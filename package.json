@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\""
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-cache-assets": "^2.0.3",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "concurrently": "^5.2.0",
     "gorko": "^0.2.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
