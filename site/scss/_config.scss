@@ -1,0 +1,127 @@
+/**
+ * BASE SIZE
+ * All calculations are based on this. It’s recommended that
+ * you keep it at 1rem because that is the root font size. You
+ * can set it to whatever you like and whatever unit you like.
+ */
+$gorko-base-size: 1rem;
+
+/**
+ * SIZE SCALE
+ * This is a Perfect Fourth scale that powers all the utilities that
+ * it is relevant for (font-size, margin, padding). All items are
+ * calcuated off the base size, so change that and cascade across
+ * your whole project.
+ */
+$gorko-size-scale: (
+  '300': $gorko-base-size * 0.75,
+  '400': $gorko-base-size,
+  '500': $gorko-base-size * 1.33,
+  '600': $gorko-base-size * 1.77,
+  '700': $gorko-base-size * 2.36,
+  '800': $gorko-base-size * 3.15,
+  '900': $gorko-base-size * 4.2,
+  'major': $gorko-base-size * 5.6,
+);
+
+/**
+ * COLORS
+ * Colors are shared between backgrounds and text by default. 
+ * You can also use them to power borders, fills or shadows, for example.
+ */
+$gorko-colors: (
+  'dark': #38445b,
+  'dark-shade': #263147,
+  'dark-glare': #505c73,
+  'light': #f9f4e3,
+  'light-shade': #fff6d7,
+  'light-glare': #fdfbf3,
+  'primary': #513aa6,
+  'primary-shade': #432e92,
+  'primary-glare': #654ac9,
+  'secondary': #6ac2b6,
+  'secondary-shade': #35a495,
+  'secondary-glare': #98e2d8,
+  'tertiary': #ffd490,
+  'tertiary-shade': #ffca77,
+  'tertiary-glare': #ffdeaa,
+  'quaternary': #ff7f5c,
+  'quaternary-shade': #f96841,
+  'quaternary-glare': #fe9476,
+  'quinary': #fa576e,
+  'quinary-shade': #fc3e59,
+  'quinary-glare': #f26c7f,
+);
+
+/**
+ * CORE CONFIG
+ * This powers everything from utility class generation to breakpoints
+ * to enabling/disabling pre-built components/utilities.
+ */
+$gorko-config: (
+  'bg': (
+    'items': $gorko-colors,
+    'output': 'standard',
+    'property': 'background',
+  ),
+  'color': (
+    'items': $gorko-colors,
+    'output': 'standard',
+    'property': 'color',
+  ),
+  'flow-space': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': '--flow-space',
+  ),
+  'font': (
+    'items': (
+      'base': '"Literata", Georgia, serif',
+      'sans': '"Red Hat Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    ),
+    'output': 'standard',
+    'property': 'font-family',
+  ),
+  'gap-top': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'margin-top',
+  ),
+  'leading': (
+    'items': (
+      'loose': 1.7,
+      'tight': 1.3,
+      'flat': '1.1',
+    ),
+    'output': 'standard',
+    'property': 'line-height',
+  ),
+  'measure': (
+    'items': (
+      'micro': '10ch',
+      'compact': '30ch',
+      'short': '40ch',
+      'long': '65ch',
+    ),
+    'output': 'responsive',
+    'property': 'max-width',
+  ),
+  'text': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'font-size',
+  ),
+  'weight': (
+    'items': (
+      'normal': 400,
+      'bold': 900,
+    ),
+    'output': 'standard',
+    'property': 'font-weight',
+  ),
+  'breakpoints': (
+    'md': '(min-width: 37em)',
+    'lg': '(min-width: 62em)',
+  ),
+);
+

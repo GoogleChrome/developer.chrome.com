@@ -1,0 +1,63 @@
+// Global styles start
+:root {
+  --flow-space: #{get-size('600')};
+}
+
+body {
+  background: get-color('light');
+  color: get-color('dark-shade');
+  line-height: 1.5;
+  font-size: get-size('500');
+
+  @include apply-utility('font', 'base');
+}
+
+a:not([class]) {
+  color: currentColor;
+  text-decoration-color: get-color('quinary');
+}
+
+:focus {
+  outline: 2px dashed get-color('primary');
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+
+  @include apply-utility('font', 'sans');
+  @include apply-utility('leading', 'flat');
+}
+
+// High contrast selection because it can help visually-impaired
+// folks read the text easier
+::selection {
+  color: get-color('light');
+
+  // We set this as an RGBA because that’s how you get a solid color, by using 0.99
+  // alpha value. Browsers are wild.
+  background: rgba(get-color('dark-shade'), 0.99);
+}
+
+// Scrollbar styles
+::-webkit-scrollbar {
+  height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: 1px solid get-color('dark-glare');
+  border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: get-color('dark');
+  border-radius: 0.25rem;
+}

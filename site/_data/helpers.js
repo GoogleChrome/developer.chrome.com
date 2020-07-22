@@ -53,14 +53,12 @@ function hashForFiles(file, ...rest) {
  * @param {String} file 
  */
 function hashAsset(file) {
-  console.log(__dirname);
-  console.log(path.join(__dirname, '..', '..', 'dist', file));
   try {
     const hash = hashForFiles(path.join(__dirname, '..', '..', 'dist', file));
     return `${file}?v=${hash}`;
   } catch(err) {
     console.error('Could not find asset at', file);
-    return file;
+    return `${file}`;
   }
 }
 

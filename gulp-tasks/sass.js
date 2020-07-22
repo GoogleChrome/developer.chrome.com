@@ -9,7 +9,7 @@ sassProcessor.compiler = require('sass');
 const isProduction = process.env.NODE_ENV === 'production';
 
 // An array of outputs that should be sent over to includes
-const criticalStyles = ['critical.scss', 'home.scss', 'page.scss'];
+const criticalStyles = ['critical.scss', 'page.scss'];
 
 // Takes the arguments passed by `dest` and determines where the output file goes
 const calculateOutput = ({history}) => {
@@ -24,7 +24,7 @@ const calculateOutput = ({history}) => {
   // to the _includes directory, so nunjucks can include it
   // directly in a <style>
   if (criticalStyles.includes(sourceFileName)) {
-    response = './src/_includes/css';
+    response = './site/_includes/css';
   }
 
   return response;
@@ -33,7 +33,7 @@ const calculateOutput = ({history}) => {
 // The main Sass method grabs all root Sass files,
 // processes them, then sends them to the output calculator
 const sass = () => {
-  return src('./src/scss/*.scss')
+  return src('./site/scss/**/*.scss')
     .pipe(sassProcessor().on('error', sassProcessor.logError))
     .pipe(
       cleanCSS(

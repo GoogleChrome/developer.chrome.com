@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    {# Add facility for pages to delare an array of critical styles. #}
+    {% if pageCriticalStyles %}
+      {% for item in pageCriticalStyles %}
+        <style>{% include item %}</style>
+      {% endfor %}
+    {% endif %}
+
+    {# Add facility for pages to declare an array of stylesheet paths. #}
+    {% if pageStylesheets %}
+      {% for item in pageStylesheets %}
+        {# If this is a production build, hash the assets to invalidate caches. #}
+        {% if global.env.NODE_ENV === 'production' %}
+          <link rel="stylesheet" media="print" href="/{{ helpers.hashAsset(item) }}" onload="this.media='all'" />
+        {# If this is a dev build, don't bother hashing hassets. It just wastes time. #}
+        {% else %}
+          <link rel="stylesheet" media="print" href="/{{ item }}" onload="this.media='all'" />
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+  </head>
+  <body>
+    <main tabindex="-1" id="main-content">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
