@@ -1,0 +1,44 @@
+{% set assetHash = global.random() %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% include "partials/meta-info.html" %}
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
+    <style>{% include "css/critical.css" %}</style>
+
+    {# Add facility for pages to delare an array of critical styles #}
+    {% if pageCriticalStyles %}
+      {% for item in pageCriticalStyles %}
+        <style>{% include item %}</style>
+      {% endfor %}
+    {% endif %}
+
+    <link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'" />
+
+    {# Add facility for pages to declare an array of stylesheet paths #}
+    {% if pageStylesheets %}
+      {% for item in pageStylesheets %}
+        <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'" />
+      {% endfor %}
+    {% endif %}
+  </head>
+  <body>
+    <div class="site-wrap">
+      {% include "partials/site-head.html" %}
+
+      <main tabindex="-1" id="main-content">
+        {% block content %}{% endblock %}
+      </main>
+
+      <footer role="contentinfo" class="site-foot">
+        <div class="wrapper">
+          <p>This is a made up agency for the course, <a href="https://piccalil.li/course/learn-eleventy-from-scratch/">“Learn Eleventy From Scratch”</a>.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

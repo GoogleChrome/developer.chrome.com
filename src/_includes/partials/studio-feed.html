@@ -1,0 +1,29 @@
+{% if studio.length %}
+<article class="[ studio-feed ] [ dot-shadow panel ] [ bg-tertiary-glare ]">
+  <div class="[ wrapper ] [ flow flow-space-300 ]">
+    <h2
+      class="[ studio-feed__heading ] [ headline ] [ md:measure-micro ]"
+      data-highlight="secondary"
+    >
+      {{ studioFeed.title }}
+    </h2>
+    <p class="visually-hidden" id="studio-feed-desc">
+      A collection of images from around our studio and the people who work here.
+    </p>
+    <div class="[ studio-feed__items ] [ flow-space-700 ]">
+      <ul class="studio-feed__list">
+        {% for item in studio %}
+        <li>
+          <img
+            src="{{ item.medium }}"
+            alt="{{ item.alt }}"
+            draggable="false"
+            class="radius"
+          />
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</article>
+{% endif %}

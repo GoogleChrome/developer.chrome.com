@@ -1,0 +1,39 @@
+{% extends "layouts/base.html" %} 
+
+{% set pageHeaderTitle = title %} 
+{% set pageHeaderSummary = content %} 
+
+{% block content %}
+  <article>
+    {% include "partials/page-header.html" %}
+  </article>
+  <div class="[ panel dot-shadow ] [ bg-tertiary-glare ]">
+    <div class="wrapper">
+      <article class="[ gallery ] [ flow flow-space-800 ]">
+        {% for item in collections.work %}
+        <figure class="[ gallery__item ] [ flow ]">
+          <div class="[ gallery__media ] [ frame ]" data-frame="primary">
+            <img
+              class="radius"
+              src="{{ item.data.hero.image }}"
+              alt="{{ item.data.hero.imageAlt }}"
+            />
+          </div>
+          <figcaption class="[ gallery__content ] [ flow ]">
+            <h2 class="[ gallery__heading ] [ text-700 md:text-900 ]">
+              {{ item.data.title }}
+            </h2>
+            <p class="[ gallery__summary ] [ measure-short flow-space-300 ]">
+              {{ item.data.summary }}
+            </p>
+            <a href="{{ item.url }}" class="button">See this work</a>
+          </figcaption>
+        </figure>
+        {% endfor %}
+      </article>
+    </div>
+  </div>
+
+  {% include "partials/cta.html" %} 
+
+{% endblock %}

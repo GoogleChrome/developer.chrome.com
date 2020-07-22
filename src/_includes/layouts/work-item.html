@@ -1,0 +1,69 @@
+{% extends "layouts/base.html" %}  
+
+{% set peopleItems = helpers.filterCollectionByKeys(collections.people, team) %}
+
+{% block content %}
+<section class="work-item">
+  <header class="hero">
+    <div class="[ hero__inner ] [ wrapper ]">
+      <div class="[ hero__content ] [ dot-shadow radius flow ] [ bg-dark-shade color-light flow-space-400 ]">
+        <h1 class="[ headline ] [ measure-compact ]" data-highlight="quinary">
+          {{ title }}
+        </h1>
+        <p class="measure-short">{{ summary }}</p>
+      </div>
+    </div>
+    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" class="hero__image" />
+  </header>
+  <article class="[ key-facts ] [ panel dot-shadow ] [ bg-primary-shade color-light ]">
+    <div class="wrapper flow">
+      <h2 class="headline" data-highlight="secondary">Key facts</h2>
+      <div class="leading-flat font-sans weight-bold flow-space-700">
+        <ol class="[ key-facts__list ] [ auto-grid ]">
+          {% for item in keyFacts %}
+            <li class="flow flow-space-300">
+              <span class="text-700 lg:text-800 color-secondary-glare"
+                >{{ item.primary }}</span
+              >
+              <span class="text-600 lg:text-700">{{ item.secondary }}</span>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+  </article>
+  <div class="wrapper">
+    <article class="[ gallery ] [ flow flow-space-800 ]">
+      {% for item in gallery %}
+        <figure class="[ gallery__item ] [ flow ]">
+          <div class="[ gallery__media ] [ frame ]" data-frame="primary">
+            <img src="{{ item.image }}" alt="" aria-hidden="true" class="radius" />
+          </div>
+          <figcaption class="[ gallery__content ] [ flow ]">
+            <h2 class="[ gallery__heading ] [ text-700 md:text-900 ]">
+              {{ item.title }}
+            </h2>
+            <p class="[ gallery__summary ] [ measure-short flow-space-300 ]">
+              {{ item.summary }}
+            </p>
+          </figcaption>
+        </figure>
+      {% endfor %}
+    </article>
+  </div>
+
+  {% if peopleItems %}
+    <article class="[ no-js-hidden ] [ panel dot-shadow ] [ bg-light-glare ]">
+      <div class="[ wrapper ] [ flow flow-space-700 ]">
+        <h2 class="[ headline ] [ measure-micro color-quinary ]" data-highlight="dark">
+          Meet the team behind this project
+        </h2>
+        {% include "partials/people.html" %}
+      </div>
+    </article>
+  {% endif %}
+</section>
+
+{% include "partials/cta.html" %} 
+
+{% endblock %}

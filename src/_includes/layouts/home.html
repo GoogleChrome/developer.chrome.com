@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %} 
+
+{% block content %}
+<div class="wrapper">
+  <article class="intro">
+    <div class="[ intro__header ] [ radius frame ]">
+      <h1 class="[ intro__heading ] [ weight-normal text-400 md:text-600 ]">
+        {{ intro.eyebrow }}
+        <em class="text-800 md:text-900 lg:text-major weight-bold">{{ intro.main }}</em>
+      </h1>
+    </div>
+    <div class="[ intro__content ] [ flow ]">
+      <p class="intro__summary">{{ intro.summary }}</p>
+      <a href="{{ intro.buttonUrl }}" class="button">{{ intro.buttonText }}</a>
+    </div>
+    <div class="[ intro__media ] [ radius dot-shadow ]">
+      <img
+        class="[ intro__image ] [ radius ]"
+        src="{{ intro.image }}"
+        alt="{{ intro.imageAlt }}"
+      />
+    </div>
+  </article>
+</div>
+
+{% set ctaContent = primaryCTA %} 
+{% include "partials/cta.html" %} 
+
+{% include "partials/featured-work.html" %} 
+{% include "partials/studio-feed.html" %} 
+
+{% set ctaContent = cta %} 
+{% include "partials/cta.html" %} 
+
+{% endblock %}
