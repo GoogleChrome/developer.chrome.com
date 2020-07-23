@@ -1,18 +1,18 @@
 // First up: config and functions
-@use 'config';
+@import 'config';
 
 // Next: pull in gorko for design tokens
-@use '../../node_modules/gorko/gorko.scss';
+@import '../../node_modules/gorko/gorko.scss';
 
-@use 'reset';
+@import 'reset';
 
-// @use 'global';
+// @import 'global';
 
 // Import blocks
-// @use 'blocks/nav';
+// @import 'blocks/nav';
 
 // Import utilities
-@use 'utilities/flow';
-@use 'utilities/radius';
-@use 'utilities/visually-hidden';
-@use 'utilities/wrapper';
+@import 'utilities/flow';
+@import 'utilities/radius';
+@import 'utilities/visually-hidden';
+@import 'utilities/wrapper';

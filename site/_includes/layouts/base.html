@@ -16,7 +16,7 @@
     {% if pageStylesheets %}
       {% for item in pageStylesheets %}
         {# If this is a production build, hash the assets to invalidate caches. #}
-        {% if global.env.NODE_ENV === 'production' %}
+        {% if process.env.NODE_ENV === 'production' %}
           <link rel="stylesheet" media="print" href="/{{ helpers.hashAsset(item) }}" onload="this.media='all'" />
         {# If this is a dev build, don't bother hashing hassets. It just wastes time. #}
         {% else %}
