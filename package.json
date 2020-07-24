@@ -1,22 +1,19 @@
 {
   "name": "developers.chrome.com",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "The source for developers.chrome.com",
   "scripts": {
     "dev": "npm-run-all gulp rollup --parallel --race gulp:watch rollup:watch eleventy:watch server",
     "eleventy:watch": "npx eleventy --watch",
     "eleventy": "npx eleventy",
     "gulp:watch": "npx gulp watch",
     "gulp": "npx gulp",
-    "production": "NODE_ENV=production npm run-all gulp rollup eleventy",
+    "production": "NODE_ENV=production npm-run-all gulp rollup eleventy",
     "rollup": "npx rollup -c",
     "rollup:watch": "npx chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
     "server": "node ./server"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "Apache 2.0",
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-cache-assets": "^2.0.3",

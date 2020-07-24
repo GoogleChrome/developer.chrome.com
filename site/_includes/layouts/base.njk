@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     {# Add facility for pages to delare an array of critical styles. #}
     {% if pageCriticalStyles %}
@@ -25,10 +24,26 @@
       {% endfor %}
     {% endif %}
 
+    {# Add a facility for pages to declare an array of script paths. #}
+    {# Note: We could also use this approach to load module/nomodule scripts #}
+    {# https://philipwalton.com/articles/deploying-es2015-code-in-production-today/ #}
+    {% if pageScripts %}
+      {% for item in pageScripts %}
+        {# If this is a production build, hash the assets to invalidate caches. #}
+        {% if process.env.NODE_ENV === 'production' %}
+          <script type="module" src="/{{ helpers.hashAsset(item) }}"></script>
+        {% else %}
+          <script type="module" src="/{{ item }}"></script>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
   </head>
   <body>
     <main tabindex="-1" id="main-content">
       {% block content %}{% endblock %}
     </main>
+
+    {% include 'partials/analytics.njk' %}
   </body>
 </html>

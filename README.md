@@ -16,13 +16,13 @@ to specify which stylesheets should be lazy loaded.
 Example:
 
 ```njk
-{# _includes/layouts/home.html #}
+{# _includes/layouts/home.njk #}
 
 {% set pageCriticalStyles = ['css/critical.css'] %}
 {% set pageStylesheets = ['css/pages/home.css'] %}
 ```
 
-Take a look at `base.html` to see how all of this is wired up.
+Take a look at `base.njk` to see how all of this is wired up.
 
 ## Asset hashing
 CSS and JS files use the `helpers.hashAsset` function to append a version string.

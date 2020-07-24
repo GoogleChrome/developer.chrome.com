@@ -1,10 +1,12 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/base.njk" %}
 
 {% set pageCriticalStyles = ['css/critical.css'] %}
 
 {# This is an example of how to lazy load an additional stylesheet. #}
 {# For most page types we'll probably put their styles into the critical array. #}
 {% set pageStylesheets = ['css/pages/home.css'] %}
+
+{% set pageScripts = ['js/main.js'] %}
 
 {% block content %}
 <h1>Home</h1>

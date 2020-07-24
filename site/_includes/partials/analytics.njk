@@ -1,0 +1,14 @@
+<script>
+  window.ga =
+    window.ga ||
+    function () {
+      (ga.q = ga.q || []).push(arguments);
+    };
+  ga.l = +new Date();
+  ga('create', {{ analytics.id }});
+  ga('set', 'transport', 'beacon');
+  ga('set', 'page', window.location.pathname);
+  // nb. Analytics requires dimension values to be strings.
+  ga('set', dimensions.TRACKING_VERSION, {{ analytics.TRACKING_VERSION }});
+  ga('send', 'pageview');
+</script>
