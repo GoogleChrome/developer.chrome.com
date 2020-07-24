@@ -39,7 +39,10 @@ const productionConfig = {
  * prefixed with `config*`.
  * 
  * Example: rollup -c --configFoo  # sets commandLineArgs.configFoo to true
- * https://rollupjs.org/guide/en/
+ * 
+ * The commandLineArgs argument gets passed to this function, but we're omitting
+ * it here because we don't use it.
+ * Learn more @ https://rollupjs.org/guide/en/
  */
 export default () => {
   if (process.env.NODE_ENV === 'production') {
