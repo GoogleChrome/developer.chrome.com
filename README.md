@@ -24,6 +24,51 @@ Example:
 
 Take a look at `base.njk` to see how all of this is wired up.
 
+## Gorko
+The scss in this project is using
+[Gorko](https://github.com/hankchizljaw/gorko). A small, handy library for
+generating utility classes based on design tokens.
+
+Essentially it lets us do things like:
+
+```scss
+$gorko-config: (
+  'stack': (
+    'items': (
+      '300': 0,
+      '400': 10,
+      '500': 20,
+      '600': 30,
+      '700': 40
+    ),
+    'output': 'standard',
+    'property': 'z-index'
+  )
+)
+```
+
+Which will generate utility classes for us:
+
+```css
+.stack-300 {
+  z-index: 0
+}
+
+.stack-400 {
+  z-index: 10
+}
+
+...etc
+```
+
+In addition, you can set it to generate utility classes for each breakpoint.
+This lets you do things like this in your HTML:
+
+```html
+<!-- Set the element's padding to 16px on mobile and 32px on desktop -->
+<div class="pad-top-400 md:pad-top-700">
+```
+
 ## Asset hashing
 CSS and JS files use the `helpers.hashAsset` function to append a version string.
 Every time eleventy rebuilds, it will scan the dist directory for assets and
