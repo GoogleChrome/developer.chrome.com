@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "The source for developers.chrome.com",
   "scripts": {
-    "dev": "npm-run-all gulp rollup --parallel --race gulp:watch rollup:watch eleventy:watch server",
+    "clean": "rm -rf dist",
+    "dev": "npm-run-all clean gulp rollup --parallel --race gulp:watch rollup:watch eleventy:watch server",
     "eleventy:watch": "npx eleventy --watch",
     "eleventy": "npx eleventy",
     "gulp:watch": "npx gulp watch",
     "gulp": "npx gulp",
-    "production": "NODE_ENV=production npm-run-all gulp rollup eleventy",
+    "production": "NODE_ENV=production npm-run-all clean gulp rollup eleventy",
     "rollup": "npx rollup -c",
     "rollup:watch": "npx chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
     "server": "node ./server"
