@@ -11,7 +11,7 @@ const hashLength = 8;
 function generateAndValidateHash(c) {
   const hash = c.digest('hex').substr(0, hashLength);
   if (hash.length !== hashLength) {
-    throw new TypeError(`could not hash content`);
+    throw new TypeError('could not hash content');
   }
   return hash;
 }
@@ -50,13 +50,13 @@ function hashForFiles(file, ...rest) {
 /**
  * A quick hacky attempt to take a file path (assuming in dist dir) and return
  * a hashed version of the path.
- * @param {String} file 
+ * @param {String} file
  */
 function hashAsset(file) {
   try {
     const hash = hashForFiles(path.join(__dirname, '..', '..', 'dist', file));
     return `${file}?v=${hash}`;
-  } catch(err) {
+  } catch (err) {
     console.error('Could not find asset at', file);
     return `${file}`;
   }
