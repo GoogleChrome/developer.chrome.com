@@ -12,7 +12,9 @@
     "production": "NODE_ENV=production npm-run-all clean gulp rollup eleventy",
     "rollup": "npx rollup -c",
     "rollup:watch": "npx chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
-    "server": "node ./server"
+    "server": "node ./server",
+    "check": "gts check",
+    "fix": "gts fix"
   },
   "license": "Apache 2.0",
   "dependencies": {
@@ -33,5 +35,10 @@
     "rollup": "^2.22.2",
     "rollup-plugin-terser": "^6.1.0",
     "sass": "^1.26.10"
+  },
+  "devDependencies": {
+    "gts": "^2.0.2",
+    "typescript": "^3.8.3",
+    "@types/node": "^13.11.1"
   }
 }

@@ -19,7 +19,7 @@ const express = require('express');
 const app = express();
 
 // Log the requested urls
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
   console.log(req.url);
   next();
 });
