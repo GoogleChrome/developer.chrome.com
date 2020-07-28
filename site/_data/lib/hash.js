@@ -50,7 +50,8 @@ function hashForFiles(file, ...rest) {
 /**
  * A quick hacky attempt to take a file path (assuming in dist dir) and return
  * a hashed version of the path.
- * @param {String} file
+ * @param {string} file
+ * @return {string}
  */
 function hashAsset(file) {
   try {

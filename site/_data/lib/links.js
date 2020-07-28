@@ -1,10 +1,12 @@
 /**
  * Returns back some attributes based on whether the
- * link is active or a parent of an active item
+ * link is active or a parent of an active item.
+ * It's recommended that both arguments use trailing slashes.
+ * This will prevent /x from appearing to be a parent of /xy/
  *
- * @param {String} itemUrl The link in question
- * @param {String} pageUrl The page context
- * @returns {String} The attributes or empty
+ * @param {string} itemUrl The link in question
+ * @param {string} pageUrl The page context
+ * @returns {string} The attributes or empty
  */
 function getLinkActiveState(itemUrl, pageUrl) {
   if (itemUrl === pageUrl) {
