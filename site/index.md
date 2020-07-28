@@ -1,5 +1,5 @@
 ---
-title: Chrome developers
+title: Chrome Developers
 layout: 'layouts/home.njk'
 ---
 
