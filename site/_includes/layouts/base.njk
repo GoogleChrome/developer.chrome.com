@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% include "partials/meta.njk" %}
 
+    <link rel="preload" as="font" crossorigin href="/fonts/google-sans/regular/latin.woff2">
+    <link rel="preload" as="font" crossorigin href="/fonts/google-sans/bold/latin.woff2">
+
     {# Add facility for pages to delare an array of critical styles. #}
     {% if pageCriticalStyles %}
       {% for item in pageCriticalStyles %}
