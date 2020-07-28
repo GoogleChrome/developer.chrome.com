@@ -1,6 +1,5 @@
 ---
-title: 'Chrome Developers'
-metaDesc: 'Build the next generation of web experiences.'
+title: Chrome Developers
 layout: 'layouts/home.njk'
 ---
 
