@@ -20,7 +20,7 @@ const app = express();
 
 // Log the requested urls
 app.use((req, res, next) => {
-  console.log(req.url);
+  // console.log(req.url);
   next();
 });
 
