@@ -10,6 +10,8 @@ module.exports = config => {
 
   // Tell eleventy to copy our images over
   config.addPassthroughCopy("site/images");
+  // Tell eleventy to copy our fonts over
+  config.addPassthroughCopy("site/fonts");
 
   // Only minify HTML if we are in production because it slows builds _right_ down
   if (isProduction) {

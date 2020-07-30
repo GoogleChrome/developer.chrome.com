@@ -30,9 +30,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 900;
-
-  @include apply-utility('font', 'sans');
+  @include apply-utility('font', 'google-sans');
+  @include apply-utility('weight', 'bold');
   @include apply-utility('leading', 'flat');
 }
 
