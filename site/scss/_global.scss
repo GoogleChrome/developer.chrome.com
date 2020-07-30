@@ -9,7 +9,6 @@ body {
   line-height: 1.5;
   font-size: get-size('500');
 
-  /* https://github.com/necolas/normalize.css/issues/665 */
   @include apply-utility('font', 'base');
 }
 
