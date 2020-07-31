@@ -6,16 +6,15 @@
  *
  * @param {string} itemUrl The link in question
  * @param {string} pageUrl The page context
- * @returns {string} The attributes or empty
+ * @returns {string|undefined} The attributes or empty
  */
 function getLinkActiveState(itemUrl, pageUrl) {
   if (itemUrl === pageUrl) {
     return ' data-state="active" aria-current="page"';
-  }
-
-  if (itemUrl.length > 1 && pageUrl.indexOf(itemUrl) === 0) {
+  } else if (itemUrl.length > 1 && pageUrl.indexOf(itemUrl) === 0) {
     return ' data-state="active"';
   }
+  return;
 }
 
 module.exports = {
