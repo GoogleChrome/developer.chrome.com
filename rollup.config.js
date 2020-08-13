@@ -6,7 +6,7 @@ import {nodeResolve} from '@rollup/plugin-node-resolve';
 import {terser} from 'rollup-plugin-terser';
 
 const devConfig = {
-  input: 'site/js/main.js',
+  input: 'site/_js/main.js',
   output: {
     dir: 'dist/js',
     format: 'esm',
@@ -19,7 +19,7 @@ const devConfig = {
 };
 
 const productionConfig = {
-  input: 'site/js/main.js',
+  input: 'site/_js/main.js',
   output: {
     dir: 'dist/js',
     format: 'esm',

@@ -1,5 +1,5 @@
 // Transforms
-const htmlMinTransform = require('./site/transforms/html-min-transform.js');
+const htmlMinTransform = require('./site/_transforms/html-min-transform.js');
 
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
@@ -10,11 +10,6 @@ module.exports = config => {
   // directory. We want to .gitignore this compiled css, but we want elventy
   // to use it for its build.
   config.setUseGitIgnore(false);
-
-  // Tell eleventy to copy our images over
-  config.addPassthroughCopy("site/images");
-  // Tell eleventy to copy our fonts over
-  config.addPassthroughCopy("site/fonts");
 
   // Only minify HTML if we are in production because it slows builds _right_ down
   if (isProduction) {

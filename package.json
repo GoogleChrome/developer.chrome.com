@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The source for developers.chrome.com",
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist",
     "dev": "npm-run-all clean gulp rollup --parallel --race gulp:watch rollup:watch eleventy:watch server",
     "eleventy:watch": "npx eleventy --watch",
     "eleventy": "npx eleventy",
@@ -41,6 +41,7 @@
   "devDependencies": {
     "@types/node": "^13.11.1",
     "gts": "^2.0.2",
+    "rimraf": "^3.0.2",
     "typescript": "^3.8.3"
   }
 }
