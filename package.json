@@ -16,6 +16,8 @@
     "rollup": "npx rollup -c",
     "rollup:watch": "npx chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
     "server": "node ./server",
+    "start": "node ./server",
+    "stage": "NODE_ENV=production npm run production && gcloud app deploy --project=chrome-apps-doc-staging-2020",
     "fix": "gts fix"
   },
   "license": "Apache 2.0",
