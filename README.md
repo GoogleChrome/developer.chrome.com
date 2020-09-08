@@ -95,6 +95,6 @@ Example:
 npm run gulp && npm run rollup && [...tell gulp and rollup to watch for changes]
 ```
 
-rollup doesn't support this; if you do `rollup -c -w` it will compile _and_
+rollup doesn't support this; if you do `rollup -c -w` it will compile *and*
 watch, and `rollup -w` doesn't work on its own. To work around this we use
 `chokidar` directly to watch for js changes and run rollup.
