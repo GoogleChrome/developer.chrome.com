@@ -4,12 +4,11 @@
 }
 
 body {
+  @include apply-utility('font', 'base');
   background: get-color('light');
   color: get-color('dark-shade');
-  line-height: 1.5;
   font-size: get-size('500');
-
-  @include apply-utility('font', 'base');
+  line-height: 1.5;
 }
 
 a:not([class]) {
@@ -33,16 +32,16 @@ h4 {
   @include apply-utility('font', 'google-sans');
   @include apply-utility('weight', 'bold');
   @include apply-utility('leading', 'flat');
+  font-weight: 900;
 }
 
 // High contrast selection because it can help visually-impaired
 // folks read the text easier
 ::selection {
-  color: get-color('light');
-
   // We set this as an RGBA because that’s how you get a solid color, by using 0.99
   // alpha value. Browsers are wild.
   background: rgba(get-color('dark-shade'), 0.99);
+  color: get-color('light');
 }
 
 // Scrollbar styles
