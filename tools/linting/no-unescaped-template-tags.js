@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+/* eslint-disable node/no-unpublished-require */
 const rule = require('unified-lint-rule');
 const visit = require('unist-util-visit');
 
 module.exports = rule(
   'remark-lint:no-unescaped-template-tags',
-  noUnescapedTemplateTags,
+  noUnescapedTemplateTags
 );
 
 const reason = `
@@ -48,7 +48,7 @@ function noUnescapedTemplateTags(tree, file) {
       // It uses a negative lookahead to find }} that are not followed by {% endverbatim %}{% endraw %} — https://regexr.com/4ipk6
       if (
         line.match(
-          /(?<!{%\s*raw\s*%}\s*{%\s*verbatim\s*%}\s*){{|}}(?!\s*{%\s*endverbatim\s*%}\s*{%\s*endraw\s*%})/g,
+          /(?<!{%\s*raw\s*%}\s*{%\s*verbatim\s*%}\s*){{|}}(?!\s*{%\s*endverbatim\s*%}\s*{%\s*endraw\s*%})/g
         )
       ) {
         return file.message(reason, node);

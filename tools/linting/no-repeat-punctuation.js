@@ -38,7 +38,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+/* eslint-disable node/no-unpublished-require */
 const rule = require('unified-lint-rule');
 const map = require('unist-util-map');
 const toList = require('unist-util-to-list-of-char');
@@ -59,7 +59,7 @@ class Traveler {
       if (value === '.') {
         this.file.message(
           `Should not repeat "${value}". Use ellipsis "…" character instead.`,
-          node,
+          node
         );
       } else {
         this.file.message(`Should not repeat "${value}"`, node);
@@ -74,12 +74,12 @@ class Traveler {
 function processor(tree, file, config = punctuations) {
   function callback(list) {
     const traveler = new Traveler(file, config);
-    list.forEach((node) => {
+    list.forEach(node => {
       traveler.process(node);
     });
     traveler.end();
   }
-  const inlineCodeReplaced = map(tree, (node) => {
+  const inlineCodeReplaced = map(tree, node => {
     if (node.type !== 'inlineCode') return node;
     /**
      * Change the value of code, so that lint rule won't throw error for

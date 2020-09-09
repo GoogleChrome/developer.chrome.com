@@ -57,6 +57,7 @@
     "typescript": "^3.8.3",
     "unified-lint-rule": "^1.0.6",
     "unist-util-map": "^2.0.1",
-    "unist-util-to-list-of-char": "^0.1.2"
+    "unist-util-to-list-of-char": "^0.1.2",
+    "unist-util-visit": "^2.0.3"
   }
 }

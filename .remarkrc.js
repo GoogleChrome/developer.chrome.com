@@ -21,6 +21,7 @@ exports.plugins = [
   ['lint-no-duplicate-headings', false],
   ['lint-no-emphasis-as-heading', false],
   ['lint-no-file-name-articles', false],
+  ['lint-no-file-name-irregular-characters', false],
   ['lint-no-heading-punctuation', ':.,;'],
   ['lint-no-multiple-toplevel-headings', false],
   ['lint-no-shell-dollars', false],
