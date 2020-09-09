@@ -1,7 +1,10 @@
 ---
-title: 'Chrome Developers'
-metaDesc: 'Build the next generation of web experiences.'
+title: Chrome Developers
 layout: 'layouts/home.njk'
 ---
 
-Hello Chrome Developerszzz
+Hello Chrome Developers
+
+```
+Here is some codez
+```

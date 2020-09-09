@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "Documentation",
+      "url": "/docs/"
+    },
+    {
+      "text": "Blog",
+      "url": "/blog/"
+    },
+    {
+      "text": "Status",
+      "url": "/status/"
+    },
+    {
+      "text": "Downloads",
+      "url": "/downloads/"
+    },
+    {
+      "text": "Origin trials",
+      "url": "https://developers.chrome.com/origintrials/",
+      "external": true
+    }
+  ]
+}

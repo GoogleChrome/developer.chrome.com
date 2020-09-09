@@ -1,0 +1,9 @@
+{% extends "layouts/base.njk" %}
+
+{% set pageCriticalStyles = ['css/critical.css'] %}
+
+{% block content %}
+<h1>Documentation</h1>
+
+{{ content | safe }}
+{% endblock %}

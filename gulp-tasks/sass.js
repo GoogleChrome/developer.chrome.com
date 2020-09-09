@@ -33,7 +33,7 @@ const calculateOutput = ({history}) => {
 // The main Sass method grabs all root Sass files,
 // processes them, then sends them to the output calculator
 const sass = () => {
-  return src('./site/scss/**/*.scss')
+  return src('./site/_scss/**/*.scss')
     .pipe(sassProcessor().on('error', sassProcessor.logError))
     .pipe(
       cleanCSS(

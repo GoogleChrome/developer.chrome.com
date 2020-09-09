@@ -14,20 +14,9 @@
  * limitations under the License.
  */
 
-const express = require('express');
+declare global {
+  export type TODO = any; // eslint-disable-line
+}
 
-const app = express();
-
-// Log the requested urls
-app.use((req, res, next) => {
-  // console.log(req.url);
-  next();
-});
-
-// Direct all requests to the static dir
-app.use(express.static('dist'));
-
-const listener = app.listen(process.env.PORT || 8080, () => {
-  // eslint-disable-next-line
-  console.log('The server is listening on port ' + listener.address().port);
-});
+// empty export to keep file a module
+export {};
