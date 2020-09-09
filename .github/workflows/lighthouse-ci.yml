@@ -37,6 +37,6 @@ jobs:
       - name: Lighthouse CI
         run: |
           npx lhci autorun \
-          --config=./lighthouserc.json \
+          --config=./lighthouserc.js \
           --upload.serverBaseUrl=${{ secrets.LHCI_SERVER }} \
           --upload.token=${{ secrets.LHCI_TOKEN }}
