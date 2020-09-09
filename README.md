@@ -91,7 +91,7 @@ run some compile steps in series, then start the server and watch for changes.
 
 Example:
 
-```
+```bash
 npm run gulp && npm run rollup && [...tell gulp and rollup to watch for changes]
 ```
 
