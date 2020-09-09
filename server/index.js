@@ -15,6 +15,7 @@
  */
 
 const express = require('express');
+const compression = require('compression')
 
 const app = express();
 
@@ -23,6 +24,8 @@ app.use((req, res, next) => {
   // console.log(req.url);
   next();
 });
+
+app.use(compression());
 
 // Direct all requests to the static dir
 app.use(express.static('dist'));

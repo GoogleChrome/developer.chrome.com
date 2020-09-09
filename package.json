@@ -29,6 +29,7 @@
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "chokidar-cli": "^2.1.0",
+    "compression": "^1.7.4",
     "concurrently": "^5.2.0",
     "express": "^4.17.1",
     "gorko": "^0.2.1",
