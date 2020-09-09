@@ -1,6 +1,7 @@
 {
   "id": "abc123",
   "dimensions": {
-    "TRACKING_VERSION": "1.0"
-  }
+    "TRACKING_VERSION": "dimension1"
+  },
+  "TRACKING_VERSION": "1.0"
 }
