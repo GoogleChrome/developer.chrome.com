@@ -30,9 +30,8 @@ h2,
 h3,
 h4 {
   @include apply-utility('font', 'google-sans');
-  @include apply-utility('weight', 'bold');
+  @include apply-utility('weight', 'normal');
   @include apply-utility('leading', 'flat');
-  font-weight: 900;
 }
 
 // High contrast selection because it can help visually-impaired
