@@ -1,10 +1,5 @@
 // A modified version of Andy Bell's "modern reset" https://github.com/hankchizljaw/modern-css-reset
 
-/* stylelint-disable selector-no-qualifying-type */
-// Disable the stylelint rule that flags things like ul[class].
-// We use this selector to target all lists created by markdown since those
-// never have a class applied.
-
 /* Box sizing rules */
 *,
 *::before,

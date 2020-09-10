@@ -46,6 +46,7 @@
   "devDependencies": {
     "@types/node": "^13.11.1",
     "gts": "^2.0.2",
+    "husky": "^4.3.0",
     "remark-cli": "^8.0.1",
     "remark-frontmatter": "^2.0.0",
     "remark-lint": "^7.0.1",
