@@ -9,6 +9,10 @@ Thumbs.db
 .env
 .cache
 
+# Code coverage generated files
+.nyc_output
+coverage
+
 # Node modules and output
 node_modules
 dist

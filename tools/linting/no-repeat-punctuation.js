@@ -38,7 +38,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/* eslint-disable node/no-unpublished-require */
+
 const rule = require('unified-lint-rule');
 const map = require('unist-util-map');
 const toList = require('unist-util-to-list-of-char');

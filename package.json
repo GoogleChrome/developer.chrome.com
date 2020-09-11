@@ -2,11 +2,16 @@
   "name": "developers.chrome.com",
   "version": "1.0.0",
   "description": "The source for developers.chrome.com",
+  "private": true,
+  "engines": {
+    "node": ">=12.18.3"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "dev": "npm-run-all clean gulp rollup --parallel --race gulp:watch rollup:watch eleventy:watch server",
     "eleventy:watch": "npx eleventy --watch",
     "eleventy": "npx eleventy",
+    "fix": "gts fix",
     "gulp:watch": "npx gulp watch",
     "gulp": "npx gulp",
     "lint:js": "gts check",
@@ -15,12 +20,13 @@
     "lint:types": "tsc --noEmit",
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
     "production": "NODE_ENV=production npm-run-all clean gulp rollup eleventy",
-    "rollup": "npx rollup -c",
     "rollup:watch": "npx chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
+    "rollup": "npx rollup -c",
     "server": "node ./server",
-    "start": "node ./server",
     "stage": "NODE_ENV=production npm run production && gcloud app deploy --project=chrome-apps-doc-staging-2020",
-    "fix": "gts fix"
+    "start": "node ./server",
+    "test:watch": "ava --watch",
+    "test": "nyc ava"
   },
   "license": "Apache 2.0",
   "dependencies": {
@@ -44,9 +50,13 @@
     "sass": "^1.26.10"
   },
   "devDependencies": {
+    "@ava/babel": "^1.0.1",
     "@types/node": "^13.11.1",
+    "ava": "^3.12.1",
+    "eslint-plugin-ava": "^11.0.0",
     "gts": "^2.0.2",
     "husky": "^4.3.0",
+    "nyc": "^15.1.0",
     "remark-cli": "^8.0.1",
     "remark-frontmatter": "^2.0.0",
     "remark-lint": "^7.0.1",
