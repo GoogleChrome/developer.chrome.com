@@ -1,3 +1,6 @@
+// Collections
+const blogCollection = require('./site/_collections/blog');
+
 // Transforms
 const htmlMinTransform = require('./site/_transforms/html-min-transform.js');
 
@@ -11,6 +14,9 @@ module.exports = config => {
   // to use it for its build.
   config.setUseGitIgnore(false);
 
+  // Add collections
+  config.addCollection('blog', blogCollection);
+
   // Only minify HTML if we are in production because it slows builds _right_ down
   if (isProduction) {
     config.addTransform('htmlmin', htmlMinTransform);
@@ -22,7 +28,7 @@ module.exports = config => {
     htmlTemplateEngine: 'njk',
     dir: {
       input: 'site',
-      output: 'dist'
-    }
+      output: 'dist',
+    },
   };
 };
