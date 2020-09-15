@@ -1,5 +1,9 @@
+// Plugins
+const rssPlugin = require('@11ty/eleventy-plugin-rss');
+
 // Collections
 const blogCollection = require('./site/_collections/blog');
+const feedsCollection = require('./site/_collections/feeds');
 
 // Transforms
 const htmlMinTransform = require('./site/_transforms/html-min-transform.js');
@@ -14,8 +18,12 @@ module.exports = config => {
   // to use it for its build.
   config.setUseGitIgnore(false);
 
+  // Add plugins
+  config.addPlugin(rssPlugin);
+
   // Add collections
   config.addCollection('blog', blogCollection);
+  config.addCollection('feeds', feedsCollection);
 
   // Only minify HTML if we are in production because it slows builds _right_ down
   if (isProduction) {

@@ -1,0 +1,30 @@
+---
+permalink: '{{feed.permalink}}'
+pagination:
+  data: collections.feeds
+  size: 1
+  alias: feed
+  resolve: values
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ feed.title or site.title }}</title>
+  <subtitle>{{ feed.description or site.summary }}</subtitle>
+  <link href="{{ site.url }}{{ feed.permalink }}" rel="self" />
+  <link href="{{ site.url }}/" />
+  <updated>{{ feed.items | rssLastUpdatedDate }}</updated>
+  <id>{{ site.url }}</id>
+  <author>
+    <name>{{ site.title }}</name>
+  </author>
+  {% for item in feed.items %}
+  {% set absolutePostUrl %}{{ site.url }}{{ item.url | url }}{% endset %}
+  <entry>
+    <title>{{ item.data.title }}</title>
+    <link href="{{ absolutePostUrl }}" />
+    <updated>{{ item.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ item.templateContent }}</content>
+  </entry>
+  {% endfor %}
+</feed>
