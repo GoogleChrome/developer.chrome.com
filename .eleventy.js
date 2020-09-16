@@ -1,12 +1,10 @@
 // Plugins
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
+const optimizeHtmlPlugin = require('./site/_plugins/optimize-html');
 
 // Collections
 const blogCollection = require('./site/_collections/blog');
 const feedsCollection = require('./site/_collections/feeds');
-
-// Transforms
-const htmlMinTransform = require('./site/_transforms/html-min-transform.js');
 
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
@@ -25,9 +23,10 @@ module.exports = config => {
   config.addCollection('blog', blogCollection);
   config.addCollection('feeds', feedsCollection);
 
-  // Only minify HTML if we are in production because it slows builds _right_ down
+  // Only minify HTML and inline CSS if we are in production because it slows
+  // builds _right_ down
   if (isProduction) {
-    config.addTransform('htmlmin', htmlMinTransform);
+    config.addPlugin(optimizeHtmlPlugin);
   }
 
   return {
