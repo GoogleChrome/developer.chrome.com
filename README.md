@@ -1,29 +1,5 @@
 # developers.chrome.com
 
-## Open questions
-
-- Do we want to separate the site from the server even more in the project structure?
-
-## Critical styles vs lazy loaded styles
-The `sass.js` gulp-task has a list of stylesheets it knows it should treat as
-critical. These sheets get output to `src/_includes/css` instead of `dist`.
-Page layouts can use the `{% set pageCriticalStyles = [...] %}` variable to
-specify which stylesheets should be inlined.
-
-In addition, layouts can use the `{% set pageStylesheets = [...] %}` variable
-to specify which stylesheets should be lazy loaded.
-
-Example:
-
-```njk
-{# _includes/layouts/home.njk #}
-
-{% set pageCriticalStyles = ['css/critical.css'] %}
-{% set pageStylesheets = ['css/pages/home.css'] %}
-```
-
-Take a look at `base.njk` to see how all of this is wired up.
-
 ## Gorko
 The scss in this project is using
 [Gorko](https://github.com/hankchizljaw/gorko). A small, handy library for
