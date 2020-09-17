@@ -28,12 +28,14 @@ $gorko-size-scale: (
  * COLORS
  * Colors are shared between backgrounds and text by default. 
  * You can also use them to power borders, fills or shadows, for example.
+ * It'd be nice if these could also output custom properties for us.
+ * I've filed an issue to discuss: https://github.com/hankchizljaw/gorko/issues/8
  */
 $gorko-colors: (
   'dark': #38445b,
   'dark-shade': #263147,
   'dark-glare': #505c73,
-  'light': #f9f4e3,
+  'light': #fff,
   'light-shade': #fff6d7,
   'light-glare': #fdfbf3,
   'primary': #513aa6,
@@ -93,7 +95,7 @@ $gorko-config: (
     'items': (
       'loose': 1.7,
       'tight': 1.3,
-      'flat': '1.1',
+      'flat': 1.1,
     ),
     'output': 'standard',
     'property': 'line-height',

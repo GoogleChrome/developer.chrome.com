@@ -1,0 +1,49 @@
+:root {
+  // Set theme aliases
+  --color-mode: 'light';
+  --color-bg: #{get-color('light')};
+  --color-bg-glare: #{get-color('light')};
+  --color-text: #{get-color('dark')};
+  --color-text-glare: #{get-color('dark')};
+  --color-selection-text: #{get-color('light')};
+  --color-selection-bg: #{get-color('dark')};
+  --color-stroke: #{get-color('dark-glare')};
+  --color-action-bg: #{get-color('primary')};
+  --color-action-text: #{get-color('light')};
+  --color-theme-primary: #{get-color('primary')};
+  --color-theme-primary-glare: #{get-color('primary-glare')};
+}
+
+// @include dark-mode() {
+// TODO
+// }
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+::selection {
+  background-color: var(--color-selection-bg);
+  color: var(--color-selection-text);
+}
+
+a:not([class]) {
+  color: currentColor;
+  text-decoration-color: get-color('quinary');
+}
+
+:focus {
+  outline: 2px dashed get-color('primary');
+  outline-offset: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: 1px solid get-color('dark-glare');
+  border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: get-color('dark');
+}

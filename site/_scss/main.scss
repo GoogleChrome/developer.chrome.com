@@ -4,9 +4,12 @@
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko';
 
+@import 'theme';
+
 @import 'reset';
 
 @import 'global';
+@import 'typography';
 
 // Import blocks
 @import 'blocks/nav';
