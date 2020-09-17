@@ -1,0 +1,14 @@
+- url: what-are-extensions
+- url: /link-to/workbox/for-reasons
+- url: whatevs
+  sections:
+    - url: hello
+    - url: world
+- url: overview
+  sections:
+    - url: foo
+    - url: bar
+      sections:
+        - url: baz
+        - url: qux
+    - url: https://google.com

@@ -1,0 +1,20 @@
+{# We support up to three levels of nesting in our project sections. #}
+<ul>
+  {% for item in sections %}
+    <li><a href="{{ item.url }}">{{ item.url }}</a></li>
+    {% if item.sections %}
+      <ul>
+        {% for secondaryItem in item.sections %}
+          <li><a href="{{ secondaryItem.url }}">{{ secondaryItem.url }}</a></li>
+          {% if secondaryItem.sections %}
+            <ul>
+              {% for tertiaryItem in secondaryItem.sections %}
+                <li><a href="{{ tertiaryItem.url }}">{{ tertiaryItem.url }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+</ul>
