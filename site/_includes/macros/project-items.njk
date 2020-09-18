@@ -1,0 +1,20 @@
+{# 
+Finds a post by its url (including language specific urls).
+Returns a link to the post and uses the post's title for link text.
+
+This will recursively keep outputting links depending on how many sections
+have been defined in the _data/docs/*.yml file for this project.
+#}
+{% macro projectItems(sections, lang = '') %}
+
+<ul>
+  {% for item in sections %}
+    {% set post = helpers.findByUrl(collections.all, item.url, lang) %}
+    <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {% if item.sections %}
+      {{ projectItems(item.sections, lang) }}
+    {% endif %}
+  {% endfor %}
+</ul>
+
+{% endmacro %}

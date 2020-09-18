@@ -1,7 +1,11 @@
+const path = require('path');
 const test = require('ava');
-const {sectionify} = require('../../../site/_functions/sectionify');
+const {
+  sectionify,
+  getSections,
+} = require('../../../site/_functions/sectionify');
 
-test('nests children under the parent path', t => {
+test('sectionify nests children under the parent path', t => {
   const section = [
     {
       url: 'foo',
@@ -29,21 +33,21 @@ test('nests children under the parent path', t => {
 
   const expected = [
     {
-      url: '/docs/foo',
+      url: '/docs/foo/',
       sections: [
         {
-          url: '/docs/foo/bar',
+          url: '/docs/foo/bar/',
           sections: [
             {
-              url: '/docs/foo/bar/hello',
+              url: '/docs/foo/bar/hello/',
             },
             {
-              url: '/docs/foo/bar/world',
+              url: '/docs/foo/bar/world/',
             },
           ],
         },
         {
-          url: '/baz/qux',
+          url: '/baz/qux/',
         },
         {
           url: 'https://google.com',
@@ -55,9 +59,25 @@ test('nests children under the parent path', t => {
   t.deepEqual(sectionify(section, '/docs'), expected);
 });
 
-test('throws if the parent argument is not an absolute path', t => {
+test('sectionify throws if the parent argument is not an absolute path', t => {
   const error = t.throws(() => {
     sectionify([], 'foo');
   });
   t.is(error.message, 'parent argument must be an absolute path.');
+});
+
+test('getSections returns properly prefixed urls', t => {
+  const expected = [
+    {
+      url: '/docs/extensions/what-are-extensions/',
+    },
+  ];
+
+  t.deepEqual(
+    getSections(
+      '/docs/extensions',
+      path.join(__dirname, 'fixtures', 'section.yml')
+    ),
+    expected
+  );
 });

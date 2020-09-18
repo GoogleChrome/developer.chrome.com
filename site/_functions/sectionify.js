@@ -1,4 +1,5 @@
 const path = require('path');
+const yaml = require('require-yml');
 
 /**
  * Converts relative paths in section yaml files into nested paths.
@@ -31,11 +32,18 @@ const sectionify = (array, parent) => {
   for (const child of array) {
     const node = /** @type {Section} */ ({});
     let url = child.url;
+
     // If the url is an absolute path, or starts with http(s)://
     // then use the url as is.
     // Otherwise, combine the url with its parent to create a nested path.
-    if (!path.isAbsolute(url) && !url.match(/^https?:\/\//)) {
-      url = path.join(parent, child.url);
+    if (path.isAbsolute(url)) {
+      // Ensure absolute paths end in a trailing slash
+      url = path.join(url, '/');
+    } else if (url.match(/^https?:\/\//)) {
+      // no-op for paths that start with a protocol.
+      // We assume these are external links.
+    } else {
+      url = path.join(parent, child.url, '/');
     }
 
     node.url = url;
@@ -50,4 +58,25 @@ const sectionify = (array, parent) => {
   return out;
 };
 
-module.exports = {sectionify};
+/**
+ * Takes a path to section data and grabs the matching yaml. Returns section
+ * info with properly nested url paths.
+ * @param {string} sectionPath The location in the _data directory to find the
+ * section information. This argument will double as the url prefix sent to
+ * the sectionify() function.
+ * @param {string} pathOverride Only used for testing. This override will look
+ * for a specific file path and ignore sectionPath.
+ * @return {Section[]}
+ */
+const getSections = (sectionPath, pathOverride = '') => {
+  let sections;
+  if (pathOverride) {
+    sections = yaml(pathOverride);
+  } else {
+    /* istanbul ignore next */
+    sections = yaml(path.join(__dirname, '../_data', `${sectionPath}.yml`));
+  }
+  return sectionify(sections, sectionPath);
+};
+
+module.exports = {sectionify, getSections};
