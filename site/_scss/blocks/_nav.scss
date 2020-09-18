@@ -1,9 +1,0 @@
-.nav {
-  a {
-    // Adds the fake border to active state items
-    &[data-state='active'] {
-      background: get-color('dark-shade');
-      color: get-color('light');
-    }
-  }
-}

@@ -30,12 +30,25 @@
 
   </head>
   <body>
-    {% include "partials/site-nav.njk" %}
+    <div class="scaffold">
+      {% block header %}
+        {% include 'partials/header.njk' %}
+      {% endblock %}
 
-    <main tabindex="-1" id="main-content">
-      {% block content %}{% endblock %}
-    </main>
+      {% block sidebar %}
+        {% include 'partials/sidebar.njk' %}
+      {% endblock %}
 
+      <main tabindex="-1" id="main-content">
+        {% block content %}{% endblock %}
+      </main>
+
+      {% block toc %}{% endblock %}
+
+      {% block footer %}
+        {% include 'partials/footer.njk' %}
+      {% endblock %}
+    </div>
     {% include 'partials/analytics.njk' %}
   </body>
 </html>

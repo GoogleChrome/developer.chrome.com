@@ -1,0 +1,7 @@
+.top-nav {
+  border-bottom: 1px solid get-color('dark-glare');
+  display: grid;
+  gap: get-size('300');
+  grid-template-columns: auto auto 1fr auto;
+  padding: get-size('300') get-size('400');
+}

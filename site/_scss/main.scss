@@ -12,7 +12,10 @@
 @import 'typography';
 
 // Import blocks
-@import 'blocks/nav';
+@import 'blocks/scaffold';
+@import 'blocks/top-nav';
+@import 'blocks/sidebar';
+@import 'blocks/main';
 
 // Import utilities
 @import 'utilities/flow';
