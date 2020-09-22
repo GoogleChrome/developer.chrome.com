@@ -28,13 +28,13 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Build
-        env:
-          ELEVENTY_ENV: prod
-        run: npm ci && npm run production
+      - name: Install
+        run: npm ci
       - name: Install Canary Lighthouse CI
         run: npm install @lhci/cli@next
       - name: Lighthouse CI
+        env:
+          ELEVENTY_ENV: prod
         run: |
           npx lhci autorun \
           --config=./lighthouserc.js \
