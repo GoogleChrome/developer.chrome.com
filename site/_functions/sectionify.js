@@ -74,7 +74,9 @@ const getSections = (sectionPath, pathOverride = '') => {
     sections = yaml(pathOverride);
   } else {
     /* istanbul ignore next */
-    sections = yaml(path.join(__dirname, '../_data', `${sectionPath}.yml`));
+    sections = yaml(
+      path.join(__dirname, '../_data', sectionPath, 'sections.yml')
+    );
   }
   return sectionify(sections, sectionPath);
 };

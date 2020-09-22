@@ -1,4 +1,4 @@
-const {getSections} = require('../../../_functions/sectionify');
+const {getSections} = require('../../../../_functions/sectionify');
 
 module.exports = {
   eleventyComputed: {

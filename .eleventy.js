@@ -1,3 +1,8 @@
+const yaml = require("js-yaml");
+
+// Filters
+const {absolute} = require('./site/_filters/absolute');
+
 // Plugins
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const optimizeHtmlPlugin = require('./site/_plugins/optimize-html');
@@ -16,12 +21,22 @@ module.exports = config => {
   // to use it for its build.
   config.setUseGitIgnore(false);
 
+  // Merge eleventy's data cascade. This means directory data files will
+  // cascade down to any child directories.
+  config.setDataDeepMerge(true);
+
+  // Make .yml files work in the _data directory.
+  config.addDataExtension('yml', contents => yaml.safeLoad(contents));
+
   // Add plugins
   config.addPlugin(rssPlugin);
 
   // Add collections
   config.addCollection('blog', blogCollection);
   config.addCollection('feeds', feedsCollection);
+
+  // Add filters
+  config.addFilter('absolute', absolute);
 
   // Only minify HTML and inline CSS if we are in production because it slows
   // builds _right_ down

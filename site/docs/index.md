@@ -1,9 +1,8 @@
 ---
-title: 'Documentation - Chrome Developers'
+title: 'Documentation'
 metaDesc: ''
 layout: 'layouts/docs-landing.njk'
+headings:
+  chrome: 'Chrome'
+  tools: 'Tools'
 ---
-
-Our documentation landing page.
-
-- [Extensions](/docs/extensions/)

@@ -16,6 +16,14 @@ test('finds a url if it exists in the collection', t => {
   t.assert(result.title === 'Foo');
 });
 
+test('finds a url (not absolute) if it exists in the collection', t => {
+  const {collection} = t.context;
+
+  const itemToFind = 'foo';
+  const result = findByUrl(collection, itemToFind);
+  t.assert(result.title === 'Foo');
+});
+
 test('finds a url (without a trailing slash) if it exists in the collection', t => {
   const {collection} = t.context;
 

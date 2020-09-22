@@ -9,6 +9,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "npm-run-all clean gulp rollup --parallel --race gulp:watch rollup:watch eleventy:watch server",
+    "eleventy:debug": "node --inspect ./node_modules/.bin/eleventy",
     "eleventy:watch": "npx eleventy --watch",
     "eleventy": "npx eleventy",
     "fix": "gts fix",
@@ -58,6 +59,7 @@
     "eslint-plugin-ava": "^11.0.0",
     "gts": "^2.0.2",
     "husky": "^4.3.0",
+    "js-yaml": "^3.14.0",
     "nyc": "^15.1.0",
     "percy": "^0.28.2",
     "purgecss": "^2.3.0",

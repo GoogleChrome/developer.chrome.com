@@ -1,5 +1,5 @@
 ---
-title: 'Blog - Chrome Developers'
+title: 'Blog'
 metaDesc: ''
 layout: 'layouts/blog-landing.njk'
 ---

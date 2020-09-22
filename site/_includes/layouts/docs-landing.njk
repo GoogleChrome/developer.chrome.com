@@ -1,5 +1,15 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-{{ content | safe }}
+<h1>{{ title }}</h1>
+
+<h2>{{ headings.chrome }}</h2>
+<ul>
+  {% for item in docs.landing.chrome %}
+    {% set project = helpers.findByUrl(collections.all, item.url, lang) %}
+    <li>
+      <a href="{{ project.url }}">{{ project.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 {% endblock %}
