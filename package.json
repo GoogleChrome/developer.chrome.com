@@ -4,7 +4,7 @@
   "description": "The source for developers.chrome.com",
   "private": true,
   "engines": {
-    "node": ">=12.18.3"
+    "node": ">=12"
   },
   "scripts": {
     "clean": "rimraf dist",
