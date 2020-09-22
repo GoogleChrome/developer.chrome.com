@@ -15,6 +15,7 @@
  */
 
 const fs = require('fs');
+const minify = require('html-minifier').minify;
 /* eslint-disable node/no-unpublished-require */
 const PurgeCSS = require('purgecss').PurgeCSS;
 const csso = require('csso');
@@ -28,45 +29,69 @@ const pathToCss = 'dist/css/main.css';
 const purifyCss = async (rawContent, outputPath) => {
   let content = rawContent;
   if (
-    !outputPath ||
-    !outputPath.endsWith('.html') ||
-    /data-style-override/.test(content)
+    outputPath &&
+    outputPath.endsWith('.html') &&
+    !/data-style-override/.test(content)
   ) {
-    return;
-  }
-  const before = fs.readFileSync(pathToCss, {
-    encoding: 'utf-8',
-  });
+    const before = fs.readFileSync(pathToCss, {
+      encoding: 'utf-8',
+    });
 
-  const purged = await new PurgeCSS().purge({
-    content: [
-      {
-        raw: rawContent,
-        extension: 'html',
-      },
-    ],
-    css: [
-      {
-        raw: before,
-      },
-    ],
-    fontFace: true,
-    variables: true,
-  });
+    const purged = await new PurgeCSS().purge({
+      content: [
+        {
+          raw: rawContent,
+          extension: 'html',
+        },
+      ],
+      css: [
+        {
+          raw: before,
+        },
+      ],
+      fontFace: true,
+      variables: true,
+    });
 
-  const after = csso.minify(purged[0].css).css;
-  // console.log('CSS reduction', before.length - after.length);
+    const after = csso.minify(purged[0].css).css;
+    // console.log('CSS reduction', before.length - after.length);
 
-  if (after.length) {
-    content = content.replace('</head>', `<style>${after}</style></head>`);
+    if (after.length) {
+      content = content.replace('</head>', `<style>${after}</style></head>`);
+    }
+
+    return content;
   }
 
   return content;
+};
+
+const minifyHtml = (rawContent, outputPath) => {
+  let content = rawContent;
+  if (outputPath && outputPath.endsWith('.html')) {
+    try {
+      content = minify(content, {
+        removeAttributeQuotes: true,
+        collapseBooleanAttributes: true,
+        collapseWhitespace: true,
+        removeComments: true,
+        sortClassName: true,
+        sortAttributes: true,
+        html5: true,
+        decodeEntities: true,
+      });
+      return content;
+    } catch (err) {
+      console.log('Could not minify:', outputPath);
+      return rawContent;
+    }
+  }
 };
 
 module.exports = {
   initArguments: {},
   configFunction: async eleventyConfig => {
     eleventyConfig.addTransform('purifyCss', purifyCss);
+    eleventyConfig.addTransform('minifyHtml', minifyHtml);
   },
 };
