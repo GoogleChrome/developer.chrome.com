@@ -1,12 +1,23 @@
 name: Percy Snapshots
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.js'
+      - 'package.json'
+      - '**.njk'
+      - '**.scss'
+      - '**.yml'
+
   pull_request:
     paths:
       - '**.js'
       - 'package.json'
       - '**.njk'
       - '**.scss'
+      - '**.yml'
 
 jobs:
   percy:
