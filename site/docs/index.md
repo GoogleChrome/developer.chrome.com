@@ -1,6 +1,6 @@
 ---
 title: 'Documentation'
-metaDesc: ''
+description: ''
 layout: 'layouts/docs-landing.njk'
 headings:
   chrome: 'Chrome'

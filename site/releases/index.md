@@ -1,6 +1,6 @@
 ---
 title: 'Chrome Developers - Releases'
-metaDesc: ''
+description: ''
 layout: 'layouts/releases-landing.njk'
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc.njk'
 title: Hola
-metaDesc: Foo bar baz
+description: Foo bar baz
 ---
 
 Hi

@@ -1,5 +1,5 @@
 ---
 title: 'Documentación'
-metaDesc: ''
+description: ''
 layout: 'layouts/docs-landing.njk'
 ---

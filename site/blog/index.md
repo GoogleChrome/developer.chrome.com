@@ -1,6 +1,6 @@
 ---
 title: 'Blog'
-metaDesc: ''
+description: ''
 layout: 'layouts/blog-landing.njk'
 ---
 
