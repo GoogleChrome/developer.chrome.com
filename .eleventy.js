@@ -1,7 +1,10 @@
-const yaml = require("js-yaml");
+const yaml = require('js-yaml');
 
 // Filters
 const {absolute} = require('./site/_filters/absolute');
+
+// Transforms
+const {prettyUrls} = require('./site/_transforms/pretty-urls');
 
 // Plugins
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
@@ -37,6 +40,9 @@ module.exports = config => {
 
   // Add filters
   config.addFilter('absolute', absolute);
+
+  // Add transforms
+  config.addTransform('prettyUrls', prettyUrls);
 
   // Only minify HTML and inline CSS if we are in production because it slows
   // builds _right_ down

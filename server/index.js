@@ -29,6 +29,7 @@ app.use(compression());
 
 // Direct all requests to the static dir
 app.use(express.static('dist'));
+app.use(express.static('dist/en'));
 
 const listener = app.listen(process.env.PORT || 8080, () => {
   // eslint-disable-next-line
