@@ -5,7 +5,7 @@ const {absolute} = require('./site/_filters/absolute');
 
 // Plugins
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
-// const optimizeHtmlPlugin = require('./site/_plugins/optimize-html');
+const optimizeHtmlPlugin = require('./site/_plugins/optimize-html');
 
 // Collections
 const blogCollection = require('./site/_collections/blog');
@@ -41,7 +41,7 @@ module.exports = config => {
   // Only minify HTML and inline CSS if we are in production because it slows
   // builds _right_ down
   if (isProduction) {
-    // config.addPlugin(optimizeHtmlPlugin);
+    config.addPlugin(optimizeHtmlPlugin);
   }
 
   return {

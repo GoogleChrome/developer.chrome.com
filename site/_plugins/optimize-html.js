@@ -26,8 +26,7 @@ const pathToCss = 'dist/css/main.css';
  * Optimizes HTML
  */
 
-const purifyCss = async (rawContent, outputPath) => {
-  let content = rawContent;
+const purifyCss = async (content, outputPath) => {
   if (
     outputPath &&
     outputPath.endsWith('.html') &&
@@ -40,7 +39,7 @@ const purifyCss = async (rawContent, outputPath) => {
     const purged = await new PurgeCSS().purge({
       content: [
         {
-          raw: rawContent,
+          raw: content,
           extension: 'html',
         },
       ],
@@ -54,20 +53,17 @@ const purifyCss = async (rawContent, outputPath) => {
     });
 
     const after = csso.minify(purged[0].css).css;
-    // console.log('CSS reduction', before.length - after.length);
-
-    if (after.length) {
-      content = content.replace('</head>', `<style>${after}</style></head>`);
+    if (!after.length) {
+      throw new Error(`Minified CSS for ${outputPath} has no length.`);
     }
-
+    content = content.replace('</head>', `<style>${after}</style></head>`);
     return content;
   }
 
   return content;
 };
 
-const minifyHtml = (rawContent, outputPath) => {
-  let content = rawContent;
+const minifyHtml = (content, outputPath) => {
   if (outputPath && outputPath.endsWith('.html')) {
     try {
       content = minify(content, {
@@ -82,10 +78,11 @@ const minifyHtml = (rawContent, outputPath) => {
       });
       return content;
     } catch (err) {
-      console.log('Could not minify:', outputPath);
-      return rawContent;
+      console.warn('Could not minify html for', outputPath);
     }
   }
+
+  return content;
 };
 
 module.exports = {
