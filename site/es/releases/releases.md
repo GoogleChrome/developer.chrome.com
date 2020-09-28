@@ -1,5 +1,5 @@
 ---
-title: 'Releases'
+title: 'Lanzamientos'
 description: ''
 layout: 'layouts/releases-landing.njk'
 i18n:
@@ -8,7 +8,7 @@ i18n:
     beta: Beta
     canary: Canary
     dev: Dev
-  channel_title: Channel
-  release_title: Release
-  stabledate_title: Stable Date
+  channel_title: Canal
+  release_title: Lanzamiento
+  stabledate_title: Fecha Estable
 ---

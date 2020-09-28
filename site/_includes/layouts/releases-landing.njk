@@ -1,5 +1,19 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-{{ content | safe }}
+
+{% for key, title in i18n.channels %}
+
+{% set release = chrome.channels[key] %}
+
+<h1>{{ title }}</h1>
+
+<dl>
+  <dt>{{ i18n.release_title }}</dt>
+  <dd>{{ release.mstone }}</dd>
+  <dt>{{ i18n.stabledate_title }}</dt>
+  <dd>{{ release.stable_date }}</dd>
+</dl>
+
+{% endfor %}
 {% endblock %}
