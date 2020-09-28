@@ -1,6 +1,6 @@
 const path = require('path');
 
-const findByUrl = (collection, url, lang = '') => {
+const findByUrl = (collection, url, locale = '') => {
   // Ensure urls are always absolute. This is because eleventy's collection
   // urls are always absolute so if we try to match against a relative url
   // we'll always miss.
@@ -16,11 +16,11 @@ const findByUrl = (collection, url, lang = '') => {
   // These don't need to end in a trailing slash because they'll be prepended
   // to the url which already ends in a trailing slash.
   // e.g. /ja/docs/extensions/
-  if (lang && !path.isAbsolute(lang)) {
-    lang = `/${lang}`;
+  if (locale && !path.isAbsolute(locale)) {
+    locale = path.join('/', locale);
   }
 
-  return collection.find(item => item.url === path.join(lang, url));
+  return collection.find(item => item.url === path.join(locale, url));
 };
 
 module.exports = {findByUrl};

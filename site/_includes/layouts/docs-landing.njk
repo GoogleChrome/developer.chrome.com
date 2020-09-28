@@ -6,7 +6,7 @@
 <h2>{{ headings.chrome }}</h2>
 <ul>
   {% for item in docs.landing.chrome %}
-    {% set project = helpers.findByUrl(collections.all, item.url, lang) %}
+    {% set project = helpers.findByUrl(collections.all, item.url, locale) %}
     <li>
       <a href="{{ project.url }}">{{ project.data.title }}</a>
     </li>
