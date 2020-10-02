@@ -13,6 +13,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 ul[class],
 ol[class],
@@ -30,9 +32,7 @@ html {
 
 /* Set core body defaults */
 body {
-  line-height: 1.5;
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
 }
 
 /* Remove default padding and list styles on ul, ol elements with a class attribute */

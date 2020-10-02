@@ -1,0 +1,11 @@
+// Global functions.
+
+// Pixels to ems.
+@function px-to-em($px) {
+  @return $px / $base-font-size * 1em;
+}
+
+// Pixels to rems.
+@function px-to-rem($px) {
+  @return $px / $base-font-size * 1rem;
+}

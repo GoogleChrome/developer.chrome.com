@@ -5,11 +5,26 @@ title: Demo
 {% extends 'layouts/base.njk' %}
 
 {% block content %}
-<article class="wrapper flow">
-  <h1>Kitchen Sink</h1>
-  <h2>In my quaint garden</h2>
-  <h3>Jaunty zinnias with flaunting phlox</h3>
-  <h4>Five or six big jet planes zoomed quickly by the new tower.</h4>
+<article class="wrapper flow flow-space-400 type">
+  <div class="flow flow-space-300">
+    
+    <h1 class="type--var-large">Variable Headline Large</h1>
+    <h1 class="type--var-small">Variable Headline Small</h1>
+    <h1 class="type--h1">Headline 1</h1>
+    <h2 class="type--h2">Headline 2</h2>
+    <h3 class="type--h3">Headline 3</h3>
+    <h4 class="type--h4">Headline 4</h4>
+    <h5 class="type--h5">Headline 5</h5>
+    <h6 class="type--h6">Headline 6</h6>
+    <p class="type--cta">CTA / Header link</p>
+    <p class="type--eyebrow">Eyebrow</p>
+    <p class="type--large">Body Large</p>
+    <p class="type">Body</p>
+    <p class="type--small">Body Small</p>
+    <p class="type--caption">Caption</p>
+    <p class="type--xsmall">Small Text</p>
+  </div>
+
   <p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p>
   <p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes
     below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags. </p>
@@ -125,7 +140,7 @@ font-family: Menlo, Monaco;
 line-height: 160%;
 }</pre>
   <figure>
-    <img src="https://webdev.imgix.net/images/headers/about.svg">
+    <img src="https://webdev.imgix.net/images/headers/about.svg" alt="">
     <figcaption>Fig1. A picture stolen from web.dev's about page.</figcaption>
   </figure>
   <form>

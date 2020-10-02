@@ -1,0 +1,118 @@
+// Defines typography placeholders (https://sass-lang.com/documentation/style-rules/placeholder-selectors)
+// These placeholders are safer to use with @extend as they don't get included
+// in the final CSS output and help us avoid duplication.
+%type {
+  &--headline {
+    @include apply-utility('font', 'google-sans');
+    @include apply-utility('weight', 'regular');
+  }
+
+  &--var-large {
+    @extend %type--headline;
+    font-size: 10vw;
+    line-height: 1.2em;
+    
+    @include media-query('md') {
+      font-size: 6vw;
+      line-height: 1.2em;
+    }
+
+    @include media-query('lg') {
+      font-size: 5vw;
+      line-height: 1.2em;
+    }
+  }
+
+  &--var-small {
+    @extend %type--headline;
+    font-size: 8vw;
+    line-height: 1.2em;
+    
+    @include media-query('md') {
+      font-size: 5vw;
+      line-height: 1.2em;
+    }
+
+    @include media-query('lg') {
+      font-size: 4vw;
+      line-height: 1.2em;
+    }
+  }
+
+  &--h1 {
+    @extend %type--headline;
+    @include flex-font((36px 40px), (48px 56px), (60px 72px));
+  }
+
+  &--h2 {
+    @extend %type--headline;
+    @include flex-font((28px 40px), (40px 48px), (48px 56px));
+  }
+
+  &--h3 {
+    @extend %type--headline;
+    @include flex-font((24px 32px), (32px 40px), (36px 44px));
+  }
+
+  &--h4 {
+    @extend %type--headline;
+    @include flex-font((18px 28px), (28px 36px), (28px 36px));
+  }
+
+  &--h5 {
+    @extend %type--headline;
+    @include flex-font((16px 28px), (20px 28px), (20px 28px));
+  }
+
+  &--h6 {
+    @extend %type--headline;
+    @include apply-utility('weight', 'medium');
+    @include flex-font((14px 24px), (16px 28px), (16px 28px));
+  }
+
+  &--cta {
+    @extend %type--headline;
+    @include apply-utility('weight', 'medium');
+    @include font-setup(16px, 24px);
+  }
+
+  &--eyebrow {
+    @extend %type--headline;
+    @include apply-utility('weight', 'medium');
+    @include apply-utility('case', 'upper');
+    @include font-setup(14px, 20px);
+  }
+
+  &--base {
+    @include apply-utility('font', 'base');
+    @include apply-utility('weight', 'regular');
+    @include font-setup(16px, 28px);
+    text-rendering: optimizeSpeed;
+  }
+
+  &--large {
+    @extend %type--base;
+    @include font-setup(18px, 28px);
+  }
+
+  &--small {
+    @extend %type--base;
+    @include font-setup(14px, 20px);
+  }
+
+  &--caption {
+    @extend %type--base;
+    @include font-setup(14px, 24px);
+  }
+
+  &--label {
+    @extend %type--base;
+    @include apply-utility('weight', 'medium');
+    @include font-setup(12px, 16px);
+  }
+
+  &--xsmall {
+    @extend %type--base;
+    @include font-setup(12px, 20px);
+  }
+}

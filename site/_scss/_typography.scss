@@ -1,48 +1,63 @@
+:root {
+  @extend %type--base;
+  font-size: 100%;
+}
+
+.type {
+  @extend %type--base;
+  position: relative;
+
+  @for $i from 1 through 6 {
+    &--h#{$i} {
+      @extend %type--h#{$i};
+    }
+
+    h#{$i}:not([class^='type--var']) {
+      @extend %type--h#{$i};
+    }
+  }
+
+  &--var-large {
+    @extend %type--var-large;
+  }
+
+  &--var-small {
+    @extend %type--var-small;
+  }
+
+  &--cta {
+    @extend %type--cta;
+  }
+
+  &--eyebrow {
+    @extend %type--eyebrow;
+  }
+
+  &--base {
+    @extend %type--base;
+  }
+
+  &--large {
+    @extend %type--large;
+  }
+
+  &--small {
+    @extend %type--small;
+  }
+
+  &--caption {
+    @extend %type--caption;
+  }
+
+  &--label {
+    @extend %type--label;
+  }
+
+  &--xsmall {
+    @extend %type--xsmall;
+  }
+}
+
 body {
-  line-height: 1.5;
-  /* stylelint-disable-next-line order/order */
-  @include apply-utility('font', 'base');
-}
-
-h1,
-h2,
-h3,
-h4 {
-  @include apply-utility('font', 'google-sans');
-  @include apply-utility('weight', 'normal');
-  @include apply-utility('leading', 'flat');
-}
-
-h1 {
-  font-size: get-size('700');
-}
-
-h2 {
-  font-size: get-size('600');
-}
-
-h3 {
-  font-size: get-size('500');
-}
-
-h4 {
-  font-size: get-size('400');
-}
-
-@include media-query('md') {
-  h1 {
-    font-size: get-size('900');
-  }
-
-  h2 {
-    font-size: get-size('800');
-  }
-
-  h3 {
-    font-size: get-size('700');
-  }
-
-  h4 {
-    font-size: get-size('600');
-  }
+  @extend %type--base;
 }

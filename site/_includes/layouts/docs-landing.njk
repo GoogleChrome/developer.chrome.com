@@ -7,10 +7,10 @@
 {% extends 'layouts/base.njk' %}
 
 {% block content %}
-<h1>{{ title }}</h1>
+<h1 class="type--h1">{{ title }}</h1>
 
 {% for key, value in i18n.projects -%}
-  <h2>{{ i18n.projects[key].heading }}</h2>
+  <h2 class="type--h2">{{ i18n.projects[key].heading }}</h2>
   <ul>
     {% for item in docs.projects[key] -%}
       {# Find the landing page for the project itself and grab its metadata #}

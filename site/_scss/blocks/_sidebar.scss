@@ -1,12 +1,12 @@
 // The sidebar navigation that appears on the left-hand side of the site.
 
 .sidebar {
-  padding: get-size('400') get-size('200');
+  padding: get-size(400) get-size(200);
 }
 
 .sidebar__icon {
-  height: get-size('400');
-  width: get-size('400');
+  height: get-size(400);
+  width: get-size(400);
 }
 
 // TODO (robdodson): I've asked Jiwoong if we can switch these to SVG that can

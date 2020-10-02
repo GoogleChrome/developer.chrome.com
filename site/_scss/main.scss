@@ -1,23 +1,23 @@
-// First up: config and functions
-@import 'config';
-
-// Next: pull in gorko for design tokens
-@import '../../node_modules/gorko/gorko';
+// Globals
+@import 'globals/colors';
+@import 'globals/vars';
+@import 'globals/functions';
+@import 'globals/mixins';
+@import 'globals/gorko';
+@import 'globals/extends';
 
 @import 'theme';
-
 @import 'reset';
-
 @import 'global';
 @import 'typography';
 
-// Import blocks
+// Blocks
 @import 'blocks/scaffold';
 @import 'blocks/top-nav';
 @import 'blocks/sidebar';
 @import 'blocks/main';
 
-// Import utilities
+// Utilities
 @import 'utilities/flow';
 @import 'utilities/radius';
 @import 'utilities/visually-hidden';

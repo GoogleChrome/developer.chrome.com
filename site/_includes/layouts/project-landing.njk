@@ -10,8 +10,8 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<h1>{{ title }}</h1>
-<p>{{ description }}</p>
+<h1 class="type--h1">{{ title }}</h1>
+<p class="type">{{ description }}</p>
 
 {# Book defines the table of contents that the project landing page displays. #}
 {% set book = docs[page.fileSlug].book %}

@@ -3,5 +3,5 @@
  * Applies a margin to sibling elements based on a --flow-space custom property.
  */
 .flow > * + * {
-  margin-top: var(--flow-space, get-size('600'));
+  margin-top: var(--flow-space, get-size(600));
 }
