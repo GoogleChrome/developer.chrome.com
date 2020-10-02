@@ -2,7 +2,10 @@
 title: 'Documentation'
 description: ''
 layout: 'layouts/docs-landing.njk'
-headings:
-  chrome: 'Chrome'
-  tools: 'Tools'
+i18n:
+  projects:
+    chrome:
+      heading: 'Chrome'
+    tools:
+      heading: 'Tools'
 ---

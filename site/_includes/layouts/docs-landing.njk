@@ -1,15 +1,26 @@
-{% extends "layouts/base.njk" %}
+{# 
+  This page grabs project data from _data/docs/projects.yml. It looks up each
+  project by its url (for example, it looks for /docs/extensions) and uses the
+  project's own frontmatter to render the project title and summary.
+#}
+
+{% extends 'layouts/base.njk' %}
 
 {% block content %}
 <h1>{{ title }}</h1>
 
-<h2>{{ headings.chrome }}</h2>
-<ul>
-  {% for item in docs.landing.chrome %}
-    {% set project = helpers.findByUrl(collections.all, item.url, locale) %}
-    <li>
-      <a href="{{ project.url }}">{{ project.data.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+{% for key, value in i18n.projects -%}
+  <h2>{{ i18n.projects[key].heading }}</h2>
+  <ul>
+    {% for item in docs.projects[key] -%}
+      {# Find the landing page for the project itself and grab its metadata #}
+      {% set projectUrl = helpers.join(page.url, item.url) %}
+      {% set project = helpers.findByUrl(collections.all, projectUrl) %}
+      <li>
+        {% include 'partials/project-icon.njk' %}
+      </li>
+    {%- endfor %}
+  </ul>
+{%- endfor %}
+
 {% endblock %}

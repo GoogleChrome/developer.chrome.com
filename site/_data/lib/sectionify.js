@@ -1,5 +1,4 @@
 const path = require('path');
-const yaml = require('require-yml');
 
 /**
  * Converts relative paths in section yaml files into nested paths.
@@ -58,27 +57,4 @@ const sectionify = (array, parent) => {
   return out;
 };
 
-/**
- * Takes a path to section data and grabs the matching yaml. Returns section
- * info with properly nested url paths.
- * @param {string} sectionPath The location in the _data directory to find the
- * section information. This argument will double as the url prefix sent to
- * the sectionify() function.
- * @param {string} pathOverride Only used for testing. This override will look
- * for a specific file path and ignore sectionPath.
- * @return {Section[]}
- */
-const getSections = (sectionPath, pathOverride = '') => {
-  let sections;
-  if (pathOverride) {
-    sections = yaml(pathOverride);
-  } else {
-    /* istanbul ignore next */
-    sections = yaml(
-      path.join(__dirname, '../_data', sectionPath, 'sections.yml')
-    );
-  }
-  return sectionify(sections, sectionPath);
-};
-
-module.exports = {sectionify, getSections};
+module.exports = {sectionify};

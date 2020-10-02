@@ -1,8 +1,25 @@
+{# 
+  This page grabs data from _data/docs/${projectName}/book.yml.
+  It turns this data into a set of links nested under this page's url.
+  e.g. /docs/extensions, /docs/extensions/overview, etc.
+
+  For each page in the set of links, it fetches the page's frontmatter and
+  uses that to render the title and summary for the page.
+#}
+
 {% extends "layouts/base.njk" %}
 
 {% block content %}
 <h1>{{ title }}</h1>
 <p>{{ description }}</p>
 
-{% include 'partials/project-sections.njk' %}
+{# Book defines the table of contents that the project landing page displays. #}
+{% set book = docs[page.fileSlug].book %}
+
+{# Convert the book into nested urls prefixed by the current project path. #}
+{% set sections = helpers.sectionify(book, page.url) %}
+
+{# Render nested sections. #}
+{% import 'macros/project-sections.njk' as macros with context %}
+{{ macros.projectSections(sections) }}
 {% endblock %}

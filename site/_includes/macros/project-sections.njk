@@ -5,14 +5,14 @@ Returns a link to the post and uses the post's title for link text.
 This will recursively keep outputting links depending on how many sections
 have been defined in the _data/docs/*.yml file for this project.
 #}
-{% macro projectItems(sections, lang = '') %}
+{% macro projectSections(sections) %}
 
 <ul>
   {% for item in sections %}
-    {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
+    {% set post = helpers.findByUrl(collections.all, item.url) %}
     <li><a href="{{ post.url }}">{{ post.data.title }}</a>
     {% if item.sections %}
-      {{ projectItems(item.sections, lang) }}
+      {{ projectSections(item.sections) }}
     {% endif %}
     </li>
   {% endfor %}

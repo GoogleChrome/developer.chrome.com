@@ -39,7 +39,8 @@ const prettyUrls = (content, outputPath) => {
     let href = $link.attr('href');
 
     if (!href) {
-      throw new Error(`Found a link in ${outputPath} with a missing href.`);
+      console.warn(`Found a link in ${outputPath} with a missing href.`);
+      return;
     }
 
     // Ignore external links

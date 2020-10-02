@@ -1,9 +1,5 @@
-const path = require('path');
 const test = require('ava');
-const {
-  sectionify,
-  getSections,
-} = require('../../../site/_functions/sectionify');
+const {sectionify} = require('../../../../site/_data/lib/sectionify');
 
 test('sectionify nests children under the parent path', t => {
   const section = [
@@ -64,20 +60,4 @@ test('sectionify throws if the parent argument is not an absolute path', t => {
     sectionify([], 'foo');
   });
   t.is(error.message, 'parent argument must be an absolute path.');
-});
-
-test('getSections returns properly prefixed urls', t => {
-  const expected = [
-    {
-      url: '/docs/extensions/what-are-extensions/',
-    },
-  ];
-
-  t.deepEqual(
-    getSections(
-      '/docs/extensions',
-      path.join(__dirname, 'fixtures', 'section.yml')
-    ),
-    expected
-  );
 });

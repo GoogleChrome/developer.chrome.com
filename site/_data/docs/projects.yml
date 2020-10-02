@@ -1,0 +1,4 @@
+chrome:
+  - url: extensions
+tools:
+  - url: devtools
