@@ -2,6 +2,18 @@
 
 {% block content %}
 <h1 class="type--h1">{{ title }}</h1>
+<h2>{{ i18n.headings['latest-news'] }}</h2>
 
-{{ content | safe }}
+{% set collectionName = 'blog-' + locale %}
+{% for post in collections[collectionName] %}
+  {% if loop.first and post.data.hero %}
+    {# Replace img with the line below once #145 lands. #}
+    {# {{ 'post.data.hero' | imgix('Hero image') | safe }} #}
+    <img src="{{ post.data.hero }}" alt="Hero image"/>
+  {% endif %}
+  <a href="{{ post.url }}"><h3>{{ post.data.title }}</h3></a>
+  <p>{{ post.data.snippet }}</p>
+  {% include 'partials/authors.njk' %}
+{% endfor %}
+
 {% endblock %}

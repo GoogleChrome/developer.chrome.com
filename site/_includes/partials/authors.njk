@@ -1,0 +1,5 @@
+{% import 'macros/author.njk' as macros with context %}
+
+{% for author in post.data.authors %}
+  {{ macros.author(author, post.date) }}
+{% endfor %}

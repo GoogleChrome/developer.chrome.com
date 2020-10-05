@@ -10,8 +10,10 @@ const {prettyUrls} = require('./site/_transforms/pretty-urls');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const optimizeHtmlPlugin = require('./site/_plugins/optimize-html');
 
+// Supported locales
+const locales = require('./site/_data/site').locales;
+
 // Collections
-const blogCollection = require('./site/_collections/blog');
 const feedsCollection = require('./site/_collections/feeds');
 
 // Create a helpful production flag
@@ -35,7 +37,9 @@ module.exports = config => {
   config.addPlugin(rssPlugin);
 
   // Add collections
-  config.addCollection('blog', blogCollection);
+  locales.forEach(locale => config.addCollection(`blog-${locale}`, collections => {
+    return collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).reverse();
+  }));
   config.addCollection('feeds', feedsCollection);
 
   // Add filters

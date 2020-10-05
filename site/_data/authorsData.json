@@ -1,0 +1,35 @@
+{
+  "jakearchibald": {
+    "name": {
+      "given": "Jake",
+      "family": "Archibald"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "UK",
+    "homepage": "https://jakearchibald.com/",
+    "twitter": "jaffathecake",
+    "descriptions": {
+      "en": "Human boy working on web standards at Google"
+    }
+  },
+  "kaycebasques": {
+    "name": {
+      "given": "Kayce",
+      "family": "Basques"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "US",
+    "twitter": "kaycebasques",
+    "github": "kaycebasques",
+    "glitch": "kaycebasques",
+    "descriptions": {
+      "en": "Technical Writer, Chrome DevTools & Lighthouse"
+    }
+  }
+}

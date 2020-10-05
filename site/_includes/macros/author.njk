@@ -1,0 +1,13 @@
+{#
+Renders an author info snippet.
+#}
+{% macro author(authorId, date) %}
+
+<div>
+  {% set author = authorsData[authorId] %}
+  <img src="/{{ authorId}}.png" alt="{{ author.name.given }} {{ author.name.family }} thumbnail" />
+  <p> {{ author.name.given }} {{ author.name.family }}</p>
+  <p> {{ author.org.unit }} {{ author.org.name }} {{ date.toDateString() }}</p>
+</div>
+
+{% endmacro %}
