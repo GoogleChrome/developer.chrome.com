@@ -99,13 +99,10 @@ test('ignores external links', t => {
   t.assert(prettyUrls(content, outputPath) === expected);
 });
 
-test('throws if it finds a link without an href', t => {
+test('ignores links without an href', t => {
   const content = template('<a></a>');
+  const expected = template('<a></a>');
   const outputPath = '/en/bar/index.html';
 
-  const error = t.throws(() => {
-    prettyUrls(content, outputPath);
-  });
-
-  t.is(error.message, `Found a link in ${outputPath} with a missing href.`);
+  t.assert(prettyUrls(content, outputPath) === expected);
 });
