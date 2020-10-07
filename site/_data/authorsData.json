@@ -13,7 +13,8 @@
     "twitter": "jaffathecake",
     "descriptions": {
       "en": "Human boy working on web standards at Google"
-    }
+    },
+    "image": "https://webdev.imgix.net/images/authors/jakearchibald@2x.jpg"
   },
   "kaycebasques": {
     "name": {
@@ -30,6 +31,7 @@
     "glitch": "kaycebasques",
     "descriptions": {
       "en": "Technical Writer, Chrome DevTools & Lighthouse"
-    }
+    },
+    "image": "https://webdev.imgix.net/images/authors/kaycebasques@2x.jpg"
   }
 }
