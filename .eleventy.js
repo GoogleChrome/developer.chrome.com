@@ -4,6 +4,10 @@ const yaml = require('js-yaml');
 const {absolute} = require('./site/_filters/absolute');
 const {i18n} = require('./site/_filters/i18n');
 
+// Shortcodes
+const {img} = require('./site/_shortcodes/img');
+const {video} = require('./site/_shortcodes/video');
+
 // Transforms
 const {prettyUrls} = require('./site/_transforms/pretty-urls');
 
@@ -46,6 +50,10 @@ module.exports = config => {
   // Add filters
   config.addFilter('absolute', absolute);
   config.addFilter('i18n', i18n);
+
+  // Add shortcodes
+  config.addShortcode('img', img);
+  config.addShortcode('video', video);
 
   // Add transforms
   config.addTransform('prettyUrls', prettyUrls);
