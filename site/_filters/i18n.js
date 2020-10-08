@@ -66,7 +66,6 @@ const data = {i18n: walk(path.join(__dirname, '..', '_data', 'i18n'))};
  * @return {string}
  */
 const i18n = (pth, locale = 'en') => {
-  console.log(JSON.stringify(data));
   return get(data, pth)[locale];
 };
 
