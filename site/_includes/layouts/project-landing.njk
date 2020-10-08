@@ -19,6 +19,8 @@
 {# Convert the book into nested urls prefixed by the current project path. #}
 {% set sections = helpers.sectionify(book, page.url) %}
 
+{{ 'i18n.docs.extensions' | i18n }}
+
 {# Render nested sections. #}
 {% import 'macros/project-sections.njk' as macros with context %}
 {{ macros.projectSections(sections) }}

@@ -2,6 +2,7 @@ const yaml = require('js-yaml');
 
 // Filters
 const {absolute} = require('./site/_filters/absolute');
+const {i18n} = require('./site/_filters/i18n');
 
 // Transforms
 const {prettyUrls} = require('./site/_transforms/pretty-urls');
@@ -44,6 +45,7 @@ module.exports = config => {
 
   // Add filters
   config.addFilter('absolute', absolute);
+  config.addFilter('i18n', i18n);
 
   // Add transforms
   config.addTransform('prettyUrls', prettyUrls);
