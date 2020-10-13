@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc.njk'
-title: Hola
+title: Hello
 description: Foo bar baz
 ---
 

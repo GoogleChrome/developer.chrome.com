@@ -14,6 +14,12 @@
       <link rel="stylesheet" href="/css/main.css">
     {% endif %}
 
+    {% if process.env.NODE_ENV === 'production' %}
+      <script type="module" src="{{ helpers.hashAsset('/js/main.js') }}"></script>
+    {% else %}
+      <script type="module" src="/js/main.js"></script>
+    {% endif %}
+
     {# Add a facility for pages to declare an array of script paths. #}
     {# Note: We could also use this approach to load module/nomodule scripts #}
     {# https://philipwalton.com/articles/deploying-es2015-code-in-production-today/ #}
@@ -21,9 +27,9 @@
       {% for item in pageScripts %}
         {# If this is a production build, hash the assets to invalidate caches. #}
         {% if process.env.NODE_ENV === 'production' %}
-          <script type="module" src="/{{ helpers.hashAsset(item) }}"></script>
+          <script type="module" src="{{ helpers.hashAsset(item) }}"></script>
         {% else %}
-          <script type="module" src="/{{ item }}"></script>
+          <script type="module" src="{{ item }}"></script>
         {% endif %}
       {% endfor %}
     {% endif %}
@@ -32,14 +38,14 @@
   <body>
     <div class="scaffold">
       {% block header %}
-        {% include 'partials/header.njk' %}
+        {% include 'partials/top-nav.njk' %}
       {% endblock %}
 
       {% block sidebar %}
-        {% include 'partials/sidebar.njk' %}
+        {% include 'partials/side-nav.njk' %}
       {% endblock %}
 
-      <main tabindex="-1" id="main-content">
+      <main tabindex="-1" id="main-content" data-side-nav-inert>
         {% block content %}{% endblock %}
       </main>
 

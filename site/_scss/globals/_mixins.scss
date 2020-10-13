@@ -39,3 +39,28 @@
     line-height: nth($lg, 2) / nth($lg, 1);
   }
 }
+
+// Sets elevation styles.
+@mixin elevation-setup($key-offset-y, $key-spread, $ambient-offset-y, $ambient-spread, $ambient-blur) {
+  $shadow-color: rgba(get-color('grey-800'), 0.3);
+  $ambient-color: rgba(get-color('grey-800'), 0.15);
+  box-shadow: 0 $key-offset-y $key-spread 0 $shadow-color, 0 $ambient-offset-y $ambient-spread $ambient-blur $ambient-color;
+}
+
+// Sets styles for a specific level of elevation (between 0-5).
+@mixin elevation($level) {
+  @if ($level == 1) {
+    @include elevation-setup(1px, 2px, 1px, 3px, 1px);
+  } @else if ($level == 2) {
+    @include elevation-setup(1px, 2px, 2px, 6px, 2px);
+  } @else if ($level == 3) {
+    @include elevation-setup(1px, 3px, 4px, 8px, 3px);
+  } @else if ($level == 4) {
+    @include elevation-setup(2px, 3px, 6px, 10px, 4px);
+  } @else if ($level == 5) {
+    @include elevation-setup(4px, 4px, 8px, 12px, 6px);
+  } @else {
+    // Elevation level 0 is just a border
+    border: 1px solid get-color('grey-300');
+  }
+}

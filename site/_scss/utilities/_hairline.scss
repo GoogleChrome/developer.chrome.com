@@ -1,0 +1,7 @@
+$directions: 'top', 'right', 'bottom', 'left';
+
+@each $direction in $directions {
+  .hairline-#{$direction} {
+    border-#{$direction}: 1px solid var(--color-hairline);
+  }
+}

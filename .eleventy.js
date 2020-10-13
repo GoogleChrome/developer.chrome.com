@@ -1,7 +1,7 @@
 const yaml = require('js-yaml');
 
 // Filters
-const {absolute} = require('./site/_filters/absolute');
+const {absolute, trailingSlash, leadingAndTrailingSlash} = require('./site/_filters/urls');
 const {i18n} = require('./site/_filters/i18n');
 
 // Shortcodes
@@ -49,6 +49,8 @@ module.exports = config => {
 
   // Add filters
   config.addFilter('absolute', absolute);
+  config.addFilter('trailingSlash', trailingSlash);
+  config.addFilter('leadingAndTrailingSlash', leadingAndTrailingSlash);
   config.addFilter('i18n', i18n);
 
   // Add shortcodes

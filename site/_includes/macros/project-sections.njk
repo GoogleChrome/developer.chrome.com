@@ -9,12 +9,15 @@ have been defined in the _data/docs/*.yml file for this project.
 
 <ul>
   {% for item in sections %}
-    {% set post = helpers.findByUrl(collections.all, item.url) %}
-    <li><a href="{{ post.url }}">{{ post.data.title }}</a>
     {% if item.sections %}
-      {{ projectSections(item.sections) }}
+      <li>
+        {{ item.title | i18n }}
+        {{ projectSections(item.sections) }}
+      </li>
+    {% elif item.url %}
+      {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
+      <li><a href="{{ post.url }}">{{ post.data.title }}</a>
     {% endif %}
-    </li>
   {% endfor %}
 </ul>
 

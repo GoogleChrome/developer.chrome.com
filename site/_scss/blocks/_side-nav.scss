@@ -1,0 +1,128 @@
+/* purgecss start ignore */
+$side-nav-transition-speed: 0.2s;
+$side-nav-transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+// We always want the entirety of the side-nav.scss to be inlined in the page
+// so we tell purgecss to "ignore" it—in other words "don't purge it".
+side-nav {
+  @include apply-utility('stack', '700');
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+
+  @include media-query('lg') {
+    pointer-events: auto;
+    position: static;
+    visibility: visible;
+  }
+
+  // Create an overlay which will cover the site and act as a click target
+  // to close the side-nav when it's expanded.
+  &::before {
+    background: rgba(get-color('black'), 0.4);
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity $side-nav-transition-speed $side-nav-transition-ease;
+    width: 100%;
+
+    @include media-query('lg') {
+      display: none;
+    }
+  }
+
+  navigation-tree,
+  navigation-rail {
+    @include media-query('lg') {
+      // Force the navigation-tree and navigation rail to always be visible on
+      // desktop, regardless of the states that they're in on mobile.
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+    }
+  }
+}
+
+side-nav[expanded] {
+  pointer-events: auto;
+  visibility: visible;
+
+  &::before {
+    opacity: 1;
+  }
+
+  .side-nav__container {
+    transform: translate(0, 0);
+  }
+}
+
+.side-nav__container {
+  @include elevation(2);
+  background: var(--color-bg);
+  height: 100%;
+  overflow: hidden;
+  transform: translate(-102%, 0); // 102% to keep box-shadow offscreen
+  transition: transform $side-nav-transition-speed $side-nav-transition-ease;
+  transition: none;
+  width: px-to-rem(360px);
+
+  @include media-query('lg') {
+    box-shadow: none;
+    overflow: auto;
+    transform: none;
+    width: auto;
+  }
+}
+
+.side-nav__view {
+  transition: none;
+}
+
+side-nav[animating] {
+  visibility: visible;
+
+  .side-nav__container {
+    transition: transform $side-nav-transition-speed $side-nav-transition-ease;
+  }
+  
+  .side-nav__view {
+    transition: transform $side-nav-transition-speed $side-nav-transition-ease,
+                opacity $side-nav-transition-speed $side-nav-transition-ease; // stylelint-disable-line
+    visibility: visible;
+  }
+}
+
+side-nav[view='project'] {
+  navigation-rail {
+    opacity: 0;
+    transform: translate(100%, 0);
+    visibility: hidden;
+  }
+
+  navigation-tree {
+    opacity: 1;
+    transform: translate(0, -100%);
+  }
+}
+
+side-nav[view='site'] {
+  navigation-rail {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  navigation-tree {
+    opacity: 0;
+    transform: translate(-100%, -100%);
+    visibility: hidden;
+  }
+}
+/* purgecss end ignore */

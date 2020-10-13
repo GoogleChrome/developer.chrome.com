@@ -1,0 +1,15 @@
+home:
+  text: i18n.nav.side_nav.home
+  url: /
+
+docs:
+  text: i18n.nav.side_nav.docs
+  url: /docs/
+
+blog:
+  text: i18n.nav.side_nav.blog
+  url: /blog/
+
+releases:
+  text: i18n.nav.side_nav.releases
+  url: /releases/

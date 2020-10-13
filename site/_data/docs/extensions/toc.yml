@@ -1,0 +1,8 @@
+- url: /docs/extensions/what-are-extensions
+- title: i18n.docs.extensions.overview
+  sections:
+    - url: /docs/extensions/overview/hello
+    - title: i18n.docs.extensions.guides
+      sections:
+        - url: /docs/extensions/overview/guides/get-started
+- url: /docs/extensions/policies

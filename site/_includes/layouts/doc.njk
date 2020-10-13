@@ -1,6 +1,13 @@
 {% extends "layouts/base.njk" %}
 
+{% block sidebar %}
+  {# toc defines the table of contents that appears to the left of the documentation. #}
+  {% set toc = docs[project_key].toc %}
+  {% include 'partials/side-nav.njk' %}
+{% endblock %}
+
 {% block content %}
 <h1 class="type--h1">{{ title }}</h1>
+
 {{ content | safe }}
 {% endblock %}

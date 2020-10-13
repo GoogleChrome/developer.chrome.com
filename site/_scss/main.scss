@@ -12,13 +12,18 @@
 @import 'typography';
 
 // Blocks
+@import 'blocks/button';
+@import 'blocks/main';
 @import 'blocks/scaffold';
 @import 'blocks/top-nav';
-@import 'blocks/sidebar';
-@import 'blocks/main';
+@import 'blocks/navigation-rail';
+@import 'blocks/navigation-tree';
+@import 'blocks/side-nav';
 
 // Utilities
 @import 'utilities/flow';
 @import 'utilities/radius';
 @import 'utilities/visually-hidden';
 @import 'utilities/wrapper';
+@import 'utilities/hairline';
+@import 'utilities/elevation';

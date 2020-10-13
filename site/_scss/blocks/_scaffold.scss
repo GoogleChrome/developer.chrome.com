@@ -7,22 +7,22 @@
   min-height: 100vh;
 }
 
-.scaffold header {
+.scaffold > top-nav {
   grid-column: 1 / 4;
 }
 
-.scaffold .sidebar {
+.scaffold > side-nav {
   grid-column: 1 / 2;
 }
 
-.scaffold main {
+.scaffold > main {
   grid-column: 2 / 3;
 }
 
-.scaffold .toc {
+.scaffold > .toc {
   grid-column: 3 / 4;
 }
 
-.scaffold footer {
+.scaffold > footer {
   grid-column: 1 / 4;
 }

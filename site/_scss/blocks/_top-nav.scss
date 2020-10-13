@@ -1,7 +1,14 @@
-.top-nav {
-  border-bottom: 1px solid var(--color-hairline);
-  display: grid;
-  gap: get-size(300);
-  grid-template-columns: auto auto 1fr auto;
-  padding: get-size(300) get-size(400);
+top-nav {
+  nav {
+    display: grid;
+    gap: get-size(300);
+    grid-template-columns: auto auto 1fr auto;
+    padding: get-size(200) get-size(400) get-size(200) get-size(200);
+  }
+
+  .top-nav__hamburger {
+    @include media-query('lg') {
+      display: none;
+    }
+  }
 }

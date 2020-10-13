@@ -1,0 +1,14 @@
+<navigation-tree class="side-nav__view height-full" aria-label="project" tabindex="-1">
+  <div class="display-flex lg:display-none align-center pad-200 hairline-bottom">
+    <button class="navigation-tree__back button display-flex align-center justify-center width-700 height-700" aria-label="back">
+      {% include 'icons/arrow-back.svg' %}
+    </button>
+    <div class="navigation-tree__title pad-left-200 pad-right-200 user-select-none">{{ project_name }}</div>
+  </div>
+
+  <div class="display-flex direction-column pad-top-300">
+    {# Render nested sections. #}
+    {% import 'macros/side-nav-sections.njk' as macros with context %}
+    {{ macros.sideNavSections(toc) }}
+  </div>
+</navigation-tree>

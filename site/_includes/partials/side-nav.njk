@@ -1,0 +1,13 @@
+<side-nav type="{{ 'project' if toc else 'site' }}">
+  <div class="side-nav__container lg:display-flex">
+    {% include 'partials/navigation-rail.njk' %}
+    {#
+      If there's a toc in the global data scope then it implies that we're
+      on an individual doc page and need to display the project's ToC on
+      the left-hand side.
+    #}
+    {% if toc %}
+      {% include 'partials/navigation-tree.njk' %}
+    {% endif %}
+  </div>
+</side-nav>

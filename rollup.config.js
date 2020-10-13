@@ -2,6 +2,10 @@
 // for using third party modules in node_modules
 import {nodeResolve} from '@rollup/plugin-node-resolve';
 
+// A Rollup plugin to convert CommonJS modules to ES6, so they can be included
+// in a Rollup bundle
+import commonjs from '@rollup/plugin-commonjs';
+
 // A Rollup plugin to minify generated ES bundles. Uses terser under the hood.
 import {terser} from 'rollup-plugin-terser';
 
@@ -15,7 +19,7 @@ const devConfig = {
     // By default rollup clears the console on every build. This disables that.
     clearScreen: false,
   },
-  plugins: [nodeResolve()],
+  plugins: [nodeResolve(), commonjs()],
 };
 
 const productionConfig = {
@@ -24,7 +28,7 @@ const productionConfig = {
     dir: 'dist/js',
     format: 'esm',
   },
-  plugins: [nodeResolve(), terser()],
+  plugins: [nodeResolve(), commonjs(), terser()],
 };
 
 /**

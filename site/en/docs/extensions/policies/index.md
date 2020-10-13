@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc.njk'
-title: Overview
+title: Policies
 description: Foo bar baz
 ---
 
-Overview of extensions
+Extension policies

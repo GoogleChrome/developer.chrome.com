@@ -1,0 +1,53 @@
+// These styles are shared by the navigation-rail and navigation-tree components
+
+%navigation {
+  &__title {
+    // A bit of a quirky line-height in order to achieve a 1.5 line-height so
+    // the text lines up evenly with the svg icon.
+    @include font-setup(18px, 27px);
+  }
+
+  &__link {
+    align-items: center;
+    border-radius: 0 100px 100px 0;
+    color: var(--color-text);
+    display: flex;
+    padding: px-to-rem(12px) 0.5rem px-to-rem(12px) 0;
+    text-decoration: none;
+    user-select: none;
+
+    &:hover {
+      background: var(--color-side-nav-hover);
+    }
+  
+    &[data-state='active'] {
+      background: var(--color-secondary);
+      color: var(--color-side-nav-active);
+    }
+  
+    // If there is only one icon then move it over to
+    // fill the space left by the missing toggle.
+    > svg:only-of-type {
+      margin-left: 1.5rem;
+    }
+  
+    // The last child is always the label which
+    // should have a little bit of left margin so
+    // its left edge lines up with the menu title.
+    > :last-child {
+      margin-left: px-to-rem(20px);
+
+      // stylelint-disable-next-line max-nesting-depth
+      @include media-query('lg') {
+        margin-left: 1rem;
+      }
+    }
+  
+    // If there is only one child in the entire
+    // link then move it all the way over so its
+    // left edge veritcally lines up with its peers.
+    > :only-child {
+      margin-left: 4rem;
+    }
+  }
+}

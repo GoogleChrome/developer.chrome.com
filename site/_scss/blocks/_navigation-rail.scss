@@ -1,0 +1,75 @@
+/* purgecss start ignore */
+navigation-rail {
+  @include media-query('lg') {
+    border-right: 1px solid var(--color-hairline);
+  }
+}
+
+.navigation-rail__title {
+  @extend %navigation__title;
+}
+
+.navigation-rail__link {
+  @extend %navigation__link;
+
+  @include media-query('lg') {
+    flex-direction: column;
+    padding: 0;
+    position: relative;
+
+    + .navigation-rail__link {
+      --flow-space: 1.5rem;
+      margin-top: var(--flow-space);
+    }
+  }
+
+  &:hover {
+    @include media-query('lg') {
+      background: transparent;
+      // Define an explicit z-index so we can position the ::before
+      // element behind it.
+      z-index: 0; 
+
+      // stylelint-disable max-nesting-depth
+      &::before {
+        background: var(--color-side-nav-hover);
+        border-radius: 50%;
+        content: '';
+        height: 40px;
+        position: absolute;
+        top: -#{get-size(200)};
+        width: 40px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &[data-state='active'] {
+    @include media-query('lg') {
+      background: transparent;
+
+      > svg {
+        fill: var(--color-primary);
+      }
+    }
+  }
+
+  > svg:only-of-type {
+    @include media-query('lg') {
+      margin-left: 0;
+    }
+  }
+
+  > :last-child {
+    @include media-query('lg') {
+      margin-left: 0;
+    }
+  }
+
+  > :only-child {
+    @include media-query('lg') {
+      margin-left: 0;
+    }
+  }
+}
+/* purgecss end ignore */

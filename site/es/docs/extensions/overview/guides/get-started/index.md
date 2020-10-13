@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/doc.njk'
-title: Overview
+title: Get Started
 description: Foo bar baz
 ---
 
-Overview of extensions
+Getting started!

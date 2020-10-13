@@ -19,6 +19,8 @@ const get = require('lodash.get');
 const fs = require('fs');
 const path = require('path');
 
+const defaultLocale = 'en';
+
 /**
  * Recursively walk a directory and create an object out of the file tree.
  * For example: _data/i18n/foo/bar/baz.yml would produce:
@@ -66,7 +68,11 @@ const data = {i18n: walk(path.join(__dirname, '..', '_data', 'i18n'))};
  * @return {string}
  */
 const i18n = (pth, locale = 'en') => {
-  return get(data, pth)[locale];
+  try {
+    return get(data, pth)[locale] || get(data, pth)[defaultLocale];
+  } catch (err) {
+    throw new Error(`Could not find i18n result for ${pth}`);
+  }
 };
 
 module.exports = {i18n};

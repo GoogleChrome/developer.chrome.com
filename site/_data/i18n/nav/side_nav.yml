@@ -1,0 +1,15 @@
+home:
+  en: 'Home'
+  es: 'Inicio'
+
+docs:
+  en: 'Docs'
+  es: 'Docs'
+
+blog:
+  en: 'Blog'
+  es: 'Blog'
+
+releases:
+  en: 'Releases'
+  es: 'Versiones'

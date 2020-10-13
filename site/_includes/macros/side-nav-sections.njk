@@ -1,0 +1,31 @@
+{#
+Finds a post by its url (including language specific urls).
+Returns a link to the post and uses the post's title for link text.
+
+This will recursively keep outputting links depending on how many sections
+have been defined in the _data/docs/*.yml file for this project.
+#}
+{% macro sideNavSections(sections) %}
+
+{% for item in sections %}
+  {% if item.sections %}
+    {% if helpers.hasActiveLink(item.sections, page.url, locale) %}
+      <button class="navigation-tree__link button" data-expandable aria-expanded="true">
+    {% else %}
+      <button class="navigation-tree__link button" data-expandable aria-expanded="false">
+    {% endif %}
+      {% include 'icons/arrow-drop-down.svg' %}
+      <span>{{ item.title | i18n }}</span>
+    </button>
+    <div class="navigation-tree__nested">
+      {{ sideNavSections(item.sections) }}
+    </div>
+  {% elif item.url %}
+    {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
+    <a href="{{ post.url }}" class="navigation-tree__link" {{ helpers.getLinkActiveState(post.url, page.url) | safe }}>
+      <span>{{ post.data.title }}</span>
+    </a>
+  {% endif %}
+{% endfor %}
+
+{% endmacro %}

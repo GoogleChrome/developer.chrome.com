@@ -4,15 +4,17 @@
   --color-bg: #{get-color('white')};
   --color-text: #{get-color('grey-800')};
   --color-secondary-text: #{get-color('grey-700')};
+  --color-primary: #{get-color('blue-600')};
+  --color-secondary: #{get-color('blue-50')};
+  --color-tertiary: #{get-color('green-600')};
+  --color-quaternary: #{get-color('green-600')};
   --color-hairline: #{get-color('grey-300')};
   --color-selection-text: #{get-color('white')};
   --color-selection-bg: #{get-color('grey-800')};
   --color-error-bg: #{get-color('red-600')};
   --color-error-text: #{get-color('white')};
-  --color-primary: #{get-color('blue-600')};
-  --color-secondary: #{get-color('blue-50')};
-  --color-tertiary: #{get-color('green-600')};
-  --color-quaternary: #{get-color('green-600')};
+  --color-side-nav-hover: #{get-color('grey-100')};
+  --color-side-nav-active: #{get-color('blue-700')};
 }
 
 @mixin dark-mode() {
@@ -60,9 +62,4 @@ body {
 
 a:not([class]) {
   color: var(--color-primary);
-}
-
-:focus {
-  outline: 2px dashed var(--color-primary);
-  outline-offset: 0.25rem;
 }

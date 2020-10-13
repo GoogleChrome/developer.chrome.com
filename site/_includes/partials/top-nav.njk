@@ -1,7 +1,7 @@
-<header>
-  <nav class="top-nav" aria-label="Home and search">
+<top-nav role="banner" data-side-nav-inert>
+  <nav class="hairline-bottom" aria-label="Home and search">
     {# Hamburger button #}
-    <button aria-label="menu">
+    <button class="top-nav__hamburger button width-700 height-700" aria-label="menu">
       <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
     </button>
 
@@ -15,8 +15,8 @@
     <input type="search" aria-label="search" placeholder="Search docs, blogs and more">
 
     {# Language picker #}
-    <select aria-label="Language">
+    <select aria-label="language">
       <option value="">English</option>
     </select>
   </nav>
-</header>
+</top-nav>

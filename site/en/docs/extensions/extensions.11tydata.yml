@@ -1,0 +1,5 @@
+# Used to fetch project data from _data/docs/[project_key]
+project_key: 'extensions'
+
+# Used to display the project name on its landing page and in the side-nav
+project_name: 'Extensions'

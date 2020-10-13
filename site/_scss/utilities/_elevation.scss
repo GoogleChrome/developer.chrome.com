@@ -1,0 +1,7 @@
+// Utility clases to setup specific levels of elevation (between 0-5).
+
+@for $i from 0 through 5 {
+  .elevation--#{$i} {
+    @include elevation($i);
+  }
+}

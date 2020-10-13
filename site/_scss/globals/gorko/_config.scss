@@ -17,6 +17,7 @@ $gorko-base-size: 1rem;
 * your whole project.
 */
 $gorko-size-scale: (
+  0:  0,                          // 0
   50: $gorko-base-size * 0.125,   // 2px
   100: $gorko-base-size * 0.25,   // 4px
   200: $gorko-base-size * 0.5,    // 8px
@@ -86,7 +87,7 @@ $gorko-config: (
       'block': 'block',
       'flex': 'flex',
       'inline-flex': 'inline-flex',
-      'hide': 'none'
+      'none': 'none'
     ),
     'output': 'responsive',
     'property': 'display'
@@ -105,6 +106,11 @@ $gorko-config: (
     ),
     'output': 'standard',
     'property': 'font-family',
+  ),
+  'gap': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'margin',
   ),
   'gap-top': (
     'items': $gorko-size-scale,
@@ -125,6 +131,16 @@ $gorko-config: (
     'items': $gorko-size-scale,
     'output': 'responsive',
     'property': 'margin-left',
+  ),
+  'height': (
+    'items': map-merge($gorko-size-scale, (
+      'full': '100%',
+      'half': percentage(1/2),
+      'quarter': percentage(1/4),
+      'third': percentage(1/3)
+    )),
+    'output': 'responsive',
+    'property': 'height'
   ),
   'justify': (
     'items': (
@@ -154,6 +170,11 @@ $gorko-config: (
     ),
     'output': 'responsive',
     'property': 'max-width',
+  ),
+  'pad': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'padding',
   ),
   'pad-top': (
     'items': $gorko-size-scale,
@@ -191,6 +212,14 @@ $gorko-config: (
     'output': 'standard',
     'property': 'z-index'
   ),
+  'user-select': (
+    'items': (
+      'none': 'none',
+      'auto': 'auto'
+    ),
+    'output': 'standard',
+    'property': 'user-select',
+  ),
   'weight': (
     'items': (
       'regular': 400,
@@ -200,12 +229,12 @@ $gorko-config: (
     'property': 'font-weight',
   ),
   'width': (
-    'items': (
+    'items': map-merge($gorko-size-scale, (
       'full': '100%',
       'half': percentage(1/2),
       'quarter': percentage(1/4),
       'third': percentage(1/3)
-    ),
+    )),
     'output': 'responsive',
     'property': 'width'
   ),
