@@ -1,0 +1,42 @@
+// The .responsive-table class will be added by an eleventy transform.
+// Authors should not need to manually add it themselves.
+.responsive-table {
+  min-width: px-to-rem(512px);
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    height: px-to-rem(6px);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-hairline);
+    border-radius: 8px;
+  }
+}
+
+table:not([class]) {
+  border: 1px solid var(--color-hairline);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  overflow-x: auto;
+}
+
+th:not([class]) {
+  @include apply-utility('weight', 'medium');
+}
+
+th:not([class]),
+td:not([class]) {
+  padding: get-size(300);
+}
+
+tr:not([class]):not(:last-of-type) {
+  border-bottom: 1px solid var(--color-hairline);
+}
+
+caption:not([class]) {
+  border-top: 1px solid var(--color-hairline);
+  padding: get-size(300);
+}

@@ -4,5 +4,7 @@ permalink: false
 
 This CSS is organized aroud the <http://cube.fyi/> structure.
 
-To simplify our builds, we don't co-locate our js and scss for web components.
-Instead, we use js/web-components and scss/web-components.
+A few rules:
+
+- When using a color, always use one of the color variables from _theme.scss.
+This will ensure that the color changes when the user switches to dark mode.

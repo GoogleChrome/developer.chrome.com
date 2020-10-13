@@ -1,5 +1,5 @@
 ---
-title: Demo
+title: Style guide
 ---
 
 {% extends 'layouts/base.njk' %}
@@ -31,7 +31,18 @@ title: Demo
 
   <h2>In my quaint garden</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolore voluptatem et enim ab itaque assumenda nulla? Praesentium repellendus iure corporis illo, ut facilis voluptas eveniet non necessitatibus reprehenderit quia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius facilis deserunt tempore, quidem sequi quos rerum. Eos excepturi maiores laudantium veritatis alias amet placeat perspiciatis natus error dolore, nulla consequuntur?</p>
+  <figure>
+    <img src="https://webdev.imgix.net/images/headers/about.svg" alt="">
+    <figcaption>Fig1. A picture stolen from web.dev's about page.</figcaption>
+  </figure>
   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, culpa quo totam alias maxime expedita porro ut perspiciatis nulla hic, sed obcaecati voluptates sunt dolores, distinctio illo cumque voluptate explicabo!</p>
+  
+  <figure class="type--full-bleed">
+    <img src="./a.jpg" alt="">
+  </figure>
+  
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, culpa quo totam alias maxime expedita porro ut perspiciatis nulla hic, sed obcaecati voluptates sunt dolores, distinctio illo cumque voluptate explicabo!</p>
+
 
   <h2>In my quaint garden</h2>
   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, dolor. Consectetur, unde alias! Omnis voluptates pariatur doloremque saepe sapiente unde nesciunt reprehenderit eos itaque sint sed, tenetur dolorum repellat corrupti?</p>
@@ -41,12 +52,12 @@ title: Demo
   <blockquote>
     <p>This is a mult-line blockquote with a cite reference. People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick
       carefully. I’m actually as proud of the things we haven’tdone as the things I have done. Innovation is saying no to 1,000 things.
-      <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite>
     </p>
+    <cite>Steve Jobs – Apple Worldwide Developers’ Conference, 1997</cite>
   </blockquote>
-  <table>
-    <caption>Tables can have captions now.</caption>
-    <tbody>
+
+  <div class="responsive-table">
+    <table>
       <tr>
         <th>Person</th>
         <th>Number</th>
@@ -55,37 +66,69 @@ title: Demo
       <tr>
         <td>Someone Lastname</td>
         <td>900</td>
-        <td>Nullam quis risus eget urna mollis ornare vel eu leo.</td>
+        <td>Nullam</td>
       </tr>
       <tr>
         <td><a href="#">Person Name</a></td>
         <td>1200</td>
-        <td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td>
+        <td>Vestibulum</td>
       </tr>
       <tr>
         <td>Another Person</td>
         <td>1500</td>
-        <td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+        <td>Vivamus</td>
       </tr>
       <tr>
         <td>Last One</td>
         <td>2800</td>
-        <td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td>
+        <td>Morbi</td>
       </tr>
-    </tbody>
-  </table>
+    </table>
+  </div>
+
+  <div class="responsive-table">
+    <table>
+      <caption>Tables can have captions now.</caption>
+      <tbody>
+        <tr>
+          <th>Person</th>
+          <th>Number</th>
+          <th>Third Column</th>
+        </tr>
+        <tr>
+          <td>Someone Lastname</td>
+          <td>900</td>
+          <td>Nullam quis risus eget urna mollis ornare vel eu leo.</td>
+        </tr>
+        <tr>
+          <td><a href="#">Person Name</a></td>
+          <td>1200</td>
+          <td>Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</td>
+        </tr>
+        <tr>
+          <td>Another Person</td>
+          <td>1500</td>
+          <td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.</td>
+        </tr>
+        <tr>
+          <td>Last One</td>
+          <td>2800</td>
+          <td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <dl>
     <dt>Definition List Title</dt>
     <dd>Definition list division.</dd>
     <dt>Kitchen Sink</dt>
     <dd>Used in expressions to describe work in which all conceivable (and some inconceivable) sources have been mined. In this case, a bunch of markup.</dd>
-    <dt>aside</dt>
-    <dd>Defines content aside from the page content</dd>
-    <dt>blockquote</dt>
-    <dd>Defines a section that is quoted from another source</dd>
+    <dt>lorem</dt>
+    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit.</dd>
   </dl>
   <ul>
-    <li>Unordered List item one
+    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quo dolores esse asperiores corporis ipsam eaque cupiditate quos deserunt adipisci assumenda provident aspernatur ullam eius, numquam quia sunt a. Adipisci?
       <ul>
         <li>Nested list item
           <ul>
@@ -105,7 +148,7 @@ title: Demo
     <li>List item four</li>
   </ul>
   <ol>
-    <li>List item one
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur soluta quas placeat voluptas nisi repudiandae nemo tenetur assumenda dignissimos cumque autem recusandae quo, sequi deleniti numquam, laudantium minima corrupti ut!
       <ol>
         <li>List item one
           <ol>
@@ -139,6 +182,7 @@ word-break: break-all;
 font-family: Menlo, Monaco;
 line-height: 160%;
 }</pre>
+
   <figure>
     <img src="https://webdev.imgix.net/images/headers/about.svg" alt="">
     <figcaption>Fig1. A picture stolen from web.dev's about page.</figcaption>

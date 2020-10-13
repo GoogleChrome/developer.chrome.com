@@ -1,6 +1,15 @@
 // Defines typography placeholders (https://sass-lang.com/documentation/style-rules/placeholder-selectors)
 // These placeholders are safer to use with @extend as they don't get included
 // in the final CSS output and help us avoid duplication.
+
+@mixin list-styles($margin) {
+  $list-margin: px-to-rem($margin);
+  list-style: none;
+  margin-left: $list-margin;
+  max-width: calc(100% - #{$list-margin * 2});
+  padding: 0;
+}
+
 %type {
   &--headline {
     @include apply-utility('font', 'google-sans');
@@ -114,5 +123,95 @@
   &--xsmall {
     @extend %type--base;
     @include font-setup(12px, 20px);
+  }
+
+  &--blockquote {
+    @extend %type--headline;
+    @include flex-font((24px 32px), (32px 40px), (32px 40px));
+    text-align: center;
+
+    > p::before {
+      content: '“';
+    }
+
+    > p::after {
+      content: '”';
+    }
+
+    > cite {
+      display: block;
+      margin-top: 1em;
+    }
+  }
+
+  &--cite {
+    @extend %type--cta;
+    @include apply-utility('weight', 'regular');
+    font-style: normal;
+  }
+
+  &--list {
+    @include list-styles(48px);
+  }
+
+  &--list-item {
+    margin-top: 0.5em;
+
+    &::before {
+      $bullet-size: px-to-rem(8px);
+      background: get-color('grey-700');
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: $bullet-size;
+      margin-left: -#{$bullet-size * 3};
+      margin-right: $bullet-size * 2;
+      width: $bullet-size;
+    }
+  }
+
+  &--ordered-list {
+    @include list-styles(56px);
+    counter-reset: ol-step-counter;
+  }
+  
+  &--ordered-list-item {
+    counter-increment: ol-step-counter;
+    margin-top: 0.5em;
+
+    &::before {
+      $bullet-size: px-to-rem(24px);
+      @extend %type--caption;
+      background: get-color('grey-100');
+      border-radius: 50%;
+      content: counter(ol-step-counter);
+      display: inline-flex;
+      flex-shrink: 0;
+      height: $bullet-size;
+      justify-content: center;
+      margin-left: -#{$bullet-size * 5/3};
+      margin-right: $bullet-size * 2/3;
+      width: $bullet-size;
+    }
+  }
+
+  &--dt {
+    @extend %type--eyebrow;
+    margin-left: 1em;
+  }
+
+  &--dd {
+    margin-left: 2em;
+    margin-top: 0;
+
+    + dt,
+    + .type--dt {
+      margin-top: 0.5em;
+    }
+  }
+
+  &--full-bleed {
+    margin-left: -#{$article-padding};
+    margin-right: -#{$article-padding};
   }
 }

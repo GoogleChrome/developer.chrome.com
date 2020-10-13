@@ -35,6 +35,11 @@ module.exports = config => {
   // cascade down to any child directories.
   config.setDataDeepMerge(true);
 
+  // Copy binary assets over to the dist/ directory.
+  // images should ideally be uploaded to our CDN but if, for whatever reason,
+  // they can't be, then this passthrough copy will pick them up.
+  config.addPassthroughCopy('site/en/**/*.{jpg,jpeg,png,webp}');
+
   // Make .yml files work in the _data directory.
   config.addDataExtension('yml', contents => yaml.safeLoad(contents));
 

@@ -45,6 +45,7 @@
     @extend %type--small;
   }
 
+  caption:not([class]),
   &--caption {
     @extend %type--caption;
   }
@@ -56,8 +57,48 @@
   &--xsmall {
     @extend %type--xsmall;
   }
-}
 
-body {
-  @extend %type--base;
+  blockquote:not([class]),
+  &--blockquote {
+    @extend %type--blockquote;
+  }
+
+  cite:not([class]),
+  &--cite {
+    @extend %type--cite;
+  }
+
+  ul:not([class]),
+  &--list {
+    @extend %type--list;
+  }
+
+  ul:not([class]) li,
+  &--list-item {
+    @extend %type--list-item;
+  }
+
+  ol:not([class]),
+  &--ordered-list {
+    @extend %type--ordered-list;
+  }
+
+  ol:not([class]) li,
+  &--ordered-list-item {
+    @extend %type--ordered-list-item;
+  }
+
+  dt:not([class]),
+  &--dt {
+    @extend %type--dt;
+  }
+
+  dd:not([class]),
+  &--dd {
+    @extend %type--dd;
+  }
+
+  &--full-bleed {
+    @extend %type--full-bleed;
+  }
 }

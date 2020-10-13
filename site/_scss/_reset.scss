@@ -1,13 +1,13 @@
 // A modified version of Andy Bell's "modern reset" https://github.com/hankchizljaw/modern-css-reset
 
-/* Box sizing rules */
+// Box sizing rules
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default margin */
+// Remove default margin
 body,
 h1,
 h2,
@@ -25,36 +25,37 @@ dd {
   margin: 0;
 }
 
-/* Set core root defaults */
+// Set core root defaults
 html {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
+// Set core body defaults
 body {
   min-height: 100vh;
 }
 
-/* Remove default padding and list styles on ul, ol elements with a class attribute */
+// Remove default padding and list styles on ul, ol elements with a class
+// attribute
 ul[class],
 ol[class] {
   list-style: none;
   padding: 0;
 }
 
-/* Anchor elements that don't have a class get default styles */
+// Anchor elements that don't have a class get default styles
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
+// Make images easier to work with
 img {
   display: block;
   height: auto;
   max-width: 100%;
 }
 
-/* Inherit fonts for inputs and buttons */
+// Inherit fonts for inputs and buttons
 input,
 button,
 textarea,
@@ -64,13 +65,18 @@ select {
   word-spacing: inherit;
 }
 
-/* Remove the default border on iframes */
+// Remove the whitespace between table cells
+table {
+  border-collapse: collapse;
+}
+
+// Remove the default border on iframes
 iframe {
   border: 0;
 }
 
-/* Blur images when they have no alt attribute */
-/* Note: an empty alt (alt="") is fine and can be used to hide decorative images */
+// Blur images when they have no alt attribute
+// Note: an empty alt (alt="") is fine and can be used to hide decorative images
 img:not([alt]) {
   filter: blur(10px);
 }
@@ -80,7 +86,12 @@ svg {
   fill: currentColor;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
+// Always place table captions on the bottom.
+caption {
+  caption-side: bottom;
+}
+
+// Remove all animations and transitions for people that prefer not to see them.
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01s !important;
