@@ -1,22 +1,24 @@
-<top-nav role="banner" data-side-nav-inert>
-  <nav class="hairline-bottom" aria-label="Home and search">
+<top-nav role="banner" class="display-block hairline-bottom" data-side-nav-inert>
+  <nav class="display-grid align-center" aria-label="{{ 'i18n.common.chrome_developers' | i18n(locale) }}">
     {# Hamburger button #}
-    <button class="top-nav__hamburger button width-700 height-700" aria-label="menu">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    <button class="top-nav__hamburger button display-flex lg:display-none align-center justify-center width-700 height-700" aria-label="{{ 'i18n.common.menu' | i18n(locale) }}">
+      {% include 'icons/hamburger.svg' %}
     </button>
 
     {# Logo #}
-    <a class="display-flex align-center" href="/" aria-label="developers.chrome.com">
+    <a class="top-nav__logo display-flex align-center" href="/" aria-label="developers.chrome.com">
       {% include 'icons/logo.svg' %}
-      <div>Chrome Developers</div>
+      <div class="type--large font-google-sans">{{ 'i18n.common.chrome_developers' | i18n(locale) }}</div>
     </a>
 
     {# Search #}
-    <input type="search" aria-label="search" placeholder="Search docs, blogs and more">
+    <search-box class="display-grid align-center">
+      <button class="search-box__btn button display-flex lg:display-none align-center justify-center width-700 height-700" aria-label="{{ 'i18n.common.open_search' | i18n(locale) }}">
+        {% include 'icons/search.svg' %}
+      </button>
 
-    {# Language picker #}
-    <select aria-label="language">
-      <option value="">English</option>
-    </select>
+      <input type="search" class="search-box__input display-none lg:display-block lg:width-full" aria-label="search" placeholder="{{ 'i18n.common.search_placeholder' | i18n(locale) }}">
+      {% include 'icons/search.svg' %}
+    </search-box>
   </nav>
 </top-nav>

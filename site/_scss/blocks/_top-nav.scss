@@ -1,14 +1,26 @@
 top-nav {
-  nav {
-    display: grid;
-    gap: get-size(300);
-    grid-template-columns: auto auto 1fr auto;
-    padding: get-size(200) get-size(400) get-size(200) get-size(200);
+  padding: get-size(200);
+
+  @include media-query('lg') {
+    padding: px-to-rem(12px) get-size(400);
   }
 
-  .top-nav__hamburger {
+  nav {
+    gap: get-size(300);
+    grid-template-columns: min-content auto min-content;
+
     @include media-query('lg') {
-      display: none;
+      gap: get-size(800);
+      grid-template-columns: 1fr 2fr 1fr;
     }
   }
+}
+
+.top-nav__logo {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.top-nav__logo > * + * {
+  margin-left: px-to-rem(14px);
 }

@@ -1,3 +1,23 @@
 chrome_developers:
   en: 'Chrome Developers'
   es: 'Chrome Developers'
+
+home_search:
+  en: 'Home and search'
+  es: 'Home and search'
+
+menu:
+  en: 'menu'
+  es: 'menu'
+
+open_search:
+  en: 'open search'
+  es: 'open search'
+
+search:
+  en: 'search'
+  es: 'search'
+
+search_placeholder:
+  en: 'Search docs, blogs and more'
+  es: 'Search docs, blogs and more'

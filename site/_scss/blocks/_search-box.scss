@@ -1,0 +1,26 @@
+search-box > * {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+search-box > svg {
+  display: none;
+
+  @include media-query('lg') {
+    display: block;
+    margin-left: 16px;
+    pointer-events: none;
+  }
+}
+
+.search-box__input {
+  @include media-query('lg') {
+    background: var(--color-bg-shade);
+    border: 0;
+    border-radius: 100px;
+    padding: get-size(200) get-size(300) get-size(200) get-size(700);
+  }
+
+  &::placeholder {
+    color: var(--color-secondary-text);
+  }
+}

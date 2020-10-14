@@ -87,6 +87,7 @@ $gorko-config: (
       'block': 'block',
       'flex': 'flex',
       'inline-flex': 'inline-flex',
+      'grid': 'grid',
       'none': 'none'
     ),
     'output': 'responsive',
@@ -195,6 +196,14 @@ $gorko-config: (
     'items': $gorko-size-scale,
     'output': 'responsive',
     'property': 'padding-left',
+  ),
+  'pointer': (
+    'items': (
+      'none': 'none',
+      'auto': 'auto'
+    ),
+    'output': 'responsive',
+    'property': 'pointer-events',
   ),
   'text': (
     'items': $gorko-size-scale,

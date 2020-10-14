@@ -68,11 +68,12 @@ side-nav[expanded] {
   @include elevation(2);
   background: var(--color-bg);
   height: 100%;
+  max-width: px-to-rem(360px);
   overflow: hidden;
+  padding-right: get-size(200);
   transform: translate(-102%, 0); // 102% to keep box-shadow offscreen
-  transition: transform $side-nav-transition-speed $side-nav-transition-ease;
   transition: none;
-  width: px-to-rem(360px);
+  width: 85vw;
 
   @include media-query('lg') {
     box-shadow: none;
