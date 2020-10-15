@@ -1,0 +1,8 @@
+<nav>
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}">Previous</a>
+  {% endif %}
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}">Next</a>
+  {% endif %}
+</nav>

@@ -4,8 +4,7 @@
 <h1 class="type--h1">{{ title }}</h1>
 <h2>{{ i18n.headings['latest-news'] }}</h2>
 
-{% set collectionName = 'blog-' + locale %}
-{% for post in collections[collectionName] %}
+{% for post in pagination.items %}
   {% if loop.first and post.data.hero %}
     {# Replace img with the line below once #145 lands. #}
     {# {{ 'post.data.hero' | imgix('Hero image') | safe }} #}
@@ -15,5 +14,5 @@
   <p>{{ post.data.snippet }}</p>
   {% include 'partials/authors.njk' %}
 {% endfor %}
-
+{% include 'partials/pagination.njk' %}
 {% endblock %}
