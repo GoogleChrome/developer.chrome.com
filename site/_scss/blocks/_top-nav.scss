@@ -17,6 +17,8 @@ top-nav {
 }
 
 .top-nav__logo {
+  @extend %type--large;
+  @include apply-utility('font', 'google-sans');
   color: currentColor;
   text-decoration: none;
 }

@@ -2,9 +2,9 @@
 
 %navigation {
   &__title {
-    // A bit of a quirky line-height in order to achieve a 1.5 line-height so
-    // the text lines up evenly with the svg icon.
-    @include font-setup(18px, 27px);
+    @include apply-utility('font', 'google-sans');
+    font-size: px-to-rem(18px);
+    line-height: 1.5;
   }
 
   &__link {
