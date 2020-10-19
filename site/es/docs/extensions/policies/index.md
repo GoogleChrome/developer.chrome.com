@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/doc.njk'
+layout: 'layouts/doc-post.njk'
 title: Policies
 description: Foo bar baz
 ---

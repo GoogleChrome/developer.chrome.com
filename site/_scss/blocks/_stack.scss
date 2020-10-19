@@ -1,0 +1,36 @@
+// The Stack layout injects margin between elements via their common parent.
+// The amount of margin can be configured using the --flow-space variable:
+
+// <div class="stack flow-space-300">
+//   <div>child</div>
+//   <div>child</div>
+//   <div>etc.</div>
+// </div>
+
+// https://every-layout.dev/layouts/stack/
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-bottom: 0;
+  margin-top: 0;
+} 
+
+.stack > * + * {
+  margin-top: var(--flow-space);
+}
+
+// Use the stack-exception class to change the top/bottom margin
+// around an individual element.
+// These exceptions follow the rest of our size scale.
+// .stack-exception-700 === margin-top 3rem
+@each $size, $value in $gorko-size-scale {
+  .stack-exception-#{$size},
+  .stack-exception-#{$size} + * {
+    margin-top: $value;
+  }
+}

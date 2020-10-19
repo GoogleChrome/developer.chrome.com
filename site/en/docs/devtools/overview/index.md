@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/doc.njk'
+layout: 'layouts/doc-post.njk'
 title: Overview
 description: Foo bar baz
 ---

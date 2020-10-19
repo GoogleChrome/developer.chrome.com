@@ -1,13 +1,16 @@
 {#
 Renders an author info snippet.
 #}
-{% macro author(authorId, date) %}
+{% macro author(authorId, locale) %}
 
-<div>
-  {% set author = authorsData[authorId] %}
-  <img src="{{ author.image }}" alt="{{ author.name.given }} {{ author.name.family }} thumbnail" />
-  <p> {{ author.name.given }} {{ author.name.family }}</p>
-  <p> {{ author.org.unit }} {{ author.org.name }} {{ date.toDateString() }}</p>
+{% set author = authorsData[authorId] %}
+
+<div class="author display-flex align-start">
+  <img class="author__image round" width="40" height="40" src="{{ author.image }}" alt="{{ author.name.given }} {{ author.name.family }} thumbnail" />
+  <div class="display-flex direction-column align-start gap-left-300 type--small">
+    <a href="/authors/{{ authorId }}">{{ author.name.given }} {{ author.name.family }}</a>
+    <p>{{ author.descriptions[locale] }}</p>
+  </div>
 </div>
 
 {% endmacro %}

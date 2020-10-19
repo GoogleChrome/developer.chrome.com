@@ -1,5 +1,11 @@
-{% import 'macros/author.njk' as macros with context %}
+{% from "macros/author.njk" import author with context %}
 
-{% for author in post.data.authors %}
-  {{ macros.author(author, post.date) }}
-{% endfor %}
+{% if authors %}
+  <div class="authors cluster">
+    <div> {# container div required by the .cluster layout #}
+      {% for item in authors %}
+        {{ author(item, locale) }}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

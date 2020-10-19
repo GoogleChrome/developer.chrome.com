@@ -2,6 +2,7 @@ const {join} = require('path');
 const {getLinkActiveState, hasActiveLink} = require('./lib/links');
 const {hashAsset} = require('./lib/hash');
 const {findByUrl} = require('./lib/find');
+const {formatDate} = require('./lib/date');
 
 module.exports = {
   join,
@@ -9,4 +10,5 @@ module.exports = {
   hasActiveLink,
   hashAsset,
   findByUrl,
+  formatDate,
 };

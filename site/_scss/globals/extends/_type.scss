@@ -14,6 +14,9 @@
   &--headline {
     @include apply-utility('font', 'google-sans');
     @include apply-utility('weight', 'regular');
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
   }
 
   &--var-large {

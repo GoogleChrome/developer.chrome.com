@@ -49,7 +49,6 @@ const purifyCss = async (content, outputPath) => {
         },
       ],
       fontFace: true,
-      variables: true,
       defaultExtractor: content => {
         // Capture as liberally as possible, including things like `lg\:display-none`
         // https://tailwindcss.com/docs/controlling-file-size#understanding-the-regex

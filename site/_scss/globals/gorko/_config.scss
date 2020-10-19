@@ -55,16 +55,6 @@ $gorko-config: (
     'output': 'responsive',
     'property': 'align-items'
   ),
-  'bg': (
-    'items': $gorko-colors,
-    'output': 'standard',
-    'property': 'background',
-  ),
-  'color': (
-    'items': $gorko-colors,
-    'output': 'standard',
-    'property': 'color',
-  ),
   'case': (
     'items': (
       'upper': 'uppercase',
@@ -97,6 +87,14 @@ $gorko-config: (
     'items': $gorko-size-scale,
     'output': 'responsive',
     'property': '--flow-space',
+  ),
+  'flex-flow': (
+    'items': (
+      'row-wrap': 'row wrap',
+      'column-wrap': 'column wrap',
+    ),
+    'output': 'responsive',
+    'property': 'flex-flow',
   ),
   /* https://github.com/necolas/normalize.css/issues/665 */
   'font': (
@@ -167,7 +165,7 @@ $gorko-config: (
       'micro': '10ch',
       'compact': '30ch',
       'short': '40ch',
-      'long': '65ch',
+      'long': '78ch',
     ),
     'output': 'responsive',
     'property': 'max-width',

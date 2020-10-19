@@ -12,7 +12,7 @@
   {% endif %}
   <a href="{{ post.url }}"><h3>{{ post.data.title }}</h3></a>
   <p>{{ post.data.snippet }}</p>
-  {% include 'partials/authors.njk' %}
+  
 {% endfor %}
 {% include 'partials/pagination.njk' %}
 {% endblock %}

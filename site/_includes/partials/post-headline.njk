@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+
+{% if subhead %}
+<p class="type--h5">{{ subhead }}</p>
+{% endif %}
+
+{% if date %}
+<div class="dates">
+  <p class="type--caption">
+    Published on <time>{{ helpers.formatDate(date, locale) }}</time>
+  {% if updated %}
+    <span>•</span>
+    Updated on <time>{{ helpers.formatDate(updated, locale) }}</time>
+  {% endif %}
+  </p>
+</div>
+{% endif %}

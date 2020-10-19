@@ -12,8 +12,14 @@
       @extend %type--h#{$i};
     }
 
-    h#{$i}:not([class^='type--var']) {
-      @extend %type--h#{$i};
+    // For articles we size our headings down a level, meaning
+    // an h1 will be styled to look like an h2, and so on.
+    // Because these headings come from markdown they're always h1-h6 without
+    // a class applied.
+    @if $i != 6 {
+      h#{$i}:not([class^='type--var']) {
+        @extend %type--h#{$i + 1};
+      }
     }
   }
 

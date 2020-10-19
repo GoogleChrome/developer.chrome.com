@@ -56,11 +56,6 @@ body {
   transition: background 500ms ease-in-out, color 200ms ease;
 }
 
-::selection {
-  background-color: var(--color-selection-bg);
-  color: var(--color-selection-text);
-}
-
 a:not([class]) {
   color: var(--color-primary);
 }
