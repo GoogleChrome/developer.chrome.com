@@ -66,7 +66,7 @@ icon declared under the [`browser_action`](browserAction) field:
 Download [`hello_extensions.png` here](/static/images/index/hello_extensions.png)
 and then create a file titled `hello.html`:
 
-```
+```html
 <html>
   <body>
     <h1>Hello Extensions</h1>
@@ -98,6 +98,50 @@ This step is fun, but not necessary:
     }
   }
 }
+```
+
+```js
+const foo = {
+  bar: "baz",
+  qux: 2
+};
+
+console.log(foo.qux);
+```
+
+```html/4-5
+<label>Choose a preferred trait:
+  <select id="splinter" name="turtles">
+    <option value="leonardo">Leads</option>
+    <option value="donatello">Does machines</option>
+    <option value="raphael">Is cool but rude</option>
+    <option value="michelangelo">Is a party dude</option>
+  </select>
+</label>
+```
+
+```html//2
+<!-- Here is a comment -->
+<label>Choose a preferred trait:
+  <select id="splinter" name="turtles">
+    <option value="leonardo">Leads</option>
+    <option value="donatello">Does machines</option>
+    <option value="raphael">Is cool but rude</option>
+    <option value="michelangelo">Is a party dude</option>
+  </select>
+</label>
+```
+
+```html/6/5
+<label>Choose a preferred trait:
+  <select id="splinter" name="turtles">
+    <option value="leonardo">Leads</option>
+    <option value="donatello">Does machines</option>
+    <option value="raphael">Is cool but rude</option>
+    <option value="michelangelo">Is a party dude</option>
+    <option value="michelangelo">Is a party animal</option>
+  </select>
+</label>
 ```
 
 The last step is to install the extension on your local machine.

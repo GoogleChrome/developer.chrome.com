@@ -57,6 +57,7 @@
     "unistore": "^3.5.2"
   },
   "devDependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "@ava/babel": "^1.0.1",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@types/node": "^13.11.1",

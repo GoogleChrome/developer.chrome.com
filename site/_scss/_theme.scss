@@ -16,6 +16,16 @@
   --color-error-text: #{get-color('white')};
   --color-side-nav-hover: #{get-color('grey-100')};
   --color-side-nav-active: #{get-color('blue-700')};
+
+  --color-code-bg: #{get-color('grey-50')};
+  --color-code-comment: #{get-color('grey-500')};
+  --color-code-string: #{get-color('blue-900')};
+  --color-code-tag: #{get-color('green-600')};
+  --color-code-number: #{get-color('blue-700')};
+  --color-code-attr: #{get-color('pink-700')};
+  --color-code-highlight: #{get-color('yellow-200')};
+  --color-code-add: #{get-color('green-200')};
+  --color-code-remove: #{get-color('red-200')};
 }
 
 @mixin dark-mode() {

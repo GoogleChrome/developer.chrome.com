@@ -7,6 +7,15 @@
   min-height: 100vh;
 }
 
+.scaffold > * {
+  // Flex/Grid children have a default min-width: auto which means they can
+  // easily bust out of the container and cause horizontal scrolling. Because
+  // min-width wins against width and max-width we need to explicitly set it to
+  // 0 to tell the browser that these children have no right to take up any
+  // minimum width
+  min-width: 0;
+}
+
 .scaffold > top-nav {
   grid-column: 1 / 4;
 }

@@ -14,6 +14,7 @@ const {prettyUrls} = require('./site/_transforms/pretty-urls');
 // Plugins
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const optimizeHtmlPlugin = require('./site/_plugins/optimize-html');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Supported locales
 const locales = require('./site/_data/site').locales;
@@ -24,52 +25,52 @@ const feedsCollection = require('./site/_collections/feeds');
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
 
-module.exports = config => {
+module.exports = eleventyConfig => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   // We do this so we can have gulp put compiled css into our _includes/css
   // directory. We want to .gitignore this compiled css, but we want elventy
   // to use it for its build.
-  config.setUseGitIgnore(false);
+  eleventyConfig.setUseGitIgnore(false);
 
   // Merge eleventy's data cascade. This means directory data files will
   // cascade down to any child directories.
-  config.setDataDeepMerge(true);
+  eleventyConfig.setDataDeepMerge(true);
 
   // Copy binary assets over to the dist/ directory.
   // images should ideally be uploaded to our CDN but if, for whatever reason,
   // they can't be, then this passthrough copy will pick them up.
-  config.addPassthroughCopy('site/en/**/*.{jpg,jpeg,png,webp}');
+  eleventyConfig.addPassthroughCopy('site/en/**/*.{jpg,jpeg,png,webp}');
 
   // Make .yml files work in the _data directory.
-  config.addDataExtension('yml', contents => yaml.safeLoad(contents));
+  eleventyConfig.addDataExtension('yml', contents => yaml.safeLoad(contents));
 
   // Add plugins
-  config.addPlugin(rssPlugin);
-
-  // Add collections
-  locales.forEach(locale => config.addCollection(`blog-${locale}`, collections => {
-    return collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).reverse();
-  }));
-  config.addCollection('feeds', feedsCollection);
-
-  // Add filters
-  config.addFilter('absolute', absolute);
-  config.addFilter('trailingSlash', trailingSlash);
-  config.addFilter('leadingAndTrailingSlash', leadingAndTrailingSlash);
-  config.addFilter('i18n', i18n);
-
-  // Add shortcodes
-  config.addShortcode('img', img);
-  config.addShortcode('video', video);
-
-  // Add transforms
-  config.addTransform('prettyUrls', prettyUrls);
-
+  eleventyConfig.addPlugin(rssPlugin);
+  eleventyConfig.addPlugin(syntaxHighlight);
   // Only minify HTML and inline CSS if we are in production because it slows
   // builds _right_ down
   if (isProduction) {
-    config.addPlugin(optimizeHtmlPlugin);
+    eleventyConfig.addPlugin(optimizeHtmlPlugin);
   }
+
+  // Add collections
+  locales.forEach(locale => eleventyConfig.addCollection(`blog-${locale}`, collections => {
+    return collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).reverse();
+  }));
+  eleventyConfig.addCollection('feeds', feedsCollection);
+
+  // Add filters
+  eleventyConfig.addFilter('absolute', absolute);
+  eleventyConfig.addFilter('trailingSlash', trailingSlash);
+  eleventyConfig.addFilter('leadingAndTrailingSlash', leadingAndTrailingSlash);
+  eleventyConfig.addFilter('i18n', i18n);
+
+  // Add shortcodes
+  eleventyConfig.addShortcode('img', img);
+  eleventyConfig.addShortcode('video', video);
+
+  // Add transforms
+  eleventyConfig.addTransform('prettyUrls', prettyUrls);
 
   return {
     markdownTemplateEngine: 'njk',
