@@ -7,20 +7,19 @@
 {% extends 'layouts/base.njk' %}
 
 {% block content %}
-<h1 class="type--h1">{{ title }}</h1>
+  <h1 class="type--h1">{{ title }}</h1>
 
-{% for key, value in i18n.projects -%}
-  <h2 class="type--h2">{{ i18n.projects[key].heading }}</h2>
-  <ul>
-    {% for item in docs.projects[key] -%}
-      {# Find the landing page for the project itself and grab its metadata #}
-      {% set projectUrl = helpers.join(page.url, item.url) %}
-      {% set project = helpers.findByUrl(collections.all, projectUrl) %}
-      <li>
-        {% include 'partials/project-icon.njk' %}
-      </li>
-    {%- endfor %}
-  </ul>
-{%- endfor %}
-
+  {% for key, value in i18n.projects -%}
+    <h2 class="type--h2">{{ i18n.projects[key].heading }}</h2>
+    <ul>
+      {% for item in docs.projects[key] -%}
+        {# Find the landing page for the project itself and grab its metadata #}
+        {% set projectUrl = helpers.join(page.url, item.url) %}
+        {% set project = helpers.findByUrl(collections.all, projectUrl) %}
+        <li>
+          {% include 'partials/project-icon.njk' %}
+        </li>
+      {%- endfor %}
+    </ul>
+  {%- endfor %}
 {% endblock %}

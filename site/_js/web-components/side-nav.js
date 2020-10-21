@@ -101,7 +101,7 @@ export class SideNav extends BaseElement {
     // If one of the nav elements inside of side-nav was clicked, we
     // block the click so the side-nav won't collapse. If the click was outside
     // of the container/on the overlay, we close the side-nav.
-    this.querySelectorAll('.side-nav__view').forEach(nav =>
+    this.querySelectorAll('navigation-rail, navigation-tree').forEach(nav =>
       nav.addEventListener('click', this.onBlockClicks)
     );
 
@@ -112,7 +112,7 @@ export class SideNav extends BaseElement {
 
   disconnectedCallback() {
     this.removeEventListener('click', collapseSideNav);
-    this.querySelectorAll('.side-nav__view').forEach(nav =>
+    this.querySelectorAll('navigation-rail, navigation-tree').forEach(nav =>
       nav.removeEventListener('click', this.onBlockClicks)
     );
     this.removeEventListener('navigation-rail-collapse', collapseSideNav);

@@ -15,9 +15,10 @@ side-nav {
   width: 100%;
 
   @include media-query('lg') {
-    pointer-events: auto;
-    position: static;
-    visibility: visible;
+    // pointer-events: auto;
+    // position: static;
+    // visibility: visible;
+    display: none;
   }
 
   // Create an overlay which will cover the site and act as a click target
@@ -41,13 +42,12 @@ side-nav {
 
   navigation-tree,
   navigation-rail {
-    @include media-query('lg') {
-      // Force the navigation-tree and navigation rail to always be visible on
-      // desktop, regardless of the states that they're in on mobile.
-      opacity: 1 !important;
-      transform: none !important;
-      visibility: visible !important;
-    }
+    // By default the navigation-tree and navigation-rail hide themselves on
+    // mobile because they're duplicated in the desktop view.
+    // This forces them to display only when they're appearing inside of the
+    // side-nav.
+    display: block;
+    height: 100%;
   }
 }
 
@@ -74,16 +74,9 @@ side-nav[expanded] {
   transform: translate(-102%, 0); // 102% to keep box-shadow offscreen
   transition: none;
   width: 85vw;
-
-  @include media-query('lg') {
-    box-shadow: none;
-    overflow: auto;
-    transform: none;
-    width: auto;
-  }
 }
 
-.side-nav__view {
+.side-nav__container > * {
   transition: none;
 }
 
@@ -94,7 +87,7 @@ side-nav[animating] {
     transition: transform $side-nav-transition-speed $side-nav-transition-ease;
   }
   
-  .side-nav__view {
+  .side-nav__container > * {
     transition: transform $side-nav-transition-speed $side-nav-transition-ease,
                 opacity $side-nav-transition-speed $side-nav-transition-ease; // stylelint-disable-line
     visibility: visible;

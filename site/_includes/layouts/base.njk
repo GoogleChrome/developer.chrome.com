@@ -41,11 +41,16 @@
         {% include 'partials/top-nav.njk' %}
       {% endblock %}
 
+      {% block navigation_rail %}
+        {% include 'partials/navigation-rail.njk' %}
+      {% endblock %}
+
       {% block sidebar %}
         {% include 'partials/side-nav.njk' %}
       {% endblock %}
 
       <main tabindex="-1" id="main-content" data-side-nav-inert>
+        {% block title_bar %}{% endblock %}
         {% block content %}{% endblock %}
       </main>
 

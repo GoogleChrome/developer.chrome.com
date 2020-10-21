@@ -1,10 +1,16 @@
 // The scaffold is a special block and only used to give the entire site
 // its layout.
 
+/* stylelint-disable order/properties-alphabetical-order */
 .scaffold {
   display: grid;
-  grid-template: auto 1fr auto / auto 1fr auto;
-  min-height: 100vh;
+  height: 100vh;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: min-content 1fr auto;
+  grid-template-areas:
+    'header header'
+    'sidebar main'
+    'footer footer';
 }
 
 .scaffold > * {
@@ -17,21 +23,21 @@
 }
 
 .scaffold > top-nav {
-  grid-column: 1 / 4;
+  grid-area: header;
+}
+
+.scaffold > navigation-rail {
+  grid-area: sidebar;
 }
 
 .scaffold > side-nav {
-  grid-column: 1 / 2;
+  grid-area: sidebar;
 }
 
 .scaffold > main {
-  grid-column: 2 / 3;
-}
-
-.scaffold > .toc {
-  grid-column: 3 / 4;
+  grid-area: main;
 }
 
 .scaffold > footer {
-  grid-column: 1 / 4;
+  grid-area: footer;
 }

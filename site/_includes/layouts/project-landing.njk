@@ -9,14 +9,14 @@
 {% set title = project_name %}
 
 {% block content %}
-<h1 class="type--h1">{{ project_name }}</h1>
-<p class="type">{{ description }}</p>
+  <h1 class="type--h1">{{ project_name }}</h1>
+  <p class="type">{{ description }}</p>
 
-{# toc defines the table of contents that the project landing page displays. #}
-{% set toc = docs[project_key].toc %}
+  {# toc defines the table of contents that the project landing page displays. #}
+  {% set toc = docs[project_key].toc %}
 
 
-{# Render nested sections. #}
-{% import 'macros/project-sections.njk' as macros with context %}
-{{ macros.projectSections(toc) }}
+  {# Render nested sections. #}
+  {% import 'macros/project-sections.njk' as macros with context %}
+  {{ macros.projectSections(toc) }}
 {% endblock %}

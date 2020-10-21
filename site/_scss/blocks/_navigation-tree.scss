@@ -1,6 +1,10 @@
 /* purgecss start ignore */
 navigation-tree {
-  display: block;
+  display: none;
+
+  @include media-query('lg') {
+    display: block;
+  }
 }
 
 .navigation-tree__title {

@@ -1,7 +1,10 @@
 /* purgecss start ignore */
 navigation-rail {
+  display: none;
+
   @include media-query('lg') {
     border-right: 1px solid var(--color-hairline);
+    display: block;
   }
 }
 

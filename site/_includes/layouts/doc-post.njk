@@ -1,22 +1,29 @@
 {% extends "layouts/base.njk" %}
 
-{% block sidebar %}
-  {# toc defines the table of contents that appears to the left of the documentation. #}
-  {% set toc = docs[project_key].toc %}
-  {% include 'partials/side-nav.njk' %}
+{# toc defines the table of contents that appears to the left of the documentation. #}
+{% set toc = docs[project_key].toc %}
+
+{% block title_bar %}
+  {% include 'partials/title-bar-docs.njk' %}
 {% endblock %}
 
 {% block content %}
-  <article class="stack measure-long type center-margin pad-400">
-    
-    <div class="stack flow-space-200">
-      {% include 'partials/post-headline.njk' %}
-    </div>
+  <div class="display-flex">
+    {% include 'partials/navigation-tree.njk' %}
 
-    <div class="stack-exception-700">
-      {% include 'partials/authors.njk' %}
-    </div>
+    <article class="stack measure-long type center-margin pad-400">
+      
+      <div class="stack flow-space-200">
+        {% include 'partials/post-headline.njk' %}
+      </div>
 
-    {{ content | safe }}
-  </article>
+      <div class="stack-exception-700">
+        {% include 'partials/authors.njk' %}
+      </div>
+
+      {{ content | safe }}
+    </article>
+
+    {% include 'partials/toc.njk' %}
+  </div>
 {% endblock %}

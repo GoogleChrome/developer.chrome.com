@@ -96,6 +96,13 @@ $gorko-config: (
     'output': 'responsive',
     'property': 'flex-flow',
   ),
+  'flex-shrink': (
+    'items': (
+      'none': 0
+    ),
+    'output': 'responsive',
+    'property': 'flex-shrink'
+  ),
   /* https://github.com/necolas/normalize.css/issues/665 */
   'font': (
     'items': (
@@ -248,6 +255,7 @@ $gorko-config: (
   'breakpoints': (
     'md': '(min-width: 37em)',
     'lg': '(min-width: 62em)',
+    'xl': '(min-width: 90em)'
   ),
 );
 
