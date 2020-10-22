@@ -6,6 +6,10 @@
 
 {% extends 'layouts/base.njk' %}
 
+{% block title_bar %}
+  {% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
+
 {% block content %}
   <h1 class="type--h1">{{ title }}</h1>
 

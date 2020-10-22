@@ -6,7 +6,9 @@
 
 {% extends "layouts/base.njk" %}
 
-{% set title = project_name %}
+{% block title_bar %}
+  {% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
 
 {% block content %}
   <h1 class="type--h1">{{ project_name }}</h1>

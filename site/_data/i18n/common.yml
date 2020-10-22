@@ -21,3 +21,15 @@ search:
 search_placeholder:
   en: 'Search docs, blogs and more'
   es: 'Search docs, blogs and more'
+
+breadcrumbs:
+  en: 'breadcrumbs'
+  es: 'breadcrumbs'
+
+primary:
+  en: 'primary'
+  es: 'primary'
+
+project_docs:
+  en: 'project docs'
+  es: 'project docs'

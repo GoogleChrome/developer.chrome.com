@@ -1,4 +1,5 @@
 ---
+title: Extensions
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
 diam neque, scelerisque et dignissim a, bibendum eu lectus. Suspendisse
 facilisis fringilla justo ut hendrerit. Vestibulum justo metus, accumsan quis

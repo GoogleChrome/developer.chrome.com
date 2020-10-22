@@ -1,0 +1,22 @@
+{% macro breadcrumbs(title, url) %}
+  <nav class="breadcrumbs cluster" aria-label="{{ 'i18n.common.breadcrumbs' | i18n(locale) }}">
+    <div class="align-center flow-space-200">
+      {{ breadcrumb(url) }}
+      <span>{{ title }}</span>
+    </div>
+  </nav>
+{% endmacro %}
+
+{# Attempts to recursively generated breadcrumb links. #}
+{% macro breadcrumb(url) %}
+  {% set post = helpers.findByUrl(collections.all, url) %}
+  {% if post.url === page.url %}
+    {% set post = helpers.findByUrl(collections.all, post.data.parent) %}
+  {% endif %}
+
+  {% if post.data.parent %}
+    {{ breadcrumb(post.data.parent) }}
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    {% include 'icons/arrow-forward.svg' %}
+  {% endif %}
+{% endmacro %}
