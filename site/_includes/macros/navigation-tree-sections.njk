@@ -5,7 +5,7 @@ Returns a link to the post and uses the post's title for link text.
 This will recursively keep outputting links depending on how many sections
 have been defined in the _data/docs/*.yml file for this project.
 #}
-{% macro sideNavSections(sections) %}
+{% macro navigationTreeSections(sections) %}
 
 {% for item in sections %}
   {% if item.sections %}
@@ -18,13 +18,23 @@ have been defined in the _data/docs/*.yml file for this project.
       <span>{{ item.title | i18n }}</span>
     </button>
     <div class="navigation-tree__nested">
-      {{ sideNavSections(item.sections) }}
+      {{ navigationTreeSections(item.sections) }}
     </div>
   {% elif item.url %}
     {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
-    <a href="{{ post.url }}" class="navigation-tree__link" {{ helpers.getLinkActiveState(post.url, page.url) | safe }}>
-      <span>{{ post.data.title }}</span>
-    </a>
+    {% if not post %}
+      {#
+        If we couldn't find a translated copy of the post, try to fallback to
+        English so we at least have a link to something in our UI.
+      #}
+      {% set post = helpers.findByUrl(collections.all, item.url, 'en') %}
+    {% endif %}
+
+    {% if post %}
+      <a href="{{ post.url }}" class="navigation-tree__link" {{ helpers.getLinkActiveState(post.url, page.url) | safe }}>
+        <span>{{ post.data.title }}</span>
+      </a>
+    {% endif %}
   {% endif %}
 {% endfor %}
 

@@ -3,6 +3,7 @@
   sections:
     - url: /docs/extensions/overview/hello
     - url: /docs/extensions/overview/world
+    - url: /docs/extensions/overview/test
     - title: i18n.docs.extensions.guides
       sections:
         - url: /docs/extensions/overview/guides/get-started

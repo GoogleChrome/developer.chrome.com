@@ -8,7 +8,7 @@
 
   <div class="display-flex direction-column pad-top-300">
     {# Render nested sections. #}
-    {% import 'macros/side-nav-sections.njk' as macros with context %}
-    {{ macros.sideNavSections(toc) }}
+    {% from 'macros/navigation-tree-sections.njk' import navigationTreeSections with context %}
+    {{ navigationTreeSections(toc) }}
   </div>
 </navigation-tree>
