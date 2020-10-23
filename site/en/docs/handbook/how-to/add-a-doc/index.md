@@ -26,3 +26,16 @@ like this:
 Follow the guide on [adding your doc to an existing project's table of
 contents](/docs/handbook/how-to/add-a-project/#configure-the-table-of-contents-for-your-project).
 
+## Get busy writing! 👩🏽‍💻
+
+Docs support markdown syntax with some additional features and shortcodes.
+See the components guide (TODO) for a full list of supported elements.
+
+### Uploading media 📸
+
+developer.chrome.com uses an image CDN and GCS bucket to ensure that images and
+videos are served in a performant, responsive manner.
+
+Take a look at the guide on [uploading media](/docs/handbook/how-to/add-media)
+to learn how to add images and videos to your docs.
+
