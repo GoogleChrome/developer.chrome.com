@@ -40,9 +40,12 @@ exports.plugins = [
   // Checks if external links are live.
   // Consider changing this to a Github Action on PR if it gets too heavy.
   require('remark-lint-no-dead-urls'),
+  // Checks if headings are accidentally duplicated
   require('remark-lint-no-duplicate-headings-in-section'),
   // Checks if relative links targets exist.
   require('remark-validate-links'),
+  // Ensure articles don't start with an h1
+  [require('remark-lint-first-heading-level'), 2],
 
   // Custom plugins.
   require('./tools/linting/no-dash-spaces.js'),

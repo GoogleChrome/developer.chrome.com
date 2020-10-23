@@ -106,3 +106,55 @@ test('ignores links without an href', t => {
 
   t.assert(prettyUrls(content, outputPath) === expected);
 });
+
+test('ignores internal links', t => {
+  const content = template('<a href="#foo"></a>');
+  const expected = template('<a href="#foo"></a>');
+  const outputPath = '/en/bar/index.html';
+
+  t.assert(prettyUrls(content, outputPath) === expected);
+});
+
+test('adds the locale prefix but does not add a trailing slash if there is a hash anchor', t => {
+  const content = template('<a href="/docs/example/#foo"></a>');
+  const expected = template('<a href="/pl/docs/example/#foo"></a>');
+  const outputPath = '/pl/docs/example/index.html';
+
+  t.assert(prettyUrls(content, outputPath) === expected);
+});
+
+test('removes the /en/ prefix but does not add a trailing slash if there is a hash anchor', t => {
+  const content = template('<a href="/en/docs/example/#foo"></a>');
+  const expected = template('<a href="/docs/example/#foo"></a>');
+  const outputPath = '/en/docs/example/index.html';
+
+  t.assert(prettyUrls(content, outputPath) === expected);
+});
+
+test('ignores mailto links', t => {
+  const content = template('<a href="mailto:me@google.com"></a>');
+  const expected = template('<a href="mailto:me@google.com"></a>');
+  const outputPath = '/en/bar/index.html';
+
+  t.assert(prettyUrls(content, outputPath) === expected);
+});
+
+test('ignores relative links', t => {
+  let content = template('<a href="foo.jpg"></a>');
+  let expected = template('<a href="foo.jpg"></a>');
+  let outputPath = '/en/bar/index.html';
+
+  t.assert(prettyUrls(content, outputPath) === expected);
+
+  content = template('<a href="./foo.jpg"></a>');
+  expected = template('<a href="./foo.jpg"></a>');
+  outputPath = '/en/bar/index.html';
+
+  t.assert(prettyUrls(content, outputPath) === expected);
+
+  content = template('<a href="../foo.jpg"></a>');
+  expected = template('<a href="../foo.jpg"></a>');
+  outputPath = '/en/bar/index.html';
+
+  t.assert(prettyUrls(content, outputPath) === expected);
+});

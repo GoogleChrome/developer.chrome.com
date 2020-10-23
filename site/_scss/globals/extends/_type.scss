@@ -17,6 +17,14 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
+
+    &:hover > .headline__link {
+      visibility: visible;
+    }
+
+    > .headline__link {
+      visibility: hidden;
+    }
   }
 
   &--var-large {
@@ -160,6 +168,10 @@
   &--list-item {
     margin-top: 0.5em;
 
+    &:first-of-type {
+      margin-top: 0;
+    }
+
     &::before {
       $bullet-size: px-to-rem(8px);
       background: get-color('grey-700');
@@ -181,6 +193,10 @@
   &--ordered-list-item {
     counter-increment: ol-step-counter;
     margin-top: 0.5em;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
 
     &::before {
       $bullet-size: px-to-rem(24px);

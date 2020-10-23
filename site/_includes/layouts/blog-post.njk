@@ -11,9 +11,11 @@
       {% include 'partials/post-headline.njk' %}
     </div>
 
-    <div class="stack-exception-700">
-      {% include 'partials/authors.njk' %}
-    </div>
+    {% if authors %}
+      <div class="stack-exception-700">
+        {% include 'partials/authors.njk' %}
+      </div>
+    {% endif %}
 
     {{ content | safe }}
   </article>

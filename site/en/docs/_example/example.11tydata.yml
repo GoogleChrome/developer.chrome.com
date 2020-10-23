@@ -1,0 +1,5 @@
+# This is used to look up the project's toc in _data/docs/[project_key]
+project_key: 'example'
+
+# This is used to display the project's name in the mobile navigation drawer.
+project_name: 'Example'

@@ -43,13 +43,23 @@ const prettyUrls = (content, outputPath) => {
       return;
     }
 
-    // Ignore external links
-    if (href.startsWith('http://') || href.startsWith('https://')) {
+    // Ignore external/internal/mailto, and relative links
+    if (
+      href.startsWith('http://') ||
+      href.startsWith('https://') ||
+      href.startsWith('#') ||
+      href.startsWith('mailto:') ||
+      !path.isAbsolute(href)
+    ) {
       return;
     }
 
-    // Ensure href ends in a trailing slash.
-    href = path.join(href, '/');
+    // Ensure href ends in a trailing slash *unless* it contains a hash anchor.
+    // Example: /en/docs/foo/#bar
+    // If we add a trailing slash to the end of a hash anchor it will break it.
+    if (href.indexOf('#') === -1) {
+      href = path.join(href, '/');
+    }
 
     // For English urls we strip the locale prefix.
     // /en/foo/bar/ becomes /foo/bar/

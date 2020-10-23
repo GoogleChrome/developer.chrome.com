@@ -1,5 +1,10 @@
 const yaml = require('js-yaml');
 
+// Markdown
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
+const markdownItAttrs = require('markdown-it-attrs');
+
 // Filters
 const {absolute, trailingSlash, leadingAndTrailingSlash} = require('./site/_filters/urls');
 const {i18n} = require('./site/_filters/i18n');
@@ -43,6 +48,30 @@ module.exports = eleventyConfig => {
 
   // Make .yml files work in the _data directory.
   eleventyConfig.addDataExtension('yml', contents => yaml.safeLoad(contents));
+
+  // Add markdown configuration
+  const markdownItOptions = {
+    html: true,
+  };
+
+  const markdownItAnchorOptions = {
+    level: 2,
+    permalink: true,
+    permalinkClass: 'headline__link',
+    permalinkSymbol: '#',
+  };
+
+  const markdownItAttrsOpts = {
+    leftDelimiter: '{:',
+    rightDelimiter: '}',
+    allowedAttributes: ['id', 'class', /^data-.*$/],
+  };
+
+  const md = markdownIt(markdownItOptions)
+    .use(markdownItAnchor, markdownItAnchorOptions)
+    .use(markdownItAttrs, markdownItAttrsOpts);
+
+  eleventyConfig.setLibrary('md', md);
 
   // Add plugins
   eleventyConfig.addPlugin(rssPlugin);
