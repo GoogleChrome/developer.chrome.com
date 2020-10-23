@@ -1,4 +1,65 @@
-# developers.chrome.com
+# developer.chrome.com
+
+developer.chrome.com is the ultimate resource for developers of all backgrounds
+to learn about what's new in Chrome!
+
+## Found a bug? 👷‍♀️
+
+Thanks for letting us know! Please [file an issue](https://github.com/GoogleChrome/developers.chrome.com/issues/new?assignees=&labels=bug&template=bug_report.md&title=) and a team member should reply shortly.
+
+## Authoring content ✍️
+
+Before you start writing take a moment to look over the
+[developer.chrome.com handbook](https://developer.chrome.com/docs/handbook) and
+familiarize yourself with the process.
+
+## Building the site 🏗
+
+You'll need a recent version of [Node](https://nodejs.org/): v12.10 or higher.
+
+### Clone the repo
+
+```bash
+git clone https://github.com/GoogleChrome/developers.chrome.com.git
+```
+
+### Install dependencies
+
+```bash
+npm ci
+```
+
+### Start a local server to preview the site
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:8080/` to see the site locally. Changes to assets will
+rebuild the site. Refresh to see your changes.
+
+## Environments 🌳
+
+To do a production build of the site and start the local server 
+run `npm run production && npm start`.
+
+## Staging 🕺
+
+When you send in a pull request it will be automatically staged for you. Keep an
+eye out for the netlify bot to comment on the pull request with your unique URL.
+
+## Deploying the site 🚀
+
+### Automatic deploys
+
+The site will build and deploy the master branch automatically every hour,
+Mon-Fri. If you've just merged an article then it should go live at the top
+of the next hour.
+
+## TODO
+
+The next few sections are leftover engineering notes that we need to migrate
+to our handbook. You can ignore them.
 
 ## Gorko
 The scss in this project is using
