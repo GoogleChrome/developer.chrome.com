@@ -5,18 +5,35 @@ Returns a link to the post and uses the post's title for link text.
 This will recursively keep outputting links depending on how many sections
 have been defined in the _data/docs/*.yml file for this project.
 #}
-{% macro projectSections(sections) %}
+{% macro projectSections(sections, previousType) %}
 
-<ul>
+{% set type = 'row' %}
+{% if previousType === 'row' %}
+  {% set type = 'column' %}
+{% elif previousType === 'column' %}
+  {% set type = 'nested-column' %}
+{% endif %}
+
+<ul class="project-sections__{{type}} stack flow-space-300">
   {% for item in sections %}
     {% if item.sections %}
       <li>
-        {{ item.title | i18n }}
-        {{ projectSections(item.sections) }}
+        <div>{{ item.title | i18n(locale) }}</div>
+        {{ projectSections(item.sections, type) }}
       </li>
     {% elif item.url %}
       {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
-      <li><a href="{{ post.url }}">{{ post.data.title }}</a>
+      <li>
+        <div>
+          {% if type === 'column' %}
+            {% include 'icons/document.svg' %}
+          {% endif %}
+          <a class="project-sections__link" href="{{ post.url }}">{{ post.data.title }}</a>
+        </div>
+        {% if type !== 'nested-column' %}
+          <div class="project-sections__description measure-long">{{ post.data.description }}</div>
+        {% endif %}
+      </li>
     {% endif %}
   {% endfor %}
 </ul>

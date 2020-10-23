@@ -1,0 +1,57 @@
+.project-sections {
+  border-top: 1px solid var(--color-hairline);
+  color: var(--color-secondary-text);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: px-to-rem(800px);
+  padding-top: get-size(300);
+}
+
+.project-sections li {
+  position: relative;
+}
+
+.project-sections__row > li {
+  display: flex;
+  flex-direction: column;
+
+  @include media-query('lg') {
+    flex-direction: row;
+  }
+}
+
+.project-sections__row > li > * {
+  flex: 1;
+}
+
+.project-sections__row > li:not(:first-of-type),
+.project-sections__column > li:not(:first-of-type) {
+  border-top: 1px solid var(--color-hairline);
+  padding-top: get-size(300);
+}
+
+.project-sections__row > li > :first-child {
+  // These headings have h4 styles on mobile, and h5 styles on desktop
+  @extend %type--headline;
+  @include flex-font((18px 28px), (20px 28px), (20px 28px));
+  margin-bottom: get-size(300);
+  @include media-query('lg') {
+    margin-bottom: 0;
+  }
+}
+
+.project-sections__column > li {
+  padding-left: get-size(700);
+  @include media-query('lg') {
+    padding-left: 0;
+  }
+}
+
+.project-sections__column > li > div {
+  display: flex;
+}
+
+.project-sections__column svg {
+  position: absolute;
+  transform: translateX(calc(-100% - #{get-size(400)}));
+}

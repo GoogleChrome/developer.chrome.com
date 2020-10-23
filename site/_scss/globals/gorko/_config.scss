@@ -215,6 +215,13 @@ $gorko-config: (
     'output': 'responsive',
     'property': 'font-size',
   ),
+  'text-align': (
+    'items': (
+      'center': 'center',
+    ),
+    'output': 'responsive',
+    'property': 'text-align',
+  ),
   'stack': (
     'items': (
       '300': 0,

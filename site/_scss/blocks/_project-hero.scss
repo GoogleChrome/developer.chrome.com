@@ -1,0 +1,7 @@
+.project-hero {
+  max-width: px-to-rem(512px);
+
+  > p {
+    color: var(--color-secondary-text);
+  }
+}

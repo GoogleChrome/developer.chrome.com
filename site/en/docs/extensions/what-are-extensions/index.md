@@ -2,7 +2,10 @@
 layout: 'layouts/doc-post.njk'
 title: What are extensions
 subhead: Improve performance by using a content delivery network
-description: Foo bar baz
+description: 'Extensions are small software programs that customize the browsing
+experience. They enable users to tailor Chrome functionality and behavior to
+individual needs or preferences. They are built on web technologies such as
+HTML, JavaScript, and CSS.'
 date: 2020-10-15
 updated: 2020-10-16
 authors:

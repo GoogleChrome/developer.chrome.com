@@ -11,14 +11,21 @@
 {% endblock %}
 
 {% block content %}
-  <h1 class="type--h1">{{ project_name }}</h1>
-  <p class="type">{{ description }}</p>
+  <div class="pad-400">
+    <div class="project-hero center-margin text-align-center">
+      <div class="project-hero__icon project-icon">
+        <div class="project-icon__cover"></div>
+      </div>
+      <h1 class="type--h4 gap-top-400">{{ title }}</h1>
+      <p class="type gap-top-300">{{ description }}</p>
+    </div>
 
-  {# toc defines the table of contents that the project landing page displays. #}
-  {% set toc = docs[project_key].toc %}
-
-
-  {# Render nested sections. #}
-  {% import 'macros/project-sections.njk' as macros with context %}
-  {{ macros.projectSections(toc) }}
+    {# toc defines the table of contents that the project landing page displays. #}
+    {% set toc = docs[project_key].toc %}
+    {# Render nested sections. #}
+    {% import 'macros/project-sections.njk' as macros with context %}
+    <div class="project-sections gap-top-800">
+      {{ macros.projectSections(toc) }}
+    </div>
+  </div>
 {% endblock %}

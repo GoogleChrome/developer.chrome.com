@@ -13,6 +13,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  // Ensure flex children do not break out of max-width/width containers.
+  min-width: 0;
 }
 
 .stack > * {
