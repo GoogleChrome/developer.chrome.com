@@ -64,7 +64,7 @@ Update the `title` and the `description`. These will be displayed on the
 ## Add your first doc
 
 The example project comes with a sample doc that you can build off of.
-See the guide on [adding a doc](/handbook/add-a-doc) for a detailed explainer.
+See the guide on [adding a doc](/docs/handbook/how-to/add-a-doc/) for a detailed explainer.
 
 ## Configure the table of contents for your project
 
