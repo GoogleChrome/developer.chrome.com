@@ -9,6 +9,10 @@ Thanks for letting us know! Please [file an issue](https://github.com/GoogleChro
 
 ## Authoring content ✍️
 
+🚨 Until this project is launched in production, the url for the handbook below
+will not work. Instead you'll need to build the site locally in order to read
+the handbook. Please skip to the [Building the site](https://github.com/GoogleChrome/developers.chrome.com#building-the-site-) instructions.
+
 Before you start writing take a moment to look over the
 [developer.chrome.com handbook](https://developer.chrome.com/docs/handbook) and
 familiarize yourself with the process.
@@ -16,6 +20,10 @@ familiarize yourself with the process.
 ## Building the site 🏗
 
 You'll need a recent version of [Node](https://nodejs.org/): v14 or higher.
+To check your node version run `node -v` in your terminal.
+
+If you don't have node, or if you need to upgrade, we recommend using the [Node
+Version Manager (nvm)](https://github.com/nvm-sh/nvm).
 
 ### Clone the repo
 
