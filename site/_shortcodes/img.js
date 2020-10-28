@@ -13,6 +13,9 @@ const client = new ImgixClient({domain, includeLibraryParam: false});
  * @return {string}
  */
 const img = (path, alt, width, height, options = {}) => {
+  const pattern = `^[http(s?):\/\/]*${domain}\/`; // eslint-disable-line no-useless-escape
+  const reg = new RegExp(pattern, 'g');
+  path = path.replace(reg, '');
   if (alt !== undefined && typeof alt !== 'string') {
     throw new Error(`alt text must be a string, received a ${typeof alt}`);
   }
@@ -20,6 +23,7 @@ const img = (path, alt, width, height, options = {}) => {
   options = {maxWidth: 1600, widthTolerance: 0.2, ...options};
   const params = {
     auto: 'format',
+    fit: 'max',
   };
   const src = client.buildURL(path, params);
   const srcSet = client.buildSrcSet(path, params, options);

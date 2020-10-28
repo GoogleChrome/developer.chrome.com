@@ -26,6 +26,7 @@ const locales = require('./site/_data/site').locales;
 
 // Collections
 const feedsCollection = require('./site/_collections/feeds');
+const tagsCollection = require('./site/_collections/tags');
 
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
@@ -87,6 +88,7 @@ module.exports = eleventyConfig => {
     return collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).reverse();
   }));
   eleventyConfig.addCollection('feeds', feedsCollection);
+  eleventyConfig.addCollection('tags', tagsCollection);
 
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);

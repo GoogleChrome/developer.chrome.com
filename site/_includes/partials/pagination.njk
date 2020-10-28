@@ -1,8 +1,20 @@
+{# If an alias exists for a pagination element use the pagination navigation.
+This would typically exist for a collections that has went through the `add-pagination`
+function used to allow pagination to handle multi-dimensional arrays. This is used in the
+`tags` collection to generate paginated pages for all the tags. #}
+{% if paged %}
+  {% set paginationObject = paged.pagination %}
+{# If no alias exists and we aren't using the `add-pagination` function use the pagination
+element for the pagination (stock) navigation #}
+{% else %}
+  {% set paginationObject = pagination %}
+{% endif %}
+
 <nav>
-  {% if pagination.href.previous %}
-    <a href="{{ pagination.href.previous }}">Previous</a>
+  {% if paginationObject.href.previous %}
+    <a href="{{ paginationObject.href.previous }}">Previous</a>
   {% endif %}
-  {% if pagination.href.next %}
-    <a href="{{ pagination.href.next }}">Next</a>
+  {% if paginationObject.href.next %}
+    <a href="{{ paginationObject.href.next }}">Next</a>
   {% endif %}
 </nav>

@@ -1,16 +1,17 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+{% set paginationObject = paged.pagination %}
 <h1 class="type--h1">{{ title }}</h1>
-<h2>{{ i18n.headings['latest-news'] }}</h2>
+<h2>{{ description }}</h2>
 
-{% for post in pagination.items %}
+{% for post in paginationObject.items %}
   {% if loop.first and post.data.hero %}
     {% img post.data.hero, post.data.alt %}
   {% endif %}
   <a href="{{ post.url }}"><h3>{{ post.data.title }}</h3></a>
   <p>{{ post.data.snippet }}</p>
-  
+
 {% endfor %}
 {% include 'partials/pagination.njk' %}
 {% endblock %}

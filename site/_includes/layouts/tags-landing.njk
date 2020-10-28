@@ -1,0 +1,30 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<h1 class="type--h1">{{ title }}</h1>
+<h2>{{ i18n.headings['latest-news'] }}</h2>
+{% for tag in pagination.items %}
+  {# Get the current first letter of the tag title #}
+  {% set tagLetter = tag.title[0] | capitalize %}
+
+  {# If this is not the first iteration and the letter title and it doesn't match the tag's letter close the div #}
+  {% if not loop.first and letterTitle !== tagLetter %}
+    </div>
+  {% endif %}
+
+  {# If the letter title doesn't match the tag's letter create a new div and set the letter title to the current letter #}
+  {% if letterTitle !== tagLetter %}
+    {% set letterTitle = tagLetter %}
+    <div>
+      <span>{{ letterTitle }}</span>
+  {% endif %}
+  
+  <a href="{{ helpers.join('/', locale, 'tags', tag.key, '/')  }}"><h3>{{ tag.title }}</h3></a>
+  
+  {# If this is the last element of our loop close the div #}
+  {% if loop.last %}
+    </div>
+  {% endif %}
+{% endfor %}
+{% include 'partials/pagination.njk' %}
+{% endblock %}
