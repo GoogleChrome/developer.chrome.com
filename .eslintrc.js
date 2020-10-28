@@ -21,13 +21,10 @@ module.exports = {
     'node/no-unpublished-require': 0,
     'node/no-unpublished-import': 0,
 
-    // This rule looks at the node version in your package.json's engines field
-    // to determine which ES features are allowed. Our engine field says we
-    // support Node v12 which does not yet have support for modules. But we use
-    // rollup to bundle our client-side JS and our config.js files for other
-    // tools like ava and rollup support ESM.
+    // Even though we target Node v14 (and v12 also supported modules), eslint
+    // still complains that modules are not yet suppoted.
     'node/no-unsupported-features/es-syntax': ['error', {
       'ignores': ['modules'],
-    }]
-  }
+    }],
+  },
 };
