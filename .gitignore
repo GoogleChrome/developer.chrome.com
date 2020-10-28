@@ -8,6 +8,7 @@ Thumbs.db
 .sass-cache
 .env
 .cache
+.vscode
 
 # Code coverage generated files
 .nyc_output
