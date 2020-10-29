@@ -18,3 +18,7 @@ coverage
 node_modules
 dist
 **/_includes/css
+
+# Eleventy
+# We generate our own .eleventyignore file dynamically during builds
+.eleventyignore

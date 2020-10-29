@@ -37,6 +37,26 @@ git clone https://github.com/GoogleChrome/developers.chrome.com.git
 npm ci
 ```
 
+### Set up build flags
+
+Building the entire site can take a while because it's over a thousand pages.
+If you want to _massively_ speed up your build times, we suggest setting some
+build flags to ignore certain sections.
+
+- Create a `.env` file in the root of your project
+- Optionally add the following:
+
+```
+# Ignore ALL /docs/
+ELEVENTY_IGNORE_DOCS=true
+
+# Only ignore /docs/native-client/
+ELEVENTY_IGNORE_NCAL=true
+
+# Only ignore /docs/extensions/
+ELEVENTY_IGNORE_EXTENSIONS=true
+```
+
 ### Start a local server to preview the site
 
 ```bash
