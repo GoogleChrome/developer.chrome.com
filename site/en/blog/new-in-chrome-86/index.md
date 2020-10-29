@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: What's new in Chrome 86
 subhead: Chrome 86 is starting to roll out to stable now.
 description: What's new in Chrome 86 for developers?
-hero:  https://wd.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/1603154782763.png
+hero:  image/tcFciHGuF3MxnTr1y5ue01OGLBn2/1603154782763.png
 authors:
   - jakearchibald
   - kaycebasques

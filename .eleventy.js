@@ -25,6 +25,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const locales = require('./site/_data/site').locales;
 
 // Collections
+const algoliaCollection = require('./site/_collections/algolia');
 const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
 const typesCollection = require('./site/_collections/types');
@@ -88,6 +89,7 @@ module.exports = eleventyConfig => {
   locales.forEach(locale => eleventyConfig.addCollection(`blog-${locale}`, collections => {
     return collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).reverse();
   }));
+  eleventyConfig.addCollection('algolia', algoliaCollection);
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('types', typesCollection);

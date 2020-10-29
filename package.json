@@ -7,6 +7,7 @@
     "node": ">=14"
   },
   "scripts": {
+    "algolia": "node ./algolia.js",
     "clean": "rimraf dist",
     "dev": "npm-run-all clean gulp rollup --parallel --race gulp:watch rollup:watch eleventy:watch server",
     "eleventy:debug": "node --inspect ./node_modules/.bin/eleventy",
@@ -52,6 +53,7 @@
     "imgix-core-js": "^2.3.1",
     "lit-element": "^2.4.0",
     "npm-run-all": "^4.1.5",
+    "remove-markdown": "^0.3.0",
     "rollup": "^2.22.2",
     "sass": "^1.26.10",
     "typedoc": "^0.19.2",
@@ -62,9 +64,11 @@
     "@ava/babel": "^1.0.1",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@types/node": "^13.11.1",
+    "algoliasearch": "^4.5.1",
     "ava": "^3.12.1",
     "cheerio": "^1.0.0-rc.3",
     "csso": "^4.0.3",
+    "dotenv": "^8.2.0",
     "eslint-plugin-ava": "^11.0.0",
     "gts": "^2.0.2",
     "husky": "^4.3.0",
