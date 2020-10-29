@@ -1,0 +1,37 @@
+{% extends "layouts/base.njk" %}
+
+{% block title_bar %}
+  {% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
+
+{% block content %}
+<div class="pad-400">
+
+<h1 class="type--h1">Chrome APIs</h1>
+<p>Chrome provides extensions with many special-purpose APIs like <code>chrome.runtime</code> and <code>chrome.alarms</code>.
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th class="reference--collapse">Description</th>
+      <th>Since</th>
+    </tr>
+  </thead>
+  <tbody>
+
+{% for namespace in collections.types %}
+
+    <tr>
+      <td><a href="{{ namespace.name }}">{{ namespace.name }}</a></td>
+      <td class="reference--collapse">{{ namespace.comment }}</td>
+      <td>{{ namespace.release }} </td>
+    </tr>
+
+{% endfor %}
+
+  </tbody>
+</table>
+
+</div>
+{% endblock %}

@@ -27,6 +27,7 @@ const locales = require('./site/_data/site').locales;
 // Collections
 const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
+const typesCollection = require('./site/_collections/types');
 
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
@@ -89,6 +90,7 @@ module.exports = eleventyConfig => {
   }));
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
+  eleventyConfig.addCollection('types', typesCollection);
 
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);

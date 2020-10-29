@@ -1,0 +1,60 @@
+{#
+  This is run for every top-level API namespace, e.g., for "chrome.accessibilityFeatures".
+#}
+
+{% extends "layouts/base.njk" %}
+
+{% block title_bar %}
+  {% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
+
+{% block content %}
+  <div class="pad-400">
+
+  <h1 class="type--h2">{{ namespace.title }}</h1>
+  <p>{{ namespace.comment }}</p>
+
+  {% if namespace.methods.length %}
+
+    <h2 class="type--h3">Methods</h2>
+
+    {% for method in namespace.methods %}
+
+      <h3 class="type--h4">{{ method.name }}</h3>
+      <div class="summary"><code>{{ method.signature }}</code></div>
+      <p>{{ method.comment }}</p>
+
+      <h4>Parameters</h4>
+      <table>
+      {% for parameter in method.parameters %}
+        <tr>
+          <th>
+            <h5 class="type--h5">{{ parameter.name }}</h5>
+            <div class="api__type">{{ parameter.type }}</div>
+          </th>
+          <td>
+            {{ parameter.comment }}
+          </td>
+        </tr>
+      {% endfor %}
+      </table>
+
+    {% endfor %}
+
+  {% endif %}
+  {% if namespace.types.length %}
+
+    <h2 class="type--h3">Types</h2>
+
+    {% for type in namespace.types %}
+
+      <h3 class="type--h4">{{ type.name }}</h3>
+
+      {# TODO: use type macro #}
+
+    {% endfor %}
+
+  {% endif %}
+
+  </div>
+{% endblock %}

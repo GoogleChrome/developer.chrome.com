@@ -1,0 +1,13 @@
+---
+layout: 'layouts/namespace-landing.njk'
+permalink: /en/docs/extensions/reference/{{ namespace.name }}/index.html
+title: Reference
+eleventyComputed:
+  title: "{{ namespace.title or title }}"
+  description: "{{ namespace.description or description }}"
+  date: "{{ namespace.updated or '' }}"
+pagination:
+  data: collections.types
+  size: 1
+  alias: namespace
+---

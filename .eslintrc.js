@@ -7,6 +7,9 @@ module.exports = {
     browser: true,
     node: true,
   },
+  // This contains "chrome" for testing the autocomplete of Chrome's extension
+  // API.
+  globals: {"chrome": "readonly"},
   rules: {
     // By default AVA will ignore folders or files with underscores in
     // their name. Since we have test paths like /site/_data/… we need to
