@@ -76,6 +76,13 @@ run `npm run production && npm start`.
 When you send in a pull request it will be automatically staged for you. Keep an
 eye out for the netlify bot to comment on the pull request with your unique URL.
 
+If you would like to stage your _local_ changes to a unique url, run the command
+`npm run stage:personal`. This can be useful if you're not ready to create a
+pull request yet, or if you need to stage something private.
+
+☝️ You will need to be a member of our app engine project for this command to
+work.
+
 ## Deploying the site 🚀
 
 ### Automatic deploys

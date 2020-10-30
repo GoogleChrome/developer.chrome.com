@@ -4,7 +4,7 @@
   "description": "The source for developers.chrome.com",
   "private": true,
   "engines": {
-    "node": ">=14"
+    "node": ">=12"
   },
   "scripts": {
     "algolia": "node ./algolia.js",
@@ -28,7 +28,8 @@
     "rollup:watch": "npx chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
     "rollup": "npx rollup -c",
     "server": "node ./server",
-    "stage": "NODE_ENV=production npm run production && gcloud app deploy --project=chrome-apps-doc-staging-2020",
+    "stage:personal": "NODE_ENV=production npm run production && gcloud app deploy --project=chrome-apps-doc-staging-2020 --quiet --no-promote",
+    "stage": "NODE_ENV=production npm run production && gcloud app deploy --project=chrome-apps-doc-staging-2020 --quiet",
     "start": "node ./server",
     "test:watch": "ava --watch",
     "test": "nyc ava"
