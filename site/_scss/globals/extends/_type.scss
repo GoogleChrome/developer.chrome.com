@@ -233,4 +233,8 @@
     margin-left: -#{$article-padding};
     margin-right: -#{$article-padding};
   }
+
+  &--hairline {
+    background-color: var(--color-hairline);
+  }
 }

@@ -9,6 +9,9 @@ import commonjs from '@rollup/plugin-commonjs';
 // A Rollup plugin to minify generated ES bundles. Uses terser under the hood.
 import {terser} from 'rollup-plugin-terser';
 
+// A Rollup plugin for copying files.
+import copy from 'rollup-plugin-copy';
+
 const devConfig = {
   input: 'site/_js/main.js',
   output: {
@@ -19,7 +22,15 @@ const devConfig = {
     // By default rollup clears the console on every build. This disables that.
     clearScreen: false,
   },
-  plugins: [nodeResolve(), commonjs()],
+  plugins: [
+    nodeResolve(),
+    commonjs(),
+    copy({
+      // Legacy docs, like those at /docs/native-client/, rely on the old
+      // prettify.js code for syntax highlighting.
+      targets: [{src: 'site/_js/prettify.js', dest: 'dist/js'}],
+    }),
+  ],
 };
 
 const productionConfig = {
@@ -28,7 +39,14 @@ const productionConfig = {
     dir: 'dist/js',
     format: 'esm',
   },
-  plugins: [nodeResolve(), commonjs(), terser()],
+  plugins: [
+    nodeResolve(),
+    commonjs(),
+    terser(),
+    copy({
+      targets: [{src: 'site/_js/prettify.js', dest: 'dist/js'}],
+    }),
+  ],
 };
 
 /**

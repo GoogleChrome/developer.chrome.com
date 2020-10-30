@@ -1,0 +1,23 @@
+learn_basics:
+  en: 'Learn the basics'
+
+sdk:
+  en: 'SDK'
+
+tutorial:
+  en: 'Tutorial'
+
+dev_cycle:
+  en: 'Development cycle'
+
+distribute:
+  en: 'Distribute your apps'
+
+pepper_api:
+  en: 'Pepper API Reference'
+
+additional_reference:
+  en: 'Additional reference & versions'
+
+help:
+  en: 'Help'

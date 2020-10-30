@@ -1,6 +1,10 @@
 const path = require('path');
 
 const findByUrl = (collection, url, locale = '') => {
+  if (path.extname(url)) {
+    throw new Error(`Page urls should not end in file extensions: ${url}`);
+  }
+
   // Ensure urls are always absolute. This is because eleventy's collection
   // urls are always absolute so if we try to match against a relative url
   // we'll always miss.
@@ -20,7 +24,9 @@ const findByUrl = (collection, url, locale = '') => {
     locale = path.join('/', locale);
   }
 
-  return collection.find(item => item.url === path.join(locale, url));
+  const urlToFind = path.join(locale, url);
+  const result = collection.find(item => item.url === urlToFind);
+  return result;
 };
 
 module.exports = {findByUrl};

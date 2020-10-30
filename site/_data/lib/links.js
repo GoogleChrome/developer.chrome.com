@@ -12,6 +12,10 @@ const {leadingAndTrailingSlash} = require('../../_filters/urls');
  * @return {string|undefined} The attributes or empty
  */
 function getLinkActiveState(itemUrl, pageUrl) {
+  if (!itemUrl || !pageUrl) {
+    return;
+  }
+
   if (itemUrl === pageUrl) {
     return ' data-state="active" aria-current="page"';
   } else if (itemUrl.length > 1 && pageUrl.indexOf(itemUrl) === 0) {
@@ -26,9 +30,13 @@ function getLinkActiveState(itemUrl, pageUrl) {
  * @param {Section[]} section A section from a _data/docs toc.yml file.
  * @param {string} pageUrl The url of the current page.
  * @param {string} locale The locale for the page.
- * @return {boolean}
+ * @return {boolean|undefined}
  */
 function hasActiveLink(section, pageUrl, locale) {
+  if (!section || !pageUrl) {
+    return;
+  }
+
   const queue = section.slice();
   while (queue.length) {
     const item = /** @type {Section} */ (queue.shift());

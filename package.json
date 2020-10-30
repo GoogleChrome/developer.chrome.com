@@ -97,6 +97,7 @@
     "remark-preset-lint-recommended": "^4.0.1",
     "remark-validate-links": "^10.0.2",
     "rimraf": "^3.0.2",
+    "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-terser": "^7.0.2",
     "stylelint": "^13.7.0",
     "stylelint-config-sass-guidelines": "^7.1.0",

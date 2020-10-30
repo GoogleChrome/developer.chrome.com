@@ -1,0 +1,33 @@
+// All generated API reference docs are nested under a top level
+// #doxygen-ref div. We use this to scope our styles.
+/* stylelint-disable selector-max-id */
+#doxygen-ref {
+
+  // Tables
+  .memberdecls,
+  .params {
+    th,
+    td {
+      padding: get-size(300);
+    }
+
+    .memItemLeft {
+      text-align: left;
+    }
+  }
+
+  .memitem:not(:last-of-type) {
+    border-bottom: 1px solid var(--color-hairline);
+    padding-bottom: var(--flow-space);
+  }
+
+  // Override our site default
+  tr:not([class]):not(:last-of-type) {
+    border-bottom: 0;
+  }
+
+  .memname td {
+    background-color: var(--color-bg-shade);
+    padding: get-size(300);
+  }
+}

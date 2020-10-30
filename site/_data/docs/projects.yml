@@ -1,4 +1,6 @@
 chrome:
   - url: extensions
+  - url: native-client
+
 tools:
   - url: devtools

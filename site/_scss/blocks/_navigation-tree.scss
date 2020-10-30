@@ -1,7 +1,9 @@
 /* purgecss start ignore */
 navigation-tree {
+  @include font-setup(14px, 28px);
   display: none;
-
+  width: px-to-rem(250px);
+  
   @include media-query('lg') {
     display: block;
   }

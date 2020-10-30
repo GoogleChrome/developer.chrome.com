@@ -36,3 +36,14 @@
     margin-top: $value;
   }
 }
+
+// A recursive stack is a more powerful/dangerous selector as it will
+// keep injecting margin regardless of the nesting level.
+// For the majority of use cases you'll probably want to use the regular .stack
+// class. But for situations like the native-client docs, which are machine
+// generated, it's helpful being able to affect all of the white space with
+// a single class.
+// https://every-layout.dev/layouts/stack/#recursion
+.stack-recursive * + * {
+  margin-top: var(--flow-space);
+}

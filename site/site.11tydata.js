@@ -6,6 +6,9 @@ module.exports = {
     // generating breadcrumbs.
     parent: data => {
       const url = data.page.url;
+      if (!url) {
+        return;
+      }
       // ignore /en/ or /en-US/ as these will always be
       // the homepage which has no parent.
       if (url.split(sep).length <= 3) {

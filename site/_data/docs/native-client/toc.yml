@@ -1,0 +1,80 @@
+# Learn the basics
+- title: i18n.docs.native_client.learn_basics
+  sections:
+    - url: /docs/native-client/welcome-to-native-client
+    - url: /docs/native-client/overview
+    - url: /docs/native-client/nacl-and-pnacl
+
+# Migration guide
+- url: /docs/native-client/migration
+
+# Download the SDK
+- title: i18n.docs.native_client.sdk
+  sections:
+    - url: /docs/native-client/sdk/download
+    - url: /docs/native-client/sdk/examples
+    - url: /docs/native-client/sdk/release-notes
+
+# Tutorial
+- title: i18n.docs.native_client.tutorial
+  sections:
+    - url: /docs/native-client/devguide/tutorial/tutorial-part1
+    - url: /docs/native-client/devguide/tutorial/tutorial-part2
+    - url: /docs/native-client/cds2014
+
+# Development cycle
+- title: i18n.docs.native_client.dev_cycle
+  sections:
+    - url: /docs/native-client/devguide/devcycle/building
+    - url: /docs/native-client/devguide/devcycle/running
+    - url: /docs/native-client/devguide/devcycle/debugging
+    - url: /docs/native-client/devguide/devcycle/vs-addin
+    - url: /docs/native-client/devguide/devcycle/dynamic-loading
+
+# Coding your application
+- title: i18n.docs.native_client.dev_cycle
+  sections:
+    - url: /docs/native-client/devguide/coding/application-structure
+    - url: /docs/native-client/devguide/coding/native-client-modules
+    - url: /docs/native-client/devguide/coding/3D-graphics
+    - url: /docs/native-client/devguide/coding/audio
+    - url: /docs/native-client/devguide/coding/file-io
+    - url: /docs/native-client/devguide/coding/nacl_io # this underscore is part of the original url
+    - url: /docs/native-client/devguide/coding/message-system
+    - url: /docs/native-client/devguide/coding/progress-events
+    - url: /docs/native-client/devguide/coding/url-loading
+    - url: /docs/native-client/devguide/coding/view-focus-input-events
+
+# Distribute your apps
+- url: /docs/native-client/devguide/distributing
+
+# Pepper API reference
+- title: i18n.docs.native_client.pepper_api
+  sections:
+    - url: /docs/native-client/c-api
+    - url: /docs/native-client/cpp-api
+    - url: /docs/native-client/c-api-beta
+    - url: /docs/native-client/cpp-api-beta
+    - url: /docs/native-client/c-api-dev
+    - url: /docs/native-client/cpp-api-dev
+
+# Additional reference & versions
+- title: i18n.docs.native_client.additional_reference
+  sections:
+    - url: /docs/native-client/glossary
+    - url: /docs/native-client/reference/ideas
+    - url: /docs/native-client/reference/nacl-manifest-format
+    - url: /docs/native-client/reference/pnacl-bitcode-manual
+    - url: /docs/native-client/reference/pnacl-bitcode-abi
+    - url: /docs/native-client/reference/pnacl-undefined-behavior
+    - url: /docs/native-client/reference/pnacl-c-cpp-language-support
+    - url: /docs/native-client/reference/sandbox_internals
+    - url: /docs/native-client/reference/design-docs
+
+# Help
+- title: i18n.docs.native_client.help
+  sections:
+    - url: /docs/native-client/faq
+    - url: /docs/native-client/help
+    - url: /docs/native-client/publications-and-presentations
+    - url: /docs/native-client/community/security-contest

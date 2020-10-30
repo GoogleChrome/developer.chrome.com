@@ -1,0 +1,15 @@
+{% extends "layouts/base.njk" %}
+
+{#
+  Native Client docs rely on the old prettify.js project for syntax
+  highlighting.
+#}
+{% set pageScripts = ['/js/prettify.js'] %}
+
+{% block content %}
+  <div class="display-flex">
+    <article class="stack measure-long type center-margin pad-400">
+      {{ content | safe }}
+    </article>
+  </div>
+{% endblock %}

@@ -107,4 +107,9 @@
   &--full-bleed {
     @extend %type--full-bleed;
   }
+
+  hr:not([class]),
+  &--hairline {
+    @extend %type--hairline;
+  }
 }

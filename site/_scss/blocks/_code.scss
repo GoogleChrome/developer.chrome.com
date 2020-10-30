@@ -3,6 +3,7 @@ code {
   @include apply-utility('font', 'mono');
 }
 
+pre,
 pre[class*='language-'] {
   background: var(--color-code-bg);
   border: 1px solid var(--color-hairline);
@@ -10,6 +11,17 @@ pre[class*='language-'] {
   color: var(--color-primary-text);
   overflow: auto;
   padding: 0.5em;
+}
+
+// Aggressively override the css loaded by prettify.js
+// prettify.js is only used by the legacy API docs at /docs/native-client/
+.prettyprint {
+  background: var(--color-code-bg) !important;
+  border: 1px solid var(--color-hairline) !important;
+  border-radius: 3px !important;
+  color: var(--color-primary-text) !important;
+  overflow: auto !important;
+  padding: 0.5em !important;
 }
 
 // Token colors
