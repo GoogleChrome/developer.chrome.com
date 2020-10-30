@@ -50,6 +50,7 @@ navigation-rail {
   &[data-state='active'] {
     @include media-query('lg') {
       background: transparent;
+      color: var(--color-side-nav-active);
 
       > svg {
         fill: var(--color-primary);

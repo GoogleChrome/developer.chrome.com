@@ -20,7 +20,7 @@
       background: var(--color-side-nav-hover);
     }
   
-    &[data-state='active'] {
+    &[aria-current='page'] {
       background: var(--color-secondary);
       color: var(--color-side-nav-active);
     }
