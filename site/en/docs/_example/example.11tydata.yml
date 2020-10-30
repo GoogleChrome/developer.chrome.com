@@ -3,3 +3,6 @@ project_key: 'example'
 
 # This is used to display the project's name in the mobile navigation drawer.
 project_name: 'Example'
+
+# Color (CSS theme variable) to use for this project page
+project_icon_color: ''

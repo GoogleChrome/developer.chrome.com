@@ -1,0 +1,7 @@
+{% macro projectIcon(color, projectKey) %}
+  <div class="project-hero__icon">
+    <div class="project-hero__icon-cover"{% if color %} style="color: var(--{{color}})"{% endif %}>
+      {% include '../../_images/project/' + projectKey + '.svg' ignore missing %}
+    </div>
+  </div>
+{% endmacro %}

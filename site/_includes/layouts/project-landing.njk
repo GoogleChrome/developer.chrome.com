@@ -13,8 +13,10 @@
 {% block content %}
   <div class="pad-400">
     <div class="project-hero center-margin text-align-center">
-      <div class="project-hero__icon project-icon">
-        <div class="project-icon__cover"></div>
+      <div class="project-hero__icon">
+        <div class="project-hero__icon-cover"{% if project_icon_color %} style="color: var(--{{project_icon_color}})"{% endif %}>
+          {% include '../../_images/project/' + project_key + '.svg' ignore missing %}
+        </div>
       </div>
       <h1 class="type--h4 gap-top-400">{{ title }}</h1>
       <p class="type gap-top-300">{{ description }}</p>

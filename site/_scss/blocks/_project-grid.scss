@@ -1,0 +1,24 @@
+.project-grid {
+  display: grid;
+  gap: get-size(500);
+  grid-template-columns: repeat(auto-fill, px-to-rem(160px));
+  justify-content: center;
+
+  @include media-query('lg') {
+    grid-template-columns: repeat(auto-fill, minmax(px-to-rem(160px), px-to-rem(300px)));
+  }
+
+  .project-grid__link {
+    color: inherit;
+    display: block;
+    padding: get-size(600) get-size(300) get-size(300);
+    text-decoration: none;
+    transition: 0.3s background-color;
+
+    &:focus,
+    &:hover {
+      background-color: var(--color-bg-shade);
+      border-radius: 12px;
+    }
+  }
+}

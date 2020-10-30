@@ -14,7 +14,7 @@ have been defined in the _data/docs/*.yml file for this project.
   {% set type = 'nested-column' %}
 {% endif %}
 
-<ul class="project-sections__{{type}} stack flow-space-300">
+<ul class="project-sections__{{type}} stack flow-space-300" role="list">
   {% for item in sections %}
     {% if item.sections %}
       <li>

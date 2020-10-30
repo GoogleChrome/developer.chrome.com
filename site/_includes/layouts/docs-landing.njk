@@ -11,19 +11,26 @@
 {% endblock %}
 
 {% block content %}
-  <h1 class="type--h1">{{ title }}</h1>
-
-  {% for key, value in i18n.projects -%}
-    <h2 class="type--h2">{{ i18n.projects[key].heading }}</h2>
-    <ul>
-      {% for item in docs.projects[key] -%}
-        {# Find the landing page for the project itself and grab its metadata #}
-        {% set projectUrl = helpers.join(page.url, item.url) %}
-        {% set project = helpers.findByUrl(collections.all, projectUrl) %}
-        <li>
-          {% include 'partials/project-icon.njk' %}
-        </li>
-      {%- endfor %}
-    </ul>
-  {%- endfor %}
+  <div class="pad-400 stack">
+    {% for key, value in i18n.projects -%}
+      <h2 class="type--eyebrow">{{ i18n.projects[key].heading }}</h2>
+      <ul class="project-grid pad-0" role="list">
+        {% for item in docs.projects[key] -%}
+          {# Find the landing page for the project itself and grab its metadata #}
+          {% set projectUrl = helpers.join(page.url, item.url) %}
+          {% set project = helpers.findByUrl(collections.all, projectUrl) %}
+          {% set pd = project.data %}
+          <li class="text-align-center">
+            <a class="project-grid__link" href="{{ pd.project_key }}">
+              {% from 'macros/project-icon.njk' import projectIcon with context %}
+              {{ projectIcon(pd.project_icon_color, pd.project_key) }}
+              <h3 class="type--h5 gap-top-400">{{ pd.project_name }}</h1>
+              {# TODO(samthor): We should probably limit this text. #}
+              <p class="display-none lg:display-block type--small gap-top-300">{{ pd.description }}</p>
+            </a>
+          </li>
+        {%- endfor %}
+      </ul>
+    {%- endfor %}
+  </div>
 {% endblock %}

@@ -26,6 +26,9 @@
   --color-code-highlight: #{get-color('yellow-200')};
   --color-code-add: #{get-color('green-200')};
   --color-code-remove: #{get-color('red-200')};
+
+  --color-project-default: #{get-color('blue-700')};
+  --color-project-handbook: #{get-color('red-700')};
 }
 
 @mixin dark-mode() {

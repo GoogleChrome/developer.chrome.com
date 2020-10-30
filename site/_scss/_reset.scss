@@ -16,8 +16,6 @@ h4,
 h5,
 h6,
 p,
-ul[class],
-ol[class],
 figure,
 blockquote,
 dl,
@@ -35,13 +33,15 @@ body {
   min-height: 100vh;
 }
 
-// Remove default padding and list styles on ul, ol elements with a class
-// attribute
-ul[class],
-ol[class] {
+// Remove list styles on ul, ol elements with a list role, which suggests
+// default styling will be removed.
+// https://github.com/hankchizljaw/modern-css-reset/issues/30
+/* purgecss start ignore */
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
-  padding: 0;
 }
+/* purgecss end ignore */
 
 // Anchor elements that don't have a class get default styles
 a:not([class]) {
