@@ -1,0 +1,43 @@
+.card {
+  border-radius: 8px;
+  display: block;
+  min-height: 506px;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    @include elevation(3);
+  }
+}
+
+// TODO(samthor): Eventually this will go into CSS Grid.
+.card {
+  margin: get-size(300);
+  margin-left: 0;
+  max-width: 32rem;
+}
+
+.card-base {
+  box-sizing: border-box;
+  padding: get-size(300);
+  position: relative;
+}
+
+.card-base__figure {
+  align-items: center;
+  background-color: get-color(grey-100);
+  display: flex;
+  justify-content: center;
+  margin: 0 0 16px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+
+  img {
+    height: 240px;
+    max-width: 100%;
+    min-width: 100%;
+    object-fit: cover;
+  }
+}

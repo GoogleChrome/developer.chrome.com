@@ -1,16 +1,30 @@
 {% extends "layouts/base.njk" %}
 
-{% block content %}
-<h1 class="type--h1">{{ title }}</h1>
-<h2>{{ i18n.headings['latest-news'] }}</h2>
+{% block title_bar %}
+  {% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
 
-{% for post in pagination.items %}
-  {% if loop.first and post.data.hero %}
-    {% img post.data.hero, post.data.alt %}
-  {% endif %}
-  <a href="{{ post.url }}"><h3>{{ post.data.title }}</h3></a>
-  <p>{{ post.data.snippet }}</p>
-  
-{% endfor %}
-{% include 'partials/pagination.njk' %}
+{% block content %}
+  <div class="pad-400">
+    <h2 class="type--eyebrow">{{ i18n.headings['latest-news'] }}</h2>
+
+    {% for post in pagination.items %}
+      <div class="card">
+        <article class="card-base">
+          {% if loop.first and post.data.hero %}
+            <a href="{{ post.url }}">
+              <figure class="card-base__figure">
+                {% img post.data.hero, post.data.alt, '100%', '240' %}
+              </figure>
+            </a>
+          {% endif %}
+          <a href="{{ post.url }}"><h3>{{ post.data.title }}</h3></a>
+          <p>{{ post.data.snippet }}</p>
+        </article>
+      </div>
+
+    {% endfor %}
+
+    {% include 'partials/pagination.njk' %}
+  </div>
 {% endblock %}

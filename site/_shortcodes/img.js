@@ -22,8 +22,8 @@ const generateSrc = path => client.buildURL(path, params);
  *
  * @param {string} path Path for image.
  * @param {string} [alt] Alt text or options for image.
- * @param {number} [width] Width, in pixels, of image.
- * @param {number} [height] Height, in pixels, of image.
+ * @param {number|string} [width] Width, in pixels, of image.
+ * @param {number|string} [height] Height, in pixels, of image.
  * @param {ImgOptions} [options] Image options.
  * @return {string}
  */
