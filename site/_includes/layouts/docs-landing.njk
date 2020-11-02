@@ -21,10 +21,10 @@
           {% set project = helpers.findByUrl(collections.all, projectUrl) %}
           {% set pd = project.data %}
           <li class="text-align-center">
-            <a class="project-grid__link" href="{{ pd.project_key }}">
+            <a class="project-grid__link" href="{{ item.url }}/">
               {% from 'macros/project-icon.njk' import projectIcon with context %}
-              {{ projectIcon(pd.project_icon_color, pd.project_key) }}
-              <h3 class="type--h5 gap-top-400">{{ pd.project_name }}</h1>
+              {{ projectIcon(item.url) }}
+              <h3 class="type--h5 gap-top-400">{{ pd.title }}</h1>
               {# TODO(samthor): We should probably limit this text. #}
               <p class="display-none lg:display-block type--small gap-top-300">{{ pd.description }}</p>
             </a>

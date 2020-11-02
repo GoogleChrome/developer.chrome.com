@@ -1,8 +1,0 @@
-# Used to fetch project data from _data/docs/[project_key]
-project_key: 'handbook'
-
-# Used to display the project name on its landing page and in the side-nav
-project_name: 'Handbook'
-
-# Color (CSS theme variable) to use for this project page
-project_icon_color: 'color-project-handbook'

@@ -8,7 +8,8 @@ date: 2020-10-22
 ## Clone the example project
 
 Duplicate the example project located in `site/en/docs/_example`. Rename the
-folder to match whatever slug you want to use for your project url.
+folder to match whatever slug you want to use for your project url. This slug
+is referred to as the `project-key`.
 
 ```bash
 .
@@ -18,33 +19,6 @@ folder to match whatever slug you want to use for your project url.
 ├── cheese # your new project! This will appear at /docs/cheese/
 └── index.md
 ```
-
-## Configure your project
-
-Rename the `example.11tydata.yml` file so it matches your directory name.
-For example, if your directory is named "cheese" you would rename the file
-`cheese.11tydata.yml` 🧀
-
-```bash
-.
-├── cheese
-│   ├── cheese.11tydata.yml
-│   ├── index.md
-│   └── my-first-doc
-```
-
-Update the configuration in the `11tydata.yml` file.
-
-<dl>
-  <dt>project_key</dt>
-  <dd>
-    This is used to look up the project's toc in
-    <code>_data/docs/[project_key]</code>. We'll explain this more in a moment.
-    You probably want this to match your directory name (i.e. "cheese").
-  </dd>
-  <dt>project_name</dt>
-  <dd>This is used to display the project's name in the mobile navigation drawer.</dd>
-</dl>
 
 ## Configure the landing page
 
@@ -59,7 +33,7 @@ Open the `index.md` file at the root of the project directory.
 ```
 
 Update the `title` and the `description`. These will be displayed on the
-`/docs/` and `/docs/[project-name]` pages.
+`/docs/` and `/docs/[project-key]` pages.
 
 ## Add your first doc
 
@@ -81,7 +55,7 @@ project.
 ```
 
 Add a `toc.yml` file to this directory. The `toc.yml` defines the navigation
-structure for your project and will appear on the `/docs/[project-name]/` page
+structure for your project and will appear on the `/docs/[project-key]/` page
 as well as in the side navigation when viewing an individual doc.
 
 The `toc.yml` supports these fields:
@@ -102,6 +76,22 @@ The `toc.yml` supports these fields:
         - url: /docs/cheese/overview/guides/melting-cheese
 - url: /docs/cheese/the-moon-is-made-of-cheese
 ```
+
+### Add styles and icon for your project
+
+Add an icon at `site/_images/project/[project-key].svg`. This should be a
+small SVG rendered in white. See the existing icons for examples.
+
+If you'd like this icon to render on a different color than the default blue,
+you can optionally add a peer `styles.yml` to your `toc.yml` file. For example:
+
+```yml
+# Color (CSS theme variable) to use for this project page
+project_icon_color: 'color-project-handbook'
+```
+
+This color will be drawn from `_theme.scss`. (The default color used without a
+configuration is `color-project-default`.)
 
 ### Add i18n paths for your titles
 

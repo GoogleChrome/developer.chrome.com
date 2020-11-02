@@ -1,7 +1,8 @@
 {# 
-  This page grabs data from _data/docs/${projectName}/toc.yml.
-  For each page in the set of links, it fetches the page's frontmatter and
-  uses that to render the title and summary for the page.
+  This page grabs data from _data/docs/${project_key}/toc.yml. (The `page.fileSlug` value will also
+  work, as the URL for this page looks like "/en/docs/{project_key}".)
+  For each page in the set of links, it fetches the page's frontmatter and uses that to render the
+  title and summary for the page.
 #}
 
 {% extends "layouts/base.njk" %}
@@ -13,11 +14,8 @@
 {% block content %}
   <div class="pad-400">
     <div class="project-hero center-margin text-align-center">
-      <div class="project-hero__icon">
-        <div class="project-hero__icon-cover"{% if project_icon_color %} style="color: var(--{{project_icon_color}})"{% endif %}>
-          {% include '../../_images/project/' + project_key + '.svg' ignore missing %}
-        </div>
-      </div>
+      {% from 'macros/project-icon.njk' import projectIcon with context %}
+      {{ projectIcon(project_key) }}
       <h1 class="type--h4 gap-top-400">{{ title }}</h1>
       <p class="type gap-top-300">{{ description }}</p>
     </div>
