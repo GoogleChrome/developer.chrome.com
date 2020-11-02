@@ -1,0 +1,66 @@
+---json
+{"title":"NaCl Dev Environment"}
+---
+<html><head></head><body><b><font color="#cc0000">
+NOTE:
+Deprecation of the technologies described here has been announced
+for platforms other than ChromeOS.<br>
+Please visit our
+<a href="/docs/native-client/migration">migration guide</a>
+for details.
+</font></b>
+<hr><section id="nacl-dev-environment" class="stack">
+
+<h2 id="feature-status">Feature Status</h2>
+<p>Here is a summary of feature status. We hope to overcome these limitations
+in the near future:</p>
+
+<div><ul>
+<li><p class="first">NaCl Development Environment</p>
+<ul>
+<li><p class="first">General</p>
+<ul>
+<li><p class="first">Supported:</p>
+<ul>
+<li>Bash (built-in)</li>
+<li>Python (built-in)</li>
+<li>Git (built-in)</li>
+<li>Make (built-in)</li>
+<li>Vim (built-in)</li>
+<li>Nano (built-in)</li>
+<li>Curl (built-in) + geturl for web</li>
+<li>GCC w/ GLibC (x86-32 and x86-64 only)</li>
+<li>Lua (install with: <cite>package -i lua &amp;&amp; . setup-environment</cite>)</li>
+<li>Ruby (install with: <cite>package -i ruby &amp;&amp; . setup-environment</cite>)</li>
+<li>Nethack! (install with: <cite>package -i nethack &amp;&amp; . setup-environment</cite>)</li>
+</ul>
+</li>
+<li><p class="first">Unsupported:</p>
+<ul>
+<li>Targeting Newlib</li>
+<li>Targeting PNaCl (getting close...)</li>
+<li>Forking in bash</li>
+<li>Pipes / Redirection</li>
+<li>Symbolic and hard links</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first">Missing / broken on ARM:</p>
+<ul>
+<li>GCC (unsupported)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first">Debugger</p>
+<ul>
+<li>Open issue causing it to suck CPU cycles (even when not in use).</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+</body></html>

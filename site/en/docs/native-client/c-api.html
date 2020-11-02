@@ -1,0 +1,213 @@
+---json
+{"title":"Pepper C API Reference (Stable)"}
+---
+<html><head></head><body><span class="target" id="c-api"><span id="pepper-stable-c-index"></span></span><b><font color="#cc0000">
+NOTE:
+Deprecation of the technologies described here has been announced
+for platforms other than ChromeOS.<br>
+Please visit our
+<a href="/docs/native-client/migration">migration guide</a>
+for details.
+</font></b>
+<hr><section id="pepper-c-api-reference-stable" class="stack">
+
+<p>This page lists the C API for Pepper 60. Apps that use this API can
+run in Chrome 60 or higher.</p>
+<h2 id="interfaces"><a class="reference external" href="/docs/native-client/pepper_stable/c/group___interfaces/">Interfaces</a></h2>
+
+<div><ul>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___audio__1__1/">PPB_Audio</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___audio_buffer__0__1/">PPB_AudioBuffer</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___audio_config__1__1/">PPB_AudioConfig</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___audio_encoder__0__1/">PPB_AudioEncoder</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___compositor__0__1/">PPB_Compositor</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___compositor_layer__0__2/">PPB_CompositorLayer</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___console__1__0/">PPB_Console</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___core__1__0/">PPB_Core</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___file_i_o__1__1/">PPB_FileIO</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___file_ref__1__2/">PPB_FileRef</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___file_system__1__0/">PPB_FileSystem</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___fullscreen__1__0/">PPB_Fullscreen</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___gamepad__1__0/">PPB_Gamepad</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___graphics2_d__1__2/">PPB_Graphics2D</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___graphics3_d__1__0/">PPB_Graphics3D</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___host_resolver__1__0/">PPB_HostResolver</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___i_m_e_input_event__1__0/">PPB_IMEInputEvent</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___image_data__1__0/">PPB_ImageData</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___input_event__1__0/">PPB_InputEvent</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___instance__1__0/">PPB_Instance</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___keyboard_input_event__1__2/">PPB_KeyboardInputEvent</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___media_stream_audio_track__0__1/">PPB_MediaStreamAudioTrack</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___media_stream_video_track__1__0/">PPB_MediaStreamVideoTrack</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___message_loop__1__0/">PPB_MessageLoop</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___messaging__1__2/">PPB_Messaging</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___mouse_cursor__1__0/">PPB_MouseCursor</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___mouse_input_event__1__1/">PPB_MouseInputEvent</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___mouse_lock__1__0/">PPB_MouseLock</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___net_address__1__0/">PPB_NetAddress</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___network_list__1__0/">PPB_NetworkList</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___network_monitor__1__0/">PPB_NetworkMonitor</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___network_proxy__1__0/">PPB_NetworkProxy</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2/">PPB_OpenGLES2</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2__1__0/">PPB_OpenGLES2</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_chromium_enable_feature/">PPB_OpenGLES2ChromiumEnableFeature</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_chromium_enable_feature__1__0/">PPB_OpenGLES2ChromiumEnableFeature</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_chromium_map_sub/">PPB_OpenGLES2ChromiumMapSub</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_chromium_map_sub__1__0/">PPB_OpenGLES2ChromiumMapSub</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_framebuffer_blit/">PPB_OpenGLES2FramebufferBlit</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_framebuffer_blit__1__0/">PPB_OpenGLES2FramebufferBlit</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_framebuffer_multisample/">PPB_OpenGLES2FramebufferMultisample</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_framebuffer_multisample__1__0/">PPB_OpenGLES2FramebufferMultisample</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_instanced_arrays/">PPB_OpenGLES2InstancedArrays</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_instanced_arrays__1__0/">PPB_OpenGLES2InstancedArrays</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_query/">PPB_OpenGLES2Query</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_query__1__0/">PPB_OpenGLES2Query</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_vertex_array_object/">PPB_OpenGLES2VertexArrayObject</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___open_g_l_e_s2_vertex_array_object__1__0/">PPB_OpenGLES2VertexArrayObject</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___t_c_p_socket__1__2/">PPB_TCPSocket</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___text_input_controller__1__0/">PPB_TextInputController</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___touch_input_event__1__0/">PPB_TouchInputEvent</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___u_d_p_socket__1__2/">PPB_UDPSocket</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___u_r_l_loader__1__0/">PPB_URLLoader</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___u_r_l_request_info__1__0/">PPB_URLRequestInfo</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___u_r_l_response_info__1__0/">PPB_URLResponseInfo</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___var__1__2/">PPB_Var</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___var_array__1__0/">PPB_VarArray</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___var_array_buffer__1__0/">PPB_VarArrayBuffer</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___var_dictionary__1__0/">PPB_VarDictionary</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___video_decoder__1__1/">PPB_VideoDecoder</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___video_encoder__0__2/">PPB_VideoEncoder</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___video_frame__0__1/">PPB_VideoFrame</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___view__1__2/">PPB_View</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___vpn_provider__0__1/">PPB_VpnProvider</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___web_socket__1__0/">PPB_WebSocket</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_b___wheel_input_event__1__0/">PPB_WheelInputEvent</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_p___graphics3_d__1__0/">PPP_Graphics3D</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_p___input_event__0__1/">PPP_InputEvent</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_p___instance__1__1/">PPP_Instance</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_p___message_handler__0__2/">PPP_MessageHandler</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_p___messaging__1__0/">PPP_Messaging</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p_p___mouse_lock__1__0/">PPP_MouseLock</a></li>
+</ul>
+</div>
+<h2 id="structures"><a class="reference external" href="/docs/native-client/pepper_stable/c/group___structs/">Structures</a></h2>
+
+<div><ul>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___array_output/">PP_ArrayOutput</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___audio_bitstream_buffer/">PP_AudioBitstreamBuffer</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___audio_profile_description/">PP_AudioProfileDescription</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___bitstream_buffer/">PP_BitstreamBuffer</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___completion_callback/">PP_CompletionCallback</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___directory_entry/">PP_DirectoryEntry</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___file_info/">PP_FileInfo</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___float_point/">PP_FloatPoint</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___float_rect/">PP_FloatRect</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___float_size/">PP_FloatSize</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___gamepad_sample_data/">PP_GamepadSampleData</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___gamepads_sample_data/">PP_GamepadsSampleData</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___host_resolver___hint/">PP_HostResolver_Hint</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___image_data_desc/">PP_ImageDataDesc</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___input_event___character/">PP_InputEvent_Character</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___input_event___key/">PP_InputEvent_Key</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___input_event___mouse/">PP_InputEvent_Mouse</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___input_event___wheel/">PP_InputEvent_Wheel</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___net_address___i_pv4/">PP_NetAddress_IPv4</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___net_address___i_pv6/">PP_NetAddress_IPv6</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___point/">PP_Point</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___rect/">PP_Rect</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___size/">PP_Size</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___touch_point/">PP_TouchPoint</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___var/">PP_Var</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___video_picture/">PP_VideoPicture</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___video_picture__0__1/">PP_VideoPicture</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___video_profile_description/">PP_VideoProfileDescription</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/struct_p_p___video_profile_description__0__1/">PP_VideoProfileDescription</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/union_p_p___var_value/">PP_VarValue</a></li>
+</ul>
+</div>
+<h2 id="functions"><a class="reference external" href="/docs/native-client/pepper_stable/c/group___functions/">Functions</a></h2>
+<h2 id="enums"><a class="reference external" href="/docs/native-client/pepper_stable/c/group___enums/">Enums</a></h2>
+<h2 id="typedefs"><a class="reference external" href="/docs/native-client/pepper_stable/c/group___typedefs/">Typedefs</a></h2>
+<h2 id="macros"><a class="reference external" href="/docs/native-client/pepper_stable/c/globals_defs/">Macros</a></h2>
+<h2 id="files">Files</h2>
+
+<div><ul>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__array__output_8h/">pp_array_output.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__bool_8h/">pp_bool.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__codecs_8h/">pp_codecs.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__completion__callback_8h/">pp_completion_callback.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__directory__entry_8h/">pp_directory_entry.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__errors_8h/">pp_errors.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__file__info_8h/">pp_file_info.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__graphics__3d_8h/">pp_graphics_3d.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__input__event_8h/">pp_input_event.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__instance_8h/">pp_instance.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__module_8h/">pp_module.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__point_8h/">pp_point.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__rect_8h/">pp_rect.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__resource_8h/">pp_resource.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__size_8h/">pp_size.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__stdint_8h/">pp_stdint.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__time_8h/">pp_time.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__touch__point_8h/">pp_touch_point.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/pp__var_8h/">pp_var.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb_8h/">ppb.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__audio_8h/">ppb_audio.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__audio__buffer_8h/">ppb_audio_buffer.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__audio__config_8h/">ppb_audio_config.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__audio__encoder_8h/">ppb_audio_encoder.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__compositor_8h/">ppb_compositor.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__compositor__layer_8h/">ppb_compositor_layer.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__console_8h/">ppb_console.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__core_8h/">ppb_core.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__file__io_8h/">ppb_file_io.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__file__ref_8h/">ppb_file_ref.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__file__system_8h/">ppb_file_system.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__fullscreen_8h/">ppb_fullscreen.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__gamepad_8h/">ppb_gamepad.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__graphics__2d_8h/">ppb_graphics_2d.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__graphics__3d_8h/">ppb_graphics_3d.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__host__resolver_8h/">ppb_host_resolver.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__image__data_8h/">ppb_image_data.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__input__event_8h/">ppb_input_event.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__instance_8h/">ppb_instance.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__media__stream__audio__track_8h/">ppb_media_stream_audio_track.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__media__stream__video__track_8h/">ppb_media_stream_video_track.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__message__loop_8h/">ppb_message_loop.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__messaging_8h/">ppb_messaging.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__mouse__cursor_8h/">ppb_mouse_cursor.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__mouse__lock_8h/">ppb_mouse_lock.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__net__address_8h/">ppb_net_address.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__network__list_8h/">ppb_network_list.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__network__monitor_8h/">ppb_network_monitor.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__network__proxy_8h/">ppb_network_proxy.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__opengles2_8h/">ppb_opengles2.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__tcp__socket_8h/">ppb_tcp_socket.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__text__input__controller_8h/">ppb_text_input_controller.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__udp__socket_8h/">ppb_udp_socket.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__url__loader_8h/">ppb_url_loader.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__url__request__info_8h/">ppb_url_request_info.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__url__response__info_8h/">ppb_url_response_info.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__var_8h/">ppb_var.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__var__array_8h/">ppb_var_array.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__var__array__buffer_8h/">ppb_var_array_buffer.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__var__dictionary_8h/">ppb_var_dictionary.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__video__decoder_8h/">ppb_video_decoder.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__video__encoder_8h/">ppb_video_encoder.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__video__frame_8h/">ppb_video_frame.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__view_8h/">ppb_view.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__vpn__provider_8h/">ppb_vpn_provider.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppb__websocket_8h/">ppb_websocket.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppp_8h/">ppp.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppp__graphics__3d_8h/">ppp_graphics_3d.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppp__input__event_8h/">ppp_input_event.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppp__instance_8h/">ppp_instance.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppp__message__handler_8h/">ppp_message_handler.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppp__messaging_8h/">ppp_messaging.h</a></li>
+<li><a class="reference external" href="/docs/native-client/pepper_stable/c/ppp__mouse__lock_8h/">ppp_mouse_lock.h</a></li>
+</ul>
+</div>
+</section>
+
+
+</body></html>

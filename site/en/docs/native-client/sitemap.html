@@ -1,0 +1,529 @@
+---json
+{"title":"Native Client Documentation Sitemap"}
+---
+<html><head></head><body><b><font color="#cc0000">
+NOTE:
+Deprecation of the technologies described here has been announced
+for platforms other than ChromeOS.<br>
+Please visit our
+<a href="/docs/native-client/migration">migration guide</a>
+for details.
+</font></b>
+<hr><section id="native-client-documentation-sitemap" class="stack">
+
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/overview">Technical Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/overview#why-use-native-client">Why use Native Client?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/overview#benefits-of-native-client">Benefits of Native Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/overview#common-use-cases">Common use cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/overview#how-native-client-works">How Native Client works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/overview#structure-of-a-web-application">Structure of a web application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/overview#where-to-start">Where to start</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/quick-start">Quick-start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/nacl-and-pnacl">NaCl and PNaCl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/nacl-and-pnacl#native-client-nacl">Native Client (NaCl)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/nacl-and-pnacl#portable-native-client-pnacl">Portable Native Client (PNaCl)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/nacl-and-pnacl#when-to-use-pnacl">When to use PNaCl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/nacl-and-pnacl#when-to-use-nacl">When to use NaCl</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/migration/index">WebAssembly Migration Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/migration/index#p-nacl-deprecation-announcements">(P)NaCl Deprecation Announcements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/migration/index#toolchain-migration">Toolchain Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/migration/index#api-migration">API Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/migration/index#ppapi">PPAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/migration/index#irt">IRT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/migration/index#ppapi-apps">PPAPI (Apps)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/glossary">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/sdk/download">Download the Native Client SDK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/download#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/download#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/download#platforms">Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/download#versions">Versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/download#installing-the-sdk">Installing the SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/download#updating-bundles">Updating bundles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/download#help-with-the-naclsdk-utility">Help with the <code>naclsdk</code> utility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/download#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/sdk/examples">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/examples#build-the-sdk-examples">Build the SDK examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/examples#run-the-sdk-examples">Run the SDK examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/examples#run-the-sdk-examples-as-chrome-apps">Run the SDK examples as Chrome apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/examples#debugging-the-sdk-examples">Debugging the SDK examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/sdk/release-notes">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-49">Chrome/Pepper 49</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-45-10-july-2015">Chrome/Pepper 45 (10 July 2015)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-43-03-april-2015">Chrome/Pepper 43 (03 April 2015)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-42-20-february-2015">Chrome/Pepper 42 (20 February 2015)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-41-09-january-2015">Chrome/Pepper 41 (09 January 2015)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-40-november-07-2014">Chrome/Pepper 40 (November 07 2014)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-39-26-september-2014">Chrome/Pepper 39 (26 September 2014)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-38-15-august-2014">Chrome/Pepper 38 (15 August 2014)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-37-20-june-2014">Chrome/Pepper 37 (20 June 2014)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-36-09-may-2014">Chrome/Pepper 36 (09 May 2014)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-35-31-mar-2014">Chrome/Pepper 35 (31 Mar 2014)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-34-20-feb-2014">Chrome/Pepper 34 (20 Feb 2014)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#chrome-pepper-33-16-dec-2013">Chrome/Pepper 33 (16 Dec 2013)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#pnacl-enabled-by-default-in-chrome-31-12-nov-2013">PNaCl enabled by default in Chrome 31 (12 Nov 2013)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#pnacl-in-chrome-30-dev-channel-01-aug-2013">PNaCl in Chrome 30 Dev channel (01 Aug 2013)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#pnacl-15-may-2013">PNaCl (15 May 2013)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#pepper-27-12-april-2013">Pepper 27 (12 April 2013)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#pepper-26-29-march-2013">Pepper 26 (29 March 2013)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#pepper-25-21-december-2012">Pepper 25 (21 December 2012)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#pepper-24-5-december-2012">Pepper 24 (5 December 2012)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#pepper-23-15-october-2012">Pepper 23 (15 October 2012)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/sdk/release-notes#pepper-22-22-august-2012">Pepper 22 (22 August 2012)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/index">Developer&#x2019;s Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/tutorial/index">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1">C++ Tutorial: Getting Started (Part 1)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1#step-1-download-and-install-the-native-client-sdk">Step 1: Download and install the Native Client SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1#step-2-start-a-local-server">Step 2: Start a local server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1#step-3-set-up-the-chrome-browser">Step 3: Set up the Chrome browser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1#step-4-stub-code-for-the-tutorial">Step 4: Stub code for the tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1#step-5-compile-the-native-client-module-and-run-the-stub-application">Step 5: Compile the Native Client module and run the stub application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1#step-6-modify-the-javascript-code-to-send-a-message-to-the-native-client-module">Step 6: Modify the JavaScript code to send a message to the Native Client module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1#step-7-implement-a-message-handler-in-the-native-client-module">Step 7: Implement a message handler in the Native Client module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1#step-8-compile-the-native-client-module-and-run-the-application-again">Step 8: Compile the Native Client module and run the application again</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part1#next-steps">Next steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part2">C++ Tutorial: Getting Started (Part 2)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part2#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part2#using-the-native-client-sdk-build-system">Using the Native Client SDK build system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part2#making-index-html-work-for-chrome-apps">Making index.html work for Chrome Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part2#sharing-common-code-with-common-js">Sharing common code with common.js</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part2#example-specific-behavior-with-example-js">Example-specific behavior with example.js</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/tutorial/tutorial-part2#compile-the-native-client-module-and-run-the-application-again">Compile the Native Client module and run the application again</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/devcycle/index">Development Cycle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/devcycle/building">Building</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/building#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/building#the-pnacl-toolchain">The PNaCl toolchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/building#using-the-pnacl-tools-to-compile-link-debug-and-deploy">Using the PNaCl tools to compile, link, debug, and deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/building#object-dumping-of-pnacl-bitcode-files">Object dumping of PNaCl bitcode files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/building#the-gnu-based-toolchains">The GNU-based toolchains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/building#using-make">Using make</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/building#libraries-and-header-files-provided-with-the-sdk">Libraries and header files provided with the SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/building#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/devcycle/running">Running</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/running#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/running#portable-native-client-pnacl-applications">Portable Native Client (PNaCl) applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/running#native-client-applications-and-the-chrome-web-store">Native Client applications and the Chrome Web Store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/running#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/running#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/running#technique-1-local-server">Technique 1: Local server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/running#technique-2-packaged-application-loaded-as-an-unpacked-extension">Technique 2: Packaged application loaded as an unpacked extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/running#technique-3-hosted-application-loaded-as-an-unpacked-extension">Technique 3: Hosted application loaded as an unpacked extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/running#technique-4-chrome-web-store-application-with-trusted-testers">Technique 4: Chrome Web Store application with trusted testers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/devcycle/debugging">Debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/debugging#diagnostic-information">Diagnostic information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/debugging#basic-debugging">Basic debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/debugging#debugging-with-other-tools">Debugging with other tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/devcycle/vs-addin">Debugging with Visual Studio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/vs-addin#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/vs-addin#platforms">Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/vs-addin#installing-the-add-in">Installing the add-in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/vs-addin#try-the-hello-world-gles-sample-project">Try the <code>hello_world_gles</code> sample project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/vs-addin#developing-for-native-client-in-visual-studio">Developing for Native Client in Visual Studio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/devcycle/dynamic-loading">Dynamic Linking and Loading with glibc</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/dynamic-loading#c-standard-libraries-glibc-and-newlib">C standard libraries: glibc and newlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/dynamic-loading#sdk-toolchains">SDK toolchains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/devcycle/dynamic-loading#specifying-and-delivering-shared-libraries">Specifying and delivering shared libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/coding/index">Coding Your Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/coding/3D-graphics">3D Graphics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/3D-graphics#validating-the-client-graphics-platform">Validating the client graphics platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/3D-graphics#calling-opengl-es-2-0-commands">Calling OpenGL ES 2.0 commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/3D-graphics#implementing-a-rendering-loop">Implementing a rendering loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/3D-graphics#managing-the-opengl-es-2-0-pipeline">Managing the OpenGL ES 2.0 pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/3D-graphics#rendering-and-inactive-tabs">Rendering and inactive tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/3D-graphics#tips-and-best-practices">Tips and best practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/coding/audio">Audio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/audio#reference-information">Reference information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/audio#about-the-pepper-audio-api">About the Pepper audio API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/audio#digital-audio-concepts">Digital audio concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/audio#setting-up-the-module">Setting up the module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/audio#creating-an-audio-configuration-resource">Creating an audio configuration resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/audio#creating-an-audio-resource">Creating an audio resource</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/audio#implementing-a-callback-function">Implementing a callback function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/audio#starting-and-stopping-playback">Starting and stopping playback</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/coding/application-structure">Application Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/application-structure#application-components">Application components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/application-structure#html-file-and-the-embed-element">HTML file and the &lt;embed&gt; element</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/application-structure#manifest-files">Manifest Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/application-structure#modules-and-instances">Modules and instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/application-structure#native-client-modules-a-closer-look">Native Client modules: A closer look</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/coding/native-client-modules">Native Client Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/native-client-modules#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/native-client-modules#writing-modules-in-c">Writing modules in C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/native-client-modules#id1">Writing modules in C++</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/coding/file-io">File I/O</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/file-io#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/file-io#reference-information">Reference information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/file-io#local-file-i-o">Local file I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/file-io#the-file-io-example">The <code>file_io</code> example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/file-io#file-io-deep-dive"><code>file_io</code> deep dive</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/coding/nacl_io">The nacl_io Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/nacl_io#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/nacl_io#using-nacl-io">Using nacl_io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/nacl_io#logging-in-nacl-io">Logging in nacl_io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/nacl_io#the-nacl-io-demo">The nacl_io demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/nacl_io#reference-information">Reference Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/coding/message-system">Messaging System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/message-system#reference-information">Reference information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/message-system#introduction-to-the-messaging-system">Introduction to the messaging system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/message-system#communication-tasks-in-the-hello-world-example">Communication tasks in the &#x201C;Hello, World&#x201D; example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/message-system#messaging-in-javascript-code-more-details">Messaging in JavaScript code: More details.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/message-system#messaging-in-the-native-client-module-more-details">Messaging in the Native Client module: More details.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/coding/progress-events">Progress Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/progress-events#module-loading-and-progress-events">Module loading and progress events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/progress-events#handling-progress-events">Handling progress events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/progress-events#displaying-load-status">Displaying load status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/progress-events#the-lasterror-attribute">The <code>lastError</code> attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/progress-events#the-readystate-attribute">The <code>readyState</code> attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/progress-events#the-exitstatus-attribute">The <code>exitStatus</code> attribute</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/coding/url-loading">URL Loading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/url-loading#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/url-loading#reference-information">Reference information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/url-loading#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/url-loading#the-url-loader-example">The <code>url_loader</code> example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/url-loading#url-loader-deep-dive"><code>url_loader</code> deep dive</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/coding/view-focus-input-events">View Change, Focus, and Input Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/view-focus-input-events#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/view-focus-input-events#handling-browser-events">Handling browser events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/coding/view-focus-input-events#handling-input-events">Handling input events</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/devguide/distributing">Distributing Your Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/distributing#portable-native-client">Portable Native Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/devguide/distributing#non-portable-native-client">Non-portable Native Client</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/io2014">Building a NaCl App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/io2014#in-the-browser">In the browser!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/cds2014/index">Chrome Dev Summit 2014 - Native Client Codelabs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/index#a-crossroads">A Crossroads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/index#codelab-1-what-a-difference-python-makes">Codelab #1 - What a Difference Python Makes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/index#codelab-2-a-saga-of-fire-and-water">Codelab #2 - A Saga of Fire and Water</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/cds2014/python">What a Difference Python Makes - Codelab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/python#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/python#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/python#get-the-code">Get the Code!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/python#your-challenge-should-you-choose-to-accept-it">Your challenge, should you choose to accept it...</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/python#what-you-ve-learned">What you&#x2019;ve learned</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/python#cleanup">Cleanup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/cds2014/cpp">A Saga of Fire and Water - Codelab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/cpp#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/cpp#setup">Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/cpp#get-the-code">Get the Code!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/cpp#fire-is-cool-let-s-burn-some-stuff">Fire is cool, let&#x2019;s burn some stuff...</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/cpp#water">Water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/cpp#what-you-ve-learned">What you&#x2019;ve learned</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cds2014/cpp#cleanup">Cleanup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/nacldev">NaCl Dev Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/nacldev#feature-status">Feature Status</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/community/index">Community</a></li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/community/security-contest/index">Security Contest Archive</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/index#contest-overview">Contest overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/index#contest-winners">Contest winners</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/index#panel-of-judges">Panel of judges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/index#additional-information">Additional information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-announcement">Native Client Security Contest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-announcement#what-it-is">What it is</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-announcement#when">When</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-announcement#what-s-in-it-for-you">What&#x2019;s in it for you</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-announcement#forum-native-client-announce">Forum: native-client-announce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-announcement#forum-native-client-discuss">Forum: native-client-discuss</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-terms">Security Contest Terms and Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq">Security Contest FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#what-is-this-contest-about">What is this contest about?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#where-can-i-get-more-information-on-native-client">Where can I get more information on Native Client?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#what-people-are-you-looking-for">What people are you looking for?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#how-do-i-sign-up">How do I sign up?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#what-is-the-process-of-participating">What is the process of participating?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#how-many-prizes-are-there-what-are-the-prizes">How many prizes are there? What are the prizes?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#can-i-sign-up-as-a-team-how-many-people-can-be-a-member-of-my-team">Can I sign up as a team? How many people can be a member of my team?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#what-will-i-need-to-do-to-win">What will I need to do to win?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#who-is-going-to-judge-these-entries-who-are-these-people">Who is going to judge these entries? Who are these people?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#when-can-i-start-submitting-issues">When can I start submitting issues?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#registration-does-not-work-for-me-what-can-i-do">Registration does not work for me&#x2014;what can I do?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#i-registered-as-a-team-but-i-want-to-change-the-team-composition-by-adding-or-removing-members-what-should-i-do">I registered as a team but I want to change the team composition by adding or removing members. What should I do?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#i-have-a-previous-engagement-and-i-cannot-sign-up-until-after-the-competition-starts-is-this-ok">I have a previous engagement and I cannot sign up until after the competition starts. Is this ok?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#my-team-has-accepted-the-terms-and-conditions-except-for-one-person-who-is-unavailable-whose-email-was-misspelled-etc-what-can-i-do">My team has accepted the Terms and Conditions except for one person who is unavailable / whose email was misspelled / etc. What can I do?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#can-i-enter-multiple-times">Can I enter multiple times?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#why-do-you-need-a-prize-recipient">Why do you need a prize recipient?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#we-want-to-change-the-prize-recipient-what-can-we-do">We want to change the prize recipient. What can we do?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#i-want-to-remain-anonymous-during-the-contest-is-this-possible">I want to remain anonymous during the contest. Is this possible?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#one-of-my-professors-friends-is-a-judge-can-i-participate">One of my professors / friends is a judge. Can I participate?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#can-my-company-be-registered-as-an-entrant">Can my company be registered as an entrant?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#i-never-signed-up-for-this-contest-but-i-got-an-email-from-you-what-is-this-about">I never signed up for this contest, but I got an email from you. What is this about?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#i-tried-to-sign-up-and-it-seems-someone-who-wants-to-be-a-member-of-my-team-has-already-registered-with-another-team-what-can-we-do">I tried to sign up and it seems someone who wants to be a member of my team has already registered with another team. What can we do?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#i-lost-or-never-got-the-email-asking-me-to-confirm-the-terms-and-conditions-what-can-i-do">I lost or never got the email asking me to confirm the Terms and Conditions. What can I do?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#one-of-our-team-members-rejected-the-terms-and-conditions-what-can-we-do">One of our team members rejected the Terms and Conditions. What can we do?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#how-are-you-going-to-evaluate-the-submissions">How are you going to evaluate the submissions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#can-i-include-issues-i-submitted-before-the-contest">Can I include issues I submitted before the contest?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#what-is-the-difference-between-exploit-issue-and-summary">What is the difference between exploit, issue and summary?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#what-issues-should-i-include-in-the-summary">What issues should I include in the summary?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#why-are-you-asking-for-the-top-10-issues-only">Why are you asking for the top 10 issues only?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#my-english-is-not-great-will-this-count-against-me-in-the-judging-process">My English is not great&#x2014;will this count against me in the judging process?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#what-information-do-i-need-to-include-in-the-issue-submission">What information do I need to include in the issue submission?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#how-do-i-contest-a-decision-that-a-bug-is-a-duplicate">How do I contest a decision that a bug is a duplicate?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#why-is-the-native-client-team-updating-the-source-code-during-the-contest">Why is the Native Client team updating the source code during the contest?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#i-forgot-to-include-something-in-the-summary-what-can-i-do">I forgot to include something in the summary&#x2014;what can I do?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#someone-from-our-team-submitted-a-summary-on-behalf-of-our-team-without-consulting-with-everyone-else-how-can-we-ensure-that-the-judges-will-use-the-previous-summary-and-not-the-last-one">Someone from our team submitted a summary on behalf of our team without consulting with everyone else. How can we ensure that the judges will use the previous summary and not the last one?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#will-you-be-evaluating-each-exploit-separately-for-every-one-of-the-criteria">Will you be evaluating each exploit separately for every one of the criteria?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#i-only-found-one-exploit-but-i-think-it-is-very-good-can-i-still-win">I only found one exploit but I think it is very good. Can I still win?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#how-are-you-going-to-pick-the-winners">How are you going to pick the winners?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#when-and-how-are-we-going-to-find-out-the-results-of-the-contest">When and how are we going to find out the results of the contest?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#what-will-google-do-with-my-data">What will Google do with my data?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#i-have-more-questions-where-can-i-get-a-response">I have more questions&#x2014;where can I get a response?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#i-like-this-project-are-you-hiring-people-to-work-on-it-full-time">I like this project. Are you hiring people to work on it full time?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#how-can-i-get-involved-in-this-project-besides-the-contest">How can I get involved in this project besides the contest?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/community/security-contest/contest-faq#why-is-my-country-province-excluded-from-the-contest">Why is my country/province excluded from the contest?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/c-api">Pepper C API Reference (Stable)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api#interfaces">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api#structures">Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api#enums">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api#typedefs">Typedefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api#macros">Macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/c-api-beta">Pepper C API Reference (Beta)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#interfaces">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#structures">Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#enums">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#typedefs">Typedefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#macros">Macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/c-api-dev">Pepper C API Reference (Dev)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#interfaces">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#structures">Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#enums">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#typedefs">Typedefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#macros">Macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/cpp-api">Pepper C++ API Reference (Stable)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cpp-api#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cpp-api#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/c-api-beta">Pepper C API Reference (Beta)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#interfaces">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#structures">Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#enums">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#typedefs">Typedefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#macros">Macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-beta#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/cpp-api-beta">Pepper C++ API Reference (Beta)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cpp-api-beta#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cpp-api-beta#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/c-api-dev">Pepper C API Reference (Dev)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#interfaces">Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#structures">Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#enums">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#typedefs">Typedefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#macros">Macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/c-api-dev#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/cpp-api-dev">Pepper C++ API Reference (Dev)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cpp-api-dev#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/cpp-api-dev#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/reference/index">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/reference/ideas">Contributor Ideas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/ideas#contributing-me">Contributing? Me&#x203D;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/ideas#google-summer-of-code">Google Summer of Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/ideas#id2">Ideas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-abi">PNaCl Bitcode Reference Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-abi#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-abi#high-level-structure">High Level Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-abi#type-system">Type System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-abi#other-values">Other Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-abi#intrinsic-global-variables">Intrinsic Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-abi#errno-and-errors-in-arithmetic-instructions">Errno and errors in arithmetic instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-abi#instruction-reference">Instruction Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-abi#intrinsic-functions">Intrinsic Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual">Contents Of PNaCl Bitcode Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#data-model">Data Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#pnacl-blocks">PNaCl Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#pnacl-records">PNaCl Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#default-abbreviations">Default Abbreviations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#pnacl-identifiers">PNaCl Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#conventions-for-describing-records">Conventions For Describing Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#factorial-example">Factorial Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#road-map">Road Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#global-state">Global State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#global-records">Global Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#types-block">Types Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#globals-block">Globals Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#valuesymtab-block">Valuesymtab Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#module-block">Module Block</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#constants-blocks">Constants Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#function-blocks">Function Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#terminator-instructions">Terminator Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#integer-binary-instructions">Integer Binary Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#floating-point-binary-instructions">Floating Point Binary Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#memory-creation-and-access-instructions">Memory Creation and Access Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#conversion-instructions">Conversion Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#comparison-instructions">Comparison Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#vector-instructions">Vector Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#other-instructions">Other Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#memory-blocks-and-alignment">Memory Blocks and Alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#intrinsic-functions">Intrinsic Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#support-functions">Support Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-bitcode-manual#abbreviations">Abbreviations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support">PNaCl C/C++ Language Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support#source-language-support">Source language support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support#memory-model-and-atomics">Memory Model and Atomics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support#threading">Threading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support#setjmp-and-longjmp"><code>setjmp</code> and <code>longjmp</code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support#c-exception-handling">C++ Exception Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support#inline-assembly">Inline Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support#portable-simd-vectors">Portable SIMD Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support#undefined-behavior">Undefined Behavior</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support#floating-point">Floating-Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support#computed-goto">Computed <code>goto</code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-c-cpp-language-support#future-directions">Future Directions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/reference/pnacl-undefined-behavior">PNaCl Undefined Behavior</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-undefined-behavior#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-undefined-behavior#specification">Specification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/pnacl-undefined-behavior#behavior-in-pnacl-bitcode">Behavior in PNaCl Bitcode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/reference/nacl-manifest-format">Native Client Manifest (nmf) Format</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/nacl-manifest-format#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/nacl-manifest-format#field-summary">Field summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/nacl-manifest-format#field-details">Field details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/nacl-manifest-format#semantics">Semantics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/reference/sandbox_internals/index">Sandbox Internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/reference/sandbox_internals/arm-32-bit-sandbox">ARM 32-bit Sandbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/sandbox_internals/arm-32-bit-sandbox#an-introduction-to-the-arm-architecture">An Introduction to the ARM Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/sandbox_internals/arm-32-bit-sandbox#the-native-client-approach">The Native Client Approach</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/reference/sandbox_internals/x86-64-sandbox">NaCl SFI model on x86-64 systems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/sandbox_internals/x86-64-sandbox#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/sandbox_internals/x86-64-sandbox#binary-format">Binary Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/sandbox_internals/x86-64-sandbox#runtime-invariants">Runtime Invariants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/sandbox_internals/x86-64-sandbox#text-segment-rules">Text Segment Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/sandbox_internals/x86-64-sandbox#list-of-pseudo-instructions">List of Pseudo-instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/reference/design-docs">Design Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/reference/design-docs#obsolete-not-implemented">Obsolete (not implemented)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/publications-and-presentations">Publications and Presentations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/publications-and-presentations#recent-talks-and-demos">Recent talks and demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/publications-and-presentations#publications">Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/publications-and-presentations#external-publications">External Publications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/faq">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/faq#what-is-native-client-good-for">What is Native Client Good For?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/faq#development-environments-and-tools">Development Environments and Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/faq#openness-and-supported-architectures-and-languages">Openness, and Supported Architectures and Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/faq#coming-soon">Coming Soon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/faq#security-and-privacy">Security and Privacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/faq#development">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/faq#portability">Portability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/faq#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/help">Help with NaCl</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/help#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/help#forums">Forums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="/docs/native-client/help#issue-tracker">Issue tracker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="/docs/native-client/version">SDK version information</a></li>
+</ul>
+</div>
+</section>
+
+
+</body></html>
