@@ -42,7 +42,7 @@ if (process.env.NODE_ENV !== 'production') {
   }
 
   // Ignore /docs/native-client/
-  if (process.env.ELEVENTY_IGNORE_NCAL) {
+  if (process.env.ELEVENTY_IGNORE_NACL) {
     console.log(warning('Ignoring native-client docs.'));
     ignores.push('site/**/docs/native-client/**/*');
   }

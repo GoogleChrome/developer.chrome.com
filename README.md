@@ -51,7 +51,7 @@ build flags to ignore certain sections.
 ELEVENTY_IGNORE_DOCS=true
 
 # Only ignore /docs/native-client/
-ELEVENTY_IGNORE_NCAL=true
+ELEVENTY_IGNORE_NACL=true
 
 # Only ignore /docs/extensions/
 ELEVENTY_IGNORE_EXTENSIONS=true
