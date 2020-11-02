@@ -107,5 +107,8 @@
     "unist-util-to-list-of-char": "^0.1.2",
     "unist-util-visit": "^2.0.3",
     "wicg-inert": "^3.0.3"
+  },
+  "optionalDependencies": {
+    "node-sass": "^5.0.0"
   }
 }
