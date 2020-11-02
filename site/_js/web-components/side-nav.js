@@ -45,9 +45,11 @@ export class SideNav extends BaseElement {
     if (value) {
       this.setAttribute('expanded', '');
       this.expanding = true;
+      this.intersectionObserver.observe(this);
     } else {
       this.removeAttribute('expanded');
       this.collapsing = true;
+      this.intersectionObserver.disconnect();
     }
 
     this.animating = true;
@@ -69,6 +71,18 @@ export class SideNav extends BaseElement {
 
     this.onBack = this.onBack.bind(this);
     this.onTransitionEnd = this.onTransitionEnd.bind(this);
+
+    // Keep track of whether the sidebar is visible. This only matters if the sidebar is opened
+    // on a small screen and then becomes larger. We call `onVisibleChange` to close the sidebar.
+    this.intersectionObserver = new IntersectionObserver(entries => {
+      let visible = false;
+      for (const entry of entries) {
+        if (entry.target === this) {
+          visible = entry.intersectionRatio > 0;
+        }
+      }
+      this.onVisibleChange(visible);
+    });
   }
 
   connectedCallback() {
@@ -118,6 +132,17 @@ export class SideNav extends BaseElement {
     this.removeEventListener('navigation-rail-collapse', collapseSideNav);
     this.removeEventListener('navigation-tree-back', this.onBack);
     this.removeEventListener('transitionend', this.onTransitionEnd);
+  }
+
+  /**
+   * Called by IntersectionObserver with visibility changes.
+   *
+   * @param {boolean} visible
+   */
+  onVisibleChange(visible) {
+    if (!visible) {
+      collapseSideNav();
+    }
   }
 
   /**
