@@ -1,5 +1,34 @@
 const path = require('path');
 
+const cacheKey = Symbol('find-cache');
+
+/**
+ * Builds and uses a cache to ensure fast lookup of Eleventy pages.
+ *
+ * @param {EleventyCollectionItem[]} collection
+ * @param {string} urlToFind
+ * @return {EleventyCollectionItem|undefined}
+ */
+const internalFind = (collection, urlToFind) => {
+  let cache = collection[cacheKey];
+  if (cache === undefined) {
+    cache = {};
+    for (const entry of collection) {
+      if (entry.url) {
+        cache[entry.url] = entry;
+      }
+    }
+    collection[cacheKey] = cache;
+  }
+
+  if (urlToFind in cache) {
+    return cache[urlToFind];
+  }
+
+  // Otherwise, be slow, since we think this is probably pretty rare.
+  return collection.find(item => item.url === urlToFind);
+};
+
 const findByUrl = (collection, url, locale = '') => {
   if (path.extname(url)) {
     throw new Error(`Page urls should not end in file extensions: ${url}`);
@@ -25,8 +54,12 @@ const findByUrl = (collection, url, locale = '') => {
   }
 
   const urlToFind = path.join(locale, url);
-  const result = collection.find(item => item.url === urlToFind);
-  return result;
+  return internalFind(collection, urlToFind);
 };
 
-module.exports = {findByUrl};
+const findByProjectKey = (collection, projectKey, locale) => {
+  const urlToFind = path.join('/', locale, '/docs/', projectKey, '/');
+  return internalFind(collection, urlToFind);
+};
+
+module.exports = {findByUrl, findByProjectKey};
