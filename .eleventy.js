@@ -17,6 +17,7 @@ const {video} = require('./site/_shortcodes/video');
 const {prettyUrls} = require('./site/_transforms/pretty-urls');
 
 // Plugins
+const md = require('./site/_plugins/markdown');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const optimizeHtmlPlugin = require('./site/_plugins/optimize-html');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -52,28 +53,7 @@ module.exports = eleventyConfig => {
   // Make .yml files work in the _data directory.
   eleventyConfig.addDataExtension('yml', contents => yaml.safeLoad(contents));
 
-  // Add markdown configuration
-  const markdownItOptions = {
-    html: true,
-  };
-
-  const markdownItAnchorOptions = {
-    level: 2,
-    permalink: true,
-    permalinkClass: 'headline__link',
-    permalinkSymbol: '#',
-  };
-
-  const markdownItAttrsOpts = {
-    leftDelimiter: '{:',
-    rightDelimiter: '}',
-    allowedAttributes: ['id', 'class', /^data-.*$/],
-  };
-
-  const md = markdownIt(markdownItOptions)
-    .use(markdownItAnchor, markdownItAnchorOptions)
-    .use(markdownItAttrs, markdownItAttrsOpts);
-
+  // Configure markdown-it plugins
   eleventyConfig.setLibrary('md', md);
 
   // Add plugins
