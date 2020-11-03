@@ -33,7 +33,19 @@ Be sure to replace the text that says "ALT TEXT HERE" with your own description
 of the image. You can read more about writing effective alt text over on [the
 web.dev handbook](https://web.dev/handbook/inclusion-and-accessibility/#use-inclusive-images).
 
+!!!.aside
 You may notice that the generated code is using either the
 {% raw %}`{% img %}`{% endraw%} or {% raw %}`{% video %}`{% endraw%} shortcodes.
 These are custom components for `developer.chrome.com` that ensure our media is
 responsive 📱
+!!!
+
+### Adjusting dimensions
+
+The `{% raw %}`{% img %}`{% endraw%}` shortcode accepts additional arguments for
+`width` and `height`. If you want to set your image to have a width of 400 and
+a height of 200, do the following:
+
+```
+{% raw %}{% img 'image/foR0vJZKULb5AGJExlazy1xYDgI2/1603484068246.jpg' , 'ALT TEXT HERE', 400, 200 %}{% endraw %}
+```
