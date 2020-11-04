@@ -1,5 +1,6 @@
 // The .responsive-table class will be added by an eleventy transform.
 // Authors should not need to manually add it themselves.
+// TODO(robdodson): This doesn't happen right now.
 .responsive-table {
   min-width: px-to-rem(512px);
   overflow: auto;
@@ -14,7 +15,7 @@
   }
 }
 
-table:not([class]) {
+table {
   border: 1px solid var(--color-hairline);
   display: block;
   margin-left: auto;
@@ -23,20 +24,21 @@ table:not([class]) {
   overflow-x: auto;
 }
 
-th:not([class]) {
+th {
   @include apply-utility('weight', 'medium');
 }
 
-th:not([class]),
-td:not([class]) {
+th,
+td {
   padding: get-size(300);
 }
 
-tr:not([class]):not(:last-of-type) {
+tr:not(:last-of-type),
+tr:only-of-type {
   border-bottom: 1px solid var(--color-hairline);
 }
 
-caption:not([class]) {
+caption {
   border-top: 1px solid var(--color-hairline);
   padding: get-size(300);
 }

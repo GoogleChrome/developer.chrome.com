@@ -1,0 +1,110 @@
+{#
+Renders a type. May be recursive.
+#}
+{% macro renderType(spec, namespace, category) %}
+<div>
+  <h3 class="type--h4" id="{{ category }}-{{ spec.name }}">{{ spec.name }}</h5>
+
+{# Renders the method signature. We need to do this here to insert links to parameter types. #}
+  {% if spec.parameters %}
+    <div class="type--xsmall"><code>{{ namespace }}.{{ spec.name }}({# 
+#}{% for parameter in spec.parameters %}{#
+  #}{{ parameter.name }}{% if parameter.optional %}?{% endif %}:
+    {{ parameter.type }}{% if not loop.last %}, {% endif %}{#
+  #}{% endfor %}{#
+#}){% if spec.returnType %}: {{ spec.returnType.type }}{% endif %}</code></div>
+  {% endif %}
+  {{ internalRenderTypeDetails(spec, true) }}
+</div>
+{% endmacro %}
+
+{#
+  Renders more information about a type, including its comment plus its components: properties,
+  parameters or enum.
+#}
+{% macro internalRenderTypeDetails(spec, headings) %}
+
+{% if spec.comment %}
+  <p>{{ spec.comment | safe }}</p>
+{% endif %}
+
+{# OPTION: object properties #}
+{% if spec.properties and spec.properties.length %}
+  <div class="code-sections">
+    {% if headings %}<h4 class="type--eyebrow">Properties</h4>{% endif %}
+
+    <ul class="stack flow-space-300">
+      {% for property in spec.properties %}
+        {{ internalRenderNamedType(property) }}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+{# OPTION: method #}
+{% if headings %}
+  {# If this at the top-level, break out parameters and the return type. #}
+  {% if spec.parameters and spec.parameters.length %}
+    <div class="code-sections">
+      <h4 class="type--eyebrow">Parameters</h4>
+
+      <ul class="stack flow-space-300">
+        {% for parameter in spec.parameters %}
+          {{ internalRenderNamedType(parameter) }}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  {% if spec.returnType %}
+    <div class="code-sections">
+      <h4 class="type--eyebrow">Returns</h4>
+
+      <ul class="stack flow-space-300">
+        {{ internalRenderNamedType(spec.returnType) }}
+      </ul>
+    </div>
+  {% endif %}
+{% elif (spec.parameters and spec.parameters.length) or spec.returnType %}
+  {# If this is a callback, merge parameters and return type. #}
+  <div class="code-sections">
+    <ul class="stack flow-space-300">
+      {% for parameter in spec.parameters %}
+        {{ internalRenderNamedType(parameter) }}
+      {% endfor %}
+      {% if spec.returnType %}
+        {{ internalRenderNamedType(spec.returnType) }} 
+      {% endif %}
+    </ul>
+  </div>
+{% endif %}
+
+{% if spec.options and spec.options.length %}
+  <div class="code-sections">
+    {% if headings %}<h4 class="type--eyebrow">Enum</h4>{% endif %}
+
+    <ul class="stack flow-space-300">
+      <li>
+        <div>
+          {% for option in spec.options %}
+            {% if loop.last and not loop.first %}or{% endif %}
+            <code>{{ option }}</code>{% if not loop.last %},{% endif %}
+          {% endfor %}
+        </div>
+      </li>
+    </ul>
+  </div>
+{% endif %}
+
+{% endmacro %}
+
+{% macro internalRenderNamedType(spec) %}
+<li>
+  <div>
+    <code>{{ spec.name }}{% if spec.optional %}?{% endif %}</code>
+    <div class="type--small">{{ spec.type }}</div>
+  </div>
+  <div>
+    {{ internalRenderTypeDetails(spec, false) }}
+  </div>
+</li>
+{% endmacro %}

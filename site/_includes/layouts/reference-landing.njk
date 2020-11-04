@@ -5,16 +5,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="pad-400">
+  <div class="display-flex">
 
-<h1 class="type--h1">Chrome APIs</h1>
-<p>Chrome provides extensions with many special-purpose APIs like <code>chrome.runtime</code> and <code>chrome.alarms</code>.
+    <article class="stack measure-long type center-margin pad-400">
+      <h1>{{ title }}</h1>
+      <p>Chrome provides extensions with many special-purpose APIs like <code>chrome.runtime</code> and <code>chrome.alarms</code>.
 
-<table>
+<table class="reference">
   <thead>
     <tr>
       <th>Name</th>
-      <th class="reference--collapse">Description</th>
+      <th class="reference-collapse">Description</th>
       <th>Since</th>
     </tr>
   </thead>
@@ -23,8 +24,8 @@
 {% for namespace in collections.types %}
 
     <tr>
-      <td><a href="{{ namespace.name }}">{{ namespace.name }}</a></td>
-      <td class="reference--collapse">{{ namespace.comment }}</td>
+      <td><a href="{{ namespace.permalink }}">{{ namespace.shortName }}</a></td>
+      <td class="reference-collapse">{{ namespace.comment | safe }}</td>
       <td>{{ namespace.release }} </td>
     </tr>
 
@@ -33,5 +34,6 @@
   </tbody>
 </table>
 
-</div>
+    </article>
+  </div>
 {% endblock %}

@@ -1,4 +1,5 @@
 - url: /docs/extensions/what-are-extensions
+- url: /docs/extensions/reference
 - title: i18n.docs.extensions.overview
   sections:
     - url: /docs/extensions/overview

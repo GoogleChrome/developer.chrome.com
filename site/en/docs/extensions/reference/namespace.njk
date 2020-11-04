@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/namespace-landing.njk'
-permalink: /en/docs/extensions/reference/{{ namespace.name }}/index.html
+permalink: /en/docs/extensions/reference/{{ namespace.shortName }}/index.html
 title: Reference
 eleventyComputed:
-  title: "{{ namespace.title or title }}"
-  description: "{{ namespace.description or description }}"
+  title: "{{ namespace.name or title }}"
+  description: "{{ namespace.comment or description }}"
   date: "{{ namespace.updated or '' }}"
 pagination:
   data: collections.types

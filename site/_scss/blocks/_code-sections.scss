@@ -1,0 +1,52 @@
+.code-sections {
+  border-left: 1px solid var(--color-hairline);
+  margin-top: get-size(300);
+  padding-left: calc(#{get-size(300)} - 1px);
+
+  ul {
+    padding-left: 0;
+  }
+
+  // nb. This is intentionally recursive.
+  .code-sections {
+    border: 1px solid var(--color-hairline);
+    margin: 0;
+    padding: calc(#{get-size(300)} - 1px);
+  }
+}
+
+.code-sections--summary {
+  border-left: 0;
+  padding-left: 0;
+
+  li > :first-child {
+    color: var(--color-secondary-text);
+  }
+}
+
+.code-sections li {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include media-query('lg') {
+    flex-direction: row;
+  }
+
+  /* stylelint-disable-next-line selector-max-compound-selectors */
+  li li {
+    flex-direction: column !important;
+  }
+}
+
+.code-sections li:not(:first-of-type) {
+  border-top: 1px solid var(--color-hairline);
+  padding-top: get-size(300);
+}
+
+.code-sections li > :first-child {
+  @include apply-utility('weight', 'medium');
+  flex-shrink: 1;
+  min-width: px-to-rem(136px);
+  padding-right: get-size(300);
+}
