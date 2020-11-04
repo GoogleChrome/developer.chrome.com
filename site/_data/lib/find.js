@@ -58,6 +58,9 @@ const findByUrl = (collection, url, locale = '') => {
 };
 
 const findByProjectKey = (collection, projectKey, locale) => {
+  if (!projectKey || !locale) {
+    return undefined;
+  }
   const urlToFind = path.join('/', locale, '/docs/', projectKey, '/');
   return internalFind(collection, urlToFind);
 };

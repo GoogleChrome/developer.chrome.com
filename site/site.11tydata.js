@@ -1,7 +1,7 @@
 const {sep, resolve, join} = require('path');
 
-// Matches e.g. "/es/docs/blah/".
-const projectKeyRe = /\/\w{2,}\/docs\/(\w+)\//;
+// Matches e.g. "/es/docs/blah/" or "/en/docs/foo-bar_zing/".
+const projectKeyRe = /\/\w{2,}\/docs\/([_-\w]+)\//;
 
 module.exports = {
   eleventyComputed: {
