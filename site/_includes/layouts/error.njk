@@ -1,0 +1,8 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <div class="pad-400">
+    <h1 class="type--h1"><code>{{ title }}</code></h1>
+    {{ content | safe }}
+  </div>
+{% endblock %}

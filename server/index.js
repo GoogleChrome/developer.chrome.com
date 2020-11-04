@@ -14,22 +14,27 @@
  * limitations under the License.
  */
 
+const isGAEProd = Boolean(process.env.GAE_APPLICATION);
+
 const express = require('express');
 const compression = require('compression');
+const {notFoundHandler} = require('./not-found');
 
 const app = express();
 
-// Log the requested urls
-app.use((req, res, next) => {
-  // console.log(req.url);
-  next();
-});
+const handlers = [
+  express.static('dist'),
+  express.static('dist/en'),
+  notFoundHandler,
+];
 
-app.use(compression());
+if (!isGAEProd) {
+  handlers.unshift(compression());
+}
+
+app.use(...handlers);
 
 // Direct all requests to the static dir
-app.use(express.static('dist'));
-app.use(express.static('dist/en'));
 
 const listener = app.listen(process.env.PORT || 8080, () => {
   // eslint-disable-next-line
