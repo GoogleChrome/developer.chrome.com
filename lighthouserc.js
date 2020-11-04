@@ -1,7 +1,9 @@
 module.exports = {
   ci: {
     collect: {
-      startServerCommand: 'npm run production && npm run server',
+      startServerCommand:
+        'ELEVENTY_IGNORE_NACL=true npm run production && npm run server',
+      startServerTimeout: 60 * 1000, // allow our build to take 60s
       url: [
         'http://localhost:8080/',
         'http://localhost:8080/blog',
