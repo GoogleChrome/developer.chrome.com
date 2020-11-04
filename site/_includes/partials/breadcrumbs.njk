@@ -1,16 +1,22 @@
 {% extends 'partials/title-bar.njk' %}
 
 {% block title_bar_content %}
-  {# Only allow breadcrumbs to go three levels deep #}
-  {# Example: Documentation > Extensions > Overview #}
-  {% set max_depth = page.url.split('/').slice(0, 4).join('/') %}
-  {#
-    nb. "with context" gives the macro access to the global scope.
-    This is useful if the macro needs to access some part of the eleventy
-    data cascade without it needing to be explicitly passed in.
-    For example, the functions in _data/helpers are made available to the
-    macro in this way.
-  #}
-  {% from 'macros/breadcrumbs.njk' import breadcrumbs with context %}
-  {{ breadcrumbs(title, max_depth) }}
+  <nav class="breadcrumbs cluster" aria-label="{{ 'i18n.common.breadcrumbs' | i18n(locale) }}">
+    <div class="align-center flow-space-200">
+      {% set all = helpers.buildBreadcrumbs(page.url, collections) %}
+      {% for part in all -%}
+
+        {% if not loop.first -%}
+          {% include 'icons/arrow-forward.svg' %}
+        {%- endif %}
+
+        {% if part.url %}
+          <a href="{{ part.url }}">{{ part.title }}</a>
+        {% else %}
+          <span>{{ part.title }}</span>
+        {% endif %}
+
+      {%- endfor %}
+    </div>
+  </nav>
 {% endblock %}

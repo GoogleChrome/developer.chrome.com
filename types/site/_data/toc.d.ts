@@ -15,10 +15,17 @@
  */
 
 declare global {
-  export interface Section {
+  export interface ProjectIndexEntry {
     url?: string;
     title?: string;
-    sections?: Section[];
+  }
+
+  export interface ProjectIndex {
+    [url: string]: ProjectIndexEntry[];
+  }
+
+  export interface AllProjectIndex {
+    [projectKey: string]: ProjectIndex;
   }
 }
 

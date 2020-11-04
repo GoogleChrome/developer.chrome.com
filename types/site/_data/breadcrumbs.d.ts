@@ -15,10 +15,9 @@
  */
 
 declare global {
-  export interface Section {
+  export interface Breadcrumb {
+    title: string;
     url?: string;
-    title?: string;
-    sections?: Section[];
   }
 }
 
