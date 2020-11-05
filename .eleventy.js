@@ -14,7 +14,7 @@ const {img} = require('./site/_shortcodes/img');
 const {video} = require('./site/_shortcodes/video');
 
 // Transforms
-const {prettyUrls} = require('./site/_transforms/pretty-urls');
+const {domTransformer} = require('./site/_transforms/dom-transformer');
 
 // Plugins
 const md = require('./site/_plugins/markdown');
@@ -85,7 +85,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('video', video);
 
   // Add transforms
-  eleventyConfig.addTransform('prettyUrls', prettyUrls);
+  eleventyConfig.addTransform('domTransformer', domTransformer);
 
   return {
     markdownTemplateEngine: 'njk',

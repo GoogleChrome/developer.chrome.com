@@ -1,37 +1,13 @@
 const path = require('path');
-const cheerio = require('cheerio');
-const ISO6391 = require('iso-639-1');
 
 /**
  * Converts /en/... urls to /...,
  * and /... urls to locale-specific ones.
  * Which url style to use is inferred from the outputPath's locale.
- * @param {string} content The target HTML file including "dist"
- * @return {string} The updated HTML content for the page
+ * @param {cheerio.Selector} $ A cheerio representation of the page. This object will be
+ * modified in place.
  */
-
-const prettyUrls = (content, outputPath) => {
-  // Make sure we're not interacting with something weird that has
-  // permalink set to false or undefined or...
-  if (!outputPath || typeof outputPath !== 'string') {
-    return content;
-  }
-
-  // outputPath is in the format "dist/en/foo/index.html"
-  const locale = outputPath.split(path.sep)[1];
-
-  // If we have a path that contains something other than a locale just return
-  // early.
-  // @ts-ignore: validate() does exist but ts fails to pick it up.
-  if (!ISO6391.validate(locale)) {
-    console.warn('Found invalid locale:', outputPath);
-    return content;
-  }
-
-  // We use cheerio to parse the page.
-  // cheerio can be quiet slow so if we're writing more transforms in the future
-  // that use cheerio then we should combine them into a single transform.
-  const $ = cheerio.load(content);
+const prettyUrls = ($, outputPath, locale) => {
   const $links = $('a');
   $links.each((_, elem) => {
     const $link = $(elem);
@@ -80,7 +56,6 @@ const prettyUrls = (content, outputPath) => {
 
     $link.attr('href', href);
   });
-  return $.html();
 };
 
 module.exports = {prettyUrls};

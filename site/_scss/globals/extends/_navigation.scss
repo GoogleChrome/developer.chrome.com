@@ -20,12 +20,7 @@
     &:hover {
       background: var(--color-side-nav-hover);
     }
-  
-    &[aria-current='page'] {
-      background: var(--color-secondary);
-      color: var(--color-side-nav-active);
-    }
-  
+    
     // If there is only one icon then move it over to
     // fill the space left by the missing toggle.
     > svg:only-of-type {
@@ -52,3 +47,10 @@
     }
   }
 }
+
+/* purgecss start ignore */
+%navigation__link[aria-current='page'] {
+  background: var(--color-secondary);
+  color: var(--color-side-nav-active);
+}
+/* purgecss end ignore */

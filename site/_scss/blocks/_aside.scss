@@ -1,0 +1,55 @@
+.aside {
+  background-color: var(--color-aside-note-bg);
+  border-radius: 6px;
+  color: var(--color-aside-note-text);
+  padding: get-size(400);
+
+  > * + * {
+    margin-top: get-size(300);
+  }
+
+  a {
+    color: inherit;
+  }
+
+  &--caution {
+    background-color: var(--color-aside-caution-bg);
+    color: var(--color-aside-caution-text);
+  }
+  
+  &--warning {
+    background-color: var(--color-aside-warning-bg);
+    color: var(--color-aside-warning-text);
+  }
+  
+  &--success {
+    background-color: var(--color-aside-success-bg);
+    color: var(--color-aside-success-text);
+  }
+  
+  &--gotchas {
+    background-color: var(--color-aside-gotchas-bg);
+    color: var(--color-aside-gotchas-text);
+  }
+  
+  &--key {
+    background-color: var(--color-aside-key-bg);
+    color: var(--color-aside-key-text);
+  }
+  
+  &--codelab {
+    background-color: var(--color-aside-codelab-bg);
+    color: var(--color-aside-codelab-text);
+  }
+}
+
+
+// The .aside__label is added by _transforms/asides.js
+.aside__label {
+  align-items: center;
+  display: flex;
+
+  > * + * {
+    margin-left: px-to-rem(12px);
+  }
+}

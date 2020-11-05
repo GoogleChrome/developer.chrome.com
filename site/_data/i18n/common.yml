@@ -33,3 +33,27 @@ primary:
 project_docs:
   en: 'project docs'
   es: 'project docs'
+
+caution:
+  en: 'Caution'
+  es: 'Precaución'
+
+warning:
+  en: 'Warning'
+  es: 'Advertencia'
+
+success:
+  en: 'Success'
+  es: 'Éxito'
+
+gotchas:
+  en: 'Gotchas'
+  es: 'Gotchas'
+
+key:
+  en: 'Key Term'
+  es: 'Término Clave'
+
+codelab:
+  en: 'Codelab'
+  es: 'Codelab'

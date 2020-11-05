@@ -67,6 +67,7 @@
     "@ava/babel": "^1.0.1",
     "@emmetio/expand-abbreviation": "^0.7.3",
     "@rollup/plugin-commonjs": "^15.1.0",
+    "@types/cheerio": "^0.22.22",
     "@types/node": "^13.11.1",
     "algoliasearch": "^4.5.1",
     "ava": "^3.12.1",

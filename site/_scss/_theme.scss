@@ -29,6 +29,21 @@
 
   --color-project-default: #{get-color('blue-700')};
   --color-project-handbook: #{get-color('red-700')};
+
+  --color-aside-note-text: #{get-color('blue-900')};
+  --color-aside-note-bg: #{rgb(get-color('blue-50'), 0.4)};
+  --color-aside-caution-text: #{darken(get-color('yellow-900'), 10%)}; // darken to meet a11y contrast
+  --color-aside-caution-bg: #{rgb(get-color('yellow-50'), 0.4)};
+  --color-aside-warning-text: #{get-color('red-900')};
+  --color-aside-warning-bg: #{rgb(get-color('red-50'), 0.4)};
+  --color-aside-success-text: #{get-color('green-900')};
+  --color-aside-success-bg: #{rgb(get-color('green-50'), 0.4)};
+  --color-aside-gotchas-text: #{get-color('purple-900')};
+  --color-aside-gotchas-bg: #{rgb(get-color('purple-50'), 0.4)};
+  --color-aside-key-text: #{get-color('pink-900')};
+  --color-aside-key-bg: #{rgb(get-color('pink-50'), 0.4)};
+  --color-aside-codelab-text: #{get-color('cyan-900')};
+  --color-aside-codelab-bg: #{rgb(get-color('cyan-50'), 0.4)};
 }
 
 @mixin dark-mode() {
