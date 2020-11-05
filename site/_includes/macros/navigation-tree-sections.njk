@@ -1,24 +1,24 @@
 {#
-Finds a post by its url (including language specific urls).
-Returns a link to the post and uses the post's title for link text.
-
-This will recursively keep outputting links depending on how many sections
-have been defined in the _data/docs/*.yml file for this project.
+This renders the TOC for the current project_key. It looks at the current page
+and marks it as active.
 #}
-{% macro navigationTreeSections(sections) %}
+{% macro navigationTreeSections() %}
+{# toc defines the table of contents that appears to the left of the documentation. #}
+{% set toc = docs[project_key].toc %}
+{% set expandedSections = helpers.expandSections(toc, page.url, locale) %}
+{{ navigationTreeSectionsInternal(expandedSections) }}
+{% endmacro %}
 
-{% for item in sections %}
+{% macro navigationTreeSectionsInternal(expandedSections) %}
+
+{% for item in expandedSections %}
   {% if item.sections %}
-    {% if helpers.hasActiveLink(item.sections, page.url, locale) %}
-      <button class="navigation-tree__link button" data-expandable aria-expanded="true">
-    {% else %}
-      <button class="navigation-tree__link button" data-expandable aria-expanded="false">
-    {% endif %}
+    <button class="navigation-tree__link button" data-expandable aria-expanded="{{ item.active }}">
       {% include 'icons/arrow-drop-down.svg' %}
       <span>{{ item.title | i18n }}</span>
     </button>
     <div class="navigation-tree__nested">
-      {{ navigationTreeSections(item.sections) }}
+      {{ navigationTreeSectionsInternal(item.sections) }}
     </div>
   {% elif item.url %}
     {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
@@ -31,7 +31,7 @@ have been defined in the _data/docs/*.yml file for this project.
     {% endif %}
 
     {% if post %}
-      <a href="{{ post.url }}" class="navigation-tree__link" {{ helpers.getLinkActiveState(post.url, page.url) | safe }}>
+      <a href="{{ post.url }}" class="navigation-tree__link" {% if item.active %}{{ helpers.getLinkActiveState(post.url, page.url) | safe }}{% endif %}>
         <span>{{ post.data.title }}</span>
       </a>
     {% endif %}

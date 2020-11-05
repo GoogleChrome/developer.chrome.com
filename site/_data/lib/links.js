@@ -1,11 +1,8 @@
 const path = require('path');
-const {leadingAndTrailingSlash} = require('../../_filters/urls');
 
 /**
- * Returns back some attributes based on whether the
- * link is active or a parent of an active item.
- * It's recommended that both arguments use trailing slashes.
- * This will prevent /x from appearing to be a parent of /xy/
+ * Returns back some attributes based on whether the link is active or a parent
+ * of an active item.
  *
  * @param {string} itemUrl The link in question
  * @param {string} pageUrl The page context
@@ -16,44 +13,86 @@ function getLinkActiveState(itemUrl, pageUrl) {
     return;
   }
 
+  // This shouldn't happen in practice (11ty always gives us URLs with trailing
+  // slashes) but add this for sanity.
+  itemUrl = path.join(itemUrl, '/');
+  pageUrl = path.join(pageUrl, '/');
+
   if (itemUrl === pageUrl) {
     return ' data-state="active" aria-current="page"';
   } else if (itemUrl.length > 1 && pageUrl.indexOf(itemUrl) === 0) {
+    // TODO(samthor): This creates no styles on its own right now.
     return ' data-state="active"';
   }
   return;
 }
 
 /**
- * Flattens all of the nested links in a section to check if the current pageUrl
- * is contained within that section.
- * @param {Section[]} section A section from a _data/docs toc.yml file.
- * @param {string} pageUrl The url of the current page.
- * @param {string} locale The locale for the page.
- * @return {boolean|undefined}
+ * @type {{
+ *   sections?: Section[],
+ *   url?: string,
+ *   parent: SectionLinkItem|undefined,
+ *   active: boolean,
+ * }}
  */
-function hasActiveLink(section, pageUrl, locale) {
-  if (!section || !pageUrl) {
-    return;
-  }
+// eslint-disable-next-line no-unused-vars
+let SectionLinkItem;
 
-  const queue = section.slice();
-  while (queue.length) {
-    const item = /** @type {Section} */ (queue.shift());
-    if (item.url) {
-      const check = leadingAndTrailingSlash(path.join(locale, item.url));
+/**
+ * Expands all sections for display in the TOC. This also finds the best match
+ * for the passed pageUrl, including partial matches (useful for generated
+ * pages).
+ *
+ * @param {Section[]} sections
+ * @param {string} pageUrl
+ * @param {string} locale
+ * @return {SectionLinkItem[]}
+ */
+function expandSections(sections, pageUrl, locale) {
+  /** @type {SectionLinkItem|undefined} */
+  let target;
+  let matchLength = 0;
+
+  const internalExpand = curr => {
+    if (curr.url) {
+      const check = path.join('/', locale, '/', curr.url, '/');
       if (check === pageUrl) {
-        return true;
+        target = curr;
+        matchLength = pageUrl.length;
+      }
+
+      // If we don't have an exact match, update the best match.
+      if (check.length > matchLength && matchLength < pageUrl.length) {
+        if (pageUrl.startsWith(check)) {
+          matchLength = check.length;
+          target = curr;
+        }
       }
     }
-    if (item.sections) {
-      queue.push(...item.sections);
+
+    for (const section of curr.sections ?? []) {
+      section.parent = curr;
+      internalExpand(section);
     }
+  };
+
+  // We clone the input sections so they're not modified for the next page.
+  /** @type {SectionLinkItem[]} */
+  const clone = JSON.parse(JSON.stringify(sections));
+  for (const section of clone) {
+    internalExpand(section);
   }
-  return false;
+
+  // mark the chain as active. This is the only reason we need parent.
+  while (target) {
+    target.active = true;
+    target = target.parent;
+  }
+
+  return clone;
 }
 
 module.exports = {
   getLinkActiveState,
-  hasActiveLink,
+  expandSections,
 };
