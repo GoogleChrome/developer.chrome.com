@@ -14,7 +14,7 @@
           {% if loop.first and post.data.hero %}
             <a href="{{ post.url }}">
               <figure class="card-base__figure">
-                {% img post.data.hero, post.data.alt, '100%', '240' %}
+                {% img post.data.hero, post.data.alt %}
               </figure>
             </a>
           {% endif %}

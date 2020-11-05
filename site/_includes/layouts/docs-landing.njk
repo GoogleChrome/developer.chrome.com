@@ -19,16 +19,19 @@
           {# Find the landing page for the project itself and grab its metadata #}
           {% set projectUrl = helpers.join(page.url, item.url) %}
           {% set project = helpers.findByUrl(collections.all, projectUrl) %}
-          {% set pd = project.data %}
-          <li class="text-align-center">
-            <a class="project-grid__link" href="{{ item.url }}/">
-              {% from 'macros/project-icon.njk' import projectIcon with context %}
-              {{ projectIcon(item.url) }}
-              <h3 class="type--h5 gap-top-400">{{ pd.title }}</h1>
-              {# TODO(samthor): We should probably limit this text. #}
-              <p class="display-none lg:display-block type--small gap-top-300">{{ pd.description }}</p>
-            </a>
-          </li>
+          {# Don't render an empty link if a project is disabled via a build flag #}
+          {% if project %}
+            {% set pd = project.data %}
+            <li class="text-align-center">
+              <a class="project-grid__link" href="{{ item.url }}/">
+                {% from 'macros/project-icon.njk' import projectIcon with context %}
+                {{ projectIcon(item.url) }}
+                <h3 class="type--h5 gap-top-400">{{ pd.title }}</h1>
+                {# TODO(samthor): We should probably limit this text. #}
+                <p class="display-none lg:display-block type--small gap-top-300">{{ pd.description }}</p>
+              </a>
+            </li>
+          {% endif %}
         {%- endfor %}
       </ul>
     {%- endfor %}

@@ -32,9 +32,13 @@ jobs:
         run: npm ci
       - name: Install Canary Lighthouse CI
         run: npm install @lhci/cli@next
+      - name: Build
+        env:
+          ELEVENTY_IGNORE_NACL: true
+        run: npm run production
       - name: Lighthouse CI
         env:
-          ELEVENTY_ENV: prod
+          ELEVENTY_ENV: production
         run: |
           npx lhci autorun \
           --config=./lighthouserc.js \
