@@ -16,6 +16,7 @@ module.exports = {
       'demo/index.html',
       'docs/index.html',
       'docs/extensions/index.html',
+      'docs/extensions/what-are-extensions/index.html',
     ].join(',')
   },
   'agent': {

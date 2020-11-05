@@ -24,7 +24,7 @@
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
     "production": "NODE_ENV=production npm-run-all clean ignore gulp rollup eleventy",
     "snapshots": "percy snapshot dist/en",
-    "percy": "npm-run-all production snapshots",
+    "percy": "ELEVENTY_IGNORE_NACL=true npm-run-all production snapshots",
     "rollup:watch": "npx chokidar \"site/**/*.js\" -c \"npx rollup -c\"",
     "rollup": "npx rollup -c",
     "server": "node ./server",
