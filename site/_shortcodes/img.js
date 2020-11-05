@@ -6,7 +6,6 @@ const client = new ImgixClient({domain, includeLibraryParam: false});
 
 const params = {
   auto: 'format',
-  fit: 'max',
 };
 
 /**
