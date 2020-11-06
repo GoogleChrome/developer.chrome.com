@@ -15,7 +15,30 @@
  */
 
 const removeMarkdown = require('remove-markdown');
+const {createHash} = require('crypto');
+
 const {generateSrc} = require('../_shortcodes/img');
+
+/**
+ * Shrink the size of the given fulltext to fit within a certain limit, at the
+ * nearest found newline character.
+ *
+ * @param {string} content
+ * @param {number} [limit]
+ * @return {string}
+ */
+function limitText(content, limit = 7500) {
+  if (content.length <= limit) {
+    return content;
+  }
+
+  // Find the nearest prior newline to the 10k limit.
+  let newlineIndex = content.lastIndexOf('\n', limit);
+  if (newlineIndex === -1) {
+    newlineIndex = limit;
+  }
+  return content.slice(0, newlineIndex);
+}
 
 /**
  * @param {EleventyCollectionObject} collections
@@ -38,11 +61,12 @@ module.exports = collections => {
     algoliaCollectionItems.push({
       title: item.data.title,
       description: item.data.description,
-      content: removeMarkdown(item.template.frontMatter.content),
+      content: limitText(removeMarkdown(item.template.frontMatter.content)),
       url: item.url,
       tags: item.data.tags || [],
       locale: item.data.locale,
       photo: item.data.hero && generateSrc(item.data.hero),
+      objectID: createHash('md5').update(item.url).digest('hex'),
     });
   }
   return algoliaCollectionItems;

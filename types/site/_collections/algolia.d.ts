@@ -23,6 +23,7 @@ declare global {
     tags: string[];
     locale: string;
     photo?: string;
+    objectID: string;
   }
 }
 

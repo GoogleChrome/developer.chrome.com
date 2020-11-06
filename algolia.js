@@ -15,9 +15,40 @@
  */
 require('dotenv').config();
 const algoliasearch = require('algoliasearch');
+
 const fs = require('fs');
+const {sizeof} = require('sizeof');
+
+const maxChunkSizeInBytes = 10000000; // 10,000,000
+
+/**
+ * Chunks array of AlgoliaCollectionItem into array of array of AlgoliaCollectionItem smaller than 10 MB.
+ *
+ * @param {AlgoliaCollectionItem[]} arr
+ * @return {AlgoliaCollectionItem[][]}
+ */
+const chunkAlgolia = arr => {
+  const chunked = [];
+  let tempSizeInBytes = 0;
+  let temp = [];
+  for (const current of arr) {
+    const currentSizeInBytes = sizeof(current);
+    if (tempSizeInBytes + currentSizeInBytes < maxChunkSizeInBytes) {
+      temp.push(current);
+      tempSizeInBytes += currentSizeInBytes;
+    } else {
+      chunked.push(temp);
+      temp = [current];
+      tempSizeInBytes = currentSizeInBytes;
+    }
+  }
+  chunked.push(temp);
+  return chunked;
+};
 
 async function index() {
+  const indexedOn = new Date();
+
   if (!process.env.ALGOLIA_APP_ID || !process.env.ALGOLIA_API_KEY) {
     console.warn('Missing Algolia environment variables, skipping indexing.');
     return;
@@ -26,17 +57,45 @@ async function index() {
   const raw = fs.readFileSync('dist/algolia.json', 'utf-8');
   const algoliaData = JSON.parse(raw);
 
+  // Set date of when object is being added to algolia
+  algoliaData.map(e => {
+    e.indexedOn = indexedOn.getTime();
+    return e;
+  });
+
+  const chunkedAlgoliaData = chunkAlgolia(algoliaData);
+  const postsCount = algoliaData.length;
+
   const client = algoliasearch(
     process.env.ALGOLIA_APP_ID,
     process.env.ALGOLIA_API_KEY
   );
   const index = client.initIndex('prod_developer_chrome');
 
-  console.log(`Indexing ${algoliaData.length} articles`);
+  console.log(
+    `Indexing ${postsCount} articles amongst ${chunkedAlgoliaData.length} chunk(s).`
+  );
 
-  await index.replaceAllObjects(algoliaData, {
-    autoGenerateObjectIDIfNotExist: true,
+  // When indexing data we mark these two fields as fields that can be filtered by.
+  await index.setSettings({
+    attributesForFaceting: ['locale', 'tags'],
   });
+
+  // Update algolia index with new data
+  for (let i = 0; i < chunkedAlgoliaData.length; i++) {
+    await index.saveObjects(chunkedAlgoliaData[i], {
+      autoGenerateObjectIDIfNotExist: true,
+    });
+  }
+
+  console.log('Updated algolia data.');
+
+  console.log('Deleting old data no longer in algolia.json.');
+  await index.deleteBy({
+    filters: `indexedOn < ${indexedOn.getTime()}`,
+  });
+  console.log('Deleted old data.');
+
   console.log('Done!');
 }
 
