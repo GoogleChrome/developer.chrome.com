@@ -12,11 +12,11 @@
       <div class="card">
         <article class="card-base">
           {% if loop.first and post.data.hero %}
-            <a href="{{ post.url }}">
+            {# <a href="{{ post.url }}">
               <figure class="card-base__figure">
                 {% img post.data.hero, post.data.alt %}
               </figure>
-            </a>
+            </a> #}
           {% endif %}
           <a href="{{ post.url }}"><h3>{{ post.data.title }}</h3></a>
           <p>{{ post.data.snippet }}</p>
