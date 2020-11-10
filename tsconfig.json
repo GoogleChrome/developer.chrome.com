@@ -28,6 +28,7 @@
   },
   "include": [
     "site/**/*",
+    "tools/**/*",
     "types/**/*.d.ts"
   ],
   "exclude": [

@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/namespace-landing.njk'
-permalink: /en/docs/extensions/reference/{{ namespace.shortName }}/index.html
+permalink: /en/docs/extensions/reference/{{ namespace.name | namespaceToPath }}/index.html
 title: Reference
 eleventyComputed:
   title: "{{ namespace.name or title }}"

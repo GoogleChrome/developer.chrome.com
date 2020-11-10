@@ -24,7 +24,7 @@
 {% for namespace in collections.types %}
 
     <tr>
-      <td><a href="{{ namespace.permalink }}">{{ namespace.shortName }}</a></td>
+      <td><a href="{{ namespace.name | namespaceToPath }}">{{ namespace.shortName }}</a></td>
       <td class="reference-collapse">{{ namespace.comment | safe }}</td>
       <td>{{ namespace.release }} </td>
     </tr>

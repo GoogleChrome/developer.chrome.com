@@ -8,6 +8,7 @@ const markdownItAttrs = require('markdown-it-attrs');
 // Filters
 const {absolute, trailingSlash, leadingAndTrailingSlash} = require('./site/_filters/urls');
 const {i18n} = require('./site/_filters/i18n');
+const {namespaceToPath} = require('./site/_filters/namespace');
 
 // Shortcodes
 const {img} = require('./site/_shortcodes/img');
@@ -29,7 +30,6 @@ const locales = require('./site/_data/site').locales;
 const algoliaCollection = require('./site/_collections/algolia');
 const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
-const typesCollection = require('./site/_collections/types');
 
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
@@ -72,13 +72,17 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('algolia', algoliaCollection);
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
-  eleventyConfig.addCollection('types', typesCollection);
+
+  // Add static collections
+  // These are generated as a postinstall step as computation is slow
+  eleventyConfig.addCollection('types', () => require('./site/_collections/types'));
 
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
   eleventyConfig.addFilter('trailingSlash', trailingSlash);
   eleventyConfig.addFilter('leadingAndTrailingSlash', leadingAndTrailingSlash);
   eleventyConfig.addFilter('i18n', i18n);
+  eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
 
   // Add shortcodes
   eleventyConfig.addShortcode('img', img);

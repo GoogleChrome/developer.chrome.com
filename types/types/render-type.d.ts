@@ -15,17 +15,37 @@
  */
 
 declare global {
+  export type RenderTypeType = "?" |
+      "type" |
+      "object" |
+      "enum" |
+      "primitive" |
+      "array" |
+      "reference";
+
   export interface RenderType {
-    name: string;
-    type: string;
+    name?: string;
+    type: RenderTypeType;
     optional?: boolean;
     comment?: string;
+
+    // primitive
+    primitiveType?: string;
+
+    // reference
+    referenceType?: string;
+    referenceLink?: boolean;
+
+    // array
+    elementType?: RenderType;
+    minLength?: number;
+    maxLength?: number;
 
     // interface, object etc
     properties?: RenderType[];
 
     // enum
-    options?: string[];
+    options?: RenderType[];
 
     // function
     parameters?: RenderType[];
@@ -35,15 +55,15 @@ declare global {
   export interface RenderNamespace {
     name: string;
     shortName: string;  // name without "chrome." prefix
-    permalink: string;  // used for URLs
     comment?: string;
 
     updated?: string;
     release?: number;
 
     // top-levels shown on API page
-    methods: RenderType[];
     types: RenderType[];
+    properties: RenderType[];
+    methods: RenderType[];
   }
 }
 

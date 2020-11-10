@@ -22,6 +22,7 @@
     "lint:scss": "stylelint **/*.scss",
     "lint:types": "tsc --noEmit",
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
+    "postinstall": "npm-run-all types",
     "production": "NODE_ENV=production npm-run-all clean ignore gulp rollup eleventy",
     "snapshots": "percy snapshot dist/en",
     "percy": "ELEVENTY_IGNORE_NACL=true npm-run-all production snapshots",
@@ -31,7 +32,8 @@
     "stage": "NODE_ENV=production npm run production && gcloud app deploy --project=chrome-apps-doc-staging-2020 --quiet",
     "start": "node ./server",
     "test:watch": "ava --watch",
-    "test": "nyc ava"
+    "test": "nyc ava",
+    "types": "node ./tools/types"
   },
   "license": "Apache 2.0",
   "dependencies": {
