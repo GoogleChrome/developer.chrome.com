@@ -1,5 +1,5 @@
 const ImgixClient = require('imgix-core-js');
-const {html} = require('common-tags');
+const {html, safeHtml} = require('common-tags');
 const {imgix: domain} = require('../_data/site.json');
 
 const client = new ImgixClient({domain, includeLibraryParam: false});
@@ -41,7 +41,7 @@ const img = (path, alt, width, height, options = {}) => {
       srcset="${srcset}"
       ${height ? `height="${height}"` : ''}
       ${width ? `width="${width}"` : ''}
-      ${alt ? `alt="${alt}"` : ''}
+      ${alt ? `alt="${safeHtml`${alt}`}"` : ''}
       loading="lazy"
     />
   `.replace(/\n/g, '');
