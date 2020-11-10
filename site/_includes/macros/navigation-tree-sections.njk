@@ -14,7 +14,9 @@ and marks it as active.
 {% for item in expandedSections %}
   {% if item.sections %}
     <button class="navigation-tree__link button" data-expandable aria-expanded="{{ item.active }}">
-      {% include 'icons/arrow-drop-down.svg' %}
+      <div class="navigation-tree__icon">
+        {% include 'icons/arrow-drop-down.svg' %}
+      </div>
       <span>{{ item.title | i18n }}</span>
     </button>
     <div class="navigation-tree__nested">

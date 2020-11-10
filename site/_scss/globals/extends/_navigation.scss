@@ -12,7 +12,7 @@
     border-radius: 0 100px 100px 0;
     color: var(--color-text);
     display: flex;
-    padding: px-to-rem(12px) 0.5rem px-to-rem(12px) 0;
+    padding: px-to-rem(4px) 0.5rem px-to-rem(4px) 0;
     text-align: left;
     text-decoration: none;
     user-select: none;
@@ -20,30 +20,34 @@
     &:hover {
       background: var(--color-side-nav-hover);
     }
-    
-    // If there is only one icon then move it over to
-    // fill the space left by the missing toggle.
-    > svg:only-of-type {
-      margin-left: 1.5rem;
-    }
-  
-    // The last child is always the label which
-    // should have a little bit of left margin so
-    // its left edge lines up with the menu title.
-    > :last-child {
-      margin-left: px-to-rem(20px);
 
-      // stylelint-disable-next-line max-nesting-depth
-      @include media-query('lg') {
-        margin-left: 1rem;
-      }
+    // Put the link's focus ring in front of any adjacent elements which have a
+    // background.
+    &:focus {
+      z-index: 1;
     }
-  
-    // If there is only one child in the entire
-    // link then move it all the way over so its
-    // left edge veritcally lines up with its peers.
-    > :only-child {
-      margin-left: 4rem;
+
+    // The last child is always the label which should have a left margin so
+    // its left edge moves past an expando chevron.
+    > :last-child {
+      margin-left: 2rem;
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 2rem;
+
+    &::before {
+      content: '\200b';
+    }
+
+    > svg {
+      min-width: 24px;
+      transition: transform 0.2s;
     }
   }
 }

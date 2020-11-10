@@ -1,6 +1,5 @@
 /* purgecss start ignore */
 navigation-tree {
-  @include font-setup(14px, 28px);
   display: none;
   width: px-to-rem(250px);
   
@@ -15,14 +14,16 @@ navigation-tree {
 
 .navigation-tree__link {
   @extend %navigation__link;
+  @include font-setup(14px, 28px);
+  align-items: flex-start;
+  padding-left: px-to-rem(12px);
 
   @include media-query('lg') {
-    padding-bottom: px-to-rem(4px);
-    padding-top: px-to-rem(4px);
+    @include font-setup(13px, 24px);
   }
 
   &[aria-expanded='true'] {
-    > svg {
+    .navigation-tree__icon > svg {
       transform: rotate(90deg);
     }
   
@@ -30,6 +31,10 @@ navigation-tree {
       display: flex;
     }
   }
+}
+
+.navigation-tree__icon {
+  @extend %navigation__icon;
 }
 
 .navigation-tree__nested {

@@ -74,7 +74,6 @@ side-nav[expanded] {
   height: 100%;
   max-width: px-to-rem(360px);
   overflow: hidden;
-  padding-right: get-size(200);
   transform: translate(-102%, 0); // 102% to keep box-shadow offscreen
   transition: none;
   width: 85vw;

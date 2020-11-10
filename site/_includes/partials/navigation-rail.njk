@@ -5,7 +5,7 @@
     </button>
     <div class="navigation-rail__title pad-left-200 pad-right-200">{{ 'i18n.common.chrome_developers' | i18n(locale) }}</div>
   </div>
-  <div class="display-flex direction-column pad-top-300">
+  <div class="display-flex direction-column pad-top-300  pad-right-200 lg:pad-right-0">
     {% for name, item in nav.rail %}
       {#
         Because the item url comes from the _data directory, it doesn't have a locale prefix.
@@ -18,7 +18,9 @@
       {% set activeState = helpers.getLinkActiveState(item.url, pageUrl) %}
       {% set iconName = name + '-active' if activeState else name %}
       <a href="{{ item.url }}" class="navigation-rail__link" {{ activeState | safe }}>
-        {% include 'icons/' + iconName + '.svg' %}
+        <div class="navigation-rail__icon">
+          {% include 'icons/' + iconName + '.svg' %}
+        </div>
         <span>{{ item.text | i18n(locale) }}</span>
       </a>
     {% endfor %}

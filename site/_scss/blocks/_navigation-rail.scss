@@ -14,11 +14,18 @@ navigation-rail {
 
 .navigation-rail__link {
   @extend %navigation__link;
+  @include font-setup(14px, 28px);
+  padding-bottom: px-to-rem(12px);
+  padding-top: px-to-rem(12px);
 
   @include media-query('lg') {
     flex-direction: column;
     padding: 0;
     position: relative;
+
+    .navigation-rail__icon {
+      position: static;
+    }
 
     + .navigation-rail__link {
       --flow-space: 1.5rem;
@@ -35,45 +42,39 @@ navigation-rail {
 
       // stylelint-disable max-nesting-depth
       &::before {
+        $hover-size: 40px;
         background: var(--color-side-nav-hover);
         border-radius: 50%;
         content: '';
-        height: 40px;
+        height: $hover-size;
         position: absolute;
-        top: -#{get-size(200)};
-        width: 40px;
+        top: -(($hover-size - 28px) / 2); // 28px is line-height
+        width: $hover-size;
         z-index: -1;
       }
     }
   }
 
   &[data-state='active'] {
+    color: var(--color-side-nav-active);
+
     @include media-query('lg') {
       background: transparent;
-      color: var(--color-side-nav-active);
-
-      > svg {
-        fill: var(--color-primary);
-      }
-    }
-  }
-
-  > svg:only-of-type {
-    @include media-query('lg') {
-      margin-left: 0;
     }
   }
 
   > :last-child {
-    @include media-query('lg') {
-      margin-left: 0;
-    }
-  }
+    margin-left: 4rem;
 
-  > :only-child {
     @include media-query('lg') {
       margin-left: 0;
     }
   }
+}
+
+.navigation-rail__icon {
+  @extend %navigation__icon;
+
+  width: 4rem;
 }
 /* purgecss end ignore */
