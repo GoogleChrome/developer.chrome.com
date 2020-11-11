@@ -109,7 +109,7 @@ function extractPublicChromeNamespaces(typesData) {
  * @param {string} typesPath
  * @return {RenderNamespace[]}
  */
-module.exports = typesPath => {
+function parseChromeTypesFile(typesPath) {
   const projectReflection = generateTypeDocObject(typesPath);
 
   // Generate namespaces in isolation (e.g. `chrome.management` and so on).
@@ -164,4 +164,6 @@ module.exports = typesPath => {
   // Returns as an already sorted Array.
   flat.sort(({name: a}, {name: b}) => a.localeCompare(b));
   return flat;
-};
+}
+
+module.exports = {parseChromeTypesFile, generateTypeDocObject};

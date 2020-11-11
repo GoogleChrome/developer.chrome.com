@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+const assert = require('assert');
 const typedoc = require('typedoc');
 const typedocModels = require('typedoc/dist/lib/models');
 
@@ -61,4 +62,19 @@ function extractComment(comment) {
   return '';
 }
 
-module.exports = {exportedChildren, extractComment};
+/**
+ * @param {RenderType|undefined} a
+ * @param {RenderType|undefined} b
+ * @return {boolean}
+ */
+function deepStrictEqual(a, b) {
+  try {
+    // @ts-ignore
+    assert.deepStrictEqual(a, b);
+  } catch (e) {
+    return false;
+  }
+  return true;
+}
+
+module.exports = {exportedChildren, extractComment, deepStrictEqual};

@@ -109,6 +109,7 @@
     "sizeof": "^1.0.0",
     "stylelint": "^13.7.0",
     "stylelint-config-sass-guidelines": "^7.1.0",
+    "tmp": "^0.2.1",
     "typescript": "^3.8.3",
     "unified-lint-rule": "^1.0.6",
     "unist-util-map": "^2.0.1",

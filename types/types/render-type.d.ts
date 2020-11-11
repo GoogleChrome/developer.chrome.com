@@ -16,12 +16,13 @@
 
 declare global {
   export type RenderTypeType = "?" |
+      "primitive" |
+      "reference" |
+      "array" |
       "type" |
       "object" |
-      "enum" |
-      "primitive" |
-      "array" |
-      "reference";
+      "union" |
+      "function";
 
   export interface RenderType {
     name?: string;
@@ -31,21 +32,25 @@ declare global {
 
     // primitive
     primitiveType?: string;
+    literalValue?: string;
 
     // reference
     referenceType?: string;
     referenceLink?: boolean;
+    referenceTemplates?: RenderType[];
 
     // array
     elementType?: RenderType;
     minLength?: number;
     maxLength?: number;
 
-    // interface, object etc
+    // type/object
     properties?: RenderType[];
+    templates?: string[];
 
-    // enum
+    // union
     options?: RenderType[];
+    isEnum?: boolean;
 
     // function
     parameters?: RenderType[];

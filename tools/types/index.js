@@ -28,8 +28,8 @@ const renderTypesPath = path.join(
 
 const start = performance.now();
 
-const buildTypes = require('./types');
-const typesRender = buildTypes(typesPath);
+const {parseChromeTypesFile} = require('./types');
+const typesRender = parseChromeTypesFile(typesPath);
 
 // In dev, emit this as formatted JS for ease-of-debugging.
 const out = JSON.stringify(

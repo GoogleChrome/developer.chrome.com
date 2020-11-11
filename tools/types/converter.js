@@ -15,44 +15,49 @@
  */
 
 const typedoc = require('typedoc');
-
-// TypeDoc doesn't export some of its internal types at the top-level, so just bring in the models.
-// These are technically disused and just here for types inside JS comments.
-// eslint-disable-next-line no-unused-vars
 const typedocModels = require('typedoc/dist/lib/models');
-
-const {extractComment} = require('./helpers');
+const {extractComment, deepStrictEqual} = require('./helpers');
 
 /**
- * @param {!typedocModels.DeclarationReflection} declaration
+ * @param {typedocModels.DeclarationReflection} declaration
  * @return {RenderType}
  */
 function declarationToType(declaration) {
-  const out = internalDeclarationToType(declaration);
+  let {type} = declaration;
+  if (!type) {
+    type = new typedocModels.ReflectionType(declaration);
+  }
+  const out = buildRenderType(type);
+  updateCommonReflectionType(out, declaration);
+  return out;
+}
 
+/**
+ * @param {RenderType} renderType
+ * @param {typedocModels.DeclarationReflection} declaration
+ */
+function updateCommonReflectionType(renderType, declaration) {
   const comment = extractComment(declaration.comment);
   if (comment) {
-    out.comment = comment;
+    renderType.comment = comment;
   }
   if (declaration.flags.hasFlag(typedoc.ReflectionFlag.Optional)) {
-    out.optional = true;
+    renderType.optional = true;
   }
-
-  return out;
 }
 
 /**
  * Internal helper to map this declaration to a RenderType. Does not add comments or optional flag.
  *
- * @param {!typedocModels.DeclarationReflection} declaration
- * @return {RenderType}
+ * @param {typedocModels.ReflectionType} reflectionType
+ * @return {RenderType|undefined}
  */
-function internalDeclarationToType(declaration) {
-  // TODO(samthor): Restore functions and general types.
+function internalBuildDeclarationRenderType(reflectionType) {
+  const {declaration} = reflectionType;
   if (declaration.type) {
     return buildRenderType(declaration.type);
-    // } else if (declaration.signatures?.length) {
-    //   return buildFunctionRenderType(declaration);
+  } else if (declaration.signatures?.length) {
+    return internalBuildFunctionRenderType(declaration);
   }
 
   // This will either be "type" for a top-level interface type, or "object" for an inline object
@@ -70,8 +75,7 @@ function internalDeclarationToType(declaration) {
       break;
 
     default: {
-      // TODO(samthor): handle other types.
-      return {type: '?'};
+      return;
     }
   }
 
@@ -80,38 +84,258 @@ function internalDeclarationToType(declaration) {
     rt.name = child.name;
     return rt;
   });
-  return {type: objectLikeType, properties};
+
+  /** @type {RenderType} */
+  const out = {
+    type: objectLikeType,
+    properties,
+  };
+  updateCommonReflectionType(out, declaration);
+
+  // Look for templated types <T>. This doesn't handle extends or anything.
+  if (declaration.typeParameters?.length) {
+    out.templates = declaration.typeParameters.map(({name}) => name);
+  }
+
+  return maybeBuildArrayRenderType(out) || out;
+}
+
+/**
+ * Maybe converts an object type into an array type.
+ *
+ * @param {RenderType} cand
+ * @return {RenderType|undefined}
+ */
+function maybeBuildArrayRenderType(cand) {
+  // If this is a normal class or interface type, return early.
+  if (cand.type !== 'object' || !cand.properties || !cand.properties.length) {
+    return;
+  }
+
+  // Otherwise, see if this is a type that looks like `{0: T, 1: T, ...}`. This is actually an
+  // array with a min/max length.
+  const check = cand.properties.slice();
+  const elementType = JSON.parse(JSON.stringify(check[0])); // clone
+  let length = 0;
+
+  for (;;) {
+    const index = check.findIndex(({name}) => name === `${length}`);
+    if (index === -1) {
+      break;
+    }
+    const checkElementType = check.splice(index, 1)[0];
+    elementType.name = checkElementType.name; // keep name for compare
+    if (!deepStrictEqual(elementType, checkElementType)) {
+      return;
+    }
+    ++length;
+  }
+  if (check.length) {
+    return;
+  }
+
+  delete elementType.name;
+  return {
+    type: 'array',
+    elementType,
+    minLength: length,
+    maxLength: length,
+  };
+}
+
+/**
+ * Generates a RenderType from a DeclarationReflection that is a function, and has at least one
+ * signature.
+ *
+ * Note that this uses the best signature and adds its comment.
+ *
+ * @param {typedoc.DeclarationReflection} raw
+ * @return {RenderType}
+ */
+function internalBuildFunctionRenderType(raw) {
+  const {signatures = []} = raw;
+
+  // This extracts the signature with the most parameters. This is an awkward mismatch between
+  // TypeScript and Chrome's internal types: Chrome supports optional _middle_ arguments but TS
+  // does not; so methods get expanded to all possible combinations.
+  // For now, just grab the longest one.
+  // TODO(samthor): Find missing parameters and mark them as optional when rendering.
+  let bestParametersLength = 0;
+  let bestSignature = signatures[0];
+  signatures.forEach(signature => {
+    const {parameters = []} = signature;
+    if (parameters.length > bestParametersLength) {
+      bestParametersLength = parameters.length;
+      bestSignature = signature;
+    }
+  });
+
+  const {
+    type: sourceReturnType,
+    parameters: sourceParameters = [],
+  } = bestSignature;
+
+  // TODO(samthor): Find inner optional arguments and mark them as such.
+  const parameters = sourceParameters.map(reflection => {
+    if (!reflection.type) {
+      throw new TypeError('got signature paramater without type');
+    }
+    const rt = buildRenderType(reflection.type);
+
+    // TODO(samthor): We don't include default values.
+    const comment = extractComment(reflection.comment);
+    if (comment) {
+      rt.comment = comment;
+    }
+    rt.name = reflection.name;
+    return rt;
+  });
+
+  /** @type {RenderType} */
+  const out = {
+    type: 'function',
+    parameters,
+  };
+
+  const comment = extractComment(bestSignature.comment);
+  if (comment) {
+    out.comment = comment;
+  }
+
+  // Set the returnType property of RenderType if valid and not void.
+  if (sourceReturnType) {
+    const returnType = buildRenderType(sourceReturnType);
+
+    // The return type comment is awkwardly on the Comment object.
+    if (bestSignature.comment?.returns) {
+      returnType.comment = bestSignature.comment.returns;
+    }
+
+    // Methods return void, but we don't include it in the docs.
+    if (returnType.primitiveType !== 'void') {
+      out.returnType = returnType;
+    }
+  }
+
+  return out;
 }
 
 /**
  * @param {typedocModels.Type} type
+ * @param {typedocModels.Type|undefined=} parentType
  * @return {RenderType}
  */
-function buildRenderType(type) {
+function buildRenderType(type, parentType) {
   switch (type.type) {
-    case 'reflection': {
-      const reflectionType = /** @type {typedocModels.ReflectionType} */ (type);
-      const {declaration} = reflectionType;
-      return declarationToType(declaration);
-    }
-
-    case 'reference': {
-      const referenceType = /** @type {typedocModels.ReferenceType} */ (type);
-      // TODO(samthor): referencetype is not scoped
-      /** @type {RenderType} */
-      const out = {
-        type: 'reference',
-        referenceType: referenceType.name,
-        referenceLink: true,
-      };
-      return out;
-    }
-
     case 'array': {
       const arrayType = /** @type {typedocModels.ArrayType} */ (type);
       return {
         type: 'array',
-        elementType: buildRenderType(arrayType.elementType),
+        elementType: buildRenderType(arrayType.elementType, type),
+      };
+    }
+
+    case 'reflection': {
+      const reflectionType = /** @type {typedocModels.ReflectionType} */ (type);
+      const out = internalBuildDeclarationRenderType(reflectionType);
+      if (out) {
+        return out;
+      }
+      break;
+    }
+
+    case 'tuple': {
+      const tupleType = /** @type {typedocModels.TupleType} */ (type);
+      const [first, ...rest] = tupleType.elements;
+
+      // We just support tuples of the same type. This is basically an array of a maximum length.
+      const invalid = rest.some(check => !check.equals(first));
+      if (!first || invalid) {
+        break;
+      }
+
+      return {
+        type: 'array',
+        elementType: buildRenderType(first, type),
+        minLength: tupleType.elements.length,
+        maxLength: tupleType.elements.length,
+      };
+    }
+
+    case 'intersection': {
+      const intersectionType = /** @type {typedocModels.IntersectionType} */ (type);
+      const [a, b, ...rest] = intersectionType.types;
+      if (rest.length) {
+        break;
+      }
+
+      const typeA = buildRenderType(a);
+      const typeB = buildRenderType(b);
+      if (
+        typeA?.type !== 'array' ||
+        typeB?.type !== 'array' ||
+        !deepStrictEqual(typeA.elementType, typeB.elementType)
+      ) {
+        break;
+      }
+
+      /** @type {RenderType} */
+      const out = {
+        type: 'array',
+        elementType: typeA.elementType,
+      };
+
+      const minLength = Math.max(typeA.minLength ?? 0, typeB.minLength ?? 0);
+      if (minLength) {
+        out.minLength = minLength;
+      }
+
+      const maxLength = Math.min(typeA.maxLength ?? 0, typeB.maxLength ?? 0);
+      if (maxLength) {
+        out.maxLength = maxLength;
+      }
+
+      return out;
+    }
+
+    case 'reference': {
+      const referenceType = /** @type {typedocModels.ReferenceType} */ (type);
+
+      // TypeDoc generates "///" when this is a local ref, otherwise it gives us the fully-qualified
+      // name here.
+      let name = referenceType.symbolFullyQualifiedName;
+      if (name.startsWith('///')) {
+        name = referenceType.name;
+      }
+
+      /** @type {RenderType} */
+      const out = {
+        type: 'reference',
+        referenceType: name,
+        referenceLink: true,
+      };
+
+      // Insert <Foo> reference data.
+      if (referenceType.typeArguments?.length) {
+        out.referenceTemplates = referenceType.typeArguments.map(t =>
+          buildRenderType(t)
+        );
+      }
+
+      return out;
+    }
+
+    case 'union': {
+      // This can be a bunch of things, including an enum.
+      const unionType = /** @type {typedocModels.UnionType} */ (type);
+      const options = unionType.types.map(c => buildRenderType(c, type));
+
+      // We only present enums if they contain primitive values (e.g., a choice of strings).
+      const isEnum = !options.some(({type}) => type !== 'primitive');
+      return {
+        type: 'union',
+        isEnum,
+        options,
       };
     }
 
@@ -119,11 +343,35 @@ function buildRenderType(type) {
       const intrinsicType = /** @type {typedocModels.IntrinsicType} */ (type);
       return {
         type: 'primitive',
-        primitiveType: intrinsicType.type,
+        primitiveType: intrinsicType.name,
+      };
+    }
+
+    case 'stringLiteral': {
+      const stringLiteralType = /** @type {typedocModels.StringLiteralType} */ (type);
+
+      // Pretend that lone stringLiterals are actually enums.
+      if (parentType?.type !== 'union') {
+        const unionType = new typedocModels.UnionType([type]);
+        return buildRenderType(unionType, parentType);
+      }
+
+      return {
+        type: 'primitive',
+        literalValue: JSON.stringify(stringLiteralType.value),
+      };
+    }
+
+    case 'typeParameter': {
+      const typeParameterType = /** @type {typedocModels.TypeParameterType} */ (type);
+      return {
+        type: 'reference',
+        referenceType: typeParameterType.name,
       };
     }
   }
 
+  console.warn('got unknown type', type);
   return {type: '?'};
 }
 
