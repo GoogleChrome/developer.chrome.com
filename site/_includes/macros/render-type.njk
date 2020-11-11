@@ -1,22 +1,3 @@
-{#
-Renders a type. May be recursive.
-#}
-{% macro renderType(spec, namespace, category) %}
-<div>
-  <h3 class="type--h4" id="{{ category }}-{{ spec.name }}">{{ spec.name }}</h5>
-
-{# Renders the method signature. We need to do this here to insert links to parameter types. #}
-  {% if spec.parameters %}
-    <div class="type--xsmall"><code>{{ namespace }}.{{ spec.name }}({# 
-#}{% for parameter in spec.parameters %}{#
-  #}{{ parameter.name }}{% if parameter.optional %}?{% endif %}:
-    {{ parameter.type }}{% if not loop.last %}, {% endif %}{#
-  #}{% endfor %}{#
-#}){% if spec.returnType %}: {{ spec.returnType.type }}{% endif %}</code></div>
-  {% endif %}
-  {{ internalRenderTypeDetails(spec, true) }}
-</div>
-{% endmacro %}
 
 {#
   Renders more information about a type, including its comment plus its components: properties,
@@ -64,10 +45,22 @@ Renders a type. May be recursive.
       </ul>
     </div>
   {% endif %}
-{% elif (spec.parameters and spec.parameters.length) or spec.returnType %}
+{% elif spec.type === 'function' %}
   {# If this is a callback, merge parameters and return type. #}
   <div class="code-sections">
     <ul class="stack flow-space-300">
+      <li class="code-sections__info type--xsmall">
+        <p>
+          {% if spec.optional %}
+            If you specify the <em>{{ spec.name }}</em> parameter, it
+          {% else %}
+            The <em>{{ spec.name }}</em> parameter
+          {% endif %}
+          should be a function that looks like this:
+        </p>
+        <code>{{ renderTypeSignatureParameters(spec) }} => {...}</code>
+      </li>
+
       {% for parameter in spec.parameters %}
         {{ internalRenderNamedType(parameter) }}
       {% endfor %}
@@ -78,7 +71,7 @@ Renders a type. May be recursive.
   </div>
 {% endif %}
 
-{% if spec.options and spec.options.length %}
+{% if spec.isEnum %}
   <div class="code-sections">
     {% if headings %}<h4 class="type--eyebrow">Enum</h4>{% endif %}
 
@@ -87,9 +80,21 @@ Renders a type. May be recursive.
         <div>
           {% for option in spec.options %}
             {% if loop.last and not loop.first %}or{% endif %}
-            <code>{{ option }}</code>{% if not loop.last %},{% endif %}
+            <code>{{ renderSingleType(option) | trim }}</code>{% if not loop.last %},{% endif %}
           {% endfor %}
         </div>
+      </li>
+    </ul>
+  </div>
+{% endif %}
+
+{% if spec.referenceType %}
+  <div class="code-sections">
+    {% if headings %}<h4 class="type--eyebrow">Type</h4>{% endif %}
+
+    <ul class="stack flow-space-300">
+      <li>
+        {{ renderSingleType(spec) }}
       </li>
     </ul>
   </div>
@@ -101,10 +106,117 @@ Renders a type. May be recursive.
 <li>
   <div>
     <code>{{ spec.name }}{% if spec.optional %}?{% endif %}</code>
-    <div class="type--small">{{ spec.type }}</div>
+    <div class="type--small">{{ renderSingleType(spec) }}</div>
   </div>
   <div>
-    {{ internalRenderTypeDetails(spec, false) }}
+    {% if spec.type !== 'reference' %}
+      {{ internalRenderTypeDetails(spec, false) }}
+    {% endif %}
   </div>
 </li>
+{% endmacro %}
+
+{#
+  Renders a single type as a single word. Used for signatures and type hints.
+#}
+{% macro renderSingleType(rt) %}
+
+  {% if rt.type === 'primitive' %}
+    {# Primitive value ("number") or literal ("abc") #}
+    {{ rt.literalValue }}{{ rt.primitiveType }}
+  {% elif rt.type === 'reference' %}
+    {# Reference to another type #}
+    {% if rt.referenceLink %}
+      <a href="#">{{ rt.referenceType }}</a>
+    {%- else %}
+      {{ rt.referenceType }}
+    {%- endif -%}
+    {%- if rt.referenceTemplates.length -%}
+      &lt;
+        {%- for t in rt.referenceTemplates -%}
+          {{ renderSingleType(t) | trim }}
+        {%- endfor -%}
+      &gt;
+    {% endif %}
+  {% elif rt.type === 'array' %}
+    array of {{ renderSingleType(rt.elementType) | trim }}
+  {% elif rt.isEnum %}
+    {# Union type that is actually an enum of primitives #}
+    enum
+  {% elif rt.type === 'union' %}
+    {% for t in rt.options %}
+      {{ renderSingleType(t) | trim }}{% if not loop.last %} | {% endif %}
+    {% endfor %}
+  {% else %}
+    {{ rt.type }}
+  {% endif %}
+
+{% endmacro %}
+
+{#
+  Renders an optional signature of a method.
+#}
+{% macro renderTypeSignature(rt, namespaceName) %}
+
+  {% if rt.type === 'function' %}
+
+    <div class="type--xsmall">
+      <code>
+        {{ namespaceName }}.{{ rt.name }}{{ renderTypeSignatureParameters(rt, namespaceName) }}
+        {%- if rt.returnType %}: {{ renderSingleType(rt.returnType) }}{% endif %}
+      </code>
+    </div>
+
+  {% endif %}
+
+{% endmacro %}
+
+{#
+  Renders the arguments of a method.
+#}
+{% macro renderTypeSignatureParameters(rt, namespaceName) -%}
+  (
+    {%- for parameter in rt.parameters -%}
+      {{ parameter.name }}{% if parameter.optional %}?{% endif %}:
+      {{ renderSingleType(parameter) | trim }}
+      {%- if not loop.last %}, {% endif -%}
+    {%- endfor -%}
+  )
+{%- endmacro %}
+
+{#
+  Renders a short summary of the passed RenderType[]. Used at the top of a namespace page.
+#}
+{% macro renderSummarySection(namespaceName, label, prefix, array) %}
+
+  {% if array.length %}
+    <li>
+      <div>{{ label }}</div>
+      <div>
+        {% for rt in array %}
+          <div><a href="#{{ prefix }}-{{ rt.name }}">{{ rt.name }}</a></div>
+          {{ renderTypeSignature(rt, namespaceName) }}
+        {% endfor %}
+      </div>
+    </li>
+  {% endif %}
+
+{% endmacro %}
+
+{#
+  Renders the whole list of the passed RenderType[].
+#}
+{% macro renderPrimarySection(namespaceName, label, prefix, array) %}
+
+  {% if array.length %}
+    <h2 class="type--h3">{{ label }}</h2>
+    {% for rt in array %}
+      <div>
+        <h3 class="type--h4" id="{{ category }}-{{ rt.name }}">{{ rt.name }}</h5>
+        {{ renderTypeSignature(rt, namespaceName) }}
+        {{ internalRenderTypeDetails(rt, true) }}
+      </div>
+    {% endfor %}
+  {% endif %}
+
 {% endmacro %}

@@ -17,49 +17,20 @@
       <h1 class="type--h2">{{ title }}</h1>
       <p>{{ namespace.comment | safe }}</p>
 
-      {# SECTION: Summary #}
       <h2 class="type--h3">Summary</h2>
       <div class="code-sections code-sections--summary">
         <ul class="stack flow-space-300">
-          {% if namespace.types.length %}
-            <li>
-              <div>Types</div>
-              <div>
-                {% for type in namespace.types %}
-                  <div><a href="#type-{{ type.name }}">{{ type.name }}</a></div>
-                {% endfor %}
-              </div>
-            </li>
-          {% endif %}
-          {% if namespace.methods.length %}
-            <li>
-              <div>Methods</div>
-              <div>
-                {% for method in namespace.methods %}
-                  <a href="#method-{{ method.name }}">{{ method.name }}</a>
-                  <div class="type--xsmall"><code>{{ method.signature }}</code></div>
-                {% endfor %}
-              </div>
-            </li>
-          {% endif %}
+          {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
+          {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
+          {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
         </ul>
       </div>
 
-    {# SECTION: Types #}
-    {% if namespace.types.length %}
-      <h2 class="type--h3">Types</h2>
-      {% for type in namespace.types %}
-        {{ macros.renderType(type, namespace.name, 'type') }}
-      {% endfor %}
-    {% endif %}
+      {{ macros.renderPrimarySection(namespace.name, 'Types', 'type', namespace.types) }}
+      {{ macros.renderPrimarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
+      {{ macros.renderPrimarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
 
-    {# SECTION: Methods #}
-    {% if namespace.methods.length %}
-      <h2 class="type--h3">Methods</h2>
-      {% for method in namespace.methods %}
-        {{ macros.renderType(method, namespace.name, 'method') }}
-      {% endfor %}
-    {% endif %}
+    </article>
 
   </div>
 {% endblock %}

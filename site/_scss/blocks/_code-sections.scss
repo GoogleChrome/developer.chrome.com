@@ -25,6 +25,10 @@
 }
 
 .code-sections li {
+  list-style: none;
+}
+
+.code-sections li:not(.code-sections__info) {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -44,7 +48,7 @@
   padding-top: get-size(300);
 }
 
-.code-sections li > :first-child {
+.code-sections li:not(.code-sections__info) > :first-child {
   @include apply-utility('weight', 'medium');
   flex-shrink: 1;
   min-width: px-to-rem(136px);
