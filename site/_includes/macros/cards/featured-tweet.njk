@@ -1,0 +1,30 @@
+{% macro featuredTweet(post) %}
+<div class="card hairline rounded-lg pad-300 md:pad-400">
+  <div class="card__title-bar display-flex align-center">
+    {% include 'icons/twitter.svg' %}
+    <span class="gap-left-300 flex-1 user-select-none">Twitter</span>
+  </div>
+
+  <a href="#" class="display-inline-block type--h5-card gap-top-300">1 day ago</a>
+
+  <p class="gap-top-300">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sint
+    perspiciatis officiis iste ut sequi! Nostrum, debitis perferendis tenetur
+    necessitatibus ipsum dicta voluptatum vero!
+  </p>
+
+  <div class="card__thumbnail gap-top-300">
+    {#
+      Pass an explicit min and max width to the shortcode so it doesn't
+      generate excessively large srcset options. We do this because we're
+      using object-fit on the image and LHCI will grump if object-fit uses an
+      image that's too large.
+    #}
+    {% img 'image/foR0vJZKULb5AGJExlazy1xYDgI2/1604759130633.jpg', 'ALT TEXT HERE', 414, 200, {}, {minWidth: 278, maxWidth: 414} %}
+  </div>
+
+  <a href="https://twitter.com/chromiumdev" class="display-inline-block gap-top-400">
+    {{ 'i18n.common.follow' | i18n(locale) }} @Chromiumdev
+  </a>
+</div>
+{% endmacro %}

@@ -1,0 +1,53 @@
+{% macro featuredPost(post) %}
+{% set pd = post.data %}
+<div class="card hairline rounded-lg pad-300 md:pad-400">
+  <div class="card__title-bar display-flex align-center">
+    {% include 'icons/blog.svg' %}
+    <span class="gap-left-300 flex-1 user-select-none">
+      {{ 'i18n.nav.side_nav.blog' | i18n(locale) }}
+    </span>
+    {% include 'icons/keyboard-arrow-left.svg' %}
+    {% include 'icons/keyboard-arrow-right.svg' %}
+  </div>
+
+  {#
+    The thumbnail image defines its own bottom margin because it's optional
+    and needs to push the title down. If the title defined its own top
+    margin and the thumbnail was omitted then there would be too much space
+    between the title and the title-bar.
+  #}
+  {% if pd.hero %}
+    <div class="card__thumbnail gap-top-400 gap-bottom-300">
+      {#
+        Pass an explicit min and max width to the shortcode so it doesn't
+        generate excessively large srcset options. We do this because we're
+        using object-fit on the image and LHCI will grump if object-fit uses an
+        image that's too large.
+      #}
+      {% img pd.hero, pd.alt, 414, 200, {}, {minWidth: 278, maxWidth: 414} %}
+    </div>
+  {% endif %}
+
+  <h2 class="type--h3-card">
+    <a href="{{ post.url }}">
+      {{ pd.title }}
+    </a>
+  </h2>
+
+  <p class="type--caption gap-top-200">
+    <a href="{{ post.url }}">
+      {{ pd.description }}
+    </a>
+  </p>
+
+  <div class="gap-top-400">
+    {% from 'macros/author.njk' import author with context %}
+    {{ author('kaycebasques', locale) }}
+    {{ author('jakearchibald', locale) }}
+  </div>
+
+  <a href="/blog" class="display-inline-block gap-top-400">
+    {{ 'i18n.common.see_all_articles' | i18n(locale) }}
+  </a>
+</div>
+{% endmacro %}

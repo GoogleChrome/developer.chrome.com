@@ -1,10 +1,8 @@
 ---
 title: Chrome Developers
 layout: 'layouts/home.njk'
+featured_projects:
+  - extensions
+  - devtools
+  - native-client
 ---
-
-Hello Chrome Developers
-
-```bash
-Here is some codez
-```

@@ -51,6 +51,16 @@
     @extend %type--small;
   }
 
+  // See _type.scss for explanation of this exception.
+  &--h3-card {
+    @extend %type--h3-card;
+  }
+  
+  // See _type.scss for explanation of this exception.
+  &--h5-card {
+    @extend %type--h5-card;
+  }
+
   caption:not([class]),
   &--caption {
     @extend %type--caption;

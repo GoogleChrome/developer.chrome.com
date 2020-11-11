@@ -23,10 +23,10 @@
           {% if project %}
             {% set pd = project.data %}
             <li class="text-align-center">
-              <a class="project-grid__link" href="{{ item.url }}/">
+              <a class="project-card" href="{{ item.url }}/">
                 {% from 'macros/project-icon.njk' import projectIcon with context %}
                 {{ projectIcon(item.url) }}
-                <h3 class="type--h5 gap-top-400">{{ pd.title }}</h1>
+                <h3 class="project-card__title type--h5 lg:gap-top-400">{{ pd.title }}</h1>
                 {# TODO(samthor): We should probably limit this text. #}
                 <p class="display-none lg:display-block type--small gap-top-300">{{ pd.description }}</p>
               </a>

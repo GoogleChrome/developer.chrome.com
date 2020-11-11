@@ -48,9 +48,9 @@ $gorko-colors: $google-colors;
 $gorko-config: (
   'align': (
     'items': (
-      'start': 'flex-start',
+      'start': 'start',
       'center': 'center',
-      'end': 'flex-end'
+      'end': 'end'
     ),
     'output': 'responsive',
     'property': 'align-items'
@@ -75,6 +75,7 @@ $gorko-config: (
   'display': (
     'items': (
       'block': 'block',
+      'inline-block': 'inline-block',
       'flex': 'flex',
       'inline-flex': 'inline-flex',
       'grid': 'grid',
@@ -87,6 +88,13 @@ $gorko-config: (
     'items': $gorko-size-scale,
     'output': 'responsive',
     'property': '--flow-space',
+  ),
+  'flex': (
+    'items': (
+      '1': '1',
+    ),
+    'output': 'responsive',
+    'property': 'flex',
   ),
   'flex-flow': (
     'items': (
@@ -138,6 +146,21 @@ $gorko-config: (
     'output': 'responsive',
     'property': 'margin-left',
   ),
+  'grid-cols': (
+    'items': (
+      '1': 'repeat(1, minmax(0, 1fr))',
+      '2': 'repeat(2, minmax(0, 1fr))',
+      '3': 'repeat(3, minmax(0, 1fr))',
+      '4': 'repeat(4, minmax(0, 1fr))',
+    ),
+    'output': 'responsive',
+    'property': 'grid-template-columns',
+  ),
+  'grid-gap': (
+    'items': $gorko-size-scale,
+    'output': 'responsive',
+    'property': 'gap',
+  ),
   'height': (
     'items': map-merge($gorko-size-scale, (
       'full': '100%',
@@ -148,7 +171,7 @@ $gorko-config: (
     'output': 'responsive',
     'property': 'height'
   ),
-  'justify': (
+  'justify-content': (
     'items': (
       'between': 'space-between',
       'around': 'space-around',
@@ -157,6 +180,16 @@ $gorko-config: (
     ),
     'output': 'responsive',
     'property': 'justify-content'
+  ),
+  'justify-items': (
+    'items': (
+      'start': 'start',
+      'end': 'end',
+      'center': 'center',
+      'stretch': 'stretch'
+    ),
+    'output': 'responsive',
+    'property': 'justify-items'
   ),
   'leading': (
     'items': (
@@ -172,7 +205,8 @@ $gorko-config: (
       'micro': '10ch',
       'compact': '30ch',
       'short': '40ch',
-      'long': '78ch'
+      'long': '78ch',
+      'xl': '100ch',
     ),
     'output': 'responsive',
     'property': 'max-width',
@@ -221,6 +255,14 @@ $gorko-config: (
     ),
     'output': 'responsive',
     'property': 'text-align',
+  ),
+  'rounded': (
+    'items': (
+      'lg': 0.75rem,
+      'full': 50%,
+    ),
+    'output': 'responsive',
+    'property': 'border-radius',
   ),
   'stack': (
     'items': (

@@ -74,6 +74,13 @@
     @include flex-font((24px 32px), (32px 40px), (36px 44px));
   }
 
+  // Cards use an h3 for their title text, but they only use the SM and MD
+  // font-sizes. On larger screens they continue to use the MD size.
+  &--h3-card {
+    @extend %type--headline;
+    @include flex-font((24px 32px), (32px 40px), (32px 40px));
+  }
+
   &--h4 {
     @extend %type--headline;
     @include flex-font((18px 28px), (28px 36px), (28px 36px));
@@ -82,6 +89,13 @@
   &--h5 {
     @extend %type--headline;
     @include flex-font((16px 28px), (20px 28px), (20px 28px));
+  }
+
+  // Twitter cards use an h5 for their date text, but they only use the smallest
+  // size.
+  &--h5-card {
+    @extend %type--headline;
+    @include font-setup(16px, 24px);
   }
 
   &--h6 {

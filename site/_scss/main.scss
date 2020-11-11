@@ -26,19 +26,21 @@
 @import 'blocks/side-nav';
 @import 'blocks/author';
 @import 'blocks/dates';
+@import 'blocks/project-icon';
 @import 'blocks/project-hero';
 @import 'blocks/project-sections';
 @import 'blocks/project-grid';
+@import 'blocks/project-card';
 @import 'blocks/native-client';
-@import 'blocks/card';
 @import 'blocks/reference';
 @import 'blocks/code-sections';
 @import 'blocks/aside';
+@import 'blocks/card';
+@import 'blocks/home-grid';
 
 // Utilities
 @import 'utilities/center-margin';
 @import 'utilities/elevation';
 @import 'utilities/hairline';
-@import 'utilities/round';
 @import 'utilities/visually-hidden';
 @import 'utilities/wrapper';

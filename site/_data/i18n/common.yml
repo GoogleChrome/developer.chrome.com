@@ -57,3 +57,15 @@ key:
 codelab:
   en: 'Codelab'
   es: 'Codelab'
+
+see_all_articles:
+  en: 'See all articles'
+  es: 'Ver todos los articulos'
+
+see_all_docs:
+  en: 'See all documentation'
+  es: 'Ver todos los documentación'
+
+follow:
+  en: 'Follow'
+  es: 'Seguir'

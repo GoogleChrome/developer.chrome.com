@@ -1,7 +1,16 @@
 {% extends "layouts/base.njk" %}
 
-{% block content %}
-  <h1 class="type--h1">{{ title }}</h1>
+{% from 'macros/cards/featured-post.njk' import featuredPost with context %}
+{% from 'macros/cards/featured-docs.njk' import featuredDocs with context %}
+{% from 'macros/cards/featured-tweet.njk' import featuredTweet with context %}
 
-  {{ content | safe }}
+{% block content %}
+  <div class="measure-xl width-full center-margin pad-400">
+    <div class="home-grid">
+      {% set blog = 'blog-' + locale %}
+      {{ featuredPost(collections[blog][0]) }}
+      {{ featuredDocs(featured_projects) }}
+      {{ featuredTweet() }}
+    </div>
+  </div>
 {% endblock %}

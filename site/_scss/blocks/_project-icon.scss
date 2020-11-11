@@ -1,0 +1,67 @@
+.project-icon {
+  align-items: center;
+  display: inline-flex;
+  height: 128px;
+  justify-content: center;
+  perspective: 128px;
+  perspective-origin: 50% -100%;
+  transform: scale(0.6875);
+  width: 128px;
+
+  @include media-query('lg') {
+    transform: scale(1);
+  }
+}
+
+.project-icon__cover {
+  align-items: center;
+  background-color: currentColor;
+  background-image: url("data:image/svg+xml,%3Csvg width='116' height='116' viewBox='0 0 116 116' fill='none' style='opacity: 0.33' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='-6' y1='57.75' x2='122' y2='57.75' stroke='%23ffffff' stroke-width='0.5'/%3E%3Cline x1='-6' y1='85.75' x2='122' y2='85.75' stroke='%23ffffff' stroke-width='0.5'/%3E%3Cline x1='-6' y1='29.75' x2='122' y2='29.75' stroke='%23ffffff' stroke-width='0.5'/%3E%3Cline x1='57.75' y1='122' x2='57.75' y2='-6' stroke='%23ffffff' stroke-width='0.5'/%3E%3Cline x1='85.75' y1='122' x2='85.75' y2='-6' stroke='%23ffffff' stroke-width='0.5'/%3E%3Cline x1='29.75' y1='122' x2='29.75' y2='-6' stroke='%23ffffff' stroke-width='0.5'/%3E%3Cline x1='-5.82322' y1='-6.17678' x2='122.87' y2='122.517' stroke='%23ffffff' stroke-width='0.5'/%3E%3Cline x1='-6.17678' y1='122.517' x2='122.517' y2='-6.17679' stroke='%23ffffff' stroke-width='0.5'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-size: contain;
+  border-radius: 6px;
+  color: var(--color-project-default);
+  display: flex;
+  height: 128px;
+  justify-content: center;
+  position: relative;
+  width: 128px;
+
+  &::before,
+  &::after {
+    background-color: inherit;
+    border-radius: 6px;
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform 0.4s;
+  }
+
+  &::before {
+    filter: saturate(90%) contrast(0.9) brightness(1.4);
+    transform: translate3D(0, 0, -1em) scale(0.95);
+    z-index: -1;
+  }
+
+  &::after {
+    filter: saturate(50%) contrast(0.7) brightness(2);
+    transform: translate3D(0, 0, -2em) scale(0.9);
+    z-index: -2;
+  }
+}
+
+.project-icon:hover {
+  .project-icon__cover {
+    &::before {
+      transform: translate3D(0, 0, -0.25em) scale(1);
+    }
+  
+    &::after {
+      transform: translate3D(0, 0, -0.5em) scale(1);
+    }
+  }
+}

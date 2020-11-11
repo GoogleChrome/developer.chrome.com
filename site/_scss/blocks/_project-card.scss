@@ -1,0 +1,38 @@
+.project-card {
+  color: inherit;
+  display: block;
+  padding: 1rem 0;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s background-color;
+
+  @include media-query('lg') {
+    padding: get-size(600) get-size(300) get-size(300);
+  }
+
+  &:focus,
+  &:hover {
+    background-color: var(--color-bg-shade);
+    border-radius: 12px;
+  }
+}
+
+.project-card--sm {
+  @include media-query('lg') {
+    padding: get-size(300);
+  }
+
+  .project-icon {
+    @include media-query('lg') {
+      transform: scale(0.6875);
+    }
+  }
+  // This is a bit of a weird exception because the project-icon is a bit of a
+  // weird element :)
+  // .project-icon--sm will scale() the icon down, but it seems to leave a bit
+  // of extra whitespace between the icon and the title.
+  // This exception just accounts for that extra vertical whitespace.
+  .project-icon + .project-card__title {
+    margin-top: -0.5rem;
+  }
+}

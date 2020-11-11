@@ -1,0 +1,33 @@
+{% from 'macros/project-icon.njk' import projectIcon with context %}
+
+{% macro featuredDocs(projects) %}
+<div class="card hairline rounded-lg pad-300 md:pad-400">
+  <div class="card__title-bar display-flex align-center">
+    {% include 'icons/docs.svg' %}
+    <span class="gap-left-300 flex-1 user-select-none">
+      {{ 'i18n.nav.side_nav.docs' | i18n(locale) }}
+    </span>
+    {% include 'icons/keyboard-arrow-left.svg' %}
+    {% include 'icons/keyboard-arrow-right.svg' %}
+  </div>
+
+  <div class="display-grid grid-cols-2 grid-gap-500 gap-top-400">
+    {% for item in projects %}
+      {# Find the landing page for the project itself and grab its metadata #}
+      {% set projectUrl = helpers.join('/docs', item) %}
+      {% set project = helpers.findByUrl(collections.all, projectUrl, locale) %}
+      {# Don't render an empty link if a project is disabled via a build flag #}
+      {% if project %}
+        <a class="project-card project-card--sm" href="{{ projectUrl }}">
+          {{ projectIcon(item) }}
+          <h3 class="project-card__title type--cta">{{project.data.title}}</h1>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <a href="/docs/" class="display-inline-block gap-top-400">
+    {{ 'i18n.common.see_all_docs' | i18n(locale) }}
+  </a>
+</div>
+{% endmacro %}

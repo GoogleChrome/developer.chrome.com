@@ -2,8 +2,12 @@
 layout: 'layouts/blog-post.njk'
 title: What's new in Chrome 86
 subhead: Chrome 86 is starting to roll out to stable now.
-description: What's new in Chrome 86 for developers?
-hero: image/tcFciHGuF3MxnTr1y5ue01OGLBn2/1603154782763.png
+description: |
+  Chrome 86 is rolling out now! The file system access API is now available in
+  stable. There are new origin trials for Web HID and the Multi-Screen Window
+  placement API. There’s some new stuff in CSS, and plenty more. Let’s dive in
+  and see what’s new for developers in Chrome 86!
+hero: image/foR0vJZKULb5AGJExlazy1xYDgI2/1605051473576.jpg
 alt: 'Chrome logo'
 authors:
   - jakearchibald
