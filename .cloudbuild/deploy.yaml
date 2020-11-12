@@ -4,9 +4,6 @@ steps:
   args: ['ci']
 - name: node
   entrypoint: npm
-  args: ['run', 'postinstall']
-- name: node
-  entrypoint: npm
   args: ['run', 'production']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', '--project=chrome-apps-doc-staging-2020']
