@@ -3,7 +3,7 @@
   Renders more information about a type, including its comment plus its components: properties,
   parameters or enum.
 #}
-{% macro internalRenderTypeDetails(spec, headings) %}
+{% macro internalRenderTypeDetails(spec, namespaceName, headings) %}
 
 {% if spec.comment %}
   <p>{{ spec.comment | safe }}</p>
@@ -16,7 +16,7 @@
 
     <ul class="stack flow-space-300">
       {% for property in spec.properties %}
-        {{ internalRenderNamedType(property) }}
+        {{ internalRenderNamedType(property, namespaceName) }}
       {% endfor %}
     </ul>
   </div>
@@ -31,7 +31,7 @@
 
       <ul class="stack flow-space-300">
         {% for parameter in spec.parameters %}
-          {{ internalRenderNamedType(parameter) }}
+          {{ internalRenderNamedType(parameter, namespaceName) }}
         {% endfor %}
       </ul>
     </div>
@@ -41,7 +41,7 @@
       <h4 class="type--eyebrow">Returns</h4>
 
       <ul class="stack flow-space-300">
-        {{ internalRenderNamedType(spec.returnType) }}
+        {{ internalRenderNamedType(spec.returnType, namespaceName) }}
       </ul>
     </div>
   {% endif %}
@@ -58,14 +58,14 @@
           {% endif %}
           should be a function that looks like this:
         </p>
-        <code>{{ renderTypeSignatureParameters(spec) }} => {...}</code>
+        <code>{{ renderTypeSignatureParameters(spec, namespaceName) }} => {...}</code>
       </li>
 
       {% for parameter in spec.parameters %}
-        {{ internalRenderNamedType(parameter) }}
+        {{ internalRenderNamedType(parameter, namespaceName) }}
       {% endfor %}
       {% if spec.returnType %}
-        {{ internalRenderNamedType(spec.returnType) }} 
+        {{ internalRenderNamedType(spec.returnType, namespaceName) }}
       {% endif %}
     </ul>
   </div>
@@ -80,7 +80,7 @@
         <div>
           {% for option in spec.options %}
             {% if loop.last and not loop.first %}or{% endif %}
-            <code>{{ renderSingleType(option) | trim }}</code>{% if not loop.last %},{% endif %}
+            <code>{{ renderSingleType(option, namespaceName) | trim }}</code>{% if not loop.last %},{% endif %}
           {% endfor %}
         </div>
       </li>
@@ -94,7 +94,7 @@
 
     <ul class="stack flow-space-300">
       <li>
-        {{ renderSingleType(spec) }}
+        {{ renderSingleType(spec, namespaceName) }}
       </li>
     </ul>
   </div>
@@ -102,15 +102,15 @@
 
 {% endmacro %}
 
-{% macro internalRenderNamedType(spec) %}
+{% macro internalRenderNamedType(spec, namespaceName) %}
 <li>
   <div>
     <code>{{ spec.name }}{% if spec.optional %}?{% endif %}</code>
-    <div class="type--small">{{ renderSingleType(spec) }}</div>
+    <div class="type--small">{{ renderSingleType(spec, namespaceName) }}</div>
   </div>
   <div>
     {% if spec.type !== 'reference' %}
-      {{ internalRenderTypeDetails(spec, false) }}
+      {{ internalRenderTypeDetails(spec, namespaceName, false) }}
     {% endif %}
   </div>
 </li>
@@ -119,33 +119,50 @@
 {#
   Renders a single type as a single word. Used for signatures and type hints.
 #}
-{% macro renderSingleType(rt) %}
+{% macro renderSingleType(rt, namespaceName) %}
 
   {% if rt.type === 'primitive' %}
     {# Primitive value ("number") or literal ("abc") #}
     {{ rt.literalValue }}{{ rt.primitiveType }}
   {% elif rt.type === 'reference' %}
     {# Reference to another type #}
-    {% if rt.referenceLink %}
-      <a href="#">{{ rt.referenceType }}</a>
+
+    {% set display = rt.referenceType %}
+    {% set isLink = rt.referenceLink %}
+    {% if display.startsWith(namespaceName + '.') %}
+      {% set display = rt.referenceType.substr(namespaceName.length + 1) %}
+      {% set link = "#type-" + display %}
+    {% elif display.indexOf('.') === -1 %}
+      {# Sometimes we get the ref without "chrome.foo." #}
+      {% set link = "#type-" + display %}
+    {% else %}
+      {# Reference an adjacent type. #}
+      {% set parts = display.split('.') %}
+      {% if parts[0] === 'chrome' %}
+        {% set link = "../" + parts.slice(1, parts.length - 1).join('_') + "/#type-" + parts[parts.length - 1] %}
+      {% endif %}
+    {% endif %}
+
+    {% if rt.referenceLink and link %}
+      <a href="{{ link }}">{{ display }}</a>
     {%- else %}
-      {{ rt.referenceType }}
+      {{ display }}
     {%- endif -%}
     {%- if rt.referenceTemplates.length -%}
       &lt;
         {%- for t in rt.referenceTemplates -%}
-          {{ renderSingleType(t) | trim }}
+          {{ renderSingleType(t, namespaceName) | trim }}
         {%- endfor -%}
       &gt;
     {% endif %}
   {% elif rt.type === 'array' %}
-    array of {{ renderSingleType(rt.elementType) | trim }}
+    array of {{ renderSingleType(rt.elementType, namespaceName) | trim }}
   {% elif rt.isEnum %}
     {# Union type that is actually an enum of primitives #}
     enum
   {% elif rt.type === 'union' %}
     {% for t in rt.options %}
-      {{ renderSingleType(t) | trim }}{% if not loop.last %} | {% endif %}
+      {{ renderSingleType(t, namespaceName) | trim }}{% if not loop.last %} | {% endif %}
     {% endfor %}
   {% else %}
     {{ rt.type }}
@@ -163,7 +180,7 @@
     <div class="type--xsmall">
       <code>
         {{ namespaceName }}.{{ rt.name }}{{ renderTypeSignatureParameters(rt, namespaceName) }}
-        {%- if rt.returnType %}: {{ renderSingleType(rt.returnType) }}{% endif %}
+        {%- if rt.returnType %}: {{ renderSingleType(rt.returnType, namespaceName) }}{% endif %}
       </code>
     </div>
 
@@ -178,7 +195,7 @@
   (
     {%- for parameter in rt.parameters -%}
       {{ parameter.name }}{% if parameter.optional %}?{% endif %}:
-      {{ renderSingleType(parameter) | trim }}
+      {{ renderSingleType(parameter, namespaceName) | trim }}
       {%- if not loop.last %}, {% endif -%}
     {%- endfor -%}
   )
@@ -212,9 +229,9 @@
     <h2 class="type--h3">{{ label }}</h2>
     {% for rt in array %}
       <div>
-        <h3 class="type--h4" id="{{ category }}-{{ rt.name }}">{{ rt.name }}</h5>
+        <h3 class="type--h4" id="{{ prefix }}-{{ rt.name }}">{{ rt.name }}</h5>
         {{ renderTypeSignature(rt, namespaceName) }}
-        {{ internalRenderTypeDetails(rt, true) }}
+        {{ internalRenderTypeDetails(rt, namespaceName, true) }}
       </div>
     {% endfor %}
   {% endif %}
