@@ -17,8 +17,14 @@
 // TODO(samthor): When we build for App Engine, we don't actually want to run
 // this file. Just check for an environment variable we see only there.
 if (process.env.GOOGLE_RUNTIME) {
-  // eslint-disable-next-line no-process-exit
-  process.exit(0);
+  try {
+    require('dotenv');
+    require('typescript');
+  } catch (e) {
+    console.warn('Refusing to build types with GOOGLE_RUNTIME', e);
+    // eslint-disable-next-line no-process-exit
+    process.exit(0);
+  }
 }
 
 require('dotenv').config();
