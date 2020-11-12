@@ -1,3 +1,4 @@
+timeout: 1200s # support 20 minutes as we are timing out at default 10 minutes
 steps:
 - name: node
   entrypoint: npm
