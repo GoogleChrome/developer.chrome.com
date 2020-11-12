@@ -1,30 +1,20 @@
 {% extends "layouts/base.njk" %}
 
+{% from 'macros/cards/blog-card.njk' import blogCard with context %}
+
 {% block title_bar %}
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
 {% block content %}
-  <div class="pad-400">
-    <h2 class="type--eyebrow">{{ i18n.headings['latest-news'] }}</h2>
+  <div class="measure-1280 width-full pad-400 center-margin">
+    <div class="blog-grid">
+      {% for post in pagination.items %}
+        {{ blogCard(post) }}
+      {% endfor %}
 
-    {% for post in pagination.items %}
-      <div class="card">
-        <article class="card-base">
-          {% if loop.first and post.data.hero %}
-            {# <a href="{{ post.url }}">
-              <figure class="card-base__figure">
-                {% img post.data.hero, post.data.alt %}
-              </figure>
-            </a> #}
-          {% endif %}
-          <a href="{{ post.url }}"><h3>{{ post.data.title }}</h3></a>
-          <p>{{ post.data.snippet }}</p>
-        </article>
-      </div>
-
-    {% endfor %}
-
-    {% include 'partials/pagination.njk' %}
+      {# TODO: If there's no pagination don't include this #}
+      {% include 'partials/pagination.njk' %}
+    </div>
   </div>
 {% endblock %}

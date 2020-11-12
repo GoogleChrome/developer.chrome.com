@@ -1,5 +1,6 @@
 ---
 title: Chrome 87
+description: A short description
 layout: 'layouts/blog-post.njk'
 date: 2020-05-20
 authors:

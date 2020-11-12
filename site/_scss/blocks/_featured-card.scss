@@ -1,5 +1,5 @@
 .card {
-  max-width: var(--card-max-width, px-to-rem(464px));
+  max-width: px-to-rem(464px);
   width: 100%;
 }
 
@@ -14,7 +14,12 @@
   }
 }
 
-.card__thumbnail > img {
-  max-height: px-to-rem(200px);
-  object-fit: cover;
+.card__thumbnail {
+  border-radius: px-to-rem(3px);
+  overflow: hidden;
+
+  > img {
+    max-height: px-to-rem(200px);
+    object-fit: cover;
+  }
 }

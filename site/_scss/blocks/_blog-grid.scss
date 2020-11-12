@@ -1,0 +1,14 @@
+.blog-grid {
+  $card-size: px-to-rem(380px);
+
+  align-items: start;
+  display: grid;
+  gap: get-size(400);
+  grid-template-columns: $card-size;
+  justify-content: center;
+
+  @include media-query('md') {
+    gap: get-size(500);
+    grid-template-columns: repeat(auto-fit, $card-size);
+  }
+}

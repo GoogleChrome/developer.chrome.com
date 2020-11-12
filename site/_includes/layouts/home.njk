@@ -1,16 +1,16 @@
 {% extends "layouts/base.njk" %}
 
-{% from 'macros/cards/featured-post.njk' import featuredPost with context %}
-{% from 'macros/cards/featured-docs.njk' import featuredDocs with context %}
-{% from 'macros/cards/featured-tweet.njk' import featuredTweet with context %}
+{% from 'macros/cards/featured-post-card.njk' import featuredPostCard with context %}
+{% from 'macros/cards/featured-docs-card.njk' import featuredDocsCard with context %}
+{% from 'macros/cards/featured-tweet-card.njk' import featuredTweetCard with context %}
 
 {% block content %}
-  <div class="measure-xl width-full center-margin pad-400">
+  <div class="measure-960 width-full center-margin pad-400">
     <div class="home-grid">
       {% set blog = 'blog-' + locale %}
-      {{ featuredPost(collections[blog][0]) }}
-      {{ featuredDocs(featured_projects) }}
-      {{ featuredTweet() }}
+      {{ featuredPostCard(collections[blog][0]) }}
+      {{ featuredDocsCard(featured_projects) }}
+      {{ featuredTweetCard() }}
     </div>
   </div>
 {% endblock %}

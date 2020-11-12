@@ -1,0 +1,18 @@
+.blog-card {
+  transition: 0.2s background-color;
+
+  &:hover,
+  &:focus-within {
+    background-color: var(--color-bg-shade);
+  }
+}
+
+.blog-card__thumbnail {
+  border-radius: px-to-rem(3px);
+  overflow: hidden;
+
+  > img {
+    max-height: px-to-rem(200px);
+    object-fit: cover;
+  }
+}
