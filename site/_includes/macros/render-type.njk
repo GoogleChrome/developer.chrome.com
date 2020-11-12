@@ -229,7 +229,7 @@
     <h2 class="type--h3">{{ label }}</h2>
     {% for rt in array %}
       <div>
-        <h3 class="type--h4" id="{{ prefix }}-{{ rt.name }}">{{ rt.name }}</h5>
+        <h3 class="type--h4" id="{{ prefix }}-{{ rt.name }}">{{ rt.name }}</h3>
         {{ renderTypeSignature(rt, namespaceName) }}
         {{ internalRenderTypeDetails(rt, namespaceName, true) }}
       </div>
