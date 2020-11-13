@@ -50,23 +50,22 @@ function hashForProd(file) {
     return file;
   }
 
-  if (file in hashForProdCache) {
-    return hashForProdCache[file];
+  let hash = hashForProdCache[file];
+  if (hash === undefined) {
+    // FIXME(robdodson): This is a hard coded path to the dist directory and it
+    // depends on the location of this file. Ideally we should pass this
+    // information into this file so it can be more portable.
+    const distPath = path.join(__dirname, '..', '..', '..', 'dist', file);
+    try {
+      hash = hashForFiles(distPath);
+    } catch (err) {
+      console.error('Could not find asset at', file);
+      return file;
+    }
+
+    hashForProdCache[file] = hash;
   }
 
-  // FIXME(robdodson): This is a hard coded path to the dist directory and it
-  // depends on the location of this file. Ideally we should pass this
-  // information into this file so it can be more portable.
-  const distPath = path.join(__dirname, '..', '..', '..', 'dist', file);
-  let hash;
-  try {
-    hash = hashForFiles(distPath);
-  } catch (err) {
-    console.error('Could not find asset at', file);
-    return file;
-  }
-
-  hashForProdCache[file] = hash;
   return `${file}?v=${hash}`;
 }
 
