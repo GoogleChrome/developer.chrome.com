@@ -7,6 +7,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 
 const hashLength = 8;
+const isProduction = process.env.NODE_ENV === 'production';
 
 function generateAndValidateHash(c) {
   const hash = c.digest('hex').substr(0, hashLength);
@@ -14,18 +15,6 @@ function generateAndValidateHash(c) {
     throw new TypeError('could not hash content');
   }
   return hash;
-}
-
-/**
- * Hashes the passed content.
- *
- * @param {string} contents to hash
- * @return {string}
- */
-function hashForContent(contents) {
-  const c = crypto.createHash('sha1');
-  c.update(contents);
-  return generateAndValidateHash(c);
 }
 
 /**
@@ -47,29 +36,40 @@ function hashForFiles(file, ...rest) {
   return generateAndValidateHash(c);
 }
 
+const hashForProdCache = {};
+
 /**
- * A quick hacky attempt to take a file path (assuming in dist dir) and return
- * a hashed version of the path.
+ * Hashes the passed file from within the dist dir if in production mode,
+ * returning the file with an appended `?v=<hash>`.
+ *
  * @param {string} file
  * @return {string}
  */
-function hashAsset(file) {
+function hashForProd(file) {
+  if (!isProduction) {
+    return file;
+  }
+
+  if (file in hashForProdCache) {
+    return hashForProdCache[file];
+  }
+
+  // FIXME(robdodson): This is a hard coded path to the dist directory and it
+  // depends on the location of this file. Ideally we should pass this
+  // information into this file so it can be more portable.
+  const distPath = path.join(__dirname, '..', '..', '..', 'dist', file);
+  let hash;
   try {
-    // FIXME(robdodson): This is a hard coded path to the dist directory and it
-    // depends on the location of this file. Ideally we should pass this
-    // information into this file so it can be more portable.
-    const hash = hashForFiles(
-      path.join(__dirname, '..', '..', '..', 'dist', file)
-    );
-    return `${file}?v=${hash}`;
+    hash = hashForFiles(distPath);
   } catch (err) {
     console.error('Could not find asset at', file);
-    return `${file}`;
+    return file;
   }
+
+  hashForProdCache[file] = hash;
+  return `${file}?v=${hash}`;
 }
 
 module.exports = {
-  hashForContent,
-  hashForFiles,
-  hashAsset,
+  hashForProd,
 };

@@ -14,23 +14,14 @@
       <link rel="stylesheet" href="/css/main.css">
     {% endif %}
 
-    {% if process.env.NODE_ENV === 'production' %}
-      <script type="module" src="{{ helpers.hashAsset('/js/main.js') }}"></script>
-    {% else %}
-      <script type="module" src="/js/main.js"></script>
-    {% endif %}
+    <script type="module" src="{{ helpers.hashForProd('/js/main.js') }}"></script>
 
     {# Add a facility for pages to declare an array of script paths. #}
     {# Note: We could also use this approach to load module/nomodule scripts #}
     {# https://philipwalton.com/articles/deploying-es2015-code-in-production-today/ #}
     {% if pageScripts %}
       {% for item in pageScripts %}
-        {# If this is a production build, hash the assets to invalidate caches. #}
-        {% if process.env.NODE_ENV === 'production' %}
-          <script type="module" src="{{ helpers.hashAsset(item) }}"></script>
-        {% else %}
-          <script type="module" src="{{ item }}"></script>
-        {% endif %}
+        <script type="module" src="{{ helpers.hashForProd(item) }}"></script>
       {% endfor %}
     {% endif %}
 
