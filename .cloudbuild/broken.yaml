@@ -1,0 +1,5 @@
+# This is an explicitly broken (i.e., fails) Cloud Build task for testing.
+steps:
+- name: node
+  entrypoint: 'bash'
+  args: ['-c', 'exit 1']
