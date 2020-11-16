@@ -20,7 +20,7 @@ A button with a hashed image or video url will appear. It should look something
 like this:
 
 ```md
-{% raw %}{% img 'image/foR0vJZKULb5AGJExlazy1xYDgI2/1603484068246.jpg' , 'ALT TEXT HERE' %}{% endraw %}
+{% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/1603484068246.jpg", alt="ALT TEXT HERE" %}{% endraw %}
 ```
 
 - Click the button to copy the snippet to your clipboard 📋
@@ -47,5 +47,5 @@ The `{% raw %}`{% img %}`{% endraw%}` shortcode accepts additional arguments for
 a height of 200, do the following:
 
 ```
-{% raw %}{% img 'image/foR0vJZKULb5AGJExlazy1xYDgI2/1603484068246.jpg' , 'ALT TEXT HERE', 400, 200 %}{% endraw %}
+{% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/1603484068246.jpg", alt="ALT TEXT HERE", width="400", height="200" %}{% endraw %}
 ```

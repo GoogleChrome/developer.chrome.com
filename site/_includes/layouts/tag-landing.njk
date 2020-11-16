@@ -7,7 +7,7 @@
 
 {% for post in paginationObject.items %}
   {% if loop.first and post.data.hero %}
-    {% img post.data.hero, post.data.alt %}
+    {% img src=post.data.hero, alt=post.data.alt %}
   {% endif %}
   <a href="{{ post.url }}"><h3>{{ post.data.title }}</h3></a>
   <p>{{ post.data.snippet }}</p>

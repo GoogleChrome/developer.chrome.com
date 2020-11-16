@@ -15,7 +15,19 @@
  */
 
 declare global {
-  export interface ImgOptions {
+  export interface ImgArgs {
+    src?: string;
+    alt?: string;
+    width?: string;
+    height?: string;
+    sizes?: string;
+    lazy?: boolean;
+    className?: string;
+    params?: object;
+    options?: ImgixOptions;
+  }
+
+  export interface ImgixOptions {
     widths?: number[];
     widthTolerance?: number;
     minWidth?: number;

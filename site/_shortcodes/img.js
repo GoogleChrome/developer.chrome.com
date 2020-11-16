@@ -7,45 +7,47 @@ const client = new ImgixClient({domain, includeLibraryParam: false});
 /**
  * Generates src URL of image from imgix path or URL.
  *
- * @param {string} path Path (or URL) for image.
+ * @param {string} src Path (or URL) for image.
  * @param {Object} params Imgix API params.
  * @return {string}
  */
-const generateSrc = (path, params) => client.buildURL(path, params);
+const generateSrc = (src, params) => client.buildURL(src, params);
 
 /**
  * Takes an imgix url or path and generates an `<img>` element with `srcset`.
  *
- * @param {string} path Path for image.
- * @param {string} [alt] Alt text or options for image.
- * @param {number|string} [width] Width, in pixels, of image.
- * @param {number|string} [height] Height, in pixels, of image.
- * @param {Object} [params] Imgix API params.
- * @param {ImgOptions} [options] Image options.
+ * @param {ImgArgs} args Named arguments
  * @return {string}
  */
-const img = (path, alt, width, height, params = {}, options = {}) => {
-  if (!path) {
-    throw new Error('must provide a path to an image');
+const img = args => {
+  // eslint-disable-next-line prefer-const
+  let {src, alt, width, height, sizes, lazy, className, params, options} = args;
+
+  if (!src) {
+    throw new Error('src is a required argument');
   }
 
-  if (alt !== undefined && typeof alt !== 'string') {
+  if (alt === undefined || typeof alt !== 'string') {
     throw new Error(`alt text must be a string, received a ${typeof alt}`);
   }
 
+  if (lazy === undefined) {
+    lazy = true;
+  }
+
   params = {auto: 'format', ...params};
-  options = {maxWidth: 1600, ...options};
-  const src = generateSrc(path, params);
-  const srcset = client.buildSrcSet(path, params, options);
+  options = {minWidth: 200, maxWidth: 1600, ...options};
 
   return html`
     <img
-      src="${src}"
-      srcset="${srcset}"
+      src="${generateSrc(src, params)}"
+      srcset="${client.buildSrcSet(src, params, options)}"
+      ${sizes ? `sizes="${sizes}"` : ''}
       ${height ? `height="${height}"` : ''}
       ${width ? `width="${width}"` : ''}
       ${alt ? `alt="${safeHtml`${alt}`}"` : ''}
-      loading="lazy"
+      ${className ? `class="${className}"` : ''}
+      ${lazy ? 'loading="lazy"' : ''}
     />
   `.replace(/\n/g, '');
 };

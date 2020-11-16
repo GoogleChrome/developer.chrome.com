@@ -24,7 +24,7 @@
         using object-fit on the image and LHCI will grump if object-fit uses an
         image that's too large.
       #}
-      {% img pd.hero, pd.alt, 414, 200, {}, {minWidth: 278, maxWidth: 414} %}
+      {% img src=pd.hero, alt=pd.alt, width="414", height="200", sizes="(min-width: 36em) 414px, calc(100vw - 80px)", lazy=false %}
     </div>
   {% endif %}
 

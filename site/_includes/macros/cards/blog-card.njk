@@ -9,7 +9,7 @@
       between the title and the top of the card.
     #}
     <div class="blog-card__thumbnail gap-bottom-300">
-      {% img pd.hero, pd.alt, 330, 184, {}, {minWidth: 280, maxWidth: 330} %}
+      {% img src=pd.hero, alt=pd.alt, width="330", height="184", sizes="(min-width: 36em) 330px, calc(100vw - 80px)" %}
     </div>
   {% endif %}
         
