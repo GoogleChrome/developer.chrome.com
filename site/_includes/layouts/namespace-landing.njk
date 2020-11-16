@@ -15,7 +15,39 @@
 
     <article class="stack measure-long center-margin pad-400">
       <h1 class="type--h2">{{ title }}</h1>
-      <p>{{ namespace.comment | safe }}</p>
+
+      <div class="code-sections code-sections--summary">
+        <ul class="stack flow-space-300">
+          <li>
+            <div>Description</div>
+            <div>
+              <p>{{ namespace.comment | safe }}</p>
+            </div>
+          </li>
+          {% if namespace.permissions.length %}
+            <li>
+              <div>Permissions</div>
+              <div>
+                {% for permission in namespace.permissions %}
+                  <code>{{ permission }}</code>
+                {% endfor %}
+              </div>
+            </li>
+          {% endif %}
+          {% if namespace.channel !== 'stable' %}
+            <li>
+              <div>Availability</div>
+              <div>
+                {% if namespace.channel === 'dev' %}
+                  Dev channel only.
+                {% else %}
+                  Beta and Dev channels only.
+                {% endif %}
+              </div>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
 
       <h2 class="type--h3">Summary</h2>
       <div class="code-sections code-sections--summary">

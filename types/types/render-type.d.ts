@@ -61,6 +61,10 @@ declare global {
     name: string;
     shortName: string;  // name without "chrome." prefix
     comment?: string;
+    channel: "stable" | "beta" | "dev";
+    permissions?: string[];
+    isApp: boolean;
+    isExtension: boolean;
 
     updated?: string;
     release?: number;

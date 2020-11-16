@@ -120,6 +120,35 @@ function parseChromeTypesFile(typesPath) {
     const [, ...rest] = name.split('.');
     const shortName = rest.join('.');
 
+    const permissions = [];
+    let isApp = false;
+    let isExtension = true;
+
+    /** @type {RenderNamespace["channel"]} */
+    let channel = 'stable';
+
+    const tags = reflection?.comment?.tags ?? [];
+    tags.forEach(({tagName, text}) => {
+      switch (tagName) {
+        case 'beta':
+          channel = 'beta';
+          break;
+        case 'alpha':
+          channel = 'dev';
+          break;
+        case 'chrome-app':
+          isApp = true;
+          break;
+        case 'chrome-app-only':
+          isApp = true;
+          isExtension = false;
+          break;
+        case 'chrome-permission':
+          permissions.push(text);
+          break;
+      }
+    });
+
     /** @type {RenderNamespace} */
     const renderNamespace = {
       name,
@@ -128,8 +157,15 @@ function parseChromeTypesFile(typesPath) {
       types: [],
       properties: [],
       methods: [],
+      isApp,
+      isExtension,
+      channel,
     };
     flat.push(renderNamespace);
+
+    if (permissions.length) {
+      renderNamespace.permissions = permissions;
+    }
 
     // Extract types/properties/methods by finding different kinds of children from the namespace's
     // DeclarationReflection.

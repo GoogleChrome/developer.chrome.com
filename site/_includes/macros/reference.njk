@@ -1,0 +1,28 @@
+
+{#
+  Renders a table of types based on a given channel filter.
+#}
+{% macro renderReferenceTable(all, channel) %}
+
+<table class="reference">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th class="reference-collapse">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for namespace in all %}
+    {% if namespace.channel === channel %}
+      <tr>
+        <td><a href="{{ namespace.name | namespaceToPath }}">{{ namespace.shortName }}</a></td>
+        <td class="reference-collapse">{{ namespace.comment | safe }}</td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+
+  </tbody>
+</table>
+
+{% endmacro %}

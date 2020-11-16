@@ -11,28 +11,16 @@
       <h1>{{ title }}</h1>
       <p>Chrome provides extensions with many special-purpose APIs like <code>chrome.runtime</code> and <code>chrome.alarms</code>.
 
-<table class="reference">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th class="reference-collapse">Description</th>
-      <th>Since</th>
-    </tr>
-  </thead>
-  <tbody>
+{% import 'macros/reference.njk' as macros with context %}
 
-{% for namespace in collections.types %}
+<h2>Stable APIs</h2>
+{{ macros.renderReferenceTable(collections.types, 'stable') }}
 
-    <tr>
-      <td><a href="{{ namespace.name | namespaceToPath }}">{{ namespace.shortName }}</a></td>
-      <td class="reference-collapse">{{ namespace.comment | safe }}</td>
-      <td>{{ namespace.release }} </td>
-    </tr>
+<h2>Beta APIs</h2>
+{{ macros.renderReferenceTable(collections.types, 'beta') }}
 
-{% endfor %}
-
-  </tbody>
-</table>
+<h2>Dev APIs</h2>
+{{ macros.renderReferenceTable(collections.types, 'dev') }}
 
     </article>
   </div>
