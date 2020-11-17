@@ -9,7 +9,7 @@
   "scripts": {
     "algolia": "node ./algolia.js",
     "clean": "rimraf dist",
-    "dev": "npm-run-all clean ignore gulp rollup --parallel --race gulp:watch rollup:watch eleventy:watch start",
+    "dev": "npm-run-all version-check clean ignore gulp rollup --parallel --race gulp:watch rollup:watch eleventy:watch start",
     "eleventy:debug": "node --inspect ./node_modules/.bin/eleventy",
     "eleventy:watch": "npx eleventy --quiet --watch",
     "eleventy": "npx eleventy",
@@ -33,7 +33,8 @@
     "start": "node ./server",
     "test:watch": "ava --watch",
     "test": "nyc ava",
-    "types": "node ./tools/types"
+    "types": "node ./tools/types",
+    "version-check": "node ./tools/version-check"
   },
   "license": "Apache 2.0",
   "dependencies": {

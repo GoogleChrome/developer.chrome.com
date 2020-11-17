@@ -19,8 +19,10 @@ familiarize yourself with the process.
 
 ## Building the site 🏗
 
-You'll need a recent version of [Node](https://nodejs.org/): v14 or higher.
+You'll need a recent version of [Node](https://nodejs.org/): v14 (LTS) or higher.
 To check your node version run `node -v` in your terminal.
+
+⚠️ App Engine only currently supports v12, so the `engines.node` property inside "package.json" is lower.
 
 If you don't have node, or if you need to upgrade, we recommend using the [Node
 Version Manager (nvm)](https://github.com/nvm-sh/nvm).
