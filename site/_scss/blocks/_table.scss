@@ -1,9 +1,11 @@
-// The .responsive-table class will be added by an eleventy transform.
+// The .responsive-table class is added by an eleventy transform.
 // Authors should not need to manually add it themselves.
-// TODO(robdodson): This doesn't happen right now.
 .responsive-table {
-  min-width: px-to-rem(512px);
-  overflow: auto;
+  overflow-x: auto;
+
+  > table {
+    min-width: px-to-rem(512px);
+  }
 
   &::-webkit-scrollbar {
     height: px-to-rem(6px);
@@ -11,7 +13,6 @@
 
   &::-webkit-scrollbar-thumb {
     background-color: var(--color-hairline);
-    border-radius: 8px;
   }
 }
 

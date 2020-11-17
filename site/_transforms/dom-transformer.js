@@ -2,6 +2,7 @@ const cheerio = require('cheerio');
 const ISO6391 = require('iso-639-1');
 const {asides} = require('./asides');
 const {prettyUrls} = require('./pretty-urls');
+const {tables} = require('./tables');
 
 const domTransformer = (content, outputPath) => {
   // Make sure we're not interacting with something weird that has
@@ -27,6 +28,7 @@ const domTransformer = (content, outputPath) => {
   // These transforms mutate the cheerio object.
   asides($, locale);
   prettyUrls($, outputPath, locale);
+  tables($);
 
   // Return the final html.
   return $.html();

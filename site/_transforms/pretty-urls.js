@@ -6,6 +6,8 @@ const path = require('path');
  * Which url style to use is inferred from the outputPath's locale.
  * @param {cheerio.Selector} $ A cheerio representation of the page. This object will be
  * modified in place.
+ * @param {string} outputPath The destination for the file.
+ * @param {string} locale The locale for the file.
  */
 const prettyUrls = ($, outputPath, locale) => {
   const $links = $('a');
