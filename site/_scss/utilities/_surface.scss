@@ -1,0 +1,35 @@
+// An overlay that takes on the color of the content (either the primary icon,
+// or text if there is no icon) at varying opacities depending on the level of
+// interaction. The surface overlay is placed *between* the content and the
+// container.
+
+.surface {
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    background-color: var(--surface-background-color, currentColor);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.2s opacity;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    opacity: 0.04;
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+  
+  &:focus-within::before {
+    opacity: 0.12;
+  }
+}

@@ -1,11 +1,14 @@
-.blog-card {
-  transition: 0.2s background-color;
+// TODO (robdodson): This is the old blog card hover style. It's commented out
+// for now while we work with Jiwoong on newer styles.
 
-  &:hover,
-  &:focus-within {
-    background-color: var(--color-bg-shade);
-  }
-}
+// .blog-card {
+//   transition: 0.2s background-color;
+
+//   &:hover,
+//   &:focus-within {
+//     background-color: var(--color-bg-shade);
+//   }
+// }
 
 .blog-card__thumbnail {
   border-radius: px-to-rem(3px);

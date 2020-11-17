@@ -28,7 +28,7 @@ have been defined in the _data/docs/*.yml file for this project.
           {% if type === 'column' %}
             {% include 'icons/document.svg' %}
           {% endif %}
-          <a class="project-sections__link" href="{{ post.url }}">{{ post.data.title }}</a>
+          <a class="project-sections__link color-primary-shade decoration-none surface" href="{{ post.url }}">{{ post.data.title }}</a>
         </div>
         {% if type !== 'nested-column' %}
           <div class="project-sections__description measure-long">{{ post.data.description }}</div>

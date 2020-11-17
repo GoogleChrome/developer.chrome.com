@@ -29,13 +29,13 @@
   {% endif %}
 
   <h2 class="type--h3-card">
-    <a href="{{ post.url }}">
+    <a class="color-text surface decoration-none" href="{{ post.url }}">
       {{ pd.title }}
     </a>
   </h2>
 
   <p class="type--caption gap-top-200">
-    <a href="{{ post.url }}">
+    <a class="display-inline-flex color-text surface decoration-none" href="{{ post.url }}">
       {{ pd.description }}
     </a>
   </p>
@@ -46,7 +46,7 @@
     {{ author('jakearchibald', locale) }}
   </div>
 
-  <a href="/blog" class="display-inline-block gap-top-400">
+  <a href="/blog" class="display-inline-flex color-primary surface decoration-none gap-top-400">
     {{ 'i18n.common.see_all_articles' | i18n(locale) }}
   </a>
 </div>

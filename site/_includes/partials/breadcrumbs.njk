@@ -11,9 +11,9 @@
         {%- endif %}
 
         {% if part.url %}
-          <a href="{{ part.url }}">{{ part.title }}</a>
+          <a class="type--h5 color-primary surface decoration-none" href="{{ part.url }}">{{ part.title }}</a>
         {% else %}
-          <span>{{ part.title }}</span>
+          <span class="type--h5">{{ part.title }}</span>
         {% endif %}
 
       {%- endfor %}

@@ -6,6 +6,7 @@
   --color-text: #{get-color('grey-800')};
   --color-secondary-text: #{get-color('grey-700')};
   --color-primary: #{get-color('blue-600')};
+  --color-primary-shade: #{get-color('blue-700')};
   --color-secondary: #{get-color('blue-50')};
   --color-tertiary: #{get-color('green-600')};
   --color-quaternary: #{get-color('green-600')};
@@ -16,6 +17,9 @@
   --color-error-text: #{get-color('white')};
   --color-side-nav-hover: #{get-color('grey-100')};
   --color-side-nav-active: #{get-color('blue-700')};
+
+  --color-link-primary-active: #{get-color('blue-900')};
+  --color-link-primary-visited: #{get-color('purple-900')};
 
   --color-code-bg: #{get-color('grey-50')};
   --color-code-comment: #{get-color('grey-500')};
@@ -76,14 +80,4 @@
 
 [data-user-color-scheme='dark'] {
   @include dark-mode();
-}
-
-body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  transition: background 500ms ease-in-out, color 200ms ease;
-}
-
-a:not([class]) {
-  color: var(--color-primary);
 }
