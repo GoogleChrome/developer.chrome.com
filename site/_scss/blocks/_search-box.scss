@@ -1,26 +1,60 @@
-search-box > * {
+/* purgecss start ignore */
+search-box {
+  min-height: px-to-rem(44px);
+}
+
+search-box[active] {
+  @include apply-utility('stack', '700');
+  background-color: var(--color-bg);
+  display: block;
+  height: 100vh;
+  left: 0;
+  padding: px-to-rem(16px);
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+search-box[active] > .search-box__inner > svg {
+  display: block;
+  margin-left: px-to-rem(16px);
+  pointer-events: none;
+}
+
+search-box svg {
+  height: px-to-rem(24px);
+  width: px-to-rem(24px);
+}
+
+.search-box__inner > * {
   grid-area: 1 / 1 / 2 / 2;
 }
 
-search-box > svg {
+.search-box__inner > svg {
   display: none;
 
   @include media-query('lg') {
     display: block;
-    margin-left: 16px;
+    margin-left: px-to-rem(16px);
     pointer-events: none;
   }
 }
 
 .search-box__input {
-  @include media-query('lg') {
-    background: var(--color-bg-shade);
-    border: 0;
-    border-radius: 100px;
-    padding: get-size(200) get-size(300) get-size(200) get-size(700);
-  }
+  background: var(--color-bg-shade);
+  border: 0;
+  border-radius: px-to-rem(100px);
+  padding: get-size(200) get-size(300) get-size(200) get-size(700);
 
   &::placeholder {
     color: var(--color-secondary-text);
   }
 }
+
+.search-result__content {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* purgecss end ignore */

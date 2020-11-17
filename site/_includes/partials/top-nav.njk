@@ -12,13 +12,6 @@
     </a>
 
     {# Search #}
-    <search-box class="display-grid align-center">
-      <button class="search-box__btn button display-flex lg:display-none align-center justify-content-center width-700 height-700" aria-label="{{ 'i18n.common.open_search' | i18n(locale) }}">
-        {% include 'icons/search.svg' %}
-      </button>
-
-      <input type="search" class="search-box__input display-none lg:display-block lg:width-full" aria-label="search" placeholder="{{ 'i18n.common.search_placeholder' | i18n(locale) }}">
-      {% include 'icons/search.svg' %}
-    </search-box>
+    <search-box class="display-grid align-center" locale="{{locale}}" buttonLabel="{{ 'i18n.common.open_search' | i18n(locale) }}" placeholder="{{'i18n.common.search_placeholder' | i18n(locale)}}"></search-box>
   </nav>
 </top-nav>

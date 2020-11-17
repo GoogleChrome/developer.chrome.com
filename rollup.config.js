@@ -5,6 +5,8 @@ import {nodeResolve} from '@rollup/plugin-node-resolve';
 // A Rollup plugin to convert CommonJS modules to ES6, so they can be included
 // in a Rollup bundle
 import commonjs from '@rollup/plugin-commonjs';
+import svg from 'rollup-plugin-inline-svg';
+import rollupjson from '@rollup/plugin-json';
 
 // A Rollup plugin to minify generated ES bundles. Uses terser under the hood.
 import {terser} from 'rollup-plugin-terser';
@@ -25,6 +27,8 @@ const devConfig = {
   plugins: [
     nodeResolve(),
     commonjs(),
+    rollupjson(),
+    svg(),
     copy({
       // Legacy docs, like those at /docs/native-client/, rely on the old
       // prettify.js code for syntax highlighting.
@@ -42,6 +46,8 @@ const productionConfig = {
   plugins: [
     nodeResolve(),
     commonjs(),
+    rollupjson(),
+    svg(),
     terser(),
     copy({
       targets: [{src: 'site/_js/prettify.js', dest: 'dist/js'}],

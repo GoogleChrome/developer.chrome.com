@@ -3,6 +3,11 @@
   "description": "Build the next generation of web experiences.",
   "url": "https://developers.chrome.com",
   "imgix": "wd.imgix.net",
+  "algolia": {
+    "applicationID": "0PPZV3EY55",
+    "apiKey": "f08cd9d7ead266781a7c2455b5f4a7b2",
+    "indexName": "prod_developer_chrome"
+  },
   "locales": [
     "en",
     "es"

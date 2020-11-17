@@ -15,6 +15,9 @@
  */
 
 declare global {
+  export interface WKeyboardEvent<T extends HTMLElement> extends KeyboardEvent {
+    target: T;
+  }
   export interface WMouseEvent<T extends HTMLElement> extends MouseEvent {
     target: T;
   }

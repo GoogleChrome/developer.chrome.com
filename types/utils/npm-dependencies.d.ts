@@ -14,11 +14,9 @@
  * limitations under the License.
  */
 
-// Utilities
-import './store.js';
+declare global {
+  export {TemplateResult, PropertyValues} from 'lit-element';
+}
 
-// Web Components
-// These are components that appear on _every_ page.
-import './web-components/search-box';
-import './web-components/side-nav';
-import './web-components/top-nav';
+// empty export to keep file a module
+export {};
