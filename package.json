@@ -92,7 +92,6 @@
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-container": "^3.0.0",
     "markdown-it-deflist": "^2.1.0",
-    "npm": "^6.14.8",
     "nyc": "^15.1.0",
     "percy": "^0.28.2",
     "purgecss": "^2.3.0",
