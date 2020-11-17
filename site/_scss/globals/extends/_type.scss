@@ -6,8 +6,10 @@
   $list-margin: px-to-rem($margin);
   list-style: none;
   margin-left: $list-margin;
-  max-width: calc(100% - #{$list-margin * 2});
   padding: 0;
+  @include media-query('lg') {
+    max-width: calc(100% - #{$list-margin * 2});
+  }
 }
 
 %type {
@@ -191,10 +193,12 @@
       background: get-color('grey-700');
       border-radius: 50%;
       content: '';
-      display: inline-block;
+      display: inline-flex;
       height: $bullet-size;
       margin-left: -#{$bullet-size * 3};
       margin-right: $bullet-size * 2;
+      position: absolute;
+      transform: translateY(px-to-rem(10px));
       width: $bullet-size;
     }
   }
@@ -224,6 +228,8 @@
       justify-content: center;
       margin-left: -#{$bullet-size * 5/3};
       margin-right: $bullet-size * 2/3;
+      position: absolute;
+      transform: translateY(px-to-rem(3px));
       width: $bullet-size;
     }
   }
