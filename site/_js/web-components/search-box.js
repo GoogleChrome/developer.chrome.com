@@ -22,10 +22,9 @@ import closeIcon from '../../_includes/icons/close.svg';
 import searchIcon from '../../_includes/icons/search.svg';
 
 import {BaseElement} from './base-element';
-import {algolia} from '../../_data/site.json';
 
-const client = algoliasearch(algolia.applicationID, algolia.apiKey);
-const index = client.initIndex(algolia.indexName);
+const client = algoliasearch('0PPZV3EY55', 'f08cd9d7ead266781a7c2455b5f4a7b2');
+const index = client.initIndex('prod_developer_chrome');
 
 export class SearchBox extends BaseElement {
   static get properties() {
