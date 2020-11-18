@@ -45,7 +45,13 @@ const productionConfig = {
     nodeResolve(),
     commonjs(),
     svg(),
-    terser(),
+    terser({
+      format: {
+        // Remove all comments, including @license comments,
+        // otherwise LHCI complains at us.
+        comments: false,
+      },
+    }),
     copy({
       targets: [{src: 'site/_js/prettify.js', dest: 'dist/js'}],
     }),

@@ -9,6 +9,7 @@ Thumbs.db
 .env
 .cache
 .vscode
+.lighthouseci
 
 # Code coverage generated files
 .nyc_output

@@ -19,7 +19,6 @@ module.exports = {
         // Canonical url will not match the domain while on localhost.
         canonical: 'off',
         'uses-responsive-images': 'off', // Disable until #265 is fixed.
-        'unminified-javascript': 'off', // Disable until #285 is fixed.
         'tap-targets': 'off', // Disable temporarily until base css is in place.
       },
     },
