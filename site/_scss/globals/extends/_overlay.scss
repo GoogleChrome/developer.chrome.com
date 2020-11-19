@@ -1,0 +1,29 @@
+%overlay {
+  overflow: hidden;
+  position: relative;
+  
+  &::before {
+    background-color: var(--overlay-background-color, currentColor);
+    border-radius: 2px;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.2s opacity;
+    width: 100%;
+  }
+
+  &:hover::before {
+    opacity: 0.04;
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+  
+  &:focus-within::before {
+    opacity: 0.12;
+  }
+}

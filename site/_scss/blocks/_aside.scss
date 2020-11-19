@@ -1,7 +1,7 @@
 .aside {
-  background-color: var(--color-aside-note-bg);
+  background-color: var(--color-blue-lightest);
   border-radius: 6px;
-  color: var(--color-aside-note-text);
+  color: var(--color-blue-dark);
   padding: get-size(400);
 
   > * + * {
@@ -13,33 +13,33 @@
   }
 
   &--caution {
-    background-color: var(--color-aside-caution-bg);
-    color: var(--color-aside-caution-text);
+    background-color: var(--color-yellow-lightest);
+    color: var(--color-yellow-dark);
   }
   
   &--warning {
-    background-color: var(--color-aside-warning-bg);
-    color: var(--color-aside-warning-text);
+    background-color: var(--color-red-lightest);
+    color: var(--color-red-dark);
   }
   
   &--success {
-    background-color: var(--color-aside-success-bg);
-    color: var(--color-aside-success-text);
+    background-color: var(--color-green-lightest);
+    color: var(--color-green-dark);
   }
   
   &--gotchas {
-    background-color: var(--color-aside-gotchas-bg);
-    color: var(--color-aside-gotchas-text);
+    background-color: var(--color-purple-lightest);
+    color: var(--color-purple-dark);
   }
   
   &--key {
-    background-color: var(--color-aside-key-bg);
-    color: var(--color-aside-key-text);
+    background-color: var(--color-pink-lightest);
+    color: var(--color-pink-dark);
   }
   
   &--codelab {
-    background-color: var(--color-aside-codelab-bg);
-    color: var(--color-aside-codelab-text);
+    background-color: var(--color-cyan-lightest);
+    color: var(--color-cyan-dark);
   }
 }
 

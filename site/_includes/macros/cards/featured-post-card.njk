@@ -1,7 +1,7 @@
 {% macro featuredPostCard(post) %}
 {% set pd = post.data %}
-<div class="card hairline rounded-lg pad-300 md:pad-400">
-  <div class="card__title-bar display-flex align-center">
+<div class="featured-card hairline rounded-lg pad-300 md:pad-400">
+  <div class="featured-card__title-bar color-blue-medium display-flex align-center">
     {% include 'icons/blog.svg' %}
     <span class="gap-left-300 flex-1 user-select-none">
       {{ 'i18n.nav.side_nav.blog' | i18n(locale) }}
@@ -17,7 +17,7 @@
     between the title and the title-bar.
   #}
   {% if pd.hero %}
-    <div class="card__thumbnail gap-top-400 gap-bottom-300">
+    <div class="featured-card__thumbnail gap-top-400 gap-bottom-300">
       {#
         Pass an explicit min and max width to the shortcode so it doesn't
         generate excessively large srcset options. We do this because we're

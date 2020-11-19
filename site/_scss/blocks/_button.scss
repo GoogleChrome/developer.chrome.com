@@ -2,4 +2,32 @@
   background: transparent;
   border: 0;
   cursor: pointer;
+  text-decoration: none;
+}
+
+$button-padding: get-size(200) get-size(400);
+$button-radius: 24px;
+
+.button-round {
+  @extend %overlay;
+  @include apply-utility('font', 'google-sans');
+  border-radius: px-to-rem($button-radius);
+  padding: $button-padding;
+}
+
+// This modifier would be nicer with a max-width media query that disables
+// the padding/border-radius on smaller screens.
+// Ideally we could do calc(62em - 1px) to define that media query but Chrome
+// has a bug which breaks calc() in media queries.
+// https://bugs.chromium.org/p/chromium/issues/detail?id=843584&q=calc%20in%20media%20query&can=2
+// As a workaround we just reapply .button-round's padding and border-radius
+// on larger screen sizes.
+.button-round--collapsible {
+  border-radius: 0;
+  padding: 0;
+
+  @include media-query('md') {
+    border-radius: px-to-rem($button-radius);
+    padding: $button-padding;
+  }
 }

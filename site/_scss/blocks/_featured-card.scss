@@ -1,12 +1,11 @@
-.card {
+.featured-card {
   max-width: px-to-rem(464px);
   width: 100%;
 }
 
-.card__title-bar {
+.featured-card__title-bar {
   @include font-setup(13px, 24px);
   @include apply-utility('font', 'google-sans');
-  color: var(--color-project-default);
 
   > svg {
     height: px-to-rem(24px);
@@ -14,7 +13,7 @@
   }
 }
 
-.card__thumbnail {
+.featured-card__thumbnail {
   border-radius: px-to-rem(3px);
   overflow: hidden;
 

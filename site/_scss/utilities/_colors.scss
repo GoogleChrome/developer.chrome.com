@@ -1,0 +1,66 @@
+$breakpoints: map-get($gorko-config, 'breakpoints');
+
+// Generates classes for color and background-color properties
+// in the format .color-$color-$step
+// e.g. .color-blue-dark
+// 
+// These classes have breakpoint prefixes
+// e.g. .lg:color-blue-dark
+$colors: 'blue', 'yellow', 'red', 'green', 'purple', 'pink', 'cyan';
+$steps: 'lightest', 'lighter', 'medium', 'darkest';
+@each $color in $colors {
+  @each $step in $steps {
+    .color-#{$color}-#{$step} {
+      color: var(--color-#{$color}-#{$step});
+    }
+
+    .bg-#{$color}-#{$step} {
+      background-color: var(--color-#{$color}-#{$step});
+    }
+
+    @each $key, $value in $breakpoints {
+      $prefix: #{$key + '\\:'};
+
+      @media screen and #{$value} {
+        .#{$prefix}color-#{$color}-#{$step} {
+          color: var(--color-#{$color}-#{$step});
+        }
+
+        .#{$prefix}bg-#{$color}-#{$step} {
+          background-color: var(--color-#{$color}-#{$step});
+        }
+      }
+    }
+  }
+}
+
+// Generates classes for color and background-color properties
+// in the format .color-$type
+// e.g. .color-text
+// 
+// These classes have breakpoint prefixes
+// e.g. .lg:color-text
+$types: 'bg', 'text', 'secondary-text', 'primary', 'primary-shade';
+@each $type in $types {
+  .color-#{$type} {
+    color: var(--color-#{$type});
+  }
+
+  .bg-#{$type} {
+    background-color: var(--color-#{$type});
+  }
+
+  @each $key, $value in $breakpoints {
+    $prefix: #{$key + '\\:'};
+
+    @media screen and #{$value} {
+      .#{$prefix}color-#{$type} {
+        color: var(--color-#{$type});
+      }
+
+      .#{$prefix}bg-#{$type} {
+        background-color: var(--color-#{$type});
+      }
+    }
+  }
+}

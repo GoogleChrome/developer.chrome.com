@@ -64,16 +64,6 @@ $gorko-config: (
     'output': 'standard',
     'property': 'text-transform',
   ),
-  'color': (
-    'items': (
-      'text': 'var(--color-text)',
-      'secondary-text': 'var(--color-secondary-text)',
-      'primary': 'var(--color-primary)',
-      'primary-shade': 'var(--color-primary-shade)',
-    ),
-    'output': 'standard',
-    'property': 'color',
-  ),
   'decoration': (
     'items': (
       'none': 'none',

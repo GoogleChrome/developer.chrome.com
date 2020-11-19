@@ -1,8 +1,8 @@
 {% from 'macros/project-icon.njk' import projectIcon with context %}
 
 {% macro featuredDocsCard(projects) %}
-<div class="card hairline rounded-lg pad-300 md:pad-400">
-  <div class="card__title-bar display-flex align-center">
+<div class="featured-card hairline rounded-lg pad-300 md:pad-400">
+  <div class="featured-card__title-bar color-blue-medium display-flex align-center">
     {% include 'icons/docs.svg' %}
     <span class="gap-left-300 flex-1 user-select-none">
       {{ 'i18n.nav.side_nav.docs' | i18n(locale) }}
