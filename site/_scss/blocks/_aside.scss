@@ -1,7 +1,7 @@
 .aside {
   background-color: var(--color-blue-lightest);
   border-radius: 6px;
-  color: var(--color-blue-dark);
+  color: var(--color-blue-darkest);
   padding: get-size(400);
 
   > * + * {
@@ -14,32 +14,32 @@
 
   &--caution {
     background-color: var(--color-yellow-lightest);
-    color: var(--color-yellow-dark);
+    color: var(--color-yellow-darkest);
   }
   
   &--warning {
     background-color: var(--color-red-lightest);
-    color: var(--color-red-dark);
+    color: var(--color-red-darkest);
   }
   
   &--success {
     background-color: var(--color-green-lightest);
-    color: var(--color-green-dark);
+    color: var(--color-green-darkest);
   }
   
   &--gotchas {
     background-color: var(--color-purple-lightest);
-    color: var(--color-purple-dark);
+    color: var(--color-purple-darkest);
   }
   
   &--key {
     background-color: var(--color-pink-lightest);
-    color: var(--color-pink-dark);
+    color: var(--color-pink-darkest);
   }
   
   &--codelab {
     background-color: var(--color-cyan-lightest);
-    color: var(--color-cyan-dark);
+    color: var(--color-cyan-darkest);
   }
 }
 
