@@ -220,6 +220,20 @@ $gorko-config: (
     'output': 'responsive',
     'property': 'max-width',
   ),
+  'object-fit': (
+    'items': (
+      'cover': 'cover',
+    ),
+    'output': 'responsive',
+    'property': 'object-fit',
+  ),
+  'overflow': (
+    'items': (
+      'hidden': 'hidden',
+    ),
+    'output': 'responsive',
+    'property': 'overflow',
+  ),
   'pad': (
     'items': $gorko-size-scale,
     'output': 'responsive',
@@ -266,10 +280,10 @@ $gorko-config: (
     'property': 'text-align',
   ),
   'rounded': (
-    'items': (
+    'items': map-merge($gorko-size-scale, (
       'lg': 0.75rem,
       'full': 50%,
-    ),
+    )),
     'output': 'responsive',
     'property': 'border-radius',
   ),

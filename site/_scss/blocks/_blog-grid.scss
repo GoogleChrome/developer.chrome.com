@@ -1,14 +1,13 @@
 .blog-grid {
-  $card-size: px-to-rem(380px);
-
   align-items: start;
   display: grid;
   gap: get-size(400);
-  grid-template-columns: $card-size;
+  grid-template-columns: 1fr;
   justify-content: center;
+  justify-items: center;
 
   @include media-query('md') {
     gap: get-size(500);
-    grid-template-columns: repeat(auto-fit, $card-size);
+    grid-template-columns: repeat(auto-fit, $blog-card-size);
   }
 }

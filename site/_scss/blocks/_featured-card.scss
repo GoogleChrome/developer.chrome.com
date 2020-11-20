@@ -1,6 +1,5 @@
 .featured-card {
-  max-width: px-to-rem(464px);
-  width: 100%;
+  max-width: $featured-card-size;
 }
 
 .featured-card__title-bar {
@@ -14,11 +13,7 @@
 }
 
 .featured-card__thumbnail {
-  border-radius: px-to-rem(3px);
-  overflow: hidden;
-
   > img {
-    max-height: px-to-rem(200px);
-    object-fit: cover;
+    max-height: px-to-rem(243px);
   }
 }

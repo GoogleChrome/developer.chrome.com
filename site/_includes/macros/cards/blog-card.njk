@@ -1,6 +1,6 @@
 {% macro blogCard(post) %}
 {% set pd = post.data %}
-<div class="blog-card rounded-lg pad-300 md:pad-400">
+<div class="blog-card rounded-lg pad-300 md:pad-400 width-full">
   {% if pd.hero %}
     {#
       The thumbnail image defines its own bottom margin because it's optional
@@ -8,8 +8,8 @@
       margin and the thumbnail was omitted then there would be too much space
       between the title and the top of the card.
     #}
-    <div class="blog-card__thumbnail gap-bottom-300">
-      {% img src=pd.hero, alt=pd.alt, width="330", height="184", sizes="(min-width: 36em) 330px, calc(100vw - 80px)" %}
+    <div class="blog-card__thumbnail gap-bottom-300 overflow-hidden rounded-100">
+      {% img className="object-fit-cover width-full", src=pd.hero, alt=pd.alt, width="330", height="184", sizes="(min-width: 36em) 330px, calc(100vw - 80px)" %}
     </div>
   {% endif %}
         

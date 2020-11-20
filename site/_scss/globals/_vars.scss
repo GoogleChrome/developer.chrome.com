@@ -5,4 +5,7 @@ $font-base: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, O
 $font-google-sans: '"Google Sans", sans-serif';
 $font-mono: 'ui-monospace, Menlo, Consolas, Monaco, "Roboto Mono", "Source Code Pro", "Liberation Mono", "Lucida Console", monospace';
 
-$article-padding: 32px / $base-font-size * 1rem;
+$article-padding: #{px-to-rem(32px)};
+
+$featured-card-size: #{px-to-rem(464px)};
+$blog-card-size: #{px-to-rem(378px)};

@@ -1,6 +1,6 @@
 {% macro featuredPostCard(post) %}
 {% set pd = post.data %}
-<div class="masonry-grid__item featured-card hairline rounded-lg pad-300 md:pad-400">
+<div class="masonry-grid__item featured-card hairline rounded-lg pad-300 md:pad-400 width-full">
   <div class="featured-card__title-bar color-blue-medium display-flex align-center">
     {% include 'icons/blog.svg' %}
     <span class="gap-left-300 flex-1 user-select-none">
@@ -17,14 +17,8 @@
     between the title and the title-bar.
   #}
   {% if pd.hero %}
-    <div class="featured-card__thumbnail gap-top-400 gap-bottom-300">
-      {#
-        Pass an explicit min and max width to the shortcode so it doesn't
-        generate excessively large srcset options. We do this because we're
-        using object-fit on the image and LHCI will grump if object-fit uses an
-        image that's too large.
-      #}
-      {% img src=pd.hero, alt=pd.alt, width="414", height="200", sizes="(min-width: 36em) 414px, calc(100vw - 80px)", lazy=false %}
+    <div class="featured-card__thumbnail gap-top-400 gap-bottom-300 rounded-100 overflow-hidden">
+      {% img className="object-fit-cover width-full", src=pd.hero, alt=pd.alt, width="414", height="200", sizes="(min-width: 36em) 414px, calc(100vw - 80px)", lazy=false %}
     </div>
   {% endif %}
 

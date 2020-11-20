@@ -10,12 +10,12 @@
 //   }
 // }
 
-.blog-card__thumbnail {
-  border-radius: px-to-rem(3px);
-  overflow: hidden;
+.blog-card {
+  max-width: $blog-card-size;
+}
 
+.blog-card__thumbnail {
   > img {
-    max-height: px-to-rem(200px);
-    object-fit: cover;
+    max-height: px-to-rem(243px);
   }
 }
