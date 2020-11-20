@@ -8,7 +8,6 @@ module.exports = {
         'http://localhost:8080/blog',
         'http://localhost:8080/docs',
         'http://localhost:8080/docs/extensions',
-        'http://localhost:8080/releases',
       ],
     },
     assert: {

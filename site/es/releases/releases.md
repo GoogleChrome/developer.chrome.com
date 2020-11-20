@@ -1,4 +1,5 @@
 ---
+permalink: false
 title: 'Lanzamientos'
 description: ''
 layout: 'layouts/releases-landing.njk'

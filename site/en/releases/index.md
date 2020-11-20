@@ -1,4 +1,6 @@
 ---
+# Remove the permalink when we launch this page
+permalink: false
 title: 'Releases'
 description: ''
 layout: 'layouts/releases-landing.njk'

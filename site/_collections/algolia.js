@@ -50,7 +50,7 @@ module.exports = collections => {
   const algoliaCollectionItems = [];
 
   for (const item of allSorted) {
-    if (item.data.disable_algolia) {
+    if (item.data.disable_algolia || item.data.permalink === false) {
       continue;
     }
 
