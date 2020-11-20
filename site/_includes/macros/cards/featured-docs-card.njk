@@ -1,7 +1,7 @@
 {% from 'macros/project-icon.njk' import projectIcon with context %}
 
 {% macro featuredDocsCard(projects) %}
-<div class="featured-card hairline rounded-lg pad-300 md:pad-400">
+<div class="masonry-grid__item featured-card hairline rounded-lg pad-300 md:pad-400">
   <div class="featured-card__title-bar color-blue-medium display-flex align-center">
     {% include 'icons/docs.svg' %}
     <span class="gap-left-300 flex-1 user-select-none">
@@ -11,7 +11,7 @@
     {% include 'icons/keyboard-arrow-right.svg' %}
   </div>
 
-  <div class="display-grid grid-cols-2 grid-gap-500 gap-top-400">
+  <div class="display-grid grid-cols-2 gap-top-400">
     {% for item in projects %}
       {# Find the landing page for the project itself and grab its metadata #}
       {% set projectUrl = helpers.join('/docs', item) %}

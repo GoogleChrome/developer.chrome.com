@@ -2,10 +2,10 @@ module.exports = {
   'version': 1,
   'snapshot': {
     'widths': [375, 865, 1280],
-    'percy-css': `
-      iframe {
-        display: none !important;
-      }`
+    'percy-css': `iframe { display: none !important; }`,
+    // We need this for pages that use the masonry layout which requires
+    // runtime JS to layout correctly.
+    'enable-javascript': true,
   },
   'static-snapshots': {
     'path': 'dist',

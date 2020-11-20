@@ -9,6 +9,7 @@ const markdownItAttrs = require('markdown-it-attrs');
 const {absolute, trailingSlash, leadingAndTrailingSlash} = require('./site/_filters/urls');
 const {i18n} = require('./site/_filters/i18n');
 const {namespaceToPath} = require('./site/_filters/namespace');
+const {minifyJs} = require('./site/_filters/minify-js');
 
 // Shortcodes
 const {img} = require('./site/_shortcodes/img');
@@ -83,6 +84,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('leadingAndTrailingSlash', leadingAndTrailingSlash);
   eleventyConfig.addFilter('i18n', i18n);
   eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
+  eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
 
   // Add shortcodes
   eleventyConfig.addShortcode('img', img);

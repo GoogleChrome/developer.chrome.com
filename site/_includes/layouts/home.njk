@@ -6,12 +6,20 @@
 
 {% block content %}
   <div class="measure-960 width-full center-margin pad-400">
-    <div class="home-grid">
+    <div class="masonry-grid">
       {% set blog = 'blog-' + locale %}
       {{ featuredPostCard(collections[blog][0]) }}
       {{ featuredDocsCard(featured_projects) }}
-      {{ featuredTweetCard() }}
       {% include 'partials/report-a-bug.njk' %}
+      {{ featuredTweetCard() }}
     </div>
+
+    {#
+      Inline a script to cause the elements above to layout in a masonry grid.
+    #}
+    {% set masonry %}
+      {% include 'scripts/masonry.js' %}
+    {% endset %}
+    <script>{{ masonry | minifyJs | safe }}</script>
   </div>
 {% endblock %}

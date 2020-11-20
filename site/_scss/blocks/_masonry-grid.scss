@@ -1,0 +1,31 @@
+.masonry-grid {
+  align-items: start;
+  display: grid;
+  gap: get-size(400);
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  @include media-query('masonry') {
+    gap: get-size(500);
+    // grid-template-columns: repeat(auto-fit, minmax(px-to-rem(390px), 1fr));
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__item {
+    @include media-query('masonry') {
+      grid-row: 1;
+    }
+  }
+
+  &__item:nth-of-type(odd) {
+    @include media-query('masonry') {
+      grid-column: 1;
+    }
+  }
+
+  &__item:nth-of-type(even) {
+    @include media-query('masonry') {
+      grid-column: 2;
+    }
+  }
+}

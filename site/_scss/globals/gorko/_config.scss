@@ -313,7 +313,8 @@ $gorko-config: (
   'breakpoints': (
     'md': '(min-width: 37em)',
     'lg': '(min-width: 62em)',
-    'xl': '(min-width: 90em)'
+    'xl': '(min-width: 90em)',
+    'masonry': '(min-width: 860px)',
   ),
 );
 
