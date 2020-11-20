@@ -1,6 +1,7 @@
 /* purgecss start ignore */
 navigation-rail {
   display: none;
+  outline: 0;
 
   @include media-query('lg') {
     border-right: 1px solid var(--color-hairline);
