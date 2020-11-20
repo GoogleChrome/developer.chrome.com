@@ -106,6 +106,12 @@
     @include flex-font((14px 24px), (16px 28px), (16px 28px));
   }
 
+  &--footer {
+    @extend %type--headline;
+    @include apply-utility('weight', 'medium');
+    @include font-setup(16px, 28px);
+  }
+
   &--cta {
     @extend %type--headline;
     @include apply-utility('weight', 'medium');

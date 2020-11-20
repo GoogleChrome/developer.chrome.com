@@ -31,6 +31,10 @@
     @extend %type--var-small;
   }
 
+  &--footer {
+    @extend %type--footer;
+  }
+
   &--cta {
     @extend %type--cta;
   }

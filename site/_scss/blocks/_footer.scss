@@ -1,0 +1,18 @@
+footer {
+  --flow-space: #{px-to-rem(12px)};
+  background-color: var(--color-footer-bg);
+}
+
+.footer__stack + .footer__stack {
+  margin-top: get-size(500);
+
+  @include media-query('lg') {
+    margin-top: 0;
+  }
+}
+
+.footer__link {
+  @extend %overlay;
+  color: var(--color-secondary-text);
+  text-decoration: none;
+}
