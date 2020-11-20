@@ -1,9 +1,12 @@
 # Settings in the [build] context are global and are applied to all contexts
 # unless otherwise overridden by more specific contexts.
 [build]
+  # Indicate to the site that this is a CI build. This will enable the ability
+  # to ignore building parts of the site, like the NACL docs.
+  CI=true
   # Don't build NaCl docs during Netlify preview builds.
   # These take forever and we don't need them for PR previews.
-  ELEVENTY_IGNORE_NCAL=true
+  ELEVENTY_IGNORE_NACL=true
 
 [[redirects]]
   from = "/*"
