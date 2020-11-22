@@ -1,0 +1,17 @@
+.card-title-bar {
+  @include font-setup(13px, 24px);
+  @include apply-utility('font', 'google-sans');
+  align-items: center;
+  display: flex;
+
+  &__controls {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+
+    > svg {
+      height: px-to-rem(24px);
+      width: px-to-rem(24px);
+    }
+  }
+}

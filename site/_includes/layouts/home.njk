@@ -1,12 +1,15 @@
 {% extends "layouts/base.njk" %}
 
+{% from 'macros/cards/hero-card.njk' import heroCard with context %}
 {% from 'macros/cards/featured-post-card.njk' import featuredPostCard with context %}
 {% from 'macros/cards/featured-docs-card.njk' import featuredDocsCard with context %}
 {% from 'macros/cards/featured-tweet-card.njk' import featuredTweetCard with context %}
 
 {% block content %}
   <div class="measure-960 width-full center-margin pad-400">
-    <div class="masonry-grid">
+
+    {{ heroCard() }}
+    <div class="masonry-grid gap-top-500">
       {% set blog = 'blog-' + locale %}
       {{ featuredPostCard(collections[blog][0]) }}
       {{ featuredDocsCard(featured_projects) }}

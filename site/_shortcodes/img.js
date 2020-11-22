@@ -38,6 +38,11 @@ const img = args => {
   params = {auto: 'format', ...params};
   options = {minWidth: 200, maxWidth: 1600, ...options};
 
+  // Below you'll notice that we do alt !== undefined. That's because passing in
+  // an empty string is a valid alt value. It tells a screen reader to ignore
+  // the image (useful for purely decorative images). If we just did alt ? ...
+  // the emptry string would evaluate as falsey and no alt attribute would be
+  // written at all—which _is_ an accessibility violation.
   return html`
     <img
       src="${generateSrc(src, params)}"
@@ -45,7 +50,7 @@ const img = args => {
       ${sizes ? `sizes="${sizes}"` : ''}
       ${height ? `height="${height}"` : ''}
       ${width ? `width="${width}"` : ''}
-      ${alt ? `alt="${safeHtml`${alt}`}"` : ''}
+      ${alt !== undefined ? `alt="${safeHtml`${alt}`}"` : ''}
       ${className ? `class="${className}"` : ''}
       ${lazy ? 'loading="lazy"' : ''}
     />

@@ -183,7 +183,7 @@ $gorko-config: (
     'items': (
       'between': 'space-between',
       'around': 'space-around',
-      'before': 'flex-end',
+      'end': 'flex-end',
       'center': 'center',
     ),
     'output': 'responsive',
@@ -198,6 +198,15 @@ $gorko-config: (
     ),
     'output': 'responsive',
     'property': 'justify-items'
+  ),
+  'justify-self': (
+    'items': (
+      'start': 'start',
+      'end': 'end',
+      'center': 'center',
+    ),
+    'output': 'responsive',
+    'property': 'justify-self'
   ),
   'leading': (
     'items': (
@@ -281,7 +290,7 @@ $gorko-config: (
   ),
   'rounded': (
     'items': map-merge($gorko-size-scale, (
-      'lg': 0.75rem,
+      'lg': 0.75rem, // 12px
       'full': 50%,
     )),
     'output': 'responsive',

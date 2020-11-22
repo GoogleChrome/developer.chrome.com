@@ -2,16 +2,6 @@
   max-width: $featured-card-size;
 }
 
-.featured-card__title-bar {
-  @include font-setup(13px, 24px);
-  @include apply-utility('font', 'google-sans');
-
-  > svg {
-    height: px-to-rem(24px);
-    width: px-to-rem(24px);
-  }
-}
-
 .featured-card__thumbnail {
   > img {
     max-height: px-to-rem(243px);
