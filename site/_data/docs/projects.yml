@@ -1,6 +1,6 @@
 chrome:
   - url: extensions
+  - url: webstore
   - url: native-client
-
 tools:
   - url: devtools

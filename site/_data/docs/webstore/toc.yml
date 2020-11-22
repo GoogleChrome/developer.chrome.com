@@ -1,0 +1,44 @@
+- title: i18n.docs.webstore.overviews
+  sections:
+    - url: /docs/webstore/overview/
+    - url: /docs/webstore/about_webstore/
+    - url: /docs/webstore/apps_vs_extensions/
+    - url: /docs/webstore/distribution/
+- url: /docs/webstore/faq/
+- title: i18n.docs.webstore.develop
+  sections:
+    - url: /docs/webstore/best_practices/
+    - url: /docs/webstore/choosing/
+    - url: /docs/webstore/i18n/
+    - url: /docs/webstore/get_started_simple/
+    - url: /docs/webstore/get_started/
+    - url: /docs/webstore/inline_installation/
+- title: i18n.docs.webstore.publish
+  sections:
+    - url: /docs/webstore/register/
+    - url: /docs/webstore/launching/
+    - url: /docs/webstore/publish/
+    - url: /docs/webstore/images/
+    - url: /docs/webstore/cws-dashboard-privacy/
+    - url: /docs/webstore/group-publishers/
+    - url: /docs/webstore/update/
+    - url: /docs/webstore/rating/
+- title: i18n.docs.webstore.payments
+  sections:
+    - url: /docs/webstore/payments-iap/
+    - url: /docs/webstore/pricing/
+    - url: /docs/webstore/money/
+    - url: /docs/webstore/one_time_payments/
+- title: i18n.docs.webstore.identity
+  sections:
+    - url: /docs/webstore/authentication/
+    - url: /docs/webstore/identify_user/
+- title: i18n.docs.webstore.policies
+  sections:
+    - url: /docs/webstore/terms/
+    - url: /docs/webstore/program_policies/
+    - url: /docs/webstore/spam-faq/
+    - url: /docs/webstore/branding/
+    - url: /docs/webstore/deceptive_installation_tactics/
+    - url: /docs/webstore/user_data/
+- url: /docs/webstore/samples/
