@@ -1,3 +1,5 @@
+{% from 'macros/card-authors.njk' import cardAuthors with context %}
+
 {% macro featuredPostCard(post) %}
 {% set pd = post.data %}
 <div class="masonry-grid__item featured-card hairline rounded-lg pad-300 md:pad-400 width-full">
@@ -36,11 +38,11 @@
     </a>
   </p>
 
-  <div class="gap-top-400">
-    {% from 'macros/author.njk' import author with context %}
-    {{ author('kaycebasques', locale) }}
-    {{ author('jakearchibald', locale) }}
-  </div>
+  {% if post.data.authors and post.data.authors.length %}
+    <div class="gap-top-400">
+      {{ cardAuthors(post.data.authors) }}
+    </div>
+  {% endif %}
 
   <a href="/blog" class="display-inline-flex color-primary surface decoration-none gap-top-400">
     {{ 'i18n.common.see_all_articles' | i18n(locale) }}

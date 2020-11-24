@@ -7,10 +7,10 @@
 {% if date %}
 <div class="dates">
   <p class="type--caption">
-    Published on <time>{{ helpers.formatDate(date, locale) }}</time>
+    Published on <time>{{ helpers.formatDateLong(date, locale) }}</time>
   {% if updated %}
     <span>•</span>
-    Updated on <time>{{ helpers.formatDate(updated, locale) }}</time>
+    Updated on <time>{{ helpers.formatDateLong(updated, locale) }}</time>
   {% endif %}
   </p>
 </div>

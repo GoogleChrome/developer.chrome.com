@@ -1,3 +1,5 @@
+{% from 'macros/card-authors.njk' import cardAuthors with context %}
+
 {% macro blogCard(post) %}
 {% set pd = post.data %}
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full">
@@ -36,13 +38,11 @@
     </div>
   {% endif %}
 
-  {% if pd.authors %}
-    {% from 'macros/author.njk' import author with context %}
+  {% if pd.authors and pd.authors.length %}
     <div class="gap-top-300">
-      {% for item in pd.authors %}
-        {{ author(item, locale) }}
-      {% endfor %}
+      {{ cardAuthors(pd.authors) }}
     </div>
   {% endif %}
+
 </div>
 {% endmacro %}

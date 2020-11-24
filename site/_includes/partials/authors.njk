@@ -1,9 +1,0 @@
-{% from "macros/author.njk" import author with context %}
-
-<div class="authors cluster">
-  <div> {# container div required by the .cluster layout #}
-    {% for item in authors %}
-      {{ author(item, locale) }}
-    {% endfor %}
-  </div>
-</div>

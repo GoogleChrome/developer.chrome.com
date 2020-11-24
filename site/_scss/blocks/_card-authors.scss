@@ -1,0 +1,14 @@
+.card-authors__image {
+  border: 2px solid var(--color-bg);
+}
+
+.card-authors__image:not(:first-of-type) {
+  margin-left: -#{get-size(200)};
+}
+
+// Only give the card meta a left margin if there are author images.
+// If there are 3 or more authors then there won't be any images and the
+// meta should be flush left.
+.card-authors__image + .card-authors__meta {
+  margin-left: get-size(300);
+}

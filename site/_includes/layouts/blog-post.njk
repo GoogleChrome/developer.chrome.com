@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-  <article class="stack measure-long type center-margin center-images width-full pad-400">
+  <article class="stack measure-long type center-margin width-full pad-400">
     
     <div class="stack flow-space-200">
       {% include 'partials/post-headline.njk' %}
@@ -13,10 +13,12 @@
 
     {% if authors %}
       <div class="stack-exception-700">
-        {% include 'partials/authors.njk' %}
+        {% include 'partials/post-authors.njk' %}
       </div>
     {% endif %}
 
-    {{ content | safe }}
+    <div class="stack center-images">
+      {{ content | safe }}
+    </div>
   </article>
 {% endblock %}

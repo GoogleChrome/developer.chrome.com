@@ -1,0 +1,27 @@
+{% macro cardAuthors(authors) %}
+
+<div class="card-authors display-flex align-start">
+  {#
+    If there are less than three authors, display them with overlapping avatars.
+    If there are three or more athors, only display their names.
+  #}
+  {% if authors.length < 3 %}
+    {% for item in authors %}
+      {% set author = authorsData[item] %}
+      <img class="card-authors__image rounded-full flex-shrink-none" width="40" height="40" src="{{ author.image }}" alt="{{ author.name.given }} {{ author.name.family }} thumbnail" />
+    {% endfor %}
+  {% endif %}
+
+  <div class="card-authors__meta">
+    <p class="type--small">
+      {%- for item in authors -%}
+        {%- set author = authorsData[item] -%}
+        {# Add a nbsp so authors' names don't break and wrap between the first and last name. #}
+        {%- if loop.index0 > 0 -%}, {% endif -%}{{ author.name.given }}&nbsp;{{ author.name.family }}
+      {%- endfor -%}
+    </p>
+    <time class="type--small color-secondary-text">{{ helpers.formatDateShort(date, locale) }}</time>
+  </div>
+</div>
+
+{% endmacro %}
