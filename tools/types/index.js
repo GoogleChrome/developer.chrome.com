@@ -33,7 +33,7 @@ const fs = require('fs');
 const {performance} = require('perf_hooks');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const typesPath = path.join(__dirname, '../../types/chrome/test.d.ts');
+const typesPath = path.join(__dirname, '../../types/chrome/types.d.ts');
 const renderTypesPath = path.join(
   __dirname,
   '../../site/_collections/types.json'
