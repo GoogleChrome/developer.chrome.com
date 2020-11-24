@@ -1,0 +1,11 @@
+{#
+  Finds an icon in the _includes/icons folder.
+  Adds a class="icon" to the icon, as well as any additional classes passed in.
+#}
+{% macro icon(name, className = '') %}
+{% set svg %}
+  {% include 'icons/' + name + '.svg' %}
+{% endset %}
+{% set className = 'icon ' + className %}
+{{ svg | replace('<svg', '<svg class="' + className + '"') | safe }}
+{% endmacro %}
