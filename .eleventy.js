@@ -12,6 +12,8 @@ const {namespaceToPath} = require('./site/_filters/namespace');
 const {minifyJs} = require('./site/_filters/minify-js');
 
 // Shortcodes
+const {iframe} = require('./site/_shortcodes/iframe');
+const {glitch} = require('./site/_shortcodes/glitch');
 const {img} = require('./site/_shortcodes/img');
 const {video} = require('./site/_shortcodes/video');
 
@@ -87,6 +89,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
 
   // Add shortcodes
+  eleventyConfig.addShortcode('iframe', iframe);
+  eleventyConfig.addShortcode('glitch', glitch);
   eleventyConfig.addShortcode('img', img);
   eleventyConfig.addShortcode('video', video);
 
