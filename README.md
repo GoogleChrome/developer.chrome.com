@@ -37,6 +37,7 @@ git clone https://github.com/GoogleChrome/developers.chrome.com.git
 
 ```bash
 npm ci
+npm run types
 ```
 
 ### Set up build flags
