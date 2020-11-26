@@ -22,6 +22,7 @@ const {domTransformer} = require('./site/_transforms/dom-transformer');
 
 // Plugins
 const md = require('./site/_plugins/markdown');
+const toc = require('eleventy-plugin-toc');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const optimizeHtmlPlugin = require('./site/_plugins/optimize-html');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -60,6 +61,12 @@ module.exports = eleventyConfig => {
   eleventyConfig.setLibrary('md', md);
 
   // Add plugins
+  eleventyConfig.addPlugin(toc, {
+    tags: ['h2', 'h3'],
+    wrapper: 'div',
+    wrapperClass: 'toc__wrapper',
+    ul: true,
+  });
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
   // Only minify HTML and inline CSS if we are in production because it slows

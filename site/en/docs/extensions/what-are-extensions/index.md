@@ -37,6 +37,10 @@ Take a small step into extensions with this quick Hello Extensions example.
 Start by creating a new directory to store the extension's files, or download
 them from the [sample page](/extensions/samples#search:hello).
 
+### A subheading
+
+### Another subheading
+
 Next, add a file called `manifest.json` and include the following code:
 
 <!-- TODO: add label component -->

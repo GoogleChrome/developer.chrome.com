@@ -69,3 +69,7 @@ see_all_docs:
 follow:
   en: 'Follow'
   es: 'Seguir'
+
+toc:
+  en: 'Table of Contents'
+  es: 'Tabla de Contenido'

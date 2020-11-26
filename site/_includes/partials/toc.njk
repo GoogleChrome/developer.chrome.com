@@ -1,28 +1,7 @@
-<div class="toc display-none xl:display-block pad-left-400 pad-right-400">
-  <strong>Contents:</strong>
-  <ul class="toc__list">
-    <li>
-      Lorem ipsum dolor sit
-    </li>
-    <li>
-      Amet consectetur adipisicing elit
-      <ul>
-        <li>
-          Lorem ipsum dolor sit
-          <ul>
-            <li>Lorem ipsum dolor sit</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      Incidunt aliquid nulla voluptate ipsam
-    </li>
-    <li>
-      Quas laborum cupiditate doloribus quis voluptates!
-    </li>
-    <li>
-      Eaque, velit eius asperiores
-    </li>
-  </ul>
-</div>
+<details class="toc" role="navigation" aria-label="{{ 'i18n.common.toc' | i18n(locale) }}">
+  <summary class="surface display-inline-flex align-center color-text-secondary user-select-none">
+    <div class="type--h6">{{ 'i18n.common.toc' | i18n(locale) }}</div>
+    <span class="toc__icon">{% include 'icons/arrow-right.svg' %}</span>
+  </summary>
+  {{ content | toc | safe }}
+</details>

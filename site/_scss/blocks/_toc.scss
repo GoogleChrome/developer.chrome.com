@@ -1,0 +1,71 @@
+.toc-container {
+  max-width: 100%;
+  width: px-to-rem(240px);
+  
+  @include media-query('xl') {
+    margin-right: auto;
+  }
+}
+
+.toc {
+  width: max-content;
+}
+
+.toc > summary {
+  align-items: center;
+  color: var(--color-secondary-text);
+  display: flex;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.toc__icon {
+  margin-left: get-size(200);
+
+  > svg {
+    display: flex;
+    transform: rotate(90deg);
+  }
+}
+
+.toc[open] .toc__icon > svg {
+  transform: rotate(270deg);
+}
+
+// The eleventy-plugin-toc doesn't let us put classes on ul/ol or li children
+// so we have to style them all with descendant selectors.
+.toc__wrapper {
+  a {
+    @extend %type--small;
+    text-decoration: none;
+  }
+
+  li {
+    margin-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  > ul,
+  > ol {
+    margin-block-start: get-size(200);
+    padding: 0;
+
+    ul,
+    ol {
+      border-left: 1px solid var(--color-hairline);
+      padding-left: get-size(300);
+    }
+  }
+}

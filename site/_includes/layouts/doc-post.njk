@@ -8,8 +8,7 @@
   <div class="display-flex">
     {% include 'partials/navigation-tree.njk' %}
 
-    <article class="stack measure-long type center-margin width-full pad-400">
-      
+    <article class="post stack measure-long width-full pad-400">
       <div class="stack flow-space-200">
         {% include 'partials/post-headline.njk' %}
       </div>
@@ -20,11 +19,19 @@
         </div>
       {% endif %}
 
-      <div class="stack center-images">
+      <div class="toc-container display-block xl:display-none">
+        {% include 'partials/toc.njk' %}
+      </div>
+
+      <div class="stack type center-images">
         {{ content | safe }}
       </div>
     </article>
 
-    {% include 'partials/toc.njk' %}
+
+    <div class="toc-container display-none xl:display-block pad-left-400 pad-right-400">
+      {% include 'partials/toc.njk' %}
+    </div>
+    
   </div>
 {% endblock %}
