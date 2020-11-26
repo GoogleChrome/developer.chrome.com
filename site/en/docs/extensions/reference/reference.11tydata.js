@@ -1,0 +1,57 @@
+const types = require('../../../../_collections/types.json');
+const striptags = require('striptags');
+
+const indexedTypes = {};
+for (const type of types) {
+  const {shortName} = type;
+  indexedTypes[shortName] = type;
+}
+
+/**
+ * Strips HTML tags and newlines for use as a meta attribute.
+ *
+ * @param {string|undefined} raw
+ * @return {string}
+ */
+function stripForMeta(raw) {
+  if (!raw) {
+    return '';
+  }
+  let work = striptags(raw);
+  work = work.replace(/\n/g, ' ');
+  work = work.replace(/\s+/g, ' ');
+  return work;
+}
+
+/**
+ * Finds the RenderNamespace for the specified API.
+ *
+ * @param {{api: string}} param
+ * @return {RenderNamespace|undefined}
+ */
+function namespaceForData({api}) {
+  return indexedTypes[api];
+}
+
+module.exports = {
+  eleventyComputed: {
+    namespace: data => {
+      return namespaceForData(data);
+    },
+
+    title: data => {
+      const namespace = namespaceForData(data);
+
+      // We can't use ?? here, as `data.title` is the empty string if missing.
+      return data.title || namespace?.name || '?';
+    },
+
+    description: data => {
+      if (!data.api || data.description) {
+        return data.description;
+      }
+      const namespace = namespaceForData(data);
+      return stripForMeta(namespace?.comment);
+    },
+  },
+};

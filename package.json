@@ -65,6 +65,7 @@
     "remove-markdown": "^0.3.0",
     "rollup": "^2.22.2",
     "sass": "^1.26.10",
+    "striptags": "^3.1.1",
     "typedoc": "^0.19.2",
     "unistore": "^3.5.2"
   },

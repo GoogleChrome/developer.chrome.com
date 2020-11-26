@@ -9,9 +9,12 @@
 
     <article class="stack measure-long type center-margin pad-400">
       <h1>{{ title }}</h1>
-      <p>Chrome provides extensions with many special-purpose APIs like <code>chrome.runtime</code> and <code>chrome.alarms</code>.
+      {{ content | safe }}
 
 {% import 'macros/reference.njk' as macros with context %}
+
+{# TODO(samthor): This currently generates a list of all known APIs, but we only
+   render pages for specific documented APIs. #}
 
 <h2>Stable APIs</h2>
 {{ macros.renderReferenceTable(collections.types, 'stable') }}
