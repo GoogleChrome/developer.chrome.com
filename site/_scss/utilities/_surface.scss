@@ -2,11 +2,16 @@
 // or text if there is no icon) at varying opacities depending on the level of
 // interaction. The surface overlay is placed *between* the content and the
 // container.
+// The surface also adds an underline to links.
 
+%surface,
 .surface {
   @extend %overlay;
-  
-  &::before {
-    z-index: -1;
+
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }

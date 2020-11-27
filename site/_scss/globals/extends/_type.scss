@@ -25,6 +25,8 @@
     }
 
     > .headline__link {
+      color: currentColor;
+      text-decoration: none;
       visibility: hidden;
     }
   }

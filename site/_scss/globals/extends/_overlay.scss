@@ -1,7 +1,7 @@
 %overlay {
   overflow: hidden;
   position: relative;
-  
+
   &::before {
     background-color: var(--overlay-background-color, currentColor);
     border-radius: 2px;

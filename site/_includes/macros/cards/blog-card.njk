@@ -10,21 +10,21 @@
       margin and the thumbnail was omitted then there would be too much space
       between the title and the top of the card.
     #}
-    <div class="blog-card__thumbnail gap-bottom-300 overflow-hidden rounded-100">
-      {% img className="object-fit-cover width-full", src=pd.hero, alt=pd.alt, width="330", height="184", sizes="(min-width: 36em) 330px, calc(100vw - 80px)" %}
+    <div class="blog-card__thumbnail gap-bottom-300">
+      <a class="display-block" href="{{ post.url }}">
+        {% img className="rounded-100 object-fit-cover width-full", src=pd.hero, alt=pd.alt, width="330", height="184", sizes="(min-width: 36em) 330px, calc(100vw - 80px)" %}
+      </a>
     </div>
   {% endif %}
         
   <h2 class="type--h5">
-    <a class="surface display-inline-flex color-text decoration-none" href="{{ post.url }}">
+    <a class="surface display-inline-flex color-text" href="{{ post.url }}">
       {{ pd.title }}
     </a>
   </h2>
 
   <p class="type--caption gap-top-200">
-    <a class="surface display-inline-flex color-text decoration-none" href="{{ post.url }}">
-      {{ pd.description }}
-    </a>
+    {{ pd.description }}
   </p>
 
   {% if pd.tags %}

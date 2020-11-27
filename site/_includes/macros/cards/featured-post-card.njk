@@ -21,21 +21,21 @@
     between the title and the title-bar.
   #}
   {% if pd.hero %}
-    <div class="featured-card__thumbnail gap-top-400 gap-bottom-300 rounded-100 overflow-hidden">
-      {% img className="object-fit-cover width-full", src=pd.hero, alt=pd.alt, width="414", height="200", sizes="(min-width: 36em) 414px, calc(100vw - 80px)", lazy=false %}
+    <div class="featured-card__thumbnail gap-top-400 gap-bottom-300">
+      <a class="display-block" href="{{ post.url }}">
+        {% img className="rounded-100 object-fit-cover width-full", src=pd.hero, alt=pd.alt, width="414", height="200", sizes="(min-width: 36em) 414px, calc(100vw - 80px)", lazy=false %}
+      </a>
     </div>
   {% endif %}
 
   <h2 class="type--h3-card">
-    <a class="color-text surface decoration-none" href="{{ post.url }}">
+    <a class="color-text surface" href="{{ post.url }}">
       {{ pd.title }}
     </a>
   </h2>
 
   <p class="type--caption gap-top-200">
-    <a class="display-inline-flex color-text surface decoration-none" href="{{ post.url }}">
-      {{ pd.description }}
-    </a>
+    {{ pd.description }}
   </p>
 
   {% if pd.authors and pd.authors.length %}
@@ -44,7 +44,7 @@
     </div>
   {% endif %}
 
-  <a href="/blog" class="display-inline-flex color-primary surface decoration-none gap-top-400">
+  <a href="/blog" class="display-inline-flex color-primary surface gap-top-400">
     {{ 'i18n.common.see_all_articles' | i18n(locale) }}
   </a>
 </div>

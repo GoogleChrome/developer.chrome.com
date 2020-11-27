@@ -12,7 +12,7 @@ footer {
 }
 
 .footer__link {
-  @extend %overlay;
+  @extend %surface;
   color: var(--color-secondary-text);
   text-decoration: none;
 }

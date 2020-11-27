@@ -126,4 +126,8 @@
   &--hairline {
     @extend %type--hairline;
   }
+
+  a:not([class]) {
+    @extend %overlay;
+  }
 }
