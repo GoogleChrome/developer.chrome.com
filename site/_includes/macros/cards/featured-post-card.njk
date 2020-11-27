@@ -38,9 +38,9 @@
     </a>
   </p>
 
-  {% if post.data.authors and post.data.authors.length %}
+  {% if pd.authors and pd.authors.length %}
     <div class="gap-top-400">
-      {{ cardAuthors(post.data.authors) }}
+      {{ cardAuthors(pd.authors, pd.date) }}
     </div>
   {% endif %}
 
