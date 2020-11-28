@@ -23,6 +23,8 @@ import searchIcon from '../../_includes/icons/search.svg';
 
 import {BaseElement} from './base-element';
 
+import {activateSearch, deactivateSearch} from '../actions/search';
+
 const client = algoliasearch('0PPZV3EY55', 'f08cd9d7ead266781a7c2455b5f4a7b2');
 const index = client.initIndex('prod_developer_chrome');
 
@@ -37,9 +39,28 @@ export class SearchBox extends BaseElement {
     };
   }
 
+  set active(isActive) {
+    if (this._active === isActive) {
+      return;
+    }
+
+    const oldVal = this._active;
+    this._active = isActive;
+    if (isActive) {
+      activateSearch();
+    } else {
+      deactivateSearch();
+    }
+    this.requestUpdate('active', oldVal);
+  }
+
+  get active() {
+    return this._active;
+  }
+
   constructor() {
     super();
-    this.active = false;
+    this._active = false;
     this.buttonLabel = 'open search';
     this.locale = 'en';
     this.placeholder = 'Search';
@@ -50,6 +71,12 @@ export class SearchBox extends BaseElement {
     this.searchIcon = unsafeSVG(searchIcon);
   }
 
+  firstUpdated() {
+    this.input = /** @type {HTMLElement} */ (this.querySelector(
+      '.search-box__input'
+    ));
+  }
+
   /**
    * @param {WKeyboardEvent} e
    */
@@ -58,14 +85,14 @@ export class SearchBox extends BaseElement {
     this.search(e.target.value);
   }
 
-  /**
-   * @param {WMouseEvent<HTMLButtonElement>} e
-   */
-  toggleSearch(e) {
+  async toggleSearch() {
     this.active = !this.active;
     if (this.active) {
-      e.target.blur();
-      this.querySelector('input')?.focus();
+      // Wait for the element to render, then focus the input.
+      // We do this because the input will be display: none on mobile
+      // and calling focus() on it would have no effect.
+      await this.updateComplete;
+      this.input?.focus();
     }
   }
 
@@ -79,16 +106,17 @@ export class SearchBox extends BaseElement {
       const {hits: results} = await index.search(query, {
         hitsPerPage: 10,
         filters: `locale:"${this.locale}"`,
+        highlightPreTag: '<strong>',
+        highlightPostTag: '</strong>',
+        // Adds a _snippetResult property to the response, truncated to 25 words.
+        attributesToSnippet: ['content:25'],
+        snippetEllipsisText: '…',
       });
       this.results = results.map(r => {
-        const highlightKeys = ['title', 'content'];
-        for (const highlightKey of highlightKeys) {
-          const highlightValue = r._highlightResult[highlightKey];
-          if (highlightValue && highlightValue.matchLevel === 'full') {
-            r[highlightKey] = highlightValue.value;
-          }
-        }
-        return r;
+        const title = r._highlightResult.title.value;
+        const content = r._snippetResult.content.value;
+        const url = r.url;
+        return {title, content, url};
       });
     } catch (err) {
       console.error(err);
@@ -118,47 +146,45 @@ export class SearchBox extends BaseElement {
     if (!this.active) {
       return;
     }
-    return html`<div>
-      <button
-        @click="${this.toggleSearch}"
-        class="search-box__btn button display-flex align-center justify-center width-700 height-700"
-      >
-        ${this.closeIcon}
-      </button>
-      ${this.results.map(r => {
-        return html`
-          <div>
-            <a href="${r.url}">
-              <h3>${unsafeHTML(r.title)}</h3>
-              ${this.renderContent(r.content)}
-            </a>
-          </div>
-        `;
-      })}
-    </div>`;
+    return html`
+      <div class="search-box__results">
+        ${this.results.map(r => {
+          return html`
+            <div class="search-box__result">
+              <a class="search-box__link" href="${r.url}">
+                <h3 class="search-box__title type--h6">
+                  ${unsafeHTML(r.title)}
+                </h3>
+                <div class="search-box__snippet type--small">
+                  ${this.renderContent(r.content)}
+                </div>
+              </a>
+            </div>
+          `;
+        })}
+      </div>
+    `;
   }
 
   render() {
+    // prettier-ignore
     return html`
-      <div class="search-box__inner align-center display-grid">
+      <div class="search-box__inner">
         <button
           @click="${this.toggleSearch}"
           aria-label="${this.buttonLabel}"
-          class="search-box__btn button display-flex lg:display-none align-center justify-center width-700 height-700"
+          class="search-box__btn"
         >
           ${this.active ? this.closeIcon : this.searchIcon}
         </button>
 
         <input
-          type="search"
-          class="search-box__input lg:display-block lg:width-full
-          ${this.active ? '' : 'display-none'}"
-          aria-label="search"
+          type="text"
+          role="search"
+          class="search-box__input"
           placeholder="${this.placeholder}"
           @input="${this.onInput}"
         />
-
-        ${this.searchIcon}
       </div>
       ${this.renderResults()}
     `;

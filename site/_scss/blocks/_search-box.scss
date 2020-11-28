@@ -1,60 +1,84 @@
 /* purgecss start ignore */
 search-box {
-  min-height: px-to-rem(44px);
+  min-height: $search-box-height;
+  position: relative;
 }
 
 search-box[active] {
-  @include apply-utility('stack', '700');
+  @include apply-utility('stack', '500');
   background-color: var(--color-bg);
-  display: block;
-  height: 100vh;
-  left: 0;
-  padding: px-to-rem(16px);
-  position: absolute;
-  top: 0;
-  width: 100vw;
-}
 
-search-box[active] > .search-box__inner > svg {
-  display: block;
-  margin-left: px-to-rem(16px);
-  pointer-events: none;
-}
-
-search-box svg {
-  height: px-to-rem(24px);
-  width: px-to-rem(24px);
-}
-
-.search-box__inner > * {
-  grid-area: 1 / 1 / 2 / 2;
-}
-
-.search-box__inner > svg {
-  display: none;
-
-  @include media-query('lg') {
+  .search-box__input {
     display: block;
-    margin-left: px-to-rem(16px);
-    pointer-events: none;
   }
+}
+
+.search-box__inner {
+  align-items: center;
+  display: grid;
+  height: 100%;
+}
+
+// Force items to overlap by putting them in the same column and row.
+// This is how we position the magnifying glass icon over the search input.
+.search-box__inner > * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.search-box__btn {
+  @extend %button;
+  @include apply-utility('stack', '400');
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: get-size(700);
 }
 
 .search-box__input {
   background: var(--color-bg-shade);
   border: 0;
   border-radius: px-to-rem(100px);
+  display: none;
+  font: inherit;
   padding: get-size(200) get-size(300) get-size(200) get-size(700);
+
+  @include media-query('lg') {
+    display: block;
+    width: 100%;
+  }
 
   &::placeholder {
     color: var(--color-secondary-text);
   }
 }
 
-.search-result__content {
+.search-box__results {
+  @extend %stack;
+  height: calc(100vh - #{$search-box-height});
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  // top = search-box's height + top-nav's bottom padding + gap
+  top: calc(#{$search-box-height} + #{nth(map-get($top-nav-padding, 'lg'), 1)} + #{get-size(300)});
+
+  strong {
+    color: var(--color-primary);
+  }
+}
+
+.search-box__link {
+  @extend %overlay;
   display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  text-decoration: none;
+}
+
+.search-box__title {
+  color: var(--color-text);
+}
+
+.search-box__snippet {
+  color: var(--color-secondary-text);
 }
 /* purgecss end ignore */

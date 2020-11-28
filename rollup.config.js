@@ -5,7 +5,7 @@ import {nodeResolve} from '@rollup/plugin-node-resolve';
 // A Rollup plugin to convert CommonJS modules to ES6, so they can be included
 // in a Rollup bundle
 import commonjs from '@rollup/plugin-commonjs';
-import svg from 'rollup-plugin-inline-svg';
+import svg from 'rollup-plugin-svg';
 
 // A Rollup plugin to minify generated ES bundles. Uses terser under the hood.
 import {terser} from 'rollup-plugin-terser';

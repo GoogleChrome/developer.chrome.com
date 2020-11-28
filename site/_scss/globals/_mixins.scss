@@ -64,3 +64,12 @@
     border: 1px solid get-color('grey-300');
   }
 }
+
+// Set an element to be the full viewport width.
+// Then set its left edge to the center of its parent element.
+// Then use calc to shift it over 50vw to the left, 
+// thereby centering it on the screen.
+@mixin full-bleed() {
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+}

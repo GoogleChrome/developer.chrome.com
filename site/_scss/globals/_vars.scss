@@ -9,3 +9,12 @@ $article-padding: #{px-to-rem(32px)};
 
 $featured-card-size: #{px-to-rem(464px)};
 $blog-card-size: #{px-to-rem(378px)};
+
+// The padding for the top-nav is shared by the search-box when it goes
+// full screen.
+$top-nav-padding: (
+  'sm': (#{px-to-rem(8px)}),
+  'lg': (#{px-to-rem(12px)} #{px-to-rem(24px)}),
+);
+
+$search-box-height: #{px-to-rem(44px)};

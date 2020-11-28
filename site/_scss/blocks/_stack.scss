@@ -9,22 +9,25 @@
 
 // https://every-layout.dev/layouts/stack/
 
+/* purgecss start ignore */
+%stack,
 .stack {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   // Ensure flex children do not break out of max-width/width containers.
   min-width: 0;
+  
+  > * {
+    margin-bottom: 0;
+    margin-top: 0;
+  } 
+  
+  > * + * {
+    margin-top: var(--flow-space);
+  }
 }
-
-.stack > * {
-  margin-bottom: 0;
-  margin-top: 0;
-} 
-
-.stack > * + * {
-  margin-top: var(--flow-space);
-}
+/* purgecss end ignore */
 
 // Use the stack-exception class to change the top AND bottom margin
 // around an individual element.

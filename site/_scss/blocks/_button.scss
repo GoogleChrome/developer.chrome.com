@@ -1,9 +1,12 @@
+/* purgecss start ignore */
+%button,
 .button {
   background: transparent;
   border: 0;
   cursor: pointer;
   text-decoration: none;
 }
+/* purgecss end ignore */
 
 $button-padding: get-size(200) get-size(400);
 $button-radius: 24px;

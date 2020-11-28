@@ -49,6 +49,9 @@ const purifyCss = async (content, outputPath) => {
         },
       ],
       fontFace: true,
+      // whitelist utility classes used by custom elements.
+      // these type classes are used by search-box.
+      whitelist: ['type--h6', 'type--small'],
       defaultExtractor: content => {
         // Capture as liberally as possible, including things like `lg\:display-none`
         // https://tailwindcss.com/docs/controlling-file-size#understanding-the-regex

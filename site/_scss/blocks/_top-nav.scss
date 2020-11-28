@@ -1,18 +1,65 @@
+/* purgecss start ignore */
 top-nav {
-  padding: get-size(200);
+  padding: map-get($top-nav-padding, 'sm');
 
   @include media-query('lg') {
-    padding: px-to-rem(12px) get-size(400);
+    padding: map-get($top-nav-padding, 'lg');
   }
 
   nav {
     gap: get-size(300);
     grid-template-columns: min-content auto min-content;
+    position: relative;
 
     @include media-query('lg') {
       gap: get-size(800);
       grid-template-columns: 1fr 2fr 1fr;
     }
+  }
+}
+
+top-nav[data-search-active] {
+  // Mobile-only
+  // When a user clicks on the search button everything else should collapse
+  // so the search can take the full width of the top-nav.
+  @include media-query('lg-max') {
+    nav {
+      grid-template-columns: 1fr;
+      padding: 0 get-size(400);
+    }
+  
+    .top-nav__hamburger,
+    .top-nav__logo {
+      display: none;
+    }
+  }
+
+  // Recreate the hairline that appears at the bottom of the top-nav.
+  // This will appear above the overlay, in between the search box and the
+  // search results.
+  nav::before {
+    @include apply-utility('stack', '500');
+    @include full-bleed();
+    background-color: var(--color-hairline);
+    content: '';
+    display: block;
+    height: 1px;
+    position: absolute;
+    // top = search-box's height + top-nav's bottom padding
+    top: calc(#{$search-box-height} + #{nth(map-get($top-nav-padding, 'lg'), 1)});
+  }
+  
+  // A full screen overlay that hides the page underneath and creates a
+  // background for the search results.
+  nav::after {
+    @include apply-utility('stack', '400');
+    @include full-bleed();
+    background: var(--color-bg);
+    content: '';
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
   }
 }
 
@@ -26,3 +73,4 @@ top-nav {
 .top-nav__logo > * + * {
   margin-left: px-to-rem(14px);
 }
+/* purgecss end ignore */

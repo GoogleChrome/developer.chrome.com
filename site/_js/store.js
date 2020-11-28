@@ -25,6 +25,7 @@ const isDebug = params.has('debug');
 
 const initialState = {
   isSideNavExpanded: false,
+  isSearchActive: false,
 };
 
 let store;
