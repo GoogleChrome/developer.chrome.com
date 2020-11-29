@@ -17,7 +17,7 @@
 /**
  * @file Generates 11ty data file for paginated tags pages,
  * the page(s) that displays all the tags. Filters out tags with no posts
- * as wekk as sorts the elements by their titles.
+ * as well as sorts the elements by their titles.
  */
 
 const {i18n} = require('../_filters/i18n');
@@ -46,7 +46,9 @@ module.exports = locale => ({
         }
       }
 
-      return filtered.sort((a, b) => (a.title > b.title ? 1 : -1));
+      return filtered.sort((a, b) =>
+        a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+      );
     },
   },
 });

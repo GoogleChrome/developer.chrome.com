@@ -1,3 +1,36 @@
 news:
-  en: 'News'
-  es: 'Noticias'
+  en: News
+  es: Noticias
+
+3D:
+  en: 3D
+
+accessibility:
+  en: Accessibility
+
+amp:
+  en: AMP
+
+devices:
+  en: Devices
+
+encryption:
+  en: Encryption
+
+feature-policy:
+  en: Feature-policy
+
+file-system:
+  en: File-system
+
+games:
+  en: Games
+
+graphics:
+  en: Graphics
+
+houdini:
+  en: Houdini
+
+html:
+  en: HTML

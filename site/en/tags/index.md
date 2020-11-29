@@ -8,6 +8,6 @@ i18n:
     latest-news: 'Latest news'
 pagination:
   data: collections.tags
-  size: 24
+  size: 50
   resolve: values
 ---

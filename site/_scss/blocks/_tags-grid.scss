@@ -1,0 +1,11 @@
+.tags-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: get-size(600);
+  
+  @include media-query('md') {
+    column-gap: get-size(1000);
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: get-size(600);
+  }
+}

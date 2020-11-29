@@ -1,5 +1,38 @@
 {
   "news": {
     "title": "i18n.tags.news"
+  },
+  "3D": {
+    "title": "i18n.tags.3D"
+  },
+  "accessibility": {
+    "title": "i18n.tags.accessibility"
+  },
+  "amp": {
+    "title": "i18n.tags.amp"
+  },
+  "devices": {
+    "title": "i18n.tags.devices"
+  },
+  "encryption": {
+    "title": "i18n.tags.encryption"
+  },
+  "feature-policy": {
+    "title": "i18n.tags.feature-policy"
+  },
+  "file-system": {
+    "title": "i18n.tags.file-system"
+  },
+  "games": {
+    "title": "i18n.tags.games"
+  },
+  "graphics": {
+    "title": "i18n.tags.graphics"
+  },
+  "houdini": {
+    "title": "i18n.tags.houdini"
+  },
+  "html": {
+    "title": "i18n.tags.html"
   }
 }

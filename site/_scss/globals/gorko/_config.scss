@@ -335,6 +335,7 @@ $gorko-config: (
   ),
   'breakpoints': (
     'md': '(min-width: 592px)',
+    'md-max': '(max-width: 591px)',
     'lg': '(min-width: 992px)',
     'lg-max': '(max-width: 991px)',
     'xl': '(min-width: 1440px)',
