@@ -16,14 +16,15 @@
 
 declare global {
   export interface AlgoliaCollectionItem {
-    title: string;
-    description?: string;
     content?: string;
-    url: string;
-    tags: string[];
+    description?: string;
     locale: string;
-    photo?: string;
     objectID: string;
+    photo?: string;
+    tags: string[];
+    title: string;
+    type?: 'blogPost' | 'doc' | 'landing' | 'release';
+    url: string;
   }
 }
 

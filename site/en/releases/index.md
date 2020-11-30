@@ -4,6 +4,7 @@ permalink: false
 title: 'Releases'
 description: ''
 layout: 'layouts/releases-landing.njk'
+type: landing
 i18n:
   channels:
     stable: Stable

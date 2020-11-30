@@ -58,7 +58,8 @@ module.exports = collections => {
       item.data.tags = [item.data.tags];
     }
 
-    algoliaCollectionItems.push({
+    /** @type {AlgoliaCollectionItem} */
+    const algoliaCollectionItem = {
       title: item.data.title,
       description: item.data.description,
       content: limitText(removeMarkdown(item.template.frontMatter.content)),
@@ -67,7 +68,13 @@ module.exports = collections => {
       locale: item.data.locale,
       photo: item.data.hero && generateSrc(item.data.hero, {auto: 'format'}),
       objectID: createHash('md5').update(item.url).digest('hex'),
-    });
+    };
+
+    if (item.data.type) {
+      algoliaCollectionItem.type = item.data.type;
+    }
+
+    algoliaCollectionItems.push(algoliaCollectionItem);
   }
   return algoliaCollectionItems;
 };
