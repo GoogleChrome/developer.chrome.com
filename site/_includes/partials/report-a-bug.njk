@@ -1,6 +1,8 @@
+{% from 'macros/icon.njk' import icon with context %}
+
 <div class="masonry-grid__item featured-card bg-green-lighter rounded-lg width-full pad-300 md:pad-400">
   <div class="featured-card__title-bar color-green-darkest display-flex align-center">
-    {% include 'icons/docs.svg' %}
+    {{ icon('docs') }}
     <span class="gap-left-300 flex-1 user-select-none">Docs</span>
   </div>
 
@@ -12,7 +14,7 @@
       <li>Create a test case</li>
       <li>Report the bug</li>
     </ol>
-    {% include 'icons/question.svg' %}
+    {{ icon('question') }}
   </div>
   <div class="display-flex gap-top-300 md:gap-top-400">
     <a class="button button-round button-round--collapsible color-green-medium md:color-bg md:bg-green-medium" href="https://web.dev/how-to-file-a-good-bug/">

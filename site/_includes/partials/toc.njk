@@ -1,7 +1,9 @@
+{% from 'macros/icon.njk' import icon with context %}
+
 <details class="toc" role="navigation" aria-label="{{ 'i18n.common.toc' | i18n(locale) }}">
   <summary class="surface display-inline-flex align-center color-text-secondary user-select-none">
     <div class="type--h6">{{ 'i18n.common.toc' | i18n(locale) }}</div>
-    <span class="toc__icon">{% include 'icons/arrow-right.svg' %}</span>
+    <span class="toc__icon">{{ icon('arrow-right') }}</span>
   </summary>
   {{ content | toc | safe }}
 </details>

@@ -1,3 +1,5 @@
+{% from 'macros/icon.njk' import icon with context %}
+
 {% extends 'partials/title-bar.njk' %}
 
 {% block title_bar_content %}
@@ -7,7 +9,7 @@
       {% for part in all -%}
 
         {% if not loop.first -%}
-          {% include 'icons/keyboard-arrow-right.svg' %}
+          {{ icon('keyboard-arrow-right') }}
         {%- endif %}
 
         {% if part.url %}

@@ -1,13 +1,15 @@
+{% from 'macros/icon.njk' import icon with context %}
+
 <top-nav role="banner" class="display-block hairline-bottom" data-side-nav-inert>
   <nav class="display-grid align-center" aria-label="{{ 'i18n.common.chrome_developers' | i18n(locale) }}">
     {# Hamburger button #}
     <button class="top-nav__hamburger button display-flex lg:display-none align-center justify-content-center width-700 height-700" aria-label="{{ 'i18n.common.menu' | i18n(locale) }}">
-      {% include 'icons/hamburger.svg' %}
+      {{ icon('hamburger') }}
     </button>
 
     {# Logo #}
     <a class="top-nav__logo display-flex align-center" href="/" aria-label="developers.chrome.com">
-      {% include 'icons/logo.svg' %}
+      {{ icon('logo') }}
       <div>{{ 'i18n.common.chrome_developers' | i18n(locale) }}</div>
     </a>
 

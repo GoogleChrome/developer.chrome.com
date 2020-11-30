@@ -87,11 +87,6 @@ img:not([alt]) {
   filter: blur(10px);
 }
 
-// Ensure SVG icons always inherit the fill color from their parent elements.
-svg {
-  fill: currentColor;
-}
-
 // Always place table captions on the bottom.
 caption {
   caption-side: bottom;

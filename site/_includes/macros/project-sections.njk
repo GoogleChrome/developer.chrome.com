@@ -1,3 +1,5 @@
+{% from 'macros/icon.njk' import icon with context %}
+
 {#
 Finds a post by its url (including language specific urls).
 Returns a link to the post and uses the post's title for link text.
@@ -26,7 +28,7 @@ have been defined in the _data/docs/*.yml file for this project.
       <li>
         <div>
           {% if type === 'column' %}
-            {% include 'icons/document.svg' %}
+            {{ icon('document') }}
           {% endif %}
           <a class="project-sections__link color-primary-shade decoration-none surface" href="{{ post.url }}">{{ post.data.title }}</a>
         </div>

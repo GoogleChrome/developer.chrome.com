@@ -1,3 +1,5 @@
+{% from 'macros/icon.njk' import icon with context %}
+
 {#
 This renders the TOC for the current project_key. It looks at the current page
 and marks it as active.
@@ -15,7 +17,7 @@ and marks it as active.
   {% if item.sections %}
     <button class="navigation-tree__link button" data-expandable aria-expanded="{{ item.active }}">
       <div class="navigation-tree__icon">
-        {% include 'icons/arrow-right.svg' %}
+        {{ icon('arrow-right') }}
       </div>
       <span>{{ item.title | i18n }}</span>
     </button>

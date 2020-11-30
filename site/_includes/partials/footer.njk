@@ -1,3 +1,5 @@
+{% from 'macros/icon.njk' import icon with context %}
+
 <footer class="type--footer gap-top-400 lg:pad-left-600 lg:pad-right-600" data-side-nav-inert data-search-inert>
 
   <div class="pad-top-600 pad-bottom-600 pad-left-400 pad-right-400 hairline-bottom lg:pad-left-0 lg:pad-right-0">
@@ -5,10 +7,10 @@
       <div class="footer__heading">{{ 'i18n.footer.follow_us' | i18n(locale) }}</div>
       <div class="display-flex color-secondary-text gap-top-300 lg:gap-top-0">
         <a href="https://twitter.com/chromiumdev/" class="display-inline-flex color-secondary-text lg:gap-left-400" aria-label="{{ 'i18n.footer.youtube' | i18n(locale) }}">
-          {% include 'icons/youtube.svg' %}
+          {{ icon('youtube') }}
         </a>
         <a href="https://www.youtube.com/user/ChromeDevelopers" class="display-inline-flex color-secondary-text gap-left-400" aria-label="{{ 'i18n.footer.twitter' | i18n(locale) }}">
-          {% include 'icons/twitter.svg' %}
+          {{ icon('twitter') }}
         </a>
       </div>
     </div>

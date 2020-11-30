@@ -1,9 +1,11 @@
+{% from 'macros/icon.njk' import icon with context %}
+
 {% macro heroCard() %}
 <div class="hero-card width-full rounded-lg bg-blue-lighter pad-400 masonry:pad-top-400 masonry:pad-right-500 masonry:pad-bottom-1000 masonry:pad-left-500">
   <div class="card-title-bar">
     <div class="card-title-bar__controls color-secondary-text">
-      {% include 'icons/keyboard-arrow-left.svg' %}
-      {% include 'icons/keyboard-arrow-right.svg' %}
+      {{ icon('keyboard-arrow-left') }}
+      {{ icon('keyboard-arrow-right') }}
     </div>
   </div>
   <div class="hero-card__inner gap-top-400">

@@ -1,16 +1,17 @@
+{% from 'macros/icon.njk' import icon with context %}
 {% from 'macros/card-authors.njk' import cardAuthors with context %}
 
 {% macro featuredPostCard(post) %}
 {% set pd = post.data %}
 <div class="masonry-grid__item featured-card hairline rounded-lg pad-300 md:pad-400 width-full">
   <div class="card-title-bar color-blue-medium">
-    {% include 'icons/blog.svg' %}
+    {{ icon('blog') }}
     <span class="gap-left-300 flex-1 user-select-none">
       {{ 'i18n.nav.side_nav.blog' | i18n(locale) }}
     </span>
     <div class="card-title-bar__controls">
-      {% include 'icons/keyboard-arrow-left.svg' %}
-      {% include 'icons/keyboard-arrow-right.svg' %}
+      {{ icon('keyboard-arrow-left') }}
+      {{ icon('keyboard-arrow-right') }}
     </div>
   </div>
 

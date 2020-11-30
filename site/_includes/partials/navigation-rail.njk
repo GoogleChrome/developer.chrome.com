@@ -1,7 +1,9 @@
+{% from 'macros/icon.njk' import icon with context %}
+
 <navigation-rail role="navigation" class="lg:pad-left-200 lg:pad-right-200" aria-label="{{ 'i18n.common.primary' | i18n(locale) }}" tabindex="-1">
   <div class="display-flex lg:display-none align-center pad-200 hairline-bottom">
     <button class="navigation-rail__close button display-flex align-center justify-content-center width-700 height-700" aria-label="close">
-      {% include 'icons/close.svg' %}
+      {{ icon('close') }}
     </button>
     <div class="navigation-rail__title pad-left-200 pad-right-200">{{ 'i18n.common.chrome_developers' | i18n(locale) }}</div>
   </div>
@@ -19,7 +21,7 @@
       {% set iconName = name + '-active' if activeState else name %}
       <a href="{{ item.url }}" class="navigation-rail__link" {{ activeState | safe }}>
         <div class="navigation-rail__icon">
-          {% include 'icons/' + iconName + '.svg' %}
+          {{ icon(iconName) }}
         </div>
         <span>{{ item.text | i18n(locale) }}</span>
       </a>
