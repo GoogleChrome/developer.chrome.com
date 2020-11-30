@@ -19,12 +19,16 @@ const isGAEProd = Boolean(process.env.GAE_APPLICATION);
 const express = require('express');
 const compression = require('compression');
 const {notFoundHandler} = require('./not-found');
+const {build: buildRedirectHandler} = require('./redirect');
 
 const app = express();
+
+const redirectHandler = buildRedirectHandler('redirects.yaml');
 
 const handlers = [
   express.static('dist'),
   express.static('dist/en'),
+  redirectHandler,
   notFoundHandler,
 ];
 
