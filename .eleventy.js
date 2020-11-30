@@ -15,6 +15,7 @@ const {
 const {i18n} = require('./site/_filters/i18n');
 const {namespaceToPath} = require('./site/_filters/namespace');
 const {minifyJs} = require('./site/_filters/minify-js');
+const {updateSvgForInclude} = require('./site/_filters/svg');
 
 // Shortcodes
 const {iframe} = require('./site/_shortcodes/iframe');
@@ -101,6 +102,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('i18n', i18n);
   eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
   eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
+  eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
 
   // Add shortcodes
   eleventyConfig.addShortcode('iframe', iframe);

@@ -3,7 +3,10 @@
     {% set styles = docs[project_key].styles %}
     {% set color = styles.project_icon_color %}
     <div class="project-icon__cover"{% if color %} style="color: var(--{{color}})"{% endif %}>
-      {% include '../../_images/project/' + project_key + '.svg' ignore missing %}
+      {% set svg -%}
+        {% include '../../_images/project/' + project_key + '.svg' ignore missing %}
+      {%- endset %}
+      {{ svg | updateSvgForInclude | safe }}
     </div>
   </div>
 {% endmacro %}
