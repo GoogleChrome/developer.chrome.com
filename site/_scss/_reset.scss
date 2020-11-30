@@ -71,11 +71,6 @@ select {
   word-spacing: inherit;
 }
 
-// Remove the whitespace between table cells
-table {
-  border-collapse: collapse;
-}
-
 // Remove the default border on iframes
 iframe {
   border: 0;
@@ -85,11 +80,6 @@ iframe {
 // Note: an empty alt (alt="") is fine and can be used to hide decorative images
 img:not([alt]) {
   filter: blur(10px);
-}
-
-// Always place table captions on the bottom.
-caption {
-  caption-side: bottom;
 }
 
 // Define a basic hairline element.

@@ -18,11 +18,10 @@
 
 table {
   border: 1px solid var(--color-hairline);
-  display: block;
+  border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  max-width: fit-content;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 
 th {
@@ -41,5 +40,6 @@ tr:only-of-type {
 
 caption {
   border-top: 1px solid var(--color-hairline);
+  caption-side: bottom;
   padding: get-size(300);
 }

@@ -5,7 +5,7 @@
  * will be modified in place.
  */
 const tables = $ => {
-  $('table').each((_, elem) => {
+  $('table:not(.fixed-table)').each((_, elem) => {
     const $elem = $(elem);
     $elem.replaceWith(`<div class="responsive-table">${$elem}</div>`);
   });
