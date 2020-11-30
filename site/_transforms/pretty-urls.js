@@ -1,4 +1,5 @@
 const path = require('path');
+const {defaultLocale} = require('../_data/site.json');
 
 /**
  * Converts /en/... urls to /...,
@@ -41,12 +42,11 @@ const prettyUrls = ($, outputPath, locale) => {
 
     // For English urls we strip the locale prefix.
     // /en/foo/bar/ becomes /foo/bar/
-    const englishLocale = 'en';
-    if (href.startsWith(`/${englishLocale}/`)) {
-      href = href.substring(`/${englishLocale}`.length);
+    if (href.startsWith(`/${defaultLocale}/`)) {
+      href = href.substring(`/${defaultLocale}`.length);
     }
 
-    if (locale !== englishLocale) {
+    if (locale !== defaultLocale) {
       // For all other locales we ensure that urls begin with the locale prefix.
       // /foo/bar becomes /es/foo/bar
       // We do this because content (blog posts, docs) will always use

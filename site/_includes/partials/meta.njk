@@ -6,7 +6,8 @@
 {% endif %}
 
 {% set siteTitle = site.title %}
-{% set currentUrl = site.url + page.url %}
+{% set pageUrlSafe %}{{ page.url | stripDefaultLocale }}{% endset %}
+{% set currentUrl = site.url + pageUrlSafe %}
 
 {% if not socialImage %} 
   {% set socialImage = site.url + '/images/meta/social.png' %} 

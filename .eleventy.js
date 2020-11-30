@@ -6,7 +6,12 @@ const markdownItAnchor = require('markdown-it-anchor');
 const markdownItAttrs = require('markdown-it-attrs');
 
 // Filters
-const {absolute, trailingSlash, leadingAndTrailingSlash} = require('./site/_filters/urls');
+const {
+  absolute,
+  trailingSlash,
+  leadingAndTrailingSlash,
+  stripDefaultLocale,
+} = require('./site/_filters/urls');
 const {i18n} = require('./site/_filters/i18n');
 const {namespaceToPath} = require('./site/_filters/namespace');
 const {minifyJs} = require('./site/_filters/minify-js');
@@ -91,6 +96,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('absolute', absolute);
   eleventyConfig.addFilter('trailingSlash', trailingSlash);
   eleventyConfig.addFilter('leadingAndTrailingSlash', leadingAndTrailingSlash);
+  eleventyConfig.addFilter('stripDefaultLocale', stripDefaultLocale);
   eleventyConfig.addFilter('i18n', i18n);
   eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
   eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
