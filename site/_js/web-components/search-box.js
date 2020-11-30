@@ -132,11 +132,7 @@ export class SearchBox extends BaseElement {
     if (!content || content.length === 0) {
       return;
     }
-    return html`
-      <p class="search-result__content">
-        ${unsafeHTML(content)}
-      </p>
-    `;
+    return html`<p class="search-result__content">${unsafeHTML(content)}</p>`;
   }
 
   /**

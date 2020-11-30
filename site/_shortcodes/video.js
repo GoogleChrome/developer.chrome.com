@@ -27,11 +27,7 @@ const video = paths => {
     paths = [paths];
   }
 
-  return html`
-    <video controls>
-      ${paths.map(generateSource)}
-    </video>
-  `;
+  return html`<video controls>${paths.map(generateSource)}</video>`;
 };
 
 module.exports = {video};
