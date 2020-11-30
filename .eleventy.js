@@ -21,6 +21,7 @@ const {iframe} = require('./site/_shortcodes/iframe');
 const {glitch} = require('./site/_shortcodes/glitch');
 const {img} = require('./site/_shortcodes/img');
 const {video} = require('./site/_shortcodes/video');
+const {youtube} = require('./site/_shortcodes/youtube');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer');
@@ -106,6 +107,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('glitch', glitch);
   eleventyConfig.addShortcode('img', img);
   eleventyConfig.addShortcode('video', video);
+  eleventyConfig.addShortcode('youtube', youtube);
 
   // Add transforms
   eleventyConfig.addTransform('domTransformer', domTransformer);
