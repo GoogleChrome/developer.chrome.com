@@ -1,6 +1,5 @@
 ---
 title: 'Tags'
-description: ''
 permalink: '{{paged.permalink}}'
 layout: 'layouts/tag-landing.njk'
 pagination:
