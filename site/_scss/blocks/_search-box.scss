@@ -34,6 +34,10 @@ search-box[active] {
   height: 100%;
   justify-content: center;
   width: get-size(700);
+
+  > svg {
+    fill: currentColor;
+  }
 }
 
 .search-box__input {
@@ -72,6 +76,10 @@ search-box[active] {
   @extend %overlay;
   display: block;
   text-decoration: none;
+}
+
+.search-box__link[data-active]::before {
+  opacity: 0.1;
 }
 
 .search-box__title {

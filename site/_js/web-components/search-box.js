@@ -36,6 +36,7 @@ export class SearchBox extends BaseElement {
       locale: {type: String},
       placeholder: {type: String},
       results: {type: Array},
+      cursor: {type: Number},
     };
   }
 
@@ -49,6 +50,7 @@ export class SearchBox extends BaseElement {
     if (isActive) {
       activateSearch();
     } else {
+      this.cursor = -1;
       deactivateSearch();
     }
     this.requestUpdate('active', oldVal);
@@ -69,20 +71,141 @@ export class SearchBox extends BaseElement {
     this.query = '';
     this.closeIcon = unsafeSVG(closeIcon);
     this.searchIcon = unsafeSVG(searchIcon);
+    // Used to track which result the user has navigated to using their keyboard.
+    this.cursor = -1;
   }
 
   firstUpdated() {
-    this.input = /** @type {HTMLElement} */ (this.querySelector(
+    this.input = /** @type {HTMLInputElement} */ (this.querySelector(
       '.search-box__input'
     ));
+
+    // Purely for style points.
+    // Add a meta/ctrl + K keyboard shortcut to quick-focus the search input.
+    window.addEventListener('keydown', e => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        this.input?.focus();
+      }
+    });
   }
 
   /**
    * @param {WKeyboardEvent} e
    */
   onInput(e) {
+    // If the user has deleted everything in the search box, clear all state
+    // and hide the results modal.
+    if (!this.input?.value) {
+      this.active = false;
+      return;
+    }
+
     this.active = true;
     this.search(e.target.value);
+  }
+
+  /**
+   * @param {WKeyboardEvent} e
+   */
+  onKeyDown(e) {
+    // Check if the user is navigating within the search popout.
+    switch (e.key) {
+      case 'Home':
+        e.preventDefault();
+        this.firstHit();
+        return;
+
+      case 'End':
+        e.preventDefault();
+        this.lastHit();
+        return;
+
+      case 'ArrowUp':
+        e.preventDefault();
+        this.prevHit();
+        return;
+
+      case 'ArrowDown':
+        e.preventDefault();
+        this.nextHit();
+        return;
+
+      case 'Enter':
+        this.navigateToResult();
+        return;
+
+      case 'Escape':
+        this.active = false;
+        /** @type {HTMLInputElement} */ (this.input).value = '';
+        return;
+    }
+  }
+
+  firstHit() {
+    this.cursor = 0;
+    this.scrollHitIntoView();
+  }
+
+  nextHit() {
+    if (this.cursor < this.results.length - 1) {
+      this.cursor++;
+    } else {
+      this.cursor = 0;
+    }
+    this.scrollHitIntoView();
+  }
+
+  lastHit() {
+    this.cursor = this.results.length - 1;
+    this.scrollHitIntoView();
+  }
+
+  prevHit() {
+    if (this.cursor <= 0) {
+      this.cursor = this.results.length - 1;
+    } else {
+      --this.cursor;
+    }
+    this.scrollHitIntoView();
+  }
+
+  navigateToResult() {
+    const link = /** @type {HTMLAnchorElement} */ (this.querySelector(
+      '.search-box__link[data-active]'
+    ));
+
+    if (link) {
+      window.location.href = link.href;
+    }
+  }
+
+  /**
+   * Changing this.cursor causes LitElement to render,
+   * so we wait for LitElement to render,
+   * then we attempt to scroll the current active link into view.
+   *
+   * This is done because focus never leaves the input field since the user may
+   * still be typing their query. As a result, we need to tell the browser to
+   * scroll if the user has arrowed down to a result that has overflown the
+   * container.
+   */
+  scrollHitIntoView() {
+    this.requestUpdate().then(() => {
+      const activeLink = /** @type {HTMLElement} */ (this.renderRoot?.querySelector(
+        '.search-box__link[data-active]'
+      ));
+
+      const modal = /** @type {HTMLElement} */ (this.querySelector(
+        '.search-box__results'
+      ));
+
+      // Unfortunately we can't use scrollIntoView() as it seems to scroll the
+      // entire page. So instead we manually scroll the modal to the offsetTop
+      // of the active link.
+      if (activeLink && modal) {
+        modal.scrollTo({top: activeLink.offsetTop, behavior: 'smooth'});
+      }
+    });
   }
 
   async toggleSearch() {
@@ -142,12 +265,13 @@ export class SearchBox extends BaseElement {
     if (!this.active) {
       return;
     }
+    // prettier-ignore
     return html`
       <div class="search-box__results">
-        ${this.results.map(r => {
+        ${this.results.map((r, idx) => {
           return html`
             <div class="search-box__result">
-              <a class="search-box__link" href="${r.url}">
+              <a class="search-box__link" href="${r.url}" ?data-active=${idx === this.cursor}>
                 <h3 class="search-box__title type--h6">
                   ${unsafeHTML(r.title)}
                 </h3>
@@ -180,6 +304,7 @@ export class SearchBox extends BaseElement {
           class="search-box__input"
           placeholder="${this.placeholder}"
           @input="${this.onInput}"
+          @keydown="${this.onKeyDown}"
         />
       </div>
       ${this.renderResults()}
