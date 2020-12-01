@@ -13,6 +13,9 @@
 
 redirects:
 
+- from: /home
+  to: /
+
 - from: /extensions/...
   to: /docs/extensions/...
 
