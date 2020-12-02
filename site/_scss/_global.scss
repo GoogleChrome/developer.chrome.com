@@ -6,6 +6,11 @@
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
+  // Allow normally unbreakable words to be broken at arbitrary points if
+  // there are no otherwise acceptable break points in the line.
+  // Soft wrap opportunities introduced by the word break are NOT considered
+  // when calculating min-content intrinsic sizes.
+  overflow-wrap: break-word;
   transition: background 500ms ease-in-out, color 200ms ease;
 }
 
