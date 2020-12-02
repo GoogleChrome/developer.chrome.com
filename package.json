@@ -23,7 +23,7 @@
     "lint:scss": "stylelint **/*.scss",
     "lint:types": "tsc --noEmit",
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
-    "postinstall": "npm-run-all types cloud-secrets",
+    "postinstall": "npm-run-all types",
     "production": "NODE_ENV=production npm-run-all clean ignore gulp rollup eleventy",
     "snapshots": "percy snapshot dist/en",
     "percy": "ELEVENTY_IGNORE_NACL=true npm-run-all production snapshots",
