@@ -69,8 +69,4 @@ top-nav[data-search-active] {
   color: currentColor;
   text-decoration: none;
 }
-
-.top-nav__logo > * + * {
-  margin-left: px-to-rem(14px);
-}
 /* purgecss end ignore */
