@@ -11,6 +11,9 @@ steps:
 - name: node
   entrypoint: npm
   args: ['run', 'production']
+- name: node
+  entrypoint: npm
+  args: ['run', 'algolia']
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
   args:
