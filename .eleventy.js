@@ -41,6 +41,7 @@ const locales = require('./site/_data/site').locales;
 const algoliaCollection = require('./site/_collections/algolia');
 const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
+const extensionsReferenceCollection = require('./site/_collections/reference');
 
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
@@ -89,6 +90,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('algolia', algoliaCollection);
   eleventyConfig.addCollection('feeds', feedsCollection);
   eleventyConfig.addCollection('tags', tagsCollection);
+  eleventyConfig.addCollection('reference', extensionsReferenceCollection);
 
   // Add static collections
   // These are generated as a postinstall step as computation is slow

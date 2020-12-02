@@ -1,30 +1,59 @@
 {% extends "layouts/base.njk" %}
 
+{# Update "content" with additional headings and so forth, so we can pass it
+   through the toc filter. #}
+{% set content %}
+  {{ content | safe }}
+
+  {% import 'macros/reference.njk' as macros with context %}
+
+  <h2 id="stable_apis">Stable APIs</h2>
+  {{ macros.renderReferenceTable(collections.reference, 'stable') }}
+
+  <h2 id="beta_apis">Beta APIs</h2>
+  <p>
+    These APIs are only available in the Chrome Beta and Dev channels:
+  </p>
+  {{ macros.renderReferenceTable(collections.reference, 'beta') }}
+
+  <h2 id="dev_apis">Dev APIs</h2>
+  <p>
+    These APIs are only available in the Chrome Dev channel:
+  </p>
+  {{ macros.renderReferenceTable(collections.reference, 'dev') }}
+
+{# TODO(samthor): Chrome currently has none of these. #}
+{#
+  <h2 id="experimental">Experimental APIs</h2>
+  <p>
+    Chrome also has experimental APIs, some of which will become supported APIs in future releases of Chrome.
+  </p>
+#}
+{% endset %}
+
 {% block title_bar %}
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
 {% block content %}
   <div class="display-flex">
+    {% include 'partials/navigation-tree.njk' %}
 
-    <article class="stack measure-long type center-margin pad-400">
-      <h1>{{ title }}</h1>
-      {{ content | safe }}
+    <article class="stack measure-long center-margin pad-left-400 pad-right-400">
+      <h1 class="type--h2">{{ title }}</h1>
 
-{% import 'macros/reference.njk' as macros with context %}
+      <div class="toc-container display-block xl:display-none">
+        {% include 'partials/toc.njk' %}
+      </div>
 
-{# TODO(samthor): This currently generates a list of all known APIs, but we only
-   render pages for specific documented APIs. #}
-
-<h2>Stable APIs</h2>
-{{ macros.renderReferenceTable(collections.types, 'stable') }}
-
-<h2>Beta APIs</h2>
-{{ macros.renderReferenceTable(collections.types, 'beta') }}
-
-<h2>Dev APIs</h2>
-{{ macros.renderReferenceTable(collections.types, 'dev') }}
+      <div class="stack type">
+        {{ content | safe }}
+      </div>
 
     </article>
+
+    <div class="toc-container display-none xl:display-block pad-left-400 pad-right-400">
+      {% include 'partials/toc.njk' %}
+    </div>
   </div>
 {% endblock %}

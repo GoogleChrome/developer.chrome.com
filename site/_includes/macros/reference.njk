@@ -13,12 +13,16 @@
   </thead>
   <tbody>
 
-  {% for namespace in all %}
-    {% if namespace.channel === channel %}
-      <tr>
-        <td><a href="{{ namespace.name | namespaceToPath }}">{{ namespace.shortName }}</a></td>
-        <td class="reference-collapse">{{ namespace.comment | safe }}</td>
-      </tr>
+  {% for page in all %}
+    {% if page.data.namespace %}
+      {% set namespace = page.data.namespace %}
+      {# TODO(samthor): Fix channel data from source .d.ts. #}
+      {% if channel == 'stable' %}
+        <tr>
+          <td><a class="surface weight-medium" href="{{ namespace.name | namespaceToPath }}">{{ namespace.shortName }}</a></td>
+          <td class="reference-collapse type">{{ namespace.comment | safe }}</td>
+        </tr>
+      {% endif %}
     {% endif %}
   {% endfor %}
 
