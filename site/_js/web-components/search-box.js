@@ -53,6 +53,7 @@ export class SearchBox extends BaseElement {
       this.cursor = -1;
       deactivateSearch();
     }
+    this.setAttribute('aria-expanded', isActive.toString());
     this.requestUpdate('active', oldVal);
   }
 
@@ -73,10 +74,20 @@ export class SearchBox extends BaseElement {
     this.searchIcon = unsafeSVG(searchIcon);
     // Used to track which result the user has navigated to using their keyboard.
     this.cursor = -1;
+    /** @type {!HTMLInputElement} */
+    this.input;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.setAttribute('role', 'combobox');
+    this.setAttribute('aria-owns', 'search-box__results');
+    this.setAttribute('aria-haspopup', 'listbox');
+    this.setAttribute('aria-expanded', 'false');
   }
 
   firstUpdated() {
-    this.input = /** @type {HTMLInputElement} */ (this.querySelector(
+    this.input = /** @type {!HTMLInputElement} */ (this.querySelector(
       '.search-box__input'
     ));
 
@@ -87,6 +98,30 @@ export class SearchBox extends BaseElement {
         this.input?.focus();
       }
     });
+  }
+
+  /**
+   * Keep track of cursor changes and reflect them to aria-activedescendant.
+   * This ensures screen readers properly announce the current search result.
+   * We do this because focus never leaves the search input box, so when the
+   * user is arrowing through results, we have to tell the screen reader about
+   * it.
+   * @param {Map<string, string>} changedProperties A Map of LitElement properties that changed.
+   */
+  updated(changedProperties) {
+    if (!changedProperties.has('cursor')) {
+      return;
+    }
+
+    if (this.cursor === -1) {
+      this.input?.removeAttribute('aria-activedescendant');
+      return;
+    }
+
+    this.input?.setAttribute(
+      'aria-activedescendant',
+      `search-box__link-${this.cursor}`
+    );
   }
 
   /**
@@ -136,7 +171,7 @@ export class SearchBox extends BaseElement {
 
       case 'Escape':
         this.active = false;
-        /** @type {HTMLInputElement} */ (this.input).value = '';
+        this.input.value = '';
         return;
     }
   }
@@ -171,7 +206,7 @@ export class SearchBox extends BaseElement {
 
   navigateToResult() {
     const link = /** @type {HTMLAnchorElement} */ (this.querySelector(
-      '.search-box__link[data-active]'
+      '.search-box__link[aria-selected="true"]'
     ));
 
     if (link) {
@@ -191,8 +226,8 @@ export class SearchBox extends BaseElement {
    */
   scrollHitIntoView() {
     this.requestUpdate().then(() => {
-      const activeLink = /** @type {HTMLElement} */ (this.renderRoot?.querySelector(
-        '.search-box__link[data-active]'
+      const activeLink = /** @type {HTMLAnchorElement} */ (this.querySelector(
+        '.search-box__link[aria-selected="true"]'
       ));
 
       const modal = /** @type {HTMLElement} */ (this.querySelector(
@@ -265,13 +300,14 @@ export class SearchBox extends BaseElement {
     if (!this.active) {
       return;
     }
+
     // prettier-ignore
     return html`
-      <div class="search-box__results">
+      <div id="search-box__results" class="search-box__results" role="listbox" aria-label="${this.placeholder}">
         ${this.results.map((r, idx) => {
           return html`
-            <div class="search-box__result">
-              <a class="search-box__link" href="${r.url}" ?data-active=${idx === this.cursor}>
+            <div class="search-box__result" role="presentation">
+              <a class="search-box__link" id="search-box__link-${idx}" href="${r.url}" aria-selected="${idx === this.cursor}" role="option">
                 <h3 class="search-box__title type--h6">
                   ${unsafeHTML(r.title)}
                 </h3>
@@ -289,7 +325,7 @@ export class SearchBox extends BaseElement {
   render() {
     // prettier-ignore
     return html`
-      <div class="search-box__inner">
+      <div class="search-box__inner" role="presentation">
         <button
           @click="${this.toggleSearch}"
           aria-label="${this.buttonLabel}"
@@ -300,11 +336,13 @@ export class SearchBox extends BaseElement {
 
         <input
           type="text"
-          role="search"
           class="search-box__input"
           placeholder="${this.placeholder}"
           @input="${this.onInput}"
           @keydown="${this.onKeyDown}"
+          aria-label="${this.placeholder}"
+          aria-autocomplete="list"
+          aria-controls="search-box__results"
         />
       </div>
       ${this.renderResults()}

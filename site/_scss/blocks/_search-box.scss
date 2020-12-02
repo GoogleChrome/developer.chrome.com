@@ -72,13 +72,18 @@ search-box[active] {
   }
 }
 
+.search-box__result {
+  hyphens: auto;
+  word-break: break-all;
+}
+
 .search-box__link {
   @extend %overlay;
   display: block;
   text-decoration: none;
 }
 
-.search-box__link[data-active]::before {
+.search-box__link[aria-selected='true']::before {
   opacity: 0.1;
 }
 
