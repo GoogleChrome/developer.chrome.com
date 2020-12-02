@@ -26,12 +26,13 @@ const {youtube} = require('./site/_shortcodes/youtube');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer');
+const {purifyCss} = require('./site/_transforms/purify-css');
+const {minifyHtml} = require('./site/_transforms/minify-html');
 
 // Plugins
 const md = require('./site/_plugins/markdown');
 const toc = require('eleventy-plugin-toc');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
-const optimizeHtmlPlugin = require('./site/_plugins/optimize-html');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Supported locales
@@ -77,11 +78,6 @@ module.exports = eleventyConfig => {
   });
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
-  // Only minify HTML and inline CSS if we are in production because it slows
-  // builds _right_ down
-  if (isProduction) {
-    eleventyConfig.addPlugin(optimizeHtmlPlugin);
-  }
 
   // Add collections
   locales.forEach(locale => eleventyConfig.addCollection(`blog-${locale}`, collections => {
@@ -115,6 +111,18 @@ module.exports = eleventyConfig => {
 
   // Add transforms
   eleventyConfig.addTransform('domTransformer', domTransformer);
+
+  // Only minify HTML and inline CSS if we are in production because it slows
+  // builds _right_ down.
+  // 
+  // !!! Important !!!
+  // These transforms should _always_ go last because they look at the final
+  // HTML for the page and inline CSS / minify.
+  if (isProduction) {
+    eleventyConfig.addTransform('purifyCss', purifyCss);
+    eleventyConfig.addTransform('minifyHtml', minifyHtml);
+  }
+
 
   return {
     markdownTemplateEngine: 'njk',

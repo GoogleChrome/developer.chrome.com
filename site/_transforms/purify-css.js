@@ -15,15 +15,13 @@
  */
 
 const fs = require('fs');
-const minify = require('html-minifier').minify;
 /* eslint-disable node/no-unpublished-require */
 const PurgeCSS = require('purgecss').PurgeCSS;
 const csso = require('csso');
 const pathToCss = 'dist/css/main.css';
 
 /**
- * Inlines the CSS.
- * Optimizes HTML
+ * Inlines all of the page's CSS into the <head>
  */
 
 const purifyCss = async (content, outputPath) => {
@@ -70,32 +68,4 @@ const purifyCss = async (content, outputPath) => {
   return content;
 };
 
-const minifyHtml = (content, outputPath) => {
-  if (outputPath && outputPath.endsWith('.html')) {
-    try {
-      content = minify(content, {
-        removeAttributeQuotes: true,
-        collapseBooleanAttributes: true,
-        collapseWhitespace: true,
-        removeComments: true,
-        sortClassName: true,
-        sortAttributes: true,
-        html5: true,
-        decodeEntities: true,
-      });
-      return content;
-    } catch (err) {
-      console.warn('Could not minify html for', outputPath);
-    }
-  }
-
-  return content;
-};
-
-module.exports = {
-  initArguments: {},
-  configFunction: async eleventyConfig => {
-    eleventyConfig.addTransform('purifyCss', purifyCss);
-    eleventyConfig.addTransform('minifyHtml', minifyHtml);
-  },
-};
+module.exports = {purifyCss};
