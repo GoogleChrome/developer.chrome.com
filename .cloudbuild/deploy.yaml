@@ -6,6 +6,8 @@ steps:
 - name: node
   entrypoint: npm
   args: ['run', 'postinstall']
+  env:
+  - 'PROJECT_ID=$PROJECT_ID'
 - name: node
   entrypoint: npm
   args: ['run', 'production']
