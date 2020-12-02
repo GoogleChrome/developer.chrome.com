@@ -1,8 +1,4 @@
 .code-sections {
-  border-left: 1px solid var(--color-hairline);
-  margin-top: get-size(300);
-  padding-left: calc(#{get-size(300)} - 1px);
-
   ul {
     padding-left: 0;
   }
@@ -10,27 +6,78 @@
   // nb. This is intentionally recursive.
   .code-sections {
     border: 1px solid var(--color-hairline);
-    margin: 0;
     padding: calc(#{get-size(300)} - 1px);
+
+    /* stylelint-disable-next-line selector-max-compound-selectors */
+    ul > li:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  .type--small {
+    font-size: 0.875em;
+    line-height: 2em;
   }
 }
 
-.code-sections--summary {
-  border-left: 0;
-  padding-left: 0;
+// This is a slightly smaller label used by API pages which doesn't match the
+// regular type system.
+.code-sections__label {
+  @include font-setup(14px, 28px);
+}
 
-  li > :first-child {
-    color: var(--color-secondary-text);
-  }
+// Ensure that .code-sections has a margin-top, except in cases where it's
+// already in a stack (as this will bring its margin).
+/* stylelint-disable-next-line selector-max-compound-selectors */
+:not(.stack) > * + .code-sections {
+  margin-top: get-size(300);
+}
+
+.code-sections__link {
+  @extend %surface;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+// This is used for method signatures. We need to:
+//  - use opacity to make them less pronounced
+//  - allow overflow-wrap as often we have very long preambles, e.g.:
+//    "chrome.browserAction.getBadgeBackgroundColor(details:"
+.code-sections__signature {
+  color: get-color('grey-700');
+  font-size: 0.875em;
+  opacity: 0.9;
+  overflow-wrap: break-word;
+  padding-bottom: 1em;
+}
+
+.code-sections__signature-type {
+  color: var(--color-cyan-medium);
+}
+
+.code-sections__optional {
+  color: var(--color-pink-medium);
+}
+
+.code-sections__callback {
+  background: get-color('grey-50');
+  border: 1px solid var(--color-hairline);
+  padding: 1em;
+}
+
+.code-sections__overline {
+  // This is used to describe enums and so on which don't have a left notice.
+  border-top: 1px solid var(--color-hairline);
+  margin: 1em 0;
+  padding-top: get-size(300);
 }
 
 .code-sections li {
-  list-style: none;
-}
-
-.code-sections li:not(.code-sections__info) {
+  border-top: 1px solid var(--color-hairline);
   display: flex;
   flex-direction: column;
+  padding-top: get-size(300);
   position: relative;
 
   @include media-query('lg') {
@@ -41,16 +88,35 @@
   li li {
     flex-direction: column !important;
   }
+
+  > :first-child {
+    @include apply-utility('weight', 'medium');
+    flex: 0 0 auto;
+    flex-shrink: 1;
+    min-width: px-to-rem(144px);
+    padding-right: get-size(300);
+  }
+
+  > :not(:first-child) {
+    flex-grow: 1;
+  }
 }
 
-.code-sections li:not(:first-of-type) {
-  border-top: 1px solid var(--color-hairline);
-  padding-top: get-size(300);
-}
+.code-sections--summary {
+  border-left: 0;
+  padding-left: 0;
 
-.code-sections li:not(.code-sections__info) > :first-child {
-  @include apply-utility('weight', 'medium');
-  flex-shrink: 1;
-  min-width: px-to-rem(136px);
-  padding-right: get-size(300);
+  li:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  li {
+    > :first-child {
+      // This makes the "Description", "Types" and so on left-columns small.
+      // We avoid "!important" here only because we are _below_ the
+      // ".code-sections li > :first-child" selector which is above this file.
+      min-width: px-to-rem(104px);
+    }
+  }
 }

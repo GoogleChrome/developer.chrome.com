@@ -16,17 +16,24 @@
     <article class="stack measure-long center-margin pad-400">
       <h1 class="type--h2">{{ title }}</h1>
 
+      {% if not namespace._isChromeOS %}
+        {# This never renders right now, and is just here for testing. #}
+        <div class="aside aside--note">
+          <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
+        </div>
+      {% endif %}
+
       <div class="code-sections code-sections--summary">
         <ul class="stack flow-space-300">
           <li>
-            <div>Description</div>
-            <div>
-              <p>{{ namespace.comment | safe }}</p>
+            <div class="code-sections__label">Description</div>
+            <div class="type">
+              {{ namespace.comment | safe }}
             </div>
           </li>
           {% if namespace.permissions.length %}
             <li>
-              <div>Permissions</div>
+              <div class="code-sections__label">Permissions</div>
               <div>
                 {% for permission in namespace.permissions %}
                   <code>{{ permission }}</code>
@@ -36,7 +43,7 @@
           {% endif %}
           {% if namespace.channel !== 'stable' %}
             <li>
-              <div>Availability</div>
+              <div class="code-sections__label">Availability</div>
               <div>
                 {% if namespace.channel === 'dev' %}
                   Dev channel only.

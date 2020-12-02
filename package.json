@@ -89,6 +89,7 @@
     "dotenv": "^8.2.0",
     "eslint-plugin-ava": "^11.0.0",
     "gts": "^2.0.2",
+    "html-escaper": "^2.0.2",
     "husky": "^4.3.0",
     "install": "^0.13.0",
     "iso-639-1": "^2.1.4",
