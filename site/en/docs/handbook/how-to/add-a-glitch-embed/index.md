@@ -7,7 +7,8 @@ date: 2020-11-23
 
 ## Add a Glitch Embed
 
-To add an Glitch embed to a post you can use a custom shortcode which optimizes Glitch embeds on the site.
+To add an Glitch embed to a post you can use a custom shortcode which optimizes
+Glitch embeds on the site.
 
 {% raw %}
 
@@ -23,7 +24,8 @@ To add an Glitch embed to a post you can use a custom shortcode which optimizes 
   id='fav-kitties-compress-starter'
 %}
 
-The Glitch embed shortcode supports additional properties though. Below is an example interface of the accepted argument:
+The Glitch embed shortcode supports additional properties though. Below is an
+example interface of the accepted argument:
 
 ```typescript
 interface GlitchArgs {

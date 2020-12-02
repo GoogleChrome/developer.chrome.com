@@ -24,3 +24,14 @@ To add an YouTube embed to a post you can use a custom shortcode.
 %}
 
 You can also specify the startTime in the second parameter.
+
+{% raw %}
+
+```md
+{% youtube
+  id='whnms4CLJys',
+  startTime='123'
+%}
+```
+
+{% endraw %}
