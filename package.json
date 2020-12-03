@@ -4,13 +4,13 @@
   "description": "The source for developers.chrome.com",
   "private": true,
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
     "algolia": "node ./algolia.js",
     "clean": "rimraf dist",
     "cloud-secrets": "node ./cloud-secrets.js",
-    "dev": "npm-run-all version-check clean ignore gulp rollup --parallel --race gulp:watch rollup:watch eleventy:watch start",
+    "dev": "npm-run-all clean ignore gulp rollup --parallel --race gulp:watch rollup:watch eleventy:watch start",
     "eleventy:debug": "node --inspect ./node_modules/.bin/eleventy",
     "eleventy:watch": "npx eleventy --quiet --watch",
     "eleventy": "npx eleventy",
@@ -34,8 +34,7 @@
     "start": "node ./server",
     "test:watch": "ava --watch",
     "test": "nyc ava",
-    "types": "node ./tools/types",
-    "version-check": "node ./tools/version-check"
+    "types": "node ./tools/types"
   },
   "license": "Apache 2.0",
   "dependencies": {
