@@ -33,6 +33,8 @@ export class SearchBox extends BaseElement {
     return {
       active: {type: Boolean, reflect: true},
       buttonLabel: {type: String},
+      docsLabel: {type: String},
+      blogLabel: {type: String},
       locale: {type: String},
       placeholder: {type: String},
       results: {type: Array},
@@ -65,17 +67,29 @@ export class SearchBox extends BaseElement {
     super();
     this._active = false;
     this.buttonLabel = 'open search';
+    this.docsLabel = 'Documentation';
+    this.blogLabel = 'Blog';
     this.locale = 'en';
     this.placeholder = 'Search';
+    this.query = '';
     /** @type AlgoliaCollectionItem[] */
     this.results = [];
-    this.query = '';
-    this.closeIcon = unsafeSVG(closeIcon);
-    this.searchIcon = unsafeSVG(searchIcon);
+    /** @type AlgoliaCollectionItem[] */
+    this.docsResults = [];
+    /** @type AlgoliaCollectionItem[] */
+    this.blogResults = [];
+    // Used when rendering categorized results. The counter helps ensure that
+    // each result has a unique id that corresponds to its rendered order in
+    // the list.
+    this.resultsCounter = -1;
     // Used to track which result the user has navigated to using their keyboard.
     this.cursor = -1;
     /** @type {!HTMLInputElement} */
     this.input;
+    this.closeIcon = unsafeSVG(closeIcon);
+    this.searchIcon = unsafeSVG(searchIcon);
+
+    this.renderResult = this.renderResult.bind(this);
   }
 
   connectedCallback() {
@@ -260,6 +274,7 @@ export class SearchBox extends BaseElement {
       this.results = [];
       return;
     }
+
     try {
       const {hits: results} = await index.search(query, {
         hitsPerPage: 10,
@@ -270,12 +285,28 @@ export class SearchBox extends BaseElement {
         attributesToSnippet: ['content:25'],
         snippetEllipsisText: '…',
       });
+
       this.results = results.map(r => {
-        const title = r._highlightResult.title.value;
-        const content = r._snippetResult.content.value;
-        const url = r.url;
-        return {title, content, url};
+        // Algolia organizes searchable fields into the following structure:
+        // {title: {value: 'some content', matchLevel: 'full|partial|none' }}
+        // This helper just lets us define keys that we want to extract the
+        // value from and add to the top level result object.
+        // At present we only use a single key, 'title', but we'll probably add
+        // more keys over time (tags, etc) so I'm leaving this helper in place.
+        const highlightKeys = ['title'];
+        for (const highlightKey of highlightKeys) {
+          const highlightValue = r._highlightResult[highlightKey];
+          if (highlightValue && highlightValue.matchLevel === 'full') {
+            r[highlightKey] = highlightValue.value;
+          }
+        }
+        r.snippet = r._snippetResult.content.value;
+        return r;
       });
+
+      // Further categorize results into docs and blog posts.
+      this.docsResults = this.results.filter(r => r.type === 'doc');
+      this.blogResults = this.results.filter(r => r.type === 'blogPost');
     } catch (err) {
       console.error(err);
       console.error(err.debugData);
@@ -290,7 +321,58 @@ export class SearchBox extends BaseElement {
     if (!content || content.length === 0) {
       return;
     }
-    return html`<p class="search-result__content">${unsafeHTML(content)}</p>`;
+
+    return html`<p>${unsafeHTML(content)}</p>`;
+  }
+
+  /**
+   * @param {string} [image]
+   * @return {TemplateResult|undefined}
+   */
+  renderImage(image) {
+    if (!image || image.length === 0) {
+      return;
+    }
+
+    return html`<img
+      class="search-box__thumbnail"
+      src="${image}"
+      width="100"
+      height="100"
+      alt=""
+    />`;
+  }
+
+  /**
+   * @return {TemplateResult|undefined}
+   */
+  renderResult(result) {
+    // Because we split results across multiple sections (docs, blog, etc)
+    // we need to have a single top-level counter so when the user presses
+    // the down arrow key, we navigate to the next result, regardless of
+    // which section its in.
+    this.resultsCounter += 1;
+    return html`
+      <div role="presentation">
+        <a
+          id="search-box__link-${this.resultsCounter}"
+          class="search-box__link"
+          href="${result.url}"
+          aria-selected="${this.resultsCounter === this.cursor}"
+          role="option"
+        >
+          <div>
+            <h3 class="search-box__title type--h6">
+              ${unsafeHTML(result.title)}
+            </h3>
+            <div class="search-box__snippet type--small">
+              ${this.renderContent(result.snippet)}
+            </div>
+          </div>
+          ${this.renderImage(result.image)}
+        </a>
+      </div>
+    `;
   }
 
   /**
@@ -301,23 +383,30 @@ export class SearchBox extends BaseElement {
       return;
     }
 
-    // prettier-ignore
+    this.resultsCounter = -1;
     return html`
-      <div id="search-box__results" class="search-box__results" role="listbox" aria-label="${this.placeholder}">
-        ${this.results.map((r, idx) => {
-          return html`
-            <div class="search-box__result" role="presentation">
-              <a class="search-box__link" id="search-box__link-${idx}" href="${r.url}" aria-selected="${idx === this.cursor}" role="option">
-                <h3 class="search-box__title type--h6">
-                  ${unsafeHTML(r.title)}
-                </h3>
-                <div class="search-box__snippet type--small">
-                  ${this.renderContent(r.content)}
-                </div>
-              </a>
-            </div>
-          `;
-        })}
+      <div
+        id="search-box__results"
+        class="search-box__results"
+        role="listbox"
+        aria-label="${this.placeholder}"
+      >
+        ${this.blogResults?.length
+          ? html`
+              <div class="search-box__result-heading type--label">
+                ${this.blogLabel.toUpperCase()}
+              </div>
+              ${this.blogResults?.map(this.renderResult)}
+            `
+          : ''}
+        ${this.docsResults?.length
+          ? html`
+              <div class="search-box__result-heading type--label">
+                ${this.docsLabel.toUpperCase()}
+              </div>
+              ${this.docsResults?.map(this.renderResult)}
+            `
+          : ''}
       </div>
     `;
   }

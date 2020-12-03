@@ -66,7 +66,8 @@ module.exports = collections => {
       url: item.url,
       tags: item.data.tags || [],
       locale: item.data.locale,
-      photo: item.data.hero && generateSrc(item.data.hero, {auto: 'format'}),
+      image:
+        item.data.hero && generateSrc(item.data.hero, {w: 100, auto: 'format'}),
       objectID: createHash('md5').update(item.url).digest('hex'),
     };
 

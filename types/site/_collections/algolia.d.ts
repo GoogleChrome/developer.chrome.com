@@ -20,7 +20,7 @@ declare global {
     description?: string;
     locale: string;
     objectID: string;
-    photo?: string;
+    image?: string;
     tags: string[];
     title: string;
     type?: 'blogPost' | 'doc' | 'landing' | 'release';

@@ -18,6 +18,13 @@
     </div>
 
     {# Search #}
-    <search-box class="display-grid align-center" locale="{{locale}}" buttonLabel="{{ 'i18n.common.open_search' | i18n(locale) }}" placeholder="{{'i18n.common.search_placeholder' | i18n(locale)}}"></search-box>
+    <search-box
+      class="display-grid align-center"
+      locale="{{locale}}"
+      buttonLabel="{{ 'i18n.common.open_search' | i18n(locale) }}"
+      docsLabel="{{ 'i18n.common.documentation' | i18n(locale) }}"
+      blogLabel="{{ 'i18n.common.blog' | i18n(locale) }}"
+      placeholder="{{'i18n.common.search_placeholder' | i18n(locale)}}"
+    ></search-box>
   </nav>
 </top-nav>

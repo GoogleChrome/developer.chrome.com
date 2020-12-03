@@ -59,27 +59,37 @@ search-box[active] {
 }
 
 .search-box__results {
+  --flow-space: #{get-size(400)};
   @extend %stack;
   height: calc(100vh - #{$search-box-height});
+  max-width: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
+  // Add some extra padding to the bottom so there's whitespace after the last
+  // result on mobile.
+  padding-bottom: get-size(1000);
   position: absolute;
   // top = search-box's height + top-nav's bottom padding + gap
-  top: calc(#{$search-box-height} + #{nth(map-get($top-nav-padding, 'lg'), 1)} + #{get-size(300)});
+  top: calc(#{$search-box-height} + #{nth(map-get($top-nav-padding, 'lg'), 1)} + #{get-size(400)});
 
   strong {
     color: var(--color-primary);
   }
 }
 
-.search-box__result {
-  hyphens: auto;
-  word-break: break-all;
+.search-box__result-heading {
+  color: var(--color-secondary-text);
+}
+
+.search-box__result-heading ~ .search-box__result-heading {
+  border-top: 1px solid var(--color-hairline);
+  padding-top: get-size(400);
 }
 
 .search-box__link {
+  --overlay-background-color: var(--color-primary);
   @extend %overlay;
-  display: block;
+  align-items: center;
+  display: inline-flex;
   text-decoration: none;
 }
 
@@ -93,5 +103,13 @@ search-box[active] {
 
 .search-box__snippet {
   color: var(--color-secondary-text);
+}
+
+.search-box__thumbnail {
+  margin-left: get-size(200);
+
+  @include media-query('md') {
+    margin-left: get-size(300);
+  }
 }
 /* purgecss end ignore */
