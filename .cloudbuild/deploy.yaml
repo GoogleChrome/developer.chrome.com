@@ -25,5 +25,6 @@ steps:
     # This snippet lets us pass additional args via the Cloud Build console
     # in the _EXTRA_GCLOUD_ARGS var.
     # nb. We don't have to specify --project; it's part of the environment.
-    gcloud app deploy ${_EXTRA_GCLOUD_ARGS:-}
-
+    gcloud app deploy ${_EXTRA_GCLOUD_ARGS}
+substitutions:
+  _EXTRA_GCLOUD_ARGS:  # default empty
