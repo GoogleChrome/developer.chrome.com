@@ -2,5 +2,6 @@ chrome:
   - url: extensions
   - url: webstore
   - url: native-client
+  - url: multidevice
 tools:
   - url: devtools

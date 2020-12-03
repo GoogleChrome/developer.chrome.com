@@ -1,0 +1,6 @@
+android:
+  en: 'Chrome for Android'
+ios:
+  en: 'Chrome for iOS'
+webview:
+  en: 'Chrome WebView'

@@ -1,0 +1,16 @@
+- url: /docs/multidevice/overview/
+- title: i18n.docs.multidevice.android
+  sections:
+    - url: /docs/multidevice/android/overview/
+    - url: /docs/multidevice/android/customtabs/
+    - url: /docs/multidevice/android/intents/
+- title: i18n.docs.multidevice.ios
+  sections:
+    - url: /docs/multidevice/ios/links/
+- title: i18n.docs.multidevice.webview
+  sections:
+    - url: /docs/multidevice/webview/gettingstarted/
+    - url: /docs/multidevice/webview/workflow/
+    - url: /docs/multidevice/webview/tipsandtricks/
+    - url: /docs/multidevice/webview/pixelperfect/
+- url: /docs/multidevice/user-agent/
