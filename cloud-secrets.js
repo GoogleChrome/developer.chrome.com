@@ -2,27 +2,46 @@ const {SecretManagerServiceClient} = require('@google-cloud/secret-manager');
 
 const client = new SecretManagerServiceClient();
 
-(async () => {
+const cloudSecrets = async () => {
   if (!process.env.PROJECT_ID) {
-    return;
+    return console.warn(
+      'No Google Cloud Project ID found, no .env file is being generated.'
+    );
   }
 
-  const [secretsList] = await client.listSecrets({
-    parent: `projects/${process.env.PROJECT_ID}`,
-  });
+  console.log('Generating .env file.');
 
+  const project = `projects/${process.env.PROJECT_ID}`;
   let dotenv = '';
+  const fetchedSecrets = [];
+  const [secretsList] = await client.listSecrets({parent: project});
 
-  for (const secret of secretsList) {
-    const key = secret.name.split('/').pop();
-    const [version] = await client.accessSecretVersion({
-      name: secret.name + '/versions/latest',
+  for (const secretItem of secretsList) {
+    const key = secretItem.name.split('/').pop();
+    const [versions] = await client.listSecretVersions({
+      parent: secretItem.name,
     });
+    const version = versions.find(v => v.state === 'ENABLED');
 
-    const value = version.payload.data.toString();
-
-    dotenv += `${key}=${value}\n`;
+    if (version) {
+      const [accessedSecret] = await client.accessSecretVersion({
+        name: version.name,
+      });
+      const value = accessedSecret.payload.data.toString();
+      dotenv += `${key}=${value}\n`;
+      fetchedSecrets.push(key);
+    }
   }
 
   require('fs').writeFileSync('.env', dotenv);
-})();
+
+  console.log(
+    `The following environment variables have been added to the generated .env file: ${fetchedSecrets.join(
+      ', '
+    )}`
+  );
+};
+
+cloudSecrets().catch(e => {
+  console.warn('Ooops, there was an error in generating the .env file.', e);
+});
