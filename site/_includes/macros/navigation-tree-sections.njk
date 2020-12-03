@@ -12,7 +12,6 @@ and marks it as active.
 {% endmacro %}
 
 {% macro navigationTreeSectionsInternal(expandedSections) %}
-
 {% for item in expandedSections %}
   {% if item.sections %}
     <button class="navigation-tree__link button" data-expandable aria-expanded="{{ item.active }}">

@@ -18,6 +18,7 @@ const removeMarkdown = require('remove-markdown');
 const {createHash} = require('crypto');
 
 const {generateSrc} = require('../_shortcodes/img');
+const {drafts} = require('../_utils/drafts');
 
 /**
  * Shrink the size of the given fulltext to fit within a certain limit, at the
@@ -45,7 +46,7 @@ function limitText(content, limit = 7500) {
  * @returns {AlgoliaCollectionItem[]}
  */
 module.exports = collections => {
-  const allSorted = collections.getAllSorted();
+  const allSorted = collections.getAllSorted().filter(drafts);
   /** @type {AlgoliaCollectionItem[]} */
   const algoliaCollectionItems = [];
 

@@ -46,9 +46,13 @@ let SectionLinkItem;
  * @param {Section[]} sections
  * @param {string} pageUrl
  * @param {string} locale
- * @return {SectionLinkItem[]}
+ * @return {SectionLinkItem[]|undefined}
  */
 function expandSections(sections, pageUrl, locale) {
+  if (!pageUrl) {
+    return;
+  }
+
   /** @type {SectionLinkItem|undefined} */
   let target;
   let matchLength = 0;

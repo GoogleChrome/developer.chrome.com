@@ -15,6 +15,7 @@
  */
 const {locales} = require('../_data/site.json');
 const supportedTags = require('../_data/supportedTags.json');
+const {drafts} = require('../_utils/drafts');
 
 /**
  * Returns an object with the keys being supported tags and the object
@@ -29,7 +30,7 @@ module.exports = function (collections) {
   /** @type Tags */
   const tags = {};
 
-  const allSorted = collections.getAllSorted();
+  const allSorted = collections.getAllSorted().filter(drafts);
 
   /**
    * Iterates over every post in order to place them in the proper tag collections.

@@ -25,17 +25,19 @@ have been defined in the _data/docs/*.yml file for this project.
       </li>
     {% elif item.url %}
       {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
-      <li>
-        <div>
-          {% if type === 'column' %}
-            {{ icon('document') }}
+      {% if post %}
+        <li>
+          <div>
+            {% if type === 'column' %}
+              {{ icon('document') }}
+            {% endif %}
+            <a class="project-sections__link color-primary-shade decoration-none surface" href="{{ post.url }}">{{ post.data.title }}</a>
+          </div>
+          {% if type !== 'nested-column' %}
+            <div class="project-sections__description measure-long">{{ post.data.description }}</div>
           {% endif %}
-          <a class="project-sections__link color-primary-shade decoration-none surface" href="{{ post.url }}">{{ post.data.title }}</a>
-        </div>
-        {% if type !== 'nested-column' %}
-          <div class="project-sections__description measure-long">{{ post.data.description }}</div>
-        {% endif %}
-      </li>
+        </li>
+      {% endif %}
     {% endif %}
   {% endfor %}
 </ul>

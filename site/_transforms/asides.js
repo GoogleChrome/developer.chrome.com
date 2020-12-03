@@ -29,7 +29,7 @@ const types = Object.keys(icons);
 const addLabel = ($elem, type, locale) => {
   const text = i18n(`i18n.common.${type}`, locale);
   $elem.prepend(
-    `<div class="aside__label">
+    `<div class="aside__label gap-bottom-300">
       ${icons[type]}
       <span>${text}</span>
     </div>`

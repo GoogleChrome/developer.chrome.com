@@ -1,4 +1,5 @@
 const yaml = require('js-yaml');
+const {drafts} = require('./site/_utils/drafts');
 
 // Markdown
 const markdownIt = require('markdown-it');
@@ -81,7 +82,7 @@ module.exports = eleventyConfig => {
 
   // Add collections
   locales.forEach(locale => eleventyConfig.addCollection(`blog-${locale}`, collections => {
-    return collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).reverse();
+    return collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).filter(drafts).reverse();
   }));
   eleventyConfig.addCollection('algolia', algoliaCollection);
   eleventyConfig.addCollection('feeds', feedsCollection);

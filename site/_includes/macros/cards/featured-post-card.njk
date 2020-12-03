@@ -15,21 +15,15 @@
     </div>
   </div>
 
-  {#
-    The thumbnail image defines its own bottom margin because it's optional
-    and needs to push the title down. If the title defined its own top
-    margin and the thumbnail was omitted then there would be too much space
-    between the title and the title-bar.
-  #}
   {% if pd.hero %}
-    <div class="featured-card__thumbnail gap-top-400 gap-bottom-300">
+    <div class="featured-card__thumbnail gap-top-400">
       <a class="display-block" href="{{ post.url }}">
         {% img className="rounded-100 object-fit-cover width-full", src=pd.hero, alt=pd.alt, width="414", height="200", sizes="(min-width: 36em) 414px, calc(100vw - 80px)", lazy=false %}
       </a>
     </div>
   {% endif %}
 
-  <h2 class="type--h3-card">
+  <h2 class="type--h3-card gap-top-300">
     <a class="color-text surface" href="{{ post.url }}">
       {{ pd.title }}
     </a>

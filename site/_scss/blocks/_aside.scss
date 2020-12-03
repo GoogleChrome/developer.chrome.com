@@ -49,6 +49,16 @@
   align-items: center;
   display: flex;
 
+  > svg {
+    fill: currentColor;
+  }
+
+  > span {
+    @extend %type--headline;
+    @include apply-utility('weight', 'medium');
+    @include font-setup(16px, 28px);
+  }
+
   > * + * {
     margin-left: px-to-rem(12px);
   }
