@@ -524,17 +524,17 @@ Please print and retain a copy of this document and any linked documents for you
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
 [2]: https://developers.chrome.com/apps/migration
-[3]: branding.html
-[4]: rating.html
-[5]: program_policies.html
-[6]: user_data.html
+[3]: /docs/webstore/branding
+[4]: /docs/webstore/rating
+[5]: /docs/webstore/program_policies
+[6]: /docs/webstore/user_data
 [7]: https://policies.google.com/terms
 [8]: http://www.google.com/chrome/intl/en/eula_text.html
-[9]: overview.html#builtin
-[10]: program_policies.html
+[9]: /docs/webstore/overview#builtin
+[10]: /docs/webstore/program_policies
 [11]: http://groups.google.com/a/chromium.org/group/chromium-apps/
 [12]: https://chrome.google.com/extensions/intl/en/branding.html
 [13]: http://groups.google.com/a/chromium.org/group/chromium-apps/
 [14]: http://g.co/help/mediation
 [15]: http://www.google.com/support/bin/static.py?page=ts.cs&ts=1114905
-[16]: terms.html
+[16]: /docs/webstore/terms

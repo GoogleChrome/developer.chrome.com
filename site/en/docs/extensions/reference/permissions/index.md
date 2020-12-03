@@ -118,21 +118,21 @@ chrome.permissions.remove({
 });
 ```
 
-[1]: /extensions/manifest
-[2]: /extensions/declare_permissions#manifest
+[1]: /docs/extensions/manifest
+[2]: /docs/extensions/declare_permissions#manifest
 [3]: #property-Permissions-origins
-[4]: /extensions/debugger
-[5]: https://developer.chrome.com/devtools/docs/debugger-protocol
-[6]: /extensions/declarativeNetRequest
-[7]: /extensions/devtools
+[4]: /docs/extensions/debugger
+[5]: /docs/devtools/docs/debugger-protocol
+[6]: /docs/extensions/declarativeNetRequest
+[7]: /docs/extensions/devtools
 [8]: https://tools.google.com/dlpage/chromesxs
 [9]: https://www.chromium.org/getting-involved/dev-channel
-[10]: /extensions/experimental
+[10]: /docs/extensions/experimental
 [11]: https://w3c.github.io/geolocation-api/
-[12]: /extensions/mdns
-[13]: /extensions/mdns
-[14]: /extensions/tts
-[15]: /extensions/ttsEngine
-[16]: /extensions/ttsEngine
-[17]: /extensions/permission_warnings
-[18]: /extensions/permission_warnings
+[12]: /docs/extensions/mdns
+[13]: /docs/extensions/mdns
+[14]: /docs/extensions/tts
+[15]: /docs/extensions/ttsEngine
+[16]: /docs/extensions/ttsEngine
+[17]: /docs/extensions/permission_warnings
+[18]: /docs/extensions/permission_warnings

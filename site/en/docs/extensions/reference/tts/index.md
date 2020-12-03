@@ -167,5 +167,5 @@ chrome.tts.getVoices(
 ```
 
 [1]: #method-speak
-[2]: /extensions/runtime#property-lastError
+[2]: /docs/extensions/runtime#property-lastError
 [3]: https://www.w3.org/TR/speech-synthesis

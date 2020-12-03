@@ -1,11 +1,57 @@
-- url: /docs/extensions/what-are-extensions
-- url: /docs/extensions/reference
+- url: /docs/extensions/getstarted
 - title: i18n.docs.extensions.overview
   sections:
     - url: /docs/extensions/overview
-    - url: /docs/extensions/overview/world
-    - url: /docs/extensions/overview/test
-    - title: i18n.docs.extensions.guides
-      sections:
-        - url: /docs/extensions/overview/guides
-- url: /docs/extensions/policies
+    - url: /docs/extensions/faq
+    - url: /docs/extensions/single_purpose
+- url: /docs/extensions/reference
+- title: i18n.docs.extensions.develop
+  sections:
+    - url: /docs/extensions/architecture-overview
+    - url: /docs/extensions/user_interface
+    - url: /docs/extensions/messaging
+    - url: /docs/extensions/content_scripts
+    - url: /docs/extensions/background_pages
+    - url: /docs/extensions/match_patterns
+    - url: /docs/extensions/shared_modules
+    - url: /docs/extensions/settings_override
+    - url: /docs/extensions/devtools
+    - url: /docs/extensions/themes
+    - url: /docs/extensions/tut_analytics
+    - url: /docs/extensions/tut_debugging
+    - url: /docs/extensions/tut_oauth
+    - url: /docs/extensions/xhr
+    - url: /docs/extensions/richNotifications
+    - url: /docs/extensions/desktop_notifications
+    - url: /docs/extensions/override
+    - url: /docs/extensions/permission_warnings
+- title: i18n.docs.extensions.quality
+  sections:
+    - url: /docs/extensions/user_privacy
+    - url: /docs/extensions/a11y
+    - url: /docs/extensions/security
+    - url: /docs/extensions/declare_permissions
+    - url: /docs/extensions/i18n-messages
+    - url: /docs/extensions/options
+    - url: /docs/extensions/sandboxingEval
+- title: i18n.docs.extensions.mv2
+  sections:
+    - url: /docs/extensions/manifest
+    - url: /docs/extensions/tut_migration_to_manifest_v2
+- title: i18n.docs.extensions.distribution
+  sections:
+    - url: /docs/extensions/hosting
+    - url: /docs/extensions/webstore
+    - url: /docs/extensions/linux_hosting
+    - url: /docs/extensions/external_extensions
+    - url: /docs/extensions/hosting_changes
+    - url: /docs/extensions/inline_faq
+- title: i18n.docs.extensions.TODO
+  sections:
+    - url: /docs/extensions/background_migration
+    - url: /docs/extensions/devguide
+    - url: /docs/extensions/location
+    - url: /docs/extensions/experimental_inputUI
+    - url: /docs/extensions/experimental_devtools
+    - url: /docs/extensions/experimental
+    - url: /docs/extensions/api_index

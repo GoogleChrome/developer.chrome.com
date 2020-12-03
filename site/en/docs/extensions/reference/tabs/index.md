@@ -29,7 +29,7 @@ You can find simple examples of manipulating tabs with the `chrome.tabs` API in 
 [examples/api/tabs][7] directory. For other examples and for help in viewing the source code, see
 [Samples][8].
 
-[1]: /extensions/manifest
+[1]: /docs/extensions/manifest
 [2]: #property-Tab-url
 [3]: #property-Tab-pendingUrl
 [4]: #property-Tab-title
@@ -37,4 +37,4 @@ You can find simple examples of manipulating tabs with the `chrome.tabs` API in 
 [6]: #type-Tab
 [7]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/tabs/
-[8]: /extensions/samples
+[8]: /docs/extensions/samples

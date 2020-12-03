@@ -113,5 +113,5 @@ fees.
 If you have specific questions related to your tax responsibilities in Japan, consult your tax
 advisor.
 
-[1]: money.html
-[2]: https://developer.chrome.com/apps/getstarted_arc
+[1]: /docs/webstore/money
+[2]: /docs/apps/getstarted_arc

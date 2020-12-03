@@ -83,5 +83,5 @@ getUserToken(generateAndSign);
 ```
 
 [1]: https://support.google.com/chrome/a/answer/1375694?hl=en
-[2]: /extensions/enterprise_platformKeys#method-getTokens
-[3]: /extensions/enterprise_platformKeys#method-importCertificate
+[2]: /docs/extensions/enterprise_platformKeys#method-getTokens
+[3]: /docs/extensions/enterprise_platformKeys#method-importCertificate

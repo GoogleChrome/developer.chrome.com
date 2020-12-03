@@ -363,8 +363,8 @@ If you just want to write your app, see the developer doc for the type of app yo
 - [Themes][39]
 - [Extensions][40]
 
-[1]: index.html
-[2]: index.html#charging
+[1]: /docs/webstore/index
+[2]: /docs/webstore/index#charging
 [3]: http://www.chromium.org/getting-involved/dev-channel
 [5]: https://developers.google.com/chrome/apps/docs/developers_guide
 [8]: https://appengine.google.com/
@@ -379,20 +379,20 @@ If you just want to write your app, see the developer doc for the type of app yo
 [18]: http://commons.apache.org/codec/download_codec.cgi
 [19]:
   http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/apps/hello-java/HelloLicenseServlet.java
-[20]: check_for_payment.html
-[21]: identify_user.html
+[20]: /docs/webstore/check_for_payment
+[21]: /docs/webstore/identify_user
 [22]: http://code.google.com/p/oauth-signpost/
 [23]: http://download-llnw.oracle.com/javase/6/docs/api/java/net/URLConnection.html
-[24]: check_for_payment.html#testids-user
-[25]: check_for_payment.html
-[27]: check_for_payment.html#testids-user
+[24]: /docs/webstore/check_for_payment#testids-user
+[25]: /docs/webstore/check_for_payment
+[27]: /docs/webstore/check_for_payment#testids-user
 [28]: #prepare
 [29]: http://hellolicense.appspot.com/hellolicense
 [31]: https://developers.google.com/chrome/apps/docs/developers_guide
-[33]: publish.html
-[35]: index.html
-[36]: check_for_payment.html
-[37]: samples.html
+[33]: /docs/webstore/publish
+[35]: /docs/webstore/index
+[36]: /docs/webstore/check_for_payment
+[37]: /docs/webstore/samples
 [38]: https://developers.google.com/chrome/apps/
 [39]: http://code.google.com/chrome/extensions/themes.html
 [40]: http://code.google.com/chrome/extensions/index.html

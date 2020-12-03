@@ -14,7 +14,7 @@ Account][1] along with the Chrome Web Store API.
 
 <div class="aside aside--note"><strong>Note: </strong>Chrome Web Store payment methods are not available for hosted apps.</div>
 
-### Offering a free trial {: #offering-free-trial }
+## Offering a free trial {: #offering-free-trial }
 
 For Chrome Apps and Chrome Extensions, you can provide a free trial version that either gives the
 user full access for a limited period of time or restricts which features are available. You can
@@ -22,14 +22,14 @@ enable the free trial by checking the appropriate box in the Developer Dashboard
 Licensing API to confirm what kind of license the user has and how long they've had it, with an
 upgrade path to the paid version.
 
-### Chrome Web Store Licensing API {: #cws-licensing-api }
+## Chrome Web Store Licensing API {: #cws-licensing-api }
 
 You can use the Chrome Web Store Licensing API to determine whether the user has paid for your item
 or how long they've been using their free trial. The Licensing API is a simple REST-based API that
 lets you query the Chrome Web Store license server to find out whether a particular user is using a
 free trial or if they have paid for your item.
 
-#### Contents
+## Contents
 
 1.  [Before you get started][2]
 2.  [Using one-time payments][3]
@@ -249,21 +249,21 @@ For a simple Chrome App that demonstrates how to use the Chrome Web Store Licens
 You can install and run the published app from the Chrome Web Store to try out free trial
 experience.
 
-[1]: https://developer.chrome.com/webstore/payments-iap
+[1]: /docs/webstore/payments-iap
 [2]: #before-starting
 [3]: #using-otps
 [4]: #verifying-payment
 [5]: #free2paid
 [6]: #sample-app
 [7]: https://payments.google.com/merchant/signup
-[8]: /webstore/pricing#seller
+[8]: /docs/webstore/pricing#seller
 [9]: https://chrome.google.com/webstore/developer/dashboard
 [10]: https://cloud.google.com/console
 [11]: #update-manifest
-[12]: /webstore/pricing#matrix
-[13]: /apps/app_identity.html
+[12]: /docs/webstore/pricing#matrix
+[13]: /apps/app_identity
 [14]: https://code.google.com/apis/console
-[15]: https://developer.chrome.com/apps/storage.html
+[15]: /docs/apps/storage.html
 [16]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/one-time-payment
 [17]:
   https://chrome.google.com/webstore/detail/one-time-payment-sample/ebcgmmcbgnpoclkoibogeiokfdmjbbob

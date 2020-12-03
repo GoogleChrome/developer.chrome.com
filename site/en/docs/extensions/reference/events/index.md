@@ -222,21 +222,21 @@ supports will be listed in the documentation for that event in the "filters" sec
 When matching URLs (as in the example above), event filters support the same URL matching
 capabilities as expressible with a [`events.UrlFilter`][18], except for scheme and port matching.
 
-[1]: /extensions/alarms#event-onAlarm
-[2]: /extensions/alarms#type-Alarm
-[3]: /extensions/alarms
-[4]: /extensions/i18n
-[5]: /extensions/identity
-[6]: /extensions/runtime
-[7]: /extensions/api_index
-[8]: /extensions/declarativeWebRequest
-[9]: /extensions/declarativeContent
-[10]: /extensions/events
+[1]: /docs/extensions/alarms#event-onAlarm
+[2]: /docs/extensions/alarms#type-Alarm
+[3]: /docs/extensions/alarms
+[4]: /docs/extensions/i18n
+[5]: /docs/extensions/identity
+[6]: /docs/extensions/runtime
+[7]: /docs/extensions/api_index
+[8]: /docs/extensions/declarativeWebRequest
+[9]: /docs/extensions/declarativeContent
+[10]: /docs/extensions/events
 [11]: #method-Event-addRules
 [12]: #method-Event-removeRules
 [13]: #method-Event-getRules
-[14]: /extensions/runtime#property-lastError
-[15]: /extensions/runtime#event-onInstalled
+[14]: /docs/extensions/runtime#property-lastError
+[15]: /docs/extensions/runtime#event-onInstalled
 [16]: #type-UrlFilter
-[17]: /extensions/event_pages
+[17]: /docs/extensions/event_pages
 [18]: #type-UrlFilter

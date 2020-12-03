@@ -77,11 +77,11 @@ For details about app payment options, see [Charging for your app][10] in the Ov
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
 [2]: https://developers.chrome.com/apps/migration
-[3]: /docs/webstore/payments-iap.html
-[4]: https://developer.chrome.com/apps/getstarted_arc
-[5]: /docs/webstore/overview.html#builtin
-[6]: /docs/webstore/overview.html#freevnot
-[7]: /docs/webstore/pricing.html
-[8]: https://developer.chrome.com/apps/getstarted_arc
-[9]: https://developer.chrome.com/webstore/one_time_payments#verifying-payment
-[10]: /docs/webstore/overview.html#charging
+[3]: /docs/webstore/payments-iap
+[4]: /docs/apps/getstarted_arc
+[5]: /docs/webstore/overview#builtin
+[6]: /docs/webstore/overview#freevnot
+[7]: /docs/webstore/pricing
+[8]: /docs/apps/getstarted_arc
+[9]: /docs/webstore/one_time_payments#verifying-payment
+[10]: /docs/webstore/overview#charging

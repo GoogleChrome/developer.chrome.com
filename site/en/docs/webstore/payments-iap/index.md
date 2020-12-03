@@ -358,20 +358,20 @@ Note, this app is not published in the Chrome Web Store to prevent accidental pu
   https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/managed-in-app-payments/scripts/buy.js
 [7]:
   https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/managed-in-app-payments/scripts/buy.js
-[8]: https://developer.chrome.com/webstore/payments-iap#query-items
-[9]: /webstore/webstore_api/inAppProducts/list
-[10]: https://developer.chrome.com/webstore/payments-iap#respond-to-purchase
-[11]: https://developer.chrome.com/webstore/payments-iap#get-purchases
-[12]: /webstore/webstore_api/payments/list
-[13]: https://developer.chrome.com/webstore/payments-iap#consume-purchase
-[14]: /webstore/pricing
+[8]: /docs/webstore/payments-iap#query-items
+[9]: /docs/webstore/webstore_api/inAppProducts/list
+[10]: /docs/webstore/payments-iap#respond-to-purchase
+[11]: /docs/webstore/payments-iap#get-purchases
+[12]: /docs/webstore/webstore_api/payments/list
+[13]: /docs/webstore/payments-iap#consume-purchase
+[14]: /docs/webstore/pricing
 [15]:
   https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/managed-in-app-payments/scripts/buy.js
 [16]: https://payments.google.com/merchant/signup
 [17]: https://chrome.google.com/webstore/developer/dashboard
-[18]: payments-iap#testing
-[19]: /webstore/publish#testaccounts
-[20]: /webstore/webstore_api/inAppProducts#resource
+[18]: /docs/webstore/payments-iap#testing
+[19]: /docs/webstore/publish#testaccounts
+[20]: /docs/webstore/webstore_api/inAppProducts#resource
 [21]: https://payments.google.com/merchant
-[22]: webstore/webstore_api/payments/list
+[22]: /docs/webstore/webstore/webstore_api/payments/list
 [23]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/managed-in-app-payments

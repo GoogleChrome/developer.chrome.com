@@ -32,7 +32,7 @@ build Chrome-specific features into your app.
 2.  Publish your first app by following the [Getting Started tutorial][5]
 
 [1]: http://chrome.google.com/webstore
-[2]: /webstore/check_for_payment.html
+[2]: /docs/webstore/check_for_payment
 [3]: https://chrome.google.com/webstore/developer/dashboard
-[4]: /webstore/overview.html
-[5]: /webstore/get_started_simple.html
+[4]: /docs/webstore/overview
+[5]: /docs/webstore/get_started_simple

@@ -1,7 +1,16 @@
 overview:
   en: 'Overview'
-  es: 'Visión General'
-
-guides:
-  en: 'Guides'
-  es: 'Guías'
+distribution:
+  en: 'Distribution'
+quality:
+  en: 'Best practices'
+devtools:
+  en: 'Extend Chrome DevTools'
+develop:
+  en: 'Develop extensions and themes'
+mv2:
+  en: 'Manifest version 2'
+apps:
+  en: 'Develop Chrome Apps'
+TODO:
+  en: 'TODO'

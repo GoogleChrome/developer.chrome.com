@@ -173,6 +173,6 @@ extension removes data on their behalf.
 
 Samples for the `browsingData` API are available [on the samples page][3].
 
-[1]: /extensions/manifest
+[1]: /docs/extensions/manifest
 [2]: https://chrome.google.com/webstore/detail/aknpkdffaafgjchaibgeefbgmgeghloj
-[3]: /extensions/samples#search:browsingData
+[3]: /docs/extensions/samples#search:browsingData

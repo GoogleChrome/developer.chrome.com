@@ -98,9 +98,9 @@ across plugin updates.
 
 You can find samples of this API on the [sample page][6].
 
-[1]: /extensions/match_patterns
+[1]: /docs/extensions/match_patterns
 [2]: #property-notifications
 [3]: #property-cookies
 [4]: #property-plugins
 [5]: #method-ContentSetting-getResourceIdentifiers
-[6]: /extensions/samples#search:contentSettings
+[6]: /docs/extensions/samples#search:contentSettings

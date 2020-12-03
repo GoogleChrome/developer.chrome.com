@@ -174,7 +174,7 @@ chrome.proxy.settings.get(
 Note that the `value` object passed to `set()` is not identical to the `value` object passed to
 callback function of `get()`. The latter will contain a `rules.proxyForHttp.port` element.
 
-[1]: /extensions/manifest
+[1]: /docs/extensions/manifest
 [2]: #type-ProxyConfig
 [3]: #type-ProxyRules
 [4]: #type-PacScript
@@ -186,5 +186,5 @@ callback function of `get()`. The latter will contain a `rules.proxyForHttp.port
 [10]: #type-ProxyRules
 [11]: #type-ProxyServer
 [12]: #type-ProxyServer
-[13]: /extensions/types#ChromeSetting
-[14]: /extensions/types#ChromeSetting
+[13]: /docs/extensions/types#ChromeSetting
+[14]: /docs/extensions/types#ChromeSetting

@@ -327,8 +327,8 @@ is determined based on the priority of each rule and the operations specified.
   `h1` was removed by (10), `h2` was set by (10) then appended by (11), and `h3` was appended by
   (10) and (11).
 
-[1]: /extensions/manifest
-[2]: /extensions/declare_permissions
+[1]: /docs/extensions/manifest
+[2]: /docs/extensions/declare_permissions
 [3]: #type-Ruleset
 [4]: #type-Ruleset
 [5]: #property-MAX_NUMBER_OF_STATIC_RULESETS
@@ -339,4 +339,4 @@ is determined based on the priority of each rule and the operations specified.
 [10]: #property-MAX_NUMBER_OF_DYNAMIC_RULES
 [11]: #method-updateEnabledRulesets
 [12]: #property-MAX_NUMBER_OF_RULES
-[13]: /extensions/webRequest
+[13]: /docs/extensions/webRequest

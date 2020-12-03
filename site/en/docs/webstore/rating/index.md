@@ -21,7 +21,7 @@ content and ads, and content that your app links to. Note that regardless of the
 your app, all applications must still adhere to the terms of the Chrome Web Store Program Policy and
 the Chrome Web Store Developer Agreement.
 
-### Sexual and suggestive content
+## Sexual and suggestive content
 
 Apps that focus on sexual content or sexually suggestive content should be rated “Mature.” For
 example, an app that is a collection of images of men or women in lingerie posing suggestively
@@ -33,17 +33,17 @@ sexually explicit, mature, and not mature.
 
 <table><tbody><tr><th>Not mature</th><th>Mature</th><th>Sexually explicit (not allowed)</th></tr><tr><td><ul><li>Images of people kissing and hugging</li><li>Dating app that is not focused on sexual relations</li><li>App to help a woman choose the right bra size</li></ul></td><td><ul><li>Close-up images of people wearing thongs</li><li>Apps with sexual themes like adult "Truth or Dare" apps</li><li>Sex position app with no porn, but has detailed descriptions</li></ul></td><td><ul><li>Apps containing images or videos with nudity or sex acts</li><li>Apps that contain prominent links to porn sites</li></ul></td></tr></tbody></table>
 
-### Strong language
+## Strong language
 
 Apps that contain explicit or frequent use of profanity should be rated "Mature.”
 
-### Violence
+## Violence
 
 Graphic cartoon or fantasy violence should be rated “Mature.” For example, games that depict graphic
 violence like decapitations or close-ups of wounds should be rated “Mature.” Gratuitous real
 violence is not allowed in the Chrome Web Store.
 
-### Alcohol, tobacco and drugs
+## Alcohol, tobacco and drugs
 
 Apps that focus on the consumption or sale of drugs, alcohol or tobacco should be rated “Mature.”
 For example, a game where the main character is a drug dealer should be rated “Mature.” Illegal
@@ -52,7 +52,7 @@ Web Store.
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
 [2]: https://developers.chrome.com/apps/migration
-[3]: branding.html
-[4]: program_policies.html
-[5]: user_data.html
-[6]: terms.html
+[3]: /docs/webstore/branding
+[4]: /docs/webstore/program_policies
+[5]: /docs/webstore/user_data
+[6]: /docs/webstore/terms

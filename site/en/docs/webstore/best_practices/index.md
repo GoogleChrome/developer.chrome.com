@@ -205,11 +205,11 @@ change; if that happens, your web app might be recategorized.
 </table>
 
 [1]: https://developers.google.com/chrome/apps/index
-[2]: launching.html#pre-launch-checklist
-[3]: identify_user.html
-[4]: check_for_payment.html
-[5]: check_for_payment.html#cache
+[2]: /docs/webstore/launching#pre-launch-checklist
+[3]: /docs/webstore/identify_user
+[4]: /docs/webstore/check_for_payment
+[5]: /docs/webstore/check_for_payment#cache
 [6]: #top
-[7]: branding.html
-[8]: images.html
+[7]: /docs/webstore/branding
+[8]: /docs/webstore/images
 [9]: #top

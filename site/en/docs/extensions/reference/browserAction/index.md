@@ -125,23 +125,23 @@ For the best visual impact, follow these guidelines:
 You can find simple examples of using browser actions in the [examples/api/browserAction][18]
 directory. For other examples and for help in viewing the source code, see [Samples][19].
 
-[1]: /extensions/pageAction
-[2]: /extensions/manifest
+[1]: /docs/extensions/pageAction
+[2]: /docs/extensions/manifest
 [3]: #icon
 [4]: #tooltip
 [5]: #badge
 [6]: #popups
 [7]: http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html
 [8]: #manifest
-[9]: /extensions/browserAction#method-setIcon
+[9]: /docs/extensions/browserAction#method-setIcon
 [10]: #manifest
-[11]: /extensions/browserAction#method-setTitle
-[12]: /extensions/i18n
-[13]: /extensions/browserAction#method-setBadgeText
-[14]: /extensions/browserAction#method-setBadgeBackgroundColor
+[11]: /docs/extensions/browserAction#method-setTitle
+[12]: /docs/extensions/i18n
+[13]: /docs/extensions/browserAction#method-setBadgeText
+[14]: /docs/extensions/browserAction#method-setBadgeBackgroundColor
 [15]: #manifest
-[16]: /extensions/browserAction#method-setPopup
-[17]: /extensions/pageAction
+[16]: /docs/extensions/browserAction#method-setPopup
+[17]: /docs/extensions/pageAction
 [18]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/browserAction/
-[19]: /extensions/samples
+[19]: /docs/extensions/samples

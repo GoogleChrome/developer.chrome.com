@@ -286,5 +286,5 @@ Unselecting a region prevents your app from being listed in that region.
 [18]: http://code.google.com/chrome/extensions/i18n.html
 [19]: http://code.google.com/chrome/extensions/i18n.html#locales-usage
 [20]: http://code.google.com/chrome/extensions/i18n.html#locales-testing
-[21]: /docs/webstore/publish.html#step3
-[24]: /docs/webstore/images.html#screenshots
+[21]: /docs/webstore/publish#step3
+[24]: /docs/webstore/images#screenshots

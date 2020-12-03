@@ -42,19 +42,19 @@ directory. Another example is in the [tabs_api.html][12] file of the [inspector]
 other examples and for help in viewing the source code, see [Samples][14].
 
 [1]: #type-Window
-[2]: /extensions/tabs#type-Tab
-[3]: /extensions/manifest
-[4]: /extensions/tabs#property-Tab-url
-[5]: /extensions/tabs#property-Tab-pendingUrl
-[6]: /extensions/tabs#property-Tab-title
-[7]: /extensions/tabs#property-Tab-favIconUrl
-[8]: /extensions/tabs#type-Tab
-[9]: /extensions/tabs#method-query
-[10]: /extensions/event_pages
+[2]: /docs/extensions/tabs#type-Tab
+[3]: /docs/extensions/manifest
+[4]: /docs/extensions/tabs#property-Tab-url
+[5]: /docs/extensions/tabs#property-Tab-pendingUrl
+[6]: /docs/extensions/tabs#property-Tab-title
+[7]: /docs/extensions/tabs#property-Tab-favIconUrl
+[8]: /docs/extensions/tabs#type-Tab
+[9]: /docs/extensions/tabs#method-query
+[10]: /docs/extensions/event_pages
 [11]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/windows/
 [12]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/tabs/inspector/tabs_api.html
 [13]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/tabs/inspector/
-[14]: /extensions/samples
+[14]: /docs/extensions/samples

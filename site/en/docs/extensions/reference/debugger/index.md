@@ -28,4 +28,4 @@ You must declare the "debugger" permission in your extension's manifest to use t
 
 You can find samples of this API in [Samples][1].
 
-[1]: /extensions/samples#search:debugger
+[1]: /docs/extensions/samples#search:debugger

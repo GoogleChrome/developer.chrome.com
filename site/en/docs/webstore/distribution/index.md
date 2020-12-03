@@ -31,15 +31,15 @@ The following table covers a few ways to monetize your product.
 
 <div class="aside aside--note"><strong>Note: </strong>Chrome Web Store payment methods are not available for websites.</div>
 
-[1]: https://developer.chrome.com/extensions/overview
-[2]: https://developer.chrome.com/apps/about_apps
+[1]: /docs/extensions/overview
+[2]: /docs/apps/about_apps
 [3]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
 [4]: https://developers.chrome.com/apps/migration
-[5]: https://developer.chrome.com/extensions/themes
+[5]: /docs/extensions/themes
 [6]: https://chrome.google.com/webstore
-[7]: https://developer.chrome.com/native-client/devguide/distributing
-[8]: https://developer.chrome.com/extensions/external_extensions
-[9]: https://developer.chrome.com/apps/chrome_apps_on_mobile
+[7]: /docs/native-client/devguide/distributing
+[8]: /docs/extensions/external_extensions
+[9]: /docs/apps/chrome_apps_on_mobile
 [10]: http://cordova.apache.org/
-[11]: https://developer.chrome.com/webstore/money
-[12]: https://developer.chrome.com/webstore/payments-iap
+[11]: /docs/webstore/money
+[12]: /docs/webstore/payments-iap

@@ -127,6 +127,6 @@ whether the extension supports the given voice parameters in its manifest and ha
 listeners for `onSpeak` and `onStop`. In other words, there's no way for an extension to receive a
 speech request and dynamically decide whether to handle it.
 
-[1]: /extensions/tts#method-speak
-[2]: /extensions/tts#method-stop
-[3]: /extensions/tts#method-getVoices
+[1]: /docs/extensions/tts#method-speak
+[2]: /docs/extensions/tts#method-stop
+[3]: /docs/extensions/tts#method-getVoices

@@ -231,17 +231,17 @@ in a scalable, fair, and objective manner.
 
 [1]: https://blog.chromium.org/2018/06/improving-extension-transparency-for.html
 [2]: /docs/extensions/inline_faq
-[3]: /docs/webstore/publish.html
+[3]: /docs/webstore/publish
 [4]: https://chrome.google.com/webstore/developer/dashboard
 [5]: https://chrome.google.com/webstore/detail/apdfllckaahabafndbhieahigkjlhalf
-[6]: /docs/webstore/faq.html#faq-app-24
+[6]: /docs/webstore/faq#faq-app-24
 [7]: https://developers.google.com/chrome/apps/docs/developers_guide#manifest
 [8]: http://code.google.com/chrome/extensions/content_scripts.html#host-page-communication
 [9]: http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592
 [10]: http://www.google.com/webmasters/
 [11]: http://blog.chromium.org/2015/08/protecting-users-from-deceptive-inline.html
 [12]: https://www.google.com/about/company/unwanted-software-policy.html
-[13]: https://developer.chrome.com/webstore/program_policies#spam
+[13]: /docs/webstore/program_policies#spam
 [14]: https://www.google.com/about/company/unwanted-software-policy.html
 [15]:
   https://support.google.com/adwordspolicy/answer/6020955?hl=en&vid=1-635766371629017731-609235876

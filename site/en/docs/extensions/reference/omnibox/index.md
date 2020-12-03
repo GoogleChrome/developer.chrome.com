@@ -46,6 +46,6 @@ example, the [context menus API][2] also uses a 16x16-pixel icon, but it is disp
 
 You can find samples of this API on the [sample page][3].
 
-[1]: /extensions/manifest
-[2]: /extensions/contextMenus
-[3]: /extensions/samples#search:omnibox
+[1]: /docs/extensions/manifest
+[2]: /docs/extensions/contextMenus
+[3]: /docs/extensions/samples#search:omnibox

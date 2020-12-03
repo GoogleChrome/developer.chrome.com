@@ -45,10 +45,10 @@ You can browse the source, download all the files, or see the app in action:
 - [Download ZIP file][14]
 - [Try live demo][15]
 
-[1]: identify_user.html
-[2]: check_for_payment.html
+[1]: /docs/webstore/identify_user
+[2]: /docs/webstore/check_for_payment
 [3]: http://code.google.com/p/oauth-signpost/
-[4]: get_started.html
+[4]: /docs/webstore/get_started
 [5]:
   http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/apps/hello-java/
 [6]:

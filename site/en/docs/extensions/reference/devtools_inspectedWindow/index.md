@@ -95,11 +95,11 @@ chrome.devtools.inspectedWindow.eval(
 
 You can find more examples that use Developer Tools APIs in [Samples][8].
 
-[1]: /extensions/devtools
+[1]: /docs/extensions/devtools
 [2]: #property-tabId
-[3]: /extensions/tabs
-[4]: /extensions/tabs#method-executeScript
+[3]: /docs/extensions/tabs
+[4]: /docs/extensions/tabs#method-executeScript
 [5]: https://code.google.com/chrome/devtools/docs/console.html
-[6]: /extensions/tabs#method-executeScript
+[6]: /docs/extensions/tabs#method-executeScript
 [7]: https://www.ietf.org/rfc/rfc6454.txt
-[8]: /extensions/samples#search:devtools
+[8]: /docs/extensions/samples#search:devtools

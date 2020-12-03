@@ -69,10 +69,10 @@ chrome.bookmarks.create({
 For an example of using this API, see the [basic bookmarks sample][5]. For other examples and for
 help in viewing the source code, see [Samples][6].
 
-[1]: /extensions/manifest
+[1]: /docs/extensions/manifest
 [2]: #type-BookmarkTreeNode
 [3]: #method-create
 [4]: #type-BookmarkTreeNode
 [5]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/bookmarks/basic/
-[6]: /extensions/samples
+[6]: /docs/extensions/samples

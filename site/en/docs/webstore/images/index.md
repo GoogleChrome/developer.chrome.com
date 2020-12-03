@@ -313,13 +313,13 @@ Next, read [Publishing Your App][39].
 [3]: #icons
 [4]: #promo
 [5]: #screenshots
-[6]: /docs/webstore/publish.html#step2
+[6]: /docs/webstore/publish#step2
 [7]: #iconsize
 [8]: https://developers.google.com/chrome/apps/docs/developers_guide#installing
 [9]: https://tools.google.com/chrome/intl/en/themes/
 [10]: #perspective
 [17]: #screenshots
-[18]: /docs/webstore/branding.html
+[18]: /docs/webstore/branding
 [27]: mailto:cws-assets@google.com
-[28]: /docs/webstore/i18n.html
-[39]: /docs/webstore/publish.html
+[28]: /docs/webstore/i18n
+[39]: /docs/webstore/publish

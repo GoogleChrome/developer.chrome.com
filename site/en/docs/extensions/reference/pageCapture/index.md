@@ -26,4 +26,4 @@ API. For example:
 ```
 
 [1]: https://tools.ietf.org/html/rfc2557
-[2]: /extensions/manifest
+[2]: /docs/extensions/manifest

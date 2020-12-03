@@ -20,4 +20,4 @@ example, if app A asks for `"system"` power management, and app B asks for `"dis
 is used until app B is unloaded or releases its request. If app A is still active, `"system"` is
 then used.
 
-[1]: /extensions/power#type-Level
+[1]: /docs/extensions/power#type-Level

@@ -65,4 +65,4 @@ extensions.
 The _effective_ value of a setting is the one that results from considering the precedence rules. It
 is used by Chrome.
 
-[1]: /extensions/proxy#overview-examples
+[1]: /docs/extensions/proxy#overview-examples

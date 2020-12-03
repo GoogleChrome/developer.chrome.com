@@ -108,7 +108,7 @@ If you're using the Licensing API, your next stop is [Checking for Payment][17].
 
 [1]: https://developers.google.com/appengine/docs/java/users/overview
 [2]: https://developers.google.com/appengine/docs/python/users/overview
-[3]: /docs/webstore/get_started.html
+[3]: /docs/webstore/get_started
 [4]:
   http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/apps/hello-java/HelloLicenseServlet.java
 [5]: https://developers.google.com/accounts/docs/OpenID
@@ -120,8 +120,8 @@ If you're using the Licensing API, your next stop is [Checking for Payment][17].
 [11]: http://github.com/josh/rack-openid
 [12]: http://www.janrain.com/openid-enabled
 [13]: http://openid.net/developers/libraries/
-[14]: /docs/webstore/authentication.html
+[14]: /docs/webstore/authentication
 [15]: https://developers.google.com/accounts/docs/OpenID
 [16]: https://developers.google.com/appengine/articles/openid
-[17]: /docs/webstore/check_for_payment.html
-[18]: /docs/webstore/images.html
+[17]: /docs/webstore/check_for_payment
+[18]: /docs/webstore/images
