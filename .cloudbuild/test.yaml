@@ -5,4 +5,7 @@ steps:
   args:
   - '-c'
   - |
-    echo gcloud app deploy ${_EXTRA_GCLOUD_ARGS:-} --after
+    echo gcloud app deploy ${_EXTRA_GCLOUD_ARGS:-} --after &&
+    echo gcloud app deploy ${_EXTRA_GCLOUD_ARGS} --non-optional
+substitutions:
+  _EXTRA_GCLOUD_ARGS:  # default empty
