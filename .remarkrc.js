@@ -39,8 +39,6 @@ exports.plugins = [
   // Third-party plugins.
   // Checks if headings are accidentally duplicated
   require('remark-lint-no-duplicate-headings-in-section'),
-  // Checks if relative links targets exist.
-  require('remark-validate-links'),
   // Ensure articles don't start with an h1
   [require('remark-lint-first-heading-level'), 2],
 
