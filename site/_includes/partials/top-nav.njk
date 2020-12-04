@@ -9,11 +9,8 @@
 
     {# Logo #}
     <div class="display-flex justify-content-start">
-      <a class="top-nav__logo" href="/" aria-label="developer.chrome.com">
-        {# Mobile-only, logo with "Developers" #}
-        {{ icon('logo-lockup-sm', 'display-block md:display-none') }}
-        {# Medium+ screens, logo with "Chrome Developers" #}
-        {{ icon('logo-lockup', 'display-none md:display-block') }}
+      <a class="display-inline-flex" href="/" aria-label="developer.chrome.com">
+        {{ icon('logo-lockup') }}
       </a>
     </div>
 

@@ -62,11 +62,4 @@ top-nav[data-search-active] {
     top: 0;
   }
 }
-
-.top-nav__logo {
-  @extend %type--large;
-  @include apply-utility('font', 'google-sans');
-  color: currentColor;
-  text-decoration: none;
-}
 /* purgecss end ignore */

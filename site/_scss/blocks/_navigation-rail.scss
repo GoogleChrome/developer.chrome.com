@@ -9,10 +9,6 @@ navigation-rail {
   }
 }
 
-.navigation-rail__title {
-  @extend %navigation__title;
-}
-
 .navigation-rail__link {
   @extend %navigation__link;
   @include font-setup(14px, 28px);
