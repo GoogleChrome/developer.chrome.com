@@ -93,7 +93,7 @@
     @extend %type--list;
   }
 
-  ul:not([class]) li,
+  ul:not([class]) > li,
   &--list-item {
     @extend %type--list-item;
   }
@@ -103,7 +103,7 @@
     @extend %type--ordered-list;
   }
 
-  ol:not([class]) li,
+  ol:not([class]) > li,
   &--ordered-list-item {
     @extend %type--ordered-list-item;
   }
