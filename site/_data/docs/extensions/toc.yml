@@ -7,6 +7,7 @@
 - url: /docs/extensions/reference
 - title: i18n.docs.extensions.develop
   sections:
+    - url: /docs/extensions/mv2/devguide
     - url: /docs/extensions/mv2/architecture-overview
     - url: /docs/extensions/mv2/user_interface
     - url: /docs/extensions/mv2/messaging
@@ -25,6 +26,7 @@
     - url: /docs/extensions/mv2/desktop_notifications
     - url: /docs/extensions/mv2/override
     - url: /docs/extensions/mv2/permission_warnings
+    - url: /docs/extensions/mv2/background_migration
 - title: i18n.docs.extensions.quality
   sections:
     - url: /docs/extensions/mv2/user_privacy
@@ -38,6 +40,7 @@
   sections:
     - url: /docs/extensions/mv2/manifest
     - url: /docs/extensions/mv2/tut_migration_to_manifest_v2
+    - url: /docs/extensions/mv2/migrating_to_manifest_v3
 - title: i18n.docs.extensions.distribution
   sections:
     - url: /docs/extensions/mv2/hosting
@@ -46,13 +49,3 @@
     - url: /docs/extensions/mv2/external_extensions
     - url: /docs/extensions/mv2/hosting_changes
     - url: /docs/extensions/mv2/inline_faq
-- title: i18n.docs.extensions.TODO
-  sections:
-    - url: /docs/extensions/mv2/migrating_to_manifest_v3
-    - url: /docs/extensions/mv2/background_migration
-    - url: /docs/extensions/mv2/devguide
-    - url: /docs/extensions/location
-    - url: /docs/extensions/experimental_inputUI
-    - url: /docs/extensions/experimental_devtools
-    - url: /docs/extensions/experimental
-    - url: /docs/extensions/api_index

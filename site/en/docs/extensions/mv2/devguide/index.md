@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Develop Extensions"
+title: "Extension development overview"
 date: 2012-09-17
 updated: 2018-06-12
 description: An overview of Chrome Extension capabilities and components.

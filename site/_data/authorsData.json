@@ -30,8 +30,46 @@
     "github": "kaycebasques",
     "glitch": "kaycebasques",
     "descriptions": {
-      "en": "Technical Writer, Chrome DevTools & Lighthouse"
+      "en": "Technically, I'm a writer"
     },
     "image": "https://webdev.imgix.net/images/authors/kaycebasques@2x.jpg"
+  },
+  "robdodson": {
+    "name": {
+      "given": "Rob",
+      "family": "Dodson"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "descriptions": {
+      "en": "A.K.A. Bobdod"
+    },
+    "country": "US",
+    "homepage": "https://robdodson.me",
+    "twitter": "rob_dodson",
+    "github": "robdodson",
+    "glitch": "robdodson",
+    "image": "https://webdev.imgix.net/images/authors/robdodson@2x.jpg"
+  },
+  "samthorogood": {
+    "name": {
+      "given": "Sam",
+      "family": "Thorogood"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "AU",
+    "homepage": "https://whistlr.info/",
+    "twitter": "samthor",
+    "github": "samthor",
+    "glitch": "samthor",
+    "descriptions": {
+      "en": "¯‍\\‍_‍(‍ツ‍)‍_‍/‍¯"
+    },
+    "image": "https://webdev.imgix.net/images/authors/samthor@2x.jpg"
   }
 }

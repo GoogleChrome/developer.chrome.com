@@ -5,6 +5,8 @@ layout: 'layouts/docs-landing.njk'
 type: landing
 i18n:
   projects:
-    chrome:
-      heading: 'Chrome'
+    crx:
+      heading: 'Extensions & Web Store'
+    architecture:
+      heading: 'Architecture'
 ---
