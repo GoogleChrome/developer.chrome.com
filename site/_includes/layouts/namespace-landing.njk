@@ -12,68 +12,81 @@
   {% import 'macros/render-type.njk' as macros with context %}
 
   <div class="display-flex">
+    {% include 'partials/navigation-tree.njk' %}
 
     <article class="stack measure-long center-margin pad-400">
       <h1 class="type--h2">{{ title }}</h1>
 
-      {% if not namespace._isChromeOS %}
-        {# This never renders right now, and is just here for testing. #}
-        <div class="aside aside--note">
-          <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
+      {% set content %}
+        {% if not namespace._isChromeOS %}
+          {# This never renders right now, and is just here for testing. #}
+          <div class="aside aside--note">
+            <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
+          </div>
+        {% endif %}
+
+        <div class="code-sections code-sections--summary">
+          <ul class="stack flow-space-300">
+            <li>
+              <div class="code-sections__label">Description</div>
+              <div class="type">
+                {{ namespace.comment | safe }}
+              </div>
+            </li>
+            {% if namespace.permissions.length %}
+              <li>
+                <div class="code-sections__label">Permissions</div>
+                <div>
+                  {% for permission in namespace.permissions %}
+                    <code>{{ permission }}</code>
+                  {% endfor %}
+                </div>
+              </li>
+            {% endif %}
+            {% if namespace.channel !== 'stable' %}
+              <li>
+                <div class="code-sections__label">Availability</div>
+                <div>
+                  {% if namespace.channel === 'dev' %}
+                    Dev channel only.
+                  {% else %}
+                    Beta and Dev channels only.
+                  {% endif %}
+                </div>
+              </li>
+            {% endif %}
+          </ul>
         </div>
-      {% endif %}
 
-      <div class="code-sections code-sections--summary">
-        <ul class="stack flow-space-300">
-          <li>
-            <div class="code-sections__label">Description</div>
-            <div class="type">
-              {{ namespace.comment | safe }}
-            </div>
-          </li>
-          {% if namespace.permissions.length %}
-            <li>
-              <div class="code-sections__label">Permissions</div>
-              <div>
-                {% for permission in namespace.permissions %}
-                  <code>{{ permission }}</code>
-                {% endfor %}
-              </div>
-            </li>
-          {% endif %}
-          {% if namespace.channel !== 'stable' %}
-            <li>
-              <div class="code-sections__label">Availability</div>
-              <div>
-                {% if namespace.channel === 'dev' %}
-                  Dev channel only.
-                {% else %}
-                  Beta and Dev channels only.
-                {% endif %}
-              </div>
-            </li>
-          {% endif %}
-        </ul>
+        <div class="type stack">
+          {{ content | safe }}
+        </div>
+
+        <h2 class="type--h3">Summary</h2>
+        <div class="code-sections code-sections--summary">
+          <ul class="stack flow-space-300">
+            {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
+            {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
+            {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
+          </ul>
+        </div>
+
+        {{ macros.renderPrimarySection(namespace.name, 'types', 'Types', 'type', namespace.types) }}
+        {{ macros.renderPrimarySection(namespace.name, 'properties', 'Properties', 'property', namespace.properties) }}
+        {{ macros.renderPrimarySection(namespace.name, 'methods', 'Methods', 'method', namespace.methods) }}
+      {% endset %}
+
+      <div class="toc-container display-block xl:display-none">
+        {% include 'partials/toc.njk' %}
       </div>
 
-      <div class="type stack">
-        {{ content | safe }}
-      </div>
-
-      <h2 class="type--h3">Summary</h2>
-      <div class="code-sections code-sections--summary">
-        <ul class="stack flow-space-300">
-          {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
-          {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
-          {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
-        </ul>
-      </div>
-
-      {{ macros.renderPrimarySection(namespace.name, 'Types', 'type', namespace.types) }}
-      {{ macros.renderPrimarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
-      {{ macros.renderPrimarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
+      {{ content | safe }}
 
     </article>
+
+    <div class="toc-container display-none xl:display-block pad-left-400 pad-right-400">
+      {% include 'partials/toc.njk' %}
+    </div>
 
   </div>
 {% endblock %}

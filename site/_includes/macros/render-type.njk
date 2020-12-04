@@ -225,10 +225,10 @@
 {#
   Renders the whole list of the passed RenderType[].
 #}
-{% macro renderPrimarySection(namespaceName, label, prefix, array) %}
+{% macro renderPrimarySection(namespaceName, id, label, prefix, array) %}
 
   {% if array.length %}
-    <h2 class="type--h3">{{ label }}</h2>
+    <h2 class="type--h3" id="{{ id }}">{{ label }}</h2>
     {% for rt in array %}
       <div>
         <h3 class="type--h4" id="{{ prefix }}-{{ rt.name }}">{{ rt.name }}</h3>
