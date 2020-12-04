@@ -34,7 +34,7 @@ The following table describes each transition type.
 For examples of using this API, see the [history sample directory][8] and the [history API test
 directory][9]. For other examples and for help in viewing the source code, see [Samples][10].
 
-[1]: /docs/extensions/manifest
+[1]: /docs/extensions/mv2/tabs
 [2]: #tt_generated
 [3]: #tt_manual_subframe
 [4]: #tt_typed
@@ -45,4 +45,4 @@ directory][9]. For other examples and for help in viewing the source code, see [
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/history/
 [9]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/test/data/extensions/api_test/history/
-[10]: /docs/extensions/samples
+[10]: /docs/extensions/mv2/samples

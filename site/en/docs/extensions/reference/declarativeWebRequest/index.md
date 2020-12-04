@@ -170,8 +170,8 @@ stages][9]. All conditions of all rules are evaluated at each stage of a web req
 `IgnoreRules` action is executed, it applies only to other actions that are executed for the same
 web request in the same stage.
 
-[1]: /docs/extensions/manifest
-[2]: /docs/extensions/declare_permissions
+[1]: /docs/extensions/mv2/tabs
+[2]: /docs/extensions/mv2/declare_permissions
 [3]: /docs/extensions/events#declarative
 [4]: /docs/extensions/events#performance
 [5]: /docs/extensions/events

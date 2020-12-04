@@ -52,11 +52,11 @@ If a pattern is more specific than another pattern in one part but less specific
 the different parts are checked in the following order: hostname, scheme, port. For example, the
 following patterns are ordered by precedence:
 
-1.  `http://www.example.com:*/*`  
+1.  `http://www.example.com:*/*`
     Specifies the hostname and scheme.
-2.  `*:/www.example.com:123/*`  
+2.  `*:/www.example.com:123/*`
     Not as high, because although it specifies the hostname, it doesn't specify the scheme.
-3.  `http://*.example.com:123/*`  
+3.  `http://*.example.com:123/*`
     Lower because although it specifies the port and scheme, it has a wildcard in the hostname.
 
 ## Primary and secondary patterns
@@ -98,9 +98,9 @@ across plugin updates.
 
 You can find samples of this API on the [sample page][6].
 
-[1]: /docs/extensions/match_patterns
+[1]: /docs/extensions/mv2/match_patterns
 [2]: #property-notifications
 [3]: #property-cookies
 [4]: #property-plugins
 [5]: #method-ContentSetting-getResourceIdentifiers
-[6]: /docs/extensions/samples#search:contentSettings
+[6]: /docs/extensions/mv2/samples#search:contentSettings

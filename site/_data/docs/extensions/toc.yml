@@ -1,55 +1,56 @@
-- url: /docs/extensions/getstarted
+- url: /docs/extensions/mv2/getstarted
 - title: i18n.docs.extensions.overview
   sections:
-    - url: /docs/extensions/overview
-    - url: /docs/extensions/faq
-    - url: /docs/extensions/single_purpose
+    - url: /docs/extensions/mv2/overview
+    - url: /docs/extensions/mv2/faq
+    - url: /docs/extensions/mv2/single_purpose
 - url: /docs/extensions/reference
 - title: i18n.docs.extensions.develop
   sections:
-    - url: /docs/extensions/architecture-overview
-    - url: /docs/extensions/user_interface
-    - url: /docs/extensions/messaging
-    - url: /docs/extensions/content_scripts
-    - url: /docs/extensions/background_pages
-    - url: /docs/extensions/match_patterns
-    - url: /docs/extensions/shared_modules
-    - url: /docs/extensions/settings_override
-    - url: /docs/extensions/devtools
-    - url: /docs/extensions/themes
-    - url: /docs/extensions/tut_analytics
-    - url: /docs/extensions/tut_debugging
-    - url: /docs/extensions/tut_oauth
-    - url: /docs/extensions/xhr
-    - url: /docs/extensions/richNotifications
-    - url: /docs/extensions/desktop_notifications
-    - url: /docs/extensions/override
-    - url: /docs/extensions/permission_warnings
+    - url: /docs/extensions/mv2/architecture-overview
+    - url: /docs/extensions/mv2/user_interface
+    - url: /docs/extensions/mv2/messaging
+    - url: /docs/extensions/mv2/content_scripts
+    - url: /docs/extensions/mv2/background_pages
+    - url: /docs/extensions/mv2/match_patterns
+    - url: /docs/extensions/mv2/shared_modules
+    - url: /docs/extensions/mv2/settings_override
+    - url: /docs/extensions/mv2/devtools
+    - url: /docs/extensions/mv2/themes
+    - url: /docs/extensions/mv2/tut_analytics
+    - url: /docs/extensions/mv2/tut_debugging
+    - url: /docs/extensions/mv2/tut_oauth
+    - url: /docs/extensions/mv2/xhr
+    - url: /docs/extensions/mv2/richNotifications
+    - url: /docs/extensions/mv2/desktop_notifications
+    - url: /docs/extensions/mv2/override
+    - url: /docs/extensions/mv2/permission_warnings
 - title: i18n.docs.extensions.quality
   sections:
-    - url: /docs/extensions/user_privacy
-    - url: /docs/extensions/a11y
-    - url: /docs/extensions/security
-    - url: /docs/extensions/declare_permissions
-    - url: /docs/extensions/i18n-messages
-    - url: /docs/extensions/options
-    - url: /docs/extensions/sandboxingEval
+    - url: /docs/extensions/mv2/user_privacy
+    - url: /docs/extensions/mv2/a11y
+    - url: /docs/extensions/mv2/security
+    - url: /docs/extensions/mv2/declare_permissions
+    - url: /docs/extensions/mv2/i18n-messages
+    - url: /docs/extensions/mv2/options
+    - url: /docs/extensions/mv2/sandboxingEval
 - title: i18n.docs.extensions.mv2
   sections:
-    - url: /docs/extensions/manifest
-    - url: /docs/extensions/tut_migration_to_manifest_v2
+    - url: /docs/extensions/mv2/manifest
+    - url: /docs/extensions/mv2/tut_migration_to_manifest_v2
 - title: i18n.docs.extensions.distribution
   sections:
-    - url: /docs/extensions/hosting
+    - url: /docs/extensions/mv2/hosting
     - url: /docs/extensions/webstore
-    - url: /docs/extensions/linux_hosting
-    - url: /docs/extensions/external_extensions
-    - url: /docs/extensions/hosting_changes
-    - url: /docs/extensions/inline_faq
+    - url: /docs/extensions/mv2/linux_hosting
+    - url: /docs/extensions/mv2/external_extensions
+    - url: /docs/extensions/mv2/hosting_changes
+    - url: /docs/extensions/mv2/inline_faq
 - title: i18n.docs.extensions.TODO
   sections:
-    - url: /docs/extensions/background_migration
-    - url: /docs/extensions/devguide
+    - url: /docs/extensions/mv2/migrating_to_manifest_v3
+    - url: /docs/extensions/mv2/background_migration
+    - url: /docs/extensions/mv2/devguide
     - url: /docs/extensions/location
     - url: /docs/extensions/experimental_inputUI
     - url: /docs/extensions/experimental_devtools

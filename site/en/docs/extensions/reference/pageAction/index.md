@@ -89,11 +89,11 @@ You can find simple examples of using page actions in the [examples/api/pageActi
 For other examples and for help in viewing the source code, see [Samples][8].
 
 [1]: /docs/extensions/browserAction
-[2]: /docs/extensions/manifest
+[2]: /docs/extensions/mv2/tabs
 [3]: /docs/extensions/browserAction#ui
 [4]: #method-show
 [5]: #method-hide
 [6]: /docs/extensions/browserAction
 [7]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/pageAction/
-[8]: /docs/extensions/samples
+[8]: /docs/extensions/mv2/samples

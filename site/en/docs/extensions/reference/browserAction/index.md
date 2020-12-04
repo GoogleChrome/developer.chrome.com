@@ -126,7 +126,7 @@ You can find simple examples of using browser actions in the [examples/api/brows
 directory. For other examples and for help in viewing the source code, see [Samples][19].
 
 [1]: /docs/extensions/pageAction
-[2]: /docs/extensions/manifest
+[2]: /docs/extensions/mv2/tabs
 [3]: #icon
 [4]: #tooltip
 [5]: #badge
@@ -144,4 +144,4 @@ directory. For other examples and for help in viewing the source code, see [Samp
 [17]: /docs/extensions/pageAction
 [18]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/browserAction/
-[19]: /docs/extensions/samples
+[19]: /docs/extensions/mv2/samples

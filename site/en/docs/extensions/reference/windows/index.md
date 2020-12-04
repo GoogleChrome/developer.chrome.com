@@ -43,18 +43,18 @@ other examples and for help in viewing the source code, see [Samples][14].
 
 [1]: #type-Window
 [2]: /docs/extensions/tabs#type-Tab
-[3]: /docs/extensions/manifest
+[3]: /docs/extensions/mv2/tabs
 [4]: /docs/extensions/tabs#property-Tab-url
 [5]: /docs/extensions/tabs#property-Tab-pendingUrl
 [6]: /docs/extensions/tabs#property-Tab-title
 [7]: /docs/extensions/tabs#property-Tab-favIconUrl
 [8]: /docs/extensions/tabs#type-Tab
 [9]: /docs/extensions/tabs#method-query
-[10]: /docs/extensions/event_pages
+[10]: /docs/extensions/mv2/event_pages
 [11]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/windows/
 [12]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/tabs/inspector/tabs_api.html
 [13]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/tabs/inspector/
-[14]: /docs/extensions/samples
+[14]: /docs/extensions/mv2/samples

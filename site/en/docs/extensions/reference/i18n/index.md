@@ -340,12 +340,12 @@ function detectLanguage(inputText) {
 
 For more details on calling `detectLanguage(inputText)`, see the [API reference][20].
 
-[1]: /docs/extensions/i18n-messages
-[2]: /docs/extensions/manifest
+[1]: /docs/extensions/mv2/i18n-messages
+[2]: /docs/extensions/mv2/tabs
 [3]: #overview-locales
 [4]: #examples-getMessage
 [5]: #overview-predefined
-[6]: /docs/extensions/i18n-messages
+[6]: /docs/extensions/mv2/i18n-messages
 [7]: https://code.google.com/apis/gadgets/docs/i18n.html#BIDI
 [8]: https://code.google.com/chrome/webstore/docs/i18n.html#localeTable
 [9]: #testing-win
@@ -357,8 +357,8 @@ For more details on calling `detectLanguage(inputText)`, see the [API reference]
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/i18n/
 [15]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/extensions/news/
-[16]: /docs/extensions/samples
-[17]: /docs/extensions/i18n-messages
+[16]: /docs/extensions/mv2/samples
+[17]: /docs/extensions/mv2/i18n-messages
 [18]: #method-getMessage
 [19]: #method-getAcceptLanguages
 [20]: #method-detectLanguage

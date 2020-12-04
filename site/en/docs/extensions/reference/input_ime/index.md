@@ -46,7 +46,7 @@ chrome.input.ime.onKeyEvent.addListener(
 For an example of using this API, see the [basic input.ime sample][2]. For other examples and for
 help in viewing the source code, see [Samples][3].
 
-[1]: /docs/extensions/manifest
+[1]: /docs/extensions/mv2/tabs
 [2]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/input.ime/basic/
-[3]: /docs/extensions/samples
+[3]: /docs/extensions/mv2/samples

@@ -20,7 +20,7 @@ extension.
 **Single purpose description** Fill out this field to help the reviewers understand the focus of
 your extension.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lQuFOcL3XgQseosEwxk1.png", 
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lQuFOcL3XgQseosEwxk1.png",
        alt="Screenshot of the 'single purpose' privacy field",
        height="278", width="800" %}
 
@@ -35,7 +35,7 @@ Fill out these fields to tell the reviewers why your extension needs to use each
 there are permissions listed here that you don’t require, remove them from your manifest before
 continuing.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xTk11mZFXz9K0RkLAcmb.png", 
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xTk11mZFXz9K0RkLAcmb.png",
        alt="Screenshot of the permissions list privacy field set",
        height="162", width="800" %}
 
@@ -49,9 +49,9 @@ code and do not declare and justify it using the field shown above will be rejec
 so, why this is necessary. If your extension doesn’t need to execute remote code, make sure that it
 does not and select “No, I am not using remote code.”
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c7Fo3mIpx0i5j4eXEhev.png", 
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c7Fo3mIpx0i5j4eXEhev.png",
        alt="Screenshot of the remote code declarations field of the privacy field set",
        height="170", width="800" %}
 
 [1]: /docs/webstore/program_policies/#extensions
-[2]: /docs/extensions/security/#permissions
+[2]: /docs/extensions/mv2/security/#permissions

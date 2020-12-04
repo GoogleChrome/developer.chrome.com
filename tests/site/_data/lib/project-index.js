@@ -8,12 +8,12 @@ test('flattens hierarchical yaml', t => {
 - url: /docs/extensions/reference
 - title: i18n.docs.extensions.overview
   sections:
-    - url: /docs/extensions/overview
-    - url: /docs/extensions/overview/world
-    - url: /docs/extensions/overview/test
+    - url: /docs/extensions/mv2/overview
+    - url: /docs/extensions/mv2/overview/world
+    - url: /docs/extensions/mv2/overview/test
     - title: i18n.docs.extensions.guides
       sections:
-        - url: /docs/extensions/overview/guides
+        - url: /docs/extensions/mv2/overview/guides
 - url: /docs/extensions/policies
   sections:
     - url: /docs/extensions/policies/sub-url
@@ -21,14 +21,14 @@ test('flattens hierarchical yaml', t => {
 
   const index = buildProjectIndex(yaml.safeLoad(testData));
 
-  t.assert(index['/docs/extensions/overview'] === undefined);
+  t.assert(index['/docs/extensions/mv2/overview'] === undefined);
 
-  const overviewNode = index['/docs/extensions/overview/'];
+  const overviewNode = index['/docs/extensions/mv2/overview/'];
   t.deepEqual(overviewNode, [
     {title: 'i18n.docs.extensions.overview', url: undefined},
   ]);
 
-  const guidesNode = index['/docs/extensions/overview/guides/'];
+  const guidesNode = index['/docs/extensions/mv2/overview/guides/'];
   t.deepEqual(guidesNode, [
     {title: 'i18n.docs.extensions.overview', url: undefined},
     {title: 'i18n.docs.extensions.guides', url: undefined},

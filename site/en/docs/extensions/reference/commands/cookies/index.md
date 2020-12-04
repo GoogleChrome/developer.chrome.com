@@ -25,7 +25,7 @@ permissions][1] for any hosts whose cookies you want to access. For example:
 You can find a simple example of using the cookies API in the [examples/api/cookies][2] directory.
 For other examples and for help in viewing the source code, see [Samples][3].
 
-[1]: /docs/extensions/declare_permissions
+[1]: /docs/extensions/mv2/declare_permissions
 [2]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/cookies/
-[3]: /docs/extensions/samples
+[3]: /docs/extensions/mv2/samples

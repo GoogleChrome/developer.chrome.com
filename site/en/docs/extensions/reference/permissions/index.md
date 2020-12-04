@@ -118,13 +118,13 @@ chrome.permissions.remove({
 });
 ```
 
-[1]: /docs/extensions/manifest
-[2]: /docs/extensions/declare_permissions#manifest
+[1]: /docs/extensions/mv2/tabs
+[2]: /docs/extensions/mv2/declare_permissions#manifest
 [3]: #property-Permissions-origins
 [4]: /docs/extensions/debugger
 [5]: /docs/devtools/docs/debugger-protocol
 [6]: /docs/extensions/declarativeNetRequest
-[7]: /docs/extensions/devtools
+[7]: /docs/extensions/mv2/devtools
 [8]: https://tools.google.com/dlpage/chromesxs
 [9]: https://www.chromium.org/getting-involved/dev-channel
 [10]: /docs/extensions/experimental
@@ -132,7 +132,7 @@ chrome.permissions.remove({
 [12]: /docs/extensions/mdns
 [13]: /docs/extensions/mdns
 [14]: /docs/extensions/tts
-[15]: /docs/extensions/ttsEngine
-[16]: /docs/extensions/ttsEngine
-[17]: /docs/extensions/permission_warnings
-[18]: /docs/extensions/permission_warnings
+[15]: /docs/extensions/reference/ttsEngine
+[16]: /docs/extensions/reference/ttsEngine
+[17]: /docs/extensions/mv2/permission_warnings
+[18]: /docs/extensions/mv2/permission_warnings

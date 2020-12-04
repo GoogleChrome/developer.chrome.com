@@ -90,30 +90,30 @@ the following entries:
 `[_<scheme>_://]_<host-pattern>_[:_<port>_]`
 
 : Match all hostnames that match the pattern `_<host-pattern>_`. A leading `"."` is interpreted as a
-  `"*."`.  
+  `"*."`.
   Examples: `"foobar.com", "*foobar.com", "*.foobar.com", "*foobar.com:99", "https://x.*.y.com:99"`.
 
   <table><tbody><tr><th>Pattern</th><th>Matches</th><th>Does not match</th></tr><tr><td><code>".foobar.com"</code></td><td><code>"www.foobar.com"</code></td><td><code>"foobar.com"</code></td></tr><tr><td><code>"*.foobar.com"</code></td><td><code>"www.foobar.com"</code></td><td><code>"foobar.com"</code></td></tr><tr><td><code>"foobar.com"</code></td><td><code>"foobar.com"</code></td><td><code>"www.foobar.com"</code></td></tr><tr><td><code>"*foobar.com"</code></td><td><code>"foobar.com"</code>, <code>"www.foobar.com"</code>, <code>"foofoobar.com"</code></td><td></td></tr></tbody></table>
 
 `[_<scheme>_://]_<ip-literal>_[:_<port>_]`
 
-: Match URLs that are IP address literals.  
+: Match URLs that are IP address literals.
   Conceptually this is the similar to the first case, but with special cases to handle IP literal
   canonicalization. For example, matching on "\[0:0:0::1\]" is the same as matching on "\[::1\]"
-  because the IPv6 canonicalization is done internally.  
+  because the IPv6 canonicalization is done internally.
   Examples: `"127.0.1", "[0:0::1]", "[::1]", "http://[::1]:99"`
 
 `_<ip-literal>_/_<prefix-length-in-bits>_`
 
 : Match any URL containing an IP literal within the given range. The IP range is specified using CIDR
-  notation.  
+  notation.
   Examples: `"192.168.1.1/16", "fefe:13::abc/33"`
 
 `<local>`
 
 : Matches simple hostnames. A simple hostname is one that contains no dots and is not an IP literal.
   For instance `example` and `localhost` are simple hostnames, whereas `example.com`, `example.`, and
-  `[::1]` are not.  
+  `[::1]` are not.
   Example: `"<local>"`
 
 ## Examples
@@ -174,7 +174,7 @@ chrome.proxy.settings.get(
 Note that the `value` object passed to `set()` is not identical to the `value` object passed to
 callback function of `get()`. The latter will contain a `rules.proxyForHttp.port` element.
 
-[1]: /docs/extensions/manifest
+[1]: /docs/extensions/mv2/tabs
 [2]: #type-ProxyConfig
 [3]: #type-ProxyRules
 [4]: #type-PacScript

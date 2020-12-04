@@ -762,8 +762,8 @@ European developers can raise concerns about clarity of terms, policies, or othe
 Business related issues by contacting CWS support.
 
 [1]: http://chrome.google.com/webstore
-[2]: /docs/extensions/hosting_changes
-[3]: /docs/extensions/faq
+[2]: /docs/extensions/mv2/hosting_changes
+[3]: /docs/extensions/mv2/faq
 [4]: http://groups.google.com/a/chromium.org/group/chromium-apps
 [5]: #faq-gen-01
 [6]: #faq-gen-02
@@ -884,7 +884,7 @@ Business related issues by contacting CWS support.
 [122]: https://www.google.com/about/company/unwanted-software-policy.html
 [123]: /docs/webstore/program_policies
 [124]: https://support.google.com/chrome_webstore/contact/developer_support/?hl=en
-[125]: /docs/extensions/manifestVersion
+[125]: /docs/extensions/mv2/manifestVersion
 [126]: http://blog.chromium.org/2013/09/saying-goodbye-to-our-old-friend-npapi.html
 [127]: https://support.google.com/chrome_webstore/answer/1254182?hl=en&ref_topic=1734051
 [128]: /docs/webstore/program_policies

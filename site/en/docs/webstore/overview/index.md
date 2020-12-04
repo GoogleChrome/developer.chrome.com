@@ -68,7 +68,7 @@ interested in:
 
 If you aren't sure what kind of app you need to write, see [Choosing an App Type][7].
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/28i4EMWuR9Baoq5d4S0e.png", 
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/28i4EMWuR9Baoq5d4S0e.png",
        alt="Thumbnail of decision flowchart from Choosing an App Type", height="627", width="581" %}
 
 ## Charging for your app {: #charging }
@@ -207,7 +207,7 @@ If you just want to write your item, see the developer doc for the type of app y
 [2]: https://developers.chrome.com/apps/migration
 [3]: http://chrome.google.com/webstore
 [4]: /apps/about_apps
-[5]: /docs/extensions/themes
+[5]: /docs/extensions/mv2/themes
 [6]: /docs/extensions/index
 [7]: /docs/webstore/choosing
 [8]: /docs/webstore/choosing
@@ -224,5 +224,5 @@ If you just want to write your item, see the developer doc for the type of app y
 [19]: /docs/webstore/get_started
 [20]: /docs/webstore/samples
 [21]: /apps/about_apps
-[22]: /docs/extensions/themes
+[22]: /docs/extensions/mv2/themes
 [23]: /docs/extensions/index

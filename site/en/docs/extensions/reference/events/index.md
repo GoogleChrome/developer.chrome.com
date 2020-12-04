@@ -238,5 +238,5 @@ capabilities as expressible with a [`events.UrlFilter`][18], except for scheme a
 [14]: /docs/extensions/runtime#property-lastError
 [15]: /docs/extensions/runtime#event-onInstalled
 [16]: #type-UrlFilter
-[17]: /docs/extensions/event_pages
+[17]: /docs/extensions/mv2/event_pages
 [18]: #type-UrlFilter

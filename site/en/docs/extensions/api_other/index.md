@@ -70,8 +70,8 @@ TODO end of definition list
 
 [1]: /docs/extensions/api_index
 [2]: https://developer.mozilla.org/en/Gecko_DOM_Reference
-[3]: /docs/extensions/xhr
-[4]: /docs/extensions/declare_permissions
+[3]: /docs/extensions/mv2/xhr
+[4]: /docs/extensions/mv2/declare_permissions
 [5]: http://www.html5rocks.com/tutorials/audio/quick/
 [6]: http://www.html5rocks.com/tutorials/appcache/beginner/
 [7]: http://www.html5rocks.com/en/tutorials/#canvas

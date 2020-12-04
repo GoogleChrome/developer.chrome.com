@@ -63,8 +63,8 @@ chrome.fontSettings.setFont(
 You can find a sample extension using the Font Settings API in the [examples/api/fontSettings][3]
 directory. For other examples and for help in viewing the source code, see [Samples][4].
 
-[1]: /docs/extensions/manifest
+[1]: /docs/extensions/mv2/tabs
 [2]: https://www.w3.org/TR/CSS21/fonts.html#generic-font-families
 [3]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/fontSettings/
-[4]: /docs/extensions/samples
+[4]: /docs/extensions/mv2/samples

@@ -22,7 +22,7 @@ API. For example:
 [`management.getPermissionWarningsByManifest`][2], [`management.uninstallSelf`][3], and
 [`management.getSelf`][4] do not require the management permission.
 
-[1]: /docs/extensions/manifest
+[1]: /docs/extensions/mv2/tabs
 [2]: #method-getPermissionWarningsByManifest
 [3]: #method-uninstallSelf
 [4]: #method-getSelf

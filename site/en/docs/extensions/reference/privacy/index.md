@@ -26,7 +26,7 @@ example:
 }
 ```
 
-## Usage 
+## Usage
 
 Reading the current value of a Chrome setting is straightforward. You'll first need to find the
 property you're interested in, then you'll call `get()` on that object in order to retrieve its
@@ -97,6 +97,6 @@ chrome.privacy.services.autofillEnabled.onChange.addListener(
 For example code, see the [Privacy API samples][4].
 
 [1]: https://www.google.com/intl/en/landing/chrome/google-chrome-privacy-whitepaper.pdf
-[2]: /docs/extensions/manifest
+[2]: /docs/extensions/mv2/tabs
 [3]: /docs/extensions/types#ChromeSetting
-[4]: /docs/extensions/samples#search:privacy
+[4]: /docs/extensions/mv2/samples#search:privacy

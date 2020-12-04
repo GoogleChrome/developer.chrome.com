@@ -124,8 +124,8 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
 ```
 
 [1]: https://developer.mozilla.org/en/DOM/Storage#localStorage
-[2]: /docs/extensions/manifest/incognito
-[3]: /docs/extensions/manifest/storage
-[4]: /docs/extensions/manifest
+[2]: /docs/extensions/mv2/manifest/incognito
+[3]: /docs/extensions/mv2/manifest/storage
+[4]: /docs/extensions/mv2/tabs
 [5]: #property-sync
 [6]: #property-local

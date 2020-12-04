@@ -149,7 +149,7 @@ landing pages, or installation patterns that suggest user confusion.
 
 ## Enforcement FAQ
 
-**Why are we disabling inline installation for certain extensions?**  
+**Why are we disabling inline installation for certain extensions?**
 Inline installation is a powerful distribution mechanism that offers users a smoother experience
 installing Chrome extensions and helps developers reach more users. While the vast majority of
 developers have used this feature as intended, we have seen instances where an inline installation
@@ -157,7 +157,7 @@ has been paired with ads and landing pages that confuse and mislead users into i
 they may not want. In response to this, we [launched][11] our inline installation enforcement effort
 in September 2015, which we updated in March 2016.
 
-**What happens when inline installation is disabled?**  
+**What happens when inline installation is disabled?**
 When an extension's inline installation is disabled, attempts to trigger inline installation for
 your extension will result in a redirect to your item's Chrome Web Store listing. Inline
 installation enforcement does not result in removal of your extension from the Chrome Web Store.
@@ -169,13 +169,13 @@ deceptive webpage leading to your extension, on a per-install basis. When inline
 disabled in this way, it will not affect other inline installations of the same extension
 originating from non-deceptive sources.
 
-**Will I know if my inline installation has been disabled?**  
+**Will I know if my inline installation has been disabled?**
 If inline installation has been disabled at the extension level, you will receive an alert to
 developer email account. If inline installation is disabled at the installation level, due to a
 deceptive or malicious installation context and not the extension itself, the developer will receive
 not receive an alert.
 
-**What are the criteria for disabling inline installation?**  
+**What are the criteria for disabling inline installation?**
 The Chrome Web Store has two separate processes that govern inline installation. The first is run
 completely by an automated enforcement system. This system regularly scans all extensions hosted on
 the Chrome Web Store and tracks various signals associated with potential abuse of the inline
@@ -197,7 +197,7 @@ Please note that we may periodically adjust our enforcement signals. If we detec
 egregious violations or any attempts to game or manipulate our signals in any way, we may apply
 further enforcement actions.
 
-**How can I have inline installation reenabled for my extension?**  
+**How can I have inline installation reenabled for my extension?**
 Once an extension's inline installation has been disabled by our automated enforcement system, we
 closely track the extension's installation patterns. If our system determines that user intent
 remains strong after a redirect to the extension's Chrome Web Store listing, the system will
@@ -208,7 +208,7 @@ installation will remain disabled.
 For cases where inline installation has been permanently disabled by our manual review process,
 there is no path to reenable that particular extension's inline installation.
 
-**How can I ensure inline installation remains enabled for my extension?**  
+**How can I ensure inline installation remains enabled for my extension?**
 In general, we urge Chrome Web Store developers to ensure their inline installation landing pages
 prominently feature their extensions' core features and deliver experiences that align with the
 expectations conveyed by the ads and landing pages associated with the installation flow. For more
@@ -220,17 +220,17 @@ Additionally, we recommend that Chrome Web Store developers carefully track any 
 indicate their extension's installation may have led to any confusion or unexpected changes, in
 addition to installation metrics that may convey low user satisfaction, e.g., high churn rates.
 
-**Is there any way that I can request a re-review, or appeal this decision?**  
+**Is there any way that I can request a re-review, or appeal this decision?**
 Yes, appeals can be made through the instructions included in the notification email you will
 receive to the email address listed under your CWS developer account. Our enforcement team will
 process the appeal within 48 hours.
 
-**Why do you have an automated enforcement system?**  
+**Why do you have an automated enforcement system?**
 Our automated disable was built to ensure we are responsive to user feedback on unwanted extensions
 in a scalable, fair, and objective manner.
 
 [1]: https://blog.chromium.org/2018/06/improving-extension-transparency-for.html
-[2]: /docs/extensions/inline_faq
+[2]: /docs/extensions/mv2/inline_faq
 [3]: /docs/webstore/publish
 [4]: https://chrome.google.com/webstore/developer/dashboard
 [5]: https://chrome.google.com/webstore/detail/apdfllckaahabafndbhieahigkjlhalf

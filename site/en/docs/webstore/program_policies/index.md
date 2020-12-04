@@ -37,7 +37,7 @@ Sexually Explicit Material:
   promotes incest, bestiality, necrophilia, or non-consensual sexual acts. Google has a zero-tolerance
   policy against child pornography. If we become aware of content with child pornography, we will
   report it to the appropriate authorities and delete the Google Accounts of those involved with the
-  distribution.  
+  distribution.
   Content which contains non-sexual nudity - such as artistic, educational, scientific, or cultural
   nudity - is generally allowed, but may impact the visibility of your Product.
 
@@ -122,7 +122,7 @@ Intellectual Property:
 
 : Don't infringe on the intellectual property rights of others, including patent, trademark, trade
   secret, copyright, and other proprietary rights. We will respond to clear notices of alleged
-  copyright infringement. For more information or to file a DMCA request, use [this tool][10].  
+  copyright infringement. For more information or to file a DMCA request, use [this tool][10].
   Additionally, the visibility of your Product may be impacted if we believe it potentially infringes
   on intellectual property rights.
 
@@ -437,7 +437,7 @@ associated publisher account with your Product can receive emails from external 
 flagged as Spam to ensure that you receive all communications in a timely manner.
 
 [1]: https://blog.chromium.org/2018/06/improving-extension-transparency-for.html
-[2]: /docs/extensions/inline_faq
+[2]: /docs/extensions/mv2/inline_faq
 [3]: /docs/webstore/branding
 [4]: /docs/webstore/rating
 [5]: /docs/webstore/user_data
@@ -456,7 +456,7 @@ flagged as Spam to ensure that you receive all communications in a timely manner
 [18]: /docs/webstore/rating
 [19]: #impersonation
 [20]: https://support.google.com/adsense/bin/answer.py?hl=en&answer=48182
-[21]: /docs/extensions/single_purpose
+[21]: /docs/extensions/mv2/single_purpose
 [22]: http://checkout.google.com/termsOfService?type=Seller
 [23]: http://checkout.google.com/seller/content_policies.html
 [24]: http://www.google.com/support/bin/static.py?page=ts.cs&ts=1114905

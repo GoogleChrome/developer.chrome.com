@@ -327,8 +327,8 @@ is determined based on the priority of each rule and the operations specified.
   `h1` was removed by (10), `h2` was set by (10) then appended by (11), and `h3` was appended by
   (10) and (11).
 
-[1]: /docs/extensions/manifest
-[2]: /docs/extensions/declare_permissions
+[1]: /docs/extensions/mv2/tabs
+[2]: /docs/extensions/mv2/declare_permissions
 [3]: #type-Ruleset
 [4]: #type-Ruleset
 [5]: #property-MAX_NUMBER_OF_STATIC_RULESETS

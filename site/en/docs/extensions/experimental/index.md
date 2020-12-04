@@ -51,10 +51,10 @@ Pay special attention to the following APIs, which we expect to finalize soon: *
 For information on the standard APIs, see [chrome.\* APIs][7] and [Other APIs][8].
 
 [1]: http://groups.google.com/a/chromium.org/group/chromium-extensions/topics
-[2]: /docs/extensions/samples#search:experimental
+[2]: /docs/extensions/mv2/samples#search:experimental
 [3]: http://tools.google.com/dlpage/chromesxs
 [4]: http://www.chromium.org/getting-involved/dev-channel
-[5]: /docs/extensions/declare_permissions
+[5]: /docs/extensions/mv2/declare_permissions
 [6]: http://groups.google.com/a/chromium.org/group/chromium-extensions/topics
 [7]: /docs/extensions/api_index
 [8]: /docs/extensions/api_other

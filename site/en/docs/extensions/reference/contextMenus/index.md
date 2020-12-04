@@ -37,4 +37,4 @@ you should specify a 16x16-pixel icon for display next to your menu item. For ex
 
 You can find samples of this API on the [sample page][1].
 
-[1]: /docs/extensions/samples#search:contextMenus
+[1]: /docs/extensions/mv2/samples#search:contextMenus

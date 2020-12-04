@@ -102,8 +102,8 @@ current URL in the user's profile. To make use of this condition the "bookmarks"
 declared in the [extension manifest][38]
 
 [1]: /docs/extensions/pageAction
-[2]: /docs/extensions/declare_permissions#host-permissions
-[3]: /docs/extensions/content_scripts
+[2]: /docs/extensions/mv2/declare_permissions#host-permissions
+[3]: /docs/extensions/mv2/content_scripts
 [4]: /docs/extensions/activeTab
 [5]: /docs/extensions/pageAction
 [6]: /docs/extensions/events#declarative
@@ -138,4 +138,4 @@ declared in the [extension manifest][38]
 [35]: https://www.w3.org/TR/selectors4/#compound
 [36]: https://www.w3.org/community/webed/wiki/CSS/Selectors#Combinators
 [37]: #property-PageStateMatcher-isBookmarked
-[38]: /docs/extensions/manifest
+[38]: /docs/extensions/mv2/tabs

@@ -127,11 +127,11 @@ In this step, you'll load the unpacked app into the browser, so you can confirm 
 valid.
 
 1.  Bring up the extensions management page: chrome://extensions.
-2.  If **Developer mode** has a + by it, click the +.  
+2.  If **Developer mode** has a + by it, click the +.
     The + changes to a -, and more buttons and information appear.
-3.  Click the **Load unpacked extension** button.  
+3.  Click the **Load unpacked extension** button.
     A file dialog appears.
-4.  In the file dialog, choose the `myapp` directory.  
+4.  In the file dialog, choose the `myapp` directory.
     Unless you get an error dialog, you've now installed the app.
 
     !!!.aside.aside--note
@@ -143,11 +143,11 @@ valid.
     not have a comma after it.
     !!!
 
-5.  Create a new tab.  
+5.  Create a new tab.
     The icon for the newly installed app appears in Google Chrome's launcher on the New Tab page. If
     the Apps area is minimized, then instead of the icon you specified, you should see the website
     favicon.
-6.  Click the icon for the app.  
+6.  Click the icon for the app.
     You've now launched the app. You should see its website in your browser window. If you don't,
     try changing the value of "web_url" in the manifest, reload the app, and click its icon again.
 
@@ -194,10 +194,10 @@ In this step, you upload the ZIP file that you created in Step 5.
     Once you sign in, you'll see a list of any installable web apps, extensions, and themes that
     you've already uploaded.
 
-3.  Click the **Add new item** button in the dashboard.  
+3.  Click the **Add new item** button in the dashboard.
     If you've never uploaded an installable web app, extension, or theme before, you need to accept
     the developer agreement before going on.
-4.  Click **Choose file**, choose the ZIP file you created in Step 5, and click **Upload**.  
+4.  Click **Choose file**, choose the ZIP file you created in Step 5, and click **Upload**.
     If you see an error message, fix the error, zip up the directory again, and upload the ZIP file.
 
 Within seconds you should see the Edit page for your app. At the top, you might see a warning that
@@ -300,16 +300,16 @@ If you just want to write your app, see the developer doc for the type of app yo
 - [Extensions][45]
 
 [1]: https://developers.google.com/chrome/apps/articles/thinking_in_web_apps
-[2]: /docs/extensions/overview
+[2]: /docs/extensions/mv2/overview
 [3]: /docs/apps/about_apps
-[4]: /docs/extensions/getstarted
+[4]: /docs/extensions/mv2/getstarted
 [5]: /docs/apps/first_app
 [6]: #step5
 [7]: https://chrome.google.com/webstore/developer/dashboard
 [8]: http://www.blogger.com
 [9]: http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592
 [10]: https://chrome.google.com/webstore/developer/dashboard
-[12]: /docs/extensions/manifestVersion
+[12]: /docs/extensions/mv2/manifestVersion
 [13]: https://developers.google.com/chrome/apps/docs/developers_guide
 [15]: /docs/webstore/images#icons
 [16]: /docs/webstore/images#screenshots
@@ -325,7 +325,7 @@ If you just want to write your app, see the developer doc for the type of app yo
 [30]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [32]: https://chrome.google.com/webstore/developer/dashboard
 [33]: /docs/webstore/branding
-[35]: /docs/extensions/manifest
+[35]: /docs/extensions/mv2/tabs
 [36]: https://chrome.google.com/webstore/developer/dashboard
 [38]: /docs/webstore/
 [39]: /docs/webstore/check_for_payment
@@ -333,5 +333,5 @@ If you just want to write your app, see the developer doc for the type of app yo
 [41]: /docs/webstore/get_started
 [42]: /docs/chrome/apps/
 [43]: /docs/apps/about_apps
-[44]: /docs/extensions/themes
+[44]: /docs/extensions/mv2/themes
 [45]: /docs/extensions/index

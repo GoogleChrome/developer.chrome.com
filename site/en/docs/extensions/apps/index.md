@@ -99,6 +99,6 @@ Read the [Overview][11] to learn basic concepts about extensions.
 [6]: /docs/apps/about_apps
 [7]: https://developers.google.com/chrome/apps/docs/developers_guide
 [8]: /docs/webstore/choosing
-[9]: /docs/extensions/manifest/icons
-[10]: /docs/extensions/manifest
-[11]: /docs/extensions/overview
+[9]: /docs/extensions/mv2/manifest/icons
+[10]: /docs/extensions/mv2/tabs
+[11]: /docs/extensions/mv2/overview
