@@ -19,6 +19,7 @@ const {createHash} = require('crypto');
 
 const {generateSrc} = require('../_shortcodes/img');
 const {drafts} = require('../_utils/drafts');
+const {stripDefaultLocale} = require('../_filters/urls');
 
 /**
  * Shrink the size of the given fulltext to fit within a certain limit, at the
@@ -64,7 +65,7 @@ module.exports = collections => {
       title: item.data.title,
       description: item.data.description,
       content: limitText(removeMarkdown(item.template.frontMatter.content)),
-      url: item.url,
+      url: stripDefaultLocale(item.url),
       tags: item.data.tags || [],
       locale: item.data.locale,
       image:
