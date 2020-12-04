@@ -7,14 +7,8 @@
   }
 }
 
-.toc {
-  width: max-content;
-}
-
 .toc > summary {
-  align-items: center;
   color: var(--color-secondary-text);
-  display: flex;
 
   &::-webkit-details-marker {
     display: none;
@@ -38,28 +32,27 @@
 // so we have to style them all with descendant selectors.
 .toc__wrapper {
   a {
+    @extend %surface;
     @extend %type--small;
     text-decoration: none;
   }
 
   li {
-    margin-top: 0;
+    line-height: 1.2;
 
     &::before {
       display: none;
     }
   }
 
+  li + li {
+    margin-top: get-size(200);
+  }
+
   ul,
   ol {
     list-style-type: none;
-    margin: 0;
-    max-width: 100%;
-  }
-
-  > ul,
-  > ol {
-    margin-block-start: get-size(200);
+    margin: get-size(200) 0;
     padding: 0;
 
     ul,
