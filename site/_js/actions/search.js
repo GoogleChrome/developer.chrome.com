@@ -32,8 +32,7 @@ export const activateSearch = store.action(() => {
   });
 
   // Prevent the user from scrolling the page underneath the search modal.
-  /** @type {HTMLElement} */ (document.querySelector('body')).style.overflow =
-    'hidden';
+  document.body.classList.add('overflow-hidden');
 
   return {isSearchActive: true};
 });
@@ -50,8 +49,7 @@ export const deactivateSearch = store.action(() => {
   });
 
   // Re-enable page scrolling.
-  /** @type {HTMLElement} */ (document.querySelector('body')).style.overflow =
-    '';
+  document.body.classList.remove('overflow-hidden');
 
   return {isSearchActive: false};
 });

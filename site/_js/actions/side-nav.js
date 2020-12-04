@@ -23,6 +23,10 @@ export const expandSideNav = store.action(() => {
   });
 
   /** @type {SideNav} */ (document.querySelector('side-nav')).expanded = true;
+
+  // Prevent the user from scrolling the page underneath the search modal.
+  document.body.classList.add('overflow-hidden');
+
   return {isSideNavExpanded: true};
 });
 
@@ -32,6 +36,10 @@ export const collapseSideNav = store.action(() => {
   });
 
   /** @type {SideNav} */ (document.querySelector('side-nav')).expanded = false;
+
+  // Re-enable page scrolling.
+  document.body.classList.remove('overflow-hidden');
+
   return {isSideNavExpanded: false};
 });
 
