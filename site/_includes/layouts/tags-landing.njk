@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="tags-grid measure-1280 pad-left-400 pad-right-400 center-margin">
+<div class="tags-grid measure-1280 gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400 center-margin">
   {% for tag in pagination.items %}
     {# Get the current first letter of the tag title #}
     {% set tagLetter = tag.title[0] | capitalize %}

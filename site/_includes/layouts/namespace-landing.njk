@@ -11,10 +11,10 @@
 {% block content %}
   {% import 'macros/render-type.njk' as macros with context %}
 
-  <div class="display-flex">
+  <div class="display-flex gap-top-300 lg:gap-top-400">
     {% include 'partials/navigation-tree.njk' %}
 
-    <article class="stack measure-long center-margin pad-400">
+    <article class="stack measure-long center-margin pad-left-400 pad-right-400">
       <h1 class="type--h2">{{ title }}</h1>
 
       {% set content %}

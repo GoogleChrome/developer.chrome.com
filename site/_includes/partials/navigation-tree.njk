@@ -9,7 +9,7 @@
     <div class="navigation-tree__title pad-left-200 pad-right-200 user-select-none">{{ projectPost.data.title }}</div>
   </div>
 
-  <div class="display-flex direction-column pad-top-300 pad-right-200 lg:pad-right-0">
+  <div class="display-flex direction-column pad-top-300 lg:pad-top-200 pad-right-200 lg:pad-right-0">
     {# Render nested sections. #}
     {% from 'macros/navigation-tree-sections.njk' import navigationTreeSections with context %}
     {{ navigationTreeSections() }}

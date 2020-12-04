@@ -5,13 +5,13 @@
 {% endblock %}
 
 {% block content %}
-  <article class="post stack measure-long center-margin width-full pad-400">
+  <article class="post stack measure-long center-margin width-full gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400">
     <div class="stack flow-space-200">
       {% include 'partials/post-headline.njk' %}
     </div>
 
     {% if authors %}
-      <div class="stack-exception-700">
+      <div class="stack-exception-600 lg:stack-exception-700">
         {% include 'partials/post-authors.njk' %}
       </div>
     {% endif %}
