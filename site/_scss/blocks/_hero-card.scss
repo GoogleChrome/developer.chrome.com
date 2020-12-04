@@ -13,12 +13,6 @@
 
   @include media-query('masonry') {
     display: grid;
-    grid-template-columns: 1fr;
-  
-    > * {
-      grid-column: 1;
-      grid-row: 1;
-      max-width: 55%;
-    }
+    grid-template-columns: 1fr 2fr;
   }
 }
