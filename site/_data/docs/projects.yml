@@ -2,4 +2,5 @@ chrome:
   - url: extensions
   - url: webstore
   - url: native-client
+  - url: apps
   - url: multidevice

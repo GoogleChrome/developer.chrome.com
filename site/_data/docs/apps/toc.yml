@@ -1,0 +1,52 @@
+- title: i18n.docs.apps.concepts
+  sections:
+    - url: /docs/apps/overview
+    - url: /docs/apps/app_architecture
+    - url: /docs/apps/app_lifecycle
+- url: /docs/apps/first_app
+- title: i18n.docs.apps.codelab
+  sections:
+    - url: /docs/apps/app_codelab_intro
+    - url: /docs/apps/app_codelab_basics/
+    - url: /docs/apps/app_codelab_import_todomvc
+    - url: /docs/apps/app_codelab_alarms/
+    - url: /docs/apps/app_codelab_webview/
+    - url: /docs/apps/app_codelab_images/
+    - url: /docs/apps/app_codelab_filesystem/
+    - url: /docs/apps/app_codelab_publish/
+- title: i18n.docs.apps.guides
+  sections:
+    - url: /docs/apps/contentSecurityPolicy
+    - url: /docs/apps/chrome_apps_on_mobile
+    - url: /docs/apps/offline_apps
+    - url: /docs/apps/app_external
+    - url: /docs/apps/app_storage
+    - url: /docs/apps/offline_storage
+    - url: /docs/apps/nativeMessaging
+    - url: /docs/apps/app_identity
+    - url: /docs/apps/app_usb
+    - url: /docs/apps/app_serial
+    - url: /docs/apps/app_network
+    - url: /docs/apps/app_bluetooth
+    - url: /docs/apps/app_frameworks
+    - url: /docs/apps/angular_framework
+    - url: /docs/apps/sencha_framework
+    - url: /docs/apps/game_engines
+    - url: /docs/apps/publish_app
+    - url: /docs/apps/analytics
+    - url: /docs/apps/autoupdate
+# Chrome Platform APIs
+- title: i18n.docs.apps.references
+  sections:
+    - url: /docs/apps/app_deprecated
+# Old site linked to these docs so they should be in the ToC.
+# The old content was identical to the Extensions version of the page
+# so we should just use that since no one will likely update these docs.
+# E.g. old site had developer.chrome.com/apps/xhr and developer.chrome.com/extensions/xhr
+# yet the content was identical.
+- url: /docs/extensions/single_purpose
+- url: /docs/extensions/xhr
+- url: /docs/extensions/shared_modules
+- url: /docs/extensions/richNotifications
+- url: /docs/webstore/payments-iap
+- url: /docs/webstore/one_time_payments
