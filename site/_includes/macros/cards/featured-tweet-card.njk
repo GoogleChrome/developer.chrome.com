@@ -13,7 +13,13 @@
       {{ helpers.formatDateShort(tweet.created_at, locale) }}
     </a>
 
+    {#
+      The .tweet-card__text element uses whitespace: pre-wrap so we can't let
+      the html minifier touch it or it will mess up the formatting of the tweet.
+    #}
+    <!-- htmlmin:ignore -->
     <p class="tweet-card__text gap-top-300">{{ tweet.formatted_text | safe }}</p>
+    <!-- htmlmin:ignore -->
 
     <a href="https://twitter.com/chromiumdev" class="tweet-card__link type--small display-inline-flex gap-top-400">
       {{ 'i18n.common.follow' | i18n(locale) }} @Chromiumdev
