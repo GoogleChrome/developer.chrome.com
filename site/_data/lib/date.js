@@ -1,4 +1,8 @@
 const formatDate = (date, locale = 'en', opts) => {
+  if (typeof date === 'string') {
+    date = new Date(date);
+  }
+
   // IMPORTANT: Before version 13.0.0, only the locale data for en-US is
   // available in Node. It will always silently fall back to en-US.
   // You must be using Node 13+ to get full locale support.

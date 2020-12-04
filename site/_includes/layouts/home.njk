@@ -14,7 +14,9 @@
       {{ featuredPostCard(collections[blog][0]) }}
       {{ featuredDocsCard(featured_projects) }}
       {% include 'partials/report-a-bug.njk' %}
-      {{ featuredTweetCard() }}
+      {% if tweets and tweets.length %}
+        {{ featuredTweetCard() }}
+      {% endif %}
     </div>
 
     {#

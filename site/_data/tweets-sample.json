@@ -1,818 +1,324 @@
 [
   {
-      "created_at": "Wed Dec 02 21:27:11 +0000 2020",
-      "id": 1334247765883367424,
-      "id_str": "1334247765883367424",
-      "text": "🎧  New episode of the #CSSPodcast just went live.\n\n🎨 This one is all about worklets and the Houdini Painting API!… https://t.co/WV0nWuOFUq",
-      "truncated": true,
-      "entities": {
-          "hashtags": [
-              {
-                  "text": "CSSPodcast",
-                  "indices": [
-                      22,
-                      33
-                  ]
-              }
-          ],
-          "symbols": [],
-          "user_mentions": [],
-          "urls": [
-              {
-                  "url": "https://t.co/WV0nWuOFUq",
-                  "expanded_url": "https://twitter.com/i/web/status/1334247765883367424",
-                  "display_url": "twitter.com/i/web/status/1…",
-                  "indices": [
-                      115,
-                      138
-                  ]
-              }
+    "created_at": "Wed Dec 02 21:27:11 +0000 2020",
+    "id": 1334247765883367400,
+    "id_str": "1334247765883367424",
+    "full_text": "🎧  New episode of the #CSSPodcast just went live.\n\n🎨 This one is all about worklets and the Houdini Painting API!\n\nPaint worklets can be used all over CSS as:\n- backgrounds\n- masks\n- borders\n- etc!\n\n➡️ Learn more, including how to write your own today!\n\nhttps://t.co/PtKpp75VxK",
+    "truncated": false,
+    "display_text_range": [
+      0,
+      277
+    ],
+    "entities": {
+      "hashtags": [
+        {
+          "text": "CSSPodcast",
+          "indices": [
+            22,
+            33
           ]
-      },
-      "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
-      "in_reply_to_status_id": null,
-      "in_reply_to_status_id_str": null,
-      "in_reply_to_user_id": null,
-      "in_reply_to_user_id_str": null,
-      "in_reply_to_screen_name": null,
-      "user": {
-          "id": 113713261,
-          "id_str": "113713261",
-          "name": "Chrome Developers",
-          "screen_name": "ChromiumDev",
-          "location": "Mountain View, CA",
-          "description": "News & guidance for developers from the Google Chrome Developer Relations team.",
-          "url": "https://t.co/b9JgHDUd68",
-          "entities": {
-              "url": {
-                  "urls": [
-                      {
-                          "url": "https://t.co/b9JgHDUd68",
-                          "expanded_url": "https://web.dev",
-                          "display_url": "web.dev",
-                          "indices": [
-                              0,
-                              23
-                          ]
-                      }
-                  ]
-              },
-              "description": {
-                  "urls": []
-              }
-          },
-          "protected": false,
-          "followers_count": 341148,
-          "friends_count": 70,
-          "listed_count": 5407,
-          "created_at": "Fri Feb 12 19:48:38 +0000 2010",
-          "favourites_count": 1384,
-          "utc_offset": null,
-          "time_zone": null,
-          "geo_enabled": false,
-          "verified": true,
-          "statuses_count": 8656,
-          "lang": null,
-          "contributors_enabled": false,
-          "is_translator": false,
-          "is_translation_enabled": false,
-          "profile_background_color": "ECF0F5",
-          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_tile": false,
-          "profile_image_url": "http://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
-          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
-          "profile_banner_url": "https://pbs.twimg.com/profile_banners/113713261/1602696263",
-          "profile_link_color": "2A4C8A",
-          "profile_sidebar_border_color": "FFFFFF",
-          "profile_sidebar_fill_color": "AAB7D0",
-          "profile_text_color": "333333",
-          "profile_use_background_image": true,
-          "has_extended_profile": false,
-          "default_profile": false,
-          "default_profile_image": false,
-          "following": null,
-          "follow_request_sent": null,
-          "notifications": null,
-          "translator_type": "none"
-      },
-      "geo": null,
-      "coordinates": null,
-      "place": null,
-      "contributors": null,
-      "is_quote_status": false,
-      "retweet_count": 2,
-      "favorite_count": 7,
-      "favorited": false,
-      "retweeted": false,
-      "possibly_sensitive": false,
-      "lang": "en"
-  },
-  {
-      "created_at": "Wed Dec 02 17:04:07 +0000 2020",
-      "id": 1334181565874671616,
-      "id_str": "1334181565874671616",
-      "text": "🎺 Introducing CDS Adventure! 🎺\n\n💻 Create your own avatar, play together, and interact with the community and Google… https://t.co/UUeL1xzuoU",
-      "truncated": true,
-      "entities": {
-          "hashtags": [],
-          "symbols": [],
-          "user_mentions": [],
-          "urls": [
-              {
-                  "url": "https://t.co/UUeL1xzuoU",
-                  "expanded_url": "https://twitter.com/i/web/status/1334181565874671616",
-                  "display_url": "twitter.com/i/web/status/1…",
-                  "indices": [
-                      117,
-                      140
-                  ]
-              }
+        }
+      ],
+      "symbols": [],
+      "user_mentions": [],
+      "urls": [
+        {
+          "url": "https://t.co/PtKpp75VxK",
+          "expanded_url": "https://pod.link/thecsspodcast/episode/NTYzZTljNWUtNjQ2ZC00OWJjLWExOTgtZTY0M2VjYjBhYmU0",
+          "display_url": "pod.link/thecsspodcast/…",
+          "indices": [
+            254,
+            277
           ]
+        }
+      ]
+    },
+    "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 113713261,
+      "id_str": "113713261",
+      "name": "Chrome Developers",
+      "screen_name": "ChromiumDev",
+      "location": "Mountain View, CA",
+      "description": "News & guidance for developers from the Google Chrome Developer Relations team.",
+      "url": "https://t.co/b9JgHDUd68",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/b9JgHDUd68",
+              "expanded_url": "https://web.dev",
+              "display_url": "web.dev",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
       },
-      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
-      "in_reply_to_status_id": null,
-      "in_reply_to_status_id_str": null,
-      "in_reply_to_user_id": null,
-      "in_reply_to_user_id_str": null,
-      "in_reply_to_screen_name": null,
-      "user": {
-          "id": 113713261,
-          "id_str": "113713261",
-          "name": "Chrome Developers",
-          "screen_name": "ChromiumDev",
-          "location": "Mountain View, CA",
-          "description": "News & guidance for developers from the Google Chrome Developer Relations team.",
-          "url": "https://t.co/b9JgHDUd68",
-          "entities": {
-              "url": {
-                  "urls": [
-                      {
-                          "url": "https://t.co/b9JgHDUd68",
-                          "expanded_url": "https://web.dev",
-                          "display_url": "web.dev",
-                          "indices": [
-                              0,
-                              23
-                          ]
-                      }
-                  ]
-              },
-              "description": {
-                  "urls": []
-              }
-          },
-          "protected": false,
-          "followers_count": 341148,
-          "friends_count": 70,
-          "listed_count": 5407,
-          "created_at": "Fri Feb 12 19:48:38 +0000 2010",
-          "favourites_count": 1384,
-          "utc_offset": null,
-          "time_zone": null,
-          "geo_enabled": false,
-          "verified": true,
-          "statuses_count": 8656,
-          "lang": null,
-          "contributors_enabled": false,
-          "is_translator": false,
-          "is_translation_enabled": false,
-          "profile_background_color": "ECF0F5",
-          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_tile": false,
-          "profile_image_url": "http://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
-          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
-          "profile_banner_url": "https://pbs.twimg.com/profile_banners/113713261/1602696263",
-          "profile_link_color": "2A4C8A",
-          "profile_sidebar_border_color": "FFFFFF",
-          "profile_sidebar_fill_color": "AAB7D0",
-          "profile_text_color": "333333",
-          "profile_use_background_image": true,
-          "has_extended_profile": false,
-          "default_profile": false,
-          "default_profile_image": false,
-          "following": null,
-          "follow_request_sent": null,
-          "notifications": null,
-          "translator_type": "none"
-      },
-      "geo": null,
-      "coordinates": null,
-      "place": null,
-      "contributors": null,
-      "is_quote_status": false,
-      "retweet_count": 18,
-      "favorite_count": 59,
-      "favorited": false,
-      "retweeted": false,
-      "possibly_sensitive": false,
-      "lang": "en"
+      "protected": false,
+      "followers_count": 341222,
+      "friends_count": 70,
+      "listed_count": 5411,
+      "created_at": "Fri Feb 12 19:48:38 +0000 2010",
+      "favourites_count": 1388,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 8659,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "ECF0F5",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/113713261/1602696263",
+      "profile_image_extensions_alt_text": null,
+      "profile_banner_extensions_alt_text": null,
+      "profile_link_color": "2A4C8A",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "AAB7D0",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 8,
+    "favorite_count": 32,
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
   },
   {
-      "created_at": "Tue Dec 01 18:22:24 +0000 2020",
-      "id": 1333838877581320192,
-      "id_str": "1333838877581320192",
-      "text": "RT @wasm_summit: Wasm Summit is back for 2021! 🎉\n\nThis year will happen virtually, through Youtube Livestreams, and a Discord community.…",
-      "truncated": false,
-      "entities": {
-          "hashtags": [],
-          "symbols": [],
-          "user_mentions": [
-              {
-                  "screen_name": "wasm_summit",
-                  "name": "WebAssembly Summit",
-                  "id": 1333487330175356929,
-                  "id_str": "1333487330175356929",
-                  "indices": [
-                      3,
-                      15
-                  ]
-              }
+    "created_at": "Wed Dec 02 17:04:07 +0000 2020",
+    "id": 1334181565874671600,
+    "id_str": "1334181565874671616",
+    "full_text": "🎺 Introducing CDS Adventure! 🎺\n\n💻 Create your own avatar, play together, and interact with the community and Googlers! Immerse yourself in our virtual world at #ChromeDevSummit.\n\n🗺 Your journey begins at 9:30am PT on December 9th! → https://t.co/iZ2Kee0SdP https://t.co/ryFaPeRWU1",
+    "truncated": false,
+    "display_text_range": [
+      0,
+      256
+    ],
+    "entities": {
+      "hashtags": [
+        {
+          "text": "ChromeDevSummit",
+          "indices": [
+            160,
+            176
+          ]
+        }
+      ],
+      "symbols": [],
+      "user_mentions": [],
+      "urls": [
+        {
+          "url": "https://t.co/iZ2Kee0SdP",
+          "expanded_url": "http://goo.gle/cds-adventure",
+          "display_url": "goo.gle/cds-adventure",
+          "indices": [
+            233,
+            256
+          ]
+        }
+      ],
+      "media": [
+        {
+          "id": 1334181499839545300,
+          "id_str": "1334181499839545345",
+          "indices": [
+            257,
+            280
           ],
-          "urls": []
-      },
-      "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
-      "in_reply_to_status_id": null,
-      "in_reply_to_status_id_str": null,
-      "in_reply_to_user_id": null,
-      "in_reply_to_user_id_str": null,
-      "in_reply_to_screen_name": null,
-      "user": {
-          "id": 113713261,
-          "id_str": "113713261",
-          "name": "Chrome Developers",
-          "screen_name": "ChromiumDev",
-          "location": "Mountain View, CA",
-          "description": "News & guidance for developers from the Google Chrome Developer Relations team.",
-          "url": "https://t.co/b9JgHDUd68",
-          "entities": {
-              "url": {
-                  "urls": [
-                      {
-                          "url": "https://t.co/b9JgHDUd68",
-                          "expanded_url": "https://web.dev",
-                          "display_url": "web.dev",
-                          "indices": [
-                              0,
-                              23
-                          ]
-                      }
-                  ]
-              },
-              "description": {
-                  "urls": []
-              }
-          },
-          "protected": false,
-          "followers_count": 341148,
-          "friends_count": 70,
-          "listed_count": 5407,
-          "created_at": "Fri Feb 12 19:48:38 +0000 2010",
-          "favourites_count": 1384,
-          "utc_offset": null,
-          "time_zone": null,
-          "geo_enabled": false,
-          "verified": true,
-          "statuses_count": 8656,
-          "lang": null,
-          "contributors_enabled": false,
-          "is_translator": false,
-          "is_translation_enabled": false,
-          "profile_background_color": "ECF0F5",
-          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_tile": false,
-          "profile_image_url": "http://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
-          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
-          "profile_banner_url": "https://pbs.twimg.com/profile_banners/113713261/1602696263",
-          "profile_link_color": "2A4C8A",
-          "profile_sidebar_border_color": "FFFFFF",
-          "profile_sidebar_fill_color": "AAB7D0",
-          "profile_text_color": "333333",
-          "profile_use_background_image": true,
-          "has_extended_profile": false,
-          "default_profile": false,
-          "default_profile_image": false,
-          "following": null,
-          "follow_request_sent": null,
-          "notifications": null,
-          "translator_type": "none"
-      },
-      "geo": null,
-      "coordinates": null,
-      "place": null,
-      "contributors": null,
-      "retweeted_status": {
-          "created_at": "Tue Dec 01 18:00:00 +0000 2020",
-          "id": 1333833239501291520,
-          "id_str": "1333833239501291520",
-          "text": "Wasm Summit is back for 2021! 🎉\n\nThis year will happen virtually, through Youtube Livestreams, and a Discord commun… https://t.co/SIJbFSBGZE",
-          "truncated": true,
-          "entities": {
-              "hashtags": [],
-              "symbols": [],
-              "user_mentions": [],
-              "urls": [
-                  {
-                      "url": "https://t.co/SIJbFSBGZE",
-                      "expanded_url": "https://twitter.com/i/web/status/1333833239501291520",
-                      "display_url": "twitter.com/i/web/status/1…",
-                      "indices": [
-                          117,
-                          140
-                      ]
-                  }
-              ]
-          },
-          "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
-          "in_reply_to_status_id": null,
-          "in_reply_to_status_id_str": null,
-          "in_reply_to_user_id": null,
-          "in_reply_to_user_id_str": null,
-          "in_reply_to_screen_name": null,
-          "user": {
-              "id": 1333487330175356929,
-              "id_str": "1333487330175356929",
-              "name": "WebAssembly Summit",
-              "screen_name": "wasm_summit",
-              "location": "",
-              "description": "A WebAssembly Conference.",
-              "url": "https://t.co/VkiwIgaSx6",
-              "entities": {
-                  "url": {
-                      "urls": [
-                          {
-                              "url": "https://t.co/VkiwIgaSx6",
-                              "expanded_url": "http://webassembly-summit.org",
-                              "display_url": "webassembly-summit.org",
-                              "indices": [
-                                  0,
-                                  23
-                              ]
-                          }
-                      ]
-                  },
-                  "description": {
-                      "urls": []
-                  }
-              },
-              "protected": false,
-              "followers_count": 70,
-              "friends_count": 6,
-              "listed_count": 0,
-              "created_at": "Mon Nov 30 19:05:48 +0000 2020",
-              "favourites_count": 0,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": false,
-              "verified": false,
-              "statuses_count": 1,
-              "lang": null,
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "F5F8FA",
-              "profile_background_image_url": null,
-              "profile_background_image_url_https": null,
-              "profile_background_tile": false,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/1333487831872835584/XhbY4WtQ_normal.jpg",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/1333487831872835584/XhbY4WtQ_normal.jpg",
-              "profile_banner_url": "https://pbs.twimg.com/profile_banners/1333487330175356929/1606763261",
-              "profile_link_color": "1DA1F2",
-              "profile_sidebar_border_color": "C0DEED",
-              "profile_sidebar_fill_color": "DDEEF6",
-              "profile_text_color": "333333",
-              "profile_use_background_image": true,
-              "has_extended_profile": true,
-              "default_profile": true,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": null,
-          "coordinates": null,
-          "place": null,
-          "contributors": null,
-          "is_quote_status": false,
-          "retweet_count": 64,
-          "favorite_count": 137,
-          "favorited": false,
-          "retweeted": false,
-          "possibly_sensitive": false,
-          "lang": "en"
-      },
-      "is_quote_status": false,
-      "retweet_count": 64,
-      "favorite_count": 0,
-      "favorited": false,
-      "retweeted": false,
-      "lang": "en"
-  },
-  {
-      "created_at": "Tue Dec 01 17:56:27 +0000 2020",
-      "id": 1333832347360301058,
-      "id_str": "1333832347360301058",
-      "text": "RT @workboxjs: 🎉 Workbox v6 is out, featuring: 🎉\n\n• New interfaces for writing custom strategies and plugins.\n• Prepackaged workbox-recipes…",
-      "truncated": false,
-      "entities": {
-          "hashtags": [],
-          "symbols": [],
-          "user_mentions": [
-              {
-                  "screen_name": "workboxjs",
-                  "name": "Workbox",
-                  "id": 903470844407459841,
-                  "id_str": "903470844407459841",
-                  "indices": [
-                      3,
-                      13
-                  ]
-              }
+          "media_url": "http://pbs.twimg.com/tweet_video_thumb/EoP3AVvVgAEcT6F.jpg",
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/EoP3AVvVgAEcT6F.jpg",
+          "url": "https://t.co/ryFaPeRWU1",
+          "display_url": "pic.twitter.com/ryFaPeRWU1",
+          "expanded_url": "https://twitter.com/ChromiumDev/status/1334181565874671616/photo/1",
+          "type": "photo",
+          "sizes": {
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "small": {
+              "w": 680,
+              "h": 680,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 720,
+              "h": 720,
+              "resize": "fit"
+            },
+            "large": {
+              "w": 720,
+              "h": 720,
+              "resize": "fit"
+            }
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "id": 1334181499839545300,
+          "id_str": "1334181499839545345",
+          "indices": [
+            257,
+            280
           ],
-          "urls": []
-      },
-      "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
-      "in_reply_to_status_id": null,
-      "in_reply_to_status_id_str": null,
-      "in_reply_to_user_id": null,
-      "in_reply_to_user_id_str": null,
-      "in_reply_to_screen_name": null,
-      "user": {
-          "id": 113713261,
-          "id_str": "113713261",
-          "name": "Chrome Developers",
-          "screen_name": "ChromiumDev",
-          "location": "Mountain View, CA",
-          "description": "News & guidance for developers from the Google Chrome Developer Relations team.",
-          "url": "https://t.co/b9JgHDUd68",
-          "entities": {
-              "url": {
-                  "urls": [
-                      {
-                          "url": "https://t.co/b9JgHDUd68",
-                          "expanded_url": "https://web.dev",
-                          "display_url": "web.dev",
-                          "indices": [
-                              0,
-                              23
-                          ]
-                      }
-                  ]
-              },
-              "description": {
-                  "urls": []
-              }
+          "media_url": "http://pbs.twimg.com/tweet_video_thumb/EoP3AVvVgAEcT6F.jpg",
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/EoP3AVvVgAEcT6F.jpg",
+          "url": "https://t.co/ryFaPeRWU1",
+          "display_url": "pic.twitter.com/ryFaPeRWU1",
+          "expanded_url": "https://twitter.com/ChromiumDev/status/1334181565874671616/photo/1",
+          "type": "animated_gif",
+          "sizes": {
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "small": {
+              "w": 680,
+              "h": 680,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 720,
+              "h": 720,
+              "resize": "fit"
+            },
+            "large": {
+              "w": 720,
+              "h": 720,
+              "resize": "fit"
+            }
           },
-          "protected": false,
-          "followers_count": 341148,
-          "friends_count": 70,
-          "listed_count": 5407,
-          "created_at": "Fri Feb 12 19:48:38 +0000 2010",
-          "favourites_count": 1384,
-          "utc_offset": null,
-          "time_zone": null,
-          "geo_enabled": false,
-          "verified": true,
-          "statuses_count": 8656,
-          "lang": null,
-          "contributors_enabled": false,
-          "is_translator": false,
-          "is_translation_enabled": false,
-          "profile_background_color": "ECF0F5",
-          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_tile": false,
-          "profile_image_url": "http://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
-          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
-          "profile_banner_url": "https://pbs.twimg.com/profile_banners/113713261/1602696263",
-          "profile_link_color": "2A4C8A",
-          "profile_sidebar_border_color": "FFFFFF",
-          "profile_sidebar_fill_color": "AAB7D0",
-          "profile_text_color": "333333",
-          "profile_use_background_image": true,
-          "has_extended_profile": false,
-          "default_profile": false,
-          "default_profile_image": false,
-          "following": null,
-          "follow_request_sent": null,
-          "notifications": null,
-          "translator_type": "none"
-      },
-      "geo": null,
-      "coordinates": null,
-      "place": null,
-      "contributors": null,
-      "retweeted_status": {
-          "created_at": "Mon Nov 30 22:14:46 +0000 2020",
-          "id": 1333534967327035392,
-          "id_str": "1333534967327035392",
-          "text": "🎉 Workbox v6 is out, featuring: 🎉\n\n• New interfaces for writing custom strategies and plugins.\n• Prepackaged workbo… https://t.co/MbNjdz7GzA",
-          "truncated": true,
-          "entities": {
-              "hashtags": [],
-              "symbols": [],
-              "user_mentions": [],
-              "urls": [
-                  {
-                      "url": "https://t.co/MbNjdz7GzA",
-                      "expanded_url": "https://twitter.com/i/web/status/1333534967327035392",
-                      "display_url": "twitter.com/i/web/status/1…",
-                      "indices": [
-                          117,
-                          140
-                      ]
-                  }
-              ]
-          },
-          "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
-          "in_reply_to_status_id": null,
-          "in_reply_to_status_id_str": null,
-          "in_reply_to_user_id": null,
-          "in_reply_to_user_id_str": null,
-          "in_reply_to_screen_name": null,
-          "user": {
-              "id": 903470844407459841,
-              "id_str": "903470844407459841",
-              "name": "Workbox",
-              "screen_name": "workboxjs",
-              "location": "",
-              "description": "Workbox is a JavaScript library for adding offline support to Progressive Web Apps.",
-              "url": "https://t.co/mHIjLQDBa0",
-              "entities": {
-                  "url": {
-                      "urls": [
-                          {
-                              "url": "https://t.co/mHIjLQDBa0",
-                              "expanded_url": "https://developers.google.com/web/tools/workbox/",
-                              "display_url": "developers.google.com/web/tools/work…",
-                              "indices": [
-                                  0,
-                                  23
-                              ]
-                          }
-                      ]
-                  },
-                  "description": {
-                      "urls": []
-                  }
-              },
-              "protected": false,
-              "followers_count": 4091,
-              "friends_count": 15,
-              "listed_count": 82,
-              "created_at": "Fri Sep 01 04:13:29 +0000 2017",
-              "favourites_count": 221,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": false,
-              "verified": false,
-              "statuses_count": 223,
-              "lang": null,
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "F5F8FA",
-              "profile_background_image_url": null,
-              "profile_background_image_url_https": null,
-              "profile_background_tile": false,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/903492966685097984/XHTY3FU9_normal.jpg",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/903492966685097984/XHTY3FU9_normal.jpg",
-              "profile_banner_url": "https://pbs.twimg.com/profile_banners/903470844407459841/1504239819",
-              "profile_link_color": "1DA1F2",
-              "profile_sidebar_border_color": "C0DEED",
-              "profile_sidebar_fill_color": "DDEEF6",
-              "profile_text_color": "333333",
-              "profile_use_background_image": true,
-              "has_extended_profile": true,
-              "default_profile": true,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": null,
-          "coordinates": null,
-          "place": null,
-          "contributors": null,
-          "is_quote_status": false,
-          "retweet_count": 37,
-          "favorite_count": 99,
-          "favorited": false,
-          "retweeted": false,
-          "possibly_sensitive": false,
-          "lang": "en"
-      },
-      "is_quote_status": false,
-      "retweet_count": 37,
-      "favorite_count": 0,
-      "favorited": false,
-      "retweeted": false,
-      "lang": "en"
-  },
-  {
-      "created_at": "Mon Nov 30 17:01:18 +0000 2020",
-      "id": 1333456080060383232,
-      "id_str": "1333456080060383232",
-      "text": "RT @argyleink: Want to tune CSS signal vs noise in the styles panel? Try filtering and grouping!\n\n💡 DevTools Tip\nElements &gt; Styles &gt; Comput…",
-      "truncated": false,
-      "entities": {
-          "hashtags": [],
-          "symbols": [],
-          "user_mentions": [
+          "video_info": {
+            "aspect_ratio": [
+              1,
+              1
+            ],
+            "variants": [
               {
-                  "screen_name": "argyleink",
-                  "name": "Adam Argyle",
-                  "id": 129940111,
-                  "id_str": "129940111",
-                  "indices": [
-                      3,
-                      13
-                  ]
+                "bitrate": 0,
+                "content_type": "video/mp4",
+                "url": "https://video.twimg.com/tweet_video/EoP3AVvVgAEcT6F.mp4"
               }
-          ],
-          "urls": []
-      },
-      "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
-      "in_reply_to_status_id": null,
-      "in_reply_to_status_id_str": null,
-      "in_reply_to_user_id": null,
-      "in_reply_to_user_id_str": null,
-      "in_reply_to_screen_name": null,
-      "user": {
-          "id": 113713261,
-          "id_str": "113713261",
-          "name": "Chrome Developers",
-          "screen_name": "ChromiumDev",
-          "location": "Mountain View, CA",
-          "description": "News & guidance for developers from the Google Chrome Developer Relations team.",
-          "url": "https://t.co/b9JgHDUd68",
-          "entities": {
-              "url": {
-                  "urls": [
-                      {
-                          "url": "https://t.co/b9JgHDUd68",
-                          "expanded_url": "https://web.dev",
-                          "display_url": "web.dev",
-                          "indices": [
-                              0,
-                              23
-                          ]
-                      }
-                  ]
-              },
-              "description": {
-                  "urls": []
-              }
+            ]
           },
-          "protected": false,
-          "followers_count": 341148,
-          "friends_count": 70,
-          "listed_count": 5407,
-          "created_at": "Fri Feb 12 19:48:38 +0000 2010",
-          "favourites_count": 1384,
-          "utc_offset": null,
-          "time_zone": null,
-          "geo_enabled": false,
-          "verified": true,
-          "statuses_count": 8656,
-          "lang": null,
-          "contributors_enabled": false,
-          "is_translator": false,
-          "is_translation_enabled": false,
-          "profile_background_color": "ECF0F5",
-          "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-          "profile_background_tile": false,
-          "profile_image_url": "http://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
-          "profile_image_url_https": "https://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
-          "profile_banner_url": "https://pbs.twimg.com/profile_banners/113713261/1602696263",
-          "profile_link_color": "2A4C8A",
-          "profile_sidebar_border_color": "FFFFFF",
-          "profile_sidebar_fill_color": "AAB7D0",
-          "profile_text_color": "333333",
-          "profile_use_background_image": true,
-          "has_extended_profile": false,
-          "default_profile": false,
-          "default_profile_image": false,
-          "following": null,
-          "follow_request_sent": null,
-          "notifications": null,
-          "translator_type": "none"
-      },
-      "geo": null,
-      "coordinates": null,
-      "place": null,
-      "contributors": null,
-      "retweeted_status": {
-          "created_at": "Mon Nov 30 16:59:49 +0000 2020",
-          "id": 1333455706477871113,
-          "id_str": "1333455706477871113",
-          "text": "Want to tune CSS signal vs noise in the styles panel? Try filtering and grouping!\n\n💡 DevTools Tip\nElements &gt; Styles… https://t.co/8GHsCtoD5L",
-          "truncated": true,
-          "entities": {
-              "hashtags": [],
-              "symbols": [],
-              "user_mentions": [],
-              "urls": [
-                  {
-                      "url": "https://t.co/8GHsCtoD5L",
-                      "expanded_url": "https://twitter.com/i/web/status/1333455706477871113",
-                      "display_url": "twitter.com/i/web/status/1…",
-                      "indices": [
-                          120,
-                          143
-                      ]
-                  }
+          "ext_alt_text": null
+        }
+      ]
+    },
+    "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 113713261,
+      "id_str": "113713261",
+      "name": "Chrome Developers",
+      "screen_name": "ChromiumDev",
+      "location": "Mountain View, CA",
+      "description": "News & guidance for developers from the Google Chrome Developer Relations team.",
+      "url": "https://t.co/b9JgHDUd68",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "url": "https://t.co/b9JgHDUd68",
+              "expanded_url": "https://web.dev",
+              "display_url": "web.dev",
+              "indices": [
+                0,
+                23
               ]
-          },
-          "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
-          "in_reply_to_status_id": null,
-          "in_reply_to_status_id_str": null,
-          "in_reply_to_user_id": null,
-          "in_reply_to_user_id_str": null,
-          "in_reply_to_screen_name": null,
-          "user": {
-              "id": 129940111,
-              "id_str": "129940111",
-              "name": "Adam Argyle",
-              "screen_name": "argyleink",
-              "location": "Seattle",
-              "description": "CSS {\n  note: #BLM !important;\n  position: #CSS @GoogleChrome @CSSWG;\n  co-host: #theCSSpodcast;\n  maker: #VisBug;\n  luv: CSS/JS/UX;\n  path: calc(dev*design)\n}",
-              "url": "https://t.co/5N6jAS28d1",
-              "entities": {
-                  "url": {
-                      "urls": [
-                          {
-                              "url": "https://t.co/5N6jAS28d1",
-                              "expanded_url": "https://nerdy.dev",
-                              "display_url": "nerdy.dev",
-                              "indices": [
-                                  0,
-                                  23
-                              ]
-                          }
-                      ]
-                  },
-                  "description": {
-                      "urls": []
-                  }
-              },
-              "protected": false,
-              "followers_count": 18202,
-              "friends_count": 1337,
-              "listed_count": 440,
-              "created_at": "Mon Apr 05 21:30:59 +0000 2010",
-              "favourites_count": 24107,
-              "utc_offset": null,
-              "time_zone": null,
-              "geo_enabled": true,
-              "verified": false,
-              "statuses_count": 13039,
-              "lang": null,
-              "contributors_enabled": false,
-              "is_translator": false,
-              "is_translation_enabled": false,
-              "profile_background_color": "111111",
-              "profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
-              "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
-              "profile_background_tile": false,
-              "profile_image_url": "http://pbs.twimg.com/profile_images/1332018227942019073/Jh666gw3_normal.jpg",
-              "profile_image_url_https": "https://pbs.twimg.com/profile_images/1332018227942019073/Jh666gw3_normal.jpg",
-              "profile_banner_url": "https://pbs.twimg.com/profile_banners/129940111/1603140790",
-              "profile_link_color": "000000",
-              "profile_sidebar_border_color": "FFFFFF",
-              "profile_sidebar_fill_color": "EFEFEF",
-              "profile_text_color": "333333",
-              "profile_use_background_image": false,
-              "has_extended_profile": false,
-              "default_profile": false,
-              "default_profile_image": false,
-              "following": null,
-              "follow_request_sent": null,
-              "notifications": null,
-              "translator_type": "none"
-          },
-          "geo": null,
-          "coordinates": null,
-          "place": null,
-          "contributors": null,
-          "is_quote_status": false,
-          "retweet_count": 51,
-          "favorite_count": 344,
-          "favorited": false,
-          "retweeted": false,
-          "possibly_sensitive": false,
-          "lang": "en"
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
       },
-      "is_quote_status": false,
-      "retweet_count": 51,
-      "favorite_count": 0,
-      "favorited": false,
-      "retweeted": false,
-      "lang": "en"
+      "protected": false,
+      "followers_count": 341222,
+      "friends_count": 70,
+      "listed_count": 5411,
+      "created_at": "Fri Feb 12 19:48:38 +0000 2010",
+      "favourites_count": 1388,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 8659,
+      "lang": null,
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "ECF0F5",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1316430904806440960/i47iiwIk_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/113713261/1602696263",
+      "profile_image_extensions_alt_text": null,
+      "profile_banner_extensions_alt_text": null,
+      "profile_link_color": "2A4C8A",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "AAB7D0",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": null,
+      "follow_request_sent": null,
+      "notifications": null,
+      "translator_type": "none"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 44,
+    "favorite_count": 167,
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
   }
 ]

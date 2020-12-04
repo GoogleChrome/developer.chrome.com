@@ -16,10 +16,12 @@
 
 declare global {
   export interface TwitterTweet {
+    [key: string]: any; // This lets us add additional properties to this object.
     created_at: string;
     id: number;
     id_str: string;
-    text: string;
+    text?: string;
+    full_text?: string;
     source: string;
     truncated: boolean;
     in_reply_to_status_id?: number | null;
@@ -40,7 +42,7 @@ declare global {
     retweet_count: number;
     favorite_count: number;
     entities: TwitterEntities;
-    extended_entities: unknown;
+    extended_entities?: any;
     favorited?: boolean | null;
     retweeted: boolean;
     possibly_sensitive?: boolean | null;
@@ -104,7 +106,7 @@ declare global {
     hashtags?: {
       indices: [number, number];
       text: string;
-    }
+    }[];
     media?: {
       display_url: string;
       expanded_url: string;
