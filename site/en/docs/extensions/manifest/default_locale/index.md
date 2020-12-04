@@ -10,4 +10,4 @@ Specifies the subdirectory of `_locales` that contains the default strings for t
 field is **required** in extensions that have a `_locales` directory; it **must be absent** in
 extensions that have no `_locales` directory. For details, see [Internationalization][1].
 
-[1] /docs/extensions/i18n
+[1]: /docs/extensions/i18n

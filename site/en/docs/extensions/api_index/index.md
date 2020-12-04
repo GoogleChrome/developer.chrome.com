@@ -53,7 +53,7 @@ video:
 [15]: /docs/extensions/contextMenus
 [16]: /docs/extensions/cookies
 [17]: /docs/extensions/debugger
-[18] /docs/devtools/docs/debugger-protocol
+[18]: /docs/devtools/docs/debugger-protocol
 [19]: /docs/extensions/declarativeContent
 [20]: /docs/extensions/declarativeNetRequest
 [21]: /docs/extensions/desktopCapture

@@ -427,7 +427,7 @@ What's next?
 [2]: /content_scripts
 [3]: /options
 [4]: /user_interface
-[5] /docs/
+[5]: /docs/
 [6]: examples/tutorials/get_started_complete.zip
 [7]: /docs/extensions/extensions/manifest
 [8]: examples/tutorials/get_started/manifest.json

@@ -111,6 +111,6 @@ giving them an option to disable these extensions.
 [12]: https://clients2.google.com/service/update2/crx
 [13]: https://clients2.google.com/service/update2/crx
 [14]: https://support.google.com/chrome/a/answer/188453?hl=en
-[15] /docs/extensions/messaging#native-messaging
+[15]: /docs/extensions/messaging#native-messaging
 [16]: http://developer.chrome.com/extensions/npapi
 [17]: https://support.google.com/chrome/answer/2811969

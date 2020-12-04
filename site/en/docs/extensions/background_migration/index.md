@@ -147,5 +147,5 @@ document.getElementById('target').addEventListener('click', function() {
 [2]: /docs/extensions/manifest
 [3]: /docs/extensions/storage
 [4]: /docs/extensions/alarms
-[5] /docs/extensions/extension#method-getBackgroundPage
-[6] /docs/extensions/runtime#method-getBackgroundPage
+[5]: /docs/extensions/extension#method-getBackgroundPage
+[6]: /docs/extensions/runtime#method-getBackgroundPage

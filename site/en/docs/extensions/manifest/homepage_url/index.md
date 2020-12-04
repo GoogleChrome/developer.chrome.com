@@ -11,5 +11,5 @@ will contain a link to this URL. This field is particularly useful if you [host 
 your own site][1]. If you distribute your extension using the [Chrome Web Store][2], the homepage
 URL defaults to the extension's own page.
 
-[1] /docs/extensions/hosting
+[1]: /docs/extensions/hosting
 [2]: https://chrome.google.com/webstore

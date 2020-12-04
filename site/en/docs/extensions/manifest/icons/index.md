@@ -28,4 +28,4 @@ to upload additional images, including at least one screenshot of your extension
 information, see the [Chrome Web Store developer documentation][2].
 
 [1]: https://chrome.google.com/webstore/developer/dashboard
-[2] /docs/webstore
+[2]: /docs/webstore

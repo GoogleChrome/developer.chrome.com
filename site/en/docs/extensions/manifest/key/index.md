@@ -16,8 +16,8 @@ To get a suitable key value, first install your extension from a `.crx` file (yo
 look in the file `Default/Extensions/_<extensionId>_/_<versionString>_/manifest.json`. You will see
 the key value filled in there.
 
-[1] /docs/extensions/overview#relative-urls
-[2] /docs/extensions/extension#method-getURL
+[1]: /docs/extensions/overview#relative-urls
+[2]: /docs/extensions/extension#method-getURL
 [3]: https://chrome.google.com/webstore/developer/dashboard
-[4] /docs/extensions/packaging
+[4]: /docs/extensions/packaging
 [5]: https://www.chromium.org/user-experience/user-data-directory

@@ -12,4 +12,4 @@ extension. The description should be suitable for both the browser's extension m
 [Internationalization][2] for details.
 
 [1]: https://chrome.google.com/webstore
-[2] /docs/extensions/i18n
+[2]: /docs/extensions/i18n

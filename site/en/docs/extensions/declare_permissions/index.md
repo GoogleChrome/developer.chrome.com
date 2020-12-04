@@ -96,7 +96,7 @@ The following table lists the currently available permissions:
 [63]: /docs/extensions/system.storage
 [64]: /docs/extensions/tabCapture
 [65]: /docs/extensions/tabGroups
-[66] /docs/extensions/tabs#type-Tab
+[66]: /docs/extensions/tabs#type-Tab
 [67]: /docs/extensions/tabs
 [68]: /docs/extensions/windows
 [69]: /docs/extensions/topSites

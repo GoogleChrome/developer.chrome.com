@@ -25,4 +25,4 @@ The changes between version 1 and version 2 of the manifest file format are desc
 
 <div class="aside aside--caution">Setting <code>manifest_version</code> 2 in Chrome 17 or lower is not recommended. If your extension needs to work in older versions of Chrome, stick with version 1 for the moment. We'll give you ample warning before version 1 stops working.</div>
 
-[1] /docs/extensions/manifestVersion
+[1]: /docs/extensions/manifestVersion

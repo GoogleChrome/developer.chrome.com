@@ -92,13 +92,13 @@ documentation][10].
 Read the [Overview][11] to learn basic concepts about extensions.
 
 [1]: /docs/apps/about_apps
-[2] /docs/webstore/migrating
+[2]: /docs/webstore/migrating
 [3]: https://blog.chromium.org/2012/11/restricting-extension-apis-in-legacy.html
 [4]: https://blog.chromium.org/2014/06/migrate-your-legacy-packaged-apps-to.html
 [5]: https://blog.chromium.org/2012/08/the-evolution-of-chrome-packaged-apps.html
 [6]: /docs/apps/about_apps
 [7]: https://developers.google.com/chrome/apps/docs/developers_guide
-[8] /docs/webstore/choosing
+[8]: /docs/webstore/choosing
 [9]: /docs/extensions/manifest/icons
 [10]: /docs/extensions/manifest
 [11]: /docs/extensions/overview

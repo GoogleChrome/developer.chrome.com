@@ -453,40 +453,40 @@ APIs][44].
 
 You can find examples that use DevTools APIs in [Samples][46].
 
-[1] /docs/devtools/docs/extensions-gallery
-[2] /docs/extensions/devtools.inspectedWindow
-[3] /docs/extensions/devtools.network
-[4] /docs/extensions/devtools.panels
-[5] /docs/extensions/devtools.panels
-[6] /docs/extensions/devtools.inspectedWindow
-[7] /docs/extensions/devtools.network
-[8] /docs/extensions/extension
-[9] /docs/extensions/runtime
+[1]: /docs/devtools/docs/extensions-gallery
+[2]: /docs/extensions/devtools.inspectedWindow
+[3]: /docs/extensions/devtools.network
+[4]: /docs/extensions/devtools.panels
+[5]: /docs/extensions/devtools.panels
+[6]: /docs/extensions/devtools.inspectedWindow
+[7]: /docs/extensions/devtools.network
+[8]: /docs/extensions/extension
+[9]: /docs/extensions/runtime
 [10]: /docs/extensions/messaging
 [11]: #injecting
-[12] /docs/extensions/devtools.panels
+[12]: /docs/extensions/devtools.panels
 [13]: http://developer.chrome.com/extensions/experimental.html
-[14] /docs/extensions/devtools.panels#method-ExtensionSidebarPane-setPage
-[15] /docs/extensions/devtools.panels#method-ExtensionSidebarPane-setObject
+[14]: /docs/extensions/devtools.panels#method-ExtensionSidebarPane-setPage
+[15]: /docs/extensions/devtools.panels#method-ExtensionSidebarPane-setObject
 [16]:
   https://developer.chrome.com/extensions/devtools.panels#method-ExtensionSidebarPane-setExpression
-[17] /docs/extensions/tabs#method-executeScript
-[18] /docs/extensions/devtools.inspectedWindow#property-tabId
-[19] /docs/extensions/tabs#method-executeScript
+[17]: /docs/extensions/tabs#method-executeScript
+[18]: /docs/extensions/devtools.inspectedWindow#property-tabId
+[19]: /docs/extensions/tabs#method-executeScript
 [20]: #selected-element
-[21] /docs/extensions/devtools.inspectedWindow#method-eval
-[22] /docs/devtools/docs/commandline-api
+[21]: /docs/extensions/devtools.inspectedWindow#method-eval
+[22]: /docs/devtools/docs/commandline-api
 [23]:
   https://github.com/RedRibbon/SOAK/blob/ffdfad68ffb6051fa2d4e9db0219b3d234ac1ae8/pages/devtools.js#L6-L8
-[24] /docs/extensions/tabs#method-executeScript
-[25] /docs/extensions/devtools.inspectedWindow
-[26] /docs/extensions/devtools.inspectedWindow#method-eval
-[27] /docs/extensions/devtools.inspectedWindow#method-eval
+[24]: /docs/extensions/tabs#method-executeScript
+[25]: /docs/extensions/devtools.inspectedWindow
+[26]: /docs/extensions/devtools.inspectedWindow#method-eval
+[27]: /docs/extensions/devtools.inspectedWindow#method-eval
 [28]: http://developer.chrome.com/extensions/devtools.panels.html#event-ExtensionPanel-onShown
-[29] /docs/extensions/tabs#method-sendMessage
+[29]: /docs/extensions/tabs#method-sendMessage
 [30]: #injecting
-[31] /docs/extensions/devtools.inspectedWindow#method-eval
-[32] /docs/extensions/runtime#method-sendMessage
+[31]: /docs/extensions/devtools.inspectedWindow#method-eval
+[32]: /docs/extensions/runtime#method-sendMessage
 [33]: https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage
 [34]: https://github.com/GoogleChrome/devtools-docs/issues/143
 [35]: /docs/extensions/runtime#event-onConnect
@@ -495,8 +495,8 @@ You can find examples that use DevTools APIs in [Samples][46].
 [38]: https://github.com/facebook/react-devtools
 [39]: https://github.com/emberjs/ember-inspector
 [40]: https://github.com/thomasboyt/coquette-inspect
-[41] /docs/devtools/docs/extensions-gallery
-[42] /docs/devtools/docs/sample-extensions
+[41]: /docs/devtools/docs/extensions-gallery
+[42]: /docs/devtools/docs/sample-extensions
 [43]: http://developer.chrome.com/extensions/api_index.html
 [44]: http://developer.chrome.com/extensions/api_other.html
 [45]: http://groups.google.com/group/google-chrome-developer-tools/topics

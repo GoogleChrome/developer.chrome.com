@@ -309,7 +309,7 @@ The steps you should follow to ensure this are:
     entry, reply to your original thread with a link to the ticket you starred or opened. This will
     make it easier for others with the same request to find the correct ticket.
 
-[1] /docs/webstore/faq
+[1]: /docs/webstore/faq
 [2]: http://stackoverflow.com/questions/tagged/google-chrome-extension
 [3]: http://groups.google.com/a/chromium.org/group/chromium-extensions
 [4]: https://support.google.com/chrome_webstore/
