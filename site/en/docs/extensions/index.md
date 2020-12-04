@@ -1,8 +1,7 @@
 ---
 title: Extensions
 description: >
-  Extensions are software programs that customize the browsing experience.
-  They enable users to tailor Chrome functionality and behavior to individual needs
-  or preferences. They are built on web technologies such as HTML, JavaScript, and CSS.
+  Extensions are software programs, built on web technologies (such as HTML, CSS,
+  and JavaScript) that enable users to customize the Chrome browsing experience.
 layout: 'layouts/project-landing.njk'
 ---

@@ -4,6 +4,4 @@ layout: 'layouts/home.njk'
 featured_projects:
   - extensions
   - webstore
-  - devtools
-  - native-client
 ---

@@ -7,6 +7,4 @@ i18n:
   projects:
     chrome:
       heading: 'Chrome'
-    tools:
-      heading: 'Tools'
 ---
