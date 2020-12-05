@@ -39,6 +39,19 @@ module.exports = {
       return namespaceForData(data);
     },
 
+    layout: data => {
+      if (data.layout) {
+        return data.layout; // don't clobber existing values
+      }
+
+      // Otherwise, if we're a namespace, use a predefined layout.
+      const namespace = namespaceForData(data);
+      if (namespace) {
+        return 'layouts/namespace-reference.njk';
+      }
+      return data.layout;
+    },
+
     title: data => {
       const namespace = namespaceForData(data);
 

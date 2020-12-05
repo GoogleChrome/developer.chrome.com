@@ -1,5 +1,4 @@
 ---
-layout: 'layouts/namespace-landing.njk'
 api: enterprise.networkingAttributes
 ---
 
