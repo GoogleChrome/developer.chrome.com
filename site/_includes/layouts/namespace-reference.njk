@@ -18,8 +18,9 @@
       <h1 class="type--h2">{{ title }}</h1>
 
       {% set content %}
-        {% if not namespace._isChromeOS %}
-          {# This never renders right now, and is just here for testing. #}
+        {% if namespace.platforms.length === 1 and namespace.platforms[0] === 'chromeos' %}
+          {# There are some historic cases of multi-platform support in Platform Apps, but
+             the only restriction these days is CrOS vs everywhere. #}
           <div class="aside aside--note">
             <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
           </div>
@@ -38,7 +39,7 @@
                 <div class="code-sections__label">Permissions</div>
                 <div>
                   {% for permission in namespace.permissions %}
-                    <code>{{ permission }}</code>
+                    <code>{{ permission }}</code>{% if not loop.last %}, {% endif %}
                   {% endfor %}
                 </div>
               </li>

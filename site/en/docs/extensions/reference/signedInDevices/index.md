@@ -1,0 +1,5 @@
+---
+api: signedInDevices
+---
+
+<!-- Intentionally blank -->

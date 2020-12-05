@@ -63,8 +63,7 @@ declare global {
     comment?: string;
     channel: "stable" | "beta" | "dev";
     permissions?: string[];
-    isApp: boolean;
-    isExtension: boolean;
+    platforms?: string[];
 
     updated?: string;
     release?: number;

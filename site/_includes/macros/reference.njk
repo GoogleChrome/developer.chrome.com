@@ -16,8 +16,7 @@
   {% for page in all %}
     {% if page.data.namespace %}
       {% set namespace = page.data.namespace %}
-      {# TODO(samthor): Fix channel data from source .d.ts. #}
-      {% if channel == 'stable' %}
+      {% if channel === namespace.channel %}
         <tr>
           <td><a class="surface weight-medium" href="{{ namespace.name | namespaceToPath }}">{{ namespace.shortName }}</a></td>
           <td class="reference-collapse type">{{ namespace.comment | safe }}</td>

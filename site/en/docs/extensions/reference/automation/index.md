@@ -1,0 +1,5 @@
+---
+api: automation
+---
+
+<!-- Intentionally blank -->

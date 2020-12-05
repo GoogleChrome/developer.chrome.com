@@ -26,7 +26,8 @@ declare namespace chrome {
   // TODO: This fixes devtools' types which refer to 'global'.
   type global = typeof Window;
 }
-// Generated on Fri Dec 04 2020 15:08:39 GMT+1100 (Australian Eastern Daylight Time)
+// Generated on Sat Dec 05 2020 17:03:44 GMT+1100 (Australian Eastern Daylight Time)
+
 /**
  * Use the <code>chrome.accessibilityFeatures</code> API to manage Chrome's
  * accessibility features. This API relies on the <a
@@ -38,6 +39,8 @@ declare namespace chrome {
  * permission. Note that <code>accessibilityFeatures.modify</code> does not
  * imply <code>accessibilityFeatures.read</code> permission.
  * @see https://developer.chrome.com/docs/extensions/reference/accessibilityFeatures/
+ * @chrome-permission accessibilityFeatures.modify
+ * @chrome-permission accessibilityFeatures.read
  */
 declare namespace chrome.accessibilityFeatures {
   /**
@@ -188,6 +191,7 @@ declare namespace chrome.accessibilityFeatures {
    */
   export const animationPolicy: types.ChromeSetting<"allowed" | "once" | "none">;
 }
+
 /**
  * Use actions to put icons in the main Google Chrome toolbar, to the right of
  * the address bar. Actions can be set to take action on all pages
@@ -625,11 +629,13 @@ declare namespace chrome.action {
     tab: tabs.Tab,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.alarms</code> API to schedule code to run
  periodically
  * or at a specified time in the future.
  * @see https://developer.chrome.com/docs/extensions/reference/alarms/
+ * @chrome-permission alarms
  */
 declare namespace chrome.alarms {
   /**
@@ -845,965 +851,7 @@ declare namespace chrome.alarms {
     alarm: Alarm,
   ) => void>;
 }
-/**
- * Use the <code>chrome.app.runtime</code> API to manage the app lifecycle.
- The
- * app runtime manages app installation, controls the event page, and can
- shut
- * down the app at anytime.
- * @see https://developer.chrome.com/docs/extensions/reference/app.runtime/
- */
-declare namespace chrome.app.runtime {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/app.runtime/#type-LaunchItem
-   */
-  export interface LaunchItem {
-    /**
-     * Entry for the item.
-     */
-    entry: Entry;
 
-    /**
-     * The MIME type of the file.
-     */
-    type?: string;
-  }
-
-  /**
-   * Enumeration of app launch sources. This should be kept in sync with
-   * AppLaunchSource in components/services/app_service/public/mojom/types.mojom,
-   * and GetLaunchSourceEnum() in
-   * extensions/browser/api/app_runtime/app_runtime_api.cc. Note the enumeration
-   * is used in UMA histogram so entries should not be re-ordered or removed.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.runtime/#type-LaunchSource
-   */
-  export type LaunchSource = "untracked" | "app_launcher" | "new_tab_page" | "reload" | "restart" | "load_and_launch" | "command_line" | "file_handler" | "url_handler" | "system_tray" | "about_page" | "keyboard" | "extensions_page" | "management_api" | "ephemeral_app" | "background" | "kiosk" | "chrome_internal" | "test" | "installed_notification" | "context_menu" | "arc" | "intent_url";
-
-  /**
-   * An app can be launched with a specific action in mind, for example, to create
-   * a new note. The type of action the app was launched with is available inside
-   * of the |actionData| field from the LaunchData instance.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.runtime/#type-ActionType
-   */
-  export type ActionType = "new_note";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/app.runtime/#type-ActionData
-   */
-  export interface ActionData {
-    actionType: ActionType;
-
-    /**
-     * <p>Whether the action was requested on Chrome OS lock screen.</p> <p>
-     * Launch events with this valued set to <code>true</code> are fired   in lock
-     * screen context, where apps have reduced access to extension   APIs, but are
-     * able to create windows on lock screen. </p> <p>   Note that this value will
-     * be set to <code>true</code> only if the app   is set as the lock screen
-     * enabled action handler by the user. </p>
-     */
-    isLockScreenAction?: boolean;
-
-    /**
-     * Currently, used only with lock screen actions. If set, indicates whether the
-     * app should attempt to restore state from when the action was last handled.
-     */
-    restoreLastActionState?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/app.runtime/#type-LaunchData
-   */
-  export interface LaunchData {
-    /**
-     * The ID of the file or URL handler that the app is being invoked with. Handler
-     * IDs are the top-level keys in the <code>file_handlers</code> and/or
-     * <code>url_handlers</code> dictionaries in the manifest.
-     */
-    id?: string;
-
-    /**
-     * The file entries for the <code>onLaunched</code> event triggered by a
-     * matching file handler in the <code>file_handlers</code> manifest key.
-     */
-    items?: LaunchItem[];
-
-    /**
-     * The URL for the <code>onLaunched</code> event triggered by a matching URL
-     * handler in the <code>url_handlers</code> manifest key.
-     */
-    url?: string;
-
-    /**
-     * The referrer URL for the <code>onLaunched</code> event triggered by a
-     * matching URL handler in the <code>url_handlers</code> manifest key.
-     */
-    referrerUrl?: string;
-
-    /**
-     * Whether the app is launched in a Chrome OS Demo Mode session. Used for
-     * default-installed Demo Mode Chrome apps.
-     */
-    isDemoSession?: boolean;
-
-    /**
-     * Whether the app is being launched in a <a
-     * href="https://support.google.com/chromebook/answer/3134673">Chrome OS kiosk
-     * session</a>.
-     */
-    isKioskSession?: boolean;
-
-    /**
-     * Whether the app is being launched in a <a
-     * href="https://support.google.com/chrome/a/answer/3017014">Chrome OS public
-     * session</a>.
-     */
-    isPublicSession?: boolean;
-
-    /**
-     * Where the app is launched from.
-     */
-    source?: LaunchSource;
-
-    /**
-     * Contains data that specifies the <code>ActionType</code> this app was
-     * launched with. This is null if the app was not launched with a specific
-     * action intent.
-     */
-    actionData?: ActionData;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/app.runtime/#type-EmbedRequest
-   */
-  export interface EmbedRequest {
-    embedderId: string;
-
-    /**
-     * Optional developer specified data that the app to be embedded can use when
-     * making an embedding decision.
-     */
-    data?: any;
-
-    /**
-     * Allows <code>embedderId</code> to embed this app in an &lt;appview&gt;
-     * element. The <code>url</code> specifies the content to embed.
-     */
-    allow: (
-      url: string,
-    ) => void;
-
-    /**
-     * Prevents <code> embedderId</code> from embedding this app in an
-     * &lt;appview&gt; element.
-     */
-    deny: () => void;
-  }
-
-  /**
-   * Fired when an embedding app requests to embed this app. This event is only
-   * available on dev channel with the flag --enable-app-view.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.runtime/#event-onEmbedRequested
-   */
-  export const onEmbedRequested: chrome.events.Event<(
-    request: EmbedRequest,
-  ) => void>;
-
-  /**
-   * Fired when an app is launched from the launcher.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.runtime/#event-onLaunched
-   */
-  export const onLaunched: chrome.events.Event<(
-    launchData?: LaunchData,
-  ) => void>;
-
-  /**
-   * Fired at Chrome startup to apps that were running when Chrome last shut
-   * down, or when apps have been requested to restart from their previous state
-   * for other reasons (e.g. when the user revokes access to an app's retained
-   * files the runtime will restart the app). In these situations if apps do not
-   * have an <code>onRestarted</code> handler they will be sent an
-   * <code>onLaunched </code> event instead.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.runtime/#event-onRestarted
-   */
-  export const onRestarted: chrome.events.Event<() => void>;
-}
-/**
- * Use the <code>chrome.app.window</code> API to create windows. Windows
- have
- * an optional frame with title bar and size controls. They are not
- associated
- * with any Chrome browser windows. See the <a
- * href="https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/window-state">
- Window State Sample</a> for a demonstration of these options.
- * @see https://developer.chrome.com/docs/extensions/reference/app.window/
- */
-declare namespace chrome.app.window {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#type-ContentBounds
-   */
-  export interface ContentBounds {
-    left?: number;
-
-    top?: number;
-
-    width?: number;
-
-    height?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#type-BoundsSpecification
-   */
-  export interface BoundsSpecification {
-    /**
-     * The X coordinate of the content or window.
-     */
-    left?: number;
-
-    /**
-     * The Y coordinate of the content or window.
-     */
-    top?: number;
-
-    /**
-     * The width of the content or window.
-     */
-    width?: number;
-
-    /**
-     * The height of the content or window.
-     */
-    height?: number;
-
-    /**
-     * The minimum width of the content or window.
-     */
-    minWidth?: number;
-
-    /**
-     * The minimum height of the content or window.
-     */
-    minHeight?: number;
-
-    /**
-     * The maximum width of the content or window.
-     */
-    maxWidth?: number;
-
-    /**
-     * The maximum height of the content or window.
-     */
-    maxHeight?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#type-Bounds
-   */
-  export interface Bounds {
-    /**
-     * This property can be used to read or write the current X coordinate of the
-     * content or window.
-     */
-    left: number;
-
-    /**
-     * This property can be used to read or write the current Y coordinate of the
-     * content or window.
-     */
-    top: number;
-
-    /**
-     * This property can be used to read or write the current width of the content
-     * or window.
-     */
-    width: number;
-
-    /**
-     * This property can be used to read or write the current height of the content
-     * or window.
-     */
-    height: number;
-
-    /**
-     * This property can be used to read or write the current minimum width of the
-     * content or window. A value of <code>null</code> indicates 'unspecified'.
-     */
-    minWidth?: number;
-
-    /**
-     * This property can be used to read or write the current minimum height of the
-     * content or window. A value of <code>null</code> indicates 'unspecified'.
-     */
-    minHeight?: number;
-
-    /**
-     * This property can be used to read or write the current maximum width of the
-     * content or window. A value of <code>null</code> indicates 'unspecified'.
-     */
-    maxWidth?: number;
-
-    /**
-     * This property can be used to read or write the current maximum height of the
-     * content or window. A value of <code>null</code> indicates 'unspecified'.
-     */
-    maxHeight?: number;
-
-    /**
-     * Set the left and top position of the content or window.
-     */
-    setPosition: (
-      left: number,
-      top: number,
-    ) => void;
-
-    /**
-     * Set the width and height of the content or window.
-     */
-    setSize: (
-      width: number,
-      height: number,
-    ) => void;
-
-    /**
-     * Set the minimum size constraints of the content or window. The minimum width
-     * or height can be set to <code>null</code> to remove the constraint. A value
-     * of <code>undefined</code> will leave a constraint unchanged.
-     */
-    setMinimumSize: (
-      minWidth: number,
-      minHeight: number,
-    ) => void;
-
-    /**
-     * Set the maximum size constraints of the content or window. The maximum width
-     * or height can be set to <code>null</code> to remove the constraint. A value
-     * of <code>undefined</code> will leave a constraint unchanged.
-     */
-    setMaximumSize: (
-      maxWidth: number,
-      maxHeight: number,
-    ) => void;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#type-FrameOptions
-   */
-  export interface FrameOptions {
-    /**
-     * <p>Frame type: <code>none</code> or <code>chrome</code> (defaults to
-     * <code>chrome</code>).</p><p>For <code>none</code>, the
-     * <code>-webkit-app-region</code> CSS property can be used to apply
-     * draggability to the app's window.</p><p><code>-webkit-app-region: drag</code>
-     * can be used to mark regions draggable. <code>no-drag</code> can be used to
-     * disable this style on nested elements.</p>
-     */
-    type?: string;
-
-    /**
-     * <p>Allows the frame color to be set. Frame coloring is only available if the
-     * frame type is <code>chrome</code>.</p><p>Frame coloring is new in Chrome
-     * 36.</p>
-     */
-    color?: string;
-
-    /**
-     * <p>Allows the frame color of the window when active to be set. Frame coloring
-     * is only available if the frame type is <code>chrome</code>.</p><p>Frame
-     * coloring is only available if the frame type is
-     * <code>chrome</code>.</p><p>Frame coloring is new in Chrome 36.</p>
-     */
-    activeColor?: string;
-
-    /**
-     * <p>Allows the frame color of the window when inactive to be set differently
-     * to the active color. Frame coloring is only available if the frame type is
-     * <code>chrome</code>.</p><p><code>inactiveColor</code> must be used in
-     * conjunction with <code> color</code>.</p><p>Frame coloring is new in Chrome
-     * 36.</p>
-     */
-    inactiveColor?: string;
-  }
-
-  /**
-   * State of a window: normal, fullscreen, maximized, minimized.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#type-State
-   */
-  export type State = "normal" | "fullscreen" | "maximized" | "minimized";
-
-  /**
-   * Specifies the type of window to create.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#type-WindowType
-   */
-  export type WindowType = "shell" | "panel";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#type-CreateWindowOptions
-   */
-  export interface CreateWindowOptions {
-    /**
-     * Id to identify the window. This will be used to remember the size and
-     * position of the window and restore that geometry when a window with the same
-     * id is later opened. If a window with a given id is created while another
-     * window with the same id already exists, the currently opened window will be
-     * focused instead of creating a new window.
-     */
-    id?: string;
-
-    /**
-     * <p>Used to specify the initial position, initial size and constraints of the
-     * window's content (excluding window decorations). If an <code>id</code> is
-     * also specified and a window with a matching <code>id</code> has been shown
-     * before, the remembered bounds will be used instead.</p><p>Note that the
-     * padding between the inner and outer bounds is determined by the OS. Therefore
-     * setting the same bounds property for both the <code>innerBounds</code> and
-     * <code>outerBounds</code> will result in an error.</p><p>This property is new
-     * in Chrome 36.</p>
-     */
-    innerBounds?: BoundsSpecification;
-
-    /**
-     * <p>Used to specify the initial position, initial size and constraints of the
-     * window (including window decorations such as the title bar and frame). If an
-     * <code>id</code> is also specified and a window with a matching
-     * <code>id</code> has been shown before, the remembered bounds will be used
-     * instead.</p><p>Note that the padding between the inner and outer bounds is
-     * determined by the OS. Therefore setting the same bounds property for both the
-     * <code>innerBounds</code> and <code>outerBounds</code> will result in an
-     * error.</p><p>This property is new in Chrome 36.</p>
-     */
-    outerBounds?: BoundsSpecification;
-
-    /**
-     * Default width of the window.
-     * @deprecated Use {@link BoundsSpecification}.
-     */
-    defaultWidth?: number;
-
-    /**
-     * Default height of the window.
-     * @deprecated Use {@link BoundsSpecification}.
-     */
-    defaultHeight?: number;
-
-    /**
-     * Default X coordinate of the window.
-     * @deprecated Use {@link BoundsSpecification}.
-     */
-    defaultLeft?: number;
-
-    /**
-     * Default Y coordinate of the window.
-     * @deprecated Use {@link BoundsSpecification}.
-     */
-    defaultTop?: number;
-
-    /**
-     * Width of the window.
-     * @deprecated Use {@link BoundsSpecification}.
-     */
-    width?: number;
-
-    /**
-     * Height of the window.
-     * @deprecated Use {@link BoundsSpecification}.
-     */
-    height?: number;
-
-    /**
-     * X coordinate of the window.
-     * @deprecated Use {@link BoundsSpecification}.
-     */
-    left?: number;
-
-    /**
-     * Y coordinate of the window.
-     * @deprecated Use {@link BoundsSpecification}.
-     */
-    top?: number;
-
-    /**
-     * Minimum width of the window.
-     * @deprecated Use innerBounds or outerBounds.
-     */
-    minWidth?: number;
-
-    /**
-     * Minimum height of the window.
-     * @deprecated Use innerBounds or outerBounds.
-     */
-    minHeight?: number;
-
-    /**
-     * Maximum width of the window.
-     * @deprecated Use innerBounds or outerBounds.
-     */
-    maxWidth?: number;
-
-    /**
-     * Maximum height of the window.
-     * @deprecated Use innerBounds or outerBounds.
-     */
-    maxHeight?: number;
-
-    /**
-     * Type of window to create.
-     * @deprecated All app windows use the 'shell' window type
-     */
-    type?: WindowType;
-
-    /**
-     * Creates a special ime window. This window is not focusable and can be stacked
-     * above virtual keyboard window. This is restriced to component ime extensions.
-     * Requires the <code>app.window.ime</code> API permission.
-     */
-    ime?: boolean;
-
-    /**
-     * If true, the window will have its own shelf icon. Otherwise the window will
-     * be grouped in the shelf with other windows that are associated with the app.
-     * Defaults to false. If showInShelf is set to true you need to specify an id
-     * for the window.
-     */
-    showInShelf?: boolean;
-
-    /**
-     * URL of the window icon. A window can have its own icon when showInShelf is
-     * set to true. The URL should be a global or an extension local URL.
-     */
-    icon?: string;
-
-    /**
-     * <p>Frame type: <code>none</code> or <code>chrome</code> (defaults to
-     * <code>chrome</code>). For <code>none</code>, the
-     * <code>-webkit-app-region</code> CSS property can be used to apply
-     * draggability to the app's window. <code>-webkit-app-region: drag</code> can
-     * be used to mark regions draggable. <code>no-drag</code> can be used to
-     * disable this style on nested elements.</p><p>Use of <code>FrameOptions</code>
-     * is new in M36.</p>
-     */
-    frame?: string | FrameOptions;
-
-    /**
-     * Size and position of the content in the window (excluding the titlebar). If
-     * an id is also specified and a window with a matching id has been shown
-     * before, the remembered bounds of the window will be used instead.
-     * @deprecated Use innerBounds or outerBounds.
-     */
-    bounds?: ContentBounds;
-
-    /**
-     * Enable window background transparency. Only supported in ash. Requires the
-     * <code>app.window.alpha</code> API permission.
-     */
-    alphaEnabled?: boolean;
-
-    /**
-     * The initial state of the window, allowing it to be created already
-     * fullscreen, maximized, or minimized. Defaults to 'normal'.
-     */
-    state?: State;
-
-    /**
-     * If true, the window will be created in a hidden state. Call show() on the
-     * window to show it once it has been created. Defaults to false.
-     */
-    hidden?: boolean;
-
-    /**
-     * If true, the window will be resizable by the user. Defaults to true.
-     */
-    resizable?: boolean;
-
-    /**
-     * By default if you specify an id for the window, the window will only be
-     * created if another window with the same id doesn't already exist. If a window
-     * with the same id already exists that window is activated instead. If you do
-     * want to create multiple windows with the same id, you can set this property
-     * to false.
-     * @deprecated Multiple windows with the same id is no longer supported.
-     */
-    singleton?: boolean;
-
-    /**
-     * <p>If true, the window will stay above most other windows. If there are
-     * multiple windows of this kind, the currently focused window will be in the
-     * foreground. Requires the <code>alwaysOnTopWindows</code> permission. Defaults
-     * to false.</p><p>Call <code>setAlwaysOnTop()</code> on the window to change
-     * this property after creation.</p>
-     */
-    alwaysOnTop?: boolean;
-
-    /**
-     * If true, the window will be focused when created. Defaults to true.
-     */
-    focused?: boolean;
-
-    /**
-     * If true, and supported by the platform, the window will be visible on all
-     * workspaces.
-     */
-    visibleOnAllWorkspaces?: boolean;
-
-    /**
-     * <p>If set, the action that is intended to be handled by the window on
-     * lockscreen. This has to be set to create an app window visible on the   lock
-     * screen. The app window should be created only in response to an   app launch
-     * request for handling an action from the lock screen. App   window creation
-     * will fail if the app was not launched to handle the   action.   </p> <p>This
-     * is <b>Chrome OS only</b>.</p>
-     */
-    lockScreenAction?: app.runtime.ActionType;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#type-AppWindow
-   */
-  export interface AppWindow {
-    /**
-     * Focus the window.
-     */
-    focus: () => void;
-
-    /**
-     * <p>Fullscreens the window.</p><p>The user will be able to restore the window
-     * by pressing ESC. An application can prevent the fullscreen state to be left
-     * when ESC is pressed by requesting the
-     * <code>app.window.fullscreen.overrideEsc</code> permission and canceling the
-     * event by calling .preventDefault(), in the keydown and keyup handlers, like
-     * this:</p><p><code>window.onkeydown = window.onkeyup = function(e) { if
-     * (e.keyCode == 27 /* ESC &#x2a;/) { e.preventDefault(); } };</code></p><p>Note
-     * <code>window.fullscreen()</code> will cause the entire window to become
-     * fullscreen and does not require a user gesture. The HTML5 fullscreen API can
-     * also be used to enter fullscreen mode (see <a
-     * href="http://developer.chrome.com/apps/api_other.html">Web APIs</a> for more
-     * details).</p>
-     */
-    fullscreen: () => void;
-
-    /**
-     * Is the window fullscreen? This will be true if the window has been created
-     * fullscreen or was made fullscreen via the <code>AppWindow</code> or HTML5
-     * fullscreen APIs.
-     */
-    isFullscreen: () => boolean;
-
-    /**
-     * Minimize the window.
-     */
-    minimize: () => void;
-
-    /**
-     * Is the window minimized?
-     */
-    isMinimized: () => boolean;
-
-    /**
-     * Maximize the window.
-     */
-    maximize: () => void;
-
-    /**
-     * Is the window maximized?
-     */
-    isMaximized: () => boolean;
-
-    /**
-     * Restore the window, exiting a maximized, minimized, or fullscreen state.
-     */
-    restore: () => void;
-
-    /**
-     * Move the window to the position (|left|, |top|).
-     * @deprecated Use outerBounds.
-     */
-    moveTo: (
-      left: number,
-      top: number,
-    ) => void;
-
-    /**
-     * Resize the window to |width|x|height| pixels in size.
-     * @deprecated Use outerBounds.
-     */
-    resizeTo: (
-      width: number,
-      height: number,
-    ) => void;
-
-    /**
-     * Draw attention to the window.
-     */
-    drawAttention: () => void;
-
-    /**
-     * Clear attention to the window.
-     */
-    clearAttention: () => void;
-
-    /**
-     * Close the window.
-     */
-    close: () => void;
-
-    /**
-     * Show the window. Does nothing if the window is already visible. Focus the
-     * window if |focused| is set to true or omitted.
-     */
-    show: (
-      focused?: boolean,
-    ) => void;
-
-    /**
-     * Hide the window. Does nothing if the window is already hidden.
-     */
-    hide: () => void;
-
-    /**
-     * Get the window's inner bounds as a {@link ContentBounds} object.
-     * @deprecated Use innerBounds or outerBounds.
-     */
-    getBounds: () => ContentBounds;
-
-    /**
-     * Set the window's inner bounds.
-     * @deprecated Use innerBounds or outerBounds.
-     */
-    setBounds: (
-      bounds: ContentBounds,
-    ) => void;
-
-    /**
-     * Set the app icon for the window (experimental). Currently this is only being
-     * implemented on Ash. TODO(stevenjb): Investigate implementing this on Windows
-     * and OSX.
-     */
-    setIcon: (
-      iconUrl: string,
-    ) => void;
-
-    /**
-     * Is the window always on top?
-     */
-    isAlwaysOnTop: () => boolean;
-
-    /**
-     * Accessors for testing.
-     */
-    hasFrameColor: boolean;
-
-    activeFrameColor: number;
-
-    inactiveFrameColor: number;
-
-    /**
-     * Set whether the window should stay above most other windows. Requires the
-     * <code>alwaysOnTopWindows</code> permission.
-     */
-    setAlwaysOnTop: (
-      alwaysOnTop: boolean,
-    ) => void;
-
-    /**
-     * Can the window use alpha transparency? TODO(jackhou): Document this properly
-     * before going to stable.
-     */
-    alphaEnabled: () => boolean;
-
-    /**
-     * Set whether the window is visible on all workspaces. (Only for platforms that
-     * support this).
-     */
-    setVisibleOnAllWorkspaces: (
-      alwaysVisible: boolean,
-    ) => void;
-
-    /**
-     * The JavaScript 'window' object for the created child.
-     */
-    contentWindow: Window;
-
-    /**
-     * The id the window was created with.
-     */
-    id: string;
-
-    /**
-     * The position, size and constraints of the window's content, which does not
-     * include window decorations. This property is new in Chrome 36.
-     */
-    innerBounds: Bounds;
-
-    /**
-     * The position, size and constraints of the window, which includes window
-     * decorations, such as the title bar and frame. This property is new in Chrome
-     * 36.
-     */
-    outerBounds: Bounds;
-  }
-
-  /**
-   * <p>The size and position of a window can be specified in a number of
-   * different ways. The most simple option is not specifying anything at all,
-   * in which case a default size and platform dependent position will be
-   * used.</p><p>To set the position, size and constraints of the window, use
-   * the <code>innerBounds</code> or <code>outerBounds</code> properties. Inner
-   * bounds do not include window decorations. Outer bounds include the window's
-   * title bar and frame. Note that the padding between the inner and outer
-   * bounds is determined by the OS. Therefore setting the same property for
-   * both inner and outer bounds is considered an error (for example, setting
-   * both <code>innerBounds.left</code> and
-   * <code>outerBounds.left</code>).</p><p>To automatically remember the
-   * positions of windows you can give them ids. If a window has an id, This id
-   * is used to remember the size and position of the window whenever it is
-   * moved or resized. This size and position is then used instead of the
-   * specified bounds on subsequent opening of a window with the same id. If you
-   * need to open a window with an id at a location other than the remembered
-   * default, you can create it hidden, move it to the desired location, then
-   * show it.</p>
-   * @param url
-   * @param options
-   * @returns <p>Called in the creating window (parent) before the load event is
-   *     called in the created window (child). The parent can set fields or
-   *     functions on the child usable from onload. E.g.
-   *     background.js:</p><p><code>function(createdWindow) {
-   *     createdWindow.contentWindow.foo = function () { };
-   *     };</code></p><p>window.js:</p><p><code>window.onload = function () {
-   *     foo(); }</code></p>
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#method-create
-   */
-  export function create(
-    url: string,
-    options?: CreateWindowOptions,
-  ): Promise<{
-    createdWindow: AppWindow,
-  }>;
-
-  /**
-   * <p>The size and position of a window can be specified in a number of
-   * different ways. The most simple option is not specifying anything at all,
-   * in which case a default size and platform dependent position will be
-   * used.</p><p>To set the position, size and constraints of the window, use
-   * the <code>innerBounds</code> or <code>outerBounds</code> properties. Inner
-   * bounds do not include window decorations. Outer bounds include the window's
-   * title bar and frame. Note that the padding between the inner and outer
-   * bounds is determined by the OS. Therefore setting the same property for
-   * both inner and outer bounds is considered an error (for example, setting
-   * both <code>innerBounds.left</code> and
-   * <code>outerBounds.left</code>).</p><p>To automatically remember the
-   * positions of windows you can give them ids. If a window has an id, This id
-   * is used to remember the size and position of the window whenever it is
-   * moved or resized. This size and position is then used instead of the
-   * specified bounds on subsequent opening of a window with the same id. If you
-   * need to open a window with an id at a location other than the remembered
-   * default, you can create it hidden, move it to the desired location, then
-   * show it.</p>
-   * @param url
-   * @param options
-   * @param callback <p>Called in the creating window (parent) before the load
-   *     event is called in the created window (child). The parent can set
-   *     fields or functions on the child usable from onload. E.g.
-   *     background.js:</p><p><code>function(createdWindow) {
-   *     createdWindow.contentWindow.foo = function () { };
-   *     };</code></p><p>window.js:</p><p><code>window.onload = function () {
-   *     foo(); }</code></p>
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#method-create
-   */
-  export function create(
-    url: string,
-    options?: CreateWindowOptions,
-    callback?: (
-      createdWindow: AppWindow,
-    ) => void,
-  ): void;
-
-  /**
-   * Returns an {@link AppWindow} object for the current script context (ie
-   * JavaScript 'window' object). This can also be called on a handle to a
-   * script context for another page, for example:
-   * otherWindow.chrome.app.window.current().
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#method-current
-   */
-  export function current(): AppWindow;
-
-  /**
-   * @param state
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#method-initializeAppWindow
-   */
-  export function initializeAppWindow(
-    state: {[name: string]: any},
-  ): void;
-
-  /**
-   * Gets an array of all currently created app windows. This method is new in
-   * Chrome 33.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#method-getAll
-   */
-  export function getAll(): AppWindow[];
-
-  /**
-   * Gets an {@link AppWindow} with the given id. If no window with the given id
-   * exists null is returned. This method is new in Chrome 33.
-   * @param id
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#method-get
-   */
-  export function get(
-    id: string,
-  ): AppWindow;
-
-  /**
-   * Whether the current platform supports windows being visible on all
-   * workspaces.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#method-canSetVisibleOnAllWorkspaces
-   */
-  export function canSetVisibleOnAllWorkspaces(): boolean;
-
-  /**
-   * Fired when the window is resized.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#event-onBoundsChanged
-   */
-  export const onBoundsChanged: chrome.events.Event<() => void>;
-
-  /**
-   * Fired when the window is closed. Note, this should be listened to from a
-   * window other than the window being closed, for example from the background
-   * page. This is because the window being closed will be in the process of
-   * being torn down when the event is fired, which means not all APIs in the
-   * window's script context will be functional.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#event-onClosed
-   */
-  export const onClosed: chrome.events.Event<() => void>;
-
-  /**
-   * Fired when the window is fullscreened (either via the
-   * <code>AppWindow</code> or HTML5 APIs).
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#event-onFullscreened
-   */
-  export const onFullscreened: chrome.events.Event<() => void>;
-
-  /**
-   * Fired when the window is maximized.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#event-onMaximized
-   */
-  export const onMaximized: chrome.events.Event<() => void>;
-
-  /**
-   * Fired when the window is minimized.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#event-onMinimized
-   */
-  export const onMinimized: chrome.events.Event<() => void>;
-
-  /**
-   * Fired when the window is restored from being minimized or maximized.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#event-onRestored
-   */
-  export const onRestored: chrome.events.Event<() => void>;
-
-  /**
-   * Fired when the window's ability to use alpha transparency changes.
-   * @see https://developer.chrome.com/docs/extensions/reference/app.window/#event-onAlphaEnabledChanged
-   */
-  export const onAlphaEnabledChanged: chrome.events.Event<() => void>;
-}
 /**
  * none
  * @see https://developer.chrome.com/docs/extensions/reference/app/
@@ -1871,6 +919,7 @@ declare namespace chrome.app {
    */
   export function getDetails(): Details;
 }
+
 /**
  * Use the <code>appview</code> tag to embed other Chrome Apps within your
  * Chrome App. (see <a href=#usage>Usage</a>).
@@ -1947,448 +996,7 @@ declare namespace chrome.appviewTag {
     ) => void,
   ): void;
 }
-/**
- * The <code>chrome.audio</code> API is provided to allow users to
- get
- * information about and control the audio devices attached to the
- system.
- * This API is currently only available in kiosk mode for ChromeOS.
- * @see https://developer.chrome.com/docs/extensions/reference/audio/
- */
-declare namespace chrome.audio {
-  /**
-   * Type of stream an audio device provides.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#type-StreamType
-   */
-  export type StreamType = "INPUT" | "OUTPUT";
 
-  /**
-   * Available audio device types.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#type-DeviceType
-   */
-  export type DeviceType = "HEADPHONE" | "MIC" | "USB" | "BLUETOOTH" | "HDMI" | "INTERNAL_SPEAKER" | "INTERNAL_MIC" | "FRONT_MIC" | "REAR_MIC" | "KEYBOARD_MIC" | "HOTWORD" | "LINEOUT" | "POST_MIX_LOOPBACK" | "POST_DSP_LOOPBACK" | "ALSA_LOOPBACK" | "OTHER";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#type-OutputDeviceInfo
-   */
-  export interface OutputDeviceInfo {
-    /**
-     * The unique identifier of the audio output device.
-     * @deprecated Used only with the deprecated {@link getInfo}.
-     */
-    id: string;
-
-    /**
-     * The user-friendly name (e.g. "Bose Amplifier").
-     * @deprecated Used only with the deprecated {@link getInfo}.
-     */
-    name: string;
-
-    /**
-     * True if this is the current active device.
-     * @deprecated Used only with the deprecated {@link getInfo}.
-     */
-    isActive: boolean;
-
-    /**
-     * True if this is muted.
-     * @deprecated Used only with the deprecated {@link getInfo}.
-     */
-    isMuted: boolean;
-
-    /**
-     * The output volume ranging from 0.0 to 100.0.
-     * @deprecated Used only with the deprecated {@link getInfo}.
-     */
-    volume: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#type-InputDeviceInfo
-   */
-  export interface InputDeviceInfo {
-    /**
-     * The unique identifier of the audio input device.
-     * @deprecated Used only with the deprecated {@link getInfo}.
-     */
-    id: string;
-
-    /**
-     * The user-friendly name (e.g. "USB Microphone").
-     * @deprecated Used only with the deprecated {@link getInfo}.
-     */
-    name: string;
-
-    /**
-     * True if this is the current active device.
-     * @deprecated Used only with the deprecated {@link getInfo}.
-     */
-    isActive: boolean;
-
-    /**
-     * True if this is muted.
-     * @deprecated Used only with the deprecated {@link getInfo}.
-     */
-    isMuted: boolean;
-
-    /**
-     * The input gain ranging from 0.0 to 100.0.
-     * @deprecated Used only with the deprecated {@link getInfo}.
-     */
-    gain: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#type-AudioDeviceInfo
-   */
-  export interface AudioDeviceInfo {
-    /**
-     * The unique identifier of the audio device.
-     */
-    id: string;
-
-    /**
-     * Stream type associated with this device.
-     */
-    streamType: StreamType;
-
-    /**
-     * Type of the device.
-     */
-    deviceType: DeviceType;
-
-    /**
-     * The user-friendly name (e.g. "USB Microphone").
-     */
-    displayName: string;
-
-    /**
-     * Device name.
-     */
-    deviceName: string;
-
-    /**
-     * True if this is the current active device.
-     */
-    isActive: boolean;
-
-    /**
-     * The sound level of the device, volume for output, gain for input.
-     */
-    level: number;
-
-    /**
-     * The stable/persisted device id string when available.
-     */
-    stableDeviceId?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#type-DeviceFilter
-   */
-  export interface DeviceFilter {
-    /**
-     * If set, only audio devices whose stream type is included in this list will
-     * satisfy the filter.
-     */
-    streamTypes?: StreamType[];
-
-    /**
-     * If set, only audio devices whose active state matches this value will satisfy
-     * the filter.
-     */
-    isActive?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#type-DeviceProperties
-   */
-  export interface DeviceProperties {
-    /**
-     * True if this is muted.
-     * @deprecated Use {@link setMute} to set mute state.
-     */
-    isMuted?: boolean;
-
-    /**
-     * If this is an output device then this field indicates the output volume. If
-     * this is an input device then this field is ignored.
-     * @deprecated Use |level| to set output volume.
-     */
-    volume?: number;
-
-    /**
-     * If this is an input device then this field indicates the input gain. If this
-     * is an output device then this field is ignored.
-     * @deprecated Use |level| to set input gain.
-     */
-    gain?: number;
-
-    /**
-     * <p>   The audio device's desired sound level. Defaults to the device's
-     * current sound level. </p>  <p>If used with audio input device, represents
-     * audio device gain.</p> <p>If used with audio output device, represents audio
-     * device volume.</p>
-     */
-    level?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#type-DeviceIdLists
-   */
-  export interface DeviceIdLists {
-    /**
-     * <p>List of input devices specified by their ID.</p> <p>To indicate input
-     * devices should be unaffected, leave this property   unset.</p>
-     */
-    input?: string[];
-
-    /**
-     * <p>List of output devices specified by their ID.</p> <p>To indicate output
-     * devices should be unaffected, leave this property   unset.</p>
-     */
-    output?: string[];
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#type-MuteChangedEvent
-   */
-  export interface MuteChangedEvent {
-    /**
-     * The type of the stream for which the mute value changed. The updated mute
-     * value applies to all devices with this stream type.
-     */
-    streamType: StreamType;
-
-    /**
-     * Whether or not the stream is now muted.
-     */
-    isMuted: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#type-LevelChangedEvent
-   */
-  export interface LevelChangedEvent {
-    /**
-     * ID of device whose sound level has changed.
-     */
-    deviceId: string;
-
-    /**
-     * The device's new sound level.
-     */
-    level: number;
-  }
-
-  /**
-   * Gets a list of audio devices filtered based on |filter|.
-   * @param filter Device properties by which to filter the list of returned
-   *     audio devices. If the filter is not set or set to <code>{}</code>,
-   *     returned device list will contain all available audio devices.
-   * @returns Reports the requested list of audio devices.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-getDevices
-   */
-  export function getDevices(
-    filter?: DeviceFilter,
-  ): Promise<{
-    devices: AudioDeviceInfo[],
-  }>;
-
-  /**
-   * Gets a list of audio devices filtered based on |filter|.
-   * @param filter Device properties by which to filter the list of returned
-   *     audio devices. If the filter is not set or set to <code>{}</code>,
-   *     returned device list will contain all available audio devices.
-   * @param callback Reports the requested list of audio devices.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-getDevices
-   */
-  export function getDevices(
-    filter: DeviceFilter,
-    callback: (
-      devices: AudioDeviceInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Gets a list of audio devices filtered based on |filter|.
-   * @param callback Reports the requested list of audio devices.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-getDevices
-   */
-  export function getDevices(
-    callback: (
-      devices: AudioDeviceInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Sets lists of active input and/or output devices.
-   * @param ids <p>Specifies IDs of devices that should be active. If either the
-   *     input or output list is not set, devices in that category are
-   *     unaffected.     </p>     <p>It is an error to pass in a non-existent
-   *     device ID.</p>     <p><b>NOTE:</b> While the method signature allows
-   *     device IDs to be     passed as a list of strings, this method of
-   *     setting active devices     is deprecated and should not be relied upon
-   *     to work. Please use     {@link DeviceIdLists} instead.     </p>
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-setActiveDevices
-   */
-  export function setActiveDevices(
-    ids: DeviceIdLists | string[],
-  ): Promise<void>;
-
-  /**
-   * Sets lists of active input and/or output devices.
-   * @param ids <p>Specifies IDs of devices that should be active. If either the
-   *     input or output list is not set, devices in that category are
-   *     unaffected.     </p>     <p>It is an error to pass in a non-existent
-   *     device ID.</p>     <p><b>NOTE:</b> While the method signature allows
-   *     device IDs to be     passed as a list of strings, this method of
-   *     setting active devices     is deprecated and should not be relied upon
-   *     to work. Please use     {@link DeviceIdLists} instead.     </p>
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-setActiveDevices
-   */
-  export function setActiveDevices(
-    ids: DeviceIdLists | string[],
-    callback: () => void,
-  ): void;
-
-  /**
-   * Sets the properties for the input or output device.
-   * @param id
-   * @param properties
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-setProperties
-   */
-  export function setProperties(
-    id: string,
-    properties: DeviceProperties,
-  ): Promise<void>;
-
-  /**
-   * Sets the properties for the input or output device.
-   * @param id
-   * @param properties
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-setProperties
-   */
-  export function setProperties(
-    id: string,
-    properties: DeviceProperties,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Gets the system-wide mute state for the specified stream type.
-   * @param streamType Stream type for which mute state should be fetched.
-   * @returns Callback reporting whether mute is set or not for specified stream
-   *     type.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-getMute
-   */
-  export function getMute(
-    streamType: StreamType,
-  ): Promise<{
-    value: boolean,
-  }>;
-
-  /**
-   * Gets the system-wide mute state for the specified stream type.
-   * @param streamType Stream type for which mute state should be fetched.
-   * @param callback Callback reporting whether mute is set or not for specified
-   *     stream type.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-getMute
-   */
-  export function getMute(
-    streamType: StreamType,
-    callback: (
-      value: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Sets mute state for a stream type. The mute state will apply to all audio
-   * devices with the specified audio stream type.
-   * @param streamType Stream type for which mute state should be set.
-   * @param isMuted New mute value.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-setMute
-   */
-  export function setMute(
-    streamType: StreamType,
-    isMuted: boolean,
-  ): Promise<void>;
-
-  /**
-   * Sets mute state for a stream type. The mute state will apply to all audio
-   * devices with the specified audio stream type.
-   * @param streamType Stream type for which mute state should be set.
-   * @param isMuted New mute value.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-setMute
-   */
-  export function setMute(
-    streamType: StreamType,
-    isMuted: boolean,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Gets the information of all audio output and input devices.
-   * @deprecated Use {@link getDevices} instead.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-getInfo
-   */
-  export function getInfo(): Promise<{
-    outputInfo: OutputDeviceInfo[],
-    inputInfo: InputDeviceInfo[],
-  }>;
-
-  /**
-   * Gets the information of all audio output and input devices.
-   * @deprecated Use {@link getDevices} instead.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#method-getInfo
-   */
-  export function getInfo(
-    callback: (
-      outputInfo: OutputDeviceInfo[],
-      inputInfo: InputDeviceInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Fired when sound level changes for an active audio device.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#event-onLevelChanged
-   */
-  export const onLevelChanged: chrome.events.Event<(
-    event: LevelChangedEvent,
-  ) => void>;
-
-  /**
-   * Fired when the mute state of the audio input or output changes. Note that
-   * mute state is system-wide and the new value applies to every audio device
-   * with specified stream type.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#event-onMuteChanged
-   */
-  export const onMuteChanged: chrome.events.Event<(
-    event: MuteChangedEvent,
-  ) => void>;
-
-  /**
-   * Fired when audio devices change, either new devices being added, or
-   * existing devices being removed.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#event-onDeviceListChanged
-   */
-  export const onDeviceListChanged: chrome.events.Event<(
-    /**
-     * List of all present audio devices after the change.
-     */
-    devices: AudioDeviceInfo[],
-  ) => void>;
-
-  /**
-   * Fired when anything changes to the audio device configuration.
-   * @see https://developer.chrome.com/docs/extensions/reference/audio/#event-onDeviceChanged
-   */
-  export const onDeviceChanged: chrome.events.Event<() => void>;
-}
 /**
  * The <code>chrome.automation</code> API allows developers to access the
  * automation (accessibility) tree for the browser. The tree resembles the DOM
@@ -2396,6 +1004,7 @@ declare namespace chrome.audio {
  * used to programmatically interact with a page by examining names, roles, and
  * states, listening for events, and performing actions on nodes.
  * @see https://developer.chrome.com/docs/extensions/reference/automation/
+ * @alpha
  */
 declare namespace chrome.automation {
   /**
@@ -4045,2287 +2654,13 @@ declare namespace chrome.automation {
     params: SetDocumentSelectionParams,
   ): void;
 }
-/**
- * The <code>chrome.bluetoothLowEnergy</code> API is used to communicate with
- * Bluetooth Smart (Low Energy) devices using the
- <a
- * href="https://developer.bluetooth.org/TechnologyOverview/Pages/GATT.aspx">
- * Generic Attribute Profile (GATT)</a>.
- * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/
- */
-declare namespace chrome.bluetoothLowEnergy {
-  /**
-   * Values representing the possible properties of a characteristic.
-   * Characteristic permissions are inferred from these properties. Please see the
-   * Bluetooth 4.x spec to see the meaning of each individual property.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-CharacteristicProperty
-   */
-  export type CharacteristicProperty = "broadcast" | "read" | "writeWithoutResponse" | "write" | "notify" | "indicate" | "authenticatedSignedWrites" | "extendedProperties" | "reliableWrite" | "writableAuxiliaries" | "encryptRead" | "encryptWrite" | "encryptAuthenticatedRead" | "encryptAuthenticatedWrite";
 
-  /**
-   * Values representing possible permissions for a descriptor. Please see the
-   * Bluetooth 4.x spec to see the meaning of each individual permission.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-DescriptorPermission
-   */
-  export type DescriptorPermission = "read" | "write" | "encryptedRead" | "encryptedWrite" | "encryptedAuthenticatedRead" | "encryptedAuthenticatedWrite";
-
-  /**
-   * Type of advertisement. If 'broadcast' is chosen, the sent advertisement type
-   * will be ADV_NONCONN_IND and the device will broadcast with a random MAC
-   * Address. If set to 'peripheral', the advertisement type will be ADV_IND or
-   * ADV_SCAN_IND and the device will broadcast with real Bluetooth Adapter's MAC
-   * Address.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-AdvertisementType
-   */
-  export type AdvertisementType = "broadcast" | "peripheral";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-Device
-   */
-  export interface Device {
-    /**
-     * The address of the device, in the format 'XX:XX:XX:XX:XX:XX'.
-     */
-    address: string;
-
-    /**
-     * The human-readable name of the device.
-     */
-    name?: string;
-
-    /**
-     * The class of the device, a bit-field defined by
-     * http://www.bluetooth.org/en-us/specification/assigned-numbers/baseband.
-     */
-    deviceClass?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-Service
-   */
-  export interface Service {
-    /**
-     * The UUID of the service, e.g. 0000180d-0000-1000-8000-00805f9b34fb.
-     */
-    uuid: string;
-
-    /**
-     * Indicates whether the type of this service is primary or secondary.
-     */
-    isPrimary: boolean;
-
-    /**
-     * Returns the identifier assigned to this service. Use the instance ID to
-     * distinguish between services from a peripheral with the same UUID and to make
-     * function calls that take in a service identifier. Present, if this instance
-     * represents a remote service.
-     */
-    instanceId?: string;
-
-    /**
-     * The device address of the remote peripheral that the GATT service belongs to.
-     * Present, if this instance represents a remote service.
-     */
-    deviceAddress?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-Characteristic
-   */
-  export interface Characteristic {
-    /**
-     * The UUID of the characteristic, e.g. 00002a37-0000-1000-8000-00805f9b34fb.
-     */
-    uuid: string;
-
-    /**
-     * The GATT service this characteristic belongs to.
-     */
-    service?: Service;
-
-    /**
-     * The properties of this characteristic.
-     */
-    properties: CharacteristicProperty[];
-
-    /**
-     * Returns the identifier assigned to this characteristic. Use the instance ID
-     * to distinguish between characteristics from a peripheral with the same UUID
-     * and to make function calls that take in a characteristic identifier. Present,
-     * if this instance represents a remote characteristic.
-     */
-    instanceId?: string;
-
-    /**
-     * The currently cached characteristic value. This value gets updated when the
-     * value of the characteristic is read or updated via a notification or
-     * indication.
-     */
-    value?: ArrayBuffer;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-Descriptor
-   */
-  export interface Descriptor {
-    /**
-     * The UUID of the characteristic descriptor, e.g.
-     * 00002902-0000-1000-8000-00805f9b34fb.
-     */
-    uuid: string;
-
-    /**
-     * The GATT characteristic this descriptor belongs to.
-     */
-    characteristic?: Characteristic;
-
-    /**
-     * The permissions of this descriptor.
-     */
-    permissions: DescriptorPermission[];
-
-    /**
-     * Returns the identifier assigned to this descriptor. Use the instance ID to
-     * distinguish between descriptors from a peripheral with the same UUID and to
-     * make function calls that take in a descriptor identifier. Present, if this
-     * instance represents a remote characteristic.
-     */
-    instanceId?: string;
-
-    /**
-     * The currently cached descriptor value. This value gets updated when the value
-     * of the descriptor is read.
-     */
-    value?: ArrayBuffer;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-ConnectProperties
-   */
-  export interface ConnectProperties {
-    /**
-     * Flag indicating whether a connection to the device is left open when the
-     * event page of the application is unloaded (see <a
-     * href="http://developer.chrome.com/apps/app_lifecycle.html">Manage App
-     * Lifecycle</a>). The default value is <code>false.</code>
-     */
-    persistent: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-NotificationProperties
-   */
-  export interface NotificationProperties {
-    /**
-     * Flag indicating whether the app should receive notifications when the event
-     * page of the application is unloaded (see <a
-     * href="http://developer.chrome.com/apps/app_lifecycle.html">Manage App
-     * Lifecycle</a>). The default value is <code>false</code>.
-     */
-    persistent: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-ManufacturerData
-   */
-  export interface ManufacturerData {
-    id: number;
-
-    data: number[];
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-ServiceData
-   */
-  export interface ServiceData {
-    uuid: string;
-
-    data: number[];
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-Advertisement
-   */
-  export interface Advertisement {
-    /**
-     * Type of advertisement.
-     */
-    type: AdvertisementType;
-
-    /**
-     * List of UUIDs to include in the "Service UUIDs" field of the Advertising
-     * Data. These UUIDs can be of the 16bit, 32bit or 128 formats.
-     */
-    serviceUuids?: string[];
-
-    /**
-     * List of manufacturer specific data to be included in "Manufacturer Specific
-     * Data" fields of the advertising data.
-     */
-    manufacturerData?: ManufacturerData[];
-
-    /**
-     * List of UUIDs to include in the "Solicit UUIDs" field of the Advertising
-     * Data. These UUIDs can be of the 16bit, 32bit or 128 formats.
-     */
-    solicitUuids?: string[];
-
-    /**
-     * List of service data to be included in "Service Data" fields of the
-     * advertising data.
-     */
-    serviceData?: ServiceData[];
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-Request
-   */
-  export interface Request {
-    /**
-     * Unique ID for this request. Use this ID when responding to this request.
-     */
-    requestId: number;
-
-    /**
-     * Device that send this request.
-     */
-    device: Device;
-
-    /**
-     * Value to write (if this is a write request).
-     */
-    value?: ArrayBuffer;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-Response
-   */
-  export interface Response {
-    /**
-     * Id of the request this is a response to.
-     */
-    requestId: number;
-
-    /**
-     * If this is an error response, this should be true.
-     */
-    isError: boolean;
-
-    /**
-     * Response value. Write requests and error responses will ignore this
-     * parameter.
-     */
-    value?: ArrayBuffer;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#type-Notification
-   */
-  export interface Notification {
-    /**
-     * New value of the characteristic.
-     */
-    value: ArrayBuffer;
-
-    /**
-     * Optional flag for sending an indication instead of a notification.
-     */
-    shouldIndicate?: boolean;
-  }
-
-  /**
-   * Establishes a connection between the application and the device with the
-   * given address. A device may be already connected and its GATT services
-   * available without calling <code>connect</code>, however, an app that wants
-   * to access GATT services of a device should call this function to make sure
-   * that a connection to the device is maintained. If the device is not
-   * connected, all GATT services of the device will be discovered after a
-   * successful call to <code>connect</code>.
-   * @param deviceAddress The Bluetooth address of the remote device to which a
-   *     GATT connection should be opened.
-   * @param properties Connection properties (optional).
-   * @returns Called when the connect request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-connect
-   */
-  export function connect(
-    deviceAddress: string,
-    properties?: ConnectProperties,
-  ): Promise<void>;
-
-  /**
-   * Establishes a connection between the application and the device with the
-   * given address. A device may be already connected and its GATT services
-   * available without calling <code>connect</code>, however, an app that wants
-   * to access GATT services of a device should call this function to make sure
-   * that a connection to the device is maintained. If the device is not
-   * connected, all GATT services of the device will be discovered after a
-   * successful call to <code>connect</code>.
-   * @param deviceAddress The Bluetooth address of the remote device to which a
-   *     GATT connection should be opened.
-   * @param properties Connection properties (optional).
-   * @param callback Called when the connect request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-connect
-   */
-  export function connect(
-    deviceAddress: string,
-    properties: ConnectProperties,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Establishes a connection between the application and the device with the
-   * given address. A device may be already connected and its GATT services
-   * available without calling <code>connect</code>, however, an app that wants
-   * to access GATT services of a device should call this function to make sure
-   * that a connection to the device is maintained. If the device is not
-   * connected, all GATT services of the device will be discovered after a
-   * successful call to <code>connect</code>.
-   * @param deviceAddress The Bluetooth address of the remote device to which a
-   *     GATT connection should be opened.
-   * @param callback Called when the connect request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-connect
-   */
-  export function connect(
-    deviceAddress: string,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Closes the app's connection to the device with the given address. Note that
-   * this will not always destroy the physical link itself, since there may be
-   * other apps with open connections.
-   * @param deviceAddress The Bluetooth address of the remote device.
-   * @returns Called when the disconnect request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-disconnect
-   */
-  export function disconnect(
-    deviceAddress: string,
-  ): Promise<void>;
-
-  /**
-   * Closes the app's connection to the device with the given address. Note that
-   * this will not always destroy the physical link itself, since there may be
-   * other apps with open connections.
-   * @param deviceAddress The Bluetooth address of the remote device.
-   * @param callback Called when the disconnect request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-disconnect
-   */
-  export function disconnect(
-    deviceAddress: string,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Get the GATT service with the given instance ID.
-   * @param serviceId The instance ID of the requested GATT service.
-   * @returns Called with the requested Service object.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getService
-   */
-  export function getService(
-    serviceId: string,
-  ): Promise<{
-    result: Service,
-  }>;
-
-  /**
-   * Get the GATT service with the given instance ID.
-   * @param serviceId The instance ID of the requested GATT service.
-   * @param callback Called with the requested Service object.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getService
-   */
-  export function getService(
-    serviceId: string,
-    callback: (
-      result: Service,
-    ) => void,
-  ): void;
-
-  /**
-   * Create a locally hosted GATT service. This service can be registered to be
-   * available on a local GATT server. This function is only available if the
-   * app has both the bluetooth:low_energy and the bluetooth:peripheral
-   * permissions set to true. The peripheral permission may not be available to
-   * all apps.
-   * @param service The service to create.
-   * @returns Called with the created services's unique ID.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-createService
-   */
-  export function createService(
-    service: Service,
-  ): Promise<{
-    serviceId: string,
-  }>;
-
-  /**
-   * Create a locally hosted GATT service. This service can be registered to be
-   * available on a local GATT server. This function is only available if the
-   * app has both the bluetooth:low_energy and the bluetooth:peripheral
-   * permissions set to true. The peripheral permission may not be available to
-   * all apps.
-   * @param service The service to create.
-   * @param callback Called with the created services's unique ID.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-createService
-   */
-  export function createService(
-    service: Service,
-    callback: (
-      serviceId: string,
-    ) => void,
-  ): void;
-
-  /**
-   * <p>Get all the GATT services that were discovered on the remote device with
-   * the given device address.</p><p><em>Note:</em> If service discovery is not
-   * yet complete on the device, this API will return a subset (possibly empty)
-   * of services. A work around is to add a time based delay and/or call
-   * repeatedly until the expected number of services is returned.</p>
-   * @param deviceAddress The Bluetooth address of the remote device whose GATT
-   *     services should be returned.
-   * @returns Called with the list of requested Service objects.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getServices
-   */
-  export function getServices(
-    deviceAddress: string,
-  ): Promise<{
-    result: Service[],
-  }>;
-
-  /**
-   * <p>Get all the GATT services that were discovered on the remote device with
-   * the given device address.</p><p><em>Note:</em> If service discovery is not
-   * yet complete on the device, this API will return a subset (possibly empty)
-   * of services. A work around is to add a time based delay and/or call
-   * repeatedly until the expected number of services is returned.</p>
-   * @param deviceAddress The Bluetooth address of the remote device whose GATT
-   *     services should be returned.
-   * @param callback Called with the list of requested Service objects.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getServices
-   */
-  export function getServices(
-    deviceAddress: string,
-    callback: (
-      result: Service[],
-    ) => void,
-  ): void;
-
-  /**
-   * Get the GATT characteristic with the given instance ID that belongs to the
-   * given GATT service, if the characteristic exists.
-   * @param characteristicId The instance ID of the requested GATT
-   *     characteristic.
-   * @returns Called with the requested Characteristic object.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getCharacteristic
-   */
-  export function getCharacteristic(
-    characteristicId: string,
-  ): Promise<{
-    result: Characteristic,
-  }>;
-
-  /**
-   * Get the GATT characteristic with the given instance ID that belongs to the
-   * given GATT service, if the characteristic exists.
-   * @param characteristicId The instance ID of the requested GATT
-   *     characteristic.
-   * @param callback Called with the requested Characteristic object.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getCharacteristic
-   */
-  export function getCharacteristic(
-    characteristicId: string,
-    callback: (
-      result: Characteristic,
-    ) => void,
-  ): void;
-
-  /**
-   * Create a locally hosted GATT characteristic. This characteristic must be
-   * hosted under a valid service. If the service ID is not valid, the lastError
-   * will be set. This function is only available if the app has both the
-   * bluetooth:low_energy and the bluetooth:peripheral permissions set to true.
-   * The peripheral permission may not be available to all apps.
-   * @param characteristic The characteristic to create.
-   * @param serviceId ID of the service to create this characteristic for.
-   * @returns Called with the created characteristic's unique ID.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-createCharacteristic
-   */
-  export function createCharacteristic(
-    characteristic: Characteristic,
-    serviceId: string,
-  ): Promise<{
-    characteristicId: string,
-  }>;
-
-  /**
-   * Create a locally hosted GATT characteristic. This characteristic must be
-   * hosted under a valid service. If the service ID is not valid, the lastError
-   * will be set. This function is only available if the app has both the
-   * bluetooth:low_energy and the bluetooth:peripheral permissions set to true.
-   * The peripheral permission may not be available to all apps.
-   * @param characteristic The characteristic to create.
-   * @param serviceId ID of the service to create this characteristic for.
-   * @param callback Called with the created characteristic's unique ID.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-createCharacteristic
-   */
-  export function createCharacteristic(
-    characteristic: Characteristic,
-    serviceId: string,
-    callback: (
-      characteristicId: string,
-    ) => void,
-  ): void;
-
-  /**
-   * Get a list of all discovered GATT characteristics that belong to the given
-   * service.
-   * @param serviceId The instance ID of the GATT service whose characteristics
-   *     should be returned.
-   * @returns Called with the list of characteristics that belong to the given
-   *     service.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getCharacteristics
-   */
-  export function getCharacteristics(
-    serviceId: string,
-  ): Promise<{
-    result: Characteristic[],
-  }>;
-
-  /**
-   * Get a list of all discovered GATT characteristics that belong to the given
-   * service.
-   * @param serviceId The instance ID of the GATT service whose characteristics
-   *     should be returned.
-   * @param callback Called with the list of characteristics that belong to the
-   *     given service.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getCharacteristics
-   */
-  export function getCharacteristics(
-    serviceId: string,
-    callback: (
-      result: Characteristic[],
-    ) => void,
-  ): void;
-
-  /**
-   * Get a list of GATT services that are included by the given service.
-   * @param serviceId The instance ID of the GATT service whose included
-   *     services should be returned.
-   * @returns Called with the list of GATT services included from the given
-   *     service.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getIncludedServices
-   */
-  export function getIncludedServices(
-    serviceId: string,
-  ): Promise<{
-    result: Service[],
-  }>;
-
-  /**
-   * Get a list of GATT services that are included by the given service.
-   * @param serviceId The instance ID of the GATT service whose included
-   *     services should be returned.
-   * @param callback Called with the list of GATT services included from the
-   *     given service.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getIncludedServices
-   */
-  export function getIncludedServices(
-    serviceId: string,
-    callback: (
-      result: Service[],
-    ) => void,
-  ): void;
-
-  /**
-   * Get the GATT characteristic descriptor with the given instance ID.
-   * @param descriptorId The instance ID of the requested GATT characteristic
-   *     descriptor.
-   * @returns Called with the requested Descriptor object.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getDescriptor
-   */
-  export function getDescriptor(
-    descriptorId: string,
-  ): Promise<{
-    result: Descriptor,
-  }>;
-
-  /**
-   * Get the GATT characteristic descriptor with the given instance ID.
-   * @param descriptorId The instance ID of the requested GATT characteristic
-   *     descriptor.
-   * @param callback Called with the requested Descriptor object.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getDescriptor
-   */
-  export function getDescriptor(
-    descriptorId: string,
-    callback: (
-      result: Descriptor,
-    ) => void,
-  ): void;
-
-  /**
-   * Create a locally hosted GATT descriptor. This descriptor must be hosted
-   * under a valid characteristic. If the characteristic ID is not valid, the
-   * lastError will be set. This function is only available if the app has both
-   * the bluetooth:low_energy and the bluetooth:peripheral permissions set to
-   * true. The peripheral permission may not be available to all apps.
-   * @param descriptor The descriptor to create.
-   * @param characteristicId ID of the characteristic to create this descriptor
-   *     for.
-   * @returns Called with the created descriptor's unique ID.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-createDescriptor
-   */
-  export function createDescriptor(
-    descriptor: Descriptor,
-    characteristicId: string,
-  ): Promise<{
-    descriptorId: string,
-  }>;
-
-  /**
-   * Create a locally hosted GATT descriptor. This descriptor must be hosted
-   * under a valid characteristic. If the characteristic ID is not valid, the
-   * lastError will be set. This function is only available if the app has both
-   * the bluetooth:low_energy and the bluetooth:peripheral permissions set to
-   * true. The peripheral permission may not be available to all apps.
-   * @param descriptor The descriptor to create.
-   * @param characteristicId ID of the characteristic to create this descriptor
-   *     for.
-   * @param callback Called with the created descriptor's unique ID.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-createDescriptor
-   */
-  export function createDescriptor(
-    descriptor: Descriptor,
-    characteristicId: string,
-    callback: (
-      descriptorId: string,
-    ) => void,
-  ): void;
-
-  /**
-   * Get a list of GATT characteristic descriptors that belong to the given
-   * characteristic.
-   * @param characteristicId The instance ID of the GATT characteristic whose
-   *     descriptors should be returned.
-   * @returns Called with the list of descriptors that belong to the given
-   *     characteristic.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getDescriptors
-   */
-  export function getDescriptors(
-    characteristicId: string,
-  ): Promise<{
-    result: Descriptor[],
-  }>;
-
-  /**
-   * Get a list of GATT characteristic descriptors that belong to the given
-   * characteristic.
-   * @param characteristicId The instance ID of the GATT characteristic whose
-   *     descriptors should be returned.
-   * @param callback Called with the list of descriptors that belong to the
-   *     given characteristic.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-getDescriptors
-   */
-  export function getDescriptors(
-    characteristicId: string,
-    callback: (
-      result: Descriptor[],
-    ) => void,
-  ): void;
-
-  /**
-   * Retrieve the value of a specified characteristic from a remote peripheral.
-   * @param characteristicId The instance ID of the GATT characteristic whose
-   *     value should be read from the remote device.
-   * @returns Called with the Characteristic object whose value was requested.
-   *     The <code>value</code> field of the returned Characteristic object
-   *     contains the result of the read request.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-readCharacteristicValue
-   */
-  export function readCharacteristicValue(
-    characteristicId: string,
-  ): Promise<{
-    result: Characteristic,
-  }>;
-
-  /**
-   * Retrieve the value of a specified characteristic from a remote peripheral.
-   * @param characteristicId The instance ID of the GATT characteristic whose
-   *     value should be read from the remote device.
-   * @param callback Called with the Characteristic object whose value was
-   *     requested. The <code>value</code> field of the returned Characteristic
-   *     object contains the result of the read request.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-readCharacteristicValue
-   */
-  export function readCharacteristicValue(
-    characteristicId: string,
-    callback: (
-      result: Characteristic,
-    ) => void,
-  ): void;
-
-  /**
-   * Write the value of a specified characteristic from a remote peripheral.
-   * @param characteristicId The instance ID of the GATT characteristic whose
-   *     value should be written to.
-   * @param value The value that should be sent to the remote characteristic as
-   *     part of the write request.
-   * @returns Called when the write request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-writeCharacteristicValue
-   */
-  export function writeCharacteristicValue(
-    characteristicId: string,
-    value: ArrayBuffer,
-  ): Promise<void>;
-
-  /**
-   * Write the value of a specified characteristic from a remote peripheral.
-   * @param characteristicId The instance ID of the GATT characteristic whose
-   *     value should be written to.
-   * @param value The value that should be sent to the remote characteristic as
-   *     part of the write request.
-   * @param callback Called when the write request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-writeCharacteristicValue
-   */
-  export function writeCharacteristicValue(
-    characteristicId: string,
-    value: ArrayBuffer,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Enable value notifications/indications from the specified characteristic.
-   * Once enabled, an application can listen to notifications using the {@link
-   * onCharacteristicValueChanged} event.
-   * @param characteristicId The instance ID of the GATT characteristic that
-   *     notifications should be enabled on.
-   * @param properties Notification session properties (optional).
-   * @returns Called when the request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-startCharacteristicNotifications
-   */
-  export function startCharacteristicNotifications(
-    characteristicId: string,
-    properties?: NotificationProperties,
-  ): Promise<void>;
-
-  /**
-   * Enable value notifications/indications from the specified characteristic.
-   * Once enabled, an application can listen to notifications using the {@link
-   * onCharacteristicValueChanged} event.
-   * @param characteristicId The instance ID of the GATT characteristic that
-   *     notifications should be enabled on.
-   * @param properties Notification session properties (optional).
-   * @param callback Called when the request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-startCharacteristicNotifications
-   */
-  export function startCharacteristicNotifications(
-    characteristicId: string,
-    properties: NotificationProperties,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Enable value notifications/indications from the specified characteristic.
-   * Once enabled, an application can listen to notifications using the {@link
-   * onCharacteristicValueChanged} event.
-   * @param characteristicId The instance ID of the GATT characteristic that
-   *     notifications should be enabled on.
-   * @param callback Called when the request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-startCharacteristicNotifications
-   */
-  export function startCharacteristicNotifications(
-    characteristicId: string,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Disable value notifications/indications from the specified characteristic.
-   * After a successful call, the application will stop receiving
-   * notifications/indications from this characteristic.
-   * @param characteristicId The instance ID of the GATT characteristic on which
-   *     this app's notification session should be stopped.
-   * @returns Called when the request has completed (optional).
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-stopCharacteristicNotifications
-   */
-  export function stopCharacteristicNotifications(
-    characteristicId: string,
-  ): Promise<void>;
-
-  /**
-   * Disable value notifications/indications from the specified characteristic.
-   * After a successful call, the application will stop receiving
-   * notifications/indications from this characteristic.
-   * @param characteristicId The instance ID of the GATT characteristic on which
-   *     this app's notification session should be stopped.
-   * @param callback Called when the request has completed (optional).
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-stopCharacteristicNotifications
-   */
-  export function stopCharacteristicNotifications(
-    characteristicId: string,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Notify a remote device of a new value for a characteristic. If the
-   * shouldIndicate flag in the notification object is true, an indication will
-   * be sent instead of a notification. Note, the characteristic needs to
-   * correctly set the 'notify' or 'indicate' property during creation for this
-   * call to succeed. This function is only available if the app has both the
-   * bluetooth:low_energy and the bluetooth:peripheral permissions set to true.
-   * The peripheral permission may not be available to all apps.
-   * @param characteristicId The characteristic to send the notication for.
-   * @param notification
-   * @returns Callback called once the notification or indication has been sent
-   *     successfully.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-notifyCharacteristicValueChanged
-   */
-  export function notifyCharacteristicValueChanged(
-    characteristicId: string,
-    notification: Notification,
-  ): Promise<void>;
-
-  /**
-   * Notify a remote device of a new value for a characteristic. If the
-   * shouldIndicate flag in the notification object is true, an indication will
-   * be sent instead of a notification. Note, the characteristic needs to
-   * correctly set the 'notify' or 'indicate' property during creation for this
-   * call to succeed. This function is only available if the app has both the
-   * bluetooth:low_energy and the bluetooth:peripheral permissions set to true.
-   * The peripheral permission may not be available to all apps.
-   * @param characteristicId The characteristic to send the notication for.
-   * @param notification
-   * @param callback Callback called once the notification or indication has
-   *     been sent successfully.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-notifyCharacteristicValueChanged
-   */
-  export function notifyCharacteristicValueChanged(
-    characteristicId: string,
-    notification: Notification,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Retrieve the value of a specified characteristic descriptor from a remote
-   * peripheral.
-   * @param descriptorId The instance ID of the GATT characteristic descriptor
-   *     whose value should be read from the remote device.
-   * @returns Called with the Descriptor object whose value was requested. The
-   *     <code>value</code> field of the returned Descriptor object contains the
-   *     result of the read request.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-readDescriptorValue
-   */
-  export function readDescriptorValue(
-    descriptorId: string,
-  ): Promise<{
-    result: Descriptor,
-  }>;
-
-  /**
-   * Retrieve the value of a specified characteristic descriptor from a remote
-   * peripheral.
-   * @param descriptorId The instance ID of the GATT characteristic descriptor
-   *     whose value should be read from the remote device.
-   * @param callback Called with the Descriptor object whose value was
-   *     requested. The <code>value</code> field of the returned Descriptor
-   *     object contains the result of the read request.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-readDescriptorValue
-   */
-  export function readDescriptorValue(
-    descriptorId: string,
-    callback: (
-      result: Descriptor,
-    ) => void,
-  ): void;
-
-  /**
-   * Write the value of a specified characteristic descriptor from a remote
-   * peripheral.
-   * @param descriptorId The instance ID of the GATT characteristic descriptor
-   *     whose value should be written to.
-   * @param value The value that should be sent to the remote descriptor as part
-   *     of the write request.
-   * @returns Called when the write request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-writeDescriptorValue
-   */
-  export function writeDescriptorValue(
-    descriptorId: string,
-    value: ArrayBuffer,
-  ): Promise<void>;
-
-  /**
-   * Write the value of a specified characteristic descriptor from a remote
-   * peripheral.
-   * @param descriptorId The instance ID of the GATT characteristic descriptor
-   *     whose value should be written to.
-   * @param value The value that should be sent to the remote descriptor as part
-   *     of the write request.
-   * @param callback Called when the write request has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-writeDescriptorValue
-   */
-  export function writeDescriptorValue(
-    descriptorId: string,
-    value: ArrayBuffer,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Register the given service with the local GATT server. If the service ID is
-   * invalid, the lastError will be set. This function is only available if the
-   * app has both the bluetooth:low_energy and the bluetooth:peripheral
-   * permissions set to true. The peripheral permission may not be available to
-   * all apps.
-   * @param serviceId Unique ID of a created service.
-   * @returns Callback with the result of the register operation.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-registerService
-   */
-  export function registerService(
-    serviceId: string,
-  ): Promise<void>;
-
-  /**
-   * Register the given service with the local GATT server. If the service ID is
-   * invalid, the lastError will be set. This function is only available if the
-   * app has both the bluetooth:low_energy and the bluetooth:peripheral
-   * permissions set to true. The peripheral permission may not be available to
-   * all apps.
-   * @param serviceId Unique ID of a created service.
-   * @param callback Callback with the result of the register operation.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-registerService
-   */
-  export function registerService(
-    serviceId: string,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Unregister the given service with the local GATT server. If the service ID
-   * is invalid, the lastError will be set. This function is only available if
-   * the app has both the bluetooth:low_energy and the bluetooth:peripheral
-   * permissions set to true. The peripheral permission may not be available to
-   * all apps.
-   * @param serviceId Unique ID of a current registered service.
-   * @returns Callback with the result of the register operation.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-unregisterService
-   */
-  export function unregisterService(
-    serviceId: string,
-  ): Promise<void>;
-
-  /**
-   * Unregister the given service with the local GATT server. If the service ID
-   * is invalid, the lastError will be set. This function is only available if
-   * the app has both the bluetooth:low_energy and the bluetooth:peripheral
-   * permissions set to true. The peripheral permission may not be available to
-   * all apps.
-   * @param serviceId Unique ID of a current registered service.
-   * @param callback Callback with the result of the register operation.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-unregisterService
-   */
-  export function unregisterService(
-    serviceId: string,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Remove the specified service, unregistering it if it was registered. If the
-   * service ID is invalid, the lastError will be set. This function is only
-   * available if the app has both the bluetooth:low_energy and the
-   * bluetooth:peripheral permissions set to true. The peripheral permission may
-   * not be available to all apps.
-   * @param serviceId Unique ID of a current registered service.
-   * @returns Callback called once the service is removed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-removeService
-   */
-  export function removeService(
-    serviceId: string,
-  ): Promise<void>;
-
-  /**
-   * Remove the specified service, unregistering it if it was registered. If the
-   * service ID is invalid, the lastError will be set. This function is only
-   * available if the app has both the bluetooth:low_energy and the
-   * bluetooth:peripheral permissions set to true. The peripheral permission may
-   * not be available to all apps.
-   * @param serviceId Unique ID of a current registered service.
-   * @param callback Callback called once the service is removed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-removeService
-   */
-  export function removeService(
-    serviceId: string,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Create an advertisement and register it for advertising. To call this
-   * function, the app must have the bluetooth:low_energy and
-   * bluetooth:peripheral permissions set to true. Additionally this API is only
-   * available to auto launched apps in Kiosk Mode or by setting the
-   * '--enable-ble-advertising-in-apps' command-line switch. See
-   * https://developer.chrome.com/apps/manifest/bluetooth Note: On some
-   * hardware, central and peripheral modes at the same time is supported but on
-   * hardware that doesn't support this, making this call will switch the device
-   * to peripheral mode. In the case of hardware which does not support both
-   * central and peripheral mode, attempting to use the device in both modes
-   * will lead to undefined behavior or prevent other central-role applications
-   * from behaving correctly (including the discovery of Bluetooth Low Energy
-   * devices).
-   * @param advertisement The advertisement to advertise.
-   * @returns Called once the registeration is done and we've started
-   *     advertising. Returns the id of the created advertisement.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-registerAdvertisement
-   */
-  export function registerAdvertisement(
-    advertisement: Advertisement,
-  ): Promise<{
-    advertisementId: number,
-  }>;
-
-  /**
-   * Create an advertisement and register it for advertising. To call this
-   * function, the app must have the bluetooth:low_energy and
-   * bluetooth:peripheral permissions set to true. Additionally this API is only
-   * available to auto launched apps in Kiosk Mode or by setting the
-   * '--enable-ble-advertising-in-apps' command-line switch. See
-   * https://developer.chrome.com/apps/manifest/bluetooth Note: On some
-   * hardware, central and peripheral modes at the same time is supported but on
-   * hardware that doesn't support this, making this call will switch the device
-   * to peripheral mode. In the case of hardware which does not support both
-   * central and peripheral mode, attempting to use the device in both modes
-   * will lead to undefined behavior or prevent other central-role applications
-   * from behaving correctly (including the discovery of Bluetooth Low Energy
-   * devices).
-   * @param advertisement The advertisement to advertise.
-   * @param callback Called once the registeration is done and we've started
-   *     advertising. Returns the id of the created advertisement.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-registerAdvertisement
-   */
-  export function registerAdvertisement(
-    advertisement: Advertisement,
-    callback: (
-      advertisementId: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Unregisters an advertisement and stops its advertising. If the
-   * advertisement fails to unregister the only way to stop advertising might be
-   * to restart the device.
-   * @param advertisementId Id of the advertisement to unregister.
-   * @returns Called once the advertisement is unregistered and is no longer
-   *     being advertised.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-unregisterAdvertisement
-   */
-  export function unregisterAdvertisement(
-    advertisementId: number,
-  ): Promise<void>;
-
-  /**
-   * Unregisters an advertisement and stops its advertising. If the
-   * advertisement fails to unregister the only way to stop advertising might be
-   * to restart the device.
-   * @param advertisementId Id of the advertisement to unregister.
-   * @param callback Called once the advertisement is unregistered and is no
-   *     longer being advertised.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-unregisterAdvertisement
-   */
-  export function unregisterAdvertisement(
-    advertisementId: number,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Resets advertising on the current device. It will unregister and stop all
-   * existing advertisements.
-   * @returns Called once the advertisements are reset.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-resetAdvertising
-   */
-  export function resetAdvertising(): Promise<void>;
-
-  /**
-   * Resets advertising on the current device. It will unregister and stop all
-   * existing advertisements.
-   * @param callback Called once the advertisements are reset.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-resetAdvertising
-   */
-  export function resetAdvertising(
-    callback: () => void,
-  ): void;
-
-  /**
-   * Set's the interval betweeen two consecutive advertisements. Note: This is a
-   * best effort. The actual interval may vary non-trivially from the requested
-   * intervals. On some hardware, there is a minimum interval of 100ms. The
-   * minimum and maximum values cannot exceed the the range allowed by the
-   * Bluetooth 4.2 specification.
-   * @param minInterval Minimum interval between advertisments (in
-   *     milliseconds). This cannot be lower than 20ms (as per the spec).
-   * @param maxInterval Maximum interval between advertisments (in
-   *     milliseconds). This cannot be more than 10240ms (as per the spec).
-   * @returns Called once the interval has been set.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-setAdvertisingInterval
-   */
-  export function setAdvertisingInterval(
-    minInterval: number,
-    maxInterval: number,
-  ): Promise<void>;
-
-  /**
-   * Set's the interval betweeen two consecutive advertisements. Note: This is a
-   * best effort. The actual interval may vary non-trivially from the requested
-   * intervals. On some hardware, there is a minimum interval of 100ms. The
-   * minimum and maximum values cannot exceed the the range allowed by the
-   * Bluetooth 4.2 specification.
-   * @param minInterval Minimum interval between advertisments (in
-   *     milliseconds). This cannot be lower than 20ms (as per the spec).
-   * @param maxInterval Maximum interval between advertisments (in
-   *     milliseconds). This cannot be more than 10240ms (as per the spec).
-   * @param callback Called once the interval has been set.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-setAdvertisingInterval
-   */
-  export function setAdvertisingInterval(
-    minInterval: number,
-    maxInterval: number,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Sends a response for a characteristic or descriptor read/write request.
-   * This function is only available if the app has both the
-   * bluetooth:low_energy and the bluetooth:peripheral permissions set to true.
-   * The peripheral permission may not be available to all apps.
-   * @param response The response to the request.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#method-sendRequestResponse
-   */
-  export function sendRequestResponse(
-    response: Response,
-  ): void;
-
-  /**
-   * Fired whan a new GATT service has been discovered on a remote device.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#event-onServiceAdded
-   */
-  export const onServiceAdded: chrome.events.Event<(
-    /**
-     * The GATT service that was added.
-     */
-    service: Service,
-  ) => void>;
-
-  /**
-   * Fired when the state of a remote GATT service changes. This involves any
-   * characteristics and/or descriptors that get added or removed from the
-   * service, as well as "ServiceChanged" notifications from the remote device.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#event-onServiceChanged
-   */
-  export const onServiceChanged: chrome.events.Event<(
-    /**
-     * The GATT service whose state has changed.
-     */
-    service: Service,
-  ) => void>;
-
-  /**
-   * Fired when a GATT service that was previously discovered on a remote device
-   * has been removed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#event-onServiceRemoved
-   */
-  export const onServiceRemoved: chrome.events.Event<(
-    /**
-     * The GATT service that was removed.
-     */
-    service: Service,
-  ) => void>;
-
-  /**
-   * Fired when the value of a remote GATT characteristic changes, either as a
-   * result of a read request, or a value change notification/indication This
-   * event will only be sent if the app has enabled notifications by calling
-   * {@link startCharacteristicNotifications}.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#event-onCharacteristicValueChanged
-   */
-  export const onCharacteristicValueChanged: chrome.events.Event<(
-    /**
-     * The GATT characteristic whose value has changed.
-     */
-    characteristic: Characteristic,
-  ) => void>;
-
-  /**
-   * Fired when the value of a remote GATT characteristic descriptor changes,
-   * usually as a result of a read request. This event exists mostly for
-   * convenience and will always be sent after a successful call to {@link
-   * readDescriptorValue}.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#event-onDescriptorValueChanged
-   */
-  export const onDescriptorValueChanged: chrome.events.Event<(
-    /**
-     * The GATT characteristic descriptor whose value has changed.
-     */
-    descriptor: Descriptor,
-  ) => void>;
-
-  /**
-   * Fired when a connected central device requests to read the value of a
-   * characteristic registered on the local GATT server. Not responding to this
-   * request for a long time may lead to a disconnection. This event is only
-   * available if the app has both the bluetooth:low_energy and the
-   * bluetooth:peripheral permissions set to true. The peripheral permission may
-   * not be available to all apps.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#event-onCharacteristicReadRequest
-   */
-  export const onCharacteristicReadRequest: chrome.events.Event<(
-    /**
-     * Request data for this request.
-     */
-    request: Request,
-    characteristicId: string,
-  ) => void>;
-
-  /**
-   * Fired when a connected central device requests to write the value of a
-   * characteristic registered on the local GATT server. Not responding to this
-   * request for a long time may lead to a disconnection. This event is only
-   * available if the app has both the bluetooth:low_energy and the
-   * bluetooth:peripheral permissions set to true. The peripheral permission may
-   * not be available to all apps.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#event-onCharacteristicWriteRequest
-   */
-  export const onCharacteristicWriteRequest: chrome.events.Event<(
-    /**
-     * Request data for this request.
-     */
-    request: Request,
-    characteristicId: string,
-  ) => void>;
-
-  /**
-   * Fired when a connected central device requests to read the value of a
-   * descriptor registered on the local GATT server. Not responding to this
-   * request for a long time may lead to a disconnection. This event is only
-   * available if the app has both the bluetooth:low_energy and the
-   * bluetooth:peripheral permissions set to true. The peripheral permission may
-   * not be available to all apps.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#event-onDescriptorReadRequest
-   */
-  export const onDescriptorReadRequest: chrome.events.Event<(
-    /**
-     * Request data for this request.
-     */
-    request: Request,
-    descriptorId: string,
-  ) => void>;
-
-  /**
-   * Fired when a connected central device requests to write the value of a
-   * descriptor registered on the local GATT server. Not responding to this
-   * request for a long time may lead to a disconnection. This event is only
-   * available if the app has both the bluetooth:low_energy and the
-   * bluetooth:peripheral permissions set to true. The peripheral permission may
-   * not be available to all apps.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothLowEnergy/#event-onDescriptorWriteRequest
-   */
-  export const onDescriptorWriteRequest: chrome.events.Event<(
-    /**
-     * Request data for this request.
-     */
-    request: Request,
-    descriptorId: string,
-  ) => void>;
-}
-/**
- * Use the <code>chrome.bluetoothSocket</code> API to send and receive data
- to
- * Bluetooth devices using RFCOMM and L2CAP connections.
- * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/
- */
-declare namespace chrome.bluetoothSocket {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#type-SocketProperties
-   */
-  export interface SocketProperties {
-    /**
-     * Flag indicating whether the socket is left open when the event page of the
-     * application is unloaded (see <a
-     * href="http://developer.chrome.com/apps/app_lifecycle.html">Manage App
-     * Lifecycle</a>). The default value is <code>false.</code> When the application
-     * is loaded, any sockets previously opened with persistent=true can be fetched
-     * with $ref:getSockets.
-     */
-    persistent?: boolean;
-
-    /**
-     * An application-defined string associated with the socket.
-     */
-    name?: string;
-
-    /**
-     * The size of the buffer used to receive data. The default value is 4096.
-     */
-    bufferSize?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#type-CreateInfo
-   */
-  export interface CreateInfo {
-    /**
-     * The ID of the newly created socket. Note that socket IDs created from this
-     * API are not compatible with socket IDs created from other APIs, such as the
-     * <code>{@link sockets.tcp}</code> API.
-     */
-    socketId: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#type-ListenOptions
-   */
-  export interface ListenOptions {
-    /**
-     * The RFCOMM Channel used by <code>listenUsingRfcomm</code>. If specified, this
-     * channel must not be previously in use or the method call will fail. When not
-     * specified, an unused channel will be automatically allocated.
-     */
-    channel?: number;
-
-    /**
-     * The L2CAP PSM used by <code>listenUsingL2cap</code>. If specified, this PSM
-     * must not be previously in use or the method call with fail. When not
-     * specified, an unused PSM will be automatically allocated.
-     */
-    psm?: number;
-
-    /**
-     * Length of the socket's listen queue. The default value depends on the
-     * operating system's host subsystem.
-     */
-    backlog?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#type-SocketInfo
-   */
-  export interface SocketInfo {
-    /**
-     * The socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * Flag indicating if the socket remains open when the event page of the
-     * application is unloaded (see <code>SocketProperties.persistent</code>). The
-     * default value is "false".
-     */
-    persistent: boolean;
-
-    /**
-     * Application-defined string associated with the socket.
-     */
-    name?: string;
-
-    /**
-     * The size of the buffer used to receive data. If no buffer size has been
-     * specified explictly, the value is not provided.
-     */
-    bufferSize?: number;
-
-    /**
-     * Flag indicating whether a connected socket blocks its peer from sending more
-     * data, or whether connection requests on a listening socket are dispatched
-     * through the <code>onAccept</code> event or queued up in the listen queue
-     * backlog. See <code>setPaused</code>. The default value is "false".
-     */
-    paused: boolean;
-
-    /**
-     * Flag indicating whether the socket is connected to a remote peer.
-     */
-    connected: boolean;
-
-    /**
-     * If the underlying socket is connected, contains the Bluetooth address of the
-     * device it is connected to.
-     */
-    address?: string;
-
-    /**
-     * If the underlying socket is connected, contains information about the service
-     * UUID it is connected to, otherwise if the underlying socket is listening,
-     * contains information about the service UUID it is listening on.
-     */
-    uuid?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#type-AcceptInfo
-   */
-  export interface AcceptInfo {
-    /**
-     * The server socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * The client socket identifier, i.e. the socket identifier of the newly
-     * established connection. This socket identifier should be used only with
-     * functions from the <code>chrome.bluetoothSocket</code> namespace. Note the
-     * client socket is initially paused and must be explictly un-paused by the
-     * application to start receiving data.
-     */
-    clientSocketId: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#type-AcceptError
-   */
-  export type AcceptError = "system_error" | "not_listening";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#type-AcceptErrorInfo
-   */
-  export interface AcceptErrorInfo {
-    /**
-     * The server socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * The error message.
-     */
-    errorMessage: string;
-
-    /**
-     * An error code indicating what went wrong.
-     */
-    error: AcceptError;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#type-ReceiveInfo
-   */
-  export interface ReceiveInfo {
-    /**
-     * The socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * The data received, with a maxium size of <code>bufferSize</code>.
-     */
-    data: ArrayBuffer;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#type-ReceiveError
-   */
-  export type ReceiveError = "disconnected" | "system_error" | "not_connected";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#type-ReceiveErrorInfo
-   */
-  export interface ReceiveErrorInfo {
-    /**
-     * The socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * The error message.
-     */
-    errorMessage: string;
-
-    /**
-     * An error code indicating what went wrong.
-     */
-    error: ReceiveError;
-  }
-
-  /**
-   * Creates a Bluetooth socket.
-   * @param properties The socket properties (optional).
-   * @returns Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-create
-   */
-  export function create(
-    properties?: SocketProperties,
-  ): Promise<{
-    /**
-     * The result of the socket creation.
-     */
-    createInfo: CreateInfo,
-  }>;
-
-  /**
-   * Creates a Bluetooth socket.
-   * @param properties The socket properties (optional).
-   * @param callback Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-create
-   */
-  export function create(
-    properties: SocketProperties,
-    callback: (
-      /**
-       * The result of the socket creation.
-       */
-      createInfo: CreateInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Creates a Bluetooth socket.
-   * @param callback Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-create
-   */
-  export function create(
-    callback: (
-      /**
-       * The result of the socket creation.
-       */
-      createInfo: CreateInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Updates the socket properties.
-   * @param socketId The socket identifier.
-   * @param properties The properties to update.
-   * @returns Called when the properties are updated.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-update
-   */
-  export function update(
-    socketId: number,
-    properties: SocketProperties,
-  ): Promise<void>;
-
-  /**
-   * Updates the socket properties.
-   * @param socketId The socket identifier.
-   * @param properties The properties to update.
-   * @param callback Called when the properties are updated.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-update
-   */
-  export function update(
-    socketId: number,
-    properties: SocketProperties,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Enables or disables a connected socket from receiving messages from its
-   * peer, or a listening socket from accepting new connections. The default
-   * value is "false". Pausing a connected socket is typically used by an
-   * application to throttle data sent by its peer. When a connected socket is
-   * paused, no <code>onReceive</code>event is raised. When a socket is
-   * connected and un-paused, <code>onReceive</code> events are raised again
-   * when messages are received. When a listening socket is paused, new
-   * connections are accepted until its backlog is full then additional
-   * connection requests are refused. <code>onAccept</code> events are raised
-   * only when the socket is un-paused.
-   * @param socketId
-   * @param paused
-   * @returns Callback from the <code>setPaused</code> method.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-setPaused
-   */
-  export function setPaused(
-    socketId: number,
-    paused: boolean,
-  ): Promise<void>;
-
-  /**
-   * Enables or disables a connected socket from receiving messages from its
-   * peer, or a listening socket from accepting new connections. The default
-   * value is "false". Pausing a connected socket is typically used by an
-   * application to throttle data sent by its peer. When a connected socket is
-   * paused, no <code>onReceive</code>event is raised. When a socket is
-   * connected and un-paused, <code>onReceive</code> events are raised again
-   * when messages are received. When a listening socket is paused, new
-   * connections are accepted until its backlog is full then additional
-   * connection requests are refused. <code>onAccept</code> events are raised
-   * only when the socket is un-paused.
-   * @param socketId
-   * @param paused
-   * @param callback Callback from the <code>setPaused</code> method.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-setPaused
-   */
-  export function setPaused(
-    socketId: number,
-    paused: boolean,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Listen for connections using the RFCOMM protocol.
-   * @param socketId The socket identifier.
-   * @param uuid Service UUID to listen on.
-   * @param options Optional additional options for the service.
-   * @returns Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-listenUsingRfcomm
-   */
-  export function listenUsingRfcomm(
-    socketId: number,
-    uuid: string,
-    options?: ListenOptions,
-  ): Promise<void>;
-
-  /**
-   * Listen for connections using the RFCOMM protocol.
-   * @param socketId The socket identifier.
-   * @param uuid Service UUID to listen on.
-   * @param options Optional additional options for the service.
-   * @param callback Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-listenUsingRfcomm
-   */
-  export function listenUsingRfcomm(
-    socketId: number,
-    uuid: string,
-    options: ListenOptions,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Listen for connections using the RFCOMM protocol.
-   * @param socketId The socket identifier.
-   * @param uuid Service UUID to listen on.
-   * @param callback Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-listenUsingRfcomm
-   */
-  export function listenUsingRfcomm(
-    socketId: number,
-    uuid: string,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Listen for connections using the L2CAP protocol.
-   * @param socketId The socket identifier.
-   * @param uuid Service UUID to listen on.
-   * @param options Optional additional options for the service.
-   * @returns Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-listenUsingL2cap
-   */
-  export function listenUsingL2cap(
-    socketId: number,
-    uuid: string,
-    options?: ListenOptions,
-  ): Promise<void>;
-
-  /**
-   * Listen for connections using the L2CAP protocol.
-   * @param socketId The socket identifier.
-   * @param uuid Service UUID to listen on.
-   * @param options Optional additional options for the service.
-   * @param callback Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-listenUsingL2cap
-   */
-  export function listenUsingL2cap(
-    socketId: number,
-    uuid: string,
-    options: ListenOptions,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Listen for connections using the L2CAP protocol.
-   * @param socketId The socket identifier.
-   * @param uuid Service UUID to listen on.
-   * @param callback Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-listenUsingL2cap
-   */
-  export function listenUsingL2cap(
-    socketId: number,
-    uuid: string,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Connects the socket to a remote Bluetooth device. When the
-   * <code>connect</code> operation completes successfully,
-   * <code>onReceive</code> events are raised when data is received from the
-   * peer. If a network error occur while the runtime is receiving packets, a
-   * <code>onReceiveError</code> event is raised, at which point no more
-   * <code>onReceive</code> event will be raised for this socket until the
-   * <code>setPaused(false)</code> method is called.
-   * @param socketId The socket identifier.
-   * @param address The address of the Bluetooth device.
-   * @param uuid The UUID of the service to connect to.
-   * @returns Called when the connect attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-connect
-   */
-  export function connect(
-    socketId: number,
-    address: string,
-    uuid: string,
-  ): Promise<void>;
-
-  /**
-   * Connects the socket to a remote Bluetooth device. When the
-   * <code>connect</code> operation completes successfully,
-   * <code>onReceive</code> events are raised when data is received from the
-   * peer. If a network error occur while the runtime is receiving packets, a
-   * <code>onReceiveError</code> event is raised, at which point no more
-   * <code>onReceive</code> event will be raised for this socket until the
-   * <code>setPaused(false)</code> method is called.
-   * @param socketId The socket identifier.
-   * @param address The address of the Bluetooth device.
-   * @param uuid The UUID of the service to connect to.
-   * @param callback Called when the connect attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-connect
-   */
-  export function connect(
-    socketId: number,
-    address: string,
-    uuid: string,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Disconnects the socket. The socket identifier remains valid.
-   * @param socketId The socket identifier.
-   * @returns Called when the disconnect attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-disconnect
-   */
-  export function disconnect(
-    socketId: number,
-  ): Promise<void>;
-
-  /**
-   * Disconnects the socket. The socket identifier remains valid.
-   * @param socketId The socket identifier.
-   * @param callback Called when the disconnect attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-disconnect
-   */
-  export function disconnect(
-    socketId: number,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Disconnects and destroys the socket. Each socket created should be closed
-   * after use. The socket id is no longer valid as soon at the function is
-   * called. However, the socket is guaranteed to be closed only when the
-   * callback is invoked.
-   * @param socketId The socket identifier.
-   * @returns Called when the <code>close</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-close
-   */
-  export function close(
-    socketId: number,
-  ): Promise<void>;
-
-  /**
-   * Disconnects and destroys the socket. Each socket created should be closed
-   * after use. The socket id is no longer valid as soon at the function is
-   * called. However, the socket is guaranteed to be closed only when the
-   * callback is invoked.
-   * @param socketId The socket identifier.
-   * @param callback Called when the <code>close</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-close
-   */
-  export function close(
-    socketId: number,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Sends data on the given Bluetooth socket.
-   * @param socketId The socket identifier.
-   * @param data The data to send.
-   * @returns Called with the number of bytes sent.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-send
-   */
-  export function send(
-    socketId: number,
-    data: ArrayBuffer,
-  ): Promise<{
-    /**
-     * The number of bytes sent.
-     */
-    bytesSent: number,
-  }>;
-
-  /**
-   * Sends data on the given Bluetooth socket.
-   * @param socketId The socket identifier.
-   * @param data The data to send.
-   * @param callback Called with the number of bytes sent.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-send
-   */
-  export function send(
-    socketId: number,
-    data: ArrayBuffer,
-    callback?: (
-      /**
-       * The number of bytes sent.
-       */
-      bytesSent: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Retrieves the state of the given socket.
-   * @param socketId The socket identifier.
-   * @returns Called when the socket state is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-getInfo
-   */
-  export function getInfo(
-    socketId: number,
-  ): Promise<{
-    /**
-     * Object containing the socket information.
-     */
-    socketInfo: SocketInfo,
-  }>;
-
-  /**
-   * Retrieves the state of the given socket.
-   * @param socketId The socket identifier.
-   * @param callback Called when the socket state is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-getInfo
-   */
-  export function getInfo(
-    socketId: number,
-    callback: (
-      /**
-       * Object containing the socket information.
-       */
-      socketInfo: SocketInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Retrieves the list of currently opened sockets owned by the application.
-   * @returns Called when the list of sockets is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-getSockets
-   */
-  export function getSockets(): Promise<{
-    sockets: SocketInfo[],
-  }>;
-
-  /**
-   * Retrieves the list of currently opened sockets owned by the application.
-   * @param callback Called when the list of sockets is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#method-getSockets
-   */
-  export function getSockets(
-    callback: (
-      sockets: SocketInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Event raised when a connection has been established for a given socket.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#event-onAccept
-   */
-  export const onAccept: chrome.events.Event<(
-    /**
-     * The event data.
-     */
-    info: AcceptInfo,
-  ) => void>;
-
-  /**
-   * Event raised when a network error occurred while the runtime was waiting
-   * for new connections on the given socket. Once this event is raised, the
-   * socket is set to <code>paused</code> and no more <code>onAccept</code>
-   * events are raised for this socket.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#event-onAcceptError
-   */
-  export const onAcceptError: chrome.events.Event<(
-    /**
-     * The event data.
-     */
-    info: AcceptErrorInfo,
-  ) => void>;
-
-  /**
-   * Event raised when data has been received for a given socket.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#event-onReceive
-   */
-  export const onReceive: chrome.events.Event<(
-    /**
-     * The event data.
-     */
-    info: ReceiveInfo,
-  ) => void>;
-
-  /**
-   * Event raised when a network error occured while the runtime was waiting for
-   * data on the socket. Once this event is raised, the socket is set to
-   * <code>paused</code> and no more <code>onReceive</code> events are raised
-   * for this socket.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetoothSocket/#event-onReceiveError
-   */
-  export const onReceiveError: chrome.events.Event<(
-    /**
-     * The event data.
-     */
-    info: ReceiveErrorInfo,
-  ) => void>;
-}
-/**
- * Use the <code>chrome.bluetooth</code> API to connect to a Bluetooth
- device.
- * All functions report failures via chrome.runtime.lastError.
- * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/
- */
-declare namespace chrome.bluetooth {
-  /**
-   * Allocation authorities for Vendor IDs.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#type-VendorIdSource
-   */
-  export type VendorIdSource = "bluetooth" | "usb";
-
-  /**
-   * Common device types recognized by Chrome.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#type-DeviceType
-   */
-  export type DeviceType = "computer" | "phone" | "modem" | "audio" | "carAudio" | "video" | "peripheral" | "joystick" | "gamepad" | "keyboard" | "mouse" | "tablet" | "keyboardMouseCombo";
-
-  /**
-   * Types for filtering bluetooth devices.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#type-FilterType
-   */
-  export type FilterType = "all" | "known";
-
-  /**
-   * Transport type of the bluetooth device.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#type-Transport
-   */
-  export type Transport = "invalid" | "classic" | "le" | "dual";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#type-AdapterState
-   */
-  export interface AdapterState {
-    /**
-     * The address of the adapter, in the format 'XX:XX:XX:XX:XX:XX'.
-     */
-    address: string;
-
-    /**
-     * The human-readable name of the adapter.
-     */
-    name: string;
-
-    /**
-     * Indicates whether or not the adapter has power.
-     */
-    powered: boolean;
-
-    /**
-     * Indicates whether or not the adapter is available (i.e. enabled).
-     */
-    available: boolean;
-
-    /**
-     * Indicates whether or not the adapter is currently discovering.
-     */
-    discovering: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#type-Device
-   */
-  export interface Device {
-    /**
-     * The address of the device, in the format 'XX:XX:XX:XX:XX:XX'.
-     */
-    address: string;
-
-    /**
-     * The human-readable name of the device.
-     */
-    name?: string;
-
-    /**
-     * The class of the device, a bit-field defined by
-     * http://www.bluetooth.org/en-us/specification/assigned-numbers/baseband.
-     */
-    deviceClass?: number;
-
-    /**
-     * The Device ID record of the device, where available.
-     */
-    vendorIdSource?: VendorIdSource;
-
-    vendorId?: number;
-
-    productId?: number;
-
-    deviceId?: number;
-
-    /**
-     * The type of the device, if recognized by Chrome. This is obtained from the
-     * |deviceClass| field and only represents a small fraction of the possible
-     * device types. When in doubt you should use the |deviceClass| field directly.
-     */
-    type?: DeviceType;
-
-    /**
-     * Indicates whether or not the device is paired with the system.
-     */
-    paired?: boolean;
-
-    /**
-     * Indicates whether the device is currently connected to the system.
-     */
-    connected?: boolean;
-
-    /**
-     * Indicates whether the device is currently connecting to the system.
-     */
-    connecting?: boolean;
-
-    /**
-     * Indicates whether the device is connectable.
-     */
-    connectable?: boolean;
-
-    /**
-     * UUIDs of protocols, profiles and services advertised by the device. For
-     * classic Bluetooth devices, this list is obtained from EIR data and SDP
-     * tables. For Low Energy devices, this list is obtained from AD and GATT
-     * primary services. For dual mode devices this may be obtained from both.
-     */
-    uuids?: string[];
-
-    /**
-     * The received signal strength, in dBm. This field is avaliable and valid only
-     * during discovery. Outside of discovery it's value is not specified.
-     */
-    inquiryRssi?: number;
-
-    /**
-     * The transmitted power level. This field is avaliable only for LE devices that
-     * include this field in AD. It is avaliable and valid only during discovery.
-     */
-    inquiryTxPower?: number;
-
-    /**
-     * The transport type of the bluetooth device.
-     */
-    transport?: Transport;
-
-    /**
-     * The remaining battery of the device. TODO(https://crbug.com/973237): This
-     * field is only used by Chrome OS and it is different from others because it is
-     * not filled by the platform. In the future, when there is a unified Mojo
-     * service, this field will be moved to BluetoothDeviceInfo.
-     */
-    batteryPercentage?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#type-BluetoothFilter
-   */
-  export interface BluetoothFilter {
-    /**
-     * Type of filter to apply to the device list. Default is all.
-     */
-    filterType?: FilterType;
-
-    /**
-     * Maximum number of bluetoth devices to return. Default is 0 (no limit) if
-     * unspecified.
-     */
-    limit?: number;
-  }
-
-  /**
-   * Get information about the Bluetooth adapter.
-   * @returns Called with an AdapterState object describing the adapter state.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#method-getAdapterState
-   */
-  export function getAdapterState(): Promise<{
-    /**
-     * Object containing the adapter information.
-     */
-    adapterInfo: AdapterState,
-  }>;
-
-  /**
-   * Get information about the Bluetooth adapter.
-   * @param callback Called with an AdapterState object describing the adapter
-   *     state.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#method-getAdapterState
-   */
-  export function getAdapterState(
-    callback: (
-      /**
-       * Object containing the adapter information.
-       */
-      adapterInfo: AdapterState,
-    ) => void,
-  ): void;
-
-  /**
-   * Get information about a Bluetooth device known to the system.
-   * @param deviceAddress Address of device to get.
-   * @returns Called with the Device object describing the device.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#method-getDevice
-   */
-  export function getDevice(
-    deviceAddress: string,
-  ): Promise<{
-    /**
-     * Object containing the device information.
-     */
-    deviceInfo: Device,
-  }>;
-
-  /**
-   * Get information about a Bluetooth device known to the system.
-   * @param deviceAddress Address of device to get.
-   * @param callback Called with the Device object describing the device.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#method-getDevice
-   */
-  export function getDevice(
-    deviceAddress: string,
-    callback: (
-      /**
-       * Object containing the device information.
-       */
-      deviceInfo: Device,
-    ) => void,
-  ): void;
-
-  /**
-   * Get a list of Bluetooth devices known to the system, including paired and
-   * recently discovered devices.
-   * @param filter Some criteria to filter the list of returned bluetooth
-   *     devices. If the filter is not set or set to <code>{}</code>, returned
-   *     device list will contain all bluetooth devices. Right now this is only
-   *     supported in ChromeOS, for other platforms, a full list is returned.
-   * @returns Called when the search is completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#method-getDevices
-   */
-  export function getDevices(
-    filter?: BluetoothFilter,
-  ): Promise<{
-    /**
-     * Array of object containing device information.
-     */
-    deviceInfos: Device[],
-  }>;
-
-  /**
-   * Get a list of Bluetooth devices known to the system, including paired and
-   * recently discovered devices.
-   * @param filter Some criteria to filter the list of returned bluetooth
-   *     devices. If the filter is not set or set to <code>{}</code>, returned
-   *     device list will contain all bluetooth devices. Right now this is only
-   *     supported in ChromeOS, for other platforms, a full list is returned.
-   * @param callback Called when the search is completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#method-getDevices
-   */
-  export function getDevices(
-    filter: BluetoothFilter,
-    callback: (
-      /**
-       * Array of object containing device information.
-       */
-      deviceInfos: Device[],
-    ) => void,
-  ): void;
-
-  /**
-   * Get a list of Bluetooth devices known to the system, including paired and
-   * recently discovered devices.
-   * @param callback Called when the search is completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#method-getDevices
-   */
-  export function getDevices(
-    callback: (
-      /**
-       * Array of object containing device information.
-       */
-      deviceInfos: Device[],
-    ) => void,
-  ): void;
-
-  /**
-   * <p>Start discovery. Newly discovered devices will be returned via the
-   * onDeviceAdded event. Previously discovered devices already known to the
-   * adapter must be obtained using getDevices and will only be updated using
-   * the |onDeviceChanged| event if information about them
-   * changes.</p><p>Discovery will fail to start if this application has already
-   * called startDiscovery.  Discovery can be resource intensive: stopDiscovery
-   * should be called as soon as possible.</p>
-   * @returns Called to indicate success or failure.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#method-startDiscovery
-   */
-  export function startDiscovery(): Promise<void>;
-
-  /**
-   * <p>Start discovery. Newly discovered devices will be returned via the
-   * onDeviceAdded event. Previously discovered devices already known to the
-   * adapter must be obtained using getDevices and will only be updated using
-   * the |onDeviceChanged| event if information about them
-   * changes.</p><p>Discovery will fail to start if this application has already
-   * called startDiscovery.  Discovery can be resource intensive: stopDiscovery
-   * should be called as soon as possible.</p>
-   * @param callback Called to indicate success or failure.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#method-startDiscovery
-   */
-  export function startDiscovery(
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Stop discovery.
-   * @returns Called to indicate success or failure.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#method-stopDiscovery
-   */
-  export function stopDiscovery(): Promise<void>;
-
-  /**
-   * Stop discovery.
-   * @param callback Called to indicate success or failure.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#method-stopDiscovery
-   */
-  export function stopDiscovery(
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Fired when the state of the Bluetooth adapter changes.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#event-onAdapterStateChanged
-   */
-  export const onAdapterStateChanged: chrome.events.Event<(
-    /**
-     * The new state of the adapter.
-     */
-    state: AdapterState,
-  ) => void>;
-
-  /**
-   * Fired when information about a new Bluetooth device is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#event-onDeviceAdded
-   */
-  export const onDeviceAdded: chrome.events.Event<(
-    device: Device,
-  ) => void>;
-
-  /**
-   * Fired when information about a known Bluetooth device has changed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#event-onDeviceChanged
-   */
-  export const onDeviceChanged: chrome.events.Event<(
-    device: Device,
-  ) => void>;
-
-  /**
-   * Fired when a Bluetooth device that was previously discovered has been out
-   * of range for long enough to be considered unavailable again, and when a
-   * paired device is removed.
-   * @see https://developer.chrome.com/docs/extensions/reference/bluetooth/#event-onDeviceRemoved
-   */
-  export const onDeviceRemoved: chrome.events.Event<(
-    device: Device,
-  ) => void>;
-}
 /**
  * Use the <code>chrome.bookmarks</code> API to create, organize, and otherwise
  * manipulate bookmarks. Also see <a href='override'>Override Pages</a>, which
  * you can use to create a custom Bookmark Manager page.
  * @see https://developer.chrome.com/docs/extensions/reference/bookmarks/
+ * @chrome-permission bookmarks
  */
 declare namespace chrome.bookmarks {
   /**
@@ -6855,6 +3190,7 @@ declare namespace chrome.bookmarks {
    */
   export const onImportEnded: chrome.events.Event<() => void>;
 }
+
 /**
  * Use browser actions to put icons in the main Google Chrome toolbar, to the
  * right of the address bar. In addition to its <a
@@ -7334,10 +3670,12 @@ declare namespace chrome.browserAction {
     tab: tabs.Tab,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.browsingData</code> API to remove browsing data from a
  * user's local profile.
  * @see https://developer.chrome.com/docs/extensions/reference/browsingData/
+ * @chrome-permission browsingData
  */
 declare namespace chrome.browsingData {
   /**
@@ -7862,10 +4200,12 @@ declare namespace chrome.browsingData {
     callback?: () => void,
   ): void;
 }
+
 /**
  * API for communicating with a Google Cast device over an authenticated
  * channel.
  * @see https://developer.chrome.com/docs/extensions/reference/cast.channel/
+ * @chrome-permission cast
  */
 declare namespace chrome.cast.channel {
   /**
@@ -8162,10 +4502,13 @@ declare namespace chrome.cast.channel {
     error: ErrorInfo,
   ) => void>;
 }
+
 /**
  * Use this API to expose certificates to the platform which can use these
  * certificates for TLS authentications.
  * @see https://developer.chrome.com/docs/extensions/reference/certificateProvider/
+ * @chrome-platform chromeos
+ * @chrome-permission certificateProvider
  */
 declare namespace chrome.certificateProvider {
   /**
@@ -8598,88 +4941,7 @@ declare namespace chrome.certificateProvider {
     ) => void,
   ) => void>;
 }
-/**
- * The <code>chrome.clipboard</code> API is provided to allow users to
- access
- * data of the clipboard. This is a temporary solution for
- chromeos platform
- * apps until open-web alternative is available. It will be
- deprecated once
- * open-web solution is available, which could be in 2017 Q4.
- * @see https://developer.chrome.com/docs/extensions/reference/clipboard/
- */
-declare namespace chrome.clipboard {
-  /**
-   * Supported image types.
-   * @see https://developer.chrome.com/docs/extensions/reference/clipboard/#type-ImageType
-   */
-  export type ImageType = "png" | "jpeg";
 
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/clipboard/#type-DataItemType
-   */
-  export type DataItemType = "textPlain" | "textHtml";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/clipboard/#type-AdditionalDataItem
-   */
-  export interface AdditionalDataItem {
-    /**
-     * Type of the additional data item.
-     */
-    type: DataItemType;
-
-    /**
-     * Content of the additional data item. Either the plain text string if |type|
-     * is "textPlain" or markup string if |type| is "textHtml". The data can not
-     * exceed 2MB.
-     */
-    data: string;
-  }
-
-  /**
-   * Sets image data to clipboard.
-   * @param imageData The encoded image data.
-   * @param type The type of image being passed.
-   * @param additionalItems Additional data items for describing image data. The
-   *     callback is called with <code>chrome.runtime.lastError</code> set to
-   *     error code if there is an error. Requires clipboard and clipboardWrite
-   *     permissions.
-   * @see https://developer.chrome.com/docs/extensions/reference/clipboard/#method-setImageData
-   */
-  export function setImageData(
-    imageData: ArrayBuffer,
-    type: ImageType,
-    additionalItems?: AdditionalDataItem[],
-  ): Promise<void>;
-
-  /**
-   * Sets image data to clipboard.
-   * @param imageData The encoded image data.
-   * @param type The type of image being passed.
-   * @param additionalItems Additional data items for describing image data. The
-   *     callback is called with <code>chrome.runtime.lastError</code> set to
-   *     error code if there is an error. Requires clipboard and clipboardWrite
-   *     permissions.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/clipboard/#method-setImageData
-   */
-  export function setImageData(
-    imageData: ArrayBuffer,
-    type: ImageType,
-    additionalItems?: AdditionalDataItem[],
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Fired when clipboard data changes. Requires clipboard and clipboardRead
-   * permissions for adding listener to chrome.clipboard.onClipboardDataChanged
-   * event. After this event fires, the clipboard data is available by calling
-   * document.execCommand('paste').
-   * @see https://developer.chrome.com/docs/extensions/reference/clipboard/#event-onClipboardDataChanged
-   */
-  export const onClipboardDataChanged: chrome.events.Event<() => void>;
-}
 /**
  * Use the commands API to add keyboard shortcuts that trigger actions in your
  * extension, for example, an action to open the browser action or send a
@@ -8738,6 +5000,7 @@ declare namespace chrome.commands {
     tab?: tabs.Tab,
   ) => void>;
 }
+
 /**
  * Stub namespace for the "content_scripts" manifest key.
  * @see https://developer.chrome.com/docs/extensions/reference/contentScripts/
@@ -8824,12 +5087,14 @@ declare namespace chrome.contentScripts {
     run_at?: RunAt;
   }
 }
+
 /**
  * Use the <code>chrome.contentSettings</code> API to change settings that
  * control whether websites can use features such as cookies, JavaScript, and
  * plugins. More generally speaking, content settings allow you to customize
  * Chrome's behavior on a per-site basis instead of globally.
  * @see https://developer.chrome.com/docs/extensions/reference/contentSettings/
+ * @chrome-permission contentSettings
  */
 declare namespace chrome.contentSettings {
   /**
@@ -9177,11 +5442,13 @@ declare namespace chrome.contentSettings {
    */
   export const automaticDownloads: ContentSetting<MultipleAutomaticDownloadsContentSetting>;
 }
+
 /**
  * Use the <code>chrome.contextMenus</code> API to add items to Google Chrome's
  * context menu. You can choose what types of objects your context menu
  * additions apply to, such as images, hyperlinks, and pages.
  * @see https://developer.chrome.com/docs/extensions/reference/contextMenus/
+ * @chrome-permission contextMenus
  */
 declare namespace chrome.contextMenus {
   /**
@@ -9433,10 +5700,12 @@ declare namespace chrome.contextMenus {
    */
   export const onClicked: chrome.events.Event<() => void>;
 }
+
 /**
  * Use the <code>chrome.cookies</code> API to query and modify cookies, and to
  * be notified when they change.
  * @see https://developer.chrome.com/docs/extensions/reference/cookies/
+ * @chrome-permission cookies
  */
 declare namespace chrome.cookies {
   /**
@@ -9982,12 +6251,14 @@ declare namespace chrome.cookies {
     },
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.dataReductionProxy</code> API to control the data
  * reduction proxy and access usage metrics. This API relies on the <a
  * href='types#ChromeSetting'>ChromeSetting prototype of the type API</a> for
  * getting and setting Chrome's configuration.
  * @see https://developer.chrome.com/docs/extensions/reference/dataReductionProxy/
+ * @chrome-permission dataReductionProxy
  */
 declare namespace chrome.dataReductionProxy {
   /**
@@ -10072,6 +6343,7 @@ declare namespace chrome.dataReductionProxy {
     ) => void,
   ): void;
 }
+
 /**
  * The <code>chrome.debugger</code> API serves as an alternate transport for
  * Chrome's <a
@@ -10081,6 +6353,7 @@ declare namespace chrome.dataReductionProxy {
  * and CSS, etc. Use the Debuggee <code>tabId</code> to target tabs with
  * sendCommand and route events by <code>tabId</code> from onEvent callbacks.
  * @see https://developer.chrome.com/docs/extensions/reference/debugger/
+ * @chrome-permission debugger
  */
 declare module chrome {
   namespace _debugger {
@@ -10349,11 +6622,13 @@ declare module chrome {
 
   export {_debugger as debugger};
 }
+
 /**
  * Use the <code>chrome.declarativeContent</code> API to take actions depending
  * on the content of a page, without requiring permission to read the page's
  * content.
  * @see https://developer.chrome.com/docs/extensions/reference/declarativeContent/
+ * @chrome-permission declarativeContent
  */
 declare namespace chrome.declarativeContent {
   /**
@@ -10510,12 +6785,14 @@ declare namespace chrome.declarativeContent {
    */
   export const onPageChanged: chrome.events.Event<() => void>;
 }
+
 /**
  * The <code>chrome.declarativeNetRequest</code> API is used to block or modify
  * network requests by specifying declarative rules. This lets extensions
  * modify network requests without intercepting them and viewing their content,
  * thus providing more privacy.
  * @see https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/
+ * @chrome-permission declarativeNetRequest
  */
 declare namespace chrome.declarativeNetRequest {
   /**
@@ -11506,6 +7783,7 @@ declare namespace chrome.declarativeNetRequest {
     info: MatchedRuleInfoDebug,
   ) => void>;
 }
+
 /**
  * <em><strong>Note:</strong> this API is currently on hold, without concrete
  * plans to move to stable.</em> Use the
@@ -11515,6 +7793,8 @@ declare namespace chrome.declarativeNetRequest {
  * register rules that are evaluated in the browser rather than the JavaScript
  * engine, which reduces roundtrip latencies and allows higher efficiency.
  * @see https://developer.chrome.com/docs/extensions/reference/declarativeWebRequest/
+ * @beta
+ * @chrome-permission declarativeWebRequest
  */
 declare namespace chrome.declarativeWebRequest {
   /**
@@ -12216,10 +8496,12 @@ declare namespace chrome.declarativeWebRequest {
     },
   ) => void>;
 }
+
 /**
  * Desktop Capture API that can be used to capture content of screen, individual
  * windows or tabs.
  * @see https://developer.chrome.com/docs/extensions/reference/desktopCapture/
+ * @chrome-permission desktopCapture
  */
 declare namespace chrome.desktopCapture {
   /**
@@ -12314,82 +8596,794 @@ declare namespace chrome.desktopCapture {
     desktopMediaRequestId: number,
   ): void;
 }
+
 /**
- * Use the <code>chrome.diagnostics</code> API to query various properties of
- * the environment that may be useful for diagnostics.
- * @see https://developer.chrome.com/docs/extensions/reference/diagnostics/
+ * Use the <code>chrome.devtools.inspectedWindow</code> API to interact with the
+ * inspected window: obtain the tab ID for the inspected page, evaluate the code
+ * in the context of the inspected window, reload the page, or obtain the list
+ * of resources within the page.
+ * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/
  */
-declare namespace chrome.diagnostics {
+declare namespace chrome.devtools.inspectedWindow {
   /**
-   * @see https://developer.chrome.com/docs/extensions/reference/diagnostics/#type-SendPacketOptions
+   * A resource within the inspected page, such as a document, a script, or an
+   * image.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#type-Resource
    */
-  export interface SendPacketOptions {
+  export interface Resource {
     /**
-     * Target IP address.
+     * The URL of the resource.
      */
-    ip: string;
+    url: string;
 
     /**
-     * Packet time to live value. If omitted, the system default value will be used.
+     * Gets the content of the resource.
+     * @param callback A function that receives resource content when the
+     *     request completes.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-getContent
      */
-    ttl?: number;
+    getContent(
+      callback: (
+        /**
+         * Content of the resource (potentially encoded).
+         */
+        content: string,
+
+        /**
+         * Empty if the content is not encoded, encoding name otherwise. Currently, only
+         * base64 is supported.
+         */
+        encoding: string,
+      ) => void,
+    ): void;
 
     /**
-     * Packet timeout in seconds. If omitted, the system default value will be used.
+     * Sets the content of the resource.
+     * @param content New content of the resource. Only resources with the text
+     *     type are currently supported.
+     * @param commit True if the user has finished editing the resource, and the
+     *     new content of the resource should be persisted; false if this is a
+     *     minor change sent in progress of the user editing the resource.
+     * @param callback A function called upon request completion.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-setContent
      */
-    timeout?: number;
-
-    /**
-     * Size of the payload. If omitted, the system default value will be used.
-     */
-    size?: number;
+    setContent(
+      content: string,
+      commit: boolean,
+      callback?: (
+        /**
+         * Set to undefined if the resource content was set successfully; describes
+         * error otherwise.
+         */
+        error?: {[name: string]: any},
+      ) => void,
+    ): void;
   }
 
   /**
-   * @see https://developer.chrome.com/docs/extensions/reference/diagnostics/#type-SendPacketResult
+   * The ID of the tab being inspected. This ID may be used with chrome.tabs.*
+   * API.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#property-tabId
    */
-  export interface SendPacketResult {
-    /**
-     * The IP of the host which we receives the ICMP reply from. The IP may differs
-     * from our target IP if the packet's ttl is used up.
-     */
-    ip: string;
-
-    /**
-     * Latency in millisenconds.
-     */
-    latency: number;
-  }
+  export const tabId: number;
 
   /**
-   * Send a packet of the given type with the given parameters.
-   * @param options
-   * @see https://developer.chrome.com/docs/extensions/reference/diagnostics/#method-sendPacket
+   * Evaluates a JavaScript expression in the context of the main frame of the
+   * inspected page. The expression must evaluate to a JSON-compliant object,
+   * otherwise an exception is thrown. The eval function can report either a
+   * DevTools-side error or a JavaScript exception that occurs during
+   * evaluation. In either case, the <code>result</code> parameter of the
+   * callback is <code>undefined</code>. In the case of a DevTools-side error,
+   * the <code>isException</code> parameter is non-null and has
+   * <code>isError</code> set to true and <code>code</code> set to an error
+   * code. In the case of a JavaScript error, <code>isException</code> is set to
+   * true and <code>value</code> is set to the string value of thrown object.
+   * @param expression An expression to evaluate.
+   * @param options The options parameter can contain one or more options.
+   * @returns A function called when evaluation completes.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-eval
    */
-  export function sendPacket(
-    options: SendPacketOptions,
+  export function eval(
+    expression: string,
+    options?: {
+      /**
+       * If specified, the expression is evaluated on the iframe whose URL matches the
+       * one specified. By default, the expression is evaluated in the top frame of
+       * the inspected page.
+       */
+      frameURL?: string,
+
+      /**
+       * Evaluate the expression in the context of the content script of the calling
+       * extension, provided that the content script is already injected into the
+       * inspected page. If not, the expression is not evaluated and the callback is
+       * invoked with the exception parameter set to an object that has the
+       * <code>isError</code> field set to true and the <code>code</code> field set to
+       * <code>E_NOTFOUND</code>.
+       */
+      useContentScriptContext?: boolean,
+
+      /**
+       * Evaluate the expression in the context of a content script of an extension
+       * that matches the specified origin. If given, contextSecurityOrigin overrides
+       * the 'true' setting on userContentScriptContext.
+       */
+      contextSecurityOrigin?: string,
+    },
   ): Promise<{
-    result: SendPacketResult,
+    /**
+     * The result of evaluation.
+     */
+    result: {[name: string]: any},
+
+    /**
+     * An object providing details if an exception occurred while evaluating the
+     * expression.
+     */
+    exceptionInfo: {
+      /**
+       * Set if the error occurred on the DevTools side before the expression is
+       * evaluated.
+       */
+      isError: boolean,
+
+      /**
+       * Set if the error occurred on the DevTools side before the expression is
+       * evaluated.
+       */
+      code: string,
+
+      /**
+       * Set if the error occurred on the DevTools side before the expression is
+       * evaluated.
+       */
+      description: string,
+
+      /**
+       * Set if the error occurred on the DevTools side before the expression is
+       * evaluated, contains the array of the values that may be substituted into the
+       * description string to provide more information about the cause of the error.
+       */
+      details: any[],
+
+      /**
+       * Set if the evaluated code produces an unhandled exception.
+       */
+      isException: boolean,
+
+      /**
+       * Set if the evaluated code produces an unhandled exception.
+       */
+      value: string,
+    },
   }>;
 
   /**
-   * Send a packet of the given type with the given parameters.
-   * @param options
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/diagnostics/#method-sendPacket
+   * Evaluates a JavaScript expression in the context of the main frame of the
+   * inspected page. The expression must evaluate to a JSON-compliant object,
+   * otherwise an exception is thrown. The eval function can report either a
+   * DevTools-side error or a JavaScript exception that occurs during
+   * evaluation. In either case, the <code>result</code> parameter of the
+   * callback is <code>undefined</code>. In the case of a DevTools-side error,
+   * the <code>isException</code> parameter is non-null and has
+   * <code>isError</code> set to true and <code>code</code> set to an error
+   * code. In the case of a JavaScript error, <code>isException</code> is set to
+   * true and <code>value</code> is set to the string value of thrown object.
+   * @param expression An expression to evaluate.
+   * @param options The options parameter can contain one or more options.
+   * @param callback A function called when evaluation completes.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-eval
    */
-  export function sendPacket(
-    options: SendPacketOptions,
-    callback: (
-      result: SendPacketResult,
+  export function eval(
+    expression: string,
+    options?: {
+      /**
+       * If specified, the expression is evaluated on the iframe whose URL matches the
+       * one specified. By default, the expression is evaluated in the top frame of
+       * the inspected page.
+       */
+      frameURL?: string,
+
+      /**
+       * Evaluate the expression in the context of the content script of the calling
+       * extension, provided that the content script is already injected into the
+       * inspected page. If not, the expression is not evaluated and the callback is
+       * invoked with the exception parameter set to an object that has the
+       * <code>isError</code> field set to true and the <code>code</code> field set to
+       * <code>E_NOTFOUND</code>.
+       */
+      useContentScriptContext?: boolean,
+
+      /**
+       * Evaluate the expression in the context of a content script of an extension
+       * that matches the specified origin. If given, contextSecurityOrigin overrides
+       * the 'true' setting on userContentScriptContext.
+       */
+      contextSecurityOrigin?: string,
+    },
+    callback?: (
+      /**
+       * The result of evaluation.
+       */
+      result: {[name: string]: any},
+
+      /**
+       * An object providing details if an exception occurred while evaluating the
+       * expression.
+       */
+      exceptionInfo: {
+        /**
+         * Set if the error occurred on the DevTools side before the expression is
+         * evaluated.
+         */
+        isError: boolean,
+
+        /**
+         * Set if the error occurred on the DevTools side before the expression is
+         * evaluated.
+         */
+        code: string,
+
+        /**
+         * Set if the error occurred on the DevTools side before the expression is
+         * evaluated.
+         */
+        description: string,
+
+        /**
+         * Set if the error occurred on the DevTools side before the expression is
+         * evaluated, contains the array of the values that may be substituted into the
+         * description string to provide more information about the cause of the error.
+         */
+        details: any[],
+
+        /**
+         * Set if the evaluated code produces an unhandled exception.
+         */
+        isException: boolean,
+
+        /**
+         * Set if the evaluated code produces an unhandled exception.
+         */
+        value: string,
+      },
     ) => void,
   ): void;
+
+  /**
+   * Reloads the inspected page.
+   * @param reloadOptions
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-reload
+   */
+  export function reload(
+    reloadOptions?: {
+      /**
+       * When true, the loader will bypass the cache for all inspected page resources
+       * loaded before the <code>load</code> event is fired. The effect is similar to
+       * pressing Ctrl+Shift+R in the inspected window or within the Developer Tools
+       * window.
+       */
+      ignoreCache?: boolean,
+
+      /**
+       * If specified, the string will override the value of the
+       * <code>User-Agent</code> HTTP header that's sent while loading the resources
+       * of the inspected page. The string will also override the value of the
+       * <code>navigator.userAgent</code> property that's returned to any scripts that
+       * are running within the inspected page.
+       */
+      userAgent?: string,
+
+      /**
+       * If specified, the script will be injected into every frame of the inspected
+       * page immediately upon load, before any of the frame's scripts. The script
+       * will not be injected after subsequent reloads&mdash;for example, if the user
+       * presses Ctrl+R.
+       */
+      injectedScript?: string,
+    },
+  ): void;
+
+  /**
+   * Retrieves the list of resources from the inspected page.
+   * @returns A function that receives the list of resources when the request
+   *     completes.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-getResources
+   */
+  export function getResources(): Promise<{
+    /**
+     * The resources within the page.
+     */
+    resources: Resource[],
+  }>;
+
+  /**
+   * Retrieves the list of resources from the inspected page.
+   * @param callback A function that receives the list of resources when the
+   *     request completes.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-getResources
+   */
+  export function getResources(
+    callback: (
+      /**
+       * The resources within the page.
+       */
+      resources: Resource[],
+    ) => void,
+  ): void;
+
+  /**
+   * Fired when a new resource is added to the inspected page.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#event-onResourceAdded
+   */
+  export const onResourceAdded: chrome.events.Event<(
+    resource: Resource,
+  ) => void>;
+
+  /**
+   * Fired when a new revision of the resource is committed (e.g. user saves an
+   * edited version of the resource in the Developer Tools).
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#event-onResourceContentCommitted
+   */
+  export const onResourceContentCommitted: chrome.events.Event<(
+    resource: Resource,
+
+    /**
+     * New content of the resource.
+     */
+    content: string,
+  ) => void>;
 }
+
+/**
+ * Use the <code>chrome.devtools.network</code> API to retrieve the information
+ * about network requests displayed by the Developer Tools in the Network panel.
+ * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/
+ */
+declare namespace chrome.devtools.network {
+  /**
+   * Represents a network request for a document resource (script, image and so
+   * on). See HAR Specification for reference.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#type-Request
+   */
+  export interface Request {
+    /**
+     * Returns content of the response body.
+     * @param callback A function that receives the response body when the
+     *     request completes.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#method-getContent
+     */
+    getContent(
+      callback: (
+        /**
+         * Content of the response body (potentially encoded).
+         */
+        content: string,
+
+        /**
+         * Empty if content is not encoded, encoding name otherwise. Currently, only
+         * base64 is supported.
+         */
+        encoding: string,
+      ) => void,
+    ): void;
+  }
+
+  /**
+   * Returns HAR log that contains all known network requests.
+   * @returns A function that receives the HAR log when the request completes.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#method-getHAR
+   */
+  export function getHAR(): Promise<{
+    /**
+     * A HAR log. See HAR specification for details.
+     */
+    harLog: {[name: string]: any},
+  }>;
+
+  /**
+   * Returns HAR log that contains all known network requests.
+   * @param callback A function that receives the HAR log when the request
+   *     completes.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#method-getHAR
+   */
+  export function getHAR(
+    callback: (
+      /**
+       * A HAR log. See HAR specification for details.
+       */
+      harLog: {[name: string]: any},
+    ) => void,
+  ): void;
+
+  /**
+   * Fired when a network request is finished and all request data are
+   * available.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#event-onRequestFinished
+   */
+  export const onRequestFinished: chrome.events.Event<(
+    /**
+     * Description of a network request in the form of a HAR entry. See HAR
+     * specification for details.
+     */
+    request: Request,
+  ) => void>;
+
+  /**
+   * Fired when the inspected window navigates to a new page.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#event-onNavigated
+   */
+  export const onNavigated: chrome.events.Event<(
+    /**
+     * URL of the new page.
+     */
+    url: string,
+  ) => void>;
+}
+
+/**
+ * Use the <code>chrome.devtools.panels</code> API to integrate your extension
+ * into Developer Tools window UI: create your own panels, access existing
+ * panels, and add sidebars.
+ * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/
+ */
+declare namespace chrome.devtools.panels {
+  /**
+   * Represents the Elements panel.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#type-ElementsPanel
+   */
+  export interface ElementsPanel {
+    /**
+     * Creates a pane within panel's sidebar.
+     * @param title Text that is displayed in sidebar caption.
+     * @param callback A callback invoked when the sidebar is created.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-createSidebarPane
+     */
+    createSidebarPane(
+      title: string,
+      callback?: (
+        /**
+         * An ExtensionSidebarPane object for created sidebar pane.
+         */
+        result: ExtensionSidebarPane,
+      ) => void,
+    ): void;
+
+    /**
+     * Fired when an object is selected in the panel.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onSelectionChanged
+     */
+    onSelectionChanged: chrome.events.Event<() => void>;
+  }
+
+  /**
+   * Represents the Sources panel.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#type-SourcesPanel
+   */
+  export interface SourcesPanel {
+    /**
+     * Creates a pane within panel's sidebar.
+     * @param title Text that is displayed in sidebar caption.
+     * @param callback A callback invoked when the sidebar is created.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-createSidebarPane
+     */
+    createSidebarPane(
+      title: string,
+      callback?: (
+        /**
+         * An ExtensionSidebarPane object for created sidebar pane.
+         */
+        result: ExtensionSidebarPane,
+      ) => void,
+    ): void;
+
+    /**
+     * Fired when an object is selected in the panel.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onSelectionChanged
+     */
+    onSelectionChanged: chrome.events.Event<() => void>;
+  }
+
+  /**
+   * Represents a panel created by extension.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#type-ExtensionPanel
+   */
+  export interface ExtensionPanel {
+    /**
+     * Appends a button to the status bar of the panel.
+     * @param iconPath Path to the icon of the button. The file should contain a
+     *     64x24-pixel image composed of two 32x24 icons. The left icon is used
+     *     when the button is inactive; the right icon is displayed when the
+     *     button is pressed.
+     * @param tooltipText Text shown as a tooltip when user hovers the mouse
+     *     over the button.
+     * @param disabled Whether the button is disabled.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-createStatusBarButton
+     */
+    createStatusBarButton(
+      iconPath: string,
+      tooltipText: string,
+      disabled: boolean,
+    ): Button;
+
+    /**
+     * Fired upon a search action (start of a new search, search result
+     * navigation, or search being canceled).
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onSearch
+     */
+    onSearch: chrome.events.Event<(
+      /**
+       * Type of search action being performed.
+       */
+      action: string,
+
+      /**
+       * Query string (only for 'performSearch').
+       */
+      queryString?: string,
+    ) => void>;
+
+    /**
+     * Fired when the user switches to the panel.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onShown
+     */
+    onShown: chrome.events.Event<(
+      /**
+       * The JavaScript <code>window</code> object of panel's page.
+       */
+      window: global,
+    ) => void>;
+
+    /**
+     * Fired when the user switches away from the panel.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onHidden
+     */
+    onHidden: chrome.events.Event<() => void>;
+  }
+
+  /**
+   * A sidebar created by the extension.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#type-ExtensionSidebarPane
+   */
+  export interface ExtensionSidebarPane {
+    /**
+     * Sets the height of the sidebar.
+     * @param height A CSS-like size specification, such as <code>'100px'</code>
+     *     or <code>'12ex'</code>.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setHeight
+     */
+    setHeight(
+      height: string,
+    ): void;
+
+    /**
+     * Sets an expression that is evaluated within the inspected page. The
+     * result is displayed in the sidebar pane.
+     * @param expression An expression to be evaluated in context of the
+     *     inspected page. JavaScript objects and DOM nodes are displayed in an
+     *     expandable tree similar to the console/watch.
+     * @param rootTitle An optional title for the root of the expression tree.
+     * @param callback A callback invoked after the sidebar pane is updated with
+     *     the expression evaluation results.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setExpression
+     */
+    setExpression(
+      expression: string,
+      rootTitle?: string,
+      callback?: () => void,
+    ): void;
+
+    /**
+     * Sets a JSON-compliant object to be displayed in the sidebar pane.
+     * @param jsonObject An object to be displayed in context of the inspected
+     *     page. Evaluated in the context of the caller (API client).
+     * @param rootTitle An optional title for the root of the expression tree.
+     * @param callback A callback invoked after the sidebar is updated with the
+     *     object.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setObject
+     */
+    setObject(
+      jsonObject: string,
+      rootTitle?: string,
+      callback?: () => void,
+    ): void;
+
+    /**
+     * Sets an HTML page to be displayed in the sidebar pane.
+     * @param path Relative path of an extension page to display within the
+     *     sidebar.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setPage
+     */
+    setPage(
+      path: string,
+    ): void;
+
+    /**
+     * Fired when the sidebar pane becomes visible as a result of user switching
+     * to the panel that hosts it.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onShown
+     */
+    onShown: chrome.events.Event<(
+      /**
+       * The JavaScript <code>window</code> object of the sidebar page, if one was set
+       * with the <code>setPage()</code> method.
+       */
+      window: global,
+    ) => void>;
+
+    /**
+     * Fired when the sidebar pane becomes hidden as a result of the user
+     * switching away from the panel that hosts the sidebar pane.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onHidden
+     */
+    onHidden: chrome.events.Event<() => void>;
+  }
+
+  /**
+   * A button created by the extension.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#type-Button
+   */
+  export interface Button {
+    /**
+     * Updates the attributes of the button. If some of the arguments are
+     * omitted or <code>null</code>, the corresponding attributes are not
+     * updated.
+     * @param iconPath Path to the new icon of the button.
+     * @param tooltipText Text shown as a tooltip when user hovers the mouse
+     *     over the button.
+     * @param disabled Whether the button is disabled.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-update
+     */
+    update(
+      iconPath?: string,
+      tooltipText?: string,
+      disabled?: boolean,
+    ): void;
+
+    /**
+     * Fired when the button is clicked.
+     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onClicked
+     */
+    onClicked: chrome.events.Event<() => void>;
+  }
+
+  /**
+   * Elements panel.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#property-elements
+   */
+  export const elements: ElementsPanel;
+
+  /**
+   * Sources panel.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#property-sources
+   */
+  export const sources: SourcesPanel;
+
+  /**
+   * The name of the color theme set in user's DevTools settings. Possible values:
+   * <code>default</code> (the default) and <code>dark</code>.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#property-themeName
+   */
+  export const themeName: string;
+
+  /**
+   * Creates an extension panel.
+   * @param title Title that is displayed next to the extension icon in the
+   *     Developer Tools toolbar.
+   * @param iconPath Path of the panel's icon relative to the extension
+   *     directory.
+   * @param pagePath Path of the panel's HTML page relative to the extension
+   *     directory.
+   * @returns A function that is called when the panel is created.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-create
+   */
+  export function create(
+    title: string,
+    iconPath: string,
+    pagePath: string,
+  ): Promise<{
+    /**
+     * An ExtensionPanel object representing the created panel.
+     */
+    panel: ExtensionPanel,
+  }>;
+
+  /**
+   * Creates an extension panel.
+   * @param title Title that is displayed next to the extension icon in the
+   *     Developer Tools toolbar.
+   * @param iconPath Path of the panel's icon relative to the extension
+   *     directory.
+   * @param pagePath Path of the panel's HTML page relative to the extension
+   *     directory.
+   * @param callback A function that is called when the panel is created.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-create
+   */
+  export function create(
+    title: string,
+    iconPath: string,
+    pagePath: string,
+    callback?: (
+      /**
+       * An ExtensionPanel object representing the created panel.
+       */
+      panel: ExtensionPanel,
+    ) => void,
+  ): void;
+
+  /**
+   * Specifies the function to be called when the user clicks a resource link in
+   * the Developer Tools window. To unset the handler, either call the method
+   * with no parameters or pass null as the parameter.
+   * @returns A function that is called when the user clicks on a valid resource
+   *     link in Developer Tools window. Note that if the user clicks an invalid
+   *     URL or an XHR, this function is not called.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setOpenResourceHandler
+   */
+  export function setOpenResourceHandler(): Promise<{
+    /**
+     * A {@link devtools.inspectedWindow.Resource} object for the resource that was
+     * clicked.
+     */
+    resource: devtools.inspectedWindow.Resource,
+  }>;
+
+  /**
+   * Specifies the function to be called when the user clicks a resource link in
+   * the Developer Tools window. To unset the handler, either call the method
+   * with no parameters or pass null as the parameter.
+   * @param callback A function that is called when the user clicks on a valid
+   *     resource link in Developer Tools window. Note that if the user clicks
+   *     an invalid URL or an XHR, this function is not called.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setOpenResourceHandler
+   */
+  export function setOpenResourceHandler(
+    callback?: (
+      /**
+       * A {@link devtools.inspectedWindow.Resource} object for the resource that was
+       * clicked.
+       */
+      resource: devtools.inspectedWindow.Resource,
+    ) => void,
+  ): void;
+
+  /**
+   * Requests DevTools to open a URL in a Developer Tools panel.
+   * @param url The URL of the resource to open.
+   * @param lineNumber Specifies the line number to scroll to when the resource
+   *     is loaded.
+   * @returns A function that is called when the resource has been successfully
+   *     loaded.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-openResource
+   */
+  export function openResource(
+    url: string,
+    lineNumber: number,
+  ): Promise<void>;
+
+  /**
+   * Requests DevTools to open a URL in a Developer Tools panel.
+   * @param url The URL of the resource to open.
+   * @param lineNumber Specifies the line number to scroll to when the resource
+   *     is loaded.
+   * @param callback A function that is called when the resource has been
+   *     successfully loaded.
+   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-openResource
+   */
+  export function openResource(
+    url: string,
+    lineNumber: number,
+    callback?: () => void,
+  ): void;
+}
+
 /**
  * The <code>chrome.displaySource</code> API creates a Display
  session using
  * WebMediaStreamTrack as sources.
  * @see https://developer.chrome.com/docs/extensions/reference/displaySource/
+ * @alpha
+ * @chrome-permission displaySource
  */
 declare namespace chrome.displaySource {
   /**
@@ -12621,9 +9615,12 @@ declare namespace chrome.displaySource {
     errorInfo: ErrorInfo,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.dns</code> API for dns resolution.
  * @see https://developer.chrome.com/docs/extensions/reference/dns/
+ * @alpha
+ * @chrome-permission dns
  */
 declare namespace chrome.dns {
   /**
@@ -12667,11 +9664,14 @@ declare namespace chrome.dns {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.documentScan</code> API to discover and retrieve
  images
  * from attached paper document scanners.
  * @see https://developer.chrome.com/docs/extensions/reference/documentScan/
+ * @chrome-platform chromeos
+ * @chrome-permission documentScan
  */
 declare namespace chrome.documentScan {
   /**
@@ -12732,6 +9732,7 @@ declare namespace chrome.documentScan {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.dom</code> API to access special DOM APIs for Extensions
  * @see https://developer.chrome.com/docs/extensions/reference/dom/
@@ -12750,10 +9751,12 @@ declare namespace chrome.dom {
     element: HTMLElement,
   ): {[name: string]: any};
 }
+
 /**
  * Use the <code>chrome.downloads</code> API to programmatically initiate,
  * monitor, manipulate, and search for downloads.
  * @see https://developer.chrome.com/docs/extensions/reference/downloads/
+ * @chrome-permission downloads
  */
 declare namespace chrome.downloads {
   /**
@@ -13714,12 +10717,15 @@ declare namespace chrome.downloads {
     ) => void,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.enterprise.deviceAttributes</code> API to read device
  * attributes.
  Note: This API is only available to extensions force-installed
  * by enterprise policy.
  * @see https://developer.chrome.com/docs/extensions/reference/enterprise.deviceAttributes/
+ * @chrome-platform chromeos
+ * @chrome-permission enterprise.deviceAttributes
  */
 declare namespace chrome.enterprise.deviceAttributes {
   /**
@@ -13846,12 +10852,14 @@ declare namespace chrome.enterprise.deviceAttributes {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.enterprise.hardwarePlatform</code> API to get the
  * manufacturer and model of the hardware platform where the browser runs.
  * Note: This API is only available to extensions installed by enterprise
  * policy.
  * @see https://developer.chrome.com/docs/extensions/reference/enterprise.hardwarePlatform/
+ * @chrome-permission enterprise.hardwarePlatform
  */
 declare namespace chrome.enterprise.hardwarePlatform {
   /**
@@ -13885,6 +10893,7 @@ declare namespace chrome.enterprise.hardwarePlatform {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.enterprise.networkingAttributes</code> API to read
  * information about your current network.
@@ -13892,6 +10901,8 @@ declare namespace chrome.enterprise.hardwarePlatform {
  * extensions force-installed by enterprise
  policy.
  * @see https://developer.chrome.com/docs/extensions/reference/enterprise.networkingAttributes/
+ * @chrome-platform chromeos
+ * @chrome-permission enterprise.networkingAttributes
  */
 declare namespace chrome.enterprise.networkingAttributes {
   /**
@@ -13939,6 +10950,7 @@ declare namespace chrome.enterprise.networkingAttributes {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.enterprise.platformKeys</code> API to generate
  * hardware-backed keys and to install certificates for these keys. The
@@ -13947,6 +10959,8 @@ declare namespace chrome.enterprise.networkingAttributes {
  {@link
  * platformKeys chrome.platformKeys}.
  * @see https://developer.chrome.com/docs/extensions/reference/enterprise.platformKeys/
+ * @chrome-platform chromeos
+ * @chrome-permission enterprise.platformKeys
  */
 declare namespace chrome.enterprise.platformKeys {
   /**
@@ -14289,6 +11303,7 @@ declare namespace chrome.enterprise.platformKeys {
     ) => void,
   ): void;
 }
+
 /**
  * The <code>chrome.events</code> namespace contains common types used by APIs
  * dispatching events to notify you when something interesting happens.
@@ -14579,6 +11594,7 @@ declare namespace chrome.events {
     ports?: (number | number[])[];
   }
 }
+
 /**
  * The <code>chrome.extensionTypes</code> API contains type declarations for
  * Chrome extensions.
@@ -14727,6 +11743,7 @@ declare namespace chrome.extensionTypes {
     cssOrigin?: CSSOrigin;
   }
 }
+
 /**
  * The <code>chrome.extension</code> API has utilities that can be used by any
  * extension page. It includes support for exchanging messages between an
@@ -14998,6 +12015,7 @@ declare namespace chrome.extension {
     sendResponse: () => void,
   ) => void>;
 }
+
 /**
  * Schemas for structured manifest entries
  * @see https://developer.chrome.com/docs/extensions/reference/extensionsManifestTypes/
@@ -15268,11 +12286,14 @@ declare namespace chrome.extensionsManifestTypes {
     enabled_on_launch?: boolean,
   }[];
 }
+
 /**
  * Use the <code>chrome.fileBrowserHandler</code> API to extend the Chrome OS
  * file browser. For example, you can use this API to enable users to upload
  * files to your website.
  * @see https://developer.chrome.com/docs/extensions/reference/fileBrowserHandler/
+ * @chrome-platform chromeos
+ * @chrome-permission fileBrowserHandler
  */
 declare namespace chrome.fileBrowserHandler {
   /**
@@ -15398,10 +12419,13 @@ declare namespace chrome.fileBrowserHandler {
     details: FileHandlerExecuteEventDetails,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.fileSystemProvider</code> API to create file systems,
  * that can be accessible from the file manager on Chrome OS.
  * @see https://developer.chrome.com/docs/extensions/reference/fileSystemProvider/
+ * @chrome-platform chromeos
+ * @chrome-permission fileSystemProvider
  */
 declare namespace chrome.fileSystemProvider {
   /**
@@ -16832,381 +13856,12 @@ declare namespace chrome.fileSystemProvider {
     ) => void,
   ) => void>;
 }
-/**
- * Use the <code>chrome.fileSystem</code> API to create, read, navigate,
- and
- * write to the user's local file system. With this API, Chrome Apps can
- read
- * and write to a user-selected location. For example, a text editor app
- can
- * use the API to read and write local documents. All failures are notified
- via
- * chrome.runtime.lastError.
- * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/
- */
-declare namespace chrome.fileSystem {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#type-AcceptOption
-   */
-  export interface AcceptOption {
-    /**
-     * This is the optional text description for this option. If not present, a
-     * description will be automatically generated; typically containing an expanded
-     * list of valid extensions (e.g. "text/html" may expand to "*.html, *.htm").
-     */
-    description?: string;
 
-    /**
-     * Mime-types to accept, e.g. "image/jpeg" or "audio/*". One of mimeTypes or
-     * extensions must contain at least one valid element.
-     */
-    mimeTypes?: string[];
-
-    /**
-     * Extensions to accept, e.g. "jpg", "gif", "crx".
-     */
-    extensions?: string[];
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#type-ChooseEntryType
-   */
-  export type ChooseEntryType = "openFile" | "openWritableFile" | "saveFile" | "openDirectory";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#type-ChooseEntryOptions
-   */
-  export interface ChooseEntryOptions {
-    /**
-     * Type of the prompt to show. The default is 'openFile'.
-     */
-    type?: ChooseEntryType;
-
-    /**
-     * The suggested file name that will be presented to the user as the default
-     * name to read or write. This is optional.
-     */
-    suggestedName?: string;
-
-    /**
-     * The optional list of accept options for this file opener. Each option will be
-     * presented as a unique group to the end-user.
-     */
-    accepts?: AcceptOption[];
-
-    /**
-     * Whether to accept all file types, in addition to the options specified in the
-     * accepts argument. The default is true. If the accepts field is unset or
-     * contains no valid entries, this will always be reset to true.
-     */
-    acceptsAllTypes?: boolean;
-
-    /**
-     * Whether to accept multiple files. This is only supported for openFile and
-     * openWritableFile. The callback to chooseEntry will be called with a list of
-     * entries if this is set to true. Otherwise it will be called with a single
-     * Entry.
-     */
-    acceptsMultiple?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#type-RequestFileSystemOptions
-   */
-  export interface RequestFileSystemOptions {
-    /**
-     * The ID of the requested volume.
-     */
-    volumeId: string;
-
-    /**
-     * Whether the requested file system should be writable. The default is
-     * read-only.
-     */
-    writable?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#type-Volume
-   */
-  export interface Volume {
-    volumeId: string;
-
-    writable: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#type-VolumeListChangedEvent
-   */
-  export interface VolumeListChangedEvent {
-    volumes: Volume[];
-  }
-
-  /**
-   * Get the display path of an Entry object. The display path is based on the
-   * full path of the file or directory on the local file system, but may be
-   * made more readable for display purposes.
-   * @param entry
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-getDisplayPath
-   */
-  export function getDisplayPath(
-    entry: Entry,
-  ): Promise<{
-    displayPath: string,
-  }>;
-
-  /**
-   * Get the display path of an Entry object. The display path is based on the
-   * full path of the file or directory on the local file system, but may be
-   * made more readable for display purposes.
-   * @param entry
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-getDisplayPath
-   */
-  export function getDisplayPath(
-    entry: Entry,
-    callback: (
-      displayPath: string,
-    ) => void,
-  ): void;
-
-  /**
-   * Get a writable Entry from another Entry. This call will fail with a runtime
-   * error if the application does not have the 'write' permission under
-   * 'fileSystem'. If entry is a DirectoryEntry, this call will fail if the
-   * application does not have the 'directory' permission under 'fileSystem'.
-   * @param entry
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-getWritableEntry
-   */
-  export function getWritableEntry(
-    entry: Entry,
-  ): Promise<{
-    entry: Entry,
-  }>;
-
-  /**
-   * Get a writable Entry from another Entry. This call will fail with a runtime
-   * error if the application does not have the 'write' permission under
-   * 'fileSystem'. If entry is a DirectoryEntry, this call will fail if the
-   * application does not have the 'directory' permission under 'fileSystem'.
-   * @param entry
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-getWritableEntry
-   */
-  export function getWritableEntry(
-    entry: Entry,
-    callback: (
-      entry: Entry,
-    ) => void,
-  ): void;
-
-  /**
-   * Gets whether this Entry is writable or not.
-   * @param entry
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-isWritableEntry
-   */
-  export function isWritableEntry(
-    entry: Entry,
-  ): Promise<{
-    isWritable: boolean,
-  }>;
-
-  /**
-   * Gets whether this Entry is writable or not.
-   * @param entry
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-isWritableEntry
-   */
-  export function isWritableEntry(
-    entry: Entry,
-    callback: (
-      isWritable: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Ask the user to choose a file or directory.
-   * @param options
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-chooseEntry
-   */
-  export function chooseEntry(
-    options?: ChooseEntryOptions,
-  ): Promise<{
-    entry?: Entry,
-    fileEntries?: FileEntry[],
-  }>;
-
-  /**
-   * Ask the user to choose a file or directory.
-   * @param options
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-chooseEntry
-   */
-  export function chooseEntry(
-    options: ChooseEntryOptions,
-    callback: (
-      entry?: Entry,
-      fileEntries?: FileEntry[],
-    ) => void,
-  ): void;
-
-  /**
-   * Ask the user to choose a file or directory.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-chooseEntry
-   */
-  export function chooseEntry(
-    callback: (
-      entry?: Entry,
-      fileEntries?: FileEntry[],
-    ) => void,
-  ): void;
-
-  /**
-   * Returns the file entry with the given id if it can be restored. This call
-   * will fail with a runtime error otherwise.
-   * @param id
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-restoreEntry
-   */
-  export function restoreEntry(
-    id: string,
-  ): Promise<{
-    entry: Entry,
-  }>;
-
-  /**
-   * Returns the file entry with the given id if it can be restored. This call
-   * will fail with a runtime error otherwise.
-   * @param id
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-restoreEntry
-   */
-  export function restoreEntry(
-    id: string,
-    callback: (
-      entry: Entry,
-    ) => void,
-  ): void;
-
-  /**
-   * Returns whether the app has permission to restore the entry with the given
-   * id.
-   * @param id
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-isRestorable
-   */
-  export function isRestorable(
-    id: string,
-  ): Promise<{
-    isRestorable: boolean,
-  }>;
-
-  /**
-   * Returns whether the app has permission to restore the entry with the given
-   * id.
-   * @param id
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-isRestorable
-   */
-  export function isRestorable(
-    id: string,
-    callback: (
-      isRestorable: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Returns an id that can be passed to restoreEntry to regain access to a
-   * given file entry. Only the 500 most recently used entries are retained,
-   * where calls to retainEntry and restoreEntry count as use. If the app has
-   * the 'retainEntries' permission under 'fileSystem', entries are retained
-   * indefinitely. Otherwise, entries are retained only while the app is running
-   * and across restarts.
-   * @param entry
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-retainEntry
-   */
-  export function retainEntry(
-    entry: Entry,
-  ): string;
-
-  /**
-   * Requests access to a file system for a volume represented by <code>
-   * options.volumeId</code>. If <code>options.writable</code> is set to true,
-   * then the file system will be writable. Otherwise, it will be read-only. The
-   * <code>writable</code> option requires the <code> "fileSystem":
-   * {"write"}</code> permission in the manifest. Available to kiosk apps
-   * running in kiosk session only. For manual-launch kiosk mode, a confirmation
-   * dialog will be shown on top of the active app window. In case of an error,
-   * <code>fileSystem</code> will be undefined, and
-   * <code>chrome.runtime.lastError</code> will be set.
-   * @param options
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-requestFileSystem
-   */
-  export function requestFileSystem(
-    options: RequestFileSystemOptions,
-  ): Promise<{
-    fileSystem?: FileSystem,
-  }>;
-
-  /**
-   * Requests access to a file system for a volume represented by <code>
-   * options.volumeId</code>. If <code>options.writable</code> is set to true,
-   * then the file system will be writable. Otherwise, it will be read-only. The
-   * <code>writable</code> option requires the <code> "fileSystem":
-   * {"write"}</code> permission in the manifest. Available to kiosk apps
-   * running in kiosk session only. For manual-launch kiosk mode, a confirmation
-   * dialog will be shown on top of the active app window. In case of an error,
-   * <code>fileSystem</code> will be undefined, and
-   * <code>chrome.runtime.lastError</code> will be set.
-   * @param options
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-requestFileSystem
-   */
-  export function requestFileSystem(
-    options: RequestFileSystemOptions,
-    callback: (
-      fileSystem?: FileSystem,
-    ) => void,
-  ): void;
-
-  /**
-   * Returns a list of volumes available for <code>requestFileSystem()</code>.
-   * The <code>"fileSystem": {"requestFileSystem"}</code> manifest permission is
-   * required. Available to kiosk apps running in the kiosk session only. In
-   * case of an error, <code>volumes</code> will be undefined, and <code>
-   * chrome.runtime.lastError</code> will be set.
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-getVolumeList
-   */
-  export function getVolumeList(): Promise<{
-    volumes?: Volume[],
-  }>;
-
-  /**
-   * Returns a list of volumes available for <code>requestFileSystem()</code>.
-   * The <code>"fileSystem": {"requestFileSystem"}</code> manifest permission is
-   * required. Available to kiosk apps running in the kiosk session only. In
-   * case of an error, <code>volumes</code> will be undefined, and <code>
-   * chrome.runtime.lastError</code> will be set.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#method-getVolumeList
-   */
-  export function getVolumeList(
-    callback: (
-      volumes?: Volume[],
-    ) => void,
-  ): void;
-
-  /**
-   * Called when a list of available volumes is changed.
-   * @see https://developer.chrome.com/docs/extensions/reference/fileSystem/#event-onVolumeListChanged
-   */
-  export const onVolumeListChanged: chrome.events.Event<(
-    event: VolumeListChangedEvent,
-  ) => void>;
-}
 /**
  * Use the <code>chrome.fontSettings</code> API to manage Chrome's font
  * settings.
  * @see https://developer.chrome.com/docs/extensions/reference/fontSettings/
+ * @chrome-permission fontSettings
  */
 declare namespace chrome.fontSettings {
   /**
@@ -17802,12 +14457,14 @@ declare namespace chrome.fontSettings {
     },
   ) => void>;
 }
+
 /**
  * Use <code>chrome.gcm</code> to enable apps and extensions to send and receive
  * messages through the <a
  * href='http://developer.android.com/google/gcm/'>Google Cloud Messaging
  * Service</a>.
  * @see https://developer.chrome.com/docs/extensions/reference/gcm/
+ * @chrome-permission gcm
  */
 declare namespace chrome.gcm {
   /**
@@ -18040,460 +14697,14 @@ declare namespace chrome.gcm {
     },
   ) => void>;
 }
-/**
- * Use the <code>chrome.hid</code> API to interact with connected HID devices.
- * This API provides access to HID operations from within the context of an
- * app.
- Using this API, apps can function as drivers for hardware devices.
- * Errors generated by this API are reported by setting
- {@link
- * runtime.lastError} and executing the function's regular callback. The
- * callback's regular parameters will be undefined in this case.
- * @see https://developer.chrome.com/docs/extensions/reference/hid/
- */
-declare namespace chrome.hid {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#type-HidCollectionInfo
-   */
-  export interface HidCollectionInfo {
-    /**
-     * HID usage page identifier.
-     */
-    usagePage: number;
 
-    /**
-     * Page-defined usage identifier.
-     */
-    usage: number;
-
-    /**
-     * Report IDs which belong to the collection and to its children.
-     */
-    reportIds: number[];
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#type-HidDeviceInfo
-   */
-  export interface HidDeviceInfo {
-    /**
-     * Opaque device ID.
-     */
-    deviceId: number;
-
-    /**
-     * Vendor ID.
-     */
-    vendorId: number;
-
-    /**
-     * Product ID.
-     */
-    productId: number;
-
-    /**
-     * The product name read from the device, if available.
-     */
-    productName: string;
-
-    /**
-     * The serial number read from the device, if available.
-     */
-    serialNumber: string;
-
-    /**
-     * Top-level collections from this device's report descriptors.
-     */
-    collections: HidCollectionInfo[];
-
-    /**
-     * Top-level collection's maximum input report size.
-     */
-    maxInputReportSize: number;
-
-    /**
-     * Top-level collection's maximum output report size.
-     */
-    maxOutputReportSize: number;
-
-    /**
-     * Top-level collection's maximum feature report size.
-     */
-    maxFeatureReportSize: number;
-
-    /**
-     * Raw device report descriptor (not available on Windows).
-     */
-    reportDescriptor: ArrayBuffer;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#type-HidConnectInfo
-   */
-  export interface HidConnectInfo {
-    /**
-     * The opaque ID used to identify this connection in all other functions.
-     */
-    connectionId: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#type-DeviceFilter
-   */
-  export interface DeviceFilter {
-    /**
-     * Device vendor ID.
-     */
-    vendorId?: number;
-
-    /**
-     * Device product ID, only checked only if the vendor ID matches.
-     */
-    productId?: number;
-
-    /**
-     * HID usage page identifier.
-     */
-    usagePage?: number;
-
-    /**
-     * HID usage identifier, checked only if the HID usage page matches.
-     */
-    usage?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#type-GetDevicesOptions
-   */
-  export interface GetDevicesOptions {
-    /**
-     * @deprecated Equivalent to setting {@link DeviceFilter.vendorId}.
-     */
-    vendorId?: number;
-
-    /**
-     * @deprecated Equivalent to setting {@link DeviceFilter.productId}.
-     */
-    productId?: number;
-
-    /**
-     * A device matching any given filter will be returned. An empty filter list
-     * will return all devices the app has permission for.
-     */
-    filters?: DeviceFilter[];
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#type-DevicePromptOptions
-   */
-  export interface DevicePromptOptions {
-    /**
-     * Allow the user to select multiple devices.
-     */
-    multiple?: boolean;
-
-    /**
-     * Filter the list of devices presented to the user. If multiple filters are
-     * provided devices matching any filter will be displayed.
-     */
-    filters?: DeviceFilter[];
-  }
-
-  /**
-   * Enumerate connected HID devices.
-   * @param options The properties to search for on target devices.
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-getDevices
-   */
-  export function getDevices(
-    options: GetDevicesOptions,
-  ): Promise<{
-    devices: HidDeviceInfo[],
-  }>;
-
-  /**
-   * Enumerate connected HID devices.
-   * @param options The properties to search for on target devices.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-getDevices
-   */
-  export function getDevices(
-    options: GetDevicesOptions,
-    callback: (
-      devices: HidDeviceInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Presents a device picker to the user and returns {@link HidDeviceInfo}
-   * objects for the devices selected. If the user cancels the picker devices
-   * will be empty. A user gesture is required for the dialog to display.
-   * Without a user gesture, the callback will run as though the user cancelled.
-   * If multiple filters are provided devices matching any filter will be
-   * displayed.
-   * @param options Configuration of the device picker dialog box.
-   * @returns Invoked with a list of chosen {@link Device}s.
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-getUserSelectedDevices
-   */
-  export function getUserSelectedDevices(
-    options?: DevicePromptOptions,
-  ): Promise<{
-    devices: HidDeviceInfo[],
-  }>;
-
-  /**
-   * Presents a device picker to the user and returns {@link HidDeviceInfo}
-   * objects for the devices selected. If the user cancels the picker devices
-   * will be empty. A user gesture is required for the dialog to display.
-   * Without a user gesture, the callback will run as though the user cancelled.
-   * If multiple filters are provided devices matching any filter will be
-   * displayed.
-   * @param options Configuration of the device picker dialog box.
-   * @param callback Invoked with a list of chosen {@link Device}s.
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-getUserSelectedDevices
-   */
-  export function getUserSelectedDevices(
-    options: DevicePromptOptions,
-    callback: (
-      devices: HidDeviceInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Presents a device picker to the user and returns {@link HidDeviceInfo}
-   * objects for the devices selected. If the user cancels the picker devices
-   * will be empty. A user gesture is required for the dialog to display.
-   * Without a user gesture, the callback will run as though the user cancelled.
-   * If multiple filters are provided devices matching any filter will be
-   * displayed.
-   * @param callback Invoked with a list of chosen {@link Device}s.
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-getUserSelectedDevices
-   */
-  export function getUserSelectedDevices(
-    callback: (
-      devices: HidDeviceInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Open a connection to an HID device for communication.
-   * @param deviceId The {@link HidDeviceInfo.deviceId} of the device to open.
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-connect
-   */
-  export function connect(
-    deviceId: number,
-  ): Promise<{
-    connection: HidConnectInfo,
-  }>;
-
-  /**
-   * Open a connection to an HID device for communication.
-   * @param deviceId The {@link HidDeviceInfo.deviceId} of the device to open.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-connect
-   */
-  export function connect(
-    deviceId: number,
-    callback: (
-      connection: HidConnectInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Disconnect from a device. Invoking operations on a device after calling
-   * this is safe but has no effect.
-   * @param connectionId The <code>connectionId</code> returned by {@link
-   *     connect}.
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-disconnect
-   */
-  export function disconnect(
-    connectionId: number,
-  ): Promise<void>;
-
-  /**
-   * Disconnect from a device. Invoking operations on a device after calling
-   * this is safe but has no effect.
-   * @param connectionId The <code>connectionId</code> returned by {@link
-   *     connect}.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-disconnect
-   */
-  export function disconnect(
-    connectionId: number,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Receive the next input report from the device.
-   * @param connectionId The <code>connectionId</code> returned by {@link
-   *     connect}.
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-receive
-   */
-  export function receive(
-    connectionId: number,
-  ): Promise<{
-    /**
-     * The report ID or <code>0</code> if none.
-     */
-    reportId: number,
-
-    /**
-     * The report data, the report ID prefix (if present) is removed.
-     */
-    data: ArrayBuffer,
-  }>;
-
-  /**
-   * Receive the next input report from the device.
-   * @param connectionId The <code>connectionId</code> returned by {@link
-   *     connect}.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-receive
-   */
-  export function receive(
-    connectionId: number,
-    callback: (
-      /**
-       * The report ID or <code>0</code> if none.
-       */
-      reportId: number,
-
-      /**
-       * The report data, the report ID prefix (if present) is removed.
-       */
-      data: ArrayBuffer,
-    ) => void,
-  ): void;
-
-  /**
-   * <p>Send an output report to the device.</p><p><em>Note:</em> Do not include
-   * a report ID prefix in <code>data</code>. It will be added if necessary.</p>
-   * @param connectionId The <code>connectionId</code> returned by {@link
-   *     connect}.
-   * @param reportId The report ID to use, or <code>0</code> if none.
-   * @param data The report data.
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-send
-   */
-  export function send(
-    connectionId: number,
-    reportId: number,
-    data: ArrayBuffer,
-  ): Promise<void>;
-
-  /**
-   * <p>Send an output report to the device.</p><p><em>Note:</em> Do not include
-   * a report ID prefix in <code>data</code>. It will be added if necessary.</p>
-   * @param connectionId The <code>connectionId</code> returned by {@link
-   *     connect}.
-   * @param reportId The report ID to use, or <code>0</code> if none.
-   * @param data The report data.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-send
-   */
-  export function send(
-    connectionId: number,
-    reportId: number,
-    data: ArrayBuffer,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Request a feature report from the device.
-   * @param connectionId The <code>connectionId</code> returned by {@link
-   *     connect}.
-   * @param reportId The report ID, or <code>0</code> if none.
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-receiveFeatureReport
-   */
-  export function receiveFeatureReport(
-    connectionId: number,
-    reportId: number,
-  ): Promise<{
-    /**
-     * The report data, including a report ID prefix if one is sent by the device.
-     */
-    data: ArrayBuffer,
-  }>;
-
-  /**
-   * Request a feature report from the device.
-   * @param connectionId The <code>connectionId</code> returned by {@link
-   *     connect}.
-   * @param reportId The report ID, or <code>0</code> if none.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-receiveFeatureReport
-   */
-  export function receiveFeatureReport(
-    connectionId: number,
-    reportId: number,
-    callback: (
-      /**
-       * The report data, including a report ID prefix if one is sent by the device.
-       */
-      data: ArrayBuffer,
-    ) => void,
-  ): void;
-
-  /**
-   * <p>Send a feature report to the device.</p><p><em>Note:</em> Do not include
-   * a report ID prefix in <code>data</code>. It will be added if necessary.</p>
-   * @param connectionId The <code>connectionId</code> returned by {@link
-   *     connect}.
-   * @param reportId The report ID to use, or <code>0</code> if none.
-   * @param data The report data.
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-sendFeatureReport
-   */
-  export function sendFeatureReport(
-    connectionId: number,
-    reportId: number,
-    data: ArrayBuffer,
-  ): Promise<void>;
-
-  /**
-   * <p>Send a feature report to the device.</p><p><em>Note:</em> Do not include
-   * a report ID prefix in <code>data</code>. It will be added if necessary.</p>
-   * @param connectionId The <code>connectionId</code> returned by {@link
-   *     connect}.
-   * @param reportId The report ID to use, or <code>0</code> if none.
-   * @param data The report data.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#method-sendFeatureReport
-   */
-  export function sendFeatureReport(
-    connectionId: number,
-    reportId: number,
-    data: ArrayBuffer,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Event generated when a device is added to the system. Events are only
-   * broadcast to apps and extensions that have permission to access the device.
-   * Permission may have been granted at install time or when the user accepted
-   * an optional permission (see {@link permissions.request}).
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#event-onDeviceAdded
-   */
-  export const onDeviceAdded: chrome.events.Event<(
-    device: HidDeviceInfo,
-  ) => void>;
-
-  /**
-   * Event generated when a device is removed from the system. See {@link
-   * onDeviceAdded} for which events are delivered.
-   * @see https://developer.chrome.com/docs/extensions/reference/hid/#event-onDeviceRemoved
-   */
-  export const onDeviceRemoved: chrome.events.Event<(
-    /**
-     * The <code>deviceId</code> property of the device passed to {@link
-     * onDeviceAdded}.
-     */
-    deviceId: number,
-  ) => void>;
-}
 /**
  * Use the <code>chrome.history</code> API to interact with the browser's record
  * of visited pages. You can add, remove, and query for URLs in the browser's
  * history. To override the history page with your own version, see <a
  * href='override'>Override Pages</a>.
  * @see https://developer.chrome.com/docs/extensions/reference/history/
+ * @chrome-permission history
  */
 declare namespace chrome.history {
   /**
@@ -18806,6 +15017,7 @@ declare namespace chrome.history {
     },
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.i18n</code> infrastructure to implement
  * internationalization across your whole app or extension.
@@ -18950,9 +15162,11 @@ declare namespace chrome.i18n {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.identity</code> API to get OAuth2 access tokens.
  * @see https://developer.chrome.com/docs/extensions/reference/identity/
+ * @chrome-permission identity
  */
 declare namespace chrome.identity {
   /**
@@ -19320,10 +15534,12 @@ declare namespace chrome.identity {
     signedIn: boolean,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.idle</code> API to detect when the machine's idle state
  * changes.
  * @see https://developer.chrome.com/docs/extensions/reference/idle/
+ * @chrome-permission idle
  */
 declare namespace chrome.idle {
   /**
@@ -19417,6 +15633,7 @@ declare namespace chrome.idle {
     newState: IdleState,
   ) => void>;
 }
+
 /**
  * Dummy namepsace for the incognito manifest key.
  * @see https://developer.chrome.com/docs/extensions/reference/incognito/
@@ -19427,11 +15644,16 @@ declare namespace chrome.incognito {
    */
   export type IncognitoMode = "split" | "spanning" | "not_allowed";
 }
+
 /**
  * Use the <code>chrome.input.ime</code> API to implement a custom IME for
  * Chrome OS. This allows your extension to handle keystrokes, set the
  * composition, and manage the candidate window.
  * @see https://developer.chrome.com/docs/extensions/reference/input.ime/
+ * @chrome-platform chromeos
+ * @chrome-platform win
+ * @chrome-platform linux
+ * @chrome-permission input
  */
 declare namespace chrome.input.ime {
   /**
@@ -20685,346 +16907,11 @@ declare namespace chrome.input.ime {
     },
   ) => void>;
 }
-/**
- * Use the <code>chrome.devtools.inspectedWindow</code> API to interact with the
- * inspected window: obtain the tab ID for the inspected page, evaluate the code
- * in the context of the inspected window, reload the page, or obtain the list
- * of resources within the page.
- * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/
- */
-declare namespace chrome.devtools.inspectedWindow {
-  /**
-   * A resource within the inspected page, such as a document, a script, or an
-   * image.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#type-Resource
-   */
-  export interface Resource {
-    /**
-     * The URL of the resource.
-     */
-    url: string;
 
-    /**
-     * Gets the content of the resource.
-     * @param callback A function that receives resource content when the
-     *     request completes.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-getContent
-     */
-    getContent(
-      callback: (
-        /**
-         * Content of the resource (potentially encoded).
-         */
-        content: string,
-
-        /**
-         * Empty if the content is not encoded, encoding name otherwise. Currently, only
-         * base64 is supported.
-         */
-        encoding: string,
-      ) => void,
-    ): void;
-
-    /**
-     * Sets the content of the resource.
-     * @param content New content of the resource. Only resources with the text
-     *     type are currently supported.
-     * @param commit True if the user has finished editing the resource, and the
-     *     new content of the resource should be persisted; false if this is a
-     *     minor change sent in progress of the user editing the resource.
-     * @param callback A function called upon request completion.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-setContent
-     */
-    setContent(
-      content: string,
-      commit: boolean,
-      callback?: (
-        /**
-         * Set to undefined if the resource content was set successfully; describes
-         * error otherwise.
-         */
-        error?: {[name: string]: any},
-      ) => void,
-    ): void;
-  }
-
-  /**
-   * The ID of the tab being inspected. This ID may be used with chrome.tabs.*
-   * API.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#property-tabId
-   */
-  export const tabId: number;
-
-  /**
-   * Evaluates a JavaScript expression in the context of the main frame of the
-   * inspected page. The expression must evaluate to a JSON-compliant object,
-   * otherwise an exception is thrown. The eval function can report either a
-   * DevTools-side error or a JavaScript exception that occurs during
-   * evaluation. In either case, the <code>result</code> parameter of the
-   * callback is <code>undefined</code>. In the case of a DevTools-side error,
-   * the <code>isException</code> parameter is non-null and has
-   * <code>isError</code> set to true and <code>code</code> set to an error
-   * code. In the case of a JavaScript error, <code>isException</code> is set to
-   * true and <code>value</code> is set to the string value of thrown object.
-   * @param expression An expression to evaluate.
-   * @param options The options parameter can contain one or more options.
-   * @returns A function called when evaluation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-eval
-   */
-  export function eval(
-    expression: string,
-    options?: {
-      /**
-       * If specified, the expression is evaluated on the iframe whose URL matches the
-       * one specified. By default, the expression is evaluated in the top frame of
-       * the inspected page.
-       */
-      frameURL?: string,
-
-      /**
-       * Evaluate the expression in the context of the content script of the calling
-       * extension, provided that the content script is already injected into the
-       * inspected page. If not, the expression is not evaluated and the callback is
-       * invoked with the exception parameter set to an object that has the
-       * <code>isError</code> field set to true and the <code>code</code> field set to
-       * <code>E_NOTFOUND</code>.
-       */
-      useContentScriptContext?: boolean,
-
-      /**
-       * Evaluate the expression in the context of a content script of an extension
-       * that matches the specified origin. If given, contextSecurityOrigin overrides
-       * the 'true' setting on userContentScriptContext.
-       */
-      contextSecurityOrigin?: string,
-    },
-  ): Promise<{
-    /**
-     * The result of evaluation.
-     */
-    result: {[name: string]: any},
-
-    /**
-     * An object providing details if an exception occurred while evaluating the
-     * expression.
-     */
-    exceptionInfo: {
-      /**
-       * Set if the error occurred on the DevTools side before the expression is
-       * evaluated.
-       */
-      isError: boolean,
-
-      /**
-       * Set if the error occurred on the DevTools side before the expression is
-       * evaluated.
-       */
-      code: string,
-
-      /**
-       * Set if the error occurred on the DevTools side before the expression is
-       * evaluated.
-       */
-      description: string,
-
-      /**
-       * Set if the error occurred on the DevTools side before the expression is
-       * evaluated, contains the array of the values that may be substituted into the
-       * description string to provide more information about the cause of the error.
-       */
-      details: any[],
-
-      /**
-       * Set if the evaluated code produces an unhandled exception.
-       */
-      isException: boolean,
-
-      /**
-       * Set if the evaluated code produces an unhandled exception.
-       */
-      value: string,
-    },
-  }>;
-
-  /**
-   * Evaluates a JavaScript expression in the context of the main frame of the
-   * inspected page. The expression must evaluate to a JSON-compliant object,
-   * otherwise an exception is thrown. The eval function can report either a
-   * DevTools-side error or a JavaScript exception that occurs during
-   * evaluation. In either case, the <code>result</code> parameter of the
-   * callback is <code>undefined</code>. In the case of a DevTools-side error,
-   * the <code>isException</code> parameter is non-null and has
-   * <code>isError</code> set to true and <code>code</code> set to an error
-   * code. In the case of a JavaScript error, <code>isException</code> is set to
-   * true and <code>value</code> is set to the string value of thrown object.
-   * @param expression An expression to evaluate.
-   * @param options The options parameter can contain one or more options.
-   * @param callback A function called when evaluation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-eval
-   */
-  export function eval(
-    expression: string,
-    options?: {
-      /**
-       * If specified, the expression is evaluated on the iframe whose URL matches the
-       * one specified. By default, the expression is evaluated in the top frame of
-       * the inspected page.
-       */
-      frameURL?: string,
-
-      /**
-       * Evaluate the expression in the context of the content script of the calling
-       * extension, provided that the content script is already injected into the
-       * inspected page. If not, the expression is not evaluated and the callback is
-       * invoked with the exception parameter set to an object that has the
-       * <code>isError</code> field set to true and the <code>code</code> field set to
-       * <code>E_NOTFOUND</code>.
-       */
-      useContentScriptContext?: boolean,
-
-      /**
-       * Evaluate the expression in the context of a content script of an extension
-       * that matches the specified origin. If given, contextSecurityOrigin overrides
-       * the 'true' setting on userContentScriptContext.
-       */
-      contextSecurityOrigin?: string,
-    },
-    callback?: (
-      /**
-       * The result of evaluation.
-       */
-      result: {[name: string]: any},
-
-      /**
-       * An object providing details if an exception occurred while evaluating the
-       * expression.
-       */
-      exceptionInfo: {
-        /**
-         * Set if the error occurred on the DevTools side before the expression is
-         * evaluated.
-         */
-        isError: boolean,
-
-        /**
-         * Set if the error occurred on the DevTools side before the expression is
-         * evaluated.
-         */
-        code: string,
-
-        /**
-         * Set if the error occurred on the DevTools side before the expression is
-         * evaluated.
-         */
-        description: string,
-
-        /**
-         * Set if the error occurred on the DevTools side before the expression is
-         * evaluated, contains the array of the values that may be substituted into the
-         * description string to provide more information about the cause of the error.
-         */
-        details: any[],
-
-        /**
-         * Set if the evaluated code produces an unhandled exception.
-         */
-        isException: boolean,
-
-        /**
-         * Set if the evaluated code produces an unhandled exception.
-         */
-        value: string,
-      },
-    ) => void,
-  ): void;
-
-  /**
-   * Reloads the inspected page.
-   * @param reloadOptions
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-reload
-   */
-  export function reload(
-    reloadOptions?: {
-      /**
-       * When true, the loader will bypass the cache for all inspected page resources
-       * loaded before the <code>load</code> event is fired. The effect is similar to
-       * pressing Ctrl+Shift+R in the inspected window or within the Developer Tools
-       * window.
-       */
-      ignoreCache?: boolean,
-
-      /**
-       * If specified, the string will override the value of the
-       * <code>User-Agent</code> HTTP header that's sent while loading the resources
-       * of the inspected page. The string will also override the value of the
-       * <code>navigator.userAgent</code> property that's returned to any scripts that
-       * are running within the inspected page.
-       */
-      userAgent?: string,
-
-      /**
-       * If specified, the script will be injected into every frame of the inspected
-       * page immediately upon load, before any of the frame's scripts. The script
-       * will not be injected after subsequent reloads&mdash;for example, if the user
-       * presses Ctrl+R.
-       */
-      injectedScript?: string,
-    },
-  ): void;
-
-  /**
-   * Retrieves the list of resources from the inspected page.
-   * @returns A function that receives the list of resources when the request
-   *     completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-getResources
-   */
-  export function getResources(): Promise<{
-    /**
-     * The resources within the page.
-     */
-    resources: Resource[],
-  }>;
-
-  /**
-   * Retrieves the list of resources from the inspected page.
-   * @param callback A function that receives the list of resources when the
-   *     request completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#method-getResources
-   */
-  export function getResources(
-    callback: (
-      /**
-       * The resources within the page.
-       */
-      resources: Resource[],
-    ) => void,
-  ): void;
-
-  /**
-   * Fired when a new resource is added to the inspected page.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#event-onResourceAdded
-   */
-  export const onResourceAdded: chrome.events.Event<(
-    resource: Resource,
-  ) => void>;
-
-  /**
-   * Fired when a new revision of the resource is committed (e.g. user saves an
-   * edited version of the resource in the Developer Tools).
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.inspectedWindow/#event-onResourceContentCommitted
-   */
-  export const onResourceContentCommitted: chrome.events.Event<(
-    resource: Resource,
-
-    /**
-     * New content of the resource.
-     */
-    content: string,
-  ) => void>;
-}
 /**
  * Use <code>chrome.instanceID</code> to access the Instance ID service.
  * @see https://developer.chrome.com/docs/extensions/reference/instanceID/
+ * @chrome-permission gcm
  */
 declare namespace chrome.instanceID {
   /**
@@ -21235,10 +17122,12 @@ declare namespace chrome.instanceID {
    */
   export const onTokenRefresh: chrome.events.Event<() => void>;
 }
+
 /**
  * An API to listen queries of the Chrome Launcher and provide search results
  * to it.
  * @see https://developer.chrome.com/docs/extensions/reference/launcherSearchProvider/
+ * @chrome-permission launcherSearchProvider
  */
 declare namespace chrome.launcherSearchProvider {
   /**
@@ -21305,6 +17194,7 @@ declare namespace chrome.launcherSearchProvider {
     itemId: string,
   ) => void>;
 }
+
 /**
  * <p>
    The API that can be used by an app to create and manage data on the
@@ -21334,6 +17224,7 @@ declare namespace chrome.launcherSearchProvider {
    context.
  * </p>
  * @see https://developer.chrome.com/docs/extensions/reference/lockScreen.data/
+ * @chrome-permission lockScreen
  */
 declare namespace chrome.lockScreen.data {
   /**
@@ -21488,10 +17379,12 @@ declare namespace chrome.lockScreen.data {
     event: DataItemsAvailableEvent,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.loginScreenStorage</code> API to store persistent data
  * from the login screen or inject data into the session.
  * @see https://developer.chrome.com/docs/extensions/reference/loginScreenStorage/
+ * @chrome-permission loginScreenStorage
  */
 declare namespace chrome.loginScreenStorage {
   /**
@@ -21607,11 +17500,13 @@ declare namespace chrome.loginScreenStorage {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.loginScreenUi</code> API to show and hide custom
  login
  * UI.
  * @see https://developer.chrome.com/docs/extensions/reference/loginScreenUi/
+ * @chrome-permission loginScreenUi
  */
 declare namespace chrome.loginScreenUi {
   /**
@@ -21666,10 +17561,13 @@ declare namespace chrome.loginScreenUi {
     callback?: () => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.loginState</code> API to read and monitor the login
  * state.
  * @see https://developer.chrome.com/docs/extensions/reference/loginState/
+ * @chrome-platform chromeos
+ * @chrome-permission loginState
  */
 declare namespace chrome.loginState {
   /**
@@ -21729,9 +17627,11 @@ declare namespace chrome.loginState {
     sessionState: SessionState,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.login</code> API to launch and exit user sessions.
  * @see https://developer.chrome.com/docs/extensions/reference/login/
+ * @chrome-permission login
  */
 declare namespace chrome.login {
   /**
@@ -21867,11 +17767,13 @@ declare namespace chrome.login {
     callback?: () => void,
   ): void;
 }
+
 /**
  * The <code>chrome.management</code> API provides ways to manage the list of
  * extensions/apps that are installed and running. It is particularly useful for
  * extensions that <a href='override'>override</a> the built-in New Tab page.
  * @see https://developer.chrome.com/docs/extensions/reference/management/
+ * @chrome-permission management
  */
 declare namespace chrome.management {
   /**
@@ -22465,6 +18367,7 @@ declare namespace chrome.management {
     info: ExtensionInfo,
   ) => void>;
 }
+
 /**
  * Schemas for structured manifest entries
  * @see https://developer.chrome.com/docs/extensions/reference/manifestTypes/
@@ -22599,2382 +18502,12 @@ declare namespace chrome.manifestTypes {
     source: FileSystemProviderSource;
   }
 }
-/**
- * Use the <code>chrome.mdns</code> API to discover services over mDNS.
- This
- * comprises a subset of the features of the NSD spec:
- * http://www.w3.org/TR/discovery-api/
- * @see https://developer.chrome.com/docs/extensions/reference/mdns/
- */
-declare namespace chrome.mdns {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/mdns/#type-MDnsService
-   */
-  export interface MDnsService {
-    /**
-     * The service name of an mDNS advertised service,
-     * <instance_name>.<service_type>.
-     */
-    serviceName: string;
 
-    /**
-     * The host:port pair of an mDNS advertised service.
-     */
-    serviceHostPort: string;
-
-    /**
-     * The IP address of an mDNS advertised service.
-     */
-    ipAddress: string;
-
-    /**
-     * Metadata for an mDNS advertised service.
-     */
-    serviceData: string[];
-  }
-
-  /**
-   * The maximum number of service instances that will be included in
-   * onServiceList events.  If more instances are available, they may be truncated
-   * from the onServiceList event.
-   * @see https://developer.chrome.com/docs/extensions/reference/mdns/#property-MAX_SERVICE_INSTANCES_PER_EVENT
-   */
-  export const MAX_SERVICE_INSTANCES_PER_EVENT: number;
-
-  /**
-   * Immediately issues a multicast DNS query for all service types. |callback|
-   * is invoked immediately. At a later time, queries will be sent, and any
-   * service events will be fired.
-   * @returns Callback invoked after ForceDiscovery() has started.
-   * @see https://developer.chrome.com/docs/extensions/reference/mdns/#method-forceDiscovery
-   */
-  export function forceDiscovery(): Promise<void>;
-
-  /**
-   * Immediately issues a multicast DNS query for all service types. |callback|
-   * is invoked immediately. At a later time, queries will be sent, and any
-   * service events will be fired.
-   * @param callback Callback invoked after ForceDiscovery() has started.
-   * @see https://developer.chrome.com/docs/extensions/reference/mdns/#method-forceDiscovery
-   */
-  export function forceDiscovery(
-    callback: () => void,
-  ): void;
-
-  /**
-   * Event fired to inform clients of the current complete set of known
-   * available services. Clients should only need to store the list from the
-   * most recent event. The service type that the extension is interested in
-   * discovering should be specified as the event filter with the 'serviceType'
-   * key. Not specifying an event filter will not start any discovery listeners.
-   * @see https://developer.chrome.com/docs/extensions/reference/mdns/#event-onServiceList
-   */
-  export const onServiceList: chrome.events.Event<(
-    services: MDnsService[],
-  ) => void>;
-}
-/**
- * Use the <code>chrome.devtools.network</code> API to retrieve the information
- * about network requests displayed by the Developer Tools in the Network panel.
- * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/
- */
-declare namespace chrome.devtools.network {
-  /**
-   * Represents a network request for a document resource (script, image and so
-   * on). See HAR Specification for reference.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#type-Request
-   */
-  export interface Request {
-    /**
-     * Returns content of the response body.
-     * @param callback A function that receives the response body when the
-     *     request completes.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#method-getContent
-     */
-    getContent(
-      callback: (
-        /**
-         * Content of the response body (potentially encoded).
-         */
-        content: string,
-
-        /**
-         * Empty if content is not encoded, encoding name otherwise. Currently, only
-         * base64 is supported.
-         */
-        encoding: string,
-      ) => void,
-    ): void;
-  }
-
-  /**
-   * Returns HAR log that contains all known network requests.
-   * @returns A function that receives the HAR log when the request completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#method-getHAR
-   */
-  export function getHAR(): Promise<{
-    /**
-     * A HAR log. See HAR specification for details.
-     */
-    harLog: {[name: string]: any},
-  }>;
-
-  /**
-   * Returns HAR log that contains all known network requests.
-   * @param callback A function that receives the HAR log when the request
-   *     completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#method-getHAR
-   */
-  export function getHAR(
-    callback: (
-      /**
-       * A HAR log. See HAR specification for details.
-       */
-      harLog: {[name: string]: any},
-    ) => void,
-  ): void;
-
-  /**
-   * Fired when a network request is finished and all request data are
-   * available.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#event-onRequestFinished
-   */
-  export const onRequestFinished: chrome.events.Event<(
-    /**
-     * Description of a network request in the form of a HAR entry. See HAR
-     * specification for details.
-     */
-    request: Request,
-  ) => void>;
-
-  /**
-   * Fired when the inspected window navigates to a new page.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.network/#event-onNavigated
-   */
-  export const onNavigated: chrome.events.Event<(
-    /**
-     * URL of the new page.
-     */
-    url: string,
-  ) => void>;
-}
-/**
- * <p>
-   The <code>chrome.networking.onc</code> API is used for configuring
- * network connections (Cellular, Ethernet, VPN or WiFi).
-   This API is
- * available in auto-launched Chrome OS kiosk sessions.
- </p>
- <p>
-   Network
- * connection configurations are specified following
-   <a
- * href="https://chromium.googlesource.com/chromium/src/+/master/components/onc/docs/onc_spec.md">
-   Open Network Configuration (ONC)</a> specification.
- </p>
- <p>
-   <b>NOTE</b>: Most dictionary properties and enum values use UpperCamelCase
-   to match the ONC specification instead of the JavaScript lowerCamelCase
-   convention.
- </p>
- * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/
- */
-declare namespace chrome.networking.onc {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ActivationStateType
-   */
-  export type ActivationStateType = "Activated" | "Activating" | "NotActivated" | "PartiallyActivated";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-CaptivePortalStatus
-   */
-  export type CaptivePortalStatus = "Unknown" | "Offline" | "Online" | "Portal" | "ProxyAuthRequired";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ClientCertificateType
-   */
-  export type ClientCertificateType = "Ref" | "Pattern";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ConnectionStateType
-   */
-  export type ConnectionStateType = "Connected" | "Connecting" | "NotConnected";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-DeviceStateType
-   */
-  export type DeviceStateType = "Uninitialized" | "Disabled" | "Enabling" | "Enabled" | "Prohibited";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-IPConfigType
-   */
-  export type IPConfigType = "DHCP" | "Static";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-NetworkType
-   */
-  export type NetworkType = "All" | "Cellular" | "Ethernet" | "Tether" | "VPN" | "Wireless" | "WiFi";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ProxySettingsType
-   */
-  export type ProxySettingsType = "Direct" | "Manual" | "PAC" | "WPAD";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedBoolean
-   */
-  export interface ManagedBoolean {
-    /**
-     * The active value currently used by the network configuration manager (e.g.
-     * Shill).
-     */
-    Active?: boolean;
-
-    /**
-     * The source from which the effective property value was determined.
-     */
-    Effective?: string;
-
-    /**
-     * The property value provided by the user policy.
-     */
-    UserPolicy?: boolean;
-
-    /**
-     * The property value provided by the device policy.
-     */
-    DevicePolicy?: boolean;
-
-    /**
-     * The property value set by the logged in user. Only provided if |UserEditable|
-     * is <code>true</code>.
-     */
-    UserSetting?: boolean;
-
-    /**
-     * The value set for all users of the device. Only provided if |DeviceEditiable|
-     * is <code>true</code>.
-     */
-    SharedSetting?: boolean;
-
-    /**
-     * Whether a UserPolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    UserEditable?: boolean;
-
-    /**
-     * Whether a DevicePolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    DeviceEditable?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedLong
-   */
-  export interface ManagedLong {
-    /**
-     * The active value currently used by the network configuration manager (e.g.
-     * Shill).
-     */
-    Active?: number;
-
-    /**
-     * The source from which the effective property value was determined.
-     */
-    Effective?: string;
-
-    /**
-     * The property value provided by the user policy.
-     */
-    UserPolicy?: number;
-
-    /**
-     * The property value provided by the device policy.
-     */
-    DevicePolicy?: number;
-
-    /**
-     * The property value set by the logged in user. Only provided if |UserEditable|
-     * is <code>true</code>.
-     */
-    UserSetting?: number;
-
-    /**
-     * The value set for all users of the device. Only provided if |DeviceEditiable|
-     * is <code>true</code>.
-     */
-    SharedSetting?: number;
-
-    /**
-     * Whether a UserPolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    UserEditable?: boolean;
-
-    /**
-     * Whether a DevicePolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    DeviceEditable?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedDOMString
-   */
-  export interface ManagedDOMString {
-    /**
-     * The active value currently used by the network configuration manager (e.g.
-     * Shill).
-     */
-    Active?: string;
-
-    /**
-     * The source from which the effective property value was determined.
-     */
-    Effective?: string;
-
-    /**
-     * The property value provided by the user policy.
-     */
-    UserPolicy?: string;
-
-    /**
-     * The property value provided by the device policy.
-     */
-    DevicePolicy?: string;
-
-    /**
-     * The property value set by the logged in user. Only provided if |UserEditable|
-     * is <code>true</code>.
-     */
-    UserSetting?: string;
-
-    /**
-     * The value set for all users of the device. Only provided if |DeviceEditiable|
-     * is <code>true</code>.
-     */
-    SharedSetting?: string;
-
-    /**
-     * Whether a UserPolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    UserEditable?: boolean;
-
-    /**
-     * Whether a DevicePolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    DeviceEditable?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedDOMStringList
-   */
-  export interface ManagedDOMStringList {
-    /**
-     * The active value currently used by the network configuration manager (e.g.
-     * Shill).
-     */
-    Active?: string[];
-
-    /**
-     * The source from which the effective property value was determined.
-     */
-    Effective?: string;
-
-    /**
-     * The property value provided by the user policy.
-     */
-    UserPolicy?: string[];
-
-    /**
-     * The property value provided by the device policy.
-     */
-    DevicePolicy?: string[];
-
-    /**
-     * The property value set by the logged in user. Only provided if |UserEditable|
-     * is <code>true</code>.
-     */
-    UserSetting?: string[];
-
-    /**
-     * The value set for all users of the device. Only provided if |DeviceEditiable|
-     * is <code>true</code>.
-     */
-    SharedSetting?: string[];
-
-    /**
-     * Whether a UserPolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    UserEditable?: boolean;
-
-    /**
-     * Whether a DevicePolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    DeviceEditable?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedIPConfigType
-   */
-  export interface ManagedIPConfigType {
-    /**
-     * The active value currently used by the network configuration manager (e.g.
-     * Shill).
-     */
-    Active?: IPConfigType;
-
-    /**
-     * The source from which the effective property value was determined.
-     */
-    Effective?: string;
-
-    /**
-     * The property value provided by the user policy.
-     */
-    UserPolicy?: IPConfigType;
-
-    /**
-     * The property value provided by the device policy.
-     */
-    DevicePolicy?: IPConfigType;
-
-    /**
-     * The property value set by the logged in user. Only provided if |UserEditable|
-     * is <code>true</code>.
-     */
-    UserSetting?: IPConfigType;
-
-    /**
-     * The value set for all users of the device. Only provided if |DeviceEditiable|
-     * is <code>true</code>.
-     */
-    SharedSetting?: IPConfigType;
-
-    /**
-     * Whether a UserPolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    UserEditable?: boolean;
-
-    /**
-     * Whether a DevicePolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    DeviceEditable?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedProxySettingsType
-   */
-  export interface ManagedProxySettingsType {
-    /**
-     * The active value currently used by the network configuration manager (e.g.
-     * Shill).
-     */
-    Active?: ProxySettingsType;
-
-    /**
-     * The source from which the effective property value was determined.
-     */
-    Effective?: string;
-
-    /**
-     * The property value provided by the user policy.
-     */
-    UserPolicy?: ProxySettingsType;
-
-    /**
-     * The property value provided by the device policy.
-     */
-    DevicePolicy?: ProxySettingsType;
-
-    /**
-     * The property value set by the logged in user. Only provided if |UserEditable|
-     * is <code>true</code>.
-     */
-    UserSetting?: ProxySettingsType;
-
-    /**
-     * The value set for all users of the device. Only provided if |DeviceEditiable|
-     * is <code>true</code>.
-     */
-    SharedSetting?: ProxySettingsType;
-
-    /**
-     * Whether a UserPolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    UserEditable?: boolean;
-
-    /**
-     * Whether a DevicePolicy for the property exists and allows the property to be
-     * edited (i.e. the policy set recommended property value). Defaults to
-     * <code>false</code>.
-     */
-    DeviceEditable?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-CellularProviderProperties
-   */
-  export interface CellularProviderProperties {
-    /**
-     * The operator name.
-     */
-    Name: string;
-
-    /**
-     * Cellular network ID as a simple concatenation of the network's MCC (Mobile
-     * Country Code) and MNC (Mobile Network Code).
-     */
-    Code: string;
-
-    /**
-     * The two-letter country code.
-     */
-    Country?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-IssuerSubjectPattern
-   */
-  export interface IssuerSubjectPattern {
-    /**
-     * If set, the value against which to match the certificate subject's common
-     * name.
-     */
-    CommonName?: string;
-
-    /**
-     * If set, the value against which to match the certificate subject's common
-     * location.
-     */
-    Locality?: string;
-
-    /**
-     * If set, the value against which to match the certificate subject's
-     * organizations. At least one organization should match the value.
-     */
-    Organization?: string;
-
-    /**
-     * If set, the value against which to match the certificate subject's
-     * organizational units. At least one organizational unit should match the
-     * value.
-     */
-    OrganizationalUnit?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-CertificatePattern
-   */
-  export interface CertificatePattern {
-    /**
-     * List of URIs to which the user can be directed in case no certificates that
-     * match this pattern are found.
-     */
-    EnrollmentURI?: string[];
-
-    /**
-     * If set, pattern against which X.509 issuer settings should be matched.
-     */
-    Issuer?: IssuerSubjectPattern;
-
-    /**
-     * List of certificate issuer CA certificates. A certificate must be signed by
-     * one of them in order to match this pattern.
-     */
-    IssuerCARef?: string[];
-
-    /**
-     * If set, pattern against which X.509 subject settings should be matched.
-     */
-    Subject?: IssuerSubjectPattern;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-EAPProperties
-   */
-  export interface EAPProperties {
-    AnonymousIdentity?: string;
-
-    ClientCertPattern?: CertificatePattern;
-
-    ClientCertPKCS11Id?: string;
-
-    ClientCertRef?: string;
-
-    ClientCertType: ClientCertificateType;
-
-    Identity?: string;
-
-    Inner?: string;
-
-    /**
-     * The outer EAP type. Required by ONC, but may not be provided when translating
-     * from Shill.
-     */
-    Outer?: string;
-
-    Password?: string;
-
-    SaveCredentials?: boolean;
-
-    ServerCAPEMs?: string[];
-
-    ServerCARefs?: string[];
-
-    SubjectMatch?: ManagedDOMString;
-
-    UseProactiveKeyCaching?: boolean;
-
-    UseSystemCAs?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-FoundNetworkProperties
-   */
-  export interface FoundNetworkProperties {
-    /**
-     * Network availability.
-     */
-    Status: string;
-
-    /**
-     * Network ID.
-     */
-    NetworkId: string;
-
-    /**
-     * Access technology used by the network.
-     */
-    Technology: string;
-
-    /**
-     * The network operator's short-format name.
-     */
-    ShortName?: string;
-
-    /**
-     * The network operator's long-format name.
-     */
-    LongName?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-IPConfigProperties
-   */
-  export interface IPConfigProperties {
-    /**
-     * Gateway address used for the IP configuration.
-     */
-    Gateway?: string;
-
-    /**
-     * The IP address for a connection. Can be IPv4 or IPv6 address, depending on
-     * value of <code>Type</code>.
-     */
-    IPAddress?: string;
-
-    /**
-     * Array of IP blocks in CIDR notation, see onc_spec.md for details.
-     */
-    ExcludedRoutes?: string[];
-
-    /**
-     * Array of IP blocks in CIDR notation, see onc_spec.md for details.
-     */
-    IncludedRoutes?: string[];
-
-    /**
-     * Array of addresses used for name servers.
-     */
-    NameServers?: string[];
-
-    /**
-     * Array of strings for name resolution, see onc_spec.md for details.
-     */
-    SearchDomains?: string[];
-
-    /**
-     * The routing prefix.
-     */
-    RoutingPrefix?: number;
-
-    /**
-     * The IP configuration type. Can be <code>IPv4</code> or <code>IPv6</code>.
-     */
-    Type?: string;
-
-    /**
-     * The URL for WEb Proxy Auto-Discovery, as reported over DHCP.
-     */
-    WebProxyAutoDiscoveryUrl?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedIPConfigProperties
-   */
-  export interface ManagedIPConfigProperties {
-    /**
-     * See {@link IPConfigProperties.Gateway}.
-     */
-    Gateway?: ManagedDOMString;
-
-    /**
-     * See {@link IPConfigProperties.IPAddress}.
-     */
-    IPAddress?: ManagedDOMString;
-
-    /**
-     * See {@link IPConfigProperties.NameServers}.
-     */
-    NameServers?: ManagedDOMStringList;
-
-    /**
-     * See {@link IPConfigProperties.RoutingPrefix}.
-     */
-    RoutingPrefix?: ManagedLong;
-
-    /**
-     * See {@link IPConfigProperties.Type}.
-     */
-    Type?: ManagedDOMString;
-
-    /**
-     * See {@link IPConfigProperties.WebProxyAutoDiscoveryUrl}.
-     */
-    WebProxyAutoDiscoveryUrl?: ManagedDOMString;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-PaymentPortal
-   */
-  export interface PaymentPortal {
-    /**
-     * The HTTP method to use for the payment portal.
-     */
-    Method: string;
-
-    /**
-     * The post data to send to the payment portal. Ignored unless
-     * <code>Method</code> is <code>POST</code>.
-     */
-    PostData?: string;
-
-    /**
-     * The payment portal URL.
-     */
-    Url?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ProxyLocation
-   */
-  export interface ProxyLocation {
-    /**
-     * The proxy IP address host.
-     */
-    Host: string;
-
-    /**
-     * The port to use for the proxy.
-     */
-    Port: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedProxyLocation
-   */
-  export interface ManagedProxyLocation {
-    /**
-     * See {@link ProxyLocation.Host}.
-     */
-    Host: ManagedDOMString;
-
-    /**
-     * See {@link ProxyLocation.Port}.
-     */
-    Port: ManagedLong;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManualProxySettings
-   */
-  export interface ManualProxySettings {
-    /**
-     * Settings for HTTP proxy.
-     */
-    HTTPProxy?: ProxyLocation;
-
-    /**
-     * Settings for secure HTTP proxy.
-     */
-    SecureHTTPProxy?: ProxyLocation;
-
-    /**
-     * Settings for FTP proxy.
-     */
-    FTPProxy?: ProxyLocation;
-
-    /**
-     * Settings for SOCKS proxy.
-     */
-    SOCKS?: ProxyLocation;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedManualProxySettings
-   */
-  export interface ManagedManualProxySettings {
-    /**
-     * See {@link ManualProxySettings.HTTPProxy}.
-     */
-    HTTPProxy?: ManagedProxyLocation;
-
-    /**
-     * See {@link ManualProxySettings.SecureHTTPProxy}.
-     */
-    SecureHTTPProxy?: ManagedProxyLocation;
-
-    /**
-     * See {@link ManualProxySettings.FTPProxy}.
-     */
-    FTPProxy?: ManagedProxyLocation;
-
-    /**
-     * See {@link ManualProxySettings.SOCKS}.
-     */
-    SOCKS?: ManagedProxyLocation;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ProxySettings
-   */
-  export interface ProxySettings {
-    /**
-     * The type of proxy settings.
-     */
-    Type: ProxySettingsType;
-
-    /**
-     * Manual proxy settings - used only for <code>Manual</code> proxy settings.
-     */
-    Manual?: ManualProxySettings;
-
-    /**
-     * Domains and hosts for which manual proxy settings are excluded.
-     */
-    ExcludeDomains?: string[];
-
-    /**
-     * URL for proxy auto-configuration file.
-     */
-    PAC?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedProxySettings
-   */
-  export interface ManagedProxySettings {
-    /**
-     * See {@link ProxySettings.Type}.
-     */
-    Type: ManagedProxySettingsType;
-
-    /**
-     * See {@link ProxySettings.Manual}.
-     */
-    Manual?: ManagedManualProxySettings;
-
-    /**
-     * See {@link ProxySettings.ExcludeDomains}.
-     */
-    ExcludeDomains?: ManagedDOMStringList;
-
-    /**
-     * See {@link ProxySettings.PAC}.
-     */
-    PAC?: ManagedDOMString;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-SIMLockStatus
-   */
-  export interface SIMLockStatus {
-    /**
-     * The status of SIM lock - possible values are <code>'sim-pin'</code>,
-     * <code>'sim-puk'</code> and <code>''</code>.
-     */
-    LockType: string;
-
-    /**
-     * Whether SIM lock is enabled.
-     */
-    LockEnabled: boolean;
-
-    /**
-     * Number of PIN lock tries allowed before PUK is required to unlock the SIM.
-     */
-    RetriesLeft?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ThirdPartyVPNProperties
-   */
-  export interface ThirdPartyVPNProperties {
-    /**
-     * ID of the third-party VPN provider extension.
-     */
-    ExtensionID: string;
-
-    /**
-     * The VPN provider name.
-     */
-    ProviderName?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedThirdPartyVPNProperties
-   */
-  export interface ManagedThirdPartyVPNProperties {
-    /**
-     * See {@link ThirdPartyVPNProperties.ExtensionID}.
-     */
-    ExtensionID: ManagedDOMString;
-
-    /**
-     * See {@link ThirdPartyVPNProperties.ProviderName}.
-     */
-    ProviderName?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-CellularProperties
-   */
-  export interface CellularProperties {
-    /**
-     * Whether the cellular network should be connected automatically (when in
-     * range).
-     */
-    AutoConnect?: boolean;
-
-    /**
-     * The cellular network activation type.
-     */
-    ActivationType?: string;
-
-    /**
-     * Carrier account activation state.
-     */
-    ActivationState?: ActivationStateType;
-
-    /**
-     * Whether roaming is allowed for the network.
-     */
-    AllowRoaming?: boolean;
-
-    /**
-     * Cellular device technology family - <code>CDMA</code> or <code>GSM</code>.
-     */
-    Family?: string;
-
-    /**
-     * The firmware revision loaded in the cellular modem.
-     */
-    FirmwareRevision?: string;
-
-    /**
-     * The list of networks found during the most recent network scan.
-     */
-    FoundNetworks?: FoundNetworkProperties[];
-
-    /**
-     * The cellular modem hardware revision.
-     */
-    HardwareRevision?: string;
-
-    /**
-     * Information about the operator that issued the SIM card currently installed
-     * in the modem.
-     */
-    HomeProvider?: CellularProviderProperties;
-
-    /**
-     * The cellular modem manufacturer.
-     */
-    Manufacturer?: string;
-
-    /**
-     * The cellular modem model ID.
-     */
-    ModelID?: string;
-
-    /**
-     * If the modem is registered on a network, the network technology currently in
-     * use.
-     */
-    NetworkTechnology?: string;
-
-    /**
-     * Online payment portal a user can use to sign-up for or modify a mobile data
-     * plan.
-     */
-    PaymentPortal?: PaymentPortal;
-
-    /**
-     * The roaming state of the cellular modem on the current network.
-     */
-    RoamingState?: string;
-
-    /**
-     * True when a cellular network scan is in progress.
-     */
-    Scanning?: boolean;
-
-    /**
-     * Information about the operator on whose network the modem is currently
-     * registered.
-     */
-    ServingOperator?: CellularProviderProperties;
-
-    /**
-     * The state of SIM lock for GSM family networks.
-     */
-    SIMLockStatus?: SIMLockStatus;
-
-    /**
-     * Whether a SIM card is present.
-     */
-    SIMPresent?: boolean;
-
-    /**
-     * The current network signal strength.
-     */
-    SignalStrength?: number;
-
-    /**
-     * Whether the cellular network supports scanning.
-     */
-    SupportNetworkScan?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedCellularProperties
-   */
-  export interface ManagedCellularProperties {
-    /**
-     * See {@link CellularProperties.AutoConnect}.
-     */
-    AutoConnect?: ManagedBoolean;
-
-    /**
-     * See {@link CellularProperties.ActivationType}.
-     */
-    ActivationType?: string;
-
-    /**
-     * See {@link CellularProperties.ActivationState}.
-     */
-    ActivationState?: ActivationStateType;
-
-    /**
-     * See {@link CellularProperties.AllowRoaming}.
-     */
-    AllowRoaming?: boolean;
-
-    /**
-     * See {@link CellularProperties.Family}.
-     */
-    Family?: string;
-
-    /**
-     * See {@link CellularProperties.FirmwareRevision}.
-     */
-    FirmwareRevision?: string;
-
-    /**
-     * See {@link CellularProperties.FoundNetworks}.
-     */
-    FoundNetworks?: FoundNetworkProperties[];
-
-    /**
-     * See {@link CellularProperties.HardwareRevision}.
-     */
-    HardwareRevision?: string;
-
-    /**
-     * See {@link CellularProperties.HomeProvider}.
-     */
-    HomeProvider?: CellularProviderProperties[];
-
-    /**
-     * See {@link CellularProperties.Manufacturer}.
-     */
-    Manufacturer?: string;
-
-    /**
-     * See {@link CellularProperties.ModelID}.
-     */
-    ModelID?: string;
-
-    /**
-     * See {@link CellularProperties.NetworkTechnology}.
-     */
-    NetworkTechnology?: string;
-
-    /**
-     * See {@link CellularProperties.PaymentPortal}.
-     */
-    PaymentPortal?: PaymentPortal;
-
-    /**
-     * See {@link CellularProperties.RoamingState}.
-     */
-    RoamingState?: string;
-
-    /**
-     * See {@link CellularProperties.Scanning}.
-     */
-    Scanning?: boolean;
-
-    /**
-     * See {@link CellularProperties.ServingOperator}.
-     */
-    ServingOperator?: CellularProviderProperties;
-
-    /**
-     * See {@link CellularProperties.SIMLockStatus}.
-     */
-    SIMLockStatus?: SIMLockStatus;
-
-    /**
-     * See {@link CellularProperties.SIMPresent}.
-     */
-    SIMPresent?: boolean;
-
-    /**
-     * See {@link CellularProperties.SignalStrength}.
-     */
-    SignalStrength?: number;
-
-    /**
-     * See {@link CellularProperties.SupportNetworkScan}.
-     */
-    SupportNetworkScan?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-CellularStateProperties
-   */
-  export interface CellularStateProperties {
-    /**
-     * See {@link CellularProperties.ActivationState}.
-     */
-    ActivationState?: ActivationStateType;
-
-    /**
-     * See {@link CellularProperties.NetworkTechnology}.
-     */
-    NetworkTechnology?: string;
-
-    /**
-     * See {@link CellularProperties.RoamingState}.
-     */
-    RoamingState?: string;
-
-    /**
-     * See {@link CellularProperties.SIMPresent}.
-     */
-    SIMPresent?: boolean;
-
-    /**
-     * See {@link CellularProperties.SignalStrength}.
-     */
-    SignalStrength?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-EthernetProperties
-   */
-  export interface EthernetProperties {
-    /**
-     * Whether the Ethernet network should be connected automatically.
-     */
-    AutoConnect?: boolean;
-
-    /**
-     * The authentication used by the Ethernet network. Possible values are
-     * <code>None</code> and <code>8021X</code>.
-     */
-    Authentication?: string;
-
-    /**
-     * Network's EAP settings. Required for 8021X authentication.
-     */
-    EAP?: EAPProperties;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedEthernetProperties
-   */
-  export interface ManagedEthernetProperties {
-    /**
-     * See {@link EthernetProperties.AutoConnect}.
-     */
-    AutoConnect?: ManagedBoolean;
-
-    /**
-     * See {@link EthernetProperties.Authentication}.
-     */
-    Authentication?: ManagedDOMString;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-EthernetStateProperties
-   */
-  export interface EthernetStateProperties {
-    /**
-     * See {@link EthernetProperties.Authentication}.
-     */
-    Authentication: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-VPNProperties
-   */
-  export interface VPNProperties {
-    /**
-     * Whether the VPN network should be connected automatically.
-     */
-    AutoConnect?: boolean;
-
-    /**
-     * The VPN host.
-     */
-    Host?: string;
-
-    /**
-     * The VPN type. This cannot be an enum because of 'L2TP-IPSec'. This is
-     * optional for NetworkConfigProperties which is passed to setProperties which
-     * may be used to set only specific properties.
-     */
-    Type?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedVPNProperties
-   */
-  export interface ManagedVPNProperties {
-    /**
-     * See {@link VPNProperties.AutoConnect}.
-     */
-    AutoConnect?: ManagedBoolean;
-
-    /**
-     * See {@link VPNProperties.Host}.
-     */
-    Host?: ManagedDOMString;
-
-    /**
-     * See {@link VPNProperties.Type}.
-     */
-    Type?: ManagedDOMString;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-VPNStateProperties
-   */
-  export interface VPNStateProperties {
-    /**
-     * See {@link VPNProperties.Type}.
-     */
-    Type: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-WiFiProperties
-   */
-  export interface WiFiProperties {
-    /**
-     * Whether ARP polling of default gateway is allowed. Defaults to true.
-     */
-    AllowGatewayARPPolling?: boolean;
-
-    /**
-     * Whether the WiFi network should be connected automatically when in range.
-     */
-    AutoConnect?: boolean;
-
-    /**
-     * The BSSID of the associated access point..
-     */
-    BSSID?: string;
-
-    /**
-     * The network EAP properties. Required for <code>WEP-8021X</code> and
-     * <code>WPA-EAP</code> networks.
-     */
-    EAP?: EAPProperties;
-
-    /**
-     * The WiFi service operating frequency in MHz. For connected networks, the
-     * current frequency on which the network is connected. Otherwise, the frequency
-     * of the best available BSS.
-     */
-    Frequency?: number;
-
-    /**
-     * Contains all operating frequency recently seen for the WiFi network.
-     */
-    FrequencyList?: number[];
-
-    /**
-     * HEX-encoded copy of the network SSID.
-     */
-    HexSSID?: string;
-
-    /**
-     * Whether the network SSID will be broadcast.
-     */
-    HiddenSSID?: boolean;
-
-    /**
-     * The passphrase for WEP/WPA/WPA2 connections. This property can only be set -
-     * properties returned by {@link getProperties} will not contain this value.
-     */
-    Passphrase?: string;
-
-    /**
-     * Deprecated, ignored.
-     */
-    RoamThreshold?: number;
-
-    /**
-     * The network SSID.
-     */
-    SSID?: string;
-
-    /**
-     * The network security type.
-     */
-    Security?: string;
-
-    /**
-     * The network signal strength.
-     */
-    SignalStrength?: number;
-
-    /**
-     * The tethering state associated with the connection.
-     */
-    TetheringState?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedWiFiProperties
-   */
-  export interface ManagedWiFiProperties {
-    /**
-     * See {@link WiFiProperties.AllowGatewayARPPolling}.
-     */
-    AllowGatewayARPPolling?: ManagedBoolean;
-
-    /**
-     * See {@link WiFiProperties.AutoConnect}.
-     */
-    AutoConnect?: ManagedBoolean;
-
-    /**
-     * See {@link WiFiProperties.BSSID}.
-     */
-    BSSID?: string;
-
-    /**
-     * See {@link WiFiProperties.Frequency}.
-     */
-    Frequency?: number;
-
-    /**
-     * See {@link WiFiProperties.FrequencyList}.
-     */
-    FrequencyList?: number[];
-
-    /**
-     * See {@link WiFiProperties.HexSSID}.
-     */
-    HexSSID?: ManagedDOMString;
-
-    /**
-     * See {@link WiFiProperties.HiddenSSID}.
-     */
-    HiddenSSID?: ManagedBoolean;
-
-    /**
-     * Deprecated, ignored. See {@link WiFiProperties.RoamThreshold}.
-     */
-    RoamThreshold?: ManagedLong;
-
-    /**
-     * See {@link WiFiProperties.SSID}.
-     */
-    SSID?: ManagedDOMString;
-
-    /**
-     * See {@link WiFiProperties.Security}.
-     */
-    Security: ManagedDOMString;
-
-    /**
-     * See {@link WiFiProperties.SignalStrength}.
-     */
-    SignalStrength?: number;
-
-    /**
-     * See {@link WiFiProperties.TetheringState}.
-     */
-    TetheringState?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-WiFiStateProperties
-   */
-  export interface WiFiStateProperties {
-    /**
-     * See {@link WiFiProperties.BSSID}.
-     */
-    BSSID?: string;
-
-    /**
-     * See {@link WiFiProperties.Frequency}.
-     */
-    Frequency?: number;
-
-    /**
-     * See {@link WiFiProperties.HexSSID}.
-     */
-    HexSSID?: string;
-
-    /**
-     * See {@link WiFiProperties.Security}.
-     */
-    Security: string;
-
-    /**
-     * See {@link WiFiProperties.SignalStrength}.
-     */
-    SignalStrength?: number;
-
-    /**
-     * See {@link WiFiProperties.SSID}.
-     */
-    SSID?: string;
-
-    /**
-     * See {@link WiFiProperties.TetheringState}.
-     */
-    TetheringState?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-WiMAXProperties
-   */
-  export interface WiMAXProperties {
-    /**
-     * Whether the network should be connected automatically.
-     */
-    AutoConnect?: boolean;
-
-    /**
-     * The network EAP properties.
-     */
-    EAP?: EAPProperties;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-NetworkConfigProperties
-   */
-  export interface NetworkConfigProperties {
-    /**
-     * See {@link NetworkProperties.Cellular}.
-     */
-    Cellular?: CellularProperties;
-
-    /**
-     * See {@link NetworkProperties.Ethernet}.
-     */
-    Ethernet?: EthernetProperties;
-
-    /**
-     * See {@link NetworkProperties.GUID}.
-     */
-    GUID?: string;
-
-    /**
-     * See {@link NetworkProperties.IPAddressConfigType}.
-     */
-    IPAddressConfigType?: IPConfigType;
-
-    /**
-     * See {@link NetworkProperties.Name}.
-     */
-    Name?: string;
-
-    /**
-     * See {@link NetworkProperties.NameServersConfigType}.
-     */
-    NameServersConfigType?: IPConfigType;
-
-    /**
-     * See {@link NetworkProperties.Priority}.
-     */
-    Priority?: number;
-
-    /**
-     * See {@link NetworkProperties.Type}.
-     */
-    Type?: NetworkType;
-
-    /**
-     * See {@link NetworkProperties.VPN}.
-     */
-    VPN?: VPNProperties;
-
-    /**
-     * See {@link NetworkProperties.WiFi}.
-     */
-    WiFi?: WiFiProperties;
-
-    /**
-     * Deprecated.
-     */
-    WiMAX?: WiMAXProperties;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-NetworkProperties
-   */
-  export interface NetworkProperties {
-    /**
-     * For cellular networks, cellular network properties.
-     */
-    Cellular?: CellularProperties;
-
-    /**
-     * Whether the network is connectable.
-     */
-    Connectable?: boolean;
-
-    /**
-     * The network's current connection state.
-     */
-    ConnectionState?: ConnectionStateType;
-
-    /**
-     * The last recorded network error state.
-     */
-    ErrorState?: string;
-
-    /**
-     * For Ethernet networks, the Ethernet network properties.
-     */
-    Ethernet?: EthernetProperties;
-
-    /**
-     * The network GUID.
-     */
-    GUID: string;
-
-    /**
-     * The network's IP address configuration type.
-     */
-    IPAddressConfigType?: IPConfigType;
-
-    /**
-     * The network's IP configuration.
-     */
-    IPConfigs?: IPConfigProperties[];
-
-    /**
-     * The network's MAC address.
-     */
-    MacAddress?: string;
-
-    /**
-     * Whether the network is metered.
-     */
-    Metered?: boolean;
-
-    /**
-     * A user friendly network name.
-     */
-    Name?: string;
-
-    /**
-     * The IP configuration type for the name servers used by the network.
-     */
-    NameServersConfigType?: IPConfigType;
-
-    /**
-     * The network priority.
-     */
-    Priority?: number;
-
-    /**
-     * The network's proxy settings.
-     */
-    ProxySettings?: ProxySettings;
-
-    /**
-     * For a connected network, whether the network connectivity to the Internet is
-     * limited, e.g. if the network is behind a portal, or a cellular network is not
-     * activated.
-     */
-    RestrictedConnectivity?: boolean;
-
-    /**
-     * The network's static IP configuration.
-     */
-    StaticIPConfig?: IPConfigProperties;
-
-    /**
-     * IP configuration that was received from the DHCP server before applying
-     * static IP configuration.
-     */
-    SavedIPConfig?: IPConfigProperties;
-
-    /**
-     * Indicates whether and how the network is configured. Possible values are:
-     * <ul>    <li><code>Device</code></li>    <li><code>DevicePolicy</code></li>
-     * <li><code>User</code></li>    <li><code>UserPolicy</code></li>
-     * <li><code>None</code></li> </ul> 'None' conflicts with extension code
-     * generation so we must use a string for 'Source' instead of a SourceType enum.
-     */
-    Source?: string;
-
-    /**
-     * The network type.
-     */
-    Type: NetworkType;
-
-    /**
-     * For VPN networks, the network VPN properties.
-     */
-    VPN?: VPNProperties;
-
-    /**
-     * For WiFi networks, the network WiFi properties.
-     */
-    WiFi?: WiFiProperties;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-ManagedProperties
-   */
-  export interface ManagedProperties {
-    /**
-     * See {@link NetworkProperties.Cellular}.
-     */
-    Cellular?: ManagedCellularProperties;
-
-    /**
-     * See {@link NetworkProperties.Connectable}.
-     */
-    Connectable?: boolean;
-
-    /**
-     * See {@link NetworkProperties.ConnectionState}.
-     */
-    ConnectionState?: ConnectionStateType;
-
-    /**
-     * See {@link NetworkProperties.ErrorState}.
-     */
-    ErrorState?: string;
-
-    /**
-     * See {@link NetworkProperties.Ethernet}.
-     */
-    Ethernet?: ManagedEthernetProperties;
-
-    /**
-     * See {@link NetworkProperties.GUID}.
-     */
-    GUID: string;
-
-    /**
-     * See {@link NetworkProperties.IPAddressConfigType}.
-     */
-    IPAddressConfigType?: ManagedIPConfigType;
-
-    /**
-     * See {@link NetworkProperties.IPConfigs}.
-     */
-    IPConfigs?: IPConfigProperties[];
-
-    /**
-     * See {@link NetworkProperties.MacAddress}.
-     */
-    MacAddress?: string;
-
-    /**
-     * See {@link NetworkProperties.Metered}.
-     */
-    Metered?: ManagedBoolean;
-
-    /**
-     * See {@link NetworkProperties.Name}.
-     */
-    Name?: ManagedDOMString;
-
-    /**
-     * See {@link NetworkProperties.NameServersConfigType}.
-     */
-    NameServersConfigType?: ManagedIPConfigType;
-
-    /**
-     * See {@link NetworkProperties.Priority}.
-     */
-    Priority?: ManagedLong;
-
-    /**
-     * See {@link NetworkProperties.ProxySettings}.
-     */
-    ProxySettings?: ManagedProxySettings;
-
-    /**
-     * See {@link NetworkProperties.RestrictedConnectivity}.
-     */
-    RestrictedConnectivity?: boolean;
-
-    /**
-     * See {@link NetworkProperties.StaticIPConfig}.
-     */
-    StaticIPConfig?: ManagedIPConfigProperties;
-
-    /**
-     * See {@link NetworkProperties.SavedIPConfig}.
-     */
-    SavedIPConfig?: IPConfigProperties;
-
-    /**
-     * See {@link NetworkProperties.Source}.
-     */
-    Source?: string;
-
-    /**
-     * See {@link NetworkProperties.Type}.
-     */
-    Type: NetworkType;
-
-    /**
-     * See {@link NetworkProperties.VPN}.
-     */
-    VPN?: ManagedVPNProperties;
-
-    /**
-     * See {@link NetworkProperties.WiFi}.
-     */
-    WiFi?: ManagedWiFiProperties;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-NetworkStateProperties
-   */
-  export interface NetworkStateProperties {
-    /**
-     * See {@link NetworkProperties.Cellular}.
-     */
-    Cellular?: CellularStateProperties;
-
-    /**
-     * See {@link NetworkProperties.Connectable}.
-     */
-    Connectable?: boolean;
-
-    /**
-     * See {@link NetworkProperties.ConnectionState}.
-     */
-    ConnectionState?: ConnectionStateType;
-
-    /**
-     * See {@link NetworkProperties.Ethernet}.
-     */
-    Ethernet?: EthernetStateProperties;
-
-    /**
-     * See {@link NetworkProperties.ErrorState}.
-     */
-    ErrorState?: string;
-
-    /**
-     * See {@link NetworkProperties.GUID}.
-     */
-    GUID: string;
-
-    /**
-     * See {@link NetworkProperties.Name}.
-     */
-    Name?: string;
-
-    /**
-     * See {@link NetworkProperties.Priority}.
-     */
-    Priority?: number;
-
-    /**
-     * See {@link NetworkProperties.Source}.
-     */
-    Source?: string;
-
-    /**
-     * See {@link NetworkProperties.Type}.
-     */
-    Type: NetworkType;
-
-    /**
-     * See {@link NetworkProperties.VPN}.
-     */
-    VPN?: VPNStateProperties;
-
-    /**
-     * See {@link NetworkProperties.WiFi}.
-     */
-    WiFi?: WiFiStateProperties;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-DeviceStateProperties
-   */
-  export interface DeviceStateProperties {
-    /**
-     * Set if the device is enabled. True if the device is currently scanning.
-     */
-    Scanning?: boolean;
-
-    /**
-     * The SIM lock status if Type = Cellular and SIMPresent = True.
-     */
-    SIMLockStatus?: SIMLockStatus;
-
-    /**
-     * Set to the SIM present state if the device type is Cellular.
-     */
-    SIMPresent?: boolean;
-
-    /**
-     * The current state of the device.
-     */
-    State: DeviceStateType;
-
-    /**
-     * The network type associated with the device (Cellular, Ethernet or WiFi).
-     */
-    Type: NetworkType;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-NetworkFilter
-   */
-  export interface NetworkFilter {
-    /**
-     * The type of networks to return.
-     */
-    networkType: NetworkType;
-
-    /**
-     * If true, only include visible (physically connected or in-range) networks.
-     * Defaults to 'false'.
-     */
-    visible?: boolean;
-
-    /**
-     * If true, only include configured (saved) networks. Defaults to 'false'.
-     */
-    configured?: boolean;
-
-    /**
-     * Maximum number of networks to return. Defaults to 1000 if unspecified. Use 0
-     * for no limit.
-     */
-    limit?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#type-GlobalPolicy
-   */
-  export interface GlobalPolicy {
-    /**
-     * If true, only policy networks may auto connect. Defaults to false.
-     */
-    AllowOnlyPolicyNetworksToAutoconnect?: boolean;
-
-    /**
-     * If true, only policy networks may be connected to and no new networks may be
-     * added or configured. Defaults to false.
-     */
-    AllowOnlyPolicyNetworksToConnect?: boolean;
-
-    /**
-     * If true and a managed network is available in the visible network list, only
-     * policy networks may be connected to and no new networks may be added or
-     * configured. Defaults to false.
-     */
-    AllowOnlyPolicyNetworksToConnectIfAvailable?: boolean;
-
-    /**
-     * List of blocked networks. Connections to blocked networks are prohibited.
-     * Networks can be unblocked again by specifying an explicit network
-     * configuration. Defaults to an empty list.
-     */
-    BlockedHexSSIDs?: string[];
-  }
-
-  /**
-   * Gets all the properties of the network with id networkGuid. Includes all
-   * properties of the network (read-only and read/write values).
-   * @param networkGuid The GUID of the network to get properties for.
-   * @returns Called with the network properties when received.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getProperties
-   */
-  export function getProperties(
-    networkGuid: string,
-  ): Promise<{
-    result: NetworkProperties,
-  }>;
-
-  /**
-   * Gets all the properties of the network with id networkGuid. Includes all
-   * properties of the network (read-only and read/write values).
-   * @param networkGuid The GUID of the network to get properties for.
-   * @param callback Called with the network properties when received.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getProperties
-   */
-  export function getProperties(
-    networkGuid: string,
-    callback: (
-      result: NetworkProperties,
-    ) => void,
-  ): void;
-
-  /**
-   * Gets the merged properties of the network with id networkGuid from the
-   * sources: User settings, shared settings, user policy, device policy and the
-   * currently active settings.
-   * @param networkGuid The GUID of the network to get properties for.
-   * @returns Called with the managed network properties when received.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getManagedProperties
-   */
-  export function getManagedProperties(
-    networkGuid: string,
-  ): Promise<{
-    result: ManagedProperties,
-  }>;
-
-  /**
-   * Gets the merged properties of the network with id networkGuid from the
-   * sources: User settings, shared settings, user policy, device policy and the
-   * currently active settings.
-   * @param networkGuid The GUID of the network to get properties for.
-   * @param callback Called with the managed network properties when received.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getManagedProperties
-   */
-  export function getManagedProperties(
-    networkGuid: string,
-    callback: (
-      result: ManagedProperties,
-    ) => void,
-  ): void;
-
-  /**
-   * Gets the cached read-only properties of the network with id networkGuid.
-   * This is meant to be a higher performance function than {@link
-   * getProperties}, which requires a round trip to query the networking
-   * subsystem. The following properties are returned for all networks: GUID,
-   * Type, Name, WiFi.Security. Additional properties are provided for visible
-   * networks: ConnectionState, ErrorState, WiFi.SignalStrength,
-   * Cellular.NetworkTechnology, Cellular.ActivationState,
-   * Cellular.RoamingState.
-   * @param networkGuid The GUID of the network to get properties for.
-   * @returns Called immediately with the network state properties.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getState
-   */
-  export function getState(
-    networkGuid: string,
-  ): Promise<{
-    result: NetworkStateProperties,
-  }>;
-
-  /**
-   * Gets the cached read-only properties of the network with id networkGuid.
-   * This is meant to be a higher performance function than {@link
-   * getProperties}, which requires a round trip to query the networking
-   * subsystem. The following properties are returned for all networks: GUID,
-   * Type, Name, WiFi.Security. Additional properties are provided for visible
-   * networks: ConnectionState, ErrorState, WiFi.SignalStrength,
-   * Cellular.NetworkTechnology, Cellular.ActivationState,
-   * Cellular.RoamingState.
-   * @param networkGuid The GUID of the network to get properties for.
-   * @param callback Called immediately with the network state properties.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getState
-   */
-  export function getState(
-    networkGuid: string,
-    callback: (
-      result: NetworkStateProperties,
-    ) => void,
-  ): void;
-
-  /**
-   * Sets the properties of the network with id |networkGuid|. This is only
-   * valid for configured networks (Source != None). Unconfigured visible
-   * networks should use {@link createNetwork} instead. <b>   In kiosk sessions,
-   * calling this method on a shared network will fail. </b>
-   * @param networkGuid The GUID of the network to set properties for.
-   * @param properties The properties to set.
-   * @returns Called when the operation has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-setProperties
-   */
-  export function setProperties(
-    networkGuid: string,
-    properties: NetworkConfigProperties,
-  ): Promise<void>;
-
-  /**
-   * Sets the properties of the network with id |networkGuid|. This is only
-   * valid for configured networks (Source != None). Unconfigured visible
-   * networks should use {@link createNetwork} instead. <b>   In kiosk sessions,
-   * calling this method on a shared network will fail. </b>
-   * @param networkGuid The GUID of the network to set properties for.
-   * @param properties The properties to set.
-   * @param callback Called when the operation has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-setProperties
-   */
-  export function setProperties(
-    networkGuid: string,
-    properties: NetworkConfigProperties,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Creates a new network configuration from properties. If a matching
-   * configured network already exists, this will fail. Otherwise returns the
-   * GUID of the new network.
-   * @param shared <p>     If <code>true</code>, share this network
-   *     configuration with     other users.     </p>     <p>       <b>This
-   *     option is exposed only to Chrome's Web UI.</b>       When called by
-   *     apps, <code>false</code> is the only allowed value.     </p>
-   * @param properties The properties to configure the new network with.
-   * @returns Called with the GUID for the new network configuration once
-   *     the network has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-createNetwork
-   */
-  export function createNetwork(
-    shared: boolean,
-    properties: NetworkConfigProperties,
-  ): Promise<{
-    result: string,
-  }>;
-
-  /**
-   * Creates a new network configuration from properties. If a matching
-   * configured network already exists, this will fail. Otherwise returns the
-   * GUID of the new network.
-   * @param shared <p>     If <code>true</code>, share this network
-   *     configuration with     other users.     </p>     <p>       <b>This
-   *     option is exposed only to Chrome's Web UI.</b>       When called by
-   *     apps, <code>false</code> is the only allowed value.     </p>
-   * @param properties The properties to configure the new network with.
-   * @param callback Called with the GUID for the new network configuration once
-   *     the network has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-createNetwork
-   */
-  export function createNetwork(
-    shared: boolean,
-    properties: NetworkConfigProperties,
-    callback?: (
-      result: string,
-    ) => void,
-  ): void;
-
-  /**
-   * <p>   Forgets a network configuration by clearing any configured properties
-   * for the network with GUID <code>networkGuid</code>. This may also   include
-   * any other networks with matching identifiers (e.g. WiFi SSID   and
-   * Security). If no such configuration exists, an error will be set   and the
-   * operation will fail. </p> <p>   <b>In kiosk sessions, this method will not
-   * be able to forget shared      network configurations.</b> </p>
-   * @param networkGuid The GUID of the network to forget.
-   * @returns Called when the operation has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-forgetNetwork
-   */
-  export function forgetNetwork(
-    networkGuid: string,
-  ): Promise<void>;
-
-  /**
-   * <p>   Forgets a network configuration by clearing any configured properties
-   * for the network with GUID <code>networkGuid</code>. This may also   include
-   * any other networks with matching identifiers (e.g. WiFi SSID   and
-   * Security). If no such configuration exists, an error will be set   and the
-   * operation will fail. </p> <p>   <b>In kiosk sessions, this method will not
-   * be able to forget shared      network configurations.</b> </p>
-   * @param networkGuid The GUID of the network to forget.
-   * @param callback Called when the operation has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-forgetNetwork
-   */
-  export function forgetNetwork(
-    networkGuid: string,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Returns a list of network objects with the same properties provided by
-   * {@link getState}. A filter is provided to specify the type of networks
-   * returned and to limit the number of networks. Networks are ordered by the
-   * system based on their priority, with connected or connecting networks
-   * listed first.
-   * @param filter Describes which networks to return.
-   * @returns Called with a dictionary of networks and their state
-   *     properties when received.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getNetworks
-   */
-  export function getNetworks(
-    filter: NetworkFilter,
-  ): Promise<{
-    result: NetworkStateProperties[],
-  }>;
-
-  /**
-   * Returns a list of network objects with the same properties provided by
-   * {@link getState}. A filter is provided to specify the type of networks
-   * returned and to limit the number of networks. Networks are ordered by the
-   * system based on their priority, with connected or connecting networks
-   * listed first.
-   * @param filter Describes which networks to return.
-   * @param callback Called with a dictionary of networks and their state
-   *     properties when received.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getNetworks
-   */
-  export function getNetworks(
-    filter: NetworkFilter,
-    callback: (
-      result: NetworkStateProperties[],
-    ) => void,
-  ): void;
-
-  /**
-   * Returns states of available networking devices.
-   * @returns Called with a list of devices and their state.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getDeviceStates
-   */
-  export function getDeviceStates(): Promise<{
-    result: DeviceStateProperties[],
-  }>;
-
-  /**
-   * Returns states of available networking devices.
-   * @param callback Called with a list of devices and their state.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getDeviceStates
-   */
-  export function getDeviceStates(
-    callback: (
-      result: DeviceStateProperties[],
-    ) => void,
-  ): void;
-
-  /**
-   * Enables any devices matching the specified network type. Note, the type
-   * might represent multiple network types (e.g. 'Wireless').
-   * @param networkType The type of network to enable.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-enableNetworkType
-   */
-  export function enableNetworkType(
-    networkType: NetworkType,
-  ): void;
-
-  /**
-   * Disables any devices matching the specified network type. See note for
-   * {@link enableNetworkType}.
-   * @param networkType The type of network to disable.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-disableNetworkType
-   */
-  export function disableNetworkType(
-    networkType: NetworkType,
-  ): void;
-
-  /**
-   * Requests that the networking subsystem scan for new networks and update the
-   * list returned by {@link getVisibleNetworks}. This is only a request: the
-   * network subsystem can choose to ignore it.  If the list is updated, then
-   * the {@link onNetworkListChanged} event will be fired.
-   * @param networkType If provided, requests a scan specific to the type.
-   *     For Cellular a mobile network scan will be requested if supported.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-requestNetworkScan
-   */
-  export function requestNetworkScan(
-    networkType?: NetworkType,
-  ): void;
-
-  /**
-   * Starts a connection to the network with networkGuid.
-   * @param networkGuid The GUID of the network to connect to.
-   * @returns Called when the connect request has been sent. Note: the
-   *     connection may not have completed. Observe {@link onNetworksChanged}
-   *     to be notified when a network state changes. If the connect request
-   *     immediately failed (e.g. the network is unconfigured),     {@link
-   *     runtime.lastError} will be set with a failure reason.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-startConnect
-   */
-  export function startConnect(
-    networkGuid: string,
-  ): Promise<void>;
-
-  /**
-   * Starts a connection to the network with networkGuid.
-   * @param networkGuid The GUID of the network to connect to.
-   * @param callback Called when the connect request has been sent. Note: the
-   *     connection may not have completed. Observe {@link onNetworksChanged}
-   *     to be notified when a network state changes. If the connect request
-   *     immediately failed (e.g. the network is unconfigured),     {@link
-   *     runtime.lastError} will be set with a failure reason.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-startConnect
-   */
-  export function startConnect(
-    networkGuid: string,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Starts a disconnect from the network with networkGuid.
-   * @param networkGuid The GUID of the network to disconnect from.
-   * @returns Called when the disconnect request has been sent. See note     for
-   *     {@link startConnect}.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-startDisconnect
-   */
-  export function startDisconnect(
-    networkGuid: string,
-  ): Promise<void>;
-
-  /**
-   * Starts a disconnect from the network with networkGuid.
-   * @param networkGuid The GUID of the network to disconnect from.
-   * @param callback Called when the disconnect request has been sent. See note
-   *     for {@link startConnect}.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-startDisconnect
-   */
-  export function startDisconnect(
-    networkGuid: string,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Returns captive portal status for the network matching 'networkGuid'.
-   * @param networkGuid The GUID of the network to get captive portal status
-   *     for.
-   * @returns A callback function that returns the results of the query for
-   *     network captive portal status.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getCaptivePortalStatus
-   */
-  export function getCaptivePortalStatus(
-    networkGuid: string,
-  ): Promise<{
-    result: CaptivePortalStatus,
-  }>;
-
-  /**
-   * Returns captive portal status for the network matching 'networkGuid'.
-   * @param networkGuid The GUID of the network to get captive portal status
-   *     for.
-   * @param callback A callback function that returns the results of the query
-   *     for     network captive portal status.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getCaptivePortalStatus
-   */
-  export function getCaptivePortalStatus(
-    networkGuid: string,
-    callback: (
-      result: CaptivePortalStatus,
-    ) => void,
-  ): void;
-
-  /**
-   * Gets the global policy properties. These properties are not expected to
-   * change during a session.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getGlobalPolicy
-   */
-  export function getGlobalPolicy(): Promise<{
-    result: GlobalPolicy,
-  }>;
-
-  /**
-   * Gets the global policy properties. These properties are not expected to
-   * change during a session.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#method-getGlobalPolicy
-   */
-  export function getGlobalPolicy(
-    callback: (
-      result: GlobalPolicy,
-    ) => void,
-  ): void;
-
-  /**
-   * Fired when the properties change on any of the networks.  Sends a list of
-   * GUIDs for networks whose properties have changed.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#event-onNetworksChanged
-   */
-  export const onNetworksChanged: chrome.events.Event<(
-    changes: string[],
-  ) => void>;
-
-  /**
-   * Fired when the list of networks has changed.  Sends a complete list of
-   * GUIDs for all the current networks.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#event-onNetworkListChanged
-   */
-  export const onNetworkListChanged: chrome.events.Event<(
-    changes: string[],
-  ) => void>;
-
-  /**
-   * Fired when the list of devices has changed or any device state properties
-   * have changed.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#event-onDeviceStateListChanged
-   */
-  export const onDeviceStateListChanged: chrome.events.Event<() => void>;
-
-  /**
-   * Fired when a portal detection for a network completes. Sends the GUID of
-   * the network and the corresponding captive portal status.
-   * @see https://developer.chrome.com/docs/extensions/reference/networking.onc/#event-onPortalDetectionCompleted
-   */
-  export const onPortalDetectionCompleted: chrome.events.Event<(
-    networkGuid: string,
-    status: CaptivePortalStatus,
-  ) => void>;
-}
 /**
  * Use the <code>chrome.notifications</code> API to create rich notifications
  * using templates and show these notifications to users in the system tray.
  * @see https://developer.chrome.com/docs/extensions/reference/notifications/
+ * @chrome-permission notifications
  */
 declare namespace chrome.notifications {
   /**
@@ -25342,6 +18875,7 @@ declare namespace chrome.notifications {
    */
   export const onShowSettings: chrome.events.Event<() => void>;
 }
+
 /**
  * The omnibox API allows you to register a keyword with Google Chrome's address
  * bar, which is also known as the omnibox.
@@ -25527,6 +19061,7 @@ declare namespace chrome.omnibox {
     text: string,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.pageAction</code> API to put icons in the main Google
  * Chrome toolbar, to the right of the address bar. Page actions represent
@@ -25836,9 +19371,11 @@ declare namespace chrome.pageAction {
     tab: tabs.Tab,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.pageCapture</code> API to save a tab as MHTML.
  * @see https://developer.chrome.com/docs/extensions/reference/pageCapture/
+ * @chrome-permission pageCapture
  */
 declare namespace chrome.pageCapture {
   /**
@@ -25882,361 +19419,7 @@ declare namespace chrome.pageCapture {
     ) => void,
   ): void;
 }
-/**
- * Use the <code>chrome.devtools.panels</code> API to integrate your extension
- * into Developer Tools window UI: create your own panels, access existing
- * panels, and add sidebars.
- * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/
- */
-declare namespace chrome.devtools.panels {
-  /**
-   * Represents the Elements panel.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#type-ElementsPanel
-   */
-  export interface ElementsPanel {
-    /**
-     * Creates a pane within panel's sidebar.
-     * @param title Text that is displayed in sidebar caption.
-     * @param callback A callback invoked when the sidebar is created.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-createSidebarPane
-     */
-    createSidebarPane(
-      title: string,
-      callback?: (
-        /**
-         * An ExtensionSidebarPane object for created sidebar pane.
-         */
-        result: ExtensionSidebarPane,
-      ) => void,
-    ): void;
 
-    /**
-     * Fired when an object is selected in the panel.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onSelectionChanged
-     */
-    onSelectionChanged: chrome.events.Event<() => void>;
-  }
-
-  /**
-   * Represents the Sources panel.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#type-SourcesPanel
-   */
-  export interface SourcesPanel {
-    /**
-     * Creates a pane within panel's sidebar.
-     * @param title Text that is displayed in sidebar caption.
-     * @param callback A callback invoked when the sidebar is created.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-createSidebarPane
-     */
-    createSidebarPane(
-      title: string,
-      callback?: (
-        /**
-         * An ExtensionSidebarPane object for created sidebar pane.
-         */
-        result: ExtensionSidebarPane,
-      ) => void,
-    ): void;
-
-    /**
-     * Fired when an object is selected in the panel.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onSelectionChanged
-     */
-    onSelectionChanged: chrome.events.Event<() => void>;
-  }
-
-  /**
-   * Represents a panel created by extension.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#type-ExtensionPanel
-   */
-  export interface ExtensionPanel {
-    /**
-     * Appends a button to the status bar of the panel.
-     * @param iconPath Path to the icon of the button. The file should contain a
-     *     64x24-pixel image composed of two 32x24 icons. The left icon is used
-     *     when the button is inactive; the right icon is displayed when the
-     *     button is pressed.
-     * @param tooltipText Text shown as a tooltip when user hovers the mouse
-     *     over the button.
-     * @param disabled Whether the button is disabled.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-createStatusBarButton
-     */
-    createStatusBarButton(
-      iconPath: string,
-      tooltipText: string,
-      disabled: boolean,
-    ): Button;
-
-    /**
-     * Fired upon a search action (start of a new search, search result
-     * navigation, or search being canceled).
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onSearch
-     */
-    onSearch: chrome.events.Event<(
-      /**
-       * Type of search action being performed.
-       */
-      action: string,
-
-      /**
-       * Query string (only for 'performSearch').
-       */
-      queryString?: string,
-    ) => void>;
-
-    /**
-     * Fired when the user switches to the panel.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onShown
-     */
-    onShown: chrome.events.Event<(
-      /**
-       * The JavaScript <code>window</code> object of panel's page.
-       */
-      window: global,
-    ) => void>;
-
-    /**
-     * Fired when the user switches away from the panel.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onHidden
-     */
-    onHidden: chrome.events.Event<() => void>;
-  }
-
-  /**
-   * A sidebar created by the extension.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#type-ExtensionSidebarPane
-   */
-  export interface ExtensionSidebarPane {
-    /**
-     * Sets the height of the sidebar.
-     * @param height A CSS-like size specification, such as <code>'100px'</code>
-     *     or <code>'12ex'</code>.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setHeight
-     */
-    setHeight(
-      height: string,
-    ): void;
-
-    /**
-     * Sets an expression that is evaluated within the inspected page. The
-     * result is displayed in the sidebar pane.
-     * @param expression An expression to be evaluated in context of the
-     *     inspected page. JavaScript objects and DOM nodes are displayed in an
-     *     expandable tree similar to the console/watch.
-     * @param rootTitle An optional title for the root of the expression tree.
-     * @param callback A callback invoked after the sidebar pane is updated with
-     *     the expression evaluation results.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setExpression
-     */
-    setExpression(
-      expression: string,
-      rootTitle?: string,
-      callback?: () => void,
-    ): void;
-
-    /**
-     * Sets a JSON-compliant object to be displayed in the sidebar pane.
-     * @param jsonObject An object to be displayed in context of the inspected
-     *     page. Evaluated in the context of the caller (API client).
-     * @param rootTitle An optional title for the root of the expression tree.
-     * @param callback A callback invoked after the sidebar is updated with the
-     *     object.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setObject
-     */
-    setObject(
-      jsonObject: string,
-      rootTitle?: string,
-      callback?: () => void,
-    ): void;
-
-    /**
-     * Sets an HTML page to be displayed in the sidebar pane.
-     * @param path Relative path of an extension page to display within the
-     *     sidebar.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setPage
-     */
-    setPage(
-      path: string,
-    ): void;
-
-    /**
-     * Fired when the sidebar pane becomes visible as a result of user switching
-     * to the panel that hosts it.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onShown
-     */
-    onShown: chrome.events.Event<(
-      /**
-       * The JavaScript <code>window</code> object of the sidebar page, if one was set
-       * with the <code>setPage()</code> method.
-       */
-      window: global,
-    ) => void>;
-
-    /**
-     * Fired when the sidebar pane becomes hidden as a result of the user
-     * switching away from the panel that hosts the sidebar pane.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onHidden
-     */
-    onHidden: chrome.events.Event<() => void>;
-  }
-
-  /**
-   * A button created by the extension.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#type-Button
-   */
-  export interface Button {
-    /**
-     * Updates the attributes of the button. If some of the arguments are
-     * omitted or <code>null</code>, the corresponding attributes are not
-     * updated.
-     * @param iconPath Path to the new icon of the button.
-     * @param tooltipText Text shown as a tooltip when user hovers the mouse
-     *     over the button.
-     * @param disabled Whether the button is disabled.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-update
-     */
-    update(
-      iconPath?: string,
-      tooltipText?: string,
-      disabled?: boolean,
-    ): void;
-
-    /**
-     * Fired when the button is clicked.
-     * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#event-onClicked
-     */
-    onClicked: chrome.events.Event<() => void>;
-  }
-
-  /**
-   * Elements panel.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#property-elements
-   */
-  export const elements: ElementsPanel;
-
-  /**
-   * Sources panel.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#property-sources
-   */
-  export const sources: SourcesPanel;
-
-  /**
-   * The name of the color theme set in user's DevTools settings. Possible values:
-   * <code>default</code> (the default) and <code>dark</code>.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#property-themeName
-   */
-  export const themeName: string;
-
-  /**
-   * Creates an extension panel.
-   * @param title Title that is displayed next to the extension icon in the
-   *     Developer Tools toolbar.
-   * @param iconPath Path of the panel's icon relative to the extension
-   *     directory.
-   * @param pagePath Path of the panel's HTML page relative to the extension
-   *     directory.
-   * @returns A function that is called when the panel is created.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-create
-   */
-  export function create(
-    title: string,
-    iconPath: string,
-    pagePath: string,
-  ): Promise<{
-    /**
-     * An ExtensionPanel object representing the created panel.
-     */
-    panel: ExtensionPanel,
-  }>;
-
-  /**
-   * Creates an extension panel.
-   * @param title Title that is displayed next to the extension icon in the
-   *     Developer Tools toolbar.
-   * @param iconPath Path of the panel's icon relative to the extension
-   *     directory.
-   * @param pagePath Path of the panel's HTML page relative to the extension
-   *     directory.
-   * @param callback A function that is called when the panel is created.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-create
-   */
-  export function create(
-    title: string,
-    iconPath: string,
-    pagePath: string,
-    callback?: (
-      /**
-       * An ExtensionPanel object representing the created panel.
-       */
-      panel: ExtensionPanel,
-    ) => void,
-  ): void;
-
-  /**
-   * Specifies the function to be called when the user clicks a resource link in
-   * the Developer Tools window. To unset the handler, either call the method
-   * with no parameters or pass null as the parameter.
-   * @returns A function that is called when the user clicks on a valid resource
-   *     link in Developer Tools window. Note that if the user clicks an invalid
-   *     URL or an XHR, this function is not called.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setOpenResourceHandler
-   */
-  export function setOpenResourceHandler(): Promise<{
-    /**
-     * A {@link devtools.inspectedWindow.Resource} object for the resource that was
-     * clicked.
-     */
-    resource: devtools.inspectedWindow.Resource,
-  }>;
-
-  /**
-   * Specifies the function to be called when the user clicks a resource link in
-   * the Developer Tools window. To unset the handler, either call the method
-   * with no parameters or pass null as the parameter.
-   * @param callback A function that is called when the user clicks on a valid
-   *     resource link in Developer Tools window. Note that if the user clicks
-   *     an invalid URL or an XHR, this function is not called.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-setOpenResourceHandler
-   */
-  export function setOpenResourceHandler(
-    callback?: (
-      /**
-       * A {@link devtools.inspectedWindow.Resource} object for the resource that was
-       * clicked.
-       */
-      resource: devtools.inspectedWindow.Resource,
-    ) => void,
-  ): void;
-
-  /**
-   * Requests DevTools to open a URL in a Developer Tools panel.
-   * @param url The URL of the resource to open.
-   * @param lineNumber Specifies the line number to scroll to when the resource
-   *     is loaded.
-   * @returns A function that is called when the resource has been successfully
-   *     loaded.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-openResource
-   */
-  export function openResource(
-    url: string,
-    lineNumber: number,
-  ): Promise<void>;
-
-  /**
-   * Requests DevTools to open a URL in a Developer Tools panel.
-   * @param url The URL of the resource to open.
-   * @param lineNumber Specifies the line number to scroll to when the resource
-   *     is loaded.
-   * @param callback A function that is called when the resource has been
-   *     successfully loaded.
-   * @see https://developer.chrome.com/docs/extensions/reference/devtools.panels/#method-openResource
-   */
-  export function openResource(
-    url: string,
-    lineNumber: number,
-    callback?: () => void,
-  ): void;
-}
 /**
  * Use the <code>chrome.permissions</code> API to request <a
  * href='permissions#manifest'>declared optional permissions</a> at run time
@@ -26430,6 +19613,7 @@ declare namespace chrome.permissions {
     permissions: Permissions,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.platformKeys</code> API to access client certificates
  * managed by the platform. If the user or policy grants the permission, an
@@ -26437,6 +19621,8 @@ declare namespace chrome.permissions {
  * E.g. this allows usage of platform managed certificates in third party VPNs
  * (see {@link vpnProvider chrome.vpnProvider}).
  * @see https://developer.chrome.com/docs/extensions/reference/platformKeys/
+ * @chrome-platform chromeos
+ * @chrome-permission platformKeys
  */
 declare namespace chrome.platformKeys {
   /**
@@ -26750,10 +19936,12 @@ declare namespace chrome.platformKeys {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.power</code> API to override the system's power
  * management features.
  * @see https://developer.chrome.com/docs/extensions/reference/power/
+ * @chrome-permission power
  */
 declare namespace chrome.power {
   /**
@@ -26779,11 +19967,13 @@ declare namespace chrome.power {
    */
   export function releaseKeepAwake(): void;
 }
+
 /**
  * The <code>chrome.printerProvider</code> API exposes events used by print
  * manager to query printers controlled by extensions, to query their
  * capabilities and to submit print jobs to these printers.
  * @see https://developer.chrome.com/docs/extensions/reference/printerProvider/
+ * @chrome-permission printerProvider
  */
 declare namespace chrome.printerProvider {
   /**
@@ -26925,11 +20115,14 @@ declare namespace chrome.printerProvider {
     ) => void,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.printingMetrics</code> API to fetch data about
  printing
  * usage.
  * @see https://developer.chrome.com/docs/extensions/reference/printingMetrics/
+ * @chrome-platform chromeos
+ * @chrome-permission printingMetrics
  */
 declare namespace chrome.printingMetrics {
   /**
@@ -27115,10 +20308,13 @@ declare namespace chrome.printingMetrics {
     jobInfo: PrintJobInfo,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.printing</code> API to send print jobs to printers
  * installed on Chromebook.
  * @see https://developer.chrome.com/docs/extensions/reference/printing/
+ * @chrome-platform chromeos
+ * @chrome-permission printing
  */
 declare namespace chrome.printing {
   /**
@@ -27367,12 +20563,14 @@ declare namespace chrome.printing {
     status: JobStatus,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.privacy</code> API to control usage of the features in
  * Chrome that can affect a user's privacy. This API relies on the <a
  * href='types#ChromeSetting'>ChromeSetting prototype of the type API</a> for
  * getting and setting Chrome's configuration.
  * @see https://developer.chrome.com/docs/extensions/reference/privacy/
+ * @chrome-permission privacy
  */
 declare namespace chrome.privacy {
   /**
@@ -27518,10 +20716,13 @@ declare namespace chrome.privacy {
     protectedContentEnabled: types.ChromeSetting<boolean>,
   };
 }
+
 /**
  * Use the <code>chrome.processes</code> API to interact with the browser's
  * processes.
  * @see https://developer.chrome.com/docs/extensions/reference/processes/
+ * @alpha
+ * @chrome-permission processes
  */
 declare namespace chrome.processes {
   /**
@@ -27858,11 +21059,14 @@ declare namespace chrome.processes {
     exitCode: number,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.proxy</code> API to manage Chrome's proxy settings. This
  * API relies on the <a href='types#ChromeSetting'>ChromeSetting prototype of
  * the type API</a> for getting and setting the proxy configuration.
  * @see https://developer.chrome.com/docs/extensions/reference/proxy/
+ * @chrome-platform chromeos
+ * @chrome-permission proxy
  */
 declare namespace chrome.proxy {
   /**
@@ -28015,6 +21219,7 @@ declare namespace chrome.proxy {
     },
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.runtime</code> API to retrieve the background page,
  * return details about the manifest, and listen for and respond to events in
@@ -28860,10 +22065,12 @@ declare namespace chrome.runtime {
     reason: OnRestartRequiredReason,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.scripting</code> API to execute script in different
  * contexts.
  * @see https://developer.chrome.com/docs/extensions/reference/scripting/
+ * @chrome-permission scripting
  */
 declare namespace chrome.scripting {
   /**
@@ -29009,9 +22216,11 @@ declare namespace chrome.scripting {
     callback?: () => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.search</code> API to search via the default provider.
  * @see https://developer.chrome.com/docs/extensions/reference/search/
+ * @chrome-permission search
  */
 declare namespace chrome.search {
   /**
@@ -29063,670 +22272,12 @@ declare namespace chrome.search {
     callback?: () => void,
   ): void;
 }
-/**
- * Use the <code>chrome.serial</code> API to read from and write to a device
- * connected to a serial port.
- * @see https://developer.chrome.com/docs/extensions/reference/serial/
- */
-declare namespace chrome.serial {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-DeviceInfo
-   */
-  export interface DeviceInfo {
-    /**
-     * The device's system path. This should be passed as the <code>path</code>
-     * argument to <code>chrome.serial.connect</code> in order to connect to this
-     * device.
-     */
-    path: string;
 
-    /**
-     * A PCI or USB vendor ID if one can be determined for the underlying device.
-     */
-    vendorId?: number;
-
-    /**
-     * A USB product ID if one can be determined for the underlying device.
-     */
-    productId?: number;
-
-    /**
-     * A human-readable display name for the underlying device if one can be queried
-     * from the host driver.
-     */
-    displayName?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-DataBits
-   */
-  export type DataBits = "seven" | "eight";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-ParityBit
-   */
-  export type ParityBit = "no" | "odd" | "even";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-StopBits
-   */
-  export type StopBits = "one" | "two";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-ConnectionOptions
-   */
-  export interface ConnectionOptions {
-    /**
-     * Flag indicating whether or not the connection should be left open when the
-     * application is suspended (see <a
-     * href="http://developer.chrome.com/apps/app_lifecycle.html">Manage App
-     * Lifecycle</a>). The default value is "false." When the application is loaded,
-     * any serial connections previously opened with persistent=true can be fetched
-     * with <code>getConnections</code>.
-     */
-    persistent?: boolean;
-
-    /**
-     * An application-defined string to associate with the connection.
-     */
-    name?: string;
-
-    /**
-     * The size of the buffer used to receive data. The default value is 4096.
-     */
-    bufferSize?: number;
-
-    /**
-     * The requested bitrate of the connection to be opened. For compatibility with
-     * the widest range of hardware, this number should match one of
-     * commonly-available bitrates, such as 110, 300, 1200, 2400, 4800, 9600, 14400,
-     * 19200, 38400, 57600, 115200. There is no guarantee, of course, that the
-     * device connected to the serial port will support the requested bitrate, even
-     * if the port itself supports that bitrate. <code>9600</code> will be passed by
-     * default.
-     */
-    bitrate?: number;
-
-    /**
-     * <code>"eight"</code> will be passed by default.
-     */
-    dataBits?: DataBits;
-
-    /**
-     * <code>"no"</code> will be passed by default.
-     */
-    parityBit?: ParityBit;
-
-    /**
-     * <code>"one"</code> will be passed by default.
-     */
-    stopBits?: StopBits;
-
-    /**
-     * Flag indicating whether or not to enable RTS/CTS hardware flow control.
-     * Defaults to false.
-     */
-    ctsFlowControl?: boolean;
-
-    /**
-     * The maximum amount of time (in milliseconds) to wait for new data before
-     * raising an <code>onReceiveError</code> event with a "timeout" error. If zero,
-     * receive timeout errors will not be raised for the connection. Defaults to 0.
-     */
-    receiveTimeout?: number;
-
-    /**
-     * The maximum amount of time (in milliseconds) to wait for a <code>send</code>
-     * operation to complete before calling the callback with a "timeout" error. If
-     * zero, send timeout errors will not be triggered. Defaults to 0.
-     */
-    sendTimeout?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-ConnectionInfo
-   */
-  export interface ConnectionInfo {
-    /**
-     * The id of the serial port connection.
-     */
-    connectionId: number;
-
-    /**
-     * Flag indicating whether the connection is blocked from firing onReceive
-     * events.
-     */
-    paused: boolean;
-
-    /**
-     * See <code>ConnectionOptions.persistent</code>
-     */
-    persistent: boolean;
-
-    /**
-     * See <code>ConnectionOptions.name</code>
-     */
-    name: string;
-
-    /**
-     * See <code>ConnectionOptions.bufferSize</code>
-     */
-    bufferSize: number;
-
-    /**
-     * See <code>ConnectionOptions.receiveTimeout</code>
-     */
-    receiveTimeout: number;
-
-    /**
-     * See <code>ConnectionOptions.sendTimeout</code>
-     */
-    sendTimeout: number;
-
-    /**
-     * See <code>ConnectionOptions.bitrate</code>. This field may be omitted or
-     * inaccurate if a non-standard bitrate is in use, or if an error occurred while
-     * querying the underlying device.
-     */
-    bitrate?: number;
-
-    /**
-     * See <code>ConnectionOptions.dataBits</code>. This field may be omitted if an
-     * error occurred while querying the underlying device.
-     */
-    dataBits?: DataBits;
-
-    /**
-     * See <code>ConnectionOptions.parityBit</code>. This field may be omitted if an
-     * error occurred while querying the underlying device.
-     */
-    parityBit?: ParityBit;
-
-    /**
-     * See <code>ConnectionOptions.stopBits</code>. This field may be omitted if an
-     * error occurred while querying the underlying device.
-     */
-    stopBits?: StopBits;
-
-    /**
-     * See <code>ConnectionOptions.ctsFlowControl</code>. This field may be omitted
-     * if an error occurred while querying the underlying device.
-     */
-    ctsFlowControl?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-SendError
-   */
-  export type SendError = "disconnected" | "pending" | "timeout" | "system_error";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-SendInfo
-   */
-  export interface SendInfo {
-    /**
-     * The number of bytes sent.
-     */
-    bytesSent: number;
-
-    /**
-     * An error code if an error occurred.
-     */
-    error?: SendError;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-HostControlSignals
-   */
-  export interface HostControlSignals {
-    /**
-     * DTR (Data Terminal Ready).
-     */
-    dtr?: boolean;
-
-    /**
-     * RTS (Request To Send).
-     */
-    rts?: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-DeviceControlSignals
-   */
-  export interface DeviceControlSignals {
-    /**
-     * DCD (Data Carrier Detect) or RLSD (Receive Line Signal/ Detect).
-     */
-    dcd: boolean;
-
-    /**
-     * CTS (Clear To Send).
-     */
-    cts: boolean;
-
-    /**
-     * RI (Ring Indicator).
-     */
-    ri: boolean;
-
-    /**
-     * DSR (Data Set Ready).
-     */
-    dsr: boolean;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-ReceiveInfo
-   */
-  export interface ReceiveInfo {
-    /**
-     * The connection identifier.
-     */
-    connectionId: number;
-
-    /**
-     * The data received.
-     */
-    data: ArrayBuffer;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-ReceiveError
-   */
-  export type ReceiveError = "disconnected" | "timeout" | "device_lost" | "break" | "frame_error" | "overrun" | "buffer_overflow" | "parity_error" | "system_error";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#type-ReceiveErrorInfo
-   */
-  export interface ReceiveErrorInfo {
-    /**
-     * The connection identifier.
-     */
-    connectionId: number;
-
-    /**
-     * An error code indicating what went wrong.
-     */
-    error: ReceiveError;
-  }
-
-  /**
-   * Returns information about available serial devices on the system. The list
-   * is regenerated each time this method is called.
-   * @returns Called with the list of <code>DeviceInfo</code> objects.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-getDevices
-   */
-  export function getDevices(): Promise<{
-    ports: DeviceInfo[],
-  }>;
-
-  /**
-   * Returns information about available serial devices on the system. The list
-   * is regenerated each time this method is called.
-   * @param callback Called with the list of <code>DeviceInfo</code> objects.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-getDevices
-   */
-  export function getDevices(
-    callback: (
-      ports: DeviceInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Connects to a given serial port.
-   * @param path The system path of the serial port to open.
-   * @param options Port configuration options.
-   * @returns Called when the connection has been opened.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-connect
-   */
-  export function connect(
-    path: string,
-    options?: ConnectionOptions,
-  ): Promise<{
-    connectionInfo: ConnectionInfo,
-  }>;
-
-  /**
-   * Connects to a given serial port.
-   * @param path The system path of the serial port to open.
-   * @param options Port configuration options.
-   * @param callback Called when the connection has been opened.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-connect
-   */
-  export function connect(
-    path: string,
-    options: ConnectionOptions,
-    callback: (
-      connectionInfo: ConnectionInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Connects to a given serial port.
-   * @param path The system path of the serial port to open.
-   * @param callback Called when the connection has been opened.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-connect
-   */
-  export function connect(
-    path: string,
-    callback: (
-      connectionInfo: ConnectionInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Update the option settings on an open serial port connection.
-   * @param connectionId The id of the opened connection.
-   * @param options Port configuration options.
-   * @returns Called when the configuation has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-update
-   */
-  export function update(
-    connectionId: number,
-    options: ConnectionOptions,
-  ): Promise<{
-    result: boolean,
-  }>;
-
-  /**
-   * Update the option settings on an open serial port connection.
-   * @param connectionId The id of the opened connection.
-   * @param options Port configuration options.
-   * @param callback Called when the configuation has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-update
-   */
-  export function update(
-    connectionId: number,
-    options: ConnectionOptions,
-    callback: (
-      result: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Disconnects from a serial port.
-   * @param connectionId The id of the opened connection.
-   * @returns Called when the connection has been closed.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-disconnect
-   */
-  export function disconnect(
-    connectionId: number,
-  ): Promise<{
-    result: boolean,
-  }>;
-
-  /**
-   * Disconnects from a serial port.
-   * @param connectionId The id of the opened connection.
-   * @param callback Called when the connection has been closed.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-disconnect
-   */
-  export function disconnect(
-    connectionId: number,
-    callback: (
-      result: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Pauses or unpauses an open connection.
-   * @param connectionId The id of the opened connection.
-   * @param paused Flag to indicate whether to pause or unpause.
-   * @returns Called when the connection has been successfully paused or
-   *     unpaused.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-setPaused
-   */
-  export function setPaused(
-    connectionId: number,
-    paused: boolean,
-  ): Promise<void>;
-
-  /**
-   * Pauses or unpauses an open connection.
-   * @param connectionId The id of the opened connection.
-   * @param paused Flag to indicate whether to pause or unpause.
-   * @param callback Called when the connection has been successfully paused or
-   *     unpaused.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-setPaused
-   */
-  export function setPaused(
-    connectionId: number,
-    paused: boolean,
-    callback: () => void,
-  ): void;
-
-  /**
-   * Retrieves the state of a given connection.
-   * @param connectionId The id of the opened connection.
-   * @returns Called with connection state information when available.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-getInfo
-   */
-  export function getInfo(
-    connectionId: number,
-  ): Promise<{
-    connectionInfo: ConnectionInfo,
-  }>;
-
-  /**
-   * Retrieves the state of a given connection.
-   * @param connectionId The id of the opened connection.
-   * @param callback Called with connection state information when available.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-getInfo
-   */
-  export function getInfo(
-    connectionId: number,
-    callback: (
-      connectionInfo: ConnectionInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Retrieves the list of currently opened serial port connections owned by the
-   * application.
-   * @returns Called with the list of connections when available.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-getConnections
-   */
-  export function getConnections(): Promise<{
-    connectionInfos: ConnectionInfo[],
-  }>;
-
-  /**
-   * Retrieves the list of currently opened serial port connections owned by the
-   * application.
-   * @param callback Called with the list of connections when available.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-getConnections
-   */
-  export function getConnections(
-    callback: (
-      connectionInfos: ConnectionInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Writes data to the given connection.
-   * @param connectionId The id of the connection.
-   * @param data The data to send.
-   * @returns Called when the operation has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-send
-   */
-  export function send(
-    connectionId: number,
-    data: ArrayBuffer,
-  ): Promise<{
-    sendInfo: SendInfo,
-  }>;
-
-  /**
-   * Writes data to the given connection.
-   * @param connectionId The id of the connection.
-   * @param data The data to send.
-   * @param callback Called when the operation has completed.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-send
-   */
-  export function send(
-    connectionId: number,
-    data: ArrayBuffer,
-    callback: (
-      sendInfo: SendInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Flushes all bytes in the given connection's input and output buffers.
-   * @param connectionId
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-flush
-   */
-  export function flush(
-    connectionId: number,
-  ): Promise<{
-    result: boolean,
-  }>;
-
-  /**
-   * Flushes all bytes in the given connection's input and output buffers.
-   * @param connectionId
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-flush
-   */
-  export function flush(
-    connectionId: number,
-    callback: (
-      result: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Retrieves the state of control signals on a given connection.
-   * @param connectionId The id of the connection.
-   * @returns Called when the control signals are available.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-getControlSignals
-   */
-  export function getControlSignals(
-    connectionId: number,
-  ): Promise<{
-    signals: DeviceControlSignals,
-  }>;
-
-  /**
-   * Retrieves the state of control signals on a given connection.
-   * @param connectionId The id of the connection.
-   * @param callback Called when the control signals are available.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-getControlSignals
-   */
-  export function getControlSignals(
-    connectionId: number,
-    callback: (
-      signals: DeviceControlSignals,
-    ) => void,
-  ): void;
-
-  /**
-   * Sets the state of control signals on a given connection.
-   * @param connectionId The id of the connection.
-   * @param signals The set of signal changes to send to the device.
-   * @returns Called once the control signals have been set.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-setControlSignals
-   */
-  export function setControlSignals(
-    connectionId: number,
-    signals: HostControlSignals,
-  ): Promise<{
-    result: boolean,
-  }>;
-
-  /**
-   * Sets the state of control signals on a given connection.
-   * @param connectionId The id of the connection.
-   * @param signals The set of signal changes to send to the device.
-   * @param callback Called once the control signals have been set.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-setControlSignals
-   */
-  export function setControlSignals(
-    connectionId: number,
-    signals: HostControlSignals,
-    callback: (
-      result: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Suspends character transmission on a given connection and places the
-   * transmission line in a break state until the clearBreak is called.
-   * @param connectionId The id of the connection.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-setBreak
-   */
-  export function setBreak(
-    connectionId: number,
-  ): Promise<{
-    result: boolean,
-  }>;
-
-  /**
-   * Suspends character transmission on a given connection and places the
-   * transmission line in a break state until the clearBreak is called.
-   * @param connectionId The id of the connection.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-setBreak
-   */
-  export function setBreak(
-    connectionId: number,
-    callback: (
-      result: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Restore character transmission on a given connection and place the
-   * transmission line in a nonbreak state.
-   * @param connectionId The id of the connection.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-clearBreak
-   */
-  export function clearBreak(
-    connectionId: number,
-  ): Promise<{
-    result: boolean,
-  }>;
-
-  /**
-   * Restore character transmission on a given connection and place the
-   * transmission line in a nonbreak state.
-   * @param connectionId The id of the connection.
-   * @param callback
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#method-clearBreak
-   */
-  export function clearBreak(
-    connectionId: number,
-    callback: (
-      result: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Event raised when data has been read from the connection.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#event-onReceive
-   */
-  export const onReceive: chrome.events.Event<(
-    /**
-     * Event data.
-     */
-    info: ReceiveInfo,
-  ) => void>;
-
-  /**
-   * Event raised when an error occurred while the runtime was waiting for data
-   * on the serial port. Once this event is raised, the connection may be set to
-   * <code>paused</code>. A <code>"timeout"</code> error does not pause the
-   * connection.
-   * @see https://developer.chrome.com/docs/extensions/reference/serial/#event-onReceiveError
-   */
-  export const onReceiveError: chrome.events.Event<(
-    info: ReceiveErrorInfo,
-  ) => void>;
-}
 /**
  * Use the <code>chrome.sessions</code> API to query and restore tabs and
  * windows from a browsing session.
  * @see https://developer.chrome.com/docs/extensions/reference/sessions/
+ * @chrome-permission sessions
  */
 declare namespace chrome.sessions {
   /**
@@ -29937,10 +22488,13 @@ declare namespace chrome.sessions {
    */
   export const onChanged: chrome.events.Event<() => void>;
 }
+
 /**
  * Use the <code>chrome.signedInDevices</code> API to get a list of devices
  * signed into chrome with the same account as the current profile.
  * @see https://developer.chrome.com/docs/extensions/reference/signedInDevices/
+ * @alpha
+ * @chrome-permission signedInDevices
  */
 declare namespace chrome.signedInDevices {
   /**
@@ -30043,2693 +22597,12 @@ declare namespace chrome.signedInDevices {
     devices: DeviceInfo[],
   ) => void>;
 }
-/**
- * Use the <code>chrome.socket</code> API to send and receive data over the
- * network using TCP and UDP connections. <b>Note:</b> Starting with Chrome 33,
- * this API is deprecated in favor of the {@link sockets.udp}, {@link
- * sockets.tcp} and
- {@link sockets.tcpServer} APIs.
- * @see https://developer.chrome.com/docs/extensions/reference/socket/
- */
-declare namespace chrome.socket {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#type-SocketType
-   */
-  export type SocketType = "tcp" | "udp";
 
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#type-CreateOptions
-   */
-  export interface CreateOptions {
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#type-CreateInfo
-   */
-  export interface CreateInfo {
-    /**
-     * The id of the newly created socket.
-     */
-    socketId: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#type-AcceptInfo
-   */
-  export interface AcceptInfo {
-    resultCode: number;
-
-    /**
-     * The id of the accepted socket.
-     */
-    socketId?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#type-ReadInfo
-   */
-  export interface ReadInfo {
-    /**
-     * The resultCode returned from the underlying read() call.
-     */
-    resultCode: number;
-
-    data: ArrayBuffer;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#type-WriteInfo
-   */
-  export interface WriteInfo {
-    /**
-     * The number of bytes sent, or a negative error code.
-     */
-    bytesWritten: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#type-RecvFromInfo
-   */
-  export interface RecvFromInfo {
-    /**
-     * The resultCode returned from the underlying recvfrom() call.
-     */
-    resultCode: number;
-
-    data: ArrayBuffer;
-
-    /**
-     * The address of the remote machine.
-     */
-    address: string;
-
-    port: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#type-SocketInfo
-   */
-  export interface SocketInfo {
-    /**
-     * The type of the passed socket. This will be <code>tcp</code> or
-     * <code>udp</code>.
-     */
-    socketType: SocketType;
-
-    /**
-     * <p>Whether or not the underlying socket is connected.</p><p>For
-     * <code>tcp</code> sockets, this will remain true even if the remote peer has
-     * disconnected. Reading or writing to the socket may then result in an error,
-     * hinting that this socket should be disconnected via
-     * <code>disconnect()</code>.</p><p>For <code>udp</code> sockets, this just
-     * represents whether a default remote address has been specified for reading
-     * and writing packets.</p>
-     */
-    connected: boolean;
-
-    /**
-     * If the underlying socket is connected, contains the IPv4/6 address of the
-     * peer.
-     */
-    peerAddress?: string;
-
-    /**
-     * If the underlying socket is connected, contains the port of the connected
-     * peer.
-     */
-    peerPort?: number;
-
-    /**
-     * If the underlying socket is bound or connected, contains its local IPv4/6
-     * address.
-     */
-    localAddress?: string;
-
-    /**
-     * If the underlying socket is bound or connected, contains its local port.
-     */
-    localPort?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#type-NetworkInterface
-   */
-  export interface NetworkInterface {
-    /**
-     * The underlying name of the adapter. On *nix, this will typically be "eth0",
-     * "lo", etc.
-     */
-    name: string;
-
-    /**
-     * The available IPv4/6 address.
-     */
-    address: string;
-
-    /**
-     * The prefix length
-     */
-    prefixLength: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#type-TLSVersionConstraints
-   */
-  export interface TLSVersionConstraints {
-    /**
-     * The minimum and maximum acceptable versions of TLS. These will be
-     * <code>tls1</code>, <code>tls1.1</code>, <code>tls1.2</code>, or
-     * <code>tls1.3</code>.
-     */
-    min?: string;
-
-    max?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#type-SecureOptions
-   */
-  export interface SecureOptions {
-    tlsVersion?: TLSVersionConstraints;
-  }
-
-  /**
-   * Creates a socket of the specified type that will connect to the specified
-   * remote machine.
-   * @param type The type of socket to create. Must be <code>tcp</code> or
-   *     <code>udp</code>.
-   * @param options The socket options.
-   * @returns Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-create
-   */
-  export function create(
-    type: SocketType,
-    options?: CreateOptions,
-  ): Promise<{
-    createInfo: CreateInfo,
-  }>;
-
-  /**
-   * Creates a socket of the specified type that will connect to the specified
-   * remote machine.
-   * @param type The type of socket to create. Must be <code>tcp</code> or
-   *     <code>udp</code>.
-   * @param options The socket options.
-   * @param callback Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-create
-   */
-  export function create(
-    type: SocketType,
-    options: CreateOptions,
-    callback: (
-      createInfo: CreateInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Creates a socket of the specified type that will connect to the specified
-   * remote machine.
-   * @param type The type of socket to create. Must be <code>tcp</code> or
-   *     <code>udp</code>.
-   * @param callback Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-create
-   */
-  export function create(
-    type: SocketType,
-    callback: (
-      createInfo: CreateInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Destroys the socket. Each socket created should be destroyed after use.
-   * @param socketId The socketId.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-destroy
-   */
-  export function destroy(
-    socketId: number,
-  ): void;
-
-  /**
-   * Connects the socket to the remote machine (for a <code>tcp</code> socket).
-   * For a <code>udp</code> socket, this sets the default address which packets
-   * are sent to and read from for <code>read()</code> and <code>write()</code>
-   * calls.
-   * @param socketId The socketId.
-   * @param hostname The hostname or IP address of the remote machine.
-   * @param port The port of the remote machine.
-   * @returns Called when the connection attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-connect
-   */
-  export function connect(
-    socketId: number,
-    hostname: string,
-    port: number,
-  ): Promise<{
-    result: number,
-  }>;
-
-  /**
-   * Connects the socket to the remote machine (for a <code>tcp</code> socket).
-   * For a <code>udp</code> socket, this sets the default address which packets
-   * are sent to and read from for <code>read()</code> and <code>write()</code>
-   * calls.
-   * @param socketId The socketId.
-   * @param hostname The hostname or IP address of the remote machine.
-   * @param port The port of the remote machine.
-   * @param callback Called when the connection attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-connect
-   */
-  export function connect(
-    socketId: number,
-    hostname: string,
-    port: number,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Binds the local address for socket. Currently, it does not support TCP
-   * socket.
-   * @param socketId The socketId.
-   * @param address The address of the local machine.
-   * @param port The port of the local machine.
-   * @returns Called when the bind attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-bind
-   */
-  export function bind(
-    socketId: number,
-    address: string,
-    port: number,
-  ): Promise<{
-    result: number,
-  }>;
-
-  /**
-   * Binds the local address for socket. Currently, it does not support TCP
-   * socket.
-   * @param socketId The socketId.
-   * @param address The address of the local machine.
-   * @param port The port of the local machine.
-   * @param callback Called when the bind attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-bind
-   */
-  export function bind(
-    socketId: number,
-    address: string,
-    port: number,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Disconnects the socket. For UDP sockets, <code>disconnect</code> is a
-   * non-operation but is safe to call.
-   * @param socketId The socketId.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-disconnect
-   */
-  export function disconnect(
-    socketId: number,
-  ): void;
-
-  /**
-   * Reads data from the given connected socket.
-   * @param socketId The socketId.
-   * @param bufferSize The read buffer size.
-   * @returns Delivers data that was available to be read without blocking.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-read
-   */
-  export function read(
-    socketId: number,
-    bufferSize?: number,
-  ): Promise<{
-    readInfo: ReadInfo,
-  }>;
-
-  /**
-   * Reads data from the given connected socket.
-   * @param socketId The socketId.
-   * @param bufferSize The read buffer size.
-   * @param callback Delivers data that was available to be read without
-   *     blocking.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-read
-   */
-  export function read(
-    socketId: number,
-    bufferSize: number,
-    callback: (
-      readInfo: ReadInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Reads data from the given connected socket.
-   * @param socketId The socketId.
-   * @param callback Delivers data that was available to be read without
-   *     blocking.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-read
-   */
-  export function read(
-    socketId: number,
-    callback: (
-      readInfo: ReadInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Writes data on the given connected socket.
-   * @param socketId The socketId.
-   * @param data The data to write.
-   * @returns Called when the write operation completes without blocking or an
-   *     error occurs.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-write
-   */
-  export function write(
-    socketId: number,
-    data: ArrayBuffer,
-  ): Promise<{
-    writeInfo: WriteInfo,
-  }>;
-
-  /**
-   * Writes data on the given connected socket.
-   * @param socketId The socketId.
-   * @param data The data to write.
-   * @param callback Called when the write operation completes without blocking
-   *     or an error occurs.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-write
-   */
-  export function write(
-    socketId: number,
-    data: ArrayBuffer,
-    callback: (
-      writeInfo: WriteInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Receives data from the given UDP socket.
-   * @param socketId The socketId.
-   * @param bufferSize The receive buffer size.
-   * @returns Returns result of the recvFrom operation.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-recvFrom
-   */
-  export function recvFrom(
-    socketId: number,
-    bufferSize?: number,
-  ): Promise<{
-    recvFromInfo: RecvFromInfo,
-  }>;
-
-  /**
-   * Receives data from the given UDP socket.
-   * @param socketId The socketId.
-   * @param bufferSize The receive buffer size.
-   * @param callback Returns result of the recvFrom operation.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-recvFrom
-   */
-  export function recvFrom(
-    socketId: number,
-    bufferSize: number,
-    callback: (
-      recvFromInfo: RecvFromInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Receives data from the given UDP socket.
-   * @param socketId The socketId.
-   * @param callback Returns result of the recvFrom operation.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-recvFrom
-   */
-  export function recvFrom(
-    socketId: number,
-    callback: (
-      recvFromInfo: RecvFromInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Sends data on the given UDP socket to the given address and port.
-   * @param socketId The socketId.
-   * @param data The data to write.
-   * @param address The address of the remote machine.
-   * @param port The port of the remote machine.
-   * @returns Called when the send operation completes without blocking or an
-   *     error occurs.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-sendTo
-   */
-  export function sendTo(
-    socketId: number,
-    data: ArrayBuffer,
-    address: string,
-    port: number,
-  ): Promise<{
-    writeInfo: WriteInfo,
-  }>;
-
-  /**
-   * Sends data on the given UDP socket to the given address and port.
-   * @param socketId The socketId.
-   * @param data The data to write.
-   * @param address The address of the remote machine.
-   * @param port The port of the remote machine.
-   * @param callback Called when the send operation completes without blocking
-   *     or an error occurs.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-sendTo
-   */
-  export function sendTo(
-    socketId: number,
-    data: ArrayBuffer,
-    address: string,
-    port: number,
-    callback: (
-      writeInfo: WriteInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * This method applies to TCP sockets only. Listens for connections on the
-   * specified port and address. This effectively makes this a server socket,
-   * and client socket functions (connect, read, write) can no longer be used on
-   * this socket.
-   * @param socketId The socketId.
-   * @param address The address of the local machine.
-   * @param port The port of the local machine.
-   * @param backlog Length of the socket's listen queue.
-   * @returns Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-listen
-   */
-  export function listen(
-    socketId: number,
-    address: string,
-    port: number,
-    backlog?: number,
-  ): Promise<{
-    result: number,
-  }>;
-
-  /**
-   * This method applies to TCP sockets only. Listens for connections on the
-   * specified port and address. This effectively makes this a server socket,
-   * and client socket functions (connect, read, write) can no longer be used on
-   * this socket.
-   * @param socketId The socketId.
-   * @param address The address of the local machine.
-   * @param port The port of the local machine.
-   * @param backlog Length of the socket's listen queue.
-   * @param callback Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-listen
-   */
-  export function listen(
-    socketId: number,
-    address: string,
-    port: number,
-    backlog: number,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * This method applies to TCP sockets only. Listens for connections on the
-   * specified port and address. This effectively makes this a server socket,
-   * and client socket functions (connect, read, write) can no longer be used on
-   * this socket.
-   * @param socketId The socketId.
-   * @param address The address of the local machine.
-   * @param port The port of the local machine.
-   * @param callback Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-listen
-   */
-  export function listen(
-    socketId: number,
-    address: string,
-    port: number,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * This method applies to TCP sockets only. Registers a callback function to
-   * be called when a connection is accepted on this listening server socket.
-   * Listen must be called first. If there is already an active accept callback,
-   * this callback will be invoked immediately with an error as the resultCode.
-   * @param socketId The socketId.
-   * @returns The callback is invoked when a new socket is accepted.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-accept
-   */
-  export function accept(
-    socketId: number,
-  ): Promise<{
-    acceptInfo: AcceptInfo,
-  }>;
-
-  /**
-   * This method applies to TCP sockets only. Registers a callback function to
-   * be called when a connection is accepted on this listening server socket.
-   * Listen must be called first. If there is already an active accept callback,
-   * this callback will be invoked immediately with an error as the resultCode.
-   * @param socketId The socketId.
-   * @param callback The callback is invoked when a new socket is accepted.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-accept
-   */
-  export function accept(
-    socketId: number,
-    callback: (
-      acceptInfo: AcceptInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Enables or disables the keep-alive functionality for a TCP connection.
-   * @param socketId The socketId.
-   * @param enable If true, enable keep-alive functionality.
-   * @param delay Set the delay seconds between the last data packet received
-   *     and the first keepalive probe. Default is 0.
-   * @returns Called when the setKeepAlive attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-setKeepAlive
-   */
-  export function setKeepAlive(
-    socketId: number,
-    enable: boolean,
-    delay?: number,
-  ): Promise<{
-    result: boolean,
-  }>;
-
-  /**
-   * Enables or disables the keep-alive functionality for a TCP connection.
-   * @param socketId The socketId.
-   * @param enable If true, enable keep-alive functionality.
-   * @param delay Set the delay seconds between the last data packet received
-   *     and the first keepalive probe. Default is 0.
-   * @param callback Called when the setKeepAlive attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-setKeepAlive
-   */
-  export function setKeepAlive(
-    socketId: number,
-    enable: boolean,
-    delay: number,
-    callback: (
-      result: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Enables or disables the keep-alive functionality for a TCP connection.
-   * @param socketId The socketId.
-   * @param enable If true, enable keep-alive functionality.
-   * @param callback Called when the setKeepAlive attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-setKeepAlive
-   */
-  export function setKeepAlive(
-    socketId: number,
-    enable: boolean,
-    callback: (
-      result: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Sets or clears <code>TCP_NODELAY</code> for a TCP connection. Nagle's
-   * algorithm will be disabled when <code>TCP_NODELAY</code> is set.
-   * @param socketId The socketId.
-   * @param noDelay If true, disables Nagle's algorithm.
-   * @returns Called when the setNoDelay attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-setNoDelay
-   */
-  export function setNoDelay(
-    socketId: number,
-    noDelay: boolean,
-  ): Promise<{
-    result: boolean,
-  }>;
-
-  /**
-   * Sets or clears <code>TCP_NODELAY</code> for a TCP connection. Nagle's
-   * algorithm will be disabled when <code>TCP_NODELAY</code> is set.
-   * @param socketId The socketId.
-   * @param noDelay If true, disables Nagle's algorithm.
-   * @param callback Called when the setNoDelay attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-setNoDelay
-   */
-  export function setNoDelay(
-    socketId: number,
-    noDelay: boolean,
-    callback: (
-      result: boolean,
-    ) => void,
-  ): void;
-
-  /**
-   * Retrieves the state of the given socket.
-   * @param socketId The socketId.
-   * @returns Called when the state is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-getInfo
-   */
-  export function getInfo(
-    socketId: number,
-  ): Promise<{
-    result: SocketInfo,
-  }>;
-
-  /**
-   * Retrieves the state of the given socket.
-   * @param socketId The socketId.
-   * @param callback Called when the state is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-getInfo
-   */
-  export function getInfo(
-    socketId: number,
-    callback: (
-      result: SocketInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Retrieves information about local adapters on this system.
-   * @returns Called when local adapter information is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-getNetworkList
-   */
-  export function getNetworkList(): Promise<{
-    result: NetworkInterface[],
-  }>;
-
-  /**
-   * Retrieves information about local adapters on this system.
-   * @param callback Called when local adapter information is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-getNetworkList
-   */
-  export function getNetworkList(
-    callback: (
-      result: NetworkInterface[],
-    ) => void,
-  ): void;
-
-  /**
-   * Join the multicast group and start to receive packets from that group. The
-   * socket must be of UDP type and must be bound to a local port before calling
-   * this method.
-   * @param socketId The socketId.
-   * @param address The group address to join. Domain names are not supported.
-   * @returns Called when the join group operation is done with an integer
-   *     parameter indicating the platform-independent error code.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-joinGroup
-   */
-  export function joinGroup(
-    socketId: number,
-    address: string,
-  ): Promise<{
-    result: number,
-  }>;
-
-  /**
-   * Join the multicast group and start to receive packets from that group. The
-   * socket must be of UDP type and must be bound to a local port before calling
-   * this method.
-   * @param socketId The socketId.
-   * @param address The group address to join. Domain names are not supported.
-   * @param callback Called when the join group operation is done with an
-   *     integer parameter indicating the platform-independent error code.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-joinGroup
-   */
-  export function joinGroup(
-    socketId: number,
-    address: string,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * <p>Leave the multicast group previously joined using
-   * <code>joinGroup</code>. It's not necessary to leave the multicast group
-   * before destroying the socket or exiting. This is automatically called by
-   * the OS.</p><p>Leaving the group will prevent the router from sending
-   * multicast datagrams to the local host, presuming no other process on the
-   * host is still joined to the group.</p>
-   * @param socketId The socketId.
-   * @param address The group address to leave. Domain names are not supported.
-   * @returns Called when the leave group operation is done with an integer
-   *     parameter indicating the platform-independent error code.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-leaveGroup
-   */
-  export function leaveGroup(
-    socketId: number,
-    address: string,
-  ): Promise<{
-    result: number,
-  }>;
-
-  /**
-   * <p>Leave the multicast group previously joined using
-   * <code>joinGroup</code>. It's not necessary to leave the multicast group
-   * before destroying the socket or exiting. This is automatically called by
-   * the OS.</p><p>Leaving the group will prevent the router from sending
-   * multicast datagrams to the local host, presuming no other process on the
-   * host is still joined to the group.</p>
-   * @param socketId The socketId.
-   * @param address The group address to leave. Domain names are not supported.
-   * @param callback Called when the leave group operation is done with an
-   *     integer parameter indicating the platform-independent error code.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-leaveGroup
-   */
-  export function leaveGroup(
-    socketId: number,
-    address: string,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * <p>Set the time-to-live of multicast packets sent to the multicast
-   * group.</p><p>Calling this method does not require multicast
-   * permissions.</p>
-   * @param socketId The socketId.
-   * @param ttl The time-to-live value.
-   * @returns Called when the configuration operation is done.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-setMulticastTimeToLive
-   */
-  export function setMulticastTimeToLive(
-    socketId: number,
-    ttl: number,
-  ): Promise<{
-    result: number,
-  }>;
-
-  /**
-   * <p>Set the time-to-live of multicast packets sent to the multicast
-   * group.</p><p>Calling this method does not require multicast
-   * permissions.</p>
-   * @param socketId The socketId.
-   * @param ttl The time-to-live value.
-   * @param callback Called when the configuration operation is done.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-setMulticastTimeToLive
-   */
-  export function setMulticastTimeToLive(
-    socketId: number,
-    ttl: number,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * <p>Set whether multicast packets sent from the host to the multicast group
-   * will be looped back to the host.</p><p>Note: the behavior of
-   * <code>setMulticastLoopbackMode</code> is slightly different between Windows
-   * and Unix-like systems. The inconsistency happens only when there is more
-   * than one application on the same host joined to the same multicast group
-   * while having different settings on multicast loopback mode. On Windows, the
-   * applications with loopback off will not RECEIVE the loopback packets; while
-   * on Unix-like systems, the applications with loopback off will not SEND the
-   * loopback packets to other applications on the same host. See MSDN:
-   * http://goo.gl/6vqbj</p><p>Calling this method does not require multicast
-   * permissions.</p>
-   * @param socketId The socketId.
-   * @param enabled Indicate whether to enable loopback mode.
-   * @returns Called when the configuration operation is done.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-setMulticastLoopbackMode
-   */
-  export function setMulticastLoopbackMode(
-    socketId: number,
-    enabled: boolean,
-  ): Promise<{
-    result: number,
-  }>;
-
-  /**
-   * <p>Set whether multicast packets sent from the host to the multicast group
-   * will be looped back to the host.</p><p>Note: the behavior of
-   * <code>setMulticastLoopbackMode</code> is slightly different between Windows
-   * and Unix-like systems. The inconsistency happens only when there is more
-   * than one application on the same host joined to the same multicast group
-   * while having different settings on multicast loopback mode. On Windows, the
-   * applications with loopback off will not RECEIVE the loopback packets; while
-   * on Unix-like systems, the applications with loopback off will not SEND the
-   * loopback packets to other applications on the same host. See MSDN:
-   * http://goo.gl/6vqbj</p><p>Calling this method does not require multicast
-   * permissions.</p>
-   * @param socketId The socketId.
-   * @param enabled Indicate whether to enable loopback mode.
-   * @param callback Called when the configuration operation is done.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-setMulticastLoopbackMode
-   */
-  export function setMulticastLoopbackMode(
-    socketId: number,
-    enabled: boolean,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Get the multicast group addresses the socket is currently joined to.
-   * @param socketId The socketId.
-   * @returns Called with an array of strings of the result.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-getJoinedGroups
-   */
-  export function getJoinedGroups(
-    socketId: number,
-  ): Promise<{
-    groups: string[],
-  }>;
-
-  /**
-   * Get the multicast group addresses the socket is currently joined to.
-   * @param socketId The socketId.
-   * @param callback Called with an array of strings of the result.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-getJoinedGroups
-   */
-  export function getJoinedGroups(
-    socketId: number,
-    callback: (
-      groups: string[],
-    ) => void,
-  ): void;
-
-  /**
-   * Start a TLS client connection over a connected TCP client socket.
-   * @param socketId The connected socket to use.
-   * @param options Constraints and parameters for the TLS connection.
-   * @returns Called when the TLS connection attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-secure
-   */
-  export function secure(
-    socketId: number,
-    options?: SecureOptions,
-  ): Promise<{
-    result: number,
-  }>;
-
-  /**
-   * Start a TLS client connection over a connected TCP client socket.
-   * @param socketId The connected socket to use.
-   * @param options Constraints and parameters for the TLS connection.
-   * @param callback Called when the TLS connection attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-secure
-   */
-  export function secure(
-    socketId: number,
-    options: SecureOptions,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Start a TLS client connection over a connected TCP client socket.
-   * @param socketId The connected socket to use.
-   * @param callback Called when the TLS connection attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/socket/#method-secure
-   */
-  export function secure(
-    socketId: number,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-}
-/**
- * Use the <code>chrome.sockets.tcpServer</code> API to create server
- * applications using TCP connections. This API supersedes the TCP
- * functionality
- previously found in the <code>chrome.socket</code> API.
- * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/
- */
-declare namespace chrome.sockets.tcpServer {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#type-SocketProperties
-   */
-  export interface SocketProperties {
-    /**
-     * Flag indicating if the socket remains open when the event page of the
-     * application is unloaded (see <a
-     * href="http://developer.chrome.com/apps/app_lifecycle.html">Manage App
-     * Lifecycle</a>). The default value is "false." When the application is loaded,
-     * any sockets previously opened with persistent=true can be fetched with
-     * <code>getSockets</code>.
-     */
-    persistent?: boolean;
-
-    /**
-     * An application-defined string associated with the socket.
-     */
-    name?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#type-CreateInfo
-   */
-  export interface CreateInfo {
-    /**
-     * The ID of the newly created server socket. Note that socket IDs created from
-     * this API are not compatible with socket IDs created from other APIs, such as
-     * the deprecated <code>{@link socket}</code> API.
-     */
-    socketId: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#type-SocketInfo
-   */
-  export interface SocketInfo {
-    /**
-     * The socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * Flag indicating if the socket remains open when the event page of the
-     * application is unloaded (see <code>SocketProperties.persistent</code>). The
-     * default value is "false".
-     */
-    persistent: boolean;
-
-    /**
-     * Application-defined string associated with the socket.
-     */
-    name?: string;
-
-    /**
-     * Flag indicating whether connection requests on a listening socket are
-     * dispatched through the <code>onAccept</code> event or queued up in the listen
-     * queue backlog. See <code>setPaused</code>. The default value is "false".
-     */
-    paused: boolean;
-
-    /**
-     * If the socket is listening, contains its local IPv4/6 address.
-     */
-    localAddress?: string;
-
-    /**
-     * If the socket is listening, contains its local port.
-     */
-    localPort?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#type-AcceptInfo
-   */
-  export interface AcceptInfo {
-    /**
-     * The server socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * The client socket identifier, i.e. the socket identifier of the newly
-     * established connection. This socket identifier should be used only with
-     * functions from the <code>chrome.sockets.tcp</code> namespace. Note the client
-     * socket is initially paused and must be explictly un-paused by the application
-     * to start receiving data.
-     */
-    clientSocketId: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#type-AcceptErrorInfo
-   */
-  export interface AcceptErrorInfo {
-    /**
-     * The server socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * The result code returned from the underlying network call.
-     */
-    resultCode: number;
-  }
-
-  /**
-   * Creates a TCP server socket.
-   * @param properties The socket properties (optional).
-   * @returns Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-create
-   */
-  export function create(
-    properties?: SocketProperties,
-  ): Promise<{
-    /**
-     * The result of the socket creation.
-     */
-    createInfo: CreateInfo,
-  }>;
-
-  /**
-   * Creates a TCP server socket.
-   * @param properties The socket properties (optional).
-   * @param callback Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-create
-   */
-  export function create(
-    properties: SocketProperties,
-    callback: (
-      /**
-       * The result of the socket creation.
-       */
-      createInfo: CreateInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Creates a TCP server socket.
-   * @param callback Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-create
-   */
-  export function create(
-    callback: (
-      /**
-       * The result of the socket creation.
-       */
-      createInfo: CreateInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Updates the socket properties.
-   * @param socketId The socket identifier.
-   * @param properties The properties to update.
-   * @returns Called when the properties are updated.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-update
-   */
-  export function update(
-    socketId: number,
-    properties: SocketProperties,
-  ): Promise<void>;
-
-  /**
-   * Updates the socket properties.
-   * @param socketId The socket identifier.
-   * @param properties The properties to update.
-   * @param callback Called when the properties are updated.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-update
-   */
-  export function update(
-    socketId: number,
-    properties: SocketProperties,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Enables or disables a listening socket from accepting new connections. When
-   * paused, a listening socket accepts new connections until its backlog (see
-   * <code>listen</code> function) is full then refuses additional connection
-   * requests. <code>onAccept</code> events are raised only when the socket is
-   * un-paused.
-   * @param socketId
-   * @param paused
-   * @returns Callback from the <code>setPaused</code> method.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-setPaused
-   */
-  export function setPaused(
-    socketId: number,
-    paused: boolean,
-  ): Promise<void>;
-
-  /**
-   * Enables or disables a listening socket from accepting new connections. When
-   * paused, a listening socket accepts new connections until its backlog (see
-   * <code>listen</code> function) is full then refuses additional connection
-   * requests. <code>onAccept</code> events are raised only when the socket is
-   * un-paused.
-   * @param socketId
-   * @param paused
-   * @param callback Callback from the <code>setPaused</code> method.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-setPaused
-   */
-  export function setPaused(
-    socketId: number,
-    paused: boolean,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Listens for connections on the specified port and address. If the
-   * port/address is in use, the callback indicates a failure.
-   * @param socketId The socket identifier.
-   * @param address The address of the local machine.
-   * @param port The port of the local machine. When set to <code>0</code>, a
-   *     free port is chosen dynamically. The dynamically allocated port can be
-   *     found by calling <code>getInfo</code>.
-   * @param backlog Length of the socket's listen queue. The default value
-   *     depends on the Operating System (SOMAXCONN), which ensures a reasonable
-   *     queue length for most applications.
-   * @returns Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-listen
-   */
-  export function listen(
-    socketId: number,
-    address: string,
-    port: number,
-    backlog?: number,
-  ): Promise<{
-    /**
-     * The result code returned from the underlying network call. A negative value
-     * indicates an error.
-     */
-    result: number,
-  }>;
-
-  /**
-   * Listens for connections on the specified port and address. If the
-   * port/address is in use, the callback indicates a failure.
-   * @param socketId The socket identifier.
-   * @param address The address of the local machine.
-   * @param port The port of the local machine. When set to <code>0</code>, a
-   *     free port is chosen dynamically. The dynamically allocated port can be
-   *     found by calling <code>getInfo</code>.
-   * @param backlog Length of the socket's listen queue. The default value
-   *     depends on the Operating System (SOMAXCONN), which ensures a reasonable
-   *     queue length for most applications.
-   * @param callback Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-listen
-   */
-  export function listen(
-    socketId: number,
-    address: string,
-    port: number,
-    backlog: number,
-    callback: (
-      /**
-       * The result code returned from the underlying network call. A negative value
-       * indicates an error.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Listens for connections on the specified port and address. If the
-   * port/address is in use, the callback indicates a failure.
-   * @param socketId The socket identifier.
-   * @param address The address of the local machine.
-   * @param port The port of the local machine. When set to <code>0</code>, a
-   *     free port is chosen dynamically. The dynamically allocated port can be
-   *     found by calling <code>getInfo</code>.
-   * @param callback Called when listen operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-listen
-   */
-  export function listen(
-    socketId: number,
-    address: string,
-    port: number,
-    callback: (
-      /**
-       * The result code returned from the underlying network call. A negative value
-       * indicates an error.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Disconnects the listening socket, i.e. stops accepting new connections and
-   * releases the address/port the socket is bound to. The socket identifier
-   * remains valid, e.g. it can be used with <code>listen</code> to accept
-   * connections on a new port and address.
-   * @param socketId The socket identifier.
-   * @returns Called when the disconnect attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-disconnect
-   */
-  export function disconnect(
-    socketId: number,
-  ): Promise<void>;
-
-  /**
-   * Disconnects the listening socket, i.e. stops accepting new connections and
-   * releases the address/port the socket is bound to. The socket identifier
-   * remains valid, e.g. it can be used with <code>listen</code> to accept
-   * connections on a new port and address.
-   * @param socketId The socket identifier.
-   * @param callback Called when the disconnect attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-disconnect
-   */
-  export function disconnect(
-    socketId: number,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Disconnects and destroys the socket. Each socket created should be closed
-   * after use. The socket id is no longer valid as soon at the function is
-   * called. However, the socket is guaranteed to be closed only when the
-   * callback is invoked.
-   * @param socketId The socket identifier.
-   * @returns Called when the <code>close</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-close
-   */
-  export function close(
-    socketId: number,
-  ): Promise<void>;
-
-  /**
-   * Disconnects and destroys the socket. Each socket created should be closed
-   * after use. The socket id is no longer valid as soon at the function is
-   * called. However, the socket is guaranteed to be closed only when the
-   * callback is invoked.
-   * @param socketId The socket identifier.
-   * @param callback Called when the <code>close</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-close
-   */
-  export function close(
-    socketId: number,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Retrieves the state of the given socket.
-   * @param socketId The socket identifier.
-   * @returns Called when the socket state is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-getInfo
-   */
-  export function getInfo(
-    socketId: number,
-  ): Promise<{
-    /**
-     * Object containing the socket information.
-     */
-    socketInfo: SocketInfo,
-  }>;
-
-  /**
-   * Retrieves the state of the given socket.
-   * @param socketId The socket identifier.
-   * @param callback Called when the socket state is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-getInfo
-   */
-  export function getInfo(
-    socketId: number,
-    callback: (
-      /**
-       * Object containing the socket information.
-       */
-      socketInfo: SocketInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Retrieves the list of currently opened sockets owned by the application.
-   * @returns Called when the list of sockets is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-getSockets
-   */
-  export function getSockets(): Promise<{
-    /**
-     * Array of object containing socket information.
-     */
-    socketInfos: SocketInfo[],
-  }>;
-
-  /**
-   * Retrieves the list of currently opened sockets owned by the application.
-   * @param callback Called when the list of sockets is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#method-getSockets
-   */
-  export function getSockets(
-    callback: (
-      /**
-       * Array of object containing socket information.
-       */
-      socketInfos: SocketInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Event raised when a connection has been made to the server socket.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#event-onAccept
-   */
-  export const onAccept: chrome.events.Event<(
-    /**
-     * The event data.
-     */
-    info: AcceptInfo,
-  ) => void>;
-
-  /**
-   * Event raised when a network error occured while the runtime was waiting for
-   * new connections on the socket address and port. Once this event is raised,
-   * the socket is set to <code>paused</code> and no more <code>onAccept</code>
-   * events are raised for this socket until the socket is resumed.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcpServer/#event-onAcceptError
-   */
-  export const onAcceptError: chrome.events.Event<(
-    /**
-     * The event data.
-     */
-    info: AcceptErrorInfo,
-  ) => void>;
-}
-/**
- * Use the <code>chrome.sockets.tcp</code> API to send and receive data over
- * the
- network using TCP connections. This API supersedes the TCP
- * functionality
- previously found in the <code>chrome.socket</code> API.
- * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/
- */
-declare namespace chrome.sockets.tcp {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#type-SocketProperties
-   */
-  export interface SocketProperties {
-    /**
-     * Flag indicating if the socket is left open when the event page of the
-     * application is unloaded (see <a
-     * href="http://developer.chrome.com/apps/app_lifecycle.html">Manage App
-     * Lifecycle</a>). The default value is "false." When the application is loaded,
-     * any sockets previously opened with persistent=true can be fetched with
-     * <code>getSockets</code>.
-     */
-    persistent?: boolean;
-
-    /**
-     * An application-defined string associated with the socket.
-     */
-    name?: string;
-
-    /**
-     * The size of the buffer used to receive data. The default value is 4096.
-     */
-    bufferSize?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#type-CreateInfo
-   */
-  export interface CreateInfo {
-    /**
-     * The ID of the newly created socket. Note that socket IDs created from this
-     * API are not compatible with socket IDs created from other APIs, such as the
-     * deprecated <code>{@link socket}</code> API.
-     */
-    socketId: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#type-SendInfo
-   */
-  export interface SendInfo {
-    /**
-     * The result code returned from the underlying network call. A negative value
-     * indicates an error.
-     */
-    resultCode: number;
-
-    /**
-     * The number of bytes sent (if result == 0)
-     */
-    bytesSent?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#type-TLSVersionConstraints
-   */
-  export interface TLSVersionConstraints {
-    /**
-     * The minimum and maximum acceptable versions of TLS. These will be
-     * <code>tls1</code>, <code>tls1.1</code>, <code>tls1.2</code>, or
-     * <code>tls1.3</code>.
-     */
-    min?: string;
-
-    max?: string;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#type-SecureOptions
-   */
-  export interface SecureOptions {
-    tlsVersion?: TLSVersionConstraints;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#type-SocketInfo
-   */
-  export interface SocketInfo {
-    /**
-     * The socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * Flag indicating whether the socket is left open when the application is
-     * suspended (see <code>SocketProperties.persistent</code>).
-     */
-    persistent: boolean;
-
-    /**
-     * Application-defined string associated with the socket.
-     */
-    name?: string;
-
-    /**
-     * The size of the buffer used to receive data. If no buffer size has been
-     * specified explictly, the value is not provided.
-     */
-    bufferSize?: number;
-
-    /**
-     * Flag indicating whether a connected socket blocks its peer from sending more
-     * data (see <code>setPaused</code>).
-     */
-    paused: boolean;
-
-    /**
-     * Flag indicating whether the socket is connected to a remote peer.
-     */
-    connected: boolean;
-
-    /**
-     * If the underlying socket is connected, contains its local IPv4/6 address.
-     */
-    localAddress?: string;
-
-    /**
-     * If the underlying socket is connected, contains its local port.
-     */
-    localPort?: number;
-
-    /**
-     * If the underlying socket is connected, contains the peer/ IPv4/6 address.
-     */
-    peerAddress?: string;
-
-    /**
-     * If the underlying socket is connected, contains the peer port.
-     */
-    peerPort?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#type-ReceiveInfo
-   */
-  export interface ReceiveInfo {
-    /**
-     * The socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * The data received, with a maxium size of <code>bufferSize</code>.
-     */
-    data: ArrayBuffer;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#type-ReceiveErrorInfo
-   */
-  export interface ReceiveErrorInfo {
-    /**
-     * The socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * The result code returned from the underlying network call.
-     */
-    resultCode: number;
-  }
-
-  /**
-   * Creates a TCP socket.
-   * @param properties The socket properties (optional).
-   * @returns Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-create
-   */
-  export function create(
-    properties?: SocketProperties,
-  ): Promise<{
-    /**
-     * The result of the socket creation.
-     */
-    createInfo: CreateInfo,
-  }>;
-
-  /**
-   * Creates a TCP socket.
-   * @param properties The socket properties (optional).
-   * @param callback Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-create
-   */
-  export function create(
-    properties: SocketProperties,
-    callback: (
-      /**
-       * The result of the socket creation.
-       */
-      createInfo: CreateInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Creates a TCP socket.
-   * @param callback Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-create
-   */
-  export function create(
-    callback: (
-      /**
-       * The result of the socket creation.
-       */
-      createInfo: CreateInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Updates the socket properties.
-   * @param socketId The socket identifier.
-   * @param properties The properties to update.
-   * @returns Called when the properties are updated.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-update
-   */
-  export function update(
-    socketId: number,
-    properties: SocketProperties,
-  ): Promise<void>;
-
-  /**
-   * Updates the socket properties.
-   * @param socketId The socket identifier.
-   * @param properties The properties to update.
-   * @param callback Called when the properties are updated.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-update
-   */
-  export function update(
-    socketId: number,
-    properties: SocketProperties,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Enables or disables the application from receiving messages from its peer.
-   * The default value is "false". Pausing a socket is typically used by an
-   * application to throttle data sent by its peer. When a socket is paused, no
-   * <code>onReceive</code> event is raised. When a socket is connected and
-   * un-paused, <code>onReceive</code> events are raised again when messages are
-   * received.
-   * @param socketId
-   * @param paused
-   * @returns Callback from the <code>setPaused</code> method.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-setPaused
-   */
-  export function setPaused(
-    socketId: number,
-    paused: boolean,
-  ): Promise<void>;
-
-  /**
-   * Enables or disables the application from receiving messages from its peer.
-   * The default value is "false". Pausing a socket is typically used by an
-   * application to throttle data sent by its peer. When a socket is paused, no
-   * <code>onReceive</code> event is raised. When a socket is connected and
-   * un-paused, <code>onReceive</code> events are raised again when messages are
-   * received.
-   * @param socketId
-   * @param paused
-   * @param callback Callback from the <code>setPaused</code> method.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-setPaused
-   */
-  export function setPaused(
-    socketId: number,
-    paused: boolean,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Enables or disables the keep-alive functionality for a TCP connection.
-   * @param socketId The socket identifier.
-   * @param enable If true, enable keep-alive functionality.
-   * @param delay Set the delay seconds between the last data packet received
-   *     and the first keepalive probe. Default is 0.
-   * @returns Called when the setKeepAlive attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-setKeepAlive
-   */
-  export function setKeepAlive(
-    socketId: number,
-    enable: boolean,
-    delay?: number,
-  ): Promise<{
-    /**
-     * The result code returned from the underlying network call. A negative value
-     * indicates an error.
-     */
-    result: number,
-  }>;
-
-  /**
-   * Enables or disables the keep-alive functionality for a TCP connection.
-   * @param socketId The socket identifier.
-   * @param enable If true, enable keep-alive functionality.
-   * @param delay Set the delay seconds between the last data packet received
-   *     and the first keepalive probe. Default is 0.
-   * @param callback Called when the setKeepAlive attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-setKeepAlive
-   */
-  export function setKeepAlive(
-    socketId: number,
-    enable: boolean,
-    delay: number,
-    callback: (
-      /**
-       * The result code returned from the underlying network call. A negative value
-       * indicates an error.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Enables or disables the keep-alive functionality for a TCP connection.
-   * @param socketId The socket identifier.
-   * @param enable If true, enable keep-alive functionality.
-   * @param callback Called when the setKeepAlive attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-setKeepAlive
-   */
-  export function setKeepAlive(
-    socketId: number,
-    enable: boolean,
-    callback: (
-      /**
-       * The result code returned from the underlying network call. A negative value
-       * indicates an error.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Sets or clears <code>TCP_NODELAY</code> for a TCP connection. Nagle's
-   * algorithm will be disabled when <code>TCP_NODELAY</code> is set.
-   * @param socketId The socket identifier.
-   * @param noDelay If true, disables Nagle's algorithm.
-   * @returns Called when the setNoDelay attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-setNoDelay
-   */
-  export function setNoDelay(
-    socketId: number,
-    noDelay: boolean,
-  ): Promise<{
-    /**
-     * The result code returned from the underlying network call. A negative value
-     * indicates an error.
-     */
-    result: number,
-  }>;
-
-  /**
-   * Sets or clears <code>TCP_NODELAY</code> for a TCP connection. Nagle's
-   * algorithm will be disabled when <code>TCP_NODELAY</code> is set.
-   * @param socketId The socket identifier.
-   * @param noDelay If true, disables Nagle's algorithm.
-   * @param callback Called when the setNoDelay attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-setNoDelay
-   */
-  export function setNoDelay(
-    socketId: number,
-    noDelay: boolean,
-    callback: (
-      /**
-       * The result code returned from the underlying network call. A negative value
-       * indicates an error.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Connects the socket to a remote machine. When the <code>connect</code>
-   * operation completes successfully, <code>onReceive</code> events are raised
-   * when data is received from the peer. If a network error occurs while the
-   * runtime is receiving packets, a <code>onReceiveError</code> event is
-   * raised, at which point no more <code>onReceive</code> event will be raised
-   * for this socket until the <code>resume</code> method is called.
-   * @param socketId The socket identifier.
-   * @param peerAddress The address of the remote machine. DNS name, IPv4 and
-   *     IPv6 formats are supported.
-   * @param peerPort The port of the remote machine.
-   * @returns Called when the connect attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-connect
-   */
-  export function connect(
-    socketId: number,
-    peerAddress: string,
-    peerPort: number,
-  ): Promise<{
-    /**
-     * The result code returned from the underlying network call. A negative value
-     * indicates an error.
-     */
-    result: number,
-  }>;
-
-  /**
-   * Connects the socket to a remote machine. When the <code>connect</code>
-   * operation completes successfully, <code>onReceive</code> events are raised
-   * when data is received from the peer. If a network error occurs while the
-   * runtime is receiving packets, a <code>onReceiveError</code> event is
-   * raised, at which point no more <code>onReceive</code> event will be raised
-   * for this socket until the <code>resume</code> method is called.
-   * @param socketId The socket identifier.
-   * @param peerAddress The address of the remote machine. DNS name, IPv4 and
-   *     IPv6 formats are supported.
-   * @param peerPort The port of the remote machine.
-   * @param callback Called when the connect attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-connect
-   */
-  export function connect(
-    socketId: number,
-    peerAddress: string,
-    peerPort: number,
-    callback: (
-      /**
-       * The result code returned from the underlying network call. A negative value
-       * indicates an error.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Disconnects the socket.
-   * @param socketId The socket identifier.
-   * @returns Called when the disconnect attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-disconnect
-   */
-  export function disconnect(
-    socketId: number,
-  ): Promise<void>;
-
-  /**
-   * Disconnects the socket.
-   * @param socketId The socket identifier.
-   * @param callback Called when the disconnect attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-disconnect
-   */
-  export function disconnect(
-    socketId: number,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Start a TLS client connection over the connected TCP client socket.
-   * @param socketId The existing, connected socket to use.
-   * @param options Constraints and parameters for the TLS connection.
-   * @returns Called when the connection attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-secure
-   */
-  export function secure(
-    socketId: number,
-    options?: SecureOptions,
-  ): Promise<{
-    result: number,
-  }>;
-
-  /**
-   * Start a TLS client connection over the connected TCP client socket.
-   * @param socketId The existing, connected socket to use.
-   * @param options Constraints and parameters for the TLS connection.
-   * @param callback Called when the connection attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-secure
-   */
-  export function secure(
-    socketId: number,
-    options: SecureOptions,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Start a TLS client connection over the connected TCP client socket.
-   * @param socketId The existing, connected socket to use.
-   * @param callback Called when the connection attempt is complete.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-secure
-   */
-  export function secure(
-    socketId: number,
-    callback: (
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Sends data on the given TCP socket.
-   * @param socketId The socket identifier.
-   * @param data The data to send.
-   * @returns Called when the <code>send</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-send
-   */
-  export function send(
-    socketId: number,
-    data: ArrayBuffer,
-  ): Promise<{
-    /**
-     * Result of the <code>send</code> method.
-     */
-    sendInfo: SendInfo,
-  }>;
-
-  /**
-   * Sends data on the given TCP socket.
-   * @param socketId The socket identifier.
-   * @param data The data to send.
-   * @param callback Called when the <code>send</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-send
-   */
-  export function send(
-    socketId: number,
-    data: ArrayBuffer,
-    callback: (
-      /**
-       * Result of the <code>send</code> method.
-       */
-      sendInfo: SendInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Closes the socket and releases the address/port the socket is bound to.
-   * Each socket created should be closed after use. The socket id is no no
-   * longer valid as soon at the function is called. However, the socket is
-   * guaranteed to be closed only when the callback is invoked.
-   * @param socketId The socket identifier.
-   * @returns Called when the <code>close</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-close
-   */
-  export function close(
-    socketId: number,
-  ): Promise<void>;
-
-  /**
-   * Closes the socket and releases the address/port the socket is bound to.
-   * Each socket created should be closed after use. The socket id is no no
-   * longer valid as soon at the function is called. However, the socket is
-   * guaranteed to be closed only when the callback is invoked.
-   * @param socketId The socket identifier.
-   * @param callback Called when the <code>close</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-close
-   */
-  export function close(
-    socketId: number,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Retrieves the state of the given socket.
-   * @param socketId The socket identifier.
-   * @returns Called when the socket state is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-getInfo
-   */
-  export function getInfo(
-    socketId: number,
-  ): Promise<{
-    /**
-     * Object containing the socket information.
-     */
-    socketInfo: SocketInfo,
-  }>;
-
-  /**
-   * Retrieves the state of the given socket.
-   * @param socketId The socket identifier.
-   * @param callback Called when the socket state is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-getInfo
-   */
-  export function getInfo(
-    socketId: number,
-    callback: (
-      /**
-       * Object containing the socket information.
-       */
-      socketInfo: SocketInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Retrieves the list of currently opened sockets owned by the application.
-   * @returns Called when the list of sockets is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-getSockets
-   */
-  export function getSockets(): Promise<{
-    /**
-     * Array of object containing socket information.
-     */
-    socketInfos: SocketInfo[],
-  }>;
-
-  /**
-   * Retrieves the list of currently opened sockets owned by the application.
-   * @param callback Called when the list of sockets is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#method-getSockets
-   */
-  export function getSockets(
-    callback: (
-      /**
-       * Array of object containing socket information.
-       */
-      socketInfos: SocketInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Event raised when data has been received for a given socket.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#event-onReceive
-   */
-  export const onReceive: chrome.events.Event<(
-    /**
-     * The event data.
-     */
-    info: ReceiveInfo,
-  ) => void>;
-
-  /**
-   * Event raised when a network error occured while the runtime was waiting for
-   * data on the socket address and port. Once this event is raised, the socket
-   * is set to <code>paused</code> and no more <code>onReceive</code> events are
-   * raised for this socket.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.tcp/#event-onReceiveError
-   */
-  export const onReceiveError: chrome.events.Event<(
-    /**
-     * The event data.
-     */
-    info: ReceiveErrorInfo,
-  ) => void>;
-}
-/**
- * Use the <code>chrome.sockets.udp</code> API to send and receive data over
- * the
- network using UDP connections. This API supersedes the UDP
- * functionality
- previously found in the "socket" API.
- * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/
- */
-declare namespace chrome.sockets.udp {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#type-SocketProperties
-   */
-  export interface SocketProperties {
-    /**
-     * Flag indicating if the socket is left open when the event page of the
-     * application is unloaded (see <a
-     * href="http://developer.chrome.com/apps/app_lifecycle.html">Manage App
-     * Lifecycle</a>). The default value is "false." When the application is loaded,
-     * any sockets previously opened with persistent=true can be fetched with
-     * <code>getSockets</code>.
-     */
-    persistent?: boolean;
-
-    /**
-     * An application-defined string associated with the socket.
-     */
-    name?: string;
-
-    /**
-     * The size of the buffer used to receive data. If the buffer is too small to
-     * receive the UDP packet, data is lost. The default value is 4096.
-     */
-    bufferSize?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#type-CreateInfo
-   */
-  export interface CreateInfo {
-    /**
-     * The ID of the newly created socket. Note that socket IDs created from this
-     * API are not compatible with socket IDs created from other APIs, such as the
-     * deprecated <code>{@link socket}</code> API.
-     */
-    socketId: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#type-SendInfo
-   */
-  export interface SendInfo {
-    /**
-     * The result code returned from the underlying network call. A negative value
-     * indicates an error.
-     */
-    resultCode: number;
-
-    /**
-     * The number of bytes sent (if result == 0)
-     */
-    bytesSent?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#type-SocketInfo
-   */
-  export interface SocketInfo {
-    /**
-     * The socket identifier.
-     */
-    socketId: number;
-
-    /**
-     * Flag indicating whether the socket is left open when the application is
-     * suspended (see <code>SocketProperties.persistent</code>).
-     */
-    persistent: boolean;
-
-    /**
-     * Application-defined string associated with the socket.
-     */
-    name?: string;
-
-    /**
-     * The size of the buffer used to receive data. If no buffer size has been
-     * specified explictly, the value is not provided.
-     */
-    bufferSize?: number;
-
-    /**
-     * Flag indicating whether the socket is blocked from firing onReceive events.
-     */
-    paused: boolean;
-
-    /**
-     * If the underlying socket is bound, contains its local IPv4/6 address.
-     */
-    localAddress?: string;
-
-    /**
-     * If the underlying socket is bound, contains its local port.
-     */
-    localPort?: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#type-ReceiveInfo
-   */
-  export interface ReceiveInfo {
-    /**
-     * The socket ID.
-     */
-    socketId: number;
-
-    /**
-     * The UDP packet content (truncated to the current buffer size).
-     */
-    data: ArrayBuffer;
-
-    /**
-     * The address of the host the packet comes from.
-     */
-    remoteAddress: string;
-
-    /**
-     * The port of the host the packet comes from.
-     */
-    remotePort: number;
-  }
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#type-ReceiveErrorInfo
-   */
-  export interface ReceiveErrorInfo {
-    /**
-     * The socket ID.
-     */
-    socketId: number;
-
-    /**
-     * The result code returned from the underlying recvfrom() call.
-     */
-    resultCode: number;
-  }
-
-  /**
-   * Creates a UDP socket with the given properties.
-   * @param properties The socket properties (optional).
-   * @returns Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-create
-   */
-  export function create(
-    properties?: SocketProperties,
-  ): Promise<{
-    /**
-     * The result of the socket creation.
-     */
-    createInfo: CreateInfo,
-  }>;
-
-  /**
-   * Creates a UDP socket with the given properties.
-   * @param properties The socket properties (optional).
-   * @param callback Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-create
-   */
-  export function create(
-    properties: SocketProperties,
-    callback: (
-      /**
-       * The result of the socket creation.
-       */
-      createInfo: CreateInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Creates a UDP socket with the given properties.
-   * @param callback Called when the socket has been created.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-create
-   */
-  export function create(
-    callback: (
-      /**
-       * The result of the socket creation.
-       */
-      createInfo: CreateInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Updates the socket properties.
-   * @param socketId The socket ID.
-   * @param properties The properties to update.
-   * @returns Called when the properties are updated.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-update
-   */
-  export function update(
-    socketId: number,
-    properties: SocketProperties,
-  ): Promise<void>;
-
-  /**
-   * Updates the socket properties.
-   * @param socketId The socket ID.
-   * @param properties The properties to update.
-   * @param callback Called when the properties are updated.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-update
-   */
-  export function update(
-    socketId: number,
-    properties: SocketProperties,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Pauses or unpauses a socket. A paused socket is blocked from firing
-   * <code>onReceive</code> events.
-   * @param socketId
-   * @param paused Flag to indicate whether to pause or unpause.
-   * @returns Called when the socket has been successfully paused or unpaused.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-setPaused
-   */
-  export function setPaused(
-    socketId: number,
-    paused: boolean,
-  ): Promise<void>;
-
-  /**
-   * Pauses or unpauses a socket. A paused socket is blocked from firing
-   * <code>onReceive</code> events.
-   * @param socketId
-   * @param paused Flag to indicate whether to pause or unpause.
-   * @param callback Called when the socket has been successfully paused or
-   *     unpaused.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-setPaused
-   */
-  export function setPaused(
-    socketId: number,
-    paused: boolean,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * <p>Binds the local address and port for the socket. For a client socket, it
-   * is recommended to use port 0 to let the platform pick a free
-   * port.</p><p>Once the <code>bind</code> operation completes successfully,
-   * <code>onReceive</code> events are raised when UDP packets arrive on the
-   * address/port specified -- unless the socket is paused.</p>
-   * @param socketId The socket ID.
-   * @param address The address of the local machine. DNS name, IPv4 and IPv6
-   *     formats are supported. Use "0.0.0.0" to accept packets from all local
-   *     available network interfaces.
-   * @param port The port of the local machine. Use "0" to bind to a free port.
-   * @returns Called when the <code>bind</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-bind
-   */
-  export function bind(
-    socketId: number,
-    address: string,
-    port: number,
-  ): Promise<{
-    /**
-     * The result code returned from the underlying network call. A negative value
-     * indicates an error.
-     */
-    result: number,
-  }>;
-
-  /**
-   * <p>Binds the local address and port for the socket. For a client socket, it
-   * is recommended to use port 0 to let the platform pick a free
-   * port.</p><p>Once the <code>bind</code> operation completes successfully,
-   * <code>onReceive</code> events are raised when UDP packets arrive on the
-   * address/port specified -- unless the socket is paused.</p>
-   * @param socketId The socket ID.
-   * @param address The address of the local machine. DNS name, IPv4 and IPv6
-   *     formats are supported. Use "0.0.0.0" to accept packets from all local
-   *     available network interfaces.
-   * @param port The port of the local machine. Use "0" to bind to a free port.
-   * @param callback Called when the <code>bind</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-bind
-   */
-  export function bind(
-    socketId: number,
-    address: string,
-    port: number,
-    callback: (
-      /**
-       * The result code returned from the underlying network call. A negative value
-       * indicates an error.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Sends data on the given socket to the given address and port. The socket
-   * must be bound to a local port before calling this method.
-   * @param socketId The socket ID.
-   * @param data The data to send.
-   * @param address The address of the remote machine.
-   * @param port The port of the remote machine.
-   * @returns Called when the <code>send</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-send
-   */
-  export function send(
-    socketId: number,
-    data: ArrayBuffer,
-    address: string,
-    port: number,
-  ): Promise<{
-    /**
-     * Result of the <code>send</code> method.
-     */
-    sendInfo: SendInfo,
-  }>;
-
-  /**
-   * Sends data on the given socket to the given address and port. The socket
-   * must be bound to a local port before calling this method.
-   * @param socketId The socket ID.
-   * @param data The data to send.
-   * @param address The address of the remote machine.
-   * @param port The port of the remote machine.
-   * @param callback Called when the <code>send</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-send
-   */
-  export function send(
-    socketId: number,
-    data: ArrayBuffer,
-    address: string,
-    port: number,
-    callback: (
-      /**
-       * Result of the <code>send</code> method.
-       */
-      sendInfo: SendInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Closes the socket and releases the address/port the socket is bound to.
-   * Each socket created should be closed after use. The socket id is no longer
-   * valid as soon at the function is called. However, the socket is guaranteed
-   * to be closed only when the callback is invoked.
-   * @param socketId The socket ID.
-   * @returns Called when the <code>close</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-close
-   */
-  export function close(
-    socketId: number,
-  ): Promise<void>;
-
-  /**
-   * Closes the socket and releases the address/port the socket is bound to.
-   * Each socket created should be closed after use. The socket id is no longer
-   * valid as soon at the function is called. However, the socket is guaranteed
-   * to be closed only when the callback is invoked.
-   * @param socketId The socket ID.
-   * @param callback Called when the <code>close</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-close
-   */
-  export function close(
-    socketId: number,
-    callback?: () => void,
-  ): void;
-
-  /**
-   * Retrieves the state of the given socket.
-   * @param socketId The socket ID.
-   * @returns Called when the socket state is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-getInfo
-   */
-  export function getInfo(
-    socketId: number,
-  ): Promise<{
-    /**
-     * Object containing the socket information.
-     */
-    socketInfo: SocketInfo,
-  }>;
-
-  /**
-   * Retrieves the state of the given socket.
-   * @param socketId The socket ID.
-   * @param callback Called when the socket state is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-getInfo
-   */
-  export function getInfo(
-    socketId: number,
-    callback: (
-      /**
-       * Object containing the socket information.
-       */
-      socketInfo: SocketInfo,
-    ) => void,
-  ): void;
-
-  /**
-   * Retrieves the list of currently opened sockets owned by the application.
-   * @returns Called when the list of sockets is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-getSockets
-   */
-  export function getSockets(): Promise<{
-    /**
-     * Array of object containing socket information.
-     */
-    socketInfos: SocketInfo[],
-  }>;
-
-  /**
-   * Retrieves the list of currently opened sockets owned by the application.
-   * @param callback Called when the list of sockets is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-getSockets
-   */
-  export function getSockets(
-    callback: (
-      /**
-       * Array of object containing socket information.
-       */
-      socketInfos: SocketInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Joins the multicast group and starts to receive packets from that group.
-   * The socket must be bound to a local port before calling this method.
-   * @param socketId The socket ID.
-   * @param address The group address to join. Domain names are not supported.
-   * @returns Called when the <code>joinGroup</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-joinGroup
-   */
-  export function joinGroup(
-    socketId: number,
-    address: string,
-  ): Promise<{
-    /**
-     * The result code returned from the underlying network call. A negative value
-     * indicates an error.
-     */
-    result: number,
-  }>;
-
-  /**
-   * Joins the multicast group and starts to receive packets from that group.
-   * The socket must be bound to a local port before calling this method.
-   * @param socketId The socket ID.
-   * @param address The group address to join. Domain names are not supported.
-   * @param callback Called when the <code>joinGroup</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-joinGroup
-   */
-  export function joinGroup(
-    socketId: number,
-    address: string,
-    callback: (
-      /**
-       * The result code returned from the underlying network call. A negative value
-       * indicates an error.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * <p>Leaves the multicast group previously joined using
-   * <code>joinGroup</code>. This is only necessary to call if you plan to keep
-   * using the socketafterwards, since it will be done automatically by the OS
-   * when the socket is closed.</p><p>Leaving the group will prevent the router
-   * from sending multicast datagrams to the local host, presuming no other
-   * process on the host is still joined to the group.</p>
-   * @param socketId The socket ID.
-   * @param address The group address to leave. Domain names are not supported.
-   * @returns Called when the <code>leaveGroup</code> operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-leaveGroup
-   */
-  export function leaveGroup(
-    socketId: number,
-    address: string,
-  ): Promise<{
-    /**
-     * The result code returned from the underlying network call. A negative value
-     * indicates an error.
-     */
-    result: number,
-  }>;
-
-  /**
-   * <p>Leaves the multicast group previously joined using
-   * <code>joinGroup</code>. This is only necessary to call if you plan to keep
-   * using the socketafterwards, since it will be done automatically by the OS
-   * when the socket is closed.</p><p>Leaving the group will prevent the router
-   * from sending multicast datagrams to the local host, presuming no other
-   * process on the host is still joined to the group.</p>
-   * @param socketId The socket ID.
-   * @param address The group address to leave. Domain names are not supported.
-   * @param callback Called when the <code>leaveGroup</code> operation
-   *     completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-leaveGroup
-   */
-  export function leaveGroup(
-    socketId: number,
-    address: string,
-    callback: (
-      /**
-       * The result code returned from the underlying network call. A negative value
-       * indicates an error.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * <p>Sets the time-to-live of multicast packets sent to the multicast
-   * group.</p><p>Calling this method does not require multicast
-   * permissions.</p>
-   * @param socketId The socket ID.
-   * @param ttl The time-to-live value.
-   * @returns Called when the configuration operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-setMulticastTimeToLive
-   */
-  export function setMulticastTimeToLive(
-    socketId: number,
-    ttl: number,
-  ): Promise<{
-    /**
-     * The result code returned from the underlying network call. A negative value
-     * indicates an error.
-     */
-    result: number,
-  }>;
-
-  /**
-   * <p>Sets the time-to-live of multicast packets sent to the multicast
-   * group.</p><p>Calling this method does not require multicast
-   * permissions.</p>
-   * @param socketId The socket ID.
-   * @param ttl The time-to-live value.
-   * @param callback Called when the configuration operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-setMulticastTimeToLive
-   */
-  export function setMulticastTimeToLive(
-    socketId: number,
-    ttl: number,
-    callback: (
-      /**
-       * The result code returned from the underlying network call. A negative value
-       * indicates an error.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * <p>Sets whether multicast packets sent from the host to the multicast group
-   * will be looped back to the host.</p><p>Note: the behavior of
-   * <code>setMulticastLoopbackMode</code> is slightly different between Windows
-   * and Unix-like systems. The inconsistency happens only when there is more
-   * than one application on the same host joined to the same multicast group
-   * while having different settings on multicast loopback mode. On Windows, the
-   * applications with loopback off will not RECEIVE the loopback packets; while
-   * on Unix-like systems, the applications with loopback off will not SEND the
-   * loopback packets to other applications on the same host. See MSDN:
-   * http://goo.gl/6vqbj</p><p>Calling this method does not require multicast
-   * permissions.</p>
-   * @param socketId The socket ID.
-   * @param enabled Indicate whether to enable loopback mode.
-   * @returns Called when the configuration operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-setMulticastLoopbackMode
-   */
-  export function setMulticastLoopbackMode(
-    socketId: number,
-    enabled: boolean,
-  ): Promise<{
-    /**
-     * The result code returned from the underlying network call. A negative value
-     * indicates an error.
-     */
-    result: number,
-  }>;
-
-  /**
-   * <p>Sets whether multicast packets sent from the host to the multicast group
-   * will be looped back to the host.</p><p>Note: the behavior of
-   * <code>setMulticastLoopbackMode</code> is slightly different between Windows
-   * and Unix-like systems. The inconsistency happens only when there is more
-   * than one application on the same host joined to the same multicast group
-   * while having different settings on multicast loopback mode. On Windows, the
-   * applications with loopback off will not RECEIVE the loopback packets; while
-   * on Unix-like systems, the applications with loopback off will not SEND the
-   * loopback packets to other applications on the same host. See MSDN:
-   * http://goo.gl/6vqbj</p><p>Calling this method does not require multicast
-   * permissions.</p>
-   * @param socketId The socket ID.
-   * @param enabled Indicate whether to enable loopback mode.
-   * @param callback Called when the configuration operation completes.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-setMulticastLoopbackMode
-   */
-  export function setMulticastLoopbackMode(
-    socketId: number,
-    enabled: boolean,
-    callback: (
-      /**
-       * The result code returned from the underlying network call. A negative value
-       * indicates an error.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Gets the multicast group addresses the socket is currently joined to.
-   * @param socketId The socket ID.
-   * @returns Called with an array of strings of the result.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-getJoinedGroups
-   */
-  export function getJoinedGroups(
-    socketId: number,
-  ): Promise<{
-    /**
-     * Array of groups the socket joined.
-     */
-    groups: string[],
-  }>;
-
-  /**
-   * Gets the multicast group addresses the socket is currently joined to.
-   * @param socketId The socket ID.
-   * @param callback Called with an array of strings of the result.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-getJoinedGroups
-   */
-  export function getJoinedGroups(
-    socketId: number,
-    callback: (
-      /**
-       * Array of groups the socket joined.
-       */
-      groups: string[],
-    ) => void,
-  ): void;
-
-  /**
-   * Enables or disables broadcast packets on this socket.
-   * @param socketId The socket ID.
-   * @param enabled <code>true</code> to enable broadcast packets,
-   *     <code>false</code> to disable them.
-   * @returns Callback from the <code>setBroadcast</code> method.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-setBroadcast
-   */
-  export function setBroadcast(
-    socketId: number,
-    enabled: boolean,
-  ): Promise<{
-    /**
-     * The result code returned from the underlying network call.
-     */
-    result: number,
-  }>;
-
-  /**
-   * Enables or disables broadcast packets on this socket.
-   * @param socketId The socket ID.
-   * @param enabled <code>true</code> to enable broadcast packets,
-   *     <code>false</code> to disable them.
-   * @param callback Callback from the <code>setBroadcast</code> method.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#method-setBroadcast
-   */
-  export function setBroadcast(
-    socketId: number,
-    enabled: boolean,
-    callback: (
-      /**
-       * The result code returned from the underlying network call.
-       */
-      result: number,
-    ) => void,
-  ): void;
-
-  /**
-   * Event raised when a UDP packet has been received for the given socket.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#event-onReceive
-   */
-  export const onReceive: chrome.events.Event<(
-    /**
-     * The event data.
-     */
-    info: ReceiveInfo,
-  ) => void>;
-
-  /**
-   * Event raised when a network error occured while the runtime was waiting for
-   * data on the socket address and port. Once this event is raised, the socket
-   * is paused and no more <code>onReceive</code> events will be raised for this
-   * socket until the socket is resumed.
-   * @see https://developer.chrome.com/docs/extensions/reference/sockets.udp/#event-onReceiveError
-   */
-  export const onReceiveError: chrome.events.Event<(
-    /**
-     * The event data.
-     */
-    info: ReceiveErrorInfo,
-  ) => void>;
-}
 /**
  * Use the <code>chrome.storage</code> API to store, retrieve, and track changes
  * to user data.
  * @see https://developer.chrome.com/docs/extensions/reference/storage/
+ * @chrome-permission storage
  */
 declare namespace chrome.storage {
   /**
@@ -32914,9 +22787,11 @@ declare namespace chrome.storage {
     areaName: string,
   ) => void>;
 }
+
 /**
  * Use the <code>system.cpu</code> API to query CPU metadata.
  * @see https://developer.chrome.com/docs/extensions/reference/system.cpu/
+ * @chrome-permission system.cpu
  */
 declare namespace chrome.system.cpu {
   /**
@@ -33013,9 +22888,11 @@ declare namespace chrome.system.cpu {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>system.display</code> API to query display metadata.
  * @see https://developer.chrome.com/docs/extensions/reference/system.display/
+ * @chrome-permission system.display
  */
 declare namespace chrome.system.display {
   /**
@@ -33777,6 +23654,7 @@ declare namespace chrome.system.display {
    */
   export const onDisplayChanged: chrome.events.Event<() => void>;
 }
+
 /**
  * Manages an app's system indicator icon, an image displayed in the system's
  * menubar, system tray, or other visible area provided by the OS.
@@ -33785,6 +23663,7 @@ declare namespace chrome.system.display {
  chrome.browserAction
  * and chrome.pageAction.
  * @see https://developer.chrome.com/docs/extensions/reference/systemIndicator/
+ * @alpha
  */
 declare namespace chrome.systemIndicator {
   /**
@@ -33840,9 +23719,11 @@ declare namespace chrome.systemIndicator {
    */
   export const onClicked: chrome.events.Event<() => void>;
 }
+
 /**
  * The <code>chrome.system.memory</code> API.
  * @see https://developer.chrome.com/docs/extensions/reference/system.memory/
+ * @chrome-permission system.memory
  */
 declare namespace chrome.system.memory {
   /**
@@ -33879,132 +23760,13 @@ declare namespace chrome.system.memory {
     ) => void,
   ): void;
 }
-/**
- * Use the <code>chrome.system.network</code> API.
- * @see https://developer.chrome.com/docs/extensions/reference/system.network/
- */
-declare namespace chrome.system.network {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/system.network/#type-NetworkInterface
-   */
-  export interface NetworkInterface {
-    /**
-     * The underlying name of the adapter. On *nix, this will typically be "eth0",
-     * "wlan0", etc.
-     */
-    name: string;
 
-    /**
-     * The available IPv4/6 address.
-     */
-    address: string;
-
-    /**
-     * The prefix length
-     */
-    prefixLength: number;
-  }
-
-  /**
-   * Retrieves information about local adapters on this system.
-   * @returns Called when local adapter information is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/system.network/#method-getNetworkInterfaces
-   */
-  export function getNetworkInterfaces(): Promise<{
-    /**
-     * Array of object containing network interfaces information.
-     */
-    networkInterfaces: NetworkInterface[],
-  }>;
-
-  /**
-   * Retrieves information about local adapters on this system.
-   * @param callback Called when local adapter information is available.
-   * @see https://developer.chrome.com/docs/extensions/reference/system.network/#method-getNetworkInterfaces
-   */
-  export function getNetworkInterfaces(
-    callback: (
-      /**
-       * Array of object containing network interfaces information.
-       */
-      networkInterfaces: NetworkInterface[],
-    ) => void,
-  ): void;
-}
-/**
- * The <code>chrome.system.powerSource</code> API allows Chrome Kiosk Apps to
- * query the state of connected power sources.
- * @see https://developer.chrome.com/docs/extensions/reference/system.powerSource/
- */
-declare namespace chrome.system.powerSource {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/system.powerSource/#type-PowerSourceType
-   */
-  export type PowerSourceType = "unknown" | "mains" | "usb";
-
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/system.powerSource/#type-PowerSourceInfo
-   */
-  export interface PowerSourceInfo {
-    /**
-     * Type of power source.
-     */
-    type: PowerSourceType;
-
-    /**
-     * Maximum power this source is capable of delivering if known. Reported in
-     * watts, rounded to two significant digits.
-     */
-    maxPower?: number;
-
-    /**
-     * Whether this power source is connected to the device.
-     */
-    active: boolean;
-  }
-
-  /**
-   * Requests information on attached power sources.
-   * @returns The callback to invoke with the results or undefined if the power
-   *     source information is not known.
-   * @see https://developer.chrome.com/docs/extensions/reference/system.powerSource/#method-getPowerSourceInfo
-   */
-  export function getPowerSourceInfo(): Promise<{
-    powerSourceInfo?: PowerSourceInfo[],
-  }>;
-
-  /**
-   * Requests information on attached power sources.
-   * @param callback The callback to invoke with the results or undefined if the
-   *     power source information is not known.
-   * @see https://developer.chrome.com/docs/extensions/reference/system.powerSource/#method-getPowerSourceInfo
-   */
-  export function getPowerSourceInfo(
-    callback: (
-      powerSourceInfo?: PowerSourceInfo[],
-    ) => void,
-  ): void;
-
-  /**
-   * Requests a power source status update. Resulting power source status
-   * updates are observable using {@link onPowerChanged}.
-   * @see https://developer.chrome.com/docs/extensions/reference/system.powerSource/#method-requestStatusUpdate
-   */
-  export function requestStatusUpdate(): void;
-
-  /**
-   * Event for changes in the set of connected power sources.
-   * @see https://developer.chrome.com/docs/extensions/reference/system.powerSource/#event-onPowerChanged
-   */
-  export const onPowerChanged: chrome.events.Event<(
-    powerSourceInfo: PowerSourceInfo[],
-  ) => void>;
-}
 /**
  * Use the <code>chrome.system.storage</code> API to query storage device
  * information and be notified when a removable storage device is attached and
  * detached.
  * @see https://developer.chrome.com/docs/extensions/reference/system.storage/
+ * @chrome-permission system.storage
  */
 declare namespace chrome.system.storage {
   /**
@@ -34147,10 +23909,12 @@ declare namespace chrome.system.storage {
     id: string,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.tabCapture</code> API to interact with tab media
  * streams.
  * @see https://developer.chrome.com/docs/extensions/reference/tabCapture/
+ * @chrome-permission tabCapture
  */
 declare namespace chrome.tabCapture {
   /**
@@ -34425,12 +24189,15 @@ declare namespace chrome.tabCapture {
     info: CaptureInfo,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.tabGroups</code> API to interact with the browser's tab
  * grouping system. You can use this API to modify and rearrange tab groups in
  * the browser. To group and ungroup tabs, or to query what tabs are in groups,
  * use the <code>chrome.tabs</code> API.
  * @see https://developer.chrome.com/docs/extensions/reference/tabGroups/
+ * @alpha
+ * @chrome-permission tabGroups
  */
 declare namespace chrome.tabGroups {
   /**
@@ -34694,6 +24461,7 @@ declare namespace chrome.tabGroups {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.tabs</code> API to interact with the browser's tab
  * system. You can use this API to create, modify, and rearrange tabs in the
@@ -36869,11 +26637,13 @@ declare namespace chrome.tabs {
     },
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.topSites</code> API to access the top sites (i.e. most
  * visited sites) that are displayed on the new tab page. These do not include
  * shortcuts customized by the user.
  * @see https://developer.chrome.com/docs/extensions/reference/topSites/
+ * @chrome-permission topSites
  */
 declare namespace chrome.topSites {
   /**
@@ -36912,6 +26682,7 @@ declare namespace chrome.topSites {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.ttsEngine</code> API to implement a text-to-speech(TTS)
  * engine using an extension. If your extension registers using this API, it
@@ -36921,6 +26692,7 @@ declare namespace chrome.topSites {
  * synthesize and output the speech, and send events back to the calling
  * function to report the status.
  * @see https://developer.chrome.com/docs/extensions/reference/ttsEngine/
+ * @chrome-permission ttsEngine
  */
 declare namespace chrome.ttsEngine {
   /**
@@ -37047,12 +26819,14 @@ declare namespace chrome.ttsEngine {
    */
   export const onResume: chrome.events.Event<() => void>;
 }
+
 /**
  * Use the <code>chrome.tts</code> API to play synthesized text-to-speech (TTS).
  * See also the related <a
  * href='http://developer.chrome.com/extensions/ttsEngine'>ttsEngine</a> API,
  * which allows an extension to implement a speech engine.
  * @see https://developer.chrome.com/docs/extensions/reference/tts/
+ * @chrome-permission tts
  */
 declare namespace chrome.tts {
   /**
@@ -37361,6 +27135,7 @@ declare namespace chrome.tts {
     event: TtsEvent,
   ) => void>;
 }
+
 /**
  * The <code>chrome.types</code> API contains type declarations for Chrome.
  * @see https://developer.chrome.com/docs/extensions/reference/types/
@@ -37502,6 +27277,7 @@ declare namespace chrome.types {
     ) => void>;
   }
 }
+
 /**
  * Use the <code>chrome.usb</code> API to interact with connected USB
  devices.
@@ -37513,6 +27289,7 @@ declare namespace chrome.types {
  * runtime.lastError} and executing the function's regular callback. The
  * callback's regular parameters will be undefined in this case.
  * @see https://developer.chrome.com/docs/extensions/reference/usb/
+ * @chrome-permission usb
  */
 declare namespace chrome.usb {
   /**
@@ -38494,73 +28271,13 @@ declare namespace chrome.usb {
     device: Device,
   ) => void>;
 }
-/**
- * The <code>chrome.virtualKeyboard</code> API is a kiosk only API used to
- * configure virtual keyboard layout and behavior in kiosk sessions.
- * @see https://developer.chrome.com/docs/extensions/reference/virtualKeyboard/
- */
-declare namespace chrome.virtualKeyboard {
-  /**
-   * @see https://developer.chrome.com/docs/extensions/reference/virtualKeyboard/#type-FeatureRestrictions
-   */
-  export interface FeatureRestrictions {
-    /**
-     * Whether virtual keyboards can provide auto-complete.
-     */
-    autoCompleteEnabled?: boolean;
 
-    /**
-     * Whether virtual keyboards can provide auto-correct.
-     */
-    autoCorrectEnabled?: boolean;
-
-    /**
-     * Whether virtual keyboards can provide input via handwriting recognition.
-     */
-    handwritingEnabled?: boolean;
-
-    /**
-     * Whether virtual keyboards can provide spell-check.
-     */
-    spellCheckEnabled?: boolean;
-
-    /**
-     * Whether virtual keyboards can provide voice input.
-     */
-    voiceInputEnabled?: boolean;
-  }
-
-  /**
-   * Sets restrictions on features provided by the virtual keyboard.
-   * @param restrictions the preferences to enabled/disabled virtual keyboard
-   *     features.
-   * @returns Invoked with the values which were updated.
-   * @see https://developer.chrome.com/docs/extensions/reference/virtualKeyboard/#method-restrictFeatures
-   */
-  export function restrictFeatures(
-    restrictions: FeatureRestrictions,
-  ): Promise<{
-    update: FeatureRestrictions,
-  }>;
-
-  /**
-   * Sets restrictions on features provided by the virtual keyboard.
-   * @param restrictions the preferences to enabled/disabled virtual keyboard
-   *     features.
-   * @param callback Invoked with the values which were updated.
-   * @see https://developer.chrome.com/docs/extensions/reference/virtualKeyboard/#method-restrictFeatures
-   */
-  export function restrictFeatures(
-    restrictions: FeatureRestrictions,
-    callback?: (
-      update: FeatureRestrictions,
-    ) => void,
-  ): void;
-}
 /**
  * Use the <code>chrome.vpnProvider</code> API to implement a VPN
  client.
  * @see https://developer.chrome.com/docs/extensions/reference/vpnProvider/
+ * @chrome-platform chromeos
+ * @chrome-permission vpnProvider
  */
 declare namespace chrome.vpnProvider {
   /**
@@ -38870,9 +28587,12 @@ declare namespace chrome.vpnProvider {
     id?: string,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.wallpaper</code> API to change the ChromeOS wallpaper.
  * @see https://developer.chrome.com/docs/extensions/reference/wallpaper/
+ * @chrome-platform chromeos
+ * @chrome-permission wallpaper
  */
 declare namespace chrome.wallpaper {
   /**
@@ -38967,10 +28687,12 @@ declare namespace chrome.wallpaper {
     ) => void,
   ): void;
 }
+
 /**
  * Use the <code>chrome.webNavigation</code> API to receive notifications about
  * the status of navigation requests in-flight.
  * @see https://developer.chrome.com/docs/extensions/reference/webNavigation/
+ * @chrome-permission webNavigation
  */
 declare namespace chrome.webNavigation {
   /**
@@ -39542,10 +29264,12 @@ declare namespace chrome.webNavigation {
     },
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.webRequest</code> API to observe and analyze traffic and
  * to intercept, block, or modify requests in-flight.
  * @see https://developer.chrome.com/docs/extensions/reference/webRequest/
+ * @chrome-permission webRequest
  */
 declare namespace chrome.webRequest {
   /**
@@ -40514,16 +30238,7 @@ declare namespace chrome.webRequest {
     },
   ) => void>;
 }
-/**
- * Use the <code>chrome.webViewRequest</code> API to intercept, block, or modify
- * requests in-flight. It is potentially faster than the <a
- * href='webRequest'><code>chrome.webRequest</code> API</a> because you can
- * register rules that are evaluated in the browser rather than the JavaScript
- * engine, which reduces roundtrip latencies and allows higher efficiency.
- * @see https://developer.chrome.com/docs/extensions/reference/webViewRequest/
- */
-declare namespace chrome.webViewRequest {
-}
+
 /**
  * Use the <code>webview</code> tag to actively load live content from the web
  * over the network and embed it in your Chrome App. Your app can control the
@@ -42319,6 +32034,7 @@ declare namespace chrome.webviewTag {
     newZoomFactor: number,
   ) => void>;
 }
+
 /**
  * Use the <code>chrome.windows</code> API to interact with browser windows. You
  * can use this API to create, modify, and rearrange windows in the browser.
