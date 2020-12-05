@@ -19,6 +19,10 @@
   --color-link-primary-active: #{get-color('blue-900')};
   --color-link-primary-visited: #{get-color('purple-900')};
 
+  // This corresponds too the color grey-800.
+  // We use the actual RGB values here so we can use it with rgba() elsewhere.
+  --rgb-button-overlay: 60, 64, 67;
+
   --color-code-bg: #{get-color('grey-50')};
   --color-code-comment: #{get-color('grey-500')};
   --color-code-string: #{get-color('blue-900')};

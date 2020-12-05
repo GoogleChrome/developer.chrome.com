@@ -17,15 +17,15 @@
   }
 
   &:hover::before {
-    opacity: 0.04;
+    opacity: 0.08;
   }
 
-  &:active::before {
-    opacity: 0.1;
-  }
-  
   &:focus-within::before {
     opacity: 0.12;
   }
+
+  &:active::before {
+    opacity: 0.16;
+  }  
 }
 /* purgecss end ignore */
