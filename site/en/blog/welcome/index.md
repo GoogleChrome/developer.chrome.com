@@ -1,13 +1,16 @@
 ---
 title: Welcome to the new developer.chrome.com!
-description: Announcing a revamp of the site, and a general roadmap of our plans for 2021.
+description: Announcing a revamp of the site, and a summary of our plans for 2021.
 layout: 'layouts/blog-post.njk'
 date: 2020-12-04
 authors:
   - samthorogood
   - robdodson
   - kaycebasques
-# hero: https://drive.google.com/file/d/1lYfwTG0uZW3-oRPs05F-j__93xwfIJGl/view?usp=sharing&resourcekey=0-DuT1cfdJPJoKkilDHa_9pw
+hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
+alt: >
+  An illustration featuring household items like a coffee cup, a
+  book, and a toolbox, each with the Chrome logo on it.
 ---
 
 Today, we're happy to announce a revamp of the developer.chrome.com documentation site. Google
