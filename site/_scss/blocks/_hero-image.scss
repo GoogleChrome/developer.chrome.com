@@ -1,0 +1,10 @@
+.hero-image {
+  max-height: 480px;
+  max-width: 960px;
+  width: 100%;
+
+  @media (min-width: 960px) {
+    @include apply-utility('rounded', 'lg');
+  }
+}
+

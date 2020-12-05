@@ -5,6 +5,19 @@
 {% endblock %}
 
 {% block content %}
+  {% if hero %}
+    <div class="display-flex justify-content-center lg:pad-left-400 lg:pad-right-400">
+      {% img
+        className="hero-image object-fit-cover",
+        src=hero,
+        alt=alt,
+        width="960",
+        height="480",
+        sizes="(min-width: 960px) 960px, 100vw"
+      %}
+    </div>
+  {% endif %}
+
   <article class="post stack measure-long center-margin width-full gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400">
     <div class="stack flow-space-200">
       {% include 'partials/post-headline.njk' %}
