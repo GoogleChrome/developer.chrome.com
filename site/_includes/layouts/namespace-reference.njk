@@ -69,12 +69,14 @@
             {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
             {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
             {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
+            {{ macros.renderSummarySection(namespace.name, 'Events', 'event', namespace.events) }}
           </ul>
         </div>
 
         {{ macros.renderPrimarySection(namespace.name, 'types', 'Types', 'type', namespace.types) }}
         {{ macros.renderPrimarySection(namespace.name, 'properties', 'Properties', 'property', namespace.properties) }}
         {{ macros.renderPrimarySection(namespace.name, 'methods', 'Methods', 'method', namespace.methods) }}
+        {{ macros.renderPrimarySection(namespace.name, 'events', 'Events', 'event', namespace.events) }}
       {% endset %}
 
       <div class="toc-container display-block xl:display-none">

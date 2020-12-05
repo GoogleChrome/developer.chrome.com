@@ -152,6 +152,7 @@ function parseChromeTypesFile(typesPath) {
       types: [],
       properties: [],
       methods: [],
+      events: [],
       channel,
     };
     flat.push(renderNamespace);
@@ -191,6 +192,16 @@ function parseChromeTypesFile(typesPath) {
         target.push(rt);
       }
     }
+
+    // Events are just properties that have an instanceof chrome.events.Events. Extract them and
+    // include them separately.
+    renderNamespace.properties = renderNamespace.properties.filter(property => {
+      if (property.referenceType === 'chrome.events.Event') {
+        renderNamespace.events.push(property);
+        return false;
+      }
+      return true;
+    });
   }
 
   // Returns as an already sorted Array.

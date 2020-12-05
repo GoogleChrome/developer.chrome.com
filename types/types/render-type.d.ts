@@ -72,6 +72,7 @@ declare global {
     types: RenderType[];
     properties: RenderType[];
     methods: RenderType[];
+    events: RenderType[];
   }
 }
 

@@ -34,7 +34,7 @@ window. Under some circumstances, there may be no current window for background 
 
 ## Examples
 
-![Two windows, each with one tab](/windows.png)
+![Two windows, each with one tab](windows.png)
 
 You can find simple examples of using the windows module in the [examples/api/windows][11]
 directory. Another example is in the [tabs_api.html][12] file of the [inspector][13] example. For

@@ -90,7 +90,18 @@
   </div>
 {% endif %}
 
-{% if spec.referenceType %}
+{% if spec.referenceType === 'chrome.events.Event' %}
+  <div class="code-sections">
+    {% if headings %}<h4 class="type--label case-upper">Event</h4>{% endif %}
+
+    {# TODO(samthor): The old code shows information on filters. #}
+
+    <ul class="stack flow-space-300">
+      {{ internalRenderNamedType(spec.referenceTemplates[0], namespaceName) }}
+    </ul>
+  </div>
+
+{% elif spec.referenceType %}
   <div class="code-sections">
     {% if headings %}<h4 class="type--label case-upper">Type</h4>{% endif %}
 
@@ -103,7 +114,12 @@
 {% macro internalRenderNamedType(spec, namespaceName, isParameter) %}
 <li>
   <div>
-    <div class="code-sections__label">{{ spec.name }}</div>
+    {# Event callbacks don't have names. Give them one. #}
+    {% set name = spec.name %}
+    {% if not name and spec.type == 'function' %}
+      {% set name = 'callback' %}
+    {% endif %}
+    <div class="code-sections__label">{{ name }}</div>
     <div class="type--xsmall">{{ renderSingleType(spec, namespaceName) }}</div>
   </div>
   <div class="stack">
@@ -233,6 +249,16 @@
       <div>
         <h3 class="type--h4" id="{{ prefix }}-{{ rt.name }}">{{ rt.name }}</h3>
         {{ renderTypeSignature(rt, namespaceName) }}
+
+        {# This isn't really part of the type but we show users how to add a listener. #}
+        {% if rt.referenceType === 'chrome.events.Event' %}
+          <div class="code-sections__signature">
+            <code>
+              {{ namespaceName }}.{{ rt.name }}.addListener(callback: <span class="code-sections__signature-type">function</span>)
+            </code>
+          </div>
+        {% endif %}
+
         {{ internalRenderTypeDetails(rt, namespaceName, true) }}
       </div>
     {% endfor %}
