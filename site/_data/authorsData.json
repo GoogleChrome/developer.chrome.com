@@ -71,5 +71,21 @@
       "en": "¯‍\\‍_‍(‍ツ‍)‍_‍/‍¯"
     },
     "image": "https://webdev.imgix.net/images/authors/samthor@2x.jpg"
+  },
+  "afuchs": {
+    "name": {
+      "given": "Andy",
+      "family": "Fuchs"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "US",
+    "github": "awfuchs",
+    "descriptions": {
+      "en": "Technical Writer, Chrome Extensions"
+    },
+    "image": "https://wd.imgix.net/image/SHhb2PDKzXTggPGAYpv8JgR81pX2/1604956151251.jpg"
   }
 }

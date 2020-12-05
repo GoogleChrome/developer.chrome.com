@@ -8,7 +8,9 @@ devtools:
   en: 'Extend Chrome DevTools'
 develop:
   en: 'Develop extensions and themes'
+mv3:
+  en: 'Manifest V3'
 mv2:
-  en: 'Manifest version 2'
+  en: 'Manifest V2'
 apps:
   en: 'Develop Chrome Apps'
