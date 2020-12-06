@@ -1,0 +1,27 @@
+%link {
+  color: var(--link-color, var(--color-primary));
+
+  // Let links opt-out of showing a visited state by using a .no-visited class.
+  &:not(.no-visited):visited {
+    color: var(--link-visited-color, var(--color-link-default-visited));
+  }
+
+  &:hover {
+    background-color: rgba(var(--link-rgb-background, var(--rgb-primary)), 0.08);
+    text-decoration: underline;
+  }
+  
+  &:not(.no-visited):visited:hover {
+    background-color: rgba(var(--link-rgb-background, var(--rgb-link-default-visited)), 0.08);
+  }
+
+  &:focus,
+  &:focus-within {
+    background-color: rgba(var(--link-rgb-background, var(--rgb-primary)), 0.12);
+  }
+
+  &:active {
+    background-color: rgba(var(--link-rgb-background, var(--rgb-primary)), 0.16);
+  }
+}
+

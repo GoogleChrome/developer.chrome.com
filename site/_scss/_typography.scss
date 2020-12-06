@@ -126,10 +126,4 @@
   &--hairline {
     @extend %type--hairline;
   }
-
-  // Links which descend from .type (basically links inside of posts) will
-  // keep their underline, but also gain an overlay on hover/focus.
-  a:not([class]) {
-    @extend %overlay;
-  }
 }

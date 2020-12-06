@@ -1,3 +1,12 @@
+// This placeholder gives elements a background hover state that matches their
+// current text color.
+// 
+// !!! IMPORTANT !!!
+// Because this placeholder uses a pseudo element, it can't be used with
+// elements that appear inline in paragraphs. If those elements are split across
+// two lines, the hover state will break.
+// https://twitter.com/rob_dodson/status/1335077889641832449
+
 /* purgecss start ignore */
 %overlay {
   overflow: hidden;

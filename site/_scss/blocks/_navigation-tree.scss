@@ -2,9 +2,13 @@
 navigation-tree {
   display: none;
   width: px-to-rem(250px);
-  
+
   @include media-query('lg') {
     display: block;
+  }
+
+  &:focus {
+    outline: 0;
   }
 }
 

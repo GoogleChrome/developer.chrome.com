@@ -3,6 +3,12 @@
 // interaction. The surface overlay is placed *between* the content and the
 // container.
 // The surface also adds an underline to links.
+// 
+// // !!! IMPORTANT !!!
+// Because this class uses a pseudo element, it can't be used with
+// elements that appear inline in paragraphs. If those elements are split across
+// two lines, the hover state will break.
+// https://twitter.com/rob_dodson/status/1335077889641832449
 
 %surface,
 .surface {

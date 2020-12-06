@@ -1,4 +1,7 @@
 .aside {
+  --link-color: var(--color-blue-darkest);
+  --link-visited-color: var(--color-blue-darkest);
+  --link-rgb-background: var(--rgb-blue-darkest);
   background-color: var(--color-blue-lightest);
   border-radius: 6px;
   color: var(--color-blue-darkest);
@@ -8,36 +11,50 @@
     margin-top: get-size(300);
   }
 
-  a {
-    color: inherit;
-  }
-
   &--caution {
+    --link-color: var(--color-yellow-darkest);
+    --link-visited-color: var(--color-yellow-darkest);
+    --link-rgb-background: var(--rgb-yellow-darkest);
     background-color: var(--color-yellow-lightest);
     color: var(--color-yellow-darkest);
   }
   
   &--warning {
+    --link-color: var(--color-red-darkest);
+    --link-visited-color: var(--color-red-darkest);
+    --link-rgb-background: var(--rgb-red-darkest);
     background-color: var(--color-red-lightest);
     color: var(--color-red-darkest);
   }
   
   &--success {
+    --link-color: var(--color-green-darkest);
+    --link-visited-color: var(--color-green-darkest);
+    --link-rgb-background: var(--rgb-green-darkest);
     background-color: var(--color-green-lightest);
     color: var(--color-green-darkest);
   }
   
   &--gotchas {
+    --link-color: var(--color-purple-darkest);
+    --link-visited-color: var(--color-purple-darkest);
+    --link-rgb-background: var(--rgb-purple-darkest);
     background-color: var(--color-purple-lightest);
     color: var(--color-purple-darkest);
   }
   
   &--key {
+    --link-color: var(--color-pink-darkest);
+    --link-visited-color: var(--color-pink-darkest);
+    --link-rgb-background: var(--rgb-pink-darkest);
     background-color: var(--color-pink-lightest);
     color: var(--color-pink-darkest);
   }
   
   &--codelab {
+    --link-color: var(--color-cyan-darkest);
+    --link-visited-color: var(--color-cyan-darkest);
+    --link-rgb-background: var(--rgb-cyan-darkest);
     background-color: var(--color-cyan-lightest);
     color: var(--color-cyan-darkest);
   }

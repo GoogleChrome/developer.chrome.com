@@ -34,12 +34,6 @@
   margin-top: get-size(300);
 }
 
-.code-sections__link {
-  @extend %surface;
-  color: var(--color-primary);
-  font-weight: 500;
-}
-
 // This is used for method signatures. We need to:
 //  - use opacity to make them less pronounced
 //  - allow overflow-wrap as often we have very long preambles, e.g.:

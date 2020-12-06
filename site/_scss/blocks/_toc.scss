@@ -32,7 +32,6 @@
 // so we have to style them all with descendant selectors.
 .toc__wrapper {
   a {
-    @extend %surface;
     @extend %type--small;
     text-decoration: none;
   }

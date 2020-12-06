@@ -15,15 +15,7 @@ body {
 }
 
 a:not([class]) {
-  color: var(--color-primary);
-
-  &:active {
-    color: var(--color-link-primary-active);
-  }
-
-  &:visited {
-    color: var(--color-link-primary-visited);
-  }
+  @extend %link;
 }
 
 main:focus {

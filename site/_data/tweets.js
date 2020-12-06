@@ -63,7 +63,7 @@ const formatMentions = tweet => {
     const re = new RegExp(pattern, 'g');
     tweet.formatted_text = tweet.formatted_text.replace(
       re,
-      `<a class="tweet-card__link" href="https://twitter.com/${mention.screen_name}">${pattern}</a>`
+      `<a class="link no-visited decoration-none" href="https://twitter.com/${mention.screen_name}">${pattern}</a>`
     );
   }
 };
@@ -84,7 +84,7 @@ const formatUrls = tweet => {
     const re = new RegExp(pattern, 'g');
     tweet.formatted_text = tweet.formatted_text.replace(
       re,
-      `<a class="tweet-card__link" href="${url.url}">${url.display_url}</a>`
+      `<a class="link no-visited decoration-none" href="${url.url}">${url.display_url}</a>`
     );
   }
 };
@@ -105,7 +105,7 @@ const formatHashtags = tweet => {
     const re = new RegExp(pattern, 'g');
     tweet.formatted_text = tweet.formatted_text.replace(
       re,
-      `<a class="tweet-card__link" href="https://twitter.com/hashtag/${hashtag.text}">${pattern}</a>`
+      `<a class="link no-visited decoration-none" href="https://twitter.com/hashtag/${hashtag.text}">${pattern}</a>`
     );
   }
 };

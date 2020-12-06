@@ -46,8 +46,10 @@
     </div>
   {% endif %}
 
-  <a href="/blog" class="type--small display-inline-flex color-primary surface gap-top-400">
-    {{ 'i18n.common.see_all_articles' | i18n(locale) }}
-  </a>
+  <div class="gap-top-400">
+    <a href="/blog" class="material-button button-text display-inline-flex color-primary">
+      {{ 'i18n.common.see_all_articles' | i18n(locale) }}
+    </a>
+  </div>
 </div>
 {% endmacro %}

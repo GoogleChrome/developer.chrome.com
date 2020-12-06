@@ -29,8 +29,10 @@
     {% endfor %}
   </div>
 
-  <a href="/docs/" class="type--small display-inline-flex color-primary surface decoration-none gap-top-400">
-    {{ 'i18n.common.see_all_docs' | i18n(locale) }}
-  </a>
+  <div class="gap-top-400">
+    <a href="/docs/" class="material-button button-text display-inline-flex color-primary">
+      {{ 'i18n.common.see_all_docs' | i18n(locale) }}
+    </a>
+  </div>
 </div>
 {% endmacro %}

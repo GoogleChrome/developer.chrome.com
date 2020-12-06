@@ -9,7 +9,7 @@
       <span class="gap-left-300 flex-1 user-select-none">Twitter</span>
     </div>
 
-    <a href="{{ tweet.tweet_url }}" class="tweet-card__link display-inline-flex type--h5-card gap-top-300">
+    <a href="{{ tweet.tweet_url }}" class="link decoration-none no-visited display-inline-flex type--small gap-top-300">
       {{ helpers.formatDateShort(tweet.created_at, locale) }}
     </a>
 
@@ -21,9 +21,11 @@
     <p class="tweet-card__text gap-top-300">{{ tweet.formatted_text | safe }}</p>
     <!-- htmlmin:ignore -->
 
-    <a href="https://twitter.com/chromiumdev" class="tweet-card__link type--small display-inline-flex gap-top-400">
-      {{ 'i18n.common.follow' | i18n(locale) }} @Chromiumdev
-    </a>
+    <div class="gap-top-400">
+      <a href="https://twitter.com/chromiumdev" class="material-button button-text display-inline-flex color-primary">
+        {{ 'i18n.common.follow' | i18n(locale) }} @ChromiumDev
+      </a>
+    </div>
   </div>
 {% endif %}
 {% endmacro %}

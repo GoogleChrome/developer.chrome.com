@@ -1,8 +1,3 @@
 .tweet-card__text {
   white-space: pre-wrap;
 }
-
-.tweet-card__link {
-  @extend %surface;
-  color: var(--color-primary);
-}

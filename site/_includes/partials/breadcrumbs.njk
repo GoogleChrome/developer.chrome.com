@@ -13,7 +13,7 @@
         {%- endif %}
 
         {% if part.url %}
-          <a class="type--h6 color-primary surface decoration-none" href="{{ part.url }}">{{ part.title }}</a>
+          <a class="link type--h6 decoration-none no-visited" href="{{ part.url }}">{{ part.title }}</a>
         {% else %}
           <span class="type--h5">{{ part.title }}</span>
         {% endif %}
