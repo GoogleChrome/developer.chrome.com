@@ -20,7 +20,12 @@ have been defined in the _data/docs/*.yml file for this project.
   {% for item in sections %}
     {% if item.sections %}
       <li>
-        <div>{{ item.title | i18n(locale) }}</div>
+        {% set translatedTitle = item.title | i18n(locale) %}
+        {% set translatedSlug = translatedTitle | slugify %}
+        <div id="{{ translatedSlug }}">
+          {{ translatedTitle }}
+          <a class="heading-link" href="#{{ translatedSlug }}">#</a>
+        </div>
         {{ projectSections(item.sections, type) }}
       </li>
     {% elif item.url %}

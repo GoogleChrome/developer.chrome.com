@@ -1,11 +1,6 @@
 const yaml = require('js-yaml');
 const {drafts} = require('./site/_utils/drafts');
 
-// Markdown
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const markdownItAttrs = require('markdown-it-attrs');
-
 // Filters
 const {
   absolute,
@@ -17,6 +12,7 @@ const {i18n} = require('./site/_filters/i18n');
 const {namespaceToPath} = require('./site/_filters/namespace');
 const {minifyJs} = require('./site/_filters/minify-js');
 const {updateSvgForInclude} = require('./site/_filters/svg');
+const {slugify} = require('./site/_filters/slugify');
 
 // Shortcodes
 const {iframe} = require('./site/_shortcodes/iframe');
@@ -102,6 +98,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
   eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
+  eleventyConfig.addFilter('slugify', slugify);
 
   // Add shortcodes
   eleventyConfig.addShortcode('iframe', iframe);

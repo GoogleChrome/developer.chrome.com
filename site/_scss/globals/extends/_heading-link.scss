@@ -1,0 +1,5 @@
+%heading-link-container {
+  &:hover > .heading-link {
+    visibility: visible;
+  }
+}

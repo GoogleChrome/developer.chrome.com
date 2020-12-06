@@ -34,7 +34,7 @@ const md = markdown({
     slugify: s => uslug(s),
     level: 2,
     permalink: true,
-    permalinkClass: 'headline__link',
+    permalinkClass: 'heading-link',
     permalinkSymbol: '#',
   })
   // Let folks define custom markdown blocks with emmet

@@ -14,21 +14,12 @@
 
 %type {
   &--headline {
+    @extend %heading-link-container;
     @include apply-utility('font', 'google-sans');
     @include apply-utility('weight', 'regular');
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
-
-    &:hover > .headline__link {
-      visibility: visible;
-    }
-
-    > .headline__link {
-      color: currentColor;
-      text-decoration: none;
-      visibility: hidden;
-    }
   }
 
   &--var-large {
