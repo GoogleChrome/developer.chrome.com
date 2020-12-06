@@ -19,15 +19,18 @@ const isGAEProd = Boolean(process.env.GAE_APPLICATION);
 const express = require('express');
 const compression = require('compression');
 const {notFoundHandler} = require('./not-found');
-const {build: buildRedirectHandler} = require('./redirect');
+const {buildRedirectHandler} = require('./redirect');
 
 const app = express();
 
-const redirectHandler = buildRedirectHandler('redirects.yaml');
+// The site serves from both roots. We pass this to our redirects handler to
+// see whether redirects will be successful.
+const staticPaths = ['dist', 'dist/en'];
+
+const redirectHandler = buildRedirectHandler('redirects.yaml', staticPaths);
 
 const handlers = [
-  express.static('dist'),
-  express.static('dist/en'),
+  ...staticPaths.map(staticPath => express.static(staticPath)),
   redirectHandler,
   notFoundHandler,
 ];

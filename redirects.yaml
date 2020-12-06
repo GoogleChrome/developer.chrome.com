@@ -7,8 +7,8 @@
 #  (2) Group redirects, e.g., "from: /foo/...", which will match the top-level
 #      path (with the same rules as (1)) as well as any descendant paths
 #
-# Redirects are ordered top-to-bottom, but all simple redirects take priority
-# over all group redirects.
+# Redirects are checked top-to-bottom. For more information on the extended
+# syntax found here, see NPM `redirects-yaml`.
 #
 # WARNING! Redirects DO NOT take priority over static content.
 # For example, if you try to redirect "/foo" but the site contains a static file
@@ -24,7 +24,7 @@ redirects:
 - from: /home
   to: /
 
-- from: /webstore/api_
+- from: /webstore/api_index
   to: /docs/webstore/webstore
 
 - from: /webstore/articles
@@ -48,13 +48,14 @@ redirects:
 - from: /webstore/webstore/webstore_api/payments/list
   to: /webstore/webstore_api/payments/list
 
-# Group redirects
-
 - from: /apps/...
   to: /docs/apps/...
 
 - from: /extensions/...
-  to: /docs/extensions/mv2/...
+  try:
+  - /docs/extensions/reference/...
+  - /docs/extensions/mv2/...
+  else: /docs/extensions/...
 
 - from : /multidevice/...
   to: /docs/multidevice/...
