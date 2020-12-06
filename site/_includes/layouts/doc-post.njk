@@ -4,6 +4,10 @@
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
+{% set tocContents -%}
+  {{ content | toc | safe }}
+{%- endset %}
+
 {% block content %}
   <div class="display-flex gap-top-300 lg:gap-top-400">
     {% include 'partials/navigation-tree.njk' %}
@@ -29,7 +33,6 @@
         {{ content | safe }}
       </div>
     </article>
-
 
     <div class="toc-container display-none xl:display-block pad-left-400 pad-right-400">
       {% include 'partials/toc.njk' %}
