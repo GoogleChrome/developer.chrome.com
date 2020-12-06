@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Shared Modules"
+title: "Shared modules"
 date: 2015-01-05
 updated: 2018-05-22
 description: How to share code between Chrome Extensions.
@@ -56,7 +56,7 @@ particular Shared Modules:
 }
 ```
 
-## Accessing Resources {: #accessing_resources }
+## Accessing resources {: #accessing_resources }
 
 Shared Module resources are accessed by a reserved path _\_modules/<shared_module_id>_ in the root
 of your importing extension. For example, to include the script 'foo.js' from a Shared Module with
@@ -78,7 +78,7 @@ extension, all privileges granted to the importing extension are available to co
 Modules. Also, the Shared Module is able to access resources in the importing extension by using
 absolute paths.
 
-## Install / Uninstall {: #install_uninstall }
+## Install / uninstall {: #install_uninstall }
 
 A Shared Module is automatically installed from the Chrome Web Store when needed by a dependent
 extension, and automatically uninstalled when the last extension which references it is uninstalled.

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Declare Permissions"
+title: "Declare permissions"
 date: 2012-10-08
 updated: 2014-05-21
 description: An overview of the valid values for the permissions property in manifest.json.

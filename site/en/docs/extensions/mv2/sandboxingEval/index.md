@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Using eval in Chrome Extensions. Safely."
+title: "Using eval in Chrome extensions"
 date: 2012-09-18
 updated: 2014-05-22
 description: How to use eval() in a Chrome Extension.

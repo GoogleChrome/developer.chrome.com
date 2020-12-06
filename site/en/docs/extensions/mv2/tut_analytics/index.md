@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Tutorial: Google Analytics"
+title: "Tutorial: Google analytics"
 date: 2012-09-18
 updated: 2016-10-11
 description: >

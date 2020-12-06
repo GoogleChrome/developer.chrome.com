@@ -20,7 +20,7 @@ keyboard and mouse - or they may depend on a screen magnifier and possibly a [sc
 While it is impossible to predict what tools people will use to access an extension, there are steps
 any developer can take to make an extension as accessible as possible.
 
-## Integrate Accessible UI Controls {: #controls }
+## Integrate accessible UI controls {: #controls }
 
 If users can’t access the user interface controls, they are unable to use an extension. The easiest
 way to create an accessible UI is to use a standard HTML control.
@@ -227,7 +227,7 @@ from the HTML entirely and placed in the CSS.
 If the extension must use text in an image, include the image text in the alt text. A good resource
 to refer to is the [WebAIM article on appropriate alt text][16].
 
-## Learn More {: #learn_more }
+## Learn more {: #learn_more }
 
 Learn more about accessibility in Chrome by checking out the [A11ycasts][17] channel and reading
 through the [Chromium Accessibility Technical Documentation][18].

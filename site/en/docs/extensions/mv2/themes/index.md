@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Themes"
+title: "What are themes?"
 date: 2012-09-18
 updated: 2018-09-18
 description: Guidelines on how to create a theme.

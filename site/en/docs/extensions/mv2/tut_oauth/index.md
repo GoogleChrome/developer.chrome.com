@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "OAuth2: Authenticate Users with Google"
+title: "OAuth2: Authenticate users with Google"
 date: 2012-09-18
 updated: 2018-05-01
 description: >
@@ -17,7 +17,7 @@ This tutorial builds an extension that accesses a user's Google contacts using t
 API][2] and the [Chrome Identity API][3]. Because extensions don’t load over HTTPS, can’t perform
 redirects or set cookies, they rely on the Chrome Identity API to use OAuth2.
 
-## Get Started {: #set_up }
+## Get started {: #set_up }
 
 Begin by creating a directory and the following starter files.
 
@@ -80,7 +80,7 @@ Add an HTML file called `index.html` and include the following code. Or download
 </html>
 ```
 
-## Upload to the Developer Dashboard {: #upload_to_dashboard }
+## Upload to the developer dashboard {: #upload_to_dashboard }
 
 Package the extension directory into a `.zip` file and upload it to the [Chrome Developer
 Dashboard][8] without publishing it:
@@ -112,7 +112,7 @@ page to the Item ID in the Developer Dashboard. They should match.
 The extension will maintain the same ID by including the `"key"` field in the manifest. Preserving a
 single ID is essential for API registration.
 
-## Create OAuth Client ID {: #oauth_client }
+## Create OAuth client ID {: #oauth_client }
 
 Navigate to the [Google API console][10] and create a new project. Once ready, select
 **Credentials** in the sidebar, click **Create credentials** and choose **OAuth client ID**.
@@ -128,7 +128,7 @@ the extension ID at the end of the URL in the Application ID field.
 
 Finish by clicking create. The console will provide an OAuth client ID.
 
-## Register OAuth in Manifest {: #oauth_registration }
+## Register OAuth in manifest {: #oauth_registration }
 
 Include the `"oauth2"` field in the extension manifest. Place the generated OAuth client ID under
 `"client_id"`. Include an empty string in `"scopes"` for now.
@@ -145,7 +145,7 @@ Include the `"oauth2"` field in the extension manifest. Place the generated OAut
 }
 ```
 
-## Initiate First OAuth Flow {: #identity_permission }
+## Initiate first OAuth flow {: #identity_permission }
 
 Register the [`identity`][11] permission in the manifest.
 
@@ -223,7 +223,7 @@ select "API key" from the dropdown.
 
 Keep the generated API key for later use.
 
-## Create First API Request {: #create_call }
+## Create first API request {: #create_call }
 
 Now that the extension has proper permissions, credentials, and can authorize a Google user, it can
 request data through the People API. Update the code in `oauth.js` to match below.
@@ -257,7 +257,7 @@ Replace `<API_Key_Here>` with the API key generated from the Google API console.
 should log a JSON object that includes an array of `people/account_id`s under the
 `memberResourceNames` field.
 
-## Block Faces {: #block_faces }
+## Block faces {: #block_faces }
 
 Now that the extension is returning a list of the user's contacts, it can make additional requests
 to [retrieve those contact's profiles and information][14] . The extension will use the

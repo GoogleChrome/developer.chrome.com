@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Cross-Origin XMLHttpRequest"
+title: "Cross-origin XMLHttpRequest"
 date: 2012-09-18
 updated: 2020-03-09
 description: How to implement cross-origin XHR in your Chrome Extension.
@@ -201,7 +201,7 @@ Additionally, be especially careful of resources retrieved via HTTP. If your ext
 hostile network, an network attacker (aka a ["man-in-the-middle"][11]) could modify the response
 and, potentially, attack your extension. Instead, prefer HTTPS whenever possible.
 
-### Adjusting the Content Security Policy {: #interaction-with-csp }
+### Adjusting the content security policy {: #interaction-with-csp }
 
 If you modify the default [Content Security Policy][12] for apps or extensions by adding a
 `content_security_policy` attribute to your manifest, you'll need to ensure that any hosts to which

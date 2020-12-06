@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Linux Installation"
+title: "Installing extensions on Linux"
 date: 2017-12-14
 updated: 2018-03-23
 description: How to package, host, and update crx files from a personal server.
@@ -96,7 +96,7 @@ The page will provide the path for the updated packaged extension.
 
 <!-- TODO(kaycebasques): Had duplicated ID of #packaging -->
 
-### Package through Command Line
+### Package through command line
 
 Package extensions in the command line by invoking [`chrome.exe`][7]. Use the `--pack-extension`
 flag to specify the location of the extension's folder and the `--pack-extension-key` flag to

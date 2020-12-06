@@ -15,7 +15,7 @@ interact with or extend and change the behavior of the browser itself.
 
 Consider extensions the gateway to making the Chrome browser the most personalized browser.
 
-## Extension Files {: #files }
+## Extension files {: #files }
 
 Extensions vary in types of files and amount of directories, but they are all required to have a
 [manifest][1]. Some basic, but useful, extensions may consist of just the manifest and its toolbar
@@ -99,14 +99,14 @@ include multiple components:
 - [Content Script][12]
 - [Options Page][13]
 
-### Background Script {: #background_script }
+### Background script {: #background_script }
 
 The [background script][14] is the extension's event handler; it contains listeners for browser
 events that are important to the extension. It lies dormant until an event is fired then performs
 the instructed logic. An effective background script is only loaded when it is needed and unloaded
 when it goes idle.
 
-### UI Elements {: #pages }
+### UI elements {: #pages }
 
 An [extension's user interface][15] should be purposeful and minimal. The UI should customize or
 enhance the browsing experience without distracting from it. Most extensions have a [browser
@@ -139,7 +139,7 @@ values using the [storage][26] API.
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png",
        alt="Shows a communication path between the content script and the parent extension", height="316", width="388" %}
 
-### Options Page {: #optionsPage }
+### Options page {: #optionsPage }
 
 Just as extensions allow users to customize the Chrome browser, the [options page][27] enables
 customization of the extension. Options can be used to enable features and allow users to choose
@@ -241,7 +241,7 @@ function saveTabData(tab) {
 }
 ```
 
-## Take the Next Step {: #next-steps }
+## Take the next step {: #next-steps }
 
 After reading the overview and completing the [Getting Started][39] tutorial, developers should be
 ready to start writing their own extensions! Dive deeper into the world of custom Chrome with the

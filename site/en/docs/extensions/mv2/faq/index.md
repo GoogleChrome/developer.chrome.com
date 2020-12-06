@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Frequently Asked Questions"
+title: "Frequently asked questions"
 date: 2014-02-28
 updated: 2020-11-20
 description: Frequently asked questions about Chrome Extensions.
@@ -51,7 +51,7 @@ If you don't find an answer to your question here, try the [Chrome Web Store FAQ
 
 ## General {: #general2 }
 
-### What are Google Chrome Extensions? {: #faq-gen-01 }
+### What are Google Chrome extensions? {: #faq-gen-01 }
 
 Google Chrome Extensions are applications that run inside the Chrome browser and provide additional
 functionality, integration with third party websites or services, and customized browsing

@@ -24,13 +24,13 @@ We have not decided on a final end of life date for MV2. We will continue evalua
 features in Manifest V3 and we don't have a firm timeline as dates are heavily dependent on
 implementation progress and implementation based on developer feedback.
 
-## Release Channels {: #release-channels }
+## Release channels {: #release-channels }
 
 MV3 is in active development. Developers that wish to experiment with the latest extension platform
 changes should install [Chrome Canary][1]. For additional information, see the Chromium project's
 documentation on [Chrome Release Channels][2] and [Release Process][3].
 
-## API Checklist {: #api_checklist }
+## API checklist {: #api_checklist }
 
 - Do you have host permissions in your `permissions` or `optional_permissions` arrays in
   manifest.json?
@@ -61,7 +61,7 @@ documentation on [Chrome Release Channels][2] and [Release Process][3].
   `chrome.extension.getViews()`?
   - Migrate to passing messages between other contexts and the background service worker.
 
-## Security Checklist {: #security_checklist }
+## Security checklist {: #security_checklist }
 
 - Are you making CORS requests in content scripts?
   - Move these requests to the background service worker.
@@ -72,9 +72,9 @@ documentation on [Chrome Release Channels][2] and [Release Process][3].
   - Remove references to external domains in `script-src`, `worker-src`, `object-src`, and
     `style-src` directives if present.
 
-## API Changes {: #api_changes }
+## API changes {: #api_changes }
 
-### Background Service Workers (In Preview) {: #service_workers }
+### Background service workers (in preview) {: #service_workers }
 
 Background service workers are available to MV3 extensions in Canary as of October 31, 2019. Once
 this feature stabilizes, it will be available to MV2 extensions in Stable.
@@ -89,7 +89,7 @@ this feature stabilizes, it will be available to MV2 extensions in Stable.
 - Additional guidance on migrating to service workers can be found in [Migrating from Background
   Pages to Service Workers][5].
 
-### Extension Actions (In Preview) {: #actions }
+### Extension actions (in preview) {: #actions }
 
 The [page action][6] and [browser action][7] APIs have been consolidated into a single API called
 action. Once this feature stabilizes, it will be available to MV2 extensions in Stable.
@@ -115,9 +115,9 @@ NOTE: This feature is still in early development.
 
 !!!
 
-## Security Changes {: #security_changes }
+## Security changes {: #security_changes }
 
-### Cross Origin Requests in Content Scripts (MV2-3) {: #cors_changes }
+### Cross-origin requests in content scripts (MV2-3) {: #cors_changes }
 
 !!!.aside.aside--note
 
@@ -134,7 +134,7 @@ from their background context and passing the response to a content script. See 
 Cross-Origin Requests in Chrome Extension Content Scripts][8] for additional guidance on how to
 safely execute cross-origin requests in an extension.
 
-### Extension Content Security Policy (NYI) {: #csp_changes }
+### Extension content security policy (NYI) {: #csp_changes }
 
 The way Chrome handles content security policy (CSP) customization is changing slightly in MV3. In
 MV2, Chrome enforced a default CSP and developers could override it by providing a custom
@@ -158,7 +158,7 @@ distributed in its bundle.
   bundled with the extension). Manifests that include such directives will error at parse time.
   - `script-src`, `worker-src`, `object-src`, and `style-src` with non-local values are disallowed.
 
-## Known Issues {: #known_issues }
+## Known issues {: #known_issues }
 
 - `chrome.action.setIcon()`, `chrome.browserAction.setIcon()`, and `chrome.pageAction.setIcon()` do
   not currently accept a path property in service workers ([1015136][10]).

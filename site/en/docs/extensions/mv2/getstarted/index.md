@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Getting Started Tutorial"
+title: "Getting started"
 date: 2014-02-28
 updated: 2020-11-18
 description: Step-by-step instructions on how to create a Chrome Extension.
@@ -19,7 +19,7 @@ To start, create a new directory to hold the extension's files.
 
 The completed extension can be downloaded [here][6].
 
-## Create the Manifest {: #manifest }
+## Create the manifest {: #manifest }
 
 Extensions start with their [manifest][7]. Create a file called `manifest.json` and include the
 following code, or download the file [here][8].
@@ -48,7 +48,7 @@ current state.
 Ta-da! The extension has been successfully installed. Because no icons were included in the
 manifest, a generic toolbar icon will be created for the extension.
 
-## Add Instruction {: #background }
+## Add instruction {: #background }
 
 Although the extension has been installed, it has no instruction. Introduce a [background script][9]
 by creating a file titled `background.js`, or downloading it [here][10], and placing it inside the
@@ -112,7 +112,7 @@ views**, becomes available with a blue link, **background page**.
 
 Click the link to view the background script's console log, "`The color is green.`"
 
-## Introduce a User Interface {: #user_interface }
+## Introduce a user interface {: #user_interface }
 
 Extensions can have many forms of a [user interface][14], but this one will use a [popup][15].
 Create and add a file titled `popup.html` to the directory, or download it [here][16]. This
@@ -286,7 +286,7 @@ applies the color as the background of the button. Include a script tag to `popu
 
 Reload the extension to view the green button.
 
-## Layer Logic {: #logic }
+## Layer logic {: #logic }
 
 The extension now knows the popup should be available to users on [developer.chrome.com][23] and
 displays a colored button, but needs logic for further user interaction. Update `popup.js` to
@@ -326,7 +326,7 @@ The extension is now fully functional! Reload the extension, refresh this page, 
 click the button to turn it green! However, some users may want to change the background to a
 different color.
 
-## Give Users Options {: #options }
+## Give users options {: #options }
 
 The extension currently only allows users to change the background to green. Including an options
 page gives users more control over the extension's functionality, further customizing their browsing
@@ -408,7 +408,7 @@ listeners. When the user clicks a button, it updates the color value in the exte
 storage. Since all of the extension's files pull the color information from global storage no other
 values need to be updated.
 
-## Take the Next Step {: #next-steps }
+## Take the next step {: #next-steps }
 
 Congratulations! The directory now holds a fully-functional, albeit simplistic, Chrome extension.
 

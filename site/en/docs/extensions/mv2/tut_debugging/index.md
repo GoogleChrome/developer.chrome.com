@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Debugging Extensions"
+title: "Debugging extensions"
 date: 2012-09-18
 updated: 2020-07-21
 description: Step-by-step instructions on how to debug Chrome Extensions.
@@ -11,13 +11,13 @@ pages, but they carry unique behavior properties. Becoming a master extension de
 understanding of these behaviors, how extension components work with each other, and where to corner
 bugs. This tutorial gives developers a basic understanding of debugging extensions.
 
-## Locate the Logs {: #locate_logs }
+## Locate the logs {: #locate_logs }
 
 Extensions are made of many different components, and these components have individual
 responsibilities. Download a broken extension [here][2] to begin locating error logs for different
 extension components.
 
-### Background Script {: #debug_bg }
+### Background script {: #debug_bg }
 
 Navigate to the chrome extensions management page at `chrome://extensions` and ensure developer mode
 is on. Click the **Load Unpacked** button and select the broken extension directory. After the
@@ -106,7 +106,7 @@ This can be corrected by calling the [`tabs.query()`][4] method, then selecting 
 Update the code, click the **Clear all** button in the upper right hand corner, and then reload the
 extension.
 
-### Content Script {: #debug_cs }
+### Content script {: #debug_cs }
 
 Refresh the page, open the popup and click the green box. And... nope, the background still hasn’t
 changed colors! Navigate back to the Extensions Management Page and... there is no **Errors**
@@ -133,12 +133,12 @@ Correct the injected script to pass the color variable into the code.
   {code: 'document.body.style.backgroundColor = "' + color + '";'});
 ```
 
-### Extension Tabs {: #extension_tabs }
+### Extension tabs {: #extension_tabs }
 
 Logs for extension pages displayed as a tab, such as [override pages][5] and [full-page options][6],
 can be found in the web page console and on the extensions management page.
 
-## Monitor Network Requests {: #network_requests }
+## Monitor network requests {: #network_requests }
 
 The popup will often make all of the required network requests before even the speediest of
 developers can open DevTools. To view these requests, refresh from inside the network panel. It will
@@ -147,7 +147,7 @@ reload the popup without closing the DevTools panel.
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/x8knWvTA11f4j1wVoNY8.gif",
        alt="Refresh inside the network panel to view popup network requests", height="520", width="566" %}
 
-## Declare Permissions {: #declare_permission }
+## Declare permissions {: #declare_permission }
 
 While extensions have similar capabilities as web pages they often need permission to use certain
 features, such as [cookies][7], [storage][8] and [Cross-Origin XMLHttpRequsts][9]. Refer to the
@@ -188,7 +188,7 @@ the correct permissions in its [manifest][12].
   }
 ```
 
-## Next Steps {: #next }
+## Next steps {: #next }
 
 For further information on debugging extensions, watch [Developing and Debugging][13]. Learn more
 about [Chrome Devtools][14] by reading the documentation.

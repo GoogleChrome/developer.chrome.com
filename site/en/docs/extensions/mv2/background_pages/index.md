@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manage Events with Background Scripts"
+title: "Manage events with background scripts"
 date: 2012-09-17
 updated: 2018-05-01
 description: How to respond to browser triggers (events) from a Chrome Extension background script.
@@ -26,7 +26,7 @@ not cause the event page to load, but only prevents it from closing once loaded.
 Effective background scripts stay dormant until an event they are listening for fires, react with
 specified instructions, then unload.
 
-## Register Background Scripts {: #manifest }
+## Register background scripts {: #manifest }
 
 Background scripts are registered in the [manifest][3] under the `"background"` field. They are
 listed in an array after the `"scripts"` key, and `"persistent"` should be specified as false.
@@ -72,7 +72,7 @@ with non-persistent background pages.
 If an extension currently uses a persistent background page, refer to [Background Migration
 Guide][5] for instruction on how to switch to a non-persistent model.
 
-## Initialize the Extension {: #initialization }
+## Initialize the extension {: #initialization }
 
 Listen to the [`runtime.onInstalled`][6] event to initialize an extension on installation. Use this
 event to set a state or for one-time initialization, such as a [context menu][7].
@@ -87,7 +87,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 ```
 
-## Set Up Listeners {: #listeners }
+## Set up listeners {: #listeners }
 
 Structure background scripts around events the extension depends on. Defining functionally relevant
 events allows background scripts to lie dormant until those events are fired and prevents the
@@ -132,7 +132,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, reply) {
 });
 ```
 
-## Filter Events {: #filters }
+## Filter events {: #filters }
 
 Use APIs that support [event filters][8] to restrict listeners to the cases the extension cares
 about. If an extension is listening for the [`tabs.onUpdated`][9] event, try using the
@@ -145,7 +145,7 @@ chrome.webNavigation.onCompleted.addListener(function() {
 }, {url: [{urlMatches : 'https://www.google.com/'}]});
 ```
 
-## React to Listeners {: #react }
+## React to listeners {: #react }
 
 Listeners exist to trigger functionality once an event has fired. To react to an event, structure
 the desired reaction inside of the listener event.
@@ -163,7 +163,7 @@ chrome.runtime.onMessage.addListener(function(message, callback) {
 });
 ```
 
-## Unload Background Scripts {: #unloading }
+## Unload background scripts {: #unloading }
 
 Data should be persisted periodically so that important information is not lost if an extension
 crashes without receiving `onSuspend`. Use the [storage][11] API to assist with this.

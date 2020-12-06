@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "User Controls For Host Permissions: Transition Guide"
+title: "User controls for host permissions: transition guide"
 date: 2018-10-01
 updated: 2020-04-27
 description: >
@@ -22,7 +22,7 @@ manifest, as well as content scripts. APIs that require host permissions include
 [cookies][2], [tabs.executeScript()][3] and [tabs.insertCSS()][4], and performing cross-origin
 requests, such as through an `XMLHTTPRequest` or the `fetch()` API.
 
-## Restricting Access {: #restricting-access }
+## Restricting access {: #restricting-access }
 
 ### How can the user restrict access? {: #user-restricting-access }
 
@@ -56,16 +56,16 @@ grant permission to, the behavior is the same as if the user had set the extensi
 
 The extension can automatically access any sites requested in the manifest.
 
-## API Behaviors {: #api-behaviors }
+## API behaviors {: #api-behaviors }
 
-### Web Request API {: #web-request-behavior }
+### Web request API {: #web-request-behavior }
 
 The extension can still intercept, modify, and block any requests from sites it has access to. For
 sites the extension does not have access to, Chrome badges the extension to indicate that the
 extension requests access to the page. The user can then grant access to the extension; Chrome then
 prompts the user to refresh the page to allow your extension to intercept the network requests.
 
-### Content Scripts, tabs.executeScript(), tabs.insertCSS() {: #scripts-behavior }
+### Content scripts, tabs.executeScript(), tabs.insertCSS() {: #scripts-behavior }
 
 The extension can still inject scripts and style sheets automatically for any sites it has access
 to. For sites the extension does not have access to, Chrome badges the extension to indicate that
@@ -75,7 +75,7 @@ Chrome prompts the user to refresh the page to allow your extension to inject sc
 page load (at document_start or document_end). The callbacks for the [tabs.executeScript()][6] and
 [tabs.insertCSS()][7] methods are only invoked if the user grants access to the site.
 
-### Cookies and Background Page XHR {: #background-behavior }
+### Cookies and background page XHR {: #background-behavior }
 
 The extension can still read and modify any cookies from and perform a cross-origin XHR to sites it
 has access to. Because there is no tab associated with an extension page accessing another origin's

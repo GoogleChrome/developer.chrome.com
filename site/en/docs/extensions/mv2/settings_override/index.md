@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Settings Overrides"
+title: "Overriding Chrome settings"
 date: 2014-02-14
 updated: 2016-11-07
 description: How to override Chrome settings from a Chrome Extension.
@@ -10,7 +10,7 @@ Settings overrides are a way for extensions to override selected Chrome settings
 available on Windows in all current versions of Chrome and is available on Mac in Chrome 56 and
 later.
 
-## Homepage, Search Provider, and Startup Pages {: #others }
+## Homepage, search provider, and startup pages {: #others }
 
 Here is an example how [homepage][1], [search provider][2] and [startup pages][3] can be modified in
 the [extension manifest][4]. Web sites used in the settings API must be [verified][5] (via Webmaster

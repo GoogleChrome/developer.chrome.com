@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Give Users Options"
+title: "Give users options"
 date: 2012-09-18
 updated: 2018-04-29
 description: How to let users customize your Extension.
@@ -11,7 +11,7 @@ an extension's options by right-clicking the extension icon in the toolbar then 
 by navigating to the extension management page at `chrome://extensions`, locating the desired
 extension, clicking **Details**, then selection the options link.
 
-## Write the Options Page {: #write_page }
+## Write the options page {: #write_page }
 
 Below is an example options page.
 
@@ -79,12 +79,12 @@ document.getElementById('save').addEventListener('click',
     save_options);
 ```
 
-## Declare Options Page Behavior {: #declare_options }
+## Declare options page behavior {: #declare_options }
 
 There are two available types of extension options pages, [full page][2] and [embedded][3]. The type
 of options is determined by how it is declared in the manifest.
 
-### Full Page Options {: #full_page }
+### Full page options {: #full_page }
 
 An extension's options page will be displayed in a new tab. The options HTML file is listed
 registered under the `options_page` field.
@@ -101,7 +101,7 @@ registered under the `options_page` field.
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ej3H0FMApR7srtGbZfBZ.png", 
        alt="Full page options", height="124", width="367" %}
 
-### Embedded Options {:#embedded_options }
+### Embedded options {:#embedded_options }
 
 Embedded options allows users to adjust extension options without navigating away from the
 extensions management page inside an embedded box. To declare an embedded options, register the HTML
@@ -132,7 +132,7 @@ false.
   Specify as `false` to declare an embedded options page. If `true`, the extension's options page
   will be opened in a new tab rather than embedded in _chrome://extensions_.
 
-## Consider the Differences {: #considerations }
+## Consider the differences {: #considerations }
 
 Options pages embedded inside _chrome://extensions_ have some subtle behavior differences related to
 not being hosted inside their own tabs.

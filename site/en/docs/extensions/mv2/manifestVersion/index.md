@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest Version"
+title: "Manifest version"
 date: 2012-09-18
 updated: 2019-08-12
 description: >
@@ -14,7 +14,7 @@ generally stable, but occasionally breaking changes must be made to address impo
 Developers should specify which version of the manifest specification their package targets by
 setting a `manifest_version` key in their manifests.
 
-## Current Version {: #current-version }
+## Current version {: #current-version }
 
 Developers should currently specify **`'manifest_version': 2`**:
 

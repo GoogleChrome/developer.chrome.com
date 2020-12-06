@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: "Migrating from Background Pages to Service Workers"
+title: "Migrating from background pages to service workers"
 date: 2020-07-29
 updated: 2020-10-06
 description: >
@@ -27,7 +27,7 @@ Second, service workers don't have access to DOM. We'll explore how to adapt to 
 the [Thinking with Events][3] and [Working with Workers][4] sections below, respectively. If you
 already use an event page, skip straight to the second section.
 
-## Thinking With Events {: #events }
+## Thinking with events {: #events }
 
 Like event pages, service workers are a special execution environment that are started to handle
 events they're interested in and are terminated when they're no longer needed. The following
@@ -40,7 +40,7 @@ article.
 
 !!!
 
-## Top Level Event Listeners {: #event_listeners }
+## Top-level event listeners {: #event_listeners }
 
 In order for Chrome to successfully dispatch events to the appropriate listeners, extensions must
 register listeners in the first turn of the event loop. The most straightforward way to achieve this
@@ -84,7 +84,7 @@ into a single chrome.action API.
 
 !!!
 
-### Persisting State With Storage APIs {: #state }
+### Persisting state with storage APIs {: #state }
 
 One of the main things to get used to when adopting service workers is that they are short-lived
 execution environments. In more practical terms, an extension's service worker will start up, do
@@ -136,7 +136,7 @@ into a single chrome.action API.
 
 !!!
 
-### Moving From Timers to Alarms {: #alarms }
+### Moving from timers to alarms {: #alarms }
 
 It's common for web developers to perform delayed or periodic operations using the `setTimeout` or
 `setInterval` methods. These APIs fail in service workers though, because the scheduler will cancel
@@ -164,7 +164,7 @@ chrome.alarms.onAlarm.addListener(function() {
 });
 ```
 
-## Working with Workers {: #workers }
+## Working with workers {: #workers }
 
 [Service workers][5] are a specialized kind of [web worker][6], which are quite different from the
 web pages most web developers are used to working with. On a typical web page (or extension
@@ -176,7 +176,7 @@ doesn't have many of these features. Most notably, service workers don't have ac
 The following sections cover some of the major use cases impacted by the move to service workers and
 recommendations on how to adapt.
 
-### Parsing and Traversing with XML/HTML {: #documents }
+### Parsing and traversing with XML/HTML {: #documents }
 
 Since service workers don't have access to DOM, it's not possible for an extension's service worker
 to access the [DOMParser][9] API or create iframes to parse and traverse documents. Extension
@@ -192,7 +192,7 @@ Extensions that need a full native browser environment can use the [chrome.windo
 [chrome.tabs.create()][13] APIs from inside a service worker. Additionally, an extension's popup
 still provides a full (temporary) window environment.
 
-### Audio/Video Playback and Capture {: #audio_vidio }
+### Audio/video playback and capture {: #audio_vidio }
 
 It's not currently possible to play or capture media directly in a service worker. In order for a
 manifest version 3 extension to leverage the web's media playback and capture capabilities, the
@@ -200,7 +200,7 @@ extension will need to create a window environment using either [chrome.windows.
 [chrome.tabs.create()][15]. Once created, the extension can use [message passing][16] to coordinate
 between the playback document and service worker.
 
-### Rendering to a Canvas {: #canvas }
+### Rendering to a canvas {: #canvas }
 
 In some cases developers use background pages to render content for display in other contexts or to
 create and cache assets. While service workers don't have access to DOM and therefore cannot use

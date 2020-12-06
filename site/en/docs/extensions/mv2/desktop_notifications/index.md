@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Rich Notifications"
+title: "Rich notifications with webKit"
 date: 2012-09-17
 updated: 2017-01-05
 description: How to implement notifications in your Chrome Extension.
@@ -73,11 +73,11 @@ var notification = webkitNotifications.createHTMLNotification(
 notification.show();
 ```
 
-## API Reference {: #reference }
+## API reference {: #reference }
 
 See the [Desktop Notifications Draft Specification][5].
 
-## Communicating with Other Views {: #communication }
+## Communicating with other views {: #communication }
 
 You can communicate between a notification and other views in your extension using
 [extension.getBackgroundPage][6] and [extension.getViews][7]. For example:
@@ -92,7 +92,7 @@ chrome.extension.getViews({type:"notification"}).forEach(function(win) {
 });
 ```
 
-## More Examples {: #examples }
+## More examples {: #examples }
 
 You can find a simple example of using notifications in the [examples/api/notifications][8]
 directory. For other examples and for help in viewing the source code, see [Samples][9].

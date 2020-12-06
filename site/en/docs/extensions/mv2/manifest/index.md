@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manifest File Format"
+title: "Manifest file format"
 date: 2012-09-18
 updated: 2018-04-26
 description: An overview of the manifest.json properties that you can use in your Chrome Extension.

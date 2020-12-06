@@ -26,7 +26,7 @@ means extensions do not depend on content from the web, unlike ordinary web apps
 Extensions are distributed through the [Chrome Developer Dashboard][4] and published to the [Chrome
 Web Store][5]. For more information, see the [store developer documentation][6].
 
-## Hello Extensions {: #hello-extensions }
+## Hello extensions {: #hello-extensions }
 
 Take a small step into extensions with this quick Hello Extensions example. Start by creating a new
 directory to store the extension's files, or download them from the [sample page][7].

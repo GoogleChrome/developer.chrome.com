@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Match Patterns"
+title: "Match patterns"
 date: 2012-09-18
 updated: 2017-10-28
 description: How host permission and content script pattern matching works, with examples.

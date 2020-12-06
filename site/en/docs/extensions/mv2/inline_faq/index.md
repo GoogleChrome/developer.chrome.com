@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Inline-Installation Deprecation Migration FAQ"
+title: "Inline-installation deprecation migration FAQ"
 date: 2018-06-12
 updated: 2018-08-23
 description: Frequently asked questions about the deprecation of inline installations for Chrome Extensions.

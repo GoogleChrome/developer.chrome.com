@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Stay Secure"
+title: "Stay secure"
 date: 2018-03-06
 updated: 2019-07-17
 description: How to keep your Chrome Extension secure.
@@ -11,14 +11,14 @@ attackers. If an extension is compromised, _every_ user of that extension become
 malicious and unwanted intrusion. Keep an extension secure and its users protected by incorporating
 these practices.
 
-## Protect Developer Accounts {: #PDA }
+## Protect developer accounts {: #PDA }
 
 Extension code is uploaded and updated through Google accounts. If developers' accounts are
 compromised, an attacker could push malicious code directly to all users. Protect these accounts by
 creating specifically developer accounts and enabling [two-factor authentication][1] , preferably
 with a [security key][2] .
 
-### Keep Groups Selective {: #group_publishing }
+### Keep groups selective {: #group_publishing }
 
 If using [group publishing][3], keep the group confined to trusted developers. Do not accept
 membership requests from unknown persons.
@@ -29,7 +29,7 @@ When requesting or sending data, avoid an HTTP connection. Assume that any HTTP 
 have eavesdroppers or contain modifications. HTTPS should always be prefered, as it has built-in
 security circumventing most [man-in-the-middle attacks][4].
 
-## Request Minimal Permissions {: #permissions }
+## Request minimal permissions {: #permissions }
 
 The Chrome browser limits an extension's access to privileges that have been explicitly requested in
 the [manifest][5]. Extensions should minimize their permissions by only registering APIs and
@@ -37,7 +37,7 @@ websites they depend on. Arbitrary code should be kept to a minimum.
 
 Limiting an extensions privileges limits what a potential attacker can exploit.
 
-### Cross-Origin XMLHttpRequest {: #xhr }
+### Cross-origin XMLHttpRequest {: #xhr }
 
 An extension can only use [XMLHttpRequest][6] to get resources from itself and from domains
 specified in the permissions.
@@ -61,13 +61,13 @@ extension were compromised, it would still only have permission to interact with
 the [match pattern][7]. The attacker would not be able to access `"https://user_bank_info.com"` or
 interact with `"https://malicious_website.com"`.
 
-## Limit Manifest Fields {: #manifest_fields }
+## Limit manifest fields {: #manifest_fields }
 
 Including unnecessary registrations in the manifest creates vulnerabilities and makes an extension
 more visible. Limit manifest fields to those the extension relies on and give specific field
 registration.
 
-### Externally Connectable {: #externally_connectable }
+### Externally connectable {: #externally_connectable }
 
 Use the [`externally_connectable`][8] field to declare which external extensions and web pages the
 extension will exchange information with. Restrict who the extension can externally connect with to
@@ -90,7 +90,7 @@ trusted sources.
 }
 ```
 
-### Web Accessible Resources {: #web_accessible_resources }
+### Web-accessible resources {: #web_accessible_resources }
 
 Making resources accessible by the web, under the [`web_accessible_resources`][9] will make an
 extension detectable by websites and attackers.
@@ -110,7 +110,7 @@ extension detectable by websites and attackers.
 The more web accessible resources available, the more avenues a potential attacker can exploit. Keep
 these files to a minimum.
 
-## Include an Explicit Content Security Policy {: #content_security_policy }
+## Include an explicit content security policy {: #content_security_policy }
 
 Include a [content security policy][10] for the extension in the manifest to prevent cross-site
 scripting attacks. If the extension only loads resources from itself register the following:
@@ -137,7 +137,7 @@ If the extension needs to include scripts from specific hosts, they can be inclu
 }
 ```
 
-## Avoid Executable APIs {: #avoid }
+## Avoid executable APIs {: #avoid }
 
 APIs that execute code should be replaced with safer alternatives.
 
@@ -187,7 +187,7 @@ xhr.onreadystatechange = function() {
 xhr.send();
 ```
 
-## Use Content Scripts Carefully {: #content_scripts }
+## Use content scripts carefully {: #content_scripts }
 
 While [content scripts][11] live in an [isolated world][12], they are not immune from attacks:
 
@@ -212,7 +212,7 @@ script][15]. Avoid accidentally exposing extension privileges to content scripts
   extension APIs (e.g., do not allow passing arbitrary URLs to [`fetch`][20] or
   [`chrome.tabs.create`][21] API).
 
-## Register and Sanitize Inputs {: #sanitize }
+## Register and sanitize inputs {: #sanitize }
 
 Safeguard an extension from malicious scripts by limiting listeners to only what the extension is
 expecting, validating the senders of incoming data, and sanitizing all inputs.

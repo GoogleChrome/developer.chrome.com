@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Design User Interface"
+title: "Design the user interface"
 date: 2018-03-16
 updated: 2018-05-16
 description: UI and design guidelines for Chrome Extensions.
@@ -61,7 +61,7 @@ chrome.browserAction.setBadgeBackgroundColor({color: '#4688F1'});
 
 Use [page_action][5] when an extension's features are only available under defined circumstances.
 
-### Declare Page Action {: #page }
+### Declare page action {: #page }
 
 The `"page_action"` field is registered in the manifest.
 
@@ -184,7 +184,7 @@ Register icons in the manifest under the `"icons"` field.
 }
 ```
 
-## Additional UI Features {: #additional_features }
+## Additional UI features {: #additional_features }
 
 ### Popup {: #popup }
 
@@ -346,7 +346,7 @@ chrome.omnibox.onInputEntered.addListener(function(text) {
 });
 ```
 
-### Context Menu {: #context_menu }
+### Context menu {: #context_menu }
 
 Add new [context menu][29] options by granting the `"contextMenus"` permission in the manifest.
 
@@ -492,7 +492,7 @@ the commands to open the popup file without including a [background script][40].
 [`page_action`][41], it can be replaced with `"execute_page_action"`. Both browser and extension
 commands can be used in the same extension.
 
-### Override Pages {: #override }
+### Override pages {: #override }
 
 An extension can [override][42] and replace the History, New Tab, or Bookmarks web page with a
 custom HTML file. Like a [popup][43], it can include specialized logic and style, but does not allow

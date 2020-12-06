@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Protect User Privacy"
+title: "Protect user privacy"
 date: 2018-03-18
 updated: 2018-04-26
 description: Guidlines for ensuring that your Chrome Extension protects user privacy.
@@ -14,7 +14,7 @@ must comply with the [user data privacy policies][1] .
 Protect and respect extension users by including these precautions to keep their identity safe.
 Remember: the less data an extension can access, the less data it can accidentally leak.
 
-## Reduce Required Permissions {: #required_permissions }
+## Reduce required permissions {: #required_permissions }
 
 The APIs an extension can access is specified in the permissions field of the [manifest][2]. The
 more permissions granted, the more avenues an attacker has to intercept information. Only the APIs
@@ -45,7 +45,7 @@ closes the current tab. It serves as an alternative for many uses of `<all_urls>
 
 The activeTab permission displays no warning messages during installation.
 
-## Opt for Optional Permissions {: #optional_permissions }
+## Opt for optional permissions {: #optional_permissions }
 
 Empower users to choose which features and permissions they need from an extension by including
 [optional permissions][5]. If a feature is not essential to the core functionality of an extension,
@@ -96,7 +96,7 @@ Optional permissions can also be implemented in an extension update. Doing so wi
 feature available to users without disabling the extension, as may happen if updating with new
 required permissions.
 
-## Limit and Secure User Information {: #data_collection }
+## Limit and secure user information {: #data_collection }
 
 Only request the minimum [user data][6] an extension needs. The less information an extension asks
 from a user means less exposure if the extension is compromised.

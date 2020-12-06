@@ -28,7 +28,7 @@ to the DevTools APIs.
        The DevTools page has access to the DevTools APIs, for example, creating panels.",
        height="556", width="522" %}
 
-## The DevTools Page {: #devtools-page }
+## The DevTools page {: #devtools-page }
 
 An instance of the extension's DevTools page is created each time a DevTools window opens. The
 DevTools page exists for the lifetime of the DevTools window. The DevTools page has access to the
@@ -44,7 +44,7 @@ of the [`extension`][8] and [`runtime`][9] APIs that a content script has access
 script, a DevTools page can communicate with the background page using [Message Passing][10]. For an
 example, see [Injecting a Content Script][11].
 
-## Creating a DevTools Extension {: #creating }
+## Creating a DevTools extension {: #creating }
 
 To create a DevTools page for your extension, add the `devtools_page` field in the extension
 manifest:
@@ -78,7 +78,7 @@ available only through the lifetime of the DevTools window.
 There are also some DevTools APIs that are still experimental. Refer to [chrome.experimental.\*
 APIs][13] for the list of experimental APIs and guidelines on how to use them.
 
-## DevTools UI Elements: Panels and Sidebar Panes {: #devtools-ui }
+## DevTools UI elements: panels and sidebar panes {: #devtools-ui }
 
 In addition to the usual extension UI elements, such as browser actions, context menus and popups, a
 DevTools extension can add UI elements to the DevTools window:
@@ -128,12 +128,12 @@ For both `setObject` and `setExpression`, the pane displays the value as it woul
 DevTools console. However, `setExpression` lets you display DOM elements and arbitrary JavaScript
 objects, while `setObject` only supports JSON objects.
 
-## Communicating Between Extension Components {: #solutions }
+## Communicating between extension components {: #solutions }
 
 The following sections describe some typical scenarios for communicating between the different
 components of a DevTools extension.
 
-### Injecting a Content Script {: #injecting }
+### Injecting a content script {: #injecting }
 
 The DevTools page can't call [`tabs.executeScript`][17] directly. To inject a content script from
 the DevTools page, you must retrieve the ID of the inspected window's tab using the
@@ -187,7 +187,7 @@ chrome.runtime.onConnect.addListener(function(devToolsConnection) {
 });
 ```
 
-### Evaluating JavaScript in the Inspected Window {: #evaluating-js }
+### Evaluating JavaScript in the inspected window {: #evaluating-js }
 
 You can use the [`inspectedWindow.eval`][21] method to execute JavaScript code in the context of the
 inspected page. You can invoke the `eval` method from a DevTools page, panel or sidebar pane.
@@ -220,7 +220,7 @@ inappropriately. Use the [`tabs.executeScript`][24] method if you don't need acc
 JavaScript context of the inspected page. For detailed cautions and a comparison of the two methods,
 see [`inspectedWindow`][25].
 
-### Passing the Selected Element to a Content Script {: #selected-element }
+### Passing the selected element to a content script {: #selected-element }
 
 The content script doesn't have direct access to the current selected element. However, any code you
 execute using [`inspectedWindow.eval`][26] has access to the DevTools console and command-line APIs.
@@ -263,7 +263,7 @@ extensionPanel.onShown.addListener(function (extPanelWindow) {
 });
 ```
 
-### Messaging from Content Scripts to the DevTools Page {: #content-script-to-devtools }
+### Messaging from content scripts to the DevTools page {: #content-script-to-devtools }
 
 Messaging between the DevTools page and content scripts is indirect, by way of the background page.
 
@@ -343,7 +343,7 @@ backgroundPageConnection.postMessage({
 });
 ```
 
-### Messaging from Injected Scripts to the DevTools Page {: #evaluated-scripts-to-devtools }
+### Messaging from injected scripts to the DevTools page {: #evaluated-scripts-to-devtools }
 
 While the above solution works for content scripts, code that is injected directly into the page
 (e.g. through appending a `<script>` tag or through [`inspectedWindow.eval`][31]) requires a
@@ -389,7 +389,7 @@ script, and finally to the DevTools page.
 
 You can also consider [two alternative message passing techniques here][34].
 
-### Detecting When DevTools Opens and Closes {: #detecting-open-close }
+### Detecting when DevTools opens and closes {: #detecting-open-close }
 
 If your extension needs to track whether the DevTools window is open, you can add an [onConnect][35]
 listener to the background page, and call [connect][36] from the DevTools page. Since each tab can

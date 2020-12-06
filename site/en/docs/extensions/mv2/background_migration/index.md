@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Migrate to Event Driven Background Scripts"
+title: "Migrate to event-driven background scripts"
 date: 2018-04-23
 #updated: YYYY-MM-DD
 description: >
@@ -16,7 +16,7 @@ consume system resources and can cause a strain on lower-powered devices.
 Enhance an extension’s performance by migrating a persistent background script to an event-based
 non-persistent model.
 
-## Designate Persistence as False {: #persistence }
+## Designate persistence as false {: #persistence }
 
 Locate the `"background"` key in the extension [manifest][2] file, then add or update the
 `"persistent"` field to false.
@@ -47,7 +47,7 @@ The same applies to background scripts that rely on an HTML file.
 }
 ```
 
-## Surface Event Listeners {: #listeners }
+## Surface event listeners {: #listeners }
 
 Listeners must be at the top-level to activate the background script if an important event is
 triggered. Registered listeners may need to be restructred to a synchronous pattern. Structuring
@@ -69,7 +69,7 @@ chrome.runtime.onStartup.addListener(function() {
 })
 ```
 
-## Record State Changes in Storage {: #storage }
+## Record state changes in storage {: #storage }
 
 Use the [storage API][3] to set and return states and values. Use `local.set` to update on the local
 machine.
@@ -87,7 +87,7 @@ chrome.storage.local.get(['variable'], function(result) {
 });
 ```
 
-## Transform Timers into Alarms {: #timers }
+## Transform timers into alarms {: #timers }
 
 DOM-based timers, such as `window.setTimeout()` or `window.setInterval()`, are not honored in
 non-persistent background scripts if they trigger when the event page is dormant.
@@ -113,7 +113,7 @@ chrome.alarms.onAlarm.addListener(function() {
 });
 ```
 
-## Update Calls for Background Script Functions {: #backgroundFunctions }
+## Update calls for background script functions {: #backgroundFunctions }
 
 If using [`extension.getBackgroundPage`][5] to call a function from the background page, update to
 [`runtime.getBackgroundPage`][6]. The newer method activates the non-persistent script before

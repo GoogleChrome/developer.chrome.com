@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Content Scripts"
+title: "Content scripts"
 date: 2012-09-17
 updated: 2019-03-11
 description: An explanation of content scripts and how to use them in your Chrome Extension.
@@ -10,7 +10,7 @@ Content scripts are files that run in the context of web pages. By using the sta
 Object Model][1] (DOM), they are able to read details of the web pages the browser visits, make
 changes to them and pass information to their parent extension.
 
-## Understand Content Script Capabilities {: #capabilities }
+## Understand content script capabilities {: #capabilities }
 
 Content scripts can access Chrome APIs used by their parent extension by exchanging [messages][2]
 with the extension. They can also access the URL of an extension's file with
@@ -37,7 +37,7 @@ Additionally, content script can access the following chrome APIs directly:
 
 Content scripts are unable to access other APIs directly.
 
-## Work in Isolated Worlds {: #isolated_world }
+## Work in isolated worlds {: #isolated_world }
 
 Content scripts live in an isolated world, allowing a content script to makes changes to its
 JavaScript environment without conflicting with the page or additional content scripts.
@@ -77,11 +77,11 @@ functionality that should not be accessible to the web page.
 
 {% youtube id="laLudeUmXHM" %}
 
-## Inject Scripts {: #functionality }
+## Inject scripts {: #functionality }
 
 Content Scripts can be [programmatically][13] or [declaratively][14] injected.
 
-### Inject Programmatically {: #programmatic }
+### Inject programmatically {: #programmatic }
 
 Use programmatic injection for content scripts that need to run on specific occasions.
 
@@ -127,7 +127,7 @@ chrome.runtime.onMessage.addListener(
   });
 ```
 
-### Inject Declaratively {: #declaratively }
+### Inject declaratively {: #declaratively }
 
 Use declarative injection for content scripts that should be automatically run on specified pages.
 
@@ -152,7 +152,7 @@ They can include JavaScript files, CSS files or both. All auto-run content scrip
 
 <table class="simple"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr id="matches"><td><code>matches</code></td><td>array of strings</td><td><em>Required.</em> Specifies which pages this content script will be injected into. See <a href="match_patterns">Match Patterns</a> for more details on the syntax of these strings and <a href="#matchAndGlob">Match patterns and globs</a> for information on how to exclude URLs.</td></tr><tr id="css"><td><code>css<code></code></code></td><td>array of strings</td><td><em>Optional.</em> The list of CSS files to be injected into matching pages. These are injected in the order they appear in this array, before any DOM is constructed or displayed for the page.</td></tr><tr id="js"><td><code>js<code></code></code></td><td><nobr>array of strings</nobr></td><td><em>Optional.</em> The list of JavaScript files to be injected into matching pages. These are injected in the order they appear in this array.</td></tr><tr id="match_about_blank"><td><code>match_about_blank</code></td><td>boolean</td><td><em>Optional.</em> Whether the script should inject into an <code>about:blank</code> frame where the parent or opener frame matches one of the patterns declared in <code>matches</code>. Defaults to false.</td></tr></tbody></table>
 
-#### Exclude Matches and Globs {: #matchAndGlob }
+#### Exclude matches and globs {: #matchAndGlob }
 
 Specified page matching is customizable by including the following fields in the manifest
 registration.
@@ -257,7 +257,7 @@ One, all, or some of these can be included to achieve the correct scope.
 }
 ```
 
-#### Run Time {: #run_time }
+#### Run time {: #run_time }
 
 When JavaScript files are injected into the web page is controlled by the `run_at` field. The
 preffered and default field is `"document_idle"`, but can also be specified as `"document_start"` or
@@ -280,7 +280,7 @@ preffered and default field is `"document_idle"`, but can also be specified as `
 
 <table class="simple"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr id="document_idle"><td><code>document_idle</code></td><td>string</td><td><em>Prefered.</em> Use <code>"document_idle"</code> whenever possible.<br><br>The browser chooses a time to inject scripts between <code>"document_end"</code> and immediately after the <a href="http://www.whatwg.org/specs/web-apps/current-work/#handler-onload"><code>window.onload </code></a>event fires. The exact moment of injection depends on how complex the document is and how long it is taking to load, and is optimized for page load speed.<br><br>Content scripts running at <code>"document_idle"</code> do not need to listen for the <code>window.onload</code> event, they are guaranteed to run after the DOM is complete. If a script definitely needs to run after <code>window.onload</code>, the extension can check if <code>onload</code> has already fired by using the <a href="http://www.whatwg.org/specs/web-apps/current-work/#dom-document-readystate"><code>document.readyState </code></a>property.</td></tr><tr id="document_start"><td><code>document_start</code></td><td>string</td><td>Scripts are injected after any files from <code>css</code>, but before any other DOM is constructed or any other script is run.</td></tr><tr id="document_end"><td><code>document_end</code></td><td>string</td><td>Scripts are injected immediately after the DOM is complete, but before subresources like images and frames have loaded.</td></tr></tbody></table>
 
-#### Specify Frames {: #frames }
+#### Specify frames {: #frames }
 
 The `"all_frames"` field allows the extension to specify if JavaScript and CSS files should be
 injected into all frames matching the specified URL requirements or only into the topmost frame in a
@@ -338,7 +338,7 @@ inspected by the content script and then posted to the extension process. In thi
 establishes a line of communication to the extension process. The reverse is possible through
 similar means.
 
-## Stay Secure {: #security }
+## Stay secure {: #security }
 
 While isolated worlds provide a layer of protection, using content scripts can create
 vulnerabilities in an extension and the web page. If the content script receives content from a

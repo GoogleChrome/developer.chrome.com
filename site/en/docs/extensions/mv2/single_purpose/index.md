@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Extensions Quality Guidelines FAQ"
+title: "Extensions quality guidelines FAQ"
 date: 2014-05-09
 updated: 2017-05-09
 description: Frequently asked questions about the single purpose policy.

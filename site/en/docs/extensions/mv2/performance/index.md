@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Reach Peak Performance"
+title: "Reach peak performance"
 date: 2018-04-16
 updated: 2020-05-07
 description: Guidelines on how to build a high-performance Chrome Extension.
@@ -11,14 +11,14 @@ functionality. An extension that slows down or impairs the browsing experience i
 user and counter to the Chrome extension objective. In addition to general good coding habits,
 developers should follow these practices to ensure their extensions are running at peak performance.
 
-## Defer Everything Possible {: #defer_everything }
+## Defer everything Possible {: #defer_everything }
 
 Refrain from loading resources until they are needed. Include only what is needed to open an
 extension in its startup function. Do not load things during startup that are only needed if the
 user clicks a button, or features that work only when the user is logged in before they have a
 chance to do so.
 
-## Manage Important Events {: #background_pages }
+## Manage important events {: #background_pages }
 
 An efficient [background script][1] contains registered events that are important to their
 extension. They lie dormant until a listener is triggered, act accordingly, then return to a dormant
@@ -74,14 +74,14 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-## Contain Content Scripts {: #content_script }
+## Contain content scripts {: #content_script }
 
 [Content scripts][3] should work as the secret agents of an extension, subtly reading from or
 modifying the webpage while relying on the extension core to work heavier logic. They should have
 clear targets to avoid invasive activity on irrelevant pages. Ideally, content scripts should go
 unnoticed in the browsing experience aside from purposeful behavior.
 
-### Declare Targets {: #declare_targets }
+### Declare targets {: #declare_targets }
 
 An extension running content scripts in unnecessary locations or at inappropriate times can cause
 the browser to slow down and potentially create functionality errors. Avoid this by providing [match
@@ -115,7 +115,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 });
 ```
 
-### Use Content Scripts Only When Required {: #no_content_scripts }
+### Use content scripts only when required {: #no_content_scripts }
 
 Many extensions may not need a content script at all to accomplish desired functionality. Using the
 [`declarativeContent` API][6] will set rules for the extension to recognize when relevant conditions
@@ -141,7 +141,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 ```
 
-## Evaluate Code Efficiency {: #code }
+## Evaluate code efficiency {: #code }
 
 The same general practices for website performance can be applied to extensions such as implement
 techniques of asynchronous programming and keeping code minimal and compact.
