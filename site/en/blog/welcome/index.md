@@ -23,7 +23,7 @@ content to the domain: including the popular "What's new in Chrome" series and t
 documentation.
 
 We'd also love for you to keep up with content by subscribing to this site in your favourite RSS
-reader. 📶
+reader.
 
 ## Chrome releases
 

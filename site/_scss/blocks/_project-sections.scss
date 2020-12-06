@@ -34,9 +34,16 @@
   // These headings have h4 styles on mobile, and h5 styles on desktop
   @extend %type--headline;
   @include flex-font((18px 28px), (20px 28px), (20px 28px));
-  margin-bottom: get-size(300);
   @include media-query('lg') {
     margin-bottom: 0;
+  }
+}
+
+.project-sections__row > li > :last-child:not(:empty) {
+  margin-top: get-size(300);
+
+  @include media-query('lg') {
+    margin-top: 0;
   }
 }
 
