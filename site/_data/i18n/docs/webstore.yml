@@ -10,3 +10,5 @@ publish:
   en: 'Publish'
 develop:
   en: 'Develop'
+api:
+  en: 'API References'

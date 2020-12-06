@@ -44,7 +44,6 @@
 - title: i18n.docs.extensions.distribution
   sections:
     - url: /docs/extensions/mv2/hosting
-    - url: /docs/extensions/webstore
     - url: /docs/extensions/mv2/linux_hosting
     - url: /docs/extensions/mv2/external_extensions
     - url: /docs/extensions/mv2/hosting_changes

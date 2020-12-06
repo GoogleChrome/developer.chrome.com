@@ -33,6 +33,7 @@
   sections:
     - url: /docs/webstore/authentication/
     - url: /docs/webstore/identify_user/
+    - url: /docs/webstore/samples/
 - title: i18n.docs.webstore.policies
   sections:
     - url: /docs/webstore/terms/
@@ -41,4 +42,7 @@
     - url: /docs/webstore/branding/
     - url: /docs/webstore/deceptive_installation_tactics/
     - url: /docs/webstore/user_data/
-- url: /docs/webstore/samples/
+- title: i18n.docs.webstore.api
+  sections:
+    - url: /docs/webstore/webstore_api/inAppProducts
+    - url: /docs/webstore/webstore_api/payments

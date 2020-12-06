@@ -106,11 +106,13 @@ title: Style guide
   </blockquote>
 
   <table>
-    <tr>
-      <th>Person</th>
-      <th>Number</th>
-      <th>Third Column</th>
-    </tr>
+    <thead>
+      <tr>
+        <th>Person</th>
+        <th>Number</th>
+        <th>Third Column</th>
+      </tr>
+    </thead>
     <tr>
       <td>Someone Lastname</td>
       <td>900</td>
@@ -133,14 +135,48 @@ title: Style guide
     </tr>
   </table>
 
-  <table>
-    <caption>Tables can have captions now.</caption>
-    <tbody>
+  <table class="with-borders with-heading-tint">
+    <thead>
       <tr>
         <th>Person</th>
         <th>Number</th>
         <th>Third Column</th>
       </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Someone Lastname</td>
+        <td>900</td>
+        <td>Nullam</td>
+      </tr>
+      <tr>
+        <td><a href="#">Person Name</a></td>
+        <td>1200</td>
+        <td>Vestibulum</td>
+      </tr>
+      <tr>
+        <td>Another Person</td>
+        <td>1500</td>
+        <td>Vivamus</td>
+      </tr>
+      <tr>
+        <td>Last One</td>
+        <td>2800</td>
+        <td>Morbi</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Tables can have captions now.</caption>
+    <thead>
+      <tr>
+        <th>Person</th>
+        <th>Number</th>
+        <th>Third Column</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>Someone Lastname</td>
         <td>900</td>
@@ -165,12 +201,14 @@ title: Style guide
   </table>
 
   <table class="fixed-table width-full">
-    <tbody>
+    <thead>
       <tr>
         <th>Person</th>
         <th>Number</th>
         <th>Third Column</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>Someone Lastname</td>
         <td>900</td>

@@ -75,7 +75,7 @@ Isolated worlds do not allow for content scripts, the extension, and the web pag
 variables or functions created by the others. This also gives content scripts the ability to enable
 functionality that should not be accessible to the web page.
 
-<!-- TODO embed https://youtu.be/laLudeUmXHM -->
+{% youtube id="laLudeUmXHM" %}
 
 ## Inject Scripts {: #functionality }
 

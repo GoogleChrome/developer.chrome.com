@@ -16,17 +16,51 @@
 
 redirects:
 
+# Simple redirects
+
+- from: /extensions/api_index
+  to: /docs/extensions/reference/
+
 - from: /home
   to: /
 
-- from: /extensions/api_index
-  to: /docs/extensions/
+- from: /webstore/api_
+  to: /docs/webstore/webstore
 
-- from: /extensions/...
-  to: /docs/extensions/...
+- from: /webstore/articles
+  to: /docs/webstore/
+
+- from: /webstore/check_for_payment
+  to: /docs/webstore/money/
+
+- from: /webstore/developer/dashboard
+  to: /docs/webstore/cws-dashboard-privacy/
+
+- from: /webstore/docs/publish
+  to: /docs/webstore/publish/
+
+- from: /webstore/intl/en/program_policies
+  to: /docs/webstore/program_policies/
+
+- from: /webstore/payments-otp
+  to: /docs/webstore/one_time_payments/
+
+- from: /webstore/webstore/webstore_api/payments/list
+  to: /webstore/webstore_api/payments/list
+
+# Group redirects
 
 - from: /apps/...
-  to: /docs/chrome-apps/...
+  to: /docs/apps/...
+
+- from: /extensions/...
+  to: /docs/extensions/mv2/...
+
+- from : /multidevice/...
+  to: /docs/multidevice/...
 
 - from: /native-client/...
   to: /docs/native-client/...
+
+- from: /webstore/...
+  to: /docs/webstore/...

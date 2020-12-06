@@ -110,21 +110,21 @@ user's perspective.
 
 This screencast uses the Diary.com app to demonstrate a basic authentication flow.
 
-<!-- TODO(kaycebasques): Link to YouTube u4FBk_XUw2Q -->
+{% youtube id="u4FBk_XUw2Q" %}
 
 #### Requesting additional information during account creation
 
 In this screencast, the Manymoon app demonstrates an account creation flow where the user is
 prompted for additional information.
 
-<!-- TODO(kaycebasques): Link to YouTube wV0ModwrCvo -->
+{% youtube id="wV0ModwrCvo" %}
 
 #### Linking with an existing account
 
 This screencast uses the Springpad app to show how a user can sign in to an app with their Google
 Account and then link to an existing Springpad account.
 
-<!-- TODO(kaycebasques): Link to YouTube _k7lmFC9IrY -->
+{% youtube id="_k7lmFC9IrY" %}
 
 ## Resources and Best Practices
 

@@ -1,11 +1,9 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Samples"
-date: 2020-11-18
-description: TODO
+date: 2017-08-30
+description: Code samples demonstrating how to use the Chrome Web Store Licensing API.
 ---
-
-# Samples
 
 The following basic samples demonstrate how to use the Chrome Web Store Licensing API. Each sample
 app obtains the user's OpenID identifier (as described in [Identifying the User][1]) and makes an
