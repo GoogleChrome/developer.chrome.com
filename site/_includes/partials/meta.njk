@@ -26,12 +26,17 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ currentUrl }}" />
 
-{% if socialImage %}
+{% if hero %}
+  {# Twitter thumbanils are 507px on their website, so this is a 3x version. #}
+  {% set heroSrc = 'https://' + site.imgix + '/' + hero + '?auto=format&w=1521' %}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:image" content="{{ socialImage }}" />
-  <meta name="twitter:image" content="{{ socialImage }}" />
-  <meta property="og:image:alt" content="Page image for {{ site.title }}" />
-  <meta name="twitter:image:alt" content="Page image for {{ site.title }}" />
+  <meta property="og:image" content="{{ heroSrc }}" />
+  <meta name="twitter:image" content="{{ heroSrc }}" />
+
+  {% if alt %}
+    <meta property="og:image:alt" content="{{ alt }}" />
+    <meta name="twitter:image:alt" content="{{ alt }}" />
+  {% endif %}
 {% endif %}
 
 {% if description %}
