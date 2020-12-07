@@ -16,7 +16,12 @@
 
 const typedoc = require('typedoc');
 const typedocModels = require('typedoc/dist/lib/models');
-const {extractComment, deepStrictEqual} = require('./helpers');
+const {
+  extractComment,
+  deepStrictEqual,
+  resolveFullyQualifiedName,
+  generateHtmlLink,
+} = require('./helpers');
 
 /**
  * @param {typedocModels.DeclarationReflection} declaration
@@ -27,7 +32,7 @@ function declarationToType(declaration) {
   if (!type) {
     type = new typedocModels.ReflectionType(declaration);
   }
-  const out = buildRenderType(type);
+  const out = buildRenderType(type, undefined, declaration);
   updateCommonReflectionType(out, declaration);
   return out;
 }
@@ -37,7 +42,7 @@ function declarationToType(declaration) {
  * @param {typedocModels.DeclarationReflection} declaration
  */
 function updateCommonReflectionType(renderType, declaration) {
-  const comment = extractComment(declaration.comment);
+  const comment = extractComment(declaration.comment, declaration);
   if (comment) {
     renderType.comment = comment;
   }
@@ -55,7 +60,7 @@ function updateCommonReflectionType(renderType, declaration) {
 function internalBuildDeclarationRenderType(reflectionType) {
   const {declaration} = reflectionType;
   if (declaration.type) {
-    return buildRenderType(declaration.type);
+    return buildRenderType(declaration.type, undefined, declaration);
   } else if (declaration.signatures?.length) {
     return internalBuildFunctionRenderType(declaration);
   }
@@ -180,10 +185,10 @@ function internalBuildFunctionRenderType(raw) {
     if (!reflection.type) {
       throw new TypeError('got signature paramater without type');
     }
-    const rt = buildRenderType(reflection.type);
+    const rt = buildRenderType(reflection.type, undefined, raw);
 
     // TODO(samthor): We don't include default values.
-    const comment = extractComment(reflection.comment);
+    const comment = extractComment(reflection.comment, reflection);
     if (comment) {
       rt.comment = comment;
     }
@@ -197,18 +202,19 @@ function internalBuildFunctionRenderType(raw) {
     parameters,
   };
 
-  const comment = extractComment(bestSignature.comment);
+  const comment = extractComment(bestSignature.comment, raw);
   if (comment) {
     out.comment = comment;
   }
 
   // Set the returnType property of RenderType if valid and not void.
   if (sourceReturnType) {
-    const returnType = buildRenderType(sourceReturnType);
+    const returnType = buildRenderType(sourceReturnType, undefined, raw);
 
     // The return type comment is awkwardly on the Comment object.
-    if (bestSignature.comment?.returns) {
-      returnType.comment = bestSignature.comment.returns;
+    const returnComment = extractComment(bestSignature.comment?.returns, raw);
+    if (returnComment) {
+      returnType.comment = returnComment;
     }
 
     // Methods return void, but we don't include it in the docs.
@@ -222,16 +228,17 @@ function internalBuildFunctionRenderType(raw) {
 
 /**
  * @param {typedocModels.Type} type
- * @param {typedocModels.Type|undefined=} parentType
+ * @param {typedocModels.Type|undefined} parentType
+ * @param {typedocModels.Reflection} owner
  * @return {RenderType}
  */
-function buildRenderType(type, parentType) {
+function buildRenderType(type, parentType, owner) {
   switch (type.type) {
     case 'array': {
       const arrayType = /** @type {typedocModels.ArrayType} */ (type);
       return {
         type: 'array',
-        elementType: buildRenderType(arrayType.elementType, type),
+        elementType: buildRenderType(arrayType.elementType, type, owner),
       };
     }
 
@@ -256,7 +263,7 @@ function buildRenderType(type, parentType) {
 
       return {
         type: 'array',
-        elementType: buildRenderType(first, type),
+        elementType: buildRenderType(first, type, owner),
         minLength: tupleType.elements.length,
         maxLength: tupleType.elements.length,
       };
@@ -269,8 +276,8 @@ function buildRenderType(type, parentType) {
         break;
       }
 
-      const typeA = buildRenderType(a);
-      const typeB = buildRenderType(b);
+      const typeA = buildRenderType(a, undefined, owner);
+      const typeB = buildRenderType(b, undefined, owner);
       if (
         typeA?.type !== 'array' ||
         typeB?.type !== 'array' ||
@@ -300,25 +307,24 @@ function buildRenderType(type, parentType) {
 
     case 'reference': {
       const referenceType = /** @type {typedocModels.ReferenceType} */ (type);
-
-      // TypeDoc generates "///" when this is a local ref, otherwise it gives us the fully-qualified
-      // name here.
-      let name = referenceType.symbolFullyQualifiedName;
-      if (name.startsWith('///')) {
-        name = referenceType.name;
-      }
+      const name = resolveFullyQualifiedName(referenceType);
 
       /** @type {RenderType} */
       const out = {
         type: 'reference',
         referenceType: name,
-        referenceLink: true,
       };
+
+      const generated = generateHtmlLink(owner, referenceType.reflection);
+      if (generated) {
+        out.referenceType = generated.name;
+        out.referenceLink = generated.link;
+      }
 
       // Insert <Foo> reference data.
       if (referenceType.typeArguments?.length) {
         out.referenceTemplates = referenceType.typeArguments.map(t =>
-          buildRenderType(t)
+          buildRenderType(t, undefined, owner)
         );
       }
 
@@ -328,7 +334,7 @@ function buildRenderType(type, parentType) {
     case 'union': {
       // This can be a bunch of things, including an enum.
       const unionType = /** @type {typedocModels.UnionType} */ (type);
-      const options = unionType.types.map(c => buildRenderType(c, type));
+      const options = unionType.types.map(c => buildRenderType(c, type, owner));
 
       // We only present enums if they contain primitive values (e.g., a choice of strings).
       const isEnum = !options.some(({type}) => type !== 'primitive');
@@ -353,7 +359,7 @@ function buildRenderType(type, parentType) {
       // Pretend that lone stringLiterals are actually enums.
       if (parentType?.type !== 'union') {
         const unionType = new typedocModels.UnionType([type]);
-        return buildRenderType(unionType, parentType);
+        return buildRenderType(unionType, parentType, owner);
       }
 
       return {

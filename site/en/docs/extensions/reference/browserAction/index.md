@@ -132,15 +132,15 @@ directory. For other examples and for help in viewing the source code, see [Samp
 [6]: #popups
 [7]: http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html
 [8]: #manifest
-[9]: /docs/extensions/browserAction#method-setIcon
+[9]: #method-setIcon
 [10]: #manifest
-[11]: /docs/extensions/browserAction#method-setTitle
-[12]: /docs/extensions/i18n
-[13]: /docs/extensions/browserAction#method-setBadgeText
-[14]: /docs/extensions/browserAction#method-setBadgeBackgroundColor
+[11]: #method-setTitle
+[12]: /extensions/i18n
+[13]: #method-setBadgeText
+[14]: #method-setBadgeBackgroundColor
 [15]: #manifest
-[16]: /docs/extensions/browserAction#method-setPopup
-[17]: /docs/extensions/pageAction
+[16]: #method-setPopup
+[17]: /extensions/pageAction
 [18]:
   https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/browserAction/
 [19]: /docs/extensions/mv2/samples

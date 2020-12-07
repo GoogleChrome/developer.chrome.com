@@ -74,18 +74,24 @@ function extractPublicChromeNamespaces(typesData) {
   /**
    * @param {typedoc.DeclarationReflection} namespace
    * @param {string} prefix
+   * @return {boolean} whether this was the terminal
    */
   const findContainedNamespaces = (namespace, prefix) => {
     const deep = exportedChildren(namespace, typedoc.ReflectionKind.Namespace);
+    if (Object.keys(deep).length === 0) {
+      return true;
+    }
 
     for (const name in deep) {
       const reflection = deep[name];
       const key = `${prefix}.${name}`;
-      out[key] = reflection;
 
-      // Find additional exported namespaces under this namespace.
-      findContainedNamespaces(reflection, key);
+      // Record this only if it was a terminal namespace and did not contain further nodes.
+      if (findContainedNamespaces(reflection, key)) {
+        out[key] = reflection;
+      }
     }
+    return false;
   };
 
   // Awkwardly extract the top-level "chrome" namespace.
@@ -148,7 +154,7 @@ function parseChromeTypesFile(typesPath) {
     const renderNamespace = {
       name,
       shortName,
-      comment: extractComment(reflection.comment),
+      comment: extractComment(reflection.comment, reflection),
       types: [],
       properties: [],
       methods: [],
@@ -196,7 +202,7 @@ function parseChromeTypesFile(typesPath) {
     // Events are just properties that have an instanceof chrome.events.Events. Extract them and
     // include them separately.
     renderNamespace.properties = renderNamespace.properties.filter(property => {
-      if (property.referenceType === 'chrome.events.Event') {
+      if (property.referenceType === 'events.Event') {
         renderNamespace.events.push(property);
         return false;
       }

@@ -44,7 +44,7 @@
       <h4 class="type--label case-upper">Returns</h4>
 
       <ul class="stack flow-space-300">
-        {{ internalRenderNamedType(spec.returnType, namespaceName) }}
+        {{ internalRenderNamedType(spec.returnType, namespaceName, false, true) }}
       </ul>
     </div>
   {% endif %}
@@ -64,15 +64,19 @@
     </div>
   {% endif %}
 
-  {% if spec.parameters.length %}
+  {% if spec.parameters.length or spec.returnType %}
     <div class="code-sections">
       <ul class="stack flow-space-300">
         {% for parameter in spec.parameters %}
           {{ internalRenderNamedType(parameter, namespaceName, true) }}
         {% endfor %}
+        {% if spec.returnType %}
+          {{ internalRenderNamedType(spec.returnType, namespaceName, false, true) }}
+        {% endif %}
       </ul>
     </div>
   {% endif %}
+
 {% endif %}
 
 {% if spec.isEnum %}
@@ -111,13 +115,16 @@
 
 {% endmacro %}
 
-{% macro internalRenderNamedType(spec, namespaceName, isParameter) %}
+{% macro internalRenderNamedType(spec, namespaceName, isParameter, isReturn) %}
 <li>
   <div>
     {# Event callbacks don't have names. Give them one. #}
     {% set name = spec.name %}
     {% if not name and spec.type == 'function' %}
       {% set name = 'callback' %}
+    {% endif %}
+    {% if not name and isReturn %}
+      {% set name = 'returns' %}
     {% endif %}
     <div class="code-sections__label">{{ name }}</div>
     <div class="type--xsmall">{{ renderSingleType(spec, namespaceName) }}</div>
@@ -140,27 +147,10 @@
     {{ rt.literalValue }}{{ rt.primitiveType }}
   {% elif rt.type === 'reference' %}
     {# Reference to another type #}
-
-    {% set display = rt.referenceType %}
-    {% set isLink = rt.referenceLink %}
-    {% if display.startsWith(namespaceName + '.') %}
-      {% set display = rt.referenceType.substr(namespaceName.length + 1) %}
-      {% set link = "#type-" + display %}
-    {% elif display.indexOf('.') === -1 %}
-      {# Sometimes we get the ref without "chrome.foo." #}
-      {% set link = "#type-" + display %}
-    {% else %}
-      {# Reference an adjacent type. #}
-      {% set parts = display.split('.') %}
-      {% if parts[0] === 'chrome' %}
-        {% set link = "../" + parts.slice(1, parts.length - 1).join('_') + "/#type-" + parts[parts.length - 1] %}
-      {% endif %}
-    {% endif %}
-
-    {% if rt.referenceLink and link %}
-      <a class="link weight-medium" href="{{ link }}">{{ display }}</a>
+    {% if rt.referenceLink  %}
+      <a class="link weight-medium" href="{{ rt.referenceLink }}">{{ rt.referenceType }}</a>
     {%- else %}
-      {{ display }}
+      {{ rt.referenceType }}
     {%- endif -%}
     {%- if rt.referenceTemplates.length -%}
       &lt;

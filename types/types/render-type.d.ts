@@ -36,7 +36,7 @@ declare global {
 
     // reference
     referenceType?: string;
-    referenceLink?: boolean;
+    referenceLink?: string;
     referenceTemplates?: RenderType[];
 
     // array
