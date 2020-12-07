@@ -2,8 +2,8 @@ require('dotenv').config();
 const CacheAsset = require('@11ty/eleventy-cache-assets');
 const escapeStringRegexp = require('escape-string-regexp');
 
-const tweetCount = 1;
-const url = `https://api.twitter.com/1.1/statuses/user_timeline.json?user_id=113713261&count=${tweetCount}&include_rts=false&exclude_replies=true&tweet_mode=extended&include_ext_alt_text=true`;
+const url =
+  'https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/tweets.json';
 
 /**
  * Insert media (images/videos) into a tweet.
@@ -132,15 +132,11 @@ const formatEntities = tweet => {
  * @return {Promise<TwitterTweet[]>}
  */
 module.exports = async () => {
-  let tweets = process.env.TWITTER_BEARER
-    ? await CacheAsset(url, {
+  let tweets = process.env.CI
+    ? require('./tweets-sample.json')
+    : await CacheAsset(url, {
         duration: '1h',
         type: 'json',
-        fetchOptions: {
-          headers: {
-            Authorization: `Bearer ${process.env.TWITTER_BEARER}`,
-          },
-        },
       }).catch(e => {
         console.warn(e);
         if (process.env.NODE_ENV === 'production') {
@@ -148,8 +144,7 @@ module.exports = async () => {
         } else {
           return require('./tweets-sample.json');
         }
-      })
-    : require('./tweets-sample.json');
+      });
 
   // Remove polls
   tweets = tweets.filter(tweet => !tweet.entities.polls);
