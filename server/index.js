@@ -20,6 +20,7 @@ const express = require('express');
 const compression = require('compression');
 const {notFoundHandler} = require('./not-found');
 const {buildRedirectHandler} = require('./redirect');
+const pluralDomainRedirectHandler = require('./plural-domain');
 
 const app = express();
 
@@ -30,6 +31,7 @@ const staticPaths = ['dist', 'dist/en'];
 const redirectHandler = buildRedirectHandler('redirects.yaml', staticPaths);
 
 const handlers = [
+  pluralDomainRedirectHandler,
   ...staticPaths.map(staticPath => express.static(staticPath)),
   redirectHandler,
   notFoundHandler,

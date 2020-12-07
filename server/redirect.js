@@ -19,6 +19,10 @@ const YAML = require('js-yaml');
 const fs = require('fs');
 const path = require('path');
 
+// Included for types only.
+// eslint-disable-next-line no-unused-vars
+const express = require('express');
+
 /**
  * @param {redirectsYaml.RedirectLine[]} redirects
  * @param {string[]=} staticPaths
@@ -52,7 +56,7 @@ function buildCheckHandlerInternal(redirects, staticPaths = undefined) {
  * @param {string} filename to load configuration from
  * @param {string[]=} staticPaths to check if content exists
  * @param {number=} code to use
- * @return {!Function}
+ * @return {express.RequestHandler}
  */
 function buildRedirectHandler(filename, staticPaths = undefined, code = 301) {
   const raw = fs.readFileSync(filename, 'utf-8');
@@ -60,6 +64,7 @@ function buildRedirectHandler(filename, staticPaths = undefined, code = 301) {
 
   const handler = buildCheckHandlerInternal(yaml.redirects, staticPaths);
 
+  /** @type {express.RequestHandler} */
   return (req, res, next) => {
     const target = handler(req.url);
     if (target !== null) {
