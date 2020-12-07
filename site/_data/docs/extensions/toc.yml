@@ -1,3 +1,4 @@
+- url: /docs/extensions/mv2
 - url: /docs/extensions/mv2/getstarted
 - title: i18n.docs.extensions.overview
   sections:
@@ -30,6 +31,12 @@
     - url: /docs/extensions/mv2/override
     - url: /docs/extensions/mv2/permission_warnings
     - url: /docs/extensions/mv2/background_migration
+- title: i18n.docs.extensions.mv3
+  sections:
+    - url: /docs/extensions/mv3/intro
+    - url: /docs/extensions/mv3/intro/platform-vision
+    - url: /docs/extensions/mv3/intro/mv3-overview
+    - url: /docs/extensions/mv3/intro/mv3-migration
 - title: i18n.docs.extensions.quality
   sections:
     - url: /docs/extensions/mv2/user_privacy
