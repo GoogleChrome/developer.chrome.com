@@ -5,10 +5,12 @@ payments:
 identity:
   en: 'Identity'
 policies:
-  en: 'Policies'
+  en: 'Chrome Web Store policies'
 publish:
-  en: 'Publish'
+  en: 'Publish on the Chrome Web Store'
+details:
+  en: 'Item detail pages'
 develop:
-  en: 'Develop'
+  en: 'Prepare your extension'
 api:
-  en: 'API References'
+  en: 'Chrome Web Store API'

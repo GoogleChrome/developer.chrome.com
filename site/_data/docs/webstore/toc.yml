@@ -1,55 +1,37 @@
-- title: i18n.docs.webstore.overviews
-  sections:
-    - url: /docs/webstore/overview/
-    - url: /docs/webstore/about_webstore/
-    - url: /docs/webstore/apps_vs_extensions/
-    - url: /docs/webstore/distribution/
+- url: /docs/webstore/about_webstore/
 - url: /docs/webstore/faq/
 - title: i18n.docs.webstore.develop
   sections:
-    - url: /docs/webstore/best_practices/
-    - url: /docs/webstore/choosing/
-    - url: /docs/webstore/i18n/
     - url: /docs/webstore/get_started_simple/
-    - url: /docs/webstore/get_started/
-    - url: /docs/webstore/inline_installation/
+    - url: /docs/webstore/best_practices/
+    - url: /docs/webstore/i18n/
+    - url: /docs/webstore/identify_user/
 - title: i18n.docs.webstore.publish
   sections:
     - url: /docs/webstore/register/
-    - url: /docs/webstore/launching/
     - url: /docs/webstore/publish/
-    - url: /docs/webstore/images/
-    - url: /docs/webstore/cws-dashboard-distribution/
-    - url: /docs/webstore/cws-dashboard-privacy/
-    - url: /docs/webstore/cws-dashboard-listing/
-    - url: /docs/webstore/group-publishers/
     - url: /docs/webstore/update/
-    - url: /docs/webstore/rating/
     - url: /docs/webstore/troubleshooting/
+    - url: /docs/webstore/branding/
+    - url: /docs/webstore/group-publishers/
     - url: /docs/webstore/account-deletion/
-- title: i18n.docs.webstore.payments
-  sections:
-    - url: /docs/webstore/payments-iap/
-    - url: /docs/webstore/pricing/
-    - url: /docs/webstore/money/
-    - url: /docs/webstore/one_time_payments/
     - url: /docs/webstore/cws-payments-deprecation/
-- title: i18n.docs.webstore.identity
+- title: i18n.docs.webstore.details
   sections:
-    - url: /docs/webstore/authentication/
-    - url: /docs/webstore/identify_user/
-    - url: /docs/webstore/samples/
+    - url: /docs/webstore/images/
+    - url: /docs/webstore/cws-dashboard-listing/
+    - url: /docs/webstore/cws-dashboard-privacy/
+    - url: /docs/webstore/cws-dashboard-distribution/
 - title: i18n.docs.webstore.policies
   sections:
     - url: /docs/webstore/terms/
     - url: /docs/webstore/program_policies/
     - url: /docs/webstore/spam-faq/
-    - url: /docs/webstore/branding/
     - url: /docs/webstore/deceptive_installation_tactics/
     - url: /docs/webstore/user_data/
     - url: /docs/webstore/play_edu_tos/
     - url: /docs/webstore/complaint-faq/
 - title: i18n.docs.webstore.api
   sections:
-    - url: /docs/webstore/using_webstore_api/
-    - url: /docs/webstore/api_index/
+    - url: /docs/webstore/using_webstore_api
+    - url: /docs/webstore/api_index

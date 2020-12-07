@@ -314,6 +314,13 @@ $gorko-config: (
     'output': 'standard',
     'property': 'user-select',
   ),
+  'visibility': (
+    'items': (
+      'hidden': 'hidden',
+    ),
+    'output': 'responsive',
+    'property': 'visibility',
+  ),
   'weight': (
     'items': (
       'regular': 400,
