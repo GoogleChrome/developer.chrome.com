@@ -13,6 +13,7 @@ const {namespaceToPath} = require('./site/_filters/namespace');
 const {minifyJs} = require('./site/_filters/minify-js');
 const {updateSvgForInclude} = require('./site/_filters/svg');
 const {slugify} = require('./site/_filters/slugify');
+const {toc} = require('./site/_filters/toc');
 
 // Shortcodes
 const {iframe} = require('./site/_shortcodes/iframe');
@@ -28,7 +29,6 @@ const {minifyHtml} = require('./site/_transforms/minify-html');
 
 // Plugins
 const md = require('./site/_plugins/markdown');
-const toc = require('eleventy-plugin-toc');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
@@ -67,12 +67,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.setLibrary('md', md);
 
   // Add plugins
-  eleventyConfig.addPlugin(toc, {
-    tags: ['h2', 'h3'],
-    wrapper: 'div',
-    wrapperClass: 'toc__wrapper',
-    ul: true,
-  });
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -99,6 +93,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
   eleventyConfig.addFilter('slugify', slugify);
+  eleventyConfig.addFilter('toc', toc);
 
   // Add shortcodes
   eleventyConfig.addShortcode('iframe', iframe);

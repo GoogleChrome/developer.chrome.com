@@ -1,0 +1,6 @@
+{# This is used inline with body contents as the TOC on small screens. #}
+{% if tocContents %}
+  <div class="toc-container display-block xl:display-none">
+    {% include 'partials/toc.njk' %}
+  </div>
+{% endif %}

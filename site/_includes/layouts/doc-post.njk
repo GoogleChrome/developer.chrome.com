@@ -4,9 +4,9 @@
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
-{% set tocContents -%}
-  {{ content | toc | safe }}
-{%- endset %}
+{% set tocContents %}
+  {{- content | toc | safe -}}
+{% endset %}
 
 {% block content %}
   <div class="display-flex gap-top-300 lg:gap-top-400">
@@ -23,10 +23,7 @@
         </div>
       {% endif %}
 
-      <div class="toc-container display-block xl:display-none">
-        {% include 'partials/toc.njk' %}
-      </div>
-
+      {% include 'partials/toc-inner.njk' %}
       {% include 'partials/draft.njk' %}
 
       <div class="stack type center-images">
@@ -34,9 +31,6 @@
       </div>
     </article>
 
-    <div class="toc-container display-none xl:display-block pad-left-400 pad-right-400">
-      {% include 'partials/toc.njk' %}
-    </div>
-    
+    {% include 'partials/toc-side.njk' %}
   </div>
 {% endblock %}

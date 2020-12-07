@@ -35,9 +35,9 @@
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
-{% set tocContents -%}
-  {{ content | toc | safe }}
-{%- endset %}
+{% set tocContents %}
+  {{- content | toc | safe -}}
+{% endset %}
 
 {% block content %}
   <div class="display-flex gap-top-300 lg:gap-top-400 ">
@@ -46,9 +46,7 @@
     <article class="stack measure-long center-margin pad-left-400 pad-right-400">
       <h1 class="type--h2">{{ title }}</h1>
 
-      <div class="toc-container display-block xl:display-none">
-        {% include 'partials/toc.njk' %}
-      </div>
+      {% include 'partials/toc-inner.njk' %}
 
       <div class="stack type">
         {{ content | safe }}
@@ -56,8 +54,6 @@
 
     </article>
 
-    <div class="toc-container display-none xl:display-block pad-left-400 pad-right-400">
-      {% include 'partials/toc.njk' %}
-    </div>
+    {% include 'partials/toc-side.njk' %}
   </div>
 {% endblock %}

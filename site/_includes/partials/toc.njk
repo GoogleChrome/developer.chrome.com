@@ -1,3 +1,6 @@
+{# Don't use this directly. You probably want "toc-inner.njk" or
+   "toc-side.njk". #}
+
 {% from 'macros/icon.njk' import icon with context %}
 
 <details class="toc" role="navigation" aria-label="{{ 'i18n.common.toc' | i18n(locale) }}">
@@ -5,5 +8,5 @@
     <div class="type--h6">{{ 'i18n.common.toc' | i18n(locale) }}</div>
     <span class="toc__icon">{{ icon('arrow-right') }}</span>
   </summary>
-  {{ tocContents | safe }}
+  <div class="toc__wrapper">{{ tocContents | safe }}</div>
 </details>
