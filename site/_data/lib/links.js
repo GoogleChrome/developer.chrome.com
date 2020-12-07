@@ -96,7 +96,15 @@ function expandSections(sections, pageUrl, locale) {
   return clone;
 }
 
+/**
+ * Checks if a link starts with a protocol and returns true if it does.
+ * @param {string} link
+ * @return {boolean}
+ */
+const isExternalLink = link => /^https?:\/\//.test(link);
+
 module.exports = {
   getLinkActiveState,
   expandSections,
+  isExternalLink,
 };

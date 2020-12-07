@@ -1,3 +1,10 @@
+samples:
+  en: 'Samples'
+samples_description:
+  en: |
+    Examples of extensions that address various use cases and call appropriate
+    Chrome APIs. Use these to learn how extensions work or as a starting point
+    for building your own extensions.
 overview:
   en: 'Overview'
 distribution:

@@ -1,5 +1,9 @@
 const {join, resolve} = require('path');
-const {getLinkActiveState, expandSections} = require('./lib/links');
+const {
+  getLinkActiveState,
+  isExternalLink,
+  expandSections,
+} = require('./lib/links');
 const {hashForProd} = require('./lib/hash');
 const {findByUrl, findByProjectKey} = require('./lib/find');
 const {formatDate, formatDateLong, formatDateShort} = require('./lib/date');
@@ -9,6 +13,8 @@ module.exports = {
   join,
   resolve,
   getLinkActiveState,
+  expandSections,
+  isExternalLink,
   hashForProd,
   findByUrl,
   findByProjectKey,
@@ -16,5 +22,4 @@ module.exports = {
   formatDateLong,
   formatDateShort,
   buildBreadcrumbs,
-  expandSections,
 };

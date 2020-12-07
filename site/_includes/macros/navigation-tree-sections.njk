@@ -24,19 +24,34 @@ and marks it as active.
       {{ navigationTreeSectionsInternal(item.sections) }}
     </div>
   {% elif item.url %}
-    {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
-    {% if not post %}
-      {#
-        If we couldn't find a translated copy of the post, try to fallback to
-        English so we at least have a link to something in our UI.
-      #}
-      {% set post = helpers.findByUrl(collections.all, item.url, 'en') %}
-    {% endif %}
-
-    {% if post %}
-      <a href="{{ post.url }}" class="navigation-tree__link" {% if item.active %}{{ helpers.getLinkActiveState(post.url, page.url) | safe }}{% endif %}>
-        <span>{{ post.data.title }}</span>
+    {#
+      Check to see if the item is a regular post on the site or an external
+      link. External links will display a special icon and open in a new
+      window.
+    #}
+    {% set isExternal = helpers.isExternalLink(item.url) %}
+    {% if isExternal %}
+      {% set postTitle = item.title | i18n(locale) %}
+      <a href="{{ item.url }}" class="navigation-tree__link" target="_blank" rel="noopener">
+        <span class="display-inline-flex align-center">
+          {{ postTitle }} {{ icon('external-link', 'width-300 gap-left-100') }}
+        </span>
       </a>
+    {% else %}
+      {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
+      {% if not post %}
+        {#
+          If we couldn't find a translated copy of the post, try to fallback to
+          English so we at least have a link to something in our UI.
+        #}
+        {% set post = helpers.findByUrl(collections.all, item.url, 'en') %}
+      {% endif %}
+
+      {% if post %}
+        <a href="{{ post.url }}" class="navigation-tree__link" {% if item.active %}{{ helpers.getLinkActiveState(post.url, page.url) | safe }}{% endif %}>
+          <span>{{ post.data.title }}</span>
+        </a>
+      {% endif %}
     {% endif %}
   {% endif %}
 {% endfor %}

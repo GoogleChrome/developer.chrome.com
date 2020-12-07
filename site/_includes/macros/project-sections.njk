@@ -29,17 +29,48 @@ have been defined in the _data/docs/*.yml file for this project.
         {{ projectSections(item.sections, type) }}
       </li>
     {% elif item.url %}
-      {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
-      {% if post %}
+
+      {#
+        Check to see if the item is a regular post on the site or an external
+        link. External links will display a special icon and open in a new
+        window.
+      #}
+      {% set isExternal = helpers.isExternalLink(item.url) %}
+      {% if isExternal %}
+        {% set postTitle = item.title | i18n(locale) %}
+        {% set postDescription = item.description | i18n(locale) %}
+        {% set postUrl = item.url %}
+      {% else %}
+        {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
+        {% if post %}
+          {% set postTitle = post.data.title %}
+          {% set postDescription = post.data.description %}
+          {% set postUrl = post.url %}
+        {% endif %}
+      {% endif %}
+
+      {% if postTitle %}
         <li>
           <div>
             {% if type === 'column' %}
-              {{ icon('document') }}
+              {{ icon('document', 'project-sections__icon') }}
             {% endif %}
-            <a class="project-sections__link color-primary-shade decoration-none surface" href="{{ post.url }}">{{ post.data.title }}</a>
+            <a
+              class="display-inline-flex align-center color-primary-shade decoration-none surface"
+              href="{{ postUrl }}"
+              {%- if isExternal -%}
+              target="_blank"
+              rel="noopener"
+              {%- endif -%}
+              >
+                {{ postTitle }}
+                {% if isExternal %}
+                  {{ icon('external-link', 'gap-left-100') }}
+                {% endif %}
+            </a>
           </div>
           {% if type !== 'nested-column' %}
-            <div class="project-sections__description measure-long">{{ post.data.description }}</div>
+            <div class="project-sections__description measure-long">{{ postDescription }}</div>
           {% endif %}
         </li>
       {% endif %}

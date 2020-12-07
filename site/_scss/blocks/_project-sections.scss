@@ -59,7 +59,7 @@
   display: flex;
 }
 
-.project-sections__column svg {
+.project-sections__icon {
   position: absolute;
   transform: translateX(calc(-100% - #{get-size(400)}));
 }
