@@ -1,8 +1,17 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-  <div class="pad-400">
-    <h1 class="type--h1"><code>{{ title }}</code></h1>
-    {{ content | safe }}
+  <div class="measure-short pad-400 gap-top-900 center-margin">
+    {% img
+      className="width-800 gap-bottom-600",
+      src="image/foR0vJZKULb5AGJExlazy1xYDgI2/F7jYbCRffHPZ2FcrDQvf.png",
+      alt="a sad folder icon",
+      height="667",
+      width="800"
+    %}
+
+    <div class="type stack">
+      {{ content | safe }}
+    </div>
   </div>
 {% endblock %}
