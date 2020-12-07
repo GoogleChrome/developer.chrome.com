@@ -19,16 +19,21 @@
     - url: /docs/webstore/launching/
     - url: /docs/webstore/publish/
     - url: /docs/webstore/images/
+    - url: /docs/webstore/cws-dashboard-distribution/
     - url: /docs/webstore/cws-dashboard-privacy/
+    - url: /docs/webstore/cws-dashboard-listing/
     - url: /docs/webstore/group-publishers/
     - url: /docs/webstore/update/
     - url: /docs/webstore/rating/
+    - url: /docs/webstore/troubleshooting/
+    - url: /docs/webstore/account-deletion/
 - title: i18n.docs.webstore.payments
   sections:
     - url: /docs/webstore/payments-iap/
     - url: /docs/webstore/pricing/
     - url: /docs/webstore/money/
     - url: /docs/webstore/one_time_payments/
+    - url: /docs/webstore/cws-payments-deprecation/
 - title: i18n.docs.webstore.identity
   sections:
     - url: /docs/webstore/authentication/
@@ -42,7 +47,9 @@
     - url: /docs/webstore/branding/
     - url: /docs/webstore/deceptive_installation_tactics/
     - url: /docs/webstore/user_data/
+    - url: /docs/webstore/play_edu_tos/
+    - url: /docs/webstore/complaint-faq/
 - title: i18n.docs.webstore.api
   sections:
-    - url: /docs/webstore/webstore_api/inAppProducts
-    - url: /docs/webstore/webstore_api/payments
+    - url: /docs/webstore/using_webstore_api/
+    - url: /docs/webstore/api_index/
