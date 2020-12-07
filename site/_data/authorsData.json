@@ -14,7 +14,7 @@
     "descriptions": {
       "en": "Human boy working on web standards at Google"
     },
-    "image": "https://webdev.imgix.net/images/authors/jakearchibald@2x.jpg"
+    "image": "image/foR0vJZKULb5AGJExlazy1xYDgI2/NJnVE7kcCKOhWiOQnB4V.jpg"
   },
   "kaycebasques": {
     "name": {
@@ -32,7 +32,7 @@
     "descriptions": {
       "en": "Technically, I'm a writer"
     },
-    "image": "https://webdev.imgix.net/images/authors/kaycebasques@2x.jpg"
+    "image": "image/foR0vJZKULb5AGJExlazy1xYDgI2/U5OHzQL4tEKFr6OFIxWK.jpg"
   },
   "robdodson": {
     "name": {
@@ -51,7 +51,7 @@
     "twitter": "rob_dodson",
     "github": "robdodson",
     "glitch": "robdodson",
-    "image": "https://webdev.imgix.net/images/authors/robdodson@2x.jpg"
+    "image": "image/foR0vJZKULb5AGJExlazy1xYDgI2/hdnOUruuCIijvnGWvleC.jpg"
   },
   "samthorogood": {
     "name": {
@@ -70,7 +70,7 @@
     "descriptions": {
       "en": "¯‍\\‍_‍(‍ツ‍)‍_‍/‍¯"
     },
-    "image": "https://webdev.imgix.net/images/authors/samthor@2x.jpg"
+    "image": "image/foR0vJZKULb5AGJExlazy1xYDgI2/8WWdqQ0FcAgkb7EIPVrC.jpg"
   },
   "afuchs": {
     "name": {
@@ -86,6 +86,6 @@
     "descriptions": {
       "en": "Technical Writer, Chrome Extensions"
     },
-    "image": "https://wd.imgix.net/image/SHhb2PDKzXTggPGAYpv8JgR81pX2/1604956151251.jpg"
+    "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/1604956151251.jpg"
   }
 }

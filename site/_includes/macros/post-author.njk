@@ -6,7 +6,14 @@ Renders an author info snippet.
 {% set author = authorsData[authorId] %}
 
 <div class="display-flex align-start">
-  <img class="rounded-full flex-shrink-none" width="40" height="40" src="{{ author.image }}" alt="{{ author.name.given }} {{ author.name.family }} thumbnail" />
+  {% img
+    className="rounded-full flex-shrink-none width-600 height-600 object-fit-cover",
+    src=author.image,
+    alt=author.name.given + author.name.family,
+    width="40",
+    height="40",
+    options={minWidth: 40, maxWidth: 120}
+  %}
   <div class="display-flex direction-column align-start gap-left-300 type--small">
     {# Add a nbsp so authors' names don't break and wrap between the first and last name. #}
     <p>{{ author.name.given }}&nbsp;{{ author.name.family }}</p>
