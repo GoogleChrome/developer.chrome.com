@@ -12,7 +12,14 @@
     #}
     <div class="blog-card__thumbnail gap-bottom-300">
       <a class="display-block" href="{{ post.url }}">
-        {% img className="rounded-100 object-fit-cover width-full", src=pd.hero, alt=pd.alt, width="330", height="184", sizes="(min-width: 36em) 330px, calc(100vw - 80px)" %}
+        {% img
+          className="rounded-100 object-fit-cover width-full",
+          src=pd.hero,
+          alt=pd.alt,
+          width="278",
+          height="156",
+          sizes="(min-width: 36em) 330px, calc(100vw - 82px)"
+        %}
       </a>
     </div>
   {% endif %}

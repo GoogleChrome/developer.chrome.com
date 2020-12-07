@@ -16,8 +16,8 @@ module.exports = {
       assertions: {
         'categories:performance': ['error', {minScore: 0.9}],
         // Canonical url will not match the domain while on localhost.
+        'uses-responsive-images': 'off', // Disable until #392 is fixed.
         canonical: 'off',
-        'uses-responsive-images': 'off', // Disable until #265 is fixed.
         'tap-targets': 'off', // Disable temporarily until base css is in place.
       },
     },

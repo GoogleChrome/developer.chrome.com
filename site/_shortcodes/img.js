@@ -35,8 +35,10 @@ const img = args => {
     lazy = true;
   }
 
+  // https://docs.imgix.com/apis/rendering
   params = {auto: 'format', ...params};
-  options = {minWidth: 200, maxWidth: 1600, ...options};
+  // https://github.com/imgix/imgix-core-js#imgixclientbuildsrcsetpath-params-options
+  options = {minWidth: 200, maxWidth: 1600, widthTolerance: 0.07, ...options};
 
   // Below you'll notice that we do alt !== undefined. That's because passing in
   // an empty string is a valid alt value. It tells a screen reader to ignore
