@@ -9,4 +9,4 @@ Thanks for letting us know! Please [file an issue](https://github.com/GoogleChro
 
 ## Source
 
-The source code to devleoper.chrome.com will launch after Chrome Dev Summit 2020.
+The source code to developer.chrome.com will launch after Chrome Dev Summit 2020.
