@@ -27,22 +27,48 @@ if (process.env.GOOGLE_RUNTIME) {
   }
 }
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 require('dotenv').config();
 const path = require('path');
 const fs = require('fs');
 const {performance} = require('perf_hooks');
+const {parseChromeTypesFile} = require('./types');
 
-const isProduction = process.env.NODE_ENV === 'production';
-const typesPath = path.join(__dirname, '../../types/chrome/types.d.ts');
-const renderTypesPath = path.join(
-  __dirname,
-  '../../site/_collections/types.json'
-);
+// We create render types for both the regular types and platform apps.
+const sourceFiles = ['index.d.ts', 'platform_app.d.ts'];
+
+// TODO(samthor): One of the Extensions APIs references this type incorrectly, so it's in
+// incorrectly included in the Extension APIs. Pretend it's an apps type only.
+const extensionBlacklist = ['chrome.usb'];
 
 const start = performance.now();
 
-const {parseChromeTypesFile} = require('./types');
-const typesRender = parseChromeTypesFile(typesPath);
+/** @type {RenderNamespace[]} */
+const typesRender = [];
+for (const sourceFile of sourceFiles) {
+  const p = require.resolve(path.join('chrome-types', sourceFile));
+
+  // Add namespaces that we don't already have (platform_app.d.ts contains namespaces to support
+  // itself in isolation, so we remove them).
+  let part = parseChromeTypesFile(p);
+  part = part.filter(namespace => {
+    if (
+      sourceFile === 'index.d.ts' &&
+      extensionBlacklist.includes(namespace.name)
+    ) {
+      return false;
+    }
+    const previous = typesRender.find(
+      existingNamespace => existingNamespace.name === namespace.name
+    );
+    return previous === undefined;
+  });
+
+  typesRender.push(...part);
+}
+
+typesRender.sort(({name: a}, {name: b}) => a.localeCompare(b));
 
 // In dev, emit this as formatted JS for ease-of-debugging.
 const out = JSON.stringify(
@@ -52,9 +78,13 @@ const out = JSON.stringify(
 );
 
 const duration = performance.now() - start;
-console.warn(`Built render types in ${duration.toFixed(2)}ms`);
+console.warn(
+  `Built render types (${typesRender.length} namespaces)`,
+  `in ${duration.toFixed(2)}ms`
+);
 
 // We write the file here rather than using the > operator, as shell will zero
 // the file while this long process runs, and a running instance of 11ty may
 // see an empty file.
-fs.writeFileSync(renderTypesPath, out);
+const outputPath = path.join(__dirname, '../../site/_collections/types.json');
+fs.writeFileSync(outputPath, out);

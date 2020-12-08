@@ -46,6 +46,7 @@
     "algoliasearch": "^4.6.0",
     "browser-media-mime-type": "^1.0.0",
     "chokidar-cli": "^2.1.0",
+    "chrome-types": "0.0.7",
     "common-tags": "^1.8.0",
     "compression": "^1.7.4",
     "concurrently": "^5.2.0",

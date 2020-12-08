@@ -13,6 +13,13 @@
 {# Update "content" with additional headings and so forth, so we can pass it
    through the toc filter. #}
 {% set content %}
+  {% if namespace.source === 'platform_app.d.ts' %}
+    <div class="aside aside--warning">
+      This API is part of the deprecated Chrome Apps platform.
+      Learn more about <a href="/docs/apps/migration">migrating your app</a>.
+    </div>
+  {% endif %}
+
   {% if namespace.platforms.length === 1 and namespace.platforms[0] === 'chromeos' %}
     {# There are some historic cases of multi-platform support in Platform Apps, but
         the only restriction these days is CrOS vs everywhere. #}

@@ -19,6 +19,7 @@
  * display.
  */
 
+const path = require('path');
 const typedoc = require('typedoc');
 const {LogLevel: TypeDocLogLevel} = require('typedoc/dist/lib/utils');
 const {extractComment, exportedChildren} = require('./helpers');
@@ -35,10 +36,8 @@ function generateTypeDocObject(source) {
   const a = new typedoc.Application();
   a.bootstrap({
     includeDeclarations: true,
-    // TODO(samthor): TypeDoc tries to consume all types in this project, but we only want to load
-    // the specific .d.ts file. We can't exclude */** as this catches the .d.ts we want.
-    exclude: ['**/node_modules/**'],
-    entryPoint: source,
+    excludeExternals: true,
+    inputFiles: [source],
 
     logger(message, level) {
       switch (level) {
@@ -150,6 +149,8 @@ function parseChromeTypesFile(typesPath) {
       }
     });
 
+    const source = path.basename(typesPath);
+
     /** @type {RenderNamespace} */
     const renderNamespace = {
       name,
@@ -160,6 +161,7 @@ function parseChromeTypesFile(typesPath) {
       methods: [],
       events: [],
       channel,
+      source,
     };
     flat.push(renderNamespace);
 

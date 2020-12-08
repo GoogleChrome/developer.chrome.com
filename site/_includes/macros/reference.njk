@@ -2,7 +2,7 @@
 {#
   Renders a table of types based on a given channel filter.
 #}
-{% macro renderReferenceTable(all, channel) %}
+{% macro renderReferenceTable(all, channel, source) %}
 
 <table class="reference fixed-table width-full">
   <thead>
@@ -16,11 +16,13 @@
   {% for page in all %}
     {% if page.data.namespace %}
       {% set namespace = page.data.namespace %}
-      {% if channel === namespace.channel %}
-        <tr>
-          <td><a class="link weight-medium" href="{{ namespace.name | namespaceToPath }}">{{ namespace.shortName }}</a></td>
-          <td class="reference-collapse type">{{ namespace.comment | safe }}</td>
-        </tr>
+      {% if not channel or channel === namespace.channel %}
+        {% if not source or source === namespace.source %}
+          <tr>
+            <td><a class="link weight-medium" href="{{ namespace.name | namespaceToPath }}">{{ namespace.shortName }}</a></td>
+            <td class="reference-collapse type">{{ namespace.comment | safe }}</td>
+          </tr>
+        {% endif %}
       {% endif %}
     {% endif %}
   {% endfor %}

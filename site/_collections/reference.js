@@ -15,16 +15,17 @@
  */
 
 /**
- * Returns a list of pages which we have documentation for. We need this to
+ * Returns a list of pages which we have documentation for and which have an API. We need this to
  * generate a TOC on /docs/extensions/reference/.
- *
- * TODO(samthor): Split into apps/extensions and locale (eventually).
- *
+ * *
  * @param {EleventyCollectionObject} collections
  * @returns {EleventyCollectionItem[]}
  */
 module.exports = collections => {
-  return collections.getFilteredByGlob(
-    './site/en/docs/extensions/reference/**/index.md'
-  );
+  const out = collections
+    .getFilteredByGlob('./site/en/docs/extensions/reference/**/index.md')
+    .filter(({data: {api}}) => api)
+    .slice();
+  out.sort(({data: {api: a}}, {data: {api: b}}) => a.localeCompare(b));
+  return out;
 };

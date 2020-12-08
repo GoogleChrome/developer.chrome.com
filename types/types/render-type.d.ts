@@ -64,6 +64,7 @@ declare global {
     channel: "stable" | "beta" | "dev";
     permissions?: string[];
     platforms?: string[];
+    source?: string;
 
     updated?: string;
     release?: number;

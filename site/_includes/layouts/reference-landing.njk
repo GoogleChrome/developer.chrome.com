@@ -8,19 +8,30 @@
   {% import 'macros/reference.njk' as macros with context %}
 
   <h2 id="stable_apis">Stable APIs</h2>
-  {{ macros.renderReferenceTable(collections.reference, 'stable') }}
+  {{ macros.renderReferenceTable(collections.reference, 'stable', 'index.d.ts') }}
 
   <h2 id="beta_apis">Beta APIs</h2>
   <p>
     These APIs are only available in the Chrome Beta and Dev channels:
   </p>
-  {{ macros.renderReferenceTable(collections.reference, 'beta') }}
+  {{ macros.renderReferenceTable(collections.reference, 'beta', 'index.d.ts') }}
 
   <h2 id="dev_apis">Dev APIs</h2>
   <p>
     These APIs are only available in the Chrome Dev channel:
   </p>
-  {{ macros.renderReferenceTable(collections.reference, 'dev') }}
+  {{ macros.renderReferenceTable(collections.reference, 'dev', 'index.d.ts') }}
+
+  <h2 id="platform_apps_apis">Platform Apps APIs</h2>
+  <p>
+    These APIs support Chrome Apps on all platforms.
+  </p>
+  <div class="aside aside--warning">
+    These APIs are deprecated.
+    Chrome will be removing support for Chrome Apps on all platforms.
+    Learn more about <a href="/docs/apps/migration">migrating your app</a>.
+  </div>
+  {{ macros.renderReferenceTable(collections.reference, '', 'platform_app.d.ts') }}
 
 {# TODO(samthor): Chrome currently has none of these. #}
 {#
