@@ -128,7 +128,7 @@ depends on the nature of your item. See the [FAQ on review times][16] for more d
 
 [1]: /docs/webstore/update
 [2]: /docs/webstore/group-publishers
-[3]: /docs/extensions#hello-extensions
+[3]: /docs/extensions/mv2/overview/#hello-extensions
 [4]: /docs/extensions/mv2/overview#files
 [5]: /docs/extensions/mv2/manifest/icons
 [6]: /docs/extensions/mv2/overview#files

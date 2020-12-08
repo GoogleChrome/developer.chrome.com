@@ -454,5 +454,5 @@ What's next?
 [29]: examples/tutorials/get_started/options.js
 [30]: /overview
 [31]: /tut_debugging
-[32]: /api_index
+[32]: /reference
 [33]: /devguide
