@@ -41,8 +41,9 @@ const feedsCollection = require('./site/_collections/feeds');
 const tagsCollection = require('./site/_collections/tags');
 const extensionsReferenceCollection = require('./site/_collections/reference');
 
-// Create a helpful production flag
+// Create a helpful environment flags
 const isProduction = process.env.NODE_ENV === 'production';
+const isCI = true || process.env.CI;
 
 module.exports = eleventyConfig => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
@@ -72,7 +73,8 @@ module.exports = eleventyConfig => {
 
   // Add collections
   locales.forEach(locale => eleventyConfig.addCollection(`blog-${locale}`, collections => {
-    return collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).filter(drafts).reverse();
+    const blogCollection = collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).filter(drafts).reverse();
+    return isCI ? blogCollection.slice(blogCollection.length - 6) : blogCollection;
   }));
   eleventyConfig.addCollection('algolia', algoliaCollection);
   eleventyConfig.addCollection('feeds', feedsCollection);

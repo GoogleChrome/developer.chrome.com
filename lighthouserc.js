@@ -5,9 +5,9 @@ module.exports = {
       startServerTimeout: 60 * 1000, // allow our build to take 60s
       url: [
         'http://localhost:8080/',
-        'http://localhost:8080/blog',
-        'http://localhost:8080/docs',
-        'http://localhost:8080/docs/extensions',
+        'http://localhost:8080/blog/',
+        'http://localhost:8080/docs/',
+        'http://localhost:8080/docs/extensions/',
       ],
     },
     assert: {
