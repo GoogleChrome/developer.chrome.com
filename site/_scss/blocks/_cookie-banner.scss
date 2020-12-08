@@ -1,4 +1,5 @@
 .cookie-banner {
+  @include apply-utility('stack', '700');
   background-color: var(--color-bg);
   bottom: 0;
   display: flex;
