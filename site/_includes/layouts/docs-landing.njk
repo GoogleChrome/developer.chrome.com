@@ -13,7 +13,7 @@
 {% block content %}
   <div class="stack gap-top-300 pad-left-400 pad-right-400">
     {% for key, value in i18n.projects -%}
-      <h2 class="type--eyebrow">{{ i18n.projects[key].heading }}</h2>
+      <h2 class="type--eyebrow color-secondary-text">{{ i18n.projects[key].heading }}</h2>
       <ul class="project-grid pad-0" role="list">
         {% for item in docs.projects[key] -%}
           {# Find the landing page for the project itself and grab its metadata #}
@@ -28,7 +28,7 @@
                 {{ projectIcon(item.url) }}
                 <h3 class="project-card__title type--h5 lg:gap-top-400">{{ pd.title }}</h1>
                 {# TODO(samthor): We should probably limit this text. #}
-                <p class="display-none lg:display-block type--small gap-top-300">{{ pd.description }}</p>
+                <p class="display-none lg:display-block type--small color-secondary-text gap-top-300">{{ pd.description }}</p>
               </a>
             </li>
           {% endif %}

@@ -29,6 +29,10 @@
   padding: $padding;
 }
 
+.button-text + .button-text {
+  margin-left: get-size(300);
+}
+
 .button-filled {
   position: relative;
   transition: box-shadow 0.1s;

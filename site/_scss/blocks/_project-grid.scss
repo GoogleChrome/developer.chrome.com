@@ -1,8 +1,8 @@
 .project-grid {
   display: grid;
   gap: get-size(500);
-  grid-template-columns: repeat(auto-fill, px-to-rem(160px));
-  justify-content: center;
+  grid-template-columns: repeat(auto-fill, px-to-rem(128px));
+  justify-content: space-around;
 
   @include media-query('lg') {
     grid-template-columns: repeat(auto-fill, minmax(px-to-rem(160px), px-to-rem(300px)));

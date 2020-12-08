@@ -1,5 +1,19 @@
 .featured-card {
   max-width: $featured-card-size;
+  padding: get-size(300) get-size(300) get-size(200);
+
+  @include media-query('md') {
+    padding: get-size(400) get-size(400) get-size(300);
+  }
+
+  // These project cards have weird padding because of their stacked background
+  // effect. And since these are used on the docs pages as well, we need to
+  // scope our changes to the .featured-card class.
+  .project-card {
+    @include media-query('md-max') {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .featured-card__thumbnail {
