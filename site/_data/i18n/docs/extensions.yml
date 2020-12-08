@@ -8,13 +8,25 @@ samples_description:
 overview:
   en: 'Overview'
 distribution:
-  en: 'Distribution'
+  en: 'Distributing your extensions'
 quality:
   en: 'Best practices'
 devtools:
   en: 'Extend Chrome DevTools'
 develop:
   en: 'Develop extensions and themes'
+indepth:
+  en: 'Development in depth'
+indepth-core:
+  en: 'In depth: core concepts'
+indepth-security:
+  en: 'In depth: security'
+indepth-other:
+  en: 'In depth: more topics'
+modernize:
+  en: 'Modernize your extensions'
+obsolete:
+  en: 'Obsolete topics'
 mv3:
   en: 'Manifest V3'
 mv2:
