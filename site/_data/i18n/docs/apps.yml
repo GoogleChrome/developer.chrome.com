@@ -1,3 +1,10 @@
+samples:
+  en: "Samples"
+samples_description:
+  en: |
+    Example Chrome Apps that address various use cases and call appropriate
+    Chrome APIs. Use these to learn how Apps work or as a starting point
+    for building your own Apps.
 concepts:
   en: "Concepts"
 codelab:

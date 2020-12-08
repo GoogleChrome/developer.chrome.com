@@ -14,6 +14,9 @@
     - url: /docs/apps/app_codelab_images/
     - url: /docs/apps/app_codelab_filesystem/
     - url: /docs/apps/app_codelab_publish/
+- url: https://github.com/GoogleChrome/chrome-extensions-samples
+  title: i18n.docs.apps.samples
+  description: i18n.docs.apps.samples_description
 - title: i18n.docs.apps.guides
   sections:
     - url: /docs/apps/contentSecurityPolicy
