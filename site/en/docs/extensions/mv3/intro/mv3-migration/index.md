@@ -22,7 +22,6 @@ date: 2020-11-09
 # A list of authors. These usernames correspond to the keys in the
 # _data/authorsData.json file.
 
-draft: true
 ---
 
 
@@ -34,7 +33,7 @@ will require very little change to make them MV3 compliant, while others will
 need to be redesigned to some degree. Developers experienced with MV2, and who
 are creating new MV3 extensions, may also find this helpful. For a quick
 reference guide see the [migration
-checklist](/docs/extensions/mv2/migrating_to_manifest_v3). 
+checklist](/docs/extensions/mv3/mv3-migration-checklist). 
 
 Manifest V3 offers a number of improvements reflecting the aims of our
 [platform vision](/docs/extensions/mv3/platform-vision).

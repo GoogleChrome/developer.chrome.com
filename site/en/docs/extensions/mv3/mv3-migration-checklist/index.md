@@ -5,7 +5,6 @@ date: 2019-11-02
 updated: 2020-11-11
 description: A quick reference on migrating your Chrome Extensions from Manifest V2 to Manifest V3.
 
-draft: true
 ---
 
 This page provides a quick reference to help you identify any changes you might need to
