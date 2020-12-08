@@ -37,10 +37,6 @@ Beyond that, you might find useful entry points in these pages:
 * Pick something from the [samples page](/docs/extensions/???), install it, and start hacking on it.
 * Look for answers in the [Extensions FAQ page](/docs/extensions/mv2/faq/)
 
-!!!.aside
-Manifest V3 is launching soon. If you want to start learning about MV3, see the [Introduction to Manifest V3](/docs/extensions/mv3/intro).
-!!!
-
 In addition to the documentation here, many developers find helpful community content at:
 
 * The [Chromium extensions](https://groups.google.com/a/chromium.org/g/chromium-extensions) Google Group.
