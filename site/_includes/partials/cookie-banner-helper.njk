@@ -1,0 +1,8 @@
+<script>
+  let ctaUrl = 'https://policies.google.com/technologies/cookies';
+  let savedCtaUrl = localStorage.getItem('user-cookies');
+
+  if (savedCtaUrl === ctaUrl) {
+    document.documentElement.classList.add("banner--hide");
+  }
+</script>

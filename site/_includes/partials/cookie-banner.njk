@@ -1,0 +1,17 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+<announcement-banner class="cookie-banner hairline-top" storage-key="user-cookies">
+  <div class="type--small">
+    We serve cookies on this site to analyze traffic, remember your preferences,
+    and optimize your experience.
+  </div>
+  <div class="cookie-banner__controls">
+    <a class="material-button button-text color-blue-medium display-inline-flex align-center"
+       href="https://policies.google.com/technologies/cookies">
+      More details {{ icon('external-link', 'gap-left-200') }}
+    </a>
+    <button class="material-button button-filled color-bg bg-primary" data-banner-close-btn>
+      Ok, Got it.
+    </button>
+  </div>
+</announcement-banner>

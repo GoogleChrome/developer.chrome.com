@@ -14,6 +14,7 @@
       <link rel="stylesheet" href="/css/main.css">
     {% endif %}
 
+    {% include 'partials/cookie-banner-helper.njk' %}
     <script type="module" src="{{ helpers.hashForProd('/js/main.js') }}"></script>
 
     {# Add a facility for pages to declare an array of script paths. #}
@@ -49,6 +50,7 @@
         {% include 'partials/footer.njk' %}
       {% endblock %}
     </div>
+    {% include 'partials/cookie-banner.njk' %}
     {% include 'partials/analytics.njk' %}
   </body>
 </html>

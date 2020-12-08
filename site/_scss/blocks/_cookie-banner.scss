@@ -1,0 +1,27 @@
+.cookie-banner {
+  background-color: var(--color-bg);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: get-size(400);
+  position: fixed;
+  width: 100%;
+
+  @include media-query('md') {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.cookie-banner__controls {
+  margin-top: get-size(300);
+
+  @include media-query('md') {
+    margin-left: get-size(400);
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-left: get-size(300);
+  }
+}
