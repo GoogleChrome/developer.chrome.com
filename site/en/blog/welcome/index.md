@@ -19,21 +19,10 @@ major update back in 2012.
 
 developer.chrome.com will remain as the home of Chrome's Extension and Web Store documentation. Over
 the coming weeks and months, we'll also be bringing a variety of new and migrated Chrome-specific
-content to the domain: including the popular "What's new in Chrome" series and the DevTools
-documentation.
+content to the domain: including the popular ["What's new in Chrome"](https://developers.google.com/web/updates/2020/11/nic87) series and the [DevTools documentation](https://developers.google.com/web/tools/chrome-devtools).
 
-We'd also love for you to keep up with content by subscribing to this site in your favourite RSS
+We'd also love for you to keep up with content by [subscribing to this site](/feeds/all.xml) in your favourite RSS
 reader.
-
-## Chrome releases
-
-developer.chrome.com aims to be your central source for information related to
-each new Chrome release. While fairly spartan for now, our [Tags page](/tags/)
-lists information tagged with the relevant upcoming Chrome release—we'll be
-including articles on major changes that will affect you if you're specifically
-targeting Chrome. This might include changes to Chrome's extensions APIs, or a
-change in the way Chrome works relative to other browsers or web standards
-themselves.
 
 ## Extensions
 
@@ -50,12 +39,16 @@ package is published automatically and will pick up changes right from Chromium 
 
 ## Technical notes
 
+In addition to the new look, we're also excited to announce that we'll be open
+sourcing all of the content from this site later this week in the
+[developer.chrome.com GitHub repo](https://github.com/GoogleChrome/developer.chrome.com).
+
 From a technical point of view, for most of Chrome's existence, long-form content has lived in the
 Chromium repository itself. But by migrating long-form content like guides and information to
 GitHub, and converting them from hand-written HTML to Markdown, we aim to remove the barrier to
 entry for contributors from the wider Chrome community. These contributions could be filing issues
 on our content or pull requests to fix issues you might find. (But if you find an issue with the
-browser itself, please continue to file it on crbug.com!)
+browser itself, please continue to file it on [crbug.com](https://crbug.com)!)
 
 Chrome has also had a number of APIs come and go. We've built and removed APIs like NaCL and the
 Chrome Apps platform. These APIs have had a "successful exit": with modern replacements that make up

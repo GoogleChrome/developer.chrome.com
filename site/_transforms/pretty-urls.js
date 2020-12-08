@@ -33,10 +33,13 @@ const prettyUrls = ($, outputPath, locale) => {
       return;
     }
 
-    // Ensure href ends in a trailing slash *unless* it contains a hash anchor.
+    // Ensure href ends in a trailing slash *unless* it contains a hash anchor
+    // or file extension.
     // Example: /en/docs/foo/#bar
-    // If we add a trailing slash to the end of a hash anchor it will break it.
-    if (href.indexOf('#') === -1) {
+    // Example: /feeds/all.xml
+    //
+    // If we add a trailing slash to the end of either of these it will break it.
+    if (href.indexOf('#') === -1 && !path.extname(href)) {
       href = path.join(href, '/');
     }
 
