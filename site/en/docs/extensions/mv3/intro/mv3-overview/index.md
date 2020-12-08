@@ -22,7 +22,7 @@ date: 2020-11-09
 # A list of authors. These usernames correspond to the keys in the
 # _data/authorsData.json file.
 
-draft:true
+draft: true
 ---
 
 Manifest V3 (MV3) is a major step forward in steering towards our
