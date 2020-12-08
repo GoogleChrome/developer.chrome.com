@@ -70,6 +70,21 @@ function buildRedirectHandler(filename, staticPaths = undefined, code = 301) {
     if (target !== null) {
       return res.redirect(code, target);
     }
+
+    // If we didn't match normally but the URL contains a dot, then check it again with those
+    // replaced with underscores. There are various bad links to APIs with ".", when the generated
+    // pages actually use "_".
+    if (req.url.includes('.')) {
+      let update = req.url.replace(/\./g, '_');
+      if (update.endsWith('_html')) {
+        update = update.slice(0, -5) + '.html';
+      }
+      const target = handler(update);
+      if (target !== null) {
+        return res.redirect(code, target);
+      }
+    }
+
     return next();
   };
 }

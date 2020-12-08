@@ -18,14 +18,117 @@ redirects:
 
 # Simple redirects
 
+- from: /activeTab
+  to: /docs/extensions/reference/activeTab
+
+- from: /android/overview
+  to: /docs/multidevice/android/overview/
+
+- from: /apps/about_apps
+  to: /docs/apps/overview/
+
+# The new site doesn't break out Platform Apps APIs, but instead just locates them at the bottom of
+# the main Extensions reference page.
+- from: /apps/api_index
+  to: /docs/extensions/reference/#platform-apis
+
+- from: /apps/app_codelab1_setup
+  to: /docs/apps/app_codelab_intro
+
+- from: /apps/arc_in_app_payments
+  to: https://developer.android.com/chrome-os/intro
+
+- from: /apps/getstarted_arc
+  to: https://developer.android.com/chrome-os/intro.html
+
+- from: /apps/google_wallet
+  to: /docs/webstore/payments-iap
+
+- from: /apps/npapi
+  to: https://blog.chromium.org/2013/09/saying-goodbye-to-our-old-friend-npapi.html
+
+- from: /apps/packaging
+  to: /docs/extensions/mv2/hosting
+
+- from: /chrome/apps/
+  to: /docs/apps/about_apps
+
+- from: /devtools/
+  to: https://developers.google.com/web/tools/chrome-devtools
+
+- from: /devtools/docs/blackboxing
+  to: https://developers.google.com/web/tools/chrome-devtools/javascript/reference#blackbox
+
+- from: /devtools/docs/commandline-api
+  to: https://developers.google.com/web/tools/chrome-devtools/console/utilities
+
+- from: /devtools/docs/console-api
+  to: https://developers.google.com/web/tools/chrome-devtools/console/api
+
+- from: /devtools/docs/debugger-protocol
+  to: https://chromedevtools.github.io/devtools-protocol/
+
+- from: /devtools/docs/device-mode
+  to: https://developers.google.com/web/tools/chrome-devtools/device-mode
+
+- from: /devtools/docs/elements-styles
+  to: https://developers.google.com/web/tools/chrome-devtools/css/reference
+
+- from: /devtools/docs/mobile-emulation
+  to: https://developers.google.com/web/tools/chrome-devtools/device-mode
+
+- from: /devtools/docs/resources
+  to: https://developers.google.com/web/tools/chrome-devtools/dom
+
+- from: /devtools/docs/remote-debugging
+  to: https://developers.google.com/web/tools/chrome-devtools/remote-debugging
+
 - from: /extensions/api_index
   to: /docs/extensions/reference/
+
+- from: /extensions/arc_in_app_payments
+  to: https://developer.android.com/chrome-os/intro.html
+
+- from: /extensions/arc_playservices
+  to: https://developer.android.com/chrome-os/intro.html
+
+- from: /extensions/autoupdate
+  to: /docs/extensions/mv2/hosting
+
+- from: /extensions/crx
+  to: /docs/extensions/mv2/hosting
+
+- from: /extensions/getstarted_arc
+  to: https://developer.android.com/chrome-os/intro.html
+
+- from: /extensions/manifest/file_system_provider
+  to: /docs/extensions/reference/fileSystemProvider
+
+- from: /extensions/npapi
+  to: https://blog.chromium.org/2013/09/saying-goodbye-to-our-old-friend-npapi.html
+
+- from: /extensions/optionsV2
+  to: /docs/extensions/mv2/options
+
+- from: /extensions/packaging
+  to: /docs/extensions/mv2/hosting
 
 - from: /home
   to: /
 
+- from: /manifest/...
+  try:
+    - /docs/extensions/mv2/manifest/...
+    - /docs/apps/manifest/...
+
+- from: /multidevice/data-compression
+  to: https://support.google.com/chrome/answer/2392284
+
+- from: /multidevice/data-compression-for-isps
+  to: https://support.google.com/chrome/answer/2392284
+
 - from: /webstore/api_index
-  to: /docs/webstore/webstore
+  to: /docs/webstore/api_index/
 
 - from: /webstore/articles
   to: /docs/webstore/
@@ -33,29 +136,49 @@ redirects:
 - from: /webstore/check_for_payment
   to: /docs/webstore/money/
 
-- from: /webstore/developer/dashboard
-  to: /docs/webstore/cws-dashboard-privacy/
-
-- from: /webstore/docs/publish
-  to: /docs/webstore/publish/
+- from: /webstore/payments-otp
+  to: /docs/webstore/one_time_payments/
 
 - from: /webstore/intl/en/program_policies
   to: /docs/webstore/program_policies/
 
-- from: /webstore/payments-otp
-  to: /docs/webstore/one_time_payments/
+- from: /webview/overview
+  to: /docs/multidevice/android/overview/
 
-- from: /webstore/webstore/webstore_api/payments/list
-  to: /webstore/webstore_api/payments/list
+  # Group redirects
+
+- from: /apps/apps/...
+  to: /apps...
 
 - from: /apps/...
-  to: /docs/apps/...
+  try:
+    - /docs/apps/manifest/...
+    - /docs/extensions/reference/...
+    - /docs/extensions/mv2/manifest/...
+    - /docs/extensions/mv2/...
+    - /docs/extensions/...
+  else: /docs/apps/...
+
+# Redirecting all old DevTools docs to the homepage
+- from: /devtools/...
+  to: https://developers.google.com/web/tools/chrome-devtools/
+
+- from: /extensions/extensions/...
+  to: /extensions/...
 
 - from: /extensions/...
   try:
-  - /docs/extensions/reference/...
-  - /docs/extensions/mv2/...
+    - /docs/extensions/reference/...
+    - /docs/extensions/mv2/manifest/...
+    - /docs/extensions/mv2/...
+    - /docs/apps/...
+    - /docs/apps/manifest/...
   else: /docs/extensions/...
+
+- from: /manifest/...
+  try:
+    - /docs/extensions/mv2/manifest/...
+  else: /docs/apps/manifest/...
 
 - from : /multidevice/...
   to: /docs/multidevice/...
@@ -65,3 +188,24 @@ redirects:
 
 - from: /webstore/...
   to: /docs/webstore/...
+
+- from: /webstore/docs/...
+  to: /docs/webstore/...
+
+- from: /webstore/webstore/...
+  to: /docs/webstore/...
+
+- from: /...
+  try:
+    - /docs/extensions/...
+    - /docs/extensions/reference/...
+    - /docs/extensions/mv2/manifest/...
+    - /docs/extensions/mv2/...
+    - /docs/apps/manifest/...
+    - /docs/apps/...
+
+# DO NOT REMOVE. This seems pointless but we rewrite "." to "_" inside our server's code, so if the
+# URL is fine for all but incorrect syntax, we'll fix it up.
+- from: /...
+  try:
+    - /...
