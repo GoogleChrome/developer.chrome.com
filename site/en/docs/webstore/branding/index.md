@@ -26,13 +26,13 @@ naming and describing your application. Your use of any Google trademarks is alw
 You can let others know that your app, extension or theme is available in the Chrome Web Store by
 using the "Available in the Chrome Web Store" badge on your site. You do not need pre-approval to
 use this badge. However, be sure that your use of the badge is consistent with the Chrome Web Store
-[terms of service][9] and these branding guidelines, or we may request that you modify or cease your
+[terms of service][6] and these branding guidelines, or we may request that you modify or cease your
 use of the badge.
 
 As the following images show, the badge has an optional border.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/RQMv2HZ0v6NKfFn7XCeU.png", 
-       alt="206x58 Chrome Web Store badge, no border", 
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/RQMv2HZ0v6NKfFn7XCeU.png",
+       alt="206x58 Chrome Web Store badge, no border",
        height="58", width="206" %}
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LclHxMxqoswLNRcUW3m5.png",
@@ -119,7 +119,7 @@ text should be smaller in size than your logo.
 ## Using screenshots
 
 For illustrative or informative purposes, you may use standard, unaltered screenshots of Google
-services. For further details, check out the [Google Permissions][23] page.
+services. For further details, check out the [Google Permissions][8] page.
 
 ## Giving proper attribution
 
@@ -133,17 +133,16 @@ Use of this trademark is subject to Google Permissions.
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
 [2]: /docs/apps/migration/
-[3]: /docs/rating/
-[4]: /docs/program_policies/
-[5]: /docs/user_data/
-[6]: /docs/terms/
-[7]: http://www.google.com/permissions/trademark/
-[8]: http://www.google.com/permissions/trademark/
-[9]: /docs/terms/
+[3]: /docs/webstore/rating/
+[4]: /docs/webstore/program_policies/
+[5]: /docs/webstore/user_data/
+[6]: /docs/webstore/terms/
+[7]: https://www.google.com/permissions/trademark/
+[8]: https://www.google.com/permissions/
 [10]: images/ChromeWebStore_Badge_v2_206x58.png
 [11]: images/ChromeWebStore_Badge_v2_340x96.png
 [12]: images/ChromeWebStore_Badge_v2_496x150.png
-[13]: images/ChromeWebStore_Badge
+[13]: images/ChromeWebStore_Badge.ai
 [14]: images/ChromeWebStore_BadgeWBorder_v2_206x58.png
 [15]: images/ChromeWebStore_BadgeWBorder_v2_340x96.png
 [16]: images/ChromeWebStore_BadgeWBorder_v2_496x150.png
@@ -151,4 +150,3 @@ Use of this trademark is subject to Google Permissions.
 [19]: https://services.google.com/fb/forms/permissionsbrand/
 [20]: https://developers.google.com/youtube/branding
 [21]: https://checkout.google.com/seller/checkout_buttons.html
-[23]: http://www.google.com/permissions/index.html
