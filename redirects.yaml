@@ -113,6 +113,9 @@ redirects:
 - from: /extensions/packaging
   to: /docs/extensions/mv2/hosting
 
+- from: /docs/extensions/mv3
+  to: /docs/extensions/mv3/intro
+
 - from: /extensions/migrating_to_manifest_v3
   to: /docs/extensions/mv3/mv3-migration-checklist
 
