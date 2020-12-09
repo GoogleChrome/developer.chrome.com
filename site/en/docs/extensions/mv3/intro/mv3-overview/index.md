@@ -25,7 +25,7 @@ date: 2020-11-09
 ---
 
 Manifest V3 (MV3) is a major step forward in steering towards our
-[vision for the extensions platform](/docs/extensions/mv3/platform-vision/).
+[vision for the extensions platform](/docs/extensions/mv3/intro/platform-vision/).
 MV3 focuses on the three pillars of that vision: privacy, security, and
 performance, while preserving and improving our foundation of capability and
 webbiness.
@@ -33,7 +33,7 @@ webbiness.
 This article summarizes the features and major changes introduced by MV3. For
 help migrating Manifest V2 extensions to MV3, or to better understand the
 architectural impact of these changes, see also the [MV3 migration
-guide](/docs/extensions/mv3/mv3-migration/).
+guide](/docs/extensions/mv3/intro/mv3-migration/).
 
 Manifest V3 is available beginning with Chrome
 [88](https://chromiumdash.appspot.com/schedule), and the Chrome Web Store
@@ -90,7 +90,7 @@ Using this declarative approach dramatically reduces the need for persistent hos
 !!!.aside
 Some extensions may still require broad host permissions for certain use cases
 (such as redirecting requests). See [Conditional permissions and
-declarativeNetRequest](/docs/extensions/mv3/mv3-migration#declarativenetrequest-conditional-perms)
+declarativeNetRequest](/docs/extensions/mv3/intro/mv3-migration#declarativenetrequest-conditional-perms)
 for further details.
 !!!
 
@@ -115,7 +115,7 @@ review the safe behavior of extensions when they’re submitted to the Chrome We
 Store. Specifically, all logic must be included in the extension's package.
 
 Instead of remote code, we recommend the use of remote configuration files. See
-the [migration guide](/docs/extensions/mv3/mv3-migration#remotely-hosted-code)
+the [migration guide](/docs/extensions/mv3/intro/mv3-migration#remotely-hosted-code)
 for more about how to work with this change.
 
 
@@ -137,11 +137,11 @@ Some scenarios, such as event listeners, will still require callbacks.
 
 There are a number of other changes introduced in MV3:
 
-* [Action API consolidation](/docs/extensions/mv3/mv3-migration#action-api-unification):
+* [Action API consolidation](/docs/extensions/mv3/intro/mv3-migration#action-api-unification):
   The Browser Action and Page Action APIs are unified into a single Action API.
-* [Web accessible resources](/docs/extensions/mv3/mv3-migration#web-accessible-resources): These resources are now available only to specified sites and extensions.
-* [Content security policy (CSP)](/docs/extensions/mv3/mv3-migration#content-security-policy): You now specify separate CSP for different execution contexts in a single object, and certain policies are disallowed.
-* [executeScript() changes](/docs/extensions/mv3/mv3-migration#executing-arbitrary-strings): Extensions can no longer execute arbitrary strings, only script files and functions. This method is also migrating from the Tabs API to the new Scripting API.
+* [Web accessible resources](/docs/extensions/mv3/intro/mv3-migration#web-accessible-resources): These resources are now available only to specified sites and extensions.
+* [Content security policy (CSP)](/docs/extensions/mv3/intro/mv3-migration#content-security-policy): You now specify separate CSP for different execution contexts in a single object, and certain policies are disallowed.
+* [executeScript() changes](/docs/extensions/mv3/intro/mv3-migration#executing-arbitrary-strings): Extensions can no longer execute arbitrary strings, only script files and functions. This method is also migrating from the Tabs API to the new Scripting API.
 
 The following features will be added to MV3 soon:
 

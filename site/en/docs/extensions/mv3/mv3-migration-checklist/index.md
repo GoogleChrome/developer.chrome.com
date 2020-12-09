@@ -9,7 +9,7 @@ description: A quick reference on migrating your Chrome Extensions from Manifest
 
 This page provides a quick reference to help you identify any changes you might need to
 make to an Manifest V2 extension so that it works under Manifest V3 (MV3). For more
-description of the nature of these changes see the [MV3 migration guide](/docs/extensions/mv3/mv3-migration).
+description of the nature of these changes see the [MV3 migration guide](/docs/extensions/mv3/intro/mv3-migration).
 
 
 ## API checklist {: #api_checklist }
@@ -18,13 +18,13 @@ There are some changes you may need to make based on changes to the API surface.
 
 **Do you have host permissions in your manifest?**
 <br/>
-*Host permissions in MV3 [are a separate element](/docs/extensions/mv3/mv3-migration#host-permissions); you don't specify them in `permissions` or `optional_permissions`.*
+*Host permissions in MV3 [are a separate element](/docs/extensions/mv3/intro/mv3-migration#host-permissions); you don't specify them in `permissions` or `optional_permissions`.*
 
 - Move host permissions into the `host_permissions` field in manifest.json.
 
 **Are you using background pages?**
 <br/>
-*Background pages are [replaced by service workers](/docs/extensions/mv3/mv3-migration#background-service-workers) in MV3.*
+*Background pages are [replaced by service workers](/docs/extensions/mv3/intro/mv3-migration#background-service-workers) in MV3.*
 
 - Replace `background.page` or `background.scripts` with `background.service_worker` in
   manifest.json. Note that the `service_worker` field takes a string, not an array of strings.
@@ -37,18 +37,18 @@ Service workers must be registered at root level: they cannot be in a nested dir
 
 **Are you using the **`browser_action`** or **`page_action`** property in manifest.json?**
 <br/>
-*These properties are [unified into a single property](/docs/extensions/mv3/mv3-migration#action-api-unification) in MV3.*
+*These properties are [unified into a single property](/docs/extensions/mv3/intro/mv3-migration#action-api-unification) in MV3.*
 
 - Replace these properties with `action`.
 
 **Are you using the **`chrome.browserAction`** or **`chrome.pageAction`** JavaScript API?**
 <br/>
-*These two equivalent APIs are [unified into a single API](/docs/extensions/mv3/mv3-migration#action-api-unification) in MV3.*
+*These two equivalent APIs are [unified into a single API](/docs/extensions/mv3/intro/mv3-migration#action-api-unification) in MV3.*
 - Migrate to the `chrome.action` API.
 
 **Are you currently using the blocking version of **`chrome.webRequest`**?**
 <br/>
-*This API is [replaced by `declarativeNetRequest`](/docs/extensions/mv3/mv3-migration#modifying-network-requests) in MV3.*
+*This API is [replaced by `declarativeNetRequest`](/docs/extensions/mv3/intro/mv3-migration#modifying-network-requests) in MV3.*
 
 !!!.aside
 This only applies to user-installed extensions; force installed extensions (extensions
@@ -66,7 +66,7 @@ still use the blocking version of `chrome.webRequest`.
 
 **Are you executing remote code or arbitrary strings?**
 <br/>
-*You can no longer [execute external logic](/docs/extensions/mv3/mv3-migration#remotely-hosted-code) using `chrome.tabs.executeScript({code: '...'})`, `eval()`, and `new Function()`.*
+*You can no longer [execute external logic](/docs/extensions/mv3/intro/mv3-migration#remotely-hosted-code) using `chrome.tabs.executeScript({code: '...'})`, `eval()`, and `new Function()`.*
 
 - Move all external code (JS, Wasm, CSS) into your extension bundle.
 - Update script and style references to load resources from the extension bundle.
@@ -74,7 +74,7 @@ still use the blocking version of `chrome.webRequest`.
 
 **Are you executing functions that expect an MV2 background context?**
 <br/>
-*The [adoption of service workers](/docs/extensions/mv3/mv3-migration#background-service-workers) in MV3 isn't compatible with 
+*The [adoption of service workers](/docs/extensions/mv3/intro/mv3-migration#background-service-workers) in MV3 isn't compatible with 
 methods like `chrome.runtime.getBackgroundPage()`,
 `chrome.extension.getBackgroundPage()`, `chrome.extension.getExtensionTabs()`,
 and `chrome.extension.getViews()`.*

@@ -175,7 +175,7 @@ like a compass heading or north star. Manifest V3 and its associated features
 are a major step in this strategic direction. 
 
 To learn about Manifest V3 itself and its features, see [Overview of Manifest
-V3](/docs/extensions/mv3/mv3-overview).
+V3](/docs/extensions/mv3/intro/mv3-overview).
 
 ### Manifest V3 related changes
 

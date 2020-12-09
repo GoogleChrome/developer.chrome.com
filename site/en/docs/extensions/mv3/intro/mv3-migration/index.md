@@ -33,31 +33,31 @@ reference guide see the [migration
 checklist](/docs/extensions/mv3/mv3-migration-checklist). 
 
 Manifest V3 offers a number of improvements reflecting the aims of our
-[platform vision](/docs/extensions/mv3/platform-vision).
+[platform vision](/docs/extensions/mv3/intro/platform-vision).
 
 
 ## Feature summary  {: #feature-summary }
 
 There are a number of new features and functional changes for extensions using MV3:
 
-* [Service workers](/docs/extensions/mv3/mv3-overview#service-workers)
+* [Service workers](/docs/extensions/mv3/intro/mv3-overview#service-workers)
   replace background pages.
-* [Network request modification](/docs/extensions/mv3/mv3-overview#network-request-modification)
+* [Network request modification](/docs/extensions/mv3/intro/mv3-overview#network-request-modification)
   is now handled with the new
   [declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest) API.
-* [Remotely hosted code](/docs/extensions/mv3/mv3-overview#remotely-hosted-code)
+* [Remotely hosted code](/docs/extensions/mv3/intro/mv3-overview#remotely-hosted-code)
   is no longer allowed; an extension can only execute JavaScript that is
   included within its package.
-* [Promise](/docs/extensions/mv3/mv3-overview#promises)
+* [Promise](/docs/extensions/mv3/intro/mv3-overview#promises)
   support has been added to many methods, though callbacks are still supported
   as an alternative.  (We will eventually support promises on all appropriate
   methods.)
 * A number of other, relatively
-  [minor feature changes](/docs/extensions/mv3/mv3-overview#other-features)
+  [minor feature changes](/docs/extensions/mv3/intro/mv3-overview#other-features)
   are also introduced in MV3.
 
 For a fuller description of these changes, see the
-[MV3 Overview](/docs/extensions/mv3/mv3-overview).
+[MV3 Overview](/docs/extensions/mv3/intro/mv3-overview).
 
 
 ## Updating the manifest.json file  {: #updating-manifest-dot-json }
