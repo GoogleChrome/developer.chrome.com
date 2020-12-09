@@ -24,9 +24,6 @@ date: 2020-11-09
 
 ---
 
-
-
-
 This guide provides developers with the information they need to begin
 migrating an extension from Manifest V2 to Manifest V3 (MV3). Some extensions
 will require very little change to make them MV3 compliant, while others will
@@ -77,23 +74,19 @@ declarations, and web-accessible resources.
 Changing the value of the manifest_version element is the key to upgrading your
 extension. This determines whether you’re using the MV2 or MV3 feature set:
 
+{% columns %}
+```json
+// Manifest v2
 
-<table class="width-full">
-  <tr>
-   <td>Manifest V2
-   </td>
-   <td>Manifest V3
-   </td>
-  </tr>
-  <tr>
-   <td><code>"manifest_version": 2</code>
-   </td>
-   <td><code>"manifest_version": 3</code>
-   </td>
-  </tr>
-</table>
+"manifest_version": 2
+```
 
+```json
+// Manifest v3
 
+"manifest_version": 3
+```
+{% endcolumns %}
 
 ### Host permissions  {: #host-permissions }
 
@@ -143,35 +136,22 @@ An extension's [content security policy](https://content-security-policy.com/)
 (CSP) was specified in MV2 as a string; in MV3 it is an object with members
 representing alternative CSP contexts:
 
+{% columns %}
+```json
+// Manifest v2
 
-<table class="width-full">
-  <tr>
-   <td>Manifest V2
-   </td>
-   <td>Manifest V3
-   </td>
-  </tr>
-  <tr>
-   <td>
-
-```
 "content_security_policy": "..."
 ```
 
-   </td>
-   <td>
+```json
+// Manifest v3
 
-```js
-"content_security_policy": { \
-  "extension_pages": "...", \
-  "sandbox": "..." \
+"content_security_policy": {
+  "extension_pages": "...",
+  "sandbox": "..."
 }
 ```
-
-   </td>
-  </tr>
-</table>
-
+{% endcolumns %}
 
 **`extension_pages`**:  This policy covers pages in your extension, including html files and service workers. 
 
@@ -204,45 +184,34 @@ but over time they've become redundant so in MV3 we are unifying them into as
 single `action` API:
 
 
-<table class="width-full">
-  <tr>
-   <td>Manifest V2
-   </td>
-   <td>Manifest V3
-   </td>
-  </tr>
-  <tr>
-   <td><code>// manifest.json</code>
-<p>
-<code>{</code>
-<p>
-<code>  "browser_action": { … },</code>
-<p>
-<code>  "page_action": { … }</code>
-<p>
-<code>}</code>
-<p>
-<code>// background.js</code>
-<p>
-<code>chrome.browserAction.onClicked.addListener(tab => { … })</code>
-<p>
-<code>chrome.pageAction.onClicked.addListener(tab => { … })</code>
-   </td>
-   <td><code>// manifest.json</code>
-<p>
-<code>{</code>
-<p>
-<code>  "action": { … }</code>
-<p>
-<code>}</code>
-<p>
-<code>// background.js</code>
-<p>
-<code>chrome.action.onClicked.addListener(tab => { … })</code>
-   </td>
-  </tr>
-</table>
+{% columns %}
+```js
+// Manifest v2
 
+// manifest.json
+{
+  "browser_action": { … },
+  "page_action": { … }
+}
+
+// background.js
+chrome.browserAction.onClicked.addListener(tab => { … });
+chrome.pageAction.onClicked.addListener(tab => { … });
+```
+
+```js
+// Manifest v3
+
+// manifest.json
+{
+  "action": { … }
+}
+
+
+// background.js
+chrome.action.onClicked.addListener(tab => { … });
+```
+{% endcolumns %}
 
 !!!.aside.aside--note
 In order to aid with the migration process, the Action API can be used in MV2
@@ -256,40 +225,26 @@ This change limits access to extension resources to specific sites/extensions.
 Instead of providing a list of files, you now provide a list of objects, each
 of which can map to a set of resources to a set of URLs and extension IDs:
 
+{% columns %}
+```json
+// Manifest v2
 
-<table class="width-full">
-  <tr>
-   <td>Manifest V2
-   </td>
-   <td>Manifest V3
-   </td>
-  </tr>
-  <tr>
-   <td><code>"web_accessible_resources": [</code>
-<p>
-<code>  &lt;files></code>
-<p>
-<code>]</code>
-   </td>
-   <td><code>"web_accessible_resources": [</code>
-<p>
-<code>  {</code>
-<p>
-<code>    "resources": [&lt;resources>],</code>
-<p>
-<code>    "matches": [&lt;urls>],</code>
-<p>
-<code>    "extension_ids": [&lt;keys>],</code>
-<p>
-<code>    optional "use_dynamic_url": boolean</code>
-<p>
-<code>  }</code>
-<p>
-<code>]</code>
-   </td>
-  </tr>
-</table>
+"web_accessible_resources": [
+  <files>
+]
+```
 
+```json
+// Manifest v3
+
+"web_accessible_resources": [{
+  "resources": [<resources>],
+  "matches": [<urls>],
+  "extension_ids": [<keys>],
+  optional "use_dynamic_url": boolean
+}]
+```
+{% endcolumns %}
 
 !!!.aside.aside--note
 The `matches`, `extension_ids`, and `use_dynamic_url` keys are not available
@@ -352,74 +307,55 @@ Instead of executing a string, you should move your code into a static
 JavaScript file included in the bundle, then execute it using the executeScript
 method's `file` property:
 
-<table class="width-full">
-  <tr>
-   <td>Manifest V2
-   </td>
-   <td>Manifest V3
-   </td>
-  </tr>
-  <tr>
-   <td><code>// background.js</code>
-<p>
-<code>chrome.tabs.executeScript({</code>
-<p>
-<code>  code: 'alert("test!")'</code>
-<p>
-<code>});</code>
-   </td>
-   <td><code>// background.js</code>
-<p>
-<code>chrome.scripting.executeScript({</code>
-<p>
-<code>  file: 'content-script.js'</code>
-<p>
-<code>}) \
-</code>
-<p>
-<code>// content-script.js</code>
-<p>
-<code>alert("test!");</code>
-   </td>
-  </tr>
-</table>
+{% columns %}
+```js
+// Manifest v2
+
+// background.js
+chrome.tabs.executeScript({
+  code: 'alert("test!")'
+});
+```
+
+```js
+// Manifest v3
+
+// background.js
+chrome.scripting.executeScript({
+  file: 'content-script.js'
+});
+
+// content-script.js
+alert("test!");
+```
+{% endcolumns %}
 
 Alternatively, if the logic being executed can be neatly wrapped in a function
 call, you can use the new `function` property:
 
-<table class="width-full">
-  <tr>
-   <td>Manifest V2
-   </td>
-   <td>Manifest V3
-   </td>
-  </tr>
-  <tr>
-   <td><code>// background.js</code>
-<p>
-<code>chrome.tabs.executeScript({</code>
-<p>
-<code>  code: 'alert("test!")'</code>
-<p>
-<code>});</code>
-   </td>
-   <td><code>// background.js</code>
-<p>
-<code>function showAlert() {</code>
-<p>
-<code>  alert("test!");</code>
-<p>
-<code>}</code>
-<p>
-<code>chrome.scripting.executeScript({</code>
-<p>
-<code>  function: showAlert</code>
-<p>
-<code>});</code>
-   </td>
-  </tr>
-</table>
+{% columns %}
+```js
+// Manifest v2
 
+// background.js
+chrome.tabs.executeScript({
+  code: 'alert("test!")'
+});
+```
+
+```js
+// Manifest v3
+
+// background.js
+function showAlert() {
+  alert("test!");
+}
+
+chrome.scripting.executeScript({
+  function: showAlert
+});
+```
+{% endcolumns %}
 
 ## Background service workers  {: #background-service-workers }
 
