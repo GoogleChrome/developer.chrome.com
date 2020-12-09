@@ -99,57 +99,36 @@ extension. This determines whether you’re using the MV2 or MV3 feature set:
 
 In MV3, you’ll need to specify host permissions separately from other permissions:
 
+{% columns %}
+```js
+// Manifest v2
+"permissions": [
+  "tabs",
+  "bookmarks",
+  "http://www.blogger.com/",
+],
+"optional_permissions": [
+  "*://*/*",
+  "unlimitedStorage"
+]
+```
 
-<table class="width-full">
-  <tr>
-   <td>Manifest V2
-   </td>
-   <td>Manifest V3
-   </td>
-  </tr>
-  <tr>
-   <td><code>"permissions": [</code>
-<p>
-<code>  "tabs",</code>
-<p>
-<code>  "bookmarks",</code>
-<p>
-<code>  "http://www.blogger.com/",</code>
-<p>
-<code>],</code>
-<p>
-<code>"optional_permissions": [</code>
-<p>
-<code>  "*://*/*",</code>
-<p>
-<code>  "unlimitedStorage"</code>
-<p>
-<code>]</code>
-   </td>
-   <td><code>"permissions": [</code>
-<p>
-<code>  "tabs",</code>
-<p>
-<code>  "bookmarks"</code>
-<p>
-<code>],</code>
-<p>
-<code>"optional_permissions": [</code>
-<p>
-<code>  "unlimitedStorage"</code>
-<p>
-<code>]</code>
-<p>
-<code>"host_permissions": [</code>
-<p>
-<code>  "http://www.blogger.com/",</code>
-<p>
-<code>  "*://*/*"</code>
-<p>
-<code>],</code>
-   </td>
-  </tr>
-</table>
+```js/7-10
+// Manifest v3
+"permissions": [
+  "tabs",
+  "bookmarks"
+],
+"optional_permissions": [
+  "unlimitedStorage"
+],
+"host_permissions": [
+  "http://www.blogger.com/",
+  "*://*/*"
+],
+```
+{% endcolumns %}
+
 
 !!!.aside.aside--warning
 You do not have to declare content script match patterns in `host_permissions`

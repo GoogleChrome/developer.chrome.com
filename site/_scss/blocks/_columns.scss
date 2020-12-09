@@ -1,0 +1,9 @@
+.columns {
+  display: grid;
+  gap: get-size(300);
+  grid-auto-flow: row;
+  
+  @include media-query('md') {
+    grid-auto-flow: column;
+  }
+}
