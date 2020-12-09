@@ -24,9 +24,12 @@ date: 2020-11-09
 Chrome extensions are one of the most-loved and most-used features of the
 Chrome browser.  Extensions can solve a myriad of use cases for a diverse set
 of users, and in one form or another they are becoming a staple feature of most
-major browsers.  There's a thriving extension developer community, with
-hundreds of thousands of published extensions; and a strong user base, with
-millions of extensions downloaded every day.
+major browsers.
+
+There's a thriving extension developer community, with hundreds of thousands of
+published extensions; a strong user base, and millions of extensions downloaded
+every day. We're going to continue improving and extending this vibrant
+ecosystem.
 
 This page describes our longer-term vision for the Chrome extensions platform.
 This helps developers understand and embrace the future direction of the
@@ -56,7 +59,7 @@ providing Chrome users with all kinds of enhancements to the browser experience.
 But the power of the extensions platform has sometimes
 been exploited to gain inappropriate access to user data and metadata. We see
 scope for improvement in the privacy and security of extensions; we also intend
-to focus on performance, while maintaining or improving extension capability
+to focus on performance, while improving extension capability
 and preserving webbiness.
 
 
