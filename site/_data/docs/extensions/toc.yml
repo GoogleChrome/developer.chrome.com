@@ -10,6 +10,13 @@
 - url: https://github.com/GoogleChrome/chrome-extensions-samples
   title: i18n.docs.extensions.samples
   description: i18n.docs.extensions.samples_description
+- title: i18n.docs.extensions.mv3
+  sections:
+    - url: /docs/extensions/mv3/intro
+    - url: /docs/extensions/mv3/intro/platform-vision
+    - url: /docs/extensions/mv3/intro/mv3-overview
+    - url: /docs/extensions/mv3/intro/mv3-migration
+    - url: /docs/extensions/mv3/mv3-migration-checklist
 - title: i18n.docs.extensions.develop
   sections:
     - url: /docs/extensions/mv2/devguide
