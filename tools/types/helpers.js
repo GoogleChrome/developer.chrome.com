@@ -77,7 +77,7 @@ function extractComment(comment, owner) {
     raw += comment?.text ?? '';
   }
 
-  raw = raw.replace(/\{@link ([^}\s]+)\s*(.*?)}/g, (_, id, note) => {
+  raw = raw.replace(/\{@link\s+([^}\s]+)\s*(.*?)}/gs, (_, id, note) => {
     const resolved = resolveLink(id, owner);
 
     const generated = generateHtmlLink(owner, resolved);
@@ -320,6 +320,8 @@ function getFullName(reflection) {
 }
 
 /**
+ * Find the fully-qualified name for this type. This will include the "chrome." prefix.
+ *
  * @param {typedocModels.ReferenceType} referenceType
  * @return {string}
  */

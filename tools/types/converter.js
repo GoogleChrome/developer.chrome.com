@@ -160,32 +160,39 @@ function maybeBuildArrayRenderType(cand) {
 function internalBuildFunctionRenderType(raw) {
   const {signatures = []} = raw;
 
-  // This extracts the signature with the most parameters. This is an awkward mismatch between
-  // TypeScript and Chrome's internal types: Chrome supports optional _middle_ arguments but TS
-  // does not; so methods get expanded to all possible combinations.
-  // For now, just grab the longest one.
-  // TODO(samthor): Find missing parameters and mark them as optional when rendering.
-  let bestParametersLength = 0;
+  // This extracts the signature with the most AND least parameters. This is an awkward mismatch
+  // between TSDoc (not to mention JSDoc) and Chrome's internal types: Chrome supports optional
+  // _middle_ arguments but this isn't representable anywhere.
+
+  // Instead, we fan out a number of signatures and here just grab the longest _and_ shortest one:
+  // if the parameters in longest aren't in the shortest, they're assumed to be optional.
+  // This assumes that all signatures have the same return type.
+
   let bestSignature = signatures[0];
+
+  /** @type {typedocModels.ParameterReflection[]} */
+  let leastParameters = bestSignature?.parameters ?? [];
+  let bestParameters = leastParameters;
+
   signatures.forEach(signature => {
     const {parameters = []} = signature;
-    if (parameters.length > bestParametersLength) {
-      bestParametersLength = parameters.length;
+    if (parameters.length > bestParameters.length) {
+      bestParameters = parameters;
       bestSignature = signature;
+    } else if (parameters.length < leastParameters.length) {
+      leastParameters = parameters;
     }
   });
 
-  const {
-    type: sourceReturnType,
-    parameters: sourceParameters = [],
-  } = bestSignature;
+  const {type: sourceReturnType} = bestSignature;
+  const requiredParameterNames = new Set(leastParameters.map(({name}) => name));
 
-  // TODO(samthor): Find inner optional arguments and mark them as such.
-  const parameters = sourceParameters.map(reflection => {
+  const parameters = bestParameters.map(reflection => {
     if (!reflection.type) {
       throw new TypeError('got signature paramater without type');
     }
     const rt = buildRenderType(reflection.type, undefined, raw);
+    rt.optional = rt.optional || !requiredParameterNames.has(reflection.name);
 
     // TODO(samthor): We don't include default values.
     const comment = extractComment(reflection.comment, reflection);
@@ -193,6 +200,7 @@ function internalBuildFunctionRenderType(raw) {
       rt.comment = comment;
     }
     rt.name = reflection.name;
+
     return rt;
   });
 
@@ -210,6 +218,7 @@ function internalBuildFunctionRenderType(raw) {
   // Set the returnType property of RenderType if valid and not void.
   if (sourceReturnType) {
     const returnType = buildRenderType(sourceReturnType, undefined, raw);
+    returnType.name = 'returns';
 
     // The return type comment is awkwardly on the Comment object.
     const returnComment = extractComment(bestSignature.comment?.returns, raw);
@@ -326,6 +335,18 @@ function buildRenderType(type, parentType, owner) {
         out.referenceTemplates = referenceType.typeArguments.map(t =>
           buildRenderType(t, undefined, owner)
         );
+      }
+
+      // TODO(samthor): special-case 'chrome.event.Event' which has some generated issues.
+      // Call the referenceType (i.e., event.Event<Function>) 'listener', and remove any return
+      // type as these have snuck into the generated .d.ts.
+      if (name === 'chrome.events.Event') {
+        if (out.referenceTemplates?.length !== 1) {
+          throw new Error('got chrome.events.Events without listener');
+        }
+        const only = out.referenceTemplates[0];
+        only.name = 'listener';
+        delete only.returnType;
       }
 
       return out;
