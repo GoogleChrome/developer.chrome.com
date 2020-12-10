@@ -154,6 +154,9 @@ redirects:
 - from: /webview/overview
   to: /docs/multidevice/android/overview/
 
+- from: /docs/extensions/declarativenetrequest
+  to: /docs/extensions/reference/declarativeNetRequest
+
   # Group redirects
 
 - from: /apps/apps/...
