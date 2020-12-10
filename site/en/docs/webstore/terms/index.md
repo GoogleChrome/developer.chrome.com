@@ -13,18 +13,6 @@ description: >
 [Branding Guidelines][3] | [Rating Guidelines][4] | [Program Policies][5] | [User Data FAQ][6] |
 **Developer Agreement**
 
-## Notice of changes {: #noticeofchanges }
-
-**On July 10, 2020, this agreement was updated.** A summary of the major changes is as follows:
-
-- Developer’s legal relationship with the Chrome Web Store is governed by the Google Terms of
-  Service and the Google Chrome And Chrome OS Additional Terms of Service as well as this Agreement.
-- Option for mediation for EU developers found in Section 7.4.
-- Data use under Section 9.1.
-- Exception to 30 day notice for termination of developer accounts under Section 10.2.
-- Continuing to use the services after a change to the terms or policies is an acceptance 15 days
-  after posting of the notification of such changes under Section 14.1
-
 ## Definitions {: #definitions }
 
 Google: Google Inc., a Delaware corporation with principal place of business at 1600 Amphitheatre
