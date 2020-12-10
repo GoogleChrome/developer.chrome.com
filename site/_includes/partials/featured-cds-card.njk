@@ -1,0 +1,45 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+<div class="masonry-grid__item featured-card hairline rounded-lg width-full">
+  <div class="card-title-bar color-blue-medium">
+    {{ icon('chrome-filled') }}
+    <span class="gap-left-300 flex-1 user-select-none">
+      Chrome Dev Summit 2020
+    </span>
+  </div>
+
+  <div class="featured-card__thumbnail gap-top-400">
+    <a class="display-block" href="https://developer.chrome.com/devsummit">
+      {% img
+        className="rounded-100 object-fit-cover width-full",
+        src="image/foR0vJZKULb5AGJExlazy1xYDgI2/qYromlYBDPIcj7u7NUlp.png",
+        alt="Chrome Dev Summit logo",
+        width="278",
+        height="139",
+        sizes="(min-width: 592px) 391px, calc(100vw - 82px)"
+      %}
+    </a>
+  </div>
+
+  <h2 class="type--h3-card gap-top-300">
+    <a class="color-text surface" href="https://developer.chrome.com/devsummit">
+      Chrome Dev Summit 2020
+    </a>
+  </h2>
+
+  <p class="gap-top-200">
+    Sessions, Live Q&amp;A, Workshops, &amp; Office hours.
+  </p>
+  <p>
+    Delivered virtually.
+  </p>
+  <p class="type--caption color-secondary-text gap-top-200">
+    Dec 9-10 • Virtual conference wherever you are
+  </p>
+
+  <div class="gap-top-400">
+    <a href="https://developer.chrome.com/devsummit" class="material-button button-text display-inline-flex color-primary">
+      Watch now
+    </a>
+  </div>
+</div>
