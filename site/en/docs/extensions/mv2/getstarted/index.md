@@ -428,7 +428,7 @@ What's next?
 [3]: /options
 [4]: /user_interface
 [5]: /docs/
-[6]: examples/tutorials/get_started_complete.zip
+[6]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/n7V7IbH6D6gqNCV7Kp5t.zip "get_started_complete.zip"
 [7]: /docs/extensions/extensions/manifest
 [8]: examples/tutorials/get_started/manifest.json
 [9]: /background_pages
@@ -440,7 +440,7 @@ What's next?
 [15]: /user_interface#popup
 [16]: examples/tutorials/get_started/popup.html
 [17]: /pageAction
-[18]: examples/tutorials/get_started/images.zip
+[18]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qwlTyQ1ah3RmqsgDhRkL.zip "images.zip"
 [19]: /user_interface#icons
 [20]: /declarativeContent
 [21]: /declarativeContent
