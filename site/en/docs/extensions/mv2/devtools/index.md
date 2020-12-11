@@ -34,10 +34,10 @@ An instance of the extension's DevTools page is created each time a DevTools win
 DevTools page exists for the lifetime of the DevTools window. The DevTools page has access to the
 DevTools APIs and a limited set of extension APIs. Specifically, the DevTools page can:
 
-- Create and interact with panels using the [`devtools.panels`][5] APIs.
+- Create and interact with panels using the [`devtools.panels`][4] APIs.
 - Get information about the inspected window and evaluate code in the inspected window using the
   [`devtools.inspectedWindow`][6] APIs.
-- Get information about network requests using the [`devtools.network`][7] APIs.
+- Get information about network requests using the [`devtools.network`][3] APIs.
 
 The DevTools page cannot use most of the extensions APIs directly. It has access to the same subset
 of the [`extension`][8] and [`runtime`][9] APIs that a content script has access to. Like a content
@@ -61,7 +61,7 @@ manifest:
 
 An instance of the `devtools_page` specified in your extension's manifest is created for every
 DevTools window opened. The page may add other extension pages as panels and sidebars to the
-DevTools window using the [`devtools.panels`][12] API.
+DevTools window using the [`devtools.panels`][4] API.
 
 !!!.aside.aside--note
 
@@ -138,7 +138,7 @@ components of a DevTools extension.
 The DevTools page can't call [`tabs.executeScript`][17] directly. To inject a content script from
 the DevTools page, you must retrieve the ID of the inspected window's tab using the
 [`inspectedWindow.tabId`][18] property and send a message to the background page. From the
-background page, call [`tabs.executeScript`][19] to inject the script.
+background page, call [`tabs.executeScript`][17] to inject the script.
 
 !!!.aside.aside--note
 
@@ -216,20 +216,20 @@ Once the context script context exists, you can use this option to inject additi
 scripts.
 
 The `eval` method is powerful when used in the right context and dangerous when used
-inappropriately. Use the [`tabs.executeScript`][24] method if you don't need access to the
+inappropriately. Use the [`tabs.executeScript`][17] method if you don't need access to the
 JavaScript context of the inspected page. For detailed cautions and a comparison of the two methods,
 see [`inspectedWindow`][25].
 
 ### Passing the selected element to a content script {: #selected-element }
 
 The content script doesn't have direct access to the current selected element. However, any code you
-execute using [`inspectedWindow.eval`][26] has access to the DevTools console and command-line APIs.
+execute using [`inspectedWindow.eval`][21] has access to the DevTools console and command-line APIs.
 For example, in evaluated code you can use `$0` to access the selected element.
 
 To pass the selected element to a content script:
 
 - Create a method in the content script that takes the selected element as an argument.
-- Call the method from the DevTools page using [`inspectedWindow.eval`][27] with the
+- Call the method from the DevTools page using [`inspectedWindow.eval`][21] with the
   `useContentScriptContext: true` option.
 
 The code in your content script might look something like this:
@@ -346,7 +346,7 @@ backgroundPageConnection.postMessage({
 ### Messaging from injected scripts to the DevTools page {: #evaluated-scripts-to-devtools }
 
 While the above solution works for content scripts, code that is injected directly into the page
-(e.g. through appending a `<script>` tag or through [`inspectedWindow.eval`][31]) requires a
+(e.g. through appending a `<script>` tag or through [`inspectedWindow.eval`][21]) requires a
 different strategy. In this context, [`runtime.sendMessage`][32] will not pass messages to the
 background script as expected.
 
@@ -439,7 +439,7 @@ Browse the source of these DevTools extension examples:
 - [Ember Inspector][39] - Shared extension core with adapters for both Chrome and Firefox.
 - [Coquette-inspect][40] - A clean React-based extension with a debugging agent injected into the
   host page.
-- our [DevTools Extension Gallery][41] and [Sample Extensions][42] have more worthwhile apps to
+- our [DevTools Extension Gallery][1] and [Sample Extensions][42] have more worthwhile apps to
   install, try out, and learn from.
 
 ## More information {: #more }
@@ -451,53 +451,41 @@ APIs][44].
 
 ## Examples {: #examples }
 
-You can find examples that use DevTools APIs in [Samples][46].
+You can find examples that use DevTools APIs in [Samples][42].
 
-[1]: /docs/devtools/docs/extensions-gallery
-[2]: /docs/extensions/mv2/devtools.inspectedWindow
-[3]: /docs/extensions/mv2/devtools.network
-[4]: /docs/extensions/mv2/devtools.panels
-[5]: /docs/extensions/mv2/devtools.panels
-[6]: /docs/extensions/mv2/devtools.inspectedWindow
-[7]: /docs/extensions/mv2/devtools.network
-[8]: /docs/extensions/extension
-[9]: /docs/extensions/runtime
+[1]: https://chrome.google.com/webstore/category/ext/11-web-development
+[2]: /docs/extensions/reference/devtools_inspectedWindow
+[3]: /docs/extensions/reference/devtools_network
+[4]: /docs/extensions/reference/devtools_panels
+[6]: /docs/extensions/reference/devtools_inspectedWindow
+[8]: /docs/extensions/reference/extension
+[9]: /docs/extensions/reference/runtime
 [10]: /docs/extensions/mv2/messaging
 [11]: #injecting
-[12]: /docs/extensions/mv2/devtools.panels
-[13]: http://developer.chrome.com/extensions/experimental.html
-[14]: /docs/extensions/mv2/devtools.panels#method-ExtensionSidebarPane-setPage
-[15]: /docs/extensions/mv2/devtools.panels#method-ExtensionSidebarPane-setObject
-[16]:
-  https://developer.chrome.com/extensions/devtools.panels#method-ExtensionSidebarPane-setExpression
-[17]: /docs/extensions/tabs#method-executeScript
-[18]: /docs/extensions/mv2/devtools.inspectedWindow#property-tabId
-[19]: /docs/extensions/tabs#method-executeScript
+[13]: /docs/extensions/reference/experimental
+[14]: /docs/extensions/reference/devtools_panels#method-ExtensionSidebarPane-setPage
+[15]: /docs/extensions/reference/devtools_panels#method-ExtensionSidebarPane-setObject
+[16]: /docs/extensions/reference/devtools_panels#method-ExtensionSidebarPane-setExpression
+[17]: /docs/extensions/reference/tabs#method-executeScript
+[18]: /docs/extensions/reference/devtools_inspectedWindow#property-tabId
 [20]: #selected-element
-[21]: /docs/extensions/mv2/devtools.inspectedWindow#method-eval
-[22]: /docs/devtools/docs/commandline-api
-[23]:
-  https://github.com/RedRibbon/SOAK/blob/ffdfad68ffb6051fa2d4e9db0219b3d234ac1ae8/pages/devtools.js#L6-L8
-[24]: /docs/extensions/tabs#method-executeScript
-[25]: /docs/extensions/mv2/devtools.inspectedWindow
-[26]: /docs/extensions/mv2/devtools.inspectedWindow#method-eval
-[27]: /docs/extensions/mv2/devtools.inspectedWindow#method-eval
-[28]: http://developer.chrome.com/extensions/devtools.panels.html#event-ExtensionPanel-onShown
-[29]: /docs/extensions/tabs#method-sendMessage
+[21]: /docs/extensions/reference/devtools_inspectedWindow#method-eval
+[22]: /devtools/docs/commandline-api
+[23]: https://github.com/RedRibbon/SOAK/blob/ffdfad68ffb6051fa2d4e9db0219b3d234ac1ae8/pages/devtools.js#L6-L8
+[25]: /docs/extensions/reference/devtools_inspectedWindow
+[28]: /docs/extensions/reference/devtools_panels#event-ExtensionPanel-onShown
+[29]: /docs/extensions/reference/tabs#method-sendMessage
 [30]: #injecting
-[31]: /docs/extensions/mv2/devtools.inspectedWindow#method-eval
-[32]: /docs/extensions/runtime#method-sendMessage
+[32]: /docs/extensions/reference/runtime#method-sendMessage
 [33]: https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage
 [34]: https://github.com/GoogleChrome/devtools-docs/issues/143
-[35]: /docs/extensions/runtime#event-onConnect
-[36]: /docs/extensions/runtime#method-connect
+[35]: /docs/extensions/reference/runtime#event-onConnect
+[36]: /docs/extensions/reference/runtime#method-connect
 [37]: https://github.com/PolymerLabs/polymer-devtools-extension
-[38]: https://github.com/facebook/react-devtools
+[38]: https://github.com/facebook/react/tree/master/packages/react-devtools
 [39]: https://github.com/emberjs/ember-inspector
 [40]: https://github.com/thomasboyt/coquette-inspect
-[41]: /docs/devtools/docs/extensions-gallery
-[42]: /docs/devtools/docs/sample-extensions
-[43]: http://developer.chrome.com/extensions/api_index.html
-[44]: http://developer.chrome.com/extensions/api_other.html
+[42]: https://github.com/GoogleChrome/chrome-extensions-samples
+[43]: /docs/extensions/reference/
+[44]: /docs/extensions/api_other/
 [45]: http://groups.google.com/group/google-chrome-developer-tools/topics
-[46]: http://developer.chrome.com/extensions/samples.html#devtools

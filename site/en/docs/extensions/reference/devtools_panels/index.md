@@ -50,7 +50,7 @@ This screenshot demonstrates the effect the above examples would have on Develop
 You can find examples that use this API in [Samples][5].
 
 [1]: /docs/extensions/mv2/devtools
-[2]: /docs/extensions/extension
+[2]: /docs/extensions/reference/extension/
 [3]: /docs/extensions/mv2/overview#contentScripts
-[4]: /docs/extensions/mv2/devtools.panels#method-setOpenResourceHandler
-[5]: /docs/extensions/mv2/samples#chrome-query
+[4]: /docs/extensions/reference/devtools_panels#method-setOpenResourceHandler
+[5]: https://github.com/GoogleChrome/chrome-extensions-samples

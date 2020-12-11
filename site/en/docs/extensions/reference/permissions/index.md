@@ -121,7 +121,7 @@ chrome.permissions.remove({
 [2]: /docs/extensions/mv2/declare_permissions#manifest
 [3]: #property-Permissions-origins
 [4]: /docs/extensions/debugger
-[5]: /docs/devtools/docs/debugger-protocol
+[5]: /devtools/docs/debugger-protocol
 [6]: /docs/extensions/declarativeNetRequest
 [7]: /docs/extensions/mv2/devtools
 [8]: https://tools.google.com/dlpage/chromesxs
