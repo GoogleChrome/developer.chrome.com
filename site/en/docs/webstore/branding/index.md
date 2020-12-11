@@ -40,8 +40,6 @@ As the following images show, the badge has an optional border.
 
 Right-click any of the following links to download an image file for the badge.
 
-<!-- TODO(kaycebasques): Migrate these assets. https://pantheon.corp.google.com/storage/browser/chromedocs-webstore/images?project=chrome-apps-doc&pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false -->
-
 | Badge for white backgrounds | Badge (with border) for colored backgrounds |
 | -------------------------------- | ------------------------------------------------ |
 | [small PNG][10] | [small PNG (with border)][14] |
@@ -139,14 +137,14 @@ Use of this trademark is subject to Google Permissions.
 [6]: /docs/webstore/terms/
 [7]: https://www.google.com/permissions/trademark/
 [8]: https://www.google.com/permissions/
-[10]: images/ChromeWebStore_Badge_v2_206x58.png
-[11]: images/ChromeWebStore_Badge_v2_340x96.png
-[12]: images/ChromeWebStore_Badge_v2_496x150.png
-[13]: images/ChromeWebStore_Badge.ai
-[14]: images/ChromeWebStore_BadgeWBorder_v2_206x58.png
-[15]: images/ChromeWebStore_BadgeWBorder_v2_340x96.png
-[16]: images/ChromeWebStore_BadgeWBorder_v2_496x150.png
-[17]: images/ChromeWebStore_BadgeWBorder.ai
+[10]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/tbyBjqi7Zu733AAKA5n4.png "ChromeWebStore_Badge_v2_206x58.png"
+[11]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/mPGKYBIR2uCP0ApchDXE.png "ChromeWebStore_Badge_v2_340x96.png"
+[12]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/YT2Grfi9vEBa2wAPzhWa.png "ChromeWebStore_Badge_v2_496x150.png"
+[13]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/xewneAQuXHkZbVSAEgiV.ai "ChromeWebStore_Badge.ai"
+[14]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png "ChromeWebStore_BadgeWBorder_v2_206x58.png"
+[15]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png "ChromeWebStore_BadgeWBorder_v2_340x96.png"
+[16]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png "ChromeWebStore_BadgeWBorder_v2_496x150.png"
+[17]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/YK7JoBOelVIK05uwEAEE.ai "ChromeWebStore_BadgeWBorder.ai"
 [19]: https://services.google.com/fb/forms/permissionsbrand/
 [20]: https://developers.google.com/youtube/branding
 [21]: https://checkout.google.com/seller/checkout_buttons.html
