@@ -4,6 +4,7 @@ const {parallel, watch} = require('gulp');
 const sass = require('./gulp-tasks/sass.js');
 const images = require('./gulp-tasks/images.js');
 const fonts = require('./gulp-tasks/fonts.js');
+const misc = require('./gulp-tasks/misc.js');
 
 // Set each directory and contents that we want to watch and
 // assign the relevant task. `ignoreInitial` set to true will
@@ -13,10 +14,11 @@ const watcher = () => {
   watch('./site/_scss/**/*.scss', {ignoreInitial: true}, sass);
   watch('./site/_images/**/*', {ignoreInitial: true}, images);
   watch('./site/_fonts/**/*', {ignoreInitial: true}, fonts);
+  watch('./site/_misc/**/*', {ignoreInitial: true}, misc);
 };
 
 // The default (if someone just runs `gulp`) is to run each task in parrallel
-exports.default = parallel(sass, images, fonts);
+exports.default = parallel(sass, images, fonts, misc);
 
 // This is our watcher task that instructs gulp to watch directories and
 // act accordingly
