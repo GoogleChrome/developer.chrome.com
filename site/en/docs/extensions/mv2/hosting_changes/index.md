@@ -6,6 +6,8 @@ updated: 2018-06-12
 description: Details about the hosting changes for Chrome Extensions that started in version 33 of Chrome.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 As a follow-up to our blog post on [protecting Windows users from malicious extensions][1], we’re
 enforcing the following changes starting in Chrome 33 Beta and stable channels for Windows:
 

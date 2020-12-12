@@ -8,6 +8,8 @@ description: >
   which is a prerequisite for using manifest version 3.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 Background pages have been a fundamental component of the Chrome Extension platform since its
 introduction. To put it simply, background pages provide extension authors with an environment that
 lives independent of any other window or tab. This allows extensions to observe and take action in

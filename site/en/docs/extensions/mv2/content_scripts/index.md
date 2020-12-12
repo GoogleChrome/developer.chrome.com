@@ -6,6 +6,8 @@ updated: 2019-03-11
 description: An explanation of content scripts and how to use them in your Chrome Extension.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 Content scripts are files that run in the context of web pages. By using the standard [Document
 Object Model][1] (DOM), they are able to read details of the web pages the browser visits, make
 changes to them and pass information to their parent extension.

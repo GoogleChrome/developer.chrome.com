@@ -6,6 +6,8 @@ updated: 2018-08-23
 description: Frequently asked questions about the deprecation of inline installations for Chrome Extensions.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 As of 06/12/2018, inline installation is deprecated. For more information, read our [Chromium Blog
 post][1].
 

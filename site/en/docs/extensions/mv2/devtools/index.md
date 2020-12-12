@@ -6,6 +6,8 @@ updated: 2020-08-25
 description: How to create a Chrome Extension that adds functionality to Chrome DevTools.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 ## Overview {: #overview }
 
 A DevTools extension adds functionality to the Chrome DevTools. It can add new UI panels and

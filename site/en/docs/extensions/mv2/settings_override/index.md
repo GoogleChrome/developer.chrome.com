@@ -6,6 +6,8 @@ updated: 2016-11-07
 description: How to override Chrome settings from a Chrome Extension.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 Settings overrides are a way for extensions to override selected Chrome settings. The API is
 available on Windows in all current versions of Chrome and is available on Mac in Chrome 56 and
 later.

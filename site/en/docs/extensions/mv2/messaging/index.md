@@ -6,6 +6,8 @@ updated: 2019-07-17
 description: How to pass messages between extensions and content scripts.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 Since content scripts run in the context of a web page and not the extension, they often need some
 way of communicating with the rest of the extension. For example, an RSS reader extension might use
 content scripts to detect the presence of an RSS feed on a page, then notify the background page in

@@ -6,6 +6,8 @@ updated: 2017-04-27
 description: How to show notifications to your Chrome Extension users.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 <div class="aside aside--note"><strong>Platform difference:</strong> In Chrome version 59, notifications appear differently for Mac OS X users. Instead of Chrome's own notifications, users see native Mac OS X notifications. <a href="https://developers.google.com/web/updates/2017/04/native-mac-os-notifications">Learn more in this article</a>.</div>
 
 The [rich notifications API][2] lets you create notifications using templates and show these

@@ -7,6 +7,8 @@ description: >
     Step-by-step instructions on how to track usage of your Extension with Google Analytics.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 This tutorial demonstrates using Google Analytics to track the usage of your extension. If you are
 developing a platform app, see [Analytics for Apps][1] since apps have different restrictions from
 extensions.

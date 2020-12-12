@@ -6,6 +6,8 @@ updated: 2020-07-21
 description: Step-by-step instructions on how to debug Chrome Extensions.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 Extensions are able to leverage the same debugging benefits [Chrome DevTools][1] provides for web
 pages, but they carry unique behavior properties. Becoming a master extension debugger requires an
 understanding of these behaviors, how extension components work with each other, and where to corner

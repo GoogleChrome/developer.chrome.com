@@ -8,6 +8,8 @@ description: >
   of the manifest specification a Chrome Extension targets.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 Extensions, themes, and applications are simply bundles of resources, wrapped up with a
 [`manifest.json`][1] file that describes the package's contents. The format of this file is
 generally stable, but occasionally breaking changes must be made to address important issues.

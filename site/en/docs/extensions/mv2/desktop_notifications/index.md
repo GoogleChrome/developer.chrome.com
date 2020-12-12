@@ -6,6 +6,8 @@ updated: 2017-01-05
 description: How to implement notifications in your Chrome Extension.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 !!!.aside.aside-warning
 **Warning:** `webKitNotifications.createHTMLNotification()` in the [web notifications API][1] has
 been deprecated. The new [web notifications API][2] only allows text. [Chrome notifications API][3]

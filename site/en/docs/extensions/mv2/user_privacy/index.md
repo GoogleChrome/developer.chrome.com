@@ -6,6 +6,8 @@ updated: 2018-04-26
 description: Guidlines for ensuring that your Chrome Extension protects user privacy.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 Users will not install an extension if it compromises their privacy or asks for more permissions
 that it seems to need. Permission requests should make sense to users and be limited to the critical
 information necessary to implement the extension. Extensions that collect or transmit any user data

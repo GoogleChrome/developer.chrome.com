@@ -6,6 +6,8 @@ updated: 2020-05-07
 description: Guidelines on how to build a high-performance Chrome Extension.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 Extensions are an addition to the browser, designed to provide supplementary and customized
 functionality. An extension that slows down or impairs the browsing experience is problematic to the
 user and counter to the Chrome extension objective. In addition to general good coding habits,

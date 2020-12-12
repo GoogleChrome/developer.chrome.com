@@ -3,7 +3,7 @@ layout: 'layouts/doc-post.njk'
 
 # The page title. This appears at the top of the doc and as the page name
 # in Google Search.
-title: Welcome
+title: About Manifest V2
 
 # This appears below the title and is an optional teaser
 subhead: 'Learn about developing extensions for Chrome.'
@@ -24,6 +24,8 @@ date: 2020-11-09
 
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 These pages contain guides and reference information for developers who want to
 create extensions for the Chrome browser. If you're not sure where to begin,
 have a look at the following starting pages:
@@ -36,10 +38,6 @@ Beyond that, you might find useful entry points in these pages:
 * Learn the scope of things in the [Extension development overview](/docs/extensions/mv2/devguide/)
 * Pick something from the [samples page](/docs/extensions/???), install it, and start hacking on it.
 * Look for answers in the [Extensions FAQ page](/docs/extensions/mv2/faq/)
-
-!!!.aside	
-Manifest V3 is launching soon. If you want to start learning about MV3, see the [Introduction to Manifest V3](/docs/extensions/mv3/intro).	
-!!!
 
 In addition to the documentation here, many developers find helpful community content at:
 

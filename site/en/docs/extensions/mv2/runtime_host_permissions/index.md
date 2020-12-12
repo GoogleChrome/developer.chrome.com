@@ -8,6 +8,8 @@ description: >
   permission changes starting in Chrome 70.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 ## Summary {: #summary }
 
 ### What's changing? {: #changes }

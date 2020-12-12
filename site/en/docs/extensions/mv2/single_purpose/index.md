@@ -6,6 +6,8 @@ updated: 2017-05-09
 description: Frequently asked questions about the single purpose policy.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 To maintain the quality of the Chrome user experience, on December 19, 2013, we launched a policy
 requiring Chrome extensions to have a single purpose. In addition, starting with the May 2014
 release of Chrome, we [started requiring][1] that extensions in Chrome for Windows be hosted in the

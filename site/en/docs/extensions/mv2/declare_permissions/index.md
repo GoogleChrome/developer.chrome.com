@@ -6,6 +6,8 @@ updated: 2014-05-21
 description: An overview of the valid values for the permissions property in manifest.json.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 To use most chrome.\* APIs, your extension or app must declare its intent in the "permissions" field
 of the [manifest][1]. Each permission can be either one of a list of known strings (such as
 "geolocation") or a [match pattern][2] that gives access to one or more hosts. Permissions help to

@@ -6,6 +6,8 @@ updated: 2018-07-30
 description: How to make your Chrome Extension accessible.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 Extensions empower users to create their ideal browsing experience, tailored to an individual's
 abilities and preferences. Extensions should include accessibility components that encourage an
 inclusive user base by enabling people with visual impairments, hearing loss, limited dexterity, and

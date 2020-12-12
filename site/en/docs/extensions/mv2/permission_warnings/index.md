@@ -7,6 +7,8 @@ description: >
   How to implement permissions to protect your users and your Extension.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 An extension’s ability to access websites and most Chrome APIs is determined by its declared
 [permissions][1]. Permissions should be restricted to only what is needed for its functionality.
 Limiting permissions establishes an extension’s capabilities and reduces possible incursion to data

@@ -6,6 +6,8 @@ updated: 2018-04-29
 description: How to let users customize your Extension.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 Allow users to customise the behavior of an extension by providing an options page. A user can view
 an extension's options by right-clicking the extension icon in the toolbar then selecting options or
 by navigating to the extension management page at `chrome://extensions`, locating the desired

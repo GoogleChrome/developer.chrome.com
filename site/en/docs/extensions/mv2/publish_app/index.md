@@ -6,6 +6,8 @@ title: "Publish Your App"
 description: TODO
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 <div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and the Chrome Web Store will continue to support extensions. <a href="https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html"><strong>Read the announcement</strong></a> and learn more about <a href="https://developers.chrome.com/apps/migration"><strong>migrating your app</strong></a>.</div>
 
 # Publish Your App

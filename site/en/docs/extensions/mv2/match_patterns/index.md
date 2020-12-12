@@ -6,6 +6,8 @@ updated: 2017-10-28
 description: How host permission and content script pattern matching works, with examples.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 [Host permissions][1] and [content script][2] matching are based on a set of URLs defined by match
 patterns. A match pattern is essentially a URL that begins with a permitted scheme (`http`, `https`,
 `file`, or `ftp`, and that can contain '`*`' characters. The special pattern `<all_urls>` matches

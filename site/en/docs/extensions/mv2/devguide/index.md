@@ -6,6 +6,8 @@ updated: 2018-06-12
 description: An overview of Chrome Extension capabilities and components.
 ---
 
+{% include 'partials/mv2-legacy-page.md' %}
+
 After reading the [Getting Started][1] tutorial and [Overview][2], use this guide as an outline to
 extension components and abilities. Developers are encouraged to explore and expand extension
 functionality.
