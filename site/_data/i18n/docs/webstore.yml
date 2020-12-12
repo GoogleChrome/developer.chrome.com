@@ -7,7 +7,7 @@ identity:
 policies:
   en: 'Chrome Web Store policies'
 publish:
-  en: 'Publish on the Chrome Web Store'
+  en: 'Publish your extension'
 details:
   en: 'Item detail pages'
 develop:
