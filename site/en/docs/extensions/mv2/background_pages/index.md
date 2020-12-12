@@ -208,22 +208,22 @@ chrome.runtime.onSuspend.addListener(function() {
 });
 ```
 
-However, persisting data should be prefered over relying on [`runtime.onSuspend`][16]. It doesn't
+However, persisting data should be prefered over relying on [`runtime.onSuspend`][15]. It doesn't
 allow for as much cleanup as may be needed and will not help in case of a crash.
 
 [1]: /docs/extensions/mv2/messaging
-[2] /docs/extensions/runtime#method-getBackgroundPage
-[3]: /docs/extensions/mv2/tabs
+[2]: /docs/extensions/reference/runtime#method-getBackgroundPage
+[3]: /docs/extensions/reference/tabs
 [4]: /docs/extensions/webRequest
 [5]: /docs/extensions/mv2/background_migration
-[6] /docs/extensions/runtime#event-onInstalled
-[7]: /docs/extensions/contextMenus
-[8]: /docs/extensions/events#filtered
-[9] /docs/extensions/extensions/tabs#event-onUpdated
-[10] /docs/extensions/webNavigation#event-onCompleted
-[11]: /docs/extensions/storage
+[6]: /docs/extensions/reference/runtime#event-onInstalled
+[7]: /docs/extensions/reference/contextMenus
+[8]: /docs/extensions/reference/events#filtered
+[9]: /docs/extensions/reference/tabs#event-onUpdated
+[10]: /docs/extensions/reference/webNavigation#event-onCompleted
+[11]: /docs/extensions/reference/storage
 [12]: /docs/extensions/mv2/messaging
-[13]: /docs/extensions/runtime#property-Port-onDisconnect
-[14]: /docs/extensions/runtime#property-Port-disconnect
-[15] /docs/extensions/runtime#event-onSuspend
-[16] /docs/extensions/runtime#event-onSuspend
+[13]: /docs/extensions/reference/runtime#property-Port-onDisconnect
+[14]: /docs/extensions/reference/runtime#property-Port-disconnect
+[15]: /docs/extensions/reference/runtime#event-onSuspend
+
