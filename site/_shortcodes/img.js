@@ -1,5 +1,5 @@
-const ImgixClient = require('imgix-core-js');
 const {html, safeHtml} = require('common-tags');
+const ImgixClient = require('imgix-core-js');
 const {imgix: domain} = require('../_data/site.json');
 
 const client = new ImgixClient({domain, includeLibraryParam: false});

@@ -1,9 +1,8 @@
-const ImgixClient = require('imgix-core-js');
-const {html} = require('common-tags');
 const mime = require('browser-media-mime-type');
-const {imgix: domain} = require('../_data/site.json');
-
-const client = new ImgixClient({domain, includeLibraryParam: false});
+const {html} = require('common-tags');
+const path = require('path');
+const url = require('url');
+const {bucket, gcs} = require('../_data/site.json');
 
 /**
  *
@@ -13,8 +12,9 @@ const client = new ImgixClient({domain, includeLibraryParam: false});
 const generateSource = src => {
   let type = src.split('.').pop();
   type = mime('.' + type);
+  src = new url.URL(path.join(bucket, src), gcs).href;
   return html`
-    <source src="${client.buildURL(src)}" ${type ? `type="${type}"` : ''} />
+    <source src="${src}" ${type ? `type="${type}"` : ''} />
   `.replace(/\n/g, '');
 };
 
