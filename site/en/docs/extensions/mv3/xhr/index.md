@@ -6,8 +6,6 @@ updated: 2020-03-09
 description: How to implement cross-origin XHR in your Chrome Extension.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 Regular web pages can use the [XMLHttpRequest][1] object to send and receive data from remote
 servers, but they're limited by the [same origin policy][2]. [Content scripts][3] initiate requests
 on behalf of the web origin that the content script has been injected into and therefore content
@@ -36,14 +34,14 @@ permissions.
 
 ## Requesting cross-origin permissions {: #requesting-permission }
 
-By adding hosts or host match patterns (or both) to the [permissions][6] section of the
+By adding hosts or host match patterns (or both) to the [host_permissions][6] section of the
 [manifest][7] file, the extension can request access to remote servers outside of its origin.
 
 ```json
 {
   "name": "My extension",
   ...
-  "permissions": [
+  "host_permissions": [
     "https://www.google.com/"
   ],
   ...
@@ -68,7 +66,7 @@ Also note that access is granted both by host and by scheme. If an extension wan
 non-secure HTTP access to a given host or set of hosts, it must declare the permissions separately:
 
 ```json
-"permissions": [
+"host_permissions": [
   "http://www.google.com/",
   "https://www.google.com/"
 ]
@@ -216,7 +214,7 @@ be careful when explicitly adding either the `connect-src` or `default-src` dire
 [4]: https://en.wikipedia.org/wiki/Same_origin_policy
 [5]: https://www.chromium.org/Home/chromium-security/extension-content-script-fetches
 [6]: /docs/extensions/mv3/declare_permissions
-[7]: /docs/extensions/mv3/tabs
+[7]: /docs/extensions/mv3/manifest
 [8]: /docs/extensions/mv3/match_patterns
 [9]: https://en.wikipedia.org/wiki/Cross-site_scripting
 [10]: /docs/extensions/mv3/security#content_scripts

@@ -6,8 +6,6 @@ updated: 2018-05-16
 description: UI and design guidelines for Chrome Extensions.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 The extension user interface should be purposeful and minimal. Just like extensions themselves, the
 UI should customize or enhance the browsing experience without distracting from it.
 
@@ -476,7 +474,7 @@ Extensions][38] example gives a command to open the popup.
     "default_popup": "hello.html",
     "default_icon": "hello_extensions.png"
   },
-  "manifest_version": 2,
+  "manifest_version": 3,
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
@@ -529,46 +527,47 @@ pages.
 </html>
 ```
 
-[1]: /browserAction
+[1]: /docs/extensions/reference/browserAction
 [2]: /docs/extensions/mv3/samples#search:drink
-[3]: /browserAction#method-setBadgeText
-[4]: /browserAction#method-setBadgeBackgroundColor
-[5]: /pageAction
-[6]: /declarativeContent
-[7]: /runtime#event-onInstalled
-[8]: /background_pages
+[3]: /docs/extensions/reference/browserAction#method-setBadgeText
+[4]: /docs/extensions/reference/browserAction#method-setBadgeBackgroundColor
+[5]: /docs/extensions/reference/pageAction
+[6]: /docs/extensions/reference/declarativeContent
+[7]: /docs/extensions/reference/runtime#event-onInstalled
+[8]: /docs/extensions/mv3/background_pages
 [9]: /samples#search:page%20action%20by%20url
-[10]: /pageAction#method-show
-[11]: /pageAction#method-show
-[12]: /pageAction#method-hide
+[10]: /docs/extensions/reference/pageAction#method-show
+[11]: /docs/extensions/reference/pageAction#method-show
+[12]: /docs/extensions/reference/pageAction#method-hide
 [13]: /docs/extensions/mv3/samples#search:mappy
 [14]: #popup
-[15]: /browserAction
-[16]: /pageAction
+[15]: /docs/extensions/reference/browserAction
+[16]: /docs/extensions/reference/pageAction
 [17]: /docs/extensions/mv3/samples#search:drink
-[18]: /browserAction#method-setPopup
-[19]: /pageAction#method-setPopup
-[20]: /browserAction
-[21]: /pageAction
-[22]: /browserAction#method-setTitle
-[23]: /pageAction#method-setTitle
-[24]: /i18n
-[25]: /i18n-messages
-[26]: /omnibox
+[18]: /docs/extensions/reference/browserAction#method-setPopup
+[19]: /docs/extensions/reference/pageAction#method-setPopup
+[20]: /docs/extensions/reference/browserAction
+[21]: /docs/extensions/reference/pageAction
+[22]: /docs/extensions/reference/browserAction#method-setTitle
+[23]: /docs/extensions/reference/pageAction#method-setTitle
+[24]: /docs/extensions/reference/i18n
+[25]: /docs/extensions/mv3/i18n-messages
+[26]: /docs/extensions/reference/omnibox
 [27]: /docs/extensions/mv3/samples#search:omnibox%20new
-[28]: /omnibox#event-onInputEntered
-[29]: /contextMenus
-[30]: /contextMenus#method-create
-[31]: /background_pages
-[32]: /runtime#event-onInstalled
+[28]: /docs/extensions/reference/omnibox#event-onInputEntered
+[29]: /docs/extensions/reference/contextMenus
+[30]: /docs/extensions/reference/contextMenus#method-create
+[31]: /docs/extensions/mv3/migrating_to_service_workers
+[32]: /docs/extensions/reference/runtime#event-onInstalled
 [33]: /docs/extensions/examples/api/contextMenus/global_context_search/locales.js
-[34]: /commands
+[34]: /docs/extensions/reference/commands
 [35]: /docs/extensions/mv3/samples#search:tab%20flipper
-[36]: /commands#event-onCommand
-[37]: /background_pages
+[36]: /docs/extensions/reference/commands#event-onCommand
+[37]: /docs/extensions/mv3/migrating_to_service_workers
 [38]: /docs/extensions
-[39]: /user_interface#browser
-[40]: /background_pages
-[41]: /user_interface#page
-[42]: /override
+[39]: /docs/extensions/mv3/user_interface#browser
+[40]: /docs/extensions/mv3/migrating_to_service_workers
+[41]: #page
+[42]: /docs/extensions/mv3/override
 [43]: #popup
+

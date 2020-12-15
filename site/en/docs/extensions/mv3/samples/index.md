@@ -6,6 +6,4 @@ title: "Samples"
 #description: TODO
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 Samples for Chrome Extensions are available [on GitHub](https://github.com/GoogleChrome/chrome-extensions-samples).

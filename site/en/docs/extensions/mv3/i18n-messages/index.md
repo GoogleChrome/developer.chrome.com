@@ -6,8 +6,6 @@ updated: 2014-05-22
 description: Reference documentation about the format of the messages.json file for Chrome Extensions.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 Each internationalized extension or app has at least one file named `messages.json` that provides
 locale-specific strings. This page describes the format of `messages.json` files. For information on
 how to internationalize and localize, see the [Internationalization][1] page.
@@ -75,7 +73,7 @@ Here's a `messages.json` file that defines three messages named "prompt_for_name
 
 This section describes each field that can appear in a `messages.json` file. For details on how the
 messages file is used — for example, what happens when a locale doesn't define all the messages —
-see [Internationalization][6].
+see [Internationalization][1].
 
 ### name {: #name }
 
@@ -107,7 +105,7 @@ Here are three examples of names, taken from the [Example][8] section:
 }
 ```
 
-For more examples of using names, see the [Internationalization][9] page.
+For more examples of using names, see the [Internationalization][1] page.
 
 ### message {: #message }
 
@@ -201,20 +199,18 @@ item because its value is obvious from the "content" field.
 }
 ```
 
-[1]: /docs/extensions/i18n
+[1]: /docs/extensions/reference/i18n
 [2]: #name
 [3]: #message
 [4]: #description
 [5]: #placeholders
-[6]: /docs/extensions/i18n
-[7]: /docs/extensions/i18n#overview-predefined
+[7]: /docs/extensions/reference/i18n#overview-predefined
 [8]: #example
-[9]: /docs/extensions/i18n
 [10]: #placeholders
 [11]: #example
-[12]: /docs/extensions/i18n#method-getMessage
+[12]: /docs/extensions/reference/i18n#method-getMessage
 [13]: #placeholders
 [14]: #example
 [15]: #name
-[16]: /docs/extensions/i18n#method-getMessage
+[16]: /docs/extensions/reference/i18n#method-getMessage
 [17]: #example

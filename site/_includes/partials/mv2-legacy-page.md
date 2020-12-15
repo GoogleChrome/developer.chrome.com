@@ -1,6 +1,5 @@
 {% if process.env.HAS_MV3 %}
 
-!!!
 !!!.aside.aside--warning
 The page you're viewing describes extensions using Manifest V2. Now that
 [Manifest V3 has launched](/docs/extensions/mv3/intro), we strongly recommend

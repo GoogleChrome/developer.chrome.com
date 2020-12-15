@@ -6,8 +6,6 @@ updated: 2018-07-30
 description: How to make your Chrome Extension accessible.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 Extensions empower users to create their ideal browsing experience, tailored to an individual's
 abilities and preferences. Extensions should include accessibility components that encourage an
 inclusive user base by enabling people with visual impairments, hearing loss, limited dexterity, and
@@ -27,11 +25,9 @@ any developer can take to make an extension as accessible as possible.
 If users can’t access the user interface controls, they are unable to use an extension. The easiest
 way to create an accessible UI is to use a standard HTML control.
 
-!!!.aside.aside--note
-
-Note: If an extension requires a custom control, it is much easier to make a custom control
+!!!.aside
+If an extension requires a custom control, it is much easier to make a custom control
 accessible from the beginning than to go back an add accessibility support later.
-
 !!!
 
 ### Standard controls {: #htmlcontrols }

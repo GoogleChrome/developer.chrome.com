@@ -5,18 +5,16 @@ date: 2020-07-29
 updated: 2020-10-06
 description: >
   How to migrate your Chrome Extension from background pages to service workers,
-  which is a prerequisite for using manifest version 3.
+  which is a prerequisite for using Manifest V3.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
-Background pages have been a fundamental component of the Chrome Extension platform since its
+*Background pages* have been a fundamental component of the Chrome Extension platform since its
 introduction. To put it simply, background pages provide extension authors with an environment that
 lives independent of any other window or tab. This allows extensions to observe and take action in
 response to events.
 
-In [manifest version 3][1], the Chrome extension platform will move from background pages to service
-workers. As stated in [Service Workers: an Introduction][2], a "service worker is a script that your
+In Manifest V3, the Chrome extension platform moves from background pages to *service
+workers*. As stated in [Service Workers: an Introduction][2], a "service worker is a script that your
 browser runs in the background, separate from a web page, opening the door to features that don't
 need a web page or user interaction." This is the technology that enables native-like experiences
 such as push notifications, rich offline support, background sync, and "Add to Home Screen" on the
@@ -37,8 +35,7 @@ sections provide recommendations for writing code in an ephemeral, evented execu
 
 !!!.aside.aside--note
 
-Note: Several of these concepts are covered in the Migrate to Event Driven Background Scripts
-article.
+Several of these concepts are covered in [Migrate to Event Driven Background Scripts][eventbgscripts].
 
 !!!
 
@@ -79,11 +76,9 @@ chrome.storage.local.get(['badgeText'], ({badgeText}) => {
 chrome.action.onClicked.addListener(handleActionClick);
 ```
 
-!!!.aside.aside--note
-
-Note: In manifest version 3 the `chrome.browserAction` and `chrome.pageAction` APIs are consolidated
+!!!.aside
+In Manifest V3 the `chrome.browserAction` and `chrome.pageAction` APIs are consolidated
 into a single chrome.action API.
-
 !!!
 
 ### Persisting state with storage APIs {: #state }
@@ -131,11 +126,9 @@ chrome.action.onClicked.addListener(tab => {
 });
 ```
 
-!!!.aside.aside--note
-
-Note: In manifest version 3 the chrome.browserAction and chrome.pageAction APIs are consolidated
+!!!.aside
+In Manifest V3 the chrome.browserAction and chrome.pageAction APIs are consolidated
 into a single chrome.action API.
-
 !!!
 
 ### Moving from timers to alarms {: #alarms }
@@ -197,7 +190,7 @@ still provides a full (temporary) window environment.
 ### Audio/video playback and capture {: #audio_vidio }
 
 It's not currently possible to play or capture media directly in a service worker. In order for a
-manifest version 3 extension to leverage the web's media playback and capture capabilities, the
+Manifest V3 extension to leverage the web's media playback and capture capabilities, the
 extension will need to create a window environment using either [chrome.windows.create()][14] or
 [chrome.tabs.create()][15]. Once created, the extension can use [message passing][16] to coordinate
 between the playback document and service worker.
@@ -231,10 +224,9 @@ function makeCanvas(width, height) {
 For additional guidance on working with OffscreenCanvas, see [OffscreenCanvas — Speed up Your Canvas
 Operations with a Web Worker][18].
 
-[1]: /migrating_to_manifest_v3
 [2]: https://developers.google.com/web/fundamentals/primers/service-workers/
-[3]: /docs/extensions/events
-[4]: /docs/extensions/workers
+[3]: #events
+[4]: #workers
 [5]: https://developers.google.com/web/ilt/pwa/introduction-to-service-worker
 [6]: https://developer.mozilla.org/en-US/docs/Web/API/Worker
 [7]: https://developer.mozilla.org/en-US/docs/Web/API/Window
@@ -242,10 +234,11 @@ Operations with a Web Worker][18].
 [9]: https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
 [10]: https://github.com/jsdom/jsdom
 [11]: https://github.com/developit/undom
-[12]: /windows#method-create
-[13]: /tabs#method-create
-[14]: /windows#method-create
-[15]: /tabs#method-create
-[16]: /messaging
+[12]: /docs/extensions/reference/windows#method-create
+[13]: /docs/extensions/reference/tabs#method-create
+[14]: /docs/extensions/reference/windows#method-create
+[15]: /docs/extensions/reference/tabs#method-create
+[16]: /docs/extensions/reference/messaging
 [17]: https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface
 [18]: https://developers.google.com/web/updates/2018/08/offscreen-canvas
+[eventbgscripts]: /docs/extensions/mv3/background_migration/

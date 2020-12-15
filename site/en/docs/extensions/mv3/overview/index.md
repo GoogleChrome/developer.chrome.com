@@ -6,8 +6,6 @@ updated: 2018-02-25
 description: An overview of the purpose of Chrome Extensions and how they're developed.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 Extensions are small software programs that customize the browsing experience. They enable users to
 tailor Chrome functionality and behavior to individual needs or preferences. They are built on web
 technologies such as HTML, JavaScript, and CSS.
@@ -40,7 +38,7 @@ Next, add a file called `manifest.json` and include the following code:
   "name": "Hello Extensions",
   "description" : "Base Level Extension",
   "version": "1.0",
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
@@ -53,7 +51,7 @@ For this quick start, the extension has a popup file and icon declared under the
   "name": "Hello Extensions",
   "description" : "Base Level Extension",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "browser_action": {
     "default_popup": "hello.html",
     "default_icon": "hello_extensions.png"
@@ -80,7 +78,7 @@ necessary:
   "name": "Hello Extensions",
   "description" : "Base Level Extension",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "browser_action": {
     "default_popup": "hello.html",
     "default_icon": "hello_extensions.png"

@@ -6,8 +6,6 @@ updated: 2018-06-07
 description: A high-level explanation of the software architecture of Chrome Extensions.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 Extensions are zipped bundles of HTML, CSS, JavaScript, images, and other files used in the web
 platform, that customize the Google Chrome browsing experience. Extensions are built using web
 technology and can use the same APIs the browser provides to the open web.

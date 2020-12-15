@@ -63,7 +63,7 @@ For a fuller description of these changes, see the
 ## Updating the manifest.json file  {: #updating-manifest-dot-json }
 
 To use the features of MV3, you need to first update your [manifest
-file](/docs/extensions/mv2/manifest). Naturally, you’ll change the manifest
+file](/docs/extensions/mv3/manifest). Naturally, you’ll change the manifest
 version to “3”, but there are a number of other things you need to change in
 the manifest file: host permissions, content security policy, action
 declarations, and web-accessible resources.
@@ -163,7 +163,7 @@ instance, a page in your extension is
 !!!
 
 **`sandbox`**: This policy covers any [sandboxed extension
-pages](/docs/extensions/mv2/manifest/sandbox) that your extension uses.
+pages](/docs/extensions/mv3/manifest/sandbox) that your extension uses.
 
 In addition, MV3 disallows certain CSP modifications for `extension_pages` that
 were permitted in MV2. The `script-src,` `object-src`, and `worker-src`
@@ -300,7 +300,7 @@ resubmitting to the Chrome Web Store.
 ### Executing arbitrary strings  {: #executing-arbitrary-strings }
 
 The `code` property from executeScript’s
-[details](/docs/extensions/mv2/tabs#method-executeScript) object is no longer
+[details](/docs/extensions/reference/tabs#method-executeScript) object is no longer
 available in MV3.
 
 Instead of executing a string, you should move your code into a static
@@ -366,7 +366,7 @@ foundational change that affects most extensions.
 are event based, and like event pages they do not persist between invocations.
 This change generally requires some redesign, with a number of factors to
 consider: see [Migrating from Background Pages to Service
-Workers](/docs/extensions/mv2/migrating_to_service_workers) for additional
+Workers](/docs/extensions/mv3/migrating_to_service_workers) for additional
 details.
 
 !!!.aside.aside--note

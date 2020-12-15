@@ -6,19 +6,20 @@ updated: 2018-04-26
 description: Guidlines for ensuring that your Chrome Extension protects user privacy.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 Users will not install an extension if it compromises their privacy or asks for more permissions
 that it seems to need. Permission requests should make sense to users and be limited to the critical
 information necessary to implement the extension. Extensions that collect or transmit any user data
 must comply with the [user data privacy policies][1] .
 
 Protect and respect extension users by including these precautions to keep their identity safe.
+
+!!!.aside
 Remember: the less data an extension can access, the less data it can accidentally leak.
+!!!
 
 ## Reduce required permissions {: #required_permissions }
 
-The APIs an extension can access is specified in the permissions field of the [manifest][2]. The
+The APIs that an extension can access are specified in the `permissions` field of the [manifest][2]. The
 more permissions granted, the more avenues an attacker has to intercept information. Only the APIs
 an extension depends on should be listed, and consideration should be given to less invasive
 options. The less permissions an extension requests, the less permission warnings will be shown to a
@@ -108,8 +109,8 @@ a registered domain. Always use HTTPS to connect and avoid keeping sensitive use
 side of an extension as extension storage is not encrypted.
 
 [1]: /docs/webstore/program_policies#userdata
-[2]: /manifest
+[2]: /docs/extensions/mv3/manifest
 [3]: #optional_permissions
-[4]: /activeTab
-[5]: /permissions#manifest
+[4]: /docs/extensions/reference/activeTab
+[5]: /docs/extensions/reference/permissions#manifest
 [6]: /webstore/user_data

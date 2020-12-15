@@ -6,13 +6,23 @@ updated: 2014-05-21
 description: An overview of the valid values for the permissions property in manifest.json.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
+To use most chrome.\* APIs, your extension or app must declare its intent in the permissions fields
+of the [manifest][1]. Extensions can request three categories of permissions, specified using the
+respective keys in the manifest:
 
-To use most chrome.\* APIs, your extension or app must declare its intent in the "permissions" field
-of the [manifest][1]. Each permission can be either one of a list of known strings (such as
-"geolocation") or a [match pattern][2] that gives access to one or more hosts. Permissions help to
-limit damage if your extension or app is compromised by malware. Some permissions are also displayed
-to users before installation, as detailed in [Permission Warnings][3].
+* **`permissions`** contain items from a list of known strings (such as "geolocation")
+* **`optional_permissions`** are like regular `permissions`, but are granted by the extension's user at runtime, rather than in advance
+* **`host_permissions`** contain one or more [match patterns][2] that give access to one or more hosts
+
+Permissions help to limit damage if your extension or app is compromised by
+malware. Some permissions are displayed to users for their consent before
+installation or at runtime as needed, as detailed in [Permission Warnings][3].
+
+!!!.aside
+You should use optional permissions wherever the functionality of your extension
+permits, to provide users with informed control over access to resources and data.
+See the [platform vision][vision-optperms] to better understand this recommendation.
+!!!
 
 If an API requires you to declare a permission in the manifest, then its documentation tells you how
 to do so. For example, the [Storage][4] page shows you how to declare the "storage" permission.
@@ -23,9 +33,15 @@ Here's an example of the permissions part of a manifest file:
 "permissions": [
   "tabs",
   "bookmarks",
-  "http://www.blogger.com/",
-  "http://*.google.com/",
   "unlimitedStorage"
+],
+"optional_permissions": [
+  "unlimitedStorage"
+],
+],
+"host_permissions": [
+  "http://www.blogger.com/",
+  "http://*.google.com/"
 ],
 ```
 
@@ -110,3 +126,4 @@ The following table lists the currently available permissions:
 [75]: /docs/extensions/webNavigation
 [76]: /docs/extensions/webRequest
 [77]: /docs/extensions/webRequest
+[vision-optperms]: /docs/extensions/mv3/intro/platform-vision/#improved-user-visibility-and-control

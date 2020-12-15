@@ -6,8 +6,6 @@ updated: 2020-11-20
 description: Frequently asked questions about Chrome Extensions.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 If you don't find an answer to your question here, try the [Chrome Web Store FAQ][1], the
 [\[google-chrome-extension\] tag on Stack Overflow][2], the [chromium-extensions group][3], or the
 [store help][4].
@@ -129,9 +127,10 @@ directly. APIs that provide data in JSON format are particularly easy to use.
 
 ### Can extensions encode/decode JSON data? {: #faq-dev-07 }
 
-Yes, because V8 (Chrome's JavaScript engine) supports JSON.stringify and JSON.parse natively, you
-may use these functions in your extensions [as described here][36] without including any additional
-JSON libraries in your code.
+Yes, modern JavaScript engines like Chrome's V8 have built-in support for
+[JSON.stringify][stringify] and [JSON.parse][parse] so you can use these
+functions in your extensions without including JSON libraries in
+your code.
 
 ### Can extensions store data locally? {: #faq-dev-08 }
 
@@ -152,7 +151,7 @@ Yes, your extension may add buttons to the Chrome browser's user interface. See 
 actions][40] and [page actions][41] for more information.
 
 An extension may also create popup notifications, which exist outside of the browser window. See the
-[desktop notifications][42] documentation for more details.
+[Rich notifications][42] documentation for more details.
 
 ### Can extensions listen to clicks on Chrome tabs and navigation buttons? {: #faq-interact-chrome }
 
@@ -350,20 +349,20 @@ The steps you should follow to ensure this are:
 [37]: http://dev.w3.org/html5/webstorage/
 [38]: http://dev.w3.org/html5/webdatabase/
 [39]: http://unitedheroes.net/OAuthSimple/js/OAuthSimple.js
-[40]: /docs/extensions/browserAction
-[41]: /docs/extensions/pageAction
-[42]: /docs/extensions/mv3/desktop_notifications
-[43]: /docs/extensions/api_index
+[40]: /docs/extensions/reference/browserAction
+[41]: /docs/extensions/reference/pageAction
+[42]: /docs/extensions/mv3/richNotifications
+[43]: /docs/extensions/reference
 [44]: /docs/extensions/mv3/messaging#external
 [45]: http://www.google.com/analytics/
 [46]: /docs/extensions/mv3/tut_analytics
 [47]: /docs/extensions/mv3/override
-[48]: /docs/extensions/runtime#event-onInstalled
+[48]: /docs/extensions/reference/runtime#event-onInstalled
 [49]: #faq-dev-05
 [50]: /docs/extensions/mv3/options
 [51]: /docs/extensions/mv3/tut_debugging
-[52]: /docs/extensions/management
-[53]: /docs/extensions/runtime#event-onInstalled
+[52]: /docs/extensions/reference/management
+[53]: /docs/extensions/reference/runtime#event-onInstalled
 [54]: #faq-lifecycle-events
 [55]: http://crbug.com
 [56]:
@@ -375,3 +374,5 @@ The steps you should follow to ensure this are:
   https://bugs.chromium.org/p/chromium/issues/list?can=2&q=component%3DPlatform>Extensions+Type%3DFeature+shortcuts
 [61]: http://crbug.com/new
 [62]: http://groups.google.com/a/chromium.org/group/chromium-extensions/topics
+[stringify]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+[parse]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse

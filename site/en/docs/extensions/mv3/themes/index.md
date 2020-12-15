@@ -6,8 +6,6 @@ updated: 2018-09-18
 description: Guidelines on how to create a theme.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 A _theme_ is a special kind of extension that changes the way the browser looks. Themes are
 [packaged][1] like regular extensions, but they don't contain JavaScript or HTML code.
 

@@ -6,8 +6,6 @@ updated: 2017-05-09
 description: Frequently asked questions about the single purpose policy.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 To maintain the quality of the Chrome user experience, on December 19, 2013, we launched a policy
 requiring Chrome extensions to have a single purpose. In addition, starting with the May 2014
 release of Chrome, we [started requiring][1] that extensions in Chrome for Windows be hosted in the
@@ -201,7 +199,7 @@ extension was created after the policy was announced, it needs to be compliant n
 temporarily unpublish it and contact us at [chromewebstore-policy@google.com][14] with your
 extension ID if you’d like feedback. We’ll try to respond within a week.
 
-## 18.) Chrome version 49 (released March 2016) updated the browser UI and now includes a browser or page action button of my extension in the upper-right corner of the toolbar. If my extension’s single purpose is to change the new tab page, how can I comply with the Single Purpose Policy with these new browser changes? {: #eighteen }
+## 18.) If my extension’s single purpose is to change the new tab page, can I use the browser/page action button? {: #eighteen }
 
 The addition of a page or browser action button under the new Chrome UI (Chrome 49 and later), will
 not trigger a single purpose policy violation if the button only serves as a shortcut to the

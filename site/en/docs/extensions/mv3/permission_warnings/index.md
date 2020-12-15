@@ -7,8 +7,6 @@ description: >
   How to implement permissions to protect your users and your Extension.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 An extension’s ability to access websites and most Chrome APIs is determined by its declared
 [permissions][1]. Permissions should be restricted to only what is needed for its functionality.
 Limiting permissions establishes an extension’s capabilities and reduces possible incursion to data
@@ -212,55 +210,55 @@ This can be avoided by making the new feature optional and adding new permission
 
 [1]: /docs/extensions/mv3/declare_permissions
 [2]: /docs/extensions/mv3/match_patterns
-[3]: /permissions#manifest
+[3]: /docs/extensions/reference/permissions#step-2-declare-optional-permissions-in-the-manifest
 [4]: #optional_events
 [5]: #permissions_with_warnings
 [6]: /docs/extensions/mv3/samples#search:optional
-[7]: /docs/extensions/storage
-[8]: /docs/extensions/topSites
-[9]: /docs/extensions/tabs
+[7]: /docs/extensions/reference/storage
+[8]: /docs/extensions/reference/topSites
+[9]: /docs/extensions/reference/tabs
 [10]: #p_activeTab_gestures
-[11]: /docs/extensions/tabs#method-executeScript
-[12]: /docs/extensions/tabs#method-insertCSS
-[13]: /docs/extensions/tabs#type-Tab
-[14]: /docs/extensions/webRequest
-[15]: /docs/extensions/browserAction
-[16]: /docs/extensions/pageAction
-[17]: /docs/extensions/contextMenus
+[11]: /docs/extensions/reference/tabs#method-executeScript
+[12]: /docs/extensions/reference/tabs#method-insertCSS
+[13]: /docs/extensions/reference/tabs#type-Tab
+[14]: /docs/extensions/reference/webRequest
+[15]: /docs/extensions/reference/browserAction
+[16]: /docs/extensions/reference/pageAction
+[17]: /docs/extensions/reference/contextMenus
 [18]: /docs/extensions/reference/commands
 [19]: /docs/extensions/reference/omnibox
-[20]: /docs/extensions/extension#method-isAllowedIncognitoAccess
-[21]: /docs/extensions/extension#method-isAllowedFileSchemeAccess
-[22]: /docs/extensions/tabs
-[23]: /docs/extensions/tabs#type-Tab
+[20]: /docs/extensions/reference/extension#method-isAllowedIncognitoAccess
+[21]: /docs/extensions/reference/extension#method-isAllowedFileSchemeAccess
+[22]: /docs/extensions/reference/tabs
+[23]: /docs/extensions/reference/tabs#type-Tab
 [24]: #optional_events
 [25]: #update_permissions
-[26]: /docs/extensions/tabs
+[26]: /docs/extensions/reference/tabs
 [27]: #view_warnings_instructions
 [28]: #activeTab_permission
 [29]: #activeTab_permission
-[30]: /docs/extensions/bookmarks
-[31]: /docs/extensions/contentSettings
-[32]: /docs/extensions/debugger
-[33]: /docs/extensions/declarativeNetRequest
-[34]: /docs/extensions/desktopCapture
-[35]: /docs/extensions/downloads
+[30]: /docs/extensions/reference/bookmarks
+[31]: /docs/extensions/reference/contentSettings
+[32]: /docs/extensions/reference/debugger
+[33]: /docs/extensions/reference/declarativeNetRequest
+[34]: /docs/extensions/reference/desktopCapture
+[35]: /docs/extensions/reference/downloads
 [36]: http://dev.w3.org/geo/api/spec-source.html
-[37]: /docs/extensions/history
+[37]: /docs/extensions/reference/history
 [38]: /docs/extensions/management
 [39]: /docs/extensions/mv3/messaging#native-messaging
-[40]: /docs/extensions/notifications
-[41]: /docs/extensions/pageCapture
-[42]: /docs/extensions/privacy
-[43]: /docs/extensions/proxy
-[44]: /docs/extensions/system.storage
-[45]: /docs/extensions/tabCapture
-[46]: /docs/extensions/tabs#type-Tab
-[47]: /docs/extensions/tabs
-[48]: /docs/extensions/windows
-[49]: /docs/extensions/topSites
+[40]: /docs/extensions/reference/notifications
+[41]: /docs/extensions/reference/pageCapture
+[42]: /docs/extensions/reference/privacy
+[43]: /docs/extensions/reference/proxy
+[44]: /docs/extensions/reference/system.storage
+[45]: /docs/extensions/reference/tabCapture
+[46]: /docs/extensions/reference/tabs#type-Tab
+[47]: /docs/extensions/reference/tabs
+[48]: /docs/extensions/reference/windows
+[49]: /docs/extensions/reference/topSites
 [50]: /docs/extensions/reference/ttsEngine
 [51]: /docs/extensions/webNavigation
-[52]: /docs/extensions/tabs
-[53]: /docs/extensions/permissions#manifest
-[54]: /docs/extensions/manifest
+[52]: /docs/extensions/reference/tabs
+[53]: /docs/extensions/reference/permissions#step-2-declare-optional-permissions-in-the-manifest
+[54]: /docs/extensions/reference/manifest

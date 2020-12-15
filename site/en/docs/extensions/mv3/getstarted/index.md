@@ -6,8 +6,6 @@ updated: 2020-11-18
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 Extensions are made of different, but cohesive, components. Components can include [background
 scripts][1], [content scripts][2], an [options page][3], [UI elements][4] and various logic files.
 Extension components are created with web development technologies: HTML, CSS, and JavaScript. An
@@ -31,7 +29,7 @@ following code, or download the file [here][8].
   "name": "Getting Started Example",
   "version": "1.0",
   "description": "Build an Extension!",
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
@@ -69,7 +67,7 @@ that file should behave.
     "scripts": ["background.js"],
     "persistent": false
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
@@ -102,7 +100,7 @@ the manifest for the extension to use them.
     "scripts": ["background.js"],
     "persistent": false
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
@@ -154,7 +152,7 @@ Like the background script, this file needs to be designated as a popup in the m
   "page_action": {
     "default_popup": "popup.html"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
@@ -181,7 +179,7 @@ the manifest so the extension knows how to use the images.
       "128": "images/get_started128.png"
     }
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
@@ -213,7 +211,7 @@ favicon. These images are designated in the manifest under [`icons`][19].
     "48": "images/get_started48.png",
     "128": "images/get_started128.png"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
@@ -300,11 +298,17 @@ let changeColor = document.getElementById('changeColor');
 changeColor.onclick = function(element) {
   let color = element.target.value;
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.executeScript(
-        tabs[0].id,
-        {code: 'document.body.style.backgroundColor = "' + color + '";'});
+    chrome.scripting.executeScript({
+      function: setTheColor
+    });
   });
 };
+
+function setTheColor() {
+  document.body.style.backgroundColor = "' + color + '";
+}
+
+
 ```
 
 The updated code adds an onclick event the button, which triggers a [programatically injected
@@ -369,7 +373,7 @@ Then register the options page in the manifest,
   ...
   "options_page": "options.html",
   ...
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
@@ -425,36 +429,36 @@ What's next?
 - The [developer's guide][33] has dozens of additional links to pieces of documentation relevant to
   advanced extension creation.
 
-[1]: /background_pages
-[2]: /content_scripts
-[3]: /options
-[4]: /user_interface
+[1]: /docs/extensions/mv3/background_pages
+[2]: /docs/extensions/mv3/content_scripts
+[3]: /docs/extensions/mv3/options
+[4]: /docs/extensions/mv3/user_interface
 [5]: /docs/
 [6]: examples/tutorials/get_started_complete.zip
-[7]: /docs/extensions/extensions/manifest
+[7]: /docs/extensions/mv3/manifest
 [8]: examples/tutorials/get_started/manifest.json
-[9]: /background_pages
+[9]: /docs/extensions/mv3/background_pages
 [10]: examples/tutorials/get_started/background.js
-[11]: /runtime#event-onInstalled
-[12]: /storage
-[13]: /storage
-[14]: /user_interface
-[15]: /user_interface#popup
+[11]: /docs/extensions/reference/runtime#event-onInstalled
+[12]: /docs/extensions/reference/storage
+[13]: /docs/extensions/reference/storage
+[14]: /docs/extensions/mv3/user_interface
+[15]: /docs/extensions/mv3/user_interface#popup
 [16]: examples/tutorials/get_started/popup.html
-[17]: /pageAction
+[17]: /docs/extensions/reference/pageAction
 [18]: examples/tutorials/get_started/images.zip
-[19]: /user_interface#icons
-[20]: /declarativeContent
-[21]: /declarativeContent
+[19]: /docs/extensions/mv3/user_interface#icons
+[20]: /docs/extensions/reference/declarativeContent
+[21]: /docs/extensions/reference/declarativeContent
 [22]: examples/tutorials/get_started/popup.js
 [23]: https://developer.chrome.com/
-[24]: /content_scripts#pi
-[25]: /docs/extensions/activeTab
-[26]: /tabs
-[27]: /tabs#method-executeScript
+[24]: /docs/extensions/mv3/content_scripts#pi
+[25]: /docs/extensions/reference/activeTab
+[26]: /docs/extensions/reference/tabs
+[27]: /docs/extensions/reference/tabs#method-executeScript
 [28]: examples/tutorials/get_started/options.html
 [29]: examples/tutorials/get_started/options.js
-[30]: /overview
-[31]: /tut_debugging
-[32]: /reference
-[33]: /devguide
+[30]: /docs/extensions/mv3/overview
+[31]: /docs/extensions/mv3/tut_debugging
+[32]: /docs//extensions/reference
+[33]: /docs/extensions/mv3/devguide

@@ -6,8 +6,6 @@ updated: 2020-07-21
 description: Step-by-step instructions on how to debug Chrome Extensions.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 Extensions are able to leverage the same debugging benefits [Chrome DevTools][1] provides for web
 pages, but they carry unique behavior properties. Becoming a master extension debugger requires an
 understanding of these behaviors, how extension components work with each other, and where to corner
@@ -87,22 +85,27 @@ Popup errors can also be viewed by inspecting the popup.
 The error, `tabs is undefined`, says the extension doesn’t know where to inject the content script.
 This can be corrected by calling the [`tabs.query()`][4] method, then selecting the active tab.
 
-```js/9-13
+```js/8-12
   let changeColor = document.getElementById('changeColor');
 
-  chrome.storage.sync.get('color', function(data) {
-    changeColor.style.backgroundColor = data.color;
-    changeColor.setAttribute('value', data.color);
+  chrome.storage.sync.get(['color'], ({color}) => {
+    changeColor.style.backgroundColor = color;
+    changeColor.setAttribute('value', color);
   });
 
-  changeColor.onclick = function(element) {
-    let color = element.target.value;
+  changeColor.addEventListener('click', () =>
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      chrome.tabs.executeScript(
+      chrome.scripting.executeScript(
           tabs[0].id,
-          {code: 'document.body.style.backgroundColor = color;'});
+          { function: setColor });
     });
+  );
+  
+  async function setColor() {
+    let {color} = await chrome.storage.sync.get(['color']);
+    document.body.style.backgroundColor = color;
   };
+
 ```
 
 Update the code, click the **Clear all** button in the upper right hand corner, and then reload the
@@ -132,7 +135,7 @@ The error says `color` is not defined. The extension must not be passing the var
 Correct the injected script to pass the color variable into the code.
 
 ```
-  {code: 'document.body.style.backgroundColor = "' + color + '";'});
+  document.body.style.backgroundColor = "' + color + '";
 ```
 
 ### Extension tabs {: #extension_tabs }
@@ -196,7 +199,7 @@ For further information on debugging extensions, watch [Developing and Debugging
 about [Chrome Devtools][14] by reading the documentation.
 
 [1]: https://developers.google.com/web/tools/chrome-devtools/
-[2]: examples/tutorials/broken_background_color.zip
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/blob/master/tutorials/broken_background_color.zip
 [3]: /docs/extensions/runtime#event-onInstalled
 [4]: /docs/extensions/tabs#method-query
 [5]: /docs/extensions/mv3/override

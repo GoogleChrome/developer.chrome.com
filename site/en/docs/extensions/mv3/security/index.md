@@ -6,8 +6,6 @@ updated: 2019-07-17
 description: How to keep your Chrome Extension secure.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
-
 Extensions have access to special privileges within the browser, making them an appealing target for
 attackers. If an extension is compromised, _every_ user of that extension becomes vulnerable to
 malicious and unwanted intrusion. Keep an extension secure and its users protected by incorporating
@@ -257,25 +255,26 @@ function sanitizeInput(input) {
 [2]: https://support.google.com/accounts/answer/6103523
 [3]: /publish#set-up-group-publishing
 [4]: https://www.owasp.org/index.php/Man-in-the-middle_attack
-[5]: /manifest
-[6]: /xhr
-[7]: /match_patterns
-[8]: /manifest/externally_connectable
-[9]: /manifest/web_accessible_resources
-[10]: /contentSecurityPolicy
-[11]: /content_scripts
-[12]: /content_scripts#isolated_world
+[5]: /docs/extensions/mv3/manifest
+[6]: /docs/extensions/mv3/xhr
+[7]: /docs/extensions/mv3/match_patterns
+[8]: /docs/extensions/mv3/manifest/externally_connectable
+[9]: /docs/extensions/mv3/manifest/web_accessible_resources
+[10]: /docs/apps/contentSecurityPolicy
+[11]: /docs/extensions/mv3/content_scripts
+[12]: /docs/extensions/mv3/content_scripts#isolated_world
 [13]: https://html.spec.whatwg.org/#dom-window-nameditem
 [14]: https://spectreattack.com/
-[15]: /background_pages
-[16]: /messaging#content-scripts-are-less-trustworthy
+[15]: /docs/extensions/mv3/background_pages
+[16]: /docs/extensions/mv3/messaging#content-scripts-are-less-trustworthy
 [17]: #sanitize
-[18]: /messaging#cross-site-scripting
-[19]: /xhr#xhr-vs-content-scripts
+[18]: /docs/extensions/mv3/messaging#cross-site-scripting
+[19]: /docs/extensions/mv3/xhr#xhr-vs-content-scripts
 [20]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-[21]: /tabs#method-create
-[22]: /runtime#event-onMessageExternal
-[23]: /runtime#event-onMessage
-[24]: /runtime#type-MessageSender
-[25]: /content_scripts
-[26]: /security#avoid
+[21]: /docs/extensions/reference/tabs#method-create
+[22]: /docs/extensions/reference/runtime#event-onMessageExternal
+[23]: /docs/extensions/reference/runtime#event-onMessage
+[24]: /docs/extensions/reference/runtime#type-MessageSender
+[25]: /docs/extensions/mv3/content_scripts
+[26]: /docs/extensions/mv3/security#avoid
+
