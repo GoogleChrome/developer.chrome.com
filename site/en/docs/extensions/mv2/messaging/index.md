@@ -251,7 +251,9 @@ chrome.runtime.onMessageExternal.addListener(
 Extensions and apps [can exchange messages][34] with native applications that are registered as a
 [native messaging host][35]. To learn more about this feature, see [Native messaging][36].
 
-## Security considerations {: #security-considerations }### Content scripts are less trustworthy {: #content-scripts-are-less-trustworthy }
+## Security considerations {: #security-considerations }
+
+### Content scripts are less trustworthy {: #content-scripts-are-less-trustworthy }
 
 [Content scripts are less trustworthy][37] than the extension background page (e.g., a malicious web
 page might be able to compromise the renderer process where the content scripts run). Assume that
