@@ -6,7 +6,7 @@ updated: 2019-07-17
 description: How to keep your Chrome Extension secure.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 Extensions have access to special privileges within the browser, making them an appealing target for
 attackers. If an extension is compromised, _every_ user of that extension becomes vulnerable to

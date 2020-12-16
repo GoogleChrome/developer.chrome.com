@@ -6,7 +6,7 @@ updated: 2018-05-22
 description: How to share code between Chrome Extensions.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 _Shared Modules_ are permissionless collections of resources that can be shared between other
 extensions and apps. Common uses of Shared Modules are:

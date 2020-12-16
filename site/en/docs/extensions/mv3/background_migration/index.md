@@ -8,7 +8,7 @@ description: >
   model to improve the performance of your Chrome Extension.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
+{% include 'partials/extensions/mv2page-in-mv3.md' %}
 
 Implementing non-persistent background scripts will greatly reduce the resource cost of your
 extension. Most extension functionality can be supported by an event based background script. Only

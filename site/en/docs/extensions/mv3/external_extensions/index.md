@@ -6,7 +6,7 @@ updated: 2018-06-12
 description: How to distibute Chrome Extensions outside of the Chrome Web Store.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
+{% include 'partials/extensions/mv2page-in-mv3.md' %}
 
 All Chrome extensions must be distributed either directly from the Chrome Web Store or by using the
 mechanisms described below. Failure to comply with one of these distribution methods constitutes a

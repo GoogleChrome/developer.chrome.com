@@ -8,7 +8,7 @@ description: >
   that's hosted in the Chrome Web Store.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 Most extensions are hosted in the [Chrome Web Store][1] to best [protect users from malicious
 extensions][2].

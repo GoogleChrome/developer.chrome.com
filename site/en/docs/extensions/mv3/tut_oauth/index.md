@@ -9,7 +9,7 @@ description: >
   and OAuth2.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
+{% include 'partials/extensions/mv2page-in-mv3.md' %}
 
 [OAuth2][1] is the industry-standard protocol for authorization. It provides a mechanism for users
 to grant web and desktop applications access to private information without sharing their username,

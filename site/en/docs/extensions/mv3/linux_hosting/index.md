@@ -6,7 +6,7 @@ updated: 2018-03-23
 description: How to package, host, and update crx files from a personal server.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
+{% include 'partials/extensions/mv2page-in-mv3.md' %}
 
 Extensions hosted outside of the [Chrome Web Store][1] can only be installed by Linux users. This
 article describes how to package, host, and update `.crx` files from a personal server. If

@@ -6,7 +6,7 @@ updated: 2020-08-25
 description: How to create a Chrome Extension that adds functionality to Chrome DevTools.
 ---
 
-{% include 'partials/mv2page-in-mv3.md' %}
+{% include 'partials/extensions/mv2page-in-mv3.md' %}
 
 ## Overview {: #overview }
 

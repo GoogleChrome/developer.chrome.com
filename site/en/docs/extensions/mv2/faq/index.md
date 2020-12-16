@@ -6,7 +6,7 @@ updated: 2020-11-20
 description: Frequently asked questions about Chrome Extensions.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 If you don't find an answer to your question here, try the [Chrome Web Store FAQ][1], the
 [\[google-chrome-extension\] tag on Stack Overflow][2], the [chromium-extensions group][3], or the

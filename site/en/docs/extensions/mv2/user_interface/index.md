@@ -6,7 +6,7 @@ updated: 2018-05-16
 description: UI and design guidelines for Chrome Extensions.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 The extension user interface should be purposeful and minimal. Just like extensions themselves, the
 UI should customize or enhance the browsing experience without distracting from it.

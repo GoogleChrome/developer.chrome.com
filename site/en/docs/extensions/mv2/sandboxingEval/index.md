@@ -6,7 +6,7 @@ updated: 2014-05-22
 description: How to use eval() in a Chrome Extension.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 Chrome's extension system enforces a fairly strict default [**Content Security Policy (CSP)**][1].
 The policy restrictions are straightforward: script must be moved out-of-line into separate

@@ -6,7 +6,7 @@ updated: 2020-03-09
 description: How to implement cross-origin XHR in your Chrome Extension.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 Regular web pages can use the [XMLHttpRequest][1] object to send and receive data from remote
 servers, but they're limited by the [same origin policy][2]. [Content scripts][3] initiate requests

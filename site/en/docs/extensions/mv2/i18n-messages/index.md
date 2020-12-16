@@ -6,7 +6,7 @@ updated: 2014-05-22
 description: Reference documentation about the format of the messages.json file for Chrome Extensions.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 Each internationalized extension or app has at least one file named `messages.json` that provides
 locale-specific strings. This page describes the format of `messages.json` files. For information on

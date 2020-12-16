@@ -6,7 +6,7 @@ updated: 2018-04-26
 description: An overview of the manifest.json properties that you can use in your Chrome Extension.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 Every extension has a [JSON][1]\-formatted manifest file, named `manifest.json`, that provides
 important information.

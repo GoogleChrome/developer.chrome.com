@@ -6,7 +6,7 @@ updated: 2018-09-20
 description: Guidelines on how to migrate from manifest v1 to manifest v2.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 Manifest version 1 was deprecated in Chrome 18, and support will be phased out according to the
 [manifest version 1 support schedule][1]. The changes from version 1 to version 2 fall under two

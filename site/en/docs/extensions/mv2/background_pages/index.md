@@ -6,7 +6,7 @@ updated: 2018-05-01
 description: How to respond to browser triggers (events) from a Chrome Extension background script.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 Extensions are event based programs used to modify or enhance the Chrome browsing experience. Events
 are browser triggers, such as navigating to a new page, removing a bookmark, or closing a tab.

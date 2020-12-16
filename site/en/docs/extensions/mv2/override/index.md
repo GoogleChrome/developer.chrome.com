@@ -8,7 +8,7 @@ description: >
   pages from your Chrome Extension.
 ---
 
-{% include 'partials/mv2-legacy-page.md' %}
+{% include 'partials/extensions/mv2-legacy-page.md' %}
 
 Override pages are a way to substitute an HTML file from your extension for a page that Google
 Chrome normally provides. In addition to HTML, an override page usually has CSS and JavaScript code.
