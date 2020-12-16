@@ -22,4 +22,4 @@ import './store.js';
 import './web-components/search-box';
 import './web-components/side-nav';
 import './web-components/top-nav';
-import './web-components/announcement-banner';
+import './third-party/announcement-banner/announcement-banner';

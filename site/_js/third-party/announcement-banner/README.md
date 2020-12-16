@@ -1,0 +1,1 @@
+Forked with modifications from https://github.com/zachleat/herald-of-the-dog/
