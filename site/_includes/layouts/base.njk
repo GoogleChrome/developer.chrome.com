@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% if noindex -%}
+    <meta name="robots" content="noindex">
+    {%- endif %}
+
     {% include "partials/meta.njk" %}
 
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans/regular/latin.woff2">
