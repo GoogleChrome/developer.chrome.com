@@ -1,4 +1,11 @@
 steps:
 - name: 'gcr.io/cloud-builders/git'
-  entrypoint: 'bash'
-  args: ['-c', './.cloudbuild/repo-sync.sh']
+  args: ['remote', 'add', 'public', 'https://github.com/GoogleChrome/developer.chrome.com.git']
+- name: 'gcr.io/cloud-builders/git'
+  args: ['fetch', 'public']
+- name: 'gcr.io/cloud-builders/git'
+  args: ['checkout', '-b', 'test-branch']
+- name: 'gcr.io/cloud-builders/git'
+  args: ['reset', '--hard', 'public/main']
+- name: 'gcr.io/cloud-builders/git'
+  args: ['push', 'origin', 'test-branch']
