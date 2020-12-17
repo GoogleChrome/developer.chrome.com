@@ -5,13 +5,9 @@ to learn about what's new in Chrome!
 
 ## Found a bug? 👷‍♀️
 
-Thanks for letting us know! Please [file an issue](https://github.com/GoogleChrome/developers.chrome.com/issues/new?assignees=&labels=bug&template=bug_report.md&title=) and a team member should reply shortly.
+Thanks for letting us know! Please [file an issue](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=bug&template=bug_report.md&title=) and a team member should reply shortly.
 
 ## Authoring content ✍️
-
-🚨 Until this project is launched in production, the url for the handbook below
-will not work. Instead you'll need to build the site locally in order to read
-the handbook. Please skip to the [Building the site](https://github.com/GoogleChrome/developers.chrome.com#building-the-site-) instructions.
 
 Before you start writing take a moment to look over the
 [developer.chrome.com handbook](https://developer.chrome.com/docs/handbook) and
@@ -22,15 +18,13 @@ familiarize yourself with the process.
 You'll need a recent version of [Node](https://nodejs.org/): v14 (LTS) or higher.
 To check your node version run `node -v` in your terminal.
 
-⚠️ App Engine only currently supports v12, so the `engines.node` property inside "package.json" is lower.
-
 If you don't have node, or if you need to upgrade, we recommend using the [Node
 Version Manager (nvm)](https://github.com/nvm-sh/nvm).
 
 ### Clone the repo
 
 ```bash
-git clone https://github.com/GoogleChrome/developers.chrome.com.git
+git clone https://github.com/GoogleChrome/developer.chrome.com.git
 ```
 
 ### Install dependencies
