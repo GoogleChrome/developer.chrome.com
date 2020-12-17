@@ -48,10 +48,11 @@ const start = performance.now();
 const typesRender = [];
 for (const sourceFile of sourceFiles) {
   const p = require.resolve(path.join('chrome-types', sourceFile));
+  const revisionsPath = path.join(__dirname, 'revisions.json');
 
   // Add namespaces that we don't already have (platform_app.d.ts contains namespaces to support
   // itself in isolation, so we remove them).
-  let part = parseChromeTypesFile(p);
+  let part = parseChromeTypesFile(p, revisionsPath);
   part = part.filter(namespace => {
     if (
       sourceFile === 'index.d.ts' &&

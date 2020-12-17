@@ -19,6 +19,7 @@
  * display.
  */
 
+const fs = require('fs');
 const path = require('path');
 const typedoc = require('typedoc');
 const {LogLevel: TypeDocLogLevel} = require('typedoc/dist/lib/utils');
@@ -112,17 +113,20 @@ function extractPublicChromeNamespaces(typesData) {
 
 /**
  * @param {string} typesPath
+ * @param {string} revisionsPath
  * @return {RenderNamespace[]}
  */
-function parseChromeTypesFile(typesPath) {
+function parseChromeTypesFile(typesPath, revisionsPath) {
   const projectReflection = generateTypeDocObject(typesPath);
+
+  const revisions = JSON.parse(fs.readFileSync(revisionsPath, 'utf-8'));
 
   // Generate namespaces in isolation (e.g. `chrome.management` and so on).
   const namespaces = extractPublicChromeNamespaces(projectReflection);
   const flat = [];
   for (const name in namespaces) {
     const reflection = namespaces[name];
-    const [, ...rest] = name.split('.');
+    const [, ...rest] = name.split('.'); // remove "chrome." prefix
     const shortName = rest.join('.');
 
     const permissions = [];
@@ -170,6 +174,9 @@ function parseChromeTypesFile(typesPath) {
     }
     if (platforms.length) {
       renderNamespace.platforms = platforms;
+    }
+    if (name in revisions) {
+      renderNamespace.release = revisions[name];
     }
 
     // Extract types/properties/methods by finding different kinds of children from the namespace's

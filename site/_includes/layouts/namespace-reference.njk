@@ -36,6 +36,14 @@
           {{ namespace.comment | safe }}
         </div>
       </li>
+      {% if namespace.release %}
+        <li>
+          <div class="code-sections__label">Availability</div>
+          <div>
+            Since Chrome {{ namespace.release }}.
+          </div>
+        </li>
+      {% endif %}
       {% if namespace.permissions.length %}
         <li>
           <div class="code-sections__label">Permissions</div>
