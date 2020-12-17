@@ -1,4 +1,4 @@
-# Set up git with key and domain
+steps:
 - name: 'gcr.io/cloud-builders/git'
   entrypoint: 'bash'
   args: ['-c', './.cloudbuild/repo-sync.sh']
