@@ -46,8 +46,8 @@ search-box[active] {
   border-radius: px-to-rem(100px);
   display: none;
   font: inherit;
-  padding: get-size(200) get-size(300) get-size(200) get-size(700);
   margin: 0;
+  padding: get-size(200) get-size(300) get-size(200) get-size(700);
 
   @include media-query('lg') {
     display: block;
