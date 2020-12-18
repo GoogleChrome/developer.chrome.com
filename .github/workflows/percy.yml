@@ -21,6 +21,7 @@ on:
 
 jobs:
   percy:
+    if: ${{ github.repository == 'GoogleChrome/developer.chrome.com' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
