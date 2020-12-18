@@ -3,7 +3,7 @@
 ## Report a content bug
 
 Have feedback? We'd love to hear it - please open an
-[issue](https://github.com/GoogleChrome/developers.chrome.com/issues/new?title=Content+feedback).
+[issue](https://github.com/GoogleChrome/developer.chrome.com/issues/new?title=Content+feedback).
 
 ## Submitting a pull request
 
@@ -26,7 +26,7 @@ instructions for how to sign and return it.
 
 1. Sign the contributors license agreement above.
 2. Decide which code you want to submit. A submission should be a set of changes
-that addresses one issue in the [issue tracker](https://github.com/GoogleChrome/developers.chrome.com/issues).
+that addresses one issue in the [issue tracker](https://github.com/GoogleChrome/developer.chrome.com/issues).
 Please don't mix more than one logical change per submission, because it makes
 the history hard to follow. If you want to make a change
 (e.g. add a sample or feature) that doesn't have a corresponding issue in the
