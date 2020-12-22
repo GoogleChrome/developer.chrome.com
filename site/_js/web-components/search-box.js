@@ -279,6 +279,8 @@ export class SearchBox extends BaseElement {
     this.query = query.trim();
     if (this.query === '') {
       this.results = [];
+      this.docsResults = [];
+      this.blogResults = [];
       return;
     }
 
