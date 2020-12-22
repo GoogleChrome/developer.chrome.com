@@ -92,6 +92,12 @@ export class SearchBox extends BaseElement {
     this.renderResult = this.renderResult.bind(this);
   }
 
+  clearSearch() {
+    this.active = false;
+    this.input.value = '';
+    this.search('');
+  }
+
   connectedCallback() {
     super.connectedCallback();
     this.setAttribute('role', 'combobox');
@@ -145,7 +151,7 @@ export class SearchBox extends BaseElement {
     // If the user has deleted everything in the search box, clear all state
     // and hide the results modal.
     if (!this.input?.value) {
-      this.active = false;
+      this.clearSearch();
       return;
     }
 
@@ -184,8 +190,7 @@ export class SearchBox extends BaseElement {
         return;
 
       case 'Escape':
-        this.active = false;
-        this.input.value = '';
+        this.clearSearch();
         return;
     }
   }
@@ -265,6 +270,8 @@ export class SearchBox extends BaseElement {
       // and calling focus() on it would have no effect.
       await this.updateComplete;
       this.input?.focus();
+    } else {
+      this.clearSearch();
     }
   }
 
