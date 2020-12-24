@@ -147,7 +147,7 @@ The following features will be added to MV3 soon:
 
 * **Dynamic content scripts:** the new Scripting API lets extensions register and unregister content scripts at runtime.
 * **New favicon API:** this new JavaScript API replaces "chrome://favicons" and gives  developers a way to retrieve websites' favicons.
-* **Tab groups:** the Tabs API will be expanded to support Crome's [Tab Groups](https://blog.google/products/chrome/manage-tabs-with-google-chrome/) feature.
+* **Tab groups:** the Tabs API will be expanded to support Chrome's [Tab Groups](https://blog.google/products/chrome/manage-tabs-with-google-chrome/) feature.
 * **In-memory storage:** a new StorageArea on the Storage API that can be used to store values in memory across service worker restarts.
 
 Look for announcements of these and other MV3 features as they become available.
