@@ -12,9 +12,9 @@ element for the pagination (stock) navigation #}
 
 <nav>
   {% if paginationObject.href.previous %}
-    <a href="{{ paginationObject.href.previous }}">Previous</a>
+    <a href="{{ paginationObject.href.previous }}">{{ 'i18n.common.previous' | i18n(locale) }}</a>
   {% endif %}
   {% if paginationObject.href.next %}
-    <a href="{{ paginationObject.href.next }}">Next</a>
+    <a href="{{ paginationObject.href.next }}">{{ 'i18n.common.next' | i18n(locale) }}</a>
   {% endif %}
 </nav>

@@ -1,7 +1,7 @@
 {% from 'macros/icon.njk' import icon with context %}
 
 <top-nav role="banner" class="display-block hairline-bottom" data-side-nav-inert>
-  <a href="#main-content" class="color-primary visually-hidden skip-link">Skip to content</a>
+  <a href="#main-content" class="color-primary visually-hidden skip-link">{{ 'i18n.common.skip_to_content' | i18n(locale) }}</a>
 
   <nav class="display-grid align-center" aria-label="{{ 'i18n.common.chrome_developers' | i18n(locale) }}">
     {# Hamburger button #}
