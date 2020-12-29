@@ -30,8 +30,19 @@ const staticPaths = ['dist', 'dist/en'];
 
 const redirectHandler = buildRedirectHandler('redirects.yaml', staticPaths);
 
+// If we see content from /fonts/, then cache it forever.
+// If this ends up 404'ing, we invalidate the Cache-Control header in notFoundHandler.
+const immutableRootMatch = /^\/fonts\//;
+const immutableRootHandler = (req, res, next) => {
+  if (immutableRootMatch.test(req.url)) {
+    res.setHeader('Cache-Control', 'max-age=31536000,immutable');
+  }
+  next();
+};
+
 const handlers = [
   pluralDomainRedirectHandler,
+  immutableRootHandler,
   ...staticPaths.map(staticPath => express.static(staticPath)),
   redirectHandler,
   notFoundHandler,
