@@ -14,11 +14,19 @@
  * limitations under the License.
  */
 
+// Included for types only.
+// eslint-disable-next-line no-unused-vars
+const express = require('express');
+
 const path = require('path');
 const fs = require('fs');
 
+/**
+ * @type {express.RequestHandler}
+ */
 const notFoundHandler = (req, res, next) => {
   res.status(404);
+  res.setHeader('Cache-Control', 'max-age=0,must-revalidate,public');
 
   const extMatch = /(\.[^.]*)$/.exec(req.url);
   if (extMatch && extMatch[1] !== '.html') {
