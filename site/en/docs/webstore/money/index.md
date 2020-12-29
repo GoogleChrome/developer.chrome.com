@@ -76,7 +76,7 @@ direct the user to the web store listing to purchase the item.
 For details about app payment options, see [Charging for your app][10] in the Overview.
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: /docs/webstore/payments-iap
 [4]: /docs/apps/getstarted_arc
 [5]: /docs/webstore/overview#builtin

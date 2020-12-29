@@ -46,7 +46,7 @@ WiMi5 can create a package for Chrome Web Store with 1-click. See: [How to publi
 Chrome Web][14].
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: https://playcanvas.com
 [4]: https://chrome.google.com/webstore/detail/swooop/jblimahfbhdcengjfbdpdngcfcghladf?hl=en-US
 [5]: /static/images/playcanvas_designer2.png

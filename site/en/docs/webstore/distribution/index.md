@@ -10,7 +10,7 @@ description: >
 
 On Chrome, you can build and distribute the following kinds of products:
 
-<table><tbody><tr><th>Websites</th><td>With just an extra bit of metadata, you can integrate your website into the Chrome browser, making your content more accessible to users.</td></tr><tr><th>Extensions</th><td><a href="https://developer.chrome.com/extensions/overview">Extensions</a> are small browser add-ons that add new and useful features to Chrome.</td></tr><tr><th>Chrome Apps</th><td><a href="https://developer.chrome.com/apps/about_apps">Chrome apps</a> are designed specifically for Chrome and only work in the Chrome browser. They allow you to take advantage of cutting-edge technology that is not available to traditional websites.<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="https://developers.chrome.com/apps/migration">migrating your app</a>.</div></td></tr><tr><th>Themes</th><td><a href="https://developer.chrome.com/extensions/themes">Themes</a> change the way the Chrome browser looks, adding style to your users’ browsing experience.</td></tr></tbody></table>
+<table><tbody><tr><th>Websites</th><td>With just an extra bit of metadata, you can integrate your website into the Chrome browser, making your content more accessible to users.</td></tr><tr><th>Extensions</th><td><a href="https://developer.chrome.com/extensions/overview">Extensions</a> are small browser add-ons that add new and useful features to Chrome.</td></tr><tr><th>Chrome Apps</th><td><a href="https://developer.chrome.com/apps/about_apps">Chrome apps</a> are designed specifically for Chrome and only work in the Chrome browser. They allow you to take advantage of cutting-edge technology that is not available to traditional websites.<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="https://developer.chrome.com/apps/migration">migrating your app</a>.</div></td></tr><tr><th>Themes</th><td><a href="https://developer.chrome.com/extensions/themes">Themes</a> change the way the Chrome browser looks, adding style to your users’ browsing experience.</td></tr></tbody></table>
 
 ## Distribution Options {: #distribution-options }
 
@@ -34,7 +34,7 @@ The following table covers a few ways to monetize your product.
 [1]: /docs/extensions/mv2/overview
 [2]: /docs/apps/about_apps
 [3]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[4]: https://developers.chrome.com/apps/migration
+[4]: https://developer.chrome.com/apps/migration
 [5]: /docs/extensions/mv2/themes
 [6]: https://chrome.google.com/webstore
 [7]: /docs/native-client/devguide/distributing

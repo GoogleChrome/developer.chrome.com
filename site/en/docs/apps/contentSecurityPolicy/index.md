@@ -87,7 +87,7 @@ Instead of using an iframe, you can call out to an external URL using a webview 
 external web pages][7]).
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: http://www.html5rocks.com/en/tutorials/security/content-security-policy/
 [4]: /extensions/contentSecurityPolicy
 [5]: app_external#sandboxing

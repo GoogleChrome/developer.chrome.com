@@ -50,5 +50,5 @@ Here are some examples of version names:
 If no version_name is present, the version field will be used for display purposes as well.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: https://developer.chrome.com/extensions/autoupdate

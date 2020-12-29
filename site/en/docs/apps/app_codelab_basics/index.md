@@ -210,7 +210,7 @@ For more detailed information about some of the APIs introduced in this step, re
 Ready to continue onto the next step? Go to [Step 2 - Import an existing web app »][18]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: #launch
 [4]: /apps/app_runtime.html#event-onLaunched
 [5]: /apps/app_window.html#method-create

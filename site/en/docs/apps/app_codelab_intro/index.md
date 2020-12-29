@@ -49,7 +49,7 @@ the reference code.
 Let's get started. Go to [Step 1 - Create and run a Chrome App »][14]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: http://goo.gl/qNNUX
 [4]: app_codelab_basics.html
 [5]: app_codelab_todomvc.html

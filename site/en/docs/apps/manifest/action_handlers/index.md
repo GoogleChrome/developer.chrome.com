@@ -32,5 +32,5 @@ This list contains one or more of the `ActionType` values specified in the `Acti
 ```
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: ../app_runtime#event-onLaunched

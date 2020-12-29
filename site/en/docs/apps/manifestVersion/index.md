@@ -36,6 +36,6 @@ Manifest version 1 only applied to extensions and hosted apps, not Chrome Apps. 
 [deprecated][4] in Chrome 18.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: manifest
 [4]: ../extensions/manifestVersion

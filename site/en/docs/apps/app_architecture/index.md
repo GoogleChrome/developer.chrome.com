@@ -81,7 +81,7 @@ surrounding page, they can only be used to load other app pages. You can use the
 {% youtube id="EDtiWN42lHs" %}
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: app_lifecycle
 [4]: declare_permissions
 [5]: app_lifecycle#eventpage

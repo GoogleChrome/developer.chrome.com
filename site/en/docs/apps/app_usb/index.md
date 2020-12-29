@@ -404,7 +404,7 @@ explanation.
 On Chrome OS, simply call [usb.requestAccess][32]. The permission broker does this for you.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: usb
 [4]: #caveats
 [5]: serial

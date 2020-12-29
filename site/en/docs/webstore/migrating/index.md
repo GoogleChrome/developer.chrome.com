@@ -84,4 +84,4 @@ Congratulations! Your legacy app is now migrated. Let your users know about the 
 new users!
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration

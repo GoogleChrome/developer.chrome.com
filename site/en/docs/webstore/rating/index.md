@@ -6,7 +6,7 @@ updated: 2019-05-29
 description: Guidelines about how the Chrome Web Store rates the maturity of content.
 ---
 
-<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to support extensions on all platforms. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="https://developers.chrome.com/apps/migration">migrating your app</a>.</div>
+<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to support extensions on all platforms. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="https://developer.chrome.com/apps/migration">migrating your app</a>.</div>
 
 [Branding Guidelines][3] | **Rating Guidelines** | [Program Policies][4] | [User Data FAQ][5] |
 [Developer Agreement][6]
@@ -51,7 +51,7 @@ activity or alcohol, tobacco or drug content that is targeted at minors is not a
 Web Store.
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: /docs/webstore/branding
 [4]: /docs/webstore/program_policies
 [5]: /docs/webstore/user_data

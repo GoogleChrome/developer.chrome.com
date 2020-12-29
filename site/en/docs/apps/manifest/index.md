@@ -105,7 +105,7 @@ discusses each field.
 ```
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: https://www.json.org
 [4]: manifest/app
 [5]: manifest/app

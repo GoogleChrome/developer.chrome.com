@@ -141,7 +141,7 @@ published by the `storage.managed` API.
 ```
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: https://tools.ietf.org/html/draft-zyp-json-schema-03
 [4]: https://www.chromium.org/administrators/
 [5]: ../storage#property-managed

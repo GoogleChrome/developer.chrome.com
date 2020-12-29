@@ -70,7 +70,7 @@ API.
   [bluetoothLowEnergy][6] API
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: /apps/bluetooth
 [4]: /apps/bluetoothSocket
 [5]: /apps/bluetoothLowEnergy

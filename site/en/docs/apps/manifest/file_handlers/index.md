@@ -53,7 +53,7 @@ system file manager (currently supported on Chrome OS only) or by providing a pa
 line][6].
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: ../app_lifecycle#eventpage
 [4]: /apps/fileSystem
 [5]: /apps/app.runtime#event-onLaunched

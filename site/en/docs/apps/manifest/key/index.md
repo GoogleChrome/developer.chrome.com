@@ -30,7 +30,7 @@ look in the file `Default/Extensions/_<extensionId>_/_<versionString>_/manifest.
 the key value filled in there.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: https://developer.chrome.com/extensions/overview#relative-urls
 [4]: https://developer.chrome.com/extensions/extension#method-getURL
 [5]: https://chrome.google.com/webstore/developer/dashboard

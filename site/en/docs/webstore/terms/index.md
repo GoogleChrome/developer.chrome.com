@@ -8,7 +8,7 @@ description: >
   developers and the Chrome Web Store.
 ---
 
-<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to support extensions on all platforms. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="https://developers.chrome.com/apps/migration">migrating your app</a>.</div>
+<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to support extensions on all platforms. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="https://developer.chrome.com/apps/migration">migrating your app</a>.</div>
 
 [Branding Guidelines][3] | [Rating Guidelines][4] | [Program Policies][5] | [User Data FAQ][6] |
 **Developer Agreement**
@@ -511,7 +511,7 @@ termination of this Agreement.
 Please print and retain a copy of this document and any linked documents for your records.
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: /docs/webstore/branding
 [4]: /docs/webstore/rating
 [5]: /docs/webstore/program_policies

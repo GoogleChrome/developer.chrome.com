@@ -160,7 +160,7 @@ Also make sure that the app saves **no sensitive user data** (such as passwords)
 machine.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: storage
 [4]: https://developer.mozilla.org/en/Online_and_offline_events
 [5]: #testing

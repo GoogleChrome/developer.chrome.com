@@ -42,6 +42,6 @@ The `usbPrinters` manifest property declares which USB printers are supported by
   be provided.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: /apps/printerProvider
 [4]: /apps/usb#type-DeviceFilter
