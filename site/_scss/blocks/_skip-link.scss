@@ -1,0 +1,12 @@
+.skip-link {
+  @extend %material-button;
+
+  background-color: var(--color-bg);
+
+  &:focus {
+    clip: auto;
+    padding: inherit;
+    width: auto;
+    z-index: 1;
+  }
+}
