@@ -1,5 +1,5 @@
 ---
-api: history
+api: idle
 ---
 
 ## Manifest
