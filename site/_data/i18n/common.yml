@@ -82,3 +82,13 @@ documentation:
 
 blog:
   en: 'Blog'
+
+skip_to_content:
+  en: 'Skip to content'
+  es: 'Saltar al contenido'
+
+previous:
+  en: 'Previous'
+
+next:
+  en: 'Next'
