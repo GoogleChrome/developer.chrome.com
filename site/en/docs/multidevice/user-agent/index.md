@@ -7,12 +7,12 @@ description: >
   and WebView contexts.
 ---
 
-A browser’s user agent string (UA) helps identify which browser is being used, what version, and on
+A browser's user agent string (UA) helps identify which browser is being used, what version, and on
 which operating system. When feature detection APIs are not available, use the UA to customize
 behavior or content to specific browser versions.
 
 Like all other browsers, Chrome for Android sends this information in the `User-Agent` HTTP header
-every time it makes a request to any site. It’s also available in the client through JavaScript
+every time it makes a request to any site. It's also available in the client through JavaScript
 using the `navigator.userAgent` call.
 
 ## Chrome for Android
@@ -32,7 +32,7 @@ Chrome/{Chrome Rev} <mark>Mobile</mark> Safari/{WebKit Rev}</code></pre>
 AppleWebKit/{WebKit Rev} (KHTML, like Gecko) 
 Chrome/{Chrome Rev} Safari/{WebKit Rev}</code></pre>
 
-Here’s an example of the Chrome user agent string on a Galaxy Nexus:
+Here's an example of the Chrome user agent string on a Galaxy Nexus:
 
 ```text
 Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) 
@@ -51,7 +51,7 @@ against Chrome on Android phones and tablets:
 The UA in Chrome for iOS is the same as the Mobile Safari user agent, with `CriOS/<ChromeRevision>`
 instead of `Version/<VersionNum>`.
 
-Here’s an example of the **Chrome** UA on iPhone:
+Here's an example of the **Chrome** UA on iPhone:
 
 <pre><code>Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) 
 AppleWebKit/602.1.50 (KHTML, like Gecko) <mark>CriOS/56.0.2924.75</mark>
@@ -102,8 +102,8 @@ Version/4.0 Safari/534.30
 AppleWebKit/537.36 (KHTML, like Gecko) 
 Version/4.0 <mark>Chrome/30.0.0.0</mark> Mobile Safari/537.36</code></pre>
 
-If you’re attempting to differentiate between the WebView and Chrome for Android, you should look
-for the presence of the **Version/\_X.X\_** string in the WebView user-agent string. Don’t rely on
+If you're attempting to differentiate between the WebView and Chrome for Android, you should look
+for the presence of the **Version/\_X.X\_** string in the WebView user-agent string. Don't rely on
 the specific Chrome version number (for example, 30.0.0.0) as the version numbers changes with each
 release.
 

@@ -318,7 +318,7 @@ is determined based on the priority of each rule and the operations specified.
         priority)
     - https://d.com/path (sub-frame request)
       - https://d.com/script.js (script request, matches rule with ids (9))All requests in green
-        will be allow-listed due to rule with id (8) and not be evaluated by the extensions’
+        will be allow-listed due to rule with id (8) and not be evaluated by the extensions'
         ruleset. Requests in red will be blocked due to rule with id (9).
 - Consider a navigation to `"http://headers.com/12345"` with response headers
   `{ "h1": "initial_1", "h2": "initial_2" }`. Rules with id (10) and (11) match. The request will

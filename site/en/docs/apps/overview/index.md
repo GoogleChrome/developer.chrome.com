@@ -53,10 +53,10 @@ development capacity beyond what you can do with traditional web apps:
 - Chrome Apps can integrate seamlessly into the desktop and look more like desktop applications than
   traditional web apps.
 - Chrome Apps for Desktop have no omnibox (address bar) and tab strip like normal browser-based
-  apps, because like native desktop apps, they don’t live in a browser.
+  apps, because like native desktop apps, they don't live in a browser.
 - The Chrome App Launcher makes it easy for users to find and start your Chrome App.
 - OS X users can use the integrated spotlight search to find and start your app.
-- Chrome Apps for Desktop can access the host computer’s file system and make use of hardware
+- Chrome Apps for Desktop can access the host computer's file system and make use of hardware
   features (like USB, Bluetooth and attached human interface devices).
 
 The best way to see what Chrome Apps look like is to [install some][4].

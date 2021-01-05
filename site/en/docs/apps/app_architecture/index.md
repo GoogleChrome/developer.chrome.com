@@ -14,7 +14,7 @@ more about [**migrating your app**][2].
 
 !!!
 
-Chrome Apps integrate closely with a user’s operating system. They are designed to be run outside of
+Chrome Apps integrate closely with a user's operating system. They are designed to be run outside of
 a browser tab, to run robustly in offline and poor connectivity scenarios and to have far more
 powerful capabilities than are available in a typical web browsing environment. The app container,
 programming, and security models support these Chrome App requirements.
@@ -72,7 +72,7 @@ on a per window basis. This allows you to minimize the code in your app that has
 APIs, while still getting to use them.
 
 Chrome Apps reuse Chrome extension process isolation, and take this a step further by isolating
-storage and external content. Each app has its own private storage area and can’t access the storage
+storage and external content. Each app has its own private storage area and can't access the storage
 of another app or personal data (such as cookies) for websites that you use in your browser. All
 external processes are isolated from the app. Since iframes run in the same process as the
 surrounding page, they can only be used to load other app pages. You can use the `object` tag to

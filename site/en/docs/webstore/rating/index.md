@@ -16,7 +16,7 @@ Ratings are not intended to reflect the quality or complexity of your app.
 
 As the developer, you are ultimately responsible for rating your application appropriately. Use the
 following rules as guidance in determining whether your app should be rated "Mature." When
-determining your app’s rating, consider all the content in your app, including user generated
+determining your app's rating, consider all the content in your app, including user generated
 content and ads, and content that your app links to. Note that regardless of the rating you give
 your app, all applications must still adhere to the terms of the Chrome Web Store Program Policy and
 the Chrome Web Store Developer Agreement.

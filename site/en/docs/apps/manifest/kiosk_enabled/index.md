@@ -33,7 +33,7 @@ screen is yours to use as you wish.
 ## How they behave {: #Behavior }
 
 When a Kiosk App is configured to run on Chrome OS using [Single App Kiosk Mode][6], the user has no
-control over the app’s lifecycle. The user cannot exit the app or switch to another task. However,
+control over the app's lifecycle. The user cannot exit the app or switch to another task. However,
 as an app developer, you can offer a "logout" or "exit" button within the app to close all its
 windows, which terminates the session and returns the user to the login screen.
 
@@ -55,7 +55,7 @@ no need for users to log in before using Single App Kiosk Mode.
 ## How to develop a Kiosk App {: #Develop }
 
 If you know how to build a [Chrome App][10], then you know how to build a Kiosk App because they use
-the same [app architecture][11]. All you have to do is set `"kiosk_enabled"` to `true` in your app’s
+the same [app architecture][11]. All you have to do is set `"kiosk_enabled"` to `true` in your app's
 [manifest file][12]. Your app can then run in either a regular session or Single App Kiosk Mode. If
 you want your app to run in Single App Kiosk Mode only, then also set `"kiosk_only"` to `true`. This
 prevents the app from being launched in a regular session. For example:

@@ -32,7 +32,7 @@ extension. Requesting broader permissions than necessary may cause your extensio
 **Permissions list** This section contains a list of permissions that your extension uses (as
 declared in your manifest), with a field for you to state the justification for each permission.
 Fill out these fields to tell the reviewers why your extension needs to use each permission. If
-there are permissions listed here that you don’t require, remove them from your manifest before
+there are permissions listed here that you don't require, remove them from your manifest before
 continuing.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xTk11mZFXz9K0RkLAcmb.png",
@@ -46,7 +46,7 @@ remote code will need extra scrutiny, resulting in longer review times. Extensio
 code and do not declare and justify it using the field shown above will be rejected.
 
 **Remote Code** Use this field to tell reviewers whether your extension executes remote code and, if
-so, why this is necessary. If your extension doesn’t need to execute remote code, make sure that it
+so, why this is necessary. If your extension doesn't need to execute remote code, make sure that it
 does not and select "No, I am not using remote code."
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c7Fo3mIpx0i5j4eXEhev.png",

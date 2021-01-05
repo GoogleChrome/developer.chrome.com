@@ -327,7 +327,7 @@ public static final int TAB_SHOWN = 5;
 public static final int TAB_HIDDEN = 6;
 ```
 
-### What happens if the user doesn’t have a recent version of Chrome installed?
+### What happens if the user doesn't have a recent version of Chrome installed?
 
 Custom Tabs uses an ACTION_VIEW Intent with key Extras to customize the UI. This means that by
 default the page willopen in the system browser, or the user's default browser.
@@ -355,7 +355,7 @@ and pre-loading Chrome.
 Connect to the Custom Tabs service on the [onStart()][34] method of the Activities you plan to
 launch a Custom Tab from. Upon connection, call [warmup()][35].
 
-The loading happens as a low priority process, meaning that **it won’t have any negative performance
+The loading happens as a low priority process, meaning that **it won't have any negative performance
 impact on your application**, but will give a big performance boost when loading a link.
 
 ### Pre-render content
@@ -367,9 +367,9 @@ Calling [mayLaunchUrl()][37] will make Custom Tabs pre-fetch the main page with 
 content and pre-render. This will give the maximum speed up to the page loading process, but **comes
 with a network and battery cost**.
 
-Custom Tabs is smart and knows if the user is using the phone on a metered network or if it’s a low
+Custom Tabs is smart and knows if the user is using the phone on a metered network or if it's a low
 end device and pre-rendering will have a negative effect on the overall performance of the device
-and won’t pre-fetch or pre-render on those scenarios. So, there’s no need to optimize your
+and won't pre-fetch or pre-render on those scenarios. So, there's no need to optimize your
 application for those cases.
 
 ### Provide a fallback for when Custom Tabs is not installed
@@ -395,7 +395,7 @@ intent.putExtra(Intent.EXTRA_REFERRER,
 
 Custom animations will make the transition from your application to the web content smoother. Make
 sure the finish animation is the reverse of the start animation, as it will help the user understand
-she’s returning to the content where the navigation started.
+she's returning to the content where the navigation started.
 
 ```java
     //Setting custom enter/exit animations
@@ -410,7 +410,7 @@ she’s returning to the content where the navigation started.
 
 ### Choosing an icon for the Action Button
 
-Adding an Action Button will make users engage more with your app features. But, if there isn’t a
+Adding an Action Button will make users engage more with your app features. But, if there isn't a
 good icon to represent the action your Action Button will perform, create a bitmap with a text
 describing the action.
 
@@ -480,7 +480,7 @@ Before opening an url from your application, check if a native alternative is av
 Customize with your application's primary color if you want the user to feel that the content is a
 part of your application.
 
-If you want to make it clear for the user that she has left your application, don’t customize the
+If you want to make it clear for the user that she has left your application, don't customize the
 color at all.
 
 ```java
@@ -492,7 +492,7 @@ color at all.
 ### Add a Share Action
 
 Make sure you add the Share Action to the overflow menu, as users expect to be able to share the
-link to the content they are seeing in most use cases, and Custom Tabs doesn’t add one by default.
+link to the content they are seeing in most use cases, and Custom Tabs doesn't add one by default.
 
 ```java
     //Sharing content from CustomTabs with on a BroadcastReceiver

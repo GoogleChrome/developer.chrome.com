@@ -90,7 +90,7 @@ can use the [`chrome.runtime.getURL()`][8] method to avoid hardcoding the ID dur
 
 ## Architecture {: #arch }
 
-An extension’s architecture will depend on its functionality, but many robust extensions will
+An extension's architecture will depend on its functionality, but many robust extensions will
 include multiple components:
 
 - [Manifest][9]
@@ -119,7 +119,7 @@ present in the extension.
 
 An extension using a page action and a popup can use the [declarative content][23] API to set rules
 in the background script for when the popup is available to users. When the conditions are met, the
-background script communicates with the popup to make it’s icon clickable to users.
+background script communicates with the popup to make it's icon clickable to users.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8oLwFaq0VFIQtw4mcA91.png",
        alt="A browser window containing a page action displaying a popup", height="316", width="325" %}
@@ -160,8 +160,8 @@ to finish. If an extension needs to know the outcome of an asynchronous operatio
 callback function into the method. The callback is executed later, potentially much later, after the
 method returns.
 
-If the extension needed to navigate the user’s currently selected tab to a new URL, it would need to
-get the current tab’s ID and then update that tab’s address to the new URL.
+If the extension needed to navigate the user's currently selected tab to a new URL, it would need to
+get the current tab's ID and then update that tab's address to the new URL.
 
 If the [tabs.query][30] method were synchronous, it may look something like below.
 
@@ -194,7 +194,7 @@ someOtherFunction();
 In the above code, the lines are executed in the following order: 1, 4, 2. The callback function
 specified to `query()` is called and then executes line 2, but only after information about the
 currently selected tab is available. This happens sometime after `query()` returns. Although
-`update()` is asynchronous the code doesn’t use a callback parameter, since the extension doesn’t do
+`update()` is asynchronous the code doesn't use a callback parameter, since the extension doesn't do
 anything with the results of the update.
 
 ```js

@@ -17,7 +17,7 @@
 declare global {
   export interface EleventyPagination<T = EleventyCollectionItem> {
     /**
-     * Array of current page’s chunk of data
+     * Array of current page's chunk of data
      */
     items?: T[];
     /**
@@ -46,11 +46,11 @@ declare global {
     pages?: T[][];
     page?: {
       /**
-       * Next page’s chunk of data
+       * Next page's chunk of data
        */
       next: T[];
       /**
-       * Previous page’s chunk of data
+       * Previous page's chunk of data
        */
       previous: T[];
       first: T[];

@@ -87,7 +87,7 @@ API.
 In order to use the Chrome Web Store API to handle in-app purchases, you'll need to create a [Google
 Payments Merchant account][16].
 
-Once you’ve created the Merchant account, it will be automatically associated with your Chrome App
+Once you've created the Merchant account, it will be automatically associated with your Chrome App
 or Extension listing in the Chrome Web Store.
 
 ### Creating and Managing your virtual goods {: #create-digital-goods }

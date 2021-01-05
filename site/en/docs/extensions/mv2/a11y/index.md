@@ -24,7 +24,7 @@ any developer can take to make an extension as accessible as possible.
 
 ## Integrate accessible UI controls {: #controls }
 
-If users can’t access the user interface controls, they are unable to use an extension. The easiest
+If users can't access the user interface controls, they are unable to use an extension. The easiest
 way to create an accessible UI is to use a standard HTML control.
 
 !!!.aside.aside--note
@@ -124,7 +124,7 @@ the contrast reduced.
 ### Shortcuts {: #shortcuts }
 
 While the most common keyboard navigation strategy involves using the Tab key to rotate focus
-through an extension’s interface, it is not always the easiest or most efficient option.
+through an extension's interface, it is not always the easiest or most efficient option.
 
 A simple JavaScript keyboard handler could look like the following. Note how the WAI-ARIA property
 `aria-activedescendant` is updated in response to user input to reflect the current active toolbar
@@ -183,7 +183,7 @@ familiar, as they reflect good practices for all web content.
 
 ### Text {: #text }
 
-Font choices and text size impact how readable an extension’s content is. Users with sight issues
+Font choices and text size impact how readable an extension's content is. Users with sight issues
 may need to increase an extensions text size. If using keyboard shortcuts, make sure they do not
 interfere with the zoom shortcuts built into Chrome.
 

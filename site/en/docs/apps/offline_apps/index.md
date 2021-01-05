@@ -16,14 +16,14 @@ more about [**migrating your app**][2].
 
 Because internet connections can be flakey or non-existent, you need to consider _offline first_:
 write your app as if it has no internet connection. Once your app works offline, add whatever
-network functionality you need for your app to do more when it’s online. Read on for tips on
+network functionality you need for your app to do more when it's online. Read on for tips on
 implementing your offline-enabled app.
 
 ## Overview {: #overview }
 
 Chrome Apps get the following for free:
 
-- Your app’s files—all of its JavaScript, CSS, and fonts, plus other resources it needs (such as
+- Your app's files—all of its JavaScript, CSS, and fonts, plus other resources it needs (such as
   images)—are **already downloaded**.
 - Your app can **save and optionally sync** small amounts of data using the [Chrome Storage API][3].
 - Your app can **detect changes in connectivity** by listening for [online and offline events][4].
@@ -36,7 +36,7 @@ Use local data whenever possible.
 : When using resources from the internet, use `XMLHttpRequest` to get it, and then save the data
   locally. You can use the Chrome Storage API, IndexedDB, or Filesystem API to save data locally.
 
-Separate your app’s UI from its data.
+Separate your app's UI from its data.
 
 : Separating the UI and data not only improves your app's design and eases the task of enabling
   offline usage, but also lets you provide other views of the user's data. An MVC framework can help

@@ -30,7 +30,7 @@ In addition to including these components, the disclosure must comply with the f
   Disclosures in an image or audio form must be accompanied by a text disclosure.
 - The disclosure must be above the first link or button that leads to the Chrome Web Store.
 
-Additionally, other elements on the referrer page must not mislead the user about the extension’s
+Additionally, other elements on the referrer page must not mislead the user about the extension's
 functionality. Images, audio, text or video that imply a functionality that the extension does not
 provide directly will be considered deceptive, even with a compliant text disclosure.
 
@@ -84,9 +84,9 @@ are different outcomes for your extension:
 
 ## What should I do if I receive a warning email?
 
-Review all of your extension’s marketing materials, both developed by you or a 3rd party, for
+Review all of your extension's marketing materials, both developed by you or a 3rd party, for
 compliance per our program policies. Repeated warnings may result in removal of your extension from
-the Chrome Web Store and disabling of your extension’s user base.
+the Chrome Web Store and disabling of your extension's user base.
 
 ## Is there a way to appeal this decision?
 

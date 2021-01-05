@@ -39,7 +39,7 @@ Generally, Chrome Apps and Extensions can use the Chrome Web Store API to charge
 virtual goods. The fee for using this API is just 5% per transaction. For example, if you charge
 $1.99, you'll receive $1.89; if you charge $9.99, you'll receive $9.49.
 
-<div class="aside aside--note"><strong>Note:</strong> In-app payments for ARC apps are subject to a 30% transaction fee. For example, if you charge $1.99 for an item offered in an ARC app, you’ll receive $1.39. This is to ensure a consistent pricing structure with in-app payments made in apps available on Google Play. ARC does not currently support other purchase models including up-front payments, subscriptions and in-app version upgrades; as these types of purchases require provisioning from Google Play which is not currently enabled. For more information on monetizing ARC apps, see <a href="https://developer.chrome.com/apps/getstarted_arc">Get Started with ARC</a>.</div>
+<div class="aside aside--note"><strong>Note:</strong> In-app payments for ARC apps are subject to a 30% transaction fee. For example, if you charge $1.99 for an item offered in an ARC app, you'll receive $1.39. This is to ensure a consistent pricing structure with in-app payments made in apps available on Google Play. ARC does not currently support other purchase models including up-front payments, subscriptions and in-app version upgrades; as these types of purchases require provisioning from Google Play which is not currently enabled. For more information on monetizing ARC apps, see <a href="https://developer.chrome.com/apps/getstarted_arc">Get Started with ARC</a>.</div>
 
 ## One-time Payments
 
@@ -50,7 +50,7 @@ users try out the item before purchasing it.
 The charge for using Chrome Web Store Payments is 5%. For example, if you charge
 $1.99, you'll receive $1.89. See [Payments: Regions, Fees, and Tiers][7] for details.
 
-<div class="aside aside--note"><strong>Note:</strong> In-app payments for ARC apps are subject to a 30% transaction fee. For example, if you charge $1.99 for an item offered in an ARC app, you’ll receive $1.39. This is to ensure a consistent pricing structure with in-app payments made in apps available on Google Play. ARC does not currently support other purchase models including up-front payments, subscriptions and in-app version upgrades; as these types of purchases require provisioning from Google Play which is not currently enabled. For more information on monetizing ARC apps, see <a href="https://developer.chrome.com/apps/getstarted_arc">Get Started with ARC</a>.</div>
+<div class="aside aside--note"><strong>Note:</strong> In-app payments for ARC apps are subject to a 30% transaction fee. For example, if you charge $1.99 for an item offered in an ARC app, you'll receive $1.39. This is to ensure a consistent pricing structure with in-app payments made in apps available on Google Play. ARC does not currently support other purchase models including up-front payments, subscriptions and in-app version upgrades; as these types of purchases require provisioning from Google Play which is not currently enabled. For more information on monetizing ARC apps, see <a href="https://developer.chrome.com/apps/getstarted_arc">Get Started with ARC</a>.</div>
 
 ## Subscriptions
 

@@ -277,9 +277,9 @@ Developers have access to the following information:
 ### 1\. What disclosures do I need to display on my project home page?
 
 All extensions that request personal or sensitive user data must show a [][12]Limited Use disclosure
-on your project’s homepage or on a page one click away from the homepage; for example, in your
+on your project's homepage or on a page one click away from the homepage; for example, in your
 privacy policy. This Limited Use disclosure should be written by you, the developer, and should
-clearly describe the app’s compliance with the Chrome Web Store User Data Policy, including the
+clearly describe the app's compliance with the Chrome Web Store User Data Policy, including the
 Limited Use requirements.
 
 ### 2\. What are the limited use requirements?
@@ -340,17 +340,17 @@ order to be updated or published.
 ### 2\. What happens if I don't fill out the limited use form?
 
 There is a section on the developer dashboard that you need to fill out to communicate how your
-extension uses personal or sensitive user data. If you don’t complete this section, then your
+extension uses personal or sensitive user data. If you don't complete this section, then your
 extension will be displayed to users as not having provided this information.
 
 Starting March 2021, the Chrome Web Store team will reach out to developers with a warning to
 complete the disclosure requirement. Inaction after 30 days of the warning will result in the
 suspension of affected items and the deactivation of the existing user-base.
 
-### 3\. What happens if there are inconsistencies between my item’s privacy policy, the disclosures provided through the developer dashboard, and the behavior of my item?
+### 3\. What happens if there are inconsistencies between my item's privacy policy, the disclosures provided through the developer dashboard, and the behavior of my item?
 
 We take our users' privacy very seriously and so should every publisher of the Chrome Web Store. As
-a publisher it is your responsibility to be transparent when handling Chrome users’ data. Any
+a publisher it is your responsibility to be transparent when handling Chrome users' data. Any
 discrepancies between the developer dashboard disclosures, your privacy policy, and the behavior of
 your item would be a violation of the [Chrome Web Store developer program policies][13]. This can
 result in the suspension of all the items owned by the publisher, deactivation of the existing

@@ -179,12 +179,12 @@ V3](/docs/extensions/mv3/intro/mv3-overview).
 
 ### Manifest V3 related changes
 
-There are a number of features that aren’t actually part of MV3, but are
+There are a number of features that aren't actually part of MV3, but are
 scheduled for release in the same time frame. These features are related to MV3
 in that they impose new requirements that MV3 is designed to address.
 
 The key feature launching in this category is the changing way that host
-permissions are granted. Again, this isn’t an MV3 feature, but it does motivate
+permissions are granted. Again, this isn't an MV3 feature, but it does motivate
 MV3 changes. Expect these changes in early 2021.
 
 The initial steps in this area have already launched:
@@ -196,8 +196,8 @@ The initial steps in this area have already launched:
 
 ### Future related changes
 
-Moving forward, we’ll be changing host permissions to be optional by default,
-with explicit user consent required to grant site access. We’ll also be
+Moving forward, we'll be changing host permissions to be optional by default,
+with explicit user consent required to grant site access. We'll also be
 providing new ways for users to defer permission grants until run time, so that
 users understand the context of the permission being requested. These changes
 are intended to provide greater user visibility of permissions.

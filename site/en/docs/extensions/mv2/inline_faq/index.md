@@ -17,7 +17,7 @@ post][1].
 
 Any Chrome Web Store item, such as extensions and apps, first published on or after 2018-06-12 will
 have inline-installation disabled. "Disabled" means that inline installation attempts will be
-automatically redirected to the item’s details page on the Chrome Web Store where the user can
+automatically redirected to the item's details page on the Chrome Web Store where the user can
 complete the installation. Nothing will change for existing items in the store that were first
 published before this date.
 
@@ -29,8 +29,8 @@ install.
 
 ### What do I need to do before 2018-09-12? {: #what_do_sept12 }
 
-You don’t need to change anything, but we suggest you review your installation flow and replace the
-`chrome.webstore.install()` call with a navigation directly to your item’s Chrome Web Store listing.
+You don't need to change anything, but we suggest you review your installation flow and replace the
+`chrome.webstore.install()` call with a navigation directly to your item's Chrome Web Store listing.
 Doing that now lets you verify it produces the best user experience.
 
 We also recommend that you incorporate the new Chrome Web Store [download badge][2] into your
@@ -85,7 +85,7 @@ try {
 
 ### How do I trigger an informational page after installation? {: #trigger }
 
-Use the [chrome.runtime][4] event and open a new tab after installation. Here’s an example to use in
+Use the [chrome.runtime][4] event and open a new tab after installation. Here's an example to use in
 your background page:
 
 ```js

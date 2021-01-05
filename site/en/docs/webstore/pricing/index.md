@@ -68,7 +68,7 @@ Each time someone buys your app using Chrome Web Store Payments, Google charges 
 fee. For example, if you charge $1.99, you'll receive $1.89; if you charge
 $9.99, you'll receive $9.49.
 
-<div class="aside aside--note"><strong>Note:</strong> In-app payments for ARC apps are subject to a 30% transaction fee. For example, if you charge $1.99 for an item offered in an ARC app, you’ll receive $1.39. This is to ensure a consistent pricing structure with in-app payments made in apps available on Google Play. ARC does not currently support other purchase models including up-front payments, subscriptions and in-app version upgrades; as these types of purchases require provisioning from Google Play which is not currently enabled. For more information on monetizing ARC apps, see <a href="https://developer.chrome.com/apps/getstarted_arc">Getting Started with ARC</a>.</div>
+<div class="aside aside--note"><strong>Note:</strong> In-app payments for ARC apps are subject to a 30% transaction fee. For example, if you charge $1.99 for an item offered in an ARC app, you'll receive $1.39. This is to ensure a consistent pricing structure with in-app payments made in apps available on Google Play. ARC does not currently support other purchase models including up-front payments, subscriptions and in-app version upgrades; as these types of purchases require provisioning from Google Play which is not currently enabled. For more information on monetizing ARC apps, see <a href="https://developer.chrome.com/apps/getstarted_arc">Getting Started with ARC</a>.</div>
 
 <div class="aside aside--note"><b>Note</b>: Google Checkout sends out payments once per month in your local currency.</div>
 
@@ -96,18 +96,18 @@ change in Japan Consumption Tax Law (JCT) affects your tax responsibilities in J
 
 **Developers located outside of Japan**
 
-If you’re located outside of Japan and offer paid items or in-app purchases to customers in Japan,
-you’re responsible for charging, remitting, and reporting on any JCT to the National Tax Agency in
+If you're located outside of Japan and offer paid items or in-app purchases to customers in Japan,
+you're responsible for charging, remitting, and reporting on any JCT to the National Tax Agency in
 Japan.
 
 **Developers located in Japan**
 
-If you’re located in Japan and offer paid items or in-app purchases to customers in Japan, beginning
+If you're located in Japan and offer paid items or in-app purchases to customers in Japan, beginning
 October 1, 2015, the Chrome Web Store Payments transaction fee is now considered a
 business-to-business (B2B) transaction.
 
-You’re responsible for assessing and reporting JCT for the B2B services provided by a foreign entity
-to the National Tax Agency in Japan. JCT will not be automatically added to your app’s transaction
+You're responsible for assessing and reporting JCT for the B2B services provided by a foreign entity
+to the National Tax Agency in Japan. JCT will not be automatically added to your app's transaction
 fees.
 
 If you have specific questions related to your tax responsibilities in Japan, consult your tax

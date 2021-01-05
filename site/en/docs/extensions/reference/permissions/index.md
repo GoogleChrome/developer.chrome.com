@@ -8,7 +8,7 @@ api: permissions
 
 An extension can declare both required and optional permissions. In general, you should:
 
-- Use required permissions when they are needed for your extension’s basic functionality.
+- Use required permissions when they are needed for your extension's basic functionality.
 - Use optional permissions when they are needed for optional features in your extension.
 
 Advantages of _required_ permissions:

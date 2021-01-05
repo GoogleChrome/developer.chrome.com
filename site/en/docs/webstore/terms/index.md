@@ -160,7 +160,7 @@ it is needed. But if the user has opted into a separate agreement with you that 
 Product to store or use personal or sensitive information directly related to your Product (not
 including other products or applications) then the terms of that separate agreement will govern your
 use of such information. If the user provides your Product with Google Account information, your
-Product may only use that information to access the user’s Google Account when, and for the limited
+Product may only use that information to access the user's Google Account when, and for the limited
 purposes for which, the user has given you permission to do so. If your Product (or any part
 thereof) targets or directs itself to users under the age of consent, you must ensure that such
 Product (or any part thereof) is compliant with applicable laws or regulations at all times
@@ -173,13 +173,13 @@ Protection Regulation (GDPR)).
 development or publication of Products or other materials, that violates the Google Chrome Web Store
 Program Policies, or that:
 
-1.  knowingly violates a third party’s terms of service,
+1.  knowingly violates a third party's terms of service,
 2.  violates any applicable laws or regulations,
 3.  interferes with, disrupts, damages, harms, or accesses in an unauthorized manner the machines,
     hardware, devices, servers, networks, data, or other properties or services of any third party
     including, but not limited to, Google Chrome users, Google or any network operator, or
 4.  creates a spammy user experience, whether by posting repetitive content or misleading
-    information about an application’s purpose,
+    information about an application's purpose,
 5.  infringes on the intellectual property rights of others,
 6.  enables the unauthorized download of streaming content or media,
 7.  displays (via text, images, video, or other media) or links to:
@@ -201,7 +201,7 @@ separate agreement with Google.
 passes itself off as the Web Store. For the avoidance of doubt, you may offer Products as access
 points to paid services for which customers have registered and provided payment information.
 
-4.4.4 Your Product may not use or include the NPAPI plug-in unless you obtain Google’s prior
+4.4.4 Your Product may not use or include the NPAPI plug-in unless you obtain Google's prior
 permission for such use.
 
 4.5 You agree that you are solely responsible for (and that Google has no responsibility to you or
@@ -215,11 +215,11 @@ party contract or terms of service, or any applicable law or regulation, and for
 
 4.7 Product Ratings. The Web Store will allow users to rate Products. Along with other factors,
 Product ratings may be used to determine the placement of Products on the Web Store with higher
-rated Products generally given better placement, subject to Google’s right to change placement at
-Google’s sole discretion. For new Developers without Product history, Google may use or publish
+rated Products generally given better placement, subject to Google's right to change placement at
+Google's sole discretion. For new Developers without Product history, Google may use or publish
 performance measurements such as uninstall rates to identify or remove Products that are not meeting
 acceptable standards, as determined by Google. Google reserves the right to display Products to
-users in a manner that will be determined at Google’s sole discretion.  
+users in a manner that will be determined at Google's sole discretion.  
 Your Products may be subject to user ratings to which you may not agree. You may contact Google if
 you have any questions or concerns regarding such ratings at
 [http://groups.google.com/a/chromium.org/group/chromium-apps/][11].
@@ -241,7 +241,7 @@ purposes in connection with the operation and marketing of the Web Store.
 5.2 You grant to the user a non-exclusive, worldwide, and perpetual license to perform, display, and
 use the Products and any content contained in, accessed by, or transmitted through the Products in
 connection with Google Chrome. If you choose, you may include a separate end user license agreement
-(EULA) in your Product that will govern the user’s rights to the Products in lieu of the previous
+(EULA) in your Product that will govern the user's rights to the Products in lieu of the previous
 sentence.
 
 5.3 Google may use consultants and other contractors in connection with the performance of
@@ -278,7 +278,7 @@ of the other party. Subject to the terms and conditions of this Agreement, Devel
 Google and its affiliates a limited, non-exclusive license during the term of this Agreement to
 display Developer Brand Features for use in connection with the Web Store and in order to fulfill
 its obligations under this Agreement. Nothing in this Agreement gives Developer a right to use any
-of Google’s trade names, trademarks, service marks, logos, domain names, or other distinctive brand
+of Google's trade names, trademarks, service marks, logos, domain names, or other distinctive brand
 features.
 
 6.3 Publicity. Google and its affiliates may include Developer Brand Features, screenshots, videos,
@@ -295,7 +295,7 @@ in accordance with the Google Chrome Brand Guidelines located at
 ## 7\. Product Takedowns, Review, and Updates {: #review }
 
 7.1 Your Takedowns. You may remove your Products from future distribution via the Web Store at any
-time, but you must comply with this Agreement (and with the Payment Processor’s Payment Account
+time, but you must comply with this Agreement (and with the Payment Processor's Payment Account
 terms of service if you use the Payment Processor) for any Products distributed through the Web
 Store, including but not limited to refund requirements. Removing your Products from future
 distribution via the Web Store does not (a) affect the license rights of users who have previously
@@ -331,11 +331,11 @@ information such as your name and email address. Google may use this information
 Product in our directory or for other uses. If Google is notified by you or otherwise becomes aware
 and determines that a Product or any portion thereof or your Brand Features; (a) violates the
 intellectual property rights or any other rights of any third party; (b) violates any applicable law
-or is subject to an injunction; (c) is pornographic, obscene or otherwise violates Google’s hosting
+or is subject to an injunction; (c) is pornographic, obscene or otherwise violates Google's hosting
 policies or other terms of service as may be updated by Google from time to time; (d) is being
 published or distributed by you improperly; (e) may create liability for Google or any third party;
 (f) is deemed by Google to have a virus or is deemed to be malware, spyware or have an adverse
-impact on Google’s or a third party’s network; (g) violates the terms of this Agreement or the
+impact on Google's or a third party's network; (g) violates the terms of this Agreement or the
 Google Chrome Web Store Program Policies; or (h) the display of the Product is impacting the
 integrity of Google servers (i.e., users are unable to access such content or otherwise experience
 difficulty), Google may prevent the Product from being made available in the Web Store, remove the
@@ -391,7 +391,7 @@ statistics from the Web Store and user machines, devices, or other hardware, inc
 on how the Web Store and Products are being used.
 
 9.2 The data collected is examined in the aggregate to improve the Web Store for users and
-Developers and is maintained in accordance with Google’s Privacy Policy. To ensure the improvement
+Developers and is maintained in accordance with Google's Privacy Policy. To ensure the improvement
 of Products, limited aggregate data may be available to you upon written request.
 
 ## 10\. Terminating this Agreement {: #terminating }
@@ -474,7 +474,7 @@ conflict between them, to the extent of such conflict.
 
 15.2 You agree that if Google does not exercise or enforce any legal right or remedy which is
 contained in this Agreement (or which Google has the benefit of under any applicable law), this will
-not be taken to be a formal waiver of Google’s rights and that those rights or remedies will still
+not be taken to be a formal waiver of Google's rights and that those rights or remedies will still
 be available to Google.
 
 15.3 If any court of law, having the jurisdiction to decide on this matter, rules that any provision

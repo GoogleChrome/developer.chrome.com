@@ -33,7 +33,7 @@ suitable for all ages should be marked "Mature" on the Developer Dashboard.
 Sexually Explicit Material:
 
 : We don't allow content that contains nudity, graphic sex acts, sexually explicit material, or
-  content that drives traffic to commercial pornography sites. We also don’t allow content that
+  content that drives traffic to commercial pornography sites. We also don't allow content that
   promotes incest, bestiality, necrophilia, or non-consensual sexual acts. Google has a zero-tolerance
   policy against child pornography. If we become aware of content with child pornography, we will
   report it to the appropriate authorities and delete the Google Accounts of those involved with the
@@ -78,7 +78,7 @@ Impersonation or Deceptive Behavior:
   divert users or provide links to any other site that mimics Chrome Web Store or passes itself off as
   Chrome Web Store. Your Product and its user experience also must not mimic functionality or warnings
   from a user's operating system or browser. Any changes to device settings must be made with the
-  user’s knowledge and consent and be easily reversible by the user.
+  user's knowledge and consent and be easily reversible by the user.
 
   We do not allow products which deceive or mislead users, including in the content, title,
   description, or screenshots.
@@ -91,7 +91,7 @@ Impersonation or Deceptive Behavior:
   - Claimed functionalities which are not possible to implement (e.g. "Who has viewed your IG
     account")
   - Developer or product names which misrepresent their current status or performance on the Chrome
-    Web Store (e.g. "Editor’s Choice" or "Number One")
+    Web Store (e.g. "Editor's Choice" or "Number One")
 
   If your product has a blank description field or is missing an icon or screenshots, it will be
   rejected. If any of your product's content, title, icon, description or screenshots contains false
@@ -100,7 +100,7 @@ Impersonation or Deceptive Behavior:
 Featured Products:
 
 : The Chrome Web Store features products that align with our standards, values, and that we believe
-  will produce valuable user experiences. Certain products that don’t meet these standards, but which
+  will produce valuable user experiences. Certain products that don't meet these standards, but which
   do not explicitly violate CWS policies - such as VPN extensions and Video Downloaders - may be
   restricted from feature in the Store, but will still be available to users. For example, the
   following products are currently not featured in the CWS Store:
@@ -198,13 +198,13 @@ For more information about this policy, please see the [Developer FAQ][11].
 
 Developers are important partners in maintaining a great user experience in the Chrome Web Store.
 
-**Repetitive Content:** We don’t allow any developer, related developer accounts, or their
+**Repetitive Content:** We don't allow any developer, related developer accounts, or their
 affiliates to submit multiple extensions that provide duplicate experiences or functionality on the
 Chrome Web Store. Extensions should provide value to users through the creation of unique content or
 services.
 
 **Keyword Spam:** We don't allow extensions with misleading, improperly formatted, non-descriptive,
-irrelevant, excessive, or inappropriate metadata, including but not limited to the extension’s
+irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
 description, developer name, title, icon, screenshots, and promotional images. Developers must
 provide a clear and well-written description. We also don't allow unattributed or anonymous user
 testimonials in the product's description.
@@ -220,9 +220,9 @@ non-functioning features—are not allowed.
 
 **Notification Abuse:** We do not allow extensions that abuse, or are associated with abuse, of
 notifications by sending spam, ads, promotions, phishing attempts, or unwanted messages that harm
-the user’s browsing experience.
+the user's browsing experience.
 
-**Message Spam:** We don’t allow extensions that send messages on behalf of the user without giving
+**Message Spam:** We don't allow extensions that send messages on behalf of the user without giving
 the user the ability to confirm the content and intended recipients.
 
 In addition to these requirements, all extensions must comply with [Google's Webmaster Quality
@@ -295,11 +295,11 @@ apply to scraped content or otherwise automatically gathered user data.
     4.  as part of a merger, acquisition or sale of assets of the developer after obtaining explicit
         prior consent from the user.
 3.  Do not allow humans to read user data, unless:
-    1.  the user’s explicit consent to read specific data for example, helping a user re-access the
+    1.  the user's explicit consent to read specific data for example, helping a user re-access the
         product or a service after having lost their password) is obtained;
     2.  the data is aggregated and anonymized and used for internal operations in accordance with
         applicable privacy and other jurisdictional legal requirements;
-    3.  it’s necessary for security purposes (e.g., investigating abuse); or,
+    3.  it's necessary for security purposes (e.g., investigating abuse); or,
     4.  to comply with applicable laws.
 
 **All other transfers, uses, or sale of user data is completely prohibited, including:**
@@ -317,7 +317,7 @@ page or privacy policy noting: "The use of information received from Google APIs
 
 ### Use of Permissions {: #permissions }
 
-Request access to the narrowest permissions necessary to implement your Product’s features or
+Request access to the narrowest permissions necessary to implement your Product's features or
 services. If more than one permission could be used to implement a feature, you must request those
 with the least access to data or functionality.
 

@@ -30,7 +30,7 @@ letters.
 Click the **Errors** button to view the error log. The extensions system has found an issue in the
 background script.
 
-`Uncaught TypeError: Cannot read property ‘addListener’ of undefined`
+`Uncaught TypeError: Cannot read property 'addListener' of undefined`
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5UNQ4gp40qQZIwOLTzxA.png",
        alt="Extensions Management Page displaying background script error", height="556", width="646" %}
@@ -82,7 +82,7 @@ Popup errors can also be viewed by inspecting the popup.
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PTfS6FEsE6vkbtDVMcsM.png",
        alt="DevTools displaying popup error", height="189", width="499" %}
 
-The error, `tabs is undefined`, says the extension doesn’t know where to inject the content script.
+The error, `tabs is undefined`, says the extension doesn't know where to inject the content script.
 This can be corrected by calling the [`tabs.query()`][4] method, then selecting the active tab.
 
 ```js/8-12
@@ -113,7 +113,7 @@ extension.
 
 ### Content script {: #debug_cs }
 
-Refresh the page, open the popup and click the green box. And... nope, the background still hasn’t
+Refresh the page, open the popup and click the green box. And... nope, the background still hasn't
 changed colors! Navigate back to the Extensions Management Page and... there is no **Errors**
 button. The likely culprit is the content script, which runs inside the web page.
 

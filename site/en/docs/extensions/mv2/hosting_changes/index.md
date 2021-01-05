@@ -8,7 +8,7 @@ description: Details about the hosting changes for Chrome Extensions that starte
 
 {% include 'partials/extensions/mv2-legacy-page.md' %}
 
-As a follow-up to our blog post on [protecting Windows users from malicious extensions][1], we’re
+As a follow-up to our blog post on [protecting Windows users from malicious extensions][1], we're
 enforcing the following changes starting in Chrome 33 Beta and stable channels for Windows:
 
 - Users can only install extensions hosted in the Chrome Web store, except for installs via
@@ -17,7 +17,7 @@ enforcing the following changes starting in Chrome 33 Beta and stable channels f
   [hard-disabled][4] (i.e the user cannot enable these extensions again), except for installs via
   [enterprise policy][5] or [developer mode][6].
 
-## What’s the rationale for this measure? {: #rationale }
+## What's the rationale for this measure? {: #rationale }
 
 See [Protecting Windows users from malicious extensions][7].
 
@@ -27,7 +27,7 @@ If your extensions are currently hosted outside the Chrome Web Store, you should
 Chrome Web Store as soon as possible. The above changes are already effective on Chrome 33 Beta for
 Windows and will be effective on Chrome 33 stable for Windows (around end of Feb 2014). Once you
 migrate your extensions to the Chrome Web Store, there will be no impact to your users, who will
-still be able to use your extension as if nothing changed. If you’re migrating your extensions to
+still be able to use your extension as if nothing changed. If you're migrating your extensions to
 the Chrome Web Store, start testing with Chrome 33 right away.
 
 ## What will happen if I migrate the extension to the Chrome Web Store sometime in the future? Will I lose all my users? {: #migration }
@@ -59,9 +59,9 @@ Windows][9] or on all Chrome channels in other operating systems.
 
 ## Why couldn't this problem be solved by having a setting/option to load extensions that are not hosted in the Chrome Web Store? {: #sandboxing }
 
-Unlike modern mobile operating systems, Windows does not sandbox applications. Hence we wouldn’t be
+Unlike modern mobile operating systems, Windows does not sandbox applications. Hence we wouldn't be
 able to differentiate between a user opting in to this setting versus a malicious native app
-overriding the user’s setting.
+overriding the user's setting.
 
 ## What are the supported deployment options for extensions after this change? {: #deployment }
 
@@ -75,7 +75,7 @@ will be supported:
   key are deprecated. Note that this deployment option works only for Chrome Web Store hosted
   extensions, and update_url cannot point to any other host other than
   [https://clients2.google.com/service/update2/crx][13].
-- For Enterprises, we’ll continue to support [group policy][14] to install extensions, irrespective
+- For Enterprises, we'll continue to support [group policy][14] to install extensions, irrespective
   of where the extensions are hosted. Note that the user's machine has to join a domain for GPO
   policy pushes to be effective.
 
@@ -96,7 +96,7 @@ following [support article][17].
 ## Why do I see a bubble about "Disable developer mode extensions" when loading an unpacked extension in Windows stable/beta channels? {: #diable_developer_mode }
 
 We do not want the developer mode to be used as an attack vector for spreading malicious extensions.
-Hence we’re informing users about developer mode extensions on Windows stable/beta channels and
+Hence we're informing users about developer mode extensions on Windows stable/beta channels and
 giving them an option to disable these extensions.
 
 [1]: http://blog.chromium.org/2013/11/protecting-windows-users-from-malicious.html

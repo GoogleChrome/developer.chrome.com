@@ -47,11 +47,11 @@ MVC is composed of three components:
 
 ### Model {: #model }
 
-Model is where the application’s data objects are stored. The model doesn’t know anything about
+Model is where the application's data objects are stored. The model doesn't know anything about
 views and controllers. When a model changes, typically it will notify its observers that a change
 has occurred.
 
-To understand this further, let’s use the Todo list app, a simple, one page web app that tracks your
+To understand this further, let's use the Todo list app, a simple, one page web app that tracks your
 task list.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7WQXOcG3PNRhnsjnsvjx.png", alt="model-view-controller", height="366", width="444" %}
@@ -66,7 +66,7 @@ HTML, CSS, JavaScript and often templates. This part of your Chrome App has acce
 
 For example, in the above todo list web app, you can create a view that nicely presents the list of
 todo items to your users. Users can also enter a new todo item through some input format; however,
-the view doesn’t know how to update the model because that’s the controller’s job.
+the view doesn't know how to update the model because that's the controller's job.
 
 ### Controller {: #controller }
 
@@ -119,7 +119,7 @@ functions such as creating, querying and filtering the model instances contained
 An adapter, or a proxy, receives the requests from a store and translates them into appropriate
 actions to take against your persistent data layer (such as JSON API). This is interesting in the
 modern web app design because you often interact with more than one persistent data layer such as a
-remote server and browser’s local storage. Chrome Apps provides both [Chrome Storage API][15] and
+remote server and browser's local storage. Chrome Apps provides both [Chrome Storage API][15] and
 [HTML 5 fileSystem API][16] for client side storage.
 
 Pros:
@@ -128,7 +128,7 @@ Pros:
 
 Cons:
 
-- Hard to test since the persistence layer is ‘baked’ into the object hierarchy.
+- Hard to test since the persistence layer is 'baked' into the object hierarchy.
 - Having different objects use different persistent stores is difficult (for example, FileSystem
   APIs vs indexedDB vs server–side).
 - Reusing Model in other applications may create conflicts, such as sharing a single Customer class
@@ -153,22 +153,22 @@ Cons:
 ### AppController does persistence {: #app_controller }
 
 In some patterns, there is a supervising controller responsible for navigating between one MVC and
-another. The AppController decides, for example, that a ‘Back’ button moves the client from an
+another. The AppController decides, for example, that a 'Back' button moves the client from an
 editing screen (which contains MVC widgets/formats), to a settings screen.
 
-In the AppController pattern, the AppController responds to events and changes the app’s current
+In the AppController pattern, the AppController responds to events and changes the app's current
 screen by issuing a call to the datastore to load any models needed and constructing all of the
 matching views and controllers for that screen.
 
 Pros:
 
 - Moves persistence layer even higher up the stack where it can be easily changed.
-- Doesn’t pollute lower level controllers like a DatePickerController with the need to know about
+- Doesn't pollute lower level controllers like a DatePickerController with the need to know about
   persistence.
 
 Cons:
 
-- Each ‘Page/Screen’ of the app now requires a lot of boilerplate to write or update: Model, View,
+- Each 'Page/Screen' of the app now requires a lot of boilerplate to write or update: Model, View,
   Controller, AppController.
 
 ### Recommended MVC frameworks {: #recommended }

@@ -67,17 +67,17 @@ This section introduces the most important and impactful features of MV3.
 Manifest V3 replaces background pages with service workers.
 
 Like their web page counterparts, extension service workers listen for and
-respond to events in order to enhance the end user’s experience. For web
+respond to events in order to enhance the end user's experience. For web
 service workers this typically means managing cache, preloading resources, and
 enabling offline web pages. While extension service workers can still do all of
 this, the extension package already contains a bundle of resources that can be
 accessed offline. As such, extension service workers tend to focus on reacting
-to relevant browser events exposed by Chrome’s extensions APIs.
+to relevant browser events exposed by Chrome's extensions APIs.
 
 
 ### Network request modification {: #network-request-modification }
 
-The way that extensions can modify network requests is changing in MV3. There’s
+The way that extensions can modify network requests is changing in MV3. There's
 a new [declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest)
 API which lets extensions modify and block network requests in a
 privacy-preserving and performant way. The essence of this API is:
@@ -109,9 +109,9 @@ blocking functionality, without requiring any host permissions.
 
 ### Remotely hosted code {: #remotely-hosted-code }
 
-A key security improvement in MV3 is that extensions can’t load remote code
+A key security improvement in MV3 is that extensions can't load remote code
 like JavaScript or Wasm files. This lets us more reliably and efficiently
-review the safe behavior of extensions when they’re submitted to the Chrome Web
+review the safe behavior of extensions when they're submitted to the Chrome Web
 Store. Specifically, all logic must be included in the extension's package.
 
 Instead of remote code, we recommend the use of remote configuration files. See
@@ -127,7 +127,7 @@ methods.
 
 You can use promise chains, as well as async/await. If you provide a callback
 to an API method, this prevents the promise from being returned. Therefore you
-can defer this part of your migration until you’re ready, or begin using
+can defer this part of your migration until you're ready, or begin using
 promises immediately.
 
 Some scenarios, such as event listeners, will still require callbacks.

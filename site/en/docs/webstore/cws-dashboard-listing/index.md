@@ -10,8 +10,8 @@ description: How to add listing information for your Chrome Web Store item.
        alt="Screenshot of the Chrome Web Store developer dashboard item listing tab", height="472", width="800" %}
 
 Add the store listing information for your item that isn't in the ZIP file, such as a long
-description, screenshots, videos, and links to related sites. You’ll need the following to finish
-your item’s store listing:
+description, screenshots, videos, and links to related sites. You'll need the following to finish
+your item's store listing:
 
 - A **detailed description** of your item. Write your description to entice users to download your
   item. Make sure to start your description with a concise statement of what your item does, so

@@ -7,7 +7,7 @@ title: "Google Play for Education Addendum to the Google Chrome Web Store Develo
 ---
 
 In connection with the Google Chrome Web Store, Google may make certain Chrome Web Store
-applications available in Google’s Play for Education site.
+applications available in Google's Play for Education site.
 
 If You or Your organization is interested in participating, please verify that the Contact
 Information below is correct and that the person listed is a qualified representative from Your
@@ -85,8 +85,8 @@ Capitalized terms not defined in this Addendum shall have the meanings set forth
 
 ### Marketing {: #marketing }
 
-You will be responsible for uploading Your Product s in accordance with the Web Store’s and Play for
-Education’s terms and conditions, including, but not limited to providing required Product and
+You will be responsible for uploading Your Product s in accordance with the Web Store's and Play for
+Education's terms and conditions, including, but not limited to providing required Product and
 Selected Product information to users, and accurately disclosing the security permissions necessary
 for the Product and Selected Product to function on user machines, hardware, or other devices.
 Products and Selected Products that are not properly uploaded will not be published in the Web Store
@@ -103,30 +103,30 @@ requirements:
 - If apps contain ads, the ads must be clearly distinguishable from other app content. Other app
   content must not be used as means of promoting commercial products in a manner unrelated to the
   functions of the app.
-- If an app contains messaging functionality, or collects or uses the user’s geo-location, You must
+- If an app contains messaging functionality, or collects or uses the user's geo-location, You must
   notify users of these functions clearly and prominently in the app description in addition to
   obtaining any user consents that are required under applicable law.
 - Apps and the ads they contain must not request users to input personal information or collect such
-  information, except for the purpose of verifying the user’s entitlement to use the app.
+  information, except for the purpose of verifying the user's entitlement to use the app.
 - Apps must not perform any of the following functions: tracking other apps or content installed on
-  the user’s device; collect or store geo-location data from the user’s device without consent or
+  the user's device; collect or store geo-location data from the user's device without consent or
   for purposes unrelated to the educational functioning of the app; collect or store information to
   build profiles of the user for commercial purposes unrelated to the educational function of the
-  app; or add bookmarks, shortcuts or icons to the user’s device for third party services,
+  app; or add bookmarks, shortcuts or icons to the user's device for third party services,
   advertising or any function other than to provide access to the app.
 - Apps must not contain sexually suggestive content or portray violence.
 
 ### Transparency {: #transparency }
 
-Your app’s title and description must contain accurate information about the app’s content and
+Your app's title and description must contain accurate information about the app's content and
 functioning, and must not be misleading or deceptive. App descriptions should be designed to assist
-an educator to assess the app’s suitability for educational use.
+an educator to assess the app's suitability for educational use.
 
 ### COPPA compliance {: #coppa }
 
 The laws of some countries, includi ng the United States, impose restrictions on the online
 collection and use of information from children. You acknowledge that You are responsible for
-ensuring that each app that You include in Play for Education complies with the Children’s Online
+ensuring that each app that You include in Play for Education complies with the Children's Online
 Privacy Protection Act and all other applicable laws and regulations.
 
 ### Free trial period {: #trial }
@@ -149,7 +149,7 @@ Developers offering, promoting or making available additional paid content, serv
 functionality for use within an app downloaded from Play for Education must make that content,
 services or functionality available for sale through Play for Education (when the relevant
 transaction type becomes available through Google Play for Education), and the exceptions to the
-requirement to use Google Play’s payment system for in-app purchases of digital content or goods
+requirement to use Google Play's payment system for in-app purchases of digital content or goods
 noted in the Google Play Developer Program Policies shall not apply.
 
 ### Blocking of In-app Purchases {: #blocking }
@@ -163,7 +163,7 @@ Once an institution has made a free o r paid app available to a user through Pla
 institution may withdraw access from that user and assign it to another member of the institution
 any number of times without additional charge. After an institution reassigns an app to a new user,
 the user previously granted access to the app will no longer have access to the app through the
-user’s account. If You do not wish Your app to be reassignable in this way, You should not make it
+user's account. If You do not wish Your app to be reassignable in this way, You should not make it
 available through Play for Education. You may withdraw Your app from Play for Education at any time
 and future purchases of Your app will not be reassignable. However, any copies of Your app purchased
 while Your app was part of Play for Education will continue to be reassignable, and are eligible for

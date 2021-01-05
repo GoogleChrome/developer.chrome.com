@@ -15,7 +15,7 @@ more about [**migrating your app**][2].
 !!!
 
 Web authentication protocols utilize HTTP features, but Chrome Apps run inside the app container;
-they don’t load over HTTP and can’t perform redirects or set cookies.
+they don't load over HTTP and can't perform redirects or set cookies.
 
 Use the [Chrome Identity API][3] to authenticate users: the `getAuthToken` for users logged into
 their Google Account and the `launchWebAuthFlow` for users logged into a non-Google account. If your
@@ -235,7 +235,7 @@ chrome.identity.launchWebAuthFlow(
 
 The <url-to-do-auth> is whatever the URL is to do auth to the provider from a website. For example,
 let us say that you are performing OAuth2 flow with a provider and have registered your app with
-client id 123456789012345 and you want access to user’s photos on the provider’s website:
+client id 123456789012345 and you want access to user's photos on the provider's website:
 `https://www.website-of-provider-with-user-photos.com/dialog/oauth?client_id=123456789012345& redirect_uri=https://abcdefghijklmnopqrstuvwxyzabcdef.chromiumapp.org/provider_cb&response_type=token&scope=user_photos`
 
 The provider will perform authentication and if appropriate, will show login and/or approval UI to

@@ -90,7 +90,7 @@ New CSS3 artifacts are available:
 - The [Flexbox][21] layout model is fully supported (prefixed as -webkit-flex)
 - [Viewport units][22], `vh`, `vmin`, and `vw` for responsive design
 - [@supports][23] conditional blocks to test whether Chromium supports certain property/value pairs
-- The [:unresolved CSS pseudo-class][24] that lets you style a custom element that hasn’t been
+- The [:unresolved CSS pseudo-class][24] that lets you style a custom element that hasn't been
   registered in the browser yet (custom elements are part of the [Web Components][25] standard in
   development)
 

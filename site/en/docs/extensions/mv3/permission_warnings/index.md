@@ -7,9 +7,9 @@ description: >
   How to implement permissions to protect your users and your Extension.
 ---
 
-An extension’s ability to access websites and most Chrome APIs is determined by its declared
+An extension's ability to access websites and most Chrome APIs is determined by its declared
 [permissions][1]. Permissions should be restricted to only what is needed for its functionality.
-Limiting permissions establishes an extension’s capabilities and reduces possible incursion to data
+Limiting permissions establishes an extension's capabilities and reduces possible incursion to data
 if the extension is compromised by an attacker. Protect extensions and their users by implementing
 explicit, minimal and optional permissions.
 
@@ -61,14 +61,14 @@ making features optional if they require permissions with warnings.
 
 ## Trigger optional permissions with events {: #optional_events }
 
-The [optional permissions sample extension’s][6] core functionality is overriding the new tab page.
-One feature is displaying the user’s goal of the day. This feature only requires the [storage][7]
+The [optional permissions sample extension's][6] core functionality is overriding the new tab page.
+One feature is displaying the user's goal of the day. This feature only requires the [storage][7]
 permission, which does not include a warning.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wtbjayBDYDyKZe2x580P.png",
        alt="Extension button that enables additional features", height="350", width="395" %}
 
-The extension has an additional feature; displaying the user’s top sites. This feature requires the
+The extension has an additional feature; displaying the user's top sites. This feature requires the
 [topSites][8] permission, which has a warning.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5edHzqeUOJ8V6XHkjNBM.png",
@@ -118,7 +118,7 @@ The following user gestures enable `activeTab`:
 ## Allowing access {: #allow_access }
 
 If an extension needs to access `file://` URLs or operate in incognito mode, users will need to
-enable access for those features inside the extension’s detail page at chrome://extensions.
+enable access for those features inside the extension's detail page at chrome://extensions.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CXSHPxG4giUkzfGR67mY.png",
        alt="Allow file urls and incognito mode on the extension detial page", height="137", width="674" %}
@@ -149,13 +149,13 @@ and click **PACK EXTENSION**.
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Jvm8mGpe3j0j0aydcRnR.png",
        alt="Developer Mode is Checked then Click Pack Extension", height="120", width="642" %}
 
-Specify the path to the extension’s folder in the Extension root directory field then click the
+Specify the path to the extension's folder in the Extension root directory field then click the
 **Pack Extension** button. Ignore the **Private key** field for a first-time package.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vVw89rdJOdXFYxvgM9Sj.png",
        alt="Specify Extension Path then Click Pack Extension", height="307", width="524" %}
 
-Chrome will create two files, a `.crx` file and a `.pem` file, which contains the extension’s
+Chrome will create two files, a `.crx` file and a `.pem` file, which contains the extension's
 private key.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GLrVd51VTUF86K8gUxu8.png",

@@ -55,9 +55,9 @@ answer here, check the [extension hosting changes FAQs][2], the [general extensi
 - [How do I localize my listing in the store?][37]
 - [How do I localize my detailed description?][38]
 - [How do I show different screenshot images per region?][39]
-- [My item’s status says "pending review." What does this mean?][40]
+- [My item's status says "pending review." What does this mean?][40]
 - [How long will it take to review my item?][41]
-- [Why isn’t my app showing up on search?][42]
+- [Why isn't my app showing up on search?][42]
 - [My app has been removed from the Chrome Web Store. What should I do?][43]
 - [How do I link my Play and Chrome Web Store item so that the "Available for Android" link appears
   on my item detail page?][44]
@@ -394,7 +394,7 @@ Once the image is uploaded you will be presented with an option to "Show this it
 locales" or "Show this item **only** in the 'en-GB' locale". Select the later to show the screenshot
 to only users of the "en-GB" Chrome Web Store.
 
-### My item’s status says "pending review." What does this mean? {: #faq-listing-08 }
+### My item's status says "pending review." What does this mean? {: #faq-listing-08 }
 
 This means that you've submitted your item for publishing and it is currently in the queue to be
 reviewed. The item will not appear in the store until it passes this review. (See also [How long
@@ -424,7 +424,7 @@ For more information about the developer program policies, see:
 If your item's status says "pending review" for more than three weeks, you should [contact
 support][124].
 
-### Why isn’t my app showing up on search? {: #faq-listing-09 }
+### Why isn't my app showing up on search? {: #faq-listing-09 }
 
 It depends. There are several reasons why your item may not be showing up in search.
 
@@ -554,7 +554,7 @@ are bundled into the `.crx` file and can use the extensions APIs.
 Yes, but there are risks in doing so. Specifically, it is easy for motivated people to bypass
 payments for packaged apps. This holds true even if you have used our Licensing API in your locally
 stored packaged app, since locally stored content is not secure and can be modified (including calls
-to the Licensing API). If you’d like to have the option of blocking access to your app by
+to the Licensing API). If you'd like to have the option of blocking access to your app by
 unauthorized users, selling a packaged app may not be the right solution for you. An alternative to
 consider is moving to a hosted app model with a server-side licensing check.
 
@@ -752,7 +752,7 @@ No, themes have no code or server-side components.
 
 ## Additional Troubleshooting
 
-If you’ve fixed all errors produced by the tools and continue experiencing issues, please [contact
+If you've fixed all errors produced by the tools and continue experiencing issues, please [contact
 us][158] with any additional details regarding the problem. Please send us a screenshot of the
 problem and include your .crx file.
 

@@ -23,7 +23,7 @@ Chrome Web Store [developer program policies][1]:
 ```text
 Use of Permissions
 
-Request access to the narrowest permissions necessary to implement your Product’s features or
+Request access to the narrowest permissions necessary to implement your Product's features or
 services. If more than one permission could be used to implement a feature, you must request those
 with the least access to data or functionality.
 
@@ -90,7 +90,7 @@ by, or produced by another company or organization, if that is not the case. Dev
 divert users or provide links to any other site that mimics Chrome Web Store or passes itself off
 as Chrome Web Store. Your Product and its user experience also must not mimic functionality or
 warnings from a user's operating system or browser. Any changes to device settings must be made
-with the user’s knowledge and consent and be easily reversible by the user.
+with the user's knowledge and consent and be easily reversible by the user.
 
 We do not allow Products which deceive or mislead users, including in the content, title,
 description, or screenshots. Don't misrepresent the functionality of your Product or include
@@ -101,7 +101,7 @@ Product they are adding. For example, Products should not contain:
 - Claimed functionalities which are not possible to implement (E.g. "Who has viewed your IG
   account")
 - Developer or Product names which misrepresent their current status or performance on the Chrome
-  Web Store (E.g. "Editor’s Choice" or "Number One")
+  Web Store (E.g. "Editor's Choice" or "Number One")
 
 If your Product has a blank description field or is missing an icon or screenshots, it will be
 rejected. If any of your Product's content, title, icon, description or screenshots contains false
@@ -247,7 +247,7 @@ Chrome Web Store [developer program policies][7]:
 Sexually Explicit Material:
 
 We don't allow content that contains nudity, graphic sex acts, sexually explicit material, or
-content that drives traffic to commercial pornography sites. We also don’t allow content that
+content that drives traffic to commercial pornography sites. We also don't allow content that
 promotes incest, bestiality, necrophilia, or non-concensual sexual acts. Google has a
 zero-tolerance policy against child pornography. If we become aware of content with child
 pornography, we will report it to the appropriate authorities and delete the Google Accounts of
@@ -601,7 +601,7 @@ Chrome Web Store [developer program policies][17]:
 Spam & Placement in the Store
 
 Keyword Spam: We don't allow extensions with misleading, improperly formatted, non-descriptive,
-irrelevant, excessive, or inappropriate metadata, including but not limited to the extension’s
+irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
 description, developer name, title, icon, screenshots, and promotional images. Developers must
 provide a clear and well-written description. We also don't allow unattributed or anonymous user
 testimonials in the app's description.
@@ -688,7 +688,7 @@ Chrome Web Store [developer program policies][20]:
 ```text
 Spam & Placement in the Store
 
-Repetitive Content: We don’t allow any developer or their affiliates to submit multiple extensions
+Repetitive Content: We don't allow any developer or their affiliates to submit multiple extensions
 that provide duplicate experiences or functionality on the Chrome Web Store.
 
 User Ratings, Reviews, and Installs: Developers must not attempt to manipulate the placement of
@@ -698,9 +698,9 @@ downloads, reviews and ratings.
 
 Notification Abuse: We do not allow extensions that abuse, or are associated with abuse, of
 notifications by sending spam, ads, promotions, phishing attempts, or unwanted messages that harm
-the user’s browsing experience.
+the user's browsing experience.
 
-Message Spam: We don’t allow extensions that send messages on behalf of the user without giving
+Message Spam: We don't allow extensions that send messages on behalf of the user without giving
 the user the ability to confirm the content and intended recipients.
 
 In addition to these requirements, all extensions must comply with Google's Webmaster Quality

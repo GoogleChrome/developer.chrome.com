@@ -50,12 +50,12 @@ Or, an extension can have a single purpose limited to a narrow **browser functio
 "new tab page", "tab management", or "browser history"). If the extension is implemented in a single
 function, then it can offer content or features related to different areas or subjects. For example,
 an extension that replaces the new tab page could offer multiple unrelated features on the new tab
-page (for example, weather forecast, news headlines, search engine, and so on), but it can’t also
-provide a browser action button, change the browser’s homepage, or make any other changes to browser
+page (for example, weather forecast, news headlines, search engine, and so on), but it can't also
+provide a browser action button, change the browser's homepage, or make any other changes to browser
 functionality.
 
-Be conscious of your extension’s permissions. We assume your extension utilizes each of the
-permissions it requests. Excessive permissions unrelated to your extension’s single purpose will be
+Be conscious of your extension's permissions. We assume your extension utilizes each of the
+permissions it requests. Excessive permissions unrelated to your extension's single purpose will be
 viewed as enabling unrelated functionalities, resulting in a policy violation.
 
 ## 4.) Will this policy affect my extension? {: #four }
@@ -67,16 +67,16 @@ single purpose. Ask yourself these questions:
 - If my extension has a narrow focus area, are all of the features directly related to that single
   purpose?
 - If my extension has multiple features, does it only affect a narrow function of the browser?
-- Does my extension modify Chrome’s behavior in a predictable way, in line with the extension's
+- Does my extension modify Chrome's behavior in a predictable way, in line with the extension's
   narrow, stated purpose?
 - Does my extension request any unnecessary permissions?
 
-If you’re unsure, you can email [chromewebstore-policy@google.com][7] with your extension ID, and
-we’ll take a look and try to provide feedback within a week. If your extension does not have a
+If you're unsure, you can email [chromewebstore-policy@google.com][7] with your extension ID, and
+we'll take a look and try to provide feedback within a week. If your extension does not have a
 single purpose, then you will need to remove functionality or split your extension into different
 extensions.
 
-## 5.) What will happen if I don’t make my extension compliant with this policy? {: #five }
+## 5.) What will happen if I don't make my extension compliant with this policy? {: #five }
 
 If you created your extension after December 19, 2013, your extension will not be permitted in the
 Chrome Web Store. If you created your extension prior to December 19,2013, your extension may be
@@ -87,7 +87,7 @@ before it can be restored.
 
 In order to minimize disruption for users, we recommend that you take a moment to carefully review
 your extensions and make necessary updates as soon as possible. You can email us at
-[chromewebstore-policy@google.com][8] with your extension ID, and we’ll try to provide feedback
+[chromewebstore-policy@google.com][8] with your extension ID, and we'll try to provide feedback
 within a week.
 
 ## 6.) Can my extension make changes to the start page, homepage, and new tab settings? {: #six }
@@ -145,9 +145,9 @@ extension.
 
 All Chrome settings changed by an extension will be reverted when that extension is disabled.
 
-## 11.) Will users’ existing homepage, search provider or startup pages be affected by the introduction of the Settings Override API? {: #eleven }
+## 11.) Will users' existing homepage, search provider or startup pages be affected by the introduction of the Settings Override API? {: #eleven }
 
-No. A user’s existing homepage, search provider or startup settings will remain unchanged by the
+No. A user's existing homepage, search provider or startup settings will remain unchanged by the
 introduction of Settings Override API. Following the launch of the Settings Override API, only
 extensions can programmatically change these settings and only through the Settings Override API.
 
@@ -184,42 +184,42 @@ Chrome Web Store, then the extension will be automatically disabled. As noted ab
 behaviours controlled by the extension, including any settings controlled by the Settings Override
 API, will be reverted when the extension is disabled. You can find more information [here][13].
 
-## 16.) If my extension is rejected from the Chrome Web Store because it doesn’t comply with the single purpose policy, what will happen after the requirement to host extensions in the Chrome Web Store comes into effect? {: #sixteen }
+## 16.) If my extension is rejected from the Chrome Web Store because it doesn't comply with the single purpose policy, what will happen after the requirement to host extensions in the Chrome Web Store comes into effect? {: #sixteen }
 
 If your extension is rejected from the Chrome Web Store, you will need to make changes or appeal the
 decision. After the requirement to host extensions in the Chrome Web Store comes into effect for
 Windows in late May 2014, your extension must be hosted in the Chrome Web Store or it will be
-automatically disabled from the users’ browsers. The same will occur for Mac extensions that are not
+automatically disabled from the users' browsers. The same will occur for Mac extensions that are not
 hosted on the Chrome Web Store prior to the release of 44 in July 2015.
 
 ## 17.) If my extension gets flagged for review under the single purpose policy, what will happen? {: #seventeen }
 
-Our team will review it, and it may be removed from the Chrome Web Store. You’ll have a chance to
+Our team will review it, and it may be removed from the Chrome Web Store. You'll have a chance to
 make changes and appeal the decision. As noted above, if you created your extension before we
 announced the policy on December 19, 2013, you have until July 22, 2014 to make changes. If your
 extension was created after the policy was announced, it needs to be compliant now. You can
 temporarily unpublish it and contact us at [chromewebstore-policy@google.com][14] with your
-extension ID if you’d like feedback. We’ll try to respond within a week.
+extension ID if you'd like feedback. We'll try to respond within a week.
 
-## 18.) Chrome version 49 (released March 2016) updated the browser UI and now includes a browser or page action button of my extension in the upper-right corner of the toolbar. If my extension’s single purpose is to change the new tab page, how can I comply with the Single Purpose Policy with these new browser changes? {: #eighteen }
+## 18.) Chrome version 49 (released March 2016) updated the browser UI and now includes a browser or page action button of my extension in the upper-right corner of the toolbar. If my extension's single purpose is to change the new tab page, how can I comply with the Single Purpose Policy with these new browser changes? {: #eighteen }
 
 The addition of a page or browser action button under the new Chrome UI (Chrome 49 and later), will
 not trigger a single purpose policy violation if the button only serves as a shortcut to the
-extension’s main functionality. For example, if an extension’s single purpose is changing the new
+extension's main functionality. For example, if an extension's single purpose is changing the new
 tab page, clicking the toolbar icon can open a new tab page. The page or browser action button
-button, however, cannot introduce any additional functionality or content. If an extension’s single
+button, however, cannot introduce any additional functionality or content. If an extension's single
 purpose is a narrow subject matter or focus area, then the functionality and content of the browser
 action button must likewise fall within that narrow purpose.
 
 ## 19.) I need help. Who should I contact? {: #nineteen }
 
-You can email [chromewebstore-policy@google.com][15] with your extension ID, and we’ll take a look
+You can email [chromewebstore-policy@google.com][15] with your extension ID, and we'll take a look
 and try to provide feedback within a week. This is a lightweight review intended to give you an
 indication of whether your extension will comply with the new policy.
 
 ## Appendix: Examples of extensions that comply with the quality guidelines {: #appendix }
 
-An extension that adds features to Chrome’s browser history. All of the features are contained in a
+An extension that adds features to Chrome's browser history. All of the features are contained in a
 single browser function.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Z2D3bf3oKeu7xFYr6JkY.png",

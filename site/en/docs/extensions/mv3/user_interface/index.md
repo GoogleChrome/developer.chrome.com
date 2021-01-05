@@ -89,7 +89,7 @@ otherwise it will be displayed in greyscale.
 
 Define rules for when the extension is usable by calling [`chrome.declarativeContent`][6] under the
 [`runtime.onInstalled`][7] listener in a [background script][8]. The [Page action by URL][9] sample
-extension sets a condition that the url must include a ‘g’. If the condition is met, the extension
+extension sets a condition that the url must include a 'g'. If the condition is met, the extension
 calls [`declarativeContent.ShowPageAction()`][10].
 
 ```js
