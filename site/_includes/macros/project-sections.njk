@@ -29,6 +29,13 @@ have been defined in the _data/docs/*.yml file for this project.
         {{ projectSections(item.sections, type) }}
       </li>
     {% elif item.url %}
+      {#
+        Reset postTitle and friends, in case we can't find the post below.
+        (Otherwise, the values from our previous iteration are used.)
+      #}
+      {% set postTitle = '' %}
+      {% set postDescription = '' %}
+      {% set postUrl = '' %}
 
       {#
         Check to see if the item is a regular post on the site or an external
