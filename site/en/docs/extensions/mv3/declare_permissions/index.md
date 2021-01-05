@@ -79,15 +79,15 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="bookmarks">
       <td><code>"bookmarks"</code></td>
-      <td>Gives your extension access to the <a href="../reference/bookmarks">chrome.bookmarks</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/bookmarks/">chrome.bookmarks</a> API.</td>
     </tr>
     <tr id="browsingData">
       <td><code>"browsingData"</code></td>
-      <td>Gives your extension access to the <a href="../reference/browsingData">chrome.browsingData</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/browsingData/">chrome.browsingData</a> API.</td>
     </tr>
     <tr id="certificateProvider">
       <td><code>"certificateProvider"</code></td>
-      <td>Gives your extension access to the <a href="../reference/certificateProvider">chrome.certificateProvider</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/certificateProvider/">chrome.certificateProvider</a> API.</td>
     </tr>
     <tr id="clipboardRead">
       <td><code>"clipboardRead"</code></td>
@@ -101,97 +101,97 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="contentSettings">
       <td><code>"contentSettings"</code></td>
-      <td>Gives your extension access to the <a href="../reference/contentSettings">chrome.contentSettings</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/contentSettings/">chrome.contentSettings</a> API.</td>
     </tr>
     <tr id="contextMenus">
       <td><code>"contextMenus"</code></td>
-      <td>Gives your extension access to the <a href="../reference/contextMenus">chrome.contextMenus</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/contextMenus/">chrome.contextMenus</a> API.</td>
     </tr>
     <tr id="cookies">
       <td><code>"cookies"</code></td>
-      <td>Gives your extension access to the <a href="../reference/cookies">chrome.cookies</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/cookies/">chrome.cookies</a> API.</td>
     </tr>
     <tr id="debugger">
       <td><code>"debugger"</code></td>
-      <td>Gives your extension access to the <a href="../reference/debugger">chrome.debugger</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/debugger/">chrome.debugger</a> API.</td>
     </tr>
     <tr id="declarativeContent">
       <td><code>"declarativeContent"</code></td>
-      <td>Gives your extension access to the <a href="../reference/declarativeContent">chrome.declarativeContent</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeContent/">chrome.declarativeContent</a> API.</td>
     </tr>
     <tr id="declarativeNetRequest">
       <td><code>"declarativeNetRequest"</code></td>
-      <td>Gives your extension access to the <a href="../reference/declarativeNetRequest">chrome.declarativeNetRequest</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API.</td>
     </tr>
     <tr id="declarativeNetRequestFeedback">
       <td><code>"declarativeNetRequestFeedback"</code></td>
       <td>Grants the extension access to events and methods within the <a
-          href="../reference/declarativeNetRequest">chrome.declarativeNetRequest</a> API which return information on declarative
+          href="/docs/extensions/reference/declarativeNetRequest/">chrome.declarativeNetRequest</a> API which return information on declarative
         rules matched.</td>
     </tr>
     <tr id="declarativeWebRequest">
       <td><code>"declarativeWebRequest"</code></td>
-      <td>Gives your extension access to the <a href="../reference/declarativeWebRequest">chrome.declarativeWebRequest</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeWebRequest/">chrome.declarativeWebRequest</a> API.</td>
     </tr>
     <tr id="desktopCapture">
       <td><code>"desktopCapture"</code></td>
-      <td>Gives your extension access to the <a href="../reference/desktopCapture">chrome.desktopCapture</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/desktopCapture/">chrome.desktopCapture</a> API.</td>
     </tr>
     <tr id="displaySource">
       <td><code>"displaySource"</code></td>
-      <td>Gives your extension access to the <a href="../reference/displaySource">chrome.displaySource</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/displaySource/">chrome.displaySource</a> API.</td>
     </tr>
     <tr id="dns">
       <td><code>"dns"</code></td>
-      <td>Gives your extension access to the <a href="../reference/dns">chrome.dns</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/dns/">chrome.dns</a> API.</td>
     </tr>
     <tr id="documentScan">
       <td><code>"documentScan"</code></td>
-      <td>Gives your extension access to the <a href="../reference/documentScan">chrome.documentScan</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/documentScan/">chrome.documentScan</a> API.</td>
     </tr>
     <tr id="downloads">
       <td><code>"downloads"</code></td>
-      <td>Gives your extension access to the <a href="../reference/downloads">chrome.downloads</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/downloads/">chrome.downloads</a> API.</td>
     </tr>
     <tr id="enterprise.deviceAttributes">
       <td><code>"enterprise.deviceAttributes"</code></td>
       <td>Gives your extension access to the <a
-          href="../reference/enterprise_deviceAttributes">chrome.enterprise.deviceAttributes</a> API.</td>
+          href="/docs/extensions/reference/enterprise_deviceAttributes/">chrome.enterprise.deviceAttributes</a> API.</td>
     </tr>
     <tr id="enterprise.hardwarePlatform">
       <td><code>"enterprise.hardwarePlatform"</code></td>
       <td>Gives your extension access to the <a
-          href="../reference/enterprise_hardwarePlatform">chrome.enterprise.hardwarePlatform</a> API.</td>
+          href="/docs/extensions/reference/enterprise_hardwarePlatform/">chrome.enterprise.hardwarePlatform</a> API.</td>
     </tr>
     <tr id="enterprise.networkingAttributes">
       <td><code>"enterprise.networkingAttributes"</code></td>
       <td>Gives your extension access to the <a
-          href="../reference/enterprise_networkingAttributes">chrome.enterprise.networkingAttributes</a> API.</td>
+          href="/docs/extensions/reference/enterprise_networkingAttributes/">chrome.enterprise.networkingAttributes</a> API.</td>
     </tr>
     <tr id="enterprise.platformKeys">
       <td><code>"enterprise.platformKeys"</code></td>
-      <td>Gives your extension access to the <a href="../reference/enterprise_platformKeys">chrome.enterprise.platformKeys</a> API.
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/enterprise_platformKeys/">chrome.enterprise.platformKeys</a> API.
       </td>
     </tr>
     <tr id="experimental">
       <td><code>"experimental"</code></td>
-      <td>Required if the extension or app uses any <a href="../reference/#experimental_apis">chrome.experimental.* APIs</a>.</td>
+      <td>Required if the extension or app uses any <a href="/docs/extensions/reference/#experimental_apis/">chrome.experimental.* APIs</a>.</td>
     </tr>
     <tr id="fileBrowserHandler">
       <td><code>"fileBrowserHandler"</code></td>
-      <td>Gives your extension access to the <a href="../reference/fileBrowserHandler">chrome.fileBrowserHandler</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/fileBrowserHandler/">chrome.fileBrowserHandler</a> API.</td>
     </tr>
     <tr id="fileSystemProvider">
       <td><code>"fileSystemProvider"</code></td>
-      <td>Gives your extension access to the <a href="../reference/fileSystemProvider">chrome.fileSystemProvider</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/fileSystemProvider/">chrome.fileSystemProvider</a> API.</td>
     </tr>
     <tr id="fontSettings">
       <td><code>"fontSettings"</code></td>
-      <td>Gives your extension access to the <a href="../reference/fontSettings">chrome.fontSettings</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/fontSettings/">chrome.fontSettings</a> API.</td>
     </tr>
     <tr id="gcm">
       <td><code>"gcm"</code></td>
-      <td>Gives your extension access to the <a href="../reference/gcm">chrome.gcm</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/gcm/">chrome.gcm</a> API.</td>
     </tr>
     <tr id="geolocation">
       <td><code>"geolocation"</code></td>
@@ -201,35 +201,35 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="history">
       <td><code>"history"</code></td>
-      <td>Gives your extension access to the <a href="../reference/history">chrome.history</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/history/">chrome.history</a> API.</td>
     </tr>
     <tr id="identity">
       <td><code>"identity"</code></td>
-      <td>Gives your extension access to the <a href="../reference/identity">chrome.identity</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/identity/">chrome.identity</a> API.</td>
     </tr>
     <tr id="idle">
       <td><code>"idle"</code></td>
-      <td>Gives your extension access to the <a href="../reference/idle">chrome.idle</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/idle/">chrome.idle</a> API.</td>
     </tr>
     <tr id="idltest">
       <td><code>"idltest"</code></td>
-      <td>Gives your extension access to the <a href="../reference/idltest">chrome.idltest</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/idltest/">chrome.idltest</a> API.</td>
     </tr>
     <tr id="login">
       <td><code>"login"</code></td>
-      <td>Gives your extension access to the <a href="../reference/login">chrome.login</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/login/">chrome.login</a> API.</td>
     </tr>
     <tr id="loginScreenStorage">
       <td><code>"loginScreenStorage"</code></td>
-      <td>Gives your extension access to the <a href="../reference/loginScreenStorage">chrome.loginScreenStorage</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/loginScreenStorage/">chrome.loginScreenStorage</a> API.</td>
     </tr>
     <tr id="loginState">
       <td><code>"loginState"</code></td>
-      <td>Gives your extension access to the <a href="../reference/loginState">chrome.loginState</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/loginState/">chrome.loginState</a> API.</td>
     </tr>
     <tr id="management">
       <td><code>"management"</code></td>
-      <td>Gives your extension access to the <a href="../reference/management">chrome.management</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/management/">chrome.management</a> API.</td>
     </tr>
     <tr id="nativeMessaging">
       <td><code>"nativeMessaging"</code></td>
@@ -237,87 +237,87 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="notifications">
       <td><code>"notifications"</code></td>
-      <td>Gives your extension access to the <a href="../reference/notifications">chrome.notifications</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/notifications/">chrome.notifications</a> API.</td>
     </tr>
     <tr id="pageCapture">
       <td><code>"pageCapture"</code></td>
-      <td>Gives your extension access to the <a href="../reference/pageCapture">chrome.pageCapture</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/pageCapture/">chrome.pageCapture</a> API.</td>
     </tr>
     <tr id="platformKeys">
       <td><code>"platformKeys"</code></td>
-      <td>Gives your extension access to the <a href="../reference/platformKeys">chrome.platformKeys</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/platformKeys/">chrome.platformKeys</a> API.</td>
     </tr>
     <tr id="power">
       <td><code>"power"</code></td>
-      <td>Gives your extension access to the <a href="../reference/power">chrome.power</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/power/">chrome.power</a> API.</td>
     </tr>
     <tr id="printerProvider">
       <td><code>"printerProvider"</code></td>
-      <td>Gives your extension access to the <a href="../reference/printerProvider">chrome.printerProvider</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/printerProvider/">chrome.printerProvider</a> API.</td>
     </tr>
     <tr id="printing">
       <td><code>"printing"</code></td>
-      <td>Gives your extension access to the <a href="../reference/printing">chrome.printing</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/printing/">chrome.printing</a> API.</td>
     </tr>
     <tr id="printingMetrics">
       <td><code>"printingMetrics"</code></td>
-      <td>Gives your extension access to the <a href="../reference/printingMetrics">chrome.printingMetrics</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/printingMetrics/">chrome.printingMetrics</a> API.</td>
     </tr>
     <tr id="privacy">
       <td><code>"privacy"</code></td>
-      <td>Gives your extension access to the <a href="../reference/privacy">chrome.privacy</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/privacy/">chrome.privacy</a> API.</td>
     </tr>
     <tr id="processes">
       <td><code>"processes"</code></td>
-      <td>Gives your extension access to the <a href="../reference/processes">chrome.processes</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/processes/">chrome.processes</a> API.</td>
     </tr>
     <tr id="proxy">
       <td><code>"proxy"</code></td>
-      <td>Gives your extension access to the <a href="../reference/proxy">chrome.proxy</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/proxy/">chrome.proxy</a> API.</td>
     </tr>
     <tr id="scripting">
       <td><code>"scripting"</code></td>
-      <td>Gives your extension access to the <a href="../reference/scripting">chrome.scripting</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/scripting/">chrome.scripting</a> API.</td>
     </tr>
     <tr id="search">
       <td><code>"search"</code></td>
-      <td>Gives your extension access to the <a href="../reference/search">chrome.search</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/search/">chrome.search</a> API.</td>
     </tr>
     <tr id="sessions">
       <td><code>"sessions"</code></td>
-      <td>Gives your extension access to the <a href="../reference/sessions">chrome.sessions</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/sessions/">chrome.sessions</a> API.</td>
     </tr>
     <tr id="signedInDevices">
       <td><code>"signedInDevices"</code></td>
-      <td>Gives your extension access to the <a href="../reference/signedInDevices">chrome.signedInDevices</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/signedInDevices/">chrome.signedInDevices</a> API.</td>
     </tr>
     <tr id="storage">
       <td><code>"storage"</code></td>
-      <td>Gives your extension access to the <a href="../reference/storage">chrome.storage</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/storage/">chrome.storage</a> API.</td>
     </tr>
     <tr id="system.cpu">
       <td><code>"system.cpu"</code></td>
-      <td>Gives your extension access to the <a href="../reference/system_cpu">chrome.system.cpu</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/system_cpu/">chrome.system.cpu</a> API.</td>
     </tr>
     <tr id="system.display">
       <td><code>"system.display"</code></td>
-      <td>Gives your extension access to the <a href="../reference/system_display">chrome.system.display</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/system_display/">chrome.system.display</a> API.</td>
     </tr>
     <tr id="system.memory">
       <td><code>"system.memory"</code></td>
-      <td>Gives your extension access to the <a href="../reference/system_memory">chrome.system.memory</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/system_memory/">chrome.system.memory</a> API.</td>
     </tr>
     <tr id="system.storage">
       <td><code>"system.storage"</code></td>
-      <td>Gives your extension access to the <a href="../reference/system_storage">chrome.system.storage</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/system_storage/">chrome.system.storage</a> API.</td>
     </tr>
     <tr id="tabCapture">
       <td><code>"tabCapture"</code></td>
-      <td>Gives your extension access to the <a href="../reference/tabCapture">chrome.tabCapture</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/tabCapture/">chrome.tabCapture</a> API.</td>
     </tr>
     <tr id="tabGroups">
       <td><code>"tabGroups"</code></td>
-      <td>Gives your extension access to the <a href="../reference/tabGroups">chrome.tabGroups</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/tabGroups/">chrome.tabGroups</a> API.</td>
     </tr>
     <tr id="tabs">
       <td><code>"tabs"</code></td>
@@ -329,15 +329,15 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="topSites">
       <td><code>"topSites"</code></td>
-      <td>Gives your extension access to the <a href="../reference/topSites">chrome.topSites</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/topSites/">chrome.topSites</a> API.</td>
     </tr>
     <tr id="tts">
       <td><code>"tts"</code></td>
-      <td>Gives your extension access to the <a href="../reference/tts">chrome.tts</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/tts/">chrome.tts</a> API.</td>
     </tr>
     <tr id="ttsEngine">
       <td><code>"ttsEngine"</code></td>
-      <td>Gives your extension access to the <a href="../reference/ttsEngine">chrome.ttsEngine</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/ttsEngine/">chrome.ttsEngine</a> API.</td>
     </tr>
     <tr id="unlimitedStorage">
       <td><code>"unlimitedStorage"</code></td>
@@ -350,23 +350,23 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="vpnProvider">
       <td><code>"vpnProvider"</code></td>
-      <td>Gives your extension access to the <a href="../reference/vpnProvider">chrome.vpnProvider</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/vpnProvider/">chrome.vpnProvider</a> API.</td>
     </tr>
     <tr id="wallpaper">
       <td><code>"wallpaper"</code></td>
-      <td>Gives your extension access to the <a href="../reference/wallpaper">chrome.wallpaper</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/wallpaper/">chrome.wallpaper</a> API.</td>
     </tr>
     <tr id="webNavigation">
       <td><code>"webNavigation"</code></td>
-      <td>Gives your extension access to the <a href="../reference/webNavigation">chrome.webNavigation</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/webNavigation/">chrome.webNavigation</a> API.</td>
     </tr>
     <tr id="webRequest">
       <td><code>"webRequest"</code></td>
-      <td>Gives your extension access to the <a href="../reference/webRequest">chrome.webRequest</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/webRequest/">chrome.webRequest</a> API.</td>
     </tr>
     <tr id="webRequestBlocking">
       <td><code>"webRequestBlocking"</code></td>
-      <td>Required if the extension uses the <a href="../reference/webRequest">chrome.webRequest</a> API in a blocking fashion.</td>
+      <td>Required if the extension uses the <a href="/docs/extensions/reference/webRequest/">chrome.webRequest</a> API in a blocking fashion.</td>
     </tr>
   </tbody>
 </table>

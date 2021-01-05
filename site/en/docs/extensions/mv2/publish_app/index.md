@@ -20,7 +20,8 @@ and zip file in a way that reduces the size of the user download package. For de
 the size of the user download package][5].
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
-[3]: https://developers.google.com/chrome/web-store/docs/publish
-[4]: https://developers.google.com/native-client/
-[5]: https://developers.google.com/native-client/dev/devguide/distributing#multi-platform-zip
+[2]: https://developer.chrome.com/docs/apps/migration/
+[3]: https://developer.chrome.com/docs/webstore/publish/
+[4]: https://developer.chrome.com/docs/native-client/
+[5]: https://developer.chrome.com/docs/native-client/devguide/distributing/#chrome-apps
+
