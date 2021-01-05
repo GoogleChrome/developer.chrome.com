@@ -549,7 +549,7 @@ gDriveApp.factory('gdocs', function() {
 ```
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: http://angularjs.org/
 [4]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/gdrive
 [5]: http://www.html5rocks.com/en/tutorials/dnd/basics/

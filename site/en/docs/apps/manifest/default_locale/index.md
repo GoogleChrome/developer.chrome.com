@@ -19,5 +19,5 @@ field is **required** in extensions that have a `_locales` directory; it **must 
 extensions that have no `_locales` directory. For details, see [Internationalization][3].
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: https://developer.chrome.com/extensions/i18n

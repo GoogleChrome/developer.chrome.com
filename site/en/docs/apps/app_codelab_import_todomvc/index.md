@@ -711,7 +711,7 @@ For more detailed information about some of the APIs introduced in this step, re
 Ready to continue onto the next step? Go to [Step 3 - Add alarms and notifications »][31]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: /apps/storage "Read 'chrome.storage.local' in the Chrome developer docs"
 [5]: #launch

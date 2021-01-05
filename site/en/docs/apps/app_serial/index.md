@@ -157,7 +157,7 @@ the fly, like bitrate, timeouts, control signals, and many others with the [seri
 method. See the full reference of the [serial][17] API for more information.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: serial
 [4]: app_usb
 [5]: app_bluetooth

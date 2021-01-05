@@ -93,7 +93,7 @@ Kiosk App through the [Chrome web store payment flow][14].
 - [Kiosk apps in the Chrome Web Store][18]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: https://support.google.com/chromebook/answer/3134673
 [4]: https://support.google.com/chromebook/answer/3134673
 [5]: https://support.google.com/chrome/a/answer/3017014

@@ -392,7 +392,7 @@ For more detailed information about some of the APIs introduced in this step, re
 Ready to continue onto the next step? Go to [Step 4 - Open external links with a webview »][36]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: #launch
 [5]: /apps/alarms.html

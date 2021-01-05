@@ -727,7 +727,7 @@ apps to write to this descriptor. Apps should instead use the
 [bluetoothLowEnergy.stopCharacteristicNotifications][85] methods to control notification behavior.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: bluetooth.html
 [4]: bluetoothSocket.html
 [5]: bluetoothLowEnergy.html

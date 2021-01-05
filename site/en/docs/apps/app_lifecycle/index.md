@@ -147,7 +147,7 @@ chrome.runtime.onSuspend.addListener(function() {
 ```
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: storage
 [4]: app_storage#options
 [5]: /apps/storage#property-sync

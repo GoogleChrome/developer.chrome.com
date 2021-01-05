@@ -205,7 +205,7 @@ host. Then [load the app][27] and interact with the app. Run `uninstall_host.bat
 `uninstall_host.sh` to unregister the native messaging host when you are done.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: messaging
 [4]: /apps/runtime#method-connectNative
 [5]: /apps/runtime#method-sendNativeMessage

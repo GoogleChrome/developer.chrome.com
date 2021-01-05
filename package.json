@@ -1,7 +1,7 @@
 {
-  "name": "developers.chrome.com",
+  "name": "developer.chrome.com",
   "version": "1.0.0",
-  "description": "The source for developers.chrome.com",
+  "description": "The source for developer.chrome.com",
   "private": true,
   "engines": {
     "node": ">=14"

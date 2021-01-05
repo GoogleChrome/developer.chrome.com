@@ -54,7 +54,7 @@ example:
 ```
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: https://www.khronos.org/webgl/
 [4]: https://support.google.com/chrome/answer/1220892
 [5]: https://blog.chromium.org/2013/09/saying-goodbye-to-our-old-friend-npapi.html

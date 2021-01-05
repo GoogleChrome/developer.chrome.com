@@ -6,7 +6,7 @@ updated: 2020-11-19
 description: Frequently asked questions about Chrome Web Store's user data policy.
 ---
 
-<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to support extensions on all platforms. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="https://developers.chrome.com/apps/migration">migrating your app</a>.</div>
+<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to support extensions on all platforms. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="https://developer.chrome.com/apps/migration">migrating your app</a>.</div>
 
 <div class="aside aside--caution"><b>Important:</b> The new requirements for Minimum Permission and updated User Data policy will be enforced starting <strong>10/15/2019</strong>.</div>
 
@@ -357,7 +357,7 @@ result in the suspension of all the items owned by the publisher, deactivation o
 user-base, and ban of the entire publisher entity (including related accounts).
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: /docs/extensions/branding
 [4]: /docs/extensions/rating
 [5]: /docs/extensions/program_policies

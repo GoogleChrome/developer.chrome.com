@@ -204,7 +204,7 @@ If you just want to write your item, see the developer doc for the type of app y
 - [Chrome Extensions][23]
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: http://chrome.google.com/webstore
 [4]: /apps/about_apps
 [5]: /docs/extensions/mv2/themes

@@ -59,7 +59,7 @@ The `title` field is reserved for future use in all relevant UI elements. It sho
 action that the app performs when launched with this type of URL handler.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: ../app_lifecycle#eventpage
 [4]: https://chrome.google.com/webstore
 [5]: ../app_runtime#event-onLaunched

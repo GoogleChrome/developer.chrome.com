@@ -266,7 +266,7 @@ System,{# LocalStorage, SessionStorage,#} and other APIs that might be specified
 Management API. You will be able to manage all storage allocation with it.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: #types
 [4]: #temporary
 [5]: #persistent

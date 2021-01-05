@@ -282,7 +282,7 @@ your 'My Drive' list but can be accessed by searching the folder name in the sea
 the remote folder layout is **not** guaranteed to remain backwards compatible between releases.)
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: app_frameworks
 [4]: offline_apps
 [5]: fileSystem

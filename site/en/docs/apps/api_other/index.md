@@ -85,7 +85,7 @@ APIs in bundled libraries
   they do in other web pages.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: api_index
 [4]: https://developer.mozilla.org/en/Gecko_DOM_Reference
 [5]: xhr

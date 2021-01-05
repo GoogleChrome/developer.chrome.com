@@ -56,7 +56,7 @@ For an illustration of how to use the CPA library to measure user interactions i
 [examples][14].
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developers.chrome.com/apps/migration
+[2]: https://developer.chrome.com/apps/migration
 [3]: https://github.com/GoogleChrome/chrome-platform-analytics/tree/master/src/example
 [4]: https://github.com/GoogleChrome/chrome-platform-analytics/wiki
 [5]: https://developers.google.com/analytics/devguides/platform/

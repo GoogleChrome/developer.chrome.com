@@ -1,7 +1,7 @@
 {
   "title": "Chrome Developers",
   "description": "Build the next generation of web experiences.",
-  "url": "https://developers.chrome.com",
+  "url": "https://developer.chrome.com",
   "imgix": "developer-chrome-com.imgix.net",
   "bucket": "chrome-gcs-uploader.appspot.com",
   "gcs": "https://storage.googleapis.com",
