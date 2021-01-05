@@ -199,7 +199,7 @@ The Chrome Web Store opens for consumers later this year. Let's run through the 
 - Did you join the [apps developer discussion group][28]?
 - Did you test your web app in the [Dev channel of Google Chrome][29]?
 - Did you upload the ZIP file of the manifest and icons into the [Chrome Web Store Developer
-  Dashboard][30]?
+  Dashboard][19]?
 - Did you verify your domain with the Google Webmaster Tools?
 - Did you test both success and failure scenarios with the Chrome Web Store Licensing API, or
   whatever registration and payment systems you are using?
@@ -259,7 +259,6 @@ documentation][35]. We look forward to seeing your app in the store!
 [27]: http://thinkvitamin.com/web-apps/how-to-track-six-key-metrics-for-your-web-app/
 [28]: https://groups.google.com/a/chromium.org/group/chromium-apps/topics
 [29]: http://www.chromium.org/getting-involved/dev-channel
-[30]: https://chrome.google.com/extensions/developer/dashboard
 [31]: https://developers.google.com/chrome/chrome-frame/
 [32]: http://launchlist.net/
 [33]: https://developers.google.com/chrome/apps/articles/thinking_in_web_apps

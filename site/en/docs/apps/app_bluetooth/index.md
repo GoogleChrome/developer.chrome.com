@@ -53,8 +53,8 @@ And for a Low Energy implementation:
 To only access adapter state, discover nearby devices, and obtain basic information about devices,
 only the entry itself is required:
 
-```
-"bluetooth": { }
+```json
+"bluetooth": {}
 ```
 
 ## Adapter information {: #adapter_info }

@@ -17,10 +17,10 @@ on the Chrome Web Store.
 
 Use the **Visibility** settings to configure who can see your item in the Chrome Web Store:
 
-- **Public** — This option lists your item on the Chrome Web Store for all users to see and install.
-- **Unlisted** — This option does not create a listing on the Chrome Web Store, but does allows
+- **Public**—This option lists your item on the Chrome Web Store for all users to see and install.
+- **Unlisted**—This option does not create a listing on the Chrome Web Store, but does allows
   anyone to install your item if they know its Chrome Web Store URL.
-- **Private** — This option limits installation of your item to specified users only. This is
+- **Private**—This option limits installation of your item to specified users only. This is
   typically used for testing before public launch of an item.
 
 ### Private visibility: Trusted testers {: #private-visibility-trusted-testers }
@@ -60,7 +60,7 @@ The **Distribution** setting lets you specify which geographic areas will see yo
 the Chrome Web Store. You can either:
 
 - Select **All regions** to display your item to the entire world.
-- Select individual countries to publish to — this is useful for items with a regional focus or
+- Select individual countries to publish to—this is useful for items with a regional focus or
   relevance.
 
 When you publish to the world, your item will be immediately visible to the region(s) you select,

@@ -221,7 +221,7 @@ function makeCanvas(width, height) {
 }
 ```
 
-For additional guidance on working with OffscreenCanvas, see [OffscreenCanvas — Speed up Your Canvas
+For additional guidance on working with OffscreenCanvas, see [OffscreenCanvas—Speed up Your Canvas
 Operations with a Web Worker][18].
 
 [2]: https://developers.google.com/web/fundamentals/primers/service-workers/

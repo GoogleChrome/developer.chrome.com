@@ -76,7 +76,7 @@ chrome.runtime.onStartup.addListener(function() {
 Use the [storage API][3] to set and return states and values. Use `local.set` to update on the local
 machine.
 
-```
+```js
   chrome.storage.local.set({ variable: variableInformation });
 ```
 

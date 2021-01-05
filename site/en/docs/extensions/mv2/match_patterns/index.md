@@ -13,13 +13,13 @@ patterns. A match pattern is essentially a URL that begins with a permitted sche
 `file`, or `ftp`, and that can contain '`*`' characters. The special pattern `<all_urls>` matches
 any URL that starts with a permitted scheme. Each match pattern has 3 parts:
 
-- _scheme_ — for example, `http` or `file` or `*`
+- _scheme_—for example, `http` or `file` or `*`
 
   <div class="aside aside--note"><b>Note:</b> Access to <code>file</code> URLs isn't automatic. The user must visit the extensions management page and opt in to <code>file</code> access for each extension that requests it.</div>
 
-- _host_ — for example, `www.google.com` or `*.google.com` or `*`; if the scheme is `file`, there is
+- _host_—for example, `www.google.com` or `*.google.com` or `*`; if the scheme is `file`, there is
   no _host_ part
-- _path_ — for example, `/*`, `/foo*`, or `/foo/bar`. The path must be present in a host permission,
+- _path_—for example, `/*`, `/foo*`, or `/foo/bar`. The path must be present in a host permission,
   but is always treated as `/*`.
 
 Here's the basic syntax:

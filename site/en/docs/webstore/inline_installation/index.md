@@ -50,7 +50,7 @@ The URL in the `<link>` tag must be exactly as specified above, except that you 
 to the [Chrome Developer Dashboard][4] and click the name of the relevant app or extension. The ID
 value for that item will be shown in the browser address bar; it is a string of 32 Latin characters
 at the end of the URL in the address bar. Do not use the URL in the address bar as the URL in the
-`<link>` tag (the URL in the address bar uses a new format that includes the app name – this new
+`<link>` tag (the URL in the address bar uses a new format that includes the app name–this new
 format does not work for inline installation). Instead, copy the ID value from the URL in the
 address bar and paste the ID value into the URL specified in the `<link>` tag above.
 

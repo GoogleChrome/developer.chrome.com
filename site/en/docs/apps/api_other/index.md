@@ -30,10 +30,10 @@ XMLHttpRequest
 : Use [XMLHttpRequest][5] to request data from one or more servers. The [permissions][6] field of the
   manifest specifies which hosts the extension can send requests to.
 
-HTML5 and other emerging APIs
+HTML and other emerging APIs
 
-: Google Chrome supports HTML5 features, along with other emerging APIs. Here are some of the APIs you
-  can use:
+: Google Chrome supports modern HTML features, along with other emerging APIs. Here are some of the
+  APIs you can use:
 
   - audio ([tutorial][7])
   - application cache ([tutorial][8])
@@ -59,11 +59,10 @@ HTML5 and other emerging APIs
   See [html5rocks.com][17] for HTML5 information, tutorials, an interactive playground, and links to
   other resources.
 
-WebKit APIs
+Web APIs
 
-: Because Google Chrome is built upon WebKit, your extensions can use WebKit APIs. Especially useful
-  are the experimental CSS features such as filters, animations, and transformations. Here's an
-  example of using WebKit styles to make the UI spin:
+: Your extension can use Web APIs. Especially useful are the CSS features such as filters,
+  animations, and transformations. Here's an example of using WebKit styles to make the UI spin:
 
   ```html
   <style>
@@ -86,10 +85,10 @@ APIs in bundled libraries
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
 [2]: https://developer.chrome.com/apps/migration
-[3]: api_index
+[3]: /docs/extensions/reference/
 [4]: https://developer.mozilla.org/en/Gecko_DOM_Reference
-[5]: xhr
-[6]: declare_permissions
+[5]: /docs/extensions/mv2/xhr/
+[6]: /docs/extensions/mv2/declare_permissions/
 [7]: http://www.html5rocks.com/tutorials/audio/quick/
 [8]: http://www.html5rocks.com/tutorials/appcache/beginner/
 [9]: http://www.html5rocks.com/en/tutorials/#canvas

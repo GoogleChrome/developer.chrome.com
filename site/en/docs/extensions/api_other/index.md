@@ -12,61 +12,56 @@ API libraries into your extension.
 
 Here's a sampling of the APIs that extensions can use:
 
-TODO clean up definition list
+Standard JavaScript APIs
 
-**Standard JavaScript APIs**
-
-These are the same core JavaScript and [Document Object Model][2] (DOM) APIs that you can use in
+: These are the same core JavaScript and [Document Object Model][2] (DOM) APIs that you can use in
 ordinary web apps.
 
-**XMLHttpRequest**
+XMLHttpRequest
 
-Use [XMLHttpRequest][3] to request data from one or more servers. The [permissions][4] field of the
-manifest specifies which hosts the extension can send requests to.
+: Use [XMLHttpRequest][3] to request data from one or more servers. The [permissions][4] field of the
+  manifest specifies which hosts the extension can send requests to.
 
-**HTML5 and other emerging APIs**
+HTML and other emerging APIs
 
-Google Chrome supports HTML5 features, along with other emerging APIs. Here are some of the APIs you
-can use:
+: Google Chrome supports modern HTML features, along with other emerging APIs. Here are some of the
+  APIs you can use:
 
-- audio ([tutorial][5])
-- application cache ([tutorial][6])
-- canvas ([articles][7])
-- geolocation ([tutorial][8])
-- local storage ([tutorial][9])
-- notifications ([tutorial][10])
-- video ([tutorial][11])
-- web database ([tutorial][12])
+  - audio ([tutorial][5])
+  - application cache ([tutorial][6])
+  - canvas ([articles][7])
+  - geolocation ([tutorial][8])
+  - local storage ([tutorial][9])
+  - notifications ([tutorial][10])
+  - video ([tutorial][11])
+  - web database ([tutorial][12])
 
-See [html5rocks.com][13] for HTML5 information, tutorials, an interactive playground, and links to
-other resources.
+  See [html5rocks.com][13] for HTML5 information, tutorials, an interactive playground, and links to
+  other resources.
 
-**WebKit APIs**
+Web APIs
 
-Because Google Chrome is built upon WebKit, your extensions can use WebKit APIs. Especially useful
-are the experimental CSS features such as filters, animations, and transformations. Here's an
-example of using WebKit styles to make the UI spin:
+: Your extension can use Web APIs. Especially useful are the CSS features such as filters,
+  animations, and transformations. Here's an example of using WebKit styles to make the UI spin:
 
-```
-<style>
-  div:hover {
-    transform: rotate(360deg);
-    transition: all 1s ease-out;
-  }
-</style>
-```
+  ```html
+  <style>
+    div:hover {
+      transform: rotate(360deg);
+      transition: all 1s ease-out;
+    }
+  </style>
+  ```
 
-**V8 APIs**, such as **JSON**
+V8 APIs, such as JSON
 
-Because JSON is in V8, you don't need to include a JSON library to use JSON functions.
+: Because JSON is in V8, you don't need to include a JSON library to use JSON functions.
 
-**APIs in bundled libraries**
+APIs in bundled libraries
 
-If you want to use a library that the browser doesn't provide (for example, jQuery), you can bundle
+: If you want to use a library that the browser doesn't provide (for example, jQuery), you can bundle
 that library's JavaScript files with your extension. Bundled libraries work in extensions just as
 they do in other web pages.
-
-TODO end of definition list
 
 [1]: /docs/extensions/api_index
 [2]: https://developer.mozilla.org/en/Gecko_DOM_Reference

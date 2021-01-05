@@ -75,13 +75,13 @@ Every app needs a manifest—a JSON-formatted file named `manifest.json` that de
     ```
 
 All new apps must specify manifest version 2 without quotes (see [manifest version
-documentation][12]). The remaining fields are fairly straightforward, except for "urls" and
-"web_url". In this example, those fields have the same values but mean different things.
+documentation][12]). The remaining fields are fairly straightforward, except for `"urls"` and
+`"web_url"`. In this example, those fields have the same values but mean different things.
 
-* "web_url": Specifies the page that the browser shows when a user launches the app.
-* "urls": Specifies the starting URLs of all other web pages that are in the app. In this example, both
-  http://mysubdomain.example.com/**page1.html** and
-  http://mysubdomain.example.com/**subdir/page2.html\*\* would be in the app. You don't need to
+* `"web_url"`: Specifies the page that the browser shows when a user launches the app.
+* `"urls"`: Specifies the starting URLs of all other web pages that are in the app. In this example, both
+  http://mysubdomain.example.com/<strong>page1.html</strong> and
+  http://mysubdomain.example.com/<strong>subdir/page2.html</strong> would be in the app. You don't need to
   specify the URLs for included files or for assets such as images. Currently, the domain name must be
   followed by at least one character ("/").
 

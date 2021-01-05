@@ -279,7 +279,7 @@ In this step, you'll make sure your app works, and you'll deploy it to the web.
 1.  Still in Eclipse, choose **Run > Run As > Web Application**.  
     If it doesn't run, make sure you followed these instructions exactly, and try again. If it does
     run, you'll see the server location in the Eclipse Console.
-2.  In a browser, visit the server location—for example, http://localhost:8888/—and click the link
+2.  In a browser, visit the server location (for example, http://localhost:8888/) and click the link
     to **HelloLicense**.  
     You should see a simple page with a **Sign in** link.
 3.  Sign in as text@example.com.  

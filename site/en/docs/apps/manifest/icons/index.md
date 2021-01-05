@@ -23,7 +23,7 @@ Icons should generally be in PNG format, because PNG has the best support for tr
 can, however, be in any format supported by WebKit, including BMP, GIF, ICO, and JPEG. Here's an
 example of specifying the icons:
 
-```
+```json
 "icons": { "16": "icon16.png",
            "48": "icon48.png",
           "128": "icon128.png" },

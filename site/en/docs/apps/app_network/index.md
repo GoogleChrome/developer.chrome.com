@@ -55,7 +55,7 @@ end point permission rules. For example:
 
 The syntax of socket "host-pattern" entries follows these rules:
 
-```
+```text
 <host-pattern> := <host> | ':' <port> | <host> ':' <port>
 <host> := '*' | '*.' <anychar except '/' and '*'>+
 <port> := '*' | <port number between 1 and 65535>)
@@ -65,13 +65,13 @@ See [Sockets Manifest Key][10] for detailed description of the syntax.
 
 Examples of socket manifest entries:
 
-- `{ "tcp": { "connect" : "*:23" } }` – connecting on port 23 of any hosts
-- `{ "tcp": { "connect" : ["*:23", "*:80"] } }` – connecting on port 23 or 80 of any hosts
-- `{ "tcp": { "connect" : "www.example.com:23" } }` – connecting port 23 of _www.example.com_
-- `{ "tcp": { "connect" : "" } }` – connecting any ports of any hosts
-- `{ "udp": { "send" : ":99" } }` – sending UDP packet to port 99 of any hosts
-- `{ "udp": { "bind" : ":8899" } }` – binding local port 8899 to receive UDP packets
-- `{ "tcpServer": { "listen" : ":8080" } }` – TCP listening on local port 8080
+- `{ "tcp": { "connect" : "*:23" } }`–connecting on port 23 of any hosts
+- `{ "tcp": { "connect" : ["*:23", "*:80"] } }`–connecting on port 23 or 80 of any hosts
+- `{ "tcp": { "connect" : "www.example.com:23" } }`–connecting port 23 of _www.example.com_
+- `{ "tcp": { "connect" : "" } }`–connecting any ports of any hosts
+- `{ "udp": { "send" : ":99" } }`–sending UDP packet to port 99 of any hosts
+- `{ "udp": { "bind" : ":8899" } }`–binding local port 8899 to receive UDP packets
+- `{ "tcpServer": { "listen" : ":8080" } }`–TCP listening on local port 8080
 
 ## Using TCP {: #tcp }
 

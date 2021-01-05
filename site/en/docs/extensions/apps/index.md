@@ -14,7 +14,7 @@ of [Chrome Apps][1] or read the [migration tutorial for legacy packaged apps][2]
 
 !!!
 
-This page talks about legacy packaged apps — how you implement them, and how they're different from
+This page talks about legacy packaged apps—how you implement them, and how they're different from
 extensions and ordinary web apps.
 
 ## Overview {: #overview }

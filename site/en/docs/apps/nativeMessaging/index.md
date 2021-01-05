@@ -51,13 +51,13 @@ installer must create registry key
 set default value of that key to the full path to the manifest file. For example, using the
 following command:
 
-```
+```text
 REG ADD "HKCU\Software\Google\Chrome\NativeMessagingHosts\com.my_company.my_application" /ve /t REG_SZ /d "C:\path\to\nmh-manifest.json" /f
 ```
 
 or using the following `.reg` file:
 
-```
+```text
 Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Google\Chrome\NativeMessagingHosts\com.my_company.my_application]
 @="C:\\path\\to\\nmh-manifest.json"

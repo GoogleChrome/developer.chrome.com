@@ -13,7 +13,7 @@ Lists the [in-app products][1] that the user has purchased.
 
 ### HTTP request
 
-```
+```text
 GET https://www.googleapis.com/chromewebstore/v1.1/items/itemId/payments
 ```
 

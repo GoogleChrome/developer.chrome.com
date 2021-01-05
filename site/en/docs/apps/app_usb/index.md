@@ -386,7 +386,7 @@ device through this API, your user will need to have write access to it too. A s
 set a udev rule. Create a file `/etc/udev/rules.d/50-yourdevicename.rules` with the following
 content:
 
-```
+```text
 SUBSYSTEM=="usb", ATTR{idVendor}=="[yourdevicevendor]", MODE="0664", GROUP="plugdev"
 ```
 

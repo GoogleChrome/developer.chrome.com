@@ -46,7 +46,7 @@ The `{% raw %}`{% img %}`{% endraw%}` shortcode accepts additional arguments for
 `width` and `height`. If you want to set your image to have a width of 400 and
 a height of 200, do the following:
 
-```
+```text
 {% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/1603484068246.jpg", alt="ALT TEXT HERE", width="400", height="200" %}{% endraw %}
 ```
 

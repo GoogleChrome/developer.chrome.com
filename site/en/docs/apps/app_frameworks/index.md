@@ -26,7 +26,7 @@ before. Application development requires collaboration from multiple developers.
 rich client-side features, is no exception.
 
 Design patterns are important to write maintainable and reusable code. A pattern is a reusable
-solution that can be applied to commonly occurring problems in software design — in our case —
+solution that can be applied to commonly occurring problems in software design—in our case —
 writing Chrome Apps. We recommend that developers decouple the app into a series of independent
 components following the MVC pattern.
 
@@ -37,7 +37,7 @@ encouraging developers to write more structured JavaScript code.
 
 ## MVC pattern overview {: #mvc }
 
-MVC offers architectural benefits over standard JavaScript — it helps you write better organized,
+MVC offers architectural benefits over standard JavaScript—it helps you write better organized,
 and therefore more maintainable code. This pattern has been used and extensively tested over
 multiple languages and generations of programmers.
 

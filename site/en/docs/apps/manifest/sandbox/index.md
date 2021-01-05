@@ -29,7 +29,7 @@ and optionally a Content Security Policy to use with them. Being in a sandbox ha
     For example, here's how to specify that two extension pages are to be served in a sandbox with a
     custom CSP:
 
-    ```
+    ```json
     {
       ...
       "sandbox": {

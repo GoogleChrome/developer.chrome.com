@@ -12,7 +12,7 @@ See [DevTools APIs summary][1] for general introduction to using Developer Tools
 
 The [`tabId`][2] property provides the tab identifier that you can use with the [`chrome.tabs.*`][3]
 API calls. However, please note that `chrome.tabs.*` API is not exposed to the Developer Tools
-extension pages due to security considerations — you will need to pass the tab ID to the background
+extension pages due to security considerations—you will need to pass the tab ID to the background
 page and invoke the `chrome.tabs.*` API functions from there.
 
 The `reload` method may be used to reload the inspected page. Additionally, the caller can specify
@@ -41,7 +41,7 @@ Here are the main differences between the `eval` and `tabs.executeScript` method
 - The evaluated code may return a value that is passed to the extension callback. The returned value
   has to be a valid JSON object (it may contain only primitive JavaScript types and acyclic
   references to other JSON objects). _Please observe extra care while processing the data received
-  from the inspected page — the execution context is essentially controlled by the inspected page; a
+  from the inspected page—the execution context is essentially controlled by the inspected page; a
   malicious page may affect the data being returned to the extension._
 
 !!!.aside.aside--caution

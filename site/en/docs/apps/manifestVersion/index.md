@@ -24,7 +24,7 @@ manifests.
 
 Chrome App developers must currently specify **`'manifest_version': 2`**:
 
-```
+```json
 {
   ...,
   "manifest_version": 2,

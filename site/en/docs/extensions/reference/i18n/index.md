@@ -188,7 +188,7 @@ To create and use a shortcut that launches Google Chrome with a particular local
 3.  Change the shortcut's properties so that the Target field specifies the `--lang` and
     `--user-data-dir` flags. The target should look something like this:
 
-    ```
+    ```text
     path_to_chrome.exe --lang=locale --user-data-dir=c:\locale_profile_dir
     ```
 
@@ -197,14 +197,14 @@ To create and use a shortcut that launches Google Chrome with a particular local
 For example, to create a shortcut that launches Google Chrome in Spanish (`es`), you might create a
 shortcut named `chrome-es` that has the following target:
 
-```
+```text
 path_to_chrome.exe --lang=es --user-data-dir=c:\chrome-profile-es
 ```
 
 You can create as many shortcuts as you like, making it easy to test in multiple languages. For
 example:
 
-```
+```text
 path_to_chrome.exe --lang=en --user-data-dir=c:\chrome-profile-en
 path_to_chrome.exe --lang=en_GB --user-data-dir=c:\chrome-profile-en_GB
 path_to_chrome.exe --lang=ko --user-data-dir=c:\chrome-profile-ko
@@ -214,7 +214,7 @@ path_to_chrome.exe --lang=ko --user-data-dir=c:\chrome-profile-ko
 
 **Note:** Specifying `--user-data-dir` is optional but handy. Having one data directory per locale
 lets you run the browser in several languages at the same time. A disadvantage is that because the
-locales' data isn't shared, you have to install your extension multiple times — once per locale,
+locales' data isn't shared, you have to install your extension multiple times—once per locale,
 which can be challenging when you don't speak the language. For more information, see [Creating and
 Using Profiles][13].
 
@@ -246,7 +246,7 @@ To change the locale on Mac, you use the system preferences.
 To change the locale on Linux, first quit Google Chrome. Then, all in one line, set the LANGUAGE
 environment variable and launch Google Chrome. For example:
 
-```
+```text
 LANGUAGE=es ./chrome
 ```
 

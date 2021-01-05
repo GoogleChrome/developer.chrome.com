@@ -3,7 +3,7 @@ title: 404
 layout: 'layouts/error.njk'
 ---
 
-# Aw, Snap!
+## Aw, Snap!
 
 We couldn't find that page.
 

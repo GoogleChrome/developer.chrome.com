@@ -43,7 +43,7 @@ build flags to ignore certain sections.
 - Create a `.env` file in the root of your project
 - Optionally add the following:
 
-```
+```text
 # Ignore ALL /docs/
 ELEVENTY_IGNORE_DOCS=true
 

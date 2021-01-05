@@ -90,7 +90,7 @@ compliance and remove duplicates before August 27, 2020.
 
 ### Are extensions that are language specific (differing only in localization) considered duplicate? {: #localization }
 
-Yes. Extensions that provide duplicate experiences — and which differ only in localization — violate
+Yes. Extensions that provide duplicate experiences—and which differ only in localization—violate
 the policy. For example:
 
 - Product ABC - UK

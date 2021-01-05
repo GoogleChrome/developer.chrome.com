@@ -10,124 +10,7 @@ find them. This FAQ answers many common questions about the Chrome Web Store. If
 answer here, check the [extension hosting changes FAQs][2], the [general extension FAQs][3], or the
 [chromium-apps group][4].
 
-## General Questions
-
-- [What is the Chrome Web Store?][5]
-- [How many people use Chrome?][6]
-- [Is there a road map for Chrome?][7]
-- [Which version of Chrome should I target for my Chrome Web Store apps?][8]
-- [Why would someone install a web app instead of just using a bookmark or typing in a URL?][9]
-- [Is there an approval process for apps in the store?][10]
-- [How will users find my app?][11]
-- [Why am I being asked to pay a registration fee?][12]
-- [How can I signup using my Google Apps email address (for example, admin@example.com)?][13]
-- [What types of apps or extensions are not allowed in the store?][14]
-- [How do I report an abusive app or extension?][15]
-- [How are items ranked in the store?][16]
-- [How are "Featured" items selected?][17]
-- [How can my app or extension be selected for a collection?][18]
-- [How can I provide support for users of my app or extension?][19]
-- [Can I remove comments from my listing if I believe they are unfair?][20]
-- [Is there a limit to the number of items I can have on the Chrome Web Store?][21]
-- [Can I obfuscate my code?][22]
-
-## Development
-
-- [How do I write an extension?][23]
-- [Should I build a web app or an extension?][24]
-- [How can I push an update of my code to my users?][25]
-- [Can I host my own app or extension?][26]
-
-## Creating a listing
-
-- [In what format should I upload my code?][27]
-- [How long will it take for my listing to appear in the store?][28]
-- [How can I remove my listing from the store?][29]
-- [What are the screenshot and text requirements for the store?][30]
-- [How can I import an existing app or extension into the store?][31]
-- [How can I export an app or extension from the store?][32]
-- [Why did I receive a "Cannot parse the manifest" error when uploading my app or extension?][33]
-- [I've verified my domain, and I have a wildcard app URL like \*://example.com, but the Chrome Web
-  Store is still asking me to verify my domain. What gives?][34]
-- [When I try to upload my app to the Chrome Web Store, I get this error: "(Server rejected) An
-  error occurred: please try again later." What gives?][35]
-- [Can I control the regions where my app is listed?][36]
-- [How do I localize my listing in the store?][37]
-- [How do I localize my detailed description?][38]
-- [How do I show different screenshot images per region?][39]
-- [My item's status says "pending review." What does this mean?][40]
-- [How long will it take to review my item?][41]
-- [Why isn't my app showing up on search?][42]
-- [My app has been removed from the Chrome Web Store. What should I do?][43]
-- [How do I link my Play and Chrome Web Store item so that the "Available for Android" link appears
-  on my item detail page?][44]
-
-## Payments and licence server
-
-- [What technologies does the Chrome Web Store Payments system use?][45]
-- [How can I verify that a user has paid for my app?][46]
-- [What technologies are used to take payments?][47]
-- [I already have a credit card merchant account. Do I really have to use Google Wallet for Digital
-  Goods?][48]
-- [I already use Paypal. Do I have to use Google Wallet for Digital Goods?][49]
-- [Does the Chrome Web Store have a preferred way to do in-app payments?][50]
-- [Is the Chrome Web Store Licensing API final?][51]
-- [Does the free trial option provide time-limited trials?][52]
-- [Can a Chrome Web Store app be both paid and free trial?][53]
-- [I'm not based in the US, can I still sell my app or extension?][54]
-- [I am a developer in region X, will I be able to sell my app in region Y?][55]
-- [Great, I can sell my app in many regions. How do I manage the pricing across all these
-  currencies?][56]
-- [If pricing is set in tiers, does that mean I am locked in to the same tier across all the regions
-  I sell my app in?][57]
-- [Is there a big table that will tell me what I will receive from each region with the fees
-  included?][58]
-- [If I list in all these regions, when and how do I get paid?][59]
-
-## Installable web apps
-
-- [What is the difference between packaged apps and hosted apps?][60]
-- [Can I sell a packaged app?][61]
-- [Why do you allow developers the option of paid packaged apps?][62]
-- [Can installable web apps have page actions?][63]
-- [Can installable web apps have browser actions?][64]
-- [Can I use Google AdSense in my web app?][65]
-- [Can I use Google Analytics?][66]
-- [What is the size limit for apps in the store?][67]
-- [I have a free Flash game, can I host it in the store?][68]
-- [I have a Flash game that I would love to be able to take payments for, how can I do it?][69]
-- [Do installable web apps run from the desktop, installed as separate apps, or otherwise operate
-  independently of the browser?][70]
-- [What is actually installed by an installable web app?][71]
-- [Do Chrome Web Store apps work in browsers other than Chrome?][72]
-- [Will users of other browsers be able to install apps directly from the Chrome Web Store?][73]
-- [Do installable web apps work on different operating systems?][74]
-- [How do I store my content for offline access?][75]
-- [What makes a good web app?][76]
-- [What is the screen resolution for Chrome Web Store apps?][77]
-- [Do apps run in full screen?][78]
-- [Will apps work on Android?][79]
-- [Will apps work on Google TV?][80]
-- [What can I do to protect the content of my web app?][81]
-- [What happens when a user clicks an external link in my app?][82]
-- [How should my app handle the back button?][83]
-- [How can I detect whether my app is running as an installed web app and via the Chrome app
-  launcher (and not just via a bookmark or link)?][84]
-- [My app is available in multiple regions. Can I list it in different categories for each
-  region?][85]
-- [What is the difference between using inline installation and hosting a .crx file on my own
-  site?][86]
-- [Is inline installation supported with all items?][87]
-
-## Extensions
-
-- [Can I sell extensions in the store?][88]
-- [Can I use the Licensing API with extensions?][89]
-
-## Themes
-
-- [Can I sell themes in the store?][90]
-- [Can I use the Licensing API with themes?][91]
+Please expand the _Table of Contents_ to quickly navigate this page.
 
 ## General Questions
 
@@ -265,7 +148,7 @@ You may also report fake reviews via the Developer Support Form.
 
 You can upload as many items to the Chrome Web Store as you like, but by default, you are limited to
 having a total of 20 published items at any one time. This limit applies to the sum of your Chrome
-Apps and Chrome Extensions as a total — it is not 20 of each item. If you reach this limit, [you may
+Apps and Chrome Extensions as a total—it is not 20 of each item. If you reach this limit, [you may
 request a limit increase][105]. The Chrome Web Store staff will review your existing items and your
 developer account history, and if approved, you will be granted an increase. Please note that if
 your developer account has been suspended in the past, or you have had items taken down previously
@@ -412,7 +295,7 @@ include:
   resubmitted.
 - The item requests powerful permissions that require in-depth review.
 
-Note that all item submissions — whether for a new item or an update to an existing one — are
+Note that all item submissions—whether for a new item or an update to an existing one—are
 subject to the same review process.
 
 For more information about the unwanted software policy, see:
@@ -717,7 +600,7 @@ correctly support both back buttons and application-defined navigation.
 Use JavaScript to check whether `window.chrome.app.isInstalled` is defined. If it is, the app is
 running from the Chrome app launcher. Here's an example of the code you'd use:
 
-```
+```js
 if (window.chrome.app.isInstalled) {
  // You're running as an installed app, via the app launcher!
  } else {

@@ -18,7 +18,7 @@ One or more mappings from MIME types to the Native Client module that handles ea
 example, the bold code in the following snippet registers a Native Client module as the content
 handler for the OpenOffice spreadsheet MIME type.
 
-```
+```json
 {
   "name": "Native Client OpenOffice Spreadsheet Viewer",
   "version": "0.1",
@@ -38,7 +38,7 @@ Each MIME type can be associated with only one `.nmf` file, but a single `.nmf` 
 multiple MIME types. The following example shows an extension with two `.nmf` files that handle
 three MIME types.
 
-```
+```json
 {
   "name": "Spreadsheet Viewer",
   "version": "0.1",

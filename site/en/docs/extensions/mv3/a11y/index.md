@@ -198,7 +198,7 @@ a [contrast checking tool][13] to test if the background and foreground colors p
 appropriate contrast.
 
 When evaluating contrast, verify that every part of the extension that relies on graphics to convey
-information is clearly visible. For specific images, tools such as [Coblis — Color Blindness
+information is clearly visible. For specific images, tools such as [Coblis—Color Blindness
 Simulator][14] can be used to see what an image looks like in various forms of color deficiency.
 
 Consider offering different color themes, or giving the user the ability to customize the color

@@ -27,7 +27,7 @@ directory. For other examples and for help in viewing the source code, see [Samp
 
 For a navigation that is successfully completed, events are fired in the following order:
 
-```
+```text
 onBeforeNavigate -> onCommitted -> onDOMContentLoaded -> onCompleted
 ```
 

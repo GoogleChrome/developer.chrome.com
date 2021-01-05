@@ -8,7 +8,6 @@ exports.plugins = [
   require('remark-preset-lint-markdown-style-guide'),
   ['lint-blockquote-indentation', false],
   ['lint-emphasis-marker', false],
-  // ['lint-fenced-code-flag', false],
   ['lint-hard-break-spaces', false],
   ['lint-link-title-style', false],
   ['lint-list-item-content-indent', false],
@@ -35,6 +34,7 @@ exports.plugins = [
   ['lint-table-pipe-alignment', false],
   ['lint-table-pipes', false],
   ['lint-unordered-list-marker-style', false],
+  ['lint-no-literal-urls', false],
 
   // Third-party plugins.
   // Checks if headings are accidentally duplicated
