@@ -44,5 +44,6 @@ exports.plugins = [
 
   // Custom plugins.
   require('./tools/linting/no-dash-spaces.js'),
+  require('./tools/linting/no-smart-quotes.js'),
   require('./tools/linting/no-unescaped-template-tags.js'),
 ];
