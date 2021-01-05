@@ -47,7 +47,7 @@ code and do not declare and justify it using the field shown above will be rejec
 
 **Remote Code** Use this field to tell reviewers whether your extension executes remote code and, if
 so, why this is necessary. If your extension doesn’t need to execute remote code, make sure that it
-does not and select “No, I am not using remote code.”
+does not and select "No, I am not using remote code."
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c7Fo3mIpx0i5j4eXEhev.png",
        alt="Screenshot of the remote code declarations field of the privacy field set",

@@ -225,7 +225,7 @@ Other factors include the following:
 - The setup and onboarding flow are intuitive.
 - The item is easy to use.
 
-### What are “By Google” extensions?
+### What are "By Google" extensions?
 
 Certain extensions on the Chrome Web Store are marked as "By Google". These extensions have been
 developed by Google and go through a rigorous review process. You may also search specifically for

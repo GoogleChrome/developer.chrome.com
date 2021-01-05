@@ -516,7 +516,7 @@ link to the content they are seeing in most use cases, and Custom Tabs doesn’t
 
 Customize the close button to make the Custom Tab feel it is part of your application.
 
-If you want the user to feel like Custom Tabs is a modal dialog, use the default “X” button. If you
+If you want the user to feel like Custom Tabs is a modal dialog, use the default "X" button. If you
 want the user to feel the Custom Tab is part of the application flow, use the back arrow.
 
 ```java

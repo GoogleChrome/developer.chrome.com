@@ -206,7 +206,7 @@ There are two ways to do this:
 
 1.  Download the relevant library locally (like jQuery) and package it with your extension.
 2.  You can relax the CSP in a limited way by allowlisting HTTPS origins in the
-    “content_security_policy” section of your manifest. To include a library like Google Analytics,
+    "content_security_policy" section of your manifest. To include a library like Google Analytics,
     this is the approach to take:
 
     ```

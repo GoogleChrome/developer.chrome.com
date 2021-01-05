@@ -46,8 +46,8 @@ appealing, inexpensive, low maintenance devices that provide a full web experien
 
 ### Extend your development capability {: #extend }
 
-You might be thinking, “If I write a standard web application, I can run it on any platform that has
-a web browser.” Of course, this is absolutely right, but remember that Chrome Apps extend your
+You might be thinking, "If I write a standard web application, I can run it on any platform that has
+a web browser." Of course, this is absolutely right, but remember that Chrome Apps extend your
 development capacity beyond what you can do with traditional web apps:
 
 - Chrome Apps can integrate seamlessly into the desktop and look more like desktop applications than

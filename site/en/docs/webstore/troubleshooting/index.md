@@ -98,10 +98,10 @@ non-obvious functionality that doesn't serve the primary purpose of the product.
 your Product must directly state the functionality so that users have a clear understanding of the
 Product they are adding. For example, Products should not contain:
 
-- Claimed functionalities which are not possible to implement (E.g. “Who has viewed your IG
-  account”)
+- Claimed functionalities which are not possible to implement (E.g. "Who has viewed your IG
+  account")
 - Developer or Product names which misrepresent their current status or performance on the Chrome
-  Web Store (E.g. “Editor’s Choice” or “Number One”)
+  Web Store (E.g. "Editor’s Choice" or "Number One")
 
 If your Product has a blank description field or is missing an icon or screenshots, it will be
 rejected. If any of your Product's content, title, icon, description or screenshots contains false

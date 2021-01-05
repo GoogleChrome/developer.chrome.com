@@ -49,7 +49,7 @@ acquire and maintain a valid Google account.
 and Google consisting of the Google Terms of Service (found at
 [https://policies.google.com/terms][7]), Google Chrome and Chrome OS Additional Terms of Service
 (found at [http://www.google.com/chrome/intl/en/eula_text.html][8]) and this Google Chrome Web Store
-Developer Agreement (together, the “Agreement”). In order to use the Web Store to distribute
+Developer Agreement (together, the "Agreement"). In order to use the Web Store to distribute
 Products, you may agree to this Agreement by clicking to accept where this option is made available
 to you or continuing to use the Web Store to distribute Products in accordance with section 14. You
 may not publish Products on the Web Store if you do not accept this Agreement.
@@ -410,7 +410,7 @@ notice and cease your use of any relevant developer credentials.
 ## 11\. DISCLAIMER OF WARRANTIES {: #disclaimer }
 
 11.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE Web Store IS AT YOUR SOLE RISK AND THAT
-THE Web Store IS PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTY OF ANY KIND, INCLUDING BUT NOT
+THE Web Store IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND, INCLUDING BUT NOT
 LIMITED TO ANY WARRANTY WITH RESPECT TO THE TIMING, FREQUENCY, OR IMPLEMENTATION OF DISTRIBUTION OF
 ANY UPDATES TO YOUR PRODUCTS.
 

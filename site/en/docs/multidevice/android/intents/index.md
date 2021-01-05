@@ -15,7 +15,7 @@ The functionality has changed slightly in Chrome for Android, versions 25 and la
 possible to launch an Android app by setting an iframe's `src` attribute. For example, navigating an
 iframe to a URI with a custom scheme such as `paulsawesomeapp://` will not work even if the user has
 the appropriate app installed. Instead, you should implement a user gesture to launch the app via a
-custom scheme, or use the “intent:” syntax described in this article.
+custom scheme, or use the "intent:" syntax described in this article.
 
 ## Syntax
 

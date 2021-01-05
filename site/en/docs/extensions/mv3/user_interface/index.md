@@ -40,7 +40,7 @@ Badges display a colored banner with up to four characters on top of the browser
 be used by extensions that declare `"browser_action"` in their manifest.
 
 Use badges to indicate the state of the extension. The [Drink Water Event][2] sample displays a
-badge with “ON” to show the user they successfully set an alarm and displays nothing when the
+badge with "ON" to show the user they successfully set an alarm and displays nothing when the
 extension is idle.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png",

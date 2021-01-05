@@ -293,13 +293,13 @@ The limited use requirements have four elements:
 
 See the following entries for the policy limitations in each of these areas.
 
-### 3\. What is the “allowed use” element of the limited use requirements?
+### 3\. What is the "allowed use" element of the limited use requirements?
 
 Developers are only allowed to use permissions, which collect personal or sensitive user data, to
 provide or improve your single purpose or user-facing features. It should be clear to your users why
 and how you use the personal or sensitive user data they've chosen to share with you.
 
-### 4\. What is the “allowed transfer” element of the limited use requirements?
+### 4\. What is the "allowed transfer" element of the limited use requirements?
 
 Developers are only allowed to transfer user data to others if that transfer is (a) necessary to
 provide or improve the single purpose of the extension, (b) to comply with applicable laws, (c) if
@@ -307,12 +307,12 @@ necessary for security purposes (for example, investigating abuse); or, (d) as p
 acquisition or sale of assets of the developer. All other transfers of personal or sensitive user
 data are completely prohibited.
 
-### 5\. What is the “prohibited advertising” element of the limited use requirements?
+### 5\. What is the "prohibited advertising" element of the limited use requirements?
 
 Developers are never allowed to use or transfer user data to serve users personalized, re-targeted,
 or interest-based advertisements.
 
-### 6\. What is the “prohibited human interaction” element of the limited use requirements?
+### 6\. What is the "prohibited human interaction" element of the limited use requirements?
 
 Developers cannot allow humans to read user data. For example, a developer with access to a user's
 data is not allowed to have one of its employees read through a user's emails. There are four

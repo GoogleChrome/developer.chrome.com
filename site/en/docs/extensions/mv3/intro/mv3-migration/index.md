@@ -64,7 +64,7 @@ For a fuller description of these changes, see the
 
 To use the features of MV3, you need to first update your [manifest
 file](/docs/extensions/mv3/manifest). Naturally, you’ll change the manifest
-version to “3”, but there are a number of other things you need to change in
+version to "3", but there are a number of other things you need to change in
 the manifest file: host permissions, content security policy, action
 declarations, and web-accessible resources.
 

@@ -90,10 +90,10 @@ using [NPAPI][16]).
 
 ## What will users see when their off-store extension is disabled as a result of this rollout? {: #disabled_extension }
 
-They will get a notification that says: “Suspicious Extensions Disabled” with a link to the
+They will get a notification that says: "Suspicious Extensions Disabled" with a link to the
 following [support article][17].
 
-## Why do I see a bubble about “Disable developer mode extensions” when loading an unpacked extension in Windows stable/beta channels? {: #diable_developer_mode }
+## Why do I see a bubble about "Disable developer mode extensions" when loading an unpacked extension in Windows stable/beta channels? {: #diable_developer_mode }
 
 We do not want the developer mode to be used as an attack vector for spreading malicious extensions.
 Hence we’re informing users about developer mode extensions on Windows stable/beta channels and

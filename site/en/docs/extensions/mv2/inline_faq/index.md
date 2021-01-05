@@ -16,7 +16,7 @@ post][1].
 ### What will change on 2018-06-12? {: #change_jun12 }
 
 Any Chrome Web Store item, such as extensions and apps, first published on or after 2018-06-12 will
-have inline-installation disabled. “Disabled” means that inline installation attempts will be
+have inline-installation disabled. "Disabled" means that inline installation attempts will be
 automatically redirected to the item’s details page on the Chrome Web Store where the user can
 complete the installation. Nothing will change for existing items in the store that were first
 published before this date.
@@ -49,7 +49,7 @@ will throw a JavaScript TypeError. You should remove any calls to the API method
 When your site calls `chrome.webstore.install()`, Chrome will no longer trigger a dialog immediately
 but will instead open a new foreground tab to the details page of the Chrome WebStore (i.e.
 https://chrome.google.com/webstore/detail/<item-id>). From there, the user can go through the
-standard installation process by clicking “install”, and a dialog will prompt the user to read
+standard installation process by clicking "install", and a dialog will prompt the user to read
 permissions and install or cancel. After the dialog is dismissed, the tab will remain on the Chrome
 Web Store.
 

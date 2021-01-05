@@ -24,7 +24,7 @@ programming, and security models support these Chrome App requirements.
 The app container describes the visual appearance and loading behavior of Chrome Apps. Chrome Apps
 look different than traditional web apps because the app container does not show any traditional web
 page UI controls; it simply contains a blank rectangular area. This allows an app to blend with
-“native” apps on the system, and it prevents the user from “messing” with the app logic by manually
+"native" apps on the system, and it prevents the user from "messing" with the app logic by manually
 changing the URL.
 
 Chrome Apps are loaded differently than web apps. Both load the same type of content: HTML documents
@@ -43,10 +43,10 @@ apps, the goal of this programming model is to give users and their systems full
 app lifecycle. The Chrome App lifecycle should be independent of browser window behavior or a
 network connection.
 
-The “event page” manages the Chrome App lifecycle by responding to user gestures and system events.
+The "event page" manages the Chrome App lifecycle by responding to user gestures and system events.
 This page is invisible, only exists in the background, and can be closed automatically by the system
 runtime. It controls how windows open and close and when the app is started or terminated. There can
-only be one “event page” for a Chrome App.
+only be one "event page" for a Chrome App.
 
 {% youtube id="yr1jgREbH8U" %}
 

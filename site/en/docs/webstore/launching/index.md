@@ -75,7 +75,7 @@ The beauty of web app development is the ease in which you can respond to custom
 a cumbersome re-deployment process.
 
 During this phase you’ll no doubt be exploring and implementing the many HTML5 features that will
-help deliver a “next generation” app look and feel. Because the Chrome Web Store is initially
+help deliver a "next generation" app look and feel. Because the Chrome Web Store is initially
 targeted at Google Chrome, you can build the app with two assumptions in mind: you have a wide array
 of modern HTML5 features available, and your initial set of users will be using Google Chrome.
 

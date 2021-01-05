@@ -50,10 +50,10 @@ not considered repetitive content.
 We do allow publication of separate test and production variants of an extension. In this case the
 test variant of the extension must be clearly labeled:
 
-- The description must clearly identify the purpose of the variant. For example, “THIS EXTENSION IS
-  FOR BETA TESTING“ or “THIS EXTENSION IS A PRE-DEVELOPMENTAL BUILD FOR TESTING PURPOSES“.
+- The description must clearly identify the purpose of the variant. For example, "THIS EXTENSION IS
+  FOR BETA TESTING" or "THIS EXTENSION IS A PRE-DEVELOPMENTAL BUILD FOR TESTING PURPOSES".
 - The extension's title should also identify the extension variant. For example, applying the word
-  “BETA” or “DEVELOPMENT BUILD” to the title.
+  "BETA" or "DEVELOPMENT BUILD" to the title.
 - The description of any non-production variants should include the URL of the production variant,
   so that users can find it. You may also wish to link from the production variant to any others so
   that users can find those too. (If you have a version that you want to test without allowing

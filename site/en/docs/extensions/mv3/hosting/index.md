@@ -32,7 +32,7 @@ There are three exceptions to the Chrome Web Store hosting rule:
 The Chrome Browser periodically checks for new versions of installed extensions and updates them
 without user intervention.
 
-To release an update to an extension, increase the number in the `“version”` field of the manifest.
+To release an update to an extension, increase the number in the `"version"` field of the manifest.
 
 ```json
 {

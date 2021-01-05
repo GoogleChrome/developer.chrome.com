@@ -228,7 +228,7 @@ your app.
 
 !!!.aside.aside--note
 If you are already hosting your app in Google Play, and you want your Chrome Web Store app
-listing to show an “Available for Android” link, your app must have the same name as your Google
+listing to show an "Available for Android" link, your app must have the same name as your Google
 Play listing and both apps must be owned by the same developer account. To have your CWS item
 transferred to a different developer account, you must submit this [form][30].
 !!!

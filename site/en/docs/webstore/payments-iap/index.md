@@ -323,7 +323,7 @@ If a free trial is specified, users will go through the purchase flow for a 0 am
 recurring order will occur automatically as soon as the free trial period expires. Note that once a
 subscription item is activated, developers can no longer inactivate it or change the price or
 period. However, the free trial period can be changed at any time. While non-subscription items will
-have the type “inapp”, subscription items will have the type “subs”. For example, getSkuDetails will
+have the type "inapp", subscription items will have the type "subs". For example, getSkuDetails will
 return a result for a subscription item that resembles:
 
 ```json

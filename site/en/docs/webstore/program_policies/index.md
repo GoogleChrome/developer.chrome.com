@@ -88,10 +88,10 @@ Impersonation or Deceptive Behavior:
   the functionality so that users have a clear understanding of the product they are adding. For
   example, products should not contain:
 
-  - Claimed functionalities which are not possible to implement (e.g. “Who has viewed your IG
-    account”)
+  - Claimed functionalities which are not possible to implement (e.g. "Who has viewed your IG
+    account")
   - Developer or product names which misrepresent their current status or performance on the Chrome
-    Web Store (e.g. “Editor’s Choice” or “Number One”)
+    Web Store (e.g. "Editor’s Choice" or "Number One")
 
   If your product has a blank description field or is missing an icon or screenshots, it will be
   rejected. If any of your product's content, title, icon, description or screenshots contains false
@@ -312,8 +312,8 @@ apply to scraped content or otherwise automatically gathered user data.
 
 An affirmative statement that your use of the data complies with the Limited Use restrictions must
 be disclosed on a website belonging to your extension; e.g., A link on a homepage to a dedicated
-page or privacy policy noting: “The use of information received from Google APIs will adhere to the
-[Chrome Web Store User Data Policy][16], including the [Limited Use][17] requirements.”
+page or privacy policy noting: "The use of information received from Google APIs will adhere to the
+[Chrome Web Store User Data Policy][16], including the [Limited Use][17] requirements."
 
 ### Use of Permissions {: #permissions }
 

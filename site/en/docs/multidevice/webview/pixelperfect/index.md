@@ -287,7 +287,7 @@ start to account for different form factors.
 ```
 
 You might notice that the `max-height` and `max-width` are set to 512px for 2`ddpx` resolution, with
-an image of 1024x1024px. this is because a CSS “pixel” actually takes into account the device pixel
+an image of 1024x1024px. this is because a CSS "pixel" actually takes into account the device pixel
 ratio (512px \* 2 = 1024px).
 
 #### What About `<img/>`?

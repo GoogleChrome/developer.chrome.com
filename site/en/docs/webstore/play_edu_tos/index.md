@@ -43,11 +43,11 @@ Products for direct distribution to users of Google Chrome.
 You acknowledge that You have agreed to the Google Chrome Terms of Service (found at
 http://www.google.com/chrome/intl/en/eula\_text.html) and the Google Chrome Web Store Developer
 Agreement (found at https://developers.google.com/chrome/web-store/terms) (collectively, the
-“Agreement”).
+"Agreement").
 
 This document, which incorporates by reference the terms and conditions of the Google Play Developer
 Distribution Agreement (found at http://play.google.com/about-developer-distribution-agreement.html)
-(collectively, the “Addendum”), adds additional terms and conditions to the Agreement covering Your
+(collectively, the "Addendum"), adds additional terms and conditions to the Agreement covering Your
 participation in Play for Education. This Addendum is hereby incorporated by reference into the
 Agreement.
 
@@ -201,7 +201,7 @@ This Addendum will continue to apply until terminated by either You or Google as
 ## 7\. DISCLAIMER OF WARRANTIES {: #disclaimer }
 
 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR PARTICIPATION IN PLAY FOR EDUCATION IS AT YOUR SOLE AND
-PLAY FOR EDUCATION IS PROVIDED OR PRODUCED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTY OF ANY KIND,
+PLAY FOR EDUCATION IS PROVIDED OR PRODUCED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND,
 INCLUDING BUT NOT LIMITED TO ANY WARRANTY WITH RESPECT TO THE TIMING, FREQUENCY, OR IMPLEMENTATION
 OF PLAY FOR EDUCATION. GOOGLE FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND,
 WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF

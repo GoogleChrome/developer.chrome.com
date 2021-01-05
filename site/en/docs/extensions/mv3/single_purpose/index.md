@@ -16,7 +16,7 @@ With the July 2014 release of Chrome, we introduced the [Settings Overrides API]
 extensions to manage important Chrome settings on Windows. Most recently, with the January 2017
 release of Chrome, we enabled the [Settings Overrides API][4] on Mac.
 
-## 1.) Why did Google launch a “single purpose” Chrome extensions policy? {: #one }
+## 1.) Why did Google launch a "single purpose" Chrome extensions policy? {: #one }
 
 To maintain the quality of the Chrome user experience, we require Chrome extensions to have a single
 purpose. For an overview of the policy announcement, please read this [Chromium blog post][5].
@@ -28,14 +28,14 @@ Also, unexpected changes to browser functionality and settings have become the n
 complaint for Chrome users, and this policy helps minimize the problem by ensuring that users
 understand what extensions are doing.
 
-## 2.) Where can I find the “single purpose” policy? {: #two }
+## 2.) Where can I find the "single purpose" policy? {: #two }
 
 Please refer to the [Extensions Quality Guidelines][6] section of the Chrome Web Store Developer
 Program Policies.
 
-## 3.) What does “single purpose” actually mean? {: #three }
+## 3.) What does "single purpose" actually mean? {: #three }
 
-“Single purpose” can refer to one of two aspects of an extension:
+"Single purpose" can refer to one of two aspects of an extension:
 
 An extension can have a single purpose limited to a narrow **focus area or subject matter** (for
 example, news headlines", "weather", "comparison shopping"). If the extension has a narrow focus
@@ -159,7 +159,7 @@ changing Chrome settings.
 
 No. This violates the single purpose policy. However, if injecting ads is the single purpose of the
 extension and the extension is otherwise compliant with Chrome policies, then it would be
-acceptable. For example, a “related articles” extension that adds sponsored links to articles
+acceptable. For example, a "related articles" extension that adds sponsored links to articles
 related to a page the user is visiting would be compliant with the single purpose policy because it
 has a single purpose limited to a narrow function of the browser. You also might want to explore the
 other monetization options described [here][10].
