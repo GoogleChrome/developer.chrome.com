@@ -12,7 +12,8 @@ const domTransformer = (content, outputPath) => {
   }
 
   // Turn the page into a cheerio object to make it queryable.
-  const $ = cheerio.load(content);
+  // This uses https://github.com/fb55/htmlparser2 instead of the default parse5.
+  const $ = cheerio.load(content, {_useHtmlParser2: true});
 
   // Grab the locale for the page. This is used by various transforms.
   const locale = $('html').attr('lang');
