@@ -1,6 +1,7 @@
 const path = require('path');
 
 const cacheKey = Symbol('find-cache');
+const alreadyNotifiedKey = Symbol('already-notified');
 
 /**
  * Builds and uses a cache to ensure fast lookup of Eleventy pages.
@@ -10,6 +11,7 @@ const cacheKey = Symbol('find-cache');
  * @return {EleventyCollectionItem|undefined}
  */
 const internalFind = (collection, urlToFind) => {
+  /** @type {{[url: string]: EleventyCollectionItem}} */
   let cache = collection[cacheKey];
   if (cache === undefined) {
     cache = {};
@@ -26,7 +28,25 @@ const internalFind = (collection, urlToFind) => {
   }
 
   // Otherwise, be slow, since we think this is probably pretty rare.
-  return collection.find(item => item.url === urlToFind);
+  const result = collection.find(item => item.url === urlToFind);
+  if (result) {
+    return result;
+  }
+
+  /** @type {Set<string>} */
+  let notifiedCache = collection[alreadyNotifiedKey];
+  if (notifiedCache === undefined) {
+    notifiedCache = new Set();
+    collection[alreadyNotifiedKey] = notifiedCache;
+  }
+
+  // If this is the first time we've looked up this URL, notify the user.
+  if (!notifiedCache.has(urlToFind)) {
+    console.warn('Could not find URL:', urlToFind);
+    notifiedCache.add(urlToFind);
+  }
+
+  return undefined;
 };
 
 const findByUrl = (collection, url, locale = '') => {
@@ -47,7 +67,7 @@ const findByUrl = (collection, url, locale = '') => {
 
   // Make sure language paths are absolute (ja becomes /ja).
   // These don't need to end in a trailing slash because they'll be prepended
-  // to the url which already ends in a trailing slash.
+  // to the url which already starts with a trailing slash.
   // e.g. /ja/docs/extensions/
   if (locale && !path.isAbsolute(locale)) {
     locale = path.join('/', locale);
