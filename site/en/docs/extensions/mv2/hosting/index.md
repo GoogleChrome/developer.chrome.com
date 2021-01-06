@@ -53,7 +53,7 @@ To release an update to an extension, increase the number in the `“version”`
 ```
 
 Convert the updated extension directory into a ZIP file and locate the old version in the [Developer
-Dashboard][10]. Select **Edit**, upload the new package, and hit **Publish**. The browser will will
+Dashboard][10]. Select **Edit**, upload the new package, and hit **Publish**. The browser will
 automatically update the extension for users after the new version is published.
 
 [1]: https://chrome.google.com/webstore/category/extensions
