@@ -4,6 +4,11 @@ const {asides} = require('./asides');
 const {prettyUrls} = require('./pretty-urls');
 const {tables} = require('./tables');
 
+/**
+ * @param {string} content
+ * @param {string} outputPath
+ * @return {string}
+ */
 const domTransformer = (content, outputPath) => {
   // Make sure we're not interacting with something weird that has
   // permalink set to false or undefined.
@@ -35,4 +40,6 @@ const domTransformer = (content, outputPath) => {
   return $.html();
 };
 
-module.exports = {domTransformer};
+// Include a default export which runs the transformer, for async-transforms pool code.
+module.exports = ({content, outputPath}) => domTransformer(content, outputPath);
+module.exports.domTransformer = domTransformer;
