@@ -14,7 +14,7 @@ let runWithPool;
 const domTransformer = (content, outputPath) => {
   if (runWithPool === undefined) {
     // Lazily create the worker pool if needed.
-    const script = path.join(__dirname, './dom-transformer-thread.js');
+    const script = path.join(__dirname, './dom-transformer.js');
     runWithPool = buildWorkerPool(script);
   }
   return runWithPool({content, outputPath});
