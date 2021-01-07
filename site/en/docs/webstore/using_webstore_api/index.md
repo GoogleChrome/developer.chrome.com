@@ -17,7 +17,7 @@ of uploading and publishing items into the store.
 To use the Chrome Web Store Publish API, you need to enable the API for your project in the [Google
 Developers Console][1].
 
-1.  Visit the [Google Developers Console][2].
+1.  Visit the [Google Developers Console][1].
 2.  Create a new project or select an existing one.
 3.  In the sidebar on the left, select **APIs & auth**.
 4.  In the displayed list of available APIs, set the status of the Chrome Web Store API to **ON**.
@@ -180,9 +180,9 @@ https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
 ### Publishing an item to trusted testers {: #trustedtesters }
 
 ```
-Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
+Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish?publishTarget=trustedTesters
 Type: POST
-Header Parameters: $TOKEN: the access token, publishTarget: trustedTesters
+Header Parameters: $TOKEN: the access token
 ```
 
 ```bash
@@ -190,10 +190,9 @@ Header Parameters: $TOKEN: the access token, publishTarget: trustedTesters
 -H "Authorization: Bearer $TOKEN"  \
 -H "x-goog-api-version: 2" \
 -H "Content-Length: 0" \
--H "publishTarget: trustedTesters" \
 -X POST \
 -v \
-https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
+https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish?publishTarget=trustedTesters
 ```
 
 !!!.aside.aside--note
@@ -201,6 +200,7 @@ https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
 **Note**: For a full description of the publish method, see [Items:Publish][9].
 
 !!!
+
 
 ### Checking the upload status of an item {: #checkstatus }
 
@@ -228,7 +228,6 @@ https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID?projection=draft
 !!!
 
 [1]: https://console.developers.google.com
-[2]: https://console.developers.google.com
 [3]: https://developers.google.com/accounts/docs/OAuth2
 [4]: https://chrome.google.com/webstore/developer/dashboard
 [5]: /docs/webstore/api_index
