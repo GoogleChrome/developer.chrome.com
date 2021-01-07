@@ -1,0 +1,5 @@
+---
+api: scripting
+---
+
+<!-- Intentionally blank -->

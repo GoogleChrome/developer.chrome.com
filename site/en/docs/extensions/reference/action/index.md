@@ -1,0 +1,5 @@
+---
+api: action
+---
+
+<!-- Intentionally blank -->
