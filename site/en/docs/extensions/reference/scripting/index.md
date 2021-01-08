@@ -1,5 +1,8 @@
 ---
-api:scripting
+api: scripting
 ---
 
-<!-- Intentionally blank -->
+!!!.aside.warning
+This documentation is in active development. We're planning to add an expanded introduction section soon to provide better context and how-to focus. This work is tracked in issue [#194](https://github.com/GoogleChrome/developer.chrome.com/issues/194).
+!!!
+
