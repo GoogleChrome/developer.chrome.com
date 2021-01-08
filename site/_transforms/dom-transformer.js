@@ -40,6 +40,5 @@ const domTransformer = (content, outputPath) => {
   return $.html();
 };
 
-// Include a default export which runs the transformer, for async-transforms pool code.
-module.exports = ({content, outputPath}) => domTransformer(content, outputPath);
-module.exports.domTransformer = domTransformer;
+// async-transforms can only operate on the default export.
+module.exports = domTransformer;
