@@ -176,7 +176,7 @@ allow your web app to show your user push notifications.
 
 ### Q: My hosted app uses the unlimitedStorage permission. How do I do that on the web? {: #unlimitedStorage }
 
-The unlimitedStorage permission ensured that data you store was ‘Persistent', which means it can
+The unlimitedStorage permission ensured that data you store was 'Persistent', which means it can
 only be cleared manually by the user.
 
 The recommended alternative is to request **[Persistent Storage][197]** permission within your web

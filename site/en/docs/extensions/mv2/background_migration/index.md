@@ -15,7 +15,7 @@ extension. Most extension functionality can be supported by an event based backg
 under [rare circumstances][1] should an extension have a persistent background, as they constantly
 consume system resources and can cause a strain on lower-powered devices.
 
-Enhance an extension’s performance by migrating a persistent background script to an event-based
+Enhance an extension's performance by migrating a persistent background script to an event-based
 non-persistent model.
 
 ## Designate persistence as false {: #persistence }

@@ -15,17 +15,17 @@ Content ratings help users determine whether your application and its content ar
 Ratings are not intended to reflect the quality or complexity of your app.
 
 As the developer, you are ultimately responsible for rating your application appropriately. Use the
-following rules as guidance in determining whether your app should be rated “Mature.” When
-determining your app’s rating, consider all the content in your app, including user generated
+following rules as guidance in determining whether your app should be rated "Mature." When
+determining your app's rating, consider all the content in your app, including user generated
 content and ads, and content that your app links to. Note that regardless of the rating you give
 your app, all applications must still adhere to the terms of the Chrome Web Store Program Policy and
 the Chrome Web Store Developer Agreement.
 
 ## Sexual and suggestive content
 
-Apps that focus on sexual content or sexually suggestive content should be rated “Mature.” For
+Apps that focus on sexual content or sexually suggestive content should be rated "Mature." For
 example, an app that is a collection of images of men or women in lingerie posing suggestively
-should be rated “Mature.” Note that pornography and sexually explicit content are not allowed in the
+should be rated "Mature." Note that pornography and sexually explicit content are not allowed in the
 Chrome Web Store.
 
 As you consider how to rate your app, here is more guidance on apps that we would consider to be
@@ -35,18 +35,18 @@ sexually explicit, mature, and not mature.
 
 ## Strong language
 
-Apps that contain explicit or frequent use of profanity should be rated "Mature.”
+Apps that contain explicit or frequent use of profanity should be rated "Mature."
 
 ## Violence
 
-Graphic cartoon or fantasy violence should be rated “Mature.” For example, games that depict graphic
-violence like decapitations or close-ups of wounds should be rated “Mature.” Gratuitous real
+Graphic cartoon or fantasy violence should be rated "Mature." For example, games that depict graphic
+violence like decapitations or close-ups of wounds should be rated "Mature." Gratuitous real
 violence is not allowed in the Chrome Web Store.
 
 ## Alcohol, tobacco and drugs
 
-Apps that focus on the consumption or sale of drugs, alcohol or tobacco should be rated “Mature.”
-For example, a game where the main character is a drug dealer should be rated “Mature.” Illegal
+Apps that focus on the consumption or sale of drugs, alcohol or tobacco should be rated "Mature."
+For example, a game where the main character is a drug dealer should be rated "Mature." Illegal
 activity or alcohol, tobacco or drug content that is targeted at minors is not allowed in the Chrome
 Web Store.
 

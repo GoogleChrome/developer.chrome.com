@@ -25,14 +25,14 @@ libraries from [Bower][3] and [npm][4], and creating a Grunt file with predefine
        width="656",
        height="264" %}
 
-In this tutorial you’ll use Yeoman to create a new basic web application, then integrate the Android
-Studio build system ([Gradle][5]) with Grunt, to build your web application. You’ll also set up
+In this tutorial you'll use Yeoman to create a new basic web application, then integrate the Android
+Studio build system ([Gradle][5]) with Grunt, to build your web application. You'll also set up
 Grunt tasks to launch a local live-reload server for testing your application in the browser, so you
-don’t have to manually refresh the page each time you change an HTML, CSS or JavaScript file.
+don't have to manually refresh the page each time you change an HTML, CSS or JavaScript file.
 
 ## Prerequisites
 
-Before getting started, you’ll need to install a few prerequisites:
+Before getting started, you'll need to install a few prerequisites:
 
 1.  Install Yeoman: [https://github.com/yeoman/yeoman/wiki/Getting-Started][6]
 2.  Install Android Studio: [http://developer.android.com/sdk/installing/studio.html][7]
@@ -43,7 +43,7 @@ You can find a full instructions on how to do this in the [Getting Started Guide
 
 ## Step 2. Create a subdirectory in your Android Studio project for the web app content
 
-After you’ve created your project, create a new top level directory:
+After you've created your project, create a new top level directory:
 
 - In Android Studio, right-click the project folder and selecting **New** > **Directory**.
 
@@ -143,7 +143,7 @@ android.applicationVariants.all { variant ->
 }
 ```
 
-Let’s examine each part of this.
+Let's examine each part of this.
 
 ### task copyWebApplication
 
@@ -176,7 +176,7 @@ copyWebApplication.dependsOn deleteWebApplication
 ```
 
 The first line of this states that the `copyWebApplication` has a dependency on the `buildWebApp`
-task from our web app’s `build.gradle` file.
+task from our web app's `build.gradle` file.
 
 The second line states there is a dependency on the `deleteWebApplication` task.
 
@@ -191,7 +191,7 @@ android.applicationVariants.all { variant ->
 }
 ```
 
-This task specifies the dependencies for all of your project’s builds, for each version of your app.
+This task specifies the dependencies for all of your project's builds, for each version of your app.
 Here it sets a dependency on the `assemble` tasks to run `copyWebApplication`.
 
 The `assemble` tasks assembles the output of the project, so the web app needs to be copied over to
@@ -201,7 +201,7 @@ the Android project first.
 
 In Android Studio, you should have no `assets` directory in your Android applications `src` folder.
 
-Don’t forget you’ll need to set the WebView to use the `index.html` page:
+Don't forget you'll need to set the WebView to use the `index.html` page:
 
 `mWebView.loadUrl("file:///android_asset/www/index.html");`
 
@@ -352,7 +352,7 @@ of a hard-coded URL.
         port: 9000,
         livereload: 35729,
         // change this to '0.0.0.0' to access the server from outside
-        hostname: ‘**0.0.0.0’**
+        hostname: '**0.0.0.0'**
       },
       ...
     }

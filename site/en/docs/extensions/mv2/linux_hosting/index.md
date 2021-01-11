@@ -46,13 +46,13 @@ On the Extensions Management Page, enable Developer Mode by clicking the toggle 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/uO9oti7LStDokrnq6d0Q.png",
        alt="Developer Mode is Checked then Click Pack Extension", height="120", width="642" %}
 
-Specify the path to the extension’s folder in the Extension root directory field then click the
+Specify the path to the extension's folder in the Extension root directory field then click the
 **PACK EXTENSION** button. Ignore the **Private key** field for a first-time package.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/a0iFUqr8SpjTcIjtXy44.png",
        alt="Specify Extension Path then Click Pack Extension", height="307", width="524" %}
 
-Chrome will create two files, a `.crx` file and a `.pem` file, which contains the extension’s
+Chrome will create two files, a `.crx` file and a `.pem` file, which contains the extension's
 private key.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/sECV1ZYWjipkhNiwwMJv.png",

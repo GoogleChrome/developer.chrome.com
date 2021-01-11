@@ -8,7 +8,7 @@ description: Why the payments is deprecated, details about the deprecation timel
 
 The Chrome Web Store payments system is now deprecated and will be shut down over the coming months.
 There are many other ways to monetize your extensions, and if you currently use Chrome Web Store
-payments, you’ll need to migrate to one of them.
+payments, you'll need to migrate to one of them.
 
 ## Why this is changing {: #why-this-is-changing }
 
@@ -18,16 +18,16 @@ the ecosystem has grown and developers now have many payment-handling options av
 
 ## What it means for developers {: #what-it-means-for-developers }
 
-If you don’t use Chrome Web Store payments to monetize your extension, then this does not affect you
-and you don’t have to do anything.
+If you don't use Chrome Web Store payments to monetize your extension, then this does not affect you
+and you don't have to do anything.
 
-If you use Chrome Web Store payments to charge for your extension or in-app purchases, you’ll need
+If you use Chrome Web Store payments to charge for your extension or in-app purchases, you'll need
 to migrate to another payments processor in the near future. If you use the licensing API to keep
-track of who has paid, you’ll need to implement another way of tracking user licenses.
+track of who has paid, you'll need to implement another way of tracking user licenses.
 
-## Details of what’s happening {: #details-of-whats-happening }
+## Details of what's happening {: #details-of-whats-happening }
 
-You will need to migrate your billing if you are affected by this change. Specifically, you’ll need
+You will need to migrate your billing if you are affected by this change. Specifically, you'll need
 to make changes if you monetize your extensions in any of the following ways:
 
 1.  If you have configured a one-time purchase for your extension [using the developer
@@ -58,7 +58,7 @@ coming months payments for existing items will be phased out.
 - **Feb 1, 2021** Your existing items and in-app purchases can no longer charge money with Chrome
   Web Store payments. You can still query license information for previously paid purchases and
   subscriptions. (The licensing API will accurately reflect the status of active subscriptions, but
-  these subscriptions won’t auto-renew.)
+  these subscriptions won't auto-renew.)
 - **At some future time** The licensing API will no longer allow you to determine license status for
   your users.
 
@@ -68,7 +68,7 @@ migrating your license tracking to a different implementation.
 
 ## Exporting user licenses {: #exporting-user-licenses }
 
-If you’re using the Chrome Web Store or the [Licensing API][3], you’ll need to do the following:
+If you're using the Chrome Web Store or the [Licensing API][3], you'll need to do the following:
 
 - Migrate to another payments processor
 - Migrate your licensing tracking
@@ -77,12 +77,12 @@ There is no way to bulk export your existing user licenses, so you need to have 
 this part of the migration.
 
 We recommend that you handle license migration in your back-end system, using the Chrome Web Store
-API. You’ll need to use OAuth 2.0 with your users' consent to access these APIs. The general
+API. You'll need to use OAuth 2.0 with your users' consent to access these APIs. The general
 sequence is:
 
 1.  Implement your replacement payment/licensing scheme.
 2.  Prepare a license migration app that runs on your site, which accesses the Chrome Web Store API.
-    This app needs to use OAuth 2.0 to authenticate, with user consent, and fetch the user’s
+    This app needs to use OAuth 2.0 to authenticate, with user consent, and fetch the user's
     subscription details.
 3.  Create and publish a new version of your extension that directs users to your site to perform
     the migration.

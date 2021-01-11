@@ -39,7 +39,7 @@ declare global {
     url: string;
     /**
      * Depends on your output directory (the default is _site)
-     * You probably won’t use this: `url` is better.
+     * You probably won't use this: `url` is better.
      */
     outputPath: string;
   }

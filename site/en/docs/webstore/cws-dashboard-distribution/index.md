@@ -64,6 +64,6 @@ the Chrome Web Store. You can either:
   relevance.
 
 When you publish to the world, your item will be immediately visible to the region(s) you select,
-and it’ll be visible in the store’s search results.
+and it'll be visible in the store's search results.
 
 [1]: #private-visibility-groups

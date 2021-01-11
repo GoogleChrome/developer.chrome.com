@@ -93,7 +93,7 @@ endpoints for creating items, updating items, and publishing items.
 
 !!!.aside.aside--note
 
-**Note**: Currently, there is no API for setting an item’s metadata, such as description. This has
+**Note**: Currently, there is no API for setting an item's metadata, such as description. This has
 to be done manually in the [Chrome Web Store Developer Dashboard.][4] More detail about the Web
 Store API can be found [here][5].
 

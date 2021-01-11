@@ -25,8 +25,8 @@ Market.
 
 ### What are the differences between Android Browser and Chrome for Android?
 
-Chrome for Android provides the same fast, secure, and stable web browsing experience you’ve come to
-enjoy when using Chrome on desktop. We’ve taken a different approach to tabs and overall navigation.
+Chrome for Android provides the same fast, secure, and stable web browsing experience you've come to
+enjoy when using Chrome on desktop. We've taken a different approach to tabs and overall navigation.
 By signing in to Chrome on Android, users can have a unified, personalized Chrome experience across
 all their devices.
 
@@ -38,7 +38,7 @@ Tools, Indexed DB, requestAnimationFrame, WebSockets and Web Workers.
 Create a bookmark via the menu, find it in the bookmark list, long-press on it, and tap "Add to home
 screen".
 
-### I’ve written my mobile web app to use feature X, but Chrome for Android doesn’t support it
+### I've written my mobile web app to use feature X, but Chrome for Android doesn't support it
 
 Please see if this is already a [known issue][2] and star it if it is. Otherwise, please log a bug.
 Also, see [chromestatus.com][3] to track new and upcoming features in Chrome.
@@ -97,7 +97,7 @@ WebGL is supported in Chrome for Android 30 and later.
 
 It does not, and we have no plans to announce at this time.
 
-### What is Chrome for Android’s User Agent string?
+### What is Chrome for Android's User Agent string?
 
 See the [user agent article][9] for an in-depth discussion.
 

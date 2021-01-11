@@ -42,7 +42,7 @@ Badges display a colored banner with up to four characters on top of the browser
 be used by extensions that declare `"browser_action"` in their manifest.
 
 Use badges to indicate the state of the extension. The [Drink Water Event][2] sample displays a
-badge with “ON” to show the user they successfully set an alarm and displays nothing when the
+badge with "ON" to show the user they successfully set an alarm and displays nothing when the
 extension is idle.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png",
@@ -91,7 +91,7 @@ otherwise it will be displayed in greyscale.
 
 Define rules for when the extension is usable by calling [`chrome.declarativeContent`][6] under the
 [`runtime.onInstalled`][7] listener in a [background script][8]. The [Page action by URL][9] sample
-extension sets a condition that the url must include a ‘g’. If the condition is met, the extension
+extension sets a condition that the url must include a 'g'. If the condition is met, the extension
 calls [`declarativeContent.ShowPageAction()`][10].
 
 ```js

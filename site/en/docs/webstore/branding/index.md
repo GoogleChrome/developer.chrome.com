@@ -53,10 +53,10 @@ fully visible.
 When using the "Available in the Chrome Web Store" badge in marketing executions or on your site,
 follow these rules and restrictions:
 
-- Don’t modify the badge in any way, other than resizing.
-- Don’t make the badge the primary element on your page.
+- Don't modify the badge in any way, other than resizing.
+- Don't make the badge the primary element on your page.
 - Keep some distance between the badge and other logos and icons on your page.
-- Don’t use the badge on a page that contains or displays adult content, promotes gambling, promotes
+- Don't use the badge on a page that contains or displays adult content, promotes gambling, promotes
   violence, contains hate speech, involves the sale of tobacco or alcohol to persons under
   twenty-one years of age, violates other applicable laws or regulations or is otherwise
   objectionable.
@@ -79,7 +79,7 @@ company without [written permission from Google.][19]
 
 ## Using Google logos
 
-Don’t use Google trademarks or a modified version of a Google trademark as the logo for your
+Don't use Google trademarks or a modified version of a Google trademark as the logo for your
 application without written permission from Google. Feel free to continue using our badges in your
 application subject to the branding guidelines for each of those badges (for example, [YouTube][20],
 [Google Checkout][21]).

@@ -63,8 +63,8 @@ For a fuller description of these changes, see the
 ## Updating the manifest.json file  {: #updating-manifest-dot-json }
 
 To use the features of MV3, you need to first update your [manifest
-file](/docs/extensions/mv3/manifest). Naturally, you’ll change the manifest
-version to “3”, but there are a number of other things you need to change in
+file](/docs/extensions/mv3/manifest). Naturally, you'll change the manifest
+version to "3", but there are a number of other things you need to change in
 the manifest file: host permissions, content security policy, action
 declarations, and web-accessible resources.
 
@@ -72,7 +72,7 @@ declarations, and web-accessible resources.
 ### Manifest version  {: #manifest-version }
 
 Changing the value of the manifest_version element is the key to upgrading your
-extension. This determines whether you’re using the MV2 or MV3 feature set:
+extension. This determines whether you're using the MV2 or MV3 feature set:
 
 {% columns %}
 ```json
@@ -90,7 +90,7 @@ extension. This determines whether you’re using the MV2 or MV3 feature set:
 
 ### Host permissions  {: #host-permissions }
 
-In MV3, you’ll need to specify host permissions separately from other permissions:
+In MV3, you'll need to specify host permissions separately from other permissions:
 
 {% columns %}
 ```js
@@ -265,7 +265,7 @@ limitations.
 
 Many extensions are unaffected by this change. However, if your MV2 extension
 executes remotely hosted scripts, injects code strings into pages, or evals
-strings at runtime, you’ll need to update your code execution strategies when
+strings at runtime, you'll need to update your code execution strategies when
 migrating to MV3.
 
 
@@ -280,7 +280,7 @@ are considered remotely hosted code:
 *   JavaScript files pulled from a remote server
 *   a code string passed into eval at runtime
 
-In MV3, all of your extension’s logic must be bundled with the extension. You
+In MV3, all of your extension's logic must be bundled with the extension. You
 can no longer load and execute a remotely hosted file. A number of alternative
 approaches are available, depending on your use case and the reason for remote
 hosting. Two such approaches are:
@@ -299,7 +299,7 @@ resubmitting to the Chrome Web Store.
 
 ### Executing arbitrary strings  {: #executing-arbitrary-strings }
 
-The `code` property from executeScript’s
+The `code` property from executeScript's
 [details](/docs/extensions/reference/tabs#method-executeScript) object is no longer
 available in MV3.
 
@@ -430,7 +430,7 @@ Request redirects and header modifications **do** require the user to grant host
 !!!
 
 When extensions require host permissions for these use cases, we recommend a
-"tiered" permissions strategy. This means implementing the extension’s core
+"tiered" permissions strategy. This means implementing the extension's core
 functionality without using these permissions; putting the more advanced use
 cases behind an optional permission.
 
@@ -466,6 +466,6 @@ As well as the undocumented:
 *   chrome.extension.onConnect
 *   chrome.extension.onMessage
 
-If your extensions use any of these deprecated APIs, you’ll need to make the
+If your extensions use any of these deprecated APIs, you'll need to make the
 appropriate changes when you migrate to MV3.
 

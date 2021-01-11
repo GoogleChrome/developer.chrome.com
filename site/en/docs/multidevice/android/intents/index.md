@@ -15,7 +15,7 @@ The functionality has changed slightly in Chrome for Android, versions 25 and la
 possible to launch an Android app by setting an iframe's `src` attribute. For example, navigating an
 iframe to a URI with a custom scheme such as `paulsawesomeapp://` will not work even if the user has
 the appropriate app installed. Instead, you should implement a user gesture to launch the app via a
-custom scheme, or use the “intent:” syntax described in this article.
+custom scheme, or use the "intent:" syntax described in this article.
 
 ## Syntax
 
@@ -54,7 +54,7 @@ Some example cases where Chrome does not launch an external application are as f
 - JavaScript timer tried to open an application without user gesture.
 
 Note that `S.<name>` is a way to define string extras. `S.browser_fallback_url` was chosen for
-backward compatibility, but the target app won’t see browser_fallback_url value as Chrome removes
+backward compatibility, but the target app won't see browser_fallback_url value as Chrome removes
 it.
 
 ## Examples
@@ -86,7 +86,7 @@ Also, if fallback URL is specified, the full URL will look like this:
 ```
 
 Now the URL will get you to zxing.org if the app could not be found, or the link was triggered from
-JavaScript without user gesture (or for other cases where we don’t launch an external application.)
+JavaScript without user gesture (or for other cases where we don't launch an external application.)
 
 ## Considerations
 
@@ -100,7 +100,7 @@ invoked using this method as it indicates that the application is safe to open f
 - [Android Intents and Intent Filters][7]
 - [Android Activities][8]
 
-And Chrome doesn’t launch an external app for a given Intent URI in the following cases.
+And Chrome doesn't launch an external app for a given Intent URI in the following cases.
 
 - When the Intent URI is redirected from a typed in URL.
 - When the Intent URI is initiated without user gesture.

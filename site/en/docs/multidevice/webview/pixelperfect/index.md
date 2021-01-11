@@ -13,7 +13,7 @@ hybrid applications.
 
 The viewport meta tag is of the most important tags you need to add to your web app. Without it, the
 WebView may act as if your site is designed for desktop browsers. This causes your web page to be
-given a larger width (typically 980px) and scales it to fit the WebView’s width. In most cases, the
+given a larger width (typically 980px) and scales it to fit the WebView's width. In most cases, the
 result is a tiny overview version of the page that requires the user to pan and zoom to actually
 read content, like the image on the left.
 
@@ -22,7 +22,7 @@ read content, like the image on the left.
        width="656",
        height="613" %}
 
-If you want the width of your site to be 100% of the WebView’s width, as shown on the right, you
+If you want the width of your site to be 100% of the WebView's width, as shown on the right, you
 need to set the viewport meta tag:
 
 ```html
@@ -32,13 +32,13 @@ need to set the viewport meta tag:
 Setting width to the special value device-width will give you more control over the page layout.
 
 By default the WebView will set the viewport to device-width, rather than defaulting to a desktop
-viewport. However, for reliable and controlled behaviour it’s good practice to include the viewport
+viewport. However, for reliable and controlled behaviour it's good practice to include the viewport
 meta tag.
 
 ### Desktop Sites
 
-In some cases, you may need to display content that isn’t designed for mobile devices–for example,
-if you’re displaying content you don’t control. In this case, you need to force the WebView to use a
+In some cases, you may need to display content that isn't designed for mobile devices–for example,
+if you're displaying content you don't control. In this case, you need to force the WebView to use a
 desktop-size viewport:
 
 - [setUseWideViewPort(true)][1]
@@ -62,9 +62,9 @@ Responsive design is the notion of changing your UI depending on the dimensions 
 Here we will look at some simple examples of how you can adapt your UI and images, but if you want
 to dig in to other topics then this article on [HTML5Rocks][4] is a good point of reference.
 
-One of the main CSS features you’ll want to use is media queries.
+One of the main CSS features you'll want to use is media queries.
 
-A media query is a way of applying CSS to elements based on a device’s characteristics. For example,
+A media query is a way of applying CSS to elements based on a device's characteristics. For example,
 suppose you wanted to go from a vertical layout to a horizontal layout based on orientation.
 
 First, set CSS properties to default to portrait:
@@ -169,7 +169,7 @@ Here are a few tips and tricks to make sure your images look crisp and clear on 
 
 Make use of CSS3 where you can for borders, drop shadows, border-radius, and so on instead of
 images. These features can scale easily. However, some combinations of CSS properties can be
-expensive to render, so you should always test the specific combinations you’re using. (For some
+expensive to render, so you should always test the specific combinations you're using. (For some
 sample data on fast and slow CSS properties, see: [CSS Paint Times and Page Render Weight][6] on
 HTML5Rocks.)
 
@@ -190,8 +190,8 @@ some visual artifacts, so you need to experiment to determine what level of comp
 acceptable. And resizing the image in CSS can be an expensive operation.
 
 If high compression is not suitable for your needs, try the WebP format, which gives a high quality
-image with relatively small file size. See [the official WebP site][8] for details. Don’t forget
-that you’ll need to provide a fallback for older versions of Android where WebP isn’t supported.
+image with relatively small file size. See [the official WebP site][8] for details. Don't forget
+that you'll need to provide a fallback for older versions of Android where WebP isn't supported.
 
 For more information on this topic:
 
@@ -200,7 +200,7 @@ For more information on this topic:
 
 ### Fine grained control
 
-In many cases, you can’t use a single image for all devices. In this case, you can select different
+In many cases, you can't use a single image for all devices. In this case, you can select different
 images based on the screen size and density. You can use media queries to select background images
 by screen size and density. You can also use JavaScript to control how images load.
 
@@ -287,13 +287,13 @@ start to account for different form factors.
 ```
 
 You might notice that the `max-height` and `max-width` are set to 512px for 2`ddpx` resolution, with
-an image of 1024x1024px. this is because a CSS “pixel” actually takes into account the device pixel
+an image of 1024x1024px. this is because a CSS "pixel" actually takes into account the device pixel
 ratio (512px \* 2 = 1024px).
 
 #### What About `<img/>`?
 
-The web today doesn’t have a solution for this. There are some proposals in the works, but they
-aren’t available in current browsers or in the WebView.
+The web today doesn't have a solution for this. There are some proposals in the works, but they
+aren't available in current browsers or in the WebView.
 
 In the mean time, if you generate your DOM in JavaScript, you can create multiple image resources in
 a sane directory structure:

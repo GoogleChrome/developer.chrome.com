@@ -46,17 +46,17 @@ appealing, inexpensive, low maintenance devices that provide a full web experien
 
 ### Extend your development capability {: #extend }
 
-You might be thinking, “If I write a standard web application, I can run it on any platform that has
-a web browser.” Of course, this is absolutely right, but remember that Chrome Apps extend your
+You might be thinking, "If I write a standard web application, I can run it on any platform that has
+a web browser." Of course, this is absolutely right, but remember that Chrome Apps extend your
 development capacity beyond what you can do with traditional web apps:
 
 - Chrome Apps can integrate seamlessly into the desktop and look more like desktop applications than
   traditional web apps.
 - Chrome Apps for Desktop have no omnibox (address bar) and tab strip like normal browser-based
-  apps, because like native desktop apps, they don’t live in a browser.
+  apps, because like native desktop apps, they don't live in a browser.
 - The Chrome App Launcher makes it easy for users to find and start your Chrome App.
 - OS X users can use the integrated spotlight search to find and start your app.
-- Chrome Apps for Desktop can access the host computer’s file system and make use of hardware
+- Chrome Apps for Desktop can access the host computer's file system and make use of hardware
   features (like USB, Bluetooth and attached human interface devices).
 
 The best way to see what Chrome Apps look like is to [install some][4].

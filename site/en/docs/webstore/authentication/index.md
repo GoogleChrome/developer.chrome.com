@@ -7,10 +7,10 @@ description: >
   in your Chrome Web Store app.
 ---
 
-When a user installs and launches your app from the Chrome Web Store, odds are they’ll be signed in
+When a user installs and launches your app from the Chrome Web Store, odds are they'll be signed in
 to their Google Account. If your app requires authentication, then you should significantly
 streamline the process for your users by supporting Federated Login to allow users to sign in to
-your app using their Google Accounts. In this article, we’ll cover some the basics of Federated
+your app using their Google Accounts. In this article, we'll cover some the basics of Federated
 Login using Google Accounts, things to consider when designing your authentication flow, some
 examples of apps that allow users to sign in using their Google Accounts, and resources to help you
 learn more and get started.

@@ -16,7 +16,7 @@ to grant web and desktop applications access to private information without shar
 password and other private credentials.
 
 This tutorial builds an extension that accesses a user's Google contacts using the [Google People
-API][2] and the [Chrome Identity API][3]. Because extensions don’t load over HTTPS, can’t perform
+API][2] and the [Chrome Identity API][3]. Because extensions don't load over HTTPS, can't perform
 redirects or set cookies, they rely on the Chrome Identity API to use OAuth2.
 
 ## Get started {: #set_up }

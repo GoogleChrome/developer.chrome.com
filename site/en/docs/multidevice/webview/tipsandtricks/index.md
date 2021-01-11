@@ -5,7 +5,7 @@ date: 2014-02-28
 description: Tips and tricks for improving your WebView application.
 ---
 
-This article outlines some useful tips to enhance your application’s user experience.
+This article outlines some useful tips to enhance your application's user experience.
 
 ## Flicker of colors when the application loads
 
@@ -26,8 +26,8 @@ only delay in displaying this color will be in the native app to draw the WebVie
 mWebView.setBackgroundColor(Color.parseColor("#3498db"));
 ```
 
-In Android it’s generally good practice to define color values in a `res/values/colors.xml` file, as
-described in [the Android App Resource guide][1]. Using a color defined in the application’s
+In Android it's generally good practice to define color values in a `res/values/colors.xml` file, as
+described in [the Android App Resource guide][1]. Using a color defined in the application's
 resources, the above line would become:
 
 ```java

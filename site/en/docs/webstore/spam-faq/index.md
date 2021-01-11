@@ -33,14 +33,14 @@ While all extensions are checked by the CWS review team for violations of this p
 certain valid use cases that require repetitive content, such as the following:
 
 - Extensions that work only on specific hosts. Specifically, you may create bespoke versions of your
-  extension targeted to your customers’ hosts.
+  extension targeted to your customers' hosts.
 - Extensions that are published privately within your domain. Extensions published as unlisted or
   public, even if distributed through a single domain, do not qualify for this Publish to Domain
   (PTD) exemption.
 
 ### Does this apply to affiliated developers? {: #affiliates }
 
-We don’t allow any developer or their affiliates to submit repetitive content. If related developers
+We don't allow any developer or their affiliates to submit repetitive content. If related developers
 or publishers submit multiple extensions that provide duplicate experiences or functionality, that
 is a repetitive content violation. Competing extensions from unrelated developers or publishers are
 not considered repetitive content.
@@ -50,16 +50,16 @@ not considered repetitive content.
 We do allow publication of separate test and production variants of an extension. In this case the
 test variant of the extension must be clearly labeled:
 
-- The description must clearly identify the purpose of the variant. For example, “THIS EXTENSION IS
-  FOR BETA TESTING“ or “THIS EXTENSION IS A PRE-DEVELOPMENTAL BUILD FOR TESTING PURPOSES“.
+- The description must clearly identify the purpose of the variant. For example, "THIS EXTENSION IS
+  FOR BETA TESTING" or "THIS EXTENSION IS A PRE-DEVELOPMENTAL BUILD FOR TESTING PURPOSES".
 - The extension's title should also identify the extension variant. For example, applying the word
-  “BETA” or “DEVELOPMENT BUILD” to the title.
+  "BETA" or "DEVELOPMENT BUILD" to the title.
 - The description of any non-production variants should include the URL of the production variant,
   so that users can find it. You may also wish to link from the production variant to any others so
   that users can find those too. (If you have a version that you want to test without allowing
   general access, you should not list it as public, but instead [publish to test accounts][2].)
 
-Only one non-production build is allowed to be ‘published to public’. The rest, if any, should be
+Only one non-production build is allowed to be 'published to public'. The rest, if any, should be
 published to trusted testers.
 
 ### Can developers appeal a repetitive content violation? {: #appeal }
@@ -102,25 +102,25 @@ Developers should implement any language-specific code within a single extension
 
 ### How many sites/keywords/brands can be listed in the metadata? {: #keyword-repitition }
 
-At most five instances of a keyword. Keywords must be relevant to the extension’s purpose. Do not
+At most five instances of a keyword. Keywords must be relevant to the extension's purpose. Do not
 repeat brand names in the description. When listing supported websites or brands in the description,
 do not list more than five. To provide a longer list of brands or websites, provide a link that
 users can refer to or embed the list in one of the extension's promotional screenshots.
 
 ### Can the extension description contain information about additional topics related to the extension? {: #unrelated-information }
 
-No. Don’t provide information that is not directly relevant to the extension. For example, sports
+No. Don't provide information that is not directly relevant to the extension. For example, sports
 team wallpaper should not include team stats and history in the description of the wallpaper
 extension. Similarly, an extension targeted at a particular industry should not include general
 information about that industry in its description.
 
-### What is the maximum number of times the extension’s primary purpose can be mentioned in the description? {: #purpose-repitition }
+### What is the maximum number of times the extension's primary purpose can be mentioned in the description? {: #purpose-repitition }
 
 Do not mention one word or phrase repeatedly in the description even if it is the primary purpose of
 the extension. For example, an extension that provides puzzles should not call out the word _puzzle_
 more than five times in the description.
 
-### Can the extension’s short description be repeated in the extension’s description? {: #short-description-repetition }
+### Can the extension's short description be repeated in the extension's description? {: #short-description-repetition }
 
 No, the short description included in the extension's manifest.json should not be repeated in its
 Chrome Web Store's description. This string is automatically included above the description in the
@@ -142,7 +142,7 @@ should be incentive enough.
 ### Can I review or rate my own extension? {: #self-review }
 
 No. Submitting a rating or review of your own extension, using your own account or other accounts,
-may be interpreted as an attempt to manipulate the extension’s placement in the Chrome Web Store.
+may be interpreted as an attempt to manipulate the extension's placement in the Chrome Web Store.
 This also includes ratings and reviews coming from other developers or users that are affiliated
 with the publisher.
 

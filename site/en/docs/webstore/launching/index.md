@@ -7,7 +7,7 @@ description: An overview of how to launch an app in the Chrome Web Store.
 
 The Chrome Web Store is an upcoming new way to distribute and sell your web apps. It [recently
 opened up for developer preview][1], and web app developers are beginning to build and package their
-apps for the launch of the store later this year. We’re going to walk you through launching an app
+apps for the launch of the store later this year. We're going to walk you through launching an app
 so you have a smooth experience and are well positioned for a successful consumer launch.
 
 ## Bootstrap: Join the apps developer discussion group
@@ -16,7 +16,7 @@ Chat with your peers and ask questions of the community in the [apps developer d
 
 ## Step One: Design your app
 
-Before diving into the technical details of the Chrome Web Store, it’s important to focus first on
+Before diving into the technical details of the Chrome Web Store, it's important to focus first on
 the design of your web app. Paying careful attention to your target users and what goals they are
 trying to accomplish will ensure you are building the right app. Web apps are more action, or verb,
 oriented than traditional websites, and successful web apps have a targeted set of use cases in
@@ -28,7 +28,7 @@ of the app itself. Design is not just the choice of button colors, but is a holi
 shaping how your users perceive and interact with your product. A well executed design permeates
 every aspect of the web app development process.
 
-We’ve written about design principles we think are important for well executed web apps. [Thinking
+We've written about design principles we think are important for well executed web apps. [Thinking
 in Web Apps][3] lists five design principles:
 
 - Tight focus
@@ -63,7 +63,7 @@ are some options:
 
 - **HTML5** - the family of HTML5, CSS, and JavaScript technologies powering the modern web. Learn
   more at [HTML5 Rocks!][5] and [HTML5 Boilerplate][6].
-- **Native Client** - run your native C/C++ code in the browser’s sandbox! Get started with the
+- **Native Client** - run your native C/C++ code in the browser's sandbox! Get started with the
   [Native Client SDK][7]. (Note: this technology is still in development, but you can try it out
   now.)
 - **Adobe Flash** - probably the most widely distributed browser plug-in.
@@ -74,21 +74,21 @@ app, release with the minimal viable product and add features and enhancements w
 The beauty of web app development is the ease in which you can respond to customer feedback, without
 a cumbersome re-deployment process.
 
-During this phase you’ll no doubt be exploring and implementing the many HTML5 features that will
-help deliver a “next generation” app look and feel. Because the Chrome Web Store is initially
+During this phase you'll no doubt be exploring and implementing the many HTML5 features that will
+help deliver a "next generation" app look and feel. Because the Chrome Web Store is initially
 targeted at Google Chrome, you can build the app with two assumptions in mind: you have a wide array
 of modern HTML5 features available, and your initial set of users will be using Google Chrome.
 
 There are [two different types of installable web apps][8]: packaged and hosted. Hosted web apps are
 regular web apps, served from web servers. Packaged web apps are bundled and are completely
-installed into the user’s browser. You'll decide which type of installable web app to build during
+installed into the user's browser. You'll decide which type of installable web app to build during
 this step. Hosted web apps are most familiar to you, and packaged web apps might appeal to you if
-you don’t want to run any servers or need to access the Google Chrome extension APIs. Regardless of
-type, you’ll still need a ZIP file that includes a [manifest file][9] and any icons required (always
+you don't want to run any servers or need to access the Google Chrome extension APIs. Regardless of
+type, you'll still need a ZIP file that includes a [manifest file][9] and any icons required (always
 a 128x128; also a 16x16 for packaged web apps). You can find more details in the documentation for
 [hosted apps][10] and [Chrome Apps][11].
 
-If your web app is using the integrated payment system (Chrome Web Store Payments) you’ll need to
+If your web app is using the integrated payment system (Chrome Web Store Payments) you'll need to
 build in support for both OpenID to [identify the user][12] and the Chrome Web Store Licensing API
 to [see if that user has successfully paid][13].
 
@@ -119,7 +119,7 @@ app and get a feel for it before purchase.
 Other monetization options include displaying ads (an option for hosted web apps), or simply
 offering your web app for free.
 
-For new web apps, don’t be afraid to try different payment options. You are free to change the
+For new web apps, don't be afraid to try different payment options. You are free to change the
 amounts or mechanisms based on feedback and experiments. Incorporate analytics and metrics from day
 one to track your web app's usage and growth.
 
@@ -148,7 +148,7 @@ to marketing your web app.
 To start, building a consistently designed marketing site for your web app will help ensure users
 notice, and learn more, about your web app. You will have total control over the design and
 execution of this marketing site, and thus can craft the perfect message for your current and future
-users. You can deep-link to the Chrome Web Store’s listing for your app, leading people right to
+users. You can deep-link to the Chrome Web Store's listing for your app, leading people right to
 your web app.
 
 Of course, using social media is a great way to share your web app. Google Buzz, Twitter, and
@@ -160,7 +160,7 @@ lists as well as inside of individual categories. Featured apps tend to get noti
 way to be featured is to build a great app that people will love and that really highlights what the
 modern web is capable of.
 
-The Chrome Web Store’s listing for your app allows you to display a few [screenshots][22] and a
+The Chrome Web Store's listing for your app allows you to display a few [screenshots][22] and a
 YouTube video. Use these opportunities to show off your app, and use the video to highlight key
 features and explain the use cases.
 
@@ -171,7 +171,7 @@ marketing campaign can expand your message's reach, get your app noticed, and fi
 
 Listening to users is extremely important, and we recommend that you provide a way for users to give
 you feedback. Numerous services can help you do this, from [Google Groups][23] to community
-management apps such as [UserVoice][24] or [Get Satisfaction][25]. Remember that it’s not enough to
+management apps such as [UserVoice][24] or [Get Satisfaction][25]. Remember that it's not enough to
 offer a place for users to voice their ideas. You should also respond and ensure that your users
 feel like their voices are heard.
 
@@ -206,7 +206,7 @@ The Chrome Web Store opens for consumers later this year. Let's run through the 
 - Did you upload compelling screenshots to the store?
 - Did you create an informative video for the store page?
 - Did you create a marketing website for your app?
-- Did you install an analytics package on the store’s page for your app?
+- Did you install an analytics package on the store's page for your app?
 - Did you install an analytics package in your app?
 - Did you configure a user feedback tool?
 - Are you tracking key metrics?
@@ -214,9 +214,9 @@ The Chrome Web Store opens for consumers later this year. Let's run through the 
 - Did you check the spelling in your app?
 - Is your app accessible to people with disabilities?
 - Does each action or app state have a unique URL that a user can bookmark or share?
-- Is your web app’s favicon configured?
+- Is your web app's favicon configured?
 - Do you have the proper copyrights?
-- Is your web app’s 404 page configured?
+- Is your web app's 404 page configured?
 - Did you add support for [Chrome Frame][31]?
 
 [Launchlist][32] has as even longer checklist for a successful web app launch.

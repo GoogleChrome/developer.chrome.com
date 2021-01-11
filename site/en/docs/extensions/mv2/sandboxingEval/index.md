@@ -106,7 +106,7 @@ template in the way Handlebars suggests:
 ```
 
 This doesn't fail! Even though `Handlebars.compile` ends up using `new Function`, things work
-exactly as expected, and we end up with a compiled template in `templates[‘hello']`.
+exactly as expected, and we end up with a compiled template in `templates['hello']`.
 
 ### Pass the result back {: #pass_result }
 

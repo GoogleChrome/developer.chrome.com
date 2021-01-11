@@ -17,15 +17,15 @@ intend.
 
 To publish your item to the Chrome Web Store, follow these steps:
 
-1.  Create your item’s zip file
+1.  Create your item's zip file
 2.  Create a developer account
 3.  Upload your item
 4.  Add assets for your listing
 5.  Submit your item for publishing
 
-We’ll go into detail about each step below.
+We'll go into detail about each step below.
 
-## Create your item’s zip file {: #create-your-items-zip-file }
+## Create your item's zip file {: #create-your-items-zip-file }
 
 To upload your item, you need to create a ZIP file that contains the [files for your extension][4].
 The item's manifest file must be included, and it must specify at least the following fields:
@@ -48,7 +48,7 @@ details.
   ZIP file in a way that reduces the size of the user download package. For details, see [Reducing
   the size of the user download package][9].
 
-Before you upload your item, you’ll be asked to pick a developer account to own your items. Instead
+Before you upload your item, you'll be asked to pick a developer account to own your items. Instead
 of your personal account, we suggest using a dedicated account.
 
 ## Create a developer account {: #create-a-developer-account }

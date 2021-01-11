@@ -108,7 +108,7 @@ Content scripts can be injected as code.
 ```js
 chrome.runtime.onMessage.addListener(
   function(message, callback) {
-    if (message == “changeColor”){
+    if (message == "changeColor"){
       chrome.tabs.executeScript({
         code: 'document.body.style.backgroundColor="orange"'
       });
@@ -121,7 +121,7 @@ Or an entire file can be injected.
 ```js
 chrome.runtime.onMessage.addListener(
   function(message, callback) {
-    if (message == “runContentScript”){
+    if (message == "runContentScript"){
       chrome.tabs.executeScript({
         file: 'contentScript.js'
       });

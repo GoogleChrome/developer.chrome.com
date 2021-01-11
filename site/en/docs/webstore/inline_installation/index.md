@@ -143,7 +143,7 @@ For security reasons, inline installations can only be initiated by a page on a 
 [verified][9] (via [Webmaster Tools][10]) as being associated with that item in the Chrome Web
 Store. Note that if you verify ownership for a domain (for example, `http://example.com`) you can
 initiate inline installation from any subdomain or page (for example, `http://app.example.com` or
-`http://example.com/page.html`). We may revoke your app or extension’s ability to use Inline
+`http://example.com/page.html`). We may revoke your app or extension's ability to use Inline
 Installation if we detect any association with deceptive practices, including deceptive ads and
 landing pages, or installation patterns that suggest user confusion.
 
@@ -187,7 +187,7 @@ In January 2018, we updated our automated enforcement systems to incorporate add
 disable deceptive or confusing flows faster.
 
 In addition to the automated enforcement system, the Chrome Web Store team periodically conducts
-manual reviews of landing pages and ads associated with an extension’s inline installation. If the
+manual reviews of landing pages and ads associated with an extension's inline installation. If the
 team encounters a landing page or ad that violates the [Unwanted Software Policy][12] or any other
 aspect of the [Developer Program Policies][13], inline installation for the associated extension
 will be permanently disabled. For violations involving malware or social engineering, further

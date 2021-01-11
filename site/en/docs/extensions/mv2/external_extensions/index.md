@@ -212,7 +212,7 @@ file (aaaaaaaaaabbbbbbbbbbcccccccccc.json) or the metadata from the registry.
 
 This section answers common questions about external extensions.
 
-**Will the methodology for allowing a “pre-install” still be supported by Google Chrome from M33
+**Will the methodology for allowing a "pre-install" still be supported by Google Chrome from M33
 onwards?**
 
 Yes, but only as an install from a Chrome Web Store `update_URL`, not from a local file path.
