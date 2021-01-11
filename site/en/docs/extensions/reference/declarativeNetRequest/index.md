@@ -40,12 +40,22 @@ of type [Ruleset][4], as shown below.
 ## Rule Resources
 
 An extension can specify up to [MAX_NUMBER_OF_STATIC_RULESETS][5] [rulesets][6] as part of the
-`"rule_resources"` manifest key. The number of rules across **enabled** static rulesets must be less
-than the [MAX_NUMBER_OF_RULES][7] constant.
+`"rule_resources"` manifest key. An extension is allowed to enable up to at least
+[GUARANTEED_MINIMUM_STATIC_RULES][7] static rules. Additional static rule sets may or may not be
+enabled depending on the available [global static rule limit][8].
+
+## Global Static Rule Limit
+
+In addition to the [GUARANTEED_MINIMUM_STATIC_RULES][9] static rules guaranteed for each extension,
+extensions can enable additional static rulesets depending on the available global static rule limit. This
+global limit is shared between all extensions and can be used by extensions on a first come first
+serve basis. Extensions shouldn't depend on the global limit having a specific value and should
+instead rely the [getAvailableStaticRuleCount][10] API method to find the additional rule limit available to
+them.
 
 ## Rules
 
-A single declarative [Rule][8] consists of four fields: `id`, `priority`, `condition` and `action`.
+A single declarative [Rule][11] consists of four fields: `id`, `priority`, `condition` and `action`.
 There are the following kinds of rules:
 
 - Rules that block a network request.
@@ -78,18 +88,18 @@ the request URL. Some examples of URL filters:
 
 ## Dynamic rules
 
-To add or remove rules dynamically, extensions can use the [updateDynamicRules][9] API method.
+To add or remove rules dynamically, extensions can use the [updateDynamicRules][12] API method.
 
 - The number of dynamic rules that an an extension can add is bounded by the
-  [MAX_NUMBER_OF_DYNAMIC_RULES][10] constant.
+  [MAX_NUMBER_OF_DYNAMIC_RULES][13] constant.
 - The dynamic rules for an extension are persisted across both sessions and extension updates.
 
 ## Updating enabled rulesets
 
-An extension can update the set of enabled static rulesets using the [updateEnabledRulesets][11] API
+An extension can update the set of enabled static rulesets using the [updateEnabledRulesets][14] API
 method.
 
-- The number of rules across enabled static rulesets must be less than the [MAX_NUMBER_OF_RULES][12]
+- The number of rules across enabled static rulesets must be less than the [MAX_NUMBER_OF_RULES][15]
   constant.
 - The set of enabled static rulesets is persisted across sessions but not across extension updates.
   The `rule_resources` manifest key will determine the set of enabled static rulesets on initial
@@ -133,7 +143,7 @@ is determined based on the priority of each rule and the operations specified.
   `append` rules from the same extension.
 - If a rule has removed a header, then lower priority rules cannot further modify the header.
 
-### Comparison with the [webRequest][13] API
+### Comparison with the [webRequest][16] API
 
 - The declarativeNetRequest API allows for evaluating network requests in the browser itself. This
   makes it more performant than the webRequest API, where each network request is evaluated in
@@ -332,10 +342,13 @@ is determined based on the priority of each rule and the operations specified.
 [4]: #type-Ruleset
 [5]: #property-MAX_NUMBER_OF_STATIC_RULESETS
 [6]: #type-Ruleset
-[7]: #property-MAX_NUMBER_OF_RULES
-[8]: #type-Rule
-[9]: #method-updateDynamicRules
-[10]: #property-MAX_NUMBER_OF_DYNAMIC_RULES
-[11]: #method-updateEnabledRulesets
-[12]: #property-MAX_NUMBER_OF_RULES
-[13]: /docs/extensions/webRequest
+[7]: #property-GUARANTEED_MINIMUM_STATIC_RULES
+[8]: #global-static-rule-limit
+[9]: #property-GUARANTEED_MINIMUM_STATIC_RULES
+[10]: #method-getAvailableStaticRuleCount
+[11]: #type-Rule
+[12]: #method-updateDynamicRules
+[13]: #property-MAX_NUMBER_OF_DYNAMIC_RULES
+[14]: #method-updateEnabledRulesets
+[15]: #property-MAX_NUMBER_OF_RULES
+[16]: /docs/extensions/webRequest
