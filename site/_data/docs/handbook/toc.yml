@@ -2,6 +2,7 @@
   sections:
     - url: /docs/handbook/how-to/add-a-project
     - url: /docs/handbook/how-to/add-a-doc
+    - url: /docs/handbook/how-to/add-an-api
     - url: /docs/handbook/how-to/add-media
     - url: /docs/handbook/how-to/add-an-author
     - url: /docs/handbook/how-to/add-an-iframe
