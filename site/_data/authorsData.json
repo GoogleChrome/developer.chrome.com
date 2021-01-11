@@ -53,6 +53,25 @@
     "glitch": "robdodson",
     "image": "image/foR0vJZKULb5AGJExlazy1xYDgI2/hdnOUruuCIijvnGWvleC.jpg"
   },
+  "petelepage": {
+    "name": {
+      "given": "Pete",
+      "family": "LePage"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "US",
+    "homepage": "https://petelepage.com/",
+    "twitter": "petele",
+    "github": "petele",
+    "glitch": "petele",
+    "descriptions": {
+      "en": "Pete is a Developer Advocate"
+    },
+    "image": "image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9l19VVp1vBxCnEA75HwX.jpg"
+  },
   "samthorogood": {
     "name": {
       "given": "Sam",
