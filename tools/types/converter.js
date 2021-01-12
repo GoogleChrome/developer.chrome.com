@@ -377,14 +377,19 @@ function buildRenderType(type, parentType, owner) {
     case 'stringLiteral': {
       const stringLiteralType = /** @type {typedocModels.StringLiteralType} */ (type);
 
-      // Pretend that lone stringLiterals are actually enums.
-      if (parentType?.type !== 'union') {
+      // If we're not contained by a union but our owner is a TypeAlias then this is just an enum
+      // type with a single possible string option.
+      if (
+        parentType?.type !== 'union' &&
+        owner.kind === typedocModels.ReflectionKind.TypeAlias
+      ) {
         const unionType = new typedocModels.UnionType([type]);
         return buildRenderType(unionType, parentType, owner);
       }
 
       return {
         type: 'primitive',
+        primitiveType: 'string',
         literalValue: JSON.stringify(stringLiteralType.value),
       };
     }
@@ -395,6 +400,21 @@ function buildRenderType(type, parentType, owner) {
         type: 'reference',
         referenceType: typeParameterType.name,
       };
+    }
+
+    case 'unknown': {
+      // This is probably a constant number, which TSDoc doesn't understand.
+
+      const unknownType = /** @type {typedocModels.UnknownType} */ (type);
+
+      const value = +unknownType.name;
+      if (typeof value === 'number' && isFinite(value)) {
+        return {
+          type: 'primitive',
+          primitiveType: 'number',
+          literalValue: unknownType.name,
+        };
+      }
     }
   }
 

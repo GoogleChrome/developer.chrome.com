@@ -44,7 +44,7 @@
       <p>
         {% for option in spec.options %}
           {% if loop.last and not loop.first %}or{% endif %}
-          <code>{{ renderSingleType(option) | trim }}</code>{% if not loop.last %},{% endif %}
+          <code>{{ option.literalValue }}</code>{% if not loop.last %},{% endif %}
         {% endfor %}
       </p>
     </div>
@@ -84,6 +84,16 @@
     <ul class="stack flow-space-300">
       {{ internalRenderNamedType(spec.referenceTemplates[0], namespaceName, spec) }}
     </ul>
+  </div>
+
+{# OPTION: literal #}
+{% elif spec.literalValue !== "" %}
+  <div class="code-sections">
+    <h4 class="type--label case-upper">Value</h4>
+
+    <div class="code-sections__overline code-sections__label">
+      {{ renderSingleType(spec, true) }}
+    </div>
   </div>
 
 {% else %}
@@ -209,7 +219,10 @@
     {% endif %}
 
     {# Primitive value ("number") or literal ("abc") #}
-    {{ rt.literalValue }}{{ rt.primitiveType }}
+    {{ rt.primitiveType }}
+    {% if rt.literalValue %}
+      <span class="code-sections__value">{{ rt.literalValue }}</span>
+    {% endif %}
   {% elif rt.type === 'reference' %}
     {# Reference to another type #}
     {% if rt.referenceLink  %}
