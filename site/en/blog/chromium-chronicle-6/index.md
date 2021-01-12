@@ -13,8 +13,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- All Good -->
-
 **Episode 6:** by Tiffany in San Francisco, CA (September, 2019)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 

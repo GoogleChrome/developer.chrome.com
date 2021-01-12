@@ -13,8 +13,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- Ready -->
-
 **Episode 8:** by Vlad Tsyrklevich in Seattle, WA (November, 2019)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 

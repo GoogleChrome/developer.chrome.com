@@ -15,8 +15,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- Ready -->
-
 **Episode 13:** by Christian Biesinger in Madison, WI (March, 2020)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 

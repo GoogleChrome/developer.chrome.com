@@ -96,7 +96,7 @@ workload involves a task outside of the TaskEnvironment’s purview,
 e.g. a system event, so use [RunUntilIdle() with care][run-until-idle-w-care].
 
 !!!.aside.aside
-Pro-tip: Use TaskEnvironment’s MOCK_TIME mode to reliably test delayed
+Pro-tip: Use TaskEnvironment’s `MOCK_TIME` mode to reliably test delayed
 tasks.
 !!!
 

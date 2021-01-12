@@ -67,10 +67,10 @@ in [`//src/testing/buildbot/`][src-test-bbot]:
 3. More fine tunings.
      * [`mixins.pyl`][mixins-pyl] contains **arguments** that
        can be applied to a group of tests at various group levels.
-     * [variants.pyl][variants-pyl] helps run a suite **in multiple instances
+     * [`variants.pyl`][variants-pyl] helps run a suite **in multiple instances
        with different arguments**.
 4. **Regenerate configuration files** by running
-   [generate_buildbot_json.py][gen-bbot-py].
+   [`generate_buildbot_json.py`][gen-bbot-py].
 
 After these, it is a simple matter of **checking in** your config changes;
 the builders running this suite will pick up the new tests automatically, and

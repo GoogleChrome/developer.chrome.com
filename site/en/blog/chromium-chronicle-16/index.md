@@ -12,8 +12,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- Ready -->
-
 **Episode 16:** by Anjali Doneria in Bellevue, WA (January 2020)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 

@@ -13,8 +13,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- Ready -->
-
 **Episode 15:** by Joe Mason in Montreal, PQ (November, 2020)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
