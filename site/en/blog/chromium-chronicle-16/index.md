@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Updating Google Apps on Desktop"
+title: "The Chromium Chronicle #16: Updating Google Apps on Desktop"
 description: >
   Ever wondered how Chrome keeps itself up-to-date on your desktop? Or how
   updates are served to Chromebooks, Chromecast, or Android?
@@ -8,10 +8,14 @@ date: 2021-01-11
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
+<!-- Ready -->
+
 **Episode 16:** by Anjali Doneria in Bellevue, WA (January 2020)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 Ever wondered how Chrome keeps itself up-to-date on your desktop? Or how
 updates are served to Chromebooks, Chromecast, or Android? Wait no more! Read
@@ -32,7 +36,7 @@ or first launch.
 The update process is controlled by rules in Omaha Configuration Language. The
 following example shows an update for Chrome extensions update checks:
 
-```
+```protobuf
 Update {
   # UpdatedVersion and subsequent Pair MUST be provided for chrome responses
   UpdatedVersion: "1.8.3.0"

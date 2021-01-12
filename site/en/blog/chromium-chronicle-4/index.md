@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Test your Web Platform Features with WPT"
+title: "The Chromium Chronicle #4: Test your Web Platform Features with WPT"
 description: >
   Web Platform tests (WPT) are the preferred way to test web-exposed features,
   as they are shared with other browsers via Github. This month, we take a
@@ -10,10 +10,14 @@ updated: 2019-08-21
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
+<!-- Needs compare widget -->
+
 **Episode 4:** by Robert in Waterloo, ON (July, 2019)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 If you work on Blink, you might know of web_tests (formerly LayoutTests).
 web-platform-tests (WPT) lives inside `web_test/external/wpt`. **WPT is the
@@ -84,7 +88,7 @@ comments from a bot in your CL. **GitHub changes from other vendors are also
 continuously imported.** To receive automatically filed bugs when new failures
 are imported, create an `OWNERS` file in a subdirectory in WPT:
 
-```
+```text
 # TEAM: your-team@chromium.org
 # COMPONENT: Blink>YourComponent
 # WPT-NOTIFY: true

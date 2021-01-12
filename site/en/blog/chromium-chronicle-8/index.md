@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: GWP-ASan: Detect bugs in the wild"
+title: "The Chromium Chronicle #8: GWP-ASan: Detect bugs in the wild"
 description: >
   GWP-ASan is a heap-only memory error detector designed to be used in the
   wild. It detects use-after-frees, buffer overflows/underflows, and double
@@ -9,10 +9,14 @@ date: 2019-11-26
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
+<!-- Ready -->
+
 **Episode 8:** by Vlad Tsyrklevich in Seattle, WA (November, 2019)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 Debugging memory safety errors, such as use-after-frees or buffer overflows,
 can be difficult. Tools like AddressSanitizer (ASan) are helpful to pinpoint

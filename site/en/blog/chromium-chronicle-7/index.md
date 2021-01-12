@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Preprocessing Source"
+title: "The Chromium Chronicle #7: Preprocessing Source"
 description: >
   Compiling a single Chromium source file by hand can help developers
   experiment with compiler optimization options, understand subtle macro
@@ -10,10 +10,14 @@ date: 2019-10-24
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
+<!-- Needs compare widget -->
+
 **Episode 7:** by Bruce Dawson in Seattle, WA (October, 2019)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 Sometimes it is helpful **to compile a single Chromium source file by hand**,
 perhaps to experiment with compiler optimization options, to preprocess it
@@ -41,11 +45,11 @@ autoninja -v ../../base/version.cc^
 In the Windows cmd shell `^` is a special character and must be escaped:
 {: .compare-better }
 
-<pre class="">
-<span class="no-select">C:\></span> autoninja ../../base/version.cc^^
-<span class="no-select">C:\></span> touch ../../base/version.cc
-<span class="no-select">C:\></span> autoninja -v ../../base/version.cc^^
-</pre>
+```bash
+C:\> autoninja ../../base/version.cc^^
+C:\> touch ../../base/version.cc
+C:\> autoninja -v ../../base/version.cc^^
+```
 
 Typical output of the `autoninja -v` command looks like this (significantly
 trimmed):
@@ -73,9 +77,9 @@ a line of output for each `#include`) **and then add `/P`** in order to
 preprocess the file instead of compiling it. The results will be saved in the
 current directory in `version.i`:
 
-<pre class="">
+```bash
 ..\..\third_party\llvm-build\Release+Asserts\bin\clang-cl.exe /nologo -imsvc ... /P
-</pre>
+```
 
 Now you can examine the preprocessed file to see what the macros are actually doing,
 or make experimental compiler-switch changes and recompile to see what happens.
@@ -86,7 +90,6 @@ or make experimental compiler-switch changes and recompile to see what happens.
   (focused on Windows).
 * [ETW][etw]: Find out how to find Windows performance problems—in Chrome
   or in the build—by reading the ETW (also known as Xperf) docs.
-
 
 [fast-chrome-builds]: https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md#Faster-builds
 [etw]: https://randomascii.wordpress.com/category/xperf/

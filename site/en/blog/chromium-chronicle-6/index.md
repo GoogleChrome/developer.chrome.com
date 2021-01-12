@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Monorail’s Grid View"
+title: "The Chromium Chronicle #6: Monorail’s Grid View"
 description: >
   Chrome’s issue tracker, Monorail, offers a grid view that allows you to
   visualize your issues in a Kanban style board. This episode explains how
@@ -9,10 +9,14 @@ date: 2019-09-24
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
+<!-- All Good -->
+
 **Episode 6:** by Tiffany in San Francisco, CA (September, 2019)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 Chrome’s issue tracker, [Monorail][monorail-homepage], offers a grid view
 that allows you to **visualize your issues in a Kanban style board**.

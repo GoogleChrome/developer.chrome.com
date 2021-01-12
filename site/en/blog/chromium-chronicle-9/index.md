@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: ClusterFuzz"
+title: "The Chromium Chronicle #9: ClusterFuzz"
 description: >
   You may find you are asked to fix high-priority security bugs discovered by
   ClusterFuzz. What is it? Should you take those bugs seriously? How can you
@@ -9,16 +9,20 @@ date: 2019-12-13
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
+<!-- Needs image float left/right -->
+
 **Episode 9:** by Adrian Taylor in Mountain View (December, 2019)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 You may find you are asked to fix high-priority security bugs discovered by
 ClusterFuzz. What is it? Should you take those bugs seriously? How can you
 help?
 
-![Fuzzing flow chart](/web/updates/images/2019/12/cr-chron-1.png)
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/YAtzVlCiCpI5kX6IfgJ3.png", alt="Fuzzing flow chart" %}
 
 **ClusterFuzz feeds input to Chrome and watches for crashes.** Some of those
 Chrome builds have extra checks turned on, for example [AddressSanitizer][go-asan],
@@ -38,8 +42,9 @@ class Foo {
 void Foo::Bar() {
   delete widget;
   ...
-  widget->Activate();  // Bad in the renderer process, worse in the browser process.
-}                      // Obviously, real bugs are more subtle. Usually.
+  widget->Activate();  // Bad in the renderer process, worse in the
+                       // browser process. Obviously, real bugs are
+                       // more subtle. Usually.
 ```
 
 ClusterFuzz generates input from fuzzers or from bugs submitted externally.
@@ -49,7 +54,7 @@ converted into `protobufs`. Once ClusterFuzz finds a crash, it will try to
 **minimize the input test case and even bisect to find the offending commit**.
 It finds a lot...
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/7KdI3HXVypDiK7GJZ3Gf.png", alt="ALT TEXT HERE", width="800", height="430", class="attempt-left" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/7KdI3HXVypDiK7GJZ3Gf.png", alt="", class="attempt-left" %}
 
 You can help:
 

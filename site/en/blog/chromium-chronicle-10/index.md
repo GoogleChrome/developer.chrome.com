@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Catching UI Regressions with Pixel Tests"
+title: "The Chromium Chronicle #10: Catching UI Regressions with Pixel Tests"
 description: >
   Chrome’s testing strategy relies heavily on automated functional correctness
   tests and manual testing, but neither of these reliably catch minor UI
@@ -9,10 +9,14 @@ date: 2020-02-05
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
+<!-- Ready -->
+
 **Episode 10:** by Sven Zheng in Bellevue, WA (January, 2020)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 Chrome’s testing strategy relies heavily on automated functional correctness
 tests and manual testing, but neither of these reliably catch minor UI
@@ -35,10 +39,11 @@ IN_PROC_BROWSER_TEST_F(SkiaGoldDemoPixelTest, TestOmnibox) {
   GURL url("chrome://bookmarks");
   AddTabAtIndex(0, url, ui::PageTransition::PAGE_TRANSITION_FIRST);
   auto* const browser_view = BrowserView::GetBrowserViewForBrowser(browser());
-  // CompareScreenshot() takes a screenshot and compares it with the golden image,
-  // which was previously human-approved, is stored server-side, and is managed
-  // by Skia Gold. If any pixels differ, the test will fail and output a link
-  // for the author to triage the new image.
+  // CompareScreenshot() takes a screenshot and compares it with the
+  // golden image, which was previously human-approved, is stored
+  // server-side, and is managed by Skia Gold. If any pixels differ, the
+  // test will fail and output a link for the author to triage the
+  // new image.
   bool ret = GetPixelDiff().CompareScreenshot("omnibox",
       browser_view->GetLocationBarView());
   EXPECT_TRUE(ret);

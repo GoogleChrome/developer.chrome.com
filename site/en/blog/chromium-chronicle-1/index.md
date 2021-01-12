@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Task Scheduling Best Practices"
+title: "The Chromium Chronicle #1: Task Scheduling Best Practices"
 description: >
   The Chrome team is proud to introduce the Chromium Chronicle, a monthly
   series geared specifically to Chromium developers - the developers who
@@ -10,7 +10,11 @@ date: 2019-04-16
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
+
+<!-- Needs compare widget -->
 
 The Chrome team is proud to introduce the Chromium Chronicle, a monthly
 series geared specifically to Chromium developers, developers who build the
@@ -28,7 +32,7 @@ Take a look at our first episode below!
 ## Task Scheduling Best Practices
 
 **Episode 1:** by Gabriel Charette in Montréal, PQ (April, 2019)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 Chrome code that needs in-process asynchronous execution typically posts tasks
 to sequences. Sequences are chrome-managed “virtual threads” and are
@@ -91,10 +95,10 @@ This is preferred to RunUntilIdle(), which can be flaky if the asynchronous
 workload involves a task outside of the TaskEnvironment’s purview,
 e.g. a system event, so use [RunUntilIdle() with care][run-until-idle-w-care].
 
-<aside class="success">
+!!!.aside.aside
 Pro-tip: Use TaskEnvironment’s MOCK_TIME mode to reliably test delayed
 tasks.
-</aside>
+!!!
 
 **Want to learn more?** Read our documentation on [threading and tasks][threading-and-tasks]
 or get involved in the [migration to TaskEnvironment][task-env]!

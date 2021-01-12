@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Restricting Target Visibility"
+title: "The Chromium Chronicle #15: Restricting Target Visibility"
 description: >
   In Chromium, it's common to find code written for one component that would
   be useful elsewhere, but might have hidden restrictions. For safety, limit
@@ -9,17 +9,21 @@ date: 2020-11-30
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
-**Episode 15:** by Joe Mason in Montreal (November 2020)<br>
-[Previous episodes](/tags/chromium-chronicle)
+<!-- Ready -->
+
+**Episode 15:** by Joe Mason in Montreal, PQ (November, 2020)<br>
+[Previous episodes](/tags/chromium-chronicle/)
 
 Chrome is a big project with many sub-systems. It’s common to find code
 written for one component that would be useful elsewhere, but might have hidden
 restrictions. For safety, **limit external access to dangerous functionality**.
 For instance, a custom function tuned for specific performance needs:
 
-```
+```cpp
 // Blazing fast for 2-char strings, O(n^3) otherwise.
 std::string ConcatShortStringsFast(const std::string& a, const std::string& b);
 ```
@@ -28,10 +32,11 @@ There are several ways to restrict access. **GN visibility rules stop code
 outside your component from depending on a target**. By default targets are
 visible to all, but you can modify that:
 
-```
+```text
 # In components/restricted_component/BUILD.gn
 visibility = [
-  # Applies to all targets in this file. Only the given targets can depend on them.
+  # Applies to all targets in this file.
+  # Only the given targets can depend on them.
   "//components/restricted_component:*",
   "//components/authorized_other_component:a_single_target",
 ]
@@ -49,11 +54,12 @@ Every directory inherits `include_rules` from its parent, and can modify those
 rules in its own `DEPS` file. All header files included from outside
 directories must be allowed by the `include_rules`.
 
-```
+```text
 # In //components/authorized_other_component/DEPS
 include_rules = [
-  # Common directories like //base are inherited from //components/DEPS or //DEPS.
-  # Also allow includes from restricted_component, but not restricted_component/internal.
+  # Common directories like //base are inherited from
+  # //components/DEPS or //DEPS. Also allow includes from
+  # restricted_component, but not restricted_component/internal.
   "+components/restricted_component",
   "-components/restricted_component/internal",
   # But do allow a single header from internal, for testing.

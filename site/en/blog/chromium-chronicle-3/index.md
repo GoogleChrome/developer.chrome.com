@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Code Coverage in Gerrit"
+title: "The Chromium Chronicle #3: Code Coverage in Gerrit"
 description: >
   Tests are critical because they find bugs and regressions, enforce better
   designs and make code easier to maintain. This month, we take a look at
@@ -9,10 +9,14 @@ date: 2019-06-24
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
+<!-- Needs float left/right -->
+
 **Episode 3:** by Yuke, Roberto and Sajjad in Mountain View, CA (June, 2019)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 Tests are critical because they find bugs and regressions, enforce better
 designs and make code easier to maintain. Code coverage helps you ensure

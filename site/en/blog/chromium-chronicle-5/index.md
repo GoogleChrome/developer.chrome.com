@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Coding Outside the Sandbox"
+title: "The Chromium Chronicle #5: Coding Outside the Sandbox"
 description: >
   All code has bugs. The Chrome Browser process has no sandbox, meaning those
   bugs could give malcious code full access to the whole device. This episode
@@ -10,10 +10,14 @@ updated: 2019-09-17
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
+<!-- Needs compare widget -->
+
 **Episode 5:** by Ade in Mountain View, CA (August, 2019)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 Chrome is split into processes. Some of them are sandboxed, which means that
 they have reduced access to the system and to users' accounts. In a sandboxed

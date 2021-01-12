@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Fighting Test Flakiness"
+title: "The Chromium Chronicle #2: Fighting Test Flakiness"
 description: >
   Flaky tests are a common problem in Chrome. They impact the productivity of
   other developers, and get disabled over time. This month, we take a look
@@ -9,10 +9,14 @@ date: 2019-05-21
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
+<!-- Needs compare widget -->
+
 **Episode 2:** by Vasilii in Munich (May, 2019)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 [Flaky tests][flaky-tests-context] are a common problem in Chrome. They
 impact the productivity of other developers, and get disabled over time.
@@ -92,7 +96,6 @@ would be correct; however, checking for the actual window makes the test flaky.
 
 Once the test is fixed, run it hundreds of times locally. Keep an eye on the
 [Flakiness Portal][flakiness-portal].
-
 
 [flaky-tests-context]: https://www.chromium.org/developers/tree-sheriffs/sheriff-details-chromium/handling-a-failing-test
 [useful-command-lines]: https://www.chromium.org/developers/testing/browser-tests

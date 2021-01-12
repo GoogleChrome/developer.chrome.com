@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Time-Travel Debugging with RR"
+title: "The Chromium Chronicle #13: Time-Travel Debugging with RR"
 description: >
   Do you find yourself running the same test over and over in the debugger,
   trying to figure out how the code got in a bad state? We have a tool for
@@ -11,10 +11,14 @@ date: 2020-03-18
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
+<!-- Ready -->
+
 **Episode 13:** by Christian Biesinger in Madison, WI (March, 2020)<br>
-[Previous episodes](/tags/chromium-chronicle)
+[Previous episodes](/tags/chromium-chronicle/)
 
 Do you find yourself **running the same test over and over** in the debugger,
 trying to figure out how the code got in a bad state? **We have a tool for you!**
@@ -46,7 +50,7 @@ GDB commands `-b`, `next`, `watch`, etc. However, you can also use
 
 These still respect any breakpoints you’ve set. For example:
 
-```
+```text
 (gdb) c  # Execute to the end
 (gdb) break blink::LayoutFlexibleBox::UpdateLayout
 (gdb) rc # Run back to the last layout call

@@ -1,5 +1,5 @@
 ---
-title: "The Chromium Chronicle: Adding Tests to the Waterfall"
+title: "The Chromium Chronicle #14: Adding Tests to the Waterfall"
 description: >
   Want to detect regressions for your new feature in Chrome? Add your tests to
   the waterfall, Chrome’s continuous build and test infrastructure!
@@ -8,10 +8,12 @@ date: 2020-10-30
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
+tags:
+  - chromium-chronicle
 ---
 
-**Episode 14:** by Zhaoyang Li in MTV, and Eric Aleshire in TOK (October 2020)<br>
-[Previous episodes](/tags/chromium-chronicle)
+**Episode 14:** by Zhaoyang Li in MTV, and Eric Aleshire in TOK (October, 2020)<br>
+[Previous episodes](/tags/chromium-chronicle/)
 
 Want to detect regressions for your new feature in Chrome? Add your
 tests to **the waterfall** (Chrome’s continuous build and test infrastructure)!
