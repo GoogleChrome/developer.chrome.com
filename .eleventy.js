@@ -21,7 +21,7 @@ const {glitch} = require('./site/_shortcodes/glitch');
 const {img} = require('./site/_shortcodes/img');
 const {video} = require('./site/_shortcodes/video');
 const {youtube} = require('./site/_shortcodes/youtube');
-const {columns} = require('./site/_shortcodes/columns');
+const {columns, column} = require('./site/_shortcodes/columns');
 const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
 
 // Transforms
@@ -45,7 +45,7 @@ const extensionsReferenceCollection = require('./site/_collections/reference');
 
 // Create a helpful environment flags
 const isProduction = process.env.NODE_ENV === 'production';
-const isCI = true || process.env.CI;
+const isCI = process.env.CI;
 
 module.exports = eleventyConfig => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
@@ -106,6 +106,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('video', video);
   eleventyConfig.addShortcode('youtube', youtube);
   eleventyConfig.addPairedShortcode('columns', columns);
+  eleventyConfig.addPairedShortcode('column', column);
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
 

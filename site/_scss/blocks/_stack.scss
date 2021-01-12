@@ -29,6 +29,13 @@
 }
 /* purgecss end ignore */
 
+// The default .stack class uses flexbox, and flexbox ignores floats.
+// Authors like to use floats in blog posts and docs so this exception can be
+// used on those stacks to enable floats.
+.stack--block {
+  display: block;
+}
+
 // Use the stack-exception class to change the top AND bottom margin
 // around an individual element.
 // These exceptions follow the rest of our size scale.

@@ -28,8 +28,10 @@ use the code coverage trybot to ensure you only submit well-tested code.
 To see code coverage for a Chromium CL, trigger the code coverage trybot
 *linux-coverage-rel*:
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Z9UKBlA67VrGcR1sxNpn.png", alt="", className="attempt-left" %}
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/p4L6k3hEN6j4kvMgsbAs.png", alt="", className="attempt-right" %}
+{% columns %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Z9UKBlA67VrGcR1sxNpn.png", alt="" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/p4L6k3hEN6j4kvMgsbAs.png", alt="" %}
+{% endcolumns %}
 
 Once the build finishes and code coverage data is processed successfully,
 look at the right column of the side by side diff view to see coverage
