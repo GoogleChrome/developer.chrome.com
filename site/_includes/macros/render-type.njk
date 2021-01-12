@@ -87,7 +87,6 @@
   </div>
 
 {% else %}
-  {# nb. This technically includes array, and perhaps we're an array of an interesting type. #}
   <div class="code-sections">
     <h4 class="type--label case-upper">Type</h4>
 
@@ -153,6 +152,12 @@
   <div class="code-sections__callback type--xsmall"><code>{{ functionPart | safe }}</code></div>
 {% endif %}
 
+{# OPTION: array #}
+{% if spec.type === 'array' %}
+  {# Render further information about the contained type. #}
+  {% set spec = spec.elementType %}
+{% endif %}
+
 {# OPTION: type (class) or object (property) #}
 {% if spec.type === 'type' or spec.type === 'object' %}
   {% if spec.properties.length %}
@@ -197,7 +202,8 @@
 {#
   Renders a single type as a single word. Used for signatures and type hints.
 
-  If isOuter is true, shows a hint icon.
+  If isOuter is true, shows a hint icon, because it's the left-most type inside
+  a table view.
 #}
 {% macro renderSingleType(rt, isOuter) %}
 
@@ -255,7 +261,7 @@
 {% endmacro %}
 
 {#
-  If the passed RenderType is a function, then render its full signature.
+  If the passed RenderType is a function, then render its full signature. Does nothing otherwise.
 #}
 {% macro renderTypeSignature(rt, namespaceName) %}
 
