@@ -117,7 +117,7 @@
 #}
 {% macro renderComment(spec) %}
   {% if spec.deprecated !== undefined %}
-  <p><strong>Deprecated</strong>. {{ spec.deprecated | safe }}
+  <p class="code-sections__deprecated"><strong>Deprecated</strong>. {{ spec.deprecated | safe }}
   {% endif %}
   {{ spec.comment | safe }}
 {% endmacro %}
