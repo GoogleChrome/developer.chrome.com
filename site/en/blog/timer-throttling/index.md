@@ -117,31 +117,23 @@ If your animation is low-framerate (like a blinking cursor), timers are still th
 
 ```js
 function animationInterval(ms, signal, callback) {
-  const start = performance.now();
+  const start = document.timeline.currentTime;
 
   function frame(time) {
     if (signal.aborted) return;
     callback(time);
-    scheduleFrame();
+    scheduleFrame(time);
   }
 
-  function scheduleFrame() {
-    const elapsed = performance.now() - start;
+  function scheduleFrame(time) {
+    const elapsed = time - start;
     const roundedElapsed = Math.round(elapsed / ms) * ms;
-    const alignedTime = start + roundedElapsed;
-    const offset = roundedElapsed - elapsed;
-    const delay = ms + offset;
-
-    setTimeout(
-      () =>
-        requestAnimationFrame(() => {
-          frame(alignedTime);
-        }),
-      delay
-    );
+    const targetNext = start + roundedElapsed + ms;
+    const delay = targetNext - performance.now();
+    setTimeout(() => requestAnimationFrame(frame), delay);
   }
 
-  scheduleFrame();
+  scheduleFrame(start);
 }
 ```
 
