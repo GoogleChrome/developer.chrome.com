@@ -79,8 +79,8 @@ The `toc.yml` supports these fields:
 
 ### Add styles and icon for your project
 
-Add an icon at `site/_images/project/[project-key].svg`. This should be a
-small SVG rendered in white. See the existing icons for examples.
+Add an icon at `site/_static/images/project/[project-key].svg`. This should be
+a small SVG rendered in white. See the existing icons for examples.
 
 If you'd like this icon to render on a different color than the default blue,
 you can optionally add a peer `styles.yml` to your `toc.yml` file. For example:
