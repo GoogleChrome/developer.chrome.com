@@ -24,7 +24,7 @@ const {youtube} = require('./site/_shortcodes/youtube');
 const {columns} = require('./site/_shortcodes/columns');
 
 // Transforms
-const {domTransformer} = require('./site/_transforms/dom-transformer');
+const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
 const {purifyCss} = require('./site/_transforms/purify-css');
 const {minifyHtml} = require('./site/_transforms/minify-html');
 

@@ -1,5 +1,5 @@
 const test = require('ava');
-const {domTransformer} = require('../../../site/_transforms/dom-transformer');
+const domTransformer = require('../../../site/_transforms/dom-transformer');
 
 test("ignores content if there's no outputPath", t => {
   const content = '<a href="/en/foo"></a>';

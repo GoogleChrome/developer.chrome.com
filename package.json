@@ -44,6 +44,7 @@
     "@lhci/cli": "^0.5.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
     "algoliasearch": "^4.6.0",
+    "async-transforms": "^1.0.6",
     "browser-media-mime-type": "^1.0.0",
     "chokidar-cli": "^2.1.0",
     "chrome-types": "0.0.7",
