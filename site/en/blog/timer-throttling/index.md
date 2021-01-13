@@ -4,7 +4,10 @@ title: Heavy throttling of chained JS timers beginning in Chrome 88
 authors:
   - jakearchibald
 description: >
-  Chrome 88 will heavily throttle chained JavaScript timers for hidden pages.
+  Intensive throttling takes effect when the page has been hidden
+  for more than 5 minutes, the page has been silent for at least
+  30 seconds, WebRTC is not in use, and the chain of timers is
+  5 or greater.
 date: 2021-01-11
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/5diIn5KBi44iwy3o6GRi.jpg
 alt: A collection of broken clocks
