@@ -17,6 +17,7 @@ import algoliasearch from 'algoliasearch/dist/algoliasearch-lite.esm.browser';
 import {html} from 'lit-element';
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 import {unsafeSVG} from 'lit-html/directives/unsafe-svg';
+import {debounce} from '../utils/debounce';
 
 import closeIcon from '../../_includes/icons/close.svg';
 import searchIcon from '../../_includes/icons/search.svg';
@@ -90,6 +91,7 @@ export class SearchBox extends BaseElement {
     this.searchIcon = unsafeSVG(searchIcon);
 
     this.renderResult = this.renderResult.bind(this);
+    this.search = debounce(this.search.bind(this), 500);
   }
 
   clearSearch() {
