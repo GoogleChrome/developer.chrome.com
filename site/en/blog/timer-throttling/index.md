@@ -82,7 +82,7 @@ This happens to timers that are scheduled when _any_ of the following is true:
 
 The timer isn't throttled, unless the requested timeout is less than 4ms, and
 the chain count is 5 or greater, in which case the timeout is set to 4ms. This
-isn't new, browsers have done this for many years.
+isn't new; browsers have done this for many years.
 
 ### Throttling
 
