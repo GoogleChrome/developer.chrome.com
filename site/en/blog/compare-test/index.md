@@ -12,70 +12,58 @@ the appropriate docs.
 
 ## Compare
 
-```md
-!!!.compare.compare--better
+{% Compare 'better' %}
 The right way to do something
-!!!
+{% endCompare %}
 
-!!!.compare.compare--worse
+{% Compare 'worse' %}
 Don't do it this way!
-!!!
-```
-
-!!!.compare.compare--better
-The right way to do something
-!!!
-
-!!!.compare.compare--worse
-Don't do it this way!
-!!!
+{% endCompare %}
 
 ### Compare with with caption
 
-```md
-!!!.compare.compare--better
-You could put an image here.
-!!!.compare--caption
-this is the better way to do it.
-!!!
-```
+{% Compare 'worse' %}
+Bad code example
 
-!!!.compare.compare--better
-You could put an image here.
-!!!.compare--caption
-this is the better way to do it.
-!!!
+{% CompareCaption %}
+Explanation of why `example` is bad.
+{% endCompareCaption %}
+
+{% endCompare %}
+
+{% Compare 'better' %}
+Good code example
+
+{% CompareCaption %}
+Explanation of why `example` is good.
+{% endCompareCaption %}
+
+{% endCompare %}
+
+### Compare with custom labels
+
+{% Compare 'worse', 'unhelpful' %}
+Lorem ipsum [dolor sit amet](#), consectetur adipiscing elit. Proin dictum a
+massa sit amet ullamcorper. `Suspendisse` auctor ultrices ante, nec tempus
+nibh varius at.
+{% endCompare %}
+
+{% Compare 'better', 'helpful' %}
+Lorem ipsum [dolor sit amet](#), consectetur adipiscing elit. Proin dictum a
+massa sit amet ullamcorper. `Suspendisse` auctor ultrices ante, nec tempus
+nibh varius at.
+{% endCompare %}
 
 ### Compare with fenced code block
 
-```md
-!!!.compare.compare--better
-```js
-const x = 0;
-\```
-!!!.compare--caption
-this is the better way to do it.
-!!!
-```
-
-!!!.compare.compare--better
+{% Compare 'better' %}
 ```js
 const x = 0;
 ```
-!!!.compare--caption
-this uses `compare--better`.
-!!!
+{% endCompare %}
 
-!!!.aside.aside--warning
-If you include a fenced code block in the compare widget, you **must** include
-`.compare--caption`, otherwise the widget won't close.
-!!!
-
-
-Today, we're happy to announce a revamp of the developer.chrome.com
-documentation site. Google Chrome was originally released in 2008, and this
-domain dates from about the same time—with the last major update back in 2012.
-
-
-
-yes.
+{% Compare 'worse' %}
+```js
+var x = 0;
+```
+{% endCompare %}

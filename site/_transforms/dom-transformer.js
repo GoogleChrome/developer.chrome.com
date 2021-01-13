@@ -1,7 +1,6 @@
 const cheerio = require('cheerio');
 const ISO6391 = require('iso-639-1');
 const {asides} = require('./asides');
-const {compares} = require('./compares');
 const {prettyUrls} = require('./pretty-urls');
 const {tables} = require('./tables');
 
@@ -34,7 +33,6 @@ const domTransformer = (content, outputPath) => {
   // Pipe the page through transforms.
   // These transforms mutate the cheerio object.
   asides($, locale);
-  compares($, locale);
   prettyUrls($, outputPath, locale);
   tables($);
 

@@ -1,52 +1,33 @@
-// =============================================================================
-// COMPARE OVERVIEW
-//
 // A compare widget is used to show a good/bad variation of something.
 // Typically it's used with a code snippet to show what someone shouldn't do.
-//
-// =============================================================================
 
 .compare {
-  line-height: 1.5em;
-  margin-top: 32px;
-  padding: 0 0 0 16px;
   position: relative;
-}
 
-.compare--label {
-  font-size: 1.125em;
-  // font-weight: $FONT_WEIGHT_MEDIUM;
-  padding-bottom: 0.5em;
-}
+  .compare__label {
+    font-size: 1.125em;    
+  }
 
-// Markdown will put unclassed p tags inside of the compare widget as content
-// so we need to make them act like regular text content.
-.compare > ol,
-.compare > p,
-.compare > web-copy-code > pre,
-.compare > ul {
-  margin: 0;
-}
+  .compare__caption {
+    color: var(--color-secondary-text);
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0.75em 0 0;
+  }
 
-.compare--better {
-  border-left: 3px solid var(--color-green-medium);
-}
+  &[data-type='better'] {
+    border-left: 3px solid var(--color-green-medium);
 
-.compare--better .compare--label {
-  color: var(--color-green-medium);
-}
+    .compare__label {
+      color: var(--color-green-medium);
+    }
+  }
 
-.compare--worse {
-  border-left: 3px solid var(--color-red-medium);
-}
+  &[data-type='worse'] {
+    border-left: 3px solid var(--color-red-medium);
 
-.compare--worse .compare--label {
-  color: var(--color-red-medium);
-}
-
-.compare--caption {
-  color: var(--color-secondary-text);
-  font-size: 1em;
-  line-height: 1.5em;
-  margin: 0.75em 0 0;
+    .compare__label {
+      color: var(--color-red-medium);
+    }
+  }
 }
