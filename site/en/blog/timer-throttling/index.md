@@ -122,10 +122,11 @@ something else to be kinder to CPUs and battery life.
 ### State polling
 
 This is the most common (mis)use of timers, where they're used to continually
-check something to see if it's changed. In most cases there's a 'push'
-equivalent, where the thing tells you about the change when it happens, so you
-don't have to keep checking. Look to see if there's an event that achieves the
-same thing.
+check or [poll](https://en.wikipedia.org/wiki/Polling_%28computer_science%29)
+to see if something has changed. In most cases there's a
+[push](https://en.wikipedia.org/wiki/Push_technology) equivalent, where the
+thing tells you about the change when it happens, so you don't have to keep
+checking. Look to see if there's an event that achieves the same thing.
 
 Some examples:
 
