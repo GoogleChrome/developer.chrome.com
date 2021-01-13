@@ -10,8 +10,6 @@ description: TODO
 
 <div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and the Chrome Web Store will continue to support extensions. <a href="https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html"><strong>Read the announcement</strong></a> and learn more about <a href="https://developer.chrome.com/apps/migration"><strong>migrating your app</strong></a>.</div>
 
-## Publish Your App
-
 Packaged apps are published in the same way as other types of apps in the Chrome Web Store. For
 detailed instructions, see [Publishing Your App][3].
 

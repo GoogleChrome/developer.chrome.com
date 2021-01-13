@@ -10,7 +10,7 @@ If you don't find an answer to your question here, try the [Chrome Web Store FAQ
 [\[google-chrome-extension\] tag on Stack Overflow][2], the [chromium-extensions group][3], or the
 [store help][4].
 
-## General {: #general2 }
+## General {: #general }
 
 ### What are Google Chrome extensions? {: #faq-gen-01 }
 
