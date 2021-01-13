@@ -1,9 +1,4 @@
 pre,
-code {
-  @include apply-utility('font', 'mono');
-}
-
-pre,
 pre[class*='language-'] {
   background: var(--color-code-bg);
   border: 1px solid var(--color-hairline);

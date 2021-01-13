@@ -248,6 +248,11 @@
     }
   }
 
+  &--code {
+    @include apply-utility('font', 'mono');
+    @include font-setup(15px, 26px);
+  }
+
   &--full-bleed {
     margin-left: -#{$article-padding};
     margin-right: -#{$article-padding};

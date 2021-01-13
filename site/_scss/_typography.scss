@@ -118,6 +118,11 @@
     @extend %type--dd;
   }
 
+  pre,
+  code {
+    @extend %type--code;
+  }
+
   &--full-bleed {
     @extend %type--full-bleed;
   }
