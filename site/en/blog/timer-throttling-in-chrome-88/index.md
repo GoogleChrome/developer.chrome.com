@@ -25,7 +25,7 @@ OK, that was pretty jargon heavy, and a bit ambiguous. Let's dig in…
 
 ### Hidden pages
 
-Generally, **hidden** means a different tab is active, or the window has been
+Generally, _hidden_ means a different tab is active, or the window has been
 minimized, but browsers may consider a page hidden whenever its content is
 totally not-visible. Some browsers go further than others here, but you can
 always use the [page visibility
@@ -34,7 +34,7 @@ track when the browser thinks visibility has changed.
 
 ### JavaScript timers
 
-By "JavaScript timers" I mean `setTimeout` and `setInterval`, which allow you to
+By _JavaScript timers_ I mean `setTimeout` and `setInterval`, which allow you to
 schedule a callback sometime in the future. Timers are useful, and they aren't
 going away, but sometimes they're used to poll state when an event would be more
 efficient, and more accurate.
@@ -43,7 +43,7 @@ efficient, and more accurate.
 
 If you call `setTimeout` in the same task as a `setTimeout` callback, the second
 invocation is 'chained'. With `setInterval`, each iteration is part of the
-chain. This might be easier to understand with code:
+_chain_. This might be easier to understand with code:
 
 ```js
 let chainCount = 0;
@@ -76,7 +76,7 @@ The throttling happens in stages:
 
 This happens to timers that are scheduled when _any_ of the following is true:
 
-- The page is visible.
+- The page is _visible_.
 - The page has made noises in the past 30 seconds. This can be from any of the
   sound-making APIs, but a silent audio track doesn't count.
 
@@ -86,13 +86,13 @@ isn't new; browsers have done this for many years.
 
 ### Throttling
 
-This happens to timers that are scheduled when 'Minimal throttling' doesn't
+This happens to timers that are scheduled when _Minimal throttling_ doesn't
 apply, and _any_ of the following is true:
 
-- The chain count is less than 5.
-- The page has been hidden for less than 5 minutes.
-- WebRTC is in use. Specifically, there's an `RTCPeerConnection` with an
-  `RTCDataChannel` set to `open` or a `MediaStreamTrack` set to `live`.
+- The _chain count_ is less than 5.
+- The page has been _hidden_ for less than 5 minutes.
+- WebRTC is in use. Specifically, there's an `RTCPeerConnection` with an 'open'
+  `RTCDataChannel` or a 'live' `MediaStreamTrack`.
 
 The browser will check timers in this group once per **second**. Because they're
 only checked once per second, timers with a similar timeout will batch together,
@@ -101,12 +101,12 @@ browsers have been doing this to some extent for years.
 
 ### Intensive throttling
 
-Ok, this is the new bit in Chrome 88. This happens to timers that are scheduled
-when neither 'Minimal throttling' or 'Throttling' apply, meaning _all_ of the
-following is true:
+OK, here's the new bit in Chrome 88. Intensive throttling happens to timers that are
+scheduled when none of the _minimal throttling_ or _throttling_ conditions
+apply, and _all_ of the following conditions are true:
 
-- The page has been hidden for more than 5 minutes.
-- The chain count is 5 or greater.
+- The page has been _hidden_ for more than 5 minutes.
+- The _chain count_ is 5 or greater.
 - The page has been silent for at least 30 seconds.
 - WebRTC is not in use.
 
@@ -156,7 +156,7 @@ you want to show a notification at a particular time.
 
 ### Animation
 
-Animation is a visual thing, so it shouldn't use CPU time when the page is hidden.
+Animation is a visual thing, so it shouldn't use CPU time when the page is _hidden_.
 
 [`requestAnimationFrame`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)
 is much better at scheduling animation work than JavaScript timers. It
