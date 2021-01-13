@@ -279,39 +279,14 @@ function buildRenderType(type, parentType, owner) {
     }
 
     case 'intersection': {
-      const intersectionType = /** @type {typedocModels.IntersectionType} */ (type);
-      const [a, b, ...rest] = intersectionType.types;
-      if (rest.length) {
-        break;
+      const out = parseIntersectionType(
+        /** @type {typedocModels.IntersectionType} */ (type),
+        owner
+      );
+      if (out) {
+        return out;
       }
-
-      const typeA = buildRenderType(a, undefined, owner);
-      const typeB = buildRenderType(b, undefined, owner);
-      if (
-        typeA?.type !== 'array' ||
-        typeB?.type !== 'array' ||
-        !deepStrictEqual(typeA.elementType, typeB.elementType)
-      ) {
-        break;
-      }
-
-      /** @type {RenderType} */
-      const out = {
-        type: 'array',
-        elementType: typeA.elementType,
-      };
-
-      const minLength = Math.max(typeA.minLength ?? 0, typeB.minLength ?? 0);
-      if (minLength) {
-        out.minLength = minLength;
-      }
-
-      const maxLength = Math.min(typeA.maxLength ?? 0, typeB.maxLength ?? 0);
-      if (maxLength) {
-        out.maxLength = maxLength;
-      }
-
-      return out;
+      break;
     }
 
     case 'reference': {
@@ -357,6 +332,18 @@ function buildRenderType(type, parentType, owner) {
       const unionType = /** @type {typedocModels.UnionType} */ (type);
       const options = unionType.types.map(c => buildRenderType(c, type, owner));
 
+      // Look for optional options (union of something and undefined).
+      if (options.length === 2) {
+        const filtered = options.filter(
+          ({primitiveType}) => primitiveType !== 'undefined'
+        );
+        if (filtered.length === 1) {
+          const t = filtered[0];
+          t.optional = true;
+          return t;
+        }
+      }
+
       // We only present enums if they contain primitive values (e.g., a choice of strings).
       const isEnum = !options.some(({type}) => type !== 'primitive');
       return {
@@ -377,14 +364,19 @@ function buildRenderType(type, parentType, owner) {
     case 'stringLiteral': {
       const stringLiteralType = /** @type {typedocModels.StringLiteralType} */ (type);
 
-      // Pretend that lone stringLiterals are actually enums.
-      if (parentType?.type !== 'union') {
+      // If we're not contained by a union but our owner is a TypeAlias then this is just an enum
+      // type with a single possible string option.
+      if (
+        parentType?.type !== 'union' &&
+        owner.kind === typedocModels.ReflectionKind.TypeAlias
+      ) {
         const unionType = new typedocModels.UnionType([type]);
         return buildRenderType(unionType, parentType, owner);
       }
 
       return {
         type: 'primitive',
+        primitiveType: 'string',
         literalValue: JSON.stringify(stringLiteralType.value),
       };
     }
@@ -396,10 +388,124 @@ function buildRenderType(type, parentType, owner) {
         referenceType: typeParameterType.name,
       };
     }
+
+    case 'unknown': {
+      // This is probably a constant number, which TSDoc doesn't understand.
+
+      const unknownType = /** @type {typedocModels.UnknownType} */ (type);
+
+      const value = +unknownType.name;
+      if (typeof value === 'number' && isFinite(value)) {
+        return {
+          type: 'primitive',
+          primitiveType: 'number',
+          literalValue: unknownType.name,
+        };
+      }
+    }
   }
 
   console.warn('got unknown type', type);
   return {type: '?'};
 }
 
-module.exports = {declarationToType};
+/**
+ * Attempts to tease out a sensible RenderType from typedoc's intersection type. There is only a
+ * few of these in Chrome's types and we match them all.
+ *
+ * @param {typedocModels.IntersectionType} intersectionType
+ * @param {typedocModels.Reflection} owner
+ * @return {RenderType|null}
+ */
+function parseIntersectionType(intersectionType, owner) {
+  const checkArray = internalParseArray(intersectionType, owner);
+  if (checkArray) {
+    // This is an array (probably with min/max).
+    return checkArray;
+  }
+
+  const checkRefProperties = internalParseRefProperties(
+    intersectionType,
+    owner
+  );
+  if (checkRefProperties) {
+    // This is a reference but which also has static properties (chrome.storage).
+    return checkRefProperties;
+  }
+
+  return null;
+}
+
+/**
+ * @param {typedocModels.IntersectionType} intersectionType
+ * @param {typedocModels.Reflection} owner
+ * @return {RenderType|null}
+ */
+function internalParseArray(intersectionType, owner) {
+  const [a, b, ...rest] = intersectionType.types;
+  if (rest.length) {
+    return null;
+  }
+
+  const typeA = buildRenderType(a, undefined, owner);
+  const typeB = buildRenderType(b, undefined, owner);
+  if (
+    typeA?.type !== 'array' ||
+    typeB?.type !== 'array' ||
+    !deepStrictEqual(typeA.elementType, typeB.elementType)
+  ) {
+    return null;
+  }
+
+  /** @type {RenderType} */
+  const out = {
+    type: 'array',
+    elementType: typeA.elementType,
+  };
+
+  const minLength = Math.max(typeA.minLength ?? 0, typeB.minLength ?? 0);
+  if (minLength) {
+    out.minLength = minLength;
+  }
+
+  const maxLength = Math.min(typeA.maxLength ?? 0, typeB.maxLength ?? 0);
+  if (maxLength) {
+    out.maxLength = maxLength;
+  }
+
+  return out;
+}
+
+/**
+ * @param {typedocModels.IntersectionType} intersectionType
+ * @param {typedocModels.Reflection} owner
+ * @return {RenderType|null}
+ */
+function internalParseRefProperties(intersectionType, owner) {
+  const [a, b, ...rest] = intersectionType.types;
+  if (rest.length) {
+    return null;
+  }
+
+  if (
+    !(
+      a instanceof typedocModels.ReferenceType &&
+      b instanceof typedocModels.ReflectionType
+    )
+  ) {
+    return null;
+  }
+  const referenceType = a;
+  const reflectionType = b;
+
+  const properties = buildRenderType(reflectionType, undefined, owner);
+  if (properties.type !== 'object') {
+    return null;
+  }
+
+  const t = buildRenderType(referenceType, undefined, owner);
+  t.properties = properties.properties;
+  return t;
+}
+
+module.exports = {declarationToType, buildRenderType};
