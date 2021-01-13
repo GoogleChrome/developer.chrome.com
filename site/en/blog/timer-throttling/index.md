@@ -215,21 +215,22 @@ controller.abort();
 
 ## Testing
 
-This change will land for everyone in Chrome 88 stable. In the meantime it's in
-Chrome Beta/Dev/Canary, but only for 50% of users. If you want to test it, use
-this command line flag when launching Chrome:
+This change will be enabled for all Chrome users in Chrome 88 (January 2020).
+It's currently enabled for 50% of Chrome Beta, Dev, and Canary users.
+If you want to test it, use this command line flag when launching Chrome
+Beta, Dev, or Canary:
 
 ```bash
 --enable-features="IntensiveWakeUpThrottling:grace_period_seconds/10,OptOutZeroTimeoutTimersFromThrottling,AllowAggressiveThrottlingWithWebSocket"
 ```
 
-This also causes intense throttling to kick in after 10 seconds of the page
-being hidden, rather than the full 5 minutes, making it easier to see the impact
-of the throttling.
+The `grace_period_seconds/10` argument causes intense throttling to kick in
+after 10 seconds of the page being hidden, rather than the full 5 minutes,
+making it easier to see the impact of the throttling.
 
 ## The future
 
-Since timers are a source of excessive CPU use, we going to continue to look at
+Since timers are a source of excessive CPU use, we're going to continue to look at
 ways we can throttle them without breaking web content, and APIs we can
 add/change to meet use-cases. Personally, I'd like to eliminate the need for
 `animationInterval` in favour of efficient low-frequency animation callbacks. If
