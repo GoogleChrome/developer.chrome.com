@@ -13,8 +13,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- Needs compare widget -->
-
 **Episode 2:** by Vasilii in Munich (May, 2019)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
@@ -41,14 +39,17 @@ will render the actual browser UI.
 possible that, under debugger, the test is never flaky. In that case, log
 statements or `base::debug::StackTrace` can be handy.
 
-Keep in mind common reasons for EXPECT__* failures besides bugs in production
+{% Compare 'worse' %}
+
+Keep in mind common reasons for `EXPECT__*` failures besides bugs in production
 code:
-{: .compare-worse }
 
 * **Incorrect expectations** (e.g. secure page means HTTPS; it can be a localhost instead).
 * Race conditions due to tests not **waiting for the proper event.**
 
 [Don't test the implementation][not-implementation] but the behavior.
+
+{% endCompare %}
 
 ```cpp
 // It takes 2 round trips between the UI and the background thread to complete.
@@ -61,8 +62,8 @@ The two round trips may change into three in the future, making the test flaky.
 However, only the store state is relevant. Instead, use an observer for the
 store.
 
+{% Compare 'worse' %}
 Beware of common patterns such as the following:
-{: .compare-worse }
 
 ```cpp
 Submit TestPasswordForm();
@@ -70,20 +71,22 @@ Submit TestPasswordForm();
 RunLoop().RunUntilIdle();
 CheckCredentialPromptVisible();
 ```
-{: .compare-worse }
+
+{% endCompare %}
 
 A snippet like the above from a browser test is almost surely incorrect.
 There are **many events that should happen in different processes and
 threads before some UI appears.**
 
+{% Compare 'better' %}
 The following is a correct fix:
-{: .compare-better }
 
 ```cpp
 SubmitTestPasswordForm();
 WaitUntilCredentialPromptVisible();
 ```
-{: .compare-better }
+
+{% endCompare %}
 
 The fix above is correct under the assumption that
 `WaitUntilCredentialPromptVisible()` doesn’t actually check the UI.

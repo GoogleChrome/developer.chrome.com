@@ -14,8 +14,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- Needs compare widget -->
-
 **Episode 7:** by Bruce Dawson in Seattle, WA (October, 2019)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
@@ -34,7 +32,6 @@ in this case. Then, touch the file, and **compile it (and only it) again with
 the `-v` (verbose) flag** to ninja:
 
 On Linux or OSX:
-{: .compare-better }
 
 ```bash
 autoninja ../../base/version.cc^
@@ -43,7 +40,6 @@ autoninja -v ../../base/version.cc^
 ```
 
 In the Windows cmd shell `^` is a special character and must be escaped:
-{: .compare-better }
 
 ```bash
 C:\> autoninja ../../base/version.cc^^
@@ -66,7 +62,6 @@ and add `-E`**. This tells the compiler to print the preprocessed file to
 stdout.
 
 Redirect the output to a file, like this:
-{: .compare-better }
 
 ```bash
 ../../third_party/llvm-build/Release+Asserts/bin/clang++ -MMD ... -E >version.i

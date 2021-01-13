@@ -59,10 +59,12 @@ in [`//src/testing/buildbot/`][src-test-bbot]:
    (You can find the mapping from builder name to the test groups on builder in
    [`waterfalls.pyl`][waterfalls-pyl].)
 
-        'all_simulator_tests': {
-          'previously_existing_test_suite': {},
-          'exciting_new_feature_test_suite': {},
-        },
+    ```json
+    'all_simulator_tests': {
+      'previously_existing_test_suite': {},
+      'exciting_new_feature_test_suite': {},
+    },
+    ```
 
 3. More fine tunings.
      * [`mixins.pyl`][mixins-pyl] contains **arguments** that

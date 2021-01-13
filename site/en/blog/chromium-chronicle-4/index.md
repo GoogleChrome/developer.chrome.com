@@ -14,8 +14,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- Needs compare widget -->
-
 **Episode 4:** by Robert in Waterloo, ON (July, 2019)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
@@ -36,7 +34,8 @@ except rendering. When writing testharness.js tests, **pay attention to timing,
 and remember to clean up global state.**
 
 Flaky timeout & potential leaked states:
-{: .compare-worse }
+
+{% Compare 'worse' %}
 
 ```html
 <script>
@@ -46,10 +45,12 @@ promise_test(async t => {
 });
 </script>
 ```
-{: .compare-worse }
+
+{% endCompare %}
 
 A better test with long timeout & cleanup:
-{: .compare-better }
+
+{% Compare 'better' %}
 
 ```html/0,3
 <meta name="timeout" content="long">
@@ -60,6 +61,8 @@ promise_test(async t => {
 });
 </script>
 ```
+
+{% endCompare %}
 
 **Use testdriver.js if you need automation otherwise unavailable on the web.**
 You can get a user gesture from `test_driver.bless`, generate complex,

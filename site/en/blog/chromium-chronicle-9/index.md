@@ -13,8 +13,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- Needs image float left/right -->
-
 **Episode 9:** by Adrian Taylor in Mountain View (December, 2019)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 

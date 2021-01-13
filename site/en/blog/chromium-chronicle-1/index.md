@@ -14,8 +14,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- Needs compare widget -->
-
 The Chrome team is proud to introduce the Chromium Chronicle, a monthly
 series geared specifically to Chromium developers, developers who build the
 browser.
@@ -39,16 +37,20 @@ to sequences. Sequences are chrome-managed “virtual threads” and are
 [preferred to creating your own thread][prefer-sequences]. How does an object
 know which sequence to post to?
 
+{% Compare 'worse' %}
+
 The old paradigm is to receive a SequencedTaskRunner from the creator:
-{: .compare-worse }
 
 ```cpp/0
 Foo::Foo(scoped_refptr<base::SequencedTaskRunner> backend_task_runner)
     : backend_task_runner_(std::move(backend_task_runner)) {}
 ```
 
+{% endCompare %}
+
+{% Compare 'better' %}
+
 The preferred paradigm is to create an independent SequencedTaskRunner:
-{: .compare-better }
 
 ```cpp/2-3
 Foo::Foo()
@@ -56,6 +58,8 @@ Foo::Foo()
           base::CreateSequencedTaskRunnerWithTraits({
               base::MayBlock(), base::TaskPriority::BEST_EFFORT})) {}
 ```
+
+{% endCompare %}
 
 This is easier to read and write as all the information is local and there’s
 no risk of inter-dependency with unrelated tasks.
@@ -79,8 +83,8 @@ manages the task environment throughout Foo’s lifetime. The TaskEnvironment
 will capture Foo’s request-on-construction to create a SequencedTaskRunner and
 will manage its tasks under each FooTest.
 
-To test the result of asynchronous execution, **use the RunLoop::Run()+QuitClosure()
-paradigm**:
+To test the result of asynchronous execution, **use the
+`RunLoop::Run()+QuitClosure()` paradigm**:
 
 ```cpp
 TEST_F(FooTest, TestAsyncWork) {
@@ -93,7 +97,7 @@ TEST_F(FooTest, TestAsyncWork) {
 
 This is preferred to RunUntilIdle(), which can be flaky if the asynchronous
 workload involves a task outside of the TaskEnvironment’s purview,
-e.g. a system event, so use [RunUntilIdle() with care][run-until-idle-w-care].
+e.g. a system event, so use [`RunUntilIdle()` with care][run-until-idle-w-care].
 
 !!!.aside.aside
 Pro-tip: Use TaskEnvironment’s `MOCK_TIME` mode to reliably test delayed

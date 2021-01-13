@@ -13,8 +13,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- Needs float left/right -->
-
 **Episode 3:** by Yuke, Roberto and Sajjad in Mountain View, CA (June, 2019)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 

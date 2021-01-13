@@ -14,8 +14,6 @@ tags:
   - chromium-chronicle
 ---
 
-<!-- Needs compare widget -->
-
 **Episode 5:** by Ade in Mountain View, CA (August, 2019)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
@@ -37,7 +35,6 @@ of all browser tabs, login data, etc.
 For more information, see Chrome's [sandbox implementation guide][sandbox-implementation].
 
 Make sure to avoid the following common mistakes:
-{: .compare-worse }
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/H5cmSK3JieUkRBdPw9oj.jpg", alt="rule of two", className="float-left" %}
 
@@ -48,8 +45,9 @@ Make sure to avoid the following common mistakes:
 
 <br style="clear: both;" />
 
+{% Compare 'better' %}
+
 Instead, use the following best practices:
-{: .compare-better }
 
 * Be extra paranoid if your code is in the browser process.
 * Validate all IPC from other processes. Assume all other processes are already
@@ -57,6 +55,8 @@ Instead, use the following best practices:
 * Do your processing in a renderer or utility process or some other sandboxed
   process. Ideally, also use a memory safe language such as JavaScript
   (solves >50% security bugs).
+
+{% endCompare %}
 
 For years, we ran network stacks (e.g. HTTP, DNS, QUIC) in the browser process,
 which led to some [critical vulnerabilities][critical-vulnerabilities]. On
