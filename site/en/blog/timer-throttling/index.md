@@ -19,7 +19,7 @@ also reduce battery usage. There are some edge cases where this will change
 behavior, but timers are often used where a different API would be more
 efficient, and more reliable.
 
-Ok, that was pretty jargon heavy, and a bit ambiguous. Let's dig in…
+OK, that was pretty jargon heavy, and a bit ambiguous. Let's dig in…
 
 ## Terminology
 
