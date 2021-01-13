@@ -6,6 +6,20 @@ home_search:
   en: 'Home and search'
   es: 'Home and search'
 
+compare_better:
+  en: 'Do'
+  es: 'Si'
+
+compare_worse:
+  en: "Don't"
+  es: 'No'
+
+compare_helpful:
+  en: 'Helpful'
+
+compare_unhelpful:
+  en: 'Unhelpful'
+
 menu:
   en: 'menu'
   es: 'menu'

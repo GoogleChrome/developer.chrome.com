@@ -1,0 +1,33 @@
+// A compare widget is used to show a good/bad variation of something.
+// Typically it's used with a code snippet to show what someone shouldn't do.
+
+.compare {
+  position: relative;
+
+  .compare__label {
+    font-size: 1.125em;    
+  }
+
+  .compare__caption {
+    color: var(--color-secondary-text);
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0.75em 0 0;
+  }
+
+  &[data-type='better'] {
+    border-left: 3px solid var(--color-green-medium);
+
+    .compare__label {
+      color: var(--color-green-medium);
+    }
+  }
+
+  &[data-type='worse'] {
+    border-left: 3px solid var(--color-red-medium);
+
+    .compare__label {
+      color: var(--color-red-medium);
+    }
+  }
+}

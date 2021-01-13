@@ -1,3 +1,4 @@
+- url: /docs/handbook/components
 - title: i18n.docs.handbook.how_to
   sections:
     - url: /docs/handbook/how-to/add-a-project
