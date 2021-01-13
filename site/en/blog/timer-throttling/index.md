@@ -96,7 +96,7 @@ apply, and _any_ of the following is true:
 
 The browser will check timers in this group once per **second**. Because they're
 only checked once per second, timers with a similar timeout will batch together,
-consolidating the time the tab needs to run code. This isn't new either,
+consolidating the time the tab needs to run code. This isn't new either;
 browsers have been doing this to some extent for years.
 
 ### Intensive throttling
