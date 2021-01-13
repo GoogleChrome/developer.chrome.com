@@ -34,5 +34,8 @@
   },
   "html": {
     "title": "i18n.tags.html"
+  },
+  "new-in-chrome": {
+    "title": "i18n.tags.new-in-chrome"
   }
 }

@@ -13,6 +13,9 @@ authors:
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/xFjaDDkGd2mBReqdPxdy.png'
 alt: >
   New in Chrome hero logo
+tags:
+  - new-in-chrome
+  - chrome-87
 ---
 
 Chrome 87 is starting to roll out to stable now.
@@ -32,7 +35,7 @@ from home, let’s dive in and see what’s new for developers in Chrome 87!
 
 ## Chrome Dev Summit {: #cds }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M6GzgK34vmmwUhsymAmI.png", alt="Chrome Dev Summit logo" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M6GzgK34vmmwUhsymAmI.png", alt="Chrome Dev Summit logo", className="float-right" %}
 
 The Chrome Dev Summit is back on December 9th and 10th with its 8th chapter.
 But this time, we're coming to you. We're bringing all the latest updates,
@@ -64,7 +67,7 @@ if (supports.pan && supports.tilt && supports.zoom) {
 }
 ```
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/CzXFGEZF3U05FAzXY42p.jpg", alt="Permission prompt for PTZ" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/CzXFGEZF3U05FAzXY42p.jpg", alt="Permission prompt for PTZ", className="float-right" %}
 
 Then, like all other powerful APIs, the user will need to grant permission
 to the camera, but also to PTZ functionality.
@@ -72,6 +75,8 @@ to the camera, but also to PTZ functionality.
 To request permission for PTZ functionality, call
 `navigator.mediaDevices.getUserMedia()` with the PTZ constraints. This will
 prompt the user to grant both regular camera and camera with PTZ permissions.
+
+<br style="clear: both;" />
 
 ```js
 try {
@@ -151,7 +156,7 @@ on web.dev.
 
 ## Origin Trial: Font access API {: #font-access }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/x5qv7Ylxb9i2mtWkBwVt.png", alt="Screen shot of Photopea image editor" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/x5qv7Ylxb9i2mtWkBwVt.png", alt="Screen shot of Photopea image editor", className="float-right" %}
 
 Bringing design apps like Figma, Gravit Designer, and Photopea, to the web is great,
 and we’re seeing a lot more coming. While the web has the ability to offer a
@@ -164,6 +169,8 @@ fonts for CAD and other design applications.
 With the font access API, which starts an origin trial in Chrome 87, a site
 can now enumerate the installed fonts, giving users access to all of the fonts
 on their system.
+
+<br style="clear: both;" />
 
 ```js
 // Query for all available fonts and log metadata.
