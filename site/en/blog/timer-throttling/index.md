@@ -25,7 +25,7 @@ OK, that was pretty jargon heavy, and a bit ambiguous. Let's dig in…
 
 ### Hidden pages
 
-Generally, 'hidden' means a different tab is active, or the window has been
+Generally, **hidden** means a different tab is active, or the window has been
 minimized, but browsers may consider a page hidden whenever its content is
 totally not-visible. Some browsers go further than others here, but you can
 always use the [page visibility
