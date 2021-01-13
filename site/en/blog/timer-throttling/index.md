@@ -68,8 +68,6 @@ function setTimeoutChain() {
 }
 ```
 
-Ok, I think that's all the terms you need to know.
-
 ## How the throttling works
 
 The throttling happens in stages:
