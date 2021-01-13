@@ -91,8 +91,8 @@ apply, and _any_ of the following is true:
 
 - The chain count is less than 5.
 - The page has been hidden for less than 5 minutes.
-- WebRTC is in use. Specifically, there's an `RTCPeerConnection` with an 'open'
-  `RTCDataChannel` or a 'live' `MediaStreamTrack`.
+- WebRTC is in use. Specifically, there's an `RTCPeerConnection` with an
+  `RTCDataChannel` set to `open` or a `MediaStreamTrack` set to `live`.
 
 The browser will check timers in this group once per **second**. Because they're
 only checked once per second, timers with a similar timeout will batch together,
