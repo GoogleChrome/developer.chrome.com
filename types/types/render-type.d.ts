@@ -28,7 +28,8 @@ declare global {
     name?: string;
     type: RenderTypeType;
     optional?: boolean;
-    comment?: string;
+    comment?: string;     // HTML, will always be wrapped by <p></p>
+    deprecated?: string;  // HTML but not wrapped in <p></p>
 
     // primitive
     primitiveType?: string;

@@ -17,7 +17,7 @@
 {% endif %}
 
 <div class="type stack code-sections__description">
-  {{ spec.comment | safe }}
+  {{ renderComment(spec) }}
 </div>
 
 {# OPTION: enum #}
@@ -113,6 +113,16 @@
 {% endmacro %}
 
 {#
+  Renders a comment and its optional deprecation notice.
+#}
+{% macro renderComment(spec) %}
+  {% if spec.deprecated !== undefined %}
+  <p class="code-sections__deprecated"><strong>Deprecated</strong>. {{ spec.deprecated | safe }}
+  {% endif %}
+  {{ spec.comment | safe }}
+{% endmacro %}
+
+{#
   Renders a <li> with the type's name and description. This is used for parts of a top-level type.
 #}
 {% macro internalRenderNamedType(spec, namespaceName, parent) %}
@@ -124,7 +134,7 @@
   <div class="stack">
 
 <div class="type stack code-sections__description">
-  {{ spec.comment | safe }}
+  {{ renderComment(spec) }}
 
   {% if spec.type === 'function' and (spec.name === 'callback' or parent.referenceType === 'events.Event') %}
     {# This is a callback or a listener. Tell the user how to specify it. #}

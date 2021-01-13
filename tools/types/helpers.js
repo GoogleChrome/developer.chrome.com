@@ -57,9 +57,10 @@ function exportedChildren(reflection, kindMask = 0) {
 /**
  * @param {typedocModels.Comment|string|undefined} comment
  * @param {typedocModels.Reflection} owner
+ * @param {boolean} ensureParagraphs
  * @return {string}
  */
-function extractComment(comment, owner) {
+function extractComment(comment, owner, ensureParagraphs = true) {
   let raw = '';
 
   if (!comment) {
@@ -73,6 +74,9 @@ function extractComment(comment, owner) {
     raw = comment?.shortText ?? '';
     if (raw && comment?.text) {
       raw += '\n';
+      if (!ensureParagraphs) {
+        throw new TypeError('must ensureParagraphs if there is long-form text');
+      }
     }
     raw += comment?.text ?? '';
   }
@@ -117,7 +121,10 @@ function extractComment(comment, owner) {
     return `href="../../${pathname}/${suffix}"`;
   });
 
-  return ensureCommentSafeHTML(raw);
+  if (ensureParagraphs) {
+    return ensureCommentSafeHTML(raw);
+  }
+  return raw;
 }
 
 /**

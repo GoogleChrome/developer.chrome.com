@@ -33,22 +33,32 @@ function declarationToType(declaration) {
     type = new typedocModels.ReflectionType(declaration);
   }
   const out = buildRenderType(type, undefined, declaration);
-  updateCommonReflectionType(out, declaration);
+  updateWithComment(out, declaration.comment, declaration);
+
+  if (declaration.flags.hasFlag(typedoc.ReflectionFlag.Optional)) {
+    out.optional = true;
+  }
   return out;
 }
 
 /**
  * @param {RenderType} renderType
- * @param {typedocModels.DeclarationReflection} declaration
+ * @param {typedocModels.Comment|undefined} commentModel
+ * @param {typedocModels.DeclarationReflection} owner
  */
-function updateCommonReflectionType(renderType, declaration) {
-  const comment = extractComment(declaration.comment, declaration);
+function updateWithComment(renderType, commentModel, owner) {
+  if (commentModel === undefined) {
+    return;
+  }
+  const comment = extractComment(commentModel, owner);
   if (comment) {
     renderType.comment = comment;
   }
-  if (declaration.flags.hasFlag(typedoc.ReflectionFlag.Optional)) {
-    renderType.optional = true;
+  const deprecatedTag = commentModel.getTag('deprecated');
+  if (deprecatedTag) {
+    renderType.deprecated = extractComment(deprecatedTag.text, owner, false);
   }
+  // TODO(samthor): When "@since Chrome xx" is available, parse this here.
 }
 
 /**
@@ -95,7 +105,11 @@ function internalBuildDeclarationRenderType(reflectionType) {
     type: objectLikeType,
     properties,
   };
-  updateCommonReflectionType(out, declaration);
+  updateWithComment(out, declaration.comment, declaration);
+
+  if (declaration.flags.hasFlag(typedoc.ReflectionFlag.Optional)) {
+    out.optional = true;
+  }
 
   // Look for templated types <T>. This doesn't handle extends or anything.
   if (declaration.typeParameters?.length) {
@@ -193,14 +207,12 @@ function internalBuildFunctionRenderType(raw) {
     }
     const rt = buildRenderType(reflection.type, undefined, raw);
     rt.optional = rt.optional || !requiredParameterNames.has(reflection.name);
-
-    // TODO(samthor): We don't include default values.
-    const comment = extractComment(reflection.comment, reflection);
-    if (comment) {
-      rt.comment = comment;
-    }
     rt.name = reflection.name;
 
+    updateWithComment(rt, reflection.comment, raw);
+
+    // TODO(samthor): We don't include default values, although Chrome doesn't seem
+    // to have any internally.
     return rt;
   });
 
@@ -209,11 +221,7 @@ function internalBuildFunctionRenderType(raw) {
     type: 'function',
     parameters,
   };
-
-  const comment = extractComment(bestSignature.comment, raw);
-  if (comment) {
-    out.comment = comment;
-  }
+  updateWithComment(out, bestSignature.comment, raw);
 
   // Set the returnType property of RenderType if valid and not void.
   if (sourceReturnType) {
