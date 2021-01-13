@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Timer throttling
+title: Heavy throttling of chained JS timers beginning in Chrome 88
 authors:
   - jakearchibald
 description: >
