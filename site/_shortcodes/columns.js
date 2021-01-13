@@ -33,4 +33,8 @@ ${content}
 </div>`;
 };
 
-module.exports = {columns};
+const column = content => {
+  return `<div class="columns__column">${content}</div>`;
+};
+
+module.exports = {columns, column};

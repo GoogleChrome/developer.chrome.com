@@ -1,0 +1,20 @@
+.float-left {
+  @include media-query('lg') {
+    float: left;
+    margin-right: get-size(600) !important;
+  }
+}
+
+.float-right {
+  @include media-query('lg') {
+    float: right;
+    margin-left: get-size(600) !important;
+  }
+}
+
+.float-left,
+.float-right {
+  @include media-query('lg') {
+    max-width: calc((100% - #{get-size(600)}) / 2);
+  }
+}

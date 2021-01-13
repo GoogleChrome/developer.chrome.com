@@ -11,6 +11,9 @@
   "amp": {
     "title": "i18n.tags.amp"
   },
+  "chromium-chronicle": {
+    "title": "i18n.tags.chromium-chronicle"
+  },
   "devices": {
     "title": "i18n.tags.devices"
   },
