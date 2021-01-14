@@ -89,7 +89,11 @@ include the following characters:
 - \_ (underscore)
 - @
 
-<div class="aside aside--note"><b>Note:</b> Don't define names that begin with "@@". Those names are reserved for <a href="i18n#overview-predefined">predefined messages</a>.</div>
+!!!.aside.aside--note
+
+**Note:** Don't define names that begin with "@@". Those names are reserved for [predefined messages][7].
+
+!!!
 
 Here are three examples of names, taken from the [Example][8] section:
 
@@ -109,11 +113,11 @@ For more examples of using names, see the [Internationalization][1] page.
 
 ### message {: #message }
 
-The translated message, in the form of a string that can contain [placeholders][10]. Use
+The translated message, in the form of a string that can contain [placeholders][5]. Use
 `$_placeholder_name_$` (case insensitive) to refer to a particular placeholder. For example, you can
 refer to a placeholder named "our_site" as `$our_site$`, `$OUR_SITE$`, or `$oUR_sITe$`.
 
-Here are three examples of messages, taken from the [Example][11] section:
+Here are three examples of messages, taken from the [Example][8] section:
 
 ```json
 "message": "What's your name?"
@@ -142,14 +146,14 @@ the first three substitution strings passed into `getMessage()`:
 Despite that example, we recommend that you stick to using placeholders instead of `$_n_` strings
 within your messages. Think of placeholders as good variable names. A week after you write your
 code, you'll probably forget what `$1` refers to, but you'll know what your placeholders refer to.
-For more information on placeholders and substitution strings, see the [placeholders][13] section.
+For more information on placeholders and substitution strings, see the [placeholders][5] section.
 
 ### description {: #description }
 
 _Optional._ A description of the message, intended to give context or details to help the translator
 make the best possible translation.
 
-Here are three examples of descriptions, taken from the [Example][14] section:
+Here are three examples of descriptions, taken from the [Example][8] section:
 
 ```json
 "description": "Ask for the user's name"
@@ -169,10 +173,10 @@ might want to use a placeholder:
 - To refer to a substitution string passed into `getMessage()`. Example: `$1`.
 
 Each placeholder has a name, a "content" item, and an optional "example" item. A placeholder's name
-is case-insensitive and can contain the same characters as a [message name][15].
+is case-insensitive and can contain the same characters as a [message name][2].
 
 The "content" item's value is a string that can refer to substitution strings, which are specified
-using the [i18n.getMessage][16] method's _substitutions_ parameter. The value of a "content" item is
+using the [i18n.getMessage][12] method's _substitutions_ parameter. The value of a "content" item is
 typically something like "Example.com" or "\$1". If you refer to a substitution string that doesn't
 exist, you get an empty string. The following table shows how `$_n_` strings correspond to strings
 specified by the _substitutions_ parameter.
@@ -183,7 +187,7 @@ The "example" item (optional, but highly recommended) helps translators by showi
 appears to the end user. For example, a placeholder for a dollar amount should have an example like
 `"$23.45"`.
 
-The following snippet, taken from the [Example][17] section, shows a "placeholders" item that
+The following snippet, taken from the [Example][8] section, shows a "placeholders" item that
 contains two placeholders named "our_site" and "user". The "our_site" placeholder has no "example"
 item because its value is obvious from the "content" field.
 
@@ -206,11 +210,4 @@ item because its value is obvious from the "content" field.
 [5]: #placeholders
 [7]: /docs/extensions/reference/i18n#overview-predefined
 [8]: #example
-[10]: #placeholders
-[11]: #example
 [12]: /docs/extensions/reference/i18n#method-getMessage
-[13]: #placeholders
-[14]: #example
-[15]: #name
-[16]: /docs/extensions/reference/i18n#method-getMessage
-[17]: #example

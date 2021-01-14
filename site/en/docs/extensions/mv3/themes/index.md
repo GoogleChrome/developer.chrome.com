@@ -87,9 +87,9 @@ Tints are in Hue-Saturation-Lightness (HSL) format, using floating-point numbers
 
 You can alternatively use `-1.0` for any of the HSL values to specify _no change_.
 
-[1]: /docs/extensions/packaging
+[1]: /docs/extensions/mv3/linux_hosting/#packaging
 [2]: https://chrome.google.com/webstore/category/themes
-[3]: /docs/extensions/mv3/tabs
+[3]: /docs/extensions/reference/tabs
 [4]: https://cs.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kOverwritableColorTable
 [5]: https://cs.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kPersistingImages$
 [6]: https://cs.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kDisplayProperties$
