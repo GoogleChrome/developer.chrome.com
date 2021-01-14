@@ -67,7 +67,7 @@ Including optional permissions allows an extension to explain why it needs a par
 when the user enables the relevant feature. The extension can offer the user an option to enable
 features.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5hIYQFOiYTl4EwyaYMLx.png", 
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5hIYQFOiYTl4EwyaYMLx.png",
        alt="A screenshot of a popup asking to enable permissions", height="248", width="258" %}
 
 Clicking **Okay!** will trigger the following event in the background script.
@@ -111,6 +111,6 @@ side of an extension as extension storage is not encrypted.
 [1]: /docs/webstore/program_policies#userdata
 [2]: /docs/extensions/mv3/manifest
 [3]: #optional_permissions
-[4]: /docs/extensions/reference/activeTab
+[4]: /docs/extensions/mv3/manifest/activeTab
 [5]: /docs/extensions/reference/permissions#manifest
 [6]: /webstore/user_data
