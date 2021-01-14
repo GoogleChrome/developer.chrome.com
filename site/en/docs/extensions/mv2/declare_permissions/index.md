@@ -49,7 +49,7 @@ The following table lists the currently available permissions:
     <tr id="background">
       <td><code>"background"</code></td>
       <td>
-        <p id="bg">Makes Chrome start up early and and shut down late, so that apps and extensions can have a longer
+        <p id="bg">Makes Chrome start up early and shut down late, so that apps and extensions can have a longer
           life.</p>
         <p>When any installed hosted app, packaged app, or extension has "background" permission, Chrome runs
           (invisibly) as soon as the user logs into their computer—before the user launches Chrome. The "background"
