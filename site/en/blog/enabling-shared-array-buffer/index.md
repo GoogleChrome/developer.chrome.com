@@ -1,27 +1,34 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Enabling Shared Array Buffer
+title: SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 91
 authors:
   - jakearchibald
 description: >
-  Browsers are imposing new requirements on SharedArrayBuffer usage. Learn how to enable it cross-browser and cross-platform.
+  SharedArrayBuffer will arrive in Android Chrome 88. It will only be available
+  to pages that are cross-origin isolated. Starting in Desktop Chrome 91 it will
+  also only be available to cross-origin isolated pages. You can register for an
+  origin trial to retain the current behavior until Desktop Chrome 93.
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
 date: 2021-01-11
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/VwqAOKnWHDx3nJegh94L.jpg
-alt: Iframes, images, and windows being accessed by someone 'evil'
+alt: Images, iframes, and windows being accessed by someone 'evil'.
 ---
 
-It's fair to say `SharedArrayBuffer` has had a bit of a rough landing on the
+It's fair to say [`SharedArrayBuffer`][mdn] has had a bit of a rough landing on the
 web, but things are settling down. Here's what you need to know:
 
 ## In brief
 
-- `SharedArrayBuffer` is supported in Firefox 79+, and will arrive in Android
-  Chrome 88. However, it's only available to page that are 'cross-origin
-  isolated' (details below).
-- `SharedArrayBuffer` is currently available in desktop Chrome, but from Chrome
-  91 it will be limited to cross-origin isolated pages.
+- `SharedArrayBuffer` is currently supported in Firefox 79+, and will arrive in Android
+  Chrome 88. However, it's only available to pages that are [cross-origin
+  isolated](#cross-origin-isolation).
+- `SharedArrayBuffer` is currently available in Desktop Chrome, but from Chrome
+  91 it will be limited to cross-origin isolated pages. If you don't think you
+  can make this change in time, you can [register for an origin trial](#origin-trial) to retain
+  the current behavior until Chrome 93.
+
+## Cross-origin isolation overview {: #cross-origin-isolation }
 
 You can make a page _cross-origin isolated_ by serving the page with these
 headers:
@@ -32,35 +39,31 @@ Cross-Origin-Opener-Policy: same-origin
 ```
 
 Once you do this, your page will not be able to load cross-origin content unless
-the [`Cross-Origin-Resource-Policy`
-header](<https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)
-allows it, or via the existing
-[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) dance that you
-know and love (`Access-Control-Allow-*` headers and so forth).
+you allow it via your [`Cross-Origin-Resource-Policy`][corp] header or
+[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) headers
+(`Access-Control-Allow-*` and so forth).
 
 There's also a [reporting
 API](https://web.dev/coop-coep/#observe-issues-using-the-reporting-api), so you
 can gather data on requests that failed as a result of
-Cross-Origin-Embedder-Policy and Cross-Origin-Opener-Policy.
+`Cross-Origin-Embedder-Policy` and `Cross-Origin-Opener-Policy`.
 
 If you don't think you can make these changes in time for Chrome 91, you can
-[register for an origin trial](#register-for-ot) to retain current desktop
+[register for an origin trial](#origin-trial) to retain current Desktop
 Chrome behavior until Chrome 93.
 
-More info on:
+Check out the [Further reading](#resources) section at the bottom of this page
+for more guidance and information on cross-origin isolation.
 
-- [How to cross-origin isolate your pages](https://web.dev/coop-coep/).
-- [Why cross-origin isolation is needed](https://web.dev/why-coop-coep/).
-
-## How did we get here?
+## How did we get here? {: #history }
 
 `SharedArrayBuffer` arrived in Chrome 60 (that's July 2017, for those of you who
 think of time in dates rather than Chrome versions), and everything was great.
 For 6 months.
 
-In January 2018 a vulnerability was revealed in some popular CPUs. [See the
-announcement](https://googleprojectzero.blogspot.com/2018/01/reading-privileged-memory-with-side.html)
-for full details, but it essentially meant that code could use high resolution
+In January 2018 a vulnerability was revealed in some popular CPUs. See the
+[announcement](https://googleprojectzero.blogspot.com/2018/01/reading-privileged-memory-with-side.html)
+for full details, but it essentially meant that code could use high-resolution
 timers to read memory that it shouldn't have access to.
 
 This was a problem for us browser vendors, as we want to allow sites to execute
@@ -70,15 +73,15 @@ anything from the internet banking site you also have open. In fact, I shouldn't
 even know you have your internet banking site open. These are fundamentals of
 web security.
 
-To mitigate this, we reduced the resolution of our high resolution timers such
-as `performance.now()`. However, you can _create_ a high resolution timer using
+To mitigate this, we reduced the resolution of our high-resolution timers such
+as `performance.now()`. However, you can _create_ a high-resolution timer using
 `SharedArrayBuffer` by modifying memory in a tight loop in a worker, and reading
 it back in another thread. This couldn't be effectively mitigated without
 heavily impacting well-intentioned code, so `SharedArrayBuffer` was disabled
 altogether.
 
 A general mitigation is to ensure a webpage's system process doesn't contain
-sensitive data from elsewhere. Chrome had invested in a multiprocess
+sensitive data from elsewhere. Chrome had invested in a multi-process
 architecture from the start ([remember the
 comic?](https://www.google.com/googlebooks/chrome/big_00.html)), but there were
 still cases where data from multiple sites could end up in the same process:
@@ -132,24 +135,27 @@ Android for pages that are cross-origin isolated, and Chrome 91 brings the same
 requirements to desktop, both for consistency, and to achieve total cross-origin
 isolation.
 
-## Delaying the desktop Chrome change {: #register-for-ot }
+## Delaying the Desktop Chrome change {: #origin-trial }
 
 This is a temporary exception in the form of an 'origin trial' that gives folks
 more time to implement cross-origin isolated pages. It enables
 `SharedArrayBuffer` without requiring the page to be cross-origin isolated. The
-exception expires in Chrome 93, and the exception only applies to desktop
+exception expires in Chrome 93, and the exception only applies to Desktop
 Chrome.
 
 1. [Request a token]({{origin_trial.url}}) for your origin.
 2. Add the token to your pages. There are two ways to do that:
-   - Add an `origin-trial` `<meta>` tag to the head of each page. For example,
-     this may look something like: <br> `<meta http-equiv="origin-trial"
-     content="TOKEN_GOES_HERE">`
+   - Add a `<meta>` tag to the head of each page. For example,
+     this may look something like: `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
    - If you can configure your server, you can also add the token using an
      `Origin-Trial` HTTP header. The resulting response header should look
-     something like:<br> `Origin-Trial: TOKEN_GOES_HERE`
+     something like: `Origin-Trial: TOKEN_GOES_HERE`
 
-## Further reading
+## Further reading {: #resources }
 
-- [How to cross-origin isolate your pages](https://web.dev/coop-coep/).
-- [Why cross-origin isolation is needed](https://web.dev/why-coop-coep/).
+- [How to cross-origin isolate your pages](https://web.dev/coop-coep/)
+- [Why cross-origin isolation is needed](https://web.dev/why-coop-coep/)
+
+[mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+[compat]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#browser_compatibility
+[corp]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)
