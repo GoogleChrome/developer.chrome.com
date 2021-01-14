@@ -44,7 +44,7 @@ Next, add a file called `manifest.json` and include the following code:
 
 Every extension requires a manifest, though most extensions will not do much with just the manifest.
 For this quick start, the extension has a popup file and icon declared under the
-[`browser_action`][8] field:
+[`action`][8] field:
 
 ```json/5-8
 {
@@ -52,7 +52,7 @@ For this quick start, the extension has a popup file and icon declared under the
   "description" : "Base Level Extension",
   "version": "1.0",
   "manifest_version": 3,
-  "browser_action": {
+  "action": {
     "default_popup": "hello.html",
     "default_icon": "hello_extensions.png"
   }
@@ -79,12 +79,12 @@ necessary:
   "description" : "Base Level Extension",
   "version": "1.0",
   "manifest_version": 3,
-  "browser_action": {
+  "action": {
     "default_popup": "hello.html",
     "default_icon": "hello_extensions.png"
   },
   "commands": {
-    "_execute_browser_action": {
+    "_execute_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+F",
         "mac": "MacCtrl+Shift+F"
@@ -123,11 +123,11 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 [2]: /docs/extensions/mv3/samples#google-mail-checker
 [3]: /docs/extensions/mv3/override
 [4]: https://chrome.google.com/webstore/developer/dashboard
-[5]: http://chrome.google.com/webstore
-[6]: http://code.google.com/chrome/webstore
+[5]: https://chrome.google.com/webstore
+[6]: /docs/webstore
 [7]: /docs/extensions/mv3/samples#search:hello
-[8]: /docs/extensions/browserAction
-[9]: /static/images/index/hello_extensions.png
+[8]: /docs/extensions/reference/action
+[9]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
 [10]: /docs/extensions/mv3/getstarted
 [11]: /docs/extensions/mv3/overview
 [12]: http://blog.chromium.org/

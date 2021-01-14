@@ -125,11 +125,11 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 [2]: /docs/extensions/mv2/samples#google-mail-checker
 [3]: /docs/extensions/mv2/override
 [4]: https://chrome.google.com/webstore/developer/dashboard
-[5]: http://chrome.google.com/webstore
-[6]: http://code.google.com/chrome/webstore
+[5]: https://chrome.google.com/webstore
+[6]: /docs/webstore
 [7]: /docs/extensions/mv2/samples#search:hello
-[8]: /docs/extensions/browserAction
-[9]: /static/images/index/hello_extensions.png
+[8]: /docs/extensions/reference/browserAction
+[9]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
 [10]: /docs/extensions/mv2/getstarted
 [11]: /docs/extensions/mv2/overview
 [12]: http://blog.chromium.org/
