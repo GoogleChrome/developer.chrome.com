@@ -304,7 +304,7 @@ If you just want to write your app, see the developer doc for the type of app yo
 [3]: /docs/apps/about_apps
 [4]: /docs/extensions/mv2/getstarted
 [5]: /docs/apps/first_app
-[6]: #step5
+[6]: #step-5-zip-up-your-app
 [7]: https://chrome.google.com/webstore/developer/dashboard
 [8]: http://www.blogger.com
 [9]: http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592
