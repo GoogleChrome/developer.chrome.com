@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
+const {defaultLocale} = require('../_data/site.json');
+const supportedTags = require('../_data/supportedTags.json');
+const {i18n} = require('../_filters/i18n');
+
 /**
  * Returns an array of `FeedsCollectionItem` to generate the RSS feeds.
  *
@@ -23,21 +27,34 @@
 module.exports = collection => {
   /** @type FeedsCollection */
   const feeds = {};
-  const tags = ['devtools'];
+  const tags = Object.keys(supportedTags);
 
   for (const tag of tags) {
-    const items = collection.getFilteredByTag(tag).reverse();
+    const items = collection
+      .getFilteredByTag(tag)
+      .reverse()
+      .filter(i => i.data.locale === defaultLocale);
+
     if (items.length) {
       feeds[tag] = {
-        permalink: `/feeds/${tag}.xml`,
         items,
+        permalink: `/feeds/${tag}.xml`,
+        title: i18n(`i18n.tags.${tag}`),
+        url: `/tags/${tag}`,
       };
     }
   }
 
-  const allItems = collection.getAllSorted().reverse();
+  const allItems = collection
+    .getAllSorted()
+    .reverse()
+    .filter(i => i.data.locale === defaultLocale);
+
   if (allItems.length) {
-    feeds['all'] = {permalink: '/feeds/all.xml', items: allItems};
+    feeds['all'] = {
+      items: allItems,
+      permalink: '/feeds/all.xml',
+    };
   }
 
   return feeds;

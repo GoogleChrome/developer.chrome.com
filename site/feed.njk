@@ -9,23 +9,21 @@ pagination:
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
+  {% set absoluteFeedUrl %}{{ site.url }}{% if feed.url %}{{ feed.url | url }}{% endif  %}{% endset %}
   <title>{{ feed.title or site.title }}</title>
-  <subtitle>{{ feed.description or site.summary }}</subtitle>
-  <link href="{{ site.url }}{{ feed.permalink }}" rel="self" />
-  <link href="{{ site.url }}/" />
+  <subtitle>{{ feed.description or site.description }}</subtitle>
+  <link href="{{ absoluteFeedUrl }}" rel="self"/>
+  <link>{{ site.url }}{{ feed.permalink | url }}</link>
   <updated>{{ feed.items | rssLastUpdatedDate }}</updated>
-  <id>{{ site.url }}</id>
-  <author>
-    <name>{{ site.title }}</name>
-  </author>
+  <id>{{ absoluteFeedUrl }}</id>
   {% for item in feed.items %}
   {% set absolutePostUrl %}{{ site.url }}{{ item.url | url }}{% endset %}
   <entry>
     <title>{{ item.data.title }}</title>
-    <link href="{{ absolutePostUrl }}" />
+    <link>{{ absolutePostUrl }}</link>
     <updated>{{ item.date | rssDate }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ item.templateContent }}</content>
+    <content type="html">{{ item.templateContent | trimHtml | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {% endfor %}
 </feed>

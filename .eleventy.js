@@ -14,6 +14,7 @@ const {minifyJs} = require('./site/_filters/minify-js');
 const {updateSvgForInclude} = require('./site/_filters/svg');
 const {slugify} = require('./site/_filters/slugify');
 const {toc} = require('./site/_filters/toc');
+const {trimHtml} = require('./site/_filters/trim-html');
 
 // Shortcodes
 const {iframe} = require('./site/_shortcodes/iframe');
@@ -98,6 +99,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
+  eleventyConfig.addFilter('trimHtml', trimHtml);
 
   // Add shortcodes
   eleventyConfig.addShortcode('iframe', iframe);

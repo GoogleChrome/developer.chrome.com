@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2021 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,18 +14,16 @@
  * limitations under the License.
  */
 
-declare global {
-  export interface FeedsCollection {
-    [key: string]: FeedsCollectionItem;
-  }
-  export interface FeedsCollectionItem {
-    description?: string;
-    items: EleventyCollectionItem[];
-    permalink: string;
-    title?: string;
-    url?: string;
-  }
-}
+const clipper = require('text-clipper').default;
 
-// empty export to keep file a module
-export {};
+/**
+ * Trims HTML string to 280 characters.
+ *
+ * @param {string} html HTML to trim.
+ * @return {string} Trimmed HTML.
+ */
+const trimHtml = html => {
+  return clipper(html, 280, {html: true});
+};
+
+module.exports = {trimHtml};
