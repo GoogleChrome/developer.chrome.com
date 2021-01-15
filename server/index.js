@@ -20,6 +20,7 @@ const express = require('express');
 const compression = require('compression');
 const {notFoundHandler} = require('./not-found');
 const {buildRedirectHandler} = require('./redirect');
+const {buildUniqueRedirectHandler} = require('./unique-redirect');
 const pluralDomainRedirectHandler = require('./plural-domain');
 
 const app = express();
@@ -29,6 +30,7 @@ const app = express();
 const staticPaths = ['dist', 'dist/en'];
 
 const redirectHandler = buildRedirectHandler('redirects.yaml', staticPaths);
+const uniqueRedirectHandler = buildUniqueRedirectHandler(staticPaths);
 
 // If we see content from /fonts/, then cache it forever.
 // If this ends up 404'ing, we invalidate the Cache-Control header in notFoundHandler.
@@ -45,6 +47,7 @@ const handlers = [
   immutableRootHandler,
   ...staticPaths.map(staticPath => express.static(staticPath)),
   redirectHandler,
+  uniqueRedirectHandler,
   notFoundHandler,
 ];
 
