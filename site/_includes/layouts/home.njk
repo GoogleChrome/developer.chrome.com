@@ -10,6 +10,7 @@
 
     {{ heroCard() }}
     <div class="masonry-grid gap-top-500">
+      hello
       {% include 'partials/featured-cds-card.njk' %}
       {% set blog = 'blog-' + locale %}
       {{ featuredPostCard(collections[blog][0]) }}
