@@ -253,7 +253,7 @@ function sanitizeInput(input) {
 
 [1]: https://support.google.com/accounts/answer/185839?hl=en
 [2]: https://support.google.com/accounts/answer/6103523
-[3]: /publish#set-up-group-publishing
+[3]: /docs/webstore/group-publishers
 [4]: https://www.owasp.org/index.php/Man-in-the-middle_attack
 [5]: /docs/extensions/mv3/manifest
 [6]: /docs/extensions/mv3/xhr

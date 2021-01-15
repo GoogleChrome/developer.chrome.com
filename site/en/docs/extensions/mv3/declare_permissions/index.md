@@ -322,8 +322,8 @@ The following table lists the currently available permissions:
     <tr id="tabs">
       <td><code>"tabs"</code></td>
       <td>Gives your extension access to privileged fields of the <a
-          href="https://developer.chrome.com/extensions/tabs#type-Tab"><code>Tab</code></a> objects used by several APIs
-        including <a href="/extensions/tabs">chrome.tabs</a> and <a href="/extensions/windows">chrome.windows</a>. In
+          href="/docs/extensions/reference/tabs#type-Tab"><code>Tab</code></a> objects used by several APIs
+        including <a href="/docs/extensions/reference/tabs">chrome.tabs</a> and <a href="/docs/extensions/reference/windows">chrome.windows</a>. In
         many circumstances your extension will not need to declare the <code>"tabs"</code> permission to make use of
         these APIs.</td>
     </tr>
