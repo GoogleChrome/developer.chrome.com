@@ -23,7 +23,7 @@ pagination:
     <link>{{ absolutePostUrl }}</link>
     <updated>{{ item.date | rssDate }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ item.templateContent | trimHtml | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+    <content type="html">{{ item.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {% endfor %}
 </feed>

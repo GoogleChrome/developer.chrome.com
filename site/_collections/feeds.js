@@ -15,7 +15,6 @@
  */
 
 const {defaultLocale} = require('../_data/site.json');
-const supportedTags = require('../_data/supportedTags.json');
 const {i18n} = require('../_filters/i18n');
 
 /**
@@ -25,34 +24,54 @@ const {i18n} = require('../_filters/i18n');
  * @returns {FeedsCollection} Key value pair of tag name with `FeedsCollectionItem`.
  */
 module.exports = collection => {
-  /** @type FeedsCollection */
-  const feeds = {};
-  const tags = Object.keys(supportedTags);
-
-  for (const tag of tags) {
-    const items = collection
-      .getFilteredByTag(tag)
-      .reverse()
-      .filter(i => i.data.locale === defaultLocale);
-
-    if (items.length) {
-      feeds[tag] = {
-        items,
-        permalink: `/feeds/${tag}.xml`,
-        title: i18n(`i18n.tags.${tag}`),
-        url: `/tags/${tag}`,
-      };
-    }
-  }
-
-  const allItems = collection
+  const MAX_POSTS = 10;
+  const posts = collection
     .getAllSorted()
     .reverse()
     .filter(i => i.data.locale === defaultLocale);
+  const tags = ['devtools'];
+  /** @type FeedsCollection */
+  const feeds = {};
+  const blog = [];
 
-  if (allItems.length) {
+  for (const post of posts) {
+    // If post is a blog post, push it into blog array.
+    if (post.data.type === 'blogPost' && blog.length < MAX_POSTS) {
+      blog.push(post);
+    }
+
+    // Check if post belongs to suuported tags
+    for (const tag of tags) {
+      if (post.data.tags && post.data.tags.includes(tag)) {
+        // If tag does not exist in feeds yet, create FeedsCollectionItem
+        if (!feeds[tag]) {
+          feeds[tag] = {
+            items: [],
+            permalink: `/feeds/${tag}.xml`,
+            title: i18n(`i18n.tags.${tag}`),
+            url: `/tags/${tag}`,
+          };
+        }
+
+        if (feeds[tag].items.length < MAX_POSTS) {
+          feeds[tag].items.push(post);
+        }
+      }
+    }
+  }
+
+  if (blog.length) {
+    feeds['blog'] = {
+      items: blog,
+      permalink: '/feeds/blog.xml',
+      title: i18n('i18n.common.blog'),
+      url: '/blog',
+    };
+  }
+
+  if (posts.length) {
     feeds['all'] = {
-      items: allItems,
+      items: posts.slice(0, MAX_POSTS),
       permalink: '/feeds/all.xml',
     };
   }
