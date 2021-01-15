@@ -78,7 +78,7 @@ shows the previous extension with a new Spanish translation.
 
 ![This looks the same as the previous figure, but with a new file at _locales/es/messages.json that contains a Spanish translation of the messages.](i18n-after-2.gif)
 
-## Predefined messages
+## Predefined messages {: #overview-predefined }
 
 The internationalization system provides a few predefined messages to help you localize. These
 include `@@ui_locale`, so you can detect the current UI locale, and a few `@@bidi_...` messages that

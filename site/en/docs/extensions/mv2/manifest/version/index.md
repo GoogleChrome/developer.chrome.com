@@ -24,7 +24,7 @@ the extension is automatically updated.
 The comparison starts with the leftmost integers. If those integers are equal, the integers to the
 right are compared, and so on. For example, 1.2.0 is a newer version than 1.1.9.9999.
 
-A missing integer is equal to zero. For example, 1.1.9.9999 is newer than 1.1, and 1.1.9.9999 is
+A missing integer is equal to zero. For example, 1.1.9.9999 is newer than 1.1 and 1.1.9.9999 is
 older than 1.2.
 
 For more information, see [Autoupdating][1].
