@@ -42,7 +42,16 @@ module.exports = collection => {
 
     // Check if post belongs to suuported tags
     for (const tag of tags) {
-      if (post.data.tags && post.data.tags.includes(tag)) {
+      let postTags = [];
+
+      if (Array.isArray(post.data.tags)) {
+        postTags = post.data.tags;
+        // If tags is a string, turn it into an array.
+      } else if (typeof post.data.tags === 'string') {
+        postTags.push(post.data.tags);
+      }
+
+      if (postTags.includes(tag)) {
         // If tag does not exist in feeds yet, create FeedsCollectionItem
         if (!feeds[tag]) {
           feeds[tag] = {
