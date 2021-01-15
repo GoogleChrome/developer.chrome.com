@@ -336,13 +336,12 @@ native app. For more examples and for help in viewing the source code, see [Samp
 [31]: /docs/extensions/reference/runtime#event-onMessageExternal
 [32]: /docs/extensions/reference/runtime#event-onConnectExternal
 [33]: #external
-[34]: /docs/extensions/reference/nativeMessaging#native-messaging-client
-[35]: /docs/extensions/reference/nativeMessaging#native-messaging-host
-[36]: /docs/extensions/reference/nativeMessaging
+[34]: /docs/apps/nativeMessaging/#native-messaging-client
+[35]: /docs/apps/nativeMessaging/#native-messaging-host
+[36]: /docs/apps/nativeMessaging/
 [37]: /docs/extensions/mv3/security#content_scripts
 [38]: /docs/extensions/mv3/security#sanitize
 [39]: https://en.wikipedia.org/wiki/Cross-site_scripting
-[40]:
-  https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/messaging/
-[41]: /docs/extensions/reference/nativeMessaging#examples
+[40]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/messaging
+[41]: /docs/apps/nativeMessaging/#examples
 [42]: /docs/extensions/mv3/samples

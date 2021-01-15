@@ -152,14 +152,14 @@ They can include JavaScript files, CSS files or both. All auto-run content scrip
 }
 ```
 
-<table class="simple"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr id="matches"><td><code>matches</code></td><td>array of strings</td><td><em>Required.</em> Specifies which pages this content script will be injected into. See <a href="match_patterns">Match Patterns</a> for more details on the syntax of these strings and <a href="#matchAndGlob">Match patterns and globs</a> for information on how to exclude URLs.</td></tr><tr id="css"><td><code>css<code></code></code></td><td>array of strings</td><td><em>Optional.</em> The list of CSS files to be injected into matching pages. These are injected in the order they appear in this array, before any DOM is constructed or displayed for the page.</td></tr><tr id="js"><td><code>js<code></code></code></td><td><nobr>array of strings</nobr></td><td><em>Optional.</em> The list of JavaScript files to be injected into matching pages. These are injected in the order they appear in this array.</td></tr><tr id="match_about_blank"><td><code>match_about_blank</code></td><td>boolean</td><td><em>Optional.</em> Whether the script should inject into an <code>about:blank</code> frame where the parent or opener frame matches one of the patterns declared in <code>matches</code>. Defaults to false.</td></tr></tbody></table>
+<table class="simple"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr id="matches"><td><code>matches</code></td><td>array of strings</td><td><em>Required.</em> Specifies which pages this content script will be injected into. See <a href="/docs/extensions/mv3/match_patterns/">Match Patterns</a> for more details on the syntax of these strings and <a href="#matchAndGlob">Match patterns and globs</a> for information on how to exclude URLs.</td></tr><tr id="css"><td><code>css<code></code></code></td><td>array of strings</td><td><em>Optional.</em> The list of CSS files to be injected into matching pages. These are injected in the order they appear in this array, before any DOM is constructed or displayed for the page.</td></tr><tr id="js"><td><code>js<code></code></code></td><td><nobr>array of strings</nobr></td><td><em>Optional.</em> The list of JavaScript files to be injected into matching pages. These are injected in the order they appear in this array.</td></tr><tr id="match_about_blank"><td><code>match_about_blank</code></td><td>boolean</td><td><em>Optional.</em> Whether the script should inject into an <code>about:blank</code> frame where the parent or opener frame matches one of the patterns declared in <code>matches</code>. Defaults to false.</td></tr></tbody></table>
 
 #### Exclude matches and globs {: #matchAndGlob }
 
 Specified page matching is customizable by including the following fields in the manifest
 registration.
 
-<table class="simple"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr id="exclude_matches"><td><code>exclude_matches</code></td><td>array of strings</td><td><em>Optional.</em> Excludes pages that this content script would otherwise be injected into. See <a href="match_patterns">Match Patterns</a> for more details on the syntax of these strings.</td></tr><tr id="include_globs"><td><code>include_globs</code></td><td>array of strings</td><td><em>Optional.</em> Applied after <code>matches</code> to include only those URLs that also match this glob. Intended to emulate the <a href="http://wiki.greasespot.net/Metadata_Block#.40include"><code>@include</code> </a>Greasemonkey keyword.</td></tr><tr id="exclude_globs"><td><code>exclude_globs</code></td><td>array of string</td><td><em>Optional.</em> Applied after <code>matches</code> to exclude URLs that match this glob. Intended to emulate the <a href="http://wiki.greasespot.net/Metadata_Block#.40include"><code>@exclude</code> </a>Greasemonkey keyword.</td></tr></tbody></table>
+<table class="simple"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr id="exclude_matches"><td><code>exclude_matches</code></td><td>array of strings</td><td><em>Optional.</em> Excludes pages that this content script would otherwise be injected into. See <a href="/docs/extensions/mv3/match_patterns/">Match Patterns</a> for more details on the syntax of these strings.</td></tr><tr id="include_globs"><td><code>include_globs</code></td><td>array of strings</td><td><em>Optional.</em> Applied after <code>matches</code> to include only those URLs that also match this glob. Intended to emulate the <a href="http://wiki.greasespot.net/Metadata_Block#.40include"><code>@include</code> </a>Greasemonkey keyword.</td></tr><tr id="exclude_globs"><td><code>exclude_globs</code></td><td>array of string</td><td><em>Optional.</em> Applied after <code>matches</code> to exclude URLs that match this glob. Intended to emulate the <a href="http://wiki.greasespot.net/Metadata_Block#.40include"><code>@exclude</code> </a>Greasemonkey keyword.</td></tr></tbody></table>
 
 The content script will be injected into a page if its URL matches any `matches` pattern and any
 `include_globs` pattern, as long as the URL doesn't also match an `exclude_matches` or
@@ -380,20 +380,20 @@ window.setTimeout(function() {
 
 [1]: http://www.w3.org/TR/DOM-Level-2-HTML/
 [2]: /docs/extensions/mv3/messaging
-[3]: /docs/extensions/i18n
-[4]: /docs/extensions/storage
-[5]: /docs/extensions/runtime
-[6]: /docs/extensions/runtime#method-connect
-[7]: /docs/extensions/runtime#method-getManifest
-[8]: /docs/extensions/runtime#method-getURL
-[9]: /docs/extensions/runtime#property-id
-[10]: /docs/extensions/runtime#event-onConnect
-[11]: /docs/extensions/runtime#event-onMessage
-[12]: /docs/extensions/runtime#method-sendMessage
+[3]: /docs/extensions/reference/i18n
+[4]: /docs/extensions/reference/storage
+[5]: /docs/extensions/reference/runtime
+[6]: /docs/extensions/reference/runtime#method-connect
+[7]: /docs/extensions/reference/runtime#method-getManifest
+[8]: /docs/extensions/reference/runtime#method-getURL
+[9]: /docs/extensions/reference/runtime#property-id
+[10]: /docs/extensions/reference/runtime#event-onConnect
+[11]: /docs/extensions/reference/runtime#event-onMessage
+[12]: /docs/extensions/reference/runtime#method-sendMessage
 [13]: #programmatic
 [14]: /docs/extensions/declaratively
-[15]: /activeTab
-[16]: /tabs#manifest
+[15]: /docs/extensions/mv3/manifest/activeTab/
+[16]: /docs/extensions/reference/tabs#manifest
 [17]: /docs/extensions/mv3/xhr#requesting-permission
 [18]: /docs/extensions/mv3/match_patterns
 [19]: /docs/extensions/mv3/match_patterns

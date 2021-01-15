@@ -74,7 +74,7 @@ chrome.notifications.create(id, options, creationCallback);
 The [notifications.NotificationOptions][4] must include a [notifications.TemplateType][5], which
 defines available notification details and how those details are displayed.
 
-<div class="aside aside--note"><b>Consider integrating with GCM!</b><br><a href="inform_users">Keep your users informed</a> all the time, even when your app isn't opened. The <a href="https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/gcm-notifications">gcm-notifications sample</a> shows a simple integration between GCM and Rich Notifications API.</div>
+<div class="aside aside--note"><b>Consider integrating with GCM!</b><br><a href="inform_users">Keep your users informed</a> all the time, even when your app isn't opened. The <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/apps/samples/gcm-notifications">gcm-notifications sample</a> shows a simple integration between GCM and Rich Notifications API.</div>
 
 ### Create basic notification {: #basic }
 
@@ -172,14 +172,14 @@ Consider including event listeners and handlers within the [event page][12], so 
 can pop-up even when the app or extension isn't running.
 
 [1]: https://developers.google.com/web/updates/2017/04/native-mac-os-notifications
-[2]: /docs/apps/notifications
-[3]: /docs/extensions/notifications#method-create
-[4]: /docs/extensions/notifications#type-NotificationOptions
-[5]: /docs/extensions/notifications#type-TemplateType
+[2]: /docs/extensions/reference/notifications
+[3]: /docs/extensions/reference/notifications#method-create
+[4]: /docs/extensions/reference/notifications#type-NotificationOptions
+[5]: /docs/extensions/reference/notifications#type-TemplateType
 [6]: /docs/extensions/inform_users
-[7]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/gcm-notifications
-[8]: /docs/extensions/mv2/contentSecurityPolicy
-[9]: /docs/extensions/app_external
-[10]: /docs/extensions/events
-[11]: /docs/extensions/notifications#event-onButtonClicked
-[12]: /docs/extensions/app_lifecycle#create_event_page
+[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/apps/samples/gcm-notifications
+[8]: /docs/apps/contentSecurityPolicy/
+[9]: /docs/apps/app_external
+[10]: /docs/extensions/reference/events
+[11]: /docs/extensions/reference/notifications#event-onButtonClicked
+[12]: /docs/apps/app_lifecycle#create_event_page
