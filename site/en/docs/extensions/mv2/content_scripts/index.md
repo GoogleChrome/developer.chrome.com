@@ -391,7 +391,7 @@ window.setTimeout(function() {
 [11]: /docs/extensions/reference/runtime#event-onMessage
 [12]: /docs/extensions/reference/runtime#method-sendMessage
 [13]: #programmatic
-[14]: /docs/extensions/declaratively
+[14]: #declaratively
 [15]: /docs/extensions/mv2/manifest/activeTab
 [16]: /docs/extensions/reference/tabs/#manifest
 [17]: /docs/extensions/mv2/xhr#requesting-permission
