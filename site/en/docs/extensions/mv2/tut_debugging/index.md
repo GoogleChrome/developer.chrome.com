@@ -197,15 +197,15 @@ about [Chrome Devtools][14] by reading the documentation.
 
 [1]: https://developers.google.com/web/tools/chrome-devtools/
 [2]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/KZdyzIighjOsDUPaibEn.zip "broken_background_color.zip"
-[3]: /docs/extensions/runtime#event-onInstalled
-[4]: /docs/extensions/tabs#method-query
+[3]: /docs/extensions/reference/runtime#event-onInstalled
+[4]: /docs/extensions/reference/tabs#method-query
 [5]: /docs/extensions/mv2/override
 [6]: /docs/extensions/mv2/options#full_page
-[7]: /docs/extensions/cookies
-[8]: /docs/extensions/storage
+[7]: /docs/extensions/reference/cookies
+[8]: /docs/extensions/reference/storage
 [9]: /docs/extensions/mv2/xhr
 [10]: /docs/extensions/mv2/permission_warnings
-[11]: /docs/extensions/api_index
-[12]: /docs/extensions/mv2/tabs
+[11]: /docs/extensions/reference
+[12]: /docs/extensions/reference/tabs
 [13]: http://www.youtube.com/watch?v=IP0nMv_NI1s&feature=PlayList&p=CA101D6A85FE9D4B&index=5
 [14]: https://developers.google.com/web/tools/chrome-devtools/

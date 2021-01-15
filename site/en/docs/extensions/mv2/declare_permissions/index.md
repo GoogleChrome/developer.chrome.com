@@ -39,12 +39,12 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="activeTab">
       <td><code>"activeTab"</code></td>
-      <td>Requests that the extension be granted permissions according to the <a href="activeTab">activeTab</a>
+      <td>Requests that the extension be granted permissions according to the <a href="/docs/extensions/mv2/manifest/activeTab">activeTab</a>
         specification.</td>
     </tr>
     <tr id="alarms">
       <td><code>"alarms"</code></td>
-      <td>Gives your extension access to the <a href="alarms">chrome.alarms</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/alarms">chrome.alarms</a> API.</td>
     </tr>
     <tr id="background">
       <td><code>"background"</code></td>
@@ -57,8 +57,8 @@ The following table lists the currently available permissions:
           quits Chrome.</p>
         <div class="aside aside--note"><b>Note:</b> Disabled apps and extensions are treated as if they aren't
           installed.</div>
-        <p>You typically use the "background" permission with a <a href="background_pages">background page</a>, <a
-            href="/docs/extensions/mv2/event_pages">event page</a> or (for hosted apps) a <a
+        <p>You typically use the "background" permission with a <a href="/docs/extensions/mv2/background_pages">background page</a>, <a
+            href="/docs/apps/event_pages">event page</a> or (for hosted apps) a <a
             href="http://developers.google.com/chrome/apps/docs/background.html">background window</a>.</p>
       </td>
     </tr>
@@ -122,6 +122,8 @@ The following table lists the currently available permissions:
       <td><code>"desktopCapture"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/desktopCapture/">chrome.desktopCapture</a> API.</td>
     </tr>
+
+<!-- No corresponding reference entry
     <tr id="displaySource">
       <td><code>"displaySource"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/displaySource/">chrome.displaySource</a> API.</td>
@@ -130,6 +132,8 @@ The following table lists the currently available permissions:
       <td><code>"dns"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/dns/">chrome.dns</a> API.</td>
     </tr>
+-->
+
     <tr id="documentScan">
       <td><code>"documentScan"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/documentScan/">chrome.documentScan</a> API.</td>
@@ -196,6 +200,8 @@ The following table lists the currently available permissions:
       <td><code>"idle"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/idle/">chrome.idle</a> API.</td>
     </tr>
+
+<!-- No corresponding reference entry
     <tr id="idltest">
       <td><code>"idltest"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/idltest/">chrome.idltest</a> API.</td>
@@ -208,6 +214,8 @@ The following table lists the currently available permissions:
       <td><code>"loginScreenStorage"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/loginScreenStorage/">chrome.loginScreenStorage</a> API.</td>
     </tr>
+-->
+
     <tr id="loginState">
       <td><code>"loginState"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/loginState/">chrome.loginState</a> API.</td>
@@ -356,12 +364,12 @@ The following table lists the currently available permissions:
   </tbody>
 </table>
 
-[1]: /docs/extensions/mv2/tabs
+[1]: /docs/extensions/mv2/manifest
 [2]: /docs/extensions/mv2/match_patterns
 [3]: /docs/extensions/mv2/permission_warnings
-[4]: /docs/extensions/storage
-[5]: /docs/extensions/activeTab
-[6]: /docs/extensions/alarms
+[4]: /docs/extensions/reference/storage
+[5]: /docs/extensions/mv2/manifest/activeTab
+[6]: /docs/extensions/reference/alarms
 [7]: /docs/extensions/mv2/background_pages
 [8]: /docs/extensions/mv2/event_pages
 [9]: http://developers.google.com/chrome/apps/docs/background.html
