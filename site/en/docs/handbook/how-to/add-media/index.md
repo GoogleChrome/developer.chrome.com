@@ -49,3 +49,19 @@ a height of 200, do the following:
 ```
 {% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/1603484068246.jpg", alt="ALT TEXT HERE", width="400", height="200" %}{% endraw %}
 ```
+
+### Properties
+
+The `{% raw %}`{% img %}`{% endraw%}` shortcode accepts many named arguments. Below are interfaces for both shortcodes. Each property of the interface is a named argument that can be used in the shortode.
+
+#### Img Properties (`ImgArgs`)
+
+```typescript
+{% include '../../../../../../types/site/_shortcodes/img.d.ts' %}
+```
+
+#### Video Properties (`VideoArgs`)
+
+```typescript
+{% include '../../../../../../types/site/_shortcodes/video.d.ts' %}
+```
