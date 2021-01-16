@@ -40,23 +40,23 @@ of type [Ruleset][4], as shown below.
 ## Rule Resources
 
 An extension can specify up to [MAX_NUMBER_OF_STATIC_RULESETS][5] [rulesets][6] as part of the
-`"rule_resources"` manifest key. An extension is allowed to enable up to at least
+`"rule_resources"` manifest key. An extension is allowed to enable at least
 [GUARANTEED_MINIMUM_STATIC_RULES][7] static rules. Additional static rule sets may or may not be
 enabled depending on the available [global static rule limit][8].
 
 ## Global Static Rule Limit
 
 In addition to the [GUARANTEED_MINIMUM_STATIC_RULES][9] static rules guaranteed for each extension,
-extensions can enable additional static rulesets depending on the available global static rule limit. This
-global limit is shared between all extensions and can be used by extensions on a first come first
-serve basis. Extensions shouldn't depend on the global limit having a specific value and should
-instead rely the [getAvailableStaticRuleCount][10] API method to find the additional rule limit available to
-them.
+extensions can enable additional static rulesets depending on the available global static rule
+limit. This global limit is shared between all extensions and can be used by extensions on a
+first-come, first-served basis. Extensions shouldn't depend on the global limit having a specific
+value and should instead use the [getAvailableStaticRuleCount][10] API method to find the additional
+rule limit available to them.
 
 ## Rules
 
-A single declarative [Rule][11] consists of four fields: `id`, `priority`, `condition` and `action`.
-There are the following kinds of rules:
+A single declarative [Rule][11] consists of four fields: `id`, `priority`, `condition`, and
+`action`. There are the following kinds of rules:
 
 - Rules that block a network request.
 - Rules that prevent a request from getting blocked by negating any matching blocked rules.
@@ -88,7 +88,7 @@ the request URL. Some examples of URL filters:
 
 ## Dynamic rules
 
-To add or remove rules dynamically, extensions can use the [updateDynamicRules][12] API method.
+To add or remove rules dynamically, use the [updateDynamicRules][12] API method.
 
 - The number of dynamic rules that an an extension can add is bounded by the
   [MAX_NUMBER_OF_DYNAMIC_RULES][13] constant.
