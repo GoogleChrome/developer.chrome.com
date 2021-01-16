@@ -431,7 +431,7 @@ What's next?
 [4]: /user_interface
 [5]: /docs/
 [6]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/n7V7IbH6D6gqNCV7Kp5t.zip "get_started_complete.zip"
-[7]: /docs/extensions/extensions/manifest
+[7]: /docs/extensions/mv2/manifest
 [8]: examples/tutorials/get_started/manifest.json
 [9]: /background_pages
 [10]: examples/tutorials/get_started/background.js
@@ -449,7 +449,7 @@ What's next?
 [22]: examples/tutorials/get_started/popup.js
 [23]: https://developer.chrome.com/
 [24]: /content_scripts#pi
-[25]: /docs/extensions/activeTab
+[25]: /docs/extensions/mv2/manifest/activeTab/
 [26]: /tabs
 [27]: /tabs#method-executeScript
 [28]: examples/tutorials/get_started/options.html
