@@ -19,15 +19,43 @@ const generateSource = src => {
 };
 
 /**
- * @param {string|string[]} paths Path(s) for video.
+ * @param {VideoArgs} args Named arguments
  * @returns {string}
  */
-const video = paths => {
-  if (typeof paths === 'string') {
-    paths = [paths];
+const video = args => {
+  if (typeof args.src === 'string') {
+    args.src = [args.src];
   }
 
-  return html`<video controls>${paths.map(generateSource)}</video>`;
+  const {
+    autoplay,
+    autoPictureInPicture,
+    className,
+    disablePictureInPicture,
+    height,
+    loop,
+    muted,
+    poster,
+    preload,
+    src,
+    width,
+  } = args;
+
+  return html`<video
+    ${autoplay ? 'autoplay' : ''}
+    ${autoPictureInPicture ? 'autoPictureInPicture' : ''}
+    ${className ? `class="${className}"` : ''}
+    controls
+    ${disablePictureInPicture ? 'disablePictureInPicture' : ''}
+    ${height ? `height="${height}"` : ''}
+    ${loop ? 'loop' : ''}
+    ${muted ? 'muted' : ''}
+    ${poster ? `poster="${poster}"` : ''}
+    ${preload ? `preload="${preload}"` : ''}
+    ${width ? `width="${width}"` : ''}
+  >
+    ${src.map(generateSource)}
+  </video>`.replace(/\n/g, '');
 };
 
 module.exports = {video};
