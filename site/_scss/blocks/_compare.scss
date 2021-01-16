@@ -4,11 +4,11 @@
 .compare {
   position: relative;
 
-  .compare__label {
+  &__label {
     font-size: 1.125em;    
   }
 
-  .compare__caption {
+  &__caption {
     color: var(--color-secondary-text);
     font-size: 1em;
     line-height: 1.5em;
