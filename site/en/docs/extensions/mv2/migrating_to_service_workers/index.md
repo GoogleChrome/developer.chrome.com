@@ -231,10 +231,10 @@ function makeCanvas(width, height) {
 For additional guidance on working with OffscreenCanvas, see [OffscreenCanvas — Speed up Your Canvas
 Operations with a Web Worker][18].
 
-[1]: /migrating_to_manifest_v3
+[1]: /docs/extensions/mv3/intro/
 [2]: https://developers.google.com/web/fundamentals/primers/service-workers/
-[3]: /docs/extensions/events
-[4]: /docs/extensions/workers
+[3]: #events
+[4]: #workers
 [5]: https://developers.google.com/web/ilt/pwa/introduction-to-service-worker
 [6]: https://developer.mozilla.org/en-US/docs/Web/API/Worker
 [7]: https://developer.mozilla.org/en-US/docs/Web/API/Window

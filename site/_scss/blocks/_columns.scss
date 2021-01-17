@@ -4,6 +4,14 @@
   grid-auto-flow: row;
   
   @include media-query('md') {
+    grid-auto-columns: 1fr;
     grid-auto-flow: column;
+  }
+}
+
+.columns__column {
+  @include media-query('md') {
+    display: flex;
+    flex-direction: column;
   }
 }

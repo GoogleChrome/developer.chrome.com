@@ -453,7 +453,7 @@ What's next?
 [22]: examples/tutorials/get_started/popup.js
 [23]: https://developer.chrome.com/
 [24]: /docs/extensions/mv3/content_scripts#pi
-[25]: /docs/extensions/reference/activeTab
+[25]: /docs/extensions/mv3/manifest/activeTab
 [26]: /docs/extensions/reference/tabs
 [27]: /docs/extensions/reference/tabs#method-executeScript
 [28]: examples/tutorials/get_started/options.html

@@ -11,6 +11,12 @@ accessibility:
 amp:
   en: AMP
 
+chromium-chronicle:
+  en: Chromium Chronicle
+
+cookies:
+  en: Cookies
+
 devices:
   en: Devices
 
@@ -34,3 +40,6 @@ houdini:
 
 html:
   en: HTML
+
+new-in-chrome:
+  en: New in Chrome

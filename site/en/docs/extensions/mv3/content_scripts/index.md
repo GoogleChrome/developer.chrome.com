@@ -258,6 +258,7 @@ chrome.runtime.onMessage.addListener((message, callback) => {
 });
 ```
 
+
 #### Exclude matches and globs {: #matchAndGlob }
 
 Specified page matching is customizable by including the following fields in a declarative
@@ -300,7 +301,6 @@ The content script will be injected into a page if both of the following are tru
 
 - Its URL matches any `matches` pattern and any `include_globs` pattern
 - The URL doesn't also match an `exclude_matches` or `exclude_globs` pattern.
-
 Because the `matches` property is required, `exclude_matches`, `include_globs`, and `exclude_globs`
 can only be used to limit which pages will be affected.
 
@@ -620,16 +620,16 @@ window.setTimeout(() => animate(elmt_id), 200);
 
 [1]: http://www.w3.org/TR/DOM-Level-2-HTML/
 [2]: /docs/extensions/mv3/messaging
-[3]: /docs/extensions/i18n
-[4]: /docs/extensions/storage
-[5]: /docs/extensions/runtime
-[6]: /docs/extensions/runtime#method-connect
-[7]: /docs/extensions/runtime#method-getManifest
-[8]: /docs/extensions/runtime#method-getURL
-[9]: /docs/extensions/runtime#property-id
-[10]: /docs/extensions/runtime#event-onConnect
-[11]: /docs/extensions/runtime#event-onMessage
-[12]: /docs/extensions/runtime#method-sendMessage
+[3]: /docs/extensions/reference/i18n
+[4]: /docs/extensions/reference/storage
+[5]: /docs/extensions/reference/runtime
+[6]: /docs/extensions/reference/runtime#method-connect
+[7]: /docs/extensions/reference/runtime#method-getManifest
+[8]: /docs/extensions/reference/runtime#method-getURL
+[9]: /docs/extensions/reference/runtime#property-id
+[10]: /docs/extensions/reference/runtime#event-onConnect
+[11]: /docs/extensions/reference/runtime#event-onMessage
+[12]: /docs/extensions/reference/runtime#method-sendMessage
 [13]: #programmatic
 [14]: #static-declarative
 [15]: /activeTab

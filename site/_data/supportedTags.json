@@ -11,6 +11,12 @@
   "amp": {
     "title": "i18n.tags.amp"
   },
+  "chromium-chronicle": {
+    "title": "i18n.tags.chromium-chronicle"
+  },
+  "cookies": {
+    "title": "i18n.tags.cookies"
+  },
   "devices": {
     "title": "i18n.tags.devices"
   },
@@ -34,5 +40,8 @@
   },
   "html": {
     "title": "i18n.tags.html"
+  },
+  "new-in-chrome": {
+    "title": "i18n.tags.new-in-chrome"
   }
 }

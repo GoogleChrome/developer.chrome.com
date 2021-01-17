@@ -6,8 +6,6 @@ updated: 2018-04-26
 description: Reference documentation for the version property of manifest.json.
 ---
 
-# Manifest - Version
-
 One to four dot-separated integers identifying the version of this extension. A couple of rules
 apply to the integers: they must be between 0 and 65535, inclusive, and non-zero integers can't
 start with 0. For example, 99999 and 032 are both invalid.
@@ -26,7 +24,8 @@ the extension is automatically updated.
 The comparison starts with the leftmost integers. If those integers are equal, the integers to the
 right are compared, and so on. For example, 1.2.0 is a newer version than 1.1.9.9999.
 
-A missing integer is equal to zero. For example, 1.1.9.9999 is newer than 1.1.
+A missing integer is equal to zero. For example, 1.1.9.9999 is newer than 1.1 and 1.1.9.9999 is
+older than 1.2.
 
 For more information, see [Autoupdating][1].
 
@@ -43,4 +42,4 @@ Here are some examples of version names:
 
 If no version_name is present, the version field will be used for display purposes as well.
 
-[1]: /docs/extensions/autoupdate
+[1]: /docs/extensions/mv3/autoupdate

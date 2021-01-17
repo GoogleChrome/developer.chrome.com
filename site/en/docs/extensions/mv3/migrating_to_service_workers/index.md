@@ -238,7 +238,7 @@ Operations with a Web Worker][18].
 [13]: /docs/extensions/reference/tabs#method-create
 [14]: /docs/extensions/reference/windows#method-create
 [15]: /docs/extensions/reference/tabs#method-create
-[16]: /docs/extensions/reference/messaging
+[16]: /docs/extensions/mv3/messaging
 [17]: https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface
 [18]: https://developers.google.com/web/updates/2018/08/offscreen-canvas
 [eventbgscripts]: /docs/extensions/mv3/background_migration/

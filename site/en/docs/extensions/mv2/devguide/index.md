@@ -222,7 +222,7 @@ functionality.
       <td>Instrument network interaction, debug JavaScript, mutate the DOM and CSS.</td>
     </tr>
     <tr>
-      <td><a href="/docs/extensions/reference/devtools">Devtools</a></td>
+      <td><a href="/docs/extensions/mv2/devtools">Devtools</a></td>
       <td>Add features to Chrome Developer Tools.</td>
     </tr>
   </tbody>

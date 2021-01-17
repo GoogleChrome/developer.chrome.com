@@ -54,12 +54,12 @@ The following table lists the currently available permissions:
     </tr>
     <tr id="activeTab">
       <td><code>"activeTab"</code></td>
-      <td>Requests that the extension be granted permissions according to the <a href="activeTab">activeTab</a>
+      <td>Requests that the extension be granted permissions according to the <a href="/docs/extensions/mv3/manifest/activeTab">activeTab</a>
         specification.</td>
     </tr>
     <tr id="alarms">
       <td><code>"alarms"</code></td>
-      <td>Gives your extension access to the <a href="alarms">chrome.alarms</a> API.</td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/alarms">chrome.alarms</a> API.</td>
     </tr>
     <tr id="background">
       <td><code>"background"</code></td>
@@ -72,8 +72,8 @@ The following table lists the currently available permissions:
           quits Chrome.</p>
         <div class="aside aside--note"><b>Note:</b> Disabled apps and extensions are treated as if they aren't
           installed.</div>
-        <p>You typically use the "background" permission with a <a href="background_pages">background page</a>, <a
-            href="/docs/extensions/mv2/event_pages">event page</a> or (for hosted apps) a <a
+        <p>You typically use the "background" permission with a <a href="/docs/extensions/mv3/background_pages">background page</a>, <a
+            href="/docs/apps/event_pages">event page</a> or (for hosted apps) a <a
             href="http://developers.google.com/chrome/apps/docs/background.html">background window</a>.</p>
       </td>
     </tr>
@@ -133,10 +133,8 @@ The following table lists the currently available permissions:
       <td><code>"declarativeWebRequest"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeWebRequest/">chrome.declarativeWebRequest</a> API.</td>
     </tr>
-    <tr id="desktopCapture">
-      <td><code>"desktopCapture"</code></td>
-      <td>Gives your extension access to the <a href="/docs/extensions/reference/desktopCapture/">chrome.desktopCapture</a> API.</td>
-    </tr>
+
+<!-- No corresponding reference entry
     <tr id="displaySource">
       <td><code>"displaySource"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/displaySource/">chrome.displaySource</a> API.</td>
@@ -144,6 +142,12 @@ The following table lists the currently available permissions:
     <tr id="dns">
       <td><code>"dns"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/dns/">chrome.dns</a> API.</td>
+    </tr>
+-->
+
+    <tr id="desktopCapture">
+      <td><code>"desktopCapture"</code></td>
+      <td>Gives your extension access to the <a href="/docs/extensions/reference/desktopCapture/">chrome.desktopCapture</a> API.</td>
     </tr>
     <tr id="documentScan">
       <td><code>"documentScan"</code></td>
@@ -211,6 +215,8 @@ The following table lists the currently available permissions:
       <td><code>"idle"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/idle/">chrome.idle</a> API.</td>
     </tr>
+
+<!-- No corresponding reference entry
     <tr id="idltest">
       <td><code>"idltest"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/idltest/">chrome.idltest</a> API.</td>
@@ -223,6 +229,8 @@ The following table lists the currently available permissions:
       <td><code>"loginScreenStorage"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/loginScreenStorage/">chrome.loginScreenStorage</a> API.</td>
     </tr>
+-->
+
     <tr id="loginState">
       <td><code>"loginState"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/loginState/">chrome.loginState</a> API.</td>
@@ -322,8 +330,8 @@ The following table lists the currently available permissions:
     <tr id="tabs">
       <td><code>"tabs"</code></td>
       <td>Gives your extension access to privileged fields of the <a
-          href="https://developer.chrome.com/extensions/tabs#type-Tab"><code>Tab</code></a> objects used by several APIs
-        including <a href="/extensions/tabs">chrome.tabs</a> and <a href="/extensions/windows">chrome.windows</a>. In
+          href="/docs/extensions/reference/tabs#type-Tab"><code>Tab</code></a> objects used by several APIs
+        including <a href="/docs/extensions/reference/tabs">chrome.tabs</a> and <a href="/docs/extensions/reference/windows">chrome.windows</a>. In
         many circumstances your extension will not need to declare the <code>"tabs"</code> permission to make use of
         these APIs.</td>
     </tr>
@@ -371,10 +379,10 @@ The following table lists the currently available permissions:
   </tbody>
 </table>
 
-[1]: /docs/extensions/mv3/tabs
+[1]: /docs/extensions/mv3/manifest
 [2]: /docs/extensions/mv3/match_patterns
 [3]: /docs/extensions/mv3/permission_warnings
-[4]: /docs/extensions/storage
+[4]: /docs/extensions/reference/storage
 [5]: /docs/extensions/activeTab
 [6]: /docs/extensions/alarms
 [7]: /docs/extensions/mv3/background_pages

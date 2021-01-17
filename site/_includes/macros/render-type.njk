@@ -17,26 +17,12 @@
 {% endif %}
 
 <div class="type stack code-sections__description">
-  {{ spec.comment | safe }}
+  {{ renderComment(spec) }}
 </div>
-
-{# OPTION: type (class) or object (property) #}
-{% if spec.type === 'type' or spec.type === 'object' %}
-  {% if spec.properties.length %}
-    <div class="code-sections">
-      <h4 class="type--label case-upper">Properties</h4>
-
-      <ul class="stack flow-space-300">
-        {% for prop in spec.properties %}
-          {{ internalRenderNamedType(prop, namespaceName, spec) }}
-        {% endfor %}
-      </ul>
-    </div>
-  {% endif %}
 
 {# OPTION: enum #}
 {# This is just a union but we render it specially. #}
-{% elif spec.type === 'union' and spec.isEnum %}
+{% if spec.type === 'union' and spec.isEnum %}
   <div class="code-sections">
     <h4 class="type--label case-upper">Enum</h4>
 
@@ -44,7 +30,7 @@
       <p>
         {% for option in spec.options %}
           {% if loop.last and not loop.first %}or{% endif %}
-          <code>{{ renderSingleType(option) | trim }}</code>{% if not loop.last %},{% endif %}
+          <code>{{ option.literalValue }}</code>{% if not loop.last %},{% endif %}
         {% endfor %}
       </p>
     </div>
@@ -86,8 +72,21 @@
     </ul>
   </div>
 
+{# OPTION: literal #}
+{% elif spec.literalValue !== undefined %}
+  <div class="code-sections">
+    <h4 class="type--label case-upper">Value</h4>
+
+    <div class="code-sections__overline code-sections__label">
+      {{ renderSingleType(spec, true) }}
+    </div>
+  </div>
+
+{# OPTION: type or object #}
+{% elif spec.type === 'object' or spec.type === 'type' %}
+  {# Ignore, we render properties below #}
+
 {% else %}
-  {# nb. This technically includes array, and perhaps we're an array of an interesting type. #}
   <div class="code-sections">
     <h4 class="type--label case-upper">Type</h4>
 
@@ -98,6 +97,29 @@
 
 {% endif %}
 
+{# Render properties, as they show up on different types. #}
+{% if spec.properties.length %}
+  <div class="code-sections">
+    <h4 class="type--label case-upper">Properties</h4>
+
+    <ul class="stack flow-space-300">
+      {% for prop in spec.properties %}
+        {{ internalRenderNamedType(prop, namespaceName, spec) }}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+{% endmacro %}
+
+{#
+  Renders a comment and its optional deprecation notice.
+#}
+{% macro renderComment(spec) %}
+  {% if spec.deprecated !== undefined %}
+  <p class="code-sections__deprecated"><strong>Deprecated</strong>. {{ spec.deprecated | safe }}
+  {% endif %}
+  {{ spec.comment | safe }}
 {% endmacro %}
 
 {#
@@ -112,7 +134,7 @@
   <div class="stack">
 
 <div class="type stack code-sections__description">
-  {{ spec.comment | safe }}
+  {{ renderComment(spec) }}
 
   {% if spec.type === 'function' and (spec.name === 'callback' or parent.referenceType === 'events.Event') %}
     {# This is a callback or a listener. Tell the user how to specify it. #}
@@ -151,6 +173,12 @@
 
 {% if functionPart %}
   <div class="code-sections__callback type--xsmall"><code>{{ functionPart | safe }}</code></div>
+{% endif %}
+
+{# OPTION: array #}
+{% if spec.type === 'array' %}
+  {# Render further information about the contained type. #}
+  {% set spec = spec.elementType %}
 {% endif %}
 
 {# OPTION: type (class) or object (property) #}
@@ -197,7 +225,8 @@
 {#
   Renders a single type as a single word. Used for signatures and type hints.
 
-  If isOuter is true, shows a hint icon.
+  If isOuter is true, shows a hint icon, because it's the left-most type inside
+  a table view.
 #}
 {% macro renderSingleType(rt, isOuter) %}
 
@@ -209,7 +238,10 @@
     {% endif %}
 
     {# Primitive value ("number") or literal ("abc") #}
-    {{ rt.literalValue }}{{ rt.primitiveType }}
+    {{ rt.primitiveType }}
+    {% if rt.literalValue %}
+      <span class="code-sections__value">{{ rt.literalValue }}</span>
+    {% endif %}
   {% elif rt.type === 'reference' %}
     {# Reference to another type #}
     {% if rt.referenceLink  %}
@@ -255,7 +287,7 @@
 {% endmacro %}
 
 {#
-  If the passed RenderType is a function, then render its full signature.
+  If the passed RenderType is a function, then render its full signature. Does nothing otherwise.
 #}
 {% macro renderTypeSignature(rt, namespaceName) %}
 

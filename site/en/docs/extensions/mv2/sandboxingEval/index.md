@@ -160,9 +160,9 @@ time.
 [6]: /docs/extensions/mv2/samples#sandboxed-frame
 [7]: http://handlebarsjs.com
 [8]: /docs/extensions/examples/howto/sandbox/sandbox.html
-[9]: /docs/extensions/mv2/event_pages
+[9]: /docs/apps/event_pages
 [10]: /docs/extensions/examples/howto/sandbox/eventpage.html
 [11]: /docs/extensions/examples/howto/sandbox/eventpage.js
-[12]: https://developer.mozilla.org/en/DOM/window.postMessage
+[12]: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
 [13]: /docs/extensions/mv2/desktop_notifications
 [14]: http://www.youtube.com/watch?v=GBxv8SaX0gg
