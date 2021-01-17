@@ -6,8 +6,6 @@ updated: 2019-03-11
 description: An explanation of content scripts and how to use them in your Chrome Extension.
 ---
 
-{% include 'partials/extensions/mv2page-in-mv3.md' %}
-
 Content scripts are files that run in the context of web pages. By using the standard [Document
 Object Model][1] (DOM), they are able to read details of the web pages the browser visits, make
 changes to them, and pass information to their parent extension.
@@ -41,14 +39,12 @@ Content scripts are unable to access other APIs directly.
 
 ## Work in isolated worlds {: #isolated_world }
 
-!!!.aside.aside--key
-
-**TODO**: Define "isolated world". This section hinges on the concept but does not face it head on.
-
-!!!
-
-Content scripts live in an isolated world, allowing a content script to makes changes to its
+Content scripts live in an isolated world, allowing a content script to make changes to its
 JavaScript environment without conflicting with the page or other extensions' content Scripts.
+
+!!!.aside
+An *isolated world* is a private execution environment that isn't accessible from other extensions. A practical consequence of this isolation is that variables declared by one extension are not visible to another one. The concept was originally introduced with the initial launch of Chrome, providing isolation for browser tabs. 
+!!!
 
 An extension may run in a web page with code similar to the example below.
 
@@ -78,20 +74,13 @@ button.addEventListener("click", () =>
 , false);
 ```
 
-With this chagen, both alerts would appear in sequence when the button is clicked.
+With this change, both alerts appear in sequence when the button is clicked.
 
-
-!!!.aside.aside--key
-
-**TODO**: The first sentence below is a bit confusing. The key idea we want to relay is that each of
-these contexts is indepdented; variables created in an extension's isolated world cannot be accessed
-by the same extension's background context, by the host page, or by content scripts that below
-to another extension.
-
-Isolated worlds do not allow for content scripts, the extension, and the web page to access any
-variables or functions created by the others. This also gives content scripts the ability to enable
-functionality that should not be accessible to the web page.
-
+!!!.aside
+Not only does each extension run in its own isolated world, but content scripts
+and the web page do too. This means that none of these (web page, content
+scripts, and any running extensions) can access the context and variables of
+the others.
 !!!
 
 {# youtube id="laLudeUmXHM" #}
@@ -103,14 +92,7 @@ Content Scripts can be injected [declared statically][14], [declared dynamically
 
 ### Inject with static declarations {: #static-declarative }
 
-!!!.aside.aside--key
-
-I changed the anchor for this section. I don't like breaking links, but I think this is a net good
-change as it makes the ancors for static & dynamic declarations more consistent. WDYT?
-
-!!!
-
-Use static conntent script declarations in manifest.json for scripts that should be automatically
+Use static content script declarations in manifest.json for scripts that should be automatically
 run on a well known set of pages.
 
 Statically declared scripts are registered in the manifest under the `"content_scripts"` field.
@@ -131,14 +113,6 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
  ...
 }
 ```
-
-!!!.aside.aside--key
-
-For most other manifest properties this documentation would live in
-`/docs/extensions/mv3/manifest/<key>`. Should this be moved for consistency & cross-linked or does
-it make more sense to have everything in one file?
-
-!!!
 
 <table class="simple">
   <tbody>
@@ -182,15 +156,18 @@ it make more sense to have everything in one file?
 
 ### Inject with dynamic declarations {: #dynamic-declarative }
 
-!!!.aside.aside--key
+!!!.aside.aside--caution
+This feature is not yet fully supported. It is currently in dev and is also available in Chrome Canary.
+!!!
 
+You should use dynamic declarations in the following cases:
+
+- When the host is not well known
+- The script may need to be added/removed from a known host
+
+{% if false %}
 **TODO**
 
-- NOT YET SUPPORTED - current in dev & available in Canary
-- Introduced in Manifest V3 & not exposed to MV2 extensions
-- Dynamic declarations should be used either
-    - when the host is not well known
-    - the script may need to be added/removed from a known host
 - Uses the JS scripting API
     - example of adding a script
     - example of removing a script
@@ -200,8 +177,8 @@ it make more sense to have everything in one file?
 See the [api
 proposal](https://docs.google.com/document/d/1p2jnIL3znAhD2VVuEbzOetgj1Qeya9yATa3B9gBGGUg/edit) for
 additional details.
+{% endif %}
 
-!!!
 
 ```js
 chrome.scripting.registerContentScript(optionsObject, callback);
@@ -215,10 +192,10 @@ chrome.scripting.unregisterContentScript(idArray, callback);
 
 ### Inject programmatically {: #programmatic }
 
-Use programmatic injection for content scripts that need to run in respone to events or on specific
+Use programmatic injection for content scripts that need to run in respond to events or on specific
 occasions.
 
-In order to inject a content script programmatically, your extension will need host permissions for
+In order to inject a content script programmatically, your extension needs host permissions for
 the page it's trying to inject scripts into. Host permissions can either be granted either by
 requesting them as part of your extension's manifest (see [`host_permissions`][33]) or temporarily
 via [activeTab][15].
@@ -319,14 +296,15 @@ registration.
   </tbody>
 </table>
 
-The content script will be injected into a page if its URL matches any `matches` pattern and any
-`include_globs` pattern, as long as the URL doesn't also match an `exclude_matches` or
-`exclude_globs` pattern.
+The content script will be injected into a page if both of the following are true:
+
+- Its URL matches any `matches` pattern and any `include_globs` pattern
+- The URL doesn't also match an `exclude_matches` or `exclude_globs` pattern.
 
 Because the `matches` property is required, `exclude_matches`, `include_globs`, and `exclude_globs`
 can only be used to limit which pages will be affected.
 
-The following extension would injected the content script into **http://www.nytimes.com/ health**
+The following extension injects the content script into **http://www.nytimes.com/ health**
 but not into **http://www.nytimes.com/ business** .
 
 ```json/6
@@ -368,7 +346,7 @@ However, it does _not_ match the following:
 - **http:// example .com/foo/**
 - **http://www.example.com/foo**
 
-This extension would inject the content script into **http:/www.nytimes.com/ arts /index.html** and
+This extension injects the content script into **http:/www.nytimes.com/ arts /index.html** and
 **http://www.nytimes.com/ jobs /index.html** but not into **http://www.nytimes.com/ sports
 /index.html**.
 
@@ -395,7 +373,7 @@ chrome.scripting.registerContentScript({
 });
 ```
 
-This extension would inject the content script into **http:// history .nytimes.com** and
+This extension injects the content script into **http:// history .nytimes.com** and
 **http://.nytimes.com/ history** but not into **http:// science .nytimes.com** or
 **http://www.nytimes.com/ science** .
 
@@ -452,8 +430,8 @@ chrome.scripting.registerContentScript({
 
 #### Run time {: #run_time }
 
-When JavaScript files are injected into the web page is controlled by the `run_at` field. The
-preffered and default field is `"document_idle"`, but can also be specified as `"document_start"` or
+The `run_at` field controls when JavaScript files are injected into the web page. The
+preferred and default value is `"document_idle"`, but you can also specify `"document_start"` or
 `"document_end"` if needed.
 
 ```json/6
@@ -557,7 +535,7 @@ chrome.scripting.registerContentScript({
       <td><em>Optional.</em> Defaults to <code>false</code>, meaning that only the top frame is
         matched.<br><br>If specified <code>true</code>, it will inject into all frames, even if the
         frame is not the topmost frame in the tab. Each frame is checked independently for URL
-        requirements, it will not inject into child frames if the URL requirements are not met.</td>
+        requirements, it won't inject into child frames if the URL requirements are not met.</td>
     </tr>
   </tbody>
 </table>
@@ -606,31 +584,39 @@ scripting][29] attacks before injecting it. Only communicate over HTTPS in order
 
 Be sure to filter for malicious web pages. For example, the following patterns are dangerous:
 
+{% Compare 'worse' %}
 ```js
 var data = document.getElementById("json-data")
 // WARNING! Might be evaluating an evil script!
 var parsed = eval("(" + data + ")")
 ```
+{% endCompare %}
 
+{% Compare 'worse' %}
 ```js
 var elmt_id = ...
 // WARNING! elmt_id might be "); ... evil script ... //"!
 window.setTimeout("animate(" + elmt_id + ")", 200);
 ```
+{% endCompare %}
 
 Instead, prefer safer APIs that do not run scripts:
 
+{% Compare 'better' %}
 ```js
 var data = document.getElementById("json-data")
 // JSON.parse does not evaluate the attacker's scripts.
 var parsed = JSON.parse(data);
 ```
+{% endCompare %}
 
+{% Compare 'better' %}
 ```js
 var elmt_id = ...
 // The closure form of setTimeout does not evaluate scripts.
 window.setTimeout(() => animate(elmt_id), 200);
 ```
+{% endCompare %}
 
 [1]: http://www.w3.org/TR/DOM-Level-2-HTML/
 [2]: /docs/extensions/mv3/messaging
