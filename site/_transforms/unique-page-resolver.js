@@ -24,7 +24,23 @@ const debug = false;
 let globalOptions = {};
 
 /**
- * Returns the normalized basename of the given path. For an argument like
+ * This removes any trailing "/index.html" and any prefix "dist/".
+ *
+ * @param {string} url
+ * @return {string}
+ */
+const normalizePath = url => {
+  if (url.endsWith('/index.html')) {
+    url = url.slice(0, -'index.html'.length);
+  }
+  if (url.startsWith('dist/')) {
+    url = url.slice('dist/'.length);
+  }
+  return url;
+};
+
+/**
+ * Returns the simple basename of the given path. For an argument like
  * "foo/bar/test-bar/zing-helloThere", this would return "zinghellothere".
  *
  * By removing special characters and capitals, we can more easily match 404s.
@@ -32,7 +48,7 @@ let globalOptions = {};
  * @param {string} p
  * @return {string}
  */
-const getNormalizedBase = p => {
+const getSimpleBase = p => {
   let base = path.basename(p);
   base = base.toLowerCase();
   base = base.replace(/[^a-z0-9]/g, '');
@@ -50,12 +66,6 @@ const getNormalizedBase = p => {
  * @return {string[]}
  */
 const splitAllOptions = (url, limit = 4) => {
-  if (url.endsWith('/index.html')) {
-    url = url.slice(0, -'/index.html'.length);
-  } else if (url.endsWith('/')) {
-    url = url.slice(0, -1);
-  }
-
   const output = [];
   let current = url;
   const parts = [];
@@ -65,7 +75,7 @@ const splitAllOptions = (url, limit = 4) => {
       break; // at top-level, abandon
     }
 
-    const base = getNormalizedBase(current);
+    const base = getSimpleBase(current);
     parts.unshift(base);
     current = path.dirname(current);
 
@@ -84,6 +94,7 @@ const splitAllOptions = (url, limit = 4) => {
  * @return {string|undefined}
  */
 const matchOutput = (url, output) => {
+  url = normalizePath(url);
   const options = splitAllOptions(url);
   for (const option of options) {
     if (option in output) {
@@ -101,11 +112,7 @@ const matchOutput = (url, output) => {
  * @param {string} outputPath
  */
 const updateUniqueSet = outputPath => {
-  if (!outputPath.startsWith('dist/')) {
-    return;
-  }
-  outputPath = outputPath.substr('dist/'.length);
-
+  outputPath = normalizePath(outputPath);
   const options = splitAllOptions(outputPath);
   for (let i = 0; i < options.length; ++i) {
     const key = options[i];
