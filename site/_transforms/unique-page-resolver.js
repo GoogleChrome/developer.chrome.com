@@ -17,29 +17,32 @@
 const path = require('path');
 const fs = require('fs');
 
-/** @type {{[page: string]: {segments: number, all: string[]}}} */
+// This is a global which lets us accumulate possible unique pages as Eleventy builds.
+/** @type {{[page: string]: {segments: number, allPages: string[]}}} */
 let globalOptions = {};
 
 /**
- * @param {string} base
- * @param {string} all
+ * Returns the normalized basename of the given path. For an argument like
+ * "foo/bar/test-bar/zing-helloThere", this would return "zinghellothere".
+ *
+ * By removing special characters and capitals, we can more easily match 404s.
+ *
+ * @param {string} p
  * @return {string}
  */
-const normalizeBase = (base, all) => {
+const getNormalizedBase = p => {
+  let base = path.basename(p);
   base = base.toLowerCase();
   base = base.replace(/[^a-z0-9]/g, '');
-
-  // Special-cases.
-  if (all === 'en/docs/extensions/mv2' || all === 'en/docs/extensions/mv3') {
-    base = 'mv-';
-  } else if (all === 'en/docs/apps' || all === 'en/docs/extensions') {
-    base = 'extensions-';
-  }
-
   return base;
 };
 
 /**
+ * Given a pathname, return a number of suffixes of increasing length.
+ *
+ * For an argument like "hello/there/test/index.html", this will strip "/index.html" and return an
+ * array of ["test", "there/test", "hello/there/test"].
+ *
  * @param {string} url
  * @param {number} limit
  * @return {string[]}
@@ -60,7 +63,7 @@ const splitAllOptions = (url, limit = 4) => {
       break; // at top-level, abandon
     }
 
-    const base = normalizeBase(path.basename(current), current);
+    const base = getNormalizedBase(current);
     parts.unshift(base);
     current = path.dirname(current);
 
@@ -71,6 +74,9 @@ const splitAllOptions = (url, limit = 4) => {
 };
 
 /**
+ * Given a candidate URL and the parsed, generated JSON output from this resolver, attempt to find
+ * a suitable page to redirect to.
+ *
  * @param {string} url
  * @param {{[right: string]: string}} output
  * @return {string|undefined}
@@ -85,19 +91,26 @@ const matchOutput = (url, output) => {
   return undefined;
 };
 
+/**
+ * Internal method that accumulates each HTML page as it is built by Eleventy.
+ *
+ * TODO(samthor): This does not deal with i18n, and "en" will be included as a prefix for every URL.
+ *
+ * @param {string} outputPath
+ */
 const updateUniqueSet = outputPath => {
   if (!outputPath.startsWith('dist/')) {
     return;
   }
-  outputPath = outputPath.substr(5);
+  outputPath = outputPath.substr('dist/'.length);
 
   const options = splitAllOptions(outputPath);
   for (let i = 0; i < options.length; ++i) {
     const key = options[i];
     if (!(key in globalOptions)) {
-      globalOptions[key] = {all: [], segments: i + 1};
+      globalOptions[key] = {allPages: [], segments: i + 1};
     }
-    globalOptions[key].all.push(outputPath);
+    globalOptions[key].allPages.push(outputPath);
   }
 };
 
@@ -113,36 +126,47 @@ const uniquePageResolver = (content, outputPath) => {
   return content;
 };
 
+/**
+ * Called on Eleventy finishing its build. This processes all accumulated pages and finds uniques.
+ */
 const uniquePageResolverAnnounce = () => {
   /** @type {{[right: string]: string}} */
   const output = {};
 
-  /** @type {{[page: string]: number}} */
-  const bestPageResolve = {};
+  // This stores pages we've already matched at lower segment counts.
+  /** @type {Set<string>} */
+  const pagesAlreadyDone = new Set();
 
-  for (let segments = 1; segments < 100; ++segments) {
+  // TODO(samthor): Just find single segments for now.
+  for (let segments = 1; segments <= 1; ++segments) {
     const foundForSegment = [];
 
+    // We have a segment length, iterate over all segments of the given length (e.g., 1 = "page",
+    // 2 = "foo/page", ...).
     for (const base of Object.keys(globalOptions)) {
-      const check = globalOptions[base];
-
-      if (check.segments !== segments) {
+      const {segments: checkSegments, allPages} = globalOptions[base];
+      if (segments !== checkSegments) {
         continue;
       }
 
-      if (check.all.length === 1) {
-        const only = check.all[0];
-        if (!(only in bestPageResolve)) {
-          bestPageResolve[only] = segments;
-          delete globalOptions[base];
-          foundForSegment.push({base, url: only});
-
-          output[base] = only;
-        }
+      delete globalOptions[base]; // we never revisit this node again
+      if (allPages.length !== 1) {
+        continue; // skip, there's more than one page this unique segment can match
       }
+
+      const onlyPage = allPages[0];
+      if (pagesAlreadyDone.has(onlyPage)) {
+        continue; // we already found a shorter way to match this page
+      }
+      pagesAlreadyDone.add(onlyPage);
+
+      output[base] = onlyPage;
+
+      // nb. This is just for logging.
+      foundForSegment.push({base, url: onlyPage});
     }
 
-    // TODO: Remove logging once we're happy.
+    // TODO(samthor): Remove logging once we're happy.
     foundForSegment.sort(({base: a}, {base: b}) => a.localeCompare(b));
     if (foundForSegment.length) {
       console.warn(`segments(${segments}): ${foundForSegment.length}`);
@@ -153,7 +177,7 @@ const uniquePageResolverAnnounce = () => {
     }
 
     // If we've found all possible segments, bail out now, otherwise we'll just
-    // do this up to 100 times to fin uniques.
+    // do this up to 100 times to find uniques.
     if (!Object.keys(globalOptions).length) {
       break;
     }
@@ -165,7 +189,7 @@ const uniquePageResolverAnnounce = () => {
     JSON.stringify(output, undefined, 2)
   );
 
-  // Reset in case Eleventy ius reused.
+  // Reset in case Eleventy is reused.
   globalOptions = {};
 };
 
