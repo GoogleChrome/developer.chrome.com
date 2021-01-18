@@ -13,7 +13,7 @@ hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/5diIn5KBi44iwy3o6GRi.jpg
 alt: A collection of broken clocks
 ---
 
-Chrome 88 (January 2020) will heavily throttle chained JavaScript timers for
+Chrome 88 (January 2021) will heavily throttle chained JavaScript timers for
 hidden pages in particular conditions. This will reduce CPU usage, which will
 also reduce battery usage. There are some edge cases where this will change
 behavior, but timers are often used where a different API would be more
