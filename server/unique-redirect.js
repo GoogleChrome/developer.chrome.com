@@ -43,7 +43,10 @@ function buildUniqueRedirectHandler(staticPaths, code = 301) {
   return (req, res, next) => {
     let match = matchOutput(req.url, raw);
     if (match) {
-      // TODO(samthor): "match" always starts with "en/".
+      // TODO(samthor): "match" always starts with "en/", remove for now.
+      if (match.startsWith('en/')) {
+        match = match.substr('en/'.length);
+      }
       match = `/${match}`;
       return res.redirect(code, match);
     }
