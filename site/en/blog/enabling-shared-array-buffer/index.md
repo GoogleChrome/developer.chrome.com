@@ -10,9 +10,9 @@ description: >
   origin trial to retain the current behavior until Desktop Chrome 93.
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
-date: 2021-01-11
-hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/VwqAOKnWHDx3nJegh94L.jpg
-alt: Images, iframes, and windows being accessed by someone 'evil'.
+date: 2021-01-18
+hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
+alt: A collection of padlocks.
 ---
 
 It's fair to say [`SharedArrayBuffer`][mdn] has had a bit of a rough landing on the
@@ -39,8 +39,8 @@ Cross-Origin-Opener-Policy: same-origin
 ```
 
 Once you do this, your page will not be able to load cross-origin content unless
-you allow it via your [`Cross-Origin-Resource-Policy`][corp] header or
-[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) headers
+the resource explicitly allows it via a [`Cross-Origin-Resource-Policy`][corp]
+header or [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) headers
 (`Access-Control-Allow-*` and so forth).
 
 There's also a [reporting
@@ -155,6 +155,11 @@ Chrome.
 
 - [How to cross-origin isolate your pages](https://web.dev/coop-coep/)
 - [Why cross-origin isolation is needed](https://web.dev/why-coop-coep/)
+
+Banner photo by <a
+href="https://unsplash.com/@yeeeeeeha?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Daniel
+Gregoire</a> on <a
+href="https://unsplash.com/s/photos/padlocks?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
 
 [mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 [compat]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#browser_compatibility
