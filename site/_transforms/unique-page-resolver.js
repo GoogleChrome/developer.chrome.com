@@ -17,6 +17,8 @@
 const path = require('path');
 const fs = require('fs');
 
+const debug = false;
+
 // This is a global which lets us accumulate possible unique pages as Eleventy builds.
 /** @type {{[page: string]: {segments: number, allPages: string[]}}} */
 let globalOptions = {};
@@ -137,8 +139,7 @@ const uniquePageResolverAnnounce = () => {
   /** @type {Set<string>} */
   const pagesAlreadyDone = new Set();
 
-  // TODO(samthor): Just find single segments for now.
-  for (let segments = 1; segments <= 1; ++segments) {
+  for (let segments = 1; segments <= 100; ++segments) {
     const foundForSegment = [];
 
     // We have a segment length, iterate over all segments of the given length (e.g., 1 = "page",
@@ -167,13 +168,15 @@ const uniquePageResolverAnnounce = () => {
     }
 
     // TODO(samthor): Remove logging once we're happy.
-    foundForSegment.sort(({base: a}, {base: b}) => a.localeCompare(b));
-    if (foundForSegment.length) {
-      console.warn(`segments(${segments}): ${foundForSegment.length}`);
-      for (const choice of foundForSegment) {
-        console.warn(`- ${choice.base}: ${choice.url}`);
+    if (debug) {
+      foundForSegment.sort(({base: a}, {base: b}) => a.localeCompare(b));
+      if (foundForSegment.length) {
+        console.warn(`segments(${segments}): ${foundForSegment.length}`);
+        for (const choice of foundForSegment) {
+          console.warn(`- ${choice.base}: ${choice.url}`);
+        }
+        console.warn('');
       }
-      console.warn('');
     }
 
     // If we've found all possible segments, bail out now, otherwise we'll just
