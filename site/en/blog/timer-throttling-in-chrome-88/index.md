@@ -8,7 +8,7 @@ description: >
   for more than 5 minutes, the page has been silent for at least
   30 seconds, WebRTC is not in use, and the chain of timers is
   5 or greater.
-date: 2021-01-11
+date: 2021-01-18
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/5diIn5KBi44iwy3o6GRi.jpg
 alt: A collection of broken clocks
 ---
