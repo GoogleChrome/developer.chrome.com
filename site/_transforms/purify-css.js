@@ -51,9 +51,7 @@ const purifyCss = async (content, outputPath) => {
       // these type classes are used by search-box.
       whitelist: ['type--h6', 'type--small', 'type--label', 'overflow-hidden'],
       defaultExtractor: content => {
-        // Capture as liberally as possible, including things like `lg\:display-none`
-        // https://tailwindcss.com/docs/controlling-file-size#understanding-the-regex
-        return content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
+        return content.match(/[A-Za-z0-9\\:_-]+/g) || [];
       },
     });
 
