@@ -215,7 +215,7 @@ controller.abort();
 
 ## Testing
 
-This change will be enabled for all Chrome users in Chrome 88 (January 2020).
+This change will be enabled for all Chrome users in Chrome 88 (January 2021).
 It's currently enabled for 50% of Chrome Beta, Dev, and Canary users.
 If you want to test it, use this command line flag when launching Chrome
 Beta, Dev, or Canary:
