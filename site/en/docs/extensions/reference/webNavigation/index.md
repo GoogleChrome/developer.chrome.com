@@ -103,8 +103,7 @@ The following transition qualifiers exist:
 <table><tbody><tr><th>Transition qualifier</th><th>Description</th></tr><tr><td>"client_redirect"</td><td>One or more redirects caused by JavaScript or meta refresh tags on the page happened during the navigation.</td></tr><tr><td>"server_redirect"</td><td>One or more redirects caused by HTTP headers sent from the server happened during the navigation.</td></tr><tr><td>"forward_back"</td><td>The user used the Forward or Back button to initiate the navigation.</td></tr><tr><td>"from_address_bar"</td><td>The user initiated the navigation from the address bar (aka Omnibox).</td></tr></tbody></table>
 
 [1]: /docs/extensions/mv2/tabs
-[2]:
-  https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/webNavigation/
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/webNavigation/
 [3]: /docs/extensions/mv2/samples
 [4]: https://support.google.com/chrome/answer/177873
 [5]: https://support.google.com/chrome/answer/1385029

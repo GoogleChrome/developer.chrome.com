@@ -50,10 +50,7 @@ other examples and for help in viewing the source code, see [Samples][14].
 [8]: /docs/extensions/tabs#type-Tab
 [9]: /docs/extensions/tabs#method-query
 [10]: /docs/extensions/mv2/event_pages
-[11]:
-  https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/windows/
-[12]:
-  https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/tabs/inspector/tabs_api.html
-[13]:
-  https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/tabs/inspector/
+[11]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/windows/
+[12]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/tabs/inspector/tabs_api.html
+[13]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/tabs/inspector/
 [14]: /docs/extensions/mv2/samples

@@ -40,8 +40,6 @@ directory][9]. For other examples and for help in viewing the source code, see [
 [5]: #tt_keyword
 [6]: #tt_keyword_generated
 [7]: #tt_keyword
-[8]:
-  https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/history/
-[9]:
-  https://chromium.googlesource.com/chromium/src/+/master/chrome/test/data/extensions/api_test/history/
+[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/history/
+[9]: https://chromium.googlesource.com/chromium/src/+/master/chrome/test/data/extensions/api_test/history/
 [10]: /docs/extensions/mv2/samples
