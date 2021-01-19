@@ -19,10 +19,7 @@ import 'wicg-inert';
 
 export const activateSearch = store.action(() => {
   // Scroll the window to the top of the page.
-  // By default we use smooth scrolling in our CSS so we need to disable it.
-  // Otherwise the window won't scroll all the way up to 0.
   const html = /** @type {HTMLElement} */ (document.querySelector('html'));
-  html.style.scrollBehavior = 'auto';
   html.scrollTop = 0;
 
   // Mark all interactive elements as inert so the user can't tab out of the
@@ -38,11 +35,6 @@ export const activateSearch = store.action(() => {
 });
 
 export const deactivateSearch = store.action(() => {
-  // Allow the page to smooth scroll again.
-  /** @type {HTMLElement} */ (document.querySelector(
-    'html'
-  )).style.scrollBehavior = '';
-
   // Re-enable interactive elements now that the search modal is closed.
   document.querySelectorAll('[data-search-inert]').forEach(item => {
     /** @type {HTMLElement} */ (item).inert = false;
