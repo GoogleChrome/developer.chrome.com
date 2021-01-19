@@ -86,7 +86,7 @@ isn't new; browsers have done this for many years.
 
 ### Throttling
 
-This happens to timers that are scheduled when _Minimal throttling_ doesn't
+This happens to timers that are scheduled when _minimal throttling_ doesn't
 apply, and _any_ of the following is true:
 
 - The _chain count_ is less than 5.
@@ -233,7 +233,7 @@ making it easier to see the impact of the throttling.
 Since timers are a source of excessive CPU use, we're going to continue to look at
 ways we can throttle them without breaking web content, and APIs we can
 add/change to meet use-cases. Personally, I'd like to eliminate the need for
-`animationInterval` in favour of efficient low-frequency animation callbacks. If
+`animationInterval` in favor of efficient low-frequency animation callbacks. If
 you have any questions, please [reach out to me on
 Twitter](https://twitter.com/jaffathecake/)!
 
