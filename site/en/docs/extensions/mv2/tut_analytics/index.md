@@ -163,5 +163,4 @@ A sample extension that uses these techniques is available in the Chromium sourc
 [6]: /docs/extensions/mv2/tabs
 [7]: /docs/extensions/mv2/tut_debugging
 [8]: https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
-[9]:
-  https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/tutorials/analytics/
+[9]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/tutorials/analytics/

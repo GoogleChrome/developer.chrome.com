@@ -27,5 +27,5 @@ You can find a simple example of using the cookies API in the
 the source code, see [Samples][3].
 
 [1]: /docs/extensions/mv2/declare_permissions
-[2]: https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/cookies/
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/cookies/
 [3]: /docs/extensions/mv2/samples

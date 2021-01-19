@@ -227,8 +227,7 @@ host. Then [load the app][27] and interact with the app. Run `uninstall_host.bat
 [21]: #native-messaging-host-location
 [22]: #native-messaging-host-protocol
 [23]: https://msdn.microsoft.com/en-us/library/tw4k6df8.aspx
-[24]:
-  https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/nativeMessaging
+[24]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/nativeMessaging
 [25]: https://developer.chrome.com/extensions/examples/api/nativeMessaging/app.zip
 [26]: https://developer.chrome.com/extensions/examples/api/nativeMessaging/host.zip
 [27]: getstarted#unpacked
