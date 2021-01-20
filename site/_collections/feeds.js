@@ -40,7 +40,7 @@ module.exports = collection => {
       blog.push(post);
     }
 
-    // Check if post belongs to suuported tags
+    // Check if post belongs to supported tags
     for (const tag of tags) {
       let postTags = [];
 
