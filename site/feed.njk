@@ -12,15 +12,15 @@ pagination:
   {% set absoluteFeedUrl %}{{ site.url }}{% if feed.url %}{{ feed.url | url }}{% endif  %}{% endset %}
   <title>{{ feed.title or site.title }}</title>
   <subtitle>{{ feed.description or site.description }}</subtitle>
-  <link href="{{ absoluteFeedUrl }}" rel="self"/>
-  <link>{{ site.url }}{{ feed.permalink | url }}</link>
+  <link href="{{ site.url }}{{ feed.permalink | url }}" rel="self"/>
+  <link href="{{ absoluteFeedUrl }}" />
   <updated>{{ feed.items | rssLastUpdatedDate }}</updated>
   <id>{{ absoluteFeedUrl }}</id>
   {% for item in feed.items %}
   {% set absolutePostUrl %}{{ site.url }}{{ item.url | url }}{% endset %}
   <entry>
     <title>{{ item.data.title }}</title>
-    <link>{{ absolutePostUrl }}</link>
+    <link href="{{ absolutePostUrl }}" />
     <updated>{{ item.date | rssDate }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content type="html">{{ item.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
