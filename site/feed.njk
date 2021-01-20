@@ -16,6 +16,9 @@ pagination:
   <link href="{{ absoluteFeedUrl }}" />
   <updated>{{ feed.items | rssLastUpdatedDate }}</updated>
   <id>{{ absoluteFeedUrl }}</id>
+  <author>
+    <name>{{ site.title }}</name>
+  </author>
   {% for item in feed.items %}
   {% set absolutePostUrl %}{{ site.url }}{{ item.url | url }}{% endset %}
   <entry>
@@ -23,6 +26,18 @@ pagination:
     <link href="{{ absolutePostUrl }}" />
     <updated>{{ item.date | rssDate }}</updated>
     <id>{{ absolutePostUrl }}</id>
+    {% if item.data.authors.length %}
+      {% for authorId in item.data.authors %}
+      {% set author = authorsData[authorId] %}
+      <author>
+        <name>{{ author.name.given }} {{ author.name.family }}</name>
+      </author>
+      {% endfor %}
+    {% else %}
+    <author>
+      <name>{{ site.title }}</name>
+    </author>
+    {% endif  %}
     <content type="html">{{ item.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {% endfor %}
