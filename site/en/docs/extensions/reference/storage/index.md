@@ -122,7 +122,7 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
 });
 ```
 
-[1]: https://developer.mozilla.org/en/DOM/Storage#localStorage
+[1]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [2]: /docs/extensions/mv2/manifest/incognito
 [3]: /docs/extensions/mv2/manifest/storage
 [4]: /docs/extensions/mv2/tabs
