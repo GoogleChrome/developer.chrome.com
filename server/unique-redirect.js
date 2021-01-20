@@ -30,7 +30,6 @@ const express = require('express');
  * @return {string}
  */
 const simplifySegment = base => {
-  return base;
   base = base.toLowerCase();
   base = base.replace(/[^a-z0-9]/g, '');
   return base;
@@ -92,6 +91,13 @@ async function buildHandler() {
   const roots = {
     '.': {},
   };
+
+  /**
+   * @param {string} dir real directory to insert at
+   * @param {string} unprocessed final target url
+   * @param {string} key to use in dir, i.e., simplified version
+   * @param {boolean} force whether this file exists _here_ and must win
+   */
   const insertRoot = (dir, target, key, force = false) => {
     if (!(dir in roots)) {
       roots[dir] = {};
@@ -112,16 +118,12 @@ async function buildHandler() {
     /** @type {string} */
     let previous;
 
-    console.info('>>>>', p);
     const key = simplifySegment(path.basename(p));
-    //    console.warn('adding', p, 'basename', basename);
 
     restart: for (;;) {
       previous = path.dirname(p);
-      console.warn('ITER');
 
       for (const dir of iterateDirs(p)) {
-        console.debug('...', dir);
         const check = roots[dir] ?? {};
         if (!(key in check)) {
           previous = dir;
@@ -134,12 +136,15 @@ async function buildHandler() {
           break;
         }
 
+        // We collided with something that already exists here. Move _that_ entry into its child
+        // dierctory, mark its position with a tombstone, and then restart inserting the original
+        // iteration as we might need to move this several times.
         const childDir = leftMostDir(path.relative(dir, other));
         const insertInto = path.join(dir, childDir);
-        check[key] = '';
-
-        const childKey = simplifySegment(path.basename(insertInto));
+        const childKey = simplifySegment(path.basename(other));
         insertRoot(insertInto, other, childKey);
+
+        check[key] = '';
         continue restart;
       }
       break;
@@ -149,10 +154,11 @@ async function buildHandler() {
     if (previous === path.dirname(p)) {
       force = true;
     }
-    console.warn('inserting into', previous, 'force', force);
     insertRoot(previous, p, key, force);
   }
 
+  // Clean up the redirs collection by removing all empty tombstones. They existed just to help
+  // lay out all possible redirects.
   for (const root of Object.keys(roots)) {
     const redirs = roots[root];
 
@@ -162,12 +168,18 @@ async function buildHandler() {
       }
     }
 
-    if (Object.keys(redirs).length === 0) {
+    const redirsAtRoot = Object.keys(redirs).length;
+    if (redirsAtRoot === 0) {
       delete roots[root];
+      continue;
+    }
+
+    // TODO(samthor): Debugging information only.
+    console.warn(root, '=>', redirsAtRoot);
+    if (redirsAtRoot === 1) {
+      console.info(redirs);
     }
   }
-
-  console.warn('got all', roots);
 }
 
 /**
