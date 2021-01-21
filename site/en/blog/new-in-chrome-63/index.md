@@ -95,8 +95,8 @@ where swiping down at the top of the page, does a hard reload.
 
 {# TODO(petele): video element, float-left|right, auto-play #}
 {% columns %}
-{% video "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZxYy6AnumGb3lwTGN6Wq.mp4" %}
-{% video "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wyoZdIhPdQ8em6ibRdg4.mp4" %}
+{% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZxYy6AnumGb3lwTGN6Wq.mp4" %}
+{% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wyoZdIhPdQ8em6ibRdg4.mp4" %}
 {% endcolumns %}
 
 In some cases, you might want to override that behavior and provide your own

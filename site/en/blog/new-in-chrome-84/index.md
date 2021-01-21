@@ -96,7 +96,7 @@ for complete details.
 
 {# TODO(petele): video element, float-right, auto-play #}
 <figure class="float-right">
-{% video [
+{% video src=[
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/7lVmOTOK52nmjWxrtL8n.webm",
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/EIl1SqvNe8jccnRgTZ3l.mp4"
   ]
@@ -219,7 +219,7 @@ to learn more about the API, and how you can start experimenting with it today.
 
 {# TODO(petele): video element, float-right, auto-play #}
 <figure class="float-right">
-{% video "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/kKpqmySxraoCo5aYUCeW.mp4" %}
+{% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/kKpqmySxraoCo5aYUCeW.mp4" %}
 </figure>
 
 And Web Assembly SIMD starts an [origin trial][ot-simd]. It introduces

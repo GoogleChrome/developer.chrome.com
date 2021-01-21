@@ -77,7 +77,7 @@ for more details, including how to do feature detection for it.
 
 {# TODO(petele): video element, float-right, auto-play #}
 <figure class="float-right">
-{% video [
+{% video src=[
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wEW1cwII7SQMcQMOYA0E.webm",
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/GX39vDqBQeWIVByOb5m0.mp4"
 ]%}

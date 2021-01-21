@@ -38,7 +38,7 @@ what’s new for developers in Chrome 76!
 
 {# TODO(petele): video element, float-right, auto-play #}
 <figure class="float-right">
-{% video [
+{% video src=[
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/PK7Qq8FyeMg2DDRL3XQT.webm",
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/bh7RkIIECjmXkIdToJdq.mp4"
 ]%}

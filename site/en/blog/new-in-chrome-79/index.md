@@ -41,7 +41,7 @@ App, you’ve probably noticed the annoying white circle around the icon.
 
 {# TODO(petele): video element, float-right, auto-play #}
 <figure class="float-right">
-{% video [
+{% video src=[
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/cjPOLN1GYdcOzAQfLer9.webm",
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/sgGdDrY5eBVo43VP2iyW.mp4"
   ]

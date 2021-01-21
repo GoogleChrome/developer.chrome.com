@@ -49,7 +49,7 @@ is no longer on the standards track.
 !!!
 
 <figure class="float-right">
-  {% video "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/pqZHxe4Ggn62Lf5dvJbK.mp4" %}
+  {% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/pqZHxe4Ggn62Lf5dvJbK.mp4" %}
   <figcaption>
     <a href="https://snap.glitch.me/carousel.html"
        target="_blank">View demo</a> |
