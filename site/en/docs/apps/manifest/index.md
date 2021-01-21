@@ -81,7 +81,6 @@ discusses each field.
   "requirements": {...},
   "sandbox": [...],
   "short_name": "Short Name",
-  "signature": ...,
   "sockets": {
     "tcp": {
       "connect": "*"

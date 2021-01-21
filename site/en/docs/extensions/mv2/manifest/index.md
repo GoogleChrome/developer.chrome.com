@@ -88,8 +88,6 @@ discusses each field.
   <span class="token property">"<a href="/docs/extensions/mv2/manifest/requirements">requirements</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv2/manifest/sandbox">sandbox</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv2/manifest/name">short_name</a>"</span><span class="token operator">:</span> <span class="token string">"Short Name"</span><span class="token punctuation">,</span>
-  <span class="token property">"signature"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
-  <span class="token property">"spellcheck"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv2/manifest/storage">storage</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"managed_schema"</span><span class="token operator">:</span> <span class="token string">"schema.json"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
