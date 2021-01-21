@@ -20,14 +20,14 @@ in your [manifest file][manifest].
 ## Usage
 
 You can use the `chrome.scripting` API to inject JavaScript and CSS into
-websites, similar to what can be achieved with
-[content scripts][contentScripts]. With the `chrome.scripting` API, extensions
-can make decisions at runtime.
+websites. This is similar to what you can do with
+[content scripts][contentScripts], but by using the `chrome.scripting` API,
+extensions can make decisions at runtime.
 
-### Injection Targets
+### Injection targets
 
-You can use the `InjectionTarget` to specify an appropriate target to inject
-JavaScript or CSS into.
+You can use the `target` parameter to specify a target to inject JavaScript or
+CSS into.
 
 The only required field is `tabId`. By default, an injection will run in the
 main frame of the specified tab.
@@ -55,7 +55,7 @@ chrome.scripting.executeScript(
     () => { ... });
 ```
 
-You can also inject in specific frames of a tab by specifying individual frame
+You can also inject into specific frames of a tab by specifying individual frame
 IDs. For more information on frame IDs, see the
 [webNavigation API][webNavigation].
 
@@ -70,9 +70,11 @@ chrome.scripting.executeScript(
     () => { ... });
 ```
 
-Note that you cannot specify both the `frameIds` and `allFrames` properties.
+!!!.aside
+You cannot specify both the `frameIds` and `allFrames` properties.
+!!!
 
-### Injected Code
+### Injected code
 
 Extensions can specify the code to be injected either via an external file or a
 runtime variable.
@@ -93,11 +95,11 @@ chrome.scripting.executeScript(
     () => { ... });
 ```
 
-!!!.aside.warning
+!!!.aside
 Note: Currently, a maximum of a single file is supported.
 !!!
 
-#### Runtime Functions
+#### Runtime functions
 
 When injecting JavaScript with `scripting.executeScript()`, you can specify a
 function to be executed instead of a file. This function should be a function
@@ -140,14 +142,11 @@ chrome.scripting.executeScript(
 You can work around this by using the [Storage API][storage] or by
 [passing messages][messaging].
 
-The Chromium team is working on providing more capabilities in the future.
-
-#### Runtime Strings
+#### Runtime strings
 
 If injecting CSS within a page, you can also specify a string to be used in the
-`css` property. Note that this option is only available for
-`scripting.insertCSS()`; you cannot execute a string via
-`scripting.executeScript()`.
+`css` property. This option is only available for `scripting.insertCSS()`; you
+can't execute a string using `scripting.executeScript()`.
 
 ```js
 const css = 'body { background-color = "red"; }';
@@ -160,7 +159,7 @@ chrome.scripting.insertCSS(
     () => { ... });
 ```
 
-### Handling Results
+### Handling results
 
 The results of executing JavaScript are passed to the extension. A single
 result is included per-frame. The main frame is guaranteed to be the first
