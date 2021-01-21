@@ -149,7 +149,7 @@ or check out the [docs](https://developers.google.com/web/android/trusted-web-ac
 And of course there’s plenty more.
 
 * To conform to a change in the HTML standard, anchor tags with `target="_blank"`
-  will now imply `rel="no-opener"` by default, this helps prevent
+  will now imply `rel="noopener"` by default, this helps prevent
   tab-napping attacks.
 * Most operating systems enable mouse acceleration by default, but that can be
   a problem for some games. In Chrome 88, the Pointer Lock API allows you to
@@ -163,7 +163,7 @@ And of course there’s plenty more.
 ## Further reading
 
 This covers only some of the key highlights. Check the links below for
-additional changes in Chrome 87.
+additional changes in Chrome 88.
 
 * [What's new in Chrome DevTools (88)](https://developers.google.com/web/updates/2020/11/devtools)
 * [Chrome 88 deprecations & removals](https://developers.google.com/web/updates/2020/12/chrome-88-deps-rems)
