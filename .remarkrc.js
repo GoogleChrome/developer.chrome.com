@@ -35,6 +35,7 @@ exports.plugins = [
   ['lint-table-pipes', false],
   ['lint-unordered-list-marker-style', false],
   ['lint-no-literal-urls', false],
+  ['lint-final-definition', false],
 
   // Third-party plugins.
   // Checks if headings are accidentally duplicated
