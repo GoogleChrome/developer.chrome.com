@@ -5,7 +5,7 @@ description: >
   support for maskable icons. You can now create immersive experiences with
   the WebXR Device API. Origin trials start for the Wake Lock API, and the
   rendersubtree attribute. And all of the videos from Chrome Dev Summit
-  2019 are now online. Let’s dive in and see what’s new for developers in
+  2019 are now online. Let's dive in and see what's new for developers in
   Chrome 79!
 layout: 'layouts/blog-post.njk'
 date: 2019-12-10
@@ -31,13 +31,13 @@ Chrome 79 is rolling out now!
 * Videos from the [Chrome DevSummit](#cds2019) are now online.
 * And plenty more.
 
-I’m [Pete LePage](https://petelepage.com/), let’s dive in and see what’s
+I'm [Pete LePage](https://petelepage.com/), let's dive in and see what's
 new for developers in Chrome 79!
 
 ## Maskable Icons {: #maskable-icons }
 
-If you’re running Android O or later, and you’ve installed a Progressive Web
-App, you’ve probably noticed the annoying white circle around the icon.
+If you're running Android O or later, and you've installed a Progressive Web
+App, you've probably noticed the annoying white circle around the icon.
 
 {# TODO(petele): video element, float-right, auto-play #}
 <figure class="float-right">
@@ -49,10 +49,10 @@ App, you’ve probably noticed the annoying white circle around the icon.
 </figure>
 
 Thankfully, Chrome 79 now supports maskable icons for installed Progressive
-Web Apps.You’ll need to design your icon to fit within the safe zone -
-essentially a circle with a diameter that’s 80% of the canvas.
+Web Apps.You'll need to design your icon to fit within the safe zone -
+essentially a circle with a diameter that's 80% of the canvas.
 
-Then, in the web app manifest, you’ll need to add a new `purpose` property to
+Then, in the web app manifest, you'll need to add a new `purpose` property to
 the icon, and set its value to `maskable`.
 
 <br style="clear:both;">
@@ -74,7 +74,7 @@ the icon, and set its value to `maskable`.
 
 Tiger Oakes has a great post on CSS Tricks - [Maskable Icons: Android Adaptive
 Icons for Your PWA][oakes-maskable] with all of the details, and has a great
-tool you can use for testing your icons to make sure they’ll fit.
+tool you can use for testing your icons to make sure they'll fit.
 
 [oakes-maskable]: https://css-tricks.com/maskable-icons-android-adaptive-icons-for-your-pwa/
 
@@ -107,7 +107,7 @@ Opting into an origin trial allows you to build demos and prototypes that
 your beta testing users can try for the duration of the trial without
 requiring them to flip any special flags in Chrome.
 
-There’s more info on origin trials in the
+There's more info on origin trials in the
 [Origin Trials Guide for Web Developers][ot-for-web-devs]. You can see a list
 of active origin trials, and sign up for them on the
 [Chrome Origin Trials][ot-listing] page.
@@ -122,8 +122,8 @@ deck open on a single slide for too long, the screensaver kicks in. Before you
 can continue, you need to unlock your computer. Ugh.
 
 But, with the new Wake Lock API, a page can request a lock, and prevent the
-screen from dimming or the screensaver from kicking in. It’s perfect for
-Slides, but it’s also helpful for things like recipe sites - where you might
+screen from dimming or the screensaver from kicking in. It's perfect for
+Slides, but it's also helpful for things like recipe sites - where you might
 want to keep the screen on while you follow the instructions.
 
 To request a wake lock, you need to call `navigator.wakeLock.request()`, and
@@ -169,7 +169,7 @@ More details are at [web.dev/wakelock](https://web.dev/wakelock).
 
 ### `rendersubtree` attribute {: #rendersubtree }
 
-There are times when you don’t want part of the DOM to render immediately.
+There are times when you don't want part of the DOM to render immediately.
 For example scrollers with a large amount of content, or tabbed UIs where
 only some of the content is visible at any given time.
 
@@ -212,7 +212,7 @@ additional changes in Chrome 78.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 80 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 80 is released, I'll be right
+here to tell you -- what's new in Chrome!

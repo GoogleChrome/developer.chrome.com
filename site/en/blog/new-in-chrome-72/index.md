@@ -3,8 +3,8 @@ title: New in Chrome 72
 description: >
   In Chrome 72, creating public class fields in JavaScript is now much
   cleaner, you can see if a page has been activated with the new User
-  Activation API, localizing lists becomes way easier, and there’s plenty
-  more. Let’s dive in and see what’s new for developers in Chrome 72!
+  Activation API, localizing lists becomes way easier, and there's plenty
+  more. Let's dive in and see what's new for developers in Chrome 72!
 layout: 'layouts/blog-post.njk'
 date: 2019-01-29
 authors:
@@ -26,12 +26,12 @@ In Chrome 72, we've added support for:
   [User Activation API](#user-activation)
 * Localizing lists becomes way easier with the [`Intl.format()`](#intl-format) API.
 
-And there’s [plenty more](#more)!
+And there's [plenty more](#more)!
 
-I’m [Pete LePage](https://twitter.com/petele). Let’s dive in and see
-what’s new for developers in Chrome 72!
+I'm [Pete LePage](https://twitter.com/petele). Let's dive in and see
+what's new for developers in Chrome 72!
 
-### Change log
+## Change log
 
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 72.
@@ -76,7 +76,7 @@ console.log(counter.value);
 
 Support for private class fields is in the works!
 
-More details are in Mathias’s article on
+More details are in Mathias's article on
 [class fields](https://developers.google.com/web/updates/2018/12/class-fields)
 for more details.
 
@@ -86,7 +86,7 @@ for more details.
 
 Remember when sites could automatically play sound as soon as the page loaded?
 You scramble to hit the mute key, or figure out which tab it was, and close it.
-That’s why some APIs require activation via a user gesture before they’ll work.
+That's why some APIs require activation via a user gesture before they'll work.
 Unfortunately, browsers handle activation in different ways.
 
 <figure class="float-right">
@@ -97,10 +97,10 @@ Unfortunately, browsers handle activation in different ways.
 </figure>
 
 Chrome 72 introduces User Activation v2, which simplifies user activation for
-all gated APIs. It’s based on a new [specification][ua-spec] that aims to
+all gated APIs. It's based on a new [specification][ua-spec] that aims to
 standardize how activation works across all browsers.
 
-There’s a new `userActivation` property on both `navigator` and `MessageEvent`,
+There's a new `userActivation` property on both `navigator` and `MessageEvent`,
 that has two properties: `hasBeenActive` and `isActive`:
 
 * `hasBeenActive` indicates if the associated window has ever seen a user
@@ -115,12 +115,12 @@ More details are in [Making user activation consistent across APIs][ua-doc]
 
 ## Localizing lists of things with `Intl.format` {: #intl-format }
 
-I love the `Intl` APIs, they’re super helpful for localizing content into
-other languages! In Chrome 72, there’s a new `.format()` method that makes
+I love the `Intl` APIs, they're super helpful for localizing content into
+other languages! In Chrome 72, there's a new `.format()` method that makes
 rendering lists easier. Like other `Intl` APIs, it shifts the burden to the
 JavaScript engine, without sacrificing performance.
 
-Initialize it with the locale you want, then call `format`, and it’ll use the
+Initialize it with the locale you want, then call `format`, and it'll use the
 correct words and syntax. It can do conjunctions - which adds the localized
 equivalent of *and* (and look at those beautiful oxford commas). It can do
 disjunctions - adding the local equivalent of *or*. And by providing some
@@ -141,7 +141,7 @@ post for more details!
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 72 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 * Chrome 72 changes the behavior of `Cache.addAll()` to better match the spec.
   Previously, if there were duplicate entries in the same call, later requests
@@ -156,7 +156,7 @@ there’s plenty more.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 73 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 73 is released, I'll be right
+here to tell you -- what's new in Chrome!

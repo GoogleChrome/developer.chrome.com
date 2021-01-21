@@ -38,9 +38,9 @@ Make sure to avoid the following common mistakes:
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/H5cmSK3JieUkRBdPw9oj.jpg", alt="rule of two", className="float-left" %}
 
-* **Don’t parse or interpret untrustworthy data using C++ in the
+* **Don't parse or interpret untrustworthy data using C++ in the
   browser process.**
-* Don’t trust the origin a renderer claims to represent. The browser’s
+* Don't trust the origin a renderer claims to represent. The browser's
   [RenderFrameHost][render-frame-host] can be used to get the current origin securely.
 
 <br style="clear: both;" />

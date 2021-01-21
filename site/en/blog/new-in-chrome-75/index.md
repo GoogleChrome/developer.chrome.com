@@ -1,10 +1,10 @@
 ---
 title: New in Chrome 75
 description: >
-  Chrome 75 is rolling out now. There’s a new way to reduce latency on
+  Chrome 75 is rolling out now. There's a new way to reduce latency on
   canvas elements. Web apps can now share files to other installed apps using
   the system level share sheet. All of talks from Google I/O are on our
-  YouTube channel. And plenty more. Let’s dive in and see what’s new for
+  YouTube channel. And plenty more. Let's dive in and see what's new for
   developers in Chrome 75!
 layout: 'layouts/blog-post.njk'
 date: 2019-06-04
@@ -30,10 +30,10 @@ In Chrome 75, we've added support for:
 * Google I/O 2019 is a wrap and all of [talks](#io-talks) are on our
   YouTube channel.
 
-I’m [Pete LePage](https://twitter.com/petele), let’s dive in and see
-what’s new for developers in Chrome 75!
+I'm [Pete LePage](https://twitter.com/petele), let's dive in and see
+what's new for developers in Chrome 75!
 
-### Change log
+## Change log
 
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 75.
@@ -68,7 +68,7 @@ const opts = { desynchronized: true };
 const ctx = canvas.getContext('2d', opts);
 ```
 
-Check out Joe’s article [Low-latency rendering with the desynchronized hint][ll-desync]
+Check out Joe's article [Low-latency rendering with the desynchronized hint][ll-desync]
 for more details, including how to do feature detection for it.
 
 [ll-desync]: https://developers.google.com/web/updates/2019/05/desynchronized
@@ -87,14 +87,14 @@ The [Web Share API](https://developers.google.com/web/updates/2016/09/navigator-
 into the share service provided by the OS, making it easy to share web pages
 and apps with other installed apps on the user's device.
 
-In Chrome 75, the Web Share API now supports the sharing of files! I’m
+In Chrome 75, the Web Share API now supports the sharing of files! I'm
 particularly excited about this because it makes it way easier for apps to
 share photos, videos and more. Squoosh is adding support for this to share a
-file once you’ve finished compressing it. The Web Share API currently supports
+file once you've finished compressing it. The Web Share API currently supports
 the sharing of [audio files, images, videos, and text documents][web-share-ok].
 
-It’s best to use feature detection to see if the Web Share API is supported,
-and fallback to your traditional mechanism if it’s not. And you can use
+It's best to use feature detection to see if the Web Share API is supported,
+and fallback to your traditional mechanism if it's not. And you can use
 `navigator.canShare` to check if file sharing is supported.
 
 <br style="clear:both;">
@@ -145,21 +145,21 @@ not allowed. So literals such as `3._14`, `_2.71` or `1.6__2` are illegal.
 
 ## Google I/O 2019 is a wrap {: #io-talks }
 
-If you didn’t make it to I/O, or maybe you did, and didn’t see all the talks,
-they’re all up on the [Chrome Developers YouTube channel][cr-dev-yt], in the
+If you didn't make it to I/O, or maybe you did, and didn't see all the talks,
+they're all up on the [Chrome Developers YouTube channel][cr-dev-yt], in the
 [Web at Google I/O 2019 playlist](https://bit.ly/web-at-io2019).
 
-* Tom and I presented [“Unlocking new capabilities for the web”][yt-unlock]
+* Tom and I presented ["Unlocking new capabilities for the web"][yt-unlock]
   covering some of the amazing new capabilities that are landing in browsers
   this year.
 * Addy and Katie covered some cool performance tips and tricks in
-  [“Speed at Scale”][yt-speed].
+  ["Speed at Scale"][yt-speed].
 * Elizabeth and Paul dove into some cool devtools in
-  [“Demystifying Speed Tooling”][yt-tooling].
-* And in [“Build Fast and Smooth Web Apps from Feature Phone to Desktop”][yt-proxx]
+  ["Demystifying Speed Tooling"][yt-tooling].
+* And in ["Build Fast and Smooth Web Apps from Feature Phone to Desktop"][yt-proxx]
   Mariko showed us how she and her crew built [Proxx][proxx]
   to work on any device, from feature phone to smart phone to desktop.
-  If you haven’t tried [Proxx][proxx] yet, it’s a super fun mine sweeper clone.
+  If you haven't tried [Proxx][proxx] yet, it's a super fun mine sweeper clone.
 
 [cr-dev-yt]: https://youtube.com/user/ChromeDevelopers/
 [yt-unlock]: https://www.youtube.com/watch?v=GSiUzuB-PoI
@@ -172,10 +172,10 @@ they’re all up on the [Chrome Developers YouTube channel][cr-dev-yt], in the
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 76 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 76 is released, I'll be right
+here to tell you -- what's new in Chrome!
 
 ### Photo Credits
 

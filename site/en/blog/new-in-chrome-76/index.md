@@ -5,8 +5,8 @@ description: >
   media query, bringing dark mode to websites. An install button in the
   omnibox to make installation of Progressive Web Apps on desktop easier.
   A way to prevent the mini-infobar from appearing on mobile. Increases the
-  frequency with which WebAPKs are updated. And plenty more. Let’s dive in
-  and see what’s new for developers in Chrome 76!
+  frequency with which WebAPKs are updated. And plenty more. Let's dive in
+  and see what's new for developers in Chrome 76!
 layout: 'layouts/blog-post.njk'
 date: 2019-07-30
 authors:
@@ -31,8 +31,8 @@ In Chrome 76, we've added support for:
 * More frequent [updates of WebAPKs](#update-webapk).
 * And plenty [more](#more).
 
-I’m [Pete LePage](https://twitter.com/petele), let’s dive in and see
-what’s new for developers in Chrome 76!
+I'm [Pete LePage](https://twitter.com/petele), let's dive in and see
+what's new for developers in Chrome 76!
 
 ## PWA Omnibox Install Button {: #pwa-install }
 
@@ -51,7 +51,7 @@ called the omnibox.
 If your site meets the
 [Progressive Web App installability criteria][pwa-install-criteria], Chrome
 will show an install button in the omnibox indicating to the user that your
-PWA can be installed. If the user clicks the install button, it’s essentially
+PWA can be installed. If the user clicks the install button, it's essentially
 the same as calling `prompt()` on the `beforeinstallprompt` event;
 it shows the install dialog, making it easy for the user to install your PWA.
 
@@ -102,9 +102,9 @@ Progressive Web Apps.
 ## Faster updates to WebAPKs {: #update-webapk }
 
 When a Progressive Web App is installed on Android, Chrome automatically
-requests and installs a [Web APK][web-apk]. After it’s been installed,
+requests and installs a [Web APK][web-apk]. After it's been installed,
 Chrome periodically checks if the web app manifest has changed,
-maybe you’ve updated the icons, colors, or changed the app name, to see if
+maybe you've updated the icons, colors, or changed the app name, to see if
 a new WebAPK is required.
 
 Starting in Chrome 76, Chrome will check the manifest more frequently;
@@ -143,11 +143,11 @@ and a dark mode.
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 76 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 ### `Promise.allSettled()`
 
-Personally, I’m really excited about `Promise.allSettled()`. It’s similar to
+Personally, I'm really excited about `Promise.allSettled()`. It's similar to
 `Promise.all()`, except it waits until all of the promises are settled before
 returning.
 
@@ -166,7 +166,7 @@ await Promise.allSettled(promises);
 ### Reading blobs is easier
 
 `Blob`s are easier to read with three new methods: `text()`, `arrayBuffer()`,
-and `stream()`; this means we don’t have to create a wrapper around file
+and `stream()`; this means we don't have to create a wrapper around file
 reader any more!
 
 ```js
@@ -188,7 +188,7 @@ return new Promise((resolve) => {
 
 ### Image support in the async clipboard API
 
-And, we’ve added support for
+And, we've added support for
 [images to the Asynchronous Clipboard API][img-async-clipboard], making it
 easy to programmatically copy and paste images.
 
@@ -209,7 +209,7 @@ additional changes in Chrome 76.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 77 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 77 is released, I'll be right
+here to tell you -- what's new in Chrome!

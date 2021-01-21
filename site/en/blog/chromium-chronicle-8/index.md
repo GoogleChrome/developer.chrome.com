@@ -19,7 +19,7 @@ tags:
 Debugging memory safety errors, such as use-after-frees or buffer overflows,
 can be difficult. Tools like AddressSanitizer (ASan) are helpful to pinpoint
 memory errors in unit tests and fuzzers, but many bugs only manifest after
-deployment to users where ASan’s overhead is prohibitively high.
+deployment to users where ASan's overhead is prohibitively high.
 
 **[GWP-ASan][gwp-asan] is a heap-only memory error detector designed to be
 used in the wild.** It detects use-after-frees, buffer overflows/underflows,

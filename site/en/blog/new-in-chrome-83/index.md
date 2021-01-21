@@ -3,9 +3,9 @@ title: New in Chrome 83
 description: >
   Chrome 83 is rolling out now! It adds support for trusted types, which help
   prevent cross site scripting vulnerabilities. Form elements get an important
-  make-over. There’s a new way to detect memory leaks. And the native file
-  system API starts a new origin trial with added functionality. Let’s dive
-  in and see what’s new for developers in Chrome 83!
+  make-over. There's a new way to detect memory leaks. And the native file
+  system API starts a new origin trial with added functionality. Let's dive
+  in and see what's new for developers in Chrome 83!
 layout: 'layouts/blog-post.njk'
 date: 2020-05-19
 authors:
@@ -26,7 +26,7 @@ Here's what you need to know:
 * [Trusted types](#trusted-types) help prevent cross site scripting
   vulnerabilities.
 * Form elements get an important [make-over](#forms).
-* There’s a new way to [detect memory leaks](#memory).
+* There's a new way to [detect memory leaks](#memory).
 * The [native file system API](#nfs) starts a new origin trial with added
   functionality.
 * There are new [cross-origin policies](#coop)
@@ -35,8 +35,8 @@ Here's what you need to know:
   a great user experience on the web.
 * And [more](#more).
 
-I’m [Pete LePage](https://twitter.com/petele), working and shooting from home,
-let’s dive in and see what’s new for developers in Chrome 83!
+I'm [Pete LePage](https://twitter.com/petele), working and shooting from home,
+let's dive in and see what's new for developers in Chrome 83!
 
 !!!.aside
 App shortcuts were supposed to be landing in Chrome 83, but were
@@ -52,7 +52,7 @@ vulnerabilities, because they require you to process the data before
 passing it into a potentially dangerous function.
 
 Take `innerHTML` for example, with trusted types turned on, if I try to pass
-a string, it'll fail with a TypeError because the browser doesn’t know if it
+a string, it'll fail with a TypeError because the browser doesn't know if it
 can trust the string.
 
 ```js
@@ -80,14 +80,14 @@ img.src = 'xyz.jpg';
 elem.appendChild(img);
 ```
 
-Before you turn on trusted types, you’ll want to identify and fix any
+Before you turn on trusted types, you'll want to identify and fix any
 violations using a `report-only` CSP header.
 
 ```http
 Content-Security-Policy-Report-Only: require-trusted-types-for 'script'; report-uri //example.com
 ```
 
-Then once you’ve got everything buttoned up, you can turn it on properly.
+Then once you've got everything buttoned up, you can turn it on properly.
 Complete details are in
 [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types][wd-tt]
 on web.dev.
@@ -115,7 +115,7 @@ number of CSS rules just to get a consistent look across devices.
 </figure>
 {% endcolumns %}
 
-I’ve been really impressed by the work Microsoft has been doing to modernize
+I've been really impressed by the work Microsoft has been doing to modernize
 the appearance of form controls. Beyond the nicer visual style, they bring
 better touch support, and better accessibility, including improved keyboard
 support!
@@ -177,14 +177,14 @@ async function writeURLToFile(fileHandle, url) {
 }
 ```
 
-Writable streams make it much easier to write to a file, and because it’s a
+Writable streams make it much easier to write to a file, and because it's a
 stream, you can easily pipe responses from one stream to another.
 
 Saving file handles to IndexedDB allows you to store state, or remember
 which files a user was working on. For example keep a list of recently
 edited files, open the last file that the user was working on, and so on.
 
-You’ll need a new origin trial token to use these features, so check out my
+You'll need a new origin trial token to use these features, so check out my
 updated article
 [The Native File System API: Simplifying access to local files][wd-nfs]
 on web.dev with all the details, and how to get your new origin trial token.
@@ -211,7 +211,7 @@ complete details.
 
 Measuring the quality of user experience has many facets. While some aspects
 of user experience are site and context specific, there is a common set of
-signals — "**Core Web Vitals**" — that is critical to all web experiences.
+signals—"**Core Web Vitals**"—that is critical to all web experiences.
 Such [core user experience needs][wd-ucpm] include loading experience,
 interactivity, and visual stability of page content, and combined are the
 foundation of the 2020 Core Web Vitals.
@@ -267,10 +267,10 @@ additional changes in Chrome 83.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and I **need** a hair cut, but as soon as Chrome 84 is
-released, I’ll be right here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and I **need** a hair cut, but as soon as Chrome 84 is
+released, I'll be right here to tell you -- what's new in Chrome!
 
 [css-supports]: https://drafts.csswg.org/css-conditional-4/#dfn-support-selector
 [crb-forms]: https://blog.chromium.org/2020/03/updates-to-form-controls-and-focus.html

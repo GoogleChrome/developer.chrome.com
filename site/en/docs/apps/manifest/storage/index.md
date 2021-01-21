@@ -31,7 +31,7 @@ to enforce the policies configured by the administrator.
 The `storage.managed_schema` property indicates a file within the app that contains the policy
 schema.
 
-```
+```json
 {
   "name": "My enterprise app",
   "storage": {
@@ -61,7 +61,7 @@ published by the `storage.managed` API.
 
 ## Sample schema {: #sample }
 
-```
+```json
 {
   "type": "object",
 

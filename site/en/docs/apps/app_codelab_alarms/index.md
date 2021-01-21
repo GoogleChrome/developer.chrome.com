@@ -31,7 +31,7 @@ To preview what you will complete in this step, [jump down to the bottom of this
 
 ## Enhance your Todo app with reminders {: #overview }
 
-Enhance the Todo app by adding functionality to remind the user if they have open todos — even when
+Enhance the Todo app by adding functionality to remind the user if they have open todos—even when
 the app is closed.
 
 First, you need to add a way for the app to regularly check for uncompleted todos. Next, the app

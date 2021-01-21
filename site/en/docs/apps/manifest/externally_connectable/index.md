@@ -29,7 +29,7 @@ lose the ability to connect to your app. This may be an unintended consequence, 
 
 ## Sample manifest.json {: #manifest }
 
-```
+```json
 {
   "name": "My externally connectable app",
   "externally_connectable": {

@@ -179,7 +179,7 @@ https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
 
 ### Publishing an item to trusted testers {: #trustedtesters }
 
-```
+```text
 Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish?publishTarget=trustedTesters
 Type: POST
 Header Parameters: $TOKEN: the access token

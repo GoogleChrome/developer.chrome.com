@@ -1,6 +1,6 @@
 We use includes to inject SVG icons into our pages.
 
-```
+```text
 {% include 'icons/arrow-back.svg' %}
 ```
 

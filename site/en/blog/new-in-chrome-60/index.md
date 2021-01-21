@@ -23,12 +23,12 @@ tags:
 * The [`font-display`](#fontdisplay) allows you to control how fonts are
   rendered before they're downloaded.
 * [WebAssembly](#wasm) has landed
-* And there’s [plenty more](#more)!
+* And there's [plenty more](#more)!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/59.0.3071.80..60.0.3112.78?pretty=fuller&n=10000)
 
-I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 60!
+I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 60!
 
 ## Paint timings API {: #paint }
 
@@ -53,12 +53,12 @@ experience.
 ## CSS `font-display` property {: #fontdisplay }
 
 Web Fonts give you the ability to incorporate rich typography. But, if the
-user doesn’t already have the typeface, it needs to be downloaded,
+user doesn't already have the typeface, it needs to be downloaded,
 potentially making your site appear slow.
 
 Thankfully, most browsers will use a fallback if the font takes too long to
 download. The new `font-display` property, allows you to control how a
-downloadable font renders before it’s fully loaded.
+downloadable font renders before it's fully loaded.
 
 * **`auto`** uses whatever font display strategy the user-agent uses.
 * **`block`** gives the font face a short block period and an infinite
@@ -70,7 +70,7 @@ downloadable font renders before it’s fully loaded.
 * **`optional`** gives the font face an extremely small block period and a
   zero second swap period.
 
-It’s supported in Chrome 60 and Opera, and is in development on Firefox.
+It's supported in Chrome 60 and Opera, and is in development on Firefox.
 Check out
 [Controlling Font Performance with `font-display`](https://developers.google.com/web/updates/2016/02/font-display)
 for more information.
@@ -108,7 +108,7 @@ These are just a few of the changes in Chrome 60 for developers.
 
 Then [subscribe](https://goo.gl/6FP1a5) to our
 [YouTube channel](https://www.youtube.com/user/ChromeDevelopers/), and
-you’ll get an email notification whenever we launch a new video.
+you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 61 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 61 is released, I'll be right
+here to tell you -- what's new in Chrome!

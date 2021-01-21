@@ -18,7 +18,7 @@ One integer specifying the version of the manifest file format your package requ
 18, developers _should_ specify `2` (without quotes) to use the format as described by this
 document:
 
-```
+```json
 "manifest_version": 2
 ```
 

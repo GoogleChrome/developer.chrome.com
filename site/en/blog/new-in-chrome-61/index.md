@@ -24,12 +24,12 @@ tags:
   share dialog.
 * The [WebUSB API](#webusb) has landed, allowing web apps to access user
   permitted USB devices.
-* And there’s [plenty more](#more)!
+* And there's [plenty more](#more)!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/60.0.3112.78..61.0.3163.79?pretty=fuller&n=10000).
 
-I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 61!
+I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 61!
 
 ## JavaScript Modules {: #modules }
 
@@ -64,7 +64,7 @@ affected by modules from the links below.
 
 If you want users to be easily able to share your content on their favorite
 social network, you need to integrate sharing buttons into your site for
-each social network. It adds bloat to your page, doesn’t always fit your
+each social network. It adds bloat to your page, doesn't always fit your
 UI nicely, and means you need to include code from a third party site.
 
 The Web Share API, available today on Chrome for Android allows you to invoke
@@ -86,7 +86,7 @@ navigator.share({
 });
 ```
 
-Check out Paul’s [WebShare API Update](https://developers.google.com/web/updates/2016/10/navigator-share)
+Check out Paul's [WebShare API Update](https://developers.google.com/web/updates/2016/10/navigator-share)
 for full details and some best practices that you should be following.
 
 ## WebUSB {: #webusb }
@@ -98,10 +98,10 @@ often requiring specialized drivers.
 
 Chrome now supports the WebUSB API, allowing web apps to communicate with
 USB devices, after the user has provided their consent. To learn more about
-the security and privacy considerations and how they’re addressed, have a
+the security and privacy considerations and how they're addressed, have a
 peek at the [WebUSB spec](https://wicg.github.io/webusb/).
 
-Then, when you’re ready to dive in, take a look at Francois’
+Then, when you're ready to dive in, take a look at Francois'
 [WebUSB post](https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web)
 on updates.
 
@@ -120,7 +120,7 @@ These are just a few of the changes in Chrome 61 for developers.
 
 Then [subscribe](https://goo.gl/6FP1a5) to our
 [YouTube channel](https://www.youtube.com/user/ChromeDevelopers/), and
-you’ll get an email notification whenever we launch a new video.
+you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 62 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 62 is released, I'll be right
+here to tell you -- what's new in Chrome!

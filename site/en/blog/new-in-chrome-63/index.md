@@ -26,23 +26,23 @@ tags:
 * And we've changed the way users are prompted for
   [permission requests](#permissions)
 
-And there’s [plenty more](#more)!
+And there's [plenty more](#more)!
 
-I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 63!
+I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 63!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/62.0.3202.62..63.0.3239.84).
 
 ## Dynamic module imports {: #dynamic }
 
-Importing JavaScript modules is super handy, but it’s static, you can’t
+Importing JavaScript modules is super handy, but it's static, you can't
 import modules based on runtime conditions.
 
 Thankfully, that changes in Chrome 63, with the new
 [dynamic import syntax](https://tc39.github.io/proposal-dynamic-import/). It
 allows you to [dynamically load code](https://dynamic-import.firebaseapp.com/news)
 into modules and scripts at runtime. It can be used to lazy load a script
-only when it’s needed, improving the performance of your application.
+only when it's needed, improving the performance of your application.
 
 ```js
 button.addEventListener('click', event => {
@@ -58,13 +58,13 @@ button.addEventListener('click', event => {
 
 Instead of loading your whole application when the user first hits your page,
 you can grab the resources you need to sign in. Your initial load is small
-and screaming fast. Then once the user signs in, load the rest, and you’re
+and screaming fast. Then once the user signs in, load the rest, and you're
 good to go.
 
 ## Async iterators and generators {: #iterators-generators }
 
 Writing code that does any sort of iteration with `async` functions can be ugly.
-In fact, it’s the core part of my favorite interview coding question.
+In fact, it's the core part of my favorite interview coding question.
 
 Now, with
 [async generator functions](https://jakearchibald.com/2017/async-iterators-and-generators/)
@@ -100,7 +100,7 @@ where swiping down at the top of the page, does a hard reload.
 {% endcolumns %}
 
 In some cases, you might want to override that behavior and provide your own
-experience. That’s what [Twitter’s progressive web app](https://mobile.twitter.com)
+experience. That's what [Twitter's progressive web app](https://mobile.twitter.com)
 does, when you pull down, instead of reloading the whole the page, it simply
 adds any new tweets to the current view.
 
@@ -116,15 +116,15 @@ You can use it to:
 * Add swipe navigations
 * And more...
 
-The best part, `overscroll-behavior` doesn’t have a negative effect on your
+The best part, `overscroll-behavior` doesn't have a negative effect on your
 page performance!
 
 ## Permission UI changes {: #permissions }
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M1qtkctKj1pjGmSTbInN.jpg", alt="", className="float-right" %}
 
-I love web push notifications but I’ve been really frustrated by the number of
-sites asking for permission on page load, without any context - and I’m not
+I love web push notifications but I've been really frustrated by the number of
+sites asking for permission on page load, without any context - and I'm not
 alone.
 
 90% of all permission requests are ignored or temporarily blocked.
@@ -134,15 +134,15 @@ In Chrome 59, we started to address this problem by
 a permission if the user dismissed the request three times. Now in m63,
 Chrome for Android will make permission requests modal dialogs.
 
-Remember, this isn’t just for push notifications, this is for **all
+Remember, this isn't just for push notifications, this is for **all
 permission requests**. If you ask permission at the [appropriate time
 and in context](https://developers.google.com/web/fundamentals/push-notifications/permission-ux),
-we’ve found that users are two and a half times more likely to grant permission!
+we've found that users are two and a half times more likely to grant permission!
 
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 63 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 * [`finally`](https://developers.google.com/web/updates/2017/10/promise-finally)
   is now available on `Promise` instances and is invoked after a `Promise` has
@@ -160,7 +160,7 @@ there’s plenty more.
 
 Be sure to [subscribe](https://goo.gl/6FP1a5) to our
 [YouTube channel](https://www.youtube.com/user/ChromeDevelopers/), and
-you’ll get an email notification whenever we launch a new video.
+you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 64 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 64 is released, I'll be right
+here to tell you -- what's new in Chrome!

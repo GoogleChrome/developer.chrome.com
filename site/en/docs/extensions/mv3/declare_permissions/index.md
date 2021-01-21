@@ -133,8 +133,7 @@ The following table lists the currently available permissions:
       <td><code>"declarativeWebRequest"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/declarativeWebRequest/">chrome.declarativeWebRequest</a> API.</td>
     </tr>
-
-<!-- No corresponding reference entry
+    <!-- No corresponding reference entry
     <tr id="displaySource">
       <td><code>"displaySource"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/displaySource/">chrome.displaySource</a> API.</td>
@@ -143,8 +142,7 @@ The following table lists the currently available permissions:
       <td><code>"dns"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/dns/">chrome.dns</a> API.</td>
     </tr>
--->
-
+    -->
     <tr id="desktopCapture">
       <td><code>"desktopCapture"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/desktopCapture/">chrome.desktopCapture</a> API.</td>
@@ -215,8 +213,7 @@ The following table lists the currently available permissions:
       <td><code>"idle"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/idle/">chrome.idle</a> API.</td>
     </tr>
-
-<!-- No corresponding reference entry
+    <!-- No corresponding reference entry
     <tr id="idltest">
       <td><code>"idltest"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/idltest/">chrome.idltest</a> API.</td>
@@ -229,8 +226,7 @@ The following table lists the currently available permissions:
       <td><code>"loginScreenStorage"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/loginScreenStorage/">chrome.loginScreenStorage</a> API.</td>
     </tr>
--->
-
+    -->
     <tr id="loginState">
       <td><code>"loginState"</code></td>
       <td>Gives your extension access to the <a href="/docs/extensions/reference/loginState/">chrome.loginState</a> API.</td>

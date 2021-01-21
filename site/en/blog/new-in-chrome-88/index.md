@@ -4,7 +4,7 @@ description: >
   Chrome 88 is rolling out now! You can now upload extensions using manifest
   v3 to the Chrome Web Store. The aspect-ratio CSS property makes it easy to
   set the aspect ratio on any element. You can now use Play Billing in your
-  Trusted Web Activity, and there’s plenty more. Let’s dive in and see what’s
+  Trusted Web Activity, and there's plenty more. Let's dive in and see what's
   new for developers in Chrome 88!
 layout: 'layouts/blog-post.njk'
 date: 2021-01-19
@@ -32,10 +32,10 @@ Here's what you need to know:
   for hidden pages in particular conditions.
 * You can now use [Play Billing](#play-billing) in your Trusted Web Activity.
 * All the videos from [Chrome Dev Summit](#cds) are up.
-* And, there’s [plenty more](#more).
+* And, there's [plenty more](#more).
 
-I’m [Pete LePage](https://twitter.com/petele), working, and shooting
-from home, let’s dive in and see what’s new for developers in Chrome 88!
+I'm [Pete LePage](https://twitter.com/petele), working, and shooting
+from home, let's dive in and see what's new for developers in Chrome 88!
 
 ## Manifest v3 {: #mv3 }
 
@@ -83,7 +83,7 @@ aspect ratio, enabling a similar behavior.
 }
 ```
 
-You can also use progressive enhancement to check if it’s supported in the
+You can also use progressive enhancement to check if it's supported in the
 browser, and apply a fallback if necessary. Then, with the new CSS 4 `not`
 selector, you can make your code a little cleaner!
 
@@ -120,13 +120,13 @@ for all the details.
 ## Play billing in Trusted Web Activity {: #play-billing }
 
 You can now use Play Billing in your Trusted Web Activity to sell digital
-goods and subscriptions using the new Digital Goods API. It’s available as an
+goods and subscriptions using the new Digital Goods API. It's available as an
 origin trial in Chrome 88 on Android, and we expect it to expand the origin
 trial to Chrome OS in the next release.
 
 Once your accounts are set-up, update your Trusted Web Activity to enable Play
 billing, and create your digital goods in the Play Developer Console. Then,
-in your PWA, add your origin trial token, and you’re ready to add the code
+in your PWA, add your origin trial token, and you're ready to add the code
 to check for existing purchases, query for available purchases, and make new
 purchases.
 
@@ -141,12 +141,12 @@ const details =
 ```
 
 Adriana and Andre go into more detail in their Chrome Dev Summit talk -
-[What’s new for web apps in Play](https://www.youtube.com/watch?v=K_TTyg2wJWM),
+[What's new for web apps in Play](https://www.youtube.com/watch?v=K_TTyg2wJWM),
 or check out the [docs](https://developers.google.com/web/android/trusted-web-activity/play-billing).
 
 ## And more {: #more }
 
-And of course there’s plenty more.
+And of course there's plenty more.
 
 * To conform to a change in the HTML standard, anchor tags with `target="_blank"`
   will now imply `rel="noopener"` by default, this helps prevent
@@ -175,7 +175,7 @@ additional changes in Chrome 88.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 89 is released, I’ll be right here to
-tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 89 is released, I'll be right here to
+tell you -- what's new in Chrome!

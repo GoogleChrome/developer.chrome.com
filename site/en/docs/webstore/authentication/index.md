@@ -34,7 +34,7 @@ recognize the user across multiple sessions.
 When deciding how to structure the authentication flow for your app, keep the following
 considerations in mind.
 
-#### Will you be adding support for Federated Login with Google Accounts on top of an existing authentication system?
+### Will you be adding support for Federated Login with Google Accounts on top of an existing authentication system?
 
 If so, you can provide users a way to link their new accounts with their existing accounts. For more
 guidance and best practices for handling and linking legacy accounts, see [this article][2]. In the
@@ -42,7 +42,7 @@ guidance and best practices for handling and linking legacy accounts, see [this 
 Springpad, which gives the user the choice to link with an existing account or continue as a new
 user.
 
-#### Do you you want to use a different authentication flow if your app is launched via the Google Chrome app launcher?
+### Do you you want to use a different authentication flow if your app is launched via the Google Chrome app launcher?
 
 You can further streamline the process for users by supporting a different authentication flow when
 your app is launched via the Google Chrome app launcher as opposed to a bookmark or link. You can
@@ -58,7 +58,7 @@ if (window.chrome.app.isInstalled) {
 }
 ```
 
-#### Must users provide information in order to create a new account in your system?
+### Must users provide information in order to create a new account in your system?
 
 With OpenID, you can request information such as first name, last name, email address, region, and
 language. You request this additional information by including [attribute exchange parameters][4] in
@@ -71,20 +71,20 @@ which demonstrates this process. If the extra information is optional, then you 
 waiting until after a user has created their account to gather this information, in order to
 simplify the account creation process.
 
-#### What authentication options will you present to your users?
+### What authentication options will you present to your users?
 
 The way you decide to design your user interface may be different if you only support Federated
 Login with Google Accounts versus supporting Federated Login with Google Accounts and your existing
 authentication system. See [Usability Research on Federated Login][6] for more options.
 
-#### Do you want to use a pop-up UI or a browser redirect flow for signing in?
+### Do you want to use a pop-up UI or a browser redirect flow for signing in?
 
 You have a choice of how users will be prompted for their Google Account credentials. You can prompt
 them via a pop-up UI, or you can use a browser redirect flow. Our [PHP sample code][7] demonstrates
 how to use the pop-up UI, while the [Java][8] and [Python][9] sample code uses the browser redirect
 flow. To try the different styles of authentication yourself, see [these examples][10].
 
-#### What if a user deletes their Google Account?
+### What if a user deletes their Google Account?
 
 If a user deletes their Google Account, they can no longer sign in to your app using that account.
 In this case, you could provide a way of associating accounts in your system with a different OpenID
@@ -106,20 +106,20 @@ Login.
 The screencasts below show three different account creation and authentication scenarios from a
 user's perspective.
 
-#### Basic authentication flow
+### Basic authentication flow
 
 This screencast uses the Diary.com app to demonstrate a basic authentication flow.
 
 {% youtube id="u4FBk_XUw2Q" %}
 
-#### Requesting additional information during account creation
+### Requesting additional information during account creation
 
 In this screencast, the Manymoon app demonstrates an account creation flow where the user is
 prompted for additional information.
 
 {% youtube id="wV0ModwrCvo" %}
 
-#### Linking with an existing account
+### Linking with an existing account
 
 This screencast uses the Springpad app to show how a user can sign in to an app with their Google
 Account and then link to an existing Springpad account.

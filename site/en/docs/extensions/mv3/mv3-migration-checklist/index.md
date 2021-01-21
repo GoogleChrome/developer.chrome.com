@@ -35,18 +35,18 @@ There are some changes you may need to make based on changes to the API surface.
 Service workers must be registered at root level: they cannot be in a nested directory.
 !!!
 
-**Are you using the **`browser_action`** or **`page_action`** property in manifest.json?**
+**Are you using the `browser_action` or `page_action` property in manifest.json?**
 <br/>
 *These properties are [unified into a single property](/docs/extensions/mv3/intro/mv3-migration#action-api-unification) in MV3.*
 
 - Replace these properties with `action`.
 
-**Are you using the **`chrome.browserAction`** or **`chrome.pageAction`** JavaScript API?**
+**Are you using the `chrome.browserAction` or `chrome.pageAction` JavaScript API?**
 <br/>
 *These two equivalent APIs are [unified into a single API](/docs/extensions/mv3/intro/mv3-migration#action-api-unification) in MV3.*
 - Migrate to the `chrome.action` API.
 
-**Are you currently using the blocking version of **`chrome.webRequest`**?**
+**Are you currently using the blocking version of `chrome.webRequest`?**
 <br/>
 *This API is [replaced by `declarativeNetRequest`](/docs/extensions/mv3/intro/mv3-migration#modifying-network-requests) in MV3.*
 
@@ -88,7 +88,7 @@ There are some changes you may need to make based on changes in security policy.
 **Are you making CORS requests in content scripts?**
 - Move these requests to the background service worker.
 
-**Are you using a custom **`content_security_policy`** in manifest.json?**
+**Are you using a custom `content_security_policy` in manifest.json?**
 - Replace `content_security_policy` with `content_security_policy.extension_pages`
   or `content_security_policy.sandbox` as appropriate.
 - Remove references to external domains in `script-src`, `worker-src`, `object-src`, and

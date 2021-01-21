@@ -2,7 +2,7 @@
 title: "The Chromium Chronicle #14: Adding Tests to the Waterfall"
 description: >
   Want to detect regressions for your new feature in Chrome? Add your tests to
-  the waterfall, Chrome’s continuous build and test infrastructure!
+  the waterfall, Chrome's continuous build and test infrastructure!
 layout: 'layouts/blog-post.njk'
 date: 2020-10-30
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
@@ -16,7 +16,7 @@ tags:
 [Previous episodes](/tags/chromium-chronicle/)
 
 Want to detect regressions for your new feature in Chrome? Add your
-tests to **the waterfall** (Chrome’s continuous build and test infrastructure)!
+tests to **the waterfall** (Chrome's continuous build and test infrastructure)!
 
 There are many builders on Chrome's waterfall that run tests on a variety of
 platforms. This article describes how to add a test suite to an existing
@@ -25,7 +25,7 @@ builder. Before proceeding, consider these questions:
 *Should the new tests live in a brand new suite, or just be added to an existing one?*
 
 * Tests are organized in test suites by **proximity of source location and theme.**
-  If your new tests can’t logically fit into any existing suite, you probably
+  If your new tests can't logically fit into any existing suite, you probably
   need a new suite.
 
 *Should the tests run on a public builder or an internal builder?*
@@ -40,7 +40,7 @@ builder. Before proceeding, consider these questions:
 * **Main CI tests are regularly monitored** by sheriffs.
 * **CQ blocks CL submission** at failure but **takes more infra resources**.
   A new suite should always **start from CI before being promoted to CQ**.
-* If you’re not sure, your platform’s **EngProd team** can help you decide.
+* If you're not sure, your platform's **EngProd team** can help you decide.
 
 *I already have a test suite running in CI, how do I add it to CQ? / What if I
 need a new builder?*

@@ -5,7 +5,7 @@ description: >
   Intl.RelativeTimeFormat() API. You can specify which side of the text the
   underline should appear on for text that flows vertically. And using the
   speech synthesis API now requires user activation before your computer
-  starts talking to you! Let’s dive in and see what’s new for developers in
+  starts talking to you! Let's dive in and see what's new for developers in
   Chrome 71!
 layout: 'layouts/blog-post.njk'
 date: 2018-12-04
@@ -28,12 +28,12 @@ In Chrome 71, we've added support for:
 * Requiring [user activation](#speech-activation) before using the speech
   synthesis API.
 
-And there’s [plenty more](#more)!
+And there's [plenty more](#more)!
 
-I’m [Pete LePage](https://twitter.com/petele). Let’s dive in and see
-what’s new for developers in Chrome 71!
+I'm [Pete LePage](https://twitter.com/petele). Let's dive in and see
+what's new for developers in Chrome 71!
 
-### Change log
+## Change log
 
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 71.
@@ -51,7 +51,7 @@ additional changes in Chrome 71.
   </figcaption>
 </figure>
 
-Many web apps use phrases like “yesterday”, “in two days”, or “an hour ago” to
+Many web apps use phrases like "yesterday", "in two days", or "an hour ago" to
 indicate when something happened - or is going to happen, instead of displaying
 the full date and time.
 
@@ -63,7 +63,7 @@ first libraries I add, expressly for this purpose.
 Chrome 71 introduces [`Intl.RelativeTimeFormat()`][mdn-reltimefmt], which
 shifts the work to the JavaScript engine, and enables localized formatting of
 relative times. This gives us a small performance boost, and means we only
-need those libraries as a polyfill when a browser doesn’t support the new APIs
+need those libraries as a polyfill when a browser doesn't support the new APIs
 yet.
 
 ```js
@@ -77,11 +77,9 @@ rtf.format(-15, 'minute');
 ```
 
 Using it is simple, create a new instance and specify the locale,
-then just call format with the relative time. Check out Mathias’
+then just call format with the relative time. Check out Mathias'
 [The `Intl.RelativeTimeFormat API`](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)
 post for full details.
-
-[mdn-reltimefmt]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat
 
 ## Specifying underline location for vertical text {: #underline }
 
@@ -116,15 +114,9 @@ the [style][css3-td-style], [color][css3-td-color], and
 }
 ```
 
-[css3-td-spec]: https://www.w3.org/TR/css-text-decor-3/
-[css3-td-line]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-style-property
-[css3-td-style]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-style-property
-[css3-td-color]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-color-property
-[css3-td-position]: https://www.w3.org/TR/css-text-decor-3/#text-underline-position-property
-
 ## Speech synthesis requires user activation {: #named-workers }
 
-We’ve all been surprised when we hit a site and it suddenly starts talking
+We've all been surprised when we hit a site and it suddenly starts talking
 to us. [Autoplay policies](https://developers.google.com/web/updates/2018/11/web-audio-autoplay)
 prevent sites from automatically playing playing audio, or video files with
 audio. Some sites have tried to get around this by using the
@@ -132,7 +124,7 @@ audio. Some sites have tried to get around this by using the
 instead.
 
 Starting in Chrome 71, the speech synthesis API now requires some kind of user
-activation on the page before it’ll work. This brings it in line with other
+activation on the page before it'll work. This brings it in line with other
 [autoplay policies](https://developers.google.com/web/updates/2018/11/web-audio-autoplay).
 If you try to use it before the user has interacted with the page, it will
 fire an error.
@@ -153,13 +145,13 @@ synthesis call in a `try`/`catch` block, so if the page isn't activated, it
 won't break the rest of your app.
 !!!
 
-There’s nothing worse than going to a site and having it surprise you,
+There's nothing worse than going to a site and having it surprise you,
 and the co-workers sitting around you.
 
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 71 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 * The `Element.requestFullscreen()` method can now be
   [customized on Android](https://www.chromestatus.com/feature/5188650908254208)
@@ -176,7 +168,7 @@ there’s plenty more.
 
 ## Chrome DevSummit Videos
 
-If you didn’t make it to Chrome Dev Summit, or maybe you did, but didn’t
+If you didn't make it to Chrome Dev Summit, or maybe you did, but didn't
 see all the talks, check out the
 [Chrome Dev Summit 2018 playlist](https://www.youtube.com/playlist?list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF)
 on our YouTube channel.
@@ -207,7 +199,14 @@ so check them out.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 72 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 72 is released, I'll be right
+here to tell you -- what's new in Chrome!
+
+[mdn-reltimefmt]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat
+[css3-td-spec]: https://www.w3.org/TR/css-text-decor-3/
+[css3-td-line]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-style-property
+[css3-td-style]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-style-property
+[css3-td-color]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-color-property
+[css3-td-position]: https://www.w3.org/TR/css-text-decor-3/#text-underline-position-property

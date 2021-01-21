@@ -4,8 +4,8 @@ description: >
   Chrome 67 brings Progressive Web Apps to the desktop. Adds support for the
   generic sensor API, which makes it way easier to get access to device
   sensors like the accelerometer, gyroscope and more. And adds support for
-  BigInts making dealing with big integers way easier. Let’s dive in and see
-  what’s new for developers in Chrome 67!
+  BigInts making dealing with big integers way easier. Let's dive in and see
+  what's new for developers in Chrome 67!
 layout: 'layouts/blog-post.njk'
 date: 2018-05-29
 updated: 2018-10-15
@@ -25,9 +25,9 @@ tags:
   access to device sensors like the accelerometer, gyroscope and more.
 * And [`BigInt`s](#bigint) make dealing with big integers way easier.
 
-And there’s [plenty more](#more)!
+And there's [plenty more](#more)!
 
-I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 67!
+I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 67!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/66.0.3359.116..67.0.3396.62).
@@ -36,11 +36,11 @@ Want the full list of changes? Check out the
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/jESgkJzlVwmOqipfF2pp.jpg", alt="Spotify's desktop progressive web app", className="float-left" %}
 
-Desktop Progressive Web Apps are now supported on Chrome OS 67, and we’ve
+Desktop Progressive Web Apps are now supported on Chrome OS 67, and we've
 already started working on support for Mac and Windows. Once installed,
-they’re launched in the same way as other apps, and run in an
+they're launched in the same way as other apps, and run in an
 [app window](https://developers.google.com/web/progressive-web-apps/desktop#app-window),
-without an address bar or tabs. Service workers ensure that they’re fast, and
+without an address bar or tabs. Service workers ensure that they're fast, and
 reliably, the app window experience makes them feel integrated. And they create
 an engaging experience for your users.
 
@@ -52,7 +52,7 @@ applies**, you simply need to consider some
 If your app meets the standard
 [PWA criteria](https://developers.google.com/web/fundamentals/app-install-banners/#criteria), Chrome will
 fire the [`beforeinstallprompt`](https://developers.google.com/web/fundamentals/app-install-banners/#trigger)
-event, but it won’t automatically prompt the user. Instead, save the event;
+event, but it won't automatically prompt the user. Instead, save the event;
 then, add some UI - like an install app button - to your app to tell the user
 your app can be installed. Then, when the user clicks the button, call prompt
 on the saved event; Chrome will then show the prompt to the user. If they
@@ -99,7 +99,7 @@ sensor.
 
 Intel has put together several
 [demos of the generic sensors API](https://intel.github.io/generic-sensor-demos/)
-and [sample code](https://github.com/intel/generic-sensor-demos), and they’ve
+and [sample code](https://github.com/intel/generic-sensor-demos), and they've
 also updated the [Sensors for the Web!](https://developers.google.com/web/updates/2017/09/sensors-for-the-web)
 post from September with everything you need to know.
 
@@ -107,7 +107,7 @@ post from September with everything you need to know.
 
 `BigInt`s are a new numeric primitive in JavaScript that can represent integers
 with arbitrary precision. Large integer IDs and high-accuracy timestamps
-can’t be safely represented as `Numbers` in JavaScript, which often leads
+can't be safely represented as `Numbers` in JavaScript, which often leads
 to real-world bugs (because of which we often end up representing such
 numbers as strings instead).
 
@@ -132,15 +132,15 @@ max = max + 9n;
 // → 9_007_199_254_741_000n - Yay!
 ```
 
-When `BigInt` becomes widely available, we’ll be able to drop these run-time
+When `BigInt` becomes widely available, we'll be able to drop these run-time
 dependencies in favor of native `BigInts`. Not only is the native implementation
-faster, it’ll help to reduce load time, parse time, and compile time because
-we won’t have to load those extra libraries.
+faster, it'll help to reduce load time, parse time, and compile time because
+we won't have to load those extra libraries.
 
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 67 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 The
 [Credential Management API](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API)
@@ -160,7 +160,7 @@ post.
 
 ### Google I/O is a wrap {: #google-io }
 
-If you didn’t make it to I/O, or may you did, but didn’t see all the web
+If you didn't make it to I/O, or may you did, but didn't see all the web
 talks, check out the
 [Chrome and Web playlist](https://www.youtube.com/playlist?list=PLNYkxOF6rcIC4NQeXpdAy0RbOACI66Hvf)
 to get caught up on all the latest from Google I/O!
@@ -168,13 +168,13 @@ to get caught up on all the latest from Google I/O!
 ### New in DevTools
 
 Be sure to check out [New in Chrome DevTools](https://developers.google.com/web/updates/2018/04/devtools), to
-learn what’s new in for DevTools in Chrome 67.
+learn what's new in for DevTools in Chrome 67.
 
 ### Subscribe
 
 Then, click the [subscribe](https://goo.gl/6FP1a5) button on our
 [YouTube channel](https://www.youtube.com/user/ChromeDevelopers/), and
-you’ll get an email notification whenever we launch a new video.
+you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 68 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 68 is released, I'll be right
+here to tell you -- what's new in Chrome!

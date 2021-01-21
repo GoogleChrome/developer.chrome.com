@@ -61,8 +61,8 @@ as well as in the side navigation when viewing an individual doc.
 The `toc.yml` supports these fields:
 
 - `url` — an absolute url path to your doc
-- `title` — the title for a subsection in `i18n` path notation (explained below.)
-- `sections` — a collection of more urls, nested under a `title`.
+- `title`—the title for a subsection in `i18n` path notation (explained below.)
+- `sections`—a collection of more urls, nested under a `title`.
 
 ```yml
 - url: /docs/cheese/what-is-cheese  # a single doc

@@ -89,9 +89,9 @@ WaitUntilCredentialPromptVisible();
 {% endCompare %}
 
 The fix above is correct under the assumption that
-`WaitUntilCredentialPromptVisible()` doesn’t actually check the UI.
+`WaitUntilCredentialPromptVisible()` doesn't actually check the UI.
 **The browser tests should not depend on external UI events** like "focus lost"
-or “window became foreground”. Imagine an implementation where the prompt
+or "window became foreground". Imagine an implementation where the prompt
 appears only when the browser window is active. Such an implementation
 would be correct; however, checking for the actual window makes the test flaky.
 

@@ -64,8 +64,8 @@ The browser action icons in Chrome are 16 dips (device-independent pixels) wide 
 icons are resized to fit, but for best results, use a 16-dip square icon.
 
 You can set the icon in two ways: using a static image or using the HTML5 [canvas element][7]. Using
-static images is easier for simple applications, but you can create more dynamic UIs — such as
-smooth animation — using the canvas element.
+static images is easier for simple applications, but you can create more dynamic UIs—such as
+smooth animation—using the canvas element.
 
 Static images can be in any format WebKit can display, including BMP, GIF, ICO, JPEG, or PNG. For
 unpacked extensions, images must be in the PNG format.
@@ -86,7 +86,7 @@ call the [`browserAction.setTitle`][11] method. You can specify locale-specific 
 
 ### Badge
 
-Browser actions can optionally display a _badge_ — a bit of text that is layered over the icon.
+Browser actions can optionally display a _badge_—a bit of text that is layered over the icon.
 Badges make it easy to update the browser action to display a small amount of information about the
 state of the extension.
 

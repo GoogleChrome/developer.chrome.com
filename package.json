@@ -19,7 +19,7 @@
     "gulp": "npx gulp",
     "ignore": "node ./tools/eleventyignore",
     "lint:js": "gts check",
-    "lint:md": "remark -q .",
+    "lint:md": "remark -q -f site/",
     "lint:scss": "stylelint **/*.scss",
     "lint:types": "tsc --noEmit",
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",

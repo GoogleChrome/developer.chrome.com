@@ -4,8 +4,8 @@ description: >
   Chrome 68 brings changes to the Add to Home Screen behavior on Android,
   giving you more control. The page lifecycle API tells you when your tab has
   been suspended or restored. And the Payment Handler API makes it possible
-  for web-based payment apps to support the Payment Request experience. Let’s
-  dive in and see what’s new for developers in Chrome 68!
+  for web-based payment apps to support the Payment Request experience. Let's
+  dive in and see what's new for developers in Chrome 68!
 layout: 'layouts/blog-post.njk'
 date: 2018-07-24
 updated: 2018-07-25
@@ -27,9 +27,9 @@ tags:
 * And the [Payment Handler API](#payment-handler) makes it possible for
   web-based payment apps to support the Payment Request experience.
 
-And there’s [plenty more](#more)!
+And there's [plenty more](#more)!
 
-I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 68!
+I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 68!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/67.0.3396.62..68.0.3440.70).
@@ -38,7 +38,7 @@ Want the full list of changes? Check out the
 
 If your site meets the
 [add to home screen criteria](https://developers.google.com/web/fundamentals/app-install-banners/#criteria),
-Chrome will no longer show the add to home screen banner. Instead, you’re in
+Chrome will no longer show the add to home screen banner. Instead, you're in
 control over when and how to prompt the user.
 
 To prompt the user, listen for the `beforeinstallprompt` event, then, save
@@ -156,7 +156,7 @@ how to implement this for merchant sites, and for payment handlers.
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 68 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 * Content embedded in an `iframe`
   [requires a user gesture to navigate](https://www.chromestatus.com/feature/5629582019395584)
@@ -172,13 +172,13 @@ there’s plenty more.
 ### New in DevTools
 
 Be sure to check out [New in Chrome DevTools](https://developers.google.com/web/updates/2018/05/devtools), to
-learn what’s new in for DevTools in Chrome 68.
+learn what's new in for DevTools in Chrome 68.
 
 ### Subscribe
 
 Then, click the [subscribe](https://goo.gl/6FP1a5) button on our
 [YouTube channel](https://www.youtube.com/user/ChromeDevelopers/), and
-you’ll get an email notification whenever we launch a new video.
+you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 69 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 69 is released, I'll be right
+here to tell you -- what's new in Chrome!

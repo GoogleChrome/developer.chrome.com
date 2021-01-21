@@ -111,7 +111,7 @@ chrome.app.window.create('index.html', {
 });
 ```
 
-Background scripts may contain additional listeners, windows, post messages, and launch data — all
+Background scripts may contain additional listeners, windows, post messages, and launch data—all
 of which are used by the event page to manage the app.
 
 ### Create an HTML view {: #html-view }

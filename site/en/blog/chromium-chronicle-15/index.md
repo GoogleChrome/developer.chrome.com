@@ -16,7 +16,7 @@ tags:
 **Episode 15:** by Joe Mason in Montreal, PQ (November, 2020)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
-Chrome is a big project with many sub-systems. It’s common to find code
+Chrome is a big project with many sub-systems. It's common to find code
 written for one component that would be useful elsewhere, but might have hidden
 restrictions. For safety, **limit external access to dangerous functionality**.
 For instance, a custom function tuned for specific performance needs:
@@ -71,7 +71,7 @@ approval is needed to restrict a directory using `include_rules`! You can
 ensure that everyone changing your component remembers not to use certain
 headers by adding an `include_rule` forbidding them.
 
-**`include_rules` are checked by the presubmit**, so you won’t see any
+**`include_rules` are checked by the presubmit**, so you won't see any
 errors until you try to upload a change. To test `include_rules` without
 uploading, run `buildtools/checkdeps/checkdeps.py <directory>`.
 

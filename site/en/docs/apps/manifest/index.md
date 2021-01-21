@@ -22,7 +22,7 @@ information.
 The following code shows the supported manifest fields for Apps, with links to the page that
 discusses each field.
 
-```
+```json
 {
   // Required
   "app": {

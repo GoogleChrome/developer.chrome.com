@@ -1,11 +1,11 @@
 ---
 title: New in Chrome 69
 description: >
-  It’s been ten years since Chrome was first released. A lot has changed since
+  It's been ten years since Chrome was first released. A lot has changed since
   then, but our goal of building a solid foundation for modern web applications
-  hasn’t! In Chrome 69 there’s support CSS Scroll Snapping, support for
-  notches, web locks, and a few cool new CSS4 features. Let’s dive in and
-  see what’s new for developers in Chrome 69!
+  hasn't! In Chrome 69 there's support CSS Scroll Snapping, support for
+  notches, web locks, and a few cool new CSS4 features. Let's dive in and
+  see what's new for developers in Chrome 69!
 layout: 'layouts/blog-post.njk'
 date: 2018-09-04
 updated: 2018-09-06
@@ -20,9 +20,9 @@ tags:
 
 {% youtube id='WF2IjH35w8o' %}
 
-It’s been **ten years** since Chrome was first released. A lot has changed
+It's been **ten years** since Chrome was first released. A lot has changed
 since then, but our goal of building a solid foundation for modern web
-applications hasn’t!
+applications hasn't!
 
 In Chrome 69, we've added support for:
 
@@ -33,9 +33,9 @@ In Chrome 69, we've added support for:
 * The [Web Locks API](#web-locks) allows you to asynchronously acquire a
   lock, hold it while work is performed, then release it.
 
-And there’s [plenty more](#more)!
+And there's [plenty more](#more)!
 
-I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 69!
+I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 69!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/68.0.3440.70..69.0.3497.81).
@@ -64,7 +64,7 @@ snap positions that tell the browser where to stop after each scrolling
 operation. This is super helpful for image carousels, or paginated sections
 where you want the user to scroll to a specific point.
 
-For an image carousel, I’d add `scroll-snap-type: x mandatory;` to the
+For an image carousel, I'd add `scroll-snap-type: x mandatory;` to the
 scroll container, and `scroll-snap-align: center;` to each image. Then, as the
 user scrolls through the carousel, each image will be smoothly scrolled into
 the perfect position.
@@ -104,7 +104,7 @@ There are an
 [increasing number of mobile devices](https://www.google.com/search?q=what+phones+have+a+notch)
 being released with a display cutout, sometimes called a notch. To deal with
 that, browsers add a little bit of extra margin to your page so the content
-isn’t obscured by the notch.
+isn't obscured by the notch.
 
 **But what if you want to use that space?**
 
@@ -131,12 +131,12 @@ your content.
 ```
 
 !!!.aside
-**Remember:** It’s important to test this well; you're telling the
-browser it’s OK if some content gets hidden behind the display cutout.
-And don’t forget to test in both portrait and landscape modes.
+**Remember:** It's important to test this well; you're telling the
+browser it's OK if some content gets hidden behind the display cutout.
+And don't forget to test in both portrait and landscape modes.
 !!!
 
-There’s a great post on the WebKit blog about
+There's a great post on the WebKit blog about
 [Designing Websites for iPhone X](https://webkit.org/blog/7929/designing-websites-for-iphone-x/),
 or check out the
 [explainer](https://docs.google.com/document/d/1lbZi18_5cMlLOphpFqTbuI4B0YGykQvvtRbw6j67UyE/preview)
@@ -163,7 +163,7 @@ navigator.locks.request('network_sync_lock', async lock => {
 ```
 
 The first tab to acquire the lock will sync the data to the network. If
-another tab tries to acquire the same lock, it’ll be queued. Once the lock has
+another tab tries to acquire the same lock, it'll be queued. Once the lock has
 been released, the next queued request will be granted the lock, and execute.
 
 MDN has a great [Web Locks primer](https://developer.mozilla.org/en-US/docs/Web/API/Web_Locks_API)
@@ -173,7 +173,7 @@ and check out the [spec](https://github.com/WICG/web-locks).
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 69 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/JSmEr981V3yPV1qlGP7G.jpg", alt="conical gradient", width="125", className="float-right" %}
 
@@ -184,7 +184,7 @@ there’s plenty more.
   [CSS `conic-gradient()` polyfill](https://leaverou.github.io/conic-gradient/)
   that you can use, and the page includes a whole bunch of really cool
   community submitted samples.
-* There’s a new
+* There's a new
   [`toggleAttribute()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute)
   method on elements that toggles the existence of an attribute, similar to
   [`classList.toggle()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList).
@@ -275,7 +275,7 @@ it, I've learned a few things:
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 70 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 70 is released, I'll be right
+here to tell you -- what's new in Chrome!

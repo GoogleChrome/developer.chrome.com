@@ -131,7 +131,7 @@ the extension.
 The error says `color` is not defined. The extension must not be passing the variable correctly.
 Correct the injected script to pass the color variable into the code.
 
-```
+```js
   {code: 'document.body.style.backgroundColor = "' + color + '";'});
 ```
 

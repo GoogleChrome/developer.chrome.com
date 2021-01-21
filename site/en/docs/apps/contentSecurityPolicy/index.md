@@ -40,7 +40,7 @@ The content security policy for Chrome Apps restricts you from doing the followi
 
 This is implemented via the following policy value:
 
-```
+```text
 default-src 'self';
 connect-src * data: blob: filesystem:;
 style-src 'self' data: 'unsafe-inline';

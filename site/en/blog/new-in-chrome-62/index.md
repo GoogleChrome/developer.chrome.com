@@ -22,12 +22,12 @@ tags:
   by providing actual performance metrics instead of theoretical results.
 * Support for [OpenType variable fonts](#otvf) has landed.
 * You can [capture media streams](#capture-media-streams) from HTML Media elements.
-* I’ve got a special reminder about an [important change](#https) that’s
+* I've got a special reminder about an [important change](#https) that's
   landing in Chrome 62.
 
-And there’s [plenty more](#more)!
+And there's [plenty more](#more)!
 
-I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 62!
+I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 62!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/61.0.3163.79..62.0.3202.62).
@@ -36,7 +36,7 @@ Want the full list of changes? Check out the
 
 The [Network Information API](https://wicg.github.io/netinfo/) has been
 available in Chrome for a while, but it only provides theoretical network
-speeds given the user’s connection. Imagine you’re on WiFi, but connected to
+speeds given the user's connection. Imagine you're on WiFi, but connected to
 a cellular hotspot that only has 2G speeds? The API would report WiFi!
 
 ```js
@@ -75,7 +75,7 @@ and have a look at the [spec](https://wicg.github.io/netinfo) for a deeper dive.
 
 Traditionally, one font contained only a single instance of a font family,
 for example one weight or one stretch. If you wanted regular, bold and italic,
-you’d need to include three separate fonts, increasing the weight of your page.
+you'd need to include three separate fonts, increasing the weight of your page.
 
 An OpenType variable font is the equivalent of multiple individual fonts that
 can be compactly packaged within a single font file. By adjusting the
@@ -131,7 +131,7 @@ This label will also be shown in Incognito Mode for all HTTP pages.
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 62 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 * The [Payment Request API](https://developers.google.com/web/fundamentals/payments/) is now available on
   Chrome for iOS.
@@ -140,7 +140,7 @@ there’s plenty more.
 
 Then [subscribe](https://goo.gl/6FP1a5) to our
 [YouTube channel](https://www.youtube.com/user/ChromeDevelopers/), and
-you’ll get an email notification whenever we launch a new video.
+you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 63 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 63 is released, I'll be right
+here to tell you -- what's new in Chrome!

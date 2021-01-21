@@ -72,12 +72,12 @@ Here's a `messages.json` file that defines three messages named "prompt_for_name
 ## Field details {: #field_details }
 
 This section describes each field that can appear in a `messages.json` file. For details on how the
-messages file is used — for example, what happens when a locale doesn't define all the messages —
+messages file is used—for example, what happens when a locale doesn't define all the messages —
 see [Internationalization][1].
 
 ### name {: #name }
 
-Actually, there's no field called "name". This field's name is the name of the message — the same
+Actually, there's no field called "name". This field's name is the name of the message—the same
 _name_ that you see in `__MSG__name___` or `getMessage("_name_")`.
 
 The name is a case-insensitive key that lets you retrieve the localized message text. The name can

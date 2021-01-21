@@ -3,7 +3,9 @@ title: 404
 layout: 'layouts/error.njk'
 ---
 
+<!--lint disable first-heading-level-->
 # Aw, Snap!
+<!--lint enable first-heading-level-->
 
 We couldn't find that page.
 

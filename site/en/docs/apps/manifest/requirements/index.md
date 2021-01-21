@@ -24,7 +24,7 @@ API][3]. For more information on Chrome 3D graphics support, see the help articl
 graphics][4]. You can list the 3D-related features your app requires, as demonstrated in the
 following example:
 
-```
+```json
 "requirements": {
   "3D": {
     "features": ["webgl"]
@@ -45,7 +45,7 @@ that still work when plugins aren't available, you can disable this requirement 
 false. You can also enable this requirement manually, by setting NPAPI to true, as shown in this
 example:
 
-```
+```json
 "requirements": {
   "plugins": {
     "npapi": true

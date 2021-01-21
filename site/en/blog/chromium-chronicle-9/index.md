@@ -29,7 +29,7 @@ which looks for memory safety errors.
 ClusterFuzz assigns components based on the crash location, and **assigns
 severity based on the type of crash and whether it happened in a sandboxed
 process**. For example, a heap use-after-free will be high severity, unless
-it’s in the browser process, in which case it’s critical (no sandbox to limit
+it's in the browser process, in which case it's critical (no sandbox to limit
 impact!):
 
 ```cpp
@@ -60,7 +60,7 @@ You can help:
 * Add new fuzzers, especially when you process untrustworthy data or IPC (see
   links below, often < 20 lines of code).
 * Fix ClusterFuzz-reported bugs: its **severity heuristics can be trusted because
-  they’re based on real-world exploitability**: Even a
+  they're based on real-world exploitability**: Even a
   [single byte overflow][go-onebyte] has led to arbitrary code execution by an
   attacker.
 

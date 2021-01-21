@@ -81,7 +81,7 @@ has no direct access to the Chrome app APIs (see [Embed external web pages][8]).
 Some of the restrictions on Chrome Apps are enforced by the [Content Security Policy (CSP)][9] which
 is always the following and cannot be changed for Chrome Apps:
 
-```
+```text
 default-src 'self';
 connect-src * data: blob: filesystem:;
 style-src 'self' blob: data: filesystem: 'unsafe-inline';

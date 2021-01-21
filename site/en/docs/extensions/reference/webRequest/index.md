@@ -280,7 +280,7 @@ its instruction to modify or redirect has been ignored.
 
 ### Caching
 
-Chrome employs two caches — an on-disk cache and a very fast in-memory cache. The lifetime of an
+Chrome employs two caches—an on-disk cache and a very fast in-memory cache. The lifetime of an
 in-memory cache is attached to the lifetime of a render process, which roughly corresponds to a tab.
 Requests that are answered from the in-memory cache are invisible to the web request API. If a
 request handler changes its behavior (for example, the behavior according to which requests are

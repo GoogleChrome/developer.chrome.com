@@ -96,50 +96,49 @@ app:
   listed in the Chrome Web Store, you must prove that you control each domain specified in this field.
   For help in proving your ownership, see the [Chrome Developer Dashboard][3].
 
-  urls:
+app.urls: <!-- TODO: remark doesn't like nested dl, so we denest it -->
 
-  : The URLs for the pages in the hosted app, not necessarily including the launch page. Once the app is
-    installed, these pages and the launch page have the permissions requested in the
-    manifest.
+: The URLs for the pages in the hosted app, not necessarily including the launch page. Once the app is
+  installed, these pages and the launch page have the permissions requested in the manifest.
 
-    !!!.aside.aside--note
+  !!!.aside.aside--note
 
-    **Note:** You don't need to specify the URLs for included files or for assets such as images.
+  **Note:** You don't need to specify the URLs for included files or for assets such as images.
 
-    !!!
+  !!!
 
-    Each URL must begin with `http`, `https`, or `*` (which matches both `http` and `https`). You can
-    use wildcards for subdomains—for example, "\*://\*.example.com/".
+  Each URL must begin with `http`, `https`, or `*` (which matches both `http` and `https`). You can
+  use wildcards for subdomains—for example, "\*://\*.example.com/".
 
-    !!!.aside.aside--caution
+  !!!.aside.aside--caution
 
-    **Important:** _Do not_ put port numbers in the value of "urls". Port numbers aren't necessary there
-    (all ports are valid), and values with port numbers are silently ignored, leaving the corresponding
-    pages without the requested permissions.
+  **Important:** _Do not_ put port numbers in the value of "urls". Port numbers aren't necessary there
+  (all ports are valid), and values with port numbers are silently ignored, leaving the corresponding
+  pages without the requested permissions.
 
-    !!!
+  !!!
 
-    You need to specify only the start of the app's URLs. For example,
-    "https://www.google.com/accounts/" matches every URL that starts with that string, such as
-    https://www.google.com/accounts/ and https://www.google.com/accounts/b/0/ManageAccount.
+  You need to specify only the start of the app's URLs. For example,
+  "https://www.google.com/accounts/" matches every URL that starts with that string, such as
+  https://www.google.com/accounts/ and https://www.google.com/accounts/b/0/ManageAccount.
 
-    !!!.aside.aside--caution
+  !!!.aside.aside--caution
 
-    **Important:** If you provide multiple apps, **avoid overlapping URLs**. If a user tries to install
-    an app whose "web_url" or "urls" values overlap with those of an already installed app, the second
-    installation will fail due to URL conflict errors. For example, an app that specifies a "urls" value
-    of "http://mail.example.com/" would conflict with an app that specifies
-    "http://mail.example.com/mail/".
+  **Important:** If you provide multiple apps, **avoid overlapping URLs**. If a user tries to install
+  an app whose "web_url" or "urls" values overlap with those of an already installed app, the second
+  installation will fail due to URL conflict errors. For example, an app that specifies a "urls" value
+  of "http://mail.example.com/" would conflict with an app that specifies
+  "http://mail.example.com/mail/".
 
-    !!!
+  !!!
 
-    If the user downloads the app's `.crx` file from a server that's not the Chrome Web Store, only one
-    domain is allowed, and it must be the same as the domain that serves the `.crx` file. For more
-    information on hosting options, see the extensions documentation for [Hosting][4].
+  If the user downloads the app's `.crx` file from a server that's not the Chrome Web Store, only one
+  domain is allowed, and it must be the same as the domain that serves the `.crx` file. For more
+  information on hosting options, see the extensions documentation for [Hosting][4].
 
-  launch:
+app.launch:
 
-  : _Required._ Specifies what happens when the user launches the app.
+: _Required._ Specifies what happens when the user launches the app.
 
 web_url:
 
@@ -249,7 +248,7 @@ for the store, especially the [Overview][16] and [Getting Started tutorial][17].
 
 [1]: /docs/extensions/mv2/apps/
 [2]: /docs/extensions/
-[3]: https://chrome.google.com/extensions/developer/dashboard
+[3]: https://chrome.google.com/webstore/devconsole
 [4]: /docs/extensions/mv2/hosting
 [5]: /webstore/images
 [6]: /docs/extensions/mv2/packaging

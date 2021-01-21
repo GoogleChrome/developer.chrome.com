@@ -144,7 +144,7 @@ Due to the use of [Content Security Policy][8], you can no longer use `<script>`
 with the HTML content. These must be moved to external JS files. In addition, inline event handlers
 are also not supported. For example, suppose you had the following code in your extension:
 
-```
+```html
 <html>
 <head>
   <script>
@@ -160,7 +160,7 @@ and reference them with a `src='path_to_file.js'` attribute.
 Similarly, inline event handlers, which are a common occurrence and convenience feature used by many
 Web developers, will not execute. For example, consider common instances such as:
 
-```
+```html
 <body onload="initialize()">
 <button onclick="handleClick()" id="button1">
 ```
@@ -169,7 +169,7 @@ These will not work in manifest V2 extensions. Remove the inline event handlers,
 external JS file and use `addEventListener()` to register event handlers for them instead. For
 example, in your JS code, use:
 
-```
+```html
 window.addEventListener("load", initialize);
 ...
 document.getElementById("button1").addEventListener("click",handleClick);
@@ -187,7 +187,7 @@ If your extension embeds resources (like images, script, CSS styles, etc) that a
 scripts that are injected into web pages, you need to use the [web_accessible_resources][9] property
 to allowlist these resources so that external Web pages can use them:
 
-```
+```json
 {
 ...
   "web_accessible_resources": [
@@ -209,7 +209,7 @@ There are two ways to do this:
     "content_security_policy" section of your manifest. To include a library like Google Analytics,
     this is the approach to take:
 
-    ```
+    ```json
     {
       ...,
       "content_security_policy": "script-src 'self'

@@ -163,7 +163,7 @@ that users are aware of what data is collected, and how it is collected, used an
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_3 }
 
 - The extension is collecting user data but has not provided a privacy policy.
-- The privacy policy is not provided in the designated field — a common mistake here is providing
+- The privacy policy is not provided in the designated field—a common mistake here is providing
   the privacy policy in the description.
 - The privacy policy URL is not working.
 - The privacy policy is not accessible.
@@ -495,9 +495,9 @@ Other Requirements
 The following types of personal or sensitive user data are also subject to additional
 requirements:
 
-- Financial or Payment Information — Don't publicly disclose financial or payment information
-- Authentication Information — Don't publicly disclose authentication information
-- Web Browsing Activity — Collection and use of web browsing activity is prohibited except to the
+- Financial or Payment Information—Don't publicly disclose financial or payment information
+- Authentication Information—Don't publicly disclose authentication information
+- Web Browsing Activity—Collection and use of web browsing activity is prohibited except to the
   extent required for a user-facing feature described prominently in the Product's Chrome Web
   Store page and in the Product's user interface.
 ```

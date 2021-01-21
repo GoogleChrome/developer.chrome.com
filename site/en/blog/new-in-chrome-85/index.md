@@ -6,7 +6,7 @@ description: >
   now check if your Windows app or PWA is installed with the
   getInstalledRelatedApps() API. App icon shortcuts work on Windows too
   (for real this time). There's an origin trial for fetch upload streaming.
-  And lots more. Let’s dive in and see what’s new for developers in Chrome 85!
+  And lots more. Let's dive in and see what's new for developers in Chrome 85!
 layout: 'layouts/blog-post.njk'
 date: 2020-08-25
 authors:
@@ -33,8 +33,8 @@ Here's what you need to know:
 * An origin trial for [`fetch` upload streaming](#fetch-stream) has started.
 * And [more](#more).
 
-I’m [Pete LePage](https://twitter.com/petele), working and shooting from home,
-let’s dive in and see what’s new for developers in Chrome 85!
+I'm [Pete LePage](https://twitter.com/petele), working and shooting from home,
+let's dive in and see what's new for developers in Chrome 85!
 
 ## Content Visibility {: #content-visibility }
 
@@ -47,7 +47,7 @@ let’s dive in and see what’s new for developers in Chrome 85!
 
 Turning your HTML into something the user can see, requires the browser to go
 through a number of steps before it can even paint the first pixel.
-And it does it for the whole page, even for content that isn’t visible in the
+And it does it for the whole page, even for content that isn't visible in the
 viewport.
 
 Applying `content-visibility: auto` to an element, tells the browser that it
@@ -105,7 +105,7 @@ The `getInstalledRelatedApps()` API makes it possible for *you* to check if
 
 For example, show different content to the user on a landing page if your app
 is already installed. Centralize overlapping functionality in one app to
-prevent confusion. Or, if your native app is already installed, don’t promote
+prevent confusion. Or, if your native app is already installed, don't promote
 the installation of your PWA.
 
 When it first shipped in [Chrome 80](https://developers.google.com/web/updates/2020/02/nic80),
@@ -122,7 +122,7 @@ relatedApps.forEach((app) => {
 
 Check out my article
 [Is your app installed? `getInstalledRelatedApps()` will tell you!](https://web.dev/get-installed-related-apps/)
-on web.dev to see how it works, and how to sign your apps to prove they’re
+on web.dev to see how it works, and how to sign your apps to prove they're
 yours.
 
 ## App Icon Shortcuts {: #app-shortcuts }
@@ -136,7 +136,7 @@ yours.
 
 In Chrome 84, we added support for App Icon Shortcuts. I accidentally said
 they were available everywhere, but they were only available on Android.
-Now, in Chrome 85, they’re available on **Android** and **Windows**, and in
+Now, in Chrome 85, they're available on **Android** and **Windows**, and in
 both Chrome and Edge.
 
 <br style="clear:both;">
@@ -156,7 +156,7 @@ both Chrome and Edge.
 ```
 
 Check out the [App Icon Shortcuts](https://web.dev/app-shortcuts/) article on
-web.dev for complete details, and I’m sorry for the confusion I caused.
+web.dev for complete details, and I'm sorry for the confusion I caused.
 
 ## Origin Trial: Streaming requests with `fetch()` {: #fetch-stream }
 
@@ -174,7 +174,7 @@ const responsePromise = fetch(url, {
 });
 ```
 
-For example, use it to warm up the server, or stream audio or video as it’s
+For example, use it to warm up the server, or stream audio or video as it's
 captured from the microphone or camera.
 
 Jake has an in-depth look in
@@ -185,7 +185,7 @@ video.
 
 ## And more {: #more }
 
-Of course, there’s plenty more.
+Of course, there's plenty more.
 
 `Promise.any` returns a promise that is fulfilled by the first given promise
 to be fulfilled or rejected.
@@ -234,9 +234,9 @@ additional changes in Chrome 85.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and I finally  **got** a hair cut!
+I'm Pete LePage, and I finally  **got** a hair cut!
 
-As soon as Chrome 86 is released, I’ll be right here to tell you -- what’s
+As soon as Chrome 86 is released, I'll be right here to tell you -- what's
 new in Chrome!

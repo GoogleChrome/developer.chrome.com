@@ -30,9 +30,9 @@ We'll go into detail about each step below.
 To upload your item, you need to create a ZIP file that contains the [files for your extension][4].
 The item's manifest file must be included, and it must specify at least the following fields:
 
-- `"name":` — Displayed in the Chrome Web Store and in the Chrome browser
-- `"version":` — The version of the metadata, incremented
-- `"icons":` — An array specifying the [icons][5] your item uses
+- `"name":`—Displayed in the Chrome Web Store and in the Chrome browser
+- `"version":`—The version of the metadata, incremented
+- `"icons":`—An array specifying the [icons][5] your item uses
 
 Your zip file may also include other images and any files that the item requires. The contents of
 the ZIP file and manifest depend on the specifics of your item; see [Extension files][6] for more

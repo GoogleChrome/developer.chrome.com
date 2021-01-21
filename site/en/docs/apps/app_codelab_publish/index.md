@@ -34,7 +34,7 @@ For those not familiar with the store, it provides several benefits to users and
 
 For users:
 
-- Added security — all apps and extensions are checked for Malware signals.
+- Added security—all apps and extensions are checked for Malware signals.
 - All apps are maintained with the latest version the developer has published.
 - Ratings and reviews provide a great way to see the quality of applications.
 
