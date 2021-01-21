@@ -81,8 +81,6 @@ then just call format with the relative time. Check out Mathias'
 [The `Intl.RelativeTimeFormat API`](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)
 post for full details.
 
-[mdn-reltimefmt]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat
-
 ## Specifying underline location for vertical text {: #underline }
 
 <figure class="float-right">
@@ -115,12 +113,6 @@ the [style][css3-td-style], [color][css3-td-color], and
   text-underline-position: right;
 }
 ```
-
-[css3-td-spec]: https://www.w3.org/TR/css-text-decor-3/
-[css3-td-line]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-style-property
-[css3-td-style]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-style-property
-[css3-td-color]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-color-property
-[css3-td-position]: https://www.w3.org/TR/css-text-decor-3/#text-underline-position-property
 
 ## Speech synthesis requires user activation {: #named-workers }
 
@@ -211,3 +203,10 @@ and you'll get an email notification whenever we launch a new video.
 
 I'm Pete LePage, and as soon as Chrome 72 is released, I'll be right
 here to tell you -- what's new in Chrome!
+
+[mdn-reltimefmt]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat
+[css3-td-spec]: https://www.w3.org/TR/css-text-decor-3/
+[css3-td-line]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-style-property
+[css3-td-style]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-style-property
+[css3-td-color]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-color-property
+[css3-td-position]: https://www.w3.org/TR/css-text-decor-3/#text-underline-position-property
