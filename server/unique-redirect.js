@@ -15,7 +15,6 @@
  */
 
 const fs = require('fs');
-const {matchOutput} = require('../site/_transforms/unique-page-resolver');
 const readdirp = require('readdirp');
 const path = require('path');
 
@@ -36,6 +35,9 @@ const simplifySegment = base => {
 };
 
 /**
+ * Iterates through all depths of subdirectories excluding the input. For example, if "foo/bar/que"
+ * was passed, will yield "foo/bar", "foo", and ".".
+ *
  * @param {string} p
  * @return {Generator<string, void, void>}
  */
@@ -48,6 +50,17 @@ const iterateDirs = function* (p) {
     yield update;
     p = update;
   }
+};
+
+/**
+ * @param {string} url
+ * @return url stripped of "/index.html" on right
+ */
+const stripIndexHtml = url => {
+  if (url.endsWith('/index.html')) {
+    return url.substr(0, url.length - '/index.html'.length);
+  }
+  return url;
 };
 
 /**
@@ -66,24 +79,19 @@ const leftMostDir = p => {
   }
 };
 
-async function buildHandler() {
-  if (path.sep !== '/') {
-    throw new Error('cannot build unique redir handler on Windows');
-  }
-
+/**
+ * @param {string} source path to find /index.html files from
+ * @return {Promise<express.RequestHandler>}
+ */
+async function buildHandler(source = 'dist/') {
   const options = {fileFilter: 'index.html', type: 'files'};
-  const results = await readdirp.promise('dist/', options);
-  const pathsOnly = results.map(({path: p}) => {
-    if (!p.endsWith('/index.html')) {
-      throw new Error(`got unexpected file: ${p}`);
-    }
-    return p.substr(0, p.length - '/index.html'.length);
-  });
+  const results = await readdirp.promise(source, options);
+  const pathsOnly = results.map(({path: p}) => '/' + stripIndexHtml(p));
 
   // for each:
   //   find highest path we can attach this basename to
   //   if we collide with something else, move _both_ under their subfolder
-  //   this leaves a tombstone which means "never place here" (empty array?)
+  //   this leaves a tombstone which means "never place here"
 
   /**
    * @type {{[root: string]: {[basename: string]: url}}}
@@ -93,6 +101,8 @@ async function buildHandler() {
   };
 
   /**
+   * Sets up a redirect for a given key within a subdirectory.
+   *
    * @param {string} dir real directory to insert at
    * @param {string} unprocessed final target url
    * @param {string} key to use in dir, i.e., simplified version
@@ -137,10 +147,13 @@ async function buildHandler() {
         }
 
         // We collided with something that already exists here. Move _that_ entry into its child
-        // dierctory, mark its position with a tombstone, and then restart inserting the original
+        // directory, mark its position with a tombstone, and then restart inserting the original
         // iteration as we might need to move this several times.
         const childDir = leftMostDir(path.relative(dir, other));
         const insertInto = path.join(dir, childDir);
+        if (insertInto === other) {
+          break; // nothing we can do: this is a page like /a/foo and there is a /a/b/foo
+        }
         const childKey = simplifySegment(path.basename(other));
         insertRoot(insertInto, other, childKey);
 
@@ -180,41 +193,61 @@ async function buildHandler() {
       console.info(redirs);
     }
   }
+
+  /**
+   * @type {express.RequestHandler}
+   */
+  return (req, res, next) => {
+    let url = stripIndexHtml(req.url);
+    const key = simplifySegment(path.basename(url));
+
+    // For now, we only support data in "/en", so check that actual folder for redirects.
+    let enPrefixAdded = false;
+    if (!url.startsWith('/en/')) {
+      url = path.join('/en', url);
+      enPrefixAdded = true;
+    }
+
+    /** @type {string=} */
+    let redirectTo = undefined;
+
+    // Walk up for the user-specified path until we find a matching redirect for the pathname key.
+    for (const dir of iterateDirs(url)) {
+      const redirs = roots[dir] ?? {};
+      redirectTo = redirs[key];
+      if (redirectTo !== undefined) {
+        break;
+      }
+    }
+    if (redirectTo === undefined) {
+      return next();
+    }
+
+    // Awkwardly remove "/en" if we added it to do our check.
+    if (enPrefixAdded && redirectTo.startsWith('/en/')) {
+      redirectTo = redirectTo.substr('/en'.length);
+    }
+    return res.redirect(301, redirectTo);
+  };
 }
 
 /**
- * Builds HTTP middleware that serves redirects for a unique-redirect.json
- * configuration file.
+ * Builds HTTP middleware that serves redirects for content found in dist/.
  *
- * @param {string[]=} staticPaths to check if content exists
- * @param {number=} code to use
  * @return {express.RequestHandler}
  */
-function buildUniqueRedirectHandler(staticPaths, code = 301) {
-  /** @type {{[right: string]: url}} */
-  let raw;
+function buildUniqueRedirectHandler() {
+  /** @type {express.RequestHandler} */
+  let replacedHandler = (req, res, next) => next();
 
-  buildHandler().catch(err => console.error('failed test', err));
+  // Build the handler async, and once it's ready, insert into the 404 handler path.
+  buildHandler()
+    .catch(err => console.error('failed to build uniqueRedirectHandler', err))
+    .then(handler => {
+      replacedHandler = handler;
+    });
 
-  try {
-    raw = JSON.parse(fs.readFileSync('dist/unique-redirect.json'));
-  } catch (e) {
-    console.warn('could not load unique-redirect:', e);
-    return (req, res, next) => next();
-  }
-
-  return (req, res, next) => {
-    let match = matchOutput(req.url, raw);
-    if (match) {
-      // TODO(samthor): "match" always starts with "en/", remove for now.
-      if (match.startsWith('en/')) {
-        match = match.substr('en/'.length);
-      }
-      match = `/${match}`;
-      return res.redirect(code, match);
-    }
-    return next();
-  };
+  return (req, res, next) => replacedHandler(req, res, next);
 }
 
 module.exports = {
