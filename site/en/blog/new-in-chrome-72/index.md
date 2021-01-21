@@ -31,7 +31,7 @@ And there's [plenty more](#more)!
 I'm [Pete LePage](https://twitter.com/petele). Let's dive in and see
 what's new for developers in Chrome 72!
 
-### Change log
+## Change log
 
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 72.

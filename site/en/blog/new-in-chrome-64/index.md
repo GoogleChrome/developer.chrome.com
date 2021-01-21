@@ -50,7 +50,7 @@ layout thrashing.
 
 Like other Observers, using it is pretty simple, create a `ResizeObserver`
 object and pass a callback to the constructor. The callback will be given
-an array of `ResizeOberverEntries` – one entry per observed element – which
+an array of `ResizeOberverEntries`–one entry per observed element–which
 contain the new dimensions for the element.
 
 ```js
@@ -112,7 +112,7 @@ there's plenty more.
 
 ## `window.alert()` {: #window-alert }
 
-Oh, and one more! While this isn't really a ‘developer feature', it makes
+Oh, and one more! While this isn't really a "developer feature", it makes
 me happy. `window.alert()` no longer brings a background tab to the
 foreground! Instead, the alert will be shown when the user switches to back
 to that tab.

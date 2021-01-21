@@ -33,7 +33,7 @@ In Chrome 75, we've added support for:
 I'm [Pete LePage](https://twitter.com/petele), let's dive in and see
 what's new for developers in Chrome 75!
 
-### Change log
+## Change log
 
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 75.

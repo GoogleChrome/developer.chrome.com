@@ -211,7 +211,7 @@ complete details.
 
 Measuring the quality of user experience has many facets. While some aspects
 of user experience are site and context specific, there is a common set of
-signals — "**Core Web Vitals**" — that is critical to all web experiences.
+signals—"**Core Web Vitals**"—that is critical to all web experiences.
 Such [core user experience needs][wd-ucpm] include loading experience,
 interactivity, and visual stability of page content, and combined are the
 foundation of the 2020 Core Web Vitals.
