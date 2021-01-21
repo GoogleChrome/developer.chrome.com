@@ -14,13 +14,25 @@
  * limitations under the License.
  */
 
-const fs = require('fs');
+const debug = false;
+
 const readdirp = require('readdirp');
 const path = require('path');
 
 // Included for types only.
 // eslint-disable-next-line no-unused-vars
 const express = require('express');
+
+/**
+ * Avoid redirecting into these directories. These are checked in-order and must not end with "/".
+ *
+ * @type {string[]}
+ */
+const avoidDirs = [
+  '/en/docs/extensions/mv3',
+  '/en/docs/apps',
+  '/en/docs/native-client',
+];
 
 /**
  * By removing special characters and capitals, we can more easily match 404s.
@@ -35,13 +47,16 @@ const simplifySegment = base => {
 };
 
 /**
- * Iterates through all depths of subdirectories excluding the input. For example, if "foo/bar/que"
- * was passed, will yield "foo/bar", "foo", and ".".
+ * Iterates through all depths of subdirectories excluding the input. For example, if "/foo/bar/que"
+ * was passed, will yield "/foo/bar", "/foo", and "/".
  *
  * @param {string} p
  * @return {Generator<string, void, void>}
  */
 const iterateDirs = function* (p) {
+  if (!p.startsWith('/')) {
+    throw new Error(`expected absolute URL, was: ${p}`);
+  }
   for (;;) {
     const update = path.dirname(p);
     if (update === p) {
@@ -80,13 +95,21 @@ const leftMostDir = p => {
 };
 
 /**
+ * @param {string} source
+ * @return {string[]}
+ */
+async function findPaths(source) {
+  const options = {fileFilter: 'index.html', type: 'files'};
+  const results = await readdirp.promise(source, options);
+  return results.map(({path: p}) => '/' + stripIndexHtml(p));
+}
+
+/**
  * @param {string} source path to find /index.html files from
  * @return {Promise<express.RequestHandler>}
  */
 async function buildHandler(source = 'dist/') {
-  const options = {fileFilter: 'index.html', type: 'files'};
-  const results = await readdirp.promise(source, options);
-  const pathsOnly = results.map(({path: p}) => '/' + stripIndexHtml(p));
+  const paths = await findPaths(source, avoidDirs);
 
   // for each:
   //   find highest path we can attach this basename to
@@ -96,8 +119,24 @@ async function buildHandler(source = 'dist/') {
   /**
    * @type {{[root: string]: {[basename: string]: url}}}
    */
-  const roots = {
-    '.': {},
+  const roots = {};
+
+  /**
+   * Finds a match for the given pathname request.
+   *
+   * @param {string} url
+   * @return {string=}
+   */
+  const matchUrl = url => {
+    const key = simplifySegment(path.basename(url));
+    for (const dir of iterateDirs(url)) {
+      const redirs = roots[dir] ?? {};
+      const match = redirs[key];
+      if (match !== undefined) {
+        return match;
+      }
+    }
+    return undefined;
   };
 
   /**
@@ -116,7 +155,9 @@ async function buildHandler(source = 'dist/') {
 
     if (force) {
       if (key in redirs && redirs[key] !== '') {
-        throw new Error(`unexpected forced insert: ${target}`);
+        throw new Error(
+          `unexpected forced insert: ${target} (was=${redirs[key]})`
+        );
       }
     } else if (key in redirs) {
       throw new Error(`got dup: '${key}' trying for '${dir}'`);
@@ -124,19 +165,23 @@ async function buildHandler(source = 'dist/') {
     redirs[key] = target;
   };
 
-  for (const p of pathsOnly) {
+  for (const p of paths) {
     /** @type {string} */
-    let previous;
+    let scope;
 
     const key = simplifySegment(path.basename(p));
 
     restart: for (;;) {
-      previous = path.dirname(p);
+      scope = path.dirname(p);
 
       for (const dir of iterateDirs(p)) {
         const check = roots[dir] ?? {};
         if (!(key in check)) {
-          previous = dir;
+          scope = dir;
+
+          if (avoidDirs.includes(scope)) {
+            break;
+          }
           continue;
         }
 
@@ -164,10 +209,31 @@ async function buildHandler(source = 'dist/') {
     }
 
     let force = false;
-    if (previous === path.dirname(p)) {
+    if (scope === path.dirname(p)) {
       force = true;
     }
-    insertRoot(previous, p, key, force);
+    insertRoot(scope, p, key, force);
+  }
+
+  // Look at all redirs in avoided directories, and move them to the root only if possible. This basically
+  // de-priorizes them while still going up as far as we can.
+  for (const avoid of avoidDirs) {
+    const redirs = roots[avoid] ?? {};
+
+    for (const key in redirs) {
+      if (redirs[key] === '') {
+        continue; // tombstone is possible here, ignore
+      }
+
+      const check = path.join(path.dirname(path.dirname(redirs[key])), key);
+      if (matchUrl(check) !== undefined) {
+        continue; // we already got a match for 'key' somewhere above us
+      }
+
+      // We can hoist this to the top as nothing else has the same name.
+      insertRoot('/', redirs[key], key);
+      redirs[key] = '';
+    }
   }
 
   // Clean up the redirs collection by removing all empty tombstones. They existed just to help
@@ -188,10 +254,7 @@ async function buildHandler(source = 'dist/') {
     }
 
     // TODO(samthor): Debugging information only.
-    console.warn(root, '=>', redirsAtRoot);
-    if (redirsAtRoot === 1) {
-      console.info(redirs);
-    }
+    debug && console.warn(root, '=>', redirsAtRoot);
   }
 
   /**
@@ -199,7 +262,6 @@ async function buildHandler(source = 'dist/') {
    */
   return (req, res, next) => {
     let url = stripIndexHtml(req.url);
-    const key = simplifySegment(path.basename(url));
 
     // For now, we only support data in "/en", so check that actual folder for redirects.
     let enPrefixAdded = false;
@@ -208,18 +270,9 @@ async function buildHandler(source = 'dist/') {
       enPrefixAdded = true;
     }
 
-    /** @type {string=} */
-    let redirectTo = undefined;
-
-    // Walk up for the user-specified path until we find a matching redirect for the pathname key.
-    for (const dir of iterateDirs(url)) {
-      const redirs = roots[dir] ?? {};
-      redirectTo = redirs[key];
-      if (redirectTo !== undefined) {
-        break;
-      }
-    }
-    if (redirectTo === undefined) {
+    // If we can't match, continue on to a 404 handler.
+    let redirectTo = matchUrl(url);
+    if (!redirectTo) {
       return next();
     }
 
