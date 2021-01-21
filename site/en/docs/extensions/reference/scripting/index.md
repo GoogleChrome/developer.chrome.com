@@ -6,7 +6,7 @@ api: scripting
 
 In order to use the `chrome.scripting` API, you need to specify a
 `"manifest_version"` of `3` or higher and include the `"scripting"` permission
-in your [manifest file](manifest).
+in your [manifest file][manifest].
 
 ```json
 {
@@ -21,7 +21,7 @@ in your [manifest file](manifest).
 
 You can use the `chrome.scripting` API to inject JavaScript and CSS into
 websites, similar to what can be achieved with
-[content scripts](contentScripts). With the `chrome.scripting` API, extensions
+[content scripts][contentScripts]. With the `chrome.scripting` API, extensions
 can make decisions at runtime.
 
 ### Injection Targets
@@ -57,7 +57,7 @@ chrome.scripting.executeScript(
 
 You can also inject in specific frames of a tab by specifying individual frame
 IDs. For more information on frame IDs, see the
-[webNavigation API](webNavigation).
+[webNavigation API][webNavigation].
 
 ```js
 const tabId = getTabId();
@@ -137,8 +137,8 @@ chrome.scripting.executeScript(
     () => { ... });
 ```
 
-You can work around this by using the [Storage API](storage) or by
-[passing messages](messaging).
+You can work around this by using the [Storage API][storage] or by
+[passing messages][messaging].
 
 The Chromium team is working on providing more capabilities in the future.
 
@@ -178,7 +178,7 @@ chrome.scripting.executeScript(
       function: getTitle,
     },
     (injectionResults) => {
-      for (const frameResult : injectionResults)
+      for (const frameResult of injectionResults)
         console.log('Frame Title: ' + frameResult.result);
     });
 ```
