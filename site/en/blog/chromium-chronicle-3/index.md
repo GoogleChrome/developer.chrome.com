@@ -41,7 +41,7 @@ The code coverage tool currently supports C/C++ code for Chrome on Linux;
 support for more platforms and more languages is in progress.
 
 The code coverage trybot has been rolled out to a 10% experiment, and once
-we’re more comfortable in its stability, we plan to enable it by default and
+we're more comfortable in its stability, we plan to enable it by default and
 expand it to more platforms.
 
 ## Learn More

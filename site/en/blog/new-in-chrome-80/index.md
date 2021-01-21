@@ -1,10 +1,10 @@
 ---
 title: New in Chrome 80
 description: >
-  Chrome 80 is rolling out now, and there’s a ton of new stuff in it for
-  developers! There’s support for modules in workers, optional chaining in
+  Chrome 80 is rolling out now, and there's a ton of new stuff in it for
+  developers! There's support for modules in workers, optional chaining in
   JavaScript, new origin trials, features that have graduated from origin
-  trial, and so much more. Let’s dive in and see what’s new for developers
+  trial, and so much more. Let's dive in and see what's new for developers
   in Chrome 80!
 layout: 'layouts/blog-post.njk'
 date: 2020-02-04
@@ -18,12 +18,12 @@ tags:
   - chrome-80
 ---
 
-Chrome 80 is rolling out now, and there’s a ton of new stuff in it for
+Chrome 80 is rolling out now, and there's a ton of new stuff in it for
 developers!
 
 {% youtube id='lM0qZpxu0Fg' %}
 
-There’s support for:
+There's support for:
 
 * [Modules in workers](#module-workers)
 * [Optional chaining](#opt-chaining) in JavaScript
@@ -31,7 +31,7 @@ There’s support for:
 * Features that have [graduated from origin trial](#ot-graduation)
 * And so much [more](#more).
 
-I’m [Pete LePage](https://twitter.com/petele), let’s dive in and see what’s
+I'm [Pete LePage](https://twitter.com/petele), let's dive in and see what's
 new for developers in Chrome 80!
 
 ## Module workers {: #module-workers }
@@ -49,14 +49,14 @@ const worker = new Worker('worker.js', {
 
 Moving to JavaScript modules, also enables the use of dynamic import for
 lazy-loading code, without blocking the execution of the worker. Check out
-Jason’s post
+Jason's post
 [Threading the web with module workers](https://web.dev/module-workers/) on
 web.dev for more details.
 
 ## Optional chaining {: #opt-chaining }
 
 Trying to read deeply nested properties in an object can be error-prone,
-especially if there’s a chance something might not evaluate.
+especially if there's a chance something might not evaluate.
 
 ```js
 // Error prone-version, could throw.
@@ -113,14 +113,14 @@ method allows your web app to check if your native app is installed on a user's
 device.
 
 One of the most common uses cases is for deciding whether to promote the
-installation of your PWA, if your native app isn’t installed. Or, you might
-want to disable some functionality of one app if it’s provided by the other app.
+installation of your PWA, if your native app isn't installed. Or, you might
+want to disable some functionality of one app if it's provided by the other app.
 
 ## New origin trials {: #ot-new }
 
 ### Content indexing API
 
-How do you let users know about content you’ve cached in your PWA?  There’s a
+How do you let users know about content you've cached in your PWA?  There's a
 discovery problem here. Will they know to open your app? Or what content is
 available?
 
@@ -146,17 +146,17 @@ await registration.index.add({
 To add something to the index, I need to get the service worker registration,
 then call `index.add`, and provide metadata about the content.
 
-Once the index is populated, it’s shown in a dedicated area of Chrome for
-Android’s Downloads page. Check out Jeff’s post [Indexing your offline-capable
+Once the index is populated, it's shown in a dedicated area of Chrome for
+Android's Downloads page. Check out Jeff's post [Indexing your offline-capable
 pages with the Content Indexing API](https://web.dev/content-indexing-api/)
 on web.dev for complete details.
 
 ### Notification triggers
 
 Notifications are a critical part of many apps. But, push notifications are
-only as reliable as the network you’re connected to. While that works in most
+only as reliable as the network you're connected to. While that works in most
 cases, it sometimes breaks. For example, if a calendar reminder, notifying
-you of an important event doesn’t come through because you’re in airplane
+you of an important event doesn't come through because you're in airplane
 mode, you might miss the event.
 
 Notification Triggers let you schedule notifications in advance, so that the
@@ -177,7 +177,7 @@ registration. In the notification options, add a `showTrigger` property with a
 `TimestampTrigger`. Then, when the time arrives, the browser will show the
 notification.
 
-The origin trial is planned to run through Chrome 83, so check out Tom’s
+The origin trial is planned to run through Chrome 83, so check out Tom's
 [Notification Triggers](https://web.dev/notification-triggers/) post on web.dev
 for complete details.
 
@@ -194,7 +194,7 @@ a complete list of features in origin trial.
 
 ## And more {: #more }
 
-Of course, there’s plenty more!
+Of course, there's plenty more!
 
 * You can now link directly to text fragments on a page, by using
   `#:~:text=something`. Chrome will scroll to and highlight the first instance
@@ -218,7 +218,7 @@ additional changes in Chrome 80.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 81 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 81 is released, I'll be right
+here to tell you -- what's new in Chrome!

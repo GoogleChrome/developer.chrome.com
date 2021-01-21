@@ -2,9 +2,9 @@
 title: New in Chrome 64
 description: >
   Chrome 64 adds support for ResizeObservers, which will notify you when an
-  element’s content rectangle has changed its size. Modules can now access to
+  element's content rectangle has changed its size. Modules can now access to
   host specific metadata with import.metadata The pop-up blocker gets strong
-  and plenty more. Let’s dive in and see what’s new for developers in Chrome 64!
+  and plenty more. Let's dive in and see what's new for developers in Chrome 64!
 layout: 'layouts/blog-post.njk'
 date: 2018-01-23
 updated: 2018-03-05
@@ -20,31 +20,31 @@ tags:
 {% youtube id='y5sb-icqOyg' %}
 
 * Support for [`ResizeObservers`](#resizeobserver), will notify you
-  when an element’s content rectangle has changed its size.
+  when an element's content rectangle has changed its size.
 * Modules can now access to host specific metadata with
   [import.meta](#import-meta).
 * The [pop-up blocker](#popup-blocker) gets strong.
 * [`window.alert()`](#window-alert) no longer changes focus.
 
-And there’s [plenty more](#more)!
+And there's [plenty more](#more)!
 
-I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 64!
+I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 64!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140).
 
 ## `ResizeObserver` {: #resizeobserver }
 
-Tracking when an element’s size changes can be a bit of a pain. Most likely,
-you’ll attach a listener to the document’s `resize` event, then call
+Tracking when an element's size changes can be a bit of a pain. Most likely,
+you'll attach a listener to the document's `resize` event, then call
 `getBoundingClientRect` or `getComputedStyle`. But, both of those can cause
 layout thrashing.
 
-And what if the browser window didn’t change size, but a new element was added
+And what if the browser window didn't change size, but a new element was added
 to the document? Or you added `display: none` to an element? Both of those
 can change the size of other elements within the page.
 
-`ResizeObserver` notifies you whenever an element’s size changes, and
+`ResizeObserver` notifies you whenever an element's size changes, and
 provides the new height and width of the element, reducing the risk of
 layout thrashing.
 
@@ -73,9 +73,9 @@ for more details and real world examples.
 
 ## Improved Pop-up Blocker {: #popup-blocker }
 
-I hate tab-unders. You know them, it’s when a page opens a pop-up to some
+I hate tab-unders. You know them, it's when a page opens a pop-up to some
 destination AND navigates the page. Usually one of them is an ad or
-something that you didn’t want.
+something that you didn't want.
 
 Starting in Chrome 64, these type of navigations will be blocked, and Chrome
 will show some native UI to the user - allowing them to follow the redirect
@@ -94,7 +94,7 @@ module file as opposed to the current HTML document.
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 64 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 * Chrome now supports
   [named captures](https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#named_captures)
@@ -112,17 +112,17 @@ there’s plenty more.
 
 ## `window.alert()` {: #window-alert }
 
-Oh, and one more! While this isn’t really a ‘developer feature’, it makes
+Oh, and one more! While this isn't really a ‘developer feature', it makes
 me happy. `window.alert()` no longer brings a background tab to the
 foreground! Instead, the alert will be shown when the user switches to back
 to that tab.
 
 No more random tab switching because something fired a `window.alert` on me.
-I’m looking at you old Google Calendar.
+I'm looking at you old Google Calendar.
 
 Be sure to [subscribe](https://goo.gl/6FP1a5) to our
 [YouTube channel](https://www.youtube.com/user/ChromeDevelopers/), and
-you’ll get an email notification whenever we launch a new video.
+you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 65 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 65 is released, I'll be right
+here to tell you -- what's new in Chrome!

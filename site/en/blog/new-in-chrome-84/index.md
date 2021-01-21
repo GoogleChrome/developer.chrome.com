@@ -5,7 +5,7 @@ description: >
   with App Icon Shortcuts. The Web Animations API adds support for a slew of
   previously unsupported features. Wake Lock, and the Content Indexing API
   graduate from origin trial. There are new origin trials for Idle detection
-  and SIMD. And there’s a whole bunch more. Let’s dive in and see what’s
+  and SIMD. And there's a whole bunch more. Let's dive in and see what's
   new for developers in Chrome 84!
 layout: 'layouts/blog-post.njk'
 date: 2020-07-14
@@ -37,8 +37,8 @@ Here's what you need to know:
 * [Same Site Cookie policy](#sscp) changes are starting to roll out again.
 * And [more](#more).
 
-I’m [Pete LePage](https://twitter.com/petele), working and shooting from home,
-let’s dive in and see what’s new for developers in Chrome 84!
+I'm [Pete LePage](https://twitter.com/petele), working and shooting from home,
+let's dive in and see what's new for developers in Chrome 84!
 
 ## App icon shortcuts {: #app-icon-shortcuts }
 
@@ -51,7 +51,7 @@ let’s dive in and see what’s new for developers in Chrome 84!
 
 App icon shortcuts make it easy for users to quick start common tasks
 within your app. For example, compose a new tweet, send a message, or see
-their notifications. They’re supported in Chrome for Android.
+their notifications. They're supported in Chrome for Android.
 
 These shortcuts are invoked by long pressing the app icon on Android. Adding
 a shortcut to your PWA is easy,  create a new `shortcuts` property in your web
@@ -104,10 +104,10 @@ for complete details.
 </figure>
 
 If your content is available without a network connection. But the user
-doesn’t know about it? Is it really available? There’s a discovery problem!
+doesn't know about it? Is it really available? There's a discovery problem!
 
 With the Content Indexing API, which just graduated from original trial,
-you can add URLs and metadata for content that’s available offline. Using that
+you can add URLs and metadata for content that's available offline. Using that
 metadata, the content is then surfaced to the user, improving discoverability.
 
 To add content to the index, call `index.add()` on the service worker
@@ -131,7 +131,7 @@ await registration.index.add({
 });
 ```
 
-Want to see what’s already in your index? Call `index.getAll()` on the service
+Want to see what's already in your index? Call `index.getAll()` on the service
 worker registration.
 
 ```js
@@ -165,7 +165,7 @@ In fact, the Betty Crocker website is using this today, and published a
 increase in purchase intent indicators.
 
 To get a wake lock, call `navigator.wakeLock.request()`, it returns a
-`WakeLockSentinel` object,  used to “release” the wake lock.
+`WakeLockSentinel` object,  used to "release" the wake lock.
 
 <br style="clear:both;">
 
@@ -177,9 +177,9 @@ const wl = await navigator.wakeLock.request('screen');
 wl.release();
 ```
 
-Of course, there’s a little more to it then that, so check out
+Of course, there's a little more to it then that, so check out
 [Stay awake with the Screen Wake Lock API](https://web.dev/wakelock/), but at
-least my screen won’t be covered in flour any more!
+least my screen won't be covered in flour any more!
 
 ## Origin trials
 
@@ -235,7 +235,7 @@ To learn more about WebAssembly SIMD, check out
 Chrome 84 is big, but there are a few other important updates I want to point
 out.
 
-* We’re resuming the gradual rollout of [SameSite cookie changes][cr-blog-sscookie].
+* We're resuming the gradual rollout of [SameSite cookie changes][cr-blog-sscookie].
 * Sites with abusive permission requests, or abusive notifications, will
   automatically be enrolled in our [quieter notifications UI][cr-blog-quieter].
 * There's a new origin trial for [QuicTransport](https://web.dev/quictransport/).
@@ -255,10 +255,10 @@ additional changes in Chrome 84.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and I **still need** a hair cut, but as soon as Chrome 85 is
-released, I’ll be right here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and I **still need** a hair cut, but as soon as Chrome 85 is
+released, I'll be right here to tell you -- what's new in Chrome!
 
 [ot-simd]: https://developers.chrome.com/origintrials/#/view_trial/-4708513410415853567
 [cr-blog-sscookie]: https://blog.chromium.org/2020/05/resuming-samesite-cookie-changes-in-july.html

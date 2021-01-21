@@ -10,7 +10,7 @@ date: 2021-01-11
 - Add your tag to `site/_data/i18n/tags.yml`. The `en` and `es` fields correspond
 to different languages. For now, just add your tag using the `en` field.
 
-```
+```yaml
 news:
   en: News
 ```
@@ -28,7 +28,7 @@ the same key you used in `site/_data/i18n/tags.yml`.
 
 In the front matter for your post you can add a list of tags:
 
-```
+```md
 ---
 title: My first post
 tags:

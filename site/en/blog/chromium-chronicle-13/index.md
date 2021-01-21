@@ -46,7 +46,7 @@ GDB commands `-b`, `next`, `watch`, etc. However, you can also use
 **reverse-next** (`rn`), **reverse-cont** (`rc`), **reverse-step** (`rs`),
 **reverse-fin**.
 
-These still respect any breakpoints you’ve set. For example:
+These still respect any breakpoints you've set. For example:
 
 ```text
 (gdb) c  # Execute to the end
@@ -68,7 +68,7 @@ New value = (const blink::ComputedStyle *) 0x0
 0x00007f68cabcf78e in std::__Cr::swap&lt;blink::ComputedStyle const*&gt; (
 ```
 
-In this example, I have used `--single-process` for simplicity, but that’s
+In this example, I have used `--single-process` for simplicity, but that's
 not necessary. **RR can trace multiple processes**; after recording, you can
 see a list using `rr ps` and pick one to replay with `rr replay -f PID`.
 

@@ -4,7 +4,7 @@ description: >
   With Chrome 59, you can run Chrome in an automated environment without a user
   interface or peripherals; notifications on macOS are shown directly by the
   native macOS notification system; you can now capture full resolution
-  photos with the image capture API, and there’s plenty more!
+  photos with the image capture API, and there's plenty more!
 layout: 'layouts/blog-post.njk'
 date: 2017-05-31
 authors:
@@ -23,12 +23,12 @@ tags:
 * [Notifications on macOS](#macnot) will be shown directly by the native
   macOS notification system.
 * You can now capture full resolution photos with the
-  [image capture API](#imagecapture), and there’s plenty more!
+  [image capture API](#imagecapture), and there's plenty more!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/58.0.3029.81..59.0.3071.80?pretty=fuller&n=10000)
 
-I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 59!
+I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 59!
 
 ## Headless Chrome {: #headless }
 
@@ -43,14 +43,14 @@ visible UI shell. For example:
 Starting in Chrome 59, you can now run headless Chrome. It brings all modern web
 platform features provided by Chrome to the command line.
 
-Check out [Eric Bidelman’s post on Updates](https://developers.google.com/web/updates/2017/04/headless-chrome)
-for full details. He’s got examples on how you can use it to convert pages to
+Check out [Eric Bidelman's post on Updates](https://developers.google.com/web/updates/2017/04/headless-chrome)
+for full details. He's got examples on how you can use it to convert pages to
 PDF, dump the DOM and how to use it programmatically in Node.
 
 ## Native notifications on macOS {: #macnot }
 
 Chrome has historically included its own notification system for web and
-extension developers to show notifications to users. But, we’ve heard from users
+extension developers to show notifications to users. But, we've heard from users
 and developers alike that they want Chrome to use the native OS notification
 system.
 
@@ -68,7 +68,7 @@ my do not disturb settings.
 </figure>
 
 Because of the way macOS handles notifications, there are a few low usage APIs
-that are now discouraged, as they’ll result in a degraded experience on macOS.
+that are now discouraged, as they'll result in a degraded experience on macOS.
 
 Check out our [Updates post](https://developers.google.com/web/updates/2017/04/native-mac-os-notifications)
 for all the details.
@@ -76,14 +76,14 @@ for all the details.
 ## Image capture API {: #imagecapture }
 
 Capturing high res photos in a web app can be hard. Either the user has to
-upload a photo they’ve already taken, or switch from the browser to the camera,
+upload a photo they've already taken, or switch from the browser to the camera,
 take the photo, switch back to the browser and upload the photo.
 
 With the new Image Capture API in Chrome 59, you have to access the full
 resolution capabilities of any available camera. The API provides control of
 features such as zoom, brightness, contrast, ISO and even white balance.
 
-Check [Sam’s post](https://developers.google.com/web/updates/2016/12/imagecapture) for full details and
+Check [Sam's post](https://developers.google.com/web/updates/2016/12/imagecapture) for full details and
 sample code you can use to get started right away.
 
 ## And more! {: #more }
@@ -101,7 +101,7 @@ and developers work together.
 
 Then [subscribe](https://goo.gl/6FP1a5) to our
 [YouTube channel](https://www.youtube.com/user/ChromeDevelopers/), and
-you’ll get an email notification whenever we launch a new video.
+you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 60 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 60 is released, I'll be right
+here to tell you -- what's new in Chrome!

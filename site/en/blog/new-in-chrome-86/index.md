@@ -3,8 +3,8 @@ title: New in Chrome 86
 description: >
   Chrome 86 is rolling out now! The file system access API is now available in
   stable. There are new origin trials for Web HID and the Multi-Screen Window
-  placement API. There’s some new stuff in CSS, and plenty more. Let’s dive in
-  and see what’s new for developers in Chrome 86!
+  placement API. There's some new stuff in CSS, and plenty more. Let's dive in
+  and see what's new for developers in Chrome 86!
 layout: 'layouts/blog-post.njk'
 date: 2020-10-06
 authors:
@@ -25,16 +25,16 @@ Here's what you need to know:
 * The [File System Access API](#fs-access) is now available in stable.
 * There are new origin trials for [Web HID](#web-hid) and the
   [Multi-screen Window Placement API](#win-place).
-* There’s some new stuff in CSS, and [plenty more](#more).
+* There's some new stuff in CSS, and [plenty more](#more).
 
-I’m [Pete LePage](https://twitter.com/petele), working and shooting from home,
-let’s dive in and see what’s new for developers in Chrome 86!
+I'm [Pete LePage](https://twitter.com/petele), working and shooting from home,
+let's dive in and see what's new for developers in Chrome 86!
 
 ## File System Access {: #fs-access }
 
 Today, you can use the `<input type="file">` element read a file from disk.
-To save changes, add [`download`][a-download] to an anchor tag, it’ll show the
-file picker, then saves the file. There’s no way to write to the same file
+To save changes, add [`download`][a-download] to an anchor tag, it'll show the
+file picker, then saves the file. There's no way to write to the same file
 you opened. That workflow is annoying.
 
 With the File System Access API (formerly the Native File System API), which
@@ -81,14 +81,14 @@ async function saveFile(fileHandle) {
 </figure>
 
 Before writing, Chrome will check if the user has granted write permission,
-if write permission hasn’t been granted, Chrome will prompt the user first.
+if write permission hasn't been granted, Chrome will prompt the user first.
 
 Calling `showDirectoryPicker()` will open a directory, allowing you to get a
 list of files, or create new files in that directory. Perfect for things like
 IDEs, or media players that interact with lots of files. Of course, before
 you can write anything, the user must grant write permission.
 
-There’s a lot more to the API, so check out the
+There's a lot more to the API, so check out the
 [File System Access article][fs-article] on web.dev.
 
 ## Origin Trial: WebHID {: #web-hid }
@@ -101,7 +101,7 @@ There’s a lot more to the API, so check out the
 </figure>
 
 Human interface devices, commonly referred to as HID, takes input from, or
-provides output to... humans. There’s a long tail of human interface devices
+provides output to... humans. There's a long tail of human interface devices
 that are too new, too old, or too uncommon to be accessible by the systems'
 device drivers.
 
@@ -143,7 +143,7 @@ for more details, examples, how you can get started, and a cool demo.
 
 Today, you can get the properties of the screen the browser window is on by
 calling `window.screen()`. But what if you have a multi-monitor setup? Sorry,
-the browser will only tell you about the screen it’s currently on.
+the browser will only tell you about the screen it's currently on.
 
 ```js
 const screen = window.screen;
@@ -166,7 +166,7 @@ and place windows on specific screens. Being able to place windows on specific
 screens is critical for things like presentation apps, financial services apps,
 and more.
 
-Before you can use the API, you’ll need to request permission. If you don’t,
+Before you can use the API, you'll need to request permission. If you don't,
 the browser will prompt the user when you first try to use it.
 
 ```js
@@ -249,11 +249,11 @@ additional changes in Chrome 86.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video, or add our
+and you'll get an email notification whenever we launch a new video, or add our
 [RSS feed](https://developers.google.com/web/shows/rss.xml) to your feed reader.
 
-I’m Pete LePage, and as soon as Chrome 87 is released, I’ll be right here to
-tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 87 is released, I'll be right here to
+tell you -- what's new in Chrome!
 
 [a-download]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download
 [fs-article]: https://web.dev/file-system-access/

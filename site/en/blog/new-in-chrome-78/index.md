@@ -3,10 +3,10 @@ title: New in Chrome 78
 description: >
   Chrome 78 is rolling out now! You can now provide "types" for CSS variables.
   You get fresher service workers because byte-for-byte checks are now
-  performed for scripts imported by importScripts(). And I’ve got details for
+  performed for scripts imported by importScripts(). And I've got details for
   two new origin trials that provide some neat new functionality including the
   Native File System and the SMS Receiver. Plus the Chrome DevSummit is
-  happening November 11-12, 2019. Let’s dive in and see what’s new for
+  happening November 11-12, 2019. Let's dive in and see what's new for
   developers in Chrome 78!
 layout: 'layouts/blog-post.njk'
 date: 2019-10-22
@@ -23,7 +23,7 @@ tags:
 
 Chrome 78 is rolling out now!
 
-I’m [Pete LePage](https://twitter.com/petele), let’s dive in and see what’s
+I'm [Pete LePage](https://twitter.com/petele), let's dive in and see what's
 new for developers in Chrome 78!
 
 ## CSS Properties and Values API {: #css-prop-val }
@@ -48,7 +48,7 @@ properties.
 
 ```css
 html {
-  --my-color: url(‘not-a-color’); // Oops, not a color!
+  --my-color: url(‘not-a-color'); // Oops, not a color!
 }
 .thing {
   color: var(--my-color);
@@ -56,8 +56,8 @@ html {
 ```
 
 Registering a property is as easy as calling `window.CSS.registerProperty()`
-and providing the name of the property you’re defining the type of property
-it is, if it should inherit, and it’s initial value.
+and providing the name of the property you're defining the type of property
+it is, if it should inherit, and it's initial value.
 
 ```js
 window.CSS.registerProperty({
@@ -69,7 +69,7 @@ window.CSS.registerProperty({
 ```
 
 Take a look at Sam Richard's
-[Smarter custom properties with Houdini’s new API][prop-val-web-dev] article
+[Smarter custom properties with Houdini's new API][prop-val-web-dev] article
 on web.dev for complete details.
 
 [prop-val-web-dev]: https://web.dev/css-props-and-vals/
@@ -116,7 +116,7 @@ Opting into an origin trial allows you to build demos and prototypes that
 your beta testing users can try for the duration of the trial without
 requiring them to flip any special flags in Chrome.
 
-There’s more info on origin trials in the
+There's more info on origin trials in the
 [Origin Trials Guide for Web Developers][ot-for-web-devs]. You can see a list
 of active origin trials, and sign up for them on the
 [Chrome Origin Trials][ot-listing] page.
@@ -138,10 +138,10 @@ interact with files on the user's local device. After a user grants a web app
 access, this API allows web apps to read or save changes directly to files
 and folders on the user's device.
 
-I’m really excited about all of the new experiences this enables, no more
-having to “upload” or “download” files I want to work with. Check out my post
+I'm really excited about all of the new experiences this enables, no more
+having to "upload" or "download" files I want to work with. Check out my post
 about the [Native File System][native-fs] for all the details, including
-code, a demo, and how we’re working to keep users safe.
+code, a demo, and how we're working to keep users safe.
 
 [fs-ot]: https://developers.chrome.com/origintrials/#/view_trial/3868592079911256065
 [native-fs]: https://developers.google.com/web/updates/2019/08/native-file-system
@@ -168,8 +168,8 @@ with all the details, and how to sign up for the origin trial.
   {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4L4iDgNCnYAykp3UXZRe.png", alt="", className="float-right" %}
 </a>
 
-Don’t forget to tune into the [Chrome Dev Summit][cds-site] on November
-11th and 12th,  it’ll be streaming live, on the
+Don't forget to tune into the [Chrome Dev Summit][cds-site] on November
+11th and 12th,  it'll be streaming live, on the
 [Chrome Developers YouTube channel][cr-yt].
 
 [cds-site]: https://developer.chrome.com/devsummit/
@@ -192,8 +192,8 @@ additional changes in Chrome 78.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video, or add our
+and you'll get an email notification whenever we launch a new video, or add our
 [RSS feed](https://developers.google.com/web/shows/rss.xml) to your feed reader.
 
-I’m Pete LePage, and as soon as Chrome 79 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 79 is released, I'll be right
+here to tell you -- what's new in Chrome!

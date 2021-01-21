@@ -25,7 +25,7 @@ tags:
   elements that scroll normally until sticking to the top of the viewport.
 * And [HTML5 by Default](#html5-by-default) is enabled for all users.
 
-I’m Pete LePage, let’s dive in and see what’s new for developers in Chrome 56.
+I'm Pete LePage, let's dive in and see what's new for developers in Chrome 56.
 
 ## Web Bluetooth API {: #webbluetooth }
 
@@ -55,7 +55,7 @@ to go along with it.
 
 Previously, building content headers that scrolled normally until sticking
 to the top of the viewport required listening to scroll events and
-switching an element’s position from relative to fixed at a specified threshold.
+switching an element's position from relative to fixed at a specified threshold.
 It was difficult to synchronize, and often results in small visual jumps.
 
 Chrome now supports CSS
@@ -81,11 +81,11 @@ about it.
 
 ## HTML5 By Default {: #html5-by-default }
 
-Last August, we announced that we’d be
+Last August, we announced that we'd be
 [moving to HTML5 By Default](https://blog.google/products/chrome/flash-and-chrome/)
 to offer a safer, more power-efficient experience. This change disables Adobe
-Flash Player unless there’s a user indication that they want Flash content on
-specific sites, and eventually all websites will require the user’s permission
+Flash Player unless there's a user indication that they want Flash content on
+specific sites, and eventually all websites will require the user's permission
 to run Flash.
 
 In Chrome 56,
@@ -98,7 +98,7 @@ and [recommendations](https://sites.google.com/a/chromium.org/dev/flash-roadmap#
 
 ## And more
 
-And of course, there’s plenty more.
+And of course, there's plenty more.
 
 * [WebVR](https://developers.google.com/web/fundamentals/vr/) is available as
   an Origin Trial.
@@ -107,14 +107,14 @@ And of course, there’s plenty more.
 * And the Payment Request API has a
   [variety of new features](https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/preview).
 
-If you want to stay up to date with Chrome and know what’s coming, be sure to
+If you want to stay up to date with Chrome and know what's coming, be sure to
 [subscribe](https://goo.gl/6FP1a5), follow
 [@ChromiumDev](//twitter.com/chromiumdev) on Twitter and be sure to check
 out the [videos from the Chrome Dev Summit](https://www.youtube.com/playlist?list=PLNYkxOF6rcIBTs2KPy1E6tIYaWoFcG3uj)
 for a deeper dive into some of the awesome things the Chrome team is working on.
 
-I’m Pete LePage, and as soon as Chrome 57 is released, I’ll be right here to
-tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 57 is released, I'll be right here to
+tell you -- what's new in Chrome!
 
 ## New in Chrome Easter Egg
 

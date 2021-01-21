@@ -21,7 +21,7 @@ on to understand how Google Update works to serve regular updates to your
 devices.
 
 **Google Update is the tool for managing desktop (Mac and Windows) client
-install and update processes. It’s not just for Chrome!** This tool serves
+install and update processes. It's not just for Chrome!** This tool serves
 updates via Auto-Update Server (also known as Omaha Server).
 
 On Windows, Google Update works both as an installer and updater for Google

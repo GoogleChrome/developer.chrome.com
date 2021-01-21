@@ -1,10 +1,10 @@
 ---
 title: New in Chrome 77
 description: >
-  Chrome 77 is rolling out now! There’s a better way to track the performance
+  Chrome 77 is rolling out now! There's a better way to track the performance
   of your site with Largest Contentful Paint. Forms get some new capabilities.
   Native lazy loading is here. The Chrome DevSummit is happening
-  November 11-12, 2019. And plenty more. Let’s dive in and see what’s new for
+  November 11-12, 2019. And plenty more. Let's dive in and see what's new for
   developers in Chrome 77!
 layout: 'layouts/blog-post.njk'
 date: 2019-09-16
@@ -22,22 +22,22 @@ tags:
 
 Chrome 77 is rolling out now!
 
-* There’s a better way to track the performance of your site with
+* There's a better way to track the performance of your site with
   [Largest Contentful Paint](#lcp).
 * Forms get some [new capabilities](#new-forms-capabilities).
 * [Native lazy loading](#lazy-loading) is here.
 * [Chrome DevSummit 2019](#cds2019) is happening November 11-12 2019.
 * And plenty [more](#more).
 
-I’m [Pete LePage](https://twitter.com/petele), let’s dive in and see what’s
+I'm [Pete LePage](https://twitter.com/petele), let's dive in and see what's
 new for developers in Chrome 77!
 
 ## Largest Contentful Paint {: #lcp }
 
 Understanding and measuring the real world performance of your site can be hard.
-Metrics like `load`, or `DOMContentLoaded`, don’t tell you what the user is
+Metrics like `load`, or `DOMContentLoaded`, don't tell you what the user is
 seeing on screen. First Paint, and First Contentful Paint, only capture the
-beginning of the experience. First Meaningful Paint is better, but it’s
+beginning of the experience. First Meaningful Paint is better, but it's
 complex, and sometimes wrong.
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Bwe8cTocyJGd5wNiaFMm.png", alt="" %}
@@ -48,7 +48,7 @@ makes it possible to measure when the main content of the page is loaded.
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/n41KwUDKNUFZAKmWDTkr.png", alt="" %}
 
-To measure the Largest Contentful Paint, you’ll need to use a Performance
+To measure the Largest Contentful Paint, you'll need to use a Performance
 Observer, and look for `largest-contentful-paint` events.
 
 ```js
@@ -66,7 +66,7 @@ const poOpts = {
 po.observe(poOpts);
 ```
 
-Since a page often loads in stages, it’s possible that the largest element
+Since a page often loads in stages, it's possible that the largest element
 on a page will change, so you should only report the last
 `largest-contentful-paint` event to your analytics service.
 
@@ -87,9 +87,9 @@ Phil has a great post about the [Largest Contentful Paint][lcp] on web.dev.
 ## New forms capabilities {: #new-forms-capabilities }
 
 Many developers build custom form controls, either to customize the look and
-feel of existing elements, or to build new controls that aren’t built in to
+feel of existing elements, or to build new controls that aren't built in to
 the browser. Typically this involves using JavaScript and hidden `<input>`
-elements, but it’s not a perfect solution.
+elements, but it's not a perfect solution.
 
 Two new web features, added in Chrome 77, make it easier to build custom form
 controls, and remove  the many of the existing limitations.
@@ -110,7 +110,7 @@ form.addEventListener('formdata', ({formData}) => {
 When the user clicks the submit button, the form fires the `formdata` event,
 which includes a `FormData` object that holds all of the data being submitted.
 Then, in your `formdata` event handler, you can update or modify the
-`formdata` before it’s submitted.
+`formdata` before it's submitted.
 
 ### Form-associated custom elements
 
@@ -140,16 +140,16 @@ details!
 
 ## Native lazy loading {: #lazy-loading }
 
-I’m not sure how I missed native lazy loading in my last video! It’s pretty
-amazing, so I’m including it now. Lazy loading is a technique that allows
+I'm not sure how I missed native lazy loading in my last video! It's pretty
+amazing, so I'm including it now. Lazy loading is a technique that allows
 you to defer the loading of non-critical resources, like off-screen `<img>`'s,
-or `<iframe>`'s - until they’re needed, increasing the performance of your page.
+or `<iframe>`'s - until they're needed, increasing the performance of your page.
 
 Starting in Chrome 76, the browser handles lazy loading for you, without the
 need to write custom lazy loading code, or use a separate JavaScript library.
 
 To tell the browser you want an image, or iframe lazy loaded, use the
-`loading=”lazy”` attribute. Images and iframes that are “above the fold”
+`loading="lazy"` attribute. Images and iframes that are "above the fold"
 load normally. And those that are below, are only fetched when the user
 scrolls near them.
 
@@ -167,10 +167,10 @@ Check out [Browser level lazy-loading for the web][wd-lazy] on web.dev for detai
 
 **The Chrome Dev Summit is coming up November 11th and 12th.**
 
-It’s a great opportunity to learn about the latest tools and updates coming
+It's a great opportunity to learn about the latest tools and updates coming
 to the web platform, and hear directly from the Chrome engineering team.
 
-It’ll be streamed live on our
+It'll be streamed live on our
 [YouTube channel](https://youtube.com/user/ChromeDevelopers/), or if you want
 to attend in person, you can request your invite at the
 [Chrome Dev Summit 2019](https://developer.chrome.com/devsummit/) website.
@@ -178,7 +178,7 @@ to attend in person, you can request your invite at the
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 77 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 The [Contact Picker API](https://developers.google.com/web/updates/2019/08/contact-picker), available as an
 origin trial, is a new, on-demand picker that allows users to select an entry
@@ -203,7 +203,7 @@ additional changes in Chrome 77.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 78 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 78 is released, I'll be right
+here to tell you -- what's new in Chrome!

@@ -26,16 +26,16 @@ tags:
   [`display: fullscreen`](#fullscreen).
 * [`allow-top-navigation-by-user-activation`](#iframes) gives sandboxed
   `iframes` new powers
-* And there’s plenty [more](#more)!
+* And there's plenty [more](#more)!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/57.0.2987.98..58.0.3029.81?pretty=fuller&n=10000)
 
-I’m Pete LePage. Let’s dive in and see what’s new for developers in Chrome 58!
+I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 58!
 
 ## IndexedDB 2.0 {: #idb2 }
 
-The structure of your site’s database has large performance impacts, and can
+The structure of your site's database has large performance impacts, and can
 be difficult to change.
 [IndexedDB 2.0](https://hacks.mozilla.org/2016/10/whats-new-in-indexeddb-2-0/)
 changes that.
@@ -86,7 +86,7 @@ ability to navigate the top-level page, while still blocking auto-redirects.
 
 ## And more! {: #more }
 
-And of course, there’s plenty more.
+And of course, there's plenty more.
 
 * Say goodbye to the `clearfix` hack. Instead of manually resetting
   multiple layout properties like float and clear, you can now add a new
@@ -106,7 +106,7 @@ and developers work together.
 
 Then [subscribe](https://goo.gl/6FP1a5) to our
 [YouTube channel](https://www.youtube.com/user/ChromeDevelopers/), and
-you’ll get an email notification whenever we launch a new video.
+you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 59 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 59 is released, I'll be right
+here to tell you -- what's new in Chrome!

@@ -4,7 +4,7 @@ description: >
   Chrome 81 is rolling out now! App icon badging graduates from it's origin
   trial. Hit testing for augmented reality is now available in the browser.
   Web NFC starts its origin trial. And I've got an update on the adjusted
-  Chrome release schedule. Let’s dive in and see what’s new for developers
+  Chrome release schedule. Let's dive in and see what's new for developers
   in Chrome 81!
 layout: 'layouts/blog-post.njk'
 date: 2020-04-07
@@ -32,8 +32,8 @@ Here's what you need to know:
 * [Web NFC](#web-nfc) starts its origin trial.
 * And [more](#more).
 
-I’m [Pete LePage](https://twitter.com/petele), working and shooting from home,
-let’s dive in and see what’s new for developers in Chrome 81!
+I'm [Pete LePage](https://twitter.com/petele), working and shooting from home,
+let's dive in and see what's new for developers in Chrome 81!
 
 !!!.aside
 We've created a [set of resources](https://web.dev/covid19) to help you
@@ -49,11 +49,11 @@ secure, and work reliably for anyone who depends on it.
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/GHbwYSfm0D7biJ0GZhOL.jpg", alt="Screenshot of Chromium Calendar", className="float-right" %}
 
-In short, Chrome 81 is rolling out now. We’re going to skip Chrome 82, and move
+In short, Chrome 81 is rolling out now. We're going to skip Chrome 82, and move
 directly to Chrome 83, which will be released 3 weeks earlier than planned,
 in approximately mid-May.
 
-We’ll keep everyone informed of any changes to our schedule on our
+We'll keep everyone informed of any changes to our schedule on our
 [release blog][cr-release-blog], and will share additional details on the
 schedule in the [Chromium Developers group][cr-dev]. You can also check our
 [schedule page][cr-schedule] for specific dates for each milestone at any time.
@@ -68,10 +68,10 @@ schedule in the [Chromium Developers group][cr-dev]. You can also check our
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZQU1XkZB415LOjJZ11L4.jpg", alt="", className="float-right" %}
 
 There are a handful of native apps that let you see what a new couch or chair
-might look like in your home. With an update to the Web XR Device API, it’s
+might look like in your home. With an update to the Web XR Device API, it's
 now possible to do that on the web too.
 
-With the Web XR Hit Test API, you can place virtual objects into your camera’s
+With the Web XR Hit Test API, you can place virtual objects into your camera's
 view of the real world.
 
 Check out the Immersive Web Working Group's [Hit Testing sample][ht-sample]
@@ -92,11 +92,11 @@ Badging of app icons makes it easy to subtly notify the user that there is
 some new activity that might require their attention, or to indicate a small
 amount of information, such as an unread count.
 
-It’s more user-friendly than notification. And because it doesn’t interrupt
-the user, it can be updated with a much higher frequency. It’s perfect for
+It's more user-friendly than notification. And because it doesn't interrupt
+the user, it can be updated with a much higher frequency. It's perfect for
 chat or email apps to indicate the number of unread messages. Social media
-apps could use it to indicate the number of times you’ve been tagged in other
-peoples posts.  Or for games, to indicate to a user that it’s their turn.
+apps could use it to indicate the number of times you've been tagged in other
+peoples posts.  Or for games, to indicate to a user that it's their turn.
 
 Check out my [Badging API][wd-badging] article on web.dev for full details.
 
@@ -109,7 +109,7 @@ web app to read and write to NFC tags. This opens new use cases, including
 providing more details about museum exhibits, inventory management, reading
 information from a conference badge, and more.
 
-It’s super easy to use. To read a tag, create a new instance of an `NDEFReader`
+It's super easy to use. To read a tag, create a new instance of an `NDEFReader`
 object, and start the scan.
 
 ```js
@@ -159,10 +159,10 @@ additional changes in Chrome 81.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 83 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 83 is released, I'll be right
+here to tell you -- what's new in Chrome!
 
 ## A personal note from Pete
 

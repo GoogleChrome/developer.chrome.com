@@ -1,7 +1,7 @@
 ---
 title: "The Chromium Chronicle #10: Catching UI Regressions with Pixel Tests"
 description: >
-  Chrome’s testing strategy relies heavily on automated functional correctness
+  Chrome's testing strategy relies heavily on automated functional correctness
   tests and manual testing, but neither of these reliably catch minor UI
   regressions. Use pixel tests to automate testing your desktop browser UI.
 layout: 'layouts/blog-post.njk'
@@ -16,7 +16,7 @@ tags:
 **Episode 10:** by Sven Zheng in Bellevue, WA (January, 2020)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
-Chrome’s testing strategy relies heavily on automated functional correctness
+Chrome's testing strategy relies heavily on automated functional correctness
 tests and manual testing, but neither of these reliably catch minor UI
 regressions. **Use pixel tests to automate testing your desktop browser UI.**
 

@@ -2,7 +2,7 @@
 title: New In Chrome 54
 description: >
   With Chrome 54, you can now create your own custom HTML tag with and make
-  re-usable web components with <b>Custom Elements v1</b>; it’s easier to send
+  re-usable web components with <b>Custom Elements v1</b>; it's easier to send
   messages between open windows or tabs on the same origin with the
   BroadcastChannel API; media experience get better on Android and foreign fetch
   is now available as an origin trial.
@@ -29,12 +29,12 @@ if this is useful to you!
 
 * You can now create your own custom HTML tag with and make re-usable web
 components with [Custom Elements v1](#custom-elements).
-* It’s easier to send messages between open windows or tabs on the same origin
+* It's easier to send messages between open windows or tabs on the same origin
 with the [BroadcastChannel API](#broadcast-channel).
 * [Media experience get better](#request-full-screen) on Android and
 [foreign fetch](#foreign-fetch) is now available as an origin trial.
 
-I’m Pete LePage, let’s dive in and see what’s new for developers in Chrome 54!
+I'm Pete LePage, let's dive in and see what's new for developers in Chrome 54!
 
 ## Custom elements v1 {: #custom-elements }
 
@@ -44,7 +44,7 @@ of language primitives to mitigate this kind of verbosity. But until now,
 creating reusable components on the web has been difficult.
 
 Custom elements allow you to create your own custom HTML tags, and define
-the new element’s API and behavior in JavaScript. The result, a
+the new element's API and behavior in JavaScript. The result, a
 browser-native way to build reusable, interoperable components.
 
 Chrome 54 provides support for the latest custom elements
@@ -91,8 +91,8 @@ their own custom networking logic, and take advantage of a single,
 authoritative cache instance for storing its responses.
 
 Now, thanks to foreign fetch, which is available in Chrome 54 as an
-origin trial, it’s a reality. Check out
-[Jeffrey’s post](https://goo.gl/BWt5RA) linked in the comments below!
+origin trial, it's a reality. Check out
+[Jeffrey's post](https://goo.gl/BWt5RA) linked in the comments below!
 
 ## Closing
 
@@ -105,8 +105,8 @@ Oh, and don't forget to check out the
 [Chrome Dev Summit](https://developer.chrome.com/devsummit/), we'll be streaming
 it on YouTube on November 10th and 11th.
 
-If you want to stay up to date with Chrome and know what’s coming, click
+If you want to stay up to date with Chrome and know what's coming, click
 that [Subscribe](https://goo.gl/6FP1a5) button up there.
 
-I’m Pete LePage, and as soon as Chrome 55 is released, I’ll be
-right here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 55 is released, I'll be
+right here to tell you -- what's new in Chrome!

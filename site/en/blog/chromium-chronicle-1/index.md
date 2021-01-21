@@ -33,7 +33,7 @@ Take a look at our first episode below!
 [Previous episodes](/tags/chromium-chronicle/)
 
 Chrome code that needs in-process asynchronous execution typically posts tasks
-to sequences. Sequences are chrome-managed “virtual threads” and are
+to sequences. Sequences are chrome-managed "virtual threads" and are
 [preferred to creating your own thread][prefer-sequences]. How does an object
 know which sequence to post to?
 
@@ -61,12 +61,12 @@ Foo::Foo()
 
 {% endCompare %}
 
-This is easier to read and write as all the information is local and there’s
+This is easier to read and write as all the information is local and there's
 no risk of inter-dependency with unrelated tasks.
 
 This paradigm is also better when it comes to testing. Instead of injecting
 task runners manually, tests can **instantiate a controlled task environment**
-to manage Foo’s tasks:
+to manage Foo's tasks:
 
 ```cpp/4
 class FooTest : public testing::Test {
@@ -79,8 +79,8 @@ class FooTest : public testing::Test {
 ```
 
 Having **TaskEnvironment first in the fixture** naturally ensures it
-manages the task environment throughout Foo’s lifetime. The TaskEnvironment
-will capture Foo’s request-on-construction to create a SequencedTaskRunner and
+manages the task environment throughout Foo's lifetime. The TaskEnvironment
+will capture Foo's request-on-construction to create a SequencedTaskRunner and
 will manage its tasks under each FooTest.
 
 To test the result of asynchronous execution, **use the
@@ -96,11 +96,11 @@ TEST_F(FooTest, TestAsyncWork) {
 ```
 
 This is preferred to RunUntilIdle(), which can be flaky if the asynchronous
-workload involves a task outside of the TaskEnvironment’s purview,
+workload involves a task outside of the TaskEnvironment's purview,
 e.g. a system event, so use [`RunUntilIdle()` with care][run-until-idle-w-care].
 
 !!!.aside.aside
-Pro-tip: Use TaskEnvironment’s `MOCK_TIME` mode to reliably test delayed
+Pro-tip: Use TaskEnvironment's `MOCK_TIME` mode to reliably test delayed
 tasks.
 !!!
 

@@ -3,8 +3,8 @@ title: New in Chrome 70
 description: >
   Chrome 70 adds support for Desktop Progressive Web Apps on Windows and Linux,
   support for Public Key Credentials to the Credential Management API,
-  allows you to provide a name to dedicated workers and plenty more. Let’s
-  dive in and see what’s new for developers in Chrome 70!
+  allows you to provide a name to dedicated workers and plenty more. Let's
+  dive in and see what's new for developers in Chrome 70!
 layout: 'layouts/blog-post.njk'
 date: 2018-10-16
 updated: 2018-10-18
@@ -25,10 +25,10 @@ In Chrome 70, we've added support for:
 * The credential management API adds support for [Public Key Credentials](#pki).
 * And you can now [name workers](#named-workers)!
 
-And there’s [plenty more](#more)!
+And there's [plenty more](#more)!
 
-I’m [Pete LePage](https://twitter.com/petele). Let’s dive in and see
-what’s new for developers in Chrome 70!
+I'm [Pete LePage](https://twitter.com/petele). Let's dive in and see
+what's new for developers in Chrome 70!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/69.0.3497.81..70.0.3538.66).
@@ -44,10 +44,10 @@ Want the full list of changes? Check out the
     src="https://storage.googleapis.com/webfundamentals-assets/updates/2018/10/spotify-on-windows.mp4">
 </video>
 
-Once installed, they’re launched from the Start menu, and run like all other
+Once installed, they're launched from the Start menu, and run like all other
 installed apps, without an address bar or tabs.
 [Service workers](https://developers.google.com/web/fundamentals/primers/service-workers/) ensure that
-they’re fast, and reliably, the [app window](https://developers.google.com/web/updates/2018/05/dpwa#the_app_window)
+they're fast, and reliably, the [app window](https://developers.google.com/web/updates/2018/05/dpwa#the_app_window)
 experience makes them feel like any other installed app.
 
 Getting started isn't any different than what you're already doing today.
@@ -75,7 +75,7 @@ in Chrome 70, but was accidentally left out of the original version of this post
 
 The [Credential Management API](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API)
 makes sign in super simple for users. It allows your site to interact with the
-browser’s [credential manager](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential)
+browser's [credential manager](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential)
 or [federated account services](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential)
 like Google and Facebook to sign.
 
@@ -99,7 +99,7 @@ for more details or give it a try with the
 [Workers](https://developer.mozilla.org/en-US/docs/Web/API/Worker) are an easy
 way to move JavaScript off the main thread and into the background. This is
 critical to keeping your site interactive, because it means that the main
-thread won’t lock up when it’s running an expensive or complex JavaScript
+thread won't lock up when it's running an expensive or complex JavaScript
 computation.
 
 <style>
@@ -195,7 +195,7 @@ const wSF = new Worker(url, oSF);
 
 This lets you distinguish dedicated workers by `name` when you have multiple
 workers with the same URL. You can also print the name in the DevTools
-console, making it much easier to know which worker you’re debugging!
+console, making it much easier to know which worker you're debugging!
 
 Naming workers is already available in Firefox, Edge, and Safari. See the
 [discussion on GitHub](https://github.com/whatwg/html/issues/2477) for more
@@ -204,7 +204,7 @@ details.
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 70 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 * [Web Bluetooth](https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web)
   is [now available in Windows 10](https://www.chromestatus.com/feature/5264933985976320),
@@ -226,7 +226,7 @@ there’s plenty more.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 71 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 71 is released, I'll be right
+here to tell you -- what's new in Chrome!

@@ -2,9 +2,9 @@
 title: New in Chrome 87
 description: >
   Chrome 87 is rolling out now! You can now control pan, tilt, and zoom on
-  webcams that support it, range requests and service workers don’t require
-  as many workarounds, the font access API starts it’s origin trial, and
-  plenty more. Let’s dive in and see what’s new for developers in Chrome 87!
+  webcams that support it, range requests and service workers don't require
+  as many workarounds, the font access API starts it's origin trial, and
+  plenty more. Let's dive in and see what's new for developers in Chrome 87!
 layout: 'layouts/blog-post.njk'
 date: 2020-11-17
 updated: 2020-11-23
@@ -26,12 +26,12 @@ Here's what you need to know:
 
 * [Chrome Dev Summit](#cds) is back on December 9 & 10.
 * You can now control [pan, tilt, and zoom](#ptz) on webcams that support it.
-* [Range requests](#rr) and service workers don’t require as many workarounds.
-* The [font access API](#font-access) starts it’s origin trial.
-* And, there’s [plenty more](#more).
+* [Range requests](#rr) and service workers don't require as many workarounds.
+* The [font access API](#font-access) starts it's origin trial.
+* And, there's [plenty more](#more).
 
-I’m [Pete LePage](https://twitter.com/petele), working, and shooting
-from home, let’s dive in and see what’s new for developers in Chrome 87!
+I'm [Pete LePage](https://twitter.com/petele), working, and shooting
+from home, let's dive in and see what's new for developers in Chrome 87!
 
 ## Chrome Dev Summit {: #cds }
 
@@ -49,14 +49,14 @@ and we'll be in the YouTube chat to answer your questions.
 
 Most meeting rooms at Google have cameras with pan, tilt, and zoom
 capabilities, so that the camera can be pointed at the people in the
-room. But it’s not just fancy conference cameras that support PTZ - pan,
+room. But it's not just fancy conference cameras that support PTZ - pan,
 tilt, zoom - many web cams support it too.
 
 Starting in Chrome 87, once a user has granted permission you can now control
 the PTZ features on a camera.
 
 Feature detection is a little different from what you're probably used to.
-You’ll need to call `navigator.mediaDevices.getSupportedConstraints()` to see
+You'll need to call `navigator.mediaDevices.getSupportedConstraints()` to see
 if the _browser_ supports PTZ.
 
 ```js
@@ -121,7 +121,7 @@ function enablePan(capabilities, settings) {
 }
 ```
 
-Personally, I’m really excited about PTZ, so I can hide my messy kitchen, but
+Personally, I'm really excited about PTZ, so I can hide my messy kitchen, but
 you'll have to check out the video to see that!
 
 Francois has a great post [Control camera pan, tilt, and zoom][wd-ptz] on
@@ -151,7 +151,7 @@ self.addEventListener('fetch', (event) => {
 ```
 
 For an explanation of the issues with range requests and what's changed in
-Chrome 87, see Jeff’s article [Handling range requests in a service worker][wd-rr]
+Chrome 87, see Jeff's article [Handling range requests in a service worker][wd-rr]
 on web.dev.
 
 ## Origin Trial: Font access API {: #font-access }
@@ -159,7 +159,7 @@ on web.dev.
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/x5qv7Ylxb9i2mtWkBwVt.png", alt="Screen shot of Photopea image editor", className="float-right" %}
 
 Bringing design apps like Figma, Gravit Designer, and Photopea, to the web is great,
-and we’re seeing a lot more coming. While the web has the ability to offer a
+and we're seeing a lot more coming. While the web has the ability to offer a
 plethora of fonts, not everything is available on the web.
 
 For many designers, there are some fonts installed on their computer that are
@@ -204,7 +204,7 @@ try {
 }
 ```
 
-Check out Tom’s article [Use advanced typography with local fonts][wd-fonts]
+Check out Tom's article [Use advanced typography with local fonts][wd-fonts]
 on web.dev with all the details, and the link to the Origin Trial so you can
 try it yourself.
 
@@ -212,7 +212,7 @@ try it yourself.
 
 * Transferable Streams - `ReadableStream`, `WritableStream`, and
   `TransformStream` objects can now be passed as arguments to `postMessage()`.
-* We’ve implemented the most granular `flow-relative` features of the CSS
+* We've implemented the most granular `flow-relative` features of the CSS
   Logical Properties and Values spec, including shorthands and offsets to
   make these logical properties and values a bit easier to write.
   For example, a single `margin-block` property can replace separate
@@ -237,10 +237,10 @@ additional changes in Chrome 87.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 88 is released, I’ll be right here to
-tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 88 is released, I'll be right here to
+tell you -- what's new in Chrome!
 
 [wd-ptz]: https://web.dev/camera-pan-tilt-zoom/
 [wd-fonts]: https://web.dev/local-fonts/

@@ -5,7 +5,7 @@ description: >
   Dynamically changing styles becomes way easier with constructable style
   sheets. And adds support for Progressive Web Apps on Mac, bringing support
   for PWAs to all desktop and mobile platforms, making it easy to create
-  installable apps, delivered through the web. Let’s dive in and see what’s
+  installable apps, delivered through the web. Let's dive in and see what's
   new for developers in Chrome 73!
 layout: 'layouts/blog-post.njk'
 date: 2019-03-12
@@ -30,10 +30,10 @@ In Chrome 73, we've added support for:
   PWAs to [all desktop and mobile platforms](#pwas-everywhere), making it easy
   to create installable apps, delivered through the web.
 
-And there’s [plenty more](#more)!
+And there's [plenty more](#more)!
 
-I’m [Pete LePage](https://twitter.com/petele). Let’s dive in and see
-what’s new for developers in Chrome 73!
+I'm [Pete LePage](https://twitter.com/petele). Let's dive in and see
+what's new for developers in Chrome 73!
 
 ### Change log
 
@@ -49,7 +49,7 @@ additional changes in Chrome 73.
 ## Progressive Web Apps work everywhere {: #pwas-everywhere }
 
 Progressive Web Apps provide an installable, app-like experience, built and
-delivered directly via the web. In Chrome 73, we’ve added support for macOS,
+delivered directly via the web. In Chrome 73, we've added support for macOS,
 bringing support for
 [Progressive Web Apps to all desktop platforms](https://developers.google.com/web/progressive-web-apps/desktop) -
 Mac, Windows, Chrome OS and Linux, as well as mobile, simplifying web app
@@ -62,7 +62,7 @@ device capabilities.
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hFEZ7fiA25H8btNM2kRU.jpg", alt="", className="float-right" %}
 
-Users can install your PWA from Chrome’s context menu, or you can directly
+Users can install your PWA from Chrome's context menu, or you can directly
 promote the installation experience using the
 [`beforeinstallprompt`](https://developers.google.com/web/fundamentals/app-install-banners/) event. Once
 installed, a PWA integrates with the OS to behave like a native application:
@@ -72,7 +72,7 @@ notification badging, and so on.
 
 We want to [close the capability gap](https://developers.google.com/web/updates/capabilities)
 between the web and native to provide a solid foundation for modern
-applications delivered on the web. We’re working to add new web platform
+applications delivered on the web. We're working to add new web platform
 capabilities that give you access to things like the
 [file system](https://developers.google.com/web/updates/2018/11/writable-files),
 [wake lock](https://developers.google.com/web/updates/2018/12/wakelock), adding an
@@ -80,10 +80,10 @@ capabilities that give you access to things like the
 to let users know your PWA can be installed, policy installation for enterprises,
 and [plenty more](https://developers.google.com/web/updates/capabilities#in-flight).
 
-If you’re already building a mobile PWA, a desktop PWA is no different. In fact,
-if you’ve used responsive design, you’re likely good to go already. Your single
-codebase will work across desktop and mobile. If you’re just starting out with
-PWAs, you’ll be surprised at how easy it is to create them!
+If you're already building a mobile PWA, a desktop PWA is no different. In fact,
+if you've used responsive design, you're likely good to go already. Your single
+codebase will work across desktop and mobile. If you're just starting out with
+PWAs, you'll be surprised at how easy it is to create them!
 
 1. [Add a manifest](https://developers.google.com/web/fundamentals/web-app-manifest/)
 2. [Create a set of icons](https://developers.google.com/web/fundamentals/web-app-manifest/#icons)
@@ -95,25 +95,25 @@ Then, iterate from there.
 
 Signed HTTP Exchanges (SXG), part of an emerging technology called
 [Web Packages](https://github.com/WICG/webpackage) is now available in Chrome 73.
-A Signed HTTP Exchange makes it possible to create “portable” content that can
+A Signed HTTP Exchange makes it possible to create "portable" content that can
 be delivered by other parties, and this is the key aspect, it retains the
 integrity and attribution of the original site.
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZORbsIuXdcZq8I9mt3wR.svg", alt="Signed Exchange: The essence", className="float-left" %}
 
 This decouples the origin of the content from the server that delivers it,
-but because it’s signed, it’s like it’s being delivered from your server.
+but because it's signed, it's like it's being delivered from your server.
 When the browser loads this Signed Exchange, it can safely show your URL in the
 address bar because the signature in the exchange indicates the content
 originally came from your origin.
 
 Signed HTTP exchanges enables faster content delivery for users, making it
 possible to get the benefits of a CDN without having to cede control of your
-certificate’s private key. The AMP team is planning to use signed HTTP
+certificate's private key. The AMP team is planning to use signed HTTP
 exchanges on Google search result pages to improve AMP URLs and speed up clicks
 on search results.
 
-Check out Kinuko’s [Signed HTTP Exchanges](https://developers.google.com/web/updates/2018/11/signed-exchanges)
+Check out Kinuko's [Signed HTTP Exchanges](https://developers.google.com/web/updates/2018/11/signed-exchanges)
 post for details on how to get started.
 
 ## Constructable style sheets {: #constructable-style-sheets }
@@ -122,7 +122,7 @@ Constructable Stylesheets, new in Chrome 73, gives us a new way to create and
 distribute reusable styles, which is particularly important when using
 Shadow DOM.
 
-It’s always been possible to create stylesheets using JavaScript. Create a
+It's always been possible to create stylesheets using JavaScript. Create a
 `<style>` element using `document.createElement('style')`. Then access its
 sheet property to obtain a reference to the underlying `CSSStyleSheet` instance,
 and set the style.
@@ -134,7 +134,7 @@ flash of unstyled content. Constructable Stylesheets make it possible to define
 and prepare shared CSS styles, and then apply those styles to multiple Shadow
 Roots or the Document easily and without duplication.
 
-Updates to a shared `CSSStyleSheet` are applied to all roots where it’s been
+Updates to a shared `CSSStyleSheet` are applied to all roots where it's been
 adopted, and adopting a stylesheet is fast and synchronous once the sheet has
 been loaded.
 
@@ -164,14 +164,14 @@ sheet.replace('@import url("styles.css")')
   });
 ```
 
-Check out Jason Miller’s
+Check out Jason Miller's
 [Constructable Stylesheets: seamless reusable styles](https://developers.google.com/web/updates/2019/02/constructable-stylesheets)
 post for more details and code samples!
 
 ## And more! {: #more }
 
 These are just a few of the changes in Chrome 73 for developers, of course,
-there’s plenty more.
+there's plenty more.
 
 * [`matchAll()`](https://tc39.github.io/proposal-string-matchall/), is a new
   regular expression matching method on the string prototype, and returns an
@@ -192,7 +192,7 @@ there’s plenty more.
 
 Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
 to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
-and you’ll get an email notification whenever we launch a new video.
+and you'll get an email notification whenever we launch a new video.
 
-I’m Pete LePage, and as soon as Chrome 74 is released, I’ll be right
-here to tell you -- what’s new in Chrome!
+I'm Pete LePage, and as soon as Chrome 74 is released, I'll be right
+here to tell you -- what's new in Chrome!
