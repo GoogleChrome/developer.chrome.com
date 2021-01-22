@@ -4,9 +4,9 @@ api: action
 
 You can use the `chrome.action` API to control the toolbar button for your
 extension in Chrome's UI.  The action icons are displayed in the browser
-toolbar, to the right of the omnibox (on LTR devices). After installation, by
-default, these will be in the extensions menu (the puzzle piece). Users can
-choose to pin your extension icon to the toolbar.
+toolbar, to the right of the omnibox (on left-to-right devices). After
+installation, by default, these appear in the extensions menu (the puzzle
+piece). Users can choose to pin your extension icon to the toolbar.
 
 Note that every extension will have an icon in the toolbar in Chrome, even if
 the `action` key is not specified.
@@ -84,12 +84,12 @@ images in the PNG format.
 
 ### Tooltip (title)
 
-The tooltip, or title, is displayed when the user hovers the mouse of the
+The tooltip, or title, appears when the user hovers the mouse of the
 extension's icon in the toolbar. It is also included in the accessible text
-spoken by screenreaders when the button is focused.
+spoken by screenreaders when the button gets focus.
 
 The default tooltip is set from the `default_title` field in the `action`
-`manifest.json` file. It can also be set programmatically with the
+`manifest.json` file. You can also set it programmatically with the
 `action.setTitle()` method.
 
 ### Badge
@@ -131,7 +131,7 @@ point to a different relative path using the `action.setPopup()` method.
 
 !!!.aside
 The `action.onClicked` event will not be dispatched if the extension action
-has a popup on the current tab.
+has specified a popup to show on click on the current tab.
 !!!
 
 ## Per-tab state
@@ -139,7 +139,7 @@ has a popup on the current tab.
 Extension actions can have different states for each tab. For instance, you
 could set the badge text to be different on each tab (to show tab-specific state).
 You can set the value for an individual tab using the `tabId` property in the
-different setting methods on the `action` API. For instance, to set the badge
+various setting methods on the `action` API. For instance, to set the badge
 text on a specific tab, you would do something like the following:
 
 ```js
@@ -151,13 +151,13 @@ chrome.action.setBadgeText(
 ```
 
 If the `tabId` property is omitted, the setting is treated as a global setting.
-Tab-specific settings will take priority over any global settings.
+Tab-specific settings take priority over any global settings.
 
 ## Enabled state
 
 By default, toolbar actions are enabled (clickable) on every tab. You can
-control this by using the `action.enable()` and `action.disable()` methods.
-This will only affect whether the popup (if any) or `action.onClicked` event
+control this using the `action.enable()` and `action.disable()` methods.
+This only affects whether the popup (if any) or `action.onClicked` event
 is dispatched to your extension; it does not affect the action's presence in the
 toolbar.
 
