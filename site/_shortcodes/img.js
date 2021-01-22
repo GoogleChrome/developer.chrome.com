@@ -13,6 +13,9 @@ const client = new ImgixClient({domain, includeLibraryParam: false});
  */
 const generateSrc = (src, params) => client.buildURL(src, params);
 
+const MIN_SIZE = 200;
+const MAX_SIZE = 1600;
+
 /**
  * Takes an imgix url or path and generates an `<img>` element with `srcset`.
  *
@@ -38,7 +41,21 @@ const img = args => {
   // https://docs.imgix.com/apis/rendering
   params = {auto: 'format', ...params};
   // https://github.com/imgix/imgix-core-js#imgixclientbuildsrcsetpath-params-options
-  options = {minWidth: 200, maxWidth: 1600, widthTolerance: 0.07, ...options};
+  options = {
+    minWidth: MIN_SIZE,
+    maxWidth: MAX_SIZE,
+    widthTolerance: 0.07,
+    ...options,
+  };
+
+  const srcset = client.buildSrcSet(src, params, options);
+  if (sizes === undefined) {
+    sizes = srcset
+      .split(',')
+      .map(s => Number(s.split(' ').pop()?.replace('w', '')))
+      .filter(s => s >= MIN_SIZE && s <= MAX_SIZE)
+      .join('px, ');
+  }
 
   // Below you'll notice that we do alt !== undefined. That's because passing in
   // an empty string is a valid alt value. It tells a screen reader to ignore
@@ -48,7 +65,7 @@ const img = args => {
   return html`
     <img
       src="${generateSrc(src, params)}"
-      srcset="${client.buildSrcSet(src, params, options)}"
+      srcset="${srcset}"
       ${sizes ? `sizes="${sizes}"` : ''}
       ${height ? `height="${height}"` : ''}
       ${width ? `width="${width}"` : ''}
