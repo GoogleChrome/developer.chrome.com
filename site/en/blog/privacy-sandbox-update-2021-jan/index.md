@@ -17,9 +17,8 @@ tags:
 [The Privacy Sandbox initiative](https://web.dev/digging-into-the-privacy-sandbox/) proposes a set
 of privacy-preserving APIs to support business models that fund the open web in the absence of
 tracking mechanisms like third-party cookies. It was introduced in 2019, and Chrome shared updates
-on progress in
-[January](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html) and
-[October](https://blog.chromium.org/2020/10/progress-on-privacy-sandbox-and.html) last year. 
+on progress in [January](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html) 
+and [October](https://blog.chromium.org/2020/10/progress-on-privacy-sandbox-and.html) last year. 
 
 After a year of incubation, 2021 will be a year of testing with continued opportunities for the web
 ecosystem to get involved. This post provides an update on the status of the Privacy Sandbox APIs
@@ -30,16 +29,15 @@ and proposals.:
 ## Placing relevant ads on a site
 
 Publishers and advertisers want to provide content, including ads, that is relevant and interesting
-to the user. On today's web, people's interests are often gauged bybased on observing what sites or
-pages they visit, relying on third-party cookies or less-transparent and undesirable mechanisms like
+to the user. On today's web, people's interests are often gauged by observing what sites or pages 
+they visit, relying on third-party cookies or less-transparent and undesirable mechanisms like 
 device fingerprinting. 
 
 In March, with release 89, Chrome will launch an [origin trial](https://web.dev/origin-trials/) for
-the **[Federated Learning of Cohorts API**](https://github.com/WICG/floc). FLoC proposes a new way
+the [Federated Learning of Cohorts API](https://github.com/WICG/floc). FLoC proposes a new way
 to reach people with relevant content and ads by clustering large groups of people with similar
-browsing patterns, hiding individuals "in the crowd" and keeping their web history on their browser.
-Today Google Ads is sharing an update from their tests
-[[link to Ads blog](https://docs.google.com/document/d/1xVNzcYbHaZyN8mukXK69BHYOAmUILn90XbuJ7Nwr0jw/edit#)]
+browsing patterns, hiding individuals "in the crowd" and keeping their web history on their browser. 
+Today Google Ads is sharing an update from their tests [link to Ads blog](https://docs.google.com/document/d/1xVNzcYbHaZyN8mukXK69BHYOAmUILn90XbuJ7Nwr0jw/edit#)
 of the FLoC algorithm, which show that the proposed API could be similarly effective as third-party
 cookies in serving relevant interest-based ads.
 
@@ -52,7 +50,7 @@ addresses this use case, while providing the same privacy protections as the oth
 website may ask the browser to store an Interest Group, including information about bidding and ad
 display, and on-device bidding by potential ads buyers would be based on this Interest Group. 
 
-Chrome's new **[FLEDGE](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) **proposal ( First
+Chrome's new [FLEDGE](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) proposal ( First
 "Locally-Executed Decision over Groups" Experiment) expands on TURTLEDOVE by incorporating new
 concepts from many other contributed proposals. FLEDGE includes a way for on-device bidding
 algorithms to use additional information from a new trusted server designed for this sole purpose.
@@ -64,8 +62,8 @@ Own Server" model and expect to ship this first experiment during 2021.
 When a marketer runs an ad campaign, it's important for them to understand how many people see each
 ad and if this results in an action by the consumer such as a purchase or sign-up.
 
-In September 2020, we opened up the **[Event Conversion Measurement
-API](https://web.dev/conversion-measurement/) **for testing in public Chrome origin trials. It
+In September 2020, we opened up the [Event Conversion Measurement
+API](https://web.dev/conversion-measurement/) for testing in public Chrome origin trials. It
 allows marketers to measure conversions without the use of third-party cookies; instead, the browser
 records clicks and conversions and shares an anonymized report. A future version of this technology
 will also support "view-through conversions" (when people see an ad but act on it later).
@@ -112,14 +110,14 @@ even if the site experience spans multiple domains. [Sign up for the trial.
 We've also been making progress on changes in Chrome to prevent existing intrusive tracking
 techniques, and enable mitigating workarounds: 
 
-+   In the coming weeks, we are completing the Chrome stable rollout of the new** [User-Agent
-    Client Hints (UA-CH) API](https://web.dev/user-agent-client-hints/) **which enables developers
++   In the coming weeks, we are completing the Chrome stable rollout of the new [User-Agent
+    Client Hints (UA-CH) API](https://web.dev/user-agent-client-hints/) which enables developers
     to request specific information about a user's browser instead of getting it all by default. We
     encourage developers to begin migrating to the UA-CH API, as Chrome will eventually begin
     limiting the information available in the traditional User-Agent string which today can be used
     for fingerprinting.
 
-+   Last week, we introduced **[Gnatcatcher**](https://github.com/bslassey/ip-blindness), a
++   Last week, we introduced [Gnatcatcher](https://github.com/bslassey/ip-blindness), a
     proposal that allows groups of users to send their traffic through the same privatizing server,
     effectively hiding their IP addresses from the site host. Gnatcatcher also ensures that sites
     requiring access to IP addresses for legitimate purposes such as abuse prevention can do so,
