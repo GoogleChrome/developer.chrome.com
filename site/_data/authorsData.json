@@ -282,5 +282,23 @@
       "en": "Adriana is a Developer Advocate."
     },
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/tIuTcnxqlspZFyklJYHG.jpg"
+  },
+  "jecelynyeen": {
+    "name": {
+      "given": "Jecelyn",
+      "family": "Yeen"
+    },
+    "org": {
+      "name": "TODO",
+      "unit": "TODO"
+    },
+    "country": "TODO",
+    "twitter": "TODO",
+    "github": "TODO",
+    "glitch": "TODO",
+    "descriptions": {
+      "en": "TODO"
+    },
+    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/4HPVWldl8gHYH8npWFHu.jpg"
   }
 }
