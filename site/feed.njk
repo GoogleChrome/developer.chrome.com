@@ -1,0 +1,44 @@
+---
+permalink: '{{feed.permalink}}'
+disable_algolia: true
+pagination:
+  data: collections.feeds
+  size: 1
+  alias: feed
+  resolve: values
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  {% set absoluteFeedUrl %}{{ site.url }}{% if feed.url %}{{ feed.url | url }}{% endif  %}{% endset %}
+  <title>{{ feed.title or site.title }}</title>
+  <subtitle>{{ feed.description or site.description }}</subtitle>
+  <link href="{{ site.url }}{{ feed.permalink | url }}" rel="self"/>
+  <link href="{{ absoluteFeedUrl }}" />
+  <updated>{{ feed.items | rssLastUpdatedDate }}</updated>
+  <id>{{ absoluteFeedUrl }}</id>
+  <author>
+    <name>{{ site.title }}</name>
+  </author>
+  {% for item in feed.items %}
+  {% set absolutePostUrl %}{{ site.url }}{{ item.url | url }}{% endset %}
+  <entry>
+    <title>{{ item.data.title }}</title>
+    <link href="{{ absolutePostUrl }}" />
+    <updated>{{ item.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    {% if item.data.authors.length %}
+      {% for authorId in item.data.authors %}
+      {% set author = authorsData[authorId] %}
+      <author>
+        <name>{{ author.name.given }} {{ author.name.family }}</name>
+      </author>
+      {% endfor %}
+    {% else %}
+    <author>
+      <name>{{ site.title }}</name>
+    </author>
+    {% endif  %}
+    <content type="html">{{ item.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {% endfor %}
+</feed>

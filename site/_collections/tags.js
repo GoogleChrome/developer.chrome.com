@@ -55,7 +55,7 @@ module.exports = function (collections) {
       continue allSortedForLoop;
     }
     // If tags is a string, turn it into an array.
-    if (item.data.tags === 'string') {
+    if (typeof item.data.tags === 'string') {
       item.data.tags = [item.data.tags];
     }
 

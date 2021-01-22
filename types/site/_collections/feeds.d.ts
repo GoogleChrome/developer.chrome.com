@@ -23,6 +23,7 @@ declare global {
     items: EleventyCollectionItem[];
     permalink: string;
     title?: string;
+    url?: string;
   }
 }
 
