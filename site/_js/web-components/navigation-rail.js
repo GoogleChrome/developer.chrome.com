@@ -26,12 +26,17 @@ export class NavigationRail extends BaseElement {
   }
 
   connectedCallback() {
-    this.closeBtn = this.querySelector('.navigation-rail__close');
-    this.closeBtn?.addEventListener('click', this.onClose);
+    this.closeBtn = /** @type {HTMLElement} */ (this.querySelector(
+      '.navigation-rail__close'
+    ));
+    this.closeBtn.addEventListener('click', this.onClose);
   }
 
   disconnectedCallback() {
-    this.closeBtn?.removeEventListener('click', this.onClose);
+    /** @type {HTMLElement} */ (this.closeBtn).removeEventListener(
+      'click',
+      this.onClose
+    );
   }
 
   onClose() {

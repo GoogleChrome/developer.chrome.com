@@ -32,12 +32,17 @@ export class NavigationTree extends BaseElement {
     // @ts-ignore
     this.querySelectorAll('[data-expandable]').forEach(expandable);
 
-    this.backBtn = this.querySelector('.navigation-tree__back');
-    this.backBtn?.addEventListener('click', this.onBack);
+    this.backBtn = /** @type {HTMLElement} */ (this.querySelector(
+      '.navigation-tree__back'
+    ));
+    this.backBtn.addEventListener('click', this.onBack);
   }
 
   disconnectedCallback() {
-    this.backBtn?.removeEventListener('click', this.onBack);
+    /** @type {HTMLElement} */ (this.backBtn).removeEventListener(
+      'click',
+      this.onBack
+    );
   }
 
   onBack() {

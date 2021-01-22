@@ -117,7 +117,7 @@ export class SearchBox extends BaseElement {
     // Add a meta/ctrl + K keyboard shortcut to quick-focus the search input.
     window.addEventListener('keydown', e => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        this.input?.focus();
+        this.input.focus();
       }
     });
   }
@@ -136,11 +136,11 @@ export class SearchBox extends BaseElement {
     }
 
     if (this.cursor === -1) {
-      this.input?.removeAttribute('aria-activedescendant');
+      this.input.removeAttribute('aria-activedescendant');
       return;
     }
 
-    this.input?.setAttribute(
+    this.input.setAttribute(
       'aria-activedescendant',
       `search-box__link-${this.cursor}`
     );
@@ -152,7 +152,7 @@ export class SearchBox extends BaseElement {
   onInput(e) {
     // If the user has deleted everything in the search box, clear all state
     // and hide the results modal.
-    if (!this.input?.value) {
+    if (!this.input.value) {
       this.clearSearch();
       return;
     }
@@ -271,7 +271,7 @@ export class SearchBox extends BaseElement {
       // We do this because the input will be display: none on mobile
       // and calling focus() on it would have no effect.
       await this.updateComplete;
-      this.input?.focus();
+      this.input.focus();
     } else {
       this.clearSearch();
     }
@@ -394,6 +394,9 @@ export class SearchBox extends BaseElement {
       return;
     }
 
+    this.blogResults = this.blogResults || [];
+    this.docsResults = this.docsResults || [];
+
     this.resultsCounter = -1;
     return html`
       <div
@@ -402,20 +405,20 @@ export class SearchBox extends BaseElement {
         role="listbox"
         aria-label="${this.placeholder}"
       >
-        ${this.blogResults?.length
+        ${this.blogResults.length
           ? html`
               <div class="search-box__result-heading type--label">
                 ${this.blogLabel.toUpperCase()}
               </div>
-              ${this.blogResults?.map(this.renderResult)}
+              ${this.blogResults.map(this.renderResult)}
             `
           : ''}
-        ${this.docsResults?.length
+        ${this.docsResults.length
           ? html`
               <div class="search-box__result-heading type--label">
                 ${this.docsLabel.toUpperCase()}
               </div>
-              ${this.docsResults?.map(this.renderResult)}
+              ${this.docsResults.map(this.renderResult)}
             `
           : ''}
       </div>
