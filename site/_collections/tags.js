@@ -30,7 +30,7 @@ module.exports = function (collections) {
   /** @type Tags */
   const tags = {};
 
-  const allSorted = collections.getAllSorted().filter(drafts);
+  const allSorted = collections.getAllSorted().reverse().filter(drafts);
 
   /**
    * Iterates over every post in order to place them in the proper tag collections.
