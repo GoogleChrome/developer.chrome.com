@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Progress update on the Privacy Sandbox initiative
+title: How to participate in the Privacy Sandbox initiative
 authors:
   - Justin Schuh
   - Marshall Vale
