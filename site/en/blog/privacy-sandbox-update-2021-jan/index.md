@@ -24,9 +24,9 @@ After a year of incubation, 2021 will be a year of testing with continued opport
 ecosystem to get involved. This post provides an update on the status of the Privacy Sandbox APIs
 and proposals.:
 
-# Progress on key use cases
+## Progress on key use cases
 
-## Placing relevant ads on a site
+### Placing relevant ads on a site
 
 Publishers and advertisers want to provide content, including ads, that is relevant and interesting
 to the user. On today's web, people's interests are often gauged by observing what sites or pages 
@@ -41,7 +41,7 @@ Today Google Ads is sharing an update from their tests [link to Ads blog](https:
 of the FLoC algorithm, which show that the proposed API could be similarly effective as third-party
 cookies in serving relevant interest-based ads.
 
-## Building first-party audiences 
+### Building first-party audiences 
 
 One of the use cases that has had exciting discussions in the standards community is around how
 companies can build audiences, and reach prior visitors to their websites through remarketing. Last
@@ -57,7 +57,7 @@ algorithms to use additional information from a new trusted server designed for 
 To help early experimentation before the new trusted servers are available, we propose a "Bring Your
 Own Server" model and expect to ship this first experiment during 2021.
 
-## Measuring advertising effectiveness
+### Measuring advertising effectiveness
 
 When a marketer runs an ad campaign, it's important for them to understand how many people see each
 ad and if this results in an action by the consumer such as a purchase or sign-up.
@@ -76,7 +76,7 @@ identify individuals. This is made possible by reporting data only once it's met
 for aggregation. We're planning to open up the Aggregate Measurement API for testing via public
 origin trials in the first half of the year. 
 
-## Preventing fraud 
+### Preventing fraud 
 
 Sites and publishers need to ensure they are able to distinguish spammers, fraudsters and bots from
 real users. Last July we opened up the [Trust Tokens API](https://web.dev/trust-tokens/) for
