@@ -1,0 +1,173 @@
+---
+layout: "layouts/doc-post.njk"
+title: "What's New In DevTools (Chrome 80)"
+authors:
+  - kaycebasques
+date: 2019-12-05
+updated: 2020-09-29
+description:
+  "Support for let and class redeclarations in the Console, improved WebAssembly debugging, and
+  more."
+---
+
+{% youtube id="2EiPb1opH3g" %}
+
+## Support for `let` and `class` redeclarations in the Console {: #redeclarations }
+
+The Console now supports redeclarations of `let` and `class` statements. The inability to redeclare
+was a common annoyance for web developers who use the Console to experiment with new JavaScript
+code.
+
+!!!.aside.aside--warning
+
+Redeclaring a `let` or `class` statement in a script outside of the Console or within a single
+Console input will still cause a `SyntaxError`.
+
+!!!
+
+For example, previously, when redeclaring a local variable with `let`, the Console would throw an
+error:
+
+![A screenshot of the Console in Chrome 78 showing that the let redeclaration fails.](https://developers.google.com/web/updates/images/2019/12/letbefore.png)
+
+Now, the Console allows the redeclaration:
+
+![A screenshot of the Console in Chrome 80 showing that the let redeclaration succeeds.](https://developers.google.com/web/updates/images/2019/12/letafter.png)
+
+Chromium issue [#1004193][1]
+
+## Improved WebAssembly debugging {: #webassembly }
+
+DevTools has started to support the [DWARF Debugging Standard][2], which means increased support for
+stepping over code, setting breakpoints, and resolving stack traces in your source languages within
+DevTools. Check out [Improved WebAssembly debugging in Chrome DevTools][3] for the full story.
+
+![A screenshot of the new DWARF-powered WebAssembly debugging.](https://developers.google.com/web/updates/images/2019/12/wasm.png)
+
+## Network panel updates {: #network }
+
+### Request Initiator Chains in the Initiator tab {: #initiators }
+
+You can now view the initiators and dependencies of a network request as a nested list. This can
+help you understand why a resource was requested, or what network activity a certain resource (such
+as a script) caused.
+
+![A screenshot of a Request Initiator Chain in the Initiator tab](https://developers.google.com/web/updates/images/2019/12/initiators.png)
+
+After [logging network activity in the Network panel][4], click a resource and then go to the
+**Initiator** tab to view its **Request Initiator Chain**:
+
+- The _inspected resource_ is bold. In the screenshot above, `https://web.dev/default-627898b5.js`
+  is the inspected resource.
+- The resources above the inspected resource are the _initiators_. In the screenshot above,
+  `https://web.dev/bootstrap.js` is the initiator of `https://web.dev/default-627898b5.js`. In other
+  words, `https://web.dev/bootstrap.js` caused the network request for
+  `https://web.dev/default-627898b5.js`.
+- The resources below the inspected resource are the _dependencies_. In the screenshot above,
+  `https://web.dev/chunk-f34f99f7.js` is a dependency of `https://web.dev/default-627898b5.js`. In
+  other words, `https://web.dev/default-627898b5.js` caused the network request for
+  `https://web.dev/chunk-f34f99f7.js`.
+
+!!!.aside.aside--note
+
+Initiator and dependency information can also be accessed by holding Shift and then hovering over
+network resources. See [View initiators and dependencies][5].
+
+!!!
+
+Chromium issue [#842488][6]
+
+### Highlight the selected network request in the Overview {: #overview }
+
+After you click a network resource in order to inspect it, the Network panel now puts a blue border
+around that resource in the **Overview**. This can help you detect if the network request is
+happening earlier or later than expected.
+
+![A screenshot of the Overview pane highlighting the inspected resource.](https://developers.google.com/web/updates/images/2019/12/overview.png)
+
+Chromium issue [#988253][7]
+
+### URL and path columns in the Network panel {: #columns }
+
+Use the new **Path** and **URL** columns in the **Network** panel to see the absolute path or full
+URL of each network resource.
+
+![A screenshot of the new Path and URL columns in the Network panel.](https://developers.google.com/web/updates/images/2019/12/columns.png)
+
+Right-click the **Waterfall** table header and select **Path** or **URL** to show the new columns.
+
+Chromium issue [#993366][8]
+
+### Updated User-Agent strings {: #useragents }
+
+DevTools supports setting a custom User-Agent string through the **Network Conditions** tab. The
+User-Agent string affects the `User-Agent` HTTP header attached to network resources, and also the
+value of `navigator.userAgent`.
+
+The predefined User-Agent strings have been updated to reflect modern browser versions.
+
+![A screenshot of the User Agent menu in the Network Conditions tab.](https://developers.google.com/web/updates/images/2019/12/useragent.png)
+
+To access **Network Conditions**, [open the Command Menu][9] and run the `Show Network Conditions`
+command.
+
+!!!.aside.aside--note
+
+You can also [set User-Agent strings in Device Mode][10].
+
+!!!
+
+Chromium issue [#1029031][11]
+
+## Audits panel updates {: #audits }
+
+### New configuration UI {: #config }
+
+The configuration UI has a new, responsive design, and the throttling configuration options have
+been simplified. See [Audits Panel Throttling][12] for more information on the throttling UI
+changes.
+
+![The new configuration UI.](https://developers.google.com/web/updates/images/2019/12/start.png)
+
+## Coverage tab updates {: #coverage }
+
+### Per-function or per-block coverage modes {: #modes }
+
+The [Coverage tab][13] has a new dropdown menu that lets you specify whether code coverage data
+should be collected **per function** or **per block**. **Per block** coverage is more detailed but
+also far more expensive to collect. DevTools uses **per function** coverage by default now.
+
+!!!.aside.aside--caution
+
+You may see large code coverage differences in HTML files depending on whether you use **per
+function** or **per block** mode. When using **per function** mode, inline scripts in HTML files are
+treated as functions. If the script executes at all then DevTools will mark the entire script as
+used code. Only if the script doesn't execute at all will DevTools mark the script as unused code.
+
+!!!
+
+![The coverage mode dropdown menu.](https://developers.google.com/web/updates/images/2019/12/modes.png)
+
+### Coverage must now be initiated by a page reload {: #reload }
+
+Toggling code coverage without a page reload has been removed because the coverage data was
+unreliable. For example, a function can be reported as unused if its execution was a long time ago
+and V8's garbage collector has cleaned it up.
+
+Chromium issue [#1004203][14]
+
+[1]: https://crbug.com/1004193
+[2]: http://dwarfstd.org/
+[3]: /web/updates/2019/12/webassembly
+[4]: /web/tools/chrome-devtools/network
+[5]: /web/tools/chrome-devtools/network/reference#initiators-dependencies
+[6]: https://crbug.com/842488
+[7]: https://crbug.com/988253
+[8]: https://crbug.com/993366
+[9]: /web/tools/chrome-devtools/command-menu
+[10]: /web/tools/chrome-devtools/device-mode#viewport
+[11]: https://crbug.com/1029031
+[12]:
+  https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-audits-panel-throttling
+[13]: /web/tools/chrome-devtools/coverage
+[14]: https://crbug.com/1004203
