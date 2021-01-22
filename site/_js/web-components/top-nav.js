@@ -24,13 +24,18 @@ import {expandSideNav} from '../actions/side-nav';
 export class TopNav extends BaseStateElement {
   connectedCallback() {
     super.connectedCallback();
-    this.hamburgerBtn = this.querySelector('.top-nav__hamburger');
-    this.hamburgerBtn?.addEventListener('click', expandSideNav);
+    this.hamburgerBtn = /** @type {HTMLElement} */ (this.querySelector(
+      '.top-nav__hamburger'
+    ));
+    this.hamburgerBtn.addEventListener('click', expandSideNav);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    this.hamburgerBtn?.removeEventListener('click', expandSideNav);
+    /** @type {HTMLElement} */ (this.hamburgerBtn).removeEventListener(
+      'click',
+      expandSideNav
+    );
   }
 
   onStateChanged({isSearchActive}) {

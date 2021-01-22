@@ -182,16 +182,16 @@ export class SideNav extends BaseElement {
     if (this.expanding) {
       this.expanding = false;
       if (this.type === 'project') {
-        this.projectView?.focus();
+        /** @type {HTMLElement} */ (this.projectView).focus();
       } else {
-        this.siteView?.focus();
+        /** @type {HTMLElement} */ (this.siteView).focus();
       }
       return;
     }
 
     if (this.switchingViews) {
       this.switchingViews = false;
-      this.siteView?.focus();
+      /** @type {HTMLElement} */ (this.siteView).focus();
       return;
     }
   }

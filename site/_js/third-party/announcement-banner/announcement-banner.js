@@ -6,7 +6,7 @@ class Banner extends HTMLElement {
     this.setAttribute('active', '');
 
     const button = this.querySelector('[data-banner-close-btn]');
-    button?.addEventListener('click', () => {
+    /** @type {HTMLElement} */ (button).addEventListener('click', () => {
       this.savePreference();
       this.close();
     });
