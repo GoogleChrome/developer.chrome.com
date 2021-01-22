@@ -16,6 +16,9 @@ chromium-chronicle:
 
 cookies:
   en: Cookies
+  
+deprecations:
+  en: Deprecations
 
 devices:
   en: Devices
@@ -43,3 +46,6 @@ html:
 
 new-in-chrome:
   en: New in Chrome
+  
+removals:
+  en: Removals
