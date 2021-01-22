@@ -2,8 +2,8 @@
 layout: 'layouts/blog-post.njk'
 title: How to participate in the Privacy Sandbox initiative
 authors:
-  - Justin Schuh
-  - Marshall Vale
+  - justinschuh
+  - marshallvale
 description: >
   The Privacy Sandbox proposes a set of privacy-preserving APIs to support business models that fund the open web in the absence of tracking mechanisms like third-party cookies. This post explains how to participate.
 date: 2021-01-25

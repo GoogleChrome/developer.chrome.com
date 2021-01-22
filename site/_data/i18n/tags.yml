@@ -46,6 +46,12 @@ html:
 
 new-in-chrome:
   en: New in Chrome
+
+privacy:
+  en: Privacy
   
 removals:
   en: Removals
+
+security:
+  en: Security
