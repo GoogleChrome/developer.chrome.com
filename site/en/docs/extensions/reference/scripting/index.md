@@ -21,7 +21,7 @@ in your [manifest file][manifest].
 
 You can use the `chrome.scripting` API to inject JavaScript and CSS into
 websites. This is similar to what you can do with
-[content scripts][contentScripts], but by using the `chrome.scripting` API,
+[content scripts][contentscripts], but by using the `chrome.scripting` API,
 extensions can make decisions at runtime.
 
 ### Injection targets
@@ -57,7 +57,7 @@ chrome.scripting.executeScript(
 
 You can also inject into specific frames of a tab by specifying individual frame
 IDs. For more information on frame IDs, see the
-[webNavigation API][webNavigation].
+[webNavigation API][webnavigation].
 
 ```js
 const tabId = getTabId();
@@ -185,7 +185,7 @@ chrome.scripting.executeScript(
 `scripting.insertCSS()` does not return any results.
 
 [manifest]: /docs/extensions/mv3/manifest
-[contentScripts]: /docs/extensions/mv3/content_scripts
-[webNavigation]: /docs/extensions/reference/webNavigation
+[contentscripts]: /docs/extensions/mv3/content_scripts
+[webnavigation]: /docs/extensions/reference/webNavigation
 [storage]: /docs/extensions/reference/storage
 [messaging]: /docs/extensions/mv3/messaging
