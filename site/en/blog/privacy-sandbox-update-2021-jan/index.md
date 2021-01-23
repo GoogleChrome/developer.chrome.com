@@ -7,8 +7,8 @@ authors:
 description: >
   The Privacy Sandbox proposes a set of privacy-preserving APIs to support business models that fund the open web in the absence of tracking mechanisms like third-party cookies. This post provides an update on the status of the APIs and proposals.
 date: 2021-01-25
-hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/XQMiO4wkYbu817nsezAA.jpg
-alt: A black-on-white printed sign saying Private, on a wooden wall.
+hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/yxxyZycGJzpQaSXsGfT3.jpg
+alt: Flock of birds over water, Yamuna Ghat, New Delhi, India
 tags:
   - privacy
   - security
@@ -133,3 +133,5 @@ techniques, and enable mitigating workarounds:
     search attacks. This change will be rolled out to all Chrome users beginning in March with
     Chrome 89.
 
+
+Photo by <a href="https://unsplash.com/@adityaries?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Aditya Saxena</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>

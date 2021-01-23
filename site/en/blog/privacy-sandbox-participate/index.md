@@ -7,8 +7,8 @@ authors:
 description: >
   The Privacy Sandbox proposes a set of privacy-preserving APIs to support business models that fund the open web in the absence of tracking mechanisms like third-party cookies. This post explains how to participate.
 date: 2021-01-25
-hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/XQMiO4wkYbu817nsezAA.jpg
-alt: A black-on-white printed sign saying Private, on a wooden wall.
+hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/z8c5fphb9kg0f3ayVgqE.jpg
+alt: Flock of birds over snowy stubble field, mountains and silos in background.
 tags:
   - privacy
   - security
@@ -57,3 +57,5 @@ experiment and provide feedback. For local testing in Chrome, developers can use
 work in live scenarios for real users and sites, developers can register to participate in Chrome
 origin trials. You can review the list of [active Chrome origin trials](https://developer.chrome.com/origintrials/#/trials/active) 
 and learn [how origin trials work](https://web.dev/origin-trials/).
+
+<span>Photo by <a href="https://unsplash.com/@ian_w?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ian Williams</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
