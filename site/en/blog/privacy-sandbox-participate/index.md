@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: How to participate in the Privacy Sandbox initiative
+title: How to participate in the Privacy Sandbox initiative
 authors:
   - justinschuh
   - marshallvale
@@ -29,6 +29,7 @@ Chromium blog. (See updates from [Aug 2019](https://blog.chromium.org/2019/08/po
 [Jan 2020](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html), [Oct 2020](https://blog.chromium.org/2020/10/progress-on-privacy-sandbox-and.html), Jan 2021.)
 
 ## Understand the proposals
+
 You can learn more about Chrome's proposals for the Privacy Sandbox on
 [web.dev](https://web.dev/digging-into-the-privacy-sandbox/), including direct links to the
 proposals on GitHub. Links to proposals offered by others in the web community can usually be found
@@ -38,6 +39,7 @@ members of the Improving Web Advertising Business Group created a
 advertising use cases and proposals.
 
 ## Early input and discussion
+
 To participate in conversations with industry representatives, browser vendors and others—for
 example, to advocate for a particular use case or solution—you can join one or more of the W3C
 forums where privacy-preserving proposals are being shared and refined. Today most community
@@ -51,11 +53,20 @@ input. You can also raise questions or share feedback by commenting directly on 
 GitHub, so that the author and other interested parties can respond and discuss.
 
 ## Experimentation and feedback
+
 As proposed solutions move to the early build and test phase, developers are encouraged to
 experiment and provide feedback. For local testing in Chrome, developers can use feature flags
 (chrome://flags) to enable an experimental feature in their local browser. To test how new solutions
 work in live scenarios for real users and sites, developers can register to participate in Chrome
-origin trials. You can review the list of [active Chrome origin trials](https://developer.chrome.com/origintrials/#/trials/active) 
+origin trials. You can review the list of [active Chrome origin trials](https://developer.chrome.com/origintrials) 
 and learn [how origin trials work](https://web.dev/origin-trials/).
 
-<span>Photo by <a href="https://unsplash.com/@ian_w?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ian Williams</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+## Find out more
+
+* [Digging in to the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox/)
+* [The Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
+* [Progress update on the Privacy Sandbox initiative](/blog/privacy-sandbox-update-2021-jan/)
+
+---
+
+<p>Photo by <a href="https://unsplash.com/@ian_w?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ian Williams</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>

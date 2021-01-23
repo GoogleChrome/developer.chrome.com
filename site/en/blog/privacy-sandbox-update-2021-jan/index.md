@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Progress update on the Privacy Sandbox initiative
+title: Progress update on the Privacy Sandbox initiative
 authors:
   - justinschuh
   - marshallvale
@@ -22,7 +22,7 @@ and [October](https://blog.chromium.org/2020/10/progress-on-privacy-sandbox-and.
 
 After a year of incubation, 2021 will be a year of testing with continued opportunities for the web
 ecosystem to get involved. This post provides an update on the status of the Privacy Sandbox APIs
-and proposals.:
+and proposals.
 
 ## Progress on key use cases
 
@@ -37,15 +37,15 @@ In March, with release 89, Chrome will launch an [origin trial](https://web.dev/
 the [Federated Learning of Cohorts API](https://github.com/WICG/floc). FLoC proposes a new way
 to reach people with relevant content and ads by clustering large groups of people with similar
 browsing patterns, hiding individuals "in the crowd" and keeping their web history on their browser.
-Today Google Ads is sharing an update from their tests [link to Ads blog](https://docs.google.com/document/d/1xVNzcYbHaZyN8mukXK69BHYOAmUILn90XbuJ7Nwr0jw/edit#)
-of the FLoC algorithm, which show that the proposed API could be similarly effective as third-party
-cookies in serving relevant interest-based ads.
+Today Google Ads is sharing [an update from their tests of the FLoC algorithm](https://blog.google/products/ads-commerce/), 
+which show that the proposed API could be similarly effective as third-party  cookies in serving 
+relevant interest-based ads.
 
 ### Building first-party audiences
 
 One of the use cases that has had exciting discussions in the standards community is around how
 companies can build audiences, and reach prior visitors to their websites through remarketing. Last
-year Chrome introduced **[TURTLEDOVE](https://github.com/WICG/turtledove)**, a proposal that
+year Chrome introduced [TURTLEDOVE](https://github.com/WICG/turtledove), a proposal that
 addresses this use case, while providing the same privacy protections as the other proposals. A
 website may ask the browser to store an Interest Group, including information about bidding and ad
 display, and on-device bidding by potential ads buyers would be based on this Interest Group.
@@ -69,12 +69,11 @@ records clicks and conversions and shares an anonymized report. A future version
 will also support "view-through conversions" (when people see an ad but act on it later).
 
 To help marketers understand the audience reach of a particular ad campaign, in April 2020 we
-published the **[Aggregate Measurement
-API](https://github.com/csharrison/aggregate-reporting-api)**, which helps measure how many times
-unique users viewed an ad across multiple sites, again, without revealing data that could be used to
-identify individuals. This is made possible by reporting data only once it's met a certain threshold
-for aggregation. We're planning to open up the Aggregate Measurement API for testing via public
-origin trials in the first half of the year.
+published the [Aggregate Measurement API](https://github.com/csharrison/aggregate-reporting-api), 
+which helps measure how many times unique users viewed an ad across multiple sites, again, without  
+revealing data that could be used to identify individuals. This is made possible by reporting data 
+only once it's met a certain threshold for aggregation. We're planning to open up the Aggregate 
+Measurement API for testing via public origin trials in the first half of the year.
 
 ### Preventing fraud
 
@@ -87,11 +86,10 @@ privacy.
 
 ## Cookie security improvements
 
-In 2020, we also improved the safety of current web technology. The **[SameSite cookie
-policy](https://web.dev/samesite-cookies-explained/)** has been adopted by Chrome and Edge and is
-coming to Firefox soon, treating cookies as first-party, unless the developer indicates that they
-need to be accessed across sites. We've also rolled this out for Android webview and expect to
-enforce the "SameSite=Lax" default treatment beginning in apps targeting Android S.
+In 2020, we also improved the safety of current web technology. The [SameSite cookie policy](https://web.dev/samesite-cookies-explained/) has been adopted by Chrome and Edge and is coming to Firefox soon, 
+treating cookies as first-party, unless the developer indicates that they need to be accessed across 
+sites. We've also rolled this out for Android webview and expect to enforce the "SameSite=Lax" 
+default treatment beginning in apps targeting Android S.
 
 New in this month's Chrome 88 release, we are strengthening this policy by [modifying the definition
 of SameSite](https://web.dev/schemeful-samesite/) to prevent some forms of cross-site attacks,
@@ -133,5 +131,12 @@ techniques, and enable mitigating workarounds:
     search attacks. This change will be rolled out to all Chrome users beginning in March with
     Chrome 89.
 
+## Find out more
 
-Photo by <a href="https://unsplash.com/@adityaries?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Aditya Saxena</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+* [Digging in to the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox/)
+* [The Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
+* [How to participate in the Privacy Sandbox initiative](/blog/privacy-sandbox-participate/)
+
+---
+
+<p>Photo by <a href="https://unsplash.com/@adityaries?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Aditya Saxena</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
