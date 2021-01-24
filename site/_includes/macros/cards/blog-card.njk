@@ -31,7 +31,9 @@
   </h2>
 
   <p class="type--caption gap-top-200">
-    {{ pd.description }}
+    {% if not pd.hero %}
+      {{ pd.description }}
+    {% endif %}
   </p>
 
   {% if pd.tags %}
