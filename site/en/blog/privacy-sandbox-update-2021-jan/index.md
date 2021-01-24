@@ -18,11 +18,11 @@ tags:
 of privacy-preserving APIs to support business models that fund the open web in the absence of
 tracking mechanisms like third-party cookies. It was introduced in 2019, and Chrome shared updates
 on progress in [January](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html)
-and [October](https://blog.chromium.org/2020/10/progress-on-privacy-sandbox-and.html) last year.
+and [October](https://blog.chromium.org/2020/10/progress-on-privacy-sandbox-and.html) last year.  
 
-After a year of incubation, 2021 will be a year of testing with continued opportunities for the web
-ecosystem to get involved. This post provides an update on the status of the Privacy Sandbox APIs
-and proposals.
+After a year of incubation, 2021 will be a year of testing with continued [opportunities for the web
+ecosystem to get involved](developer.chrome.com/blog/privacy-sandbox-participate). This post 
+provides an update on the status of the Privacy Sandbox APIs and proposals.
 
 ## Progress on key use cases
 
@@ -37,7 +37,7 @@ In March, with release 89, Chrome will launch an [origin trial](https://web.dev/
 the [Federated Learning of Cohorts API](https://github.com/WICG/floc). FLoC proposes a new way
 to reach people with relevant content and ads by clustering large groups of people with similar
 browsing patterns, hiding individuals "in the crowd" and keeping their web history on their browser.
-Today Google Ads is sharing [an update from their tests of the FLoC algorithm](https://blog.google/products/ads-commerce/), 
+Today Google Ads is sharing [an update from their tests of the FLoC algorithm](https://blog.google/products/ads-commerce/2021-01-privacy-sandbox), 
 which show that the proposed API could be similarly effective as third-party  cookies in serving 
 relevant interest-based ads.
 
@@ -136,6 +136,7 @@ techniques, and enable mitigating workarounds:
 * [Digging in to the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox/)
 * [The Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
 * [How to participate in the Privacy Sandbox initiative](/blog/privacy-sandbox-participate/)
+* [Privacy Sandbox in 2021: Testing a More Private Web](https://blog.chromium.org/)
 
 ---
 
