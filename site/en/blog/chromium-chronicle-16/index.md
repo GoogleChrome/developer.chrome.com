@@ -12,7 +12,7 @@ tags:
   - chromium-chronicle
 ---
 
-**Episode 16:** by Anjali Doneria in Bellevue, WA (January 2020)<br>
+**Episode 16:** by Anjali Doneria in Bellevue, WA (January 2021)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
 Ever wondered how Chrome keeps itself up-to-date on your desktop? Or how
