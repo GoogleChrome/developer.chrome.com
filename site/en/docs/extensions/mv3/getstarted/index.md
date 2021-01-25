@@ -431,7 +431,7 @@ What's next?
 [2]: /docs/extensions/mv3/content_scripts
 [3]: /docs/extensions/mv3/options
 [4]: /docs/extensions/mv3/user_interface
-[5]: /docs/
+[5]: /
 [6]: /https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qCZMjrACJfKZodFyd1bU.zip
 [7]: /docs/extensions/mv3/manifest
 [9]: /docs/extensions/mv3/background_pages
@@ -452,5 +452,5 @@ What's next?
 [27]: /docs/extensions/reference/tabs#method-executeScript
 [30]: /docs/extensions/mv3/overview
 [31]: /docs/extensions/mv3/tut_debugging
-[32]: /docs//extensions/reference
+[32]: /docs/extensions/reference
 [33]: /docs/extensions/mv3/devguide
