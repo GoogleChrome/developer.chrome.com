@@ -22,7 +22,7 @@ The completed extension can be downloaded [here][6].
 ## Create the manifest {: #manifest }
 
 Extensions start with their [manifest][7]. Create a file called `manifest.json` and include the
-following code, or download the file [here][8].
+following code.
 
 ```json
 {
@@ -115,8 +115,8 @@ Click the link to view the background script's console log, "`The color is green
 ## Introduce a user interface {: #user_interface }
 
 Extensions can have many forms of a [user interface][14], but this one will use a [popup][15].
-Create and add a file titled `popup.html` to the directory, or download it [here][16]. This
-extension uses a button to change the background color.
+Create and add a file named `popup.html` to the extension's directory. This extension uses a button
+to change the background color.
 
 ```html
 <!DOCTYPE html>
@@ -257,8 +257,8 @@ The browser will now show a full-color page action icon in the browser toolbar w
 to a URL that contains `"developer.chrome.com"`. When the icon is full-color, users can click it to
 view popup.html.
 
-The last step for the popup UI is adding color to the button. Create and add a file called
-`popup.js` with the following code to the extension directory, or downloaded [here][22].
+The last step for the popup UI is adding color to the button. Create and add a file named
+`popup.js` with the following code to the extension's directory.
 
 ```js
 let changeColor = document.getElementById('changeColor');
@@ -338,8 +338,7 @@ The extension currently only allows users to change the background to green. Inc
 page gives users more control over the extension's functionality, further customizing their browsing
 experience.
 
-Start by creating a file in the directory called `options.html` and include the following code, or
-download it [here][28].
+Start by creating a file in the directory named `options.html` and include the following code.
 
 ```html
 <!DOCTYPE html>
@@ -388,8 +387,7 @@ will currently appear blank.
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/z1VEYxYlJev7llaXIQUL.png",
        alt="Extension Options", height="726", width="645" %}
 
-Last step is to add the options logic. Create a file called `options.js` in the extension directory
-with the following code, or download it [here][29].
+Last step is to add the options logic. Create a file named `options.js` in the extension's directory with the following code.
 
 ```js
 let page = document.getElementById('buttonDiv');
@@ -436,28 +434,22 @@ What's next?
 [5]: /docs/
 [6]: /https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qCZMjrACJfKZodFyd1bU.zip
 [7]: /docs/extensions/mv3/manifest
-[8]: examples/tutorials/get_started/manifest.json
 [9]: /docs/extensions/mv3/background_pages
-[10]: examples/tutorials/get_started/background.js
 [11]: /docs/extensions/reference/runtime#event-onInstalled
 [12]: /docs/extensions/reference/storage
 [13]: /docs/extensions/reference/storage
 [14]: /docs/extensions/mv3/user_interface
 [15]: /docs/extensions/mv3/user_interface#popup
-[16]: examples/tutorials/get_started/popup.html
 [17]: /docs/extensions/reference/pageAction
 [18]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/Os33t2iqHyr5RiJHwkjB.zip
 [19]: /docs/extensions/mv3/user_interface#icons
 [20]: /docs/extensions/reference/declarativeContent
 [21]: /docs/extensions/reference/declarativeContent
-[22]: examples/tutorials/get_started/popup.js
 [23]: https://developer.chrome.com/
 [24]: /docs/extensions/mv3/content_scripts#pi
 [25]: /docs/extensions/mv3/manifest/activeTab
 [26]: /docs/extensions/reference/tabs
 [27]: /docs/extensions/reference/tabs#method-executeScript
-[28]: examples/tutorials/get_started/options.html
-[29]: examples/tutorials/get_started/options.js
 [30]: /docs/extensions/mv3/overview
 [31]: /docs/extensions/mv3/tut_debugging
 [32]: /docs//extensions/reference
