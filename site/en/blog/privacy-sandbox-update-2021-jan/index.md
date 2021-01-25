@@ -34,7 +34,7 @@ they visit, relying on third-party cookies or less-transparent and undesirable m
 device fingerprinting.
 
 In March, with release 89, Chrome will launch an [origin trial](https://web.dev/origin-trials/) for
-the [Federated Learning of Cohorts API](https://github.com/WICG/floc). FLoC proposes a new way
+the [Federated Learning of Cohorts API](https://github.com/WICG/floc) (FLoC). FLoC proposes a new way
 to reach people with relevant content and ads by clustering large groups of people with similar
 browsing patterns, hiding individuals "in the crowd" and keeping their web history on their browser.
 Today Google Ads is sharing [an update from their tests of the FLoC algorithm](https://blog.google/products/ads-commerce/2021-01-privacy-sandbox), 
