@@ -50,9 +50,8 @@ manifest, a generic toolbar icon will be created for the extension.
 
 ## Add instruction {: #background }
 
-Although the extension has been installed, it has no instruction. Introduce a [background script][9]
-by creating a file titled `background.js`, or downloading it [here][10], and placing it inside the
-extension directory.
+Although the extension has been installed, it has no instruction. Introduce a [background script][1]
+by creating a file named `background.js` inside the extension's directory.
 
 Background scripts, and many other important components, must be registered in the manifest.
 Registering a background script in the manifest tells the extension which file to reference, and how
@@ -87,7 +86,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 ```
 
-Most APIs, including the [storage][13] API, must be registered under the `"permissions"` field in
+Most APIs, including the [storage][12] API, must be registered under the `"permissions"` field in
 the manifest for the extension to use them.
 
 ```json
@@ -114,7 +113,7 @@ Click the link to view the background script's console log, "`The color is green
 
 ## Introduce a user interface {: #user_interface }
 
-Extensions can have many forms of a [user interface][14], but this one will use a [popup][15].
+Extensions can have many forms of a [user interface][4], but this one will use a [popup][15].
 Create and add a file named `popup.html` to the extension's directory. This extension uses a button
 to change the background color.
 
@@ -239,7 +238,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 ```
 
-The extension will need permission to access the [`declarativeContent`][21] API in its manifest.
+The extension will need permission to access the [`declarativeContent`][20] API in its manifest.
 
 ```json
 {
@@ -434,17 +433,13 @@ What's next?
 [5]: /
 [6]: /https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qCZMjrACJfKZodFyd1bU.zip
 [7]: /docs/extensions/mv3/manifest
-[9]: /docs/extensions/mv3/background_pages
 [11]: /docs/extensions/reference/runtime#event-onInstalled
 [12]: /docs/extensions/reference/storage
-[13]: /docs/extensions/reference/storage
-[14]: /docs/extensions/mv3/user_interface
 [15]: /docs/extensions/mv3/user_interface#popup
 [17]: /docs/extensions/reference/pageAction
 [18]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/Os33t2iqHyr5RiJHwkjB.zip
 [19]: /docs/extensions/mv3/user_interface#icons
 [20]: /docs/extensions/reference/declarativeContent
-[21]: /docs/extensions/reference/declarativeContent
 [23]: https://developer.chrome.com/
 [24]: /docs/extensions/mv3/content_scripts#pi
 [25]: /docs/extensions/mv3/manifest/activeTab
