@@ -49,7 +49,6 @@ const extensionsReferenceCollection = require('./site/_collections/reference');
 
 // Create a helpful environment flags
 const isProduction = process.env.NODE_ENV === 'production';
-const isCI = process.env.CI;
 
 module.exports = eleventyConfig => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
@@ -79,8 +78,12 @@ module.exports = eleventyConfig => {
 
   // Add collections
   locales.forEach(locale => eleventyConfig.addCollection(`blog-${locale}`, collections => {
-    const blogCollection = collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).filter(drafts).reverse();
-    return isCI ? blogCollection.slice(blogCollection.length - 6) : blogCollection;
+    let blogCollection = collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).filter(drafts).reverse();
+    // If we're running inside of Percy then just show the first six blog posts.
+    if (process.env.PERCY_BRANCH) {
+      blogCollection = blogCollection.slice(blogCollection.length - 6);
+    }
+    return blogCollection;
   }));
   eleventyConfig.addCollection('algolia', algoliaCollection);
   eleventyConfig.addCollection('feeds', feedsCollection);
