@@ -6,6 +6,9 @@ updated: 2020-11-18
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 
+{# Note: "components" is probalby not the best word to use here any more as "web components" are a
+cross-browser tech for creating reusable custom elements or "?componenets". #}
+
 Extensions are made of different, but cohesive, components. Components can include [background
 scripts][1], [content scripts][2], an [options page][3], [UI elements][4] and various logic files.
 Extension components are created with web development technologies: HTML, CSS, and JavaScript. An
@@ -27,8 +30,8 @@ following code.
 ```json
 {
   "name": "Getting Started Example",
-  "version": "1.0",
   "description": "Build an Extension!",
+  "version": "1.0",
   "manifest_version": 3
 }
 ```
@@ -37,41 +40,49 @@ The directory holding the manifest file can be added as an extension in develope
 current state.
 
 1.  Open the Extension Management page by navigating to `chrome://extensions`.
-    - The Extension Management page can also be opened by clicking on the Chrome menu, hovering over
-      **More Tools** then selecting **Extensions**.
+    - Alternatively, open this page by clicking on the Extensions menu button and selecting **Manage
+      Extensions** at the bottom of the menu.
+    - Alternatively, open this page by clicking on the Chrome menu, hovering over **More Tools**
+      then selecting **Extensions**
 2.  Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
-3.  Click the **LOAD UNPACKED** button and select the extension directory.
+3.  Click the **Load unpacked** button and select the extension directory.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iYdLKFsJ1KSVGLhbLRvS.png",
        alt="Load Extension", height="337", width="606" %}
 
 Ta-da! The extension has been successfully installed. Because no icons were included in the
-manifest, a generic toolbar icon will be created for the extension.
+manifest, a generic icon will be created for the extension.
 
 ## Add instruction {: #background }
 
-Although the extension has been installed, it has no instruction. Introduce a [background script][1]
-by creating a file named `background.js` inside the extension's directory.
+{# "Instruction" feels like a very odd phrasng to use here. #}
+
+Even though is installed, it does not currently do anything. That's becasue we haven't told the
+extension to do anything yet. Let's update the extension to store a background color value for
+future use.
+
+To do this, we will need to crate a [background script][1] and add it to the extension's manifest.
+Start by creating a file named `background.js` inside the extension's directory.
+
+```json/5-7
+{
+  "name": "Getting Started Example",
+  "description": "Build an Extension!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  }
+}
+```
 
 Background scripts, and many other important components, must be registered in the manifest.
 Registering a background script in the manifest tells the extension which file to reference, and how
 that file should behave.
 
-```json
-{
-  "name": "Getting Started Example",
-  "version": "1.0",
-  "description": "Build an Extension!",
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "manifest_version": 3
-}
-```
-
-The extension is now aware that it includes a non-persistent background script and will scan the
-registered file for important events it needs to listen for.
+Chrome is now aware that the extension includes a service worker. When you reload the extension,
+Chrome will scan the specified file for additional instructions, such as important events it needs
+to listen for.
 
 This extension will need information from a persistent variable as soon as its installed. Start by
 including a listening event for [`runtime.onInstalled`][11] in the background script. Inside the
@@ -79,27 +90,27 @@ including a listening event for [`runtime.onInstalled`][11] in the background sc
 multiple extension components to access that value and update it.
 
 ```js
-chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({color: '#3aa757'}, function() {
-    console.log("The color is green.");
-  });
+let color = '#3aa757';
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.storage.sync.set({ color });
+  console.log('Set default color to %cgreen', `color: ${color}`);
 });
 ```
 
 Most APIs, including the [storage][12] API, must be registered under the `"permissions"` field in
 the manifest for the extension to use them.
 
-```json
+```json/8
 {
   "name": "Getting Started Example",
-  "version": "1.0",
   "description": "Build an Extension!",
-  "permissions": ["storage"],
+  "version": "1.0",
+  "manifest_version": 3,
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "manifest_version": 3
+  "permissions": ["storage"]
 }
 ```
 
@@ -109,25 +120,20 @@ views**, becomes available with a blue link, **background page**.
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/V96EHNVYQLVsjURz4Naz.png",
        alt="Inspect Views", height="337", width="606" %}
 
-Click the link to view the background script's console log, "`The color is green.`"
+Click the link to view the background script's console log, "`Default background color set to
+green`"
 
 ## Introduce a user interface {: #user_interface }
 
-Extensions can have many forms of a [user interface][4], but this one will use a [popup][15].
-Create and add a file named `popup.html` to the extension's directory. This extension uses a button
-to change the background color.
+Extensions can have many forms of a [user interface][4]; this one will use a [popup][15]. Create and
+add a file named `popup.html` to the extension's directory. This extension uses a button to change
+the background color.
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-      }
-    </style>
+    <link rel="stylesheet" href="button.css">
   </head>
   <body>
     <button id="changeColor"></button>
@@ -136,135 +142,115 @@ to change the background color.
 ```
 
 Like the background script, this file needs to be designated as a popup in the manifest under
-[`page_action`][17].
+[`action`][17].
 
-```json
+```json/9-11
 {
   "name": "Getting Started Example",
-  "version": "1.0",
   "description": "Build an Extension!",
-  "permissions": ["storage"],
+  "version": "1.0",
+  "manifest_version": 3,
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "page_action": {
+  "permissions": ["storage"],
+  "action": {
     "default_popup": "popup.html"
-  },
-  "manifest_version": 3
+  }
 }
 ```
 
-Designation for toolbar icons is also included under `page_action` in the `default_icons` field.
+Our popup's HTLM references an external CSS file named `button.css`. Add another file to the
+extension's directory, name it appropraitely, and add the following code.
+
+```css
+button {
+  height: 30px;
+  width: 30px;
+  outline: none;
+  margin: 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+button.current {
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px black;
+}
+```
+
+Designation for toolbar icons is also included under `action` in the `default_icons` field.
 Download the images folder [here][18], unzip it, and place it in the extension's directory. Update
 the manifest so the extension knows how to use the images.
 
-```json
+```json/11-16
 {
   "name": "Getting Started Example",
-  "version": "1.0",
   "description": "Build an Extension!",
-  "permissions": ["storage"],
+  "version": "1.0",
+  "manifest_version": 3,
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "page_action": {
+  "permissions": ["storage"],
+  "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
+      "16": "/images/get_started16.png",
+      "32": "/images/get_started32.png",
+      "48": "/images/get_started48.png",
+      "128": "/images/get_started128.png"
     }
-  },
-  "manifest_version": 3
+  }
 }
 ```
 
 Extensions also display images on the extension management page, the permissions warning, and
 favicon. These images are designated in the manifest under [`icons`][19].
 
-```json
+```json/18-23
 {
   "name": "Getting Started Example",
-  "version": "1.0",
   "description": "Build an Extension!",
-  "permissions": ["storage"],
+  "version": "1.0",
+  "manifest_version": 3,
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "page_action": {
+  "permissions": ["storage"],
+  "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/get_started16.png",
-      "32": "images/get_started32.png",
-      "48": "images/get_started48.png",
-      "128": "images/get_started128.png"
+      "16": "/images/get_started16.png",
+      "32": "/images/get_started32.png",
+      "48": "/images/get_started48.png",
+      "128": "/images/get_started128.png"
     }
   },
   "icons": {
-    "16": "images/get_started16.png",
-    "32": "images/get_started32.png",
-    "48": "images/get_started48.png",
-    "128": "images/get_started128.png"
-  },
-  "manifest_version": 3
+    "16": "/images/get_started16.png",
+    "32": "/images/get_started32.png",
+    "48": "/images/get_started48.png",
+    "128": "/images/get_started128.png"
+  }
 }
 ```
 
-If the extension is reloaded at this stage, it will include a grey-scale icon, but will not contain
-any functionality differences. Because `page_action` is declared in the manifest, it is up to the
-extension to tell the browser when the user can interact with `popup.html`.
-
-Add declared rules to the background script with the [`declarativeContent`][20] API within the
-`runtime.onInstalled` listener event.
-
-```js
-chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({color: '#3aa757'}, function() {
-    console.log('The color is green.');
-  });
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-    chrome.declarativeContent.onPageChanged.addRules([{
-      conditions: [new chrome.declarativeContent.PageStateMatcher({
-        pageUrl: {hostEquals: 'developer.chrome.com'},
-      })
-      ],
-          actions: [new chrome.declarativeContent.ShowPageAction()]
-    }]);
-  });
-});
-```
-
-The extension will need permission to access the [`declarativeContent`][20] API in its manifest.
-
-```json
-{
-  "name": "Getting Started Example",
-...
-  "permissions": ["declarativeContent", "storage"],
-...
-}
-```
+If the extension is reloaded at this stage, it will include a the provided icon rather than the
+default placeholder and clicking the action will open a popup with button with default colors.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/j3Ff3oF0tEl9tE5ed6L0.png",
        alt="Popup", height="99", width="73" %}
-
-The browser will now show a full-color page action icon in the browser toolbar when users navigate
-to a URL that contains `"developer.chrome.com"`. When the icon is full-color, users can click it to
-view popup.html.
 
 The last step for the popup UI is adding color to the button. Create and add a file named
 `popup.js` with the following code to the extension's directory.
 
 ```js
-let changeColor = document.getElementById('changeColor');
+// Initialize butotn with users's prefered color
+let changeColor = document.getElementById("changeColor");
 
-chrome.storage.sync.get('color', function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute('value', data.color);
+chrome.storage.sync.get("color", ({ color }) => {
+  changeColor.style.backgroundColor = color;
 });
 ```
 
@@ -272,10 +258,12 @@ This code grabs the button from `popup.html` and requests the color value from s
 applies the color as the background of the button. Include a script tag to `popup.js` in
 `popup.html`.
 
-```html
+```html/7
 <!DOCTYPE html>
 <html>
-...
+  <head>
+    <link rel="stylesheet" href="button.css">
+  </head>
   <body>
     <button id="changeColor"></button>
     <script src="popup.js"></script>
@@ -288,26 +276,26 @@ Reload the extension to view the green button.
 ## Layer logic {: #logic }
 
 The extension now knows the popup should be available to users on [developer.chrome.com][23] and
-displays a colored button, but needs logic for further user interaction. Update `popup.js` to
-include the following code.
+displays a colored button, but needs logic for further user interaction. Update `popup.js` by adding
+the following to the end of the file.
 
 ```js
-let changeColor = document.getElementById('changeColor');
-...
-changeColor.onclick = function(element) {
-  let color = element.target.value;
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.scripting.executeScript({
-      function: setTheColor
-    });
+// When the button is clicked, inject setPageBackgroundColor into current page
+changeColor.addEventListener("click", async () => {
+  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: setPageBackgroundColor,
   });
-};
+});
 
-function setTheColor() {
-  document.body.style.backgroundColor = "' + color + '";
+// The body of this function will be execuetd as a content script inside the current page
+function setPageBackgroundColor() {
+  chrome.storage.sync.get("color", ({ color }) => {
+    document.body.style.backgroundColor = color;
+  });
 }
-
-
 ```
 
 The updated code adds an `onclick` event on the button, which triggers a [programatically injected
@@ -316,13 +304,14 @@ programmatic injection allows for user-invoked content scripts, instead of auto 
 code into web pages.
 
 The manifest will need the [`activeTab`][25] permission to allow the extension temporary access to
-the [`tabs`][26] API. This enables the extension to call [`tabs.executeScript`][27].
+the current page, and the [`scripting`][26] permission to use the Scripting API's
+[`executeScript`][27] method.
 
-```json
+```json/3
 {
   "name": "Getting Started Example",
 ...
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": ["storage", "activeTab", "scripting"],
 ...
 }
 ```
@@ -343,14 +332,7 @@ Start by creating a file in the directory named `options.html` and include the f
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      button {
-        height: 30px;
-        width: 30px;
-        outline: none;
-        margin: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="button.css">
   </head>
   <body>
     <div id="buttonDiv">
@@ -365,13 +347,11 @@ Start by creating a file in the directory named `options.html` and include the f
 
 Then register the options page in the manifest,
 
-```json
+```json/3
 {
   "name": "Getting Started Example",
   ...
   "options_page": "options.html",
-  ...
-  "manifest_version": 3
 }
 ```
 
@@ -380,8 +360,7 @@ Reload the extension and click **DETAILS**.
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3fNrYEoJMOPQ00L7tBtp.png",
        alt="Inspect Views", height="337", width="606" %}
 
-Scroll down the details page and select **Extension options** to view the options page, although it
-will currently appear blank.
+Scroll down the details page and select **Extension options** to view the options page.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/z1VEYxYlJev7llaXIQUL.png",
        alt="Extension Options", height="726", width="645" %}
@@ -389,21 +368,50 @@ will currently appear blank.
 Last step is to add the options logic. Create a file named `options.js` in the extension's directory with the following code.
 
 ```js
-let page = document.getElementById('buttonDiv');
-const kButtonColors = ['#3aa757', '#e8453c', '#f9bb2d', '#4688f1'];
-function constructOptions(kButtonColors) {
-  for (let item of kButtonColors) {
-    let button = document.createElement('button');
-    button.style.backgroundColor = item;
-    button.addEventListener('click', function() {
-      chrome.storage.sync.set({color: item}, function() {
-        console.log('color is ' + item);
-      })
-    });
-    page.appendChild(button);
+let page = document.getElementById("buttonDiv");
+let selectedClassName = current;
+const presetButtonColors = ["#3aa757", "#e8453c", "#f9bb2d", "#4688f1"];
+
+// Reacts to a button click by marking marking the selected button and saving the selection
+function handleButtonClick(event) {
+  // Remove styling from the previously selected color
+  let current = event.target.parentElement.querySelector(`.${selectedClassName}`);
+  if (current && current !== event.target) {
+    current.classList.remove(selectedClassName);
   }
+
+  // Mark the button as selected
+  let color = event.target.dataset.color;
+  event.target.classList.add(selectedClassName);
+  chrome.storage.sync.set({ color });
 }
-constructOptions(kButtonColors);
+
+// Add a button to the page for each supplied color
+function constructOptions(buttonColors) {
+  chrome.storage.sync.get("color", (data) => {
+    let currentColor = data.color;
+
+    // For each color we were provided…
+    for (let buttonColor of buttonColors) {
+      // …crate a button with that color…
+      let button = document.createElement("button");
+      button.dataset.color = buttonColor;
+      button.style.backgroundColor = buttonColor;
+
+      // …mark the currently selected color…
+      if (buttonColor === currentColor) {
+        button.classList.add(selectedClassName);
+      }
+
+      // …and register a listener for when that button is clicked
+      button.addEventListener("click", handleButtonClick);
+      page.appendChild(button);
+    }
+  });
+}
+
+// Initialize the page by constructing the color options
+constructOptions(presetButtonColors);
 ```
 
 Four color options are provided then generated as buttons on the options page with onclick event
@@ -436,15 +444,15 @@ What's next?
 [11]: /docs/extensions/reference/runtime#event-onInstalled
 [12]: /docs/extensions/reference/storage
 [15]: /docs/extensions/mv3/user_interface#popup
-[17]: /docs/extensions/reference/pageAction
+[17]: /docs/extensions/reference/action
 [18]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/Os33t2iqHyr5RiJHwkjB.zip
 [19]: /docs/extensions/mv3/user_interface#icons
 [20]: /docs/extensions/reference/declarativeContent
 [23]: https://developer.chrome.com/
 [24]: /docs/extensions/mv3/content_scripts#pi
 [25]: /docs/extensions/mv3/manifest/activeTab
-[26]: /docs/extensions/reference/tabs
-[27]: /docs/extensions/reference/tabs#method-executeScript
+[26]: /docs/extensions/reference/scripting
+[26]: /docs/extensions/reference/scripting#method-executeScript
 [30]: /docs/extensions/mv3/overview
 [31]: /docs/extensions/mv3/tut_debugging
 [32]: /docs/extensions/reference
