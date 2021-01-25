@@ -152,8 +152,7 @@ documentation][8].
 
 ## Sample code {: #toc-samplecode }
 
-A sample extension that uses these techniques is available in the Chromium source tree:
-[.../examples/tutorials/analytics/][9]
+An example extension that uses these techniques is available in the [samples repository][9].
 
 [1]: /apps/analytics
 [2]: /docs/extensions/mv2/getstarted
