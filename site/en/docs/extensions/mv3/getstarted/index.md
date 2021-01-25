@@ -439,7 +439,7 @@ What's next?
 [3]: /docs/extensions/mv3/options
 [4]: /docs/extensions/mv3/user_interface
 [5]: /
-[6]: /https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qCZMjrACJfKZodFyd1bU.zip
+[6]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qCZMjrACJfKZodFyd1bU.zip
 [7]: /docs/extensions/mv3/manifest
 [11]: /docs/extensions/reference/runtime#event-onInstalled
 [12]: /docs/extensions/reference/storage
