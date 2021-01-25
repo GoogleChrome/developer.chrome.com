@@ -14,7 +14,7 @@ tags:
   - chromium-chronicle
 ---
 
-**Episode 17:** by Todd Huang in San Francisco, CA (January 2021)<br>
+**Episode 17:** by Toby Huang in San Francisco, CA (January 2021)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
 Browser tests are a form of automated testing for chromium code that are more
