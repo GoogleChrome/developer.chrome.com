@@ -434,7 +434,7 @@ What's next?
 [3]: /docs/extensions/mv3/options
 [4]: /docs/extensions/mv3/user_interface
 [5]: /docs/
-[6]: examples/tutorials/get_started_complete.zip
+[6]: /https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qCZMjrACJfKZodFyd1bU.zip
 [7]: /docs/extensions/mv3/manifest
 [8]: examples/tutorials/get_started/manifest.json
 [9]: /docs/extensions/mv3/background_pages
@@ -446,7 +446,7 @@ What's next?
 [15]: /docs/extensions/mv3/user_interface#popup
 [16]: examples/tutorials/get_started/popup.html
 [17]: /docs/extensions/reference/pageAction
-[18]: examples/tutorials/get_started/images.zip
+[18]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/Os33t2iqHyr5RiJHwkjB.zip
 [19]: /docs/extensions/mv3/user_interface#icons
 [20]: /docs/extensions/reference/declarativeContent
 [21]: /docs/extensions/reference/declarativeContent
