@@ -17,6 +17,9 @@
   "cookies": {
     "title": "i18n.tags.cookies"
   },
+  "deprications": {
+    "title": "i18n.tags.deprications"
+  },
   "devices": {
     "title": "i18n.tags.devices"
   },
@@ -43,5 +46,14 @@
   },
   "new-in-chrome": {
     "title": "i18n.tags.new-in-chrome"
+  },
+  "privacy": {
+    "title": "i18n.tags.privacy"
+  },
+  "removals": {
+    "title": "i18n.tags.removals"
+  },
+  "security": {
+    "title": "i18n.tags.security"
   }
 }
