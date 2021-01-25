@@ -37,6 +37,8 @@ Examples of useful mixins:
 The snippet below logs in as a guest user for your test. It is important to
 **make sure your feature works in incognito mode.**
 
+{% Compare 'better' %}
+
 ```cpp
 class MyGuestBrowserTestClass : public MixinBasedInProcessBrowserTest {
  private:
@@ -44,12 +46,16 @@ class MyGuestBrowserTestClass : public MixinBasedInProcessBrowserTest {
 };
 ```
 
+{% endCompare %}
+
 `LoggedInUserMixin` is a convenient way to log in as a Family Link user for
 your test. If your feature affects anything related to child supervision,
 you should **test your feature for supervised users**. A possible bug is
 forgetting that child users have incognito mode disabled or can't install
 extensions without parent approval. `LoggedInUserMixin` is a compound mixin
 composed of other mixins.
+
+{% Compare 'better' %}
 
 ```cpp
 class MyChildBrowserTestClass : public MixinBasedInProcessBrowserTest {
@@ -65,6 +71,8 @@ class MyChildBrowserTestClass : public MixinBasedInProcessBrowserTest {
                                           embedded_test_server(), this};
 };
 ```
+
+{% endCompare %}
 
 One of the primary benefits of mixins is **using composition instead of
 inheritance, and avoiding problems with diamond multiple inheritance**.
