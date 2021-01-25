@@ -58,7 +58,7 @@ The icon can also be set programmatically using the `action.setIcon()` method.
 This can be used to specify a different image path or to provide a
 dynamically-generated icon using the [HTML canvas element][canvas], or, if
 setting from an extension service worker, the
-[offscreen canvas][offscreenCanvas] API.
+[offscreen canvas][offscreencanvas] API.
 
 ```js
 const canvas = new OffscreenCanvas(16, 16);
@@ -163,4 +163,4 @@ toolbar.
 
 [manifest]: /docs/extensions/mv3/manifest
 [canvas]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement
-[offscreenCanvas]: https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas
+[offscreencanvas]: https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas
