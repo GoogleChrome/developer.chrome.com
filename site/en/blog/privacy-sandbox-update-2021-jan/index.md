@@ -21,7 +21,7 @@ on progress in [January](https://blog.chromium.org/2020/01/building-more-private
 and [October](https://blog.chromium.org/2020/10/progress-on-privacy-sandbox-and.html) last year.  
 
 After a year of incubation, 2021 will be a year of testing with continued [opportunities for the web
-ecosystem to get involved](developer.chrome.com/blog/privacy-sandbox-participate). This post 
+ecosystem to get involved](/blog/privacy-sandbox-participate). This post
 provides an update on the status of the Privacy Sandbox APIs and proposals.
 
 ## Progress on key use cases
