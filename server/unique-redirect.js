@@ -29,7 +29,7 @@ const express = require('express');
  * @type {string[]}
  */
 const avoidDirs = [
-  '/en/docs/extensions/mv3',
+  '/en/docs/extensions/mv2', // as discussed with team, MV3 takes priority
   '/en/docs/apps',
   '/en/docs/native-client',
 ];
@@ -60,7 +60,7 @@ const iterateDirs = function* (p) {
   for (;;) {
     const update = path.dirname(p);
     if (update === p) {
-      return;
+      return; // stable dir, we can't yield any moer
     }
     yield update;
     p = update;
@@ -87,7 +87,7 @@ const leftMostDir = p => {
   for (;;) {
     const update = path.dirname(p);
     if (update === p) {
-      return previous;
+      return previous; // stable dir (e.g., "." or "/"), return previous
     }
     previous = p;
     p = update;
@@ -111,10 +111,10 @@ async function findPaths(source) {
 async function buildHandler(source = 'dist/') {
   const paths = await findPaths(source, avoidDirs);
 
-  // for each:
-  //   find highest path we can attach this basename to
-  //   if we collide with something else, move _both_ under their subfolder
-  //   this leaves a tombstone which means "never place here"
+  // The broad design of this function is, for each URL found inside dist/:
+  //   * find the highest path we can safely attach this basename to
+  //   * if we collide with something else, move it under its respective subfolder and try again
+  //   * collisions leave a tombstone (empty redirect) which means "never place here"
 
   /**
    * @type {{[root: string]: {[basename: string]: url}}}
@@ -179,6 +179,7 @@ async function buildHandler(source = 'dist/') {
         if (!(key in check)) {
           scope = dir;
 
+          // If we're in an avoided directory, then don't continue above that directory.
           if (avoidDirs.includes(scope)) {
             break;
           }
