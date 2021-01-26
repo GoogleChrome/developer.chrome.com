@@ -53,13 +53,10 @@ current state.
 Ta-da! The extension has been successfully installed. Because no icons were included in the
 manifest, a generic icon will be created for the extension.
 
-## Add instruction {: #background }
+## Add functionality {: #background }
 
-{# "Instruction" feels like a very odd phrasng to use here. #}
-
-Even though is installed, it does not currently do anything. That's becasue we haven't told the
-extension to do anything yet. Let's update the extension to store a background color value for
-future use.
+The extension is now installed, but it doesn't currently do anything becasue we haven't told it what
+to do or when to do it. Let's fix that by adding some code to store a background color value.
 
 To do this, we will need to crate a [background script][1] and add it to the extension's manifest.
 Start by creating a file named `background.js` inside the extension's directory.
@@ -94,7 +91,7 @@ let color = '#3aa757';
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ color });
-  console.log('Set default color to %cgreen', `color: ${color}`);
+  console.log('Default background color set to %cgreen', `color: ${color}`);
 });
 ```
 
@@ -290,7 +287,8 @@ changeColor.addEventListener("click", async () => {
   });
 });
 
-// The body of this function will be execuetd as a content script inside the current page
+// The body of this function will be execuetd as a content script inside the
+// current page
 function setPageBackgroundColor() {
   chrome.storage.sync.get("color", ({ color }) => {
     document.body.style.backgroundColor = color;
@@ -351,7 +349,7 @@ Then register the options page in the manifest,
 {
   "name": "Getting Started Example",
   ...
-  "options_page": "options.html",
+  "options_page": "options.html"
 }
 ```
 
@@ -365,17 +363,21 @@ Scroll down the details page and select **Extension options** to view the option
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/z1VEYxYlJev7llaXIQUL.png",
        alt="Extension Options", height="726", width="645" %}
 
-Last step is to add the options logic. Create a file named `options.js` in the extension's directory with the following code.
+Last step is to add the options logic. Create a file named `options.js` in the extension's directory
+with the following code.
 
 ```js
 let page = document.getElementById("buttonDiv");
-let selectedClassName = current;
+let selectedClassName = "current";
 const presetButtonColors = ["#3aa757", "#e8453c", "#f9bb2d", "#4688f1"];
 
-// Reacts to a button click by marking marking the selected button and saving the selection
+// Reacts to a button click by marking marking the selected button and saving
+// the selection
 function handleButtonClick(event) {
   // Remove styling from the previously selected color
-  let current = event.target.parentElement.querySelector(`.${selectedClassName}`);
+  let current = event.target.parentElement.querySelector(
+    `.${selectedClassName}`
+  );
   if (current && current !== event.target) {
     current.classList.remove(selectedClassName);
   }
@@ -390,7 +392,6 @@ function handleButtonClick(event) {
 function constructOptions(buttonColors) {
   chrome.storage.sync.get("color", (data) => {
     let currentColor = data.color;
-
     // For each color we were provided…
     for (let buttonColor of buttonColors) {
       // …crate a button with that color…
@@ -415,9 +416,9 @@ constructOptions(presetButtonColors);
 ```
 
 Four color options are provided then generated as buttons on the options page with onclick event
-listeners. When the user clicks a button, it updates the color value in the extension's global
-storage. Since all of the extension's files pull the color information from global storage no other
-values need to be updated.
+listeners. When the user clicks a button, it updates the color value in the extension's storage.
+Since all of the extension's files pull the color information from this storage, no other values
+need to be updated.
 
 ## Take the next step {: #next-steps }
 
@@ -452,7 +453,7 @@ What's next?
 [24]: /docs/extensions/mv3/content_scripts#pi
 [25]: /docs/extensions/mv3/manifest/activeTab
 [26]: /docs/extensions/reference/scripting
-[26]: /docs/extensions/reference/scripting#method-executeScript
+[27]: /docs/extensions/reference/scripting#method-executeScript
 [30]: /docs/extensions/mv3/overview
 [31]: /docs/extensions/mv3/tut_debugging
 [32]: /docs/extensions/reference
