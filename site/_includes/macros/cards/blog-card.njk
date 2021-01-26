@@ -30,11 +30,11 @@
     </a>
   </h2>
 
+{% if not pd.hero %}
   <p class="type--caption gap-top-200">
-    {% if not pd.hero %}
-      {{ pd.description }}
-    {% endif %}
+     {{ pd.description }}
   </p>
+{% endif %}
 
   {% if pd.tags %}
     {% from 'macros/tag.njk' import tag with context %}
