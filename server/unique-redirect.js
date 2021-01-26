@@ -28,7 +28,7 @@ const express = require('express');
  *
  * @type {string[]}
  */
-const avoidDirs = [
+const defaultAvoidDirs = [
   '/en/docs/extensions/mv2', // as discussed with team, MV3 takes priority
   '/en/docs/apps',
   '/en/docs/native-client',
@@ -106,10 +106,13 @@ async function findPaths(source) {
 
 /**
  * @param {string} source path to find /index.html files from
- * @return {Promise<express.RequestHandler>}
+ * @param {string[]} avoidDirs to default avoid
+ * @return {Promise<(url: string) => string|void>}
  */
-async function buildHandler(source = 'dist/') {
-  const paths = await findPaths(source, avoidDirs);
+async function buildMatcher(source = 'dist/', avoidDirs = defaultAvoidDirs) {
+  const paths = await findPaths(source);
+
+  avoidDirs = avoidDirs.map(dir => path.join(dir, '.')); // ensure no trailing slash
 
   // The broad design of this function is, for each URL found inside dist/:
   //   * find the highest path we can safely attach this basename to
@@ -258,30 +261,13 @@ async function buildHandler(source = 'dist/') {
     debug && console.warn(root, '=>', redirsAtRoot);
   }
 
-  /**
-   * @type {express.RequestHandler}
-   */
-  return (req, res, next) => {
-    let url = stripIndexHtml(req.url);
-
-    // For now, we only support data in "/en", so check that actual folder for redirects.
-    let enPrefixAdded = false;
-    if (!url.startsWith('/en/')) {
-      url = path.join('/en', url);
-      enPrefixAdded = true;
+  return url => {
+    url = stripIndexHtml(url);
+    const result = matchUrl(url);
+    if (result === url) {
+      return undefined; // this should never happen but just for safety
     }
-
-    // If we can't match, continue on to a 404 handler.
-    let redirectTo = matchUrl(url);
-    if (!redirectTo) {
-      return next();
-    }
-
-    // Awkwardly remove "/en" if we added it to do our check.
-    if (enPrefixAdded && redirectTo.startsWith('/en/')) {
-      redirectTo = redirectTo.substr('/en'.length);
-    }
-    return res.redirect(301, redirectTo);
+    return result;
   };
 }
 
@@ -295,15 +281,40 @@ function buildUniqueRedirectHandler() {
   let replacedHandler = (req, res, next) => next();
 
   // Build the handler async, and once it's ready, insert into the 404 handler path.
-  buildHandler()
+  buildMatcher()
     .catch(err => console.error('failed to build uniqueRedirectHandler', err))
-    .then(handler => {
-      replacedHandler = handler;
+    .then(match => {
+      /**
+       * @type {express.RequestHandler}
+       */
+      replacedHandler = (req, res, next) => {
+        let {url} = req;
+
+        // For now, we only support data in "/en", so check that actual folder for redirects.
+        let enPrefixAdded = false;
+        if (!url.startsWith('/en/')) {
+          url = path.join('/en', url);
+          enPrefixAdded = true;
+        }
+
+        // If we can't match, continue on to a 404 handler.
+        let redirectTo = match(url);
+        if (!redirectTo) {
+          return next();
+        }
+
+        // Awkwardly remove "/en" if we added it to do our check.
+        if (enPrefixAdded && redirectTo.startsWith('/en/')) {
+          redirectTo = redirectTo.substr('/en'.length);
+        }
+        return res.redirect(301, redirectTo);
+      };
     });
 
   return (req, res, next) => replacedHandler(req, res, next);
 }
 
 module.exports = {
+  buildMatcher,
   buildUniqueRedirectHandler,
 };
