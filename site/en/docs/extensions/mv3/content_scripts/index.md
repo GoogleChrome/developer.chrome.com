@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Content scripts"
 date: 2012-09-17
-updated: 2019-03-11
+updated: 2021-01-20
 description: An explanation of content scripts and how to use them in your Chrome Extension.
 ---
 
