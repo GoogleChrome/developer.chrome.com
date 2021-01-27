@@ -57,3 +57,9 @@ caption {
   caption-side: bottom;
   padding: get-size(300);
 }
+
+table ul,
+table ol {
+  margin-left: 1.5rem !important;
+  max-width: initial !important;
+}
