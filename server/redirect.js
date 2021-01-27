@@ -67,7 +67,7 @@ function buildRedirectHandler(filename, staticPaths = undefined, code = 301) {
   /** @type {express.RequestHandler} */
   return (req, res, next) => {
     const target = handler(req.url);
-    if (target !== null) {
+    if (target !== null && target !== req.url) {
       return res.redirect(code, target);
     }
 
@@ -80,7 +80,7 @@ function buildRedirectHandler(filename, staticPaths = undefined, code = 301) {
         update = update.slice(0, -5) + '.html';
       }
       const target = handler(update);
-      if (target !== null) {
+      if (target !== null && target !== req.url) {
         return res.redirect(code, target);
       }
     }
