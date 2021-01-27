@@ -82,7 +82,7 @@ Create the following file and save it as **_background.js_**:
 /**
  * Listens for the app launching then creates the window
  *
- * @see http://developer.chrome.com/apps/app.window.html
+ * @see /apps/app.window.html
  */
 chrome.app.runtime.onLaunched.addListener(function() {
   chrome.app.window.create('index.html', {
@@ -210,24 +210,24 @@ For more detailed information about some of the APIs introduced in this step, re
 Ready to continue onto the next step? Go to [Step 2 - Import an existing web app »][18]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: #launch
-[4]: /apps/app_runtime.html#event-onLaunched
-[5]: /apps/app_window.html#method-create
+[4]: /docs/extensions/reference/app_runtime#event-onLaunched
+[5]: /docs/extensions/reference/app_window#method-create
 [6]: /devtools
-[7]: app_codelab_alarms.html
+[7]: ../app_codelab_alarms
 [8]: /apps/manifest "Read 'Manifest File Format' in the Chrome developer docs"
 [9]: #manifest "This feature mentioned in 'Create a manifest'"
 [10]: /apps/manifest/icons "Read 'Manifest - Icons' in the Chrome developer docs"
 [11]: #app-icon "This feature mentioned in 'Add an app icon'"
-[12]: app_lifecycle.html "Read 'Manifest File Format' in the Chrome developer docs"
+[12]: ../app_lifecycle "Read 'Manifest File Format' in the Chrome developer docs"
 [13]: #background-script "This feature mentioned in 'Create a background script'"
 [14]:
-  /apps/app_runtime.html#event-onLaunched
+  /docs/extensions/reference/app_runtime#event-onLaunched
   "Read 'chrome.app.runtime.onLaunched' in the Chrome developer docs"
 [15]: #background-script "This feature mentioned in 'Create a background script'"
 [16]:
-  /apps/app_window.html#method-create
+  /docs/extensions/reference/app_window#method-create
   "Read 'chrome.app.window.create()' in the Chrome developer docs"
 [17]: #background-script "This feature mentioned in 'Create a background script'"
-[18]: app_codelab_import_todomvc.html
+[18]: ../app_codelab_import_todomvc

@@ -306,15 +306,15 @@ If you just want to write your app, see the developer doc for the type of app yo
 [5]: /docs/apps/first_app
 [6]: #step-5-zip-up-your-app
 [7]: https://chrome.google.com/webstore/developer/dashboard
-[8]: http://www.blogger.com
-[9]: http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592
+[8]: https://www.blogger.com
+[9]: https://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=34592
 [10]: https://chrome.google.com/webstore/developer/dashboard
 [12]: /docs/extensions/mv2/manifestVersion
 [13]: https://developers.google.com/chrome/apps/docs/developers_guide
 [15]: /docs/webstore/images#icons
 [16]: /docs/webstore/images#screenshots
 [17]: /docs/webstore/images#promo
-[19]: http://www.google.com/search?q=json+validator
+[19]: https://www.google.com/search?q=json+validator
 [21]: https://developers.google.com/native-client/dev/devguide/distributing#multi-platform-zip
 [23]: /docs/webstore/publish#step1
 [24]: https://chrome.google.com/webstore/developer/dashboard
@@ -334,4 +334,4 @@ If you just want to write your app, see the developer doc for the type of app yo
 [42]: /docs/chrome/apps/
 [43]: /docs/apps/about_apps
 [44]: /docs/extensions/mv2/themes
-[45]: /docs/extensions/index
+[45]: /docs/extensions

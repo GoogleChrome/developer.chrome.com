@@ -363,8 +363,8 @@ If you just want to write your app, see the developer doc for the type of app yo
 - [Themes][39]
 - [Extensions][40]
 
-[1]: /docs/webstore/index
-[2]: /docs/webstore/index#charging
+[1]: /docs/webstore/
+[2]: /docs/webstore/#charging
 [3]: http://www.chromium.org/getting-involved/dev-channel
 [5]: https://developers.google.com/chrome/apps/docs/developers_guide
 [8]: https://appengine.google.com/
@@ -390,7 +390,7 @@ If you just want to write your app, see the developer doc for the type of app yo
 [29]: http://hellolicense.appspot.com/hellolicense
 [31]: https://developers.google.com/chrome/apps/docs/developers_guide
 [33]: /docs/webstore/publish
-[35]: /docs/webstore/index
+[35]: /docs/webstore/
 [36]: /docs/webstore/check_for_payment
 [37]: /docs/webstore/samples
 [38]: https://developers.google.com/chrome/apps/

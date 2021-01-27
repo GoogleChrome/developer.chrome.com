@@ -309,7 +309,7 @@ As an example, here are five screenshot images for an app:
 Next, read [Publishing Your App][39].
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: #icons
 [4]: #promo
 [5]: #screenshots

@@ -189,7 +189,7 @@ There are a few other origin trials starting in Chrome 80:
 * The ability for PWAs to register as file handlers
 * New properties for the contact picker
 
-Check <https://developers.chrome.com/origintrials/#/trials/active> for
+Check </origintrials/#/trials/active> for
 a complete list of features in origin trial.
 
 ## And more {: #more }

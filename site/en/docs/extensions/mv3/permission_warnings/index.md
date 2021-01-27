@@ -310,7 +310,7 @@ the steps in [Viewing Warnings][27].
     <tr id="tabs">
       <td><code>"tabs"</code></td>
       <td>Grants the extension access to privileged fields of the <a
-          href="https://developer.chrome.com/extensions/tabs#type-Tab"><code>Tab</code></a> objects used by several APIs
+          href="/extensions/tabs#type-Tab"><code>Tab</code></a> objects used by several APIs
         including <a href="/extensions/tabs">chrome.tabs</a> and <a href="/docs/extensions/reference/windows">chrome.windows</a>. In
         many circumstances the extension will not need to declare the <code>"tabs"</code> permission to make use of
         these APIs.</td>

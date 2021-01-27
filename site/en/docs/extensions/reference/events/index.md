@@ -221,21 +221,21 @@ supports will be listed in the documentation for that event in the "filters" sec
 When matching URLs (as in the example above), event filters support the same URL matching
 capabilities as expressible with a [`events.UrlFilter`][18], except for scheme and port matching.
 
-[1]: /docs/extensions/alarms#event-onAlarm
-[2]: /docs/extensions/alarms#type-Alarm
-[3]: /docs/extensions/alarms
-[4]: /docs/extensions/i18n
-[5]: /docs/extensions/identity
-[6]: /docs/extensions/runtime
-[7]: /docs/extensions/api_index
-[8]: /docs/extensions/declarativeWebRequest
-[9]: /docs/extensions/declarativeContent
-[10]: /docs/extensions/events
+[1]: /docs/extensions/reference/alarms#event-onAlarm
+[2]: /docs/extensions/reference/alarms#type-Alarm
+[3]: /docs/extensions/reference/alarms
+[4]: /docs/extensions/reference/i18n
+[5]: /docs/extensions/reference/identity
+[6]: /docs/extensions/reference/runtime
+[7]: /docs/extensions/reference
+[8]: /docs/extensions/reference/declarativeWebRequest
+[9]: /docs/extensions/reference/declarativeContent
+[10]: /docs/extensions/reference/events
 [11]: #method-Event-addRules
 [12]: #method-Event-removeRules
 [13]: #method-Event-getRules
-[14]: /docs/extensions/runtime#property-lastError
-[15]: /docs/extensions/runtime#event-onInstalled
+[14]: /docs/extensions/reference/runtime#property-lastError
+[15]: /docs/extensions/reference/runtime#event-onInstalled
 [16]: #type-UrlFilter
 [17]: /docs/extensions/mv2/event_pages
 [18]: #type-UrlFilter

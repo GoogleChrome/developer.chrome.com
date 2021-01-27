@@ -132,10 +132,10 @@ depends on the nature of your item. See the [FAQ on review times][16] for more d
 [4]: /docs/extensions/mv2/overview#files
 [5]: /docs/extensions/mv2/manifest/icons
 [6]: /docs/extensions/mv2/overview#files
-[7]: /docs/extensions/mv2/tabs.html#version
+[7]: /docs/extensions/reference/tabs#version
 [8]: https://developers.google.com/native-client/
 [9]:
-  https://developer.chrome.com/native-client/devguide/distributing#reducing-the-size-of-the-user-download-package
+  /native-client/devguide/distributing#reducing-the-size-of-the-user-download-package
 [10]: /docs/webstore/register
 [11]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [12]: https://chrome.google.com/webstore/devconsole

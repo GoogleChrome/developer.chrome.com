@@ -100,7 +100,7 @@ world.
 Congratulations on completing this Chrome Apps codelab!
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: #view-in-webstore
 [5]: https://chrome.google.com/webstore/developer/dashboard

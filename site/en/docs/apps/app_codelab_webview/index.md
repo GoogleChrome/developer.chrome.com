@@ -253,18 +253,18 @@ For more detailed information about some of the APIs introduced in this step, re
 Ready to continue onto the next step? Go to [Step 5 - Add images from the web »][14]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: #launch
-[5]: /apps/tags/webview
-[6]: /apps/app_window.html#method-create
-[7]: /apps/tags/webview#tag
-[8]: /apps/declare_permissions "Read 'Declare Permissions' in the Chrome developer docs"
+[5]: /docs/extensions/reference/webviewTag
+[6]: /docs/extensions/reference/app_window#method-create
+[7]: /docs/extensions/reference/webviewTag#tag
+[8]: /docs/extensions/mv3/declare_permissions/ "Read 'Declare Permissions' in the Chrome developer docs"
 [9]: #update-permissions "This feature mentioned in 'Update app permissions'"
-[10]: /apps/tags/webview "Read '<webview> Tag' in the Chrome developer docs"
+[10]: /docs/extensions/reference/webviewTag "Read '<webview> Tag' in the Chrome developer docs"
 [11]: #overview "This feature mentioned in 'Learn about the webview tag'"
 [12]:
-  /apps/app_window.html#method-create
+  /docs/extensions/reference/app_window#method-create
   "Read 'chrome.app.window.create()' in the Chrome developer docs"
 [13]: #open-webview "This feature mentioned in 'Open new window containing webview'"
-[14]: app_codelab_images.html
+[14]: ../app_codelab_images

@@ -113,7 +113,7 @@ of active origin trials, and sign up for them on the
 [Chrome Origin Trials][ot-listing] page.
 
 [ot-for-web-devs]: https://googlechrome.github.io/OriginTrials/developer-guide.html
-[ot-listing]: https://developers.chrome.com/origintrials/#/trials/active
+[ot-listing]: /origintrials/#/trials/active
 
 ### Wake Lock {: #wake-lock }
 

@@ -195,7 +195,7 @@ frameworks for writing secure and scalable Chrome Apps:
 - [Maintainable JavaScript][31] (By Nicolas Z. Zakas)
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: http://httparchive.org/trends.php?s=intersection&minlabel=Jan+20+2011&maxlabel=Jan+15+2012
 [4]: http://httparchive.org/
 [5]: http://backbonejs.org/

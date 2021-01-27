@@ -40,5 +40,5 @@ before version 1 stops working.
 !!!
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
-[3]: https://developer.chrome.com/extensions/manifestVersion
+[2]: /apps/migration
+[3]: /extensions/manifestVersion

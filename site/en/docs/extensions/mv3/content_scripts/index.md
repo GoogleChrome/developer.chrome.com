@@ -649,4 +649,4 @@ window.setTimeout(() => animate(elmt_id), 200);
 [30]: http://en.wikipedia.org/wiki/Man-in-the-middle_attack
 [31]: #functionality
 [32]: #dynamic-declarative
-[33]: /docs/extensions/mv3/manifest/host_permissions
+[33]: /docs/extensions/reference/permissions

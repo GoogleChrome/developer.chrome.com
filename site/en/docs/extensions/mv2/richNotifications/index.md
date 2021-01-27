@@ -53,7 +53,11 @@ notification center, and produce an error on other platforms. Priority 0 is the 
 Priorities > 0 are shown for increasing duration and more high priority notifications can be
 displayed in the system tray.
 
-<div class="aside aside--note"><strong>Platform difference:</strong> The <code>priority</code> does not affect the order of notifications in Chrome version 59+ on Mac OS X.</div>
+!!!.aside.aside-note
+
+**Platform difference:** The `code` priority does not affect the order of notifications in Chrome version 59+ on macOS.
+
+!!!
 
 In addition to displaying information, all notification types can include up to two action items.
 When users click on an action item, your app can respond with the appropriate action. For example,
@@ -74,7 +78,15 @@ chrome.notifications.create(id, options, creationCallback);
 The [notifications.NotificationOptions][4] must include a [notifications.TemplateType][5], which
 defines available notification details and how those details are displayed.
 
-<div class="aside aside--note"><b>Consider integrating with GCM!</b><br><a href="inform_users">Keep your users informed</a> all the time, even when your app isn't opened. The <a href="https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/apps/samples/gcm-notifications">gcm-notifications sample</a> shows a simple integration between GCM and Rich Notifications API.</div>
+!!!.aside.aside-note
+
+**Consider integrating with GCM!**
+
+[Keep your users informed][6] all the time, even
+when your app isn't opened. The [gcm-notifications sample][7] shows a simple
+integration between GCM and Rich Notifications API.
+
+!!!
 
 ### Create basic notification {: #basic }
 
@@ -176,7 +188,7 @@ can pop-up even when the app or extension isn't running.
 [3]: /docs/extensions/reference/notifications#method-create
 [4]: /docs/extensions/reference/notifications#type-NotificationOptions
 [5]: /docs/extensions/reference/notifications#type-TemplateType
-[6]: /docs/extensions/inform_users
+[6]: /docs/extensions/reference/gcm
 [7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/apps/samples/gcm-notifications
 [8]: /docs/apps/contentSecurityPolicy/
 [9]: /docs/apps/app_external

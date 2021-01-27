@@ -92,7 +92,7 @@ Use the full featured IDE in the [Chrome Dev Editor][8].
 {% youtube id="NNLnTz6yIc4" %}
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: apps/chrome_apps_on_mobile
 [4]: https://chrome.google.com/webstore/category/apps?_feature=chromeapp
 [5]: https://classroom.google.com/

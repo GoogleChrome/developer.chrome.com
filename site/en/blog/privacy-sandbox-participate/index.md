@@ -58,7 +58,7 @@ As proposed solutions move to the early build and test phase, developers are enc
 experiment and provide feedback. For local testing in Chrome, developers can use feature flags
 (chrome://flags) to enable an experimental feature in their local browser. To test how new solutions
 work in live scenarios for real users and sites, developers can register to participate in Chrome
-origin trials. You can review the list of [active Chrome origin trials](https://developer.chrome.com/origintrials) 
+origin trials. You can review the list of [active Chrome origin trials](/origintrials) 
 and learn [how origin trials work](https://web.dev/origin-trials/).
 
 ## Find out more

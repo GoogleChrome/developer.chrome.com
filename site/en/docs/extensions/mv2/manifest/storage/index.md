@@ -134,7 +134,7 @@ published by the `storage.managed` API.
 
 [1]: https://tools.ietf.org/html/draft-zyp-json-schema-03
 [2]: https://www.chromium.org/administrators/
-[3]: /docs/extensions/storage#property-managed
-[4]: /docs/extensions/storage#event-onChanged
+[3]: /docs/extensions/reference/storage#property-managed
+[4]: /docs/extensions/reference/storage#event-onChanged
 [5]: /docs/extensions/mv2/event_pages
 [6]: chrome://policy

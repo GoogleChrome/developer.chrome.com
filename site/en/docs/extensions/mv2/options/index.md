@@ -186,19 +186,19 @@ options pages that adjust their content shape based on window size.
 If this is an issue, provide fixed minimum dimensions for the options page to ensure that the
 embedded page will find an appropriate size.
 
-[1]: /docs/extensions/storage#property-sync
+[1]: /docs/extensions/reference/storage#property-sync
 [2]: #full_page
 [3]: #embedded_options
 [4]: /runtime#method-openOptionsPage
-[5]: /docs/extensions/tabs
-[6]: /docs/extensions/tabs#method-query
-[7]: /docs/extensions/tabs#event-onCreated
-[8]: /docs/extensions/tabs#event-onUpdated
-[9]: /docs/extensions/tabs#method-connect
-[10]: /docs/extensions/tabs#method-sendMessage
-[11]: /docs/extensions/runtime#method-connect
-[12]: /docs/extensions/runtime#method-sendMessage
-[13]: /docs/extensions/runtime#method-connect
-[14]: /docs/extensions/runtime#method-sendMessage
-[15]: /docs/extensions/runtime#property-MessageSender-tab
-[16]: /docs/extensions/runtime#property-MessageSender-url
+[5]: /docs/extensions/reference/tabs
+[6]: /docs/extensions/reference/tabs#method-query
+[7]: /docs/extensions/reference/tabs#event-onCreated
+[8]: /docs/extensions/reference/tabs#event-onUpdated
+[9]: /docs/extensions/reference/tabs#method-connect
+[10]: /docs/extensions/reference/tabs#method-sendMessage
+[11]: /docs/extensions/reference/runtime#method-connect
+[12]: /docs/extensions/reference/runtime#method-sendMessage
+[13]: /docs/extensions/reference/runtime#method-connect
+[14]: /docs/extensions/reference/runtime#method-sendMessage
+[15]: /docs/extensions/reference/runtime#property-MessageSender-tab
+[16]: /docs/extensions/reference/runtime#property-MessageSender-url

@@ -359,12 +359,12 @@ The Chrome ADT for Android is currently in a pre-alpha release. To try it out, v
 [ChromeADT.apk release notes][50] for installation and usage instructions.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: https://github.com/MobileChromeApps/mobile-chrome-apps/issues
 [4]: http://groups.google.com/a/chromium.org/group/chromium-apps/topics
 [5]: http://stackoverflow.com/questions/tagged/google-chrome-app
 [6]: https://plus.google.com/+GoogleChromeDevelopers/
-[7]: http://developer.chrome.com/apps
+[7]: /apps
 [8]: https://github.com/MobileChromeApps/mobile-chrome-apps
 [9]: http://cordova.apache.org
 [10]: #special-considerations-when-developing-with-cordova
@@ -374,7 +374,7 @@ The Chrome ADT for Android is currently in a pre-alpha release. To try it out, v
 [14]: http://nodejs.org
 [15]: http://nodejs.org
 [16]: https://github.com/creationix/nvm
-[17]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+[17]: http://ww'w.oracle.com/technetwork/java/javase/downloads/index.html
 [18]: http://developer.android.com/sdk/index.html
 [19]: https://www.google.com/search?q=how+to+add+sdktools+to+path
 [20]: http://ant.apache.org/bindownload.cgi
@@ -394,21 +394,21 @@ The Chrome ADT for Android is currently in a pre-alpha release. To try it out, v
 [32]: https://play.google.com/apps/publish
 [33]:
   https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
-[34]: http://developer.chrome.com/apps/app_deprecated
+[34]: /apps/app_deprecated
 [35]: http://www.html5rocks.com/en/mobile/mobifying/#toc-mediaqueries
-[36]: http://developer.chrome.com/apps/app_window.html
+[36]: /docs/extensions/reference/app_window
 [37]: https://github.com/ftlabs/fastclick
 [38]: http://updates.html5rocks.com/2013/12/300ms-tap-delay-gone-away
-[39]: http://developer.chrome.com/apps/identity.html
+[39]: /docs/extensions/reference/identity
 [40]:
   https://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/chrome-cordova/plugins/google.payments/README.md
-[41]: http://developer.chrome.com/apps/pushMessaging.html
-[42]: http://developer.chrome.com/apps/sockets.html
-[43]: http://developer.chrome.com/apps/notifications.html
-[44]: http://developer.chrome.com/apps/storage.html
-[45]: http://developer.chrome.com/apps/syncFileSystem.html
-[46]: http://developer.chrome.com/apps/alarms.html
-[47]: http://developer.chrome.com/apps/idle.html
-[48]: http://developer.chrome.com/apps/power.html
+[41]: /docs/extensions/reference/pushMessaging
+[42]: /docs/extensions/reference/socket
+[43]: /docs/extensions/reference/notifications
+[44]: /docs/extensions/reference/storage
+[45]: /docs/extensions/reference/syncFileSystem
+[46]: /docs/extensions/reference/alarms
+[47]: /docs/extensions/reference/idle
+[48]: /docs/extensions/reference/power
 [49]: https://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/docs/APIStatus.md
 [50]: https://github.com/MobileChromeApps/harness/releases/

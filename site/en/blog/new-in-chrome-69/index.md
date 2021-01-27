@@ -91,9 +91,7 @@ for more details and samples you can try!
 ## Display cutouts (aka notches) {: #notch }
 
 <figure class="float-right">
-  <a href="/web/updates/images/2018/09/notch-extra-margin.png">
-    {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wwRk7hb36LukU6XBGZ8m.png", alt="mobile phone with display cutout" %}
-  </a>
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wwRk7hb36LukU6XBGZ8m.png", alt="mobile phone with display cutout" %}
   <figcaption>
     Browsers add some extra margin on a mobile device with display cutout to
     prevent content from being covered by the cutout.

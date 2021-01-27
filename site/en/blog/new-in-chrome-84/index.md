@@ -260,6 +260,6 @@ and you'll get an email notification whenever we launch a new video.
 I'm Pete LePage, and I **still need** a hair cut, but as soon as Chrome 85 is
 released, I'll be right here to tell you -- what's new in Chrome!
 
-[ot-simd]: https://developers.chrome.com/origintrials/#/view_trial/-4708513410415853567
+[ot-simd]: /origintrials/#/view_trial/-4708513410415853567
 [cr-blog-sscookie]: https://blog.chromium.org/2020/05/resuming-samesite-cookie-changes-in-july.html
 [cr-blog-quieter]: https://blog.chromium.org/2020/05/protecting-chrome-users-from-abusive.html

@@ -58,7 +58,7 @@ If you know the path associated with the serial port, you can connect to it usin
 chrome.serial.connect(path, options, callback)
 ```
 
-<table border="0"><tbody><tr><th scope="col">Parameter</th><th scope="col">Description</th></tr><tr><td>path&nbsp;(string)</td><td>If the path associated with your device's port is unknown, you can use the <a href="https://developer.chrome.com/apps/serial#method-getDevices"><code>serial.getDevices</code></a> method.</td></tr><tr><td>options&nbsp;(object)</td><td>Parameter object with several configuration values. See details at <a href="/apps/serial#type-ConnectionOptions">serial.ConnectionOptions</a></td></tr><tr><td>callback</td><td>Invoked when the port has been successfully opened. The callback will be called with one parameter, <code>connectionInfo</code>, that has several important values. See details at <a href="/apps/serial#type-ConnectionInfo">serial.ConnectionInfo</a>.</td></tr></tbody></table>
+<table border="0"><tbody><tr><th scope="col">Parameter</th><th scope="col">Description</th></tr><tr><td>path&nbsp;(string)</td><td>If the path associated with your device's port is unknown, you can use the <a href="/apps/serial#method-getDevices"><code>serial.getDevices</code></a> method.</td></tr><tr><td>options&nbsp;(object)</td><td>Parameter object with several configuration values. See details at <a href="/apps/serial#type-ConnectionOptions">serial.ConnectionOptions</a></td></tr><tr><td>callback</td><td>Invoked when the port has been successfully opened. The callback will be called with one parameter, <code>connectionInfo</code>, that has several important values. See details at <a href="/apps/serial#type-ConnectionInfo">serial.ConnectionInfo</a>.</td></tr></tbody></table>
 
 A simple example:
 
@@ -157,16 +157,16 @@ the fly, like bitrate, timeouts, control signals, and many others with the [seri
 method. See the full reference of the [serial][17] API for more information.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: serial
 [4]: app_usb
 [5]: app_bluetooth
 [6]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/serial/adkjs#readme
 [7]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/serial/ledtoggle#readme
 [8]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/servo#readme
-[9]: https://developer.chrome.com/apps/serial#method-getDevices
-[10]: https://developer.chrome.com/apps/serial#method-connect
-[11]: https://developer.chrome.com/apps/serial#method-getDevices
+[9]: /apps/serial#method-getDevices
+[10]: /apps/serial#method-connect
+[11]: /apps/serial#method-getDevices
 [12]: /apps/serial#type-ConnectionOptions
 [13]: /apps/serial#type-ConnectionInfo
 [14]: /apps/serial#method-disconnect

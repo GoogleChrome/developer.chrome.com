@@ -88,7 +88,7 @@ The externally_connectable manifest key can have the following properties:
   [runtime.MessageSender.tlsChannelId][13] will never be set under any circumstance.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: ../runtime#method-connect
 [4]: ../runtime#method-sendMessage
 [5]: ../messaging#external

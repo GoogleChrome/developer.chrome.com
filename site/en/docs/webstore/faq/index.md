@@ -166,7 +166,7 @@ more information, please review our [program policies][106].
 ### How do I write an extension? {: #faq-dev-01 }
 
 You can find all the information you need to develop extensions and apps at
-[http://developer.chrome.com/extensions/][108] and [http://developer.chrome.com/apps/][109],
+[/extensions/][108] and [/apps/][109],
 respectively.
 
 ### Should I build a web app or an extension? {: #faq-gen-10 }
@@ -302,7 +302,7 @@ For more information about the unwanted software policy, see:
 [https://www.google.com/about/company/unwanted-software-policy.html][122].
 
 For more information about the developer program policies, see:
-[https://developer.chrome.com/webstore/program_policies][123].
+[/webstore/program_policies][123].
 
 If your item's status says "pending review" for more than three weeks, you should [contact
 support][124].
@@ -784,7 +784,7 @@ Business related issues by contacting CWS support.
 [140]: /docs/webstore/pricing#matrix
 [142]: #faq-app-02
 [143]: https://support.google.com/adsense/answer/48182?hl=en&ref_topic=1261918
-[144]: /apps/analytics.html
+[144]: /apps/analytics
 [145]: https://developers.google.com/analytics/devguides/collection/analyticsjs/
 [146]: http://www.html5rocks.com/tutorials/appcache/beginner/
 [147]: http://www.w3.org/TR/FileAPI/
