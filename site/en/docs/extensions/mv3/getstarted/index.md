@@ -6,8 +6,8 @@ updated: 2020-11-18
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 
-{# Note: "components" is probalby not the best word to use here any more as "web components" are a
-cross-browser tech for creating reusable custom elements or "?componenets". #}
+{# Note: "components" is probably not the best word to use here any more as "web components" are a
+cross-browser tech for creating reusable custom elements or "?components". #}
 
 Extensions are made of different, but cohesive, components. Components can include [background
 scripts][1], [content scripts][2], an [options page][3], [UI elements][4] and various logic files.
@@ -55,7 +55,7 @@ manifest, a generic icon will be created for the extension.
 
 ## Add functionality {: #background }
 
-The extension is now installed, but it doesn't currently do anything becasue we haven't told it what
+The extension is now installed, but it doesn't currently do anything because we haven't told it what
 to do or when to do it. Let's fix that by adding some code to store a background color value.
 
 To do this, we will need to crate a [background script][1] and add it to the extension's manifest.
@@ -73,7 +73,7 @@ Start by creating a file named `background.js` inside the extension's directory.
 }
 ```
 
-Background scripts, and many other important components, must be registered in the manifest.
+Background scripts, like many other important components, must be registered in the manifest.
 Registering a background script in the manifest tells the extension which file to reference, and how
 that file should behave.
 
@@ -157,8 +157,8 @@ Like the background script, this file needs to be designated as a popup in the m
 }
 ```
 
-Our popup's HTLM references an external CSS file named `button.css`. Add another file to the
-extension's directory, name it appropraitely, and add the following code.
+This popup's HTML references an external CSS file named `button.css`. Add another file to the
+extension's directory, name it appropriately, and add the following code.
 
 ```css
 button {
@@ -233,8 +233,8 @@ favicon. These images are designated in the manifest under [`icons`][19].
 }
 ```
 
-If the extension is reloaded at this stage, it will include a the provided icon rather than the
-default placeholder and clicking the action will open a popup with button with default colors.
+If the extension is reloaded at this stage, it will include the provided icon rather than the
+default placeholder, and clicking the action will open a popup with button with default colors.
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/j3Ff3oF0tEl9tE5ed6L0.png",
        alt="Popup", height="99", width="73" %}
@@ -243,7 +243,7 @@ The last step for the popup UI is adding color to the button. Create and add a f
 `popup.js` with the following code to the extension's directory.
 
 ```js
-// Initialize butotn with users's prefered color
+// Initialize button with user's preferred color
 let changeColor = document.getElementById("changeColor");
 
 chrome.storage.sync.get("color", ({ color }) => {
@@ -273,7 +273,7 @@ Reload the extension to view the green button.
 ## Layer logic {: #logic }
 
 The extension now knows the popup should be available to users on [developer.chrome.com][23] and
-displays a colored button, but needs logic for further user interaction. Update `popup.js` by adding
+displays a colored button but needs logic for further user interaction. Update `popup.js` by adding
 the following to the end of the file.
 
 ```js
@@ -287,7 +287,7 @@ changeColor.addEventListener("click", async () => {
   });
 });
 
-// The body of this function will be execuetd as a content script inside the
+// The body of this function will be executed as a content script inside the
 // current page
 function setPageBackgroundColor() {
   chrome.storage.sync.get("color", ({ color }) => {
@@ -296,7 +296,7 @@ function setPageBackgroundColor() {
 }
 ```
 
-The updated code adds an `onclick` event on the button, which triggers a [programatically injected
+The updated code adds an `onclick` event on the button, which triggers a [programmatically injected
 content script][24]. This turns the background color of the page the same color as the button. Using
 programmatic injection allows for user-invoked content scripts, instead of auto inserting unwanted
 code into web pages.
@@ -363,8 +363,8 @@ Scroll down the details page and select **Extension options** to view the option
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/z1VEYxYlJev7llaXIQUL.png",
        alt="Extension Options", height="726", width="645" %}
 
-Last step is to add the options logic. Create a file named `options.js` in the extension's directory
-with the following code.
+The last step is to add the options logic. Create a file named `options.js` in the extension's
+directory with the following code.
 
 ```js
 let page = document.getElementById("buttonDiv");
