@@ -13,8 +13,9 @@ the `action` key is not specified.
 
 ## Manifest
 
-In order to use the `chrome.action` API, you need to specify the `action` key
-in your [manifest file][manifest].
+In order to use the `chrome.action` API, you need to specify a
+`"manifest_version"` of `3` or higher and include the `action` key in your
+[manifest file][manifest].
 
 ```json
 {
