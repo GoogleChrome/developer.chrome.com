@@ -20,8 +20,9 @@ declare namespace notChrome {
 
 declare namespace chrome {
   export namespace test {
-    export var enumTestSingle: "foo";
+    export var variableTestSingle: "foo";
     export var enumTestMany: "foo" | "bar";
+    export type enumTypeSingle = "single_option";
     export interface Stuff {}
   }
   export namespace stuff {
@@ -85,25 +86,43 @@ test('parse demo Chrome types', async t => {
   t.is(chromeStuff.name, 'chrome.stuff');
   t.is(chromeTest.name, 'chrome.test');
 
-  const enumTestSingle = chromeTest.properties.find(
-    ({name}) => name === 'enumTestSingle'
+  // Check that a variable that can only be one thing is not converted to an enum.
+  const variableTestSingle = chromeTest.properties.find(
+    ({name}) => name === 'variableTestSingle'
   );
   t.deepEqual(
-    enumTestSingle,
+    variableTestSingle,
     {
-      name: 'enumTestSingle',
-      type: 'union',
+      name: 'variableTestSingle',
+      literalValue: '"foo"',
+      type: 'primitive',
+      primitiveType: 'string',
+    },
+    'single string var is kept as primitive'
+  );
+
+  // Check that a type that can only be one thing is converted to an enum.
+  const enumTypeSingle = chromeTest.types.find(
+    ({name}) => name === 'enumTypeSingle'
+  );
+  t.deepEqual(
+    enumTypeSingle,
+    {
+      name: 'enumTypeSingle',
       isEnum: true,
+      type: 'union',
       options: [
         {
+          literalValue: '"single_option"',
           type: 'primitive',
-          literalValue: '"foo"',
+          primitiveType: 'string',
         },
       ],
     },
-    'single string is converted to enum'
+    'single enum type is created'
   );
 
+  // Check that an odd union type is converted to an array of minimum length.
   const typeTwoStuff = chromeStuff.types.find(
     ({name}) => name === 'TwoStuffType'
   );
@@ -115,8 +134,8 @@ test('parse demo Chrome types', async t => {
       minLength: 2,
       elementType: {
         type: 'reference',
-        referenceLink: true,
-        referenceType: 'chrome.stuff.StuffType',
+        referenceLink: '#type-StuffType',
+        referenceType: 'StuffType',
       },
     },
     'TwoStuffType is a reference to array of minLength=2'

@@ -1,6 +1,15 @@
 const test = require('ava');
 const cheerio = require('cheerio');
-const {asides} = require('../../../site/_transforms/asides');
+const {asides: asidesRaw} = require('../../../site/_transforms/asides');
+
+/**
+ * @param {cheerio.Selector} $
+ * @param {string} locale
+ */
+const asides = ($, locale) => {
+  asidesRaw($, locale);
+  return $;
+};
 
 const template = markup => {
   return cheerio.load(`<html><head></head><body>${markup}</body></html>`);
