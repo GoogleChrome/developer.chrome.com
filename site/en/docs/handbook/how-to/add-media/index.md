@@ -13,23 +13,27 @@ Googlers access, so signing in with a personal account will fail.
 
 ## Choose a file
 
-- Click **Choose file** and select either an image or a video to upload.
+Upload a high quality image (jpg or png if you need alpha transparency). Our
+image CDN will handle converting the image to webp if the browser supports it
+and it will resize the image so you don't have to.
+
+- Drag one or more files to the **Drop files here!** area
 - Click **Upload**
 
-A button with a hashed image or video url will appear. It should look something
-like this:
+A preview of the image or video with a shortcode snippet will appear. It should
+look something like this:
 
 ```md
-{% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/1603484068246.jpg", alt="ALT TEXT HERE" %}{% endraw %}
+{% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/ZOR0at2oFXeasz6jKylI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}{% endraw %}
 ```
 
-- Click the button to copy the snippet to your clipboard 📋
+- Click the copy button to copy the snippet to your clipboard 📋
 
 ## Paste!
 
 Paste the copied code from the previous step into your article.
 
-Be sure to replace the text that says "ALT TEXT HERE" with your own description
+Be sure to replace the text that says "ALT_TEXT_HERE" with your own description
 of the image. You can read more about writing effective alt text over on [the
 web.dev handbook](https://web.dev/handbook/inclusion-and-accessibility/#use-inclusive-images).
 
@@ -40,25 +44,44 @@ These are custom components for `developer.chrome.com` that ensure our media is
 responsive 📱
 !!!
 
-### Adjusting dimensions
-
-The `{% raw %}`{% img %}`{% endraw%}` shortcode accepts additional arguments for
-`width` and `height`. If you want to set your image to have a width of 400 and
-a height of 200, do the following:
-
-```text
-{% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/1603484068246.jpg", alt="ALT TEXT HERE", width="400", height="200" %}{% endraw %}
-```
-
 ### Properties
 
-The `{% raw %}`{% img %}`{% endraw%}` shortcode accepts many named arguments. Below are interfaces for both shortcodes. Each property of the interface is a named argument that can be used in the shortode.
+The `{% raw %}`{% img %}`{% endraw%}` and `{% raw %}`{% video %}`{% endraw%}`
+shortcodes accepts many named arguments. Below are interfaces for both
+shortcodes. Each property of the interface is a named argument that can be used
+in the shortode.
 
 #### Img Properties (`ImgArgs`)
 
 ```typescript
 {% include '../../../../../../types/site/_shortcodes/img.d.ts' %}
 ```
+
+The `{% raw %}`{% img %}`{% endraw%}` `params` object exposes the entire [Imgix
+API](https://docs.imgix.com/apis/rendering) to you. For example, if you wanted
+to use the [flip API](https://docs.imgix.com/apis/rendering/rotation/flip) to flip
+an image on its horitonzal axis you would do:
+
+```md
+{% raw %}{% img 
+  src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg",
+  alt="ALT_TEXT_HERE",
+  width="380",
+  height="240",
+  params={flip: 'h'}
+%}{% endraw%}
+```
+
+{% columns %}
+{% column %}
+{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
+Original
+{% endcolumn %}
+{% column %}
+{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
+Flipped
+{% endcolumn %}
+{% endcolumns %}
 
 #### Video Properties (`VideoArgs`)
 
