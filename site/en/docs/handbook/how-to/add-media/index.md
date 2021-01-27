@@ -83,6 +83,12 @@ Flipped
 {% endcolumn %}
 {% endcolumns %}
 
+!!!.aside
+Please call out in a review if you're calling a specific Imgix API, so we can be
+aware of custom use-cases and potentially support them through our own shortcode
+directly.
+!!!
+
 #### Video Properties (`VideoArgs`)
 
 ```typescript
