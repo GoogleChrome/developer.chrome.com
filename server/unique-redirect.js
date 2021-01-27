@@ -282,7 +282,6 @@ function buildUniqueRedirectHandler() {
 
   // Build the handler async, and once it's ready, insert into the 404 handler path.
   buildMatcher()
-    .catch(err => console.error('failed to build uniqueRedirectHandler', err))
     .then(match => {
       /**
        * @type {express.RequestHandler}
@@ -309,7 +308,8 @@ function buildUniqueRedirectHandler() {
         }
         return res.redirect(301, redirectTo);
       };
-    });
+    })
+    .catch(err => console.error('failed to build uniqueRedirectHandler', err));
 
   return (req, res, next) => replacedHandler(req, res, next);
 }
