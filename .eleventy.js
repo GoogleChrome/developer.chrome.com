@@ -26,10 +26,6 @@ const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
-const {
-  uniquePageResolver,
-  uniquePageResolverAnnounce,
-} = require('./site/_transforms/unique-page-resolver');
 const {purifyCss} = require('./site/_transforms/purify-css');
 const {minifyHtml} = require('./site/_transforms/minify-html');
 
@@ -119,10 +115,6 @@ module.exports = eleventyConfig => {
 
   // Add transforms
   eleventyConfig.addTransform('domTransformer', domTransformer);
-  eleventyConfig.addTransform('uniquePageResolver', uniquePageResolver);
-  eleventyConfig.on('afterBuild', () => {
-    uniquePageResolverAnnounce();
-  });
 
   // Only minify HTML and inline CSS if we are in production because it slows
   // builds _right_ down.
