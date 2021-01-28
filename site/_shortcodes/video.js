@@ -10,8 +10,8 @@ const {bucket, gcs} = require('../_data/site.json');
  * @return {string}
  */
 const generateSource = src => {
-  let type = src.split('.').pop();
-  type = mime('.' + type);
+  const extname = path.extname(src);
+  const type = mime(extname);
   src = new url.URL(path.join(bucket, src), gcs).href;
   return html`
     <source src="${src}" ${type ? `type="${type}"` : ''} />

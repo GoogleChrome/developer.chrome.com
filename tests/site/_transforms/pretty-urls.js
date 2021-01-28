@@ -1,6 +1,18 @@
 const test = require('ava');
 const cheerio = require('cheerio');
-const {prettyUrls} = require('../../../site/_transforms/pretty-urls');
+const {
+  prettyUrls: prettyUrlsRaw,
+} = require('../../../site/_transforms/pretty-urls');
+
+/**
+ * @param {cheerio.Selector} $
+ * @param {string} outputPath
+ * @param {string} locale
+ */
+const prettyUrls = ($, outputPath, locale) => {
+  prettyUrlsRaw($, outputPath, locale);
+  return $;
+};
 
 const template = markup => {
   return cheerio.load(`<html><head></head><body>${markup}</body></html>`);

@@ -37,7 +37,6 @@ const addLabel = ($elem, type, locale) => {
 };
 
 /**
- *
  * @param {cheerio.Selector} $ A cheerio representation of the page. This object
  * will be modified in place.
  * @param {string} locale The locale of the current page.
