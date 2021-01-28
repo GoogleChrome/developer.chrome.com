@@ -446,8 +446,7 @@ Browse the source of these DevTools extension examples:
 
 ## More information {: #more }
 
-For information on the standard APIs that extensions can use, see [chrome.\* APIs][43] and [Other
-APIs][44].
+For information on the standard APIs that extensions can use, see [chrome.\* APIs][43].
 
 [Give us feedback!][45] Your comments and suggestions help us improve the APIs.
 
@@ -467,11 +466,11 @@ You can find examples that use DevTools APIs in [Samples][46].
 [10]: /docs/extensions/mv3/messaging
 [11]: #injecting
 [12]: /docs/extensions/mv3/devtools.panels
-[13]: http://developer.chrome.com/extensions/experimental.html
+[13]: /docs/extensions/reference
 [14]: /docs/extensions/mv3/devtools.panels#method-ExtensionSidebarPane-setPage
 [15]: /docs/extensions/mv3/devtools.panels#method-ExtensionSidebarPane-setObject
 [16]:
-  https://developer.chrome.com/extensions/devtools.panels#method-ExtensionSidebarPane-setExpression
+  /extensions/devtools.panels#method-ExtensionSidebarPane-setExpression
 [17]: /docs/extensions/tabs#method-executeScript
 [18]: /docs/extensions/mv3/devtools.inspectedWindow#property-tabId
 [19]: /docs/extensions/tabs#method-executeScript
@@ -484,7 +483,7 @@ You can find examples that use DevTools APIs in [Samples][46].
 [25]: /docs/extensions/mv3/devtools.inspectedWindow
 [26]: /docs/extensions/mv3/devtools.inspectedWindow#method-eval
 [27]: /docs/extensions/mv3/devtools.inspectedWindow#method-eval
-[28]: http://developer.chrome.com/extensions/devtools.panels.html#event-ExtensionPanel-onShown
+[28]: /docs/extensions/reference/devtools_panels#event-ExtensionPanel-onShown
 [29]: /docs/extensions/tabs#method-sendMessage
 [30]: #injecting
 [31]: /docs/extensions/mv3/devtools.inspectedWindow#method-eval
@@ -499,7 +498,6 @@ You can find examples that use DevTools APIs in [Samples][46].
 [40]: https://github.com/thomasboyt/coquette-inspect
 [41]: /docs/devtools/docs/extensions-gallery
 [42]: /docs/devtools/docs/sample-extensions
-[43]: http://developer.chrome.com/extensions/api_index.html
-[44]: http://developer.chrome.com/extensions/api_other.html
+[43]: /docs/extensions/reference
 [45]: http://groups.google.com/group/google-chrome-developer-tools/topics
-[46]: http://developer.chrome.com/extensions/samples.html#devtools
+[46]: /extensions/samples#devtools

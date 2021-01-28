@@ -55,21 +55,19 @@ choose:
   Chrome. They take advantage of Chrome support for functionality such as [idle state][13],
   [internationalization][14], [tabs][15], and [windows][16].
 
-<!-- TODO(kaycebasques): All of these http://code.google.com links redirect to DCC. -->
-
-[1]: https://developers.google.com/chrome/apps/docs/developers_guide
-[2]: /docs/apps/
-[3]: /docs/extensions/
+[1]: /docs/apps
+[2]: /docs/apps
+[3]: /docs/extensions
 [4]: /docs/webstore/apps_vs_extensions
-[5]: https://developers.google.com/chrome/apps/docs/background
+[5]: /docs/extensions/reference/mv3/background_execution
 [6]: http://www.khronos.org/webgl/
-[7]: http://code.google.com/chrome/extensions/browserAction.html
-[8]: http://code.google.com/chrome/extensions/browserAction.html
-[9]: http://code.google.com/chrome/extensions/override.html
+[7]: /docs/extensions/reference/browserAction
+[8]: /docs/extensions/reference/browserAction
+[9]: /docs/extensions/mv3/override
 [10]: /docs/webstore/check_for_payment
 [11]: /docs/webstore/faq#faq-app-02
-[12]: http://code.google.com/chrome/extensions/api_index.html
-[13]: http://code.google.com/chrome/extensions/idle.html
-[14]: http://code.google.com/chrome/extensions/i18n.html
-[15]: http://code.google.com/chrome/extensions/tabs.html
-[16]: http://code.google.com/chrome/extensions/windows.html
+[12]: /docs/extensions/reference
+[13]: /docs/extensions/reference/idle
+[14]: /docs/extensions/reference/i18n
+[15]: /docs/extensions/reference/tabs
+[16]: /docs/extensions/reference/windows

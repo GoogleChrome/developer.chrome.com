@@ -260,16 +260,16 @@ For more detailed information about some of the APIs introduced in this step, re
 Ready to continue onto the next step? Go to [Step 7 - Publish your app »][26]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: #launch
-[5]: https://developer.chrome.com/apps/fileSystem#method-chooseEntry
-[6]: https://developer.chrome.com/apps/fileSystem#method-getDisplayPath
+[5]: /apps/fileSystem#method-chooseEntry
+[6]: /apps/fileSystem#method-getDisplayPath
 [7]: https://developer.mozilla.org/en-US/docs/Web/API/Blob
 [8]: http://www.html5rocks.com/en/tutorials/file/filesystem/
 [9]: https://developer.mozilla.org/en-US/docs/Web/API/FileEntry
 [10]: /apps/fileSystem#method-restoreEntry
-[11]: /apps/fileSystem.html#method-retainEntry
+[11]: /apps/fileSystem#method-retainEntry
 [12]:
   /apps/app_storage#filesystem
   "Read 'Using the Chrome Filesystem API' in the Chrome developer docs"
@@ -296,4 +296,4 @@ Ready to continue onto the next step? Go to [Step 7 - Publish your app »][26]
   /apps/fileSystem#method-retainEntry
   "Read 'chrome.fileSystem.retainEntry()' in the Chrome developer docs"
 [25]: #persistance "This feature mentioned in 'Persist FileEntry objects'"
-[26]: app_codelab_publish.html
+[26]: ../app_codelab_publish

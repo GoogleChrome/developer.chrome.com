@@ -9,7 +9,7 @@ description: Reference documentation for the key property of manifest.json.
 This value can be used to control the unique ID of an extension, app, or theme when it is loaded
 during development.
 
-<div class="aside aside--note"><b>Note:</b> You don't usually need to use this value. Instead, write your code so that the key value doesn't matter by using <a href="https://developer.chrome.com/extensions/overview#relative-urls">relative paths</a> and <a href="https://developer.chrome.com/extensions/extension#method-getURL">extension.getURL</a>.</div>
+<div class="aside aside--note"><b>Note:</b> You don't usually need to use this value. Instead, write your code so that the key value doesn't matter by using <a href="/extensions/overview#relative-urls">relative paths</a> and <a href="/extensions/extension#method-getURL">extension.getURL</a>.</div>
 
 To get a suitable key value, first install your extension from a `.crx` file (you may need to
 [upload your extension][3] or [package it manually][4]). Then, in your [user data directory][5],

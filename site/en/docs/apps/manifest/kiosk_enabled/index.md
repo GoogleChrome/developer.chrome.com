@@ -93,19 +93,19 @@ Kiosk App through the [Chrome web store payment flow][14].
 - [Kiosk apps in the Chrome Web Store][18]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: https://support.google.com/chromebook/answer/3134673
 [4]: https://support.google.com/chromebook/answer/3134673
 [5]: https://support.google.com/chrome/a/answer/3017014
 [6]: https://support.google.com/chromebook/answer/3134673
-[7]: https://developer.chrome.com/apps/manifest/offline_enabled
-[8]: https://developer.chrome.com/apps/fileSystem
-[9]: https://developer.chrome.com/apps/offline_apps.html
-[10]: https://developer.chrome.com/apps/about_apps
-[11]: https://developer.chrome.com/apps/app_architecture
-[12]: https://developer.chrome.com/apps/manifest
-[13]: https://developer.chrome.com/apps/app_runtime#event-onLaunched
-[14]: https://developer.chrome.com/webstore/money
+[7]: /apps/manifest/offline_enabled
+[8]: /apps/fileSystem
+[9]: /docs/apps/offline_apps
+[10]: /apps/about_apps
+[11]: /apps/app_architecture
+[12]: /apps/manifest
+[13]: /apps/app_runtime#event-onLaunched
+[14]: /webstore/money
 [15]: https://github.com/KioskApps/InfoHub
 [16]: https://github.com/KioskApps/SalesPoint
 [17]: https://github.com/KioskApps/QuickTicket

@@ -63,10 +63,10 @@ extension's [default Content Security Policy][7].
 Sandboxed page may only be specified when using [`manifest_version`][8] 2 or above.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
-[3]: https://developer.chrome.com/apps/webview_tag
-[4]: https://developer.chrome.com/extensions/contentSecurityPolicy
+[2]: /apps/migration
+[3]: /apps/webview_tag
+[4]: /extensions/contentSecurityPolicy
 [5]: https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-sandbox
-[6]: https://developer.chrome.com/extensions/sandboxingEval
-[7]: https://developer.chrome.com/extensions/contentSecurityPolicy
-[8]: https://developer.chrome.com/extensions/manifest#manifest_version
+[6]: /extensions/sandboxingEval
+[7]: /extensions/contentSecurityPolicy
+[8]: /extensions/manifest#manifest_version

@@ -10,7 +10,7 @@ When the user selects one or more files, the file browser adds buttons represent
 
 ## Manifest
 
-You must declare the "fileBrowserHandler" permission in the [extension manifest](https://developer.chrome.com/extensions/manifest), and you must use the "file_browser_handlers" field to register the extension as a handler of at least one file type. You should also provide a 16x16 icon to be displayed on the button. For example:
+You must declare the "fileBrowserHandler" permission in the [extension manifest](/extensions/manifest), and you must use the "file_browser_handlers" field to register the extension as a handler of at least one file type. You should also provide a 16x16 icon to be displayed on the button. For example:
 
 ```json
 {
@@ -39,7 +39,7 @@ You must declare the "fileBrowserHandler" permission in the [extension manifest]
 
 !!!.aside.aside--note
 
-**Note:** You can specify locale-specific strings for the value of "default_title". See [Internationalization (i18n)](https://developer.chrome.com/extensions/i18n) for details.
+**Note:** You can specify locale-specific strings for the value of "default_title". See [Internationalization (i18n)](/extensions/i18n) for details.
 
 !!!
 

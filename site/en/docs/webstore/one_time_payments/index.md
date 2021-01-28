@@ -261,9 +261,8 @@ experience.
 [10]: https://cloud.google.com/console
 [11]: #update-manifest
 [12]: /docs/webstore/pricing#matrix
-[13]: /apps/app_identity
+[13]: /docs/extensions/reference/app_identity
 [14]: https://code.google.com/apis/console
-[15]: /docs/apps/storage.html
+[15]: /docs/extensions/reference/storage
 [16]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/one-time-payment
-[17]:
-  https://chrome.google.com/webstore/detail/one-time-payment-sample/ebcgmmcbgnpoclkoibogeiokfdmjbbob
+[17]: https://chrome.google.com/webstore/detail/one-time-payment-sample/ebcgmmcbgnpoclkoibogeiokfdmjbbob

@@ -204,7 +204,7 @@ change; if that happens, your web app might be recategorized.
   </tbody>
 </table>
 
-[1]: https://developers.google.com/chrome/apps/index
+[1]: /docs/apps
 [2]: /docs/webstore/launching#pre-launch-checklist
 [3]: /docs/webstore/identify_user
 [4]: /docs/webstore/check_for_payment

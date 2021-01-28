@@ -488,7 +488,7 @@ When the download process is finished, `MediaExplorer` updates the media file li
 player tree panel.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: http://www.sencha.com/products/extjs
 [4]: https://github.com/GoogleChrome/sencha-video-player-app
 [5]: http://senchaprosvcs.github.com/GooglePlayer/docs/output/#!/api

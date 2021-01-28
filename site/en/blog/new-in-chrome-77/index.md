@@ -173,7 +173,7 @@ to the web platform, and hear directly from the Chrome engineering team.
 It'll be streamed live on our
 [YouTube channel](https://youtube.com/user/ChromeDevelopers/), or if you want
 to attend in person, you can request your invite at the
-[Chrome Dev Summit 2019](https://developer.chrome.com/devsummit/) website.
+[Chrome Dev Summit 2019](/devsummit/) website.
 
 ## And more! {: #more }
 

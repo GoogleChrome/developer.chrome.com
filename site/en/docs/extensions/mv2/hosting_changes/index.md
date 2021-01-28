@@ -101,18 +101,18 @@ giving them an option to disable these extensions.
 
 [1]: http://blog.chromium.org/2013/11/protecting-windows-users-from-malicious.html
 [2]: https://support.google.com/chrome/a/answer/188453
-[3]: http://developer.chrome.com/extensions/getstarted#unpacked
+[3]: /extensions/getstarted#unpacked
 [4]: https://support.google.com/chrome/answer/2811969
 [5]: https://support.google.com/chrome/a/answer/188453
-[6]: http://developer.chrome.com/extensions/getstarted#unpacked
+[6]: /extensions/getstarted#unpacked
 [7]: http://blog.chromium.org/2013/11/protecting-windows-users-from-malicious.html
-[8]: http://developer.chrome.com/extensions/getstarted#unpacked
+[8]: /extensions/getstarted#unpacked
 [9]: http://www.chromium.org/getting-involved/dev-channel
-[10]: http://developer.chrome.com/extensions/external_extensions#preferences
-[11]: http://developer.chrome.com/extensions/external_extensions#registry
+[10]: /extensions/external_extensions#preferences
+[11]: /extensions/external_extensions#registry
 [12]: https://clients2.google.com/service/update2/crx
 [13]: https://clients2.google.com/service/update2/crx
 [14]: https://support.google.com/chrome/a/answer/188453?hl=en
 [15]: /docs/extensions/mv2/messaging#native-messaging
-[16]: http://developer.chrome.com/extensions/npapi
+[16]: /extensions/npapi
 [17]: https://support.google.com/chrome/answer/2811969

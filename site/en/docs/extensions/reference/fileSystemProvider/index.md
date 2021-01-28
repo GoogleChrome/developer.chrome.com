@@ -4,7 +4,7 @@ api: fileSystemProvider
 
 ## Manifest
 
-You must declare the "fileSystemProvider" permission and section in the [extension manifest](https://developer.chrome.com/extensions/manifest) to use the File System Provider API. For example:
+You must declare the "fileSystemProvider" permission and section in the [extension manifest](/extensions/manifest) to use the File System Provider API. For example:
 
 ```json
 {

@@ -43,6 +43,6 @@ to upload additional images, including at least one screenshot of your extension
 information, see the [Chrome Web Store developer documentation][4].
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: https://chrome.google.com/webstore/developer/dashboard
-[4]: https://developer.chrome.com/webstore
+[4]: /webstore

@@ -191,7 +191,7 @@ This would ensure that users would autoupdate to version 2 only if they are runn
 3.0.193.0 or greater.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: https://chrome.google.com/webstore/developer/dashboard
 [4]: hosting
 [5]: packaging

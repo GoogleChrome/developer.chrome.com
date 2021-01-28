@@ -13,7 +13,12 @@ region that you publish to. This page shows those price tiers for all regions th
 supports. It also gives details about who can use Chrome Web Store Payments, and how much of the
 purchase price you can expect to receive.
 
-<div class="aside aside--note"><b>Note</b>: This page applies only if you use Chrome Web Store Payments. For information on other options, see <a href="money.html">Monetizing your app</a>.</div>
+!!!.aside.aside-note
+
+**Note**: This page applies only if you use Chrome Web Store Payments.
+For information on other options, see [Monetizing your app][1].
+
+!!!
 
 ## Who can use Chrome Web Store Payments {: #seller }
 
@@ -68,7 +73,7 @@ Each time someone buys your app using Chrome Web Store Payments, Google charges 
 fee. For example, if you charge $1.99, you'll receive $1.89; if you charge
 $9.99, you'll receive $9.49.
 
-<div class="aside aside--note"><strong>Note:</strong> In-app payments for ARC apps are subject to a 30% transaction fee. For example, if you charge $1.99 for an item offered in an ARC app, you'll receive $1.39. This is to ensure a consistent pricing structure with in-app payments made in apps available on Google Play. ARC does not currently support other purchase models including up-front payments, subscriptions and in-app version upgrades; as these types of purchases require provisioning from Google Play which is not currently enabled. For more information on monetizing ARC apps, see <a href="https://developer.chrome.com/apps/getstarted_arc">Getting Started with ARC</a>.</div>
+<div class="aside aside--note"><strong>Note:</strong> In-app payments for ARC apps are subject to a 30% transaction fee. For example, if you charge $1.99 for an item offered in an ARC app, you'll receive $1.39. This is to ensure a consistent pricing structure with in-app payments made in apps available on Google Play. ARC does not currently support other purchase models including up-front payments, subscriptions and in-app version upgrades; as these types of purchases require provisioning from Google Play which is not currently enabled. For more information on monetizing ARC apps, see <a href="/apps/getstarted_arc">Getting Started with ARC</a>.</div>
 
 <div class="aside aside--note"><b>Note</b>: Google Checkout sends out payments once per month in your local currency.</div>
 

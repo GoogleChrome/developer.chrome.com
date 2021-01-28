@@ -124,7 +124,7 @@ transaction. For example, if you charge $1.99, you'll receive $1.89. You must ch
 each location where you sell your app; for the US, the minimum price is \$1.99. See [Payments:
 Regions, Fees, and Tiers][12] for details.
 
-<div class="aside aside--note"><strong>Note:</strong> In-app payments for ARC apps are subject to a 30% transaction fee. For example, if you charge $1.99 for an item offered in an ARC app, you'll receive $1.39. This is to ensure a consistent pricing structure with in-app payments made in apps available on Google Play. ARC does not currently support other purchase models including up-front payments, subscriptions and in-app version upgrades; as these types of purchases require provisioning from Google Play which is not currently enabled. For more information on monetizing ARC apps, see <a href="https://developer.chrome.com/apps/arc_in_app_payments">In-app purchases for ARC apps</a>.</div>
+<div class="aside aside--note"><strong>Note:</strong> In-app payments for ARC apps are subject to a 30% transaction fee. For example, if you charge $1.99 for an item offered in an ARC app, you'll receive $1.39. This is to ensure a consistent pricing structure with in-app payments made in apps available on Google Play. ARC does not currently support other purchase models including up-front payments, subscriptions and in-app version upgrades; as these types of purchases require provisioning from Google Play which is not currently enabled. For more information on monetizing ARC apps, see <a href="/apps/arc_in_app_payments">In-app purchases for ARC apps</a>.</div>
 
 Chrome Web Store Payments works for buyers and sellers in many [supported {# seller#} regions][14].
 As long as you're in a supported region you can signup as a merchant, specify regions where the app
@@ -204,11 +204,11 @@ If you just want to write your item, see the developer doc for the type of app y
 - [Chrome Extensions][23]
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: http://chrome.google.com/webstore
-[4]: /apps/about_apps
+[4]: /docs/apps
 [5]: /docs/extensions/mv2/themes
-[6]: /docs/extensions/index
+[6]: /docs/extensions
 [7]: /docs/webstore/choosing
 [8]: /docs/webstore/choosing
 [9]: /docs/webstore/payments-iap
@@ -225,4 +225,4 @@ If you just want to write your item, see the developer doc for the type of app y
 [20]: /docs/webstore/samples
 [21]: /apps/about_apps
 [22]: /docs/extensions/mv2/themes
-[23]: /docs/extensions/index
+[23]: /docs/extensions

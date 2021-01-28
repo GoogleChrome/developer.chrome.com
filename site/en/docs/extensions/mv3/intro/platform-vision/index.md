@@ -115,7 +115,7 @@ other resources. The platform already begins to address this by:
 We'll continue to improve this user experience. Look for an increasing emphasis
 on temporary, in-context style of permissions grants, constraining passive
 access to user data. The introduction of
-[activeTab](https://developer.chrome.com/extensions/activeTab) was an initial
+[activeTab](/extensions/activeTab) was an initial
 step in this direction.
 
 It's also important that users make informed decisions about how their data is
@@ -134,7 +134,7 @@ they're needed.
 
 Beyond that, we'll be providing new API features to help
 extensions perform work without requiring data access. Chrome's
-[declarativeNetRequest](https://developer.chrome.com/extensions/declarativeNetRequest)
+[declarativeNetRequest](/extensions/declarativeNetRequest)
 is an example of this approach.
 
 

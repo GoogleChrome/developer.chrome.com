@@ -18,6 +18,6 @@ Used by [packaged apps][3] to specify the app's background scripts. Also used by
 specify the URLs that the app uses.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
-[3]: https://developer.chrome.com/trunk/apps/app_lifecycle#eventpage
+[2]: /apps/migration
+[3]: /trunk/apps/app_lifecycle#eventpage
 [4]: https://developers.google.com/chrome/apps/docs/developers_guide#live

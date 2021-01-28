@@ -58,5 +58,5 @@ For information on the standard APIs, see [chrome.\* APIs][7] and [Other APIs][8
 [4]: http://www.chromium.org/getting-involved/dev-channel
 [5]: /docs/extensions/mv2/declare_permissions
 [6]: http://groups.google.com/a/chromium.org/group/chromium-extensions/topics
-[7]: /docs/extensions/api_index
+[7]: /docs/extensions/reference
 [8]: /docs/extensions/api_other

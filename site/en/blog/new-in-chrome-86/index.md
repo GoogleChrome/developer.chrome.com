@@ -258,5 +258,5 @@ tell you -- what's new in Chrome!
 [a-download]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download
 [fs-article]: https://web.dev/file-system-access/
 [wd-window]: https://web.dev/multi-screen-window-placement/
-[ot-hid]: https://developers.chrome.com/origintrials/#/view_trial/1074108511127863297
-[ot-wplace]: https://developers.chrome.com/origintrials/#/view_trial/1411878483180650497
+[ot-hid]: /origintrials/#/view_trial/1074108511127863297
+[ot-wplace]: /origintrials/#/view_trial/1411878483180650497

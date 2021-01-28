@@ -711,49 +711,49 @@ For more detailed information about some of the APIs introduced in this step, re
 Ready to continue onto the next step? Go to [Step 3 - Add alarms and notifications »][31]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
-[4]: /apps/storage "Read 'chrome.storage.local' in the Chrome developer docs"
+[4]: /docs/extensions/reference/storage "Read 'chrome.storage.local' in the Chrome developer docs"
 [5]: #launch
 [6]: http://todomvc.com/vanilla-examples/vanillajs/
 [7]: http://todomvc.com/
 [8]: https://github.com/mangini/io13-codelab/archive/master.zip
 [9]: /apps/contentSecurityPolicy
 [10]: http://dev.w3.org/html5/webstorage/#the-localstorage-attribute
-[11]: /apps/storage "Read 'chrome.storage.local' in the Chrome developer docs"
+[11]: /docs/extensions/reference/storage "Read 'chrome.storage.local' in the Chrome developer docs"
 [12]:
-  /apps/storage#method-StorageArea-set
+  /docs/extensions/reference/storage#method-StorageArea-set
   "Read 'chrome.storage.local.set()' in the Chrome developer docs"
 [13]:
-  /apps/storage#method-StorageArea-get
+  /docs/extensions/reference/storage#method-StorageArea-get
   "Read 'chrome.storage.local.get()' in the Chrome developer docs"
 [14]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 [15]: http://en.wikipedia.org/wiki/Hazard_(computer_architecture)#Read_After_Write_.28RAW.29
-[16]: https://developer.chrome.com/apps/storage#method-StorageArea-remove
+[16]: /docs/extensions/reference/storage#method-StorageArea-remove
 [17]: /apps/contentSecurityPolicy "Read 'Content Security Policy' in the Chrome developer docs"
 [18]:
   #csp-compliance
   "This feature mentioned in 'Make scripts Content Security Policy (CSP) compliant'"
 [19]: /apps/declare_permissions "Read 'Declare Permissions' in the Chrome developer docs"
 [20]: #update-permissions "This feature mentioned in 'Update app permissions'"
-[21]: /apps/storage "Read 'chrome.storage' in the Chrome developer docs"
+[21]: /docs/extensions/reference/storage "Read 'chrome.storage' in the Chrome developer docs"
 [22]:
   #get-and-set
   "This feature mentioned in 'Learn about local.storage.set() and local.storage.get()'"
 [23]:
-  /apps/storage#method-StorageArea-get
+  /docs/extensions/reference/storage#method-StorageArea-get
   "Read 'chrome.storage.local.get()' in the Chrome developer docs"
 [24]: #retrieve-items "This feature mentioned in 'Retrieve todos items'"
 [25]:
-  /apps/storage#method-StorageArea-set
+  /docs/extensions/reference/storage#method-StorageArea-set
   "Read 'chrome.storage.local.set()' in the Chrome developer docs"
 [26]: #save-items "This feature mentioned in 'Save todos items'"
 [27]:
-  /apps/storage#method-StorageArea-remove
+  /docs/extensions/reference/storage#method-StorageArea-remove
   "Read 'chrome.storage.local.remove()' in the Chrome developer docs"
 [28]: #remove-items "This feature mentioned in 'Remove todos items'"
 [29]:
-  /apps/storage#method-StorageArea-remove
+  /docs/extensions/reference/storage#method-StorageArea-remove
   "Read 'chrome.storage.local.clear()' in the Chrome developer docs"
 [30]: #remove-items "This feature mentioned in 'Drop all todo items'"
-[31]: app_codelab_alarms.html
+[31]: ../app_codelab_alarms

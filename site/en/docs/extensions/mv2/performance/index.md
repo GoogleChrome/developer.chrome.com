@@ -69,7 +69,7 @@ with non-persistent background pages.
 ```js
 chrome.webRequest.onBeforeRequest.addListener(
   function(details) {
-    return {redirectUrl: "https://developer.chrome.com/"};
+    return {redirectUrl: "/"};
   },
   {urls: ["https://social.media.distraction.com/*"]},
   ["blocking"]
@@ -98,7 +98,7 @@ patterns][4] in the manifest and running the script at `document_idle` instead o
   "content_scripts": [
     {
       "js": ["content_script.js"],
-      "matches": ["https://developer.chrome.com/*"],
+      "matches": ["/*"],
       "run_at": "document_idle"
     }
   ]

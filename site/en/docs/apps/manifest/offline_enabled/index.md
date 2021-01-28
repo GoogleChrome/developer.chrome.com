@@ -27,5 +27,5 @@ performed when apps are not offline enabled, and app launching put on hold until
 connectivity to the Internet.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: /apps/manifest/kiosk_enabled

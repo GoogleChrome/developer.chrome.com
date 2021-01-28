@@ -115,7 +115,7 @@ To learn more, see the respective developer guides for [apps][24] and [extension
 
 The following table describes the differences among the three types of storage.
 
- <table><tbody><tr><th width="215" scope="col">&nbsp;</th><th width="385" scope="col">Temporary storage</th><th width="385" scope="col">Persistent storage</th><th width="385" scope="col">Unlimited storage</th></tr><tr><td><strong>Basic description</strong></td><td><p>Transient storage that is available to any web app.</p><p>It is automatic and does not need to be requested.</p></td><td>Permanent storage that must be requested through the Quota Management API and granted by users.</td><td><p>Permanent storage for Chrome extensions and apps.</p><p>It is set in the manifest file and must be granted by users.</p></td></tr><tr><td><strong>Availability</strong></td><td><p>All web apps.</p></td><td>All web apps.</td><td>Unique to <a href="https://developer.chrome.com/extensions">Chrome extensions</a> as well as hosted and installed <a href="https://developer.chrome.com/apps/">web apps</a>.</td></tr><tr><td><strong>Permission</strong></td><td>None. You can use it without explicitly requesting it.</td><td><p>You have to request more storage using the Quota Management API.</p></td><td>You can ask for the <code>unlimitedStorage</code> permission in the manifest file for the <a href="/chrome/apps/docs/developers_guide#manifest">app</a> or <a href="https://developer.chrome.com/extensions/manifest#permissions">extension</a>.</td></tr><tr><td><strong>User experience at first use</strong></td><td>Invisible to the user. The app just runs.</td><td><p>Chrome displays an info bar that prompts the user to either accept or decline the storage request.</p><p>But if the amount of quota you request is actually less than the app's current allocation, no prompt is shown. The larger quota is kept.</p></td><td><p>At installation, the user is informed of permissions required by the app or extension. By proceeding with the installation, the user implicitly grants permission for all pages whose URLs are listed in the manifest.json file for <a href="/chrome/apps/docs/developers_guide#manifest">app</a> or <a href="https://developer.chrome.com/extensions/manifest">extension</a>.</p></td></tr><tr><td><strong>User experience at subsequent requests for increased storage</strong></td><td>Not applicable. You cannot ask for more temporary storage.</td><td><p>Chrome prompts the user again.</p><p>&nbsp;</p><p></p></td><td>Chrome does not prompt the user after installation, regardless of the requests for increased quota by the app or extension.</td></tr><tr><td><strong>Persistence of data</strong></td><td><p>Transient. The browser can delete the data.</p></td><td><p>Persistent. The browser doesn't delete the data unless the user instructs it to. Data is available in subsequent accesses.</p><p>Do not assume that the data is permanent, because the user can delete it.</p></td><td><p>Same as persistent storage.</p><p>&nbsp;</p></td></tr><tr><td><strong>Default storage space</strong></td><td><p>Up to 20% of the shared pool.</p></td><td>0 MB. You have to explicitly ask for a specific storage space.</td><td><p>0 MB. You have to explicitly ask for <code>unlimitedStorage</code> in the manifest file.</p><p>If you do not specify your storage requirements, Chrome allocates storage to the app from the shared pool of temporary storage.</p></td></tr><tr><td><strong>Maximum storage space</strong></td><td>Up to 20% of the shared pool.</td><td>As large as the available space on the hard drive. It has no fixed pool of storage.</td><td>As large as the available space on the hard drive.</td></tr><tr><td><strong>Recommended use case</strong></td><td>Caching.</td><td>Apps that work offline or have a large number of assets.</td><td>Apps that were designed to run in Google Chrome.</td></tr><tr><td><strong>APIs that can use it</strong></td><td><p>Offline APIs</p><ul><li>App Cache</li><li>File System</li><li>IndexedDB</li><li>WebSQL (<a href="https://www.w3.org/TR/webdatabase/">deprecated</a> since November 18, 2010)</li></ul><p class="note"><strong>Note:</strong> Web storage APIs like LocalStorage and SessionStorage remain fixed at 5 MB.</p></td><td>File System API</td><td><p>Offline APIs</p><ul><li>App Cache</li><li>File System</li><li>IndexedDB</li><li>WebSQL (deprecated)</li></ul><p class="note"><strong>Note:</strong> Web storage APIs like LocalStorage and SessionStorage remain fixed at 5 MB.</p></td></tr></tbody></table>
+ <table><tbody><tr><th width="215" scope="col">&nbsp;</th><th width="385" scope="col">Temporary storage</th><th width="385" scope="col">Persistent storage</th><th width="385" scope="col">Unlimited storage</th></tr><tr><td><strong>Basic description</strong></td><td><p>Transient storage that is available to any web app.</p><p>It is automatic and does not need to be requested.</p></td><td>Permanent storage that must be requested through the Quota Management API and granted by users.</td><td><p>Permanent storage for Chrome extensions and apps.</p><p>It is set in the manifest file and must be granted by users.</p></td></tr><tr><td><strong>Availability</strong></td><td><p>All web apps.</p></td><td>All web apps.</td><td>Unique to <a href="/extensions">Chrome extensions</a> as well as hosted and installed <a href="/apps/">web apps</a>.</td></tr><tr><td><strong>Permission</strong></td><td>None. You can use it without explicitly requesting it.</td><td><p>You have to request more storage using the Quota Management API.</p></td><td>You can ask for the <code>unlimitedStorage</code> permission in the manifest file for the <a href="/chrome/apps/docs/developers_guide#manifest">app</a> or <a href="/extensions/manifest#permissions">extension</a>.</td></tr><tr><td><strong>User experience at first use</strong></td><td>Invisible to the user. The app just runs.</td><td><p>Chrome displays an info bar that prompts the user to either accept or decline the storage request.</p><p>But if the amount of quota you request is actually less than the app's current allocation, no prompt is shown. The larger quota is kept.</p></td><td><p>At installation, the user is informed of permissions required by the app or extension. By proceeding with the installation, the user implicitly grants permission for all pages whose URLs are listed in the manifest.json file for <a href="/chrome/apps/docs/developers_guide#manifest">app</a> or <a href="/extensions/manifest">extension</a>.</p></td></tr><tr><td><strong>User experience at subsequent requests for increased storage</strong></td><td>Not applicable. You cannot ask for more temporary storage.</td><td><p>Chrome prompts the user again.</p><p>&nbsp;</p><p></p></td><td>Chrome does not prompt the user after installation, regardless of the requests for increased quota by the app or extension.</td></tr><tr><td><strong>Persistence of data</strong></td><td><p>Transient. The browser can delete the data.</p></td><td><p>Persistent. The browser doesn't delete the data unless the user instructs it to. Data is available in subsequent accesses.</p><p>Do not assume that the data is permanent, because the user can delete it.</p></td><td><p>Same as persistent storage.</p><p>&nbsp;</p></td></tr><tr><td><strong>Default storage space</strong></td><td><p>Up to 20% of the shared pool.</p></td><td>0 MB. You have to explicitly ask for a specific storage space.</td><td><p>0 MB. You have to explicitly ask for <code>unlimitedStorage</code> in the manifest file.</p><p>If you do not specify your storage requirements, Chrome allocates storage to the app from the shared pool of temporary storage.</p></td></tr><tr><td><strong>Maximum storage space</strong></td><td>Up to 20% of the shared pool.</td><td>As large as the available space on the hard drive. It has no fixed pool of storage.</td><td>As large as the available space on the hard drive.</td></tr><tr><td><strong>Recommended use case</strong></td><td>Caching.</td><td>Apps that work offline or have a large number of assets.</td><td>Apps that were designed to run in Google Chrome.</td></tr><tr><td><strong>APIs that can use it</strong></td><td><p>Offline APIs</p><ul><li>App Cache</li><li>File System</li><li>IndexedDB</li><li>WebSQL (<a href="https://www.w3.org/TR/webdatabase/">deprecated</a> since November 18, 2010)</li></ul><p class="note"><strong>Note:</strong> Web storage APIs like LocalStorage and SessionStorage remain fixed at 5 MB.</p></td><td>File System API</td><td><p>Offline APIs</p><ul><li>App Cache</li><li>File System</li><li>IndexedDB</li><li>WebSQL (deprecated)</li></ul><p class="note"><strong>Note:</strong> Web storage APIs like LocalStorage and SessionStorage remain fixed at 5 MB.</p></td></tr></tbody></table>
  
 ## Managing your quota {: #managing_quota }
 
@@ -218,7 +218,7 @@ The following are `webkitStorageInfo` constants, which indicate the type of stor
 
 ### Method overview {: #method_overview }
 
-<table><tbody><tr><td><a href="https://developer.chrome.com/apps/offline_storage#queryUsageAndQuota"><code>queryUsageAndQuota</code></a></td></tr><tr><td><a href="https://developer.chrome.com/apps/offline_storage#requestQuota"><code>requestQuota</code></a></td></tr></tbody></table>
+<table><tbody><tr><td><a href="/apps/offline_storage#queryUsageAndQuota"><code>queryUsageAndQuota</code></a></td></tr><tr><td><a href="/apps/offline_storage#requestQuota"><code>requestQuota</code></a></td></tr></tbody></table>
 
 ### Methods {: #methods }
 
@@ -266,7 +266,7 @@ System,{# LocalStorage, SessionStorage,#} and other APIs that might be specified
 Management API. You will be able to manage all storage allocation with it.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: #types
 [4]: #temporary
 [5]: #persistent
@@ -287,20 +287,20 @@ Management API. You will be able to manage all storage allocation with it.
 [20]: #table
 [21]: #query
 [22]: /chrome/apps/docs/developers_guide#manifest
-[23]: https://developer.chrome.com/extensions/manifest#permissions
+[23]: /extensions/manifest#permissions
 [24]: /chrome/apps/docs/developers_guide#manifest
-[25]: https://developer.chrome.com/extensions/manifest
-[26]: https://developer.chrome.com/extensions
-[27]: https://developer.chrome.com/apps/
+[25]: /extensions/manifest
+[26]: /extensions
+[27]: /apps/
 [28]: /chrome/apps/docs/developers_guide#manifest
-[29]: https://developer.chrome.com/extensions/manifest#permissions
+[29]: /extensions/manifest#permissions
 [30]: /chrome/apps/docs/developers_guide#manifest
-[31]: https://developer.chrome.com/extensions/manifest
+[31]: /extensions/manifest
 [32]: https://www.w3.org/TR/webdatabase/
 [33]: #query
 [34]: #asking_more
 [35]: #reset
 [36]: #reference
 [37]: #table
-[38]: https://developer.chrome.com/apps/offline_storage#queryUsageAndQuota
-[39]: https://developer.chrome.com/apps/offline_storage#requestQuota
+[38]: /apps/offline_storage#queryUsageAndQuota
+[39]: /apps/offline_storage#requestQuota

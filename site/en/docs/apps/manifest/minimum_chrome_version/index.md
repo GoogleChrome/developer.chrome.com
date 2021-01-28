@@ -18,5 +18,5 @@ The version of Chrome that your extension, app, or theme requires, if any. The f
 string is the same as for the [version][3] field.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
-[3]: https://developer.chrome.com/extensions/manifest#version
+[2]: /apps/migration
+[3]: /extensions/manifest#version

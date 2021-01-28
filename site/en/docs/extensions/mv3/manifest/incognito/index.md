@@ -43,5 +43,5 @@ _spanning_ incognito behavior.
 [chrome.storage.sync][1] and [chrome.storage.local][2] are _always_ shared between regular and
 incognito processes. It is recommended to use them for persisting your extension's settings.
 
-[1]: /docs/extensions/storage#property-sync
-[2]: /docs/extensions/storage#property-local
+[1]: /docs/extensions/reference/storage#property-sync
+[2]: /docs/extensions/reference/storage#property-local

@@ -311,20 +311,20 @@ The steps you should follow to ensure this are:
 [37]: http://dev.w3.org/html5/webstorage/
 [38]: http://dev.w3.org/html5/webdatabase/
 [39]: http://unitedheroes.net/OAuthSimple/js/OAuthSimple.js
-[40]: /docs/extensions/browserAction
-[41]: /docs/extensions/pageAction
+[40]: /docs/extensions/reference/browserAction
+[41]: /docs/extensions/reference/pageAction
 [42]: /docs/extensions/mv2/desktop_notifications
-[43]: /docs/extensions/api_index
+[43]: /docs/extensions/reference
 [44]: /docs/extensions/mv2/messaging#external
 [45]: http://www.google.com/analytics/
 [46]: /docs/extensions/mv2/tut_analytics
 [47]: /docs/extensions/mv2/override
-[48]: /docs/extensions/runtime#event-onInstalled
+[48]: /docs/extensions/reference/runtime#event-onInstalled
 [49]: #faq-dev-05
 [50]: /docs/extensions/mv2/options
 [51]: /docs/extensions/mv2/tut_debugging
-[52]: /docs/extensions/management
-[53]: /docs/extensions/runtime#event-onInstalled
+[52]: /docs/extensions/reference/management
+[53]: /docs/extensions/reference/runtime#event-onInstalled
 [54]: #faq-lifecycle-events
 [55]: http://crbug.com
 [56]:

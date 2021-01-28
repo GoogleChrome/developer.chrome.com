@@ -49,16 +49,16 @@ the reference code.
 Let's get started. Go to [Step 1 - Create and run a Chrome App »][14]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: http://goo.gl/qNNUX
-[4]: app_codelab_basics.html
-[5]: app_codelab_todomvc.html
-[6]: app_codelab_alarms.html
-[7]: app_codelab_webview.html
-[8]: app_codelab_images.html
-[9]: app_codelab_filesystem.html
-[10]: app_codelab_publish.html
+[4]: ../app_codelab_basics
+[5]: ../app_codelab_import_todomvc
+[6]: ../app_codelab_alarms
+[7]: ../app_codelab_webview
+[8]: ../app_codelab_images
+[9]: ../app_codelab_filesystem
+[10]: ../app_codelab_publish
 [11]: https://www.google.com/intl/en/chrome/browser/
 [12]: https://github.com/mangini/io13-codelab/archive/master.zip
 [13]: https://github.com/mangini/io13-codelab/tree/master/cheat_code
-[14]: app_codelab_basics.html
+[14]: ../app_codelab_basics

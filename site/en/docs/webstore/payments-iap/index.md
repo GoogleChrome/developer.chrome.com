@@ -6,7 +6,7 @@ updated: 2018-06-15
 description: How to handle in-app purchases.
 ---
 
-<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to support extensions on all platforms. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="https://developer.chrome.com/apps/migration">migrating your app</a>.</div>
+<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to support extensions on all platforms. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="/apps/migration">migrating your app</a>.</div>
 
 You can use a [Payments Merchant Account][3] and the Chrome Web Store API to sell virtual goods
 within your Chrome App or Chrome Extension.
@@ -350,7 +350,7 @@ For a simple app that demonstrates how to use CWS API for in-app products, you c
 Note, this app is not published in the Chrome Web Store to prevent accidental purchases.
 
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: https://payments.google.com/merchant/signup
 [4]: https://chrome.google.com/webstore/developer/dashboard
 [5]: #setup-account

@@ -104,7 +104,7 @@ Origin trials provide an opportunity for us to validate experimental features
 and APIs, and make it possible for you to provide feedback on their usability
 and effectiveness in broader deployment.
 
-<a href="https://developers.chrome.com/origintrials/#/trials/active">
+<a href="/origintrials/#/trials/active">
   {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/b8W2avaeSBFf7PhZcxAX.png", alt="", className="float-right" %}
 </a>
 
@@ -122,7 +122,7 @@ of active origin trials, and sign up for them on the
 [Chrome Origin Trials][ot-listing] page.
 
 [ot-for-web-devs]: https://googlechrome.github.io/OriginTrials/developer-guide.html
-[ot-listing]: https://developers.chrome.com/origintrials/#/trials/active
+[ot-listing]: /origintrials/#/trials/active
 
 <br style="clear:both;">
 
@@ -143,7 +143,7 @@ having to "upload" or "download" files I want to work with. Check out my post
 about the [Native File System][native-fs] for all the details, including
 code, a demo, and how we're working to keep users safe.
 
-[fs-ot]: https://developers.chrome.com/origintrials/#/view_trial/3868592079911256065
+[fs-ot]: /origintrials/#/view_trial/3868592079911256065
 [native-fs]: https://developers.google.com/web/updates/2019/08/native-file-system
 
 ### SMS Receiver {: #sms-receiver }
@@ -159,12 +159,12 @@ number for the user more easily.
 Eiji wrote [Verify phone numbers on the web with the SMS Receiver API][sms-r]
 with all the details, and how to sign up for the origin trial.
 
-[smsr-ot]: https://developers.chrome.com/origintrials/#/view_trial/607985949695016961
+[smsr-ot]: /origintrials/#/view_trial/607985949695016961
 [sms-r]: https://web.dev/sms-receiver-api-announcement/
 
 ## Chrome Dev Summit 2019 {: #cds2019 }
 
-<a href="https://developer.chrome.com/devsummit/">
+<a href="/devsummit/">
   {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4L4iDgNCnYAykp3UXZRe.png", alt="", className="float-right" %}
 </a>
 
@@ -172,7 +172,7 @@ Don't forget to tune into the [Chrome Dev Summit][cds-site] on November
 11th and 12th,  it'll be streaming live, on the
 [Chrome Developers YouTube channel][cr-yt].
 
-[cds-site]: https://developer.chrome.com/devsummit/
+[cds-site]: /devsummit/
 [cr-yt]: https://www.youtube.com/user/ChromeDevelopers/
 
 <br style="clear:both;">

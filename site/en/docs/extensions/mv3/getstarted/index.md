@@ -449,7 +449,8 @@ What's next?
 [18]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/wy3lvPQdeJn4iqHmI0Rp.zip
 [19]: /docs/extensions/mv3/user_interface#icons
 [20]: /docs/extensions/reference/declarativeContent
-[23]: https://developer.chrome.com/
+[21]: /docs/extensions/reference/declarativeContent
+[23]: /
 [24]: /docs/extensions/mv3/content_scripts#pi
 [25]: /docs/extensions/mv3/manifest/activeTab
 [26]: /docs/extensions/reference/scripting

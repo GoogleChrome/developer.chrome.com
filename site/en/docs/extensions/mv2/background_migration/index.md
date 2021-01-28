@@ -146,8 +146,8 @@ document.getElementById('target').addEventListener('click', function() {
 ```
 
 [1]: /docs/extensions/mv2/background_pages#persistentWarning
-[2]: /docs/extensions/mv2/tabs
-[3]: /docs/extensions/storage
-[4]: /docs/extensions/alarms
-[5]: /docs/extensions/extension#method-getBackgroundPage
-[6]: /docs/extensions/runtime#method-getBackgroundPage
+[2]: /docs/extensions/reference/tabs
+[3]: /docs/extensions/reference/storage
+[4]: /docs/extensions/reference/alarms
+[5]: /docs/extensions/reference/extension#method-getBackgroundPage
+[6]: /docs/extensions/reference/runtime#method-getBackgroundPage

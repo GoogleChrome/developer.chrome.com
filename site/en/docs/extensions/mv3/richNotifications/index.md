@@ -51,7 +51,9 @@ notification center, and produce an error on other platforms. Priority 0 is the 
 Priorities > 0 are shown for increasing duration and more high priority notifications can be
 displayed in the system tray.
 
-<div class="aside aside--note"><strong>Platform difference:</strong> The <code>priority</code> does not affect the order of notifications in Chrome version 59+ on Mac OS X.</div>
+!!!.aside.aside-note
+**Platform difference:** The `code` priority does not affect the order of notifications in Chrome version 59+ on macOS.
+!!!
 
 In addition to displaying information, all notification types can include up to two action items.
 When users click on an action item, your app can respond with the appropriate action. For example,
@@ -182,7 +184,7 @@ can pop-up even when the app or extension isn't running.
 [3]: /docs/extensions/reference/notifications#method-create
 [4]: /docs/extensions/reference/notifications#type-NotificationOptions
 [5]: /docs/extensions/reference/notifications#type-TemplateType
-[6]: /docs/extensions/inform_users
+[6]: /docs/extensions/reference/gcm
 [7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/apps/samples/gcm-notifications
 [8]: /docs/apps/contentSecurityPolicy
 [9]: /docs/apps/app_external

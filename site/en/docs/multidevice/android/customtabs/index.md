@@ -405,7 +405,7 @@ she's returning to the content where the navigation started.
         android.R.anim.slide_out_right);
 
     //Open the Custom Tab
-    intentBuilder.build().launchUrl(context, Uri.parse("https://developer.chrome.com/"));
+    intentBuilder.build().launchUrl(context, Uri.parse("/"));
 ```
 
 ### Choosing an icon for the Action Button

@@ -191,7 +191,7 @@ on web.dev with all the details, and how to get your new origin trial token.
 
 ### Other origin trials
 
-Check <https://developers.chrome.com/origintrials/#/trials/active> for
+Check </origintrials/#/trials/active> for
 a complete list of features in origin trial.
 
 ## New cross-origin policies {: #coop }

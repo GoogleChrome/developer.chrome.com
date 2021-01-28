@@ -249,7 +249,7 @@ Previously when off-store extensions were supported, it was possible to have the
 the extension be updated in lock step. However, extensions hosted on the Chrome Web Store are
 updated via the Chrome update mechanism which developers do not control. Extension developers should
 be careful about updating extensions that have a dependency on the native binary (for example,
-legacy extensions using [NPAPI][16]).
+legacy extensions using NPAPI).
 
 **What if the user uninstalls the extension?**
 
@@ -277,4 +277,3 @@ by installing the extension normally through the UI, and then uninstalling it.
 [13]: #registry
 [14]: /docs/extensions/mv3/hosting
 [15]: /docs/extensions/autoupdate#update_manifest
-[16]: /docs/extensions/npapi

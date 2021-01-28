@@ -250,7 +250,7 @@ chrome.sockets.tcpServer.disconnect(serverSocketId);
 ```
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: sockets_udp
 [4]: sockets_tcp
 [5]: sockets_tcp_server

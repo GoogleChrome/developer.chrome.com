@@ -392,13 +392,13 @@ For more detailed information about some of the APIs introduced in this step, re
 Ready to continue onto the next step? Go to [Step 4 - Open external links with a webview »][36]
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: #launch
-[5]: /apps/alarms.html
+[5]: /docs/extensions/reference/alarms
 [6]: /apps/alarms#event-onAlarm
 [7]: /apps/app_codelab_import_todomvc#csp-compliance
-[8]: /apps/alarms#method-create
+[8]: /docs/extensions/reference/alarms#method-create
 [9]: /apps/alarms#method-clear
 [10]: /apps/alarms#method-getAll
 [11]: /apps/notifications
@@ -409,7 +409,7 @@ Ready to continue onto the next step? Go to [Step 4 - Open external links with a
   https://github.com/mangini/io13-codelab/blob/master/cheat_code/solution_for_step3/background.js
 [16]: /apps/declare_permissions "Read 'Declare Permissions' in the Chrome developer docs"
 [17]: #update-permissions-alarms "This feature mentioned in 'Update app permissions for alarms'"
-[18]: /apps/alarms.html "Read 'chrome.alarms' in the Chrome developer docs"
+[18]: /docs/extensions/reference/alarms "Read 'chrome.alarms' in the Chrome developer docs"
 [19]: #alarms "This feature mentioned in 'Add alarm reminders'"
 [20]: /apps/alarms#event-onAlarm "Read 'chrome.alarms.onAlarm' in the Chrome developer docs"
 [21]: #update-background-script-alarms "This feature mentioned in ''"
@@ -433,4 +433,4 @@ Ready to continue onto the next step? Go to [Step 4 - Open external links with a
   /apps/notifications#event-onClicked
   "Read 'chrome.notifications.onClicked' in the Chrome developer docs"
 [35]: #interact-with-notification "This feature mentioned in 'Handle notification interactions'"
-[36]: app_codelab_webview.html
+[36]: ../app_codelab_webview/

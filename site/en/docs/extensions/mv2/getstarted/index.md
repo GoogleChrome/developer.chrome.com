@@ -447,7 +447,7 @@ What's next?
 [20]: /declarativeContent
 [21]: /declarativeContent
 [22]: examples/tutorials/get_started/popup.js
-[23]: https://developer.chrome.com/
+[23]: /
 [24]: /content_scripts#pi
 [25]: /docs/extensions/mv2/manifest/activeTab/
 [26]: /tabs

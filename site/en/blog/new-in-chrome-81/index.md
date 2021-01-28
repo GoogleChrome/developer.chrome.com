@@ -131,7 +131,7 @@ includes a number of common patterns that you might want to use.
 
 ### Other origin trials
 
-Check <https://developers.chrome.com/origintrials/#/trials/active> for
+Check </origintrials/#/trials/active> for
 a complete list of features in origin trial.
 
 ## And more {: #more }
@@ -180,7 +180,7 @@ equipment, helped me get it all setup in my tiny NYC apartment, and then
 busted their butts to get this video out in the tight turn-around time we had.
 Working with them is a pleasure. **Thank you, you all rock!**
 
-[nfc-ot]: https://developers.chrome.com/origintrials/#/view_trial/236438980436951041
+[nfc-ot]: /origintrials/#/view_trial/236438980436951041
 [ms-tracking]: https://googlechrome.github.io/samples/media-session/video.html
 [intl-display-names]: https://github.com/tc39/proposal-intl-displaynames
 [wd-nfc]: https://web.dev/nfc/

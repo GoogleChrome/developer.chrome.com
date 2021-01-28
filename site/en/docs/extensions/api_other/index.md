@@ -63,7 +63,7 @@ APIs in bundled libraries
 that library's JavaScript files with your extension. Bundled libraries work in extensions just as
 they do in other web pages.
 
-[1]: /docs/extensions/api_index
+[1]: /docs/extensions/reference
 [2]: https://developer.mozilla.org/en/Gecko_DOM_Reference
 [3]: /docs/extensions/mv2/xhr
 [4]: /docs/extensions/mv2/declare_permissions

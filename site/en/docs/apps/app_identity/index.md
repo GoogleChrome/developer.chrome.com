@@ -261,7 +261,7 @@ interactive mode if there is a user gesture (for example, the user clicked the S
 your app). Note that we do not enforce gesture requirement.
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
-[2]: https://developer.chrome.com/apps/migration
+[2]: /apps/migration
 [3]: identity
 [4]: https://github.com/GoogleChrome/chrome-app-samples#_feature_identity
 [5]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/identity#readme
