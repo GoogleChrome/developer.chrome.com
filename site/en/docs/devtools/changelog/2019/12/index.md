@@ -28,11 +28,11 @@ Console input will still cause a `SyntaxError`.
 For example, previously, when redeclaring a local variable with `let`, the Console would throw an
 error:
 
-![A screenshot of the Console in Chrome 78 showing that the let redeclaration fails.](https://developers.google.com/web/updates/images/2019/12/letbefore.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Vl5ixHwhHp2lUc8Y0qvY.png", alt="A screenshot of the Console in Chrome 78 showing that the let redeclaration fails.", width="800", height="447" %}
 
 Now, the Console allows the redeclaration:
 
-![A screenshot of the Console in Chrome 80 showing that the let redeclaration succeeds.](https://developers.google.com/web/updates/images/2019/12/letafter.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mJwYqPFpIO73IAC38Uqv.png", alt="A screenshot of the Console in Chrome 80 showing that the let redeclaration succeeds.", width="800", height="493" %}
 
 Chromium issue [#1004193][1]
 
@@ -42,7 +42,7 @@ DevTools has started to support the [DWARF Debugging Standard][2], which means i
 stepping over code, setting breakpoints, and resolving stack traces in your source languages within
 DevTools. Check out [Improved WebAssembly debugging in Chrome DevTools][3] for the full story.
 
-![A screenshot of the new DWARF-powered WebAssembly debugging.](https://developers.google.com/web/updates/images/2019/12/wasm.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/9ANP4ItuuJ8PjPrVCgmR.png", alt="A screenshot of the new DWARF-powered WebAssembly debugging.", width="800", height="446" %}
 
 ## Network panel updates {: #network }
 
@@ -52,7 +52,7 @@ You can now view the initiators and dependencies of a network request as a neste
 help you understand why a resource was requested, or what network activity a certain resource (such
 as a script) caused.
 
-![A screenshot of a Request Initiator Chain in the Initiator tab](https://developers.google.com/web/updates/images/2019/12/initiators.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/meHk2Mm8MqaTl5GeZxtl.png", alt="A screenshot of a Request Initiator Chain in the Initiator tab", width="800", height="410" %}
 
 After [logging network activity in the Network panel][4], click a resource and then go to the
 **Initiator** tab to view its **Request Initiator Chain**:
@@ -83,7 +83,7 @@ After you click a network resource in order to inspect it, the Network panel now
 around that resource in the **Overview**. This can help you detect if the network request is
 happening earlier or later than expected.
 
-![A screenshot of the Overview pane highlighting the inspected resource.](https://developers.google.com/web/updates/images/2019/12/overview.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pyt6Fzlzt8gefPvjUKie.png", alt="A screenshot of the Overview pane highlighting the inspected resource.", width="800", height="465" %}
 
 Chromium issue [#988253][7]
 
@@ -92,7 +92,7 @@ Chromium issue [#988253][7]
 Use the new **Path** and **URL** columns in the **Network** panel to see the absolute path or full
 URL of each network resource.
 
-![A screenshot of the new Path and URL columns in the Network panel.](https://developers.google.com/web/updates/images/2019/12/columns.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zO6RL23L8xQLEsWqh9Ec.png", alt="A screenshot of the new Path and URL columns in the Network panel.", width="800", height="366" %}
 
 Right-click the **Waterfall** table header and select **Path** or **URL** to show the new columns.
 
@@ -106,7 +106,7 @@ value of `navigator.userAgent`.
 
 The predefined User-Agent strings have been updated to reflect modern browser versions.
 
-![A screenshot of the User Agent menu in the Network Conditions tab.](https://developers.google.com/web/updates/images/2019/12/useragent.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ONxZp1H5PnvusPEDGEJu.png", alt="A screenshot of the User Agent menu in the Network Conditions tab.", width="800", height="681" %}
 
 To access **Network Conditions**, [open the Command Menu][9] and run the `Show Network Conditions`
 command.
@@ -127,7 +127,7 @@ The configuration UI has a new, responsive design, and the throttling configurat
 been simplified. See [Audits Panel Throttling][12] for more information on the throttling UI
 changes.
 
-![The new configuration UI.](https://developers.google.com/web/updates/images/2019/12/start.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2VHTNHEFIGhcBX3DavHi.png", alt="The new configuration UI.", width="800", height="401" %}
 
 ## Coverage tab updates {: #coverage }
 
@@ -146,7 +146,7 @@ used code. Only if the script doesn't execute at all will DevTools mark the scri
 
 !!!
 
-![The coverage mode dropdown menu.](https://developers.google.com/web/updates/images/2019/12/modes.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lZqzpkt0TEaZcpLv8nLz.png", alt="The coverage mode dropdown menu.", width="800", height="630" %}
 
 ### Coverage must now be initiated by a page reload {: #reload }
 
