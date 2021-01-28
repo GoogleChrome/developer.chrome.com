@@ -1,6 +1,8 @@
 const path = require('path');
 const {defaultLocale} = require('../_data/site.json');
 
+const fakeOrigin = `https://fake-does-not-exist-${Math.random()}.localhost`;
+
 /**
  * Converts /en/... urls to /...,
  * and /... urls to locale-specific ones.
@@ -22,14 +24,19 @@ const prettyUrls = ($, outputPath, locale) => {
       return;
     }
 
-    // Ignore external/internal/mailto, and relative links
-    if (
-      href.startsWith('http://') ||
-      href.startsWith('https://') ||
-      href.startsWith('#') ||
-      href.startsWith('mailto:') ||
-      !path.isAbsolute(href)
-    ) {
+    // Fix URLs targeting the same scheme.
+    if (href.startsWith('//')) {
+      href = `https:${href}`;
+    }
+
+    // If constructing a new URL puts us on a new origin, skip it.
+    const checkExternalOrigin = new URL(href, fakeOrigin);
+    if (checkExternalOrigin.origin !== fakeOrigin) {
+      return;
+    }
+
+    // Ignore internal and relative links.
+    if (href.startsWith('#') || !path.isAbsolute(href)) {
       return;
     }
 
