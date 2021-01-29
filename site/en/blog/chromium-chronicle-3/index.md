@@ -27,15 +27,15 @@ To see code coverage for a Chromium CL, trigger the code coverage trybot
 *linux-coverage-rel*:
 
 {% columns %}
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Z9UKBlA67VrGcR1sxNpn.png", alt="" %}
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/p4L6k3hEN6j4kvMgsbAs.png", alt="" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Z9UKBlA67VrGcR1sxNpn.png", alt="", width="745", height="28" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/p4L6k3hEN6j4kvMgsbAs.png", alt="", width="745", height="28" %}
 {% endcolumns %}
 
 Once the build finishes and code coverage data is processed successfully,
 look at the right column of the side by side diff view to see coverage
 information:
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wUaY6ZViX5BWxUBIOPz7.jpg", alt="" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wUaY6ZViX5BWxUBIOPz7.jpg", alt="", width="360", height="190" %}
 
 The code coverage tool currently supports C/C++ code for Chrome on Linux;
 support for more platforms and more languages is in progress.
