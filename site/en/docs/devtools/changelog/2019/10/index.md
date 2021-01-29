@@ -19,7 +19,7 @@ After recording network activity, select a network resource and then navigate to
 [Changes to the default behavior without SameSite][1] to understand why you might be seeing more
 blocked cookies in Chrome 76 and later.
 
-![The Cookies tab.](https://developers.google.com/web/updates/images/2019/10/cookiestab.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/I8l1Wb6XJovxlxygGcQz.png", alt="The Cookies tab.", width="800", height="618" %}
 
 The **Cookies** tab.
 
@@ -39,7 +39,7 @@ Chromium issues [#856777][3], [#993843][4]
 
 Click a row in the [Cookies pane][5] to view the value of that cookie.
 
-![Viewing the value of a cookie.](https://developers.google.com/web/updates/images/2019/10/cookievalues.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZDLwhWKNzfEXhFDIM4qO.png", alt="Viewing the value of a cookie.", width="800", height="324" %}
 
 Viewing the value of a cookie.
 
@@ -63,9 +63,7 @@ Open the [Command Menu][8], run the **Show Rendering** command, and then set the
 feature prefers-color-scheme** dropdown to debug your `prefers-color-scheme: dark` and
 `prefers-color-scheme: light` styles.
 
-![When the 'prefers-color-scheme: dark' option is set in the Rendering tab
-            the Styles pane shows the CSS that gets applied when that media query is true
-            and the viewport shows the dark mode styles.](https://developers.google.com/web/updates/images/2019/10/colorscheme.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZLTfvieg3K4jUnt9GqOh.png", alt="prefers-color-scheme: dark", width="800", height="372" %}
 
 When `prefers-color-scheme: dark` is set (middle box) the Styles pane (right box) shows the CSS that
 gets applied when that media query is true and the viewport shows the dark mode styles (left box).
@@ -95,14 +93,14 @@ represents unused code, and the bluish bar on the right represents used code.
 The new coverage **type filter** text box lets you filter for coverage information by its type:
 display only JavaScript coverage, only CSS, or display all types of coverage.
 
-![The Coverage tab.](https://developers.google.com/web/updates/images/2019/10/coverage.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Pzd50LvrnFeWfqBKpG8B.png", alt="The Coverage tab.", width="800", height="437" %}
 
 The Coverage tab.
 
 The Sources panel displays code coverage data when it is available. Clicking the red or bluish marks
 next to the line number opens the Coverage tab and highlights the file.
 
-![Coverage data in the Sources panel.](https://developers.google.com/web/updates/images/2019/10/sources.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5D3z80VU7dw3efoCgAkn.png", alt="Coverage data in the Sources panel.", width="800", height="611" %}
 
 Coverage data in the Sources panel. Line 8 is an example of unused code. Line 11 is an example of
 used code.
@@ -115,7 +113,7 @@ After recording network activity, select a network resource and then navigate to
 tab to understand why the resource was requested. The **Request call stack** section describes the
 JavaScript call stack leading up to the network request.
 
-![The Initiator tab.](https://developers.google.com/web/updates/images/2019/10/initiator.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pTGHyz9hMoyHpSDG6791.png", alt="The Initiator tab.", width="800", height="491" %}
 
 The **Initiator** tab.
 
