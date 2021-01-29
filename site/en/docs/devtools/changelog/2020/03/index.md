@@ -16,7 +16,7 @@ description:
 Open the [Rendering tab][1] and use the new **Emulate vision deficiencies** feature to get a better
 idea of how people with different types of vision deficiencies experience your site.
 
-![Emulating blurred vision.](/web/updates/images/2020/03/vision.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4Q4dkh5YFfsKnz2F89t4.png", alt="Emulating blurred vision.", width="800", height="481" %}
 
 Emulating blurred vision.
 
@@ -71,12 +71,12 @@ The Network panel now provides [Cross-Origin Embedder Policy][8] debugging infor
 The **Status** column now provides a quick explanation of why a request was blocked as well as a
 link to view that request's headers for further debugging:
 
-![Blocked requests in the Status column](/web/updates/images/2020/03/status.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NR5ijqUdPHunvoOBWWlC.png", alt="Blocked requests in the Status column", width="800", height="384" %}
 
 The **Response Headers** section of the **Headers** tab provides more guidance on how to resolve the
 issues:
 
-![More guidance in the Response Headers section](/web/updates/images/2020/03/guidance.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/yFJu74FPKJkn99nTK14j.png", alt="More guidance in the Response Headers section", width="800", height="438" %}
 
 Send feedback to [Chromium issue #1051466][9].
 
@@ -84,13 +84,15 @@ Send feedback to [Chromium issue #1051466][9].
 
 The **Sources** panel has new icons for breakpoints, conditional breakpoints, and logpoints:
 
-- [Breakpoints][10] ![Breakpoint](/web/updates/images/2020/03/breakpoint.png) are represented by red
-  circles.
+- [Breakpoints][10] 
+  {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/bB8RsXECQym7qfO16kaj.png", alt="Breakpoint", width="100", height="100" %}
+  are represented by red circles.
 - [Conditional Breakpoints][11]
-  ![Conditional Breakpoint](/web/updates/images/2020/03/conditional.png) are represented by half-red
-  half-white circles.
-- [Logpoints][12] ![Logpoint](/web/updates/images/2020/03/logpoint.png) are represented by red
-  circles with Console icons.
+  {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ua2vgvlpL0lbMT7mOzgy.png", alt="Conditional Breakpoint", width="100", height="100" %}
+  are represented by half-red half-white circles.
+- [Logpoints][12]
+  {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GU0U13igWpNgErv9aSod.png", alt="Logpoint", width="100", height="100" %}
+  are represented by red circles with Console icons.
 
 The motivation for the new icons was to make the UI more consistent with other GUI debugging tools
 (which usually color breakpoints red) and to make it easier to distinguish between the 3 features at
@@ -110,7 +112,7 @@ Check out [Filter requests by properties][15] to discover more special keywords 
 Open the [Command Menu][16] and run the `Dock to left` command to move DevTools to the left of your
 viewport.
 
-![DevTools docked to the left of the viewport](/web/updates/images/2020/03/dock-to-left.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Fxnb0smaHkiP5PrXKO76.png", alt="DevTools docked to the left of the viewport", width="800", height="481" %}
 
 !!!.aside.aside--note
 
@@ -126,7 +128,7 @@ Send feedback to [Chromium issue #1011679][18].
 
 The option for opening [Settings][19] from the **Main Menu** can now be found under **More Tools**.
 
-![Main Menu > More Tools > Settings](/web/updates/images/2020/03/settings.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/aR6qHi4byFMPYGPitlu0.png", alt="Main Menu > More Tools > Settings", width="800", height="468" %}
 
 Send feedback to [Chromium issue #1050855][20].
 
@@ -136,14 +138,14 @@ The DevTools and Lighthouse teams frequently got feedback from web developers th
 that it's possible to run [Lighthouse][21] from DevTools, but when they went to try it out they
 couldn't find the "Lighthouse" panel, so the **Audits** panel is now the **Lighthouse** panel.
 
-![The Lighthouse panel](/web/updates/images/2020/03/lighthouse.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IJz4ISkV6IoWnMjVjOwF.png", alt="The Lighthouse panel", width="800", height="828" %}
 
 ## Delete all Local Overrides in a folder {: #overrides }
 
 After setting up [Local Overrides][22] you can now right-click a folder and select the new **Delete
 all overrides** option to delete all Local Overrides in that folder.
 
-![Delete all overrides](/web/updates/images/2020/03/overrides.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MutXfOtMnvN3IKjSOb6q.png", alt="Delete all overrides", width="800", height="534" %}
 
 Send feedback to [Chromium issue #1016501][23].
 
@@ -156,7 +158,7 @@ You've been able to [visualize Long Tasks in the Performance panel][25] for a wh
 Chrome 83 the Long Task visualization UI in the Performance panel has been updated. The Long Task
 portion of a task is now colored with a striped red background.
 
-![The new Long Task UI](/web/updates/images/2020/03/long-task.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zB1QLni239q7xxTYqUhP.png", alt="The new Long Task UI", width="800", height="568" %}
 
 Send feedback to [Chromium issue #1054447][26].
 
@@ -171,7 +173,7 @@ Enable the new **Show only the minimum safe area for maskable icons** checkbox i
 pane to check that your maskable icon will look good on Android Oreo devices. Check out [Are my
 current icons ready?][29] to learn more.
 
-![The "Show only the minimum safe area for maskable icons" checkbox](/web/updates/images/2020/03/maskable-icons.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IRDdXdCbPKD2wkKWdPlk.png", alt="The "Show only the minimum safe area for maskable icons" checkbox", width="800", height="626" %}
 
 !!!.aside.aside--note
 
@@ -211,3 +213,4 @@ to cover it in What's New In DevTools (Chrome 81).
 [27]: https://web.dev/maskable-icon/
 [28]: https://web.dev/progressive-web-apps
 [29]: https://web.dev/maskable-icon/#are-my-current-icons-ready
+
