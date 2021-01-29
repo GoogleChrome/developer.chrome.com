@@ -10,7 +10,7 @@ pagination:
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   {% set absoluteFeedUrl %}{{ site.url }}{% if feed.url %}{{ feed.url | url }}{% endif  %}{% endset %}
-  <title>{{ feed.title or site.title }}</title>
+  <title>{{ site.title }}{% if feed.title %} - {{ feed.title }}{% endif %}</title>
   <subtitle>{{ feed.description or site.description }}</subtitle>
   <link href="{{ site.url }}{{ feed.permalink | url }}" rel="self"/>
   <link href="{{ absoluteFeedUrl }}" />
@@ -37,7 +37,7 @@ pagination:
     <author>
       <name>{{ site.title }}</name>
     </author>
-    {% endif  %}
+    {% endif %}
     <content type="html">{{ item.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {% endfor %}
