@@ -27,7 +27,7 @@ function stripForMeta(raw) {
  * Finds the RenderNamespace for the specified API.
  *
  * @param {{api: string}} param
- * @return {RenderNamespace|void}
+ * @return {RenderNamespace|undefined}
  */
 function namespaceForData({api}) {
   if (!api) {
