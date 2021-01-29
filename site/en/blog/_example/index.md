@@ -35,12 +35,25 @@ tags:
 # https://developer.chrome.com/docs/handbook/how-to/add-media/
 hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
 
-# Optional (if there is no hero image)
+# Required if there is a hero image
 alt: >
   An alternative text description of your hero image.
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem necessitatibus consectetur porro eveniet, facere quisquam laudantium architecto quae? Voluptates praesentium, dolore laborum sint est eligendi quam aliquam ratione nobis quaerat?
+A few rules:
+
+- Posts should **NOT** contain any h1's in markdown. The `title` element in the
+  YAML frontmatter will generate the page's h1. Only use h2-h4s in markdown.
+- Make sure all of your images have `alt` text unless they are purely
+  decorative.
+- Make sure authors appear in the `authorsData.json` file and that they have
+  uploaded a headshot to our image CDN. See [How to add an author](https://developer.chrome.com/docs/handbook/how-to/add-an-author/).
+- Make sure tags have been added to `supportedTags.json` and `tags.yml`. See [How to add a tag](https://developer.chrome.com/docs/handbook/how-to/add-a-tag/).
+- Code blocks should use triple backticks and include a language name. Example:
+
+```html
+<p>Hello world!</p>
+```
 
 ## My first heading
 

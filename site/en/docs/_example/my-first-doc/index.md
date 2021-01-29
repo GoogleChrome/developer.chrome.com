@@ -1,29 +1,40 @@
 ---
+# Required
 layout: 'layouts/doc-post.njk'
 
-# The page title. This appears at the top of the doc and as the page name
-# in Google Search.
+# Required
 title: My first doc
 
+# Required
 # This appears below the title and is an optional teaser
 subhead: 'A sentence of extra info to entice the reader.'
 
+# Required
 # This appears in the ToC of the project landing page at
 # /docs/[project-name]/. It also appears in the <meta description> used in 
 # Google Search.
 description: 'A brief, high level summary of this doc.'
 
-# The publish date
+# Required
 date: 2020-10-15
 
-# An optional updated date
+# Optional
+# Include an updated date when you update your post
 updated: 2020-10-16
 
-# A list of authors. These usernames correspond to the keys in the
-# _data/authorsData.json file.
+# Optional
+# How to add a new author
+# https://developer.chrome.com/docs/handbook/how-to/add-an-author/
 authors:
   - jakearchibald
   - kaycebasques
+
+# Optional
+# How to a new tag
+# https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
+tags:
+  - privacy
+  - security
 ---
 
 A few rules:
@@ -35,7 +46,8 @@ A few rules:
 - Don't forget to add your new doc to the `_data/docs/[project-name]/toc.yml` or
   else it won't show up in the site navigation!
 - Make sure authors appear in the `authorsData.json` file and that they have
-  uploaded a headshot to our image CDN.
+  uploaded a headshot to our image CDN. See [How to add an author](https://developer.chrome.com/docs/handbook/how-to/add-an-author/).
+- Make sure tags have been added to `supportedTags.json` and `tags.yml`. See [How to add a tag](https://developer.chrome.com/docs/handbook/how-to/add-a-tag/).
 - Code blocks should use triple backticks and include a language name. Example:
 
 ```html

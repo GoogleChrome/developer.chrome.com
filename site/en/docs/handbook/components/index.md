@@ -184,7 +184,7 @@ See the [Code](https://web.dev/handbook/markup-code/) post for more details.
 ## Columns
 
 Columns can be used to place elements side-by-side. This works well for
-blocks of code or images.
+blocks of code or images. On mobile the columns will stack vertically.
 
 ```md
 {% raw %}{% columns %}
