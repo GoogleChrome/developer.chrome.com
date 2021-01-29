@@ -43,7 +43,7 @@ let's dive in and see what's new for developers in Chrome 84!
 ## App icon shortcuts {: #app-icon-shortcuts }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ksYJMfb6G3OcRwDrtBsP.jpg", alt="" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ksYJMfb6G3OcRwDrtBsP.jpg", alt="", height="1109", width="800" %}
   <figcaption>
     App icon shortcuts for Twitter's PWA
   </figcaption>
@@ -149,7 +149,7 @@ for complete details.
 ## Wake lock API {: #wake-lock }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/z8SHisPaV1V3kk2MghIx.jpg", alt="" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/z8SHisPaV1V3kk2MghIx.jpg", alt="", height="639", width="800" %}
   <figcaption>
     Wake lock implementation on the Betty Crocker website.
   </figcaption>

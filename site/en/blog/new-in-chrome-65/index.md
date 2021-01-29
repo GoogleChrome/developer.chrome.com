@@ -81,7 +81,7 @@ response:
 'Server-Timing': 'su=42;"Start-up",db-read=142;"Database Read"'
 ```
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/IPeIflKc639uL515Tml2.png", alt="", className="float-right" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/IPeIflKc639uL515Tml2.png", alt="", className="float-right", height="418", width="640" %}
 
 They're shown in Chrome DevTools, or you can pull them out of the response
 header and save them with your other performance analytics.

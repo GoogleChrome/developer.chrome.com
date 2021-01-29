@@ -60,7 +60,7 @@ at the same speed, regardless of network connection. They provide rich,
 engaging experiences via modern web features that take full advantage of the
 device capabilities.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hFEZ7fiA25H8btNM2kRU.jpg", alt="", className="float-right" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hFEZ7fiA25H8btNM2kRU.jpg", alt="", className="float-right", height="500", width="800" %}
 
 Users can install your PWA from Chrome's context menu, or you can directly
 promote the installation experience using the
@@ -99,7 +99,7 @@ A Signed HTTP Exchange makes it possible to create "portable" content that can
 be delivered by other parties, and this is the key aspect, it retains the
 integrity and attribution of the original site.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZORbsIuXdcZq8I9mt3wR.svg", alt="Signed Exchange: The essence", className="float-left" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZORbsIuXdcZq8I9mt3wR.svg", alt="Signed Exchange: The essence", className="float-left", height="138", width="300" %}
 
 This decouples the origin of the content from the server that delivers it,
 but because it's signed, it's like it's being delivered from your server.
@@ -127,7 +127,7 @@ It's always been possible to create stylesheets using JavaScript. Create a
 sheet property to obtain a reference to the underlying `CSSStyleSheet` instance,
 and set the style.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/0O8yvT2v0Xs8RFV159Ar.png", alt="Diagram showing preparation and application of CSS", className="float-right" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/0O8yvT2v0Xs8RFV159Ar.png", alt="Diagram showing preparation and application of CSS", className="float-right", height="610", width="800" %}
 
 Using this method tends to lead to style sheet bloat. Even worse, it causes a
 flash of unstyled content. Constructable Stylesheets make it possible to define

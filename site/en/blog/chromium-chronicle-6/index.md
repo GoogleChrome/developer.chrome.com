@@ -21,7 +21,7 @@ that allows you to **visualize your issues in a Kanban style board**.
 When you're viewing a list of issues, you can click the "Grid" button to
 activate grid mode!
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hcqAX7n6MD5nYfDbWkLP.png", alt="" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hcqAX7n6MD5nYfDbWkLP.png", alt="", height="124", width="800" %}
 
 While on the grid page, you can customize your view to **sort issues by
 almost any field you want**! Status, Priority, NextAction, Milestone,
@@ -31,14 +31,14 @@ The flexibility of the grid view allows you to **customize it to fit your
 team's needs**. For example, below we've set up the grid view to show all
 pending Q3 Monorail work, sorted by owner and sprint date.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/SLPm26hRL1ic74nbnDlY.png", alt="" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/SLPm26hRL1ic74nbnDlY.png", alt="", height="140", width="800" %}
 
 If you need more information on each issue, you can view the grid view with
 "Tile" cells instead. And if you want a bird's eye view of many, many issues,
 you can **view issues in the grid view as counts**. In fact, the grid view even
 supports loading up to 6,000 issues at once.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/qus5UiIZeYWxeIig0Kd0.png", alt="" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/qus5UiIZeYWxeIig0Kd0.png", alt="", height="170", width="800" %}
 
 All setting changes in the grid view are reflected in the page URL. So once
 you've configured your grid to your needs, you can **share a link to your new

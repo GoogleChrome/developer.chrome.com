@@ -16,10 +16,10 @@
 
 declare global {
   export interface ImgArgs {
-    src?: string;
-    alt?: string;
-    width?: string;
-    height?: string;
+    src: string;
+    alt: string;
+    width: string;
+    height: string;
     sizes?: string;
     lazy?: boolean;
     className?: string;

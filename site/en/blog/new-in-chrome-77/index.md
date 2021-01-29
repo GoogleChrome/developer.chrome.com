@@ -40,13 +40,13 @@ seeing on screen. First Paint, and First Contentful Paint, only capture the
 beginning of the experience. First Meaningful Paint is better, but it's
 complex, and sometimes wrong.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Bwe8cTocyJGd5wNiaFMm.png", alt="" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Bwe8cTocyJGd5wNiaFMm.png", alt="", height="279", width="800" %}
 
 The **Largest Contentful Paint API**, available starting in Chrome 77, reports
 the render time of the largest content element visible in the viewport and
 makes it possible to measure when the main content of the page is loaded.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/n41KwUDKNUFZAKmWDTkr.png", alt="" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/n41KwUDKNUFZAKmWDTkr.png", alt="", height="311", width="800" %}
 
 To measure the Largest Contentful Paint, you'll need to use a Performance
 Observer, and look for `largest-contentful-paint` events.
@@ -163,7 +163,7 @@ Check out [Browser level lazy-loading for the web][wd-lazy] on web.dev for detai
 
 ## Chrome Dev Summit 2019 {: #cds2019 }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4L4iDgNCnYAykp3UXZRe.png", alt="", className="float-right" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4L4iDgNCnYAykp3UXZRe.png", alt="", className="float-right", height="420", width="800" %}
 
 **The Chrome Dev Summit is coming up November 11th and 12th.**
 
