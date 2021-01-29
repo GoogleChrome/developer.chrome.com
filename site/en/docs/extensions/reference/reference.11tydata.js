@@ -27,10 +27,18 @@ function stripForMeta(raw) {
  * Finds the RenderNamespace for the specified API.
  *
  * @param {{api: string}} param
- * @return {RenderNamespace|undefined}
+ * @return {RenderNamespace|void}
  */
 function namespaceForData({api}) {
-  return indexedTypes[api];
+  if (!api) {
+    return undefined;
+  }
+  if (api in indexedTypes) {
+    return indexedTypes[api];
+  }
+  throw new Error(
+    `cannot build, reference "api: ${api}" is missing from types`
+  );
 }
 
 module.exports = {
