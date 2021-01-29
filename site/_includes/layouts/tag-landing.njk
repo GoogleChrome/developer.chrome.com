@@ -13,7 +13,7 @@
       {% for post in paginationObject.items %}
         {{ blogCard(post) }}
       {% endfor %}
-      {% include 'partials/pagination.njk' %}
     </div>
+    {% include 'partials/pagination.njk' %}
   </div>
 {% endblock %}

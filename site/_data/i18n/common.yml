@@ -101,8 +101,8 @@ skip_to_content:
   en: 'Skip to content'
   es: 'Saltar al contenido'
 
-previous:
-  en: 'Previous'
+newer_posts:
+  en: 'Newer posts'
 
-next:
-  en: 'Next'
+older_posts:
+  en: 'Older posts'

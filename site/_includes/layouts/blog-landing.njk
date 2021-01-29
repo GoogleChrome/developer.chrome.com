@@ -12,9 +12,7 @@
       {% for post in pagination.items %}
         {{ blogCard(post) }}
       {% endfor %}
-
-      {# TODO: If there's no pagination don't include this #}
-      {% include 'partials/pagination.njk' %}
     </div>
+    {% include 'partials/pagination.njk' %}
   </div>
 {% endblock %}
