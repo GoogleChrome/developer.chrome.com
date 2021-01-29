@@ -75,7 +75,7 @@ Snippets are scripts which you can run on any page. Imagine that you repeatedly 
 following code in the **Console**, in order to insert the jQuery library into a page, so that you
 can run jQuery commands from the **Console**:
 
-```
+```js
 let script = document.createElement('script');
 script.src = 'https://code.jquery.com/jquery-3.2.1.min.js';
 script.crossOrigin = 'anonymous';
