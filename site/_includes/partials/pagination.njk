@@ -1,3 +1,5 @@
+{% from 'macros/icon.njk' import icon with context %}
+
 {# If an alias exists for a pagination element use the pagination navigation.
 This would typically exist for a collections that has went through the `add-pagination`
 function used to allow pagination to handle multi-dimensional arrays. This is used in the
@@ -10,11 +12,15 @@ element for the pagination (stock) navigation #}
   {% set paginationObject = pagination %}
 {% endif %}
 
-<nav>
-  {% if paginationObject.href.previous %}
-    <a href="{{ paginationObject.href.previous }}">{{ 'i18n.common.previous' | i18n(locale) }}</a>
-  {% endif %}
-  {% if paginationObject.href.next %}
-    <a href="{{ paginationObject.href.next }}">{{ 'i18n.common.next' | i18n(locale) }}</a>
-  {% endif %}
+{% if paginationObject.href.previous or paginationObject.href.next %}
+<nav class="pagination gap-top-300 pad-left-400 pad-right-400">
+  <a class="pagination__button type--small" {% if paginationObject.href.previous %} href="{{ paginationObject.href.previous }}" {% endif %}>
+    {{ icon('arrow-back') }}
+    <span>{{ 'i18n.common.newer_posts' | i18n(locale) }}</span>
+  </a>
+  <a class="pagination__button type--small" {% if paginationObject.href.next %} href="{{ paginationObject.href.next }}" {% endif %}>
+    <span>{{ 'i18n.common.older_posts' | i18n(locale) }}</span>
+    {{ icon('arrow-forward') }}
+  </a>
 </nav>
+{% endif %}
