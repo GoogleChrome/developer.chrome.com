@@ -29,7 +29,7 @@ contents](/docs/handbook/how-to/add-a-project/#configure-the-table-of-contents-f
 ## Get busy writing! 👩🏽‍💻
 
 Docs support markdown syntax with some additional features and shortcodes.
-See the components guide (TODO) for a full list of supported elements.
+See the [components guide](/docs/handbook/components/) for a full list of supported elements.
 
 ### Uploading media 📸
 
