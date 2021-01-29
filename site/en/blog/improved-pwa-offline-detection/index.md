@@ -15,7 +15,6 @@ tags:
   - progressive-web-apps
 ---
 
-
 !!!.aside
 **TL;DR:** Offline support has been part of the PWA installability criteria
 since the beginning. We are updating the offline detection logic to ensure a
@@ -93,15 +92,13 @@ time. At the other end of the spectrum, a
 [custom offline fallback page][offline-fallback].
 
 !!!.aside
-Check out [Workbox][workbox], a set of libraries that can power a production-ready service worker for your Progressive Web App.
+Check out [Workbox][workbox], a set of libraries that can power a
+production-ready service worker for your Progressive Web App.
 
-**Have a question about service workers?** Ask it on [Stack Overflow][so] and tag
-it with [`service-worker`][so-sw] and [`progressive-web-apps`][so-pwa], our team regularly monitors
-those tags and does our best to help.
+**Have a question about service workers?** Ask it on [Stack Overflow][so] and
+tag it with [`service-worker`][so-sw] and [`progressive-web-apps`][so-pwa],
+our team regularly monitors those tags and does our best to help.
 !!!
-
-[so-pwa]: https://stackoverflow.com/questions/tagged/progressive-web-apps
-[so-sw]: https://stackoverflow.com/questions/tagged/service-worker
 
 ## When will this change take effect?
 
@@ -153,3 +150,5 @@ Your feedback will help us understand and mitigate any concerns you have.
 [offline-fallback]: https://web.dev/offline-fallback-page/
 [so]: https://stackoverflow.com/
 [workbox]: https://developers.google.com/web/tools/workbox
+[so-pwa]: https://stackoverflow.com/questions/tagged/progressive-web-apps
+[so-sw]: https://stackoverflow.com/questions/tagged/service-worker
