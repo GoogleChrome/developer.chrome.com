@@ -6,3 +6,5 @@ architecture:
   - url: native-client
   - url: multidevice
   - url: android
+infrastructure:
+  - url: versionhistory
