@@ -50,6 +50,9 @@
   "privacy": {
     "title": "i18n.tags.privacy"
   },
+  "progressive-web-apps": {
+    "title": "i18n.tags.progressive-web-apps"
+  },
   "removals": {
     "title": "i18n.tags.removals"
   },
