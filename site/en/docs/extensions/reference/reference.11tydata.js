@@ -37,7 +37,8 @@ function namespaceForData({api}) {
     return indexedTypes[api];
   }
   throw new Error(
-    `cannot build, reference "api: ${api}" is missing from types`
+    `cannot build, reference "api: ${api}" ` +
+      'is missing from types (run `npm run types`?)'
   );
 }
 
