@@ -44,7 +44,7 @@ can upload them to the Chrome Web Store. Manifest v3 is a new extension
 platform, that makes Chrome extensions more secure, performant, and privacy
 respecting, by default.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XDUO2gCu8GcokIqjB6KE.png", alt="", className="float-right" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XDUO2gCu8GcokIqjB6KE.png", alt="", className="float-right", height="648", width="800" %}
 
 For example, it disallows remotely hosted code, which helps Chrome Web Store
 reviewers better understand what risks an extension poses. And should allow you

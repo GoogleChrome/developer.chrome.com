@@ -47,7 +47,7 @@ We recently announced an [adjusted release schedule][sched-adjust] for Chrome.
 We did this because it is important to ensure Chrome continues to be stable,
 secure, and work reliably for anyone who depends on it.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/GHbwYSfm0D7biJ0GZhOL.jpg", alt="Screenshot of Chromium Calendar", className="float-right" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/GHbwYSfm0D7biJ0GZhOL.jpg", alt="Screenshot of Chromium Calendar", className="float-right", height="391", width="800" %} %}
 
 In short, Chrome 81 is rolling out now. We're going to skip Chrome 82, and move
 directly to Chrome 83, which will be released 3 weeks earlier than planned,
@@ -65,7 +65,7 @@ schedule in the [Chromium Developers group][cr-dev]. You can also check our
 
 ## WebXR hit testing {: #hit-testing }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZQU1XkZB415LOjJZ11L4.jpg", alt="", className="float-right" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZQU1XkZB415LOjJZ11L4.jpg", alt="", className="float-right", height="1422", width="800" %} %}
 
 There are a handful of native apps that let you see what a new couch or chair
 might look like in your home. With an update to the Web XR Device API, it's
@@ -86,7 +86,7 @@ for more details.
 App icon badging is graduating from Origin Trial to stable, which means you
 can now use it on any site, without a token.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/OYVASlDc4gtR75yunTHh.jpg", alt="", className="float-right" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/OYVASlDc4gtR75yunTHh.jpg", alt="", className="float-right", height="388", width="658" %}
 
 Badging of app icons makes it easy to subtly notify the user that there is
 some new activity that might require their attention, or to indicate a small

@@ -74,7 +74,7 @@ async function saveFile(fileHandle) {
 ```
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9zxgacmiGxvljxLSDkOD.jpg", alt="permission prompt screen shot" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9zxgacmiGxvljxLSDkOD.jpg", alt="permission prompt screen shot", height="281", width="800" %}
   <figcaption>
     Prompt to the user requesting permission to write to a file.
   </figcaption>
@@ -94,7 +94,7 @@ There's a lot more to the API, so check out the
 ## Origin Trial: WebHID {: #web-hid }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/s3z7rDiMGGKttmxRSSlL.jpg", alt="Game controller" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/s3z7rDiMGGKttmxRSSlL.jpg", alt="Game controller", height="534", width="800" %}
   <figcaption>
     Game controller.
   </figcaption>
@@ -125,7 +125,7 @@ Web based video chat apps can use the telephony buttons on specialized
 speakers, to start or end calls,  mute the audio, and more.
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/zzryfqePHZDWDS8W4OQy.jpg", alt="HID device picker" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/zzryfqePHZDWDS8W4OQy.jpg", alt="HID device picker", height="513", width="800" %}
   <figcaption>
     HID device picker.
   </figcaption>

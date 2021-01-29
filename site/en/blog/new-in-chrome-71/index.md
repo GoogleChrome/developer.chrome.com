@@ -45,7 +45,7 @@ additional changes in Chrome 71.
 ## Display relative times with `Intl.RelativeTimeFormat()` {: #relative-times }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/FVgovCvB89Sbz4csuwhM.jpg", alt="" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/FVgovCvB89Sbz4csuwhM.jpg", alt="", height="353", width="591" %}
   <figcaption>
     Twitter showing relative time for latest post
   </figcaption>
@@ -84,7 +84,7 @@ post for full details.
 ## Specifying underline location for vertical text {: #underline }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/jboAMumW8Pu2fdCF3FRk.png", alt="" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/jboAMumW8Pu2fdCF3FRk.png", alt="", height="315", width="268" %}
   <figcaption>
     Vertical text with inconsistent underlines
   </figcaption>

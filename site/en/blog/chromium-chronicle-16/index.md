@@ -29,7 +29,7 @@ apps, while on Mac, Keystone is designed to centrally update all Mac software
 that Google ships; it is installed by the software it updates during install
 or first launch.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XPiCoUveSMYp24BbOT50.jpg", alt="Overview of how Omaha works"%}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XPiCoUveSMYp24BbOT50.jpg", alt="Overview of how Omaha works", height="431", width="701" %}
 
 The update process is controlled by rules in Omaha Configuration Language. The
 following example shows an update for Chrome extensions update checks:

@@ -66,7 +66,7 @@ for complete details.
 ## More control over the PWA mini-infobar {: #prevent-mini-infobar }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/e8QdF96TkOMv3pzLAVYN.png", alt="" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/e8QdF96TkOMv3pzLAVYN.png", alt="", height="417", width="800" %}
   <figcaption>
     Example of the Add to Home screen mini-infobar for AirHorner
   </figcaption>

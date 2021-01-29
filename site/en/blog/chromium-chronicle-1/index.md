@@ -14,7 +14,6 @@ tags:
   - chromium-chronicle
 ---
 
-
 The Chrome team is proud to introduce the Chromium Chronicle, a monthly
 series geared specifically to Chromium developers, developers who build the
 browser.
@@ -37,9 +36,6 @@ Chrome code that needs in-process asynchronous execution typically posts tasks
 to sequences. Sequences are chrome-managed "virtual threads" and are
 [preferred to creating your own thread][prefer-sequences]. How does an object
 know which sequence to post to?
-
-
-{% img src="image/tcFciHGuF3MxnTr1y5ue01OGLBn2/MuHNq8gxlB1EsyCvOzuK.jpg", alt="ALT_TEXT_HERE", width="374", height="274" %}
 
 {% Compare 'worse' %}
 

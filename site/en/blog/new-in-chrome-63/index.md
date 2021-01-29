@@ -121,7 +121,7 @@ page performance!
 
 ## Permission UI changes {: #permissions }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M1qtkctKj1pjGmSTbInN.jpg", alt="", className="float-right" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M1qtkctKj1pjGmSTbInN.jpg", alt="", className="float-right", height="491", width="800" %}
 
 I love web push notifications but I've been really frustrated by the number of
 sites asking for permission on page load, without any context - and I'm not

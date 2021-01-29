@@ -20,7 +20,7 @@ You may find you are asked to fix high-priority security bugs discovered by
 ClusterFuzz. What is it? Should you take those bugs seriously? How can you
 help?
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/YAtzVlCiCpI5kX6IfgJ3.png", alt="Fuzzing flow chart" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/YAtzVlCiCpI5kX6IfgJ3.png", alt="Fuzzing flow chart", height="108", width="681" %}
 
 **ClusterFuzz feeds input to Chrome and watches for crashes.** Some of those
 Chrome builds have extra checks turned on, for example [AddressSanitizer][go-asan],
@@ -52,7 +52,7 @@ converted into `protobufs`. Once ClusterFuzz finds a crash, it will try to
 **minimize the input test case and even bisect to find the offending commit**.
 It finds a lot...
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/7KdI3HXVypDiK7GJZ3Gf.png", alt="", className="float-left" %}
+{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/7KdI3HXVypDiK7GJZ3Gf.png", alt="", className="float-left", height="430", width="800" %}
 
 You can help:
 
