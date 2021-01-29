@@ -24,7 +24,7 @@ Use the Chrome DevTools **Sources** panel to:
 
 Use the **Page** pane to view all of the resources that the page has loaded.
 
-![The Page pane](/web/tools/chrome-devtools/images/sources-page-pane.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/smmuE51BssHZBgSb2Ytb.png", alt="The Page pane", width="800", height="536" %}
 
 **Figure 1**. The **Page** pane
 
@@ -40,7 +40,7 @@ How the **Page** pane is organized:
 Click a file in the **Page** pane to view its contents in the **Editor** pane. You can view any type
 of file. For images, you see a preview of the image.
 
-![Viewing a file in the Editor pane](/web/tools/chrome-devtools/images/sources-editor-pane.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ByErR7HFeQ7zOVjF4Wyp.png", alt="Viewing a file in the Editor pane", width="800", height="530" %}
 
 **Figure 2**. Viewing the contents of `jquery-bundle.js` in the **Editor** pane
 
@@ -50,7 +50,7 @@ Use the **Editor** pane to edit CSS and JavaScript. DevTools updates the page to
 For example, if you edit the `background-color` of an element, you'll see that change take effect
 immediately.
 
-![Editing CSS in the Editor pane](/web/tools/chrome-devtools/images/edit-css.gif)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/p0sdJ5tx5yQx1cuOLimO.gif", alt="Editing CSS in the Editor pane", width="800", height="461" %}
 
 **Figure 3**. Editing CSS in the **Editor** pane to change the background color of an element from
 blue to red
@@ -62,7 +62,7 @@ JavaScript changes that take effect are those that you make inside of functions.
 re-ran the entire script after making the change, then the text `A` would have been logged to the
 **Console**.
 
-![Editing JavaScript in the Editor pane](/web/tools/chrome-devtools/images/edit-js.gif)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vtNDAWnzXAV5H0cjkZdT.gif", alt="Editing JavaScript in the Editor pane", width="800", height="461" %}
 
 **Figure 4**. Editing JavaScript in the **Editor** pane
 
@@ -86,14 +86,14 @@ document.head.appendChild(script);
 Instead, you can save this code in a **Snippet** and run it with a couple of button clicks, any time
 you need it. DevTools saves the **Snippet** to your file system.
 
-![A Snippet that inserts the jQuery library into a page.](/web/tools/chrome-devtools/images/snippet.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nl6ALIOWRQZdn35Y86ip.png", alt="A Snippet that inserts the jQuery library into a page.", width="800", height="430" %}
 
 **Figure 5**. A **Snippet** that inserts the jQuery library into a page
 
 To run a **Snippet**:
 
 - Open the file via the **Snippets** pane, and click **Run**
-  ![The Run button](/web/tools/chrome-devtools/images/run-snippet.png).
+  {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/AYD0vcbsamPjNAhXQ2Ns.png", alt="The Run button", width="20", height="20" %}.
 - Open the [**Command Menu**][9], delete the `>` character, type `!`, type the name of your
   **Snippet**, then press Enter.
 
@@ -109,7 +109,7 @@ properties and variables, run JavaScript in the **Console**, and more.
 
 See [Get Started With Debugging JavaScript][11] to learn the basics of debugging in DevTools.
 
-![Debugging JavaScript](/web/tools/chrome-devtools/images/debugging.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FKKzVSy54zN5nRV0DkVk.png", alt="Debugging JavaScript", width="800", height="526" %}
 
 **Figure 6**. Debugging JavaScript
 
