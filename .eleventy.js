@@ -60,7 +60,7 @@ module.exports = eleventyConfig => {
   // Copy binary assets over to the dist/ directory.
   // images should ideally be uploaded to our CDN but if, for whatever reason,
   // they can't be, then this passthrough copy will pick them up.
-  eleventyConfig.addPassthroughCopy('site/en/**/*.{jpg,jpeg,png,webp}');
+  eleventyConfig.addPassthroughCopy('site/en/**/*.{jpg,jpeg,png,webp,gif}');
 
   // Make .yml files work in the _data directory.
   eleventyConfig.addDataExtension('yml', contents => yaml.safeLoad(contents));
