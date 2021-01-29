@@ -173,7 +173,7 @@ Enable the new **Show only the minimum safe area for maskable icons** checkbox i
 pane to check that your maskable icon will look good on Android Oreo devices. Check out [Are my
 current icons ready?][29] to learn more.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IRDdXdCbPKD2wkKWdPlk.png", alt="The "Show only the minimum safe area for maskable icons" checkbox", width="800", height="626" %}
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IRDdXdCbPKD2wkKWdPlk.png", alt="The 'Show only the minimum safe area for maskable icons' checkbox", width="800", height="626" %}
 
 !!!.aside.aside--note
 
