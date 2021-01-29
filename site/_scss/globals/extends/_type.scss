@@ -251,7 +251,7 @@
 
   &--code {
     @include apply-utility('font', 'mono');
-    @include font-setup(15px, 26px);
+    @include font-setup(15px, 26px, false, false);
   }
 
   &--full-bleed {
