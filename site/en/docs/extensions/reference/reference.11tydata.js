@@ -30,7 +30,16 @@ function stripForMeta(raw) {
  * @return {RenderNamespace|undefined}
  */
 function namespaceForData({api}) {
-  return indexedTypes[api];
+  if (!api) {
+    return undefined;
+  }
+  if (api in indexedTypes) {
+    return indexedTypes[api];
+  }
+  throw new Error(
+    `cannot build, reference "api: ${api}" ` +
+      'is missing from types (run `npm run types`?)'
+  );
 }
 
 module.exports = {
