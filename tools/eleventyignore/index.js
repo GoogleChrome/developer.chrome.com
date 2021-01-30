@@ -38,7 +38,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const isCI = process.env.CI;
 
 // Only use ignore environment variables during dev and CI builds.
-if (true) {
+if (!isProduction || isCI) {
   // Ignore /docs/
   if (process.env.ELEVENTY_IGNORE_DOCS) {
     console.log(warning('Ignoring ALL docs.'));
