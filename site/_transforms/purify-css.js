@@ -40,6 +40,7 @@ const purifyCss = async (content, outputPath) => {
           raw: content,
           extension: 'html',
         },
+        './site/_js/**/*.js',
       ],
       css: [
         {
@@ -49,7 +50,7 @@ const purifyCss = async (content, outputPath) => {
       fontFace: true,
       // whitelist utility classes used by custom elements.
       // these type classes are used by search-box.
-      whitelist: ['type--h6', 'type--small', 'type--label', 'overflow-hidden'],
+      // whitelist: ['type--h6', 'type--small', 'type--label', 'overflow-hidden'],
       defaultExtractor: content => {
         return content.match(/[A-Za-z0-9\\:_-]+/g) || [];
       },
