@@ -72,12 +72,10 @@
 // Ensure that .code-sections has a margin-top, except in cases where it's
 // already in a stack (as this will bring its margin).
 // purgecss tries to remove this bit.
-/* purgecss start ignore */
 /* stylelint-disable-next-line selector-max-compound-selectors */
 :not(.stack) > * + .code-sections {
   margin-top: get-size(300);
 }
-/* purgecss end ignore */
 
 // This is used for method signatures. We need to:
 //  - use opacity to make them less pronounced

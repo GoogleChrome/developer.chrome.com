@@ -52,9 +52,7 @@
   }
 }
 
-/* purgecss start ignore */
 %navigation__link[aria-current='page'] {
   background: var(--color-secondary);
   color: var(--color-side-nav-active);
 }
-/* purgecss end ignore */
