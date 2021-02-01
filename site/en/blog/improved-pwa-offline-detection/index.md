@@ -49,7 +49,7 @@ heuristic.
 
 Previously, the installability check passed if the page had a service worker
 installed that included a `fetch` event handler.  Chrome did not have the
-infrastructure for running simulated requests through the service worker, so
+capability to simulate requests through the service worker, so
 a full check of correct offline behaviour was not possible.
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/qrDoFGCM2s8pBvM4n7Dv.png", alt="Diagram of service worker", width="800", height="385" %}
@@ -84,11 +84,11 @@ HTTP 200 response code, you will need to update your PWA to meet the updated
 installability criteria.
 
 It's up to you to decide what kind of offline experience you want to provide.
-On one end of the spectrum, full functionality, pre-caching all the resources
-and data needed, and syncing data with your server when the user is online
-again. Caching resources will also help improve [core web vital metrics][cwv]
-because it eliminates the need to download resources from the network every
-time. At the other end of the spectrum, a
+On one end of the spectrum is a fully functional offline experience. This means
+pre-caching all the resources and data needed, and syncing data with your
+server when the user is online again. Caching resources will also help improve
+[core web vital metrics][cwv] because it eliminates the need to download
+resources from the network every time. At the other end of the spectrum, a
 [custom offline fallback page][offline-fallback].
 
 !!!.aside
