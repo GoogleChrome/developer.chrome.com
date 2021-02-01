@@ -49,18 +49,18 @@ heuristic.
 
 Previously, the installability check passed if the page had a service worker
 installed that included a `fetch` event handler.  Chrome did not have the
-capability to simulate requests through the service worker, so
-a full check of correct offline behaviour was not possible.
+capability to simulate requests through the service worker, so a full check of
+correct offline behaviour was not possible.
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/qrDoFGCM2s8pBvM4n7Dv.png", alt="Diagram of service worker", width="800", height="385" %}
 
-In the current logic, Chrome does not validate whether the `fetch` event
-handler returned a valid resource with HTTP 200 during the offline check.
-Chrome only checks whether the service worker actually has a `fetch` handler.
+That meant that Chrome did not have the ability to validate whether the `fetch`
+event handler returned a valid resource with HTTP 200 during the offline check.
+Chrome only checked whether the service worker actually has a `fetch` handler.
 
-Now that Chrome has the infrastructure to run simulated offline requests
-through the service worker, we can update the offline detection logic to
-better reflect actual offline support of the application.
+Starting in Chrome 89, Chrome has the ability to run simulated offline requests
+through the service worker, allowing us to update the offline detection logic
+to better reflect actual offline support of the application.
 
 ## Updated offline detection logic
 
