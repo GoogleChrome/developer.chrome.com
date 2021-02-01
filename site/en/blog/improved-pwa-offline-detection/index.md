@@ -20,7 +20,7 @@ tags:
 !!!.aside
 **TL;DR:** Offline support has been part of the PWA installability criteria
 since the beginning. We are updating the offline detection logic to ensure a
-PWA actually provides an offline experience, and close the loophole used by
+PWA actually provides an offline experience, closing the loophole used by
 some developers to meet the installability critiera. In the future,
 sites with empty `fetch` event handlers will no longer meet the criteria.
 !!!
@@ -34,8 +34,8 @@ coincidentally PWAs, is that the app must continue to work even if the device
 is offline.  That means no Chrome Dino screen if the user loses network
 access on their device!
 
-The goal of all PWA criteria checks is to help ensure users have a high
-quality, app competitive experience when browsing the web. Chrome performs
+The goal of all PWA criteria is to help ensure users have a high
+quality, app-competitive experience when browsing the web. Chrome performs
 checks against [PWA criteria][pwa-criteria] before enabling the install
 capability for a PWA.
 
@@ -50,35 +50,35 @@ checklist of a PWA for several years. However, the check was a simplified
 heuristic.
 
 Previously, the installability check passed if the page had a service worker
-installed that included a `fetch` event handler.  Chrome did not have the
-capability to simulate requests through the service worker, so a full check of
+that included a `fetch` event handler.  Chrome did not have the
+ability to simulate requests through the service worker, so a full check of
 correct offline behaviour was not possible.
 
 {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/qrDoFGCM2s8pBvM4n7Dv.png", alt="Diagram of service worker", width="800", height="385" %}
 
 That meant that Chrome did not have the ability to validate whether the `fetch`
 event handler returned a valid resource with HTTP 200 during the offline check.
-Chrome only checked whether the service worker actually has a `fetch` handler.
+Chrome only checked whether the service worker actually had a `fetch` handler.
 
 Starting in Chrome 89, Chrome has the ability to run simulated offline requests
-through the service worker, allowing us to update the offline detection logic
+through the service worker, allowing improved offline detection logic
 to better reflect actual offline support of the application.
 
 ## Updated offline detection logic
 
 The updated offline detection logic checks:
 
-1) That there is a service worker installed for the page.
-2) That the installed service worker has a `fetch` event.
-3) **That the installed service worker `fetch` event returns an HTTP 200
+* That there is a service worker installed for the page.
+* That the installed service worker has a `fetch` event.
+* **That the installed service worker `fetch` event returns an HTTP 200
    status code (indicating a successful fetch) in simulated offline mode.**
 
 ## What does this mean for developers?
 
 A properly implemented offline mode requires that the `fetch` handler return
 a resource with HTTP 200, so, if you've correctly implemented an offline mode
-for your Progressive Web App, this change to the offline detection logic will
-not require any action on your part.
+for your Progressive Web App, this change to offline detection requires no
+action by you.
 
 On the other hand, if you only defined a `fetch` handler stub, or if your
 offline mode isn't working properly and a resource is not returned with an
@@ -90,7 +90,7 @@ On one end of the spectrum is a fully functional offline experience. This means
 pre-caching all the resources and data needed, and syncing data with your
 server when the user is online again. Caching resources will also help improve
 [core web vital metrics][cwv] because it eliminates the need to download
-resources from the network every time. At the other end of the spectrum, a
+resources from the network every time. At the other end of the spectrum is a
 [custom offline fallback page][offline-fallback].
 
 !!!.aside
@@ -98,15 +98,15 @@ Check out [Workbox][workbox], a set of libraries that can power a
 production-ready service worker for your Progressive Web App.
 
 **Have a question about service workers?** Ask it on [Stack Overflow][so] and
-tag it with [`service-worker`][so-sw] and [`progressive-web-apps`][so-pwa],
-our team regularly monitors those tags and does our best to help.
+tag it with [`service-worker`][so-sw] and [`progressive-web-apps`][so-pwa].
+Our team regularly monitors those tags and does our best to help.
 !!!
 
 ## When will this change take effect?
 
-For most PWA developers who correctly implemented offline mode, this change
+For most PWA developers, specifically those who correctly implemented offline mode, this change
 will not impact your applications.  However, we want to give adequate time
-for developers with apps that have broken offline modes to address the issue.
+to address this issue for developers with apps that have broken offline modes.
 
 ### Warning starting Chrome 89 (March 2021)
 
@@ -115,20 +115,20 @@ valid response when offline, a message will be displayed under the *Issues*
 tab of developer tools. The `beforeinstallprompt` event, and in-browser
 installation prompts will still be provided.
 
-Lighthouse v7 will also indicate that there's a problem with the
+Lighthouse v7 and later will also indicate when there's a problem with the
 offline implementation and provide guidance on how to fix it.
 
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/PuyRpRfJnVs8o8aTdHlA.png", alt="Screen shot of DevTools showing warning message in Console", width="800", height="115" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/PuyRpRfJnVs8o8aTdHlA.png", alt="Screen shot of DevTools showing warning message in Console.", width="800", height="115" %}
   <figcaption>
-    Warning message in the Chrome DevTools Console
+    Warning message in the Chrome DevTools Console.
   </figcaption>
 </figure>
 
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/TjqKPXYUF5Y3tjeZLSwT.png", alt="Screenshot of DevTools showing warning message in Application tab", width="800", height="175" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/TjqKPXYUF5Y3tjeZLSwT.png", alt="Screenshot of DevTools showing warning message in Application tab.", width="800", height="175" %}
   <figcaption>
-    Warning message in Application tab &gt; Manifest &gt; Installability
+    Warning message in Application tab &gt; Manifest &gt; Installability.
   </figcaption>
 </figure>
 
