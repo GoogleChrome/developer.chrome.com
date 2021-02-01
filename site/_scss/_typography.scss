@@ -133,6 +133,10 @@
     font-size: inherit;
   }
 
+  figcaption {
+    @extend %type--caption;
+  }
+
   &--full-bleed {
     @extend %type--full-bleed;
   }
