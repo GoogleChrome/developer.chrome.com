@@ -9,6 +9,8 @@ description: >
 date: 2021-02-02
 hero: image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4dPIp42oCe3Vq3OPMIuQ.png
 alt: Screenshot of Chrome dino game.
+authors:
+  - pjmclachlan
 tags:
   - chrome-89
   - chrome-92
