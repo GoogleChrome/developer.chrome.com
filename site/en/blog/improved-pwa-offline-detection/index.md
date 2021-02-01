@@ -45,8 +45,8 @@ for an offline mode, can be installed to the device from Chrome.
 
 ## Current offline detection logic
 
-Verification of offline support has been part of the browser's installability
-checklist of a PWA for several years. However, the check was a simplified
+Verification of offline support has been part of PWA installability
+criteria for several years; however, Chrome's check was a simplified
 heuristic.
 
 Previously, the installability check passed if the page had a service worker
