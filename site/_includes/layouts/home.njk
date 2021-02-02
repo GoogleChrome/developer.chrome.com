@@ -10,14 +10,13 @@
 
     {{ heroCard() }}
     <div class="masonry-grid gap-top-500">
-      {% include 'partials/featured-cds-card.njk' %}
       {% set blog = 'blog-' + locale %}
       {{ featuredPostCard(collections[blog][0]) }}
       {{ featuredDocsCard(featured_projects) }}
+      {% include 'partials/report-a-bug.njk' %}
       {% if tweets and tweets.length %}
         {{ featuredTweetCard() }}
       {% endif %}
-      {% include 'partials/report-a-bug.njk' %}
     </div>
 
     {#
