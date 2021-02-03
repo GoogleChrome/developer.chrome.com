@@ -151,7 +151,6 @@ function parseChromeTypesFile(typesPath) {
       const all = exportedChildren(reflection, mask);
       for (const name in all) {
         const rt = declarationToType(all[name]);
-        rt.name = name;
         target.push(rt);
       }
     }

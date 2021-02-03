@@ -102,7 +102,6 @@ test('parse demo Chrome types', async t => {
       minLength: 2,
       elementType: {
         type: 'reference',
-//        referenceLink: '#type-StuffType',
         referenceType: 'chrome.stuff.StuffType',
       },
     },

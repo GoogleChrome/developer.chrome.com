@@ -16,7 +16,6 @@
 
 const typedocModels = require('typedoc/dist/lib/models');
 const {resolveLink, closest, fullName} = require('webdev-infra/lib/types');
-const path = require('path').posix;
 
 const rk = typedocModels.ReflectionKind;
 
