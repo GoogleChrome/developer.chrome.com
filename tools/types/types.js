@@ -14,69 +14,35 @@
  * limitations under the License.
  */
 
-/**
- * @fileoverview This converts from TypeDoc's JSON format to an internal representation for
- * display.
- */
-
+const {
+  exportedChildren,
+  generateTypeDocObjectOptions,
+} = require('webdev-infra/lib/types');
+const typedocModels = require('typedoc/dist/lib/models/index.js');
 const path = require('path');
-const typedoc = require('typedoc');
-const {LogLevel: TypeDocLogLevel} = require('typedoc/dist/lib/utils');
-const {extractComment, exportedChildren} = require('./helpers');
-const {declarationToType} = require('./converter');
-
-/**
- * Generates the TypeDoc internal representation for the passed source. This invokes typedoc's
- * Application bundle and throws on failures.
- *
- * @param {string} source
- * @return {typedoc.ProjectReflection}
- */
-function generateTypeDocObject(source) {
-  const a = new typedoc.Application();
-  a.bootstrap({
-    includeDeclarations: true,
-    excludeExternals: true,
-    inputFiles: [source],
-
-    logger(message, level) {
-      switch (level) {
-        case TypeDocLogLevel.Warn:
-        case TypeDocLogLevel.Error:
-          throw new Error(`could not convert types: ${message}`);
-      }
-      console.warn(message);
-    },
-  });
-
-  const reflection = a.convert([source]);
-  if (!reflection) {
-    throw new Error('could not convert types, null return value');
-  }
-  return reflection;
-}
+const {declarationToType} = require('./converter.js');
 
 /**
  * Finds all exported namespaces prefixed with "chrome." inside the passed project, and flattens
  * into a returned object.
  *
- * (If a namespace is exported under many names, it will appear many times, but this doesn't happen
- * in Chrome's types.)
- *
- * @param {typedoc.ProjectReflection} typesData
- * @return {{[name: string]: typedoc.DeclarationReflection}}
+ * @param {typedocModels.ProjectReflection} project
+ * @return {{[name: string]: typedocModels.DeclarationReflection}}
  */
-function extractPublicChromeNamespaces(typesData) {
-  /** @type {{[name: string]: typedoc.DeclarationReflection}} */
+function extractPublicChromeNamespaces(project) {
+  /** @type {{[name: string]: typedocModels.DeclarationReflection}} */
   const out = {};
 
   /**
-   * @param {typedoc.DeclarationReflection} namespace
+   * @param {typedocModels.DeclarationReflection} namespace
    * @param {string} prefix
    * @return {boolean} whether this was the terminal
    */
   const findContainedNamespaces = (namespace, prefix) => {
-    const deep = exportedChildren(namespace, typedoc.ReflectionKind.Namespace);
+    const deep = exportedChildren(
+      namespace,
+      typedocModels.ReflectionKind.Namespace
+    );
     if (Object.keys(deep).length === 0) {
       return true;
     }
@@ -93,16 +59,11 @@ function extractPublicChromeNamespaces(typesData) {
     return false;
   };
 
-  // Awkwardly extract the top-level "chrome" namespace.
-  const {children: toplevelChildren = []} = typesData;
-  if (toplevelChildren.length !== 1 || toplevelChildren[0].kind !== 1) {
-    throw new TypeError('expected single top-level module');
-  }
-  const toplevel = toplevelChildren[0];
   const chromeNamespace =
-    /** @type {typedoc.DeclarationReflection|undefined} */
-    (toplevel.getChildByName('chrome'));
+    /** @type {typedocModels.DeclarationReflection|undefined} */
+    (project.getChildByName('chrome'));
   if (!chromeNamespace) {
+    console.warn('project had children', project.children);
     throw new TypeError('expected module to contain `chrome`');
   }
   findContainedNamespaces(chromeNamespace, 'chrome');
@@ -115,7 +76,13 @@ function extractPublicChromeNamespaces(typesData) {
  * @return {RenderNamespace[]}
  */
 function parseChromeTypesFile(typesPath) {
-  const projectReflection = generateTypeDocObject(typesPath);
+  // TODO(samthor): We need to use TypeDoc in just the right way.
+  const entryPoints = [typesPath];
+  const projectReflection = generateTypeDocObjectOptions(
+    entryPoints,
+    {entryPoints},
+    {declaration: true}
+  );
 
   // Generate namespaces in isolation (e.g. `chrome.management` and so on).
   const namespaces = extractPublicChromeNamespaces(projectReflection);
@@ -155,7 +122,7 @@ function parseChromeTypesFile(typesPath) {
     const renderNamespace = {
       name,
       shortName,
-      comment: extractComment(reflection.comment, reflection),
+      comment: '?', // extractComment(reflection.comment, reflection),
       types: [],
       properties: [],
       methods: [],
@@ -178,18 +145,20 @@ function parseChromeTypesFile(typesPath) {
       {
         target: renderNamespace.types,
         mask:
-          typedoc.ReflectionKind.Enum |
-          typedoc.ReflectionKind.TypeLiteral |
-          typedoc.ReflectionKind.TypeAlias |
-          typedoc.ReflectionKind.Interface,
+          typedocModels.ReflectionKind.Enum |
+          typedocModels.ReflectionKind.TypeLiteral |
+          typedocModels.ReflectionKind.TypeAlias |
+          typedocModels.ReflectionKind.Interface,
       },
       {
         target: renderNamespace.methods,
-        mask: typedoc.ReflectionKind.Function,
+        mask: typedocModels.ReflectionKind.Function,
       },
       {
         target: renderNamespace.properties,
-        mask: typedoc.ReflectionKind.Property | typedoc.ReflectionKind.Variable,
+        mask:
+          typedocModels.ReflectionKind.Property |
+          typedocModels.ReflectionKind.Variable,
       },
     ];
     for (const {target, mask} of groups) {
@@ -217,4 +186,4 @@ function parseChromeTypesFile(typesPath) {
   return flat;
 }
 
-module.exports = {parseChromeTypesFile, generateTypeDocObject};
+module.exports = {parseChromeTypesFile};
