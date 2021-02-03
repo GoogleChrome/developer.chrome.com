@@ -32,7 +32,13 @@ function uniqueVersionDataFor(fullName) {
   /** @type {VersionData} */
   const out = {};
   for (const key in self) {
-    if (parent[key] !== self[key]) {
+    if (parent[key] === self[key]) {
+      continue;
+    }
+    if (key === 'release') {
+      // TODO(samthor): Source file has the wrong key.
+      out.channel = self['release'];
+    } else {
       out[key] = self[key];
     }
   }

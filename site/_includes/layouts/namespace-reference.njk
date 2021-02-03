@@ -46,14 +46,16 @@
           </div>
         </li>
       {% endif %}
-      {% if namespace.channel !== 'stable' %}
+      {% if namespace.version.channel or namespace.version.low %}
         <li>
           <div class="code-sections__label">Availability</div>
           <div>
-            {% if namespace.channel === 'dev' %}
+            {% if namespace.version.channel === 'dev' %}
               Dev channel only.
-            {% else %}
+            {% elif namespace.version.channel === 'beta' %}
               Beta and Dev channels only.
+            {% else %}
+              Since Chrome {{ namespace.version.low }}.
             {% endif %}
           </div>
         </li>

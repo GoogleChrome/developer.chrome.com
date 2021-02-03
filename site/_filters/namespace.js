@@ -21,7 +21,7 @@
  * @return {string}
  */
 function namespaceToPath(namespace) {
-  return namespace.substr(7).replace(/\./g, '_');
+  return namespace.replace(/\./g, '_');
 }
 
 module.exports = {namespaceToPath};

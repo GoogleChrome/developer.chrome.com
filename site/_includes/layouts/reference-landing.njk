@@ -8,7 +8,10 @@
   {% import 'macros/reference.njk' as macros with context %}
 
   <h2 id="stable_apis">Stable APIs</h2>
-  {{ macros.renderReferenceTable(collections.reference, 'stable', 'index.d.ts') }}
+  <p>
+    Release information is not available for APIs before Chrome 39–released around November 2014.
+  </p>
+  {{ macros.renderReferenceTable(collections.reference, '', 'index.d.ts') }}
 
   <h2 id="beta_apis">Beta APIs</h2>
   <p>
