@@ -16,6 +16,7 @@
 
 const typedocModels = require('typedoc/dist/lib/models');
 const {resolveLink, closest, fullName} = require('webdev-infra/lib/types');
+const path = require('path').posix;
 
 const rk = typedocModels.ReflectionKind;
 
@@ -97,14 +98,38 @@ class CommentHelper {
    * @return {typedocModels.Reflection|string}
    */
   resolveExistingHref(href) {
+    let returnUnchanged = false;
+
     if (href.startsWith('/') || href.startsWith('../')) {
-      return href;
+      returnUnchanged = true;
     }
     try {
       new URL(href);
-      return href;
+      returnUnchanged = true;
     } catch (e) {
       // ignore
+    }
+
+    if (returnUnchanged) {
+      const u = new URL(href, 'https://developer.chrome.com');
+      if (u.protocol === 'http:') {
+        // Force all clickable links to https:.
+        u.protocol = 'https:';
+      } else if (u.protocol !== 'https:') {
+        return href; // not sure what this is
+      }
+      if (u.hostname !== 'developer.chrome.com') {
+        return u.toString();
+      }
+
+      const extensionsUrlRe = /^\/(extensions|apps)\/([.a-zA-Z0-9_]+)(\.html)?(\/)?$/;
+      const m = extensionsUrlRe.exec(u.pathname);
+      if (!m) {
+        // We didn't match a known URL, but at least get rid of the domain part.
+        return u.pathname + u.search;
+      }
+
+      href = m[1] + u.search;
     }
 
     // TODO(samthor): Rather than trying to resolve bad hrefs here, we should do this as part of

@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+const {Type} = require('typedoc/dist/lib/models');
 const typedocModels = require('typedoc/dist/lib/models');
 const {
   matchEnum,
@@ -49,6 +50,7 @@ function declarationToType(reflection) {
     rt.deprecated = formatCommentLine(deprecatedTag.text, helper);
   }
 
+  rt.name = reflection.name;
   rt.fullName = fullName(reflection);
   return rt;
 }
@@ -76,35 +78,10 @@ function internalReflectionRenderType(reflection) {
     };
   }
 
-  const matchedUnifiedFunction = matchUnifiedFunction(reflection);
-  if (matchedUnifiedFunction) {
-    const parameters = matchedUnifiedFunction.parameters.map(
-      ({reflection, optional}) => {
-        const rt = declarationToType(reflection);
-        if (optional) {
-          rt.optional = true;
-        }
-        return rt;
-      }
-    );
-
-    // Convert the return type to a RenderType.
-    const returnType = internalTypeRenderType(
-      matchedUnifiedFunction.returnType
-    );
-    const returnTypeComment = formatCommentLine(
-      matchedUnifiedFunction.signature.comment?.returns ?? '',
-      new CommentHelper(reflection)
-    );
-    if (returnTypeComment) {
-      returnType.comment = returnTypeComment;
-    }
-
-    return {
-      type: 'function',
-      parameters,
-      returnType,
-    };
+  // Match function type.
+  const out = internalMaybeBuildFunction(reflection, true);
+  if (out) {
+    return out;
   }
 
   // Match interface types.
@@ -179,6 +156,15 @@ function internalTypeRenderType(type) {
     return out;
   }
 
+  // Functions are always reflections as they define new types, although they can apper anywhere.
+  if (type.type === 'reflection') {
+    const reflectionType = /** @type {typedocModels.ReflectionType} */ (type);
+    const out = internalMaybeBuildFunction(reflectionType.declaration, false);
+    if (out) {
+      return out;
+    }
+  }
+
   const matchedTypeLiteral = matchTypeLiteral(type);
   if (matchedTypeLiteral) {
     const raw = matchedTypeLiteral.properties ?? {};
@@ -224,7 +210,7 @@ function internalTypeRenderType(type) {
       // Insert Reference<Arg> reference data.
       if (referenceType.typeArguments?.length) {
         out.referenceTemplates = referenceType.typeArguments.map(t =>
-          internalTypeRenderType(t)
+          reentrantTypeParser(t)
         );
       }
 
@@ -278,6 +264,66 @@ function internalTypeRenderType(type) {
   }
 
   throw new Error(`got unknown typedoc.Type: ${type.type}`);
+}
+
+/**
+ * @param {typedocModels.Reflection} reflection
+ * @param {boolean} allowManySignatures
+ * @return {RenderType=}
+ */
+function internalMaybeBuildFunction(reflection, allowManySignatures) {
+  if (!(reflection instanceof typedocModels.DeclarationReflection)) {
+    return;
+  }
+  if ((reflection.signatures?.length ?? 0) > 1 && !allowManySignatures) {
+    throw new TypeError(`invalid signatures: ${reflection.signatures?.length}`);
+  }
+
+  const matchedUnifiedFunction = matchUnifiedFunction(reflection);
+  if (!matchedUnifiedFunction) {
+    return;
+  }
+
+  const parameters = matchedUnifiedFunction.parameters.map(
+    ({reflection, optional}) => {
+      const rt = declarationToType(reflection);
+      if (optional) {
+        rt.optional = true;
+      }
+      return rt;
+    }
+  );
+
+  // Convert the return type to a RenderType.
+  const returnType = internalTypeRenderType(matchedUnifiedFunction.returnType);
+  const returnTypeComment = formatCommentLine(
+    matchedUnifiedFunction.signature.comment?.returns ?? '',
+    new CommentHelper(reflection)
+  );
+  if (returnTypeComment) {
+    returnType.comment = returnTypeComment;
+  }
+
+  return {
+    type: 'function',
+    parameters,
+    returnType,
+  };
+}
+
+/**
+ * Converts a Type to a RenderType, but treats it as a DeclarationReflection (with comments et al)
+ * if possible.
+ *
+ * @param {typedocModels.Type} type
+ * @return {RenderType}
+ */
+function reentrantTypeParser(type) {
+  if (type.type === 'reflection') {
+    const reflectionType = /** @type {typedocModels.ReflectionType} */ (type);
+    return declarationToType(reflectionType.declaration);
+  }
+  return internalTypeRenderType(type);
 }
 
 module.exports = {declarationToType};

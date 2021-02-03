@@ -17,10 +17,12 @@
 const {
   exportedChildren,
   generateTypeDocObjectOptions,
+  formatComment,
 } = require('webdev-infra/lib/types');
 const typedocModels = require('typedoc/dist/lib/models/index.js');
 const path = require('path');
 const {declarationToType} = require('./converter.js');
+const {CommentHelper} = require('./comment.js');
 
 /**
  * Finds all exported namespaces prefixed with "chrome." inside the passed project, and flattens
@@ -117,12 +119,16 @@ function parseChromeTypesFile(typesPath) {
     });
 
     const source = path.basename(typesPath);
+    const comment = formatComment(
+      reflection.comment,
+      new CommentHelper(reflection)
+    );
 
     /** @type {RenderNamespace} */
     const renderNamespace = {
       name,
       shortName,
-      comment: '?', // extractComment(reflection.comment, reflection),
+      comment,
       types: [],
       properties: [],
       methods: [],
