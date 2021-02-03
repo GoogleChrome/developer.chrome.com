@@ -25,4 +25,4 @@ import './web-components/top-nav';
 import './third-party/announcement-banner/announcement-banner';
 
 // Copyable heading links
-import './behavior/copyable-heading-links';
+import './behaviors/copyable-heading-links';
