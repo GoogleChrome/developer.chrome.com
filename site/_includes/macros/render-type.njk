@@ -113,9 +113,12 @@
 {% endmacro %}
 
 {#
-  Renders a comment and its optional deprecation notice.
+  Renders a comment, its optional introduction and its optional deprecation notice.
 #}
 {% macro renderComment(spec) %}
+  {% if spec.version.low %}
+  <p class="code-sections__deprecated">Since Chrome {{ spec.version.low }}.</p>
+  {% endif %}
   {% if spec.version.deprecated %}
   <p class="code-sections__deprecated"><strong>Deprecated
     {%- if spec.version.deprecated !== -1 %} since Chrome {{ spec.version.deprecated }}{% endif -%}
