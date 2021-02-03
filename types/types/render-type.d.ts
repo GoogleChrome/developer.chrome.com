@@ -24,13 +24,24 @@ declare global {
       "union" |
       "function";
 
-  export interface RenderType {
+  export interface VersionData {
+    low?: number;
+    deprecated?: number;
+    deprecatedComment?: string;
+    channel?: "" | "beta" | "dev";
+  }
+
+  export interface RenderBase {
     name?: string;
     fullName?: string;
+    version?: VersionData;
+    comment?: string;     // HTML, will always be wrapped by <p></p>
+    optional?: boolean;
+  }
+
+  export interface RenderType extends RenderBase {
     type: RenderTypeType;
     optional?: boolean;
-    comment?: string;     // HTML, will always be wrapped by <p></p>
-    deprecated?: string;  // HTML but not wrapped in <p></p>
 
     // primitive
     primitiveType?: string;
@@ -59,23 +70,26 @@ declare global {
     returnType?: RenderType;
   }
 
-  export interface RenderNamespace {
-    name: string;
+  export interface RenderNamespace extends RenderBase {
     shortName: string;  // name without "chrome." prefix
-    comment?: string;
-    channel: "stable" | "beta" | "dev";
+
     permissions?: string[];
     platforms?: string[];
     source?: string;
-
     updated?: string;
-    release?: number;
 
     // top-levels shown on API page
     types: RenderType[];
     properties: RenderType[];
     methods: RenderType[];
     events: RenderType[];
+  }
+
+  export interface RawVersionDataValue {
+    low?: number;
+    high?: number;
+    deprecated?: number;
+    release?: "" | "beta" | "dev";
   }
 }
 

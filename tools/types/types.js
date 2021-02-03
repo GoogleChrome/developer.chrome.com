@@ -17,12 +17,10 @@
 const {
   exportedChildren,
   generateTypeDocObjectOptions,
-  formatComment,
 } = require('webdev-infra/lib/types');
 const typedocModels = require('typedoc/dist/lib/models/index.js');
 const path = require('path');
-const {declarationToType} = require('./converter.js');
-const {CommentHelper} = require('./comment.js');
+const {declarationToType, prepareBase} = require('./converter.js');
 
 /**
  * Finds all exported namespaces prefixed with "chrome." inside the passed project, and flattens
@@ -89,55 +87,37 @@ function parseChromeTypesFile(typesPath) {
   // Generate namespaces in isolation (e.g. `chrome.management` and so on).
   const namespaces = extractPublicChromeNamespaces(projectReflection);
   const flat = [];
-  for (const name in namespaces) {
-    const reflection = namespaces[name];
-    const [, ...rest] = name.split('.');
-    const shortName = rest.join('.');
-
-    const permissions = [];
-    const platforms = [];
-
-    /** @type {RenderNamespace["channel"]} */
-    let channel = 'stable';
-
-    const tags = reflection?.comment?.tags ?? [];
-    tags.forEach(({tagName, text}) => {
-      switch (tagName) {
-        case 'beta':
-          channel = 'beta';
-          break;
-        case 'alpha':
-          channel = 'dev';
-          break;
-        case 'chrome-permission':
-          permissions.push(text);
-          break;
-        case 'chrome-platform':
-          platforms.push(text);
-          break;
-      }
-    });
-
-    const source = path.basename(typesPath);
-    const comment = formatComment(
-      reflection.comment,
-      new CommentHelper(reflection)
-    );
+  for (const fullName in namespaces) {
+    const reflection = namespaces[fullName];
+    if (!fullName.startsWith('chrome.')) {
+      throw new Error(`got non-chrome namespace: ${fullName}`);
+    }
 
     /** @type {RenderNamespace} */
     const renderNamespace = {
-      name,
-      shortName,
-      comment,
+      shortName: fullName.substr('chrome.'.length),
       types: [],
       properties: [],
       methods: [],
       events: [],
-      channel,
-      source,
+      source: path.basename(typesPath),
     };
+    prepareBase(renderNamespace, reflection);
     flat.push(renderNamespace);
 
+    const permissions = [];
+    const platforms = [];
+    const tags = reflection?.comment?.tags ?? [];
+    tags.forEach(({tagName, text}) => {
+      switch (tagName) {
+        case 'chrome-permission':
+          permissions.push(text.trim());
+          break;
+        case 'chrome-platform':
+          platforms.push(text.trim());
+          break;
+      }
+    });
     if (permissions.length) {
       renderNamespace.permissions = permissions;
     }
@@ -188,7 +168,7 @@ function parseChromeTypesFile(typesPath) {
   }
 
   // Returns as an already sorted Array.
-  flat.sort(({name: a}, {name: b}) => a.localeCompare(b));
+  flat.sort(({shortName: a}, {shortName: b}) => a.localeCompare(b));
   return flat;
 }
 

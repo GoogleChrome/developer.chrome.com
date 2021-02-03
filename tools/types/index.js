@@ -40,7 +40,7 @@ const sourceFiles = ['index.d.ts', 'platform_app.d.ts'];
 
 // TODO(samthor): One of the Extensions APIs references this type incorrectly, so it's in
 // incorrectly included in the Extension APIs. Pretend it's an apps type only.
-const extensionBlacklist = ['chrome.usb'];
+const extensionBlacklist = ['usb'];
 
 const start = performance.now();
 
@@ -55,12 +55,12 @@ for (const sourceFile of sourceFiles) {
   part = part.filter(namespace => {
     if (
       sourceFile === 'index.d.ts' &&
-      extensionBlacklist.includes(namespace.name)
+      extensionBlacklist.includes(namespace.shortName)
     ) {
       return false;
     }
     const previous = typesRender.find(
-      existingNamespace => existingNamespace.name === namespace.name
+      existingNamespace => existingNamespace.fullName === namespace.fullName
     );
     return previous === undefined;
   });
@@ -68,7 +68,7 @@ for (const sourceFile of sourceFiles) {
   typesRender.push(...part);
 }
 
-typesRender.sort(({name: a}, {name: b}) => a.localeCompare(b));
+typesRender.sort(({shortName: a}, {shortName: b}) => a.localeCompare(b));
 
 // In dev, emit this as formatted JS for ease-of-debugging.
 const out = JSON.stringify(

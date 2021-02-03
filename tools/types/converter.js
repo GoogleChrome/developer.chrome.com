@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-const {Type} = require('typedoc/dist/lib/models');
 const typedocModels = require('typedoc/dist/lib/models');
 const {
   matchEnum,
@@ -28,31 +27,44 @@ const {
   matchOptionalType,
 } = require('webdev-infra/lib/types');
 const {CommentHelper} = require('./comment');
+const {uniqueVersionDataFor} = require('./version.js');
 
 /**
+ * Updates the passed RenderBase with version and comment information.
+ *
+ * @param {RenderBase} base
  * @param {typedocModels.Reflection} reflection
- * @return {RenderType}
  */
-function declarationToType(reflection) {
-  const rt = internalReflectionRenderType(reflection);
+function prepareBase(base, reflection) {
   if (isOptional(reflection)) {
-    rt.optional = true;
+    base.optional = true;
   }
 
   const helper = new CommentHelper(reflection);
   const comment = formatComment(reflection.comment, helper);
   if (comment) {
-    rt.comment = comment;
+    base.comment = comment;
   }
+  base.name = reflection.name;
+  base.fullName = fullName(reflection);
+
+  const data = uniqueVersionDataFor(base.fullName) ?? {};
 
   const deprecatedTag = reflection.comment?.getTag('deprecated');
   if (deprecatedTag) {
-    rt.deprecated = formatCommentLine(deprecatedTag.text, helper);
+    data.deprecatedComment = formatCommentLine(deprecatedTag.text, helper);
+    data.deprecated = data.deprecated ?? -1;
   }
 
-  rt.name = reflection.name;
-  rt.fullName = fullName(reflection);
-  return rt;
+  if (reflection.comment?.hasTag('beta')) {
+    data.channel = 'beta';
+  } else if (reflection.comment?.hasTag('alpha')) {
+    data.channel = 'dev';
+  }
+
+  if (Object.keys(data).length) {
+    base.version = data;
+  }
 }
 
 /**
@@ -61,7 +73,17 @@ function declarationToType(reflection) {
  * @param {typedocModels.Reflection} reflection
  * @return {RenderType}
  */
-function internalReflectionRenderType(reflection) {
+function declarationToType(reflection) {
+  const out = internalDeclarationToType(reflection);
+  prepareBase(out, reflection);
+  return out;
+}
+
+/**
+ * @param {typedocModels.Reflection} reflection
+ * @return {RenderType}
+ */
+function internalDeclarationToType(reflection) {
   const matchedEnum = matchEnum(reflection);
   if (matchedEnum) {
     const options = matchedEnum.map(value => {
@@ -296,7 +318,7 @@ function internalMaybeBuildFunction(reflection, allowManySignatures) {
 
   // Convert the return type to a RenderType.
   const returnType = internalTypeRenderType(matchedUnifiedFunction.returnType);
-  const returnTypeComment = formatCommentLine(
+  const returnTypeComment = formatComment(
     matchedUnifiedFunction.signature.comment?.returns ?? '',
     new CommentHelper(reflection)
   );
@@ -326,4 +348,4 @@ function reentrantTypeParser(type) {
   return internalTypeRenderType(type);
 }
 
-module.exports = {declarationToType};
+module.exports = {prepareBase, declarationToType};
