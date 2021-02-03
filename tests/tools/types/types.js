@@ -2,16 +2,16 @@ const test = require('ava');
 const tmp = require('tmp');
 const fs = require('fs');
 
-const {
-  generateTypeDocObject,
-  parseChromeTypesFile,
-} = require('../../../tools/types/types');
-const {exportedChildren} = require('../../../tools/types/helpers');
+const {parseChromeTypesFile} = require('../../../tools/types/types');
 
 const namespacesPromise = buildCommonTestNamespaces();
 
-// We use a common parsed string for a number of tests. This returns a Promise
-// so failures here show up in each test case, not globally.
+/**
+ * We use a common parsed string for many tests. This returns a Promise (even
+ * though it's needless) so failures show up in each test case.
+ *
+ * @return {Promise<RenderNamespace[]>}
+ */
 async function buildCommonTestNamespaces() {
   const commonTestSource = `
 declare namespace notChrome {
@@ -34,7 +34,6 @@ declare namespace chrome {
   }
 }
 `;
-
   const f = tmp.fileSync({postfix: '.d.ts'});
   try {
     fs.writeFileSync(f.name, commonTestSource);
@@ -43,40 +42,6 @@ declare namespace chrome {
     f.removeCallback();
   }
 }
-
-// Ensure that we remove all temporary files.
-test.afterEach.always(t => {
-  t.context.cleanup?.();
-});
-
-test('identifies exported namespace children', t => {
-  const source = `
-declare namespace test {
-  var foo: number;
-
-  export {foo as bar};
-  export {foo as bar2};
-
-  export var bar3: "enum";
-
-  export interface Exported {}
-}
-`;
-  const f = tmp.fileSync({postfix: '.d.ts'});
-  fs.writeFileSync(f.name, source);
-  t.context.cleanup = f.removeCallback;
-
-  const td = generateTypeDocObject(f.name);
-
-  const toplevel = td.children[0];
-  const testNamespace = toplevel.getChildByName('test');
-
-  const children = exportedChildren(testNamespace, ~0);
-  const keys = Object.keys(children);
-  keys.sort();
-
-  t.deepEqual(keys, ['Exported', 'bar', 'bar2', 'bar3']);
-});
 
 test('parse demo Chrome types', async t => {
   const namespaces = await namespacesPromise;
@@ -93,6 +58,7 @@ test('parse demo Chrome types', async t => {
   t.deepEqual(
     variableTestSingle,
     {
+      fullName: 'chrome.test.variableTestSingle',
       name: 'variableTestSingle',
       literalValue: '"foo"',
       type: 'primitive',
@@ -108,6 +74,7 @@ test('parse demo Chrome types', async t => {
   t.deepEqual(
     enumTypeSingle,
     {
+      fullName: 'chrome.test.enumTypeSingle',
       name: 'enumTypeSingle',
       isEnum: true,
       type: 'union',
@@ -129,13 +96,14 @@ test('parse demo Chrome types', async t => {
   t.deepEqual(
     typeTwoStuff,
     {
+      fullName: 'chrome.stuff.TwoStuffType',
       name: 'TwoStuffType',
       type: 'array',
       minLength: 2,
       elementType: {
         type: 'reference',
-        referenceLink: '#type-StuffType',
-        referenceType: 'StuffType',
+//        referenceLink: '#type-StuffType',
+        referenceType: 'chrome.stuff.StuffType',
       },
     },
     'TwoStuffType is a reference to array of minLength=2'

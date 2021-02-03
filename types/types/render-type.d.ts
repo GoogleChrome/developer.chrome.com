@@ -26,6 +26,7 @@ declare global {
 
   export interface RenderType {
     name?: string;
+    fullName?: string;
     type: RenderTypeType;
     optional?: boolean;
     comment?: string;     // HTML, will always be wrapped by <p></p>

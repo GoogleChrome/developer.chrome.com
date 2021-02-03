@@ -49,6 +49,7 @@ function declarationToType(reflection) {
     rt.deprecated = formatCommentLine(deprecatedTag.text, helper);
   }
 
+  rt.fullName = fullName(reflection);
   return rt;
 }
 
@@ -65,7 +66,7 @@ function internalReflectionRenderType(reflection) {
       return /** @type {RenderType} */ ({
         type: 'primitive',
         primitiveType: typeof value,
-        literalValue: `${value}`,
+        literalValue: JSON.stringify(value),
       });
     });
     return {
@@ -263,7 +264,7 @@ function internalTypeRenderType(type) {
       return {
         type: 'primitive',
         primitiveType: typeof literalType.value,
-        literalValue: `${literalType.value}`,
+        literalValue: JSON.stringify(literalType.value),
       };
     }
 
