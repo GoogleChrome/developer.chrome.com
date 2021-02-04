@@ -23,7 +23,7 @@ running.
 
 By default, DevTools records all network requests in the Network panel, so long as DevTools is open.
 
-![The Network panel.](/web/tools/chrome-devtools/network/imgs/network.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/62R1WFVGgPSfnWi6EJcd.png", alt="The Network panel.", width="800", height="562" %}
 
 **Figure 1**. The Network panel
 
@@ -39,10 +39,14 @@ log](/web/tools/chrome-devtools/network/imgs/record-on.png) on the Network
 
 ### Clear requests {: #clear }
 
+TODO inline image
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SUPMgMoG5s0cLAe1yKEd.png", alt="Clear", width="26", height="26" %}
+
 Click **Clear** ![Clear](/web/tools/chrome-devtools/network/imgs/clear-requests.png) on the Network
 panel to clear all requests from the Requests table.
 
-![The Clear button.](/web/tools/chrome-devtools/network/imgs/clear.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IZwN127NS4ZHwAJ4QJNx.svg", alt="The Clear button.", width="606", height="900" %}
 
 **Figure 2**. Clear, outlined in blue
 
@@ -51,13 +55,17 @@ panel to clear all requests from the Requests table.
 To save requests across page loads, check the **Preserve log** checkbox on the Network panel.
 DevTools saves all requests until you disable **Preserve log**.
 
-![The Preserve Log checkbox.](/web/tools/chrome-devtools/network/imgs/preserve-log.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/9xALh1ItognWtTexZzRv.svg", alt="The Preserve Log checkbox.", width="606", height="450" %}
 
 **Figure 3**. The Preserve Log checkbox, outlined in blue
 
 ### Capture screenshots during page load {: #screenshots }
 
 Capture screenshots to analyze what users see as they wait for your page to load.
+
+TODO inline image
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MzwAIIiGa9ZOUqfsCBaj.png", alt="Capture screenshots", width="26", height="16" %}
 
 To enable screenshots, click **Capture screenshots**
 ![Capture
@@ -74,7 +82,7 @@ Once captured, you can interact with screenshots in the following ways:
   captured.
 - Double-click a thumbnail to zoom in on it.
 
-![Hovering over a screenshot.](/web/tools/chrome-devtools/network/imgs/screenshot-hover.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/cqE56LuAWj7R8H3xFCXt.png", alt="Hovering over a screenshot.", width="800", height="509" %}
 
 **Figure 4**. Hovering over a screenshot. The yellow, vertical line in the Overview pane and the
 Waterfall represent the time at which the screenshot was captured.
@@ -83,7 +91,7 @@ Waterfall represent the time at which the screenshot was captured.
 
 To replay an XHR request, right-click the request in the Requests table and select **Replay XHR**.
 
-![Selecting Replay XHR.](/web/tools/chrome-devtools/network/imgs/replay-xhr.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/q78sXBNcIyDKpzm3nQja.png", alt="Selecting Replay XHR.", width="800", height="625" %}
 
 **Figure 5**. Selecting Replay XHR
 
@@ -95,7 +103,7 @@ To emulate how a first-time user experiences your site, check the **Disable cach
 DevTools disables the browser cache. This more accurately emulates a first-time user's experience,
 because requests are served from the browser cache on repeat visits.
 
-![The Disable Cache checkbox.](/web/tools/chrome-devtools/network/imgs/disable-cache.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/04bkZSC2b8Dsi0eE7H0J.svg", alt="The Disable Cache checkbox.", width="606", height="450" %}
 
 **Figure 6**. The Disable Cache checkbox, outlined in blue
 
@@ -112,7 +120,7 @@ drawer.
 To manually clear the browser cache at any time, right-click anywhere in the Requests table and
 select **Clear Browser Cache**.
 
-![Selecting Clear Browser Cache.](/web/tools/chrome-devtools/network/imgs/clear-browser-cache.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/m8T2kha4f43D1ipWIVWj.png", alt="Selecting Clear Browser Cache.", width="800", height="596" %}
 
 **Figure 7**. Selecting Clear Browser Cache
 
@@ -124,7 +132,7 @@ quickly simulate a device that has no data connection.
 
 Check the **Offline** checkbox to simulate a completely offline network experience.
 
-![The Offline checkbox](/web/tools/chrome-devtools/network/imgs/offline.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2GrWegpdEJMfsnEYNkq6.svg", alt="The Offline checkbox", width="684", height="450" %}
 
 **Figure 8**. The Offline checkbox, outlined in blue
 
@@ -132,7 +140,7 @@ Check the **Offline** checkbox to simulate a completely offline network experien
 
 Emulate 2G, 3G, and other connection speeds from the **Network Throttling** menu.
 
-![The Network Throttling menu.](/web/tools/chrome-devtools/network/imgs/network-panel-throttling-menu.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7LD09urCKiCrkJcsYhiA.svg", alt="The Network Throttling menu.", width="753", height="450" %}
 
 **Figure 9**. The Network Throttling menu, outlined in blue
 
@@ -155,7 +163,7 @@ Network Conditions drawer.
 To manually clear browser cookies at any time, right-click anywhere in the Requests table and select
 **Clear Browser Cookies**.
 
-![Selecting Clear Browser Cookies.](/web/tools/chrome-devtools/network/imgs/clear-browser-cookies.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GJpOkjNwoZTgr4VnFlC4.png", alt="Selecting Clear Browser Cookies.", width="800", height="597" %}
 
 **Figure 10**. Selecting Clear Browser Cookies
 
@@ -176,7 +184,7 @@ request.
 
 If you can't see the text box, the Filters pane is probably hidden. See [Hide the Filters pane][6].
 
-![The Filters text box.](/web/tools/chrome-devtools/network/imgs/filter-text-box.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oCVPgkalqEC6p9WWbaPu.svg", alt="The Filters text box.", width="684", height="450" %}
 
 **Figure 11**. The Filters text box, outlined in blue
 
@@ -237,8 +245,7 @@ pane][11].
 To enable multiple type filters simultaneously, hold Command (Mac) or Control (Windows, Linux) and
 then click.
 
-![Using the Type filters to display JS, CSS, and Doc[ument]
-            resources.](/web/tools/chrome-devtools/network/imgs/multi-type-filter.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/EOVhAQmzNZXNSrvMwXv5.png", alt="Using the Type filters to display JS, CSS, and Document resources.", width="800", height="421" %}
 
 **Figure 12**. Using the Type filters to display JS, CSS, and Doc\[ument\] resources.
 
@@ -248,7 +255,7 @@ Click and drag left or right on the Overview pane to only display requests that 
 that time frame. The filter is inclusive. Any request that was active during the highlighted time is
 shown.
 
-![Filtering out any requests that weren't active around 2500ms.](/web/tools/chrome-devtools/network/imgs/overview-filter.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/HasYhu7GxWfIp5Jq4ASn.png", alt="Filtering out any requests that weren't active around 2500ms.", width="800", height="511" %}
 
 **Figure 13**. Filtering out any requests that weren't active around 2500ms
 
@@ -259,7 +266,7 @@ Requests table that starts with `data:` is a data URL.
 
 Check the **Hide data URLs** checkbox to hide these requests.
 
-![The Hide Data URLs checkbox.](/web/tools/chrome-devtools/network/imgs/hide-data-urls.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hz8BXb9YlYLhCGarY12J.svg", alt="The Hide Data URLs checkbox.", width="705", height="450" %}
 
 **Figure 14**. The Hide Data URLs checkbox
 
@@ -287,7 +294,7 @@ To change how the Waterfall sorts requests, right-click the header of the Reques
 These descriptions assume that each respective option is ranked from shortest to longest. Clicking
 on the **Waterfall** column's header reverses the order.
 
-![Sorting the Waterfall by total duration.](/web/tools/chrome-devtools/network/imgs/waterfall-total-duration.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tJOhr2jBQWy2CdKHDlUl.png", alt="Sorting the Waterfall by total duration.", width="800", height="525" %}
 
 **Figure 15**. Sorting the Waterfall by total duration. The lighter portion of each bar is time
 spent waiting. The darker portion is time spent downloading bytes.
@@ -302,7 +309,7 @@ analyze requests.
 Use the Requests table to view a log of all requests made while DevTools has been open. Clicking or
 hovering over requests reveals more information about them.
 
-![The Requests table.](/web/tools/chrome-devtools/network/imgs/requests-table.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/aUR3bbt8luG6r5p2WIuP.svg", alt="The Requests table.", width="684", height="450" %}
 
 **Figure 16**. The Requests table, outlined in blue
 
@@ -328,7 +335,7 @@ The Requests table displays the following columns by default:
 Right-click the header of the Requests table and select an option to hide or show it. Currently
 displayed options have checkmarks next to them.
 
-![Adding a column to the Requests table.](/web/tools/chrome-devtools/network/imgs/add-column.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hGwBQqVdg2QGM6aSzFdj.png", alt="Adding a column to the Requests table.", width="800", height="722" %}
 
 **Figure 17**. Adding a column to the Requests table.
 
@@ -337,7 +344,7 @@ displayed options have checkmarks next to them.
 To add a custom column to the Requests table, right-click the header of the Requests table and
 select **Response Headers** > **Manage Header Columns**.
 
-![Adding a custom column to the Requests table.](/web/tools/chrome-devtools/network/imgs/custom-column.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7zoqb5aU14tK8jiNMgQw.png", alt="Adding a custom column to the Requests table.", width="800", height="669" %}
 
 **Figure 18**. Adding a custom column to the Requests table.
 
@@ -349,7 +356,7 @@ started earlier than those that are farther to the right.
 
 See [Sort by activity phase][14] to see the different ways that you can sort the Waterfall.
 
-![The Waterfall column of the Requests pane.](/web/tools/chrome-devtools/network/imgs/waterfall.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3I6fk1zlTDXx5J6hRaOJ.png", alt="The Waterfall column of the Requests pane.", width="800", height="556" %}
 
 **Figure 19**. The Waterfall column of the Requests pane.
 
@@ -363,7 +370,7 @@ To view the frames of a WebSocket connection:
 To refresh the table, re-click the name of the WebSocket connection under the **Name** column of the
 Requests table.
 
-![The Frames tab.](/web/tools/chrome-devtools/network/imgs/frames.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/QgftKdIKE6NqaFwlZAVc.svg", alt="The Frames tab.", width="657", height="450" %}
 
 **Figure 20**. The Frames tab, outlined in blue
 
@@ -391,7 +398,7 @@ To view a preview of a response body:
 
 This tab is mostly useful for viewing images.
 
-![The Preview tab.](/web/tools/chrome-devtools/network/imgs/preview.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/v3bEdPqabJ8vxsXfsboK.svg", alt="The Preview tab.", width="705", height="450" %}
 
 **Figure 21**. The Preview tab, outlined in blue
 
@@ -402,7 +409,7 @@ To view the response body to a request:
 1.  Click the URL of the request, under the **Name** column of the Requests table.
 2.  Click the **Response** tab.
 
-![The Response tab.](/web/tools/chrome-devtools/network/imgs/response.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/th1QacW6EGUpityje3Rk.svg", alt="The Response tab.", width="705", height="450" %}
 
 **Figure 22**. The Response tab, outlined in blue
 
@@ -413,7 +420,7 @@ To view HTTP header data about a request:
 1.  Click on the URL of the request, under the **Name** column of the Requests table.
 2.  Click the **Headers** tab.
 
-![The Headers tab.](/web/tools/chrome-devtools/images/headers.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Zv6sbHi6fZfZMWufSp75.svg", alt="The Headers tab.", width="684", height="450" %}
 
 **Figure 23**. The Headers tab, outlined in blue
 
@@ -432,7 +439,7 @@ To view the query string parameters of a URL in a human-readable format:
 1.  Open the **Headers** tab for the request you're interested in. See [View HTTP headers][16].
 2.  Go to the **Query String Parameters** section.
 
-![The Query String Parameters section.](/web/tools/chrome-devtools/network/imgs/query-string.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/B5QMjpRJZ72xKQ3uWLlh.svg", alt="The Query String Parameters section.", width="684", height="450" %}
 
 **Figure 24**. The Query String Parameters section, outlined in blue
 
@@ -459,7 +466,7 @@ To view the cookies sent in a request's HTTP header:
 
 See [Fields][19] for a description of each of the columns.
 
-![The Cookies tab.](/web/tools/chrome-devtools/network/imgs/cookies.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/y2W5yVOMWqgL8ZE1Lklh.svg", alt="The Cookies tab.", width="744", height="450" %}
 
 **Figure 25**. The Cookies tab, outlined in blue
 
@@ -475,7 +482,7 @@ See [Preview a timing breakdown][20] for a faster way to access this data.
 See [Timing breakdown phases explained][21] for more information about each of the phases that you
 may see in the Timing tab.
 
-![The Timing tab.](/web/tools/chrome-devtools/network/imgs/timing.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/yDJ70NF49BREe9kHD7pw.svg", alt="The Timing tab.", width="615", height="450" %}
 
 **Figure 26**. The Timing tab, outlined in blue
 
@@ -491,7 +498,7 @@ To view a preview of the timing breakdown of a request, hover over the request's
 See [View the timing breakdown of a request][23] for a way to access this data that does not require
 hovering.
 
-![Previewing the timing breakdown of a request.](/web/tools/chrome-devtools/network/imgs/waterfall-hover.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c7kf94kHB11kK5AyYyMn.png", alt="Previewing the timing breakdown of a request.", width="800", height="556" %}
 
 **Figure 27**. Previewing the timing breakdown of a request
 
@@ -524,7 +531,7 @@ Here's more information about each of the phases you may see in the Timing tab:
 To view the initiators and dependencies of a request, hold Shift and hover over the request in the
 Requests table. DevTools colors initiators green, and dependencies red.
 
-![Viewing the initiators and dependencies of a request.](/web/tools/chrome-devtools/network/imgs/initiators-dependencies.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JiZisZ4UmarOjo5cAwf3.png", alt="Viewing the initiators and dependencies of a request.", width="800", height="568" %}
 
 **Figure 28**. Viewing the initiators and dependencies of a request
 
@@ -537,7 +544,7 @@ that, that higher request is the initiator of the initiator. And so on.
 DevTools displays the timing of the `DOMContentLoaded` and `load` events in multiple places on the
 Network panel. The `DOMContentLoaded` event is colored blue, and the `load` event is red.
 
-![The locations of the DOMContentLoaded and load events on the Network panel.](/web/tools/chrome-devtools/network/imgs/load-events.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FzH6gwuHgXuGnasATVOH.svg", alt="The locations of the DOMContentLoaded and load events on the Network panel.", width="585", height="450" %}
 
 **Figure 29**. The locations of the `DOMContentLoaded` and `load` events in the Network panel
 
@@ -552,7 +559,7 @@ other requests occurred before DevTools was opened, those requests aren't counte
 
 !!!
 
-![The total number of requests since DevTools was opened](/web/tools/chrome-devtools/network/imgs/total-requests.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ce9YHacO35q8t5wbmFp9.svg", alt="The total number of requests since DevTools was opened", width="705", height="450" %}
 
 **Figure 30**. The total number of requests since DevTools was opened
 
@@ -568,7 +575,7 @@ other requests occurred before DevTools was opened, those requests aren't counte
 
 !!!
 
-![The total download size of requests](/web/tools/chrome-devtools/network/imgs/total-size.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hlTa0Pu0GRSTt1yuantk.svg", alt="The total download size of requests", width="705", height="450" %}
 
 **Figure 31**. The total download size of requests
 
@@ -580,18 +587,22 @@ uncompresses them.
 When a JavaScript statement causes a resource to be requested, hover over the **Initiator** column
 to view the stack trace leading up to the request.
 
-![The stack trace leading up to a resource request](/web/tools/chrome-devtools/network/imgs/initiator-stack.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tAENLxUdEAUkxHpAysBL.png", alt="The stack trace leading up to a resource request", width="800", height="455" %}
 
 **Figure 32**. The stack trace leading up to a resource request
 
 ### View the uncompressed size of a resource {: #uncompressed }
+
+TODO inline image
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lvgZdF4HI4aDB451wS5G.png", alt="Use Large Request Rows", width="28", height="20" %}
 
 Click **Use Large Request Rows**
 ![Use Large Request
 Rows](/web/tools/chrome-devtools/network/imgs/large-resource-rows-button.png) and
 then look at the bottom value of the **Size** column.
 
-![An example of uncompressed resources.](/web/tools/chrome-devtools/network/imgs/large-request-rows.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OkTz8xZwi0zVh2GWltnE.png", alt="An example of uncompressed resources.", width="800", height="478" %}
 
 **Figure 33**. The compressed size of the `jquery-bundle.js` file that was sent over the network was
 `30.9 KB`, whereas the uncompressed size was `86.3 KB`
@@ -610,7 +621,7 @@ To save all network requests to a HAR file:
 Once you've got a HAR file, you can import it back into DevTools for analysis. Just drag-and-drop
 the HAR file into the Requests table. See also [HAR Analyzer][26].
 
-![Selecting Save as HAR with Content.](/web/tools/chrome-devtools/network/imgs/save-as-har.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FjVMRBNwMyIlkUElRzYI.png", alt="Selecting Save as HAR with Content.", width="800", height="490" %}
 
 **Figure 34**. Selecting **Save as HAR with Content**
 
@@ -625,7 +636,7 @@ select one of the following options:
 - **Copy All as cURL**. Copy all requests as a chain of cURL commands.
 - **Copy All as HAR**. Copy all requests as HAR data.
 
-![Selecting Copy Response.](/web/tools/chrome-devtools/network/imgs/copy.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FCQLdbRS9UMc4eFHzYvI.png", alt="Selecting Copy Response.", width="800", height="514" %}
 
 **Figure 35**. Selecting Copy Response
 
@@ -635,10 +646,14 @@ Expand or collapse sections of the Network panel UI to focus on what's important
 
 ### Hide the Filters pane {: #hide-filters }
 
+TODO inline image
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BmGbqXVYxIY2kwgbNmsp.png", alt="Filter", width="28", height="24" %}
+
 By default, DevTools shows the [Filters pane][27]. Click **Filter**
 ![Filter](/web/tools/chrome-devtools/network/imgs/filters.png) to hide it.
 
-![The Hide Filters button](/web/tools/chrome-devtools/network/imgs/hide-filters.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zN18ngzI6ejSpoKMYKJG.svg", alt="The Hide Filters button", width="705", height="450" %}
 
 **Figure 36**. Hide Filters, outlined in blue
 
@@ -648,25 +663,33 @@ Use large rows when you want more whitespace in your network requests table. Som
 provide a little more information when using large rows. For example, the bottom value of the
 **Size** column is the uncompressed size of a request.
 
-![An example of large request rows in the Requests pane.](/web/tools/chrome-devtools/network/imgs/large-request-rows.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OkTz8xZwi0zVh2GWltnE.png", alt="An example of large request rows in the Requests pane.", width="800", height="478" %}
 
 **Figure 37**. An example of large request rows in the Requests pane
+
+TODO inline image
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lvgZdF4HI4aDB451wS5G.png", alt="Use large request rows", width="28", height="20" %}
 
 Click **Use large request rows**
 ![Use large request
 rows](/web/tools/chrome-devtools/network/imgs/large-resource-rows-button.png) to
 enable large rows.
 
-![The Large Request Rows button](/web/tools/chrome-devtools/network/imgs/large-request-rows.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/inNDJZFVu1zUQ4jz1XhV.svg", alt="The Large Request Rows button", width="705", height="450" %}
 
 **Figure 38**. Large Request Rows, outlined in blue
 
 ### Hide the Overview pane {: #hide-overview }
 
+TODO inline image
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ghte2yf6yUoWNtBfUY6c.png", alt="Hide overview", width="34", height="22" %}
+
 By default, DevTools shows the [Overview pane][28]. Click **Hide overview**
 ![Hide overview](/web/tools/chrome-devtools/network/imgs/hide-overview.png) to hide it.
 
-![The Hide Overview button](/web/tools/chrome-devtools/network/imgs/hide-overview.svg)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SjuObPgFeP2thIv8NWem.svg", alt="The Hide Overview button", width="705", height="450" %}
 
 **Figure 39**. Hide Overview, outlined in blue
 
