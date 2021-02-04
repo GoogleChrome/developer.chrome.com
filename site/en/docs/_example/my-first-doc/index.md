@@ -6,14 +6,16 @@ layout: 'layouts/doc-post.njk'
 title: My first doc
 
 # Required
-# This appears below the title and is an optional teaser
-subhead: 'A sentence of extra info to entice the reader.'
-
-# Required
 # This appears in the ToC of the project landing page at
 # /docs/[project-name]/. It also appears in the <meta description> used in 
 # Google Search.
-description: 'A brief, high level summary of this doc.'
+description: >
+  A brief, high level summary of this doc.
+
+# Optional
+# This appears below the title and is an optional teaser
+subhead: >
+  A sentence of extra info to entice the reader.
 
 # Required
 date: 2020-10-15

@@ -1,12 +1,18 @@
 ---
 # Required
+layout: 'layouts/blog-post.njk'
+
+# Required
 title: An example blog post
 
 # Required
-description: Describe your example post with a couple sentences.
+description: >
+  Describe your example post with a couple sentences.
 
-# Required
-layout: 'layouts/blog-post.njk'
+# Optional
+# This appears below the title and is an optional teaser
+subhead: >
+  A sentence of extra info to entice the reader.
 
 # Required
 date: 2021-01-27
