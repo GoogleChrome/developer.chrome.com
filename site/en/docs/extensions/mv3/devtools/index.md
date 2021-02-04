@@ -91,8 +91,9 @@ DevTools extension can add UI elements to the DevTools window:
   appearance of sidebar panes may not match the image, depending on the version of Chrome you're
   using, and where the DevTools window is docked.)
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png",
-       alt="DevTools window showing Elements panel and Styles sidebar pane.", height="302", width="770" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png"
+    className="screenshot",
+    alt="DevTools window showing Elements panel and Styles sidebar pane.", height="302", width="770" %}
 
 Each panel is its own HTML file, which can include other resources (JavaScript, CSS, images, and so
 on). Creating a basic panel looks like this:
