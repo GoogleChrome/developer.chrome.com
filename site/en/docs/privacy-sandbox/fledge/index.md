@@ -29,9 +29,9 @@ The seller initiates the ad auction by calling runAdAuction(), with data includi
 5. The auction returns data about the winning ad. The data cannot be accessed by the publisher site, except to render the ad in a Fenced Frame.
 6. The ad is displayed.
 
-When a user visits an advertiser’s website, the site can ask the user’s browser to associate the user with specific interest groups for a certain period of time (for example 30 days). 
+When a user visits an advertiser's website, the site can ask the user's browser to associate the user with specific interest groups for a certain period of time (for example 30 days). 
 
-The interest group could be unique to the advertiser’s website, so that it functions as a remarketing list.  Alternatively, multiple websites could agree to assign users to the same interest group, for example if the sites are partnered together or they belong to the same ad network. 
-Periodically the user’s browser fetches ads designated for the interest groups, along with code to enable the browser to run an "auction" to choose an ad, for example based on whether the ad will be displayed near the top of the page. 
+The interest group could be unique to the advertiser's website, so that it functions as a remarketing list.  Alternatively, multiple websites could agree to assign users to the same interest group, for example if the sites are partnered together or they belong to the same ad network. 
+Periodically the user's browser fetches ads designated for the interest groups, along with code to enable the browser to run an "auction" to choose an ad, for example based on whether the ad will be displayed near the top of the page. 
 When the user visits a publisher site that displays ads from an ad network used by an advertiser site the user visited previously, ad network code in the page makes a request to the browser to run "auction" code to select an ad. The "winning" ad is displayed.
 
