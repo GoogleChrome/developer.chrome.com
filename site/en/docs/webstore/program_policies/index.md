@@ -161,15 +161,6 @@ Code Readability Requirements:
   - Shortening of variable and function names
   - Collapsing files together
 
-
-
-
-
-
-
-
-
-
 Additional Requirements for Manifest V3:
 
 : Extensions using Manifest V3 must meet additional requirements related to the
