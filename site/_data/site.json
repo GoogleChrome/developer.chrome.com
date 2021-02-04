@@ -5,6 +5,7 @@
   "imgix": "developer-chrome-com.imgix.net",
   "bucket": "chrome-gcs-uploader.appspot.com",
   "gcs": "https://storage.googleapis.com",
+  "repo": "https://github.com/GoogleChrome/developer.chrome.com/",
   "locales": [
     "en",
     "es"

@@ -9,6 +9,7 @@ const {
   stripDefaultLocale,
 } = require('./site/_filters/urls');
 const {i18n} = require('./site/_filters/i18n');
+const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
 const {minifyJs} = require('./site/_filters/minify-js');
 const {updateSvgForInclude} = require('./site/_filters/svg');
@@ -96,6 +97,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('leadingAndTrailingSlash', leadingAndTrailingSlash);
   eleventyConfig.addFilter('stripDefaultLocale', stripDefaultLocale);
   eleventyConfig.addFilter('i18n', i18n);
+  eleventyConfig.addFilter('githubLink', githubLink);
   eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
   eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
@@ -118,7 +120,7 @@ module.exports = eleventyConfig => {
 
   // Only minify HTML and inline CSS if we are in production because it slows
   // builds _right_ down.
-  // 
+  //
   // !!! Important !!!
   // These transforms should _always_ go last because they look at the final
   // HTML for the page and inline CSS / minify.
