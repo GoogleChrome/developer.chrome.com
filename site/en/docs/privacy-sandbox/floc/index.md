@@ -1,8 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: 'Federated Learning of Cohorts (FLoC)'
-subhead: 'FLoC allows sites to guess your interests without being able to uniquely identify you.'
-description: 'FLoC allows sites to guess your interests without being able to uniquely identify you. By generating a ID based on the browsing history of a large group of people, instead of ones of a particular individual, content can be personalized in a private way.'
+subhead: >
+  FLoC allows sites to guess your interests without being able to uniquely identify you.
+description: >
+  FLoC allows sites to guess your interests without being able to uniquely identify you. By generating a ID based on the browsing history of a large group of people, instead of ones of a particular individual, content can be personalized in a private way.
 date: 2021-01-04
 updated: 2021-01-04
 authors:
@@ -31,18 +33,18 @@ FLoC allows sites to guess your interests without being able to uniquely identif
 
 ### Advertiser (such as a shoe store)
 1. A user visits an advertiser site.
-1. The advertiser identifies correlations between conversions (or other desirable behaviour) and cohort names. For example, an online shoe store might learn that browsers from cohorts 219 and 9739 show a particular interest in hiking shoes. 
+1. The advertiser identifies correlations between conversions (or other desirable behaviour) and cohort names. For example, an online shoe store might learn that browsers from cohorts 219 and 9739 show a particular interest in hiking shoes.
 1. The advertiser shares this information with advertising platforms.
 
 
 ### Publisher (such as a news website)
 1. A user visits a publisher website.
-1. The site requests the browser's cohort name.  
+1. The site requests the browser's cohort name.
 1. The website makes a request for an ad to an ad platform, providing the browser's cohort name.
 
 
 ### Ad platform
-1. The ad platform selects ads appropriate to a user by combining cohort information from a publisher website with cohort conversion information shared by the advertiser. 
+1. The ad platform selects ads appropriate to a user by combining cohort information from a publisher website with cohort conversion information shared by the advertiser.
 
 For example:
 1. A user visits an advertiser site, such as an online shoe store, and views hiking shoes.
