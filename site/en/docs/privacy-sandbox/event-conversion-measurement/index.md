@@ -4,7 +4,7 @@ title: 'Event Conversion Measurement'
 subhead: >
   A new web API available as an origin trial measures when an ad click leads to a conversion, without using cross-site identifiers.
 description: >
-  In order to measure the effectiveness of ad campaigns, advertisers and publishers need to know when an ad click or view leads to a conversion, such as a purchase or sign-up. Historically, this has been done with third-party cookies. Now, the Event Conversion Measurement API enables the correlation of an event on a publisher's website with a subsequent conversion on an advertiser site without involving mechanisms that can be used to recognize a user across sites.
+  The Event Conversion Measurement API enables the correlation of an event on a publisher's website with a subsequent conversion on an advertiser site without involving mechanisms that can be used to recognize a user across sites.
 date: 2021-01-04
 updated: 2021-01-04
 authors:

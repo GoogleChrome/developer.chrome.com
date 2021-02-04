@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'What are Trust Tokens?'
+title: 'Trust Tokens'
 subhead: >
   Trust Tokens is a new API to help combat fraud and distinguish bots from real humans, without passive tracking.
 description: >

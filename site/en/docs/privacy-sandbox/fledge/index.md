@@ -11,7 +11,7 @@ authors:
   - samdutton
 ---
 
-## What is the FLEDGE?
+## What is FLEDGE?
 
 ### Today
 Blah
@@ -21,15 +21,15 @@ Blah
 
 ## How does it work?
 1. A user visits a page on a site that wants to advertise its products, such as an online store.
-2. The advertiser site (or the ad tech it uses) asks the user's browser to join an ad 'interest group' by calling joinAdInterestGroup(), passing data including ads relevant to the user's browsing, the ad platform host name, and URLs to access bidding logic and bidding signals.
-3. The user visits a site that displays ads, such as a news publisher.
-4. The user's browser runs an 'auction' to choose an ad for an ad block on the site. The 'seller' in this auction might be the site itself or a third party acting on its behalf, such as a supply-side platform. The 'buyers' are third parties bidding for the site's ad inventory, such as demand-side platforms acting on behalf of advertisers. The seller in this ad auction has three jobs:
-Choose which buyers can participate.
-Choose which bid is most desirable, based on each bid's price and metadata.
-Report the auction outcome.
-The seller initiates the ad auction by calling runAdAuction(), with data including the host name of the seller, signals from buyers and the seller, and a URL for auction decision logic.
-5. The auction returns data about the winning ad. The data cannot be accessed by the publisher site, except to render the ad in a Fenced Frame.
-6. The ad is displayed.
+1. The advertiser site (or the ad tech it uses) asks the user's browser to join an ad 'interest group' by calling joinAdInterestGroup(), passing data including ads relevant to the user's browsing, the ad platform host name, and URLs to access bidding logic and bidding signals.
+1. The user visits a site that displays ads, such as a news publisher.
+1. The user's browser runs an 'auction' to choose an ad for an ad block on the site. The 'seller' in this auction might be the site itself or a third party acting on its behalf, such as a supply-side platform. The 'buyers' are third parties bidding for the site's ad inventory, such as demand-side platforms acting on behalf of advertisers. The seller in this ad auction has three jobs:<br>
+• Choose which buyers can participate.<br>
+• Choose which bid is most desirable, based on each bid's price and metadata.<br>
+• Report the auction outcome.<br>
+1. The seller initiates the ad auction by calling runAdAuction(), with data including the host name of the seller, signals from buyers and the seller, and a URL for auction decision logic.
+1. The auction returns data about the winning ad. The data cannot be accessed by the publisher site, except to render the ad in a Fenced Frame.
+1. The ad is displayed.
 
 When a user visits an advertiser's website, the site can ask the user's browser to associate the user with specific interest groups for a certain period of time (for example 30 days).
 
