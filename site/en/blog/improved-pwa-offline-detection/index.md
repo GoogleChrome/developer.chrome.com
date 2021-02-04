@@ -6,7 +6,7 @@ description: >
   criteria since the beginning. Starting in Chrome 89, we will start to close
   a key loophole that allowed developers to pass the check, without an offline
   experience.
-date: 2021-02-02
+date: 2021-02-05
 hero: image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4dPIp42oCe3Vq3OPMIuQ.png
 alt: Screenshot of Chrome dino game.
 authors:
@@ -73,6 +73,9 @@ The updated offline detection logic checks:
 * **That the installed service worker `fetch` event returns an HTTP 200
    status code (indicating a successful fetch) in simulated offline mode.**
 
+This change **does not** affect PWAs that have already been installed. The
+criteria are only checked before a PWA is installed.
+
 ## What does this mean for developers?
 
 A properly implemented offline mode requires that the `fetch` handler return
@@ -104,9 +107,10 @@ Our team regularly monitors those tags and does our best to help.
 
 ## When will this change take effect?
 
-For most PWA developers, specifically those who correctly implemented offline mode, this change
-will not impact your applications.  However, we want to give adequate time
-to address this issue for developers with apps that have broken offline modes.
+For most PWA developers, specifically those who correctly implemented offline
+mode, this change will not impact your applications.  However, we want to give
+adequate time to address this issue for developers with apps that have broken
+offline modes.
 
 ### Warning starting Chrome 89 (March 2021)
 
