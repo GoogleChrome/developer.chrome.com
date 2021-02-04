@@ -16,8 +16,7 @@ tutorial teaches you how to:
 - Inspect and debug live content on your Android device from your development machine.
 - Screencast content from your Android device onto a DevTools instance on your development machine.
 
-![Remote Debugging lets you inspect a page running on an Android device from
-            your development machine.](/web/tools/chrome-devtools/remote-debugging/imgs/remote-debugging.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NIeeTMc8eH6hDiA3IX0Y.png", alt="Remote debugging diagram", width="800", height="317" %}
 
 **Figure 1**. Remote Debugging lets you inspect a page running on an Android device from your
 development machine.
@@ -34,8 +33,7 @@ device][1] for more help.
 4.  Go to `chrome://inspect#devices`.
 5.  Make sure that the **Discover USB devices** checkbox is enabled.
 
-    ![The Discover USB Devices checkbox is
-       enabled.](/web/tools/chrome-devtools/remote-debugging/imgs/discover-usb-devices.png)
+    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4P4G0Hmt3CbDkqMoTOiY.png", alt="The Discover USB Devices checkbox is enabled.", width="800", height="587" %}
 
     **Figure 2**. The **Discover USB Devices** checkbox is enabled
 
@@ -44,8 +42,7 @@ device][1] for more help.
     model name of your Android device, then DevTools has successfully established the connection to
     your device. Continue to [Step 2][3].
 
-    ![The Remote Target has successfully detected
-       an offline device that is pending authorization.](/web/tools/chrome-devtools/remote-debugging/imgs/offline-device.png)
+    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7Iy1yVH62Xz40tbiwgRg.png", alt="The Remote Target has successfully detected an offline device that is pending authorization.", width="800", height="587" %}
 
     **Figure 3**. The **Remote Target** has successfully detected an offline device that is pending
     authorization
@@ -96,7 +93,7 @@ issue in the webfundamentals repository][8]!
     interact with that tab from this section. If there are any apps using WebView, you see a section
     for each of those apps, too. In **Figure 5** there are no tabs or WebViews open.
 
-    ![A connected remote device.](/web/tools/chrome-devtools/remote-debugging/imgs/connected-remote-device.png)
+    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/y1pMOU5sSvCLPct4J480.png", alt="A connected remote device.", width="800", height="587" %}
 
     **Figure 4**. A connected remote device
 
@@ -111,7 +108,7 @@ issue in the webfundamentals repository][8]!
 
 Below the URL you can find a menu to pause, focus, reload or close a tab.
 
-![The menu for pausing, reloading, focusing, or closing a tab.](/web/tools/chrome-devtools/remote-debugging/imgs/reload.png)
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JaZPnZlDhAywdFkn8vNm.png", alt="The menu for pausing, reloading, focusing, or closing a tab.", width="800", height="255" %}
 
 **Figure 5**. The menu for pausing, reloading, focusing, or closing a tab
 
@@ -119,6 +116,10 @@ Below the URL you can find a menu to pause, focus, reload or close a tab.
 
 Go to the **Elements** panel of your DevTools instance, and hover over an element to highlight it in
 the viewport of your Android device.
+
+TODO inline image
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/y9AaD4jeSmPRG4sQSylM.png", alt="Select Element", width="42", height="40" %}
 
 You can also tap an element on your Android device screen to select it in the **Elements** panel.
 Click **Select Element**
@@ -129,6 +130,10 @@ Element** is disabled after the first touch, so you need to re-enable it every t
 this feature.
 
 ### Screencast your Android screen to your development machine {: #screencast }
+
+TODO inline image
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/A5AtRECWSgsdtMZkI6g5.png", alt="Toggle Screencast", width="44", height="44" %}
 
 Click **Toggle Screencast**
 ![Toggle Screencast](/web/tools/chrome-devtools/remote-debugging/imgs/toggle-screencast.png) to view
