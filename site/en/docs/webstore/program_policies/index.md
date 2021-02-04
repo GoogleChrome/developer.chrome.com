@@ -164,7 +164,7 @@ Code Readability Requirements:
 Additional Requirements for Manifest V3:
 
 : Extensions using Manifest V3 must meet additional requirements related to the
-  extension’s code. Specifically, the full functionality of an extension must be
+  extension's code. Specifically, the full functionality of an extension must be
   easily discernible from its submitted code. This means that the logic of how
   each extension operates should be self contained. The extension may reference
   and load data and other information sources that are external to the extension,
