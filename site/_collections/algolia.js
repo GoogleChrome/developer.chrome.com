@@ -17,7 +17,7 @@
 const removeMarkdown = require('remove-markdown');
 const {createHash} = require('crypto');
 
-const {generateSrc} = require('../_shortcodes/img');
+const {generateSrc} = require('../_shortcodes/Img');
 const {drafts} = require('../_utils/drafts');
 const {stripDefaultLocale} = require('../_filters/urls');
 

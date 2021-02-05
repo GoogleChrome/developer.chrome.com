@@ -20,7 +20,7 @@ Google Drive Uploader. The [source code][4] is available on GitHub.
 
 ## About the app {: #first }
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UbxLa9XoyBXX4BgqNqeJ.png", alt="Google Drive Uploader", height="680", width="580" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UbxLa9XoyBXX4BgqNqeJ.png", alt="Google Drive Uploader", height="680", width="580" %}
 
 The Google Drive Uploader allows users to quickly view and interact with files stored in their
 Google Drive account as well as upload new files using the [HTML Drag and Drop APIs][5]. It's a
@@ -113,12 +113,12 @@ chrome.app.runtime.onLaunched.addListener(function(launchData) {
 The window is created as a chromeless window (frame: 'none'). By default, windows render with the
 OS's default close/expand/minimize bar:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZCIALlecZwMUv7LW77hO.png", alt="Google Drive Uploader with no frame", height="75", width="508" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZCIALlecZwMUv7LW77hO.png", alt="Google Drive Uploader with no frame", height="75", width="508" %}
 
 The Uploader uses `frame: 'none'` to render the window as a "blank slate" and creates a custom close
 button in `main.html`:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IDJ8RCDPcatsI60AQEni.png", alt="Google Drive Uploader with custom frame", height="50", width="504" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IDJ8RCDPcatsI60AQEni.png", alt="Google Drive Uploader with custom frame", height="50", width="504" %}
 
 The entire navigational area is wrapped in a <nav> (see next section). To declutter the app a bit,
 the custom close button is hidden until the user interacts with this the area:
@@ -376,14 +376,14 @@ feed.
 
 If you run `fetchDocs()` right now, everything works and the list of files shows up:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qF2CspUxWPlHgeukJOkp.png", alt="Fetched list of files in Google Drive Uploader", height="680", width="580" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qF2CspUxWPlHgeukJOkp.png", alt="Fetched list of files in Google Drive Uploader", height="680", width="580" %}
 
 Woot!
 
 Wait,...we're missing those neat file icons. What gives? A quick check of the console shows a bunch
 of CSP-related errors:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/F7b9iaRTKc8cTHN9OEOE.png", alt="CSP errors in developer console", height="71", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/F7b9iaRTKc8cTHN9OEOE.png", alt="CSP errors in developer console", height="71", width="800" %}
 
 The reason is that we're trying to set the icons `img.src` to external URLs. This violates CSP. For
 example: `https://ssl.gstatic.com/docs/doclist/images/icon_10_document_list.png`. To fix this, we
@@ -428,7 +428,7 @@ var successCallback = function(resp, status, headers, config) {
 
 Now that CSP is happy with us again, we get nice file icons:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GP49lYVzl4rPNt868wtn.png", alt="Google Drive Uploader with file icons", height="680", width="580" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GP49lYVzl4rPNt868wtn.png", alt="Google Drive Uploader with file icons", height="680", width="580" %}
 
 ## Going offline: caching external resources {: #six }
 
@@ -436,7 +436,7 @@ The obvious optimization that needs to be made: not make 100s of XHR requests fo
 every call to `fetchDocs()`. Verify this in the Developer Tools console by pressing the "Refresh"
 button several times. Every time, n images are fetched:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/YJgMcn00xGOFjNvWz9K1.png", alt="Console log 65: Fetched icon via XHR", height="19", width="180" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/YJgMcn00xGOFjNvWz9K1.png", alt="Console log 65: Fetched icon via XHR", height="19", width="180" %}
 
 Let's modify `successCallback` to add a caching layer. The additions are highlighted in bold:
 
@@ -515,7 +515,7 @@ case, we can reuse the technique from before and fetch the images. The only diff
 that each blob is written to the filesystem (see [writeFile()][27]). The console verifies this
 behavior:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tS8fAphl6h2v9706ndyV.png", alt="Console log 100: Write completed", height="42", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tS8fAphl6h2v9706ndyV.png", alt="Console log 100: Write completed", height="42", width="800" %}
 
 Upon next run (or press of the "Refresh" button), the URL passed to
 `webkitResolveLocalFileSystemURL()` exists because the file has been previously cached. The app sets

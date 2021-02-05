@@ -38,7 +38,7 @@ what's new for developers in Chrome 76!
 
 {# TODO(petele): video element, float-right, auto-play #}
 <figure class="float-right">
-{% video src=[
+{% Video src=[
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/PK7Qq8FyeMg2DDRL3XQT.webm",
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/bh7RkIIECjmXkIdToJdq.mp4"
 ]%}
@@ -66,7 +66,7 @@ for complete details.
 ## More control over the PWA mini-infobar {: #prevent-mini-infobar }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/e8QdF96TkOMv3pzLAVYN.png", alt="", height="417", width="800" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/e8QdF96TkOMv3pzLAVYN.png", alt="", height="417", width="800" %}
   <figcaption>
     Example of the Add to Home screen mini-infobar for AirHorner
   </figcaption>

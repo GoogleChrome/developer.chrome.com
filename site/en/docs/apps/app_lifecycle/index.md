@@ -23,7 +23,7 @@ page listens out for events from the app runtime and manages what gets launched 
 The app runtime loads the event page from a user's desktop and the `onLaunch()` event is fired. This
 event tells the event page what windows to launch and their dimensions.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JjrzyAmp9vghsqh71tKu.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JjrzyAmp9vghsqh71tKu.png",
        alt="how app lifecycle works", height="329", width="444" %}
 
 When the event page has no executing JavaScript, no pending callbacks, and no open windows, the

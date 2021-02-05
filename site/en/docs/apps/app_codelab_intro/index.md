@@ -20,7 +20,7 @@ Follow along with each step to learn about the basic building blocks of the Chro
 the end of this codelab, you will have an offline-enabled and feature-rich Todo app that you can
 install on your desktop computer.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/epH3dXjtGY32KrRzPjt2.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/epH3dXjtGY32KrRzPjt2.png",
        alt="A screenshot of the finished codelab", height="538", width="800" %}
 
 The finished Todo app can be [installed from the Chrome Web Store][3].

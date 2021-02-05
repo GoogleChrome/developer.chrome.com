@@ -243,7 +243,7 @@ restart. (Hint: Add a listener to the `onRestarted` event in the background page
 You are done Step 6! Reload your app and add some todos. Click **Export to disk** to export your
 todos to a .txt file.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/D5YDP8PChoRlsCxAOkPa.png", alt="The Todo app with exported todos", height="650", width="659" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/D5YDP8PChoRlsCxAOkPa.png", alt="The Todo app with exported todos", height="650", width="659" %}
 
 ## For more information {: #recap }
 

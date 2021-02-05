@@ -55,15 +55,15 @@ Here are some icons that follow these guidelines.
 <table>
   <tr>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Rd4d1Q0Oiqrloe2FEuhz.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Rd4d1Q0Oiqrloe2FEuhz.png", 
         alt="Google Calendar icon (square)", height="128", width="128" %}
     </td>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/6kEsFm1qtHHAh5bhoqyb.png",
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/6kEsFm1qtHHAh5bhoqyb.png",
             alt="Google Reader icon (irregular)", height="128", width="128" %}
     </td>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/sXGfYmHIWHd1daw8XWqU.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/sXGfYmHIWHd1daw8XWqU.png", 
             alt="bowling ball-like icon (round)", height="128", width="128" %}
     </td>
   </tr>
@@ -77,13 +77,13 @@ All app icons should have the same visual weight, occupying roughly the same are
 figure shows, when you size an icon to fill the available area, square and circular icons are
 significantly larger than they should be, compared to icons with other shapes.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/9FMwqxYPCJPUtgOopXPk.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/9FMwqxYPCJPUtgOopXPk.png", 
        alt="icons filling all available space", height="98", width="562" %}
 
 Normalizing the icon sizes, as the next figure shows, gives the icons roughly even area and visual
 weight.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Jx7j7kIofWvXzqdvNj58.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Jx7j7kIofWvXzqdvNj58.png", 
        alt="most of the icons are smaller, and they have equal visual weight", height="99", width="563" %}
 
 You can use the following template images to help you judge how large your image's artwork should
@@ -94,15 +94,15 @@ very little area and is mostly negative space, using the entire 128x128 area mig
 <table>
   <tr>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c0DOKQ3OrWsplkGsI1B7.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c0DOKQ3OrWsplkGsI1B7.png", 
             alt="Square icon template", height="128", width="128" %}
     </td>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GnSrHkHRaoyeCSh5uUYF.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GnSrHkHRaoyeCSh5uUYF.png", 
             alt="Circular icon template", height="128", width="128" %}
     </td>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/dpaYEIUCdU2xtyld5bI0.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/dpaYEIUCdU2xtyld5bI0.png", 
             alt="Irregular icon template", height="128", width="128" %}
     </td>
   </tr>
@@ -118,29 +118,29 @@ The following figures show square and circular icons, comparing them with the te
 <table>
   <tr>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c0DOKQ3OrWsplkGsI1B7.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c0DOKQ3OrWsplkGsI1B7.png", 
              alt="Square icon template", height="128", width="128" %}
     </td>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hjay02YiqEGyRPei7P3p.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hjay02YiqEGyRPei7P3p.png", 
              alt="Google Calendar icon on top of square template", height="128", width="128" %}
     </td>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Rd4d1Q0Oiqrloe2FEuhz.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Rd4d1Q0Oiqrloe2FEuhz.png", 
              alt="Google Calendar icon (square)", height="128", width="128" %}
     </td>
   </tr>
   <tr>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GnSrHkHRaoyeCSh5uUYF.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GnSrHkHRaoyeCSh5uUYF.png", 
             alt="Circular icon template", height="128", width="128" %}
     </td>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/XTqBY6it54ZoYNpYPrLx.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/XTqBY6it54ZoYNpYPrLx.png", 
              alt="bowling ball-like icon on top of circle template", height="128", width="128" %}
     </td>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/sXGfYmHIWHd1daw8XWqU.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/sXGfYmHIWHd1daw8XWqU.png", 
             alt="bowling ball-like icon (round)", height="128", width="128" %}
     </td>
   </tr>
@@ -152,15 +152,15 @@ nor circular guidelines, but it fits near them both.
 <table>
   <tr>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/dpaYEIUCdU2xtyld5bI0.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/dpaYEIUCdU2xtyld5bI0.png", 
             alt="Irregular icon template", height="128", width="128" %}
     </td>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OejNJxYAhv6mOh5E76M7.png", 
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OejNJxYAhv6mOh5E76M7.png", 
              alt="Google Reader icon on top of irregular template", height="128", width="128" %}
     </td>
     <td>
-      {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/6kEsFm1qtHHAh5bhoqyb.png",
+      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/6kEsFm1qtHHAh5bhoqyb.png",
             alt="Google Reader icon (irregular)", height="128", width="128" %}
     </td>
   </tr>
@@ -181,21 +181,21 @@ give a sense of tangibility are OK, but avoid dramatic angles.
   <tbody>
     <tr>
       <td>
-        {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Rd4d1Q0Oiqrloe2FEuhz.png", 
+        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Rd4d1Q0Oiqrloe2FEuhz.png", 
               alt="Google Calendar icon (square)", height="128", width="128" %}
       </td>
       <td>
-        {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OQkBUeIh9bfpXYwbJbPp.png", 
+        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OQkBUeIh9bfpXYwbJbPp.png", 
               alt="Generic calendar icon with too much perspective", height="98", width="98" %}
       </td>
     </tr>
     <tr>
       <td>
-        {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pVaO0s5ibmNTuR8V1J5m.png", 
+        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pVaO0s5ibmNTuR8V1J5m.png", 
               alt="YouTube icon", height="99", width="99" %}
       </td>
       <td>
-        {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/e3g4CRusuKk9Gu7JUPTI.png", 
+        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/e3g4CRusuKk9Gu7JUPTI.png", 
               alt="YouTube icon with too much perspective", height="98", width="98" %}
       </td>
     </tr>
@@ -245,11 +245,11 @@ The following graphics are examples of the promotional images for an app:
   <tbody>
     <tr>
       <td>
-        {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xB3wghefUGHWB2CqzYxw.jpg", 
+        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xB3wghefUGHWB2CqzYxw.jpg", 
                alt="Small promo image", height="140", width="220" %}
       </td>
       <td>
-        {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PQvoyo0sb9SHh9kTaxip.jpg", 
+        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PQvoyo0sb9SHh9kTaxip.jpg", 
                alt="Large promo image", height="340", width="460" %}
       </td>
     </tr>
@@ -258,7 +258,7 @@ The following graphics are examples of the promotional images for an app:
 
 Marquee image (1400x560):
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DETytGVTDQk2HMmnjOFr.jpg", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DETytGVTDQk2HMmnjOFr.jpg", 
         alt="Marquee", height="280", width="700" %}
 
 <div class="aside aside--note"><b>Note</b>: You can find the review status of your promo image in each item's listing within your developer dashboard. Click on 'Edit' on the item's listing, and scroll down to the Promotional Images section. If you have questions about the status of your promo images, contact <a href="mailto:cws-assets@google.com">cws-assets@google.com</a>.</div>
@@ -294,15 +294,15 @@ Each screenshot should be as follows:
 
 As an example, here are five screenshot images for an app:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FjacdYh8XHvRwHoiP8UN.jpeg", alt="Screenshot 1", height="500", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FjacdYh8XHvRwHoiP8UN.jpeg", alt="Screenshot 1", height="500", width="800" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/6krgGzrhfz7nTHdRzJPI.jpeg", alt="Screenshot 2", height="500", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/6krgGzrhfz7nTHdRzJPI.jpeg", alt="Screenshot 2", height="500", width="800" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/WG7svtEYGdzprL9jkC7A.jpeg", alt="Screenshot 3", height="500", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/WG7svtEYGdzprL9jkC7A.jpeg", alt="Screenshot 3", height="500", width="800" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xJJTI5ixv2rqG1FZ09kQ.jpeg", alt="Screenshot 4", height="500", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xJJTI5ixv2rqG1FZ09kQ.jpeg", alt="Screenshot 4", height="500", width="800" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oPzkJXhVmZWLTENXhQMf.jpeg", alt="Screenshot 5", height="500", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oPzkJXhVmZWLTENXhQMf.jpeg", alt="Screenshot 5", height="500", width="800" %}
 
 ## What next?
 

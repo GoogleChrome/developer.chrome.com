@@ -25,7 +25,7 @@ To delete a developer account, first make sure you've unpublished any published 
 your account page on the Chrome Web Store [Developer Dashboard][1]. Scroll down to the **Developer
 Account** section:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/D6j5hOCsx4GmL3rbkEbK.png", alt="image showing the account deletion field", height="348", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/D6j5hOCsx4GmL3rbkEbK.png", alt="image showing the account deletion field", height="348", width="800" %}
 
 Click on **Delete developer account** to permanently delete the developer account.
 
@@ -37,7 +37,7 @@ associated with the group publisher account.
 
 With the group publisher account selected, you'll see a **Group publisher account** section:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/XHb5NK5htbNct2ATTg7R.png", alt="image showing the group publisher deletion field", height="158", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/XHb5NK5htbNct2ATTg7R.png", alt="image showing the group publisher deletion field", height="158", width="800" %}
 
 Click on **Delete group publisher account** to permanently delete the group publisher account.
 

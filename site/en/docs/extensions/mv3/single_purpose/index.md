@@ -220,23 +220,23 @@ indication of whether your extension will comply with the new policy.
 An extension that adds features to Chrome's browser history. All of the features are contained in a
 single browser function.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Z2D3bf3oKeu7xFYr6JkY.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Z2D3bf3oKeu7xFYr6JkY.png",
        alt="Image of browsing history extension", height="385", width="680" %}
 
 An extension with a single subject matter: It provides dropdown information about the weather.
 Because it is focused on one type of content, this extension could also change browser settings,
 like the new tab page, where the extension displays weather conditions and offers a weather search.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mFpoq52gmosqUk2o5hDl.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mFpoq52gmosqUk2o5hDl.png",
        alt="Image of weather extension", height="425", width="680" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/epJv9ntYr6LGgUS3HdwB.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/epJv9ntYr6LGgUS3HdwB.png",
        alt="Image of weather extension showing new tab page", height="488", width="781" %}
 
 A search extension. It has multiple features, including this dropdown, but all of them are related
 to the narrow subject matter of search.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/S92tiTcndTEmjPJYWVoW.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/S92tiTcndTEmjPJYWVoW.png",
        alt="Image of search extension", height="425", width="680" %}
 
 [1]: http://blog.chromium.org/2014/02/make-sure-to-get-your-extension-in.html

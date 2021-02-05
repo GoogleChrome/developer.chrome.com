@@ -16,7 +16,7 @@ An extension must fulfill a [single purpose][1] that is narrowly defined and eas
 single extension can include multiple components and a range of functionality, as long as everything
 contributes towards a common purpose.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/bk1NEBu7WXWCXfNJCsms.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/bk1NEBu7WXWCXfNJCsms.png",
        alt="A screenshot of an extension's icon in the browser bar", height="35", width="91" %}
 
 User interfaces should be minimal and have intent. They can range from a simple icon, such as the [Google

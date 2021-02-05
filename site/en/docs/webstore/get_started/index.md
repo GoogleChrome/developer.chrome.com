@@ -114,13 +114,13 @@ Store Payments.
 
 4.  Click the **Generate new token** button at the bottom of the OAuth page.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/WAH6o7pV8RwTgYb1NDrN.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/WAH6o7pV8RwTgYb1NDrN.png",
            alt="A screenshot showing the bottom of the OAuth page before generating the new token",
            height="66", width="456" %}
 
 5.  Save the values that appear next to **oauth_token_secret** and **oauth_token**.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ShWIu4C7l4ZTcu1P2Fgy.png", 
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ShWIu4C7l4ZTcu1P2Fgy.png", 
            alt="A screenshot showing the generated token and secret at bottom of the OAuth page",
            height="58", width="456" %}
 
@@ -295,7 +295,7 @@ In this step, you'll make sure your app works, and you'll deploy it to the web.
 4.  Once you successfully run your app locally, deploy it:
 
     1.  Click the App Engine deploy button on the toolbar:
-        {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GgDrbzu3jMJ4Pa8Rv7D3.png", alt="The deply button", height="22", width="22" %}
+        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GgDrbzu3jMJ4Pa8Rv7D3.png", alt="The deply button", height="22", width="22" %}
         A Deploy dialog comes up.
     2.  Set the identifier to be used for Google App Engine. This is different from the Google
         Chrome app ID; it's the string you chose in [Step 4][28]. To set it, click the **App Engine

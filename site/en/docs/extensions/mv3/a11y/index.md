@@ -35,7 +35,7 @@ accessible from the beginning than to go back an add accessibility support later
 Whenever possible, use [standard HTML UI controls][2]. Standard HTML controls are keyboard
 accessible, scale easily and are generally understood by screen readers.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GzBvxe7wf61STDT30M2C.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GzBvxe7wf61STDT30M2C.png",
        alt="Screenshots and code for button, checkbox, radio, text, select/option, and link", height="350", width="550" %}
 
 ### WAI-ARIA in custom controls {: #aria }
@@ -111,10 +111,10 @@ Make sure it's easy to see which parts of the interface have keyboard focus. Usu
 moves around the interface, however, if CSS is used too heavily the outline might be suppressed or
 the contrast reduced.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KLh65zbJuxjLzdmYxFrP.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KLh65zbJuxjLzdmYxFrP.png",
        alt="A focus outline on a Search button", height="75", width="200" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nrhQ8wybIh28GxRFfmSl.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nrhQ8wybIh28GxRFfmSl.png",
        alt="A focus outline on one of a series of links", height="40", width="400" %}
 
 ### Shortcuts {: #shortcuts }

@@ -192,7 +192,7 @@ chrome.runtime.onMessage.addListener(function(message, callback) {
 The lifetime of a background script is observable by monitoring when an entry for the extension
 appears and disappears from Chrome's task manager.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/occ8HD81vNq2zboXIbiu.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/occ8HD81vNq2zboXIbiu.png",
        alt="Chrome with an extension's popup open.", height="623", width="730" %}
 
 Open the task manager by clicking the Chrome Menu, hovering over more tools and selecting "Task

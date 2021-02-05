@@ -49,7 +49,7 @@ Method][12].
 You can use `google.payments.inapp.getSkuDetails` to get the list of available products, and then
 show those to the user.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/EZULNCIw4clveEnCqfvT.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/EZULNCIw4clveEnCqfvT.png",
        alt="A screenshot of an example purchase flow.", height="566", width="800" %}
 
 <div class="aside aside--note"><strong>Best Practice:</strong> Before showing the user all of the items that are available, compare the list of items that they've already purchased (using <code>google.payments.inapp.getPurchases</code>) and provide some indication that the items have already been purchased.</div>
@@ -98,7 +98,7 @@ interface for creating in-app products and licenses. This interface can be found
 Products tab in the Chrome app listing page of the Chrome Web Store Developer Dashboard. Once you
 have created your in-app products, you can continue to use this interface to manage them.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BboETdjxoq0zsejDhhkL.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BboETdjxoq0zsejDhhkL.png",
        alt="A screenshot of the in-app product dashboard", height="614", width="800" %}
 
 1.  Open the [Chrome Web Store Developer Dashboard][17] and edit the listing for your app.

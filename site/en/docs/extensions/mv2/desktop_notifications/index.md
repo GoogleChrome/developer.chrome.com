@@ -19,13 +19,13 @@ Use rich desktop notifications to notify users that something important has happ
 appear outside the browser window. As the following snapshots show, the details of how notifications
 look and where they're shown depend on the platform.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nbLinHu3r2DVL7DWmssr.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nbLinHu3r2DVL7DWmssr.png",
        alt="Notifications on Microsoft Windows", height="135", width="330" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/aG2rad4dnaqo3hWMCcvv.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/aG2rad4dnaqo3hWMCcvv.png",
        alt="Notifications on Mac OS X", height="135", width="330" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2A4keArJesaukD4UiIvk.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2A4keArJesaukD4UiIvk.png",
        alt="Notifications on Ubuntu Linux", height="135", width="330" %}
 
 You create the notification window using a bit of JavaScript and, optionally, an HTML page packaged
