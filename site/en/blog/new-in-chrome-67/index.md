@@ -18,7 +18,7 @@ tags:
   - chrome-67
 ---
 
-{% youtube id='UyLI3WlWqLM' %}
+{% YouTube id='UyLI3WlWqLM' %}
 
 * Progressive Web Apps are coming to the [desktop](#desktop-pwas)
 * The [generic sensor API](#generic-sensor-api) makes it way easier to get
@@ -58,7 +58,7 @@ your app can be installed. Then, when the user clicks the button, call prompt
 on the saved event; Chrome will then show the prompt to the user. If they
 click add, Chrome will add your PWA to their shelf and launcher.
 
-{% youtube id="NITk4kXMQDw", startTime="1678" %}
+{% YouTube id="NITk4kXMQDw", startTime="1678" %}
 
 Check out my [Google I/O talk](https://youtu.be/NITk4kXMQDw?t=1678) where
 Jenny and I go into detail about the technical and special design

@@ -19,7 +19,7 @@ tags:
 
 Chrome 83 is starting to roll out to stable now.
 
-{% youtube id='RsMikJZhnSQ' %}
+{% YouTube id='RsMikJZhnSQ' %}
 
 Here's what you need to know:
 
@@ -100,7 +100,7 @@ familiar to our users. The styling of form controls can be inconsistent
 across browsers and operating systems. And we frequently have to ship a
 number of CSS rules just to get a consistent look across devices.
 
-{% columns %}
+{% Columns %}
 <figure>
   {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/WSHGuVSVSsRyOdbnUN4F.png", alt="", height="928", width="492" %}
   <figcaption>
@@ -113,7 +113,7 @@ number of CSS rules just to get a consistent look across devices.
     After, updated styling of form controls.
   </figcaption>
 </figure>
-{% endcolumns %}
+{% endColumns %}
 
 I've been really impressed by the work Microsoft has been doing to modernize
 the appearance of form controls. Beyond the nicer visual style, they bring

@@ -17,7 +17,7 @@ tags:
   - chrome-70
 ---
 
-{% youtube id='msA284Q6yZU' %}
+{% YouTube id='msA284Q6yZU' %}
 
 In Chrome 70, we've added support for:
 

@@ -18,7 +18,7 @@ tags:
   - chrome-75
 ---
 
-{% youtube id='_BtaAIhC2UU' %}
+{% YouTube id='_BtaAIhC2UU' %}
 
 In Chrome 75, we've added support for:
 

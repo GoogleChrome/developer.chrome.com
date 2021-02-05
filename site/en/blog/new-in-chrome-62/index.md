@@ -16,7 +16,7 @@ tags:
   - chrome-62
 ---
 
-{% youtube id='jO8iVc4hEe8' %}
+{% YouTube id='jO8iVc4hEe8' %}
 
 * Chrome 62 makes the [network information API](#network-info) more useful
   by providing actual performance metrics instead of theoretical results.

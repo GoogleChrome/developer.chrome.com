@@ -16,7 +16,7 @@ tags:
   - chrome-60
 ---
 
-{% youtube id='vE7JTf2_-ws' %}
+{% YouTube id='vE7JTf2_-ws' %}
 
 * [Paint Timing API](#paint) allows you to measure time to first paint and
   time to first contentful paint with the Paint Timings AP.
@@ -77,7 +77,7 @@ for more information.
 
 ## WebAssembly {: #wasm }
 
-{% youtube id="6v4E6oksar0" %}
+{% YouTube id="6v4E6oksar0" %}
 
 Web Assembly or wasm provides a new way to run code, written in languages like
 C and C++ on the web, at near native speed.

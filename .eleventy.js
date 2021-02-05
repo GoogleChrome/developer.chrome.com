@@ -17,12 +17,12 @@ const {slugify} = require('./site/_filters/slugify');
 const {toc} = require('./site/_filters/toc');
 
 // Shortcodes
-const {iframe} = require('./site/_shortcodes/iframe');
-const {glitch} = require('./site/_shortcodes/glitch');
+const {IFrame} = require('./site/_shortcodes/IFrame');
+const {Glitch} = require('./site/_shortcodes/Glitch');
 const {img} = require('./site/_shortcodes/img');
 const {video} = require('./site/_shortcodes/video');
-const {youtube} = require('./site/_shortcodes/youtube');
-const {columns, column} = require('./site/_shortcodes/columns');
+const {YouTube} = require('./site/_shortcodes/YouTube');
+const {Columns, Column} = require('./site/_shortcodes/Columns');
 const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
 
 // Transforms
@@ -105,13 +105,13 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('toc', toc);
 
   // Add shortcodes
-  eleventyConfig.addShortcode('iframe', iframe);
-  eleventyConfig.addShortcode('glitch', glitch);
+  eleventyConfig.addShortcode('IFrame', IFrame);
+  eleventyConfig.addShortcode('Glitch', Glitch);
   eleventyConfig.addShortcode('img', img);
   eleventyConfig.addShortcode('video', video);
-  eleventyConfig.addShortcode('youtube', youtube);
-  eleventyConfig.addPairedShortcode('columns', columns);
-  eleventyConfig.addPairedShortcode('column', column);
+  eleventyConfig.addShortcode('YouTube', YouTube);
+  eleventyConfig.addPairedShortcode('Columns', Columns);
+  eleventyConfig.addPairedShortcode('Column', Column);
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
 

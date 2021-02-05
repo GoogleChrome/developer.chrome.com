@@ -17,7 +17,7 @@ tags:
   - chrome-56
 ---
 
-{% youtube id='F4DfGVbvRpY' %}
+{% YouTube id='F4DfGVbvRpY' %}
 
 * Users can now select Bluetooth Low Energy
   devices to connect to web sites that use the [Web Bluetooth API](#webbluetooth).

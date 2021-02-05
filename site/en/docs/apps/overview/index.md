@@ -17,7 +17,7 @@ more about [**migrating your app**][2].
 Chrome Apps let you use HTML5, CSS, and JavaScript to deliver an experience comparable to a native
 application.
 
-{% youtube id="lBUGTVIJVfM" %}
+{% YouTube id="lBUGTVIJVfM" %}
 
 ## Why build a Chrome App? {: #why-build }
 
@@ -89,7 +89,7 @@ Chromebooks.
 
 Use the full featured IDE in the [Chrome Dev Editor][8].
 
-{% youtube id="NNLnTz6yIc4" %}
+{% YouTube id="NNLnTz6yIc4" %}
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
 [2]: /apps/migration

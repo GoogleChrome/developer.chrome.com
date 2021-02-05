@@ -21,7 +21,7 @@ tags:
 Chrome 80 is rolling out now, and there's a ton of new stuff in it for
 developers!
 
-{% youtube id='lM0qZpxu0Fg' %}
+{% YouTube id='lM0qZpxu0Fg' %}
 
 There's support for:
 

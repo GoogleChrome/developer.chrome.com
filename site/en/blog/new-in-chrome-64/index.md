@@ -17,7 +17,7 @@ tags:
   - chrome-64
 ---
 
-{% youtube id='y5sb-icqOyg' %}
+{% YouTube id='y5sb-icqOyg' %}
 
 * Support for [`ResizeObservers`](#resizeobserver), will notify you
   when an element's content rectangle has changed its size.

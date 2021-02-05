@@ -16,7 +16,7 @@
 
 const {html} = require('common-tags');
 const {escape, stringify} = require('querystring');
-const {iframe} = require('./iframe');
+const {IFrame} = require('./IFrame');
 
 /**
  * Validates allow sources are an array and lower case.
@@ -38,7 +38,7 @@ function expandAllowSource(s) {
  * @param {GlitchArgs} args  Named arguments
  * @return {string}
  */
-const glitch = args => {
+const Glitch = args => {
   const defaultAllow = [
     'camera',
     'clipboard-read',
@@ -82,9 +82,9 @@ const glitch = args => {
 
   return html`
     <div style="height: ${glitchProps.height}px; width: 100%;">
-      ${iframe({src, title: `${escape(glitchProps.id)} on Glitch`, allow})}
+      ${IFrame({src, title: `${escape(glitchProps.id)} on Glitch`, allow})}
     </div>
   `.replace(/\s\s+/g, ' ');
 };
 
-module.exports = {glitch};
+module.exports = {Glitch};

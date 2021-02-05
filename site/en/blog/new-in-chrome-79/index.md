@@ -18,7 +18,7 @@ tags:
   - chrome-79
 ---
 
-{% youtube id='L0OB0_bO5I0' %}
+{% YouTube id='L0OB0_bO5I0' %}
 
 Chrome 79 is rolling out now!
 

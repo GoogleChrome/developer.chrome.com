@@ -13,7 +13,7 @@ IFrames on the site.
 {% raw %}
 
 ```md
-{% iframe
+{% IFrame
   src='https://example.com',
 %}
 ```
@@ -39,7 +39,7 @@ Keep in mind, for an attribute that has a boolean value, just set the value to
 {% raw %}
 
 ```md
-{% iframe
+{% IFrame
   src='https://example.com',
   allowfullscreen=true
 %}

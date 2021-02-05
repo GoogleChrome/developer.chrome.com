@@ -20,7 +20,7 @@ tags:
 
 Chrome 87 is starting to roll out to stable now.
 
-{% youtube id='NCKMMzVn1c8' %}
+{% YouTube id='NCKMMzVn1c8' %}
 
 Here's what you need to know:
 

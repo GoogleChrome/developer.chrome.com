@@ -22,7 +22,7 @@ const {html} = require('common-tags');
  * @param {IFrameArgs} args Named arguments
  * @return {string}
  */
-const iframe = args => {
+const IFrame = args => {
   /** @type IFrameArgs */
   const iframeArgs = {
     style: 'height: 100%; width: 100%; border: 0;',
@@ -48,4 +48,4 @@ const iframe = args => {
   return html`<iframe${attributes}></iframe>`.replace(/\s\s+/g, ' ');
 };
 
-module.exports = {iframe};
+module.exports = {IFrame};

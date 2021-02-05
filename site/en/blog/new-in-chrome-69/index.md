@@ -18,7 +18,7 @@ tags:
   - chrome-69
 ---
 
-{% youtube id='WF2IjH35w8o' %}
+{% YouTube id='WF2IjH35w8o' %}
 
 It's been **ten years** since Chrome was first released. A lot has changed
 since then, but our goal of building a solid foundation for modern web
@@ -206,8 +206,8 @@ A special thanks to all the people who have helped to make the
 [28 episodes of New in Chrome](https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m)
 happen. Every single one of these people are awesome!
 
-{% columns %}
-  {% column %}
+{% Columns %}
+  {% Column %}
     Heather Duthie<br>
     Tim Malieckal<br>
     Rick Murphy<br>
@@ -215,9 +215,9 @@ happen. Every single one of these people are awesome!
     Kiran Puri<br>
     Nilesh Bell-Gorsia<br>
     Lee Carruthers
-  {% endcolumn%}
+  {% endColumn %}
 
-  {% column %}
+  {% Column %}
     Philip Maniaci<br>
     Chris Turiello<br>
     Andrew Barker<br>
@@ -225,9 +225,9 @@ happen. Every single one of these people are awesome!
     Izzy Cosentino<br>
     Norm Magnuson<br>
     Loren Borja
-  {% endcolumn%}
+  {% endColumn %}
 
-  {% column %}
+  {% Column %}
     Michelle Ortega<br>
     Varun Bajaj<br>
     Ted Maroney<br>
@@ -235,9 +235,9 @@ happen. Every single one of these people are awesome!
     Andrew Naugle<br>
     Michelle Michelson<br>
     Todd Rawiszer
-  {% endcolumn%}
+  {% endColumn %}
 
-  {% column %}
+  {% Column %}
     Anthony Mcgowen<br>
     Victoria Canty<br>
     Alexander Koht<br>
@@ -245,8 +245,8 @@ happen. Every single one of these people are awesome!
     Andre Szyszkowski<br>
     Kelsey Allen<br>
     Liam Spradlin
-  {% endcolumn%}
-{% endcolumns%}
+  {% endColumn %}
+{% endColumns %}
 
 Want to see how far New in Chrome has come since our first episode?
 Check out this fun 30 second [progression video](https://www.youtube.com/watch?v=kMRdS5pusU0)
@@ -260,7 +260,7 @@ have gotten better because of you!
 
 ### New in Chrome Bloopers
 
-{% youtube id="LScSTMOMEDM" %}
+{% YouTube id="LScSTMOMEDM" %}
 
 We put together a fun little blooper reel for you to enjoy! After watching
 it, I've learned a few things:

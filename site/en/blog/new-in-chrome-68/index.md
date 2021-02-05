@@ -18,7 +18,7 @@ tags:
   - chrome-68
 ---
 
-{% youtube id='jlbLRsAmKtw' %}
+{% YouTube id='jlbLRsAmKtw' %}
 
 * The [Add to Home Screen behavior](#a2hs) on Android is changing to give
   you more control.

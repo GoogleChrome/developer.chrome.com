@@ -187,39 +187,39 @@ Columns can be used to place elements side-by-side. This works well for
 blocks of code or images. On mobile the columns will stack vertically.
 
 ```md
-{% raw %}{% columns %}
+{% raw %}{% Columns %}
 
-{% column %}
+{% Column %}
 {% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
 Original
-{% endcolumn %}
+{% endColumn %}
 
-{% column %}
+{% Column %}
 {% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
 Flipped
-{% endcolumn %}
+{% endColumn %}
 
-{% endcolumns %}{% endraw %}
+{% endColumns %}{% endraw %}
 ```
 
-{% columns %}
+{% Columns %}
 
-{% column %}
+{% Column %}
 {% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
 Original
-{% endcolumn %}
+{% endColumn %}
 
-{% column %}
+{% Column %}
 {% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
 Flipped
-{% endcolumn %}
+{% endColumn %}
 
-{% endcolumns %}
+{% endColumns %}
 
 ````md
-{% raw %}{% columns %}
+{% raw %}{% Columns %}
 
-{% column %} <!-- Include a newline to mix markdown with shortcodes -->
+{% Column %} <!-- Include a newline to mix markdown with shortcodes -->
 
 ```js
 // v1
@@ -229,9 +229,9 @@ const config = {
 };
 ```
 
-{% endcolumn %}
+{% endColumn %}
 
-{% column %}
+{% Column %}
 
 ```js
 // v2
@@ -241,14 +241,14 @@ const config = {
 };
 ```
 
-{% endcolumn %}
+{% endColumn %}
 
-{% endcolumns %}{% endraw %}
+{% endColumns %}{% endraw %}
 ````
 
-{% columns %}
+{% Columns %}
 
-{% column %}
+{% Column %}
 
 ```js
 // v1
@@ -258,9 +258,9 @@ const config = {
 };
 ```
 
-{% endcolumn %}
+{% endColumn %}
 
-{% column %}
+{% Column %}
 
 ```js
 // v2
@@ -270,9 +270,9 @@ const config = {
 };
 ```
 
-{% endcolumn %}
+{% endColumn %}
 
-{% endcolumns %}
+{% endColumns %}
 
 ## Compare
 
@@ -411,7 +411,7 @@ var x = 0;
 {% raw %}
 
 ```html
-{% glitch {
+{% Glitch {
   id: 'tabindex-zero',
   path: 'index.html',
   previewSize: 0,
@@ -420,12 +420,12 @@ var x = 0;
 
 <!-- Or just the Glitch ID -->
 
-{% glitch 'tabindex-zero' %}
+{% Glitch 'tabindex-zero' %}
 ```
 
 {% endraw %}
 
-{% glitch {
+{% Glitch {
   id: 'tabindex-zero',
   path: 'index.html'
 } %}
@@ -849,13 +849,13 @@ See the [Add an image or video guide](https://developer.chrome.com/docs/handbook
 
 ## YouTube
 
-Use the {% raw %}`{% youtube %}`{% endraw %} shortcode to embed a YouTube video.
+Use the {% raw %}`{% YouTube %}`{% endraw %} shortcode to embed a YouTube video.
 
 ```md
-{% raw %}{% youtube id="qPD2yc8BoDk" %}
+{% raw %}{% YouTube id="qPD2yc8BoDk" %}
 
 <!-- You can pass an optional start time as well -->
-{% youtube id="qPD2yc8BoDk", startTime="1678" %}{% endraw %}
+{% YouTube id="qPD2yc8BoDk", startTime="1678" %}{% endraw %}
 ```
 
-{% youtube id="qPD2yc8BoDk" %}
+{% YouTube id="qPD2yc8BoDk" %}

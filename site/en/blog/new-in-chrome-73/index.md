@@ -19,7 +19,7 @@ tags:
   - chrome-73
 ---
 
-{% youtube id='ksWDVurubwE' %}
+{% YouTube id='ksWDVurubwE' %}
 
 In Chrome 73, we've added support for:
 

@@ -18,7 +18,7 @@ tags:
   - chrome-76
 ---
 
-{% youtube id='I1nosVzVbB4' %}
+{% YouTube id='I1nosVzVbB4' %}
 
 In Chrome 76, we've added support for:
 

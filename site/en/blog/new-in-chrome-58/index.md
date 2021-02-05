@@ -17,7 +17,7 @@ tags:
   - chrome-58
 ---
 
-{% youtube id='y5-hH8DnqMk' %}
+{% YouTube id='y5-hH8DnqMk' %}
 
 * The [IndexedDB 2.0](#idb2) standard is now fully supported in Chrome, and
   features new schema management, bulk action methods, and more

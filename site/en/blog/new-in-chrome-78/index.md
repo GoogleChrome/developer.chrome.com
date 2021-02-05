@@ -19,7 +19,7 @@ tags:
   - chrome-78
 ---
 
-{% youtube id='Q81403HNZRc' %}
+{% YouTube id='Q81403HNZRc' %}
 
 Chrome 78 is rolling out now!
 
