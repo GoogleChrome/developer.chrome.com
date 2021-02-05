@@ -24,6 +24,7 @@ const {video} = require('./site/_shortcodes/video');
 const {YouTube} = require('./site/_shortcodes/YouTube');
 const {Columns, Column} = require('./site/_shortcodes/Columns');
 const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
+const {Aside} = require('./site/_shortcodes/Aside');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -114,6 +115,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Column', Column);
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
+  eleventyConfig.addPairedShortcode('Aside', Aside);
 
   // Add transforms
   eleventyConfig.addTransform('domTransformer', domTransformer);

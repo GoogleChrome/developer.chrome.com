@@ -37,42 +37,6 @@ const md = markdown({
     permalinkClass: 'heading-link',
     permalinkSymbol: '#',
   })
-  // Let folks define custom markdown blocks with emmet
-  // Example:
-  // !!! .aside.aside__caution
-  // Some cautionary text
-  // !!!
-  //
-  // Note that since this uses emmet, we can have it generate elements that
-  // aren't just divs. For example, if we want to generate a custom element
-  // we could do:
-  // !!!my-element.foo
-  // which would produce <my-element class="foo">
-  .use(require('markdown-it-container'), 'emmet', {
-    marker: '!',
-    validate(params) {
-      // This will only allow a single element to be created.
-      // For example, authors can do !!!.foo.bar but not !!!.foo .bar because
-      // that would generate <div class="foo"><div class="bar">
-      return expand(params).split('</').length === 2;
-    },
-    render(tokens, idx) {
-      let token = tokens[idx];
-
-      if (token.nesting === 1) {
-        const expanded = expand(token.info);
-        const closing = expanded.lastIndexOf('</');
-        return expanded.substring(0, closing);
-      }
-      while (token.info === '') {
-        idx--;
-        token = tokens[idx];
-      }
-      const expanded = expand(token.info);
-      const closing = expanded.lastIndexOf('</');
-      return expanded.substring(closing, expanded.length);
-    },
-  })
   // Disable indented code blocks.
   // We only support fenced code blocks.
   .disable('code');

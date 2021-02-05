@@ -10,101 +10,131 @@ Use asides to provide information that's related to but distinct from the
 content in the body of the post or codelab. Asides should generally be short—no
 more than 2–3 lines.
 
-Asides can contain links and formatted text, including code.
-
 There are several kinds of asides, each for a different purpose.
 
 ### Note asides
 
 ```md
-!!!.aside
+{% raw %}{% Aside %}
 Use the note aside to provide supplemental information.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside
+{% Aside %}
 Use the note aside to provide supplemental information.
-!!!
+{% endAside %}
+
+Asides can contain links and formatted text, including code.
+
+````md
+{% raw %}{% Aside %}
+Here is some code:
+```js
+const foo = 'bar';
+function() {
+  console.log('hello world');
+}
+```
+
+Here is a fancy [named markdown link][google].
+{% endAside %}{% endraw %}
+
+[google]: https://google.com
+````
+
+{% Aside %}
+Here is some code:
+```js
+const foo = 'bar';
+function() {
+  console.log('hello world');
+}
+```
+
+Here is a fancy [named markdown link][google].
+{% endAside %}
+
+[google]: https://google.com
 
 ### Caution asides
 
 ```md
-!!!.aside.aside--caution
+{% raw %}{% Aside 'caution' %}
 Use the caution aside to indicate a potential pitfall or complication.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 Use the caution aside to indicate a potential pitfall or complication.
-!!!
+{% endAside %}
 
 ### Warning asides
 
 ```md
-!!!.aside.aside--warning
+{% raw %}{% Aside 'warning' %}
 The warning aside is stronger than a caution aside; use it to tell the reader
 not to do something.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 The warning aside is stronger than a caution aside; use it to tell the reader
 not to do something.
-!!!
+{% endAside %}
 
 ### Success asides
 
 ```md
-!!!.aside.aside--success
+{% raw %}{% Aside 'success' %}
 Use the success aside to describe a successful action or an error-free status.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--success
+{% Aside 'success' %}
 Use the success aside to describe a successful action or an error-free status.
-!!!
+{% endAside %}
 
 ### Gotchas asides
 
 ```md
-!!!.aside.aside--gotchas
+{% raw %}{% Aside 'gotchas' %}
 Use the gotcha aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--gotchas
+{% Aside 'gotchas' %}
 Use the gotchas aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
-!!!
+{% endAside %}
 
 ### Key-term asides
 
 ```md
-!!!.aside.aside--key
+{% raw %}{% Aside 'key-term' %}
 Use the key-term aside to define a term that's essential to understanding an
 idea in the body copy. Key-term asides should be a single sentence that
 includes the term in italics. For example, "A _portal_ is…"
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--key
+{% Aside 'key-term' %}
 Use the key-term aside to define a term that's essential to understanding an
 idea in the body copy. Key-term asides should be a single sentence that
 includes the term in italics. For example, "A _portal_ is…"
-!!!
+{% endAside %}
 
 ### Codelab asides
 
 ```md
-!!!.aside.aside--codelab
+{% raw %}{% Aside 'codelab' %}
 Use the codelab aside to link to an associated codelab.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--codelab
+{% Aside 'codelab' %}
 Get started: [Measure your page performance with Lighthouse](#).
-!!!
+{% endAside %}
 
 ## Blockquotes
 Use blockquotes to emphasize a quotation that's important to
