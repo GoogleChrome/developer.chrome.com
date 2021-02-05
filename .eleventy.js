@@ -18,7 +18,7 @@ const {toc} = require('./site/_filters/toc');
 
 // Shortcodes
 const {iframe} = require('./site/_shortcodes/iframe');
-const {glitch} = require('./site/_shortcodes/glitch');
+const {Glitch} = require('./site/_shortcodes/Glitch');
 const {img} = require('./site/_shortcodes/img');
 const {video} = require('./site/_shortcodes/video');
 const {youtube} = require('./site/_shortcodes/youtube');
@@ -106,7 +106,7 @@ module.exports = eleventyConfig => {
 
   // Add shortcodes
   eleventyConfig.addShortcode('iframe', iframe);
-  eleventyConfig.addShortcode('glitch', glitch);
+  eleventyConfig.addShortcode('Glitch', Glitch);
   eleventyConfig.addShortcode('img', img);
   eleventyConfig.addShortcode('video', video);
   eleventyConfig.addShortcode('youtube', youtube);

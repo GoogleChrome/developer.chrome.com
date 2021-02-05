@@ -38,7 +38,7 @@ function expandAllowSource(s) {
  * @param {GlitchArgs} args  Named arguments
  * @return {string}
  */
-const glitch = args => {
+const Glitch = args => {
   const defaultAllow = [
     'camera',
     'clipboard-read',
@@ -87,4 +87,4 @@ const glitch = args => {
   `.replace(/\s\s+/g, ' ');
 };
 
-module.exports = {glitch};
+module.exports = {Glitch};
