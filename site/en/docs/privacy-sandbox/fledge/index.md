@@ -11,15 +11,37 @@ authors:
   - samdutton
 ---
 
-## What is FLEDGE?
+## Implementation status
 
-### Today
-Blah
+* [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) under discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
 
-### Future
-Blah
+[Embed video when available.]
 
-## How does it work?
+
+!!!.aside.aside--warning
+This document is a work in progress, unfinished and not to be shared externally.
+
+The aim is to include the following textual content in this page in 300 words or less. 
+
+Potentially, these (or similar) could be headings.
+
+* Why do we need this technology? 
+* What requirements does it meet?
+* How does the technology work?
+* What are the major use cases?
+* Simple diagram
+* Simple example
+* Are there any new capabilities this technology will give web platforms?
+* If there are existing solutions, why do we need something new? 
+* Who needs to know about this API?
+* [Short glossary if necessary: just a few words.]
+* How to share feedback and comments
+* How to get involved
+
+**Text below is just draft/dummy content: work in progress.**
+!!!
+
+## How does FLEDGE work?
 1. A user visits a page on a site that wants to advertise its products, such as an online store.
 1. The advertiser site (or the ad tech it uses) asks the user's browser to join an ad 'interest group' by calling joinAdInterestGroup(), passing data including ads relevant to the user's browsing, the ad platform host name, and URLs to access bidding logic and bidding signals.
 1. The user visits a site that displays ads, such as a news publisher.
@@ -37,3 +59,9 @@ The interest group could be unique to the advertiser's website, so that it funct
 Periodically the user's browser fetches ads designated for the interest groups, along with code to enable the browser to run an "auction" to choose an ad, for example based on whether the ad will be displayed near the top of the page.
 When the user visits a publisher site that displays ads from an ad network used by an advertiser site the user visited previously, ad network code in the page makes a request to the browser to run "auction" code to select an ad. The "winning" ad is displayed.
 
+
+## Find out more
+
+* [FLEDGE API technical explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)
+* [Digging into the Privacy Sandbox](web.dev/digging-into-the-privacy-sandbox)
+* [The Privacy Sandbox on chromium.org](chromium.org/Home/chromium-privacy/privacy-sandbox)

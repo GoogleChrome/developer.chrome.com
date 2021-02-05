@@ -1,8 +1,12 @@
 overview:
   en: 'What is the Privacy Sandbox?'
+fledge:
+  en: 'FLEDGE'
 floc:
-  en: 'What is Federated Learning of Cohorts (FLoC)?'
+  en: 'Federated Learning of Cohorts (FLoC)'
+glossary:
+  en: 'Privacy Sandbox glossary'
 trust-tokens:
-  en: 'What are Trust Tokens?'
+  en: 'Trust Tokens'
 event-conversion-measurement:
-  en: 'What is the Event Conversion Measurement API?'
+  en: 'Event Conversion Measurement API'

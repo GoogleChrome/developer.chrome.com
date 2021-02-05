@@ -11,6 +11,14 @@ authors:
   - samdutton
 ---
 
+## Implementation status
+
+* [Origin trial](https://web.dev/origin-trials/): Chrome 84 to 91. [Register for trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+* [Demo](https://trust-token-demo.glitch.me/).
+* [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
+
+[Embed video when available.]
+
 ## What are Trust Tokens?
 
 Trust Tokens enable trust in a user's authenticity to be conveyed from one context to another, to help sites combat fraud and distinguish bots from real humans, without passive tracking. Tokens can be issued by a website to a user once the user has shown that they're trustworthy, for example through continued account usage or by completing a transaction. Another website can later confirm that the user is not fake, by checking if they have tokens from an issuer the site trusts.
@@ -19,11 +27,28 @@ Trust Tokens enable trust in a user's authenticity to be conveyed from one conte
 Trust Tokens are a way to **convey** trust in a user, not **establish** trust in a user. Trust Tokens are not a replacement for reCAPTCHA or other mechanisms for determining whether or not a user is who they say they are.
 !!!
 
-### Today
-Blah
+!!!.aside.aside--warning
+This document is a work in progress, unfinished and not to be shared externally.
 
-### Future
-Blah
+The aim is to include the following textual content in this page in 300 words or less. 
+
+Potentially, these (or similar) could be headings.
+
+* Why do we need this technology? 
+* What requirements does it meet?
+* Who needs to know about this API?
+* [Short glossary if necessary: just a few words.]
+* How does the technology work?
+* What are the major use cases?
+* Simple diagram
+* Simple example
+* Are there any new capabilities this technology will give web platforms?
+* If there are existing solutions, why do we need something new? 
+* How to share feedback and comments
+* How to get involved
+
+**Text below is just draft/dummy content: work in progress.**
+!!!
 
 ## How do Trust Tokens work?
 
@@ -46,3 +71,10 @@ The web needs ways to convey trust, to show that a user is who they say they are
 Unfortunately, many existing mechanisms to gauge and propagate trustworthiness—to work out if an interaction with a site is from a real human, for example—take advantage of techniques that can also be used for fingerprinting. Mechanisms to convey trust must preserve privacy, enabling trust to be propagated across sites without individual user tracking.
 
 With the Trust Tokens API, a website can issue cryptographic tokens to a user it trusts that can later be used elsewhere. The tokens are stored securely by the user's browser, and can then be redeemed in other contexts to confirm the user's authenticity. This allows trust of a user on one website (such as a social media site or email service) to be conveyed to another website (such as a publisher or online store) without identifying the user or linking identities across sites.
+
+
+## Find out more
+
+* [Trust Token API technical explainer](https://github.com/dvorak42/trust-token-api)
+* [Digging into the Privacy Sandbox](web.dev/digging-into-the-privacy-sandbox)
+* [The Privacy Sandbox on chromium.org](chromium.org/Home/chromium-privacy/privacy-sandbox)
