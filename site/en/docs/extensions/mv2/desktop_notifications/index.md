@@ -109,6 +109,6 @@ unnecessary if you declare the "notifications" permission.
 [5]: http://dev.chromium.org/developers/design-documents/desktop-notifications/api-specification
 [6]: /docs/extensions/extension#method-getBackgroundPage
 [7]: /docs/extensions/extension#method-getViews
-[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/notifications/
+[8]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/notifications/
 [9]: /docs/extensions/mv2/samples
 [10]: http://www.html5rocks.com/tutorials/notifications/quick/
