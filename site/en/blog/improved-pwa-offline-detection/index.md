@@ -6,7 +6,7 @@ description: >
   criteria since the beginning. Starting in Chrome 89, we will start to close
   a key loophole that allowed developers to pass the check, without an offline
   experience.
-date: 2021-02-05
+date: 2021-02-08
 hero: image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4dPIp42oCe3Vq3OPMIuQ.png
 alt: Screenshot of Chrome dino game.
 authors:
