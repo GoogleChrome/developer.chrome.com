@@ -5,8 +5,8 @@ subhead: >
   FLoC allows sites to guess your interests without being able to uniquely identify you.
 description: >
   FLoC allows sites to guess your interests without being able to uniquely identify you. By generating a ID based on the browsing history of a large group of people, instead of ones of a particular individual, content can be personalized in a private way.
-date: 2021-01-04
-updated: 2021-01-04
+date: 2021-02-05
+updated: 2021-02-05
 authors:
   - samdutton
 ---

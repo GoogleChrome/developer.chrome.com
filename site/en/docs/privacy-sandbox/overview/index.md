@@ -1,7 +1,12 @@
 ---
-layout: 'layouts/project-landing.njk'
-title: 'What is the Privacy Sandbox?'
-description: 'The Privacy Sandbox introduces a set of privacy-preserving APIs to support business models that fund the open web in the absence of tracking mechanisms like third-party cookies.'
+layout: layouts/doc-post.njk
+title: What is the Privacy Sandbox?
+subhead: The Privacy Sandbox is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms.
+description: What's in it, who's behind it, and what it's for.
+date: 2021-02-05
+updated: 2021-02-05
+authors:
+	- samdutton
 ---
 
 ## What is the Privacy Sandbox?

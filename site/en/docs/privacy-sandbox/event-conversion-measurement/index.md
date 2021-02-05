@@ -5,10 +5,10 @@ subhead: >
   A new web API available as an origin trial measures when an ad click leads to a conversion, without using cross-site identifiers.
 description: >
   The Event Conversion Measurement API enables the correlation of an event on a publisher's website with a subsequent conversion on an advertiser site without involving mechanisms that can be used to recognize a user across sites.
-date: 2021-01-04
-updated: 2021-01-04
+date: 2021-02-05
+updated: 2021-02-05
 authors:
-  - samdutton
+  - maudnalpas
 ---
 
 ## What is Event Conversion Measurement?
