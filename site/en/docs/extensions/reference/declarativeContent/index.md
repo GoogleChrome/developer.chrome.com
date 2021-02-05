@@ -35,11 +35,11 @@ var rule1 = {
 };
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** All conditions and actions are created via a constructor as shown in the example above.
 
-!!!
+{% endAside %}
 
 In order to also show a page action for sites with a video, you can add a second condition, as each
 condition is sufficient to trigger all specified actions:
@@ -69,13 +69,13 @@ chrome.runtime.onInstalled.addListener(function(details) {
 });
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You should always register or unregister rules in bulk rather than individually because
 each of these operations recreates internal data structures. This re-creation is computationally
 expensive but facilitates a faster matching algorithm.
 
-!!!
+{% endAside %}
 
 Combine the above rule with the [activeTab][33] permission to create an extension that doesn't need
 any install-time permissions but can invite the user to click its page action on relevant pages and

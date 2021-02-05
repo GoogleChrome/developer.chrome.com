@@ -45,20 +45,15 @@ function Aside(content, type = 'note') {
 
   // prettier-ignore
   // The funky whitespace here is intentional.
-  // We need to have newlines between the ${content} so the markdown parser
-  // will kick in again.
+  // We need to have a newline between the opening div and ${content} so the
+  // markdown parser will kick in again.
   // And because the content might be a <pre> element, which renders whitespace,
   // we need to make sure it's not indented in any way.
-  return `<div class="aside aside--${type}">
-${ type !== 'note' ? `
-<div class="aside__label gap-bottom-300">
-  ${icons[type]}
-  <span>${text}</span>
-</div>` : ''}
-
-${content}
-
-</div>`;
+  // Also, if we render an .aside__label, we need to make sure there is not a
+  // newline between it and the opening div or markdown-it will insert an extra
+  // closing </div> if the Aside is used inside of a markdown definition list.
+  return `<div class="aside aside--${type}">${ type !== 'note' ? `<div class="aside__label gap-bottom-300">${icons[type]}<span>${text}</span></div>` : ''}
+${content}</div>`;
 }
 
 module.exports = {Aside};

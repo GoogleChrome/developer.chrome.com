@@ -63,11 +63,11 @@ users will find your app even outside of the store.
 The registration fee helps to prevent fraud in the Chrome Web Store. You need to pay this one-time
 fee before you can access the Chrome Web Store Developer Dashboard.
 
-!!!.aside.aside--note
+{% Aside %}
 If you are already using the developer dashboard but haven't paid this fee yet, you must
 now pay it in order to continue accessing your developer dashboard. This one-time fee is now part of
 the standard [developer registration process][99].
-!!!
+{% endAside %}
 
 ### How can I sign up using my Google Apps email address (for example, admin@example.com)? {: #faq-gen-17 }
 

@@ -6,13 +6,13 @@ updated: 2013-10-21
 description: How to publish your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Packaged apps are published in the same way as other types of apps in the Chrome Web Store. For
 detailed instructions, see [Publishing Your App][3].

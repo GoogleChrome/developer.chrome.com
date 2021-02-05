@@ -6,13 +6,13 @@ updated: 2015-03-20
 description: Recommended game engines for Chrome Apps.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Several graphically intense interactive application frameworks / game engines exist that target web
 technologies. The following are some we recommend with instructions for producing a Chrome App.

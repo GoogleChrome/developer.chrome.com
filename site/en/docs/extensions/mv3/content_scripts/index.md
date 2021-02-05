@@ -76,12 +76,12 @@ button.addEventListener("click", () =>
 
 With this change, both alerts appear in sequence when the button is clicked.
 
-!!!.aside
+{% Aside %}
 Not only does each extension run in its own isolated world, but content scripts
 and the web page do too. This means that none of these (web page, content
 scripts, and any running extensions) can access the context and variables of
 the others.
-!!!
+{% endAside %}
 
 {# youtube id="laLudeUmXHM" #}
 

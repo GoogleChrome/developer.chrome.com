@@ -37,12 +37,12 @@ Be sure to replace the text that says "ALT_TEXT_HERE" with your own description
 of the image. You can read more about writing effective alt text over on [the
 web.dev handbook](https://web.dev/handbook/inclusion-and-accessibility/#use-inclusive-images).
 
-!!!.aside
+{% Aside %}
 You may notice that the generated code is using either the
 {% raw %}`{% img %}`{% endraw%} or {% raw %}`{% video %}`{% endraw%} shortcodes.
 These are custom components for `developer.chrome.com` that ensure our media is
 responsive 📱
-!!!
+{% endAside %}
 
 ### Properties
 
@@ -83,11 +83,11 @@ Flipped
 {% endColumn %}
 {% endColumns %}
 
-!!!.aside
+{% Aside %}
 Please call out in a review if you're calling a specific Imgix API, so we can be
 aware of custom use-cases and potentially support them through our own shortcode
 directly.
-!!!
+{% endAside %}
 
 #### Video Properties (`VideoArgs`)
 

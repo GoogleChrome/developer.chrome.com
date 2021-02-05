@@ -33,11 +33,11 @@ Like event pages, service workers are a special execution environment that are s
 events they're interested in and are terminated when they're no longer needed. The following
 sections provide recommendations for writing code in an ephemeral, evented execution context.
 
-!!!.aside.aside--note
+{% Aside %}
 
 Several of these concepts are covered in [Migrate to Event Driven Background Scripts][eventbgscripts].
 
-!!!
+{% endAside %}
 
 ## Top-level event listeners {: #event_listeners }
 
@@ -76,10 +76,10 @@ chrome.storage.local.get(['badgeText'], ({badgeText}) => {
 chrome.action.onClicked.addListener(handleActionClick);
 ```
 
-!!!.aside
+{% Aside %}
 In Manifest V3 the `chrome.browserAction` and `chrome.pageAction` APIs are consolidated
 into a single chrome.action API.
-!!!
+{% endAside %}
 
 ### Persisting state with storage APIs {: #state }
 
@@ -126,10 +126,10 @@ chrome.action.onClicked.addListener(tab => {
 });
 ```
 
-!!!.aside
+{% Aside %}
 In Manifest V3 the chrome.browserAction and chrome.pageAction APIs are consolidated
 into a single chrome.action API.
-!!!
+{% endAside %}
 
 ### Moving from timers to alarms {: #alarms }
 

@@ -6,20 +6,20 @@ updated: 2015-01-06
 description: How to wake your Chrome App at specified intervals and use notifications.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Want to start fresh from here?** Find the previous step's code in the [reference code zip][3]
 under **_cheat_code > solution_for_step2_**.
 
-!!!
+{% endAside %}
 
 In this step, you will learn:
 
@@ -142,21 +142,21 @@ clicked.
 
 Reload your app and spend a few moments activating (and deactivating) the alarm.
 
-!!!.aside.aside--note
+{% Aside %}
 
 Since the log messages are being sent to the Console via the event page (aka background script), you
 need to **right-click > Inspect Background Page** to see the log messages:
 
-!!!
+{% endAside %}
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oc61HiXGKKbfETFGyNCK.png", alt="Inspect background page messages", height="522", width="623" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 It's also worthwhile to continue to use **right-click > Inspect Element** to make sure you do not
 have errors in other JavaScript files.
 
-!!!
+{% endAside %}
 
 Whenever you have the alarm activated, you should see log messages being printed in the Console
 every time the alarm "rings":

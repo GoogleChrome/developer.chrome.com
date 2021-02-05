@@ -15,7 +15,6 @@
  */
 
 const markdown = require('markdown-it');
-const {expand} = require('@emmetio/expand-abbreviation');
 const uslug = require('uslug');
 
 const md = markdown({

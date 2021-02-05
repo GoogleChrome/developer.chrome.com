@@ -28,13 +28,13 @@ Use the **Visibility** settings to configure who can see your item in the Chrome
 Private allows your trusted testers to install the item. You designate trusted testers by listing
 them on your Chrome Web Store account home page.
 
-!!!.aside.aside--note
+{% Aside %}
 
 The trusted testers list is associated with your _account_, and not an individual item. To create
 multiple trusted tester accounts, you must use separate accounts. However, you can also [add
 groups][1]to your private listing, on a per-item basis.
 
-!!!
+{% endAside %}
 
 The following screenshot shows some trusted tester accounts listed in a Chrome Web Store developer
 account page:

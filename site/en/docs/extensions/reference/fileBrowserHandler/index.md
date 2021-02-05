@@ -37,11 +37,11 @@ You must declare the "fileBrowserHandler" permission in the [extension manifest]
 }
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You can specify locale-specific strings for the value of "default_title". See [Internationalization (i18n)](/extensions/i18n) for details.
 
-!!!
+{% endAside %}
 
 ## Implementing a file browser handler
 

@@ -6,20 +6,20 @@ updated: 2016-12-16
 description: How to adapt an existing web app for the Chrome Apps platform.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Want to start fresh from here?** Find the previous step's code in the [reference code zip][3]
 under **_cheat_code > solution_for_step1_**.
 
-!!!
+{% endAside %}
 
 In this step, you will learn:
 
@@ -168,7 +168,7 @@ Most of the remaining steps in converting the Todo app are small changes to the 
 all the places where `localStorage` is currently being used, though time-consuming and error-prone,
 is required.
 
-!!!.aside.aside--note
+{% Aside %}
 
 To maximize your fun with this codelab, it'll be best if you overwrite your **_store.js_**,
 **_controller.js_**, and **_model.js_** with the ones from **_cheat_code/solution_for_step_2_** in
@@ -176,7 +176,7 @@ the reference code zip.
 
 Once you've done that, continue reading as we'll go over each of the changes individually.
 
-!!!
+{% endAside %}
 
 The key differences between `localStorage` and `chrome.storage` come from the async nature of
 `chrome.storage`:
@@ -689,12 +689,12 @@ implementing it on your own. Hint: Have a look at [`chrome.storage.local.clear()
 You are done Step 2! Reload your app and you should now have a fully working Chrome packaged version
 of TodoMVC.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Troubleshooting**  
 Remember to always check the DevTools Console to see if there are any error messages.
 
-!!!
+{% endAside %}
 
 ## For more information {: #recap }
 

@@ -6,13 +6,13 @@ updated: 2018-05-14
 description: How to authenticate users in your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Web authentication protocols utilize HTTP features, but Chrome Apps run inside the app container;
 they don't load over HTTP and can't perform redirects or set cookies.
@@ -21,12 +21,12 @@ Use the [Chrome Identity API][3] to authenticate users: the `getAuthToken` for u
 their Google Account and the `launchWebAuthFlow` for users logged into a non-Google account. If your
 app uses its own server to authenticate users, you will need to use the latter.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **API Samples:** Want to play with the code? Check out [these samples][4], in particular the
 [identity sample][5].
 
-!!!
+{% endAside %}
 
 ## How it works {: #how }
 
@@ -94,12 +94,12 @@ You need to register your app in the Google APIs Console to get the client ID:
 6.  Select **Chrome Application** and enter your application ID (same ID displayed in the apps and
     extensions management page).
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** If the app ID here does not match your app ID, an error will occur when your app calls
 [getAuthToken()][9].
 
-!!!
+{% endAside %}
 
 ### Update your manifest with OAuth2 client ID and scopes {: #update_manifest }
 

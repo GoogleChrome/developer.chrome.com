@@ -6,13 +6,13 @@ updated: 2014-11-14
 description: An overview of the lifecycle of Chrome Apps.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 The app runtime and event page are responsible for managing the app lifecycle. The app runtime
 manages app installation, controls the event page, and can shutdown the app at anytime. The event

@@ -6,13 +6,13 @@ title: "Manifest Version"
 #description: TODO
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 One integer specifying the version of the manifest file format your package requires. As of Chrome
 18, developers _should_ specify `2` (without quotes) to use the format as described by this
@@ -31,13 +31,13 @@ entirely.
 The changes between version 1 and version 2 of the manifest file format are described in detail in
 [the `manifest_version` documentation.][3]
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 Setting `manifest_version` 2 in Chrome 17 or lower is not recommended. If your extension needs to
 work in older versions of Chrome, stick with version 1 for the moment. We'll give you ample warning
 before version 1 stops working.
 
-!!!
+{% endAside %}
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
 [2]: /apps/migration

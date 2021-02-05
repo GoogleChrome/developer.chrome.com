@@ -99,10 +99,10 @@ This is preferred to RunUntilIdle(), which can be flaky if the asynchronous
 workload involves a task outside of the TaskEnvironment's purview,
 e.g. a system event, so use [`RunUntilIdle()` with care][run-until-idle-w-care].
 
-!!!.aside.aside
+{% Aside %}
 Pro-tip: Use TaskEnvironment's `MOCK_TIME` mode to reliably test delayed
 tasks.
-!!!
+{% endAside %}
 
 **Want to learn more?** Read our documentation on [threading and tasks][threading-and-tasks]
 or get involved in the [migration to TaskEnvironment][task-env]!

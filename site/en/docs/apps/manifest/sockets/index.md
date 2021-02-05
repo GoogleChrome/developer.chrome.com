@@ -6,13 +6,13 @@ updated: 2014-10-31
 description: Reference documentation for the sockets property of manifest.json.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 The `sockets` manifest property declares which permissions are available for the [sockets.udp][3],
 [sockets.tcp][4] and [sockets.tcpServer][5] APIs.

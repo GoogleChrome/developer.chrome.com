@@ -66,10 +66,10 @@ Chrome will add your PWA to their start menu and desktop.
 See my [Desktop PWAs](https://developers.google.com/web/progressive-web-apps/desktop)
 post for complete details.
 
-!!!.aside
+{% Aside %}
 Mac support is expected to arrive in Chrome 72. Linux support was added
 in Chrome 70, but was accidentally left out of the original version of this post.
-!!!
+{% endAside %}
 
 ## Credential Management API: Public Key Credentials {: #pki }
 

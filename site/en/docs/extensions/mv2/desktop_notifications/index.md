@@ -8,12 +8,12 @@ description: How to implement notifications in your Chrome Extension.
 
 {% include 'partials/extensions/mv2-legacy-page.md' %}
 
-!!!.aside.aside-warning
+{% Aside 'warning' %}
 **Warning:** `webKitNotifications.createHTMLNotification()` in the [web notifications API][1] has
 been deprecated. The new [web notifications API][2] only allows text. [Chrome notifications API][3]
 will be promoted to stable soon and web notifications will be updated to use the new rich
 notifications format.
-!!!
+{% endAside %}
 
 Use rich desktop notifications to notify users that something important has happened. Notifications
 appear outside the browser window. As the following snapshots show, the details of how notifications

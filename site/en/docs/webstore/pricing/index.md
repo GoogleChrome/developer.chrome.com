@@ -13,12 +13,10 @@ region that you publish to. This page shows those price tiers for all regions th
 supports. It also gives details about who can use Chrome Web Store Payments, and how much of the
 purchase price you can expect to receive.
 
-!!!.aside.aside-note
-
+{% Aside %}
 **Note**: This page applies only if you use Chrome Web Store Payments.
 For information on other options, see [Monetizing your app][1].
-
-!!!
+{% endAside %}
 
 ## Who can use Chrome Web Store Payments {: #seller }
 

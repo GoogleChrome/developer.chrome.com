@@ -123,11 +123,11 @@ In MV3, you'll need to specify host permissions separately from other permission
 {% endColumns %}
 
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 You do not have to declare content script match patterns in `host_permissions`
 in order to inject content scripts.  However, they **are** treated as host
 permissions requests by the Chrome Web Store review process.
-!!!
+{% endAside %}
 
 
 ### Content security policy  {: #fcontent-security-policy }
@@ -156,11 +156,11 @@ representing alternative CSP contexts:
 **`extension_pages`**:  This policy covers pages in your extension, including html files and service workers. 
 
 
-!!!.aside.aside--note
+{% Aside %}
 These page types are served from the `chrome-extension://` protocol. For
 instance, a page in your extension is
 `chrome-extension://<extension-id>/foo.html`.
-!!!
+{% endAside %}
 
 **`sandbox`**: This policy covers any [sandboxed extension
 pages](/docs/extensions/mv3/manifest/sandbox) that your extension uses.
@@ -213,10 +213,10 @@ chrome.action.onClicked.addListener(tab => { … });
 ```
 {% endColumns %}
 
-!!!.aside.aside--note
+{% Aside %}
 In order to aid with the migration process, the Action API can be used in MV2
 beginning with Chrome 88.
-!!!
+{% endAside %}
 
 
 ### Web-accessible resources  {: #web-accessible-resources }
@@ -246,10 +246,10 @@ of which can map to a set of resources to a set of URLs and extension IDs:
 ```
 {% endColumns %}
 
-!!!.aside.aside--note
+{% Aside %}
 The `matches`, `extension_ids`, and `use_dynamic_url` keys are not available
 yet. Support for these properties will be coming in a future release.
-!!!
+{% endAside %}
 
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
@@ -369,10 +369,10 @@ consider: see [Migrating from Background Pages to Service
 Workers](/docs/extensions/mv3/migrating_to_service_workers) for additional
 details.
 
-!!!.aside.aside--note
+{% Aside %}
 In order to aid with the migration process, MV2 extensions can use background
 service workers as of Chrome 87.
-!!!
+{% endAside %}
 
 
 ## Modifying network requests  {: #modifying-network-requests }
@@ -397,9 +397,9 @@ network request modification. This moves the actual modification of the network
 request into the Chrome browser: the extension no longer can read the actual
 network request, and in most cases needs no host permissions. 
 
-!!!.aside.aside--note
+{% Aside %}
 Request redirects and header modifications **do** require the user to grant host permissions.
-!!!
+{% endAside %}
 
 
 ### How do you use declarativeNetRequest?  {: #how-use-declarativenetrequest }
@@ -414,10 +414,10 @@ This feature allows content blockers and other request-modifying extensions to
 implement their use cases without requiring host permissions, and without
 needing to read the actual requests.
 
-!!!.aside.aside--note
+{% Aside %}
 In order to aid with the migration process, the declarativeNetRequest API is
 available for use in MV2 extensions as of Chrome 84.
-!!!
+{% endAside %}
 
 
 ### Conditional permissions and declarativeNetRequest  {: #declarativenetrequest-conditional-perms }
@@ -425,9 +425,9 @@ available for use in MV2 extensions as of Chrome 84.
 Most use cases for declarativeNetRequest don't require any host permissions at
 all. However, some do.
 
-!!!.aside.aside--note
+{% Aside %}
 Request redirects and header modifications **do** require the user to grant host permissions.
-!!!
+{% endAside %}
 
 When extensions require host permissions for these use cases, we recommend a
 "tiered" permissions strategy. This means implementing the extension's core

@@ -6,13 +6,13 @@ updated: 2019-12-02
 description: How to migrate your Chrome packaged or hosted app.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 To transition away from a Chrome packaged or hosted app, the following options are available.
 

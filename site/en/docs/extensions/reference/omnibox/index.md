@@ -33,13 +33,13 @@ For example:
 }
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Chrome automatically creates a grayscale version of your 16x16-pixel icon. You should
 provide a full-color version so that it can also be used in other situations that require color. For
 example, the [context menus API][2] also uses a 16x16-pixel icon, but it is displayed in color.
 
-!!!
+{% endAside %}
 
 ## Examples
 

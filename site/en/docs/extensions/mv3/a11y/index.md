@@ -25,10 +25,10 @@ any developer can take to make an extension as accessible as possible.
 If users can't access the user interface controls, they are unable to use an extension. The easiest
 way to create an accessible UI is to use a standard HTML control.
 
-!!!.aside
+{% Aside %}
 If an extension requires a custom control, it is much easier to make a custom control
 accessible from the beginning than to go back an add accessibility support later.
-!!!
+{% endAside %}
 
 ### Standard controls {: #htmlcontrols }
 
