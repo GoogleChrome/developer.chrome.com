@@ -411,7 +411,7 @@ var x = 0;
 {% raw %}
 
 ```html
-{% glitch {
+{% Glitch {
   id: 'tabindex-zero',
   path: 'index.html',
   previewSize: 0,
@@ -420,12 +420,12 @@ var x = 0;
 
 <!-- Or just the Glitch ID -->
 
-{% glitch 'tabindex-zero' %}
+{% Glitch 'tabindex-zero' %}
 ```
 
 {% endraw %}
 
-{% glitch {
+{% Glitch {
   id: 'tabindex-zero',
   path: 'index.html'
 } %}

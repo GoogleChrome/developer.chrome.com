@@ -13,14 +13,14 @@ Glitch embeds on the site.
 {% raw %}
 
 ```md
-{% glitch
+{% Glitch
   id='fav-kitties-compress-starter'
 %}
 ```
 
 {% endraw %}
 
-{% glitch
+{% Glitch
   id='fav-kitties-compress-starter'
 %}
 

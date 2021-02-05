@@ -16,7 +16,7 @@
 
 const {html} = require('common-tags');
 const {escape, stringify} = require('querystring');
-const {iframe} = require('./iframe');
+const {IFrame} = require('./IFrame');
 
 /**
  * Validates allow sources are an array and lower case.
@@ -82,7 +82,7 @@ const Glitch = args => {
 
   return html`
     <div style="height: ${glitchProps.height}px; width: 100%;">
-      ${iframe({src, title: `${escape(glitchProps.id)} on Glitch`, allow})}
+      ${IFrame({src, title: `${escape(glitchProps.id)} on Glitch`, allow})}
     </div>
   `.replace(/\s\s+/g, ' ');
 };

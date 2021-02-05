@@ -17,7 +17,7 @@ const {slugify} = require('./site/_filters/slugify');
 const {toc} = require('./site/_filters/toc');
 
 // Shortcodes
-const {iframe} = require('./site/_shortcodes/iframe');
+const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
 const {img} = require('./site/_shortcodes/img');
 const {video} = require('./site/_shortcodes/video');
@@ -105,7 +105,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('toc', toc);
 
   // Add shortcodes
-  eleventyConfig.addShortcode('iframe', iframe);
+  eleventyConfig.addShortcode('IFrame', IFrame);
   eleventyConfig.addShortcode('Glitch', Glitch);
   eleventyConfig.addShortcode('img', img);
   eleventyConfig.addShortcode('video', video);
