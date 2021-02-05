@@ -21,7 +21,7 @@ tags:
 
 Chrome 84 is starting to roll out to stable now.
 
-{% youtube id='1XBUeaqjTA4' %}
+{% YouTube id='1XBUeaqjTA4' %}
 
 Here's what you need to know:
 

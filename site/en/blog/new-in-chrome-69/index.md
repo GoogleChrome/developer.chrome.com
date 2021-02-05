@@ -18,7 +18,7 @@ tags:
   - chrome-69
 ---
 
-{% youtube id='WF2IjH35w8o' %}
+{% YouTube id='WF2IjH35w8o' %}
 
 It's been **ten years** since Chrome was first released. A lot has changed
 since then, but our goal of building a solid foundation for modern web
@@ -260,7 +260,7 @@ have gotten better because of you!
 
 ### New in Chrome Bloopers
 
-{% youtube id="LScSTMOMEDM" %}
+{% YouTube id="LScSTMOMEDM" %}
 
 We put together a fun little blooper reel for you to enjoy! After watching
 it, I've learned a few things:

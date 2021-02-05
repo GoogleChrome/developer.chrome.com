@@ -16,7 +16,7 @@ tags:
   - chrome-72
 ---
 
-{% youtube id='coh1k7TY1P0' %}
+{% YouTube id='coh1k7TY1P0' %}
 
 In Chrome 72, we've added support for:
 

@@ -18,7 +18,7 @@ tags:
   - chrome-65
 ---
 
-{% youtube id='_W4GSpoSOZI' %}
+{% YouTube id='_W4GSpoSOZI' %}
 
 * The [CSS Paint API](#css-paint) allows you to programmatically generate
   an image.

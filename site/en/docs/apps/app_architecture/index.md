@@ -48,7 +48,7 @@ This page is invisible, only exists in the background, and can be closed automat
 runtime. It controls how windows open and close and when the app is started or terminated. There can
 only be one "event page" for a Chrome App.
 
-{% youtube id="yr1jgREbH8U" %}
+{% YouTube id="yr1jgREbH8U" %}
 
 ### App lifecycle at a glance {: #lifecycle }
 
@@ -78,7 +78,7 @@ external processes are isolated from the app. Since iframes run in the same proc
 surrounding page, they can only be used to load other app pages. You can use the `object` tag to
 [embed external content][8]; this content runs in a separate process from the app.
 
-{% youtube id="EDtiWN42lHs" %}
+{% YouTube id="EDtiWN42lHs" %}
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
 [2]: /apps/migration

@@ -17,7 +17,7 @@ tags:
   - chrome-66
 ---
 
-{% youtube id='hsfueop_Hb8' %}
+{% YouTube id='hsfueop_Hb8' %}
 
 * CSS manipulation becomes easier with the new [CSS Typed Model Object](#cssom).
 * Access to the [clipboard](#async-clipboard) is now asynchronous.

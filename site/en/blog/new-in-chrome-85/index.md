@@ -20,7 +20,7 @@ tags:
 
 Chrome 85 is starting to roll out to stable now.
 
-{% youtube id='htAiPOarIwI' %}
+{% YouTube id='htAiPOarIwI' %}
 
 Here's what you need to know:
 

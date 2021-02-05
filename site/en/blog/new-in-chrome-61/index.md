@@ -16,7 +16,7 @@ tags:
   - chrome-61
 ---
 
-{% youtube id='2vJm1Gfn0ng' %}
+{% YouTube id='2vJm1Gfn0ng' %}
 
 * Chrome 61 now supports JavaScript [modules](#modules) natively, unifying the
   way modular JavaScript can be written.

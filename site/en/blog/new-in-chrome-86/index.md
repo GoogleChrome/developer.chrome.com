@@ -18,7 +18,7 @@ tags:
 
 Chrome 86 is starting to roll out to stable now.
 
-{% youtube id='GNuG-5m4Ud0' %}
+{% YouTube id='GNuG-5m4Ud0' %}
 
 Here's what you need to know:
 

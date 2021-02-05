@@ -16,7 +16,7 @@ tags:
   - chrome-63
 ---
 
-{% youtube id='F3_-jTLaFSs' %}
+{% YouTube id='F3_-jTLaFSs' %}
 
 * Chrome 63 allows you to import [JavaScript modules dynamically](#dynamic).
 * My favorite interview coding question becomes a piece of cake with

@@ -849,13 +849,13 @@ See the [Add an image or video guide](https://developer.chrome.com/docs/handbook
 
 ## YouTube
 
-Use the {% raw %}`{% youtube %}`{% endraw %} shortcode to embed a YouTube video.
+Use the {% raw %}`{% YouTube %}`{% endraw %} shortcode to embed a YouTube video.
 
 ```md
-{% raw %}{% youtube id="qPD2yc8BoDk" %}
+{% raw %}{% YouTube id="qPD2yc8BoDk" %}
 
 <!-- You can pass an optional start time as well -->
-{% youtube id="qPD2yc8BoDk", startTime="1678" %}{% endraw %}
+{% YouTube id="qPD2yc8BoDk", startTime="1678" %}{% endraw %}
 ```
 
-{% youtube id="qPD2yc8BoDk" %}
+{% YouTube id="qPD2yc8BoDk" %}

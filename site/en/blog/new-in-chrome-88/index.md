@@ -20,7 +20,7 @@ tags:
 
 Chrome 88 is starting to roll out to stable now.
 
-{% youtube id='cqAO2xR7lzM' %}
+{% YouTube id='cqAO2xR7lzM' %}
 
 Here's what you need to know:
 

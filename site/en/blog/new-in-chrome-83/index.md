@@ -19,7 +19,7 @@ tags:
 
 Chrome 83 is starting to roll out to stable now.
 
-{% youtube id='RsMikJZhnSQ' %}
+{% YouTube id='RsMikJZhnSQ' %}
 
 Here's what you need to know:
 

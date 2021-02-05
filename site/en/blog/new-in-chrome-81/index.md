@@ -20,7 +20,7 @@ tags:
 
 Chrome 81 is starting to roll out to stable now.
 
-{% youtube id='ihjL0mcnlQs' %}
+{% YouTube id='ihjL0mcnlQs' %}
 
 Here's what you need to know:
 

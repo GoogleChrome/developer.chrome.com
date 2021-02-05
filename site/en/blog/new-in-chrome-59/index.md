@@ -16,7 +16,7 @@ tags:
   - chrome-59
 ---
 
-{% youtube id='zNoc4zEkWPo' %}
+{% YouTube id='zNoc4zEkWPo' %}
 
 * [Headless Chrome](#headless) allows you to run Chrome in an automated
   environment without a user interface or peripherals.

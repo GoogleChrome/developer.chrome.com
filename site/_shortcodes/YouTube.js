@@ -21,7 +21,7 @@ const {html} = require('common-tags');
  * @param {{id: string, startTime?: string}} args
  * @return {string}
  */
-const youtube = args => {
+const YouTube = args => {
   const {id, startTime} = args;
 
   if (!id) {
@@ -48,4 +48,4 @@ const youtube = args => {
   `;
 };
 
-module.exports = {youtube};
+module.exports = {YouTube};

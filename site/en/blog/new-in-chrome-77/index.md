@@ -18,7 +18,7 @@ tags:
   - chrome-77
 ---
 
-{% youtube id='S8aVB3IfOR4' %}
+{% YouTube id='S8aVB3IfOR4' %}
 
 Chrome 77 is rolling out now!
 
