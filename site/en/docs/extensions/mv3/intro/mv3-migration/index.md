@@ -74,7 +74,7 @@ declarations, and web-accessible resources.
 Changing the value of the manifest_version element is the key to upgrading your
 extension. This determines whether you're using the MV2 or MV3 feature set:
 
-{% columns %}
+{% Columns %}
 ```json
 // Manifest v2
 
@@ -86,13 +86,13 @@ extension. This determines whether you're using the MV2 or MV3 feature set:
 
 "manifest_version": 3
 ```
-{% endcolumns %}
+{% endColumns %}
 
 ### Host permissions  {: #host-permissions }
 
 In MV3, you'll need to specify host permissions separately from other permissions:
 
-{% columns %}
+{% Columns %}
 ```js
 // Manifest v2
 "permissions": [
@@ -120,7 +120,7 @@ In MV3, you'll need to specify host permissions separately from other permission
   "*://*/*"
 ],
 ```
-{% endcolumns %}
+{% endColumns %}
 
 
 !!!.aside.aside--warning
@@ -136,7 +136,7 @@ An extension's [content security policy](https://content-security-policy.com/)
 (CSP) was specified in MV2 as a string; in MV3 it is an object with members
 representing alternative CSP contexts:
 
-{% columns %}
+{% Columns %}
 ```json
 // Manifest v2
 
@@ -151,7 +151,7 @@ representing alternative CSP contexts:
   "sandbox": "..."
 }
 ```
-{% endcolumns %}
+{% endColumns %}
 
 **`extension_pages`**:  This policy covers pages in your extension, including html files and service workers. 
 
@@ -184,7 +184,7 @@ but over time they've become redundant so in MV3 we are unifying them into as
 single `action` API:
 
 
-{% columns %}
+{% Columns %}
 ```js
 // Manifest v2
 
@@ -211,7 +211,7 @@ chrome.pageAction.onClicked.addListener(tab => { … });
 // background.js
 chrome.action.onClicked.addListener(tab => { … });
 ```
-{% endcolumns %}
+{% endColumns %}
 
 !!!.aside.aside--note
 In order to aid with the migration process, the Action API can be used in MV2
@@ -225,7 +225,7 @@ This change limits access to extension resources to specific sites/extensions.
 Instead of providing a list of files, you now provide a list of objects, each
 of which can map to a set of resources to a set of URLs and extension IDs:
 
-{% columns %}
+{% Columns %}
 ```json
 // Manifest v2
 
@@ -244,7 +244,7 @@ of which can map to a set of resources to a set of URLs and extension IDs:
   optional "use_dynamic_url": boolean
 }]
 ```
-{% endcolumns %}
+{% endColumns %}
 
 !!!.aside.aside--note
 The `matches`, `extension_ids`, and `use_dynamic_url` keys are not available
@@ -307,7 +307,7 @@ Instead of executing a string, you should move your code into a static
 JavaScript file included in the bundle, then execute it using the executeScript
 method's `file` property:
 
-{% columns %}
+{% Columns %}
 ```js
 // Manifest v2
 
@@ -328,12 +328,12 @@ chrome.scripting.executeScript({
 // content-script.js
 alert("test!");
 ```
-{% endcolumns %}
+{% endColumns %}
 
 Alternatively, if the logic being executed can be neatly wrapped in a function
 call, you can use the new `function` property:
 
-{% columns %}
+{% Columns %}
 ```js
 // Manifest v2
 
@@ -355,7 +355,7 @@ chrome.scripting.executeScript({
   function: showAlert
 });
 ```
-{% endcolumns %}
+{% endColumns %}
 
 ## Background service workers  {: #background-service-workers }
 

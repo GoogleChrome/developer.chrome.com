@@ -72,16 +72,16 @@ an image on its horitonzal axis you would do:
 %}{% endraw%}
 ```
 
-{% columns %}
-{% column %}
+{% Columns %}
+{% Column %}
 {% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
 Original
-{% endcolumn %}
-{% column %}
+{% endColumn %}
+{% Column %}
 {% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
 Flipped
-{% endcolumn %}
-{% endcolumns %}
+{% endColumn %}
+{% endColumns %}
 
 !!!.aside
 Please call out in a review if you're calling a specific Imgix API, so we can be

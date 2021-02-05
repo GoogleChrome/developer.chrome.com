@@ -22,7 +22,7 @@ const {glitch} = require('./site/_shortcodes/glitch');
 const {img} = require('./site/_shortcodes/img');
 const {video} = require('./site/_shortcodes/video');
 const {youtube} = require('./site/_shortcodes/youtube');
-const {columns, column} = require('./site/_shortcodes/columns');
+const {Columns, Column} = require('./site/_shortcodes/Columns');
 const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
 
 // Transforms
@@ -110,8 +110,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('img', img);
   eleventyConfig.addShortcode('video', video);
   eleventyConfig.addShortcode('youtube', youtube);
-  eleventyConfig.addPairedShortcode('columns', columns);
-  eleventyConfig.addPairedShortcode('column', column);
+  eleventyConfig.addPairedShortcode('Columns', Columns);
+  eleventyConfig.addPairedShortcode('Column', Column);
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
 

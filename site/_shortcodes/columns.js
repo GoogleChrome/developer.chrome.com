@@ -19,7 +19,7 @@
  * item into their own column.
  * @param {string} content A string of markdown
  */
-const columns = content => {
+const Columns = content => {
   // prettier-ignore
   // The funky whitespace here is intentional.
   // We need to have newlines between the ${content} so the markdown parser
@@ -33,8 +33,8 @@ ${content}
 </div>`;
 };
 
-const column = content => {
+const Column = content => {
   return `<div class="columns__column">${content}</div>`;
 };
 
-module.exports = {columns, column};
+module.exports = {Columns, Column};

@@ -94,10 +94,10 @@ certain patterns can be tricky to deal with. For example, the browsers
 where swiping down at the top of the page, does a hard reload.
 
 {# TODO(petele): video element, float-left|right, auto-play #}
-{% columns %}
+{% Columns %}
 {% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZxYy6AnumGb3lwTGN6Wq.mp4" %}
 {% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wyoZdIhPdQ8em6ibRdg4.mp4" %}
-{% endcolumns %}
+{% endColumns %}
 
 In some cases, you might want to override that behavior and provide your own
 experience. That's what [Twitter's progressive web app](https://mobile.twitter.com)

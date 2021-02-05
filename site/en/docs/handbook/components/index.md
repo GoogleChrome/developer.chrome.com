@@ -187,39 +187,39 @@ Columns can be used to place elements side-by-side. This works well for
 blocks of code or images. On mobile the columns will stack vertically.
 
 ```md
-{% raw %}{% columns %}
+{% raw %}{% Columns %}
 
-{% column %}
+{% Column %}
 {% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
 Original
-{% endcolumn %}
+{% endColumn %}
 
-{% column %}
+{% Column %}
 {% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
 Flipped
-{% endcolumn %}
+{% endColumn %}
 
-{% endcolumns %}{% endraw %}
+{% endColumns %}{% endraw %}
 ```
 
-{% columns %}
+{% Columns %}
 
-{% column %}
+{% Column %}
 {% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
 Original
-{% endcolumn %}
+{% endColumn %}
 
-{% column %}
+{% Column %}
 {% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
 Flipped
-{% endcolumn %}
+{% endColumn %}
 
-{% endcolumns %}
+{% endColumns %}
 
 ````md
-{% raw %}{% columns %}
+{% raw %}{% Columns %}
 
-{% column %} <!-- Include a newline to mix markdown with shortcodes -->
+{% Column %} <!-- Include a newline to mix markdown with shortcodes -->
 
 ```js
 // v1
@@ -229,9 +229,9 @@ const config = {
 };
 ```
 
-{% endcolumn %}
+{% endColumn %}
 
-{% column %}
+{% Column %}
 
 ```js
 // v2
@@ -241,14 +241,14 @@ const config = {
 };
 ```
 
-{% endcolumn %}
+{% endColumn %}
 
-{% endcolumns %}{% endraw %}
+{% endColumns %}{% endraw %}
 ````
 
-{% columns %}
+{% Columns %}
 
-{% column %}
+{% Column %}
 
 ```js
 // v1
@@ -258,9 +258,9 @@ const config = {
 };
 ```
 
-{% endcolumn %}
+{% endColumn %}
 
-{% column %}
+{% Column %}
 
 ```js
 // v2
@@ -270,9 +270,9 @@ const config = {
 };
 ```
 
-{% endcolumn %}
+{% endColumn %}
 
-{% endcolumns %}
+{% endColumns %}
 
 ## Compare
 
