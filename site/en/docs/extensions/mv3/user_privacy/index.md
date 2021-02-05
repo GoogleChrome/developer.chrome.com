@@ -13,9 +13,9 @@ must comply with the [user data privacy policies][1] .
 
 Protect and respect extension users by including these precautions to keep their identity safe.
 
-!!!.aside
+{% Aside %}
 Remember: the less data an extension can access, the less data it can accidentally leak.
-!!!
+{% endAside %}
 
 ## Reduce required permissions {: #required_permissions }
 
