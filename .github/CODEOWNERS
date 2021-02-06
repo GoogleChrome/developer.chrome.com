@@ -14,6 +14,12 @@ site/_data/i18n/docs/extensions.yml @GoogleChrome/dcc-extensions
 site/_includes/partials/extensions/ @GoogleChrome/dcc-extensions
 site/en/docs/extensions/ @GoogleChrome/dcc-extensions
 
+# Chrome Apps
+site/_data/docs/apps/toc.yml @GoogleChrome/dcc-extensions
+site/_data/i18n/docs/apps.yml @GoogleChrome/dcc-extensions
+site/_includes/partials/apps/ @GoogleChrome/dcc-extensions
+site/en/docs/apps/ @GoogleChrome/dcc-extensions
+
 # Web Store
 site/_data/docs/webstore/toc.yml @GoogleChrome/dcc-extensions
 site/_data/i18n/docs/webstore.yml @GoogleChrome/dcc-extensions
