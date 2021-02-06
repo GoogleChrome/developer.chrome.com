@@ -96,7 +96,7 @@ message sent to the native messaging host is 4 GB.
 The first argument to the native messaging host is the origin of the caller, usually
 `chrome-extension://[ID of allowed extension]`. This allows native messaging hosts to identify the
 source of the message when multiple extensions are specified in the `allowed_origins` key in the
-[native messaging host manifest][7].  
+[native messaging host manifest][7].
 **_Warning_**: In Windows, in Chrome 54 and earlier, the origin was passed as the second parameter
 instead of the first parameter.
 
@@ -117,7 +117,7 @@ messaging host create native UI windows that are correctly focused.
 Sending and receiving messages to and from a native application is very similar to cross-extension
 messaging. The main difference is that [runtime.connectNative][11] is used instead of
 [runtime.connect][12], and [runtime.sendNativeMessage][13] is used instead of
-[runtime.sendMessage][14].  
+[runtime.sendMessage][14].
 These methods can only be used if the "nativeMessaging" permission is [declared][15] in your app's
 manifest file.
 
@@ -227,7 +227,7 @@ host. Then [load the app][27] and interact with the app. Run `uninstall_host.bat
 [21]: #native-messaging-host-location
 [22]: #native-messaging-host-protocol
 [23]: https://msdn.microsoft.com/en-us/library/tw4k6df8.aspx
-[24]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/nativeMessaging
+[24]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/nativeMessaging
 [25]: /extensions/examples/api/nativeMessaging/app.zip
 [26]: /extensions/examples/api/nativeMessaging/host.zip
 [27]: getstarted#unpacked

@@ -162,4 +162,4 @@ An example extension that uses these techniques is available in the [samples rep
 [6]: /docs/extensions/mv2/tabs
 [7]: /docs/extensions/mv2/tut_debugging
 [8]: https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
-[9]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/tutorials/analytics/
+[9]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/tutorials/analytics/
