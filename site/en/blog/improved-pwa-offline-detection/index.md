@@ -123,14 +123,14 @@ Lighthouse v7 and later will also indicate when there's a problem with the
 offline implementation and provide guidance on how to fix it.
 
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/PuyRpRfJnVs8o8aTdHlA.png", alt="Screen shot of DevTools showing warning message in Console.", width="800", height="115" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/qQHA9CJQrYX6w9FY9P6T.png", alt="Screen shot of DevTools showing warning message in Console.", width="800", height="100" %}
   <figcaption>
     Warning message in the Chrome DevTools Console.
   </figcaption>
 </figure>
 
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/TjqKPXYUF5Y3tjeZLSwT.png", alt="Screenshot of DevTools showing warning message in Application tab.", width="800", height="175" %}
+  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/On0AEdm2u9EZUuI3NIVv.png", alt="Screenshot of DevTools showing warning message in Application tab.", width="800", height="170" %}
   <figcaption>
     Warning message in Application tab &gt; Manifest &gt; Installability.
   </figcaption>
