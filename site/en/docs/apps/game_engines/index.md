@@ -23,7 +23,7 @@ technologies. The following are some we recommend with instructions for producin
 
 PlayCanvas demo on Chrome Web Store: [Swooop][4]
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qMe2bDKXSnyLvffmRgLi.png", alt="PlayCanvas editor screenshot", height="335", width="500" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qMe2bDKXSnyLvffmRgLi.png", alt="PlayCanvas editor screenshot", height="335", width="500" %}
 
 PlayCanvas is a free and open source WebGL Game Engine targeting mobile and desktop. Its browser
 based development tools support real-time collaboration.

@@ -68,7 +68,7 @@ interested in:
 
 If you aren't sure what kind of app you need to write, see [Choosing an App Type][7].
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/28i4EMWuR9Baoq5d4S0e.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/28i4EMWuR9Baoq5d4S0e.png",
        alt="Thumbnail of decision flowchart from Choosing an App Type", height="627", width="581" %}
 
 ## Charging for your app {: #charging }

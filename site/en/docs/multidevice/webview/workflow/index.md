@@ -20,7 +20,7 @@ build.
 [Yeoman][2] is a tool which helps create web applications, generating boilerplate, bringing in
 libraries from [Bower][3] and [npm][4], and creating a Grunt file with predefined tasks.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604541751329.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604541751329.png", 
        alt="The Yeoman, Grunt, and Bower logos.",
        width="656",
        height="264" %}
@@ -49,7 +49,7 @@ After you've created your project, create a new top level directory:
 
   Name the directory `webapp`.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604541811944.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604541811944.png",
        alt="Creating a new directory.",
        width="656",
        height="142" %}
@@ -87,7 +87,7 @@ optimised and made into a production ready version inside this folder.
 
 In your `webapp` directory create a new file called `build.gradle`.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604541870306.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604541870306.png",
        alt="Creating a new file.",
        width="656",
        height="166" %}
@@ -245,7 +245,7 @@ Gradle will now offer you the ability to create a version of your app with a liv
 name, and one with your normal package name. To check if it worked, click **Sync Project with Gradle
 Files** (on the top bar next to the **Run** button).
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604541916467.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604541916467.png",
        alt="Sync Project With Gradle Files",
        width="656",
        height="156" %}
@@ -253,7 +253,7 @@ Files** (on the top bar next to the **Run** button).
 Then view the **Build Variants** which are in the bottom left corner of Android Studio and
 essentially shows you what versions of your app you can build.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604541989518.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604541989518.png", 
        alt="LiveserverDebug",
        width="656",
        height="540" %}
@@ -279,7 +279,7 @@ of a hard-coded URL.
 
 1.  Create the folders `src/liveserver` and `src/staticbuild`.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604542062720.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604542062720.png",
            alt="A screenshot of the directory hierarchy.",
            width="656",
            height="709" %}
@@ -287,7 +287,7 @@ of a hard-coded URL.
 2.  In the `liveserver` folder, create a new folder named `res` with a subfolder named `values`.
     Inside this create a file named `config.xml`. Repeat this process for the `staticbuild` folder.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604542103713.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604542103713.png",
            alt="Another screenshot of the directory hierarchy.",
            width="656",
            height="520" %}

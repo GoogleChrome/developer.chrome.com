@@ -33,7 +33,7 @@ tab. Also, the app container must load the main document of the Chrome App from 
 forces all Chrome Apps to be at least minimally functional when offline and it provides a place to
 enforce stricter security measures.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1elqMcady4myIQ5qqQxA.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1elqMcady4myIQ5qqQxA.png",
        alt="how app container model works", height="172", width="671" %}
 
 ## Programming model {: #programming }

@@ -100,7 +100,7 @@ registered under the `options_page` field.
 }
 ```
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ej3H0FMApR7srtGbZfBZ.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ej3H0FMApR7srtGbZfBZ.png", 
        alt="Full page options", height="124", width="367" %}
 
 ### Embedded options {:#embedded_options }
@@ -122,7 +122,7 @@ false.
 }
 ```
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/AW1YkMTrWYUNmtTaRM0q.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/AW1YkMTrWYUNmtTaRM0q.png",
        alt="Embedded options", height="386", width="633" %}
 
 - **`page` (string)**

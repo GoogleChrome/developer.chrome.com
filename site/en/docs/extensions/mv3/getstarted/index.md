@@ -47,7 +47,7 @@ current state.
 2.  Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
 3.  Click the **Load unpacked** button and select the extension directory.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iYdLKFsJ1KSVGLhbLRvS.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iYdLKFsJ1KSVGLhbLRvS.png",
        alt="Load Extension", height="337", width="606" %}
 
 Ta-da! The extension has been successfully installed. Because no icons were included in the
@@ -114,7 +114,7 @@ the manifest for the extension to use them.
 Navigate back to the extension management page and click the **Reload** link. A new field, **Inspect
 views**, becomes available with a blue link, **background page**.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/V96EHNVYQLVsjURz4Naz.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/V96EHNVYQLVsjURz4Naz.png",
        alt="Inspect Views", height="337", width="606" %}
 
 Click the link to view the background script's console log, "`Default background color set to
@@ -236,7 +236,7 @@ favicon. These images are designated in the manifest under [`icons`][19].
 If the extension is reloaded at this stage, it will include the provided icon rather than the
 default placeholder, and clicking the action will open a popup with button with default colors.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/j3Ff3oF0tEl9tE5ed6L0.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/j3Ff3oF0tEl9tE5ed6L0.png",
        alt="Popup", height="99", width="73" %}
 
 The last step for the popup UI is adding color to the button. Create and add a file named
@@ -355,12 +355,12 @@ Then register the options page in the manifest,
 
 Reload the extension and click **DETAILS**.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3fNrYEoJMOPQ00L7tBtp.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3fNrYEoJMOPQ00L7tBtp.png",
        alt="Inspect Views", height="337", width="606" %}
 
 Scroll down the details page and select **Extension options** to view the options page.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/z1VEYxYlJev7llaXIQUL.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/z1VEYxYlJev7llaXIQUL.png",
        alt="Extension Options", height="726", width="645" %}
 
 The last step is to add the options logic. Create a file named `options.js` in the extension's

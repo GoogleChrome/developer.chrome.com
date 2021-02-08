@@ -49,12 +49,12 @@ manage their apps, in which case you only need to register a Google Developers C
 
 {% endAside %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vkcDhH8uyPOODVrKTpKH.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vkcDhH8uyPOODVrKTpKH.png",
        alt="A screenshot of the permission request UI.", height="310", width="481" %}
 
 Click the Accept button and you will see a code that looks something like this:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oCXSDgT7JuB3yvD8V1CJ.png", alt="A screenshot of the UI for copying code.", height="173", width="414" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oCXSDgT7JuB3yvD8V1CJ.png", alt="A screenshot of the UI for copying code.", height="173", width="414" %}
 
 Use this value to request an access token. For example, using `curl`, you can get an access token by
 executing the following command (replacing the values of $CLIENT\_ID, $CLIENT_SECRET, and \$CODE

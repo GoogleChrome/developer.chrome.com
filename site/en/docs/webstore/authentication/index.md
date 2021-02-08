@@ -96,7 +96,7 @@ This sample workflow walks through the authentication process for an app that su
 Login.
 
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1605551445479.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1605551445479.png",
        alt="A diagram of the authentication flow.",
        height="662",
        width="800" %}

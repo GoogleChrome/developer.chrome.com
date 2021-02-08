@@ -18,7 +18,7 @@ As modern browsers become more powerful with rich features, building full-blown 
 JavaScript is not only feasible, but increasingly popular. Based on [trends][3] on [HTTP
 Archive][4], deployed JavaScript code size has grown 45% over the course of the year.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JYbQCeKcbI0rbDtXUGKi.png", alt="JS transfer size and JS requests", height="292", width="568" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JYbQCeKcbI0rbDtXUGKi.png", alt="JS transfer size and JS requests", height="292", width="568" %}
 
 With JavaScript's popularity climbing, our client-side applications are much more complex than
 before. Application development requires collaboration from multiple developers. Writing
@@ -43,7 +43,7 @@ multiple languages and generations of programmers.
 
 MVC is composed of three components:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BHGcFQr06iG3kquyozom.png", alt="model-view-controller", height="303", width="466" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BHGcFQr06iG3kquyozom.png", alt="model-view-controller", height="303", width="466" %}
 
 ### Model {: #model }
 
@@ -54,7 +54,7 @@ has occurred.
 To understand this further, let's use the Todo list app, a simple, one page web app that tracks your
 task list.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7WQXOcG3PNRhnsjnsvjx.png", alt="model-view-controller", height="366", width="444" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7WQXOcG3PNRhnsjnsvjx.png", alt="model-view-controller", height="366", width="444" %}
 
 The model here represents attributes associated with each todo item such as description and status.
 When a new todo item is created, it is stored in an instance of the model.

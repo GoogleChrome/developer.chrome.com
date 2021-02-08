@@ -57,7 +57,7 @@ If you have a simple button with the following styling:
 }
 ```
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604543700975.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604543700975.png",
        alt="A screenshot of the example button.",
        width="656",
        height="299" %}
@@ -73,7 +73,7 @@ The pressed state may look like:
 }
 ```
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604543733832.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604543733832.png",
        alt="A screenshot of the button being touched.",
        width="656",
        height="299" %}
@@ -96,14 +96,14 @@ ring around links and elements.
 
 For example a button element in the new WebView is given an orange outline:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604543764609.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604543764609.png",
        alt="A screenshot of the outlined button.",
        width="656",
        height="195" %}
 
 In the old webview a highlight color is applied on top of certain elements:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604543794370.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604543794370.png", 
        alt="A screenshot of a button with a highlight color on top of it.",
        width="656",
        height="158" %}

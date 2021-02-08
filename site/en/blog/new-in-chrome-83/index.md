@@ -102,13 +102,13 @@ number of CSS rules just to get a consistent look across devices.
 
 {% Columns %}
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/WSHGuVSVSsRyOdbnUN4F.png", alt="", height="928", width="492" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/WSHGuVSVSsRyOdbnUN4F.png", alt="", height="928", width="492" %}
   <figcaption>
     Before, default styling of form controls.
   </figcaption>
 </figure>
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/FhoI03qxVPRrOxY6lVJR.png", alt="", height="928", width="492" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/FhoI03qxVPRrOxY6lVJR.png", alt="", height="928", width="492" %}
   <figcaption>
     After, updated styling of form controls.
   </figcaption>
@@ -120,7 +120,7 @@ the appearance of form controls. Beyond the nicer visual style, they bring
 better touch support, and better accessibility, including improved keyboard
 support!
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/t173v86PHOoikrehWzeh.gif", alt="", height="294", width="620" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/t173v86PHOoikrehWzeh.gif", alt="", height="294", width="620" %}
 
 The new form controls have already landed in Microsoft Edge, and are now
 available in Chrome 83. For more information, see
@@ -216,7 +216,7 @@ Such [core user experience needs][wd-ucpm] include loading experience,
 interactivity, and visual stability of page content, and combined are the
 foundation of the 2020 Core Web Vitals.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/PJP3ZSo0RxY3cjvZlXhx.jpg", alt="", height="232", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/PJP3ZSo0RxY3cjvZlXhx.jpg", alt="", height="232", width="800" %}
 
 * [**Largest Contentful Paint**][wd-lcp] measures perceived load speed and
   marks the point in the page load timeline when the page's main content has

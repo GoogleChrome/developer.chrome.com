@@ -220,12 +220,12 @@ blocks of code or images. On mobile the columns will stack vertically.
 {% raw %}{% Columns %}
 
 {% Column %}
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
 Original
 {% endColumn %}
 
 {% Column %}
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
 Flipped
 {% endColumn %}
 
@@ -235,12 +235,12 @@ Flipped
 {% Columns %}
 
 {% Column %}
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
 Original
 {% endColumn %}
 
 {% Column %}
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
 Flipped
 {% endColumn %}
 
@@ -474,13 +474,13 @@ Shortcode object fields allow for modifying how the embed is presented:
 
 ## Images
 
-Images should always use the {% raw %}`{% img %}`{% endraw %} shortcode.
+Images should always use the {% raw %}`{% Img %}`{% endraw %} shortcode.
 
 ```md
-{% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
+{% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
 ```
 
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
 
 See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/).
 
@@ -490,12 +490,12 @@ Full bleed images break out of the main column.
 
 ```md
 <div class="type--full-bleed">
-{% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
+{% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
 </div>
 ```
 
 <div class="type--full-bleed">
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
 </div>
 
 ### Inline images
@@ -505,7 +505,7 @@ class.
 
 ```md
 <!-- !important: note the commas after each property -->
-{% raw %}{% img
+{% raw %}{% Img
   className="float-right",
   src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg",
   alt="ALT_TEXT_HERE",
@@ -514,7 +514,7 @@ class.
 %}{% endraw %}
 ```
 
-{% img className="float-right", src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+{% Img className="float-right", src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque iure eveniet
 assumenda ea natus perspiciatis, atque totam fugit labore amet facere,
@@ -862,13 +862,13 @@ responsive. To prevent this from happening add the `fixed-table` class.
 
 ## Video
 
-Videos should always use the {% raw %}`{% video %}`{% endraw %} shortcode.
+Videos should always use the {% raw %}`{% Video %}`{% endraw %} shortcode.
 
 ```md
-{% raw %}{% video src='video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4' %}{% endraw %}
+{% raw %}{% Video src='video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4' %}{% endraw %}
 ```
 
-{% video src="video/foR0vJZKULb5AGJExlazy1xYDgI2/vkRVf2txsBrzkFUMpolP.mp4" %}
+{% Video src="video/foR0vJZKULb5AGJExlazy1xYDgI2/vkRVf2txsBrzkFUMpolP.mp4" %}
 
 {% Aside %}
 Note that the video `src` property can either be a string or an array of strings

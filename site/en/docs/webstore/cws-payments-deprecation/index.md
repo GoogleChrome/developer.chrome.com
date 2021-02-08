@@ -48,7 +48,7 @@ The deprecation timeline began with the temporary disabling of new paid items be
 constraints due to Covid-19. We have since decided to make this change permanent, and over the
 coming months payments for existing items will be phased out.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iqFt5YpdIgBp1EyKixKP.png", alt="Deprecation timeline", height="217", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iqFt5YpdIgBp1EyKixKP.png", alt="Deprecation timeline", height="217", width="800" %}
 
 - **March 27, 2020** Publishing of paid items temporarily disabled.
 - **September 21, 2020** You can no longer create new paid extensions or in-app items. This change,

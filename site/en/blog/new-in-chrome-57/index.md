@@ -29,7 +29,7 @@ I'm Pete LePage, let's dive in and see what's new for developers in Chrome 57!
 
 ## CSS grid layout {: #gridlayout }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/U0lsMmYyKqvglQi6H5Kt.png", alt="", className="float-right", height="516", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/U0lsMmYyKqvglQi6H5Kt.png", alt="", className="float-right", height="516", width="800" %}
 
 Flexbox is a powerful layout tool. It makes many complex layouts possible,
 but it can only do layout in one dimension. Chrome 57 adds support for
@@ -48,7 +48,7 @@ about it, and when you're ready to dive in deeper, check out
 
 ## Media Session API {: #mediasession }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/VAKU1oILMIgkAZQyFxNZ.png", alt="", className="float-left", height="532", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/VAKU1oILMIgkAZQyFxNZ.png", alt="", className="float-left", height="532", width="800" %}
 
 One of the missing features from web media applications has been the
 ability to deeply integrate with the core media experience on mobile devices.

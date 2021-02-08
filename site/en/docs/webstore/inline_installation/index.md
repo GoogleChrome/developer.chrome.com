@@ -20,7 +20,7 @@ As of Google Chrome 15, you can initiate app and extensions installations "inlin
 These apps and extensions are still hosted in the Chrome Web Store, but users no longer have to
 leave your site to install them.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iOr6LOVuZYykpCTpthlq.png", alt="Inline installation dialog", height="241", width="401" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iOr6LOVuZYykpCTpthlq.png", alt="Inline installation dialog", height="241", width="401" %}
 
 When users install the app, they
 will see an installation confirmation dialog similar to the one pictured on right. Just like the

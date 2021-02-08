@@ -42,7 +42,7 @@ If you're changing any code, the manifest, or other assets packaged with your ex
 make a new zip file and upload the new package. In the developer dashboard entry for your item, on
 the Package tab, use the Upload New Package button to upload the zip file:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MXJosZfPAB5V2AcGfYSy.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MXJosZfPAB5V2AcGfYSy.png", 
        alt="Screenshot of the Chrome Web Store developer dashboard package tab for an item",
        height="368", width="800" %}
 
@@ -64,7 +64,7 @@ update this information on the same tabs used for creating a new item:
 If your item has a large user base, its distribution tab will include a **Percentage rollout**
 option to restrict the update to just a fraction of the user base:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oZxWW5oMsh7fUSzwvRNp.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oZxWW5oMsh7fUSzwvRNp.png",
        alt="Screenshot of the Chrome Web Store fractional rollout field",
        height="488", width="800" %}
 
@@ -89,7 +89,7 @@ To submit your update for review:
 2.  Click the **Submit for Review** button.
 3.  The following dialog appears, letting you confirm that you want to submit the item for review.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OkIWdcXXkYFTU322j9Vs.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OkIWdcXXkYFTU322j9Vs.png",
        alt="Screenshot of the Chrome Web Store confirm submission dialog", height="388", width="800" %}
 
 ### Deferred publishing option {: #deferred-publishing-option }
@@ -111,7 +111,7 @@ extent of your changes. See the [FAQ on review times][7] for more details.
 For items that you previously published with [partial rollout][8], you can update the percent
 rollout using the Package tab:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Dy8HD5xF4NiboQxgUtNt.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Dy8HD5xF4NiboQxgUtNt.png",
        alt="Screenshot of the Chrome Web Store update percent rollout field", height="395", width="800" %}
 
 To increase the rollout fraction for your item, enter the increased percentage target and then click

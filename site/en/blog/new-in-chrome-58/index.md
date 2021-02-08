@@ -65,7 +65,7 @@ Now you can make your Progressive Web App feel fully immersive by setting
 [web app manifest](https://developers.google.com/web/fundamentals/web-app-manifest).
 
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/uaDm5T4ifsA6lQJohjmg.png", alt="", height="450", width="800" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/uaDm5T4ifsA6lQJohjmg.png", alt="", height="450", width="800" %}
   <figcaption>
     A PWA launched from the home screen (left), launched from the home screen
     in <code>standalone</code> mode (middle), and launched from the home screen in

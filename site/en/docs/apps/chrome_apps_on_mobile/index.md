@@ -18,7 +18,7 @@ _**The toolchain for running Chrome Apps on mobile is in early developer preview
 us your feedback using the [Github issue tracker][3], our [Chrome Apps developer forum][4], on
 [Stack Overflow][5], or our [G+ Developers page][6].**_
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FNYKWfrpCKjWdrBh45zK.jpg", alt="A Chrome App running on both desktop and mobile", height="459", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FNYKWfrpCKjWdrBh45zK.jpg", alt="A Chrome App running on both desktop and mobile", height="459", width="800" %}
 
 ## Overview {: #overview }
 

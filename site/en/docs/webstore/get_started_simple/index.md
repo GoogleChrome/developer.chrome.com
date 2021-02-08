@@ -241,7 +241,7 @@ Now you get to see what your app's listing in the store will look like.
 2.  At the bottom of the Edit page, click **Preview changes**. You should see a page that looks
     something like this:
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DnAipknPku2gPKNyqXpG.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DnAipknPku2gPKNyqXpG.png",
            alt="a screenshot of the store listing", height="328", width="550" %}
 
     {% Aside %}

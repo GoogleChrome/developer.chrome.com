@@ -66,7 +66,7 @@ Including optional permissions allows an extension to explain why it needs a par
 when the user enables the relevant feature. The extension can offer the user an option to enable
 features.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5hIYQFOiYTl4EwyaYMLx.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5hIYQFOiYTl4EwyaYMLx.png",
        alt="A screenshot of a popup asking to enable permissions", height="248", width="258" %}
 
 Clicking **Okay!** will trigger the following event in the background script.
@@ -91,7 +91,7 @@ document.querySelector('#button').addEventListener('click', function(event) {
 
 The user will then be prompted with the following request.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/HPfMXx3PsqYcdFjlZ2iz.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/HPfMXx3PsqYcdFjlZ2iz.png",
        alt="A screenshot of optional permissions request.", height="323", width="800" %}
 
 Optional permissions can also be implemented in an extension update. Doing so will make the new

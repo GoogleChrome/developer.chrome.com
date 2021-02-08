@@ -35,7 +35,7 @@ application experience. For example, a news aggregator might want to embed the n
 sites with all the formatting, images, and behavior of the original site. For these and other
 usages, Chrome Apps have a custom HTML tag called [webview][5].
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8Au5I2qFyIOANWUbmh70.png", alt="The Todo app using a webview", height="524", width="737" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8Au5I2qFyIOANWUbmh70.png", alt="The Todo app using a webview", height="524", width="737" %}
 
 {% Aside %}
 

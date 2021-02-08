@@ -11,7 +11,7 @@ description: How to show notifications to your Chrome Extension users.
 The [rich notifications API][2] lets you create notifications using templates and show these
 notifications to users in the user's system tray:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tAzH8Og2Lql9nAcIRMOA.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tAzH8Og2Lql9nAcIRMOA.png",
        alt="Notifications in system user tray", height="375", width="354" %}
 
 ## How they look {: #look }
@@ -22,22 +22,22 @@ message, and a contextMessage field, which is displayed as a 3rd text field in a
 
 A basic image:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZNTfa7vVa0sor219W0dk.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZNTfa7vVa0sor219W0dk.png",
        alt="Basic notification", height="175", width="479" %}
 
 List notifications display any number of list items:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vFV3s1EW9gAPTog3khPE.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vFV3s1EW9gAPTog3khPE.png",
        alt="List notification", height="200", width="400" %}
 
 Image notifications include an image preview:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vtc3JD29GPhnAZSjxljc.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vtc3JD29GPhnAZSjxljc.png",
        alt="Image notification", height="400", width="365" %}
 
 Progress notifications show a progress bar:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/cKPXPoLP0vqqenR88z9M.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/cKPXPoLP0vqqenR88z9M.png",
        alt="Progress notification", height="205", width="389" %}
 
 ## How they behave {: #behave }
@@ -59,7 +59,7 @@ In addition to displaying information, all notification types can include up to 
 When users click on an action item, your app can respond with the appropriate action. For example,
 when the user clicks on "Reply", the email app opens and the user can complete the reply:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CozjuLjsi01Ch9KNBoAY.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CozjuLjsi01Ch9KNBoAY.png",
        alt="Action in notification", height="275", width="392" %}
 
 ## How to develop them {: #develop }

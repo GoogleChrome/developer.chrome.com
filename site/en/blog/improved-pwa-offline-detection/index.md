@@ -54,7 +54,7 @@ that included a `fetch` event handler.  Chrome did not have the
 ability to simulate requests through the service worker, so a full check of
 correct offline behaviour was not possible.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/qrDoFGCM2s8pBvM4n7Dv.png", alt="Diagram of service worker", width="800", height="385" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/qrDoFGCM2s8pBvM4n7Dv.png", alt="Diagram of service worker", width="800", height="385" %}
 
 That meant that Chrome did not have the ability to validate whether the `fetch`
 event handler returned a valid resource with HTTP 200 during the offline check.
@@ -123,14 +123,14 @@ Lighthouse v7 and later will also indicate when there's a problem with the
 offline implementation and provide guidance on how to fix it.
 
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/qQHA9CJQrYX6w9FY9P6T.png", alt="Screen shot of DevTools showing warning message in Console.", width="800", height="100" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/qQHA9CJQrYX6w9FY9P6T.png", alt="Screen shot of DevTools showing warning message in Console.", width="800", height="100" %}
   <figcaption>
     Warning message in the Chrome DevTools Console.
   </figcaption>
 </figure>
 
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/On0AEdm2u9EZUuI3NIVv.png", alt="Screenshot of DevTools showing warning message in Application tab.", width="800", height="170" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/On0AEdm2u9EZUuI3NIVv.png", alt="Screenshot of DevTools showing warning message in Application tab.", width="800", height="170" %}
   <figcaption>
     Warning message in Application tab &gt; Manifest &gt; Installability.
   </figcaption>

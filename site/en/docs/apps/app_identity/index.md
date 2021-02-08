@@ -132,7 +132,7 @@ indicating whether you want the API to be called in interactive mode or silent m
 the API in interactive mode, the user is shown a sign in and/or approval UI when necessary, as shown
 in the screenshot below:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4ssCBdcz1KciXq4NOSVm.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4ssCBdcz1KciXq4NOSVm.png",
        alt="screenshot showing UI when an app uses the Identity API to authenticate a Google account", height="482", width="800" %}
 
 If you invoke the API in silent mode, the API will only return a token if it's possible to produce
