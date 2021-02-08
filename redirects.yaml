@@ -27,6 +27,9 @@ redirects:
 - from: /apps/about_apps
   to: /docs/apps/overview/
 
+- from: /docs/extensions/mv2/migrating_to_service_workers
+  to: /docs/extensions/mv3/migrating_to_service_workers
+
 - from: /docs/extensions/mv3/background_migration
   to: /docs/extensions/mv3/migrating_to_service_workers
 
