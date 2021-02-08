@@ -42,11 +42,11 @@ Want the full list of changes? Check out the
 
 ## CSS Scroll Snap {: #scroll-snap }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 This post refers to **CSS Scroll Snap**, which is the current standard,
 not to be confused with _CSS Scroll Snap Points_, which has been deprecated and
 is no longer on the standards track.
-!!!
+{% endAside %}
 
 <figure class="float-right">
   {% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/pqZHxe4Ggn62Lf5dvJbK.mp4" %}
@@ -128,11 +128,11 @@ your content.
 }
 ```
 
-!!!.aside
+{% Aside %}
 **Remember:** It's important to test this well; you're telling the
 browser it's OK if some content gets hidden behind the display cutout.
 And don't forget to test in both portrait and landscape modes.
-!!!
+{% endAside %}
 
 There's a great post on the WebKit blog about
 [Designing Websites for iPhone X](https://webkit.org/blog/7929/designing-websites-for-iphone-x/),

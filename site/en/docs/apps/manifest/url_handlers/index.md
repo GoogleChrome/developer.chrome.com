@@ -6,13 +6,13 @@ updated: 2014-05-21
 description: Reference documentation for the url_handlers property of manifest.json.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Used by [packaged apps][3] to specify URL patterns the app wants to intercept and handle. An app can
 define multiple URL handlers under this manifest entry, each having an identifier, a URL pattern,

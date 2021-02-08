@@ -6,20 +6,20 @@ updated: 2014-10-20
 description: How to show external web content in your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Want to start fresh from here?** Find the previous step's code in the [reference code zip][3]
 under **_cheat_code > solution_for_step3_**.
 
-!!!
+{% endAside %}
 
 In this step, you will learn:
 
@@ -37,12 +37,12 @@ usages, Chrome Apps have a custom HTML tag called [webview][5].
 
 {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8Au5I2qFyIOANWUbmh70.png", alt="The Todo app using a webview", height="524", width="737" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Webviews are sandboxed processes:** The enclosing Chrome App (also known as the "embedder page")
 cannot easily access the webview's loaded DOM. You can only interact with the webview using its API.
 
-!!!
+{% endAside %}
 
 ## Implement the webview tag {: #implement-webview }
 

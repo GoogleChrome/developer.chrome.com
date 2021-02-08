@@ -35,11 +35,11 @@ Here's what you need to know:
 I'm [Pete LePage](https://twitter.com/petele), working and shooting from home,
 let's dive in and see what's new for developers in Chrome 81!
 
-!!!.aside
+{% Aside %}
 We've created a [set of resources](https://web.dev/covid19) to help you
 ensure your site remains available and accessible to all during the COVID-19
 situation.
-!!!
+{% endAside %}
 
 ## Updated Chrome release schedule {: #adjusted-schedule }
 

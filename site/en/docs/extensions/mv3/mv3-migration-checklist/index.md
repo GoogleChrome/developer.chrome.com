@@ -31,9 +31,9 @@ There are some changes you may need to make based on changes to the API surface.
 - Remove `background.persistent` from manifest.json.
 - Update background scripts to adapt to the service worker execution context.
 
-!!!.aside.aside--gotchas
+{% Aside 'gotchas' %}
 Service workers must be registered at root level: they cannot be in a nested directory.
-!!!
+{% endAside %}
 
 **Are you using the `browser_action` or `page_action` property in manifest.json?**
 <br/>
@@ -50,13 +50,13 @@ Service workers must be registered at root level: they cannot be in a nested dir
 <br/>
 *This API is [replaced by `declarativeNetRequest`](/docs/extensions/mv3/intro/mv3-migration#modifying-network-requests) in MV3.*
 
-!!!.aside
+{% Aside %}
 This only applies to user-installed extensions; force installed extensions (extensions
 distributed using
 [ExtensionInstallForcelist](https://www.chromium.org/administrators/policy-list-3#ExtensionInstallForcelist)).
 These extensions &mdash; typically used in an enterprise setting &mdash; can
 still use the blocking version of `chrome.webRequest`. 
-!!!
+{% endAside %}
 
 - Migrate request modification logic to `chrome.declarativeNetRequest` rules.
 - Replace the `webRequestBlocking` permission with `declarativeNetRequest`.

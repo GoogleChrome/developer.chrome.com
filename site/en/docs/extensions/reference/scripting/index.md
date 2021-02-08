@@ -70,9 +70,9 @@ chrome.scripting.executeScript(
     () => { ... });
 ```
 
-!!!.aside
+{% Aside %}
 You cannot specify both the `frameIds` and `allFrames` properties.
-!!!
+{% endAside %}
 
 ### Injected code
 
@@ -95,9 +95,9 @@ chrome.scripting.executeScript(
     () => { ... });
 ```
 
-!!!.aside
+{% Aside %}
 Note: Currently, a maximum of a single file is supported.
-!!!
+{% endAside %}
 
 #### Runtime functions
 

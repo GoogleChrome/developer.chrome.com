@@ -6,24 +6,24 @@ updated: 2017-01-12
 description: How to communicate with USB devices from your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 This document describes how to use the [USB API][3] to communicate with USB devices. Some devices
 are not accessible through the USB API (see the [Caveats][4] section below for details). Chrome Apps
 can also connect to [serial][5] and [Bluetooth][6] devices.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Samples:** For examples that illustrate how Chrome Apps can connect to hardware devices, see the
 [serial][7], [servo][8], and [usb][9] samples.
 
-!!!
+{% endAside %}
 
 For background information about USB, see the official [USB specifications][10].  
 [_USB in a NutShell_][11] is a reasonable crash course that you may find helpful.
@@ -58,12 +58,12 @@ permission in your app's manifest file, as shown in the example below:
 ]
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 Note that only decimal numbers are allowed in JSON format. You cannot use hexadecimal numbers in
 these fields.
 
-!!!
+{% endAside %}
 
 Since **Chrome 57**, the requirement for declaring all the device types in the app manifest is
 relaxed for apps running as Chrome OS [kiosk apps][14]. For kiosk apps, you can use the
@@ -105,12 +105,12 @@ devices from a specific vendor, as demonstrated by the following example:
 ]
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 Note that `usbDevices` permissions with `interfaceClass` property have effect only when the app is
 running in kiosk session - outside a kiosk session these permissions will be ignored.
 
-!!!
+{% endAside %}
 
 ## Finding a device {: #finding_device }
 
@@ -165,7 +165,7 @@ var onOpenCallback = function(connection) {
 chrome.usb.openDevice(device, onOpenCallback);
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 Not every device can be opened successfully. In general, operating systems lock down many types of
 USB interfaces (e.g. keyboards and mice, mass storage devices, webcams, etc.) and they cannot be
@@ -175,7 +175,7 @@ device file), even if the other interfaces of the device can be used in theory. 
 can request access to unlocked interfaces using the [usb.requestAccess][18] method. If permitted,
 the permission broker will unlock the device file for you.
 
-!!!
+{% endAside %}
 
 To simplify the opening process, you can use the [usb.findDevices][19] method, which enumerates,
 requests access, and opens devices in one call:
@@ -308,7 +308,7 @@ var isoTransferInfo = {
 chrome.usb.isochronousTransfer(connectionHandle, isoTransferInfo, optionalCallback);
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Notes:** One isochronous transfer will contain `isoTransferInfo.packets` packets of
 `isoTransferInfo.packetLength` bytes. If it is an inbound transfer (your code requested data from
@@ -320,7 +320,7 @@ If you are expecting a stream of data from the device, remember that you will ha
 "inbound" transfer for each transfer you expect back. USB devices don't send transfers to the USB
 bus unless the host explicitly requests them through "inbound" transfers.
 
-!!!
+{% endAside %}
 
 ## BULK transfers {: #bulk_transfers }
 

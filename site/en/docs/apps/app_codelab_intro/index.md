@@ -6,13 +6,13 @@ updated: 2014-10-20
 description: An introduction to the codelab.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Welcome to the Chrome Apps codelab.
 

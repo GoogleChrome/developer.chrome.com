@@ -14,10 +14,10 @@ might initially publish your app in English (locale code: "en"). Then, after a f
 you might add support for additional locales such as French (locale code: "fr") and Arabic (locale
 code: "ar").
 
-!!!.aside.aside--note
+{% Aside %}
 The word _internationalization_ is often abbreviated to _i18n_, referring to the 18
 letters between the letters _i_ and _n_. _Localization_ is sometimes abbreviated to _l10n_.
-!!!
+{% endAside %}
 
 ## Overview
 
@@ -260,9 +260,9 @@ your app to be listed in a particular region, unselect that region from the foll
 - United Kingdom
 - United States
 
-!!!.aside.aside--note
+{% Aside %}
 Unselecting a region prevents your app from being listed in that region.
-!!!
+{% endAside %}
 
 [1]: #localeTable
 [2]: #manifest

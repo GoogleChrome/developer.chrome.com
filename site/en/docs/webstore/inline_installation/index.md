@@ -5,10 +5,10 @@ date: 2018-06-12
 description: How to use inline installations.
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 As of 06/12/2018, inline installation is deprecated. For more information, read our
 [Chromium Blog post][1] and [Migration FAQ][2].
-!!!
+{% endAside %}
 
 Once you've [published][3] your app or extension, you may be wondering how users will find and
 install your app. For users who browse the Chrome Web Store and find your item, its a very easy

@@ -6,20 +6,20 @@ date: 2014-10-17
 description: How to write to the file system from your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Want to start fresh from here?** Find the previous step's code in the [reference code zip][3]
 under **_cheat_code > solution_for_step5_**.
 
-!!!
+{% endAside %}
 
 In this step, you will learn:
 

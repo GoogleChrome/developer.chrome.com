@@ -5,12 +5,12 @@ date: 2018-06-11
 description: Guidlines for use of Google trademarks.
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 **Important:** Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS
 will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to
 support extensions on all platforms. [Read the announcement][1] and learn more about [migrating your
 app][2].
-!!!
+{% endAside %}
 
 <!-- TODO(kaycebasques): Remove this duplicate site nav. -->
 

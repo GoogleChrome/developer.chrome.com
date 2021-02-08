@@ -65,13 +65,13 @@ An instance of the `devtools_page` specified in your extension's manifest is cre
 DevTools window opened. The page may add other extension pages as panels and sidebars to the
 DevTools window using the [`devtools.panels`][4] API.
 
-!!!.aside.aside--note
+{% Aside %}
 
 The `devtools_page` field must point to an HTML page. This differs from the `background` field, used
 for specifying a background page, which lets you specify JavaScript files directly. The DevTools
 page must be local to your extension, so it is best to specify it using a relative URL.
 
-!!!
+{% endAside %}
 
 The `chrome.devtools.*` API modules are available only to the pages loaded within the DevTools
 window. Content scripts and other extension pages do not have these APIs. Thus, the APIs are
@@ -142,12 +142,12 @@ the DevTools page, you must retrieve the ID of the inspected window's tab using 
 [`inspectedWindow.tabId`][18] property and send a message to the background page. From the
 background page, call [`tabs.executeScript`][17] to inject the script.
 
-!!!.aside.aside--note
+{% Aside %}
 
 If a content script has already been injected, you can add additional context scripts using the
 `eval` method. See [Passing the Selected Element to a Content Script][20] for more information.
 
-!!!
+{% endAside %}
 
 The following code snippets show how to inject a content script using `executeScript`.
 

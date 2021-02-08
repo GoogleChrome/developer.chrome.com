@@ -6,13 +6,13 @@ updated: 2014-05-21
 description: An overview of the model view controller software architecture model.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 As modern browsers become more powerful with rich features, building full-blown web applications in
 JavaScript is not only feasible, but increasingly popular. Based on [trends][3] on [HTTP

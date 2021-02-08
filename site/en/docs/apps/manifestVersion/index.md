@@ -6,13 +6,13 @@ updated: 2019-08-12
 description: Reference documentation for the manifest_version property of manifest.json.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Applications are simply bundles of resources, wrapped up with a [`manifest.json`][3] file that
 describes the package's contents. The format of this file is generally stable, but occasionally

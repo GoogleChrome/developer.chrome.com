@@ -5,12 +5,12 @@ date: 2020-03-05
 description: An explanation of the purpose of the Chrome Web Store.
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS
 will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to
 support extensions on all platforms. [Read the announcement][1] and learn more about [migrating your
 app][2].
-!!!
+{% endAside %}
 
 The [Chrome Web Store][3] lets you publish apps where Google Chrome users can easily find them. The
 store's primary purpose is to help Chrome users find apps. It does this by supporting search, by
@@ -87,11 +87,11 @@ For each item you publish, you can choose from any of the following payment opti
 4.  **Free trial** with b or c
 5.  **Custom payment solution**
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 Although packaged apps and extensions can use Chrome Web Store Payments, it's difficult
 for them to use the Licensing API securely. Themes have no executable code, so they can't use the
 Licensing API.
-!!!
+{% endAside %}
 
 ### Providing some functionality for free {: #freevnot }
 

@@ -53,11 +53,11 @@ notification center, and produce an error on other platforms. Priority 0 is the 
 Priorities > 0 are shown for increasing duration and more high priority notifications can be
 displayed in the system tray.
 
-!!!.aside.aside-note
+{% Aside %}
 
 **Platform difference:** The `code` priority does not affect the order of notifications in Chrome version 59+ on macOS.
 
-!!!
+{% endAside %}
 
 In addition to displaying information, all notification types can include up to two action items.
 When users click on an action item, your app can respond with the appropriate action. For example,
@@ -78,7 +78,7 @@ chrome.notifications.create(id, options, creationCallback);
 The [notifications.NotificationOptions][4] must include a [notifications.TemplateType][5], which
 defines available notification details and how those details are displayed.
 
-!!!.aside.aside-note
+{% Aside %}
 
 **Consider integrating with GCM!**
 
@@ -86,7 +86,7 @@ defines available notification details and how those details are displayed.
 when your app isn't opened. The [gcm-notifications sample][7] shows a simple
 integration between GCM and Rich Notifications API.
 
-!!!
+{% endAside %}
 
 ### Create basic notification {: #basic }
 

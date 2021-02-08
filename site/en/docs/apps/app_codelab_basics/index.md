@@ -6,13 +6,13 @@ updated: 2014-10-20
 description: How to create, install, run, and debug a basic Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 In this step, you will learn:
 

@@ -139,11 +139,11 @@ try {
 }
 ```
 
-!!!.aside
+{% Aside %}
 To make sure your code works, I recommend wrapping your speech
 synthesis call in a `try`/`catch` block, so if the page isn't activated, it
 won't break the rest of your app.
-!!!
+{% endAside %}
 
 There's nothing worse than going to a site and having it surprise you,
 and the co-workers sitting around you.

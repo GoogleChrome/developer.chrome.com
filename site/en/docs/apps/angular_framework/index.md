@@ -6,13 +6,13 @@ updated: 2017-03-01
 description: A guide on building Chrome Apps with AngularJS.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 This guide gets you started building Chrome Apps with the [AngularJS][3] MVC framework. To
 illustrate Angular in action, we'll be referencing an actual app built using the framework, the
@@ -27,12 +27,12 @@ Google Drive account as well as upload new files using the [HTML Drag and Drop A
 great example of building an app which talks to one of [Google's APIs][6]; in this case, the Google
 Drive API.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You can also build apps which talk to 3rd party APIs/services that are OAuth2-enabled. See
 [non-Google Account authentication][7].
 
-!!!
+{% endAside %}
 
 The Uploader uses OAuth2 to access the user's data. The [chrome.identity API][8] handles fetching an
 OAuth token for the logged-in user, so the hard work is done for us! Once we have a long-lived
@@ -173,13 +173,13 @@ The Angular bits are highlighted in bold:
 This reads exactly as it looks: stamp out an <li> for every doc in our data model "docs". Each item
 contains a file icon, link to open the file on the web, and last updatedDate.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** To make the template valid HTML, we're using `data-*` attributes for Angular's
 [ngRepeat][19] iterator, but you don't have to. You could easily write the repeater as
 `<li ng-repeat="doc in docs">`.
 
-!!!
+{% endAside %}
 
 Next, we need to tell Angular which controller will oversee this template's rendering. For that, we
 use the [ngController][20] directive to tell the `DocsController` to have reign over the template
@@ -274,18 +274,18 @@ GDocs.prototype.auth = function(opt_callback) {
 };
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Passing the optional callback gives us the flexibility of knowing when the OAuth token is
 ready.
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** To simplify things a bit, we've created a library, [gdocs.js][26] to handle API tasks.
 
-!!!
+{% endAside %}
 
 Once we have the token, it's time to make requests against the Drive API and populate the model.
 

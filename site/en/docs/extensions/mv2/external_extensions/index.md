@@ -40,7 +40,7 @@ user's Linux computer.
 First, [publish][4] the extension in the Chrome Web Store, or package a [`.crx` file][5] and make
 sure that it installs successfully.
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Windows and Mac installs must come from Chrome Web Store:**
 As of Chrome 33, no external installs are allowed from a path to a local `.crx` on Windows (see
@@ -48,7 +48,7 @@ As of Chrome 33, no external installs are allowed from a path to a local `.crx` 
 allowed from a path to a local .crx on Mac (see [Continuing to protect Chrome users from malicious
 extensions][7]).
 
-!!!
+{% endAside %}
 
 If installing from an [update URL][8], ensure that the extension is properly [hosted][9].
 
@@ -64,12 +64,12 @@ The following examples assume the version is `1.0` and the ID is `aaaaaaaaaabbbb
 
 ## Using a preferences file {: #preferences }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Mac OS X and Linux only:** Do not use the preferences file for Windows. Use [Windows registry][10]
 instead.
 
-!!!
+{% endAside %}
 
 1.  If you are installing from a file on Linux, make the `.crx` extension file available to the
     machine you want to install the extension on. (Copy it to a local directory or to a network
@@ -89,14 +89,14 @@ instead.
       also be free of symbolic links. These restrictions prevent an unprivileged user from causing
       extensions to be installed for all users. See [troubleshooting][11] for details.
 
-      !!!.aside.aside--note
+      {% Aside %}
 
       **Note:** The above path for all users was added in Chrome 16. Prior versions used a different
       path:
       `/Applications/Google Chrome.app/Contents/Extensions/` This path was deprecated in version 17.
       Support was removed in version 20. Use one of the paths above instead.
 
-      !!!
+      {% endAside %}
 
     Linux:
 
@@ -148,13 +148,13 @@ instead.
 8.  Save the JSON file.
 9.  Launch Google Chrome and go to **chrome://extensions**; you should see the extension listed.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Previous versions of Google Chrome used an `external_extensions.json` file to specify
 which extensions to install. This file has been deprecated in favor of individual `.json` files, one
 per extension.
 
-!!!
+{% endAside %}
 
 ### Troubleshooting Mac OS permissions problems {: #troubleshooting }
 

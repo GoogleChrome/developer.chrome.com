@@ -6,13 +6,13 @@ updated: 2014-07-18
 description: Reference documentation for the kiosk_enabled property of manifest.json.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Kiosk Apps are Chrome Apps that are designed to always run fullscreen using [Single App Kiosk
 Mode][3] on Chrome OS and do not allow the user to exit the app. They're great for a purpose-built

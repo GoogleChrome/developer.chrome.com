@@ -2,12 +2,12 @@
 api: privacy
 ---
 
-!!!.aside.aside--note
+{% Aside %}
 
 The [Chrome Privacy Whitepaper][1] gives background detail regarding the features which this API can
 control.
 
-!!!
+{% endAside %}
 
 ## Manifest
 
@@ -50,12 +50,12 @@ value (`levelOfControl` will be set to "controlled_by_other_extensions"). The `s
 succeed, but the setting will be immediately overridden. As this might be confusing, it is advisable
 to warn the user when the settings they've chosen aren't practically applied.
 
-!!!.aside.aside--note
+{% Aside %}
 
 Full details about extensions' ability to control `ChromeSetting`s can be found under
 [`chrome.types.ChromeSetting`][3].
 
-!!!
+{% endAside %}
 
 This means that you ought to use the `get()` method to determine your level of access, and then only
 call `set()` if your extension can grab control over the setting (in fact if your extension can't

@@ -38,10 +38,10 @@ Here's what you need to know:
 I'm [Pete LePage](https://twitter.com/petele), working and shooting from home,
 let's dive in and see what's new for developers in Chrome 83!
 
-!!!.aside
+{% Aside %}
 App shortcuts were supposed to be landing in Chrome 83, but were
 delayed until Chrome 84, scheduled for July 14th.
-!!!
+{% endAside %}
 
 ## Trusted types {: #trusted-types }
 
