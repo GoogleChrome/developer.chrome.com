@@ -20,11 +20,13 @@ authors:
 
 
 !!!.aside.aside--warning
+[For Googlers, February 2021.]
+
 This document is a work in progress, unfinished and not to be shared externally.
 
 The aim is to include the following textual content in this page in 300 words or less. 
 
-Potentially, these (or similar) could be headings.
+Potentially, these items (or similar) could be headings.
 
 * Why do we need this technology? 
 * What requirements does it meet?
@@ -39,7 +41,7 @@ Potentially, these (or similar) could be headings.
 * How to share feedback and comments
 * How to get involved
 
-**Text below is just draft/dummy content: work in progress.**
+**Text below is content in progress.**
 !!!
 
 

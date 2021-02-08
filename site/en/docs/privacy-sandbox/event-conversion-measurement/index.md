@@ -13,9 +13,11 @@ authors:
 
 ## When will this be available?
 
-* [Origin trial](https://web.dev/origin-trials/): Chrome 86 to 91. [Register for trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
-* [Demo](https://goo.gle/demo-event-level-conversion-measurement-api) 
+* Currently in [origin trial](https://web.dev/origin-trials/): Chrome 86 to 91. [Register for trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
+* [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
 
+
+[Might want to replace this video with short version as for other APIs.]
 
 {% youtube 
 	id='jcDfOoWwZcM' 
@@ -23,26 +25,28 @@ authors:
 
 
 !!!.aside.aside--warning
+[For Googlers, February 2021.]
+
 This document is a work in progress, unfinished and not to be shared externally.
 
 The aim is to include the following textual content in this page in 300 words or less. 
 
-Potentially, these (or similar) could be headings.
+Potentially, these items (or similar) could be headings.
 
 * Why do we need this technology? 
 * What requirements does it meet?
-* Who needs to know about this API?
-* [Short glossary if necessary: just a few words.]
 * How does the technology work?
 * What are the major use cases?
 * Simple diagram
 * Simple example
 * Are there any new capabilities this technology will give web platforms?
 * If there are existing solutions, why do we need something new? 
+* Who needs to know about this API?
+* [Short glossary if necessary: just a few words.]
 * How to share feedback and comments
 * How to get involved
 
-**Text below is just draft/dummy content: work in progress.**
+**Text below is content in progress.**
 !!!
 
 

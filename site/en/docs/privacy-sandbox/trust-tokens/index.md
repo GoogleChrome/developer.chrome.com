@@ -19,20 +19,15 @@ authors:
 
 [Embed video when available.]
 
-## What are Trust Tokens?
-
-Trust Tokens enable trust in a user's authenticity to be conveyed from one context to another, to help sites combat fraud and distinguish bots from real humans, without passive tracking. Tokens can be issued by a website to a user once the user has shown that they're trustworthy, for example through continued account usage or by completing a transaction. Another website can later confirm that the user is not fake, by checking if they have tokens from an issuer the site trusts.
-
-!!!.aside.aside--caution
-Trust Tokens are a way to **convey** trust in a user, not **establish** trust in a user. Trust Tokens are not a replacement for reCAPTCHA or other mechanisms for determining whether or not a user is who they say they are.
-!!!
-
 !!!.aside.aside--warning
+
+[For Googlers, February 2021.]
+
 This document is a work in progress, unfinished and not to be shared externally.
 
 The aim is to include the following textual content in this page in 300 words or less. 
 
-Potentially, these (or similar) could be headings.
+Potentially, these items (or similar) could be headings.
 
 * Why do we need this technology? 
 * What requirements does it meet?
@@ -47,8 +42,46 @@ Potentially, these (or similar) could be headings.
 * How to share feedback and comments
 * How to get involved
 
-**Text below is just draft/dummy content: work in progress.**
+**Text below is content in progress.**
 !!!
+
+## What are Trust Tokens?
+
+Trust Tokens enable trust in a user's authenticity to be conveyed from one context to another, to help sites combat fraud and distinguish bots from real humans, without passive tracking. Tokens can be issued by a website to a user once the user has shown that they're trustworthy, for example through continued account usage or by completing a transaction. Another website can later confirm that the user is not fake, by checking if they have tokens from an issuer the site trusts.
+
+!!!.aside.aside--caution
+Trust Tokens are a way to **convey** trust in a user, not **establish** trust in a user. Trust Tokens are not a replacement for reCAPTCHA or other mechanisms for determining whether or not a user is who they say they are.
+!!!
+
+## Why do we need Trust Tokens?
+
+The web needs ways to establish trust signals which show that a user is who they
+say they are, and not a bot pretending to be a human, or a malicious third-party
+defrauding a real person or service. Fraud protection is particularly important
+for advertisers, ad providers, and CDNs.   
+  
+Unfortunately, many existing mechanisms to gauge and propagate
+trustworthiness—to work out if an interaction with a site is from a real human, 
+for example—take advantage of techniques that can also be used for
+fingerprinting.
+
+{% Aside 'key-term' %}  
+**Fingerprinting** enables sites to identify and track individual users by
+getting data about their device, operating system, and browser setup (such as
+language preferences,
+[user agent](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent), and 
+available fonts) or changes in device state. This may be done on the server
+by checking request headers or on the client with JavaScript.
+
+Fingerprinting uses mechanisms that users aren't aware of and can't control.
+Sites such as [Panopticlick](https://panopticlick.eff.org/) and
+[amiunique.org](https://amiunique.org/) show how fingerprint data can be
+combined to identify you as an individual.  
+{% endAside %} 
+
+The API must preserve privacy, enabling trust to be propagated across sites 
+without individual user tracking.
+
 
 ## How do Trust Tokens work?
 
