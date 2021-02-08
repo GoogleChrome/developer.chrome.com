@@ -99,8 +99,9 @@ To add or remove rules dynamically, use the [updateDynamicRules][12] API method.
 An extension can update the set of enabled static rulesets using the [updateEnabledRulesets][14] API
 method.
 
-- The number of rules across enabled static rulesets must be less than the [MAX_NUMBER_OF_RULES][15]
-  constant.
+- The number of rules across enabled static rulesets across all extensions must not exceed the
+  [global limit][15]. Calling [getAvailableStaticRuleCount][16] is recommended to check the number
+  of rules an extension can still enable before the global limit is reached.
 - The set of enabled static rulesets is persisted across sessions but not across extension updates.
   The `rule_resources` manifest key will determine the set of enabled static rulesets on initial
   extension install and on each subsequent extension update.
@@ -143,7 +144,7 @@ is determined based on the priority of each rule and the operations specified.
   `append` rules from the same extension.
 - If a rule has removed a header, then lower priority rules cannot further modify the header.
 
-### Comparison with the [webRequest][16] API
+### Comparison with the [webRequest][17] API
 
 - The declarativeNetRequest API allows for evaluating network requests in the browser itself. This
   makes it more performant than the webRequest API, where each network request is evaluated in
@@ -350,5 +351,6 @@ is determined based on the priority of each rule and the operations specified.
 [12]: #method-updateDynamicRules
 [13]: #property-MAX_NUMBER_OF_DYNAMIC_RULES
 [14]: #method-updateEnabledRulesets
-[15]: #property-MAX_NUMBER_OF_RULES
-[16]: /docs/extensions/webRequest
+[15]: #global-static-rule-limit
+[16]: #method-getAvailableStaticRuleCount
+[17]: /docs/extensions/webRequest
