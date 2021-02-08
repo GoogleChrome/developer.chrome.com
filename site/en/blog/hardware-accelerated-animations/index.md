@@ -36,7 +36,7 @@ few ways to specify and enable hardware-accelerated animations and transitions o
 
 - Use CSS `transform` functions or transition the `opacity` or `filter` values
 - Add the `will-change` property to your element.
-- Create an animated canvas drawing
+- Create an animated canvas drawing via `OffscreenCanvas`
 - Create a WebGL 3D drawing
 
 <div class="aside aside--note"> The Chromium rendering team is continually
@@ -52,34 +52,34 @@ down the pipeline, including SVG animations, something that developers have been
 ## Hardware accelerated SVG animations
 
 SVG is a great addition to any website, and now those interactions with SVG can be more performant.
-As of Chromium 88, Chromium will join the likes of Firefox to enable hardware-acceleration by
+As of Chromium 89, Chrome will join the likes of Firefox to enable hardware-acceleration by
 default on SVG animations. What do you, the developer, need to do? Nothing—this will be
-automatically applied for SVG animations in Chromium 88+.
+automatically applied for SVG animations in Chromium 89+.
 
 ### Example
 
 Let's take a look at the differences between an SVG animation with and without hardware acceleration turned on. Loading indicators are commonly-used UI elements, such as this one seen on facebook.com. These indicators hint at work being done on the server, while the user waits for a response. In the case shown here, the response would be to load additional results in the sidebar.
 
-<figure class="w-figure">
+<figure>
   {% img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/CBSrDDfkO8Ab693jU50K.gif", alt="Facebook sidebar UI", width="305", height="384" %}
-  <figcaption class="w-figcaption">Facebook sidebar UI shows a circular loader while loading additional content.</figcaption>
+  <figcaption>Facebook sidebar UI shows a circular loader while loading additional content.</figcaption>
 </figure>
 
 When we open up DevTools, we can start to profile and really see the differences between a CPU and
 GPU-accelerated animation experience.
 
-<figure class="w-figure">
+<figure>
   {% img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/u572WdEbkTbVTY6UEENT.png", alt="Performance panel with paint flashing turned on", width="800", height="221" %}
-  <figcaption class="w-figcaption">Left: Chromium 87. Right: Chromium 88, with hardware acceleration for SVG animations. See demo by Benoit Girard on <a href="https://jsfiddle.net/hydhaval/0pnot2sx/144/">JSFiddle</a>.</figcaption>
+  <figcaption>Left: Chromium 88. Right: Chromium 89, with hardware acceleration for SVG animations. See demo by Benoit Girard on <a href="https://jsfiddle.net/hydhaval/0pnot2sx/144/">JSFiddle</a>.</figcaption>
 </figure>
 
 You can see that on the left (Chromium 87), repaint occurs each time the spinner animates (which is
-continuously). On the right there is no repainting (Chromium 88 and Firefox). We can test this in
+continuously). On the right there is no repainting (Chromium 89 and Firefox). We can test this in
 the DevTools Rendering panel, when turning on Paint flashing.
 
-<figure class="w-figure">
+<figure>
   {% img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/916QhF9oEoKsj7scSxCB.png", alt="Performance panel showing rendering", width="800", height="481" %}
-  <figcaption class="w-figcaption">Left: Chromium 87. Right: Chromium 88, with hardware acceleration for SVG animations. See demo by Benoit Girard on <a href="https://jsfiddle.net/hydhaval/0pnot2sx/144/">JSFiddle</a>.</figcaption>
+  <figcaption>Left: Chromium 88. Right: Chromium 89, with hardware acceleration for SVG animations. See demo by Benoit Girard on <a href="https://jsfiddle.net/hydhaval/0pnot2sx/144/">JSFiddle</a>.</figcaption>
 </figure>
 
 Taking a closer look at the Performance panel, you can again see this effect,
@@ -90,32 +90,19 @@ this SVG-based loader until browser support for hardware-accelerated SVG is
 greater, it would allow for more flexibility in terms of theming, scaling and
 resolution requirements, and easier maintenance.
 
-Take a look at this more visually complex example:
-
-<figure class="w-figure">
-  <video controls autoplay loop muted playsinline>
-    <source src="https://storage.googleapis.com/web-dev-assets/hardware-accel-animations/Kapture%202021-01-08%20at%2012.30.38.mp4" type="video/mp4">
-  </video>
-  <figcaption class="w-figcaption">Left: Chromium 87. Right: Chromium 88, with hardware acceleration for SVG animations. Demo by <a href="">Chris Gannon</a> on <a href="https://codepen.io/chrisgannon/full/PzRWNO">Codepen</a>. </figcaption>
-</figure>
-
-Note the differences in paint flashing between Chromium 87 and 88. In Chromium 88, the entire SVG is
-composited to one later, causing less jank. In Chromium 87, all of the layers are separated. Another
-way to view the difference is through the FPS meter:
-
-<figure class="w-figure">
-  {% img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/PLMvG6Vsig0uFQ5FLZwc.png", alt="Paint meter showing changes on animated demo", width="800", height="344" %}
-  <figcaption class="w-figcaption">The FPS meter shows less GPU utilization in Chromium 87, and more utilization in 88. Demo by <a href="">Chris Gannon</a> on <a href="https://codepen.io/chrisgannon/full/PzRWNO">Codepen</a>. </figcaption>
-</figure>
-
 ## Percentage animations
 
-The Interactions team is also working on support for percentage transform animations, shipping in
+The Interactions team is also shipping on support for percentage transform animations, shipping in
 Chromium 89. Percentage-based animations describe interactions that include percentage-based
 movement. For example, you could scale something up by 20%, or slide a responsive sidebar menu from
 off-screen using something like `translateX: -100%`. 
 
-<video/gif of sliding animation>
+<figure>
+  <video controls autoplay loop muted playsinline>
+    <source src="https://storage.googleapis.com/web-dev-assets/hardware-accel-animations/waze.mp4" type="video/mp4">
+  </video>
+  <figcaption>Navigation example from <a href="https://waze.com">waze.com</a>, which uses a percentage transform to open and hide the menu on smaller screen sizes. </figcaption>
+</figure>
 
 These types of UI animations are relatively common, but currently do not take advantage of hardware
 acceleration because previously we were unable to composite such animations. Percentages in
@@ -138,11 +125,11 @@ effects, and `clip-path` enables much  more performant [transition
 effects](https://transition.style/)  across the web. When performance meets interactivity, everyone
 wins!
 
-<figure class="w-figure">
+<figure>
   <video controls autoplay loop muted playsinline>
     <source src="https://storage.googleapis.com/web-dev-assets/hardware-accel-animations/Kapture%202021-01-07%20at%2017.55.00.mp4" type="video/mp4">
   </video>
-  <figcaption class="w-figcaption">Left: Chromium 87. Right: Chromium 88, with hardware acceleration for SVG animations. Demo by <a href="">Chris Gannon</a> on <a href="https://codepen.io/chrisgannon/full/PzRWNO">Codepen</a>. </figcaption>
+  <figcaption><a href="https://transition.style/">transition.style</a>: a demo site highlighting CSS transition effects by Adam Argyle. </figcaption>
 </figure>
 
 Cover Image: [Siora Photography](https://unsplash.com/photos/DhoCVkssJjs) for Unsplash.
