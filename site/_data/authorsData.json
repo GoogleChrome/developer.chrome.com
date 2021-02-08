@@ -72,6 +72,22 @@
     },
     "image": "image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9l19VVp1vBxCnEA75HwX.jpg"
   },
+  "pjmclachlan": {
+    "name": {
+      "given": "PJ",
+      "family": "Mclachlan"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "CA",
+    "twitter": "b1tr0t",
+    "descriptions": {
+      "en": "PJ is a Product Manager on the Chrome Web Platform team responsible for Chrome permissions, notifications, and progressive web apps."
+    },
+    "image": "image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Nt1I5Rz9h0kOlyXQ630Q.jpg"
+  },
   "samthorogood": {
     "name": {
       "given": "Sam",
