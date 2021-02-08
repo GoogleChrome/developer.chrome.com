@@ -4,7 +4,7 @@
   // width attribute, preventing HiDPI screenshots from being blurry:
   //  <img src="800x500.png" width="400" class="screenshot">
   box-sizing: content-box;
-  padding: get-size(400);
+  padding: get-size(100);
 }
 
 .screenshot--filled {
@@ -12,4 +12,5 @@
   // This ensures image size fits to content width with padding(16 * 2)
   // while specifying `box-sizing: content-box;` in .screenshot
   max-width: calc(100% - 2 * #{get-size(400)});
+  padding: get-size(400);
 }
