@@ -114,7 +114,7 @@ Featured Products:
   - Cryptocurrency
   - Non-production builds
   - Prohibited products
-  - Gambiling content
+  - Gambling content
   - Extensions whose developers have questionable reputations, such as historically misleading or
     malicious extensions.
 
