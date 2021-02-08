@@ -47,7 +47,7 @@ uses the `"service_worker"` key, which specifies a single JavaScript file.
 }
 ```
 
-You may want to modularize your event handling code by dividing it across multiple JavaScript files. In this case, you must import these scfripts from within the main service worker file:
+You may want to modularize your event handling code by dividing it across multiple JavaScript files. In this case, you must import these scripts from within the main service worker file:
 
 ```js
 {
