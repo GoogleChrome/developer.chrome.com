@@ -11,9 +11,9 @@ authors:
   - samdutton
 ---
 
-## Implementation status
+## When will this be available?
 
-* [Origin trial](https://web.dev/origin-trials/): Chrome 84 to 91. [Register for trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+* Currently in [origin trial](https://web.dev/origin-trials/): Chrome 84 to 91. [Register for trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
 * [Demo](https://trust-token-demo.glitch.me/).
 * [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 

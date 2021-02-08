@@ -11,9 +11,9 @@ authors:
   - samdutton
 ---
 
-## Implementation status
+## When will this be available?
 
-* [API proposal](https://github.com/WICG/floc) under discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
+* [API proposal](https://github.com/WICG/floc) is under discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
 
 
 [Embed video when available.]
