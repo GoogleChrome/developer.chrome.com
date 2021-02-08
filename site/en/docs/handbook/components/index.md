@@ -870,10 +870,10 @@ Videos should always use the {% raw %}`{% video %}`{% endraw %} shortcode.
 
 {% video src="video/foR0vJZKULb5AGJExlazy1xYDgI2/vkRVf2txsBrzkFUMpolP.mp4" %}
 
-!!!.aside
+{% Aside %}
 Note that the video `src` property can either be a string or an array of strings
 for multiple sources.
-!!!
+{% endAside %}
 
 See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/).
 

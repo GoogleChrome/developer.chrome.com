@@ -17,13 +17,13 @@ tags:
   - progressive-web-apps
 ---
 
-!!!.aside
+{% Aside %}
 **TL;DR:** Offline support has been part of the PWA installability criteria
 since the beginning. We are updating the offline detection logic to ensure a
 PWA actually provides an offline experience, closing the loophole used by
 some developers to meet the installability critiera. In the future,
 sites with empty `fetch` event handlers will no longer meet the criteria.
-!!!
+{% endAside %}
 
 [Progressive Web Apps (PWAs)](https://web.dev/pwa/) are a pattern for
 building modern, installable applications using web technology for mobile and
@@ -96,14 +96,14 @@ server when the user is online again. Caching resources will also help improve
 resources from the network every time. At the other end of the spectrum is a
 [custom offline fallback page][offline-fallback].
 
-!!!.aside
+{% Aside %}
 Check out [Workbox][workbox], a set of libraries that can power a
 production-ready service worker for your Progressive Web App.
 
 **Have a question about service workers?** Ask it on [Stack Overflow][so] and
 tag it with [`service-worker`][so-sw] and [`progressive-web-apps`][so-pwa].
 Our team regularly monitors those tags and does our best to help.
-!!!
+{% endAside %}
 
 ## When will this change take effect?
 
@@ -144,12 +144,12 @@ it will no longer pass the installability check, the `beforeinstallprompt`
 event will not be triggered, and the in-browser install prompts will not be
 shown.
 
-!!!.aside
+{% Aside %}
 **Do you think this is a good change?** Take a moment to
 [let us know your thoughts](https://goo.gle/pwa-offline-feedback), how it
 will affect you, and what changes you'll make to your site because of it.
 Your feedback will help us understand and mitigate any concerns you have.
-!!!
+{% endAside %}
 
 [pwa-criteria]: https://web.dev/install-criteria/
 [cwv]: https://web.dev/vitals/
