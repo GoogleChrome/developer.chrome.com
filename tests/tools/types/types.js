@@ -48,8 +48,8 @@ test('parse demo Chrome types', async t => {
   t.is(namespaces.length, 2);
 
   const [chromeStuff, chromeTest] = namespaces;
-  t.is(chromeStuff.name, 'chrome.stuff');
-  t.is(chromeTest.name, 'chrome.test');
+  t.is(chromeStuff.name, 'stuff');
+  t.is(chromeTest.name, 'test');
 
   // Check that a variable that can only be one thing is not converted to an enum.
   const variableTestSingle = chromeTest.properties.find(
