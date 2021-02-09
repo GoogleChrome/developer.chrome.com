@@ -16,18 +16,16 @@
   {% for page in all %}
     {% if page.data.namespace %}
       {% set namespace = page.data.namespace %}
-      {% if not channel or channel === (namespace.version.channel or '') %}
-        {% if not source or source === namespace.source %}
-          <tr>
-            <td>
-              <a class="link weight-medium" href="{{ namespace.shortName | namespaceToPath }}">{{ namespace.shortName }}</a><br />
-              {% if not channel and namespace.version.low %}
-                Chrome {{ namespace.version.low }}
-              {% endif %}
-            </td>
-            <td class="reference-collapse type">{{ namespace.comment | safe }}</td>
-          </tr>
-        {% endif %}
+      {% if (not channel or channel === namespace.version.channel) and (not source or source === namespace.source) %}
+        <tr>
+          <td>
+            <a class="link weight-medium" href="{{ namespace.shortName | namespaceToPath }}">{{ namespace.shortName }}</a><br />
+            {% if not channel and namespace.version.low %}
+              Chrome {{ namespace.version.low }}
+            {% endif %}
+          </td>
+          <td class="reference-collapse type">{{ namespace.comment | safe }}</td>
+        </tr>
       {% endif %}
     {% endif %}
   {% endfor %}
