@@ -17,7 +17,7 @@ have more options.
 
 <!-- TODO(kaycebasques): This flowchart needs to be converted into text for a11y. -->
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1605580911516.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1605580911516.png",
    alt="A flowchart of the decision process.",
    height="627",
    width="581" %}

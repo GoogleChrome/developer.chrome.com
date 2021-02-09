@@ -43,10 +43,10 @@ Use badges to indicate the state of the extension. The [Drink Water Event][2] sa
 badge with "ON" to show the user they successfully set an alarm and displays nothing when the
 extension is idle.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nXwAHSWLBEgT8099ITT0.png",
        alt="Badge On", height="72", width="72" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pNz8UgfTBMmcf7fE9wja.png",
        alt="Badge Off", height="72", width="72" %}
 
 Set the text of the badge by calling [`chrome.browserAction.setBadgeText`][3] and the banner color
@@ -79,10 +79,10 @@ The `"page_action"` field is registered in the manifest.
 Declaring `"page_action"` will colorize the icon only when the extension is available to users,
 otherwise it will be displayed in greyscale.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/eoqQgLdvEe1gCDaz5ocx.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/eoqQgLdvEe1gCDaz5ocx.png",
        alt="Active Page Action Icon", height="72", width="72" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5tyLyV97eUeLb01648UF.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5tyLyV97eUeLb01648UF.png",
        alt="Unusable Page Action Icon", height="72", width="72" %}
 
 ### Define rules for activating the extension {: #rules }
@@ -195,7 +195,7 @@ does not allow inline JavaScript.
 The [Drink Water Event][17] example popup displays available timer options. Users set an alarm by
 clicking one of the provided buttons.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JVduBMXnyUorfNjFZmue.png",
        alt="Popup sample screenshot", height="561", width="413" %}
 
 ```html
@@ -245,7 +245,7 @@ chrome.storage.local.get('signed_in', function(data) {
 Use a tooltip to give short descriptions or instructions to users when hovering over the browser
 icon.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Go8aQg0vd0f2hkOFElLK.png",
        alt="A screenshot of an example tooltip", height="157", width="519" %}
 
 Tooltips are registered in the `"default_title"` field [`browser_action`][20] or [`page_action`][21]
@@ -332,7 +332,7 @@ the keyword.
 When the user types "nt" into the omnibox, it activates the extension. To signal this to the user,
 it greyscales the provided 16x16 icon and includes it in the omnibox next to the extension name.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/T0jCZDUVfuEANigPV6bY.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/T0jCZDUVfuEANigPV6bY.png",
        alt="Active Omnibox Extension", height="70", width="576" %}
 
 The extension listens to the [`omnibox.onInputEntered`][28] event. After it's triggered, the
@@ -369,7 +369,7 @@ Add new [context menu][29] options by granting the `"contextMenus"` permission i
 
 The 16x16 icon is displayed next to the new menu entry.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jpA0DLCg2sEnwIf4FkLp.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jpA0DLCg2sEnwIf4FkLp.png",
        alt="Context Menu Icon", height="500", width="500" %}
 
 Create a context menu by calling [`contextMenus.create`][30] in the [background script][31]. This
@@ -409,7 +409,7 @@ The Global Google Search context menu example creates multiple options from the 
 [locales.js][33] . When an extension contains more than one context menu, Google Chrome
 automatically collapses them into a single parent menu.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LhrliaEhN82maJmeNp7f.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LhrliaEhN82maJmeNp7f.png",
        alt="Multiple Context Menus will Collapse", height="606", width="800" %}
 
 ### Commands {: #commands }

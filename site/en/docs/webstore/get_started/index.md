@@ -14,10 +14,10 @@ Eclipse IDE.
 You should be able to follow this tutorial even if you've never used Java, Google App Engine, or
 Eclipse. You'll get more out of this tutorial if you read the [Overview][1] first.
 
-!!!.aside.aside--note
+{% Aside %}
 You only need to use the Licensing API if you use Chrome Web Store Payments. For
 information on other payment options, see [Charging for your app][2] in the Overview.
-!!!
+{% endAside %}
 
 ## Step 1: Get ready
 
@@ -62,11 +62,11 @@ a manifest for your app.
     }
     ```
 
-    !!!.aside.aside--note
+    {% Aside %}
     This manifest uses dummy data because you can always change it later. The important
     thing, for now, is to have correct formatting. For information about what the manifest for a
     hosted app should really contain, see [Hosted Apps][5].
-    !!!
+    {% endAside %}
 
 3.  Create a ZIP archive of the directory that contains `manifest.json`.
 4.  Upload the ZIP file to the Chrome Developer Dashboard.
@@ -105,39 +105,39 @@ Store Payments.
 2.  Choose **This application uses Chrome Web Store Payments**, and save.
 3.  Return to the Chrome Developer Dashboard, and click the **OAuth setup** link for your app.
 
-    !!!.aside.aside--note
+    {% Aside %}
     The OAuth setup link appears _only_ if you've set the pricing of your app to use
     Chrome Web Store Payments.
-    !!!
+    {% endAside %}
 
     A page comes up with information about the Licensing API and its use of OAuth.
 
 4.  Click the **Generate new token** button at the bottom of the OAuth page.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/WAH6o7pV8RwTgYb1NDrN.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/WAH6o7pV8RwTgYb1NDrN.png",
            alt="A screenshot showing the bottom of the OAuth page before generating the new token",
            height="66", width="456" %}
 
 5.  Save the values that appear next to **oauth_token_secret** and **oauth_token**.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ShWIu4C7l4ZTcu1P2Fgy.png", 
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ShWIu4C7l4ZTcu1P2Fgy.png", 
            alt="A screenshot showing the generated token and secret at bottom of the OAuth page",
            height="58", width="456" %}
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 Keep your access token and token secret safe and private. (The screenshot shows
 sample values that won't work.) If you lose the token or secret, you'll need to generate them again.
-!!!
+{% endAside %}
 
 ## Step 4: Set up your development environment
 
 Now that you have the IDs and tokens you need, it's time to code. But first, you need to set up your
 development environment.
 
-!!!.aside.aside--note
+{% Aside %}
 This tutorial uses Google App Engine, but you can use whatever technologies you like when
 you create your own apps.
-!!!
+{% endAside %}
 
 1.  Sign into [Google App Engine][8], and create an application with the following information:
 
@@ -265,10 +265,10 @@ environment.
       );
       ```
 
-      !!!.aside.aside--note
+      {% Aside %}
       Until users can buy apps, the value of the "result" field will always be "NO" unless
       you use a [special test user ID][24].
-      !!!
+      {% endAside %}
 
 For more information about using the Licensing API, see [Checking for Payment][25].
 
@@ -286,16 +286,16 @@ In this step, you'll make sure your app works, and you'll deploy it to the web.
     If you get an error page, then make sure you entered the app ID, OAuth access token, and access
     token secret correctly.
 
-    !!!.aside.aside--note
+    {% Aside %}
     Currently, there's no way to pay, so you'll always be told that the user doesn't have
     access. However, in this developer release, you can modify the user ID that you supply so that
     you get a different answer. For details, see [Special user IDs for testing][27].
-    !!!
+    {% endAside %}
 
 4.  Once you successfully run your app locally, deploy it:
 
     1.  Click the App Engine deploy button on the toolbar:
-        {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GgDrbzu3jMJ4Pa8Rv7D3.png", alt="The deply button", height="22", width="22" %}
+        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GgDrbzu3jMJ4Pa8Rv7D3.png", alt="The deply button", height="22", width="22" %}
         A Deploy dialog comes up.
     2.  Set the identifier to be used for Google App Engine. This is different from the Google
         Chrome app ID; it's the string you chose in [Step 4][28]. To set it, click the **App Engine

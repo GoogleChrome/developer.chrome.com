@@ -32,7 +32,7 @@ Users can choose to allow your extension to run on click, on a specific set of s
 requested sites. These options are presented to users on the `chrome://extensions` page as well as
 in the extension context menu.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JSg4nkfMPMfNHum95Otu.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JSg4nkfMPMfNHum95Otu.png",
        alt="A screenshot of the context menu controls for runtime host permissions,
             including options to run the extension on click, on a specific site, or on all sites.",
        height="346", width="800" %}
@@ -45,7 +45,7 @@ the extension (and isn't a restricted site, like chrome://settings). When set to
 Chrome badges your extension with a circle and drop shadow (see below) to indicate that is
 requesting access on a particular site.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FsV4PT4vR8SXb96CLrNc.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FsV4PT4vR8SXb96CLrNc.png",
        alt="A screenshot of the badging Chrome adds to the extension icon in the toolbar", height="174", width="484" %}
 
 ### What happens if a user chooses to run my extension on specific sites? {: #access-on-specific-sites }

@@ -6,14 +6,14 @@ title: "Migrating from Packaged App to Chrome App or Extension"
 description: Guidelines on converting your packaged app to a Chrome App or Extension.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS
 will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to
 support extensions on all platforms. [Read the announcement][1] and learn more about [migrating your
 app][2].
 
-!!!
+{% endAside %}
 
 Since their initial introduction, packaged apps have evolved into Chrome Apps and Chrome Extensions.
 If your your legacy packaged app has an active user base, you will likely want to migrate to a new

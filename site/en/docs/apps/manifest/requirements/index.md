@@ -6,13 +6,13 @@ title: "Manifest - Requirements"
 #description: TODO
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Technologies required by the app or extension. Hosting sites such as the Chrome Web Store may use
 this list to dissuade users from installing apps or extensions that will not work on their computer.
@@ -32,12 +32,12 @@ following example:
 }
 ```
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 NPAPI Plugin support for extension has been [discontinued][5]. As part of this, the **"plugins"**
 requirement described below has been deprecated.
 
-!!!
+{% endAside %}
 
 The "plugins" requirement indicates if an app or extension requires NPAPI to run. This requirement
 is enabled by default when the manifest includes the ["plugins" field][6]. For apps and extensions

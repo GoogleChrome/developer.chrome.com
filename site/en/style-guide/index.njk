@@ -24,54 +24,40 @@ title: Style guide
     <p class="type--xsmall">Small Text</p>
   </div>
 
-  <div class="aside">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
-      ratione <a href="#">quidem inventore</a> id.
-    </p>
-  </div>
+  {% Aside %}
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
+  ratione quidem inventore id.
+  {% endAside %}
 
-  <div class="aside aside--caution">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
-      ratione <a href="#">quidem inventore</a> id.
-    </p>
-  </div>
+  {% Aside 'caution' %}
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
+  ratione quidem inventore id.
+  {% endAside %}
 
-  <div class="aside aside--warning">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
-      ratione <a href="#">quidem inventore</a> id.
-    </p>
-  </div>
+  {% Aside 'warning' %}
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
+  ratione quidem inventore id.
+  {% endAside %}
 
-  <div class="aside aside--success">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
-      ratione <a href="#">quidem inventore</a> id.
-    </p>
-  </div>
+  {% Aside 'success' %}
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
+  ratione quidem inventore id.
+  {% endAside %}
 
-  <div class="aside aside--gotchas">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
-      ratione <a href="#">quidem inventore</a> id.
-    </p>
-  </div>
+  {% Aside 'gotchas' %}
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
+  ratione quidem inventore id.
+  {% endAside %}
 
-  <div class="aside aside--key">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
-      ratione <a href="#">quidem inventore</a> id.
-    </p>
-  </div>
+  {% Aside 'key-term' %}
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
+  ratione quidem inventore id.
+  {% endAside %}
 
-  <div class="aside aside--codelab">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
-      ratione <a href="#">quidem inventore</a> id.
-    </p>
-  </div>
+  {% Aside 'codelab' %}
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. In, culpa quas
+  ratione quidem inventore id.
+  {% endAside %}
 
   <p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p>
   <p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes
@@ -453,9 +439,15 @@ line-height: 160%;
     </p>
   </form>
   <div>
-    {% img src='image/foR0vJZKULb5AGJExlazy1xYDgI2/1600132969326.jpg', alt='Smiling Dog', height='450', width='800' %}
-    {% video src='video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4' %}
+    {% Img src='image/foR0vJZKULb5AGJExlazy1xYDgI2/1600132969326.jpg', alt='Smiling Dog', height='450', width='800' %}
+    {% Video src='video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4' %}
   </div>
+
+  <div>
+    {% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", className="screenshot" %}
+    {% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", className="screenshot screenshot--filled" %}
+  </div>
+
   <div>
     {% Details %}
       {% DetailsSummary %}
@@ -493,5 +485,6 @@ line-height: 160%;
       This is the body of the Details component.
     {% endDetails %}
   </div>
+
 </article>
 {% endblock %}

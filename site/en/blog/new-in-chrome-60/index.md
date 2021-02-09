@@ -43,7 +43,7 @@ The API exposes two metrics:
 * **Time to first contentful paint** - which marks the point when the browser
   renders the first bit of content from the DOM, text, an image, etc.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Bwe8cTocyJGd5wNiaFMm.png", alt="", height="279", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Bwe8cTocyJGd5wNiaFMm.png", alt="", height="279", width="800" %}
 
 Check out
 [Leveraging the Performance Metrics that Most Affect User Experience](https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics)

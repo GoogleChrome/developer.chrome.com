@@ -95,8 +95,8 @@ where swiping down at the top of the page, does a hard reload.
 
 {# TODO(petele): video element, float-left|right, auto-play #}
 {% Columns %}
-{% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZxYy6AnumGb3lwTGN6Wq.mp4" %}
-{% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wyoZdIhPdQ8em6ibRdg4.mp4" %}
+{% Video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZxYy6AnumGb3lwTGN6Wq.mp4" %}
+{% Video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wyoZdIhPdQ8em6ibRdg4.mp4" %}
 {% endColumns %}
 
 In some cases, you might want to override that behavior and provide your own
@@ -121,7 +121,7 @@ page performance!
 
 ## Permission UI changes {: #permissions }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M1qtkctKj1pjGmSTbInN.jpg", alt="", className="float-right", height="491", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M1qtkctKj1pjGmSTbInN.jpg", alt="", className="float-right", height="491", width="800" %}
 
 I love web push notifications but I've been really frustrated by the number of
 sites asking for permission on page load, without any context - and I'm not

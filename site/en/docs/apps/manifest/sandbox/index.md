@@ -6,13 +6,13 @@ title: "Manifest - Sandbox"
 #description: TODO
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 **_Warning:_** Starting in version 57, Chrome will no longer allow external web content (including
 embedded frames and scripts) inside sandboxed pages. Please use a [webview][3] instead.

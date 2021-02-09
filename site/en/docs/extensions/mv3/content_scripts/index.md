@@ -42,9 +42,9 @@ Content scripts are unable to access other APIs directly.
 Content scripts live in an isolated world, allowing a content script to make changes to its
 JavaScript environment without conflicting with the page or other extensions' content Scripts.
 
-!!!.aside
+{% Aside %}
 An *isolated world* is a private execution environment that isn't accessible from other extensions. A practical consequence of this isolation is that variables declared by one extension are not visible to another one. The concept was originally introduced with the initial launch of Chrome, providing isolation for browser tabs. 
-!!!
+{% endAside %}
 
 An extension may run in a web page with code similar to the example below.
 
@@ -76,12 +76,12 @@ button.addEventListener("click", () =>
 
 With this change, both alerts appear in sequence when the button is clicked.
 
-!!!.aside
+{% Aside %}
 Not only does each extension run in its own isolated world, but content scripts
 and the web page do too. This means that none of these (web page, content
 scripts, and any running extensions) can access the context and variables of
 the others.
-!!!
+{% endAside %}
 
 {# youtube id="laLudeUmXHM" #}
 
@@ -156,9 +156,9 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
 
 ### Inject with dynamic declarations {: #dynamic-declarative }
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 This feature is not yet fully supported. It is currently in dev and is also available in Chrome Canary.
-!!!
+{% endAside %}
 
 You should use dynamic declarations in the following cases:
 

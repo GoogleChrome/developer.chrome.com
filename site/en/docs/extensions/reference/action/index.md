@@ -71,10 +71,10 @@ const imageData = context.getImageData(0, 0, 16, 16);
 chrome.action.setIcon({imageData: imageData}, () => { ... });
 ```
 
-!!!.aside
+{% Aside %}
 The `action.setIcon()` API is intended to set a static image. It should not
 be used to simulate animation.
-!!!
+{% endAside %}
 
 #### Formats
 
@@ -130,10 +130,10 @@ key in the `manifest.json` file. If present, this should point to a relative
 path within the extension directory. It can also be updated dynamically to
 point to a different relative path using the `action.setPopup()` method.
 
-!!!.aside
+{% Aside %}
 The `action.onClicked` event will not be dispatched if the extension action
 has specified a popup to show on click on the current tab.
-!!!
+{% endAside %}
 
 ## Per-tab state
 

@@ -29,7 +29,7 @@ in, the user will be prompted to sign in with a Google-provided login page or po
 
 Here's what the login page looks like. Note that it has a Google URL, not a URL from the app's site:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/yDxgjzMfnbRFJi9XlGyj.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/yDxgjzMfnbRFJi9XlGyj.png", 
        alt="The Google login page.", height="368", width="644" %}
 
 If you're writing a hosted app with Google App Engine, supporting Google Accounts is easy. You just
@@ -53,7 +53,7 @@ details.
 
 ## How to skip the OpenID approval screen
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/yDxgjzMfnbRFJi9XlGyj.png", alt="the Google Accounts approval page", height="368", width="644" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/yDxgjzMfnbRFJi9XlGyj.png", alt="the Google Accounts approval page", height="368", width="644" %}
 
 Normally, the first time your app uses the
 Google OpenID endpoint to authenticate a particular user, the user must approve your access to their

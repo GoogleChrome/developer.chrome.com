@@ -6,13 +6,13 @@ updated: 2018-05-14
 description: How to exchange messages with native applications from your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Extensions and apps can exchange messages with native applications using an API that is similar to
 the other [message passing APIs][3]. Native applications that support this feature must register a

@@ -27,7 +27,7 @@ like:
 Chrome Custom Tabs also allow the developer to pre-start Chrome and pre-fetch content for faster
 loading.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1603858501365.gif", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1603858501365.gif", 
        alt="Comparing the performance of Chrome Custom Tabs to WebViews.",
        width="1378",
        height="775" %}
@@ -131,7 +131,7 @@ builder.setToolbarColor(colorInt);
 
 ### Configure a custom action button
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1603858941555.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1603858941555.png", 
        alt="An example of a custom action.",
        width="1378",
        height="2450" %}
@@ -165,7 +165,7 @@ builder.setActionButton(icon, description, pendingIntent, tint);
 
 ### Configure a custom menu
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1603859010933.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1603859010933.png", 
        alt="An example of a custom menu.",
        width="1378",
        height="2450" %}

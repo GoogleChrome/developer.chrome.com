@@ -76,13 +76,13 @@ the data can be eventually deleted on the server. However the more specific
 `chrome.browsingData.removeCookies` can be used to clear the cookie for the Sync account, and Sync
 will be paused in this case.
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important**: Removing browsing data involves a good deal of heavy lifting in the background, and
 can take _tens of seconds_ to complete, depending on a user's profile. You should use the callback
 mechanism to keep your users up to date on the removal's status.
 
-!!!
+{% endAside %}
 
 ## Specific Origins
 
@@ -105,13 +105,13 @@ chrome.browsingData.remove({
 }, callback);
 ```
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important**: As cookies are scoped more broadly than other types of storage, deleting cookies for
 an origin will delete all cookies of the registrable domain. For example, deleting data for
 `https://www.example.com` will delete cookies with a domain of `.example.com` as well.
 
-!!!
+{% endAside %}
 
 ## Origin Types
 
@@ -160,13 +160,13 @@ chrome.browsingData.remove({
 }, callback);
 ```
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Seriously**: Be careful with `protectedWeb` and `extension`. These are destructive operations that
 your users will write angry email about if they're not well-informed about what to expect when your
 extension removes data on their behalf.
 
-!!!
+{% endAside %}
 
 ## Examples
 

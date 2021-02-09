@@ -31,12 +31,12 @@ call [bookmarks.create][3], you pass in the new node's parent (`parentId`), and,
 node's `index`, `title`, and `url` properties. See [bookmarks.BookmarkTreeNode][4] for information
 about the properties a node can have.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You cannot use this API to add or remove entries in the root folder. You also cannot
 rename, move, or remove the special "Bookmarks Bar" and "Other Bookmarks" folders.
 
-!!!
+{% endAside %}
 
 ## Examples {: #overview-examples }
 

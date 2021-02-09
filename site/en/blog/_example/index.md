@@ -66,11 +66,11 @@ A few rules:
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aliquam reprehenderit placeat saepe sit libero dicta fugit laboriosam id dolor. Totam, optio obcaecati. Deserunt, itaque commodi? Qui laborum hic reprehenderit.
 
 <!--
-All images or videos should use the {% img %} or {% video %} shortcodes.
+All images or videos should use the {% Img %} or {% Video %} shortcodes.
 Take a look at our guide on uploading media:
 https://developer.chrome.com/docs/handbook/how-to/add-media/
 -->
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="A white dog holding a stick in its mouth.", width="380", height="240" %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="A white dog holding a stick in its mouth.", width="380", height="240" %}
 
 ## My second heading
 
