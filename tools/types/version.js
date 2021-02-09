@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-const versionData = /** @type {{[fullName: string]: RawVersionDataValue}} */ (require('./version-data.json'));
+const versionData = /** @type {{[fullName: string]: RawVersionDataValue}} */ (require('../../node_modules/chrome-types/version-data.json'));
 
 /**
  * @param {string} fullName
