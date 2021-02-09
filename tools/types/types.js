@@ -17,7 +17,7 @@
 const {
   exportedChildren,
   generateTypeDocObjectOptions,
-} = require('webdev-infra/lib/types');
+} = require('chrome-types-helpers/lib/types');
 const typedocModels = require('typedoc/dist/lib/models/index.js');
 const path = require('path');
 const {declarationToType, prepareBase} = require('./converter.js');

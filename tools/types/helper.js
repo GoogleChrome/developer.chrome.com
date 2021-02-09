@@ -16,7 +16,7 @@
 
 // eslint-disable-next-line no-unused-vars
 const typedocModels = require('typedoc/dist/lib/models');
-const {fullName} = require('webdev-infra/lib/types');
+const {fullName} = require('chrome-types-helpers/lib/types');
 
 /**
  * @param {typedocModels.Reflection} from

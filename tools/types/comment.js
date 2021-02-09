@@ -15,7 +15,11 @@
  */
 
 const typedocModels = require('typedoc/dist/lib/models');
-const {resolveLink, closest, fullName} = require('webdev-infra/lib/types');
+const {
+  resolveLink,
+  closest,
+  fullName,
+} = require('chrome-types-helpers/lib/types');
 
 const rk = typedocModels.ReflectionKind;
 

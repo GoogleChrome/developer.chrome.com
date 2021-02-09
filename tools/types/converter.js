@@ -25,7 +25,7 @@ const {
   isOptional,
   fullName,
   matchOptionalType,
-} = require('webdev-infra/lib/types');
+} = require('chrome-types-helpers/lib/types');
 const {CommentHelper} = require('./comment');
 const {uniqueVersionDataFor} = require('./version.js');
 
