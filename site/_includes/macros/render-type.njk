@@ -116,6 +116,9 @@
   Renders a comment, its optional introduction and its optional deprecation notice.
 #}
 {% macro renderComment(spec) %}
+  {% if spec.version.unknown %}
+  <p class="code-sections__deprecated">This API is in active development.</p>
+  {% endif %}
   {% if spec.version.low %}
   <p class="code-sections__deprecated">Since Chrome {{ spec.version.low }}.</p>
   {% endif %}

@@ -14,16 +14,19 @@
  * limitations under the License.
  */
 
-const versionData = /** @type {{[fullName: string]: RawVersionDataValue}} */ (require('../../node_modules/chrome-types/version-data.json'));
+const versionData = /** @type {{[fullName: string]: RawVersionDataValue}} */ (require('../../node_modules/chrome-types/version-data.json')
+  .symbols);
 
 /**
  * @param {string} fullName
- * @return {VersionData=}
+ * @return {VersionData}
  */
 function uniqueVersionDataFor(fullName) {
   const self = versionData[fullName];
   if (!self) {
-    return;
+    // This happens if a new API is introduced without an update to its version-data, like
+    // for in-development APIs.
+    return {unknown: true};
   }
 
   const parentFullName = fullName.replace(/\.[^.]*$/, '');
@@ -42,7 +45,8 @@ function uniqueVersionDataFor(fullName) {
       out[key] = self[key];
     }
   }
-  return Object.keys(out).length ? out : undefined;
+
+  return out;
 }
 
 module.exports = {uniqueVersionDataFor};

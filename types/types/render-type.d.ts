@@ -28,7 +28,8 @@ declare global {
     low?: number;
     deprecated?: number;
     deprecatedComment?: string;
-    channel?: "" | "beta" | "dev";
+    channel?: "stable" | "beta" | "dev";
+    unknown?: true;
   }
 
   export interface RenderBase {
@@ -89,7 +90,7 @@ declare global {
     low?: number;
     high?: number;
     deprecated?: number;
-    release?: "" | "beta" | "dev";
+    release?: "stable" | "beta" | "dev";
   }
 }
 
