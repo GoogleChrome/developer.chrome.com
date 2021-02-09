@@ -2,11 +2,11 @@
 api: enterprise.platformKeys
 ---
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This API is only for **[extensions pre-installed by policy][1]**.
 
-!!!
+{% endAside %}
 
 ## Usage
 

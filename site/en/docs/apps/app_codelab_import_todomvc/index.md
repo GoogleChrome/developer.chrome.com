@@ -6,20 +6,20 @@ updated: 2016-12-16
 description: How to adapt an existing web app for the Chrome Apps platform.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Want to start fresh from here?** Find the previous step's code in the [reference code zip][3]
 under **_cheat_code > solution_for_step1_**.
 
-!!!
+{% endAside %}
 
 In this step, you will learn:
 
@@ -38,16 +38,16 @@ app, into your project.
 We've included a version of the TodoMVC app in the [reference code zip][8] in the **_todomvc_**
 folder. Copy all files (including folders) from _todomvc_ into your project folder.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Yfv4O1dCRrqr6XNtTBta.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Yfv4O1dCRrqr6XNtTBta.png",
        alt="Copy todomvc folder into codelab folder", height="515", width="800" %}
 
 You will be asked to replace _index.html_. Go ahead and accept.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/EhTkBXH06XN95xjOreut.png", alt="Replace index.html", height="124", width="420" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/EhTkBXH06XN95xjOreut.png", alt="Replace index.html", height="124", width="420" %}
 
 You should now have the following file structure in your application folder:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vSqNPowp4gvcBThfKYE0.png", alt="New project folder", height="144", width="593" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vSqNPowp4gvcBThfKYE0.png", alt="New project folder", height="144", width="593" %}
 
 The files highlighted in blue are from the _todomvc_ folder.
 
@@ -59,7 +59,7 @@ able to add todos.
 Open the DevTools Console (**right-click > Inspect Element**, then select the **Console** tab). You
 will see an error about refusing to execute an inline script:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/eM7GRjvPtb2BJPDVfTLF.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/eM7GRjvPtb2BJPDVfTLF.png",
        alt="Todo app with CSP console log error", height="574", width="724" %}
 
 Let's fix this error by making the app [Content Security Policy][9] compliant. One of the most
@@ -98,7 +98,7 @@ You'll still have a non-working Todo app if you reload the app now but you're ge
 If you open the DevTools Console now, the previous error should be gone. There is a new error,
 however, about `window.localStorage` not being available:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TLhaB5KDe0e80De4kC88.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TLhaB5KDe0e80De4kC88.png",
        alt="Todo app with localStorage console log error", height="589", width="723" %}
 
 Chrome Apps do not support [`localStorage`][10] as `localStorage` is synchronous. Synchronous access
@@ -159,7 +159,7 @@ Unlike `localStorage`, you won't be able to inspect locally stored items using t
 Resources panel. You can, however, interact with `chrome.storage` from the JavaScript Console like
 so:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rHYyJEoDVKnSbjAegQ4g.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rHYyJEoDVKnSbjAegQ4g.png",
        alt="Use the Console to debug chrome.storage", height="410", width="658" %}
 
 ### Preview required API changes {: #preview-changes }
@@ -168,7 +168,7 @@ Most of the remaining steps in converting the Todo app are small changes to the 
 all the places where `localStorage` is currently being used, though time-consuming and error-prone,
 is required.
 
-!!!.aside.aside--note
+{% Aside %}
 
 To maximize your fun with this codelab, it'll be best if you overwrite your **_store.js_**,
 **_controller.js_**, and **_model.js_** with the ones from **_cheat_code/solution_for_step_2_** in
@@ -176,7 +176,7 @@ the reference code zip.
 
 Once you've done that, continue reading as we'll go over each of the changes individually.
 
-!!!
+{% endAside %}
 
 The key differences between `localStorage` and `chrome.storage` come from the async nature of
 `chrome.storage`:
@@ -556,7 +556,7 @@ console errors.
 Now that the app can save todo items, you're close to being done! You still get errors when you
 attempt to _remove_ todo items:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PryPGnyoZVeKoHrtGT9x.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PryPGnyoZVeKoHrtGT9x.png",
        alt="Todo app with localStorage console log error", height="726", width="678" %}
 
 1\. In **_store.js_**, convert all the `localStorage` instances to use `chrome.storage.local`:
@@ -689,12 +689,12 @@ implementing it on your own. Hint: Have a look at [`chrome.storage.local.clear()
 You are done Step 2! Reload your app and you should now have a fully working Chrome packaged version
 of TodoMVC.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Troubleshooting**  
 Remember to always check the DevTools Console to see if there are any error messages.
 
-!!!
+{% endAside %}
 
 ## For more information {: #recap }
 

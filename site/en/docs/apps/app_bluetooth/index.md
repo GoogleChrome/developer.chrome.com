@@ -6,25 +6,25 @@ updated: 2017-02-18
 description: How to communicate with Bluetooth devices from your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 This document describes how to use the [Bluetooth][3], [Bluetooth Socket][4] and [Bluetooth Low
 Energy][5] APIs to communicate with Bluetooth and Bluetooth Low Energy devices.
 
 For background information about Bluetooth, see the official [Bluetooth specifications][6].
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** With Chrome 56, users can select nearby Bluetooth Low Energy devices to provide to web
 sites that use the [Web Bluetooth][7] API.
 
-!!!
+{% endAside %}
 
 ## Manifest requirements {: #manifest }
 

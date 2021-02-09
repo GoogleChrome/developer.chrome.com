@@ -108,7 +108,7 @@ Open the Extensions Management page at `chrome://extensions`, ensure developer m
 upload the unpackaged extension directory. Compare the extension ID on the extensions management
 page to the Item ID in the Developer Dashboard. They should match.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/n6jGhPAAxEjOweiTePjP.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/n6jGhPAAxEjOweiTePjP.png",
        alt="The ID of the extension matches in all places", height="438", width="567" %}
 
 The extension will maintain the same ID by including the `"key"` field in the manifest. Preserving a
@@ -119,13 +119,13 @@ single ID is essential for API registration.
 Navigate to the [Google API console][10] and create a new project. Once ready, select
 **Credentials** in the sidebar, click **Create credentials** and choose **OAuth client ID**.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iC6LC1PYreTxndYmLEWN.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iC6LC1PYreTxndYmLEWN.png",
        alt="Create credentials for extension", height="478", width="800" %}
 
 On the Create client ID page, select **Chrome App**. Fill out the name of the extension and place
 the extension ID at the end of the URL in the Application ID field.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CwgbnssSgeRtqHGxRbpd.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CwgbnssSgeRtqHGxRbpd.png",
        alt="Fill out extension information", height="366", width="800" %}
 
 Finish by clicking create. The console will provide an OAuth client ID.
@@ -190,7 +190,7 @@ Place a script tag for `oauth.js` in the head of `index.html`.
 Reload the extension and click on the browser icon to open `index.html`. Open the console and click
 on the "FriendBlock Contacts" button. An OAuth token will appear in the console.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/aXVIN7YRfBnDc3ItHVJ2.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/aXVIN7YRfBnDc3ItHVJ2.png",
        alt="View the token in the console", height="227", width="800" %}
 
 ## Enable the Google People API {: #enable_people }
@@ -198,7 +198,7 @@ on the "FriendBlock Contacts" button. An OAuth token will appear in the console.
 Return to the Google API console and select **Library** from the sidebar. Search for "Google People
 API", click on the correct result and enable it.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/AQbJX735qIGEJUephhXf.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/AQbJX735qIGEJUephhXf.png",
        alt="Enable the People API", height="319", width="693" %}
 
 Add the [Google People API][13] client library to `"scopes"` in the extension manifest.
@@ -220,7 +220,7 @@ Add the [Google People API][13] client library to `"scopes"` in the extension ma
 Return to the Google API console and navigate back to credentials. Click "Create credentials" and
 select "API key" from the dropdown.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c8Fpzw5f3fihBgx1RbIr.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/c8Fpzw5f3fihBgx1RbIr.png",
        alt="Create People API credentials", height="369", width="699" %}
 
 Keep the generated API key for later use.
@@ -307,7 +307,7 @@ window.onload = function() {
 Reload and return to the extension. Click the FriendBlock button and ta-da! Enjoy contact's faces in
 a block.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/EQkrpv2o5kKIWPYHVhXn.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/EQkrpv2o5kKIWPYHVhXn.png", 
        alt="Contact faces in a block", height="359", width="397" %}
 
 [1]: https://oauth.net/2/

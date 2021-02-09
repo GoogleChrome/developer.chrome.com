@@ -87,12 +87,12 @@ privacy-preserving and performant way. The essence of this API is:
 
 Using this declarative approach dramatically reduces the need for persistent host permissions. 
 
-!!!.aside
+{% Aside %}
 Some extensions may still require broad host permissions for certain use cases
 (such as redirecting requests). See [Conditional permissions and
 declarativeNetRequest](/docs/extensions/mv3/intro/mv3-migration#declarativenetrequest-conditional-perms)
 for further details.
-!!!
+{% endAside %}
 
 The blocking version of the
 [webRequest](/docs/extensions/reference/webRequest)

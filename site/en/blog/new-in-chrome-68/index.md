@@ -58,7 +58,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
 });
 ```
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/b11lXsSixVY6VrDV1Emd.png", alt="", className="float-right", height="417", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/b11lXsSixVY6VrDV1Emd.png", alt="", className="float-right", height="417", width="800" %}
 
 When the user clicks the install button, call `prompt()` on the saved
 `beforeinstallprompt` event, Chrome then shows the add to home screen dialog.
@@ -76,7 +76,7 @@ btnInstall.addEventListener('click', () => {
 });
 ```
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/e8QdF96TkOMv3pzLAVYN.png", alt="", className="float-right", height="417", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/e8QdF96TkOMv3pzLAVYN.png", alt="", className="float-right", height="417", width="800" %}
 
 To give you time to update your site Chrome will show a mini-infobar the first
 time a user visits a site that meets the add to home screen criteria. Once
@@ -87,7 +87,7 @@ has the full details, including code samples you can use and more.
 
 ## Page Lifecycle API {: #page-lifecycle }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/uDSah821BWaTBBpcJgam.png", alt="", className="float-right", height="541", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/uDSah821BWaTBBpcJgam.png", alt="", className="float-right", height="541", width="800" %}
 
 When a user has a large number of tabs running, critical resources such as
 memory, CPU, battery and the network can be oversubscribed, leading to a

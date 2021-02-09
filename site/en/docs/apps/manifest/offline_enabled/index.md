@@ -6,13 +6,13 @@ title: "Manifest - Offline Enabled"
 #description: TODO
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Whether the app or extension is expected to work offline. When Chrome detects that it is offline,
 apps with this field set to true will be highlighted on the New Tab page.

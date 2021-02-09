@@ -2,13 +2,13 @@ const test = require('ava');
 const cheerio = require('cheerio');
 const {html} = require('common-tags');
 
-const {img} = require('../../../site/_shortcodes/img');
+const {Img} = require('../../../site/_shortcodes/Img');
 const thisToBind = {page: {inputPath: './this/file/doesnt/exist.md'}};
 
-test('img shortcode generates img html', t => {
+test('Img shortcode generates img html', t => {
   const src = 'image/foR0vJZKULb5AGJExlazy1xYDgI2/1600132969326.jpg';
   const parsed = cheerio.load(
-    img.bind(thisToBind)({src, alt: 'hello', height: '100', width: '100'})
+    Img.bind(thisToBind)({src, alt: 'hello', height: '100', width: '100'})
   );
   const expected = cheerio.load(html` <img
     src="https://developer-chrome-com.imgix.net/image/foR0vJZKULb5AGJExlazy1xYDgI2/1600132969326.jpg?auto=format"
@@ -31,10 +31,10 @@ test('img shortcode generates img html', t => {
   t.deepEqual(parsed('img').html(), expected('img').html());
 });
 
-test('img shortcode throws error when `alt` argument is not a string', t => {
+test('Img shortcode throws error when `alt` argument is not a string', t => {
   const src = 'image/foR0vJZKULb5AGJExlazy1xYDgI2/1600132969326.jpg';
   const error = t.throws(() => {
-    img.bind(thisToBind)({src});
+    Img.bind(thisToBind)({src});
   });
   t.is(
     error.message,

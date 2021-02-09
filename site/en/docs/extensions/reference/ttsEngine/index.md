@@ -62,7 +62,7 @@ Finally, the `event_types` parameter is required if the engine can send events t
 on the progress of speech synthesis. At a minimum, supporting the `'end'` event type to indicate
 when speech is finished is highly recommended, otherwise Chrome cannot schedule queued utterances.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** If your TTS engine does not support the `'end'` event type, Chrome cannot queue utterances
 because it has no way of knowing when your utterance has finished. To help mitigate this, Chrome
@@ -70,7 +70,7 @@ passes an additional boolean `enqueue` option to your engine's onSpeak handler, 
 option of implementing your own queueing. This is discouraged because then clients are unable to
 queue utterances that should get spoken by different speech engines.
 
-!!!
+{% endAside %}
 
 The possible event types that you can send correspond to the event types that the `speak()` method
 receives:
@@ -114,12 +114,12 @@ chrome.ttsEngine.onSpeak.addListener(speakListener);
 chrome.ttsEngine.onStop.addListener(stopListener);
 ```
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Important:** If your extension does not register listeners for both `onSpeak` and `onStop`, it
 will not intercept any speech calls, regardless of what is in the manifest.
 
-!!!
+{% endAside %}
 
 The decision of whether or not to send a given speech request to an extension is based solely on
 whether the extension supports the given voice parameters in its manifest and has registered

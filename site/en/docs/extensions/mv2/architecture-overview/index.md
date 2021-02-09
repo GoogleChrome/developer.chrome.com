@@ -56,13 +56,13 @@ uses a [popup][2] by clicking on the icon.
 This <a href="/extensions/samples#search:google%20mail%20checker">Google Mail Checker extension</a>
 uses a <a href="browserAction">browser action</a>:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mG1Uyd3uzcP7sSyKXWkh.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mG1Uyd3uzcP7sSyKXWkh.png",
        alt="A screenshot of the Google Mail Checker extension", height="79", width="90" %}
 
 This <a href="/extensions/samples#search:mappy">Mappy extension</a> uses a
 <a href="pageAction">page action</a> and <a href="#contentScripts">content script</a>:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LrHTrkZVBN96DqNQjtyF.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LrHTrkZVBN96DqNQjtyF.png",
        alt="A screenshot of the Mappy extension", height="103", width="90" %}
 
 ### Referring to files {: #relative-urls }
@@ -123,7 +123,7 @@ An extension using a page action and a popup can use the [declarative content][2
 in the background script for when the popup is available to users. When the conditions are met, the
 background script communicates with the popup to make it's icon clickable to users.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8oLwFaq0VFIQtw4mcA91.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8oLwFaq0VFIQtw4mcA91.png",
        alt="A browser window containing a page action displaying a popup", height="316", width="325" %}
 
 ### Content scripts {: #contentScripts }
@@ -132,13 +132,13 @@ Extensions that read or write to web pages utilize a [content script][24]. The c
 contains JavaScript that executes in the contexts of a page that has been loaded into the browser.
 Content scripts read and modify the DOM of web pages the browser visits.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CNDAVsTnJeSskIXVnSQV.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CNDAVsTnJeSskIXVnSQV.png",
        alt="A browser window with a page action and a content script", height="316", width="388" %}
 
 Content scripts can communicate with their parent extension by exchanging [messages][25] and storing
 values using the [storage][26] API.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png",
        alt="Shows a communication path between the content script and the parent extension", height="316", width="388" %}
 
 ### Options page {: #optionsPage }

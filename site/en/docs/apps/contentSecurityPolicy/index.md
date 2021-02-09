@@ -6,13 +6,13 @@ updated: 2018-05-14
 description: An overview of CSP for Chrome Apps and how to comply with it.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 If you're not familiar with Content Security Policy (CSP), [An Introduction to Content Security
 Policy][3] is a good starting point. That document covers the broader web platform view of CSP;

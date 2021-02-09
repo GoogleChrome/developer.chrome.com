@@ -25,7 +25,7 @@ process, bugs that allow malicious code to run are much less severe.
 access to the whole device. What should you do differently? And what's the
 situation with other processes?
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/FFBrFUv5NMb2xhG4Zukw.png", alt="Sandbox diagram", height="310", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/FFBrFUv5NMb2xhG4Zukw.png", alt="Sandbox diagram", height="310", width="800" %}
 
 **All code has bugs.** In the browser process, those bugs allow malicious code
 to install a program, steal user data, adjust computer settings, access content
@@ -36,7 +36,7 @@ For more information, see Chrome's [sandbox implementation guide][sandbox-implem
 
 Make sure to avoid the following common mistakes:
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/H5cmSK3JieUkRBdPw9oj.jpg", alt="rule of two", className="float-left", height="597", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/H5cmSK3JieUkRBdPw9oj.jpg", alt="rule of two", className="float-left", height="597", width="800" %}
 
 * **Don't parse or interpret untrustworthy data using C++ in the
   browser process.**

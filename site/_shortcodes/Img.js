@@ -20,7 +20,7 @@ const generateSrc = (src, params) => client.buildURL(src, params);
  * @param {ImgArgs} args Named arguments
  * @return {string}
  */
-const img = function (args) {
+const Img = function (args) {
   // eslint-disable-next-line prefer-const
   let {src, alt, width, height, sizes, lazy, className, params, options} = args;
   // @ts-ignore: `this` has type of `any`
@@ -88,4 +88,4 @@ const img = function (args) {
   `.replace(/\n/g, '');
 };
 
-module.exports = {img, generateSrc};
+module.exports = {Img, generateSrc};

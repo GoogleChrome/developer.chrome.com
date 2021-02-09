@@ -34,5 +34,5 @@ You can find simple examples of manipulating tabs with the `chrome.tabs` API in 
 [4]: #property-Tab-title
 [5]: #property-Tab-favIconUrl
 [6]: #type-Tab
-[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/tabs/
+[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
 [8]: /docs/extensions/mv2/samples

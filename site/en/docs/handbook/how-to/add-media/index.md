@@ -24,7 +24,7 @@ A preview of the image or video with a shortcode snippet will appear. It should
 look something like this:
 
 ```md
-{% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/ZOR0at2oFXeasz6jKylI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}{% endraw %}
+{% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/ZOR0at2oFXeasz6jKylI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}{% endraw %}
 ```
 
 - Click the copy button to copy the snippet to your clipboard 📋
@@ -37,16 +37,16 @@ Be sure to replace the text that says "ALT_TEXT_HERE" with your own description
 of the image. You can read more about writing effective alt text over on [the
 web.dev handbook](https://web.dev/handbook/inclusion-and-accessibility/#use-inclusive-images).
 
-!!!.aside
+{% Aside %}
 You may notice that the generated code is using either the
-{% raw %}`{% img %}`{% endraw%} or {% raw %}`{% video %}`{% endraw%} shortcodes.
+{% raw %}`{% Img %}`{% endraw%} or {% raw %}`{% Video %}`{% endraw%} shortcodes.
 These are custom components for `developer.chrome.com` that ensure our media is
 responsive 📱
-!!!
+{% endAside %}
 
 ### Properties
 
-The `{% raw %}`{% img %}`{% endraw%}` and `{% raw %}`{% video %}`{% endraw%}`
+The `{% raw %}`{% Img %}`{% endraw%}` and `{% raw %}`{% Video %}`{% endraw%}`
 shortcodes accepts many named arguments. Below are interfaces for both
 shortcodes. Each property of the interface is a named argument that can be used
 in the shortode.
@@ -57,13 +57,13 @@ in the shortode.
 {% include '../../../../../../types/site/_shortcodes/img.d.ts' %}
 ```
 
-The `{% raw %}`{% img %}`{% endraw%}` `params` object exposes the entire [Imgix
+The `{% raw %}`{% Img %}`{% endraw%}` `params` object exposes the entire [Imgix
 API](https://docs.imgix.com/apis/rendering) to you. For example, if you wanted
 to use the [flip API](https://docs.imgix.com/apis/rendering/rotation/flip) to flip
 an image on its horitonzal axis you would do:
 
 ```md
-{% raw %}{% img 
+{% raw %}{% Img 
   src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg",
   alt="ALT_TEXT_HERE",
   width="380",
@@ -74,20 +74,20 @@ an image on its horitonzal axis you would do:
 
 {% Columns %}
 {% Column %}
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
 Original
 {% endColumn %}
 {% Column %}
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
 Flipped
 {% endColumn %}
 {% endColumns %}
 
-!!!.aside
+{% Aside %}
 Please call out in a review if you're calling a specific Imgix API, so we can be
 aware of custom use-cases and potentially support them through our own shortcode
 directly.
-!!!
+{% endAside %}
 
 #### Video Properties (`VideoArgs`)
 

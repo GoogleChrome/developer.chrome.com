@@ -6,13 +6,13 @@ updated: 2017-03-01
 description: Chrome Apps can use all the APIs that are available to websites.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 In addition to the [chrome.\* APIs][3], extensions can use all the APIs that the browser provides to
 web pages and apps. If the browser doesn't support an API you want to use, you can bundle additional

@@ -20,12 +20,12 @@ user navigates to https://chromium.org, access is revoked.
 
 Without `activeTab`:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/yNt7dAfXO9RlkRjr0rMV.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/yNt7dAfXO9RlkRjr0rMV.png",
        alt="Without activeTab", height="190", width="490" %}
 
 With `activeTab`:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rejIX68BPQrssxbh98BH.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rejIX68BPQrssxbh98BH.png",
        alt="With activeTab", height="190", width="490" %}
 
 ## Example {: #example }

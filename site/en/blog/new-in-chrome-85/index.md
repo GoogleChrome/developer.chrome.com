@@ -39,7 +39,7 @@ let's dive in and see what's new for developers in Chrome 85!
 ## Content Visibility {: #content-visibility }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/aPo72AQPvTn4s9kdI7Cm.png", alt="", height="408", width="800" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/aPo72AQPvTn4s9kdI7Cm.png", alt="", height="408", width="800" %}
   <figcaption>
     Browsers rendering process
   </figcaption>
@@ -66,7 +66,7 @@ To get the most impact out of `content-visibility`, apply it to parent
 sections with more complex layout algorithms, like `flexbox`, and `grid`, or
 that have children with contained layouts of their own.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/liWPW8kNA0dsiJGv28rg.jpg", alt="", height="554", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/liWPW8kNA0dsiJGv28rg.jpg", alt="", height="554", width="800" %}
 
 By chunking content and adding `content-visibility: auto;`, this page went
 from a rendering time of 232ms to only 30ms.
@@ -128,7 +128,7 @@ yours.
 ## App Icon Shortcuts {: #app-shortcuts }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9zcJuaBsNnskaZByurvY.png", alt="", height="420", width="800" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9zcJuaBsNnskaZByurvY.png", alt="", height="420", width="800" %}
   <figcaption>
     App icon shortcut on Windows
   </figcaption>

@@ -17,7 +17,7 @@ given a larger width (typically 980px) and scales it to fit the WebView's width.
 result is a tiny overview version of the page that requires the user to pan and zoom to actually
 read content, like the image on the left.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604544745761.jpg", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604544745761.jpg", 
        alt="Screenshots of a page before and after using the viewport meta tag.",
        width="656",
        height="613" %}
@@ -51,7 +51,7 @@ In addition to doing this, you may want to use the new layout algorithm `TEXT_AU
 in Android 4.4, which increases the font size to make it more readable on a mobile device. See
 [setLayoutAlgorithm][3].
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604544955630.jpg", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604544955630.jpg", 
        alt="An example of how a page looks before and after text autosizing.",
        width="656",
        height="616" %}
@@ -98,7 +98,7 @@ the orientation:
 }
 ```
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604545057377.jpg", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604545057377.jpg", 
        alt="A page that has different presentations in landscape and portrait modes.",
        width="656",
        height="488" %}
@@ -130,7 +130,7 @@ button {
 }
 ```
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604545130107.jpg", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604545130107.jpg", 
        alt="Adjusting button size for different screen sizes.",
        width="656",
        height="769" %}
@@ -154,7 +154,7 @@ require less memory and are faster to load, but blur if you scale them up.
 The images below show the blurring that occurs when you scale a low-density image up for a
 high-denity screen, compared with the crisp display of an appropriately-sized image.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604545182932.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604545182932.png", 
        alt="Low-density and high-density versions of an image.",
        width="656",
        height="320" %}
@@ -261,7 +261,7 @@ To swap this out for a larger image on devices with device pixel ratio of 1.5 (h
 }
 ```
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604545224766.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604545224766.png", 
        alt="Using different images for different device pixel ratios.",
        width="656",
        height="619" %}

@@ -6,20 +6,20 @@ updated: 2018-05-14
 description: How to add images to your Chrome App using XHR and ObjectURL.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Want to start fresh from here?** Find the previous step's code in the [reference code zip][3]
 under **_cheat_code > solution_for_step4_**.
 
-!!!
+{% endAside %}
 
 In this step, you will learn:
 
@@ -199,13 +199,13 @@ image:
 You are done Step 5! Reload your app and add a todo item with a URL to an image hosted online. Some
 URLs you could use: **http://goo.gl/nqHMF#.jpg** or **http://goo.gl/HPBGR#.png**.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Tip**: For real-world situations, when you need to control offline cache and dozens of
 simultaneous resource downloads, we have created [a helper library][8] to handle some common use
 cases.
 
-!!!
+{% endAside %}
 
 ## For more information {: #recap }
 

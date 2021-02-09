@@ -6,13 +6,13 @@ updated: 2016-04-19
 description: Reference documentation for the file_handlers property of manifest.json.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Used by [packaged apps][3] to specify what types of files the app can handle. An app can have
 multiple `file_handlers`, with each one having an identifier, a list of MIME types and/or a list of

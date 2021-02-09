@@ -114,7 +114,7 @@ Featured Products:
   - Cryptocurrency
   - Non-production builds
   - Prohibited products
-  - Gambiling content
+  - Gambling content
   - Extensions whose developers have questionable reputations, such as historically misleading or
     malicious extensions.
 
@@ -268,8 +268,9 @@ Guidelines][12].
 
 For additional information about the spam policy, see the [Spam FAQ][13].
 
-For information about Product ranking, please see [these FAQs][14].## User Data Privacy {: #userdata
-}
+For information about Product ranking, please see [these FAQs][14].
+
+## User Data Privacy {: #userdata }
 
 You must be transparent in how you handle user data (e.g., information provided by a user or
 collected about a user or a user's use of the Product or Chrome Browser), including by disclosing

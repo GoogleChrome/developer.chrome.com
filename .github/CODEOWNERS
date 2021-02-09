@@ -6,13 +6,19 @@
 * @GoogleChrome/dcc-eng
 
 # Blog
-site/en/blog/ @GoogleChrome/dcc-content
+site/en/blog/ @GoogleChrome/dcc-content @GoogleChrome/dcc-approvers
 
 # Extensions
 site/_data/docs/extensions/toc.yml @GoogleChrome/dcc-extensions
 site/_data/i18n/docs/extensions.yml @GoogleChrome/dcc-extensions
 site/_includes/partials/extensions/ @GoogleChrome/dcc-extensions
 site/en/docs/extensions/ @GoogleChrome/dcc-extensions
+
+# Chrome Apps
+site/_data/docs/apps/toc.yml @GoogleChrome/dcc-extensions
+site/_data/i18n/docs/apps.yml @GoogleChrome/dcc-extensions
+site/_includes/partials/apps/ @GoogleChrome/dcc-extensions
+site/en/docs/apps/ @GoogleChrome/dcc-extensions
 
 # Web Store
 site/_data/docs/webstore/toc.yml @GoogleChrome/dcc-extensions
@@ -32,5 +38,6 @@ site/en/docs/webstore/ @GoogleChrome/dcc-extensions
 
 # Exceptions
 # These should always come last.
-site/_data/authorsData.json @GoogleChrome/dcc-content
-site/_data/supportedTags.json @GoogleChrome/dcc-content
+site/_data/authorsData.json @GoogleChrome/dcc-content @GoogleChrome/dcc-approvers
+site/_data/supportedTags.json @GoogleChrome/dcc-content @GoogleChrome/dcc-approvers
+site/redirects.yaml @GoogleChrome/dcc-content @GoogleChrome/dcc-approvers

@@ -93,5 +93,5 @@ For other examples and for help in viewing the source code, see [Samples][8].
 [4]: #method-show
 [5]: #method-hide
 [6]: /docs/extensions/browserAction
-[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/pageAction/
+[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/pageAction/
 [8]: /docs/extensions/mv2/samples
