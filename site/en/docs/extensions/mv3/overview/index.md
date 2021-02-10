@@ -6,9 +6,24 @@ updated: 2018-02-25
 description: An overview of the purpose of Chrome Extensions and how they're developed.
 ---
 
-Extensions are small software programs that customize the browsing experience. They enable users to
-tailor Chrome functionality and behavior to individual needs or preferences. They are built on web
-technologies such as HTML, JavaScript, and CSS.
+This page provides a very brief introduction to what extensions are and how you can make a trivial one.
+
+
+## About extensions
+
+Extensions are small software programs that customize the browsing experience. They let users
+tailor Chrome functionality and behavior in many ways, providing things like:
+
+* Games
+* Productivity tools
+* Web page content enrichment
+* Information aggregation
+
+These are just a few examples of the many things that extensions can do. See the [Chrome Web Store][5] to see thousands of different examples of published extensions.
+
+### What goes into an extension?
+
+Extensions are built on web technologies such as HTML, JavaScript, and CSS.
 
 An extension must fulfill a [single purpose][1] that is narrowly defined and easy to understand. A
 single extension can include multiple components and a range of functionality, as long as everything
@@ -20,7 +35,9 @@ contributes towards a common purpose.
 User interfaces should be minimal and have intent. They can range from a simple icon, such as the [Google
 Mail Checker extension][2] shown on the right, to [overriding][3] an entire page.
 
-Extension files are zipped into a single `.crx` package that the user downloads and installs. This
+### How do users get extensions?
+
+When you make an extension, you zip it into a single `.crx` package that the user downloads and installs. This
 means extensions do not depend on content from the web, unlike ordinary web apps.
 
 Extensions are distributed through the [Chrome Developer Dashboard][4] and published to the [Chrome
