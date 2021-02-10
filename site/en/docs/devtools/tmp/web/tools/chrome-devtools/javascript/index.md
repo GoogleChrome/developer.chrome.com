@@ -11,7 +11,7 @@ description: "Learn how to use Chrome DevTools to find and fix JavaScript bugs."
 This tutorial teaches you the basic workflow for debugging any JavaScript issue in DevTools. Read
 on, or watch the video version of this tutorial, below.
 
-{% youtube id="H0XScE08hy8" %}
+{% YouTube id="H0XScE08hy8" %}
 
 ## Step 1: Reproduce the bug {: #reproduce }
 

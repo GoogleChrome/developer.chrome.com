@@ -14,7 +14,7 @@ This tutorial teaches you how to use Chrome DevTools to find ways to make your w
 
 Read on, or watch the video version of this tutorial:
 
-{% youtube id="5fLW5Q5ODiE" %}
+{% YouTube id="5fLW5Q5ODiE" %}
 
 ## Prerequisites {: #prerequisites }
 

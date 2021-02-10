@@ -578,7 +578,7 @@ Transform](/web/tools/chrome-devtools/evaluate-performance/imgs/reset-transform.
 
 See layer analysis in action:
 
-{% youtube id="6je49J67TQk" %}
+{% YouTube id="6je49J67TQk" %}
 
 ### View paint profiler {: #paint-profiler }
 

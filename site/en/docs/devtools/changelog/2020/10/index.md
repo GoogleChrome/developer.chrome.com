@@ -15,13 +15,13 @@ Interested in helping improve DevTools? Sign up to participate in [Google User R
 
 !!!
 
-{% youtube id="bE3O6EhLjPc" %}
+{% YouTube id="bE3O6EhLjPc" %}
 
 ## New CSS Grid debugging tools {: #css-grid }
 
 DevTools now has better support for CSS grid debugging!
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/eY07EGjmEvoS8stHYsB1.png", alt="CSS grid debugging", width="800", height="524" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/eY07EGjmEvoS8stHYsB1.png", alt="CSS grid debugging", width="800", height="524" %}
 
 When an HTML element on your page has `display: grid` or `display: inline-grid` applied to it, you
 can see a `grid` badge next to it in the **Elements** panel. Click the badge to toggle the display
@@ -41,7 +41,7 @@ tab][5].
 
 Select **More options** > **More tools** > **WebAuthn** to open the WebAuthn tab.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5FjbhXHqEKYflSyEhWon.png", alt="WebAuthn tab", width="800", height="512" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5FjbhXHqEKYflSyEhWon.png", alt="WebAuthn tab", width="800", height="512" %}
 
 Prior to the new **WebAuthn** tab, there was no native WebAuthn debugging support on Chrome.
 Developers needed physical authenticators to test their web application with Web Authentication API.
@@ -62,12 +62,12 @@ view any two tools at once.
 For example, if you would like to view **Elements** and **Sources** panel at once, you can right
 click on the **Sources** panel, and select **Move to bottom** to move it to the bottom.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DQGr4zX238Doo49X41xz.png", alt="Move to bottom", width="800", height="524" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DQGr4zX238Doo49X41xz.png", alt="Move to bottom", width="800", height="524" %}
 
 Similarly, you can move any bottom tab to the top by right clicking on a tab and select **Move to
 top**.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/gyWUnfer6FYewfNbjoXl.png", alt="Move to top", width="800", height="524" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/gyWUnfer6FYewfNbjoXl.png", alt="Move to top", width="800", height="524" %}
 
 Chromium issue: [1075732][8]
 
@@ -80,7 +80,7 @@ You can now toggle the **Computed sidebar** pane in the Styles pane.
 The **Computed sidebar** pane in the **Styles** pane is collapsed by default. Click on the button to
 toggle it.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vvGnNg7t4aVqbjB6w3nl.png", alt="Computed sidebar pane", width="800", height="522" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vvGnNg7t4aVqbjB6w3nl.png", alt="Computed sidebar pane", width="800", height="522" %}
 
 Chromium issue: [1073899][9]
 
@@ -94,7 +94,7 @@ scrolling) and selectively focus on a set of related properties for CSS inspecti
 On the **Elements** panel, select an element. Toggle the **Group** checkbox to group/ungroup the CSS
 properties.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JjL1F5FYRjTVnhudSJBC.png", alt="Grouping CSS properties", width="800", height="522" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JjL1F5FYRjTVnhudSJBC.png", alt="Grouping CSS properties", width="800", height="522" %}
 
 Chromium issues: [1096230][10], [1084673][11], [1106251][12]
 
@@ -103,7 +103,7 @@ Chromium issues: [1096230][10], [1084673][11], [1106251][12]
 The **Lighthouse** panel is now running Lighthouse 6.4. Check out the [release notes][13] for a full
 list of changes.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SU7fhHwII5BDUNTPwMwh.png", alt="Lighthouse", width="800", height="524" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SU7fhHwII5BDUNTPwMwh.png", alt="Lighthouse", width="800", height="524" %}
 
 New audits in Lighthouse 6.4:
 
@@ -119,7 +119,7 @@ Chromium issue: [772558][14]
 
 The [Timings section][15] of a Performance recording now marks `performance.mark()` events.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/viBrya85v25YsfDogDjk.png", alt="Performance.mark events", width="800", height="521" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/viBrya85v25YsfDogDjk.png", alt="Performance.mark events", width="800", height="521" %}
 
 ## New `resource-type` and `url` filters in the Network panel {: #network-filters }
 
@@ -127,7 +127,7 @@ Use the new `resource-type` and `url` keywords in the **Network panel** to filte
 
 For example, use `resource-type:image` to focus on the network requests that are images.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/D3KPJsvmvwvR3wauVpQl.png", alt="resource-type filter", width="800", height="522" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/D3KPJsvmvwvR3wauVpQl.png", alt="resource-type filter", width="800", height="522" %}
 
 Check out [filter requests by properties][16] to discover more special keywords like `resource-type`
 and `url`.
@@ -144,7 +144,7 @@ You can now view the Cross-Origin Embedder Policy (COEP) and Cross-Origin Opener
 The [Reporting API][19] defines a new HTTP header, `Report-To`, that gives web developers a way to
 specify server endpoints for the browser to send warnings and errors to.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ouxjUfRZuORirRiXs7PL.png", alt="reporting to endpoint", width="800", height="524" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ouxjUfRZuORirRiXs7PL.png", alt="reporting to endpoint", width="800", height="524" %}
 
 Read this [article][20] to learn more about how to enable COEP and COOP and make your website
 "cross-origin isolated".
@@ -155,7 +155,7 @@ Chromium issue: [1051466][21]
 
 DevTools now displays `report-only` label for COEP and COOP that are set to `report-only` mode.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/q0t3pw0ALUIBUx0K63bK.png", alt="report-only label", width="800", height="524" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/q0t3pw0ALUIBUx0K63bK.png", alt="report-only label", width="800", height="524" %}
 
 Watch this [video][22] to learn about how to prevent information leaks and enable COOP and COEP in
 your website.
@@ -167,7 +167,7 @@ Chromium issue: [1051466][23]
 The `Settings` in the More tools menu has been deprecated. Open the **Settings** from the main panel
 instead.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PSirLdDNbFF4WD21jS5Y.png", alt="Settings in the main panel", width="800", height="522" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PSirLdDNbFF4WD21jS5Y.png", alt="Settings in the main panel", width="800", height="522" %}
 
 Chromium issue: [1121312][24]
 
@@ -192,7 +192,7 @@ To enable this experiment, check the **CSS Overview** checkbox under **Settings*
 In this example, the [demo page][25] has a low color contrast issue. Click on the issue, you can
 view a list of elements that have the issue.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nPm8RBrXiJdotyN9uptQ.png", alt="Low color contrast issues", width="800", height="521" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nPm8RBrXiJdotyN9uptQ.png", alt="Low color contrast issues", width="800", height="521" %}
 
 Click on an element in the list to open the element in **Elements** panel. DevTools [provides auto
 color suggestion][26] to help you fix the low contrast text.
@@ -213,7 +213,7 @@ You can now customize the keyboard shortcuts for your favourite commands in DevT
 Go to **Settings** > **Shortcuts**, hovering on a command and click the **Edit** button (pen icon)
 to customize the keyboard shortcut.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FDXOHeck0BGR4FrPR2pk.png", alt="Customize keyboard shortcuts", width="800", height="522" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FDXOHeck0BGR4FrPR2pk.png", alt="Customize keyboard shortcuts", width="800", height="522" %}
 
 To reset all shortcuts, click on **Restore default shortcuts**.
 
