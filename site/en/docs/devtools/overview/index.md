@@ -10,7 +10,7 @@ Chrome DevTools is a set of web developer tools built directly into the [Google 
 DevTools can help you edit pages on-the-fly and diagnose problems quickly, which ultimately helps
 you build better websites, faster.
 
-{% youtube id="VYyQv0CSZOE" %}
+{% YouTube id="VYyQv0CSZOE" %}
 
 Check out the video for live demonstrations of core DevTools workflows, including debugging CSS,
 prototyping CSS, debugging JavaScript, and analyzing load performance.
@@ -54,7 +54,7 @@ seriously boost your productivity.
 
 ### Device Mode {: #device-mode }
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KCl7BybVtFjmOigO56Si.png", alt="Device Mode", width="800", height="613" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KCl7BybVtFjmOigO56Si.png", alt="Device Mode", width="800", height="613" %}
 
 Simulate mobile devices.
 
@@ -64,7 +64,7 @@ Simulate mobile devices.
 
 ### Elements panel {: #elements }
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UjVAPTnFGxLEc5RLDwBy.png", alt="Elements Panel", width="800", height="609" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UjVAPTnFGxLEc5RLDwBy.png", alt="Elements Panel", width="800", height="609" %}
 
 View and change the DOM and CSS.
 
@@ -78,7 +78,7 @@ View and change the DOM and CSS.
 
 ### Console panel {: #console }
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hlgSxlGaLKLeQ45nGwUC.png", alt="Console Panel", width="800", height="469" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hlgSxlGaLKLeQ45nGwUC.png", alt="Console Panel", width="800", height="469" %}
 
 View messages and run JavaScript from the Console.
 
@@ -89,7 +89,7 @@ View messages and run JavaScript from the Console.
 
 ### Sources panel {: #sources }
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tYPZahEdu0RMGFFcCvyp.png", alt="Sources Panel", width="800", height="655" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tYPZahEdu0RMGFFcCvyp.png", alt="Sources Panel", width="800", height="655" %}
 
 Debug JavaScript, persist changes made in DevTools across page reloads, save and run snippets of
 JavaScript, and save changes that you make in DevTools to disk.
@@ -104,7 +104,7 @@ JavaScript, and save changes that you make in DevTools to disk.
 
 ### Network panel {: #network }
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/XE91VMkc9x1jdMQR1Iep.png", alt="Network Panel", width="800", height="649" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/XE91VMkc9x1jdMQR1Iep.png", alt="Network Panel", width="800", height="649" %}
 
 View and debug network activity.
 
@@ -120,7 +120,7 @@ View and debug network activity.
 
 !!!
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nCVPdzEUA2XIY5txAG1G.png", alt="Timeline Panel", width="800", height="649" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nCVPdzEUA2XIY5txAG1G.png", alt="Timeline Panel", width="800", height="649" %}
 
 Find ways to improve load and runtime performance.
 
@@ -138,14 +138,14 @@ Find ways to improve load and runtime performance.
 
 !!!
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oR8gZtwxxhRLj77xYsWd.png", alt="Profiles Panel", width="800", height="655" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oR8gZtwxxhRLj77xYsWd.png", alt="Profiles Panel", width="800", height="655" %}
 
 - [Fix Memory Problems][38]
 - [JavaScript CPU Profiler][39]
 
 ### Application panel {: #application }
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zVZBef8kCIP6uEm9em9y.png", alt="Application Panel", width="800", height="500" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zVZBef8kCIP6uEm9em9y.png", alt="Application Panel", width="800", height="500" %}
 
 Inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session
 storage, cookies, Application Cache, images, fonts, and stylesheets.
@@ -157,7 +157,7 @@ storage, cookies, Application Cache, images, fonts, and stylesheets.
 
 ### Security panel {: #security }
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wB3jgziVHoF13hYf8Yi1.png", alt="Security Panel", width="800", height="573" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wB3jgziVHoF13hYf8Yi1.png", alt="Security Panel", width="800", height="573" %}
 
 Debug mixed content issues, certificate problems, and more.
 

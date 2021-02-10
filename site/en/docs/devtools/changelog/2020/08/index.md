@@ -16,13 +16,13 @@ Interested in helping improve DevTools? Sign up to participate in [Google User R
 
 !!!
 
-{% youtube id="koUsK58dpNo" %}
+{% YouTube id="koUsK58dpNo" %}
 
 ## New Media panel {: #media-panel }
 
 DevTools now displays media players information in the [Media panel][2].
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DmEIPFNcIQcD2f1oVfGC.png", alt="New Media panel", width="800", height="487" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DmEIPFNcIQcD2f1oVfGC.png", alt="New Media panel", width="800", height="487" %}
 
 Prior to the new media panel in DevTools, logging and debug information about video players could be
 found in `chrome://media-internals`.
@@ -41,7 +41,7 @@ You can now capture node screenshots via the context menu in the Elements panel.
 For example, you can take a screenshot of the table of content by right clicking the element and
 select **Capture node screenshot**.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/r1qEVioRv6kTYoSCbAAG.png", alt="Capture node screenshots", width="800", height="377" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/r1qEVioRv6kTYoSCbAAG.png", alt="Capture node screenshots", width="800", height="377" %}
 
 Chromium issue: [1100253][4]
 
@@ -49,12 +49,12 @@ Chromium issue: [1100253][4]
 
 The Issues warning bar on the Console panel is now replaced with a regular message.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KTMjp7sZIi82132RbSGD.png", alt="Issues in console message", width="800", height="483" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KTMjp7sZIi82132RbSGD.png", alt="Issues in console message", width="800", height="483" %}
 
 Third-party cookie issues are now hidden by default in the Issues tab. Enable the new **Include
 third-party cookie issues** checkbox to view them.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Bf8gnyAN5YX0nX14eqif.png", alt="third-party cookie issues checkbox", width="800", height="535" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Bf8gnyAN5YX0nX14eqif.png", alt="third-party cookie issues checkbox", width="800", height="535" %}
 
 Chromium issues: [1096481][5], [1068116][6], [1080589][7]
 
@@ -69,7 +69,7 @@ as a `local()` font, Chrome uses the local font file from your device.
 When **Disable local fonts** is enabled, DevTools ignores the `local()` fonts and fetches them from
 the network.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/U9GRJae9v4Mt9uEkz6Ut.png", alt="Emulate missing local fonts", width="800", height="487" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/U9GRJae9v4Mt9uEkz6Ut.png", alt="Emulate missing local fonts", width="800", height="487" %}
 
 Oftentimes, developers and designers use two different copies of the same font during development:
 
@@ -91,7 +91,7 @@ changes. You can now use DevTools to emulate idle state changes in the **Sensors
 user state and the screen state instead of waiting for the actual idle state to change. You can open
 the **Sensors** tab from the [**Drawer**][11].
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/9bZbJYcIzAJx9n9hvAKw.png", alt="Emulate inactive users", width="800", height="487" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/9bZbJYcIzAJx9n9hvAKw.png", alt="Emulate inactive users", width="800", height="487" %}
 
 Chromium issue: [1090802][12]
 
@@ -110,7 +110,7 @@ content that uses less data for the page to be rendered.
 
 You can now use DevTools to emulate the `prefers-reduced-data` media query.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Yl06AtiNkQb0L7fhxdFa.png", alt="Emulate prefers-reduced-data", width="800", height="449" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Yl06AtiNkQb0L7fhxdFa.png", alt="Emulate prefers-reduced-data", width="800", height="449" %}
 
 Chromium issue: [1096068][15]
 
@@ -130,7 +130,7 @@ Chromium issues: [1086817][18], [1080569][19]
 The Lighthouse panel is now running Lighthouse 6.2. Check out the [release notes][20] for a full
 list of changes.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JA6LSMIJs2adZUpKrVic.png", alt="Unsize image", width="800", height="448" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JA6LSMIJs2adZUpKrVic.png", alt="Unsize image", width="800", height="448" %}
 
 New audits in Lighthouse 6.2:
 
@@ -160,7 +160,7 @@ browser tab - `chrome://serviceworker-internals/?devtools`.
 Previously DevTools displayed a list nested under the **Application** panel > **Service workers**
 pane.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NkuzBGAChhAFXGb5hUTj.png", alt="Link to other origins", width="800", height="473" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NkuzBGAChhAFXGb5hUTj.png", alt="Link to other origins", width="800", height="473" %}
 
 Chromium issue: [807440][23]
 
@@ -174,7 +174,7 @@ In the example below notice how the summary initially says
 `446 kB of 2.0 MB (22%) used so far. 1.5 MB unused.` and then says
 `57 kB of 604 kB (10%) used so far. 546 kB unused.` after CSS filtering has been applied.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LL47aWqPhRWssfrS7CG3.png", alt="Coverage summary for filtered items", width="800", height="487" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LL47aWqPhRWssfrS7CG3.png", alt="Coverage summary for filtered items", width="800", height="487" %}
 
 Chromium issue: [1061385][25]
 
@@ -183,7 +183,7 @@ Chromium issue: [1061385][25]
 DevTools now show a detailed view for each frame. Access it by clicking a frame under the **Frames**
 menu in the **Application** panel.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mu4AlNhH4ccBxbxD0Iud.png", alt="New frame details view in Application panel", width="800", height="488" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mu4AlNhH4ccBxbxD0Iud.png", alt="New frame details view in Application panel", width="800", height="488" %}
 
 Chromium issue: [1093247][26]
 
@@ -192,7 +192,7 @@ Chromium issue: [1093247][26]
 DevTools now displays opened windows / pop-ups under the frame tree as well. The frame details view
 of the opened windows includes additional security information.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/bjoqstLwlkt4YgI3fPnc.png", alt="Opened window frame details", width="800", height="419" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/bjoqstLwlkt4YgI3fPnc.png", alt="Opened window frame details", width="800", height="419" %}
 
 Chromium issue: [1107766][27]
 
@@ -201,7 +201,7 @@ Chromium issue: [1107766][27]
 DevTools now display secure context, [Cross-Origin-Embedder-Policy (COEP) and
 Cross-Origin-Opener-Policy (COOP)][28] in the frame details.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/dKR9CacOdSXMaSnQMCoN.png", alt="Security and isolation information", width="800", height="499" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/dKR9CacOdSXMaSnQMCoN.png", alt="Security and isolation information", width="800", height="499" %}
 
 More security information will be added to the frame details view soon.
 
@@ -224,7 +224,7 @@ Chromium issue: [1093227][30]
 The Properties pane is back, it was [deprecated in Chrome 84][31]. In a future version of DevTools,
 we are going to improve the workflow for inspecting properties of elements.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pH2dORbQtsgbIPLjPdki.png", alt="Properties pane in the Elements panel", width="800", height="448" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pH2dORbQtsgbIPLjPdki.png", alt="Properties pane in the Elements panel", width="800", height="448" %}
 
 Chromium issue: [1105205][32], [1116085][33]
 
@@ -238,7 +238,7 @@ in your browser. The raw header values look like opaque strings since they are b
 serialized [protocol buffers][34]. To make the contents more transparent to developers, DevTools is
 now showing the decoded values.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1UGV59FZody02UIJYY9z.png", alt="Human-readable `X-Client-Data` header values", width="800", height="454" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1UGV59FZody02UIJYY9z.png", alt="Human-readable `X-Client-Data` header values", width="800", height="454" %}
 
 Chromium issue: [1103854][35]
 
@@ -250,7 +250,7 @@ property in the **Styles** pane.
 In this example, `'Noto Sans'` is a custom font installed in the local machine. It is displayed in
 the CSS completion list. Previously, it was not.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vGxVqEkbmjCzdrohbrf6.png", alt="Auto-complete custom fonts", width="800", height="440" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vGxVqEkbmjCzdrohbrf6.png", alt="Auto-complete custom fonts", width="800", height="440" %}
 
 Chromium issue: [1106221][36]
 
@@ -261,7 +261,7 @@ appends `/ Redirect` to the **Type** column value when redirection (status 302) 
 
 Previously DevTools changed the type to `Other` sometimes.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PZKRaTCgqsKPIH1Wq4LQ.png", alt="Display redirect resource type", width="800", height="487" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PZKRaTCgqsKPIH1Wq4LQ.png", alt="Display redirect resource type", width="800", height="487" %}
 
 Chromium issue: [997694][37]
 
@@ -271,7 +271,7 @@ The filter text boxes in the **Styles** pane and **Network** panel, as well as t
 box in the **Elements** panel, now have **Clear** buttons. Clicking **Clear** removes any text that
 you have input.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BKLSpd4HoW62Ql8PbqEp.png", alt="Clear buttons in the Elements and Network panels", width="800", height="454" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BKLSpd4HoW62Ql8PbqEp.png", alt="Clear buttons in the Elements and Network panels", width="800", height="454" %}
 
 Chromium issue: [1067184][38]
 
