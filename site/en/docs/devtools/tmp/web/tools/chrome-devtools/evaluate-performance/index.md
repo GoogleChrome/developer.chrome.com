@@ -42,7 +42,7 @@ performance bottleneck on the page.
 
 3.  Press Command+Option+I (Mac) or Control+Shift+I (Windows, Linux) to open DevTools.
 
-    ![The demo on the left, and DevTools on the right](/web/tools/chrome-devtools/evaluate-performance/imgs/get-started.png)
+    {% Img src="image/admin/IXp4LurzBB57BgokE7aC.png", alt="The demo on the left, and DevTools on the right", width="800", height="562" %}
 
     **Figure 1**. The demo on the left, and DevTools on the right
 
@@ -61,12 +61,12 @@ CPU Throttling to simulate how your page performs on mobile devices.
 1.  In DevTools, click the **Performance** tab.
 2.  Make sure that the **Screenshots** checkbox is enabled.
 3.  Click **Capture Settings**
-    ![Capture Settings](/web/tools/chrome-devtools/evaluate-performance/imgs/capture-settings.png).
+    {% Img src="image/admin/4LzQVJAubPkguM9kg402.png", alt="Capture Settings", width="28", height="28" %}.
     DevTools reveals settings related to how it captures performance metrics.
 4.  For **CPU**, select **2x slowdown**. DevTools throttles your CPU so that it's 2 times slower
     than usual.
 
-    ![CPU throttling](/web/tools/chrome-devtools/evaluate-performance/imgs/throttling.svg)
+    {% Img src="image/admin/ah6pOJ4pk0HgCcohE5ak.svg", alt="CPU throttling", width="800", height="527" %}
 
     **Figure 2**. CPU throttling, outlined in blue
 
@@ -108,10 +108,10 @@ a recording in the Performance panel to learn how to detect the performance bott
 un-optimized version.
 
 1.  In DevTools, click **Record**
-    ![Record](/web/tools/chrome-devtools/evaluate-performance/imgs/record.png). DevTools captures
+    {% Img src="image/admin/gEStzrqw8NDLLcN1siJB.png", alt="Record", width="24", height="24" %}. DevTools captures
     performance metrics as the page runs.
 
-    ![Profiling the page](/web/tools/chrome-devtools/evaluate-performance/imgs/profiling.png)
+    {% Img src="image/admin/eZtzzkEKshRv8KFYbajF.png", alt="Profiling the page", width="800", height="527" %}
 
     **Figure 3**: Profiling the page
 
@@ -119,7 +119,7 @@ un-optimized version.
 3.  Click **Stop**. DevTools stops recording, processes the data, then displays the results on the
     Performance panel.
 
-    ![The results of the profile](/web/tools/chrome-devtools/evaluate-performance/imgs/results.png)
+    {% Img src="image/admin/lj5ApwyK5o0YmdcYeHjh.png", alt="The results of the profile", width="800", height="889" %}
 
     **Figure 4**: The results of the profile
 
@@ -139,7 +139,7 @@ happy when animations run at 60 FPS.
     dropped so low that it's probably harming the user experience. In general, the higher the green
     bar, the higher the FPS.
 
-    ![The FPS chart](/web/tools/chrome-devtools/evaluate-performance/imgs/fps-chart.svg)
+    {% Img src="image/admin/rLbUyQ0Y0p6xIiwy85SK.svg", alt="The FPS chart", width="800", height="530" %}
 
     **Figure 5**: The FPS chart, outlined in blue
 
@@ -148,7 +148,7 @@ happy when animations run at 60 FPS.
     **CPU** chart is full of color means that the CPU was maxed out during the recording. Whenever
     you see the CPU maxed out for long periods, it's a cue to find ways to do less work.
 
-    ![The CPU chart and Summary tab](/web/tools/chrome-devtools/evaluate-performance/imgs/cpu-summary.svg)
+    {% Img src="image/admin/XFtPfdKzTPBXeQC9g9OC.svg", alt="The CPU chart and Summary tab", width="800", height="889" %}
 
     **Figure 6**: The CPU chart and Summary tab, outlined in blue
 
@@ -156,14 +156,14 @@ happy when animations run at 60 FPS.
     the page at that point in time. Move your mouse left and right to replay the recording. This is
     called scrubbing, and it's useful for manually analyzing the progression of animations.
 
-    ![Viewing a screenshot](/web/tools/chrome-devtools/evaluate-performance/imgs/screenshot.png)
+    {% Img src="image/admin/HwxH2YN7r7EbH6X7O9nD.png", alt="Viewing a screenshot", width="800", height="528" %}
 
     **Figure 7**: Viewing a screenshot of the page around the 2000ms mark of the recording
 
 4.  In the **Frames** section, hover your mouse over one of the green squares. DevTools shows you
     the FPS for that particular frame. Each frame is probably well below the target of 60 FPS.
 
-    ![Hovering over a frame](/web/tools/chrome-devtools/evaluate-performance/imgs/frame.png)
+    {% Img src="image/admin/8CgXsm3N7ZoqexM4papz.png", alt="Hovering over a frame", width="800", height="542" %}
 
     **Figure 8**: Hovering over a frame
 
@@ -179,7 +179,7 @@ Another handy tool is the FPS meter, which provides real-time estimates for FPS 
 3.  In the **Rendering** tab, enable **FPS Meter**. A new overlay appears in the top-right of your
     viewport.
 
-    ![The FPS meter](/web/tools/chrome-devtools/evaluate-performance/imgs/fps-meter.png)
+    {% Img src="image/admin/CnzqipAr4ZLTZMhzj9tQ.png", alt="The FPS meter", width="800", height="593" %}
 
     **Figure 9**: The FPS meter
 
@@ -195,7 +195,7 @@ to answer is: why?
     The page spent most of its time rendering. Since performance is the art of doing less work, your
     goal is to reduce the amount of time spent doing rendering work.
 
-    ![The Summary tab](/web/tools/chrome-devtools/evaluate-performance/imgs/summary.svg)
+    {% Img src="image/admin/icVAEBrsTnHXfg68xO0W.svg", alt="The Summary tab", width="800", height="716" %}
 
     **Figure 10**: The Summary tab, outlined in blue
 
@@ -204,7 +204,7 @@ to answer is: why?
     bar means that event took longer. The y-axis represents the call stack. When you see events
     stacked on top of each other, it means the upper events caused the lower events.
 
-    ![The Main section](/web/tools/chrome-devtools/evaluate-performance/imgs/main.svg)
+    {% Img src="image/admin/SqkREdHdAzgeXavWwMtC.svg", alt="The Main section", width="800", height="662" %}
 
     **Figure 11**: The Main section, outlined in blue
 
@@ -213,7 +213,7 @@ to answer is: why?
     includes the **FPS**, **CPU**, and **NET** charts. The **Main** section and **Summary** tab only
     display information for the selected portion of the recording.
 
-    ![Zoomed in on a single Animation Frame Fired event](/web/tools/chrome-devtools/evaluate-performance/imgs/zoomed.png)
+    {% Img src="image/admin/ZKsCP4UtDA1wxaqGHqi7.png", alt="Zoomed in on a single Animation Frame Fired event", width="800", height="622" %}
 
     **Figure 12**: Zoomed in on a single Animation Frame Fired event
 
@@ -239,7 +239,7 @@ to answer is: why?
     initiated the **Animation Frame Fired** event. Also note the **app.js:94** link. Clicking that
     jumps you to the relevant line in the source code.
 
-    ![More information about the Animation Frame Fired event](/web/tools/chrome-devtools/evaluate-performance/imgs/animation-frame-fired.png)
+    {% Img src="image/admin/IeZiW7iMHzE1MwxqFPAg.png", alt="More information about the Animation Frame Fired event", width="800", height="821" %}
 
     **Figure 13**: More information about the Animation Frame Fired event
 
@@ -256,7 +256,7 @@ to answer is: why?
 7.  In the **Summary** tab, click the **app.js:70** link under **Layout Forced**. DevTools takes you
     to the line of code that forced the layout.
 
-    ![The line of code that caused the forced layout](/web/tools/chrome-devtools/evaluate-performance/imgs/forced-layout-src.png)
+    {% Img src="image/admin/q9y3chHXU2LoRUvc62JS.png", alt="The line of code that caused the forced layout", width="800", height="513" %}
 
     **Figure 13**: The line of code that caused the forced layout
 

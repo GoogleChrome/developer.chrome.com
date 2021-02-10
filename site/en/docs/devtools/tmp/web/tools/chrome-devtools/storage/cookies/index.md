@@ -19,13 +19,13 @@ page's cookies with Chrome DevTools.
 2.  Click the **Application** tab to open the **Application** panel. The **Manifest** pane will
     probably open.
 
-    ![The Manifest pane](/web/tools/chrome-devtools/storage/imgs/manifest.png)
+    {% Img src="image/admin/VdjVnm7S9Pbg4THMrlc0.png", alt="The Manifest pane", width="800", height="619" %}
 
     **Figure 1**. The Manifest pane
 
 3.  Under **Storage** expand **Cookies**, then select an origin.
 
-    ![The Cookies pane](/web/tools/chrome-devtools/storage/imgs/cookies.png)
+    {% Img src="image/admin/Yl2rWrOQvnBHkZwjUzOi.png", alt="The Cookies pane", width="800", height="445" %}
 
     **Figure 2**. The Cookies pane
 
@@ -55,7 +55,7 @@ The **Cookies** table contains the following fields:
 Use the **Filter** text box to filter cookies by **Name** or **Value**. Filtering by other fields is
 not supported.
 
-![Filtering out any cookies that don't contain the text 'NID'](/web/tools/chrome-devtools/storage/imgs/filtercookies.png)
+{% Img src="image/admin/uqHAFnsQgjLFqg5Fcu6S.png", alt="Filtering out any cookies that don't contain the text 'NID'", width="800", height="401" %}
 
 **Figure 3**. Filtering out any cookies that don't contain the text `NID`
 
@@ -64,23 +64,23 @@ not supported.
 The **Name**, **Value**, **Domain**, **Path**, and **Expires / Max-Age** fields are editable.
 Double-click a field to edit it.
 
-![Setting the name of a cookie to 'DEVTOOL!'](/web/tools/chrome-devtools/storage/imgs/editcookie.png)
+{% Img src="image/admin/uUZg7B7jgE41Vaz4pYxx.png", alt="Setting the name of a cookie to 'DEVTOOL!'", width="800", height="445" %}
 
 **Figure 4**. Setting the name of a cookie to `DEVTOOLS!`
 
 ## Delete cookies {: #delete }
 
 Select a cookie and then click **Delete Selected**
-![Delete Selected](/web/tools/chrome-devtools/images/shared/delete.png) to delete that one cookie.
+{% Img src="image/admin/frAwfK150YtdxHAOVccj.png", alt="Delete Selected", width="20", height="20" %} to delete that one cookie.
 
-![Deleting a selected cookie](/web/tools/chrome-devtools/storage/imgs/deletecookie.png)
+{% Img src="image/admin/SRIEc7haLwu49I4A94yg.png", alt="Deleting a selected cookie", width="800", height="401" %}
 
 **Figure 5**. Deleting a selected cookie
 
-Click **Clear All** ![Clear All](/web/tools/chrome-devtools/images/shared/clear.png) to delete all
+Click **Clear All** {% Img src="image/admin/tQ74nCvbca93aX5voHXy.png", alt="Clear All", width="26", height="26" %} to delete all
 cookies.
 
-![Clearing all cookies](/web/tools/chrome-devtools/storage/imgs/clearallcookies.png)
+{% Img src="image/admin/YKnko46qX5nMMn3V26Sn.png", alt="Clearing all cookies", width="800", height="401" %}
 
 **Figure 6**. Clearing all cookies
 

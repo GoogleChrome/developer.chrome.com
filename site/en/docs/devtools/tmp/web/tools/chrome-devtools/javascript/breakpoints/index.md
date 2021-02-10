@@ -34,7 +34,7 @@ To set a line-of-code breakpoint in DevTools:
 4.  To the left of the line of code is the line number column. Click on it. A blue icon appears on
     top of the line number column.
 
-![A line-of-code breakpoint.](/web/tools/chrome-devtools/javascript/imgs/loc-breakpoint.png)
+{% Img src="image/admin/0BqKJaEX3Afeq6s5GbA6.png", alt="A line-of-code breakpoint.", width="800", height="572" %}
 **Figure 1**: A line-of-code breakpoint set on line **29**
 
 ### Line-of-code breakpoints in your code {: #debugger }
@@ -64,14 +64,14 @@ To set a conditional line-of-code breakpoint:
 6.  Enter your condition in the dialog.
 7.  Press Enter to activate the breakpoint. An orange icon appears on top of the line number column.
 
-![A conditional line-of-code breakpoint.](/web/tools/chrome-devtools/javascript/imgs/conditional-loc-breakpoint.png)
+{% Img src="image/admin/g9xQCASKEYBNWZoztC4G.png", alt="A conditional line-of-code breakpoint.", width="800", height="553" %}
 **Figure 2**: A conditional line-of-code breakpoint set on line **32**
 
 ### Manage line-of-code breakpoints {: #manage-loc }
 
 Use the **Breakpoints** pane to disable or remove line-of-code breakpoints from a single location.
 
-![The Breakpoints pane.](/web/tools/chrome-devtools/javascript/imgs/breakpoints-pane.png) **Figure
+{% Img src="image/admin/dgJMnIWMWFIwtJ76X9w0.png", alt="The Breakpoints pane.", width="800", height="578" %} **Figure
 3**: The **Breakpoints** pane showing two line-of-code breakpoints: one on line 15 of
 `get-started.js`, another on line 32
 
@@ -83,7 +83,7 @@ Use the **Breakpoints** pane to disable or remove line-of-code breakpoints from 
   to also maintain preserve their enabled state so that they are in the same state as before when
   you reactivate them.
 
-![Deactivated breakpoints in the Breakpoints pane.](/web/tools/chrome-devtools/javascript/imgs/deactivated-breakpoints.png)
+{% Img src="image/admin/jR6uTu7EVph7vbfunUa3.png", alt="Deactivated breakpoints in the Breakpoints pane.", width="800", height="657" %}
 **Figure 4**: Deactivated breakpoints in the **Breakpoints** pane are disabled and transparent
 
 ## DOM change breakpoints {: #dom }
@@ -99,7 +99,7 @@ To set a DOM change breakpoint:
 4.  Hover over **Break on** then select **Subtree modifications**, **Attribute modifications**, or
     **Node removal**.
 
-![The context menu for creating a DOM change breakpoint.](/web/tools/chrome-devtools/javascript/imgs/dom-change-breakpoint.png)
+{% Img src="image/admin/PlPfY25q2BTOrc69IVDj.png", alt="The context menu for creating a DOM change breakpoint.", width="800", height="577" %}
 **Figure 5**: The context menu for creating a DOM change breakpoint
 
 ### Types of DOM change breakpoints {: #dom-types }
@@ -134,7 +134,7 @@ To set an XHR breakpoint:
     anywhere in an XHR's request URL.
 5.  Press Enter to confirm.
 
-![Creating an XHR breakpoint.](/web/tools/chrome-devtools/javascript/imgs/xhr-breakpoint.png)
+{% Img src="image/admin/BQXfCgOqQp7usvLOSySx.png", alt="Creating an XHR breakpoint.", width="800", height="698" %}
 **Figure 6**: Creating an XHR breakpoint in the **XHR Breakpoints** for any request that contains
 `org` in the URL
 
@@ -150,7 +150,7 @@ all mouse events.
 3.  Check one of these categories to pause whenever any event from that category is fired, or expand
     the category and check a specific event.
 
-![Creating an event listener breakpoint.](/web/tools/chrome-devtools/javascript/imgs/event-listener-breakpoint.png)
+{% Img src="image/admin/c40PakNjXuOPIn21VySn.png", alt="Creating an event listener breakpoint.", width="800", height="543" %}
 **Figure 7**: Creating an event listener breakpoint for `deviceorientation`
 
 ## Exception breakpoints {: #exceptions }
@@ -164,13 +164,13 @@ uncaught exception.
 exceptions](/web/tools/chrome-devtools/javascript/imgs/pause-on-exceptions.png). It
     turns blue when enabled.
 
-    ![The 'Pause on exceptions' button.](/web/tools/chrome-devtools/javascript/imgs/pause-on-exceptions-highlight.png)
+    {% Img src="image/admin/Rc3ID0gnnhS8JBMCbF6J.png", alt="The 'Pause on exceptions' button.", width="800", height="594" %}
     **Figure 8**: The **Pause on exceptions** button
 
 3.  (Optional) Check the **Pause On Caught Exceptions** checkbox if you also want to pause on caught
     exceptions, in addition to uncaught ones.
 
-![Paused on an uncaught exception.](/web/tools/chrome-devtools/javascript/imgs/uncaught-exception.png)
+{% Img src="image/admin/kCtXt5gDE2wHcxyEytig.png", alt="Paused on an uncaught exception.", width="800", height="550" %}
 **Figure 9**: Paused on an uncaught exception
 
 ## Function breakpoints {: #function }

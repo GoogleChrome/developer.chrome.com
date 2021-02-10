@@ -60,7 +60,7 @@ process of writing the HTML and JavaScript for a page:
 **Figure 1** shows what the Console looks like after loading the page and waiting 3 seconds. Try to
 figure out which lines of code caused the browser to log the messages.
 
-![The Console panel.](/web/tools/chrome-devtools/console/images/overviewlogging.png)
+{% Img src="image/admin/dpOohQpnFAKdK0JpVvuv.png", alt="The Console panel.", width="800", height="437" %}
 
 **Figure 1**. The Console panel.
 
@@ -79,11 +79,11 @@ The Console is also a [REPL][5]. You can run JavaScript in the Console to intera
 that you're inspecting. For example, **Figure 2** shows the Console next to the DevTools homepage,
 and **Figure 3** shows that same page after using the Console to change the page's title.
 
-![The Console panel next to the DevTools homepage.](/web/tools/chrome-devtools/console/images/overviewjs1.png)
+{% Img src="image/admin/HsESeWdYC1Yck5qTtzkj.png", alt="The Console panel next to the DevTools homepage.", width="800", height="507" %}
 
 **Figure 2**. The Console panel next to the DevTools homepage.
 
-![Using the Console to change the page's title.](/web/tools/chrome-devtools/console/images/overviewjs2.png)
+{% Img src="image/admin/Diu3Bq4TbPWb9Y5gr7HX.png", alt="Using the Console to change the page's title.", width="800", height="507" %}
 
 **Figure 3**. Using the Console to change the page's title.
 
