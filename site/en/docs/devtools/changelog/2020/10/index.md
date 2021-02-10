@@ -9,11 +9,11 @@ description:
   "New CSS Grid debugging tools, Web Authn tab, moveable tools and Computed sidebar pane."
 ---
 
-!!!.aside.aside--note
+{% Aside %}
 
 Interested in helping improve DevTools? Sign up to participate in [Google User Research here][1].
 
-!!!
+{% endAside %}
 
 {% YouTube id="bE3O6EhLjPc" %}
 
@@ -173,19 +173,19 @@ Chromium issue: [1121312][24]
 
 ## Experimental features {: #experimental }
 
-!!!.aside.aside--caution
+{% Aside "caution" %}
 
 Caution: Experimental features are still under development and subject to change.
 
-!!!
+{% endAside %}
 
 ### View and fix color contrast issues in the CSS Overview panel {: #css-overview }
 
-!!!.aside.aside--note
+{% Aside %}
 
 To enable this experiment, check the **CSS Overview** checkbox under **Settings** > **Experiments**.
 
-!!!
+{% endAside %}
 
 **CSS Overview** panel now displays a list of low color contrast texts of your page.
 
@@ -201,12 +201,12 @@ Chromium issue: [1120316][27]
 
 ### Customize keyboard shortcuts in DevTools {: #customize }
 
-!!!.aside.aside--note
+{% Aside %}
 
 To enable this experiment, check the **Enable keyboard shortcut editor** checkbox under
 **Settings** > **Experiments**.
 
-!!!
+{% endAside %}
 
 You can now customize the keyboard shortcuts for your favourite commands in DevTools.
 

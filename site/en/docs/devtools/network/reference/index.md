@@ -11,13 +11,13 @@ description: "A comprehensive reference of Chrome DevTools Network panel feature
 Discover new ways to analyze how your page loads in this comprehensive reference of Chrome DevTools
 network analysis features.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This reference is based on Chrome 58. If you use another version of Chrome, the UI and
 features of DevTools may be different. Check `chrome://help` to see what version of Chrome you're
 running.
 
-!!!
+{% endAside %}
 
 ## Record network requests {: #record }
 
@@ -552,12 +552,12 @@ Network panel. The `DOMContentLoaded` event is colored blue, and the `load` even
 
 The total number of requests is listed in the Summary pane, at the bottom of the Network panel.
 
-!!!.aside.aside--caution
+{% Aside "caution" %}
 
 **Caution:** This number only tracks requests that have been logged since DevTools was opened. If
 other requests occurred before DevTools was opened, those requests aren't counted.
 
-!!!
+{% endAside %}
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ce9YHacO35q8t5wbmFp9.svg", alt="The total number of requests since DevTools was opened", width="705", height="450" %}
 
@@ -568,12 +568,12 @@ other requests occurred before DevTools was opened, those requests aren't counte
 The total download size of requests is listed in the Summary pane, at the bottom of the Network
 panel.
 
-!!!.aside.aside--caution
+{% Aside "caution" %}
 
 **Caution:** This number only tracks requests that have been logged since DevTools was opened. If
 other requests occurred before DevTools was opened, those requests aren't counted.
 
-!!!
+{% endAside %}
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hlTa0Pu0GRSTt1yuantk.svg", alt="The total download size of requests", width="705", height="450" %}
 

@@ -113,12 +113,12 @@ See also [Set orientation][8].
 When simulating the dimensions of a specific mobile device like an iPhone 6, open **More options**
 and then select **Show device frame** to show the physical device frame around the viewport.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** If you don't see a device frame for a particular device, it probably means that DevTools
 just doesn't have art for that specific option.
 
-!!!
+{% endAside %}
 
 {% Img src="image/admin/YQw0pa2iWzi3pEQbwphz.png", alt="Show device frame.", width="800", height="567" %}
 

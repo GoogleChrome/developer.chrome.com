@@ -8,24 +8,24 @@ updated: 2020-07-24
 description: "Learn how to evaluate runtime performance in Chrome DevTools."
 ---
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** See [Optimize Website Speed][1] to learn how make your pages load faster.
 
-!!!
+{% endAside %}
 
 Runtime performance is how your page performs when it is running, as opposed to loading. This
 tutorial teaches you how to use the Chrome DevTools Performance panel to analyze runtime
 performance. In terms of the [RAIL][2] model, the skills you learn in this tutorial are useful for
 analyzing the Response, Animation, and Idle phases of your page.
 
-!!!.aside.aside--caution
+{% Aside "caution" %}
 
 **Caution:** This tutorial is based on Chrome 59. If you use another version of Chrome, the UI and
 features of DevTools may be different. Check `chrome://help` to see what version of Chrome you're
 running.
 
-!!!
+{% endAside %}
 
 ## Get started {: #get-started }
 
@@ -46,12 +46,12 @@ performance bottleneck on the page.
 
     **Figure 1**. The demo on the left, and DevTools on the right
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note**: For the rest of the screenshots, DevTools is [undocked to a separate window][4] so
     that you can see its contents better.
 
-    !!!
+    {% endAside %}
 
 ### Simulate a mobile CPU {: #simulate_a_mobile_cpu }
 
@@ -70,13 +70,13 @@ CPU Throttling to simulate how your page performs on mobile devices.
 
     **Figure 2**. CPU throttling, outlined in blue
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note**: When testing other pages, if you want to ensure that they work well on low-end mobile
     devices, set CPU Throttling to **20x slowdown**. This demo doesn't work well with 20x slowdown,
     so it just uses 2x slowdown for instructional purposes.
 
-    !!!
+    {% endAside %}
 
 ### Set up the demo {: #set_up_the_demo }
 
@@ -89,14 +89,14 @@ particular setup.
     high-end machine, it may take about 20 clicks.
 2.  Click **Optimize**. The blue squares should move faster and more smoothly.
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note**: If you don't see a noticeable difference between the optimized and un-optimized
     versions, try clicking **Subtract 10** a few times and trying again. If you add too many blue
     squares, you're just going to max out the CPU and you're not going to see a major difference in
     the results for the two versions.
 
-    !!!
+    {% endAside %}
 
 3.  Click **Un-Optimize**. The blue squares move slower and with more jank again.
 
@@ -217,22 +217,22 @@ to answer is: why?
 
     **Figure 12**: Zoomed in on a single Animation Frame Fired event
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note**: Another way to zoom is to focus the **Main** section by clicking its background or
     selecting an event, and then press the W, A, S, and D keys.
 
-    !!!
+    {% endAside %}
 
 4.  Note the red triangle in the top-right of the **Animation Frame Fired** event. Whenever you see
     a red triangle, it's a warning that there may be an issue related to this event.
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note**: The **Animation Frame Fired** event occurs whenever a [`requestAnimationFrame()`][5]
     callback is executed.
 
-    !!!
+    {% endAside %}
 
 5.  Click the **Animation Frame Fired** event. The **Summary** tab now shows you information about
     that event. Note the **reveal** link. Clicking that causes DevTools to highlight the event that
@@ -243,11 +243,11 @@ to answer is: why?
 
     **Figure 13**: More information about the Animation Frame Fired event
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note**: After selecting an event, use the arrow keys to select the events next to it.
 
-    !!!
+    {% endAside %}
 
 6.  Under the **app.update** event, there's a bunch of purple events. If they were wider, it looks
     as though each one might have a red triangle on it. Click one of the purple **Layout** events
@@ -260,7 +260,7 @@ to answer is: why?
 
     **Figure 13**: The line of code that caused the forced layout
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note**: The problem with this code is that, in each animation frame, it changes the style for
     each square, and then queries the position of each square on the page. Because the styles
@@ -268,7 +268,7 @@ to answer is: why?
     square in order to compute its position. See [Avoid forced synchronous layouts][6] to learn
     more.
 
-    !!!
+    {% endAside %}
 
 Phew! That was a lot to take in, but you now have a solid foundation in the basic workflow for
 analyzing runtime performance. Good job.
@@ -280,13 +280,13 @@ optimized code, take another performance recording, and then analyze the results
 framerate to the reduction in events in the **Main** section's flame chart, you can see that the
 optimized version of the app does much less work, resulting in better performance.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Even this "optimized" version isn't that great, because it still manipulates the `top`
 property of each square. A better approach is to stick to properties that only affect compositing.
 See [Use transform and opacity changes for animations][7] for more information.
 
-!!!
+{% endAside %}
 
 ## Next steps {: #next_steps }
 
