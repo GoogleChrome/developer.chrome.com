@@ -16,26 +16,26 @@ key-value pairs.
 1.  Click the **Application** tab to open the **Application** panel. The **Manifest** pane is shown
     by default.
 
-    ![The Manifest pane](/web/tools/chrome-devtools/storage/imgs/manifest.png)
+    {% Img src="image/admin/D0n4Y2LgEnwi2x98f4Su.png", alt="The Manifest pane", width="800", height="619" %}
 
     **Figure 1**. The Manifest pane
 
 2.  Expand the **Local Storage** menu.
 
-    ![The Local Storage Menu](/web/tools/chrome-devtools/storage/imgs/localstoragemenu.png)
+    {% Img src="image/admin/HV8eHezUc8qcKPyDnS1S.png", alt="The Local Storage Menu", width="800", height="525" %}
 
     **Figure 2**. The **Local Storage** menu shows two domains: **https://developers.google.com**
     and **https://www.youtube.com**
 
 3.  Click a domain to view its key-value pairs.
 
-    ![The localStorage key-value pairs for the https://www.youtube.com domain](/web/tools/chrome-devtools/storage/imgs/localstorage.png)
+    {% Img src="image/admin/sZ8JCGib96F45euuc4pi.png", alt="The localStorage key-value pairs for the https://www.youtube.com domain", width="800", height="525" %}
 
     **Figure 3**. The `localStorage` key-value pairs for the **https://www.youtube.com** domain
 
 4.  Click a row of the table to view the value in the viewer below the table.
 
-    ![Viewing the value of the yt-remote-connected-devices key](/web/tools/chrome-devtools/storage/imgs/localstorageviewer.png)
+    {% Img src="image/admin/fC3vyAbvWYXqcTRhnpun.png", alt="Viewing the value of the yt-remote-connected-devices key", width="800", height="525" %}
 
     **Figure 4**. Viewing the value of the `yt-remote-connected-devices` key
 
@@ -56,7 +56,7 @@ key-value pairs.
 1.  [View a domain's `localStorage` key-value pairs][4].
 2.  Double-click a cell in the **Key** or **Value** column to edit that key or value.
 
-    ![Editing a localStorage key](/web/tools/chrome-devtools/storage/imgs/localstorageedit.png)
+    {% Img src="image/admin/eEghzgOxFdtCglymVTfO.png", alt="Editing a localStorage key", width="800", height="525" %}
 
     **Figure 6**. Editing a `localStorage` key
 
@@ -66,12 +66,12 @@ key-value pairs.
 2.  Click the key-value pair that you want to delete. DevTools highlights it blue to indicate that
     it's selected.
 3.  Press the Delete key or click **Delete Selected**
-    ![Delete Selected](/web/tools/chrome-devtools/images/shared/delete.png).
+    {% Img src="image/admin/Ut5ykA2d9ulNxQMcrILz.png", alt="Delete Selected", width="20", height="20" %}.
 
 ## Delete all localStorage key-value pairs for a domain {: #deleteall }
 
 1.  [View a domain's `localStorage` key-value pairs][6].
-2.  Click **Clear All** ![Clear All](/web/tools/chrome-devtools/images/shared/clear.png).
+2.  Click **Clear All** {% Img src="image/admin/R7oNtQoKqUSqP55Ux0ck.png", alt="Clear All", width="26", height="26" %}.
 
 ## Interact with localStorage from the Console {: #console }
 
@@ -81,13 +81,13 @@ JavaScript contexts, it's possible to interact with `localStorage` from the **Co
 1.  Use the **JavaScript contexts** menu to change the JavaScript context of the **Console** if you
     want to access the `localStorage` key-value pairs of a domain other than the page you're on.
 
-    ![Changing the JavaScript context of the Console](/web/tools/chrome-devtools/storage/imgs/jscontext.png)
+    {% Img src="image/admin/g7AlwIgHyyhjWhzrX6aI.png", alt="Changing the JavaScript context of the Console", width="800", height="525" %}
 
     **Figure 7**. Changing the JavaScript context of the **Console**
 
 2.  Run your `localStorage` expressions in the Console, the same as you would in your JavaScript.
 
-    ![Interacting with localStorage from the Console](/web/tools/chrome-devtools/storage/imgs/localstorageconsole.png)
+    {% Img src="image/admin/AgbPaacvuPCKVaBuQVGE.png", alt="Interacting with localStorage from the Console", width="800", height="579" %}
 
     **Figure 8**. Interacting with `localStorage` from the **Console**
 

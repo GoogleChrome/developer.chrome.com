@@ -27,7 +27,7 @@ debugging.
 4.  Click **Add Number 1 and Number 2**. The label below the button says `5 + 1 = 51`. The result
     should be `6`. This is the bug you're going to fix.
 
-    ![The result of 5 + 1 is 51. It should be 6.](/web/tools/chrome-devtools/javascript/imgs/bug.png)
+    {% Img src="image/admin/dCZqJCgs1FHWJAeJ1Nub.png", alt="The result of 5 + 1 is 51. It should be 6.", width="800", height="707" %}
 
     **Figure 1**. The result of 5 + 1 is 51. It should be 6.
 
@@ -40,19 +40,19 @@ JavaScript.
 1.  Open DevTools by pressing Command+Option+I (Mac) or Control+Shift+I (Windows, Linux). This
     shortcut opens the **Console** panel.
 
-    ![The Console panel.](/web/tools/chrome-devtools/javascript/imgs/console.png)
+    {% Img src="image/admin/JS6A41j5zLtT1J0xqjqL.png", alt="The Console panel.", width="800", height="494" %}
 
     **Figure 2**. The **Console** panel
 
 2.  Click the **Sources** tab.
 
-    ![The Sources panel.](/web/tools/chrome-devtools/javascript/imgs/sources.png)
+    {% Img src="image/admin/1jeGIsUUPzcGzXOrPOTB.png", alt="The Sources panel.", width="800", height="566" %}
 
     **Figure 3**. The **Sources** panel
 
 The **Sources** panel UI has 3 parts:
 
-![The 3 parts of the Sources panel UI.](/web/tools/chrome-devtools/javascript/imgs/sources-annotated.png)
+{% Img src="image/admin/fgJB1mwfZsJ7Pv21hzSt.png", alt="The 3 parts of the Sources panel UI.", width="800", height="566" %}
 
 **Figure 4**. The 3 parts of the **Sources** panel UI
 
@@ -100,7 +100,7 @@ icon](/web/tools/chrome-devtools/images/expand.png). DevTools reveals a list of 
 3.  Check the **click** checkbox. DevTools is now set up to automatically pause when _any_ `click`
     event listener executes.
 
-    ![The click checkbox is enabled.](/web/tools/chrome-devtools/javascript/imgs/get-started-click-breakpoint.png)
+    {% Img src="image/admin/j7toLd0kyGNvBJtMhRHS.png", alt="The click checkbox is enabled.", width="800", height="536" %}
 
     **Figure 5**. The **click** checkbox is enabled
 
@@ -136,7 +136,7 @@ enables you to walk through your code's execution, one line at a time, and figur
 it's executing in a different order than you expected. Try it now:
 
 1.  On the **Sources** panel of DevTools, click **Step into next function call**
-    ![Step into next function call](/web/tools/chrome-devtools/images/step-into.png) to step through
+    {% Img src="image/admin/uQ1yacZ8AMGI0EFMxT05.png", alt="Step into next function call", width="18", height="26" %} to step through
     the execution of the `onClick()` function, one line at a time. DevTools highlights the following
     line of code:
 
@@ -173,7 +173,7 @@ execution](/web/tools/chrome-devtools/images/resume-script-execution.png). The
     script continues executing until it reaches line 32. On lines 29, 30, and 31, DevTools prints
     out the values of `addend1`, `addend2`, and `sum` to the right of each line's semi-colon.
 
-    ![DevTools pauses on the line-of-code breakpoint on line 32.](/web/tools/chrome-devtools/javascript/imgs/line-of-code-breakpoint.png)
+    {% Img src="image/admin/99Omb7ALyJB7MfYpuqXp.png", alt="DevTools pauses on the line-of-code breakpoint on line 32.", width="800", height="571" %}
 
     **Figure 6**. DevTools pauses on the line-of-code breakpoint on line 32
 
@@ -191,7 +191,7 @@ are currently defined, along with the value of each variable. It also shows clos
 applicable. Double-click a variable value to edit it. When you're not paused on a line of code, the
 **Scope** pane is empty.
 
-![The Scope pane.](/web/tools/chrome-devtools/javascript/imgs/scope-pane.png)
+{% Img src="image/admin/Tynv55DnsSgtvpd6Iz9z.png", alt="The Scope pane.", width="800", height="538" %}
 
 **Figure 7**. The **Scope** pane
 
@@ -203,12 +203,12 @@ expression in a Watch Expression. Try it now:
 
 1.  Click the **Watch** tab.
 2.  Click **Add Expression**
-    ![Add Expression](/web/tools/chrome-devtools/javascript/imgs/add-expression.png).
+    {% Img src="image/admin/IYPLvXHyMtjVBILENOIL.png", alt="Add Expression", width="20", height="20" %}.
 3.  Type `typeof sum`.
 4.  Press Enter. DevTools shows `typeof sum: "string"`. The value to the right of the colon is the
     result of your Watch Expression.
 
-    ![The Watch Expression pane.](/web/tools/chrome-devtools/javascript/imgs/get-started-watch-expression.png)
+    {% Img src="image/admin/iAZLQFWjCy2kNbYKPGpR.png", alt="The Watch Expression pane.", width="800", height="542" %}
 
     **Figure 8**. The Watch Expression pane (bottom-right), after creating the `typeof sum` Watch
     Expression. If your DevTools window is large, the Watch Expression pane is on the right, above
@@ -230,7 +230,7 @@ for bugs. Try it now:
 3.  Press Enter. DevTools evaluates the statement and prints out `6`, which is the result you expect
     the demo to produce.
 
-    ![The Console drawer, after evaluating parseInt(addend1) + parseInt(addend2).](/web/tools/chrome-devtools/javascript/imgs/get-started-console.png)
+    {% Img src="image/admin/Z5dF1m9vAWBnpMG29Ltv.png", alt="The Console drawer, after evaluating parseInt(addend1) + parseInt(addend2).", width="800", height="608" %}
 
     **Figure 9**. The Console drawer, after evaluating `parseInt(addend1) + parseInt(addend2)`.
 
