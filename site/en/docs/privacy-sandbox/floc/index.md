@@ -66,35 +66,50 @@ FLoC allows sites to guess your interests without being able to uniquely identif
 ## How does FLoC work?
 
 ### FLoC server
-1. Creates points randomly distributed in n-dimensional 'browsing history space', and assigns each point a 'cohort name'.
+1. Creates points randomly distributed in n-dimensional 'browsing history space', and assigns each 
+point a 'cohort name'.
 
 ### User's browser, on their device
-1. Calculates the point in 'browsing history space' that corresponds to its browsing history.
+1. Calculates the point in 'browsing history space' that corresponds most closely to its browsing
+history.
 1. Gets the set of points with their cohort names from the FloC server.
-1. Works out its cohort name by calculating which point from the FLoC data is closest to its own.
+1. Works out its cohort name by calculating which point from the FLoC data is closest to its own. In
+other words, the browser, on the device, works out which cohort best matches its own browsing
+history.
 
 ### Advertiser (such as a shoe store)
 1. A user visits an advertiser site.
-1. The advertiser identifies correlations between conversions (or other desirable behaviour) and cohort names. For example, an online shoe store might learn that browsers from cohorts 219 and 9739 show a particular interest in hiking shoes.
+1. The advertiser identifies correlations between cohorts and conversions (or other desirable
+behaviour). For example, an online shoe store might learn that browsers from cohorts 219 and 9739
+show a particular interest in hiking shoes.
 1. The advertiser shares this information with advertising platforms.
 
 ### Publisher (such as a news website)
-1. A user visits a publisher website.
+1. User visits the publisher website.
 1. The site requests the browser's cohort name.
 1. The website makes a request for an ad to an ad platform, providing the browser's cohort name.
 
-### Ad platform
-1. The ad platform selects ads appropriate to a user by combining cohort information from a publisher website with cohort conversion information shared by the advertiser.
+### Ad platform 
+1. The ad platform can select ads appropriate to the user, since it has the browser's cohort name 
+from the publisher site, and data about what ads are appropriate for that cohort from the
+advertiser.
 
 For example:
 
-1. A user visits an advertiser site, such as an online shoe store, and views hiking shoes.
-1. The shoe store gets the cohort name of the user's browser: 9739.
-1. The shoe store shares this information with its ad platform: a browser with cohort name 9739 showed an interest in hiking shoes.
+1. A user visits an advertiser site, such as an online shoe store.
+1. The shoe store uses JavaScript to request the browser's cohort name, which is 9739.
+1. The user searches the store for hiking boots.
+1. The shoe store shares this information with its ad platform: "A browser from cohort 9739 showed
+an interest in hiking boots."
 1. Later, the user visits a news website that publishes ads.
-1. The news site shares the user's browser's cohort name 9739 with an ad platform, which is used by the shoe store.
-1. The ad platform knows (from the news site) that the browser's cohort name is 9739, and (from the shoe store) that cohort 9739 is interested in hiking shoes, so it provides the news site with a hiking shoe ad from the shoe store.
-1. Publisher (the news site) displays ads from the ad platform that are appropriate for the user's cohort.
+1. The news site requests the browser's cohort name.
+1. The news site requests an ad from its ad platform, providing the browser cohort name (9739) in
+its request. The ad platform happens to be the same one used by the shoe store to advertise its
+products.
+1. The ad platform now knows (from the news site) that the browser's cohort name is 9739, and (from
+the shoe store) that cohort 9739 is interested in hiking boots, so it provides the news site with a 
+hiking boot ad from the shoe store.
+1. The news site displays the ad.
 
 
 ## Find out more
