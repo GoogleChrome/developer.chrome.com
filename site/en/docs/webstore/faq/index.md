@@ -473,18 +473,6 @@ can use one of the Google Analytics libraries for standard websites (e.g., [anal
 
 The `.crx` file is currently limited to 2GB.
 
-### I have a free Flash game, can I host it in the store? {: #faq-app-08 }
-
-Yes. If you want to host it on your server, it is exactly the same as hosting a Flash file on your
-site. If you create a packaged app, you must include the complete app (with Flash file) in your ZIP
-file.
-
-### I have a Flash game that I would love to be able to take payments for, how can I do it? {: #faq-app-09 }
-
-Flash games are hosted inside a web page, this means that the payment infrastructure can be handled
-on the server that hosts the container page. Using the Licensing API makes it easy to determine if a
-user has paid or not.
-
 ### Do installable web apps run from the desktop, installed as separate apps, or otherwise operate independently of the browser? {: #faq-app-10 }
 
 No, Chrome Web Store apps are just web apps written with traditional web technologies, and are run
