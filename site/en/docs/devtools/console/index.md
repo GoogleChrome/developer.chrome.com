@@ -20,7 +20,7 @@ JavaScript. When the browser executes your JavaScript and sees an expression lik
 that it's supposed to log the message to the Console. For example, suppose that you're in the
 process of writing the HTML and JavaScript for a page:
 
-```
+```html
 <!doctype html>
 <html>
   <head>
