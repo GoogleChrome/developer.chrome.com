@@ -16,7 +16,7 @@ parts of the DevTools UI.
 When you want to inspect a DOM node's styles or attributes, right-click the element and select
 **Inspect**.
 
-![The Inspect option](/web/tools/chrome-devtools/images/inspect.png)
+{% Img src="image/admin/yDROFVw6p2poGhkOdFKu.png", alt="The Inspect option", width="800", height="648" %}
 
 **Figure 1**. The **Inspect** option
 
@@ -38,10 +38,10 @@ Press Command+Option+I (Mac) or Control+Shift+I.
 ## Open DevTools from Chrome's main menu {: #chrome }
 
 Click **Customize and control Google Chrome**
-![Customize and control Google Chrome](/web/tools/chrome-devtools/images/shared/main-menu.png) and
+{% Img src="image/admin/t7rsoT0IGcnwvW76Xj32.png", alt="Customize and control Google Chrome", width="6", height="26" %} and
 then select **More Tools** > **Developer Tools**.
 
-![Opening DevTools from Chrome's main menu.](/web/tools/chrome-devtools/images/open-from-main.png)
+{% Img src="image/admin/0bZRHFrsZGxpTAWhYCg6.png", alt="Opening DevTools from Chrome's main menu.", width="800", height="492" %}
 
 **Figure 2**. Opening DevTools from Chrome's main menu
 

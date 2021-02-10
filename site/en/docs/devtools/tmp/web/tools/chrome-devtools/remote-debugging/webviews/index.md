@@ -50,7 +50,7 @@ The **chrome://inspect** page displays a list of debug-enabled WebViews on your 
 To start debugging, click **inspect** below the WebView you want to debug. Use DevTools as you would
 for a remote browser tab.
 
-![Inspecting elements in a WebView](/web/tools/chrome-devtools/remote-debugging/imgs/webview-debugging.png)
+{% Img src="image/admin/bI74HumV9kgCZc0l3OXl.png", alt="Inspecting elements in a WebView", width="800", height="563" %}
 
 The gray graphics listed with the WebView represent its size and position relative to the device's
 screen. If your WebViews have titles set, the titles are listed as well.

@@ -21,13 +21,13 @@ This guide shows you how to use [Chrome DevTools][2] to inspect [Application Cac
 1.  Click the **Sources** tab to open the **Sources** panel. The **Manifest** pane usually opens by
     default.
 
-    ![The Manifest pane.](/web/tools/chrome-devtools/storage/imgs/manifest.png)
+    {% Img src="image/admin/DWM2ZTX1pMb2BuJmIPNd.png", alt="The Manifest pane.", width="800", height="619" %}
 
     **Figure 1**. The Manifest pane.
 
 2.  Expand the **Application Cache** section and click a cache to view its resources.
 
-    ![The Application Cache pane.](/web/tools/chrome-devtools/storage/imgs/appcache.png)
+    {% Img src="image/admin/lEGfiEPSEhRFY8C919gY.png", alt="The Application Cache pane.", width="800", height="427" %}
 
     **Figure 2**. The Application Cache pane.
 
