@@ -20,20 +20,20 @@ When you want to inspect a DOM node's styles or attributes, right-click the elem
 
 **Figure 1**. The **Inspect** option
 
-Or press Command+Option+C (Mac) or Control+Shift+C (Windows, Linux, Chrome OS).
+Or press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>C</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Windows, Linux, Chrome OS).
 
 See [Get Started With Viewing And Changing CSS][1].
 
 ## Open the Console panel to view logged messages or run JavaScript {: #console }
 
-Press Command+Option+J (Mac) or Control+Shift+J (Windows, Linux, Chrome OS) to jump straight into
+Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows, Linux, Chrome OS) to jump straight into
 the **Console** panel.
 
 See [Get Started With The Console][2].
 
 ## Open the last panel you had open {: #last }
 
-Press Command+Option+I (Mac) or Control+Shift+I.
+Press <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>I</kbd> (Mac) or <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>.
 
 ## Open DevTools from Chrome's main menu {: #chrome }
 
@@ -47,7 +47,7 @@ then select **More Tools** > **Developer Tools**.
 
 ## Auto-open DevTools on every new tab {: #auto }
 
-Open Chrome from the command line and pass the `--auto-open-devtools-for-tabs` flag.
+Open Chrome from the Command line and pass the `--auto-open-devtools-for-tabs` flag.
 
 Mac:
 
