@@ -34,10 +34,10 @@ actually runs on a mobile device.
 ## Simulate a mobile viewport {: #viewport }
 
 Click **Toggle Device Toolbar**
-![Toggle Device Toolbar](/web/tools/chrome-devtools/images/shared/toggle-device-toolbar.png) to open
+{% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="Toggle Device Toolbar", width="30", height="32" %} to open
 the UI that enables you to simulate a mobile viewport.
 
-![The Device Toolbar.](/web/tools/chrome-devtools/device-mode/imgs/device-toolbar.png)
+{% Img src="image/admin/9Hw1ojc4jyUdo0ycwH7X.png", alt="The Device Toolbar.", width="800", height="645" %}
 
 **Figure 1**. The Device Toolbar
 
@@ -49,7 +49,7 @@ Drag the handles to resize the viewport to whatever dimensions you need. Or, ent
 in the width and height boxes. In **Figure 2**, the width is set to `628` and the height is set to
 `662`.
 
-![The handles for changing the viewport's dimensions when in Responsive Viewport Mode.](/web/tools/chrome-devtools/device-mode/imgs/responsive-handles.png)
+{% Img src="image/admin/ElSBe9rER945XTdAyfEZ.png", alt="The handles for changing the viewport's dimensions when in Responsive Viewport Mode.", width="800", height="645" %}
 
 **Figure 2**. The handles for changing the viewport's dimensions when in Responsive Viewport Mode
 
@@ -58,13 +58,13 @@ in the width and height boxes. In **Figure 2**, the width is set to `628` and th
 To show media query breakpoints above your viewport, click **More options** and then select **Show
 media queries**.
 
-![Show media queries.](/web/tools/chrome-devtools/device-mode/imgs/show-media-queries.png)
+{% Img src="image/admin/oJZtLzKYgf4PTNvtAQSu.png", alt="Show media queries.", width="800", height="550" %}
 
 **Figure 3**. Show media queries
 
 Click a breakpoint to change the viewport's width so that the breakpoint gets triggered.
 
-![Click a breakpoint to change the viewport's width.](/web/tools/chrome-devtools/device-mode/imgs/breakpoint.png)
+{% Img src="image/admin/jrnh2WuIYexYaH5Qh3ZZ.png", alt="Click a breakpoint to change the viewport's width.", width="800", height="527" %}
 
 **Figure 4**. Click a breakpoint to change the viewport's width
 
@@ -72,7 +72,7 @@ Click a breakpoint to change the viewport's width so that the breakpoint gets tr
 
 Use the **Device Type** list to simulate a mobile device or desktop device.
 
-![The Device Type list.](/web/tools/chrome-devtools/device-mode/imgs/device-type.png)
+{% Img src="image/admin/S6rhZEC4PMfN5c3WpZk8.png", alt="The Device Type list.", width="800", height="468" %}
 
 **Figure 5**. The **Device Type** list
 
@@ -87,16 +87,16 @@ of cursor you see when you hover over the page. **Events fired** refers to wheth
 
 To simulate the dimensions of a specific mobile device, select the device from the **Device** list.
 
-![The Device list.](/web/tools/chrome-devtools/device-mode/imgs/device-list.png)
+{% Img src="image/admin/q5MGmsuKDvz67EWNfriE.png", alt="The Device list.", width="800", height="500" %}
 
 **Figure 6**. The Device list
 
 #### Rotate the viewport to landscape orientation {: #landscape }
 
-Click **Rotate** ![Rotate](/web/tools/chrome-devtools/device-mode/imgs/rotate.png) to rotate the
+Click **Rotate** {% Img src="image/admin/BU4jR7mdnO6VxOkWH1Wl.png", alt="Rotate", width="29", height="28" %} to rotate the
 viewport to landscape orientation.
 
-![Landscape orientation.](/web/tools/chrome-devtools/device-mode/imgs/landscape.png)
+{% Img src="image/admin/YMWoNEKKmHrRIxrR0vmv.png", alt="Landscape orientation.", width="800", height="372" %}
 
 **Figure 7**. Landscape orientation
 
@@ -120,11 +120,11 @@ just doesn't have art for that specific option.
 
 !!!
 
-![Show device frame.](/web/tools/chrome-devtools/device-mode/imgs/show-device-frame.png)
+{% Img src="image/admin/YQw0pa2iWzi3pEQbwphz.png", alt="Show device frame.", width="800", height="567" %}
 
 **Figure 9**. Show device frame
 
-![The device frame for the iPhone 6.](/web/tools/chrome-devtools/device-mode/imgs/iphone-frame.png)
+{% Img src="image/admin/hlZmXsdKkLqGUo0m8obv.png", alt="The device frame for the iPhone 6.", width="800", height="586" %}
 
 **Figure 10**. The device frame for the iPhone 6
 
@@ -134,7 +134,7 @@ To add a custom device:
 
 1.  Click the **Device** list and then select **Edit**.
 
-    ![Selecting 'Edit'.](/web/tools/chrome-devtools/device-mode/imgs/edit.png)
+    {% Img src="image/admin/WJsZLsXJmMAkxsVMIAg9.png", alt="Selecting 'Edit'.", width="800", height="536" %}
 
     **Figure 11**. Selecting **Edit**
 
@@ -143,7 +143,7 @@ To add a custom device:
     string][10], and [device type][11] fields are optional. The device type field is the list that
     is set to **Mobile** by default.
 
-    ![Creating a custom device.](/web/tools/chrome-devtools/device-mode/imgs/add-custom-device.png)
+    {% Img src="image/admin/on0B3hv1k23NRXjE1TzW.png", alt="Creating a custom device.", width="800", height="548" %}
 
     **Figure 12**. Creating a custom device
 
@@ -152,11 +152,11 @@ To add a custom device:
 Click **More options** and then select **Show rulers** to see rulers above and to the left of your
 viewport. The sizing unit of the rulers is pixels.
 
-![Show rulers.](/web/tools/chrome-devtools/device-mode/imgs/show-rulers.png)
+{% Img src="image/admin/rQGuzADTqJj8CUFidrW5.png", alt="Show rulers.", width="800", height="504" %}
 
 **Figure 13**. Show rulers
 
-![Rulers above and to the left of the viewport.](/web/tools/chrome-devtools/device-mode/imgs/rulers.png)
+{% Img src="image/admin/EtRsMva6aPxWmLRukwLf.png", alt="Rulers above and to the left of the viewport.", width="800", height="609" %}
 
 **Figure 14**. Rulers above and to the left of the viewport
 
@@ -164,7 +164,7 @@ viewport. The sizing unit of the rulers is pixels.
 
 Use the **Zoom** list to zoom in or out.
 
-![Zoom.](/web/tools/chrome-devtools/device-mode/imgs/zoom-viewport.png)
+{% Img src="image/admin/0OVcVM6pQOzYiJ8c0GM5.png", alt="Zoom.", width="800", height="463" %}
 
 **Figure 15**. Zoom
 
@@ -173,7 +173,7 @@ Use the **Zoom** list to zoom in or out.
 To throttle the network and CPU, select **Mid-tier mobile** or **Low-end mobile** from the
 **Throttle** list.
 
-![The Throttle list.](/web/tools/chrome-devtools/device-mode/imgs/throttling.png)
+{% Img src="image/admin/YEoB6HQkzQUZ33XSH25y.png", alt="The Throttle list.", width="800", height="567" %}
 
 **Figure 16**. The Throttle list
 
@@ -190,10 +190,10 @@ Note that the **Throttle** list will be hidden if your **Device Toolbar** is nar
 ### Throttle the CPU only {: #cpu }
 
 To throttle the CPU only and not the network, go to the **Performance** panel, click **Capture
-Settings** ![Capture Settings](/web/tools/chrome-devtools/images/shared/capture-settings.png), and
+Settings** {% Img src="image/admin/CBHNS0GIpZlOcDkO1D7F.png", alt="Capture Settings", width="28", height="28" %}, and
 then select **4x slowdown** or **6x slowdown** from the **CPU** list.
 
-![The CPU list.](/web/tools/chrome-devtools/device-mode/imgs/cpu.png)
+{% Img src="image/admin/ntoyTFejTcYZs6eZ8oQB.png", alt="The CPU list.", width="800", height="588" %}
 
 **Figure 18**. The CPU list
 
@@ -202,14 +202,14 @@ then select **4x slowdown** or **6x slowdown** from the **CPU** list.
 To throttle the network only and not the CPU, go the **Network** panel and select **Fast 3G** or
 **Slow 3G** from the **Throttle** list.
 
-![The Throttle list.](/web/tools/chrome-devtools/device-mode/imgs/network.png)
+{% Img src="image/admin/rTpWIlXuQcUB0tUa75fI.png", alt="The Throttle list.", width="800", height="465" %}
 
 **Figure 19**. The Throttle list
 
 Or press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open the Command
 Menu, type `3G`, and select **Enable fast 3G throttling** or **Enable slow 3G throttling**.
 
-![The Command Menu.](/web/tools/chrome-devtools/device-mode/imgs/commandmenu.png)
+{% Img src="image/admin/dpOHIvK5v3J5Flv1Zrsv.png", alt="The Command Menu.", width="800", height="518" %}
 
 **Figure 20**. The Command Menu
 
@@ -217,24 +217,24 @@ You can also set network throttling from the **Performance** panel. Click **Capt
 ![Capture Settings](/web/tools/chrome-devtools/images/shared/capture-settings.png) and then select
 **Fast 3G** or **Slow 3G** from the **Network** list.
 
-![Setting network throttling from the Performance panel.](/web/tools/chrome-devtools/device-mode/imgs/network2.png)
+{% Img src="image/admin/DVa1oLS5wWMY07WXe0K1.png", alt="Setting network throttling from the Performance panel.", width="800", height="656" %}
 
 **Figure 21**. Setting network throttling from the Performance panel
 
 ## Override geolocation {: #geolocation }
 
 To open the geolocation overriding UI click **Customize and control DevTools**
-![Customize and control DevTools](/web/tools/chrome-devtools/images/shared/customize-and-control-devtools.png)
+{% Img src="image/admin/MEV74GBA0djVjJ36fPf3.png", alt="Customize and control DevTools", width="6", height="26" %}
 and then select **More tools** > **Sensors**.
 
-![Sensors](/web/tools/chrome-devtools/device-mode/imgs/sensors.png)
+{% Img src="image/admin/eb1Ahn7tFUrvfwsj1FQd.png", alt="Sensors", width="800", height="648" %}
 
 **Figure 22**. Sensors
 
 Or press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open the Command
 Menu, type `Sensors`, and then select **Show Sensors**.
 
-![Show Sensors](/web/tools/chrome-devtools/device-mode/imgs/show-sensors.png)
+{% Img src="image/admin/hVVQ0sRjUQkDKWfyjH8O.png", alt="Show Sensors", width="800", height="627" %}
 
 **Figure 23**. Show Sensors
 
@@ -242,7 +242,7 @@ Select one of the presets from the **Geolocation** list, or select **Custom loca
 own coordinates, or select **Location unavailable** to test out how your page behaves when
 geolocation is in an error state.
 
-![Geolocation](/web/tools/chrome-devtools/device-mode/imgs/geolocation.png)
+{% Img src="image/admin/VaU4wIpuUsjgsDHjOw6x.png", alt="Geolocation", width="800", height="602" %}
 
 **Figure 24**. Geolocation
 
@@ -266,7 +266,7 @@ Menu, type `Sensors`, and then select **Show Sensors**.
 Select one of the presets from the **Orientation** list or select **Custom orientation** to set your
 own alpha, beta, and gamma values.
 
-![Orientation](/web/tools/chrome-devtools/device-mode/imgs/orientation.png)
+{% Img src="image/admin/kk5jCSTMJHmGN1w3AMIC.png", alt="Orientation", width="800", height="675" %}
 
 **Figure 27**. Orientation
 

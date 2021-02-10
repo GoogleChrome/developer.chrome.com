@@ -22,9 +22,9 @@ opposed to loading.
 
 1.  Go to the page that you want to analyze.
 2.  Click the **Performance** tab in DevTools.
-3.  Click **Record** ![Record](/web/tools/chrome-devtools/evaluate-performance/imgs/record.png).
+3.  Click **Record** {% Img src="image/admin/Re0KNyMRmkswFBpNYVW3.png", alt="Record", width="24", height="24" %}.
 
-    ![Record](/web/tools/chrome-devtools/evaluate-performance/imgs/record.svg)
+    {% Img src="image/admin/Vkr4jM5q0MAgLIvGyG35.svg", alt="Record", width="800", height="468" %}
 
     **Figure 1**. **Record**, outlined in blue
 
@@ -40,17 +40,17 @@ opposed to running.
 1.  Go to the page that you want to analyze.
 2.  Open the **Performance** panel of DevTools.
 3.  Click **Reload page**
-    ![Reload Page](/web/tools/chrome-devtools/evaluate-performance/imgs/reload-page.png). DevTools
+    {% Img src="image/admin/LLUc63dXLxWMXnoL8kyr.png", alt="Reload Page", width="24", height="25" %}. DevTools
     records performance metrics while the page reloads and then automatically stops the recording a
     couple seconds after the load finishes.
 
-    ![Reload page](/web/tools/chrome-devtools/evaluate-performance/imgs/reload-page.svg)
+    {% Img src="image/admin/lKfrmjzS0hQHvgk425kL.svg", alt="Reload page", width="800", height="468" %}
 
     **Figure 2**. **Reload page**, outlined in blue
 
 DevTools automatically zooms in on the portion of the recording where most of the activity occurred.
 
-![A page-load recording](/web/tools/chrome-devtools/evaluate-performance/imgs/load-recording.png)
+{% Img src="image/admin/MQaqMsLSnCfpnjt0C4xk.png", alt="A page-load recording", width="800", height="857" %}
 
 **Figure 3**. A page-load recording
 
@@ -58,7 +58,7 @@ DevTools automatically zooms in on the portion of the recording where most of th
 
 Enable the **Screenshots** checkbox to capture a screenshot of every frame while recording.
 
-![The Screenshots checkbox](/web/tools/chrome-devtools/evaluate-performance/imgs/screenshots.svg)
+{% Img src="image/admin/bgBdzp23tsgMHIYVMVNJ.svg", alt="The Screenshots checkbox", width="800", height="468" %}
 
 **Figure 4**. The **Screenshots** checkbox
 
@@ -67,20 +67,20 @@ See [View a screenshot][2] to learn how to interact with screenshots.
 ### Force garbage collection while recording {: #garbage }
 
 While you are recording a page, click **Collect garbage**
-![Collect garbage](/web/tools/chrome-devtools/evaluate-performance/imgs/collect-garbage.png) to
+{% Img src="image/admin/3pKYmus2h5cTtgSeGSDj.png", alt="Collect garbage", width="18", height="28" %} to
 force garbage collection.
 
-![Collect garbage](/web/tools/chrome-devtools/evaluate-performance/imgs/collect-garbage.svg)
+{% Img src="image/admin/TpDkcFuP46PR2f3ViVWM.svg", alt="Collect garbage", width="800", height="468" %}
 
 **Figure 5**. Collect garbage, outlined in blue
 
 ### Show recording settings {: #settings }
 
 Click **Capture settings**
-![Capture settings](/web/tools/chrome-devtools/evaluate-performance/imgs/capture-settings.png) to
+{% Img src="image/admin/AVbUTcyBdsQDHOGJrYtO.png", alt="Capture settings", width="28", height="28" %} to
 expose more settings related to how DevTools captures performance recordings.
 
-![The Capture Settings section](/web/tools/chrome-devtools/evaluate-performance/imgs/capture-settings.svg)
+{% Img src="image/admin/oMrzdv4yCX3nNYXXxyiO.svg", alt="The Capture Settings section", width="800", height="583" %}
 
 **Figure 6**. The **Capture settings** section, outlined in blue
 
@@ -97,11 +97,11 @@ Figure 7 and Figure 8 show the difference between disabling and enabling JavaScr
 **Main** section of the recording is much shorter when sampling is disabled, because it omits all of
 the JavaScript call stacks.
 
-![An example of a recording when JS samples are disabled](/web/tools/chrome-devtools/evaluate-performance/imgs/js-samples-disabled.png)
+{% Img src="image/admin/ggxgXYwyRlwqZ64RQjYR.png", alt="An example of a recording when JS samples are disabled", width="800", height="626" %}
 
 **Figure 7**. An example of a recording when JS samples are disabled
 
-![An example of a recording when JS samples are enabled](/web/tools/chrome-devtools/evaluate-performance/imgs/js-samples-enabled.png)
+{% Img src="image/admin/mDRqRgX1BgCgS3UjWSzm.png", alt="An example of a recording when JS samples are enabled", width="800", height="781" %}
 
 **Figure 8**. An example of a recording when JS samples are enabled
 
@@ -138,7 +138,7 @@ profiler][8].
 
 To save a recording, right-click and select **Save Profile**.
 
-![Save Profile](/web/tools/chrome-devtools/evaluate-performance/imgs/save-profile.png)
+{% Img src="image/admin/u2XWglmRCUs83vxv3fFK.png", alt="Save Profile", width="800", height="600" %}
 
 **Figure 9**. **Save Profile**
 
@@ -146,7 +146,7 @@ To save a recording, right-click and select **Save Profile**.
 
 To load a recording, right-click and select **Load Profile**.
 
-![Load Profile](/web/tools/chrome-devtools/evaluate-performance/imgs/load-profile.png)
+{% Img src="image/admin/nz7lFM4urJs2IGwtosdm.png", alt="Load Profile", width="800", height="587" %}
 
 **Figure 10**. **Load Profile**
 
@@ -157,7 +157,7 @@ After making a recording, press **Clear recording**
 recording](/web/tools/chrome-devtools/evaluate-performance/imgs/clear-recording.png) to clear
 that recording from the **Performance** panel.
 
-![Clear recording](/web/tools/chrome-devtools/evaluate-performance/imgs/clear-recording.svg)
+{% Img src="image/admin/KDg1wSCNTs4Ts3qQN0gy.svg", alt="Clear recording", width="800", height="547" %}
 
 **Figure 11**. Clear recording, outlined in blue
 
@@ -171,7 +171,7 @@ panel provides a lot of data for analyzing the performance of what just happened
 Drag your mouse left or right across the **Overview** to select a portion of a recording. The
 **Overview** is the section that contains the **FPS**, **CPU**, and **NET** charts.
 
-![Dragging the mouse across the Overview to zoom](/web/tools/chrome-devtools/evaluate-performance/imgs/zoom.gif)
+{% Img src="image/admin/CvbTzzqLPqoCfo0vJ8UE.gif", alt="Dragging the mouse across the Overview to zoom", width="800", height="546" %}
 
 **Figure 12**. Dragging the mouse across the Overview to zoom
 
@@ -198,7 +198,7 @@ dragging up and down. Drag left and right to move what portion of the recording 
 Press Command+F (Mac) or Control+F (Windows, Linux) to open the search box at the bottom of the
 **Performance** panel.
 
-![The search box](/web/tools/chrome-devtools/evaluate-performance/imgs/search.png)
+{% Img src="image/admin/bDTtPmR7htQFD82qG0Mp.png", alt="The search box", width="800", height="586" %}
 
 **Figure 13**. Using regex in the search box at the bottom of the window to find any activity that
 begins with \`E\`
@@ -206,16 +206,16 @@ begins with \`E\`
 To navigate activities that match your query:
 
 - Use the **Previous**
-  ![Previous](/web/tools/chrome-devtools/evaluate-performance/imgs/previous.png) and **Next**
-  ![Next](/web/tools/chrome-devtools/evaluate-performance/imgs/next.png) buttons.
+  {% Img src="image/admin/4IX7ufjSOK30gfolntm4.png", alt="Previous", width="34", height="36" %} and **Next**
+  {% Img src="image/admin/podVrMNQX4eE0cNLfarR.png", alt="Next", width="34", height="36" %} buttons.
 - Press Shift+Enter to select the previous or Enter to select the next.
 
 To modify query settings:
 
 - Press **Case sensitive**
-  ![Case sensitive](/web/tools/chrome-devtools/evaluate-performance/imgs/search-case.png) to make
+  {% Img src="image/admin/PZvAN15LZnGb1fGFzr53.png", alt="Case sensitive", width="31", height="19" %} to make
   the query case sensitive.
-- Press **Regex** ![Regex](/web/tools/chrome-devtools/evaluate-performance/imgs/search-regex.png) to
+- Press **Regex** {% Img src="image/admin/klPyk4dJ7YIwumZTOqOp.png", alt="Regex", width="17", height="18" %} to
   use a regular expression in your query.
 
 To hide the search box, press **Cancel**.
@@ -224,21 +224,21 @@ To hide the search box, press **Cancel**.
 
 Use the **Main** section to view activity that occurred on the page's main thread.
 
-![The Main section](/web/tools/chrome-devtools/evaluate-performance/imgs/main.svg)
+{% Img src="image/admin/xNyVAPQQVzJ6WAehsum5.svg", alt="The Main section", width="800", height="662" %}
 
 **Figure 14**. The **Main** section, outlined in blue
 
 Click on an event to view more information about it in the **Summary** tab. DevTools outlines the
 selected event in blue.
 
-![More information about a main thread event in the Summary tab](/web/tools/chrome-devtools/evaluate-performance/imgs/maineventsummary.png)
+{% Img src="image/admin/8R1ZWSovI8pMUgylpZpJ.png", alt="More information about a main thread event in the Summary tab", width="800", height="869" %}
 
 **Figure 15**. More information about the `Me` function call event in the **Summary** tab
 
 DevTools represents main thread activity with a flame chart. The x-axis represents the recording
 over time. The y-axis represents the call stack. The events on top cause the events below it.
 
-![A flame chart](/web/tools/chrome-devtools/evaluate-performance/imgs/flamechart.png)
+{% Img src="image/admin/9GggXOXYnbx2DVeZ3Fa1.png", alt="A flame chart", width="800", height="893" %}
 
 **Figure 16**. A flame chart in the **Main** section
 
@@ -297,7 +297,7 @@ Use the **Call Tree** tab to view which [root activities][18] cause the most wor
 The **Call Tree** tab only displays activities during the selected portion of the recording. See
 [Select a portion of a recording][19] to learn how to select portions.
 
-![The Call Tree tab](/web/tools/chrome-devtools/evaluate-performance/imgs/call-tree.png)
+{% Img src="image/admin/OjSICzOrejsaGYTysG7u.png", alt="The Call Tree tab", width="800", height="863" %}
 
 **Figure 17**. The **Call Tree** tab
 
@@ -317,7 +317,7 @@ By default the **Grouping** menu is set to **No Grouping**. Use the **Grouping**
 activity table based on various criteria.
 
 Click **Show Heaviest Stack**
-![Show Heaviest Stack](/web/tools/chrome-devtools/evaluate-performance/imgs/show-heaviest-stack.png)
+{% Img src="image/admin/QGgcONKJoO4kVtKreJY3.png", alt="Show Heaviest Stack", width="30", height="26" %}
 to reveal another table to the right of the **Activity** table. Click on an activity to populate the
 **Heaviest Stack** table. The **Heaviest Stack** table shows you which children of the selected
 activity took the longest time to execute.
@@ -329,7 +329,7 @@ Use the **Bottom-Up** tab to view which activities directly took up the most tim
 The **Bottom-Up** tab only displays activities during the selected portion of the recording. See
 [Select a portion of a recording][20] to learn how to select portions.
 
-![The Bottom-Up tab](/web/tools/chrome-devtools/evaluate-performance/imgs/bottom-up.png)
+{% Img src="image/admin/m5ooBRBaQ4MLXmjeLgYR.png", alt="The Bottom-Up tab", width="800", height="879" %}
 
 **Figure 18**. The **Bottom-Up** tab
 
@@ -352,7 +352,7 @@ recording.
 The **Event Log** tab only displays activities during the selected portion of the recording. See
 [Select a portion of a recording][21] to learn how to select portions.
 
-![The Event Log tab](/web/tools/chrome-devtools/evaluate-performance/imgs/event-log.png)
+{% Img src="image/admin/ErnVsmtVYqnc9awGTY5n.png", alt="The Event Log tab", width="800", height="826" %}
 
 **Figure 19**. The **Event Log** tab
 
@@ -379,7 +379,7 @@ activities from those categories.
 
 View GPU activity in the **GPU** section.
 
-![The GPU section](/web/tools/chrome-devtools/evaluate-performance/imgs/gpu.svg)
+{% Img src="image/admin/zOL3E4TTppXz4o0appWw.svg", alt="The GPU section", width="800", height="660" %}
 
 **Figure 20**. The **GPU** section, outlined in blue
 
@@ -387,7 +387,7 @@ View GPU activity in the **GPU** section.
 
 View raster activity in the **Raster** section.
 
-![The Raster section](/web/tools/chrome-devtools/evaluate-performance/imgs/raster.svg)
+{% Img src="image/admin/MjviwXOVytHRom3xDsDi.svg", alt="The Raster section", width="800", height="709" %}
 
 **Figure 21**. The **Raster** section, outlined in blue
 
@@ -396,7 +396,7 @@ View raster activity in the **Raster** section.
 Use the **Interactions** section to find and analyze user interactions that happened during the
 recording.
 
-![The Interactions section](/web/tools/chrome-devtools/evaluate-performance/imgs/interactions.svg)
+{% Img src="image/admin/RLvocLiAoWSxDrSIM0U8.svg", alt="The Interactions section", width="800", height="816" %}
 
 **Figure 22**. The **Interactions** section, outlined in blue
 
@@ -421,7 +421,7 @@ general, the higher the green bar, the better the frame rate.
 A red bar above the **FPS** chart is a warning that the frame rate dropped so low that it probably
 harmed the user's experience.
 
-![The FPS chart](/web/tools/chrome-devtools/evaluate-performance/imgs/fps-chart.svg)
+{% Img src="image/admin/DRy9iQ4PlKbu568jEQxD.svg", alt="The FPS chart", width="800", height="530" %}
 
 **Figure 20**. The FPS chart, outlined in blue
 
@@ -431,14 +431,14 @@ The **Frames** section tells you exactly how long a particular frame took.
 
 Hover over a frame to view a tooltip with more information about it.
 
-![Hovering over a frame](/web/tools/chrome-devtools/evaluate-performance/imgs/frames-section.png)
+{% Img src="image/admin/MX9kRvaRf3DqfkZAgoTq.png", alt="Hovering over a frame", width="800", height="542" %}
 
 **Figure 21**. Hovering over a frame
 
 Click on a frame to view even more information about the frame in the **Summary** tab. DevTools
 outlines the selected frame in blue.
 
-![Viewing a frame in the Summary tab](/web/tools/chrome-devtools/evaluate-performance/imgs/frame-summary.png)
+{% Img src="image/admin/0eNKIn4DCCUo0A1GsA8R.png", alt="Viewing a frame in the Summary tab", width="800", height="596" %}
 
 **Figure 22**. Viewing a frame in the **Summary** tab
 
@@ -447,7 +447,7 @@ outlines the selected frame in blue.
 Expand the **Network** section to view a waterfall of network requests that occurred during the
 recording.
 
-![The Network section](/web/tools/chrome-devtools/evaluate-performance/imgs/network-request.svg)
+{% Img src="image/admin/ZkpNSWGs2csexM9Mo7GO.svg", alt="The Network section", width="800", height="950" %}
 
 **Figure 23**. The **Network** section, outlined in blue
 
@@ -478,11 +478,11 @@ Here's how these two representations map to each other:
 - The right line is essentially time spent waiting for the main thread. This is not represented in
   the **Timing** tab.
 
-![The line-bar representation of the www.google.com request](/web/tools/chrome-devtools/evaluate-performance/imgs/linebar.png)
+{% Img src="image/admin/IHFdgHMSSdVjrKkbknOM.png", alt="The line-bar representation of the www.google.com request", width="800", height="603" %}
 
 **Figure 24**. The line-bar representation of the `www.google.com` request
 
-![The Network section](/web/tools/chrome-devtools/evaluate-performance/imgs/timing.png)
+{% Img src="image/admin/0tmyrwYEZd27ej4gw0UM.png", alt="The Network section", width="800", height="831" %}
 
 **Figure 25**. The **Timing** tab representation of the `www.google.com` request
 
@@ -490,7 +490,7 @@ Here's how these two representations map to each other:
 
 Enable the **Memory** checkbox to view memory metrics from the last recording.
 
-![The Memory checkbox](/web/tools/chrome-devtools/evaluate-performance/imgs/memory.svg)
+{% Img src="image/admin/RKJIxxwVnBj5ivVjvMtI.svg", alt="The Memory checkbox", width="800", height="468" %}
 
 **Figure 26**. The **Memory** checkbox, outlined in blue
 
@@ -498,7 +498,7 @@ DevTools displays a new **Memory** chart, above the **Summary** tab. There's als
 the **NET** chart, called **HEAP**. The **HEAP** chart provides the same information as the **JS
 Heap** line in the **Memory** chart.
 
-![Memory metrics](/web/tools/chrome-devtools/evaluate-performance/imgs/memory.png)
+{% Img src="image/admin/dgmYH2RBKH2M2Ej0gaXO.png", alt="Memory metrics", width="800", height="493" %}
 
 **Figure 27**. Memory metrics, above the **Summary** tab
 
@@ -515,7 +515,7 @@ When analyzing a section like **Network** or **Main**, sometimes you need a more
 how long certain events took. Hold Shift, click and hold, and drag left or right to select a portion
 of the recording. At the bottom of your selection, DevTools shows how long that portion took.
 
-![Viewing the duration of a portion of a recording](/web/tools/chrome-devtools/evaluate-performance/imgs/duration.png)
+{% Img src="image/admin/ywM6ZNwJARqChcDXyR8W.png", alt="Viewing the duration of a portion of a recording", width="800", height="606" %}
 
 **Figure 28**. The `488.53ms` timestamp at the bottom of the selected portion indicates how long
 that portion took
@@ -527,21 +527,21 @@ See [Capture screenshots while recording][25] to learn how to enable screenshots
 Hover over the **Overview** to view a screenshot of how the page looked during that moment of the
 recording. The **Overview** is the section that contains the **CPU**, **FPS**, and **NET** charts.
 
-![Viewing a screenshot](/web/tools/chrome-devtools/evaluate-performance/imgs/view-screenshot.png)
+{% Img src="image/admin/kEHMCIm7hnRwi1Zu02ej.png", alt="Viewing a screenshot", width="800", height="658" %}
 
 **Figure 29**. Viewing a screenshot
 
 You can also view screenshots by clicking a frame in the **Frames** section. DevTools displays a
 small version of the screenshot in the **Summary** tab.
 
-![Viewing a screenshot in the Summary tab](/web/tools/chrome-devtools/evaluate-performance/imgs/frame-screenshot-summary.png)
+{% Img src="image/admin/4eReOueadJ28sws2OXmI.png", alt="Viewing a screenshot in the Summary tab", width="800", height="851" %}
 
 **Figure 30**. After clicking the `195.5ms` frame in the **Frames** section, the screenshot for that
 frame is displayed in the **Summary** tab
 
 Click the thumbnail in the **Summary** tab to zoom in on the screenshot.
 
-![Zooming in on a screenshot from the Summary tab](/web/tools/chrome-devtools/evaluate-performance/imgs/frame-screenshot-zoom.png)
+{% Img src="image/admin/IRCF7raB4ms6clXaJ1ma.png", alt="Zooming in on a screenshot from the Summary tab", width="800", height="851" %}
 
 **Figure 31**. After clicking the thumbnail in the **Summary** tab, DevTools zooms in on the
 screenshot
@@ -554,22 +554,22 @@ To view advanced layers information about a frame:
 2.  Select a frame in the **Frames** section. DevTools displays information about its layers in the
     new **Layers** tab, next to the **Event Log** tab.
 
-![The Layers tab](/web/tools/chrome-devtools/evaluate-performance/imgs/layers.png)
+{% Img src="image/admin/gJFELbc08PJ13f3QMSeF.png", alt="The Layers tab", width="800", height="758" %}
 
 **Figure 32**. The **Layers** tab
 
 Hover over a layer to highlight it in the diagram.
 
-![Highlighting a layer](/web/tools/chrome-devtools/evaluate-performance/imgs/layerhover.png)
+{% Img src="image/admin/22v3FsuWbI5rLiU8sEUs.png", alt="Highlighting a layer", width="800", height="689" %}
 
 **Figure 33**. Highlighting layer **#39**
 
 To move the diagram:
 
-- Click **Pan Mode** ![Pan Mode](/web/tools/chrome-devtools/evaluate-performance/imgs/pan-mode.png)
+- Click **Pan Mode** {% Img src="image/admin/M00j8zOIaeKAJ0jLqyOU.png", alt="Pan Mode", width="32", height="32" %}
   to move along the X and Y axes.
 - Click **Rotate Mode**
-  ![Rotate Mode](/web/tools/chrome-devtools/evaluate-performance/imgs/rotate-mode.png) to rotate
+  {% Img src="image/admin/QfAWp7e0kuhmVzOwJY28.png", alt="Rotate Mode", width="32", height="32" %} to rotate
   along the Z axis.
 - Click **Reset Transform**
   ![Reset
@@ -587,7 +587,7 @@ To view advanced information about a paint event:
 1.  [Enable advanced paint instrumentation][27].
 2.  Select a **Paint** event in the **Main** section.
 
-![The Paint Profiler tab](/web/tools/chrome-devtools/evaluate-performance/imgs/paint-profiler.png)
+{% Img src="image/admin/ljSjIYcsNHLsNj6JQO9J.png", alt="The Paint Profiler tab", width="800", height="713" %}
 
 **Figure 34**. The **Paint Profiler** tab
 
@@ -601,7 +601,7 @@ To open the **Rendering** tab:
 2.  Start typing `Rendering` and select `Show Rendering`. DevTools displays the **Rendering** tab at
     the bottom of your DevTools window.
 
-![The Rendering tab](/web/tools/chrome-devtools/evaluate-performance/imgs/rendering-tab.png)
+{% Img src="image/admin/hBtfLDNsBbr9vJhy4GHr.png", alt="The Rendering tab", width="800", height="687" %}
 
 **Figure 35**. The **Rendering** tab
 
@@ -613,7 +613,7 @@ realtime estimate of FPS as the page runs. To open the **FPS meter**:
 1.  Open the **Rendering** tab. See [Analyze rendering performance with the Rendering tab][29].
 2.  Enable the **FPS Meter** checkbox.
 
-![The FPS meter](/web/tools/chrome-devtools/evaluate-performance/imgs/fps-meter.png)
+{% Img src="image/admin/ztC0PRZRr0tczy4jqrxq.png", alt="The FPS meter", width="800", height="593" %}
 
 **Figure 36**. The FPS meter
 
@@ -627,7 +627,7 @@ To enable Paint Flashing:
 1.  Open the **Rendering** tab. See [Analyze rendering performance with the Rendering tab][30].
 2.  Enable the **Paint Flashing** checkbox.
 
-![Paint Flashing](/web/tools/chrome-devtools/evaluate-performance/imgs/paint-flashing.gif)
+{% Img src="image/admin/AKUsdeRRaSFncCF94ap5.gif", alt="Paint Flashing", width="800", height="322" %}
 
 **Figure 37**. **Paint Flashing**
 
@@ -640,7 +640,7 @@ To enable Layer Borders:
 1.  Open the **Rendering** tab. See [Analyze rendering performance with the Rendering tab][31].
 2.  Enable the **Layer Borders** checkbox.
 
-![Layer Borders](/web/tools/chrome-devtools/evaluate-performance/imgs/layer-borders.png)
+{% Img src="image/admin/FAgzk3UUc2WZC5i28X9f.png", alt="Layer Borders", width="800", height="515" %}
 
 **Figure 38**. **Layer Borders**
 

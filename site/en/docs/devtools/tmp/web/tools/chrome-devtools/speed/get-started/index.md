@@ -28,7 +28,7 @@ This is Tony. Tony is very famous in cat society. He has built a website so that
 what his favorite foods are. His fans love the site, but Tony keeps hearing complaints that the site
 loads slowly. Tony has asked you to help him speed the site up.
 
-![Tony the cat.](/web/tools/chrome-devtools/speed/imgs/tony.jpg)
+{% Img src="image/admin/TLlf3OH689gZcCLnEY67.jpg", alt="Tony the cat.", width="800", height="600" %}
 
 **Figure 1**. Tony the cat
 
@@ -50,13 +50,13 @@ But first, you need to set up the site so that you can make changes to it later:
     UI may look different than the screenshots.
 2.  [Open the source code for the site][2]. This tab will be referred to as the _editor tab_.
 
-    ![The editor tab.](/web/tools/chrome-devtools/speed/imgs/editor.png)
+    {% Img src="image/admin/h2JSHSXIa8G3kOqRILbk.png", alt="The editor tab.", width="800", height="457" %}
 
     **Figure 2**. The editor tab
 
 3.  Click **tony**. A menu appears.
 
-    ![The menu that appears after clicking 'tony'.](/web/tools/chrome-devtools/speed/imgs/menu.png)
+    {% Img src="image/admin/N9c7p2yrUhWgUobkDuVs.png", alt="The menu that appears after clicking 'tony'.", width="800", height="457" %}
 
     **Figure 3**. The menu that appears after clicking **tony**
 
@@ -66,14 +66,14 @@ But first, you need to set up the site so that you can make changes to it later:
 5.  Click **Show Live**. The demo opens in a new tab. This tab will be referred to as the _demo
     tab_. It may take a while for the site to load.
 
-    ![The demo tab.](/web/tools/chrome-devtools/speed/imgs/demo.png)
+    {% Img src="image/admin/2kZXAZgIbvKrafszL6X3.png", alt="The demo tab.", width="800", height="588" %}
 
     **Figure 4**. The demo tab
 
 6.  Press Command+Option+J (Mac) Control+Shift+J (Windows, Linux, Chrome OS). Chrome DevTools opens
     up alongside the demo.
 
-    ![DevTools and the demo.](/web/tools/chrome-devtools/speed/imgs/devtools.png)
+    {% Img src="image/admin/QyoSneXNo8Npiy28nJlU.png", alt="DevTools and the demo.", width="800", height="476" %}
 
     **Figure 5**. DevTools and the demo
 
@@ -81,7 +81,7 @@ For the rest of the screenshots in this tutorial, DevTools will be shown as a se
 can do this by pressing Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open
 the Command Menu, typing `Undock`, and then selecting **Undock into separate window**.
 
-![Undocked DevTools.](/web/tools/chrome-devtools/speed/imgs/undocked.png)
+{% Img src="image/admin/YgPOzT6Re0aIGezSKPZr.png", alt="Undocked DevTools.", width="800", height="514" %}
 
 **Figure 6**. Undocked DevTools
 
@@ -90,11 +90,11 @@ the Command Menu, typing `Undock`, and then selecting **Undock into separate win
 The baseline is a record of how the site performed before you made any performance improvements.
 
 1.  Click the **Audits** tab. It may be hidden behind the **More Panels**
-    ![More Panels](/web/tools/chrome-devtools/speed/imgs/more-panels.png) button. There's a
+    {% Img src="image/admin/IxLXhwoZksgzzdzr9OCx.png", alt="More Panels", width="18", height="16" %} button. There's a
     Lighthouse on this panel because the project that powers the Audits panel is called
     [Lighthouse][3].
 
-    ![The Audits panel.](/web/tools/chrome-devtools/speed/imgs/audits.png)
+    {% Img src="image/admin/3pLUyTJ93xjvm0itZ3Lb.png", alt="The Audits panel.", width="800", height="1068" %}
 
     **Figure 7**. The Audits panel
 
@@ -119,7 +119,7 @@ The baseline is a record of how the site performed before you made any performan
 3.  Click **Run Audits**. After 10 to 30 seconds, the Audits panel shows you a report of the site's
     performance.
 
-    ![An Audits panel report of the site's performance.](/web/tools/chrome-devtools/speed/imgs/report.png)
+    {% Img src="image/admin/NgjLST0tdYLxJIyaLMAo.png", alt="An Audits panel report of the site's performance.", width="800", height="966" %}
 
     **Figure 8**. The Audits panel's report of the site's performance
 
@@ -129,7 +129,7 @@ If you ever get an error in your Audits panel report, try running the demo tab f
 window][4] with no other tabs open. This ensures that you're running Chrome from a clean state.
 Chrome Extensions in particular often interfere with the auditing process.
 
-![A report that errored.](/web/tools/chrome-devtools/speed/imgs/error.png)
+{% Img src="image/admin/BQOnt1Z7Qp1CUZ1Ln6ve.png", alt="A report that errored.", width="800", height="552" %}
 
 **Figure 9**. A report that errored
 
@@ -138,7 +138,7 @@ Chrome Extensions in particular often interfere with the auditing process.
 The number at the top of your report is the overall performance score for the site. Later, as you
 make changes to the code, you should see this number rise. A higher score means better performance.
 
-![The overall performance score.](/web/tools/chrome-devtools/speed/imgs/overall.png)
+{% Img src="image/admin/V9sAawCdJGzkcYHlGaom.png", alt="The overall performance score.", width="800", height="607" %}
 
 **Figure 10**. The overall performance score
 
@@ -148,54 +148,54 @@ tells you when content is first painted to the screen, which is an important mil
 perception of the page load, whereas **Time To Interactive** marks the point at which the page
 appears ready enough to handle user interactions.
 
-![The Metrics section.](/web/tools/chrome-devtools/speed/imgs/metrics.png)
+{% Img src="image/admin/rPpuNEgtEJVOtfbOCS8Z.png", alt="The Metrics section.", width="800", height="607" %}
 
 **Figure 11**. The Metrics section
 
 Hover over a metric to see a description of it, and click **Learn More** to read documentation about
 it.
 
-![Hovering over the First Meaningful Paint metric.](/web/tools/chrome-devtools/speed/imgs/fmp.png)
+{% Img src="image/admin/5t8Vg0jVnMqsTj3E8mqC.png", alt="Hovering over the First Meaningful Paint metric.", width="800", height="607" %}
 
 **Figure 12**. Hovering over the First Meaningful Paint metric
 
 Below Metrics is a collection of screenshots that show you how the page looked as it loaded.
 
-![Screenshots of how the page looked while loading.](/web/tools/chrome-devtools/speed/imgs/screenshots.png)
+{% Img src="image/admin/1tTDKtRCRyOFq7umNNjV.png", alt="Screenshots of how the page looked while loading.", width="800", height="607" %}
 
 **Figure 13**. Screenshots of how the page looked while loading
 
 The **Opportunities** section provides specific tips on how to improve this particular page's load
 performance.
 
-![The Opportunities section.](/web/tools/chrome-devtools/speed/imgs/opportunities.png)
+{% Img src="image/admin/dWEuVD1kQ4nXTiqnPSYr.png", alt="The Opportunities section.", width="800", height="607" %}
 
 **Figure 14**. The Opportunities section
 
 Click an opportunity to learn more about it.
 
-![More information about the text compression opportunity.](/web/tools/chrome-devtools/speed/imgs/compression.png)
+{% Img src="image/admin/zzNtRlnwivYQRztxvTQg.png", alt="More information about the text compression opportunity.", width="800", height="607" %}
 
 **Figure 15**. More information about the text compression opportunity
 
 Click **Learn More** to see documentation about why an opportunity is important, and specific
 recommendations on how to fix it.
 
-![Documentation for the text compression opportunity.](/web/tools/chrome-devtools/speed/imgs/reference.png)
+{% Img src="image/admin/vbaaxqIidyig4woShl7L.png", alt="Documentation for the text compression opportunity.", width="800", height="539" %}
 
 **Figure 16**. Documentation for the text compression opportunity
 
 The **Diagnostics** section provides more information about factors that contribute to the page's
 load time.
 
-![The Diagnostics section](/web/tools/chrome-devtools/speed/imgs/diagnostics.png)
+{% Img src="image/admin/fsV4sOVHK1J59ieTlX3c.png", alt="The Diagnostics section", width="800", height="607" %}
 
 **Figure 17**. The Diagnostics section
 
 The **Passed Audits** section shows you what the site is doing correctly. Click to expand the
 section.
 
-![The Passed Audits section.](/web/tools/chrome-devtools/speed/imgs/passed.png)
+{% Img src="image/admin/4G7pw92Q89MgJYKCrHVz.png", alt="The Passed Audits section.", width="800", height="607" %}
 
 **Figure 18**. The Passed Audits section
 
@@ -218,15 +218,15 @@ resources are compressed.
 
 1.  Click the **Network** tab.
 
-    ![The Network panel.](/web/tools/chrome-devtools/speed/imgs/network.png)
+    {% Img src="image/admin/g11RtVWK4hcRDwj4WGJZ.png", alt="The Network panel.", width="800", height="599" %}
 
     **Figure 19**. The Network panel
 
 2.  Click **Use Large Request Rows**
-    ![Use Large Request Rows](/web/tools/chrome-devtools/network-performance/imgs/large-resource-rows-button.png).
+    {% Img src="image/admin/156xToAGxtuF9W5EQ3Ag.png", alt="Use Large Request Rows", width="28", height="20" %}.
     The height of the rows in the table of network requests increases.
 
-    ![Large rows in the network requests table.](/web/tools/chrome-devtools/speed/imgs/largerows.png)
+    {% Img src="image/admin/a5QbfNJhyb20gc9hS6XL.png", alt="Large rows in the network requests table.", width="800", height="607" %}
 
     **Figure 20**. Large rows in the network requests table
 
@@ -243,7 +243,7 @@ You can also check for compression by inspecting a resource's HTTP headers:
 1.  Click **bundle.js**.
 2.  Click the **Headers** tab.
 
-    ![The Headers tab.](/web/tools/chrome-devtools/speed/imgs/headers.png)
+    {% Img src="image/admin/a2tGTXojvtJNXs5jFH8y.png", alt="The Headers tab.", width="800", height="631" %}
 
     **Figure 21**. The Headers tab
 
@@ -257,7 +257,7 @@ of lines of code:
 
 1.  In the editor tab, click **server.js**.
 
-    ![Editing server.js.](/web/tools/chrome-devtools/speed/imgs/server.png)
+    {% Img src="image/admin/1xABsKdRgfthMK0131pr.png", alt="Editing server.js.", width="800", height="425" %}
 
     **Figure 22**. Editing `server.js`
 
@@ -278,7 +278,7 @@ of lines of code:
     **Logs** and **Show** means that the site is getting rebuilt and redeployed. The change is ready
     when you see **Show Live** again.
 
-    ![The animation that indicates that the site is getting built.](/web/tools/chrome-devtools/speed/imgs/building.png)
+    {% Img src="image/admin/mmhq1c5QiB0DtICtZKSN.png", alt="The animation that indicates that the site is getting built.", width="800", height="470" %}
 
     **Figure 23**. The animation that indicates that the site is getting built
 
@@ -289,14 +289,14 @@ Use the workflows that you learned earlier to manually check that the compressio
     `bundle.js` is the size of the file that was sent over the network, and the bottom value of
     `1.4 MB` is the uncompressed file size.
 
-    ![The Size column now shows 2 different values for text resources.](/web/tools/chrome-devtools/speed/imgs/requests.png)
+    {% Img src="image/admin/F6WaqKTo3NkxzUrGnt7T.png", alt="The Size column now shows 2 different values for text resources.", width="800", height="562" %}
 
     **Figure 24**. The Size column now shows 2 different values for text resources
 
 2.  The **Response Headers** section for `bundle.js` should now include a `content-encoding: gzip`
     header.
 
-    ![The Response Headers section now contains a content-encoding header.](/web/tools/chrome-devtools/speed/imgs/gzip.png)
+    {% Img src="image/admin/2mALWw5969topkCeKfc9.png", alt="The Response Headers section now contains a content-encoding header.", width="800", height="562" %}
 
     **Figure 25**. The Response Headers section now contains a `content-encoding` header
 
@@ -305,11 +305,11 @@ performance:
 
 1.  Click the **Audits** tab.
 2.  Click **Perform an audit**
-    ![Perform an audit](/web/tools/chrome-devtools/speed/imgs/perform.png).
+    {% Img src="image/admin/9GXCdrHJFoccxgwFYFBm.png", alt="Perform an audit", width="20", height="20" %}.
 3.  Leave the settings the same as before.
 4.  Click **Run audit**.
 
-    ![An Audits report after enabling text compression.](/web/tools/chrome-devtools/speed/imgs/report2.png)
+    {% Img src="image/admin/3AAwanwyXAGgYS20JRa9.png", alt="An Audits report after enabling text compression.", width="800", height="631" %}
 
     **Figure 26**. An Audits report after enabling text compression
 
@@ -332,7 +332,7 @@ sending a 1500-pixel-wide image. Ideally, you'd send a 500-pixel-wided image, at
 1.  In your report, click **Properly size images** to see what images should be resized. It looks
     like all 4 images are bigger than necessary.
 
-    ![Details about the 'properly size images' opportunity.](/web/tools/chrome-devtools/speed/imgs/resize.png)
+    {% Img src="image/admin/MQEebrl7WbkRsSQ9Xm4H.png", alt="Details about the 'properly size images' opportunity.", width="800", height="533" %}
 
     **Figure 27**. Details about the _Properly size images_ opportunity
 
@@ -341,7 +341,7 @@ sending a 1500-pixel-wide image. Ideally, you'd send a 500-pixel-wided image, at
     same images which have been resized.
 4.  Audit the page again to see how this change affects load performance.
 
-    ![An Audits report after resizing images.](/web/tools/chrome-devtools/speed/imgs/report3.png)
+    {% Img src="image/admin/ln4bwb1bVEIgnR9pNb32.png", alt="An Audits report after resizing images.", width="800", height="573" %}
 
     **Figure 28**. An Audits report after resizing images
 
@@ -376,27 +376,27 @@ The first task, then, is to find code that doesn't need to be executed on page l
 1.  Click **Eliminate render-blocking resources** to see the resources that are blocking:
     `lodash.js` and `jquery.js`.
 
-    ![More information about the 'reduce render-blocking resources' opportunity.](/web/tools/chrome-devtools/speed/imgs/render.png)
+    {% Img src="image/admin/30KsfDd87y7S1Tx7KsdY.png", alt="More information about the 'reduce render-blocking resources' opportunity.", width="800", height="470" %}
 
     **Figure 29**. More information about the _Reduce render-blocking resources_ opportunity
 
 2.  Press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open the Command
     Menu, start typing `Coverage`, and then select **Show Coverage**.
 
-    ![Opening the Command Menu from the Audits panel.](/web/tools/chrome-devtools/speed/imgs/commandmenu.png)
+    {% Img src="image/admin/Cy7cW3nb11D7A2ndQcsS.png", alt="Opening the Command Menu from the Audits panel.", width="800", height="438" %}
 
     **Figure 30**. Opening the Command Menu from the Audits panel
 
-    ![The Coverage tab.](/web/tools/chrome-devtools/speed/imgs/coverage.png)
+    {% Img src="image/admin/aG2vkytNQ4ohI3grGxXP.png", alt="The Coverage tab.", width="800", height="546" %}
 
     **Figure 31**. The Coverage tab
 
-3.  Click **Reload** ![Reload](/web/tools/chrome-devtools/speed/imgs/reload.png). The Coverage tab
+3.  Click **Reload** {% Img src="image/admin/sUKAx2esbJbYN6Ti3K8j.png", alt="Reload", width="24", height="25" %}. The Coverage tab
     provides an overview of how much of the code in `bundle.js`, `jquery.js`, and `lodash.js` is
     being executed while the page loads. **Figure 32** says that about 76% and 30% of the jQuery and
     Lodash files aren't used, respectively.
 
-    ![The Coverage report.](/web/tools/chrome-devtools/speed/imgs/coveragereport.png)
+    {% Img src="image/admin/QmkjKS7ovEnvxmOwdva0.png", alt="The Coverage report.", width="800", height="565" %}
 
     **Figure 32**. The Coverage report
 
@@ -404,7 +404,7 @@ The first task, then, is to find code that doesn't need to be executed on page l
     executed if it has a green bar next to it. A red bar means it was not executed, and is
     definitely not needed on page load.
 
-    ![Viewing the jQuery file in the Sources panel.](/web/tools/chrome-devtools/speed/imgs/jquery.png)
+    {% Img src="image/admin/xiqQiVD1TIga3vAjhOTp.png", alt="Viewing the jQuery file in the Sources panel.", width="800", height="727" %}
 
     **Figure 33**. Viewing the jQuery file in the Sources panel
 
@@ -423,26 +423,26 @@ show you what happens when resources aren't available.
     Menu again.
 3.  Start typing `blocking` and then select **Show Request Blocking**.
 
-    ![The Request Blocking tab.](/web/tools/chrome-devtools/speed/imgs/blocking.png)
+    {% Img src="image/admin/QzxdwawxAL7lcTDITDUr.png", alt="The Request Blocking tab.", width="800", height="628" %}
 
     **Figure 34**. The Request Blocking tab
 
-4.  Click **Add Pattern** ![Add Pattern](/web/tools/chrome-devtools/speed/imgs/addpattern.png), type
+4.  Click **Add Pattern** {% Img src="image/admin/VxE1QVPuOBQU1jNi6daa.png", alt="Add Pattern", width="20", height="20" %}, type
     `/libs/*`, and then press Enter to confirm.
 
-    ![Adding a pattern to block any request to the 'libs' directory.](/web/tools/chrome-devtools/speed/imgs/libs.png)
+    {% Img src="image/admin/4VOUHS947Tl88W04BhlQ.png", alt="Adding a pattern to block any request to the 'libs' directory.", width="800", height="628" %}
 
     **Figure 35**. Adding a pattern to block any request to the `libs` directory
 
 5.  Reload the page. The jQuery and Lodash requests are red, meaning that they were blocked. The
     page still loads and is interactive, so it looks like these resources aren't needed whatsoever!
 
-    ![The Network panel shows that the requests have been blocked.](/web/tools/chrome-devtools/speed/imgs/blockedlibs.png)
+    {% Img src="image/admin/6uapC5Z2q18AdsytxmLY.png", alt="The Network panel shows that the requests have been blocked.", width="800", height="649" %}
 
     **Figure 36**. The Network panel shows that the requests have been blocked
 
 6.  Click **Remove all patterns**
-    ![Remove all patterns](/web/tools/chrome-devtools/speed/imgs/remove.png) to delete the `/libs/*`
+    {% Img src="image/admin/68qlmwDuexzRmvlmENsm.png", alt="Remove all patterns", width="26", height="26" %} to delete the `/libs/*`
     blocking pattern.
 
 In general, the Request Blocking tab is useful for simulating how your page behaves when any given
@@ -455,7 +455,7 @@ Now, remove the references to these files from the code and audit the page again
 3.  Wait for the site to re-build and re-deploy.
 4.  Audit the page again from the **Audits** panel. Your overall score should have improved again.
 
-    ![An Audits report after removing the render-blocking resources.](/web/tools/chrome-devtools/speed/imgs/report4.png)
+    {% Img src="image/admin/1CCrhlIeucyJLLH373f7.png", alt="An Audits report after removing the render-blocking resources.", width="800", height="555" %}
 
     **Figure 37**. An Audits report after removing the render-blocking resources
 
@@ -485,7 +485,7 @@ page loads, and find ways to defer or remove unnecessary work.
 
 1.  Click the **Performance** tab.
 2.  Click **Capture Settings**
-    ![Capture Settings](/web/tools/chrome-devtools/speed/imgs/capture.png).
+    {% Img src="image/admin/II9FuwvOLWrZAaaPOKTL.png", alt="Capture Settings", width="28", height="28" %}.
 3.  Set **Network** to **Slow 3G** and **CPU** to **6x slowdown**. Mobile devices typically have
     more hardware constraints than laptops or desktops, so these settings let you experience the
     page load as if you were using a less powerful device.
@@ -493,7 +493,7 @@ page loads, and find ways to defer or remove unnecessary work.
     the page and then produces a visualization of all it had to do in order to load the page. This
     visualization will be referred to as the _trace_.
 
-    ![The Performance panel's trace of the page load.](/web/tools/chrome-devtools/speed/imgs/performance.png)
+    {% Img src="image/admin/XM6GIspnPnqxmE516rYP.png", alt="The Performance panel's trace of the page load.", width="800", height="713" %}
 
     **Figure 38**. The Performance panel's trace of the page load
 
@@ -502,7 +502,7 @@ top give you an overview of frames per second, CPU activity, and network activit
 yellow that you see in **Figure 39** means that the CPU was completely busy with scripting activity.
 This is a clue that you may be able to speed up page load by doing less JavaScript work.
 
-![The Overview section of the trace.](/web/tools/chrome-devtools/speed/imgs/overview.png)
+{% Img src="image/admin/dN3o50JaLqXs5SsXKczC.png", alt="The Overview section of the trace.", width="800", height="552" %}
 
 **Figure 39**. The Overview section of the trace
 
@@ -513,7 +513,7 @@ Investigate the trace to find ways to do less JavaScript work:
     of React. Switching to the production mode of React will probably yield some easy performance
     wins.
 
-    ![The User Timing section.](/web/tools/chrome-devtools/speed/imgs/usertiming.png)
+    {% Img src="image/admin/fyFy1OSmVToyqYkEhCrU.png", alt="The User Timing section.", width="800", height="556" %}
 
     **Figure 40**. The User Timing section
 
@@ -524,7 +524,7 @@ Investigate the trace to find ways to do less JavaScript work:
     caused `../rbd/pnpm-volume/...` to execute, which caused `__webpack__require__` to execute, and
     so on.
 
-    ![The Main section](/web/tools/chrome-devtools/speed/imgs/main.png)
+    {% Img src="image/admin/vfnYkoiAVM61wxyXIbXc.png", alt="The Main section", width="800", height="609" %}
 
     **Figure 41**. The Main section
 
@@ -534,7 +534,7 @@ Investigate the trace to find ways to do less JavaScript work:
     causing a lot of calls to a `mineBitcoin` function. It sounds like Tony might be using the
     devices of his fans to mine cryptocurrency...
 
-    ![Hovering over the mineBitcoin activity.](/web/tools/chrome-devtools/speed/imgs/mine.png)
+    {% Img src="image/admin/UmtH1RZihmBQxNcmVtE3.png", alt="Hovering over the mineBitcoin activity.", width="800", height="512" %}
 
     **Figure 42**. Hovering over the `mineBitcoin` activity
 
@@ -554,7 +554,7 @@ Investigate the trace to find ways to do less JavaScript work:
     currently selected. For example, if you clicked on one of the `mineBitcoin` activities, the
     Bottom-Up section is only going to show information for that one activity.
 
-    ![The Bottom-Up tab.](/web/tools/chrome-devtools/speed/imgs/bottomup.png)
+    {% Img src="image/admin/SkSkmxCFJGTrMa9YsBdi.png", alt="The Bottom-Up tab.", width="800", height="614" %}
 
     **Figure 43**. The Bottom-Up tab
 
@@ -569,7 +569,7 @@ load. Start with production mode:
 3.  Wait for the new build to deploy.
 4.  Audit the page again.
 
-    ![An Audits report after configuring webpack to use production mode.](/web/tools/chrome-devtools/speed/imgs/report5.png)
+    {% Img src="image/admin/dzTo8Pt5AyXipmvq5gEF.png", alt="An Audits report after configuring webpack to use production mode.", width="800", height="601" %}
 
     **Figure 44**. An Audits report after configuring webpack to use production mode
 
@@ -580,7 +580,7 @@ Reduce JavaScript activity by removing the call to `mineBitcoin`:
 3.  Wait for the new build to deploy.
 4.  Audit the page again.
 
-    ![An Audits report after removing unnecessary JavaScript work.](/web/tools/chrome-devtools/speed/imgs/report6.png)
+    {% Img src="image/admin/fdW3Jstcwj3Wpjd5RTqy.png", alt="An Audits report after removing unnecessary JavaScript work.", width="800", height="601" %}
 
     **Figure 45**. An Audits report after removing unnecessary JavaScript work
 

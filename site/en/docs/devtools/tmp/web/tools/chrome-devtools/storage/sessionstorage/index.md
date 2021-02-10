@@ -16,26 +16,26 @@ key-value pairs.
 1.  Click the **Application** tab to open the **Application** panel. The **Manifest** pane is shown
     by default.
 
-    ![The Manifest pane](/web/tools/chrome-devtools/storage/imgs/manifest.png)
+    {% Img src="image/admin/Rt9sE5wcM4XChjHAEbwm.png", alt="The Manifest pane", width="800", height="619" %}
 
     **Figure 1**. The Manifest pane
 
 2.  Expand the **Session Storage** menu.
 
-    ![The Session Storage Menu](/web/tools/chrome-devtools/storage/imgs/sessionstoragemenu.png)
+    {% Img src="image/admin/FNTagOn8cnsylvpMAqls.png", alt="The Session Storage Menu", width="800", height="579" %}
 
     **Figure 2**. The **Session Storage** menu shows two domains: **https://developers.google.com**
     and **https://www.youtube.com**
 
 3.  Click a domain to view its key-value pairs.
 
-    ![The sessionStorage key-value pairs for the https://www.youtube.com domain](/web/tools/chrome-devtools/storage/imgs/sessionstorage.png)
+    {% Img src="image/admin/fJijNAIrM9DFmAGxkXAU.png", alt="The sessionStorage key-value pairs for the https://www.youtube.com domain", width="800", height="579" %}
 
     **Figure 3**. The `sessionStorage` key-value pairs for the **https://www.youtube.com** domain
 
 4.  Click a row of the table to view the value in the viewer below the table.
 
-    ![Viewing the value of the yt-remote-cast-available key](/web/tools/chrome-devtools/storage/imgs/sessionstorageviewer.png)
+    {% Img src="image/admin/YxEayGVMtIP0yExSuWVk.png", alt="Viewing the value of the yt-remote-cast-available key", width="800", height="579" %}
 
     **Figure 4**. Viewing the value of the `yt-remote-cast-available` key
 
@@ -56,7 +56,7 @@ key-value pairs.
 1.  [View a domain's `sessionStorage` key-value pairs][4].
 2.  Double-click a cell in the **Key** or **Value** column to edit that key or value.
 
-    ![Editing a sessionStorage key](/web/tools/chrome-devtools/storage/imgs/sessionstorageedit.png)
+    {% Img src="image/admin/tEPwnClhMoj3lQGkIpa8.png", alt="Editing a sessionStorage key", width="800", height="579" %}
 
     **Figure 6**. Editing a `sessionStorage` key
 
@@ -66,12 +66,12 @@ key-value pairs.
 2.  Click the key-value pair that you want to delete. DevTools highlights it blue to indicate that
     it's selected.
 3.  Press the Delete key or click **Delete Selected**
-    ![Delete Selected](/web/tools/chrome-devtools/images/shared/delete.png).
+    {% Img src="image/admin/RZdVGIrpAWpIoQ7yo45u.png", alt="Delete Selected", width="20", height="20" %}.
 
 ## Delete all sessionStorage key-value pairs for a domain {: #deleteall }
 
 1.  [View a domain's `sessionStorage` key-value pairs][6].
-2.  Click **Clear All** ![Clear All](/web/tools/chrome-devtools/images/shared/clear.png).
+2.  Click **Clear All** {% Img src="image/admin/XOrLlc1EDHyM8wRTRhD2.png", alt="Clear All", width="26", height="26" %}.
 
 ## Interact with sessionStorage from the Console {: #console }
 
@@ -81,13 +81,13 @@ JavaScript contexts, it's possible to interact with `sessionStorage` from the **
 1.  Use the **JavaScript contexts** menu to change the JavaScript context of the **Console** if you
     want to access the `sessionStorage` key-value pairs of a domain other than the page you're on.
 
-    ![Changing the JavaScript context of the Console](/web/tools/chrome-devtools/storage/imgs/jscontext.png)
+    {% Img src="image/admin/6CdoUiGdkS5zpuBeF9pE.png", alt="Changing the JavaScript context of the Console", width="800", height="525" %}
 
     **Figure 7**. Changing the JavaScript context of the **Console**
 
 2.  Run your `sessionStorage` expressions in the Console, the same as you would in your JavaScript.
 
-    ![Interacting with sessionStorage from the Console](/web/tools/chrome-devtools/storage/imgs/sessionstorageconsole.png)
+    {% Img src="image/admin/y85mudOFG83xUq9rIUJE.png", alt="Interacting with sessionStorage from the Console", width="800", height="579" %}
 
     **Figure 8**. Interacting with `sessionStorage` from the **Console**
 

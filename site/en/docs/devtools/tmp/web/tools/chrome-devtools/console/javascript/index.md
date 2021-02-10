@@ -13,7 +13,7 @@ This interactive tutorial shows you how to run JavaScript in the [Chrome DevTool
 With Debugging JavaScript][3] to learn how to pause JavaScript code and step through it one line at
 a time.
 
-![The Console.](/web/tools/chrome-devtools/console/images/playground.png)
+{% Img src="image/admin/niTYZhvjmKcUZpMZmuOV.png", alt="The Console.", width="800", height="463" %}
 
 **Figure 1**. The **Console**.
 
@@ -31,7 +31,7 @@ you physically follow along, you're more likely to remember the workflows later.
 1.  Press Command+Option+J (Mac) or Control+Shift+J (Windows, Linux, Chrome OS) to open the
     **Console**, right here on this very page.
 
-    ![This tutorial on the left, and DevTools on the right.](/web/tools/chrome-devtools/console/images/setupjs.png)
+    {% Img src="image/admin/5aHOGjzCHY5tHEnye4lU.png", alt="This tutorial on the left, and DevTools on the right.", width="800", height="480" %}
 
     **Figure 2**. This tutorial on the left, and DevTools on the right.
 
@@ -47,7 +47,7 @@ to change how the page looks or runs.
 2.  Type `document.getElementById('hello').textContent = 'Hello, Console!'` in the **Console** and
     then press Enter to evaluate the expression. Notice how the text inside the button changes.
 
-    ![How the Console looks after evaluating the expression above.](/web/tools/chrome-devtools/console/images/textcontentchange.png)
+    {% Img src="image/admin/7AFYFztno8K9z7C7rXZm.png", alt="How the Console looks after evaluating the expression above.", width="800", height="463" %}
 
     **Figure 3**. How the Console looks after evaluating the expression above.
 

@@ -86,7 +86,7 @@ panel helps you visualize a page's memory use over time.
 
 Tip: It's a good practice to start and end your recording with a forced garbage collection. Click
 the **collect garbage** button
-(![force garbage collection button](/web/tools/chrome-devtools/memory-problems/imgs/collect-garbage.png))
+({% Img src="image/admin/Qkf1EfUFRSoRsCEMVHdY.png", alt="force garbage collection button", width="18", height="20" %})
 while recording to force garbage collection.
 
 To demonstrate Timeline memory recordings, consider the code below:
@@ -108,7 +108,7 @@ Every time that the button referenced in the code is pressed, ten thousand `div`
 to the document body, and a string of one million `x` characters is pushed onto the `x` array.
 Running this code produces a Timeline recording like the following screenshot:
 
-![simple growth example](/web/tools/chrome-devtools/memory-problems/imgs/simple-growth.png)
+{% Img src="image/admin/pPcZQbQ6EleigzceZoct.png", alt="simple growth example", width="800", height="349" %}
 
 First, an explanation of the user interface. The **HEAP** graph in the **Overview** pane (below
 **NET**) represents the JS heap. Below the **Overview** pane is the **Counter** pane. Here you can
@@ -161,18 +161,18 @@ snapshot.
 To create a snapshot, open DevTools and go to the **Profiles** panel, select the **Take Heap
 Snapshot** radio button, and then press the **Take Snapshot** button.
 
-![take heap snapshot](/web/tools/chrome-devtools/memory-problems/imgs/take-heap-snapshot.png)
+{% Img src="image/admin/cZnWVusrPfoLR9R9edO1.png", alt="take heap snapshot", width="800", height="353" %}
 
 The snapshot may take some time to process and load. Once it's finished, select it from the lefthand
 panel (named **HEAP SNAPSHOTS**).
 
 Type `Detached` in the **Class filter** textbox to search for detached DOM trees.
 
-![filtering for detached nodes](/web/tools/chrome-devtools/memory-problems/imgs/detached-filter.png)
+{% Img src="image/admin/WXv2Bv8LfZKGQBmgcPbl.png", alt="filtering for detached nodes", width="800", height="218" %}
 
 Expand the carats to investigate a detached tree.
 
-![investigating detached tree](/web/tools/chrome-devtools/memory-problems/imgs/expanded-detached.png)
+{% Img src="image/admin/j2sPLeVjZ5tgbmVhs9Ri.png", alt="investigating detached tree", width="800", height="384" %}
 
 Nodes highlighted yellow have direct references to them from the JavaScript code. Nodes highlighted
 red do not have direct references. They are only alive because they are part of the yellow node's
@@ -186,7 +186,7 @@ that the `detachedTree` variable is referencing the node. To fix this particular
 would study the code that uses `detachedTree` and ensure that it removes its reference to the node
 when it's no longer needed.
 
-![investigating a yellow node](/web/tools/chrome-devtools/memory-problems/imgs/yellow-node.png)
+{% Img src="image/admin/YB6UXZtlZ1eleCZUbUuG.png", alt="investigating a yellow node", width="800", height="369" %}
 
 ## Identify JS heap memory leaks with Allocation Timelines {: #identify_js_heap_memory_leaks_with_allocation_timelines }
 
@@ -210,31 +210,31 @@ added to the `x` array.
 To record an Allocation Timeline, open DevTools, go to the **Profiles** panel, select the **Record
 Allocation Timeline** radio button, press the **Start** button, perform the action that you suspect
 is causing the memory leak, and then press the **stop recording** button
-(![stop recording button](/web/tools/chrome-devtools/memory-problems/imgs/stop-recording.png)) when
+({% Img src="image/admin/1bMLuZwggo3QfUYi6Irk.png", alt="stop recording button", width="20", height="19" %}) when
 you're done.
 
 As you're recording, notice if any blue bars show up on the Allocation Timeline, like in the
 screenshot below.
 
-![new allocations](/web/tools/chrome-devtools/memory-problems/imgs/new-allocations.png)
+{% Img src="image/admin/2OEngx5L3tELetdn1JDy.png", alt="new allocations", width="800", height="381" %}
 
 Those blue bars represent new memory allocations. Those new memory allocations are your candidates
 for memory leaks. You can zoom on a bar to filter the **Constructor** pane to only show objects that
 were allocated during the specified timeframe.
 
-![zoomed allocation timeline](/web/tools/chrome-devtools/memory-problems/imgs/zoomed-allocation-timeline.png)
+{% Img src="image/admin/j1EwNIGrsYdMX23HkF7I.png", alt="zoomed allocation timeline", width="800", height="252" %}
 
 Expand the object and click on its value to view more details about it in the **Object** pane. For
 example, in the screenshot below, by viewing the details of the object that was newly allocated,
 you'd be able to see that it was allocated to the `x` variable in the `Window` scope.
 
-![object details](/web/tools/chrome-devtools/memory-problems/imgs/object-details.png)
+{% Img src="image/admin/y8Yq6Ma0MVawDaG7dz8b.png", alt="object details", width="800", height="368" %}
 
 ## Investigate memory allocation by function {: #allocation-profile }
 
 Use the **Record Allocation Profiler** type to view memory allocation by JavaScript function.
 
-![Record Allocation Profiler](/web/tools/chrome-devtools/memory-problems/imgs/record-allocation-profile.png)
+{% Img src="image/admin/EiRjVwtHv1eh7idYWz37.png", alt="Record Allocation Profiler", width="800", height="564" %}
 
 1.  Select the **Record Allocation Profiler** radio button. If there is a worker on the page, you
     can select that as the profiling target using the dropdown menu next to the **Start** button.
@@ -245,7 +245,7 @@ Use the **Record Allocation Profiler** type to view memory allocation by JavaScr
 DevTools shows you a breakdown of memory allocation by function. The default view is **Heavy (Bottom
 Up)**, which displays the functions that allocated the most memory at the top.
 
-![Allocation profile](/web/tools/chrome-devtools/memory-problems/imgs/allocation-profile.png)
+{% Img src="image/admin/bR7LtElQ59hH4L3DTpE4.png", alt="Allocation profile", width="800", height="382" %}
 
 ## Spot frequent garbage collections {: #spot_frequent_garbage_collections }
 

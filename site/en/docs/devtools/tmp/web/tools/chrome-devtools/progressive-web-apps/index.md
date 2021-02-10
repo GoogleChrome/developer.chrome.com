@@ -45,7 +45,7 @@ Related Guides:
 Once you've got your manifest set up, you can use the **Manifest** pane of the **Application** panel
 to inspect it.
 
-![manifest pane](/web/tools/chrome-devtools/images/manifest.png)
+{% Img src="image/admin/lcj1XOPDeY6HMzWOE12x.png", alt="manifest pane", width="602", height="541" %}
 
 - To look at the manifest source, click the link below **App Manifest** label
   (`https://airhorner.com/manifest.json` in the screenshot above).
@@ -67,7 +67,7 @@ support for Add to Homescreen. Clicking on **Add to Homescreen** while the app i
 Chrome to display the "add this site to your shelf" banner, which is the desktop equivalent of the
 "add to homescreen" banner for mobile devices.
 
-![add to desktop shelf](/web/tools/chrome-devtools/images/io.png)
+{% Img src="image/admin/dcHC145P0QVJTCapLWFd.png", alt="add to desktop shelf", width="800", height="611" %}
 
 **Tip**: Keep the **Console** drawer open while simulating Add to Homescreen events. The Console
 tells you if your manifest has any issues and logs other information about the Add to Homescreen
@@ -97,7 +97,7 @@ Related Guides:
 The **Service Workers** pane in the **Application** panel is the main place in DevTools to inspect
 and debug service workers.
 
-![service worker pane](/web/tools/chrome-devtools/images/sw.png)
+{% Img src="image/admin/6DPB4hljonLW1hVhaka5.png", alt="service worker pane", width="718", height="415" %}
 
 - If a service worker is installed to the currently open page, then you'll see it listed on this
   pane. For example, in the screenshot above there's a service worker installed for the scope of
@@ -131,21 +131,21 @@ and debug service workers.
 
 If the service worker causes any errors, a new label called **Errors** shows up.
 
-![service worker with errors](/web/tools/chrome-devtools/images/sw-error.png)
+{% Img src="image/admin/EhulxkNH9EIAwVbQX6Xd.png", alt="service worker with errors", width="508", height="296" %}
 
 ## Service worker caches {: #caches }
 
 The **Cache Storage** pane provides a read-only list of resources that have been cached using the
 (service worker) [Cache API][12].
 
-![service worker cache pane](/web/tools/chrome-devtools/images/sw-cache.png)
+{% Img src="image/admin/KLqhHBwpNPFGTiv1kUTR.png", alt="service worker cache pane", width="800", height="421" %}
 
 Note that the first time you open a cache and add a resource to it, DevTools might not detect the
 change. Reload the page and you should see the cache.
 
 If you've got two or more caches open, you'll see them listed below the **Cache Storage** dropdown.
 
-![multiple service worker caches](/web/tools/chrome-devtools/images/multiple-caches.png)
+{% Img src="image/admin/mK84c0i8pMq3hPTXCNpv.png", alt="multiple service worker caches", width="800", height="206" %}
 
 ## Quota usage {: #opaque-responses }
 

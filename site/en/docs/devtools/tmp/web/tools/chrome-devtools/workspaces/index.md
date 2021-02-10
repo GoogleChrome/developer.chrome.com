@@ -66,7 +66,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
 1.  [Open the demo][8]. In the top-left of the editor, there's a randomly-generated project name.
 
-    ![A Glitch project with a randomly-generated name.](/web/tools/chrome-devtools/workspaces/imgs/glitch.png)
+    {% Img src="image/admin/tuAe9vJKXT0hRaNghrMA.png", alt="A Glitch project with a randomly-generated name.", width="800", height="606" %}
 
     **Figure 1**. A Glitch project with a randomly-generated name
 
@@ -74,7 +74,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
     **desert-cycle**.
 3.  Select **Advanced Options** > **Download Project**.
 
-    ![The Download Project button.](/web/tools/chrome-devtools/workspaces/imgs/download.png)
+    {% Img src="image/admin/78hxAkUuVvPelHFE0q4P.png", alt="The Download Project button.", width="800", height="665" %}
 
     **Figure 2**. The **Download Project** button, highlighted in blue
 
@@ -91,7 +91,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
 7.  Open a tab in Google Chrome and go to locally-hosted version of the site. You should be able to
     access it via a URL like `localhost:8080`. The exact [port number][9] may be different.
 
-    ![The demo.](/web/tools/chrome-devtools/workspaces/imgs/demo.png)
+    {% Img src="image/admin/uXnoG3LgkfkOGbHPaQtP.png", alt="The demo.", width="800", height="633" %}
 
     **Figure 3**. The demo
 
@@ -100,14 +100,14 @@ Complete this tutorial to get hands-on experience with Workspaces.
 1.  Press Command+Option+J (Mac) or Control+Shift+J (Windows, Linux, Chrome OS) to open the
     **Console** panel of DevTools.
 
-    ![The Console panel.](/web/tools/chrome-devtools/workspaces/imgs/console.png)
+    {% Img src="image/admin/RjZAIMvHhWe2HnMp4XUU.png", alt="The Console panel.", width="800", height="524" %}
 
     **Figure 4**. The **Console** panel
 
 2.  Click the **Sources** tab.
 3.  Click the **Filesystem** tab.
 
-    ![The Filesystem tab.](/web/tools/chrome-devtools/workspaces/imgs/filesystem.png)
+    {% Img src="image/admin/eEo5tlYXGVAX6gc4ZY3t.png", alt="The Filesystem tab.", width="800", height="524" %}
 
     **Figure 5**. The **Filesystem** tab
 
@@ -129,7 +129,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
 1.  Open `~/Desktop/app/styles.css` in a text editor. Notice how the `color` property of `h1`
     elements is set to `fuchsia`.
 
-    ![Viewing styles.css in a text editor.](/web/tools/chrome-devtools/workspaces/imgs/fuchsia.png)
+    {% Img src="image/admin/aYtE6OhxyFc6D6Ur0eXY.png", alt="Viewing styles.css in a text editor.", width="800", height="551" %}
 
     **Figure 7**. Viewing `styles.css` in a text editor
 
@@ -140,7 +140,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
     applied to it in the **Styles** pane. The green dot next to `styles.css:1` means that any change
     you make will get mapped to `~/Desktop/app/styles.css`.
 
-    ![Setting the color property of the h1 element to green.](/web/tools/chrome-devtools/workspaces/imgs/green.png)
+    {% Img src="image/admin/izj9zoJvOeyE4zHJvCC0.png", alt="Setting the color property of the h1 element to green.", width="800", height="524" %}
 
     **Figure 8**. Setting the `color` property of the `h1` element to `green`
 
@@ -165,7 +165,7 @@ don't waste time later trying to figure out why it's not working.
 2.  Double click the text content of the `h1` element, which says `Workspaces Demo`, and replace it
     with `I ❤️ Cake`.
 
-    ![Attempting to change HTML from the DOM Tree of the Elements panel](/web/tools/chrome-devtools/workspaces/imgs/cake.png)
+    {% Img src="image/admin/aIjt9kcloYh3DT7XlIWV.png", alt="Attempting to change HTML from the DOM Tree of the Elements panel", width="800", height="524" %}
 
     **Figure 9**. Attempting to change HTML from the **DOM Tree** of the **Elements** panel
 
@@ -205,7 +205,7 @@ If you want to save a change to the page's HTML, do it via the **Sources** panel
 5.  Press Command+S (Mac) or Control+S (Windows, Linux, Chrome OS) to save the change.
 6.  Reload the page. The `<h1>` element is still displaying the new text.
 
-    ![Changing HTML from the Sources panel.](/web/tools/chrome-devtools/workspaces/imgs/cakehtml.png)
+    {% Img src="image/admin/AMhS744qZFBSt0UHqFjv.png", alt="Changing HTML from the Sources panel.", width="800", height="524" %}
 
     **Figure 11**. Line 12 has been set to `I ❤️ Cake`
 
@@ -225,7 +225,7 @@ to your site. There's a way to have the **Sources** panel open alongside other p
     file you edited in the **Sources** panel. The **Quick Source** tab gives you the editor from the
     **Sources** panel, so that you can edit files while having other panels open.
 
-    ![Opening the Quick Source tab via Command Menu.](/web/tools/chrome-devtools/workspaces/imgs/commandmenu.png)
+    {% Img src="image/admin/dp21fCa89ezyttjmgzVT.png", alt="Opening the Quick Source tab via Command Menu.", width="800", height="524" %}
 
     **Figure 12**. Opening the **Quick Source** tab via the **Command Menu**
 
@@ -233,7 +233,7 @@ to your site. There's a way to have the **Sources** panel open alongside other p
     See **Figure 13**.
 5.  Type `script`, then select **app/script.js**.
 
-    ![Opening script.js via the Open File dialog.](/web/tools/chrome-devtools/workspaces/imgs/open.png)
+    {% Img src="image/admin/eoOAA9Pt6Qz3Xfy2PpbZ.png", alt="Opening script.js via the Open File dialog.", width="800", height="524" %}
 
     **Figure 13**. Opening `script.js` via the **Open File** dialog
 
@@ -246,7 +246,7 @@ to your site. There's a way to have the **Sources** panel open alongside other p
 8.  Press Command+S (Mac) or Control+S (Windows, Linux, Chrome OS) to save the change.
 9.  Reload the page. The link on the page is now italic.
 
-    ![The link on the page is now italic.](/web/tools/chrome-devtools/workspaces/imgs/italic.png)
+    {% Img src="image/admin/9USr1MmQSdD8wGABrVtI.png", alt="The link on the page is now italic.", width="800", height="524" %}
 
     **Figure 14**. The link on the page is now italic
 

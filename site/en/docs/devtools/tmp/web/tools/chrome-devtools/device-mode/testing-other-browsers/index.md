@@ -48,7 +48,7 @@ keyboards.
 
 ### Android Emulator {: #android_emulator }
 
-![Android Emulator Stock Browser](/web/tools/chrome-devtools/device-mode/imgs/android-emulator-stock-browser.png)
+{% Img src="image/admin/4dZEPJ7KfytAZofgy4iR.png", alt="Android Emulator Stock Browser", width="800", height="1443" %}
 
 Stock Browser in Android Emulator
 
@@ -65,7 +65,7 @@ old Stock Browser for Android.
 
 #### Chromium Content Shell on Android {: #chromium_content_shell_on_android }
 
-![Android Emulator Content Shell](/web/tools/chrome-devtools/device-mode/imgs/android-avd-contentshell.png)
+{% Img src="image/admin/IhUyOkDJ1RxZFh7zDucB.png", alt="Android Emulator Content Shell", width="800", height="1443" %}
 
 Android Emulator Content Shell
 
@@ -82,7 +82,7 @@ Now you can test your site with the Chromium Content Shell.
 
 #### Firefox on Android {: #firefox_on_android }
 
-![Firefox Icon on Android Emulator](/web/tools/chrome-devtools/device-mode/imgs/ff-on-android-emulator.png)
+{% Img src="image/admin/rY90fx78bamE1SiV6AFB.png", alt="Firefox Icon on Android Emulator", width="800", height="1443" %}
 
 Firefox Icon on Android Emulator
 
@@ -114,7 +114,7 @@ whenever you need it.
 
 ### Modern.IE {: #modernie }
 
-![Modern IE VM](/web/tools/chrome-devtools/device-mode/imgs/modern-ie-simulator.png)
+{% Img src="image/admin/zl5ezXOKAlPeqU2IRbwY.png", alt="Modern IE VM", width="800", height="582" %}
 
 Modern IE VM
 

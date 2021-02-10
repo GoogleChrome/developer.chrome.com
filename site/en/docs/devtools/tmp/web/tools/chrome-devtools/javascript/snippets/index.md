@@ -20,7 +20,7 @@ alternative to [bookmarklets][3]. Firefox DevTools has a feature similar to Snip
 For example, **Figure 1** shows the DevTools homepage on the left and some Snippet source code on
 the right.
 
-![How the page looks before running the Snippet.](/web/tools/chrome-devtools/javascript/imgs/snippetexamplebefore.png)
+{% Img src="image/admin/EWQszqRC7ElFmBEL7F7N.png", alt="How the page looks before running the Snippet.", width="800", height="514" %}
 
 **Figure 1**. How the page looks before running the Snippet.
 
@@ -38,7 +38,7 @@ document.body.appendChild(p);
 display the `Hello, Snippets!` message that the Snippet logs, and the page's content changes
 completely.
 
-![How the page looks after running the Snippet.](/web/tools/chrome-devtools/javascript/imgs/snippetexampleafter.png)
+{% Img src="image/admin/0LdPF6MB3EzkAu04pXYs.png", alt="How the page looks after running the Snippet.", width="800", height="514" %}
 
 **Figure 2**. How the page looks after running the Snippet.
 
@@ -47,7 +47,7 @@ completely.
 The **Snippets** pane lists your Snippets. When you want to edit a Snippet, you need to open it from
 the **Snippets** pane.
 
-![The Snippets pane.](/web/tools/chrome-devtools/javascript/imgs/snippetspane.png)
+{% Img src="image/admin/P9yNZWUJKt2hUUYsDy1v.png", alt="The Snippets pane.", width="800", height="573" %}
 
 **Figure 3**. The **Snippets** pane.
 
@@ -56,12 +56,12 @@ the **Snippets** pane.
 1.  Click the **Sources** tab to open the **Sources** panel. The **Page** pane usually opens by
     default.
 
-    ![The Sources panel with the Page pane open on the left.](/web/tools/chrome-devtools/javascript/imgs/emptysources.png)
+    {% Img src="image/admin/rloloE1a9afaWUDo4Typ.png", alt="The Sources panel with the Page pane open on the left.", width="800", height="589" %}
 
     **Figure 4**. The **Sources** panel with the **Page** pane open on the left.
 
 2.  Click the **Snippets** tab to open the **Snippets** pane. You might need to click **More Tabs**
-    ![More Tabs](/web/tools/chrome-devtools/images/shared/more-tabs.png) in order to access the
+    {% Img src="image/admin/kXITLxKrpFwp1ir6Tl3b.png", alt="More Tabs", width="18", height="16" %} in order to access the
     **Snippets** option.
 
 ### Open the Snippets pane with the Command Menu {: #opencommandmenu }
@@ -70,7 +70,7 @@ the **Snippets** pane.
 2.  Press Control+Shift+P or Command+Shift+P (Mac) to open the Command Menu.
 3.  Start typing `Snippets`, select **Show Snippets**, and then press Enter to run the command.
 
-    ![The Show Snippets command.](/web/tools/chrome-devtools/javascript/imgs/showsnippets.png)
+    {% Img src="image/admin/6zVZHNVXNXxMP2SziTMa.png", alt="The Show Snippets command.", width="800", height="573" %}
 
     **Figure 5**. The **Show Snippets** command.
 
@@ -82,7 +82,7 @@ the **Snippets** pane.
 2.  Click **New snippet**.
 3.  Enter a name for your Snippet then press Enter to save.
 
-    ![Naming a Snippet.](/web/tools/chrome-devtools/javascript/imgs/snippetname.png)
+    {% Img src="image/admin/QCPp5Bcgm7Ns4pgYKGpS.png", alt="Naming a Snippet.", width="800", height="573" %}
 
     **Figure 6**. Naming a Snippet.
 
@@ -92,7 +92,7 @@ the **Snippets** pane.
 2.  Press Control+Shift+P or Command+Shift+P (Mac) to open the Command Menu.
 3.  Start typing `Snippet`, select **Create new snippet**, then press Enter to run the command.
 
-    ![The command for creating a new Snippet.](/web/tools/chrome-devtools/javascript/imgs/createsnippetcommand.png)
+    {% Img src="image/admin/THzXr6JqYkTv6lv83iSN.png", alt="The command for creating a new Snippet.", width="800", height="573" %}
 
     **Figure 7**. The command for creating a new Snippet.
 
@@ -104,7 +104,7 @@ See [Rename Snippets][6] if you'd like to give your new Snippet a custom name.
 2.  In the **Snippets** pane click the name of the Snippet that you want to edit in order to open it
     in the **Code Editor**.
 
-    ![The Code Editor.](/web/tools/chrome-devtools/javascript/imgs/editor.png)
+    {% Img src="image/admin/XEIt2GZsfU8MtZJqeDRv.png", alt="The Code Editor.", width="800", height="573" %}
 
     **Figure 8**. The **Code Editor**.
 
@@ -112,7 +112,7 @@ See [Rename Snippets][6] if you'd like to give your new Snippet a custom name.
 4.  When there's an asterisk next to the name of your Snippet it means you have unsaved code. Press
     Control+S or Command+S (Mac) to save.
 
-    ![An asterisk next to the Snippet name, which indicates unsaved code.](/web/tools/chrome-devtools/javascript/imgs/unsavedsnippet.png)
+    {% Img src="image/admin/Nz3usljhLTIN0SAvYHAs.png", alt="An asterisk next to the Snippet name, which indicates unsaved code.", width="800", height="573" %}
 
     **Figure 9**. An asterisk next to the Snippet name, which indicates unsaved code.
 
@@ -122,7 +122,7 @@ See [Rename Snippets][6] if you'd like to give your new Snippet a custom name.
 
 1.  [Open the **Snippets** pane][8].
 2.  Click the name of the Snippet that you want to run. The Snippet opens in the **Code Editor**.
-3.  Click **Run Snippet** ![Run Snippet](/web/tools/chrome-devtools/javascript/imgs/runsnippet.png),
+3.  Click **Run Snippet** {% Img src="image/admin/uz8qSHNEFlBv9yiK7re1.png", alt="Run Snippet", width="20", height="20" %},
     or press Control+Enter or Command+Enter (Mac).
 
 ### Run a Snippet with the Command Menu {: #runcommandmenu }
@@ -131,7 +131,7 @@ See [Rename Snippets][6] if you'd like to give your new Snippet a custom name.
 2.  Press Control+O or Command+O (Mac) to open the Command Menu.
 3.  Type the `!` character followed by the name of the Snippet that you want to run.
 
-    ![Running a Snippet from the Command Menu.](/web/tools/chrome-devtools/javascript/imgs/run-snippet-command.png)
+    {% Img src="image/admin/Ua8t4kX7zmVps6tntHOT.png", alt="Running a Snippet from the Command Menu.", width="800", height="603" %}
 
     **Figure 10**. Running a Snippet from the Command Menu.
 
