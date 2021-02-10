@@ -267,12 +267,12 @@ of lines of code:
     ... const fs = require('fs'); const compression = require('compression');
     app.use(compression()); app.use(express.static('build')); ...
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note**: Usually, you'd have to install the `compression` package via something like
     `npm i -S compression`, but this has already been done for you.
 
-    !!!
+    {% endAside %}
 
 3.  Wait for Glitch to deploy the new build of the site. The fancy animation that you see next to
     **Logs** and **Show** means that the site is getting rebuilt and redeployed. The change is ready
@@ -538,7 +538,7 @@ Investigate the trace to find ways to do less JavaScript work:
 
     **Figure 42**. Hovering over the `mineBitcoin` activity
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note:** Although the calls that your framework makes are usually out of your control,
     sometimes you may structure your app in a way that causes the framework to run inefficiently.
@@ -546,7 +546,7 @@ Investigate the trace to find ways to do less JavaScript work:
     work. However, this requires a deep understanding of how your framework works, and what kind of
     changes you can make in your own code in order to use the framework more efficiently.
 
-    !!!
+    {% endAside %}
 
 5.  Expand the **Bottom-Up** section. This tab breaks down what activities took up the most time. If
     you don't see anything in the Bottom-Up section, click the label for **Main** section. The
@@ -586,13 +586,13 @@ Reduce JavaScript activity by removing the call to `mineBitcoin`:
 
 Looks like that last change caused a massive jump in performance!
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This section provided a rather brief introduction to the Performance panel. See
 [Performance Analysis Reference][12] to learn more about how you can use it to analyze page
 performance.
 
-!!!
+{% endAside %}
 
 #### Doing less main thread work in the real world {: #real-world-main-thread }
 

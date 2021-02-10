@@ -47,11 +47,11 @@ panel.
 
 The Cookies tables in the Network and Application panels now include a **Priority** column.
 
-!!!.aside.aside--caution
+{% Aside "caution" %}
 
 Chrome is the only browser that supports cookie priority.
 
-!!!
+{% endAside %}
 
 [Chromium issue #1026879][8]
 

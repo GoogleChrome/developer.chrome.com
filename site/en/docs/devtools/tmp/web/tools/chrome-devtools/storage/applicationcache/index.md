@@ -8,11 +8,11 @@ updated: 2021-01-18
 description: "How to view Application Cache data from the Application panel of Chrome DevTools."
 ---
 
-!!!.aside.aside--warning
+{% Aside "warning" %}
 
 The Application Cache API is [being removed from the web platform][1] .
 
-!!!
+{% endAside %}
 
 This guide shows you how to use [Chrome DevTools][2] to inspect [Application Cache][3] resources.
 

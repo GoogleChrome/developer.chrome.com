@@ -50,13 +50,13 @@ modifies the current default locale, affecting the following:
 - DOM APIs such as `navigator.language` and `navigator.languages`
 - the [`Accept-Language`][5] HTTP request header
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** updates to `navigator.language` and `navigator.languages` are not visible immediately, but
 only after the next navigation or page reload. Changes to the `Accept-Language` HTTP header are only
 reflected for subsequent requests.
 
-!!!
+{% endAside %}
 
 {% YouTube id="lZEFwACYPo0" %}
 
@@ -114,13 +114,13 @@ viewport.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Fxnb0smaHkiP5PrXKO76.png", alt="DevTools docked to the left of the viewport", width="800", height="481" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** DevTools has had the **Dock to left** feature for a long time but it was previously only
 accessible from the [**Main Menu**][17]. The new feature in Chrome 83 is that you can now access
 this feature from the Command Menu.
 
-!!!
+{% endAside %}
 
 Send feedback to [Chromium issue #1011679][18].
 
@@ -175,12 +175,12 @@ current icons ready?][29] to learn more.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IRDdXdCbPKD2wkKWdPlk.png", alt="The 'Show only the minimum safe area for maskable icons' checkbox", width="800", height="626" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This feature launched in Chrome 81. We're covering it here in Chrome 83 because we forgot
 to cover it in What's New In DevTools (Chrome 81).
 
-!!!
+{% endAside %}
 
 [1]: /web/tools/chrome-devtools/evaluate-performance/reference#rendering
 [2]: http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/

@@ -8,11 +8,11 @@ updated: 2020-07-10
 description: "How to view Web SQL data from the Application panel of Chrome DevTools."
 ---
 
-!!!.aside.aside--warning
+{% Aside "warning" %}
 
 The Web SQL specification is [not being maintained][1] .
 
-!!!
+{% endAside %}
 
 This guide shows you how to use [Chrome DevTools][2] to inspect Web SQL data.
 

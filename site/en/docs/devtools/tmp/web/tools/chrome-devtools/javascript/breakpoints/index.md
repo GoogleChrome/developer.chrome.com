@@ -116,11 +116,11 @@ To set a DOM change breakpoint:
 Use an XHR breakpoint when you want to break when the request URL of an XHR contains a specified
 string. DevTools pauses on the line of code where the XHR calls `send()`.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This feature also works with [Fetch][10] requests.
 
-!!!
+{% endAside %}
 
 One example of when this is helpful is when you see that your page is requesting an incorrect URL,
 and you want to quickly find the AJAX or Fetch source code that is causing the incorrect request.

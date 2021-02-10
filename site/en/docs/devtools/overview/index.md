@@ -46,11 +46,11 @@ The DevTools UI can be a little overwhelming... there are so many tabs! But, if 
 to get familiar with each tab to understand what's possible, you may discover that DevTools can
 seriously boost your productivity.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** In the DevTools docs, the top-level tabs are called panels.
 
-!!!
+{% endAside %}
 
 ### Device Mode {: #device-mode }
 
@@ -114,11 +114,11 @@ View and debug network activity.
 
 ### Performance panel {: #performance }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** In Chrome 58 the Timeline panel was renamed to the Performance panel.
 
-!!!
+{% endAside %}
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nCVPdzEUA2XIY5txAG1G.png", alt="Timeline Panel", width="800", height="649" %}
 
@@ -132,11 +132,11 @@ Find ways to improve load and runtime performance.
 
 ### Memory panel {: #memory }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** In Chrome 58 the Profiles panel was renamed to the Memory panel.
 
-!!!
+{% endAside %}
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oR8gZtwxxhRLj77xYsWd.png", alt="Profiles Panel", width="800", height="655" %}
 
