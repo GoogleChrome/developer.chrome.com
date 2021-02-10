@@ -58,10 +58,10 @@ does not and select "No, I am not using remote code."
 You must disclose how your extension collects and uses user data. These disclosures include:
 
 * The nature of the data that the extensions collects from users
-* Your certification that the extension complies with the policy on limited use.
+* Your certification that the extension complies with the policy on limited use
 
 Your disclosures are displayed to Chrome users, and should be consistent with the existing privacy
-policies that developers you provide to the Chrome Web Store.
+policies that you provide to the Chrome Web Store.
 
 
 **Data usage** Use this field to disclose and certify your data collection practices. Use the first
