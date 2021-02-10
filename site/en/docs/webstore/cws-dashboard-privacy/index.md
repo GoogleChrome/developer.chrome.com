@@ -53,5 +53,22 @@ does not and select "No, I am not using remote code."
        alt="Screenshot of the remote code declarations field of the privacy field set",
        height="170", width="800" %}
 
+## Certify your data use practices
+
+You must disclose how your extension collects and uses user data. These disclosures include:
+
+* The nature of the data that the extensions collects from users
+* Your certification that the extension complies with the policy on limited use.
+
+Your disclosures are displayed to Chrome users, and should be consistent with the existing privacy
+policies that developers you provide to the Chrome Web Store.
+
+
+**Data usage** Use this field to disclose and certify your data collection practices. Use the first
+group of checkboxes to disclose which types of data your extension collects. Use the second group of
+checkboxes to certify that you comply with each of the disclosure statements.
+
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/PwmNuP356TsVi80bxWAj.png", alt="ALT_TEXT_HERE", width="800", height="495" %}
+
 [1]: /docs/webstore/program_policies/#extensions
 [2]: /docs/extensions/mv2/security/#permissions
