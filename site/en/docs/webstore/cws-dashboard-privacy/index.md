@@ -68,7 +68,8 @@ policies that you provide to the Chrome Web Store.
 group of checkboxes to disclose which types of data your extension collects. Use the second group of
 checkboxes to certify that you comply with each of the disclosure statements.
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/PwmNuP356TsVi80bxWAj.png", alt="ALT_TEXT_HERE", width="800", height="495" %}
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/PwmNuP356TsVi80bxWAj.png", alt="Screenshot of data
+use certification fields", width="800", height="495" %}
 
 [1]: /docs/webstore/program_policies/#extensions
 [2]: /docs/extensions/mv2/security/#permissions
