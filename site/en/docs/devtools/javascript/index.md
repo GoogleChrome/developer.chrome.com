@@ -67,9 +67,17 @@ The **Sources** panel UI has 3 parts:
 A common method for debugging a problem like this is to insert a lot of `console.log()` statements
 into the code, in order to inspect values as the script executes. For example:
 
-function updateLabel() { var addend1 \= getNumber1(); console.log('addend1:', addend1); var addend2
-\= getNumber2(); console.log('addend2:', addend2); var sum \= addend1 + addend2; console.log('sum:',
-sum); label.textContent \= addend1 + ' + ' + addend2 + ' = ' + sum; }
+```js
+function updateLabel() {
+  var addend1 = getNumber1();
+  console.log('addend1:', addend1);
+  var addend2 = getNumber2();
+  console.log('addend2:', addend2);
+  var sum = addend1 + addend2;
+  console.log('sum:', sum);
+  label.textContent = addend1 + ' + ' + addend2 + ' = ' + sum;
+}
+```
 
 The `console.log()` method may get the job done, but **breakpoints** can get it done faster. A
 breakpoint lets you pause your code in the middle of its execution, and examine all values at that
@@ -94,9 +102,8 @@ that the `click` listener executes. **Event Listener Breakpoints** let you do ex
     section. DevTools reveals a list of expandable event categories, such as **Animation** and
     **Clipboard**.
 2.  Next to the **Mouse** event category, click **Expand**
-    ![Expand
-icon](/web/tools/chrome-devtools/images/expand.png). DevTools reveals a list of mouse
-    events, such as **click** and **mousedown**. Each event has a checkbox next to it.
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/aRiQWVlQJQz6Mbv1RMag.png", alt="Expand", width="14", height="16" %}.
+    DevTools reveals a list of mouse events, such as **click** and **mousedown**. Each event has a checkbox next to it.
 3.  Check the **click** checkbox. DevTools is now set up to automatically pause when _any_ `click`
     event listener executes.
 
@@ -108,12 +115,13 @@ icon](/web/tools/chrome-devtools/images/expand.png). DevTools reveals a list of 
     highlights a line of code in the **Sources** panel. DevTools should be paused on this line of
     code:
 
+    ```js
     function onClick() {
+    ```
 
     If you're paused on a different line of code, press **Resume Script Execution**
-    ![Resume
- Script Execution](/web/tools/chrome-devtools/images/resume-script-execution.png) until
-    you're paused on the correct line.
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lk63wTlzwXWuRIdSsKP4.png", alt="ALT_TEXT_HERE", width="26", height="20" %}
+    until you're paused on the correct line.
 
     {% Aside %}
 
@@ -140,12 +148,13 @@ it's executing in a different order than you expected. Try it now:
     the execution of the `onClick()` function, one line at a time. DevTools highlights the following
     line of code:
 
+    ```js
     if (inputsAreEmpty()) {
+    ```
 
 2.  Click **Step over next function call**
-    ![Step over next function
-call](/web/tools/chrome-devtools/images/step-over.png). DevTools
-    executes `inputsAreEmpty()` without stepping into it. Notice how DevTools skips a few lines of
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KMlE5HW4DU3PRgYEHny9.png", alt="Step over next function call.", width="36", height="20" %}.
+    DevTools executes `inputsAreEmpty()` without stepping into it. Notice how DevTools skips a few lines of
     code. This is because `inputsAreEmpty()` evaluated to false, so the `if` statement's block of
     code didn't execute.
 
@@ -161,15 +170,16 @@ code that you want to pause on, use a line-of-code breakpoint:
 
 1.  Look at the last line of code in `updateLabel()`:
 
-    label.textContent \= addend1 + ' + ' + addend2 + ' = ' + sum;
+    ```js
+    label.textContent = addend1 + ' + ' + addend2 + ' = ' + sum;
+    ```
 
 2.  To the left of the code you can see the line number of this particular line of code, which is
     **32**. Click on **32**. DevTools puts a blue icon on top of **32**. This means that there is a
     line-of-code breakpoint on this line. DevTools now always pauses before this line of code is
     executed.
 3.  Click **Resume script execution**
-    ![Resume script
-execution](/web/tools/chrome-devtools/images/resume-script-execution.png). The
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lk63wTlzwXWuRIdSsKP4.png", alt="Resume Script Execution", width="26", height="20" %}. The
     script continues executing until it reaches line 32. On lines 29, 30, and 31, DevTools prints
     out the values of `addend1`, `addend2`, and `sum` to the right of each line's semi-colon.
 
@@ -241,14 +251,12 @@ re-running the demo. You don't need to leave DevTools to apply the fix. You can 
 directly within the DevTools UI. Try it now:
 
 1.  Click **Resume script execution**
-    ![Resume script
-execution](/web/tools/chrome-devtools/images/resume-script-execution.png).
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lk63wTlzwXWuRIdSsKP4.png", alt="Resume Script Execution", width="26", height="20" %}.
 2.  In the **Code Editor**, replace line 31, `var sum = addend1 + addend2`, with
     `var sum = parseInt(addend1) + parseInt(addend2)`.
 3.  Press Command+S (Mac) or Control+S (Windows, Linux) to save your change.
 4.  Click **Deactivate breakpoints**
-    ![Deactivate
-breakpoints](/web/tools/chrome-devtools/images/deactivate-breakpoints-button.png).
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/WTW7ZmEWJsBaeMrmXRJn.png", alt="Deactivate breakpoints", width="19", height="17" %}.
     It changes blue to indicate that it's active. While this is set, DevTools ignores any
     breakpoints you've set.
 5.  Try out the demo with different values. The demo now calculates correctly.
