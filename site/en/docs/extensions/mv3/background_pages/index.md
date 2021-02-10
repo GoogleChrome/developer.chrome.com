@@ -1,18 +1,18 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Manage events with background scripts"
+title: "Manage events with service workers"
 date: 2012-09-17
 updated: 2018-05-01
 description: How to respond to browser triggers (events) from a Chrome Extension background script.
 ---
 
-{% include 'partials/extensions/mv2page-in-mv3.md' %}
-
-Extensions are event based programs used to modify or enhance the Chrome browsing experience. Events
+Extensions are event-based programs used to modify or enhance the Chrome browsing experience. Events
 are browser triggers, such as navigating to a new page, removing a bookmark, or closing a tab.
-Extensions monitor these events in their background script, then react with specified instructions.
+Extensions monitor these events using scripts in their background
+[service worker](/docs/extensions/mv3/migrating_to_service_workers), which then react
+with specified instructions.
 
-A background page is loaded when it is needed, and unloaded when it goes idle. Some examples of
+A background service worker is loaded when it is needed, and unloaded when it goes idle. Some examples of
 events include:
 
 - The extension is first installed or updated to a new version.
@@ -20,59 +20,41 @@ events include:
 - A content script or other extension [sends a message.][1]
 - Another view in the extension, such as a popup, calls [`runtime.getBackgroundPage`][2].
 
-Once it has been loaded, a background page will stay running as long as it is performing an action,
-such as calling a Chrome API or issuing a network request. Additionally, the background page will
-not unload until all visible views and all message ports are closed. Note that opening a view does
-not cause the event page to load, but only prevents it from closing once loaded.
+Once it has been loaded, a service worker keeps running as long as it is performing an action,
+such as calling a Chrome API or issuing a network request. Additionally, the service worker won't
+unload until all visible views and all message ports are closed.
+
+!!!.aside
+Opening a view doesn't cause the service worker to load, but only prevents it from closing once loaded.
+!!!
 
 Effective background scripts stay dormant until an event they are listening for fires, react with
 specified instructions, then unload.
 
 ## Register background scripts {: #manifest }
 
-Background scripts are registered in the [manifest][3] under the `"background"` field. They are
-listed in an array after the `"scripts"` key, and `"persistent"` should be specified as false.
+Extensions register their background service workers in the [manifest][3] under the `"background"` field. This field
+uses the `"service_worker"` key, which specifies a single JavaScript file.
 
 ```json/3-6
 {
   "name": "Awesome Test Extension",
   ...
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
   ...
 }
 ```
 
-Multiple background scripts can be registered for modularized code.
+You may want to modularize your event handling code by dividing it across multiple JavaScript files. In this case, you must import these scripts from within the main service worker file:
 
-```json
+```js
 {
-    "name": "Awesome Test Extension",
     ...
-    "background": {
-      "scripts": [
-        "backgroundContextMenus.js",
-        "backgroundOmniBox.js",
-        "backgroundOauth.js"
-      ],
-      "persistent": false
-    },
     ...
   }
 ```
-
-{% Aside 'warning' %}
-
-The only occasion to keep a background script persistently active is if the extension uses
-[chrome.webRequest][4] API to block or modify network requests. The webRequest API is incompatible
-with non-persistent background pages.
-
-{% endAside %}
-
-If an extension currently uses a persistent background page, refer to [Background Migration
-Guide][5] for instruction on how to switch to a non-persistent model.
 
 ## Initialize the extension {: #initialization }
 
@@ -189,7 +171,7 @@ chrome.runtime.onMessage.addListener(function(message, callback) {
 });
 ```
 
-The lifetime of a background script is observable by monitoring when an entry for the extension
+The lifetime of a background service worker is observable by monitoring when an entry for the extension
 appears and disappears from Chrome's task manager.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/occ8HD81vNq2zboXIbiu.png",
@@ -198,7 +180,7 @@ appears and disappears from Chrome's task manager.
 Open the task manager by clicking the Chrome Menu, hovering over more tools and selecting "Task
 Manager".
 
-Background scripts unload on their own after a few seconds of inactivity. If any last minute cleanup
+Service workers unload on their own after a few seconds of inactivity. If any last minute cleanup
 is required, listen to the [`runtime.onSuspend`][15] event.
 
 ```js
