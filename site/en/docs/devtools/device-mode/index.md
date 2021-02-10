@@ -102,7 +102,7 @@ viewport to landscape orientation.
 
 Note that the **Rotate** button disappears if your **Device Toolbar** is narrow.
 
-![The Device Toolbar.](/web/tools/chrome-devtools/device-mode/imgs/device-toolbar.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zf7hzykbu0bOx8JjZJpp.png", alt="The Device Toolbar.", width="800", height="645" %}
 
 **Figure 8**. The Device Toolbar
 
@@ -183,7 +183,7 @@ in mind that the throttling is relative to the normal capability of your laptop 
 
 Note that the **Throttle** list will be hidden if your **Device Toolbar** is narrow.
 
-![The Device Toolbar.](/web/tools/chrome-devtools/device-mode/imgs/device-toolbar.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zf7hzykbu0bOx8JjZJpp.png", alt="The Device Toolbar.", width="800", height="645" %}
 
 **Figure 17**. The Device Toolbar
 
@@ -249,17 +249,17 @@ geolocation is in an error state.
 ## Set orientation {: #orientation }
 
 To open the orientation UI click **Customize and control DevTools**
-![Customize and control DevTools](/web/tools/chrome-devtools/images/shared/customize-and-control-devtools.png)
+{% Img src="image/admin/MEV74GBA0djVjJ36fPf3.png", alt="Customize and control DevTools", width="6", height="26" %}
 and then select **More tools** > **Sensors**.
 
-![Sensors](/web/tools/chrome-devtools/device-mode/imgs/sensors.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JXJf08VxTePcH96fxMCB.png", alt="Sensors", width="800", height="648" %}
 
 **Figure 25**. Sensors
 
 Or press Command+Shift+P (Mac) or Control+Shift+P (Windows, Linux, Chrome OS) to open the Command
 Menu, type `Sensors`, and then select **Show Sensors**.
 
-![Show Sensors](/web/tools/chrome-devtools/device-mode/imgs/show-sensors.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nQ9bLVGBdLT4I9jvm69f.png", alt="Show Sensors", width="800", height="627" %}
 
 **Figure 26**. Show Sensors
 
@@ -269,8 +269,6 @@ own alpha, beta, and gamma values.
 {% Img src="image/admin/kk5jCSTMJHmGN1w3AMIC.png", alt="Orientation", width="800", height="675" %}
 
 **Figure 27**. Orientation
-
-See [Join the DevTools community][12] for other ways to leave feedback.
 
 [1]: #viewport
 [2]: #network
