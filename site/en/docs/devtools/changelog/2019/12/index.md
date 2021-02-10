@@ -18,12 +18,12 @@ The Console now supports redeclarations of `let` and `class` statements. The ina
 was a common annoyance for web developers who use the Console to experiment with new JavaScript
 code.
 
-!!!.aside.aside--warning
+{% Aside "warning" %}
 
 Redeclaring a `let` or `class` statement in a script outside of the Console or within a single
 Console input will still cause a `SyntaxError`.
 
-!!!
+{% endAside %}
 
 For example, previously, when redeclaring a local variable with `let`, the Console would throw an
 error:
@@ -68,12 +68,12 @@ After [logging network activity in the Network panel][4], click a resource and t
   other words, `https://web.dev/default-627898b5.js` caused the network request for
   `https://web.dev/chunk-f34f99f7.js`.
 
-!!!.aside.aside--note
+{% Aside %}
 
 Initiator and dependency information can also be accessed by holding Shift and then hovering over
 network resources. See [View initiators and dependencies][5].
 
-!!!
+{% endAside %}
 
 Chromium issue [#842488][6]
 
@@ -111,11 +111,11 @@ The predefined User-Agent strings have been updated to reflect modern browser ve
 To access **Network Conditions**, [open the Command Menu][9] and run the `Show Network Conditions`
 command.
 
-!!!.aside.aside--note
+{% Aside %}
 
 You can also [set User-Agent strings in Device Mode][10].
 
-!!!
+{% endAside %}
 
 Chromium issue [#1029031][11]
 
@@ -137,14 +137,14 @@ The [Coverage tab][13] has a new dropdown menu that lets you specify whether cod
 should be collected **per function** or **per block**. **Per block** coverage is more detailed but
 also far more expensive to collect. DevTools uses **per function** coverage by default now.
 
-!!!.aside.aside--caution
+{% Aside "caution" %}
 
 You may see large code coverage differences in HTML files depending on whether you use **per
 function** or **per block** mode. When using **per function** mode, inline scripts in HTML files are
 treated as functions. If the script executes at all then DevTools will mark the entire script as
 used code. Only if the script doesn't execute at all will DevTools mark the script as unused code.
 
-!!!
+{% endAside %}
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lZqzpkt0TEaZcpLv8nLz.png", alt="The coverage mode dropdown menu.", width="800", height="630" %}
 

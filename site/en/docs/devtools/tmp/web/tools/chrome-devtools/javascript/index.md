@@ -115,14 +115,14 @@ icon](/web/tools/chrome-devtools/images/expand.png). DevTools reveals a list of 
  Script Execution](/web/tools/chrome-devtools/images/resume-script-execution.png) until
     you're paused on the correct line.
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note**: If you paused on a different line, you have a browser extension that registers a
     `click` event listener on every page that you visit. You were paused in the extension's `click`
     listener. If you use Incognito Mode to [browse in private][2], which disables all extensions,
     you can see that you pause on the correct line of code every time.
 
-    !!!
+    {% endAside %}
 
 **Event Listener Breakpoints** are just one of many types of breakpoints available in DevTools. It's
 worth memorizing all the different types, because each type ultimately helps you debug different
@@ -253,13 +253,13 @@ breakpoints](/web/tools/chrome-devtools/images/deactivate-breakpoints-button.png
     breakpoints you've set.
 5.  Try out the demo with different values. The demo now calculates correctly.
 
-!!!.aside.aside--caution
+{% Aside "caution" %}
 
 **Caution:** This workflow only applies a fix to the code that is running in your browser. It won't
 fix the code for all users that visit your page. To do that, you need to fix the code that's on your
 servers.
 
-!!!
+{% endAside %}
 
 ## Next steps {: #next-steps }
 

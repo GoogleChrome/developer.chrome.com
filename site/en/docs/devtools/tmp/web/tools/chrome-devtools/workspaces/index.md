@@ -12,7 +12,7 @@ description: "Learn how to save changes made within DevTools to disk."
 can use Workspaces in your own projects. Workspaces enable you to save changes that you make within
 DevTools to source code that's stored on your computer.
 
-!!!.aside.aside--caution
+{% Aside "caution" %}
 
 **Prerequisites**: Before beginning this tutorial, you should know how to:
 
@@ -20,7 +20,7 @@ DevTools to source code that's stored on your computer.
 - [Use DevTools to make basic changes to CSS][2].
 - [Run a local HTTP web server][3].
 
-!!!
+{% endAside %}
 
 ## Overview {: #overview }
 
@@ -154,12 +154,12 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
 ### Try changing HTML from the Elements panel {: #elements }
 
-!!!.aside.aside--warning
+{% Aside "warning" %}
 
 **Warning:** The workflow that you're about to try doesn't work. You're trying it now so that you
 don't waste time later trying to figure out why it's not working.
 
-!!!
+{% endAside %}
 
 1.  Click the **Elements** tab.
 2.  Double click the text content of the `h1` element, which says `Workspaces Demo`, and replace it
@@ -174,12 +174,12 @@ don't waste time later trying to figure out why it's not working.
 
 #### Optional: Why it doesn't work {: #why }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This section describes why the workflow from [Try changing HTML from the Elements
 panel][10] doesn't work. You can skip this section if you don't care why.
 
-!!!
+{% endAside %}
 
 - The tree of nodes that you see on the **Elements** panel represents the page's [DOM][11].
 - To display a page, a browser fetches HTML over the network, parses the HTML, and then converts it

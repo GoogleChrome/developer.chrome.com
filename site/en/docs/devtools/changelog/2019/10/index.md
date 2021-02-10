@@ -43,13 +43,13 @@ Click a row in the [Cookies pane][5] to view the value of that cookie.
 
 Viewing the value of a cookie.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** The main difference between the Cookies tab in the Network panel and the Cookies pane in
 the Application panel is that the Cookies pane in the Application panel lets you edit and delete
 cookies.
 
-!!!
+{% endAside %}
 
 Chromium issue [#462370][6]
 
@@ -117,12 +117,12 @@ JavaScript call stack leading up to the network request.
 
 The **Initiator** tab.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You can also access this data by hovering over the **Initiator** column in the Network
 Log. We added the **Initiator** tab because it's more accessible.
 
-!!!
+{% endAside %}
 
 Chromium issues [963183][15], [842488][16]
 
