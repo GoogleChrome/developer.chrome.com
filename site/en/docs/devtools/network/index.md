@@ -93,12 +93,12 @@ To view the network activity that a page causes:
     - **Waterfall**. A graphical representation of the different stages of the request. Hover over a
       Waterfall to see a breakdown.
 
-      !!!.aside.aside--note
+      {% Aside %}
 
       **Note** The graph above the Network Log is called the Overview. You won't be using it in this
       tutorial, so you can hide it if you prefer. See [Hide the Overview pane][6].
 
-      !!!
+      {% endAside %}
 
 2.  So long as you've got DevTools open, it will record network activity in the Network Log. To
     demonstrate this, first look at the bottom of the **Network Log** and make a mental note of the
@@ -123,11 +123,11 @@ are also many columns that are hidden by default which you may find useful.
 
     **Figure 8**. Enabling the Domain column
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Tip** You can see the full URL of a resource by hovering over its cell in the **Name** column.
 
-!!!
+{% endAside %}
 
 ## Simulate a slower network connection {: #throttle }
 
@@ -163,11 +163,11 @@ idea of how long a page takes to load on a mobile device.
     resources. This is helpful when you want to see how a first-time visitor experiences a page
     load.
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note** The **Empty Cache And Hard Reload** workflow is only available when DevTools is open.
 
-    !!!
+    {% endAside %}
 
 ## Capture screenshots {: #screenshots }
 
@@ -232,13 +232,13 @@ TODO inline image below
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/M9e9yKo9gzxlsRvw3i0t.png", alt="Format", width="30", height="24" %}
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Tip** When a file is minified, clicking the **Format**
     ![Format](/web/tools/chrome-devtools/images/shared/format.png) button at the bottom of the
     **Response** tab re-formats the file's contents for readability.
 
-    !!!
+    {% endAside %}
 
 4.  Click the **Timing** tab. A breakdown of the network activity for this resource is shown.
 

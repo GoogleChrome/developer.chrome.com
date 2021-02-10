@@ -41,11 +41,11 @@ the **Styles** tab
 
 Use the **Styles** tab when you want to change or add CSS declarations to an element.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Complete the [View an element's CSS][2] tutorial before doing this one.
 
-!!!
+{% endAside %}
 
 1.  Right-click the `Add A Background Color To Me!` text below and select **Inspect**.
 2.  Click `element.style` near the top of the **Styles** tab.
@@ -63,11 +63,11 @@ Use the **Styles** tab when you want to change or add CSS declarations to an ele
 Use the **Styles** tab to see how an element looks when a CSS class is applied to or removed from an
 element.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Complete the [View an element's CSS][3] tutorial before doing this one.
 
-!!!
+{% endAside %}
 
 1.  Right-click the `Add A Class To Me!` element below and select **Inspect**.
 2.  Click **.cls**. DevTools reveals a text box where you can add classes to the selected element.
@@ -86,11 +86,11 @@ element.
 Use the **Styles** tab to permanently apply a CSS pseudostate to an element. DevTools supports
 `:active`, `:focus`, `:hover`, and `:visited`.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Complete the [View an element's CSS][4] tutorial before doing this one.
 
-!!!
+{% endAside %}
 
 1.  Hover over the `Hover Over Me!` text below. The background color changes.
 2.  Right-click the `Hover Over Me!` text and select **Inspect**.
@@ -107,22 +107,22 @@ Use the **Styles** tab to permanently apply a CSS pseudostate to an element. Dev
 Use the **Box Model** interactive diagram in the **Styles** tab to change the width, height,
 padding, margin, or border length of an element.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Complete the [View an element's CSS][5] tutorial before doing this one.
 
-!!!
+{% endAside %}
 
 1.  Right-click the `Change My Margin!` element below and select **Inspect**.
 2.  In the **Box Model** diagram in the **Styles** tab, hover over **padding**. The element's
     padding is highlighted in the viewport.
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note**: Depending on the size of your DevTools window, you may need to scroll to the bottom of
     the **Styles** tab to see the **Box Model**.
 
-    !!!
+    {% endAside %}
 
 3.  Double-click the left margin in the **Box Model**, which currently has a value of `-` meaning
     that the element doesn't have a left-margin.

@@ -268,13 +268,13 @@ perspective on the activities:
 - When you want to view the activities in the order in which they occurred during the recording, use
   [the **Event Log** tab][14].
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** The next three sections all refer to the same demo. You can run the demo yourself at
 [Activity Tabs Demo][15] and see the source at
 [GoogleChrome/devtools-samples/perf/activitytabs.html][16].
 
-!!!
+{% endAside %}
 
 #### Root activities {: #root-activities }
 

@@ -104,13 +104,13 @@ The iOS simulator for Mac OS X comes with Xcode, which you can [install from the
 
 When you're done, learn how to work with the simulator through [Apple's documentation][9].
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** To avoid having to open Xcode every time you want to use the iOS Simulator, open it, then
 right click the iOS Simulator icon in your dock and select `Keep in Dock`. Now just click this icon
 whenever you need it.
 
-!!!
+{% endAside %}
 
 ### Modern.IE {: #modernie }
 

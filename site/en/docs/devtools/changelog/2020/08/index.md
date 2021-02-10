@@ -10,11 +10,11 @@ description:
   inactive users and prefers-reduced-data."
 ---
 
-!!!.aside.aside--note
+{% Aside %}
 
 Interested in helping improve DevTools? Sign up to participate in [Google User Research here][1].
 
-!!!
+{% endAside %}
 
 {% YouTube id="koUsK58dpNo" %}
 
@@ -97,13 +97,13 @@ Chromium issue: [1090802][12]
 
 ## Emulate `prefers-reduced-data` {: #emulate-prefers-reduced-data }
 
-!!!.aside.aside--note
+{% Aside %}
 
 In Chrome 86, this feature is available behind the
 [chrome://flags/#enable-experimental-web-platform-features][13] flag. You can see this emulation
 option only if the flag is enabled.
 
-!!!
+{% endAside %}
 
 The [`prefers-reduced-data`][14] media query detects if the user prefers being served alternate
 content that uses less data for the page to be rendered.
