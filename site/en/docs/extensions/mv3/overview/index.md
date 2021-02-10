@@ -114,10 +114,6 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 3.  Keep up to date by reading the [Chromium blog][12]
 4.  Subscribe to the [chromium-extensions group][13]
 
-## Featured videos {: #Featured-videos }
-
-[Technical videos][14]
-[Developer snapshots][15]
 
 [1]: /docs/extensions/mv3/single_purpose
 [2]: /docs/extensions/mv3/samples#google-mail-checker
@@ -132,5 +128,3 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 [11]: /docs/extensions/mv3/overview
 [12]: http://blog.chromium.org/
 [13]: http://groups.google.com/a/chromium.org/group/chromium-extensions
-[14]: http://www.youtube.com/view_play_list?p=CA101D6A85FE9D4B
-[15]: http://www.youtube.com/view_play_list?p=38DF05697DE372B1
