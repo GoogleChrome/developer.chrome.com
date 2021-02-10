@@ -9,7 +9,7 @@ description:
   "Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more."
 ---
 
-{% youtube id="NOal2gTzftI" %}
+{% YouTube id="NOal2gTzftI" %}
 
 ## Style editing for CSS-in-JS frameworks {: #css-in-js }
 
@@ -40,7 +40,7 @@ Delay.
 The performance score formula has also been reweighted to better reflect the users’ loading
 experience.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1Tmmm0bSZ1g2G5LRgt2p.png", alt="New performance metrics in Lighthouse 6.0", width="800", height="455" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1Tmmm0bSZ1g2G5LRgt2p.png", alt="New performance metrics in Lighthouse 6.0", width="800", height="455" %}
 
 Chromium issue [#772558][8]
 
@@ -74,7 +74,7 @@ The Manifest pane now shows warnings if:
 - the app shortcut icons are smaller than 96x96 pixels
 - the app shortcut icons and manifest icons are not square (as they will be ignored)
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2MLhQXnSoZmpTFfuyoWR.png", alt="App shortcut warnings", width="800", height="534" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2MLhQXnSoZmpTFfuyoWR.png", alt="App shortcut warnings", width="800", height="534" %}
 
 Chromium issue [#955497][19]
 
@@ -84,7 +84,7 @@ The Timing tab of the Network panel now includes service worker `respondWith` ev
 is the time immediately before the service worker `fetch` event handler runs to the time when the
 `fetch` handler's `respondWith` promise is settled.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MAsxvpqRZLI4SOvwyfSK.png", alt="service worker `respondWith`", width="800", height="502" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MAsxvpqRZLI4SOvwyfSK.png", alt="service worker `respondWith`", width="800", height="502" %}
 
 Chromium issue [#1066579][20]
 
@@ -102,7 +102,7 @@ DevTools now uses bytecode offsets for displaying line numbers of Wasm disassemb
 clearer that you're looking at binary data, and is more consistent with how the Wasm runtime
 references locations.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qH0jKcKjN8X5cVZqt0SR.png", alt="Bytecode offsets", width="800", height="691" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qH0jKcKjN8X5cVZqt0SR.png", alt="Bytecode offsets", width="800", height="691" %}
 
 Chromium issue [#1071432][22]
 
@@ -133,7 +133,7 @@ The **Selected context only** settings in Console Settings is now persisted. Pre
 were reset every time you closed and reopened DevTools. This change makes the setting behavior
 consistent with other Console Settings options.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5IOY8x1f61ddnRcdFFrg.png", alt="Selected context only", width="800", height="581" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5IOY8x1f61ddnRcdFFrg.png", alt="Selected context only", width="800", height="581" %}
 
 Chromium issue [#1055875][26]
 
@@ -145,7 +145,7 @@ Chromium issue [#1055875][26]
 Performance panel. Previously, DevTools wouldn’t show anything related to code caching if code
 caching didn’t happen.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ihesnfou0XvBC59T3wfj.png", alt="JavaScript compilation cache information", width="800", height="447" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ihesnfou0XvBC59T3wfj.png", alt="JavaScript compilation cache information", width="800", height="447" %}
 
 Chromium issue [#912581][28]
 
@@ -155,7 +155,7 @@ The Performance panel used to show times in the rulers based on when the recordi
 now changed for recordings where the user navigates, where DevTools now shows ruler times relative
 to the navigation instead.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/HURhX5qUI9CnNL09tJvj.png", alt="Align navigation timing in Performance panel", width="800", height="667" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/HURhX5qUI9CnNL09tJvj.png", alt="Align navigation timing in Performance panel", width="800", height="667" %}
 
 We've also updated times for `DOMContentLoaded`, First Paint, First Contentful Paint, and Largest
 Contentful Paint events to be relative to the start of the navigation, which means they match the
@@ -169,7 +169,7 @@ The **Sources** panel has new designs for breakpoints, conditional breakpoints, 
 Breakpoints get a refreshed flag design with brighter and friendlier colors. Icons are added to
 differentiate conditional breakpoints and logpoints.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BaH2w6G22IL5BkgQoO2K.png", alt="Breakpoints", width="800", height="809" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BaH2w6G22IL5BkgQoO2K.png", alt="Breakpoints", width="800", height="809" %}
 
 Chromium issue [#1041830][30]
 
