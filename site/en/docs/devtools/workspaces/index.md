@@ -118,8 +118,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
     `styles.css`. These green dots mean that DevTools has established a mapping between the network
     resources of the page, and the files in `~/Desktop/app`.
 
-    ![The Filesystem tab now shows a mapping between the local files and the network
-             ones.](/web/tools/chrome-devtools/workspaces/imgs/mapping.png)
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/uPHSpNhpCTrOdwtOyP9D.png", alt="The Filesystem tab now shows a mapping between the local files and the network ones.", width="800", height="524" %}
 
     **Figure 6**. The **Filesystem** tab now shows a mapping between the local files and the network
     ones
@@ -253,14 +252,6 @@ to your site. There's a way to have the **Sources** panel open alongside other p
 ## Next steps {: #next-steps }
 
 Congratulations, you have completed the tutorial. Click the button below to receive your prize.
-
-Use what you have learned in this tutorial to set up Workspaces in your own project. If you run into
-any issues or are able to get it working after some custom configuration, please [start a thread in
-the mailing list][13] or [ask a question on Stack Overflow][14] to share your knowledge with the
-rest of the DevTools community.
-
-- [Mailing List][15]
-- [Twitter][16]
 
 [1]: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
 [2]: /web/tools/chrome-devtools/css
