@@ -1,29 +1,14 @@
 .details {
-  border: 1px solid --color-hairline;
-  border-width: 1px 0;
-  margin: 36px 0;
-  padding: 18px 0;
   position: relative;
-
-  & + & {
-    border-top: 0;
-    margin-top: -36px;
-  }
 }
 
 .details__summary {
   cursor: pointer;
-  font: inherit;
-  list-style: none;
   -webkit-tap-highlight-color: transparent;
 
-  // scss-lint thinks this is a pseudo class instead of a psuedo element
-  // and complains about the two colons.
-  // scss-lint:disable all
   &::-webkit-details-marker {
     display: none;
   }
-  // scss-lint:enable all
 
   &:focus {
     outline: none;
@@ -35,12 +20,8 @@
   }
 }
 
-// The details header class overrides the margins of the base element and
-// adds padding so that the tap target is sufficiently tall.
 .details__header {
   color: var(--color-primary);
-  margin: 0;
-  padding: 0.75rem 0;
   position: relative;
 
   &::after {
@@ -55,7 +36,6 @@
     padding: 2px;
     position: absolute;
     right: 1px;
-    speak: none;
     top: 50%;
     transform: rotate(180deg) translateY(50%);
     transition: background 0.2s;
@@ -66,45 +46,4 @@
 
 .details[open] .details__header::after {
   transform: rotate(0deg) translateY(-50%);
-}
-
-.details__header:only-child {
-  line-height: 1.5rem;
-  padding: 0.375rem 0;
-}
-
-.details > p:first-of-type {
-  margin-top: 0;
-}
-
-// -----------------------------------------------------------------------------
-// Preview text appears immediately below the header in the closed state and
-// remains visible at the top of the expanded panel in the open state.
-// In the closed state, the preview includes a 'Read more' button
-// as a pseudo element to improve discoverability for sighted users.
-// -----------------------------------------------------------------------------
-
-.details__preview {
-  margin: 0 0 1rem;
-
-  &::after {
-    color: var(--color-secondary-text);
-    content: 'Read more';
-    display: block;
-    font-size: 0.7222em;
-    font-weight: 500;
-    line-height: 2.13333;
-    padding-top: 0.75rem;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-}
-
-.details[open] .details__preview {
-  display: none;
-}
-
-.details__summary:hover .details__preview::after,
-.details__summary:focus .details__preview::after {
-  color: var(--color-primary);
 }

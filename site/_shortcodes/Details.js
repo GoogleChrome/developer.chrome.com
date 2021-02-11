@@ -6,11 +6,9 @@
 function Details(content, state) {
   const stateOverride = state === 'open' ? 'open' : '';
 
-  return `
-    <details class="details" ${stateOverride}>
-      ${content}
-    </details>
-  `;
+  return `<details class="details" ${stateOverride}>
+
+${content}</details>`;
 }
 
 module.exports = {Details};
