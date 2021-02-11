@@ -48,7 +48,63 @@ as long as it has a matching scheme.
 
 Most Chrome extension permissions can be specified as optional, with the following exceptions.
 
-<table><tbody><tr><th>Permission</th><th>Description</th></tr><tr id="debugger"><td><code>"debugger"</code></td><td>The <a href="debugger">chrome.debugger</a> API serves as an alternate transport for Chrome's <a href="/devtools/docs/debugger-protocol">remote debugging protocol </a>.</td></tr><tr id="declarativeNetRequest"><td><code>"declarativeNetRequest"</code></td><td>Grants the extension access to the <a href="declarativeNetRequest">chrome.declarativeNetRequest</a> API.</td></tr><tr id="devtools"><td><code>"devtools"</code></td><td>Allows extension to expand <a href="devtools">Chrome DevTools</a> functionality.</td></tr><tr id="experimental"><td><code>"experimental"</code></td><td><strong><a href="http://tools.google.com/dlpage/chromesxs">Canary</a> and <a href="https://www.chromium.org/getting-involved/dev-channel">Dev channel</a> only.</strong> Grants the extension access to <a href="experimental">chrome.experimental</a> APIs.</td></tr><tr id="geolocation"><td><code>"geolocation"</code></td><td>Allows the extension to use the HTML5 <a href="https://w3c.github.io/geolocation-api/">geolocation</a> API.</td></tr><tr id="mdns"><td><code>"mdns"</code></td><td>Grants the extension access to the <a href="mdns">chrome.mdns</a> API.</td></tr><tr id="proxy"><td><code>"proxy"</code></td><td>Grants the extension access to the <a href="mdns">chrome.proxy</a> API to manage Chrome's proxy settings.</td></tr><tr id="tts"><td><code>"tts"</code></td><td>The <a href="tts">chrome.tts</a> API plays synthesized text-to-speech (TTS).</td></tr><tr id="ttsEngine"><td><code>"ttsEngine"</code></td><td>The <a href="ttsEngine">chrome.ttsEngine</a> API implements a text-to-speech(TTS) engine using an extension.</td></tr><tr id="wallpaper"><td><code>"wallpaper"</code></td><td><strong>ChromeOS only</strong>. Use the <a href="ttsEngine">chrome.wallpaper</a> API change the ChromeOS wallpaper.</td></tr></tbody></table>
+<table>
+  <tbody>
+    <tr>
+      <th>Permission</th>
+      <th>Description</th>
+    </tr>
+    <tr id="debugger">
+      <td><code>"debugger"</code></td>
+      <td>The <a href="debugger">chrome.debugger</a> API serves as an alternate transport for
+        Chrome's <a href="/devtools/docs/debugger-protocol">remote debugging protocol </a>.</td>
+    </tr>
+    <tr id="declarativeNetRequest">
+      <td><code>"declarativeNetRequest"</code></td>
+      <td>Grants the extension access to the <a
+          href="declarativeNetRequest">chrome.declarativeNetRequest</a> API.</td>
+    </tr>
+    <tr id="devtools">
+      <td><code>"devtools"</code></td>
+      <td>Allows extension to expand <a href="devtools">Chrome DevTools</a> functionality.</td>
+    </tr>
+    <tr id="experimental">
+      <td><code>"experimental"</code></td>
+      <td><strong><a href="http://tools.google.com/dlpage/chromesxs">Canary</a> and <a
+            href="https://www.chromium.org/getting-involved/dev-channel">Dev channel</a>
+          only.</strong> Grants the extension access to <a
+          href="experimental">chrome.experimental</a> APIs.</td>
+    </tr>
+    <tr id="geolocation">
+      <td><code>"geolocation"</code></td>
+      <td>Allows the extension to use the HTML5 <a
+          href="https://w3c.github.io/geolocation-api/">geolocation</a> API.</td>
+    </tr>
+    <tr id="mdns">
+      <td><code>"mdns"</code></td>
+      <td>Grants the extension access to the <a href="mdns">chrome.mdns</a> API.</td>
+    </tr>
+    <tr id="proxy">
+      <td><code>"proxy"</code></td>
+      <td>Grants the extension access to the <a href="mdns">chrome.proxy</a> API to manage Chrome's
+        proxy settings.</td>
+    </tr>
+    <tr id="tts">
+      <td><code>"tts"</code></td>
+      <td>The <a href="tts">chrome.tts</a> API plays synthesized text-to-speech (TTS).</td>
+    </tr>
+    <tr id="ttsEngine">
+      <td><code>"ttsEngine"</code></td>
+      <td>The <a href="ttsEngine">chrome.ttsEngine</a> API implements a text-to-speech(TTS) engine
+        using an extension.</td>
+    </tr>
+    <tr id="wallpaper">
+      <td><code>"wallpaper"</code></td>
+      <td><strong>ChromeOS only</strong>. Use the <a href="ttsEngine">chrome.wallpaper</a> API
+        change the ChromeOS wallpaper.</td>
+    </tr>
+  </tbody>
+</table>
 
 View [Declare Permissions and Warn Users][17] for further information on available permissions and
 their warnings.
