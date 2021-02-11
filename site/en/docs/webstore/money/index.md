@@ -6,8 +6,10 @@ description: An overview of how you can monetize Chrome Web Store items.
 ---
 
 {% Aside 'warning' %}
-The Chrome Web Store payments system [is now deprecated](/docs/webstore/cws-payments-deprecation/).
-You are free to monetize your extensions using other payment platforms.
+**Important:** Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS
+will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to
+support extensions on all platforms. [Read the announcement][1] and learn more about [migrating your
+app][2].
 {% endAside %}
 
 You can publish Hosted Apps, Chrome Apps, Chrome Extensions, and Themes in the Chrome Web Store.
