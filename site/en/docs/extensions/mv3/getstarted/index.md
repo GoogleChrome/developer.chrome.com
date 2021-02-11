@@ -6,8 +6,8 @@ updated: 2020-11-18
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 
-{# Note: "components" is probably not the best word to use here any more as "web components" are a
-cross-browser tech for creating reusable custom elements or "?components". #}
+{# TODO: "components" is probably not the best word to use here any more as "web components" are a
+cross-browser tech for creating reusable custom elements or "components". #}
 
 Extensions are made of different, but cohesive, components. Components can include [background
 scripts][1], [content scripts][2], an [options page][3], [UI elements][4] and various logic files.
@@ -15,8 +15,8 @@ Extension components are created with web development technologies: HTML, CSS, a
 extension's components will depend on its functionality and may not require every option.
 
 This tutorial will build an extension that allows the user to change the background color of the
-currently focused page. It will use many core components to give an introductory demonstration of
-their relationships.
+currently focused page. It will use many of the extension platform's components to give an
+introductory demonstration of their relationships.
 
 To start, create a new directory to hold the extension's files.
 
@@ -138,8 +138,9 @@ the background color.
 </html>
 ```
 
-Like the background script, this file needs to be designated as a popup in the manifest under
-[`action`][17].
+Like the background script, this file must be declared in the manifest in order for Chrome to
+present it in the extension's popup. To do this, add an [`action`][17] object to the manifest and
+set `popup.html` as the action's `default_popup`.
 
 ```json/9-11
 {
@@ -296,7 +297,7 @@ function setPageBackgroundColor() {
 }
 ```
 
-The updated code adds an `click` event listener to the button, which triggers a [programmatically
+The updated code adds a `click` event listener to the button, which triggers a [programmatically
 injected content script][24]. This turns the background color of the page the same color as the
 button. Using programmatic injection allows for user-invoked content scripts, instead of auto
 inserting unwanted code into web pages.
