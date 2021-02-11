@@ -299,7 +299,12 @@ function buildRenderType(type, parentType, owner) {
 
     case 'reference': {
       const referenceType = /** @type {typedocModels.ReferenceType} */ (type);
-      const name = fullName(referenceType);
+      let name;
+      if (referenceType.reflection) {
+        name = fullName(referenceType.reflection);
+      } else {
+        ({name} = referenceType);
+      }
 
       /** @type {RenderType} */
       const out = {

@@ -19,7 +19,6 @@
  * display.
  */
 
-const path = require('path');
 const typedoc = require('typedoc');
 const {LogLevel: TypeDocLogLevel} = require('typedoc/dist/lib/utils');
 const {extractComment, exportedChildren} = require('./helpers');
