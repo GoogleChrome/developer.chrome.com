@@ -41,10 +41,9 @@ const typesExipry = '7d';
  * @return {Promise<{[name: string]: RenderNamespace}>}
  */
 module.exports = async () => {
-  if (process.env.CI) {
+  if (process.env.ELEVENTY_IGNORE_EXTENSIONS) {
     return {};
   }
-
   const asset = new AssetCache('generated_types_info#' + typesRevision);
   if (asset.isCacheValid(typesExipry)) {
     return asset.getCachedValue();
