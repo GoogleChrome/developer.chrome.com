@@ -13,13 +13,13 @@ account; here are some tips about which email to use:
   That's why we suggest using a new email account just for publishing your Chrome Web Store items.
 * If you recently deleted your Chrome Web Store developer account, you can't reuse its associated
   email identity to create a new one. 
+  {% Aside 'warning' %}
+  If you requested the deletion of your account by mistake, please contact developer support
+  immediately.
+  {% endAside %}
 * Make sure to check this address frequently so that you're aware of any important alerts or
   announcements.
 
-{% Aside 'warning' %}
-If you requested the deletion of your account by mistake, please contact developer support
-immediately.
-{% endAside %}
 
 
 To register, just access the [developer console][1]. The first time you do this, a registration
