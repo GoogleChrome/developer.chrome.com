@@ -17,7 +17,7 @@ The [Extension Quality Guidelines][1] state that an extension must have a single
 narrow and easy to understand. Make sure that this field clearly communicates this purpose for your
 extension.
 
-**Single purpose description** Fill out this field to help the reviewers understand the focus of
+**Single purpose description**&emsp;Fill out this field to help the reviewers understand the focus of
 your extension.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lQuFOcL3XgQseosEwxk1.png",
@@ -29,7 +29,7 @@ your extension.
 Your extension should request the [minimum permissions][2] consistent with the purpose of the
 extension. Requesting broader permissions than necessary may cause your extension to be rejected.
 
-**Permissions list** This section contains a list of permissions that your extension uses (as
+**Permissions list**&emsp;This section contains a list of permissions that your extension uses (as
 declared in your manifest), with a field for you to state the justification for each permission.
 Fill out these fields to tell the reviewers why your extension needs to use each permission. If
 there are permissions listed here that you don't require, remove them from your manifest before
@@ -45,7 +45,7 @@ Your extension should avoid using remote code except where absolutely necessary.
 remote code will need extra scrutiny, resulting in longer review times. Extensions that call remote
 code and do not declare and justify it using the field shown above will be rejected.
 
-**Remote Code** Use this field to tell reviewers whether your extension executes remote code and, if
+**Remote Code**&emsp;Use this field to tell reviewers whether your extension executes remote code and, if
 so, why this is necessary. If your extension doesn't need to execute remote code, make sure that it
 does not and select "No, I am not using remote code."
 
@@ -64,7 +64,7 @@ Your disclosures are displayed to Chrome users, and should be consistent with th
 policies that you provide to the Chrome Web Store.
 
 
-**Data usage** Use this field to disclose and certify your data collection practices. Use the first
+**Data usage**&emsp;Use this field to disclose and certify your data collection practices. Use the first
 group of checkboxes to disclose which types of data your extension collects. Use the second group of
 checkboxes to certify that you comply with each of the disclosure statements.
 
