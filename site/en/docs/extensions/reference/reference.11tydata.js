@@ -1,11 +1,4 @@
-const types = require('../../../../_collections/types.json');
 const striptags = require('striptags');
-
-const indexedTypes = {};
-for (const type of types) {
-  const {shortName} = type;
-  indexedTypes[shortName] = type;
-}
 
 /**
  * Strips HTML tags and newlines for use as a meta attribute.
@@ -26,20 +19,20 @@ function stripForMeta(raw) {
 /**
  * Finds the RenderNamespace for the specified API.
  *
- * @param {{api: string}} param
- * @return {RenderNamespace|undefined}
+ * @param {{api: string, chromeApiNamespaces: {[name: string]: RenderNamespace}}} data
+ * @return {RenderNamespace=}
  */
-function namespaceForData({api}) {
+function namespaceForData(data) {
+  const {api, chromeApiNamespaces} = data;
   if (!api) {
     return undefined;
+  } else if (api in chromeApiNamespaces) {
+    return chromeApiNamespaces[api];
   }
-  if (api in indexedTypes) {
-    return indexedTypes[api];
-  }
-  throw new Error(
-    `cannot build, reference "api: ${api}" ` +
-      'is missing from types (run `npm run types`?)'
-  );
+
+  // This can be called several times by Eleventy. The first time it's called it's unlikely that
+  // the namespace data is available yet, so we can't warn here if it's missing.
+  return undefined;
 }
 
 module.exports = {

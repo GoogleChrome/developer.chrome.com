@@ -15,36 +15,24 @@
  */
 
 const assert = require('assert');
-const typedoc = require('typedoc');
 const typedocModels = require('typedoc/dist/lib/models');
 const htmlEscaper = require('html-escaper');
 
-const {ReflectionKind} = typedocModels;
+const rk = typedocModels.ReflectionKind;
+
+const knownMagicNames = ['__call', '__type', '__index'];
 
 /**
- * @param {typedoc.DeclarationReflection} reflection
- * @param {typedoc.ReflectionKind=} kindMask
- * @return {{[name: string]: typedoc.DeclarationReflection}}
+ * @param {typedocModels.DeclarationReflection} reflection
+ * @param {typedocModels.ReflectionKind=} kindMask
+ * @return {{[name: string]: typedocModels.DeclarationReflection}}
  */
 function exportedChildren(reflection, kindMask = 0) {
-  /** @type {{[name: string]: typedoc.DeclarationReflection}} */
+  /** @type {{[name: string]: typedocModels.DeclarationReflection}} */
   const all = {};
 
-  for (let cand of reflection.children ?? []) {
-    if (!cand.flags.hasFlag(typedoc.ReflectionFlag.Exported)) {
-      continue;
-    }
+  for (const cand of reflection.children ?? []) {
     const {name} = cand;
-
-    if (cand.kind === typedoc.ReflectionKind.Reference) {
-      const reference = /** @type {typedoc.ReferenceReflection} */ (cand);
-      const target = reference.getTargetReflection();
-      if (!(target instanceof typedocModels.DeclarationReflection)) {
-        continue;
-      }
-      cand = target;
-    }
-
     if (!(cand.kind & kindMask)) {
       continue;
     }
@@ -207,10 +195,10 @@ function generateHtmlLink(from, to) {
 
   // We're never linking _from_ a specific type; just modify 'from'.
   from = getNamespace(from);
-  const fromName = getFullName(from);
+  const fromName = fullName(from);
 
   const toNamespace = getNamespace(to);
-  const toNamespaceName = getFullName(toNamespace);
+  const toNamespaceName = fullName(toNamespace);
 
   // This should never happen, but sanity-check that we're both in the chrome. namespace.
   if (
@@ -235,22 +223,23 @@ function generateHtmlLink(from, to) {
   // Otherwise, generate an ID based on the type of the thing we're linking to, plus a path.
   // This matches the syntax used on the Chrome Developers site since 2012+.
   let type = 'type';
-  if (to.kind === ReflectionKind.Function) {
+  if (to.kind === rk.Function) {
     type = 'method';
-  } else if (to.kind === ReflectionKind.Variable) {
+  } else if (to.kind === rk.Variable) {
     type = 'property';
 
     // Events are just properties that have an instanceof chrome.event.Events.
     if (
       to instanceof typedocModels.DeclarationReflection &&
       to.type instanceof typedocModels.ReferenceType &&
-      to.type.symbolFullyQualifiedName === 'chrome.events.Event'
+      to.type.reflection &&
+      fullName(to.type.reflection) === 'chrome.events.Event'
     ) {
       type = 'event';
     }
   }
 
-  const toName = getFullName(to);
+  const toName = fullName(to);
 
   // This is the name of the targe type without "chrome.foo" prefixing it.
   const innerShortName = toName.substr(toNamespaceName.length + 1);
@@ -273,7 +262,7 @@ function resolveLink(id, reflection) {
   /** @type {typedocModels.Reflection|undefined} */
   let r = reflection;
 
-  while (r && r.kind !== ReflectionKind.Global) {
+  while (r) {
     // TODO(samthor): This doesn't deal with _-prefixed things.
 
     /** @type {typedocModels.Reflection|undefined} */
@@ -301,8 +290,8 @@ function resolveLink(id, reflection) {
  * @return {typedocModels.Reflection}
  */
 function getNamespace(reflection) {
-  while (reflection.kind !== ReflectionKind.Module) {
-    if (reflection.kind === ReflectionKind.Namespace) {
+  while (reflection.kind !== rk.Module) {
+    if (reflection.kind === rk.Namespace) {
       return reflection;
     }
     if (!reflection.parent) {
@@ -314,69 +303,79 @@ function getNamespace(reflection) {
 }
 
 /**
- * @param {typedocModels.Reflection|undefined} reflection
- * @return {string}
- */
-function getFullName(reflection) {
-  const parts = [];
-  while (reflection && reflection.kind !== ReflectionKind.Module) {
-    parts.unshift(reflection.name);
-    reflection = reflection.parent;
-  }
-  return parts.join('.');
-}
-
-/**
- * Find the fully-qualified name for this type. This will include the "chrome." prefix.
+ * Generates the FQDN for this reflection.
  *
- * @param {typedocModels.ReferenceType} referenceType
+ * This is improved over TypeDoc's generation:
+ *   - hides internal __call etc types
+ *   - doesn't include the module/filename
+ *
+ * It's only useful for names within a specific project or module. Notably this works for Chrome
+ * and friends because they declare a new global namespace, "chrome".
+ *
+ * @param {typedocModels.Reflection} reflection
  * @return {string}
  */
-function resolveFullyQualifiedName(referenceType) {
-  // Some types arrive like "foo.bar", but with corrent parents. Grab the right part.
-  let initialName = referenceType.name;
-  initialName = initialName.split('.').pop() ?? referenceType.name;
+function fullName(reflection) {
+  /** @type {typedocModels.Reflection|undefined} */
+  let r = reflection;
 
-  const nameParts = [initialName];
-  let reflection = referenceType.reflection?.parent;
+  const parts = [];
+  while (r && r.kind !== rk.Module && r.kind !== rk.Project) {
+    const {parent} = r;
 
-  if (referenceType.reflection instanceof typedocModels.ParameterReflection) {
-    if (referenceType.reflection?.type === referenceType) {
-      // TODO(samthor): This happens incorrectly when a function looks like `(Foo: Foo): void`, and
-      // the parameter name matches the type.
-      // Look up to the nearest Namespace to find the correct type.
-
-      /** @type {typedocModels.Reflection|undefined} */
-      let cand = referenceType.reflection;
-      while (cand && cand.kind !== ReflectionKind.Namespace) {
-        cand = cand.parent;
+    // Insert "~" when this looks at the type or call bridge. This only happens when we record
+    // the properties of a type or arguments to a function. Chrome's docs historically don't report
+    // this information, instead only providing information on top-level types.
+    if (r.name.startsWith('__')) {
+      if (!knownMagicNames.includes(r.name)) {
+        throw new Error(
+          `unknown magic: ${r.name}, ${reflection.getFullName()}`
+        );
+      }
+      if (parts.length && parts[0] !== '~') {
+        parts.unshift('~');
+      }
+    } else {
+      // If we have a node with a leading "_", see if there's a matching parent without it.
+      // This solves our awkward approach to escaping, which exports e.g., the real type
+      // "_debugger" under a friendly alias "debugger".
+      if (/^_\w/.test(r.name)) {
+        const checkName = r.name.slice(1);
+        const check = r.parent?.getChildByName(checkName);
+        r = check ?? r;
       }
 
-      // Load our expected type, and then go to its parent again. If it's not valid this will end
-      // up as undefined and we'll just show the initial name.
-      reflection = cand?.getChildByName(nameParts[0])?.parent;
+      if (r.name.length) {
+        parts.unshift(r.name);
+      }
     }
+
+    // If this is the _type_ of a CallSignature, then skip over it (duplicate name).
+    if (
+      r.kind === rk.CallSignature &&
+      (parent?.kind === rk.Function || parent?.kind === rk.Method)
+    ) {
+      if (r.name !== parent.name) {
+        throw new TypeError(
+          `signature did not match function: ${r.name} vs ${parent.name}`
+        );
+      }
+      r = parent.parent;
+      continue;
+    }
+
+    r = r.parent;
   }
 
-  while (reflection && reflection.kind !== ReflectionKind.Module) {
-    // See if there's a matching parent type of the same name without leading "_". This works
-    // around escaped names but assumes we're solving it with a _ prefix.
-    if (/_\w/.test(reflection.name)) {
-      const checkName = reflection.name.slice(1);
-      const check = reflection.parent?.getChildByName(checkName);
-      reflection = check ?? reflection;
-    }
-    nameParts.unshift(reflection.name);
-    reflection = reflection.parent;
-  }
-
-  return nameParts.join('.');
+  // We insert `~` instead of magic names, but it ends up being displayed as `.~.`. Fix that and
+  // use the property delimiter of '.'.
+  return parts.join('.').replace(/\.~\./g, '.').replace(/^\./, '');
 }
 
 module.exports = {
   exportedChildren,
   extractComment,
   deepStrictEqual,
-  resolveFullyQualifiedName,
+  fullName,
   generateHtmlLink,
 };
