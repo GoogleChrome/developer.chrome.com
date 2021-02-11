@@ -3,8 +3,9 @@ const tmp = require('tmp');
 const fs = require('fs');
 
 const {
-  generateTypeDocObject,
-  parseChromeTypesFile,
+  generateTypeDocProject,
+  extractPublicChromeNamespaces,
+  renderNamespaceFromNamespace,
 } = require('../../../tools/types/types');
 const {exportedChildren} = require('../../../tools/types/helpers');
 
@@ -38,7 +39,18 @@ declare namespace chrome {
   const f = tmp.fileSync({postfix: '.d.ts'});
   try {
     fs.writeFileSync(f.name, commonTestSource);
-    return parseChromeTypesFile(f.name);
+    const project = generateTypeDocProject(f.name);
+    const namespaces = extractPublicChromeNamespaces(project);
+    const out = [];
+    for (const name in namespaces) {
+      const rn = renderNamespaceFromNamespace(
+        'test.d.ts',
+        name,
+        namespaces[name]
+      );
+      out.push(rn);
+    }
+    return out;
   } finally {
     f.removeCallback();
   }
@@ -66,10 +78,8 @@ declare namespace test {
   fs.writeFileSync(f.name, source);
   t.context.cleanup = f.removeCallback;
 
-  const td = generateTypeDocObject(f.name);
-
-  const toplevel = td.children[0];
-  const testNamespace = toplevel.getChildByName('test');
+  const td = generateTypeDocProject(f.name);
+  const testNamespace = td.getChildByName('test');
 
   const children = exportedChildren(testNamespace, ~0);
   const keys = Object.keys(children);
