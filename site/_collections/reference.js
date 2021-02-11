@@ -24,7 +24,22 @@
 module.exports = collections => {
   const out = collections
     .getFilteredByGlob('./site/en/docs/extensions/reference/**/index.md')
-    .filter(({data: {api}}) => api)
+    .filter(raw => {
+      const {
+        template: {inputPath},
+        data: {api, namespace},
+      } = raw;
+
+      // This can happen if e.g., a Chrome namespace is removed and we still have a reference page
+      // for it.
+      if (api && !namespace) {
+        console.warn(
+          `Reference page with 'api: ${api}' has missing namespace:`,
+          inputPath
+        );
+      }
+      return Boolean(namespace);
+    })
     .slice();
   out.sort(({data: {api: a}}, {data: {api: b}}) => a.localeCompare(b));
   return out;

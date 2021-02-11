@@ -32,12 +32,10 @@ const {declarationToType} = require('./converter');
  * @param {string} source
  * @return {typedoc.ProjectReflection}
  */
-function generateTypeDocObject(source) {
+function generateTypeDocProject(source) {
   const a = new typedoc.Application();
   a.bootstrap({
-    includeDeclarations: true,
-    excludeExternals: true,
-    inputFiles: [source],
+    entryPoints: [source],
 
     logger(message, level) {
       switch (level) {
@@ -45,11 +43,10 @@ function generateTypeDocObject(source) {
         case TypeDocLogLevel.Error:
           throw new Error(`could not convert types: ${message}`);
       }
-      console.warn(message);
     },
   });
-
-  const reflection = a.convert([source]);
+  a.options.setCompilerOptions([source], {declaration: true}, undefined);
+  const reflection = a.convert();
   if (!reflection) {
     throw new Error('could not convert types, null return value');
   }
@@ -94,14 +91,9 @@ function extractPublicChromeNamespaces(typesData) {
   };
 
   // Awkwardly extract the top-level "chrome" namespace.
-  const {children: toplevelChildren = []} = typesData;
-  if (toplevelChildren.length !== 1 || toplevelChildren[0].kind !== 1) {
-    throw new TypeError('expected single top-level module');
-  }
-  const toplevel = toplevelChildren[0];
   const chromeNamespace =
     /** @type {typedoc.DeclarationReflection|undefined} */
-    (toplevel.getChildByName('chrome'));
+    (typesData.getChildByName('chrome'));
   if (!chromeNamespace) {
     throw new TypeError('expected module to contain `chrome`');
   }
@@ -111,110 +103,103 @@ function extractPublicChromeNamespaces(typesData) {
 }
 
 /**
- * @param {string} typesPath
- * @return {RenderNamespace[]}
+ * @param {string} source
+ * @param {string} name
+ * @param {typedoc.DeclarationReflection} reflection
+ * @return {RenderNamespace}
  */
-function parseChromeTypesFile(typesPath) {
-  const projectReflection = generateTypeDocObject(typesPath);
+function renderNamespaceFromNamespace(source, name, reflection) {
+  const [, ...rest] = name.split('.');
+  const shortName = rest.join('.');
 
-  // Generate namespaces in isolation (e.g. `chrome.management` and so on).
-  const namespaces = extractPublicChromeNamespaces(projectReflection);
-  const flat = [];
-  for (const name in namespaces) {
-    const reflection = namespaces[name];
-    const [, ...rest] = name.split('.');
-    const shortName = rest.join('.');
+  const permissions = [];
+  const platforms = [];
 
-    const permissions = [];
-    const platforms = [];
+  /** @type {RenderNamespace["channel"]} */
+  let channel = 'stable';
 
-    /** @type {RenderNamespace["channel"]} */
-    let channel = 'stable';
-
-    const tags = reflection?.comment?.tags ?? [];
-    tags.forEach(({tagName, text}) => {
-      switch (tagName) {
-        case 'beta':
-          channel = 'beta';
-          break;
-        case 'alpha':
-          channel = 'dev';
-          break;
-        case 'chrome-permission':
-          permissions.push(text);
-          break;
-        case 'chrome-platform':
-          platforms.push(text);
-          break;
-      }
-    });
-
-    const source = path.basename(typesPath);
-
-    /** @type {RenderNamespace} */
-    const renderNamespace = {
-      name,
-      shortName,
-      comment: extractComment(reflection.comment, reflection),
-      types: [],
-      properties: [],
-      methods: [],
-      events: [],
-      channel,
-      source,
-    };
-    flat.push(renderNamespace);
-
-    if (permissions.length) {
-      renderNamespace.permissions = permissions;
+  const tags = reflection?.comment?.tags ?? [];
+  tags.forEach(({tagName, text}) => {
+    switch (tagName) {
+      case 'beta':
+        channel = 'beta';
+        break;
+      case 'alpha':
+        channel = 'dev';
+        break;
+      case 'chrome-permission':
+        permissions.push(text);
+        break;
+      case 'chrome-platform':
+        platforms.push(text);
+        break;
     }
-    if (platforms.length) {
-      renderNamespace.platforms = platforms;
-    }
+  });
 
-    // Extract types/properties/methods by finding different kinds of children from the namespace's
-    // DeclarationReflection.
-    const groups = [
-      {
-        target: renderNamespace.types,
-        mask:
-          typedoc.ReflectionKind.Enum |
-          typedoc.ReflectionKind.TypeLiteral |
-          typedoc.ReflectionKind.TypeAlias |
-          typedoc.ReflectionKind.Interface,
-      },
-      {
-        target: renderNamespace.methods,
-        mask: typedoc.ReflectionKind.Function,
-      },
-      {
-        target: renderNamespace.properties,
-        mask: typedoc.ReflectionKind.Property | typedoc.ReflectionKind.Variable,
-      },
-    ];
-    for (const {target, mask} of groups) {
-      const all = exportedChildren(reflection, mask);
-      for (const name in all) {
-        const rt = declarationToType(all[name]);
-        rt.name = name;
-        target.push(rt);
-      }
-    }
+  /** @type {RenderNamespace} */
+  const renderNamespace = {
+    name,
+    shortName,
+    comment: extractComment(reflection.comment, reflection),
+    types: [],
+    properties: [],
+    methods: [],
+    events: [],
+    channel,
+    source,
+  };
 
-    // Events are just properties that have an instanceof chrome.events.Events. Extract them and
-    // include them separately.
-    renderNamespace.properties = renderNamespace.properties.filter(property => {
-      if (property.referenceType === 'events.Event') {
-        renderNamespace.events.push(property);
-        return false;
-      }
-      return true;
-    });
+  if (permissions.length) {
+    renderNamespace.permissions = permissions;
+  }
+  if (platforms.length) {
+    renderNamespace.platforms = platforms;
   }
 
-  // Returns as an already sorted Array.
-  flat.sort(({name: a}, {name: b}) => a.localeCompare(b));
-  return flat;
+  // Extract types/properties/methods by finding different kinds of children from the namespace's
+  // DeclarationReflection.
+  const groups = [
+    {
+      target: renderNamespace.types,
+      mask:
+        typedoc.ReflectionKind.Enum |
+        typedoc.ReflectionKind.TypeLiteral |
+        typedoc.ReflectionKind.TypeAlias |
+        typedoc.ReflectionKind.Interface,
+    },
+    {
+      target: renderNamespace.methods,
+      mask: typedoc.ReflectionKind.Function,
+    },
+    {
+      target: renderNamespace.properties,
+      mask: typedoc.ReflectionKind.Property | typedoc.ReflectionKind.Variable,
+    },
+  ];
+  for (const {target, mask} of groups) {
+    const all = exportedChildren(reflection, mask);
+    for (const name in all) {
+      const rt = declarationToType(all[name]);
+      rt.name = name;
+      target.push(rt);
+    }
+  }
+
+  // Events are just properties that have an instanceof chrome.events.Events. Extract them and
+  // include them separately.
+  renderNamespace.properties = renderNamespace.properties.filter(property => {
+    if (property.referenceType === 'events.Event') {
+      renderNamespace.events.push(property);
+      return false;
+    }
+    return true;
+  });
+
+  return renderNamespace;
 }
 
-module.exports = {parseChromeTypesFile, generateTypeDocObject};
+module.exports = {
+  extractPublicChromeNamespaces,
+  generateTypeDocProject,
+  renderNamespaceFromNamespace,
+};

@@ -23,7 +23,6 @@
     "lint:scss": "stylelint **/*.scss",
     "lint:types": "tsc --noEmit",
     "lint": "npm-run-all lint:js lint:scss lint:md lint:types",
-    "postinstall": "npm-run-all types",
     "production": "NODE_ENV=production npm-run-all clean ignore gulp rollup eleventy",
     "snapshots": "percy snapshot dist/en",
     "percy": "ELEVENTY_IGNORE_NACL=true npm-run-all production snapshots",
@@ -33,8 +32,7 @@
     "stage": "NODE_ENV=production npm run production && gcloud app deploy --project=chrome-apps-doc-staging-2020 --quiet",
     "start": "node ./server",
     "test:watch": "ava --watch",
-    "test": "nyc ava",
-    "types": "node ./tools/types"
+    "test": "nyc ava"
   },
   "license": "Apache 2.0",
   "dependencies": {
@@ -43,11 +41,12 @@
     "@11ty/eleventy-plugin-rss": "^1.0.9",
     "@lhci/cli": "^0.5.0",
     "@rollup/plugin-node-resolve": "^8.4.0",
+    "@types/node-fetch": "^2.5.8",
+    "@types/tmp": "^0.2.0",
     "algoliasearch": "^4.6.0",
     "async-transforms": "^1.0.6",
     "browser-media-mime-type": "^1.0.0",
     "chokidar-cli": "^2.1.0",
-    "chrome-types": "^0.0.14",
     "common-tags": "^1.8.0",
     "compression": "^1.7.4",
     "concurrently": "^5.2.0",
@@ -61,6 +60,7 @@
     "imgix-core-js": "^2.3.2",
     "lit-element": "^2.4.0",
     "lit-html": "^1.3.0",
+    "node-fetch": "^2.6.0",
     "npm-run-all": "^4.1.5",
     "querystring": "^0.2.0",
     "readdirp": "^3.4.0",
@@ -68,7 +68,7 @@
     "remove-markdown": "^0.3.0",
     "rollup": "^2.22.2",
     "striptags": "^3.1.1",
-    "typedoc": "^0.19.2",
+    "typedoc": "^0.20.24",
     "unistore": "^3.5.2"
   },
   "devDependencies": {

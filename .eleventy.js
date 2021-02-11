@@ -88,10 +88,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
 
-  // Add static collections
-  // These are generated as a postinstall step as computation is slow
-  eleventyConfig.addCollection('types', () => require('./site/_collections/types'));
-
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
   eleventyConfig.addFilter('trailingSlash', trailingSlash);
