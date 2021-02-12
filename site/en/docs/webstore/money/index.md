@@ -6,9 +6,14 @@ description: An overview of how you can monetize Chrome Web Store items.
 ---
 
 {% Aside 'warning' %}
-**Important:** Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS
+The Chrome Web Store payments system [is now deprecated](/docs/webstore/cws-payments-deprecation/).
+You are free to monetize your extensions using other payment platforms.
+{% endAside %}
+
+{% Aside 'caution' %}
+Chrome no longer supports Chrome Apps on Windows, Mac, and Linux. Chrome OS
 will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to
-support extensions on all platforms. [Read the announcement][1] and learn more about [migrating your
+support extensions on all platforms. [Read the announcement][1] and learn more about [migrating your	
 app][2].
 {% endAside %}
 
