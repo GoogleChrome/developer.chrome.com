@@ -1,7 +1,9 @@
 
-<div class="wrapper banner gap-top-300 rounded-500 banner--{{ banner.type }}">
-  <div class="banner__text">
-    {{ banner.text }}
+{% if banner %}
+  <div class="wrapper banner gap-top-300 rounded-500 banner--{{ banner.type }}">
+    <div class="banner__text">
+      {{ banner.text }}
+    </div>
+    <a class="link" href="{{ banner.action }}">{{ banner.action_href }}</a>
   </div>
-  <a class="link" href="{{ banner.action }}">{{ banner.action_href }}</a>
-</div>
+{% endif %}
