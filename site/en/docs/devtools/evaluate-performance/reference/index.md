@@ -153,9 +153,8 @@ To load a recording, right-click and select **Load Profile**.
 ## Clear the previous recording {: #clear }
 
 After making a recording, press **Clear recording**
-![Clear
-recording](/web/tools/chrome-devtools/evaluate-performance/imgs/clear-recording.png) to clear
-that recording from the **Performance** panel.
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mEMdGoChkUDgRIowaEu1.png", alt="Clear recording", width="26", height="26" %}
+to clear that recording from the **Performance** panel.
 
 {% Img src="image/admin/KDg1wSCNTs4Ts3qQN0gy.svg", alt="Clear recording", width="800", height="547" %}
 
@@ -201,7 +200,7 @@ Press Command+F (Mac) or Control+F (Windows, Linux) to open the search box at th
 {% Img src="image/admin/bDTtPmR7htQFD82qG0Mp.png", alt="The search box", width="800", height="586" %}
 
 **Figure 13**. Using regex in the search box at the bottom of the window to find any activity that
-begins with \`E\`
+begins with `E`
 
 To navigate activities that match your query:
 
@@ -571,10 +570,8 @@ To move the diagram:
 - Click **Rotate Mode**
   {% Img src="image/admin/QfAWp7e0kuhmVzOwJY28.png", alt="Rotate Mode", width="32", height="32" %} to rotate
   along the Z axis.
-- Click **Reset Transform**
-  ![Reset
-Transform](/web/tools/chrome-devtools/evaluate-performance/imgs/reset-transform.png) to
-  reset the diagram to its original position.
+- Click **Reset Transform** {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5SunRxvT1B8Zmp4iOKk7.png", alt="Reset Transform", width="30", height="30" %}
+  to reset the diagram to its original position.
 
 See layer analysis in action:
 
@@ -657,9 +654,7 @@ To view scroll performance issues:
 1.  Open the **Rendering** tab. See [Analyze rendering performance with the Rendering tab][33].
 2.  Enable the **Scrolling Performance Issues** checkbox.
 
-![Scrolling Performance Issues is indicating that there's a mousewheel
-         event listener encompassing the entire viewport that may harm scroll
-         performance](/web/tools/chrome-devtools/evaluate-performance/imgs/scrolling-performance-issues.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NH12bctPHXR9VD9GO7ov.png", alt="Scrolling Performance Issues is indicating that there's a mousewheel event listener encompassing the entire viewport that may harm scroll performance", width="800", height="498" %}
 
 **Figure 39**. **Scrolling Performance Issues** is indicating that there's a `mousewheel` event
 listener encompassing the entire viewport that may harm scroll performance
