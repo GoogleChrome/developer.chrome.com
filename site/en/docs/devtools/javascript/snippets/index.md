@@ -26,7 +26,7 @@ the right.
 
 Here's the Snippet source code from **Figure 1**:
 
-```
+```js
 console.log('Hello, Snippets!');
 document.body.innerHTML = '';
 var p = document.createElement('p');

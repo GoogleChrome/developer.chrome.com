@@ -10,9 +10,9 @@ Your job doesn't end with ensuring your site runs great across Chrome and Androi
 Device Mode can simulate a range of other devices like iPhones, we encourage you to check out other
 browsers solutions for emulation.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
-- When you don’t have a particular device, or want to do a spot check on something, the best option
+- When you don't have a particular device, or want to do a spot check on something, the best option
   is to emulate the device right inside your browser.
 - Device emulators and simulators let you mimic your development site on a range of devices from
   your workstation.
@@ -20,7 +20,7 @@ browsers solutions for emulation.
 
 ## Browser emulators {: #browser_emulators }
 
-Browser emulators are great for testing a site's responsiveness, but they don’t emulate differences
+Browser emulators are great for testing a site's responsiveness, but they don't emulate differences
 in API, CSS support, and certain behaviors that you'd see on a mobile browser. Test your site on
 browsers running on real devices to be certain everything behaves as expected.
 
@@ -69,7 +69,7 @@ Android Emulator Content Shell
 To install the Chromium Content Shell for Android, leave your emulator running and run the following
 commands at a command prompt:
 
-```
+```bash
 git clone https://github.com/PaulKinlan/chromium-android-installer.git
 chmod u+x ./chromium-android-installer/\*.sh
 ./chromium-android-installer/install-chromeandroid.sh
@@ -91,7 +91,7 @@ Download the right .apk file from
 From here, you can install the file onto an open emulator or connected Android device with the
 following command:
 
-```
+```bash
 adb install &lt;path to APK&gt;/fennec-XX.X.XX.android-arm.apk
 ```
 
@@ -120,7 +120,7 @@ Modern.IE Virtual Machines let you access different versions of IE on your compu
 
 ## Cloud-based emulators and simulators {: #cloud-based_emulators_and_simulators }
 
-If you can’t use the emulators and don't have access to real devices, then cloud-based emulators are
+If you can't use the emulators and don't have access to real devices, then cloud-based emulators are
 the next best thing. A big advantage of cloud-based emulators over real devices and local emulators
 is that you can automate unit tests for your site across different platforms.
 

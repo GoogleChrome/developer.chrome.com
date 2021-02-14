@@ -43,7 +43,7 @@ To set a line-of-code breakpoint in DevTools:
 Call `debugger` from your code to pause on that line. This is equivalent to a [line-of-code
 breakpoint][9], except that the breakpoint is set in your code, not in the DevTools UI.
 
-```
+```js
 console.log('a');
 console.log('b');
 debugger;
@@ -186,7 +186,7 @@ pause whenever a specific function is called. You can insert `debug()` into your
 `console.log()` statement) or call it from the DevTools Console. `debug()` is equivalent to setting
 a [line-of-code breakpoint][11] on the first line of the function.
 
-```
+```js
 function sum(a, b) {
   let result = a + b; // DevTools pauses on this line.
   return result;
@@ -199,7 +199,7 @@ sum();
 
 DevTools throws a `ReferenceError` if the function you want to debug is not in scope.
 
-```
+```js
 (function () {
   function hey() {
     console.log('hey');

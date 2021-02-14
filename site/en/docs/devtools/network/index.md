@@ -228,14 +228,10 @@ Click a resource to learn more information about it. Try it now:
 
     **Figure 16**. The Response tab
 
-TODO inline image below
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/M9e9yKo9gzxlsRvw3i0t.png", alt="Format", width="30", height="24" %}
-
     {% Aside %}
 
     **Tip** When a file is minified, clicking the **Format**
-    ![Format](/web/tools/chrome-devtools/images/shared/format.png) button at the bottom of the
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/M9e9yKo9gzxlsRvw3i0t.png", alt="Format", width="30", height="24" %} button at the bottom of the
     **Response** tab re-formats the file's contents for readability.
 
     {% endAside %}
