@@ -45,8 +45,7 @@ key-value pairs.
 2.  Double-click the empty part of the table. DevTools creates a new row and focuses your cursor in
     the **Key** column.
 
-    ![The empty part of the table to double-click in order to create a new
-             key-value pair](/web/tools/chrome-devtools/storage/imgs/sessionstoragecreate.png)
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wHbbYT8MsU3U68Op2yWj.png", alt="The empty part of the table to double-click in order to create a new key-value pair", width="800", height="579" %}
 
     **Figure 5**. The empty part of the table to double-click in order to create a new key-value
     pair
