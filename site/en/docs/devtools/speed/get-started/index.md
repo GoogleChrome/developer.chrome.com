@@ -489,7 +489,7 @@ page loads, and find ways to defer or remove unnecessary work.
 3.  Set **Network** to **Slow 3G** and **CPU** to **6x slowdown**. Mobile devices typically have
     more hardware constraints than laptops or desktops, so these settings let you experience the
     page load as if you were using a less powerful device.
-4.  Click **Reload** ![Reload](/web/tools/chrome-devtools/speed/imgs/reload.png). DevTools reloads
+4.  Click **Reload** {% Img src="image/admin/sUKAx2esbJbYN6Ti3K8j.png", alt="Reload", width="24", height="25" %}. DevTools reloads
     the page and then produces a visualization of all it had to do in order to load the page. This
     visualization will be referred to as the _trace_.
 

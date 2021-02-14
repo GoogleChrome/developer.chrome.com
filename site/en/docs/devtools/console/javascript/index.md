@@ -42,7 +42,7 @@ to change how the page looks or runs.
 
 1.  Notice the text in the button below.
 
-    Hello, World!
+    <button id="hello">Hello, World!</button>
 
 2.  Type `document.getElementById('hello').textContent = 'Hello, Console!'` in the **Console** and
     then press Enter to evaluate the expression. Notice how the text inside the button changes.
@@ -82,7 +82,7 @@ features you're not familiar with. The Console is a perfect place for these kind
     add(25);
     ```
 
-    ![How the Console looks after evaluating the expressions above.](/web/tools/chrome-devtools/console/images/playground.png)
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3V5mx06Kehe06nGL3csv.png", alt="How the Console looks after evaluating the expressions above.", width="800", height="463" %}
 
     **Figure 4**. How the Console looks after evaluating the expressions above.
 
