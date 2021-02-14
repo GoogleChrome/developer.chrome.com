@@ -37,7 +37,7 @@ Cumulative Layout Shift (CLS), and Total Blocking Time (TBT). LCP and CLS are 2 
 [Core Web Vitals][7], and TBT is a lab measurement proxy for another Core Web Vital, First Input
 Delay.
 
-The performance score formula has also been reweighted to better reflect the users’ loading
+The performance score formula has also been reweighted to better reflect the users' loading
 experience.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1Tmmm0bSZ1g2G5LRgt2p.png", alt="New performance metrics in Lighthouse 6.0", width="800", height="455" %}
@@ -142,8 +142,8 @@ Chromium issue [#1055875][26]
 ### JavaScript compilation cache information in Performance panel {: #javascript_compilation_cache_information_in_performance_panel }
 
 [JavaScript compilation cache information][27] is now always displayed in the Summary tab of the
-Performance panel. Previously, DevTools wouldn’t show anything related to code caching if code
-caching didn’t happen.
+Performance panel. Previously, DevTools wouldn't show anything related to code caching if code
+caching didn't happen.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ihesnfou0XvBC59T3wfj.png", alt="JavaScript compilation cache information", width="800", height="447" %}
 
