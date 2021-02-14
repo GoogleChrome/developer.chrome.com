@@ -63,7 +63,7 @@ Chromium issues: [1096481][5], [1068116][6], [1080589][7]
 Open the [Rendering tab][8] and use the new **Disable local fonts** feature to emulate missing
 `local()` sources in `@font-face` rules.
 
-For example, when the font “Rubik” is installed on your device and the `@font-face src` rule uses it
+For example, when the font "Rubik" is installed on your device and the `@font-face src` rule uses it
 as a `local()` font, Chrome uses the local font file from your device.
 
 When **Disable local fonts** is enabled, DevTools ignores the `local()` fonts and fetches them from
@@ -152,7 +152,7 @@ Updated audits in Lighthouse 6.2:
 
 Chromium issue: [772558][22]
 
-## Deprecation of “other origins” listing in the Service Workers pane {: #deprecate-sw-other-origins }
+## Deprecation of "other origins" listing in the Service Workers pane {: #deprecate-sw-other-origins }
 
 DevTools now provides a link to view the full list of service workers from other origins in a new
 browser tab - `chrome://serviceworker-internals/?devtools`.

@@ -51,7 +51,7 @@ Open Chrome from the Command line and pass the `--auto-open-devtools-for-tabs` f
 
 Mac:
 
-```
+```bash
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --auto-open-devtools-for-tabs
 ```
 

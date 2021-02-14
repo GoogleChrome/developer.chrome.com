@@ -67,7 +67,7 @@ features you're not familiar with. The Console is a perfect place for these kind
 2.  Type the following code into the **Console**. Try typing it out, character-by-character, rather
     than copy-pasting it.
 
-    ```
+    ```js
     function add(a, b=20) {
       return a + b;
     }
@@ -78,7 +78,7 @@ features you're not familiar with. The Console is a perfect place for these kind
 
 3.  Now, call the function that you just defined.
 
-    ```
+    ```js
     add(25);
     ```
 

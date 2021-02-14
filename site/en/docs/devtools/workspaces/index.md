@@ -84,7 +84,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
 6.  Start a local web server in `~/Desktop/app`. Below is some sample code for starting up
     `SimpleHTTPServer`, but you can use whatever server you prefer.
 
-    ```
+    ```bash
     cd ~/Desktop/app
     ```
 
