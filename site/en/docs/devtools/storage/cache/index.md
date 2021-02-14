@@ -74,7 +74,7 @@ column of the **Network Log** has the information you're looking for. See [Log n
 2.  Click the resource that you want to delete. DevTools highlights it blue to indicate that it's
     selected.
 
-    ![Selecting a resource.](/web/tools/chrome-devtools/storage/imgs/cacheselected.png)
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3MLpzyWtyg9MyCsBKr0T.png", alt="Selecting a resource.", width="800", height="488" %}
 
     **Figure 8**. Selecting the **/styles/main.css** resource.
 
