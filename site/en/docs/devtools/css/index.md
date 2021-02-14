@@ -31,8 +31,7 @@ Chrome DevTools.
 If you'd like to dock your DevTools window to the right of your viewport, like you see in **Figure
 1**, see [Change DevTools placement][1].
 
-![CSS classes being applied to the inspected element are highlighted
-            in the Styles tab](/web/tools/chrome-devtools/css/imgs/aloha.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/dPkDHB9qgSHjLL6mc6GY.png", alt="CSS classes being applied to the inspected element are highlighted in the Styles tab", width="800", height="562" %}
 
 **Figure 2**. CSS classes being applied to the selected element, such as `aloha`, are displayed in
 the **Styles** tab

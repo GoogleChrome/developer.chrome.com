@@ -58,13 +58,11 @@ is a realtime monitor that tells you how much memory a page is currently using.
 1.  Press Shift+Esc or go to the Chrome main menu and select **More tools** > **Task manager** to
     open the Task Manager.
 
-    ![opening the task
-manager](/web/tools/chrome-devtools/memory-problems/imgs/task-manager.png)
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/N79qVbngo3RGfyJqVAXs.png", alt="Opening the Task Manager", width="800", height="441" %}
 
 2.  Right-click on the table header of the Task Manager and enable **JavaScript memory**.
 
-    ![enable javascript
-memory](/web/tools/chrome-devtools/memory-problems/imgs/js-memory.png)
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/HgelJFumP0cFX1lYZc1V.png", alt="Enabling JS memory", width="764", height="705" %}
 
 These two columns tell you different things about how your page is using memory:
 

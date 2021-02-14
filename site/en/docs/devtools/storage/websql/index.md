@@ -10,7 +10,7 @@ description: "How to view Web SQL data from the Application panel of Chrome DevT
 
 {% Aside "warning" %}
 
-The Web SQL specification is [not being maintained][1] .
+The Web SQL specification is [not being maintained][1].
 
 {% endAside %}
 
