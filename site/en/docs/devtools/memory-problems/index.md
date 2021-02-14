@@ -13,7 +13,7 @@ description:
 Learn how to use Chrome and DevTools to find memory issues that affect page performance, including
 memory leaks, memory bloat, and frequent garbage collections.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Find out how much memory your page is currently using with the Chrome Task Manager.
 - Visualize memory usage over time with Timeline recordings.
@@ -89,7 +89,7 @@ while recording to force garbage collection.
 
 To demonstrate Timeline memory recordings, consider the code below:
 
-```
+```js
 var x = [];
 
 function grow() {
@@ -134,7 +134,7 @@ section teaches you how to use DevTools' heap profilers to identify detached nod
 
 Here's a simple example of detached DOM nodes.
 
-```
+```js
 var detachedTree;
 
 function create() {
@@ -192,7 +192,7 @@ The Allocation Timeline is another tool that can help you track down memory leak
 
 To demonstrate the Allocation Timeline consider the following code:
 
-```
+```js
 var x = [];
 
 function grow() {
