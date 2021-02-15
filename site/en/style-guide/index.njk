@@ -448,43 +448,5 @@ line-height: 160%;
     {% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", className="screenshot screenshot--filled" %}
   </div>
 
-  <div>
-    {% Details %}
-      {% DetailsSummary %}
-        Details component _summary_
-      {% endDetailsSummary %}
-      This is the body of the Details component.
-    {% endDetails %}
-  </div>
-
-  <div>
-    {% Details %}
-      {% DetailsSummary %}
-        Details component with a preview
-        This is an optional details preview.
-      {% endDetailsSummary %}
-      This is the body of the Details component.
-    {% endDetails %}
-  </div>
-
-  <div>
-    {% Details %}
-      {% DetailsSummary 'h3' %}
-        Details component with custom heading level 'h3'
-        First line of the DetailsSummary is the header.
-      {% endDetailsSummary %}
-        This is the body of the Details component.
-    {% endDetails %}
-  </div>
-
-  <div>
-    {% Details 'open' %}
-      {% DetailsSummary 'h3' %}
-        Details component in open state
-      {% endDetailsSummary %}
-      This is the body of the Details component.
-    {% endDetails %}
-  </div>
-
 </article>
 {% endblock %}

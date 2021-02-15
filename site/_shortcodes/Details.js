@@ -5,7 +5,7 @@
  */
 function Details(content, state) {
   const stateOverride = state === 'open' ? 'open' : '';
-
+  // Whitespace is needed for the markdown parser to process the ${content}.
   return `<details class="details" ${stateOverride}>
 
 ${content}</details>`;

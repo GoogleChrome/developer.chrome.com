@@ -14,7 +14,7 @@ qui? Culpa eligendi nobis, dolores rem expedita similique quas.
 {% Details %}
 
 {% DetailsSummary %}
-### Details component _summary_
+Details component _summary_
 {% endDetailsSummary %}
 
   This is the body of the Details component.
@@ -24,6 +24,24 @@ qui? Culpa eligendi nobis, dolores rem expedita similique quas.
   console.log(bar);
   ```
 {% endDetails %}
+
+
+{% Details %}
+
+{% DetailsSummary %}
+### Details component _summary_
+
+This is an optional preview.
+{% endDetailsSummary %}
+
+  This is the body of the Details component.
+  It **can contain** markdown
+  ```js
+  const bar = 'foo';
+  console.log(bar);
+  ```
+{% endDetails %}
+
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolorum? Vitae
 necessitatibus omnis rem recusandae laudantium, nostrum deleniti maxime
