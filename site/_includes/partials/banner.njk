@@ -4,6 +4,8 @@
     <div class="banner__text">
       {{ banner.text }}
     </div>
-    <a class="link" href="{{ banner.action }}">{{ banner.action_href }}</a>
+    {% if banner.action and banner.action_href %}
+      <a class="link" href="{{ banner.action_href }}">{{ banner.action }}</a>
+    {% endif %}
   </div>
 {% endif %}
