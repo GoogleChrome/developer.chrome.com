@@ -19,7 +19,7 @@ Utilities API Reference][2] if you're looking for the convenience methods like `
 
 Writes an [error][4] to the console when `expression` evaluates to `false`.
 
-```
+```js
 const x = 5;
 const y = 3;
 const reason = 'x is expected to be less than y';
@@ -34,7 +34,7 @@ console.assert(x < y, {x, y, reason});
 
 Clears the console.
 
-```
+```js
 console.clear();
 ```
 
@@ -49,7 +49,7 @@ See also: [Clear the Console][6]
 Writes the number of times that `count()` has been invoked at the same line and with the same
 `label`. Call [`console.countReset([label])`][8] to reset the count.
 
-```
+```js
 console.count();
 console.count('coffee');
 console.count();
@@ -64,7 +64,7 @@ console.count();
 
 Resets a count.
 
-```
+```js
 console.countReset();
 console.countReset('coffee');
 ```
@@ -75,7 +75,7 @@ console.countReset('coffee');
 
 Identical to [`console.log(object [, object, ...])`][10] except different log level.
 
-```
+```js
 console.debug('debug');
 ```
 
@@ -89,7 +89,7 @@ console.debug('debug');
 
 Prints a JSON representation of the specified object.
 
-```
+```js
 console.dir(document.head);
 ```
 
@@ -103,7 +103,7 @@ console.dir(document.head);
 
 Prints an XML representation of the descendants of `node`.
 
-```
+```js
 console.dirxml(document);
 ```
 
@@ -117,7 +117,7 @@ console.dirxml(document);
 
 Prints `object` to the Console, formats it as an error, and includes a stack trace.
 
-```
+```js
 console.error("I'm sorry, Dave. I'm afraid I can't do that.");
 ```
 
@@ -130,7 +130,7 @@ console.error("I'm sorry, Dave. I'm afraid I can't do that.");
 Visually groups messages together until `console.groupEnd(label)` is called. Use
 `console.groupCollapsed(label)` to collapse the group when it's initially logged to the Console.
 
-```
+```js
 const label = 'Adolescent Irradiated Espionage Tortoises';
 console.group(label);
 console.info('Leo');
@@ -159,7 +159,7 @@ Stops visually grouping messages. See [`console.group`][15].
 
 Identical to [`console.log(object [, object, ...])`][17].
 
-```
+```js
 console.info('info');
 ```
 
@@ -173,7 +173,7 @@ console.info('info');
 
 Prints a message to the Console.
 
-```
+```js
 console.log('log');
 ```
 
@@ -187,7 +187,7 @@ console.log('log');
 
 Logs an array of objects as a table.
 
-```
+```js
 console.table([
   {
     first: 'René',
@@ -214,7 +214,7 @@ console.table([
 Starts a new timer. Call `console.timeEnd([label])` to stop the timer and print the elapsed time to
 the Console.
 
-```
+```js
 console.time();
 for (var i = 0; i < 100000; i++) {
   let square = i ** 2;
@@ -238,7 +238,7 @@ Stops a timer. See [`console.time()`][21].
 
 Prints a stack trace to the Console.
 
-```
+```js
 const first = () => { second(); };
 const second = () => { third(); };
 const third = () => { fourth(); };
@@ -256,7 +256,7 @@ first();
 
 Prints a warning to the Console.
 
-```
+```js
 console.warn('warn');
 ```
 

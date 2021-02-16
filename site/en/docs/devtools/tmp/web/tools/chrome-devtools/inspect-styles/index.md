@@ -19,7 +19,7 @@ Inspect and live-edit the HTML and CSS of a page using the Chrome DevTools Eleme
 
 ![Chrome DevTools Elements panel](/web/tools/chrome-devtools/inspect-styles/imgs/elements-panel.png)
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Inspect and edit on the fly any element in the DOM tree in the Elements panel.
 - View and change the CSS rules applied to any selected element in the Styles pane.

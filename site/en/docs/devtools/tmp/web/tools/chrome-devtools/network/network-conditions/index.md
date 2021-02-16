@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Optimize Performance Under Varying Network Conditions"
 authors:
   - megginkearney
-,  - jonathangarbee
+  - jonathangarbee
 date: 2015-04-13
 updated: 2020-07-10
 description: "It’s easy to overlook the network conditions your users will face on mobile. Use DevTools to emulate different network conditions. Fix any load time issues and your users will thank you."
@@ -19,7 +19,7 @@ where you can find similar information.
 It's easy to overlook the network conditions your users will face on mobile. Use DevTools to emulate
 different network conditions. Fix any load time issues and your users will thank you.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Without affecting traffic to other tabs, evaluate your site''s performance using the Chrome
   DevTools network emulator.

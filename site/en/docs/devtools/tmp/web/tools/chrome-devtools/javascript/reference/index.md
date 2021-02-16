@@ -39,7 +39,7 @@ without stepping into it.
 
 For example, suppose you're debugging the following code:
 
-```
+```js
 function updateHeader() {
   var day = new Date().getDay();
   var name = getName(); // A
@@ -67,7 +67,7 @@ further.
 
 For example, suppose you're debugging the following code:
 
-```
+```js
 function updateHeader() {
   var day = new Date().getDay();
   var name = getName(); // A
@@ -94,7 +94,7 @@ the function's code.
 
 For example, suppose you're debugging the following code:
 
-```
+```js
 function updateHeader() {
   var day = new Date().getDay();
   var name = getName();
@@ -135,7 +135,7 @@ last function that was called.
 
 For example, suppose you're stepping through the following code:
 
-```
+```js
 function factorial(n) {
   var product = 0; // B
   for (var i = 1; i <= n; i++) {
@@ -232,7 +232,7 @@ stack to the clipboard.
 
 Below is an example of the output:
 
-```
+```js
 getNumber1 (get-started.js:35)
 inputsAreEmpty (get-started.js:22)
 onClick (get-started.js:15)
@@ -246,7 +246,7 @@ through your code.
 
 For example, suppose you're stepping through this code:
 
-```
+```js
 function animate() {
   prepare();
   lib.doFancyStuff(); // A

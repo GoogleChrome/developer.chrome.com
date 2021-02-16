@@ -19,7 +19,7 @@ Use the **Styles** pane to modify the CSS styles associated to an element.
 
 ![Styles pane](/web/tools/chrome-devtools/inspect-styles/imgs/styles-pane.png)
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - The styles pane lets you change your CSS in as many ways as possible, locally, including editing
   existing styles, adding new styles, adding rules for styles.

@@ -13,7 +13,7 @@ Identify expensive functions using the Chrome DevTools CPU Profiler.
 
 ![CPU profile](/web/tools/chrome-devtools/rendering-tools/imgs/cpu-profile.png)
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Record exactly which functions were called and how long each took with the CPU Profiler.
 - Visualize your profiles as a flame chart.

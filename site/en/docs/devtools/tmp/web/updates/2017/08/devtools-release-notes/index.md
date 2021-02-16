@@ -64,7 +64,7 @@ To take a screenshot of a specific HTML node:
 
 1.  [Select an element][12] in the **Elements** panel.
 
-    ![An example of a node ](/web/updates/images/2017/08/target-node.png)
+    ![An example of a node](/web/updates/images/2017/08/target-node.png)
 
     **Figure 3**. In this example, the goal is to take a screenshot of the blue header that contains
     the text `Tools`. Note that this node is already selected in the **DOM Tree** of the

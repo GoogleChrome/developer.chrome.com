@@ -94,7 +94,7 @@ equivalent to calling [document.querySelectorAll()][3].
 The following example uses `$$()` to create an array of all `<img>` elements in the current document
 and displays the value of each element's `src` property:
 
-```
+```js
     var images = $$('img');
     for (each in images) {
         console.log(images[each].src);
@@ -110,7 +110,7 @@ which to search for elements. The default value of this parameter is `document`.
 This modified version of the previous example uses `$$()` to create an array of all `<img>` elements
 that appear in the current document after the selected Node:
 
-```
+```js
 var images = $$('img', document.querySelector('.devsite-header-background'));
    for (each in images) {
        console.log(images[each].src);
@@ -132,7 +132,7 @@ a new line without executing the script.
 
 For example, the following returns all the `<p>` elements on the page:
 
-```
+```js
     $x("//p")
 ```
 
@@ -140,7 +140,7 @@ For example, the following returns all the `<p>` elements on the page:
 
 The following example returns all the `<p>` elements that contain `<a>` elements:
 
-```
+```js
     $x("//p[a]")
 ```
 
@@ -155,7 +155,7 @@ that specifies an element or Node from which to search for elements.
 
 `clear()` clears the console of its history.
 
-```
+```js
     clear();
 ```
 
@@ -163,7 +163,7 @@ that specifies an element or Node from which to search for elements.
 
 `copy(object)` copies a string representation of the specified object to the clipboard.
 
-```
+```js
     copy($0);
 ```
 
@@ -172,7 +172,7 @@ that specifies an element or Node from which to search for elements.
 When the specified function is called, the debugger is invoked and breaks inside the function on the
 Sources panel allowing to step through the code and debug it.
 
-```
+```js
     debug(getData);
 ```
 
@@ -190,7 +190,7 @@ is an alias for the Console API's `console.dir()` method.
 The following example shows the difference between evaluating `document.body` directly in the
 command line, and using `dir()` to display the same element:
 
-```
+```js
     document.body;
     dir(document.body);
 ```
@@ -211,7 +211,7 @@ panel: either the Elements panel for DOM elements or the Profiles panel for Java
 
 The following example opens the `document.body` in the Elements panel:
 
-```
+```js
     inspect(document.body);
 ```
 
@@ -228,7 +228,7 @@ return value is an object that contains an array for each registered event type 
 for each type. For example, the following lists all the event listeners registered on the document
 object:
 
-```
+```js
     getEventListeners(document);
 ```
 
@@ -251,7 +251,7 @@ object. To get the associated values of the same properties, use `values()`.
 
 For example, suppose your application defined the following object:
 
-```
+```js
     var player1 = { "name": "Ted", "level": 42 }
 ```
 
@@ -265,7 +265,7 @@ Assuming `player1` was defined in the global namespace (for simplicity), typing 
 When the function specified is called, a message is logged to the console that indicates the
 function name along with the arguments that are passed to the function when it was called.
 
-```
+```js
     function sum(x, y) {
         return x + y;
     }
@@ -284,7 +284,7 @@ console. You can specify a single event to monitor, an array of events, or one o
 
 The following monitors all resize events on the window object.
 
-```
+```js
     monitorEvents(window, "resize");
 ```
 
@@ -292,7 +292,7 @@ The following monitors all resize events on the window object.
 
 The following defines an array to monitor both "resize" and "scroll" events on the window object:
 
-```
+```js
     monitorEvents(window, ["resize", "scroll"])
 ```
 
@@ -304,7 +304,7 @@ events. The table below lists the available event types and their associated eve
 For example, the following uses the "key" event type all corresponding key events on an input text
 field currently selected in the Elements panel.
 
-```
+```js
     monitorEvents($0, "key");
 ```
 
@@ -320,19 +320,19 @@ Execution][7].)
 
 To start profiling:
 
-```
+```js
     profile("My profile")
 ```
 
 To stop profiling and display the results in the Profiles panel:
 
-```
+```js
     profileEnd("My profile")
 ```
 
 Profiles can also be nested. For example, this will work in any order:
 
-```
+```js
     profile('A');
     profile('B');
     profileEnd('A');
@@ -367,7 +367,7 @@ The scope of `queryObjects()` is the currently-selected execution context in the
 Log object data with table formatting by passing in a data object in with optional column headings.
 For example, to display a list of names using a table in the console, you would do:
 
-```
+```js
     var names = {
         0: { firstName: "John", lastName: "Smith" },
         1: { firstName: "Jane", lastName: "Doe" }
@@ -382,7 +382,7 @@ For example, to display a list of names using a table in the console, you would 
 `undebug(function)` stops the debugging of the specified function so that when the function is
 called, the debugger is no longer invoked.
 
-```
+```js
     undebug(getData);
 ```
 
@@ -391,7 +391,7 @@ called, the debugger is no longer invoked.
 `unmonitor(function)` stops the monitoring of the specified function. This is used in concert with
 `monitor(fn)`.
 
-```
+```js
     unmonitor(getData);
 ```
 
@@ -400,7 +400,7 @@ called, the debugger is no longer invoked.
 `unmonitorEvents(object[, events])` stops monitoring events for the specified object and events. For
 example, the following stops all event monitoring on the window object:
 
-```
+```js
     unmonitorEvents(window);
 ```
 
@@ -408,7 +408,7 @@ You can also selectively stop monitoring specific events on an object. For examp
 code starts monitoring all mouse events on the currently selected element, and then stops monitoring
 "mousemove" events (perhaps to reduce noise in the console output):
 
-```
+```js
     monitorEvents($0, "mouse");
     unmonitorEvents($0, "mousemove");
 ```
@@ -418,7 +418,7 @@ code starts monitoring all mouse events on the currently selected element, and t
 `values(object)` returns an array containing the values of all properties belonging to the specified
 object.
 
-```
+```js
     values(object);
 ```
 

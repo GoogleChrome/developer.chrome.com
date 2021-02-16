@@ -13,7 +13,7 @@ Users expect pages to be interactive and smooth. Each stage in the pixel pipelin
 opportunity to introduce jank. Learn about tools and strategies to identify and fix common problems
 that slow down runtime performance.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Don't write JavaScript that forces the browser to recalculate layout. Separate read and write
   functions, and perform reads first.

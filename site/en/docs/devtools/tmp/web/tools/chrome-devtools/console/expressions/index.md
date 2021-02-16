@@ -22,7 +22,7 @@ The DevTools console allows you to learn the state of items in your page in an a
 Evaluate any expression you can type using a combination of your knowledge of JavaScript and several
 features that support it.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Evaluate an expression just by typing it.
 - Select elements using one of the shortcuts.
@@ -49,7 +49,7 @@ Use the following shortcuts to select elements:
 
 Examples of target selection:
 
-```
+```js
 $('code') // Returns the first code element in the document.
 $$('figure') // Returns an array of all figure elements in the document.
 $x('html/body/p') // Returns an array of all paragraphs in the document body.
@@ -65,7 +65,7 @@ When this code executes in your console on this page, it grabs this figure and d
 Elements panel. This takes advantage of the `$_` property to get the output of the last evaluated
 expression.
 
-```
+```js
 $('[data-target="inspecting-dom-elements-example"]')
 inspect($_)
 ```

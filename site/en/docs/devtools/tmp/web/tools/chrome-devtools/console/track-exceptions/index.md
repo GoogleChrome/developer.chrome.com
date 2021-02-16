@@ -26,7 +26,7 @@ In the Console you can track exceptions and trace the execution path that led to
 implicitly catch them (or ignore them), and even set error handlers to automatically collect and
 process exception data.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Turn on Pause on Exceptions to debug the code context when the exception triggered.
 - Print current JavaScript call stack using `console.trace`.

@@ -19,7 +19,7 @@ This page is deprecated.
 Console logging is a powerful way to inspect what your page or application does. Let's start with
 console.log() and explore other advanced usage.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Use [console.log()][1] for basic logging
 - Use [console.error()][2] and [console.warn()][3] for eye-catching stuff
@@ -34,7 +34,7 @@ parameters into a space-delimited line.
 
 Executing this line of code in your JavaScript:
 
-```
+```js
 console.log("Node count:", a.childNodes.length, "and the current time is:", Date.now());
 ```
 
@@ -61,7 +61,7 @@ To end the grouping you only need to call [`console.groupEnd()`][9] when you're 
 
 Example input:
 
-```
+```js
 var user = "jsmith", authenticated = false;
 console.group("Authentication phase");
 console.log("Authenticating user '%s'", user);
@@ -82,7 +82,7 @@ a time.
 
 This example shows a log group for the authentication phase of a login process:
 
-```
+```js
 var user = "jsmith", authenticated = true, authorized = true;
 // Top-level group
 console.group("Authenticating user '%s'", user);
@@ -110,7 +110,7 @@ When using groups heavily, it can be very useful to not see everything as it hap
 times you can automatically collapse groups by calling [`console.groupCollapsed()`][10] instead of
 `console.group()`:
 
-```
+```js
 console.groupCollapsed("Authenticating user '%s'", user);
 if (authenticated) {
     ...
@@ -130,7 +130,7 @@ Errors and warnings act the same way as normal logging. The only difference is `
 
 The [`console.error()`][11] method displays a red icon along with red message text:
 
-```
+```js
 function connectToServer() {
     console.error("Error: %s (%i)", "Server is  not responding",500);
 }
@@ -145,7 +145,7 @@ turns into
 
 The [`console.warn()`][12] method displays a yellow warning icon with the message text:
 
-```
+```js
 if(a.childNodes.length < 3 ) {
     console.warn('Warning! Too few nodes (%d)', a.childNodes.length);
 }
@@ -165,7 +165,7 @@ only if its first parameter evaluates to `false`.
 The following code will cause an error message in the console only if the number of child nodes
 belonging to the `list` element is greater than 500.
 
-```
+```js
 console.assert(list.childNodes.length <= 500, "Node count is > 500");
 ```
 
@@ -181,7 +181,7 @@ applies to the value. The parameters following the string apply to the placehold
 The following example uses the string and digit formatters to insert values into the output string.
 You will see "Sam has 100 points" in the console.
 
-```
+```js
 console.log("%s has %d points", "Sam", 100);
 ```
 
@@ -194,7 +194,7 @@ uses the floating point specifier to format the value of `Date.now()`.
 
 The code:
 
-```
+```js
 console.log("Node count: %d, and the time is %f.", document.childNodes.length, Date.now());
 ```
 
@@ -208,7 +208,7 @@ the specifier and give the style you wish to apply as the second parameter.
 
 Try this code:
 
-```
+```js
 console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
 ```
 

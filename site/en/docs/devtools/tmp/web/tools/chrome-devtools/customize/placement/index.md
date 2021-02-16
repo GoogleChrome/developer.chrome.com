@@ -27,8 +27,7 @@ left, or undock to a DevTools to a separate bottom.
 ## Change placement from the main menu {: #menu }
 
 1.  Click **Customize And Control DevTools**
-    ![Customize And Control
-DevTools](/web/tools/chrome-devtools/images/shared/main-menu.png) and
+    ![Customize And Control DevTools](/web/tools/chrome-devtools/images/shared/main-menu.png) and
     select **Undock Into Separate Window**
     ![Undock](/web/tools/chrome-devtools/customize/images/undockicon.png), **Dock To Bottom**
     ![Dock To Bottom](/web/tools/chrome-devtools/customize/images/bottomicon.png), or **Dock To

@@ -12,7 +12,7 @@ Inspect and modify animations with the Chrome DevTools Animation Inspector.
 
 ![animation inspector](/web/tools/chrome-devtools/inspect-styles/imgs/animation-inspector.png)
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Capture animations by opening the Animation Inspector. It automatically detects animations and
   sorts them into groups.

@@ -93,7 +93,7 @@ Relevant Chromium issue: [#805429][17]
 
 Suppose that you add a [line-of-code breakpoint][18] to the following line of code:
 
-```
+```js
 document.querySelector('#dante').addEventListener('click', logWarning);
 ```
 

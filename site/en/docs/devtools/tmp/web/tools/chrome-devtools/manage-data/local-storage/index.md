@@ -16,7 +16,7 @@ This page is deprecated.
 
 Inspect and manage storage, databases, and caches from the **Application** panel.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - View and edit local and session storage.
 - Inspect and modify IndexedDB databases.
