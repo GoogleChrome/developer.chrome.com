@@ -1,0 +1,95 @@
+---
+layout: "layouts/doc-post.njk"
+title: "Understand Security Issues With Chrome DevTools"
+authors:
+  - kaycebasques
+date: 2015-12-21
+updated: 2020-07-10
+description: "Use the Security Panel to make sure that a page is fully protected by HTTPS."
+---
+
+Use the **Security** Panel in Chrome DevTools to make sure HTTPS is properly implemented on a page.
+See [Why HTTPS Matters][1] to learn why every website should be protected with HTTPS, even sites
+that don't handle sensitive user data.
+
+## Open the Security panel {: #open }
+
+The **Security** panel is the main place in DevTools for inspecting the security of a page.
+
+1.  [Open DevTools][2].
+2.  Click the **Security** tab to open the **Security** panel.
+
+    ![The Security panel](/web/tools/chrome-devtools/security/imgs/panel.png)
+
+    **Figure 1**. The Security panel
+
+## Common problems {: #problems }
+
+### Non-secure main origins {: #main }
+
+When the main origin of a page is not secure, the **Security Overview** says **This page is not
+secure**.
+
+![A non-secure page](/web/tools/chrome-devtools/security/imgs/nonsecuremain.png)
+
+**Figure 2**. A non-secure page
+
+This problem occurs when the URL that you visited was requested over HTTP. To make it secure you
+need to request it over HTTPS. For example, if you look at the URL in your address bar, it probably
+looks similar to `http://example.com`. To make it secure the URL should be `https://example.com`.
+
+If you've already got HTTPS set up on your server, all you need to do to fix this problem is
+configure your server to redirect all HTTP requests to HTTPS.
+
+If you don't have HTTPS set up on your server, [Let's Encrypt][3] provides a free and
+relatively-easy way to start the process. Or, you might consider hosting your site on a CDN. Most
+major CDNs host sites on HTTPS by default now.
+
+**Tip** The [Redirect HTTP Traffic To HTTPS][4] audit in [Lighthouse][5] can help automate the
+process of making sure that all HTTP requests are redirected to HTTPS.
+
+### Mixed content {: #mixed }
+
+[Mixed content][6] means that the main origin of a page is secure, but the page requested resources
+from non-secure origins. Mixed content pages are only partially protected because the HTTP content
+is accessible to sniffers and vulnerable to man-in-the-middle attacks.
+
+![Mixed content](/web/tools/chrome-devtools/security/imgs/mixedoverview.png)
+
+**Figure 3**. Mixed content
+
+In **Figure 3** above, clicking **View 1 request in Network panel** opens the **Network** panel and
+applies the `mixed-content:displayed` filter so that the **Network Log** only shows non-secure
+resources.
+
+![Mixed resources in the Network Log](/web/tools/chrome-devtools/security/imgs/mixedresources.png)
+
+**Figure 4**. Mixed resources in the Network Log
+
+## View details {: #details }
+
+### View main origin certificate {: #certificate }
+
+From the **Security Overview** click **View certificate** to quickly inspect the main origin's
+certificate.
+
+![A main origin certificate](/web/tools/chrome-devtools/security/imgs/certificate.png)
+
+**Figure 5**. A main origin certificate
+
+### View origin details {: #origindetails }
+
+Click one of the entries in the left-hand nav to view the origin's details. From the details page
+you can view connection and certificate information. Certificate transparency information is also
+shown when available.
+
+![Main origin details](/web/tools/chrome-devtools/security/imgs/origindetails.png)
+
+**Figure 6**. Main origin details
+
+[1]: /web/fundamentals/security/encrypt-in-transit/why-https
+[2]: /web/tools/chrome-devtools/open
+[3]: https://letsencrypt.org/
+[4]: /web/tools/lighthouse/audits/http-redirects-to-https
+[5]: /web/tools/lighthouse
+[6]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
