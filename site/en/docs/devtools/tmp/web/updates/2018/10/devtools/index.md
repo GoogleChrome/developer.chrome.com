@@ -26,7 +26,7 @@ Read on, or watch the video version of this page:
 When a [Live Expression][7] evaluates to a DOM node, hover over the Live Expression result to
 highlight that node in the viewport.
 
-![Hovering over a Live Expression result to highlight the node in the viewport.](/web/updates/images/2018/10/hover1.png)
+{% Img src="image/admin/RwKgxU3QgMl4HFhkiwCU.png", alt="Hovering over a Live Expression result to highlight the node in the viewport.", width="800", height="538" %}
 
 **Figure 1**. Hovering over a Live Expression result to highlight the node in the viewport
 
@@ -35,13 +35,13 @@ highlight that node in the viewport.
 To store a DOM node as a global variable, run an expression in the Console that evaluates to a node,
 right-click the result, and then select **Store as global variable**.
 
-![Store as global variable in the Console.](/web/updates/images/2018/10/store1.png)
+{% Img src="image/admin/DlSygYaM8NJJwMwWrMtk.png", alt="Store as global variable in the Console.", width="800", height="550" %}
 
 **Figure 2**. Store as global variable in the Console
 
 Or, right-click the node in the **DOM Tree** and select **Store as global variable**.
 
-![Store as global variable in the DOM Tree.](/web/updates/images/2018/10/store2.png)
+{% Img src="image/admin/x6QyAxisOZRkPEGGI3Qd.png", alt="Store as global variable in the DOM Tree.", width="800", height="557" %}
 
 **Figure 3**. Store as global variable in the DOM Tree
 
@@ -50,7 +50,7 @@ Or, right-click the node in the **DOM Tree** and select **Store as global variab
 If you'd like to diagnose network logs with colleagues, you can [export the network requests to a
 HAR file][8].
 
-![Exporting network requests to a HAR file.](/web/tools/chrome-devtools/network-performance/imgs/save-as-har.png)
+{% Img src="image/admin/opKZS6d6ERQfvdXXhmQo.png", alt="Exporting network requests to a HAR file.", width="800", height="490" %}
 
 **Figure 8**. Exporting network requests to a HAR file
 
@@ -63,28 +63,28 @@ now populated.
 The `_initiator` field provides more context around what caused the resource to be requested. This
 maps to the **Initiator** column in the Requests table.
 
-![The initiator column.](/web/updates/images/2018/10/HAR1.png)
+{% Img src="image/admin/UpzMoXodZw6gqWRZ4v0H.png", alt="The initiator column.", width="800", height="603" %}
 
 **Figure 9**. The initiator column
 
 You can also [hold <kbd>Shift</kbd> and hover over a request][9] to view its initiator and
 dependencies.
 
-![Viewing initiators and dependencies.](/web/tools/chrome-devtools/network-performance/imgs/initiators-dependencies.png)
+{% Img src="image/admin/yZxQUHD54lKX0DGvtM9Q.png", alt="Viewing initiators and dependencies.", width="800", height="568" %}
 
 **Figure 10**. Viewing initiators and dependencies
 
 The `_priority` field states what priority level the browser assigned to the resource. This maps to
 the **Priority** column in the Requests table, which is hidden by default.
 
-![The Priority column.](/web/updates/images/2018/10/HAR2.png)
+{% Img src="image/admin/3bARzJP9nyrR3Fu7oIl7.png", alt="The Priority column.", width="800", height="603" %}
 
 **Figure 11**. The Priority column
 
 Right-click the header of the Requests table and select **Priority** to show the **Priority**
 column.
 
-![How to show the Priority column.](/web/updates/images/2018/10/HAR3.png)
+{% Img src="image/admin/hNGmMyPt6NSDS412Z4FP.png", alt="How to show the Priority column.", width="800", height="670" %}
 
 **Figure 12**. How to show the **Priority** column
 
@@ -99,14 +99,14 @@ states that custom fields must begin with underscores.
 
 Use the [Command Menu][11] for a fast way to access DevTools panels, tabs, and features.
 
-![The Command Menu.](/web/tools/chrome-devtools/images/command-menu.png)
+{% Img src="image/admin/D4633SRg8P0N0DpISp5R.png", alt="The Command Menu.", width="800", height="630" %}
 
 **Figure 13**. The Command Menu
 
 You can now open the Command Menu from the Main Menu. Click the **Main Menu**
-![main](/web/tools/chrome-devtools/images/shared/main-menu.png) button and select **Run command**.
+{% Img src="image/admin/Z2PMFN1cVLHOqIbJrb23.png", alt="main", width="6", height="26" %} button and select **Run command**.
 
-![Opening the Command Menu from the Main Menu.](/web/updates/images/2018/10/command-menu1.png)
+{% Img src="image/admin/E0sYAOSTscvoAvlPQIbk.png", alt="Opening the Command Menu from the Main Menu.", width="800", height="648" %}
 
 **Figure 14**. Opening the Command Menu from the Main Menu
 
@@ -119,7 +119,7 @@ Enable the `enterpictureinpicture`, `leavepictureinpicture`, and `resize` checkb
 Listener Breakpoints pane][13] to pause whenever one of these picture-in-picture events fires.
 DevTools pauses on the first line of the handler.
 
-![Picture-in-Picture events in the Event Listener Breakpoints pane.](/web/updates/images/2018/10/pip1.png)
+{% Img src="image/admin/Cfa2fZ046Odp89JUdjAB.png", alt="Picture-in-Picture events in the Event Listener Breakpoints pane.", width="800", height="570" %}
 
 **Figure 16**. Picture-in-Picture events in the Event Listener Breakpoints pane
 
@@ -137,19 +137,19 @@ element's events to the Console.
 
 1.  Get a reference to the node.
 
-    ![Using 'Store as global variable' to get a reference to the node.](/web/updates/images/2018/10/bonus1.png)
+    {% Img src="image/admin/4KI3LybfPi0pAZpuB8fT.png", alt="Using 'Store as global variable' to get a reference to the node.", width="800", height="500" %}
 
     **Figure 17**. Using **Store as global variable** to get a reference to the node
 
 2.  Pass the node as the first argument to `monitorEvents()`.
 
-    ![Passing the node to monitorEvents().](/web/updates/images/2018/10/bonus2.png)
+    {% Img src="image/admin/xlOnKapF3FEesLmEpYSz.png", alt="Passing the node to monitorEvents().", width="800", height="500" %}
 
     **Figure 18**. Passing the node to `monitorEvents()`
 
 3.  Interact with the node. DevTools logs all of the node's events to the Console.
 
-    ![The node's events in the Console.](/web/updates/images/2018/10/bonus3.png)
+    {% Img src="image/admin/jIZL7Oqiphr5zAHEPTDx.png", alt="The node's events in the Console.", width="800", height="500" %}
 
     **Figure 19**. The node's events in the Console
 

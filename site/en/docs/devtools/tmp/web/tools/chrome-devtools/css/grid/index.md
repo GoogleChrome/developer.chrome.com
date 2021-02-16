@@ -19,17 +19,17 @@ box][1] and [Snack box][2].
 When an HTML element on your page has `display: grid` or `display: inline-grid` applied to it, you
 can see a `grid` badge next to it in the [**Elements**][3] panel.
 
-![Discover grid](/web/tools/chrome-devtools/css/imgs/grid/01-discover-grid.png)
+{% Img src="image/admin/SbWH3OGFQDiXKV2Eev2j.png", alt="Discover grid", width="800", height="524" %}
 
 Clicking the badge to toggle the display of a grid overlay on the page. The overlay appears over the
 element, laid out like a grid to show the position of its grid lines and tracks:
 
-![Toggle grid badge](/web/tools/chrome-devtools/css/imgs/grid/02-highlight-grid.png)
+{% Img src="image/admin/YwKMuoODL6eFMvfJOzlF.png", alt="Toggle grid badge", width="800", height="524" %}
 
 Open the **Layout** pane. When grids are included on a page, the Layout pane includes a **Grid**
 section containing a number of options for viewing those grids.
 
-![Layout pane](/web/tools/chrome-devtools/css/imgs/grid/03-layout-pane.png)
+{% Img src="image/admin/r4Ignwcmy4VzFqs3Zzb1.png", alt="Layout pane", width="800", height="524" %}
 
 ## Grid viewing options {: #options }
 
@@ -66,13 +66,13 @@ Let's examine these settings in more detail.
 
 By default, the positive and negative line numbers are displayed on the grid overlay.
 
-![Show line numbers](/web/tools/chrome-devtools/css/imgs/grid/04-show-line-numbers.png)
+{% Img src="image/admin/KEEXn0ipZF0I7Y1qNuZs.png", alt="Show line numbers", width="800", height="524" %}
 
 ### Hide line labels {: #line-labels }
 
 Select **Hide line labels** to hide the line numbers.
 
-![Hide line labels](/web/tools/chrome-devtools/css/imgs/grid/05-hide-line-labels.png)
+{% Img src="image/admin/I1QJnFZDFcIflsKBSK8J.png", alt="Hide line labels", width="800", height="524" %}
 
 ### Show line names {: #line-names }
 
@@ -82,7 +82,7 @@ have 4 lines with names: left, middle1, middle2 and right.
 In this demo, **orange** element spans from left to right, with CSS `grid-column: left / right`.
 Showing line names make it easier to visualize the start and end position of the element.
 
-![Show line names](/web/tools/chrome-devtools/css/imgs/grid/06-show-line-names.png)
+{% Img src="image/admin/fiQzqCmGbD0acgVNXWyR.png", alt="Show line names", width="800", height="524" %}
 
 ### Show track sizes {: #track-sizes }
 
@@ -98,21 +98,21 @@ Therefore, the column line labels show both authored and computed sizes: **1fr -
 The row line labels show only computed sizes: **80px** and **80px** since there are no row sizes
 defined in the stylesheet.
 
-![Show track sizes](/web/tools/chrome-devtools/css/imgs/grid/07-show-track-sizes.png)
+{% Img src="image/admin/RknbkSjXv9ZKgL83nx8N.png", alt="Show track sizes", width="800", height="524" %}
 
 ### Show area names {: #area-names }
 
 To view the area names, enable the **Show area names** checkbox. In this example, there are 3 areas
 in the grid - **top**, **bottom1** and **bottom2**.
 
-![Show area names](/web/tools/chrome-devtools/css/imgs/grid/08-show-area-names.png)
+{% Img src="image/admin/iPPMOUBJFtsTyKr0ZcMh.png", alt="Show area names", width="800", height="524" %}
 
 ### Extend grid lines {: #extend-grid-lines }
 
 Enable the **Extend grid lines** checkbox to extend the grid lines to the edge of the viewport along
 each axis.
 
-![Extend grid lines](/web/tools/chrome-devtools/css/imgs/grid/09-extend-grid-lines.png)
+{% Img src="image/admin/OlajZ73i2Y8hlAIZAwFD.png", alt="Extend grid lines", width="800", height="524" %}
 
 ## Grid overlays {: #overlays }
 
@@ -124,20 +124,20 @@ checkbox, along with various options.
 You can enable overlay views of multiple grids. In this example, there are 2 grid overlays enabled -
 `main` and `div.snack-box`, each represented with different colors.
 
-![Enable overlay views of multiple grids](/web/tools/chrome-devtools/css/imgs/grid/10-grid-overlays.png)
+{% Img src="image/admin/GMCjbEkrzZXFfskAqlUe.png", alt="Enable overlay views of multiple grids", width="800", height="524" %}
 
 ### Customize the grid overlay color {: #customize-overlay-color }
 
 You can customize each grid overlay color by clicking the color picker.
 
-![Customize the grid overlay color](/web/tools/chrome-devtools/css/imgs/grid/11-grid-overlays-color.png)
+{% Img src="image/admin/GLcwHKYxWT6oQW7rd0HP.png", alt="Customize the grid overlay color", width="800", height="524" %}
 
 ### Highlight the grid {: #highlight-grid }
 
 Click the highlight icon to immediately highlight the HTML element, scroll to it in the page and
 select it in the Elements panel.
 
-![Highlight the grid](/web/tools/chrome-devtools/css/imgs/grid/12-grid-overlays-highlight.png)
+{% Img src="image/admin/JinOsqhnOBZIf6A2UdWD.png", alt="Highlight the grid", width="800", height="524" %}
 
 [1]: https://jec.fyi/demo/css-grid-fruit
 [2]: https://jec.fyi/demo/css-grid-snack

@@ -27,46 +27,46 @@ You can open the Console as a [panel][4] or as a [tab in the Drawer][5].
 Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> or
 <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac).
 
-![The Console panel.](/web/tools/chrome-devtools/console/images/panel.png)
+{% Img src="image/admin/yA07vZPXixZWv2jHdE6W.png", alt="The Console panel.", width="800", height="493" %}
 
 **Figure 1**. The Console panel.
 
 To open the Console panel from the [Command Menu][6], start typing `Console` and then run the **Show
 Console** command that has the **Panel** badge next to it.
 
-![The command for showing the Console panel.](/web/tools/chrome-devtools/console/images/showpanelcommand.png)
+{% Img src="image/admin/QXom109Oiui7fgVBj38Y.png", alt="The command for showing the Console panel.", width="800", height="413" %}
 
 **Figure 2**. The command for showing the Console panel.
 
 ### Open the Console tab in the Drawer {: #drawer }
 
 Press <kbd>Escape</kbd> or click **Customize And Control DevTools**
-![Customize And Controls DevTools](/web/tools/chrome-devtools/images/shared/main-menu.png) and then
+{% Img src="image/admin/Pw9x0BpjZoeW2Wb5nmTH.png", alt="Customize And Controls DevTools", width="6", height="26" %} and then
 select **Show Console Drawer**.
 
-![Show Console Drawer.](/web/tools/chrome-devtools/console/images/showconsoledrawer.png)
+{% Img src="image/admin/KJTO8aoQihf8hrpNdhvD.png", alt="Show Console Drawer.", width="800", height="501" %}
 
 **Figure 3**. Show Console Drawer.
 
 The Drawer pops up at the bottom of your DevTools window, with the **Console** tab open.
 
-![The Console tab in the Drawer.](/web/tools/chrome-devtools/console/images/drawer.png)
+{% Img src="image/admin/anf99vgXPq5x3KV21nX0.png", alt="The Console tab in the Drawer.", width="800", height="568" %}
 
 **Figure 4**. The Console tab in the Drawer.
 
 To open the Console tab from the [Command Menu][7], start typing `Console` and then run the **Show
 Console** command that has the **Drawer** badge next to it.
 
-![The command for showing the Console tab in the Drawer.](/web/tools/chrome-devtools/console/images/showdrawercommand.png)
+{% Img src="image/admin/Zo8atFvEFrTm619HsdRU.png", alt="The command for showing the Console tab in the Drawer.", width="800", height="413" %}
 
 **Figure 5**. The command for showing the Console tab in the Drawer.
 
 ### Open Console Settings {: #settings }
 
 Click **Console Settings**
-![Console Settings](/web/tools/chrome-devtools/console/images/settingsbutton.png).
+{% Img src="image/admin/X3iDnXdnzdBTOrbaZiP7.png", alt="Console Settings", width="28", height="28" %}.
 
-![Console Settings.](/web/tools/chrome-devtools/console/images/consolesettings.png)
+{% Img src="image/admin/MMPCv1S2FqQVG6qJvByI.png", alt="Console Settings.", width="800", height="541" %}
 
 **Figure 6**. Console Settings.
 
@@ -83,10 +83,10 @@ The links below explain each setting:
 ### Open the Console Sidebar {: #sidebar }
 
 Click **Show Console Sidebar**
-![Show Console Sidebar](/web/tools/chrome-devtools/console/images/showconsolesidebar.png) to show
+{% Img src="image/admin/JWC9AxhF6aRjxKLTIfEv.png", alt="Show Console Sidebar", width="30", height="26" %} to show
 the Sidebar, which is useful for filtering.
 
-![Console Sidebar.](/web/tools/chrome-devtools/console/images/sidebar.png)
+{% Img src="image/admin/SgCPLaYCtxNBclGXHz0Q.png", alt="Console Sidebar.", width="800", height="530" %}
 
 **Figure 7**. Console Sidebar.
 
@@ -105,14 +105,14 @@ grouping behavior. See [Log XHR and Fetch requests][17] for an example.
 [Open Console Settings][18] and enable **Log XMLHttpRequests** to log all `XMLHttpRequest` and
 `Fetch` requests to the Console as they happen.
 
-![Logging XMLHttpRequest and Fetch requests.](/web/tools/chrome-devtools/console/images/xhrgrouped.png)
+{% Img src="image/admin/t9sLCbiL3KrQW9MdLZoV.png", alt="Logging XMLHttpRequest and Fetch requests.", width="800", height="490" %}
 
 **Figure 8**. Logging `XMLHttpRequest` and `Fetch` requests.
 
 The top message in **Figure 8** shows the Console's default grouping behavior. **Figure 9** shows
 how the same log looks after [disabling message grouping][19].
 
-![How the logged XMLHttpRequest and Fetch requests look after ungrouping.](/web/tools/chrome-devtools/console/images/xhrungrouped.png)
+{% Img src="image/admin/5uz4gBdOGdW2RO58Wkui.png", alt="How the logged XMLHttpRequest and Fetch requests look after ungrouping.", width="800", height="589" %}
 
 **Figure 9**. How the logged `XMLHttpRequest` and `Fetch` requests look after ungrouping.
 
@@ -126,7 +126,7 @@ By default the Console clears whenever you load a new page. To persist messages 
 By default the browser logs network messages to the **Console**. For example, the top message in
 **Figure X** represents a 404.
 
-![A 404 message in the Console.](/web/tools/chrome-devtools/console/images/404.png)
+{% Img src="image/admin/rlMckNNbRXvT4xln5jTQ.png", alt="A 404 message in the Console.", width="800", height="497" %}
 
 **Figure 10**. A 404 message in the Console.
 
@@ -144,7 +144,7 @@ There are many ways to filter out messages in the Console.
 [Open the Console Sidebar][22] and click **User Messages** to only show messages that came from the
 page's JavaScript.
 
-![Viewing user messages.](/web/tools/chrome-devtools/console/images/usermessages.png)
+{% Img src="image/admin/mYDvN18HyYlZszVGzp1F.png", alt="Viewing user messages.", width="800", height="588" %}
 
 **Figure 11**. Viewing user messages.
 
@@ -160,14 +160,14 @@ only interested in `Error` messages, you can hide the other 3 groups.
 Click the **Log Levels** dropdown to enable or disable `Verbose`, `Info`, `Warning` or `Error`
 messages.
 
-![The Log Levels dropdown.](/web/tools/chrome-devtools/console/images/loglevels.png)
+{% Img src="image/admin/PX52vbEI6gTFqSmTZNVB.png", alt="The Log Levels dropdown.", width="800", height="529" %}
 
 **Figure 12**. The **Log Levels** dropdown.
 
 You can also filter by log level by [opening the Console Sidebar][24] and then clicking **Errors**,
 **Warnings**, **Info**, or **Verbose**.
 
-![Using the Sidebar to view warnings.](/web/tools/chrome-devtools/console/images/sidebarwarnings.png)
+{% Img src="image/admin/osvdtWq0DGX1yjkFDGLZ.png", alt="Using the Sidebar to view warnings.", width="800", height="588" %}
 
 **Figure 13**. Using the Sidebar to view warnings.
 
@@ -178,7 +178,7 @@ DevTools shows all relevant URLs. Domains also work. For example, if `https://ex
 `https://example.com/b.js` are logging messages, `url:https://example.com` enables you to focus on
 the messages from these 2 scripts.
 
-![A URL filter.](/web/tools/chrome-devtools/console/images/urlfilter.png)
+{% Img src="image/admin/VEumwMRJ7kuQDV3JFtQk.png", alt="A URL filter.", width="800", height="514" %}
 
 **Figure 14**. A URL filter.
 
@@ -194,7 +194,7 @@ You can also show messages from a single URL by [opening the Console Sidebar][25
 **User Messages** section, and then clicking the URL of the script containing the messages you want
 to focus on.
 
-![Viewing the messages that came from wp-ad.min.js.](/web/tools/chrome-devtools/console/images/negativeurlfilter.png)
+{% Img src="image/admin/7d3qjmCPUgkXVsg1rVf1.png", alt="Viewing the messages that came from wp-ad.min.js.", width="800", height="447" %}
 
 **Figure 16**. Viewing the messages that came from `wp-ad.min.js`.
 
@@ -211,7 +211,7 @@ Type a regular expression such as `/[gm][ta][mi]/` in the **Filter** text box to
 messages that don't match that pattern. DevTools checks if the pattern is found in the message text
 or the script that caused the message to be logged.
 
-![Filtering out any messages that don't match /[gm][ta][mi]/.](/web/tools/chrome-devtools/console/images/regexfilter.png)
+{% Img src="image/admin/1FvJQi69s6J7nHtKUIDy.png", alt="Filtering out any messages that don't match /[gm][ta][mi]/.", width="800", height="512" %}
 
 **Figure 17**. Filtering out any messages that don't match `/[gm][ta][mi]/`.
 
@@ -244,7 +244,7 @@ As you type out an expression, the Console's autocomplete popup shows expression
 earlier. These expressions are prepended with the `>` character. [Open Console Settings][31] and
 disable the **Autocomplete From History** checkbox to stop showing expressions from your history.
 
-![The autocomplete popup showing expressions from history.](/web/tools/chrome-devtools/console/images/historyautocomplete.png)
+{% Img src="image/admin/7HsvmvxxZifd5ZqkP4Hg.png", alt="The autocomplete popup showing expressions from history.", width="800", height="512" %}
 
 **Figure 18**. `document.querySelector('a')` and `document.querySelector('img')` are expressions
 that were evaluated earlier.
@@ -254,7 +254,7 @@ that were evaluated earlier.
 By default the **JavaScript Context** dropdown is set to **top**, which represents the main
 document's [browsing context][32].
 
-![The JavaScript Context dropdown.](/web/tools/chrome-devtools/console/images/jscontext.png)
+{% Img src="image/admin/V87tEcP23yWQwPhRlSsR.png", alt="The JavaScript Context dropdown.", width="800", height="512" %}
 
 **Figure 19**. The **JavaScript Context** dropdown.
 
@@ -262,7 +262,7 @@ Suppose you have an ad on your page embedded in an `<iframe>`. You want to run J
 to tweak the ad's DOM. To do this, you first need to select the ad's browsing context from the
 **JavaScript Context** dropdown.
 
-![Selecting a different JavaScript context.](/web/tools/chrome-devtools/console/images/selectcontext.png)
+{% Img src="image/admin/Vl95VEu6LEV6X2cpgyAv.png", alt="Selecting a different JavaScript context.", width="800", height="650" %}
 
 **Figure 20**. Selecting a different JavaScript context.
 
@@ -271,7 +271,7 @@ to tweak the ad's DOM. To do this, you first need to select the ad's browsing co
 You can use any of the following workflows to clear the Console:
 
 - Click **Clear Console**
-  ![Clear Console](/web/tools/chrome-devtools/console/images/clearconsole.png).
+  {% Img src="image/admin/PleTkKOHeF03hC4BxBvM.png", alt="Clear Console", width="26", height="26" %}.
 - Right-click a message and then select **Clear Console**.
 - Type `clear()` in the Console and then press <kbd>Enter</kbd>.
 - Call `console.clear()` from your webpage's JavaScript.

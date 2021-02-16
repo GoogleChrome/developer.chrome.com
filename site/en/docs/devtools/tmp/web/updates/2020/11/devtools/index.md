@@ -33,7 +33,7 @@ Chromium issue: [1029427][2]
 
 DevTools now has better support for CSS angle debugging!
 
-![CSS angle](/web/updates/images/2020/11/devtools/01-angle.png)
+{% Img src="image/admin/M1Au4mPpxHaFbLoEGNIi.png", alt="CSS angle", width="800", height="608" %}
 
 When an HTML element on your page has CSS angle applied to it (e.g.
 `background: linear-gradient(angle, color-stop1, color-stop2)`, `transform: rotate(angle)`), a clock
@@ -65,7 +65,7 @@ a fallback PNG image for older browsers.
 Open the **Rendering** tab, select "Disable AVIF image format" and refresh the page. Hover over the
 `img src`. The current image src (`currentSrc`) is now the fallback WebP image.
 
-![Emulate image types](/web/updates/images/2020/11/devtools/02-emulate-image-type.png)
+{% Img src="image/admin/WHyF0XexaaWPCp07vJRj.png", alt="Emulate image types", width="800", height="480" %}
 
 Chromium issue: [1130556][6]
 
@@ -77,7 +77,7 @@ simulate different devices and test the behavior of your apps in low disk availa
 Go to **Application** > **Storage**, enable the **Simulate custom storage quota** checkbox, and
 enter any valid number to simulate the storage quota.
 
-![Simulate storage quota size](/web/updates/images/2020/11/devtools/03-storage-quota.png)
+{% Img src="image/admin/tO7iv8T0Y1mPK4fMFQSK.png", alt="Simulate storage quota size", width="800", height="480" %}
 
 Chromium issues: [945786][7], [1146985][8]
 
@@ -94,7 +94,7 @@ The lane currently displays Web Vitals information such as [First Contentful Pai
 Check out [web.dev/vitals][12] to learn more about how to optimize user experience with the Web
 Vitals metrics.
 
-![Web Vitals lane](/web/updates/images/2020/11/devtools/04-web-vitals-lane.png)
+{% Img src="image/admin/AFxlLLBhqMQdxTbc1s92.png", alt="Web Vitals lane", width="800", height="480" %}
 
 Chromium issue: N/A
 
@@ -110,7 +110,7 @@ showed generic **"(failed)"** status for CORS errors.
 This lays the foundation for our next enhancements on providing more detailed description of the
 CORS problems!
 
-![CORS errors](/web/updates/images/2020/11/devtools/05-cors-err.png)
+{% Img src="image/admin/DHGTFV0ybVJzeD3MmUIe.png", alt="CORS errors", width="800", height="480" %}
 
 Chromium issue: [1141824][13]
 
@@ -127,7 +127,7 @@ A deprecation warning will show if the SAB and `postMessage()` is currently avai
 context is not cross-origin isolated. Learn more about cross-origin isolation and why it will be
 required for features like `SharedArrayBuffers` in this [article][14].
 
-![Cross-origin information](/web/updates/images/2020/11/devtools/06-frame-cross-origin-isolated-api.png)
+{% Img src="image/admin/zUKJS3qlUNqxTpPYLslQ.png", alt="Cross-origin information", width="800", height="480" %}
 
 Chromium issue: [1139899][15]
 
@@ -138,7 +138,7 @@ DevTools now displays dedicated web workers under the frame which creates them.
 In the **Application** panel, expand a frame with web workers, then select a worker under the
 **Workers** tree to view the web worker's details.
 
-![Web workers information](/web/updates/images/2020/11/devtools/07-frame-worker.png)
+{% Img src="image/admin/rHxO3TM0jpwuDj2XFW7L.png", alt="Web workers information", width="800", height="480" %}
 
 Chromium issues: [1122507][16], [1051466][17]
 
@@ -149,7 +149,7 @@ You can now view the details about which frame caused the opening of another Win
 Select an opened window under the **Frames** tree to view the window details. Click on the **Opener
 Frame** link to reveal the opener in the Elements panel.
 
-![Opener frame details](/web/updates/images/2020/11/devtools/08-frame-opener.png)
+{% Img src="image/admin/ceCIdX7RvwqU226EgZXK.png", alt="Opener frame details", width="800", height="480" %}
 
 Chromium issue: [1107766][18]
 
@@ -162,7 +162,7 @@ Go to **Application** > **Service Workers**, click on the **Network requests** o
 **Network** panel is opened in the bottom panel displaying all service worker related requests (the
 network requests are filtered by _"is:service-worker-intercepted"_).
 
-![Open Network panel from the Service Workers](/web/updates/images/2020/11/devtools/09-sw-network-request.png)
+{% Img src="image/admin/ivX2jn1HnNYrpKA6gOmR.png", alt="Open Network panel from the Service Workers", width="800", height="480" %}
 
 Chromium issue: N/A
 
@@ -173,7 +173,7 @@ Chromium issue: N/A
 The new **"Copy value"** option in the context menu lets you copy the property value of a network
 request.
 
-![Copy property value](/web/updates/images/2020/11/devtools/10-copy-prop-value.png)
+{% Img src="image/admin/5eUVpfTNli3XXgaFoScB.png", alt="Copy property value", width="800", height="480" %}
 
 In the **Network** panel, click on a network request to open the **Headers** pane. Right click on
 one of the properties under these section: Request payload (JSON) Form Data Query String Parameters
@@ -188,7 +188,7 @@ Chromium issue: [1132084][19]
 Right-click a network request, then select **Copy stacktrace** to copy the stacktrace to your
 clipboard.
 
-![Copy stacktrace](/web/updates/images/2020/11/devtools/11-copy-stacktrace.png)
+{% Img src="image/admin/D50DOHVfdgQ2d0P2hDSP.png", alt="Copy stacktrace", width="800", height="480" %}
 
 Chromium issue: [1139615][20]
 
@@ -202,7 +202,7 @@ DevTools now shows the variable current value.
 In the **Sources** panel, open a Wasm file, put a breakpoint and refresh the page. Hover to a
 variable to see the value.
 
-![Preview Wasm variable on mouseover](/web/updates/images/2020/11/devtools/12-wasm-mouseover.png)
+{% Img src="image/admin/6Uugv35ktmbzkQyJ3X92.png", alt="Preview Wasm variable on mouseover", width="800", height="480" %}
 
 Chromium issues: [1058836][21], [1071432][22]
 
@@ -213,7 +213,7 @@ You can now evaluate Wasm variable in the Console while paused on a breakpoint.
 In this example, we put a breakpoint on the line `local.get $input`. When debugging, type `$input`
 in the Console will return the current value of the variable, which is `4` in this case.
 
-![Evaluate Wasm variable in the Console](/web/updates/images/2020/11/devtools/12-wasm-console.png)
+{% Img src="image/admin/sxagdNxUWL0G8qBUsQnu.png", alt="Evaluate Wasm variable in the Console", width="800", height="508" %}
 
 Chromium issue: [1127914][23]
 
@@ -229,7 +229,7 @@ Chromium issue: [1035309][24]
 
 DevTools has increased the color contrast of pseudo elements to help you better spot them.
 
-![Highlight pseudo elementse](/web/updates/images/2020/11/devtools/15-pseudo.png)
+{% Img src="image/admin/9vSBemIYz3MuM4eaq4ge.png", alt="Highlight pseudo elementse", width="800", height="549" %}
 
 Chromium issue: [1143833][25]
 
@@ -266,7 +266,7 @@ On top of that, these icons are context-aware. The icon direction will be adjust
 
 These icons aim to help you better visualize the flexbox layout of the page.
 
-![CSS Flex debugging](/web/updates/images/2020/11/devtools/13-flex-debugging.png)
+{% Img src="image/admin/DtWip3leUSGoK2Rvm92B.png", alt="CSS Flex debugging", width="800", height="480" %}
 
 Here is the [design doc][26] of the Flexbox tooling features. More features will be added soon.
 
@@ -290,7 +290,7 @@ You can now create chords (a.k.a multi-keypress shortcuts) in the shortcut edito
 Go to **Settings** > **Shortcuts**, hovering on a command and click the **Edit** button (pen icon)
 to customize the chords shortcut.
 
-![Chords keyboard shortcuts](/web/updates/images/2020/11/devtools/14-keyboard-shortcuts.png)
+{% Img src="image/admin/tF18281gSqF69MENLGuk.png", alt="Chords keyboard shortcuts", width="800", height="508" %}
 
 Chromium issue: [174309][31]
 

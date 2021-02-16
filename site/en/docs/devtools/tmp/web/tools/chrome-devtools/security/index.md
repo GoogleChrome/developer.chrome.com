@@ -19,7 +19,7 @@ The **Security** panel is the main place in DevTools for inspecting the security
 1.  [Open DevTools][2].
 2.  Click the **Security** tab to open the **Security** panel.
 
-    ![The Security panel](/web/tools/chrome-devtools/security/imgs/panel.png)
+    {% Img src="image/admin/WnYbcLXh2TCkhoVh9Jub.png", alt="The Security panel", width="800", height="566" %}
 
     **Figure 1**. The Security panel
 
@@ -30,7 +30,7 @@ The **Security** panel is the main place in DevTools for inspecting the security
 When the main origin of a page is not secure, the **Security Overview** says **This page is not
 secure**.
 
-![A non-secure page](/web/tools/chrome-devtools/security/imgs/nonsecuremain.png)
+{% Img src="image/admin/37YwtqHGHTituFBvm74p.png", alt="A non-secure page", width="800", height="530" %}
 
 **Figure 2**. A non-secure page
 
@@ -54,7 +54,7 @@ process of making sure that all HTTP requests are redirected to HTTPS.
 from non-secure origins. Mixed content pages are only partially protected because the HTTP content
 is accessible to sniffers and vulnerable to man-in-the-middle attacks.
 
-![Mixed content](/web/tools/chrome-devtools/security/imgs/mixedoverview.png)
+{% Img src="image/admin/T1250jd5mFG2827izkwI.png", alt="Mixed content", width="800", height="589" %}
 
 **Figure 3**. Mixed content
 
@@ -62,7 +62,7 @@ In **Figure 3** above, clicking **View 1 request in Network panel** opens the **
 applies the `mixed-content:displayed` filter so that the **Network Log** only shows non-secure
 resources.
 
-![Mixed resources in the Network Log](/web/tools/chrome-devtools/security/imgs/mixedresources.png)
+{% Img src="image/admin/Eh7KosTILZPJZ85kdzgM.png", alt="Mixed resources in the Network Log", width="800", height="514" %}
 
 **Figure 4**. Mixed resources in the Network Log
 
@@ -73,7 +73,7 @@ resources.
 From the **Security Overview** click **View certificate** to quickly inspect the main origin's
 certificate.
 
-![A main origin certificate](/web/tools/chrome-devtools/security/imgs/certificate.png)
+{% Img src="image/admin/Zxh7Ko5oWlqjC88zjpHk.png", alt="A main origin certificate", width="800", height="566" %}
 
 **Figure 5**. A main origin certificate
 
@@ -83,7 +83,7 @@ Click one of the entries in the left-hand nav to view the origin's details. From
 you can view connection and certificate information. Certificate transparency information is also
 shown when available.
 
-![Main origin details](/web/tools/chrome-devtools/security/imgs/origindetails.png)
+{% Img src="image/admin/Vh0PItXao7jFNl65mYFU.png", alt="Main origin details", width="800", height="848" %}
 
 **Figure 6**. Main origin details
 

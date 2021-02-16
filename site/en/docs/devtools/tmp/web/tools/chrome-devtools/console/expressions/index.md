@@ -39,7 +39,7 @@ If there are multiple matches, <kbd class="kbd">↑</kbd> and <kbd class="kbd">�
 them. Pressing <kbd class="kbd">→</kbd> selects the current suggestion. If there's a single
 suggestion, <kbd class="kbd">Tab</kbd> selects it.
 
-![Simple expressions in the console.](/web/tools/chrome-devtools/console/images/evaluate-expressions.png)
+{% Img src="image/admin/eUU41EnhNvdBKwx4yMhr.png", alt="Simple expressions in the console.", width="800", height="251" %}
 
 ## Select elements {: #select_elements }
 

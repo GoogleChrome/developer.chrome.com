@@ -18,10 +18,10 @@ then pin it to the top of your Console. The value of the expression updates in n
 
 1.  [Open the Console][1].
 2.  Click **Create Live Expression**
-    ![Create Live Expression](/web/tools/chrome-devtools/console/images/createliveexpression.png).
+    {% Img src="image/admin/AvEHQZdjwsrFJOcU8JLR.png", alt="Create Live Expression", width="33", height="23" %}.
     The **Live Expression** text box appears.
 
-    ![Typing document.activeElement into the Live Expression text box.](/web/tools/chrome-devtools/console/images/liveexpressiontextbox.png)
+    {% Img src="image/admin/8KMAI8XnGHYGmQYX34mz.png", alt="Typing document.activeElement into the Live Expression text box.", width="800", height="512" %}
 
     **Figure 1** Typing `document.activeElement` into the **Live Expression** text box.
 

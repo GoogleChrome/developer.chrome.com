@@ -35,7 +35,7 @@ auto-updates to a new major version about every 6 weeks.
 
 The **Console** now supports top-level `await` operators.
 
-![Using top-level await operators in the Console](/web/updates/images/2017/08/await.png)
+{% Img src="image/admin/71X0fX7b3MPd1XHh4RRq.png", alt="Using top-level await operators in the Console", width="800", height="578" %}
 
 **Figure 1**. Using top-level `await` operators in the **Console**
 
@@ -47,14 +47,14 @@ You can now take a screenshot of a portion of the viewport, or of a specific HTM
 
 To take a screenshot of a portion of your viewport:
 
-1.  Click **Inspect** ![Inspect](/web/updates/images/2017/08/inspect-icon.png) or press
+1.  Click **Inspect** {% Img src="image/admin/nnx3r8nkEF8iDhofWHDV.png", alt="Inspect", width="26", height="26" %} or press
     <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Mac) or
     <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Windows, Linux) to enter Inspect Element Mode.
 2.  Hold <kbd>Command</kbd> (Mac) or <kbd>Control</kbd> (Windows, Linux) and select the portion of
     the viewport that you want to take a screenshot of.
 3.  Release your mouse. DevTools downloads a screenshot of the portion that you selected.
 
-![Taking a screenshot of a portion of the viewport](/web/updates/images/2017/08/screenshot.png)
+{% Img src="image/admin/iR7k72K9hcWA3Fa673R5.png", alt="Taking a screenshot of a portion of the viewport", width="800", height="536" %}
 
 **Figure 2**. Taking a screenshot of a portion of the viewport
 
@@ -64,7 +64,7 @@ To take a screenshot of a specific HTML node:
 
 1.  [Select an element][12] in the **Elements** panel.
 
-    ![An example of a node](/web/updates/images/2017/08/target-node.png)
+    {% Img src="image/admin/SSf580tYGEHkxnoDw8qH.png", alt="An example of a node", width="800", height="475" %}
 
     **Figure 3**. In this example, the goal is to take a screenshot of the blue header that contains
     the text `Tools`. Note that this node is already selected in the **DOM Tree** of the
@@ -74,7 +74,7 @@ To take a screenshot of a specific HTML node:
 3.  Start typing `node` and select `Capture node screenshot`. DevTools downloads a screenshot of the
     selected node.
 
-    ![The result of the 'Capture node screenshot' command](/web/updates/images/2017/08/node-screenshot.png)
+    {% Img src="image/admin/oLRynL854GzTK6y4jzJa.png", alt="The result of the 'Capture node screenshot' command", width="800", height="111" %}
 
     **Figure 4**. The result of the `Capture node screenshot` command
 
@@ -84,7 +84,7 @@ To view the CSS Grid that's affecting an element, hover over an element in the *
 **Elements** panel. A dashed border appears around each of the grid items. This only works when the
 selected item, or the parent of the selected item, has `display:grid` applied to it.
 
-![Highlighting a CSS Grid](/web/updates/images/2017/08/css-grid-highlighting.png)
+{% Img src="image/admin/N4dPMnuDcJErX3XMDVRF.png", alt="Highlighting a CSS Grid", width="800", height="618" %}
 
 **Figure 5**. Highlighting a CSS Grid
 
@@ -113,7 +113,7 @@ The **Console** now supports negative and URL filters.
 
 Type `-<text>` in the **Filter** box to filter out any **Console** message that includes `<text>`.
 
-![An example of 3 messages that will be filtered out](/web/updates/images/2017/08/negative-filter.png)
+{% Img src="image/admin/Ukp7ge0eweiyjk77ZaSf.png", alt="An example of 3 messages that will be filtered out", width="800", height="394" %}
 
 **Figure 6**. The first statement logs `one`, `two`, `three`, and `four` to the **Console**. `two`
 is hidden because `-two` is entered in the **Filter** box
@@ -134,7 +134,7 @@ URL includes `<text>`.
 The filter uses fuzzy matching. If `<text>` appears anywhere in the URL, then DevTools shows the
 message.
 
-![An example of URL filtering](/web/updates/images/2017/08/url-filter.png)
+{% Img src="image/admin/I3Wc8xjZBvzId3BRwEIm.png", alt="An example of URL filtering", width="800", height="389" %}
 
 **Figure 7**. Using URL filtering to only display messages that originate from scripts whose URL
 includes `hymn`. By hovering over the script name, you can see that the host name includes this text
@@ -143,7 +143,7 @@ includes `hymn`. By hovering over the script name, you can see that the host nam
 
 Drag and drop a HAR file into the **Network** panel to import it.
 
-![Importing a HAR file](/web/updates/images/2017/08/har-import.png)
+{% Img src="image/admin/STHEvnbcwmLRvtK3ybUN.png", alt="Importing a HAR file", width="800", height="518" %}
 
 **Figure 8**. Importing a HAR file
 
@@ -159,7 +159,7 @@ are ignored.
 
 Click a row in a **Cache Storage** table to see a preview of that resource below the table.
 
-![Previewing a cache resource](/web/updates/images/2017/08/cache-preview.png)
+{% Img src="image/admin/J7XEvBzF8nrvxBF8CGMU.png", alt="Previewing a cache resource", width="800", height="759" %}
 
 **Figure 9**. Previewing a cache resource
 
@@ -181,14 +181,14 @@ See the [Cache Storage Demo][16] to try it out yourself.
 In Chrome 61 and earlier, the **Coverage** tab marks all of the code within a function as used, so
 long as the function is called.
 
-![An example of the Coverage tab in Chrome 61](/web/updates/images/2017/08/coverage-before.png)
+{% Img src="image/admin/iInIeUqCY8K85HCu09xT.png", alt="An example of the Coverage tab in Chrome 61", width="800", height="587" %}
 
 **Figure 10**. An example of the **Coverage** tab in Chrome 61. Line 4 is marked used, even though
 it never executes
 
 Starting in Chrome 62, the **Coverage** tab now tells you which code within a function is called.
 
-![An example of the Coverage tab in Chrome 62](/web/updates/images/2017/08/coverage-after.png)
+{% Img src="image/admin/lWKkk4JCXIn2Tt3ucxnp.png", alt="An example of the Coverage tab in Chrome 62", width="800", height="622" %}
 
 **Figure 11**. An example of the **Coverage** tab in Chrome 62. Line 4 is marked unused
 

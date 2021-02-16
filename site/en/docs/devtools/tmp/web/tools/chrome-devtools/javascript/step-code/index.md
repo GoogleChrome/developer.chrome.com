@@ -49,7 +49,7 @@ breakpoint is highlighted. You can now selectively execute code and examine its 
 !!!
 
 All step options are represented through clickable icons
-![Breakpoints button bar](/web/tools/chrome-devtools/javascript/imgs/image_7.png) in the sidebar,
+{% Img src="image/admin/os0IJ3imhmeiU9TcjBYa.png", alt="Breakpoints button bar", width="179", height="20" %} in the sidebar,
 but can also be triggered via shortcut. Here's the rundown:
 
 <table><thead><tr><th data-th="Icon/Button">Icon/Button</th><th data-th="Action">Action</th><th data-th="Description">Description</th></tr></thead><tbody><tr><td data-th="Icon/Button"><img src="/web/tools/chrome-devtools/javascript/imgs/image_8.png" alt="Resume" class="inline"></td><td data-th="Action">Resume</td><td data-th="Description">Resumes execution up to the next breakpoint. If no breakpoint is encountered, normal execution is resumed.</td></tr><tr><td data-th="Icon/Button"><img src="/web/tools/chrome-devtools/javascript/imgs/image_9.png" alt="Long Resume" class="inline"></td><td data-th="Action">Long Resume</td><td data-th="Description">Resumes execution with breakpoints disabled for 500ms. Convenient for momentarily skipping breakpoints that would otherwise continually pause the code, e.g., a breakpoint inside a loop.<p><b>Click and hold <i>Resume</i> until expands to show the action.</b></p></td></tr><tr><td data-th="Icon/Button"><img src="/web/tools/chrome-devtools/javascript/imgs/image_10.png" alt="Step Over" class="inline"></td><td data-th="Action">Step Over</td><td data-th="Description">Executes whatever happens on the next line and jumps to the next line.</td></tr><tr><td data-th="Icon/Button"><img src="/web/tools/chrome-devtools/javascript/imgs/image_11.png" alt="Step Into" class="inline"></td><td data-th="Action">Step Into</td><td data-th="Description">If the next line contains a function call, <i>Step Into</i> will jump to and pause that function at its first line.</td></tr><tr><td data-th="Icon/Button"><img src="/web/tools/chrome-devtools/javascript/imgs/image_12.png" alt="Step Out" class="inline"></td><td data-th="Action">Step Out</td><td data-th="Description">Executes the remainder of the current function and then pauses at the next statement after the function call.</td></tr><tr><td data-th="Icon/Button"><img src="/web/tools/chrome-devtools/javascript/imgs/image_13.png" alt="Deactivate breakpoints" class="inline"></td><td data-th="Action">Deactivate breakpoints</td><td data-th="Description">Temporarily disables all breakpoints. Use to resume full execution without actually removing your breakpoints. Click it again to reactivate the breakpoints.</td></tr><tr><td data-th="Icon/Button"><img src="/web/tools/chrome-devtools/javascript/imgs/image_14.png" alt="Pause on exceptions" class="inline"></td><td data-th="Action">Pause on exceptions</td><td data-th="Description">Automatically pauses the code when an exception occurs.</td></tr></tbody></table>
@@ -76,7 +76,7 @@ that moment in time.
 
 The pane is highlighted in blue in the screenshot below.
 
-![The Scope pane of the Sources panel](/web/tools/chrome-devtools/javascript/imgs/scope-pane.png)
+{% Img src="image/admin/UG6vwFS878n8CnxSkLJa.png", alt="The Scope pane of the Sources panel", width="800", height="538" %}
 
 The Scope pane is only populated when a script is paused. While your page is running, the Scope pane
 is empty.
@@ -89,7 +89,7 @@ expand the object and view its properties.
 Sometimes properties are dimmed down. For example, the property `constructor` is dimmer than the
 `confirm` property in the screenshot below.
 
-![Dimmed down properties](/web/tools/chrome-devtools/javascript/imgs/enumerables.png)
+{% Img src="image/admin/LSGyeYOxBjHeQs118eJo.png", alt="Dimmed down properties", width="586", height="119" %}
 
 The darker properties are enumerable. The lighter, dimmed down properties are not. See the following
 Stack Overflow thread for more information: [What do the colors mean in Chrome Developer Tools Scope
@@ -111,7 +111,7 @@ got there, an important factor in debugging.
 
 ### Example {: #example }
 
-![Call stack](/web/tools/chrome-devtools/javascript/imgs/image_15.png)
+{% Img src="image/admin/PWGG0bm652Pgyvew7z14.png", alt="Call stack", width="226", height="89" %}
 
 An initial onclick event at line 50 in the `index.html` file called the `setone()` function at line
 18 in the `dgjs.js` JavaScript file, which then called the `setall()` function at line 4 in the same
@@ -155,11 +155,11 @@ much easier to understand the call stack flow when functions are named.
 
 Call stack with anonymous functions:
 
-![Call stack with hard-to-read anonymous functions](/web/tools/chrome-devtools/javascript/imgs/anon.png)
+{% Img src="image/admin/w8t1IXbt4eMivfkRIwF9.png", alt="Call stack with hard-to-read anonymous functions", width="800", height="698" %}
 
 Call stack with named functions:
 
-![Call stack with easier-to-read named function](/web/tools/chrome-devtools/javascript/imgs/named.png)
+{% Img src="image/admin/ubckEsqNMQA1Ei1VkiGV.png", alt="Call stack with easier-to-read named function", width="800", height="697" %}
 
 ### Blackbox third-party code {: #blackbox_third-party_code }
 
@@ -174,27 +174,27 @@ Blackbox script files to omit third-party files from your call stacks.
 
 Before blackbox:
 
-![Call stack before blackbox](/web/tools/chrome-devtools/javascript/imgs/before-blackbox.png)
+{% Img src="image/admin/vmQMk437aiyMqWV1ZeSn.png", alt="Call stack before blackbox", width="800", height="356" %}
 
 After blackbox:
 
-![Call stack after blackbox](/web/tools/chrome-devtools/javascript/imgs/after-blackbox.png)
+{% Img src="image/admin/UUeF803m6jQG4f428rnp.png", alt="Call stack after blackbox", width="800", height="356" %}
 
 To blackbox a file:
 
 1.  Open DevTools Settings.
 
-    ![Opening DevTools Settings](/web/tools/chrome-devtools/javascript/imgs/open-settings.png)
+    {% Img src="image/admin/xLT85JKBkDnkMS2aREBk.png", alt="Opening DevTools Settings", width="800", height="607" %}
 
 2.  In the navigation menu on the left, click **Blackboxing**.
 
-    ![Blackboxing panel in Chrome DevTools](/web/tools/chrome-devtools/javascript/imgs/blackbox-panel.png)
+    {% Img src="image/admin/R2GnhlPYvjyaFkewZQ2n.png", alt="Blackboxing panel in Chrome DevTools", width="800", height="318" %}
 
 3.  Click **Add pattern**.
 4.  In the **Pattern** textfield enter the filename pattern that you wish to exclude from your call
     stack. DevTools excludes any scripts that match the pattern.
 
-    ![Adding blackbox pattern](/web/tools/chrome-devtools/javascript/imgs/add-pattern.png)
+    {% Img src="image/admin/5DSBj94mE25AHmOwHbMF.png", alt="Adding blackbox pattern", width="800", height="335" %}
 
 5.  In the dropdown menu to the right of the textfield, select **Blackbox** to execute the script
     files but exclude the calls from the call stack, or select **Disabled** to prevent the files
@@ -211,7 +211,7 @@ when trying to track down a variable that seems to have the wrong value or a pas
 isn't received as expected.
 
 Show the Console drawer by clicking **Show/Hide drawer**
-![Show/Hide drawer](/web/tools/chrome-devtools/javascript/imgs/image_16.png) or press
+{% Img src="image/admin/nvbYURsT0T0uWx84S9aa.png", alt="Show/Hide drawer", width="20", height="17" %} or press
 <kbd class="kbd">ESC</kbd>. With the console open while stepping, you can now:
 
 - Type the name of a variable to see its current value in the scope of the current function
@@ -222,7 +222,7 @@ whether it behaves as you expect.
 
 ### Example {: #example_2 }
 
-![Console Drawer](/web/tools/chrome-devtools/javascript/imgs/image_17.png)
+{% Img src="image/admin/kV0SLzyPwzvdsKq61jMT.png", alt="Console Drawer", width="281", height="184" %}
 
 We reveal that the value of the parameter `dow` is currently 2, but manually change it to 3 before
 resuming execution.
@@ -249,7 +249,7 @@ can observe the effects of your changes.
 
 ### Example {: #example_3 }
 
-![Live editing](/web/tools/chrome-devtools/javascript/imgs/image_18.png)
+{% Img src="image/admin/wT23J98wv9IQePrmtKW2.png", alt="Live editing", width="398", height="220" %}
 
 We suspect that the parameter `dow` is, in every case, off by +1 when it is passed to the function
 `setone()` – that is, the value of `dow<`, as received, is 1 when it should be 0, 2 when it should
@@ -273,11 +273,11 @@ example][10].
 
 If you open DevTools on the app, you can see that the main script is located in `main.js`:
 
-![Main script](/web/tools/chrome-devtools/javascript/imgs/main-script.png)
+{% Img src="image/admin/4bOaIlK6P1kSrDwJ46X2.png", alt="Main script", width="800", height="460" %}
 
 And the web worker script is located in `worker.js`:
 
-![Worker script](/web/tools/chrome-devtools/javascript/imgs/worker-script.png)
+{% Img src="image/admin/rxLK15gYg0ENkpMnRnQY.png", alt="Worker script", width="800", height="460" %}
 
 The main script listens to changes to the **Multiply number 1** or **Multiply number 2** input
 fields. Upon change the main script sends a message to the web worker with the values of the two
@@ -286,15 +286,15 @@ main script.
 
 Suppose that you set a breakpoint in `main.js` that's triggered when the first number is changed:
 
-![Main script breakpoint](/web/tools/chrome-devtools/javascript/imgs/main-script-breakpoint.png)
+{% Img src="image/admin/RaoYdLS7R5QIFla7fgcj.png", alt="Main script breakpoint", width="800", height="760" %}
 
 And you also set a breakpoint in `worker.js` when the worker receives a message:
 
-![Worker script breakpoint](/web/tools/chrome-devtools/javascript/imgs/worker-script-breakpoint.png)
+{% Img src="image/admin/bRTTU4G7ybXPVTzPw2Bc.png", alt="Worker script breakpoint", width="800", height="240" %}
 
 Modifying the first number on the app's UI triggers both of the breakpoints.
 
-![Main and worker script breakpoints triggered](/web/tools/chrome-devtools/javascript/imgs/breakpoints-triggered.png)
+{% Img src="image/admin/lqQR7OpknoYsAhpQiF0S.png", alt="Main and worker script breakpoints triggered", width="800", height="534" %}
 
 In the Threads pane the blue arrow indicates which thread is currently selected. For example, in the
 screenshot above the **Main** thread is selected.
@@ -312,7 +312,7 @@ thread. Again, if you were to press any of the stepping through code buttons (re
 execution, step over next function call, etc.), that action would only pertain to the worker thread.
 The Main thread is not affected.
 
-![worker thread in focus](/web/tools/chrome-devtools/javascript/imgs/worker-thread.png)
+{% Img src="image/admin/XDgeNHCiagnDyOtW854I.png", alt="worker thread in focus", width="800", height="353" %}
 
 [1]: /web/tools/chrome-devtools/javascript/breakpoints
 [2]: /web/tools/chrome-devtools/javascript/reference#stepping

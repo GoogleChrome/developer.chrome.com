@@ -38,7 +38,7 @@ buttons and links are appropriately large and spaced apart on mobile devices.
 
 The PWA category of a report now uses a badge scoring system.
 
-![The new badge scoring system for the PWA category](/web/updates/images/2019/03/lighthouse1.png)
+{% Img src="image/admin/CWKa8x2Fiyn1D5Az2Igg.png", alt="The new badge scoring system for the PWA category", width="800", height="495" %}
 
 **Figure 3**. The new badge scoring system for the PWA category
 
@@ -58,40 +58,40 @@ To view the contents of a binary WebSocket message:
 1.  Open the **Network** panel. See [Inspect Network Activity][6] to learn the basics of analyzing
     network activity.
 
-    ![The Network panel](/web/updates/images/2019/03/binary1.png)
+    {% Img src="image/admin/ItvTp9UEpfriUqQ2Iiek.png", alt="The Network panel", width="800", height="488" %}
 
     **Figure 4**. The Network panel
 
 2.  Click **WS** to filter out all resources that aren't WebSocket connections.
 
-    ![After clicking WS only WebSockety connections are shown](/web/updates/images/2019/03/binary2.png)
+    {% Img src="image/admin/a7Cc8FzrUI4cKpql2HdG.png", alt="After clicking WS only WebSockety connections are shown", width="800", height="488" %}
 
     **Figure 5**. After clicking WS only WebSockety connections are shown
 
 3.  Click the **Name** of a WebSocket connection to inspect it.
 
-    ![Inspecting a WebSocket connection](/web/updates/images/2019/03/binary3.png)
+    {% Img src="image/admin/rQ3LpboH9hN1ftk1Zk2f.png", alt="Inspecting a WebSocket connection", width="800", height="548" %}
 
     **Figure 6**. Inspecting a WebSocket connection
 
 4.  Click the **Messages** tab.
 
-    ![The Messages tab](/web/updates/images/2019/03/binary6.png)
+    {% Img src="image/admin/XwMXuCkT5MrV1iEXodAd.png", alt="The Messages tab", width="800", height="543" %}
 
     **Figure 7**. The Messages tab
 
 5.  Click one of the **Binary Message** entries to inspect it.
 
-    ![Inspecting a binary message](/web/updates/images/2019/03/binary4.png)
+    {% Img src="image/admin/WTOJHsZCu8q5GYPReSIC.png", alt="Inspecting a binary message", width="800", height="543" %}
 
     **Figure 8**. Inspecting a binary message
 
 Use the dropdown menu at the bottom of the viewer to convert the message into Base64 or UTF-8. Click
 **Copy to clipboard**
-![Copy to clipboard](/web/tools/chrome-devtools/images/shared/copy-to-clipboard.png) to copy the
+{% Img src="image/admin/gBH78tAXh6tCgg0aexWN.png", alt="Copy to clipboard", width="22", height="25" %} to copy the
 binary message to your clipboard.
 
-![Viewing a binary message as Base64](/web/updates/images/2019/03/binary5.png)
+{% Img src="image/admin/VlsTdr4jWE1pkNbR9tYw.png", alt="Viewing a binary message as Base64", width="800", height="543" %}
 
 **Figure 9**. Viewing a binary message as Base64
 
@@ -104,14 +104,14 @@ available from the Command Menu.
 1.  Focus DevTools and then press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or
     <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the Command Menu.
 
-    ![The Command Menu](/web/tools/chrome-devtools/images/shared/command-menu.png)
+    {% Img src="image/admin/mPvCSc2zWKnCKJQUgdjM.png", alt="The Command Menu", width="800", height="632" %}
 
     **Figure 10**. The Command Menu
 
 2.  Start typing `area`, select **Capture area screenshots**, then press <kbd>Enter</kbd>.
 3.  Drag your mouse over the section of the viewport that you want to screenshot.
 
-    ![Selecting the portion of viewport to screenshot](/web/updates/images/2019/03/screenshot1.png)
+    {% Img src="image/admin/cHoN1cib7Eo1rv4hjby3.png", alt="Selecting the portion of viewport to screenshot", width="800", height="642" %}
 
     **Figure 11**. Selecting the portion of viewport to screenshot
 
@@ -121,11 +121,11 @@ Type `is:service-worker-initiated` or `is:service-worker-intercepted` in the Net
 text box to view requests that were caused (`initiated`) or potentially modified (`intercepted`) by
 a service worker.
 
-![Filtering by is:service-worker-initiated](/web/updates/images/2019/03/swfilters1.png)
+{% Img src="image/admin/ZTE1UXxZ5nkSl5W2TNby.png", alt="Filtering by is:service-worker-initiated", width="800", height="467" %}
 
 **Figure 12**. Filtering by `is:service-worker-initiated`
 
-![Filtering by is:service-worker-intercepted](/web/updates/images/2019/03/swfilters2.png)
+{% Img src="image/admin/lZ4MvirVdsd6VAtsr7sZ.png", alt="Filtering by is:service-worker-intercepted", width="800", height="467" %}
 
 **Figure 13**. Filtering by `is:service-worker-intercepted`
 
@@ -142,7 +142,7 @@ page load performance.
 
 Performance recordings now show long [tasks][9].
 
-![Hovering over a long task in a Performance recording](/web/updates/images/2019/03/longtasks1.png)
+{% Img src="image/admin/1d6YMcJfXMwnH1cAPW53.png", alt="Hovering over a long task in a Performance recording", width="800", height="605" %}
 
 **Figure 14**. Hovering over a long task in a Performance recording
 
@@ -150,7 +150,7 @@ Performance recordings now show long [tasks][9].
 
 The [Timings section][10] of a Performance recording now marks First Paint.
 
-![First Paint in the Timings section](/web/updates/images/2019/03/fp.png)
+{% Img src="image/admin/fyJuaDg84kGGyfvAmKxC.png", alt="First Paint in the Timings section", width="800", height="426" %}
 
 **Figure 15**. First Paint in the Timings section
 

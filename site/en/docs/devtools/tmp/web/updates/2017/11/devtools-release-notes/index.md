@@ -47,7 +47,7 @@ To use the **Performance Monitor**:
 1.  Open the [Command Menu][5].
 2.  Start typing `Performance` then select `Show Performance Monitor`.
 
-    ![The Performance Monitor](/web/updates/images/2017/11/perf-monitor.png) **Figure 1**. The
+    {% Img src="image/admin/T0NRJB8MqpmcdhwvRx2S.png", alt="The Performance Monitor", width="800", height="488" %} **Figure 1**. The
     Performance Monitor
 
 3.  Click a metric to show or hide it. In Figure 1 the **CPU Usage**, **JS heap size**, and **JS
@@ -70,7 +70,7 @@ monitor.
 On large sites, the Console can quickly get flooded with irrelevant messages. Use the new **Console
 Sidebar** to reduce the noise and focus on the messages that are important to you.
 
-![Using the Console Sidebar to show error messages only](/web/updates/images/2017/11/console-sidebar.png)
+{% Img src="image/admin/Zh583Lcb57sNBWDGBas3.png", alt="Using the Console Sidebar to show error messages only", width="800", height="551" %}
 **Figure 2**. Using the Console Sidebar to show error messages only
 
 The Console Sidebar is hidden by default. Click **Show Console Sidebar**
@@ -87,12 +87,12 @@ Related features:
 The Console now groups similar messages together by default. For example, in Figure 3 there are 27
 instances of the message `[Violation] Avoid using document.write()`.
 
-![An example of the Console grouping similar messages together](/web/updates/images/2017/11/group-similar.png)
+{% Img src="image/admin/uw6PiqfqFdJAlL7iScXm.png", alt="An example of the Console grouping similar messages together", width="800", height="493" %}
 **Figure 3**. An example of the Console grouping similar messages together
 
 Click on a group to expand it and see each instance of the message.
 
-![An example of an expanded group of Console messages](/web/updates/images/2017/11/group-expanded.png)
+{% Img src="image/admin/jzkZ5NxwQDLZlddAI7sS.png", alt="An example of an expanded group of Console messages", width="800", height="505" %}
 **Figure 4**. An example of an expanded group of Console messages
 
 Uncheck the **Group Similar** checkbox to disable this feature.

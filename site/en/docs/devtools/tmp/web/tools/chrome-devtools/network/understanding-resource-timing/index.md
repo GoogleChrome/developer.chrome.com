@@ -61,7 +61,7 @@ received. The primary phases of the request lifecycle are:
   - `responseStart` is the time when the server initially responds to the request.
   - `responseEnd` is the time when the request ends and the data is retrieved.
 
-![Resource Timing API diagram](/web/tools/chrome-devtools/network/imgs/resource-timing-api.png)
+{% Img src="image/admin/20iofdzU24jfQwDYt89I.png", alt="Resource Timing API diagram", width="800", height="336" %}
 
 ## Viewing in DevTools {: #viewing_in_devtools }
 
@@ -81,7 +81,7 @@ To view the full timing information for a given entry of the Network Panel you h
 2.  Click on any entry and open the Timing tab of that entry.
 3.  Use the Resource Timing API to retrieve the raw data from JavaScript.
 
-![Resource Timing Information](/web/tools/chrome-devtools/network/imgs/resource-timing-data.png)
+{% Img src="image/admin/X1ajqMDcRC3X86khtuBp.png", alt="Resource Timing Information", width="387", height="233" %}
 
 This code can be ran in the DevTools console. It will use the network timing API to retrieve all
 resources. Then it filters the entries looking for one with a name that contains "style.css". If
@@ -89,7 +89,7 @@ found it will be returned.
 
 `performance.getEntriesByType('resource').filter(item => item.name.includes("style.css"))`
 
-![Resource Timing Entry](/web/tools/chrome-devtools/network/imgs/resource-timing-entry.png)
+{% Img src="image/admin/epDzN0ol4p9ZvTETGaRm.png", alt="Resource Timing Entry", width="243", height="139" %}
 
 **Queuing**
 
@@ -158,7 +158,7 @@ enforces a maximum of six TCP connections per host. If you are requesting twelve
 first six will begin and the last half will be queued. Once one of the original half is finished,
 the first item in the queue will begin its request process.
 
-![Stalled series of requests](/web/tools/chrome-devtools/network/imgs/stalled-request-series.png)
+{% Img src="image/admin/ihLh23Aq2wsPpAfcJ6Rp.png", alt="Stalled series of requests", width="800", height="495" %}
 
 To fix this problem for traditional HTTP 1 traffic, you would need to implement [domain
 sharding][6]. That is making multiple subdomains on your application to serve resources from. Then
@@ -174,7 +174,7 @@ can be transferred over the single connection simultaneously.
 
 AKA: lots of green
 
-![High TTFB Indicator](/web/tools/chrome-devtools/network/imgs/indicator-of-high-ttfb.png)
+{% Img src="image/admin/6lUlQomd82vXAzQiQUBc.png", alt="High TTFB Indicator", width="257", height="247" %}
 
 A slow time to first byte (TTFB) is recognized by a high waiting time. It is recommended that you
 have this [under 200ms][7]. A high TTFB reveals one of two primary issues. Either:
@@ -199,7 +199,7 @@ improves.
 
 AKA: lots of blue
 
-![Throughput capacity Indicator](/web/tools/chrome-devtools/network/imgs/indicator-of-large-content.png)
+{% Img src="image/admin/siEwTaSS0Yu4ooKT74Ff.png", alt="Throughput capacity Indicator", width="410", height="243" %}
 
 If you see lots of time spent in the Content Download phases, then improving server response or
 concatenating won't help. The primary solution is to send fewer bytes.

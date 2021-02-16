@@ -40,14 +40,14 @@ transfer). Latency manipulation enforces a minimum delay in connection round-tri
 Network Conditioning is turned on through the Network panel. Select a connection from the dropdown
 to apply network throttling and latency manipulation.
 
-![Select Network Throttle](/web/tools/chrome-devtools/network/imgs/throttle-selection.png)
+{% Img src="image/admin/hZEMOFLM0jJ58u0PwTSn.png", alt="Select Network Throttle", width="777", height="327" %}
 
 **Tip**: You can also set network throttles via the [Network conditions][2] drawer.
 
 When a Throttle is enabled the panel indicator will show a warning icon. This is to remind you that
 throttling is enabled when you are in other panels.
 
-![Network Panel Selector With Warning Indicator](/web/tools/chrome-devtools/network/imgs/throttling-enabled.png)
+{% Img src="image/admin/1LjQ7mKyGxHJQK2qkchV.png", alt="Network Panel Selector With Warning Indicator", width="773", height="177" %}
 
 ## Custom throttles {: #custom_throttles }
 
@@ -64,17 +64,17 @@ To add a condition open the dropdown to apply a condition. Under the **custom** 
 select the **Add...** option. This will open the DevTools settings dialog with the "Throttling" tab
 open.
 
-![Throttle Settings Index](/web/tools/chrome-devtools/network/imgs/throttle-index.png)
+{% Img src="image/admin/gS3cf5Jxj34IcTEzQTT3.png", alt="Throttle Settings Index", width="775", height="667" %}
 
 First, click the **Add custom profile** button. This opens an inline form to supply the profiles
 conditions. Accurately fill the form out then press the **Add** button when it meets your needs.
 
-![Throttle Settings Add Custom Throttle](/web/tools/chrome-devtools/network/imgs/add-custom-throttle.png)
+{% Img src="image/admin/qsOQLikFF9LTe05nER5Y.png", alt="Throttle Settings Add Custom Throttle", width="777", height="665" %}
 
 You may modify an existing custom profile by hovering the entry. On hover the **Edit** and
 **Delete** icons are shown to the right of the entry.
 
-![Throttle Settings Modify Custom Entry](/web/tools/chrome-devtools/network/imgs/hover-to-modify-custom-throttle.png)
+{% Img src="image/admin/r42Rnl6AjtsaORHp9sye.png", alt="Throttle Settings Modify Custom Entry", width="778", height="221" %}
 
 Now you may close the settings dialog. Your new custom profiles will be shown under the **custom**
 header to select a condition.
@@ -90,12 +90,12 @@ header to select a condition.
 You can access network functions while other DevTools panels are open with the **Network
 conditions** drawer.
 
-![the network conditions drawer](/web/tools/chrome-devtools/network/imgs/network-drawer.png)
+{% Img src="image/admin/GVyF4Ey3YVnMTi0kMpou.png", alt="the network conditions drawer", width="800", height="404" %}
 
 Access the drawer from the DevTools main menu (**Main Menu** > **More Tools** > **Network
 Conditions**).
 
-![opening the network conditions drawer](/web/tools/chrome-devtools/network/imgs/open-network-drawer.png)
+{% Img src="image/admin/T7aIZLEOJdfxVom2IvId.png", alt="opening the network conditions drawer", width="706", height="419" %}
 
 [1]: /web/tools/chrome-devtools/network/reference#throttling
 [2]: #network-conditions

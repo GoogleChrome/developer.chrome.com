@@ -63,7 +63,7 @@ DevTools does not eager evaluate if the expression causes [side effects][9].
 
 As you're typing out functions, the Console now shows you the arguments that the function expects.
 
-![Argument hints in the Console.](/web/updates/images/2018/05/arghints.png)
+{% Img src="image/admin/5c1WCwmfD4i6a835ilvv.png", alt="Argument hints in the Console.", width="800", height="951" %}
 
 **Figure 2**. Various examples of argument hints in the Console
 
@@ -78,7 +78,7 @@ Notes:
 !!!.aside.aside--note
 
 **Note:** This feature depends on [Eager Evaluation][12], which needs to be enabled from **Console
-Settings** ![Console Settings](/web/updates/images/2018/05/settings.png).
+Settings** {% Img src="image/admin/le64GLKlj72gyFGlOt8z.png", alt="Console Settings", width="36", height="36" %}.
 
 !!!
 
@@ -95,7 +95,7 @@ the new behavior that supports function autocompletion
 
 ES2017 keywords, such as `await`, are now available in the Console's autocomplete UI.
 
-![The Console now suggests 'await' in its autocomplete UI.](/web/updates/images/2018/05/await.png)
+{% Img src="image/admin/a386VKlJGY81qaQk5xHG.png", alt="The Console now suggests 'await' in its autocomplete UI.", width="800", height="461" %}
 
 **Figure 4**. The Console now suggests `await` in its autocomplete UI
 
@@ -114,7 +114,7 @@ faster, and with less variance between runs.
 Lighthouse 3.0 also brings a new UI, thanks to a collaboration between the Lighthouse and Chrome UX
 (Research & Design) teams.
 
-![The new report UI in Lighthouse 3.0.](/web/updates/images/2018/05/lighthouse3.png)
+{% Img src="image/admin/pl2otqSS0e37W0i2kwlz.png", alt="The new report UI in Lighthouse 3.0.", width="800", height="996" %}
 
 **Figure 5**. The new report UI in Lighthouse 3.0
 
@@ -139,7 +139,7 @@ try out in the Console.
 Chrome 68 supports a new numeric primitive called [`BigInt`][14]. `BigInt` lets you represent
 integers with arbitrary precision. Try it out in the Console:
 
-![An example of BigInt in the Console.](/web/updates/images/2018/05/bigint.png)
+{% Img src="image/admin/DDJt3uIWbO5V1ZQSblye.png", alt="An example of BigInt in the Console.", width="800", height="564" %}
 
 **Figure 6**. An example of `BigInt` in the Console
 
@@ -148,7 +148,7 @@ integers with arbitrary precision. Try it out in the Console:
 While paused on a breakpoint, right-click a property in the Scope pane and select **Add property
 path to watch** to add that property to the Watch pane.
 
-![An example of Add property path to watch.](/web/updates/images/2018/05/watch.png)
+{% Img src="image/admin/Go7V8YiZD5n1vJUwlg7a.png", alt="An example of Add property path to watch.", width="800", height="557" %}
 
 **Figure 7**. An example of **Add property path to watch**
 

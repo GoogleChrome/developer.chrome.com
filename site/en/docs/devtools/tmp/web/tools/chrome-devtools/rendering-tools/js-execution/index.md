@@ -11,7 +11,7 @@ description: "Identify expensive functions using the Chrome DevTools CPU Profile
 
 Identify expensive functions using the Chrome DevTools CPU Profiler.
 
-![CPU profile](/web/tools/chrome-devtools/rendering-tools/imgs/cpu-profile.png)
+{% Img src="image/admin/3Ry7NqfMn18ByWvzfCzV.png", alt="CPU profile", width="800", height="501" %}
 
 ## TL;DR {: #tldr }
 
@@ -43,32 +43,32 @@ impact on performance and examine the calling paths to those functions.
 ### Change sort order {: #sort }
 
 To change the sorting order, click on the dropdown menu next to the **focus selected function** icon
-(![focus selected function icon](/web/tools/chrome-devtools/rendering-tools/imgs/focus.png)) and
+({% Img src="image/admin/w3fAGWo11pLRedsWGexI.png", alt="focus selected function icon", width="48", height="38" %}) and
 then choose one of the following options:
 
 **Chart**. Displays a chronological flame chart of the recording.
 
-![flame chart](/web/tools/chrome-devtools/rendering-tools/imgs/flamechart.png)
+{% Img src="image/admin/MkCVSIoGVHlD8Z8oSLeO.png", alt="flame chart", width="800", height="438" %}
 
 **Heavy (Bottom Up)**. Lists functions by impact on performance and enables you to examine the
 calling paths to the functions. This is the default view.
 
-![heavy chart](/web/tools/chrome-devtools/rendering-tools/imgs/heavy.png)
+{% Img src="image/admin/8UcfaWScCPLRzEN90FqK.png", alt="heavy chart", width="800", height="439" %}
 
 **Tree (Top Down)**. Shows an overall picture of the calling structure, starting at the top of the
 call stack.
 
-![tree chart](/web/tools/chrome-devtools/rendering-tools/imgs/tree.png)
+{% Img src="image/admin/5LuQy9y3qtOaOczmmFDs.png", alt="tree chart", width="800", height="430" %}
 
 ### Exclude functions {: #exclude }
 
 To exclude a function from your CPU profile, click on it to select it and then press the **exclude
 selected function** icon
-(![exclude function icon](/web/tools/chrome-devtools/rendering-tools/imgs/exclude.png)). The caller
+({% Img src="image/admin/4PVg71mdP3hxjJffuw4I.png", alt="exclude function icon", width="38", height="36" %}). The caller
 of the excluded function is charged with the excluded function's total time.
 
 Click the **restore all functions** icon
-(![restore all functions icon](/web/tools/chrome-devtools/rendering-tools/imgs/restore.png)) to
+({% Img src="image/admin/woI39FCAsXEF4jntiUYA.png", alt="restore all functions icon", width="40", height="38" %}) to
 restore all excluded functions back into the recording.
 
 ## View CPU profile as Flame Chart {: #flame-chart }
@@ -92,7 +92,7 @@ The flame chart is split into two parts:
     However, functions are always colored the same across invocations so that you can see patterns
     of executions.
 
-![annotated flame chart](/web/tools/chrome-devtools/rendering-tools/imgs/annotated-cpu-flame.png)
+{% Img src="image/admin/D1SVsDmzPnLvlAEyh1CO.png", alt="annotated flame chart", width="606", height="450" %}
 
 A tall call stack is not necessarily significant, it just means that a lot of functions were called.
 But a wide bar means that a call took a long time to complete. These are candidates for
@@ -104,7 +104,7 @@ Click, hold, and drag your mouse left and right across the overview to zoom in o
 of the call stack. After you zoom, the call stack automatically displays the portion of the
 recording that you've selected.
 
-![flame chart zoomed](/web/tools/chrome-devtools/rendering-tools/imgs/benchmark-zoom.png)
+{% Img src="image/admin/hRYlvA3N7KwB4ZYefnmb.png", alt="flame chart zoomed", width="800", height="724" %}
 
 ### View function details {: #flame-chart-function-details }
 
@@ -126,7 +126,7 @@ Hover over a function to display its name and timing data. The following informa
 - **Not optimized**. If the profiler has detected a potential optimization for the function it lists
   it here.
 
-![viewing functions details in flame chart](/web/tools/chrome-devtools/rendering-tools/imgs/details.png)
+{% Img src="image/admin/Qu4Ls67NZrjTtwGnQ120.png", alt="viewing functions details in flame chart", width="615", height="397" %}
 
 [1]:
   /web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendname
