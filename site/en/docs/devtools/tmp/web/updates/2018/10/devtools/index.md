@@ -155,14 +155,14 @@ element's events to the Console.
 
 Call [`unmonitorEvents()`][15] to stop logging events to the Console.
 
-```
+```js
 unmonitorEvents(temp1);
 ```
 
 Pass an array as the second argument to `monitorEvents()` if you only want to monitor certain events
 or types of events:
 
-```
+```js
 monitorEvents(temp1, ['mouse', 'focus']);
 ```
 

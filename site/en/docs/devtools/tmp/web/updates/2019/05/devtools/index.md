@@ -53,7 +53,7 @@ When [exporting a HAR file from the Network panel][4] to share network logs with
 your HAR file now includes WebSocket messages. The `_webSocketMessages` property begins with an
 underscore to indicate that it's a custom field.
 
-```
+```js
 ...
 "_webSocketMessages": [
   {

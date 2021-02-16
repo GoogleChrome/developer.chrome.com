@@ -19,7 +19,7 @@ The Chrome DevTools Command Line API offers various ways to observe and inspect 
 JavaScript plays a central role in interactive pages, and the browser provides you some useful tools
 to debug events and event handlers.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Listen to events of a certain type using `monitorEvents()`.
 - Use `unmonitorEvents()` to stop listening.
@@ -36,7 +36,7 @@ second parameter.
 
 Listen to click events on the body of the page:
 
-```
+```js
 monitorEvents(document.body, "click");
 ```
 
@@ -50,7 +50,7 @@ monitoring.
 
 Stop listening to events on the `body` object:
 
-```
+```js
 unmonitorEvents(document.body);
 ```
 
@@ -63,7 +63,7 @@ The return value is an object that contains an array for each registered event t
 for each type. For example, the following code lists all the event listeners registered on the
 document object:
 
-```
+```js
 getEventListeners(document);
 ```
 

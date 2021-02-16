@@ -183,7 +183,7 @@ A typical JavaScript object can be one of two array types used for storing:
 In cases where there is a very small number of properties, they can be stored internally in the
 JavaScript object itself.
 
-**Map** - an object that describes the kind of object and its layout. For example, maps are used to
+**Map**-an object that describes the kind of object and its layout. For example, maps are used to
 describe implicit object hierarchies for [fast property access][3].
 
 ### Object groups {: #object_groups }
@@ -191,7 +191,7 @@ describe implicit object hierarchies for [fast property access][3].
 Each native objects group is made up of objects that hold mutual references to each other. Consider,
 for example, a DOM subtree where every node has a link to its parent and links to the next child and
 next sibling, thus forming a connected graph. Note that native objects are not represented in the
-JavaScript heap — that's why they have zero size. Instead, wrapper objects are created.
+JavaScript heap—that's why they have zero size. Instead, wrapper objects are created.
 
 Each wrapper object holds a reference to the corresponding native object, for redirecting commands
 to it. In its own turn, an object group holds wrapper objects. However, this doesn't create an

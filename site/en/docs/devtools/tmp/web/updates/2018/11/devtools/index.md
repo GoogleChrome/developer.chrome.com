@@ -66,7 +66,7 @@ it for any DOM node.
 
 DevTools copies an expression like the one below to your clipboard:
 
-```
+```js
 document.querySelector('#demo1').shadowRoot.querySelector('p:nth-child(2)')
 ```
 

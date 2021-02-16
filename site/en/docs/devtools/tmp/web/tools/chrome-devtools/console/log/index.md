@@ -123,7 +123,6 @@ JavaScript.
 10. Click **Log Custom**. A message with a red border and blue background gets logged to the
     Console.
 
-
     ![A message with custom formatting in the Console.](/web/tools/chrome-devtools/console/images/logcustom.png)
 
     **Figure 13**. A message with custom formatting in the Console.
