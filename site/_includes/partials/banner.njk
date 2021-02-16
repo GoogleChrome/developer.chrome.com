@@ -1,0 +1,11 @@
+
+{% if banner %}
+  <div class="wrapper banner gap-top-300 rounded-500 banner--{{ banner.type }}">
+    <div class="banner__text">
+      {{ banner.text }}
+    </div>
+    {% if banner.action and banner.action_href %}
+      <a class="link" href="{{ banner.action_href }}">{{ banner.action }}</a>
+    {% endif %}
+  </div>
+{% endif %}
