@@ -23,7 +23,7 @@ The Sources panel provides the ability to watch variables within your applicatio
 in the watch section of the debugger sidebar. By taking advantage of this functionality you will not
 need repeatedly log objects to the console.
 
-![Watch section of debugger](/web/tools/chrome-devtools/javascript/imgs/sources-watch-variables-location.png)
+{% Img src="image/admin/CKt18LDyBiqZ0D2GxUKk.png", alt="Watch section of debugger", width="800", height="625" %}
 
 ## Adding variables {: #adding_variables }
 
@@ -31,12 +31,12 @@ To add a variable to the watch list use the add icon to the right of the section
 open an inline input where you provide the variable name to watch. Once it is filled in press your
 <kbd>Enter</kbd> key to add it to the list.
 
-![Add to watch list button](/web/tools/chrome-devtools/javascript/imgs/add-variable-to-watch.png)
+{% Img src="image/admin/VTzjYywdF1D5xQEx5iIv.png", alt="Add to watch list button", width="357", height="263" %}
 
 The watcher will show you the current value of the variable as it is added. If the variable is not
 set or can't be found it will show <Not Available> for the value.
 
-![Undefined variable in the watch list](/web/tools/chrome-devtools/javascript/imgs/undefined-variable-in-watch.png)
+{% Img src="image/admin/qUVQAccqDdO9QZS30NSu.png", alt="Undefined variable in the watch list", width="328", height="206" %}
 
 ## Updating variables {: #updating_variables }
 
@@ -45,12 +45,12 @@ of the variables unless you are stepping through execution. When you are steppin
 using [breakpoints][2], the watched values will update automatically. To manually recheck the
 variables in the list press the refresh button to the right of the section heading.
 
-![Refresh watch variables button](/web/tools/chrome-devtools/javascript/imgs/refresh-variables-being-watched.png)
+{% Img src="image/admin/AthCSFuyq6VkbAyXonPm.png", alt="Refresh watch variables button", width="328", height="205" %}
 
 As the refresh is requested the current application state is rechecked. Every watched item will be
 updated with the current values.
 
-![Updated variable being watched](/web/tools/chrome-devtools/javascript/imgs/updated-variable-being-watched.png)
+{% Img src="image/admin/VEQsI4m2Tb4fVUkijTLJ.png", alt="Updated variable being watched", width="359", height="202" %}
 
 ## Removing variables {: #removing_variables }
 
@@ -58,7 +58,7 @@ To keep what you are looking at minimal for faster work you may need to remove v
 watch list. This can be done by hovering the variable and then clicking the removal icon that
 appears to the right.
 
-![Hover variable to remove from watch list](/web/tools/chrome-devtools/javascript/imgs/hover-to-delete-watched-variable.png)
+{% Img src="image/admin/aXkD0ZIzyIPnd0Aq3n4F.png", alt="Hover variable to remove from watch list", width="358", height="207" %}
 
 [1]: /web/tools/chrome-devtools/javascript/reference#watch
 [2]: /web/tools/chrome-devtools/javascript/breakpoints

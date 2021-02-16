@@ -40,7 +40,7 @@ JavaScript error messages. Each message has a link to the file name with the lin
 navigate to.
 
 An example of an exception:
-![Exception example](/web/tools/chrome-devtools/console/images/track-exceptions-tracking-exceptions.jpg)
+{% Img src="image/admin/3Dmm0wAHO6zCFF2J4F6M.jpg", alt="Exception example", width="800", height="345" %}
 
 ### View exception stack trace {: #view_exception_stack_trace }
 
@@ -48,19 +48,19 @@ It's not always obvious which execution path lead to an error. Complete JavaScri
 accompany exceptions in the console. Expand these console messages to see the stack frames and
 navigate to the corresponding locations in the code:
 
-![Exception stack trace](/web/tools/chrome-devtools/console/images/track-exceptions-exception-stack-trace.jpg)
+{% Img src="image/admin/ksn0ZRTY6gTp6ayL5OsC.jpg", alt="Exception stack trace", width="800", height="495" %}
 
 ### Pause on JavaScript exceptions {: #pause_on_javascript_exceptions }
 
 The next time an exception is thrown, pause JavaScript execution and inspect its call stack, scope
 variables, and state of your app. A tri-state stop button at the bottom of the Scripts panel enables
 you to switch among different exception handling modes:
-![Pause button](/web/tools/chrome-devtools/console/images/track-exceptions-pause-gray.png)
+{% Img src="image/admin/XTxxlHNkmrUTP2U6Nkdw.png", alt="Pause button", width="24", height="20" %}
 
 Choose to either pause on all exceptions or only on the uncaught ones or you can ignore exceptions
 altogether.
 
-![Pause execution](/web/tools/chrome-devtools/console/images/track-exceptions-pause-execution.jpg)
+{% Img src="image/admin/xCmNmd5AfJsR0s3RlNTB.jpg", alt="Pause execution", width="800", height="317" %}
 
 ## Print stack traces {: #print_stack_traces }
 
@@ -71,13 +71,13 @@ entries more informative by including associated stack traces. There are several
 
 Each Error object has a string property named stack that contains the stack trace:
 
-![Error.stack example](/web/tools/chrome-devtools/console/images/track-exceptions-error-stack.jpg)
+{% Img src="image/admin/tGYJ6nZnaWJ9n6Hz4PA2.jpg", alt="Error.stack example", width="665", height="454" %}
 
 ### console.trace() {: #consoletrace }
 
 Instrument your code with [`console.trace()`][1] calls that print current JavaScript call stacks:
 
-![console.trace() example](/web/tools/chrome-devtools/console/images/track-exceptions-console-trace.jpg)
+{% Img src="image/admin/BW2bUApaMUTaSxrsGppS.jpg", alt="console.trace() example", width="800", height="473" %}
 
 ### console.assert() {: #consoleassert }
 
@@ -85,14 +85,14 @@ Place assertions in your JavaScript code by calling [`console.assert()`][2] with
 as the first parameter. When this expression evaluates to false, you will see a corresponding
 console record:
 
-![console.assert() example](/web/tools/chrome-devtools/console/images/track-exceptions-console-assert.jpg)
+{% Img src="image/admin/oEVpZWlOhcgfwZQTjvj1.jpg", alt="console.assert() example", width="800", height="495" %}
 
 ## How to examine stack trace to find triggers {: #how_to_examine_stack_trace_to_find_triggers }
 
 Let's see how to use the tools you've just learned about, and find the real cause of an error.
 Here's a simple HTML page that includes two scripts:
 
-![Example code](/web/tools/chrome-devtools/console/images/track-exceptions-example-code.png)
+{% Img src="image/admin/mufGpW3JtKnESRnc8JsA.png", alt="Example code", width="554", height="550" %}
 
 When the user clicks on the page, the paragraph changes its inner text, and the `callLibMethod()`
 function provided by `lib.js` is called.
@@ -102,11 +102,11 @@ Console API. This should trigger an error.
 
 When the page is run and you click on it, this error is triggered:
 
-![Error triggered](/web/tools/chrome-devtools/console/images/track-exceptions-example-error-triggered.png)
+{% Img src="image/admin/rk4smGIzlRJoofaq4OHo.png", alt="Error triggered", width="749", height="139" %}
 
 Click the arrow to can expand the error message:
 
-![Error message expanded](/web/tools/chrome-devtools/console/images/track-exceptions-example-error-message-expanded.png)
+{% Img src="image/admin/lAMeZLn7NAE7lOdH70O4.png", alt="Error message expanded", width="561", height="191" %}
 
 The Console tells you the error was triggered in `lib.js`, line 4, which was called by `script.js`
 in the `addEventListener` callback, an anonymous function, in line 3.
@@ -128,7 +128,7 @@ can log all the errors happening in the user's browser, and be notified about th
 
 Example of using `window.onerror`:
 
-![Example of window.onerror handler](/web/tools/chrome-devtools/console/images/runtime-exceptions-window-onerror.jpg)
+{% Img src="image/admin/2tiXcRaAhY5LRqCrueA2.jpg", alt="Example of window.onerror handler", width="786", height="373" %}
 
 [1]:
   https://developers.google.com/web/tools/chrome-devtools/console/console-reference#consoletraceobject

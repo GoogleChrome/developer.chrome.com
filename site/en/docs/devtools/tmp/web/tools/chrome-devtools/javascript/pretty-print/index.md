@@ -17,15 +17,15 @@ information.
 !!!
 
 When viewing a script in the **Sources** panel, click the **Pretty-Print**
-![the pretty-print icon](/web/tools/chrome-devtools/javascript/imgs/prettyprint-icon.png) icon to
+{% Img src="image/admin/e84Q2LWgpLLNgFTqT5EC.png", alt="the pretty-print icon", width="15", height="12" %} icon to
 transform a minified script into a more human-readable form.
 
 Here is how a minified script might look in the **Sources** panel:
 
-![a minified script](/web/tools/chrome-devtools/javascript/imgs/pretty-print-off.jpg)
+{% Img src="image/admin/CEITuraUY4oL6N4afArz.jpg", alt="a minified script", width="800", height="534" %}
 
 Here is how the same script looks after clicking the **Pretty-Print** icon:
 
-![a minified script after pretty print](/web/tools/chrome-devtools/javascript/imgs/pretty-print-on.jpg)
+{% Img src="image/admin/NLvxBoJpmBGkxE0I778A.jpg", alt="a minified script after pretty print", width="800", height="533" %}
 
 [1]: /web/tools/chrome-devtools/javascript/reference#format

@@ -16,7 +16,7 @@ To override the [user agent][1] string from Chrome DevTools:
     <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the
     **Command Menu**.
 
-    ![The Command Menu.](/web/tools/chrome-devtools/images/shared/command-menu.png)
+    {% Img src="image/admin/6zZ617vix5m8hDk4OZQn.png", alt="The Command Menu.", width="800", height="632" %}
 
     **Figure 1**. The Command Menu
 
@@ -24,7 +24,7 @@ To override the [user agent][1] string from Chrome DevTools:
     open the **Network conditions** tab.
 3.  In the **User agent** section disable the **Select automatically** checkbox.
 
-    ![Disabling 'Select automatically'.](/web/tools/chrome-devtools/device-mode/imgs/user-agent.png)
+    {% Img src="image/admin/5RNVgBsha4LYrVxEc5CH.png", alt="Disabling 'Select automatically'.", width="800", height="552" %}
 
     **Figure 2**. Disabling **Select automatically**
 

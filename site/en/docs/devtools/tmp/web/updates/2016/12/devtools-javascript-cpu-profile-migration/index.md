@@ -39,7 +39,7 @@ removed in future DevTools versions.
 1.  Open DevTools.
 2.  Click the **Performance** tab.
 
-    ![The Chrome DevTools Performance panel](/web/updates/images/2016/12/js-perf-profile.png)
+    {% Img src="image/admin/4RsO4nZuUZrC8UpNrbf8.png", alt="The Chrome DevTools Performance panel", width="800", height="463" %}
 
     **Figure 1**. The Performance panel.
 
@@ -55,19 +55,19 @@ removed in future DevTools versions.
 From the **Chart** view of the old workflow, the screenshot below shows you the position of the CPU
 usage overview chart (top arrow) and the flame chart (bottom arrow) in the new workflow.
 
-![Mapping between flame chart in old workflow and new workflow.](/web/updates/images/2016/12/flame-map.png)
+{% Img src="image/admin/65r1vd3w5FGALyttqIE7.png", alt="Mapping between flame chart in old workflow and new workflow.", width="800", height="329" %}
 
 **Figure 2**. Mapping between flame chart in old workflow (left) and new workflow (right).
 
 The **Heavy (Bottom Up)** view is available in the **Bottom-Up** tab:
 
-![Mapping between Bottom-Up view in old workflow and new workflow.](/web/updates/images/2016/12/bottom-up-map.png)
+{% Img src="image/admin/DJFYcoz74MXgHsJTEwg2.png", alt="Mapping between Bottom-Up view in old workflow and new workflow.", width="800", height="282" %}
 
 **Figure 3**. Mapping between Bottom-Up view in old workflow (left) and new workflow (right).
 
 And the **Tree (Top Down)** view is available in the **Call Tree** tab:
 
-![Mapping between Tree view in old workflow and new workflow.](/web/updates/images/2016/12/tree-map.png)
+{% Img src="image/admin/cAjO3BTWVqZj1XC7mxWD.png", alt="Mapping between Tree view in old workflow and new workflow.", width="800", height="286" %}
 
 **Figure 4**. Mapping between Tree view in old workflow (left) and new workflow (right).
 

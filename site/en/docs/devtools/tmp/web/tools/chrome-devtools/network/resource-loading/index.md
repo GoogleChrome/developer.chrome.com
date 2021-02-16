@@ -58,7 +58,7 @@ The Network panel consists of five panes:
 5.  **Summary**. At a glance this pane tells you the total number of requests, amount of data
     transferred, and load times.
 
-![network panel panes](/web/tools/chrome-devtools/network/imgs/panes.png)
+{% Img src="image/admin/hrAt9lxLr9Ui39NuFc8N.png", alt="network panel panes", width="800", height="410" %}
 
 The **Requests Table** displays the following columns by default. You can [add and remove
 columns][6].
@@ -93,8 +93,8 @@ just reload a page while the panel is open, or wait for network activity on the 
 page.
 
 You can tell whether or not DevTools is recording via the **record** button. When it's red
-(![record button on](/web/tools/chrome-devtools/network/imgs/record-on.png)), DevTools is recording.
-When it's grey (![record button off](/web/tools/chrome-devtools/network/imgs/record-off.png)),
+({% Img src="image/admin/JrOUQPBj3AR2rbPlz6Us.png", alt="record button on", width="36", height="36" %}), DevTools is recording.
+When it's grey ({% Img src="image/admin/lTHzHYK2HjIhzujkWQbV.png", alt="record button off", width="26", height="26" %}),
 DevTools is not recording. Click this button to start or stop recording, or press the keyboard
 shortcut <kbd>Cmd/Ctrl</kbd>+<kbd>e</kbd>.
 
@@ -114,21 +114,21 @@ Click on the **camera** icon to enable the Filmstrip. When the icon is grey, the
 disabled (![filmstrip
 disabled](/web/tools/chrome-devtools/network/imgs/filmstrip-disabled.png)).
 When the icon is blue, it is enabled
-(![filmstrip enabled](/web/tools/chrome-devtools/network/imgs/filmstrip-enabled.png)).
+({% Img src="image/admin/NsdIk1xJniWJNXyYnYyr.png", alt="filmstrip enabled", width="36", height="26" %}).
 
 Reload the page to capture the screenshots. The screenshots are displayed above the **Overview**.
 
-![recording with filmstrip](/web/tools/chrome-devtools/network/imgs/filmstrip.png)
+{% Img src="image/admin/AU7QLdVkzOKnTIMnFpDi.png", alt="recording with filmstrip", width="800", height="785" %}
 
 When you hover over a screenshot, the **Timeline** displays a vertical yellow line indicating when
 the frame was captured.
 
-![filmstrip overlay on timeline](/web/tools/chrome-devtools/network/imgs/filmstrip-timeline-overlay.png)
+{% Img src="image/admin/NwsEDx3eLKAK3qrNseYB.png", alt="filmstrip overlay on timeline", width="603", height="463" %}
 
 Double-click on a screenshot to view a zoomed version of the screenshot. While a screenshot is
 zoomed, use the left and right arrows of your keyboard to navigate between screenshots.
 
-![zoomed filmstrip screenshot](/web/tools/chrome-devtools/network/imgs/filmstrip-zoom.png)
+{% Img src="image/admin/UU6IV81uujlKNvzzGuzO.png", alt="zoomed filmstrip screenshot", width="800", height="746" %}
 
 ## View DOMContentLoaded and load event information {: #view_domcontentloaded_and_load_event_information }
 
@@ -146,7 +146,7 @@ two places on the **Network** panel:
 1.  The blue vertical bar in the **Overview** pane signifies the event.
 2.  In the **Summary** pane you can see the exact time of the event.
 
-![DOMContentLoaded event on network panel](/web/tools/chrome-devtools/network/imgs/domcontentloaded.png)
+{% Img src="image/admin/yCoUaXomSETtioC4mK18.png", alt="DOMContentLoaded event on network panel", width="521", height="408" %}
 
 `load` is fired when a page has fully loaded. It is displayed in three places:
 
@@ -154,7 +154,7 @@ two places on the **Network** panel:
 2.  The red vertical bar in the **Requests Table** signifies the event, too.
 3.  In the **Summary** pane you can see the exact time of the event.
 
-![load event on network panel](/web/tools/chrome-devtools/network/imgs/load.png)
+{% Img src="image/admin/jeBgWyebLc72gG5fF1HK.png", alt="load event on network panel", width="448", height="437" %}
 
 ## View details for a single resource {: #view_details_for_a_single_resource }
 
@@ -175,7 +175,7 @@ below are most common:
 - **Response**. HTTP response data (if any).
 - **Timing**. A granular breakdown of the request lifecycle for the resource.
 
-![viewing details for a single resource](/web/tools/chrome-devtools/network/imgs/network-headers.png)
+{% Img src="image/admin/Ofxk7Dui2KnayPuO60gO.png", alt="viewing details for a single resource", width="800", height="417" %}
 
 ### View network timing {: #view_network_timing }
 
@@ -197,12 +197,12 @@ The lifecycle shows how much time is spent in the following categories:
 - Waiting (Time to first byte (TTFB))
 - Content Download
 
-![timing tab](/web/tools/chrome-devtools/network/imgs/timing-tab.png)
+{% Img src="image/admin/6RUnd9L8yhxp1CBbbXJM.png", alt="timing tab", width="800", height="462" %}
 
 You can also view this same information by hovering your mouse over a resource within the
 **Timeline** graph.
 
-![timing data for one resource in timeline](/web/tools/chrome-devtools/network/imgs/timeline-view-hover.png)
+{% Img src="image/admin/vxf49R2GItgQml8QibyW.png", alt="timing data for one resource in timeline", width="800", height="458" %}
 
 Related Guides:
 
@@ -227,12 +227,12 @@ parameters.
 You can view response headers, request headers, or query string parameters in source or parsed
 format by clicking the `view source` or `view parsed` link next to each section.
 
-![view header source](/web/tools/chrome-devtools/network/imgs/view-header-source.png)
+{% Img src="image/admin/WX3vXwlhEHYA6Vqtak6G.png", alt="view header source", width="688", height="443" %}
 
 You can also view query string parameters in URL-encoded or decoded format by clicking the
 `view URL encoded` or `view decoded` link next to that section.
 
-![view URL encoded](/web/tools/chrome-devtools/network/imgs/view-url-encoded.png)
+{% Img src="image/admin/cYsjomXfTDW02AwNzlr5.png", alt="view URL encoded", width="703", height="453" %}
 
 ### Preview a resource {: #preview_a_resource }
 
@@ -245,7 +245,7 @@ You can also view query string parameters in URL-encoded or decoded format by cl
 Click the **Preview** tab to view a preview of that resource. The **Preview** tab may or may not
 display any useful information, depending on the type of resource you've selected.
 
-![image resource preview](/web/tools/chrome-devtools/network/imgs/preview-png.png)
+{% Img src="image/admin/xyCjEPOCCaPf2GsqqX3U.png", alt="image resource preview", width="800", height="284" %}
 
 ### View HTTP response content {: #view_http_response_content }
 
@@ -259,7 +259,7 @@ Click the **Response** tab to view the resource's unformatted HTTP response cont
 **Response** tab may or may not contain any useful information, depending on the type of resource
 you've selected.
 
-![JSON resource response data](/web/tools/chrome-devtools/network/imgs/response-json.png)
+{% Img src="image/admin/LjPyUw50DPhH9dF4cTtq.png", alt="JSON resource response data", width="798", height="478" %}
 
 ### View cookies {: #view_cookies }
 
@@ -285,7 +285,7 @@ Below is a description of each of the columns in the table:
 - **Secure**. The presence of this attribute indicates that the cookie should only be transmitted
   over a secure connection.
 
-![resource cookies](/web/tools/chrome-devtools/network/imgs/cookies.png)
+{% Img src="image/admin/PtS1RmV1pR5HcbSpBE2C.png", alt="resource cookies", width="800", height="290" %}
 
 ### View WebSocket frames {: #view_websocket_frames }
 
@@ -298,7 +298,7 @@ Below is a description of each of the columns in the table:
 Click the **Frames** tab to view [`WebSocket`][20] connection information. This tab is only visible
 when the selected resource initiated a `WebSocket` connection.
 
-![websocket frames tab](/web/tools/chrome-devtools/network/imgs/websocket-frames.png)
+{% Img src="image/admin/k8A3ogJIVFBTPbaI2bt0.png", alt="websocket frames tab", width="800", height="393" %}
 
 The list below describes each of the columns in the table on the **Frames** tab:
 
@@ -377,7 +377,7 @@ The **Timeline** column is unique from the others. When clicked, it displays a m
 - **Latency**. Sorts by the time between the start of the request and the beginning of the response.
   Select this filter to determine which resource takes the longest time to first byte (TTFB).
 
-![Timeline sort fields](/web/tools/chrome-devtools/network/imgs/timeline-sort-fields.png)
+{% Img src="image/admin/mpvVd5lf8BQXoGrtuVm1.png", alt="Timeline sort fields", width="800", height="463" %}
 
 ## Filter requests {: #filter_requests }
 
@@ -388,7 +388,7 @@ The **Timeline** column is unique from the others. When clicked, it displays a m
 !!!
 
 The **Network** panel provides numerous ways to filter which resources are displayed. Click the
-**filters** button (![filters button](/web/tools/chrome-devtools/network/imgs/filters.png)) to hide
+**filters** button ({% Img src="image/admin/MYLfTABCgv4ZVueCZ4wG.png", alt="filters button", width="28", height="24" %}) to hide
 or display the **Filters** pane.
 
 Use the content type buttons to only display resources of the selected content type.
@@ -406,7 +406,7 @@ simultaneously](/web/tools/chrome-devtools/network/imgs/multiple-content-type-fi
 The **filter** text field is deceptively powerful. If you enter an arbitrary string in it, the
 **Network** panel only displays the resources whose filenames match the given string.
 
-![resource name filtering](/web/tools/chrome-devtools/network/imgs/resource-name-filtering.png)
+{% Img src="image/admin/XOztMSLewAESyqKU3G2P.png", alt="resource name filtering", width="800", height="534" %}
 
 The **filter** text field also supports various keywords that let you sort resources by various
 properties, such as file size using the `larger-than` keyword.
@@ -443,13 +443,13 @@ The list below describes all of the keywords.
 - `status-code`. Only show resources whose HTTP status code match the specified code. DevTools
   populates the autocomplete dropdown menu with all of the status codes it has encountered.
 
-![filtering by file size](/web/tools/chrome-devtools/network/imgs/larger-than.png)
+{% Img src="image/admin/My9T3k1jiDim7xWfyvd5.png", alt="filtering by file size", width="800", height="541" %}
 
 Some of the keywords above mention an autocomplete dropdown menu. To trigger the autocomplete menu,
 type in the keyword followed by a colon. For example, in the screenshot below typing `domain:`
 triggered the autocomplete dropdown.
 
-![filter text field autocomplete](/web/tools/chrome-devtools/network/imgs/filter-autocomplete.png)
+{% Img src="image/admin/ho7cqGHhyR4RpJ3nKom5.png", alt="filter text field autocomplete", width="627", height="464" %}
 
 ## Copy, save, and clear network information {: #copy_save_and_clear_network_information }
 
@@ -487,7 +487,7 @@ right-click on that resource's row. The list below describes each of the options
 - **Save**. Save the selected text resource. Only displayed on text resources.
 - **Replay XHR**. Re-send the selected `XMLHTTPRequest`. Only displayed on XHR resources.
 
-![copy and save context menu](/web/tools/chrome-devtools/network/imgs/copy-save-menu.png)
+{% Img src="image/admin/ky2wjgfn7byGZOEfVzlN.png", alt="copy and save context menu", width="800", height="530" %}
 
 ### Copy one or all requests as cURL commands {: #curl }
 
@@ -503,7 +503,7 @@ Right-click on a resource within the Requests Table, hover over **Copy** and the
 cURL** to copy a string of cURL requests for all resources that have been detected by the Network
 panel.
 
-![Copy single request as cURL command](/web/tools/chrome-devtools/network/imgs/copy-as-curl.png)
+{% Img src="image/admin/OkEzTLeVYrTSxSzTnbQj.png", alt="Copy single request as cURL command", width="800", height="599" %}
 
 Select **Copy All as cURL** to copy a string of cURL requests for all resources that have been
 detected by the Network panel.
@@ -523,13 +523,13 @@ information.
 
 By default the **Requests Table** displays resources with small rows. Click the **Use large resource
 rows** button
-(![large resource rows button](/web/tools/chrome-devtools/network/imgs/large-resource-rows-button.png))
+({% Img src="image/admin/qORtyUwSi1OvgruasPeS.png", alt="large resource rows button", width="28", height="20" %})
 to increase the size of each row.
 
 Large rows enable some columns to display two text fields: a primary field and a secondary field.
 The column header indicates the meaning of the secondary field.
 
-![large resource rows](/web/tools/chrome-devtools/network/imgs/large-resource-rows.png)
+{% Img src="image/admin/CCMgQghnwoej5dQCXJaK.png", alt="large resource rows", width="800", height="656" %}
 
 ### Add and remove table columns {: #add_and_remove_table_columns }
 
@@ -544,7 +544,7 @@ The column header indicates the meaning of the secondary field.
 
 Right-click on any of the headers in the **Requests Table** to add or remove columns.
 
-![Add or remove columns](/web/tools/chrome-devtools/network/imgs/add-remove-columns.png)
+{% Img src="image/admin/dOiQavClenmBDKOKG07R.png", alt="Add or remove columns", width="800", height="825" %}
 
 ### Preserve the network log upon navigation {: #preserve_the_network_log_upon_navigation }
 

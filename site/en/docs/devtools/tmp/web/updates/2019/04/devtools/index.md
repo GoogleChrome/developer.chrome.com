@@ -22,12 +22,12 @@ adds a 1-pixel blur to a node. When autocompleting properties like `filter`, Dev
 the property with a meaningful value so that you can preview what kind of change the value will have
 on the node.
 
-![The old autocomplete behavior.](/web/updates/images/2019/04/blur1.png)
+{% Img src="image/admin/DdRvcEClGIiO7OXkOO1B.png", alt="The old autocomplete behavior.", width="800", height="530" %}
 
 **Figure 1**. The old autocomplete behavior. DevTools is autocompleting to `filter: blur` and no
 change is visible in the viewport.
 
-![The new autocomplete behavior.](/web/updates/images/2019/04/blur2.png)
+{% Img src="image/admin/pn14H2YyCFv06zM2o4qO.png", alt="The new autocomplete behavior.", width="800", height="529" %}
 
 **Figure 2**. The new autocomplete behavior. DevTools is autocompleting to `filter: blur(1px)` and
 the change is visible in the viewport.
@@ -42,7 +42,7 @@ Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or
 [`localStorage`][5], [`sessionStorage`][6], [IndexedDB][7], [Web SQL][8], [Cookies][9], [Cache][10],
 and [Application Cache][11].
 
-![The Clear Site Data command.](/web/updates/images/2019/04/clearsitedata.png)
+{% Img src="image/admin/g3ip1ThKFE50s1dPgwGO.png", alt="The Clear Site Data command.", width="800", height="481" %}
 
 **Figure 3**. The **Clear Site Data** command.
 
@@ -52,7 +52,7 @@ feature in Chrome 75 is being able to run the command from the Command Menu.
 If you don't want to delete _all_ site data, you can control what data gets deleted from
 **Application** > **Clear Storage**.
 
-![Application > Clear Storage.](/web/updates/images/2019/04/clearstoragepane.png)
+{% Img src="image/admin/Qk1XBPFLJRSbMRASIcFD.png", alt="Application > Clear Storage.", width="800", height="688" %}
 
 **Figure 4**. **Application** > **Clear Storage**.
 
@@ -65,12 +65,12 @@ main origin. For example, if you had an `<iframe>` on your page, and that `<ifra
 IndexedDB, you wouldn't be able to see its database(s). As of Chrome 75, DevTools shows IndexedDB
 databases for all origins.
 
-![The old behavior. The page is embedding a demo that uses IndexedDB, but no databases are visible.](/web/updates/images/2019/04/idb1.png)
+{% Img src="image/admin/cwYQMte5WDjKECdTMkxs.png", alt="The old behavior. The page is embedding a demo that uses IndexedDB, but no databases are visible.", width="800", height="518" %}
 
 **Figure 5**. The old behavior. The page is embedding a demo that uses IndexedDB, but no databases
 are visible.
 
-![The new behavior. The demo's databases are visible.](/web/updates/images/2019/04/idb2.png)
+{% Img src="image/admin/F31CiY149rkyXWZqqAf6.png", alt="The new behavior. The demo's databases are visible.", width="800", height="478" %}
 
 **Figure 6**. The new behavior. The demo's databases are visible.
 
@@ -83,7 +83,7 @@ reduce the transfer size of resources. You want to see how large the page's reso
 browser uncompresses them. Previously this information was only available when using [large request
 rows][16]. Now you can access this information by hovering over the **Size** column.
 
-![Hovering over the Size column to view a resource's uncompressed size.](/web/updates/images/2019/04/hover.png)
+{% Img src="image/admin/YR6PNeZOoA5uCtJR4QPp.png", alt="Hovering over the Size column to view a resource's uncompressed size.", width="800", height="500" %}
 
 **Figure 7**. Hovering over the Size column to view a resource's uncompressed size.
 
@@ -104,11 +104,11 @@ creating 3 breakpoints. Previously the **Breakpoints** pane did not give you the
 these 3 breakpoints individually. As of Chrome 75 each inline breakpoint gets its own entry in the
 **Breakpoints** pane.
 
-![The old behavior. There's only one entry in the Breakpoints pane.](/web/updates/images/2019/04/breakpoints1.png)
+{% Img src="image/admin/qy0a4FstNRIVUAccS8Xk.png", alt="The old behavior. There's only one entry in the Breakpoints pane.", width="800", height="360" %}
 
 **Figure 8**. The old behavior. There's only 1 entry in the **Breakpoints** pane.
 
-![The new behavior. There's 3 entries in the Breakpoints pane.](/web/updates/images/2019/04/breakpoints2.png)
+{% Img src="image/admin/59qgazgk65XVoZYmDBzS.png", alt="The new behavior. There's 3 entries in the Breakpoints pane.", width="800", height="457" %}
 
 **Figure 9**. The new behavior. There's 3 entries in the **Breakpoints** pane.
 
@@ -119,7 +119,7 @@ Relevant Chromium issue: [#927961][19]
 The **IndexedDB** and **Cache** panes now indicate the total number of resources in a database or
 cache.
 
-![Total entries in an IndexedDB database.](/web/updates/images/2019/04/totalentries.png)
+{% Img src="image/admin/9R80yMf5xJQzsSwUZuGZ.png", alt="Total entries in an IndexedDB database.", width="800", height="463" %}
 
 **Figure 10**. Total entries in an IndexedDB database.
 
@@ -129,14 +129,14 @@ Relevant Chromium issues: [#941197][20], [#930773][21], [#930865][22]
 
 Chrome 73 introduced [detailed tooltips when in Inspect mode][23].
 
-![A detailed tooltip.](/web/updates/images/2019/04/inspect1.png)
+{% Img src="image/admin/bZiwRUHS71QoTcp639yN.png", alt="A detailed tooltip.", width="800", height="596" %}
 
 **Figure 11**. A detailed tooltip showing color, font, margin, and contrast.
 
 You can now disable these detailed tooltips from [**Settings**][24] > **Preferences** >
 **Elements** > **Show Detailed Inspect Tooltip**.
 
-![A minimal tooltip.](/web/updates/images/2019/04/inspect2.png)
+{% Img src="image/admin/gAKNoI1QKD7Qm9okQsJh.png", alt="A minimal tooltip.", width="800", height="596" %}
 
 **Figure 12**. A minimal tooltip showing only width and height.
 

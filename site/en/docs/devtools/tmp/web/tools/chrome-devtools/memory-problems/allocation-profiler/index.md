@@ -23,7 +23,7 @@ then stop the recording for analysis.
 The tool takes heap snapshots periodically throughout the recording (as frequently as every 50 ms!)
 and one final snapshot at the end of the recording.
 
-![Allocation profiler](/web/tools/chrome-devtools/memory-problems/imgs/object-tracker.png)
+{% Img src="image/admin/eQkiSycjOtiM8pGHNCFH.png", alt="Allocation profiler", width="620", height="474" %}
 
 !!!.aside.aside--note
 
@@ -41,7 +41,7 @@ To begin using the allocation profiler:
 2.  Open the Developer Tools and click on the gear icon in the lower right.
 3.  Now, open the Profiler panel, you should see a profile called "Record Heap Allocations"
 
-![Record heap allocations profiler](/web/tools/chrome-devtools/memory-problems/imgs/record-heap.png)
+{% Img src="image/admin/f5LWyjVhPWDTihZsMBRU.png", alt="Record heap allocations profiler", width="800", height="444" %}
 
 ## Read a heap allocation profile {: #read_a_heap_allocation_profile }
 
@@ -53,7 +53,7 @@ the bars indicate whether or not those objects are still live in the final heap 
 indicate objects that are still live at the end of the timeline, Gray bars indicate objects that
 were allocated during the timeline, but have since been garbage collected:
 
-![Allocation profiler snapshot](/web/tools/chrome-devtools/memory-problems/imgs/collected.png)
+{% Img src="image/admin/nSsCYXi2rkMk2SBaH9Gj.png", alt="Allocation profiler snapshot", width="800", height="416" %}
 
 In the snapshot below, an action was performed 10 times. The sample program caches five objects, so
 the last five blue bars are expected. But the leftmost blue bar indicates a potential problem.
@@ -61,7 +61,7 @@ the last five blue bars are expected. But the leftmost blue bar indicates a pote
 You can then use the sliders in the timeline above to zoom in on that particular snapshot and see
 the objects that were recently allocated at that point:
 
-![Zoom in on snapshot](/web/tools/chrome-devtools/memory-problems/imgs/sliders.png)
+{% Img src="image/admin/6VYMytA90PywfFglF7mu.png", alt="Zoom in on snapshot", width="800", height="416" %}
 
 Clicking on a specific object in the heap will show its retaining tree in the bottom portion of the
 heap snapshot. Examining the retaining path to the object should give you enough information to

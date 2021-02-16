@@ -22,7 +22,7 @@ Use the Chrome DevTools _Timeline_ panel to record and analyze all the activity 
 as it runs. It's the best place to start investigating perceived performance issues in your
 application.
 
-![Timeline tool](/web/tools/chrome-devtools/evaluate-performance/imgs/timeline-panel.png)
+{% Img src="image/admin/dTWv7nk48ctaQVAL9khU.png", alt="Timeline tool", width="800", height="568" %}
 
 ## TL;DR {: #tldr }
 
@@ -58,7 +58,7 @@ The Timeline panel consists of four panes:
 4.  **Details**. When an event is selected, this pane shows more information about that event. When
     no event is selected, this pane shows information about the selected time frame.
 
-![annotated timeline panel](/web/tools/chrome-devtools/evaluate-performance/imgs/timeline-annotated.png)
+{% Img src="image/admin/v7D5LYMXYrWz6efWVbvN.png", alt="annotated timeline panel", width="800", height="567" %}
 
 ### Overview pane {: #overview_pane }
 
@@ -82,7 +82,7 @@ The **Overview** pane consists of three graphs:
     - Media files are **green**.
     - Miscellaneous resources are **grey**.
 
-![overview pane, annotated](/web/tools/chrome-devtools/evaluate-performance/imgs/overview-annotated.jpg)
+{% Img src="image/admin/2HDqQih0c6Ee8v8QxFd2.jpg", alt="overview pane, annotated", width="800", height="145" %}
 
 ## Make a recording {: #make_a_recording }
 
@@ -97,7 +97,7 @@ record, and then reload the page. The **Timeline** panel automatically records t
 
 To make a recording of a _page interaction_, open the **Timeline** panel, then start the recording
 by pressing the **Record** button
-(![record button](/web/tools/chrome-devtools/evaluate-performance/imgs/record-off.png)) or by typing
+({% Img src="image/admin/0lDkj81bWVh1br1t9Hn6.png", alt="record button", width="26", height="26" %}) or by typing
 the keyboard shortcut <kbd>Cmd</kbd>+<kbd>E</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>E</kbd> (Windows /
 Linux). The **Record** button turns red during a recording. Perform your page interactions, and then
 press the **Record** button or type the keyboard shortcut again to stop the recording.
@@ -129,7 +129,7 @@ you, and automatically zooms to that portion.
 When you select an event in the **Flame Chart**, the **Details** pane displays additional
 information about the event.
 
-![details pane](/web/tools/chrome-devtools/evaluate-performance/imgs/details-pane.png)
+{% Img src="image/admin/r3JM81hXuBDtKQ8zOQHu.png", alt="details pane", width="800", height="544" %}
 
 Some tabs, like **Summary**, are present for all event types. Other tabs are only available to
 certain event types. See the [Timeline event reference][12] for details on each record type.
@@ -149,7 +149,7 @@ The **Timeline** panel can capture screenshots during a page load. This feature 
 Enable the **Screenshots** checkbox in the **Controls** pane before you make a recording to capture
 screenshots of the recording. The screenshots are displayed below the **Overview** pane.
 
-![timeline recording with filmstrip](/web/tools/chrome-devtools/evaluate-performance/imgs/timeline-filmstrip.png)
+{% Img src="image/admin/97ajXOfoK4FCXbMkZeaL.png", alt="timeline recording with filmstrip", width="800", height="293" %}
 
 Hover your mouse over the **Screenshots** or **Overview** pane to view a zoomed screenshot of that
 point in the recording. Move your mouse left and right to simulate an animation of the recording.
@@ -170,7 +170,7 @@ Enable the **JS Profile** checkbox before you take a recording to capture JavaSc
 timeline recording. When the JS profiler is enabled, your flame chart shows every JavaScript
 function that was called.
 
-![flame chart with JS profile enabled](/web/tools/chrome-devtools/evaluate-performance/imgs/js-profile.png)
+{% Img src="image/admin/Wi65B9xauldX3FNvlWrD.png", alt="flame chart with JS profile enabled", width="800", height="605" %}
 
 ## Profile painting {: #profile-painting }
 
@@ -184,7 +184,7 @@ Enable the **Paint** checkbox before you take a recording to gain more insight i
 events. When paint profiling is enabled and you click on a **Paint** event, a new **Paint Profiler**
 tab is displayed in the **Details** pane that shows much more granular information about the event.
 
-![paint profiler](/web/tools/chrome-devtools/evaluate-performance/imgs/paint-profiler.png)
+{% Img src="image/admin/HKXiy68yW83qidJuSyp7.png", alt="paint profiler", width="800", height="713" %}
 
 ### Rendering settings {: #rendering-settings }
 
@@ -199,7 +199,7 @@ Open the main DevTools menu and select **More tools** > **Rendering settings** t
 settings that may be helpful when debugging paint issues. The rendering settings opens up as a tab
 next to the **Console** drawer (press <kbd>esc</kbd> to show the drawer, if it's hiding).
 
-![rendering settings](/web/tools/chrome-devtools/evaluate-performance/imgs/rendering-settings.png)
+{% Img src="image/admin/ZcLDi0MVFyn0EmFnX21I.png", alt="rendering settings", width="800", height="380" %}
 
 ## Search records {: #search_records }
 
@@ -225,7 +225,7 @@ time that you press the up or down arrow, a new event is selected, so you can vi
 the **Details** pane. Pressing the up and down arrows is equivalent to clicking on an event in the
 **Flame Chart**.
 
-![find toolbar](/web/tools/chrome-devtools/evaluate-performance/imgs/find-toolbar.png)
+{% Img src="image/admin/r1QbF8jnBeyaxmgglRo2.png", alt="find toolbar", width="690", height="307" %}
 
 ## Zoom in on a Timeline section {: #zoom }
 
@@ -240,7 +240,7 @@ You can zoom in on a section of a recording to make analysis easier. You use the
 to zoom in on a section of the recording. After zooming, the **Flame Chart** is automatically zoomed
 to match the same section.
 
-![zoom in on a section of a timeline recording](/web/tools/chrome-devtools/evaluate-performance/imgs/zoom.png)
+{% Img src="image/admin/B9s6zXrFb1IBqAmw9CFX.png", alt="zoom in on a section of a timeline recording", width="800", height="246" %}
 
 To zoom in on a Timeline section:
 
@@ -265,7 +265,7 @@ respectively. <kbd>A</kbd> and <kbd>D</kbd> move left and right, respectively.
 You can save and open recordings by right-clicking inside the **Overview** or **Flame Chart** panes
 and selecting the relevant option.
 
-![save and open recordings](/web/tools/chrome-devtools/evaluate-performance/imgs/save-open.png)
+{% Img src="image/admin/HcZf7ZzxWzsu5qWhFL9l.png", alt="save and open recordings", width="517", height="342" %}
 
 You can also share saved recordings using [timeline-viewer][23].
 

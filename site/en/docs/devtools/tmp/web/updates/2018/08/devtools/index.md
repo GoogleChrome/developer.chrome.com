@@ -33,22 +33,22 @@ Read on, or watch the video version of this doc:
 Pin a Live Expression to the top of your Console when you want to monitor its value in real-time.
 
 1.  Click **Create Live Expression**
-    ![Create Live Expression](/web/updates/images/2018/08/create-live-expression.png). The Live
+    {% Img src="image/admin/I2koUa4iploELZN4Rs8N.png", alt="Create Live Expression", width="33", height="23" %}. The Live
     Expression UI opens.
 
-    ![The Live Expression UI](/web/updates/images/2018/08/live1.png)
+    {% Img src="image/admin/SZdCaRdB0m9KOBaKzC0w.png", alt="The Live Expression UI", width="800", height="516" %}
 
     **Figure 1**. The Live Expression UI
 
 2.  Type the expression that you want to monitor.
 
-    ![Typing Date.now() into the Live Expression UI.](/web/updates/images/2018/08/live2.png)
+    {% Img src="image/admin/zgB9xFL6x4NRg79TLjJX.png", alt="Typing Date.now() into the Live Expression UI.", width="800", height="516" %}
 
     **Figure 2**. Typing `Date.now()` into the Live Expression UI
 
 3.  Click outside of the Live Expression UI to save your expression.
 
-    ![A saved Live Expression.](/web/updates/images/2018/08/live3.png)
+    {% Img src="image/admin/IE8bIVdTjaGBPqKd4euz.png", alt="A saved Live Expression.", width="800", height="516" %}
 
     **Figure 3**. A saved Live Expression
 
@@ -88,7 +88,7 @@ When profiling a large page, the Performance panel previously took tens of secon
 visualize the data. Clicking on a event to learn more about it in the Summary tab also sometimes
 took multiple seconds to load. Processing and visualizing is faster in Chrome 70.
 
-![Processing and loading Performance data.](/web/updates/images/2018/08/performance.png)
+{% Img src="image/admin/nymZOf5a8pVh6FgTYU9t.png", alt="Processing and loading Performance data.", width="800", height="638" %}
 
 **Figure 5**. Processing and loading Performance data
 
@@ -105,7 +105,7 @@ to generally run slowly.
 
 You can now set network throttling to fast 3G or slow 3G from the [Command Menu][13].
 
-![Network throttling commands in the Command Menu.](/web/updates/images/2018/08/throttling.png)
+{% Img src="image/admin/IcmXceEt6IOkJgJ4FIkH.png", alt="Network throttling commands in the Command Menu.", width="800", height="467" %}
 
 **Figure 6**. Network throttling commands in the Command Menu
 
@@ -113,7 +113,7 @@ You can now set network throttling to fast 3G or slow 3G from the [Command Menu]
 
 Use the Autocomplete UI to type out your [Conditional Breakpoint][14] expressions faster.
 
-![The Autocomplete UI](/web/updates/images/2018/08/autocomplete.png)
+{% Img src="image/admin/9yFogzZSqY04KLMP4d8J.png", alt="The Autocomplete UI", width="800", height="638" %}
 
 **Figure 7**. The Autocomplete UI
 
@@ -127,7 +127,7 @@ lifecycle event handler.
 
 [AudioContext][17] is part of the Web Audio API, which you can use to process and synthesize audio.
 
-![AudioContext events in the Event Listener Breakpoints pane.](/web/updates/images/2018/08/audiocontext.png)
+{% Img src="image/admin/BLgPmE3bubvc3nfPMLkg.png", alt="AudioContext events in the Event Listener Breakpoints pane.", width="800", height="648" %}
 
 **Figure 8**. AudioContext events in the Event Listener Breakpoints pane
 
@@ -147,7 +147,7 @@ through DevTools][18], ndb also offers:
 - Editing files within the DevTools UI.
 - Blackboxing all scripts outside of the current working directory by default.
 
-![The ndb UI.](/web/updates/images/2018/08/ndb.png)
+{% Img src="image/admin/P6mBnxfW1xelxoTbdVWK.png", alt="The ndb UI.", width="800", height="432" %}
 
 **Figure 9**. The ndb UI
 
@@ -187,7 +187,7 @@ const CTA = window.performance.getEntriesByName('CTA')[0].duration;
 DevTools automatically marks up your User Timing measurements in the **User Timing** section of your
 Performance recordings.
 
-![The User Timing section.](/web/updates/images/2018/08/usertiming.png)
+{% Img src="image/admin/7dzjqyjRXEFZVoFTVwUq.png", alt="The User Timing section.", width="800", height="689" %}
 
 **Figure 10**. The User Timing section
 

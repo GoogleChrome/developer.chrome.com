@@ -63,7 +63,7 @@ Click on a **Recalculate Style** event to view more information about it in the 
 the style changes are taking a long time, that's a performance hit. If the style calculations are
 affecting a large number of elements, that's another area with room for improvement.
 
-![Long recalculate style](/web/tools/chrome-devtools/rendering-tools/imgs/recalculate-style.png)
+{% Img src="image/admin/FqzRqrOzaWhqMeBbg0W7.png", alt="Long recalculate style", width="800", height="466" %}
 
 To reduce the impact of **Recalculate Style** events:
 
@@ -103,7 +103,7 @@ Related Guides:
 The Chrome DevTools **Timeline** identifies when a page causes forced synchronous layouts. These
 **Layout** events are marked with red bars.
 
-![forced synchronous layout](/web/tools/chrome-devtools/rendering-tools/imgs/forced-synchronous-layout.png)
+{% Img src="image/admin/fDFrcqzkWgCWYLcoCfSj.png", alt="forced synchronous layout", width="800", height="206" %}
 
 "Layout thrashing" is a repetition of forced synchronous layout conditions. This occurs when
 JavaScript writes and reads from the DOM repeatedly, which forces the browser to recalculate the
@@ -133,7 +133,7 @@ Want to know how long painting takes or how often painting occurs? Enable the [P
 on the **Timeline** panel and then [make a recording][23]. If most of your rendering time is spent
 painting, you have paint problems.
 
-![Long paint times in timeline recording](/web/tools/chrome-devtools/rendering-tools/imgs/long-paint.png)
+{% Img src="image/admin/FpTO5wDQ5w3vsbYeWARc.png", alt="Long paint times in timeline recording", width="800", height="637" %}
 
 Check out the [**rendering settings**][24] menu for further configurations that can help diagnose
 paint problems.

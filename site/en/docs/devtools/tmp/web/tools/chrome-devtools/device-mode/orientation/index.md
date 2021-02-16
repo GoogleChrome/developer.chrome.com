@@ -14,7 +14,7 @@ To simulate different [device orientations][1] from Chrome DevTools:
     <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the
     **Command Menu**.
 
-    ![The Command Menu.](/web/tools/chrome-devtools/images/shared/command-menu.png)
+    {% Img src="image/admin/ybeQIXE0h2xg3nfKPFZU.png", alt="The Command Menu.", width="800", height="632" %}
 
     **Figure 1**. The Command Menu
 
@@ -23,7 +23,7 @@ To simulate different [device orientations][1] from Chrome DevTools:
 3.  From the **Orientation** list select one of the preset orientations, like **Portrait upside
     down**, or select **Custom orientation** to provide your own exact orientation.
 
-    ![Selecting 'Portrait upside down' from the 'Orientation' list.](/web/tools/chrome-devtools/device-mode/imgs/portrait-upside-down.png)
+    {% Img src="image/admin/y5lnWi2Sa77ADlcTea2h.png", alt="Selecting 'Portrait upside down' from the 'Orientation' list.", width="800", height="663" %}
 
     **Figure 2**. Selecting **Portrait upside down** from the **Orientation** list
 
@@ -33,7 +33,7 @@ To simulate different [device orientations][1] from Chrome DevTools:
     You can also set a custom orientation by dragging the **Orientation Model**. Hold
     <kbd>Shift</kbd> before dragging to rotate along the **alpha** axis.
 
-    ![The Orientation Model.](/web/tools/chrome-devtools/device-mode/imgs/orientation-model.png)
+    {% Img src="image/admin/Dq2YzD2HbRXAyyrSHDun.png", alt="The Orientation Model.", width="800", height="648" %}
 
     **Figure 3**. The **Orientation Model**
 

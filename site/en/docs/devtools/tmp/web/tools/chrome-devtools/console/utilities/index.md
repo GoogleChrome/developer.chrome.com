@@ -29,13 +29,13 @@ Looking for `console.log()`, `console.error()`, and the rest of the `console.*` 
 In the following example, a simple expression (`2 + 2`) is evaluated. The `$_` property is then
 evaluated, which contains the same value:
 
-![$_ is the most recently evaluated expression](/web/tools/chrome-devtools/console/images/recently-evaluated-expression-1.png)
+{% Img src="image/admin/TfgjCE7ayHU8lwJJTFss.png", alt="$_ is the most recently evaluated expression", width="800", height="238" %}
 
 In the next example, the evaluated expression initially contains an array of names. Evaluating
 `$_.length` to find the length of the array, the value stored in `$_` changes to become the latest
 evaluated expression, 4:
 
-![$_ changes when new commands are evaluated](/web/tools/chrome-devtools/console/images/recently-evaluated-expression-2.png)
+{% Img src="image/admin/d2jU3P5gc4G2OuK4PMQ1.png", alt="$_ changes when new commands are evaluated", width="800", height="319" %}
 
 ## $0 - $4 {: #dom }
 
@@ -47,12 +47,12 @@ returns the second most recently selected one, and so on.
 In the following example, an `img` element is selected in the Elements panel. In the Console drawer,
 `$0` has been evaluated and displays the same element:
 
-![Example of $0](/web/tools/chrome-devtools/console/images/element-0.png)
+{% Img src="image/admin/v9jdOozAkvhutIYnejJl.png", alt="Example of $0", width="800", height="186" %}
 
 The image below shows a different element selected in the same page. The `$0` now refers to newly
 selected element, while `$1` returns the previously selected one:
 
-![Example of $1](/web/tools/chrome-devtools/console/images/element-1.png)
+{% Img src="image/admin/ET1JJFtUIXvaoPCGQ94C.png", alt="Example of $1", width="800", height="318" %}
 
 ## \$(selector, \[startNode\]) {: #queryselector }
 
@@ -61,7 +61,7 @@ called with one argument, this function is an alias for the [document.querySelec
 
 The following example returns a reference to the first `<img>` element in the document:
 
-![Example of $('img')](/web/tools/chrome-devtools/console/images/selector-img.png)
+{% Img src="image/admin/poVWF9iRLAYZ08O2t88S.png", alt="Example of $('img')", width="800", height="234" %}
 
 Right-click on the returned result and select 'Reveal in Elements Panel' to find it in the DOM, or
 'Scroll in to View' to show it on the page.
@@ -69,7 +69,7 @@ Right-click on the returned result and select 'Reveal in Elements Panel' to find
 The following example returns a reference to the currently selected element and displays its src
 property:
 
-![Example of $('img').src](/web/tools/chrome-devtools/console/images/selector-img-src.png)
+{% Img src="image/admin/TLcKoLAXcrFcOgSPnNaD.png", alt="Example of $('img').src", width="800", height="234" %}
 
 This function also supports a second parameter, startNode, that specifies an 'element' or Node from
 which to search for elements. The default value of this parameter is `document`.
@@ -77,7 +77,7 @@ which to search for elements. The default value of this parameter is `document`.
 The following example returns a reference to the first element after the currently selected Node and
 displays its src properly:
 
-![Example of $('img', div).src](/web/tools/chrome-devtools/console/images/selector-img-div-src.png)
+{% Img src="image/admin/Q5XlmeIMaHQkpP1QryBd.png", alt="Example of $('img', div).src", width="800", height="234" %}
 
 !!!.aside.aside--note
 
@@ -117,7 +117,7 @@ var images = $$('img', document.querySelector('.devsite-header-background'));
    }
 ```
 
-![Example of using $$() to select all images appearing after the select div element in the document and displaying their sources.](/web/tools/chrome-devtools/console/images/all-selector-div.png)
+{% Img src="image/admin/MKKFwNfiqaq8JPUkgchF.png", alt="Example of using $() to select all images appearing after the select div element in the document and displaying their sources.", width="800", height="336" %}
 
 !!!.aside.aside--note
 
@@ -136,7 +136,7 @@ For example, the following returns all the `<p>` elements on the page:
     $x("//p")
 ```
 
-![Example of using an XPath selector](/web/tools/chrome-devtools/console/images/xpath-p-example.png)
+{% Img src="image/admin/8fIwlT9ZWd9109E9jyRb.png", alt="Example of using an XPath selector", width="800", height="282" %}
 
 The following example returns all the `<p>` elements that contain `<a>` elements:
 
@@ -144,12 +144,12 @@ The following example returns all the `<p>` elements that contain `<a>` elements
     $x("//p[a]")
 ```
 
-![Example of using a more complicated XPath selector](/web/tools/chrome-devtools/console/images/xpath-p-a-example.png)
+{% Img src="image/admin/qvqloRRfS4IU1WhDsJkP.png", alt="Example of using a more complicated XPath selector", width="800", height="251" %}
 
 Similar to the other selector functions, `$x(path)` has an optional second parameter, `startNode`,
 that specifies an element or Node from which to search for elements.
 
-![Example of using an XPath selector with startNode](/web/tools/chrome-devtools/console/images/xpath-p-node-example.png)
+{% Img src="image/admin/srYQFy4Y7TRlT0kGarUN.png", alt="Example of using an XPath selector with startNode", width="800", height="282" %}
 
 ## clear() {: #clear }
 
@@ -176,7 +176,7 @@ Sources panel allowing to step through the code and debug it.
     debug(getData);
 ```
 
-![Breaking inside a function with debug()](/web/tools/chrome-devtools/console/images/debug.png)
+{% Img src="image/admin/dhPBjuzWvsEbHeGR5NpQ.png", alt="Breaking inside a function with debug()", width="800", height="526" %}
 
 Use `undebug(fn)` to stop breaking on the function, or use the UI to disable all breakpoints.
 
@@ -195,7 +195,7 @@ command line, and using `dir()` to display the same element:
     dir(document.body);
 ```
 
-![Logging document.body with and without dir() function](/web/tools/chrome-devtools/console/images/dir.png)
+{% Img src="image/admin/SBW2kszkhG1rlXfxtQDg.png", alt="Logging document.body with and without dir() function", width="800", height="590" %}
 
 For more information, see the [`console.dir()`][5] entry in the Console API.
 
@@ -215,7 +215,7 @@ The following example opens the `document.body` in the Elements panel:
     inspect(document.body);
 ```
 
-![Inspecting an element with inspect()](/web/tools/chrome-devtools/console/images/inspect.png)
+{% Img src="image/admin/BDFR3iEMqRnWIWrrVEu6.png", alt="Inspecting an element with inspect()", width="800", height="337" %}
 
 When passing a function to inspect, the function opens the document up in the Sources panel for you
 to inspect.
@@ -232,17 +232,17 @@ object:
     getEventListeners(document);
 ```
 
-![Output of using getEventListeners()](/web/tools/chrome-devtools/console/images/get-event-listeners.png)
+{% Img src="image/admin/pVhvAi37yxLejbODHGSZ.png", alt="Output of using getEventListeners()", width="800", height="255" %}
 
 If more than one listener is registered on the specified object, then the array contains a member
 for each listener. In the following example, there are two event listeners registered on the
 document element for the `click` event:
 
-![Multiple listeners](/web/tools/chrome-devtools/console/images/scrolling-list.png)
+{% Img src="image/admin/Hlh3CErBYJTTNg9butfj.png", alt="Multiple listeners", width="800", height="389" %}
 
 You can further expand each of these objects to explore their properties:
 
-![Expanded view of listener object](/web/tools/chrome-devtools/console/images/scrolling-list-expanded.png)
+{% Img src="image/admin/EJnoDfrKGIhwz7cx0WE3.png", alt="Expanded view of listener object", width="800", height="389" %}
 
 ## keys(object) {: #keys }
 
@@ -258,7 +258,7 @@ For example, suppose your application defined the following object:
 Assuming `player1` was defined in the global namespace (for simplicity), typing `keys(player1)` and
 `values(player1)` in the console results in the following:
 
-![Example of keys() and values() methods](/web/tools/chrome-devtools/console/images/keys-values.png)
+{% Img src="image/admin/HYEKFYyD93YzGLoF2avv.png", alt="Example of keys() and values() methods", width="800", height="226" %}
 
 ## monitor(function) {: #monitor }
 
@@ -272,7 +272,7 @@ function name along with the arguments that are passed to the function when it w
     monitor(sum);
 ```
 
-![Example of monitor() method](/web/tools/chrome-devtools/console/images/monitor.png)
+{% Img src="image/admin/V28TFRjUqryt2u3b2zls.png", alt="Example of monitor() method", width="800", height="221" %}
 
 Use `unmonitor(function)` to cease monitoring.
 
@@ -288,7 +288,7 @@ The following monitors all resize events on the window object.
     monitorEvents(window, "resize");
 ```
 
-![Monitoring window resize events](/web/tools/chrome-devtools/console/images/monitor-events.png)
+{% Img src="image/admin/ZrU8M58cKhN2eZRpiNVI.png", alt="Monitoring window resize events", width="800", height="252" %}
 
 The following defines an array to monitor both "resize" and "scroll" events on the window object:
 
@@ -310,7 +310,7 @@ field currently selected in the Elements panel.
 
 Below is sample output after typing a characters in the text field:
 
-![Monitoring key events](/web/tools/chrome-devtools/console/images/monitor-key.png)
+{% Img src="image/admin/Shs04IRgNP87cbbjCbtd.png", alt="Monitoring key events", width="800", height="252" %}
 
 ## profile(\[name\]) and profileEnd(\[name\]) {: #profilename_and_profileendname }
 
@@ -341,7 +341,7 @@ Profiles can also be nested. For example, this will work in any order:
 
 Result in the profiles panel:
 
-![Grouped profiles](/web/tools/chrome-devtools/console/images/grouped-profiles.png)
+{% Img src="image/admin/BWxxLJby5scm6zF0eidW.png", alt="Grouped profiles", width="800", height="469" %}
 
 !!!.aside.aside--note
 
@@ -375,7 +375,7 @@ For example, to display a list of names using a table in the console, you would 
     table(names);
 ```
 
-![Example of table() method](/web/tools/chrome-devtools/console/images/table.png)
+{% Img src="image/admin/jI1NQZJs08FsKA6nMyIp.png", alt="Example of table() method", width="800", height="488" %}
 
 ## undebug(function) {: #undebug }
 

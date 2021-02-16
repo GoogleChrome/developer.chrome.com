@@ -35,11 +35,11 @@ Future versions of Chrome will support more issue types.
 
     Alternatively, select **Issues** from the **More tools** menu.
 
-    ![Chrome DevTools screenshot showing Issues tab in More tools menu.](/web/tools/chrome-devtools/issues/images/more-tools-menu.png)
+    {% Img src="image/admin/I1lYj0JQnddws06dscVU.png", alt="Chrome DevTools screenshot showing Issues tab in More tools menu.", width="800", height="350" %}
 
 4.  Once you're on the Issues tab, click the **Reload page** button if necessary.
 
-    ![Chrome DevTools screenshot showing Issues tab with 'Reload page' button.](/web/tools/chrome-devtools/issues/images/issues-tab-before-reload.png)
+    {% Img src="image/admin/LeFSmbYEy8cjAmdqNYr9.png", alt="Chrome DevTools screenshot showing Issues tab with 'Reload page' button.", width="800", height="481" %}
 
     You'll notice that issues reported in the Console (such as the cookie warnings here) are quite
     hard to understand. It's not clear what needs to be done to fix the issues reported.
@@ -55,7 +55,7 @@ way.
 1.  Click an item in the **Issues** tab to get guidance on how to fix the issue and find affected
     resources.
 
-    ![Chrome DevTools screenshot showing a cookie issue open in the Issues tab.](/web/tools/chrome-devtools/issues/images/issues-tab-issue-open.png)
+    {% Img src="image/admin/ohxdDJRkjvFGaFHO3i0R.png", alt="Chrome DevTools screenshot showing a cookie issue open in the Issues tab.", width="800", height="657" %}
 
     Each item has four components:
 
@@ -68,19 +68,19 @@ way.
 2.  Click on **AFFECTED RESOURCES** items to view details. In this example, there is one cookie and
     one request affected.
 
-    ![Chrome DevTools screenshot showing affected resources open in the Issues tab.](/web/tools/chrome-devtools/issues/images/issues-tab-affected-resources.png)
+    {% Img src="image/admin/6AwuuJhT2Uuxzc395J41.png", alt="Chrome DevTools screenshot showing affected resources open in the Issues tab.", width="800", height="657" %}
 
 ## View issues in context {: #issues-devtools }
 
 1.  Click on a resource link to view the item in the appropriate context within DevTools. In this
     example, click `samesite-sandbox.glitch.me` to show the cookies attached to that request.
 
-    ![Chrome DevTools screenshot showing affected resources open in the Issues tab.](/web/tools/chrome-devtools/issues/images/issues-tab-view-request.png)
+    {% Img src="image/admin/REHyxZ4gkbfzZgRCp3OG.png", alt="Chrome DevTools screenshot showing affected resources open in the Issues tab.", width="800", height="657" %}
 
 2.  Scroll to view the item with a problem: in this case, the cookie `ck02`. Hover over the
     information icon on the right to see the problem and how to fix it.
 
-    ![Chrome DevTools screenshot showing issue with a resource opened from the Issues tab.](/web/tools/chrome-devtools/issues/images/issues-tab-view-issue.png)
+    {% Img src="image/admin/CQlNNpB5ISFRD5lCYkKw.png", alt="Chrome DevTools screenshot showing issue with a resource opened from the Issues tab.", width="800", height="679" %}
 
 [1]: https://web.dev/samesite-cookies-explained
 [2]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content

@@ -51,7 +51,7 @@ To set up **Local Overrides**:
 1.  Open the **Sources** panel.
 2.  Open the **Overrides** tab.
 
-    ![The Overrides tab](/web/updates/images/2018/01/overrides.png)
+    {% Img src="image/admin/KBYIoNu3MLcdTwVrF2of.png", alt="The Overrides tab", width="800", height="588" %}
 
     **Figure 2**. The **Overrides** tab
 
@@ -77,7 +77,7 @@ To set up **Local Overrides**:
 
 Track changes that you make locally in DevTools via the new **Changes** tab.
 
-![The Changes tab](/web/updates/images/2018/01/changes.png)
+{% Img src="image/admin/Sz85zGJr0pSZK0qmSLRI.png", alt="The Changes tab", width="800", height="651" %}
 
 **Figure 3**. The **Changes** tab
 
@@ -114,7 +114,7 @@ affects accessibility.
 Improving the color contrast of your text elements makes your site more usable for _all_ users. In
 other words, if your text is grey with a white background, that's hard for anyone to read.
 
-![Inspecting the contrast ratio of the highlighted H1 element.](/web/updates/images/2018/01/contrast-ratio-collapsed.png)
+{% Img src="image/admin/YG7Bo8L4mFmHNZHOlQ5k.png", alt="Inspecting the contrast ratio of the highlighted H1 element.", width="800", height="508" %}
 
 **Figure 5**. Inspecting the contrast ratio of the highlighted `h1` element
 
@@ -122,13 +122,13 @@ In **Figure 5**, the two checkmarks next to **4.61** means that this element mee
 recommended contrast ratio (AAA)][11]. If it only had one checkmark, that would mean it met the
 [minimum recommended contrast ratio (AA)][12].
 
-Click **Show More** ![Show More](/web/updates/images/2018/01/show-more.png) to expand the **Contrast
+Click **Show More** {% Img src="image/admin/XmkOAQRvFegERSyqg7ri.png", alt="Show More", width="16", height="10" %} to expand the **Contrast
 Ratio** section. The white line in the **Color Spectrum** box represents the boundary between colors
 that meet the recommended contrast ratio, and those that don't. For example, since the grey color in
 **Figure 6** meets recommendations, that means that all of the colors below the white line also meet
 recommendations.
 
-![The expanded Contrast Ratio section.](/web/updates/images/2018/01/contrast-ratio-expanded.png)
+{% Img src="image/admin/lUbK35fGHAwETU0JboBp.png", alt="The expanded Contrast Ratio section.", width="800", height="668" %}
 
 **Figure 6**. The expanded **Contrast Ratio** section
 
@@ -159,7 +159,7 @@ updates from 2.6, 2.7, and 2.8.
 Ensuring that your pages pass each of the audits in the new **SEO** category may help improve your
 search engine rankings.
 
-![The new SEO category of audits.](/web/updates/images/2018/01/seo.png)
+{% Img src="image/admin/TUJ4tg2xSAF3xz53mkL6.png", alt="The new SEO category of audits.", width="800", height="926" %}
 
 **Figure 7**. The new **SEO** category of audits
 
@@ -194,9 +194,9 @@ ways you can improve that page. [Get started][16].
 ## Reliable code stepping with workers and asynchronous code {: #stepping }
 
 Chrome 65 brings updates to the **Step Into**
-![Step Into](/web/tools/chrome-devtools/javascript/imgs/step-into.png) button when stepping into
+{% Img src="image/admin/M2uaA0NnXNpNicUiKtFg.png", alt="Step Into", width="18", height="26" %} button when stepping into
 code that passes messages between threads, and asynchronous code. If you want the previous stepping
-behavior, you can use the new **Step** ![Step](/web/tools/chrome-devtools/javascript/imgs/step.png)
+behavior, you can use the new **Step** {% Img src="image/admin/JhOtwtYfcNqWJ7iHHL29.png", alt="Step", width="26", height="19" %}
 button, instead.
 
 ### Stepping into code that passes messages between threads {: #workers }
@@ -246,7 +246,7 @@ The **Performance** panel now lets you temporarily save up to 5 recordings. The 
 deleted when you close your DevTools window. See [Get Started with Analyzing Runtime
 Performance][20] to get comfortable with the **Performance** panel.
 
-![Selecting between multiple recordings in the Performance panel.](/web/updates/images/2018/01/recordings.png)
+{% Img src="image/admin/FJl8iAdG706qJV74fjob.png", alt="Selecting between multiple recordings in the Performance panel.", width="800", height="712" %}
 
 **Figure 12**. Selecting between multiple recordings in the **Performance** panel
 

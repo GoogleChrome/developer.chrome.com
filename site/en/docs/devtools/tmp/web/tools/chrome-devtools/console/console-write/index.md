@@ -39,7 +39,7 @@ console.log("Node count:", a.childNodes.length, "and the current time is:", Date
 ```
 
 Will output this in the Console:
-![Log Multiple](/web/tools/chrome-devtools/console/images/console-write-log-multiple.png)
+{% Img src="image/admin/pwWQ9y5zdiEqQGGzCilY.png", alt="Log Multiple", width="800", height="145" %}
 
 ## Autocompleting commands {: #autocomplete }
 
@@ -47,7 +47,7 @@ When you type in the Console, the Console automatically displays an autocomplete
 relevant methods that match the text that you have already typed. This includes previous commands
 that you executed.
 
-![example of autocomplete](/web/tools/chrome-devtools/console/images/autocomplete.png)
+{% Img src="image/admin/q1Jk3l0Kt9XdDomLWCL8.png", alt="example of autocomplete", width="800", height="769" %}
 
 ## Organizing Console output {: #organizing }
 
@@ -73,7 +73,7 @@ console.groupEnd();
 ```
 
 Example output:
-![Simple console group output](/web/tools/chrome-devtools/console/images/console-write-group.png)
+{% Img src="image/admin/j2QgLIGrjVG7zrICvTV7.png", alt="Simple console group output", width="800", height="183" %}
 
 #### Nested groups {: #nested_groups }
 
@@ -102,7 +102,7 @@ console.log("A group-less log trace.");
 ```
 
 And here's the nested groups output in the console:
-![Simple console group output](/web/tools/chrome-devtools/console/images/console-write-nestedgroup.png)
+{% Img src="image/admin/diMvCAsFDsQKdJyjG0ch.png", alt="Simple console group output", width="800", height="223" %}
 
 #### Auto-collapsing groups {: #auto-collapsing_groups }
 
@@ -119,7 +119,7 @@ console.groupEnd();
 ```
 
 groupCollapsed() output:
-![Initially collapsed group](/web/tools/chrome-devtools/console/images/console-write-groupcollapsed.png)
+{% Img src="image/admin/0E09ohyas3O6fgaZ9Fnn.png", alt="Initially collapsed group", width="800", height="164" %}
 
 ## Errors and warnings {: #errors_and_warnings }
 
@@ -139,7 +139,7 @@ connectToServer();
 
 turns into
 
-![Error example output](/web/tools/chrome-devtools/console/images/console-write-error-server-not-resp.png)
+{% Img src="image/admin/k0eARpgPxTUgnVPshAF3.png", alt="Error example output", width="800", height="226" %}
 
 ### console.warn() {: #consolewarn }
 
@@ -153,7 +153,7 @@ if(a.childNodes.length < 3 ) {
 
 turns into
 
-![Warn example](/web/tools/chrome-devtools/console/images/console-write-warning-too-few-nodes.png)
+{% Img src="image/admin/RdU6itMGeX0foYrb1WbT.png", alt="Warn example", width="800", height="142" %}
 
 ## Assertions {: #assertions }
 
@@ -170,7 +170,7 @@ console.assert(list.childNodes.length <= 500, "Node count is > 500");
 ```
 
 How an assertion failure displays in the console:
-![Assertion failed](/web/tools/chrome-devtools/console/images/console-write-assert-failed.png)
+{% Img src="image/admin/zIZbyTOS1WYXeqQJ9qOW.png", alt="Assertion failed", width="800", height="142" %}
 
 ## String substitution and formatting {: #string_substitution_and_formatting }
 
@@ -214,7 +214,7 @@ console.log("%cThis will be formatted with large, blue text", "color: blue; font
 
 ..to make your log output large and blue:
 
-![Formatted string](/web/tools/chrome-devtools/console/images/console-write-format-string.png)
+{% Img src="image/admin/sDAr9UIoHr1mbFga8NBS.png", alt="Formatted string", width="800", height="236" %}
 
 ### Formatting DOM elements as JavaScript objects {: #formatting_dom_elements_as_javascript_objects }
 
@@ -222,7 +222,7 @@ By default, DOM elements are logged into the console as representation of their 
 you want to access the DOM element as JavaScript object and inspect its properties. You can use the
 `%O` string specifier to do that (see above), or use `console.dir` to achieve the same:
 
-![Logging an element using dir()](/web/tools/chrome-devtools/console/images/dir-element.png)
+{% Img src="image/admin/loRrwjLCDtEOqfTC93Dd.png", alt="Logging an element using dir()", width="800", height="324" %}
 
 [1]: /web/tools/chrome-devtools/console/console-reference#log
 [2]: /web/tools/chrome-devtools/debug/console/console-reference#error

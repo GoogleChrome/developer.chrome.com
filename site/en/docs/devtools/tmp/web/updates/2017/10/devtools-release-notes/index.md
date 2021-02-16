@@ -92,13 +92,13 @@ in Chrome 63, now you can. Try it now:
 5.  Go to the **Service Workers** pane.
 6.  Write something in the **Push** text box.
 
-    ![Simulating a push notification with custom data.](/web/updates/images/2017/10/push-text.png)
+    {% Img src="image/admin/UQm1GplN9Vont3jI4wGb.png", alt="Simulating a push notification with custom data.", width="800", height="488" %}
     **Figure 1**. Simulating a push notification with custom data via the **Push** text box in the
     **Service Worker** pane
 
 7.  Click **Push** to send the notification.
 
-    ![The simulated push notification](/web/updates/images/2017/10/push-result.png)
+    {% Img src="image/admin/0WYH7Hl1TojntCXGQhpV.png", alt="The simulated push notification", width="789", height="188" %}
 
     **Figure 2**. The simulated push notification
 
@@ -112,7 +112,7 @@ now you can send custom tags:
 3.  Enter some text in the **Sync** text box.
 4.  Click **Sync**.
 
-![Triggering a custom background sync event](/web/updates/images/2017/10/sync.png)
+{% Img src="image/admin/JcCAO4fmPvVtkqZTqVgN.png", alt="Triggering a custom background sync event", width="800", height="553" %}
 
 **Figure 3**. After clicking **Sync**, DevTools sends a background sync event with the custom tag
 `update-content` to the service worker

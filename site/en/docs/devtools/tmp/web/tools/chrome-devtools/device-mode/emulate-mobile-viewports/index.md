@@ -32,7 +32,7 @@ go fully responsive.
 
 !!!
 
-![device mode enabled](/web/tools/chrome-devtools/device-mode/imgs/device-mode.png)
+{% Img src="image/admin/tZAo3YXiqJNVR2ggHK39.png", alt="device mode enabled", width="800", height="303" %}
 
 The Viewport Controls allow you to test your site against a variety of devices, as well as fully
 responsively. It comes in two modes:
@@ -88,7 +88,7 @@ each preset automatically configures emulation of certain device characteristics
 - Emulates mobile scrollbar overlays and meta viewport.
 - Autosizes (boosts) text for pages without a defined viewport.
 
-![select a device](/web/tools/chrome-devtools/device-mode/imgs/select-device.png)
+{% Img src="image/admin/AZ8ONM8cxQYYC31pRMFB.png", alt="select a device", width="334", height="496" %}
 
 ### Adding custom device presets {: #adding_custom_device_presets }
 
@@ -111,7 +111,7 @@ To add a custom device:
 
 Your custom device is now available in the **Device** dropdown menu.
 
-![select a device](/web/tools/chrome-devtools/device-mode/imgs/custom-device.png)
+{% Img src="image/admin/p6ujBaYFVFJbOMJ6vuEU.png", alt="select a device", width="800", height="659" %}
 
 ### Device states and orientation {: #device_states_and_orientation }
 
@@ -121,7 +121,7 @@ Your custom device is now available in the **Device** dropdown menu.
 
 !!!
 
-![toggle orientation](/web/tools/chrome-devtools/device-mode/imgs/change-orientation.png)
+{% Img src="image/admin/fx1n9GLOUyeWsQL3X6nx.png", alt="toggle orientation", width="800", height="91" %}
 
 When emulating a specific device, the Device Mode toolbar shows an additional control that primarily
 serves as a way to toggle the orientation between landscape and portrait.
@@ -133,7 +133,7 @@ like the Nexus 5X, you'll get a dropdown that allows you to emulate certain devi
 - With Chrome navigation bar
 - With opened keyboard
 
-![Change the Device UI](/web/tools/chrome-devtools/device-mode/imgs/change-device-state.png)
+{% Img src="image/admin/vpB3Yo8dxFDOc1zcPxrm.png", alt="Change the Device UI", width="462", height="382" %}
 
 ### Zoom to fit {: #zoom_to_fit }
 
@@ -143,7 +143,7 @@ in your browser window. In these cases, the **Zoom to Fit** option comes in hand
 1.  **Fit to Window** will automatically set the zoom level to the maximum available space.
 2.  **Explicit percentages** are useful if you want to test DPI on images, for instance.
 
-![Zoom to Fit](/web/tools/chrome-devtools/device-mode/imgs/zoom-to-fit.png)
+{% Img src="image/admin/XuCNiZaYnD1fYD2HaLGN.png", alt="Zoom to Fit", width="374", height="390" %}
 
 ## Optional controls (e.g. touch, media queries, DPR) {: #optional_controls_eg_touch_media_queries_dpr }
 
@@ -156,7 +156,7 @@ of the device toolbar. Current options include
 - Rulers
 - Configure Network (UA, Network Throttling)
 
-![Device Mode Settings](/web/tools/chrome-devtools/device-mode/imgs/device-mode-dotmenu.png)
+{% Img src="image/admin/0e4VMuw2VbAfYmxjBAnc.png", alt="Device Mode Settings", width="448", height="380" %}
 
 Read on to learn more about the specific options.
 
@@ -194,9 +194,9 @@ will look pixelated.
 inspector, click **Show Media queries** in the three dot menu. The DevTools detect media queries in
 your stylesheets and display them as colored bars in the top ruler.
 
-![show media queries](/web/tools/chrome-devtools/device-mode/imgs/show-media-queries.png)
+{% Img src="image/admin/chA3dy9z2WGMXJU3HVhb.png", alt="show media queries", width="800", height="550" %}
 
-![media query inspector](/web/tools/chrome-devtools/device-mode/imgs/media-query-inspector-ruler.png)
+{% Img src="image/admin/e6LeCoc4RMmFiphKoAKc.png", alt="media query inspector", width="800", height="135" %}
 
 Media queries are color-coded as follows:
 
@@ -212,7 +212,7 @@ sizes.
 Right-click a bar to view where the media query is defined in CSS and jump to the definition in
 source code.
 
-![web fundamentals media queries view](/web/tools/chrome-devtools/device-mode/imgs/reveal-source-code.png)
+{% Img src="image/admin/CEMu2wYVTgIkDk2weKaX.png", alt="web fundamentals media queries view", width="800", height="261" %}
 
 ### Rulers {: #rulers }
 

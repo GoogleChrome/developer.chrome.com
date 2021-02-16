@@ -54,10 +54,10 @@ production.
 
 Source Maps are enabled by default (as of Chrome 39), but if you'd like to double-check or enable
 them, first open DevTools and click the settings cog
-![gear](/web/tools/chrome-devtools/javascript/imgs/gear.png). Under **Sources**, check **Enable
+{% Img src="image/admin/6OvQcMgStUCLS2kGRYn7.png", alt="gear", width="18", height="18" %}. Under **Sources**, check **Enable
 JavaScript Source Maps**. You might also check **Enable CSS Source Maps**.
 
-![Enable Source Maps](/web/tools/chrome-devtools/javascript/imgs/source-maps.jpg)
+{% Img src="image/admin/YGj3osOPCRzs4zWSEjNe.jpg", alt="Enable Source Maps", width="800", height="402" %}
 
 ### Debugging with Source Maps {: #debugging_with_source_maps }
 
@@ -90,7 +90,7 @@ our original source. On the last line, however, will be a `// @sourceURL` commen
 the original source file was. This can greatly help with debugging when working with language
 abstractions.
 
-![Working with sourceURL](/web/tools/chrome-devtools/javascript/imgs/coffeescript.jpg)
+{% Img src="image/admin/KJAs60U1FMmwVUTjElkV.jpg", alt="Working with sourceURL", width="800", height="403" %}
 
 [1]: /web/tools/setup/setup-preprocessors?#supported_preprocessors
 [2]: /web/tools/setup/setup-preprocessors?#debugging-and-editing-preprocessed-content

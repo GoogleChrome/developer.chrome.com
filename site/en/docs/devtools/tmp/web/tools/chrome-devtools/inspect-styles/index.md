@@ -17,7 +17,7 @@ This page is deprecated.
 
 Inspect and live-edit the HTML and CSS of a page using the Chrome DevTools Elements panel.
 
-![Chrome DevTools Elements panel](/web/tools/chrome-devtools/inspect-styles/imgs/elements-panel.png)
+{% Img src="image/admin/Sou6Tb9tOkeInPK5vvCJ.png", alt="Chrome DevTools Elements panel", width="800", height="464" %}
 
 ## TL;DR {: #tldr }
 
@@ -42,7 +42,7 @@ the ones that are greyed out (as is the case with user agent stylesheets).
 To edit a name or value, click on it, make your changes, and press <kbd class="kbd">Tab</kbd> or
 <kbd class="kbd">Enter</kbd> to save the change.
 
-![edit property name](/web/tools/chrome-devtools/inspect-styles/imgs/edit-property-name.png)
+{% Img src="image/admin/6WQzmOQxDEOtXUcgPnQF.png", alt="edit property name", width="800", height="521" %}
 
 By default, your CSS modifications are not permanent, changes are lost when you reload the page. Set
 up [persistent authoring][2] if you want to persist your changes between page loads.
@@ -52,7 +52,7 @@ up [persistent authoring][2] if you want to persist your changes between page lo
 Examine and edit the current element's box model parameters using the **Computed pane**. All values
 in the box model are editable, just click on them.
 
-![Computed pane](/web/tools/chrome-devtools/inspect-styles/imgs/computed-pane.png)
+{% Img src="image/admin/KvIRoQVzjJBGrCaOc0Jf.png", alt="Computed pane", width="800", height="521" %}
 
 The concentric rectangles contain the **top**, **bottom**, **left**, **right** values for the
 current element's **padding**, **border**, and **margin** properties.
@@ -60,14 +60,14 @@ current element's **padding**, **border**, and **margin** properties.
 For non-statically positioned elements, a **position** rectangle is also displayed, containing the
 values of the **top**, **right**, **bottom**, and **left** properties.
 
-![non-static computed element](/web/tools/chrome-devtools/inspect-styles/imgs/computed-non-static.png)
+{% Img src="image/admin/YA77pJ1CQjXQnH4TUuiO.png", alt="non-static computed element", width="800", height="500" %}
 
 For `position: fixed` and `position: absolute` elements, the central field contains the actual
 **offsetWidth × offsetHeight** pixel dimensions of the selected element. All values can be modified
 by double-clicking them, like property values in the Styles pane. The changes are not, however,
 guaranteed to take effect, as this is subject to the concrete element positioning specifics.
 
-![fixed computed element](/web/tools/chrome-devtools/inspect-styles/imgs/computed-fixed.png)
+{% Img src="image/admin/z5iNK3n0b3dGv2eMI0DI.png", alt="fixed computed element", width="800", height="500" %}
 
 ## View local changes {: #view_local_changes }
 
@@ -81,7 +81,7 @@ To view a history of live-edits made to your page:
 To explore the changes made:
 
 - Expand top-level file names to view the time
-  ![time modification occurred](/web/tools/chrome-devtools/inspect-styles/imgs/image_25.png) a
+  {% Img src="image/admin/nf0kHeWeH6at5ZXNsSK9.png", alt="time modification occurred", width="81", height="13" %} a
   modification occurred.
 - Expand second-level items to view a [diff][3] (before and after) corresponding to the
   modification. A line with a pink background signifies a removal while a line with a green
