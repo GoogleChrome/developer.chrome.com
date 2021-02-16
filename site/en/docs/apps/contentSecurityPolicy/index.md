@@ -16,9 +16,7 @@ more about [**migrating your app**][2].
 
 If you're not familiar with Content Security Policy (CSP), [An Introduction to Content Security
 Policy][3] is a good starting point. That document covers the broader web platform view of CSP;
-Chrome App CSP isn't as flexible. You should also read the [Chrome extension Content Security
-Policy][4], as it's the foundation for the Chrome App CSP. For brevity's sake, we don't repeat the
-same information here.
+Chrome App CSP isn't as flexible.
 
 CSP is a policy to mitigate against cross-site scripting issues, and we all know that cross-site
 scripting is bad. We aren't going to try and convince you that CSP is a warm-and-fuzzy new policy.
