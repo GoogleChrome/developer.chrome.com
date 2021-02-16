@@ -56,7 +56,7 @@ clear data, just enable the checkboxes next to the components that you want to w
 **Clear site data**. The action wipes all of the data for the origin listed under the **Clear
 storage** label.
 
-![clear storage](/web/tools/chrome-devtools/manage-data/imgs/clear-storage.png)
+{% Img src="image/admin/r52uDNwdqwMXLE6NT6xI.png", alt="clear storage", width="718", height="496" %}
 
 [1]: /web/tools/chrome-devtools/storage/localstorage
 [2]: /web/tools/chrome-devtools/storage/sessionstorage

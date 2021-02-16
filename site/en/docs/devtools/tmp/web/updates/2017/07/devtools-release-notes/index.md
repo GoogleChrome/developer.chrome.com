@@ -35,11 +35,11 @@ Check out the video version of these release notes below or read on to learn mor
 The Device Mode **Throttling** menu is now exposed by default, and it now lets you simulate a
 low-end or mid-tier mobile device with a couple of clicks.
 
-![The Throttling Menu](/web/updates/images/2017/07/throttling-menu.png)
+{% Img src="image/admin/oF5txSZp8l7oLUpqzByj.png", alt="The Throttling Menu", width="800", height="511" %}
 
 **Figure 1**. The **Throttling Menu**
 
-![Throttling Menu definitions](/web/updates/images/2017/07/throttling-definitions.svg)
+{% Img src="image/admin/7ZeCyXh6WRFbqvdCUtzh.svg", alt="Throttling Menu definitions", width="800", height="471" %}
 
 **Figure 2**. Hover over the **Throttling** menu or open the **Capture Settings** menu to see the
 definitions for **Mid-tier mobile** and **Low-end mobile**
@@ -49,7 +49,7 @@ definitions for **Mid-tier mobile** and **Low-end mobile**
 The new **Usage** section in the **Clear Storage** tab of the **Application** panel shows you how
 much storage an [origin][7] is using, as well as the maximum quota for the origin on this device.
 
-![The Usage section](/web/updates/images/2017/07/usage-section.png)
+{% Img src="image/admin/wjRSmrs9iXUuyhqo6qwW.png", alt="The Usage section", width="800", height="507" %}
 
 **Figure 3**. The **Usage** section shows that `https://airhorner.com` is using 66.9KB out of the
 origin's quota of 15214MB
@@ -59,7 +59,7 @@ origin's quota of 15214MB
 The new **Time Cached** column in the **Cache Storage** tab shows you when a service worker cached
 responses.
 
-![The Time Cached column](/web/updates/images/2017/07/time-cached.png)
+{% Img src="image/admin/n7gJiv0MUjixjWafnJsC.png", alt="The Time Cached column", width="800", height="581" %}
 
 **Figure 4**. The **Time Cached** column
 
@@ -67,7 +67,7 @@ responses.
 
 You can now enable the [FPS Meter][8] from the [Command Menu][9].
 
-![Enabling the FPS Meter from the Command Menu](/web/updates/images/2017/07/fps-meter.png)
+{% Img src="image/admin/Lzkb4RCXPrjN6YNi0ZTQ.png", alt="Enabling the FPS Meter from the Command Menu", width="800", height="433" %}
 
 **Figure 5**. Enabling the **FPS Meter** from the **Command Menu**
 
@@ -80,7 +80,7 @@ For example, when you use a mousewheel on the **Main** section of a recording, o
 with two fingers on a trackpad, the default behavior is to zoom in or out. When you change the
 setting to **Scroll**, this gesture now scrolls up or down.
 
-![The 'Flamechart mouse wheel action' setting](/web/updates/images/2017/07/flamechart-setting.svg)
+{% Img src="image/admin/oicYBAxeipbNpfurGevt.svg", alt="The 'Flamechart mouse wheel action' setting", width="800", height="581" %}
 
 **Figure 6**. The **Flamechart mouse wheel action** setting
 

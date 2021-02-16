@@ -45,7 +45,7 @@ The scores at the top for [**Progressive Web App**][11], [**Performance**][12],
 categories. The rest of the report is a breakdown of each of the tests that determined your scores.
 Improve the quality of your web page by fixing the failing tests.
 
-![A Lighthouse report](/web/updates/images/2017/05/lh-report.png)
+{% Img src="image/admin/RtdnYvpJE9vdzc9PnsFW.png", alt="A Lighthouse report", width="800", height="990" %}
 
 **Figure 1**. A Lighthouse report
 
@@ -83,11 +83,11 @@ it, check out the Lighthouse talk from Google I/O '17 below.
 Use third-party badges to get more insight into the entities that are making network requests on a
 page, logging to the Console, and executing JavaScript.
 
-![Hovering over a third-party badge in the Network panel](/web/updates/images/2017/05/network-badges.png)
+{% Img src="image/admin/tFrUy2jX0liKvxcI9jih.png", alt="Hovering over a third-party badge in the Network panel", width="800", height="502" %}
 
 **Figure 2**. Hovering over a third-party badge in the Network panel
 
-![Hovering over a third-party badge in the Console](/web/updates/images/2017/05/console-badges.png)
+{% Img src="image/admin/a9t406jRFjz0ZGTfjxvn.png", alt="Hovering over a third-party badge in the Console", width="800", height="500" %}
 
 **Figure 3**. Hovering over a third-party badge in the Console
 
@@ -100,7 +100,7 @@ Use the **Group by product** option in the **Call Tree** and **Bottom-Up** tabs 
 recording activity by the third-party entities that caused the activities. See [Get Started With
 Analyzing Runtime Performance][17] to learn how to analyze performance with DevTools.
 
-![Grouping by product in the Bottom-Up tab](/web/updates/images/2017/05/group-by-product.png)
+{% Img src="image/admin/g3d8MPeAz9Jz7yfBmSsG.png", alt="Grouping by product in the Bottom-Up tab", width="800", height="744" %}
 
 **Figure 4**. Grouping by product in the **Bottom-Up** tab
 
@@ -113,7 +113,7 @@ there's a faster gesture for handling this workflow.
 When stepping through code, hold <kbd>Command</kbd> (Mac) or <kbd>Control</kbd> (Windows, Linux) and
 then click to continue to that line of code. DevTools highlights the jumpable destinations in blue.
 
-![Continue to Here](/web/updates/images/2017/05/continue.gif)
+{% Img src="image/admin/LfbHzjLqb2AVIqGgXBzL.gif", alt="Continue to Here", width="519", height="540" %}
 
 **Figure 5**. Continue To Here
 
@@ -146,11 +146,11 @@ Previously, when you logged or evaluated an object in the Console, the Console w
 `Object`, which is not particularly helpful. Now, the Console provides more information about the
 contents of the object.
 
-![How the Console used to preview objects](/web/updates/images/2017/05/oldobjpreview.png)
+{% Img src="image/admin/PBFrubv1bsDfv2Af2iFM.png", alt="How the Console used to preview objects", width="800", height="565" %}
 
 **Figure 6**. How the Console used to preview objects
 
-![How the Console now previews objects](/web/updates/images/2017/05/newobjpreview.png)
+{% Img src="image/admin/wL18zM2tEWKszNgiEow5.png", alt="How the Console now previews objects", width="800", height="521" %}
 
 **Figure 7**. How the Console now previews objects
 
@@ -162,7 +162,7 @@ The Console's Context Selection menu now provides more information about availab
 - The subtitle below the title describes the domain where the item came from.
 - Hover over an iframe context to highlight it in the viewport.
 
-![The new Context Selection menu](/web/updates/images/2017/05/context.png)
+{% Img src="image/admin/yrUG7X95mXw3rjkI0p8a.png", alt="The new Context Selection menu", width="800", height="508" %}
 
 **Figure 8**. Hovering over an iframe in the new Context Selection menu highlights it in the
 viewport
@@ -173,11 +173,11 @@ When recording code coverage in Chrome 59, the **Coverage** tab would just displ
 with no visibility into what code was being used. Now, the **Coverage** tab shows you in real-time
 what code is being used.
 
-![Loading and interacting with a page using the old Coverage tab](/web/updates/images/2017/05/oldcoverage.gif)
+{% Img src="image/admin/n1gxt0EFkoLCl06B6v4b.gif", alt="Loading and interacting with a page using the old Coverage tab", width="694", height="540" %}
 
 **Figure 9**. Loading and interacting with a page using the old **Coverage** tab
 
-![Loading and interacting with a page using the new Coverage tab](/web/updates/images/2017/05/codecoverage.gif)
+{% Img src="image/admin/o61xWys7PyEpdjK0OxNt.gif", alt="Loading and interacting with a page using the new Coverage tab", width="649", height="540" %}
 
 **Figure 10**. Loading and interacting with a page using the new **Coverage** tab
 
@@ -187,7 +187,7 @@ The network throttling menus in the **Network** and **Performance** panels have 
 include only three options: **Offline**, **Slow 3G**, which is common in places like India, and
 **Fast 3G**, which is common in places like the United States.
 
-![The new network throttling options](/web/updates/images/2017/05/throttling.png)
+{% Img src="image/admin/RklbREBsnfsJxpj1sbui.png", alt="The new network throttling options", width="800", height="629" %}
 
 **Figure 11**. The new network throttling options
 

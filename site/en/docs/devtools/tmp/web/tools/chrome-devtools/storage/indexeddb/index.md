@@ -17,20 +17,20 @@ with IndexedDB. If not, see [Using IndexedDB][4].
 1.  Click the **Application** tab to open the **Application** panel. The **Manifest** pane usually
     opens by default.
 
-    ![The Manifest pane](/web/tools/chrome-devtools/storage/imgs/manifest.png)
+    {% Img src="image/admin/JXXI9yZ0j9xCVs4W4R1C.png", alt="The Manifest pane", width="800", height="619" %}
 
     **Figure 1**. The Manifest pane
 
 2.  Expand the **IndexedDB** menu to see which databases are available.
 
-    ![The IndexedDB menu](/web/tools/chrome-devtools/storage/imgs/idbmenu.png)
+    {% Img src="image/admin/SLH67ZeSBmZMOHW8y036.png", alt="The IndexedDB menu", width="800", height="579" %}
 
     **Figure 2**. The **IndexedDB** menu
 
-    - ![Database icon](/web/tools/chrome-devtools/images/shared/database.png) **notes -
+    - {% Img src="image/admin/621QGydZcQbvLxEXFyEj.png", alt="Database icon", width="24", height="26" %} **notes -
       https://mdn.github.io** represents a database, where **notes** is the name of the database and
       **https://mdn.github.io** is the origin that can access the database.
-    - ![Object Store icon](/web/tools/chrome-devtools/images/shared/objectstore.png) **notes** is an
+    - {% Img src="image/admin/iCTUUGCj14KSIMN6brU8.png", alt="Object Store icon", width="26", height="22" %} **notes** is an
       object store.
     - **title** and **body** are [indexes][5].
 
@@ -44,7 +44,7 @@ with IndexedDB. If not, see [Using IndexedDB][4].
 
 3.  Click a database to see its origin and version number.
 
-    ![The 'notes' database](/web/tools/chrome-devtools/storage/imgs/idbdatabase.png)
+    {% Img src="image/admin/bXK6EnZMo6yDUwkoFLXc.png", alt="The 'notes' database", width="800", height="579" %}
 
     **Figure 3**. The **notes** database
 
@@ -56,7 +56,7 @@ with IndexedDB. If not, see [Using IndexedDB][4].
 
     !!!
 
-    ![The 'notes' object store](/web/tools/chrome-devtools/storage/imgs/idbobjectstore.png)
+    {% Img src="image/admin/w7r5L2I6CD9EIlCCZyVe.png", alt="The 'notes' object store", width="800", height="415" %}
 
     **Figure 4**. The **notes** object store
 
@@ -66,21 +66,21 @@ with IndexedDB. If not, see [Using IndexedDB][4].
 
 5.  Click a cell in the **Value** column to expand that value.
 
-    ![Viewing an IndexedDB value](/web/tools/chrome-devtools/storage/imgs/idbvalue.png)
+    {% Img src="image/admin/84k10iTRZfFTGd6HAGXv.png", alt="Viewing an IndexedDB value", width="800", height="415" %}
 
     **Figure 5**. Viewing an IndexedDB value
 
 6.  Click an index, such as **title** or **body** in **Figure 6** below, to sort the object store
     according to the values of that index.
 
-    ![Sorting an object store by an index](/web/tools/chrome-devtools/storage/imgs/idbindex.png)
+    {% Img src="image/admin/lkksyFWKnZbSJZGWIdsi.png", alt="Sorting an object store by an index", width="800", height="384" %}
 
     **Figure 6**. An object store that is sorted alphabetically according to its **title** key
 
 ## Refresh IndexedDB data {: #refresh }
 
 IndexedDB values in the **Application** panel do not update in real-time. Click **Refresh**
-![Refresh](/web/tools/chrome-devtools/images/shared/reload.png) when viewing an object store to
+{% Img src="image/admin/t6Vwc2XfZKsrmIRJmO09.png", alt="Refresh", width="24", height="25" %} when viewing an object store to
 refresh its data, or view a database and click **Refresh database** to refresh all data.
 
 ![Viewing a database](/web/tools/chrome-devtools/storage/imgs/idbdatabase.png)
@@ -98,7 +98,7 @@ to page context, however, you can run JavaScript code within DevTools that edits
 Snippet, the result is logged to the **Console**. You can use a Snippet to run JavaScript code that
 edits an IndexedDB database.
 
-![Using a Snippet to interact with IndexedDB](/web/tools/chrome-devtools/storage/imgs/idbsnippet.png)
+{% Img src="image/admin/DHdPZXwfsagXnt25cRsl.png", alt="Using a Snippet to interact with IndexedDB", width="800", height="743" %}
 
 **Figure 8**. Using a Snippet to interact with IndexedDB
 
@@ -110,14 +110,14 @@ edits an IndexedDB database.
 2.  Click the key-value pair that you want to delete. DevTools highlights it blue to indicate that
     it's selected.
 
-    ![Selecting a key-value pair in order to delete it](/web/tools/chrome-devtools/storage/imgs/idbkvp1.png)
+    {% Img src="image/admin/vRnv2bHWTWBo6iWH8hCn.png", alt="Selecting a key-value pair in order to delete it", width="800", height="357" %}
 
     **Figure 9**. Selecting a key-value pair in order to delete it
 
 3.  Press the <kbd>Delete</kbd> key or click **Delete Selected**
-    ![Delete Selected](/web/tools/chrome-devtools/images/shared/delete.png).
+    {% Img src="image/admin/LIWHfgDB8ZvCTPHtXYxt.png", alt="Delete Selected", width="20", height="20" %}.
 
-    ![How the object store looks after the key-value pair has been deleted](/web/tools/chrome-devtools/storage/imgs/idbkvp2.png)
+    {% Img src="image/admin/3kLjkSWE1DjgcCSUZFMW.png", alt="How the object store looks after the key-value pair has been deleted", width="800", height="357" %}
 
     **Figure 10**. How the object store looks after the key-value pair has been deleted
 
@@ -130,7 +130,7 @@ edits an IndexedDB database.
     **Figure 11**. Viewing an object store
 
 2.  Click **Clear object store**
-    ![Clear object store](/web/tools/chrome-devtools/images/shared/clear.png).
+    {% Img src="image/admin/ARGsVs91SSwdHjW2p6CP.png", alt="Clear object store", width="26", height="26" %}.
 
 ### Delete an IndexedDB database {: #deletedatabase }
 
@@ -147,7 +147,7 @@ edits an IndexedDB database.
 2.  Make sure that the **IndexedDB** checkbox is enabled.
 3.  Click **Clear site data**.
 
-    ![The 'Clear storage' pane](/web/tools/chrome-devtools/storage/imgs/idbclearstorage.png)
+    {% Img src="image/admin/wJKlzu5mw7RZMEpVvUCR.png", alt="The 'Clear storage' pane", width="800", height="700" %}
 
     **Figure 13**. The **Clear storage** pane
 

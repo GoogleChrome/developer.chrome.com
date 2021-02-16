@@ -34,7 +34,7 @@ To enable port forwarding:
 1.  Set up [remote debugging][1] between your development machine and your Android device. When
     you're finished, you should see your Android device in the list.
 2.  Click **Port forwarding** button. `localhost:8080` is set up by default.
-    ![adding a port forwarding rule](/web/tools/chrome-devtools/remote-debugging/imgs/add-rule.png)
+    {% Img src="image/admin/UAxeJU4l4zujSKNYwEib.png", alt="adding a port forwarding rule", width="800", height="308" %}
 3.  Check **Enable port forwarding**. If you want to set up other ports, follow the steps 4 and 5.
     Otherwise skip to step 6.
 4.  In the **Port** textfield on the left, enter the `localhost` port number from which you want to
@@ -48,7 +48,7 @@ To enable port forwarding:
 Port forwarding is now set up. You can see a status indicator of the port forward at the top as well
 as besides the device name.
 
-![port forwarding status](/web/tools/chrome-devtools/remote-debugging/imgs/port-forwarding-status.png)
+{% Img src="image/admin/3WFLAFQbYWZfih8kJKDC.png", alt="port forwarding status", width="800", height="324" %}
 
 To view the content, open up Chrome on your Android device and go to the `localhost` port that you
 specified in the **Device port** field. For example, if you entered `5000` in the field, then you

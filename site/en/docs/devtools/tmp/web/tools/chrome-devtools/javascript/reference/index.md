@@ -30,10 +30,10 @@ property values along the way.
 
 When paused on a line of code containing a function that's not relevant to the problem you're
 debugging, click **Step over**
-![Step over](/web/tools/chrome-devtools/javascript/imgs/step-over.png) to execute the function
+{% Img src="image/admin/Y91zw0txWmdqrTJ49eeK.png", alt="Step over", width="36", height="20" %} to execute the function
 without stepping into it.
 
-![Selecting 'Step over'.](/web/tools/chrome-devtools/javascript/imgs/step-over-outline.svg)
+{% Img src="image/admin/Rvty5ws4fZ2lid3XeEue.svg", alt="Selecting 'Step over'.", width="800", height="610" %}
 
 **Figure 1**. **Step over**, outlined in blue
 
@@ -58,10 +58,10 @@ you're stepping over, which is `B` and `C`. DevTools then pauses on `D`.
 
 When paused on a line of code containing a function call that is related to the problem you're
 debugging, click **Step into**
-![Step into](/web/tools/chrome-devtools/javascript/imgs/step-into.png) to investigate that function
+{% Img src="image/admin/htSXjGeDQXrMPRk1PNBC.png", alt="Step into", width="18", height="26" %} to investigate that function
 further.
 
-![Selecting 'Step into'.](/web/tools/chrome-devtools/javascript/imgs/step-into-outline.svg)
+{% Img src="image/admin/dTGivIfR6pShgPSNEpCZ.svg", alt="Selecting 'Step into'.", width="800", height="610" %}
 
 **Figure 2**. **Step into**, outlined in blue
 
@@ -85,10 +85,10 @@ You're paused on `A`. By pressing **Step into**, DevTools executes this line of 
 ### Step out of line of code {: #step-out }
 
 When paused inside of a function that is not related to the problem you're debugging, click **Step
-out** ![Step out](/web/tools/chrome-devtools/javascript/imgs/step-out.png) to execute the rest of
+out** {% Img src="image/admin/xMCC8ajA54Dt06xvvni7.png", alt="Step out", width="18", height="26" %} to execute the rest of
 the function's code.
 
-![Selecting 'Step out'.](/web/tools/chrome-devtools/javascript/imgs/step-out-outline.svg)
+{% Img src="image/admin/Mf2Jkbcv0dBHWTNTMDMQ.svg", alt="Selecting 'Step out'.", width="800", height="610" %}
 
 **Figure 3**. **Step out**, outlined in blue
 
@@ -123,7 +123,7 @@ there's a faster way.
 Right-click the line of code that you're interested in, and select **Continue to here**. DevTools
 runs all of the code up to that point, and then pauses on that line.
 
-![Selecting 'Continue to here'.](/web/tools/chrome-devtools/javascript/imgs/continue-to-here.png)
+{% Img src="image/admin/weTYHv4ceNfpam1GEJC9.png", alt="Selecting 'Continue to here'.", width="800", height="573" %}
 
 **Figure 4**. Selecting **Continue to here**
 
@@ -148,17 +148,17 @@ function factorial(n) {
 You're paused on `A`. After clicking **Restart Frame**, you'd be paused on `B`, without ever setting
 a breakpoint or pressing **Resume script execution**.
 
-![Selecting 'Restart Frame'.](/web/tools/chrome-devtools/javascript/imgs/restart-frame.png)
+{% Img src="image/admin/YPU4B9cT6LWCyeguEnRX.png", alt="Selecting 'Restart Frame'.", width="800", height="738" %}
 
 **Figure 5**. Selecting **Restart Frame**
 
 ### Resume script execution {: #resume }
 
 To continue your script's execution after a pause, click **Resume Script Execution**
-![Resume Script Execution](/web/tools/chrome-devtools/images/resume-script-execution.png). DevTools
+{% Img src="image/admin/c6QDPFXIkyhhqCWYktNB.png", alt="Resume Script Execution", width="26", height="20" %}. DevTools
 executes the script up until the next breakpoint, if any.
 
-![Selecting 'Resume script execution'.](/web/tools/chrome-devtools/javascript/imgs/resume-script-execution-outline.svg)
+{% Img src="image/admin/y1FEPpRKSDR894RM2TFG.svg", alt="Selecting 'Resume script execution'.", width="800", height="610" %}
 
 **Figure 6**. **Resume script execution**, outlined in blue
 
@@ -171,7 +171,7 @@ and then select **Force script execution**
 ![Force script
 execution](/web/tools/chrome-devtools/javascript/imgs/force-script-execution.png).
 
-![Selecting 'Force script execution'.](/web/tools/chrome-devtools/javascript/imgs/selecting-force-script-execution.png)
+{% Img src="image/admin/Bgu0IMoqiDsHm8LbCDjK.png", alt="Selecting 'Force script execution'.", width="800", height="561" %}
 
 **Figure 7**. Selecting **Force script execution**
 
@@ -180,7 +180,7 @@ execution](/web/tools/chrome-devtools/javascript/imgs/force-script-execution.png
 When working with web workers or service workers, click on a context listed in the Threads pane to
 switch to that context. The blue arrow icon represents which context is currently selected.
 
-![The Threads pane.](/web/tools/chrome-devtools/javascript/imgs/threads.svg)
+{% Img src="image/admin/bJO6eqgFRXeXmGmN3jv3.svg", alt="The Threads pane.", width="800", height="564" %}
 
 **Figure 8**. The Threads pane, outlined in blue
 
@@ -197,7 +197,7 @@ variables in the local, closure, and global scopes.
 - Double-click a property value to change it.
 - Non-enumerable properties are greyed out.
 
-![The Scope pane.](/web/tools/chrome-devtools/javascript/imgs/scope.svg)
+{% Img src="image/admin/E1Pz1oku9apJyINg58N0.svg", alt="The Scope pane.", width="800", height="492" %}
 
 **Figure 9**. The Scope pane, outlined in blue
 
@@ -211,7 +211,7 @@ If you're working with async code, check the **Async** checkbox to enable async 
 Click on an entry to jump to the line of code where that function was called. The blue arrow icon
 represents which function DevTools is currently highlighting.
 
-![The Call Stack pane.](/web/tools/chrome-devtools/javascript/imgs/call-stack.svg)
+{% Img src="image/admin/z85EIYxxKzDde3aAEhCP.svg", alt="The Call Stack pane.", width="800", height="492" %}
 
 **Figure 10**. The Call Stack pane, outlined in blue
 
@@ -226,7 +226,7 @@ represents which function DevTools is currently highlighting.
 Right-click anywhere in the Call Stack pane and select **Copy stack trace** to copy the current call
 stack to the clipboard.
 
-![Selecting 'Copy Stack Trace'.](/web/tools/chrome-devtools/javascript/imgs/copy-stack-trace.png)
+{% Img src="image/admin/mGJl4FrGxA9mlztfEFeD.png", alt="Selecting 'Copy Stack Trace'.", width="800", height="556" %}
 
 **Figure 11**. Selecting **Copy Stack Trace**
 
@@ -265,7 +265,7 @@ To blackbox a script from the Editor pane:
 2.  Right-click anywhere.
 3.  Select **Blackbox script**.
 
-![Blackboxing a script from the Editor pane.](/web/tools/chrome-devtools/javascript/imgs/blackbox-editor-pane.png)
+{% Img src="image/admin/GhNf369siGvdo9lt8m6Z.png", alt="Blackboxing a script from the Editor pane.", width="800", height="632" %}
 
 **Figure 12**. Blackboxing a script from the Editor pane
 
@@ -276,7 +276,7 @@ To blackbox a script from the Call Stack pane:
 1.  Right-click on a function from the script.
 2.  Select **Blackbox script**.
 
-![Blackboxing a script from the Call Stack pane.](/web/tools/chrome-devtools/javascript/imgs/blackbox-call-stack-pane.png)
+{% Img src="image/admin/e7zpqaYG9tHW7u1s0slX.png", alt="Blackboxing a script from the Call Stack pane.", width="800", height="634" %}
 
 **Figure 13**. Blackboxing a script from the Call Stack pane
 
@@ -290,7 +290,7 @@ To blackbox a single script or pattern of scripts from Settings:
 4.  Enter the script name or a regex pattern of script names to blackbox.
 5.  Click **Add**.
 
-![Blackboxing a script from Settings.](/web/tools/chrome-devtools/javascript/imgs/blackbox.png)
+{% Img src="image/admin/htNiY3e0ygFegu9yeLiJ.png", alt="Blackboxing a script from Settings.", width="800", height="598" %}
 
 **Figure 14**. Blackboxing a script from Settings
 
@@ -306,7 +306,7 @@ See [Run Snippets of Code From Any Page][4] to learn more.
 Use the Watch pane to watch the values of custom expressions. You can watch any valid JavaScript
 expression.
 
-![The Watch pane.](/web/tools/chrome-devtools/javascript/imgs/watch.svg)
+{% Img src="image/admin/PzX7IuS3Hezm4ZQvKD5m.svg", alt="The Watch pane.", width="800", height="492" %}
 
 **Figure 15**. The Watch pane, outlined in blue
 
@@ -314,7 +314,7 @@ expression.
   ![Add
 Expression](/web/tools/chrome-devtools/javascript/imgs/add-expression.png) to create a new
   watch expression.
-- Click **Refresh** ![Refresh](/web/tools/chrome-devtools/javascript/imgs/refresh.png) to refresh
+- Click **Refresh** {% Img src="image/admin/UzPRUGsZGyxITgev7q5K.png", alt="Refresh", width="24", height="24" %} to refresh
   the values of all existing expressions. Values automatically refresh while stepping through code.
 - Hover over an expression and click **Delete Expression**
   ![Delete
@@ -323,10 +323,10 @@ Expression](/web/tools/chrome-devtools/javascript/imgs/delete-expression.png) to
 
 ## Make a minified file readable {: #format }
 
-Click **Format** ![Format](/web/tools/chrome-devtools/javascript/imgs/format.png) to make a minified
+Click **Format** {% Img src="image/admin/nLnqjfo4vbFLkwAuExCY.png", alt="Format", width="30", height="24" %} to make a minified
 file human-readable.
 
-![The Format button.](/web/tools/chrome-devtools/javascript/imgs/format.svg)
+{% Img src="image/admin/cttlkengXdMrdvwjh5S3.svg", alt="The Format button.", width="800", height="609" %}
 
 **Figure 16**. **Format**, outlined in blue
 
@@ -343,7 +343,7 @@ To edit a script:
 3.  Press <kbd>Command</kbd>+<kbd>S</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>S</kbd> (Windows, Linux) to
     save. DevTools patches the entire JS file into Chrome's JavaScript engine.
 
-    ![The Editor pane.](/web/tools/chrome-devtools/javascript/imgs/editor.svg)
+    {% Img src="image/admin/zOITyiLOZPasp6Zf30Xi.svg", alt="The Editor pane.", width="800", height="564" %}
 
     **Figure 17**. The Editor pane, outlined in blue
 

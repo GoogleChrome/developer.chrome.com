@@ -20,7 +20,7 @@ easier to remember than the name `font-weight`. The Style pane's autocomplete UI
 values. If you remember what keyword value you want, but can't remember the property name, try
 typing the value and autocomplete should help you find the name you're looking for.
 
-![After typing 'bold' the Styles pane autocompletes to 'font-weight: bold'.](/web/updates/images/2019/05/values.png)
+{% Img src="image/admin/UFh9UD8HrKQVevK0Fcj0.png", alt="After typing 'bold' the Styles pane autocompletes to 'font-weight: bold'.", width="800", height="490" %}
 
 Figure 1. After typing `bold` the Styles pane autocompletes to `font-weight: bold`.
 
@@ -31,7 +31,7 @@ Send feedback on this new feature to [Chromium issue #931145][2].
 The Network panel previously had a usability issue where options like the throttling menu were
 unreachable when the DevTools window was narrow. To fix this issue and de-clutter the Network panel,
 a few lesser-used options have been moved behind the new **Network Settings**
-![Network Settings](/web/tools/chrome-devtools/images/shared/settings.png) pane.
+{% Img src="image/admin/NDKc7r9S96q0VftZKNUv.png", alt="Network Settings", width="800", height="582" %} pane.
 
 ![Network Settings.](/web/updates/images/2019/05/settings.png)
 
@@ -41,7 +41,7 @@ The following options have moved to **Network Settings**: **Use Large Request Ro
 Frame**, **Show Overview**, **Capture Screenshots**. Figure 3 maps the old locations to the new
 ones.
 
-![Mapping the old locations to the new.](/web/updates/images/2019/05/mapping.png)
+{% Img src="image/admin/SGzAjLVVrO05h5IKSJl6.png", alt="Mapping the old locations to the new.", width="800", height="742" %}
 
 Figure 3. Mapping the old locations to the new.
 
@@ -77,11 +77,11 @@ Send feedback on this new feature to [Chromium issue #496006][5].
 ## HAR import and export buttons {: #HAR }
 
 Share network logs with colleagues more easily with the new **Export All As HAR With Content**
-![Export](/web/tools/chrome-devtools/images/shared/export.png) and **Import HAR File**
-![Import](/web/tools/chrome-devtools/images/shared/import.png) buttons. HAR importing and exporting
+{% Img src="image/admin/dNCNUI01NWH41GxOjHJi.png", alt="Export", width="20", height="24" %} and **Import HAR File**
+{% Img src="image/admin/nSyUy6bEAGI5GQ8prTjz.png", alt="Import", width="20", height="24" %} buttons. HAR importing and exporting
 have existed in DevTools for a while. The more discoverable buttons are the new change.
 
-![The new HAR buttons.](/web/updates/images/2019/05/har-buttons.png)
+{% Img src="image/admin/CwFs8aZqhoggO9pzV0n6.png", alt="The new HAR buttons.", width="800", height="536" %}
 
 Figure 4. The new HAR buttons.
 
@@ -91,7 +91,7 @@ Send feedback on this UI change to [Chromium issue #904585][6].
 
 The Memory panel now shows total memory usage in real-time.
 
-![Real-time total memory usage.](/web/updates/images/2019/05/memory.png)
+{% Img src="image/admin/00P8w14xckIquRwdbUY5.png", alt="Real-time total memory usage.", width="800", height="877" %}
 
 Figure 5. The bottom of the Memory panel shows that the page is using **43.4 MB** of memory in
 total. **209 KB/s** indicates that total memory usage is increasing 209 KB per second.
@@ -105,7 +105,7 @@ Send feedback on this new feature to [Chromium issue #958177][8].
 The **Service Workers** pane now includes port numbers in its titles to make it easier to keep track
 of which service worker you're debugging.
 
-![Service worker ports.](/web/updates/images/2019/05/sw-ports.png)
+{% Img src="image/admin/ZiPgN4YBAOMMrw053lfV.png", alt="Service worker ports.", width="800", height="530" %}
 
 Figure 6. Service worker ports.
 
@@ -121,14 +121,14 @@ Fetch and Background Sync events will continue to be recorded, even after you cl
 even after you close Chrome.
 
 Go to the **Application** panel, open the **Background Fetch** or **Background Sync** tab, then
-click **Record** ![Record](/web/tools/chrome-devtools/images/shared/record.png) to start logging
+click **Record** {% Img src="image/admin/dOKdrohaIcdt0N6AT3Qw.png", alt="Record", width="24", height="24" %} to start logging
 events. Click an event to view more information about it.
 
-![The Background Fetch pane.](/web/updates/images/2019/05/fetch.png)
+{% Img src="image/admin/m1b035oRqiVwEa0yMozJ.png", alt="The Background Fetch pane.", width="800", height="485" %}
 
 Figure 7. The Background Fetch pane. [Demo][12] by [Maxim Salnikov][13].
 
-![The Background Sync pane.](/web/updates/images/2019/05/sync.png)
+{% Img src="image/admin/S8m3qhV2yHHvHvWuo3sj.png", alt="The Background Sync pane.", width="800", height="352" %}
 
 Figure 8. The Background Sync pane.
 

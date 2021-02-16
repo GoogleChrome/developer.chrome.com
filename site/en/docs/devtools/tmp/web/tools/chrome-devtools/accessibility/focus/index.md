@@ -16,9 +16,9 @@ focus is hidden. To track the focused element in DevTools:
 
 1.  Open the **Console**.
 2.  Click **Create Live Expression**
-    ![Create Live Expression](/web/tools/chrome-devtools/images/shared/create-live-expression.png).
+    {% Img src="image/admin/IPDgkbaWTrf05ffw1JSt.png", alt="Create Live Expression", width="33", height="23" %}.
 
-    ![Creating a Live Expression.](/web/tools/chrome-devtools/images/shared/live-expression.png)
+    {% Img src="image/admin/3iWMW3uh7GaqUWxv8uB1.png", alt="Creating a Live Expression.", width="800", height="516" %}
 
     **Figure 1**. Creating a **Live Expression**.
 

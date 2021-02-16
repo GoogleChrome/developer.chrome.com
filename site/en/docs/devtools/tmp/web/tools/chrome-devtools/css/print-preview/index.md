@@ -16,14 +16,14 @@ preview mode:
     <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the
     **Command Menu**.
 
-    ![The Command Menu](/web/tools/chrome-devtools/images/shared/command-menu.png)
+    {% Img src="image/admin/vAwmfhwU6lLmrbEBCSsc.png", alt="The Command Menu", width="800", height="632" %}
 
     **Figure 1**. The **Command Menu**
 
 2.  Type `rendering`, select **Show Rendering**, and then press <kbd>Enter</kbd>.
 3.  Under **Emulate CSS media** select **print**.
 
-    ![Print preview mode.](/web/tools/chrome-devtools/css/imgs/print-mode.png)
+    {% Img src="image/admin/F5e5z6N1lhwERU1TrX8c.png", alt="Print preview mode.", width="800", height="588" %}
 
     **Figure 2**. Print preview mode
 

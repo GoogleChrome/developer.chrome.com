@@ -26,7 +26,7 @@ const reason = 'x is expected to be less than y';
 console.assert(x < y, {x, y, reason});
 ```
 
-![The result of the console.assert() example above.](/web/tools/chrome-devtools/console/images/assert.png)
+{% Img src="image/admin/cS62AuHJfLVVaDYf3OEL.png", alt="The result of the console.assert() example above.", width="800", height="447" %}
 
 **Figure 1**. The result of the `console.assert()` example above.
 
@@ -56,7 +56,7 @@ console.count();
 console.count();
 ```
 
-![The result of the console.count() example above.](/web/tools/chrome-devtools/console/images/count.png)
+{% Img src="image/admin/XNCvcoyyu8TabN0K1pjL.png", alt="The result of the console.count() example above.", width="800", height="507" %}
 
 **Figure 2**. The result of the `console.count()` example above.
 
@@ -79,7 +79,7 @@ Identical to [`console.log(object [, object, ...])`][10] except different log le
 console.debug('debug');
 ```
 
-![The result of the console.debug() example above.](/web/tools/chrome-devtools/console/images/debug.png)
+{% Img src="image/admin/GuN0auKEMAdVW9j8wW7J.png", alt="The result of the console.debug() example above.", width="800", height="526" %}
 
 **Figure 3**. The result of the `console.debug()` example above.
 
@@ -93,7 +93,7 @@ Prints a JSON representation of the specified object.
 console.dir(document.head);
 ```
 
-![The result of the console.dir() example above.](/web/tools/chrome-devtools/console/images/dir.png)
+{% Img src="image/admin/2aLQxuFHsyzYIuBzz5Mp.png", alt="The result of the console.dir() example above.", width="800", height="590" %}
 
 **Figure 4**. The result of the `console.dir()` example above.
 
@@ -107,7 +107,7 @@ Prints an XML representation of the descendants of `node`.
 console.dirxml(document);
 ```
 
-![The result of the console.dirxml() example above.](/web/tools/chrome-devtools/console/images/dirxml.png)
+{% Img src="image/admin/JIDSgSq8UQf7YIt6w1vw.png", alt="The result of the console.dirxml() example above.", width="800", height="561" %}
 
 **Figure 5**. The result of the `console.dirxml()` example above.
 
@@ -121,7 +121,7 @@ Prints `object` to the Console, formats it as an error, and includes a stack tra
 console.error("I'm sorry, Dave. I'm afraid I can't do that.");
 ```
 
-![The result of the console.error() example above.](/web/tools/chrome-devtools/console/images/error.png)
+{% Img src="image/admin/Pfsjy00hVaI53iAhOhNt.png", alt="The result of the console.error() example above.", width="800", height="550" %}
 
 **Figure 6**. The result of the `console.error()` example above.
 
@@ -140,7 +140,7 @@ console.info('Raph');
 console.groupEnd(label);
 ```
 
-![The result of the console.group() example above.](/web/tools/chrome-devtools/console/images/group.png)
+{% Img src="image/admin/nXx5Fyu0l3p3jm3ooD77.png", alt="The result of the console.group() example above.", width="800", height="513" %}
 
 **Figure 7**. The result of the `console.group()` example above.
 
@@ -163,7 +163,7 @@ Identical to [`console.log(object [, object, ...])`][17].
 console.info('info');
 ```
 
-![The result of the console.info() example above.](/web/tools/chrome-devtools/console/images/info.png)
+{% Img src="image/admin/tIWshweM0G6hiTKzhfCw.png", alt="The result of the console.info() example above.", width="800", height="477" %}
 
 **Figure 8**. The result of the `console.info()` example above.
 
@@ -177,7 +177,7 @@ Prints a message to the Console.
 console.log('log');
 ```
 
-![The result of the console.log() example above.](/web/tools/chrome-devtools/console/images/log.png)
+{% Img src="image/admin/4NsJDaAjDpipnzkmkfDU.png", alt="The result of the console.log() example above.", width="800", height="477" %}
 
 **Figure 9**. The result of the `console.log()` example above.
 
@@ -205,7 +205,7 @@ console.table([
 ]);
 ```
 
-![The result of the console.table() example above.](/web/tools/chrome-devtools/console/images/table.png)
+{% Img src="image/admin/RDdME5SuTCjNFtXKxTUh.png", alt="The result of the console.table() example above.", width="800", height="488" %}
 
 **Figure 10**. The result of the `console.table()` example above.
 
@@ -222,7 +222,7 @@ for (var i = 0; i < 100000; i++) {
 console.timeEnd();
 ```
 
-![The result of the console.time() example above.](/web/tools/chrome-devtools/console/images/time.png)
+{% Img src="image/admin/9yLfjQpQZ9fBNdRCI7U1.png", alt="The result of the console.time() example above.", width="800", height="514" %}
 
 **Figure 11**. The result of the `console.time()` example above.
 
@@ -246,7 +246,7 @@ const fourth = () => { console.trace(); };
 first();
 ```
 
-![The result of the console.trace() example above.](/web/tools/chrome-devtools/console/images/trace.png)
+{% Img src="image/admin/uO2xhv9WrEjpUHpT3lLN.png", alt="The result of the console.trace() example above.", width="800", height="498" %}
 
 **Figure 12**. The result of the `console.trace()` example above.
 
@@ -260,7 +260,7 @@ Prints a warning to the Console.
 console.warn('warn');
 ```
 
-![The result of the console.warn() example above.](/web/tools/chrome-devtools/console/images/warn.png)
+{% Img src="image/admin/CsGNmsnQn4GnJRaR339w.png", alt="The result of the console.warn() example above.", width="800", height="481" %}
 
 **Figure 13**. The result of the `console.warn()` example above.
 

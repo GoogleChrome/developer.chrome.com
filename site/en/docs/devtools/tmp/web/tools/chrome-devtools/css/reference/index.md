@@ -20,7 +20,7 @@ The **Elements** panel of DevTools lets you view or change the CSS of one elemen
 selected element is highlighted blue in the **DOM Tree**. The element's styles are shown in the
 **Styles** pane. See [View an element's CSS][2] for a tutorial.
 
-![An example of a selected element](/web/tools/chrome-devtools/css/imgs/select.png)
+{% Img src="image/admin/Iganvpf9K9dEOpSb6wIA.png", alt="An example of a selected element", width="800", height="503" %}
 
 **Figure 1**. The `h1` element that's highlighted blue in the **DOM Tree** is the selected element.
 To the right, the element's styles are shown in the **Styles** pane. To the left, the element is
@@ -49,7 +49,7 @@ defines the rule.
 
 If the stylesheet is minified, see [Make a minified file readable][3].
 
-![Viewing the stylesheet where a rule is defined](/web/tools/chrome-devtools/css/imgs/view-rule-stylesheet.svg)
+{% Img src="image/admin/DIRRbj70JvHO7EDpeSdC.svg", alt="Viewing the stylesheet where a rule is defined", width="800", height="488" %}
 
 **Figure 2**. Clicking `devsite-google-blue.css:487` takes you to line 487 of
 `devsite-google-blue.css`, where the `.devsite-article h1:first-of-type` CSS rule is defined.
@@ -72,7 +72,7 @@ tab to view only the CSS that's actually being applied to an element.
 
 Inherited properties are opaque. Check the **Show All** checkbox to see all inherited values.
 
-![The Computed tab](/web/tools/chrome-devtools/css/imgs/computed.svg)
+{% Img src="image/admin/QZo3RH4i4zmlurpX8M3B.svg", alt="The Computed tab", width="800", height="488" %}
 
 **Figure 3**. The **Computed** tab shows the CSS properties being applied to the currently-selected
 `h1` element
@@ -93,7 +93,7 @@ narrow, the **Box Model** diagram is at the bottom of the tab.
 
 To change a value, double-click on it.
 
-![The Box Model diagram](/web/tools/chrome-devtools/css/imgs/box-model.png)
+{% Img src="image/admin/3M83x7zsgaeJctz6B3iu.png", alt="The Box Model diagram", width="800", height="592" %}
 
 **Figure 4**. The **Box Model** diagram in the **Styles** tab shows the box model for the currently
 selected `h1` element
@@ -105,11 +105,11 @@ properties or values.
 
 To also search inherited properties in the **Computed** tab, check the **Show All** checkbox.
 
-![Filtering the Styles tab](/web/tools/chrome-devtools/css/imgs/styles-filter.png)
+{% Img src="image/admin/2wXKvRxuWUObC2uNfIJ5.png", alt="Filtering the Styles tab", width="800", height="460" %}
 
 **Figure 5**. Filtering the **Styles** tab to only show rules that include the search query `color`
 
-![Filtering the Computed tab](/web/tools/chrome-devtools/css/imgs/computed-filter.png)
+{% Img src="image/admin/sORR9WlEYpkRtltoSHp8.png", alt="Filtering the Computed tab", width="800", height="460" %}
 
 **Figure 6**. Filtering the **Computed** tab to only show declarations that include the search query
 `100%`
@@ -124,7 +124,7 @@ To toggle a pseudo-class like `:active`, `:focus`, `:hover`, `:visited`, `:focus
 3.  Click **:hov**.
 4.  Check the pseudo-class that you want to enable.
 
-![Toggling the :hover pseudo-class](/web/tools/chrome-devtools/css/imgs/pseudo-class.png)
+{% Img src="image/admin/Ag3tYHtZr72Op5Xf1J1A.png", alt="Toggling the :hover pseudo-class", width="800", height="523" %}
 
 **Figure 7**. Toggling the `:hover` pseudo-class. In the viewport you can see that the
 `background-color: cornflowerblue` declaration is being applied to the element, even though the
@@ -149,27 +149,27 @@ The Coverage tab shows you what CSS a page actually uses.
     in focus to open the Command Menu.
 2.  Start typing `coverage` and select **Show Coverage**. The Coverage tab appears.
 
-    ![Opening the Coverage tab from the Command Menu.](/web/tools/chrome-devtools/css/imgs/command-menu.png)
+    {% Img src="image/admin/w4EnEqO6dqj8nGQEMq6j.png", alt="Opening the Coverage tab from the Command Menu.", width="800", height="526" %}
 
     **Figure 8**. Opening the Coverage tab from the Command Menu
 
-    ![The Coverage tab.](/web/tools/chrome-devtools/css/imgs/coverage-empty.png)
+    {% Img src="image/admin/WiWn2DPIl3HGsiM9hxNa.png", alt="The Coverage tab.", width="800", height="575" %}
 
     **Figure 9**. The Coverage tab
 
 3.  Click **Start Instrumenting Coverage And Reload Page**
-    ![Start Instrumenting Coverage And Reload Page](/web/tools/chrome-devtools/css/imgs/reload.png).
+    {% Img src="image/admin/7Nr8n3jly53lAoufh6Tn.png", alt="Start Instrumenting Coverage And Reload Page", width="24", height="25" %}.
     The page reloads and the Coverage tab provides an overview of how much CSS (and JavaScript) is
     used from each file that the browser loads. Green represents used CSS. Red represents unused
     CSS.
 
-    ![An overview of how much CSS (and JavaScript) is used and unused.](/web/tools/chrome-devtools/css/imgs/coverage-overview.png)
+    {% Img src="image/admin/pvGdoYTcYTA5lO0mptQy.png", alt="An overview of how much CSS (and JavaScript) is used and unused.", width="800", height="575" %}
 
     **Figure 10**. An overview of how much CSS (and JavaScript) is used and unused
 
 4.  Click a CSS file to see a line-by-line breakdown of what CSS it uses.
 
-    ![A line-by-line breakdown of used and unused CSS.](/web/tools/chrome-devtools/css/imgs/coverage-detail.png)
+    {% Img src="image/admin/rA1y59EuQv5COtnFX8d7.png", alt="A line-by-line breakdown of used and unused CSS.", width="800", height="646" %}
 
     **Figure 11**. Lines 55 to 57 and 65 to 67 of `devsite-google-blue.css` are unused, whereas
     lines 59 to 63 are used
@@ -207,7 +207,7 @@ To add an inline declaration:
 4.  Enter a valid value for that property and press <kbd>Enter</kbd>. In the **DOM Tree**, you can
     see that a `style` attribute has been added to the element.
 
-![Adding inline declarations](/web/tools/chrome-devtools/css/imgs/inline-declaration.png)
+{% Img src="image/admin/aUviBexUPdpxXvUbSUxS.png", alt="Adding inline declarations", width="800", height="645" %}
 
 **Figure 12**. The `margin-top` and `background-color` properties have been applied to the selected
 element. In the **DOM Tree** you can see the declarations reflected in the element's `style`
@@ -223,7 +223,7 @@ To add a declaration to an existing style rule:
 3.  Enter a property name and press <kbd>Enter</kbd>.
 4.  Enter a valid value for that property and press <kbd>Enter</kbd>.
 
-![Adding a declaration to a style rule](/web/tools/chrome-devtools/css/imgs/add-declaration-existing-rule.png)
+{% Img src="image/admin/dQMFYTxsVz5WxQpuvRga.png", alt="Adding a declaration to a style rule", width="800", height="547" %}
 
 **Figure 13**. Adding the `border-bottom-style:groove` declaration to a style rule
 
@@ -261,7 +261,7 @@ To add a class to an element:
 3.  Enter the name of the class in the **Add New Class** text box.
 4.  Press <kbd>Enter</kbd>.
 
-![The Element Classes pane](/web/tools/chrome-devtools/css/imgs/element-classes.svg)
+{% Img src="image/admin/US4gZWGNdDcz4MswYkV3.svg", alt="The Element Classes pane", width="800", height="460" %}
 
 **Figure 14**. The **Element Classes** pane
 
@@ -280,10 +280,10 @@ To add a new style rule:
 
 1.  [Select an element][21].
 2.  Click **New Style Rule**
-    ![New Style Rule](/web/tools/chrome-devtools/css/imgs/new-style-rule.png). DevTools inserts a
+    {% Img src="image/admin/XcURsD5IoAJqI4TwgY4w.png", alt="New Style Rule", width="20", height="20" %}. DevTools inserts a
     new rule beneath the **element.style** rule.
 
-![Adding a new style rule](/web/tools/chrome-devtools/css/imgs/style-rule.png)
+{% Img src="image/admin/yAkLVkP6eeeBihslr7oy.png", alt="Adding a new style rule", width="800", height="599" %}
 
 **Figure 15**. DevTools adds the `h1.devsite-page-title` style rule after clicking **New Style
 Rule**
@@ -294,7 +294,7 @@ When [adding a new style rule][22], click and hold **New Style Rule**
 ![New Style Rule](/web/tools/chrome-devtools/css/imgs/new-style-rule.png) to choose which stylesheet
 to add the style rule to.
 
-![Choosing a stylesheet](/web/tools/chrome-devtools/css/imgs/choose-stylesheet.png)
+{% Img src="image/admin/QEehBhl9E7tfEwyfdWgO.png", alt="Choosing a stylesheet", width="800", height="599" %}
 
 **Figure 16**. Choosing a stylesheet
 
@@ -308,7 +308,7 @@ To toggle a single declaration on or off:
 3.  Check or uncheck the checkbox next to the declaration. When you uncheck a declaration, DevTools
     crosses it out to indicate that it's no longer active.
 
-![Toggling a declaration](/web/tools/chrome-devtools/css/imgs/toggle-declaration.png)
+{% Img src="image/admin/Z36P2RuDUFAFIp8kTZ6N.png", alt="Toggling a declaration", width="800", height="608" %}
 
 **Figure 20**. The `color` property for the currently-selected element has been toggled off
 
@@ -323,20 +323,20 @@ To open the **Color Picker**:
     change. To the left of the `color` or `background-color` value, there is a small square which is
     a preview of the color.
 
-    ![Color preview](/web/tools/chrome-devtools/css/imgs/color-preview.png)
+    {% Img src="image/admin/SuJ1WT25iaaOgt8iWQzj.png", alt="Color preview", width="800", height="517" %}
 
     **Figure 24**. The small blue square to the left of `rgb(123, 170, 247)` is a preview of that
     color
 
 3.  Click the preview to open the **Color Picker**.
 
-    ![The Color Picker](/web/tools/chrome-devtools/css/imgs/color-picker.png)
+    {% Img src="image/admin/i8pU9ALTZwhbvrhlXGm7.png", alt="The Color Picker", width="800", height="624" %}
 
     **Figure 25**. The **Color Picker**
 
 Here's a description of each of the UI elements of the **Color Picker**:
 
-![The Color Picker, annotated](/web/tools/chrome-devtools/css/imgs/color-picker-annotated.svg)
+{% Img src="image/admin/kAtu8Uoi2x8IFvaX561h.svg", alt="The Color Picker, annotated", width="800", height="548" %}
 
 **Figure 26**. The **Color Picker**, annotated
 
@@ -356,13 +356,13 @@ Here's a description of each of the UI elements of the **Color Picker**:
 #### Sample a color off the page with the Eyedropper {: #eyedropper }
 
 When you open the **Color Picker**, the **Eyedropper**
-![Eyedropper](/web/tools/chrome-devtools/css/imgs/eyedropper-icon.png) is on by default. To change
+{% Img src="image/admin/FCjp9jpqJo8tAB7LneFU.png", alt="Eyedropper", width="28", height="28" %} is on by default. To change
 the selected color to some other color on the page:
 
 1.  Hover over the target color in the viewport.
 2.  Click to confirm.
 
-    ![Using the Eyedropper](/web/tools/chrome-devtools/css/imgs/eyedropper.png)
+    {% Img src="image/admin/7g1d1iGpJgm98vIHA6pA.png", alt="Using the Eyedropper", width="800", height="529" %}
 
     **Figure 27**. The **Color Picker** shows a current color value of `#212121`, which is close to
     black. This color would change to the blue that's currently highlighted in the viewport once the
@@ -378,13 +378,13 @@ To open the **Angle Clock**:
 2.  In the **Styles** tab, find the `transform` or `background` declaration that you want to change.
     Click on the **Angle Preview** box next to the angle value.
 
-    ![Angle preview](/web/tools/chrome-devtools/css/imgs/angle-preview.png)
+    {% Img src="image/admin/EjXqoXmADgOgKMRQSBsP.png", alt="Angle preview", width="800", height="661" %}
 
     **Figure 28**. The small clock to the left of `-5deg` and `0.25turn` are preview of the angle.
 
 3.  Click the preview to open the **Angle Clock**.
 
-    ![Angle clock](/web/tools/chrome-devtools/css/imgs/angle-clock.png)
+    {% Img src="image/admin/CykQzGfW2DfCt2VUmTcR.png", alt="Angle clock", width="800", height="723" %}
 
     **Figure 29**. The Angle Clock.
 
