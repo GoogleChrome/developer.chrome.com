@@ -34,7 +34,7 @@ module.exports = collections => {
       // for it.
       if (api && !namespace) {
         console.warn(
-          `Reference page with 'api: ${api}' has missing namespace:`,
+          `Reference page with 'api: ${api}' does not have source data, check types flow:`,
           inputPath
         );
       }

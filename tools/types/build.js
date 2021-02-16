@@ -71,8 +71,8 @@ async function build() {
       const namespace = namespaces[name];
       const rn = renderNamespaceFromNamespace(sourceFile, name, namespace);
 
-      // Store the output as "accessibilityFeatures", not "chrome.accessibilityFeatures".
-      out[rn.shortName] = rn;
+      // Store the output as "chrome.accessibilityFeatures", to match the source data.
+      out[name] = rn;
     }
   }
 

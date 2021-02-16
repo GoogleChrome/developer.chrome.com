@@ -15,8 +15,8 @@
  */
 
 /**
- * Converts a namespace name like "chrome.foo.bar" into a path segment like
- * "foo_bar". Throws if namespace does not start with "chrome.".
+ * Converts a namespace name like "chrome.foo.bar" into a path segment like "foo_bar". Throws if
+ * namespace does not start with "chrome.", as this is all the site currently supports.
  *
  * @param {string} namespace
  * @return {string}
