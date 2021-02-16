@@ -12,7 +12,7 @@ description: "Keep your client-side code readable and debuggable even after you&
 Keep your client-side code readable and debuggable even after you've combined, minified or compiled
 it. Use source maps to map your source code to your compiled code.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Use Source Maps to map minified code to source code. You can then read and debug compiled code in
   its original source.

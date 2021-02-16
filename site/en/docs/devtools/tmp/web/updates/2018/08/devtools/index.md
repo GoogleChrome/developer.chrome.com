@@ -162,7 +162,7 @@ For example, suppose you wanted to measure how long a user spends on your homepa
 your [call-to-action][21] (CTA) button. First, you would mark the beginning of the journey in an
 event handler associated to a page load event, such as `DOMContentLoaded`:
 
-```
+```js
 document.addEventListener('DOMContentLoaded', () => {
   window.performance.mark('start');
 });
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 Then, you would mark the end of the journey and calculate its duration when the button is clicked:
 
-```
+```js
 document.querySelector('#CTA').addEventListener('click', () => {
   window.performance.mark('end');
   window.performance.measure('CTA', 'start', 'end');
@@ -180,7 +180,7 @@ document.querySelector('#CTA').addEventListener('click', () => {
 You can also extract your measurements, making it easy to send them to your analytics service to
 collect anonymous, aggregated data:
 
-```
+```js
 const CTA = window.performance.getEntriesByName('CTA')[0].duration;
 ```
 

@@ -24,7 +24,7 @@ application.
 
 ![Timeline tool](/web/tools/chrome-devtools/evaluate-performance/imgs/timeline-panel.png)
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Make a Timeline recording to analyze every event that occurred after a page load or a user
   interaction.

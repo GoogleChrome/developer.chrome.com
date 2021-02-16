@@ -158,8 +158,7 @@ The Coverage tab shows you what CSS a page actually uses.
     **Figure 9**. The Coverage tab
 
 3.  Click **Start Instrumenting Coverage And Reload Page**
-    ![Start Instrumenting Coverage
-And Reload Page](/web/tools/chrome-devtools/css/imgs/reload.png).
+    ![Start Instrumenting Coverage And Reload Page](/web/tools/chrome-devtools/css/imgs/reload.png).
     The page reloads and the Coverage tab provides an overview of how much CSS (and JavaScript) is
     used from each file that the browser loads. Green represents used CSS. Red represents unused
     CSS.

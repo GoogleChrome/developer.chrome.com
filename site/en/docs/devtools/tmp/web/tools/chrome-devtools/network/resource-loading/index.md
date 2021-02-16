@@ -21,7 +21,7 @@ Measure the network performance of your site using the **Network** panel.
 The **Network** panel records information about each network operation on a page, including detailed
 timing data, HTTP request and response headers, cookies, and more.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Use the Network panel to record and analyze network activity.
 - View load information in aggregate or for individual resources.
