@@ -26,8 +26,11 @@ function namespaceForData(data) {
   const {api, chromeApiNamespaces} = data;
   if (!api) {
     return undefined;
-  } else if (api in chromeApiNamespaces) {
-    return chromeApiNamespaces[api];
+  }
+
+  const canonicalApi = `chrome.${api}`;
+  if (canonicalApi in chromeApiNamespaces) {
+    return chromeApiNamespaces[canonicalApi];
   }
 
   // This can be called several times by Eleventy. The first time it's called it's unlikely that
