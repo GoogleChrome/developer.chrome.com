@@ -127,7 +127,7 @@ which are referenced from one with a yellow background.
 - **(compiled code)** – simply, everything related to compiled code. Script is similar to a function
   but corresponds to a <script> body. SharedFunctionInfos (SFI) are objects standing between
   functions and compiled code. Functions are usually have a context, while SFIs do not.
-- **HTMLDivElement**, **HTMLAnchorElement**, **DocumentFragment** etc – references to elements or
+- **HTMLDivElement**, **HTMLAnchorElement**, **DocumentFragment** etc–references to elements or
   document objects of a particular type referenced by your code.
 
 **Example:** Try this [demo page][8] to understand how the Summary view can be used.
@@ -178,7 +178,7 @@ using the view.
 It helps a lot to name the functions so you can easily distinguish between closures in the snapshot.
 For example, this example does not use named functions:
 
-```
+```js
 function createLargeClosure() {
   var largeStr = new Array(1000000).join('x');
 
@@ -192,7 +192,7 @@ function createLargeClosure() {
 
 Whilst this example does:
 
-```
+```js
 function createLargeClosure() {
   var largeStr = new Array(1000000).join('x');
 
@@ -254,7 +254,7 @@ leaks happening due to forgotten detached DOM subtrees floating around.
 
 DOM leaks can be bigger than you think. Consider the following sample - when is the #tree GC?
 
-```
+```js
   var select = document.querySelector;
   var treeRef = select("#tree");
   var leafRef = select("#leaf");

@@ -20,7 +20,7 @@ where you can find similar information.
 It is crucial to understand the phases in which resources are gathered over the network. This is the
 foundation for fixing load issues.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Understand the phases of resource timing.
 - Know what each phase provides to the Resource Timing API.

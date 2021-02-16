@@ -29,7 +29,7 @@ After [setting breakpoints][1], return to the page and use it normally until a b
 reached. This pauses all JavaScript on the page, focus shifts to the DevTools Sources panel, and the
 breakpoint is highlighted. You can now selectively execute code and examine its data, step by step.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Step through code to observe issues before or while they happen and test out changes through live
   editing.
@@ -220,7 +220,7 @@ Show the Console drawer by clicking **Show/Hide drawer**
 Try modifying values, then continue execution to see how it changes the outcome of your code and
 whether it behaves as you expect.
 
-#### Example {: #example_2 }
+### Example {: #example_2 }
 
 ![Console Drawer](/web/tools/chrome-devtools/javascript/imgs/image_17.png)
 
@@ -247,7 +247,7 @@ all function definitions will be updated.
 Now, you can resume execution; your modified script will execute in place of the original, and you
 can observe the effects of your changes.
 
-#### Example {: #example_3 }
+### Example {: #example_3 }
 
 ![Live editing](/web/tools/chrome-devtools/javascript/imgs/image_18.png)
 

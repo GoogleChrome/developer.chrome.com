@@ -262,7 +262,7 @@ Version 1.0 of Puppeteer, a browser automation tool maintained by the Chrome Dev
 out. You can use Puppeteer to automate many tasks that were previously only available via DevTools,
 such as capturing screenshots:
 
-```
+```js
 const puppeteer = require('puppeteer');
 (async () => {
   const browser = await puppeteer.launch();
@@ -275,7 +275,7 @@ const puppeteer = require('puppeteer');
 
 It also has APIs for lots of generally useful automation tasks, such as generating PDFs:
 
-```
+```js
 const puppeteer = require('puppeteer');
 (async () => {
   const browser = await puppeteer.launch();

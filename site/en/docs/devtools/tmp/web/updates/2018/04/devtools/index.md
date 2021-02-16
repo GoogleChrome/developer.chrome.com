@@ -89,7 +89,7 @@ Right-click a network request then select **Copy** > **Copy As Fetch** to copy t
 
 DevTools produces code like the following:
 
-```
+```js
 fetch("https://preload.glitch.me/styles.css", {
   "credentials": "omit",
   "headers": {},

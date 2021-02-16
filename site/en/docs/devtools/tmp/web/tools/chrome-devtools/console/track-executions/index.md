@@ -3,8 +3,8 @@ layout: "layouts/doc-post.njk"
 title: "Measure and count executions"
 authors:
   - megginkearney
-,  - flaviocopes
-,  - pbakaus
+  - flaviocopes
+  - pbakaus
 date: 2015-04-13
 updated: 2020-07-10
 description: "Take advantage of the Console API to measure execution times and count statement executions."
@@ -18,7 +18,7 @@ This page is deprecated.
 
 Take advantage of the Console API to measure execution times and count statement executions.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - Use `console.time()` and `console.timeEnd()` to track time elapsed between code execution points.
 - Use `console.count()` to count how many times the same string is passed to a function.
@@ -37,7 +37,7 @@ The console then logs the label and time elapsed when the `timeEnd()` method fir
 
 Here, we measure the initialization of a million new Arrays:
 
-```
+```js
 console.time("Array initialize");
 var array= new Array(1000000);
 for (var i = array.length - 1; i >= 0; i--) {
@@ -73,7 +73,7 @@ The `timeStamp()` annotates the Timeline in the following places:
 
 The following example code:
 
-```
+```js
 function AddResult(name, result) {
     console.timeStamp("Adding result");
     var text = name + ': ' + result;
@@ -94,7 +94,7 @@ incremented.
 
 Example code of using `count()` with some dynamic content:
 
-```
+```js
 function login(user) {
     console.count("Login called for user " + user);
 }

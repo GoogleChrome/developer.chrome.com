@@ -81,7 +81,7 @@ To inspect a node:
 
 [Code coverage][4] data can now be exported as a JSON file. The JSON looks like this:
 
-```
+```js
 [
   {
     "url": "https://wndt73.glitch.me/style.css",

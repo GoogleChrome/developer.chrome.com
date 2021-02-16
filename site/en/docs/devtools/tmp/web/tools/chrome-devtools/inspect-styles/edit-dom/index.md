@@ -18,7 +18,7 @@ This page is deprecated.
 The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current
 web page. Live-edit the content and structure of your page through DOM updates.
 
-### TL;DR {: #tldr }
+## TL;DR {: #tldr }
 
 - The DOM defines your page structure. Each DOM node is a page element, for example, a header node,
   paragraph node.
@@ -207,7 +207,7 @@ A subtree modification breakpoint is triggered when a child element is added, re
 example, if you set a subtree modification breakpoint on the `main-content` element, the following
 code triggers the breakpoint:
 
-```
+```js
 var element = document.getElementById('main-content');
 //modify the element's subtree.
 var mySpan = document.createElement('span');
@@ -219,7 +219,7 @@ element.appendChild( mySpan );
 An attribute modification occurs when the attribute of an element (`class, id, name`) is changed
 dynamically:
 
-```
+```js
 var element = document.getElementById('main-content');
 // class attribute of element has been modified.
 element.className = 'active';
@@ -229,7 +229,7 @@ element.className = 'active';
 
 A node removal modification is triggered when the node in question is removed from the DOM:
 
-```
+```js
 document.getElementById('main-content').remove();
 ```
 

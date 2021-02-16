@@ -54,7 +54,7 @@ scenarios without having to switch browsers.
 Suppose we have the following HTML code to serve an image in AVIF and WebP for newer browsers, with
 a fallback PNG image for older browsers.
 
-```
+```js
 <picture>
   <source srcset="test.avif" type="image/avif">
   <source srcset="test.webp" type="image/webp">
