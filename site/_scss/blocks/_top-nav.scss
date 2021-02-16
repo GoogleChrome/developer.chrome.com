@@ -21,11 +21,13 @@ top-nav {
     margin-left: 12px;
     overflow: hidden;
 
+    // stylelint-disable max-nesting-depth
     @include media-query('md-max') {
       > svg {
         margin-left: -82px;
       }
     }
+    // stylelint-enable max-nesting-depth
   }
 }
 
