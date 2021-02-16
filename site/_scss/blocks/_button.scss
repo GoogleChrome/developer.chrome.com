@@ -87,6 +87,7 @@
   border: 1px solid transparent;
   border-radius: 50%;
   display: flex;
+  height: 40px;
   justify-content: center;
   width: 40px;
 
@@ -103,5 +104,6 @@
   > svg {
     min-width: 24px;
     transition: transform 0.2s;
+    margin-left: -2px;
   }
 }
