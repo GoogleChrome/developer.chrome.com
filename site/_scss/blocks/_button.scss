@@ -81,3 +81,27 @@
     padding: 0;
   }
 }
+
+.button-icon {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  width: 40px;
+
+  &:hover {
+    background-color: var(--color-bg-shade);
+  }
+
+  &:focus,
+  &:active {
+    border-color: var(--color-hairline);
+    outline: none;
+  }
+
+  > svg {
+    min-width: 24px;
+    transition: transform 0.2s;
+  }
+}

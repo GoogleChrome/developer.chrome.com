@@ -20,6 +20,7 @@ import './store.js';
 // Web Components
 // These are components that appear on _every_ page.
 import './web-components/search-box';
+import './web-components/share-button';
 import './web-components/side-nav';
 import './web-components/top-nav';
 import './third-party/announcement-banner/announcement-banner';

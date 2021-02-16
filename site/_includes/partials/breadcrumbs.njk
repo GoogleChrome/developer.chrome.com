@@ -2,7 +2,7 @@
 
 {% extends 'partials/title-bar.njk' %}
 
-{% block title_bar_content %}
+{% block breadcrumbs %}
   <nav class="breadcrumbs cluster" aria-label="{{ 'i18n.common.breadcrumbs' | i18n(locale) }}">
     <div class="align-center flow-space-200">
       {% set all = helpers.buildBreadcrumbs(page.url, collections) %}
