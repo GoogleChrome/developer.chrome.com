@@ -47,7 +47,7 @@ To audit a page:
 1.  Go to the URL that you want to audit.
 2.  In DevTools, click the **Audits** tab. DevTools shows you various configuration options.
 
-    ![Configuring audits.](/web/tools/chrome-devtools/accessibility/imgs/config.png)
+    {% Img src="image/admin/2O9SByfzzLWTPQAcPlgN.png", alt="Configuring audits.", width="800", height="1053" %}
 
     **Figure 1**. Configuring audits
 
@@ -75,19 +75,19 @@ To audit a page:
 7.  Click **Run Audits**. After 10 to 30 seconds, DevTools provides a report. Your report gives you
     various tips on how to improve the page's accessibility.
 
-    ![A report.](/web/tools/chrome-devtools/accessibility/imgs/report.png)
+    {% Img src="image/admin/62KIEtieXbeJl36cN0kQ.png", alt="A report.", width="800", height="983" %}
 
     **Figure 2**. A report
 
 8.  Click an audit to learn more about it.
 
-    ![More information about an audit.](/web/tools/chrome-devtools/accessibility/imgs/attributes.png)
+    {% Img src="image/admin/rlUAzlrnHlt2dAfTtsAL.png", alt="More information about an audit.", width="800", height="586" %}
 
     **Figure 3**. More information about an audit
 
 9.  Click **Learn More** to view that audit's documentation.
 
-    ![Viewing an audit's documentation.](/web/tools/chrome-devtools/accessibility/imgs/documentation.png)
+    {% Img src="image/admin/uLnvFFpu1Aqksuh5JxdJ.png", alt="Viewing an audit's documentation.", width="800", height="728" %}
 
     **Figure 4**. Viewing an audit's documentation
 
@@ -98,7 +98,7 @@ the same information, since aXe is the underlying engine that powers the Audits 
 extension has a different UI and describes audits slightly differently. One advantage that the aXe
 extension has over the Audits panel is that it lets you inspect and highlight failing nodes.
 
-![The aXe extension.](/web/tools/chrome-devtools/accessibility/imgs/aXe.png)
+{% Img src="image/admin/XUIvZ0Hmn8stW6KxQCF3.png", alt="The aXe extension.", width="800", height="626" %}
 
 **Figure 5**. The aXe extension
 
@@ -112,9 +112,9 @@ To open the Accessibility pane:
 1.  Click the **Elements** tab.
 2.  In the **DOM Tree**, select the element which you want to inspect.
 3.  Click the **Accessibility** tab. This tab may be hidden behind the **More Tabs**
-    ![More Tabs](/web/tools/chrome-devtools/images/shared/more-tabs.png) button.
+    {% Img src="image/admin/K91DZQf9MTMExVz8NZ3w.png", alt="More Tabs", width="18", height="16" %} button.
 
-![Inspecting the h1 element of the DevTools homepage in the Accessibility pane.](/web/tools/chrome-devtools/accessibility/imgs/a11y-pane.png)
+{% Img src="image/admin/i38qmp8kPpiHCepwqkAg.png", alt="Inspecting the h1 element of the DevTools homepage in the Accessibility pane.", width="800", height="464" %}
 
 **Figure 6**. Inspecting the `h1` element of the DevTools homepage in the Accessibility pane
 
@@ -125,7 +125,7 @@ that are relevant and useful for displaying the page's contents in a screen read
 
 Inspect an element's position in the accessibility tree from [the Accessibility pane][8].
 
-![The Accessibility Tree section](/web/tools/chrome-devtools/accessibility/imgs/a11y-tree.png)
+{% Img src="image/admin/IGM9xYMSTugsmo7sxIjk.png", alt="The Accessibility Tree section", width="800", height="506" %}
 
 **Figure 7**. The Accessibility Tree section
 
@@ -136,7 +136,7 @@ properly represent a page's contents.
 
 View an element's ARIA attributes in [the Accessibility pane][9].
 
-![The ARIA Attributes section](/web/tools/chrome-devtools/accessibility/imgs/aria.png)
+{% Img src="image/admin/5gOS8Kz2Qdxu3FbaKZ6W.png", alt="The ARIA Attributes section", width="800", height="506" %}
 
 **Figure 8**. The ARIA Attributes section
 
@@ -153,7 +153,7 @@ viewed in the **Computed Properties** section of the **Accessibility** pane.
 
 View an element's computed accessibility properties in [the Accessibility pane][11].
 
-![The Computed (Accessibility) Properties section.](/web/tools/chrome-devtools/accessibility/imgs/computed-a11y.png)
+{% Img src="image/admin/KhrNElIocLRywp4Na7x7.png", alt="The Computed (Accessibility) Properties section.", width="800", height="506" %}
 
 **Figure 9**. The Computed (Accessibility) Properties section
 
@@ -170,13 +170,13 @@ The Color Picker can help you make sure that your text meets recommended contras
 1.  Click the **Elements** tab.
 2.  In the **DOM Tree**, select the text element that you want to inspect.
 
-    ![Inspecting a paragraph in the DOM Tree.](/web/tools/chrome-devtools/accessibility/imgs/inspect.png)
+    {% Img src="image/admin/I2op86IuFtozDrACGUYb.png", alt="Inspecting a paragraph in the DOM Tree.", width="800", height="516" %}
 
     **Figure 10**. Inspecting a paragraph in the DOM Tree
 
 3.  In the **Styles** pane, click the color square next to the element's `color` value.
 
-    ![The color property of the element.](/web/tools/chrome-devtools/accessibility/imgs/color.png)
+    {% Img src="image/admin/FspNZHSagZlSOAOqtCqG.png", alt="The color property of the element.", width="800", height="516" %}
 
     **Figure 11**. The `color` property of the element
 
@@ -195,7 +195,7 @@ The Color Picker can help you make sure that your text meets recommended contras
     on the same side of the line also meets recommendations. If the current color does not meet
     recommendations, then anything on the same side also does not meet recommendations.
 
-    ![The Contrast Ratio Line in the visual picker.](/web/tools/chrome-devtools/accessibility/imgs/contrast-ratio-line.png)
+    {% Img src="image/admin/Jw8dX2kSVDdPUtfDHT5F.png", alt="The Contrast Ratio Line in the visual picker.", width="800", height="516" %}
 
     **Figure 13**. The Contrast Ratio Line in the visual picker
 

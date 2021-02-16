@@ -18,9 +18,9 @@ To open Settings, do one of the following:
 
 - Press <kbd>F1</kbd> while DevTools is in focus.
 - Click **Settings**
-  ![Settings icon](/web/tools/chrome-devtools/images/shared/capture-settings.png).
+  {% Img src="image/admin/UmyyBkC2pWlZTt9m9MDc.png", alt="Settings icon", width="28", height="28" %}.
 
-![Settings.](/web/tools/chrome-devtools/customize/images/settings-menu.png)
+{% Img src="image/admin/JT10WadwpzpCOuHkWHw9.png", alt="Settings.", width="800", height="524" %}
 
 **Figure 1**. Settings.
 
@@ -30,11 +30,11 @@ The **Drawer** contains many hidden features.
 
 Press <kbd>Escape</kbd> to open or close the Drawer.
 
-![The Drawer.](/web/tools/chrome-devtools/customize/images/drawer-example.png)
+{% Img src="image/admin/xeCLVEAiw99oxMJp0uzn.png", alt="The Drawer.", width="800", height="604" %}
 
 **Figure 2**. The Drawer.
 
-Click **More** ![More](/web/tools/chrome-devtools/customize/images/more.png) to open other Drawer
+Click **More** {% Img src="image/admin/412azsDzeKPM2HQ6p5Rr.png", alt="More", width="6", height="26" %} to open other Drawer
 tabs.
 
 ![The button for opening Drawer
@@ -57,7 +57,7 @@ usually the fourth from the left. In the screenshot, it's the first from the lef
 
 See [Chrome DevTools Placement][1].
 
-![Undocked DevTools.](/web/tools/chrome-devtools/customize/images/undock.png)
+{% Img src="image/admin/NqpfQ9foeTjvOYLzOh16.png", alt="Undocked DevTools.", width="800", height="352" %}
 
 **Figure 5**. Undocked DevTools.
 
@@ -65,7 +65,7 @@ See [Chrome DevTools Placement][1].
 
 See [Enable Dark Theme][2].
 
-![The dark theme.](/web/tools/chrome-devtools/customize/images/darktheme.png)
+{% Img src="image/admin/aeIyPT88dwvuDGDmQTDw.png", alt="The dark theme.", width="800", height="477" %}
 
 **Figure 6**. The dark theme.
 

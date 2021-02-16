@@ -20,7 +20,7 @@ geolocation in Chrome DevTools:
     <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux, Chrome OS) to open the
     **Command Menu**.
 
-    ![The Command Menu.](/web/tools/chrome-devtools/images/shared/command-menu.png)
+    {% Img src="image/admin/Ok1tHKMMQkTppz0aYqjk.png", alt="The Command Menu.", width="800", height="632" %}
 
     **Figure 1**. The Command Menu
 
@@ -30,7 +30,7 @@ geolocation in Chrome DevTools:
     **Custom location** to enter custom longitude and latitude coordinates, or select **Location
     unavailable** to see how your site behaves when the user's location is not available.
 
-    ![Selecting 'Tokyo' from the 'Geolocation' list.](/web/tools/chrome-devtools/device-mode/imgs/tokyo.png)
+    {% Img src="image/admin/GLnD87xLckOcCq7Uxi8P.png", alt="Selecting 'Tokyo' from the 'Geolocation' list.", width="800", height="670" %}
 
     **Figure 2**. Selecting **Tokyo** from the **Geolocation** list
 

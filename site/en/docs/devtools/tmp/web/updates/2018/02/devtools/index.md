@@ -57,7 +57,7 @@ now possible:
 3.  Select **Blackbox script**. The **Initiator** column now hides any calls from the script that
     you blackboxed.
 
-![Blackboxing requests.js.](/web/updates/images/2018/02/blackbox.png)
+{% Img src="image/admin/hpgshbdiwKtYMcRsfVt9.png", alt="Blackboxing requests.js.", width="800", height="518" %}
 
 **Figure 2**. Blackboxing `requests.js`
 
@@ -76,14 +76,14 @@ See [Ignore a script or pattern of scripts][7] to learn more about blackboxing.
 The **Preview** tab in the **Network** panel now pretty-prints resources by default when it detects
 that those resources have been minified.
 
-![The Preview tab pretty-printing the contents of analytics.js by default.](/web/updates/images/2018/02/preview-prettyprint.png)
+{% Img src="image/admin/pGztOri2zTIkZm559MvP.png", alt="The Preview tab pretty-printing the contents of analytics.js by default.", width="800", height="527" %}
 
 **Figure 4**. The **Preview** tab pretty-printing the contents of `analytics.js` by default
 
 To view the unminified version of a resource, use the **Response** tab. You can also manually
 pretty-print resources from the **Response** tab, via the new **Format** button.
 
-![Manually pretty-printing the contents of analytics.js via the Format button.](/web/updates/images/2018/02/response-prettyprint.png)
+{% Img src="image/admin/EvUzuxoqJEAd6US9bEzK.png", alt="Manually pretty-printing the contents of analytics.js via the Format button.", width="800", height="527" %}
 
 **Figure 5**. Manually pretty-printing the contents of `analytics.js` via the **Format** button
 
@@ -95,7 +95,7 @@ does a basic rendering of the HTML. It's not intended to be a full browser, so i
 HTML exactly as you expect. If you want to see the HTML code, click the **Response** tab, or
 right-click a resource and select **Open in Sources panel**.
 
-![Previewing HTML in the Preview tab.](/web/updates/images/2018/02/preview.png)
+{% Img src="image/admin/sZcyshIjXIgfT064asGm.png", alt="Previewing HTML in the Preview tab.", width="800", height="547" %}
 
 **Figure 6**. Previewing HTML in the **Preview** tab
 
@@ -112,7 +112,7 @@ Back when DevTools launched [**Local Overrides**][9] in Chrome 65, one limitatio
 couldn't track changes to styles defined within HTML. For example, in **Figure 7** there's a style
 rule in the `head` of the document that declares `font-weight: bold` for `h1` elements.
 
-![An example of styles defined within HTML](/web/updates/images/2018/02/overrides.png)
+{% Img src="image/admin/N4V6uciEsD8KxEJflPZc.png", alt="An example of styles defined within HTML", width="800", height="486" %}
 
 **Figure 7**. An example of styles defined within HTML
 
@@ -144,14 +144,14 @@ breakpoint in DevTools. When I click the button in the demo, DevTools automatica
 first line of listener code. In this case, it pauses in Vue.js's wrapper code on line 1802, which
 isn't that helpful.
 
-![The click breakpoint pauses in Vue.js' wrapper code.](/web/updates/images/2018/02/click-breakpoint.png)
+{% Img src="image/admin/R6aqGqlETYfPt229gX88.png", alt="The click breakpoint pauses in Vue.js' wrapper code.", width="800", height="486" %}
 
 **Figure 8**. The `click` breakpoint pauses in Vue.js' wrapper code
 
 Since the Vue.js script is in a separate file, I can blackbox that script from the **Call Stack**
 pane in order to make this `click` breakpoint more useful.
 
-![Blackboxing the Vue.js script from the Call Stack pane.](/web/updates/images/2018/02/blackbox-framework.png)
+{% Img src="image/admin/HthqwHAzXf5v61dwRZFh.png", alt="Blackboxing the Vue.js script from the Call Stack pane.", width="800", height="454" %}
 
 **Figure 9**. Blackboxing the Vue.js script from the **Call Stack** pane
 
@@ -159,7 +159,7 @@ The next time I click the button and trigger the `click` breakpoint, it executes
 without pausing in it, and then pauses on the first line of code in my app's listener, which is
 where I really wanted to pause all along.
 
-![The click breakpoint now pauses on the app's listener code.](/web/updates/images/2018/02/blackboxed-results.png)
+{% Img src="image/admin/0UHBfrZykjGbEfFkrCwE.png", alt="The click breakpoint now pauses on the app's listener code.", width="800", height="486" %}
 
 **Figure 10**. The `click` breakpoint now pauses on the app's listener code
 

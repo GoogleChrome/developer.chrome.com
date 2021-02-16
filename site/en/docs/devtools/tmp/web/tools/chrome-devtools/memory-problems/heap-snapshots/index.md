@@ -20,7 +20,7 @@ memory graphs, compare snapshots, and find memory leaks.
 On the Profiles panel, choose **Take Heap Snapshot**, then click **Start** or press Cmd + E or
 Ctrl + E:
 
-![Select profiling type](/web/tools/chrome-devtools/memory-problems/imgs/profiling-type.png)
+{% Img src="image/admin/eXy0IF7EI8oiqd7CM8KG.png", alt="Select profiling type", width="800", height="582" %}
 
 **Snapshots** are initially stored in the renderer process memory. They are transferred to the
 DevTools on demand, when you click on the snapshot icon to view it.
@@ -28,7 +28,7 @@ DevTools on demand, when you click on the snapshot icon to view it.
 After the snapshot has been loaded into DevTools and has been parsed, the number below the snapshot
 title appears and shows the total size of the [reachable JavaScript objects][2]:
 
-![Total size of reachable objects](/web/tools/chrome-devtools/memory-problems/imgs/total-size.png)
+{% Img src="image/admin/qTTxQm0RcYd1YJsPRJif.png", alt="Total size of reachable objects", width="800", height="528" %}
 
 !!!.aside.aside--note
 
@@ -41,7 +41,7 @@ with a garbage collection.
 
 Remove snapshots (both from DevTools and renderers memory) by pressing the Clear all profiles icon:
 
-![Remove snapshots](/web/tools/chrome-devtools/memory-problems/imgs/remove-snapshots.png)
+{% Img src="image/admin/vDLKOGnE1e17pfWZgBBQ.png", alt="Remove snapshots", width="800", height="550" %}
 
 Closing the DevTools window will not delete profiles from the renderers memory. When reopening
 DevTools, all previously taken snapshots will reappear in the list of snapshots.
@@ -71,7 +71,7 @@ deletion/garbage collection is actually working.
 
 To switch between views, use the selector at the bottom of the view:
 
-![Switch views selector](/web/tools/chrome-devtools/memory-problems/imgs/switch-views.png)
+{% Img src="image/admin/x7nyCuSlwz3gbRhwIvJZ.png", alt="Switch views selector", width="333", height="181" %}
 
 !!!.aside.aside--note
 
@@ -85,7 +85,7 @@ that execute native code aren't captured. Also, non-string values such as number
 Initially, a snapshot opens in the Summary view, displaying object totals, which can be expanded to
 show instances:
 
-![Summary view](/web/tools/chrome-devtools/memory-problems/imgs/summary-view.png)
+{% Img src="image/admin/lpUo7q7jG2S2CVIw65ql.png", alt="Summary view", width="800", height="517" %}
 
 Top-level entries are "total" lines. They display:
 
@@ -109,7 +109,7 @@ which are referenced from one with a yellow background.
 
 **What do the various constructor (group) entries in the Heap profiler correspond to?**
 
-![Constructor groups](/web/tools/chrome-devtools/memory-problems/imgs/constructor-groups.jpg)
+{% Img src="image/admin/nsY5dgLPRJJIOhADyHyR.jpg", alt="Constructor groups", width="544", height="198" %}
 
 - **(global property)** – intermediate objects between a global object (like 'window') and an object
   referenced by it. If an object is created using a constructor Person and is held by a global
@@ -148,7 +148,7 @@ follow the scenario below:
 In the Comparison view, the difference between two snapshots is displayed. When expanding a total
 entry, added and deleted object instances are shown:
 
-![Comparison view](/web/tools/chrome-devtools/memory-problems/imgs/comparison-view.png)
+{% Img src="image/admin/aUzueSBh2VdlZdySO05q.png", alt="Comparison view", width="800", height="546" %}
 
 **Example:** Try this [demo page][9] to get an idea how to use snapshot comparison for detecting
 leaks.
@@ -168,7 +168,7 @@ The view provides several entry points:
 - **Native objects** are browser objects "pushed" inside the JavaScript virtual machine to allow
   automation, for example, DOM nodes, CSS rules.
 
-![Containment view](/web/tools/chrome-devtools/memory-problems/imgs/containment-view.png)
+{% Img src="image/admin/TrXbxzCRkGkJv17Da4sd.png", alt="Containment view", width="800", height="525" %}
 
 **Example:** Try this [demo page][10] for finding out how to explore closures and event handlers
 using the view.
@@ -204,7 +204,7 @@ function createLargeClosure() {
 }
 ```
 
-![Name functions to distinguish between closures](/web/tools/chrome-devtools/memory-problems/imgs/domleaks.png)
+{% Img src="image/admin/gU3gSvHcKR2UyJzn5abo.png", alt="Name functions to distinguish between closures", width="688", height="150" %}
 
 **Examples:** Try out this example of [why eval is evil][11] to analyze the impact of closures on
 memory. You may also be interested in following it up with this example that takes you through
@@ -220,7 +220,7 @@ good, as helps us to identify memory accumulation points quickly.
 **Note:** In Chrome Canary, Dominators view can be enabled by going to Settings > Show advanced heap
 snapshot properties and restarting the DevTools.
 
-![Dominators view](/web/tools/chrome-devtools/memory-problems/imgs/dominators-view.png)
+{% Img src="image/admin/AuEZxFtdT8P9QZQ5w48P.png", alt="Dominators view", width="800", height="548" %}
 
 **Examples:** Try this [demo][14] to train yourself in finding accumulation points. Follow it up
 with this example of running into [retaining paths and dominators][15].
@@ -275,7 +275,7 @@ DOM leaks can be bigger than you think. Consider the following sample - when is 
 `#leaf` maintains a reference to it's parent (parentNode) and recursively up to `#tree`, so only
 when leafRef is nullified is the WHOLE tree under `#tree` a candidate for GC.
 
-![DOM subtrees](/web/tools/chrome-devtools/memory-problems/imgs/treegc.png)
+{% Img src="image/admin/kQoKHBKI6Xtvt1d0BPb4.png", alt="DOM subtrees", width="368", height="278" %}
 
 **Examples:** Try out this example of [leaking DOM nodes][18] to understand where DOM nodes can leak
 and how to detect them. You can follow it up by also looking at this example of [DOM leaks being

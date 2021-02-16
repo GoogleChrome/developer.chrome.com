@@ -33,7 +33,7 @@ New features and major changes coming to Chrome DevTools in Chrome 72 include:
 After [recording a page load][5], DevTools now marks performance metrics like `DOMContentLoaded` and
 [First Meaningful Paint][6] in the **Timings** section.
 
-![First Meaningful Paint in the Timing section](/web/updates/images/2018/11/metrics.png)
+{% Img src="image/admin/L2xlo86WWuf3klu7Ic5q.png", alt="First Meaningful Paint in the Timing section", width="800", height="525" %}
 
 **Figure 1**. First Meaningful Paint in the Timing section
 
@@ -42,7 +42,7 @@ After [recording a page load][5], DevTools now marks performance metrics like `D
 When you hover over a text node in the DOM Tree, DevTools now highlights that text node in the
 viewport.
 
-![Highlighting a text node](/web/updates/images/2018/11/text.png)
+{% Img src="image/admin/CpeguzIfsQVmTbtFZv3Z.png", alt="Highlighting a text node", width="800", height="463" %}
 
 **Figure 2**. Highlighting a text node
 
@@ -60,7 +60,7 @@ path**. DevTools copies to your clipboard a `document.querySelector()` expressio
 node. As mentioned above, this is particularly helpful when working with Shadow DOM, but you can use
 it for any DOM node.
 
-![Copy JS path](/web/updates/images/2018/11/copyjs.png)
+{% Img src="image/admin/r8tgdjOvVRm2Yq8NL1hE.png", alt="Copy JS path", width="800", height="462" %}
 
 **Figure 3**. Copy JS path
 
@@ -76,13 +76,13 @@ The Audits panel is now running [Lighthouse 3.2][9]. Version 3.2 includes a new 
 **Detected JavaScript libraries**. This audit lists out what JS libraries Lighthouse has detected on
 the page. You can find this audit in your report under **Best Practices** > **Passed audits**.
 
-![Detected JavaScript libraries](/web/updates/images/2018/11/libs.png)
+{% Img src="image/admin/Fw0UUyWa1YjF1RI1r0Eh.png", alt="Detected JavaScript libraries", width="800", height="466" %}
 
 **Figure 4**. Detected JavaScript libraries
 
 Also, you can now access the Audits panel from the Command Menu by typing `Lighthouse` or `PWA`.
 
-![Typing 'lighthouse' into the Command Menu](/web/updates/images/2018/11/lighthouse.png)
+{% Img src="image/admin/L78JbAnO0nTzEOyEOELu.png", alt="Typing 'lighthouse' into the Command Menu", width="800", height="464" %}
 
 **Figure 5**. Typing `lighthouse` into the Command Menu
 

@@ -67,33 +67,33 @@ document object:
 getEventListeners(document);
 ```
 
-![Output of using getEventListeners()](/web/tools/chrome-devtools/console/images/events-call-geteventlisteners.png)
+{% Img src="image/admin/T9sTJoEib9KuMjUO3vrf.png", alt="Output of using getEventListeners()", width="678", height="238" %}
 
 If more than one listener is registered on the specified object, then the array contains a member
 for each listener. In the following example, there are two event listeners registered on the
 #scrollingList element for the `mousedown` event:
 
-![View of the event listeners attached to mousedown](/web/tools/chrome-devtools/console/images/events-geteventlisteners_multiple.png)
+{% Img src="image/admin/uJ1gTpJwcegSK1MxSV0B.png", alt="View of the event listeners attached to mousedown", width="796", height="170" %}
 
 Further expand each of these objects to explore their properties:
 
-![Expanded view of listener object](/web/tools/chrome-devtools/console/images/events-geteventlisteners_expanded.png)
+{% Img src="image/admin/Jk4QoVM3oMhT9yZM6xPe.png", alt="Expanded view of listener object", width="800", height="278" %}
 
 ## View event listeners registered on DOM elements {: #view_event_listeners_registered_on_dom_elements }
 
 By default, the _Event Listeners_ panel in the Elements Inspector shows all the events attached to a
 page:
 
-![Event listeners panel](/web/tools/chrome-devtools/console/images/events-eventlisteners_panel.png)
+{% Img src="image/admin/O7kMik8HNeeWZhnmYOn4.png", alt="Event listeners panel", width="800", height="178" %}
 
 The filter limits the events just to the selected node:
 
-![Event listeners panel, filtered by selected node only](/web/tools/chrome-devtools/console/images/events-eventlisteners_panel_filtered.png)
+{% Img src="image/admin/BeOeS9LNOqEYmfbiwpPw.png", alt="Event listeners panel, filtered by selected node only", width="800", height="160" %}
 
 By expanding the object, the panel shows the event listener details. In this example, the page has
 two event listeners attached via jQuery:
 
-![Expanded view of the event listeners](/web/tools/chrome-devtools/console/images/events-eventlisteners_panel_details.png)
+{% Img src="image/admin/kviukeFg4bMSd1OENbm4.png", alt="Expanded view of the event listeners", width="748", height="314" %}
 
 [1]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#monitoreventsobject-events
 [2]: /web/tools/chrome-devtools/debug/command-line/command-line-reference

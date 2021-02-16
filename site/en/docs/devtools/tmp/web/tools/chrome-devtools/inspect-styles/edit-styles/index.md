@@ -17,7 +17,7 @@ description: "Use the Styles pane in Chrome DevTools to inspect and modify the C
 
 Use the **Styles** pane to modify the CSS styles associated to an element.
 
-![Styles pane](/web/tools/chrome-devtools/inspect-styles/imgs/styles-pane.png)
+{% Img src="image/admin/NfWdD3xPHZAr1N5nSbvY.png", alt="Styles pane", width="800", height="485" %}
 
 ## TL;DR {: #tldr }
 
@@ -41,7 +41,7 @@ the selected element, from highest priority to lowest:
 
 The labels on the image below correspond with the numbered items below it.
 
-![Annotated Styles pane](/web/tools/chrome-devtools/inspect-styles/imgs/styles-annotated.png)
+{% Img src="image/admin/mTOI3ZGOAd2Sc1FlxWR7.png", alt="Annotated Styles pane", width="774", height="692" %}
 
 1.  Styles associated with a selector that matches the element.
 2.  [User agent stylesheets][3] are clearly labelled, and are often overridden by the CSS on your
@@ -64,7 +64,7 @@ by the selector. For example, in the screenshot below the mouse is hovering over
 `.wf-tools-guide__section-link a`. In the live page you can see all of the `<a>` elements that are
 affected by the selector.
 
-![viewing elements affected by selector](/web/tools/chrome-devtools/inspect-styles/imgs/selector-hover.png)
+{% Img src="image/admin/pxBVEXPT9YBVQk43c6y9.png", alt="viewing elements affected by selector", width="800", height="511" %}
 
 **Note**: this feature only highlights elements in the viewport; it's possible that other elements
 outside of the viewport are also affected by the selector.
@@ -83,7 +83,7 @@ element. From there, you can:
 - Enable or disable the classes currently associated to the element.
 - Add new classes to the element.
 
-![classes pane](/web/tools/chrome-devtools/inspect-styles/imgs/classes.png)
+{% Img src="image/admin/fhIxpRnwkMpe6Ye9AXn2.png", alt="classes pane", width="790", height="247" %}
 
 ## Edit an existing property name or value {: #edit_an_existing_property_name_or_value }
 
@@ -138,7 +138,7 @@ correct fields.
 !!!
 
 Click the **New Style Rule**
-(![new style rule button](/web/tools/chrome-devtools/inspect-styles/imgs/new-style-rule.png)) button
+({% Img src="image/admin/16RTQ3uVxZ5lQoJdnYAd.png", alt="new style rule button", width="54", height="50" %}) button
 to add a new CSS rule.
 
 Click and hold the button to choose which stylesheet the rule is added to.
@@ -165,7 +165,7 @@ to enable pseudoclass selector](/web/tools/chrome-devtools/inspect-styles/imgs/p
 - Select an element in the **Elements** panel, click the **:hov** button in the **Styles** pane, and
   use the checkboxes to enable or disable the selectors for the currently selected element.
 
-  ![:hov pane](/web/tools/chrome-devtools/inspect-styles/imgs/hov.png)
+  {% Img src="image/admin/V9onCucenT2WHcTlRv8D.png", alt=":hov pane", width="676", height="238" %}
 
 ## Add background-color or color to a style rule {: #add_background-color_or_color_to_a_style_rule }
 
@@ -182,10 +182,10 @@ style rule.
 In the bottom-right of the style rule, there is a three-dot icon. You need to hover over the style
 rule in order to see it.
 
-![three-dots icon in rule set](/web/tools/chrome-devtools/inspect-styles/imgs/rule-set-three-dots-icon.png)
+{% Img src="image/admin/4vlIQoqLcMkKCztqpPoP.png", alt="three-dots icon in rule set", width="525", height="148" %}
 
 Hover over this icon to reveal buttons for adding a `color` declaration
-(![add color declaration](/web/tools/chrome-devtools/inspect-styles/imgs/add-color.png)) or a
+({% Img src="image/admin/0FcU3ZLn3B26jqa4jV2c.png", alt="add color declaration", width="48", height="42" %}) or a
 `background-color` declaration
 (![add background-color 
 declaration](/web/tools/chrome-devtools/inspect-styles/imgs/add-background-color.png)).
@@ -204,7 +204,7 @@ To open the **Color Picker**, find a CSS declaration in the **Styles** pane that
 color of the square matches the declaration value. Click on this little square to open the **Color
 Picker**.
 
-![opening the color picker](/web/tools/chrome-devtools/inspect-styles/imgs/open-color-picker.jpg)
+{% Img src="image/admin/wN2Z3aqpz1al6fmvEnWl.jpg", alt="opening the color picker", width="743", height="371" %}
 
 You can interact with the **Color Picker** in multiple ways:
 
@@ -218,16 +218,16 @@ You can interact with the **Color Picker** in multiple ways:
 8.  **Color value selector**. Click to toggle between RGBA, HSL, and hexadecimal.
 9.  **Color palette selector**. Click to select different templates.
 
-![annotated color picker](/web/tools/chrome-devtools/inspect-styles/imgs/annotated-color-picker.jpg)
+{% Img src="image/admin/ScInm2mxH01Gv6f43hBF.jpg", alt="annotated color picker", width="554", height="410" %}
 
 ### Eyedropper {: #eyedropper }
 
 Click on the **eyedropper** button so that it is enabled
-(![enabled eyedropper](/web/tools/chrome-devtools/inspect-styles/imgs/eyedropper-enabled.png)),
+({% Img src="image/admin/CaqCVeLZbvOfOfUsbSsp.png", alt="enabled eyedropper", width="52", height="50" %}),
 hover over a color on the live page, and then click to set the currently selected declaration value
 to the color that you're hovering over.
 
-![the eyedropper in action](/web/tools/chrome-devtools/inspect-styles/imgs/eyedropper.jpg)
+{% Img src="image/admin/ujZ5BpI53ewz61Y0OgYu.jpg", alt="the eyedropper in action", width="513", height="750" %}
 
 ### Color palettes {: #color-palettes }
 
@@ -254,7 +254,7 @@ as CSS variables) just like any other declaration.
 Custom properties are usually [defined][18] in the `:root` selector. To view a custom property
 defined in `:root`, inspect the `html` element.
 
-![custom property defined on :root](/web/tools/chrome-devtools/inspect-styles/imgs/css-var-defined-on-root.png)
+{% Img src="image/admin/7rH9l5QOwMOmsFdLyRAG.png", alt="custom property defined on :root", width="796", height="572" %}
 
 Custom properties do not have to be defined on the `:root` selector, however. If you defined it
 elsewhere, inspect the element on which it was defined to view the definition.
@@ -266,7 +266,7 @@ If you see a declaration value like `var(--main-color)` as in the screenshot bel
 the declaration is using custom properties. These values can be edited like any other declaration
 value. Currently there is no way to jump to the custom property definition.
 
-![using a custom property](/web/tools/chrome-devtools/inspect-styles/imgs/css-var-in-use.png)
+{% Img src="image/admin/5ug6u33nf1YRfTzw5i8v.png", alt="using a custom property", width="478", height="94" %}
 
 ## Edit Sass, Less or Stylus {: #edit_sass_less_or_stylus }
 
@@ -282,7 +282,7 @@ leave DevTools or refresh the page.
 When you inspect an element whose styles are provided by a generated CSS file, the Elements panel
 displays a link to the original source file, not the generated CSS file.
 
-![Elements panel showing .scss stylesheet](/web/tools/chrome-devtools/inspect-styles/imgs/sass-debugging.png)
+{% Img src="image/admin/eL7EjTTupX4l7pwRXxeS.png", alt="Elements panel showing .scss stylesheet", width="622", height="219" %}
 
 To jump to the source file:
 
@@ -290,7 +290,7 @@ To jump to the source file:
 2.  <kbd class="kbd">Ctrl</kbd> + **Click** (or <kbd class="kbd">Cmd</kbd> + **click**) on any CSS
     property name or value to open the source file and jump to the appropriate line.
 
-![Sources panel showing .scss file](/web/tools/chrome-devtools/inspect-styles/imgs/sass-sources.png)
+{% Img src="image/admin/ncIPMgBhlRaPRsl0ryaJ.png", alt="Sources panel showing .scss file", width="622", height="233" %}
 
 When you save changes to a CSS preprocessor file in DevTools, the CSS preprocessor should
 re-generate the CSS files. Then DevTools then reloads the newly-generated CSS file.

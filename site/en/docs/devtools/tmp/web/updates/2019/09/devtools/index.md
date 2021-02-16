@@ -19,11 +19,11 @@ Blocking][1] and [Local Overrides][2].
 For example, suppose that your **Audits** panel report says that your page's performance score is 70
 and one of your biggest performance opportunities is [eliminating render-blocking resources][3].
 
-![The initial Performance score is 70.](/web/updates/images/2019/09/score1.png)
+{% Img src="image/admin/o4iVZaYzQHnLmhY5mfvJ.png", alt="The initial Performance score is 70.", width="800", height="374" %}
 
 Figure 1. The initial **Performance** score.
 
-![The initial report says that 3 render-blocking scripts are an issue.](/web/updates/images/2019/09/renderblockingresources.png)
+{% Img src="image/admin/wTxTsDf0ECKzHUGFKaIG.png", alt="The initial report says that 3 render-blocking scripts are an issue.", width="800", height="388" %}
 
 Figure 2. The initial report says that 3 render-blocking scripts are an issue.
 
@@ -31,13 +31,13 @@ Now that the **Audits** panel can be used in combination with request blocking, 
 measure how much the render-blocking scripts affect your load performance by first [blocking the
 requests for the render-blocking scripts][4]:
 
-![Using the Request Blocking tab to block the problematic scripts.](/web/updates/images/2019/09/blocking.png)
+{% Img src="image/admin/MfH1naJRKqJkvmbm96f7.png", alt="Using the Request Blocking tab to block the problematic scripts.", width="800", height="469" %}
 
 Figure 3. Using the **Request Blocking** tab to block the problematic scripts.
 
 And then auditing the page again:
 
-![The Performance score improved to 97 after enabling request blocking.](/web/updates/images/2019/09/score2.png)
+{% Img src="image/admin/JQ8BQA9xwYKj7qViJq18.png", alt="The Performance score improved to 97 after enabling request blocking.", width="800", height="469" %}
 
 Figure 4. The **Performance** score improved to 97 after blocking the problematic scripts.
 
@@ -57,7 +57,7 @@ events.
 3.  Click **Record**. DevTools records Payment Handler events for 3 days, even when DevTools is
     closed.
 
-    ![Recording Payment Handler events.](/web/updates/images/2019/09/payment1.png)
+    {% Img src="image/admin/IHG8hmoGVoAmH0TXEuuD.png", alt="Recording Payment Handler events.", width="800", height="436" %}
 
     Figure 5. Recording Payment Handler events.
 
@@ -65,7 +65,7 @@ events.
     origin.
 5.  After triggering a Payment Handler event, click the event's row to learn more about the event.
 
-    ![Viewing a Payment Handler event.](/web/updates/images/2019/09/payment2.png)
+    {% Img src="image/admin/HsrxAv97G0pyDdpCevCr.png", alt="Viewing a Payment Handler event.", width="800", height="366" %}
 
     Figure 6. Viewing a Payment Handler event.
 
@@ -85,7 +85,7 @@ audit tells you how much third-party code was requested and how long that third-
 the main thread while the page loaded. See [Optimize your third-party resources][12] to learn more
 about how third-party code can degrade load performance.
 
-![A screenshot of the 'Third-Party Usage' audit in the Lighthouse report UI.](/web/updates/images/2019/09/thirdpartycode.png)
+{% Img src="image/admin/pfc7cTFPWHSlhxFQnpJH.png", alt="A screenshot of the 'Third-Party Usage' audit in the Lighthouse report UI.", width="800", height="571" %}
 
 Figure 7. The **Third-party usage** audit.
 
@@ -97,7 +97,7 @@ When [analyzing load performance in the **Performance** panel][14], the **Timing
 includes a marker for [Largest Contentful Paint][15] (LCP). LCP reports the render time of the
 largest content element visible in the viewport.
 
-![The LCP marker in the Timings section.](/web/updates/images/2019/09/lcp.png)
+{% Img src="image/admin/YZcYowM2zmEuRXogL8FX.png", alt="The LCP marker in the Timings section.", width="800", height="620" %}
 
 Figure 8. The **LCP** marker in the **Timings** section.
 
@@ -106,7 +106,7 @@ To highlight the DOM node associated with LCP:
 1.  Click the **LCP** marker in the **Timings** section.
 2.  Hover over the **Related Node** in the **Summary** tab to highlight the node in the viewport.
 
-    ![The Related Node section of the Summary tab.](/web/updates/images/2019/09/relatednode.png)
+    {% Img src="image/admin/T2Aa5RiWuVWQONplTOSx.png", alt="The Related Node section of the Summary tab.", width="800", height="620" %}
 
     Figure 9. The **Related Node** section of the **Summary** tab.
 
@@ -120,7 +120,7 @@ DevTools issue** to create an issue in the DevTools engineering team's tracker. 
 [minimal, reproducible example][17] on [Glitch][18] dramatically increases the team's ability to fix
 your bug or implement your feature request!
 
-![Main Menu > Help > Report a DevTools issue.](/web/updates/images/2019/09/reportissue.png)
+{% Img src="image/admin/GzHzYN4ayQXslwllhVxO.png", alt="Main Menu > Help > Report a DevTools issue.", width="800", height="604" %}
 
 Figure 10. **Main Menu** > **Help** > **Report a DevTools issue**.
 

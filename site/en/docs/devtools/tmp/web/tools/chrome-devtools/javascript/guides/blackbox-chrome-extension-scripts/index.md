@@ -13,11 +13,11 @@ on code that you don't recognize. You're probably paused on the code of one of t
 that you've installed. To never pause on extension code:
 
 1.  Press <kbd>F1</kbd> to open **Settings**. Or click **Settings**
-    ![Settings](/web/tools/chrome-devtools/images/shared/capture-settings.png).
+    {% Img src="image/admin/alL4Um6RCmypEOSCEBgj.png", alt="Settings", width="28", height="28" %}.
 2.  Open the **Blackboxing** tab.
 3.  Enable the **Blackbox content scripts** checkbox.
 
-    ![Enabling the 'Blackbox content scripts' checkbox.](/web/tools/chrome-devtools/javascript/guides/images/blackbox-content-scripts.png)
+    {% Img src="image/admin/SHrse0pfDPQ3fsdwkKbb.png", alt="Enabling the 'Blackbox content scripts' checkbox.", width="800", height="562" %}
 
     **Figure 1**. Enabling the **Blackbox content scripts** checkbox
 

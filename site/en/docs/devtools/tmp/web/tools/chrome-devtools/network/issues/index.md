@@ -21,7 +21,7 @@ See [Get Started][1] to learn the basics of the Network panel.
 Six requests are downloading simultaneously. After that, a series of requests are queued or stalled.
 Once one of the first six requests finishes, one of the requests in the queue starts.
 
-![An example of a queued or stalled series in the Network panel.](/web/tools/chrome-devtools/network/imgs/stalled.png)
+{% Img src="image/admin/FIGst4T9FJY9oekGJ0Sd.png", alt="An example of a queued or stalled series in the Network panel.", width="800", height="531" %}
 
 **Figure 1**. An example of a queued or stalled series of requests in the Network panel. In the
 **Waterfall**, you can see that the first six requests for `logo-1024px.png` start simultaneously.
@@ -44,7 +44,7 @@ allows a maximum of six simultaneous TCP connections per host.
 
 A request spends a long time waiting to receive the first byte from the server.
 
-![An example of a request with a slow Time To First Byte.](/web/tools/chrome-devtools/network/imgs/slow-ttfb.png)
+{% Img src="image/admin/gDa7P1zo4oeGFQ0kqSgY.png", alt="An example of a request with a slow Time To First Byte.", width="800", height="434" %}
 
 **Figure 2**. An example of a request with a slow Time To First Byte. The long, green bar in the
 **Waterfall** indicates that the `wait` request was waiting a long time.
@@ -67,7 +67,7 @@ A request spends a long time waiting to receive the first byte from the server.
 
 A request takes a long time to download.
 
-![An example of a request that takes a long time to download.](/web/tools/chrome-devtools/network/imgs/slow-content-download.png)
+{% Img src="image/admin/g3d3dKleJfIJsbJDTB5k.png", alt="An example of a request that takes a long time to download.", width="800", height="613" %}
 
 **Figure 3**. An example of a request that takes a long time to download. The long, blue bar in the
 **Waterfall** next to `elements-panel.png` means it took a long time to download.

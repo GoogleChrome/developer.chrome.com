@@ -22,7 +22,7 @@ Think of memory as a graph with primitive types (like numbers and strings) and o
 arrays). It might visually be represented as a graph with a number of interconnected points as
 follows:
 
-![Visual representation of memory](/web/tools/chrome-devtools/memory-problems/imgs/thinkgraph.png)
+{% Img src="image/admin/DJLnkpJzkDTH5Kq1ZL02.png", alt="Visual representation of memory", width="538", height="339" %}
 
 An object can hold memory in two ways:
 
@@ -34,7 +34,7 @@ When working with the Heap Profiler in DevTools (a tool for investigating memory
 "Profiles"), you will likely find yourself looking at a few different columns of information. Two
 that stand out are **Shallow Size** and **Retained Size**, but what do these represent?
 
-![Shallow and Retained Size](/web/tools/chrome-devtools/memory-problems/imgs/shallow-retained.png)
+{% Img src="image/admin/lh4dEARsXXwAEL30wA5p.png", alt="Shallow and Retained Size", width="800", height="535" %}
 
 ### Shallow size {: #shallow_size }
 
@@ -76,7 +76,7 @@ applications standpoint there are following kinds of roots:
 The memory graph starts with a root, which may be the `window` object of the browser or the `Global`
 object of a Node.js module. You don't control how this root object is GC'd.
 
-![Root object can't be controlled](/web/tools/chrome-devtools/memory-problems/imgs/dontcontrol.png)
+{% Img src="image/admin/j931F7akeLF5NYMv5QYT.png", alt="Root object can't be controlled", width="478", height="295" %}
 
 Whatever is not reachable from the root gets GC.
 
@@ -101,7 +101,7 @@ see in the Heap Profiler recording below include distance: the distance from the
 all the objects of the same type are at the same distance, and a few are at a bigger distance,
 that's something worth investigating.
 
-![Distance from root](/web/tools/chrome-devtools/memory-problems/imgs/root.png)
+{% Img src="image/admin/fEhAsyGN2ApsCj3TDsCr.png", alt="Distance from root", width="800", height="536" %}
 
 ## Dominators {: #dominators }
 
@@ -117,13 +117,13 @@ In the diagram below:
 - Node 5 dominates node 8
 - Node 6 dominates node 7
 
-![Dominator tree structure](/web/tools/chrome-devtools/memory-problems/imgs/dominatorsspanning.png)
+{% Img src="image/admin/5IkAzbiOC1UqGJHqHBxe.png", alt="Dominator tree structure", width="275", height="444" %}
 
 In the example below, node `#3` is the dominator of `#10`, but `#7` also exists in every simple path
 from GC to `#10`. Therefore, an object B is a dominator of an object A if B exists in every simple
 path from the root to the object A.
 
-![Animated dominator illustration](/web/tools/chrome-devtools/memory-problems/imgs/dominators.gif)
+{% Img src="image/admin/zh4nucauCn5WkDElv9MZ.gif", alt="Animated dominator illustration", width="798", height="664" %}
 
 ## V8 specifics {: #v8_specifics }
 

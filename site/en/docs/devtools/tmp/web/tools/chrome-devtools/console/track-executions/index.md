@@ -47,7 +47,7 @@ console.timeEnd("Array initialize");
 ```
 
 Which outputs the following in the Console:
-![Time elapsed](/web/tools/chrome-devtools/console/images/track-executions-time-duration.png)
+{% Img src="image/admin/R9EZaXdVVNekxacYFAlg.png", alt="Time elapsed", width="800", height="147" %}
 
 ### Timers on the Timeline {: #timers_on_the_timeline }
 
@@ -56,7 +56,7 @@ timeline as well. Use it when you want to trace what your application does and w
 
 How an annotation on the timeline looks from `time()`:
 
-![Time annotation on timeline](/web/tools/chrome-devtools/console/images/track-executions-time-annotation-on-timeline.png)
+{% Img src="image/admin/8fFyWajZEKi7rA7JjHJM.png", alt="Time annotation on timeline", width="800", height="392" %}
 
 ### Marking the Timeline {: #marking_the_timeline }
 
@@ -84,7 +84,7 @@ function AddResult(name, result) {
 
 Results in the following Timeline timestamps:
 
-![Timestamps in the timeline](/web/tools/chrome-devtools/console/images/track-executions-timestamp2.png)
+{% Img src="image/admin/xNFqZmelqrEX7ecbYNdq.png", alt="Timestamps in the timeline", width="800", height="470" %}
 
 ## Counting statement executions {: #counting_statement_executions }
 
@@ -114,7 +114,7 @@ login(users[0]);
 
 Output of the code sample:
 
-![console.count() example output](/web/tools/chrome-devtools/console/images/track-executions-console-count.png)
+{% Img src="image/admin/M2HKTeq7Q3sgGDTl9NWb.png", alt="console.count() example output", width="544", height="216" %}
 
 [1]:
   https://developers.google.com/web/tools/chrome-devtools/console/console-reference#consoletimelabel

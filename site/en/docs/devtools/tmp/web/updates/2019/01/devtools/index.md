@@ -23,19 +23,19 @@ To add a logpoint:
 
 1.  Right-click the line number where you want to add the Logpoint.
 
-    ![Adding a Logpoint](/web/updates/images/2019/01/add-logpoint.png)
+    {% Img src="image/admin/pZO9nJ979W0K7RciiC9r.png", alt="Adding a Logpoint", width="800", height="461" %}
 
     **Figure 1**. Adding a Logpoint
 
 2.  Select **Add logpoint**. The **Breakpoint Editor** pops up.
 
-    ![The Breakpoint Editor](/web/updates/images/2019/01/breakpoint-editor.png)
+    {% Img src="image/admin/DLYjHddID67skOmdZj3Z.png", alt="The Breakpoint Editor", width="800", height="458" %}
 
     **Figure 2**. The Breakpoint Editor
 
 3.  In the **Breakpoint Editor**, enter the expression that you want to log to the Console.
 
-    ![Typing the Logpoint expression](/web/updates/images/2019/01/logpoint-expression.png)
+    {% Img src="image/admin/TNXzKFBE5QTRP13HAxWR.png", alt="Typing the Logpoint expression", width="800", height="480" %}
 
     **Figure 3**. Typing the Logpoint expression
 
@@ -46,14 +46,14 @@ To add a logpoint:
 4.  Press <kbd>Enter</kbd> or click outside of the **Breakpoint Editor** to save. The orange badge
     on top of the line number represents the Logpoint.
 
-    ![An orange Logpoint badge on line 174](/web/updates/images/2019/01/logpoint-badge.png)
+    {% Img src="image/admin/gtz1tzq3FPcYVZAMeIsK.png", alt="An orange Logpoint badge on line 174", width="800", height="456" %}
 
     **Figure 4**. An orange Logpoint badge on line 174
 
 The next time that the line executes, DevTools logs the result of the Logpoint expression to the
 Console.
 
-![The result of the Logpoint expression in the Console](/web/updates/images/2019/01/logpoint-result.png)
+{% Img src="image/admin/pFlCz3shVYBTW1HXadCU.png", alt="The result of the Logpoint expression in the Console", width="800", height="242" %}
 
 **Figure 5**. The result of the Logpoint expression in the Console
 
@@ -64,7 +64,7 @@ See [Chromium issue #700519][3] to report bugs or suggest improvements.
 When inspecting a node, DevTools now shows an expanded tooltip containing commonly important
 information like font size, font color, contrast ratio, and box model dimensions.
 
-![Inspecting a node](/web/updates/images/2019/01/inspect.png)
+{% Img src="image/admin/ghAgSJFpVdoGNc0rfjbm.png", alt="Inspecting a node", width="26", height="26" %}
 
 **Figure 6**. Inspecting a node
 
@@ -114,25 +114,25 @@ To analyze how much code is used on page load and export the data:
 1.  Press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or
     <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) to open the Command Menu.
 
-    ![The Command Menu](/web/updates/images/2019/01/command-menu.png)
+    {% Img src="image/admin/BbO98rFQ7sIPXa1pFd5g.png", alt="The Command Menu", width="800", height="513" %}
 
     **Figure 7**. The Command Menu
 
 2.  Start typing `coverage`, select **Show Coverage** and then press <kbd>Enter</kbd>.
 
-    ![Show Coverage](/web/updates/images/2019/01/show-coverage.png)
+    {% Img src="image/admin/EjGuGZO2Aanf1auzp7a1.png", alt="Show Coverage", width="800", height="222" %}
 
     **Figure 8**. Show Coverage
 
     The **Coverage** tab opens.
 
-    ![The Coverage tab](/web/updates/images/2019/01/coverage.png)
+    {% Img src="image/admin/15C76bRXIwrEwBrdWiUT.png", alt="The Coverage tab", width="800", height="443" %}
 
     **Figure 9**. The Coverage tab
 
-3.  Click **Reload** ![Reload](/web/tools/chrome-devtools/images/shared/reload.png). DevTools
+3.  Click **Reload** {% Img src="image/admin/ulhuP6lZdnSsXFhf18gh.png", alt="Reload", width="24", height="25" %}. DevTools
     reloads the page and records how much code is used compared to how much is shipped.
-4.  Click **Export** ![Export](/web/tools/chrome-devtools/images/shared/export.png) to export the
+4.  Click **Export** {% Img src="image/admin/p34prTy4dJsM5bvBIBIg.png", alt="Export", width="20", height="24" %} to export the
     data as a JSON file.
 
 Code coverage is also available in Puppeteer, a browser automation tool maintained by the DevTools
@@ -149,26 +149,26 @@ expression). If the message contains links, the last link is highlighted first. 
 <kbd>Enter</kbd> opens the link in a new tab. Pressing the <kbd>Left</kbd> arrow key highlights the
 entire message (see **Figure 13**).
 
-![Focusing a link](/web/updates/images/2019/01/focus1.png)
+{% Img src="image/admin/eMMHx7RurYd4DOQ4Gm1W.png", alt="Focusing a link", width="800", height="195" %}
 
 **Figure 11**. Focusing a link
 
 Pressing the <kbd>Up</kbd> arrow key focuses the next link.
 
-![Focusing another link](/web/updates/images/2019/01/focus2.png)
+{% Img src="image/admin/jl9syC2BIsauEigIZP86.png", alt="Focusing another link", width="800", height="181" %}
 
 **Figure 12**. Focusing another link
 
 Pressing the <kbd>Up</kbd> arrow key again focuses the entire message.
 
-![Focusing an entire message](/web/updates/images/2019/01/focus3.png)
+{% Img src="image/admin/NqmAeRDcCuzQXmEBJA42.png", alt="Focusing an entire message", width="800", height="188" %}
 
 **Figure 13**. Focusing an entire message
 
 Pressing the <kbd>Right</kbd> arrow key expands a collapsed stack trace (or object, array, and so
 on).
 
-![Expanding a collapsed stack trace](/web/updates/images/2019/01/focus4.png)
+{% Img src="image/admin/Kkg6e0HLh7Fp93msgflj.png", alt="Expanding a collapsed stack trace", width="800", height="481" %}
 
 **Figure 14**. Expanding a collapsed stack trace
 
@@ -181,7 +181,7 @@ See [Chromium issue #865674][7] to report bugs or suggest improvements.
 The Color Picker now shows a second line to indicate which colors meet the [AAA contrast ratio
 recommendation][8]. The AA line has been there since Chrome 65.
 
-![The AA line (top) and AAA line (bottom)](/web/updates/images/2019/01/AAA.png)
+{% Img src="image/admin/TgG8SkwxztbICauNVIhb.png", alt="The AA line (top) and AAA line (bottom)", width="800", height="730" %}
 
 **Figure 15**. The AA line (top) and AAA line (bottom)
 
@@ -211,20 +211,20 @@ The Sensors tab now lets you save custom geolocation overrides.
 
 2.  Type `sensors`, select **Show Sensors**, and press <kbd>Enter</kbd>. The **Sensors** tab opens.
 
-    ![The Sensors tab](/web/updates/images/2019/01/sensors.png)
+    {% Img src="image/admin/DNzlFkzLvExnjWxtIHlP.png", alt="The Sensors tab", width="800", height="395" %}
 
     **Figure 17**. The Sensors tab
 
 3.  In the **Geolocation** section click **Manage**. **Settings** > **Geolocations** opens up.
 
-    ![The Geolocations tab in Settings](/web/updates/images/2019/01/geolocations.png)
+    {% Img src="image/admin/QRiF9MxsP4wu6bi5aNpO.png", alt="The Geolocations tab in Settings", width="800", height="508" %}
 
     **Figure 18**. The Geolocations tab in Settings
 
 4.  Click **Add location**.
 5.  Enter a location name, latitude, and longitude, then click **Add**.
 
-    ![Adding a custom geolocation](/web/updates/images/2019/01/custom-geolocation.png)
+    {% Img src="image/admin/yD7ozmf2YegMorupu1GG.png", alt="Adding a custom geolocation", width="800", height="540" %}
 
     **Figure 19**. Adding a custom geolocation
 
@@ -234,7 +234,7 @@ See [Chromium issue #649657][11] to report bugs or suggest improvements.
 
 The **Sources** and **Network** panels now support code folding.
 
-![Lines 54 to 65 have been folded](/web/updates/images/2019/01/folding.png)
+{% Img src="image/admin/6lgkXNYx1hQMQj1h8ZnQ.png", alt="Lines 54 to 65 have been folded", width="800", height="513" %}
 
 **Figure 20**. Lines 54 to 65 have been folded
 
@@ -246,7 +246,7 @@ To enable code folding:
 To fold a block of code:
 
 1.  Hover your mouse over the line number where the block starts.
-2.  Click **Fold** ![Fold](/web/updates/images/2019/01/fold.png).
+2.  Click **Fold** {% Img src="image/admin/57zvY4yBV8rY0NR90o90.png", alt="Fold", width="16", height="14" %}.
 
 See [Chromium issue #328431][12] to report bugs or suggest improvements.
 
@@ -255,7 +255,7 @@ See [Chromium issue #328431][12] to report bugs or suggest improvements.
 The **Frames** tab has been renamed to the **Messages** tab. This tab is only available in the
 **Network** panel when inspecting a web socket connection.
 
-![The Messages tab](/web/updates/images/2019/01/messages.png)
+{% Img src="image/admin/cebKJSpVQD5uL8lQJ1xa.png", alt="The Messages tab", width="800", height="260" %}
 
 **Figure 21**. The Messages tab
 

@@ -24,7 +24,7 @@ Chrome DevTools can log background service events for 3 days, even when DevTools
 can help you make sure that events are being sent and received as expected. You can also inspect the
 details of each event.
 
-![Viewing the details of an event in the Push Messaging pane.](/web/tools/chrome-devtools/javascript/imgs/pushdetails.png)
+{% Img src="image/admin/ZG5sVS5QkS30tRGieBoo.png", alt="Viewing the details of an event in the Push Messaging pane.", width="800", height="389" %}
 
 Figure 1. Viewing the details of an event in the Push Messaging pane.
 
@@ -38,20 +38,20 @@ when DevTools is not open:
 2.  Open the **Application** panel.
 3.  Open the **Background Fetch** pane.
 
-    ![The Background Fetch pane.](/web/tools/chrome-devtools/javascript/imgs/fetchempty.png)
+    {% Img src="image/admin/DXdZs4q3sjqAmiQv1O6M.png", alt="The Background Fetch pane.", width="800", height="591" %}
 
     Figure 2. The Background Fetch pane.
 
-4.  Click **Record** ![Record](/web/tools/chrome-devtools/images/shared/record.png). After
+4.  Click **Record** {% Img src="image/admin/jvgbyEZPbYfaxB255rCm.png", alt="Record", width="24", height="24" %}. After
     triggering some Background Fetch activity, DevTools logs the events to the table.
 
-    ![A log of events in the Background Fetch pane.](/web/tools/chrome-devtools/javascript/imgs/fetchlog.png)
+    {% Img src="image/admin/1rpEuNKslwetMvtD8c6c.png", alt="A log of events in the Background Fetch pane.", width="800", height="478" %}
 
     Figure 3. A log of events in the Background Fetch pane.
 
 5.  Click an event to view its details in the space below the table.
 
-    ![Viewing the details of an event in the Background Fetch pane.](/web/tools/chrome-devtools/javascript/imgs/fetchdetails.png)
+    {% Img src="image/admin/q192DLorZyny4WEIkyRB.png", alt="Viewing the details of an event in the Background Fetch pane.", width="800", height="478" %}
 
     Figure 4. Viewing the details of an event in the Background Fetch pane.
 
@@ -65,20 +65,20 @@ when DevTools is not open:
 2.  Open the **Application** panel.
 3.  Open the **Background Sync** pane.
 
-    ![The Background Sync pane.](/web/tools/chrome-devtools/javascript/imgs/syncempty.png)
+    {% Img src="image/admin/IApG84NTEtNfo8cu74HC.png", alt="The Background Sync pane.", width="800", height="591" %}
 
     Figure 5. The Background Sync pane.
 
 4.  Click **Record** ![Record](/web/tools/chrome-devtools/images/shared/record.png). After
     triggering some Background Sync activity, DevTools logs the events to the table.
 
-    ![A log of events in the Background Sync pane.](/web/tools/chrome-devtools/javascript/imgs/synclog.png)
+    {% Img src="image/admin/tdWi9XbJMOiF8FEihe0X.png", alt="A log of events in the Background Sync pane.", width="800", height="424" %}
 
     Figure 6. A log of events in the Background Sync pane.
 
 5.  Click an event to view its details in the space below the table.
 
-    ![Viewing the details of an event in the Background Sync pane.](/web/tools/chrome-devtools/javascript/imgs/syncdetails.png)
+    {% Img src="image/admin/jmRJkVcRWWI3hdz2NMnK.png", alt="Viewing the details of an event in the Background Sync pane.", width="800", height="424" %}
 
     Figure 7. Viewing the details of an event in the Background Sync pane.
 
@@ -92,20 +92,20 @@ even when DevTools is not open:
 2.  Open the **Application** panel.
 3.  Open the **Notifications** pane.
 
-    ![The Notifications pane.](/web/tools/chrome-devtools/javascript/imgs/notificationsempty.png)
+    {% Img src="image/admin/PdFuiQdA7Ky6Fxvi4Bl0.png", alt="The Notifications pane.", width="800", height="424" %}
 
     Figure 8. The Notifications pane.
 
 4.  Click **Record** ![Record](/web/tools/chrome-devtools/images/shared/record.png). After
     triggering some Notifications activity, DevTools logs the events to the table.
 
-    ![A log of events in the Notifications pane.](/web/tools/chrome-devtools/javascript/imgs/notificationslog.png)
+    {% Img src="image/admin/TGjY2BFbfsOWXuGdxvxW.png", alt="A log of events in the Notifications pane.", width="800", height="424" %}
 
     Figure 9. A log of events in the Notifications pane.
 
 5.  Click an event to view its details in the space below the table.
 
-    ![Viewing the details of an event in the Notifications pane.](/web/tools/chrome-devtools/javascript/imgs/notificationsdetails.png)
+    {% Img src="image/admin/WeqtSllDCAA8laqB1HXJ.png", alt="Viewing the details of an event in the Notifications pane.", width="800", height="424" %}
 
     Figure 10. Viewing the details of an event in the Notifications pane.
 
@@ -120,14 +120,14 @@ DevTools is not open:
 2.  Open the **Application** panel.
 3.  Open the **Push Messaging** pane.
 
-    ![The Push Messaging pane.](/web/tools/chrome-devtools/javascript/imgs/pushempty.png)
+    {% Img src="image/admin/aovnBdkC3HsGTvJK3dvc.png", alt="The Push Messaging pane.", width="800", height="424" %}
 
     Figure 11. The Push Messaging pane.
 
 4.  Click **Record** ![Record](/web/tools/chrome-devtools/images/shared/record.png). After
     triggering some Push Message activity, DevTools logs the events to the table.
 
-    ![A log of events in the Push Messaging pane.](/web/tools/chrome-devtools/javascript/imgs/pushlog.png)
+    {% Img src="image/admin/cpKYRm8ioL77xOpKg7To.png", alt="A log of events in the Push Messaging pane.", width="800", height="389" %}
 
     Figure 12. A log of events in the Push Messaging pane.
 

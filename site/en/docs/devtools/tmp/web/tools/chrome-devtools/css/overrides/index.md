@@ -30,20 +30,20 @@ your new CSS to not be applied.
 
 1.  From the **Elements** panel, open the **Computed** pane.
 
-    ![The Computed pane.](/web/tools/chrome-devtools/css/imgs/computed.png)
+    {% Img src="image/admin/t1c3gz5FCBdbp7itsWGE.png", alt="The Computed pane.", width="800", height="509" %}
 
     **Figure 2**. The Computed pane.
 
 2.  Scroll through the list of properties and expand the one that you want to investigate further.
 
-    ![Investigating the 'max-height' property in the Computed pane.](/web/tools/chrome-devtools/css/imgs/computedexpanded.png)
+    {% Img src="image/admin/6Ylg9XlaprgHHkWieYws.png", alt="Investigating the 'max-height' property in the Computed pane.", width="800", height="509" %}
 
     **Figure 3**. Investigating the `max-height` property in the Computed pane.
 
 3.  Click the blue link next to a declaration to jump to open the **Sources** panel and jump to that
     declaration's source code. See [Make a minified file readable][4] if the code is minified.
 
-    ![Viewing the 'max-height' declaration's source code in the Sources panel.](/web/tools/chrome-devtools/css/imgs/computedsource.png)
+    {% Img src="image/admin/kOMUgtZ1X4Cq18HODUkH.png", alt="Viewing the 'max-height' declaration's source code in the Sources panel.", width="800", height="626" %}
 
     **Figure 4**. Viewing the `max-height` declaration's source code in the Sources panel.
 
@@ -51,7 +51,7 @@ your new CSS to not be applied.
 
 If you want to focus on a specific property, type that property name in the **Filter** textbox.
 
-![Filtering out properties that do not contain 'max' in the Computed pane.](/web/tools/chrome-devtools/css/imgs/computedfilter.png)
+{% Img src="image/admin/DugXTWwvIHP6wPlHE2z7.png", alt="Filtering out properties that do not contain 'max' in the Computed pane.", width="800", height="509" %}
 
 **Figure 5**. Filtering out properties that do not contain `max` in the Computed pane.
 
