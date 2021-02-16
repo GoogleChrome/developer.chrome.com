@@ -1,0 +1,31 @@
+---
+layout: "layouts/doc-post.njk"
+title: "Watch JavaScript Expression Values In Real-Time With Live Expressions"
+authors:
+  - kaycebasques
+date: 2019-04-18
+updated: 2020-07-10
+description:
+  "If you find yourself typing the same JavaScript expressions into the Console repeatedly, try Live
+  Expressions instead."
+---
+
+If you find yourself typing the same JavaScript expression in the Console repeatedly, you might find
+it easier to create a **Live Expression**. With **Live Expressions** you type an expression once and
+then pin it to the top of your Console. The value of the expression updates in near real-time.
+
+## Create a Live Expression {: #create }
+
+1.  [Open the Console][1].
+2.  Click **Create Live Expression**
+    ![Create Live Expression](/web/tools/chrome-devtools/console/images/createliveexpression.png).
+    The **Live Expression** text box appears.
+
+    ![Typing document.activeElement into the Live Expression text box.](/web/tools/chrome-devtools/console/images/liveexpressiontextbox.png)
+
+    **Figure 1** Typing `document.activeElement` into the **Live Expression** text box.
+
+3.  Type <kbd>Control</kbd>+<kbd>Enter</kbd> or <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac) to save
+    the expression, or click outside of the **Live Expression** text box.
+
+[1]: /web/tools/chrome-devtools/console/reference#open
