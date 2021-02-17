@@ -44,6 +44,25 @@ module.exports = {
       return namespaceForData(data);
     },
 
+    /**
+     * Finds all permissions, both specified in the .d.ts and any additional permissions
+     * specified here inside the front matter.
+     *
+     * @return {string[]}
+     */
+    permissions: data => {
+      const extraPermissions = data.extra_permissions ?? [];
+      const namespacePermissions = data.namespace?.permissions ?? [];
+
+      const all = new Set([...extraPermissions, ...namespacePermissions]);
+      const out = [...all];
+      out.sort();
+      return out;
+    },
+
+    /**
+     * @return {string}
+     */
     layout: data => {
       if (data.layout) {
         return data.layout; // don't clobber existing values
@@ -57,6 +76,9 @@ module.exports = {
       return data.layout;
     },
 
+    /**
+     * @return {string}
+     */
     title: data => {
       const namespace = namespaceForData(data);
 
@@ -64,6 +86,9 @@ module.exports = {
       return data.title || namespace?.name || '?';
     },
 
+    /**
+     * @return {string}
+     */
     description: data => {
       if (!data.api || data.description) {
         return data.description;
