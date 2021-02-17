@@ -1,5 +1,10 @@
 ---
 api: declarativeNetRequest
+extra_permissions:
+- declarativeNetRequestFeedback
+extra_permissions_html:
+  <a href="declare_permissions#host-permissions">host permissions</a><br />
+  Note that <code>declarativeNetRequestFeedback</code> and host permissions should only be specified when necessary.
 ---
 
 ## Manifest
