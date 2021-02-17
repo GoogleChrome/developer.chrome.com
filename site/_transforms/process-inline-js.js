@@ -47,7 +47,6 @@ const processInlineJs = async $ => {
 
     const out = await terser.minify(content, {output: {comments: false}});
     const code = out.code ?? '';
-    console.warn('minified, out', code, 'source was', content);
     $script.html(code);
     cache.set(content, code);
   };
