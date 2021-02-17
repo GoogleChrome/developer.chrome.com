@@ -24,9 +24,9 @@ Once it has been loaded, a service worker keeps running as long as it is perform
 such as calling a Chrome API or issuing a network request. Additionally, the service worker won't
 unload until all visible views and all message ports are closed.
 
-!!!.aside
+{% Aside %}
 Opening a view doesn't cause the service worker to load, but only prevents it from closing once loaded.
-!!!
+{% endAside %}
 
 Effective background scripts stay dormant until an event they are listening for fires, react with
 specified instructions, then unload.
