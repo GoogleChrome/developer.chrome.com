@@ -11,6 +11,7 @@ description: >
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
 date: 2021-01-18
+updated: 2021-02-17
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
 alt: A collection of padlocks.
 ---
@@ -153,6 +154,8 @@ Chrome.
 
 ## Further reading {: #resources }
 
+- [A guide to enable cross-origin
+  isolation](https://web.dev/cross-origin-isolation-guide)
 - [How to cross-origin isolate your pages](https://web.dev/coop-coep/)
 - [Why cross-origin isolation is needed](https://web.dev/why-coop-coep/)
 
