@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Emulate Sensors: Geolocation and Accelerometer"
 authors:
   - megginkearney
-,  - pbakaus
+  - pbakaus
 date: 2015-04-13
 updated: 2020-07-10
 description: "Touch screens, GPS chips, and accelerometers can be difficult to test since most desktops don&#39;t have them. The Chrome DevTools sensor emulators reduce the overhead of testing by emulating common mobile device sensors."

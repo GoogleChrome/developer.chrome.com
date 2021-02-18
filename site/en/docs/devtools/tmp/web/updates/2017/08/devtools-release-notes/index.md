@@ -29,7 +29,7 @@ auto-updates to a new major version about every 6 weeks.
 
 !!!
 
-{% youtube id="eD4fiqjaxHw" %}
+{% YouTube id="eD4fiqjaxHw" %}
 
 ## Top-level await operators in the Console {: #await }
 
@@ -90,7 +90,7 @@ selected item, or the parent of the selected item, has `display:grid` applied to
 
 Check out the video below to learn the basics of CSS Grid in less than 2 minutes.
 
-{% youtube id="AqwPrR7hklE" %}
+{% YouTube id="AqwPrR7hklE" %}
 
 ## A new API for querying heap objects {: #query-objects }
 
@@ -172,7 +172,7 @@ to see the new cache.
 In Chrome 62, the **Cache Storage** tab now updates in real-time whenever you create, update, or
 delete a cache or a resource. Watch the video below for an example.
 
-{% youtube id="laZpBKpjzRM" %}
+{% YouTube id="laZpBKpjzRM" %}
 
 See the [Cache Storage Demo][16] to try it out yourself.
 

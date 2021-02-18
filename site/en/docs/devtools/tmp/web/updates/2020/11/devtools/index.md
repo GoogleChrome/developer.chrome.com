@@ -16,7 +16,7 @@ Interested in helping improve DevTools? Sign up to participate in [Google User R
 
 !!!
 
-{% youtube id="3tUXV\_n3yng" %}
+{% YouTube id="3tUXV\_n3yng" %}
 
 ## Faster DevTools startup {: #fast-startup }
 

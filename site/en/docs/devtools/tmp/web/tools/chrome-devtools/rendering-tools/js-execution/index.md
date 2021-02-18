@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Speed Up JavaScript Execution"
 authors:
   - kaycebasques
-,  - megginkearney
+  - megginkearney
 date: 2015-04-13
 updated: 2020-07-10
 description: "Identify expensive functions using the Chrome DevTools CPU Profiler."

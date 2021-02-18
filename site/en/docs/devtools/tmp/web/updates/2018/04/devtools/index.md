@@ -26,7 +26,7 @@ New features and major changes coming to DevTools in Chrome 67 include:
 
 [Video version of the release notes][12]:
 
-{% youtube id="4EdPq9Nw6uI" %}
+{% YouTube id="4EdPq9Nw6uI" %}
 
 !!!.aside.aside--note
 
@@ -147,7 +147,7 @@ infinite loop by mistake while developing your site. To stop the infinite loop, 
     ![Resume](/web/tools/chrome-devtools/images/resume-script-execution.png) then select **Stop
     Current JavaScript Call** {% Img src="image/admin/Nvxc3igqv68CADzcPKSb.png", alt="Stop", width="16", height="16" %}.
 
-{% youtube id="haFYwEBjaTo" %}
+{% YouTube id="haFYwEBjaTo" %}
 
 In the video above, the clock is being updated via a `setInterval()` timer. Clicking **Start
 Infinite Loop** runs a `do...while` loop that never stops. The interval resumes because it wasn't

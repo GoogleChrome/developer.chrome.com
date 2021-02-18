@@ -13,7 +13,7 @@ Hello! Here's what's new in [Chrome DevTools][1] in Chrome 75.
 
 ## Video version of this page {: #video }
 
-{% youtube id="6zKPwOMFsa4" %}
+{% YouTube id="6zKPwOMFsa4" %}
 
 ## Meaningful preset values when autocompleting CSS functions {: #presets }
 

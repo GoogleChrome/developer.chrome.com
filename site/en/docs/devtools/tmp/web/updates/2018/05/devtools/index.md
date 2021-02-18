@@ -33,7 +33,7 @@ have changed. Chrome auto-updates to a new major version about every 6 weeks.
 
 Read on, or watch the video version of the release notes, below.
 
-{% youtube id="br4JZ5qz\_20" %}
+{% YouTube id="br4JZ5qz\_20" %}
 
 ## Assistive Console {: #console }
 

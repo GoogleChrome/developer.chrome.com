@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Make JavaScript Look Pretty"
 authors:
   - megginkearney
-,  - kaycebasques
+  - kaycebasques
 date: 2015-04-13
 updated: 2020-07-10
 description: "Transform your JavaScript into a more readable form by clicking the Pretty-Print icon in Chrome DevTools."
