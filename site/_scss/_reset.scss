@@ -50,12 +50,13 @@ a:not([class]) {
 
 // Make images easier to work with
 img {
-  display: inline-block;
+  display: block;
   height: auto;
   max-width: 100%;
 }
 
 p img {
+  display: inline-block;
   vertical-align: sub;
 }
 
