@@ -55,6 +55,11 @@ img {
   max-width: 100%;
 }
 
+p img {
+  display: inline-block;
+  vertical-align: sub;
+}
+
 // Inherit fonts for inputs and buttons
 input,
 button,
