@@ -26,7 +26,7 @@ New features and major changes coming to Chrome DevTools in Chrome 72 include:
 
 ## Video version of these release notes {: #video }
 
-{% youtube id="XVJxlEdB230" %}
+{% YouTube id="XVJxlEdB230" %}
 
 ## Visualize performance metrics {: #metrics }
 

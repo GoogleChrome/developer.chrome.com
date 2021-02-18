@@ -31,7 +31,7 @@ auto-updates to a new major version about every 6 weeks.
 
 Check out the video version of these release notes below or read on to learn more.
 
-{% youtube id="Qnmb2YhkQmQ" %}
+{% YouTube id="Qnmb2YhkQmQ" %}
 
 ## New features {: #features }
 
@@ -67,7 +67,7 @@ in DevTools.
 
 !!!
 
-{% youtube id="PjjlwAvV8Jg" %}
+{% YouTube id="PjjlwAvV8Jg" %}
 
 #### Contribute to Lighthouse {: #contribute-to-lighthouse }
 
@@ -76,7 +76,7 @@ it, check out the Lighthouse talk from Google I/O '17 below.
 
 [Got an idea for a Lighthouse audit? Post it here!][15]
 
-{% youtube id="NoRYn6gOtVo" %}
+{% YouTube id="NoRYn6gOtVo" %}
 
 ### Third-party badges {: #badges }
 
@@ -136,7 +136,7 @@ Check out the demo below from the DevTools talk at I/O for an example.
 
 !!!
 
-{% youtube id="PjjlwAvV8Jg" %}
+{% YouTube id="PjjlwAvV8Jg" %}
 
 ## Changes {: #changes }
 
@@ -208,7 +208,7 @@ command in the [Command Menu][21].
 Check out the talk by the mythical Paul Irish below to learn more about what the DevTools team has
 been working on over the past year and the big themes that they're tackling in the near future.
 
-{% youtube id="PjjlwAvV8Jg" %}
+{% YouTube id="PjjlwAvV8Jg" %}
 
 - [CSS and JS code coverage][22]
 - [Full-page screenshots][23]

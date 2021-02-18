@@ -12,7 +12,7 @@ Here's what's new in DevTools in Chrome 73.
 
 ## Video version of these release notes {: #video }
 
-{% youtube id="uddZX9ZK6wY" %}
+{% YouTube id="uddZX9ZK6wY" %}
 
 ## Logpoints {: #logpoints }
 

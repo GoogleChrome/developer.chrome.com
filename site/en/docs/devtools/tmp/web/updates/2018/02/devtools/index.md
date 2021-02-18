@@ -26,7 +26,7 @@ have changed. Chrome auto-updates to a new major version about every 6 weeks.
 
 Read on, or watch the video version of the release notes below.
 
-{% youtube id="eaYXFTJVewA" %}
+{% YouTube id="eaYXFTJVewA" %}
 
 ## Blackboxing in the Network panel {: #blackboxing }
 
@@ -104,7 +104,7 @@ right-click a resource and select **Open in Sources panel**.
 When in [**Device Mode**][8], open the **Zoom** dropdown and select **Auto-adjust zoom** to
 automatically resize the viewport whenever you change device orientation.
 
-{% youtube id="OCXQem0YaJM" %}
+{% YouTube id="OCXQem0YaJM" %}
 
 ## Local Overrides now works with some styles defined in HTML {: #overrides }
 

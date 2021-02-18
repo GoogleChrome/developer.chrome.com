@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Edit the DOM"
 authors:
   - kaycebasques
-,  - megginkearney
+  - megginkearney
 date: 2015-04-29
 updated: 2020-12-14
 description: "The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current web page. Live-edit the content and structure of your page through DOM updates."

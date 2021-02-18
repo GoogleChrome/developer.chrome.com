@@ -3,8 +3,8 @@ layout: "layouts/doc-post.njk"
 title: "Diagnose and Log to Console"
 authors:
   - pbakaus
-,  - megginkearney
-,  - flaviocopes
+  - megginkearney
+  - flaviocopes
 date: 2015-04-13
 updated: 2020-07-10
 description: "Console logging is a powerful way to inspect what your page or application does. Let&#39;s start with console.log() and explore other advanced usage."

@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Evaluate Expressions"
 authors:
   - megginkearney
-,  - josephmedley
+  - josephmedley
 date: 2015-04-13
 updated: 2020-07-10
 description: "Explore the state of any item on your page from the DevTools console."
