@@ -50,9 +50,12 @@ a:not([class]) {
 
 // Make images easier to work with
 img {
-  display: block;
+  display: inline-block;
   height: auto;
   max-width: 100%;
+}
+p img {
+  vertical-align: sub;
 }
 
 // Inherit fonts for inputs and buttons
