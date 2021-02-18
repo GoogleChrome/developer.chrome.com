@@ -10,7 +10,7 @@ description: "Autocomplete with CSS values, a new UI for network settings, and m
 
 Hello! Here's what's new in [Chrome DevTools][1] in Chrome 76.
 
-{% youtube id="GLUB2yzk0ZQ" %}
+{% YouTube id="GLUB2yzk0ZQ" %}
 
 ## Autocomplete with CSS values {: #values }
 
@@ -148,7 +148,7 @@ Puppeteer for Firefox is a new experimental project that enables you to automate
 Puppeteer API. In other words, you can now automate Firefox and Chromium with the same Node API, as
 demonstrated in the video below.
 
-{% youtube id="YSni7t2ktMA" %}
+{% YouTube id="YSni7t2ktMA" %}
 
 After running `node example.js`, Firefox opens and the text `page` is inserted into the search box
 on Puppeteer's documentation site. Then the same task is repeated in Chromium.
@@ -156,7 +156,7 @@ on Puppeteer's documentation site. Then the same task is repeated in Chromium.
 Check out the Puppeteer talk by [Joel][15] and [Andrey][16] from Google I/O 2019 to learn more about
 Puppeteer and Puppeteer for Firefox. The Firefox announcement happens around 4:05.
 
-{% youtube id="MbnATLCuKI4" %}
+{% YouTube id="MbnATLCuKI4" %}
 
 [1]: /web/tools/chrome-devtools
 [2]: https://crbug.com/931145

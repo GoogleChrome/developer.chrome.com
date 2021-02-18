@@ -19,7 +19,7 @@ New features and major changes coming to Chrome DevTools in Chrome 71 include:
 
 Read on, or watch the video version of this page:
 
-{% youtube id="fJxFZO8OEEs" %}
+{% YouTube id="fJxFZO8OEEs" %}
 
 ## Hover over a Live Expression to highlight a DOM node {: #hover }
 

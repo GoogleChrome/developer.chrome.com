@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Monitor Events"
 authors:
   - megginkearney
-,  - flaviocopes
+  - flaviocopes
 date: 2015-04-13
 updated: 2020-07-10
 description: "The Chrome DevTools Command Line API offers various ways to observe and inspect event listeners"

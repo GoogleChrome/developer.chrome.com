@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Exception and Error Handling"
 authors:
   - megginkearney
-,  - flaviocopes
+  - flaviocopes
 date: 2015-04-13
 updated: 2020-07-10
 description: "Chrome DevTools provides tools to help you fix web pages throwing exceptions and debug errors in your JavaScript."

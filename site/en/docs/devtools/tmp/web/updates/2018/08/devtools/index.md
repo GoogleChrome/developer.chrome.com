@@ -26,7 +26,7 @@ New features and major changes coming to DevTools in Chrome 70 include:
 
 Read on, or watch the video version of this doc:
 
-{% youtube id="LJq8vg8ktdQ" %}
+{% YouTube id="LJq8vg8ktdQ" %}
 
 ## Live Expressions in the Console {: #watch }
 

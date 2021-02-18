@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Diagnose Forced Synchronous Layouts"
 authors:
   - kaycebasques
-,  - megginkearney
+  - megginkearney
 date: 2015-04-13
 updated: 2020-07-10
 description: "Follow along with this interactive guide to learn how to use DevTools to diagnose forced synchronous layouts."

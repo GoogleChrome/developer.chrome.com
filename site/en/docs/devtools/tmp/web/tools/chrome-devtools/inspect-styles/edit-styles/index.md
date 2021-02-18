@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Edit Styles"
 authors:
   - kaycebasques
-,  - megginkearney
+  - megginkearney
 date: 2015-04-13
 updated: 2020-07-10
 description: "Use the Styles pane in Chrome DevTools to inspect and modify the CSS styles associated to an element."

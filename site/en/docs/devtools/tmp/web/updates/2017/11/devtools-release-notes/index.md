@@ -16,7 +16,7 @@ Welcome back! New features coming to DevTools in Chrome 64 include:
 
 Read on, or watch the video version of these release notes below.
 
-{% youtube id="90wNAn05Cf4" %}
+{% YouTube id="90wNAn05Cf4" %}
 
 !!!.aside.aside--note
 

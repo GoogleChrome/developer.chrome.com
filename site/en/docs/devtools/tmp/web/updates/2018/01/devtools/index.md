@@ -19,7 +19,7 @@ New features coming to DevTools in Chrome 65 include:
 
 Read on, or watch the video version of these release notes, below.
 
-{% youtube id="D1pV7ermy6w" %}
+{% YouTube id="D1pV7ermy6w" %}
 
 !!!.aside.aside--note
 
@@ -102,7 +102,7 @@ position in the accessibility tree
 
 Check out Rob Dodson's A11ycast on labeling below to see the **Accessibility** pane in action.
 
-{% youtube id="8dCUzOiMRy4" %}
+{% YouTube id="8dCUzOiMRy4" %}
 
 ### Contrast ratio in the Color Picker {: #contrast }
 
@@ -140,7 +140,7 @@ a page has a sufficient contrast ratio.
 See [Run Lighthouse in Chrome DevTools][13], or watch the A11ycast below, to learn how to use the
 **Audits** panel to test accessibility.
 
-{% youtube id="b0Q5Zp\_yKaU" %}
+{% YouTube id="b0Q5Zp\_yKaU" %}
 
 ## New audits {: #audits }
 

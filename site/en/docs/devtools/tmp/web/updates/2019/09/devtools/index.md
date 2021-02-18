@@ -9,7 +9,7 @@ description:
   "Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in the Performance panel."
 ---
 
-{% youtube id="VNkctDLYP6o" %}
+{% YouTube id="VNkctDLYP6o" %}
 
 ## Multi-client support in the Audits panel {: #multiclient }
 
