@@ -5,8 +5,8 @@ subhead: >
   Trust Tokens is a new API to help combat fraud and distinguish bots from real humans, without passive tracking.
 description: >
   Trust Tokens enable an origin to issue cryptographic tokens to a user it trusts. The tokens are stored by the user's browser. The browser can then use the tokens in other contexts to evaluate the user's authenticity. The Trust Token API enables trust of a user in one context to be conveyed to another context without identifying the user or linking the two identities.
-date: 2021-02-05
-updated: 2021-02-05
+date: 2021-02-19
+updated: 2021-02-19
 authors:
   - samdutton
 ---
@@ -19,7 +19,8 @@ authors:
 
 [Embed video when available.]
 
-!!!.aside.aside--warning
+
+{% Aside 'warning' %}
 
 [For Googlers, February 2021.]
 
@@ -43,15 +44,17 @@ Potentially, these items (or similar) could be headings.
 * How to get involved
 
 **Text below is content in progress.**
-!!!
+
+{% endAside %}
+
 
 ## What are Trust Tokens?
 
 Trust Tokens enable trust in a user's authenticity to be conveyed from one context to another, to help sites combat fraud and distinguish bots from real humans, without passive tracking. Tokens can be issued by a website to a user once the user has shown that they're trustworthy, for example through continued account usage or by completing a transaction. Another website can later confirm that the user is not fake, by checking if they have tokens from an issuer the site trusts.
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 Trust Tokens are a way to **convey** trust in a user, not **establish** trust in a user. Trust Tokens are not a replacement for reCAPTCHA or other mechanisms for determining whether or not a user is who they say they are.
-!!!
+{% endAside %}
 
 ## Why do we need Trust Tokens?
 

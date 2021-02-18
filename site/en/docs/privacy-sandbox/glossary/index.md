@@ -3,15 +3,15 @@ layout: 'layouts/doc-post.njk'
 title: 'Privacy Sandbox glossary'
 subhead: Privacy Sandbox articles and documentation assume a knowledge of concepts from privacy, advertising, and web development. This glossary explains key terms.
 description: Simple explanations of key concepts.  
-date: 2021-02-05
-updated: 2021-02-05
+date: 2021-02-19
+updated: 2021-02-19
 authors:
   - samdutton
 ---
 
-!!!.aside.aside
-[Let us know](.) if something is missing!
-!!!
+{% Aside %}
+[Let us know](.) [URL TBC] if something is missing!
+{% endAside %}
 
 ## Click-through rate (CTR) {: #glossary-ctr }
 

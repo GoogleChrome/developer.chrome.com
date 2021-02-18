@@ -3,20 +3,21 @@ layout: layouts/doc-post.njk
 title: What is the Privacy Sandbox?
 subhead: The Privacy Sandbox is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms.
 description: What's in it, who's behind it, and what it's for.
-date: 2021-02-05
-updated: 2021-02-05
+date: 2021-02-19
+updated: 2021-02-19
 authors:
 	- samdutton
 ---
 
 ## What is the Privacy Sandbox?
 
-{% youtube 
+{% YouTube
 	id='WnCKlNE52tc' 
 %}
 
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
+
 [For Googlers, February 2021.]
 
 This document is a work in progress, unfinished and not to be shared externally.
@@ -37,7 +38,9 @@ Potentially, these (or similar) could be headings.
 * How to get involved
 
 Text below is temporary content taken from [web.dev/digging-into-the-privacy-sandbox](https://web.dev/digging-into-the-privacy-sandbox/).
-!!!
+
+{% endAside %}
+
 
 [**TEMPORARY PLACEHOLDER CONTENT**]
 

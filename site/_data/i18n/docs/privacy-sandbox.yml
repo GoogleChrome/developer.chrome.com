@@ -1,12 +1,14 @@
 overview:
   en: 'What is the Privacy Sandbox?'
+event-attribution-reporting:
+  en: 'Event Attribution Reporting'
 fledge:
   en: 'FLEDGE'
 floc:
   en: 'Federated Learning of Cohorts (FLoC)'
 glossary:
   en: 'Privacy Sandbox glossary'
+status:
+  en: 'Is it ready yet?'
 trust-tokens:
   en: 'Trust Tokens'
-event-conversion-measurement:
-  en: 'Event Conversion Measurement API'

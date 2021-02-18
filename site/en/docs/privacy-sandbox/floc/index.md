@@ -2,11 +2,15 @@
 layout: 'layouts/doc-post.njk'
 title: 'Federated Learning of Cohorts (FLoC)'
 subhead: >
-  FLoC allows sites to guess your interests without being able to uniquely identify you.
+  Allow sites to guess your interests without being able to uniquely identify you.
 description: >
-  FLoC allows sites to guess your interests without being able to uniquely identify you. By generating a ID based on the browsing history of a large group of people, instead of ones of a particular individual, content can be personalized in a private way.
-date: 2021-02-05
-updated: 2021-02-05
+ FLoC enables interest-based advertising in a way that preserves privacy. As a user moves around the 
+ web, their browser is assigned to an "interest cohort" along with thousands of others with a 
+ similar browsing history. This is done without sharing individual browsing data with the browser 
+ vendor or anyone else. Advertisers (sites that pay for advertisements) can include code on their 
+ pages to provide access to cohort data for their ad-tech platforms. 
+date: 2021-02-19
+updated: 2021-02-19
 authors:
   - samdutton
 ---
@@ -19,7 +23,8 @@ authors:
 [Embed video when available.]
 
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
+
 [For Googlers, February 2021.]
 
 This document is a work in progress, unfinished and not to be shared externally.
@@ -42,7 +47,8 @@ Potentially, these items (or similar) could be headings.
 * How to get involved
 
 **Text below is content in progress.**
-!!!
+
+{% endAside %}
 
 
 ## What is the Federated Learning of Cohorts (FLoC)?
