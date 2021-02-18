@@ -174,5 +174,24 @@
       "en": "Engineering Director, Google Chrome"
     },
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/Cv4qmh8vnXhcHPgCzbpb.jpg"
+  },
+  "surma": {
+    "name": {
+      "given": "Surma",
+      "family": ""
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "UK",
+    "homepage": "https://surma.dev/",
+    "twitter": "dassurma",
+    "github": "surma",
+    "glitch": "surma",
+    "descriptions": {
+      "en": "Advocate for the web."
+    },
+    "image": "image/i9nJGvw3SnTPH63zKOYWtI6cP5m2/rS10rvGrNat9Euvxw8ju.jpg"
   }
 }
