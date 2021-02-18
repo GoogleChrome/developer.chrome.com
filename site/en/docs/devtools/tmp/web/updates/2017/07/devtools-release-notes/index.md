@@ -28,7 +28,7 @@ auto-updates to a new major version about every 6 weeks.
 
 Check out the video version of these release notes below or read on to learn more.
 
-{% youtube id="Lscb4SL58X4" %}
+{% YouTube id="Lscb4SL58X4" %}
 
 ## Simulate low-end and mid-tier mobile devices in Device Mode {: #throttling }
 

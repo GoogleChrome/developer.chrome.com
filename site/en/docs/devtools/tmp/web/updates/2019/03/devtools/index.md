@@ -14,7 +14,7 @@ Welcome back! Here's what's new.
 
 ## Video version of this page {: #video }
 
-{% youtube id="I14fXc7sXdU" %}
+{% YouTube id="I14fXc7sXdU" %}
 
 ## Highlight all nodes affected by CSS property {: #highlight }
 

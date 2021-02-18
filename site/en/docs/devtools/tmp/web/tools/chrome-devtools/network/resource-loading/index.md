@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Measure Resource Loading Times"
 authors:
   - kaycebasques
-,  - megginkearney
+  - megginkearney
 date: 2015-04-13
 updated: 2020-07-10
 description: "Measure the network performance of your web application using the Chrome DevTools Network panel."

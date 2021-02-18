@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Analyze Runtime Performance"
 authors:
   - kaycebasques
-,  - megginkearney
+  - megginkearney
 date: 2015-04-13
 updated: 2020-07-10
 description: "Users expect pages to be interactive and smooth. Each stage in the pixel pipeline represents an opportunity to introduce jank. Learn about tools and strategies to identify and fix common problems that slow down runtime performance."

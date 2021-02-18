@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "CSS Reference"
 authors:
   - kaycebasques
-,  - jecelynyeen
+  - jecelynyeen
 date: 2017-06-09
 updated: 2020-11-12
 description: "Discover new workflows for viewing and changing CSS in Chrome DevTools."

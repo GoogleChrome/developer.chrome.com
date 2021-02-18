@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Network Issues Guide"
 authors:
   - kaycebasques
-,  - jonathangarbee
+  - jonathangarbee
 date: 2016-12-28
 updated: 2020-07-10
 description: "Learn how to detect network issues in the Network panel of Chrome DevTools."

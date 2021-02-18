@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Emulate Authenticators and Debug WebAuthn in Chrome DevTools"
 authors:
   - fawazm
-,  - jecelynyeen
+  - jecelynyeen
 date: 2020-09-28
 updated: 2020-09-29
 description: "Emulate Authenticators and Debug WebAuthn in Chrome DevTools."

@@ -26,7 +26,7 @@ auto-updates to a new major version about every 6 weeks.
 
 Read on or watch the video below to learn more!
 
-{% youtube id="Eyw\_mwbABIQ" %}
+{% YouTube id="Eyw\_mwbABIQ" %}
 
 ## Multi-client remote debugging support {: #multi-client }
 
@@ -63,7 +63,7 @@ code. This feature was originally scheduled to be released shortly after Chrome 
 Check out the "Authoring" part (around 14:28) of the DevTools talk from CDS 2016 to see Workspaces
 2.0 in action.
 
-{% youtube id="HF1luRD4Qmk" %}
+{% YouTube id="HF1luRD4Qmk" %}
 
 ## Four new audits {: #audits }
 

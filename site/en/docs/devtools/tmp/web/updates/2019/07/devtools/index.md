@@ -8,7 +8,7 @@ updated: 2019-09-23
 description: "Copy element styles, visualize layout shifting, and more."
 ---
 
-{% youtube id="R8KzoMoKhnM" %}
+{% YouTube id="R8KzoMoKhnM" %}
 
 ## Copy element's styles {: #copystyles }
 
