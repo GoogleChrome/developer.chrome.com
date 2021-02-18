@@ -21,7 +21,8 @@ test suite runs. Generating coverage data has three major steps: compiling
 with instrumentation, gathering data from running instrumented tests, and
 post-processing the data. The coverage team has tools to automate this process.
 
-The [Coverage script][1] **can generate code coverage reports in just one command**.
+The [Coverage script][1] **can generate code coverage reports in just one command**,
+without waiting for [Gerrit UI to be updated](/blog/chromium-chronicle-3/).
 This script is currently supported on Linux, Mac, iOS and ChromeOS.
 
 Here is a sample usage:
