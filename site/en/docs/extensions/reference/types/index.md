@@ -2,7 +2,7 @@
 api: types
 ---
 
-## Chrome settings
+## Chrome settings {: #ChromeSetting }
 
 The `ChromeSetting` prototype provides a common set of functions (`get()`, `set()`, and `clear()`)
 as well as an event publisher (`onChange`) for settings of the Chrome browser. The [proxy settings

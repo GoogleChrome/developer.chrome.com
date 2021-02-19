@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-const chromeTypesRepoURL = 'https://unpkg.com/chrome-types@latest/';
+// FIXME: remove before submit
+const chromeTypesRepoURL =
+  'https://unpkg.com/chrome-types@0.0.16-beta.0/index.d.ts';
 
 require('dotenv').config();
 const fs = require('fs');

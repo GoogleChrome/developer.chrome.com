@@ -27,9 +27,9 @@ const {AssetCache} = require('@11ty/eleventy-cache-assets');
 const {build} = require('../../tools/types/build.js');
 
 /**
- * Bump this value if the generated types change shape, so folks' caches are invalidated.
+ * Bump this value if the parser changes, so folks' caches are invalidated.
  */
-const typesRevision = '2021-02-07';
+const typesRevision = '2021-02-17';
 
 /**
  * Building the JSON types is reasonably expensive. Don't do this often. When deploying to prod,
