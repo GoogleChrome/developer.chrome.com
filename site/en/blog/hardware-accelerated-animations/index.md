@@ -1,5 +1,5 @@
 ---
-title: Updates in Hardware Accelerated Animation Capabilities
+title: Updates in hardware-accelerated animation capabilities
 description: >
   Chromium is updating its hardware-acceleration capabilities to SVG animations, percentage-based transformations, clip-path, background images, and more.
 layout: 'layouts/blog-post.njk'
@@ -13,7 +13,7 @@ tags:
   - chrome-89
 ---
 
-*TLDR: Chromium is updating its hardware-acceleration capabilities automatically
+*Summary: Chromium is updating its hardware-acceleration capabilities automatically
 for SVG animations,
 percentage-based transformations, and soon, background-color and clip-path animations.*
 
@@ -93,7 +93,7 @@ resolution requirements, and easier maintenance.
 
 ## Percentage animations
 
-The Interactions team is also shipping on support for percentage transform animations, shipping in
+The Interactions team is also shipping support for percentage transform animations in
 Chromium 89. Percentage-based animations describe interactions that include percentage-based
 movement. For example, you could scale something up by 20%, or slide a responsive sidebar menu from
 off-screen using something like `translateX: -100%`. 
