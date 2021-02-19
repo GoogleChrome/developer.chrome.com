@@ -3,7 +3,7 @@ title: Updates in Hardware Accelerated Animation Capabilities
 description: >
   Chromium is updating its hardware-acceleration capabilities to SVG animations, percentage-based transformations, clip-path, background images, and more.
 layout: 'layouts/blog-post.njk'
-date: 2021-02-12
+date: 2021-02-22
 authors:
   - unakravets
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/Tojod6kLLs7q2NCjsi30.jpg'
@@ -61,6 +61,7 @@ automatically applied for SVG animations in Chromium 89+.
 Let's take a look at the differences between an SVG animation with and without hardware acceleration turned on. Loading indicators are commonly-used UI elements, such as this one seen on facebook.com. These indicators hint at work being done on the server, while the user waits for a response. In the case shown here, the response would be to load additional results in the sidebar.
 
 <figure>
+  {% video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/hfeHJcDMq8FFzXDD12qv.mp4" %} 
   {% img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/CBSrDDfkO8Ab693jU50K.gif", alt="Facebook sidebar UI", width="305", height="384" %}
   <figcaption>Facebook sidebar UI shows a circular loader while loading additional content.</figcaption>
 </figure>
