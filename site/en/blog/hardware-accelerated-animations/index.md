@@ -62,7 +62,6 @@ Let's take a look at the differences between an SVG animation with and without h
 
 <figure>
   {% video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/hfeHJcDMq8FFzXDD12qv.mp4" %} 
-  {% img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/CBSrDDfkO8Ab693jU50K.gif", alt="Facebook sidebar UI", width="305", height="384" %}
   <figcaption>Facebook sidebar UI shows a circular loader while loading additional content.</figcaption>
 </figure>
 
