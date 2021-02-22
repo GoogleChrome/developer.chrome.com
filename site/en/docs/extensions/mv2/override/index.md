@@ -33,10 +33,10 @@ Overview for more details on how you should treat incognito windows.
 
 The following screenshots show the default New Tab page and then a custom New Tab page.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LbjiI23vPdf5z8jjttwN.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LbjiI23vPdf5z8jjttwN.png",
        alt="The default new tab page", height="173", width="200" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OvYbqxEERBMXwIQsxkm7.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OvYbqxEERBMXwIQsxkm7.png",
        alt="A custom new tab page", height="173", width="200" %}
 
 ## Manifest {: #manifest }

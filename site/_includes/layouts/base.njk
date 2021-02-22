@@ -19,7 +19,6 @@
       <link rel="stylesheet" href="/css/main.css">
     {% endif %}
 
-    {% include 'partials/cookie-banner-helper.njk' %}
     <script type="module" src="{{ helpers.hashForProd('/js/main.js') }}"></script>
     {% if process.env.NODE_ENV === 'production' %}
       <script async src="https://www.google-analytics.com/analytics.js"></script>
@@ -34,6 +33,7 @@
       {% endfor %}
     {% endif %}
 
+    <script>{% include 'partials/script.js' %}</script>
   </head>
   <body>
     <div class="scaffold">
@@ -50,6 +50,7 @@
       {% endblock %}
 
       <main tabindex="-1" id="main-content" data-side-nav-inert data-search-inert>
+        {% include 'partials/banner.njk' %}
         {% block title_bar %}{% endblock %}
         {% block content %}{% endblock %}
       </main>
@@ -59,6 +60,5 @@
       {% endblock %}
     </div>
     {% include 'partials/cookie-banner.njk' %}
-    {% include 'partials/analytics.njk' %}
   </body>
 </html>

@@ -13,8 +13,10 @@
 @import 'typography';
 
 // Blocks
+@import 'blocks/details';
 @import 'blocks/link';
 @import 'blocks/button';
+@import 'blocks/banner';
 @import 'blocks/icon';
 @import 'blocks/table';
 @import 'blocks/code';
@@ -62,6 +64,7 @@
 @import 'blocks/skip-link';
 @import 'blocks/compare';
 @import 'blocks/pagination';
+@import 'blocks/screenshot';
 
 // Utilities
 @import 'utilities/center-margin';

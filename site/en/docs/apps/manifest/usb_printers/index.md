@@ -6,13 +6,13 @@ date: 2015-05-07
 description: Reference documentation for the usb_printers property of manifest.json.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 The `usbPrinters` manifest property declares which USB printers are supported by an app using the
 [printerProvider][3] API.

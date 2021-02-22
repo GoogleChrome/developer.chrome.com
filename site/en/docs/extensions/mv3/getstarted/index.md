@@ -47,7 +47,7 @@ current state.
 2.  Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
 3.  Click the **Load unpacked** button and select the extension directory.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iYdLKFsJ1KSVGLhbLRvS.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iYdLKFsJ1KSVGLhbLRvS.png",
        alt="Load Extension", height="337", width="606" %}
 
 Ta-da! The extension has been successfully installed. Because no icons were included in the
@@ -58,7 +58,7 @@ manifest, a generic icon will be created for the extension.
 The extension is now installed, but it doesn't currently do anything because we haven't told it what
 to do or when to do it. Let's fix that by adding some code to store a background color value.
 
-To do this, we will need to crate a [background script][1] and add it to the extension's manifest.
+To do this, we will need to create a [background script][1] and add it to the extension's manifest.
 Start by creating a file named `background.js` inside the extension's directory.
 
 ```json/5-7
@@ -114,7 +114,7 @@ the manifest for the extension to use them.
 Navigate back to the extension management page and click the **Reload** link. A new field, **Inspect
 views**, becomes available with a blue link, **background page**.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/V96EHNVYQLVsjURz4Naz.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/V96EHNVYQLVsjURz4Naz.png",
        alt="Inspect Views", height="337", width="606" %}
 
 Click the link to view the background script's console log, "`Default background color set to
@@ -236,7 +236,7 @@ favicon. These images are designated in the manifest under [`icons`][19].
 If the extension is reloaded at this stage, it will include the provided icon rather than the
 default placeholder, and clicking the action will open a popup with button with default colors.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/j3Ff3oF0tEl9tE5ed6L0.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/j3Ff3oF0tEl9tE5ed6L0.png",
        alt="Popup", height="99", width="73" %}
 
 The last step for the popup UI is adding color to the button. Create and add a file named
@@ -355,12 +355,12 @@ Then register the options page in the manifest,
 
 Reload the extension and click **DETAILS**.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3fNrYEoJMOPQ00L7tBtp.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3fNrYEoJMOPQ00L7tBtp.png",
        alt="Inspect Views", height="337", width="606" %}
 
 Scroll down the details page and select **Extension options** to view the options page.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/z1VEYxYlJev7llaXIQUL.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/z1VEYxYlJev7llaXIQUL.png",
        alt="Extension Options", height="726", width="645" %}
 
 The last step is to add the options logic. Create a file named `options.js` in the extension's
@@ -371,7 +371,7 @@ let page = document.getElementById("buttonDiv");
 let selectedClassName = "current";
 const presetButtonColors = ["#3aa757", "#e8453c", "#f9bb2d", "#4688f1"];
 
-// Reacts to a button click by marking marking the selected button and saving
+// Reacts to a button click by marking the selected button and saving
 // the selection
 function handleButtonClick(event) {
   // Remove styling from the previously selected color
@@ -394,7 +394,7 @@ function constructOptions(buttonColors) {
     let currentColor = data.color;
     // For each color we were provided…
     for (let buttonColor of buttonColors) {
-      // …crate a button with that color…
+      // …create a button with that color…
       let button = document.createElement("button");
       button.dataset.color = buttonColor;
       button.style.backgroundColor = buttonColor;

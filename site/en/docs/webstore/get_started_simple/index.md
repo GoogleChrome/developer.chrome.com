@@ -12,11 +12,11 @@ If you don't already have a web app, you can still follow this tutorial with any
 own. Any website can be an installable web app, although the site should follow a few [design
 principles][1].
 
-!!!.aside.aside--note
+{% Aside %}
 If you're interested in developing a [Chrome Extension][2] or [Chrome App][3] instead of a
 web app, follow the [extension tutorial][4] or the [Chrome App tutorial][5]. Then return to this
 page, and start at [Step 5: Zip up your app][6].
-!!!
+{% endAside %}
 
 ## Step 1: Get ready
 
@@ -34,9 +34,9 @@ Also, note the location of the [Chrome Web Store Developer Dashboard][7].
     worry about this if you created a Blogger blog; you already own it.) For information about
     claiming ownership, see the Google Webmaster Tools help article [Adding a site][9].
 
-    !!!.aside.aside--note
+    {% Aside %}
     You can wait to actually verify ownership until just before you publish the app.
-    !!!
+    {% endAside %}
 
 3.  Bookmark the [Chrome Web Store Developer Dashboard][10].
 
@@ -46,10 +46,10 @@ Every app needs a manifest—a JSON-formatted file named `manifest.json` that de
 
 1.  Create a directory called `myapp` to contain your app's manifest.
 
-    !!!.aside.aside--note
+    {% Aside %}
     You can use a different directory name, if you like. The only name that can't change
     is `manifest.json`.
-    !!!
+    {% endAside %}
 
 2.  In this new directory, create a text file named `manifest.json` and copy the following code into
     it, changing the italicized text to reflect your app:
@@ -85,9 +85,9 @@ documentation][12]). The remaining fields are fairly straightforward, except for
   specify the URLs for included files or for assets such as images. Currently, the domain name must be
   followed by at least one character ("/").
 
-!!!.aside.aside--note
+{% Aside %}
 If your app has only one page, you can omit the "urls" field.
-!!!
+{% endAside %}
 
 For more information about what the manifest for a hosted app can contain, see [Hosted Apps][13].
 
@@ -109,15 +109,15 @@ store presents multiple apps.
     [Promotional images][17] section of Supplying Images. You can also provide 920x680 and 1400x560
     promotional images.
 
-    !!!.aside.aside--note
+    {% Aside %}
     Promotional images are the main way that people will notice your app. Make them pretty
     and informative!
-    !!!
+    {% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 If you don't have an icon yet, you can continue with this tutorial by temporarily removing
 the following lines from the `manifest.json` file: `"icons": { "128": "_icon_128.png_" },`
-!!!
+{% endAside %}
 
 
 
@@ -134,14 +134,14 @@ valid.
 4.  In the file dialog, choose the `myapp` directory.
     Unless you get an error dialog, you've now installed the app.
 
-    !!!.aside.aside--note
+    {% Aside %}
     If you get an error dialog saying you could not load the extension, make sure your
     manifest file has valid JSON formatting and is called `manifest.json` (not `manifest.json.txt`
     or `manifest.json.rtf`, for example). You can use a [JSON validator][19] to make sure your
     manifest's format is valid. Often, formatting issues are related to commas (`,`) and quotation
     marks (`"`)—either too many or not enough. For example, the last entry in the manifest should
     not have a comma after it.
-    !!!
+    {% endAside %}
 
 5.  Create a new tab.
     The icon for the newly installed app appears in Google Chrome's launcher on the New Tab page. If
@@ -163,11 +163,11 @@ If you like to use the command line, you might enter this:
 zip -r myapp.zip myapp
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 If your app is an extension or a packaged app that uses Native Client, you can structure
 your application directory hierarchy and ZIP file in a way that reduces the size of the user
 download package. For details, see [Reducing the size of the user download package][21].
-!!!
+{% endAside %}
 
 ## Step 6: Upload your app
 
@@ -178,18 +178,18 @@ In this step, you upload the ZIP file that you created in Step 5.
     create a dedicated account for your apps. For details, see [Choose a developer account][23] in
     Publishing Your App.
 
-    !!!.aside.aside--note
+    {% Aside %}
     If you created a blog, choose the account that you used to create that blog.
-    !!!
+    {% endAside %}
 
 2.  Go to the [Chrome Web Store Developer Dashboard][24], and sign into your developer account.
 
-    !!!.aside.aside--note
+    {% Aside %}
     If you don't have a developer account, then when you try and access the dashboard you'll be
     asked to [register as a Chrome Web Store developer][25] now and pay a one-time fee. If you
     already have a developer account, but have never paid the one-time fee, you'll see the same
     retistration page and will need to pay the one-time fee now.
-    !!!
+    {% endAside %}
 
     Once you sign in, you'll see a list of any installable web apps, extensions, and themes that
     you've already uploaded.
@@ -226,12 +226,12 @@ your app.
     App][29].
 8.  At the bottom of the edit page, click **Save draft and return to dashboard**.
 
-!!!.aside.aside--note
+{% Aside %}
 If you are already hosting your app in Google Play, and you want your Chrome Web Store app
 listing to show an "Available for Android" link, your app must have the same name as your Google
 Play listing and both apps must be owned by the same developer account. To have your CWS item
 transferred to a different developer account, you must submit this [form][30].
-!!!
+{% endAside %}
 
 ## Step 8: Preview and improve your app's listing
 
@@ -241,24 +241,24 @@ Now you get to see what your app's listing in the store will look like.
 2.  At the bottom of the Edit page, click **Preview changes**. You should see a page that looks
     something like this:
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DnAipknPku2gPKNyqXpG.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DnAipknPku2gPKNyqXpG.png",
            alt="a screenshot of the store listing", height="328", width="550" %}
 
-    !!!.aside.aside--note
+    {% Aside %}
     If you haven't provided a screenshot yet, your page will have a big blank space at the
     upper left.
-    !!!
+    {% endAside %}
 
 3.  Make sure that the images and text look good and that any links you provide are valid. If you
     refer to Google brands, follow the [Branding Guidelines][33].
 4.  At the top of the page, click the "Edit" link to return to the Edit page.
 5.  After making any improvements you'd like, click **Save draft and return to dashboard**.
 
-!!!.aside.aside--note
+{% Aside %}
 Before finalizing your app's listing, think about how users are going to find your app,
 and make sure the detailed description includes the terms they're likely to search for. Check out
 listings for similar apps to get ideas for how you should present your app.
-!!!
+{% endAside %}
 
 ## Step 9: Test, deploy, publish, improve, repeat
 

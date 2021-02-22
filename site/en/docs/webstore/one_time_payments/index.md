@@ -68,7 +68,7 @@ Follow the steps below to enable one-time payments for your item:
     trial for your item.
 4.  Finally, click **OK** to return to the dashboard for your item.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/VwqkyI8cJ1YVQR010lzh.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/VwqkyI8cJ1YVQR010lzh.png", 
        alt="A screenshot of the change payment UI", height="560", width="795" %}
 
 #### Choosing a price {: #choosing-a-price }
@@ -76,7 +76,7 @@ Follow the steps below to enable one-time payments for your item:
 When you use Chrome Web Store Payments, you can choose from 18 tiers or set your own custom price
 for each supported region.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/fovAcun6Xbv1izwOcfh8.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/fovAcun6Xbv1izwOcfh8.png", 
        alt="A screenshot of the supported regions UI", height="523", width="652" %}
 
 To change the price of your item, select the tier you'd like in the Pricing and payments section of

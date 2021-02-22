@@ -6,19 +6,19 @@ date: 2014-04-15
 description: A guide on how to use Apache Cordova to set up your Chrome App to run on Android and iOS devices.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 _**The toolchain for running Chrome Apps on mobile is in early developer preview. Feel free to give
 us your feedback using the [Github issue tracker][3], our [Chrome Apps developer forum][4], on
 [Stack Overflow][5], or our [G+ Developers page][6].**_
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FNYKWfrpCKjWdrBh45zK.jpg", alt="A Chrome App running on both desktop and mobile", height="459", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FNYKWfrpCKjWdrBh45zK.jpg", alt="A Chrome App running on both desktop and mobile", height="459", width="800" %}
 
 ## Overview {: #overview }
 

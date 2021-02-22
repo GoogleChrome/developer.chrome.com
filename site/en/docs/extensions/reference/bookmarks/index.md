@@ -31,12 +31,12 @@ call [bookmarks.create][3], you pass in the new node's parent (`parentId`), and,
 node's `index`, `title`, and `url` properties. See [bookmarks.BookmarkTreeNode][4] for information
 about the properties a node can have.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You cannot use this API to add or remove entries in the root folder. You also cannot
 rename, move, or remove the special "Bookmarks Bar" and "Other Bookmarks" folders.
 
-!!!
+{% endAside %}
 
 ## Examples {: #overview-examples }
 
@@ -72,5 +72,5 @@ help in viewing the source code, see [Samples][6].
 [2]: #type-BookmarkTreeNode
 [3]: #method-create
 [4]: #type-BookmarkTreeNode
-[5]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/bookmarks/basic/
+[5]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/bookmarks/basic/
 [6]: /docs/extensions/mv2/samples

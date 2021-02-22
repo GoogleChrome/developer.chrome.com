@@ -6,13 +6,13 @@ updated: 2018-03-19
 description: How to enable auto-updating of your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 We want extensions and apps to be autoupdated for some of the same reasons as Google Chrome itself:
 to incorporate bug and security fixes, add new features or performance enhancements, and improve
@@ -24,12 +24,12 @@ the dashboard to release updated versions to users, as well as to the Chrome Web
 If you want to host somewhere other than the store, keep reading. You should also read [Hosting][4]
 and [Packaging][5].
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** As of M33, Windows stable/beta channel users can only download extensions hosted in the
 Chrome Web Store (see [Protecting Windows users from malicious extensions][6]).
 
-!!!
+{% endAside %}
 
 Previously when off-store extensions were supported, it was possible to have the native binaries and
 the extension be updated in lock step. However, extensions hosted on the Chrome Web Store are
@@ -49,12 +49,12 @@ manifest mentions a version that is more recent than what's installed, the brows
 installs the new version. As with manual updates, the new `.crx` file must be signed with the same
 private key as the currently installed version.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** In order to maintain user privacy, Google Chrome does not send any Cookie headers with
 autoupdate manifest requests, and ignores any Set-Cookie headers in the responses to those requests.
 
-!!!
+{% endAside %}
 
 ## Update URL {: #update_url }
 
@@ -162,12 +162,12 @@ If the number of installed extensions using the same update URL is large enough 
 URL is too long (over 2000 characters or so), the update check issues additional GET requests as
 necessary.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** In the future, instead of issuing multiple GET requests, a single POST request might be
 issued with the request parameters in the POST body.
 
-!!!
+{% endAside %}
 
 ## Advanced usage: minimum browser version {: #minimum_browser_version }
 

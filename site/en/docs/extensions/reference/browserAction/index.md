@@ -141,5 +141,5 @@ directory. For other examples and for help in viewing the source code, see [Samp
 [15]: #manifest
 [16]: #method-setPopup
 [17]: /extensions/pageAction
-[18]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/browserAction/
+[18]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/browserAction/
 [19]: /docs/extensions/mv2/samples

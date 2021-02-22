@@ -17,13 +17,16 @@ const {slugify} = require('./site/_filters/slugify');
 const {toc} = require('./site/_filters/toc');
 
 // Shortcodes
+const {Details} = require('./site/_shortcodes/Details');
+const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
 const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
-const {img} = require('./site/_shortcodes/img');
-const {video} = require('./site/_shortcodes/video');
+const {Img} = require('./site/_shortcodes/Img');
+const {Video} = require('./site/_shortcodes/Video');
 const {YouTube} = require('./site/_shortcodes/YouTube');
 const {Columns, Column} = require('./site/_shortcodes/Columns');
 const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
+const {Aside} = require('./site/_shortcodes/Aside');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -87,10 +90,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
 
-  // Add static collections
-  // These are generated as a postinstall step as computation is slow
-  eleventyConfig.addCollection('types', () => require('./site/_collections/types'));
-
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
   eleventyConfig.addFilter('trailingSlash', trailingSlash);
@@ -107,13 +106,16 @@ module.exports = eleventyConfig => {
   // Add shortcodes
   eleventyConfig.addShortcode('IFrame', IFrame);
   eleventyConfig.addShortcode('Glitch', Glitch);
-  eleventyConfig.addShortcode('img', img);
-  eleventyConfig.addShortcode('video', video);
+  eleventyConfig.addShortcode('Img', Img);
+  eleventyConfig.addShortcode('Video', Video);
   eleventyConfig.addShortcode('YouTube', YouTube);
+  eleventyConfig.addPairedShortcode('Details', Details);
+  eleventyConfig.addPairedShortcode('DetailsSummary', DetailsSummary);
   eleventyConfig.addPairedShortcode('Columns', Columns);
   eleventyConfig.addPairedShortcode('Column', Column);
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
+  eleventyConfig.addPairedShortcode('Aside', Aside);
 
   // Add transforms
   eleventyConfig.addTransform('domTransformer', domTransformer);

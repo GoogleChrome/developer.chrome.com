@@ -6,13 +6,13 @@ title: "Manifest - Version"
 #description: TODO
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 One to four dot-separated integers identifying the version of this extension. A couple of rules
 apply to the integers: they must be between 0 and 65535, inclusive, and non-zero integers can't

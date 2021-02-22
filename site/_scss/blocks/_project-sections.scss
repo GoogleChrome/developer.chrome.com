@@ -59,7 +59,12 @@
   display: flex;
 }
 
+// This renders a base64'ed version of 'document.svg' with fill set to #5f6368. This SVG is used a
+// multitude of times on each docs landing page, so dedup it vs including in the HTML.
 .project-sections__icon {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0iIzVmNjM2OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjIuMTc4IDMuNUg1Ljg0NWEyLjM0IDIuMzQgMCAwMC0yLjMzMyAyLjMzM3YxNi4zMzRBMi4zNCAyLjM0IDAgMDA1Ljg0NSAyNC41aDE2LjMzM2EyLjM0IDIuMzQgMCAwMDIuMzM0LTIuMzMzVjUuODMzQTIuMzQgMi4zNCAwIDAwMjIuMTc4IDMuNXptMCAxOC42NjdINS44NDVWNS44MzNoMTYuMzMzdjE2LjMzNHoiLz48cGF0aCBkPSJNMTkuODU3IDguMTY3SDguMTc4VjEwLjVoMTEuNjc5VjguMTY3ek0xOS44NTcgMTIuODMzSDguMTc4djIuMzM0aDExLjY3OXYtMi4zMzR6TTE2LjM1NyAxNy41SDguMTc4djIuMzMzaDguMTc5VjE3LjV6Ii8+PC9zdmc+');
+  height: 28px;
   position: absolute;
   transform: translateX(calc(-100% - #{get-size(400)}));
+  width: 28px;
 }

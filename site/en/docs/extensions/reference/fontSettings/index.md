@@ -64,5 +64,5 @@ directory. For other examples and for help in viewing the source code, see [Samp
 
 [1]: /docs/extensions/mv2/tabs
 [2]: https://www.w3.org/TR/CSS21/fonts.html#generic-font-families
-[3]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/fontSettings/
+[3]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/fontSettings/
 [4]: /docs/extensions/mv2/samples

@@ -5,106 +5,178 @@ date: 2021-01-12
 updated: 2021-01-27
 ---
 
+## Details
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ab aspernatur
+praesentium, dolores deleniti, nemo eos, saepe laudantium id maiores corporis
+qui? Culpa eligendi nobis, dolores rem expedita similique quas.
+
+{% Details %}
+
+{% DetailsSummary %}
+Details component _summary_
+{% endDetailsSummary %}
+
+  This is the body of the Details component.
+  It **can contain** markdown
+  ```js
+  const bar = 'foo';
+  console.log(bar);
+  ```
+{% endDetails %}
+
+
+{% Details %}
+
+{% DetailsSummary %}
+### Details component _summary_
+
+This is an optional preview.
+{% endDetailsSummary %}
+
+  This is the body of the Details component.
+  It **can contain** markdown
+  ```js
+  const bar = 'foo';
+  console.log(bar);
+  ```
+{% endDetails %}
+
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolorum? Vitae
+necessitatibus omnis rem recusandae laudantium, nostrum deleniti maxime
+corporis? Id deserunt quam dicta dolore tempore in omnis iure ex!
+
 ## Asides
 Use asides to provide information that's related to but distinct from the
 content in the body of the post or codelab. Asides should generally be short—no
 more than 2–3 lines.
-
-Asides can contain links and formatted text, including code.
 
 There are several kinds of asides, each for a different purpose.
 
 ### Note asides
 
 ```md
-!!!.aside
+{% raw %}{% Aside %}
 Use the note aside to provide supplemental information.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside
+{% Aside %}
 Use the note aside to provide supplemental information.
-!!!
+{% endAside %}
+
+Asides can contain links and formatted text, including code.
+
+````md
+{% raw %}{% Aside %}
+Here is some code:
+```js
+const foo = 'bar';
+function() {
+  console.log('hello world');
+}
+```
+
+Here is a fancy [named markdown link][google].
+{% endAside %}{% endraw %}
+
+[google]: https://google.com
+````
+
+{% Aside %}
+Here is some code:
+```js
+const foo = 'bar';
+function() {
+  console.log('hello world');
+}
+```
+
+Here is a fancy [named markdown link][google].
+{% endAside %}
+
+[google]: https://google.com
 
 ### Caution asides
 
 ```md
-!!!.aside.aside--caution
+{% raw %}{% Aside 'caution' %}
 Use the caution aside to indicate a potential pitfall or complication.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 Use the caution aside to indicate a potential pitfall or complication.
-!!!
+{% endAside %}
 
 ### Warning asides
 
 ```md
-!!!.aside.aside--warning
+{% raw %}{% Aside 'warning' %}
 The warning aside is stronger than a caution aside; use it to tell the reader
 not to do something.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 The warning aside is stronger than a caution aside; use it to tell the reader
 not to do something.
-!!!
+{% endAside %}
 
 ### Success asides
 
 ```md
-!!!.aside.aside--success
+{% raw %}{% Aside 'success' %}
 Use the success aside to describe a successful action or an error-free status.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--success
+{% Aside 'success' %}
 Use the success aside to describe a successful action or an error-free status.
-!!!
+{% endAside %}
 
 ### Gotchas asides
 
 ```md
-!!!.aside.aside--gotchas
+{% raw %}{% Aside 'gotchas' %}
 Use the gotcha aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--gotchas
+{% Aside 'gotchas' %}
 Use the gotchas aside to indicate a common problem that the reader wouldn't know
 without specialized knowledge of the topic.
-!!!
+{% endAside %}
 
 ### Key-term asides
 
 ```md
-!!!.aside.aside--key
+{% raw %}{% Aside 'key-term' %}
 Use the key-term aside to define a term that's essential to understanding an
 idea in the body copy. Key-term asides should be a single sentence that
 includes the term in italics. For example, "A _portal_ is…"
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--key
+{% Aside 'key-term' %}
 Use the key-term aside to define a term that's essential to understanding an
 idea in the body copy. Key-term asides should be a single sentence that
 includes the term in italics. For example, "A _portal_ is…"
-!!!
+{% endAside %}
 
 ### Codelab asides
 
 ```md
-!!!.aside.aside--codelab
+{% raw %}{% Aside 'codelab' %}
 Use the codelab aside to link to an associated codelab.
-!!!
+{% endAside %}{% endraw %}
 ```
 
-!!!.aside.aside--codelab
+{% Aside 'codelab' %}
 Get started: [Measure your page performance with Lighthouse](#).
-!!!
+{% endAside %}
 
 ## Blockquotes
 Use blockquotes to emphasize a quotation that's important to
@@ -190,12 +262,12 @@ blocks of code or images. On mobile the columns will stack vertically.
 {% raw %}{% Columns %}
 
 {% Column %}
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
 Original
 {% endColumn %}
 
 {% Column %}
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
 Flipped
 {% endColumn %}
 
@@ -205,12 +277,12 @@ Flipped
 {% Columns %}
 
 {% Column %}
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240" %}
 Original
 {% endColumn %}
 
 {% Column %}
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg", alt="ALT_TEXT_HERE", width="380", height="240", params={flip: 'h'} %}
 Flipped
 {% endColumn %}
 
@@ -444,15 +516,31 @@ Shortcode object fields allow for modifying how the embed is presented:
 
 ## Images
 
-Images should always use the {% raw %}`{% img %}`{% endraw %} shortcode.
+Images should always use the {% raw %}`{% Img %}`{% endraw %} shortcode. This
+shortcode will be generated for you when you upload your image to our CDN.
+See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/) for upload instructions.
 
 ```md
-{% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
+{% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
 ```
 
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
 
-See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/).
+Images with a white background should use the `.screenshot` class to give
+them a border so they don't appear to "float" on the page.
+
+```md
+{% raw %}{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", className="screenshot" %}{% endraw %}
+
+<!-- Add the .screenshot--filled modifier to give the screenshot padding and a grey background. -->
+{% raw %}{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", className="screenshot screenshot--filled" %}{% endraw %}
+```
+
+{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", className="screenshot" %}
+
+<br>
+
+{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", className="screenshot screenshot--filled" %}
 
 ### Full bleed images
 
@@ -460,12 +548,12 @@ Full bleed images break out of the main column.
 
 ```md
 <div class="type--full-bleed">
-{% raw %}{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
+{% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
 </div>
 ```
 
 <div class="type--full-bleed">
-{% img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
 </div>
 
 ### Inline images
@@ -475,7 +563,7 @@ class.
 
 ```md
 <!-- !important: note the commas after each property -->
-{% raw %}{% img
+{% raw %}{% Img
   className="float-right",
   src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg",
   alt="ALT_TEXT_HERE",
@@ -484,7 +572,7 @@ class.
 %}{% endraw %}
 ```
 
-{% img className="float-right", src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+{% Img className="float-right", src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque iure eveniet
 assumenda ea natus perspiciatis, atque totam fugit labore amet facere,
@@ -832,18 +920,20 @@ responsive. To prevent this from happening add the `fixed-table` class.
 
 ## Video
 
-Videos should always use the {% raw %}`{% video %}`{% endraw %} shortcode.
+Videos should always use the {% raw %}`{% Video %}`{% endraw %} shortcode. This
+shortcode will be generated for you when you upload your video to our CDN.
+See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/) for upload instructions.
 
 ```md
-{% raw %}{% video src='video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4' %}{% endraw %}
+{% raw %}{% Video src='video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4' %}{% endraw %}
 ```
 
-{% video src="video/foR0vJZKULb5AGJExlazy1xYDgI2/vkRVf2txsBrzkFUMpolP.mp4" %}
+{% Video src="video/foR0vJZKULb5AGJExlazy1xYDgI2/vkRVf2txsBrzkFUMpolP.mp4" %}
 
-!!!.aside
+{% Aside %}
 Note that the video `src` property can either be a string or an array of strings
 for multiple sources.
-!!!
+{% endAside %}
 
 See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/).
 

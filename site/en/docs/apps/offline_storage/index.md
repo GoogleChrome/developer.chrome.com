@@ -6,13 +6,13 @@ updated: 2018-04-26
 description: How to store data client-side in your Chrome App so that it works offline.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 HTML5 introduced many storage APIs that let you store a large amount of data locally in your users'
 browsers. But the amount of space allocated for each app is, by default, restricted to a few

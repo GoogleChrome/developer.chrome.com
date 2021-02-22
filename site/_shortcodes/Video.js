@@ -22,7 +22,7 @@ const generateSource = src => {
  * @param {VideoArgs} args Named arguments
  * @returns {string}
  */
-const video = args => {
+const Video = args => {
   if (typeof args.src === 'string') {
     args.src = [args.src];
   }
@@ -58,4 +58,4 @@ const video = args => {
   </video>`.replace(/\n/g, '');
 };
 
-module.exports = {video};
+module.exports = {Video};

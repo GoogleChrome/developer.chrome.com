@@ -66,11 +66,11 @@ When Chrome is offline, Chrome stores the data locally. The next time the browse
 syncs the data. Even if a user disables syncing, `storage.sync` will still work. In this case, it
 will behave identically to `storage.local`.
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 Confidential user information should not be stored! The storage area isn't encrypted.
 
-!!!
+{% endAside %}
 
 The `storage.managed` storage is read-only.
 

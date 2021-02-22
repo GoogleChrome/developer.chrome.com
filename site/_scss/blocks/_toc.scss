@@ -8,7 +8,7 @@
 }
 
 .toc > summary {
-  color: var(--color-secondary-text);
+  list-style: none;
 
   &::-webkit-details-marker {
     display: none;

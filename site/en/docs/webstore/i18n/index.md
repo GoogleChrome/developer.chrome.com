@@ -14,10 +14,10 @@ might initially publish your app in English (locale code: "en"). Then, after a f
 you might add support for additional locales such as French (locale code: "fr") and Arabic (locale
 code: "ar").
 
-!!!.aside.aside--note
+{% Aside %}
 The word _internationalization_ is often abbreviated to _i18n_, referring to the 18
 letters between the letters _i_ and _n_. _Localization_ is sometimes abbreviated to _l10n_.
-!!!
+{% endAside %}
 
 ## Overview
 
@@ -187,7 +187,7 @@ First, get to your app's Edit page, which you can do by going to the dashboard a
 list appears at the top of your app's Edit page. Each item in the list corresponds to one of the
 `_locales/_locale_` directories that you uploaded.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MbFyk7NrqNRhTLkOeIMT.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MbFyk7NrqNRhTLkOeIMT.png",
        alt="screenshot of the locale pull-down", height="57", width="525" %}
 
 Next, choose the locale that you want to edit. (Skip this if your app supports only one locale.)
@@ -195,7 +195,7 @@ Next, choose the locale that you want to edit. (Skip this if your app supports o
 Now edit the detailed description, providing text for the currently selected locale (or for the
 default locale, if you support just one).
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vJ5OLO5OdFBcmV963q8e.jpg", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vJ5OLO5OdFBcmV963q8e.jpg", 
        alt="screenshot of the Detailed Description section for an app", height="258", width="527" %}
 
 If you support multiple locales, repeat the previous two steps until you've provided a detailed
@@ -212,7 +212,7 @@ page.
 If your app supports multiple locales, then after you upload each screenshot, you can specify
 whether it's for all locales or just for the one you're currently editing.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TTqmjZAmXBuov9HRBISe.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TTqmjZAmXBuov9HRBISe.png", 
        alt="screenshot of screenshots with localization options", height="375", width="430" %}
 
 To change the locale information for a screenshot, first use the pull-down list at the top of the
@@ -260,9 +260,9 @@ your app to be listed in a particular region, unselect that region from the foll
 - United Kingdom
 - United States
 
-!!!.aside.aside--note
+{% Aside %}
 Unselecting a region prevents your app from being listed in that region.
-!!!
+{% endAside %}
 
 [1]: #localeTable
 [2]: #manifest

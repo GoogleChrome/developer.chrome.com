@@ -8,7 +8,6 @@
 
   &:hover {
     background-color: rgba(var(--link-rgb-background, var(--rgb-primary)), 0.08);
-    text-decoration: underline;
   }
   
   &:not(.no-visited):visited:hover {

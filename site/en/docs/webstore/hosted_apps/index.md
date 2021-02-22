@@ -22,12 +22,12 @@ on your own server or, more typically, by the Chrome Web Store.
 The `.crx` file for a hosted app must contain an icon and a manifest that has details about how the
 app should function.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Unlike extensions and packaged apps, a hosted app has no access to the files inside its
 `.crx` file.
 
-!!!
+{% endAside %}
 
 ### Making a web app installable {: #live }
 
@@ -101,28 +101,26 @@ app.urls: <!-- TODO: remark doesn't like nested dl, so we denest it -->
 : The URLs for the pages in the hosted app, not necessarily including the launch page. Once the app is
   installed, these pages and the launch page have the permissions requested in the manifest.
 
-  !!!.aside.aside--note
-
+  {% Aside %}
   **Note:** You don't need to specify the URLs for included files or for assets such as images.
-
-  !!!
+  {% endAside %}
 
   Each URL must begin with `http`, `https`, or `*` (which matches both `http` and `https`). You can
   use wildcards for subdomains—for example, "\*://\*.example.com/".
 
-  !!!.aside.aside--caution
+  {% Aside 'caution' %}
 
   **Important:** _Do not_ put port numbers in the value of "urls". Port numbers aren't necessary there
   (all ports are valid), and values with port numbers are silently ignored, leaving the corresponding
   pages without the requested permissions.
 
-  !!!
+  {% endAside %}
 
   You need to specify only the start of the app's URLs. For example,
   "https://www.google.com/accounts/" matches every URL that starts with that string, such as
   https://www.google.com/accounts/ and https://www.google.com/accounts/b/0/ManageAccount.
 
-  !!!.aside.aside--caution
+  {% Aside 'caution' %}
 
   **Important:** If you provide multiple apps, **avoid overlapping URLs**. If a user tries to install
   an app whose "web_url" or "urls" values overlap with those of an already installed app, the second
@@ -130,7 +128,7 @@ app.urls: <!-- TODO: remark doesn't like nested dl, so we denest it -->
   of "http://mail.example.com/" would conflict with an app that specifies
   "http://mail.example.com/mail/".
 
-  !!!
+  {% endAside %}
 
   If the user downloads the app's `.crx` file from a server that's not the Chrome Web Store, only one
   domain is allowed, and it must be the same as the domain that serves the `.crx` file. For more
@@ -191,11 +189,11 @@ offline_enabled:
   field set to true are highlighted on the New Tab page. For help on enabling offline access for your
   app, see [these articles][8].
 
-  !!!.aside.aside--note
+  {% Aside %}
 
   **Version note:** Before Chrome 15, this flag is valid but ignored.
 
-  !!!
+  {% endAside %}
 
 permissions:
 
