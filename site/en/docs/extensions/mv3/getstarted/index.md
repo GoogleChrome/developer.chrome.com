@@ -6,17 +6,17 @@ updated: 2020-11-18
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 
-{# Note: "components" is probably not the best word to use here any more as "web components" are a
-cross-browser tech for creating reusable custom elements or "?components". #}
+{# TODO: Reword this intro. "Components" is probably not the best word to use here any more as "web
+components" are a cross-browser tech for creating reusable custom elements or "components". #}
 
 Extensions are made of different, but cohesive, components. Components can include [background
 scripts][1], [content scripts][2], an [options page][3], [UI elements][4] and various logic files.
 Extension components are created with web development technologies: HTML, CSS, and JavaScript. An
 extension's components will depend on its functionality and may not require every option.
 
-This tutorial will build an extension that allows the user to change the background color of any
-page on [developer.chrome.com][5]. It will use many core components to give an introductory
-demonstration of their relationships.
+This tutorial will build an extension that allows the user to change the background color of the
+currently focused page. It will use many of the extension platform's components to give an
+introductory demonstration of their relationships.
 
 To start, create a new directory to hold the extension's files.
 
@@ -138,8 +138,9 @@ the background color.
 </html>
 ```
 
-Like the background script, this file needs to be designated as a popup in the manifest under
-[`action`][17].
+Like the background script, this file must be declared in the manifest in order for Chrome to
+present it in the extension's popup. To do this, add an [`action`][17] object to the manifest and
+set `popup.html` as the action's `default_popup`.
 
 ```json/9-11
 {
@@ -272,9 +273,9 @@ Reload the extension to view the green button.
 
 ## Layer logic {: #logic }
 
-The extension now knows the popup should be available to users on [developer.chrome.com][23] and
-displays a colored button but needs logic for further user interaction. Update `popup.js` by adding
-the following to the end of the file.
+The extension now has a custom icon and a popup, and it colors the popup button based on a value
+saved to the extension's storage. Next, it needs logic for further user interaction. Update
+`popup.js` by adding the following to the end of the file.
 
 ```js
 // When the button is clicked, inject setPageBackgroundColor into current page
@@ -296,10 +297,10 @@ function setPageBackgroundColor() {
 }
 ```
 
-The updated code adds an `onclick` event on the button, which triggers a [programmatically injected
-content script][24]. This turns the background color of the page the same color as the button. Using
-programmatic injection allows for user-invoked content scripts, instead of auto inserting unwanted
-code into web pages.
+The updated code adds a `click` event listener to the button, which triggers a [programmatically
+injected content script][24]. This turns the background color of the page the same color as the
+button. Using programmatic injection allows for user-invoked content scripts, instead of auto
+inserting unwanted code into web pages.
 
 The manifest will need the [`activeTab`][25] permission to allow the extension temporary access to
 the current page, and the [`scripting`][26] permission to use the Scripting API's
@@ -308,9 +309,9 @@ the current page, and the [`scripting`][26] permission to use the Scripting API'
 ```json/3
 {
   "name": "Getting Started Example",
-...
+  ...
   "permissions": ["storage", "activeTab", "scripting"],
-...
+  ...
 }
 ```
 
@@ -439,7 +440,6 @@ What's next?
 [2]: /docs/extensions/mv3/content_scripts
 [3]: /docs/extensions/mv3/options
 [4]: /docs/extensions/mv3/user_interface
-[5]: /
 [6]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/SVxMBoc5P3f6YV3O7Xbu.zip
 [7]: /docs/extensions/mv3/manifest
 [11]: /docs/extensions/reference/runtime#event-onInstalled
@@ -449,9 +449,7 @@ What's next?
 [18]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/wy3lvPQdeJn4iqHmI0Rp.zip
 [19]: /docs/extensions/mv3/user_interface#icons
 [20]: /docs/extensions/reference/declarativeContent
-[21]: /docs/extensions/reference/declarativeContent
-[23]: /
-[24]: /docs/extensions/mv3/content_scripts#pi
+[24]: /docs/extensions/mv3/content_scripts/#programmatic
 [25]: /docs/extensions/mv3/manifest/activeTab
 [26]: /docs/extensions/reference/scripting
 [27]: /docs/extensions/reference/scripting#method-executeScript
