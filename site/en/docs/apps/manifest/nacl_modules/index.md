@@ -6,13 +6,13 @@ title: "Manifest - Nacl Modules"
 #description: TODO
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 One or more mappings from MIME types to the Native Client module that handles each type. For
 example, the bold code in the following snippet registers a Native Client module as the content
@@ -58,13 +58,13 @@ three MIME types.
 }
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You can use Native Client modules in extensions without specifying "nacl_modules". Use
 "nacl_modules" only if you want the browser to use your Native Client module to display a particular
 type of content.
 
-!!!
+{% endAside %}
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
 [2]: /apps/migration

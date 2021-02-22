@@ -18,7 +18,7 @@
   {% if pd.hero %}
     <div class="featured-card__thumbnail gap-top-400">
       <a class="display-block" href="{{ post.url }}">
-        {% img
+        {% Img
           className="rounded-100 object-fit-cover width-full",
           src=pd.hero,
           alt=pd.alt,
@@ -31,7 +31,7 @@
   {% endif %}
 
   <h2 class="type--h3-card gap-top-300">
-    <a class="color-text surface" href="{{ post.url }}">
+    <a class="color-text surface display-inline-flex" href="{{ post.url }}">
       {{ pd.title }}
     </a>
   </h2>

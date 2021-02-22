@@ -6,13 +6,13 @@ date: 2017-02-03
 description: Reference documentation for the action_handlers property of manifest.json.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 The `action_handlers` manifest property declares which user actions or intents the application
 supports; these can serve as alternate launch points for your application. This API is only

@@ -25,7 +25,7 @@ When writing a pixel test, avoid flakiness by: (1) disabling animation,
 
 Here is a sample image used to verify pixel correctness for the omnibox:
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/WdIk74i8zUDGYrHX44FP.png", alt="Omnibox image used for pixel comparison.", width="745", height="28" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/WdIk74i8zUDGYrHX44FP.png", alt="Omnibox image used for pixel comparison.", width="745", height="28" %}
 
 And the code to verify the browser matches this image:
 

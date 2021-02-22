@@ -84,14 +84,14 @@ an invalid condition or action, none of the rules are added and the [runtime.las
 is set when the callback function is called. Each rule in `rule_list` must contain a unique
 identifier that is not currently used by another rule or an empty identifier.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Rules are persistent across browsing sessions. Therefore, you should install rules during
 extension installation time using the [`runtime.onInstalled`][15] event. Note that this event is
 also triggered when an extension is updated. Therefore, you should first clear previously installed
 rules and then register new rules.
 
-!!!
+{% endAside %}
 
 ### Removing rules
 

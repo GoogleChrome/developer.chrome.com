@@ -88,7 +88,7 @@ Here's how to upload your item:
 
 Once you've uploaded your extension, you will see it as an item in the dashboard.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/g06GNVoineSSnxt4N6Fy.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/g06GNVoineSSnxt4N6Fy.png",
        alt="Screenshot of the Chrome Web Store item listing page", height="472", width="800" %}
 
 You need to fill out additional listing information before you can publish, as contained in the
@@ -110,7 +110,7 @@ To publish your item:
 2.  Click the **Submit for Review** button.
 3.  The following dialog appears, letting you confirm that you want to submit the item for review.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BiZituXHHZ74SIkwc3q7.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BiZituXHHZ74SIkwc3q7.png",
        alt="Screenshot of the Chrome Web Store confirm submission dialog",
        height="388", width="800" %}
 

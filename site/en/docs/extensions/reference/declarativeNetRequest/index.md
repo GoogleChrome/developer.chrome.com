@@ -1,5 +1,10 @@
 ---
 api: declarativeNetRequest
+extra_permissions:
+- declarativeNetRequestFeedback
+extra_permissions_html:
+  <a href="declare_permissions#host-permissions">host permissions</a><br />
+  Note that <code>declarativeNetRequestFeedback</code> and host permissions should only be specified when necessary.
 ---
 
 ## Manifest
@@ -86,21 +91,21 @@ the request URL. Some examples of URL filters:
 
 <table><tbody><tr><th><code><b>urlFilter</b></code></th><th>Matches</th><th>Does not match</th></tr><tr><td><code>"abc"</code></td><td>https://abcd.com<br>https://example.com/abcd</td><td>http://ab.com</td></tr><tr><td><code>"abc*d"</code></td><td>https://abcd.com<br>https://example.com/abcxyzd</td><td>http://abc.com</td></tr><tr><td><code>"||a.example.com"</code></td><td>https://a.example.com/<br>https://b.a.example.com/xyz</td><td>http://example.com/</td></tr><tr><td><code>"|https*"</code></td><td>https://example.com</td><td>http://example.com/<br>http://https.com</td></tr><tr><td><code>"example*^123|"</code></td><td>https://example.com/123<br>http://abc.com/example?123</td><td>https://example.com/1234<br>https://abc.com/example0123</td></tr></tbody></table>
 
-## Dynamic rules
+## Dynamic and session-scoped rules
 
-To add or remove rules dynamically, use the [updateDynamicRules][12] API method.
-
-- The number of dynamic rules that an an extension can add is bounded by the
-  [MAX_NUMBER_OF_DYNAMIC_RULES][13] constant.
-- The dynamic rules for an extension are persisted across both sessions and extension updates.
+An extension can add or remove rules dynamically using the [updateDynamicRules][12] and the [updateSessionRules][17] API methods.
+- Rules added using the [updateDynamicRules][12] API method are persisted across both sessions and extension updates.
+- Rules added using the [updateSessionRules][17] API method are not persisted across Chrome sessions. These rules are backed in memory by Chrome.
+- The number of dynamic and session-scoped rules that an an extension can add is bounded by the [MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES][13] constant.
 
 ## Updating enabled rulesets
 
 An extension can update the set of enabled static rulesets using the [updateEnabledRulesets][14] API
 method.
 
-- The number of rules across enabled static rulesets must be less than the [MAX_NUMBER_OF_RULES][15]
-  constant.
+- The number of rules across enabled static rulesets across all extensions must not exceed the
+  [global limit][15]. Calling [getAvailableStaticRuleCount][10] is recommended to check the number
+  of rules an extension can still enable before the global limit is reached.
 - The set of enabled static rulesets is persisted across sessions but not across extension updates.
   The `rule_resources` manifest key will determine the set of enabled static rulesets on initial
   extension install and on each subsequent extension update.
@@ -120,8 +125,7 @@ If more than one extension returns an action, the extension whose action type co
 list above gets priority. If more than one extension returns an action with the same priority
 (position in the list), the most recently installed extension gets priority.
 
-When an extension is queried for how to handle a request, the highest priority matching static or
-dynamic rule is returned. If more than one matching rule has the highest priority, the tie is broken
+When an extension is queried for how to handle a request, the highest priority matching rule is returned. If more than one matching rule has the highest priority, the tie is broken
 based on the action type, in the following order of decreasing precedence:
 
 - `allow`
@@ -348,7 +352,8 @@ is determined based on the priority of each rule and the operations specified.
 [10]: #method-getAvailableStaticRuleCount
 [11]: #type-Rule
 [12]: #method-updateDynamicRules
-[13]: #property-MAX_NUMBER_OF_DYNAMIC_RULES
+[13]: #property-MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
 [14]: #method-updateEnabledRulesets
-[15]: #property-MAX_NUMBER_OF_RULES
+[15]: #global-static-rule-limit
 [16]: /docs/extensions/webRequest
+[17]: #method-updateSessionRules

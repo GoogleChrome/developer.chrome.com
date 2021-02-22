@@ -89,11 +89,11 @@ include the following characters:
 - \_ (underscore)
 - @
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Don't define names that begin with "@@". Those names are reserved for [predefined messages][7].
 
-!!!
+{% endAside %}
 
 Here are three examples of names, taken from the [Example][8] section:
 

@@ -6,13 +6,13 @@ date: 2013-08-01
 description: How to integrate Google Analytics into your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 <table class="intro"><tbody><tr><td><strong>Description:</strong></td><td>Use the Chrome Platform Analytics JavaScript library to measure user interactions with your app.</td></tr><tr><td><strong>Samples:</strong></td><td><a href="https://github.com/GoogleChrome/chrome-platform-analytics/tree/master/src/example">JavaScript and Closure examples</a></td></tr><tr><td><strong>Learn&nbsp;more:</strong></td><td><a href="https://github.com/GoogleChrome/chrome-platform-analytics/wiki">Chrome Platform Analytics</a></td></tr></tbody></table>
 

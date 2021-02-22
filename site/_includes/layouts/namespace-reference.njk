@@ -13,54 +13,6 @@
 {# Update "content" with additional headings and so forth, so we can pass it
    through the toc filter. #}
 {% set content %}
-  {% if namespace.source === 'platform_app.d.ts' %}
-    <div class="aside aside--warning">
-      This API is part of the deprecated Chrome Apps platform.
-      Learn more about <a href="/docs/apps/migration">migrating your app</a>.
-    </div>
-  {% endif %}
-
-  {% if namespace.platforms.length === 1 and namespace.platforms[0] === 'chromeos' %}
-    {# There are some historic cases of multi-platform support in Platform Apps, but
-        the only restriction these days is CrOS vs everywhere. #}
-    <div class="aside aside--note">
-      <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
-    </div>
-  {% endif %}
-
-  <div class="code-sections code-sections--summary">
-    <ul class="stack flow-space-300">
-      <li>
-        <div class="code-sections__label">Description</div>
-        <div class="type">
-          {{ namespace.comment | safe }}
-        </div>
-      </li>
-      {% if namespace.permissions.length %}
-        <li>
-          <div class="code-sections__label">Permissions</div>
-          <div>
-            {% for permission in namespace.permissions %}
-              <code>{{ permission }}</code>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-          </div>
-        </li>
-      {% endif %}
-      {% if namespace.channel !== 'stable' %}
-        <li>
-          <div class="code-sections__label">Availability</div>
-          <div>
-            {% if namespace.channel === 'dev' %}
-              Dev channel only.
-            {% else %}
-              Beta and Dev channels only.
-            {% endif %}
-          </div>
-        </li>
-      {% endif %}
-    </ul>
-  </div>
-
   <div class="type stack">
     {{ content | safe }}
   </div>
@@ -92,7 +44,57 @@
     <article class="stack measure-long center-margin pad-left-400 pad-right-400">
       <h1 class="type--h2">{{ title }}</h1>
 
+      {% if namespace.source === 'platform_app.d.ts' %}
+        <div class="aside aside--warning">
+          This API is part of the deprecated Chrome Apps platform.
+          Learn more about <a href="/docs/apps/migration">migrating your app</a>.
+        </div>
+      {% endif %}
+
+      {% if namespace.platforms.length === 1 and namespace.platforms[0] === 'chromeos' %}
+        {# There are some historic cases of multi-platform support in Platform Apps, but
+            the only restriction these days is CrOS vs everywhere. #}
+        <div class="aside aside--note">
+          <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
+        </div>
+      {% endif %}
+
+      <div class="code-sections code-sections--summary">
+        <ul class="stack flow-space-300">
+          <li>
+            <div class="code-sections__label">Description</div>
+            <div class="type">
+              {{ namespace.comment | safe }}
+            </div>
+          </li>
+          {% if namespace.permissions.length %}
+            <li>
+              <div class="code-sections__label">Permissions</div>
+              <div>
+                {% for permission in permissions %}
+                  <code>{{ permission }}</code><br />
+                {% endfor %}
+                {{ extra_permissions_html | safe }}
+              </div>
+            </li>
+          {% endif %}
+          {% if namespace.channel !== 'stable' %}
+            <li>
+              <div class="code-sections__label">Availability</div>
+              <div>
+                {% if namespace.channel === 'dev' %}
+                  Dev channel only.
+                {% else %}
+                  Beta and Dev channels only.
+                {% endif %}
+              </div>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+
       {% include 'partials/toc-inner.njk' %}
+
       {{ content | safe }}
     </article>
 

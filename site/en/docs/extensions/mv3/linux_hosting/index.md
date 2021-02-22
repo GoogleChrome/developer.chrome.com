@@ -27,7 +27,7 @@ If an extension is hosted on the Chrome Web Store, the `.crx` file can be downlo
 Developer Dashboard. Locate the extension under "Your Listings" and click on "More info". In the
 popup window, click the blue `main.crx` link to download it.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ympE762hCQc9EH6ZIB9W.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ympE762hCQc9EH6ZIB9W.png",
        alt="Download .crx from the Developer Dashboard", height="271", width="484" %}
 
 The downloaded file can be hosted on a personal server. This is the most secure way to host an
@@ -43,19 +43,19 @@ select "Extensions".
 On the Extensions Management Page, enable Developer Mode by clicking the toggle switch next to
 **Developer mode**. Then select the **PACK EXTENSION** button.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/uO9oti7LStDokrnq6d0Q.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/uO9oti7LStDokrnq6d0Q.png",
        alt="Developer Mode is Checked then Click Pack Extension", height="120", width="642" %}
 
 Specify the path to the extension's folder in the Extension root directory field then click the
 **PACK EXTENSION** button. Ignore the **Private key** field for a first-time package.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/a0iFUqr8SpjTcIjtXy44.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/a0iFUqr8SpjTcIjtXy44.png",
        alt="Specify Extension Path then Click Pack Extension", height="307", width="524" %}
 
 Chrome will create two files, a `.crx` file and a `.pem` file, which contains the extension's
 private key.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/sECV1ZYWjipkhNiwwMJv.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/sECV1ZYWjipkhNiwwMJv.png",
        alt="Packaged Extension Files", height="210", width="521" %}
 
 **Do not lose the private key!** Keep the `.pem` file in a secret and secure place; it will be
@@ -88,12 +88,12 @@ Update an extension's `.crx` file by increasing the version number in `manifest.
 Return to the [Extensions Management Page][6] and click the **PACK EXTENSION** button. Specify the
 path to the extensions directory and the location of private key.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/gcvNd3qR9hU7Pp0fQvhZ.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/gcvNd3qR9hU7Pp0fQvhZ.png",
        alt="Updating Extension Files", height="305", width="521" %}
 
 The page will provide the path for the updated packaged extension.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/sECV1ZYWjipkhNiwwMJv.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/sECV1ZYWjipkhNiwwMJv.png",
        alt="Updating Extension Files", height="210", width="521" %}
 
 <!-- TODO(kaycebasques): Had duplicated ID of #packaging -->
@@ -186,7 +186,7 @@ The update manifest XML file may contain information about multiple extensions b
 The default update check frequency is several hours, but an update can be forced using the **Update
 extensions now** button on the Extensions Management Page.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/VoSOLJm03H8uwWTQJP7w.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/VoSOLJm03H8uwWTQJP7w.png",
        alt="Update Extensions Now", height="115", width="773" %}
 
 This will start checks for all installed extensions.

@@ -46,7 +46,7 @@ additional changes in Chrome 75.
 
 ## Hint for low latency `canvas` contexts {: #desync }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/C063CtT60X6q0DOffXzv.jpg", alt="", className="float-right", height="450", width="600" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/C063CtT60X6q0DOffXzv.jpg", alt="", className="float-right", height="450", width="600" %}
 
 Drawing on screen with the canvas element requires the page to synchronize
 graphics updates with the DOM. This synchronization can sometimes cause latency.
@@ -77,7 +77,7 @@ for more details, including how to do feature detection for it.
 
 {# TODO(petele): video element, float-right, auto-play #}
 <figure class="float-right">
-{% video src=[
+{% Video src=[
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wEW1cwII7SQMcQMOYA0E.webm",
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/GX39vDqBQeWIVByOb5m0.mp4"
 ]%}

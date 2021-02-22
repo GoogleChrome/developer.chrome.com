@@ -6,13 +6,13 @@ title: "Manifest - Minimum Chrome Version"
 #description: TODO
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 The version of Chrome that your extension, app, or theme requires, if any. The format for this
 string is the same as for the [version][3] field.

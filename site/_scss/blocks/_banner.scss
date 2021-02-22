@@ -1,0 +1,35 @@
+.banner {
+  background: var(--color-bg-shade);
+  display: flex;
+  font: inherit;
+  line-height: $search-box-height;
+  min-height: $search-box-height;
+  padding: get-size(200) get-size(300) get-size(200) get-size(700);
+  width: fit-content;
+
+  &--info {
+    --link-color: var(--color-blue-darkest);
+    --link-visited-color: var(--color-blue-darkest);
+    --link-rgb-background: transparent;
+    background-color: var(--color-blue-lighter);
+  }
+
+  &--warning {
+    --link-color: var(--color-red-darkest);
+    --link-visited-color: var(--color-red-darkest);
+    --link-rgb-background: transparent;
+    background-color: var(--color-red-lightest);
+  }
+
+  .link {
+    @include apply-utility('weight', 'medium');
+    text-decoration: none;
+  }
+}
+
+.banner__text {
+  height: 100%;
+  margin-right: get-size(400);
+  min-height: $search-box-height;
+}
+

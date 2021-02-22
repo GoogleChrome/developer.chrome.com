@@ -44,13 +44,13 @@ Here are the main differences between the `eval` and `tabs.executeScript` method
   from the inspected page—the execution context is essentially controlled by the inspected page; a
   malicious page may affect the data being returned to the extension._
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Due to the security considerations explained above, the [`tabs.executeScript`][4]
 method is the preferred way for an extension to access DOM data of the inspected page in cases where
 the access to JavaScript state of the inspected page is not required.
 
-!!!
+{% endAside %}
 
 Note that a page can include multiple different JavaScript execution contexts. Each frame has its
 own context, plus an additional context for each extension that has content scripts running in that

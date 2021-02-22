@@ -27,6 +27,12 @@ redirects:
 - from: /apps/about_apps
   to: /docs/apps/overview/
 
+- from: /docs/extensions/mv2/migrating_to_service_workers
+  to: /docs/extensions/mv3/migrating_to_service_workers
+
+- from: /docs/extensions/mv3/background_migration
+  to: /docs/extensions/mv3/migrating_to_service_workers
+
 # The new site doesn't break out Platform Apps APIs, but instead just locates them at the bottom of
 # the main Extensions reference page.
 - from: /apps/api_index

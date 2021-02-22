@@ -6,13 +6,13 @@ updated: 2014-11-17
 description: Legacy packaged apps are deprecated.
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** All content in this doc refers to the legacy version of packaged apps. Legacy packaged
 apps are discontinued, and Chrome will **stop loading them** in June 2015. Check out the new version
 of [Chrome Apps][1] or read the [migration tutorial for legacy packaged apps][2].
 
-!!!
+{% endAside %}
 
 This page talks about legacy packaged apps—how you implement them, and how they're different from
 extensions and ordinary web apps.

@@ -53,7 +53,7 @@ A simple extension may need to request multiple permissions, and many permission
 [warnings][5] on installation. Users are more likely to trust an extension with limited warnings or
 when permissions are explained to them.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/VVyazEJTquUP7aa6OZn0.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/VVyazEJTquUP7aa6OZn0.png",
        alt="Extension permission warnings on installation", height="369", width="486" %}
 
 Identify the core functionality of an extension and what permissions are required for it. Consider
@@ -65,13 +65,13 @@ The [optional permissions sample extension's][6] core functionality is overridin
 One feature is displaying the user's goal of the day. This feature only requires the [storage][7]
 permission, which does not include a warning.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wtbjayBDYDyKZe2x580P.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wtbjayBDYDyKZe2x580P.png",
        alt="Extension button that enables additional features", height="350", width="395" %}
 
 The extension has an additional feature; displaying the user's top sites. This feature requires the
 [topSites][8] permission, which has a warning.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5edHzqeUOJ8V6XHkjNBM.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5edHzqeUOJ8V6XHkjNBM.png",
        alt="Extension warning for topSites API", height="173", width="480" %}
 
 Developing features that rely on permissions with warnings as optional and introducing those
@@ -87,12 +87,12 @@ extension to use the [`"tabs"`][9] permission on the current tab. It replaces th
 
 Without activeTab:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jb7SZPwm4zPoOT7BVMw3.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jb7SZPwm4zPoOT7BVMw3.png",
        alt="Permissions UI without activeTab", height="190", width="490" %}
 
 With activeTab:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2QKcJJSz35suMsGSWXM4.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2QKcJJSz35suMsGSWXM4.png",
        alt="Permissions UI with activeTab", height="190", width="490" %}
 
 The `activeTab` permission grants an extension temporary access to the currently active tab when the
@@ -120,7 +120,7 @@ The following user gestures enable `activeTab`:
 If an extension needs to access `file://` URLs or operate in incognito mode, users will need to
 enable access for those features inside the extension's detail page at chrome://extensions.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CXSHPxG4giUkzfGR67mY.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CXSHPxG4giUkzfGR67mY.png",
        alt="Allow file urls and incognito mode on the extension detial page", height="137", width="674" %}
 
 An extension can detect if it is enabled in incognito mode by calling
@@ -146,19 +146,19 @@ No permission warnings will be displayed if an extension is loaded as an unpacke
 extension's permission warnings, navigate to `chrome://extensions`, ensure developer mode is enabled
 and click **PACK EXTENSION**.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Jvm8mGpe3j0j0aydcRnR.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Jvm8mGpe3j0j0aydcRnR.png",
        alt="Developer Mode is Checked then Click Pack Extension", height="120", width="642" %}
 
 Specify the path to the extension's folder in the Extension root directory field then click the
 **Pack Extension** button. Ignore the **Private key** field for a first-time package.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vVw89rdJOdXFYxvgM9Sj.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vVw89rdJOdXFYxvgM9Sj.png",
        alt="Specify Extension Path then Click Pack Extension", height="307", width="524" %}
 
 Chrome will create two files, a `.crx` file and a `.pem` file, which contains the extension's
 private key.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GLrVd51VTUF86K8gUxu8.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GLrVd51VTUF86K8gUxu8.png",
        alt="Packaged Extension Files", height="288", width="521" %}
 
 **Do not lose the private key!** Keep the `.pem` file in a secret and secure place; it will be
@@ -166,13 +166,13 @@ needed to [update][25] the extension.
 
 Install the `.crx` file by dropping it into the Chrome Extension's Management page.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KXm9vTnv5VRNZJ9e2AJt.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KXm9vTnv5VRNZJ9e2AJt.png",
        alt="Drop File to Install", height="420", width="427" %}
 
 After dropping the `.crx` file the browser will ask if the extension can be added and display
 warnings.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4vOB4X8ZNbdk321eAzKS.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4vOB4X8ZNbdk321eAzKS.png",
        alt="Warning for New Tab Extension", height="150", width="481" %}
 
 ### Permissions with warnings {: #permissions_with_warnings }
@@ -342,16 +342,16 @@ re-enable it after agreeing to any new warnings.
 If the user manually updates an extension that now includes the [tabs][52] permission, they will get
 a warning on the management page.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/gotD9HeWU8LsFdacTQkq.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/gotD9HeWU8LsFdacTQkq.png",
        alt="Adding tabs Permission", height="193", width="481" %}
 
 If the extension is updated automatically it will be disabled until the user agrees to the new
 permissions.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/usZSh31pGiJxhhuKmM8B.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/usZSh31pGiJxhhuKmM8B.png",
        alt="Extension has been disabled", height="398", width="297" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZxRaaibQJSuZ6MZBvmmo.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZxRaaibQJSuZ6MZBvmmo.png",
        alt="Agree to permissions", height="159", width="286" %}
 
 This can be avoided by making the new feature optional and adding new permission updates to

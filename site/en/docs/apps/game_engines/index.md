@@ -6,13 +6,13 @@ updated: 2015-03-20
 description: Recommended game engines for Chrome Apps.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Several graphically intense interactive application frameworks / game engines exist that target web
 technologies. The following are some we recommend with instructions for producing a Chrome App.
@@ -23,7 +23,7 @@ technologies. The following are some we recommend with instructions for producin
 
 PlayCanvas demo on Chrome Web Store: [Swooop][4]
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qMe2bDKXSnyLvffmRgLi.png", alt="PlayCanvas editor screenshot", height="335", width="500" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qMe2bDKXSnyLvffmRgLi.png", alt="PlayCanvas editor screenshot", height="335", width="500" %}
 
 PlayCanvas is a free and open source WebGL Game Engine targeting mobile and desktop. Its browser
 based development tools support real-time collaboration.

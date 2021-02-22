@@ -18,11 +18,11 @@ Permissions help to limit damage if your extension or app is compromised by
 malware. Some permissions are displayed to users for their consent before
 installation or at runtime as needed, as detailed in [Permission Warnings][3].
 
-!!!.aside
+{% Aside %}
 You should use optional permissions wherever the functionality of your extension
 permits, to provide users with informed control over access to resources and data.
 See the [platform vision][vision-optperms] to better understand this recommendation.
-!!!
+{% endAside %}
 
 If an API requires you to declare a permission in the manifest, then its documentation tells you how
 to do so. For example, the [Storage][4] page shows you how to declare the "storage" permission.

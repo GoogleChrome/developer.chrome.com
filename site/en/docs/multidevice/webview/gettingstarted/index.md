@@ -27,7 +27,7 @@ start off by installing Android Studio, as described here:
 
 When the installation completes, Android Studio launches and displays the welcome screen.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547040438.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547040438.png",
        alt="The welcome screen.",
        width="1378",
        height="1021" %}
@@ -37,7 +37,7 @@ To create a new project:
 1.  Click **New Project**.
 2.  On the next page, enter your application name, package name and target SDKs, and click **Next**.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547132601.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547132601.png",
            alt="Creating a new project.",
            width="1378",
            height="1021" %}
@@ -48,7 +48,7 @@ To create a new project:
 3.  On the next page, you're prompted to enter an application icon. (You can change the icon later,
     so don't worry if you don't have one right now.) When you're done, click **Next**.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547168938.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547168938.png",
            alt="Creating an application icon.",
            width="1378",
            height="1021" %}
@@ -56,7 +56,7 @@ To create a new project:
 4.  The next page lets you select the main Android activity for your application. For the purposes
     of this guide, select **Blank Activity** and click **Next**.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547277493.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547277493.png",
            alt="Selecting the main activity.",
            width="1378",
            height="1021" %}
@@ -69,14 +69,14 @@ To create a new project:
 5.  The next page lets you change the names for the default Activity and layout. Click **Finish** to
     accept the defaults and create the project.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547305190.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547305190.png",
            alt="The screen for changing the default activity name.",
            width="1378",
            height="1021" %}
 
     You now have a new Android project. Next, to add the WebView!
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547397240.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547397240.png",
        alt="The new Android project.",
        width="1378",
        height="993" %}
@@ -89,7 +89,7 @@ To create a new project:
 Android Studio will give you some boilerplate code to set up your application. Your project's
 structure should look something like this:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547451314.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547451314.png",
        alt="A screenshot of the file hierarchy.",
        width="1378",
        height="2359" %}
@@ -114,7 +114,7 @@ You need to add a [WebView][5] to the main activity's layout.
     Select the **Text** tab at the bottom of the of the `activity_main.xml` editor to see the XML
     markup.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547496059.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547496059.png",
            alt="The XML markup.",
            width="1378",
            height="442" %}
@@ -186,7 +186,7 @@ You need to add a [WebView][5] to the main activity's layout.
     name and wait for a popup showing a "quick fix" -- in this case, adding an `import` statment for
     the `WebView` class.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547546460.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547546460.png",
            alt="The quick fix popup.",
            width="1378",
            height="284" %}
@@ -234,7 +234,7 @@ internet. This permission needs to be added in the [application's manifest file]
     Now try running the project. If you don't have a device handy, you can create an emulator (AVD
     or Android Virtual Device) by going to **Tools** > **Android** > **AVD Manager**.
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547603429.jpg",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547603429.jpg",
            alt="Loading a URL in the WebView.",
            width="1378",
            height="2626" %}
@@ -262,7 +262,7 @@ Here's the sequence of events:
     is, the user's default browser. If you have more than one browser installed, you may see a
     dialog at this point.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547691304.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547691304.png",
        alt="A browser selection dialog.",
        width="1378",
        height="952" %}
@@ -294,7 +294,7 @@ Create a new class:
 
 1.  Right-click the package name of your app and select **New** > **Java Class**
 
-    {% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547739137.png",
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1604547739137.png",
            alt="Creating a new Java class.",
            width="1378",
            height="584" %}

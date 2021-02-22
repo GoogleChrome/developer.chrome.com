@@ -5,12 +5,12 @@ date: 2018-06-11
 description: Guidlines for use of Google trademarks.
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 **Important:** Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS
 will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to
 support extensions on all platforms. [Read the announcement][1] and learn more about [migrating your
 app][2].
-!!!
+{% endAside %}
 
 <!-- TODO(kaycebasques): Remove this duplicate site nav. -->
 
@@ -31,11 +31,11 @@ use of the badge.
 
 As the following images show, the badge has an optional border.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/RQMv2HZ0v6NKfFn7XCeU.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/RQMv2HZ0v6NKfFn7XCeU.png",
        alt="206x58 Chrome Web Store badge, no border",
        height="58", width="206" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LclHxMxqoswLNRcUW3m5.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LclHxMxqoswLNRcUW3m5.png",
        alt="206x58 Chrome Web Store badge, with border", height="58", width="206" %}
 
 Right-click any of the following links to download an image file for the badge.
@@ -68,13 +68,13 @@ follow these rules and restrictions:
 Don't use any Google trademarks or any confusingly similar marks as the name of your application or
 company without [written permission from Google.][19]
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qn7cPDkh9kYbUmlRiJWO.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qn7cPDkh9kYbUmlRiJWO.png",
        alt="Trademark violation", height="146", width="146" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2C4YaKrZ3xqIocu0glTV.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2C4YaKrZ3xqIocu0glTV.png",
        alt="Trademark violation", height="146", width="146" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TXSCGhobjl0bfUdt8DJK.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TXSCGhobjl0bfUdt8DJK.png",
        alt="Trademark violation", height="146", width="146" %}
 
 ## Using Google logos
@@ -84,13 +84,13 @@ application without written permission from Google. Feel free to continue using 
 application subject to the branding guidelines for each of those badges (for example, [YouTube][20],
 [Google Checkout][21]).
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l1QxerNZuBZBa6dUFOIT.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l1QxerNZuBZBa6dUFOIT.png",
        alt="Google logo violation", height="146", width="146" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/e5R2FGF0ZlqmT7Nxg6Ew.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/e5R2FGF0ZlqmT7Nxg6Ew.png",
        alt="Google logo violation", height="146", width="146" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rPqMdiBSYbH6lj1Na2E1.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rPqMdiBSYbH6lj1Na2E1.png",
        alt="Acceptable logo", height="146", width="224" %}
 
 ## Describing your application
@@ -99,19 +99,19 @@ If your product is compatible with a Google product, make reference to that Goog
 the text "for", "for use with", or "compatible with", and be sure to include the ™ symbol with the
 Google trademark. Example: "for Google Chrome™"
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KZSasHWcKsgBbhYvXc9H.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KZSasHWcKsgBbhYvXc9H.png",
        alt="Google compatible product logo", height="152", width="392" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l0a4lhaR5uN28BOtnnKN.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l0a4lhaR5uN28BOtnnKN.png",
        alt="Google compatible product logo", height="150", width="590" %}
 
 If you are making reference to a Google trademark in combination with your logo, the referencing
 text should be smaller in size than your logo.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MEkrcGvgRMGi9dnyB1qI.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MEkrcGvgRMGi9dnyB1qI.png",
        alt="Acceptable Google trademark in logo", height="164", width="320" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xt1E8oSP6BCexzpaEknR.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xt1E8oSP6BCexzpaEknR.png",
        alt="Unacceptable Google trademark in logo", height="164", width="250" %}
 
 ## Using screenshots
