@@ -14,10 +14,10 @@ This page provides a very brief introduction to what extensions are and how you 
 Extensions are small software programs that customize the browsing experience. They let users
 tailor Chrome functionality and behavior in many ways, providing things like:
 
-* Games
 * Productivity tools
 * Web page content enrichment
 * Information aggregation
+* Fun and games
 
 These are just a few examples of the many things that extensions can do. See the [Chrome Web Store][5] to see thousands of different examples of published extensions.
 
@@ -37,11 +37,20 @@ Mail Checker extension][2] shown on the right, to [overriding][3] an entire page
 
 ### How do users get extensions?
 
-When you make an extension, you zip it into a single `.crx` package that the user downloads and installs. This
-means extensions do not depend on content from the web, unlike ordinary web apps.
+Most Chrome users get extensions from the Chrome Web Store (CWS). Developers across the globe
+publish their extensions in the Chrome Web Store where they are reviewed and made available to end
+users.
 
-Extensions are distributed through the [Chrome Developer Dashboard][4] and published to the [Chrome
-Web Store][5]. For more information, see the [store developer documentation][6].
+{% Aside %}
+
+Some organizations use enterprise policies to install extensions on their user's devices. These
+extensions may either be fetched from the Chrome Web Store or hosted on the organization's web servers.
+{# TODO: See XXX for info on the capabilities and limitations of self hosting. #}
+
+{% endAside %}
+
+You can distribute your extensions through the [Chrome Developer Dashboard][4], publishing them to the [Chrome
+Web Store][5]. For more information, see the Chrome Web Store [developer documentation][6].
 
 ## Hello extensions {: #hello-extensions }
 
