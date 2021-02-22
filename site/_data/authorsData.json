@@ -175,6 +175,23 @@
     },
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/Cv4qmh8vnXhcHPgCzbpb.jpg"
   },
+  "unakravets": {
+    "name": {
+      "given": "Una",
+      "family": "Kravets"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "US",
+    "homepage": "https://una.im",
+    "twitter": "una",
+    "descriptions": {
+      "en": "Making the web a more stylish place at Google Chrome"
+    },
+    "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/gTvIXYVFxXMYjBiZxysB.jpg"
+  },
   "surma": {
     "name": {
       "given": "Surma",
