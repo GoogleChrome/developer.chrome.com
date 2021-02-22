@@ -273,9 +273,9 @@ Reload the extension to view the green button.
 
 ## Layer logic {: #logic }
 
-The extension now has a custom icon, a popup, and colors the popup button based on a value saved to
-the extension's storage. Next, it needs logic for further user interaction. Update `popup.js` by
-adding the following to the end of the file.
+The extension now has a custom icon and a popup, and it colors the popup button based on a value
+saved to the extension's storage. Next, it needs logic for further user interaction. Update
+`popup.js` by adding the following to the end of the file.
 
 ```js
 // When the button is clicked, inject setPageBackgroundColor into current page
