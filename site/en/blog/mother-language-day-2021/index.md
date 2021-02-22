@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: International Mother Language Day 2021
 description: >
-  Describe your example post with a couple sentences.
+  International Mother Language Day is an annual celebration of cultural diversity observed worldwide on February 21.  It promotes the preservation and protection of languages spoken all over the world and celebrates multilingualism.
 date: 2021-02-21
 authors:
   - surma
