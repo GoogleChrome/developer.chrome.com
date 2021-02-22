@@ -61,7 +61,7 @@ automatically applied for SVG animations in Chromium 89+.
 Let's take a look at the differences between an SVG animation with and without hardware acceleration turned on. Loading indicators are commonly-used UI elements, such as this one seen on facebook.com. These indicators hint at work being done on the server, while the user waits for a response. In the case shown here, the response would be to load additional results in the sidebar.
 
 <figure>
-  {% video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/hfeHJcDMq8FFzXDD12qv.mp4" %} 
+  {% Video src="video/HodOHWjMnbNw56hvNASHWSgZyAf2/hfeHJcDMq8FFzXDD12qv.mp4" %} 
   <figcaption>Facebook sidebar UI shows a circular loader while loading additional content.</figcaption>
 </figure>
 
