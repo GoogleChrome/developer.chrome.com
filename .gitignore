@@ -19,7 +19,6 @@ coverage
 node_modules
 dist
 **/_includes/css
-site/_collections/types.json
 
 # Eleventy
 # We generate our own .eleventyignore file dynamically during builds

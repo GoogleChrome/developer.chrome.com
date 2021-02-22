@@ -1,5 +1,7 @@
 ---
 api: tabs
+extra_permissions_html:
+  The majority of the <code>chrome.tabs</code> API can be used without declaring any permission. However, the <code>"tabs"</code> permission is required in order to populate the <code>url</code>, <code>pendingUrl</code>, <code>title</code>, and <code>favIconUrl</code> properties of <code><a href="#type-Tab">Tab</a></code>.
 ---
 
 ## Manifest

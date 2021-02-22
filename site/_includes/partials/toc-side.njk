@@ -1,10 +1,12 @@
 {#
   This is used as the TOC on larger screens.
+  Unlike the inner TOC, this is always open.
   Normally the toc has margin-right:auto, and the article itself has
   margin-left: auto, so the toc sticks to the right side of the article.
   If we don't have any toc contents, set the toc to visiblity: hidden so we
   still have the right margin. Otherwise the article will shift out of place.
 #}
 <div class="toc-container display-none xl:display-block pad-left-400 pad-right-400 {% if not tocContents %}visibility-hidden{% endif %}">
-  {% include 'partials/toc.njk' %}
+  <div class="type--h6 color-secondary-text">{{ 'i18n.common.toc' | i18n(locale) }}</div>
+  <div class="toc__wrapper">{{ tocContents | safe }}</div>
 </div>

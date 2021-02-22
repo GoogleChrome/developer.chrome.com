@@ -5,6 +5,48 @@ date: 2021-01-12
 updated: 2021-01-27
 ---
 
+## Details
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ab aspernatur
+praesentium, dolores deleniti, nemo eos, saepe laudantium id maiores corporis
+qui? Culpa eligendi nobis, dolores rem expedita similique quas.
+
+{% Details %}
+
+{% DetailsSummary %}
+Details component _summary_
+{% endDetailsSummary %}
+
+  This is the body of the Details component.
+  It **can contain** markdown
+  ```js
+  const bar = 'foo';
+  console.log(bar);
+  ```
+{% endDetails %}
+
+
+{% Details %}
+
+{% DetailsSummary %}
+### Details component _summary_
+
+This is an optional preview.
+{% endDetailsSummary %}
+
+  This is the body of the Details component.
+  It **can contain** markdown
+  ```js
+  const bar = 'foo';
+  console.log(bar);
+  ```
+{% endDetails %}
+
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolorum? Vitae
+necessitatibus omnis rem recusandae laudantium, nostrum deleniti maxime
+corporis? Id deserunt quam dicta dolore tempore in omnis iure ex!
+
 ## Asides
 Use asides to provide information that's related to but distinct from the
 content in the body of the post or codelab. Asides should generally be short—no

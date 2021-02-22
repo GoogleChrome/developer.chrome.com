@@ -16,9 +16,7 @@ more about [**migrating your app**][2].
 
 If you're not familiar with Content Security Policy (CSP), [An Introduction to Content Security
 Policy][3] is a good starting point. That document covers the broader web platform view of CSP;
-Chrome App CSP isn't as flexible. You should also read the [Chrome extension Content Security
-Policy][4], as it's the foundation for the Chrome App CSP. For brevity's sake, we don't repeat the
-same information here.
+Chrome App CSP isn't as flexible.
 
 CSP is a policy to mitigate against cross-site scripting issues, and we all know that cross-site
 scripting is bad. We aren't going to try and convince you that CSP is a warm-and-fuzzy new policy.
@@ -71,12 +69,12 @@ doesn't offer precompilation, but it will require some work on your part and the
 You will need to use sandboxing to isolate any content that you want to do 'eval' things to.
 Sandboxing lifts CSP on the content that you specify. If you want to use the very powerful Chrome
 APIs in your Chrome App, your sandboxed content can't directly interact with these APIs (see
-[Sandbox local content][5]).
+[Sandbox local content][4]).
 
 ### Access remote resources {: #remote_resources }
 
 You can fetch remote resources via `XMLHttpRequest` and serve them via `blob:`, `data:`, or
-`filesystem:` URLs (see [Referencing external resources][6]).
+`filesystem:` URLs (see [Referencing external resources][5]).
 
 Video and audio can be loaded from remote services because they have good fallback behavior when
 offline or under spotty connectivity.
@@ -84,12 +82,11 @@ offline or under spotty connectivity.
 ### Embed web content {: #embed_content }
 
 Instead of using an iframe, you can call out to an external URL using a webview tag (see [Embed
-external web pages][7]).
+external web pages][6]).
 
 [1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
 [2]: /apps/migration
 [3]: http://www.html5rocks.com/en/tutorials/security/content-security-policy/
-[4]: /extensions/contentSecurityPolicy
-[5]: app_external#sandboxing
-[6]: app_external#external
-[7]: app_external#webview
+[4]: app_external#sandboxing
+[5]: app_external#external
+[6]: app_external#webview
