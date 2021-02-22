@@ -69,7 +69,7 @@ When we open up DevTools, we can start to profile and really see the differences
 GPU-accelerated animation experience.
 
 <figure>
-  {% img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/u572WdEbkTbVTY6UEENT.png", alt="Performance panel with paint flashing turned on", width="800", height="221" %}
+  {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/u572WdEbkTbVTY6UEENT.png", alt="Performance panel with paint flashing turned on", width="800", height="221" %}
   <figcaption>Left: Chromium 88. Right: Chromium 89, with hardware acceleration for SVG animations. See demo by Benoit Girard on <a href="https://jsfiddle.net/hydhaval/0pnot2sx/144/">JSFiddle</a>.</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ continuously). On the right there is no repainting (Chromium 89 and Firefox). We
 the DevTools Rendering panel, when turning on Paint flashing.
 
 <figure>
-  {% img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/916QhF9oEoKsj7scSxCB.png", alt="Performance panel showing rendering", width="800", height="481" %}
+  {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/916QhF9oEoKsj7scSxCB.png", alt="Performance panel showing rendering", width="800", height="481" %}
   <figcaption>Left: Chromium 88. Right: Chromium 89, with hardware acceleration for SVG animations. See demo by Benoit Girard on <a href="https://jsfiddle.net/hydhaval/0pnot2sx/144/">JSFiddle</a>.</figcaption>
 </figure>
 
