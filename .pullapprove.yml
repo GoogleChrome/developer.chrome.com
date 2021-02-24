@@ -15,6 +15,7 @@ groups:
       # but skip them when sending review requests.
       - ~dcc-extensions
       - ~dcc-content
+      - ~dcc-eng
       - ~dcc-approvers
     reviews:
       # Assign all possible reviewers
