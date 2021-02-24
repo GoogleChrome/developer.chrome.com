@@ -1,0 +1,51 @@
+version: 3
+
+groups:
+  # Content
+  # Handles any changes related to site content.
+  content:
+    reviewers:
+      teams:
+      - dcc-content
+      # Prefix a username or team with ~ to include them in the reviewer pool
+      # but skip them when sending review requests.
+      - ~dcc-eng
+      - ~dcc-approvers
+    reviews:
+      # Assign everyone on the content team for reviews.
+      request: 99
+    conditions:
+      - >
+        files.include('site/en/*') or
+        files.include('redirects.yaml') or
+        files.include('site/_data/docs/*') or
+        files.include('site/_data/i18n/*') or
+        files.include('site/_data/authorsData.json') or
+        files.include('site/_data/supportedTags.json')
+  
+  # Code
+  # Handles any changes to programmatic files.
+  code:
+    reviewers:
+      teams:
+      - dcc-eng
+    reviews:
+      # The number of people who should be requested for review at any given
+      # time. Default is 1.
+      request: 2
+    conditions:
+      # The engineering team is the default owner for any code related files.
+      - >
+        contains_any_globs(files, [
+          '**/*.js',
+          '**/*.css',
+          '**/*.scss',
+          '**/*.html',
+          '**/*.htm',
+          '**/*.njk',
+          '**/*.toml',
+          '**/*.sh'
+        ]) or
+        files.include('*.yaml').exclude('redirects.yaml') or
+        files.include('*.yml').exclude('site/_data/docs/*').exclude('site/_data/i18n/*') or
+        files.include('*.json').exclude('site/_data/authorsData.json').exclude('site/_data/supportedTags.json')
