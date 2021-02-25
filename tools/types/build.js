@@ -28,6 +28,7 @@ const tmp = require('tmp');
 const {enumerateAllRenderNamespace} = require('./helpers');
 
 // We create render types for both the regular types and platform apps.
+// The order here is important: the namespaces in earlier files win.
 const sourceFiles = ['index.d.ts', 'platform_app.d.ts'];
 
 /**
@@ -52,7 +53,13 @@ async function build() {
 
   const versionDataRequest = await safeFetch('version-data.json');
   const versionData = await versionDataRequest.json();
-  console.warn('got version data for Chrome', versionData.version);
+  console.warn(
+    'Got version data for Chrome',
+    versionData.version,
+    'with',
+    Object.keys(versionData.symbols).length,
+    'symbols'
+  );
 
   /** @type {{[name: string]: RenderNamespace}} */
   const out = {};

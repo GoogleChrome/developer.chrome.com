@@ -113,11 +113,25 @@
 {% endmacro %}
 
 {#
-  Renders a comment and its optional deprecation notice.
+  Renders a comment, its optional version information and deprecation notice.
 #}
 {% macro renderComment(spec) %}
-  {% if spec.deprecated !== undefined %}
-  <p class="code-sections__deprecated"><strong>Deprecated</strong>. {{ spec.deprecated | safe }}
+  {% if spec.version.unknown %}
+    <p class="code-sections__deprecated">This API is in active development.</p>
+  {% endif %}
+  {% if spec.version.low %}
+    <p class="code-sections__deprecated">Since Chrome {{ spec.version.low }}.</p>
+  {% endif %}
+  {% if spec.deprecatedComment !== undefined or spec.version.deprecated %}
+    <p class="code-sections__deprecated">
+      <strong>
+        Deprecated
+        {%- if spec.version.deprecated > 0 %}
+          since Chrome {{ spec.version.deprecated }}
+        {%- endif -%}
+      </strong>.
+      {{ spec.deprecatedComment | safe }}
+    </p>
   {% endif %}
   {{ spec.comment | safe }}
 {% endmacro %}

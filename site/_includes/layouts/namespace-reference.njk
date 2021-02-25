@@ -78,14 +78,17 @@
               </div>
             </li>
           {% endif %}
-          {% if namespace.channel !== 'stable' %}
+          {% if namespace.channel !== 'stable' or namespace.version.low %}
             <li>
               <div class="code-sections__label">Availability</div>
               <div>
                 {% if namespace.channel === 'dev' %}
                   Dev channel only.
-                {% else %}
+                {% elif namespace.version.channel === 'beta' %}
                   Beta and Dev channels only.
+                {% else if namespace.version.low %}
+                  Since Chrome {{ namespace.version.low }}.
+                  {# No namespace is currently deprecated. #}
                 {% endif %}
               </div>
             </li>
