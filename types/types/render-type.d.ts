@@ -24,12 +24,25 @@ declare global {
       "union" |
       "function";
 
-  export interface RenderType {
+  export interface VersionData {
+    low?: number;
+    high?: number;
+    deprecated?: number;
+    channel?: "stable" | "beta" | "dev";
+    unknown?: true;
+  }
+
+  export interface RenderBase {
     name?: string;
-    type: RenderTypeType;
+    fullName?: string;
+    version?: VersionData;
+    comment?: string;            // HTML, will always be wrapped by <p></p>
+    deprecatedComment?: string;  // HTML, not a pargraph
     optional?: boolean;
-    comment?: string;     // HTML, will always be wrapped by <p></p>
-    deprecated?: string;  // HTML but not wrapped in <p></p>
+  }
+
+  export interface RenderType extends RenderBase {
+    type: RenderTypeType;
 
     // primitive
     primitiveType?: string;
@@ -58,11 +71,7 @@ declare global {
     returnType?: RenderType;
   }
 
-  export interface RenderNamespace {
-    name: string;
-    shortName: string;  // name without "chrome." prefix
-    comment?: string;
-    channel: "stable" | "beta" | "dev";
+  export interface RenderNamespace extends RenderBase {
     permissions?: string[];
     platforms?: string[];
     source?: string;

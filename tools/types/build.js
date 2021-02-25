@@ -25,6 +25,7 @@ const {
 } = require('./types');
 const fetch = require('node-fetch');
 const tmp = require('tmp');
+const {enumerateAllRenderNamespace} = require('./helpers');
 
 // We create render types for both the regular types and platform apps.
 const sourceFiles = ['index.d.ts', 'platform_app.d.ts'];
@@ -88,6 +89,64 @@ async function build() {
       // Store the output as "chrome.accessibilityFeatures", to match the source data.
       out[name] = rn;
     }
+  }
+
+  /**
+   * Builds a set of partial version data for this node (i.e., only the differences from the
+   * parent).
+   *
+   * @param {RenderBase} base
+   * @param {string} parentFullName
+   */
+  const buildPartialVersionData = (base, parentFullName = '') => {
+    if (!base.fullName) {
+      throw new Error('operates only on base with name');
+    }
+    const selfRawData = versionData.symbols[base.fullName];
+    if (!selfRawData) {
+      // TODO(samthor): The raw data is not including all subpaths properly. Properties of
+      // function arguments seem to be flattened.
+      // see e.g.: chrome.input.ime.setCandidateWindowProperties.parameters.properties
+      return; // skip
+    }
+
+    const parentRawData = versionData.symbols[parentFullName] ?? {};
+    base.version = {};
+
+    for (const key in selfRawData) {
+      if (parentRawData[key] === selfRawData[key]) {
+        continue;
+      }
+      if (key === 'release') {
+        // TODO(samthor): Source file has the wrong key.
+        base.version.channel = selfRawData['release'];
+      } else {
+        base.version[key] = selfRawData[key];
+      }
+    }
+
+    // if (Object.keys(base.version).length) {
+    //   console.warn(base.fullName, base.version);
+    // }
+  };
+
+  // Enumerate through all final namespaces and add version data.
+  for (const name in out) {
+    const rn = out[name];
+
+    // Build version data for both the namespace itself and all its children.
+    buildPartialVersionData(rn);
+    enumerateAllRenderNamespace(rn, (base, parent) => {
+      if (base.fullName) {
+        return;
+      }
+      if (!base.name || !parent.fullName) {
+        // This happens in e.g. options of unions or enums. Ignore.
+        return;
+      }
+      base.fullName = parent.fullName + '.' + base.name;
+      buildPartialVersionData(base, parent.fullName);
+    });
   }
 
   const count = Object.keys(out).length;

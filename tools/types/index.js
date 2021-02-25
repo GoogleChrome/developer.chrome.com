@@ -17,7 +17,7 @@
 /**
  * @fileoverview This is a helper to test parsing published types for Chrome extensions.
  *
- * It is not used to build the site, just for development.
+ * It is not used to build the site, and is just provided for development and testing.
  */
 
 const {build} = require('./build.js');

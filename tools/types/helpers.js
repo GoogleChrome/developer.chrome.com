@@ -30,7 +30,7 @@ const md = markdown({
 /**
  * @param {typedocModels.DeclarationReflection} reflection
  * @param {typedocModels.ReflectionKind=} kindMask
- * @return {{[name: string]: typedocModels.DeclarationReflection}}
+ * @return {{[name: string]: typedocModels.DeclarationReflection}} short name mapped to reflection
  */
 function exportedChildren(reflection, kindMask = 0) {
   /** @type {{[name: string]: typedocModels.DeclarationReflection}} */
@@ -306,10 +306,63 @@ function fullName(reflection) {
   return parts.join('.').replace(/\.~\./g, '.').replace(/^\./, '');
 }
 
+/**
+ * Enumerates through an entire |RenderNamespace|.
+ *
+ * @param {RenderNamespace} namespace
+ * @param {(rb: RenderBase, parent: RenderBase) => void} callback
+ */
+function enumerateAllRenderNamespace(namespace, callback) {
+  /** @type {Set<RenderBase>} */
+  const seen = new Set([namespace]);
+
+  const all = [
+    namespace.types,
+    namespace.properties,
+    namespace.methods,
+    namespace.events,
+  ]
+    .flat()
+    .map(rb => {
+      return {parent: /** @type {RenderBase} */ (namespace), rb};
+    });
+
+  for (let i = 0; i < all.length; ++i) {
+    const {rb, parent} = all[i];
+    if (seen.has(rb)) {
+      continue;
+    }
+    seen.add(rb);
+
+    callback(rb, parent);
+
+    const rawExtra = /** @type {RenderType[]} */ ([
+      rb.elementType,
+      rb.properties,
+      rb.options,
+      rb.parameters,
+    ]
+      .flat()
+      .filter(Boolean));
+
+    // TODO(samthor): We give the template in e.g. "chrome.event.Events" a name, but it's not
+    // included in the version data. Remove it for now.
+    for (const rt of rb.referenceTemplates ?? []) {
+      rawExtra.push(...(rt.parameters ?? []));
+    }
+
+    const extra = rawExtra.map(child => {
+      return {parent: rb, rb: child};
+    });
+    all.push(...extra);
+  }
+}
+
 module.exports = {
   exportedChildren,
   extractComment,
   deepStrictEqual,
   fullName,
   generateHtmlLink,
+  enumerateAllRenderNamespace,
 };

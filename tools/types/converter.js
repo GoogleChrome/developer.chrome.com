@@ -56,9 +56,12 @@ function updateWithComment(renderType, commentModel, owner) {
   }
   const deprecatedTag = commentModel.getTag('deprecated');
   if (deprecatedTag) {
-    renderType.deprecated = extractComment(deprecatedTag.text, owner, false);
+    renderType.deprecatedComment = extractComment(
+      deprecatedTag.text,
+      owner,
+      false
+    );
   }
-  // TODO(samthor): When "@since Chrome xx" is available, parse this here.
 }
 
 /**
