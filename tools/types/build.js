@@ -114,6 +114,7 @@ async function build() {
       // TODO(samthor): The raw data is not including all subpaths properly. Properties of
       // function arguments seem to be flattened.
       // see e.g.: chrome.input.ime.setCandidateWindowProperties.parameters.properties
+      // Once this is resolved, this should be listed as `{unknown: true}`.
       return; // skip
     }
 
