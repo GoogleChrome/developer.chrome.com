@@ -20,6 +20,8 @@ tags:
 
 Chrome 89 is starting to roll out to stable now.
 
+<!-- TODO: Consider adding info about release schedule -->
+
 {% YouTube id='TODO' %}
 
 Here's what you need to know:
