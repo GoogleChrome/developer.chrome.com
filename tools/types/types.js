@@ -144,8 +144,12 @@ function renderNamespaceFromNamespace(source, fullName, reflection) {
     properties: [],
     methods: [],
     events: [],
-    // channel,
     source,
+
+    // Channel information is probably replaced by the top-level versionData.
+    version: {
+      channel,
+    },
   };
 
   if (permissions.length) {
