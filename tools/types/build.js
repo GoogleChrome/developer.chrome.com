@@ -14,9 +14,7 @@
  * limitations under the License.
  */
 
-// FIXME: remove before submit
-const chromeTypesRepoURL =
-  'https://unpkg.com/chrome-types@0.0.16-beta.0/index.d.ts';
+const chromeTypesRepoBase = 'https://unpkg.com/chrome-types@latest/';
 
 require('dotenv').config();
 const fs = require('fs');
@@ -32,20 +30,34 @@ const tmp = require('tmp');
 const sourceFiles = ['index.d.ts', 'platform_app.d.ts'];
 
 /**
+ * @param {string} part
+ */
+function safeFetch(part) {
+  const u = new URL(part, chromeTypesRepoBase);
+  console.warn(`Fetching ${u}...`);
+  // @ts-ignore TypeScript doesn't think `fetch` is callable
+  return /** @type {Promise<Response>} */ (fetch(u));
+}
+
+/**
  * @return {Promise<{[name: string]: RenderNamespace}>}
  */
 async function build() {
+  const sourceFilesData = sourceFiles.map(async part => {
+    const request = await safeFetch(part);
+    const raw = await request.text();
+    return {raw, sourceFile: part};
+  });
+
+  const versionDataRequest = await safeFetch('version-data.json');
+  const versionData = await versionDataRequest.json();
+  console.warn('got version data for Chrome', versionData.version);
+
   /** @type {{[name: string]: RenderNamespace}} */
   const out = {};
 
-  for (const sourceFile of sourceFiles) {
-    const u = new URL(sourceFile, chromeTypesRepoURL);
-    console.warn(`Fetching ${u}...`);
-
-    // For some reason, VSCode doesn't think `fetch` is callable.
-    // @ts-ignore
-    const request = await fetch(u);
-    const raw = await request.text();
+  for (const dataPromise of sourceFilesData) {
+    const {raw, sourceFile} = await dataPromise;
 
     // Write the file to a temporary location and parse it as TypeDoc only works on real files.
     let project;
