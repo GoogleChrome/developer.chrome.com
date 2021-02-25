@@ -5,7 +5,7 @@ groups:
   # Handles any changes related to extensions, web store, and chrome apps.
   # By default Simeon and Andy will be tagged in as reviewers, but anyone
   # on the dcc-extensions, dcc-content, or dcc-approvers team can approve PRs.
-  content:
+  extensions:
     reviewers:
       users:
       - awfuchs
