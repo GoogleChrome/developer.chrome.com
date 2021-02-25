@@ -11,29 +11,39 @@ This page provides a very brief introduction to what extensions are and how you 
 
 ## About extensions
 
-Extensions are small software programs that customize the browsing experience. They let users
-tailor Chrome functionality and behavior in many ways, providing things like:
+Extensions are small software programs that customize the browsing experience. They let users tailor
+Chrome functionality and behavior in many ways, providing things like:
 
 * Productivity tools
 * Web page content enrichment
 * Information aggregation
 * Fun and games
 
-These are just a few examples of the many things that extensions can do. See the [Chrome Web Store][5] to see thousands of different examples of published extensions.
+These are just a few examples of the many things that extensions can do. See the [Chrome Web
+Store][5] to see thousands of different examples of published extensions.
 
-### What goes into an extension?
+### How do extensions work?
 
-Extensions are built on web technologies such as HTML, JavaScript, and CSS.
+Extensions are built on web technologies such as HTML, JavaScript, and CSS.  They run in a separate,
+sandboxed execution environment and interact with the Chrome browser.  Consider the context for this
+-- Chrome runs on a device, connecting the user to resources on the Web, as depicted in this context
+diagram:
 
-An extension must fulfill a [single purpose][1] that is narrowly defined and easy to understand. A
-single extension can include multiple components and a range of functionality, as long as everything
-contributes towards a common purpose.
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/5qVlqGn6vVMCWCSRclOY.png", alt="Context diagram of Chrome with an extension", width="517", height="476" %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/bk1NEBu7WXWCXfNJCsms.png",
-       alt="A screenshot of an extension's icon in the browser bar", height="35", width="91" %}
+Also shown in the diagram is an extension "plugged into" the Chrome browser. The extension can
+access and modify selected resources and actions in Chrome. There are two aspects to consider:
 
-User interfaces should be minimal and have intent. They can range from a simple icon, such as the [Google
-Mail Checker extension][2] shown on the right, to [overriding][3] an entire page.
+**The extensions mechanism**&emsp;This provides a consistent way for users to install and activate
+extensions.
+
+**Extensions APIs**&emsp;The [extensions APIs](/docs/extensions/reference/) allow the extension's
+code to access features of the browser itself, activating tabs, modifying net requests, and so on.
+
+To create an extension, you assemble some resources -- JavaScript and HTML files, a manifest,
+images, and others -- that constitute the extension. For development and testing, you can load these
+"unpacked" into Chrome using extension developer mode. Once you are happy with your extension, you
+can package it and distribute it to users.
 
 ### How do users get extensions?
 
@@ -51,6 +61,24 @@ extensions may either be fetched from the Chrome Web Store or hosted on the orga
 
 You can distribute your extensions through the [Chrome Developer Dashboard][4], publishing them to the [Chrome
 Web Store][5]. For more information, see the Chrome Web Store [developer documentation][6].
+
+### A note about extensions policy
+
+Extensions on the Chrome Web Store must adhere to the [Chrome Web Store policies][cws-policies].
+Here are some things to keep in mind as you begin:
+
+* An extension must fulfill a [single purpose][1] that is narrowly defined and easy to understand. A
+single extension can include multiple components and a range of functionality, as long as everything
+contributes towards a common purpose.
+
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/XniXB3snAeMvLwI1am3O.png", alt="Screenshot of AMP validator extension pinned", width="169", height="62" %}
+
+* User interfaces should be minimal and have intent. They can range from a simple icon, such as the
+  [AMP validator] extension shown above, to opening a new window with a form, like the [PackageTrack]
+  extension shown below.
+
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/nMdr0cEZ0TOANuztuW1y.png", alt="Screenshot of
+PackageTrack extension form window", width="400", height="1073" %}
 
 ## Hello extensions {: #hello-extensions }
 
@@ -136,15 +164,17 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 ## What next? {: #How-do-I-start }
 
 1.  Follow the [Getting Started tutorial][10]
-2.  Read the [Overview][11]
-3.  Keep up to date by reading the [Chromium blog][12]
-4.  Subscribe to the [chromium-extensions group][13]
+1.  Explore the [extension samples][2]
+1.  Subscribe to the [chromium-extensions group][13]
 
 
+[AMP validator]: https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc
+[PackageTrack]: https://chrome.google.com/webstore/detail/packagetrack-package-trac/hoipjclokbelgffomjhhiflphegpmlpe
+[cws-policies]: /docs/webstore/program_policies/
 [1]: /docs/extensions/mv3/single_purpose
-[2]: /docs/extensions/mv3/samples#google-mail-checker
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples
 [3]: /docs/extensions/mv3/override
-[4]: https://chrome.google.com/webstore/developer/dashboard
+[4]: https://chrome.google.com/webstore/devconsole
 [5]: https://chrome.google.com/webstore
 [6]: /docs/webstore
 [7]: /docs/extensions/mv3/samples#search:hello
