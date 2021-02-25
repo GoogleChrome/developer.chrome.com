@@ -86,7 +86,7 @@
                   Dev channel only.
                 {% elif namespace.version.channel === 'beta' %}
                   Beta and Dev channels only.
-                {% else if namespace.version.low %}
+                {% elif namespace.version.low %}
                   Since Chrome {{ namespace.version.low }}.
                   {# No namespace is currently deprecated. #}
                 {% endif %}
