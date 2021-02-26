@@ -53,7 +53,8 @@ Using Web Serial, and [about 60 lines of code][pico-code],
 the MicroPython REPL on a [Raspberry Pi Pico][rpi-pico]. Web Serial is also
 used by Espruino in their [web based IDE][espruino-ide].
 
-At CDS last year, Francois wrote a fun, memory-style game using Web NFC. You had to tap the phone to the right card, in the right order.
+At CDS last year, Francois wrote a fun, memory-style game using Web NFC.
+You had to tap the phone to the right card, in the right order.
 
 <div style="clear:both;"></div>
 
@@ -177,11 +178,14 @@ Chrome now allows top level `await` within JavaScript modules.
 
 {% Img className="float-right",  src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Yqyikwd9xFsj6jqnhYar.png", alt="New omnibox install icon for PWAs", width="380", height="180" %}
 
-To reduce confusion for users, we've updated the icon shown in the omnibox for installable PWAs.
+To reduce confusion for users, we've updated the icon shown in the omnibox for
+installable PWAs.
 
 <br style="clear:both;">
 
-And, if you've used a Trusted Web Activity to make your PWA available in the Play Store for Chrome OS, you can sign up for the [Digital Goods API origin trial](/blog/new-in-chrome-88/#play-billing).
+And, if you've used a Trusted Web Activity to make your PWA available in the
+Play Store for Chrome OS, you can sign up for the
+[Digital Goods API origin trial](/blog/new-in-chrome-88/#play-billing).
 
 ## Further reading
 
@@ -202,6 +206,11 @@ and you'll get an email notification whenever we launch a new video.
 
 I'm Pete LePage, and as soon as Chrome 90 is released, I'll be right here to
 tell you -- what's new in Chrome!
+
+## Credits
+
+The photo of the Raspberry Pis and Arduino are by by
+[Harrison Broadbent on Unsplash](https://unsplash.com/photos/1mu9gF8OhNk)
 
 [pico-code]: https://glitch.com/edit/#!/viridian-receptive-rugby?path=index.html%3A91%3A3
 [andre-tweet]: https://twitter.com/andreban/status/1355212228618813440
