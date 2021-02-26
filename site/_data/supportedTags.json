@@ -17,8 +17,8 @@
   "cookies": {
     "title": "i18n.tags.cookies"
   },
-  "deprications": {
-    "title": "i18n.tags.deprications"
+  "deprecations": {
+    "title": "i18n.tags.deprecations"
   },
   "devices": {
     "title": "i18n.tags.devices"
