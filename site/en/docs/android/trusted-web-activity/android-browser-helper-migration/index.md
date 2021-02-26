@@ -49,7 +49,7 @@ changes in their application, when migrating to `android-browser-helper`.
 Fortunately, besides replacing using the old library with the new library, those changes mainly
 involve changing searching and replacing a few strings throughout `AndroidManifest.xml`. 
 
-Here’s a summary of the names changed:
+Here's a summary of the names changed:
 
 | Name on custom-tabs-client (Old Library)                     | Name on android-browser-helper (New Library)              |
 |--------------------------------------------------------------|-----------------------------------------------------------|

@@ -154,9 +154,9 @@ Check out the [Web Share Target article][1] to learn more using the API on a PWA
 
 ## Troubleshooting
 
-**My application doesn’t show as an option when I try to share a file from another application.**
+**My application doesn't show as an option when I try to share a file from another application.**
 
-When the application doesn’t show as an option, this indicates that the `intent-filter` is
+When the application doesn't show as an option, this indicates that the `intent-filter` is
 incorrect. Double check the `intent-filter` markup, ensure it contains the correct actions,
 category, and `mime-types` handled by the application.
 

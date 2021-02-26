@@ -28,7 +28,7 @@ Activity.
 Android application that launches an existing PWAs using a Trusted Web
 Activity. It contains both a [library][6] and a [Command Line Interface (CLI)][5].
 
-#### Creating a new project:
+#### Creating a new project
 
 When using the [Bubblewrap CLI][5], a project is initialized with the `init` command, and creates
 default values from a Web Manifest, provided as a parameter:
@@ -59,7 +59,7 @@ developers need to modify the file:
 
 Then, re-generate the project files and apply the new start URL
 
-```
+```shell
 bubblewrap update
 ```
 
@@ -89,7 +89,7 @@ In other cases, developers may want to create parameters that change across user
 instance. In most cases, this will involve collecting details from the Android side of the
 application to pass it to the Progressive Web App. 
 
-### Step 1: Create a custom LauncherActivity:
+### Step 1: Create a custom LauncherActivity
 
 ```java
 public class CustomQueryStringLauncherActivity extends LauncherActivity {
@@ -125,7 +125,7 @@ public class CustomQueryStringLauncherActivity extends LauncherActivity {
 </activity>
 ```
 
-Note: Bubblewrap doesn’t support dynamically generating query parameters at this moment. We’re
+Note: Bubblewrap doesn't support dynamically generating query parameters at this moment. We're
 interested in hearing from developers who have the need for this feature. Check out the Bubblewrap
 [issue tracker][3] and tell us about your use-case.
 
@@ -139,7 +139,7 @@ the developer implements a share action.
 Developers must be aware of those implications, and can mitigate them using
 [link rel=noreferrer][1] or cleaning-up the URL using the [page location API][2].
 
-The Trusted Web Activity protocol doesn’t currently provide a mechanism to exchange messages with
+The Trusted Web Activity protocol doesn't currently provide a mechanism to exchange messages with
 the native part of the application after the web part is invoked. 
 
 We believe existing or upcoming Web Platform APIs enable most use cases needed by developers. If

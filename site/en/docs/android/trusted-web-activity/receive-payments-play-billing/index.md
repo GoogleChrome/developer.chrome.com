@@ -15,7 +15,7 @@ Store that is already familiar to your users.
 
 For apps built using [Trusted Web Activities][2], and delivered through the Google Play Store, you
 can now use the [Payment Request API][3] and the new [Digital Goods API][4] to integrate with
-Google Play Billing. It’s available as an [origin trial][5] in Chrome 88 for Android, and we expect
+Google Play Billing. It's available as an [origin trial][5] in Chrome 88 for Android, and we expect
 it to expand the origin trial to Chrome OS in version 89.
 
 In this guide, you will learn how to add Google Play Billing support to your PWA and package it for
@@ -41,7 +41,7 @@ features, or removing ads.
 like news subscriptions or memberships.
 
 Note: The Play Store allows selling applications on the store and users can only download the
-application after purchasing it. We don’t recommend this for PWAs as the web application needs to
+application after purchasing it. We don't recommend this for PWAs as the web application needs to
 be freely accessible to the open web and it is not possible to limit access in the same way
 platform-specific applications would do. A better alternative is to provide the application for
 free on the store and enable features via in-app purchases.
@@ -54,7 +54,7 @@ In order to setup Google Play Billing, you will need:
 [linked to each other][11].
 - A [Play Store listing][12] with a
 [release on the public, closed testing or internal testing track][13].
-- To [create and configure][14] your app’s products and subscriptions on the Play Store.
+- To [create and configure][14] your app's products and subscriptions on the Play Store.
 - A [Bubblewrap generated project][15] with a working [Digital Asset Links configuration][16].
 
 ## Request access to the Origin Trial
@@ -66,7 +66,7 @@ the feature is made available to all users. You can sign-up for the Digital Good
 
 ## Update the Bubblewrap project
 
-If you don’t have Bubblewrap installed, you will need to install it. See the
+If you don't have Bubblewrap installed, you will need to install it. See the
 [Quick Start Guide][18] for details on how to get started. If you already have Bubblewrap, make
 sure to update to version 1.8.2 or above.
 
@@ -148,7 +148,7 @@ for (item of skuDetails) {
 
 Note: The product SKUs are defined by you, when
 [creating your products and subscriptions on the Play Store interface][14]. The Digital Goods API
-doesn’t have methods to query SKUs, but the Play Store does provide
+doesn't have methods to query SKUs, but the Play Store does provide
 [an API that can be used to query SKUs from a backend][20].
 
 ## Build the purchase flow
@@ -208,7 +208,7 @@ try {
 
     // Call backend to validate the purchase.
     if (validatePurchaseOnBackend(purchaseToken)) {
-        // Acknowledge using the Digital Goods API. Use ‘onetime’ for items
+        // Acknowledge using the Digital Goods API. Use ‘onetime' for items
         // that can only be purchased once and ‘repeatable for items
         // that can be purchased multiple times.
         await service.acknowledge(purchaseToken, 'onetime');
@@ -261,7 +261,7 @@ async function makePurchase(service, sku) {
 
         // Call backend to validate the purchase.
         if (validatePurchaseOnBackend(purchaseToken)) {
-            // Acknowledge using the Digital Goods API. Use ‘onetime’ for
+            // Acknowledge using the Digital Goods API. Use ‘onetime' for
             // items that can only be purchased once and ‘repeatable for
             // items that can be purchased multiple times.
             await service.acknowledge(purchaseToken, 'onetime');
@@ -286,7 +286,7 @@ async function makePurchase(service, sku) {
 ## Check the status of existing purchases
 
 The Digital Goods API allows you to check if the user has any existing entitlements (in-app
-purchases that haven’t been consumed yet or on-going subscriptions) from previous purchases they’ve
+purchases that haven't been consumed yet or on-going subscriptions) from previous purchases they've
 already made, whether on another device, from a previous install, redeemed from a promo code, or
 just the last time they opened the app.
 
@@ -302,8 +302,8 @@ for (const p of existingPurchases) {
 }
 ```
 
-This is also a good time to check for purchases that were previously made but weren’t acknowledged.
-It is recommended to acknowledge purchases as soon as possible to ensure your users’ entitlements
+This is also a good time to check for purchases that were previously made but weren't acknowledged.
+It is recommended to acknowledge purchases as soon as possible to ensure your users' entitlements
 are properly reflected in your app.
 
 ```js
@@ -313,7 +313,7 @@ const service =
 const existingPurchases = await service.listPurchases();
 for (const p of existingPurchases) {
     if (!p.acknowledged) {
-       await service.acknowledge(p.purchaseToken, ’onetime’);
+       await service.acknowledge(p.purchaseToken, 'onetime');
        // Do something to record successful acknowledgement of a purchase
        // e.g. update backend server
     }
@@ -332,7 +332,7 @@ without enabling the Origin Trial:
  - Ensure you are on Android 9 or greater with [developer mode enabled][23].
  - Install Chrome 88 or above.
  - Enable the following flags in Chrome by navigating to `chrome://flags` and searching for the
- flag by name.  
+   flag by name:  
      - `#enable-experimental-web-platform-features`
      - `#enable-web-payments-experimental-features`
      - `#enable-debug-for-store-billing`
@@ -347,7 +347,7 @@ meantime, it is possible to test the Digital Goods API:
 
  - Enable the [Chrome OS dev channel][24], 
  - Enable the following flags in Chrome by navigating to `chrome://flags` and searching for the
- flag by name. 
+   flag by name: 
      - `#enable-experimental-web-platform-features`
      - `#enable-web-payments-experimental-features`
  - Install your app from the Play Store on the device.
@@ -365,7 +365,7 @@ Checkout the [Google Play Billing test documentation][25] for more information.
 As discussed in this document, the Play Billing API has client-side components, which are managed
 by the Digital Goods API, and server-side components.
 
- - Take a look at Peter Conn’s sample at [https://github.com/PEConn/beer][26]
+ - Take a look at Peter Conn's sample at [https://github.com/PEConn/beer][26]
  - Check out the Play documentation on [purchase verification][21].
  - Consider using one of the [Google Play Developer API client libraries][27], which are available
  in [multiple languages][28].

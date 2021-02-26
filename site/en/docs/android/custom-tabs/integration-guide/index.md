@@ -252,7 +252,7 @@ public static final int TAB_SHOWN = 5;
 public static final int TAB_HIDDEN = 6;
 ```
 
-## What happens if the user doesn’t have a browser that supports Custom Tabs installed?
+## What happens if the user doesn't have a browser that supports Custom Tabs installed?
 
 Custom Tabs is supported by most Android browsers. Nevertheless, since it uses an `ACTION_VIEW`
 Intent with key Extras to customize the UI it will open in the system browser,

@@ -19,7 +19,7 @@ Connect to the Custom Tabs service on the [`onStart()`][1] method of the Activit
 launch a Custom Tab from. Upon connection, call [`warmup()`][2].
 
 The loading happens as a low priority process, meaning that
-**it won’t have any negative performance impact on your application**, but will give a big
+**it won't have any negative performance impact on your application**, but will give a big
 performance boost when loading a link.
 
 ## Pre-render content
@@ -31,9 +31,9 @@ Calling [`mayLaunchUrl()`][3] will make Custom Tabs pre-fetch the main page with
 content and pre-render. This will give the maximum speed up to the page loading process, but
 **comes with a network and battery cost**.
 
-Custom Tabs is smart and knows if the user is using the phone on a metered network or if it’s a low
+Custom Tabs is smart and knows if the user is using the phone on a metered network or if it's a low
 end device and pre-rendering will have a negative effect on the overall performance of the device
-and won’t pre-fetch or pre-render on those scenarios. So, there’s no need to optimize your
+and won't pre-fetch or pre-render on those scenarios. So, there's no need to optimize your
 application for those cases.
 
 ## Provide a fallback for when Custom Tabs is not installed
@@ -49,7 +49,7 @@ default browser or using your own [WebView][4] implementation.
 It's usually very important for websites to track where their traffic is coming from. Make sure you
 let them know you are sending them users by setting the referrer when launching your Custom Tab:
 
-```
+```java
 intent.putExtra(Intent.EXTRA_REFERRER, 
         Uri.parse("android-app://" + context.getPackageName()));
 ```
@@ -73,7 +73,7 @@ intentBuilder.build().launchUrl(context, Uri.parse("https://developer.chrome.com
 
 ## Choosing an icon for the Action Button
 
-Adding an Action Button will make users engage more with your app features. But, if there isn’t a
+Adding an Action Button will make users engage more with your app features. But, if there isn't a
 good icon to represent the action your Action Button will perform, create a bitmap with a text
 describing the action.
 
@@ -160,7 +160,7 @@ Before opening an url from your application, check if a native alternative is av
 ### On Android 11 and above
 
 Android 11 introduces a new Intent flag, [`FLAG_ACTIVITY_REQUIRE_NON_BROWSER`][6], which is the
-recommended way to try opening a native app, as it doesn’t require the app to declare any package
+recommended way to try opening a native app, as it doesn't require the app to declare any package
 manager queries.
 
 ```java
@@ -224,12 +224,12 @@ private static boolean launchNativeBeforeApi30(Context context, Uri uri) {
 ```
 
 The approach used here is to query the Package Manager for applications that support a generic
-“http” intent. Those applications are likely browsers.
+"http" intent. Those applications are likely browsers.
 
 Then, query for applications that handle itents for the specific URL we want to launch. This will
 return both browsers and native applications setup to handle that URL.
 
-Now, remove all browsers found on the first list from the second list, and we’ll be left only with
+Now, remove all browsers found on the first list from the second list, and we'll be left only with
 native apps.
 
 If the list is empty, we know there are no native handlers and return false. Otherwise, we launch
@@ -253,7 +253,7 @@ static void launchUri(Context context, Uri uri) {
 }
 ```
 
-`Build.VERSION.SDK_INT` provides the information we need. If it’s equal or larger than 30, Android
+`Build.VERSION.SDK_INT` provides the information we need. If it's equal or larger than 30, Android
 knows the `FLAG_ACTIVITY_REQUIRE_NON_BROWSER` and we can try launching a nativa app with the new
 approach. Otherwise, we try launching with the old approach.
 
@@ -264,7 +264,7 @@ If launching a native app fails, we then launch a Custom Tabs.
 Customize with your application's primary color if you want the user to feel that the content is a
 part of your application.
 
-If you want to make it clear for the user that they have left your application, don’t customize the
+If you want to make it clear for the user that they have left your application, don't customize the
 color at all.
 
 ```java

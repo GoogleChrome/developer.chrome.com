@@ -116,7 +116,7 @@ validated will be inside an `item` sub-element:
 Next, add a new `meta-data` tag inside the existing activity element that references the
 `LauncherActivity`, inside `AndroidManifest.xml`:
 
-```
+```xml
 ...
 <activity android:name="com.google.androidbrowserhelper.trusted.LauncherActivity"
     android:label="@string/app_name">
@@ -158,12 +158,12 @@ sure to check it.
 
 ## Troubleshooting
 Setting up Digital Asset Links has a few moving parts. If the application is still showing the
-Custom Tabs bar on the top, it’s likely that something is wrong with the configuration.
+Custom Tabs bar on the top, it's likely that something is wrong with the configuration.
 
 The [Trusted Web Activity Quick Start Guide][1] has a great [troubleshooting section][10] on how to
 debug Digital Asset Link issues.
 
-There’s also the amazing [Peter’s Asset Link Tool][11], which helps debuggint Digital Asset Links
+There's also the amazing [Peter's Asset Link Tool][11], which helps debuggint Digital Asset Links
 on applications installed on the device..
 
 [1]: /docs/android/trusted-web-activity/quick-start

@@ -50,7 +50,7 @@ content-type     | indicates the media type of the resource
 
 **Table 2.:** Example whitelisted CORS headers.
 
-The whitelisted headers are considered safe because they don’t contain sensitive 
+The whitelisted headers are considered safe because they don't contain sensitive 
 user information and are unlikely to cause the server to perform potentially damaging operations.
 
 Examples of non-whitelisted headers are shown in the following table:
@@ -175,8 +175,8 @@ CustomTabsCallback callback = new CustomTabsCallback() {
 
 ### Bind the custom tabs service connection
 
-Binding the service launches the service and the connection’s `onCustomTabsServiceConnected()`
-will be called eventually. Don’t forget to unbind the service appropriately. Binding and unbinding
+Binding the service launches the service and the connection's `onCustomTabsServiceConnected()`
+will be called eventually. Don't forget to unbind the service appropriately. Binding and unbinding
 is commonly done in the `onStart()` and `onStop()` activity lifecycle methods.
 
 ```java

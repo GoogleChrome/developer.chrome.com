@@ -12,7 +12,7 @@ Note: A simpler
 [quick start guide for Trusted Web Activities](/docs/android/trusted-web-activity/quick-start)
 is now available.
 
-Setting up a Trusted Web Activity doesn’t require developers to author
+Setting up a Trusted Web Activity doesn't require developers to author
 Java code, but [Android Studio](https://developer.android.com/studio/) is
 required. This guide was created using *Android Studio 3.3*. Check the [docs on
 how to install it](https://developer.android.com/studio/install).
@@ -66,7 +66,7 @@ The Trusted Web Activities library uses
 and the first change enables Java 8. Add a `compileOptions` section to the
 bottom of the `android` section, as below:
 
-```
+```groovy
 android {
         ...
     compileOptions {
@@ -79,7 +79,7 @@ android {
 The next step will add the Trusted Web Activity Support Library to the project. Add a new
 dependency to the `dependencies` section:
 
-```
+```groovy
 dependencies {
     implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.1.0'
 }
@@ -235,7 +235,7 @@ We have now established a relationship from the Android application to the
 website. It is helpful to debug this part of the relationship without creating
 the website to application validation.
 
-Here’s how to test this on a development device:
+Here's how to test this on a development device:
 
 ### Enable debug mode {: #debugging }
 
@@ -290,7 +290,7 @@ keytool -list -v -keystore [path] -alias [alias] -storepass [password] -keypass 
 </pre>
 
 The value for the *SHA-256 fingerprint* is printed under the *Certificate*
-fingerprints section. Here’s an example output:
+fingerprints section. Here's an example output:
 
 <pre>
 <code class="devsite-terminal">keytool -list -v -keystore ./mykeystore.ks -alias test -storepass password -keypass password</code>
@@ -348,7 +348,7 @@ adb install app-release.apk
 </pre>
 
 If the verification step fails it is possible to check for error
-messages using the Android Debug Bridge, from your OS’s terminal and with the
+messages using the Android Debug Bridge, from your OS's terminal and with the
 test device connected.
 
 <pre class="devsite-terminal devsite-click-to-copy">

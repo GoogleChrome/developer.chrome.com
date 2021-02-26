@@ -10,12 +10,12 @@ authors:
 
 <div class="clearfix"></div>
 
-There’s a fair amount of ecosystem around Trusted Web Activities and it can be quite difficult to
+There's a fair amount of ecosystem around Trusted Web Activities and it can be quite difficult to
 see how everything relates and what you should use.
 This article hopes to address that.
 
 If you are new to Trusted Web Activities or just looking for the recommended set of tools you
-should be using today, here’s what you need to be aware of:
+should be using today, here's what you need to be aware of:
 
 * [Bubblewrap][12]: a NodeJS tool that allows developers to create and build an Android APK that
   wraps an existing PWA.
@@ -30,14 +30,14 @@ should be using today, here’s what you need to be aware of:
   To get started with android-browser-helper, check the [documentation][17] and our [demos][15].
 
 The next section gives a brief summary of all the projects in relation to each other.
-Finally (for the really curious) there’s a history section to show you how we got here and where
-we’re planning to go in the near future.
+Finally (for the really curious) there's a history section to show you how we got here and where
+we're planning to go in the near future.
 
 ## An overview of the libraries {: #library-overview }
 
-Here’s a short, single sentence summary of each of the libraries you may end up using:
+Here's a short, single sentence summary of each of the libraries you may end up using:
 
-* [androidx.browser][7], an Android library for interacting with the browser installed on the user’s
+* [androidx.browser][7], an Android library for interacting with the browser installed on the user's
   device.
 * The [Android Browser Helper][8], a library building on androidx.browser for Trusted Web Activity
   clients providing convenience methods and sensible defaults.
@@ -57,21 +57,21 @@ In addition, each of these libraries/tools replaces an older one:
 The [Android Support Library][1] extends the Android platform with new APIs and compatibility
 features.
 It is split across multiple packages, with the [Custom Tabs Support Library][2] containing
-functionality for interacting with browsers on the user’s system.
+functionality for interacting with browsers on the user's system.
 Development of the **Custom Tabs Support Library** was primarily done in the [custom-tabs-client][3]
 GitHub repo, with the changes being upstreamed back into the **Android Support Library**.
 
 A [Custom Tab][4] is an Android Activity that uses a browser to display a web page.
 The primary benefit for the developer is that it can be themed and has a close button, so the user
-still remains in the developer’s app (instead of leaving the app and going to the full browsing
+still remains in the developer's app (instead of leaving the app and going to the full browsing
 experience).
-As an Android API, Custom Tabs can be supported by any browser and will use the user’s default
+As an Android API, Custom Tabs can be supported by any browser and will use the user's default
 browser (although this can be overridden by developers).
 
 Because [Trusted Web Activities][14] are built on top of Custom Tabs, they started their life in
 this **custom-tabs-client** library.
 Trusted Web Activities remove the Custom Tabs top bar when the user is browsing a site owned by the
-app’s developer.
+app's developer.
 This opens the doors to seamless integration of your website within a native Android app, and can
 be used to create apps where all functionality is provided by the web.
 
@@ -87,21 +87,21 @@ Web Activity helper classes, but not for an Android API.
 Code dealing with checking for out of date Chrome versions and prompting the user to update or
 making decisions about how data should be stored could not move into AndroidX.
 Therefore, we created an alternative library to contain these parts of **custom-tabs-client** that
-couldn’t go into **androidx.browser**, and so the [Android Browser Helper][8] was born.
+couldn't go into **androidx.browser**, and so the [Android Browser Helper][8] was born.
 
 The **Android Browser Helper** was created to contain code that can be specific to browsers (not
-just Chrome, we’re open to code specifically for other browsers) and can make concrete decisions
-that libraries shouldn’t.
+just Chrome, we're open to code specifically for other browsers) and can make concrete decisions
+that libraries shouldn't.
 We took this opportunity to generally separate the roles of these two libraries:
 
 * **androidx.browser** contains the basic building blocks for interacting with browsers on the
-  user’s system.
+  user's system.
 * The **Android Browser Helper** contains convenient to use and sensible default implementations.
 
 ### Bootstrapping {: #bootstrapping }
 
 Developers are busy people, with a lot of work to do and deadlines to match.
-To help with this, we created two tools to let user’s bootstrap their Trusted Web Activity.
+To help with this, we created two tools to let user's bootstrap their Trusted Web Activity.
 
 The first (and oldest) is [svgomg-twa][9], which is a GitHub hosted Android Project that launches a
 Trusted Web Activity.
@@ -115,7 +115,7 @@ Browser Helper (and transitively androidx.browser).
 
 The newest and shiniest tool is [Bubblewrap][12], a Node.js tool that will take your Web App
 Manifest and generate a Trusted Web Activity for you.
-This is the easiest way to create a Trusted Web Activity from an existing PWA and doesn’t require
+This is the easiest way to create a Trusted Web Activity from an existing PWA and doesn't require
 any Android development knowledge.
 
 ## Near Future {: #near-future }
@@ -129,10 +129,10 @@ We will be deprecating **svgomg-twa** for two reasons:
   scratch, they can look at the Android Browser Helpers [demos][15] directory.
 
 New developers should use **Bubblewrap** to generate their project instead.
-If you’re already using **svgomg-twa** and have made some heavy modifications, you’ll be fine to
-continue doing so, but won’t get updates.
+If you're already using **svgomg-twa** and have made some heavy modifications, you'll be fine to
+continue doing so, but won't get updates.
 
-We plan to make **Bubblewrap** as capable as possible, so if there’s an obvious feature missing or
+We plan to make **Bubblewrap** as capable as possible, so if there's an obvious feature missing or
 you come across a bug, feel free to [create an issue][16].
 
 [1]: https://developer.android.com/topic/libraries/support-library
