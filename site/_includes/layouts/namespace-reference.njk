@@ -78,11 +78,11 @@
               </div>
             </li>
           {% endif %}
-          {% if namespace.channel !== 'stable' or namespace.version.low %}
+          {% if namespace.version.channel !== 'stable' or namespace.version.low %}
             <li>
               <div class="code-sections__label">Availability</div>
               <div>
-                {% if namespace.channel === 'dev' %}
+                {% if namespace.version.channel === 'dev' %}
                   Dev channel only.
                 {% elif namespace.version.channel === 'beta' %}
                   Beta and Dev channels only.

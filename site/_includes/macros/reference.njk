@@ -20,7 +20,11 @@
         <tr>
           <td>
             <a class="link weight-medium" href="{{ namespace.fullName | namespaceToPath }}">{{ namespace.name }}</a><br />
-            {% if not channel and namespace.version.low %}
+            {% if not channel and namespace.version.channel === 'dev' %}
+              Dev channel
+            {% elif not channel and namespace.version.channel === 'beta' %}
+              Beta and Dev channels
+            {% elif namespace.version.low %}
               Chrome {{ namespace.version.low }}
             {% endif %}
           </td>
