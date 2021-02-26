@@ -210,5 +210,61 @@
       "en": "Advocate for the web."
     },
     "image": "image/i9nJGvw3SnTPH63zKOYWtI6cP5m2/rS10rvGrNat9Euvxw8ju.jpg"
+  },
+  "andreban": {
+    "name": {
+      "given": "André",
+      "family": "Cipriani Bandarra"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "UK",
+    "homepage": "https://bandarra.me",
+    "twitter": "andreban",
+    "glitch": "andreban",
+    "github": "andreban",
+    "descriptions": {
+      "en": "André is a Developer Relations Engineer"
+    },
+    "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/JEp8KytgeB3nYFintp4W.jpg"
+  },
+  "peconn": {
+    "name": {
+      "given": "Peter",
+      "family": "Conn"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Web Platform"
+    },
+    "country": "UK",
+    "twitter": "petereconn",
+    "github": "PEConn",
+    "email": "conn.peter@gmail.com",
+    "descriptions": {
+      "en": "I'm a Software Engineer working on the Web Platform at Google London."
+    },
+    "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/bphnrZBppE6u1ZqNnhKU.jpg"
+  },
+  "pavoldrotar": {
+    "name": {
+      "given": "Pavol",
+      "family": "Drotar"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Web Platform"
+    },
+    "country": "UK",
+    "homepage": "https://pavoldrotar.com",
+    "twitter": "DrotarPavol",
+    "github": "padr31",
+    "email": "pavol.drotar3@gmail.com",
+    "descriptions": {
+      "en": "I am a Software Engineer Intern wroking on the Web Platform."
+    },
+    "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/DXzBVhVGAn8NTnPqW7Pa.jpg"
   }
 }

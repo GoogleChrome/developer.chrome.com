@@ -1,0 +1,10 @@
+android:
+  en: 'Web on Android'
+webview:
+  en: 'WebView'
+customtabs:
+  en: 'Custom Tabs'
+trustedwebactivity:
+  en: 'Trusted Web Activity'
+howtos:
+  en: 'How-Tos'
