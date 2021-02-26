@@ -25,7 +25,9 @@ date: 2021-02-25
 Check this page often to learn about changes to the Chrome extensions platform,
 its documentation, and related policy or other changes.
 
-### 2020-01-19 Manifest V3 launched
+## 2021
+
+### Jan 19: Manifest V3 launched
 
 With the launch of Chrome 88, the extensions platform now supports extensions
 built with Manifest v3, and you can upload them to the Chrome Web Store.
