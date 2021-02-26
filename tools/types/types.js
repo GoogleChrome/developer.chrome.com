@@ -103,18 +103,18 @@ function extractPublicChromeNamespaces(typesData) {
 
 /**
  * @param {string} source
- * @param {string} name
+ * @param {string} fullName
  * @param {typedoc.DeclarationReflection} reflection
  * @return {RenderNamespace}
  */
-function renderNamespaceFromNamespace(source, name, reflection) {
-  const [, ...rest] = name.split('.');
+function renderNamespaceFromNamespace(source, fullName, reflection) {
+  const [, ...rest] = fullName.split('.');
   const shortName = rest.join('.');
 
   const permissions = [];
   const platforms = [];
 
-  /** @type {RenderNamespace["channel"]} */
+  /** @type {VersionData["channel"]} */
   let channel = 'stable';
 
   const tags = reflection?.comment?.tags ?? [];
@@ -137,15 +137,19 @@ function renderNamespaceFromNamespace(source, name, reflection) {
 
   /** @type {RenderNamespace} */
   const renderNamespace = {
-    name,
-    shortName,
+    name: shortName,
+    fullName,
     comment: extractComment(reflection.comment, reflection),
     types: [],
     properties: [],
     methods: [],
     events: [],
-    channel,
     source,
+
+    // Channel information is probably replaced by the top-level versionData.
+    version: {
+      channel,
+    },
   };
 
   if (permissions.length) {

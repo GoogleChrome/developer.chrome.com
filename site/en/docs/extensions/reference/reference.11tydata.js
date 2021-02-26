@@ -83,7 +83,7 @@ module.exports = {
       const namespace = namespaceForData(data);
 
       // We can't use ?? here, as `data.title` is the empty string if missing.
-      return data.title || namespace?.name || '?';
+      return data.title || namespace?.fullName || '?';
     },
 
     /**
