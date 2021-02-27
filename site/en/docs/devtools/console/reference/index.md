@@ -184,8 +184,7 @@ the messages from these 2 scripts.
 
 Type `-url:` to hide messages from that URL. This is called a negative URL filter.
 
-![A negative URL filter. DevTools is hiding all messages that match the URL
-            https://b.wal.co](/web/tools/chrome-devtools/console/images/negativeurlfilter.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hyalP82Gj2k0Op3gkfEH.png", alt="A negative URL filter. DevTools is hiding all messages that match the URL https://b.wal.co", width="800", height="447" %}
 
 **Figure 15**. A negative URL filter. DevTools is hiding all messages that match the URL
 `https://b.wal.co`.
