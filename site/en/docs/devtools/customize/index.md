@@ -17,8 +17,7 @@ This page lists the ways you can customize Chrome DevTools.
 To open Settings, do one of the following:
 
 - Press <kbd>F1</kbd> while DevTools is in focus.
-- Click **Settings**
-  {% Img src="image/admin/UmyyBkC2pWlZTt9m9MDc.png", alt="Settings icon", width="28", height="28" %}.
+- Click **Settings**.
 
 {% Img src="image/admin/JT10WadwpzpCOuHkWHw9.png", alt="Settings.", width="800", height="524" %}
 
@@ -37,8 +36,7 @@ Press <kbd>Escape</kbd> to open or close the Drawer.
 Click **More** {% Img src="image/admin/412azsDzeKPM2HQ6p5Rr.png", alt="More", width="6", height="26" %} to open other Drawer
 tabs.
 
-![The button for opening Drawer
-      tabs.](/web/tools/chrome-devtools/customize/images/more-drawer-tabs.svg)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/js6f1MUOacROa2L3kYnY.svg", alt="The button for opening Drawer tabs.", width="197", height="150" %}
 
 **Figure 3**: The button for opening Drawer tabs, outlined in blue.
 
@@ -47,8 +45,7 @@ tabs.
 Click and drag a panel tab to change its ordering. Your custom tab order persists across DevTools
 sessions.
 
-![A DevTools window
-      with a custom panel tab ordering.](/web/tools/chrome-devtools/customize/images/custom-panel-tab-ordering.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Nv6HgEaNsc7QNRQzOykX.png", alt="A DevTools window with a custom panel tab ordering.", width="800", height="516" %}
 
 **Figure 4**: A DevTools window with a custom tab ordering. By default, the Network panel tab is
 usually the fourth from the left. In the screenshot, it's the first from the left.
