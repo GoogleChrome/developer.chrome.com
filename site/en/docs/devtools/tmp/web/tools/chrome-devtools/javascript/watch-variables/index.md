@@ -9,12 +9,12 @@ description:
   "Chrome DevTools allows you to easily see multiple variables throughout your application."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See following section for up-to-date information: [Watch the
 values of custom JavaScript expressions][1]
 
-!!!
+{% endAside %}
 
 Chrome DevTools allows you to easily see multiple variables throughout your application. Watching
 variables within Sources keeps you out of the console and focused on improving your code.

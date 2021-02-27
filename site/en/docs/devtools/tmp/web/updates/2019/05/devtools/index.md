@@ -136,13 +136,13 @@ Send feedback on these new features to [Chromium issue #927726][14].
 
 ## Puppeteer for Firefox {: #puppeteer }
 
-!!!.aside.aside--note
+{% Aside %}
 
 Puppeteer is a high-level Node API for automating Chromium. We mention Puppeteer in the DevTools
 release notes because Puppeteer was started by the DevTools team and because you might be able to
 use it to automate tasks that were previously only possible in DevTools.
 
-!!!
+{% endAside %}
 
 Puppeteer for Firefox is a new experimental project that enables you to automate Firefox with the
 Puppeteer API. In other words, you can now automate Firefox and Chromium with the same Node API, as

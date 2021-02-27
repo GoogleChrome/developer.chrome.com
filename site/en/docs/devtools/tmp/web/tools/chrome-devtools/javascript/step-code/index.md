@@ -10,12 +10,12 @@ updated: 2020-07-10
 description: "By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. At the top of each section, there's a link to an up-to-date
 page where you can find similar information.
 
-!!!
+{% endAside %}
 
 By executing code one line or one function at a time, you can observe changes in the data and in the
 page to understand exactly what is happening. You can also modify data values used by the script,
@@ -42,11 +42,11 @@ breakpoint is highlighted. You can now selectively execute code and examine its 
 
 ## Stepping in action {: #stepping_in_action }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Step through code][2] for up-to-date information.
 
-!!!
+{% endAside %}
 
 All step options are represented through clickable icons
 {% Img src="image/admin/os0IJ3imhmeiU9TcjBYa.png", alt="Breakpoints button bar", width="179", height="20" %} in the sidebar,
@@ -64,12 +64,12 @@ exception occurs.
 
 ## View properties by scope {: #scope }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [View and edit local, closure, and global properties][4]
 for up-to-date information.
 
-!!!
+{% endAside %}
 
 When you pause a script, the **Scope** pane shows you all of the currently-defined properties at
 that moment in time.
@@ -97,12 +97,12 @@ panel?][5]
 
 ## The call stack {: #the_call_stack }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [View the current call stack][6] for up-to-date
 information.
 
-!!!
+{% endAside %}
 
 Near the top of the sidebar is the **Call Stack** section. When the code is paused at a breakpoint,
 the call stack shows the execution path, in reverse chronological order, that brought the code to
@@ -163,12 +163,12 @@ Call stack with named functions:
 
 ### Blackbox third-party code {: #blackbox_third-party_code }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Ignore a script or pattern of scripts][7] for up-to-date
 information.
 
-!!!
+{% endAside %}
 
 Blackbox script files to omit third-party files from your call stacks.
 
@@ -229,11 +229,11 @@ resuming execution.
 
 ## Live editing {: #live_editing }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Edit a script][8] for up-to-date information.
 
-!!!
+{% endAside %}
 
 Observing and pausing the executing code helps you locate errors, and live editing allows you to
 quickly preview changes without the need to reload.
@@ -259,11 +259,11 @@ we add line 17 at the beginning of the function, commit with <kbd class="kbd">Ct
 
 ## Managing thread execution {: #threads }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Change thread context][9] for up-to-date information.
 
-!!!
+{% endAside %}
 
 Use the **Threads** pane on the Sources panel to pause, step into, and inspect other threads, such
 as service worker or web worker threads.

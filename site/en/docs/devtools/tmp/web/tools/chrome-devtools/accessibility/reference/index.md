@@ -51,13 +51,13 @@ To audit a page:
 
     **Figure 1**. Configuring audits
 
-    !!!.aside.aside--note
+    {% Aside %}
 
     **Note**: The screenshots in this section were taken with version 69 of Chrome. You can check
     what version you're running at `chrome://version`. The Audits panel UI looks different in
     earlier versions of Chrome, but the general workflow is the same.
 
-    !!!
+    {% endAside %}
 
 3.  For **Device**, select **Mobile** if you want to simulate a mobile device. This option changes
     differently your user agent string and resizes the viewport. If the mobile version of the page
@@ -142,11 +142,11 @@ View an element's ARIA attributes in [the Accessibility pane][9].
 
 ### View an element's computed accessibility properties {: #computed }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** If you're looking for computed CSS properties, see [the Computed tab][10].
 
-!!!
+{% endAside %}
 
 Some accessibility properties are dynamically calculated by the browser. These properties can be
 viewed in the **Computed Properties** section of the **Accessibility** pane.

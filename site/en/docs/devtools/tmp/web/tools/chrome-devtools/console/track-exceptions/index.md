@@ -9,11 +9,11 @@ updated: 2020-07-10
 description: "Chrome DevTools provides tools to help you fix web pages throwing exceptions and debug errors in your JavaScript."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 This page is deprecated.
 
-!!!
+{% endAside %}
 
 Chrome DevTools provides tools to help you fix web pages throwing exceptions and debug errors in
 your JavaScript.

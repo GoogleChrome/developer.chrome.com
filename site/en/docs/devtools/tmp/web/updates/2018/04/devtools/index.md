@@ -28,13 +28,13 @@ New features and major changes coming to DevTools in Chrome 67 include:
 
 {% YouTube id="4EdPq9Nw6uI" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Check what version of Chrome you're running at `chrome://version`. If you're running an
 earlier version, these features won't exist. If you're running a later version, these features may
 have changed. Chrome auto-updates to a new major version about every 6 weeks.
 
-!!!
+{% endAside %}
 
 ## Search across all network headers and responses {: #network-search }
 

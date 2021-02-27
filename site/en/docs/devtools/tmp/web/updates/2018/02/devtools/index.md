@@ -16,13 +16,13 @@ New features and major changes coming to DevTools in Chrome 66 include:
 - [Previewing HTML content in the **Preview** tab][4]
 - [**Local Overrides** with styles inside of HTML][5]
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Check what version of Chrome you're running at `chrome://version`. If you're running an
 earlier version, these features won't exist. If you're running a later version, these features may
 have changed. Chrome auto-updates to a new major version about every 6 weeks.
 
-!!!
+{% endAside %}
 
 Read on, or watch the video version of the release notes below.
 
@@ -34,11 +34,11 @@ The **Initiator** column in the **Network** panel tells you why a resource was r
 example, if JavaScript causes an image to be fetched, the **Initiator** column shows you the line of
 JavaScript code that caused the request.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You can hide or show columns in the **Network** panel by right-clicking the table header.
 
-!!!
+{% endAside %}
 
 Previously, if your framework wrapped network requests in a wrapper, the **Initiator** column
 wouldn't be that helpful. All network requests pointed to the same line of wrapper code.
@@ -120,22 +120,22 @@ In Chrome 65, if you changed the `font-weight` declaration via the DevTools **St
 Overrides** wouldn't track the change. In other words, on the next reload, the style would revert
 back to `font-weight: bold`. But in Chrome 66, changes like this now persist across page loads.
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Caution:** **Local Overrides** can track changes like this _so long as the style is defined in the
 HTML document that was sent over the network_. If you have a script that dynamically adds styles to
 an HTML document, **Local Overrides** still won't be able to detect those changes.
 
-!!!
+{% endAside %}
 
 ## Bonus tip: Blackbox framework scripts to make Event Listener Breakpoints more useful {: #tip }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This section is not related to Chrome 66. It's just a bonus tip about an existing feature
 that you may find useful.
 
-!!!
+{% endAside %}
 
 Back when I created the [Get Started With Debugging JavaScript][10] video, some viewers commented
 that event listener breakpoints aren't useful for apps built on top of frameworks, because the event
@@ -169,13 +169,13 @@ If you're on Mac or Windows, please consider using [Chrome Canary][11] as your d
 browser. If you report a bug or a change that you don't like while it's still in Canary, the
 DevTools team can address your feedback significantly faster.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Canary is the bleeding-edge version of Chrome. It's released as soon as its built, without
 testing. This means that Canary breaks from time-to-time, about once-a-month, and it's usually fixed
 within a day. You can go back to using Chrome Stable while Canary is broken.
 
-!!!
+{% endAside %}
 
 - [CSS and JS code coverage][12]
 - [Full-page screenshots][13]

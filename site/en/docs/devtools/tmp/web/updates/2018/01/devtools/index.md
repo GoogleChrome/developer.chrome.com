@@ -21,13 +21,13 @@ Read on, or watch the video version of these release notes, below.
 
 {% YouTube id="D1pV7ermy6w" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Check what version of Chrome you're running at `chrome://version`. If you're running an
 earlier version, these features won't exist. If you're running a later version, these features may
 have changed. Chrome auto-updates to a new major version about every 6 weeks.
 
-!!!
+{% endAside %}
 
 ## Local Overrides {: #overrides }
 
@@ -146,13 +146,13 @@ See [Run Lighthouse in Chrome DevTools][13], or watch the A11ycast below, to lea
 
 Chrome 65 ships with a whole new category of SEO audits, and many new performance audits.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** The **Audits** panel is powered by [Lighthouse][14]. Chrome 64 runs Lighthouse version
 2.5. Chrome 65 runs Lighthouse version 2.8. So this section is simply a summary of the Lighthouse
 updates from 2.6, 2.7, and 2.8.
 
-!!!
+{% endAside %}
 
 ### New SEO audits {: #seo }
 
@@ -252,11 +252,11 @@ Performance][20] to get comfortable with the **Performance** panel.
 
 ## Bonus: Automate DevTools actions with Puppeteer 1.0 {: #puppeteer }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This section isn't related to Chrome 65.
 
-!!!
+{% endAside %}
 
 Version 1.0 of Puppeteer, a browser automation tool maintained by the Chrome DevTools team, is now
 out. You can use Puppeteer to automate many tasks that were previously only available via DevTools,
@@ -297,13 +297,13 @@ If you're on Mac or Windows, please consider using [Chrome Canary][23] as your d
 browser. If you report a bug or a change that you don't like while it's still in Canary, the
 DevTools team can address your feedback significantly faster.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Canary is the bleeding-edge version of Chrome. It's released as soon as its built, without
 testing. This means that Canary breaks from time-to-time, about once-a-month, and it's usually fixed
 within a day. You can go back to using Chrome Stable when Canary breaks.
 
-!!!
+{% endAside %}
 
 - [CSS and JS code coverage][24]
 - [Full-page screenshots][25]

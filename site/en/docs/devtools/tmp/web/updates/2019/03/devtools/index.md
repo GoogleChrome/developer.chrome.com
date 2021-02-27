@@ -42,14 +42,14 @@ The PWA category of a report now uses a badge scoring system.
 
 **Figure 3**. The new badge scoring system for the PWA category
 
-!!!.aside.aside--note
+{% Aside %}
 
 **What's Lighthouse?** [Lighthouse][2] is the auditing engine that powers the Audits panel. It also
 powers [web.dev/measure][3] and [PageSpeed Insights][4]. You can also run Lighthouse as a Node
 module, a Chrome Extension, or from the command line. See [Run Lighthouse in Chrome DevTools][5] to
 get started.
 
-!!!
+{% endAside %}
 
 ## WebSocket binary message viewer {: #binary }
 

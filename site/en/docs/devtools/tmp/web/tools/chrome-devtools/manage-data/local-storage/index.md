@@ -8,11 +8,11 @@ updated: 2020-07-10
 description: "Inspect and manage storage, databases, and caches from the Application panel."
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 This page is deprecated.
 
-!!!
+{% endAside %}
 
 Inspect and manage storage, databases, and caches from the **Application** panel.
 

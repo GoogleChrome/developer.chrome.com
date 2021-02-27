@@ -8,11 +8,11 @@ description:
   on a range of devices."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. There are links to up-to-date documentation throughout the page.
 
-!!!
+{% endAside %}
 
 The updated Device Mode (since Chrome 49) is an integral part of the now-mobile-first DevTools and
 extends the main DevTools bar. Learn how to use its controls to simulate a wide range of devices or
@@ -26,11 +26,11 @@ go fully responsive.
 
 ## Using the viewport controls {: #viewport-controls }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. See [Response Viewport Mode][1] and [Mobile Device Viewport Mode][2].
 
-!!!
+{% endAside %}
 
 {% Img src="image/admin/tZAo3YXiqJNVR2ggHK39.png", alt="device mode enabled", width="800", height="303" %}
 
@@ -43,11 +43,11 @@ responsively. It comes in two modes:
 
 ## Responsive mode {: #responsive_mode }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. See [Response Viewport Mode][3].
 
-!!!
+{% endAside %}
 
 We recommend using the **Responsive Mode** as your default work mode. Use it during active
 development of your site and app and resize the viewport often to create a freely responsive design
@@ -62,22 +62,22 @@ finer grained control.
 
 ## Device-specific mode {: #device-specific_mode }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. See [Mobile Device Viewport Mode][5].
 
-!!!
+{% endAside %}
 
 Use the **Device-specific Mode** when you're nearing the end of active development and want to
 perfect how your site looks like on specific mobiles (e.g. a certain iPhone or Nexus).
 
 ### Built-in device presets {: #built-in_device_presets }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. See [Mobile Device Viewport Mode][6].
 
-!!!
+{% endAside %}
 
 We've included the currently most popular devices in the device dropdown. After selecting a device,
 each preset automatically configures emulation of certain device characteristics:
@@ -92,11 +92,11 @@ each preset automatically configures emulation of certain device characteristics
 
 ### Adding custom device presets {: #adding_custom_device_presets }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. See [Add a custom mobile device][7].
 
-!!!
+{% endAside %}
 
 Device Mode offers a wide array of devices for emulation. You can add a custom device if you find an
 edge-case or niche device that isn't covered.
@@ -115,11 +115,11 @@ Your custom device is now available in the **Device** dropdown menu.
 
 ### Device states and orientation {: #device_states_and_orientation }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. See [Set orientation][8].
 
-!!!
+{% endAside %}
 
 {% Img src="image/admin/fx1n9GLOUyeWsQL3X6nx.png", alt="toggle orientation", width="800", height="91" %}
 
@@ -184,11 +184,11 @@ will look pixelated.
 
 ### Media queries {: #media-queries }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. See [Show media queries][11].
 
-!!!
+{% endAside %}
 
 [Media queries][12] are an essential part of responsive web design.To view the media query
 inspector, click **Show Media queries** in the three dot menu. The DevTools detect media queries in
@@ -216,11 +216,11 @@ source code.
 
 ### Rulers {: #rulers }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. See [Show rulers][13].
 
-!!!
+{% endAside %}
 
 Toggle this option to show pixel-based rulers next to the viewport.
 

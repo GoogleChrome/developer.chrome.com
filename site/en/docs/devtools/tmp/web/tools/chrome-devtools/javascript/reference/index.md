@@ -215,11 +215,11 @@ represents which function DevTools is currently highlighting.
 
 **Figure 10**. The Call Stack pane, outlined in blue
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** When not paused on a line of code, the Call Stack pane is empty.
 
-!!!
+{% endAside %}
 
 ### Copy stack trace {: #copy-stack-trace }
 
