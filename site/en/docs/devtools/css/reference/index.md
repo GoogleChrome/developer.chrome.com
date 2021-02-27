@@ -31,9 +31,8 @@ There are many ways to select an element:
 
 - In your viewport, right-click the element and select **Inspect**.
 - In DevTools, click **Select an element**
-  ![Select an
-element](/web/tools/chrome-devtools/css/imgs/select-an-element.png) or press
-  <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Mac) or
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7HgaRejtWu4NfpPOTtJU.png", alt="Select an element", width="26", height="26" %}
+  or press <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Mac) or
   <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> (Windows, Linux), and then click the element in
   the viewport.
 - In DevTools, click the element in the **DOM Tree**.
@@ -223,8 +222,6 @@ To add a declaration to an existing style rule:
 3.  Enter a property name and press <kbd>Enter</kbd>.
 4.  Enter a valid value for that property and press <kbd>Enter</kbd>.
 
-{% Img src="image/admin/dQMFYTxsVz5WxQpuvRga.png", alt="Adding a declaration to a style rule", width="800", height="547" %}
-
 **Figure 13**. Adding the `border-bottom-style:groove` declaration to a style rule
 
 ### Change a declaration name or value {: #change-declaration }
@@ -233,9 +230,7 @@ Double-click a declaration's name or value to change it. See [Change declaration
 keyboard shortcuts][17] for shortcuts for quickly incrementing or decrementing a value by 0.1, 1,
 10, or 100 units.
 
-![Changing the value of a declaration](/web/tools/chrome-devtools/css/imgs/add-declaration-existing-rule.png)
-
-**Figure 14**. Changing the value of the `border-bottom-style` declaration
+{% Img src="image/admin/dQMFYTxsVz5WxQpuvRga.png", alt="Changing the value of a declaration", width="800", height="547" %}
 
 ### Change declaration values with keyboard shortcuts {: #values-shortcuts }
 
