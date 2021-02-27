@@ -30,8 +30,8 @@ you physically follow along, you're more likely to remember the workflows later.
 
     **Figure 2**. This tutorial on the left, and the demo on the right.
 
-3.  Focus the demo and then press <kbd>Control</kbd>+<kbd>Shift</kbd>+J or
-    <kbd>Command</kbd>+<kbd>Option</kbd>+J (Mac) to open DevTools. By default DevTools opens to the
+3.  Focus the demo and then press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> or
+    <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (Mac) to open DevTools. By default DevTools opens to the
     right of the demo.
 
     {% Img src="image/admin/DMOW45O6ocuz4p6MyOGd.png", alt="DevTools opens to the right of the demo.", width="800", height="482" %}
@@ -230,7 +230,7 @@ When you want to only view the messages that came from a certain URL, use the **
 
     **Figure 21**. The Sidebar.
 
-2.  Click the **Expand** ![Expand](/web/tools/chrome-devtools/images/shared/expand.png) icon next to
+2.  Click the **Expand** {% Img src="image/admin/kNA03JXX9dff86Eftn9Z.png", alt="Expand", width="14", height="16" %} icon next to
     **12 Messages**. The **Sidebar** shows a list of URLs that caused messages to be logged. For
     example, `log.js` caused 11 messages.
 
