@@ -88,12 +88,12 @@ column.
 
 **Figure 12**. How to show the **Priority** column
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** The `_initiator` and `_priority` fields begin with underscores because the [HAR spec][10]
 states that custom fields must begin with underscores.
 
-!!!
+{% endAside %}
 
 ## Access the Command Menu from the Main Menu {: #command-menu }
 
@@ -125,11 +125,11 @@ DevTools pauses on the first line of the handler.
 
 ## (Bonus Tip) Run monitorEvents() in the Console to watch an element's events fire {: #bonus }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This section covers a lesser-known feature that has been in DevTools for a long time.
 
-!!!
+{% endAside %}
 
 Suppose you want to add a red border around a button after focusing it and pressing `R`, `E`, `D`,
 but you don't know what events to add listeners to. Use [`monitorEvents()`][14] to log all of the

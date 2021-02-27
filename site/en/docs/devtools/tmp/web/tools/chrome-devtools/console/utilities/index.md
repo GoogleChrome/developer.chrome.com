@@ -12,12 +12,12 @@ The Console Utilities API contains a collection of convenience functions for per
 tasks: selecting and inspecting DOM elements, displaying data in readable format, stopping and
 starting the profiler, and monitoring DOM events.
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** These functions only work when you call them from the Chrome DevTools Console. They
 won't work if you try to call them in your scripts.
 
-!!!
+{% endAside %}
 
 Looking for `console.log()`, `console.error()`, and the rest of the `console.*` functions? See
 [Console API Reference][1].
@@ -79,12 +79,12 @@ displays its src properly:
 
 {% Img src="image/admin/Q5XlmeIMaHQkpP1QryBd.png", alt="Example of $('img', div).src", width="800", height="234" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** If you are using a library such as jQuery that uses `$`, this functionality will be
 overwritten, and `$` will correspond to that library's implementation.
 
-!!!
+{% endAside %}
 
 ## \$\$(selector, \[startNode\]) {: #queryselectorall }
 
@@ -119,12 +119,12 @@ var images = $$('img', document.querySelector('.devsite-header-background'));
 
 {% Img src="image/admin/MKKFwNfiqaq8JPUkgchF.png", alt="Example of using $() to select all images appearing after the select div element in the document and displaying their sources.", width="800", height="336" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Press <kbd class="kbd">Shift</kbd> + <kbd class="kbd">Enter</kbd> in the console to start
 a new line without executing the script.
 
-!!!
+{% endAside %}
 
 ## \$x(path, \[startNode\]) {: #xpath }
 
@@ -343,12 +343,12 @@ Result in the profiles panel:
 
 {% Img src="image/admin/BWxxLJby5scm6zF0eidW.png", alt="Grouped profiles", width="800", height="469" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Multiple CPU profiles can operate at once and you aren't required to close them out in
 creation order.
 
-!!!
+{% endAside %}
 
 ## queryObjects(Constructor) {: #queryObjects }
 

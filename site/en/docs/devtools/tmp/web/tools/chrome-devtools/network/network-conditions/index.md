@@ -9,12 +9,12 @@ updated: 2020-07-10
 description: "It’s easy to overlook the network conditions your users will face on mobile. Use DevTools to emulate different network conditions. Fix any load time issues and your users will thank you."
 ---
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This page is deprecated. At the top of each section, there's a link to an up-to-date page
 where you can find similar information.
 
-!!!
+{% endAside %}
 
 It's easy to overlook the network conditions your users will face on mobile. Use DevTools to emulate
 different network conditions. Fix any load time issues and your users will thank you.
@@ -27,11 +27,11 @@ different network conditions. Fix any load time issues and your users will thank
 
 ## Emulate network connectivity {: #emulate_network_connectivity }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This page is deprecated. See [Simulate network throttling][1] for up-to-date information.
 
-!!!
+{% endAside %}
 
 Network conditioning allows you to test your site on a variety of network connections, including
 Edge, 3G, and even offline. It throttles the maximum download and upload throughput (rate of data
@@ -51,11 +51,11 @@ throttling is enabled when you are in other panels.
 
 ## Custom throttles {: #custom_throttles }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This page is deprecated. See [Simulate network throttling][3] for up-to-date information.
 
-!!!
+{% endAside %}
 
 DevTools provides a solid foundation of default conditions. You may need to add custom conditions to
 cover your audiences primary conditions.
@@ -81,11 +81,11 @@ header to select a condition.
 
 ## Open the network conditions drawer {: #network-conditions }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This page is deprecated. See [Network Conditions drawer][4] for up-to-date information.
 
-!!!
+{% endAside %}
 
 You can access network functions while other DevTools panels are open with the **Network
 conditions** drawer.

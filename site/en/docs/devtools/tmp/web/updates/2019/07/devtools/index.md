@@ -22,12 +22,12 @@ Thanks [Adam Argyle][1] and [VisBug][2] for the [inspiration][3].
 
 ## Visualize layout shifts {: #layoutshifts }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 This feature can cause your screen to flash a lot and may not be suitable for you if you're prone to
 photosensitive epilepsy.
 
-!!!
+{% endAside %}
 
 Supposing you're reading a news article on your favorite website. As you're reading the page, you
 keep losing your place because the content is jumping around. This problem is called layout
@@ -51,19 +51,19 @@ Figure 2. A layout shift.
 
 ## Lighthouse 5.1 in the Audits panel {: #audits }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This actually launched in Chrome 76, but we missed it in the last release notes so we're
 covering it now.
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 This update actually shipped in Chrome 76. We didn't cover it in [What's New In DevTools
 (Chrome 76)][7] so we're covering it now.
 
-!!!
+{% endAside %}
 
 The Audits panel is now running [Lighthouse 5.1][8]. New audits include:
 

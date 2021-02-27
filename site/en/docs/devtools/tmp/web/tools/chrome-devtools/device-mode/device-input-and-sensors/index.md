@@ -9,11 +9,11 @@ updated: 2020-07-10
 description: "Touch screens, GPS chips, and accelerometers can be difficult to test since most desktops don&#39;t have them. The Chrome DevTools sensor emulators reduce the overhead of testing by emulating common mobile device sensors."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. There are links to up-to-date documentation throughout the page.
 
-!!!
+{% endAside %}
 
 GPS chips and accelerometers can be difficult to test since most desktops don't have them. The
 Chrome DevTools Sensors emulation pane reduces the overhead of testing by emulating common mobile
@@ -33,20 +33,20 @@ To access the Chrome DevTools sensor controls:
 
 {% Img src="image/admin/OUotpPZMMrGF5kTdHvB8.png", alt="Navigate to Sensors panel", width="716", height="482" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** If your app detects sensors onload using JavaScript (such as Modernizr), make sure that
 you reload the page after enabling sensor emulators.
 
-!!!
+{% endAside %}
 
 ## Override geolocation data {: #override_geolocation_data }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. See [Override Geolocation][1].
 
-!!!
+{% endAside %}
 
 Unlike desktops, mobile devices commonly use GPS hardware to detect location. In the Sensors pane,
 you can simulate geolocation coordinates to use with the [Geolocation API][2].
@@ -61,11 +61,11 @@ simulate cases when geolocation data is unavailable.
 
 ## Emulate Accelerometer (Device Orientation) {: #emulate_accelerometer_device_orientation }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **This page is deprecated**. See [Simulate Device Orientation][3].
 
-!!!
+{% endAside %}
 
 To test accelerometer data coming from the [Orientation API][4], enable the accelerometer emulator
 by selecting the **Accelerometer** checkbox in the Sensors pane.

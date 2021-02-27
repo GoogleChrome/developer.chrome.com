@@ -18,13 +18,13 @@ Read on, or watch the video version of these release notes below.
 
 {% YouTube id="90wNAn05Cf4" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Check what version of Chrome you're running at `chrome://version`. If you're running an
 earlier version, these features won't exist. If you're running a later version, these features may
 have changed. Chrome auto-updates to a new major version about every 6 weeks.
 
-!!!
+{% endAside %}
 
 ## Performance Monitor {: #perf-monitor }
 

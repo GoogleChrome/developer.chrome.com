@@ -9,11 +9,11 @@ updated: 2020-07-10
 description: "The Chrome DevTools Command Line API offers various ways to observe and inspect event listeners"
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 This page is deprecated.
 
-!!!
+{% endAside %}
 
 The Chrome DevTools Command Line API offers various ways to observe and inspect event listeners.
 JavaScript plays a central role in interactive pages, and the browser provides you some useful tools

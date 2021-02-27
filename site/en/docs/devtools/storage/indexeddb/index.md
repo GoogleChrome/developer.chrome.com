@@ -34,13 +34,13 @@ with IndexedDB. If not, see [Using IndexedDB][4].
       object store.
     - **title** and **body** are [indexes][5].
 
-      !!!.aside.aside--note
+      {% Aside %}
 
       **Known Limitation** Third-party databases are not visible. For example, if you use an
       `<iframe>` to embed an ad on your page, and your ad network uses IndexedDB, your ad network's
       IndexedDB data won't be visible. See [issue #943770][6].
 
-      !!!
+      {% endAside %}
 
 3.  Click a database to see its origin and version number.
 
@@ -50,11 +50,11 @@ with IndexedDB. If not, see [Using IndexedDB][4].
 
 4.  Click an object store to see its key-value pairs.
 
-    !!!.aside.aside--caution
+    {% Aside 'caution' %}
 
     IndexedDB data does not update in real-time. See [Refresh IndexedDB data][7].
 
-    !!!
+    {% endAside %}
 
     {% Img src="image/admin/w7r5L2I6CD9EIlCCZyVe.png", alt="The 'notes' object store", width="800", height="415" %}
 

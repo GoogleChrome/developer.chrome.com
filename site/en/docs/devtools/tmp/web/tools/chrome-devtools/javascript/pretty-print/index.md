@@ -9,12 +9,12 @@ updated: 2020-07-10
 description: "Transform your JavaScript into a more readable form by clicking the Pretty-Print icon in Chrome DevTools."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Make a minified file readable][1] for up-to-date
 information.
 
-!!!
+{% endAside %}
 
 When viewing a script in the **Sources** panel, click the **Pretty-Print**
 {% Img src="image/admin/e84Q2LWgpLLNgFTqT5EC.png", alt="the pretty-print icon", width="15", height="12" %} icon to

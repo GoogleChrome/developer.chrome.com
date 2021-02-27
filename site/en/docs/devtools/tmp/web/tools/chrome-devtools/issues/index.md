@@ -12,7 +12,7 @@ The **Issues** tab in Chrome DevTools reduces the notification fatigue and clutt
 Use it to find solutions to problems detected by the browser, such as cookie issues and mixed
 content.
 
-!!!.aside.aside--note
+{% Aside %}
 
 In Chrome 84, the Issues tab supports three types of issue:
 
@@ -22,7 +22,7 @@ In Chrome 84, the Issues tab supports three types of issue:
 
 Future versions of Chrome will support more issue types.
 
-!!!
+{% endAside %}
 
 ## Open the Issues tab {: #open }
 

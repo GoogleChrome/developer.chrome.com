@@ -80,11 +80,11 @@ object of a Node.js module. You don't control how this root object is GC'd.
 
 Whatever is not reachable from the root gets GC.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Both the Shallow and Retained size columns represent data in bytes.
 
-!!!
+{% endAside %}
 
 ## Objects retaining tree {: #objects_retaining_tree }
 

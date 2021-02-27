@@ -9,12 +9,12 @@ updated: 2020-07-10
 description: "Measure the network performance of your web application using the Chrome DevTools Network panel."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. At the top of each section, there's a link to an up-to-date
 page where you can find similar information.
 
-!!!
+{% endAside %}
 
 Measure the network performance of your site using the **Network** panel.
 
@@ -31,7 +31,7 @@ timing data, HTTP request and response headers, cookies, and more.
 
 ## Network panel overview {: #network_panel_overview }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See following sections for up-to-date information:
 
@@ -41,7 +41,7 @@ timing data, HTTP request and response headers, cookies, and more.
 - [Requests pane][4]
 - [Summary pane][5]
 
-!!!
+{% endAside %}
 
 The Network panel consists of five panes:
 
@@ -82,11 +82,11 @@ columns][6].
 
 ## Record network activity {: #record_network_activity }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Start or stop recording][7] for up-to-date information.
 
-!!!
+{% endAside %}
 
 When the **Network** panel is open, DevTools records all network activity by default. To record,
 just reload a page while the panel is open, or wait for network activity on the currently loaded
@@ -100,12 +100,12 @@ shortcut <kbd>Cmd/Ctrl</kbd>+<kbd>e</kbd>.
 
 ## Capture screenshots during recording {: #filmstrip }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Capture screenshots during recording][8] for up-to-date
 information.
 
-!!!
+{% endAside %}
 
 The **Network** panel can capture screenshots during a page load. This feature is known as the
 **Filmstrip**.
@@ -132,11 +132,11 @@ zoomed, use the left and right arrows of your keyboard to navigate between scree
 
 ## View DOMContentLoaded and load event information {: #view_domcontentloaded_and_load_event_information }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [View load events][9] for up-to-date information.
 
-!!!
+{% endAside %}
 
 The **Network** panel highlights two events: [`DOMContentLoaded`][10] and [`load`][11].
 
@@ -158,11 +158,11 @@ two places on the **Network** panel:
 
 ## View details for a single resource {: #view_details_for_a_single_resource }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [View details][12] for up-to-date information.
 
-!!!
+{% endAside %}
 
 Click on a resource name (under the **Name** column of the **Requests Table**) to view more
 information about that resource.
@@ -179,11 +179,11 @@ below are most common:
 
 ### View network timing {: #view_network_timing }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Timing tab][13] for up-to-date information.
 
-!!!
+{% endAside %}
 
 Click the **Timing** tab to view a granular breakdown of the request lifecycle for a single
 resource.
@@ -210,11 +210,11 @@ Related Guides:
 
 ### View HTTP headers {: #view_http_headers }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Headers tab][15] for up-to-date information.
 
-!!!
+{% endAside %}
 
 Clicking the **Headers** shows the headers for that resource.
 
@@ -236,11 +236,11 @@ You can also view query string parameters in URL-encoded or decoded format by cl
 
 ### Preview a resource {: #preview_a_resource }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Preview tab][16] for up-to-date information.
 
-!!!
+{% endAside %}
 
 Click the **Preview** tab to view a preview of that resource. The **Preview** tab may or may not
 display any useful information, depending on the type of resource you've selected.
@@ -249,11 +249,11 @@ display any useful information, depending on the type of resource you've selecte
 
 ### View HTTP response content {: #view_http_response_content }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Response tab][17] for up-to-date information.
 
-!!!
+{% endAside %}
 
 Click the **Response** tab to view the resource's unformatted HTTP response content. The
 **Response** tab may or may not contain any useful information, depending on the type of resource
@@ -263,11 +263,11 @@ you've selected.
 
 ### View cookies {: #view_cookies }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Cookies tab][18] for up-to-date information.
 
-!!!
+{% endAside %}
 
 Click the **Cookies** tab to view a table of cookies transmitted in the resource's HTTP request and
 response headers. This tab is only available when cookies are transmitted.
@@ -289,11 +289,11 @@ Below is a description of each of the columns in the table:
 
 ### View WebSocket frames {: #view_websocket_frames }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Frames tab][19] for up-to-date information.
 
-!!!
+{% endAside %}
 
 Click the **Frames** tab to view [`WebSocket`][20] connection information. This tab is only visible
 when the selected resource initiated a `WebSocket` connection.
@@ -326,12 +326,12 @@ Messages are color-coded according to their type:
 
 ## View resource initiators and dependencies {: #initiators-dependencies }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [View initiators and dependencies][21] for up-to-date
 information.
 
-!!!
+{% endAside %}
 
 Hold <kbd>Shift</kbd> and hover over a resource to view its initiators and dependencies. This
 section refers to the resource that you are hovering over as the **target**.
@@ -352,11 +352,11 @@ of the initiators or dependencies.
 
 ## Sort requests {: #sort_requests }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Sort by activity phase][22] for up-to-date information.
 
-!!!
+{% endAside %}
 
 By default, the resources in the **Requests Table** are sorted by the start time of each request,
 starting with the earliest requests at the top.
@@ -381,11 +381,11 @@ The **Timeline** column is unique from the others. When clicked, it displays a m
 
 ## Filter requests {: #filter_requests }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Filters panel][23] for up-to-date information.
 
-!!!
+{% endAside %}
 
 The **Network** panel provides numerous ways to filter which resources are displayed. Click the
 **filters** button ({% Img src="image/admin/MYLfTABCgv4ZVueCZ4wG.png", alt="filters button", width="28", height="24" %}) to hide
@@ -393,12 +393,12 @@ or display the **Filters** pane.
 
 Use the content type buttons to only display resources of the selected content type.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Hold <kbd>Cmd</kbd> (Mac) or <kbd>Ctrl</kbd> (Windows/Linux) and then click to enable
 multiple filters simultaneously.
 
-!!!
+{% endAside %}
 
 ![multiple content type filters selected
 simultaneously](/web/tools/chrome-devtools/network/imgs/multiple-content-type-filters.png)
@@ -453,7 +453,7 @@ triggered the autocomplete dropdown.
 
 ## Copy, save, and clear network information {: #copy_save_and_clear_network_information }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See following sections for up-to-date information:
 
@@ -462,7 +462,7 @@ triggered the autocomplete dropdown.
 - [Clear browser cache][26]
 - [Clear browser cookies][27]
 
-!!!
+{% endAside %}
 
 Right-click within the **Requests Table** to copy, save, or delete network information. Some of the
 options are context-sensitive, so if you want to operate on a single resource, you need to
@@ -491,11 +491,11 @@ right-click on that resource's row. The list below describes each of the options
 
 ### Copy one or all requests as cURL commands {: #curl }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Copy one or all requests][35] for up-to-date information.
 
-!!!
+{% endAside %}
 
 [cURL][36] is a command line tool for making HTTP transactions.
 
@@ -514,12 +514,12 @@ CSS).
 
 ## Customize the Network panel {: #customize_the_network_panel }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Use large or small requests rows][37] for up-to-date
 information.
 
-!!!
+{% endAside %}
 
 By default the **Requests Table** displays resources with small rows. Click the **Use large resource
 rows** button
@@ -533,14 +533,14 @@ The column header indicates the meaning of the secondary field.
 
 ### Add and remove table columns {: #add_and_remove_table_columns }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See following sections for up-to-date information:
 
 - [Show or hide columns][38]
 - [Add custom columns][39]
 
-!!!
+{% endAside %}
 
 Right-click on any of the headers in the **Requests Table** to add or remove columns.
 
@@ -548,11 +548,11 @@ Right-click on any of the headers in the **Requests Table** to add or remove col
 
 ### Preserve the network log upon navigation {: #preserve_the_network_log_upon_navigation }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Preserve log][40] for up-to-date information.
 
-!!!
+{% endAside %}
 
 By default, the network activity recording is discarded whenever you reload the current page or load
 a different page. Enable the **Preserve log** checkbox to save the network log across these

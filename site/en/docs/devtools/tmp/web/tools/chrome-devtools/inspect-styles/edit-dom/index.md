@@ -9,11 +9,11 @@ updated: 2020-12-14
 description: "The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current web page. Live-edit the content and structure of your page through DOM updates."
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 This page is deprecated.
 
-!!!
+{% endAside %}
 
 The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current
 web page. Live-edit the content and structure of your page through DOM updates.
@@ -61,21 +61,21 @@ Hover over an `img` tag in the **DOM Tree** to view the rendered and natural siz
 To view which version of an image in a `srcset` was loaded, select the `img` element, then evaluate
 `$0.currentSrc` in the **Console**.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** See [Enhance `img`s with `srcset` for high DPI devices][2] to learn more about image
 optimization using `srcset`.
 
-!!!
+{% endAside %}
 
 {% Img src="image/admin/y8FFlwNqQM87sHUcLfAi.png", alt="currentSrc in the Console", width="800", height="600" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** `$0` is a shortcut in the DevTools **Console**. It provides a reference to the
 currently-selected element in the **DOM Tree**.
 
-!!!
+{% endAside %}
 
 You can also view `currentSrc` via the **Properties** tab. The **Properties** tab only displays
 properties for the currently-selected element, so make sure that you've selected the correct element
@@ -164,12 +164,12 @@ To delete a DOM node:
 - Open the [more actions menu][5] and select **Delete Node**.
 - Select the node and press the <kbd>Delete</kbd> key.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** If you delete a node by accident, <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Z</kbd>
 (or <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Z</kbd> on Mac) to undo your last action.
 
-!!!
+{% endAside %}
 
 ## Show more actions menu {: #more-actions }
 
@@ -271,13 +271,13 @@ The Event Listeners pane lists the following properties for each listener:
 
 <table class="responsive"><thead><tr><th colspan="2">Event Listener Properties &amp; Description</th></tr></thead><tbody><tr><td data-th="Value"><code translate="no" dir="ltr">handler</code></td><td data-th="Description">Contains a callback function. Right-click on the function and select <strong>Show Function Definition</strong> to view where the function is defined (if source code is available).</td></tr><tr><td data-th="Value"><code translate="no" dir="ltr">useCapture</code></td><td data-th="Description">A boolean value stating whether the <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener">useCapture</a> flag on <code translate="no" dir="ltr">addEventListener</code> was set.</td></tr></tbody></table>
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Many Chrome extensions add their own event listeners onto the DOM. If you see a number of
 event listeners that aren't set by your code, you may want to reopen your page in an [Incognito
 window][7]. Incognito windows prevent extensions from running by default.
 
-!!!
+{% endAside %}
 
 ### View ancestor event listeners {: #view_ancestor_event_listeners }
 

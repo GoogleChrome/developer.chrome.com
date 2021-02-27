@@ -9,11 +9,11 @@ updated: 2020-07-10
 description: "Explore the state of any item on your page from the DevTools console."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 This page is deprecated.
 
-!!!
+{% endAside %}
 
 Explore the state of any item on your page from the DevTools console using one of its evaluation
 capabilities.

@@ -10,11 +10,11 @@ description:
   Vitals lane and more."
 ---
 
-!!!.aside.aside--note
+{% Aside %}
 
 Interested in helping improve DevTools? Sign up to participate in [Google User Research here][1].
 
-!!!
+{% endAside %}
 
 {% YouTube id="3tUXV\_n3yng" %}
 
@@ -237,12 +237,12 @@ Chromium issue: [1143833][25]
 
 ### CSS Flexbox debugging tools {: #flexbox }
 
-!!!.aside.aside--note
+{% Aside %}
 
 To enable the experiment, check the **Enable CSS Flexbox debugging features** checkbox under
 **Settings** > **Experiments**.
 
-!!!
+{% endAside %}
 
 Flexbox debugging tools are coming!
 
@@ -276,12 +276,12 @@ Chromium issues: [1144090][28], [1139945][29]
 
 ### Customize chords keyboard shortcuts {: #keyboard-shortcuts }
 
-!!!.aside.aside--note
+{% Aside %}
 
 To enable the experiment, check the **Enable keyboard shortcut editor** checkbox under
 **Settings** > **Experiments**.
 
-!!!
+{% endAside %}
 
 DevTools added experimental support for [customize keyboard shortcuts][30] since last release.
 

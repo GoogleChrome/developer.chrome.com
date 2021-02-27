@@ -23,13 +23,13 @@ New to DevTools in Chrome 68:
   pane.
 - ["Show timestamps" moved to Settings][8].
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Check what version of Chrome you're running at `chrome://version`. If you're running an
 earlier version, these features won't exist. If you're running a later version, these features may
 have changed. Chrome auto-updates to a new major version about every 6 weeks.
 
-!!!
+{% endAside %}
 
 Read on, or watch the video version of the release notes, below.
 
@@ -75,12 +75,12 @@ Notes:
 
 ### Autocomplete after function executions {: #autocomplete }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This feature depends on [Eager Evaluation][12], which needs to be enabled from **Console
 Settings** {% Img src="image/admin/le64GLKlj72gyFGlOt8z.png", alt="Console Settings", width="36", height="36" %}.
 
-!!!
+{% endAside %}
 
 After enabling Eager Evaluation, the Console now also shows you which properties and functions are
 available after you type out a function.
@@ -129,12 +129,12 @@ Lighthouse 3.0 also ships with 4 new audits:
 
 ## BigInt support {: #bigint }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This isn't a DevTools features per se, but it is a new JavaScript capability that you can
 try out in the Console.
 
-!!!
+{% endAside %}
 
 Chrome 68 supports a new numeric primitive called [`BigInt`][14]. `BigInt` lets you represent
 integers with arbitrary precision. Try it out in the Console:

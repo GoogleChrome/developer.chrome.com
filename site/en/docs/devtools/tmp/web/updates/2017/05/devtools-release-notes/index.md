@@ -22,12 +22,12 @@ Welcome! New features and major changes coming to DevTools in Chrome 60 include:
 - [Simpler network throttling options][8].
 - [Async stack traces on by default][9].
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You can check what version of Chrome you're running at `chrome://version`. Chrome
 auto-updates to a new major version about every 6 weeks.
 
-!!!
+{% endAside %}
 
 Check out the video version of these release notes below or read on to learn more.
 
@@ -61,11 +61,11 @@ To audit a page:
 Check out the DevTools talk from Google I/O '17 below to learn more about Lighthouse's integration
 in DevTools.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** The video should start playing at 32:30, which is when Paul discusses Lighthouse.
 
-!!!
+{% endAside %}
 
 {% YouTube id="PjjlwAvV8Jg" %}
 
@@ -130,11 +130,11 @@ asynchronous destinations in green.
 
 Check out the demo below from the DevTools talk at I/O for an example.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** The video should start playing at 17:40, which is when Paul discusses the feature.
 
-!!!
+{% endAside %}
 
 {% YouTube id="PjjlwAvV8Jg" %}
 

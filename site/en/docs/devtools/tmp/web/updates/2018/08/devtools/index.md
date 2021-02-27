@@ -59,14 +59,14 @@ Live Expression values update every 250 milliseconds.
 Type an expression that evaluates to a DOM node in the Console and [Eager Evaluation][10] now
 highlights that node in the viewport.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** **The highlighted node only updates when you type**. It does not update on an interval.
 For example, if you type `document.activeElement`, which tracks the element in focus, and then tab
 through the page, DevTools will still be highlighting the node that was active when you originally
 typed out the expression.
 
-!!!
+{% endAside %}
 
 ![Since the current expression evaluates to a node, that node is highlighted in the
             viewport.](/web/updates/images/2018/08/node.png)
@@ -133,11 +133,11 @@ lifecycle event handler.
 
 ## Debug Node.js apps with ndb {: #ndb }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** ndb is an experimental project from Google Chrome Labs.
 
-!!!
+{% endAside %}
 
 ndb is a new debugger for Node.js applications. On top of the [usual debugging features that you get
 through DevTools][18], ndb also offers:
