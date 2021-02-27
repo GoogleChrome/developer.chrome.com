@@ -62,6 +62,13 @@ redirects:
 - from: /chrome/apps/
   to: /docs/apps/about_apps
 
+# DevTools redirects
+
+- from: /docs/devtools/network/resource-loading/
+  to: /docs/devtools/network/reference/
+
+# TODO(kaycebasques): Update these old DevTools redirects
+
 - from: /devtools/
   to: https://developers.google.com/web/tools/chrome-devtools
 
