@@ -101,8 +101,7 @@ and displays the value of each element's `src` property:
     }
 ```
 
-![Example of using $$() to select all images in the document and display their
-sources.](/web/tools/chrome-devtools/console/images/all-selector.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/f3W2BdYq3PAl435AMXso.png", alt="Example of using $$() to select all images in the document and display their sources.", width="800", height="536" %}
 
 This function also supports a second parameter, startNode, that specifies an element or Node from
 which to search for elements. The default value of this parameter is `document`.

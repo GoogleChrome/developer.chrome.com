@@ -70,6 +70,21 @@ redirects:
 - from: /docs/devtools/device-mode/emulate-mobile-viewports/
   to: /docs/devtools/device-mode/
 
+- from: /docs/devtools/console/console-write/
+  to: /docs/devtools/console/api/
+
+- from: /docs/devtools/console/track-exceptions/
+  to: /docs/devtools/console/api/
+
+- from: /docs/devtools/console/track-executions/
+  to: /docs/devtools/console/api/
+
+- from: /docs/devtools/console/events/
+  to: /docs/devtools/console/utilities/
+
+- from: /docs/devtools/console/expressions/
+  to: /docs/devtools/console/javascript/
+
 # TODO(kaycebasques): Update these old DevTools redirects
 
 - from: /devtools/
