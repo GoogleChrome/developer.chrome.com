@@ -64,6 +64,12 @@ redirects:
 - from: /docs/devtools/network/resource-loading/
   to: /docs/devtools/network/reference/
 
+- from: /docs/devtools/device-mode/device-input-and-sensors/
+  to: /docs/devtools/device-mode/
+
+- from: /docs/devtools/device-mode/emulate-mobile-viewports/
+  to: /docs/devtools/device-mode/
+
 # TODO(kaycebasques): Update these old DevTools redirects
 
 - from: /devtools/
