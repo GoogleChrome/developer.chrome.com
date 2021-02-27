@@ -25,13 +25,13 @@ and one final snapshot at the end of the recording.
 
 {% Img src="image/admin/eQkiSycjOtiM8pGHNCFH.png", alt="Allocation profiler", width="620", height="474" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** The number after the @ is an object ID that persists among multiple snapshots taken. This
 allows precise comparison between heap states. Displaying an object's address makes no sense, as
 objects are moved during garbage collections.
 
-!!!
+{% endAside %}
 
 ## Enable allocation profiler {: #enable_allocation_profiler }
 

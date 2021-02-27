@@ -10,11 +10,11 @@ updated: 2020-07-10
 description: "Console logging is a powerful way to inspect what your page or application does. Let&#39;s start with console.log() and explore other advanced usage."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 This page is deprecated.
 
-!!!
+{% endAside %}
 
 Console logging is a powerful way to inspect what your page or application does. Let's start with
 console.log() and explore other advanced usage.

@@ -11,12 +11,12 @@ description:
   application."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Performance Analysis Reference][1] for up-to-date
 information.
 
-!!!
+{% endAside %}
 
 Use the Chrome DevTools _Timeline_ panel to record and analyze all the activity in your application
 as it runs. It's the best place to start investigating perceived performance issues in your
@@ -34,7 +34,7 @@ application.
 
 ## Timeline panel overview {: #timeline-overview }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See the following sections for up-to-date information:
 
@@ -42,7 +42,7 @@ application.
 - [The FPS chart][3]
 - [View main thread activity][4]
 
-!!!
+{% endAside %}
 
 The Timeline panel consists of four panes:
 
@@ -86,11 +86,11 @@ The **Overview** pane consists of three graphs:
 
 ## Make a recording {: #make_a_recording }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Record performance][7] for up-to-date information.
 
-!!!
+{% endAside %}
 
 To make a recording of a _page load_, open the **Timeline** panel, open the page that you want to
 record, and then reload the page. The **Timeline** panel automatically records the page reload.
@@ -120,11 +120,11 @@ you, and automatically zooms to that portion.
 
 ## View recording details {: #view_recording_details }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [View main thread][11] for up-to-date information.
 
-!!!
+{% endAside %}
 
 When you select an event in the **Flame Chart**, the **Details** pane displays additional
 information about the event.
@@ -136,12 +136,12 @@ certain event types. See the [Timeline event reference][12] for details on each 
 
 ## Capture screenshots during recording {: #filmstrip }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Capture screenshots while recording][13] for up-to-date
 information.
 
-!!!
+{% endAside %}
 
 The **Timeline** panel can capture screenshots during a page load. This feature is known as the
 **Filmstrip**.
@@ -156,7 +156,7 @@ point in the recording. Move your mouse left and right to simulate an animation 
 
 ## Profile JavaScript {: #profile-js }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See the following sections for up-to-date information:
 
@@ -164,7 +164,7 @@ point in the recording. Move your mouse left and right to simulate an animation 
 - [View main thread activity][15]
 - [View activities][16]
 
-!!!
+{% endAside %}
 
 Enable the **JS Profile** checkbox before you take a recording to capture JavaScript stacks in your
 timeline recording. When the JS profiler is enabled, your flame chart shows every JavaScript
@@ -174,11 +174,11 @@ function that was called.
 
 ## Profile painting {: #profile-painting }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [View paint profiler][17] for up-to-date information.
 
-!!!
+{% endAside %}
 
 Enable the **Paint** checkbox before you take a recording to gain more insight into **Paint**
 events. When paint profiling is enabled and you click on a **Paint** event, a new **Paint Profiler**
@@ -188,12 +188,12 @@ tab is displayed in the **Details** pane that shows much more granular informati
 
 ### Rendering settings {: #rendering-settings }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Analyze rendering performance with the Rendering tab][18]
 for up-to-date information.
 
-!!!
+{% endAside %}
 
 Open the main DevTools menu and select **More tools** > **Rendering settings** to access rendering
 settings that may be helpful when debugging paint issues. The rendering settings opens up as a tab
@@ -203,11 +203,11 @@ next to the **Console** drawer (press <kbd>esc</kbd> to show the drawer, if it's
 
 ## Search records {: #search_records }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Search activities][19] for up-to-date information.
 
-!!!
+{% endAside %}
 
 While looking at events you may want to focus on one type of events. For example, perhaps you need
 to view the details of every `Parse HTML` event.
@@ -229,12 +229,12 @@ the **Details** pane. Pressing the up and down arrows is equivalent to clicking 
 
 ## Zoom in on a Timeline section {: #zoom }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Select a portion of a recording][20] for up-to-date
 information.
 
-!!!
+{% endAside %}
 
 You can zoom in on a section of a recording to make analysis easier. You use the **Overview** pane
 to zoom in on a section of the recording. After zooming, the **Flame Chart** is automatically zoomed
@@ -253,14 +253,14 @@ respectively. <kbd>A</kbd> and <kbd>D</kbd> move left and right, respectively.
 
 ## Save and load recordings {: #save_and_load_recordings }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See the following sections for up-to-date information:
 
 - [Save a recording][21]
 - [Load a recording pane][22]
 
-!!!
+{% endAside %}
 
 You can save and open recordings by right-clicking inside the **Overview** or **Flame Chart** panes
 and selecting the relevant option.

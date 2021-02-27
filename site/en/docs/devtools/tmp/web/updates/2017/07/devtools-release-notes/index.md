@@ -19,12 +19,12 @@ New features and major changes coming to DevTools in Chrome 61 include:
 - [Change mousewheel and trackpad behavior in the Performance panel][5].
 - [Debug ES6 modules natively][6].
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You can check what version of Chrome you're running at `chrome://version`. Chrome
 auto-updates to a new major version about every 6 weeks.
 
-!!!
+{% endAside %}
 
 Check out the video version of these release notes below or read on to learn more.
 

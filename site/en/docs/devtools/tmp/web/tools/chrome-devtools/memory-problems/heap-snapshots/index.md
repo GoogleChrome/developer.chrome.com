@@ -30,12 +30,12 @@ title appears and shows the total size of the [reachable JavaScript objects][2]:
 
 {% Img src="image/admin/qTTxQm0RcYd1YJsPRJif.png", alt="Total size of reachable objects", width="800", height="528" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Only reachable objects are included in snapshots. Also, taking a snapshot always starts
 with a garbage collection.
 
-!!!
+{% endAside %}
 
 ## Clear snapshots {: #clear_snapshots }
 
@@ -73,12 +73,12 @@ To switch between views, use the selector at the bottom of the view:
 
 {% Img src="image/admin/x7nyCuSlwz3gbRhwIvJZ.png", alt="Switch views selector", width="333", height="181" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Not all properties are stored on the JavaScript heap. Properties implemented using getters
 that execute native code aren't captured. Also, non-string values such as numbers are not captured.
 
-!!!
+{% endAside %}
 
 ### Summary view {: #summary_view }
 

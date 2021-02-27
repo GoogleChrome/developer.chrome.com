@@ -22,12 +22,12 @@ New features and changes coming to DevTools in Chrome 62:
 - [More predictable cache debugging][10].
 - [Block-level code coverage][11].
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You can check what version of Chrome you're running at `chrome://version`. Chrome
 auto-updates to a new major version about every 6 weeks.
 
-!!!
+{% endAside %}
 
 {% YouTube id="eD4fiqjaxHw" %}
 
@@ -147,13 +147,13 @@ Drag and drop a HAR file into the **Network** panel to import it.
 
 **Figure 8**. Importing a HAR file
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note**: To export a HAR file, right-click a request and select **Save As HAR With Content**. All
 requests that DevTools has recorded are saved to the file. If you've got any filters enabled, those
 are ignored.
 
-!!!
+{% endAside %}
 
 ## Previewable cache resources in the Application panel {: #cache-preview }
 

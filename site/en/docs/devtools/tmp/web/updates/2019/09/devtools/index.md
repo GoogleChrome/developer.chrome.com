@@ -73,12 +73,12 @@ events.
 
 ## Lighthouse 5.2 in the Audits panel {: #audits }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This actually launched in Chrome 77, but we missed it in the last release notes so we're
 covering it now.
 
-!!!
+{% endAside %}
 
 The **Audits** panel is now running [Lighthouse 5.2][11]. The new **Third-Party Usage** diagnostic
 audit tells you how much third-party code was requested and how long that third-party code blocked

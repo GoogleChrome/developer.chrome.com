@@ -27,12 +27,12 @@ Profiles panel, you can still access it like so:
 2.  Select **More tools** > **JavaScript Profiler**. The old profiler opens in a new panel called
     **JavaScript Profiler**.
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** The long-term goal is to migrate everyone to the new workflow. This workflow may be
 removed in future DevTools versions.
 
-!!!
+{% endAside %}
 
 ## How to record a JS profile {: #record }
 

@@ -10,12 +10,12 @@ description:
   the foundation for fixing load issues."
 ---
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This page is deprecated. At the top of each section, there's a link to an up-to-date page
 where you can find similar information.
 
-!!!
+{% endAside %}
 
 It is crucial to understand the phases in which resources are gathered over the network. This is the
 foundation for fixing load issues.
@@ -31,12 +31,12 @@ All network requests are considered resources. As they are retrieved over the ne
 have distinct lifecycles expressed in terms of resource timing. The Network Panel uses the same
 [Resource Timing API][1] that is available to application developers.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** when using the Resource Timing API with cross origin resources, make sure that all of the
 resources have CORS headers.
 
-!!!
+{% endAside %}
 
 The Resource Timing API provides a rich level of detail about each individual asset's time to be
 received. The primary phases of the request lifecycle are:
@@ -65,14 +65,14 @@ received. The primary phases of the request lifecycle are:
 
 ## Viewing in DevTools {: #viewing_in_devtools }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This page is deprecated. See following sections for up-to-date information:
 
 - [View timing breakdown][2]
 - [Timing tab][3]
 
-!!!
+{% endAside %}
 
 To view the full timing information for a given entry of the Network Panel you have three options.
 
@@ -140,11 +140,11 @@ Time spent receiving the response data.
 
 ## Diagnosing Network Issues {: #diagnosing_network_issues }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This page is deprecated. See [Network Issues Guide][5] for up-to-date information.
 
-!!!
+{% endAside %}
 
 There are numerous possible issues that can be uncovered through the Network Panel. Being able to
 find these requires a good understanding of how clients and servers communicate and the limitations

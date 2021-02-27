@@ -9,11 +9,11 @@ updated: 2020-07-10
 description: "Use the Styles pane in Chrome DevTools to inspect and modify the CSS styles associated to an element."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [CSS Reference][1].
 
-!!!
+{% endAside %}
 
 Use the **Styles** pane to modify the CSS styles associated to an element.
 
@@ -71,11 +71,11 @@ outside of the viewport are also affected by the selector.
 
 ## Add, enable, and disable CSS classes {: #classes }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Toggle a class][6].
 
-!!!
+{% endAside %}
 
 Click on the **.cls** button to view all of the CSS classes associated to the currently selected
 element. From there, you can:
@@ -87,11 +87,11 @@ element. From there, you can:
 
 ## Edit an existing property name or value {: #edit_an_existing_property_name_or_value }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Change a declaration name or value][7].
 
-!!!
+{% endAside %}
 
 Click on a CSS property name or value to edit it. While a name or value is highlighted, press
 <kbd>Tab</kbd> to move forward to the next property, name, or selector. Hold <kbd>Shift</kbd> and
@@ -113,29 +113,29 @@ shortcuts:
 
 ## Add a new property declaration {: #add_a_new_property_declaration }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Add a declaration to an element][8].
 
-!!!
+{% endAside %}
 
 Click an empty space within an editable CSS rule to create a new declaration. Type it out, or paste
 the CSS into the **Styles** pane. Properties and their values are parsed and entered into the
 correct fields.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** To enable or disable a style declaration, check or uncheck the checkbox next to it.
 
-!!!
+{% endAside %}
 
 ## Add a style rule {: #add_a_style_rule }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Add a style rule][9].
 
-!!!
+{% endAside %}
 
 Click the **New Style Rule**
 ({% Img src="image/admin/16RTQ3uVxZ5lQoJdnYAd.png", alt="new style rule button", width="54", height="50" %}) button
@@ -145,11 +145,11 @@ Click and hold the button to choose which stylesheet the rule is added to.
 
 ## Add or remove dynamic styles (pseudo-classes) {: #pseudo-classes }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Toggle a pseudo-class][10].
 
-!!!
+{% endAside %}
 
 You can manually set dynamic pseudo-class selectors (such as `:active`, `:focus`, `:hover`, and
 `:visited`) on elements.
@@ -169,12 +169,12 @@ to enable pseudoclass selector](/web/tools/chrome-devtools/inspect-styles/imgs/p
 
 ## Add background-color or color to a style rule {: #add_background-color_or_color_to_a_style_rule }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Add a background-color declaration][11] and [Add a color
 declaration][12].
 
-!!!
+{% endAside %}
 
 The **Styles** pane provides a shortcut for adding `color` and `background-color` declarations to a
 style rule.
@@ -193,11 +193,11 @@ Click on one of these buttons to add the declaration to the style rule.
 
 ## Modify colors with the Color Picker {: #color-picker }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Change colors with the Color Picker][13].
 
-!!!
+{% endAside %}
 
 To open the **Color Picker**, find a CSS declaration in the **Styles** pane that defines a color
 (such as `color: blue`). To the left of the declaration value there is a small, colored square. The
@@ -325,11 +325,11 @@ Learn how to setup source maps in [Setup CSS & JS Preprocessors][20].
 
 ## Emulate print media {: #emulate-print-media }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [View a page in print mode][21].
 
-!!!
+{% endAside %}
 
 To view a page in print mode:
 

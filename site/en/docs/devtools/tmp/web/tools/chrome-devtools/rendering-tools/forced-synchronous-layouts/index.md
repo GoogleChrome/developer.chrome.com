@@ -9,12 +9,12 @@ updated: 2020-07-10
 description: "Follow along with this interactive guide to learn how to use DevTools to diagnose forced synchronous layouts."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Warning:** This page is deprecated. See [Get Started With Analyzing Runtime Performance][1] for an
 up-to-date tutorial on forced synchronous layouts.
 
-!!!
+{% endAside %}
 
 Learn how to use DevTools to diagnose forced synchronous layouts.
 
@@ -67,13 +67,13 @@ The top of the stack is an `Animation Frame Fired` event. The function that you 
 see `Function Call`, and below that you see `update`. You can infer that a method called `update()`
 is the callback for `requestAnimationFrame()`.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** This is where the **JS Profile** option that you enabled earlier is useful. If it was
 disabled, you would just see `Function Call`, followed by all the small purple events (discussed
 next), without details on exactly which functions were called.
 
-!!!
+{% endAside %}
 
 Now, focus your attention on all of the small purple events below the `update` event. The top part
 of many of these events are red. That's a warning sign. Hover over these events and you see that

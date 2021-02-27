@@ -63,12 +63,12 @@ tab to view only the CSS that's actually being applied to an element.
 1.  [Select an element][4].
 2.  Go to the **Computed** tab in the **Elements** panel.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** On a wide DevTools window, the **Computed** tab does not exist. The contents of the
 **Computed** tab are shown on the **Styles** tab.
 
-!!!
+{% endAside %}
 
 Inherited properties are opaque. Check the **Show All** checkbox to see all inherited values.
 

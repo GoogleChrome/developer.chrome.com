@@ -10,11 +10,11 @@ updated: 2020-07-10
 description: "Take advantage of the Console API to measure execution times and count statement executions."
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 This page is deprecated.
 
-!!!
+{% endAside %}
 
 Take advantage of the Console API to measure execution times and count statement executions.
 

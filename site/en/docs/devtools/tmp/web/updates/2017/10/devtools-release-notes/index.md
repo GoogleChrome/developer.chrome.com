@@ -17,12 +17,12 @@ Welcome back! New features coming to DevTools in Chrome 63 include:
 - [Simulate push notifications with custom data][4].
 - [Trigger background sync events with custom tags][5].
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You can check what version of Chrome you're running at `chrome://version`. Chrome
 auto-updates to a new major version about every 6 weeks.
 
-!!!
+{% endAside %}
 
 Read on or watch the video below to learn more!
 

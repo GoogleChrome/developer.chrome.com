@@ -10,11 +10,11 @@ description:
   panel updates."
 ---
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** We'll publish the video version of this page in early February 2019.
 
-!!!
+{% endAside %}
 
 New features and major changes coming to Chrome DevTools in Chrome 72 include:
 
