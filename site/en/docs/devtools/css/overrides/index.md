@@ -21,8 +21,7 @@ it means that there's some other CSS that is overriding your new CSS. In CSS ter
 concept is called [Specificity][3]. Chrome DevTools can help you find the old CSS that is causing
 your new CSS to not be applied.
 
-![A 'max-height: 512px' declaration is crossed out in the Styles pane of 
-            Chrome DevTools.](/web/tools/chrome-devtools/css/imgs/override.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/VmAsW0AeQ5mRyBeAM6mI.png", alt="A 'max-height: 512px' declaration is crossed out in the Styles pane of Chrome DevTools.", width="800", height="435" %}
 
 **Figure 1**. The `max-height: 512px` declaration is crossed out.
 
@@ -58,11 +57,7 @@ If you want to focus on a specific property, type that property name in the **Fi
 ## Show all properties {: #all }
 
 If you want to see all properties that are being applied to the element, including [user-agent
-stylesheets][5], enable the **Show All** checkbox.
-
-![Showing all properties in the Computed pane.](/web/tools/chrome-devtools/css/imgs/computedfilter.png)
-
-**Figure 6**. Showing all properties in the Computed pane.
+stylesheets][5], enable the **Show All** checkbox (next to the [**Filter**](#filter) textbox).
 
 [1]: /web/tools/chrome-devtools/css
 [2]: /web/tools/chrome-devtools/css/reference#select
