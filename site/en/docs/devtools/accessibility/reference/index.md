@@ -184,8 +184,7 @@ The Color Picker can help you make sure that your text meets recommended contras
     meets the [minimum recommendation][12]. Two checkmarks means that it meets the [enhanced
     recommendation][13].
 
-    ![The Contrast Ratio section of the Color Picker shows 2 checkmarks and a
-             value of 16.10.](/web/tools/chrome-devtools/accessibility/imgs/color-picker.png)
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mwC8fcpEcDQoDO0ZqJ4G.png", alt="The Contrast Ratio section of the Color Picker shows 2 checkmarks and a value of 16.10.", width="800", height="516" %}
 
     **Figure 12**. The Contrast Ratio section of the Color Picker shows 2 checkmarks and a value of
     `16.10`
