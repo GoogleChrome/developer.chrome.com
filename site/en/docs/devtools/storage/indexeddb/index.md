@@ -83,7 +83,7 @@ IndexedDB values in the **Application** panel do not update in real-time. Click 
 {% Img src="image/admin/t6Vwc2XfZKsrmIRJmO09.png", alt="Refresh", width="24", height="25" %} when viewing an object store to
 refresh its data, or view a database and click **Refresh database** to refresh all data.
 
-![Viewing a database](/web/tools/chrome-devtools/storage/imgs/idbdatabase.png)
+{% Img src="image/admin/bXK6EnZMo6yDUwkoFLXc.png", alt="Viewing a database", width="800", height="579" %}
 
 **Figure 7**. Viewing a database
 
@@ -125,7 +125,7 @@ edits an IndexedDB database.
 
 1.  [View an IndexedDB object store][11].
 
-    ![Viewing an object store](/web/tools/chrome-devtools/storage/imgs/idbobjectstore.png)
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FJ6eP0ZU0g7QuA1TxBBP.png", alt="Viewing an object store", width="800", height="415" %}
 
     **Figure 11**. Viewing an object store
 
@@ -137,7 +137,7 @@ edits an IndexedDB database.
 1.  [View the IndexedDB database][12] that you want to delete.
 2.  Click **Delete database**.
 
-    ![The 'Delete database' button](/web/tools/chrome-devtools/storage/imgs/idbdatabase.png)
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hhUoSxlRKF2j6kacnKem.png", alt="The 'Delete database' button", width="800", height="579" %}
 
     **Figure 12**. The **Delete database** button
 
