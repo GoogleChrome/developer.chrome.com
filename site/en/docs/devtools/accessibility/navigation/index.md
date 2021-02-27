@@ -308,9 +308,6 @@ Each section ends with a final `details` element which contains all of the passe
 To run a new audit, use <kbd>Shift</kbd>+<kbd>Tab</kbd> to exit the report and look for the
 **Perform An Audit** button.
 
-- Send DevTools bug reports or feature requests to [Chromium Issue Tracker][20].
-- Send any feedback related to this document to [GitHub][21].
-
 [1]: /web/tools/chrome-devtools
 [2]: /web/tools/chrome-devtools/accessibility/reference
 [3]: https://www.w3.org/TR/wai-aria-1.1/#tablist
@@ -330,5 +327,3 @@ To run a new audit, use <kbd>Shift</kbd>+<kbd>Tab</kbd> to exit the report and l
 [17]: /web/tools/chrome-devtools/css/reference#computed
 [18]: /web/tools/chrome-devtools/accessibility/reference#pane
 [19]: https://bugs.chromium.org/p/chromium/issues/detail?id=868480
-[20]: https://crbug.com
-[21]: https://github.com/google/webfundamentals/issues/new
