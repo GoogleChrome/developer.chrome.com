@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: Set up Group Publishing
+title: Set up group publishing
 date: 2020-06-20
 description: How to share ownership of your Chrome Web Store items with other developers.
 ---
@@ -9,6 +9,19 @@ You can share ownership of your items in Google Chrome Web Store with other deve
 group publishing. With group publishing, you can add developers to a Google Group, who can then act
 on your behalf. They'll have access to all the items you own and can make any changes to them that
 you can make.
+
+{% Aside 'warning' %}
+
+It's important that the Google Group you use for group publishing is private and that you carefully
+control the group membership. For this reason, we recommend:
+
+* Use a Google Group that is dedicated just to group publishing on the Chrome Web Store. Don't use
+  an existing group that has other purposes.
+
+* Keep this group private. This is the default; make sure not to change it to public.
+
+Remember that anyone who is a  member of the group can make changes to your published items!
+{% endAside %}
 
 ## Before you set up group publishing
 
