@@ -4,7 +4,7 @@ title: "Change Chrome DevTools Placement (Undock, Dock To Bottom, Dock To Left)"
 authors:
   - kaycebasques
 date: 2019-05-14
-
+#updated: YYYY-MM-DD
 description:
   "How to move Chrome DevTools to the bottom or left of your viewport, or to a separate window."
 ---

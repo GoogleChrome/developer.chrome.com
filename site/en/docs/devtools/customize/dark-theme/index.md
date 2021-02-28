@@ -4,7 +4,7 @@ title: "Enable Dark Theme In Chrome DevTools"
 authors:
   - kaycebasques
 date: 2019-05-03
-
+#updated: YYYY-MM-DD
 description: "How to turn on the dark theme in Chrome DevTools."
 ---
 

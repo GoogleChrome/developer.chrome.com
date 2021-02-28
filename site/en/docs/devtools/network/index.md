@@ -4,7 +4,7 @@ title: "Inspect Network Activity In Chrome DevTools"
 authors:
   - kaycebasques
 date: 2019-02-08
-
+#updated: YYYY-MM-DD
 description: "A tutorial on the most popular network-related features in Chrome DevTools."
 ---
 

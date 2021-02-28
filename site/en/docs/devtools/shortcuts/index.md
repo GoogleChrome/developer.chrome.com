@@ -4,7 +4,7 @@ title: "Chrome DevTools Keyboard Shortcuts"
 authors:
   - kaycebasques
 date: 2015-04-29
-
+#updated: YYYY-MM-DD
 description: "The canonical documentation for Chrome DevTools keyboard shortcuts."
 ---
 

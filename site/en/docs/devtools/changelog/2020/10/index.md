@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 87)"
 authors:
   - jecelynyeen
 date: 2020-10-01
-
+#updated: YYYY-MM-DD
 description:
   "New CSS Grid debugging tools, Web Authn tab, moveable tools and Computed sidebar pane."
 ---

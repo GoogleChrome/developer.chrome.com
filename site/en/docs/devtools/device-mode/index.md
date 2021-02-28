@@ -4,7 +4,7 @@ title: "Simulate Mobile Devices with Device Mode in Chrome DevTools"
 authors:
   - kaycebasques
 date: 2015-04-13
-
+#updated: YYYY-MM-DD
 description: "Use virtual devices in Chrome&#39;s Device Mode to build mobile-first websites."
 ---
 

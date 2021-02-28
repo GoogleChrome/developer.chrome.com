@@ -4,7 +4,7 @@ title: "Override Geolocation With Chrome DevTools"
 authors:
   - kaycebasques
 date: 2018-12-18
-
+#updated: YYYY-MM-DD
 description: "Open the Sensors tab and select coordinates from the &#34;Geolocation&#34; list."
 ---
 

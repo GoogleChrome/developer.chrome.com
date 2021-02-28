@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 78)"
 authors:
   - kaycebasques
 date: 2019-09-03
-
+#updated: YYYY-MM-DD
 description:
   "Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in the Performance panel."
 ---

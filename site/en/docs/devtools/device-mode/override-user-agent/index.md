@@ -4,7 +4,7 @@ title: "Override The User Agent String From Chrome DevTools"
 authors:
   - kaycebasques
 date: 2018-12-14
-
+#updated: YYYY-MM-DD
 description:
   "Open the Network conditions tab, disable &#34;Select automatically&#34;, and choose from the list
   or enter a custom string."
