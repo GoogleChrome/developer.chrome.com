@@ -26,7 +26,11 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 The web does not meet today’s expectations for user privacy and choice.
 
-The Privacy Sandbox initiative announced in 2019 has two core aims:
+When you visit a website you're unlikely to know what third parties involved and what they're doing 
+with your data. Even publishers and web developers may not understand the entire third-party supply 
+chain.
+
+The Privacy Sandbox initiative has two core aims:
 * Work with the web community to develop replacement solutions for third-party cookies and covert 
 tracking techniques.
 * Phase out support for [third-party cookies](https://web.dev/samesite-cookies-explained/) when new 
@@ -35,50 +39,68 @@ solutions are in place. ([First party cookies](https://web.dev/samesite-cookies-
 
 ## What are the Privacy Sandbox use cases?
 
-Chrome and other ecosystem stakeholders have offered more than 30 proposals to date, but explanations of the key proposals are linked to below. Most proposals can be found in the public resources of W3C groups.
+Chrome and other ecosystem stakeholders have offered more than 30 proposals to date, which can be 
+found in the [public resources of W3C groups](https://www.w3.org/Privacy/).
+
+Explanations of each of the key proposals are linked to below. 
 
 ### 🍪 First-party context
-* SameSite cookie changes: 
-* First Party Sets: 
+* [SameSite cookie changes](https://web.dev/samesite-cookies-explained/): secure sites by explicitly 
+marking your cross-site cookies.
+* [First Party Sets](/docs/privacy-sandbox/first-party-sets): Allow related domain names owned by 
+the same entity to declare themselves as belonging to the same first party.
 
-### Audience selection
-* FLoC: interest groups
-* FLEDGE: remarketing
+### 👤 Audience selection
+* [FLoC](/docs/privacy-sandbox/floc): Ad selection for interest groups (aka relevant ads). 
+* [FLEDGE](/docs/privacy-sandbox/fledge): Ad selection for remarketing. Descendant of TURTLEDOVE.
 
 ### 📊 Measurement and attribution
-* Event Attribution API: attributing ad clicks and ad views. Previously known as the Event Conversion Measurement API.
-* Reach Measurement API: measure
-* Aggregation Service
+* [Event Attribution Reporting](/docs/privacy-sandbox/event-attribution-reporting): Attribute ad 
+clicks and ad views. Previously known as the Event Conversion Measurement API.
+* [Aggregation Reporting](https://github.com/csharrison/aggregate-reporting-api): Measure the reach 
+of a particular ad campaign (how many distinct users saw the ad) by collapsing information across 
+multiple sites into a single, privacy-preserving report.
 
 ### 🚨 Fraud detection
-* Trust Tokens: convey trust in a user from one context to another.
+* [Trust Tokens](/docs/privacy-sandbox/trust-tokens): convey trust in a user from one context to 
+another to help combat fraud and distinguish bots from humans.
 
-### Limiting data collection
-* Privacy Budget
-* Gnatcatcher (IP Privacy)
+### 👀 Limiting data collection
+* [Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8): Allow websites to get information 
+about a user's browser or device, but enable the browser to set a quota on the total amount of 
+information a site can access, so that a user cannot be identified.
+* [Gnatcatcher](https://github.com/bslassey/ip-blindness): Limit the ability to identify individual 
+users by accessing their IP address. There are two parts to the proposal: [Willful IP Blindness](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) provides a way for websites to let browsers know 
+they are not observing IP addresses and [Near-path NAT](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) allows groups of users to send their traffic through the same privatizing server, 
+effectively hiding their IP addresses from a site host. Gnatcatcher also ensures that sites 
+requiring access to IP addresses for legitimate purposes such as abuse prevention can do so, subject 
+to certification and auditing.
 
-### 👤 Identity
-* WebID (Federated Identity)
+### 🏷 Identity
+* WebID (Federated Identity): Support federated identity (where a user can sign into a website 
+through a third-party service) without sharing the user’s email address or other identifying 
+information with the third-party service or the website, unless the user explicitly agrees to do so. 
+WebID enables federated sign-in without the use of redirects, pop-ups or third-party cookies which 
+can be used to identify and track users across sites.
 
-End to end flows will use multiple solutions. The example below gives a simplified view of click-based advertising flow with customized audience selection 
+End to end flows will use multiple solutions. The example below gives a simplified view of a
+click-based advertising flow with customized audience selection.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/G8X0dMdSaKQKkX048y9e.png", alt="Simplified view of a click-based advertising flow with customized audience selection, using Privacy Sandbox APIs", width="800", height="265" %}
 
 
-
-
-
-
-
-## Has there been any progress?
+## Who is working on the Privacy Sandbox?
 
 By early 2021 there were: 
 * 30+ Privacy Sandbox proposals offered by Chrome and others.
 * 400+ participants who joined W3C groups to provide input including the [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) and the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
-* 5 API implementations already available for testing in Chrome.
+* 5 API implementations available for testing in Chrome.
 
 
-## Who is behind the Privacy Sandbox?
-[TBC]
+## Is the Privacy Sandbox ready yet?
 
+The [implementation status](/docs/privacy-sandbox/status/) page on this site provides progress 
+updates for individual APIs.
 
 
 ## Find out more
@@ -98,7 +120,6 @@ The Privacy Sandbox initiative needs your support. The API proposal [explainers]
 * [TURTLEDOVE](https://github.com/michaelkleber/turtledove)
 
 [A Potential Privacy Model for the Web](https://github.com/michaelkleber/privacy-model) sets out the core principles underlying the APIs.
-
 
 ### The Privacy Sandbox
 

@@ -1,50 +1,62 @@
+--- 
+layout: 'layouts/doc-post.njk' 
+title: 'Privacy Sandbox glossary' 
+subhead: Privacy Sandbox articles and documentation assume a knowledge of concepts from privacy, advertising, and web development. This glossary explains key terms. description: Simple explanations of key concepts.
+date: 2021-02-28 
+updated: 2021-02-28 
+authors: 
+	- samdutton 
 ---
-layout: 'layouts/doc-post.njk'
-title: 'Privacy Sandbox glossary'
-subhead: Privacy Sandbox articles and documentation assume a knowledge of concepts from privacy, advertising, and web development. This glossary explains key terms.
-description: Simple explanations of key concepts.  
-date: 2021-02-28
-updated: 2021-02-28
-authors:
-  - samdutton
----
 
-{% Aside %}
-[Let us know](.) [URL TBC] if something is missing!
-{% endAside %}
+{% Aside %} [Let us know](.) [URL TBC] if something is missing! {% endAside %}
 
-## Click-through rate (CTR) {: #glossary-ctr }
+## Click-through rate (CTR) {: #ctr }
 
-The ratio of users who click on an ad, having seen it. (See also [impression](#glossary-impression).)
+The ratio of users who click on an ad, having seen it. (See also [impression](#impression).)
 
-## Click-through-conversion (CTC) {: #glossary-ctc }
+## Click-through-conversion (CTC) {: #ctc }
 
 A conversion attributed to an ad that was 'clicked'.
 
 ## Conversion
 
-The completion of an action on an advertiser's website by a user who has previously interacted with an ad from that advertiser. For example, purchase of a product or sign-up for a newsletter after clicking an ad that links to the advertiser's site.
+The completion of an action on an advertiser's website by a user who has previously interacted with
+an ad from that advertiser. For example, purchase of a product or sign-up for a newsletter after
+clicking an ad that links to the advertiser's site.
+
+## Cookie
+
+A website can ask a web browser to store a small piece of textual data called a cookie on a user's 
+computer. Cookies can be used to save data about a user (or a reference to data in a back-end data store) 
+as the user moves across the web. For example: an online store can retain shopping cart details even 
+if a user is not logged in, or the site could record the user's browsing activity on their site. See 
+[First-party cookie](#first-party-cookie) and [Third-party cookie](#third-party-cookie).
 
 ## Differential privacy
 
-Share information about a dataset to reveal patterns of behaviour without revealing private information about individuals or whether they belong to the dataset.
+Share information about a dataset to reveal patterns of behaviour without revealing private
+information about individuals or whether they belong to the dataset.
 
 ## Domain
 
-See [Top-Level Domain](#glossary-tld) and [eTLD](#glossary-etld).
+See [Top-Level Domain](#tld) and [eTLD](#etld).
 
-## eTLD, eTLD+1 {: #glossary-etld }
+## eTLD, eTLD+1 {: #etld }
 
-'Effective' top level domains are defined by the [Public Suffix List](https://publicsuffix.org/list/). For example:
+'Effective top level domains' are defined by the [Public Suffix List](https://publicsuffix.org/list/). 
+For example:
 
-```text
-co.uk
-appspot.com
-glitch.me
 ```
-Effective TLDs are what enable foo.appspot.com to be a different site from bar.appspot.com. The effective top-level domain (**eTLD**) in this case is appspot.com, and the whole **site** name (foo.appspot.com, bar.appspot.com) is known as the **eTLD+1**.
+text co.uk 
+appspot.com 
+glitch.me
+``` 
 
-See also [Top-Level Domain](#glossary-tld).
+Effective TLDs are what enable foo.appspot.com to be a different site from bar.appspot.com. The
+effective top-level domain (**eTLD**) in this case is appspot.com, and the whole **site** name 
+(foo.appspot.com, bar.appspot.com) is known as the **eTLD+1**.
+
+See also [Top-Level Domain](#tld).
 
 ## Entropy
 
@@ -52,43 +64,74 @@ A measure of how much an item of data reveals individual identity.
 
 Data entropy is measured in bits. The more that data reveals identity, the higher its entropy value.
 
-Data can be combined to identify an individual, but it can be difficult to work out whether new data adds to entropy. For example, knowing a person is from Australia doesn't reduce entropy if you already know the person is from Kangaroo Island.
+Data can be combined to identify an individual, but it can be difficult to work out whether new data
+adds to entropy. For example, knowing a person is from Australia doesn't reduce entropy if you
+already know the person is from Kangaroo Island.
 
-## Fingerprinting {: #glossary-fingerprinting }
+## Federated identity (also known as federated login)
 
-Techniques to identify and track the behaviour of individual users. Fingerprinting uses mechanisms that users aren't aware of and can't control. Sites such as [Panopticlick](https://panopticlick.eff.org) and [amiunique.org](https://amiunique.org/) show how fingerprint data can be combined to identify you as an individual.
+A third-party platform to enable a user to sign in to a website, without requiring the site to
+implement their own identity service.
 
-## Fingerprinting surface {: #glossary-fingerprinting-surface }
+## Fingerprinting {: #fingerprinting }
 
-Something that can be used (probably in combination with other surfaces) to identify a particular user or device. For example, the `navigator.userAgent()` JavaScript method and the `User-Agent` HTTP request header provide access to a fingerprinting surface (the user agent string).
+Techniques to identify and track the behaviour of individual users. Fingerprinting uses mechanisms
+that users aren't aware of and can't control. Sites such as [Panopticlick](https://panopticlick.eff.org) 
+and [amiunique.org](https://amiunique.org/) show how fingerprint data can be combined to identify 
+you as an individual.
 
-## First-party {: #glossary-first-party }
+## Fingerprinting surface {: #fingerprinting-surface }
 
-Resources from the site you're visiting. For example, the page you're reading is on the site web.dev and includes resources from that site. See also [Third-party](#glossary-third-party).
+Something that can be used (probably in combination with other surfaces) to identify a particular
+user or device. For example, the `navigator.userAgent()` JavaScript method and the `User-Agent` HTTP
+request header provide access to a fingerprinting surface (the user agent string).
 
-## Impression {: #glossary-impression }
+## First-party {: #first-party }
 
-View of an ad. (See also [click-through rate](#glossary-ctr).)
+Resources from the site you're visiting. For example, the page you're reading is on the site 
+developer.chrome.com and includes resources from that site. Requests for those first-party resources 
+are called 'first-party requests', and [cookies](#cookies) stored by developer.chrome.com are called 
+[first-party cookies](#first-party-cookies). See also [Third-party](#third-party).
+
+* First-party cookie {: #first-party-cookie } 
+
+[Cookie](#cookie) stored by a website while a user is on the site itself. For example: an online 
+store might ask a browser to store a cookie in order to retain shopping cart details for a user 
+who is not logged in. See also [Third-party cookies](#third-party-cookie). 
+
+## Impression {: #impression }
+
+View of an ad. (See also [click-through rate](#ctr).)
 
 ## k-anonymity
 
-A measure of anonymity within a data set. If you have _k_ anonymity, you can't be distinguished from _k-1_ other individuals in the data set. In other words, _k_ individuals have the same information (including you).
+A measure of anonymity within a data set. If you have _k_ anonymity, you can't be distinguished from
+_k-1_ other individuals in the data set. In other words, _k_ individuals have the same information
+(including you).
 
-## Nonce
+## Nonce 
+
 Arbitrary number used once only in cryptographic communication.
 
-## Origin
-The origin of a request, including the server name but no path information. For example: `https://web.dev`.
+## Origin 
 
-## Passive surface {: #glossary-passive-surface }
+The origin of a request, including the server name but no path information. For example:
+`https://web.dev`.
 
-Some fingerprinting surfaces, such as user agent strings, IP addresses and accept-language headers, are available to every website whether the site asks for them or not. That means passive surfaces can easily consume a site's privacy budget.
+## Passive surface {: #passive-surface }
 
-The Privacy Sandbox initiative proposes replacing passive surfaces with active ways to get specific information, for example using Client Hints a single time to get the user's language rather than having an accept-language header for every response to every server.
+Some fingerprinting surfaces, such as user agent strings, IP addresses and accept-language headers,
+are available to every website whether the site asks for them or not. That means passive surfaces
+can easily consume a site's privacy budget.
+
+The Privacy Sandbox initiative proposes replacing passive surfaces with active ways to get specific
+information, for example using Client Hints a single time to get the user's language rather than
+having an accept-language header for every response to every server.
 
 ## Publisher
 
-The Privacy Sandbox proposal explainers are mostly about ads, so the kinds of publishers referred to are ones that put ads on their websites.
+The Privacy Sandbox proposal explainers are mostly about ads, so the kinds of publishers referred to
+are ones that put ads on their websites.
 
 ## Reach
 
@@ -96,26 +139,44 @@ The total number of people who see an ad.
 
 ## Remarketing
 
-Advertising to people who've already visited your site. For example, an online store could show ads for a toy sale to people who previously viewed toys on their site.
+Advertising to people who've already visited your site. For example, an online store could show ads
+for a toy sale to people who previously viewed toys on their site.
 
 ## Site
 
-See [Top-Level Domain](#glossary-tld) and [eTLD](#glossary-etld).
+See [Top-Level Domain](#tld) and [eTLD](#etld).
 
 ## Surface
 
-See [Fingerprinting surface](#glossary-fingerprinting-surface) and [Passive surface](#glossary-passive-surface).
+See [Fingerprinting surface](#fingerprinting-surface) and [Passive
+surface](#passive-surface).
 
-## Third-party {: #glossary-third-party }
+## Third-party {: #third-party }
 
-Resources served from a domain that's different from the website you're visiting. For example, a website foo.com might use analytics code from google-analytics.com (via JavaScript), fonts from use.typekit.net (via a link element) and a video from vimeo.com (in an iframe). See also [First-party](#glossary-first-party).
+Resources served from a domain that's different from the website you're visiting. For example, a
+website foo.com might use analytics code from google-analytics.com (via JavaScript), fonts from
+use.typekit.net (via a link element) and a video from vimeo.com (in an iframe). See also
+[First-party](#first-party).
 
-## Top-level domain (TLD) {: #glossary-tld }
+* Third-party cookie {: #third-party-cookie}
 
-Top-level domains such as .com and .org are listed in the [Root Zone Database](https://www.iana.org/domains/root/db).
+[Cookie](#cookie) stored by a third-party service. For example, a video website might include a 
+**Watch Later** button in their embedded player, to enable a user to add a video to their wishlist 
+without forcing them to navigate to the video site. See also [First-party cookie](#first-party-cookie).
 
-Note that some 'sites' are actually just subdomains. For example, translate.google.com and maps.google.com are just subdomains of google.com (which is the [eTLD + 1](#glossary-etld)).
+## Top-level domain (TLD) {: #tld }
+
+Top-level domains such as .com and .org are listed in the [Root Zone
+Database](https://www.iana.org/domains/root/db).
+
+Note that some 'sites' are actually just subdomains. For example, translate.google.com and
+maps.google.com are just subdomains of google.com (which is the [eTLD + 1](#etld)).
 
 ## .well-known
 
-It can be useful to access policy or other information about a host _before_ making a request. For example, robots.txt tells web crawlers which pages to visit and which pages to ignore. IETF [RFC8615](https://tools.ietf.org/html/rfc8615) outlines a standardized way to make site-wide metadata accessible in standard locations in a /.well-known/ subdirectory. You can see a list of these at [iana.org/assignments/well-known-uris/well-known-uris.xhtml](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml).
+It can be useful to access policy or other information about a host _before_ making a request. For
+example, robots.txt tells web crawlers which pages to visit and which pages to ignore. IETF
+[RFC8615](https://tools.ietf.org/html/rfc8615) outlines a standardized way to make site-wide
+metadata accessible in standard locations in a /.well-known/ subdirectory. You can see a list of
+these at
+[iana.org/assignments/well-known-uris/well-known-uris.xhtml](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml).
