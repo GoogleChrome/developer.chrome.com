@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Fix memory problems (Chrome DevTools)"
+title: "Fix memory problems"
 authors:
   - kaycebasques
 date: 2015-04-13

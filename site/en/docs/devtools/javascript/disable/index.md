@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Disable JavaScript (Chrome DevTools)"
+title: "Disable JavaScript"
 authors:
   - kaycebasques
 date: 2019-01-31

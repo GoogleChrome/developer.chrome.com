@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Track element focus (Chrome DevTools)"
+title: "Track element focus"
 authors:
   - kaycebasques
 date: 2018-12-14

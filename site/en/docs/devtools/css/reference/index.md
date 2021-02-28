@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "CSS features reference (Chrome DevTools)"
+title: "CSS features reference"
 authors:
   - kaycebasques
   - jecelynyeen

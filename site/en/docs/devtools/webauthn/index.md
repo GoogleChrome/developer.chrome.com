@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Emulate authenticators and debug WebAuthn (Chrome DevTools)"
+title: "Emulate authenticators and debug WebAuthn"
 authors:
   - fawazm
   - jecelynyeen

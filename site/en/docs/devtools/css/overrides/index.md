@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Find overriding CSS declarations (Chrome DevTools)"
+title: "Find overriding CSS declarations"
 authors:
   - kaycebasques
 date: 2019-07-11

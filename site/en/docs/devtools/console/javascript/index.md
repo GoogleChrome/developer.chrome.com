@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Run JavaScript in the Console (Chrome DevTools)"
+title: "Run JavaScript in the Console"
 authors:
   - kaycebasques
 date: 2018-04-18

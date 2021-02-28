@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Network features reference (Chrome DevTools)"
+title: "Network features reference"
 authors:
   - kaycebasques
 date: 2015-04-13

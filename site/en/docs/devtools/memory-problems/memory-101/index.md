@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Memory terminology (Chrome DevTools)"
+title: "Memory terminology"
 authors:
   - megginkearney
 date: 2015-05-18
