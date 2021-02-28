@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Performance Analysis Reference"
+title: "Performance features reference (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2017-05-08

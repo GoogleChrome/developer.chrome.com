@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Force Chrome DevTools Into Print Preview Mode (CSS Print Media Type)"
+title: "Force print preview mode (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2018-12-14

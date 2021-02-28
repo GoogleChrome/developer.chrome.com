@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Console Overview"
+title: "Console overview (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2019-04-18

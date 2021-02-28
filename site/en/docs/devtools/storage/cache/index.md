@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "View Cache Data With Chrome DevTools"
+title: "View Cache data (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2019-03-25

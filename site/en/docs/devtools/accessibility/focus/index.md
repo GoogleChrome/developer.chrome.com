@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Track Which Element Has Focus"
+title: "Track element focus (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2018-12-14

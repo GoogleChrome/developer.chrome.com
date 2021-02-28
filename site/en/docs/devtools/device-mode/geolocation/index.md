@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Override Geolocation With Chrome DevTools"
+title: "Override geolocation (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2018-12-18

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Console Utilities API Reference"
+title: "Console Utilities API reference (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2015-04-13

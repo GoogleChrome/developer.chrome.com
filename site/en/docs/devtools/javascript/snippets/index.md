@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Run Snippets Of JavaScript On Any Page With Chrome DevTools"
+title: "Run Snippets of JavaScript (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2015-10-12

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Console Reference"
+title: "Console features reference (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2019-04-18

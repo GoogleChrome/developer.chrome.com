@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Navigate Chrome DevTools With Assistive Technology"
+title: "Navigate Chrome DevTools with assistive technology"
 authors:
   - robdodson
 date: 2019-03-08

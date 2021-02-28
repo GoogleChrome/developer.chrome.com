@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Inspect CSS Grid"
+title: "Inspect CSS Grid (Chrome DevTools)"
 authors:
   - jecelynyeen
 date: 2017-06-08
