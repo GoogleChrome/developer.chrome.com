@@ -5,7 +5,7 @@ authors:
   - megginkearney
   - pbakaus
 date: 2015-04-13
-updated: 2020-07-10
+
 description: "Keep your client-side code readable and debuggable even after you&#39;ve combined, minified or compiled it."
 ---
 

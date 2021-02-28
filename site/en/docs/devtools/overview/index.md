@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Chrome DevTools"
 date: 2016-03-28
-updated: 2020-07-10
+
 description: "Get started with Google Chrome's built-in web developer tools."
 ---
 

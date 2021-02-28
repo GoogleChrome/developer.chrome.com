@@ -4,7 +4,7 @@ title: "Customize Chrome DevTools"
 authors:
   - kaycebasques
 date: 2019-05-02
-updated: 2020-10-01
+
 description: "A list of ways you can customize Chrome DevTools."
 ---
 

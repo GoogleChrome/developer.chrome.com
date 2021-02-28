@@ -4,7 +4,7 @@ title: "Get Started With Running JavaScript In The Console"
 authors:
   - kaycebasques
 date: 2018-04-18
-updated: 2020-07-10
+
 description: "Learn how to run JavaScript in the Console."
 ---
 

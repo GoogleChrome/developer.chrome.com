@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 62)"
 authors:
   - kaycebasques
 date: 2017-08-29
-updated: 2018-12-03
+
 description:
   "Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and
   more."

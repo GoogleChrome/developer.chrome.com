@@ -4,7 +4,7 @@ title: "Inspect CSS Grid"
 authors:
   - jecelynyeen
 date: 2017-06-08
-updated: 2020-10-01
+
 description: "Learn how to use Chrome DevTools to view and change a page&#39;s CSS."
 ---
 

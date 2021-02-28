@@ -4,7 +4,7 @@ title: "Console API Reference"
 authors:
   - kaycebasques
 date: 2016-03-21
-updated: 2020-07-10
+
 description: "Use the Console API to write messages to the Console."
 ---
 

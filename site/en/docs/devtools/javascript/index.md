@@ -4,7 +4,7 @@ title: "Get Started with Debugging JavaScript in Chrome DevTools"
 authors:
   - kaycebasques
 date: 2017-01-04
-updated: 2020-07-10
+
 description: "Learn how to use Chrome DevTools to find and fix JavaScript bugs."
 ---
 

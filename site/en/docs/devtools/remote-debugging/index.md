@@ -4,7 +4,7 @@ title: "Get Started with Remote Debugging Android Devices"
 authors:
   - kaycebasques
 date: 2015-04-13
-updated: 2020-08-21
+
 description:
   "Remote debug live content on an Android device from a Windows, Mac, or Linux computer."
 ---
@@ -117,26 +117,16 @@ Below the URL you can find a menu to pause, focus, reload or close a tab.
 Go to the **Elements** panel of your DevTools instance, and hover over an element to highlight it in
 the viewport of your Android device.
 
-TODO inline image
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/y9AaD4jeSmPRG4sQSylM.png", alt="Select Element", width="42", height="40" %}
-
 You can also tap an element on your Android device screen to select it in the **Elements** panel.
-Click **Select Element**
-![Select
-Element](/web/tools/chrome-devtools/remote-debugging/imgs/select-element.png) on your
+Click **Select Element** {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/y9AaD4jeSmPRG4sQSylM.png", alt="Select Element", width="42", height="40" %} on your
 DevTools instance, and then tap the element on your Android device screen. Note that **Select
 Element** is disabled after the first touch, so you need to re-enable it every time you want to use
 this feature.
 
 ### Screencast your Android screen to your development machine {: #screencast }
 
-TODO inline image
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/A5AtRECWSgsdtMZkI6g5.png", alt="Toggle Screencast", width="44", height="44" %}
-
 Click **Toggle Screencast**
-![Toggle Screencast](/web/tools/chrome-devtools/remote-debugging/imgs/toggle-screencast.png) to view
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/A5AtRECWSgsdtMZkI6g5.png", alt="Toggle Screencast", width="44", height="44" %} to view
 the content of your Android device in your DevTools instance.
 
 You can interact with the screencast in multiple ways:

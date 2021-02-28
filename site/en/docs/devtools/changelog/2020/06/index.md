@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 85)"
 authors:
   - jecelynyeen
 date: 2020-07-01
-updated: 2020-08-26
+
 description:
   "Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more."
 ---
@@ -23,7 +23,7 @@ Stylesheets are a new way to create and distribute reusable styles when using [S
 For example, the `h1` styles added with `CSSStyleSheet` (CSSOM APIs) are not editable previously.
 There are editable now in the Styles pane:
 
-TODO get the video
+{% Video src="video/BrQidfK9jaQyIHwdw91aVpkPiib2/ejZpFP0QqyhNy7p32goP.mp4" %}
 
 Chromium issue [#946975][4]
 
@@ -94,6 +94,8 @@ The Computed pane in the Elements panel now displays consistently as a pane acro
 sizes. Previously the Computed pane would merge inside the Styles pane when the width of the
 DevTools' viewport was narrow.
 
+{% Video src="video/BrQidfK9jaQyIHwdw91aVpkPiib2/AsgYdc0jmYE5M8VzHx2O.mp4" %}
+
 Chromium issue [#1073899][21]
 
 ## Bytecode offsets for WebAssembly files {: #wasm }
@@ -112,6 +114,8 @@ When performing copy or cut with no selection in the [Sources panel editor][23],
 or cut the current line content. For example, in the video below, the cursor is at the end of
 line 1. After pressing the cut keyboard shortcut, the entire line is copied to the clipboard and
 deleted.
+
+{% Video src="video/BrQidfK9jaQyIHwdw91aVpkPiib2/gkwPfntrPTxuQkisI1n5.mp4" %}
 
 Chromium issue [#800028][24]
 

@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 76)"
 authors:
   - kaycebasques
 date: 2019-05-28
-updated: 2019-07-15
+
 description: "Autocomplete with CSS values, a new UI for network settings, and more."
 ---
 

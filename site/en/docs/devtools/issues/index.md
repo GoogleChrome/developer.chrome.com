@@ -4,7 +4,7 @@ title: "Find And Fix Problems With The Chrome DevTools Issues Tab"
 authors:
   - samdutton
 date: 2020-05-14
-updated: 2020-07-10
+
 description: "Use the Issues Tab to find and fix problems with your website."
 ---
 

@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 75)"
 authors:
   - kaycebasques
 date: 2019-04-17
-updated: 2019-04-17
+
 description:
   "Meaningful autocomplete preset values, clear site data from the Command Menu, and more."
 ---

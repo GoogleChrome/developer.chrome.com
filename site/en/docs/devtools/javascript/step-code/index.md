@@ -6,7 +6,7 @@ authors:
   - pbakaus
   - kaycebasques
 date: 2015-04-13
-updated: 2020-07-10
+
 description: "By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening."
 ---
 

@@ -4,7 +4,7 @@ title: "Debug Progressive Web Apps"
 authors:
   - kaycebasques
 date: 2016-07-25
-updated: 2020-07-10
+
 description:
   "Use the Application panel to inspect, modify, and debug web app manifests, service workers, and
   service worker caches."

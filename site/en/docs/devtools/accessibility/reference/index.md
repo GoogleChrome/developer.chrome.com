@@ -4,7 +4,7 @@ title: "Accessibility Reference"
 authors:
   - kaycebasques
 date: 2018-07-13
-updated: 2020-07-14
+
 description: "A comprehensive reference of accessibility features in Chrome DevTools."
 ---
 

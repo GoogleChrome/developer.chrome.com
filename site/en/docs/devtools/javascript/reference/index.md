@@ -4,7 +4,7 @@ title: "JavaScript Debugging Reference"
 authors:
   - kaycebasques
 date: 2017-01-04
-updated: 2020-07-10
+
 description:
   "Discover new debugging workflows in this comprehensive reference of Chrome DevTools debugging
   features."

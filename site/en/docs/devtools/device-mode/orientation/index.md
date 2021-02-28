@@ -4,7 +4,7 @@ title: "Simulate Device Orientation With Chrome DevTools"
 authors:
   - kaycebasques
 date: 2018-12-18
-updated: 2020-07-10
+
 description: "Open the Sensors tab and go to the &#34;Orientation&#34; section."
 ---
 

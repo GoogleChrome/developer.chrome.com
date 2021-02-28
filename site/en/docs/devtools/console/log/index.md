@@ -4,7 +4,7 @@ title: "Get Started With Logging Messages In The Console"
 authors:
   - kaycebasques
 date: 2019-04-19
-updated: 2020-07-10
+
 description: "Learn how to log messages to the Console."
 ---
 
