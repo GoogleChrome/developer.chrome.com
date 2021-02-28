@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Change Chrome DevTools Placement (Undock, Dock To Bottom, Dock To Left)"
+title: "Change placement: undock, dock to bottom, dock to left (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2019-05-14

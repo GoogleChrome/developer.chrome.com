@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Enable Dark Theme In Chrome DevTools"
+title: "Enable dark theme (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2019-05-03

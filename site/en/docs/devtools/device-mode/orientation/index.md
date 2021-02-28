@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Simulate Device Orientation With Chrome DevTools"
+title: "Simulate device orientation (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2018-12-18

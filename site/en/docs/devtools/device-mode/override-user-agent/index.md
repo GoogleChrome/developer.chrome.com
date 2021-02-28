@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Override The User Agent String From Chrome DevTools"
+title: "Override the user agent string (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2018-12-14

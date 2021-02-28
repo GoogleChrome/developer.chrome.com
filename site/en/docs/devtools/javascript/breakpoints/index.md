@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "How To Pause Your Code With Breakpoints In Chrome DevTools"
+title: "Pause your code with breakpoints (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2017-02-03

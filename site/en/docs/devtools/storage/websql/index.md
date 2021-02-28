@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "View Web SQL Data With Chrome DevTools"
+title: "View Web SQL data (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2019-03-25

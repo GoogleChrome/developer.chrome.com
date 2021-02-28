@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Get Started With Viewing And Changing CSS"
+title: "View and change CSS (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2017-06-08

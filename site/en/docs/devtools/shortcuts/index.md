@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Chrome DevTools Keyboard Shortcuts"
+title: "Keyboard shortcuts (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2015-04-29

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Get Started with Remote Debugging Android Devices"
+title: "Remote debug Android devices (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2015-04-13

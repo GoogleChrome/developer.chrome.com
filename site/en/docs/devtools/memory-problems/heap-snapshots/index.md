@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "How to Record Heap Snapshots"
+title: "Record heap snapshots (Chrome DevTools)"
 authors:
   - megginkearney
 date: 2015-06-08

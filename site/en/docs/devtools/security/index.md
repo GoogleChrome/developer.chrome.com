@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Understand Security Issues With Chrome DevTools"
+title: "Understand security issues (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2015-12-21

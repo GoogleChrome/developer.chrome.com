@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Get Started With Running JavaScript In The Console"
+title: "Run JavaScript in the Console (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2018-04-18

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Get Started With Logging Messages In The Console"
+title: "Log messages in the Console (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2019-04-19
