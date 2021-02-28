@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Log messages in the Console (Chrome DevTools)"
+title: "Log messages in the Console"
 authors:
   - kaycebasques
 date: 2019-04-19

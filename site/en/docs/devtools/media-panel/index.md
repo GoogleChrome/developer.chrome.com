@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "View and debug media players information (Chrome DevTools)"
+title: "View and debug media players information"
 authors:
   - jecelynyeen
 date: 2020-08-20

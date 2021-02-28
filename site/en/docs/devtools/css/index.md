@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "View and change CSS (Chrome DevTools)"
+title: "View and change CSS"
 authors:
   - kaycebasques
 date: 2017-06-08

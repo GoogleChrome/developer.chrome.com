@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Watch JavaScript values in real-time with Live Expressions (Chrome DevTools)"
+title: "Watch JavaScript values in real-time with Live Expressions"
 authors:
   - kaycebasques
 date: 2019-04-18

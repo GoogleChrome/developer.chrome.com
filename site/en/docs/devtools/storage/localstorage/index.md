@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "View and edit local storage (Chrome DevTools)"
+title: "View and edit local storage"
 authors:
   - kaycebasques
 date: 2019-03-14

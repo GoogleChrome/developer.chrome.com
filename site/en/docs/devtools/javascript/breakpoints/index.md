@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Pause your code with breakpoints (Chrome DevTools)"
+title: "Pause your code with breakpoints"
 authors:
   - kaycebasques
 date: 2017-02-03

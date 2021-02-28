@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Force print preview mode (Chrome DevTools)"
+title: "Force print preview mode"
 authors:
   - kaycebasques
 date: 2018-12-14

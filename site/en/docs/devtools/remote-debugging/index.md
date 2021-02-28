@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Remote debug Android devices (Chrome DevTools)"
+title: "Remote debug Android devices"
 authors:
   - kaycebasques
 date: 2015-04-13

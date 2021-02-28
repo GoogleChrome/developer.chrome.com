@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Simulate mobile devices with Device Mode (Chrome DevTools)"
+title: "Simulate mobile devices with Device Mode"
 authors:
   - kaycebasques
 date: 2015-04-13

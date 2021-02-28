@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Edit the DOM (Chrome DevTools)"
+title: "Edit the DOM"
 authors:
   - kaycebasques
   - megginkearney

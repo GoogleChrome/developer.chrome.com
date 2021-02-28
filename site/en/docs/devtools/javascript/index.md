@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Debug JavaScript (Chrome DevTools)"
+title: "Debug JavaScript"
 authors:
   - kaycebasques
 date: 2017-01-04

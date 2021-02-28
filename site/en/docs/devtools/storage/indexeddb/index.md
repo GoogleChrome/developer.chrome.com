@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "View and change IndexedDB data (Chrome DevTools)"
+title: "View and change IndexedDB data"
 authors:
   - kaycebasques
 date: 2019-03-18

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Analyze runtime performance (Chrome DevTools)"
+title: "Analyze runtime performance"
 authors:
   - kaycebasques
 date: 2017-04-06

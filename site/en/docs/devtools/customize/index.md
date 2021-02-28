@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Customization (Chrome DevTools)"
+title: "Customization"
 authors:
   - kaycebasques
 date: 2019-05-02

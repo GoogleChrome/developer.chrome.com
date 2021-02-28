@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Sources panel overview (Chrome DevTools)"
+title: "Sources panel overview"
 authors:
   - kaycebasques
 date: 2018-01-09
