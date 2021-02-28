@@ -30,8 +30,7 @@ Future versions of Chrome will support more issue types.
 2.  [Open DevTools][5].
 3.  Click the **Go to Issues** button in the yellow warning bar.
 
-    ![Chrome DevTools screenshot showing yellow warning bar for Issues 
-    detected.](/web/tools/chrome-devtools/issues/images/issues-detected.png)
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/gCmzHUEJiNXOrvIB0fZg.png", alt="Chrome DevTools screenshot showing yellow warning bar for Issues detected.", width="800", height="350" %}
 
     Alternatively, select **Issues** from the **More tools** menu.
 
@@ -44,8 +43,7 @@ Future versions of Chrome will support more issue types.
     You'll notice that issues reported in the Console (such as the cookie warnings here) are quite
     hard to understand. It's not clear what needs to be done to fix the issues reported.
 
-    ![Chrome DevTools screenshot showing Issues tab with two 
-       cookie issues.](/web/tools/chrome-devtools/issues/images/issues-tab-after-reload.png)
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TjbgfCTF4wLnhifvpiRc.png", alt="Chrome DevTools screenshot showing Issues tab with two cookie issues.", width="800", height="529" %}
 
 ## View items in the Issues tab {: #view-issues }
 

@@ -330,5 +330,26 @@
       "family": "Kearney"
     },
     "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/wKFYQ94ArLlegTGeElAg.jpg"
+  },
+  "flaviocopes": {
+    "name": {
+      "given": "Flavio",
+      "family": "Copes"
+    },
+    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/Lr9pGxMHt7A5UizJ2Ogn.jpg"
+  },
+  "fawazm": {
+    "name": {
+      "given": "Fawaz",
+      "family": "Mohammad"
+    },
+    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/QDNnPHloDqEwqRW5ASvt.jpg"
+  },
+  "samdutton": {
+    "name": {
+      "given": "Sam",
+      "family": "Dutton"
+    },
+    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/Oci8M3M98YmwQJGHkHS9.jpg"
   }
 }
