@@ -30,6 +30,8 @@ Previously known as the Event Conversion Measurement API.
 * Find out more: [Getting started with Trust Tokens](https://web.dev/trust-tokens/)
 
 ## Federated Learning of Cohorts (FLoC)
+* Origin trial proposed to begin in Chrome 89. See [github.com/WICG/floc/issues/25](https://github.com/WICG/floc/issues/25) 
+for more detail.
 * [API proposal](https://github.com/WICG/floc) is under discussion with 
 [WICG](https://www.w3.org/community/wicg/) and interest groups.
 * [GitHub](https://github.com/WICG/floc): see [issues](https://github.com/WICG/floc/issues) for 

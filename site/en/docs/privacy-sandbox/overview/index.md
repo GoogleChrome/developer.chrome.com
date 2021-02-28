@@ -24,17 +24,18 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 {% endAside %}
 
-The web does not meet today’s expectations for user privacy and choice.
+The web today does not meet user expectations for privacy and choice.
 
-When you visit a website you're unlikely to know what third parties involved and what they're doing 
-with your data. Even publishers and web developers may not understand the entire third-party supply 
-chain.
+When you visit a website you're unlikely to know what third parties are involved and what they're 
+doing with your data. Even publishers and web developers may not understand the entire third-party 
+supply chain.
 
 The Privacy Sandbox initiative has two core aims:
-* Work with the web community to develop replacement solutions for third-party cookies and covert 
-tracking techniques.
+* Work with the web community to develop replacement solutions to support legitimate third-party use 
+cases and business models without enabling users to be tracked across sites.
 * Phase out support for [third-party cookies](https://web.dev/samesite-cookies-explained/) when new 
-solutions are in place. ([First party cookies](https://web.dev/samesite-cookies-explained/#what-are-first-party-and-third-party-cookies) are unaffected.)
+solutions are in place. ([First party cookies](https://web.dev/samesite-cookies-explained/#what-are-first-party-and-third-party-cookies) 
+are unaffected.)
 
 
 ## What are the Privacy Sandbox use cases?
@@ -83,10 +84,14 @@ information with the third-party service or the website, unless the user explici
 WebID enables federated sign-in without the use of redirects, pop-ups or third-party cookies which 
 can be used to identify and track users across sites.
 
-End to end flows will use multiple solutions. The example below gives a simplified view of a
-click-based advertising flow with customized audience selection.
+End-to-end flows will use multiple solutions. 
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/G8X0dMdSaKQKkX048y9e.png", alt="Simplified view of a click-based advertising flow with customized audience selection, using Privacy Sandbox APIs", width="800", height="265" %}
+The example below gives a simplified view of a click-based advertising flow with customized audience 
+selection.
+
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/9Zpa9oYNNal5sqAU5hpW.png", 
+  alt="Simplified view of a click-based advertising flow with customized audience selection using Privacy Sandbox APIs", width="800", 
+  height="265" %}
 
 
 ## Who is working on the Privacy Sandbox?
@@ -94,7 +99,7 @@ click-based advertising flow with customized audience selection.
 By early 2021 there were: 
 * 30+ Privacy Sandbox proposals offered by Chrome and others.
 * 400+ participants who joined W3C groups to provide input including the [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) and the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
-* 5 API implementations available for testing in Chrome.
+* Five API implementations available for testing in Chrome.
 
 
 ## Is the Privacy Sandbox ready yet?
