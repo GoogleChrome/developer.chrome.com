@@ -2,9 +2,9 @@
 layout: 'layouts/doc-post.njk'
 title: Is it ready yet?
 subhead: API discussion, origin trials, demos, tools and resources.
-description: Implementation status for Privacy Sandbox APIs
-date: 2021-02-19
-updated: 2021-02-19
+description: Implementation status for Privacy Sandbox APIs.
+date: 2021-02-28
+updated: 2021-02-28
 authors:
   - samdutton
 ---

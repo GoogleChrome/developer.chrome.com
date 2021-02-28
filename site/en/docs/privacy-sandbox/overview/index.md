@@ -2,9 +2,9 @@
 layout: layouts/doc-post.njk
 title: What is the Privacy Sandbox?
 subhead: The Privacy Sandbox is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms.
-description: What's in it, who's behind it, and what it's for.
-date: 2021-02-19
-updated: 2021-02-19
+description: "What's in it, who's behind it, and what it's for."
+date: 2021-02-28
+updated: 2021-02-28
 authors:
 	- samdutton
 ---
@@ -18,59 +18,68 @@ authors:
 
 {% Aside 'warning' %}
 
-[For Googlers, February 2021.]
+[For Googlers, March 2021.]
 
 This document is a work in progress, unfinished and not to be shared externally.
-The aim is to include the following textual content in this page in 300 words or less. 
-
-Potentially, these (or similar) could be headings.
-
-* What are the requirements that need to be met (by the Privacy Sandbox)?
-* What are the problems that need to be addressed?
-* What's wrong with existing solutions: why do we need something new?
-* In concrete terms, what is 'the Privacy Sandbox'? 
-* What the Privacy Sandbox is not.
-* How will the Privacy Sandbox address requirements and solve problems?
-* Who is working on the Privacy Sandbox?
-* How are these proposals developed?
-* What is the timeframe?
-* How to share feedback and comments
-* How to get involved
-
-Text below is temporary content taken from [web.dev/digging-into-the-privacy-sandbox](https://web.dev/digging-into-the-privacy-sandbox/).
 
 {% endAside %}
 
+The web does not meet today’s expectations for user privacy and choice.
 
-[**TEMPORARY PLACEHOLDER CONTENT**]
+The Privacy Sandbox initiative announced in 2019 has two core aims:
+* Work with the web community to develop replacement solutions for third-party cookies and covert 
+tracking techniques.
+* Phase out support for [third-party cookies](https://web.dev/samesite-cookies-explained/) when new 
+solutions are in place. ([First party cookies](https://web.dev/samesite-cookies-explained/#what-are-first-party-and-third-party-cookies) are unaffected.)
 
 
-## The current state of privacy on the web
+## What are the Privacy Sandbox use cases?
 
-Websites use services from other companies to provide analytics, serve video and do lots of other useful stuff. Composability is one of the web's superpowers. Most notably, ads are included in web pages via third-party JavaScript and iframes. Ad views, clicks and conversions are tracked via third-party cookies and scripts.
+Chrome and other ecosystem stakeholders have offered more than 30 proposals to date, but explanations of the key proposals are linked to below. Most proposals can be found in the public resources of W3C groups.
 
-However, when you visit a website you may not be aware of the third parties involved and what they're doing with your data. Even publishers and web developers may not understand the entire third-party supply chain.
+### 🍪 First-party context
+* SameSite cookie changes: 
+* First Party Sets: 
 
-Ad selection, conversion measurement, and other use cases currently rely on establishing stable cross-site user identity. Historically this has been done with third-party cookies, but browsers have begun to restrict access to these cookies. There has also been an increase in the use of other mechanisms for cross-site user tracking, such as covert browser storage, device fingerprinting, and requests for personal information such as email addresses.
+### Audience selection
+* FLoC: interest groups
+* FLEDGE: remarketing
 
-This is a dilemma for the web. How can legitimate third-party use cases be supported without enabling users to be tracked across sites?
+### 📊 Measurement and attribution
+* Event Attribution API: attributing ad clicks and ad views. Previously known as the Event Conversion Measurement API.
+* Reach Measurement API: measure
+* Aggregation Service
 
-In particular, how can websites fund content by enabling third parties to show ads and measure ad performance—but not allow individual users to be profiled? How can advertisers and site owners evaluate a user's authenticity without resorting to dark patterns such as device fingerprinting?
+### 🚨 Fraud detection
+* Trust Tokens: convey trust in a user from one context to another.
 
-The way things work at the moment can be problematic for the entire web ecosystem, not just users. For publishers and advertisers, tracking identity and using a variety of non-standard third-party solutions can add to technical debt, code complexity, and data risk. Users, developers, publishers, and advertisers should be confident that the web is protecting user privacy choices.
+### Limiting data collection
+* Privacy Budget
+* Gnatcatcher (IP Privacy)
 
-Advertising is a core web business model for the internet, but advertising has to work for everyone. Which brings us to the Privacy Sandbox's mission: to create a thriving web ecosystem that is respectful of users and private by default.
+### 👤 Identity
+* WebID (Federated Identity)
 
-## Introducing the Privacy Sandbox
+End to end flows will use multiple solutions. The example below gives a simplified view of click-based advertising flow with customized audience selection 
 
-The Privacy Sandbox introduces a set of privacy-preserving APIs to support business models that fund the open web in the absence of tracking mechanisms like third-party cookies.
 
-The Privacy Sandbox APIs require web browsers to take on a new role. Rather than working with limited tools and protections, the APIs enable the user's browser to act on the user's behalf—locally, on their device—to protect the user's identifying information as they navigate the web. The APIs enable use cases such as ad selection and conversion measurement, without revealing individual private and personal information. In engineering terms a sandbox is a protected environment; a key principle of the Privacy Sandbox is that a user's personal information should be protected and not shared in a way that lets the user be identified across sites.
 
-This is a shift in direction for browsers. The Privacy Sandbox's vision of the future has browsers providing specific tools to satisfy specific use cases, while preserving user privacy. A Potential Privacy Model for the Web sets out core principles behind the APIs:
 
-To establish the range of web activity across which the user's browser can let websites treat a person as having a single identity.
-To identify the ways in which information can move across identity boundaries without compromising that separation.
+
+
+
+## Has there been any progress?
+
+By early 2021 there were: 
+* 30+ Privacy Sandbox proposals offered by Chrome and others.
+* 400+ participants who joined W3C groups to provide input including the [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) and the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
+* 5 API implementations already available for testing in Chrome.
+
+
+## Who is behind the Privacy Sandbox?
+[TBC]
+
+
 
 ## Find out more
 

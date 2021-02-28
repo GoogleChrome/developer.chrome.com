@@ -4,9 +4,9 @@ title: 'Trust Tokens'
 subhead: >
   Trust Tokens is a new API to help combat fraud and distinguish bots from real humans, without passive tracking.
 description: >
-  Trust Tokens enable an origin to issue cryptographic tokens to a user it trusts. The tokens are stored by the user's browser. The browser can then use the tokens in other contexts to evaluate the user's authenticity. The Trust Token API enables trust of a user in one context to be conveyed to another context without identifying the user or linking the two identities.
-date: 2021-02-19
-updated: 2021-02-19
+  Trust Tokens enables trust of a user in one context to be conveyed to another context, without identifying the user or linking the two identities. The API enables an origin to issue cryptographic tokens to a user it trusts. The tokens are stored by the user's browser. The browser can then use the tokens in other contexts to evaluate the user's authenticity. 
+date: 2021-02-28
+updated: 2021-02-28
 authors:
   - samdutton
 ---

@@ -5,8 +5,8 @@ subhead: >
   Measure when an ad click leads to a conversion, without using cross-site identifiers.
 description: >
   The Event Attribution Reporting API enables the correlation of an event on a publisher's website with a subsequent conversion on an advertiser site without involving mechanisms that can be used to recognize a user across sites.
-date: 2021-02-19
-updated: 2021-02-19
+date: 2021-02-28
+updated: 2021-02-28
 authors:
   - maudnalpas
 ---

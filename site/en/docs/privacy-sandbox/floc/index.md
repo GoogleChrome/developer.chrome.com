@@ -8,9 +8,9 @@ description: >
  web, their browser is assigned to an "interest cohort" along with thousands of others with a 
  similar browsing history. This is done without sharing individual browsing data with the browser 
  vendor or anyone else. Advertisers (sites that pay for advertisements) can include code on their 
- pages to provide access to cohort data for their ad-tech platforms. 
-date: 2021-02-19
-updated: 2021-02-19
+ pages to provide access to cohort data for their ad-tech platforms.
+date: 2021-02-28
+updated: 2021-02-28
 authors:
   - samdutton
 ---
