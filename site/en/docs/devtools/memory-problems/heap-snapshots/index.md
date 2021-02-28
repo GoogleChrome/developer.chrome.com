@@ -125,7 +125,7 @@ which are referenced from one with a yellow background.
 - **(array, string, number, regexp)** – a list of object types with properties which reference an
   Array, String, Number or regular expression.
 - **(compiled code)** – simply, everything related to compiled code. Script is similar to a function
-  but corresponds to a <script> body. SharedFunctionInfos (SFI) are objects standing between
+  but corresponds to a `<script>` body. SharedFunctionInfos (SFI) are objects standing between
   functions and compiled code. Functions are usually have a context, while SFIs do not.
 - **HTMLDivElement**, **HTMLAnchorElement**, **DocumentFragment** etc–references to elements or
   document objects of a particular type referenced by your code.
