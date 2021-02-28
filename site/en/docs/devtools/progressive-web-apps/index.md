@@ -21,7 +21,7 @@ This guide only discusses the Progressive Web App features of the **Application*
 looking for help on the other panes, check out the last section of this guide, [Other Application
 panel guides][2].
 
-## TL;DR {: #tldr }
+## Summary {: #summary }
 
 - Use the **Manifest** pane to inspect your web app manifest and trigger Add to Homescreen events.
 - Use the **Service Workers** pane for a whole range of service-worker-related tasks, like

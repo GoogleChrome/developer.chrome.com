@@ -11,7 +11,7 @@ Debug WebViews in your native Android apps using Chrome Developer Tools.
 On Android 4.4 (KitKat) or later, use DevTools to debug WebView content in native Android
 applications.
 
-## TL;DR {: #tldr }
+## Summary {: #summary }
 
 - Enable WebView debugging in your native Android app; debug WebViews in Chrome DevTools.
 - Access list of debug-enabled WebViews via **chrome://inspect**.

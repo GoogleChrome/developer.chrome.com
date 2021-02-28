@@ -14,7 +14,7 @@ Host a site on a development machine web server, then access the content from an
 With a USB cable and Chrome DevTools, you can run a site from a development machine and then view
 the site on an Android device.
 
-## TL;DR {: #tldr }
+## Summary {: #summary }
 
 - Port forwarding enables you to view content from your development machine's web server on your
   Android device.
