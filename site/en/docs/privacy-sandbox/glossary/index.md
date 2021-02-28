@@ -5,11 +5,13 @@ subhead: Privacy Sandbox articles and documentation assume a knowledge of concep
 description: Simple explanations of key concepts.
 date: 2021-02-28 
 updated: 2021-02-28 
-authors: 
-	- samdutton 
+authors:
+  - samdutton 
 ---
 
-{% Aside %} [Let us know](.) [URL TBC] if something is missing! {% endAside %}
+{% Aside %}
+[Let us know](.) [URL TBC] if something is missing!
+{% endAside %}
 
 ## Click-through rate (CTR) {: #ctr }
 
@@ -47,7 +49,7 @@ See [Top-Level Domain](#tld) and [eTLD](#etld).
 'Effective top level domains' are defined by the [Public Suffix List](https://publicsuffix.org/list/). 
 For example:
 
-```
+```text
 text co.uk 
 appspot.com 
 glitch.me
@@ -94,7 +96,7 @@ developer.chrome.com and includes resources from that site. Requests for those f
 are called 'first-party requests', and [cookies](#cookies) stored by developer.chrome.com are called 
 [first-party cookies](#first-party-cookies). See also [Third-party](#third-party).
 
-* First-party cookie {: #first-party-cookie } 
+## First-party cookie {: #first-party-cookie } 
 
 [Cookie](#cookie) stored by a website while a user is on the site itself. For example: an online 
 store might ask a browser to store a cookie in order to retain shopping cart details for a user 
@@ -117,7 +119,7 @@ Arbitrary number used once only in cryptographic communication.
 ## Origin 
 
 The origin of a request, including the server name but no path information. For example:
-`https://web.dev`.
+`https://web.dev`
 
 ## Passive surface {: #passive-surface }
 
@@ -136,7 +138,7 @@ are ones that put ads on their websites.
 
 ## Reach
 
-The total number of people who see an ad.
+The total number of people who see an ad (or who visit a web page that displays the ad).
 
 ## Remarketing
 
@@ -159,7 +161,7 @@ website foo.com might use analytics code from google-analytics.com (via JavaScri
 use.typekit.net (via a link element) and a video from vimeo.com (in an iframe). See also
 [First-party](#first-party).
 
-* Third-party cookie {: #third-party-cookie}
+## Third-party cookie {: #third-party-cookie}
 
 [Cookie](#cookie) stored by a third-party service. For example, a video website might include a 
 **Watch Later** button in their embedded player, to enable a user to add a video to their wishlist 
@@ -175,9 +177,11 @@ maps.google.com are just subdomains of google.com (which is the [eTLD + 1](#etld
 
 ## .well-known
 
-It can be useful to access policy or other information about a host _before_ making a request. For
+It can be useful to add redirects to a website from standardized URLs. For example, password 
+managers can make it easier for users to update passwords if a website sets a redirect from 
+`/.well-known/change-password` to the change password page of the site. In addition, it can be 
+useful to access policy or other information about a host _before_ making a request. For
 example, robots.txt tells web crawlers which pages to visit and which pages to ignore. IETF
 [RFC8615](https://tools.ietf.org/html/rfc8615) outlines a standardized way to make site-wide
 metadata accessible in standard locations in a /.well-known/ subdirectory. You can see a list of
-these at
-[iana.org/assignments/well-known-uris/well-known-uris.xhtml](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml).
+these at [iana.org/assignments/well-known-uris/well-known-uris.xhtml](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml).

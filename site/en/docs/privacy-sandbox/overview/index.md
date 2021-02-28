@@ -79,7 +79,7 @@ to certification and auditing.
 
 ### 🏷 Identity
 * WebID (Federated Identity): Support federated identity (where a user can sign into a website 
-through a third-party service) without sharing the user’s email address or other identifying 
+through a third-party service) without sharing the user's email address or other identifying 
 information with the third-party service or the website, unless the user explicitly agrees to do so. 
 WebID enables federated sign-in without the use of redirects, pop-ups or third-party cookies which 
 can be used to identify and track users across sites.
