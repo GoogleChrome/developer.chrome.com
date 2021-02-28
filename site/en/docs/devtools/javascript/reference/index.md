@@ -116,9 +116,7 @@ debugging.
 
 You _could_ step through all the lines, but that can be tedious. You _could_ set a line-of-code
 breakpoint on the line you're interested in and then press **Resume Script Execution**
-![Resume Script
-Execution](/web/tools/chrome-devtools/images/resume-script-execution.png), but
-there's a faster way.
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ix91vDLx4PdN9W3x8wOa.png", alt="Resume script execution", width="26", height="20" %}, but there's a faster way.
 
 Right-click the line of code that you're interested in, and select **Continue to here**. DevTools
 runs all of the code up to that point, and then pauses on that line.
@@ -165,11 +163,9 @@ executes the script up until the next breakpoint, if any.
 #### Force script execution {: #force-resume }
 
 To ignore all breakpoints and force your script to resume execution, click and hold **Resume Script
-Execution** ![Resume Script
-Execution](/web/tools/chrome-devtools/images/resume-script-execution.png)
+Execution** {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ix91vDLx4PdN9W3x8wOa.png", alt="Resume script execution", width="26", height="20" %}
 and then select **Force script execution**
-![Force script
-execution](/web/tools/chrome-devtools/javascript/imgs/force-script-execution.png).
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4rCLPqjmTkTNXXXBA0GQ.png", alt="Force script execution", width="20", height="21" %}.
 
 {% Img src="image/admin/Bgu0IMoqiDsHm8LbCDjK.png", alt="Selecting 'Force script execution'.", width="800", height="561" %}
 
@@ -311,15 +307,13 @@ expression.
 **Figure 15**. The Watch pane, outlined in blue
 
 - Click **Add Expression**
-  ![Add
-Expression](/web/tools/chrome-devtools/javascript/imgs/add-expression.png) to create a new
-  watch expression.
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/QU6fmfF1UA1ckrB3tklD.png", alt="Add expression", width="20", height="20" %}
+  to create a new watch expression.
 - Click **Refresh** {% Img src="image/admin/UzPRUGsZGyxITgev7q5K.png", alt="Refresh", width="24", height="24" %} to refresh
   the values of all existing expressions. Values automatically refresh while stepping through code.
 - Hover over an expression and click **Delete Expression**
-  ![Delete
-Expression](/web/tools/chrome-devtools/javascript/imgs/delete-expression.png) to delete
-  it.
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iWsdoHnowdltMpnOfSJG.png", alt="Delete expression", width="20", height="11" %}
+  to delete it.
 
 ## Make a minified file readable {: #format }
 

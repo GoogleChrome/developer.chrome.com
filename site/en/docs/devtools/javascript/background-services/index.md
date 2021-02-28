@@ -69,7 +69,7 @@ when DevTools is not open:
 
     Figure 5. The Background Sync pane.
 
-4.  Click **Record** ![Record](/web/tools/chrome-devtools/images/shared/record.png). After
+4.  Click **Record** {% Img src="image/admin/jvgbyEZPbYfaxB255rCm.png", alt="Record", width="24", height="24" %}. After
     triggering some Background Sync activity, DevTools logs the events to the table.
 
     {% Img src="image/admin/tdWi9XbJMOiF8FEihe0X.png", alt="A log of events in the Background Sync pane.", width="800", height="424" %}
@@ -96,7 +96,7 @@ even when DevTools is not open:
 
     Figure 8. The Notifications pane.
 
-4.  Click **Record** ![Record](/web/tools/chrome-devtools/images/shared/record.png). After
+4.  Click **Record** {% Img src="image/admin/jvgbyEZPbYfaxB255rCm.png", alt="Record", width="24", height="24" %}. After
     triggering some Notifications activity, DevTools logs the events to the table.
 
     {% Img src="image/admin/TGjY2BFbfsOWXuGdxvxW.png", alt="A log of events in the Notifications pane.", width="800", height="424" %}
@@ -124,7 +124,7 @@ DevTools is not open:
 
     Figure 11. The Push Messaging pane.
 
-4.  Click **Record** ![Record](/web/tools/chrome-devtools/images/shared/record.png). After
+4.  Click **Record** {% Img src="image/admin/jvgbyEZPbYfaxB255rCm.png", alt="Record", width="24", height="24" %}. After
     triggering some Push Message activity, DevTools logs the events to the table.
 
     {% Img src="image/admin/cpKYRm8ioL77xOpKg7To.png", alt="A log of events in the Push Messaging pane.", width="800", height="389" %}
@@ -133,7 +133,7 @@ DevTools is not open:
 
 5.  Click an event to view its details in the space below the table.
 
-    ![Viewing the details of an event in the Push Messaging pane.](/web/tools/chrome-devtools/javascript/imgs/pushdetails.png)
+    {% Img src="image/admin/ZG5sVS5QkS30tRGieBoo.png", alt="Viewing the details of an event in the Push Messaging pane.", width="800", height="389" %}
 
     Figure 13. Viewing the details of an event in the Push Messaging pane.
 

@@ -47,8 +47,8 @@ There are two ways to open the Animation Inspector:
 - Through the Main Menu:
 
   - Click **More**
-    ![More](https://developers.google.com/web/tools/chrome-devtools/images/shared/more.png) to open
-    the Main Menu.
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MU5oyGVk9rFUORcbptoZ.png", alt="More", width="6", height="26" %}
+    to open the Main Menu.
   - Navigate to the **More tools** sub-menu.
   - Select **Animations**:  
     {% Img src="image/admin/VVGz6geZHi4jFJuuUxoT.png", alt="Animations via Main Menu", width="422", height="199" %}
@@ -85,8 +85,7 @@ Once you've captured an animation, there are a few ways to replay it:
   pane) and press the **replay** button
   ({% Img src="image/admin/FMABaWsGPXg627w2Ip0d.png", alt="replay button", width="46", height="44" %}). The
   animation is replayed in the viewport. Click on the **animation speed** buttons
-  (![animation speed 
-buttons](/web/tools/chrome-devtools/inspect-styles/imgs/animation-speed-buttons.png))
+  {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/0TdVNMElxodMWBFqfRze.png", alt="Animation speed buttons", width="254", height="50" %}
   to change the preview speed of the currently selected Animation Group. You can use the red
   vertical bar to change your current position.
 - Click and drag the red vertical bar to scrub the viewport animation.
@@ -101,8 +100,7 @@ In the **Details** pane each individual animation gets its own row.
 Hover over an animation to highlight it in the viewport. Click on the animation to select it in the
 **Elements** panel.
 
-![hover over animation to highlight it in 
-viewport](/web/tools/chrome-devtools/inspect-styles/imgs/highlight-animation.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/cwfsRGVqdUx09qYmZGzu.png", alt="Hovering over an animation to highlight it in viewport", width="800", height="431" %}
 
 The leftmost, darker section of an animation is its definition. The right, more faded section
 represents iterations. For example, in the screenshot below, sections two and three represent

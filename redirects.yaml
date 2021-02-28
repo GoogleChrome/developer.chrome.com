@@ -85,6 +85,15 @@ redirects:
 - from: /docs/devtools/console/expressions/
   to: /docs/devtools/console/javascript/
 
+- from: /docs/devtools/evaluate-performance/timeline-tool/
+  to: /docs/devtools/evaluate-performance/reference/
+
+- from: /docs/devtools/inspect-styles/edit-styles/
+  to: /docs/devtools/css/reference/
+
+- from: /docs/devtools/javascript/pretty-print/
+  to: /docs/devtools/javascript/reference/#format
+
 # TODO(kaycebasques): Update these old DevTools redirects
 
 - from: /devtools/
