@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "View, edit, and delete cookies (Chrome DevTools)"
+title: "View, edit, and delete cookies"
 authors:
   - kaycebasques
 date: 2015-04-13

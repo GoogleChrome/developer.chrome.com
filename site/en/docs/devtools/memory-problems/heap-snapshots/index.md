@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Record heap snapshots (Chrome DevTools)"
+title: "Record heap snapshots"
 authors:
   - megginkearney
 date: 2015-06-08

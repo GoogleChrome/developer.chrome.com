@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "View page resources (Chrome DevTools)"
+title: "View page resources"
 authors:
   - kaycebasques
 date: 2015-04-13

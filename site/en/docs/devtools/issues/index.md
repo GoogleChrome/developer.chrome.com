@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Find and fix problems with the Issues tab (Chrome DevTools)"
+title: "Find and fix problems with the Issues tab"
 authors:
   - samdutton
 date: 2020-05-14

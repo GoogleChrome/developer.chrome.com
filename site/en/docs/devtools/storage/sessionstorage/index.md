@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "View and edit session storage (Chrome DevTools)"
+title: "View and edit session storage"
 authors:
   - kaycebasques
 date: 2019-03-14

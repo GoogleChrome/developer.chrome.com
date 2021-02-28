@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Run commands in the Command Menu (Chrome DevTools)"
+title: "Run commands in the Command Menu"
 authors:
   - kaycebasques
 date: 2019-04-09
