@@ -71,11 +71,12 @@ On large sites, the Console can quickly get flooded with irrelevant messages. Us
 Sidebar** to reduce the noise and focus on the messages that are important to you.
 
 {% Img src="image/admin/Zh583Lcb57sNBWDGBas3.png", alt="Using the Console Sidebar to show error messages only", width="800", height="551" %}
+
 **Figure 2**. Using the Console Sidebar to show error messages only
 
 The Console Sidebar is hidden by default. Click **Show Console Sidebar**
-![Show Console
-Sidebar](/web/updates/images/2017/11/show-console-sidebar.png) to show it.
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iq3lqE16ilO9zTji6jEF.png", alt="Show Console Sidebar", width="30", height="26" %}
+to show it.
 
 Related features:
 
@@ -88,11 +89,13 @@ The Console now groups similar messages together by default. For example, in Fig
 instances of the message `[Violation] Avoid using document.write()`.
 
 {% Img src="image/admin/uw6PiqfqFdJAlL7iScXm.png", alt="An example of the Console grouping similar messages together", width="800", height="493" %}
+
 **Figure 3**. An example of the Console grouping similar messages together
 
 Click on a group to expand it and see each instance of the message.
 
 {% Img src="image/admin/jzkZ5NxwQDLZlddAI7sS.png", alt="An example of an expanded group of Console messages", width="800", height="505" %}
+
 **Figure 4**. An example of an expanded group of Console messages
 
 Uncheck the **Group Similar** checkbox to disable this feature.
@@ -110,12 +113,6 @@ time. Sorry!
 This feature is shipping in Chrome 65, which will land approximately 6 weeks after Chrome 64. Check
 out [Local Overrides][11] to learn more. If you're on Windows or Mac, you can try Chrome 65 now by
 downloading [Chrome Canary][12].
-
-- [CSS and JS code coverage][13]
-- [Full-page screenshots][14]
-- [Block requests][15]
-- [Step over async await][16]
-- [Unified Command Menu][17]
 
 [1]: #perf-monitor
 [2]: #console-sidebar

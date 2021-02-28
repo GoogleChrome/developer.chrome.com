@@ -93,6 +93,7 @@ in Chrome 63, now you can. Try it now:
 6.  Write something in the **Push** text box.
 
     {% Img src="image/admin/UQm1GplN9Vont3jI4wGb.png", alt="Simulating a push notification with custom data.", width="800", height="488" %}
+
     **Figure 1**. Simulating a push notification with custom data via the **Push** text box in the
     **Service Worker** pane
 
@@ -116,12 +117,6 @@ now you can send custom tags:
 
 **Figure 3**. After clicking **Sync**, DevTools sends a background sync event with the custom tag
 `update-content` to the service worker
-
-- [CSS and JS code coverage][12]
-- [Full-page screenshots][13]
-- [Block requests][14]
-- [Step over async await][15]
-- [Unified Command Menu][16]
 
 [1]: #multi-client
 [2]: #workspaces

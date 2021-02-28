@@ -210,12 +210,6 @@ been working on over the past year and the big themes that they're tackling in t
 
 {% YouTube id="PjjlwAvV8Jg" %}
 
-- [CSS and JS code coverage][22]
-- [Full-page screenshots][23]
-- [Block requests][24]
-- [Step over async await][25]
-- [Unified Command Menu][26]
-
 [1]: #lighthouse
 [2]: #badges
 [3]: #continue
