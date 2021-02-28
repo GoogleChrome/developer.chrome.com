@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 72)"
 authors:
   - kaycebasques
 date: 2018-11-27
-updated: 2018-12-03
+
 description:
   "Visualize performance metrics, highlight text nodes, copy the JS path to a DOM node, and Audits
   panel updates."

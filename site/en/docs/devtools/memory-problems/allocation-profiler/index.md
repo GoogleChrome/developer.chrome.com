@@ -4,7 +4,7 @@ title: "How to Use the Allocation Profiler Tool"
 authors:
   - megginkearney
 date: 2015-04-13
-updated: 2020-07-10
+
 description:
   "Use the allocation profiler tool to find objects that aren&#39;t being properly garbage
   collected, and continue to retain memory."

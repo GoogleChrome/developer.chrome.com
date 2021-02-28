@@ -4,7 +4,7 @@ title: "Edit Files With Workspaces"
 authors:
   - kaycebasques
 date: 2018-04-10
-updated: 2020-07-10
+
 description: "Learn how to save changes made within DevTools to disk."
 ---
 

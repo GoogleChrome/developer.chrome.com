@@ -4,7 +4,7 @@ title: "Force Chrome DevTools Into Print Preview Mode (CSS Print Media Type)"
 authors:
   - kaycebasques
 date: 2018-12-14
-updated: 2020-07-10
+
 description:
   "Open the &#34;Rendering&#34; tab and select &#34;Emulate CSS media&#34; &gt; &#34;print&#34;."
 ---

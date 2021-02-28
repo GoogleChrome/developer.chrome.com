@@ -5,7 +5,7 @@ authors:
   - megginkearney
   - flaviocopes
 date: 2015-04-13
-updated: 2020-07-10
+
 description: "The timeline events mode displays all events triggered while making a recording. Use the timeline event reference to learn more about each timeline event type."
 ---
 

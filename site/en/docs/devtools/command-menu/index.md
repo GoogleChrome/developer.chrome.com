@@ -4,7 +4,7 @@ title: "Run Commands With The Chrome DevTools Command Menu"
 authors:
   - kaycebasques
 date: 2019-04-09
-updated: 2020-07-10
+
 description: "A guide on how to open the Command Menu, run commands, see other actions, and more."
 ---
 

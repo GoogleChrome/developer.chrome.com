@@ -4,7 +4,7 @@ title: "Blackbox Chrome Extension Scripts"
 authors:
   - kaycebasques
 date: 2018-12-14
-updated: 2020-10-01
+
 description: "Enable &#34;Blackbox content scripts&#34; from Settings &gt; Blackboxing."
 ---
 

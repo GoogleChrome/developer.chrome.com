@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 71)"
 authors:
   - kaycebasques
 date: 2018-10-10
-updated: 2018-12-03
+
 description: "Highlight DOM nodes from Live expressions, store nodes as global variables, and more."
 ---
 

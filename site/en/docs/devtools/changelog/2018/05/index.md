@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 68)"
 authors:
   - kaycebasques
 date: 2018-05-21
-updated: 2019-09-19
+
 description: "Eager evaluation, argument hints, function autocompletion, Lighthouse 3.0, and more."
 ---
 

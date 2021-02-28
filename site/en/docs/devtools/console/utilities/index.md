@@ -4,7 +4,7 @@ title: "Console Utilities API Reference"
 authors:
   - kaycebasques
 date: 2015-04-13
-updated: 2020-07-10
+
 description: "A reference of convenience functions available in the Chrome DevTools Console."
 ---
 

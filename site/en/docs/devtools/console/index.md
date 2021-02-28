@@ -4,7 +4,7 @@ title: "Console Overview"
 authors:
   - kaycebasques
 date: 2019-04-18
-updated: 2020-07-10
+
 description:
   "The main uses of the Chrome DevTools Console are logging messages and running JavaScript."
 ---

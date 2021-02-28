@@ -4,7 +4,7 @@ title: "View And Edit Local Storage With Chrome DevTools"
 authors:
   - kaycebasques
 date: 2019-03-14
-updated: 2020-07-10
+
 description: "How to view and edit localStorage with the Local Storage pane and the Console."
 ---
 

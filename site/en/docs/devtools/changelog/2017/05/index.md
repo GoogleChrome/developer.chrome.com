@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 60)"
 authors:
   - kaycebasques
 date: 2017-05-23
-updated: 2018-12-03
+
 description: "New features and changes coming to DevTools in Chrome 60."
 ---
 

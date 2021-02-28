@@ -4,7 +4,7 @@ title: "Sources Panel Overview"
 authors:
   - kaycebasques
 date: 2018-01-09
-updated: 2020-07-10
+
 description:
   "View and edit files, create Snippets, debug JavaScript, and set up Workspaces in the Sources
   panel of Chrome DevTools."

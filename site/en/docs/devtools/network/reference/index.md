@@ -4,7 +4,7 @@ title: "Network Analysis Reference"
 authors:
   - kaycebasques
 date: 2015-04-13
-updated: 2020-09-28
+
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
@@ -39,12 +39,9 @@ log](/web/tools/chrome-devtools/network/imgs/record-on.png) on the Network
 
 ### Clear requests {: #clear }
 
-TODO inline image
-
+Click **Clear**
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SUPMgMoG5s0cLAe1yKEd.png", alt="Clear", width="26", height="26" %}
-
-Click **Clear** ![Clear](/web/tools/chrome-devtools/network/imgs/clear-requests.png) on the Network
-panel to clear all requests from the Requests table.
+on the Network panel to clear all requests from the Requests table.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IZwN127NS4ZHwAJ4QJNx.svg", alt="The Clear button.", width="606", height="900" %}
 
@@ -63,14 +60,9 @@ DevTools saves all requests until you disable **Preserve log**.
 
 Capture screenshots to analyze what users see as they wait for your page to load.
 
-TODO inline image
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MzwAIIiGa9ZOUqfsCBaj.png", alt="Capture screenshots", width="26", height="16" %}
-
 To enable screenshots, click **Capture screenshots**
-![Capture
-screenshots](/web/tools/chrome-devtools/network/imgs/capture-screenshots.png) on the
-Network panel. It turns blue when enabled.
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MzwAIIiGa9ZOUqfsCBaj.png", alt="Capture screenshots", width="26", height="16" %}
+on the Network panel. It turns blue when enabled.
 
 Reload the page while the Network panel is in focus to capture screenshots.
 
@@ -593,14 +585,9 @@ to view the stack trace leading up to the request.
 
 ### View the uncompressed size of a resource {: #uncompressed }
 
-TODO inline image
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lvgZdF4HI4aDB451wS5G.png", alt="Use Large Request Rows", width="28", height="20" %}
-
 Click **Use Large Request Rows**
-![Use Large Request
-Rows](/web/tools/chrome-devtools/network/imgs/large-resource-rows-button.png) and
-then look at the bottom value of the **Size** column.
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lvgZdF4HI4aDB451wS5G.png", alt="Use Large Request Rows", width="28", height="20" %}
+and then look at the bottom value of the **Size** column.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OkTz8xZwi0zVh2GWltnE.png", alt="An example of uncompressed resources.", width="800", height="478" %}
 
@@ -646,12 +633,9 @@ Expand or collapse sections of the Network panel UI to focus on what's important
 
 ### Hide the Filters pane {: #hide-filters }
 
-TODO inline image
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BmGbqXVYxIY2kwgbNmsp.png", alt="Filter", width="28", height="24" %}
-
 By default, DevTools shows the [Filters pane][27]. Click **Filter**
-![Filter](/web/tools/chrome-devtools/network/imgs/filters.png) to hide it.
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BmGbqXVYxIY2kwgbNmsp.png", alt="Filter", width="28", height="24" %}
+to hide it.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zN18ngzI6ejSpoKMYKJG.svg", alt="The Hide Filters button", width="705", height="450" %}
 
@@ -667,14 +651,9 @@ provide a little more information when using large rows. For example, the bottom
 
 **Figure 37**. An example of large request rows in the Requests pane
 
-TODO inline image
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lvgZdF4HI4aDB451wS5G.png", alt="Use large request rows", width="28", height="20" %}
-
 Click **Use large request rows**
-![Use large request
-rows](/web/tools/chrome-devtools/network/imgs/large-resource-rows-button.png) to
-enable large rows.
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lvgZdF4HI4aDB451wS5G.png", alt="Use large request rows", width="28", height="20" %}
+to enable large rows.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/inNDJZFVu1zUQ4jz1XhV.svg", alt="The Large Request Rows button", width="705", height="450" %}
 
@@ -682,12 +661,9 @@ enable large rows.
 
 ### Hide the Overview pane {: #hide-overview }
 
-TODO inline image
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ghte2yf6yUoWNtBfUY6c.png", alt="Hide overview", width="34", height="22" %}
-
 By default, DevTools shows the [Overview pane][28]. Click **Hide overview**
-![Hide overview](/web/tools/chrome-devtools/network/imgs/hide-overview.png) to hide it.
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ghte2yf6yUoWNtBfUY6c.png", alt="Hide overview", width="34", height="22" %}
+to hide it.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SjuObPgFeP2thIv8NWem.svg", alt="The Hide Overview button", width="705", height="450" %}
 

@@ -5,7 +5,7 @@ authors:
   - kaycebasques
   - megginkearney
 date: 2015-04-13
-updated: 2020-07-24
+
 description: "Host a site on a development machine web server, and then access the content from an Android device."
 ---
 

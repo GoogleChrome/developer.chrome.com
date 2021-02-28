@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Emulate and Test Other Browsers"
 date: 2015-04-13
-updated: 2020-07-21
+
 description: "Your job doesn&#39;t end with ensuring your site runs great across Chrome and Android. Even though Device Mode can simulate a range of other devices like iPhones, we encourage you to check out other browsers solutions for emulation."
 ---
 
