@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Optimize Website Speed With Chrome DevTools"
+title: "Optimize website speed (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2018-06-18

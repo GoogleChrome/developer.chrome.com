@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Get Started with Debugging JavaScript in Chrome DevTools"
+title: "Debug JavaScript (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2017-01-04

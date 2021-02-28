@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "JavaScript Debugging Reference"
+title: "JavaScript debugging reference (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2017-01-04

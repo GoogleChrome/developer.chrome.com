@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Debug Background Services With Chrome DevTools"
+title: "Debug background services (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2019-09-15

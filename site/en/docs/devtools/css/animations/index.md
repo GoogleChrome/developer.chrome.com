@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Inspect animations"
+title: "Inspect animations (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2016-05-02

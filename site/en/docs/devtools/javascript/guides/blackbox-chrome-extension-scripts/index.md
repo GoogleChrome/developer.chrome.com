@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Blackbox Chrome Extension Scripts"
+title: "Blackbox Chrome Extension Scripts (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2018-12-14

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Edit Files With Workspaces"
+title: "Edit files with Workspaces (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2018-04-10

@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Debug Progressive Web Apps"
+title: "Debug Progressive Web Apps (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2016-07-25

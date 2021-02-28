@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Inspect Network Activity In Chrome DevTools"
+title: "Inspect network activity (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2019-02-08

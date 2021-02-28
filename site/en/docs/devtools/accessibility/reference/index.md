@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Accessibility Reference"
+title: "Accessibility features reference (Chrome DevTools)"
 authors:
   - kaycebasques
 date: 2018-07-13
