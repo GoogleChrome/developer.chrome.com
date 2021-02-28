@@ -97,6 +97,21 @@ redirects:
 - from: /docs/devtools/manage-data/local-storage/
   to: /docs/devtools/#storage
 
+- from: /docs/devtools/network/network-conditions/
+  to: /docs/devtools/network/reference/
+
+- from: /docs/devtools/network/understanding-resource-timing/
+  to: /docs/devtools/network/reference/#timing
+
+- from: /docs/devtools/rendering-tools/forced-synchronous-layouts/
+  to: /docs/devtools/evaluate-performance/
+
+- from: /docs/devtools/rendering-tools/js-execution/
+  to: /docs/devtools/evaluate-performance/
+
+- from: /docs/devtools/rendering-tools/
+  to: /docs/devtools/evaluate-performance/
+
 # TODO(kaycebasques): Update these old DevTools redirects
 
 - from: /devtools/
