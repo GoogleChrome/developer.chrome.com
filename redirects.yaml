@@ -97,6 +97,9 @@ redirects:
 - from: /docs/devtools/javascript/pretty-print/
   to: /docs/devtools/javascript/reference/#format
 
+- from: /docs/devtools/manage-data/local-storage/
+  to: /docs/devtools/#storage
+
 # TODO(kaycebasques): Update these old DevTools redirects
 
 - from: /devtools/
