@@ -10,7 +10,7 @@ Your job doesn't end with ensuring your site runs great across Chrome and Androi
 Device Mode can simulate a range of other devices like iPhones, we encourage you to check out other
 browsers solutions for emulation.
 
-## TL;DR {: #tldr }
+## Summary {: #summary }
 
 - When you don't have a particular device, or want to do a spot check on something, the best option
   is to emulate the device right inside your browser.

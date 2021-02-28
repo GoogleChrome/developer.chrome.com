@@ -29,7 +29,7 @@ After [setting breakpoints][1], return to the page and use it normally until a b
 reached. This pauses all JavaScript on the page, focus shifts to the DevTools Sources panel, and the
 breakpoint is highlighted. You can now selectively execute code and examine its data, step by step.
 
-## TL;DR {: #tldr }
+## Summary {: #summary }
 
 - Step through code to observe issues before or while they happen and test out changes through live
   editing.

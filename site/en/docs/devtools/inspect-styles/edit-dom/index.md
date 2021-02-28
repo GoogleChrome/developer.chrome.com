@@ -18,7 +18,7 @@ This page is deprecated.
 The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current
 web page. Live-edit the content and structure of your page through DOM updates.
 
-## TL;DR {: #tldr }
+## Summary {: #summary }
 
 - The DOM defines your page structure. Each DOM node is a page element, for example, a header node,
   paragraph node.

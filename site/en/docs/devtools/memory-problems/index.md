@@ -13,7 +13,7 @@ description:
 Learn how to use Chrome and DevTools to find memory issues that affect page performance, including
 memory leaks, memory bloat, and frequent garbage collections.
 
-## TL;DR {: #tldr }
+## Summary {: #summary }
 
 - Find out how much memory your page is currently using with the Chrome Task Manager.
 - Visualize memory usage over time with Timeline recordings.
