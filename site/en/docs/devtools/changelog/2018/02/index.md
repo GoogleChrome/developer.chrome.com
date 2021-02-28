@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 66)"
 authors:
   - kaycebasques
 date: 2018-02-26
-
+#updated: YYYY-MM-DD
 description: "Blackboxing in the Network panel, auto-adjust zooming in Device Mode, and more."
 ---
 

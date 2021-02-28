@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 65)"
 authors:
   - kaycebasques
 date: 2018-01-17
-
+#updated: YYYY-MM-DD
 description: "Local Overrides, accessibility tools, performance and SEO audits, and more."
 ---
 

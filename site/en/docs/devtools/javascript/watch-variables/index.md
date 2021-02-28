@@ -4,7 +4,7 @@ title: "Watch variables in Sources"
 authors:
   - jonathangarbee
 date: 2016-02-11
-
+#updated: YYYY-MM-DD
 description:
   "Chrome DevTools allows you to easily see multiple variables throughout your application."
 ---

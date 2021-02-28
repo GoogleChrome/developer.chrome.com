@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 83)"
 authors:
   - kaycebasques
 date: 2020-03-10
-
+#updated: YYYY-MM-DD
 description:
   "Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more."
 ---

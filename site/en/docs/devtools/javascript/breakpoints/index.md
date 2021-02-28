@@ -4,7 +4,7 @@ title: "How To Pause Your Code With Breakpoints In Chrome DevTools"
 authors:
   - kaycebasques
 date: 2017-02-03
-
+#updated: YYYY-MM-DD
 description: "Learn about all the ways you can pause your code in Chrome DevTools."
 ---
 

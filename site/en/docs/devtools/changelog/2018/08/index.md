@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 70)"
 authors:
   - kaycebasques
 date: 2018-08-29
-
+#updated: YYYY-MM-DD
 description:
   "Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more."
 ---

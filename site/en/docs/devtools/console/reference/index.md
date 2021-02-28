@@ -4,7 +4,7 @@ title: "Console Reference"
 authors:
   - kaycebasques
 date: 2019-04-18
-
+#updated: YYYY-MM-DD
 description:
   "A comprehensive reference on every feature and behavior related to the Console UI in Chrome
   DevTools."

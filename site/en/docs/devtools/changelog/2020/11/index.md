@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 88)"
 authors:
   - jecelynyeen
 date: 2020-11-12
-
+#updated: YYYY-MM-DD
 description:
   "New CSS angle visualization tools, emulate unsupported image types and storage quota, new Web
   Vitals lane and more."

@@ -4,7 +4,7 @@ title: "Open Chrome DevTools"
 authors:
   - kaycebasques
 date: 2018-12-14
-
+#updated: YYYY-MM-DD
 description: "All of the ways that you can open Chrome DevTools."
 ---
 

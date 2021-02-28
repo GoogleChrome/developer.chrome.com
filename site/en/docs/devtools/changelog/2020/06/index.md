@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 85)"
 authors:
   - jecelynyeen
 date: 2020-07-01
-
+#updated: YYYY-MM-DD
 description:
   "Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more."
 ---

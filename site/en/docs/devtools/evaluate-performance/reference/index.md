@@ -4,7 +4,7 @@ title: "Performance Analysis Reference"
 authors:
   - kaycebasques
 date: 2017-05-08
-
+#updated: YYYY-MM-DD
 description: "A reference on all the ways to record and analyze performance in Chrome DevTools."
 ---
 

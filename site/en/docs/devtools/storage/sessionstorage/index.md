@@ -4,7 +4,7 @@ title: "View And Edit Session Storage With Chrome DevTools"
 authors:
   - kaycebasques
 date: 2019-03-14
-
+#updated: YYYY-MM-DD
 description: "How to view and edit sessionStorage with the Session Storage pane and the Console."
 ---
 

@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 67)"
 authors:
   - kaycebasques
 date: 2018-04-11
-
+#updated: YYYY-MM-DD
 description:
   "Search across network headers, copy requests as fetch, audit pages using desktop conditions, and
   much more."

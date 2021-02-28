@@ -4,7 +4,7 @@ title: "Watch JavaScript Expression Values In Real-Time With Live Expressions"
 authors:
   - kaycebasques
 date: 2019-04-18
-
+#updated: YYYY-MM-DD
 description:
   "If you find yourself typing the same JavaScript expressions into the Console repeatedly, try Live
   Expressions instead."

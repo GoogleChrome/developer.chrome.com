@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 74)"
 authors:
   - kaycebasques
 date: 2019-03-07
-
+#updated: YYYY-MM-DD
 description:
   "Highlight nodes affected by a CSS property, Lighthouse v4, WebSocket binary message viewer, and
   more."
