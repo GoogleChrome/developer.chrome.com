@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 86)"
 authors:
   - jecelynyeen
 date: 2020-08-20
-
+#updated: YYYY-MM-DD
 description:
   "New Media panel, capture node screenshot, Issues tab updates, emulate missing local fonts,
   inactive users and prefers-reduced-data."

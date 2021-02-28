@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 79)"
 authors:
   - kaycebasques
 date: 2019-10-15
-
+#updated: YYYY-MM-DD
 description:
   "Debug why cookies were blocked, simulate &#34;prefers-color-scheme: dark&#34;, code coverage
   updates, and more."

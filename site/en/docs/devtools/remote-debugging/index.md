@@ -4,7 +4,7 @@ title: "Get Started with Remote Debugging Android Devices"
 authors:
   - kaycebasques
 date: 2015-04-13
-
+#updated: YYYY-MM-DD
 description:
   "Remote debug live content on an Android device from a Windows, Mac, or Linux computer."
 ---

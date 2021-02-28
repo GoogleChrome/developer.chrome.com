@@ -4,7 +4,7 @@ title: "Optimize Website Speed With Chrome DevTools"
 authors:
   - kaycebasques
 date: 2018-06-18
-
+#updated: YYYY-MM-DD
 description: "Learn how to use Chrome DevTools to find ways to make your websites load faster."
 ---
 

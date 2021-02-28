@@ -4,7 +4,7 @@ title: "Network Analysis Reference"
 authors:
   - kaycebasques
 date: 2015-04-13
-
+#updated: YYYY-MM-DD
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 

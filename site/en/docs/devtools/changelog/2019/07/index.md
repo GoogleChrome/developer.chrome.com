@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 77)"
 authors:
   - kaycebasques
 date: 2019-07-22
-
+#updated: YYYY-MM-DD
 description: "Copy element styles, visualize layout shifting, and more."
 ---
 

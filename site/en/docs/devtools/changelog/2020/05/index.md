@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 84)"
 authors:
   - kaycebasques
 date: 2020-05-12
-
+#updated: YYYY-MM-DD
 description: "The new Issues tab, accessibility information in the Inspect Mode tooltip, and more."
 ---
 

@@ -4,7 +4,7 @@ title: "Understand Security Issues With Chrome DevTools"
 authors:
   - kaycebasques
 date: 2015-12-21
-
+#updated: YYYY-MM-DD
 description: "Use the Security Panel to make sure that a page is fully protected by HTTPS."
 ---
 

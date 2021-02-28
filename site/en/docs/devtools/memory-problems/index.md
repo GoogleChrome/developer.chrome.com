@@ -4,7 +4,7 @@ title: "Fix Memory Problems"
 authors:
   - kaycebasques
 date: 2015-04-13
-
+#updated: YYYY-MM-DD
 description:
   "Learn how to use Chrome and DevTools to find memory issues that affect page performance,
   including memory leaks, memory bloat, and frequent garbage collections."

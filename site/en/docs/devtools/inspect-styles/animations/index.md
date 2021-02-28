@@ -4,7 +4,7 @@ title: "Inspect animations"
 authors:
   - kaycebasques
 date: 2016-05-02
-
+#updated: YYYY-MM-DD
 description: "Inspect and modify animations with the Chrome DevTools Animation Inspector."
 ---
 

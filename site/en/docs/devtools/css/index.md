@@ -4,7 +4,7 @@ title: "Get Started With Viewing And Changing CSS"
 authors:
   - kaycebasques
 date: 2017-06-08
-
+#updated: YYYY-MM-DD
 description: "Learn how to use Chrome DevTools to view and change a page&#39;s CSS."
 ---
 

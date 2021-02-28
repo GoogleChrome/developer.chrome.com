@@ -4,7 +4,7 @@ title: "Find Overriding CSS Declarations In Chrome DevTools"
 authors:
   - kaycebasques
 date: 2019-07-11
-
+#updated: YYYY-MM-DD
 description: "How to figure out what old CSS is causing your new CSS to not be applied properly."
 ---
 

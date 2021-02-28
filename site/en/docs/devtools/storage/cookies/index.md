@@ -4,7 +4,7 @@ title: "View, Edit, And Delete Cookies With Chrome DevTools"
 authors:
   - kaycebasques
 date: 2015-04-13
-
+#updated: YYYY-MM-DD
 description: "Learn how to view, edit, and delete a page&#39;s HTTP cookies using Chrome DevTools."
 ---
 

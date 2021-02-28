@@ -4,7 +4,7 @@ title: "View Page Resources With Chrome DevTools"
 authors:
   - kaycebasques
 date: 2015-04-13
-
+#updated: YYYY-MM-DD
 description: "Organize resources by frame, domain, type, or other criteria."
 ---
 
