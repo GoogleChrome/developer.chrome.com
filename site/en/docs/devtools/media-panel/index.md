@@ -4,7 +4,7 @@ title: "View and Debug Media Players Information"
 authors:
   - jecelynyeen
 date: 2020-08-20
-updated: 2020-08-25
+
 description: "Use the Media Panel to view information and debug the media players per browser tab."
 ---
 

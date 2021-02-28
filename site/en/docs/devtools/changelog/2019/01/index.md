@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 73)"
 authors:
   - kaycebasques
 date: 2019-01-22
-updated: 2019-01-21
+
 description: "Logpoints, detailed tooltips in Inspect Mode, and much more."
 ---
 

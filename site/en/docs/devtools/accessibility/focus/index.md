@@ -4,7 +4,7 @@ title: "Track Which Element Has Focus"
 authors:
   - kaycebasques
 date: 2018-12-14
-updated: 2020-07-10
+
 description:
   "Open the Console, create a Live Expression, and set the expression to
   &#34;document.activeElement&#34;."

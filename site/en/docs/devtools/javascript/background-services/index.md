@@ -4,7 +4,7 @@ title: "Debug Background Services With Chrome DevTools"
 authors:
   - kaycebasques
 date: 2019-09-15
-updated: 2020-07-10
+
 description:
   "How to debug Background Fetch, Background Sync, Notifications, and Push Messages with Chrome
   DevTools."

@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 81)"
 authors:
   - kaycebasques
 date: 2020-01-29
-updated: 2020-02-07
+
 description: "Moto G4 in Device Mode, new cookie-related features, and more."
 ---
 

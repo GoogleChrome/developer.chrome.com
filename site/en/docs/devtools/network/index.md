@@ -4,7 +4,7 @@ title: "Inspect Network Activity In Chrome DevTools"
 authors:
   - kaycebasques
 date: 2019-02-08
-updated: 2020-07-10
+
 description: "A tutorial on the most popular network-related features in Chrome DevTools."
 ---
 
@@ -147,11 +147,7 @@ idea of how long a page takes to load on a mobile device.
 
     **Figure 10**. Selecting Slow 3G
 
-    TODO replace the inline image below
-
-    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/6Zix64R1K9bMxOVgMjpw.png", alt="Reload", width="24", height="25" %}
-
-3.  Long-press **Reload** ![Reload](/web/tools/chrome-devtools/images/shared/reload.png) and then
+3.  Long-press **Reload** {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/6Zix64R1K9bMxOVgMjpw.png", alt="Reload", width="24", height="25" %} and then
     select **Empty Cache And Hard Reload**.
 
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2jZjKEtRSz6qSatQqRMA.png", alt="Empty Cache And Hard Reload", width="800", height="620" %}
@@ -173,12 +169,8 @@ idea of how long a page takes to load on a mobile device.
 
 Screenshots let you see how a page looked over time while it was loading.
 
-TODO replace the inline image below
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wXN8qM2CVEuXXSDEANQP.png", alt="Capture Screenshots", width="26", height="16" %}
-
 1.  Click **Capture Screenshots**
-    ![Capture Screenshots](/web/tools/chrome-devtools/images/shared/screenshots.png).
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wXN8qM2CVEuXXSDEANQP.png", alt="Capture Screenshots", width="26", height="16" %}.
 2.  Reload the page again via the **Empty Cache And Hard Reload** workflow. See [Simulate a slower
     connection][8] if you need a reminder on how to do this. The Screenshots pane provides
     thumbnails of how the page looked at various points during the loading process.
@@ -194,12 +186,8 @@ TODO replace the inline image below
 
     **Figure 13**. The network activity that was happening during the first screenshot
 
-TODO replace the inline image below
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wXN8qM2CVEuXXSDEANQP.png", alt="Capture Screenshots", width="26", height="16" %}
-
 4.  Click **Capture Screenshots**
-    ![Capture Screenshots](/web/tools/chrome-devtools/images/shared/screenshots.png) again to close
+    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wXN8qM2CVEuXXSDEANQP.png", alt="Capture Screenshots", width="26", height="16" %} again to close
     the Screenshots pane.
 5.  Reload the page again.
 
@@ -242,11 +230,7 @@ Click a resource to learn more information about it. Try it now:
 
     **Figure 17**. The Timing tab
 
-TODO inline image
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/R9i0QcALlmZf86wPd6X8.png", alt="Close", width="14", height="15" %}
-
-5.  Click **Close** ![Close](/web/tools/chrome-devtools/images/shared/close.png) to view the Network
+5.  Click **Close** {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/R9i0QcALlmZf86wPd6X8.png", alt="Close", width="14", height="15" %} to view the Network
     Log again.
 
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lpYAsLVvE4KYpFRStzzG.png", alt="The Close button", width="800", height="736" %}
@@ -260,11 +244,7 @@ a certain string or regular expression.
 
 For example, suppose you want to check if your resources are using reasonable [cache policies][9].
 
-TODO we don't have the correct inline image below because there were two images with the filename search.png
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rYeYU92i6nt7kmW2g1mb.png", alt="ALT_TEXT_HERE", width="800", height="633" %}
-
-1.  Click **Search** ![Search](/web/tools/chrome-devtools/images/shared/search.png). The Search pane
+1.  Click **Search** {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rEiMt86Ljm1En0bEpEtJ.png", alt="Search", width="28", height="28" %}. The Search pane
     opens to the left of the Network log.
 
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rYeYU92i6nt7kmW2g1mb.png", alt="The Search pane", width="800", height="633" %}
@@ -302,11 +282,7 @@ hand.
 
 The **Filters** toolbar should be enabled by default. If not:
 
-TODO inline image
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Y2jMjWqUoZJ2lOG5Q3Bv.png", alt="Filter", width="28", height="24" %}
-
-1.  Click **Filter** ![Filter](/web/tools/chrome-devtools/images/shared/filter.png) to show it.
+1.  Click **Filter** {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Y2jMjWqUoZJ2lOG5Q3Bv.png", alt="Filter", width="28", height="24" %} to show it.
 
 ### Filter by string, regular expression, or property {: #filterbox }
 
@@ -381,11 +357,7 @@ completely, or is it still somewhat functional? Block requests to find out:
 
     **Figure 31**. Show Request Blocking
 
-TODO inline image
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pX4YIMDftDDHOO0h9Ks1.png", alt="Add Pattern", width="20", height="20" %}
-
-3.  Click **Add Pattern** ![Add Pattern](/web/tools/chrome-devtools/images/shared/add.png).
+3.  Click **Add Pattern** {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/pX4YIMDftDDHOO0h9Ks1.png", alt="Add Pattern", width="20", height="20" %}.
 4.  Type `main.css`.
 
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mAaDUCJfFNOM6mYXvtTI.png", alt="Blocking main.css", width="800", height="688" %}
@@ -406,8 +378,6 @@ TODO inline image
 ## Next steps {: #next }
 
 Congratulations, you have completed the tutorial. Click **Dispense Award** to receive your award.
-
-TODO how to recreate the "dispense award"?
 
 Check out the [Network Reference][12] to discover more DevTools features related to inspecting
 network activity.

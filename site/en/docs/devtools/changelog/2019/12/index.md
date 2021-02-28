@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 80)"
 authors:
   - kaycebasques
 date: 2019-12-05
-updated: 2020-09-29
+
 description:
   "Support for let and class redeclarations in the Console, improved WebAssembly debugging, and
   more."

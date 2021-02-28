@@ -4,7 +4,7 @@ title: "Get Started With Analyzing Runtime Performance"
 authors:
   - kaycebasques
 date: 2017-04-06
-updated: 2020-07-24
+
 description: "Learn how to evaluate runtime performance in Chrome DevTools."
 ---
 

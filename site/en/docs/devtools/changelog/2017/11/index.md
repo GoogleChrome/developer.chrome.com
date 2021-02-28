@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 64)"
 authors:
   - kaycebasques
 date: 2017-11-28
-updated: 2018-12-03
+
 description: "Performance Monitor, Console Sidebar, and Console groupings."
 ---
 

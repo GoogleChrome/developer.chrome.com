@@ -4,7 +4,7 @@ title: "Navigate Chrome DevTools With Assistive Technology"
 authors:
   - robdodson
 date: 2019-03-08
-updated: 2020-07-24
+
 description: "A guide on navigating Chrome DevTools using assistive technology like screen readers."
 ---
 

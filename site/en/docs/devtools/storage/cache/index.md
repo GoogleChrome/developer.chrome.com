@@ -4,7 +4,7 @@ title: "View Cache Data With Chrome DevTools"
 authors:
   - kaycebasques
 date: 2019-03-25
-updated: 2020-07-10
+
 description: "How to view Cache data from the Application panel of Chrome DevTools."
 ---
 

@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 86)"
 authors:
   - jecelynyeen
 date: 2020-08-20
-updated: 2021-01-19
+
 description:
   "New Media panel, capture node screenshot, Issues tab updates, emulate missing local fonts,
   inactive users and prefers-reduced-data."
@@ -216,6 +216,8 @@ DevTools now provides color suggestions for low color contrast text.
 In the example below, `h1` has low contrast text. To fix it, open the color picker of the `color`
 property in the Styles pane. After you expand the **Contrast ratio** section, DevTools provides AA
 and AAA color suggestions. Click on the suggested color to apply the color.
+
+{% Video src="video/BrQidfK9jaQyIHwdw91aVpkPiib2/WOjpk44xMhCtDUpZksQf.mp4" %}
 
 Chromium issue: [1093227][30]
 

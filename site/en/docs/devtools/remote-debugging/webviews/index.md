@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Remote Debugging WebViews"
 date: 2015-04-13
-updated: 2020-07-10
+
 description: "Debug WebViews in your native Android apps using Chrome Developer Tools."
 ---
 
