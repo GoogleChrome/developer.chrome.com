@@ -90,12 +90,6 @@ ES6 Modules are shipping natively in Chrome 61. There's not much going on here w
 DevTools, other than that debugging works as you'd expect it to. Try setting some breakpoints in and
 stepping through [Paul Irish's ES6-Module-implementation][11] of [TodoMVC][12] to see for yourself.
 
-- [CSS and JS code coverage][13]
-- [Full-page screenshots][14]
-- [Block requests][15]
-- [Step over async await][16]
-- [Unified Command Menu][17]
-
 [1]: #throttling
 [2]: #storage
 [3]: #time-cached
