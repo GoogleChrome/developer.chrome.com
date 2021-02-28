@@ -192,12 +192,6 @@ Starting in Chrome 62, the **Coverage** tab now tells you which code within a fu
 
 **Figure 11**. An example of the **Coverage** tab in Chrome 62. Line 4 is marked unused
 
-- [CSS and JS code coverage][17]
-- [Full-page screenshots][18]
-- [Block requests][19]
-- [Step over async await][20]
-- [Unified Command Menu][21]
-
 [1]: #await
 [2]: #screenshot-areas
 [3]: #node-screenshots
