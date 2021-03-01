@@ -10,9 +10,9 @@ layout: 'layouts/blog-post.njk'
 date: 2021-03-02
 authors:
   - petelepage
-hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/uZrRgzGlqKLp99tnYKNJ.jpg'
+hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/st3dNRCY5FpDmmZXJ8ZG.jpg'
 alt: >
-  New in Chrome hero logo [TODO]
+  New in Chrome hero logo
 tags:
   - new-in-chrome
   - chrome-89
@@ -20,9 +20,7 @@ tags:
 
 Chrome 89 is starting to roll out to stable now.
 
-<!-- TODO: Consider adding info about release schedule -->
-
-{% YouTube id='TODO' %}
+{% YouTube id='O-gv6zLZHKw' %}
 
 Here's what you need to know:
 
@@ -196,7 +194,7 @@ additional changes in Chrome 89.
 * [Chrome 89 deprecations & removals](/blog/deps-rems-89/)
 * [ChromeStatus.com updates for Chrome 88](https://www.chromestatus.com/features#milestone%3D89)
 * [What's new in JavaScript in Chrome 88](https://v8.dev/blog/v8-release-89)
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/88.0.4324.98..89.0.TODO.XX)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/88.0.4324.98..89.0.4389.75)
 
 ## Subscribe
 
