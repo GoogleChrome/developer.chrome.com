@@ -76,7 +76,7 @@ that file should behave.
 The extension is now aware that it includes a non-persistent background script and will scan the
 registered file for important events it needs to listen for.
 
-This extension will need information from a persistent variable as soon as its installed. Start by
+This extension will need information from a persistent variable as soon as it's installed. Start by
 including a listening event for [`runtime.onInstalled`][11] in the background script. Inside the
 `onInstalled` listener, the extension will set a value using the [storage][12] API. This will allow
 multiple extension components to access that value and update it.
