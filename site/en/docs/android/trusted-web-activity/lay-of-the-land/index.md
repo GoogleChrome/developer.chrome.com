@@ -8,8 +8,6 @@ authors:
   - peconn
 ---
 
-<div class="clearfix"></div>
-
 There's a fair amount of ecosystem around Trusted Web Activities and it can be quite difficult to
 see how everything relates and what you should use.
 This article hopes to address that.

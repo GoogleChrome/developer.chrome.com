@@ -8,8 +8,6 @@ authors:
   - peconn
 ---
 
-<div class="clearfix"></div>
-
 Trusted Web Activities can be a bit tricky to set up, especially if all you want to do is
 display your website.
 This guide will take you through creating a basic project that uses Trusted Web Activities,

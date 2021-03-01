@@ -8,9 +8,11 @@ authors:
   - andreban
 ---
 
+{% Aside %}
 Note: A simpler
 [quick start guide for Trusted Web Activities](/docs/android/trusted-web-activity/quick-start)
 is now available.
+{% endAside%}
 
 Setting up a Trusted Web Activity doesn't require developers to author
 Java code, but [Android Studio](https://developer.android.com/studio/) is

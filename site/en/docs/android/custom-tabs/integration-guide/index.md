@@ -86,8 +86,6 @@ It can be customized by calling [`CustomTabsIntentBuilder#setActionButton`][30]:
  as data. The client app can call [`Intent#getDataString`][28] to get the url.
  - `tint` is a [boolean][29] that defines if the Action Button should be tinted.
 
-<div class="clearfix"></div>
-
 ## Configure a custom menu
 
 ```java
@@ -108,8 +106,6 @@ row and foot items.
 A menu item is added by calling [`CustomTabsIntent.Builder#addMenuItem`][6] with title and a
 [`PendingIntent`][26] that browser will call on your behalf when the user taps the item are passed
 as parameters.
-
-<div class="clearfix"></div>
 
 ## Configure custom enter and exit animations
 

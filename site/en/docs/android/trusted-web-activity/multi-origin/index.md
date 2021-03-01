@@ -8,10 +8,11 @@ authors:
   - andreban
 ---
 
-*If you are new to Trusted Web Activities, you may want to read the
+{% Aside %}
+If you are new to Trusted Web Activities, you may want to read the
 [Trusted Web Activity Quick Start Guide][1] or the [Introduction to Trusted Web Activities][2]
-before reading this documentation.*
-________________
+before reading this documentation.
+{% endAside%}
 
 **Trusted Web Activities** are a new way to integrate your web-app content such as your PWA with
 your Android app using a protocol based on Custom Tabs. 

@@ -25,8 +25,6 @@ _Looking for the code?_
 * [Trusted Web Activity demos][10]
 * [Bubblewrap, a NodeJs library / CLI to generate and build Trusted Web Activity projects][11]
 
-<div class="clearfix"></div>
-
 There are a few things that make Trusted Web Activity different from other
 ways to open web content from your Android app:
 
@@ -47,7 +45,7 @@ ways to open web content from your Android app:
    Activity or any other kind of web state, like cookies and `localStorage`.
    Nevertheless, you can coordinate with the web content by passing data to and
    from the page in URLs (e.g. through query parameters and 
-   [intent URIs](https://developer.chrome.com/multidevice/android/intents).)
+   [intent URIs](/docs/multidevice/android/intents).)
 1. Transitions between web and native content are between **activities**. Each
    activity (i.e. screen) of your app is either completely provided by the web,
    or by an Android activity
