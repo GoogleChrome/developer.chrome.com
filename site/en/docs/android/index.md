@@ -1,8 +1,8 @@
 ---
 layout: 'layouts/project-landing.njk'
 title: 'Web on Android'
-description: 'This description of the sample project will appear on the project
-landing page at /docs/android/'
+description: 'Information on libraries and APIs to embed web content into
+Android applications.'
 ---
 
 <!-- No content should go here. -->
