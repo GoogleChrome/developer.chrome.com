@@ -25,6 +25,7 @@ date: 2021-02-25
 
 ---
 <!--lint disable no-duplicate-headings-->
+<!--lint disable first-heading-level-->
 
 Check this page often to learn about changes to the Chrome extensions platform,
 its documentation, and related policy or other changes.
