@@ -3,11 +3,18 @@ layout: layouts/doc-post.njk
 title: What is the Privacy Sandbox?
 subhead: The Privacy Sandbox is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms.
 description: "What's in it, who's behind it, and what it's for."
-date: 2021-02-28
-updated: 2021-02-28
+date: 2021-03-02
+updated: 2021-03-02
 authors:
 	- samdutton
 ---
+
+{% Aside 'warning' %}
+[For Googlers, March 2021.]
+
+This document is a work in progress, unfinished and not to be shared externally.
+{% endAside %}
+
 
 ## What is the Privacy Sandbox?
 
@@ -15,14 +22,6 @@ authors:
 	id='WnCKlNE52tc' 
 %}
 
-
-{% Aside 'warning' %}
-
-[For Googlers, March 2021.]
-
-This document is a work in progress, unfinished and not to be shared externally.
-
-{% endAside %}
 
 ## Why do we need the Privacy Sandbox?
 
@@ -81,20 +80,24 @@ requiring access to IP addresses for legitimate purposes such as abuse preventio
 to certification and auditing.
 
 ### 🏷 Identity
-* [WebID](https://github.com/WICG/WebID): Support federated identity (where a user can sign into a website 
-through a third-party service) without sharing the user's email address or other identifying 
+* [WebID](https://github.com/WICG/WebID): Support federated identity (where a user can sign into a 
+website through a third-party service) without sharing the user's email address or other identifying 
 information with the third-party service or the website, unless the user explicitly agrees to do so. 
 WebID enables federated sign-in without the use of redirects, pop-ups or third-party cookies which 
 can be used to identify and track users across sites.
 
+
 ## What about more complex use cases?
 
-End-to-end flows will require multiple solutions. For example, the illustration below gives a 
-simplified view of a click-based advertising flow with customized audience selection.
+End-to-end flows will require multiple solutions. For example, a click-based advertising flow with 
+customized audience selection could be implemented using Privacy Sandbox APIs as in the diagram 
+below.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/9Zpa9oYNNal5sqAU5hpW.png", 
   alt="Simplified view of a click-based advertising flow with customized audience selection using Privacy Sandbox APIs", width="800", 
   height="265" %}
+
+[Add additional complex use cases.]
 
 
 ## Who is working on the Privacy Sandbox?
@@ -105,11 +108,12 @@ By early 2021 there were:
 * Five API implementations available for testing in Chrome.
 
 
-## When will the Privacy Sandbox APIs be implemented?
+## When will the APIs be implemented?
 
 The [implementation status](/docs/privacy-sandbox/status/) page on this site provides progress 
 updates for individual APIs.
 
+---
 
 ## Engage and share feedback
 
@@ -129,6 +133,7 @@ tab for each explainer.
 
 * [Privacy Budget](https://github.com/bslassey/privacy-budget)
 * [Trust Tokens](https://github.com/dvorak42/trust-token-api)
+* [First-Party Sets](https://github.com/privacycg/first-party-sets)
 * [Gnatcatcher](https://github.com/bslassey/ip-blindness)
 * [Aggregated Reporting API](https://github.com/csharrison/aggregate-reporting-api)
 * [Event Attribution Reporting](https://github.com/csharrison/conversion-measurement-api)

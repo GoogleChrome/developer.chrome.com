@@ -5,48 +5,43 @@ subhead: >
   A solution for remarketing use cases, designed so it cannot be used by third parties to track user browsing behaviour.
 description: >
   FLEDGE satisfies remarketing use cases, but is designed so it cannot be used by third parties to track user browsing behaviour. The API enables on-device "auctions" by the browser, on the user's device, to choose relevant ads, based on websites the user has previously visited. 
-date: 2021-02-28
-updated: 2021-02-28
+date: 2021-03-02
+updated: 2021-03-02
 authors:
   - samdutton
 ---
 
-## When will this be available?
+{% Aside 'warning' %}
+[For Googlers, March 2021.]
+
+This document is a work in progress, unfinished and not to be shared externally.
+{% endAside %}
+
+
+## Implementation status
 
 * [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is under discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
 
 [Embed video when available.]
 
 
-{% Aside 'warning' %}
-
-[For Googlers, February 2021.]
-
-This document is a work in progress, unfinished and not to be shared externally.
-
-The aim is to include the following textual content in this page in 300 words or less. 
-
-Potentially, these items (or similar) could be headings.
-
-* Why do we need this technology? 
-* What requirements does it meet?
-* How does the technology work?
-* What are the major use cases?
-* Simple diagram
-* Simple example
-* Are there any new capabilities this technology will give web platforms?
-* If there are existing solutions, why do we need something new? 
-* Who needs to know about this API?
-* [Short glossary if necessary: just a few words.]
-* How to share feedback and comments
-* How to get involved
-
-**Text below is content in progress.**
-
-{% endAside %}
-
+## Why do we need FLEDGE?
 
 ## How does FLEDGE work?
+
+When a user visits an advertiser's website, the site can ask the user's browser to associate the 
+user with specific interest groups for a certain period of time (for example 30 days).
+
+The interest group could be unique to the advertiser's website, so that it functions as a 
+remarketing list.  Alternatively, multiple websites could agree to assign users to the same interest 
+group, for example if the sites are partnered together or they belong to the same ad network. 
+Periodically the user's browser fetches ads designated for the interest groups, along with code to 
+enable the browser to run an "auction" to choose an ad, for example based on whether the ad will be 
+displayed near the top of the page. When the user visits a publisher site that displays ads from an 
+ad network used by an advertiser site the user visited previously, ad network code in the page makes 
+a request to the browser to run "auction" code to select an ad. The "winning" ad is displayed.
+
+
 1. A user visits a page on a site that wants to advertise its products, such as an online store.
 1. The advertiser site (or the ad tech it uses) asks the user's browser to join an ad 'interest group' by calling joinAdInterestGroup(), passing data including ads relevant to the user's browsing, the ad platform host name, and URLs to access bidding logic and bidding signals.
 1. The user visits a site that displays ads, such as a news publisher.
@@ -58,15 +53,18 @@ Potentially, these items (or similar) could be headings.
 1. The auction returns data about the winning ad. The data cannot be accessed by the publisher site, except to render the ad in a Fenced Frame.
 1. The ad is displayed.
 
-When a user visits an advertiser's website, the site can ask the user's browser to associate the user with specific interest groups for a certain period of time (for example 30 days).
+---
 
-The interest group could be unique to the advertiser's website, so that it functions as a remarketing list.  Alternatively, multiple websites could agree to assign users to the same interest group, for example if the sites are partnered together or they belong to the same ad network.
-Periodically the user's browser fetches ads designated for the interest groups, along with code to enable the browser to run an "auction" to choose an ad, for example based on whether the ad will be displayed near the top of the page.
-When the user visits a publisher site that displays ads from an ad network used by an advertiser site the user visited previously, ad network code in the page makes a request to the browser to run "auction" code to select an ad. The "winning" ad is displayed.
+## Engage and share feedback
+
+* **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md), [raise 
+questions and follow discussion](https://github.com/WICG/turtledove/blob/master/FLEDGE.md/issues).
+* **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants).
 
 
 ## Find out more
 
 * [FLEDGE API technical explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)
-* [Digging into the Privacy Sandbox](web.dev/digging-into-the-privacy-sandbox)
-* [The Privacy Sandbox on chromium.org](chromium.org/Home/chromium-privacy/privacy-sandbox)
+* [Getting started with Chrome's origin trials](https://web.dev/origin-trials)
+* [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
+

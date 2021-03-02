@@ -15,45 +15,23 @@ authors:
   - samdutton
 ---
 
-## When will this be available?
+{% Aside 'warning' %}
+[For Googlers, March 2021.]
+
+This document is a work in progress, unfinished and not to be shared externally.
+{% endAside %}
+
+
+## Implementation status
 
 * [API proposal](https://github.com/WICG/floc) is under discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
 
 
-[Embed video when available.]
-
-
-{% Aside 'warning' %}
-
-[For Googlers, February 2021.]
-
-This document is a work in progress, unfinished and not to be shared externally.
-
-The aim is to include the following textual content in this page in 300 words or less. 
-
-Potentially, these items (or similar) could be headings.
-
-* Why do we need this technology? 
-* What requirements does it meet?
-* How does the technology work?
-* What are the major use cases?
-* Simple diagram
-* Simple example
-* Are there any new capabilities this technology will give web platforms?
-* If there are existing solutions, why do we need something new? 
-* Who needs to know about this API?
-* [Short glossary if necessary: just a few words.]
-* How to share feedback and comments
-* How to get involved
-
-**Text below is content in progress.**
-
-{% endAside %}
-
-
 ## What is the Federated Learning of Cohorts (FLoC)?
 
-Many people are concerned about the privacy implications of ad selection, which currently relies on techniques such as tracking cookies and device fingerprinting that can reveal your browsing history to ad platforms and advertisers.
+Many people are concerned about the privacy implications of ad selection, which currently relies on 
+techniques such as tracking cookies and device fingerprinting that can reveal your browsing history 
+to ad platforms and advertisers.
 
 Advertisers use multiple techniques to choose relevant ads. For example:
 * First-party and contextual information: "Show this ad to users who selected knitting as a favorite topic" or "Show this ad on pages about motorcycles'.

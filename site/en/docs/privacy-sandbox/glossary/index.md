@@ -3,15 +3,23 @@ layout: 'layouts/doc-post.njk'
 title: 'Privacy Sandbox glossary' 
 subhead: Privacy Sandbox articles and documentation assume a knowledge of concepts from privacy, advertising, and web development. This glossary explains key terms. 
 description: Simple explanations of key concepts.
-date: 2021-02-28 
-updated: 2021-02-28 
+date: 2021-03-02 
+updated: 2021-03-02 
 authors:
   - samdutton 
 ---
 
+{% Aside 'warning' %}
+[For Googlers, March 2021.]
+
+This document is a work in progress, unfinished and not to be shared externally.
+{% endAside %}
+
+
 {% Aside %}
 [Let us know](.) [URL TBC] if something is missing!
 {% endAside %}
+
 
 ## Click-through rate (CTR) {: #ctr }
 
@@ -92,9 +100,10 @@ request header provide access to a fingerprinting surface (the user agent string
 ## First-party {: #first-party }
 
 Resources from the site you're visiting. For example, the page you're reading is on the site 
-developer.chrome.com and includes resources from that site. Requests for those first-party resources 
-are called 'first-party requests', and [cookies](#cookies) stored by developer.chrome.com are called 
-[first-party cookies](#first-party-cookies). See also [Third-party](#third-party).
+developer.chrome.com and includes resources requested from that site. Requests for those first-party 
+resources are called 'first-party requests', and [cookies](#cookie) from developer.chrome.com 
+stored while you're on this site are called [first-party cookies](#first-party-cookie). See also 
+[Third-party](#third-party).
 
 ## First-party cookie {: #first-party-cookie } 
 

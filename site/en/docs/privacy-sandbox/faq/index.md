@@ -2,11 +2,18 @@
 layout: 'layouts/doc-post.njk'
 title: FAQs
 description: Frequently Asked Questions for the Privacy Sandbox.
-date: 2021-02-28
-updated: 2021-02-28
+date: 2021-03-02
+updated: 2021-03-02
 authors:
   - samdutton
 ---
+
+{% Aside 'warning' %}
+[For Googlers, March 2021.]
+
+This document is a work in progress, unfinished and not to be shared externally.
+{% endAside %}
+
 
 ## General topics
 
