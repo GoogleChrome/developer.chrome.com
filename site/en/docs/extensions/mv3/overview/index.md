@@ -38,7 +38,7 @@ access and modify selected resources and actions in Chrome. There are two aspect
 extensions.
 
 **Extensions APIs**&emsp;The [extensions APIs](/docs/extensions/reference/) allow the extension's
-code to access features of the browser itself, activating tabs, modifying net requests, and so on.
+code to access features of the browser itself: activating tabs, modifying net requests, and so on.
 
 To create an extension, you assemble some resources -- JavaScript and HTML files, a manifest,
 images, and others -- that constitute the extension. For development and testing, you can load these
