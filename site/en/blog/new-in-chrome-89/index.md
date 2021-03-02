@@ -40,7 +40,7 @@ I'm really excited about WebHID, WebNFC, and Web Serial. They open up new
 scenarios for users that were never possible before, interacting with real
 world hardware.
 
-It allows makers to connect to fun, quirky hardware, video conferencing apps
+They allow makers to connect to fun, quirky hardware, video conferencing apps
 to use the dedicated telephony buttons on specialized speakers. Or any number
 of other use cases.
 
@@ -51,7 +51,7 @@ Using Web Serial, and [about 60 lines of code][pico-code],
 the MicroPython REPL on a [Raspberry Pi Pico][rpi-pico]. Web Serial is also
 used by Espruino in their [web based IDE][espruino-ide].
 
-At CDS last year, Francois wrote a fun, memory-style game using Web NFC.
+At CDS 2019, Francois wrote a fun, memory-style game using Web NFC.
 You had to tap the phone to the right card, in the right order.
 
 <div style="clear:both;"></div>
@@ -63,7 +63,7 @@ StreamDeck, building a [Daft Punk drum pad][bramus-demo]. If you don't have
 a StreamDeck, check out his [demo video][bramus-demo-video] on YouTube, and
 check out the [code on GitHub][bramus-code].
 
-Whether it's your site, that interacts with your hardware, or your hardware
+Whether it's your site that interacts with your hardware, or your hardware
 that can interact with lots of sites, users win because they don't need to
 install special drivers, or software.
 
@@ -75,17 +75,17 @@ and [Web Serial](https://web.dev/serial/).
 ## PWA installability criteria changes {: #installability }
 
 Offline support has been a key part of the Progressive Web App criteria for
-installability since the beginning. Like any other installed app, users
-expect it to work reliably, it should be fast, and, they should never see
+installability since the beginning. As with other installed app, users
+expect it to work reliably. It should be fast, and, they should never see
 the offline dino!
 
 Later this year, we plan to close a loophole that allowed a few sites to
 pass the installability criteria, without an offline experience. **If your
-PWA already has an offline experience, you're all set, there's no
+PWA already has an offline experience, you're all set. There's no
 action required, but, if you don't, it's time to add one!**
 
 Starting in Chrome 89, if your PWA doesn't provide a valid response when
-offline, you'll see a warning DevTools under the Issues tab, and Lighthouse
+offline, you'll see a warning in DevTools under the Issues tab, and Lighthouse
 will indicate there's an issue. And, enforcement will start in Chrome 93,
 later this year.
 
@@ -125,7 +125,7 @@ be using the Web Share and Web Share Target APIs. These APIs have been
 available on mobile for some time but are now supported on Chrome OS and
 Windows.
 
-Web Share makes it possible for users to send files, or data to other
+Web Share makes it possible for users to send files or data to other
 installed apps on their device, for example, sharing a photo from Google
 Photos to Twitter.
 
@@ -143,7 +143,7 @@ async function share(title, text, url) {
 }
 ```
 
-To register as a target, so other apps can share files or data with you,
+To register as a target so other apps can share files or data with you,
 you'll want to use the Web Share Target API.
 
 ```json
@@ -203,7 +203,7 @@ to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDe
 and you'll get an email notification whenever we launch a new video.
 
 I'm Pete LePage, and as soon as Chrome 90 is released, I'll be right here to
-tell you -- what's new in Chrome!
+tell you what's new in Chrome!
 
 ## Credits
 
