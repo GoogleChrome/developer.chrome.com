@@ -35,6 +35,7 @@ Previously known as the Event Conversion Measurement API.
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
 * [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
 * [API proposal](https://github.com/privacycg/first-party-sets)): see [issues](hhttps://github.com/privacycg/first-party-sets/issues) and [proposal on WICG](https://discourse.wicg.io/t/proposal-first-party-sets/3331) for API questions and discussion.
+* Find out more: [The Chromium Projects: First-Party Sets](https://www.chromium.org/updates/first-party-sets).  
 
 ## Federated Learning of Cohorts (FLoC)
 * Origin trial proposed to begin in Chrome 89. See [github.com/WICG/floc/issues/25](https://github.com/WICG/floc/issues/25) 
