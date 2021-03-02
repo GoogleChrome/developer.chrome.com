@@ -64,7 +64,7 @@ FLoC allows sites to guess your interests without being able to uniquely identif
 ## What can FLoC be used for?
 
 * Show ads to people whose browsers belong to a cohort that has been observed to frequently visit an 
-advertiser’s site or shows interest in relevant topics.
+advertiser's site or shows interest in relevant topics.
 * Approximate demographic targeting by analyzing cohort behavior to infer characteristics of the 
 cohort.
 * Use machine learning models to predict the probability a user will convert based on their cohort, 
