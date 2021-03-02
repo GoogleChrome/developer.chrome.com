@@ -4,7 +4,7 @@ title: 'FLEDGE'
 subhead: >
   A solution for remarketing use cases, designed so it cannot be used by third parties to track user browsing behaviour.
 description: >
-  FLEDGE satisfies remarketing use cases, but is designed so it cannot be used by third parties to track user browsing behaviour. The API enables on-device "auctions" by the browser, on the user's device, to choose relevant ads, based on websites the user has previously visited. 
+  FLEDGE satisfies remarketing use cases, but is designed so it cannot be used by third parties to track user browsing behaviour. The API enables on-device "auctions" by the browser to choose relevant ads, based on websites the user has previously visited. 
 date: 2021-03-02
 updated: 2021-03-02
 authors:
@@ -22,10 +22,29 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 * [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is under discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
 
-[Embed video when available.]
+
+{% Aside %}
+FLEDGE is a descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
+{% endAside %}
 
 
 ## Why do we need FLEDGE?
+
+Understanding user interests can result in more relevant ads than simply choosing ads based on site 
+content (contextual targeting) or by using information about the user (first-party-data targeting).
+Traditionally, ad platforms have learned about user interests by tracking their behaviour across 
+sites. We need a way to present users with relevant ads without cross-site tracking.
+
+With FLEDGE:
+
+* The browser, not the advertiser, holds the information about what the advertiser thinks a person 
+is interested in. 
+* Advertisers can serve ads based on an interest, but cannot combine that interest data with other 
+information about the person—in particular, the identity of the person or the pages they visit.
+* Websites the person visits, and the ad networks those sites use, cannot learn about their 
+visitors' ad interests: ad selection is done on the user's browser.
+
+
 
 ## How does FLEDGE work?
 
@@ -58,13 +77,12 @@ a request to the browser to run "auction" code to select an ad. The "winning" ad
 ## Engage and share feedback
 
 * **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md), [raise 
-questions and follow discussion](https://github.com/WICG/turtledove/blob/master/FLEDGE.md/issues).
+questions and follow discussion](https://github.com/WICG/turtledove/issues).
 * **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants).
 
 
 ## Find out more
 
 * [FLEDGE API technical explainer](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)
-* [Getting started with Chrome's origin trials](https://web.dev/origin-trials)
 * [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 
