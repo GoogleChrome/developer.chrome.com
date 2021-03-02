@@ -34,13 +34,13 @@ diagram:
 Also shown in the diagram is an extension "plugged into" the Chrome browser. The extension can
 access and modify selected resources and actions in Chrome. There are two aspects to consider:
 
-**The extensions mechanism**&emsp;This provides a consistent way for users to install and activate
+**The extensions user interface**&emsp;This provides a consistent way for users to manage their
 extensions.
 
 **Extensions APIs**&emsp;The [extensions APIs](/docs/extensions/reference/) allow the extension's
 code to access features of the browser itself, activating tabs, modifying net requests, and so on.
 
-To create an extension, you assemble some resources -- JavaScript and HTML files, a manifest,
+To create an extension, you assemble some resources -- a manifest, JavaScript and HTML files,
 images, and others -- that constitute the extension. For development and testing, you can load these
 "unpacked" into Chrome using extension developer mode. Once you are happy with your extension, you
 can package it and distribute it to users.
