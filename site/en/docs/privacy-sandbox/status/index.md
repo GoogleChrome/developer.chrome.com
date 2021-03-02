@@ -1,13 +1,14 @@
 ---
 layout: 'layouts/doc-post.njk'
 title: Is it ready yet?
-subhead: API discussion, origin trials, demos, tools and resources.
+subhead: Implementation status for Privacy Sandbox APIs.
 description: Implementation status for Privacy Sandbox APIs.
 date: 2021-02-28
 updated: 2021-02-28
 authors:
   - samdutton
 ---
+
 
 ## Event Attribution Reporting
 Previously known as the Event Conversion Measurement API.
@@ -29,6 +30,12 @@ Previously known as the Event Conversion Measurement API.
 * [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 * Find out more: [Getting started with Trust Tokens](https://web.dev/trust-tokens/)
 
+## First-Party Sets
+* Currently in [origin trial](https://web.dev/origin-trials/): Chrome 89 to 91. 
+* [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+* [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
+* [API proposal](https://github.com/privacycg/first-party-sets)): see [issues](hhttps://github.com/privacycg/first-party-sets/issues) and [proposal on WICG](https://discourse.wicg.io/t/proposal-first-party-sets/3331) for API questions and discussion.
+
 ## Federated Learning of Cohorts (FLoC)
 * Origin trial proposed to begin in Chrome 89. See [github.com/WICG/floc/issues/25](https://github.com/WICG/floc/issues/25) 
 for more detail.
@@ -43,8 +50,7 @@ API questions and discussion.
 Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
 * [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is under discussion with 
 [WICG](https://www.w3.org/community/wicg/) and interest groups.
-* [GitHub](https://github.com/WICG/turtledove/blob/master/FLEDGE.md): see [TURTLEDOVE issues](https://github.com/WICG/turtledove/issues) for 
-API questions and discussion.
+* [GitHub](https://github.com/WICG/turtledove/blob/master/FLEDGE.md): see [TURTLEDOVE issues](https://github.com/WICG/turtledove/issues) for API questions and discussion.
 
 <br>
 
