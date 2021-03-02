@@ -20,7 +20,7 @@ Chrome functionality and behavior in many ways, providing things like:
 * Fun and games
 
 These are just a few examples of the many things that extensions can do. See the [Chrome Web
-Store][5] to see thousands of different examples of published extensions.
+Store] to see thousands of different examples of published extensions.
 
 ### How do extensions work?
 
@@ -59,15 +59,15 @@ extensions may either be fetched from the Chrome Web Store or hosted on the orga
 
 {% endAside %}
 
-You can distribute your extensions through the [Chrome Developer Dashboard][4], publishing them to the [Chrome
-Web Store][5]. For more information, see the Chrome Web Store [developer documentation][6].
+You can distribute your extensions through the [Chrome Developer Dashboard][dev-dashboard], publishing them to the [Chrome
+Web Store]. For more information, see the Chrome Web Store [developer documentation][cws-docs].
 
 ### A note about extensions policy
 
 Extensions on the Chrome Web Store must adhere to the [Chrome Web Store policies][cws-policies].
 Here are some things to keep in mind as you begin:
 
-* An extension must fulfill a [single purpose][1] that is narrowly defined and easy to understand. A
+* An extension must fulfill a [single purpose] that is narrowly defined and easy to understand. A
 single extension can include multiple components and a range of functionality, as long as everything
 contributes towards a common purpose.
 
@@ -83,7 +83,7 @@ PackageTrack extension form window", width="400", height="1073" %}
 ## Hello extensions {: #hello-extensions }
 
 Take a small step into extensions with this quick Hello Extensions example. Start by creating a new
-directory to store the extension's files, or download them from the [sample page][7].
+directory to store the extension's files, or download them from the [sample page][hello-sample].
 
 Next, add a file called `manifest.json` and include the following code:
 
@@ -98,7 +98,7 @@ Next, add a file called `manifest.json` and include the following code:
 
 Every extension requires a manifest, though most extensions will not do much with just the manifest.
 For this quick start, the extension has a popup file and icon declared under the
-[`action`][8] field:
+[`action`][action-field] field:
 
 ```json/5-8
 {
@@ -113,7 +113,7 @@ For this quick start, the extension has a popup file and icon declared under the
 }
 ```
 
-Download [`hello_extensions.png` here][9] and then create a file titled `hello.html`:
+Download [`hello_extensions.png` here][hello-uploader] and then create a file titled `hello.html`:
 
 ```html
 <html>
@@ -163,24 +163,20 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 
 ## What next? {: #How-do-I-start }
 
-1.  Follow the [Getting Started tutorial][10]
-1.  Explore the [extension samples][2]
-1.  Subscribe to the [chromium-extensions group][13]
-
+1.  Follow the [Getting Started tutorial][getstarted-tut]
+1.  Explore the [extension samples]
+1.  Subscribe to the [chromium-extensions Google group][crx-group]
 
 [AMP validator]: https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc
+[Chrome Web Store]: https://chrome.google.com/webstore
 [PackageTrack]: https://chrome.google.com/webstore/detail/packagetrack-package-trac/hoipjclokbelgffomjhhiflphegpmlpe
+[action-field]: /docs/extensions/reference/action
+[crx-group]: http://groups.google.com/a/chromium.org/group/chromium-extensions
+[cws-docs]: /docs/webstore
 [cws-policies]: /docs/webstore/program_policies/
-[1]: /docs/extensions/mv3/single_purpose
-[2]: https://github.com/GoogleChrome/chrome-extensions-samples
-[3]: /docs/extensions/mv3/override
-[4]: https://chrome.google.com/webstore/devconsole
-[5]: https://chrome.google.com/webstore
-[6]: /docs/webstore
-[7]: /docs/extensions/mv3/samples#search:hello
-[8]: /docs/extensions/reference/action
-[9]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
-[10]: /docs/extensions/mv3/getstarted
-[11]: /docs/extensions/mv3/overview
-[12]: http://blog.chromium.org/
-[13]: http://groups.google.com/a/chromium.org/group/chromium-extensions
+[dev-dashboard]: https://chrome.google.com/webstore/devconsole
+[extension samples]: https://github.com/GoogleChrome/chrome-extensions-samples
+[getstarted-tut]: /docs/extensions/mv3/getstarted
+[hello-sample]: /docs/extensions/mv3/samples#search:hello
+[hello-uploader]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
+[single purpose]: /docs/extensions/mv3/single_purpose
