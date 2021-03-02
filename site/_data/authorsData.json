@@ -266,5 +266,21 @@
       "en": "I am a Software Engineer Intern wroking on the Web Platform."
     },
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/DXzBVhVGAn8NTnPqW7Pa.jpg"
+  },
+  "adrianajara": {
+    "name": {
+      "given": "Adriana",
+      "family": "Jara"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "US",
+    "email": "ajara@google.com",
+    "descriptions": {
+      "en": "Adriana is a Developer Advocate."
+    },
+    "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/tIuTcnxqlspZFyklJYHG.jpg"
   }
 }

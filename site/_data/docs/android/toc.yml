@@ -11,6 +11,7 @@
     - url: /docs/android/trusted-web-activity/quick-start
     - url: /docs/android/trusted-web-activity/integration-guide
     - url: /docs/android/trusted-web-activity/lay-of-the-land
+    - url: /docs/android/trusted-web-activity/whats-new
     - title: i18n.docs.android.howtos
       sections:
         - url: /docs/android/trusted-web-activity/multi-origin/
