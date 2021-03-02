@@ -131,9 +131,9 @@ Alex's browser's cohort number: 1354.
 
 ### 5. Adtech platform: <span style="text-decoration:underline">adnetwork.example</span>
 1. <u>adnetwork.example</u> can select an ad suitable for Alex by combining the data it has from 
-the publisher <u>dailynews.example</u> and the advertiser <u>shoestore.example</u>: 
-	* Alex's browser's cohort number (1354) provided by <u>dailynews.example</u>.
-	* Data about cohorts and product interests from <u>shoestore.example</u>: 'Browsers from cohort 1354 
+the publisher <u>dailynews.example</u> and the advertiser <u>shoestore.example</u>: <br>
+	• Alex's browser's cohort number (1354) provided by <u>dailynews.example</u>.<br>
+	• Data about cohorts and product interests from <u>shoestore.example</u>: 'Browsers from cohort 1354 
 	might be interested in hiking boots.'
 1. <u>adnetwork.example</u> selects an ad appropriate to Alex: an ad for hiking boots on
 <u>shoestore.example</u>.
