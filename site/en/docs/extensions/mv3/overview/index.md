@@ -25,7 +25,12 @@ Store][cws] to see thousands of different examples of published extensions.
 ### How do extensions work?
 
 Extensions are built on web technologies such as HTML, JavaScript, and CSS.  They run in a separate,
-sandboxed execution environment and interact with the Chrome browser.  Consider the context for this
+sandboxed execution environment and interact with the Chrome browser.
+
+{# TODO: put a diagram here that is useful and helps with context #}
+{% if false %}
+
+Consider the context for this
 -- Chrome runs on a device, connecting the user to resources on the Web, as depicted in this context
 diagram:
 
@@ -33,6 +38,10 @@ diagram:
 
 Also shown in the diagram is an extension "plugged into" the Chrome browser. The extension can
 access and modify selected resources and actions in Chrome. There are two aspects to consider:
+{% endif %}
+
+Extensions let you "extend" the browser by using APIs to modify browser behavior and access web
+content. There are two aspects to consider:
 
 **The extensions user interface**&emsp;This provides a consistent way for users to manage their
 extensions.
