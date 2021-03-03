@@ -167,7 +167,7 @@ performance, hence it should only be used when really necessary.
 
 The webRequest API only exposes requests that the extension has permission to see, given its [host
 permissions][9]. Moreover, only the following schemes are accessible: `http://`, `https://`,
-`ftp://`, `file://`, `ws://` (since Chrome 58), `wss://` (since Chrome 58), or
+`ftp://`, `file://`, `ws://` (since Chrome 58), `wss://` (since Chrome 58), `urn:` (since Chrome 91), or
 `chrome-extension://`. In addition, even certain requests with URLs using one of the above schemes
 are hidden. These include `chrome-extension://other_extension_id` where `other_extension_id` is not
 the ID of the extension to handle the request, `https://www.google.com/chrome`, and other sensitive
