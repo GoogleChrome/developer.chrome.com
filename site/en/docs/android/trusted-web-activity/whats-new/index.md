@@ -331,7 +331,7 @@ const supportedInstruments = [{
   data: {
     sku: sku
   }
-}]
+}];
 ```
 
 Then, build a `PaymentRequest` object as usual and use the API as usual
@@ -351,7 +351,7 @@ const response = await request.show();
 const token = response.details.token;
 const service =
           await window.getDigitalGoodsService("https://play.google.com/billing");
-await service.acknowledge(token, 'onetime')
+await service.acknowledge(token, 'onetime');
 ```
 
 The Digital Goods API and the Payment Request API don't have knowledge on the user's identity. As a
@@ -373,7 +373,7 @@ purchases to ensure that the user correctly redeems their entitlements.
 const purchases = await itemService.listPurchases();
 for (p of purchases) {
   if (!p.acknowledged) {
-    await itemService.acknowledge(p.purchaseToken, “onetime”);
+    await itemService.acknowledge(p.purchaseToken, 'onetime');
   }
 }
 ```
