@@ -33,6 +33,12 @@ redirects:
 - from: /docs/extensions/mv3/background_migration
   to: /docs/extensions/mv3/migrating_to_service_workers
 
+- from: /docs/multidevice/android/customtabs/
+  to: /docs/android/custom-tabs/overview
+
+- from: /multidevice/android/customtabs/
+  to: /docs/android/custom-tabs/overview
+
 # The new site doesn't break out Platform Apps APIs, but instead just locates them at the bottom of
 # the main Extensions reference page.
 - from: /apps/api_index

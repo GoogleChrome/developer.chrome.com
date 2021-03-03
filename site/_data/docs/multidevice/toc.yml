@@ -2,7 +2,6 @@
 - title: i18n.docs.multidevice.android
   sections:
     - url: /docs/multidevice/android/overview/
-    - url: /docs/multidevice/android/customtabs/
     - url: /docs/multidevice/android/intents/
 - title: i18n.docs.multidevice.ios
   sections:
