@@ -20,7 +20,7 @@ Chrome functionality and behavior in many ways, providing things like:
 * Fun and games
 
 These are just a few examples of the many things that extensions can do. See the [Chrome Web
-Store] to see thousands of different examples of published extensions.
+Store][cws] to see thousands of different examples of published extensions.
 
 ### How do extensions work?
 
@@ -60,7 +60,7 @@ extensions may either be fetched from the Chrome Web Store or hosted on the orga
 {% endAside %}
 
 You can distribute your extensions through the [Chrome Developer Dashboard][dev-dashboard], publishing them to the [Chrome
-Web Store]. For more information, see the Chrome Web Store [developer documentation][cws-docs].
+Web Store][cws]. For more information, see the Chrome Web Store [developer documentation][cws-docs].
 
 ### A note about extensions policy
 
@@ -74,7 +74,8 @@ contributes towards a common purpose.
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/XniXB3snAeMvLwI1am3O.png", alt="Screenshot of AMP validator extension pinned", width="169", height="62" %}
 
 * User interfaces should be minimal and have intent. They can range from a simple icon, such as the
-  [AMP validator][amp-validator] extension shown above, to opening a new window with a form, like the [PackageTrack]
+  [AMP validator][amp-validator] extension shown above, to opening a new window with a form, like
+the [PackageTrack][packagetrack]
   extension shown below.
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/nMdr0cEZ0TOANuztuW1y.png", alt="Screenshot of
@@ -168,8 +169,8 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 1.  Subscribe to the [chromium-extensions Google group][crx-group]
 
 [amp-validator]: https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc
-[Chrome Web Store]: https://chrome.google.com/webstore
-[PackageTrack]: https://chrome.google.com/webstore/detail/packagetrack-package-trac/hoipjclokbelgffomjhhiflphegpmlpe
+[cws]: https://chrome.google.com/webstore
+[packagetrack]: https://chrome.google.com/webstore/detail/packagetrack-package-trac/hoipjclokbelgffomjhhiflphegpmlpe
 [action-field]: /docs/extensions/reference/action
 [crx-group]: http://groups.google.com/a/chromium.org/group/chromium-extensions
 [cws-docs]: /docs/webstore
