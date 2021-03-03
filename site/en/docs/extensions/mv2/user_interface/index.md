@@ -514,7 +514,7 @@ Register an override page in the manifest under the `"chrome_url_overrides"` fie
 }
 ```
 
-The `"newtab"` field should be replaed with `"bookmarks"` or `"history"` when overriding those
+The `"newtab"` field should be replaced with `"bookmarks"` or `"history"` when overriding those
 pages.
 
 ```html
