@@ -30,7 +30,7 @@ These pages contain guides and reference information for developers who want to
 create extensions for the Chrome browser. If you're not sure where to begin,
 have a look at the following starting pages:
 
-* [What are extensions?](/extensions/mv2/overview/) to help you understand just what an extension is.
+* [What are extensions?](/docs/extensions/mv2/overview/) to help you understand just what an extension is.
 * The [Getting started tutorial](/docs/extensions/mv2/getstarted/) if you're ready for hello, world.
 
 Beyond that, you might find useful entry points in these pages:
