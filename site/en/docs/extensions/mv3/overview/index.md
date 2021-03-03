@@ -74,7 +74,7 @@ contributes towards a common purpose.
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/XniXB3snAeMvLwI1am3O.png", alt="Screenshot of AMP validator extension pinned", width="169", height="62" %}
 
 * User interfaces should be minimal and have intent. They can range from a simple icon, such as the
-  [AMP validator] extension shown above, to opening a new window with a form, like the [PackageTrack]
+  [AMP validator][amp-validator] extension shown above, to opening a new window with a form, like the [PackageTrack]
   extension shown below.
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/nMdr0cEZ0TOANuztuW1y.png", alt="Screenshot of
@@ -167,7 +167,7 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 1.  Explore the [extension samples]
 1.  Subscribe to the [chromium-extensions Google group][crx-group]
 
-[AMP validator]: https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc
+[amp-validator]: https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc
 [Chrome Web Store]: https://chrome.google.com/webstore
 [PackageTrack]: https://chrome.google.com/webstore/detail/packagetrack-package-trac/hoipjclokbelgffomjhhiflphegpmlpe
 [action-field]: /docs/extensions/reference/action
