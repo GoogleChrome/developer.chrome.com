@@ -31,14 +31,16 @@ This document is a work in progress, unfinished and not to be shared externally.
 Web pages are composed of content from multiple [origins](/docs/privacy-sanddbox/glossary#origin). 
 Some content is first-party and comes from the top-level site the user is visiting. Other content 
 may come from third parties, such as ads, embedded media, or shared resources such as JavaScript 
-libraries from CDNs. Third parties may also want to correlate user activity across different sites 
-by using mechanisms such as [cookies](/docs/privacy-sanddbox/glossary#origin).
+libraries from [CDNs](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/). Third parties 
+may also want to correlate user activity across different sites by using mechanisms such as 
+[cookies](/docs/privacy-sanddbox/glossary#origin).
 
 Browsers are proposing privacy models that restrict access to user identity outside of a first-party 
 context. However, many organizations have related sites with different domain names or with domains 
-for different countries. It should be possible to allow related domain names owned by the same 
-entity to declare themselves as belonging to the same first party, so browsers treat those domains 
-as first-party in situations where first party and third party are treated differently. 
+for different countries (such as `bbc.co.uk` and `bbc.com`). It should be possible to allow related 
+domain names owned by the same entity to declare themselves as belonging to the same first party, so 
+browsers treat those domains as first-party in situations where first party and third party are 
+treated differently. 
 
 Any solution would also need to prevent abuse of the system. For example, ad networks must not be 
 able to define organizations that include all the sites they advertise on.
@@ -46,11 +48,37 @@ able to define organizations that include all the sites they advertise on.
 
 ## How do First-Party Sets work?
 
-An **owner** domain hosts a manifest file which lists the **member** domains it owns.  A browser can 
+A website can declare that it is a member (or owner) of a set of web domains by serving a manifest 
+file that defines its relationship to the other domains: a JSON file at a 
+`.well-known/first-party-set` address.
+
+Suppose `a.example`, `b.example`, and `c.example` wish to form a first-party set owned by 
+`a.example`. The sites would then serve the following resources:
+
+```json
+// https://a.example/.well-known/first-party-set
+{
+  "owner": "a.example",
+  "members": ["b.example", "c.example"],
+  ...
+}
+
+// https://b.example/.well-known/first-party-set
+{ 
+	"owner": "a.example" 
+}
+
+// https://c.example/.well-known/first-party-set
+{ 
+	"owner": "a.example" 
+}
+```
+
+In other words, an owner domain hosts a manifest file that lists its member domains.  A browser can 
 ask a member website to specify its owner, and then check the owner's manifest to verify the 
-relationship.  Additional browser policies would prevent abuse or misuse, for example First Party 
-Sets is not intended to enable the exchange of user information across unrelated sites, or the 
-grouping of sites that are not owned by the same entity.
+relationship. Additional browser policies would prevent abuse or misuse. For example, First-Party 
+Sets must not enable the exchange of user information across unrelated sites, or the grouping of 
+sites that are not owned by the same entity.
 
 ---
 
