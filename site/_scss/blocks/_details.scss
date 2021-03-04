@@ -1,11 +1,9 @@
 .details {
-  position: relative;
-
   border: 1px solid var(--color-hairline);
   border-width: 1px 0;
-
   margin: calc(var(--flow-space)) 0;
   padding: calc(var(--flow-space) / 2) 0;
+  position: relative;
 }
 
 .details__summary {
