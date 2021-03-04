@@ -39,7 +39,7 @@ Building the entire site can take a while because it's over a thousand pages.
 If you want to _massively_ speed up your build times, we suggest setting some
 build flags to ignore certain sections.
 
-- Create a `.env` file in the root of your project
+- Create a `.env` file at the root of your project
 - Optionally add the following:
 
 ```text
@@ -72,7 +72,7 @@ run `npm run production && npm start`.
 When you send in a pull request it will be automatically staged for you. Keep an
 eye out for the netlify bot to comment on the pull request with your unique URL.
 
-(Googlers only) If you would like to stage your _local_ changes to a unique url,
+(Googlers only) If you would like to stage your _local_ changes to a unique URL,
 run the command `npm run stage:personal`. This can be useful if you're not ready
 to create a pull request yet, or if you need to stage something private.
 
