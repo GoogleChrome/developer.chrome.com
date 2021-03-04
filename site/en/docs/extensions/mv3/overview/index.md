@@ -56,7 +56,7 @@ can package it and distribute it to users.
 
 ### How do users get extensions?
 
-Most Chrome users get extensions from the Chrome Web Store (CWS). Developers across the globe
+Most Chrome users get extensions from the Chrome Web Store. Developers across the globe
 publish their extensions in the Chrome Web Store where they are reviewed and made available to end
 users.
 
@@ -84,11 +84,11 @@ contributes towards a common purpose.
 
 * User interfaces should be minimal and have intent. They can range from a simple icon, such as the
   [AMP validator][amp-validator] extension shown above, to opening a new window with a form, like
-the [PackageTrack][packagetrack]
+the [Google Similar Pages][similar-pages-extension]
   extension shown below.
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/nMdr0cEZ0TOANuztuW1y.png", alt="Screenshot of
-PackageTrack extension form window", width="400", height="1073" %}
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/oR9iCEgY2889Z3mHHLll.png", alt="Screenshot of Google
+Similar Pages extension", width="334", height="597" %}
 
 ## Hello extensions {: #hello-extensions }
 
@@ -178,10 +178,9 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 1.  Subscribe to the [chromium-extensions Google group][crx-group]
 
 [amp-validator]: https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc
-[cws]: https://chrome.google.com/webstore
-[packagetrack]: https://chrome.google.com/webstore/detail/packagetrack-package-trac/hoipjclokbelgffomjhhiflphegpmlpe
 [action-field]: /docs/extensions/reference/action
 [crx-group]: http://groups.google.com/a/chromium.org/group/chromium-extensions
+[cws]: https://chrome.google.com/webstore
 [cws-docs]: /docs/webstore
 [cws-policies]: /docs/webstore/program_policies/
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
@@ -189,4 +188,5 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 [getstarted-tut]: /docs/extensions/mv3/getstarted
 [hello-sample]: /docs/extensions/mv3/samples#search:hello
 [hello-uploader]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
+[similar-pages-extension]: https://chrome.google.com/webstore/detail/packagetrack-package-trac/hoipjclokbelgffomjhhiflphegpmlpe
 [single purpose]: /docs/extensions/mv3/single_purpose
