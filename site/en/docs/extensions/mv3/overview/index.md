@@ -6,10 +6,11 @@ updated: 2018-02-25
 description: An overview of the purpose of Chrome Extensions and how they're developed.
 ---
 
-This page provides a very brief introduction to what extensions are and how you can make a trivial one.
+This page provides a brief introduction to Chrome extensions and walks through the creation of a 
+"Hello, World!" extension.
 
 
-## About extensions
+## About extensions {: #intro }
 
 Extensions are small software programs that customize the browsing experience. They let users tailor
 Chrome functionality and behavior in many ways, providing things like:
@@ -22,7 +23,7 @@ Chrome functionality and behavior in many ways, providing things like:
 These are just a few examples of the many things that extensions can do. See the [Chrome Web
 Store][cws] to see thousands of different examples of published extensions.
 
-### How do extensions work?
+### How do extensions work? {: #basics }
 
 Extensions are built on web technologies such as HTML, JavaScript, and CSS.  They run in a separate,
 sandboxed execution environment and interact with the Chrome browser.
@@ -54,7 +55,7 @@ images, and others -- that constitute the extension. For development and testing
 "unpacked" into Chrome using extension developer mode. Once you are happy with your extension, you
 can package it and distribute it to users.
 
-### How do users get extensions?
+### How do users get extensions? {: #getting-extensions }
 
 Most Chrome users get extensions from the Chrome Web Store. Developers across the globe
 publish their extensions in the Chrome Web Store where they are reviewed and made available to end
