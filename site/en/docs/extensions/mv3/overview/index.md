@@ -71,7 +71,7 @@ extensions may either be fetched from the Chrome Web Store or hosted on the orga
 You can distribute your extensions through the [Chrome Developer Dashboard][dev-dashboard], publishing them to the [Chrome
 Web Store][cws]. For more information, see the Chrome Web Store [developer documentation][cws-docs].
 
-### A note about extensions policy
+### A note about extensions policy {: #policy }
 
 Extensions on the Chrome Web Store must adhere to the [Chrome Web Store policies][cws-policies].
 Here are some things to keep in mind as you begin:
