@@ -7,45 +7,63 @@ updated: 2021-01-27
 
 ## Details
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ab aspernatur
-praesentium, dolores deleniti, nemo eos, saepe laudantium id maiores corporis
-qui? Culpa eligendi nobis, dolores rem expedita similique quas.
+Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
 
-{% Details %}
+<!-- Example 1 -->
 
+````md
+{% raw %}{% Details %}
 {% DetailsSummary %}
-Details component _summary_
+### A normal heading goes here
 {% endDetailsSummary %}
 
-  This is the body of the Details component.
-  It **can contain** markdown
-  ```js
-  const bar = 'foo';
-  console.log(bar);
-  ```
-{% endDetails %}
+The body of the Details component goes here, and **can** contain markdown.
 
+{% endDetails %}{% endraw %}
+````
 
 {% Details %}
-
 {% DetailsSummary %}
-### Details component _summary_
-
-This is an optional preview.
+### A normal heading goes here
 {% endDetailsSummary %}
 
-  This is the body of the Details component.
-  It **can contain** markdown
-  ```js
-  const bar = 'foo';
-  console.log(bar);
-  ```
+The body of the Details component goes here, and **can** contain markdown.
+
 {% endDetails %}
 
+<!-- Example 2 -->
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolorum? Vitae
-necessitatibus omnis rem recusandae laudantium, nostrum deleniti maxime
-corporis? Id deserunt quam dicta dolore tempore in omnis iure ex!
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview. 
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview. 
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}
 
 ## Asides
 Use asides to provide information that's related to but distinct from the

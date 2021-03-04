@@ -1,5 +1,11 @@
 .details {
   position: relative;
+
+  border: 1px solid var(--color-hairline);
+  border-width: 1px 0;
+
+  margin: calc(var(--flow-space)) 0;
+  padding: calc(var(--flow-space) / 2) 0;
 }
 
 .details__summary {
@@ -25,7 +31,6 @@
 .details__header {
   --chevron-size: 2rem;
 
-  margin-bottom: calc(var(--flow-space) / 2);
   padding-right: var(--chevron-size);
   position: relative;
 
