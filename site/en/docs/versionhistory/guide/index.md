@@ -12,7 +12,7 @@ This guide shows you how to use the VersionHistory web service API.
 ## Overview
 
 The VersionHistory API provides programmatic access to Google Chrome
-version history information. It is a [REST] API that returns information
+version history information. It is a [REST][rest] API that returns information
 as JSON.
 
 All API access is over HTTPS, and accessed from `https://versionhistory.googleapis.com/v1/chrome`.
@@ -874,6 +874,6 @@ and check out the [reference](/docs/versionhistory/reference/) for detailed tech
 including how to [filter](/docs/versionhistory/reference/#filter) and
 [order](/docs/versionhistory/reference/#order) results.
 
-[REST]: https://en.wikipedia.org/wiki/Representational_state_transfer
+[rest]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [channels]: https://www.chromium.org/getting-involved/dev-channel#TOC-How-do-I-choose-which-channel-to-use-
 [platform identifier]: /docs/versionhistory/reference/#platform-identifiers

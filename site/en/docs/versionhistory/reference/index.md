@@ -266,7 +266,7 @@ expression should take the form of `field operator value`.
   fields. For example, `version>80` becomes `version>80.0.0.0`.
 * `endtime=none` filters for releases that are currently live and do not
   have an end time yet.
-* When filtering by `starttime` or `endtime`, the value must be in [RFC 3339]
+* When filtering by `starttime` or `endtime`, the value must be in [RFC 3339][rfc3339]
   date string format.
 * `name` and `platform` are filtered by string comparison.
 * For releases that Chrome is still serving, `serving.endtime` will not be populated.
@@ -304,4 +304,4 @@ GET /platforms/win/channels/stable/versions/all/releases?order_by=starttime%20as
   `version`, and then `serving.starttime`.
 
 [channels]: https://www.chromium.org/getting-involved/dev-channel#TOC-How-do-I-choose-which-channel-to-use-
-[RFC 3339]: https://medium.com/easyread/understanding-about-rfc-3339-for-datetime-formatting-in-software-engineering-940aa5d5f68a
+[rfc3339]: https://medium.com/easyread/understanding-about-rfc-3339-for-datetime-formatting-in-software-engineering-940aa5d5f68a
