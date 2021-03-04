@@ -1,13 +1,18 @@
 ---
 layout: "layouts/doc-post.njk"
 title: VersionHistory API reference
-date: 2021-01-28
-description: TODO
+date: 2021-03-04
+description: Technical reference information about the VersionHistory web service API.
 ---
+
+This page contains technical reference information about the VersionHistory web
+service API.
 
 All API access is over HTTPS, and accessed from `https://versionhistory.googleapis.com/v1/chrome`.
 
 ## Version
+
+A version is a particular instance of Chrome that users are running.
 
 ### Get version information for a given platform and channel
 
@@ -76,6 +81,9 @@ GET /platforms/{platform}/channels/{channel}/versions/{version}/releases
 
 ## Platform
 
+A platform is one of the computing platforms that Chrome runs on, such
+as Windows, Android, etc.
+
 ### Get all platforms
 
 ```http
@@ -139,9 +147,35 @@ GET /platforms/all/channels
 
 ## Channel
 
+See [How do I choose which channel to use?][channels] for an explanation
+of Chrome's channels.
+
+### Get a platform's valid channels
+
+Lists the valid channels for a given platform:
+
+```http
+GET /platforms/{platform}/channels
+```
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>platform</code></td>
+      <td>A <a href="#platform-identifiers">platform identifier</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Channel identifiers {: #channel-identifiers }
 
-The VersionHistory API supports the following [channel] identifiers:
+The VersionHistory API supports the following channel identifiers:
 
 <table>
   <thead>
@@ -181,100 +215,93 @@ The VersionHistory API supports the following [channel] identifiers:
   at uncovering bugs.
 {% endAside %}
 
-### Get a platform's valid channels
+## Filter results {: #filter }
 
-Lists the valid channels for a given platform:
+Add a `filter` query parameter to filter results. Only the
+[version](#version) and [release](#release) endpoints support filtering.
+Example:
 
 ```http
-GET /platforms/{platform}/channels
+GET /platforms/win/channels/stable/versions/all/releases?filter=fraction=1
 ```
+
+The value of `filter` should be a comma-separated list of expressions. Each
+expression should take the form of `field operator value`.
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <th>Item</th>
+      <th>Valid values</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>platform</code></td>
-      <td>A <a href="#platform-identifiers">platform identifier</a>.</td>
+      <td>Field</td>
+      <td>
+        <code>version</code>, <code>name</code>, <code>platform</code>,
+        <code>starttime</code>*, <code>endtime</code>*, <code>fraction</code>*
+      </td>
+    </tr>
+    <tr>
+      <td>Operator</td>
+      <td>
+        <code>&lt;</code>, <code>&lt;=</code>, <code>=</code>,
+        <code>&gt;</code>, <code>&gt;=</code>
+      </td>
     </tr>
   </tbody>
 </table>
 
-## Filter results
+{% Aside %}
+  An item with an asterisk (`*`) to the right of it is only valid
+  for [release](#release) endpoints.
+{% endAside %} 
 
-The version and release endpoints support filtering. Example:
+* Channel filtering is done by distance from Stable, in other words `stable` < `beta`
+  < `dev` < `canary` < `canary_asan`. For example, `channel<=dev` returns
+  information for `stable`, `beta`, and `dev`.
+* Version filtering is done numerically, for example `1.0.0.8` < `1.0.0.10`.
+  If a version is not entirely written, VersionHistory appends `0` for the missing
+  fields. For example, `version>80` becomes `version>80.0.0.0`.
+* `endtime=none` filters for releases that are currently live and do not
+  have an end time yet.
+* When filtering by `starttime` or `endtime`, the value must be in [RFC 3339]
+  date string format.
+* `name` and `platform` are filtered by string comparison.
+* For releases that Chrome is still serving, `serving.endtime` will not be populated.
+  During ordering or filtering, `serving.endtime` will be treated as
+  `1970-01-01T00:00:00Z` if the field is not populated.
+* `fraction` is used to specify how many users were involved in the rollout.
+  For example, `fraction=1` means 100% of users.
+
+## Order results {: #order }
+
+Add a `order_by` query parameter to order results. Only the
+[version](#version) and [release](#release) endpoints support ordering.
+Example:
 
 ```http
-GET /platforms/win/channels/stable/versions?filter={filter}
+GET /platforms/win/channels/stable/versions/all/releases?order_by=starttime
 ```
 
-The value for `filter` should be a comma-separated list of expressions.
-Each expression must take the form of `{field} {operator} {value}` where
-`field` is the 
+`order_by` accepts a comma-separated list of the following
+values: `version`, `name`, `platform`, `channel`, `starttime`,
+`endtime`, `fraction`.
 
-Add the `filter` query parameter to filter version and release endpoints
+Add a space character (`%20`) followed by `asc` or `desc` after the `order_by` value to specify ascending
+or descending ordering. Example:
 
-The version and release endpoints support filtering. Use the `filter` query
-param
+```http
+GET /platforms/win/channels/stable/versions/all/releases?order_by=starttime%20asc
+```
 
-Filtering is available for versions and releases. To use filtering, append the
-API query with `?filter=<filter string>`.
+* Channel ordering is done in the following order: `stable`, `beta`,
+  `dev`, `canary`, `canary_asan`. 
+* Ordering by `name` may cause unexpected behaviour as it is a naive string sort. For
+  example, `1.0.0.8` will be before 1.0.0.10 in descending order.
+* When `order_by` is not specified the default ordering is by `platform`, `channel`,
+  `version`, and then `serving.starttime`.
 
-Format of the `<filter string>` is a comma separated list of `<field_name>
-<operator> <filter>`. \
-All comma separated filter clauses are conjoined with a logical and. \
-Valid field_names are **version**, **name**, **platform**, **channel**,
-**starttime**, **endtime**, and **fraction** (starttime, endtime, and fraction
-are only available for releases). \
-Valid operators are **<**, **<=**, **=**, **>=**, and **>**.
-
-Channel comparison is done by distance from stable, i.e., stable < beta dev <
-canary < canary_asan. \
-`<filter>` must be a valid channel when filtering by channel.
-
-Version comparison is done numerically, i.e., 1.0.0.8 < 1.0.0.10. \
-If version is not entirely written, the version will be appended with 0 for the
-missing fields i.e. version > 80 becomes version > 80.0.0.0
-
-The filter `endtime=none` will filter for releases that are currently live and
-do not have an endtime yet.
-
-When filtering by starttime or endtime, `<filter>` must be in RFC 3339 date
-string format.
-
-Name and platform are filtered by string comparison.
-
-For releases that are still serving, serving.endtime will not be populated.
-During ordering or filtering, serving.endtime will be treated as
-`1970-01-01T00:00:00Z` if the field is not populated.
-
-To filter for releases that are still serving and do not have an endtime, you
-can filter for `endtime=none`
-
-## Order results
-
-Ordering of the versions and releases can be changed by appending the query with
-`?order_by=<order_by string>`.
-
-Format of the `<order_by string>` is a comma separated list of `<field_name>`. \
-Valid field_names are **version**, **name**, **platform**, **channel**,
-**starttime**, **endtime**, and **fraction** (starttime, endtime, and fraction
-are only available for releases). \
-Optionally, you can append **desc** or **asc** after each field_name to specify
-the sorting order.
-
-Ordering by channel will sort by distance from the stable channel (not
-alphabetically). A list of channels sorted in this order is: stable, beta, dev,
-canary, and canary_asan.
-
-Sorting by name may cause unexpected behaviour as it is a naive string sort. For
-example, 1.0.0.8 will be before 1.0.0.10 in descending order.
-
-If order_by is not specified the response will be sorted by platform, channel,
-version, and then serving.starttime.
-
-[channel]: https://www.chromium.org/getting-involved/dev-channel#TOC-How-do-I-choose-which-channel-to-use-
+[channels]: https://www.chromium.org/getting-involved/dev-channel#TOC-How-do-I-choose-which-channel-to-use-
+[RFC 3339]: https://medium.com/easyread/understanding-about-rfc-3339-for-datetime-formatting-in-software-engineering-940aa5d5f68a
