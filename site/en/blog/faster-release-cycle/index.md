@@ -10,6 +10,8 @@ hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XfJpTb2N1cpHQ5HuPA9l.jpg'
 alt: Side of road in the evening with light trails from vehicles.
 tags:
   - chrome-94
+authors:
+  - petelepage
 ---
 
 Later this year, we plan to shorten the release cycle and ship a new version
