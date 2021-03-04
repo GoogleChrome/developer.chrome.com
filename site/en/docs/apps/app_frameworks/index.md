@@ -26,8 +26,8 @@ before. Application development requires collaboration from multiple developers.
 rich client-side features, is no exception.
 
 Design patterns are important to write maintainable and reusable code. A pattern is a reusable
-solution that can be applied to commonly occurring problems in software design—in our case —
-writing Chrome Apps. We recommend that developers decouple the app into a series of independent
+solution that can be applied to commonly occurring problems in software design—in our
+case—writing Chrome Apps. We recommend that developers decouple the app into a series of independent
 components following the MVC pattern.
 
 In the last few years, a series of JavaScript MVC frameworks have been developed, such as
