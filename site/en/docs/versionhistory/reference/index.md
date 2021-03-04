@@ -39,7 +39,7 @@ GET /platforms/{platform}/channels/{channel}/versions
 ## Release
 
 A release is the interval in which users were running a particular
-version of Chrome. The VersionHistory API also provides information
+version of Chrome. The release endpoints also provide information
 around what fraction of users were running that version of Chrome
 during that interval.
 
@@ -73,15 +73,6 @@ GET /platforms/{platform}/channels/{channel}/versions/{version}/releases
     </tr>
   </tbody>
 </table>
-
-### Filtering releases
-
-For releases that are still serving, serving.endtime will not be populated.
-During ordering or filtering, serving.endtime will be treated as
-`1970-01-01T00:00:00Z` if the field is not populated.
-
-To filter for releases that are still serving and do not have an endtime, you
-can filter for `endtime=none`
 
 ## Platform
 
@@ -145,10 +136,6 @@ GET /platforms/all/channels
     </tr>
   </tbody>
 </table>
-
-### Product
-
-Currently, the only available product for VersionHistory is **Chrome**.
 
 ## Channel
 
@@ -260,6 +247,13 @@ When filtering by starttime or endtime, `<filter>` must be in RFC 3339 date
 string format.
 
 Name and platform are filtered by string comparison.
+
+For releases that are still serving, serving.endtime will not be populated.
+During ordering or filtering, serving.endtime will be treated as
+`1970-01-01T00:00:00Z` if the field is not populated.
+
+To filter for releases that are still serving and do not have an endtime, you
+can filter for `endtime=none`
 
 ## Order results
 
