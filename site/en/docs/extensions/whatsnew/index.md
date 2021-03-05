@@ -32,11 +32,10 @@ its documentation, and related policy or other changes.
 
 ### 2021.01.19: Manifest V3 launched
 
-With the launch of Chrome 88, the extensions platform now supports extensions
+With the release of Chrome 88, the extensions platform now supports extensions
 built with Manifest v3, and you can upload them to the Chrome Web Store.
 Manifest v3 is a new extension platform that makes Chrome extensions more
 secure, performant, and privacy respecting, by default.
 
 Check out [Welcome to Manifest V3](/docs/extensions/mv3/intro/) for complete
 details about Manifest V3 and how to build or migrate extensions for it.
-
