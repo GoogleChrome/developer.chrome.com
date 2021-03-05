@@ -28,7 +28,6 @@ declare global {
     low?: number;
     high?: number;
     deprecated?: number;
-    channel?: "stable" | "beta" | "dev";
     unknown?: true;
   }
 
@@ -84,6 +83,10 @@ declare global {
     properties: RenderType[];
     methods: RenderType[];
     events: RenderType[];
+
+    channel: "stable" | "beta" | "dev";
+    minManifestVersion?: number;
+    maxManifestVersion?: number;
   }
 }
 
