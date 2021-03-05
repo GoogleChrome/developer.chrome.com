@@ -58,3 +58,17 @@ test('avoid dir, prefer another', async t => {
   t.is(matcher('/mv2/under/foo'), '/mv2/foo');
   t.is(matcher('/mv3/onlyINmv2'), '/mv2/only-in-mv2');
 });
+
+test('prefer mv3', async t => {
+  addPage(t, '/en/docs/extensions/mv2/content_scripts');
+  addPage(t, '/en/docs/extensions/mv3/content_scripts');
+
+  const matcher = await buildMatcher(t.context.dir, [
+    '/en/docs/extensions/mv2',
+  ]);
+
+  t.is(
+    matcher('/extensions/content_scripts'),
+    '/en/docs/extensions/mv3/content_scripts'
+  );
+});
