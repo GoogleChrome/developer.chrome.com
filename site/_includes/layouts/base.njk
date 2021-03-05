@@ -14,7 +14,7 @@
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/medium/latin.woff2">
 
     {% if process.env.NODE_ENV === 'production' %}
-      {# CSS will be injected by purify-js plugin. #}
+      {# CSS will be injected by purify-css plugin. #}
     {% else %}
       <link rel="stylesheet" href="/css/main.css">
     {% endif %}
