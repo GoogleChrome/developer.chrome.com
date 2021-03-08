@@ -21,6 +21,8 @@ This document is a work in progress, unfinished and not to be shared externally.
 ## Implementation status
 
 * [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is under discussion with [WICG](https://www.w3.org/community/wicg/) and interest groups.
+* [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI) in 
+[Blink](https://www.chromium.org/blink).
 
 
 {% Aside %}
