@@ -51,6 +51,7 @@ You may want to modularize your event handling code by dividing it across multip
 
 ```js
 {
+  self.importScripts(...);
     ...
     ...
   }
