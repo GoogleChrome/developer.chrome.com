@@ -30,10 +30,15 @@ This document is a work in progress, unfinished and not to be shared externally.
 ## What are Trust Tokens?
 
 Trust Tokens enable trust in a user's authenticity to be conveyed from one context to another, to 
-help sites combat fraud and distinguish bots from real humans, without passive tracking. Tokens can 
-be issued by a website to a user once the user has shown that they're trustworthy, for example 
-through continued account usage or by completing a transaction. Another website can later confirm 
-that the user is not fake, by checking if they have tokens from an issuer the site trusts.
+help sites combat fraud and distinguish bots from real humans—without passive tracking. 
+* An *issuer* website can issue tokens to the web browser of a user who shows that they're
+trustworthy, for example through continued account usage, by completing a transaction, or by getting
+an acceptable [reCAPTCHA score](https://developers.google.com/recaptcha). 
+* A *redeemer* website can confirm that a user is not fake by checking if they have tokens from a
+trusted issuer, and then redeem tokens as necessary.
+
+Trust tokens are encrypted, so it isn’t possible to identify an individual or connect trusted and 
+untrusted instances to discover user identity.
 
 {% Aside 'caution' %}
 Trust Tokens are a way to **convey** trust in a user, not **establish** trust in a user. 
