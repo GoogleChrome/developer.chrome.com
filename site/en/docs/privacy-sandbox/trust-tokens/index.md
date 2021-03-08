@@ -38,7 +38,7 @@ an acceptable [reCAPTCHA score](https://developers.google.com/recaptcha).
 * A **redeemer** website can confirm that a user is not fake by checking if they have tokens from a
 trusted issuer, and then redeem tokens as necessary.
 
-Trust tokens are encrypted, so it isn’t possible to identify an individual or connect trusted and 
+Trust tokens are encrypted, so it isn't possible to identify an individual or connect trusted and 
 untrusted instances to discover user identity.
 
 {% Aside 'caution' %}
