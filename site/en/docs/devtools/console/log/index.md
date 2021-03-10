@@ -279,7 +279,7 @@ Congratulations, you have completed the tutorial. Click **Dispense Trophy** to r
 
 [1]: /docs/devtools
 [2]: https://devtools.glitch.me/console/log.html
-[3]: /docs/devtools/ui#placement
+[3]: /docs/devtools/customize/#placement
 [4]: /docs/devtools/command-menu
 [5]: https://en.wikipedia.org/wiki/Stack_trace
 [6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions

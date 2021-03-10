@@ -316,7 +316,7 @@ To run a new audit, use <kbd>Shift</kbd>+<kbd>Tab</kbd> to exit the report and l
 [6]: /docs/devtools/console
 [7]: /docs/devtools/shortcuts
 [8]: /docs/devtools/open
-[9]: /docs/devtools/ui#command-menu
+[9]: /docs/devtools/customize/#command-menu
 [10]: /docs/devtools/dom
 [11]: https://www.w3.org/TR/wai-aria-1.1/#tree
 [12]: /docs/devtools/dom#keynav

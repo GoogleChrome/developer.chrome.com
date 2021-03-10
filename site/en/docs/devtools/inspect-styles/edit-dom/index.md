@@ -328,5 +328,5 @@ checkbox.
 [5]: #more-actions
 [6]: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener
 [7]: https://support.google.com/chrome/answer/95464
-[8]: /docs/devtools/ui#settings
+[8]: /docs/devtools/customize/#settings
 [9]: #settings

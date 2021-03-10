@@ -206,7 +206,7 @@ lifecycle function. React does this in development mode.
 [10]: /web/updates/2018/05/devtools#eagerevaluation
 [11]: /docs/devtools/css/reference#select
 [12]: /docs/devtools/console/command-line-reference#dom
-[13]: /docs/devtools/ui#command-menu
+[13]: /docs/devtools/customize/#command-menu
 [14]: /docs/devtools/javascript/breakpoints#conditional-loc
 [15]: https://codemirror.net/
 [16]: https://developers.google.com/docs/devtools/javascript/breakpoints#event-listeners

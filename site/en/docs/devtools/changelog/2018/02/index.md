@@ -166,7 +166,7 @@ where I really wanted to pause all along.
 [3]: #pretty-printing
 [4]: #previews
 [5]: #overrides
-[6]: /docs/devtools/ui#settings
+[6]: /docs/devtools/customize/#settings
 [7]: /docs/devtools/javascript/reference#blackbox
 [8]: /docs/devtools/device-mode
 [9]: /web/updates/2018/01/devtools#overrides
