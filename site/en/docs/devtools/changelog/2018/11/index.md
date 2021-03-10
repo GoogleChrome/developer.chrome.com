@@ -92,7 +92,7 @@ Also, you can now access the Audits panel from the Command Menu by typing `Light
 [4]: #audits
 [5]: /docs/devtools/speed/get-started
 [6]:
-  /web/fundamentals/performance/user-centric-performance-metrics#first_meaningful_paint_and_hero_element_timing
+  https://developers.google.com/web/fundamentals/performance/user-centric-performance-metrics#first_meaningful_paint_and_hero_element_timing
 [7]: https://pptr.dev/#?product=Puppeteer&version=v1.9.0&show=api-pageclickselector-options
-[8]: /web/fundamentals/web-components/shadowdom
+[8]: https://developers.google.com/web/fundamentals/web-components/shadowdom
 [9]: https://github.com/GoogleChrome/lighthouse/releases/tag/v3.2.0

@@ -198,13 +198,13 @@ The Color Picker can help you make sure that your text meets recommended contras
 
     **Figure 13**. The Contrast Ratio Line in the visual picker
 
-[1]: /web/fundamentals/accessibility
+[1]: https://developers.google.com/web/fundamentals/accessibility
 [2]: /docs/devtools/accessibility/navigation
-[3]: /web/fundamentals/accessibility/semantics-builtin#screen_readers
-[4]: /web/fundamentals/accessibility/how-to-review
+[3]: https://developers.google.com/web/fundamentals/accessibility/semantics-builtin#screen_readers
+[4]: https://developers.google.com/web/fundamentals/accessibility/how-to-review
 [5]: #contrast
 [6]: https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd
-[7]: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
+[7]: https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
 [8]: #pane
 [9]: #pane
 [10]: /docs/devtools/css/reference#computed

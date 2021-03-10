@@ -221,9 +221,9 @@ been working on over the past year and the big themes that they're tackling in t
 [9]: #async-stacks
 [10]: /web/tools/lighthouse
 [11]: /web/progressive-web-apps
-[12]: /web/fundamentals/performance
-[13]: /web/fundamentals/accessibility
-[14]: /web/fundamentals
+[12]: https://developers.google.com/web/fundamentals/performance
+[13]: https://developers.google.com/web/fundamentals/accessibility
+[14]: https://developers.google.com/web/fundamentals
 [15]: https://groups.google.com/d/msg/google-chrome-developer-tools/Wb76dhsEll4/W8Ab2WICBAAJ
 [16]: /docs/devtools/ui#command-menu
 [17]: /docs/devtools/evaluate-performance

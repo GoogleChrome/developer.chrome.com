@@ -179,7 +179,7 @@ Chromium issue [#1041830][30]
 
 [1]: https://drafts.csswg.org/cssom/
 [2]: /web/updates/2019/02/constructable-stylesheets
-[3]: /web/fundamentals/web-components/shadowdom
+[3]: https://developers.google.com/web/fundamentals/web-components/shadowdom
 [4]: https://crbug.com/946975
 [5]: https://web.dev/lighthouse-whats-new-6.0/
 [6]: https://github.com/GoogleChrome/lighthouse/releases/tag/v6.0.0

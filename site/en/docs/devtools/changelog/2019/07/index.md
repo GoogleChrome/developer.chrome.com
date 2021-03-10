@@ -140,12 +140,12 @@ Figure 7. The new Push Messages and Notifications panes in the Application panel
 [2]: https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc
 [3]: https://twitter.com/argyleink/status/1142216452184821760
 [4]:
-  /web/fundamentals/performance/lazy-loading-guidance/images-and-video#layout_shifting_and_placeholders
+  https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video#layout_shifting_and_placeholders
 [5]: /docs/devtools/command-menu
 [6]: https://crbug.com/961846
 [7]: /web/updates/2019/05/devtools
 [8]: https://github.com/GoogleChrome/lighthouse/releases/tag/v5.1.0
-[9]: /web/fundamentals/design-and-ux/browser-customization#safari
+[9]: https://developers.google.com/web/fundamentals/design-and-ux/browser-customization#safari
 [10]: /web/tools/lighthouse/audits/budgets
 [11]: /web/updates/2018/05/first-input-delay
 [12]: /web/tools/lighthouse/audits/budgets
@@ -154,7 +154,7 @@ Figure 7. The new Push Messages and Notifications panes in the Application panel
 [15]: /docs/devtools/customize/dark-theme
 [16]: /web/updates/2019/01/devtools#logpoints
 [17]: /docs/devtools/javascript/breakpoints#conditional-loc
-[18]: /web/fundamentals/performance/resource-prioritization#prefetch
+[18]: https://developers.google.com/web/fundamentals/performance/resource-prioritization#prefetch
 [19]: https://caniuse.com/#feat=link-rel-prefetch
 [20]: https://devtools.glitch.me/wndt77/prefetch1.html
 [21]: https://crbug.com/935267
