@@ -171,7 +171,7 @@ periodically calculate the region in "cohort space" that corresponds most closel
 browsing history.
 
 <figure style="text-align: center">
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/RULVYVAWXOIIkzcsJWnz.png", alt="Diagram of the 
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/IRRcOym8lfaXYZFgH52I.png", alt="Diagram of the 
 'browsing history space' created by a FLoC server, showing multiple segments, each with a cohort 
 number.", width="400", height="359" %}
 <figcaption class="w-figcaption">The FLoC service divides up "cohort space" into
@@ -198,11 +198,11 @@ its cohort every seven days.
 
 In the example above, both Yoshi and Alex's browser's cohort number is 1354. In the future Yoshi's 
 browser and Alex's browser may move to a different cohort if their interests change. In the
-example below, Yoshi's browser moves to cohort 1378 and Alex's browser moves to cohort 1101. Other
+example below, Yoshi's browser moves to cohort 1101 and Alex's browser moves to cohort 1378. Other
 people's browsers will move into and out of cohorts as their browsing interests change.
 
 <figure style="text-align: center">
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/WJdhnIaXy8hNQ9JXsaeK.png", alt="Diagram of the 
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/ECeyV3l0TLactheszn3V.png", alt="Diagram of the 
 'browsing history space' created by a FLoC server, showing multiple segments, each with a cohort 
 number. The diagram shows browsers belonging to users Yoshi and Alex moving from one cohort to 
 another as their browsing interests change over time.", width="800", height="533" %}
