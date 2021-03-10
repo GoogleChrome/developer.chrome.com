@@ -225,12 +225,12 @@ been working on over the past year and the big themes that they're tackling in t
 [13]: https://developers.google.com/web/fundamentals/accessibility
 [14]: https://developers.google.com/web/fundamentals
 [15]: https://groups.google.com/d/msg/google-chrome-developer-tools/Wb76dhsEll4/W8Ab2WICBAAJ
-[16]: /docs/devtools/customize/#command-menu
+[16]: /docs/devtools/command-menu/
 [17]: /docs/devtools/evaluate-performance
 [18]: /docs/devtools/javascript
 [19]: #continue
 [20]: /docs/devtools/customize/#settings
-[21]: /docs/devtools/customize/#command-menu
+[21]: /docs/devtools/command-menu/
 [22]: /web/updates/2017/04/devtools-release-notes#coverage
 [23]: /web/updates/2017/04/devtools-release-notes#screenshots
 [24]: /web/updates/2017/04/devtools-release-notes#block-requests
