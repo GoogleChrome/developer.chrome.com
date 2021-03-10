@@ -347,6 +347,6 @@ See [Disable JavaScript With Chrome DevTools][5].
 
 [1]: /docs/devtools/javascript
 [2]: /docs/devtools/javascript/breakpoints
-[3]: /docs/devtools/ui#settings
+[3]: /docs/devtools/customize/#settings
 [4]: /docs/devtools/snippets
 [5]: /docs/devtools/javascript/disable

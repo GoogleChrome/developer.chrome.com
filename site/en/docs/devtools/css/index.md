@@ -136,7 +136,7 @@ padding, margin, or border length of an element.
 
 **Figure 7**. Changing the element's left-margin
 
-[1]: /docs/devtools/ui#placement
+[1]: /docs/devtools/customize/#placement
 [2]: #view
 [3]: #view
 [4]: #view

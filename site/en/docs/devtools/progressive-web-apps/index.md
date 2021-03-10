@@ -195,7 +195,7 @@ Related Guides:
 [6]: /docs/devtools/debug/remote-debugging/remote-debugging
 [7]: https://developers.google.com/web/fundamentals/primers/service-worker
 [8]: https://developers.google.com/web/fundamentals/push-notifications
-[9]: /docs/devtools/ui#command-menu
+[9]: /docs/devtools/customize/#command-menu
 [10]: https://developers.google.com/web/fundamentals/push-notifications/how-push-works
 [11]: #clear-storage
 [12]: https://developer.mozilla.org/en-US/docs/Web/API/Cache

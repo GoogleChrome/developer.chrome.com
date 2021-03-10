@@ -169,7 +169,7 @@ The **Show timestamps** checkbox previously in **Console Settings**
 [12]: #eagerevaluation
 [13]: /web/updates/2018/05/lighthouse3
 [14]: /web/updates/2018/05/bigint
-[15]: /docs/devtools/ui#settings
+[15]: /docs/devtools/customize/#settings
 [16]: /web/updates/2017/04/devtools-release-notes#coverage
 [17]: /web/updates/2017/04/devtools-release-notes#screenshots
 [18]: /web/updates/2017/04/devtools-release-notes#block-requests

@@ -386,7 +386,7 @@ network activity.
 [2]: /docs/devtools/speed/get-started
 [3]: https://devtools.glitch.me/network/getstarted.html
 [4]: /docs/devtools/open
-[5]: /docs/devtools/ui#placement
+[5]: /docs/devtools/customize/#placement
 [6]: /docs/devtools/network-performance/reference#hide-overview
 [7]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
 [8]: #throttle

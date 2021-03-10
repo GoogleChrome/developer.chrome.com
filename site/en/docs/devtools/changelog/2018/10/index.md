@@ -181,7 +181,7 @@ Check out [Command Line Reference][16] for other handy functions that you can ca
 [8]: /docs/devtools/network-performance/reference#save-as-har
 [9]: /docs/devtools/network-performance/reference#initiators-dependencies
 [10]: https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/HAR/Overview.html
-[11]: /docs/devtools/ui#command-menu
+[11]: /docs/devtools/customize/#command-menu
 [12]: https://github.com/WICG/picture-in-picture
 [13]: /docs/devtools/javascript/breakpoints#event-listeners
 [14]: /docs/devtools/console/command-line-reference#monitorevents

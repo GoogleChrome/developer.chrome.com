@@ -686,7 +686,7 @@ listener encompassing the entire viewport that may harm scroll performance
 [25]: #screenshots
 [26]: #paint
 [27]: #paint
-[28]: /docs/devtools/ui#command-menu
+[28]: /docs/devtools/customize/#command-menu
 [29]: #rendering
 [30]: #rendering
 [31]: #rendering
