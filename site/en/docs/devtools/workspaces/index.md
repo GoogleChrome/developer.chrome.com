@@ -254,7 +254,7 @@ to your site. There's a way to have the **Sources** panel open alongside other p
 Congratulations, you have completed the tutorial. Click the button below to receive your prize.
 
 [1]: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
-[2]: /web/tools/chrome-devtools/css
+[2]: /docs/devtools/css
 [3]:
   https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#Running_a_simple_local_HTTP_server
 [4]: http://blog.teamtreehouse.com/introduction-source-maps

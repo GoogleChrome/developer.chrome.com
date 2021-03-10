@@ -96,10 +96,10 @@ column of the **Network Log** has the information you're looking for. See [Log n
 
     **Figure 10**. The **Clear Site Data** button.
 
-[1]: /web/tools/chrome-devtools
+[1]: /docs/devtools
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 [3]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
-[4]: /web/tools/chrome-devtools/network#load
+[4]: /docs/devtools/network#load
 [5]: #view
 [6]: #view
 [7]: #view

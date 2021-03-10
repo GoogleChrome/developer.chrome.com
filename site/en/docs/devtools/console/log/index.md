@@ -277,14 +277,14 @@ Congratulations, you have completed the tutorial. Click **Dispense Trophy** to r
   that weren't covered in this tutorial.
 - See [Get Started][11] to explore what else you can do with DevTools.
 
-[1]: /web/tools/chrome-devtools
+[1]: /docs/devtools
 [2]: https://devtools.glitch.me/console/log.html
-[3]: /web/tools/chrome-devtools/ui#placement
-[4]: /web/tools/chrome-devtools/command-menu
+[3]: /docs/devtools/ui#placement
+[4]: /docs/devtools/command-menu
 [5]: https://en.wikipedia.org/wiki/Stack_trace
 [6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 [7]: https://regexr.com
-[8]: /web/tools/chrome-devtools/console/reference
-[9]: /web/tools/chrome-devtools/console/api
+[8]: /docs/devtools/console/reference
+[9]: /docs/devtools/console/api
 [10]: #javascript
-[11]: /web/tools/chrome-devtools#start
+[11]: /docs/devtools#start

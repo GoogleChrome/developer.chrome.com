@@ -159,7 +159,7 @@ Puppeteer and Puppeteer for Firefox. The Firefox announcement happens around 4:0
 
 {% YouTube id="MbnATLCuKI4" %}
 
-[1]: /web/tools/chrome-devtools
+[1]: /docs/devtools
 [2]: https://crbug.com/931145
 [3]: https://crbug.com/892969
 [4]: #HAR

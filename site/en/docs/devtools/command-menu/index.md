@@ -42,6 +42,6 @@ Delete the `>` character and type `?` to see other actions that are available fr
 
 **Figure 4**. Other available actions.
 
-[1]: /web/tools/chrome-devtools/javascript/disable
+[1]: /docs/devtools/javascript/disable
 [2]: https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette
 [3]: #open

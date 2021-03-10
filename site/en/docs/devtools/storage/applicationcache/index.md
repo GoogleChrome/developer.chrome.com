@@ -52,7 +52,7 @@ of the Application Cache. The Application Cache can have the following statuses:
 - **OBSOLETE**. The cache is being deleted.
 
 [1]: https://web.dev/appcache-removal/
-[2]: /web/tools/chrome-devtools
+[2]: /docs/devtools
 [3]: https://developer.mozilla.org/en-US/docs/Web/API/Window/applicationCache
 [4]:
   https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache#Resources_in_an_application_cache

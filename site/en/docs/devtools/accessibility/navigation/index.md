@@ -308,22 +308,22 @@ Each section ends with a final `details` element which contains all of the passe
 To run a new audit, use <kbd>Shift</kbd>+<kbd>Tab</kbd> to exit the report and look for the
 **Perform An Audit** button.
 
-[1]: /web/tools/chrome-devtools
-[2]: /web/tools/chrome-devtools/accessibility/reference
+[1]: /docs/devtools
+[2]: /docs/devtools/accessibility/reference
 [3]: https://www.w3.org/TR/wai-aria-1.1/#tablist
-[4]: /web/tools/chrome-devtools/dom
-[5]: /web/tools/chrome-devtools/css
-[6]: /web/tools/chrome-devtools/console
-[7]: /web/tools/chrome-devtools/shortcuts
-[8]: /web/tools/chrome-devtools/open
-[9]: /web/tools/chrome-devtools/ui#command-menu
-[10]: /web/tools/chrome-devtools/dom
+[4]: /docs/devtools/dom
+[5]: /docs/devtools/css
+[6]: /docs/devtools/console
+[7]: /docs/devtools/shortcuts
+[8]: /docs/devtools/open
+[9]: /docs/devtools/ui#command-menu
+[10]: /docs/devtools/dom
 [11]: https://www.w3.org/TR/wai-aria-1.1/#tree
-[12]: /web/tools/chrome-devtools/dom#keynav
+[12]: /docs/devtools/dom#keynav
 [13]: https://developer.mozilla.org/en-US/docs/Web/CSS/:active
 [14]: https://developer.mozilla.org/en-US/docs/Web/CSS/:focus
 [15]: #inspect
-[16]: /web/tools/chrome-devtools/shortcuts#styles
-[17]: /web/tools/chrome-devtools/css/reference#computed
-[18]: /web/tools/chrome-devtools/accessibility/reference#pane
+[16]: /docs/devtools/shortcuts#styles
+[17]: /docs/devtools/css/reference#computed
+[18]: /docs/devtools/accessibility/reference#pane
 [19]: https://bugs.chromium.org/p/chromium/issues/detail?id=868480

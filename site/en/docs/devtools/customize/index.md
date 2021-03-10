@@ -76,6 +76,6 @@ To enable DevTools experiments:
 
 The next time you open DevTools, there's a new page called **Experiments** in [Settings][3].
 
-[1]: /web/tools/chrome-devtools/customize/placement
-[2]: /web/tools/chrome-devtools/customize/dark-theme
+[1]: /docs/devtools/customize/placement
+[2]: /docs/devtools/customize/dark-theme
 [3]: #settings

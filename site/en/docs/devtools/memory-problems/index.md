@@ -257,5 +257,5 @@ JS heap or node count graphs indicate frequent garbage collections.
 Once you've identified the problem, you can use an Allocation Timeline recording to find out where
 memory is being allocated and which functions are causing the allocations.
 
-[1]: /web/tools/chrome-devtools/profile/evaluate-performance/rail
-[2]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
+[1]: /docs/devtools/profile/evaluate-performance/rail
+[2]: /docs/devtools/profile/evaluate-performance/timeline-tool#make-a-recording

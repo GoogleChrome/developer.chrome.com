@@ -182,26 +182,26 @@ to cover it in What's New In DevTools (Chrome 81).
 
 {% endAside %}
 
-[1]: /web/tools/chrome-devtools/evaluate-performance/reference#rendering
+[1]: /docs/devtools/evaluate-performance/reference#rendering
 [2]: http://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/
 [3]: https://crbug.com/1003700
-[4]: /web/tools/chrome-devtools/command-menu
+[4]: /docs/devtools/command-menu
 [5]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Accept-Language
 [6]: https://mathiasbynens.be/demo/locale
 [7]: https://crbug.com/1051822
 [8]:
   https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.uo6kivyh0ge2
 [9]: https://crbug.com/1051466
-[10]: /web/tools/chrome-devtools/javascript/breakpoints#loc
-[11]: /web/tools/chrome-devtools/javascript/breakpoints#conditional-loc
+[10]: /docs/devtools/javascript/breakpoints#loc
+[11]: /docs/devtools/javascript/breakpoints#conditional-loc
 [12]: /web/updates/2019/01/devtools#logpoints
 [13]: https://crbug.com/1041830
 [14]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives
-[15]: https://developers.google.com/web/tools/chrome-devtools/network/reference#filter-by-property
-[16]: /web/tools/chrome-devtools/command-menu
-[17]: /web/tools/chrome-devtools/customize/placement#menu
+[15]: https://developers.google.com/docs/devtools/network/reference#filter-by-property
+[16]: /docs/devtools/command-menu
+[17]: /docs/devtools/customize/placement#menu
 [18]: https://crbug.com/1011679
-[19]: /web/tools/chrome-devtools/customize#settings
+[19]: /docs/devtools/customize#settings
 [20]: https://crbug.com/1050855
 [21]: /web/tools/lighthouse
 [22]: /web/updates/2018/01/devtools#overrides

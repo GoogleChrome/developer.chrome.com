@@ -159,15 +159,15 @@ Chromium issue [#1004203][14]
 [1]: https://crbug.com/1004193
 [2]: http://dwarfstd.org/
 [3]: /web/updates/2019/12/webassembly
-[4]: /web/tools/chrome-devtools/network
-[5]: /web/tools/chrome-devtools/network/reference#initiators-dependencies
+[4]: /docs/devtools/network
+[5]: /docs/devtools/network/reference#initiators-dependencies
 [6]: https://crbug.com/842488
 [7]: https://crbug.com/988253
 [8]: https://crbug.com/993366
-[9]: /web/tools/chrome-devtools/command-menu
-[10]: /web/tools/chrome-devtools/device-mode#viewport
+[9]: /docs/devtools/command-menu
+[10]: /docs/devtools/device-mode#viewport
 [11]: https://crbug.com/1029031
 [12]:
   https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#devtools-audits-panel-throttling
-[13]: /web/tools/chrome-devtools/coverage
+[13]: /docs/devtools/coverage
 [14]: https://crbug.com/1004203

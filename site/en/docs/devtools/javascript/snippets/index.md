@@ -147,8 +147,8 @@ See [Rename Snippets][6] if you'd like to give your new Snippet a custom name.
 1.  [Open the **Snippets** pane][10].
 2.  Right-click the Snippet name and select **Remove**.
 
-[1]: /web/tools/chrome-devtools/console
-[2]: /web/tools/chrome-devtools/sources
+[1]: /docs/devtools/console
+[2]: /docs/devtools/sources
 [3]: https://en.wikipedia.org/wiki/Bookmarklet
 [4]: https://developer.mozilla.org/en-US/docs/Tools/Scratchpad
 [5]: #open

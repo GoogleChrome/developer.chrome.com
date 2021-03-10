@@ -59,8 +59,8 @@ If you want to focus on a specific property, type that property name in the **Fi
 If you want to see all properties that are being applied to the element, including [user-agent
 stylesheets][5], enable the **Show All** checkbox (next to the [**Filter**](#filter) textbox).
 
-[1]: /web/tools/chrome-devtools/css
-[2]: /web/tools/chrome-devtools/css/reference#select
+[1]: /docs/devtools/css
+[2]: /docs/devtools/css/reference#select
 [3]: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
-[4]: /web/tools/chrome-devtools/javascript/reference#format
+[4]: /docs/devtools/javascript/reference#format
 [5]: https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade#User-agent_stylesheets

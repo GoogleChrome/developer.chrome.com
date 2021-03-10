@@ -60,5 +60,5 @@ appears to the right.
 
 {% Img src="image/admin/aXkD0ZIzyIPnd0Aq3n4F.png", alt="Hover variable to remove from watch list", width="358", height="207" %}
 
-[1]: /web/tools/chrome-devtools/javascript/reference#watch
-[2]: /web/tools/chrome-devtools/javascript/breakpoints
+[1]: /docs/devtools/javascript/reference#watch
+[2]: /docs/devtools/javascript/breakpoints

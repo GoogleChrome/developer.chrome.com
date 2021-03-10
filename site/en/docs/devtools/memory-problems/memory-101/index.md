@@ -199,6 +199,6 @@ uncollectable cycle, as GC is smart enough to release object groups whose wrappe
 referenced. But forgetting to release a single wrapper will hold the whole group and associated
 wrappers.
 
-[1]: /web/tools/chrome-devtools/profile/memory-problems/heap-snapshots
-[2]: /web/tools/chrome-devtools/profile/memory-problems/heap-snapshots
+[1]: /docs/devtools/profile/memory-problems/heap-snapshots
+[2]: /docs/devtools/profile/memory-problems/heap-snapshots
 [3]: /v8/design#prop_access

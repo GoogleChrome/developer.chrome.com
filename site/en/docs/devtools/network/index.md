@@ -382,15 +382,15 @@ Congratulations, you have completed the tutorial. Click **Dispense Award** to re
 Check out the [Network Reference][12] to discover more DevTools features related to inspecting
 network activity.
 
-[1]: /web/tools/chrome-devtools/network-performance/reference
-[2]: /web/tools/chrome-devtools/speed/get-started
+[1]: /docs/devtools/network-performance/reference
+[2]: /docs/devtools/speed/get-started
 [3]: https://devtools.glitch.me/network/getstarted.html
-[4]: /web/tools/chrome-devtools/open
-[5]: /web/tools/chrome-devtools/ui#placement
-[6]: /web/tools/chrome-devtools/network-performance/reference#hide-overview
+[4]: /docs/devtools/open
+[5]: /docs/devtools/ui#placement
+[6]: /docs/devtools/network-performance/reference#hide-overview
 [7]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
 [8]: #throttle
 [9]: /web/tools/lighthouse/audits/cache-policy
-[10]: /web/tools/chrome-devtools/network-performance/reference#filter-by-property
-[11]: /web/tools/chrome-devtools/network-performance/reference#filter
-[12]: /web/tools/chrome-devtools/network-performance/reference
+[10]: /docs/devtools/network-performance/reference#filter-by-property
+[11]: /docs/devtools/network-performance/reference#filter
+[12]: /docs/devtools/network-performance/reference

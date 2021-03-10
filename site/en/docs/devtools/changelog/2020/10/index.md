@@ -221,11 +221,11 @@ Chromium issue: [174309][28]
 
 [1]:
   https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838
-[2]: /web/tools/chrome-devtools/css/grid
+[2]: /docs/devtools/css/grid
 [3]: https://crbug.com/1047356
 [4]: https://w3c.github.io/webauthn/
-[5]: /web/tools/chrome-devtools/webauthn
-[6]: /web/tools/chrome-devtools/webauthn
+[5]: /docs/devtools/webauthn
+[6]: /docs/devtools/webauthn
 [7]: https://crbug.com/1034663
 [8]: https://crbug.com/1075732
 [9]: https://crbug.com/1073899
@@ -235,7 +235,7 @@ Chromium issue: [174309][28]
 [13]: https://github.com/GoogleChrome/lighthouse/releases
 [14]: https://crbug.com/772558
 [15]: /web/updates/2018/11/devtools#metrics
-[16]: /web/tools/chrome-devtools/network/reference#filter-by-property
+[16]: /docs/devtools/network/reference#filter-by-property
 [17]: https://crbug.com/1121141
 [18]: https://crbug.com/1104188
 [19]: /web/updates/2018/09/reportingapi

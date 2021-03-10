@@ -109,17 +109,17 @@ the **Sources** panel.
 
 Here's a [GIF of the feature][14].
 
-[1]: /web/tools/chrome-devtools/device-mode#viewport
-[2]: /web/tools/chrome-devtools/device-mode#frame
-[3]: /web/tools/chrome-devtools/command-menu
-[4]: /web/tools/chrome-devtools/device-mode#throttle
+[1]: /docs/devtools/device-mode#viewport
+[2]: /docs/devtools/device-mode#frame
+[3]: /docs/devtools/command-menu
+[4]: /docs/devtools/device-mode#throttle
 [5]: https://crbug.com/924693
 [6]: /web/updates/2019/10/devtools#blockedcookies
 [7]: https://crbug.com/1030258
 [8]: https://crbug.com/1026879
-[9]: /web/tools/chrome-devtools/storage/cookies#fields
+[9]: /docs/devtools/storage/cookies#fields
 [10]: https://crbug.com/1029826
 [11]: https://crbug.com/985402
 [12]: https://mathiasbynens.github.io/css-dbg-stories/css-escapes.html
-[13]: /web/tools/chrome-devtools/customize#settings
+[13]: /docs/devtools/customize#settings
 [14]: https://imgur.com/zJytuf1

@@ -109,7 +109,7 @@ be using the URL `chrome.devtools:7331`.
 **Tip**: To resume normal browsing, remember to revert the proxy settings on your Android device
 after you disconnect from the development machine.
 
-[1]: /web/tools/chrome-devtools/remote-debugging
+[1]: /docs/devtools/remote-debugging
 [2]: http://www.charlesproxy.com/
 [3]: http://www.squid-cache.org/
 [4]: http://www.telerik.com/fiddler

@@ -225,12 +225,12 @@ been working on over the past year and the big themes that they're tackling in t
 [13]: /web/fundamentals/accessibility
 [14]: /web/fundamentals
 [15]: https://groups.google.com/d/msg/google-chrome-developer-tools/Wb76dhsEll4/W8Ab2WICBAAJ
-[16]: /web/tools/chrome-devtools/ui#command-menu
-[17]: /web/tools/chrome-devtools/evaluate-performance
-[18]: /web/tools/chrome-devtools/javascript
+[16]: /docs/devtools/ui#command-menu
+[17]: /docs/devtools/evaluate-performance
+[18]: /docs/devtools/javascript
 [19]: #continue
-[20]: /web/tools/chrome-devtools/ui#settings
-[21]: /web/tools/chrome-devtools/ui#command-menu
+[20]: /docs/devtools/ui#settings
+[21]: /docs/devtools/ui#command-menu
 [22]: /web/updates/2017/04/devtools-release-notes#coverage
 [23]: /web/updates/2017/04/devtools-release-notes#screenshots
 [24]: /web/updates/2017/04/devtools-release-notes#block-requests

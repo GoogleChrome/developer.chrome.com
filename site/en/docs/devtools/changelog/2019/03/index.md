@@ -159,9 +159,9 @@ features.
 [3]: https://web.dev/measure
 [4]: /speed/pagespeed/insights
 [5]: /web/tools/lighthouse#devtools
-[6]: /web/tools/chrome-devtools/network
-[7]: /web/tools/chrome-devtools/network#filter
-[8]: /web/tools/chrome-devtools/speed/get-started#main
+[6]: /docs/devtools/network
+[7]: /docs/devtools/network#filter
+[8]: /docs/devtools/speed/get-started#main
 [9]: https://w3c.github.io/longtasks/#sec-terminology
 [10]: /web/updates/2018/11/devtools#metrics
-[11]: /web/tools/chrome-devtools/dom
+[11]: /docs/devtools/dom

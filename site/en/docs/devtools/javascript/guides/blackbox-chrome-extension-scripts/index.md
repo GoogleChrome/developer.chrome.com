@@ -21,4 +21,4 @@ that you've installed. To never pause on extension code:
 
     **Figure 1**. Enabling the **Blackbox content scripts** checkbox
 
-[1]: /web/tools/chrome-devtools/javascript#code-stepping
+[1]: /docs/devtools/javascript#code-stepping

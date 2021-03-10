@@ -345,8 +345,8 @@ To edit a script:
 
 See [Disable JavaScript With Chrome DevTools][5].
 
-[1]: /web/tools/chrome-devtools/javascript
-[2]: /web/tools/chrome-devtools/javascript/breakpoints
-[3]: /web/tools/chrome-devtools/ui#settings
-[4]: /web/tools/chrome-devtools/snippets
-[5]: /web/tools/chrome-devtools/javascript/disable
+[1]: /docs/devtools/javascript
+[2]: /docs/devtools/javascript/breakpoints
+[3]: /docs/devtools/ui#settings
+[4]: /docs/devtools/snippets
+[5]: /docs/devtools/javascript/disable

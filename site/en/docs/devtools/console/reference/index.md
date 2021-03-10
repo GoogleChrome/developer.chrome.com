@@ -276,13 +276,13 @@ You can use any of the following workflows to clear the Console:
 - Call `console.clear()` from your webpage's JavaScript.
 - Press <kbd>Control</kbd>+<kbd>L</kbd> while the Console is in focus.
 
-[1]: /web/tools/chrome-devtools/console/get-started
-[2]: /web/tools/chrome-devtools/console/api
-[3]: /web/tools/chrome-devtools/console/utilities
+[1]: /docs/devtools/console/get-started
+[2]: /docs/devtools/console/api
+[3]: /docs/devtools/console/utilities
 [4]: #panel
 [5]: #drawer
-[6]: /web/tools/chrome-devtools/command-menu
-[7]: /web/tools/chrome-devtools/command-menu
+[6]: /docs/devtools/command-menu
+[7]: /docs/devtools/command-menu
 [8]: #network
 [9]: #persist
 [10]: #filtercontext
@@ -290,7 +290,7 @@ You can use any of the following workflows to clear the Console:
 [12]: #xhr
 [13]: #eagereval
 [14]: #autocomplete
-[15]: /web/tools/chrome-devtools/console/get-started#view
+[15]: /docs/devtools/console/get-started#view
 [16]: #settings
 [17]: #xhr
 [18]: #settings
@@ -298,13 +298,13 @@ You can use any of the following workflows to clear the Console:
 [20]: #settings
 [21]: #settings
 [22]: #sidebar
-[23]: /web/tools/chrome-devtools/console/api
+[23]: /docs/devtools/console/api
 [24]: #sidebar
 [25]: #sidebar
 [26]: #context
 [27]: #settings
-[28]: /web/tools/chrome-devtools/console/get-started#javascript
-[29]: /web/tools/chrome-devtools/console/live-expressions
+[28]: /docs/devtools/console/get-started#javascript
+[29]: /docs/devtools/console/live-expressions
 [30]: #settings
 [31]: #settings
 [32]: https://developer.mozilla.org/en-US/docs/Glossary/Browsing_context

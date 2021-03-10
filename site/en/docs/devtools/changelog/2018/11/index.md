@@ -90,7 +90,7 @@ Also, you can now access the Audits panel from the Command Menu by typing `Light
 [2]: #highlight
 [3]: #copy
 [4]: #audits
-[5]: /web/tools/chrome-devtools/speed/get-started
+[5]: /docs/devtools/speed/get-started
 [6]:
   /web/fundamentals/performance/user-centric-performance-metrics#first_meaningful_paint_and_hero_element_timing
 [7]: https://pptr.dev/#?product=Puppeteer&version=v1.9.0&show=api-pageclickselector-options

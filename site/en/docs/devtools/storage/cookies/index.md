@@ -85,7 +85,7 @@ cookies.
 **Figure 6**. Clearing all cookies
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
-[2]: /web/tools/chrome-devtools/open
+[2]: /docs/devtools/open
 [3]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Scope_of_cookies
 [4]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Scope_of_cookies
 [5]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Permanent_cookies

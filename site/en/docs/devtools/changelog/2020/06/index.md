@@ -199,7 +199,7 @@ Chromium issue [#1041830][30]
 [20]: https://crbug.com/1066579
 [21]: https://crbug.com/1073899
 [22]: https://crbug.com/1071432
-[23]: https://developers.google.com/web/tools/chrome-devtools/sources#edit
+[23]: https://developers.google.com/docs/devtools/sources#edit
 [24]: https://crbug.com/800028
 [25]: https://crbug.com/1082963
 [26]: https://crbug.com/1055875

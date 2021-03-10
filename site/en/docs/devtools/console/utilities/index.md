@@ -421,10 +421,10 @@ object.
     values(object);
 ```
 
-[1]: /web/tools/chrome-devtools/console/api
+[1]: /docs/devtools/console/api
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 [3]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
-[4]: /web/tools/chrome-devtools/javascript/breakpoints
-[5]: /web/tools/chrome-devtools/debug/console/console-reference#console.dir(object)
+[4]: /docs/devtools/javascript/breakpoints
+[5]: /docs/devtools/debug/console/console-reference#console.dir(object)
 [6]: https://developer.mozilla.org/en-US/docs/Web/API/Console
-[7]: /web/tools/chrome-devtools/rendering-tools/js-execution
+[7]: /docs/devtools/rendering-tools/js-execution

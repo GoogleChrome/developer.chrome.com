@@ -73,7 +73,7 @@ the unnecessary reference.
 You can also view memory allocation by JavaScript function. See [Investigate memory allocation by
 function][4] for more information.
 
-[1]: /web/tools/chrome-devtools/profile/memory-problems/heap-snapshots
-[2]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool
+[1]: /docs/devtools/profile/memory-problems/heap-snapshots
+[2]: /docs/devtools/profile/evaluate-performance/timeline-tool
 [3]: https://www.google.com/intl/en/chrome/browser/canary.html
-[4]: /web/tools/chrome-devtools/memory-problems#allocation-profile
+[4]: /docs/devtools/memory-problems#allocation-profile

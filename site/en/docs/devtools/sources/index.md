@@ -129,7 +129,7 @@ See [Edit Files With Workspaces][12] to get started.
 [6]: https://www.w3.org/TR/html401/present/frames.html
 [7]: https://html.spec.whatwg.org/multipage/origin.html#origin
 [8]: #workspace
-[9]: /web/tools/chrome-devtools/ui#command-menu
-[10]: /web/tools/chrome-devtools/snippets
-[11]: /web/tools/chrome-devtools/javascript
-[12]: /web/tools/chrome-devtools/workspaces
+[9]: /docs/devtools/ui#command-menu
+[10]: /docs/devtools/snippets
+[11]: /docs/devtools/javascript
+[12]: /docs/devtools/workspaces

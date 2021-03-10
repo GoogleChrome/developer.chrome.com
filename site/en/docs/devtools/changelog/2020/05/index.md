@@ -145,7 +145,7 @@ Check out [Get things done quickly with app shortcuts][25] to learn more.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1KUD1snHJ1sVaaZo3BRK.png", alt="App shortcuts in the Manifest pane.", width="800", height="534" %}
 
-[1]: /web/tools/chrome-devtools/issues
+[1]: /docs/devtools/issues
 [2]: https://crbug.com/1068116
 [3]: /web/updates/2019/01/devtools#inspect
 [4]: https://web.dev/labels-and-text-alternatives/
@@ -163,10 +163,10 @@ Check out [Get things done quickly with app shortcuts][25] to learn more.
 [16]: https://crbug.com/1075437
 [17]: https://crbug.com/1040019
 [18]: https://drafts.csswg.org/css-color/#changes-from-3
-[19]: /web/tools/chrome-devtools/css/reference#color-picker
+[19]: /docs/devtools/css/reference#color-picker
 [20]: https://twitter.com/mathias/status/1253242715304857601
 [21]: https://caniuse.com/#feat=mdn-css_types_color_space_separated_functional_notation
 [22]: https://crbug.com/1072952
-[23]: /web/tools/chrome-devtools/console/api#dir
-[24]: /web/tools/chrome-devtools/console/utilities#dom
+[23]: /docs/devtools/console/api#dir
+[24]: /docs/devtools/console/utilities#dom
 [25]: https://web.dev/app-shortcuts

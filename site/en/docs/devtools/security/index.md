@@ -88,7 +88,7 @@ shown when available.
 **Figure 6**. Main origin details
 
 [1]: /web/fundamentals/security/encrypt-in-transit/why-https
-[2]: /web/tools/chrome-devtools/open
+[2]: /docs/devtools/open
 [3]: https://letsencrypt.org/
 [4]: /web/tools/lighthouse/audits/http-redirects-to-https
 [5]: /web/tools/lighthouse

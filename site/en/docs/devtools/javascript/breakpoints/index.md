@@ -221,7 +221,7 @@ Console. Here's one strategy:
 3.  Call `debug()` in the DevTools Console while the code is still paused on your line-of-code
     breakpoint.
 
-[1]: /web/tools/chrome-devtools/javascript
+[1]: /docs/devtools/javascript
 [2]: #loc
 [3]: #conditional-loc
 [4]: #dom

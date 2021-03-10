@@ -279,16 +279,16 @@ Chromium issue: [1067184][38]
 
 [1]:
   https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838
-[2]: /web/tools/chrome-devtools/media-panel
+[2]: /docs/devtools/media-panel
 [3]: https://crbug.com/1018414
 [4]: https://crbug.com/1100253
 [5]: https://crbug.com/1096481
 [6]: https://crbug.com/1068116
 [7]: https://crbug.com/1080589
-[8]: /web/tools/chrome-devtools/evaluate-performance/reference#rendering
+[8]: /docs/devtools/evaluate-performance/reference#rendering
 [9]: https://crbug.com/384968
 [10]: https://web.dev/idle-detection
-[11]: /web/tools/chrome-devtools/customize#drawer
+[11]: /docs/devtools/customize#drawer
 [12]: https://crbug.com/1090802
 [13]: chrome://flags/#enable-experimental-web-platform-features
 [14]: https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-reduced-data
@@ -301,7 +301,7 @@ Chromium issue: [1067184][38]
 [21]: https://web.dev/non-composited-animations/
 [22]: https://crbug.com/772558
 [23]: https://crbug.com/807440
-[24]: /web/tools/chrome-devtools/coverage
+[24]: /docs/devtools/coverage
 [25]: https://crbug.com/1090802
 [26]: https://crbug.com/1093247
 [27]: https://crbug.com/1107766

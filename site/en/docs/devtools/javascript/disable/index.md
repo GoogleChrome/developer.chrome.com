@@ -39,4 +39,4 @@ To re-enable JavaScript:
 - Open the Command Menu again and run the **Enable JavaScript** command.
 - Close DevTools.
 
-[1]: /web/tools/chrome-devtools/open
+[1]: /docs/devtools/open
