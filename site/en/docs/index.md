@@ -9,4 +9,6 @@ i18n:
       heading: 'Extensions & Web Store'
     architecture:
       heading: 'Architecture'
+    infrastructure:
+      heading: 'Infrastructure'
 ---
