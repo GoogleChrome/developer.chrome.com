@@ -671,7 +671,7 @@ to hide it.
 
 [1]: #network-conditions
 [2]: /web/progressive-web-apps
-[3]: /web/fundamentals/getting-started/primers/service-workers
+[3]: https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
 [4]: #network-conditions
 [5]: #network-conditions
 [6]: #hide-filters

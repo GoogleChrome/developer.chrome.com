@@ -37,7 +37,7 @@ To simulate different [device orientations][1] from Chrome DevTools:
 
     **Figure 3**. The **Orientation Model**
 
-[1]: /web/fundamentals/native-hardware/device-orientation
-[2]: /web/fundamentals/native-hardware/device-orientation#alpha
-[3]: /web/fundamentals/native-hardware/device-orientation#beta
-[4]: /web/fundamentals/native-hardware/device-orientation#gamma
+[1]: https://developers.google.com/web/fundamentals/native-hardware/device-orientation
+[2]: https://developers.google.com/web/fundamentals/native-hardware/device-orientation#alpha
+[3]: https://developers.google.com/web/fundamentals/native-hardware/device-orientation#beta
+[4]: https://developers.google.com/web/fundamentals/native-hardware/device-orientation#gamma

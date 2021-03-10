@@ -298,7 +298,7 @@ opening DevTools. See [Using DevTools Features Without Opening DevTools][22] for
 [7]: #overrides-limitations
 [8]: /web/updates/2017/10/devtools-release-notes#workspaces
 [9]: /docs/devtools/css/reference#color-picker
-[10]: /web/fundamentals/accessibility/accessible-styles#color_and_contrast
+[10]: https://developers.google.com/web/fundamentals/accessibility/accessible-styles#color_and_contrast
 [11]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [12]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
 [13]: /web/tools/lighthouse#devtools

@@ -322,7 +322,7 @@ To show or hide HTML comments in the **Elements** panel, [open **Settings**][9],
 checkbox.
 
 [1]: /docs/devtools/debug/command-line/command-line-reference#inspect
-[2]: /web/fundamentals/design-and-ux/responsive/images#enhance_imgs_with_srcset_for_high_dpi_devices
+[2]: https://developers.google.com/web/fundamentals/design-and-ux/responsive/images#enhance_imgs_with_srcset_for_high_dpi_devices
 [3]: #more-actions
 [4]: #more-actions
 [5]: #more-actions

@@ -81,7 +81,7 @@ way.
     {% Img src="image/admin/CQlNNpB5ISFRD5lCYkKw.png", alt="Chrome DevTools screenshot showing issue with a resource opened from the Issues tab.", width="800", height="679" %}
 
 [1]: https://web.dev/samesite-cookies-explained
-[2]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+[2]: https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
 [3]: https://web.dev/coop-coep/
 [4]: https://samesite-sandbox.glitch.me/
 [5]: /docs/devtools/open

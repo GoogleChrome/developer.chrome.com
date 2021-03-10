@@ -316,22 +316,22 @@ tips for improving various aspects of runtime performance, such as:
 - [Debounce Your Input Handlers][17]
 
 [1]: /docs/devtools/speed/get-started
-[2]: /web/fundamentals/performance/rail
+[2]: https://developers.google.com/web/fundamentals/performance/rail
 [3]: https://support.google.com/chrome/answer/95464
 [4]: /docs/devtools/ui#placement
 [5]: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
 [6]:
-  /web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing#avoid_forced_synchronous_layouts
+  https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing#avoid_forced_synchronous_layouts
 [7]:
-  /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count#use_transform_and_opacity_changes_for_animations
-[8]: /web/fundamentals/performance/rail
+  https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count#use_transform_and_opacity_changes_for_animations
+[8]: https://developers.google.com/web/fundamentals/performance/rail
 [9]: http://stackoverflow.com/questions/ask?tags=google-chrome-devtools
-[10]: /web/fundamentals/performance/rendering
+[10]: https://developers.google.com/web/fundamentals/performance/rendering
 [11]: https://aerotwist.com/blog/the-anatomy-of-a-frame/
-[12]: /web/fundamentals/performance/rendering/optimize-javascript-execution
-[13]: /web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
-[14]: /web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
-[15]: /web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
+[12]: https://developers.google.com/web/fundamentals/performance/rendering/optimize-javascript-execution
+[13]: https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
+[14]: https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
+[15]: https://developers.google.com/web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
 [16]:
-  /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
-[17]: /web/fundamentals/performance/rendering/debounce-your-input-handlers
+  https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
+[17]: https://developers.google.com/web/fundamentals/performance/rendering/debounce-your-input-handlers

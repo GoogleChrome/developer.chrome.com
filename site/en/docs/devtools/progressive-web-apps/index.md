@@ -189,18 +189,18 @@ Related Guides:
 
 [1]: /web/progressive-web-apps
 [2]: #other
-[3]: /web/fundamentals/web-app-manifest
-[4]: /web/fundamentals/app-install-banners
+[3]: https://developers.google.com/web/fundamentals/web-app-manifest
+[4]: https://developers.google.com/web/fundamentals/app-install-banners
 [5]: https://events.google.com/io2016/
 [6]: /docs/devtools/debug/remote-debugging/remote-debugging
-[7]: /web/fundamentals/primers/service-worker
-[8]: /web/fundamentals/push-notifications
+[7]: https://developers.google.com/web/fundamentals/primers/service-worker
+[8]: https://developers.google.com/web/fundamentals/push-notifications
 [9]: /docs/devtools/ui#command-menu
-[10]: /web/fundamentals/push-notifications/how-push-works
+[10]: https://developers.google.com/web/fundamentals/push-notifications/how-push-works
 [11]: #clear-storage
 [12]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
-[13]: /web/fundamentals/glossary#opaque-response
-[14]: /web/fundamentals/glossary#CDN
+[13]: https://developers.google.com/web/fundamentals/glossary#opaque-response
+[14]: https://developers.google.com/web/fundamentals/glossary#CDN
 [15]: https://fetch.spec.whatwg.org/#http-cors-protocol
 [16]: /web/updates/2017/08/estimating-available-storage-space
 [17]: https://bugs.chromium.org/p/chromium/issues/detail?id=796060#c17

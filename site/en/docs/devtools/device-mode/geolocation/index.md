@@ -34,4 +34,4 @@ geolocation in Chrome DevTools:
 
     **Figure 2**. Selecting **Tokyo** from the **Geolocation** list
 
-[1]: /web/fundamentals/native-hardware/user-location
+[1]: https://developers.google.com/web/fundamentals/native-hardware/user-location
