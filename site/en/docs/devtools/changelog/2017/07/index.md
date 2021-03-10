@@ -98,7 +98,7 @@ stepping through [Paul Irish's ES6-Module-implementation][11] of [TodoMVC][12] t
 [6]: #modules
 [7]: https://tools.ietf.org/html/rfc6454#section-3.2
 [8]: /docs/devtools/evaluate-performance/reference#fps-meter
-[9]: /docs/devtools/customize/#command-menu
+[9]: /docs/devtools/command-menu/
 [10]: /docs/devtools/customize/#settings
 [11]: https://paulirish.github.io/es-modules-todomvc/
 [12]: http://todomvc.com/

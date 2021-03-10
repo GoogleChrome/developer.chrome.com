@@ -118,7 +118,7 @@ downloading [Chrome Canary][12].
 [2]: #console-sidebar
 [3]: #group-similar
 [4]: /web/showcase/2017/bookmyshow
-[5]: /docs/devtools/customize/#command-menu
+[5]: /docs/devtools/command-menu/
 [6]: /docs/devtools/evaluate-performance
 [7]: /web/tools/lighthouse#devtools
 [8]: /web/updates/2017/08/devtools-release-notes#negative-filters
