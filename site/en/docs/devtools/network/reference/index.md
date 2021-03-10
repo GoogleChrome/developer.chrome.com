@@ -33,7 +33,7 @@ To stop recording requests:
 
 - Click **Stop recording network log**
   ![Stop recording network
-log](/web/tools/chrome-devtools/network/imgs/record-on.png) on the Network
+log](/docs/devtools/network/imgs/record-on.png) on the Network
   panel. It turns grey to indicate that DevTools is no longer recording requests.
 - Press Command+E (Mac) or Control+E (Windows, Linux) while the Network panel is in focus.
 
@@ -687,7 +687,7 @@ to hide it.
 [16]: #headers
 [17]: #query-string
 [18]: #query-string
-[19]: /web/tools/chrome-devtools/manage-data/cookies#fields
+[19]: /docs/devtools/manage-data/cookies#fields
 [20]: #timing-preview
 [21]: #timing-explanation
 [22]: #timing-breakdown

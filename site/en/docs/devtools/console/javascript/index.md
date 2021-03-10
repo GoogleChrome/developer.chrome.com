@@ -109,12 +109,12 @@ For example:
 
 See [Console Utilities API Reference][9] to explore all the convenience functions.
 
-[1]: /web/tools/chrome-devtools
-[2]: /web/tools/chrome-devtools/console/log
-[3]: /web/tools/chrome-devtools/javascript
+[1]: /docs/devtools
+[2]: /docs/devtools/console/log
+[3]: /docs/devtools/javascript
 [4]: https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
 [5]: http://2ality.com/2012/09/expressions-vs-statements.html
 [6]: http://es6-features.org/#DefaultParameterValues
-[7]: /web/tools/chrome-devtools/console/reference#js
-[8]: /web/tools/chrome-devtools/javascript
-[9]: /web/tools/chrome-devtools/console/utilities
+[7]: /docs/devtools/console/reference#js
+[8]: /docs/devtools/javascript
+[9]: /docs/devtools/console/utilities

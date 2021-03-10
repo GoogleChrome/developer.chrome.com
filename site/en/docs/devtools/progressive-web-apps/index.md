@@ -192,10 +192,10 @@ Related Guides:
 [3]: /web/fundamentals/web-app-manifest
 [4]: /web/fundamentals/app-install-banners
 [5]: https://events.google.com/io2016/
-[6]: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging
+[6]: /docs/devtools/debug/remote-debugging/remote-debugging
 [7]: /web/fundamentals/primers/service-worker
 [8]: /web/fundamentals/push-notifications
-[9]: /web/tools/chrome-devtools/ui#command-menu
+[9]: /docs/devtools/ui#command-menu
 [10]: /web/fundamentals/push-notifications/how-push-works
 [11]: #clear-storage
 [12]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
@@ -206,6 +206,6 @@ Related Guides:
 [17]: https://bugs.chromium.org/p/chromium/issues/detail?id=796060#c17
 [18]: https://stackoverflow.com/q/39109789/385997
 [19]: /web/tools/workbox/guides/storage-quota#beware_of_opaque_responses
-[20]: /web/tools/chrome-devtools/iterate/manage-data/local-storage#clear-storage
-[21]: /web/tools/chrome-devtools/iterate/manage-data/page-resources
-[22]: /web/tools/chrome-devtools/iterate/manage-data/local-storage
+[20]: /docs/devtools/iterate/manage-data/local-storage#clear-storage
+[21]: /docs/devtools/iterate/manage-data/page-resources
+[22]: /docs/devtools/iterate/manage-data/local-storage

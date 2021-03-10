@@ -176,7 +176,7 @@ To delete a DOM node:
 The **more actions** menu lets you interact with a DOM node in a variety of ways. To view the menu,
 right-click on a node, or select a node and then press the **more actions** button
 (![more action 
-button](/web/tools/chrome-devtools/inspect-styles/imgs/more-actions-button.png))).
+button](/docs/devtools/inspect-styles/imgs/more-actions-button.png))).
 The button is only displayed on the currently selected element.
 
 {% Img src="image/admin/qm3O8Ui3sVOiO0U7LVIK.png", alt="more actions menu", width="800", height="897" %}
@@ -321,12 +321,12 @@ To show or hide HTML comments in the **Elements** panel, [open **Settings**][9],
 **Preferences** panel, find the **Elements** section, and then toggle the **Show HTML comments**
 checkbox.
 
-[1]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect
+[1]: /docs/devtools/debug/command-line/command-line-reference#inspect
 [2]: /web/fundamentals/design-and-ux/responsive/images#enhance_imgs_with_srcset_for_high_dpi_devices
 [3]: #more-actions
 [4]: #more-actions
 [5]: #more-actions
 [6]: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener
 [7]: https://support.google.com/chrome/answer/95464
-[8]: /web/tools/chrome-devtools/ui#settings
+[8]: /docs/devtools/ui#settings
 [9]: #settings

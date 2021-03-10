@@ -659,7 +659,7 @@ To view scroll performance issues:
 **Figure 39**. **Scrolling Performance Issues** is indicating that there's a `mousewheel` event
 listener encompassing the entire viewport that may harm scroll performance
 
-[1]: /web/tools/chrome-devtools/evaluate-performance
+[1]: /docs/devtools/evaluate-performance
 [2]: #view-screenshot
 [3]: #settings
 [4]: #settings
@@ -686,7 +686,7 @@ listener encompassing the entire viewport that may harm scroll performance
 [25]: #screenshots
 [26]: #paint
 [27]: #paint
-[28]: /web/tools/chrome-devtools/ui#command-menu
+[28]: /docs/devtools/ui#command-menu
 [29]: #rendering
 [30]: #rendering
 [31]: #rendering

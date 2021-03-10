@@ -297,7 +297,7 @@ Chromium issue: [174309][31]
 [1]:
   https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838
 [2]: https://crbug.com/1029427
-[3]: /web/tools/chrome-devtools/css/reference#angle-clock
+[3]: /docs/devtools/css/reference#angle-clock
 [4]: https://crbug.com/1126178
 [5]: https://crbug.com/1138633
 [6]: https://crbug.com/1130556

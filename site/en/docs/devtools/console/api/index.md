@@ -264,26 +264,26 @@ console.warn('warn');
 
 **Figure 13**. The result of the `console.warn()` example above.
 
-[1]: /web/tools/chrome-devtools/console/log
-[2]: /web/tools/chrome-devtools/console/utilities
-[3]: /web/tools/chrome-devtools/console/reference#level
+[1]: /docs/devtools/console/log
+[2]: /docs/devtools/console/utilities
+[3]: /docs/devtools/console/reference#level
 [4]: #error
-[5]: /web/tools/chrome-devtools/console/reference#persist
-[6]: /web/tools/chrome-devtools/console/reference#clear
-[7]: /web/tools/chrome-devtools/console/reference#level
+[5]: /docs/devtools/console/reference#persist
+[6]: /docs/devtools/console/reference#clear
+[7]: /docs/devtools/console/reference#level
 [8]: #countreset
-[9]: /web/tools/chrome-devtools/console/reference#level
+[9]: /docs/devtools/console/reference#level
 [10]: #log
-[11]: /web/tools/chrome-devtools/console/reference#level
-[12]: /web/tools/chrome-devtools/console/reference#level
-[13]: /web/tools/chrome-devtools/console/reference#level
+[11]: /docs/devtools/console/reference#level
+[12]: /docs/devtools/console/reference#level
+[13]: /docs/devtools/console/reference#level
 [14]: #group
 [15]: #group
-[16]: /web/tools/chrome-devtools/console/reference#level
+[16]: /docs/devtools/console/reference#level
 [17]: #log
-[18]: /web/tools/chrome-devtools/console/reference#level
-[19]: /web/tools/chrome-devtools/console/reference#level
-[20]: /web/tools/chrome-devtools/console/reference#level
+[18]: /docs/devtools/console/reference#level
+[19]: /docs/devtools/console/reference#level
+[20]: /docs/devtools/console/reference#level
 [21]: #time
-[22]: /web/tools/chrome-devtools/console/reference#level
-[23]: /web/tools/chrome-devtools/console/reference#level
+[22]: /docs/devtools/console/reference#level
+[23]: /docs/devtools/console/reference#level

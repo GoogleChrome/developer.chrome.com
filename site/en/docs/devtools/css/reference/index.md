@@ -286,7 +286,7 @@ Rule**
 #### Choose which stylesheet to add a rule to {: #style-rule-stylesheet }
 
 When [adding a new style rule][22], click and hold **New Style Rule**
-![New Style Rule](/web/tools/chrome-devtools/css/imgs/new-style-rule.png) to choose which stylesheet
+![New Style Rule](/docs/devtools/css/imgs/new-style-rule.png) to choose which stylesheet
 to add the style rule to.
 
 {% Img src="image/admin/QEehBhl9E7tfEwyfdWgO.png", alt="Choosing a stylesheet", width="800", height="599" %}
@@ -388,17 +388,17 @@ To open the **Angle Clock**:
 5.  There are more keyboard shortcuts to change the angle value. Find out more in the [Styles pane
     keyboard shortcuts][28].
 
-[1]: /web/tools/chrome-devtools/css
-[2]: /web/tools/chrome-devtools/css#view
-[3]: /web/tools/chrome-devtools/javascript/reference#format
+[1]: /docs/devtools/css
+[2]: /docs/devtools/css#view
+[3]: /docs/devtools/javascript/reference#format
 [4]: #select
 [5]: #computed
 [6]: #computed
 [7]: https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model
 [8]: #select
-[9]: /web/tools/chrome-devtools/css#pseudostates
-[10]: /web/tools/chrome-devtools/command-menu
-[11]: /web/tools/chrome-devtools/css/print-preview
+[9]: /docs/devtools/css#pseudostates
+[10]: /docs/devtools/command-menu
+[11]: /docs/devtools/css/print-preview
 [12]: #add-declaration-inline
 [13]: #add-declaration-to-rule
 [14]: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity#Selector_Types
@@ -415,4 +415,4 @@ To open the **Angle Clock**:
 [25]: #eyedropper
 [26]: https://material.io/guidelines/style/color.html#color-color-palette
 [27]: #select
-[28]: /web/tools/chrome-devtools/shortcuts#styles
+[28]: /docs/devtools/shortcuts#styles

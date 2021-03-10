@@ -288,6 +288,6 @@ line of code][5] to learn more.
 
 [1]: https://googlechrome.github.io/devtools-samples/debug-js/get-started
 [2]: https://support.google.com/chrome/answer/95464
-[3]: /web/tools/chrome-devtools/javascript/breakpoints
-[4]: /web/tools/chrome-devtools/javascript/breakpoints
-[5]: /web/tools/chrome-devtools/javascript/reference#stepping
+[3]: /docs/devtools/javascript/breakpoints
+[4]: /docs/devtools/javascript/breakpoints
+[5]: /docs/devtools/javascript/reference#stepping

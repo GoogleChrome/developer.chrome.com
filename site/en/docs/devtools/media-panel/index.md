@@ -64,6 +64,6 @@ You can choose to show or hide each media player for easier debugging experience
 
 {% Img src="image/admin/CPXXN0ZjMVLgIXOjvoQ3.png", alt="Export media information", width="800", height="455" %}
 
-[1]: /web/tools/chrome-devtools/open
+[1]: /docs/devtools/open
 [2]: https://youtu.be/e1gAyQuIFQo
-[3]: /web/tools/chrome-devtools/remote-debugging
+[3]: /docs/devtools/remote-debugging

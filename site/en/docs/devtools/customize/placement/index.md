@@ -47,5 +47,5 @@ left, or undock to a DevTools to a separate bottom.
 
     **Figure 5**. The undock command.
 
-[1]: /web/tools/chrome-devtools/command-menu
+[1]: /docs/devtools/command-menu
 [2]: #menu

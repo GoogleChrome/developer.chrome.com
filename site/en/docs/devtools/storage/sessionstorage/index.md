@@ -90,7 +90,7 @@ JavaScript contexts, it's possible to interact with `sessionStorage` from the **
 
     **Figure 8**. Interacting with `sessionStorage` from the **Console**
 
-[1]: /web/tools/chrome-devtools
+[1]: /docs/devtools
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 [3]: #view
 [4]: #view

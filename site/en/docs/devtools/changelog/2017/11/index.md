@@ -118,12 +118,12 @@ downloading [Chrome Canary][12].
 [2]: #console-sidebar
 [3]: #group-similar
 [4]: /web/showcase/2017/bookmyshow
-[5]: /web/tools/chrome-devtools/ui#command-menu
-[6]: /web/tools/chrome-devtools/evaluate-performance
+[5]: /docs/devtools/ui#command-menu
+[6]: /docs/devtools/evaluate-performance
 [7]: /web/tools/lighthouse#devtools
 [8]: /web/updates/2017/08/devtools-release-notes#negative-filters
 [9]: /web/updates/2017/08/devtools-release-notes#url-filters
-[10]: /web/tools/chrome-devtools/console/console-reference#group
+[10]: /docs/devtools/console/console-reference#group
 [11]: /web/updates/2018/01/devtools#overrides
 [12]: https://www.google.com/chrome/browser/canary.html
 [13]: /web/updates/2017/04/devtools-release-notes#coverage

@@ -86,7 +86,7 @@ DevTools does not update tables in real-time. To update the data in a table:
     **Figure 7**. The **Clear Site Data** button.
 
 [1]: https://www.w3.org/TR/webdatabase/#status-of-this-document
-[2]: /web/tools/chrome-devtools
+[2]: /docs/devtools
 [3]: #run
 [4]: #view
 [5]: #view

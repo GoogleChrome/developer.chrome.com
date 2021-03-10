@@ -28,4 +28,4 @@ then pin it to the top of your Console. The value of the expression updates in n
 3.  Type <kbd>Control</kbd>+<kbd>Enter</kbd> or <kbd>Command</kbd>+<kbd>Enter</kbd> (Mac) to save
     the expression, or click outside of the **Live Expression** text box.
 
-[1]: /web/tools/chrome-devtools/console/reference#open
+[1]: /docs/devtools/console/reference#open

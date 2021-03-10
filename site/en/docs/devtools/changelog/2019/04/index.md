@@ -152,7 +152,7 @@ used for indentation. To override the default behavior and use <kbd>Tab</kbd> to
 There's been a lot of work recently around making the DevTools UI itself more keyboard navigable.
 Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to learn more.
 
-[1]: /web/tools/chrome-devtools
+[1]: /docs/devtools
 [2]: https://developer.mozilla.org/en-US/docs/Web/CSS/filter
 [3]: https://crbug.com/931145
 [4]: /web/ilt/pwa/introduction-to-service-worker
@@ -165,18 +165,18 @@ Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to lear
 [11]: https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache
 [12]: https://crbug.com/942503
 [13]: https://crbug.com/943770
-[14]: /web/tools/chrome-devtools/network
+[14]: /docs/devtools/network
 [15]: /web/tools/lighthouse/audits/text-compression
-[16]: /web/tools/chrome-devtools/network/reference#uncompressed
+[16]: /docs/devtools/network/reference#uncompressed
 [17]: https://crbug.com/805429
-[18]: /web/tools/chrome-devtools/javascript/breakpoints#loc
+[18]: /docs/devtools/javascript/breakpoints#loc
 [19]: https://crbug.com/927961
 [20]: https://crbug.com/941197
 [21]: https://crbug.com/930773
 [22]: https://crbug.com/930865
 [23]: /web/updates/2019/01/devtools#inspect
-[24]: /web/tools/chrome-devtools/ui#settings
+[24]: /docs/devtools/ui#settings
 [25]: https://crbug.com/948417
-[26]: /web/tools/chrome-devtools/sources#edit
-[27]: /web/tools/chrome-devtools/ui#settings
-[28]: /web/tools/chrome-devtools/accessibility/navigation
+[26]: /docs/devtools/sources#edit
+[27]: /docs/devtools/ui#settings
+[28]: /docs/devtools/accessibility/navigation

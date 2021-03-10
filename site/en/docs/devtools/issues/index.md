@@ -84,4 +84,4 @@ way.
 [2]: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
 [3]: https://web.dev/coop-coep/
 [4]: https://samesite-sandbox.glitch.me/
-[5]: /web/tools/chrome-devtools/open
+[5]: /docs/devtools/open

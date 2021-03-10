@@ -315,10 +315,10 @@ tips for improving various aspects of runtime performance, such as:
 - [Stick To Compositor-Only Properties And Manage Layer Count][16]
 - [Debounce Your Input Handlers][17]
 
-[1]: /web/tools/chrome-devtools/speed/get-started
+[1]: /docs/devtools/speed/get-started
 [2]: /web/fundamentals/performance/rail
 [3]: https://support.google.com/chrome/answer/95464
-[4]: /web/tools/chrome-devtools/ui#placement
+[4]: /docs/devtools/ui#placement
 [5]: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
 [6]:
   /web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing#avoid_forced_synchronous_layouts

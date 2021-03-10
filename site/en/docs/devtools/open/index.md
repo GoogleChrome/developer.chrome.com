@@ -55,5 +55,5 @@ Mac:
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --auto-open-devtools-for-tabs
 ```
 
-[1]: /web/tools/chrome-devtools/css
-[2]: /web/tools/chrome-devtools/console/get-started
+[1]: /docs/devtools/css
+[2]: /docs/devtools/console/get-started

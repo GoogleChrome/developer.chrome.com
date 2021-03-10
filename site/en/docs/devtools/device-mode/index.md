@@ -214,7 +214,7 @@ Menu, type `3G`, and select **Enable fast 3G throttling** or **Enable slow 3G th
 **Figure 20**. The Command Menu
 
 You can also set network throttling from the **Performance** panel. Click **Capture Settings**
-![Capture Settings](/web/tools/chrome-devtools/images/shared/capture-settings.png) and then select
+![Capture Settings](/docs/devtools/images/shared/capture-settings.png) and then select
 **Fast 3G** or **Slow 3G** from the **Network** list.
 
 {% Img src="image/admin/DVa1oLS5wWMY07WXe0K1.png", alt="Setting network throttling from the Performance panel.", width="800", height="656" %}
@@ -276,9 +276,9 @@ own alpha, beta, and gamma values.
 [4]: #geolocation
 [5]: #orientation
 [6]: https://en.wikipedia.org/wiki/Order_of_approximation#First-order
-[7]: /web/tools/chrome-devtools/remote-debugging
+[7]: /docs/devtools/remote-debugging
 [8]: #orientation
 [9]: https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio
 [10]: https://developer.mozilla.org/en-US/docs/Glossary/User_agent
 [11]: #type
-[12]: /web/tools/chrome-devtools#community
+[12]: /docs/devtools#community

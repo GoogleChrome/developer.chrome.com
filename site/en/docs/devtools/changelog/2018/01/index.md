@@ -297,7 +297,7 @@ opening DevTools. See [Using DevTools Features Without Opening DevTools][22] for
 [6]: #stepping
 [7]: #overrides-limitations
 [8]: /web/updates/2017/10/devtools-release-notes#workspaces
-[9]: /web/tools/chrome-devtools/css/reference#color-picker
+[9]: /docs/devtools/css/reference#color-picker
 [10]: /web/fundamentals/accessibility/accessible-styles#color_and_contrast
 [11]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
 [12]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast
@@ -308,7 +308,7 @@ opening DevTools. See [Using DevTools Features Without Opening DevTools][22] for
 [17]: /web/updates/2018/01/lighthouse#a11y
 [18]: /web/updates/2018/01/lighthouse#webp
 [19]: /web/updates/2017/12/lighthouse#a11y
-[20]: /web/tools/chrome-devtools/evaluate-performance
+[20]: /docs/devtools/evaluate-performance
 [21]: /web/tools/puppeteer/get-started
 [22]: /web/updates/2018/01/devtools-without-devtools
 [23]: https://www.google.com/chrome/browser/canary.html

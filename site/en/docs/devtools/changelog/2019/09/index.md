@@ -137,8 +137,8 @@ Figure 10. **Main Menu** > **Help** > **Report a DevTools issue**.
 [11]: https://github.com/GoogleChrome/lighthouse/releases/tag/v5.2.0
 [12]: https://web.dev/fast#optimize-your-third-party-resources
 [13]: https://crbug.com/772558
-[14]: /web/tools/chrome-devtools/evaluate-performance/reference#record-load
+[14]: /docs/devtools/evaluate-performance/reference#record-load
 [15]: https://web.dev/largest-contentful-paint
-[16]: /web/tools/chrome-devtools/dom
+[16]: /docs/devtools/dom
 [17]: https://stackoverflow.com/help/minimal-reproducible-example
 [18]: https://glitch.com/

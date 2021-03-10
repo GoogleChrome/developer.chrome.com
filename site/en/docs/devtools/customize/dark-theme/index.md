@@ -30,4 +30,4 @@ You can enable dark theme in [Settings][1] or the [Command Menu][2].
 
 [1]: #settings
 [2]: #commandmenu
-[3]: /web/tools/chrome-devtools/command-menu
+[3]: /docs/devtools/command-menu

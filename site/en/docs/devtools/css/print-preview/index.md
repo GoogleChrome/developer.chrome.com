@@ -31,4 +31,4 @@ From here, you can view and change your CSS, like any other web page. See [Get S
 And Changing CSS][2].
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
-[2]: /web/tools/chrome-devtools/css
+[2]: /docs/devtools/css

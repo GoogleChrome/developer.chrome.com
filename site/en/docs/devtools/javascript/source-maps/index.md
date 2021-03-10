@@ -103,5 +103,5 @@ abstractions.
 [9]: http://coffeescript.org
 [10]: https://www.dartlang.org
 [11]: https://github.com/mishoo/UglifyJS
-[12]: /web/tools/chrome-devtools/debug/breakpoints/step-code
+[12]: /docs/devtools/debug/breakpoints/step-code
 [13]: http://www.thecssninja.com/demo/source_mapping/compile.html

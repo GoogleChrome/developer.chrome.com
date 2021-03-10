@@ -144,7 +144,7 @@ infinite loop by mistake while developing your site. To stop the infinite loop, 
 2.  Click **Pause** {% Img src="image/admin/aRnFKWDcMQ2YezsefPr0.png", alt="Pause", width="18", height="16" %}. The button changes to **Resume
     Script Execution** {% Img src="image/admin/QeKjQuJXBEDj4gFZTNrP.png", alt="Resume", width="26", height="20" %}.
 3.  Hold **Resume Script Execution**
-    ![Resume](/web/tools/chrome-devtools/images/resume-script-execution.png) then select **Stop
+    ![Resume](/docs/devtools/images/resume-script-execution.png) then select **Stop
     Current JavaScript Call** {% Img src="image/admin/Nvxc3igqv68CADzcPKSb.png", alt="Stop", width="16", height="16" %}.
 
 {% YouTube id="haFYwEBjaTo" %}
@@ -231,7 +231,7 @@ each process so that you can see the total work that each process is causing.
 [10]: #security
 [11]: #site-isolation
 [12]: https://youtu.be/4EdPq9Nw6uI
-[13]: /web/tools/chrome-devtools/shortcuts#command-menu
+[13]: /docs/devtools/shortcuts#command-menu
 [14]: /web/tools/lighthouse/audits/preload
 [15]: /web/updates/2016/02/font-display
 [16]: https://www.html5rocks.com/en/tutorials/webperformance/usertiming/
