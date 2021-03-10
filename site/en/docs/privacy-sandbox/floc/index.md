@@ -7,8 +7,7 @@ description: >
  FLoC enables interest-based advertising in a way that preserves privacy. As a user moves around the 
  web, their browser is assigned to an "interest cohort" along with thousands of others with a 
  similar browsing history. This is done without sharing individual browsing data with the browser 
- vendor or anyone else. Advertisers (sites that pay for advertisements) can include code on their 
- pages to provide access to cohort data for their ad-tech platforms.
+ vendor or anyone else.
 date: 2021-02-28
 updated: 2021-02-28
 authors:
@@ -30,47 +29,56 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 ## Why do we need FLoC?
 
-Relevant ads are [more likely to engage users](https://services.google.com/fh/files/misc/disabling_third-party_cookies_publisher_revenue.pdf). This means that ad space is more valuable when 
-it's used to display relevant ads. This in turn means that selecting relevant ads increases revenue 
-for ad-supported websites.
+Many businesses rely on advertising to drive traffic to their sites, and many publisher websites 
+fund content by enabling third parties to show ads. People generally prefer to see ads that are 
+relevant and useful to them, and relevant ads also bring more business to advertisers and 
+[more revenue to the websites that host them](https://services.google.com/fh/files/misc/disabling_third-party_cookies_publisher_revenue.pdf). In other words, ad space is more valuable when 
+it displays relevant ads. Thus, selecting relevant ads increases revenue for ad-supported websites.
 
-However, many people are concerned about the privacy implications of ad targeting, which currently 
-relies on techniques such as tracking cookies and device fingerprinting which can reveal your 
-browsing history to advertisers. The FLoC proposal aims to allow ad selection without compromising 
-privacy.
+However, many people are concerned about the privacy implications of tailored advertising, which 
+currently relies on techniques such as tracking cookies and device fingerprinting which can reveal 
+your browsing history to advertisers or ad platforms. The FLoC proposal aims to allow ad selection 
+without compromising privacy.
 
 
 ## What is the Federated Learning of Cohorts (FLoC)?
 
-Many people are concerned about the privacy implications of ad selection, which currently relies on 
-techniques such as tracking cookies and device fingerprinting that can reveal your browsing history 
-to ad platforms and advertisers.
-
 Advertisers use multiple techniques to choose relevant ads. For example:
-* First-party and contextual information: "Show this ad to users who selected knitting as a favorite topic" or "Show this ad on pages about motorcycles'.
-* Specific actions of the user: "Show this ad for discount wool to users who left knitting items in their shopping cart." Remarketing use cases such as this are handled by the TURTLEDOVE proposal.
-* General information about user interests: "Show this ad to classical music lovers'. This is the use case handled by FLoC.
+* First-party and contextual information: "Show this ad to users who selected knitting as a favorite 
+topic" or "Show this ad on pages about motorcycles'.
+* Specific actions of the user: "Show this ad for discount wool to users who left knitting items in 
+their shopping cart." Remarketing use cases such as this are handled by the [FLEDGE](/docs/privacy-sandbox/fledge) 
+proposal.
+* General information about user interests: "Show this ad to classical music lovers" or "Show this 
+ad to users that viewed hiking boots on an online shoe store". This is the use case handled by FLoC.
 
-With FLoC, the browser groups thousands of users with similar browsing histories into "cohorts". Advertisers can select ads for this group, but cannot identify individual people within it. Each user belongs to no more than one cohort. The user's browser provides their cohort name (for example "9739") to websites and services on request. Cohort names can be requested to select ads or to learn which cohorts are most likely to visit a website or complete a conversion event.
+With FLoC, the browser groups thousands of users with similar browsing histories into "cohorts". 
+Advertisers can select ads for this group, but cannot identify individual people within it. Each 
+user belongs to no more than one cohort. The user's browser provides their cohort ID (for example 
+"9739") to websites and services on request. Cohort IDs can be requested to select ads or to learn 
+which cohorts are most likely to visit a website or complete a conversion event.
+
+As well as relevant ads, FLoC can also be used to suggest relevant content by sites that observe 
+correlations between cohort IDs and browsing activity.
 
 ### Today
 Ad tech companies infer a particular individual's interests based on sites they visit by using cookies and fingerprinting techniques.
 
 ### Future
-FLoC allows sites to guess your interests without being able to uniquely identify you. By generating an ID based on the browsing history of a large group of people, instead of ones of a particular individual, content can be personalized in a private way.
+FLoC allows sites to guess your interests without being able to uniquely identify you. By generating 
+an ID based on the browsing history of a large group of people, instead of tracking the browsing 
+history of an individual, content can be personalized in a private way.
 
 
 ## What can FLoC be used for?
 
 * Show ads to people whose browsers belong to a cohort that has been observed to frequently visit an 
 advertiser's site or shows interest in relevant topics.
-* Approximate demographic targeting by analyzing cohort behavior to infer characteristics of the 
-cohort.
 * Use machine learning models to predict the probability a user will convert based on their cohort, 
-in order to inform bidding behavior.
-* Recommend content to users. For example, suppose some of the content on your site is about sports.  
-You could more highly recommend that content to people in the same cohorts as other people who have 
-engaged with your sports stories in the past.
+in order to inform ad auction bidding behavior.
+* Recommend content to users. For example, suppose a news site observes that their sports podcast 
+page has become especially popular with visitors from cohorts 1234 and 7. They can recommend that 
+content to other visitors from those cohorts.
 
 
 ## How does FLoC work?
@@ -88,7 +96,7 @@ retailer: <br>
 **<u>adnetwork.example</u>**
 
 In this example we've called the users **Yoshi** and **Alex**. Initially their browsers both belong
-to the same cohort, number 1354.
+to the same cohort, 1354.
 
 {% Aside %}
 Don't think of a cohort as a collection of people. Instead, think of a cohort as a grouping of 
@@ -97,8 +105,8 @@ browsing activity.
 
 ### 1. FLoC service
 1. The FLoC service used by the browser creates a mathematical model with thousands of "cohorts",
-each of which will correspond to thousands of web browsers with similar browsing histories. More
-about how this works [below](#floc-server).
+each of which will correspond to thousands of web browsers with similar recent browsing histories. 
+More about how this works [below](#floc-server).
 1. Each cohort is given a number.
 
 ### 2. Web browser
