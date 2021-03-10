@@ -20,6 +20,12 @@ This document is a work in progress, unfinished and not to be shared externally.
 [Let us know](.) [URL TBC] if something is missing!
 {% endAside %}
 
+## Blink
+The [rendering engine](https://en.wikipedia.org/wiki/Browser_engine) used by Chrome, developed as 
+part of the [Chromium](#chromium) project.
+
+## Chromium
+An open-source web browser project. Chrome, Microsoft Edge and Opera are based on Chromium.
 
 ## Click-through rate (CTR) {: #ctr }
 
@@ -129,6 +135,16 @@ Arbitrary number used once only in cryptographic communication.
 
 The origin of a request, including the server name but no path information. For example:
 `https://web.dev`
+
+## Origin trial {: #origin-trial}
+Origin trials provide access to a new or experimental feature, to build functionality users can try 
+out for a limited time before the feature is made available to everyone. When Chrome offers an 
+origin trial for a feature, you can register for the trial to enable the feature for all users on 
+your [origin](https://web.dev/same-site-same-origin/#origin), without requiring uses to toggle any 
+flags or switch to an alternative build of Chrome (though they may need to upgrade). Origin trials 
+enable developers to build demos and prototypes using new features. The trials also help Chrome 
+engineers understand how new features are used, and how they may interact with other web 
+technologies. Find out more: [Getting started with Chrome's origin trials](https://web.dev/origin-trials/).
 
 ## Passive surface {: #passive-surface }
 

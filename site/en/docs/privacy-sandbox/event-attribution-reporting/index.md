@@ -25,8 +25,7 @@ The Event Attribution Reporting API was previously known as the Event Conversion
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials/): Chrome 86 to 91. 
-* [Register for trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
+* [In origin trial](https://web.dev/origin-trials/) Chrome 86 to 91: [register for the trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
 * [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
 * [Chrome Platform Status](https://www.chromestatus.com/feature/6412002824028160).
 

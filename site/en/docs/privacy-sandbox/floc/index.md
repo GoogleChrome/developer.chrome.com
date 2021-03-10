@@ -30,8 +30,6 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 ## Why do we need FLoC?
 
-This means that ad space is more valuable when it's used to display relevant ads. This in turn means that selecting relevant ads increases revenue for ad-supported websites.
-
 Relevant ads are [more likely to engage users](https://services.google.com/fh/files/misc/disabling_third-party_cookies_publisher_revenue.pdf). This means that ad space is more valuable when 
 it's used to display relevant ads. This in turn means that selecting relevant ads increases revenue 
 for ad-supported websites.
@@ -59,7 +57,7 @@ With FLoC, the browser groups thousands of users with similar browsing histories
 Ad tech companies infer a particular individual's interests based on sites they visit by using cookies and fingerprinting techniques.
 
 ### Future
-FLoC allows sites to guess your interests without being able to uniquely identify you. By generating a ID based on the browsing history of a large group of people, instead of ones of a particular individual, content can be personalized in a private way.
+FLoC allows sites to guess your interests without being able to uniquely identify you. By generating an ID based on the browsing history of a large group of people, instead of ones of a particular individual, content can be personalized in a private way.
 
 
 ## What can FLoC be used for?
@@ -150,17 +148,17 @@ browsing history never leaves the device.
 {% endAside %}
 
 
-## How does the FLoC service enable the browser to work out its cohort? {: #floc-server }
+## How does the user's browser to work out its cohort? {: #floc-server }
 
-1. The FLoC service used by the browser creates a multi-dimensional mathematical representation 
+1. The FLoC service accessed by the user's browser creates a multi-dimensional mathematical representation 
 of all potential web browsing histories. We'll call this model "cohort space".
 1. The service divides up this space into thousands of segments. Each segment represents a
 cluster of thousands of similar browsing histories. These groupings aren't based on knowing
 any actual browsing histories; they're simply based on picking random centers in "cohort space" or
 cutting up the space with random lines.
 1. Each segment is given a cohort number.
-1. The web browser gets this data describing "cohort space" from its FLoC service.
-1. As a user moves around the web, their browser [uses an algorithm](#floc-algorithm) to 
+1. The user's browser gets this data describing "cohort space" from its FLoC service.
+1. As the user moves around the web, their browser [uses the FLoC algorithm](#floc-algorithm) to 
 periodically calculate the region in "cohort space" that corresponds most closely to its own 
 browsing history.
 
