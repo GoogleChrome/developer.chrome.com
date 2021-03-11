@@ -9,6 +9,7 @@
     - url: /docs/devtools/css/grid/
     - url: /docs/devtools/css/print-preview/
     - url: /docs/devtools/coverage/
+- url: /docs/devtools/dom/
 - title: i18n.docs.devtools.console
   sections:
     - url: /docs/devtools/console/
