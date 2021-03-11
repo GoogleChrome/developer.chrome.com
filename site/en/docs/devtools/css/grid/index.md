@@ -141,4 +141,4 @@ select it in the Elements panel.
 
 [1]: https://jec.fyi/demo/css-grid-fruit
 [2]: https://jec.fyi/demo/css-grid-snack
-[3]: /docs/devtools#open
+[3]: /docs/devtools/open
