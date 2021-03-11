@@ -120,7 +120,7 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 [4]: https://chrome.google.com/webstore/developer/dashboard
 [5]: https://chrome.google.com/webstore
 [6]: /docs/webstore
-[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/hello-world
+[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/hello-world
 [8]: /docs/extensions/reference/action
 [9]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
 [10]: /docs/extensions/mv3/getstarted
