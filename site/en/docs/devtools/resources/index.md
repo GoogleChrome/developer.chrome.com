@@ -144,7 +144,7 @@ See [Filter by resource type][8].
 **Figure 12**. Filtering for CSS in the Network Log
 
 [1]: https://developer.mozilla.org/en-US/docs/Learn
-[2]: /docs/devtools#start
+[2]: /docs/devtools/overview/#start
 [3]: /docs/devtools/network#details
 [4]: #browse
 [5]: /docs/devtools/network#load

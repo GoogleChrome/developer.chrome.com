@@ -287,4 +287,4 @@ Congratulations, you have completed the tutorial. Click **Dispense Trophy** to r
 [8]: /docs/devtools/console/reference
 [9]: /docs/devtools/console/api
 [10]: #javascript
-[11]: /docs/devtools#start
+[11]: /docs/devtools/overview/#start

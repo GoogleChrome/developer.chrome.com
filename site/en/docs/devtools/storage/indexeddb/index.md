@@ -153,7 +153,7 @@ edits an IndexedDB database.
 
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
-[3]: /docs/devtools#start
+[3]: /docs/devtools/overview/#start
 [4]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB
 [5]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Using_an_index
 [6]: https://crbug.com/943770

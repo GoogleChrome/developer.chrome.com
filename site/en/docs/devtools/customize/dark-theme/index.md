@@ -29,5 +29,5 @@ You can enable dark theme in [Settings][1] or the [Command Menu][2].
 {% Img src="image/admin/ZuWH6C0rI0XPrSNock9l.png", alt="The dark theme command.", width="800", height="350" %}
 
 [1]: #settings
-[2]: #commandmenu
+[2]: #command-menu
 [3]: /docs/devtools/command-menu

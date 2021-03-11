@@ -413,6 +413,6 @@ To open the **Angle Clock**:
 [23]: #select
 [24]: #select
 [25]: #eyedropper
-[26]: https://material.io/guidelines/style/color.html#color-color-palette
+[26]: https://material.io/design/color/the-color-system.html#color-usage-and-palettes
 [27]: #select
 [28]: /docs/devtools/shortcuts#styles
