@@ -65,7 +65,11 @@
     - url: /docs/devtools/accessibility/reference/
     - url: /docs/devtools/accessibility/navigation/
     - url: /docs/devtools/accessibility/focus/
-- url: /docs/devtools/remote-debugging/
+- title: i18n.docs.devtools.remotedebug
+  sections:
+    - url: /docs/devtools/remote-debugging/
+    - url: /docs/devtools/remote-debugging/local-server/
+    - url: /docs/devtools/remote-debugging/webviews/
 - title: i18n.docs.devtools.memory
   sections:
     - url: /docs/devtools/memory-problems/

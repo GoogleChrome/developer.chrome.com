@@ -18,3 +18,5 @@ memory:
   en: 'Memory'
 customization:
   en: 'Customization'
+remotedebug:
+  en: 'Remote debugging'

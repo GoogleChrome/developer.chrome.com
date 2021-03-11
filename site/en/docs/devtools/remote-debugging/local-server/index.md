@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Access Local Servers"
+title: "Access local servers"
 authors:
   - kaycebasques
   - megginkearney
