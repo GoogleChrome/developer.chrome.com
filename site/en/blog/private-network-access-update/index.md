@@ -6,7 +6,7 @@ authors:
   - titouan
 description: TBD
 date: 2021-03-15
-hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
+hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A collection of padlocks.
 ---
 
@@ -245,8 +245,12 @@ specification](https://wicg.github.io/private-network-access).
 Chrome is deprecating and eventually blocking subresource requests to the
 private network. This will not affect navigations to the private network, which
 can also be used in
-[CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks, if not
-as subtly.
+[CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks.
 
 The Private Network Access specification does not make a distinction between the
 two kinds of fetches, which will eventually be subject to the same restrictions.
+
+Cover photo by [Markus
+Spiske](https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+on
+[Unsplash](https://unsplash.com/s/photos/private?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
