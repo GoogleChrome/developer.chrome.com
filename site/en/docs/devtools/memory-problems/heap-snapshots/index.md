@@ -231,8 +231,8 @@ Properties and property values of objects have different types and are colored a
 property has one of four types:
 
 - **a: property** — regular property with a name, accessed via the . (dot) operator, or via
-  [][16]notation, e.g. \["foo bar"\];
-- **0: element** — regular property with a numeric index, accessed via [][17]notation;
+  brackets (`[]`) notation, e.g. `[foo bar]`
+- **0: element** — regular property with a numeric index, accessed via brackets (`[]`) notation
 - **a: context var** - variable in a function context, accessible by its name from inside a function
   closure;
 - **a: system prop** - property added by the JavaScript VM, not accessible from JavaScript code.
@@ -286,24 +286,22 @@ leaks with the Chrome DevTools][20] by Gonzalo Ruiz de Villa.
 
 **Example:** Try this [demo][21] to play with detached DOM trees.
 
-[1]: /docs/devtools/profile/memory-problems/memory-101#objects-retaining-tree
-[2]: /docs/devtools/profile/memory-problems/memory-101#object-sizes
+[1]: /docs/devtools/memory-problems/memory-101/#objects_retaining_tree
+[2]: /docs/devtools/memory-problems/memory-101/#object-sizes
 [3]: https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example3.html
 [4]:
-  /docs/devtools/profile/memory-problems/memory-diagnosis#narrow-down-causes-of-memory-leaks
-[5]: /docs/devtools/profile/memory-problems/memory-101#dominators
-[6]: /docs/devtools/profile/memory-problems/memory-101#object-sizes
-[7]: /docs/devtools/profile/memory-problems/memory-101#object-sizes
+  /docs/devtools/memory-problems/#overview
+[5]: /docs/devtools/memory-problems/memory-101/#dominators
+[6]: /docs/devtools/memory-problems/memory-101/#object-sizes
+[7]: /docs/devtools/memory-problems/memory-101/#object-sizes
 [8]: https://developer.chrome.com/devtools/docs/heap-profiling-summary
 [9]: https://developer.chrome.com/devtools/docs/heap-profiling-comparison
 [10]: https://developer.chrome.com/devtools/docs/heap-profiling-containment
 [11]: https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example7.html
 [12]: https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example8.html
-[13]: /docs/devtools/profile/memory-problems/memory-101#dominators
+[13]: /docs/devtools/memory-problems/memory-101/#dominators
 [14]: https://developer.chrome.com/devtools/docs/heap-profiling-dominators
 [15]: https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example10.html
-[16]: /docs/devtools/memory-problems/brackets
-[17]: /docs/devtools/memory-problems/brackets
 [18]: https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example6.html
 [19]: https://github.com/GoogleChrome/devtools-docs/blob/master/docs/demos/memory/example9.html
 [20]: http://slid.es/gruizdevilla/memory

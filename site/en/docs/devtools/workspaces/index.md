@@ -260,7 +260,7 @@ Congratulations, you have completed the tutorial. Click the button below to rece
 [4]: http://blog.teamtreehouse.com/introduction-source-maps
 [5]: https://groups.google.com/forum/#!forum/google-chrome-developer-tools
 [6]: https://stackoverflow.com/questions/ask?tags=google-chrome-devtools
-[7]: /web/updates/2018/01/devtools#overrides
+[7]: /blog/new-in-devtools-65/#overrides
 [8]: https://glitch.com/edit/#!/remix/workspaces
 [9]: https://en.wikipedia.org/wiki/Port_(computer_networking)#Use_in_URLs
 [10]: #elements

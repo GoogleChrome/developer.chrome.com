@@ -86,5 +86,5 @@ To remove a virtual authenticator, click the **Remove** button of the authentica
 {% Img src="image/admin/QfQ84aImd5DkQNnT8VlI.png", alt="Remove authenticator", width="800", height="503" %}
 
 [1]: https://webauthndemo.appspot.com/
-[2]: /chrome-devtools/open
+[2]: /docs/devtools/open/
 [3]: https://webauthndemo.appspot.com/

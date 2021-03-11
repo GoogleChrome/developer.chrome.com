@@ -187,12 +187,12 @@ Related Guides:
 - [Inspect page resources][21]
 - [Inspect and manage local storage and caches][22]
 
-[1]: /web/progressive-web-apps
+[1]: https://web.dev/progressive-web-apps
 [2]: #other
 [3]: https://developers.google.com/web/fundamentals/web-app-manifest
 [4]: https://developers.google.com/web/fundamentals/app-install-banners
 [5]: https://events.google.com/io2016/
-[6]: /docs/devtools/debug/remote-debugging/remote-debugging
+[6]: /docs/devtools/remote-debugging/
 [7]: https://developers.google.com/web/fundamentals/primers/service-worker
 [8]: https://developers.google.com/web/fundamentals/push-notifications
 [9]: /docs/devtools/command-menu/
@@ -202,10 +202,10 @@ Related Guides:
 [13]: https://developers.google.com/web/fundamentals/glossary#opaque-response
 [14]: https://developers.google.com/web/fundamentals/glossary#CDN
 [15]: https://fetch.spec.whatwg.org/#http-cors-protocol
-[16]: /web/updates/2017/08/estimating-available-storage-space
+[16]: https://developers.google.com/web/updates/2017/08/estimating-available-storage-space
 [17]: https://bugs.chromium.org/p/chromium/issues/detail?id=796060#c17
 [18]: https://stackoverflow.com/q/39109789/385997
-[19]: /web/tools/workbox/guides/storage-quota#beware_of_opaque_responses
-[20]: /docs/devtools/iterate/manage-data/local-storage#clear-storage
-[21]: /docs/devtools/iterate/manage-data/page-resources
-[22]: /docs/devtools/iterate/manage-data/local-storage
+[19]: https://developers.google.com/web/tools/workbox/guides/storage-quota#beware_of_opaque_responses
+[20]: /docs/devtools/storage/localstorage/#clear
+[21]: /docs/devtools/resources/
+[22]: /docs/devtools/storage/localstorage/

@@ -87,9 +87,9 @@ shown when available.
 
 **Figure 6**. Main origin details
 
-[1]: https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https
+[1]: https://web.dev/why-https
 [2]: /docs/devtools/open
 [3]: https://letsencrypt.org/
-[4]: /web/tools/lighthouse/audits/http-redirects-to-https
-[5]: /web/tools/lighthouse
+[4]: https://web.dev/redirects-http/
+[5]: https://developers.google.com/web/tools/lighthouse
 [6]: https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
