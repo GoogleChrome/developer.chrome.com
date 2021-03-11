@@ -155,7 +155,10 @@ or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`:
 - Referer
 - Cookie
 
-Starting from Chrome 72, the Set-Cookie response header is **not provided** and cannot be modified
+Starting from Chrome 72, the `Set-Cookie` response header is **not provided** and cannot be modified
+or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
+
+Starting from Chrome 89, the `X-Frame-Options` response header cannot be effectively modified
 or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
 
 {% Aside %}
