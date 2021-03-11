@@ -91,15 +91,10 @@ from a non-secure context.
 
 Deprecation reports are [POSTed as
 JSON](https://wicg.github.io/deprecation-reporting/#sample-reports) to websites'
-reporting endpoints, as configured by the `Reporting-Endpoints` header, for
-example:
+reporting endpoints, as configured by the `Reporting-To` header.
 
-```http
-Reporting-Endpoints: default="https://example.com/reports"
-```
-
-We highly recommend setting one up if you haven't. See [Receive reports when
-there are unexpected non-secure private network requests](#receive-reports).
+See [Receive reports when there are unexpected non-secure private network
+requests](#receive-reports) to learn how to set up a reporting endpoint.
 
 #### DevTools warnings and issues logged when requests are initiated from non-secure contexts
 
@@ -140,9 +135,9 @@ deprecation.
 ### Receive reports when there are unexpected non-secure private network requests {: #receive-reports}
 
 We highly recommend that you set up a reporting endpoint server and send a
-`Reporting-Endpoint` header on your website's documents to keep track of
-unexpected non-secure private network requests. This will also serve to warn you
-of other upcoming deprecations and errors your clients encounter in the wild.
+`Reporting-To` header on your website's documents to keep track of unexpected
+non-secure private network requests. This will also serve to warn you of other
+upcoming deprecations and errors your clients encounter in the wild.
 
 To receive reports, there are a couple of known SaaS solutions.
 
@@ -150,32 +145,27 @@ To receive reports, there are a couple of known SaaS solutions.
 * [https://uriports.com](https://uriports.com)
 
 {% Aside %}
-
-[Please let us know](https://github.com/GoogleChrome/web.dev/issues) if you know
-any other options so we can add them to the list.
-
 We are not aware of any open source solutions that can accumulate reports in a
-database. We welcome to list them here as well if you ever build one.
-
+database. If you know any other solutions, especially open source ones, [let us
+know](https://github.com/GoogleChrome/web.dev/issues) so we can add them to the
+list.
 {% endAside %}
 
-Once the endpoint is set up, send the endpoint URL with a `Reporting-Endpoint`
+Once the endpoint is set up, send the endpoint URL with a `Reporting-To`
 header with the top-level document.
 
 ```http
-Reporting-Endpoints: default="https://example.com/reports"
+Reporting-Endpoints: default="https://reporting-endpoint.glitch.me/post"
 Report-To: { group: 'default', max_age: 86400, endpoints: [{ url: 'https://reporting-endpoint.glitch.me/post'}]}
 ```
 
 {% Aside %}
-
 The Reporting API is undergoing transition to [a new
 version](https://w3c.github.io/reporting/) (from `Reporting-To` to
 `Reporting-Endpoint`). Chrome is planning to release it soon, but will leave the
 older API in place for some time. Firefox is also [considering the new
 API](https://bugzilla.mozilla.org/show_bug.cgi?id=1620573). You may want to use
 both APIs during the transition.
-
 {% endAside %}
 
 ### Avoid crossing address spaces
@@ -237,7 +227,7 @@ In short, a CORS preflight request is an HTTP `OPTIONS` request carrying some
 request. The server can then decide whether or not to grant fine-grained access
 by responding `200 OK` with `Access-Control-Allow-*` headers.
 
-More details on this can be found in [the
+Find more details about this in the
 specification](https://wicg.github.io/private-network-access).
 
 ### Restrict navigation fetches
