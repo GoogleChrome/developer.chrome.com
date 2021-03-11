@@ -1,5 +1,5 @@
 ---
-layout: "layouts/doc-post.njk"
+layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 66)"
 authors:
   - kaycebasques
