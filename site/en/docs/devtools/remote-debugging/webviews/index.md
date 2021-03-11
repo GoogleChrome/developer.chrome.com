@@ -61,6 +61,6 @@ Can't see your WebViews on the **chrome://inspect page**?
 - On your device, open the app with the WebView you want to debug. Then, refresh the
   **chrome://inspect** page.
 
-[1]: /docs/devtools/debug/remote-debugging
+[1]: /docs/devtools/remote-debugging/
 [2]:
   https://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)

@@ -16,19 +16,17 @@ it. Use source maps to map your source code to your compiled code.
 
 - Use Source Maps to map minified code to source code. You can then read and debug compiled code in
   its original source.
-- Only use [preprocessors capable of producing Source Maps][1].
+- Only use preprocessors capable of producing Source Maps.
 - Verify that your web server can serve Source Maps.
 
 ## Get started with preprocessors {: #get_started_with_preprocessors }
 
-This article explains how to interact with JavaScript Source Maps in the DevTools Sources Panel. For
-a first overview of what preprocessors are, how they can help and how Source Maps work, head over to
-[Set Up CSS & JS Preprocessors][2].
+This article explains how to interact with JavaScript Source Maps in the DevTools Sources Panel.
 
 ## Use a supported preprocessor {: #use_a_supported_preprocessor }
 
-You need to use a minifier that's capable of creating source maps. For the most popular options,
-[see our preprocessor support section][3]. For an extended view, see the [Source maps: languages,
+You need to use a minifier that's capable of creating source maps.
+For an extended view, see the [Source maps: languages,
 tools and other info][4] wiki page.
 
 The following types of preprocessors are commonly used in combination with Source Maps:
@@ -103,5 +101,5 @@ abstractions.
 [9]: http://coffeescript.org
 [10]: https://www.dartlang.org
 [11]: https://github.com/mishoo/UglifyJS
-[12]: /docs/devtools/debug/breakpoints/step-code
+[12]: /docs/devtools/javascript/#code-stepping
 [13]: http://www.thecssninja.com/demo/source_mapping/compile.html

@@ -673,8 +673,8 @@ listener encompassing the entire viewport that may harm scroll performance
 [12]: #call-tree
 [13]: #bottom-up
 [14]: #event-log
-[15]: https://googlechrome.github.io/devtools-samples/perf/activitytabs
-[16]: https://github.com/GoogleChrome/devtools-samples/blob/master/perf/activitytabs.html
+[15]: https://activitytabs.glitch.me/
+[16]: https://glitch.com/edit/#!/activitytabs?path=index.html
 [17]: #call-tree
 [18]: #root-activities
 [19]: #select
