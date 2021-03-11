@@ -1,6 +1,6 @@
 - url: /docs/devtools/overview/
-- url: /docs/devtools/updates/
 - url: /docs/devtools/open/
+- url: /docs/devtools/updates/
 - title: i18n.docs.devtools.css
   sections:
     - url: /docs/devtools/css/
