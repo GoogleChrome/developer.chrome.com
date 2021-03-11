@@ -181,8 +181,8 @@ both APIs during the transition.
 ### Avoid crossing address spaces
 
 The simplest way around the issues caused by private network requests is to
-avoid straddling the boundary between public and private IP addresses. This can
-be achieved in one of two ways:
+avoid straddling the boundary between public and private IP addresses. There are
+two ways to achieve this.
 
 #### Serve the subresources from a more public address space
 
