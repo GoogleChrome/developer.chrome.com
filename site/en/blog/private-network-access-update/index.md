@@ -7,7 +7,7 @@ authors:
 description: Chrome has some updates to share about the standardization of the Private Network Access - formerly known as CORS-RFC1918 - plans to restrict private network resource accesses, and how your websites can align with those changes.
 date: 2021-03-11
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
-alt: A collection of padlocks.
+alt: A private sign in German
 ---
 
 Last November, [we asked for feedback about the proposed web platform
