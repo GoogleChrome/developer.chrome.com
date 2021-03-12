@@ -245,7 +245,7 @@ out.
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 84.
 
-* [What's new in Chrome DevTools (84)](https://developers.google.com/web/updates/2020/05/devtools)
+* [What's new in Chrome DevTools (84)](/blog/new-in-devtools-84)
 * [Chrome 84 deprecations & removals](https://developers.google.com/web/updates/2020/05/chrome-84-deps-rems)
 * [ChromeStatus.com updates for Chrome 84](https://www.chromestatus.com/features#milestone%3D84)
 * [What's new in JavaScript in Chrome 84](https://v8.dev/blog/v8-release-84)

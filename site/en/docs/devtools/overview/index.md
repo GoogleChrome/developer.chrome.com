@@ -214,7 +214,7 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [25]: /web/tools/setup/setup-workflow
 [26]: /docs/devtools/snippets
 [27]: /docs/devtools/javascript/reference
-[28]: /web/updates/2018/01/devtools#overrides
+[28]: /blog/new-in-devtools-65#overrides
 [29]: /docs/devtools/coverage
 [30]: /docs/devtools/network
 [31]: /docs/devtools/network/issues

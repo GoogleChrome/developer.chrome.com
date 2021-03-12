@@ -102,8 +102,8 @@ stepping through [Paul Irish's ES6-Module-implementation][11] of [TodoMVC][12] t
 [10]: /docs/devtools/customize/#settings
 [11]: https://paulirish.github.io/es-modules-todomvc/
 [12]: http://todomvc.com/
-[13]: /web/updates/2017/04/devtools-release-notes#coverage
-[14]: /web/updates/2017/04/devtools-release-notes#screenshots
-[15]: /web/updates/2017/04/devtools-release-notes#block-requests
-[16]: /web/updates/2017/04/devtools-release-notes#async
-[17]: /web/updates/2017/04/devtools-release-notes#command-menu
+[13]: /blog/new-in-devtools-59#coverage
+[14]: /blog/new-in-devtools-59#screenshots
+[15]: /blog/new-in-devtools-59#block-requests
+[16]: /blog/new-in-devtools-59#async
+[17]: /blog/new-in-devtools-59#command-menu

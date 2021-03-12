@@ -239,7 +239,7 @@ our YouTube channel for more info!
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 86.
 
-* [What's new in Chrome DevTools (86)](https://developers.google.com/web/updates/2020/06/devtools)
+* [What's new in Chrome DevTools (86)](/blog/new-in-devtools-85)
 * [Chrome 86 deprecations & removals](https://developers.google.com/web/updates/2020/09/chrome-86-deps-rems)
 * [ChromeStatus.com updates for Chrome 86](https://www.chromestatus.com/features#milestone%3D86)
 * [What's new in JavaScript in Chrome 86](https://v8.dev/blog/v8-release-86)

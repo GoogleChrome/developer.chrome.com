@@ -324,5 +324,5 @@ Chromium issue: [174309][31]
 [27]: https://crbug.com/1136394
 [28]: https://crbug.com/1144090
 [29]: https://crbug.com/1139945
-[30]: /web/updates/2020/10/devtools#customize
+[30]: /blog/new-in-devtools-87#customize
 [31]: https://crbug.com/174309

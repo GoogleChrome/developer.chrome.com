@@ -231,8 +231,8 @@ been working on over the past year and the big themes that they're tackling in t
 [19]: #continue
 [20]: /docs/devtools/customize/#settings
 [21]: /docs/devtools/command-menu/
-[22]: /web/updates/2017/04/devtools-release-notes#coverage
-[23]: /web/updates/2017/04/devtools-release-notes#screenshots
-[24]: /web/updates/2017/04/devtools-release-notes#block-requests
-[25]: /web/updates/2017/04/devtools-release-notes#async
-[26]: /web/updates/2017/04/devtools-release-notes#command-menu
+[22]: /blog/new-in-devtools-59#coverage
+[23]: /blog/new-in-devtools-59#screenshots
+[24]: /blog/new-in-devtools-59#block-requests
+[25]: /blog/new-in-devtools-59#async
+[26]: /blog/new-in-devtools-59#command-menu

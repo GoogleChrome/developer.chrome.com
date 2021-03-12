@@ -208,8 +208,8 @@ Starting in Chrome 62, the **Coverage** tab now tells you which code within a fu
 [14]: /docs/devtools/console#execution-context
 [15]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 [16]: https://googlechrome.github.io/devtools-samples/whatsnew/m62/cache.html
-[17]: /web/updates/2017/04/devtools-release-notes#coverage
-[18]: /web/updates/2017/04/devtools-release-notes#screenshots
-[19]: /web/updates/2017/04/devtools-release-notes#block-requests
-[20]: /web/updates/2017/04/devtools-release-notes#async
-[21]: /web/updates/2017/04/devtools-release-notes#command-menu
+[17]: /blog/new-in-devtools-59#coverage
+[18]: /blog/new-in-devtools-59#screenshots
+[19]: /blog/new-in-devtools-59#block-requests
+[20]: /blog/new-in-devtools-59#async
+[21]: /blog/new-in-devtools-59#command-menu

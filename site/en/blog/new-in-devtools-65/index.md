@@ -296,7 +296,7 @@ opening DevTools. See [Using DevTools Features Without Opening DevTools][22] for
 [5]: #recordings
 [6]: #stepping
 [7]: #overrides-limitations
-[8]: /web/updates/2017/10/devtools-release-notes#workspaces
+[8]: /blog/new-in-devtools-63#workspaces
 [9]: /docs/devtools/css/reference#color-picker
 [10]: https://developers.google.com/web/fundamentals/accessibility/accessible-styles#color_and_contrast
 [11]: https://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast7
@@ -310,10 +310,10 @@ opening DevTools. See [Using DevTools Features Without Opening DevTools][22] for
 [19]: /web/updates/2017/12/lighthouse#a11y
 [20]: /docs/devtools/evaluate-performance
 [21]: /web/tools/puppeteer/get-started
-[22]: /web/updates/2018/01/devtools-without-devtools
+[22]: /blog/new-in-devtools-65-without-devtools
 [23]: https://www.google.com/chrome/browser/canary.html
-[24]: /web/updates/2017/04/devtools-release-notes#coverage
-[25]: /web/updates/2017/04/devtools-release-notes#screenshots
-[26]: /web/updates/2017/04/devtools-release-notes#block-requests
-[27]: /web/updates/2017/04/devtools-release-notes#async
-[28]: /web/updates/2017/04/devtools-release-notes#command-menu
+[24]: /blog/new-in-devtools-59#coverage
+[25]: /blog/new-in-devtools-59#screenshots
+[26]: /blog/new-in-devtools-59#block-requests
+[27]: /blog/new-in-devtools-59#async
+[28]: /blog/new-in-devtools-59#command-menu

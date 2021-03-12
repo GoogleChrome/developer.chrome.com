@@ -202,7 +202,7 @@ went on between the talks, including the newest member of our team,
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 78.
 
-* [What's new in Chrome DevTools (79)](https://developers.google.com/web/updates/2019/10/devtools)
+* [What's new in Chrome DevTools (79)](/blog/new-in-devtools-79)
 * [Chrome 79 deprecations & removals](https://developers.google.com/web/updates/2019/10/chrome-79-deps-rems)
 * [ChromeStatus.com updates for Chrome 79](https://www.chromestatus.com/features#milestone%3D79)
 * [What's new in JavaScript in Chrome 79](https://v8.dev/blog/v8-release-79)

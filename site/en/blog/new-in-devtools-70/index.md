@@ -203,7 +203,7 @@ lifecycle function. React does this in development mode.
 [7]: #audiocontext
 [8]: #ndb
 [9]: #bonus
-[10]: /web/updates/2018/05/devtools#eagerevaluation
+[10]: /blog/new-in-devtools-68#eagerevaluation
 [11]: /docs/devtools/css/reference#select
 [12]: /docs/devtools/console/command-line-reference#dom
 [13]: /docs/devtools/command-menu/

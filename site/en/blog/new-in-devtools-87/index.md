@@ -234,7 +234,7 @@ Chromium issue: [174309][28]
 [12]: https://crbug.com/1106251
 [13]: https://github.com/GoogleChrome/lighthouse/releases
 [14]: https://crbug.com/772558
-[15]: /web/updates/2018/11/devtools#metrics
+[15]: /blog/new-in-devtools-72#metrics
 [16]: /docs/devtools/network/reference#filter-by-property
 [17]: https://crbug.com/1121141
 [18]: https://crbug.com/1104188
@@ -245,6 +245,6 @@ Chromium issue: [174309][28]
 [23]: https://crbug.com/1051466
 [24]: https://crbug.com/1121312
 [25]: https://jec.fyi/demo/accessible-color-multi
-[26]: /web/updates/2020/08/devtools#accessible-color
+[26]: /blog/new-in-devtools-86#accessible-color
 [27]: https://crbug.com/1120316
 [28]: https://crbug.com/174309

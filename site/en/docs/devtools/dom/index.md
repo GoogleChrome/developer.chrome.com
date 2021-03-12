@@ -327,7 +327,7 @@ covered in this tutorial. See also [Elements panel keyboard shortcuts][shortcuts
 Check out the [Chrome DevTools homepage](/docs/devtools/) to discover everything
 else you can do with DevTools.
 
-See [Community](/docs/devtools/#community) if you want to contact the DevTools team
+See [Community](/docs/devtools/overview/#community) if you want to contact the DevTools team
 or get help from the DevTools community.
 
 ## Appendix: HTML versus the DOM {: #appendix }

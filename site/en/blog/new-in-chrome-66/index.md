@@ -200,7 +200,7 @@ there's plenty more.
 * `trimStart()` and `trimEnd()` are now available as the standards-based way
   of trimming whitespace from strings.
 
-Be sure to check out [New in Chrome DevTools](https://developers.google.com/web/updates/2018/02/devtools),
+Be sure to check out [New in Chrome DevTools](/blog/new-in-devtools-66),
 to learn what's new in for DevTools in Chrome 66. And, if you're interested in
 Progressive Web Apps, check out the new
 [PWA Roadshow video series](https://www.youtube.com/playlist?list=PLNYkxOF6rcICnIOm4cfylT0-cEfytBtYt).

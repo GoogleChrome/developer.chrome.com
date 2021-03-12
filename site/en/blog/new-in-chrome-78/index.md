@@ -182,7 +182,7 @@ Don't forget to tune into the [Chrome Dev Summit][cds-site] on November
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 78.
 
-* [What's new in Chrome DevTools (78)](https://developers.google.com/web/updates/2019/09/devtools)
+* [What's new in Chrome DevTools (78)](/blog/new-in-devtools-78)
 * [Chrome 78 deprecations & removals](https://developers.google.com/web/updates/2019/09/chrome-78-deps-rems)
 * [ChromeStatus.com updates for Chrome 78](https://www.chromestatus.com/features#milestone%3D78)
 * [What's new in JavaScript in Chrome 78](https://v8.dev/blog/v8-release-78)

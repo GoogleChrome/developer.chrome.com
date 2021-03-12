@@ -143,7 +143,7 @@ Figure 7. The new Push Messages and Notifications panes in the Application panel
   https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video#layout_shifting_and_placeholders
 [5]: /docs/devtools/command-menu
 [6]: https://crbug.com/961846
-[7]: /web/updates/2019/05/devtools
+[7]: /blog/new-in-devtools-76
 [8]: https://github.com/GoogleChrome/lighthouse/releases/tag/v5.1.0
 [9]: https://developers.google.com/web/fundamentals/design-and-ux/browser-customization#safari
 [10]: /web/tools/lighthouse/audits/budgets
@@ -152,12 +152,12 @@ Figure 7. The new Push Messages and Notifications panes in the Application panel
 [13]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/plugins.md
 [14]: https://github.com/GoogleChrome/lighthouse-stack-packs
 [15]: /docs/devtools/customize/dark-theme
-[16]: /web/updates/2019/01/devtools#logpoints
+[16]: /blog/new-in-devtools-73#logpoints
 [17]: /docs/devtools/javascript/breakpoints#conditional-loc
 [18]: https://developers.google.com/web/fundamentals/performance/resource-prioritization#prefetch
 [19]: https://caniuse.com/#feat=link-rel-prefetch
 [20]: https://devtools.glitch.me/wndt77/prefetch1.html
 [21]: https://crbug.com/935267
 [22]: https://v8.dev/features/class-fields#private-class-fields
-[23]: /web/updates/2019/05/devtools#background
+[23]: /blog/new-in-devtools-76#background
 [24]: https://crbug.com/927726

@@ -149,7 +149,7 @@ a complete list of features in origin trial.
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 81.
 
-* [What's new in Chrome DevTools (81)](https://developers.google.com/web/updates/2020/01/devtools)
+* [What's new in Chrome DevTools (81)](/blog/new-in-devtools-81)
 * [Chrome 81 deprecations & removals](https://developers.google.com/web/updates/2020/02/chrome-81-deps-rems)
 * [ChromeStatus.com updates for Chrome 81](https://www.chromestatus.com/features#milestone%3D81)
 * [What's new in JavaScript in Chrome 81](https://v8.dev/blog/v8-release-81)

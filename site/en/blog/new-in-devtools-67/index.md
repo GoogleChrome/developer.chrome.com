@@ -237,8 +237,8 @@ each process so that you can see the total work that each process is causing.
 [16]: https://www.html5rocks.com/en/tutorials/webperformance/usertiming/
 [17]: https://www.certificate-transparency.org/
 [18]: https://www.chromium.org/Home/chromium-security/site-isolation
-[19]: /web/updates/2017/04/devtools-release-notes#coverage
-[20]: /web/updates/2017/04/devtools-release-notes#screenshots
-[21]: /web/updates/2017/04/devtools-release-notes#block-requests
-[22]: /web/updates/2017/04/devtools-release-notes#async
-[23]: /web/updates/2017/04/devtools-release-notes#command-menu
+[19]: /blog/new-in-devtools-59#coverage
+[20]: /blog/new-in-devtools-59#screenshots
+[21]: /blog/new-in-devtools-59#block-requests
+[22]: /blog/new-in-devtools-59#async
+[23]: /blog/new-in-devtools-59#command-menu

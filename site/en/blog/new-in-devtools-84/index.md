@@ -147,7 +147,7 @@ Check out [Get things done quickly with app shortcuts][25] to learn more.
 
 [1]: /docs/devtools/issues
 [2]: https://crbug.com/1068116
-[3]: /web/updates/2019/01/devtools#inspect
+[3]: /blog/new-in-devtools-73#inspect
 [4]: https://web.dev/labels-and-text-alternatives/
 [5]: https://web.dev/control-focus-with-tabindex/
 [6]: https://crbug.com/1040025

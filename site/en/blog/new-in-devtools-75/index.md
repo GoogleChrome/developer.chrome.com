@@ -174,7 +174,7 @@ Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to lear
 [20]: https://crbug.com/941197
 [21]: https://crbug.com/930773
 [22]: https://crbug.com/930865
-[23]: /web/updates/2019/01/devtools#inspect
+[23]: /blog/new-in-devtools-73#inspect
 [24]: /docs/devtools/customize/#settings
 [25]: https://crbug.com/948417
 [26]: /docs/devtools/sources#edit

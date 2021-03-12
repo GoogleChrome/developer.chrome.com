@@ -167,7 +167,7 @@ to get caught up on all the latest from Google I/O!
 
 ### New in DevTools
 
-Be sure to check out [New in Chrome DevTools](https://developers.google.com/web/updates/2018/04/devtools), to
+Be sure to check out [New in Chrome DevTools](/blog/new-in-devtools-67), to
 learn what's new in for DevTools in Chrome 67.
 
 ### Subscribe

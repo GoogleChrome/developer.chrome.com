@@ -165,7 +165,7 @@ Puppeteer and Puppeteer for Firefox. The Firefox announcement happens around 4:0
 [4]: #HAR
 [5]: https://crbug.com/496006
 [6]: https://crbug.com/904585
-[7]: /web/updates/2017/11/devtools-release-notes#perf-monitor
+[7]: /blog/new-in-devtools-64#perf-monitor
 [8]: https://crbug.com/958177
 [9]: https://crbug.com/601286
 [10]:

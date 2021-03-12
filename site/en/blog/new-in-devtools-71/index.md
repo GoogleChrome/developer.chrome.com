@@ -177,7 +177,7 @@ Check out [Command Line Reference][16] for other handy functions that you can ca
 [4]: #command-menu
 [5]: #picture-in-picture
 [6]: #bonus
-[7]: /web/updates/2018/08/devtools#watch
+[7]: /blog/new-in-devtools-70#watch
 [8]: /docs/devtools/network-performance/reference#save-as-har
 [9]: /docs/devtools/network-performance/reference#initiators-dependencies
 [10]: https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/HAR/Overview.html

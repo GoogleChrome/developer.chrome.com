@@ -129,8 +129,8 @@ now you can send custom tags:
 [9]: /web/tools/lighthouse#devtools
 [10]: /web/tools/lighthouse
 [11]: https://gauntface.github.io/simple-push-demo/
-[12]: /web/updates/2017/04/devtools-release-notes#coverage
-[13]: /web/updates/2017/04/devtools-release-notes#screenshots
-[14]: /web/updates/2017/04/devtools-release-notes#block-requests
-[15]: /web/updates/2017/04/devtools-release-notes#async
-[16]: /web/updates/2017/04/devtools-release-notes#command-menu
+[12]: /blog/new-in-devtools-59#coverage
+[13]: /blog/new-in-devtools-59#screenshots
+[14]: /blog/new-in-devtools-59#block-requests
+[15]: /blog/new-in-devtools-59#async
+[16]: /blog/new-in-devtools-59#command-menu

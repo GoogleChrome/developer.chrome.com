@@ -263,12 +263,12 @@ See [Chromium issue #802182][13] to report bugs or suggest improvements.
 [1]: https://medium.com/frontmen/art-of-debugging-with-chrome-devtools-ab7b5fd8e0b4#a4f3
 [2]: https://alligator.io/js/object-property-shorthand-es6/"
 [3]: https://crbug.com/700519
-[4]: /web/updates/2017/04/devtools-release-notes#coverage
+[4]: /blog/new-in-devtools-59#coverage
 [5]: https://pptr.dev/#?product=Puppeteer&version=v1.11.0&show=api-class-coverage
 [6]: https://crbug.com/717195
 [7]: https://crbug.com/865674
 [8]: https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html
-[9]: /web/updates/2018/01/devtools#contrast
+[9]: /blog/new-in-devtools-65#contrast
 [10]: https://crbug.com/879856
 [11]: https://crbug.com/649657
 [12]: https://crbug.com/328431

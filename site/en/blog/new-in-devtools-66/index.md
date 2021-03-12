@@ -169,11 +169,11 @@ where I really wanted to pause all along.
 [6]: /docs/devtools/customize/#settings
 [7]: /docs/devtools/javascript/reference#blackbox
 [8]: /docs/devtools/device-mode
-[9]: /web/updates/2018/01/devtools#overrides
+[9]: /blog/new-in-devtools-65#overrides
 [10]: https://youtu.be/H0XScE08hy8
 [11]: https://www.google.com/chrome/browser/canary.html
-[12]: /web/updates/2017/04/devtools-release-notes#coverage
-[13]: /web/updates/2017/04/devtools-release-notes#screenshots
-[14]: /web/updates/2017/04/devtools-release-notes#block-requests
-[15]: /web/updates/2017/04/devtools-release-notes#async
-[16]: /web/updates/2017/04/devtools-release-notes#command-menu
+[12]: /blog/new-in-devtools-59#coverage
+[13]: /blog/new-in-devtools-59#screenshots
+[14]: /blog/new-in-devtools-59#block-requests
+[15]: /blog/new-in-devtools-59#async
+[16]: /blog/new-in-devtools-59#command-menu

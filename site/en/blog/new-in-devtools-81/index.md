@@ -114,7 +114,7 @@ Here's a [GIF of the feature][14].
 [3]: /docs/devtools/command-menu
 [4]: /docs/devtools/device-mode#throttle
 [5]: https://crbug.com/924693
-[6]: /web/updates/2019/10/devtools#blockedcookies
+[6]: /blog/new-in-devtools-79#blockedcookies
 [7]: https://crbug.com/1030258
 [8]: https://crbug.com/1026879
 [9]: /docs/devtools/storage/cookies#fields

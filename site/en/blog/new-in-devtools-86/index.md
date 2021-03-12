@@ -308,7 +308,7 @@ Chromium issue: [1067184][38]
 [28]: https://web.dev/coop-coep/
 [29]: https://crbug.com/1051466
 [30]: https://crbug.com/1093227
-[31]: /web/updates/2020/05/devtools#properties
+[31]: /blog/new-in-devtools-84#properties
 [32]: https://crbug.com/1105205
 [33]: https://crbug.com/1116085
 [34]: /protocol-buffers

@@ -170,8 +170,8 @@ The **Show timestamps** checkbox previously in **Console Settings**
 [13]: /web/updates/2018/05/lighthouse3
 [14]: /web/updates/2018/05/bigint
 [15]: /docs/devtools/customize/#settings
-[16]: /web/updates/2017/04/devtools-release-notes#coverage
-[17]: /web/updates/2017/04/devtools-release-notes#screenshots
-[18]: /web/updates/2017/04/devtools-release-notes#block-requests
-[19]: /web/updates/2017/04/devtools-release-notes#async
-[20]: /web/updates/2017/04/devtools-release-notes#command-menu
+[16]: /blog/new-in-devtools-59#coverage
+[17]: /blog/new-in-devtools-59#screenshots
+[18]: /blog/new-in-devtools-59#block-requests
+[19]: /blog/new-in-devtools-59#async
+[20]: /blog/new-in-devtools-59#command-menu

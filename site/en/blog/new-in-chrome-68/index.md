@@ -171,7 +171,7 @@ there's plenty more.
 
 ### New in DevTools
 
-Be sure to check out [New in Chrome DevTools](https://developers.google.com/web/updates/2018/05/devtools), to
+Be sure to check out [New in Chrome DevTools](/blog/new-in-devtools-68), to
 learn what's new in for DevTools in Chrome 68.
 
 ### Subscribe

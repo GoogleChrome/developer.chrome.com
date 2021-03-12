@@ -163,5 +163,5 @@ features.
 [7]: /docs/devtools/network#filter
 [8]: /docs/devtools/speed/get-started#main
 [9]: https://w3c.github.io/longtasks/#sec-terminology
-[10]: /web/updates/2018/11/devtools#metrics
+[10]: /blog/new-in-devtools-72#metrics
 [11]: /docs/devtools/dom

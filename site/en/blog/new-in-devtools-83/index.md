@@ -194,7 +194,7 @@ to cover it in What's New In DevTools (Chrome 81).
 [9]: https://crbug.com/1051466
 [10]: /docs/devtools/javascript/breakpoints#loc
 [11]: /docs/devtools/javascript/breakpoints#conditional-loc
-[12]: /web/updates/2019/01/devtools#logpoints
+[12]: /blog/new-in-devtools-73#logpoints
 [13]: https://crbug.com/1041830
 [14]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives
 [15]: https://developers.google.com/docs/devtools/network/reference#filter-by-property
@@ -204,7 +204,7 @@ to cover it in What's New In DevTools (Chrome 81).
 [19]: /docs/devtools/customize#settings
 [20]: https://crbug.com/1050855
 [21]: /web/tools/lighthouse
-[22]: /web/updates/2018/01/devtools#overrides
+[22]: /blog/new-in-devtools-65#overrides
 [23]: https://crbug.com/1016501
 [24]: https://web.dev/long-tasks-devtools/#what-are-long-tasks
 [25]:

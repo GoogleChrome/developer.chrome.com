@@ -124,11 +124,11 @@ your bug or implement your feature request!
 
 Figure 10. **Main Menu** > **Help** > **Report a DevTools issue**.
 
-[1]: /web/updates/2017/04/devtools-release-notes#block-requests
-[2]: /web/updates/2018/01/devtools#overrides
+[1]: /blog/new-in-devtools-59#block-requests
+[2]: /blog/new-in-devtools-65#overrides
 [3]: https://web.dev/render-blocking-resources
-[4]: /web/updates/2017/04/devtools-release-notes#block-requests
-[5]: /web/updates/2018/01/devtools#overrides
+[4]: /blog/new-in-devtools-59#block-requests
+[5]: /blog/new-in-devtools-65#overrides
 [6]: https://devtools.glitch.me/wndt78/multiclient.html
 [7]: https://twitter.com/cjamcl/status/1167602064584671234
 [8]: https://crbug.com/991906
