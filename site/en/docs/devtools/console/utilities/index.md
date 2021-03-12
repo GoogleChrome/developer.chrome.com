@@ -425,6 +425,6 @@ object.
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 [3]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 [4]: /docs/devtools/javascript/breakpoints
-[5]: /docs/devtools/console/reference#console.dir(object)
+[5]: /docs/devtools/console/api/#dir
 [6]: https://developer.mozilla.org/en-US/docs/Web/API/Console
 [7]: /docs/devtools/rendering-tools/js-execution

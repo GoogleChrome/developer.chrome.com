@@ -276,7 +276,7 @@ You can use any of the following workflows to clear the Console:
 - Call `console.clear()` from your webpage's JavaScript.
 - Press <kbd>Control</kbd>+<kbd>L</kbd> while the Console is in focus.
 
-[1]: /docs/devtools/console/get-started
+[1]: /docs/devtools/console/
 [2]: /docs/devtools/console/api
 [3]: /docs/devtools/console/utilities
 [4]: #panel
@@ -290,7 +290,7 @@ You can use any of the following workflows to clear the Console:
 [12]: #xhr
 [13]: #eagereval
 [14]: #autocomplete
-[15]: /docs/devtools/console/get-started#view
+[15]: /docs/devtools/console/#view
 [16]: #settings
 [17]: #xhr
 [18]: #settings
@@ -303,7 +303,7 @@ You can use any of the following workflows to clear the Console:
 [25]: #sidebar
 [26]: #context
 [27]: #settings
-[28]: /docs/devtools/console/get-started#javascript
+[28]: /docs/devtools/console/#javascript
 [29]: /docs/devtools/console/live-expressions
 [30]: #settings
 [31]: #settings

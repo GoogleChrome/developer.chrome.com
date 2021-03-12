@@ -382,15 +382,15 @@ Congratulations, you have completed the tutorial. Click **Dispense Award** to re
 Check out the [Network Reference][12] to discover more DevTools features related to inspecting
 network activity.
 
-[1]: /docs/devtools/network-performance/reference
+[1]: /docs/devtools/network/reference
 [2]: /docs/devtools/speed/get-started
 [3]: https://devtools.glitch.me/network/getstarted.html
 [4]: /docs/devtools/open
 [5]: /docs/devtools/customize/#placement
-[6]: /docs/devtools/network-performance/reference#hide-overview
+[6]: /docs/devtools/network/reference#hide-overview
 [7]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
 [8]: #throttle
-[9]: /web/tools/lighthouse/audits/cache-policy
-[10]: /docs/devtools/network-performance/reference#filter-by-property
-[11]: /docs/devtools/network-performance/reference#filter
-[12]: /docs/devtools/network-performance/reference
+[9]: https://web.dev/uses-long-cache-ttl/
+[10]: /docs/devtools/network/reference#filter-by-property
+[11]: /docs/devtools/network/reference#filter
+[12]: /docs/devtools/network/reference

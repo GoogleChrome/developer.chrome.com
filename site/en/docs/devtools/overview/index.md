@@ -216,9 +216,9 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [27]: /docs/devtools/javascript/reference
 [28]: /web/updates/2018/01/devtools#overrides
 [29]: /docs/devtools/coverage
-[30]: /docs/devtools/network-performance
-[31]: /docs/devtools/network-performance/issues
-[32]: /docs/devtools/network-performance/reference
+[30]: /docs/devtools/network
+[31]: /docs/devtools/network/issues
+[32]: /docs/devtools/network/reference
 [33]: /docs/devtools/speed/get-started
 [34]: /docs/devtools/evaluate-performance
 [35]: /docs/devtools/evaluate-performance/reference

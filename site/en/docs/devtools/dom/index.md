@@ -50,7 +50,7 @@ and investigate that node.
      Now, `<li>Tokyo</li>` is highlighted in the DOM Tree.
 
 Inspecting a node is also the first step towards viewing and changing a node's styles.
-See [Get Started With Viewing And Changing CSS](/web/tools/chrome-devtools/css/).
+See [Get Started With Viewing And Changing CSS](/docs/devtools/css/).
 
 ### Navigate the DOM Tree with a keyboard {: #keynav }
 
@@ -318,16 +318,16 @@ https://github.com/google/WebFundamentals/blob/f9bd5c30d9cee69556ca15daf14fea29f
 
 ## Next steps {: #next }
 
-[shortcuts]: /web/tools/chrome-devtools/shortcuts#elements
+[shortcuts]: /docs/devtools/shortcuts#elements
 
 That covers most of the DOM-related features in DevTools. You can discover the rest of them
 by right-clicking nodes in the DOM Tree and experimenting with the other options that weren't
 covered in this tutorial. See also [Elements panel keyboard shortcuts][shortcuts].
 
-Check out the [Chrome DevTools homepage](/web/tools/chrome-devtools/) to discover everything
+Check out the [Chrome DevTools homepage](/docs/devtools/) to discover everything
 else you can do with DevTools.
 
-See [Community](/web/tools/chrome-devtools/#community) if you want to contact the DevTools team
+See [Community](/docs/devtools/#community) if you want to contact the DevTools team
 or get help from the DevTools community.
 
 ## Appendix: HTML versus the DOM {: #appendix }

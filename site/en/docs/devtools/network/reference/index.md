@@ -670,15 +670,15 @@ to hide it.
 **Figure 39**. Hide Overview, outlined in blue
 
 [1]: #network-conditions
-[2]: /web/progressive-web-apps
+[2]: https://web.dev/progressive-web-apps
 [3]: https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
 [4]: #network-conditions
 [5]: #network-conditions
 [6]: #hide-filters
-[7]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives
-[8]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives
-[9]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives
-[10]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives
+[7]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
+[8]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
+[9]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
+[10]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
 [11]: #hide-filters
 [12]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 [13]: #waterfall
@@ -687,13 +687,13 @@ to hide it.
 [16]: #headers
 [17]: #query-string
 [18]: #query-string
-[19]: /docs/devtools/manage-data/cookies#fields
+[19]: /docs/devtools/storage/cookies/#fields
 [20]: #timing-preview
 [21]: #timing-explanation
-[22]: #timing-breakdown
+[22]: #timing
 [23]: #timing
 [24]: https://en.wikipedia.org/wiki/Proxy_server
 [25]: #uncompressed
 [26]: https://toolbox.googleapps.com/apps/har_analyzer/
-[27]: #filters
+[27]: #filter
 [28]: #overview
