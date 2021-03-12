@@ -230,9 +230,9 @@ with this example of running into [retaining paths and dominators][15].
 Properties and property values of objects have different types and are colored accordingly. Each
 property has one of four types:
 
-- **a: property** — regular property with a name, accessed via the . (dot) operator, or via
+- **a: property**—regular property with a name, accessed via the . (dot) operator, or via
   brackets (`[]`) notation, e.g. `[foo bar]`
-- **0: element** — regular property with a numeric index, accessed via brackets (`[]`) notation
+- **0: element**—regular property with a numeric index, accessed via brackets (`[]`) notation
 - **a: context var** - variable in a function context, accessible by its name from inside a function
   closure;
 - **a: system prop** - property added by the JavaScript VM, not accessible from JavaScript code.
