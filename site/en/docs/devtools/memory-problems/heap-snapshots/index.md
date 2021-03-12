@@ -111,20 +111,20 @@ which are referenced from one with a yellow background.
 
 {% Img src="image/admin/nsY5dgLPRJJIOhADyHyR.jpg", alt="Constructor groups", width="544", height="198" %}
 
-- **(global property)** – intermediate objects between a global object (like 'window') and an object
+- **(global property)**–intermediate objects between a global object (like 'window') and an object
   referenced by it. If an object is created using a constructor Person and is held by a global
   object, the retaining path would look like \[global\] > (global property) > Person. This contrasts
   with the norm, where objects directly reference each other. We have intermediate objects for
   performance reasons. Globals are modified regularly and property access optimizations do a good
   job for non-global objects aren't applicable for globals.
-- **(roots)** – The root entries in the retaining tree view are the entities that have references to
+- **(roots)**–The root entries in the retaining tree view are the entities that have references to
   the selected object. These can also be references created by the engine for its own purposes. The
   engine has caches which reference objects, but all such references are weak and won't prevent an
   object from being collected given that there are no truly strong references.
-- **(closure)** – a count of references to a group of objects through function closures
-- **(array, string, number, regexp)** – a list of object types with properties which reference an
+- **(closure)**–a count of references to a group of objects through function closures
+- **(array, string, number, regexp)**–a list of object types with properties which reference an
   Array, String, Number or regular expression.
-- **(compiled code)** – simply, everything related to compiled code. Script is similar to a function
+- **(compiled code)**–simply, everything related to compiled code. Script is similar to a function
   but corresponds to a `<script>` body. SharedFunctionInfos (SFI) are objects standing between
   functions and compiled code. Functions are usually have a context, while SFIs do not.
 - **HTMLDivElement**, **HTMLAnchorElement**, **DocumentFragment** etc–references to elements or
