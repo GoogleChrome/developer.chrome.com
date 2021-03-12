@@ -260,13 +260,13 @@ Chromium issue: [887173][41]
 [1]: https://crbug.com/1166710
 [2]: https://crbug.com/1175699
 [3]: https://web.dev/vitals/
-[4]: /web/tools/chrome-devtools/command-menu
+[4]: /docs/devtools/command-menu
 [5]: https://web.dev/lcp/
 [6]: https://web.dev/fid/
 [7]: https://web.dev/cls/
 [8]: https://crbug.com/1152089
 [9]: https://crbug.com/1140516
-[10]: /web/android/trusted-web-activity
+[10]: /docs/android/trusted-web-activity
 [11]: #issue-count
 [12]: https://youtu.be/QJlbMfW3jPc
 [13]: https://crbug.com/1147479
@@ -274,7 +274,7 @@ Chromium issue: [887173][41]
 [15]: https://web.dev/trust-tokens/
 [16]: https://crbug.com/1126824
 [17]: https://www.chromestatus.com/feature/5354410980933632
-[18]: /web/tools/chrome-devtools/command-menu
+[18]: /docs/devtools/command-menu
 [19]: https://crbug.com/1073887
 [20]: https://web.dev/progressive-web-apps/
 [21]: https://goo.gle/improved-pwa-offline-detection
@@ -296,5 +296,5 @@ Chromium issue: [887173][41]
 [37]: https://jec.fyi/demo/cds-anchovy
 [38]: #issue-count
 [39]: https://crbug.com/1155460
-[40]: /web/tools/chrome-devtools/accessibility/reference#pane
+[40]: /docs/devtools/accessibility/reference#pane
 [41]: https://crbug.com/887173

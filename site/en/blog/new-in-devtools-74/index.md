@@ -154,11 +154,11 @@ The [Timings section][10] of a Performance recording now marks First Paint.
 Check out [Get Started With Viewing And Changing The DOM][11] for a hands-on tour of DOM-related
 features.
 
-[1]: /web/tools/lighthouse/audits/tap-targets
-[2]: /web/tools/lighthouse
+[1]: https://web.dev/tap-targets
+[2]: https://developers.google.com/web/tools/lighthouse
 [3]: https://web.dev/measure
-[4]: /speed/pagespeed/insights
-[5]: /web/tools/lighthouse#devtools
+[4]: https://developers.google.com/speed/pagespeed/insights
+[5]: https://developers.google.com/web/tools/lighthouse#devtools
 [6]: /docs/devtools/network
 [7]: /docs/devtools/network#filter
 [8]: /docs/devtools/speed/get-started#main

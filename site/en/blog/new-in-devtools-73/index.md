@@ -261,7 +261,7 @@ The **Frames** tab has been renamed to the **Messages** tab. This tab is only av
 See [Chromium issue #802182][13] to report bugs or suggest improvements.
 
 [1]: https://medium.com/frontmen/art-of-debugging-with-chrome-devtools-ab7b5fd8e0b4#a4f3
-[2]: https://alligator.io/js/object-property-shorthand-es6/"
+[2]: https://alligator.io/js/object-property-shorthand-es6/
 [3]: https://crbug.com/700519
 [4]: /blog/new-in-devtools-59#coverage
 [5]: https://pptr.dev/#?product=Puppeteer&version=v1.11.0&show=api-class-coverage

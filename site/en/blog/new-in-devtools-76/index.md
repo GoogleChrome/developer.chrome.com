@@ -170,7 +170,7 @@ Puppeteer and Puppeteer for Firefox. The Firefox announcement happens around 4:0
 [9]: https://crbug.com/601286
 [10]:
   https://medium.com/google-developer-experts/background-fetch-api-get-ready-to-use-it-69cca522cd8f
-[11]: /web/updates/2015/12/background-sync
+[11]: https://developers.google.com/web/updates/2015/12/background-sync
 [12]: https://background-fetch.glitch.me
 [13]: https://twitter.com/webmaxru
 [14]: https://crbug.com/927726

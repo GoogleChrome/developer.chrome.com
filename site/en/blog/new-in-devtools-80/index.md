@@ -158,7 +158,7 @@ Chromium issue [#1004203][14]
 
 [1]: https://crbug.com/1004193
 [2]: http://dwarfstd.org/
-[3]: /web/updates/2019/12/webassembly
+[3]: https://developers.google.com/web/updates/2019/12/webassembly
 [4]: /docs/devtools/network
 [5]: /docs/devtools/network/reference#initiators-dependencies
 [6]: https://crbug.com/842488

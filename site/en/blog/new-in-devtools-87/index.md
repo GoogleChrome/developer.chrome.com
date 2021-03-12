@@ -238,7 +238,7 @@ Chromium issue: [174309][28]
 [16]: /docs/devtools/network/reference#filter-by-property
 [17]: https://crbug.com/1121141
 [18]: https://crbug.com/1104188
-[19]: /web/updates/2018/09/reportingapi
+[19]: https://developers.google.com/web/updates/2018/09/reportingapi
 [20]: https://web.dev/coop-coep/
 [21]: https://crbug.com/1051466
 [22]: https://youtu.be/XLNJYhjA-0c

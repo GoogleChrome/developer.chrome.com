@@ -117,13 +117,13 @@ downloading [Chrome Canary][12].
 [1]: #perf-monitor
 [2]: #console-sidebar
 [3]: #group-similar
-[4]: /web/showcase/2017/bookmyshow
+[4]: https://developers.google.com/web/showcase/2017/bookmyshow
 [5]: /docs/devtools/command-menu/
 [6]: /docs/devtools/evaluate-performance
-[7]: /web/tools/lighthouse#devtools
+[7]: https://developers.google.com/web/tools/lighthouse#devtools
 [8]: /blog/new-in-devtools-62#negative-filters
 [9]: /blog/new-in-devtools-62#url-filters
-[10]: /docs/devtools/console/console-reference#group
+[10]: /docs/devtools/console/api#group
 [11]: /blog/new-in-devtools-65#overrides
 [12]: https://www.google.com/chrome/browser/canary.html
 [13]: /blog/new-in-devtools-59#coverage

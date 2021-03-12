@@ -197,13 +197,13 @@ to cover it in What's New In DevTools (Chrome 81).
 [12]: /blog/new-in-devtools-73#logpoints
 [13]: https://crbug.com/1041830
 [14]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie#Directives
-[15]: https://developers.google.com/docs/devtools/network/reference#filter-by-property
+[15]: /docs/devtools/network/reference#filter-by-property
 [16]: /docs/devtools/command-menu
 [17]: /docs/devtools/customize/placement#menu
 [18]: https://crbug.com/1011679
 [19]: /docs/devtools/customize#settings
 [20]: https://crbug.com/1050855
-[21]: /web/tools/lighthouse
+[21]: https://developers.google.com/web/tools/lighthouse
 [22]: /blog/new-in-devtools-65#overrides
 [23]: https://crbug.com/1016501
 [24]: https://web.dev/long-tasks-devtools/#what-are-long-tasks

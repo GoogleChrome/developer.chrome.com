@@ -478,9 +478,9 @@ Chromium issue: [1121900][50]
 [30]: https://crbug.com/1122507
 [31]: https://web.dev/monitor-total-page-memory-usage
 [32]: https://crbug.com/1139899
-[33]: /web/tools/chrome-devtools/evaluate-performance/reference#record-load
+[33]: /docs/devtools/evaluate-performance/reference#record-load
 [34]: https://crbug.com/1075865
-[35]: /web/tools/chrome-devtools/device-mode#viewport
+[35]: /docs/devtools/device-mode#viewport
 [36]: https://crbug.com/1054281
 [37]: https://pptr.dev/
 [38]: https://chromedevtools.github.io/devtools-protocol/
@@ -488,11 +488,11 @@ Chromium issue: [1121900][50]
 [40]: https://pptr.dev/
 [41]: https://crbug.com/1144127
 [42]: https://crbug.com/1093229
-[43]: /web/updates/2020/11/devtools#flexbox
+[43]: /blog/new-in-devtools-88#flexbox
 [44]: https://crbug.com/1139949
 [45]: https://crbug.com/1137837
 [46]: https://w3c.github.io/silver/guidelines/methods/Method-font-characteristic-contrast.html
 [47]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum
 [48]: https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced
-[49]: /web/tools/chrome-devtools/accessibility/reference#contrast
+[49]: /docs/devtools/accessibility/reference#contrast
 [50]: https://crbug.com/1121900

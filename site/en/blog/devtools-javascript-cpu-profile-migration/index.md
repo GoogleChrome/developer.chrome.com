@@ -71,4 +71,4 @@ And the **Tree (Top Down)** view is available in the **Call Tree** tab:
 
 **Figure 4**. Mapping between Tree view in old workflow (left) and new workflow (right).
 
-[1]: /web/tools/chrome-devtools/ui#main-menu
+[1]: /docs/devtools/ui#main-menu

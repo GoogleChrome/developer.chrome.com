@@ -205,7 +205,7 @@ Starting in Chrome 62, the **Coverage** tab now tells you which code within a fu
 [11]: #coverage
 [12]: /docs/devtools/css/reference#select
 [13]: /docs/devtools/command-menu/
-[14]: /docs/devtools/console#execution-context
+[14]: /docs/devtools/console/reference/#context
 [15]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
 [16]: https://googlechrome.github.io/devtools-samples/whatsnew/m62/cache.html
 [17]: /blog/new-in-devtools-59#coverage

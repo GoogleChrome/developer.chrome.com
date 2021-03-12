@@ -219,7 +219,7 @@ been working on over the past year and the big themes that they're tackling in t
 [7]: #context
 [8]: #network-throttling
 [9]: #async-stacks
-[10]: /web/tools/lighthouse
+[10]: https://developers.google.comhttps://developers.google.com/web/tools/lighthouse
 [11]: /web/progressive-web-apps
 [12]: https://developers.google.com/web/fundamentals/performance
 [13]: https://developers.google.com/web/fundamentals/accessibility

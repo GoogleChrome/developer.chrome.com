@@ -178,7 +178,7 @@ differentiate conditional breakpoints and logpoints.
 Chromium issue [#1041830][30]
 
 [1]: https://drafts.csswg.org/cssom/
-[2]: /web/updates/2019/02/constructable-stylesheets
+[2]: https://developers.google.com/web/updates/2019/02/constructable-stylesheets
 [3]: https://developers.google.com/web/fundamentals/web-components/shadowdom
 [4]: https://crbug.com/946975
 [5]: https://web.dev/lighthouse-whats-new-6.0/
@@ -199,7 +199,7 @@ Chromium issue [#1041830][30]
 [20]: https://crbug.com/1066579
 [21]: https://crbug.com/1073899
 [22]: https://crbug.com/1071432
-[23]: https://developers.google.com/docs/devtools/sources#edit
+[23]: /docs/devtools/sources#edit
 [24]: https://crbug.com/800028
 [25]: https://crbug.com/1082963
 [26]: https://crbug.com/1055875

@@ -132,7 +132,7 @@ Figure 10. **Main Menu** > **Help** > **Report a DevTools issue**.
 [6]: https://devtools.glitch.me/wndt78/multiclient.html
 [7]: https://twitter.com/cjamcl/status/1167602064584671234
 [8]: https://crbug.com/991906
-[9]: /web/updates/2018/06/payment-handler-api
+[9]: https://developers.google.com/web/updates/2018/06/payment-handler-api
 [10]: https://crbug.com/980291
 [11]: https://github.com/GoogleChrome/lighthouse/releases/tag/v5.2.0
 [12]: https://web.dev/fast#optimize-your-third-party-resources

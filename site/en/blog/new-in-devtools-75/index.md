@@ -155,7 +155,7 @@ Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to lear
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/en-US/docs/Web/CSS/filter
 [3]: https://crbug.com/931145
-[4]: /web/ilt/pwa/introduction-to-service-worker
+[4]: https://developers.google.com/web/ilt/pwa/introduction-to-service-worker
 [5]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [6]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 [7]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
@@ -166,7 +166,7 @@ Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to lear
 [12]: https://crbug.com/942503
 [13]: https://crbug.com/943770
 [14]: /docs/devtools/network
-[15]: /web/tools/lighthouse/audits/text-compression
+[15]: https://web.dev/uses-text-compression/
 [16]: /docs/devtools/network/reference#uncompressed
 [17]: https://crbug.com/805429
 [18]: /docs/devtools/javascript/breakpoints#loc

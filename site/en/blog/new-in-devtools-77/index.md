@@ -146,9 +146,9 @@ Figure 7. The new Push Messages and Notifications panes in the Application panel
 [7]: /blog/new-in-devtools-76
 [8]: https://github.com/GoogleChrome/lighthouse/releases/tag/v5.1.0
 [9]: https://developers.google.com/web/fundamentals/design-and-ux/browser-customization#safari
-[10]: /web/tools/lighthouse/audits/budgets
-[11]: /web/updates/2018/05/first-input-delay
-[12]: /web/tools/lighthouse/audits/budgets
+[10]: https://web.dev/use-lighthouse-for-performance-budgets/
+[11]: https://developers.google.com/web/updates/2018/05/first-input-delay
+[12]: https://web.dev/use-lighthouse-for-performance-budgets/
 [13]: https://github.com/GoogleChrome/lighthouse/blob/master/docs/plugins.md
 [14]: https://github.com/GoogleChrome/lighthouse-stack-packs
 [15]: /docs/devtools/customize/dark-theme

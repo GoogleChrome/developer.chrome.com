@@ -205,11 +205,11 @@ lifecycle function. React does this in development mode.
 [9]: #bonus
 [10]: /blog/new-in-devtools-68#eagerevaluation
 [11]: /docs/devtools/css/reference#select
-[12]: /docs/devtools/console/command-line-reference#dom
+[12]: /docs/devtools/console/utilities#dom
 [13]: /docs/devtools/command-menu/
 [14]: /docs/devtools/javascript/breakpoints#conditional-loc
 [15]: https://codemirror.net/
-[16]: https://developers.google.com/docs/devtools/javascript/breakpoints#event-listeners
+[16]: /docs/devtools/javascript/breakpoints#event-listeners
 [17]: https://developer.mozilla.org/en-US/docs/Web/API/AudioContext
 [18]: https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27
 [19]: https://github.com/GoogleChromeLabs/ndb/blob/master/README.md

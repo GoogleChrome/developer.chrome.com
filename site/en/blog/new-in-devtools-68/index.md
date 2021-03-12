@@ -167,8 +167,8 @@ The **Show timestamps** checkbox previously in **Console Settings**
 [10]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
 [11]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 [12]: #eagerevaluation
-[13]: /web/updates/2018/05/lighthouse3
-[14]: /web/updates/2018/05/bigint
+[13]: https://developers.google.com/web/updates/2018/05/lighthouse3
+[14]: https://developers.google.com/web/updates/2018/05/bigint
 [15]: /docs/devtools/customize/#settings
 [16]: /blog/new-in-devtools-59#coverage
 [17]: /blog/new-in-devtools-59#screenshots

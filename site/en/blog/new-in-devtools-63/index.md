@@ -126,8 +126,8 @@ now you can send custom tags:
 [6]: https://crbug.com/129539
 [7]: https://github.com/GoogleChrome/puppeteer
 [8]: https://github.com/cyrus-and/chrome-remote-interface
-[9]: /web/tools/lighthouse#devtools
-[10]: /web/tools/lighthouse
+[9]: https://developers.google.com/web/tools/lighthouse#devtools
+[10]: https://developers.google.com/web/tools/lighthouse
 [11]: https://gauntface.github.io/simple-push-demo/
 [12]: /blog/new-in-devtools-59#coverage
 [13]: /blog/new-in-devtools-59#screenshots

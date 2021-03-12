@@ -232,8 +232,8 @@ each process so that you can see the total work that each process is causing.
 [11]: #site-isolation
 [12]: https://youtu.be/4EdPq9Nw6uI
 [13]: /docs/devtools/shortcuts#command-menu
-[14]: /web/tools/lighthouse/audits/preload
-[15]: /web/updates/2016/02/font-display
+[14]: https://web.dev/uses-rel-preload/
+[15]: https://developers.google.com/web/updates/2016/02/font-display
 [16]: https://www.html5rocks.com/en/tutorials/webperformance/usertiming/
 [17]: https://www.certificate-transparency.org/
 [18]: https://www.chromium.org/Home/chromium-security/site-isolation

@@ -178,12 +178,12 @@ Check out [Command Line Reference][16] for other handy functions that you can ca
 [5]: #picture-in-picture
 [6]: #bonus
 [7]: /blog/new-in-devtools-70#watch
-[8]: /docs/devtools/network-performance/reference#save-as-har
-[9]: /docs/devtools/network-performance/reference#initiators-dependencies
+[8]: /docs/devtools/network/reference#save-as-har
+[9]: /docs/devtools/network/reference#initiators-dependencies
 [10]: https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/HAR/Overview.html
 [11]: /docs/devtools/command-menu/
 [12]: https://github.com/WICG/picture-in-picture
 [13]: /docs/devtools/javascript/breakpoints#event-listeners
-[14]: /docs/devtools/console/command-line-reference#monitorevents
-[15]: /docs/devtools/console/command-line-reference#unmonitorevents
-[16]: /docs/devtools/console/command-line-reference
+[14]: /docs/devtools/console/utilities#monitorevents
+[15]: /docs/devtools/console/utilities#unmonitorevents
+[16]: /docs/devtools/console/utilities
