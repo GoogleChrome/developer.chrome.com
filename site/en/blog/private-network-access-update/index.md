@@ -4,8 +4,8 @@ title: Private Network Access (CORS-RFC1918) updates
 authors:
   - agektmr
   - titouan
-description: TBD
-date: 2021-03-15
+description: Chrome has some updates to share about the standardization of the Private Network Access - formerly known as CORS-RFC1918 - plans to restrict private network resource accesses, and how your websites can align with those changes.
+date: 2021-03-11
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A collection of padlocks.
 ---
@@ -50,8 +50,14 @@ example, a request from a public website (`https://example.com`) to a private
 website (`http://router.local`), or a request from a private website to
 localhost.
 
+<figure>
 {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/nSGfU9xMJxIy6lMjJiMx.png",
-alt="ALT_TEXT_HERE", width="800", height="512" %}
+alt="Relationship between public, private, local networks in Private Network
+Access (CORS-RFC1918). ", width="800", height="512" %}
+  <figcaption>
+    Relationship between public, private, local networks in Private Network Access (CORS-RFC1918).
+  </figcaption>
+</figure>
 
 Learn more at [Feedback wanted: CORS for private networks
 (RFC1918)](https://web.dev/cors-rfc1918-feedback/).
