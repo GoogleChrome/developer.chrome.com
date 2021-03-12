@@ -118,7 +118,7 @@ overview:
   es: 'Visión General'
 ```
 
-If you aren't ready to translate your docs—**yet that's OK!** Just add an `en`
+If you aren't ready to translate your docs yet that's OK!. Just add an `en`
 field for now.
 
 Finally, in your `toc.yml`, add the path to this object:
