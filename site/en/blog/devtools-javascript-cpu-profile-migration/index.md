@@ -5,7 +5,7 @@ authors:
   - kaycebasques
 date: 2016-12-15
 updated: 2019-01-16
-description: "&#34;Record JavaScript CPU Profile&#34; has been changed in Chrome 58."
+description: "Record JavaScript CPU Profile has been changed in Chrome 58."
 ---
 
 In Chrome 58, which is currently Canary, the Timeline panel has been renamed to the Performance

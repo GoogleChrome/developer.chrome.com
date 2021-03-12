@@ -7,7 +7,7 @@ date: 2018-12-14
 #updated: YYYY-MM-DD
 description:
   "Open the Console, create a Live Expression, and set the expression to
-  &#34;document.activeElement&#34;."
+  document.activeElement."
 ---
 
 Suppose that you're testing the keyboard navigation accessibility of a page. When navigating the

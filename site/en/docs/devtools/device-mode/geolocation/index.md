@@ -5,7 +5,7 @@ authors:
   - kaycebasques
 date: 2018-12-18
 #updated: YYYY-MM-DD
-description: "Open the Sensors tab and select coordinates from the &#34;Geolocation&#34; list."
+description: "Open the Sensors tab and select coordinates from the Geolocation list."
 ---
 
 Many websites take advantage of [user location][1] in order to provide a more relevant experience

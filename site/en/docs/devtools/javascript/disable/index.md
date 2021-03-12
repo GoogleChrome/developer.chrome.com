@@ -5,7 +5,7 @@ authors:
   - kaycebasques
 date: 2019-01-31
 #updated: YYYY-MM-DD
-description: "Open the Command Menu and run the &#34;Disable JavaScript&#34; command."
+description: "Open the Command Menu and run the Disable JavaScript command."
 ---
 
 To see how a web page looks and behaves when JavaScript is disabled:

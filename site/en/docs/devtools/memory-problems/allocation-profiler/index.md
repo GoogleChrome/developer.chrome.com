@@ -6,7 +6,7 @@ authors:
 date: 2015-04-13
 #updated: YYYY-MM-DD
 description:
-  "Use the allocation profiler tool to find objects that aren&#39;t being properly garbage
+  "Use the allocation profiler tool to find objects that aren't being properly garbage
   collected, and continue to retain memory."
 ---
 

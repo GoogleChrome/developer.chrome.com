@@ -6,7 +6,7 @@ authors:
 date: 2019-10-15
 #updated: YYYY-MM-DD
 description:
-  "Debug why cookies were blocked, simulate &#34;prefers-color-scheme: dark&#34;, code coverage
+  "Debug why cookies were blocked, simulate prefers-color-scheme: dark, code coverage
   updates, and more."
 ---
 

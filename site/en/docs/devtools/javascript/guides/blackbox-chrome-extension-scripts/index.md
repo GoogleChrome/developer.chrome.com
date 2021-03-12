@@ -5,7 +5,7 @@ authors:
   - kaycebasques
 date: 2018-12-14
 #updated: YYYY-MM-DD
-description: "Enable &#34;Blackbox content scripts&#34; from Settings &gt; Blackboxing."
+description: "Enable Blackbox content scripts from Settings > Blackboxing."
 ---
 
 When using the **Sources** panel of Chrome DevTools to [step through code][1], sometimes you pause

@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2017-06-08
 #updated: YYYY-MM-DD
-description: "Learn how to use Chrome DevTools to view and change a page&#39;s CSS."
+description: "Learn how to use Chrome DevTools to view and change a page's CSS."
 ---
 
 This guide shows you how to discover CSS grids on a page, examining them and debugging layout issues

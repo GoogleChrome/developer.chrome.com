@@ -6,7 +6,7 @@ authors:
 date: 2018-12-14
 #updated: YYYY-MM-DD
 description:
-  "Open the Network conditions tab, disable &#34;Select automatically&#34;, and choose from the list
+  "Open the Network conditions tab, disable Select automatically, and choose from the list
   or enter a custom string."
 ---
 

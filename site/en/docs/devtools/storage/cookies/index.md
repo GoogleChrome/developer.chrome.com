@@ -5,7 +5,7 @@ authors:
   - kaycebasques
 date: 2015-04-13
 #updated: YYYY-MM-DD
-description: "Learn how to view, edit, and delete a page&#39;s HTTP cookies using Chrome DevTools."
+description: "Learn how to view, edit, and delete a page's HTTP cookies using Chrome DevTools."
 ---
 
 [HTTP Cookies][1] are mainly used to manage user sessions, store user personalization preferences,
