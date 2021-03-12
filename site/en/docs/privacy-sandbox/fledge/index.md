@@ -37,15 +37,26 @@ content (contextual targeting) or by using information about the user (first-par
 Traditionally, ad platforms have learned about user interests by tracking their behaviour across 
 sites. We need a way to present users with relevant ads without cross-site tracking.
 
+FLEDGE satisfies remarketing use cases, but is designed so it cannot be used by third parties to 
+track user browsing behaviour. The API enables on-device "auctions" by the browser to choose 
+relevant ads, based on websites the user has previously visited.
+
 With FLEDGE:
 
-* The browser, not the advertiser, holds the information about what the advertiser thinks a person 
-is interested in. 
+* The user's browser, not the advertiser or adtech platform, holds information about what the 
+advertiser thinks a person is interested in. 
+* The browser combines user data with ad buyer/seller data and business logic to conduct an 
+"auction" to select an ad on the user's device, rather than sharing data with a third party.
 * Advertisers can serve ads based on an interest, but cannot combine that interest data with other 
-information about the person—in particular, the identity of the person or the pages they visit.
+information about the person—in particular, the identity of the person or the pages they visit. The 
+advertiser cannot learn about what pages the user viewing on a publisher site.
 * Websites the person visits, and the ad networks those sites use, cannot learn about their 
-visitors' ad interests: ad selection is done on the user's browser.
+visitors' ad interests: ad selection is done on the user's browser. 
 
+In other words, FLEDGE keeps your interests and browsing activity private. For example, if you visit 
+an online store and show an interest in running shoes, and then visit a news site, the advertiser 
+(the running store) doesn't learn what pages you're viewing and the ad publisher (the news site) 
+doesn't learn about your interest in running shoes. 
 
 
 ## How does FLEDGE work?
