@@ -182,7 +182,7 @@ Chromium issue: [1161427][32]
 
 Support for the non-standard `fn.displayName` has been deprecated. Use `fn.name` instead.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/d0T9rqp1ASln0kWXE41w.png", alt="Deprecation of non-standard `fn.displayName` support", width="800", height="473" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oXk5CGKAAPyJIQeecS0I.png", alt="Example usage of displayName", width="800", height="488" %}
 
 Chrome has traditionally supported the non-standard `fn.displayName` property as a way for
 developers to control debug names for functions that show up in `error.stack` and in DevTools stack
@@ -195,7 +195,7 @@ Support for `fn.displayName` has been unreliable and not consistent across brows
 down stack trace collection, a cost that developers always pay no matter whether they actually use
 `fn.displayName` or not.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/aieojilTMlsewNdAaHHh.png", alt="Use `fn.name` to control debug names for functions", width="800", height="455" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/aieojilTMlsewNdAaHHh.png", alt="Example usage of name", width="800", height="455" %}
 
 Chromium issue: [1177685][33]
 
@@ -204,7 +204,7 @@ Chromium issue: [1177685][33]
 The `Don't show Chrome Data Saver warning` setting is removed because [Chrome Data Saver has been
 deprecated][34].
 
-![Deprecated "Don't show Chrome Data Saver warning" settings](/web/updates/images/2021/02/devtools/deprecated.png)
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/d0T9rqp1ASln0kWXE41w.png", alt="Deprecated 'Don't show Chrome Data Saver warning' settings", width="800", height="473" %}
 
 Chromium issue: [1056922][35]
 
