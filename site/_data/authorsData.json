@@ -282,5 +282,39 @@
       "en": "Adriana is a Developer Advocate."
     },
     "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/tIuTcnxqlspZFyklJYHG.jpg"
+  },
+  "agektmr": {
+    "name": {
+      "given": "Eiji",
+      "family": "Kitamura"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "JP",
+    "twitter": "agektmr",
+    "github": "agektmr",
+    "glitch": "agektmr",
+    "email": "agektmr@google.com",
+    "descriptions": {
+      "en": "Eiji is a Developer Advocate."
+    },
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/r7YL1q3afKza6VUTF4QN.jpg"
+  },
+  "titouan": {
+    "name": {
+      "given": "Titouan",
+      "family": "Rigoudy"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Web Platform"
+    },
+    "country": "FR",
+    "descriptions": {
+      "en": "Titouan is a Software Engineer working on the Web Platform."
+    },
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/vdjz5azkSvwbgq3lrg9X.jpeg"
   }
 }
