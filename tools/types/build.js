@@ -125,12 +125,7 @@ async function build() {
       if (parentRawData[key] === selfRawData[key]) {
         continue;
       }
-      if (key === 'release') {
-        // TODO(samthor): Source file has the wrong key.
-        base.version.channel = selfRawData['release'];
-      } else {
-        base.version[key] = selfRawData[key];
-      }
+      base.version[key] = selfRawData[key];
     }
 
     // if (Object.keys(base.version).length) {

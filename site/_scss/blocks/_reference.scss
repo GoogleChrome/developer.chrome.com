@@ -22,3 +22,11 @@
     }
   }
 }
+
+.reference-requirements {
+  > span {
+    &:not(:last-child)::after {
+      content: ' · ';
+    }
+  }
+}

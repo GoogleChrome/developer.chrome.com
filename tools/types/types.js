@@ -114,8 +114,11 @@ function renderNamespaceFromNamespace(source, fullName, reflection) {
   const permissions = [];
   const platforms = [];
 
-  /** @type {VersionData["channel"]} */
+  /** @type {RenderNamespace["channel"]} */
   let channel = 'stable';
+
+  let minManifestVersion = 0;
+  let maxManifestVersion = 0;
 
   const tags = reflection?.comment?.tags ?? [];
   tags.forEach(({tagName, text}) => {
@@ -132,6 +135,12 @@ function renderNamespaceFromNamespace(source, fullName, reflection) {
       case 'chrome-platform':
         platforms.push(text);
         break;
+      case 'chrome-manifest-min':
+        minManifestVersion = +text || 0;
+        break;
+      case 'chrome-manifest-max':
+        maxManifestVersion = +text || 0;
+        break;
     }
   });
 
@@ -145,12 +154,15 @@ function renderNamespaceFromNamespace(source, fullName, reflection) {
     methods: [],
     events: [],
     source,
-
-    // Channel information is probably replaced by the top-level versionData.
-    version: {
-      channel,
-    },
+    channel,
   };
+
+  if (minManifestVersion) {
+    renderNamespace.minManifestVersion = minManifestVersion;
+  }
+  if (maxManifestVersion) {
+    renderNamespace.maxManifestVersion = maxManifestVersion;
+  }
 
   if (permissions.length) {
     renderNamespace.permissions = permissions;

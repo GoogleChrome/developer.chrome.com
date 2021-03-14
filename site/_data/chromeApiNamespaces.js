@@ -29,7 +29,7 @@ const {build} = require('../../tools/types/build.js');
 /**
  * Bump this value if the parser changes, so folks' caches are invalidated.
  */
-const typesRevision = '2021-02-26b';
+const typesRevision = '2021-03-05';
 
 /**
  * Building the JSON types is reasonably expensive. Don't do this often. When deploying to prod,

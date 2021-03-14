@@ -78,17 +78,29 @@
               </div>
             </li>
           {% endif %}
-          {% if namespace.version.channel !== 'stable' or namespace.version.low %}
+          {% if namespace.channel !== 'stable' or namespace.version.low or namespace.maxManifestVersion or namespace.minManifestVersion %}
             <li>
               <div class="code-sections__label">Availability</div>
               <div>
-                {% if namespace.version.channel === 'dev' %}
+                {% if namespace.channel === 'dev' %}
                   Dev channel only.
-                {% elif namespace.version.channel === 'beta' %}
+                {% elif namespace.channel === 'beta' %}
                   Beta and Dev channels only.
                 {% elif namespace.version.low %}
                   Since Chrome {{ namespace.version.low }}.
                   {# No namespace is currently deprecated. #}
+                {% endif %}
+                {% if namespace.maxManifestVersion %}
+                  Manifest V{{ namespace.maxManifestVersion }}
+                  {% if namespace.maxManifestVersion === 2 %}
+                    {# Nothing is actually before MV2. #}
+                    only.
+                  {% else %}
+                    and below.
+                  {% endif %}
+                {% endif %}
+                {% if namespace.minManifestVersion %}
+                  Manifest V{{ namespace.minManifestVersion }} and above.
                 {% endif %}
               </div>
             </li>
