@@ -4,9 +4,12 @@
 
   <div class="toc-container display-block xl:display-none">
     <details class="toc" role="navigation" aria-label="{{ 'i18n.common.toc' | i18n(locale) }}">
-      <summary class="surface display-inline-flex align-center color-secondary-text user-select-none">
-        <div class="type--h6">{{ 'i18n.common.toc' | i18n(locale) }}</div>
-        <span class="toc__icon">{{ icon('arrow-right') }}</span>
+      <summary class="surface color-secondary-text user-select-none">
+        {# This is nested as Safari fails to render `display: inline-flex` on <summary>. #}
+        <div class="display-inline-flex align-center">
+          <div class="type--h6">{{ 'i18n.common.toc' | i18n(locale) }}</div>
+          <span class="toc__icon">{{ icon('arrow-right') }}</span>
+        </div>
       </summary>
       <div class="toc__wrapper">{{ tocContents | safe }}</div>
     </details>

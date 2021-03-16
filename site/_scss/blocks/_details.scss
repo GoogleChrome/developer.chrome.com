@@ -6,9 +6,10 @@
   position: relative;
 }
 
-.details__summary {
+.details > summary {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  list-style: none;
 
   &::-webkit-details-marker {
     display: none;
@@ -23,10 +24,9 @@
     background-color: var(--color-blue-lighter);
     border: 1px solid  var(--color-blue-medium);
   }
-
 }
 
-.details__header {
+.details > summary > .details__header {
   --chevron-size: 2rem;
 
   padding-right: var(--chevron-size);
@@ -56,6 +56,6 @@
   }
 }
 
-.details[open] .details__header > :first-child::after {
+.details[open] > summary > .details__header > :first-child::after {
   transform: rotate(0deg) translateY(-50%);
 }
