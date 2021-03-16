@@ -16,6 +16,8 @@
 }
 
 .toc__icon {
+  // We need this for Safari, otherwise it makes the toc__icon too large.
+  display: inline-flex;
   margin-left: get-size(200);
 
   > svg {
