@@ -164,7 +164,7 @@ backgroundPageConnection.onMessage.addListener(function (message) {
 });
 
 // Relay the tab ID to the background page
-chrome.runtime.sendMessage({
+backgroundPageConnection.postMessage({
     tabId: chrome.devtools.inspectedWindow.tabId,
     scriptToInject: "content_script.js"
 });
