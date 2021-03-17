@@ -123,7 +123,7 @@
     },
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/1604956151251.jpg"
   },
-  "simeonv": {
+  "dotproto": {
     "name": {
       "given": "Simeon",
       "family": "Vincent"
@@ -136,7 +136,6 @@
       "en": "Extensions whisperer"
     },
     "country": "US",
-    "homepage": "https://robdodson.me",
     "twitter": "dotproto",
     "github": "dotproto",
     "glitch": "dotproto",
