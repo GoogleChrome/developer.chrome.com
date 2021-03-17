@@ -52,7 +52,7 @@ See the [Page Redder][2] sample extension:
 
 ```js
 // Called when the user clicks on the browser action.
-chrome.browserAction.onClicked.addListener(function(tab) {
+chrome.action.onClicked.addListener(function(tab) {
   // No tabs or host permissions needed!
   console.log('Turning ' + tab.url + ' red!');
   chrome.tabs.executeScript({
@@ -97,16 +97,16 @@ The following user gestures enable `activeTab`:
 - Executing a keyboard shortcut from the [commands API][13]
 - Accepting a suggestion from the [omnibox API][14]
 
-[1]: /docs/extensions/reference/browserAction
+[1]: /docs/extensions/reference/action/
 [2]: /docs/extensions/mv3/samples#page-redder
-[3]: /docs/extensions/reference/browserAction
+[3]: /docs/extensions/reference/action/
 [4]: /docs/extensions/reference/contextMenus
 [5]: /docs/extensions/reference/tabs#method-executeScript
 [6]: /docs/extensions/reference/tabs#method-insertCSS
 [7]: /docs/extensions/reference/tabs#type-Tab
 [8]: /docs/extensions/reference/tabs#manifest
 [9]: /docs/extensions/reference/webRequest
-[10]: /docs/extensions/reference/browserAction
+[10]: /docs/extensions/reference/action/
 [11]: /docs/extensions/reference/pageAction
 [12]: /docs/extensions/reference/contextMenus
 [13]: /docs/extensions/reference/commands
