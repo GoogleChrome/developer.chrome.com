@@ -223,10 +223,11 @@ rest of the specification in the coming months. Stay tuned for updates!
 ### CORS preflight requests
 
 The second part of Private Network Access is to gate private network requests
-initiated from *secure* contexts with CORS preflight requests. The idea is that
-even when the request was initiated from a secure context, the target server is
-asked to provide an explicit grant to the initiator. The request is only sent if
-the grant is successful.
+initiated from *secure* contexts with 
+[CORS preflight requests](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls). 
+The idea is that even when the request was initiated from a secure context, 
+the target server is asked to provide an explicit grant to the initiator. 
+The request is only sent if the grant is successful.
 
 In short, a CORS preflight request is an HTTP `OPTIONS` request carrying some
 `Access-Control-Request-*` headers indicating the nature of the subsequent
@@ -234,7 +235,7 @@ request. The server can then decide whether or not to grant fine-grained access
 by responding `200 OK` with `Access-Control-Allow-*` headers.
 
 Find more details about this in the
-specification](https://wicg.github.io/private-network-access).
+[specification](https://wicg.github.io/private-network-access).
 
 ### Restrict navigation fetches
 
