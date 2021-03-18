@@ -38,7 +38,6 @@ cases and business models without enabling users to be tracked across sites.
 solutions are in place. ([First party cookies](https://web.dev/samesite-cookies-explained/#what-are-first-party-and-third-party-cookies) 
 are unaffected.)
 
-
 ## What are the Privacy Sandbox proposals?
 
 Chrome and other ecosystem stakeholders have offered more than 30 proposals to date, which can be 
@@ -47,28 +46,50 @@ wide variety of use cases and requirements.
 
 The key proposals are listed below. 
 
-### 🍪 First-party protections
-* [SameSite cookie changes](https://web.dev/samesite-cookies-explained/): secure sites by explicitly 
-marking your cross-site cookies.
-* [First Party Sets](/docs/privacy-sandbox/first-party-sets): Allow related domain names owned by 
-the same entity to declare themselves as belonging to the same first party.
+{% Details %}
+{% DetailsSummary %}
+## Relevant content and ads
+{% endDetailsSummary %}
+* [FLoC](/docs/privacy-sandbox/floc): Ad selection for interest groups: "relevant ads". 
+* [FLEDGE](/docs/privacy-sandbox/fledge): Ad selection for remarketing. Descendant of 
+[TURTLEDOVE](https://github.com/WICG/turtledove).
+{% endDetails %}
 
-### 👤 Audience selection
-* [FLoC](/docs/privacy-sandbox/floc): Ad selection for interest groups ("relevant ads"). 
-* [FLEDGE](/docs/privacy-sandbox/fledge): Ad selection for remarketing. Descendant of TURTLEDOVE.
-
-### 📊 Measurement and attribution
+{% Details %}
+{% DetailsSummary %}
+## Measurement and attribution
+{% endDetailsSummary %}
 * [Event Attribution Reporting](/docs/privacy-sandbox/event-attribution-reporting): Attribute ad 
 clicks and ad views. Previously known as the Event Conversion Measurement API.
 * [Aggregation Reporting](https://github.com/csharrison/aggregate-reporting-api): Measure the reach 
 of a particular ad campaign (how many distinct users saw the ad) by collapsing information across 
 multiple sites into a single, privacy-preserving report.
+{% endDetails %}
 
-### 🚨 Fraud detection
+{% Details %}
+{% DetailsSummary %}
+## First-party protections
+{% endDetailsSummary %}
+* [SameSite cookie changes](https://web.dev/samesite-cookies-explained/): secure sites by explicitly 
+marking your cross-site cookies.
+* [First Party Sets](/docs/privacy-sandbox/first-party-sets): Allow related domain names owned by 
+the same entity to declare themselves as belonging to the same first party.
+{% endDetails %}
+
+
+{% Details %}
+{% DetailsSummary %}
+## Fraud detection
+{% endDetailsSummary %}
 * [Trust Tokens](/docs/privacy-sandbox/trust-tokens): Convey trust in a user from one context to 
 another, in order to help combat fraud and distinguish bots from humans.
+{% endDetails %}
 
-### 👀 Limiting data collection
+
+{% Details %}
+{% DetailsSummary %}
+## Limiting data collection
+{% endDetailsSummary %}
 * [Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8): Allow websites to get information 
 about a user's browser or device, but enable the browser to set a quota on the total amount of 
 information a site can access, so that a user cannot be identified.
@@ -78,13 +99,19 @@ they are not observing IP addresses and [Near-path NAT](https://github.com/bslas
 effectively hiding their IP addresses from a site host. Gnatcatcher also ensures that sites 
 requiring access to IP addresses for legitimate purposes such as abuse prevention can do so, subject 
 to certification and auditing.
+{% endDetails %}
 
-### 🏷 Identity
+
+{% Details %}
+{% DetailsSummary %}
+### Identity
+{% endDetailsSummary %}
 * [WebID](https://github.com/WICG/WebID): Support federated identity (where a user can sign into a 
 website through a third-party service) without sharing the user's email address or other identifying 
 information with the third-party service or the website, unless the user explicitly agrees to do so. 
 WebID enables federated sign-in without the use of redirects, pop-ups or third-party cookies which 
 can be used to identify and track users across sites.
+{% endDetails %}
 
 
 ## What about more complex use cases?
@@ -140,9 +167,6 @@ tab for each explainer.
 * [Federated Learning of Cohorts](https://github.com/jkarlin/floc)
 * [FLEDGE](https://github.com/michaelkleber/turtledove)
 
-[A Potential Privacy Model for the Web](https://github.com/michaelkleber/privacy-model) sets out the 
-core principles underlying the APIs.
-
 ### Articles and videos for web developers
 
 * [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
@@ -153,15 +177,9 @@ core principles underlying the APIs.
 
 ### Principles and concepts behind the proposals
 
+* [A Potential Privacy Model for the Web](https://github.com/michaelkleber/privacy-model) sets out the 
+core principles underlying the APIs.
 * [The Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
 * Privacy Sandbox overview: [Building a more private web](https://www.blog.google/products/chrome/building-a-more-private-web/)
 * Google AI Blog: [Federated Learning: Collaborative Machine Learning without Centralized Training Data](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html)
 * [The future of third-party cookies](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
-
-### Use cases, policies, and requirements
-
-* [Advertising Use Cases](https://github.com/w3c/web-advertising/blob/master/support_for_advertising_use_cases.md)
-* [Mozilla anti-tracking policy](https://wiki.mozilla.org/Security/Anti_tracking_policy)
-* [WebKit tracking prevention policy](https://webkit.org/tracking-prevention-policy/)
-* [Privacy Preserving Ad Click Attribution For the Web](https://webkit.org/blog/8943/privacy-preserving-ad-click-attribution-for-the-web/)
-* [Brave, Fingerprinting, and Privacy Budgets](https://brave.com/brave-fingerprinting-and-privacy-budgets/)
