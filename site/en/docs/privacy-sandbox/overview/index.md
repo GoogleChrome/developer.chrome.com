@@ -46,50 +46,64 @@ wide variety of use cases and requirements.
 
 The key proposals are listed below. 
 
-{% Details %}
-{% DetailsSummary %}
-## Relevant content and ads
-{% endDetailsSummary %}
-* [FLoC](/docs/privacy-sandbox/floc): Ad selection for interest groups: "relevant ads". 
-* [FLEDGE](/docs/privacy-sandbox/fledge): Ad selection for remarketing. Descendant of 
-[TURTLEDOVE](https://github.com/WICG/turtledove).
-{% endDetails %}
 
 {% Details %}
 {% DetailsSummary %}
-## Measurement and attribution
+### Relevant content and ads
 {% endDetailsSummary %}
+
+* [FLoC](/docs/privacy-sandbox/floc): Ad selection for interest groups: "relevant ads". 
+* [FLEDGE](/docs/privacy-sandbox/fledge): Ad selection for remarketing. Descendant of 
+[TURTLEDOVE](https://github.com/WICG/turtledove).
+
+{% endDetails %}
+
+
+{% Details %}
+{% DetailsSummary %}
+### Measurement and attribution
+{% endDetailsSummary %}
+
 * [Event Attribution Reporting](/docs/privacy-sandbox/event-attribution-reporting): Attribute ad 
 clicks and ad views. Previously known as the Event Conversion Measurement API.
 * [Aggregation Reporting](https://github.com/csharrison/aggregate-reporting-api): Measure the reach 
 of a particular ad campaign (how many distinct users saw the ad) by collapsing information across 
 multiple sites into a single, privacy-preserving report.
+
 {% endDetails %}
+
 
 {% Details %}
 {% DetailsSummary %}
-## First-party protections
+### First-party protections
 {% endDetailsSummary %}
+
 * [SameSite cookie changes](https://web.dev/samesite-cookies-explained/): secure sites by explicitly 
 marking your cross-site cookies.
 * [First Party Sets](/docs/privacy-sandbox/first-party-sets): Allow related domain names owned by 
 the same entity to declare themselves as belonging to the same first party.
+
 {% endDetails %}
+
 
 
 {% Details %}
 {% DetailsSummary %}
-## Fraud detection
+### Fraud detection
 {% endDetailsSummary %}
+
 * [Trust Tokens](/docs/privacy-sandbox/trust-tokens): Convey trust in a user from one context to 
 another, in order to help combat fraud and distinguish bots from humans.
+
 {% endDetails %}
+
 
 
 {% Details %}
 {% DetailsSummary %}
-## Limiting data collection
+### Limiting data collection
 {% endDetailsSummary %}
+
 * [Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8): Allow websites to get information 
 about a user's browser or device, but enable the browser to set a quota on the total amount of 
 information a site can access, so that a user cannot be identified.
@@ -99,18 +113,24 @@ they are not observing IP addresses and [Near-path NAT](https://github.com/bslas
 effectively hiding their IP addresses from a site host. Gnatcatcher also ensures that sites 
 requiring access to IP addresses for legitimate purposes such as abuse prevention can do so, subject 
 to certification and auditing.
+
 {% endDetails %}
+
 
 
 {% Details %}
 {% DetailsSummary %}
 ### Identity
 {% endDetailsSummary %}
+
+
 * [WebID](https://github.com/WICG/WebID): Support federated identity (where a user can sign into a 
 website through a third-party service) without sharing the user's email address or other identifying 
 information with the third-party service or the website, unless the user explicitly agrees to do so. 
 WebID enables federated sign-in without the use of redirects, pop-ups or third-party cookies which 
 can be used to identify and track users across sites.
+
+
 {% endDetails %}
 
 
