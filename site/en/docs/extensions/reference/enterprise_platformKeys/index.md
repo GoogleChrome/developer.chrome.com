@@ -50,7 +50,7 @@ function generateAndSign(userToken) {
     publicExponent:
         new Uint8Array([0x01, 0x00, 0x01]),  // Equivalent to 65537
     hash: {
-      name: "SHA-1",
+      name: "SHA-256",
     }
   };
   var cachedKeyPair;
