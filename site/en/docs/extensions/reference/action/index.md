@@ -22,13 +22,13 @@ In order to use the `chrome.action` API, you need to specify a
   "name": "Action Extension",
   "manifest_version": 3,
   "action": {
-    "default_icon": {                    // optional
-      "16": "images/icon16.png",           // optional
-      "24": "images/icon24.png",           // optional
-      "32": "images/icon32.png"            // optional
+    "default_icon": {              // optional
+      "16": "images/icon16.png",   // optional
+      "24": "images/icon24.png",   // optional
+      "32": "images/icon32.png"    // optional
     },
-    "default_title": "Click Me",         // optional
-    "default_popup": "popup.html"        // optional
+    "default_title": "Click Me",   // optional, shown in tooltip
+    "default_popup": "popup.html"  // optional
   },
   ...
 }
