@@ -43,7 +43,7 @@ See the [Page Redder][2] sample extension:
     "scripts": ["background.js"],
     "persistent": false
   },
-  "browser_action": {
+  "action": {
     "default_title": "Make this page red"
   },
   "manifest_version": 3
