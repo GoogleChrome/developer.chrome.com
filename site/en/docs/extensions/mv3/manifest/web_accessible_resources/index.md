@@ -6,6 +6,27 @@ updated: 2018-05-14
 description: Reference documentation for the web_accessible_resources property of manifest.json.
 ---
 
+Web-accessible resources are resources within an extension &mdash; images, icons, or other files
+&mdash; that can be accessed by code on a web page or in another extension.
+
+Access to resources is blocked by default; they are only exposed when specifically declared in the
+`web_accessible_resources` element of the manifest.
+
+{% Aside %}
+Prior to Manifest V2 all resources within an extension could be accessed from any page on the
+web. This allowed a malicious website to [fingerprint][6] the extensions that a user has installed
+or exploit vulnerabilities (for example [XSS bugs][7]) within installed extensions. 
+
+Beginning with Manifest V2, access to those resources was limited to rotect the privacy of users. MV2
+extensions exposed only those resources explicitly designated as web accessible.
+
+Manifest V3 provides finer-grained control, letting you expose individual resources to specified
+pages, domains, or extensions.
+{% endAside %}
+
+
+## Manifest declaration
+
 An array of objects that specify accessiblity of resources. Each object maps a set of extension
 resources to a set of URLs or extensions that can access those resources.
 
@@ -13,19 +34,45 @@ resources to a set of URLs or extensions that can access those resources.
 {
   ...
   "web_accessible_resources": [
-    "images/*.png",
-    "style/double-rainbow.css",
-    "script/double-rainbow.js",
-    "script/main.js",
-    "templates/*"
+    {
+      "resources": [ "test1.png", "test2.png" ],
+      "matches": [ "https://web-accessible-resources-1.glitch.me/*" ]
+    }, {
+      "resources": [ "test3.png", "test4.png" ],
+      "matches": [ "https://web-accessible-resources-2.glitch.me/*" ],
+      "use_dynamic_url": true
+    }
   ],
   ...
 }
 ```
 
-These resources would then be available in a webpage via the URL
+Each element in the array contains these elements:
+<dl>
+  <dt><code>resources</code></dt>
+  <dd>A list of resources to be exposed.</dd>
+  <dt><code>matches</code></dt>
+  <dd>A list of URL match patterns specifying which pages can access the resources.</dd>
+  <dt><code>extensions</code></dt>
+  <dd>A list of extension IDs, specifying which extensions can access the resources.</dd>
+</dl>
+
+<!--
+* A list of resources that the extension will expose
+* Either:
+    * A list of URL match patterns, or
+    * A list of extension IDs
+-->
+
+Each element must include a `"resources"` element and either a `"matches"` or `"extensions"`
+element. This establishes a mapping that exposes the specified resources to web pages matching the
+pattern or to specified extensions.
+
+## Navigability of resources
+
+These resources are available in a webpage via the URL
 `chrome-extension://[PACKAGE ID]/[PATH]`, which can be generated with the [extension.getURL][1]
-method. Allowlisted resources are served with appropriate [CORS][2] headers, so they're available
+method. The resources are served with appropriate [CORS][2] headers, so they're available
 via mechanisms like XHR.
 
 A navigation from a web origin to an extension resource will be blocked unless the resource is
@@ -38,21 +85,11 @@ listed as web accessible. Note these corner cases:
 
 [Content scripts][5] themselves do not need to be allowlisted.
 
-Prior to manifest version 2 all resources within an extension could be accessed from any page on the
-web. This allowed a malicious website to [fingerprint][6] the extensions that a user has installed
-or exploit vulnerabilities (for example [XSS bugs][7]) within installed extensions. Limiting
-availability to only resources which are explicitly intended to be web accessible serves to both
-minimize the available attack surface and protect the privacy of users.
+## Example
 
-## Default Availability {: #availability }
+The [Web Accessible Resources example][war-example] demonstrates the use of this element in a working extension.
 
-Resources inside of packages using [`manifest_version`][8] 2 or above are **blocked by default**,
-and must be allowlisted for use via this property.
-
-Resources inside of packages using `manifest_version` 1 are available by default, but _if_ you do
-set this property, then it will be treated as a complete list of all allowlisted resources.
-Resources not listed will be blocked.
-
+[war-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/web-accessible-resources
 [1]: /docs/extensions/extension#method-getURL
 [2]: https://www.w3.org/TR/cors/
 [3]: /docs/extensions/webRequest
