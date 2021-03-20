@@ -19,10 +19,10 @@ In order to sell virtual goods, you'll need to:
 
 1.  Create a [Google Payments Merchant account][5].
 2.  Create the items you wish to sell via the Developer Dashboard in the Chrome Web Store.
-3.  Include the appropriate [`buy.js`][6] file in your package.
+3.  Include the appropriate [`buy.js`][buy-js] file in your package.
 4.  Wire up the sales flow.
 
-The [`buy.js`][7] file provides four functions:
+The [`buy.js`][buy-js] file provides four functions:
 
 [`google.payments.inapp.getSkuDetails`][8]
 
@@ -75,7 +75,7 @@ API.
 - The Chrome Web Store handles the list of virtual goods available for sale, eliminating the need to
   create, store, or manage JSON Web Tokens.
 - You can get the list of available virtual goods through the `getSkuDetails` function.
-- You must include the [`buy.js`][15] library with your package, and load the library from its
+- You must include the [`buy.js`][buy-js] library with your package, and load the library from its
   location in your package.
 - You must call the `buy()` method with an extra parameter called `parameters`.
 - The UI to process payments is displayed in a separate window, rather than in an iframe.
@@ -354,10 +354,6 @@ Note, this app is not published in the Chrome Web Store to prevent accidental pu
 [3]: https://payments.google.com/merchant/signup
 [4]: https://chrome.google.com/webstore/developer/dashboard
 [5]: #setup-account
-[6]:
-  https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/managed-in-app-payments/scripts/buy.js
-[7]:
-  https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/managed-in-app-payments/scripts/buy.js
 [8]: /docs/webstore/payments-iap#query-items
 [9]: /docs/webstore/webstore_api/inAppProducts/list
 [10]: /docs/webstore/payments-iap#respond-to-purchase
@@ -365,8 +361,6 @@ Note, this app is not published in the Chrome Web Store to prevent accidental pu
 [12]: /docs/webstore/webstore_api/payments/list
 [13]: /docs/webstore/payments-iap#consume-purchase
 [14]: /docs/webstore/pricing
-[15]:
-  https://github.com/GoogleChrome/chrome-app-samples/blob/master/samples/managed-in-app-payments/scripts/buy.js
 [16]: https://payments.google.com/merchant/signup
 [17]: https://chrome.google.com/webstore/developer/dashboard
 [18]: /docs/webstore/payments-iap#testing
@@ -375,3 +369,5 @@ Note, this app is not published in the Chrome Web Store to prevent accidental pu
 [21]: https://payments.google.com/merchant
 [22]: /docs/webstore/webstore/webstore_api/payments/list
 [23]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/managed-in-app-payments
+
+[buy-js]: https://github.com/GoogleChrome/chrome-extensions-samples/blob/main/apps/samples/managed-in-app-payments/scripts/buy.js
