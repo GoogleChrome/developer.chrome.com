@@ -20,15 +20,15 @@ In order to use the `chrome.action` API, you need to specify a
 ```json
 {
   "name": "Action Extension",
-  "manifest_version": 3,
+  ...
   "action": {
-    "default_icon": {
-      "16": "images/icon16.png",
-      "24": "images/icon24.png",
-      "32": "images/icon32.png"
+    "default_icon": {              // optional
+      "16": "images/icon16.png",   // optional
+      "24": "images/icon24.png",   // optional
+      "32": "images/icon32.png"    // optional
     },
-    "default_title": "Click Me",
-    "default_popup": "popup.html"
+    "default_title": "Click Me",   // optional, shown in tooltip
+    "default_popup": "popup.html"  // optional
   },
   ...
 }
@@ -121,9 +121,10 @@ chrome.action.setBadgeBackgroundColor(
 
 ### Popup
 
-An action's popup will be shown when the user clicks on the extension's button
-in the toolbar. The popup can contain any HTML contents you like, and will be
-sized to fit its contents (though it has a maximum size).
+An action's popup will be shown when the user clicks on the extension's action
+button in the toolbar. The popup can contain any HTML contents you like, and
+will be automatically sized to fit its contents. The popup cannot be smaller
+than 25x25 and cannot be larger than 800x600.
 
 The popup is initially set from the `default_popup` property in the `action`
 key in the `manifest.json` file. If present, this should point to a relative

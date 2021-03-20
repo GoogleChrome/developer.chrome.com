@@ -18,14 +18,14 @@ Register your browser action in the [extension manifest][2] like this:
 {
   "name": "My extension",
   ...
-  "browser_action": {
-    "default_icon": {                    // optional
-      "16": "images/icon16.png",           // optional
-      "24": "images/icon24.png",           // optional
-      "32": "images/icon32.png"            // optional
+  "action": {
+    "default_icon": {                // optional
+      "16": "images/icon16.png",     // optional
+      "24": "images/icon24.png",     // optional
+      "32": "images/icon32.png"      // optional
     },
-    "default_title": "Google Mail",      // optional; shown in tooltip
-    "default_popup": "popup.html"        // optional
+    "default_title": "Google Mail",  // optional, shown in tooltip
+    "default_popup": "popup.html"    // optional
   },
   ...
 }
@@ -97,8 +97,9 @@ Set the text and color of the badge using [`browserAction.setBadgeText`][13] and
 
 ### Popup
 
-If a browser action has a popup, the popup appears when the user clicks the icon. The popup can
-contain any HTML contents that you like, and it's automatically sized to fit its contents.
+If a browser action has a popup, the popup appears when the user clicks the extension's icon. The
+popup can contain any HTML contents that you like, and it's automatically sized to fit its contents.
+The popup cannot be smaller than 25x25 and cannot be larger than 800x600.
 
 To add a popup to your browser action, create an HTML file with the popup's contents. Specify the
 HTML file in the **default_popup** field of **browser_action** in the [manifest][15], or call the
