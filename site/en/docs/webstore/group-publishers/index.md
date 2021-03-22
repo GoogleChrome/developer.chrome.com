@@ -4,6 +4,7 @@ title: Set up a group publisher
 date: 2020-06-20
 description: How to share ownership of your Chrome Web Store items with other developers.
 ---
+<!--lint disable code-block-style-->
 
 You can share ownership of your items in Google Chrome Web Store with other developers by setting up
 a *group publisher*. This page explains how group publishers work and how to set one up.
