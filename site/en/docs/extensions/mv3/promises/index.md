@@ -123,6 +123,7 @@ Extensions APIs don't set `chrome.runtime.lastError()` with promises.
 This lets you write async function calls like sync function calls, verifying the failure cases (the
 errors) in the same way.
 
+{% if false %}
 ## Dealing with edge cases
 
 There are a few cases where you might need to take some extra care when converting an existing
@@ -143,5 +144,6 @@ TODO:
 ### Calls with multiple returns
 
 TODO
+{% endif %}
 
 
