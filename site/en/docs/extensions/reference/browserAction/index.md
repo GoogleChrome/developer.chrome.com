@@ -18,11 +18,11 @@ Register your browser action in the [extension manifest][2] like this:
 {
   "name": "My extension",
   ...
-  "browser_action": {
+  "action": {
     "default_icon": {                    // optional
-      "16": "images/icon16.png",           // optional
-      "24": "images/icon24.png",           // optional
-      "32": "images/icon32.png"            // optional
+      "16": "images/icon16.png",         // optional
+      "24": "images/icon24.png",         // optional
+      "32": "images/icon32.png"          // optional
     },
     "default_title": "Google Mail",      // optional; shown in tooltip
     "default_popup": "popup.html"        // optional

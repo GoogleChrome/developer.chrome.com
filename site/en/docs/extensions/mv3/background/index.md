@@ -8,9 +8,8 @@ description: How to respond to browser triggers (events) from a Chrome Extension
 
 Extensions are event-based programs used to modify or enhance the Chrome browsing experience. Events
 are browser triggers, such as navigating to a new page, removing a bookmark, or closing a tab.
-Extensions monitor these events using scripts in their background
-[service worker](/docs/extensions/mv3/migrating_to_service_workers), which then react
-with specified instructions.
+Extensions monitor these events using scripts in their background [service worker][sw-migration],
+which then react with specified instructions.
 
 A background service worker is loaded when it is needed, and unloaded when it goes idle. Some examples of
 events include:
@@ -209,3 +208,5 @@ allow for as much cleanup as may be needed and will not help in case of a crash.
 [14]: /docs/extensions/reference/runtime#property-Port-disconnect
 [15]: /docs/extensions/reference/runtime#event-onSuspend
 [16]: /docs/extensions/reference/runtime#event-onSuspend
+
+[sw-migration]: /docs/extensions/mv3/migrating_to_service_workers
