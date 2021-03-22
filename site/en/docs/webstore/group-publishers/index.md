@@ -5,21 +5,25 @@ date: 2020-06-20
 description: How to share ownership of your Chrome Web Store items with other developers.
 ---
 
-You can share ownership of your items in Google Chrome Web Store with other developers by setting up group publishing.
-
-This guide tells you how to set up group publishing.
+You can share ownership of your items in Google Chrome Web Store with other developers by setting up
+*group publishing*. This guide tells you how to set up and use a group publisher.
 
 ## About group publishers
 
-Use a group publisher to establish an entity that owns Chrome Web Store items, so that publishing isn't tied to any individual developer. Consider how this differs from the more basic individual publisher role.
+Use a group publisher to establish an entity that owns Chrome Web Store items, so that publishing
+isn't tied to any individual developer. Consider how this differs from the more basic individual
+publisher role.
 
-**Individual publisher** When an individual developer acts as a publisher of an item, only that developer can upload and publish updates to the item. The following diagram describes this scenario:
+**Individual publisher** When an individual developer acts as a publisher of an item, only that
+developer can upload and publish updates to the item. The following diagram describes this scenario:
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/VCMoTUiD0xFT5pZVj3kO.svg", alt="ALT_TEXT_HERE", width="800", height="145" %}
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/VCMoTUiD0xFT5pZVj3kO.svg", alt="Diagram of individual
+publishing process", width="800", height="145" %}
 
 **Group publisher** By setting up a *group publisher*, a Google Group associates a number of individuals developers into a composite entity. Any Chrome Web Store developer who belongs to the group can publish updates to the item, as depicted in the following diagram:
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/pgzFlq6rxiKFQ5NjYlBi.svg", alt="ALT_TEXT_HERE", width="800", height="395" %}
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/pgzFlq6rxiKFQ5NjYlBi.svg", alt="Diagram of group
+publishing process", width="800", height="395" %}
 
 Group publishers provide a number of benefits for organizations and development teams:
 
@@ -41,10 +45,10 @@ Keep these important notes in mind:
   remaining group member) can delete the group publisher, unlinking the Google 
   Group from the Chrome Web Store.
 
-    <p class="warning">
+    {% Aside "caution" %}
     Deleting the group publisher and the Google Group does not restore your
-  lifetime quota of one group publisher activation.
-    </p>
+    lifetime quota of one group publisher activation.
+    {% endAside %}
 
 * You can be a *member* of any number of group publishers.
 
@@ -59,19 +63,22 @@ To create a group publisher, follow these steps:
 
 1. Scroll down to the **Google group publishing** field:
 
-    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/ozixwtnU0bikOAzhBaPM.png", alt="ALT_TEXT_HERE", width="800", height="291" %}
+    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/ozixwtnU0bikOAzhBaPM.png", alt="Screenshot of the
+    Google group publishing field", width="800", height="291" %}
 
 1. Select the Google Group that you want to associate with the new group
 publisher, then click **Convert to group publisher**.
 
 1. Make sure that the Google Group has mail turned on, as shown below:
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/TU0AD2DYks5nPZGNWGLb.png", alt="ALT_TEXT_HERE", width="800", height="104" %}
+    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/TU0AD2DYks5nPZGNWGLb.png", alt="Screenshot of Allow
+    posting by email option", width="800", height="104" %}
 
 1. Make sure that the Google Group doesn't allow anyone to join without being
 validated. Use either "Only invited users" or "Anyone can ask", as shown below:
 
-    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/LV2itIZXoZTLdgetsUwz.png", alt="ALT_TEXT_HERE", width="800", height="211" %}
+    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/LV2itIZXoZTLdgetsUwz.png", alt="Screenshot of
+    selecting the only-invited-users option", width="800", height="211" %}
 
 These steps create a new group publisher account. The Google Group you selected is linked to this new publisher account, and the group email is the new group publisher account's email.
 
@@ -80,7 +87,18 @@ These steps create a new group publisher account. The Google Group you selected 
 Your dashboard page will show the new group publisher account and the linked
 Google Group. You can [add or remove developers](https://groups.google.com/).
 
-**Any Chrome Web Store developer who is a member of the linked group can act on behalf of the new publisher account**. For example, they can edit items, publish items, and edit the publisher's display name.
+{% Aside %}
+Any Chrome Web Store developer who is a member of the linked group can act on behalf of the new
+publisher account. For example, they can edit items, publish items, and edit the publisher's display
+name.
+{% endAside %}
+
+To maintain security over your items, we recommend that you manage your group in carefully:
+
+* Create a Google Group for exclusive use as the group publisher; don't use an existing group that
+  you also use for other purposes.
+* Keep the group private using the "Only invited users" option.
+* Minimize the number of members of the group.
 
 ## Publishing using a group publisher
 
@@ -115,7 +133,8 @@ account, then transfer the item as described below:
 1. Click the "..." menu in the upper corner, then select **Transfer to group publisher**. The
 following dialog appears:
 
-    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/xMqFS3lPkdW5NWTiO4gJ.png", alt="ALT_TEXT_HERE", width="800", height="506" %}
+    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/xMqFS3lPkdW5NWTiO4gJ.png", alt="Screenshot of
+    transfer to group publisher dialog", width="800", height="506" %}
 
 1. Choose carefully (because this is a permanent change) the group publisher you want to transfer
 the item to.
