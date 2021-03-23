@@ -227,7 +227,7 @@ try it yourself.
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 87.
 
-* [What's new in Chrome DevTools (87)](https://developers.google.com/web/updates/2020/10/devtools)
+* [What's new in Chrome DevTools (87)](/blog/new-in-devtools-87)
 * [Chrome 87 deprecations & removals](https://developers.google.com/web/updates/2020/10/chrome-87-deps-rems)
 * [ChromeStatus.com updates for Chrome 87](https://www.chromestatus.com/features#milestone%3D87)
 * [What's new in JavaScript in Chrome 87](https://v8.dev/blog/v8-release-87)

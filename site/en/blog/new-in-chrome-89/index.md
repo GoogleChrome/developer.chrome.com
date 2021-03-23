@@ -190,7 +190,7 @@ Play Store for Chrome OS, you can sign up for the
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 89.
 
-* [What's new in Chrome DevTools (89)](https://developers.google.com/web/updates/2021/01/devtools)
+* [What's new in Chrome DevTools (89)](/blog/new-in-devtools-89)
 * [Chrome 89 deprecations & removals](/blog/deps-rems-89/)
 * [ChromeStatus.com updates for Chrome 88](https://www.chromestatus.com/features#milestone%3D89)
 * [What's new in JavaScript in Chrome 88](https://v8.dev/blog/v8-release-89)

@@ -62,6 +62,61 @@ redirects:
 - from: /chrome/apps/
   to: /docs/apps/about_apps
 
+# DevTools redirects
+
+- from: /docs/devtools/network/resource-loading/
+  to: /docs/devtools/network/reference/
+
+- from: /docs/devtools/device-mode/device-input-and-sensors/
+  to: /docs/devtools/device-mode/
+
+- from: /docs/devtools/device-mode/emulate-mobile-viewports/
+  to: /docs/devtools/device-mode/
+
+- from: /docs/devtools/console/console-write/
+  to: /docs/devtools/console/api/
+
+- from: /docs/devtools/console/track-exceptions/
+  to: /docs/devtools/console/api/
+
+- from: /docs/devtools/console/track-executions/
+  to: /docs/devtools/console/api/
+
+- from: /docs/devtools/console/events/
+  to: /docs/devtools/console/utilities/
+
+- from: /docs/devtools/console/expressions/
+  to: /docs/devtools/console/javascript/
+
+- from: /docs/devtools/evaluate-performance/timeline-tool/
+  to: /docs/devtools/evaluate-performance/reference/
+
+- from: /docs/devtools/inspect-styles/edit-styles/
+  to: /docs/devtools/css/reference/
+
+- from: /docs/devtools/javascript/pretty-print/
+  to: /docs/devtools/javascript/reference/#format
+
+- from: /docs/devtools/manage-data/local-storage/
+  to: /docs/devtools/#storage
+
+- from: /docs/devtools/network/network-conditions/
+  to: /docs/devtools/network/reference/
+
+- from: /docs/devtools/network/understanding-resource-timing/
+  to: /docs/devtools/network/reference/#timing
+
+- from: /docs/devtools/rendering-tools/forced-synchronous-layouts/
+  to: /docs/devtools/evaluate-performance/
+
+- from: /docs/devtools/rendering-tools/js-execution/
+  to: /docs/devtools/evaluate-performance/
+
+- from: /docs/devtools/rendering-tools/
+  to: /docs/devtools/evaluate-performance/
+
+# TODO(kaycebasques): Update these old DevTools redirects
+
 - from: /devtools/
   to: https://developers.google.com/web/tools/chrome-devtools
 
