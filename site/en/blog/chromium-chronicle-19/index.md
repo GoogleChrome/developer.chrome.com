@@ -40,7 +40,7 @@ of methods. Navigate directly to definitions from the source.
 
 {% Column %}
 Use <a href="https://www.jetbrains.com/help/clion/searching-everywhere.html">Global Search</a>
-to search across all files and symbols in Chrome OS by tapping the *Shift* key
+to search across all files and symbols in Chrome OS by tapping the **Shift** key
 twice.
 {% endColumn %}
 
