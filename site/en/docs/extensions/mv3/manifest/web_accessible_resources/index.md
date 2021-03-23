@@ -49,7 +49,7 @@ extension resources to an array of URLs and/or extension IDs that can access tho
 }
 ```
 
-Each element in the array contains these elements:
+Each object in the array contains these properties:
 <dl>
   <dt><code>resources</code></dt>
   <dd>A list of resources to be exposed.</dd>
