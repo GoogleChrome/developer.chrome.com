@@ -55,7 +55,7 @@ See the [Page Redder][2] sample extension:
 chrome.browserAction.onClicked.addListener(function(tab) {
   // No tabs or host permissions needed!
   console.log('Turning ' + tab.url + ' red!');
-  chrome.tabs.executeScript({
+  chrome.scripting.executeScript({
     code: 'document.body.style.backgroundColor="red"'
   });
 });
@@ -81,7 +81,7 @@ navigated or is closed.
 
 While the `activeTab` permission is enabled for a tab, an extension can:
 
-- Call [`tabs.executeScript`][5] or [`tabs.insertCSS`][6] on that tab.
+- Call [`tabs.insertCSS`][6] on that tab.
 - Get the URL, title, and favicon for that tab via an API that returns a [`tabs.Tab`][7] object
   (essentially, `activeTab` grants the [`tabs`][8] permission temporarily).
 - Intercept network requests in the tab to the tab's main frame origin using the [webRequest][9]
@@ -101,7 +101,6 @@ The following user gestures enable `activeTab`:
 [2]: /docs/extensions/mv3/samples#page-redder
 [3]: /docs/extensions/reference/browserAction
 [4]: /docs/extensions/reference/contextMenus
-[5]: /docs/extensions/reference/tabs#method-executeScript
 [6]: /docs/extensions/reference/tabs#method-insertCSS
 [7]: /docs/extensions/reference/tabs#type-Tab
 [8]: /docs/extensions/reference/tabs#manifest

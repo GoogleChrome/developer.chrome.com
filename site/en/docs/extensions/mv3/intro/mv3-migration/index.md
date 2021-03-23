@@ -268,14 +268,21 @@ executes remotely hosted scripts, injects code strings into pages, or evals
 strings at runtime, you'll need to update your code execution strategies when
 migrating to MV3.
 
+{% Aside %}
+With Manifest V3 the executeScript() method also moves to a different API.
+
+* **MV2:**&emsp;[chrome.tabs.executeScript()](/docs/extensions/reference/tabs/#method-executeScript)
+* **MV3:**&emsp;[chrome.scripting.executeScript()](/docs/extensions/reference/scripting/#method-executeScript).
+
+If you use executeScript() anywhere in your code, you'll need to update that call to use the new API.
+{% endAside %}
+
 
 ### Remotely hosted code  {: #remotely-hosted-code }
 
 _Remotely hosted code_ refers to any code that is not included in an
 extension's package as a loadable resource. For example, both of the following
 are considered remotely hosted code:
-
-
 
 *   JavaScript files pulled from a remote server
 *   a code string passed into eval at runtime

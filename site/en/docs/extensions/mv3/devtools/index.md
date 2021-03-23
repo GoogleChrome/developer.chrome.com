@@ -138,10 +138,10 @@ components of a DevTools extension.
 
 ### Injecting a content script {: #injecting }
 
-The DevTools page can't call [`tabs.executeScript`][17] directly. To inject a content script from
+The DevTools page can't call [`scripting.executeScript`][17] directly. To inject a content script from
 the DevTools page, you must retrieve the ID of the inspected window's tab using the
 [`inspectedWindow.tabId`][18] property and send a message to the background page. From the
-background page, call [`tabs.executeScript`][19] to inject the script.
+background page, call [`scripting.executeScript`][19] to inject the script.
 
 {% Aside %}
 
@@ -178,7 +178,7 @@ chrome.runtime.onConnect.addListener(function(devToolsConnection) {
     // assign the listener function to a variable so we can remove it later
     var devToolsListener = function(message, sender, sendResponse) {
         // Inject a content script into the identified tab
-        chrome.tabs.executeScript(message.tabId,
+        chrome.scripting.executeScript(message.tabId,
             { file: message.scriptToInject });
     }
     // add the listener
@@ -219,7 +219,7 @@ Once the context script context exists, you can use this option to inject additi
 scripts.
 
 The `eval` method is powerful when used in the right context and dangerous when used
-inappropriately. Use the [`tabs.executeScript`][24] method if you don't need access to the
+inappropriately. Use the [`scripting.executeScript`][24] method if you don't need access to the
 JavaScript context of the inspected page. For detailed cautions and a comparison of the two methods,
 see [`inspectedWindow`][25].
 
@@ -472,20 +472,20 @@ You can find examples that use DevTools APIs in [Samples][46].
 [15]: /docs/extensions/mv3/devtools.panels#method-ExtensionSidebarPane-setObject
 [16]:
   /extensions/devtools.panels#method-ExtensionSidebarPane-setExpression
-[17]: /docs/extensions/tabs#method-executeScript
+[17]: /docs/extensions/scripting#method-executeScript
 [18]: /docs/extensions/mv3/devtools.inspectedWindow#property-tabId
-[19]: /docs/extensions/tabs#method-executeScript
+[19]: /docs/extensions/scripting#method-executeScript
 [20]: #selected-element
 [21]: /docs/extensions/mv3/devtools.inspectedWindow#method-eval
 [22]: /docs/devtools/docs/commandline-api
 [23]:
   https://github.com/RedRibbon/SOAK/blob/ffdfad68ffb6051fa2d4e9db0219b3d234ac1ae8/pages/devtools.js#L6-L8
-[24]: /docs/extensions/tabs#method-executeScript
+[24]: /docs/extensions/scripting#method-executeScript
 [25]: /docs/extensions/mv3/devtools.inspectedWindow
 [26]: /docs/extensions/mv3/devtools.inspectedWindow#method-eval
 [27]: /docs/extensions/mv3/devtools.inspectedWindow#method-eval
 [28]: /docs/extensions/reference/devtools_panels#event-ExtensionPanel-onShown
-[29]: /docs/extensions/tabs#method-sendMessage
+[29]: /docs/extensions/scripting#method-sendMessage
 [30]: #injecting
 [31]: /docs/extensions/mv3/devtools.inspectedWindow#method-eval
 [32]: /docs/extensions/runtime#method-sendMessage

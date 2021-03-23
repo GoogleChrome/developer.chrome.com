@@ -66,7 +66,8 @@ still use the blocking version of `chrome.webRequest`.
 
 **Are you executing remote code or arbitrary strings?**
 <br/>
-*You can no longer [execute external logic](/docs/extensions/mv3/intro/mv3-migration#remotely-hosted-code) using `chrome.tabs.executeScript({code: '...'})`, `eval()`, and `new Function()`.*
+*You can no longer [execute external
+logic](/docs/extensions/mv3/intro/mv3-migration#remotely-hosted-code) using `chrome.scripting.executeScript({code: '...'})`, `eval()`, and `new Function()`.*
 
 - Move all external code (JS, Wasm, CSS) into your extension bundle.
 - Update script and style references to load resources from the extension bundle.
