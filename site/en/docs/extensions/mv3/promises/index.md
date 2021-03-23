@@ -159,7 +159,6 @@ execution).  The extension would look at the last error like this:
 
 ```js
 chrome.tabs.create({...}, (result) => {
-
   if (chrome.runtime.lastError) {
     // Handle last error
   }
