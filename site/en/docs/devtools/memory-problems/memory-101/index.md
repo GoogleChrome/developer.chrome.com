@@ -123,6 +123,8 @@ In the example below, node `#3` is the dominator of `#10`, but `#7` also exists 
 from GC to `#10`. Therefore, an object B is a dominator of an object A if B exists in every simple
 path from the root to the object A.
 
+{# TODO: This is a huge gif (1.7mb). imgix can convert it to mp4/webp. #}
+
 {% Img src="image/admin/zh4nucauCn5WkDElv9MZ.gif", alt="Animated dominator illustration", width="798", height="664" %}
 
 ## V8 specifics {: #v8_specifics }

@@ -8,7 +8,6 @@
     - url: /docs/devtools/css/animations/
     - url: /docs/devtools/css/grid/
     - url: /docs/devtools/css/print-preview/
-    - url: /docs/devtools/coverage/
 - url: /docs/devtools/dom/
 - title: i18n.docs.devtools.console
   sections:
@@ -40,12 +39,10 @@
     - url: /docs/devtools/device-mode/override-user-agent/
     - url: /docs/devtools/device-mode/geolocation/
     - url: /docs/devtools/device-mode/orientation/
-- url: /docs/devtools/dom/
 - title: i18n.docs.devtools.javascript
   sections:
     - url: /docs/devtools/javascript/
     - url: /docs/devtools/javascript/breakpoints/
-    - url: /docs/devtools/coverage/
     - url: /docs/devtools/javascript/reference/
     - url: /docs/devtools/javascript/snippets/
     - url: /docs/devtools/javascript/sources/
@@ -71,10 +68,10 @@
 - title: i18n.docs.devtools.memory
   sections:
     - url: /docs/devtools/memory-problems/
-    - url: /docs/devtools/memory-problems/memory-terminology/
+    - url: /docs/devtools/memory-problems/memory-101/
     - url: /docs/devtools/memory-problems/heap-snapshots/
     - url: /docs/devtools/memory-problems/allocation-profiler/
-- url: /docs/devtools/media/
+- url: /docs/devtools/media-panel/
 - url: /docs/devtools/webauthn/
 - url: /docs/devtools/workspaces/
 - url: /docs/devtools/progressive-web-apps/
