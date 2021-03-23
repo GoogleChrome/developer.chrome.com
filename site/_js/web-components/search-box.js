@@ -445,7 +445,6 @@ export class SearchBox extends BaseElement {
           @keydown="${this.onKeyDown}"
           aria-label="${this.placeholder}"
           aria-autocomplete="list"
-          aria-controls="search-box__results"
         />
       </div>
       ${this.renderResults()}
