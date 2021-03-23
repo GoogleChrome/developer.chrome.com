@@ -69,10 +69,79 @@ One way to understand how you can use promises in extensions APIs is to compare 
 fragments, one using a callback and one using a promise. The following example shows this
 comparison:
 
-```
-Callback/Promise
-Comparison code Fragment
-Goes here
+```js
+/*---------------------------------\
+| Standard callback implementation |
+\---------------------------------*/
+
+function openTabOnRight(onComplete) {
+  chrome.tabs.query(queryOptions, function(tabs) {
+    if (chrome.runtime.lastError) {
+      onComplete({error: chrome.runtime.lastError});
+      return;
+    }
+
+    if (!tabs.length) {
+      onComplete();
+      return;
+    };
+
+    chrome.tabs.create({
+      url: 'https://example.com',
+      index: tab[0].index + 1,
+    }, function(tab) {
+      if (chrome.runtime.lastError) {
+        onComplete({error: chrome.runtime.lastError});
+      }
+
+      console.log('tab created', tab);
+      onComplete(tab);
+    });
+  });
+}
+
+/*-----------------------\
+| Promise implementation |
+\-----------------------*/
+
+function openTabOnRight() {
+  // Errors are automatically propagated down the promise chain
+  return chrome.tabs.query(queryOptions)
+    .then((tabs) => {
+      if (!tabs.length) return;
+
+      return chrome.tabs.create({
+        url: 'https://example.com',
+        index: tab[0].index + 1,
+      });
+    })
+    .then(tab => {
+      if (!tab) return;
+
+      console.log('tab created', tab);
+      return tab;
+    });
+}
+
+/*---------------------------\
+| Async/await implementation |
+\---------------------------*/
+
+async function openTabOnRight() {
+  // When not wrapped in try/catch, errors thrown in an async
+  // function will propagate down the promise chain
+  let tabs = await chrome.tabs.query(queryOptions);
+
+  if (!tabs.length) return;
+  let tab = await chrome.tabs.create({
+    url: 'https://example.com',
+    index: tab[0].index + 1,
+  });
+
+  if (!tab) return;
+  console.log('tab created', tab);
+  return tab;
+}
 ```
 
 <!-- notes here about the code fragments -->
@@ -142,4 +211,3 @@ TODO:
 
 TODO
 {% endif %}
-
