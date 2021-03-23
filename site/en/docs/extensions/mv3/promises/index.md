@@ -20,10 +20,16 @@ date: 2021-03-26
 Many extension API methods support promises.  This document explains how to use promises when
 calling these methods.
 
+{% Aside "key-term" %}
+A *promise* is a JavaScript object that represents the eventual outcome of an asynchronous
+operation. For more about promises and their use, see the MDN documentation on
+[using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).
+{% endAside %}
+
 ## Introduction
 
 Promises were introduced into Chrome not long after they were included in the ES6 specification.
-They are an important feature of the modern JavaScript idiom, providing several benefits, such as:
+They are an important feature of modern JavaScript, providing several benefits, such as:
 
 * Streamlined error handling
 * Coding in a synchronous style for invoking asynchronous functions
@@ -61,18 +67,20 @@ should consider using promises in situations such as the following:
 * Where error handling would be too difficult using callbacks.
 * When you want a simpler way to invoke a number of concurrent methods and gather the results into a single thread of code.
 
-* When you can’t
-
-### Converting a callback to a promise
+### Converting a callback to a promise {: #compare-to-callback}
 
 One way to understand how you can use promises in extensions APIs is to compare two equivalent code
 fragments, one using a callback and one using a promise. The following example shows this
 comparison:
 
+<!--
+// --- Standard callback implementation ---
+// --- Promise implementation ---
+-->
+
+#### Standard callback implementation
+
 ```js
-/*---------------------------------\
-| Standard callback implementation |
-\---------------------------------*/
 
 function openTabOnRight(onComplete) {
   chrome.tabs.query(queryOptions, function(tabs) {
@@ -99,11 +107,11 @@ function openTabOnRight(onComplete) {
     });
   });
 }
+```
 
-/*-----------------------\
-| Promise implementation |
-\-----------------------*/
+#### Promise implementation
 
+```js
 function openTabOnRight() {
   // Errors are automatically propagated down the promise chain
   return chrome.tabs.query(queryOptions)
@@ -122,27 +130,8 @@ function openTabOnRight() {
       return tab;
     });
 }
-
-/*---------------------------\
-| Async/await implementation |
-\---------------------------*/
-
-async function openTabOnRight() {
-  // When not wrapped in try/catch, errors thrown in an async
-  // function will propagate down the promise chain
-  let tabs = await chrome.tabs.query(queryOptions);
-
-  if (!tabs.length) return;
-  let tab = await chrome.tabs.create({
-    url: 'https://example.com',
-    index: tab[0].index + 1,
-  });
-
-  if (!tab) return;
-  console.log('tab created', tab);
-  return tab;
-}
 ```
+
 
 <!-- notes here about the code fragments -->
 
@@ -189,25 +178,33 @@ Extensions APIs don't set `chrome.runtime.lastError()` with promises.
 This lets you write async function calls like sync function calls, verifying the failure cases (the
 errors) in the same way.
 
-{% if false %}
-## Dealing with edge cases
+### Using async/await
 
-There are a few cases where you might need to take some extra care when converting an existing
-callback-based method call to use promises. These cases include the following:
+JavaScript provides async/await as syntactic sugar on top of promises, letting you code in a more
+imperative style. The following example shows how to implement the [example shown
+earlier](#compare-to-callback) using async/await:
 
-* Methods with multiple parameters
-* Methods with multiple returns (a meaningful return value and also data returned via a callback)
 
-The following sections address these cases.
+```js
+// Async/await implementation
 
-### Calls with multiple parameters
+async function openTabOnRight() {
+  // When not wrapped in try/catch, errors thrown in an async
+  // function will propagate down the promise chain
+  let tabs = await chrome.tabs.query(queryOptions);
 
-TODO:
+  if (!tabs.length) return;
+  let tab = await chrome.tabs.create({
+    url: 'https://example.com',
+    index: tab[0].index + 1,
+  });
 
-* promises take just one
-* bundle into an object
+  if (!tab) return;
+  console.log('tab created', tab);
+  return tab;
+}
+```
 
-### Calls with multiple returns
-
-TODO
-{% endif %}
+{% Aside %}
+Note that `await` is only valid in async functions and the top-level bodies of modules.
+{% endAside %}
