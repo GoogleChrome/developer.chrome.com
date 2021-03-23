@@ -29,8 +29,8 @@ pages, domains, or extensions.
 
 ## Manifest declaration
 
-An array of objects that specify accessiblity of resources. Each object maps a set of extension
-resources to a set of URLs or extensions that can access those resources.
+An array of objects that declare resource access rules. Each object maps an array of
+extension resources to an array of URLs and/or extension IDs that can access those resources.
 
 ```json
 {
