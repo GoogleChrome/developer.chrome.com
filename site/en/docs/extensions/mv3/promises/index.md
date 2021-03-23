@@ -157,7 +157,7 @@ chrome.tabs.create({...}, (result) => {
 Promises are designed to deliver asynchronous results, both success and failure.  A failure in a
 promise (a promise rejection) is handled differently.  It might look like this:
 
-```
+```js
 chrome.tabs.create({...})
   .then((result) => {
     // success case
