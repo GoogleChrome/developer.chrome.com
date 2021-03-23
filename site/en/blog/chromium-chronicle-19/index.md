@@ -15,7 +15,11 @@ tags:
 **Episode 19:** by Tom Hughes in Mountain View, CA (March, 2021)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
-When dealing with large codebases, it's useful to have the code indexed, so you can navigate across symbols. For Googlers, CodeSearch works for Google3 and Chromium, but doesn't yet support Chrome OS, and isn't available to non-Googlers. Don't despair, you can use the CLion IDE (**TODO** go/clion-for-chromeos **TODO**) to get this functionality, in addition to many more useful features.
+When dealing with large codebases, it's useful to have the code indexed, so
+you can navigate across symbols. For Googlers, CodeSearch works for Google3
+and Chromium, but doesn't yet support Chrome OS, and isn't available to
+non-Googlers. Don't despair, you can use the [CLion IDE][clion] to get this
+functionality, in addition to many more useful features.
 
 <!-- Row 1 -->
 {% Columns %}
@@ -60,3 +64,5 @@ extract values, and more.
 {% endColumn %}
 
 {% endColumns %}
+
+[clion]: https://www.jetbrains.com/clion/
