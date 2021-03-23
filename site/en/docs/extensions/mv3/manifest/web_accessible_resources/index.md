@@ -6,11 +6,13 @@ updated: 2018-05-14
 description: Reference documentation for the web_accessible_resources property of manifest.json.
 ---
 
-Web-accessible resources are resources within an extension &mdash; images, icons, or other files
-&mdash; that can be accessed by code on a web page or in another extension.
+Web-accessible resources are files inside an extension that can be accessed by web pages or other
+extensions. Extensions typically use this feature to expose images or other assets that need to be
+loaded in web pages, but any asset included in an extension's bundle can be made web accessible.
 
-Access to resources is blocked by default; they are only exposed when specifically declared in the
-`web_accessible_resources` element of the manifest.
+By default no resources are web accessible; only pages or scripts loaded from an extension's origin
+can access that extension's resources. Extension authors can use the `web_accessible_resources`
+manifest property to declare which resources are exposed and to what origins.
 
 {% Aside %}
 Prior to Manifest V2 all resources within an extension could be accessed from any page on the
