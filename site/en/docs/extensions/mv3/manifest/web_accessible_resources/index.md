@@ -73,7 +73,7 @@ pattern or to specified extensions.
 ## Navigability of resources
 
 These resources are available in a webpage via the URL
-`chrome-extension://[PACKAGE ID]/[PATH]`, which can be generated with the [extension.getURL][1]
+`chrome-extension://[PACKAGE ID]/[PATH]`, which can be generated with the [runtime.getURL][1]
 method. The resources are served with appropriate [CORS][2] headers, so they're available
 via mechanisms like XHR.
 
