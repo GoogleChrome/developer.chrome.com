@@ -16,9 +16,10 @@ Please expand the _Table of Contents_ to quickly navigate this page.
 
 ### What is the Chrome Web Store? {: #faq-gen-01 }
 
-The Chrome Web Store is an open marketplace for [Chrome Apps][92], [Google Chrome Extensions][93],
-and [Google Chrome Themes][94], where consumers may browse, install, and purchase items and install
-them in their browser. These items are built with web technologies and run inside of web browsers.
+The Chrome Web Store is an open marketplace for [Chrome Apps][apps], [Google Chrome
+Extensions][ext], and [Google Chrome Themes][themes], where consumers may browse, install, and
+purchase items and install them in their browser. These items are built with web technologies and
+run inside of web browsers.
 
 ### How many people use Chrome? {: #faq-gen-02 }
 
@@ -165,9 +166,8 @@ more information, please review our [program policies][106].
 
 ### How do I write an extension? {: #faq-dev-01 }
 
-You can find all the information you need to develop extensions and apps at
-[/extensions/][108] and [/apps/][109],
-respectively.
+You can find all the information you need to develop extensions and apps at [/docs/extensions/][ext]
+and [/docs/apps/][apps], respectively.
 
 ### Should I build a web app or an extension? {: #faq-gen-10 }
 
@@ -723,9 +723,6 @@ Business related issues by contacting CWS support.
 [89]: #faq-extensions-02
 [90]: #faq-themes-01
 [91]: #faq-themes-02
-[92]: /apps/
-[93]: http://code.google.com/chrome/extensions/
-[94]: http://code.google.com/chrome/extensions/themes.html
 [95]: http://googlechromereleases.blogspot.com/
 [96]: http://crbug.com
 [97]: http://www.chromium.org/getting-involved/dev-channel
@@ -738,8 +735,6 @@ Business related issues by contacting CWS support.
 [104]: http://groups.google.com
 [105]: https://support.google.com/chrome_webstore/contact/developer_support
 [106]: /docs/webstore/program_policies
-[108]: /docs/extensions/
-[109]: /apps/
 [110]: https://chrome.google.com/webstore/devconsole
 [111]: http://code.google.com/chrome/extensions/packaging.html
 [112]: http://code.google.com/chrome/extensions/autoupdate.html
@@ -785,3 +780,7 @@ Business related issues by contacting CWS support.
 [154]: https://developers.google.com/chrome/web-store/docs/payments-otp#verifying-payment
 [156]: https://developers.google.com/chrome/web-store/docs/payments-otp
 [158]: https://support.google.com/chrome_webstore/contact/developer_support/?hl=en
+
+[apps]: /docs/apps/
+[ext]: /docs/extensions/
+[themes]: /docs/extensions/mv3/themes/
