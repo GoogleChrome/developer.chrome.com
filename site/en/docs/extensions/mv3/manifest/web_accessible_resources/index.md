@@ -54,7 +54,7 @@ Each object in the array contains these properties:
   <dt><code>resources</code></dt>
   <dd>An array of resources to be exposed. Resources are specified as strings. Directories can be exposed using asterisks (e.g. `/images/*` exposes everything in the images directory).</dd>
   <dt><code>matches</code></dt>
-  <dd>A list of URL match patterns specifying which pages can access the resources.</dd>
+  <dd>A list of URL match patterns specifying which pages can access the resources. Only the origin is used to match URLs; subdomains patterns (`*.google.com`) and paths are ignored.</dd>
   <dt><code>extensions</code></dt>
   <dd>A list of extension IDs, specifying which extensions can access the resources.</dd>
 </dl>
