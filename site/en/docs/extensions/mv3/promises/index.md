@@ -170,12 +170,13 @@ Promises are designed to deliver asynchronous results, both success and failure.
 promise (a promise rejection) is handled differently.  It might look like this:
 
 ```
-chrome.tabs.create({...}).then((result) => {
-
-  // success case
-}).catch((e) => {
-  // failure case
-});
+chrome.tabs.create({...})
+  .then((result) => {
+    // success case
+  })
+  .catch((e) => {
+    // failure case
+  });
 ```
 
 Instead of setting `chrome.runtime.lastError`, we deliver the error directly to the "catch" of the
