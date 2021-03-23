@@ -52,7 +52,7 @@ extension resources to an array of URLs and/or extension IDs that can access tho
 Each object in the array contains these properties:
 <dl>
   <dt><code>resources</code></dt>
-  <dd>A list of resources to be exposed.</dd>
+  <dd>An array of resources to be exposed. Resources are specified as strings. Directories can be exposed using asterisks (e.g. `/images/*` exposes everything in the images directory).</dd>
   <dt><code>matches</code></dt>
   <dd>A list of URL match patterns specifying which pages can access the resources.</dd>
   <dt><code>extensions</code></dt>
