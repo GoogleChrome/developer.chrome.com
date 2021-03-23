@@ -15,9 +15,6 @@ date: 2021-03-26
 # An optional updated date
 # updated: 2020-10-16
 
-# A list of authors. These usernames correspond to the keys in the
-# _data/authorsData.json file.
-
 ---
 
 Many extension API methods support promises.  This document explains how to use promises when
@@ -145,5 +142,4 @@ TODO:
 
 TODO
 {% endif %}
-
 
