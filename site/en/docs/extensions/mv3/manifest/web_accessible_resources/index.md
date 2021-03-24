@@ -59,13 +59,6 @@ Each object in the array contains these properties:
   <dd>A list of extension IDs, specifying which extensions can access the resources.</dd>
 </dl>
 
-<!--
-* A list of resources that the extension will expose
-* Either:
-    * A list of URL match patterns, or
-    * A list of extension IDs
--->
-
 Each element must include a `"resources"` element and either a `"matches"` or `"extensions"`
 element. This establishes a mapping that exposes the specified resources to web pages matching the
 pattern or to specified extensions.
