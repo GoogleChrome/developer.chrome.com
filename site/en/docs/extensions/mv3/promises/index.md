@@ -166,7 +166,7 @@ chrome.tabs.create({...})
   .then((result) => {
     // success case
   })
-  .catch((e) => {
+  .catch((error) => {
     // failure case
   });
 ```
