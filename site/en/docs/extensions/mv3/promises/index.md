@@ -137,13 +137,12 @@ function openTabOnRight() {
 ```
 
 
-<!-- notes here about the code fragments -->
 
 ### Error handling
 
 Returning errors works differently depending on if the extension is using a callback or a promise.
 
-#### Error handling with Callbacks
+#### Error handling with callbacks
 
 If using a callback, then `chrome.runtime.lastError` is set for the duration of the execution of the
 callback. It is not thrown as a JS Error (which would interrupt JS execution), and is not set
@@ -157,6 +156,8 @@ chrome.tabs.create({...}, (result) => {
   }
 });
 ```
+
+#### Error handling with promises
 
 Promises are designed to deliver asynchronous results, both success and failure.  A failure in a
 promise (a promise rejection) is handled differently.  It might look like this:
