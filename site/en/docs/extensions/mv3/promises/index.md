@@ -176,7 +176,7 @@ promise. We don't set the `lastError` in the success case, because the onFulfill
 argument in the `.then())` is never invoked in the failure case.
 
 {% Aside %}
-Extensions APIs don't set `chrome.runtime.lastError()` with promises.
+Extensions APIs don't set `chrome.runtime.lastError` with promises.
 {% endAside %}
 
 This lets you write async function calls like sync function calls, verifying the failure cases (the
