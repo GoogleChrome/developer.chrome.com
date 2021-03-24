@@ -139,9 +139,9 @@ chrome.runtime.onMessage.addListener(function(message, callback) {
   if (message.data == "setAlarm") {
     chrome.alarms.create({delayInMinutes: 5})
   } else if (message.data == "runLogic") {
-    chrome.tabs.executeScript({file: 'logic.js'});
+    chrome.scripting.executeScript({file: 'logic.js'});
   } else if (message.data == "changeColor") {
-    chrome.tabs.executeScript(
+    chrome.scripting.executeScript(
         {code: 'document.body.style.backgroundColor="orange"'});
   };
 });
