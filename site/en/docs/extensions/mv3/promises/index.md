@@ -44,7 +44,7 @@ Promises are not available for extensions using Manifest V2, and are not availab
 
 Promises can and should be used in many circumstances. However, there are times (for example, event
 listeners) when a promise won't work and a callback is more appropriate. Methods that support
-promises also support callbacks when invoked asynchronously.
+promises also support callbacks for backwards compatibility reasons.
 
 ## Can I use promises?
 
