@@ -29,7 +29,7 @@ operation. For more about promises and their use, see the MDN documentation on
 ## Introduction
 
 Promises were introduced into Chrome not long after they were included in the ES6 specification.
-They are an important feature of modern JavaScript, providing several benefits, such as:
+They are an important feature of modern JavaScript, providing benefits such as:
 
 * Streamlined error handling
 * Coding in a synchronous style for invoking asynchronous functions
@@ -140,7 +140,8 @@ function openTabOnRight() {
 
 ### Error handling
 
-Returning errors works differently depending on if the extension is using a callback or a promise.
+Returning errors works differently depending on whether the extension is using a callback or a
+promise.
 
 #### Error handling with callbacks
 
@@ -179,7 +180,7 @@ promise.
 Extensions APIs don't set `chrome.runtime.lastError` with promises.
 {% endAside %}
 
-This form of error notification also lets you write async logic in a more synchronous style.
+This form of error notification also helps you write async logic in a more synchronous style.
 
 ### Using async/await
 
