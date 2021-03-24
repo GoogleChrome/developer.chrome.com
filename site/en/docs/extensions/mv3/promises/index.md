@@ -53,10 +53,14 @@ to the use case.
 
 Not all methods in extensions APIs support promises. Sometimes that's because we haven't added
 promise support on the method yet; in many cases it's because using a promise isn't feasible for the
-method. You can check if an API method support promises by checking its API reference page:
+method.
+
+{% if false %}
+You can check if an API method support promises by checking its API reference page:
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/lDjGweNENKyqGSA2nZrp.png", alt="Screenshot of an API
 reference page with promises support noted", width="800", height="467" %}
+{% endif %}
 
 ## How to use promises
 
