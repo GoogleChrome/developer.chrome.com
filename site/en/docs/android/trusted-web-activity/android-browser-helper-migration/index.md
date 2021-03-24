@@ -38,7 +38,7 @@ appllication `build.gradle`:
 ```groovy
 dependencies {
     //...
-    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.1.0'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.2.0'
 }
 ```
 
