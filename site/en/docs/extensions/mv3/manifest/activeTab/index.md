@@ -81,7 +81,7 @@ navigated or is closed.
 
 While the `activeTab` permission is enabled for a tab, an extension can:
 
-- Call [`scripting.insertCSS`][insertCSSmethod] on that tab.
+- Call [`scripting.insertCSS`][insert-css-method] on that tab.
 - Get the URL, title, and favicon for that tab via an API that returns a [`tabs.Tab`][7] object
   (essentially, `activeTab` grants the [`tabs`][8] permission temporarily).
 - Intercept network requests in the tab to the tab's main frame origin using the [webRequest][9]
@@ -97,7 +97,7 @@ The following user gestures enable `activeTab`:
 - Executing a keyboard shortcut from the [commands API][13]
 - Accepting a suggestion from the [omnibox API][14]
 
-[insertCSSmethod]: /docs/extensions/reference/scripting#method-insertCSS
+[insert-css-method]: /docs/extensions/reference/scripting#method-insertCSS
 [1]: /docs/extensions/reference/browserAction
 [2]: /docs/extensions/mv3/samples#page-redder
 [3]: /docs/extensions/reference/browserAction
