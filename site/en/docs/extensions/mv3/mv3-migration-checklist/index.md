@@ -64,6 +64,12 @@ still use the blocking version of `chrome.webRequest`.
 - Remove unnecessary host permissions; blocking a request or upgrading a request's protocol
   doesn't require host permissions with `declarativeNetRequest`.
 
+**Are you using tabs.executeScript?**
+<br/>
+*In Manifest V3, the executeScript() method moves to the chrome.scripting API.*
+
+- Change any `chrome.tabs.executeScript(...)` calls to `chrome.scripting.executeScript(...)`.
+
 **Are you executing remote code or arbitrary strings?**
 <br/>
 *You can no longer [execute external
