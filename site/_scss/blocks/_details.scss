@@ -3,7 +3,6 @@
 .details {
   border: 1px solid var(--color-hairline);
   border-width: 1px 0;
-  margin: calc(var(--flow-space)) 0;
   padding: calc(var(--flow-space) / 2) 0;
   position: relative;
 }
@@ -36,7 +35,6 @@
 
   > :first-child {
     color: var(--color-primary);
-    font-size: var(--chevron-size);
     position: relative;
   }
 
@@ -60,4 +58,11 @@
 
 .details[open] > summary > .details__header > :first-child::after {
   transform: rotate(0deg) translateY(-50%);
+}
+
+// We generate clickable links for our markdown headings but if someone uses
+// a heading inside of a details shortcode then the link shows up on hover and
+// looks strange. This hides it.
+.details .heading-link {
+  display: none;
 }

@@ -9,7 +9,27 @@ updated: 2021-01-27
 
 Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
 
-<!-- Example 1 -->
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}
+
+The details shortcode also supports using headers in the summary.
 
 ````md
 {% raw %}{% Details %}
@@ -30,8 +50,6 @@ The body of the Details component goes here, and **can** contain markdown.
 The body of the Details component goes here, and **can** contain markdown.
 
 {% endDetails %}
-
-<!-- Example 2 -->
 
 ````md
 {% raw %}{% Details %}
