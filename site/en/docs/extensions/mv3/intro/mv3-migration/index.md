@@ -269,12 +269,14 @@ strings at runtime, you'll need to update your code execution strategies when
 migrating to MV3.
 
 {% Aside %}
-With Manifest V3 the executeScript() method also moves to a different API.
+With Manifest V3 the `executeScript()` method also moves to a different API.
 
 * **MV2:**&emsp;[chrome.tabs.executeScript()](/docs/extensions/reference/tabs/#method-executeScript)
 * **MV3:**&emsp;[chrome.scripting.executeScript()](/docs/extensions/reference/scripting/#method-executeScript).
 
-If you use executeScript() anywhere in your code, you'll need to update that call to use the new API.
+If you use executeScript() anywhere in your code, you'll need to update that call to use the new
+API. The `insertCSS()` and `removeCSS()` methods similarly move from chrome.tabs to
+chrome.scripting.
 {% endAside %}
 
 

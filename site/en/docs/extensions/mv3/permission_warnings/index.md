@@ -102,7 +102,7 @@ the tab is navigated or closed.
 
 While the `activeTab` permission is enabled for a tab, an extension can:
 
-- Call [`tabs.insertCSS`][12] on that tab.
+- Call [`scripting.insertCSS`][12] on that tab.
 - Get the URL, title, and favicon for that tab via an API that returns a [`tabs.Tab`][13] object.
 - Intercept network requests in the tab to the tab's main frame origin using the [webRequest][14]
   API. The extension temporarily gets host permissions for the tab's main frame origin.
@@ -367,7 +367,7 @@ This can be avoided by making the new feature optional and adding new permission
 [8]: /docs/extensions/reference/topSites
 [9]: /docs/extensions/reference/tabs
 [10]: #p_activeTab_gestures
-[12]: /docs/extensions/reference/tabs#method-insertCSS
+[12]: /docs/extensions/reference/scripting#method-insertCSS
 [13]: /docs/extensions/reference/tabs#type-Tab
 [14]: /docs/extensions/reference/webRequest
 [15]: /docs/extensions/reference/browserAction
