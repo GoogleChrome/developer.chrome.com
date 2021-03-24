@@ -42,7 +42,7 @@ access and modify selected resources and actions in Chrome. There are two aspect
 {% endif %}
 
 Extensions let you "extend" the browser by using APIs to modify browser behavior and access web
-content. There are two aspects to consider:
+content. Extensions operate by means of an end-user UI and a developer API:
 
 **The extensions user interface**&emsp;This provides a consistent way for users to manage their
 extensions.
@@ -52,18 +52,18 @@ code to access features of the browser itself: activating tabs, modifying net re
 
 To create an extension, you assemble some resources -- a manifest, JavaScript and HTML files,
 images, and others -- that constitute the extension. For development and testing, you can load these
-"unpacked" into Chrome using extension developer mode. Once you are happy with your extension, you
-can package it and distribute it to users.
+"unpacked" into Chrome using [extension developer mode][devmode]. Once you are happy with your
+extension, you can [package it and distribute it to users][cws-publish].
 
 ### How do users get extensions? {: #getting-extensions }
 
-Most Chrome users get extensions from the Chrome Web Store. Developers across the globe
+Most Chrome users get extensions from the [Chrome Web Store][cws]. Developers across the globe
 publish their extensions in the Chrome Web Store where they are reviewed and made available to end
 users.
 
 {% Aside %}
 
-Some organizations use enterprise policies to install extensions on their user's devices. These
+Some organizations use [enterprise policies] to install extensions on their user's devices. These
 extensions may either be fetched from the Chrome Web Store or hosted on the organization's web servers.
 {# TODO: See XXX for info on the capabilities and limitations of self hosting. #}
 
@@ -184,7 +184,10 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 [cws]: https://chrome.google.com/webstore
 [cws-docs]: /docs/webstore
 [cws-policies]: /docs/webstore/program_policies/
+[cws-publish]: /docs/webstore/publish/
+[devmode]: /docs/extensions/mv3/getstarted/#manifest
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
+[enterprise policies]: https://cloud.google.com/docs/chrome-enterprise/policies/
 [extension samples]: https://github.com/GoogleChrome/chrome-extensions-samples
 [getstarted-tut]: /docs/extensions/mv3/getstarted
 [hello-sample]: /docs/extensions/mv3/samples#search:hello
