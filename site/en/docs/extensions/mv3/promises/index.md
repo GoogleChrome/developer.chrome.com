@@ -44,7 +44,7 @@ Promises are not available for extensions using Manifest V2, and are not availab
 
 Promises can and should be used in many circumstances. However, there are times (for example, event
 listeners) when a promise won't work and a callback is more appropriate. Methods that support
-promises also support callbacks for backwards compatibility reasons.
+promises also support callbacks to provide backwards compatibility.
 
 ## Can I use promises?
 
@@ -172,22 +172,19 @@ chrome.tabs.create({...})
 ```
 
 Instead of setting `chrome.runtime.lastError`, we deliver the error directly to the "catch" of the
-promise. We don't set the `lastError` in the success case, because the onFulfilled handler (the
-argument in the `.then())` is never invoked in the failure case.
+promise.
 
 {% Aside %}
 Extensions APIs don't set `chrome.runtime.lastError` with promises.
 {% endAside %}
 
-This lets you write async function calls like sync function calls, verifying the failure cases (the
-errors) in the same way.
+This form of error notification also lets you write async logic in a more synchronous style.
 
 ### Using async/await
 
 JavaScript provides async/await as syntactic sugar on top of promises, letting you code in a more
 imperative style. The following example shows how to implement the [example shown
 earlier](#compare-to-callback) using async/await:
-
 
 ```js
 // Async/await implementation
