@@ -24,11 +24,57 @@ permission in the manifest, as shown below:
 
 ## Examples
 
+Opening the extension's onboarding page in new tab after the extension is installed for the first
+time. Must be called from a background context.
+
+```js
+chrome.runtime.onInstalled.addListener((reason) => {
+  if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
+    chrome.tabs.create({
+      url: 'onboarding.html'
+    });
+  }
+});
+```
+
+Retrieve the user's currently focused tab. Requires Manifest V3. Cannot be used in a content
+script.
+
+```js
+async function getCurrentTab() {
+  let queryOptions = { active: true, currentWindow: true };
+  let [tab] = await chrome.tabs.query(queryOptions);
+  return tab;
+}
+```
+
+Content script asking a background script to navigate the current tab.
+
+```js
+// Content script
+function requestNavigation(url) {
+  chrome.runtime.sendMessage({ action: 'navigate', url });
+}
+
+// Background script
+chrome.runtime.onMessage.addListener(messageListener);
+
+function messageListener(request, sender, _sendResponse) {
+  if (request.action === 'navigate') {
+    // Sanitize URL in to guard against compromised content scripts
+    let url = new URL(request.url);
+    chrome.tabs.update(sender.tab.id, { url: url.toString() });
+  }
+}
+```
+
+### More samples
+
 ![Two tabs in a window](tabs.png)
 
-You can find simple examples of manipulating tabs with the `chrome.tabs` API in the
-[examples/api/tabs][7] directory. For other examples and for help in viewing the source code, see
-[Samples][8].
+More samples simple examples of manipulating tabs with the Tabs API can be found in the
+[mv2-archive/api/tabs][7] directory of the [chrome-extensions-samples][samples-repo] repository. For
+other examples and for help in viewing the source code, see [Samples][8].
 
 [1]: /docs/extensions/mv2/tabs
 [2]: #property-Tab-url
@@ -38,3 +84,5 @@ You can find simple examples of manipulating tabs with the `chrome.tabs` API in 
 [6]: #type-Tab
 [7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
 [8]: /docs/extensions/mv2/samples
+
+[samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
