@@ -52,9 +52,13 @@ extension resources to an array of URLs and/or extension IDs that can access tho
 Each object in the array contains these properties:
 <dl>
   <dt><code>resources</code></dt>
-  <dd>An array of resources to be exposed. Resources are specified as strings. Directories can be exposed using asterisks (e.g. `/images/*` exposes everything in the images directory).</dd>
+  <dd>An array of resources to be exposed. Resources are specified as strings and may contain
+  <code>*</code> for wildcard matches. For example, <code>"/images/*"</code> exposes everything in
+  the extension's /images directory recursively while <code>"*.png"</code> exposes all PNG
+  files.</dd>
   <dt><code>matches</code></dt>
-  <dd>A list of URL match patterns specifying which pages can access the resources. Only the origin is used to match URLs; subdomains patterns (`*.google.com`) and paths are ignored.</dd>
+  <dd>A list of URL match patterns specifying which pages can access the resources. Only the origin
+  is used to match URLs; subdomains patterns (<code>*.google.com<code>) and paths are ignored.</dd>
   <dt><code>extensions</code></dt>
   <dd>A list of extension IDs, specifying which extensions can access the resources.</dd>
 </dl>
