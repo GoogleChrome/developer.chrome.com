@@ -18,6 +18,7 @@
     - url: /docs/devtools/console/api/
     - url: /docs/devtools/console/utilities/
     - url: /docs/devtools/console/live-expressions/
+- url: /docs/devtools/coverage/
 - title: i18n.docs.devtools.network
   sections:
     - url: /docs/devtools/network/
