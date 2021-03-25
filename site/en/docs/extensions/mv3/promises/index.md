@@ -173,7 +173,7 @@ chrome.tabs.create({...})
 ```
 
 Extensions APIs don't set `chrome.runtime.lastError` when you use a promise, instead returning the
-error as an argument to the function in the catch().
+error as an argument to the function in the `.catch()`.
 
 {% Aside %}
 In simpler cases with a single promise, you can instead supply your error handler as the second
@@ -181,8 +181,8 @@ parameter to `.then()` instead of chaining to a `.catch()`. For more about this 
 article on chained promises][mdn-promise-chain].
 {% endAside %}
 
-Regardless of which syntax you use, this form of error notification also helps you write async logic
-in a more synchronous style.
+Whether you receive the error using `.catch()` or the optional second parameter of `.then()`,
+this form of error handling helps you write async logic in a more synchronous style.
 
 ### Using async/await
 
