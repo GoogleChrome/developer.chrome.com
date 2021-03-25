@@ -23,7 +23,7 @@ calling these methods.
 {% Aside "key-term" %}
 A *promise* is a JavaScript object that represents the eventual outcome of an asynchronous
 operation. For more about promises and their use, see the MDN documentation on
-[using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).
+[using promises][mdn-promises].
 {% endAside %}
 
 ## Introduction
@@ -137,7 +137,6 @@ function openTabOnRight() {
 ```
 
 
-
 ### Error handling
 
 Returning errors works differently depending on whether the extension is using a callback or a
@@ -173,18 +172,21 @@ chrome.tabs.create({...})
   });
 ```
 
-Instead of setting `chrome.runtime.lastError`, we deliver the error directly to the "catch" of the
-promise.
+Extensions APIs don't set `chrome.runtime.lastError` when you use a promise, instead returning the
+error as an argument to the function in the catch().
 
 {% Aside %}
-Extensions APIs don't set `chrome.runtime.lastError` with promises.
+In simpler cases with a single promise, you can instead supply your error handler as the second
+parameter to `.then()` instead of chaining to a `.catch()`. For more about this topic, see this [MDN
+article on chained promises][mdn-promise-chain].
 {% endAside %}
 
-This form of error notification also helps you write async logic in a more synchronous style.
+Regardless of which syntax you use, this form of error notification also helps you write async logic
+in a more synchronous style.
 
 ### Using async/await
 
-JavaScript provides async/await as syntactic sugar on top of promises, letting you code in a more
+JavaScript also provides async/await as syntactic sugar on top of promises, letting you code in a more
 imperative style. The following example shows how to implement the [example shown
 earlier](#compare-to-callback) using async/await:
 
@@ -211,3 +213,6 @@ async function openTabOnRight() {
 {% Aside %}
 Note that `await` is only valid in async functions and the top-level bodies of modules.
 {% endAside %}
+
+[mdn-promise-chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises
+[mdn-promises]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
