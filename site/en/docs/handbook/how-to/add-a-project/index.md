@@ -60,7 +60,7 @@ as well as in the side navigation when viewing an individual doc.
 
 The `toc.yml` supports these fields:
 
-- `url` — an absolute url path to your doc
+- `url`—an absolute url path to your doc
 - `title`—the title for a subsection in `i18n` path notation (explained below.)
 - `sections`—a collection of more urls, nested under a `title`.
 
@@ -118,7 +118,7 @@ overview:
   es: 'Visión General'
 ```
 
-If you aren't ready to translate your docs—**yet that's OK!** Just add an `en`
+If you aren't ready to translate your docs yet that's OK!. Just add an `en`
 field for now.
 
 Finally, in your `toc.yml`, add the path to this object:

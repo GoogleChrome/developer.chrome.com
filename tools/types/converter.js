@@ -19,7 +19,7 @@ const typedocModels = require('typedoc/dist/lib/models');
 const {
   extractComment,
   deepStrictEqual,
-  resolveFullyQualifiedName,
+  fullName,
   generateHtmlLink,
 } = require('./helpers');
 
@@ -56,9 +56,12 @@ function updateWithComment(renderType, commentModel, owner) {
   }
   const deprecatedTag = commentModel.getTag('deprecated');
   if (deprecatedTag) {
-    renderType.deprecated = extractComment(deprecatedTag.text, owner, false);
+    renderType.deprecatedComment = extractComment(
+      deprecatedTag.text,
+      owner,
+      false
+    );
   }
-  // TODO(samthor): When "@since Chrome xx" is available, parse this here.
 }
 
 /**
@@ -299,7 +302,12 @@ function buildRenderType(type, parentType, owner) {
 
     case 'reference': {
       const referenceType = /** @type {typedocModels.ReferenceType} */ (type);
-      const name = resolveFullyQualifiedName(referenceType);
+      let name;
+      if (referenceType.reflection) {
+        name = fullName(referenceType.reflection);
+      } else {
+        ({name} = referenceType);
+      }
 
       /** @type {RenderType} */
       const out = {
@@ -369,8 +377,8 @@ function buildRenderType(type, parentType, owner) {
       };
     }
 
-    case 'stringLiteral': {
-      const stringLiteralType = /** @type {typedocModels.StringLiteralType} */ (type);
+    case 'literal': {
+      const literalType = /** @type {typedocModels.LiteralType} */ (type);
 
       // If we're not contained by a union but our owner is a TypeAlias then this is just an enum
       // type with a single possible string option.
@@ -384,8 +392,8 @@ function buildRenderType(type, parentType, owner) {
 
       return {
         type: 'primitive',
-        primitiveType: 'string',
-        literalValue: JSON.stringify(stringLiteralType.value),
+        primitiveType: typeof literalType.value,
+        literalValue: JSON.stringify(literalType.value),
       };
     }
 
@@ -395,21 +403,6 @@ function buildRenderType(type, parentType, owner) {
         type: 'reference',
         referenceType: typeParameterType.name,
       };
-    }
-
-    case 'unknown': {
-      // This is probably a constant number, which TSDoc doesn't understand.
-
-      const unknownType = /** @type {typedocModels.UnknownType} */ (type);
-
-      const value = +unknownType.name;
-      if (typeof value === 'number' && isFinite(value)) {
-        return {
-          type: 'primitive',
-          primitiveType: 'number',
-          literalValue: unknownType.name,
-        };
-      }
     }
   }
 

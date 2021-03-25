@@ -74,7 +74,7 @@
   },
   "pjmclachlan": {
     "name": {
-      "given": "PJ",
+      "given": "Penny",
       "family": "Mclachlan"
     },
     "org": {
@@ -84,7 +84,7 @@
     "country": "CA",
     "twitter": "b1tr0t",
     "descriptions": {
-      "en": "PJ is a Product Manager on the Chrome Web Platform team responsible for Chrome permissions, notifications, and progressive web apps."
+      "en": "Penny is a Product Manager on the Chrome Web Platform team responsible for Chrome permissions, notifications, and progressive web apps."
     },
     "image": "image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Nt1I5Rz9h0kOlyXQ630Q.jpg"
   },
@@ -174,5 +174,182 @@
       "en": "Engineering Director, Google Chrome"
     },
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/Cv4qmh8vnXhcHPgCzbpb.jpg"
+  },
+  "unakravets": {
+    "name": {
+      "given": "Una",
+      "family": "Kravets"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "US",
+    "homepage": "https://una.im",
+    "twitter": "una",
+    "descriptions": {
+      "en": "Making the web a more stylish place at Google Chrome"
+    },
+    "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/gTvIXYVFxXMYjBiZxysB.jpg"
+  },
+  "surma": {
+    "name": {
+      "given": "Surma",
+      "family": ""
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "UK",
+    "homepage": "https://surma.dev/",
+    "twitter": "dassurma",
+    "github": "surma",
+    "glitch": "surma",
+    "descriptions": {
+      "en": "Advocate for the web."
+    },
+    "image": "image/i9nJGvw3SnTPH63zKOYWtI6cP5m2/rS10rvGrNat9Euvxw8ju.jpg"
+  },
+  "andreban": {
+    "name": {
+      "given": "André",
+      "family": "Cipriani Bandarra"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "UK",
+    "homepage": "https://bandarra.me",
+    "twitter": "andreban",
+    "glitch": "andreban",
+    "github": "andreban",
+    "descriptions": {
+      "en": "André is a Developer Relations Engineer"
+    },
+    "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/JEp8KytgeB3nYFintp4W.jpg"
+  },
+  "peconn": {
+    "name": {
+      "given": "Peter",
+      "family": "Conn"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Web Platform"
+    },
+    "country": "UK",
+    "twitter": "petereconn",
+    "github": "PEConn",
+    "email": "conn.peter@gmail.com",
+    "descriptions": {
+      "en": "I'm a Software Engineer working on the Web Platform at Google London."
+    },
+    "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/bphnrZBppE6u1ZqNnhKU.jpg"
+  },
+  "pavoldrotar": {
+    "name": {
+      "given": "Pavol",
+      "family": "Drotar"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Web Platform"
+    },
+    "country": "UK",
+    "homepage": "https://pavoldrotar.com",
+    "twitter": "DrotarPavol",
+    "github": "padr31",
+    "email": "pavol.drotar3@gmail.com",
+    "descriptions": {
+      "en": "I am a Software Engineer Intern wroking on the Web Platform."
+    },
+    "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/DXzBVhVGAn8NTnPqW7Pa.jpg"
+  },
+  "adrianajara": {
+    "name": {
+      "given": "Adriana",
+      "family": "Jara"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "US",
+    "email": "ajara@google.com",
+    "descriptions": {
+      "en": "Adriana is a Developer Advocate."
+    },
+    "image": "image/Vww75TFpThOgTNuASFM6UYfBAp53/tIuTcnxqlspZFyklJYHG.jpg"
+  },
+  "agektmr": {
+    "name": {
+      "given": "Eiji",
+      "family": "Kitamura"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "JP",
+    "twitter": "agektmr",
+    "github": "agektmr",
+    "glitch": "agektmr",
+    "email": "agektmr@google.com",
+    "descriptions": {
+      "en": "Eiji is a Developer Advocate."
+    },
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/r7YL1q3afKza6VUTF4QN.jpg"
+  },
+  "titouan": {
+    "name": {
+      "given": "Titouan",
+      "family": "Rigoudy"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Web Platform"
+    },
+    "country": "FR",
+    "descriptions": {
+      "en": "Titouan is a Software Engineer working on the Web Platform."
+    },
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/vdjz5azkSvwbgq3lrg9X.jpeg"
+  },
+  "jecelynyeen": {
+    "name": {
+      "given": "Jecelyn",
+      "family": "Yeen"
+    },
+    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/4HPVWldl8gHYH8npWFHu.jpg"
+  },
+  "megginkearney": {
+    "name": {
+      "given": "Meggin",
+      "family": "Kearney"
+    },
+    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/wKFYQ94ArLlegTGeElAg.jpg"
+  },
+  "flaviocopes": {
+    "name": {
+      "given": "Flavio",
+      "family": "Copes"
+    },
+    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/Lr9pGxMHt7A5UizJ2Ogn.jpg"
+  },
+  "fawazm": {
+    "name": {
+      "given": "Fawaz",
+      "family": "Mohammad"
+    },
+    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/QDNnPHloDqEwqRW5ASvt.jpg"
+  },
+  "samdutton": {
+    "name": {
+      "given": "Sam",
+      "family": "Dutton"
+    },
+    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/Oci8M3M98YmwQJGHkHS9.jpg"
   }
 }

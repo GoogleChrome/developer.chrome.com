@@ -219,7 +219,7 @@ there's plenty more.
   [Deprecations and removals in Chrome 70](https://developers.google.com/web/updates/2018/09/chrome-70-deps-rems)
   post for more details.
 * And be sure to check out the latest
-  [What's new in DevTools](https://developers.google.com/web/updates/2018/08/devtools) post to learn what's
+  [What's new in DevTools](/blog/new-in-devtools-70) post to learn what's
   new in Chrome DevTools.
 
 ### Subscribe

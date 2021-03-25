@@ -1,11 +1,14 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Create a report to help us improve the site
 title: ''
 labels: 'bug'
 assignees: ''
 
 ---
+
+⚠️ This is for issues with the https://developer.chrome.com site, not Chromium itself.
+If you want to file a bug with Chromium (the open-source project behind Google Chrome and other browsers), please use https://crbug.com.
 
 **Describe the bug**
 A clear and concise description of what the bug is.

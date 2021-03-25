@@ -27,6 +27,15 @@ redirects:
 - from: /apps/about_apps
   to: /docs/apps/overview/
 
+- from: /docs/extensions/mv3/background_migration
+  to: /docs/extensions/mv3/migrating_to_service_workers
+
+- from: /docs/multidevice/android/customtabs/
+  to: /docs/android/custom-tabs/overview
+
+- from: /multidevice/android/customtabs/
+  to: /docs/android/custom-tabs/overview
+
 # The new site doesn't break out Platform Apps APIs, but instead just locates them at the bottom of
 # the main Extensions reference page.
 - from: /apps/api_index
@@ -52,6 +61,61 @@ redirects:
 
 - from: /chrome/apps/
   to: /docs/apps/about_apps
+
+# DevTools redirects
+
+- from: /docs/devtools/network/resource-loading/
+  to: /docs/devtools/network/reference/
+
+- from: /docs/devtools/device-mode/device-input-and-sensors/
+  to: /docs/devtools/device-mode/
+
+- from: /docs/devtools/device-mode/emulate-mobile-viewports/
+  to: /docs/devtools/device-mode/
+
+- from: /docs/devtools/console/console-write/
+  to: /docs/devtools/console/api/
+
+- from: /docs/devtools/console/track-exceptions/
+  to: /docs/devtools/console/api/
+
+- from: /docs/devtools/console/track-executions/
+  to: /docs/devtools/console/api/
+
+- from: /docs/devtools/console/events/
+  to: /docs/devtools/console/utilities/
+
+- from: /docs/devtools/console/expressions/
+  to: /docs/devtools/console/javascript/
+
+- from: /docs/devtools/evaluate-performance/timeline-tool/
+  to: /docs/devtools/evaluate-performance/reference/
+
+- from: /docs/devtools/inspect-styles/edit-styles/
+  to: /docs/devtools/css/reference/
+
+- from: /docs/devtools/javascript/pretty-print/
+  to: /docs/devtools/javascript/reference/#format
+
+- from: /docs/devtools/manage-data/local-storage/
+  to: /docs/devtools/#storage
+
+- from: /docs/devtools/network/network-conditions/
+  to: /docs/devtools/network/reference/
+
+- from: /docs/devtools/network/understanding-resource-timing/
+  to: /docs/devtools/network/reference/#timing
+
+- from: /docs/devtools/rendering-tools/forced-synchronous-layouts/
+  to: /docs/devtools/evaluate-performance/
+
+- from: /docs/devtools/rendering-tools/js-execution/
+  to: /docs/devtools/evaluate-performance/
+
+- from: /docs/devtools/rendering-tools/
+  to: /docs/devtools/evaluate-performance/
+
+# TODO(kaycebasques): Update these old DevTools redirects
 
 - from: /devtools/
   to: https://developers.google.com/web/tools/chrome-devtools
@@ -93,10 +157,10 @@ redirects:
   to: https://developer.android.com/chrome-os/intro.html
 
 - from: /extensions/autoupdate
-  to: /docs/extensions/mv2/hosting
+  to: /docs/extensions/mv3/hosting
 
 - from: /extensions/crx
-  to: /docs/extensions/mv2/hosting
+  to: /docs/extensions/mv3/hosting
 
 - from: /extensions/getstarted_arc
   to: https://developer.android.com/chrome-os/intro.html
@@ -111,7 +175,7 @@ redirects:
   to: /docs/extensions/mv2/options
 
 - from: /extensions/packaging
-  to: /docs/extensions/mv2/hosting
+  to: /docs/extensions/mv3/hosting
 
 - from: /extensions/migrating_to_manifest_v3
   to: /docs/extensions/mv3/mv3-migration-checklist
@@ -124,7 +188,7 @@ redirects:
 
 - from: /manifest/...
   try:
-    - /docs/extensions/mv2/manifest/...
+    - /docs/extensions/mv3/manifest/...
     - /docs/apps/manifest/...
 
 - from: /multidevice/data-compression
@@ -163,7 +227,7 @@ redirects:
   try:
     - /docs/apps/manifest/...
     - /docs/extensions/reference/...
-    - /docs/extensions/mv2/manifest/...
+    - /docs/extensions/mv2/manifest/...  # nb. Deprecated /apps/ platform is essentially mv2 only
     - /docs/extensions/mv2/...
     - /docs/extensions/...
   else: /docs/apps/...
@@ -178,15 +242,15 @@ redirects:
 - from: /extensions/...
   try:
     - /docs/extensions/reference/...
-    - /docs/extensions/mv2/manifest/...
-    - /docs/extensions/mv2/...
+    - /docs/extensions/mv3/manifest/...
+    - /docs/extensions/mv3/...
     - /docs/apps/...
     - /docs/apps/manifest/...
   else: /docs/extensions/...
 
 - from: /manifest/...
   try:
-    - /docs/extensions/mv2/manifest/...
+    - /docs/extensions/mv3/manifest/...
   else: /docs/apps/manifest/...
 
 - from : /multidevice/...
@@ -208,8 +272,8 @@ redirects:
   try:
     - /docs/extensions/...
     - /docs/extensions/reference/...
-    - /docs/extensions/mv2/manifest/...
-    - /docs/extensions/mv2/...
+    - /docs/extensions/mv3/manifest/...
+    - /docs/extensions/mv3/...
     - /docs/apps/manifest/...
     - /docs/apps/...
 

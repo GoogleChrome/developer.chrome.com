@@ -93,10 +93,15 @@ certain patterns can be tricky to deal with. For example, the browsers
 [pull to refresh](https://developers.google.com/web/updates/2017/11/overscroll-behavior#p2r) feature,
 where swiping down at the top of the page, does a hard reload.
 
-{# TODO(petele): video element, float-left|right, auto-play #}
 {% Columns %}
-{% Video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZxYy6AnumGb3lwTGN6Wq.mp4" %}
-{% Video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wyoZdIhPdQ8em6ibRdg4.mp4" %}
+{% Column %}
+{% Video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XHUGqmZs8LZdCKZS0mpa.mp4", autoplay="true", muted="true", loop="true" %}
+Before, with full page refresh.
+{% endColumn %}
+{% Column %}
+{% Video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/VgYcDIroTPSPhzWoMRuQ.mp4", autoplay="true", muted="true", loop="true" %}
+After, refresh only the content.
+{% endColumn %}
 {% endColumns %}
 
 In some cases, you might want to override that behavior and provide your own

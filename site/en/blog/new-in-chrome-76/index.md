@@ -199,7 +199,7 @@ easy to programmatically copy and paste images.
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 76.
 
-* [What's new in Chrome DevTools (76)](https://developers.google.com/web/updates/2019/05/devtools)
+* [What's new in Chrome DevTools (76)](/blog/new-in-devtools-76)
 * [Chrome 76 deprecations & removals](https://developers.google.com/web/updates/2019/06/chrome-76-deps-rems)
 * [ChromeStatus.com updates for Chrome 76](https://www.chromestatus.com/features#milestone%3D76)
 * [What's new in JavaScript in Chrome 76](https://v8.dev/blog/v8-release-76)

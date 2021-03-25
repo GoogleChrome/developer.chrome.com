@@ -14,13 +14,36 @@ element for the pagination (stock) navigation #}
 
 {% if paginationObject.href.previous or paginationObject.href.next %}
 <nav class="pagination gap-top-300 pad-left-400 pad-right-400">
-  <a class="pagination__button type--small" {% if paginationObject.href.previous %} href="{{ paginationObject.href.previous }}" {% endif %}>
-    {{ icon('arrow-back') }}
-    <span>{{ 'i18n.common.newer_posts' | i18n(locale) }}</span>
-  </a>
-  <a class="pagination__button type--small" {% if paginationObject.href.next %} href="{{ paginationObject.href.next }}" {% endif %}>
-    <span>{{ 'i18n.common.older_posts' | i18n(locale) }}</span>
-    {{ icon('arrow-forward') }}
+
+  {#
+    We expand this out to both options: button available and missing, as Lighthouse is unhappy with
+    a lone <a> without a href.
+  #}
+
+  {% if paginationObject.href.previous %}
+    <a class="pagination__button type--small gap-right-200 text-align-center" href="{{ paginationObject.href.previous }}">
+      {{ icon('arrow-back') }}
+      <span>{{ 'i18n.common.newer_posts' | i18n(locale) }}</span>
+    </a>
+  {% else %}
+    <span class="pagination__button type--small gap-right-200 text-align-center">
+      {{ icon('arrow-back') }}
+      <span>{{ 'i18n.common.newer_posts' | i18n(locale) }}</span>
+    </span>
+  {% endif %}
+
+  {% if paginationObject.href.next %}
+    <a class="pagination__button type--small gap-left-200 text-align-center" href="{{ paginationObject.href.next }}">
+      <span>{{ 'i18n.common.older_posts' | i18n(locale) }}</span>
+      {{ icon('arrow-forward') }}
+    </a>
+  {% else %}
+    <span class="pagination__button type--small gap-left-200 text-align-center">
+      <span>{{ 'i18n.common.older_posts' | i18n(locale) }}</span>
+      {{ icon('arrow-forward') }}
+    </span>
+  {% endif %}
+
   </a>
 </nav>
 {% endif %}

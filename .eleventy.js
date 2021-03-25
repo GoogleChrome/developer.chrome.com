@@ -17,6 +17,8 @@ const {slugify} = require('./site/_filters/slugify');
 const {toc} = require('./site/_filters/toc');
 
 // Shortcodes
+const {Details} = require('./site/_shortcodes/Details');
+const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
 const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
 const {Img} = require('./site/_shortcodes/Img');
@@ -88,10 +90,6 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('tags', tagsCollection);
   eleventyConfig.addCollection('reference', extensionsReferenceCollection);
 
-  // Add static collections
-  // These are generated as a postinstall step as computation is slow
-  eleventyConfig.addCollection('types', () => require('./site/_collections/types'));
-
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
   eleventyConfig.addFilter('trailingSlash', trailingSlash);
@@ -111,6 +109,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('Img', Img);
   eleventyConfig.addShortcode('Video', Video);
   eleventyConfig.addShortcode('YouTube', YouTube);
+  eleventyConfig.addPairedShortcode('Details', Details);
+  eleventyConfig.addPairedShortcode('DetailsSummary', DetailsSummary);
   eleventyConfig.addPairedShortcode('Columns', Columns);
   eleventyConfig.addPairedShortcode('Column', Column);
   eleventyConfig.addPairedShortcode('Compare', Compare);

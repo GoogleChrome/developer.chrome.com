@@ -193,7 +193,7 @@ And there are new measurement units in the
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 77.
 
-* [What's new in Chrome DevTools (77)](https://developers.google.com/web/updates/2019/07/devtools)
+* [What's new in Chrome DevTools (77)](/blog/new-in-devtools-77)
 * [Chrome 77 deprecations & removals](https://developers.google.com/web/updates/2019/08/chrome-77-deps-rems)
 * [ChromeStatus.com updates for Chrome 77](https://www.chromestatus.com/features#milestone%3D77)
 * [What's new in JavaScript in Chrome 77](https://v8.dev/blog/v8-release-77)

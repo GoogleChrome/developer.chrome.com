@@ -165,7 +165,7 @@ And of course there's plenty more.
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 88.
 
-* [What's new in Chrome DevTools (88)](https://developers.google.com/web/updates/2020/11/devtools)
+* [What's new in Chrome DevTools (88)](/blog/new-in-devtools-88)
 * [Chrome 88 deprecations & removals](https://developers.google.com/web/updates/2020/12/chrome-88-deps-rems)
 * [ChromeStatus.com updates for Chrome 88](https://www.chromestatus.com/features#milestone%3D88)
 * [What's new in JavaScript in Chrome 88](https://v8.dev/blog/v8-release-88)

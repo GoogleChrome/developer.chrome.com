@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "What are extensions?"
 date: 2013-02-21
-updated: 2018-02-25
+updated: 2021-03-12
 description: An overview of the purpose of Chrome Extensions and how they're developed.
 ---
 
@@ -101,7 +101,7 @@ Next, add a file called `manifest.json` and include the following code:
 ```json
 {
   "name": "Hello Extensions",
-  "description" : "Base Level Extension",
+  "description": "Base Level Extension",
   "version": "1.0",
   "manifest_version": 3
 }
@@ -114,7 +114,7 @@ For this quick start, the extension has a popup file and icon declared under the
 ```json/5-8
 {
   "name": "Hello Extensions",
-  "description" : "Base Level Extension",
+  "description": "Base Level Extension",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
@@ -141,7 +141,7 @@ necessary:
 ```json/9-17
 {
   "name": "Hello Extensions",
-  "description" : "Base Level Extension",
+  "description": "Base Level Extension",
   "version": "1.0",
   "manifest_version": 3,
   "action": {

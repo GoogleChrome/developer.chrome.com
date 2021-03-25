@@ -1,0 +1,68 @@
+// stylelint-disable selector-max-compound-selectors
+
+.details {
+  border: 1px solid var(--color-hairline);
+  border-width: 1px 0;
+  padding: calc(var(--flow-space) / 2) 0;
+  position: relative;
+}
+
+.details > summary {
+  cursor: pointer;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover .details__header > :first-child::after,
+  &:focus .details__header > :first-child::after {
+    background-color: var(--color-blue-lighter);
+    border: 1px solid  var(--color-blue-medium);
+  }
+}
+
+.details > summary > .details__header {
+  --chevron-size: 2rem;
+
+  padding-right: var(--chevron-size);
+  position: relative;
+
+  > :first-child {
+    color: var(--color-primary);
+    position: relative;
+  }
+
+  > :first-child::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'%3e%3cpath d='M0 0h24v24H0z' fill='none'/%3e%3cpath fill='%231a73e8' d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'/%3e%3c/svg%3e");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    content: '';
+    height: var(--chevron-size);
+    padding: 2px;
+    position: absolute;
+    right: calc(var(--chevron-size) - 2 * var(--chevron-size));
+    top: 50%;
+    transform: rotate(180deg) translateY(50%);
+    transition: background 0.2s;
+    vertical-align: middle;
+    width: var(--chevron-size);
+  }
+}
+
+.details[open] > summary > .details__header > :first-child::after {
+  transform: rotate(0deg) translateY(-50%);
+}
+
+// We generate clickable links for our markdown headings but if someone uses
+// a heading inside of a details shortcode then the link shows up on hover and
+// looks strange. This hides it.
+.details .heading-link {
+  display: none;
+}

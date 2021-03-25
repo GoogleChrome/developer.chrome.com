@@ -1,0 +1,22 @@
+- title: i18n.docs.android.customtabs
+  sections:
+    - url: /docs/android/custom-tabs/overview
+    - url: /docs/android/custom-tabs/integration-guide
+    - url: /docs/android/custom-tabs/best-practices
+    - url: /docs/android/custom-tabs/headers
+    - url: /docs/android/custom-tabs/low-level-api
+- title: i18n.docs.android.trustedwebactivity
+  sections:
+    - url: /docs/android/trusted-web-activity/overview
+    - url: /docs/android/trusted-web-activity/quick-start
+    - url: /docs/android/trusted-web-activity/integration-guide
+    - url: /docs/android/trusted-web-activity/lay-of-the-land
+    - url: /docs/android/trusted-web-activity/whats-new
+    - title: i18n.docs.android.howtos
+      sections:
+        - url: /docs/android/trusted-web-activity/multi-origin/
+        - url: /docs/android/trusted-web-activity/query-parameters/
+        - url: /docs/android/trusted-web-activity/android-browser-helper-migration/
+        - url: /docs/android/trusted-web-activity/web-share-target/
+        - url: /docs/android/trusted-web-activity/play-billing/
+        - url: /docs/android/trusted-web-activity/receive-payments-play-billing/

@@ -171,7 +171,7 @@ there's plenty more.
   you to control synchronous XHRs through an HTTP header or the
   iframe `allow` attribute.
 
-Be sure to check out [New in Chrome DevTools](https://developers.google.com/web/updates/2018/01/devtools),
+Be sure to check out [New in Chrome DevTools](/blog/new-in-devtools-65),
 to learn what's new in for DevTools in Chrome 65. And, if you're interested in
 Progressive Web Apps, check out the new
 [PWA Roadshow video series](https://www.youtube.com/playlist?list=PLNYkxOF6rcICnIOm4cfylT0-cEfytBtYt).

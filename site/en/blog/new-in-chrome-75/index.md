@@ -38,7 +38,7 @@ what's new for developers in Chrome 75!
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 75.
 
-* [What's new in Chrome DevTools (75)](https://developers.google.com/web/updates/2019/04/devtools)
+* [What's new in Chrome DevTools (75)](/blog/new-in-devtools-75)
 * [Chrome 75 deprecations & removals](https://developers.google.com/web/updates/2019/05/chrome-75-deps-rems)
 * [ChromeStatus.com updates for Chrome 75](https://www.chromestatus.com/features#milestone%3D75)
 * [What's new in JavaScript in Chrome 75](https://v8.dev/blog/v8-release-75)

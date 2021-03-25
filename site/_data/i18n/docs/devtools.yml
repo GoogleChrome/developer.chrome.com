@@ -1,0 +1,22 @@
+css:
+  en: 'CSS'
+console:
+  en: 'Console'
+network:
+  en: 'Network'
+storage:
+  en: 'Storage'
+mobile:
+  en: 'Mobile simulation'
+javascript:
+  en: 'JavaScript'
+performance:
+  en: 'Performance'
+accessibility:
+  en: 'Accessibility'
+memory:
+  en: 'Memory'
+customization:
+  en: 'Customization'
+remotedebug:
+  en: 'Remote debugging'

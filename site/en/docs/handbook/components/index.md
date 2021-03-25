@@ -5,6 +5,84 @@ date: 2021-01-12
 updated: 2021-01-27
 ---
 
+## Details
+
+Use a details section to hide extra information from the user until it's needed. It can have an optional preview.
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+A brief summary goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}
+
+The details shortcode also supports using headers in the summary.
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+### A normal heading goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+### A normal heading goes here
+{% endDetailsSummary %}
+
+The body of the Details component goes here, and **can** contain markdown.
+
+{% endDetails %}
+
+````md
+{% raw %}{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview. 
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}{% endraw %}
+````
+
+{% Details %}
+{% DetailsSummary %}
+### Details component summary
+This is an optional preview. 
+{% endDetailsSummary %}
+
+This is the body of the Details component.
+It **can** contain markdown.
+
+```js
+const bar = 'foo';
+console.log(bar);
+```
+{% endDetails %}
+
 ## Asides
 Use asides to provide information that's related to but distinct from the
 content in the body of the post or codelab. Asides should generally be short—no

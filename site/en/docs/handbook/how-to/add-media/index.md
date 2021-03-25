@@ -3,6 +3,7 @@ layout: 'layouts/doc-post.njk'
 title: Add an image or video
 description: 'Upload media to our CDN.'
 date: 2020-10-23
+updated: 2021-03-11
 ---
 
 ## Navigate to the media uploader
@@ -10,6 +11,12 @@ date: 2020-10-23
 Visit [the image uploader page](https://chrome-gcs-uploader.web.app/) and
 sign-in using your Google corporate account. Note that this page only allows
 Googlers access, so signing in with a personal account will fail.
+
+{% Aside 'caution' %}
+There are different uploaders for developer.chrome.com and web.dev:
+* [developer.chrome.com uploader](https://chrome-gcs-uploader.web.app/)
+* [web.dev uploader](https://web-dev-uploads.web.app/uploader)
+{% endAside %}
 
 ## Choose a file
 
