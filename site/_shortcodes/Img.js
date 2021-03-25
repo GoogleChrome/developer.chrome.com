@@ -50,22 +50,31 @@ const Img = function (args) {
     lazy = true;
   }
 
-  // https://docs.imgix.com/apis/rendering
-  params = {auto: 'format', ...params};
-  // https://github.com/imgix/imgix-core-js#imgixclientbuildsrcsetpath-params-options
-  options = {
-    minWidth: 200,
-    maxWidth: 1600,
-    widthTolerance: 0.07,
-    ...options,
-  };
+  let srcset = '';
 
-  const srcset = client.buildSrcSet(src, params, options);
-  if (sizes === undefined) {
-    if (widthAsNumber >= MAX_WIDTH) {
-      sizes = `(min-width: ${MAX_WIDTH}px) ${MAX_WIDTH}px, calc(100vw - 48px)`;
-    } else {
-      sizes = `(min-width: ${widthAsNumber}px) ${widthAsNumber}px, calc(100vw - 48px)`;
+  // If this is a SVG, then don't run imgix's rewrite path. As of March 2021, imgix won't render
+  // inline PNGs inside these SVGs, so many of devtools' images fail to display.
+  // In the long term, these should be replaced with pure PNGs so we can benefit from the CDN.
+  const isSvg = src.endsWith('.svg');
+  if (!isSvg) {
+    // https://docs.imgix.com/apis/rendering
+    params = {auto: 'format', ...params};
+
+    // https://github.com/imgix/imgix-core-js#imgixclientbuildsrcsetpath-params-options
+    const srcsetOptions = {
+      minWidth: 200,
+      maxWidth: 1600,
+      widthTolerance: 0.07,
+      ...options,
+    };
+
+    srcset = client.buildSrcSet(src, params, srcsetOptions);
+    if (sizes === undefined) {
+      if (widthAsNumber >= MAX_WIDTH) {
+        sizes = `(min-width: ${MAX_WIDTH}px) ${MAX_WIDTH}px, calc(100vw - 48px)`;
+      } else {
+        sizes = `(min-width: ${widthAsNumber}px) ${widthAsNumber}px, calc(100vw - 48px)`;
+      }
     }
   }
 
