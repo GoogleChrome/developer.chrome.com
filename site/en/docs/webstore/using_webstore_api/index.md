@@ -26,8 +26,7 @@ Developers Console][1].
 7.  Find the lines labeled **Client ID** and **Client secret**. Note that there may be a client ID
     without a client secret for use with Compute Engine and App Engine. In that case, create a new
     client ID and client secret.
-8.  To create the client ID and client secret, click on **Create New Client ID**, select **Installed
-    Application**, and **Other** under **Installed application type**.
+8.  To create the client ID and client secret, click on **CREATE CREDENTIALS**, select **OAuth client ID** and select **Desktop app** under **Application type**.
 9.  Get an access token:
 
 Once you have the client ID and client secret, you can retrieve an access token to work with the
