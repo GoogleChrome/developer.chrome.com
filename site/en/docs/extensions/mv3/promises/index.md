@@ -172,8 +172,8 @@ chrome.tabs.create({...})
   });
 ```
 
-Extensions APIs don't set `chrome.runtime.lastError` when you use a promise, instead returning the
-error as an argument to the function in the `.catch()`.
+Extensions APIs don't set `chrome.runtime.lastError` when you use a promise; instead they provide
+the error as an argument to the function in the `.catch()`.
 
 {% Aside %}
 In simpler cases with a single promise, you can instead supply your error handler as the second
