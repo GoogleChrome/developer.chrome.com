@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Find Unused JavaScript And CSS Code With The Coverage Tab In Chrome DevTools"
+title: "Find Unused JavaScript And CSS With The Coverage Tab"
 authors:
   - kaycebasques
 date: 2019-07-09
