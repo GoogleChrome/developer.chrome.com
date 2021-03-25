@@ -6,30 +6,95 @@ updated: 2021-03-12
 description: An overview of the purpose of Chrome Extensions and how they're developed.
 ---
 
-Extensions are small software programs that customize the browsing experience. They enable users to
-tailor Chrome functionality and behavior to individual needs or preferences. They are built on web
-technologies such as HTML, JavaScript, and CSS.
+This page provides a brief introduction to Chrome extensions and walks through the creation of a 
+"Hello, World!" extension.
 
-An extension must fulfill a [single purpose][1] that is narrowly defined and easy to understand. A
+
+## About extensions {: #intro }
+
+Extensions are small software programs that customize the browsing experience. They let users tailor
+Chrome functionality and behavior in many ways, providing things like:
+
+* Productivity tools
+* Web page content enrichment
+* Information aggregation
+* Fun and games
+
+These are just a few examples of the many things that extensions can do. See the [Chrome Web
+Store][cws] to see thousands of different examples of published extensions.
+
+### How do extensions work? {: #basics }
+
+Extensions are built on web technologies such as HTML, JavaScript, and CSS.  They run in a separate,
+sandboxed execution environment and interact with the Chrome browser.
+
+{# TODO: put a diagram here that is useful and helps with context #}
+{% if false %}
+
+Consider the context for this
+-- Chrome runs on a device, connecting the user to resources on the Web, as depicted in this context
+diagram:
+
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/5qVlqGn6vVMCWCSRclOY.png", alt="Context diagram of Chrome with an extension", width="517", height="476" %}
+
+Also shown in the diagram is an extension "plugged into" the Chrome browser. The extension can
+access and modify selected resources and actions in Chrome. There are two aspects to consider:
+{% endif %}
+
+Extensions let you "extend" the browser by using APIs to modify browser behavior and access web
+content. Extensions operate by means of an end-user UI and a developer API:
+
+**The extensions user interface**&emsp;This provides a consistent way for users to manage their
+extensions.
+
+**Extensions APIs**&emsp;The [extensions APIs](/docs/extensions/reference/) allow the extension's
+code to access features of the browser itself: activating tabs, modifying net requests, and so on.
+
+To create an extension, you assemble some resources -- a manifest, JavaScript and HTML files,
+images, and others -- that constitute the extension. For development and testing, you can load these
+"unpacked" into Chrome using [extension developer mode][devmode]. Once you are happy with your
+extension, you can [package it and distribute it to users][cws-publish].
+
+### How do users get extensions? {: #getting-extensions }
+
+Most Chrome users get extensions from the [Chrome Web Store][cws]. Developers across the globe
+publish their extensions in the Chrome Web Store where they are reviewed and made available to end
+users.
+
+{% Aside %}
+
+Some organizations use [enterprise policies] to install extensions on their user's devices. These
+extensions may either be fetched from the Chrome Web Store or hosted on the organization's web servers.
+{# TODO: See XXX for info on the capabilities and limitations of self hosting. #}
+
+{% endAside %}
+
+You can distribute your extensions through the [Chrome Developer Dashboard][dev-dashboard], publishing them to the [Chrome
+Web Store][cws]. For more information, see the Chrome Web Store [developer documentation][cws-docs].
+
+### A note about extensions policy {: #policy }
+
+Extensions on the Chrome Web Store must adhere to the [Chrome Web Store policies][cws-policies].
+Here are some things to keep in mind as you begin:
+
+* An extension must fulfill a [single purpose] that is narrowly defined and easy to understand. A
 single extension can include multiple components and a range of functionality, as long as everything
 contributes towards a common purpose.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/bk1NEBu7WXWCXfNJCsms.png",
-       alt="A screenshot of an extension's icon in the browser bar", height="35", width="91" %}
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/XniXB3snAeMvLwI1am3O.png", alt="Screenshot of AMP validator extension pinned", width="169", height="62" %}
 
-User interfaces should be minimal and have intent. They can range from a simple icon, such as the [Google
-Mail Checker extension][2] shown above, to [overriding][3] an entire page.
+* User interfaces should be minimal and have intent. They can range from a simple icon, such as the
+  [AMP validator][amp-validator] extension shown above, to opening a new window with a form, like
+the [Google Similar Pages][similar-pages-extension]
+  extension shown below.
 
-Extension files are zipped into a single `.crx` package that the user downloads and installs. This
-means extensions do not depend on content from the web, unlike ordinary web apps.
-
-Extensions are distributed through the [Chrome Developer Dashboard][4] and published to the [Chrome
-Web Store][5]. For more information, see the [store developer documentation][6].
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/oR9iCEgY2889Z3mHHLll.png", alt="Screenshot of Google
+Similar Pages extension", width="334", height="597" %}
 
 ## Hello extensions {: #hello-extensions }
 
 Take a small step into extensions with this quick Hello Extensions example. Start by creating a new
-directory to store the extension's files, or download them from the [sample page][7].
+directory to store the extension's files, or download them from the [sample page][hello-sample].
 
 Next, add a file called `manifest.json` and include the following code:
 
@@ -44,7 +109,7 @@ Next, add a file called `manifest.json` and include the following code:
 
 Every extension requires a manifest, though most extensions will not do much with just the manifest.
 For this quick start, the extension has a popup file and icon declared under the
-[`action`][8] field:
+[`action`][action-field] field:
 
 ```json/5-8
 {
@@ -59,7 +124,7 @@ For this quick start, the extension has a popup file and icon declared under the
 }
 ```
 
-Download [`hello_extensions.png` here][9] and then create a file titled `hello.html`:
+Download [`hello_extensions.png` here][hello-uploader] and then create a file titled `hello.html`:
 
 ```html
 <html>
@@ -109,21 +174,23 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 
 ## What next? {: #How-do-I-start }
 
-1.  Follow the [Getting Started tutorial][10]
-2.  Read the [Overview][11]
-3.  Keep up to date by reading the [Chromium blog][12]
-4.  Subscribe to the [chromium-extensions group][13]
+1.  Follow the [Getting Started tutorial][getstarted-tut]
+1.  Explore the [extension samples]
+1.  Subscribe to the [chromium-extensions Google group][crx-group]
 
-[1]: /docs/extensions/mv3/single_purpose
-[2]: /docs/extensions/mv3/samples#google-mail-checker
-[3]: /docs/extensions/mv3/override
-[4]: https://chrome.google.com/webstore/developer/dashboard
-[5]: https://chrome.google.com/webstore
-[6]: /docs/webstore
-[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/tutorials/hello-world
-[8]: /docs/extensions/reference/action
-[9]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
-[10]: /docs/extensions/mv3/getstarted
-[11]: /docs/extensions/mv3/overview
-[12]: https://blog.chromium.org/
-[13]: https://groups.google.com/a/chromium.org/group/chromium-extensions
+[amp-validator]: https://chrome.google.com/webstore/detail/amp-validator/nmoffdblmcmgeicmolmhobpoocbbmknc
+[action-field]: /docs/extensions/reference/action
+[crx-group]: http://groups.google.com/a/chromium.org/group/chromium-extensions
+[cws]: https://chrome.google.com/webstore
+[cws-docs]: /docs/webstore
+[cws-policies]: /docs/webstore/program_policies/
+[cws-publish]: /docs/webstore/publish/
+[devmode]: /docs/extensions/mv3/getstarted/#manifest
+[dev-dashboard]: https://chrome.google.com/webstore/devconsole
+[enterprise policies]: https://cloud.google.com/docs/chrome-enterprise/policies/
+[extension samples]: https://github.com/GoogleChrome/chrome-extensions-samples
+[getstarted-tut]: /docs/extensions/mv3/getstarted
+[hello-sample]: /docs/extensions/mv3/samples#search:hello
+[hello-uploader]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
+[similar-pages-extension]: https://chrome.google.com/webstore/detail/packagetrack-package-trac/hoipjclokbelgffomjhhiflphegpmlpe
+[single purpose]: /docs/extensions/mv3/single_purpose
