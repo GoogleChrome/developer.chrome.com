@@ -328,6 +328,7 @@
     },
     "country": "DE",
     "twitter": "jecelynyeen",
+    "homepage": "https://jec.fyi/",
     "github": "chybie",
     "email": "jec@google.com",
     "descriptions": {
@@ -455,5 +456,42 @@
       "en": "Software Development Intern working on Puppeteer"
     },
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pYrCz7DlWnk2k9Qz3nB7.jpg"
+  },
+  "mathiasbynens": {
+    "name": {
+      "given": "Mathias",
+      "family": "Bynens"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome DevTools"
+    },
+    "country": "DE",
+    "twitter": "mathias",
+    "github": "mathiasbynens",
+    "email": "mths@google.com",
+    "descriptions": {
+      "en": "JavaScript whisperer"
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/abpvpv7lyW7ECZNEJ7wb.jpg"
+  },
+  "jackfranklin": {
+    "name": {
+      "given": "Jack",
+      "family": "Franklin"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "UK",
+    "twitter": "jack_franklin",
+    "github": "jackfranklin",
+    "email": "jacktfranklin@chromium.org",
+    "homepage": "https://www.jackfranklin.co.uk/",
+    "descriptions": {
+      "en": "Googler building Chrome DevTools and Puppeteer and web tooling."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7EeikZvegS1VHqGHWPxW.jpg"
   }
 }
