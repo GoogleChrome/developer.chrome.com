@@ -17,12 +17,12 @@ tags:
 Federated Learning of Cohorts (FLoC) provides a privacy-preserving mechanism for interest-based ad 
 selection. As a user moves around the web, their browser uses the FLoC algorithm to work out its 
 "interest cohort", which will be the same for thousands of browsers with a similar recent browsing 
-history. The user’s browser is associated with one interest cohort at a time and recalculates its 
+history. The user's browser is associated with one interest cohort at a time and recalculates its 
 cohort periodically (currently once every seven days during this initial origin trial) on 
 the user's device, without sharing individual browsing data with the browser vendor or anyone else. 
 
 
-To find out more about FLoC, see [What is Federated Learning of Cohorts (FLoC)](http://web.dev/floc).
+To find out more about FLoC, see [What is Federated Learning of Cohorts (FLoC)](https://web.dev/floc).
 
 ## Take part in the origin trial
 
