@@ -508,5 +508,41 @@
       "en": "WebAssembly Developer Advocate at Google"
     },
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cyBZmbNjKjdMn930X8MD.jpg"
+  },
+  "sadym": {
+    "name": {
+      "given": "Maksim",
+      "family": "Sadym"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "DE",
+    "twitter": "maximsadym",
+    "github": "sadym-chromium",
+    "email": "sadym@chromium.org",
+    "descriptions": {
+      "en": "Googler working on Chrome DevTools."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PzmJZBgZBJ612Hy8QBSZ.jpg"
+  },
+  "orkon": {
+    "name": {
+      "given": "Alex",
+      "family": "Rudenko"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "DE",
+    "twitter": "orkon",
+    "github": "orkon",
+    "email": "alexrudenkoym@chromium.org",
+    "descriptions": {
+      "en": "Googler working on Chrome DevTools."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KMNWpnRJTP6eHJs1wEw2.jpg"
   }
 }
