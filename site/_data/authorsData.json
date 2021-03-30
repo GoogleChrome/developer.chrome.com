@@ -322,6 +322,17 @@
       "given": "Jecelyn",
       "family": "Yeen"
     },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "DE",
+    "twitter": "jecelynyeen",
+    "github": "chybie",
+    "email": "jec@google.com",
+    "descriptions": {
+      "en": "Developer advocate working on Chrome DevTools at Google."
+    },
     "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/4HPVWldl8gHYH8npWFHu.jpg"
   },
   "megginkearney": {
@@ -351,5 +362,55 @@
       "family": "Dutton"
     },
     "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/Oci8M3M98YmwQJGHkHS9.jpg"
+  },
+  "tvanderlippe": {
+    "name": {
+      "given": "Tim",
+      "family": "van der Lippe"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "UK",
+    "twitter": "timvdlippe",
+    "github": "timvdlippe",
+    "email": "tvanderlippe@google.com",
+    "descriptions": {
+      "en": "Software Engineer working on Chrome DevTools at Google."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/f3Wz3J7qXM06P764b15c.jpg"
+  },
+  "janscheffler": {
+    "name": {
+      "given": "Jan",
+      "family": "Scheffler"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome DevTools"
+    },
+    "email": "janscheffler@google.com",
+    "descriptions": {
+      "en": "Software Engineer working on Chrome DevTools at Google."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/RSAAD1CFd8fVEN9cErxn.jpg"
+  },
+  "sigurds": {
+    "name": {
+      "given": "Sigurd",
+      "family": "Schneider"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "DE",
+    "twitter": "sigurdschn",
+    "email": "sigurds@google.com",
+    "descriptions": {
+      "en": "Software Engineer working on Chrome DevTools at Google."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/kt0TRNu8iPYdgh9HGZMe.jpg"
   }
 }
