@@ -493,5 +493,20 @@
       "en": "Googler building Chrome DevTools and Puppeteer and web tooling."
     },
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7EeikZvegS1VHqGHWPxW.jpg"
+  },
+  "ingvarstepanyan": {
+    "name": {
+      "given": "Ingvar",
+      "family": "Stepanyan"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "UK",
+    "descriptions": {
+      "en": "WebAssembly Developer Advocate at Google"
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cyBZmbNjKjdMn930X8MD.jpg"
   }
 }
