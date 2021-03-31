@@ -10,7 +10,7 @@ hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YhoLsiCeOqeg8yGr0pXi.jpg'
 alt: >
   DevTools blog image
 tags:
-  - devtools-blog
+  - devtools-engineering
 ---
 
 ## Puppeteer and its approach to selectors {: .intro }

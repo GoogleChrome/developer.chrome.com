@@ -10,7 +10,7 @@ hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5sHOu8thiBSDQL68V9Ed.jpg'
 alt: >
   DevTools blog image
 tags:
-  - devtools-blog
+  - devtools-engineering
 ---
 
 As you might know, [Chrome DevTools](/docs/devtools/) is a web application written using HTML, CSS and JavaScript.

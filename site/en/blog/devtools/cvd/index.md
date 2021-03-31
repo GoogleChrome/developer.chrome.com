@@ -10,7 +10,7 @@ hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/A4BYzXsym40Ehje2Z7sx.jpg'
 alt: >
   DevTools blog image
 tags:
-  - devtools-blog
+  - devtools-engineering
 ---
 
 This article describes why and how we implemented color vision deficiency simulation in DevTools and the Blink Renderer.

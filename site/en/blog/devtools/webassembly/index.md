@@ -10,7 +10,7 @@ hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cuyrdAwj3IOp4rkKALdK.jpg'
 alt: >
   DevTools blog image
 tags:
-  - devtools-blog
+  - devtools-engineering
 ---
 
 {% YouTube id='VBMHswhun-s' %}

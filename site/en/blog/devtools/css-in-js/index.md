@@ -10,7 +10,7 @@ hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fD43v6RiVCDlmo3WhVPe.jpg'
 alt: >
   DevTools blog image
 tags:
-  - devtools-blog
+  - devtools-engineering
 ---
 
 This article talks about CSS-in-JS support in DevTools that landed since Chrome 85 and, in general, what we mean by CSS-in-JS and how it's different from regular CSS that has been supported by DevTools for a long time.
