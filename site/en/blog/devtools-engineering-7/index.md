@@ -29,7 +29,7 @@ source maps opens for us in the future:
 - Evaluating expressions in source languages
 - …and much more!
 
-Today, we’re excited to showcase the promised features come into life
+Today, we're excited to showcase the promised features come into life
 and the progress Emscripten and Chrome DevTools teams have made over
 this year, in particular, for C and C++ apps.
 
@@ -38,7 +38,7 @@ of the new experience, you need to use the latest version of all tools
 at your own risk, and if you run into any issues, please report them to
 [https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue](https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue).
 
-Let’s start with the same simple C example as the last time:
+Let's start with the same simple C example as the last time:
 
 ```c
 #include <stdlib.h>
@@ -69,12 +69,12 @@ example, with [serve](https://www.npmjs.com/package/serve)), and
 open it in the latest [Chrome
 Canary](https://www.google.com/chrome/canary/).
 
-This time we’ll also need a helper extension that integrates with Chrome
+This time we'll also need a helper extension that integrates with Chrome
 DevTools and helps it make sense of all the debugging information
 encoded in the WebAssembly file. Please install it by going to this
 link: [goo.gle/wasm-debugging-extension](https://goo.gle/wasm-debugging-extension)
 
-You’ll also want to enable WebAssembly debugging in the DevTools
+You'll also want to enable WebAssembly debugging in the DevTools
 **Experiments**. Open Chrome DevTools, click the gear (**⚙**) icon in
 the top right corner of DevTools pane, go to the **Experiments** panel
 and tick **WebAssembly Debugging: Enable DWARF support**.
@@ -82,7 +82,7 @@ and tick **WebAssembly Debugging: Enable DWARF support**.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/46kV95N1TrBgVm4RmcdG.png", alt="Experiments pane of the DevTools settings", width="800", height="325" %}
 
 When you close the **Settings**, DevTools will suggest to reload itself
-to apply settings, so let’s do just that. That’s it for the one-off
+to apply settings, so let's do just that. That's it for the one-off
 setup.
 
 Now we can go back to the **Sources** panel, enable **Pause on
@@ -101,15 +101,15 @@ the error, and can navigate to the original C line that invoked
 Now, if you look in the **Scope** view, you can see the original names
 and values of variables in the C/C++ code, and no longer have to figure
 out what mangled names like `$localN` mean and how they relate to the
-source code you’ve written.
+source code you've written.
 
 This applies not only to primitive values like integers, but to compound
 types like structures, classes, arrays, etc., too!
 
 ## Rich type support {: #rich-types }
 
-Let’s take a look at a more complicated example to show those. This
-time, we’ll draw a [Mandelbrot
+Let's take a look at a more complicated example to show those. This
+time, we'll draw a [Mandelbrot
 fractal](https://en.wikipedia.org/wiki/Mandelbrot_set) with the
 following C++ code:
 
@@ -166,16 +166,16 @@ int main() {
 }
 ```
 
-You can see that this application is still fairly small – it’s a single
-file containing 50 lines of code – but this time I’m also using some
+You can see that this application is still fairly small – it's a single
+file containing 50 lines of code – but this time I'm also using some
 external APIs, like [SDL
 library](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer) for
 graphics as well as [complex
 numbers](https://en.cppreference.com/w/cpp/numeric/complex) from the
 C++ standard library.
 
-I’m going to compile it with the same `-g` flag as above to include
-debug information, and also I’ll ask Emscripten to provide the SDL2
+I'm going to compile it with the same `-g` flag as above to include
+debug information, and also I'll ask Emscripten to provide the SDL2
 library and allow arbitrarily-sized memory:
 
 <pre class="devsite-terminal devsite-click-to-copy">
@@ -190,7 +190,7 @@ fractal shape with some random colors:
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nBKJpU8uQ8z3M2PbUzgO.png", alt="Demo page", width="800", height="441" %}
 
 When I open DevTools, once again, I can see the original C++ file. This
-time, however, we don’t have an error in the code (whew!), so let’s set
+time, however, we don't have an error in the code (whew!), so let's set
 some breakpoint at the beginning of our code instead.
 
 When we reload the page again, the debugger will pause right inside our
@@ -199,10 +199,10 @@ C++ source:
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/kWLHwNkx2qyKoEfc32T5.png", alt="DevTools paused on the `SDL_Init` call", width="800", height="325" %}
 
 We can already see all our variables on the right, but only `width`
-and `height` are initialized at the moment, so there isn’t much to
+and `height` are initialized at the moment, so there isn't much to
 inspect.
 
-Let’s set another breakpoint inside our main Mandelbrot loop, and resume
+Let's set another breakpoint inside our main Mandelbrot loop, and resume
 execution to skip a bit forward.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dYkxFRBTFC5xTCj6JYYj.png", alt="DevTools paused inside the nested loops", width="800", height="325" %}
@@ -221,7 +221,7 @@ yet supported.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/941JrBrs0T1fEv6YoLub.png", alt="Console panel showing the result of `palette[10].r`", width="800", height="325" %}
 
-Let’s resume execution a few times and we can see how the inner `x` is
+Let's resume execution a few times and we can see how the inner `x` is
 changing as well – either by looking in the **Scope** view again, adding
 the variable name to the watch list, evaluating it in the console, or by
 hovering over the variable in the source code:
@@ -234,27 +234,27 @@ other variables are changing too:
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SwpdTR1jGWJiYnncY7RM.png", alt="Tooltips and Scope view showing values of `color`, `point` and other variables", width="800", height="325" %}
 
 Okay, so this all works great when a debug information is available, but
-what if we want to debug a code that wasn’t built with the debugging
+what if we want to debug a code that wasn't built with the debugging
 options?
 
 ## Raw WebAssembly debugging {: #raw }
 
 For example, we asked Emscripten to provide a prebuilt SDL library for
 us, instead of compiling it ourselves from the source, so – at least
-currently – there’s no way for the debugger to find associated sources.
-Let’s step-in again to get into the `SDL_RenderDrawColor`:
+currently – there's no way for the debugger to find associated sources.
+Let's step-in again to get into the `SDL_RenderDrawColor`:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Jxpkixgqq4wighsvwZIg.png", alt="DevTools showing disassembly view of `mandelbrot.wasm`", width="800", height="325" %}
 
-We’re back to the raw WebAssembly debugging experience.
+We're back to the raw WebAssembly debugging experience.
 
-Now, it looks a bit scary and isn’t something most Web developers will
+Now, it looks a bit scary and isn't something most Web developers will
 ever need to deal with, but occasionally you might want to debug a
-library built without debug information – whether because it’s a
-3<sup>rd</sup>-party library you have no control over, or because you’re
+library built without debug information – whether because it's a
+3<sup>rd</sup>-party library you have no control over, or because you're
 running into one of those bugs that occurs only on production.
 
-To aid in those cases, we’ve made some improvements to the basic
+To aid in those cases, we've made some improvements to the basic
 debugging experience, too.
 
 First of all, if you used raw WebAssembly debugging before, you might
@@ -264,10 +264,10 @@ wasm-53834e3e-7` possibly corresponds to.
 
 ### New name generation scheme {: #names }
 
-We improved names in the disassembly view, too. Previously you’d see
+We improved names in the disassembly view, too. Previously you'd see
 just numeric indices, or, in case of functions, no name at all.
 
-Now we’re generating names similarly to other disassembly tools, by
+Now we're generating names similarly to other disassembly tools, by
 using hints from the [WebAssembly name
 section](https://webassembly.github.io/spec/core/appendix/custom.html#name-section),
 import/export paths and, finally, if everything else fails, generating
@@ -277,16 +277,16 @@ more readable stacktraces and disassembly.
 
 When there is no type information available, it might be hard to inspect
 any values besides the primitives – for example, pointers will show up
-as regular integers, with no way of knowing what’s stored behind them in
+as regular integers, with no way of knowing what's stored behind them in
 memory.
 
 ### Memory inspection {: #memory-inspector }
 
 Previously, you could only expand the WebAssembly memory object –
 represented by `env.memory` in the **Scope** view – to look up
-individual bytes. This worked in some trivial scenarios, but wasn’t
-particularly convenient to expand and didn’t allow to reinterpret data
-in formats other than byte values. We’ve added a new feature to help
+individual bytes. This worked in some trivial scenarios, but wasn't
+particularly convenient to expand and didn't allow to reinterpret data
+in formats other than byte values. We've added a new feature to help
 with this, too: a linear memory inspector.
 
 If you right-click on the `env.memory`, you should now see a new
@@ -307,9 +307,9 @@ different formats:
 
 When you open DevTools, WebAssembly code gets “tiered down” to an
 unoptimized version to enable debugging. This version is a lot slower,
-which means that you can’t rely on `console.time`, `performance.now`
+which means that you can't rely on `console.time`, `performance.now`
 and other methods of measuring speed of your code while DevTools are
-open, as the numbers you get won’t represent the real-world performance
+open, as the numbers you get won't represent the real-world performance
 at all.
 
 Instead, you should use the DevTools [Performance
@@ -322,7 +322,7 @@ detailed breakdown of the time spent in different functions:
 Alternatively, you can run your application with DevTools closed, and
 open them once finished to inspect the **Console**.
 
-We’ll be improving profiling scenarios in the future, but for now it’s a
+We'll be improving profiling scenarios in the future, but for now it's a
 caveat to be aware of. If you want to learn more about WebAssembly
 tiering scenarios, check out our docs on [WebAssembly compilation
 pipeline](https://v8.dev/docs/wasm-compilation-pipeline).
@@ -331,7 +331,7 @@ pipeline](https://v8.dev/docs/wasm-compilation-pipeline).
 
 When building in a Docker, virtual machine, or on a remote build server,
 you will likely run into situations where the paths to the source files
-used during the build don’t match the paths on your own filesystem where
+used during the build don't match the paths on your own filesystem where
 the Chrome DevTools are running. In this case, files will show up in the
 **Sources** panel but fail to load.
 
@@ -346,7 +346,7 @@ it back during debugging by specifying those paths as prefixes:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M9z9cm1piNiu02OUiWb8.png", alt="Options page of the C/C++ debugging extension", width="800", height="268" %}
 
-The first matched prefix “wins”. If you’re familiar with other C++
+The first matched prefix “wins”. If you're familiar with other C++
 debuggers, this option is similar to the `set substitute-path` command
 in GDB or a `target.source-map` setting in LLDB.
 
@@ -357,7 +357,7 @@ disabled. Optimizations might inline functions one into another, reorder
 code, or remove parts of the code altogether – and all of this has a
 chance to confuse the debugger and, consequently, you as the user.
 
-If you don’t mind a more limited debugging experience and still want to
+If you don't mind a more limited debugging experience and still want to
 debug an optimized build, then most of the optimizations will work as
 expected, except for function inlining. We plan to address the remaining
 issues in the future, but, for now, please use `-fno-inline` to
@@ -392,7 +392,7 @@ load it when you open DevTools.
 When combined with optimizations like described above, this feature can
 be even used to ship almost-optimized production builds of your
 application, and later debug them with a local side file. In this case,
-we’ll additionally need to override the stored URL to help the extension
+we'll additionally need to override the stored URL to help the extension
 find the side file, for example:
 
 <pre class="devsite-terminal devsite-click-to-copy">
@@ -411,7 +411,7 @@ powerful, debugger not only for JavaScript, but also for C and C++ apps,
 making it easier than ever to take apps, built in a variety of
 technologies and bring them to a shared, cross-platform Web.
 
-However, our journey is not over yet. Some of the things we’ll be
+However, our journey is not over yet. Some of the things we'll be
 working on from here on:
 
 - Cleaning up the rough edges in the debugging experience.

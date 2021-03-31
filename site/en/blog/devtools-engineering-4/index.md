@@ -96,10 +96,10 @@ The rest of this article dives into the details on how we implemented the Puppet
 As motivated above, we want to enable querying elements by their accessible name and role.
 These are properties of the [accessibility tree](https://chromium.googlesource.com/chromium/src/+/master/docs/accessibility/overview.md#concepts), a dual to the usual DOM tree, that is used by devices such as screen readers to show webpages.
 
-From looking at the specification for [computing the accessible name](https://w3c.github.io/accname/#mapping_additional_nd_te), it is clear that computing the name for an element is a non-trivial task, so from the beginning we decided that we wanted to reuse Chromium’s existing infrastructure for this.
+From looking at the specification for [computing the accessible name](https://w3c.github.io/accname/#mapping_additional_nd_te), it is clear that computing the name for an element is a non-trivial task, so from the beginning we decided that we wanted to reuse Chromium's existing infrastructure for this.
 
 ### How we approached implementing it
-Even limiting ourselves to using Chromium’s accessibility tree, there are quite a few ways that we could implement ARIA querying in Puppeteer. To see why, let’s first see how Puppeteer controls the browser.
+Even limiting ourselves to using Chromium's accessibility tree, there are quite a few ways that we could implement ARIA querying in Puppeteer. To see why, let's first see how Puppeteer controls the browser.
 
 The browser exposes a debugging interface via a protocol called the [Chrome DevTools Protocol (CDP)](https://chromedevtools.github.io/devtools-protocol/). This exposes functionality such as "reload the page" or "execute this piece of JavaScript in the page and hand back the result" via a language-agnostic interface.
 
@@ -161,5 +161,5 @@ As seen in the chart below, we tried quite a few approaches satisfying this inte
 ### Wrapping it all up {: .wrapping-up }
 Now, with the CDP endpoint in place, we implemented the query handler on [the Puppeteer side](https://github.com/puppeteer/puppeteer/issues/6307). The grunt of the work here was to restructure the query handling code to enable queries to resolve directly through CDP instead of querying through JavaScript evaluated in the page context.
 
-## What’s next? {: .whats-next }
+## What's next? {: .whats-next }
 The new `aria` handler shipped with [Puppeteer v5.4.0](https://github.com/puppeteer/puppeteer/releases/tag/v5.4.0) as a built-in query handler. We are looking forward to seeing how users adopt it into their test scripts, and we cannot wait to hear your ideas on how we can make this even more useful!

@@ -22,7 +22,7 @@ While researching the tools that DevTools already provides, we often found ourse
 
 😰 The console was full of warnings and error messages, that contained rather technical explanations and sometimes links to [chromestatus.com](https://chromestatus.com). All messages looked roughly equally important, making it hard to figure out **which to address first**. More importantly, the text was not linking to additional information inside DevTools, making it difficult to understand **what happened**. And finally, the messages often left it entirely to the web developer to figure out **how to fix the problem** or even learn about the technical context.
 
-If you also use the console for messages from your own application, you’ll sometimes have a hard time finding them between all the messages from the browser.
+If you also use the console for messages from your own application, you'll sometimes have a hard time finding them between all the messages from the browser.
 
 As well as humans, it's also difficult for automated processes to interact with console messages. For example, developers might use Chrome Headless and Puppeteer in a Continuous Integration/Continuous Deployment scenario. Because console messages are just strings, developers need to write regular expressions or some other parser to extract actionable information. 
 
@@ -77,7 +77,7 @@ The work here is especially challenging because of all the security implications
 
 ### In DevTools frontend
 
-[DevTools](https://github.com/ChromeDevTools/devtools-frontend) itself is a web application written in JavaScript and CSS. It’s a lot like many other web applications - except that it’s been around for more than 10 years. And of course its back-end is basically a direct communication channel to the browser: the Chrome DevTools Protocol.
+[DevTools](https://github.com/ChromeDevTools/devtools-frontend) itself is a web application written in JavaScript and CSS. It's a lot like many other web applications - except that it's been around for more than 10 years. And of course its back-end is basically a direct communication channel to the browser: the Chrome DevTools Protocol.
 
 For the Issues tab, we first thought about [user stories](https://docs.google.com/document/d/1F6R5Bpb3qHNzGPNBSXwEJ_eP8L-anIj0WinxOIyAh54/edit#heading=h.7xl44gtucf0p) and what developers would have to do to resolve an issue. Our ideas mostly evolved around having the Issues tab as a central starting point for investigations that linked people to the panels that show more detailed information. We decided to put the Issues tab with the other tabs at the bottom of DevTools so it can stay open while a developer interacts with another DevTools component, such as the Network or the Application panel.
 
