@@ -1,7 +1,7 @@
 ---
 title: "Puppetaria: accessibility-first Puppeteer scripts"
 description: >
-  Puppetaria: accessibility-first Puppeteer scripts. The Chrome DevTools engineering blog - by the developers who build the DevTools.
+  Puppetaria - accessibility-first Puppeteer scripts, allowing alternative query handler based on querying the accessibility tree rather than relying on CSS selectors.
 layout: "layouts/blog-post.njk"
 authors:
   - jobay

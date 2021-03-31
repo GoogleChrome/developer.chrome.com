@@ -1,7 +1,7 @@
 ---
 title: "DevTools architecture refresh: migrating to Web Components"
 description: >
-  How we migrate Chrome DevTools to Web Components. The Chrome DevTools engineering blog - by the developers who build the DevTools.
+  Why and how we migrate Chrome DevTools to Web Components.
 layout: "layouts/blog-post.njk"
 authors:
   - jackfranklin

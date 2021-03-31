@@ -1,7 +1,7 @@
 ---
 title: "DevTools architecture refresh: migrating to JavaScript modules"
 description: >
-  How we migrate Chrome DevTools to JavaScript modules. The Chrome DevTools engineering blog - by the developers who build the DevTools.
+  How we migrate Chrome DevTools to JavaScript modules.
 layout: "layouts/blog-post.njk"
 authors:
   - tvanderlippe

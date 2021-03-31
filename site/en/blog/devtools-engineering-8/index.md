@@ -1,7 +1,7 @@
 ---
 title: "Migrating Puppeteer to TypeScript"
 description: >
-  How we migrate Puppeteer to TypeScript. The Chrome DevTools engineering blog - by the developers who build the DevTools.
+  How we migrate Puppeteer to TypeScript.
 layout: "layouts/blog-post.njk"
 authors:
   - jackfranklin

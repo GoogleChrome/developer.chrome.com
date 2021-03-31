@@ -1,7 +1,7 @@
 ---
 title: "How we built the Chrome DevTools WebAuthn tab"
 description: >
-  How we built the Chrome DevTools WebAuthn tab. The Chrome DevTools engineering blog - by the developers who build the DevTools.
+  How we built the Chrome DevTools WebAuthn tab to allow developers emulate the authenticators, customize their capabilities, and inspect their states.
 layout: "layouts/blog-post.njk"
 authors:
   - fawazm

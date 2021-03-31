@@ -1,7 +1,7 @@
 ---
 title: "How we built the Chrome DevTools Issues tab"
 description: >
-  How we built the Chrome DevTools Issues tab. The Chrome DevTools engineering blog - by the developers who build the DevTools.
+  How we built the Chrome DevTools Issues tab to improve developer experience on issues discovery and solution.
 layout: "layouts/blog-post.njk"
 authors:
   - janscheffler

@@ -1,7 +1,7 @@
 ---
 title: "Improving DevTools startup time"
 description: >
-  Reduce DevTools performance overhead of message dispatch in the front-end. The Chrome DevTools engineering blog - by the developers who build the DevTools.
+  Reduce DevTools performance overhead of message dispatch in the front-end.
 layout: "layouts/blog-post.njk"
 authors:
   - sadym

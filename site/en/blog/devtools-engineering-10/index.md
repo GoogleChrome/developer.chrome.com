@@ -1,7 +1,7 @@
 ---
 title: "CSS-in-JS support in DevTools"
 description: >
-  How we support CSS-in-JS in DevTools and how it is different from regular CSS. The Chrome DevTools engineering blog - by the developers who build the DevTools.
+  How we support CSS-in-JS in DevTools and how it is different from regular CSS.
 layout: "layouts/blog-post.njk"
 authors:
   - orkon

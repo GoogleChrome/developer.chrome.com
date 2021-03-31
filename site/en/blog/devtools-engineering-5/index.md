@@ -1,7 +1,7 @@
 ---
 title: "Simulating color vision deficiencies in the Blink Renderer"
 description: >
-  Simulating color vision deficiencies in the Blink Renderer. The Chrome DevTools engineering blog - by the developers who build the DevTools.
+  Why and how we implemented color vision deficiency simulation in DevTools and the Blink Renderer.
 layout: "layouts/blog-post.njk"
 authors:
   - mathiasbynens
@@ -124,7 +124,7 @@ Anyway, we have this SVG filter, and we can now apply it to arbitrary elements o
 
 {% Glitch {
   id: 'color-vision-deficiencies',
-  height: 920
+  height: 900
 } %}
 
 If we wanted to, we could build our DevTools feature as follows: when the user emulates a vision deficiency in the DevTools UI, we inject the SVG filter into the inspected document, and then we apply the filter style on the root element. However, there are several problems with that approach:
