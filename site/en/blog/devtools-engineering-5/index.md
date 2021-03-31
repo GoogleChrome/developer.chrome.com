@@ -203,7 +203,7 @@ Hurrah, we no longer have to inject SVG into the document! That's already a lot 
 
 As it turns out, we don't actually need a file. We can encode the entire file within a URL by using a data URL. To make this happen, we literally take the contents of the SVG file we had before, add the `data:` prefix, configure the proper MIME type, and we've got ourselves a valid data URL that represents the very same SVG file:
 
-```
+```html
 data:image/svg+xml,
   <svg xmlns="http://www.w3.org/2000/svg">
     <filter id="deuteranopia">

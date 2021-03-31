@@ -50,7 +50,7 @@ For any individual JavaScript file our process was:
 
 Most of the work in these initial pull requests was to extract TypeScript interfaces for existing data structures. In the case of the [first pull request](https://github.com/puppeteer/puppeteer/pull/5595) that migrated `DeviceDescriptors.js` that we discussed previously, the code went from:
 
-```
+```js
 module.exports = [
   { 
     name: 'Pixel 4',
@@ -62,7 +62,7 @@ module.exports = [
 
 And became:
 
-```
+```ts
 interface Device {
   name: string,
   …

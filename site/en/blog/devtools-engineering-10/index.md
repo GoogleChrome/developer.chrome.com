@@ -76,7 +76,7 @@ So, to support editing of CSS-in-JS rules, we decided that the best solution wou
 
 The first step is to build the source text. The browser's style engine stores the CSS rules in the `CSSStyleSheet` class. That class is the one whose instances you can create from JavaScript as discussed previously. The code to build the source text is as follows:
 
-```
+```c
 String InspectorStyleSheet::CollectStyleSheetRules() {
   StringBuilder builder;
   for (unsigned i = 0; i < page_style_sheet_->length(); i++) {
@@ -89,7 +89,7 @@ String InspectorStyleSheet::CollectStyleSheetRules() {
 
 It iterates over the rules found in a CSSStyleSheet instance and builds a single string out of it. This method is invoked when an instance of InspectorStyleSheet class is created. The InspectorStyleSheet class wraps a CSSStyleSheet instance and extracts additional metadata that is required by DevTools:
 
-```
+```c
 void InspectorStyleSheet::UpdateText() {
   String text;
   bool success = InspectorStyleSheetText(&text);
@@ -108,7 +108,7 @@ In this snippet, we see `CSSOMStyleSheetText` that calls `CollectStyleSheetRules
 
 A special case is the stylesheets associated with a `<style>` tag that have been mutated using the CSSOM API. In this case, the stylesheet contains the source text and additional rules that are not present in the source. To handle this case, we introduce a method to merge those additional rules into the source text. Here, the order matters because CSS rules can be inserted in the middle of the original source text. For example, imagine that the original `<style>` element contained the following text:
 
-```
+```css
 /* comment */
 .rule1 {}
 .rule3 {}
@@ -117,7 +117,7 @@ A special case is the stylesheets associated with a `<style>` tag that have been
 Then the page inserted some new rules using the JS API producing the following order of rules:
 .rule0, .rule1, .rule2, .rule3, .rule4. The resulting source text after the merge operation should be as follows:
 
-```
+```css
 .rule0 {}
 /* comment */
 .rule1 {}
