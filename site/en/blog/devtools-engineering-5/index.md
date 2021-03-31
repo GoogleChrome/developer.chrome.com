@@ -49,7 +49,7 @@ In Puppeteer, [the new `page.emulateVisionDeficiency(type)` API](https://github.
 
 ## Color vision deficiencies {: #cvd }
 
-[Roughly 1 in 20 people](http://www.colourblindawareness.org/colour-blindness/) suffer from a color vision deficiency (also known as the less accurate term “color blindness”). Such impairments make it harder to tell different colors apart, which *can amplify contrast issues*.
+[Roughly 1 in 20 people](http://www.colourblindawareness.org/colour-blindness/) suffer from a color vision deficiency (also known as the less accurate term "color blindness"). Such impairments make it harder to tell different colors apart, which *can amplify contrast issues*.
 
 
 <figure>
@@ -158,7 +158,7 @@ Let's see how we can make this less intrusive. There's two parts to this solutio
 
 ### Avoiding the in-document SVG dependency
 
-Let's start with part 2: how can we avoid adding the SVG to the DOM? One idea is to move it to a separate SVG file. We can copy the `<svg>…</svg>` from the above HTML and save it as `filter.svg` — but we need to make some changes first! Inline SVG in HTML follows the HTML parsing rules. That means you can get away with things like [omitting quotes around attribute values in some cases](https://mathiasbynens.be/notes/unquoted-attribute-values). However, SVG in separate files is supposed to be valid XML — and XML parsing is way more strict than HTML. Here's our SVG-in-HTML snippet again:
+Let's start with part 2: how can we avoid adding the SVG to the DOM? One idea is to move it to a separate SVG file. We can copy the `<svg>…</svg>` from the above HTML and save it as `filter.svg`—but we need to make some changes first! Inline SVG in HTML follows the HTML parsing rules. That means you can get away with things like [omitting quotes around attribute values in some cases](https://mathiasbynens.be/notes/unquoted-attribute-values). However, SVG in separate files is supposed to be valid XML—and XML parsing is way more strict than HTML. Here's our SVG-in-HTML snippet again:
 
 ```html
 <svg>
@@ -187,7 +187,7 @@ To make this valid standalone SVG (and thus XML), we need to make some changes. 
 ``` -->
 <pre class="prettyprint"><code class="html"><span class="tag"><span class="tag">&lt;svg </span></span><mark><span class="atn"><span class="atn">xmlns</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"http://www.w3.org/2000/svg"</span></span></mark><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln"><br>&nbsp; </span></span><span class="tag"><span class="tag">&lt;filter</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">id</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"deuteranopia"</span></span><span class="tag"><span class="tag">&gt;</span></span><span class="pln"><span class="pln"><br>&nbsp; &nbsp; </span></span><span class="tag"><span class="tag">&lt;feColorMatrix</span></span><span class="pln"><span class="pln"> </span></span><span class="atn"><span class="atn">values</span></span><span class="pun"><span class="pun">=</span></span><span class="atv"><span class="atv">"0.367 &nbsp;0.861 -0.228 &nbsp;0.000 &nbsp;0.000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.280 &nbsp;0.673 &nbsp;0.047 &nbsp;0.000 &nbsp;0.000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -0.012 &nbsp;0.043 &nbsp;0.969 &nbsp;0.000 &nbsp;0.000<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0.000 &nbsp;0.000 &nbsp;0.000 &nbsp;1.000 &nbsp;0.000"</span></span><mark><span class="tag"><span class="tag"> /&gt;</span></span></mark><span class="pln"><span class="pln"><br>&nbsp; </span></span><span class="tag"><span class="tag">&lt;/filter&gt;</span></span><span class="pln"><span class="pln"><br></span></span><span class="tag"><span class="tag">&lt;/svg&gt;</span></span><span class="pln"><span class="pln"><br></span></span></code></pre>
 
-The first change is the XML namespace declaration at the top. The second addition is the so-called “solidus” — the slash that indicates the `<feColorMatrix>` tag both opens and closes the element. This last change is not actually necessary (we could just stick to the explicit `</feColorMatrix>` closing tag instead), but since both XML and SVG-in-HTML support this `/>` shorthand, we might as well make use of it.
+The first change is the XML namespace declaration at the top. The second addition is the so-called "solidus"—the slash that indicates the `<feColorMatrix>` tag both opens and closes the element. This last change is not actually necessary (we could just stick to the explicit `</feColorMatrix>` closing tag instead), but since both XML and SVG-in-HTML support this `/>` shorthand, we might as well make use of it.
 
 Anyway, with those changes, we can finally save this as a valid SVG file, and point to it from the CSS `filter` property value in our HTML document:
 
@@ -233,7 +233,7 @@ The benefit is that now, we no longer need to store the file anywhere, or load i
 </style>
 ```
 
-At the end of the URL, we still specify the ID of the filter we want to use, just like before. Note that there's no need to Base64-encode the SVG document in the URL — doing so would only hurt readability and increase file size. We added backslashes at the end of each line to ensure the newline characters in the data URL don't terminate the CSS string literal.
+At the end of the URL, we still specify the ID of the filter we want to use, just like before. Note that there's no need to Base64-encode the SVG document in the URL—doing so would only hurt readability and increase file size. We added backslashes at the end of each line to ensure the newline characters in the data URL don't terminate the CSS string literal.
 
 So far, we've only talked about how to simulate vision deficiencies using web technology. Interestingly, our final implementation in the Blink Renderer is actually quite similar. Here's [a C++ helper utility](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/css/vision_deficiency.cc;l=16-20;drc=25c9d397f8ece542feaf21ad680b71f161edf47b) we've added to create a data URL with a given filter definition, based on the same technique:
 
@@ -281,7 +281,7 @@ AtomicString CreateVisionDeficiencyFilterUrl(VisionDeficiency vision_deficiency)
 
 Note that this technique gives us access to the full power of SVG filters without having to re-implement anything or re-invent any wheels. We're implementing a Blink Renderer feature, but we're doing so by leveraging the Web Platform.
 
-Okay, so we've figured out how to construct SVG filters and turn them into data URLs that we can use within our CSS `filter` property value. Can you think of a problem with this technique? It turns out, we can't actually _rely_ on the data URL being loaded in all cases, since the target page might have [a `Content-Security-Policy`](https://developers.google.com/web/fundamentals/security/csp) that blocks data URLs. Our final Blink-level implementation takes special care to bypass CSP for these “internal” data URLs during loading.
+Okay, so we've figured out how to construct SVG filters and turn them into data URLs that we can use within our CSS `filter` property value. Can you think of a problem with this technique? It turns out, we can't actually _rely_ on the data URL being loaded in all cases, since the target page might have [a `Content-Security-Policy`](https://developers.google.com/web/fundamentals/security/csp) that blocks data URLs. Our final Blink-level implementation takes special care to bypass CSP for these "internal" data URLs during loading.
 
 Edge cases aside, we've made some good progress. Because we no longer depend on inline `<svg>` being present in the same document, we've effectively reduced our solution to just a single self-contained CSS `filter` property definition. Great! Now let's get rid of that too.
 
@@ -301,7 +301,7 @@ We still depend on this CSS `filter` property, which might override a `filter` i
 
 One idea that came up was to create a new Chrome-internal CSS property that behaves like `filter`, but has a different name, like `--internal-devtools-filter`. We could then add special logic to ensure this property never shows up in DevTools or in the computed styles in the DOM. We could even make sure it only works on the one element we need it for: the root element. However, this solution wouldn't be ideal: we'd be duplicating functionality that already exists with `filter`, and even if we try hard to hide this non-standard property, web developers could still find out about it and start using it, which would be bad for the Web Platform. We need some other way of applying a CSS style without it being observable in the DOM. Any ideas?
 
-The CSS spec has a section introducing the _visual formatting model_ it uses, and one of the key concepts there is [the *viewport*](https://drafts.csswg.org/css2/#viewport). This is the visual view through which users consult the web page. A closely related concept is [the _initial containing block_](https://drafts.csswg.org/css2/#initial-containing-block), which is kind of like a styleable viewport `<div>` that only exists at the spec level. The spec refers to this “viewport” concept all over the place. For example, you know how the browser shows scrollbars when the content doesn't fit? This is all defined in the CSS spec, based on this “viewport”.
+The CSS spec has a section introducing the _visual formatting model_ it uses, and one of the key concepts there is [the *viewport*](https://drafts.csswg.org/css2/#viewport). This is the visual view through which users consult the web page. A closely related concept is [the _initial containing block_](https://drafts.csswg.org/css2/#initial-containing-block), which is kind of like a styleable viewport `<div>` that only exists at the spec level. The spec refers to this "viewport" concept all over the place. For example, you know how the browser shows scrollbars when the content doesn't fit? This is all defined in the CSS spec, based on this "viewport".
 
 This `viewport` exists within the Blink Renderer as well, as an implementation detail. [Here's the code](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/css/resolver/style_resolver.cc;l=785-803;drc=2d1ab18ff3b5a4d3d1b92d75ab3aafedb78c9842) that applies the default viewport styles according to the spec:
 
@@ -320,7 +320,7 @@ scoped_refptr<ComputedStyle> StyleResolver::StyleForViewport() {
 }
 ```
 
-You don't need to understand C++ or the intricacies of Blink's Style engine to see that this code handles the viewport's (or more accurately: the initial containing block's) `z-index`, `display`, `position`, and `overflow`. Those are all concepts you might be familiar with from CSS! There's some other magic related to stacking contexts, which doesn't _directly_ translate to a CSS property, but overall you could think of this `viewport` object as something that can be styled using CSS from within Blink, just like a DOM element — except it's not part of the DOM.
+You don't need to understand C++ or the intricacies of Blink's Style engine to see that this code handles the viewport's (or more accurately: the initial containing block's) `z-index`, `display`, `position`, and `overflow`. Those are all concepts you might be familiar with from CSS! There's some other magic related to stacking contexts, which doesn't _directly_ translate to a CSS property, but overall you could think of this `viewport` object as something that can be styled using CSS from within Blink, just like a DOM element—except it's not part of the DOM.
 
 *This gives us exactly what we want!* We can apply our `filter` styles to the `viewport` object, which visually affects the rendering, without interfering with the observable page styles or the DOM in any way.
 

@@ -13,11 +13,11 @@ tags:
   - devtools-blog
 ---
 
-We're big fans of TypeScript on the DevTools team — so much so that new code in DevTools is being authored in it and we're in the middle of a big migration of the entire codebase to being type-checked by TypeScript. You can find out more about that migration in [our talk at Chrome Dev Summit 2020](https://youtu.be/BHogHiiyuQk). It therefore made perfect sense to look at migrating [Puppeteer's codebase](https://pptr.dev/) to TypeScript, too.
+We're big fans of TypeScript on the DevTools team—so much so that new code in DevTools is being authored in it and we're in the middle of a big migration of the entire codebase to being type-checked by TypeScript. You can find out more about that migration in [our talk at Chrome Dev Summit 2020](https://youtu.be/BHogHiiyuQk). It therefore made perfect sense to look at migrating [Puppeteer's codebase](https://pptr.dev/) to TypeScript, too.
 
 ## Planning the migration
 
-When planning how to migrate we wanted to be **able to make progress in small steps**. This keeps the overhead of the migration down — you're working only on a small part of the code at anyone time — and keeps the risk down, too. If anything goes wrong with one of the steps you can easily revert it. Puppeteer has a lot of users and a broken release would cause problems for lots of them, so it was vital that we kept the risk of breaking changes to a minimum.
+When planning how to migrate we wanted to be **able to make progress in small steps**. This keeps the overhead of the migration down—you're working only on a small part of the code at anyone time—and keeps the risk down, too. If anything goes wrong with one of the steps you can easily revert it. Puppeteer has a lot of users and a broken release would cause problems for lots of them, so it was vital that we kept the risk of breaking changes to a minimum.
 
 We were also fortunate that Puppeteer has a **robust set of unit tests** in place covering all of its functionality. This meant we could be confident that we weren't breaking code as we migrated, but also that we weren't introducing changes to our API. The goal of the migration was to complete it without any Puppeteer users even realising that we'd migrated, and the tests were a vital part of that strategy. If we hadn't had good test coverage, we would have added that before continuing with the migration.
 

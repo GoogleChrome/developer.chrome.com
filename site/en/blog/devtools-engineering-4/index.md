@@ -57,7 +57,7 @@ This is not news to test writers: Puppeteer users already attempt to pick select
 
 Puppeteer now ships with an **alternative query handler based on querying the accessibility tree rather than relying on CSS selectors**. The underlying philosophy here is that if the concrete element we want to select has not changed, then the corresponding accessibility node should not have changed either. 
 
-We name such selectors “[ARIA](https://w3c.github.io/aria/) selectors” and support querying for the computed accessible name and role of the accessibility tree. Compared to the CSS selectors, these properties are semantic in nature. They are not tied to syntactic properties of the DOM but instead descriptors for how the page is observed through assistive technologies such as screen readers.
+We name such selectors "[ARIA](https://w3c.github.io/aria/) selectors" and support querying for the computed accessible name and role of the accessibility tree. Compared to the CSS selectors, these properties are semantic in nature. They are not tied to syntactic properties of the DOM but instead descriptors for how the page is observed through assistive technologies such as screen readers.
 
 In the test script example above, we could instead use the selector `aria/Submit[role="button"]` to select the wanted button, where `Submit` refers to the accessible name of the element:
 

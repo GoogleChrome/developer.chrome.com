@@ -49,7 +49,7 @@ In DevTools, the most commonly used feature when dealing with CSS is the **Style
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Jy8q9gPbQknRturLyCsq.mp4", autoplay="true", muted="true", loop="true" %}
 
-Before last year, the support for CSS rules modified using CSSOM APIs was rather limited: **you could only see the applied rules but could not edit them.** The main goal we had last year was to allow editing of CSS-in-JS rules using the Styles pane. Sometimes we also call CSS-in-JS styles [“constructed”](https://developers.google.com/web/updates/2019/02/constructable-stylesheets) to indicate that they were constructed using Web APIs.
+Before last year, the support for CSS rules modified using CSSOM APIs was rather limited: **you could only see the applied rules but could not edit them.** The main goal we had last year was to allow editing of CSS-in-JS rules using the Styles pane. Sometimes we also call CSS-in-JS styles ["constructed"](https://developers.google.com/web/updates/2019/02/constructable-stylesheets) to indicate that they were constructed using Web APIs.
 
 Let's dive into the details of Styles editing works in DevTools.
 

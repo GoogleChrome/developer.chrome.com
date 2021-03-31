@@ -168,7 +168,7 @@ In the end, updating the very first folder to include `export`-statements [took 
 ### `import`-phase
 
 After all symbols are both exported using `export`-statements and remained on the global scope (legacy), we had to update all references to cross-file symbols to use ES imports.
-The end goal would be to remove all "legacy export objects”, cleaning up the global scope.
+The end goal would be to remove all "legacy export objects", cleaning up the global scope.
 The transformation would be automated, by [running a script per folder](https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/1958525).
 
 For example, for the following symbols that exist in the `module.json` world:

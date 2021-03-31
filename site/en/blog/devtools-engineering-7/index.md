@@ -210,7 +210,7 @@ execution to skip a bit forward.
 At this point our `palette` has been filled with some random colors,
 and we can expand both the array itself, as well as the individual
 `SDL_Color` structures and inspect their components to verify that
-everything looks good (for example, that “alpha” channel is always set
+everything looks good (for example, that "alpha" channel is always set
 to full opacity). Similarly, we can expand and check the real and
 imaginary parts of the complex number stored in the `center` variable.
 
@@ -305,7 +305,7 @@ different formats:
 
 ### Profiling WebAssembly code {: #profiling }
 
-When you open DevTools, WebAssembly code gets “tiered down” to an
+When you open DevTools, WebAssembly code gets "tiered down" to an
 unoptimized version to enable debugging. This version is a lot slower,
 which means that you can't rely on `console.time`, `performance.now`
 and other methods of measuring speed of your code while DevTools are
@@ -346,7 +346,7 @@ it back during debugging by specifying those paths as prefixes:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M9z9cm1piNiu02OUiWb8.png", alt="Options page of the C/C++ debugging extension", width="800", height="268" %}
 
-The first matched prefix “wins”. If you're familiar with other C++
+The first matched prefix "wins". If you're familiar with other C++
 debuggers, this option is similar to the `set substitute-path` command
 in GDB or a `target.source-map` setting in LLDB.
 
