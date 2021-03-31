@@ -166,8 +166,8 @@ int main() {
 }
 ```
 
-You can see that this application is still fairly small – it's a single
-file containing 50 lines of code – but this time I'm also using some
+You can see that this application is still fairly small-it's a single
+file containing 50 lines of code-but this time I'm also using some
 external APIs, like [SDL
 library](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer) for
 graphics as well as [complex
@@ -222,7 +222,7 @@ yet supported.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/941JrBrs0T1fEv6YoLub.png", alt="Console panel showing the result of `palette[10].r`", width="800", height="325" %}
 
 Let's resume execution a few times and we can see how the inner `x` is
-changing as well – either by looking in the **Scope** view again, adding
+changing as well-either by looking in the **Scope** view again, adding
 the variable name to the watch list, evaluating it in the console, or by
 hovering over the variable in the source code:
 
@@ -240,8 +240,8 @@ options?
 ## Raw WebAssembly debugging {: #raw }
 
 For example, we asked Emscripten to provide a prebuilt SDL library for
-us, instead of compiling it ourselves from the source, so – at least
-currently – there's no way for the debugger to find associated sources.
+us, instead of compiling it ourselves from the source, so-at least
+currently-there's no way for the debugger to find associated sources.
 Let's step-in again to get into the `SDL_RenderDrawColor`:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Jxpkixgqq4wighsvwZIg.png", alt="DevTools showing disassembly view of `mandelbrot.wasm`", width="800", height="325" %}
@@ -250,7 +250,7 @@ We're back to the raw WebAssembly debugging experience.
 
 Now, it looks a bit scary and isn't something most Web developers will
 ever need to deal with, but occasionally you might want to debug a
-library built without debug information – whether because it's a
+library built without debug information-whether because it's a
 3<sup>rd</sup>-party library you have no control over, or because you're
 running into one of those bugs that occurs only on production.
 
@@ -258,7 +258,7 @@ To aid in those cases, we've made some improvements to the basic
 debugging experience, too.
 
 First of all, if you used raw WebAssembly debugging before, you might
-notice that the entire disassembly is now shown in a single file – no
+notice that the entire disassembly is now shown in a single file-no
 more guessing which function a **Sources** entry `wasm-53834e3e/
 wasm-53834e3e-7` possibly corresponds to.
 
@@ -276,14 +276,14 @@ see how, in the screenshot above, this already helps to get slightly
 more readable stacktraces and disassembly.
 
 When there is no type information available, it might be hard to inspect
-any values besides the primitives – for example, pointers will show up
+any values besides the primitives-for example, pointers will show up
 as regular integers, with no way of knowing what's stored behind them in
 memory.
 
 ### Memory inspection {: #memory-inspector }
 
 Previously, you could only expand the WebAssembly memory object –
-represented by `env.memory` in the **Scope** view – to look up
+represented by `env.memory` in the **Scope** view-to look up
 individual bytes. This worked in some trivial scenarios, but wasn't
 particularly convenient to expand and didn't allow to reinterpret data
 in formats other than byte values. We've added a new feature to help
@@ -354,7 +354,7 @@ in GDB or a `target.source-map` setting in LLDB.
 
 Like with any other languages, debugging works best if optimizations are
 disabled. Optimizations might inline functions one into another, reorder
-code, or remove parts of the code altogether – and all of this has a
+code, or remove parts of the code altogether-and all of this has a
 chance to confuse the debugger and, consequently, you as the user.
 
 If you don't mind a more limited debugging experience and still want to
@@ -371,7 +371,7 @@ emcc -g temp.c -o temp.html \
 ### Separating the debug information {: #separate-dwarf }
 
 Debug information preserves lots of details about your code, defined
-types, variables, functions, scopes, and locations – anything that might
+types, variables, functions, scopes, and locations-anything that might
 be useful to the debugger. As a result, it often can be larger than the
 code itself.
 
