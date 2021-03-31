@@ -13,7 +13,7 @@ tags:
   - devtools-blog
 ---
 
-As you might know, [Chrome DevTools](/web/tools/chrome-devtools) is a web application written using HTML, CSS and JavaScript.
+As you might know, [Chrome DevTools](/docs/devtools/) is a web application written using HTML, CSS and JavaScript.
 Over the years, DevTools has gotten more feature-rich, smarter and knowledgeable about the broader web platform. 
 While DevTools has expanded over the years, its architecture largely resembles the original architecture when it was still part of [WebKit](https://webkit.org/web-inspector/).
 

@@ -21,7 +21,7 @@ While DevTools is starting up, it needs to make some calls to the [V8 JavaScript
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Cj4F4MSl0yvhWmELEHIQ.svg", alt="DevTools starting up process", width="800", height="240" %}
 
-The mechanism Chromium uses to send DevTools commands to V8 (and for IPC in general) is called [`mojo`](https://chromium.googlesource.com/chromium/src/+/master/mojo/README.md). My teammates [Benedikt Meurer](https://twitter.com/bmeurer) and [Sigurd Schneider](/web/resources/contributors#sigurd-schneider) discovered an inefficiency while working on another task, and came up with an idea to improve the process by removing two redundant steps in how these messages are sent and received.
+The mechanism Chromium uses to send DevTools commands to V8 (and for IPC in general) is called [`mojo`](https://chromium.googlesource.com/chromium/src/+/master/mojo/README.md). My teammates [Benedikt Meurer](https://twitter.com/bmeurer) and [Sigurd Schneider](https://twitter.com/sigurdschn) discovered an inefficiency while working on another task, and came up with an idea to improve the process by removing two redundant steps in how these messages are sent and received.
 
 Let us dive into how the `mojo` mechanism works!
 
@@ -72,38 +72,38 @@ Based on these experiments, DevTools opens **~13% faster (from 11.2s down to 10s
 <tbody>
   <tr>
   <td><strong>Total</strong></td>
-  <td><strong>11,213.19</strong></td>
-  <td><strong>9,953.99</strong></td>
-  <td><strong>-1,259.20</strong></td>
-  <td><strong>12.65%</strong></td>
+  <td style="text-align: right;"><strong>11,213.19</strong></td>
+  <td style="text-align: right;"><strong>9,953.99</strong></td>
+  <td style="text-align: right;"><strong>-1,259.20</strong></td>
+  <td style="text-align: right;"><strong>12.65%</strong></td>
   </tr>
   <tr>
   <td>v8.run</td>
-  <td>499.67</td>
-  <td>3.61</td>
-  <td>-496.06</td>
-  <td>12.65%</td>
+  <td style="text-align: right;">499.67</td>
+  <td style="text-align: right;">3.61</td>
+  <td style="text-align: right;">-496.06</td>
+  <td style="text-align: right;">12.65%</td>
   </tr>
   <tr>
   <td>V8.Execute</td>
-  <td>1,654.87</td>
-  <td>1,349.61</td>
-  <td>-305.25</td>
-  <td>3.07%</td>
+  <td style="text-align: right;">1,654.87</td>
+  <td style="text-align: right;">1,349.61</td>
+  <td style="text-align: right;">-305.25</td>
+  <td style="text-align: right;">3.07%</td>
   </tr>
   <tr>
   <td>v8.callFunction</td>
-  <td>1,171.84</td>
-  <td>1,339.77</td>
-  <td>167.94</td>
-  <td>-1.69%</td>
+  <td style="text-align: right;">1,171.84</td>
+  <td style="text-align: right;">1,339.77</td>
+  <td style="text-align: right;">167.94</td>
+  <td style="text-align: right;">-1.69%</td>
   </tr>
   <tr>
   <td>v8.compile</td>
-  <td>133.93</td>
-  <td>3.56</td>
-  <td>-130.37</td>
-  <td>1.31%</td>
+  <td style="text-align: right;">133.93</td>
+  <td style="text-align: right;">3.56</td>
+  <td style="text-align: right;">-130.37</td>
+  <td style="text-align: right;">1.31%</td>
   </tr>
 </tbody>
 </table>

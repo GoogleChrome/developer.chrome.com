@@ -17,7 +17,7 @@ tags:
 
 ## The road so far {: #past }
 
-A year ago, Chrome [announced initial support](/web/updates/2019/12/webassembly)
+A year ago, Chrome [announced initial support](https://developers.google.com/web/updates/2019/12/webassembly)
 for native WebAssembly debugging in Chrome DevTools.
 
 We demonstrated basic stepping support and talked about opportunities
@@ -313,7 +313,7 @@ open, as the numbers you get won’t represent the real-world performance
 at all.
 
 Instead, you should use the DevTools [Performance
-panel](/web/tools/chrome-devtools/evaluate-performance/reference)
+panel](/docs/devtools/evaluate-performance/reference/)
 which will run the code at the full speed and provide you with a
 detailed breakdown of the time spent in different functions:
 
@@ -417,8 +417,8 @@ working on from here on:
 - Cleaning up the rough edges in the debugging experience.
 - Adding support for custom type formatters.
 - Working on improvements to the
-  [profiling](/web/tools/chrome-devtools/evaluate-performance/reference) for WebAssembly apps.
-- Adding support for [code coverage](/web/tools/chrome-devtools/coverage) to make it easier to find
+  [profiling](/docs/devtools/evaluate-performance/reference/) for WebAssembly apps.
+- Adding support for [code coverage](/docs/devtools/coverage) to make it easier to find
   unused code.
 - Improving support for expressions in console evaluation.
 - Adding support for more languages.

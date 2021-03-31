@@ -15,7 +15,10 @@ tags:
 
 This article describes why and how we implemented color vision deficiency simulation in DevTools and the Blink Renderer.
 
+{% Aside %}
 Note: If you prefer watching a presentation over reading articles, then enjoy the video below! If not, skip the video and read on.
+{% endAside %}
+
 
 {% YouTube id='34iDTeCNTz4' %}
 
@@ -32,13 +35,13 @@ According to [WebAIM’s accessibility analysis of the top 1-million websites](h
 
 Chrome DevTools can help developers and designers to improve contrast and to pick more accessible color schemes for web apps:
 
-- The Inspect Mode tooltip that appears on top of the web page [shows the contrast ratio](/web/updates/2020/05/devtools#a11y) for text elements.
-- The DevTools color picker [calls out bad contrast ratios](/web/updates/2018/01/devtools#contrast) for text elements, [shows the recommended contrast line](/web/updates/2019/01/devtools#AAA) to help manually select better colors, and can even [suggest accessible colors](/web/updates/2020/08/devtools#accessible-color).
-- Both [the CSS Overview panel](/web/updates/2020/10/devtools#css-overview) and [the Lighthouse Accessibility audit report](https://web.dev/color-contrast/) lists low-contrast text elements as found on your page.
+- The Inspect Mode tooltip that appears on top of the web page [shows the contrast ratio](/blog/new-in-devtools-84#a11y) for text elements.
+- The DevTools color picker [calls out bad contrast ratios](/blog/new-in-devtools-65#contrast) for text elements, [shows the recommended contrast line](/blog/new-in-devtools-73#AAA) to help manually select better colors, and can even [suggest accessible colors](/blog/new-in-devtools-86#accessible-color).
+- Both [the CSS Overview panel](/blog/new-in-devtools-87#css-overview) and [the Lighthouse Accessibility audit report](https://web.dev/color-contrast/) lists low-contrast text elements as found on your page.
 
 {% YouTube id='Mje2wYgPYP0' %}
 
-We’ve recently added a new tool to this list, and it’s a bit different from the others. The above tools mainly focus on *surfacing contrast ratio information* and giving you options to *fix* it. We realized that DevTools was still missing a way for developers to get a deeper *understanding* of this problem space. To address this, we implemented [vision deficiency simulation](/web/updates/2020/03/devtools#vision-deficiencies) in the DevTools Rendering tab.
+We’ve recently added a new tool to this list, and it’s a bit different from the others. The above tools mainly focus on *surfacing contrast ratio information* and giving you options to *fix* it. We realized that DevTools was still missing a way for developers to get a deeper *understanding* of this problem space. To address this, we implemented [vision deficiency simulation](/blog/new-in-devtools-83/#vision-deficiencies) in the DevTools Rendering tab.
 
 {% YouTube id='mK_XmFb8E_w' %}
 
@@ -119,7 +122,10 @@ You might be wondering where the exact numbers in our example come from. What ma
 
 Anyway, we have this SVG filter, and we can now apply it to arbitrary elements on the page using CSS. We can repeat the same pattern for other vision deficiencies. Here’s a demo of what that looks like:
 
-<!-- TODO: framebox -->
+{% Glitch {
+  id: 'color-vision-deficiencies',
+  height: 920
+} %}
 
 If we wanted to, we could build our DevTools feature as follows: when the user emulates a vision deficiency in the DevTools UI, we inject the SVG filter into the inspected document, and then we apply the filter style on the root element. However, there are several problems with that approach:
 
@@ -275,7 +281,7 @@ AtomicString CreateVisionDeficiencyFilterUrl(VisionDeficiency vision_deficiency)
 
 Note that this technique gives us access to the full power of SVG filters without having to re-implement anything or re-invent any wheels. We’re implementing a Blink Renderer feature, but we’re doing so by leveraging the Web Platform.
 
-Okay, so we’ve figured out how to construct SVG filters and turn them into data URLs that we can use within our CSS `filter` property value. Can you think of a problem with this technique? It turns out, we can’t actually _rely_ on the data URL being loaded in all cases, since the target page might have [a `Content-Security-Policy`](/web/fundamentals/security/csp) that blocks data URLs. Our final Blink-level implementation takes special care to bypass CSP for these “internal” data URLs during loading.
+Okay, so we’ve figured out how to construct SVG filters and turn them into data URLs that we can use within our CSS `filter` property value. Can you think of a problem with this technique? It turns out, we can’t actually _rely_ on the data URL being loaded in all cases, since the target page might have [a `Content-Security-Policy`](https://developers.google.com/web/fundamentals/security/csp) that blocks data URLs. Our final Blink-level implementation takes special care to bypass CSP for these “internal” data URLs during loading.
 
 Edge cases aside, we’ve made some good progress. Because we no longer depend on inline `<svg>` being present in the same document, we’ve effectively reduced our solution to just a single self-contained CSS `filter` property definition. Great! Now let’s get rid of that too.
 
