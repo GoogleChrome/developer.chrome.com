@@ -282,8 +282,7 @@ memory.
 
 ### Memory inspection {: #memory-inspector }
 
-Previously, you could only expand the WebAssembly memory object –
-represented by `env.memory` in the **Scope** view-to look up
+Previously, you could only expand the WebAssembly memory object, represented by `env.memory` in the **Scope** view-to look up
 individual bytes. This worked in some trivial scenarios, but wasn't
 particularly convenient to expand and didn't allow to reinterpret data
 in formats other than byte values. We've added a new feature to help
