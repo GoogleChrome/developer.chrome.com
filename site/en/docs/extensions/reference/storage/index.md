@@ -5,22 +5,23 @@ api: storage
 ## Overview
 
 This API has been optimized to meet the specific storage needs of extensions. It provides the same
-storage capabilities as the [localStorage API][1] with the following key differences:
+storage capabilities as the [localStorage API][localStorage] with the following key differences:
 
 - User data can be automatically synced with Chrome sync (using `storage.sync`).
 - Your extension's content scripts can directly access user data without the need for a background
   page.
-- A user's extension settings can be persisted even when using [split incognito behavior][2].
+- A user's extension settings can be persisted even when using [split incognito
+  behavior][incognito].
 - It's asynchronous with bulk read and write operations, and therefore faster than the blocking and
   serial `localStorage API`.
 - User data can be stored as objects (the `localStorage API` stores data in strings).
 - Enterprise policies configured by the administrator for the extension can be read (using
-  `storage.managed` with a [schema][3]).
+  `storage.managed` with a [schema][api-storage]).
 
 ## Manifest
 
-You must declare the "storage" permission in the [extension manifest][4] to use the storage API. For
-example:
+You must declare the "storage" permission in the [extension manifest][api-tabs] to use the storage
+API. For example:
 
 ```json
 {
@@ -81,7 +82,7 @@ tubes can be filled, and if they are filled when you put your message in, it get
 going to be delayed by anyone that puts into that tube enormous amounts of material.
 
 For details on the current limits of the storage API, and what happens when those limits are
-exceeded, please see the quota information for [sync][5] and [local][6].
+exceeded, please see the quota information for [sync][prop-sync] and [local][prop-local].
 
 ## Examples
 
@@ -110,21 +111,17 @@ listen for saved changes:
 
 ```js
 chrome.storage.onChanged.addListener(function(changes, namespace) {
-  for (var key in changes) {
-    var storageChange = changes[key];
-    console.log('Storage key "%s" in namespace "%s" changed. ' +
-                'Old value was "%s", new value is "%s".',
-                key,
-                namespace,
-                storageChange.oldValue,
-                storageChange.newValue);
+  for (let [key, {oldValue, newValue}] of Object.entries(changes)) {
+    let message = `Storage key "${key}" in namespace "${namespace}" changed. ` +
+                  `Old value was "${oldValue}", new value is "${newValue}".`);
+    console.log(message);
   }
 });
 ```
 
-[1]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-[2]: /docs/extensions/mv2/manifest/incognito
-[3]: /docs/extensions/mv2/manifest/storage
-[4]: /docs/extensions/mv2/tabs
-[5]: #property-sync
-[6]: #property-local
+[api-storage]: /docs/extensions/mv2/manifest/storage
+[api-tabs]: /docs/extensions/mv2/tabs
+[incognito]: /docs/extensions/mv2/manifest/incognito
+[localStorage]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[prop-local]: #property-local
+[prop-sync]: #property-sync
