@@ -64,7 +64,7 @@ The key proposals are listed below.
 ### Measurement and attribution
 {% endDetailsSummary %}
 
-* [Event Attribution Reporting](/docs/privacy-sandbox/event-attribution-reporting): Attribute ad 
+* [Event Attribution Reporting](/docs/privacy-sandbox/attribution-reporting): Attribute ad 
 clicks and ad views. Previously known as the Event Conversion Measurement API.
 * [Aggregation Reporting](https://github.com/csharrison/aggregate-reporting-api): Measure the reach 
 of a particular ad campaign (how many distinct users saw the ad) by collapsing information across 

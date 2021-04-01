@@ -71,7 +71,7 @@ From Chrome 90, DevTools enables [trust token
 inspection](https://developers.google.com/web/updates/2021/01/devtools#trust-token) from the Network
 and Application tabs. 
 
-## Event Attribution Reporting
+## Attribution Reporting
 
 ### Is this the same as the Event Conversion Measurement API?
 
@@ -84,7 +84,7 @@ iterations.
 
 ### How does it work?
 
-See [Event Attribution Reporting](/docs/privacy-sandbox/event-attribution-reporting).
+See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting).
 
 ### What about view-through conversions?
 
@@ -94,7 +94,7 @@ privacy-preserving way. This is an active area of work; you can read more about 
 considerations in the [API
 proposal](https://github.com/WICG/conversion-measurement-api#privacy-considerations).
 
-### How does Event Attribution Reporting API compare to third-party cookies?
+### How does Attribution Reporting API compare to third-party cookies?
 
 +   Purpose-built to attribute conversions, unlike cookies. This in turn can enable browsers
     to apply more enhanced privacy protections.
@@ -102,7 +102,7 @@ proposal](https://github.com/WICG/conversion-measurement-api#privacy-considerati
     sites, for example to link publisher-side and advertiser-side user profiles. See how in
     [How this API preserves user privacy](https://web.dev/conversion-measurement/#how-this-api-preserves-user-privacy).
 
-### What kind of businesses might benefit from the Event Attribution Reporting API?
+### What kind of businesses might benefit from the Attribution Reporting API?
 
 Businesses that are using third-party cookies today to attribute conversions should benefit from the
 API.  
@@ -119,9 +119,9 @@ More specifically:
 For more information see
 [A more private way to measure ad conversions](https://web.dev/conversion-measurement/#who-needs-to-know-about-this-api:-adtech-platforms-advertisers-and-publishers).
 
-### Can affiliate service providers continue their business using the Event Attribution Reporting API?
+### Can affiliate service providers continue their business using the Attribution Reporting API?
 
-Yes. The Event Attribution Reporting API makes it possible to attribute conversions without
+Yes. The Attribution Reporting API makes it possible to attribute conversions without
 third-party cookies.   
 If you're using third-party cookies, we encourage you to try out the API: 
 

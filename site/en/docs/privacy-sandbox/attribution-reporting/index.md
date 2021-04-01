@@ -1,10 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Event Attribution Reporting'
+title: 'Attribution Reporting'
 subhead: >
   Measure when an ad click leads to a conversion, without using cross-site identifiers.
 description: >
-  The Event Attribution Reporting API enables the correlation of an event on a publisher's website with a subsequent conversion on an advertiser site without involving mechanisms that can be used to recognize a user across sites.
+  The Attribution Reporting API enables the correlation of an event on a publisher's website with a subsequent conversion on an advertiser site without involving mechanisms that can be used to recognize a user across sites.
 date: 2021-03-02
 updated: 2021-03-02
 authors:
@@ -19,7 +19,7 @@ This document is a work in progress, unfinished and not to be shared externally.
 {% endAside %}
 
 {% Aside 'caution' %}
-The Event Attribution Reporting API was previously known as the Event Conversion Measurement API.
+The Attribution Reporting API was previously known as the Event Conversion Measurement API.
 {% endAside %}
 
 
@@ -78,7 +78,7 @@ and Edge [offers tracking prevention](https://support.microsoft.com/en-us/help/4
 Third-party cookies are becoming a legacy solution. **New purpose-built APIs are emerging** to
 address in a privacy-preserving way the use cases that third-party cookies solved. To name a few:
 
-* Event Attribution Reporting helps measure click-through conversions for now, and maybe
+* Attribution Reporting helps measure click-through conversions for now, and maybe
   view-through conversions in future iterations.
 * [Aggregate Conversion Measurement](https://github.com/WICG/conversion-measurement-api/blob/master/AGGREGATE.md) 
 provides rich reports to advertisers by [aggregating conversions from multiple
@@ -87,7 +87,7 @@ provides rich reports to advertisers by [aggregating conversions from multiple
 to another, to help combat fraud and distinguish bots from humans.
 
 {% Aside %}
-**How does the Event Attribution Reporting API compare to third-party cookies?**
+**How does the Attribution Reporting API compare to third-party cookies?**
 
 * It's **purpose-built** to measure conversions, unlike cookies. This in turn can enable browsers to
   apply more enhanced privacy protections.
@@ -103,7 +103,7 @@ In order to measure the effectiveness of ad campaigns, advertisers and publisher
 an ad click or view leads to a conversion, such as a purchase or sign-up. Historically this has been 
 done with third-party cookies, but browsers are restricting access to these.
 
-The Event Attribution Reporting API enables correlation of an event on a publisher's website (such 
+The Attribution Reporting API enables correlation of an event on a publisher's website (such 
 as a user clicking on an ad) to be correlated with a subsequent conversion on an advertiser 
 site—without involving mechanisms that can be used to recognize a user across sites.
 
@@ -126,7 +126,7 @@ element with special attributes:<br>
 securely on the user's device.
 1. The browser navigates to the destination of the ad link: the advertiser's website.
 1. At some point, the user makes a purchase on the advertiser's site.
-1. Using the Event Attribution Reporting JavaScript API, the advertiser site asks the browser to 
+1. Using the Attribution Reporting JavaScript API, the advertiser site asks the browser to 
 record data for the conversion.
 1. The browser correlates the click data stored previously with the conversion data.
 1. Later, the browser sends a conversion report to the advertiser.
