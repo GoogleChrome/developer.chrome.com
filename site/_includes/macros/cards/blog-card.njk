@@ -11,7 +11,7 @@
       between the title and the top of the card.
     #}
     <div class="blog-card__thumbnail gap-bottom-300">
-      <a class="display-block" href="{{ post.url }}" {% if not pd.alt %}aria-hidden="true"{% endif %}>
+      <a class="display-block" href="{{ post.url }}" {% if not pd.alt %}aria-hidden="true" tabindex="-1"{% endif %}>
         {% Img
           className="rounded-100 object-fit-cover width-full",
           src=pd.hero,
