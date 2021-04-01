@@ -7,10 +7,9 @@ authors:
   - ingvarstepanyan
 date: 2020-12-10
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cuyrdAwj3IOp4rkKALdK.jpg'
-alt: >
-  DevTools blog image
 tags:
   - devtools-engineering
+  - devtools
 ---
 
 {% YouTube id='VBMHswhun-s' %}

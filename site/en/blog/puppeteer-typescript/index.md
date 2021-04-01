@@ -7,10 +7,9 @@ authors:
   - jackfranklin
 date: 2021-01-21
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nBjAqf1PuX7O2nvJbJck.jpg'
-alt: >
-  DevTools blog image
 tags:
   - devtools-engineering
+  - devtools
 ---
 
 We're big fans of TypeScript on the DevTools team—so much so that new code in DevTools is being authored in it and we're in the middle of a big migration of the entire codebase to being type-checked by TypeScript. You can find out more about that migration in [our talk at Chrome Dev Summit 2020](https://youtu.be/BHogHiiyuQk). It therefore made perfect sense to look at migrating [Puppeteer's codebase](https://pptr.dev/) to TypeScript, too.

@@ -7,10 +7,9 @@ authors:
   - jackfranklin
 date: 2020-12-08
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/MSQL3122aVqW6nsnBVdO.jpg'
-alt: >
-  DevTools blog image
 tags:
   - devtools-engineering
+  - devtools
 ---
 
 When DevTools was first created many, many years ago the team chose to build a bespoke UI framework. This was a reasonable choice at the time and has served DevTools well.

@@ -7,10 +7,9 @@ authors:
   - jobay
 date: 2020-11-10
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YhoLsiCeOqeg8yGr0pXi.jpg'
-alt: >
-  DevTools blog image
 tags:
   - devtools-engineering
+  - devtools
 ---
 
 ## Puppeteer and its approach to selectors {: .intro }

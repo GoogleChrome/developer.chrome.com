@@ -8,10 +8,9 @@ authors:
   - sigurds
 date: 2020-09-24
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JHFSiflWmymyILCC18s7.jpg'
-alt: >
-  DevTools blog image
 tags:
   - devtools-engineering
+  - devtools
 ---
 
 In the last quarter of 2019, the Chrome DevTools team started improving the developer experience in DevTools around cookies. This was particularly important because Google Chrome and other browsers had begun to change their default cookie behavior. 

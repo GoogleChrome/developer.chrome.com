@@ -7,10 +7,9 @@ authors:
   - sadym
 date: 2021-02-04
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/53IuclsjUVBaBME7MPRb.jpg'
-alt: >
-  DevTools blog image
 tags:
   - devtools-engineering
+  - devtools
 ---
 
 ## DevTools startup now is ~13% faster 🎉 (from 11.2s down to 10s)
