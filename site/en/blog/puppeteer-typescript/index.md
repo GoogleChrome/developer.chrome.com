@@ -7,6 +7,7 @@ authors:
   - jackfranklin
 date: 2021-01-21
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nBjAqf1PuX7O2nvJbJck.jpg'
+alt: ''
 tags:
   - devtools-engineering
   - devtools

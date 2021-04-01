@@ -7,6 +7,7 @@ authors:
   - jobay
 date: 2020-11-10
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YhoLsiCeOqeg8yGr0pXi.jpg'
+alt: ''
 tags:
   - devtools-engineering
   - devtools

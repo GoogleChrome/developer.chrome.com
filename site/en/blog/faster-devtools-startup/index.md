@@ -7,6 +7,7 @@ authors:
   - sadym
 date: 2021-02-04
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/53IuclsjUVBaBME7MPRb.jpg'
+alt: ''
 tags:
   - devtools-engineering
   - devtools

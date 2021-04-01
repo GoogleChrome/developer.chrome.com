@@ -7,6 +7,7 @@ authors:
   - mathiasbynens
 date: 2020-11-19
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/A4BYzXsym40Ehje2Z7sx.jpg'
+alt: ''
 tags:
   - devtools-engineering
   - devtools
@@ -123,7 +124,7 @@ Anyway, we have this SVG filter, and we can now apply it to arbitrary elements o
 
 {% Glitch {
   id: 'color-vision-deficiencies',
-  height: 960
+  height: 1100
 } %}
 
 If we wanted to, we could build our DevTools feature as follows: when the user emulates a vision deficiency in the DevTools UI, we inject the SVG filter into the inspected document, and then we apply the filter style on the root element. However, there are several problems with that approach:

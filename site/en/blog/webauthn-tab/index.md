@@ -8,6 +8,7 @@ authors:
   - nsatragno
 date: 2020-10-22
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lBGv7MQnhx3pF410gQ0P.jpg'
+alt: ''
 tags:
   - devtools-engineering
   - devtools
