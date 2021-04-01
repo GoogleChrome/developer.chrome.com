@@ -6,6 +6,7 @@ authors:
 description: >
   Federated Learning of Cohorts (FLoC) provides a privacy preserving mechanism for interest-based ad selection. This article explains how to take part in the FLoC origin trial.
 date: 2021-03-30
+updated: 2021-04-01
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/cfY1L58Z3w2xzCOo3Ayx.jpg
 alt: Murmuration of starlings over Brighton pier
 tags:
@@ -74,8 +75,8 @@ The FLoC API is available in Chrome 89 and above, but if you're not taking part 
 1.  Start Chrome with the following flags:  
 
     ``` text
-    --enable-blink-features=InterestCohortAPI
-    --enable-features="FederatedLearningOfCohorts:update_interval/10s/minimum_history_domain_size_required/1"
+--enable-blink-features=InterestCohortAPI 
+--enable-features="FederatedLearningOfCohorts:update_interval/10s/minimum_history_domain_size_required/1,FlocIdSortingLshBasedComputation,InterestCohortFeaturePolicy"
     ```
 
 1.  Make sure third-party cookies are not blocked and that no ad blocker is running.
