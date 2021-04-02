@@ -58,5 +58,11 @@
   },
   "security": {
     "title": "i18n.tags.security"
+  },
+  "devtools": {
+    "title": "i18n.tags.devtools"
+  },
+  "devtools-engineering": {
+    "title": "i18n.tags.devtools-engineering"
   }
 }
