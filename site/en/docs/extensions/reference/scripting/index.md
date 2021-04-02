@@ -26,5 +26,23 @@ in your [manifest file][manifest].
 }
 ```
 
+## Examples
+
+The following example shows how you can inject a JavaScript file into the current tab:
+
+```js
+const tabId = getTabId();
+chrome.scripting.executeScript(
+    {
+      target: {tabId: tabId},
+      files: ['script.js'],
+    },
+    () => { ... });
+```
+
+For additional examples and more about injecting scripts, see [Using
+chrome.scripting][howto-scripting].
+
 [content scripts]: /docs/extensions/mv3/content_scripts/
+[howto-scripting]: /docs/extensions/api-howto/scripting/
 [manifest]: /docs/extensions/mv3/manifest
