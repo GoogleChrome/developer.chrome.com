@@ -22,7 +22,7 @@ disassembled WebAssembly text format.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AXC6Bckkc9hmT7Ga8LS5.png", alt="A screenshot of the previously limited WebAssembly debugging support in 
             Chrome DevTools.", width="800", height="390" %}
 
-While this works with any WebAssembly module and helps somewhat with debugging small, isolated functions, it’s not very practical for larger apps where the mapping between the disassembled code and your sources is less obvious.
+While this works with any WebAssembly module and helps somewhat with debugging small, isolated functions, it's not very practical for larger apps where the mapping between the disassembled code and your sources is less obvious.
 
 ### A temporary workaround
 
@@ -58,7 +58,7 @@ You can use same `-g` flag in Rust:
   rustc -g source.rs --target wasm32-unknown-unknown -o out.wasm
 ```
 
-Or, if you’re using Cargo, the debug info will be included by default:
+Or, if you're using Cargo, the debug info will be included by default:
 
 ```bash
   cargo build --target wasm32-unknown-unknown
@@ -71,9 +71,9 @@ This new DevTools integration with DWARF already covers support for stepping ove
 ## The future
 
 There is still quite a bit of work to do though.
-For example, on the tooling side, ~~Emscripten (Binaryen) and~~ wasm-pack (wasm-bindgen) doesn’t support updating DWARF information on transformations they perform yet. For now, they won’t benefit from this integration. 
+For example, on the tooling side, ~~Emscripten (Binaryen) and~~ wasm-pack (wasm-bindgen) doesn't support updating DWARF information on transformations they perform yet. For now, they won't benefit from this integration. 
 
-And on the Chrome DevTools side, we’ll be evolving integration more over time to ensure a seamless debugging experience, including: 
+And on the Chrome DevTools side, we'll be evolving integration more over time to ensure a seamless debugging experience, including: 
 
 * Resolving variable names
 * Pretty-printing types
@@ -85,5 +85,5 @@ Stay tuned for future updates!
 {% Aside %}
 *Updated 2020-06-19*: 
 
-The original blog post used to state that Emscripten doesn’t support DWARF yet. This has been fixed since, and Emscripten preserves debug information end-to-end, throughout any transformations and optimisations.
+The original blog post used to state that Emscripten doesn't support DWARF yet. This has been fixed since, and Emscripten preserves debug information end-to-end, throughout any transformations and optimisations.
 {% endAside %}
