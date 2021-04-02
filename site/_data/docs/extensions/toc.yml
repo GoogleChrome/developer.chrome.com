@@ -14,7 +14,12 @@
     - url: /docs/extensions/mv3/themes
     - url: /docs/extensions/mv3/faq
     - url: /docs/extensions/mv3/single_purpose
-- url: /docs/extensions/reference
+- title: i18n.docs.extensions.api
+  sections:
+  - url: /docs/extensions/reference
+  - url: /docs/extensions/api-howto/scripting
+  - url: /docs/extensions/api-howto/events
+  - url: /docs/extensions/api-howto/declarativeNetRequest
 - url: https://github.com/GoogleChrome/chrome-extensions-samples
   title: i18n.docs.extensions.samples
   description: i18n.docs.extensions.samples_description
