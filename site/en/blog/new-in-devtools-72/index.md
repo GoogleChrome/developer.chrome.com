@@ -8,6 +8,12 @@ date: 2018-11-27
 description:
   "Visualize performance metrics, highlight text nodes, copy the JS path to a DOM node, and Audits
   panel updates."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YH7j2OcMe2sg9VI5QXFQ.jpg'
+alt: ''
+tags:
+  - new-in-devtools
+  - devtools
+  - chrome-72
 ---
 
 {% Aside %}

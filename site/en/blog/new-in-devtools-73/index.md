@@ -6,6 +6,12 @@ authors:
 date: 2019-01-22
 #updated: YYYY-MM-DD
 description: "Logpoints, detailed tooltips in Inspect Mode, and much more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AhjpnjFaNhPtnS9Hm3HG.jpg'
+alt: ''
+tags:
+  - new-in-devtools
+  - devtools
+  - chrome-73
 ---
 
 Here's what's new in DevTools in Chrome 73.

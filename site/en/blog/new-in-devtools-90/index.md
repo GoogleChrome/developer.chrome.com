@@ -8,6 +8,12 @@ updated: 2021-03-01
 description:
   "Debugging support for CSS Flexbox, performance heads-up display on page, issues tab updates and
   more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lB7dsXtKeasPNZXiUFfu.jpg'
+alt: ''
+tags:
+  - new-in-devtools
+  - devtools
+  - chrome-90
 ---
 
 ## New CSS flexbox debugging tools {: #flexbox }

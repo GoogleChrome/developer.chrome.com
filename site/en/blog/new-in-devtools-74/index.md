@@ -8,6 +8,12 @@ date: 2019-03-07
 description:
   "Highlight nodes affected by a CSS property, Lighthouse v4, WebSocket binary message viewer, and
   more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/i5guj1H6YCTNka6y0tub.jpg'
+alt: ''
+tags:
+  - new-in-devtools
+  - devtools
+  - chrome-74
 ---
 
 Welcome back! Here's what's new.
