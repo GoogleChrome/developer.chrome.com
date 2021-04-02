@@ -5,7 +5,7 @@ api: storage
 ## Overview
 
 This API has been optimized to meet the specific storage needs of extensions. It provides the same
-storage capabilities as the [localStorage API][localStorage] with the following key differences:
+storage capabilities as the [localStorage API][local-storage] with the following key differences:
 
 - User data can be automatically synced with Chrome sync (using `storage.sync`).
 - Your extension's content scripts can directly access user data without the need for a background
@@ -190,7 +190,7 @@ function getAllStorageSyncData() {
 [api-storage]: /docs/extensions/mv2/manifest/storage
 [api-tabs]: /docs/extensions/mv2/tabs
 [incognito]: /docs/extensions/mv2/manifest/incognito
-[localStorage]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[local-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [options-page]: https://developer.chrome.com/docs/extensions/mv3/options/
 [prop-local]: #property-local
 [prop-sync]: #property-sync
