@@ -12,6 +12,7 @@ hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/i5guj1H6YCTNka6y0tub.jpg'
 alt: ''
 tags:
   - new-in-devtools
+  - devtools
   - chrome-74
 ---
 
