@@ -6,6 +6,8 @@ authors:
 date: 2017-05-23
 #updated: YYYY-MM-DD
 description: "New features and changes coming to DevTools in Chrome 60."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EOSOQXLWBQ5la6UyCCT6.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-60

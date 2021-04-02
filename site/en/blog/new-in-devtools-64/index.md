@@ -3,9 +3,11 @@ layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 64)"
 authors:
   - kaycebasques
-date: 2017-11-28
+date: 2017-12-28
 #updated: YYYY-MM-DD
 description: "Performance Monitor, Console Sidebar, and Console groupings."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qydNN6rx1qbTZj2Uroyn.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-64

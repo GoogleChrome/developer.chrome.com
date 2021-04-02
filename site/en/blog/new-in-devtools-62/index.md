@@ -8,6 +8,8 @@ date: 2017-08-29
 description:
   "Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and
   more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SZvKcTh58DvCQoqImLW0.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-62

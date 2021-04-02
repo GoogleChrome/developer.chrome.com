@@ -6,6 +6,8 @@ authors:
 date: 2018-02-26
 #updated: YYYY-MM-DD
 description: "Blackboxing in the Network panel, auto-adjust zooming in Device Mode, and more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3K94BKdNuYeQQpXJgwxF.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-66

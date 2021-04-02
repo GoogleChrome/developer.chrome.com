@@ -6,6 +6,8 @@ authors:
 date: 2018-01-17
 #updated: YYYY-MM-DD
 description: "Local Overrides, accessibility tools, performance and SEO audits, and more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CkUbVNFvO8lq77aAbawF.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-65

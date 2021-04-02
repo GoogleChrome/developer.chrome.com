@@ -8,6 +8,8 @@ updated: 2021-02-24
 description:
   "Debugging support for Trusted Types violations, capture node screenshot beyond viewport, new
   Trust Tokens tab for network requests and more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/brc7vpdKlH1gHEk9aJM6.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-89

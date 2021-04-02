@@ -6,6 +6,8 @@ authors:
 date: 2018-10-10
 #updated: YYYY-MM-DD
 description: "Highlight DOM nodes from Live expressions, store nodes as global variables, and more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gnfb6rY6bc6nLDRgyenT.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-71

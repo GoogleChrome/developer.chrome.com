@@ -6,6 +6,8 @@ authors:
 date: 2019-05-28
 #updated: YYYY-MM-DD
 description: "Autocomplete with CSS values, a new UI for network settings, and more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/iVFoEmqr84KwT6vPMkMH.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-76

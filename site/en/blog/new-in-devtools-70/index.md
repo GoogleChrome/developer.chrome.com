@@ -7,6 +7,8 @@ date: 2018-08-29
 #updated: YYYY-MM-DD
 description:
   "Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/THn7nAwsJpBAbaFeRKgU.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-70

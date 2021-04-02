@@ -8,6 +8,8 @@ date: 2020-08-20
 description:
   "New Media panel, capture node screenshot, Issues tab updates, emulate missing local fonts,
   inactive users and prefers-reduced-data."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VYCJO5yoVwSN3v8f1XSm.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-86

@@ -3,10 +3,12 @@ layout: "layouts/blog-post.njk"
 title: "What's New In DevTools (Chrome 63)"
 authors:
   - kaycebasques
-date: 2017-12-28
+date: 2017-11-28
 #updated: YYYY-MM-DD
 description:
   "Multi-client remote debugging, push notifications with custom data, and Workspaces 2.0."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xV71BolvPqA7eZZaWCsD.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-63

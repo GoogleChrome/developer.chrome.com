@@ -7,6 +7,8 @@ date: 2020-07-01
 #updated: YYYY-MM-DD
 description:
   "Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VLstNJeC67163SBU8484.jpg'
+alt: ''
 tags:
   - new-in-devtools
   - chrome-85
