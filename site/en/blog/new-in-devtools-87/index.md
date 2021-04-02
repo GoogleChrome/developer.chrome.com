@@ -7,6 +7,9 @@ date: 2020-10-01
 #updated: YYYY-MM-DD
 description:
   "New CSS Grid debugging tools, Web Authn tab, moveable tools and Computed sidebar pane."
+tags:
+  - new-in-devtools
+  - chrome-87
 ---
 
 {% Aside %}

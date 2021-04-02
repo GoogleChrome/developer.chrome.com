@@ -6,6 +6,9 @@ authors:
 date: 2020-01-29
 #updated: YYYY-MM-DD
 description: "Moto G4 in Device Mode, new cookie-related features, and more."
+tags:
+  - new-in-devtools
+  - chrome-81
 ---
 
 {% YouTube id="HJNaNDspffM" %}

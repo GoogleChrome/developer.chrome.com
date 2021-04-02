@@ -7,6 +7,9 @@ date: 2019-09-03
 #updated: YYYY-MM-DD
 description:
   "Lighthouse 5.2 in the Audits panel, and Largest Contentful Paint in the Performance panel."
+tags:
+  - new-in-devtools
+  - chrome-78
 ---
 
 {% YouTube id="VNkctDLYP6o" %}

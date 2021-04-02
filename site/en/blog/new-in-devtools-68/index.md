@@ -6,6 +6,9 @@ authors:
 date: 2018-05-21
 #updated: YYYY-MM-DD
 description: "Eager evaluation, argument hints, function autocompletion, Lighthouse 3.0, and more."
+tags:
+  - new-in-devtools
+  - chrome-68
 ---
 
 New to DevTools in Chrome 68:

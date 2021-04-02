@@ -7,6 +7,9 @@ date: 2019-04-17
 #updated: YYYY-MM-DD
 description:
   "Meaningful autocomplete preset values, clear site data from the Command Menu, and more."
+tags:
+  - new-in-devtools
+  - chrome-75
 ---
 
 Hello! Here's what's new in [Chrome DevTools][1] in Chrome 75.

@@ -8,6 +8,9 @@ date: 2020-11-12
 description:
   "New CSS angle visualization tools, emulate unsupported image types and storage quota, new Web
   Vitals lane and more."
+tags:
+  - new-in-devtools
+  - chrome-88
 ---
 
 {% Aside %}

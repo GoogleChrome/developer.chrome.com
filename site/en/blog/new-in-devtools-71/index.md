@@ -6,6 +6,9 @@ authors:
 date: 2018-10-10
 #updated: YYYY-MM-DD
 description: "Highlight DOM nodes from Live expressions, store nodes as global variables, and more."
+tags:
+  - new-in-devtools
+  - chrome-71
 ---
 
 New features and major changes coming to Chrome DevTools in Chrome 71 include:

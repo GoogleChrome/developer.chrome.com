@@ -6,6 +6,9 @@ authors:
 date: 2020-05-12
 #updated: YYYY-MM-DD
 description: "The new Issues tab, accessibility information in the Inspect Mode tooltip, and more."
+tags:
+  - new-in-devtools
+  - chrome-84
 ---
 
 {% YouTube id="dgYAlcJonxo" %}

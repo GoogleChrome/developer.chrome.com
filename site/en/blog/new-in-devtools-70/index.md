@@ -7,6 +7,9 @@ date: 2018-08-29
 #updated: YYYY-MM-DD
 description:
   "Live Expressions in the Console, highlight DOM nodes during Eager Evaluation, and more."
+tags:
+  - new-in-devtools
+  - chrome-70
 ---
 
 Welcome back! It's been about 12 weeks since our last update, which was for Chrome 68. We skipped

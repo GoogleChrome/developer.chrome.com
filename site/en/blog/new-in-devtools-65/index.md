@@ -6,6 +6,9 @@ authors:
 date: 2018-01-17
 #updated: YYYY-MM-DD
 description: "Local Overrides, accessibility tools, performance and SEO audits, and more."
+tags:
+  - new-in-devtools
+  - chrome-65
 ---
 
 New features coming to DevTools in Chrome 65 include:

@@ -6,6 +6,9 @@ authors:
 date: 2019-07-22
 #updated: YYYY-MM-DD
 description: "Copy element styles, visualize layout shifting, and more."
+tags:
+  - new-in-devtools
+  - chrome-77
 ---
 
 {% YouTube id="R8KzoMoKhnM" %}

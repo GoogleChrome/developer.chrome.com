@@ -8,6 +8,9 @@ date: 2019-10-15
 description:
   "Debug why cookies were blocked, simulate prefers-color-scheme: dark, code coverage
   updates, and more."
+tags:
+  - new-in-devtools
+  - chrome-79
 ---
 
 ## New features for cookies {: #cookies }

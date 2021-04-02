@@ -8,6 +8,9 @@ date: 2019-12-05
 description:
   "Support for let and class redeclarations in the Console, improved WebAssembly debugging, and
   more."
+tags:
+  - new-in-devtools
+  - chrome-80
 ---
 
 {% YouTube id="2EiPb1opH3g" %}

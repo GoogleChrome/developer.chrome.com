@@ -8,6 +8,9 @@ date: 2017-08-29
 description:
   "Top-level await operators in the Console, new screenshot workflows, CSS Grid highlighting, and
   more."
+tags:
+  - new-in-devtools
+  - chrome-62
 ---
 
 New features and changes coming to DevTools in Chrome 62:

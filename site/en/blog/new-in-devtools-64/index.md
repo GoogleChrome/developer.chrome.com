@@ -6,6 +6,9 @@ authors:
 date: 2017-11-28
 #updated: YYYY-MM-DD
 description: "Performance Monitor, Console Sidebar, and Console groupings."
+tags:
+  - new-in-devtools
+  - chrome-64
 ---
 
 Welcome back! New features coming to DevTools in Chrome 64 include:
