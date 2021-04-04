@@ -55,5 +55,7 @@ Mac:
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --auto-open-devtools-for-tabs
 ```
 
+Will only work if an instance of Chrome is not already running. From then on, every new tab will automatically open DevTools until user fully quits Chrome <kbd>Command</kbd>+<kbd>Q</kbd>.
+
 [1]: /docs/devtools/css
 [2]: /docs/devtools/console/get-started
