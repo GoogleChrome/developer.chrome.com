@@ -52,7 +52,7 @@ persistent background page.
 chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
   chrome.action.setBadgeText({ text: badgeText });
 
-  // Listener is registered asynchronously.
+  // Listener is registered asynchronously
   chrome.action.onClicked.addListener(handleActionClick);
 });
 ```
@@ -72,7 +72,7 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
   chrome.action.setBadgeText({ text: badgeText });
 });
 
-// Listener is registered on on startup.
+// Listener is registered on startup
 chrome.action.onClicked.addListener(handleActionClick);
 ```
 
@@ -150,7 +150,7 @@ Instead, we can use the [Alarms API][alarms]. Like other listeners, alarm listen
 registered in the top level of your script.
 
 ```js
-chrome.alarms.create({ delayInMinutes: 3.0 });
+chrome.alarms.create({ delayInMinutes: 3 });
 
 chrome.alarms.onAlarm.addListener(() => {
   chrome.action.setIcon({
