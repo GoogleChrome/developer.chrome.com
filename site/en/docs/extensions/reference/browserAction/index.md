@@ -130,7 +130,7 @@ directory. For other examples and for help in viewing the source code, see [Samp
 [3]: #icon
 [4]: #tooltip
 [5]: #badge
-[6]: #popups
+[6]: #popup
 [7]: http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html
 [8]: #manifest
 [9]: #method-setIcon
