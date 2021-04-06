@@ -1,3 +1,7 @@
+blog:
+  en: 'Engineering blog'
+blog_description:
+  en: 'Learn how the team builds new features in DevTools.'
 css:
   en: 'CSS'
 console:

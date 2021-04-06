@@ -21,7 +21,7 @@ tags:
 **TL;DR:** Offline support has been part of the PWA installability criteria
 since the beginning. We are updating the offline detection logic to ensure a
 PWA actually provides an offline experience, closing the loophole used by
-some developers to meet the installability critiera. In the future,
+some developers to meet the installability criteria. In the future,
 sites with empty `fetch` event handlers will no longer meet the criteria.
 {% endAside %}
 
