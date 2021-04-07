@@ -238,7 +238,7 @@ Menu, type `Sensors`, and then select **Show Sensors**.
 
 **Figure 23**. Show Sensors
 
-Select one of the presets from the **Geolocation** list, or select **Custom location** to enter your
+Select one of the presets from the **Location** list, or select **Other...** to enter your
 own coordinates, or select **Location unavailable** to test out how your page behaves when
 geolocation is in an error state.
 
