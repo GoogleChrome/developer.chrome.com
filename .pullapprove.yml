@@ -32,6 +32,32 @@ groups:
         files.include('site/_data/i18n/docs/extensions.yml') or
         files.include('site/_data/i18n/docs/webstore.yml')
 
+  # DevTools
+  # Handles any changes related to devtools.
+  # By default Jecelyn will be tagged in as a reviewer, but anyone
+  # on the dcc-devtools, dcc-content, dcc-eng, or dcc-approvers teams can
+  # approve PRs.
+  devtools:
+    reviewers:
+      users:
+      - chybie
+      teams:
+      # Prefix a username or team with ~ to include them in the reviewer pool
+      # but skip them when sending review requests.
+      - ~dcc-devtools
+      - ~dcc-content
+      - ~dcc-eng
+      - ~dcc-approvers
+    reviews:
+      # Assign all possible reviewers
+      request: 99
+    conditions:
+      - '"reviewers: devtools" in labels'
+      - >
+        files.include('site/en/docs/devtools/*') or
+        files.include('site/_data/docs/devtools/*') or
+        files.include('site/_data/i18n/docs/devtools.yml')
+
   # Content
   # Handles any changes related to site content.
   content:
@@ -54,7 +80,7 @@ groups:
         files.include('site/_data/i18n/*') or
         files.include('site/_data/authorsData.json') or
         files.include('site/_data/supportedTags.json')
-  
+
   # Code
   # Handles any changes to programmatic files.
   code:
