@@ -6,6 +6,12 @@ authors:
 date: 2017-07-10
 #updated: YYYY-MM-DD
 description: "New features and changes coming to DevTools in Chrome 61."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pkmry1VcHxSk2Wx96Ee6.jpg'
+alt: ''
+tags:
+  - new-in-devtools
+  - devtools
+  - chrome-61
 ---
 
 New features and major changes coming to DevTools in Chrome 61 include:

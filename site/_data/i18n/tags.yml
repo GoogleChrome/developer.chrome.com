@@ -58,3 +58,12 @@ removals:
 
 security:
   en: Security
+
+devtools:
+  en: DevTools
+
+new-in-devtools:
+  en: What's New in DevTools
+
+devtools-engineering:
+  en: DevTools Engineering

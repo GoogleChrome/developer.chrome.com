@@ -8,6 +8,12 @@ date: 2018-04-11
 description:
   "Search across network headers, copy requests as fetch, audit pages using desktop conditions, and
   much more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/edO2lzkhF5E6uCQ85tv9.jpg'
+alt: ''
+tags:
+  - new-in-devtools
+  - devtools
+  - chrome-67
 ---
 
 New features and major changes coming to DevTools in Chrome 67 include:
