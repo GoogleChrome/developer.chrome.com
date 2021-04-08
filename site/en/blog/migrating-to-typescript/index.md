@@ -1,7 +1,7 @@
 ---
 title: "DevTools architecture refresh: migrating DevTools to TypeScript"
 description: >
-  How we migrate Chrome DevTools to TypeScript.
+  How we migrate Chrome DevTools from the Closure Compiler type checker to TypeScript.
 layout: "layouts/blog-post.njk"
 authors:
   - tvanderlippe
