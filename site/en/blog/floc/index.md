@@ -6,7 +6,7 @@ authors:
 description: >
   Federated Learning of Cohorts (FLoC) provides a privacy preserving mechanism for interest-based ad selection. This article explains how to take part in the FLoC origin trial.
 date: 2021-03-30
-updated: 2021-04-01
+updated: 2021-04-07
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/cfY1L58Z3w2xzCOo3Ayx.jpg
 alt: Murmuration of starlings over Brighton pier
 tags:
@@ -110,7 +110,10 @@ For example, a site can opt out of all FLoC cohort calculation by sending the HT
 Permissions-Policy: interest-cohort=()
 ```  
 
-During the FLoC origin trial, websites that don't opt out will be included in the FLoC calculation if Chrome detects that they are sites which load ads-related resources.   
+During the FLoC origin trial, pages on websites that don't opt out will be included in the FLoC 
+calculation if Chrome detects that they load [ads-related resources](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md) or if they use `document.interestCohort()`. Pages served from private IP addresses, 
+such as intranet pages, won't be part of the FLoC computation.
+
 
 {% Aside %}  
 [Ad Tagging in Chromium](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md) explains how Chrome's ad detection mechanism works.  
