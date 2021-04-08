@@ -16,7 +16,7 @@ tags:
 <!-- lint disable no-smart-quotes -->
 
 Following up on our [migration to JavaScript modules](/blog/migrating-to-js-modules/) and [migration to Web Components](/blog/migrating-to-web-components/), today we are continuing our blog post series on **the changes we are making to Devtools' architecture and how it is built**.
-(If you have not seen it already, we posted a video on our work of [Upgrading DevTools’ architecture to the modern web](https://www.youtube.com/watch?v=BHogHiiyuQk), with 14 tips on how to make improvements to your web projects.
+(If you have not seen it already, we posted a video on our work of [Upgrading DevTools’ architecture to the modern web](https://www.youtube.com/watch?v=BHogHiiyuQk), with 14 tips on how to make improvements to your web projects.)
 
 {% YouTube id='BHogHiiyuQk' %}
 
@@ -139,6 +139,7 @@ However, in August 2020 (9 months into this migration) we did a check-in and dis
 One of our engineers built an analysis graph to show the progress of "TypeScriptification" (the name we gave to this migration).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vxsdG9lI4YjuWi8ibZr9.png", alt="TypeScript Migration progress", width="800", height="639" %}
+
 *TypeScript Migration progress - Tracking lines of code remaining that need migrating*
 
 Estimations when we would hit zero lines remaining ranged from July 2021 to December 2021, almost a year past our deadline.
