@@ -154,7 +154,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
 Since service workers are not always running, Manifest V3 extensions sometimes need to
 asynchronously load data from storage before they execute their event handlers. To do this, the
 below snippet uses an async `action.onClicked` event handler that waits for the `storageCache`
-global to be populated before executing it's logic.
+global to be populated before executing its logic.
 
 ```js
 //// background.js ////
