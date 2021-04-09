@@ -125,8 +125,8 @@ let options = {};
 
 // Initialize the form with the user's option settings
 chrome.storage.sync.get('options', (data) => {
-  Object.assign(options, data?.options);
-  optionsForm.debug.checked = data?.options?.debug;
+  Object.assign(options, data.options);
+  optionsForm.debug.checked = data.options?.debug;
 });
 
 // Immediately persist options changes
@@ -139,9 +139,10 @@ optionsForm.debug.addEventListener('change', (event) => {
 
 // Watch for changes to the user's options & apply them
 chrome.storage.onChanged.addListener((changes, area) => {
-  if (area === 'sync' && changes.options) {
-    console.log('enable debug mode?', !!changes.options?.newValue?.debug);
-    setDebugMode(!!changes.options?.newValue?.debug);
+  if (area === 'sync' && changes.options?.newValue) {
+    const debugMode = Boolean(changes.options.newValue.debug);
+    console.log('enable debug mode?', debugMode);
+    setDebugMode(debugMode);
   }
 });
 ```
