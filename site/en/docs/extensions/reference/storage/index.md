@@ -107,8 +107,8 @@ We can take this idea even further. In this example we have an [options page][op
 allows the user to toggle a "debug mode" in the extension (implementation not shown here). Changes
 to this setting are immediately saved to sync storage by the options page and the background script uses `storage.onChanged` to apply the setting as soon as possible.
 
-```js
-//// options.html ////
+```html
+<!-- options.html -->
 
 <script defer src="options.js"></script>
 <form id="optionsForm">
@@ -117,16 +117,18 @@ to this setting are immediately saved to sync storage by the options page and th
     Enable debug mode
   </label>
 </form>
+```
 
+```js
 //// options.js ////
 
 // In-page cache of the user's options
-let options = {};
+const options = {};
 
 // Initialize the form with the user's option settings
 chrome.storage.sync.get('options', (data) => {
   Object.assign(options, data.options);
-  optionsForm.debug.checked = data.options?.debug;
+  optionsForm.debug.checked = Boolean(options.debug);;
 });
 
 // Immediately persist options changes
@@ -134,7 +136,9 @@ optionsForm.debug.addEventListener('change', (event) => {
   options.debug = event.target.checked;
   chrome.storage.sync.set({options});
 });
+```
 
+```js
 //// background.js ////
 
 // Watch for changes to the user's options & apply them
@@ -155,33 +159,37 @@ global to be populated before executing it's logic.
 ```js
 //// background.js ////
 
-// Where we will expose all the data we retrieve from storage.sync
-let storageCache = {};
-// Asynchronously retrieve data from storage.sync, then cache it
-let initStorageCache = getAllStorageSyncData().then(items => {
-  // Copy the data retrieved from storage into storageCache
+// Where we will expose all the data we retrieve from storage.sync.
+const storageCache = {};
+// Asynchronously retrieve data from storage.sync, then cache it.
+const initStorageCache = getAllStorageSyncData().then(items => {
+  // Copy the data retrieved from storage into storageCache.
   Object.assign(storageCache, items);
 });
 
 chrome.action.onClicked.addListener(async (tab) => {
-  await initStorageCache;
-  /* normal action handler logic */
+  try {
+    await initStorageCache;
+  } catch (e) {
+    // Handle error that occurred during storage initialization.
+  }
+  // Normal action handler logic.
 });
 
-// Reads all data out of storage.sync and exposes it via a promise
+// Reads all data out of storage.sync and exposes it via a promise.
 //
 // Note: Once the Storage API gains promise support, this function
 // can be greatly simplified.
 function getAllStorageSyncData() {
   // Immediately return a promise and start asynchronous work
   return new Promise((resolve, reject) => {
-    // Asynchronously fetch all data from storage.sync
+    // Asynchronously fetch all data from storage.sync.
     chrome.storage.sync.get(null, (items) => {
-      // Pass any observed errors down the promise chain
+      // Pass any observed errors down the promise chain.
       if (chrome.runtime.lastError) {
         return reject(chrome.runtime.lastError);
       }
-      // Pass the data retrieved from storage down the promise chain
+      // Pass the data retrieved from storage down the promise chain.
       resolve(items);
     });
   });
