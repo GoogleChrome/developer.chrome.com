@@ -4,11 +4,11 @@ api: runtime
 
 ## Examples
 
-### Use [`getURL`][getURL] to add an extension image to a page
+### Use [`getURL`][getURL] to add an extension image to a page {: #example-getURL }
 
 Extensions can access their own resources using relative paths, but in order for the extension's
-assets to appear in a web page, you will need to specify the fully URL of the asset (and expose it
-using [web_accessible_resources][war]).
+assets to appear in a web page, you will need to specify the full URL of the asset (and expose it
+using the [web_accessible_resources][war] field).
 
 This example shows how a [content script][content] could add an image in the extension's package to
 the page that the content script has been [injected][content-inject] into.
@@ -22,6 +22,8 @@ the page that the content script has been [injected][content-inject] into.
   document.body.append(img);
 }
 ```
+
+### Use runtime messaging to communicate between background and content scripts {: #example-background-content-messaging }
 
 A basic example of content script injected into a page and background script passing messages to
 each other. This exchange is modeled on a [TCP handshake][handshake].
@@ -60,6 +62,8 @@ chrome.runtime.onMessage.addListener((message, sender) => {
   }
 });
 ```
+
+### Getting an extension's key from it's manifest {: #example-key }
 
 Retrieve a production extension's [public key][key-prop] for use in development. Execute this snippet in a DevTools console for the production extension paste the value in your unpacked extension's manifest.json.
 
