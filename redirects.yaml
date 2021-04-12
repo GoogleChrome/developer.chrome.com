@@ -36,6 +36,12 @@ redirects:
 - from: /multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
 
+- from: /docs/webstore/overview/
+  to: /docs/webstore/about_webstore/
+
+- from: /docs/webstore/pricing/
+  to: /docs/webstore/money/
+
 # The new site doesn't break out Platform Apps APIs, but instead just locates them at the bottom of
 # the main Extensions reference page.
 - from: /apps/api_index
