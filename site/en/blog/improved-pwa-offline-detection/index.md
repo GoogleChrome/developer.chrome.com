@@ -69,8 +69,9 @@ will continue to pass if the page has a service worker that includes a
 
 ## What does this mean for developers?
 
-While **no changes are required**, we strongly recommend you provide an
-offline experience.
+While **no changes are required now**, we strongly recommend you provide an
+offline experience, as we expect to use the updated logic to check for a valid
+page at some point in the future.
 
 It's up to you to decide what kind of offline experience you want to provide.
 On one end of the spectrum is a fully functional offline experience. This means
