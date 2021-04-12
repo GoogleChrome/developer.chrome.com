@@ -75,7 +75,7 @@
   "pjmclachlan": {
     "name": {
       "given": "Penny",
-      "family": "Mclachlan"
+      "family": "McLachlan"
     },
     "org": {
       "name": "Google",
@@ -83,10 +83,11 @@
     },
     "country": "CA",
     "twitter": "b1tr0t",
+    "github": "b1tr0t",
     "descriptions": {
       "en": "Penny is a Product Manager on the Chrome Web Platform team responsible for Chrome permissions, notifications, and progressive web apps."
     },
-    "image": "image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Nt1I5Rz9h0kOlyXQ630Q.jpg"
+    "image": "image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ruPda8fjIcYfc4ySP34v.jpg"
   },
   "samthorogood": {
     "name": {
