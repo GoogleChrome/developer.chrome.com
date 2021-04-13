@@ -1,7 +1,7 @@
 ---
 title: New in Chrome 90
 description: >
-  Chrome 90 is rolling out now! There's a new value for the CSS overflow property. The Feature Policy API has been renamed to Permission Policy. And there's a new way to implement and use Shadow DOM directly in HTML. Plus there's plenty more.
+  Chrome 90 is rolling out now! There's a new value for the CSS overflow property. The Feature Policy API has been renamed to Permissions Policy. And there's a new way to implement and use Shadow DOM directly in HTML. Plus there's plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2021-04-13
 authors:
@@ -41,7 +41,7 @@ the video is '90s style. Enjoy!
 Here's what you need to know:
 
 * There's a new value for the CSS [`overflow`](#overflow-clip) property.
-* The Feature Policy API has been renamed to [Permission Policy](#permission-policy).
+* The Feature Policy API has been renamed to [Permissions Policy](#permission-policy).
 * And there's a new way to implement and use [Shadow DOM](#declarative)
   directly in HTML.
 * I owned several jackets almost exactly like this in the 1990s.
@@ -91,7 +91,7 @@ you need it, you can apply clipping to a single axis via `overflow-x`
 and `overflow-y`.
 
 Oh, and FYI - there's also `overflow-clip-margin`, which allows you to expand
-the clip border. Useful for cases where there is ink overflow that should be
+the clip border. This is useful for cases where there is ink overflow that should be
 visible.
 
 {% Columns %}
@@ -121,11 +121,11 @@ which allows you to selectively enable, disable, and modify the behavior of
 certain APIs and web features in the browser. These policies are a contract
 between you and the browser. They inform the browser about what your intent is.
 
-If your code, or any of the 3rd party libraries you use violate your
+If your code, or any of the third party libraries you use violate your
 preselected rules, the browser overrides the behavior with better UX or
-just says - talk to the hand - blocking the API altogether.
+just says, "talk to the hand," blocking the API altogether.
 
-Starting in Chrome 90, the Feature Policy API will be renamed to the
+Starting in Chrome 90, the Feature Policy API will be renamed
 Permissions Policy, and the HTTP header has been renamed along with it. At
 the same time, the community has settled on a new syntax, based on Structured
 Field Values for HTTP.
@@ -187,7 +187,7 @@ shadow root of its parent element.
 </host-element>
 ```
 
-Loading the pure HTML markup results in this DOM tree.
+Loading the pure HTML markup results in this DOM tree:
 
 ```html
 <host-element>
@@ -239,9 +239,9 @@ tell you what's new in Chrome!
 
 ## A special shout out
 
-I had a lot of fun shooting this 1990s themed episode of New in Chrome! Huge
+I had a lot of fun shooting this 1990s themed episode of New in Chrome. Huge
 thanks to Sean Meehan for the idea and for bringing together the amazing
-folks helped open the time warp to 1990.
+folks who helped open the time warp to 1990.
 
 {% Columns %}
 {% Column %}
