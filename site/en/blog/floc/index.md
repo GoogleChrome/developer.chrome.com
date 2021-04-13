@@ -110,7 +110,7 @@ For example, a site can opt out of all FLoC cohort calculation by sending the HT
 Permissions-Policy: interest-cohort=()
 ```  
 
-During the FLoC origin trial, for websites that don't opt out, pages will be included in the FLoC 
+During the FLoC origin trial, pages on websites that don't opt out will be included in the FLoC 
 calculation if Chrome detects that they load [ads-related resources](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md) or if they use `document.interestCohort()`. Pages served from private IP addresses, 
 such as intranet pages, won't be part of the FLoC computation.
 
