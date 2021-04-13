@@ -30,7 +30,11 @@ tags:
   }
 </style>
 
-Chrome 90 is starting to roll out to stable now.
+{% Aside %}
+Chrome 90 is starting to roll out to stable now, and in honor of Chrome 90,
+the video is '90s style. Enjoy!
+{% endAside %}
+
 
 {% YouTube id='h3MONldIoNM' %}
 
