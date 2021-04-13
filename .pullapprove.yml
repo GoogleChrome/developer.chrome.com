@@ -56,7 +56,8 @@ groups:
       - >
         files.include('site/en/docs/devtools/*') or
         files.include('site/_data/docs/devtools/*') or
-        files.include('site/_data/i18n/docs/devtools.yml')
+        files.include('site/_data/i18n/docs/devtools.yml') or
+        files.include('site/en/blog/*').exclude('site/en/blog/blog.11tydata.js')
 
   # Content
   # Handles any changes related to site content.
