@@ -6,7 +6,7 @@ authors:
 description: >
   Federated Learning of Cohorts (FLoC) provides a privacy preserving mechanism for interest-based ad selection. This article explains how to take part in the FLoC origin trial.
 date: 2021-03-30
-updated: 2021-04-07
+updated: 2021-04-13
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/cfY1L58Z3w2xzCOo3Ayx.jpg
 alt: Murmuration of starlings over Brighton pier
 tags:
@@ -55,7 +55,13 @@ When your token expires, you will get an email with a renewal link. Before renew
 
 ## Try out FLoC as a web developer
 
-The FLoC API is very simple: just a single method that returns a promise that resolves to an object providing the cohort `id` and `version`:  
+There are two ways to try out FLoC during the origin trial: 
+* Enable FLoC for your browser by setting browser flags.
+* Use a browser that is included in the trial.
+
+### Enable FLoC with browser flags
+
+The FLoC API is very simple: just a single method that returns a promise which resolves to an object providing the cohort `id` and `version`:  
 
 ``` js
 document.interestCohort()
@@ -80,7 +86,22 @@ The FLoC API is available in Chrome 89 and above, but if you're not taking part 
     ```
 
 1.  Make sure third-party cookies are not blocked and that no ad blocker is running.
-1.  View the demo at [floc.glitch.me](https://floc.glitch.me/).
+1.  View the demo at [floc.glitch.me](https://floc.glitch.me/) or just run 
+`await document.interestCohort()` from the DevTools console.
+
+### Check if your browser is included in the trial
+
+We have registered two demos for the FLoC origin trial, each of which uses a different method to 
+provide an origin trial token.
+
+* Meta tag: [floc-ot-meta.glitch.me](https://floc-ot-meta.glitch.me)
+* HTTP header: [floc-ot-header.glitch.me](https://floc-ot-header.glitch.me)
+
+{% Aside 'caution' %}
+The FLoC origin trial is taking place only with a [small percentage of users](https://blog.google/products/chrome/privacy-sustainability-and-the-importance-of-and/#jump-content:~:text=The%20initial%20testing%20of%20FLoC). 
+Your browser is likely not to be included.
+{% endAside %}
+
 
 ## Try out FLoC as a publisher, advertiser or adtech platform
 
