@@ -2,7 +2,7 @@
 {#
   Renders a table of types based on a given channel filter.
 #}
-{% macro renderReferenceTable(all, channel, source) %}
+{% macro renderReferenceTable(all, channel, platformAppsOnly = undefined) %}
 
 <table class="reference fixed-table width-full">
   <thead>
@@ -16,34 +16,36 @@
   {% for page in all %}
     {% if page.data.namespace %}
       {% set namespace = page.data.namespace %}
-      {% if (not channel or channel === namespace.channel) and (not source or source === namespace.source) %}
+      {% set feature = namespace.feature %}
+
+      {% if (not channel or channel === feature.supportedInChannel) and (platformAppsOnly === feature.platformAppsOnly) %}
         <tr>
           <td>
-            <a class="link weight-medium" href="{{ namespace.fullName | namespaceToPath }}">{{ namespace.name }}</a>
+            <a class="link weight-medium" href="{{ namespace.name | namespaceToPath }}">{{ namespace.name }}</a>
             <div class="reference-requirements">
-              {% if not channel and namespace.channel === 'dev' %}
+              {% if not channel and feature.supportedInChannel === 'dev' %}
                 <span>Dev channel</span>
-              {% elif not channel and namespace.channel === 'beta' %}
+              {% elif not channel and feature.supportedInChannel === 'beta' %}
                 <span>Beta and Dev channels</span>
-              {% elif namespace.version.low %}
-                <span>Chrome {{ namespace.version.low }}</span>
+              {% elif feature.availableFromVersion %}
+                <span>Chrome {{ feature.availableFromVersion }}</span>
               {% endif %}
-              {% if namespace.maxManifestVersion %}
+              {% if feature.maxManifestVersion %}
                 <span>
-                  MV{{ namespace.maxManifestVersion }}
-                  {% if namespace.maxManifestVersion === 2 %}
+                  MV{{ feature.maxManifestVersion }}
+                  {% if feature.maxManifestVersion === 2 %}
                     {# Nothing is actually before MV2. #}
                   {% else %}
                     and below
                   {% endif %}
                 </span>
               {% endif %}
-              {% if namespace.minManifestVersion %}
-                <span>MV{{ namespace.minManifestVersion }}+</span>
+              {% if feature.minManifestVersion %}
+                <span>MV{{ feature.minManifestVersion }}+</span>
               {% endif %}
             </div>
           </td>
-          <td class="reference-collapse type">{{ namespace.comment | safe }}</td>
+          <td class="reference-collapse type">{{ namespace.description }}</td>
         </tr>
       {% endif %}
     {% endif %}

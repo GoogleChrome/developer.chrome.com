@@ -15,17 +15,13 @@
  */
 
 /**
- * Converts a namespace name like "chrome.foo.bar" into a path segment like "foo_bar". Throws if
- * namespace does not start with "chrome.", as this is all the site currently supports.
+ * Converts a namespace name like "foo.bar" into a path segment like "foo_bar".
  *
  * @param {string} namespace
  * @return {string}
  */
 function namespaceToPath(namespace) {
-  if (!namespace.startsWith('chrome.')) {
-    throw new Error(`can't work with non-chrome. namespace: ${namespace}`);
-  }
-  return namespace.substr(7).replace(/\./g, '_');
+  return namespace.replace(/\./g, '_');
 }
 
 module.exports = {namespaceToPath};

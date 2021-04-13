@@ -23,33 +23,25 @@
  */
 
 require('dotenv').config();
-const {AssetCache} = require('@11ty/eleventy-cache-assets');
-const {build} = require('../../tools/types/build.js');
 
 /**
- * Bump this value if the parser changes, so folks' caches are invalidated.
- */
-const typesRevision = '2021-03-05';
-
-/**
- * Building the JSON types is reasonably expensive. Don't do this often. When deploying to prod,
- * there will never be cache, so it will always be fresh.
- */
-const typesExipry = '7d';
-
-/**
- * @return {Promise<{[name: string]: RenderNamespace}>}
+ * @return {Promise<{[name: string]: any}>}
  */
 module.exports = async () => {
   if (process.env.ELEVENTY_IGNORE_EXTENSIONS) {
     return {};
   }
-  const asset = new AssetCache('generated_types_info#' + typesRevision);
-  if (asset.isCacheValid(typesExipry)) {
-    return asset.getCachedValue();
+
+  let chromeTypesHelpers;
+  try {
+    // eslint-disable-next-line node/no-unsupported-features/es-syntax
+    chromeTypesHelpers = await import('chrome-types-helpers');
+  } catch (e) {
+    console.warn("could not import 'chrome-types-helpers', skipping types", e);
+    return {};
   }
 
-  const types = await build();
-  await asset.save(types, 'json');
-  return types;
+  const {default: prepareNamespaces} = chromeTypesHelpers;
+  const out = await prepareNamespaces();
+  return out.namespaces;
 };

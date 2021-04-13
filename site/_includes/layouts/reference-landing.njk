@@ -11,19 +11,19 @@
   <p>
     Release information is not available for APIs before Chrome 39, which was released in November 2014.
   </p>
-  {{ macros.renderReferenceTable(collections.reference, 'stable', 'index.d.ts') }}
+  {{ macros.renderReferenceTable(collections.reference, 'stable') }}
 
   <h2 id="beta_apis">Beta APIs</h2>
   <p>
     These APIs are only available in the Chrome Beta and Dev channels:
   </p>
-  {{ macros.renderReferenceTable(collections.reference, 'beta', 'index.d.ts') }}
+  {{ macros.renderReferenceTable(collections.reference, 'beta') }}
 
   <h2 id="dev_apis">Dev APIs</h2>
   <p>
     These APIs are only available in the Chrome Dev channel:
   </p>
-  {{ macros.renderReferenceTable(collections.reference, 'dev', 'index.d.ts') }}
+  {{ macros.renderReferenceTable(collections.reference, 'dev') }}
 
   <h2 id="platform_apps_apis">Platform Apps APIs</h2>
   <p>
@@ -34,7 +34,7 @@
     Chrome will be removing support for Chrome Apps on all platforms.
     Learn more about <a href="/docs/apps/migration">migrating your app</a>.
   </div>
-  {{ macros.renderReferenceTable(collections.reference, '', 'platform_app.d.ts') }}
+  {{ macros.renderReferenceTable(collections.reference, '', true) }}
 
 {# TODO(samthor): Chrome currently has none of these. #}
 {#
