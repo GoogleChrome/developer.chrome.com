@@ -72,35 +72,50 @@ The cohort data made available looks like this:
 ``` json
     {
         "id": "14159",
-        "version": "chrome.1.0"
+        "version": "chrome.1.1"
     }
 ```
 
-The FLoC API is available in Chrome 89 and above, but if you're not taking part in the origin trial, you will need to set flags and run Chrome from the command line. [Run Chromium with flags](http://www.chromium.org/developers/how-tos/run-chromium-with-flags) explains how to do this for different operating systems.  
+The FLoC API is available in Chrome 89 and above, but if your browser is not included in the origin 
+trial, you will need to run Chrome with flags in order to try out the API. [Run Chromium with flags](http://www.chromium.org/developers/how-tos/run-chromium-with-flags) explains how to do this for different operating systems.  
 
-1.  Start Chrome with the following flags:  
+1.  Start Chrome with the following flags. Make sure to copy all the text!<br> <br>  
 
     ``` text
     --enable-blink-features=InterestCohortAPI 
     --enable-features="FederatedLearningOfCohorts:update_interval/10s/minimum_history_domain_size_required/1,FlocIdSortingLshBasedComputation,InterestCohortFeaturePolicy"
     ```
+    <br>
 
-1.  Make sure third-party cookies are not blocked and that no ad blocker is running.
-1.  View the demo at [floc.glitch.me](https://floc.glitch.me/) or just run 
-`await document.interestCohort()` from the DevTools console.
+1.  Check that third-party cookies are not blocked and that no ad blocker is running.
+1.  View the demo at [floc.glitch.me](https://floc.glitch.me/) or run the following code from the 
+DevTools console:<br><br>
 
-### Check if your browser is included in the trial
+    ``` js
+    await document.interestCohort()
+    ```
 
-We have registered two demos for the FLoC origin trial, each of which uses a different method to 
-provide an origin trial token.
+{% Aside %}
+
+The flags used above: 
+* Enable FLoC.
+* Set the cohort recalculation to be done every 10 seconds. This is only for testing during the 
+origin trial; the cohort recalculation interval currently defaults otherwise to every seven days.
+* Set the minimum number of domains to be available in order for the cohort to be calculated.
+* Set the clustering algorithm used by FLoC.
+
+You can view FLoC flag code in [Chromium Code Search](https://source.chromium.org/chromium/chromium/src/+/master:components/federated_learning/features/features.cc?q=minimum_history_domain_size_required&ss=chromium).
+{% endAside %}
+
+### Check if your browser is included in the origin trial
+
+During the origin trial, FLoC is enabled by default for [a small percentage of browsers](https://blog.google/products/chrome/privacy-sustainability-and-the-importance-of-and/#jump-content:~:text=The%20initial%20testing%20of%20FLoC). 
+For these browsers, the FLoC API is made available without requiring flags to be set. You can check 
+if your browser is included in the trial by trying out one of the two demos below. Each of these 
+uses a different method to provide an origin trial token.
 
 * Meta tag: [floc-ot-meta.glitch.me](https://floc-ot-meta.glitch.me)
 * HTTP header: [floc-ot-header.glitch.me](https://floc-ot-header.glitch.me)
-
-{% Aside 'caution' %}
-The FLoC origin trial is taking place only with a [small percentage of users](https://blog.google/products/chrome/privacy-sustainability-and-the-importance-of-and/#jump-content:~:text=The%20initial%20testing%20of%20FLoC). 
-Your browser is likely not to be included.
-{% endAside %}
 
 
 ## Try out FLoC as a publisher, advertiser or adtech platform
