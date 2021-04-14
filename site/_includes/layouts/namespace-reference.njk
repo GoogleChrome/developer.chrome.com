@@ -27,10 +27,10 @@
     </ul>
   </div>
 
-  {# {{ macros.renderPrimarySection(namespace.name, 'types', 'Types', 'type', namespace.types) }}
+  {{ macros.renderPrimarySection(namespace.name, 'types', 'Types', 'type', namespace.types) }}
   {{ macros.renderPrimarySection(namespace.name, 'properties', 'Properties', 'property', namespace.properties) }}
   {{ macros.renderPrimarySection(namespace.name, 'methods', 'Methods', 'method', namespace.methods) }}
-  {{ macros.renderPrimarySection(namespace.name, 'events', 'Events', 'event', namespace.events) }} #}
+  {{ macros.renderPrimarySection(namespace.name, 'events', 'Events', 'event', namespace.events) }}
 {% endset %}
 
 {% set tocContents %}
@@ -65,7 +65,7 @@
           <li>
             <div class="code-sections__label">Description</div>
             <div class="type">
-              {{ namespace.description | safe }}
+              {{ namespace.description | md | safe }}
             </div>
           </li>
           {% if feature.permissions.length %}

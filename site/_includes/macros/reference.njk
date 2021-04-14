@@ -45,7 +45,7 @@
               {% endif %}
             </div>
           </td>
-          <td class="reference-collapse type">{{ namespace.description }}</td>
+          <td class="reference-collapse type">{{ namespace.description | md | safe }}</td>
         </tr>
       {% endif %}
     {% endif %}

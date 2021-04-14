@@ -11,6 +11,7 @@ const {
 const {i18n} = require('./site/_filters/i18n');
 const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
+const mdFilters = require('./site/_filters/md');
 const {minifyJs} = require('./site/_filters/minify-js');
 const {updateSvgForInclude} = require('./site/_filters/svg');
 const {slugify} = require('./site/_filters/slugify');
@@ -97,6 +98,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('stripDefaultLocale', stripDefaultLocale);
   eleventyConfig.addFilter('i18n', i18n);
   eleventyConfig.addFilter('githubLink', githubLink);
+  eleventyConfig.addFilter('md', mdFilters.render);
+  eleventyConfig.addFilter('mdInline', mdFilters.renderInline);
   eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
   eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
