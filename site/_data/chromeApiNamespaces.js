@@ -24,6 +24,8 @@
 
 require('dotenv').config();
 
+const {prepareNamespaces} = require('chrome-types-helpers');
+
 /**
  * @return {Promise<{[name: string]: any}>}
  */
@@ -32,16 +34,6 @@ module.exports = async () => {
     return {};
   }
 
-  let chromeTypesHelpers;
-  try {
-    // eslint-disable-next-line node/no-unsupported-features/es-syntax
-    chromeTypesHelpers = await import('chrome-types-helpers');
-  } catch (e) {
-    console.warn("could not import 'chrome-types-helpers', skipping types", e);
-    return {};
-  }
-
-  const {default: prepareNamespaces} = chromeTypesHelpers;
   const out = await prepareNamespaces();
   return out.namespaces;
 };
