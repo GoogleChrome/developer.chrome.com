@@ -5,10 +5,9 @@ const linkMatch = /{@link (\S+?)(|\s+\S+?)}/g;
 function updateAtLink(content) {
   return content.replace(linkMatch, (_, link, text) => {
     if (!text) {
-      text = link;
-      return `<a href="#">${text}</a>`;
+      return `[\`${link}\`](#)`;
     }
-    return `<code><a href="#">${text}</a></code>`;
+    return `[${text}](#)`;
   });
 }
 
