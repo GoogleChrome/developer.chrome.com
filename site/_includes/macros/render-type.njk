@@ -6,7 +6,7 @@
 
 {# Render the function signature. #}
 {% if spec.type === 'function' %}
-  {{ renderTypeSignature(spec, namespaceName) }}
+  {{ renderTypeSignature(spec) }}
 {% elif spec.referenceType === 'events.Event' %}
   {# This isn't really part of the type but we show users how to add a listener. #}
   <div class="code-sections__signature">
@@ -161,7 +161,7 @@
       should be a function that looks like this:
     </p>
     {% set functionPart %}
-      {{ renderTypeSignatureParameters(spec, namespaceName) }} => {...}
+      {{ renderTypeSignatureParameters(spec) }} => {...}
     {% endset %}
   {% elif spec.type === 'function' %}
     {# This is a function, often given to the user. It's ambiguous how it will
@@ -237,12 +237,68 @@
 {% endmacro %}
 
 {#
-  Renders a single type as a single word. Used for signatures and type hints.
+  Renders a single model.Type as a single word. Used for signatures and type hints.
 
-  If isOuter is true, shows a hint icon, because it's the left-most type inside
-  a table view.
+  If isOuter is true, shows a hint icon, because it's the left-most type inside a table view.
 #}
-{% macro renderSingleType(rt, isOuter) %}
+{% macro renderSingleType(type, isOuter) %}
+  {% set iconType = type.key %}
+
+  {% set stringType %}
+    {% if not type %}
+      {# Should never happen #}
+      ?
+
+    {% elif type.key === 'primitive' %}
+      {# Primitive type, e.g. "number" or "void" #}
+      {% set iconType = type.primitiveType %}
+      {{ type.primitiveType }}
+
+    {% elif type.key === 'literal' %}
+      {# Literal value, e.g., 123 or '"foo"' #}
+      <span class="code-sections__value">{{ type.value }}</span>
+
+    {% elif type.key === 'ref' %}
+      {# Reference to another type (internal or external) #}
+      {# TODO: add links for internal types #}
+
+      {% set iconType = 'object' %}
+      {{ type.name }}
+
+      {%- if type.templates.length -%}
+        &lt;
+          {%- for t in type.templates -%}
+            {{ renderSingleType(t) | trim }}
+          {%- endfor -%}
+        &gt;
+      {% endif %}
+
+    {% elif type.key === 'sequence' %}
+      {# An array of something else. #}
+      {{ renderSingleType(type.itemType) | trim }}[]
+
+    {% else %}
+      {# TODO: This doesn't make sense for many types. #}
+      {{ type.key }}
+    {% endif %}
+
+  {% endset %}
+
+  {# Note that we avoid whitespace below, and instead set margins in CSS. #}
+  {% if isOuter %}
+    <div class="display-inline-flex align-center flex-flow-row-wrap code-sections__type">
+      <span class="code-sections__icon code-sections__icon--{{ iconType }}">{{ stringType | safe | trim }}</span>
+      {% if rt.optional %}
+        <span class="code-sections__optional">optional</span>
+      {% endif %}
+    </div>
+  {% else %}
+    <span>{{ stringType | safe | trim }}</span>
+  {% endif %}
+
+{% endmacro %}
+
+{% macro renderSingleTypeOld(rt, isOuter) %}
 
 {% set iconType = rt.type %}
 {% set stringType %}
@@ -301,37 +357,47 @@
 {% endmacro %}
 
 {#
-  If the passed RenderType is a function, then render its full signature. Does nothing otherwise.
+  If the passed model.Property is a function, then render its full signature. Does nothing otherwise.
 #}
-{% macro renderTypeSignature(rt, namespaceName) %}
+{% macro renderTypeSignature(prop) %}
 
-  {% if rt.type === 'function' %}
-    <div class="code-sections__signature">
-      <code>
-        {{ namespaceName }}.{{ rt.name }}{{ renderTypeSignatureParameters(rt, namespaceName) }}
-        {%- if rt.returnType %}: {{ renderSingleType(rt.returnType) }}{% endif %}
-      </code>
+  {% if prop.type.key === 'function' %}
+    {% set type = prop.type %}
+      {% if type.isReturnsAsync %}
+        <div class="code-sections__signature">
+          <code>
+            {{ prop.name }}{{ renderFunctionParameters(type.parametersForAsync) }}:
+            {{ renderSingleType(type.returnTypeForAsync) }}
+          </code>
+        </div>
+      {% endif %}
+      <div class="code-sections__signature">
+        <code>
+          {{ prop.name }}{{ renderFunctionParameters(type.parameters) }}:
+          {{ renderSingleType(type.returnType) }}
+        </code>
+      </div>
     </div>
   {% endif %}
 
 {% endmacro %}
 
 {#
-  Renders the arguments of a method including ()'s. This assumes the passed RenderType is
-  a function.
+  Renders the arguments of a method including ()'s. This is an array of model.Property.
 #}
-{% macro renderTypeSignatureParameters(rt, namespaceName) -%}
+{% macro renderFunctionParameters(parameters) -%}
   (
-    {%- for parameter in rt.parameters -%}
+    {%- for parameter in parameters -%}
       {{ parameter.name }}{% if parameter.optional %}?{% endif %}:
-      <span class="code-sections__signature-type">{{ renderSingleType(parameter) | trim }}</span>
+      <span class="code-sections__signature-type">{{ renderSingleType(parameter.type) | trim }}</span>
       {%- if not loop.last %}, {% endif -%}
     {%- endfor -%}
   )
 {%- endmacro %}
 
 {#
-  Renders a short summary of the passed RenderType[]. Used at the top of a namespace page.
+  Renders a short summary of the passed list of Property objects. Used at the top of a namespace
+  page for different sections (types, events, etc).
 #}
 {% macro renderSummarySection(namespaceName, label, prefix, array) %}
 
@@ -339,9 +405,9 @@
     <li>
       <div class="code-sections__label">{{ label }}</div>
       <div>
-        {% for rt in array %}
-          <div><a href="#{{ prefix }}-{{ rt.name }}" class="link weight-medium">{{ rt.name }}</a></div>
-          {{ renderTypeSignature(rt, namespaceName) }}
+        {% for prop in array %}
+          <div><a href="#{{ prefix }}-{{ prop.name }}" class="link weight-medium">{{ prop.name }}</a></div>
+          {{ renderTypeSignature(prop) }}
         {% endfor %}
       </div>
     </li>
