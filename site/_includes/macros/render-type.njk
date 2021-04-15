@@ -74,11 +74,11 @@
             {% set returnParameters = type.callbackForAsync.type.parameters %}
 
             <div class="type stack">
-              {{ renderComment(type.returnProperty) }}
+              {{ renderComment(type.callbackForAsync) }}
               <p>
-                This callback may be specified as a callback or returned as a <code>Promise</code> (MV3 only).
+                The <code>{{ prop.name }}</code> method provides its result via callback or returned as a <code>Promise</code> (MV3 only).
                 {% if not returnParameters.length %}
-                  It takes no parameters.
+                  It has no parameters.
                 {% endif %}
               </p>
             </div>
