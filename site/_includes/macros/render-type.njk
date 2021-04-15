@@ -47,9 +47,9 @@
 
       <div class="code-sections__overline code-sections__label">
         <p>
-          {% for choiceType in spec.choices %}
+          {% for choiceType in type.choices %}
             {% if loop.last and not loop.first %}or{% endif %}
-            {{ renderSingleType(choiceType) }}{% if not loop.last %},{% endif %}
+            {{ renderSingleType(choiceType, prop) | trim }}{% if not loop.last %},{% endif %}
           {% endfor %}
         </p>
       </div>
@@ -83,23 +83,13 @@
               </p>
             </div>
 
-            {{ renderOptionalParametersSection(returnParameters )}}
+            {{ renderOptionalParametersSection(returnParameters) }}
           </li>
         </ul>
       </div>
 
     {% else %}
-      {% if type.parameters.length %}
-        <div class="code-sections">
-          <h4 class="type--label case-upper">Parameters</h4>
-
-          <ul class="stack flow-space-300">
-            {% for parameter in type.parameters %}
-              {{ internalRenderParameter(parameter) }}
-            {% endfor %}
-          </ul>
-        </div>
-      {% endif %}
+      {{ renderOptionalParametersSection(type.parameters, 'Parameters') }}
       {% if type.returnProperty and type.returnType.primitiveType !== 'void' %}
         <div class="code-sections">
           <h4 class="type--label case-upper">Returns</h4>
@@ -357,14 +347,20 @@
 
     {% elif type.key === 'literal' %}
       {# Literal value, e.g., 123 or '"foo"' #}
-      <span class="code-sections__value">{{ type.value }}</span>
+      {% set iconType = type.primitiveType %}
+      <span class="code-sections__value">{{ type.value | dump }}</span>
 
     {% elif type.key === 'ref' %}
       {# Reference to another type (internal or external) #}
-      {# TODO: add links for internal types #}
 
       {% set iconType = 'object' %}
-      {{ type.name }}
+
+      {% set link = type | modelToHref %}
+      {% if link %}
+        <a href="{{ link }}">{{ type.name }}</a>
+      {%- else %}
+        {{ type.name }}
+      {%- endif %}
 
       {%- if type.templates.length -%}
         &lt;
@@ -393,11 +389,11 @@
 
   {# Note that we avoid whitespace below, and instead set margins in CSS. #}
   {% if outerProp %}
-    <div class="code-sections__icon code-sections__icon--{{ iconType }}">{{ stringType | safe | trim }}
+    <span class="code-sections__icon code-sections__icon--{{ iconType }}">{{ stringType | safe | trim }}
       {%- if outerProp.optional -%}
         &nbsp;<span class="code-sections__optional">optional</span>
-      {% endif %}
-    </div>
+      {%- endif -%}
+    </span>
   {% else %}
     <span>{{ stringType | safe | trim }}</span>
   {% endif %}
@@ -428,7 +424,7 @@
 {% endmacro %}
 
 {#
-  Renders the arguments of a method including ()'s. This is an array of model.Property.
+  Renders the arguments of a method including ()'s. This is passed as model.Property[].
 #}
 {% macro renderFunctionParameters(parameters) -%}
   (
@@ -441,8 +437,8 @@
 {%- endmacro %}
 
 {#
-  Renders a short summary of the passed list of Property objects. Used at the top of a namespace
-  page for different sections (types, events, etc).
+  Renders a short summary of the passed model.Property[]. Used at the top of a namespace page for
+  different sections (types, events, etc).
 #}
 {% macro renderSummarySection(namespaceName, label, prefix, array) %}
 
@@ -461,7 +457,7 @@
 {% endmacro %}
 
 {#
-  Renders the whole list of the passed RenderType[].
+  Renders the whole list of the passed model.Property[].
 #}
 {% macro renderPrimarySection(namespaceName, id, label, prefix, array) %}
 
