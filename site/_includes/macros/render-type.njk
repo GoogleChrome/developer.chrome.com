@@ -64,7 +64,7 @@
       <div class="code-sections">
         <h4 class="type--label case-upper">Result</h4>
 
-        <ul class="stack flow-space-300">
+        <ul class="stack">
           <li class="stack">
             <div>
               <div class="code-sections__label">return/callback</div>
@@ -94,7 +94,7 @@
         <div class="code-sections">
           <h4 class="type--label case-upper">Returns</h4>
 
-          <ul class="stack flow-space-300">
+          <ul class="stack">
             {{ internalRenderParameter(type.returnProperty) }}
           </ul>
         </div>
@@ -109,7 +109,7 @@
     {% else %}
       <div class="code-sections">
         <h4 class="type--label case-upper">Event</h4>
-        <ul class="stack flow-space-300">
+        <ul class="stack">
           {{ internalRenderListenerAsItem(type.templates[0]) }}
         </ul>
       </div>
@@ -139,7 +139,7 @@
       <div class="code-sections">
         <h4 class="type--label case-upper">Properties</h4>
 
-        <ul class="stack flow-space-300">
+        <ul class="stack">
           {% for name, prop in type.properties | dictsort %}
             {{ internalRenderParameter(prop) }}
           {% endfor %}
@@ -173,7 +173,7 @@
         <h4 class="type--label case-upper">{{ label }}</h4>
       {% endif %}
 
-      <ul class="stack flow-space-300">
+      <ul class="stack">
         {% for parameter in parameters %}
           {{ internalRenderParameter(parameter) }}
         {% endfor %}
@@ -199,7 +199,7 @@
     <p class="code-sections__deprecated">
       <strong>
         Deprecated
-        {%- if feature.deprecatedSinceVersion %}
+        {%- if feature.deprecatedSinceVersion > 0 %}
           since Chrome {{ feature.deprecatedSinceVersion }}
         {%- endif -%}
       </strong>.
@@ -291,7 +291,7 @@
 {% if type.key === 'object' %}
   {% if type.properties | length %}
     <div class="code-sections">
-      <ul class="stack flow-space-300">
+      <ul class="stack">
         {% for name, prop in type.properties | dictsort %}
           {{ internalRenderParameter(prop) }}
         {% endfor %}
@@ -303,7 +303,7 @@
 {% elif type.key === 'function' %}
   {% if type.parameters.length or type.returnType.primitiveType !== 'void' %}
     <div class="code-sections">
-      <ul class="stack flow-space-300">
+      <ul class="stack">
         {% for parameter in type.parameters %}
           {{ internalRenderParameter(parameter) }}
         {% endfor %}
@@ -317,7 +317,7 @@
 {# OPTION: event #}
 {% elif type.key === 'ref' and type.name === 'events.Event' %}
   <div class="code-sections">
-    <ul class="stack flow-space-300">
+    <ul class="stack">
       {{ internalRenderListenerAsItem(type.templates[0]) }}
     </ul>
   </div>
