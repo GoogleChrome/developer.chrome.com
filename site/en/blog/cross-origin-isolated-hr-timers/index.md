@@ -12,11 +12,11 @@ alt: A stopwatch
 
 Before version 91,
 [timer resolutions](https://www.w3.org/TR/hr-time/)
-on Chrome were restricted to 5 microseconds on desktop,
+in Chrome were restricted to 5 microseconds on desktop,
 where [site-isolation](https://www.chromium.org/Home/chromium-security/site-isolation) is enabled,
 and to 100 microseconds on Android, where it's not.
 
-Starting from version 91,
+Starting from version 91, following a [specification change](https://github.com/w3c/hr-time/pull/93),
 Chrome will be restricting the resolution of explicit [timers](https://www.w3.org/TR/hr-time/)
 (`performance.now()`, `performance.timeOrigin()`,
 and other performance APIs that expose `DOMHighResTimestamps`) to 100 microseconds across platforms.
@@ -34,7 +34,7 @@ Cross-origin isolation is a state where a web page is isolated from other origin
 ## Do I need to do something about it?
 
 Probably not. `performance.now()` has been limited to significantly more coarse resolutions in other browsers
-(e.g. 1ms = 0.001 seconds),
+(e.g. 1 millisecond = 0.001 seconds),
 so you shouldn't have relied on the current resolution anyway.
 
 At the same time,
@@ -57,8 +57,9 @@ then guess the contents of the process' memory.
 
 While speculative execution attacks can be executed with coarse timers,
 high-resolution timers can speed them up.
-Chrome introduced
+Chrome used its
 [site-isolation](https://www.chromium.org/Home/chromium-security/site-isolation)
+architecture, as well as other [mechanisms](https://www.chromium.org/Home/chromium-security/corb-for-developers),
 to mitigate the risk and re-enabled those functionalities,
 but it is limited to desktop platforms and Chromium browsers only.
 Having APIs relying on the underlying browser architecture isn't really ideal.
