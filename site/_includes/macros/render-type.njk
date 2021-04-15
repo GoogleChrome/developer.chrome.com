@@ -355,7 +355,7 @@
 
       {% set iconType = 'object' %}
 
-      {% set link = type | modelToHref %}
+      {% set link = type.name | modelToHref %}
       {% if link %}
         <a href="{{ link }}">{{ type.name }}</a>
       {%- else %}
