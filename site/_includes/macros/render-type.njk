@@ -6,12 +6,19 @@
 
   {% set type = prop.type %}
 
+  {% set declarativeNote = '' %}
+
 {# Render the function signature. #}
 {% if type.key === 'function' %}
   {{ renderTypeSignature(prop) }}
 {% elif type.key === 'ref' and type.name === 'events.Event' %}
-  {% if type.templates[0].name === 'void' %}
-    {# TODO: This is a declarative event listener. #}
+  {% if type.templates[0].primitiveType === 'void' %}
+    {% set declarativeNote %}
+      <p>
+        {# TODO: links #}
+        Provides the Declarative Event API consisting of <code>addRules</code>, <code>removeRules</code>, and <code>getRules</code>.
+      </p>
+    {% endset %}
   {% else %}
     {# This isn't really part of the type but we show users how to add a listener. #}
     <div class="code-sections__signature">
@@ -24,6 +31,7 @@
 
 <div class="type stack code-sections__description">
   {{ renderComment(prop) }}
+  {{ declarativeNote | safe }}
 </div>
 
 {{ renderTopType(type, prop) }}
@@ -41,19 +49,7 @@
 
   {% elif prop.isType and type.key === 'choices' %}
     {# Type that contains many string (probably) options, basically an enum. #}
-
-    <div class="code-sections">
-      <h4 class="type--label case-upper">Enum</h4>
-
-      <div class="code-sections__overline code-sections__label">
-        <p>
-          {% for choiceType in type.choices %}
-            {% if loop.last and not loop.first %}or{% endif %}
-            {{ renderSingleType(choiceType, prop) | trim }}{% if not loop.last %},{% endif %}
-          {% endfor %}
-        </p>
-      </div>
-    </div>
+    {{ renderOptionalTypesArray(type.choices, 'Enum', prop) }}
 
   {% elif type.key === 'function' %}
     {# Top-level namespace function. #}
@@ -104,8 +100,9 @@
   {% elif type.key === 'ref' and type.name === 'events.Event' %}
     {# Top-level event variable. #}
 
-    {% if type.templates[0].name === 'void' %}
-      {# TODO: This is a declarative event listener. #}
+    {% if type.templates[0].primitiveType === 'void' %}
+      {{ renderOptionalTypesArray(type.templates[1].choices, 'Conditions', prop) }}
+      {{ renderOptionalTypesArray(type.templates[2].choices, 'Actions', prop) }}
     {% else %}
       <div class="code-sections">
         <h4 class="type--label case-upper">Event</h4>
@@ -178,6 +175,30 @@
           {{ internalRenderParameter(parameter) }}
         {% endfor %}
       </ul>
+    </div>
+  {% endif %}
+
+{% endmacro %}
+
+{#
+  Renders an optional list of types, e.g., for an enum.
+#}
+{% macro renderOptionalTypesArray(types, label, prop) %}
+
+  {% if types.length %}
+    <div class="code-sections">
+      {% if label %}
+        <h4 class="type--label case-upper">{{ label }}</h4>
+      {% endif %}
+
+      <div class="code-sections__overline code-sections__label">
+        <p>
+          {% for t in types %}
+            {% if loop.last and not loop.first %}or{% endif %}
+            {{ renderSingleType(t, prop) | trim }}{% if not loop.last %},{% endif %}
+          {% endfor %}
+        </p>
+      </div>
     </div>
   {% endif %}
 

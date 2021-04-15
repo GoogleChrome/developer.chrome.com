@@ -1,6 +1,6 @@
 const md = require('markdown-it')();
 
-const linkMatch = /{@link (\S+?)(|\s+\S+?)}/g;
+const linkMatch = /{@link (\S+?)(|\s+.+?)}/g;
 
 /**
  * Resolves a reference to another type from within Chrome APIs extensions docs.
