@@ -45,7 +45,7 @@
     "async-transforms": "^1.0.6",
     "chokidar": "^3.5.1",
     "chokidar-cli": "^2.1.0",
-    "chrome-types-helpers": "^0.1.0-beta3",
+    "chrome-types-helpers": "^0.1.0-beta4",
     "common-tags": "^1.8.0",
     "compression": "^1.7.4",
     "concurrently": "^5.2.0",
