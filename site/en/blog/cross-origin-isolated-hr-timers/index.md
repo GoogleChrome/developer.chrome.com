@@ -2,11 +2,11 @@
 layout: 'layouts/blog-post.njk'
 title: Aligning timers with cross origin isolation restrictions
 authors:
-  - yoav
+  - yoavweiss
   - agektmr
 description: Starting in Chrome 91, the resolution of explicit timers will be restricted to 100 microseconds across platforms without cross-origin isolation.
 date: 2021-04-15
-hero: image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/mnoYgEv2E9L6eSThY9G4.jpg
+hero: 'image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/mnoYgEv2E9L6eSThY9G4.jpg'
 alt: A stopwatch
 ---
 
@@ -54,6 +54,7 @@ This is because Spectre,
 and similar speculative execution attacks,
 rely on timers to measure the time certain operations take,
 then guess the contents of the process' memory.
+
 While speculative execution attacks can be executed with coarse timers,
 high-resolution timers can speed them up.
 Chrome introduced
@@ -72,3 +73,6 @@ and other APIs that are unsafe to expose in processes that can read arbitrary cr
 
 To learn more about the background, read
 [Why you need "cross-origin isolated" for powerful features](https://web.dev/why-coop-coep/).
+
+Cover photo by [Linda Perez Johannessen](https://unsplash.com/@linper?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+on [Unsplash](https://unsplash.com/s/photos/stopwatch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).

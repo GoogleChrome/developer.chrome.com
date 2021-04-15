@@ -545,5 +545,14 @@
       "en": "Googler working on Chrome DevTools."
     },
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KMNWpnRJTP6eHJs1wEw2.jpg"
+  },
+  "yoavweiss": {
+    "name": {
+      "given": "Yoav",
+      "family": "Weiss"
+    },
+    "twitter": "yoavweiss",
+    "github": "yoavweiss",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/isPv6ZIClCtYWtmkB1w0.jpg"
   }
 }
