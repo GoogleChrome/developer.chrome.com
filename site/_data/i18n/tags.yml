@@ -29,6 +29,9 @@ encryption:
 extensions:
   en: Extensions
 
+extensions:
+  en: Extensions
+
 feature-policy:
   en: Feature-policy
 
