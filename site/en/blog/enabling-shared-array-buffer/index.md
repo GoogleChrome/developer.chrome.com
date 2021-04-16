@@ -11,7 +11,7 @@ description: >
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
 date: 2021-01-18
-updated: 2021-02-17
+updated: 2021-04-16
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
 alt: A collection of padlocks.
 ---
@@ -50,8 +50,33 @@ can gather data on requests that failed as a result of
 `Cross-Origin-Embedder-Policy` and `Cross-Origin-Opener-Policy`.
 
 If you don't think you can make these changes in time for Chrome 91, you can
-[register for an origin trial](#origin-trial) to retain current Desktop
-Chrome behavior until Chrome 93.
+[register for an origin trial](#origin-trial) to retain current Desktop Chrome
+behavior until at least Chrome 93.
+
+{% Aside %}
+**Update on April 2021**
+
+We've been exploring ways to deploy `Cross-Origin-Resource-Policy` at scale, as
+cross-origin isolation requires all subresources to explicitly opt-in. And we
+have come up with the idea of going in the opposite direction: a new [COEP
+"credentialless" mode](https://github.com/mikewest/credentiallessness/) that
+allows loading resources without the CORP header by stripping all their
+credentials. We are working out how it should work in detail, but we hope this
+will lighten your burden of making sure the subresources are sending the
+`Cross-Origin-Resource-Policy` header.
+
+Also, it's known that the `Cross-Origin-Opener-Policy: same-origin` header will
+break integrations that require cross-origin window interactions such as OAuth
+and payments. To mitigate this problem, we are [exploring relaxing the
+condition](https://github.com/whatwg/html/issues/6364) to enable cross-origin
+isolation to `Cross-Origin-Opener-Policy: same-origin-allow-popups`. This way
+the communication with the window opened by itself will be possible.
+
+If you want to enable cross-origin isolation to use `SharedArrayBuffer` but are
+blocked by these challenges, we recommend [registering for an origin
+trial](#origin-trial) and wait until the new modes are available. We are not
+planning to terminate the origin trial until these new modes are available.
+{% endAside %}
 
 Check out the [Further reading](#resources) section at the bottom of this page
 for more guidance and information on cross-origin isolation.
