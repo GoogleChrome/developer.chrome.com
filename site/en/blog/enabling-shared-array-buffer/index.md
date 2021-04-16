@@ -28,6 +28,11 @@ web, but things are settling down. Here's what you need to know:
   91 it will be limited to cross-origin isolated pages. If you don't think you
   can make this change in time, you can [register for an origin trial](#origin-trial) to retain
   the current behavior until Chrome 93.
+- If you intend to enable cross-origin isolation to continue using
+  `SharedArrayBuffer` evaluate the impact this will have on other cross-origin
+  elements on your website, e.g. ad placements. Check if `SharedArrayBuffer` is
+  used by any of your third-party resources to understand impact and guidance. 
+
 
 ## Cross-origin isolation overview {: #cross-origin-isolation }
 
