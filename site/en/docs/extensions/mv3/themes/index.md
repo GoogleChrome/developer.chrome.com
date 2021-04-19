@@ -62,7 +62,8 @@ Colors are in RGB format. To find the strings you can use within the "colors" fi
 ### images {: #images }
 
 Image resources use paths relative to the root of the extension. You can override any of the images
-that are specified by the strings in [`kPersistingImages`][5].
+that are specified by the strings in [`kPersistingImages`][5]. All images must be stored in PNG
+format or they [will not render properly][8].
 
 ### properties {: #properties }
 
@@ -94,3 +95,4 @@ You can alternatively use `-1.0` for any of the HSL values to specify _no change
 [5]: https://cs.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kPersistingImages$
 [6]: https://cs.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kDisplayProperties$
 [7]: https://cs.chromium.org/search/?q=file:chrome/browser/themes%20symbol:kTintTable$
+[8]: https://bugs.chromium.org/p/chromium/issues/detail?id=1200459
