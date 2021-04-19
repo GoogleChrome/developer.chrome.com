@@ -45,7 +45,7 @@
 {% macro renderTopType(type, prop) %}
 
   {% if not type %}
-    {# TODO #}
+    {# This should probably never happen. #}
 
   {% elif prop.isType and type.key === 'choices' %}
     {# Type that contains many string (probably) options, basically an enum. #}
@@ -402,8 +402,8 @@
       {%- endfor -%}
 
     {% else %}
-      {# TODO: This doesn't make sense for many types. #}
-      {{ type.key }}
+     {# This is a fallback display but won't render a sensible type that looks like TS. #}
+     {{ type.key }}
     {% endif %}
 
   {% endset %}
