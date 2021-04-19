@@ -545,5 +545,24 @@
       "en": "Googler working on Chrome DevTools."
     },
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KMNWpnRJTP6eHJs1wEw2.jpg"
+  },
+  "solomonkinard": {
+    "name": {
+      "given": "Solomon",
+      "family": "Kinard"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "descriptions": {
+      "en": "Software Engineer, Chrome Extensions"
+    },
+    "country": "US",
+    "homepage": "https://kinard.com",
+    "twitter": "solomonkinard",
+    "github": "solomonkinard",
+    "glitch": "solomonkinar",
+    "image": "image/VK2OszK9GThIIwHngukz3x84Zfd2/rmArqpThpCHbCz9dWSWT.jpg"
   }
 }
