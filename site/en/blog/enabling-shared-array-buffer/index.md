@@ -11,7 +11,7 @@ description: >
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
 date: 2021-01-18
-updated: 2021-04-16
+updated: 2021-04-19
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
 alt: A collection of padlocks.
 ---
@@ -30,8 +30,9 @@ web, but things are settling down. Here's what you need to know:
   the current behavior until at least Chrome 96.
 - If you intend to enable cross-origin isolation to continue using
   `SharedArrayBuffer` evaluate the impact this will have on other cross-origin
-  elements on your website, e.g. ad placements. Check if `SharedArrayBuffer` is
-  used by any of your third-party resources to understand impact and guidance. 
+  elements on your website, such as ad placements. Check if `SharedArrayBuffer`
+  is used by any of your third-party resources to understand impact and
+  guidance. 
 
 
 ## Cross-origin isolation overview {: #cross-origin-isolation }
@@ -59,15 +60,15 @@ If you don't think you can make these changes in time for Chrome 91, you can
 behavior until at least Chrome 96.
 
 {% Aside %}
-**Update on April 2021**
+**Update, April 2021**
 
 We've been exploring ways to deploy `Cross-Origin-Resource-Policy` at scale, as
 cross-origin isolation requires all subresources to explicitly opt-in. And we
 have come up with the idea of going in the opposite direction: a new [COEP
 "credentialless" mode](https://github.com/mikewest/credentiallessness/) that
 allows loading resources without the CORP header by stripping all their
-credentials. We are working out how it should work in detail, but we hope this
-will lighten your burden of making sure the subresources are sending the
+credentials. We are figuring out the details of how it should work, but we hope
+this will lighten your burden of making sure the subresources are sending the
 `Cross-Origin-Resource-Policy` header.
 
 Also, it's known that the `Cross-Origin-Opener-Policy: same-origin` header will
@@ -79,9 +80,9 @@ the communication with the window opened by itself will be possible.
 
 If you want to enable cross-origin isolation to use `SharedArrayBuffer` but are
 blocked by these challenges, we recommend [registering for an origin
-trial](#origin-trial) and wait until the new modes are available. We are not
-planning to terminate the origin trial until these new modes are available.
-{% endAside %}
+trial](#origin-trial) and waiting until the new modes are available. We are not
+planning to terminate the origin trial until these new modes are available. {%
+endAside %}
 
 Check out the [Further reading](#resources) section at the bottom of this page
 for more guidance and information on cross-origin isolation.
