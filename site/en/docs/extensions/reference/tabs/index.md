@@ -54,7 +54,10 @@ async function getCurrentTab() {
 }
 ```
 
-Content script asking a background script to navigate the current tab.
+### Request background script to navigate current tab
+
+This example shows how a content script could ask the background script to navigate the current tab.
+{# Editor's note: I'd like to frame this as a use case; is there an obvious one? #}
 
 ```js
 // Content script
