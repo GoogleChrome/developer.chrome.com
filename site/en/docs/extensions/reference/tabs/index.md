@@ -28,7 +28,9 @@ The following sections demonstrate several common use cases for the chrome.tabs 
 
 ### Opening an extension page in a new tab
 
-A common pattern for extensions is to open an onboarding page in a new tab when the extension is installed. The following example shows how to do this. {% Aside %} Note that this code must be called from a background context, because tabs cannot use `chrome.tabs.create()`{% end Aside %}.
+A common pattern for extensions is to open an onboarding page in a new tab when the extension is installed. The following example shows how to do this.
+
+{% Aside %} Cannot use `chrome.tabs.create()` in content scripts. {% endAside %}.
 
 ```js
 //// background.js
@@ -44,9 +46,10 @@ chrome.runtime.onInstalled.addListener((reason) => {
 
 ### Get the current tab
 
-This example demonstrates how the background script can retrieve the currently focused tab. {% Aside %} Requires Manifest V3. Cannot be used in a content script. {% end Aside %}
+This example demonstrates how the background script can retrieve the currently focused tab.
 
-{# Editor's note: what happened about converting this example to a promise with a note? #}
+{% Aside %} Requires Manifest V3 due to the use of Promises. Cannot use `tabs.query` in content
+scripts. {% endAside %}
 
 ```js
 //// background.js
