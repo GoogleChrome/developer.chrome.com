@@ -22,6 +22,17 @@ history. The user's browser is associated with one interest cohort at a time and
 cohort periodically (currently once every seven days during this initial origin trial) on 
 the user's device, without sharing individual browsing data with the browser vendor or anyone else. 
 
+{% Aside %}
+A page visit will only be included in the browser's FLoC calculation if `document.interestCohort()` 
+is used on the page. In other words, your cohort is based only on the pages you've visited that use 
+FLoC. 
+
+During the current FLoC origin trial, a page will also be included in the 
+calculation if (and&nbsp;only if) Chrome detects that the page load ads or ads-related resources. For 
+other clustering algorithms, we may experiment with different inclusion criteria: that's part of the 
+origin trial experiment process.
+{% endAside %}
+
 
 To find out more about FLoC, see [What is Federated Learning of Cohorts (FLoC)](https://web.dev/floc).
 
