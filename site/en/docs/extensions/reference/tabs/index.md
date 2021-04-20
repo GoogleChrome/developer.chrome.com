@@ -31,6 +31,8 @@ The following sections demonstrate several common use cases for the chrome.tabs 
 A common pattern for extensions is to open an onboarding page in a new tab when the extension is installed. The following example shows how to do this. {% Aside %} Note that this code must be called from a background context, because tabs cannot use `chrome.tabs.create()`{% end Aside %}.
 
 ```js
+//// background.js
+
 chrome.runtime.onInstalled.addListener((reason) => {
   if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
     chrome.tabs.create({
@@ -47,6 +49,8 @@ This example demonstrates how the background script can retrieve the currently f
 {# Editor's note: what happened about converting this example to a promise with a note? #}
 
 ```js
+//// background.js
+
 async function getCurrentTab() {
   let queryOptions = { active: true, currentWindow: true };
   let [tab] = await chrome.tabs.query(queryOptions);
