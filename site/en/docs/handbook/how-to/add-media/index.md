@@ -61,7 +61,7 @@ in the shortode.
 #### Img Properties (`ImgArgs`)
 
 ```typescript
-{% include '../../../../../../types/site/_shortcodes/img.d.ts' %}
+{% include '../../../../../../node_modules/webdev-infra/types/shortcodes/Img.d.ts' %}
 ```
 
 The `{% raw %}`{% Img %}`{% endraw%}` `params` object exposes the entire [Imgix
@@ -70,7 +70,7 @@ to use the [flip API](https://docs.imgix.com/apis/rendering/rotation/flip) to fl
 an image on its horitonzal axis you would do:
 
 ```md
-{% raw %}{% Img 
+{% raw %}{% Img
   src="image/foR0vJZKULb5AGJExlazy1xYDgI2/iuwBXAyKJMz4b7oRyIdI.jpg",
   alt="ALT_TEXT_HERE",
   width="380",
@@ -99,5 +99,5 @@ directly.
 #### Video Properties (`VideoArgs`)
 
 ```typescript
-{% include '../../../../../../types/site/_shortcodes/video.d.ts' %}
+{% include '../../../../../../node_modules/webdev-infra/types/shortcodes/Video.d.ts' %}
 ```

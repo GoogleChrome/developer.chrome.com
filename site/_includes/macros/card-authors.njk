@@ -9,7 +9,7 @@
     {% for item in authors %}
       {% set author = authorsData[item] %}
       {% Img
-        className="card-authors__image rounded-full flex-shrink-none width-600 height-600 object-fit-cover",
+        class="card-authors__image rounded-full flex-shrink-none width-600 height-600 object-fit-cover",
         src=author.image,
         alt=author.name.given + author.name.family,
         width="40",

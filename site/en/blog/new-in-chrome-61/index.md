@@ -60,7 +60,7 @@ affected by modules from the links below.
 
 ## Web Share API {: #share }
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/QUYSEpO7FD2S7aMGmIzf.png", alt="", className="float-right", height="600", width="338" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/QUYSEpO7FD2S7aMGmIzf.png", alt="", class="float-right", height="600", width="338" %}
 
 If you want users to be easily able to share your content on their favorite
 social network, you need to integrate sharing buttons into your site for
