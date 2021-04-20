@@ -71,8 +71,8 @@ The cohort data made available looks like this:
 
 ``` json
     {
-        "id": "14159",
-        "version": "chrome.2.1"
+      "id": "14159",
+      "version": "chrome.2.1"
     }
 ```
 
