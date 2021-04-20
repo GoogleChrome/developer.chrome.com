@@ -20,7 +20,7 @@ New and improved Web Accessible Resources for Manifest V3!
 
 ## Summary
 
-Web Accessible Resources for Manifest is here! Now ```manifest.json``` supports permission definitions. Developers can restrict resources based on the requesting site origin or extension id.
+Web Accessible Resources for Manifest V3 is here! Now ```manifest.json``` supports permission definitions. Developers can restrict resources based on the requesting site origin or extension id.
 
 ## Examples
 
@@ -88,3 +88,6 @@ Extension and site specific:
 * [Demo](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/web-accessible-resources)
 * [Docs](https://developer.chrome.com/docs/extensions/mv3/manifest/web_accessible_resources/)
 
+## Launched
+
+m89
