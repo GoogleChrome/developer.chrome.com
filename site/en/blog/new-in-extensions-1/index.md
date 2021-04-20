@@ -2,7 +2,7 @@
 layout: 'layouts/blog-post.njk'
 title: Web Accessible Resources for Manifest V3
 description: >
-  Web Accessible Resources for Manifest is here! Now `manifest.json` supports permission definitions. Developers can restrict resources based on the requesting site origin or extension id.
+  Web Accessible Resources for Manifest V3 is here! Now `manifest.json` supports permission definitions. Developers can restrict resources based on the requesting site origin or extension id.
 subhead: >
   New and improved Web Accessible Resources for Manifest V3!
 date: 2021-04-20
