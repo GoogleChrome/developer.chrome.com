@@ -210,14 +210,34 @@
 {% macro renderComment(prop) %}
   {% set feature = prop.feature %}
 
-  {% if feature.unknownVersion %}
-    <p class="code-sections__deprecated">This API is in active development.</p>
-  {% endif %}
-  {% if feature.availableFromVersion %}
-    <p class="code-sections__deprecated">Since Chrome {{ feature.availableFromVersion }}.</p>
-  {% endif %}
-  {% if prop.deprecated !== undefined or feature.deprecatedSinceVersion %}
-    <p class="code-sections__deprecated">
+  {# TODO(samthor): Much of this text is cloned from namespace-reference.njk's namespace rendering. #}
+  {% set warningText %}
+    {% if feature.supportedInChannel === 'dev' %}
+      Dev channel only.
+    {% elif feature.supportedInChannel === 'beta' %}
+      Beta and Dev channels only.
+    {% elif feature.unknownVersion %}
+      This API is brand new.
+    {% elif feature.availableFromVersion %}
+      Since Chrome {{ feature.availableFromVersion }}.
+    {% endif %}
+    {% if feature.maxManifestVersion %}
+      Manifest V{{ feature.maxManifestVersion }}
+      {% if feature.maxManifestVersion === 2 %}
+        {# Nothing is actually before MV2. #}
+        only.
+      {% else %}
+        and below.
+      {% endif %}
+    {% endif %}
+    {% if feature.minManifestVersion %}
+      Manifest V{{ feature.minManifestVersion }} and above.
+    {% endif %}
+    {% if feature.disallowForServiceWorkers and feature.maxManifestVersion !== 2 %}
+      {# Don't show this message if the maximum manifest version is 2, because they don't support SWs anyway. #}
+      Unavailable in Service Workers.
+    {% endif %}
+    {% if prop.deprecated !== undefined or feature.deprecatedSinceVersion %}
       <strong>
         Deprecated
         {%- if feature.deprecatedSinceVersion > 0 %}
@@ -225,8 +245,13 @@
         {%- endif -%}
       </strong>.
       {{ prop.deprecated | mdInline | safe }}
-    </p>
+    {% endif %}
+  {% endset %}
+
+  {% if warningText | trim %}
+    <p class="code-sections__deprecated">{{ warningText | trim | safe }}</p>
   {% endif %}
+  {# This |md filter will add <p> as appropriate. #}
   {{ prop.description | md | safe }}
 {% endmacro %}
 
@@ -485,7 +510,7 @@
   {% if array.length %}
     <h2 class="type--h3" id="{{ id }}">{{ label }}</h2>
     {% for prop in array %}
-      <div>
+      <div class="flow-space-300">
         <h3 class="type--h4" id="{{ prefix }}-{{ prop.name }}">{{ prop.name }}</h3>
         {{ renderTopProperty(prop, true) }}
       </div>
