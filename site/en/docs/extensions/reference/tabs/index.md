@@ -45,7 +45,6 @@ chrome.runtime.onInstalled.addListener((reason) => {
 This example demonstrates how the background script can retrieve the currently focused tab. {% Aside %} Requires Manifest V3. Cannot be used in a content script. {% end Aside %}
 
 {# Editor's note: what happened about converting this example to a promise with a note? #}
-script.
 
 ```js
 async function getCurrentTab() {
