@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: An example blog post
+title: Extension Manifest Converter
 description: >
   Open source tool to convert extensions to Manifest V3. You’ll still need to manually update any service worker code that relies on a DOM, in addition to updating chrome.scripts.
 subhead: >
@@ -11,7 +11,7 @@ authors:
   - solomonkinard
   - simeonv
 tags:
-  - extension
+  - extensions
 ---
 
 Extension Manifest Converter for Manifest V3
@@ -24,7 +24,7 @@ Open source tool to convert extensions to Manifest V3. Easily convert an entire 
 
 Converting files can be done one of the following ways.
 
-`git clone https://github.com/GoogleChromeLabs/extension-manifest-converter`
+```git clone https://github.com/GoogleChromeLabs/extension-manifest-converter```
 
 manifest.json
 ```
