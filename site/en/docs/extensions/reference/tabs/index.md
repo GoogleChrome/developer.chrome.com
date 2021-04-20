@@ -24,8 +24,11 @@ permission in the manifest, as shown below:
 
 ## Examples
 
-Opening the extension's onboarding page in new tab after the extension is installed for the first
-time. Must be called from a background context.
+The following sections demonstrate several common use cases for the chrome.tabs API.
+
+### Opening an extension page in a new tab
+
+A common pattern for extensions is to open an onboarding page in a new tab when the extension is installed. The following example shows how to do this. {% Aside %} Note that this code must be called from a background context, because tabs cannot use `chrome.tabs.create()`{% end Aside %}.
 
 ```js
 chrome.runtime.onInstalled.addListener((reason) => {
