@@ -26,6 +26,9 @@ devices:
 encryption:
   en: Encryption
 
+extensions:
+  en: Extensions
+
 feature-policy:
   en: Feature-policy
 
