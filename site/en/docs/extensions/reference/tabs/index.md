@@ -83,7 +83,7 @@ function messageListener(request, sender, _sendResponse) {
 
 ![Two tabs in a window](tabs.png)
 
-More samples simple examples of manipulating tabs with the Tabs API can be found in the
+For more examples that demonstrate the Tabs API, see the
 [mv2-archive/api/tabs][7] directory of the [chrome-extensions-samples][samples-repo] repository. For
 other examples and for help in viewing the source code, see [Samples][8].
 
