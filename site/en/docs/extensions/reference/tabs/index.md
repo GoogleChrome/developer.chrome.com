@@ -81,11 +81,9 @@ function messageListener(request, sender, _sendResponse) {
 
 ### More samples
 
-![Two tabs in a window](tabs.png)
-
-For more examples that demonstrate the Tabs API, see the
-[mv2-archive/api/tabs][7] directory of the [chrome-extensions-samples][samples-repo] repository. For
-other examples and for help in viewing the source code, see [Samples][8].
+For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][7] directory of the
+[chrome-extensions-samples][samples-repo] repository. For other examples and for help in viewing the
+source code, see [Samples][8].
 
 [1]: /docs/extensions/mv2/tabs
 [2]: #property-Tab-url
