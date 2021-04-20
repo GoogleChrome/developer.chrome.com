@@ -90,8 +90,7 @@ function toggleMuteState(tabId) {
 ### More samples
 
 For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][mv2-tabs-samples]
-directory of the [chrome-extensions-samples][samples-repo] repository. For other examples and for
-help in viewing the source code, see [Samples][mv2-samples].
+directory of the [chrome-extensions-samples][samples-repo] repository.
 
 [manifest]: /docs/extensions/mv3/manifest/
 [prop-url]: #property-Tab-url
@@ -100,5 +99,4 @@ help in viewing the source code, see [Samples][mv2-samples].
 [prop-favIconUrl]: #property-Tab-favIconUrl
 [tab]: #type-Tab
 [mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
-[mv2-samples]: /docs/extensions/mv2/samples
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
