@@ -6,7 +6,7 @@ authors:
 description: >
   Federated Learning of Cohorts (FLoC) provides a privacy preserving mechanism for interest-based ad selection. This article explains how to take part in the FLoC origin trial.
 date: 2021-03-30
-updated: 2021-04-13
+updated: 2021-04-20
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/cfY1L58Z3w2xzCOo3Ayx.jpg
 alt: Murmuration of starlings over Brighton pier
 tags:
@@ -70,10 +70,10 @@ document.interestCohort()
 The cohort data made available looks like this:
 
 ``` json
-    {
-      "id": "14159",
-      "version": "chrome.2.1"
-    }
+{
+  "id": "14159",
+  "version": "chrome.2.1"
+}
 ```
 
 The FLoC API is available in Chrome 89 and above, but if your browser is not included in the origin 
@@ -95,17 +95,33 @@ DevTools console:<br><br>
     await document.interestCohort()
     ```
 
-{% Aside %}
+#### What do the experimental flags mean?
 
-The flags used above: 
-* Enable FLoC.
-* Set the cohort recalculation to be done every 10 seconds. This is only for testing during the 
-origin trial; the cohort recalculation interval currently defaults otherwise to every seven days.
-* Set the minimum number of domains to be available in order for the cohort to be calculated.
-* Set the clustering algorithm used by FLoC.
+* `InterestCohortAPI` enables FLoC.
+* `update_interval/10s` sets the cohort to be recalculated every 10 seconds. This is only to enable 
+testing; the cohort recalculation interval currently defaults otherwise to every seven days.
+* `minimum_history_domain_size_required/1` specifies the minimum number of domains that must be 
+available in order for the cohort to be computed. The value here is for testing only and normally 
+would be higher.
+* `FlocIdSortingLshBasedComputation` sets the clustering algorithm used by FLoC.
+* `InterestCohortFeaturePolicy` enables the availability of the [Permissions-Policy header for FLoC](#how-can-websites-opt-out-of-the-floc-computation).
+* It is also possible to [set the FLoC version](https://github.com/WICG/floc/issues/90#issuecomment-814389410) 
+by using a value such as `"FederatedLearningOfCohorts:finch_config_version/2"`. 
 
 You can view FLoC flag code in [Chromium Code Search](https://source.chromium.org/chromium/chromium/src/+/master:components/federated_learning/features/features.cc?q=minimum_history_domain_size_required&ss=chromium).
+
+{% Aside %}
+The codebase for Chrome has two different lists of features:
+* `--enable-features` is for Chromium browser feature
+* `--enable-blink-features`is for Blink.
+
+You have to use the correct flag depending on which list your feature is in (though some are in both!)
+
+[Blink features](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/platform/runtime_enabled_features.json5;l=108?q=runtime_enabled_features.json5%20&ss=chromium) with `status=experimental` 
+can also be enabled by using the Experimental Web Platform features flag in Chrome: 
+chrome://flags/#enable-experimental-web-platform-features.
 {% endAside %}
+
 
 ### Check if your browser is included in the origin trial
 
