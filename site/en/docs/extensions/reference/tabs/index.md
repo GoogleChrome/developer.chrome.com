@@ -64,7 +64,9 @@ This example shows how a content script could ask the background script to navig
 function requestNavigation(url) {
   chrome.runtime.sendMessage({ action: 'navigate', url });
 }
+```
 
+```js
 // Background script
 chrome.runtime.onMessage.addListener(messageListener);
 
