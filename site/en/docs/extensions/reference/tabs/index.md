@@ -7,9 +7,9 @@ extra_permissions_html:
 ## Manifest
 
 You can use most `chrome.tabs` methods and events without declaring any permissions in the
-extension's [manifest][manifest] file. However, if you require access to the [`url`][prop-url], [`pendingUrl`][3],
-[`title`][prop-title], or [`favIconUrl`][prop-favIconUrl] properties of [`tabs.Tab`][tab], you must declare the `"tabs"`
-permission in the manifest, as shown below:
+extension's [manifest][manifest] file. However, if you require access to the [`url`][prop-url],
+[`pendingUrl`][3], [`title`][prop-title], or [`favIconUrl`][prop-favIconUrl] properties of
+[`tabs.Tab`][tab], you must declare the `"tabs"` permission in the manifest, as shown below:
 
 ```json
 {
@@ -28,7 +28,8 @@ The following sections demonstrate several common use cases for the chrome.tabs 
 
 ### Opening an extension page in a new tab
 
-A common pattern for extensions is to open an onboarding page in a new tab when the extension is installed. The following example shows how to do this.
+A common pattern for extensions is to open an onboarding page in a new tab when the extension is
+installed. The following example shows how to do this.
 
 {% Aside %} Cannot use `chrome.tabs.create()` in content scripts. {% endAside %}.
 
@@ -82,9 +83,9 @@ function toggleMuteState(tabId) {
 
 ### More samples
 
-For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][mv2-tabs-samples] directory of the
-[chrome-extensions-samples][samples-repo] repository. For other examples and for help in viewing the
-source code, see [Samples][mv2-samples].
+For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][mv2-tabs-samples]
+directory of the [chrome-extensions-samples][samples-repo] repository. For other examples and for
+help in viewing the source code, see [Samples][mv2-samples].
 
 [manifest]: /docs/extensions/mv3/manifest/
 [prop-url]: #property-Tab-url
