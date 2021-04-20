@@ -7,8 +7,8 @@ extra_permissions_html:
 ## Manifest
 
 You can use most `chrome.tabs` methods and events without declaring any permissions in the
-extension's [manifest][1] file. However, if you require access to the [`url`][2], [`pendingUrl`][3],
-[`title`][4], or [`favIconUrl`][5] properties of [`tabs.Tab`][6], you must declare the `"tabs"`
+extension's [manifest][manifest] file. However, if you require access to the [`url`][prop-url], [`pendingUrl`][3],
+[`title`][prop-title], or [`favIconUrl`][prop-favIconUrl] properties of [`tabs.Tab`][tab], you must declare the `"tabs"`
 permission in the manifest, as shown below:
 
 ```json
@@ -82,17 +82,16 @@ function toggleMuteState(tabId) {
 
 ### More samples
 
-For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][7] directory of the
+For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][mv2-tabs-samples] directory of the
 [chrome-extensions-samples][samples-repo] repository. For other examples and for help in viewing the
-source code, see [Samples][8].
+source code, see [Samples][mv2-samples].
 
-[1]: /docs/extensions/mv2/tabs
-[2]: #property-Tab-url
-[3]: #property-Tab-pendingUrl
-[4]: #property-Tab-title
-[5]: #property-Tab-favIconUrl
-[6]: #type-Tab
-[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
-[8]: /docs/extensions/mv2/samples
-
+[manifest]: /docs/extensions/mv3/manifest/
+[prop-url]: #property-Tab-url
+[prop-pendingUrl]: #property-Tab-pendingUrl
+[prop-title]: #property-Tab-title
+[prop-favIconUrl]: #property-Tab-favIconUrl
+[tab]: #type-Tab
+[mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
+[mv2-samples]: /docs/extensions/mv2/samples
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
