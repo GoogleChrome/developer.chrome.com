@@ -54,28 +54,22 @@ async function getCurrentTab() {
 }
 ```
 
-### Request background script to navigate current tab
+### Mute the specified tab
 
-This example shows how a content script could ask the background script to navigate the current tab.
-{# Editor's note: I'd like to frame this as a use case; is there an obvious one? #}
+This example shows how an extension can toggle the muted state for a given tab.
 
-```js
-// Content script
-function requestNavigation(url) {
-  chrome.runtime.sendMessage({ action: 'navigate', url });
-}
-```
+{% Aside %} Requires Manifest V3 due to the use of Promises. Cannot use `tabs.get` or `tabs.update`
+in content scripts. {% endAside %}
 
 ```js
-// Background script
-chrome.runtime.onMessage.addListener(messageListener);
+//// background.js
 
-function messageListener(request, sender, _sendResponse) {
-  if (request.action === 'navigate') {
-    // Sanitize URL in to guard against compromised content scripts
-    let url = new URL(request.url);
-    chrome.tabs.update(sender.tab.id, { url: url.toString() });
-  }
+function toggleMuteState(tabId) {
+  chrome.tabs.get(tabId, async (tab) => {
+    let muted = !tab.mutedInfo.muted;
+    await chrome.tabs.update(tabId, { muted });
+    console.log(`Tab ${tab.id} is ${ muted ? 'muted' : 'unmuted' }`);
+  });
 }
 ```
 
