@@ -25,24 +25,30 @@ Open source tool to convert extensions to Manifest V3. Easily convert an entire 
 
 Converting files can be done one of the following ways.
 
-```git clone https://github.com/GoogleChromeLabs/extension-manifest-converter```
+```bash
+git clone https://github.com/GoogleChromeLabs/extension-manifest-converter
+```
 
 manifest.json
-```
+
+```bash
 python3 extension.py manifest.json
 ```
 
 .zip file
-```
+
+```bash
 python3 extension.py extension.zip
 ```
 
 directory
-```
+
+```bash
 python3 extension.py dir/
 ```
 
 help
-```
+
+```bash
 python3 extension.py
 ```
