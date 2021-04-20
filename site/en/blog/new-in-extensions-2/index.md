@@ -12,6 +12,7 @@ authors:
   - simeonv
 tags:
   - extensions
+draft: true
 ---
 
 Extension Manifest Converter for Manifest V3
