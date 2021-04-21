@@ -124,7 +124,7 @@
     },
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/1604956151251.jpg"
   },
-  "simeonv": {
+  "dotproto": {
     "name": {
       "given": "Simeon",
       "family": "Vincent"
@@ -137,7 +137,6 @@
       "en": "Extensions whisperer"
     },
     "country": "US",
-    "homepage": "https://robdodson.me",
     "twitter": "dotproto",
     "github": "dotproto",
     "glitch": "dotproto",
@@ -545,5 +544,24 @@
       "en": "Googler working on Chrome DevTools."
     },
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KMNWpnRJTP6eHJs1wEw2.jpg"
+  },
+  "solomonkinard": {
+    "name": {
+      "given": "Solomon",
+      "family": "Kinard"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "descriptions": {
+      "en": "Software Engineer, Chrome Extensions"
+    },
+    "country": "US",
+    "homepage": "https://kinard.com",
+    "twitter": "solomonkinard",
+    "github": "solomonkinard",
+    "glitch": "solomonkinard",
+    "image": "image/VK2OszK9GThIIwHngukz3x84Zfd2/rmArqpThpCHbCz9dWSWT.jpg"
   }
 }

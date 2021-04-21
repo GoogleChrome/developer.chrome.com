@@ -2,32 +2,35 @@
 layout: 'layouts/blog-post.njk'
 title: Web Accessible Resources for Manifest V3
 description: >
-  Web Accessible Resources for Manifest V3 is here! Now `manifest.json` supports permission definitions. Developers can restrict resources based on the requesting site origin or extension id.
+  Web Accessible Resources for Manifest V3 is here! Now `manifest.json` supports permission
+  definitions. Developers can restrict resources based on the requesting site origin or extension
+  id.
 subhead: >
   New and improved Web Accessible Resources for Manifest V3!
 date: 2021-04-20
 updated: 2021-04-20
 authors:
   - solomonkinard
-  - simeonv
+  - dotproto
 tags:
   - extensions
   - privacy
   - security
+draft: true
 ---
 
 New and improved Web Accessible Resources for Manifest V3!
 
 ## Summary
 
-Web Accessible Resources for Manifest V3 is here! Now ```manifest.json``` supports permission definitions. Developers can restrict resources based on the requesting site origin or extension id.
+Web Accessible Resources for Manifest V3 is here! Now `manifest.json` supports permission
+definitions. Developers can restrict resources based on the requesting site origin or extension id.
 
 ## Examples
 
-```manifest.json```
-
 Wildcard site:
-```
+
+```json
 {
   "web_accessible_resources": [
     {
@@ -41,7 +44,7 @@ Wildcard site:
 
 Site specific:
 
-```
+```json
 {
   "web_accessible_resources": [
     {
@@ -56,7 +59,7 @@ Site specific:
 
 Extension specific:
 
-```
+```json
 {
   "web_accessible_resources": [
     {
@@ -70,7 +73,7 @@ Extension specific:
 
 Extension and site specific:
 
-```
+```json
 {
   "web_accessible_resources": [
     {
@@ -85,9 +88,12 @@ Extension and site specific:
 
 ## Links
 
-* [Demo](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/web-accessible-resources)
-* [Docs](https://developer.chrome.com/docs/extensions/mv3/manifest/web_accessible_resources/)
+* [Demo][war-example]
+* [Docs][war-docs]
 
 ## Launched
 
 m89
+
+[war-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/web-accessible-resources
+[war-docs]: https://developer.chrome.com/docs/extensions/mv3/manifest/web_accessible_resources/
