@@ -165,7 +165,7 @@ Chromium issue: [1158827](https://crbug.com/1158827)
 
 
 ## Filter experiments in the Experiments setting {: #filter-experiment }
-Find experiments quicker with the new experiment filter. For example, go to **Settings** > **Experiments**, in the **Filter** textbox, type “contrast” to filter all the experiments with the word “contrast”.
+Find experiments quicker with the new experiment filter. For example, go to **Settings** > **Experiments**, in the **Filter** textbox, type "contrast" to filter all the experiments with the word "contrast".
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dwGsjklZTIihki8uYLTn.png", alt="Filter experiments in the Experiments setting", width="800", height="524" %}
 
