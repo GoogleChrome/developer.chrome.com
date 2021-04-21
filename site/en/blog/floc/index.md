@@ -31,7 +31,8 @@ computation for one of two reasons:
 For other clustering algorithms, the trial may experiment with different inclusion criteria: that's 
 part of the origin trial experiment process.
 {% endAside %}
-To find out more about FLoC, see [What is Federated Learning of Cohorts (FLoC)](https://web.dev/floc).
+
+To find out more about FLoC, see [What is Federated Learning of Cohorts?](https://web.dev/floc).
 
 ## Take part in the origin trial
 
