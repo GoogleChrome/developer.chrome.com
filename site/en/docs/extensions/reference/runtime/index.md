@@ -63,33 +63,21 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 ```
 
-### Getting an extension's key from it's manifest {: #example-key }
+### Gathering feedback on uninstall {: #example-uninstall-url }
 
-When building an extension, there are occasionally times where you may need your unpacked extension
-to have the same extension ID as your production version. For example, [Google OAuth][oauth]
-identifies extensions by their IDs.
+Many extensions use post-uninstall surveys to understand how the extension could better serve its
+users and improve retention. The below example shows how one can add this functionality to their
+extension.
 
-
-Sometimes during development you may need the development version of your extension to have the same
-extension ID as the production version of your extension.
-
-production extension's [public key][key-prop].
-
-
-
-The following example shows a snippet that retrieves the public key; you can execute this in the
-DevTools console...
-
-
-
-Retrieve a production extension's [public key][key-prop] for use in development. Execute this
-snippet in a DevTools console for the production extension to copy the extension's key to your
-clipboard, then open your unpacked extension's manifest.json and paste the key on a new line.
 
 ```js
-//// DevTools console for a published extension
-copy(`"key": "${chrome.runtime.getManifest().key}"`)
+chrome.runtime.onInstalled.addListener(reason => {
+  if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
+    chrome.runtime.setUninstallURL('https://example.com/extension-survey');
+  }
+});
 ```
+
 
 [content-inject]: https://developer.chrome.com/docs/extensions/mv3/content_scripts/#functionality
 [content]: /docs/extensions/mv3/content_scripts/
