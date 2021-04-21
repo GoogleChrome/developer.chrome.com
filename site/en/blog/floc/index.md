@@ -6,7 +6,7 @@ authors:
 description: >
   Federated Learning of Cohorts (FLoC) provides a privacy preserving mechanism for interest-based ad selection. This article explains how to take part in the FLoC origin trial.
 date: 2021-03-30
-updated: 2021-04-20
+updated: 2021-04-21
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/cfY1L58Z3w2xzCOo3Ayx.jpg
 alt: Murmuration of starlings over Brighton pier
 tags:
@@ -23,17 +23,14 @@ cohort periodically (currently once every seven days during this initial origin 
 the user's device, without sharing individual browsing data with the browser vendor or anyone else. 
 
 {% Aside %}
-A page visit will only be included in the browser's FLoC calculation if `document.interestCohort()` 
-is used on the page. In other words, your cohort is based only on the pages you've visited that use 
-FLoC. 
+During the current FLoC origin trial, a page visit will only be included in the browser's FLoC 
+computation for one of two reasons: 
+* The FLoC API (`document.interestCohort()`) is used on the page. 
+* Chrome detects that the page [load ads or ads-related resources](https://github.com/WICG/floc/issues/82). 
 
-During the current FLoC origin trial, a page will also be included in the 
-calculation if (and&nbsp;only if) Chrome detects that the page load ads or ads-related resources. For 
-other clustering algorithms, we may experiment with different inclusion criteria: that's part of the 
-origin trial experiment process.
+For other clustering algorithms, the trial may experiment with different inclusion criteria: that's 
+part of the origin trial experiment process.
 {% endAside %}
-
-
 To find out more about FLoC, see [What is Federated Learning of Cohorts (FLoC)](https://web.dev/floc).
 
 ## Take part in the origin trial
