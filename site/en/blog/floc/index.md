@@ -34,10 +34,12 @@ part of the origin trial experiment process.
 
 To find out more about FLoC, see [What is Federated Learning of Cohorts?](https://web.dev/floc).
 
-## Take part in the origin trial
+## Take part in a FLoC origin trial
 
-The trial will start in Chrome 89, and will be made available as a [third-party origin trial](https://web.dev/third-party-origin-trials/).  
+An origin trial for FLoC started in Chrome 89, and has been made available as a [third-party origin trial](https://web.dev/third-party-origin-trials/).  
 You will need to [register](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561) for a FLoC origin trial token.
+
+The initial testing of FLoC is taking place with a [small percentage of users](https://blog.google/products/chrome/privacy-sustainability-and-the-importance-of-and/#jump-content:~:text=The%20initial%20testing%20of%20FLoC%20is%20taking%20place%20with%20a%20small%20percentage%20of%20users), and FLoC is subject to [origin trial usage limits](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#19-are-there-any-usage-limits-on-experimental-features).
 
 ### First-party context
 
