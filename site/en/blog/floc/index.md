@@ -36,10 +36,16 @@ To find out more about FLoC, see [What is Federated Learning of Cohorts?](https:
 
 ## Take part in a FLoC origin trial
 
-An origin trial for FLoC started in Chrome 89, and has been made available as a [third-party origin trial](https://web.dev/third-party-origin-trials/).  
-You will need to [register](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561) for a FLoC origin trial token.
+An origin trial for FLoC started in Chrome 89, and has been made available as a [third-party origin trial](https://web.dev/third-party-origin-trials/). 
 
-The initial testing of FLoC is taking place with a [small percentage of users](https://blog.google/products/chrome/privacy-sustainability-and-the-importance-of-and/#jump-content:~:text=The%20initial%20testing%20of%20FLoC%20is%20taking%20place%20with%20a%20small%20percentage%20of%20users), and FLoC is subject to [origin trial usage limits](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#19-are-there-any-usage-limits-on-experimental-features).
+To take part, you will need to [register](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561) for a FLoC origin trial token.
+
+{% Aside 'caution' %}
+The initial testing of FLoC is taking place with a [small percentage of users](https://blog.google/products/chrome/privacy-sustainability-and-the-importance-of-and/#jump-content:~:text=The%20initial%20testing%20of%20FLoC%20is%20taking%20place%20with%20a%20small%20percentage%20of%20users), and FLoC is subject to [origin trial usage limits](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#19-are-there-any-usage-limits-on-experimental-features). This means that initially during the 
+current origin trial you will only be able to access the user's cohort (with `document.interestCohort()`) for a small proportion of visitors to your site. Alternatively, 
+you can test the FLoC API locally by [setting browser flags](#enable-floc-with-browser-flags).
+{% endAside %}
+
 
 ### First-party context
 
