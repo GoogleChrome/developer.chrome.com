@@ -4,13 +4,15 @@ api: runtime
 
 ## Examples
 
-### Use [`getURL`][getURL] to add an extension image to a page {: #example-getURL }
+### Use [`getURL`][getURL] to add an extension image to a page {: #example-get-url }
 
-Extensions can access their own resources using relative paths, but in order for the extension's
-assets to appear in a web page, you will need to specify the full URL of the asset (and expose it
-using the [web_accessible_resources][war] field).
+In order for a web page to access an asset hosted on another domain, it must specify the resource's
+full URL (e.g. `<img src-"https://example.com/logo.png">`). The same is true for when a web page
+wants to include assets included in an extension. The two main differences here are that the
+extension's assets must be exposed as [web_accessible_resources][war] and that typically content
+scripts are responsible for injecting extension assets.
 
-This example shows how a [content script][content] could add an image in the extension's package to
+This example shows how a [content script][content] can add an image in the extension's package to
 the page that the content script has been [injected][content-inject] into.
 
 ```js
