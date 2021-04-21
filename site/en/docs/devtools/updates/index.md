@@ -6,6 +6,28 @@ description: "A list of everything that has been covered in the What's New In De
 
 Here's a list of everything that's been covered in the *What's New In DevTools* series.
 
+## Chrome 91 {: #chrome91 }
+
+* [Web Vitals information pop up](/blog/new-in-devtools-91/#web-vitals)
+* [New Memory inspector](/blog/new-in-devtools-91/#memory-inspector)
+* [Visualize CSS scroll-snap](/blog/new-in-devtools-91/#css-croll-snap)
+* [New badge settings pane](/blog/new-in-devtools-91/#badge-settings)
+* [Enhanced image preview with aspect ratio information](/blog/new-in-devtools-91/#image-preview)
+* [New network conditions button with options to configure `Content-Encoding`s](/blog/new-in-devtools-91/#network-panel)
+* [shortcut to view computed value](/blog/new-in-devtools-91/#computed-value)
+* [`accent-color` keyword](/blog/new-in-devtools-91/#accent-color)
+* [Categorize issue types with colors and icons](/blog/new-in-devtools-91/#issue-category)
+* [Delete Trust tokens](/blog/new-in-devtools-91/#trust-tokens)
+* [Blocked features in the Frame details view](/blog/new-in-devtools-91/#permissions-policy)
+* [Filter experiments in the Experiments setting](/blog/new-in-devtools-91/#filter-experiment)
+* [New `Vary Header` column in the Cache storage pane](/blog/new-in-devtools-91/#vary-header)
+* [Support JavaScript private brand check](/blog/new-in-devtools-91/#javascript)
+* [Enhanced support for breakpoints debugging](/blog/new-in-devtools-91/#breakpoint)
+* [Support hover preview with `[]` notation](/blog/new-in-devtools-91/#expression-preview)
+* [Improved outline of HTML files](/blog/new-in-devtools-91/#html-outline)
+* [Proper error stack traces for Wasm debugging](/blog/new-in-devtools-91/#error-stack-traces)
+
+
 ## Chrome 90 {: #chrome90 }
 
 * [New CSS flexbox debugging tools](/blog/new-in-devtools-90#flexbox)
