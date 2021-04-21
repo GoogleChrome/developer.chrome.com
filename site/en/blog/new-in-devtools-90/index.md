@@ -280,7 +280,7 @@ Chromium issue: [887173][41]
 [7]: https://web.dev/cls/
 [8]: https://crbug.com/1152089
 [9]: https://crbug.com/1140516
-[10]: /docs/android/trusted-web-activity
+[10]: /docs/android/trusted-web-activity/overview
 [11]: #issue-count
 [12]: https://youtu.be/QJlbMfW3jPc
 [13]: https://crbug.com/1147479

@@ -26,6 +26,9 @@
   "encryption": {
     "title": "i18n.tags.encryption"
   },
+  "extensions": {
+    "title": "i18n.tags.extensions"
+  },
   "feature-policy": {
     "title": "i18n.tags.feature-policy"
   },
