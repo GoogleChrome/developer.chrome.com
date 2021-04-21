@@ -24,9 +24,23 @@ Hover on a Web Vitals marker in the **Performance** panel to understand what's t
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BTpc3iOnzmLhNvv9XZwF.png", alt="Web Vitals information pop up", width="800", height="524" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a5ee192a42493f0b31f360da9caee458d18fb0c5# }
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/a5ee192a42493f0b31f360da9caee458d18fb0c5 #}
 
 Chromium issue: [1147872](https://crbug.com/1147872)
+
+
+## Visualize CSS scroll-snap {: #css-croll-snap }
+You can now toggle the `scroll-snap` badge in the **Elements** panel to inspect the CSS scroll-snap alignment.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/H3smYZG2alG5PQU3BHw3.png", alt="CSS scroll-snap", width="800", height="507" %}
+
+When an HTML element on your page (e.g. this [demo](https://mathiasbynens.github.io/css-dbg-stories/css-scroll-snap.html) page) has `scroll-snap-type` applied to it, you can see a `scroll-snap` badge next to it in the **Elements** panel. Click the badge to toggle the display of a scroll-snap overlay on the page.
+
+In the example above, you can see dot marks on snap edges. The scroll port has solid outlined while the snap items have dash outlines. The scroll padding is filled in green color while the scroll margin is filled in orange.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/e63382911634945d2113d2c2215e6dd3bff9a28a #}
+
+Chromium issue: [862450](https://crbug.com/862450)
 
 
 ## New Memory inspector {: #memory-inspector }
@@ -42,20 +56,6 @@ Try [this demo](https://memory-inspector.glitch.me/demo-wasm.html) for Wasm memo
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7de6c9a80d7214559939399310b7ef1184554d92 #}
 Chromium issue: [1166577](https://crbug.com/1166577)
-
-
-## Visualize CSS scroll-snap {: #css-croll-snap }
-You can now toggle the `scroll-snap` badge in the **Elements** panel to inspect the CSS scroll-snap alignment.
-
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/H3smYZG2alG5PQU3BHw3.png", alt="CSS scroll-snap", width="800", height="507" %}
-
-When an HTML element on your page (e.g. this [demo](https://mathiasbynens.github.io/css-dbg-stories/css-scroll-snap.html) page) has `scroll-snap-type` applied to it, you can see a `scroll-snap` badge next to it in the **Elements** panel. Click the badge to toggle the display of a scroll-snap overlay on the page.
-
-In the example above, you can see dot marks on snap edges. The scroll port has solid outlined while the snap items have dash outlines. The scroll padding is filled in green color while the scroll margin is filled in orange.
-
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/e63382911634945d2113d2c2215e6dd3bff9a28a #}
-
-Chromium issue: [862450](https://crbug.com/862450)
 
 
 ## New badge settings pane in the Elements panel {: #badge-settings }
