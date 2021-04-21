@@ -126,9 +126,9 @@ Chromium issue: [1092093](https://crbug.com/1092093)
 ## Categorize issue types with colors and icons {: #issue-category }
 The **Issues** tab now categorize issues into page errors, upcoming breaking changes, and possible improvements for better severity indication. You can open the **Issues** tab by clicking on the **issue count** button in the **Console**.
 
-**Page errors (red)**. Issues that have immediate impact for page functionality, such as not setting correct [CORS](https://web.dev/cross-origin-resource-sharing/) headers, etc.
-**Upcoming breaking changes (yellow)**. Issues that inform about an upcoming, incompatible change of the web platform that may result in a loss of page functionality (e.g. warning of upcoming [CORS RFC 1918 changes](https://web.dev/cors-rfc1918-feedback)).
-**Possible improvements (blue)**. Potential improvements on the page, but are currently not impairing basic functionality of the page (e.g. accessibility issues)
+- **Page errors (red)**. Issues that have immediate impact for page functionality, such as not setting correct [CORS](https://web.dev/cross-origin-resource-sharing/) headers, etc.
+- **Upcoming breaking changes (yellow)**. Issues that inform about an upcoming, incompatible change of the web platform that may result in a loss of page functionality (e.g. warning of upcoming [CORS RFC 1918 changes](https://web.dev/cors-rfc1918-feedback)).
+- **Possible improvements (blue)**. Potential improvements on the page, but are currently not impairing basic functionality of the page (e.g. accessibility issues)
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/urhDPcFLC8LO4ibV20Hd.png", alt="Categorize issue types with colors and icons", width="800", height="501" %}
 
