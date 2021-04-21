@@ -29,8 +29,8 @@ the page that the content script has been [injected][content-inject] into.
 
 It's common for an extension's content scripts to need data managed by another part of the
 extension, like the extension's background script. Much like two browser windows opened to the same
-web page, these two contexts cannot directly access each other's values. Instead, the page and
-background can use [message passing][message-passing] to coordinate with each other.
+web page, these two contexts cannot directly access each other's values. Instead, the extension can
+use [message passing][message-passing] to coordinate across these different contexts.
 
 In this example, the content script needs some data from the extension's background script in order
 to initialize it's UI. To get this data, it passes a `get-user-data` message to the background, and
