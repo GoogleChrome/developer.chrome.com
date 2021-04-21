@@ -23,49 +23,43 @@ the page that the content script has been [injected][content-inject] into.
 }
 ```
 
-### Use runtime messaging to communicate between background and content scripts {: #example-background-content-messaging }
+### Getting background data into a content script {: #example-content-msg }
 
-A basic example of content script injected into a page and background script passing messages to
-each other. This exchange is modeled on a [TCP handshake][handshake].
+Extensions often need to load data such as user settings or application state in a page shortly
+after a content script is injected. This example shows a simple pattern where a page's content
+script requests data and the background replies.
 
 ```js
 //// content.js ////
 
-// 1. Send the background a message requesting receipt confirmation.
-console.log('[content] sending content-syn');
-chrome.runtime.sendMessage('content-syn');
-
-chrome.runtime.onMessage.addListener((message, sender) => {
-  if (message === 'bg-syn-ack') {
-    // 3. BG syn-ack received, acknowledged receipt.
-    console.log('[content] received bg-syn-ack');
-    console.log('[content] sending content-ack');
-    chrome.runtime.sendMessage('content-ack');
-  }
+// 1. Send the background a message requesting the user's data
+chrome.runtime.sendMessage('get-user-data', (response) => {
+  // 3. Got an asynchronous response with the data from the background
+  initializeUI(response);
 });
 ```
 
 ```js
 //// background.js ////
 
-chrome.runtime.onMessage.addListener((message, sender) => {
-  if (message.type === 'content-syn') {
-    // 2. Content syn received, acknowledge receipt & request confirmation.
-    console.log('[bg] received content-syn');
-    console.log('[bg] sending bg-syn-ack');
-    chrome.tabs.sendMessage(sender.tab.id, 'bg-syn-ack');
-  }
-  if (message.type === 'content-ack') {
-    // 4. Content ack received. Both ends have verified that message
-    //    passing works as expected.
-    console.log('[bg] received content-ack');
+// Example of a simple user data object
+let user = {
+  username: 'demo-user'
+}
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  // 2. A page requested user data, respond with a copy of the user object
+  if (message === 'get-user-data') {
+    sendResponse(user);
   }
 });
 ```
 
 ### Getting an extension's key from it's manifest {: #example-key }
 
-Retrieve a production extension's [public key][key-prop] for use in development. Execute this snippet in a DevTools console for the production extension paste the value in your unpacked extension's manifest.json.
+Retrieve a production extension's [public key][key-prop] for use in development. Execute this
+snippet in a DevTools console for the production extension to copy the extension's key to your
+clipboard, then open your unpacked extension's manifest.json and paste the key on a new line.
 
 ```js
 //// DevTools console for a published extension
