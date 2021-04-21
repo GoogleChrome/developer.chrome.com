@@ -14,6 +14,8 @@ description: >
 authors:
   - mihajlija
 date: 2021-04-22
+hero: "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/c5KORd65eNdEeszLJWk1.jpeg"
+alt: "A bunch of passwords."
 tags:
   - security
 ---
@@ -70,6 +72,8 @@ at `/.well-known/assetlinks.json` on the respective domains.
     `https://www.example.co.uk`, create a file named `assetlinks.json` with the
     following content:
     
+    <br>
+    
     ```json
     [{
       "relation": ["delegate_permission/common.get_login_creds"],
@@ -86,13 +90,17 @@ at `/.well-known/assetlinks.json` on the respective domains.
       }
      }]
      ```
-
+    
+    <br>
+    
     The `relation` field is an array of one or more strings that describe the
     relationship between the sites. For sites to share sign-in credentials,
     specify the string `delegate_permission/common.get_login_creds`.  
     The `target` field is an object that specifies the asset the declaration
     applies to. The following fields identify a website:
-
+    
+    <br>
+    
     <table>
       <tr>
         <td><code>namespace</code></td>
@@ -111,19 +119,23 @@ at `/.well-known/assetlinks.json` on the respective domains.
     for details.
 
 1.  Host the Digital Assets Link JSON file at the following location on
-    the sign-in domain:
+    the sign-in domain: `https://domain[:optional_port]/.well-known/assetlinks.json`.
 
-    `https://domain[:optional_port]/.well-known/assetlinks.json`
+    <br>
 
     In this example, the domain is `www.example.com`, so the JSON file should
-    be hosted at `https://www.example.com/.well-known/assetlinks.json`.  
-    
+    be hosted at `https://www.example.com/.well-known/assetlinks.json`.   
+
+    <br>
+
     The MIME type for the Digital Assets Link file needs to be JSON. Make sure
     the server sends a `Content-Type: application/json` header in the response.
 
 1.  To declare the association in both websites, host the
-    `assetlinks.json `at `https://www.example.co.uk/.well-known/assetlinks.json
-    `as well`:`
+    `assetlinks.json `at `https://www.example.co.uk/.well-known/assetlinks.json`
+    as well:
+
+    <br>
 
     ```json
     [{
@@ -147,6 +159,8 @@ at `/.well-known/assetlinks.json` on the respective domains.
     agent to retrieve `/.well-known/assetlinks.json`. Most sites can simply
     allow any automated agent to retrieve files in the `/.well-known/` path so
     that other services can access the metadata in those files:
+
+    <br>
 
     ```text
     User-agent: *
