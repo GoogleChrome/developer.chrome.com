@@ -209,7 +209,7 @@ Chromium issues: [1142705](https://crbug.com/1142705), [979000](https://crbug.co
 ### Support hover preview with `[]` notation {: #expression-preview }
 DevTools now support for hover preview on JavaScript member expressions that use the `[]` notation in the **Sources** panel.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XFxlQjvLVWJUiV24zDw2.png", alt="Support hover preview with ‘[]’ notation", width="800", height="505" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XFxlQjvLVWJUiV24zDw2.png", alt="Support hover preview with '[]' notation", width="800", height="505" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6ebaf1aed1524c64a0909d257be4a0aa28f7b6bd #}
 
