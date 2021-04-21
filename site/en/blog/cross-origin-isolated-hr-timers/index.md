@@ -5,7 +5,7 @@ authors:
   - yoavweiss
   - agektmr
 description: Starting in Chrome 91, the resolution of explicit timers will be restricted to 100 microseconds across platforms without cross-origin isolation.
-date: 2021-04-15
+date: 2021-04-21
 hero: 'image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/mnoYgEv2E9L6eSThY9G4.jpg'
 alt: A stopwatch
 ---
