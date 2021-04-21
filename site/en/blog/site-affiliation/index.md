@@ -148,7 +148,7 @@ at `/.well-known/assetlinks.json` on the respective domains.
     allow any automated agent to retrieve files in the `/.well-known/` path so
     that other services can access the metadata in those files:
 
-    ```
+    ```text
     User-agent: *
     Allow: /.well-known/
     ```
