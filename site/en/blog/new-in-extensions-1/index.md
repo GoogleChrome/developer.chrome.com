@@ -14,6 +14,7 @@ tags:
   - extensions
   - privacy
   - security
+draft: true
 ---
 
 New and improved Web Accessible Resources for Manifest V3!
