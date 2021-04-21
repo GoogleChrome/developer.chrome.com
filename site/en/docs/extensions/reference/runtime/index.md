@@ -65,6 +65,23 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 ### Getting an extension's key from it's manifest {: #example-key }
 
+When building an extension, there are occasionally times where you may need your unpacked extension
+to have the same extension ID as your production version. For example, [Google OAuth][oauth]
+identifies extensions by their IDs.
+
+
+Sometimes during development you may need the development version of your extension to have the same
+extension ID as the production version of your extension.
+
+production extension's [public key][key-prop].
+
+
+
+The following example shows a snippet that retrieves the public key; you can execute this in the
+DevTools console...
+
+
+
 Retrieve a production extension's [public key][key-prop] for use in development. Execute this
 snippet in a DevTools console for the production extension to copy the extension's key to your
 clipboard, then open your unpacked extension's manifest.json and paste the key on a new line.
@@ -80,4 +97,5 @@ copy(`"key": "${chrome.runtime.getManifest().key}"`)
 [handshake]: https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Connection_establishment
 [key-prop]: /docs/extensions/mv3/manifest/key/
 [message-passing]: /docs/extensions/mv3/messaging/
+[oauth]: https://developer.chrome.com/docs/extensions/mv3/tut_oauth/
 [war]: /docs/extensions/mv3/manifest/web_accessible_resources/
