@@ -27,9 +27,13 @@ the page that the content script has been [injected][content-inject] into.
 
 ### Getting background data into a content script {: #example-content-msg }
 
-Extensions often need to load data such as user settings or application state in a page shortly
-after a content script is injected. This example shows a simple pattern where a page's content
-script requests data and the background replies.
+It's common for an extension's content scripts to need data managed by another part of the
+extension, like the extension's background script. Much like two browser windows opened to the same
+web page, these two contexts cannot directly access each other's values. Instead, the page and background can use [message passing][message-passing] to coordinate with each other.
+
+In this example, the content script needs some data from the extension's background script in order
+to initialize it's UI. To get this data, it passes a `get-user-data` message to the background, and
+the background responds with a copy of the user's information.
 
 ```js
 //// content.js ////
@@ -37,6 +41,7 @@ script requests data and the background replies.
 // 1. Send the background a message requesting the user's data
 chrome.runtime.sendMessage('get-user-data', (response) => {
   // 3. Got an asynchronous response with the data from the background
+  console.log('received user data', response);
   initializeUI(response);
 });
 ```
@@ -50,7 +55,7 @@ let user = {
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  // 2. A page requested user data, respond with a copy of the user object
+  // 2. A page requested user data, respond with a copy of `user`
   if (message === 'get-user-data') {
     sendResponse(user);
   }
@@ -68,9 +73,10 @@ clipboard, then open your unpacked extension's manifest.json and paste the key o
 copy(`"key": "${chrome.runtime.getManifest().key}"`)
 ```
 
-[content]: /docs/extensions/mv3/content_scripts/
 [content-inject]: https://developer.chrome.com/docs/extensions/mv3/content_scripts/#functionality
+[content]: /docs/extensions/mv3/content_scripts/
 [get-url]: #method-getURL
 [handshake]: https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Connection_establishment
 [key-prop]: /docs/extensions/mv3/manifest/key/
+[message-passing]: /docs/extensions/mv3/messaging/
 [war]: /docs/extensions/mv3/manifest/web_accessible_resources/
