@@ -26,7 +26,7 @@ the user's device, without sharing individual browsing data with the browser ven
 During the current FLoC origin trial, a page visit will only be included in the browser's FLoC 
 computation for one of two reasons: 
 * The FLoC API (`document.interestCohort()`) is used on the page. 
-* Chrome detects that the page [load ads or ads-related resources](https://github.com/WICG/floc/issues/82). 
+* Chrome detects that the page [loads ads or ads-related resources](https://github.com/WICG/floc/issues/82). 
 
 For other clustering algorithms, the trial may experiment with different inclusion criteria: that's 
 part of the origin trial experiment process.
@@ -128,8 +128,8 @@ You can view FLoC flag code in [Chromium Code Search](https://source.chromium.or
 
 {% Aside %}
 The codebase for Chrome has two different lists of features:
-* `--enable-features` is for Chromium browser feature
-* `--enable-blink-features`is for Blink.
+* `--enable-features` is for Chromium browser features.
+* `--enable-blink-features` is for Blink.
 
 You have to use the correct flag depending on which list your feature is in (though some are in both!)
 
