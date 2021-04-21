@@ -9,7 +9,7 @@ date: 2021-04-20
 updated: 2021-04-20
 authors:
   - solomonkinard
-  - simeonv
+  - dotproto
 tags:
   - extensions
   - privacy
