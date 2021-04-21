@@ -4,7 +4,7 @@ api: runtime
 
 ## Examples
 
-### Use [`getURL`][getURL] to add an extension image to a page {: #example-get-url }
+### Use [`getURL`][get-url] to add an extension image to a page {: #example-get-url }
 
 In order for a web page to access an asset hosted on another domain, it must specify the resource's
 full URL (e.g. `<img src-"https://example.com/logo.png">`). The same is true for when a web page
@@ -70,7 +70,7 @@ copy(`"key": "${chrome.runtime.getManifest().key}"`)
 
 [content]: /docs/extensions/mv3/content_scripts/
 [content-inject]: https://developer.chrome.com/docs/extensions/mv3/content_scripts/#functionality
-[getURL]: #method-getURL
+[get-url]: #method-getURL
 [handshake]: https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Connection_establishment
 [key-prop]: /docs/extensions/mv3/manifest/key/
 [war]: /docs/extensions/mv3/manifest/web_accessible_resources/
