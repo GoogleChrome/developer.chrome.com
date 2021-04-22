@@ -32,8 +32,10 @@ A common pattern for extensions is to open an onboarding page in a new tab when 
 installed. The following example shows how to do this.
 
 {% Aside %}
-Cannot use `chrome.tabs.create()` in content scripts.
-{% endAside %}.
+
+Content scripts cannot use `chrome.tabs.create()`.
+
+{% endAside %}
 
 ```js
 //// background.js
@@ -52,8 +54,10 @@ chrome.runtime.onInstalled.addListener((reason) => {
 This example demonstrates how the background script can retrieve the currently focused tab.
 
 {% Aside %}
-Requires Manifest V3 due to the use of Promises. Cannot use `tabs.query` in content
-scripts.
+
+This example requires Manifest due to the use of [Promises][promises]. Additionally, content scripts
+cannot use `tabs.query`.
+
 {% endAside %}
 
 ```js
@@ -71,8 +75,10 @@ async function getCurrentTab() {
 This example shows how an extension can toggle the muted state for a given tab.
 
 {% Aside %}
-Requires Manifest V3 due to the use of Promises. Cannot use `tabs.get` or `tabs.update`
-in content scripts.
+
+Requires Manifest V3 due to the use of Promises. Content scripts cannot use `tabs.get` or
+`tabs.update`.
+
 {% endAside %}
 
 ```js
@@ -93,6 +99,7 @@ For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][
 directory of the [chrome-extensions-samples][samples-repo] repository.
 
 [manifest]: /docs/extensions/mv3/manifest/
+[promises]: /docs/extensions/mv3/promises/
 [prop-url]: #property-Tab-url
 [prop-pendingurl]: #property-Tab-pendingUrl
 [prop-title]: #property-Tab-title
