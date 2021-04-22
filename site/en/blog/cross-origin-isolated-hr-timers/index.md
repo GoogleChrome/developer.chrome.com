@@ -34,7 +34,7 @@ Cross-origin isolation is a state where a web page is isolated from other origin
 ## Do I need to do something about it?
 
 Probably not. `performance.now()` has been limited to significantly more coarse resolutions in other browsers
-(e.g. 1 millisecond = 0.001 seconds),
+(for example, 1 millisecond = 0.001 seconds),
 so you shouldn't have relied on the current resolution anyway.
 
 At the same time,
