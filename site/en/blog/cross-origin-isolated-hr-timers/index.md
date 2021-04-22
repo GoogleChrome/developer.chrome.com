@@ -72,7 +72,7 @@ we can now allow pages to access high-resolution timers,
 `SharedArrayBuffer`,
 and other APIs that are unsafe to expose in processes that can read arbitrary cross-origin data.
 
-To learn more about the background, read
+To learn more about the background behind this change, read
 [Why you need "cross-origin isolated" for powerful features](https://web.dev/why-coop-coep/).
 
 Cover photo by [Linda Perez Johannessen](https://unsplash.com/@linper?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
