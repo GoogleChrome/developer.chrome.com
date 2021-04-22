@@ -9,7 +9,7 @@ api: runtime
 In order for a web page to access an asset hosted on another domain, it must specify the resource's
 full URL (e.g. `<img src-"https://example.com/logo.png">`). The same is true for when a web page
 wants to include assets included in an extension. The two main differences here are that the
-extension's assets must be exposed as [web_accessible_resources][war] and that typically content
+extension's assets must be exposed as [web accessible resources][war] and that typically content
 scripts are responsible for injecting extension assets.
 
 This example shows how a [content script][content] can add an image in the extension's package to
