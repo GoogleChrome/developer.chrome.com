@@ -186,8 +186,7 @@ such as intranet pages, won't be part of the FLoC computation.
 [Ad Tagging in Chromium](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md) explains how Chrome's ad detection mechanism works.  
 {% endAside %}
 
-### Why are pages that have ads or ads-related resources included in FLoC cohort computation during 
-the initial origin trial?
+### Why are pages that have ads or ads-related resources included in FLoC cohort computation during the initial origin trial?
 
 Origin trials give developers a chance to see what a new API proposal would be like *if* it were 
 launched. For FLoC, how can we enable the API to be evaluated realistically before it has wide 
