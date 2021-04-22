@@ -16,10 +16,10 @@ This example shows how a [content script][content] can add an image in the exten
 the page that the content script has been [injected][content-inject] into.
 
 ```js
-//// content.js
+//// content.js ////
 
 { // Block used to avoid setting global variables
-  let img = document.createElement('img');
+  let const = document.createElement('img');
   img.src = chrome.runtime.getURL('logo.png');
   document.body.append(img);
 }
@@ -27,13 +27,13 @@ the page that the content script has been [injected][content-inject] into.
 
 ### Getting background data into a content script {: #example-content-msg }
 
-It's common for an extension's content scripts to need data managed by another part of the
-extension, like the extension's background script. Much like two browser windows opened to the same
-web page, these two contexts cannot directly access each other's values. Instead, the extension can
-use [message passing][message-passing] to coordinate across these different contexts.
+Its common for an extension's content scripts to need data managed by another part of the extension,
+like the extension's background script. Much like two browser windows opened to the same web page,
+these two contexts cannot directly access each other's values. Instead, the extension can use
+[message passing][message-passing] to coordinate across these different contexts.
 
 In this example, the content script needs some data from the extension's background script in order
-to initialize it's UI. To get this data, it passes a `get-user-data` message to the background, and
+to initialize its UI. To get this data, it passes a `get-user-data` message to the background, and
 the background responds with a copy of the user's information.
 
 ```js
@@ -51,9 +51,9 @@ chrome.runtime.sendMessage('get-user-data', (response) => {
 //// background.js ////
 
 // Example of a simple user data object
-let user = {
+const user = {
   username: 'demo-user'
-}
+};
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   // 2. A page requested user data, respond with a copy of `user`
