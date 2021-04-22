@@ -17,7 +17,7 @@ This document is a work in progress, unfinished and not to be shared externally.
 {% endAside %}
 
 
-## Event Attribution Reporting
+## Attribution Reporting
 Previously known as the Event Conversion Measurement API.
 * [In origin trial](https://web.dev/origin-trials/): Chrome 86 to 91. 
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).

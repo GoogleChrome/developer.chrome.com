@@ -64,7 +64,7 @@ The key proposals are listed below.
 ### Measurement and attribution
 {% endDetailsSummary %}
 
-* [Event Attribution Reporting](/docs/privacy-sandbox/attribution-reporting): Attribute ad 
+* [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting): Attribute ad 
 clicks and ad views. Previously known as the Event Conversion Measurement API.
 * [Aggregation Reporting](https://github.com/csharrison/aggregate-reporting-api): Measure the reach 
 of a particular ad campaign (how many distinct users saw the ad) by collapsing information across 
@@ -183,7 +183,7 @@ tab for each explainer.
 * [First-Party Sets](https://github.com/privacycg/first-party-sets)
 * [Gnatcatcher](https://github.com/bslassey/ip-blindness)
 * [Aggregated Reporting API](https://github.com/csharrison/aggregate-reporting-api)
-* [Event Attribution Reporting](https://github.com/csharrison/conversion-measurement-api)
+* [Attribution Reporting](https://github.com/csharrison/conversion-measurement-api)
 * [Federated Learning of Cohorts](https://github.com/jkarlin/floc)
 * [FLEDGE](https://github.com/michaelkleber/turtledove)
 
