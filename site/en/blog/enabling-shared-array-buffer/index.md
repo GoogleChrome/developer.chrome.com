@@ -185,8 +185,8 @@ You can only enable the origin trial using an `Origin-Trial` HTTP header.
 Do not use a meta tag for this purpose.
 {% endAside %}
 
-You can verify that it's working properly by installing and testing with [Chrome
-91 beta](https://www.google.com/chrome/beta/).
+To verify that it's working properly, install [Chrome
+91 beta](https://www.google.com/chrome/beta/) for testing.
 
 ## Further reading {: #resources }
 
