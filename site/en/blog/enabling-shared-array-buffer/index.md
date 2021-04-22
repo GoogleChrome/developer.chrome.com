@@ -181,8 +181,8 @@ Chrome.
    TOKEN_GOES_HERE`
 
 {% Aside 'caution' %}
-You can only enable the origin trial using an `Origin-Trial` HTTP header. Please
-do not use a meta tag.
+You can only enable the origin trial using an `Origin-Trial` HTTP header.
+Do not use a meta tag for this purpose.
 {% endAside %}
 
 You can verify that it's working properly by installing and testing with [Chrome
