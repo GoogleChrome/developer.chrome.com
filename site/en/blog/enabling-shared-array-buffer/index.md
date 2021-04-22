@@ -181,8 +181,8 @@ Chrome.
    TOKEN_GOES_HERE`
 
 {% Aside 'caution' %}
-Unfortunately, configuring an origin trial using a meta tag won't work for
-`SharedArrayBuffer` exception.
+You can only enable the origin trial using an `Origin-Trial` HTTP header. A meta
+tag won't work for `SharedArrayBuffer` in non-isolated pages.
 {% endAside %}
 
 You can verify that it's working properly by installing and testing with [Chrome
