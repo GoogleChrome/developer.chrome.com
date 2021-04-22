@@ -573,5 +573,24 @@
     "twitter": "bibydigital",
     "github": "mihajlija",
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg"
-  }
+  },
+  "mustafa": {
+  "name": {
+    "given": "Mustafa",
+    "family": "Kurtuldu"
+  },
+  "org": {
+    "name": "Google",
+    "unit": "Chrome"
+  },
+  "descriptions": {
+    "en": "Senior UX design on Chrome, UX lead on installability & PWAs"
+  },
+  "country": "US",
+  "homepage": "https://designtoday.info",
+  "twitter": "mustafa_x",
+  "github": "mustafa-x",
+  "glitch": "mustafa-x",
+  "image": "image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/ShCbqP0E2I9TaNyA7d5a.jpg"
+}
 }
