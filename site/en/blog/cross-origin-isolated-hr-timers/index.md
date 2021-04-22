@@ -28,7 +28,7 @@ A microsecond is one millionth of a second (0.000001 seconds). Therefore, 5 micr
 {% endAside %}
 
 Gaining more powerful capabilities by enabling cross-origin isolation is
-[a similar approach posed on `SharedArrayBuffer`](https://developer.chrome.com/blog/enabling-shared-array-buffer/).
+[a similar approach posed on `SharedArrayBuffer`](/blog/enabling-shared-array-buffer/).
 Cross-origin isolation is a state where a web page is isolated from other origins except ones that opted-in.
 
 ## Do I need to do something about it?
