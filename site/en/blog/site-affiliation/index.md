@@ -104,7 +104,7 @@ at `/.well-known/assetlinks.json` on the respective domains.
     <table>
       <tr>
         <td><code>namespace</code></td>
-        <td>Must be `web` for websites.</td>
+        <td>Must be <code>web</code> for websites.</td>
       </tr>
       <tr>
         <td><code>site</code></td>
