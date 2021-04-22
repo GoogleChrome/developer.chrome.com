@@ -104,7 +104,7 @@ at `/.well-known/assetlinks.json` on the respective domains.
     <table>
       <tr>
         <td><code>namespace</code></td>
-        <td>Must be web for websites.</td>
+        <td>Must be `web` for websites.</td>
       </tr>
       <tr>
         <td><code>site</code></td>
@@ -118,7 +118,7 @@ at `/.well-known/assetlinks.json` on the respective domains.
     [Digital Asset Links reference](https://developers.google.com/digital-asset-links/v1/statements)
     for details.
 
-1.  Host the Digital Assets Link JSON file at the following location on
+1.  Host the Digital Asset Links JSON file at the following location on
     the sign-in domain: `https://domain[:optional_port]/.well-known/assetlinks.json`.
 
     <br>
@@ -128,7 +128,7 @@ at `/.well-known/assetlinks.json` on the respective domains.
 
     <br>
 
-    The MIME type for the Digital Assets Link file needs to be JSON. Make sure
+    The MIME type for the Digital Asset Links file needs to be JSON. Make sure
     the server sends a `Content-Type: application/json` header in the response.
 
 1.  To declare the association in both websites, host the
@@ -155,7 +155,7 @@ at `/.well-known/assetlinks.json` on the respective domains.
      ```
 
 1.  Ensure that your host permits Google to retrieve your Digital Asset
-    Link file. If you have a `robots.txt` file, it must allow the Googlebot
+    Links file. If you have a `robots.txt` file, it must allow the Googlebot
     agent to retrieve `/.well-known/assetlinks.json`. Most sites can simply
     allow any automated agent to retrieve files in the `/.well-known/` path so
     that other services can access the metadata in those files:
@@ -175,7 +175,7 @@ resource and recognize the association.
 ## Associate multiple websites with one another
 
 You can associate multiple websites with one another by specifying each one in
-the Digital Assets Link file. For example, to associate the `example.com`,
+the Digital Asset Links file. For example, to associate the `example.com`,
 `example.co.uk, `and` example.co.jp`, specify all of those websites in the
 `assetlinks.json` JSON file and host it on each website at
 `https://EXAMPLE_DOMAIN_NAME/.well-known/assetlinks.json`.
@@ -211,8 +211,9 @@ the Digital Assets Link file. For example, to associate the `example.com`,
 ```
 
 {% Aside %}
-You can use include statements if you need to issue statements from
-different sites to the same set of targets. For example, a website may be
+You can use include statements if you need to [issue
+statements](https://developers.google.com/digital-asset-links/v1/statements#scaling-to-dozens-of-statements-or-more)
+from different sites to the same set of targets. For example, a website may be
 available on many different per-country top level domains, and you want to share
 credentials between all of them. Using include statements, you can set up
 pointers from many different sites to one central location, which defines
