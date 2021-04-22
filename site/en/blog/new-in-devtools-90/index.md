@@ -8,7 +8,21 @@ updated: 2021-03-01
 description:
   "Debugging support for CSS Flexbox, performance heads-up display on page, issues tab updates and
   more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lB7dsXtKeasPNZXiUFfu.jpg'
+alt: ''
+tags:
+  - new-in-devtools
+  - devtools
+  - chrome-90
 ---
+
+{% Aside %}
+Interested in helping improve DevTools? Sign up to participate in [Google User Research here](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458).
+{% endAside %}
+
+{% YouTube id="UyXPdYLQVQk" %}
+
+{% YouTube id="kOodTLAjPsE" %}
 
 ## New CSS flexbox debugging tools {: #flexbox }
 
@@ -266,7 +280,7 @@ Chromium issue: [887173][41]
 [7]: https://web.dev/cls/
 [8]: https://crbug.com/1152089
 [9]: https://crbug.com/1140516
-[10]: /docs/android/trusted-web-activity
+[10]: /docs/android/trusted-web-activity/overview
 [11]: #issue-count
 [12]: https://youtu.be/QJlbMfW3jPc
 [13]: https://crbug.com/1147479

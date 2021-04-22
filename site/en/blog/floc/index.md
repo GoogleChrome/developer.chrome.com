@@ -6,7 +6,7 @@ authors:
 description: >
   Federated Learning of Cohorts (FLoC) provides a privacy preserving mechanism for interest-based ad selection. This article explains how to take part in the FLoC origin trial.
 date: 2021-03-30
-updated: 2021-04-01
+updated: 2021-04-22
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/cfY1L58Z3w2xzCOo3Ayx.jpg
 alt: Murmuration of starlings over Brighton pier
 tags:
@@ -22,13 +22,29 @@ history. The user's browser is associated with one interest cohort at a time and
 cohort periodically (currently once every seven days during this initial origin trial) on 
 the user's device, without sharing individual browsing data with the browser vendor or anyone else. 
 
+{% Aside %}
+During the current FLoC origin trial, a page visit will only be included in the browser's FLoC 
+computation for one of two reasons: 
+* The FLoC API (`document.interestCohort()`) is used on the page. 
+* Chrome detects that the page [loads ads or ads-related resources](https://github.com/WICG/floc/issues/82). 
 
-To find out more about FLoC, see [What is Federated Learning of Cohorts (FLoC)](https://web.dev/floc).
+For other clustering algorithms, the trial may experiment with different inclusion criteria: that's 
+part of the origin trial experiment process.
+{% endAside %}
 
-## Take part in the origin trial
+To find out more about FLoC, see [What is Federated Learning of Cohorts?](https://web.dev/floc).
 
-The trial will start in Chrome 89, and will be made available as a [third-party origin trial](https://web.dev/third-party-origin-trials/).  
-You will need to [register](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561) for a FLoC origin trial token.
+## Take part in a FLoC origin trial
+
+An origin trial for FLoC started in Chrome 89, and has been made available as a [third-party origin trial](https://web.dev/third-party-origin-trials/). 
+
+To take part, you will need to [register](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561) for a FLoC origin trial token.
+
+{% Aside %}
+The initial testing of FLoC is taking place with a [small percentage of users](https://blog.google/products/chrome/privacy-sustainability-and-the-importance-of-and/#jump-content:~:text=The%20initial%20testing%20of%20FLoC%20is%20taking%20place%20with%20a%20small%20percentage%20of%20users), and FLoC is subject to [origin trial usage limits](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#19-are-there-any-usage-limits-on-experimental-features). This means that initially during the 
+current trial you will only be able to access the user's cohort (with `document.interestCohort()`) for a small proportion of visits to pages on your site that include your origin trial token. Alternatively, you can test the FLoC API locally by [setting browser flags](#enable-floc-with-browser-flags).
+{% endAside %}
+
 
 ### First-party context
 
@@ -55,7 +71,13 @@ When your token expires, you will get an email with a renewal link. Before renew
 
 ## Try out FLoC as a web developer
 
-The FLoC API is very simple: just a single method that returns a promise that resolves to an object providing the cohort `id` and `version`:  
+There are two ways to try out FLoC during the origin trial: 
+* Enable FLoC for your browser by setting browser flags.
+* Use a browser that is included in the trial.
+
+### Enable FLoC with browser flags
+
+The FLoC API is very simple: just a single method that returns a promise which resolves to an object providing the cohort `id` and `version`:  
 
 ``` js
 document.interestCohort()
@@ -64,23 +86,69 @@ document.interestCohort()
 The cohort data made available looks like this:
 
 ``` json
-    {
-        "id": "14159",
-        "version": "chrome.1.0"
-    }
+{
+  "id": "14159",
+  "version": "chrome.2.1"
+}
 ```
 
-The FLoC API is available in Chrome 89 and above, but if you're not taking part in the origin trial, you will need to set flags and run Chrome from the command line. [Run Chromium with flags](http://www.chromium.org/developers/how-tos/run-chromium-with-flags) explains how to do this for different operating systems.  
+The FLoC API is available in Chrome 89 and above, but if your browser is not included in the origin 
+trial, you will need to run Chrome with flags in order to try out the API. [Run Chromium with flags](http://www.chromium.org/developers/how-tos/run-chromium-with-flags) explains how to do this for different operating systems.  
 
-1.  Start Chrome with the following flags:  
+1.  Start Chrome with the following flags. Make sure to copy all the text!<br> <br>  
 
     ``` text
     --enable-blink-features=InterestCohortAPI 
     --enable-features="FederatedLearningOfCohorts:update_interval/10s/minimum_history_domain_size_required/1,FlocIdSortingLshBasedComputation,InterestCohortFeaturePolicy"
     ```
+    <br>
 
-1.  Make sure third-party cookies are not blocked and that no ad blocker is running.
-1.  View the demo at [floc.glitch.me](https://floc.glitch.me/).
+1.  Check that third-party cookies are not blocked and that no ad blocker is running.
+1.  View the demo at [floc.glitch.me](https://floc.glitch.me/) or run the following code from the 
+DevTools console:<br><br>
+
+    ``` js
+    await document.interestCohort()
+    ```
+
+#### What do the experimental flags mean?
+
+* `InterestCohortAPI` enables FLoC.
+* `update_interval/10s` sets the cohort to be recalculated every 10 seconds. This is only to enable 
+testing; the cohort recalculation interval currently defaults otherwise to every seven days.
+* `minimum_history_domain_size_required/1` specifies the minimum number of domains that must be 
+available in order for the cohort to be computed. The value here is for testing only and normally 
+would be higher.
+* `FlocIdSortingLshBasedComputation` sets the clustering algorithm used by FLoC.
+* `InterestCohortFeaturePolicy` enables the availability of the [Permissions-Policy header for FLoC](#how-can-websites-opt-out-of-the-floc-computation).
+* It is also possible to [set the FLoC version](https://github.com/WICG/floc/issues/90#issuecomment-814389410) 
+by using a value such as `"FederatedLearningOfCohorts:finch_config_version/2"`. 
+
+You can view FLoC flag code in [Chromium Code Search](https://source.chromium.org/chromium/chromium/src/+/master:components/federated_learning/features/features.cc?q=minimum_history_domain_size_required&ss=chromium).
+
+{% Aside %}
+The codebase for Chrome has two different lists of features:
+* `--enable-features` is for Chromium browser features.
+* `--enable-blink-features` is for Blink.
+
+You have to use the correct flag depending on which list your feature is in (though some are in both!)
+
+[Blink features](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/platform/runtime_enabled_features.json5;l=108?q=runtime_enabled_features.json5%20&ss=chromium) with `status=experimental` 
+can also be enabled by using the Experimental Web Platform features flag in Chrome: 
+chrome://flags/#enable-experimental-web-platform-features.
+{% endAside %}
+
+
+### Check if your browser is included in the origin trial
+
+During the origin trial, FLoC is enabled by default for [a small percentage of browsers](https://blog.google/products/chrome/privacy-sustainability-and-the-importance-of-and/#jump-content:~:text=The%20initial%20testing%20of%20FLoC). 
+For these browsers, the FLoC API is made available without requiring flags to be set. You can check 
+if your browser is included in the trial by trying out one of the two demos below. Each of these 
+uses a different method to provide an origin trial token.
+
+* Meta tag: [floc-ot-meta.glitch.me](https://floc-ot-meta.glitch.me)
+* HTTP header: [floc-ot-header.glitch.me](https://floc-ot-header.glitch.me)
+
 
 ## Try out FLoC as a publisher, advertiser or adtech platform
 
@@ -110,11 +178,21 @@ For example, a site can opt out of all FLoC cohort calculation by sending the HT
 Permissions-Policy: interest-cohort=()
 ```  
 
-During the FLoC origin trial, websites that don't opt out will be included in the FLoC calculation if Chrome detects that they are sites which load ads-related resources.   
+During the FLoC origin trial, pages on websites that don't opt out will be included in the FLoC 
+calculation if Chrome detects that they load [ads-related resources](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md) or if they use `document.interestCohort()`. Pages served from private IP addresses, 
+such as intranet pages, won't be part of the FLoC computation.
 
 {% Aside %}  
 [Ad Tagging in Chromium](https://chromium.googlesource.com/chromium/src/+/master/docs/ad_tagging.md) explains how Chrome's ad detection mechanism works.  
 {% endAside %}
+
+### Why are pages that have ads or ads-related resources included in FLoC cohort computation during the initial origin trial?
+
+Origin trials give developers a chance to see what a new API proposal would be like *if* it were 
+launched. For FLoC, how can we enable the API to be evaluated realistically before it has wide 
+adoption? For the small-scale origin trial experiment, Chrome chose to make the assumption that 
+every page which uses ads would use FLoC. This is unlikely to be completely realistic, but is the 
+most plausible heuristic available.
 
 
 ## Find out more

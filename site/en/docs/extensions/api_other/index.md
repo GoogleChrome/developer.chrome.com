@@ -64,7 +64,7 @@ that library's JavaScript files with your extension. Bundled libraries work in e
 they do in other web pages.
 
 [1]: /docs/extensions/reference
-[2]: https://developer.mozilla.org/en/Gecko_DOM_Reference
+[2]: https://developer.mozilla.org/en-US/docs/Web/API
 [3]: /docs/extensions/mv2/xhr
 [4]: /docs/extensions/mv2/declare_permissions
 [5]: http://www.html5rocks.com/tutorials/audio/quick/

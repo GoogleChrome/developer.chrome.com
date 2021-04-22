@@ -13,7 +13,7 @@ Thumbs.db
 
 # Code coverage generated files
 .nyc_output
-coverage
+/coverage
 
 # Node modules and output
 node_modules

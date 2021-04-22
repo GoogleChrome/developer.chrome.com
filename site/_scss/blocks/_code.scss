@@ -8,6 +8,20 @@ pre[class*='language-'] {
   padding: 0.5em;
 }
 
+code {
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-hairline);
+  border-radius: 3px;
+  padding: 0.125em 0.25em;
+}
+
+pre > code {
+  background: initial;
+  border: initial;
+  border-radius: initial;
+  padding: initial;
+}
+
 // Aggressively override the css loaded by prettify.js
 // prettify.js is only used by the legacy API docs at /docs/native-client/
 .prettyprint {

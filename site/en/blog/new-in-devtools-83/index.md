@@ -7,6 +7,12 @@ date: 2020-03-10
 #updated: YYYY-MM-DD
 description:
   "Emulate color vision deficiencies, emulate locales, COOP and COEP debugging, and lots more."
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZYa1YaBoE4bmPPGd1sN2.jpg'
+alt: ''
+tags:
+  - new-in-devtools
+  - devtools
+  - chrome-83
 ---
 
 {% YouTube id="MLNERCykDPg" %}

@@ -357,7 +357,7 @@ For more example code, see the [web request samples][16].
 [1]: /docs/extensions/mv2/tabs
 [2]: /docs/extensions/mv2/declare_permissions
 [3]: #life_cycle_footnote
-[4]: #implementation
+[4]: #implementation-details
 [5]: #life_cycle_footnote
 [6]: https://fetch.spec.whatwg.org/#cors-check
 [7]: https://fetch.spec.whatwg.org/#origin-header
