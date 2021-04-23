@@ -12,9 +12,9 @@ alt: "New install surface for progressive web apps"
 ---
 
 {% Aside 'caution' %}
-This is experimental UI, and potential could change in the future depending on developer, user and
-partner feedback. We are also planning on expanding the UI to consider use cases where we need to
-educate the user about  really powerful features like WebSockets. 
+This is an experimental UI, and could potentially change in the future depending on developer, user, 
+and partner feedback. We are also planning on expanding the UI to consider use cases where we need to
+educate the user about powerful features like WebSockets. 
 {% endAside %}
 
 
@@ -24,13 +24,13 @@ Mobile devices and the introduction of device vendor app stores have changed use
 of how to discover, evaluate and install software. Users are now so familiar with app stores, and
 the additional information that is provided through app stores such as context about the app,
 social feedback, ratings etc that we see the app store metaphor emerging in Desktop operating
-systems including ChromeOS, Mac & Windows. 
+systems including ChromeOS, Mac and Windows. 
 
  
 ## Challenge with today's install surfaces {: #today }
 
 Today, if a user wants to install a PWA, an infobar and modal overlay appears with minimal
-information. If they do continue to install, the process is over too quickly without giving
+information. If they continue to install, the process is over too quickly without giving
 context to the user. This goes against their expectations of installing apps and can leave them
 somewhat confused with what has happened.  
 
@@ -154,12 +154,10 @@ truncate longer descriptions
 
 In the future we will consider adding other data such as categories and app rating, but this will 
 be based on feedback from developers and users. 
-[See example code here](https://glitch.com/edit/#!/richerinstall-description?path=manifest.json%3A13%3A29).
-
-Example; 
+[See the example code here](https://glitch.com/edit/#!/richerinstall-description?path=manifest.json%3A13%3A29).
 
  ```javascript
-"description": "Compress and compare images with different codecs, 
+"description": "Compress and compare images with different codecs 
 right in your browser."
  ```
 
@@ -173,7 +171,7 @@ Description added.
 {% endColumn %}
 {% Column %}
 {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/Dpzs03K6QmBkZaefX2nU.jpg", 
-alt="Longer description added that has been truncated.", width="342", height="684" %}
+alt="A longer description that has been truncated.", width="342", height="684" %}
 {% Aside %}
 Longer descriptions are truncated.
 {% endAside %}
