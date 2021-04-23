@@ -13,7 +13,7 @@ authors:
 ---
 
 {% Aside 'warning' %}
-[For Googlers, March 2021.]
+[For Googlers, April 2021.]
 
 This document is a work in progress, unfinished and not to be shared externally.
 {% endAside %}
@@ -25,7 +25,8 @@ The Attribution Reporting API was previously known as the Event Conversion Measu
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials/) Chrome 86 to 91: [register for the trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
+* [In origin trial](https://web.dev/origin-trials/) Chrome 86 to 91. 
+* [Register for the trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
 * [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
 * [Chrome Platform Status](https://www.chromestatus.com/feature/6412002824028160).
 
@@ -97,7 +98,7 @@ to another, to help combat fraud and distinguish bots from humans.
 {% endAside %}
 
 
-## How does it work?
+## How does Attribution Reporting work?
 
 In order to measure the effectiveness of ad campaigns, advertisers and publishers need to know when 
 an ad click or view leads to a conversion, such as a purchase or sign-up. Historically this has been 

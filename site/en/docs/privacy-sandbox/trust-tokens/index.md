@@ -12,7 +12,7 @@ authors:
 ---
 
 {% Aside 'warning' %}
-[For Googlers, March 2021.]
+[For Googlers, April 2021.]
 
 This document is a work in progress, unfinished and not to be shared externally.
 {% endAside %}
@@ -20,7 +20,8 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 91: [register for the trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+* [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 91.
+* [Register for the trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
 * [Demo](https://trust-token-demo.glitch.me/).
 * [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 * [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).

@@ -10,7 +10,7 @@ authors:
 ---
 
 {% Aside 'warning' %}
-[For Googlers, March 2021.]
+[For Googlers, April 2021.]
 
 This document is a work in progress, unfinished and not to be shared externally.
 {% endAside %}
@@ -125,19 +125,6 @@ can be used to identify and track users across sites.
 
 
 {% endDetails %}
-
-
-## What about more complex use cases?
-
-End-to-end flows will require multiple solutions. For example, a click-based advertising flow with 
-customized audience selection could be implemented using Privacy Sandbox APIs as in the diagram 
-below.
-
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/9Zpa9oYNNal5sqAU5hpW.png", 
-  alt="Simplified view of a click-based advertising flow with customized audience selection using Privacy Sandbox APIs", width="800", 
-  height="265" %}
-
-[Add additional complex use cases.]
 
 
 ## Who is working on the Privacy Sandbox?
