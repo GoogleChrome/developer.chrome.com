@@ -182,7 +182,7 @@ Chrome.
 
 {% Aside 'caution' %}
 You can only enable the origin trial using an `Origin-Trial` HTTP header.
-Do not use a meta tag for this purpose.
+Do not use a meta tag.
 {% endAside %}
 
 To verify that it's working properly, install [Chrome
