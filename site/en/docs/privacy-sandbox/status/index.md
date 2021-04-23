@@ -18,7 +18,7 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 
 ## Attribution Reporting
-Previously known as the Event Conversion Measurement API.
+Previously known as Event Conversion Measurement.
 * [In origin trial](https://web.dev/origin-trials/): Chrome 86 to 91. 
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
 * [Chrome Platform Status](https://www.chromestatus.com/features/6412002824028160).
@@ -48,8 +48,8 @@ Previously known as the Event Conversion Measurement API.
 * Find out more: [The Chromium Projects: First-Party Sets](https://www.chromium.org/updates/first-party-sets).  
 
 ## Federated Learning of Cohorts (FLoC)
-* Origin trial proposed to begin in Chrome 89. See [github.com/WICG/floc/issues/25](https://github.com/WICG/floc/issues/25) 
-for more detail.
+* [In origin trial](https://web.dev/origin-trials): Chrome 89–91. See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) for updates.
+* [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561).
 * [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=floc)
 * [API proposal](https://github.com/WICG/floc) is under discussion with 
 [WICG](https://www.w3.org/community/wicg/) and interest groups.
@@ -79,6 +79,7 @@ ___
 * [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
 * [blink-dev](https://groups.google.com/a/chromium.org/g/blink-dev/): implementation status and 
 discussion of features in Blink, the rendering engine used by Chromium. 
+* [Chromium code search](https://source.chromium.org/).
 
 ### Origin trials
 * [Getting started with Chrome's origin trials](https://web.dev/origin-trials/)

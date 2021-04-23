@@ -7,13 +7,3 @@ updated: 2021-03-02
 authors:
   - samdutton
 ---
-
-{% Aside 'warning' %}
-[For Googlers, March 2021.]
-
-This document is a work in progress, unfinished and not to be shared externally.
-{% endAside %}
-
-
-[Content TBC based on existing Guiding Principles.]
-

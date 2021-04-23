@@ -25,18 +25,11 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 ## Why do we need the Privacy Sandbox?
 
-The web today does not meet user expectations for privacy and choice.
-
-When you visit a website you're unlikely to know what third parties are involved and what they're 
-doing with your data. Even publishers and web developers may not understand the entire third-party 
-supply chain.
-
 The Privacy Sandbox initiative has two core aims:
-* Work with the web community to develop replacement solutions to support legitimate third-party use 
-cases and business models without enabling users to be tracked across sites.
+* Develop replacement solutions to support legitimate third-party use cases and business models 
+without enabling users to be tracked across sites.
 * Phase out support for [third-party cookies](https://web.dev/samesite-cookies-explained/) when new 
-solutions are in place. ([First party cookies](https://web.dev/samesite-cookies-explained/#what-are-first-party-and-third-party-cookies) 
-are unaffected.)
+solutions are in place.
 
 ## What are the Privacy Sandbox proposals?
 
@@ -52,7 +45,7 @@ The key proposals are listed below.
 ### Relevant content and ads
 {% endDetailsSummary %}
 
-* [FLoC](/docs/privacy-sandbox/floc): Ad selection for interest groups: "relevant ads". 
+* [FLoC](/docs/privacy-sandbox/floc): Privacy-preserving interest-based ad selection: "relevant ads". 
 * [FLEDGE](/docs/privacy-sandbox/fledge): Ad selection for remarketing. Descendant of 
 [TURTLEDOVE](https://github.com/WICG/turtledove).
 
