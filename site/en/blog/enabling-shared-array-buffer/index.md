@@ -11,7 +11,7 @@ description: >
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
 date: 2021-01-18
-updated: 2021-04-19
+updated: 2021-04-22
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
 alt: A collection of padlocks.
 ---
@@ -176,12 +176,17 @@ exception expires in Chrome 96, and the exception only applies to Desktop
 Chrome.
 
 1. [Request a token]({{origin_trial.url}}) for your origin.
-2. Add the token to your pages. There are two ways to do that:
-   - Add a `<meta>` tag to the head of each page. For example,
-     this may look something like: `<meta http-equiv="origin-trial" content="TOKEN_GOES_HERE">`
-   - If you can configure your server, you can also add the token using an
-     `Origin-Trial` HTTP header. The resulting response header should look
-     something like: `Origin-Trial: TOKEN_GOES_HERE`
+2. Add the token to your pages using an `Origin-Trial` HTTP header. The
+   resulting response header should look something like: `Origin-Trial:
+   TOKEN_GOES_HERE`
+
+{% Aside 'caution' %}
+You can only enable the origin trial using an `Origin-Trial` HTTP header.
+Do not use a meta tag.
+{% endAside %}
+
+To verify that it's working properly, install [Chrome
+91 beta](https://www.google.com/chrome/beta/) for testing.
 
 ## Further reading {: #resources }
 
