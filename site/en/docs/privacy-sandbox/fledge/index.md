@@ -5,8 +5,8 @@ subhead: >
   A solution for remarketing use cases, designed so it cannot be used by third parties to track user browsing behaviour.
 description: >
   FLEDGE satisfies remarketing use cases, but is designed so it cannot be used by third parties to track user browsing behaviour. The API enables on-device "auctions" by the browser to choose relevant ads, based on websites the user has previously visited. 
-date: 2021-03-02
-updated: 2021-03-02
+date: 2021-04-23
+updated: 2021-04-23
 authors:
   - samdutton
 ---

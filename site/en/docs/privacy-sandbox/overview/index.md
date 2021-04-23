@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: What is the Privacy Sandbox?
 subhead: The Privacy Sandbox is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms.
 description: "What's in it, who's behind it, and what it's for."
-date: 2021-03-02
-updated: 2021-03-02
+date: 2021-04-23
+updated: 2021-04-23
 authors:
 	- samdutton
 ---
