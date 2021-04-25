@@ -99,8 +99,8 @@ content script and persists it in a global variable for later use.
 let name = undefined;
 
 chrome.runtime.onMessage.addListener(({ type, name }) => {
-  if (msg.type === "set-name") {
-    name = msg.name;
+  if (type === "set-name") {
+    name = name;
   }
 });
 
