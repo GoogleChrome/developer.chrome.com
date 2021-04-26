@@ -13,8 +13,8 @@ alt: "New install surface for progressive web apps"
 
 {% Aside 'caution' %}
 This is an experimental UI, and could potentially change in the future depending on developer, user, 
-and partner feedback. We are also planning on expanding the UI to consider use cases where we need to
-educate the user about powerful features like WebSockets. 
+and partner feedback. We are also planning on expanding the UI to consider use cases where users need to be 
+educated about powerful features like WebSockets. 
 {% endAside %}
 
 
@@ -23,7 +23,7 @@ educate the user about powerful features like WebSockets.
 Mobile devices and the introduction of device vendor app stores have changed users' mental model
 of how to discover, evaluate and install software. Users are now so familiar with app stores, and
 the additional information that is provided through app stores such as context about the app,
-social feedback, ratings etc that we see the app store metaphor emerging in Desktop operating
+social feedback, ratings etc that you see the app store metaphor emerging in Desktop operating
 systems including ChromeOS, Mac and Windows. 
 
  
@@ -32,18 +32,18 @@ systems including ChromeOS, Mac and Windows.
 Today, if a user wants to install a PWA, an infobar and modal overlay appears with minimal
 information. If they continue to install, the process is over too quickly without giving
 context to the user. This goes against their expectations of installing apps and can leave them
-somewhat confused with what has happened.  
+somewhat confused about what has happened.  
 
 {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/VwB1V3K61vQMs1htKJpY.png", 
 alt="An example of PWA install UI.", width="360", height="632" %}
 
-To enable and empower developers to provide installed experiences on--par with native experiences
-Chrome is introducing a new install surface, Richer Install, that will allow developers to add a
+To enable developers to provide installed experiences on par with native experiences
+Chrome is introducing a new install surface, Richer Install, that allows developers to add a
 description and screenshots to their manifest file and have it appear in a bottomsheet dialog
-within Chrome. 
+within Chrome for Android. 
 
-By doing this we are giving developers the opportunity to create a more enticing install process
-that better aligns to user expectations and better context that mimics their existing mental model
+This gives developers the opportunity to create a more enticing install process
+that better aligns to user expectations and that mimics their existing mental model
 of installed experiences. 
 
 {% Columns %}
@@ -65,14 +65,13 @@ Richer Install UI Collapsed
 
 ## Backwards compatibility {: #compatibility }
 
-Websites that do not conform to the above will continue to receive the existing prompts. This may
-change in the future depending on uptake of the developer community and users' reaction.  
+Websites that do not include at least one screenshot to their manifest file will continue to receive 
+the existing prompts. This may change in the future depending on uptake of the developer community 
+and users' reaction.  
 
 ## Previewing the UI {: #previewing }
 
-This UI works in Chrome Dev & Chrome Canary on Android, with the flag enabled;
-
-`mobile-pwa-install-use-bottom-sheet` 
+This UI works in Chrome Dev & Chrome Canary on Android, with the flag `#mobile-pwa-install-use-bottom-sheet` enabled in `chrome://flags`.
 
 This feature is enabled on [squoosh.app](https://squoosh.app) and can be previewed there. As an
 aside, [#screenshots](https://web.dev/add-manifest/#screenshots) and 
@@ -81,14 +80,14 @@ you can give it a try behind the flag.
 
 ## Implementation {: #implementation }
 
-In order to enable Richer installs on your site you need to add at least one screenshot to your 
+To enable Richer installs on your site you need to add at least one screenshot to your 
 manifest file. Descriptions are not required but are recommended. 
 
 Origins that are too long to fit the UI are truncated, this is also known as eliding and is used
 as a [security measure to protect users](https://chromium.googlesource.com/chromium/src/+/master/docs/security/url_display_guidelines/url_display_guidelines.md#eliding-urls). 
 
-Let's take a look at how we can trigger Richer Install UI when installing a PWA. In this example
-we are looking at squoosh.app implementation. Let's assume that you have your name and origin
+Let's take a look at how you can trigger Richer Install UI when installing a PWA. This is an example
+of a squoosh.app implementation. Let's assume that you have your name and origin
 defined.
 
 The manifest should look like this; 
@@ -109,19 +108,19 @@ The manifest should look like this;
 }
  ```
 
-Now let's add the screenshots to the end of the manifest.json file; 
+Now add the screenshots to the end of the manifest.json file; 
 
 ## Screenshots {: #screenshots }
 
-To add screenshots we need to determine the size, source and type, following this 
+To add screenshots you need to determine the size, source and type, following this 
 [criteria](https://web.dev/add-manifest/#screenshots). 
 
-Width and height must be at least 320px and at most 3840px.
-The maximum dimension can't be more than 2.3 times as long as the minimum dimension.
-Screenshots must have the same aspect ratio.
-Only JPEG and PNG image formats are supported.
+* Width and height must be at least 320px and at most 3840px.
+* The maximum dimension can't be more than 2.3 times as long as the minimum dimension.
+* Screenshots must have the same aspect ratio.
+* Only JPEG and PNG image formats are supported.
 
-Currently animated gifs are not supported. We need to include the size and type of the image so it 
+Currently animated gifs are not supported. Also, you need to include the size and type of the image so it 
 is rendered correctly. 
 [See this code example](https://glitch.com/edit/#!/richerinstall-screenshot?path=manifest.json%3A14%3A24).
 
@@ -147,10 +146,10 @@ A single screenshot added.
 
 ## Description {: #description }
 
-Descriptions are not compulsory, so there is no minimum requirement. There however is a max which 
+Descriptions are not compulsory, so there is no minimum requirement. However, there is a maximum that 
 kicks in after 7 lines of text (roughly 324 characters). After this an ellipse will appear and 
 truncate longer descriptions 
-([see example](https://glitch.com/edit/#!/richerinstall-longer-description)). 
+([for example](https://glitch.com/edit/#!/richerinstall-longer-description)). 
 
 In the future we will consider adding other data such as categories and app rating, but this will 
 be based on feedback from developers and users. 
