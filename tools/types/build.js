@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-const chromeTypesRepoBase = 'https://unpkg.com/chrome-types@latest/';
+const chromeTypesRepoBase = 'https://unpkg.com/chrome-types@0.0.23/';
 
 require('dotenv').config();
 const fs = require('fs');
