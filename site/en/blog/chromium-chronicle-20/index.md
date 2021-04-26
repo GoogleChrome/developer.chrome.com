@@ -2,7 +2,7 @@
 title: "The Chromium Chronicle #20: Benchmarking Test Harnesses"
 description: >
   Adding benchmarks is an easy way to prevent performance regressions and
-  help improve performance over time.
+  help improve performance.
 layout: 'layouts/blog-post.njk'
 date: 2021-04-30
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
@@ -19,7 +19,7 @@ Speed is one of Chrome's four core principles. **Adding benchmarks is an
 easy way to prevent performance regressions and help improve performance
 over time.** Good Benchmarks have a fast iteration cycle, can catch
 performance regressions much earlier than UMA, and are great for measuring
-new feature's performance.
+a new feature's performance.
 
 **Benchmarks run regularly in the lab.** When a regression is found, bisect
 automatically finds the culprit CL and a bug is assigned to the CL owner.
@@ -62,12 +62,12 @@ using an existing metric within one of the existing harnesses. You can also
 collect additional traces and add more metrics to existing benchmarks or pass
 additional flags to the browser.
 
-Use Blink Perf for one off cases that don't fit into other harnesses. In
+Use Blink Perf for one-off cases that don't fit into other harnesses. In
 Blink Perf, you can measure trace events on one-off pages.
 
 **Keep your benchmark stories simple** and only include the minimal set of
 interactions needed to complete your scenario. If a test case is complex, it
-may be hard to automate or be flaky.
+may be hard to automate or it may be flaky.
 
 Limit your tests to the smallest number that cover the most important use
 cases. The benchmarking infrastructure is expensive to maintain. See
