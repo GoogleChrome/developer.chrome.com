@@ -1,3 +1,7 @@
+/**
+ * Temporarily disable TS type check as the global `wd` namespace
+ * that comes from `webdev-infra` is currently broken.
+ */
 // @ts-nocheck
 const {imgix: imgixFilter} = require('webdev-infra/filters/imgix');
 const {Img: BuildImgShortcode} = require('webdev-infra/shortcodes/Img');

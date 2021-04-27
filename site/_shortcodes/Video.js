@@ -1,3 +1,7 @@
+/**
+ * Temporarily disable TS type check as the global `wd` namespace
+ * that comes from `webdev-infra` is currently broken.
+ */
 // @ts-nocheck
 const {Video: BuildVideoShortcode} = require('webdev-infra/shortcodes/Video');
 const {bucket, imgixDomain} = require('../_data/site.json');
