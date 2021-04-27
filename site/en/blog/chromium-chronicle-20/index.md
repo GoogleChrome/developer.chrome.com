@@ -22,7 +22,7 @@ performance regressions much earlier than UMA, and are great for measuring
 a new feature's performance.
 
 **Benchmarks run regularly in the lab.** When a regression is found, [`bisect`][bisect]
-automatically finds the culprit CL and a bug is assigned to the CL owner.
+automatically finds the culprit CL and assigns a bug to the CL owner.
 
 **Chrome benchmarks combine sequences of web page interactions (called
 stories) with performance measurements.** Similar cases are grouped into
