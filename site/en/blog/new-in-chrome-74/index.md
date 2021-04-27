@@ -99,7 +99,7 @@ To read more about public and private classes, check out Mathias's post on
 
 ## `prefers-reduced-motion` {: #prefers-reduced-motion }
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/nUa8d2JtpVfYhsWBCXPf.png", alt="", className="float-right", height="493", width="472" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/nUa8d2JtpVfYhsWBCXPf.png", alt="", class="float-right", height="493", width="472" %}
 
 Some users have reported getting motion sick when viewing parallax scrolling,
 zooming, and other motion effects. To address this, many operating systems

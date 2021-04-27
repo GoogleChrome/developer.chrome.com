@@ -173,7 +173,7 @@ and check out the [spec](https://github.com/WICG/web-locks).
 These are just a few of the changes in Chrome 69 for developers, of course,
 there's plenty more.
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/JSmEr981V3yPV1qlGP7G.jpg", alt="conical gradient", width="125", className="float-right", height="350", width="350" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/JSmEr981V3yPV1qlGP7G.jpg", alt="conical gradient", width="125", class="float-right", height="350", width="350" %}
 
 * From the CSS4 spec, you can now create color transitions around the
   circumference of a circle, using
