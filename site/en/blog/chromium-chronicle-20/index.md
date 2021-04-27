@@ -21,7 +21,7 @@ over time.** Good Benchmarks have a fast iteration cycle, can catch
 performance regressions much earlier than UMA, and are great for measuring
 a new feature's performance.
 
-**Benchmarks run regularly in the lab.** When a regression is found, bisect
+**Benchmarks run regularly in the lab.** When a regression is found, [`bisect`][bisect]
 automatically finds the culprit CL and a bug is assigned to the CL owner.
 
 **Chrome benchmarks combine sequences of web page interactions (called
@@ -91,3 +91,4 @@ Want to learn more about Chrome benchmarking? Contact telemetry@chromium.org.
 [chrome-speed-devices]: https://chromium.googlesource.com/chromium/src/+/HEAD/docs/speed/perf_lab_platforms.md
 [new-bmp]: https://docs.google.com/document/d/1ni2MIeVnlH4bTj4yvEDMVNxgL73PqK_O9_NUm3NW3BA
 [cr-bm]: https://groups.google.com/a/chromium.org/g/telemetry
+[bisect]: https://chromium.googlesource.com/chromium/src/+/HEAD/docs/speed/bisects.md
