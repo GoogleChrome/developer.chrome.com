@@ -72,6 +72,9 @@ redirects:
 
 # DevTools redirects
 
+- from: /docs/devtools/network-performance/reference
+  to: /docs/devtools/network/reference/
+
 - from: /docs/devtools/network/resource-loading/
   to: /docs/devtools/network/reference/
 
