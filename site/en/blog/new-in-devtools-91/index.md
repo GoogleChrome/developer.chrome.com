@@ -50,7 +50,7 @@ Open [this demo page](https://memory-inspector.glitch.me/demo-js.html). In the *
 
 Refresh the page. Expand the **Scope** section in the right **debugger** pane. Notice the new icon next to the **buffer** value. Click on it to reveal the **Memory Inspector**.
 
-Try [this demo](https://memory-inspector.glitch.me/demo-wasm.html) for Wasm memory inspection. Read [this article](/blog/webassembly/#memory-inspector) to learn more on how to inspect Wasm memory.
+Check out the documentation to learn more about [inspecting JavaScript `ArrayBuffer` and `WebAssembly.Memory`](/docs/devtools/memory-inspector/) with this new Memory inspector. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7CY7ijbHVfFFl7DM3lLT.png", alt="Memory inspector", width="800", height="499" %}
 
