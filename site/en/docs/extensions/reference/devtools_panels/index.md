@@ -27,7 +27,7 @@ Developer Tools toolbar and labeled as _Font Picker_:
 ```js
 chrome.devtools.panels.create("Font Picker",
                               "FontPicker.png",
-                              "Panel.html"
+                              "Panel.html",
                               function(panel) { ... });
 ```
 
