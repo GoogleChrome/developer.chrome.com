@@ -29,7 +29,7 @@ manifest formats. Users can quickly convert an extension directory, zip file, or
 with a single command.
 
 ```bash
-python3 extension.py <extension_path>
+python3 emc.py <extension_path>
 ```
 
 This tool focuses on automating the mechanical parts of converting an extension. For example, it
