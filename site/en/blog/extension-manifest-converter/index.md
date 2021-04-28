@@ -13,46 +13,32 @@ authors:
   - dotproto
 tags:
   - extensions
-draft: true
+hero: image/WlD8wC6g8khYWPJUsQceQkhXSlv1/GVDuhpIli5DeYmbiPlqG.jpg
+alt: A woodworking hand plane.
 ---
 
-Extension Manifest Converter for Manifest V3
+Hi everyone. My name is Solomon and I'm a software engineer on Chrome's extensions team.
 
-## Summary
+As we continue to build out the latest version of [Chrome's extensions platform][mv3], I found
+myself needing to convert MV2 extensions to MV3 for testing purposes. To make this process a little
+easier I created a tool called [Extension Manifest Converter][emc-repo] (EMC).
 
-Open source tool to convert extensions to Manifest V3. Easily convert an entire directory, extension
-zip file, or manifest.json file. All expected changes are applied to manifest.json. Only search and
-replace changes are applied to .js files. You'll still need to manually update any service worker
-code that relies on a DOM, in addition to updating chrome.scripts.
-
-## Examples
-
-Converting files can be done one of the following ways.
+EMC is a Python 3 command line tool that automates several parts of converting an extension form MV2
+to MV3. Users can quickly convert an extension directory, zip file, or manifest.json file with a
+single command.
 
 ```bash
-git clone https://github.com/GoogleChromeLabs/extension-manifest-converter
+python3 extension.py <extension_path>
 ```
 
-manifest.json
+This tool automates some of the more mechanical parts of updating an extension like moving from
+`chrome.browserAction` to `chrome.action` or moving to the new [web accessible resources][war]
+syntax introduced with Manifest V3.
 
-```bash
-python3 extension.py manifest.json
-```
+If you encounter any issues with the project, [open an issue][emc-issue] on the [project's
+repo][emc-repo].
 
-.zip file
-
-```bash
-python3 extension.py extension.zip
-```
-
-directory
-
-```bash
-python3 extension.py dir/
-```
-
-help
-
-```bash
-python3 extension.py
-```
+[emc-issue]: https://github.com/GoogleChromeLabs/extension-manifest-converter/issues
+[emc-repo]: https://github.com/GoogleChromeLabs/extension-manifest-converter
+[mv3]: https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/
+[war]: https://developer.chrome.com/docs/extensions/mv3/manifest/web_accessible_resources/
