@@ -192,5 +192,5 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 [getstarted-tut]: /docs/extensions/mv3/getstarted
 [hello-sample]: /docs/extensions/mv3/samples#search:hello
 [hello-uploader]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
-[similar-pages-extension]: https://chrome.google.com/webstore/detail/packagetrack-package-trac/hoipjclokbelgffomjhhiflphegpmlpe
+[similar-pages-extension]: https://chrome.google.com/webstore/detail/google-similar-pages/pjnfggphgdjblhfjaphkjhfpiiekbbej
 [single purpose]: /docs/extensions/mv3/single_purpose
