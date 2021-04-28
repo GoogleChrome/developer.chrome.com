@@ -6,8 +6,8 @@ description: >
   service worker code that relies on a DOM, in addition to updating chrome.scripts.
 subhead: >
   Easily convert an entire directory, extension zip file, or manifest.json file.
-date: 2021-04-19
-updated: 2021-04-19
+date: 2021-04-28
+updated: 2021-04-28
 authors:
   - solomonkinard
   - dotproto
