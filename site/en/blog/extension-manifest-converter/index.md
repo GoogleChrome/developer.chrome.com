@@ -23,7 +23,7 @@ As we continue to build out the latest version of [Chrome's extensions platform]
 myself needing to convert MV2 extensions to MV3 for testing purposes. To make this process a little
 easier I created a tool called [Extension Manifest Converter][emc-repo] (EMC).
 
-EMC is a Python 3 command line tool that automates several parts of converting an extension form MV2
+EMC is a Python 3 command line tool that automates several parts of converting an extension from MV2
 to MV3. Users can quickly convert an extension directory, zip file, or manifest.json file with a
 single command.
 
