@@ -30,7 +30,7 @@ ways to open web content from your Android app:
 
 1. Content in a Trusted Web activity is **trusted** -- the app and the site it
    opens are expected to come from the same developer. (This is verified using
-   [Digital Asset Links](/digital-asset-links/v1/getting-started).)
+   [Digital Asset Links][12].)
 1. The content rendered in a Trusted Web Activity comes from the **web**: they're
    rendered by the user's browser, in exactly the same way as a user would see
    it in their browser except they are run fullscreen. Web content should be
@@ -55,7 +55,7 @@ opened in the preview of Trusted Web activities. You can expect, however, that
 Trusted Web activities will need to meet the same
 [Add to Home Screen](https://web.dev/customize-install/#criteria)
 requirements. You can audit your site for these requirements using the
-[Lighthouse](/web/tools/lighthouse/) "*user can be prompted to Add to Home
+[Lighthouse][13] "*user can be prompted to Add to Home
 screen*" audit.
 
 Today, if the user's version of Chrome doesn't support Trusted Web activities,
@@ -74,8 +74,10 @@ If integrating Trusted Web Activity into an existing Android App, the [Integrati
 is a good place to get started.
 
 [6]: https://play.google.com/store/apps/details?id=com.android.chrome
-[7]: /web/android/trusted-web-activity/quick-start/
-[8]: /web/android/trusted-web-activity/integration-guide/
+[7]: /docs/android/trusted-web-activity/quick-start/
+[8]: /docs/android/trusted-web-activity/integration-guide/
 [9]: https://github.com/GoogleChrome/android-browser-helper
 [10]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos
 [11]: https://github.com/GoogleChromeLabs/bubblewrap
+[12]: https://developers.google.com/digital-asset-links/v1/getting-started
+[13]: https://web.dev/measure/

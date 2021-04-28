@@ -46,7 +46,7 @@ additional changes in Chrome 75.
 
 ## Hint for low latency `canvas` contexts {: #desync }
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/C063CtT60X6q0DOffXzv.jpg", alt="", className="float-right", height="450", width="600" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/C063CtT60X6q0DOffXzv.jpg", alt="", class="float-right", height="450", width="600" %}
 
 Drawing on screen with the canvas element requires the page to synchronize
 graphics updates with the DOM. This synchronization can sometimes cause latency.

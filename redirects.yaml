@@ -42,6 +42,14 @@ redirects:
 - from: /docs/webstore/pricing/
   to: /docs/webstore/money/
 
+# Fixes #675
+- from: /extensions/manifestVersion
+  to: /docs/extensions/mv3/manifest/version/
+
+# Fixes #675
+- from: /apps/manifestVersion
+  to: /docs/apps/manifestVersion
+
 # The new site doesn't break out Platform Apps APIs, but instead just locates them at the bottom of
 # the main Extensions reference page.
 - from: /apps/api_index
@@ -69,6 +77,9 @@ redirects:
   to: /docs/apps/about_apps
 
 # DevTools redirects
+
+- from: /docs/devtools/network-performance/reference
+  to: /docs/devtools/network/reference/
 
 - from: /docs/devtools/network/resource-loading/
   to: /docs/devtools/network/reference/

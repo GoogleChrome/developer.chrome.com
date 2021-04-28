@@ -368,7 +368,7 @@ There are good reasons to offer a paid packaged app, even with the [limitations 
 above][142]. Packaged apps let you easily provide functionality to your users without the overhead
 of managing a hosted service. Charging for a packaged app is a quick and simple way to enable a
 low-friction transaction if the app provides clear user value. However, it is up to the developer to
-decide which solution is right for him or her.
+decide which solution is right for them.
 
 ### Can installable web apps have page actions? {: #faq-app-03 }
 

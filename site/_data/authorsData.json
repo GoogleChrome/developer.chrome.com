@@ -75,7 +75,7 @@
   "pjmclachlan": {
     "name": {
       "given": "Penny",
-      "family": "Mclachlan"
+      "family": "McLachlan"
     },
     "org": {
       "name": "Google",
@@ -83,10 +83,11 @@
     },
     "country": "CA",
     "twitter": "b1tr0t",
+    "github": "b1tr0t",
     "descriptions": {
       "en": "Penny is a Product Manager on the Chrome Web Platform team responsible for Chrome permissions, notifications, and progressive web apps."
     },
-    "image": "image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Nt1I5Rz9h0kOlyXQ630Q.jpg"
+    "image": "image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ruPda8fjIcYfc4ySP34v.jpg"
   },
   "samthorogood": {
     "name": {
@@ -123,7 +124,7 @@
     },
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/1604956151251.jpg"
   },
-  "simeonv": {
+  "dotproto": {
     "name": {
       "given": "Simeon",
       "family": "Vincent"
@@ -136,7 +137,6 @@
       "en": "Extensions whisperer"
     },
     "country": "US",
-    "homepage": "https://robdodson.me",
     "twitter": "dotproto",
     "github": "dotproto",
     "glitch": "dotproto",
@@ -544,5 +544,43 @@
       "en": "Googler working on Chrome DevTools."
     },
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KMNWpnRJTP6eHJs1wEw2.jpg"
+  },
+  "yoavweiss": {
+    "name": {
+      "given": "Yoav",
+      "family": "Weiss"
+    },
+    "twitter": "yoavweiss",
+    "github": "yoavweiss",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/isPv6ZIClCtYWtmkB1w0.jpg"
+  },
+  "solomonkinard": {
+    "name": {
+      "given": "Solomon",
+      "family": "Kinard"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "descriptions": {
+      "en": "Software Engineer, Chrome Extensions"
+    },
+    "country": "US",
+    "homepage": "https://kinard.com",
+    "twitter": "solomonkinard",
+    "github": "solomonkinard",
+    "glitch": "solomonkinard",
+    "image": "image/VK2OszK9GThIIwHngukz3x84Zfd2/rmArqpThpCHbCz9dWSWT.jpg"
+  },
+  "mihajlija": {
+    "name": {
+      "given": "Milica",
+      "family": "Mihajlija"
+    },
+    "homepage": "https://mihajlija.github.io/",
+    "twitter": "bibydigital",
+    "github": "mihajlija",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg"
   }
 }

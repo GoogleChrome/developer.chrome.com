@@ -49,10 +49,11 @@ The below snippet shows how an existing extension initializes its browser action
 persistent background page.
 
 ```js
+//// background.js
 chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
   chrome.action.setBadgeText({ text: badgeText });
 
-  // Listener is registered asynchronously.
+  // Listener is registered asynchronously
   chrome.action.onClicked.addListener(handleActionClick);
 });
 ```
@@ -68,11 +69,12 @@ that Chrome will be able to immediately find and invoke your action's click hand
 extension hasn't finished executing its async startup logic.
 
 ```js
+//// background.js
 chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
   chrome.action.setBadgeText({ text: badgeText });
 });
 
-// Listener is registered on on startup.
+// Listener is registered on startup
 chrome.action.onClicked.addListener(handleActionClick);
 ```
 
@@ -93,11 +95,12 @@ This example is taken from a simple manifest version 2 extension that receives a
 content script and persists it in a global variable for later use.
 
 ```js
+//// background.js
 let name = undefined;
 
 chrome.runtime.onMessage.addListener(({ type, name }) => {
-  if (msg.type === "set-name") {
-    name = msg.name;
+  if (type === "set-name") {
+    name = name;
   }
 });
 
@@ -113,6 +116,7 @@ set name will have been lost and name variable will again be undefined.
 We can fix this bug by treating the [Storage APIs][storage] as our source of truth.
 
 ```js
+//// background.js
 chrome.runtime.onMessage.addListener(({ type, name }) => {
   if (type === "set-name") {
     chrome.storage.local.set({ name });
@@ -138,6 +142,7 @@ It's common for web developers to perform delayed or periodic operations using t
 cancel the timers when the service worker is terminated.
 
 ```js
+//// background.js
 const TIMEOUT = 3 * 60 * 1000; // 3 minutes in milliseconds
 window.setTimeout(() => {
   chrome.action.setIcon({
@@ -150,7 +155,8 @@ Instead, we can use the [Alarms API][alarms]. Like other listeners, alarm listen
 registered in the top level of your script.
 
 ```js
-chrome.alarms.create({ delayInMinutes: 3.0 });
+//// background.js
+chrome.alarms.create({ delayInMinutes: 3 });
 
 chrome.alarms.onAlarm.addListener(() => {
   chrome.action.setIcon({
@@ -202,6 +208,7 @@ create and cache assets. While service workers don't have access to DOM and ther
 `<canvas>` elements, service workers do have access to the [OffscreenCanvas API][17].
 
 ```js
+//// background.js
 function buildCanvas(width, height) {
   const canvas = document.createElement("canvas");
   canvas.width = width;
@@ -215,6 +222,7 @@ migrate to offscreen canvas, replace `document.createElement('canvas')` with `ne
 OffscreenCanvas(width, height)`.
 
 ```js
+//// background.js
 function buildCanvas(width, height) {
   const canvas = new OffscreenCanvas(width, height);
   return canvas;

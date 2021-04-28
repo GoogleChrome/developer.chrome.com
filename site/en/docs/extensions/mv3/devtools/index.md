@@ -92,7 +92,7 @@ DevTools extension can add UI elements to the DevTools window:
   using, and where the DevTools window is docked.)
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png",
-    className="screenshot",
+    class="screenshot",
     alt="DevTools window showing Elements panel and Styles sidebar pane.", height="302", width="770" %}
 
 Each panel is its own HTML file, which can include other resources (JavaScript, CSS, images, and so
