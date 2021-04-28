@@ -36,6 +36,12 @@ redirects:
 - from: /multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
 
+- from: /docs/webstore/overview/
+  to: /docs/webstore/about_webstore/
+
+- from: /docs/webstore/pricing/
+  to: /docs/webstore/money/
+
 # Fixes #675
 - from: /extensions/manifestVersion
   to: /docs/extensions/mv3/manifest/version/
