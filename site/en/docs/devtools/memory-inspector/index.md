@@ -56,7 +56,7 @@ The **Memory inspector** consists of 3 main areas:
 1. The **address input** shows the current byte address in hex format. You can input a new value to jump to a new location in the memory buffer. For example, try type `0x00000008`.
 2. Memory buffers could be longer than a page. Instead of scrolling through, you can use the **left** and **right** button to navigate.
 3. The buttons on the left allow a **forward/backward** navigation.
-4. By default, the buffer is automatically updated on stepping. In the case it’s not, the **refresh** button gives you the option to refresh the memory and update its contents.
+4. By default, the buffer is automatically updated on stepping. In the case it's not, the **refresh** button gives you the option to refresh the memory and update its contents.
 
 ### Memory buffer {: #buffer }
 
@@ -80,7 +80,7 @@ The **Memory inspector** consists of 3 main areas:
 
 ## Inspecting memory {: #inspect }
 
-Let’s inspect the memory together. 
+Let's inspect the memory together. 
 
 1. Follow these steps to [start](/#open-debug) the debugging.
 2. Change the address to `0x00000027` in the **address input**. 
@@ -92,9 +92,9 @@ Let’s inspect the memory together.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/r0qWvOy2GO8bqUfkjYZa.png", alt="Resume script execution", width="800", height="602" %}
 6. Notice the **ASCII representation** is now updated.  All the **value interpretations** are updated as well.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IeVwiaLTr50DjXx59AQi.png", alt="All value interpretations are updated", width="800", height="602" %}
-7. Let’s customize the **Value inspector** to show only **floating point**. Click on the **settings** button and check only **Float 32-bit** and **Float 64-bit**.
+7. Let's customize the **Value inspector** to show only **floating point**. Click on the **settings** button and check only **Float 32-bit** and **Float 64-bit**.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZJFQAJFXB3GOA1hqVcfd.png", alt="settings to customize value inspector", width="800", height="602" %}
-8. Let’s change the encoding from `dec` to `sci`. Notice the value representations are updated accordingly.
+8. Let's change the encoding from `dec` to `sci`. Notice the value representations are updated accordingly.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/RqOAPGuSPUReZ6yRIf2Z.png", alt="change the encoding", width="800", height="602" %}
 9. Try to navigate the memory buffer with your keyboard or using the navigation bar. Repeat step 4 to observe values changes. 
 
