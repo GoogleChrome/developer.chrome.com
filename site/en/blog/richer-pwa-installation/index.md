@@ -34,13 +34,22 @@ information. If they continue to install, the process is over too quickly withou
 context to the user. This goes against their expectations of installing apps and can leave them
 somewhat confused about what has happened.  
 
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/VwB1V3K61vQMs1htKJpY.png", 
-alt="An example of PWA install UI.", width="360", height="632" %}
+
+{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/VwB1V3K61vQMs1htKJpY.png", alt="An example of PWA install UI", width="360", height="720" %}
 
 To enable developers to provide installed experiences on par with native experiences
 Chrome is introducing a new install surface, Richer Install, that allows developers to add a
 description and screenshots to their manifest file and have it appear in a bottomsheet dialog
 within Chrome for Android. 
+
+{% Columns %}
+{% Column %}
+{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/RoQRxu3CPkKvAtkxYsAQ.jpeg", alt="Example of bottomsheet UI in Chrome", width="360", height="720" %}
+{% Aside %}
+Example of bottomsheet UI in Chrome.
+{% endAside %}
+{% endColumn %}
+{% endColumns %}
 
 This gives developers the opportunity to create a more enticing install process
 that better aligns to user expectations and that mimics their existing mental model
@@ -71,7 +80,7 @@ and users' reaction.
 
 ## Previewing the UI {: #previewing }
 
-This UI works in Chrome Dev & Chrome Canary on Android, with the flag `#mobile-pwa-install-use-bottom-sheet` enabled in `chrome://flags`.
+This UI works in M91 non stable channels (Chrome Dev and Chrome Canary) on Android, with the flag `#mobile-pwa-install-use-bottom-sheet` enabled in `chrome://flags`.
 
 This feature is enabled on [squoosh.app](https://squoosh.app) and can be previewed there. As an
 aside, [#screenshots](https://web.dev/add-manifest/#screenshots) and 
