@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Google Chrome Web Store Developer Agreement"
 date: 2014-02-28
-updated: 2020-07-10
+updated: 2021-05-04
 description: >
   The legal agreement governing the relationship between Chrome Web Store
   developers and the Chrome Web Store.
@@ -63,7 +63,6 @@ Agreement or use the Web Store on behalf of your employer or other entity.
 3.1 You are responsible for any Taxes and must pay the Registration Fee without any reduction for Taxes. 
 
 3.2 This Agreement covers both Products you choose to distribute for free and Products for which you charge a fee.
-
 If you charge a fee for your Product, you assume sole responsibility and liability for all related transactions and authentications, records, and taxes. Google will have no obligations with respect to such Products, including without limitation obligations to track and process payments, authenticate paid or previously paid downloads, maintain payment records, or pay, report, or charge taxes.
 
 3.3 You may also choose to distribute Products for free. If the Product is free, you will not be charged a Transaction Fee. You may not collect future charges from users for copies of the Products that those users were initially allowed to download for free. This is not intended to prevent distribution of free trial versions of the Product with an "upsell" option to obtain the full version of the Product: Such free trials for Products are encouraged. In this Agreement, "free" means there are no charges or fees of any kind for use of the Product.
@@ -72,7 +71,7 @@ If you charge a fee for your Product, you assume sole responsibility and liabili
 
 Failure to provide adequate support for your Products may result in low Product ratings, less prominent product exposure, or in some cases removal from the Web Store, such as if the extension no longer functions as described.
 
-3.6 Reinstalls. Users are allowed unlimited reinstalls of each application distributed via the Web Store, provided however that if you remove a Product(s) from the Web Store pursuant to clauses (i), (ii), (iii) or (iv) of Section 7.1, such Product(s) shall be removed from all portions of the Web Store and users shall no longer have a right or ability to reinstall the affected Products. You are solely responsible for maintaining records of users who have previously paid for your Products, and Google will not be responsible for determining whether users attempting to reinstall your Products have previously paid for such Products.
+3.5 Reinstalls. Users are allowed unlimited reinstalls of each application distributed via the Web Store, provided however that if you remove a Product(s) from the Web Store pursuant to clauses (i), (ii), (iii) or (iv) of Section 7.1, such Product(s) shall be removed from all portions of the Web Store and users shall no longer have a right or ability to reinstall the affected Products. You are solely responsible for maintaining records of users who have previously paid for your Products, and Google will not be responsible for determining whether users attempting to reinstall your Products have previously paid for such Products.
 
 ## 4\. Use of the Web Store by You {: #use }
 
@@ -378,7 +377,7 @@ Google may make changes to this Agreement from time to time. When these changes 
 will make a new copy of the Agreement available on the Web Store site
 http://developers.google.com/chrome/web-store/terms. Google will also post a notification on the Web
 Store site for any material modifications . The changes will become effective, and will be deemed
-accepted by you, immediately or, in the case of material modifications, 15 days after the posting of
+accepted by You, immediately or, in the case of material modifications, 15 days after the posting of
 the notification (except changes required by law which will be effective immediately).
 
 If You do not agree with the modifications to the Agreement, You may terminate Your use of the Web
