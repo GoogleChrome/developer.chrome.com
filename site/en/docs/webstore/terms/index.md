@@ -25,7 +25,7 @@ Web Store: The Google Chrome Web Store site operated by Google, where Developers
 
 Products: Software, content and digital materials created for use in connection with Google Chrome and distributed via the Web Store.
 
-Taxes: All government-imposed taxes, except for taxes based on Google’s net income, net worth, asset value, property value, or employment.
+Taxes: All government-imposed taxes, except for taxes based on Google's net income, net worth, asset value, property value, or employment.
 
 
 ## 1\. Introduction {: #introduction }
@@ -44,7 +44,7 @@ Agreement (together, the "Agreement"). You are contracting with the applicable G
 on where You reside. In order to use the Web Store to distribute Products, you must agree to this
 Agreement by clicking to accept where this option is made available to you or continuing to use the
 Web Store to distribute Products in accordance with section 14, and pay a one-time registration fee,
-in an amount determined in Google’s sole discretion (the “Registration Fee”). You may not publish
+in an amount determined in Google's sole discretion (the "Registration Fee"). You may not publish
 Products on the Web Store if you do not accept this Agreement and pay the Registration Fee.
 
 2.2 You may not use the Web Store and may not enter into this Agreement if you are (a) not of legal
@@ -367,7 +367,7 @@ defames any person or violates their rights of publicity or privacy, and (c) any
 arising out of or relating to your Product or your use of the Web Store.
 
 13.2 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google
-and Google’s affiliates, directors, officers, employees and agents from and against any and all
+and Google's affiliates, directors, officers, employees and agents from and against any and all
 third party claims, actions, suits or proceedings, as well as any and all losses, liabilities,
 damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from
 taxes related to Your distribution of Product distributed via the Web Store.
