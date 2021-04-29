@@ -45,6 +45,7 @@
     "async-transforms": "^1.0.6",
     "chokidar": "^3.5.1",
     "chokidar-cli": "^2.1.0",
+    "chrome-types-helpers": "^0.1.4",
     "common-tags": "^1.8.0",
     "compression": "^1.7.4",
     "concurrently": "^5.2.0",
@@ -65,7 +66,6 @@
     "remove-markdown": "^0.3.0",
     "rollup": "^2.22.2",
     "striptags": "^3.1.1",
-    "typedoc": "^0.20.24",
     "unistore": "^3.5.2",
     "webdev-infra": "^1.0.10"
   },

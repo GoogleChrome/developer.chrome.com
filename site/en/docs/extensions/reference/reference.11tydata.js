@@ -19,8 +19,8 @@ function stripForMeta(raw) {
 /**
  * Finds the RenderNamespace for the specified API.
  *
- * @param {{api: string, chromeApiNamespaces: {[name: string]: RenderNamespace}}} data
- * @return {RenderNamespace=}
+ * @param {{api: string, chromeApiNamespaces: {[name: string]: any}}} data
+ * @return {any=}
  */
 function namespaceForData(data) {
   const {api, chromeApiNamespaces} = data;
@@ -28,9 +28,8 @@ function namespaceForData(data) {
     return undefined;
   }
 
-  const canonicalApi = `chrome.${api}`;
-  if (canonicalApi in chromeApiNamespaces) {
-    return chromeApiNamespaces[canonicalApi];
+  if (api in chromeApiNamespaces) {
+    return chromeApiNamespaces[api];
   }
 
   // This can be called several times by Eleventy. The first time it's called it's unlikely that
@@ -81,9 +80,13 @@ module.exports = {
      */
     title: data => {
       const namespace = namespaceForData(data);
-
-      // We can't use ?? here, as `data.title` is the empty string if missing.
-      return data.title || namespace?.fullName || '?';
+      if (data.title) {
+        return data.title;
+      }
+      if (namespace?.name) {
+        return `chrome.${namespace.name}`;
+      }
+      return '?';
     },
 
     /**
@@ -94,7 +97,7 @@ module.exports = {
         return data.description;
       }
       const namespace = namespaceForData(data);
-      return stripForMeta(namespace?.comment);
+      return stripForMeta(namespace?.description);
     },
   },
 };

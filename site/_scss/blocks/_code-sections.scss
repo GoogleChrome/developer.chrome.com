@@ -19,6 +19,10 @@
     font-size: 0.875em;
     line-height: 2em;
   }
+
+  strong {
+    font-weight: 500;
+  }
 }
 
 // This is a slightly smaller label used by API pages which doesn't match the
@@ -72,9 +76,16 @@
 // Ensure that .code-sections has a margin-top, except in cases where it's
 // already in a stack (as this will bring its margin).
 // purgecss tries to remove this bit.
+/* purgecss start ignore */
 /* stylelint-disable-next-line selector-max-compound-selectors */
 :not(.stack) > * + .code-sections {
-  margin-top: get-size(300);
+  margin: get-size(300) 0 get-size(600);
+}
+/* purgecss end ignore */
+
+// This makes the upper-case "PROPERTIES" etc sections stand out by being a lighter color.
+.code-sections .type--label {
+  color: get-color('grey-500');
 }
 
 // This is used for method signatures. We need to:
@@ -125,15 +136,6 @@
   padding-top: get-size(300);
   position: relative;
 
-  @include media-query('lg') {
-    flex-direction: row;
-  }
-
-  /* stylelint-disable-next-line selector-max-compound-selectors */
-  li li {
-    flex-direction: column !important;
-  }
-
   > :first-child {
     @include apply-utility('weight', 'medium');
     flex: 0 0 auto;
@@ -148,15 +150,16 @@
 }
 
 .code-sections--summary {
-  border-left: 0;
-  padding-left: 0;
-
   li:first-child {
     border-top: 0;
     padding-top: 0;
   }
 
   li {
+    @include media-query('lg') {
+      flex-direction: row;
+    }
+
     > :first-child {
       // This makes the "Description", "Types" and so on left-columns small.
       // We avoid "!important" here only because we are _below_ the
