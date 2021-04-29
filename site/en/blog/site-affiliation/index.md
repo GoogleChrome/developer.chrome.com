@@ -169,7 +169,7 @@ at `/.well-known/assetlinks.json` on the respective domains.
     ```
 
 1.  Submit [a
-    form](https://docs.google.com/forms/d/1e4vVbcI7rqQls5HQ4F4bH_4bHcqfC8r0oEY5CxjSrag/edit?usp=forms_home&ths=true)
+    form](https://docs.google.com/forms/d/1e4vVbcI7rqQls5HQ4F4bH_4bHcqfC8r0oEY5CxjSrag/viewform)
     to request starting crawling `assetlinks.json`s on your affiliations.
 
 {% Aside %}
