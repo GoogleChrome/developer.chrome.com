@@ -20,22 +20,16 @@ Please
 
 Whitelist
 
-It's fair to say [`SharedArrayBuffer`][mdn] has had a bit of a rough landing on the
-web, but things are settling down. Here's what you need to know:
+It's fair to say [`SharedArrayBuffer`][mdn] has had a bit of a rough landing on the web, but things are settling down. Here's what you need to know:
 
 ## In brief
 
-- `SharedArrayBuffer` is currently supported in Firefox 79+, and will arrive in Android
-  Chrome 88. However, it's only available to pages that are [cross-origin
+- `SharedArrayBuffer` is currently supported in Firefox 79+, and will arrive in Android Chrome 88. However, it's only available to pages that are [cross-origin
   isolated](#cross-origin-isolation).
-- `SharedArrayBuffer` is currently available in Desktop Chrome, but from Chrome
-  91 it will be limited to cross-origin isolated pages. If you don't think you
-  can make this change in time, you can [register for an origin trial](#origin-trial) to retain
-  the current behavior until at least Chrome 96.
-- If you intend to enable cross-origin isolation to continue using
-  `SharedArrayBuffer` evaluate the impact this will have on other cross-origin
-  elements on your website, such as ad placements. Check if `SharedArrayBuffer`
-  is used by any of your third-party resources to understand impact and
+- `SharedArrayBuffer` is currently available in Desktop Chrome, but from Chrome 91 it will be limited to cross-origin isolated pages. If you don't think you
+  can make this change in time, you can [register for an origin trial](#origin-trial) to retain the current behavior until at least Chrome 96.
+- If you intend to enable cross-origin isolation to continue using `SharedArrayBuffer` evaluate the impact this will have on other cross-origin
+  elements on your website, such as ad placements. Check if `SharedArrayBuffer` is used by any of your third-party resources to understand impact and
   guidance. 
 
 
@@ -49,27 +43,21 @@ Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
 ```
 
-Once you do this, your page will not be able to load cross-origin content unless
-the resource explicitly allows it via a [`Cross-Origin-Resource-Policy`][corp]
+Once you do this, your page will not be able to load cross-origin content unles the resource explicitly allows it via a [`Cross-Origin-Resource-Policy`][corp]
 header or [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) headers
 (`Access-Control-Allow-*` and so forth).
 
-There's also a [reporting
-API](https://web.dev/coop-coep/#observe-issues-using-the-reporting-api), so you
-can gather data on requests that failed as a result of
+There's also a [reporting API](https://web.dev/coop-coep/#observe-issues-using-the-reporting-api), so you can gather data on requests that failed as a result of
 `Cross-Origin-Embedder-Policy` and `Cross-Origin-Opener-Policy`.
 
-If you don't think you can make these changes in time for Chrome 91, you can
-[register for an origin trial](#origin-trial) to retain current Desktop Chrome
+If you don't think you can make these changes in time for Chrome 91, you can [register for an origin trial](#origin-trial) to retain current Desktop Chrome
 behavior until at least Chrome 96.
 
 {% Aside %}
 **Update, April 2021**
 
-We've been exploring ways to deploy `Cross-Origin-Resource-Policy` at scale, as
-cross-origin isolation requires all subresources to explicitly opt-in. And we
-have come up with the idea of going in the opposite direction: a new [COEP
-"credentialless" mode](https://github.com/mikewest/credentiallessness/) that
+We've been exploring ways to deploy `Cross-Origin-Resource-Policy` at scale, as cross-origin isolation requires all subresources to explicitly opt-in. And we
+have come up with the idea of going in the opposite direction: a new [COEP "credentialless" mode](https://github.com/mikewest/credentiallessness/) that 
 allows loading resources without the CORP header by stripping all their
 credentials. We are figuring out the details of how it should work, but we hope
 this will lighten your burden of making sure the subresources are sending the
