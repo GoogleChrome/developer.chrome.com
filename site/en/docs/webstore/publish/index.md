@@ -140,7 +140,7 @@ publish** option from the developer console's &#x22EE; menu as shown below:
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png", alt="Screenshot showing
 the 'more' menu's defer publish option", width="386", height="284" %}
 
-This lets you pause the rollout of a submitted item if you discover an error after submitting it, or
+This lets you pause the rollout of a submitted item if you discover an error after submitting it or
 if you simply want to change your rollout time.
 
 
