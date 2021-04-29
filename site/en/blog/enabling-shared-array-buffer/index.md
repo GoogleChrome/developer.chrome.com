@@ -16,6 +16,10 @@ hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
 alt: A collection of padlocks.
 ---
 
+Please
+
+Whitelist
+
 It's fair to say [`SharedArrayBuffer`][mdn] has had a bit of a rough landing on the
 web, but things are settling down. Here's what you need to know:
 
