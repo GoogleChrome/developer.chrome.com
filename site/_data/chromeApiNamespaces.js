@@ -24,6 +24,8 @@
 
 require('dotenv').config();
 
+// TODO(samthor): This is in package.json and installed yet ESLint complains it does not exist.
+// eslint-disable-next-line node/no-missing-require
 const chromeTypesHelpers = require('chrome-types-helpers');
 const {fetchFromCache} = require('./lib/cache');
 

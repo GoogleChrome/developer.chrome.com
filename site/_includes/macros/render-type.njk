@@ -13,10 +13,10 @@
   {{ renderTypeSignature(prop) }}
 {% elif type.key === 'ref' and type.name === 'events.Event' %}
   {% if type.templates[0].primitiveType === 'void' %}
+    {# This is a declarative event listener as it has no listener function type. #}
     {% set declarativeNote %}
       <p>
-        {# TODO: links #}
-        Provides the Declarative Event API consisting of <code>addRules</code>, <code>removeRules</code>, and <code>getRules</code>.
+        Provides the <a href="/docs/extensions/reference/events/#declarative-event-handlers">Declarative Event API</a> consisting of <code>addRules</code>, <code>removeRules</code>, and <code>getRules</code>.
       </p>
     {% endset %}
   {% else %}
@@ -492,9 +492,15 @@
     Dev channel only.
   {% elif feature.supportedInChannel === 'beta' %}
     Beta and Dev channels only.
+  {% elif feature.supportedInChannel === 'canary' or feature.supportedInChannel === 'trunk' %}
+    In development.
+  {% elif feature.unknownVersion %}
+    {# This is stable but not yet visible in the version history data. It's probably coming next
+      Chrome release. #}
+    Unknown version.
   {% elif feature.availableFromVersion %}
+    {# This implies stable. We don't specifically announce `supportedInChannel` of stable. #}
     Since Chrome {{ feature.availableFromVersion }}.
-    {# No namespace is currently deprecated. #}
   {% endif %}
   {% if feature.maxManifestVersion %}
     Manifest V{{ feature.maxManifestVersion }}
