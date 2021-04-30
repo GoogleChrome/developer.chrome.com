@@ -485,6 +485,12 @@
 {% macro renderAvailabilityFeature(feature, prop) %}
 
   {% set inner %}
+    {% if prop.type.isReturnsAsync %}
+      <span class="aside--success tag-pill type--label rounded-lg" title="Can return its result via Promise">
+        Promise
+      </span>
+    {% endif %}
+
     {% if feature.supportedInChannel === 'dev' %}
       <span class="aside--warning tag-pill type--label rounded-lg">
         Dev channel
