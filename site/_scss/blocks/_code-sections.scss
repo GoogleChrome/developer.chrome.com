@@ -21,18 +21,6 @@
   }
 }
 
-.code-sections__tag {
-  border-radius: 10000px;
-  font-size: 0.875em;
-  line-height: 1.666667em;
-  display: inline-block;
-
-  background: rgba(0, 0, 255, 0.125);
-  color: blue;
-  padding: 0 12px;
-  font-weight: 500;
-}
-
 // This is a slightly smaller label used by API pages which doesn't match the
 // regular type system.
 .code-sections__label {
@@ -99,9 +87,9 @@
   padding: 1em;
 
   > code {
-    border: none;
-    border-radius: 0;
     background: transparent;
+    border: 0;
+    border-radius: 0;
   }
 }
 
@@ -137,7 +125,7 @@
   }
 }
 
-ul.code-sections--summary {
+.code-sections--summary {
   padding-left: 0;
 
   > li:first-child {
