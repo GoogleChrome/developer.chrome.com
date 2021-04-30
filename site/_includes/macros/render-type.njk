@@ -6,7 +6,8 @@
 
   {% set type = prop.type %}
 
-  {% set declarativeNote = '' %}
+<div class="type stack flow-space-300">
+  <h3 id="{{ prefix }}-{{ prop.name }}">{{ prop.name }}</h3>
 
 {# Render the function signature. #}
 {% if type.key === 'function' %}
@@ -57,43 +58,37 @@
     {% if type.isReturnsAsync %}
       {{ renderOptionalParametersSection(type.parametersForAsync, 'Parameters') }}
 
-      <div class="code-sections">
-        <h4 class="type--label case-upper">Result</h4>
-
-        <ul class="stack">
-          <li class="stack">
-            <div>
-              <div class="code-sections__label">return/callback</div>
-              <div class="type--xsmall code-sections__icon code-sections__icon--function">async</span></div>
-            </div>
-
-            {% set returnParameters = type.callbackForAsync.type.parameters %}
-
-            <div class="type stack">
-              {{ renderComment(type.callbackForAsync) }}
-              <p>
-                The <code>{{ prop.name }}</code> method provides its result via callback or returned as a <code>Promise</code> (MV3 only).
-                {% if not returnParameters.length %}
-                  It has no parameters.
-                {% endif %}
-              </p>
-            </div>
-
-            {{ renderOptionalParametersSection(returnParameters) }}
-          </li>
-        </ul>
-      </div>
+      <dl class="code-sections__list">
+        <h4>Result</h4>
+        <dt>
+          <div class="code-sections__label">return/callback</div>
+          <div class="type--xsmall code-sections__icon code-sections__icon--function">async</span></div>
+        </dt>
+        <dd>
+          {% set returnParameters = type.callbackForAsync.type.parameters %}
+          {% set cf = prop.canonicalFeature %}
+          <p>
+            The <code>{{ prop.name }}</code> method provides its result via callback or returned as a <code>Promise</code>
+            {% if not cf.minManifestVersion or cf.minManifestVersion < 3 %}
+              (MV3 only)
+            {% endif %}.
+            {% if not returnParameters.length %}
+              It has no parameters.
+            {% endif %}
+          </p>
+          {{ renderOptionalParametersSection(returnParameters) }}
+        </dd>
+      </dl>
 
     {% else %}
       {{ renderOptionalParametersSection(type.parameters, 'Parameters') }}
       {% if type.returnProperty and type.returnType.primitiveType !== 'void' %}
-        <div class="code-sections">
-          <h4 class="type--label case-upper">Returns</h4>
 
-          <ul class="stack">
-            {{ internalRenderParameter(type.returnProperty) }}
-          </ul>
-        </div>
+        <dl class="code-sections__list">
+          <h4>Returns</h4>
+          {{ internalRenderParameter(type.returnProperty) }}
+        </dl>
+
       {% endif %}
     {% endif %}
 
@@ -104,23 +99,21 @@
       {{ renderOptionalTypesArray(type.templates[1].choices, 'Conditions', prop) }}
       {{ renderOptionalTypesArray(type.templates[2].choices, 'Actions', prop) }}
     {% else %}
-      <div class="code-sections">
-        <h4 class="type--label case-upper">Event</h4>
-        <ul class="stack">
-          {{ internalRenderListenerAsItem(type.templates[0]) }}
-        </ul>
-      </div>
+
+      <dl class="code-sections__list">
+        <h4>Event</h4>
+        {{ internalRenderListenerAsItem(type.templates[0]) }}
+      </dl>
+
     {% endif %}
 
   {% elif type.key === 'literal' %}
     {# Top-level literal number or string. #}
-    <div class="code-sections">
-      <h4 class="type--label case-upper">Value</h4>
 
-      <div class="code-sections__overline code-sections__label">
-        {{ renderSingleType(type, prop) }}
-      </div>
-    </div>
+    <dl class="code-sections__list">
+      <h4>Value</h4>
+      <dt>{{ renderSingleType(type, prop) }}</dt>
+    </dl>
 
   {% elif type.key === 'union' and not prop.isType %}
     {# Union of many things as a non-type. #}
@@ -133,27 +126,23 @@
     {# Object with properties. #}
 
     {% if type.properties | length %}
-      <div class="code-sections">
-        <h4 class="type--label case-upper">Properties</h4>
 
-        <ul class="stack">
-          {% for name, prop in type.properties | dictsort %}
-            {{ internalRenderParameter(prop) }}
-          {% endfor %}
-        </ul>
-      </div>
+      <dl class="code-sections__list">
+        <h4>Properties</h4>
+        {% for name, prop in type.properties | dictsort %}
+          {{ internalRenderParameter(prop) }}
+        {% endfor %}
+      </dl>
+
     {% endif %}
 
   {% else %}
     {# Some other kind of type. #}
 
-    <div class="code-sections">
-      <h4 class="type--label case-upper">Type</h4>
-
-      <div class="code-sections__overline code-sections__label">
-        {{ renderSingleType(type, prop) }}
-      </div>
-    </div>
+      <dl class="code-sections__list">
+        <h4>Type</h4>
+        <dt>{{ renderSingleType(type, prop) }}</dt>
+      </dl>
 
   {% endif %}
 
@@ -165,17 +154,14 @@
 {% macro renderOptionalParametersSection(parameters, label) %}
 
   {% if parameters.length %}
-    <div class="code-sections">
+    <dl class="code-sections__list">
       {% if label %}
-        <h4 class="type--label case-upper">{{ label }}</h4>
+        <h4>{{ label }}</h4>
       {% endif %}
-
-      <ul class="stack">
-        {% for parameter in parameters %}
-          {{ internalRenderParameter(parameter) }}
-        {% endfor %}
-      </ul>
-    </div>
+      {% for parameter in parameters %}
+        {{ internalRenderParameter(parameter) }}
+      {% endfor %}
+    </dl>
   {% endif %}
 
 {% endmacro %}
@@ -186,20 +172,17 @@
 {% macro renderOptionalTypesArray(types, label, prop) %}
 
   {% if types.length %}
-    <div class="code-sections">
+    <dl class="code-sections__list">
       {% if label %}
-        <h4 class="type--label case-upper">{{ label }}</h4>
+        <h4>{{ label }}</h4>
       {% endif %}
-
-      <div class="code-sections__overline code-sections__label">
-        <p>
-          {% for t in types %}
-            {% if loop.last and not loop.first %}or{% endif %}
-            {{ renderSingleType(t, prop) | trim }}{% if not loop.last %},{% endif %}
-          {% endfor %}
-        </p>
-      </div>
-    </div>
+      <dd>
+        {% for t in types %}
+          {% if loop.last and not loop.first %}or{% endif %}
+          {{ renderSingleType(t, prop) | trim }}{% if not loop.last %},{% endif %}
+        {% endfor %}
+      </dd>
+    </dl>
   {% endif %}
 
 {% endmacro %}
@@ -221,22 +204,18 @@
   as part of interfaces.
 #}
 {% macro internalRenderListenerAsItem(listenerType, name = 'listener') %}
-  <li class="stack">
-    <div>
-      <div class="code-sections__label">{{ name }}</div>
-      <div class="type--xsmall code-sections__icon code-sections__icon--function">function</span></div>
-    </div>
-
-    <div class="type stack">
-      <p>
-        The {{ name }} parameter should be a function that looks like this:
-      </p>
-    </div>
-
+  <dt>
+    <div class="code-sections__label">{{ name }}</div>
+    <div class="type--xsmall code-sections__icon code-sections__icon--function">function</span></div>
+  </dt>
+  <dd>
+    <p>
+      The {{ name }} parameter should be a function that looks like this:
+    </p>
     <div class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(listenerType.parameters) }} => {...}</code></div>
 
     {{ renderOptionalParametersSection(listenerType.parameters) }}
-  </li>
+  </dd>
 {% endmacro %}
 
 {#
@@ -245,11 +224,11 @@
 {% macro internalRenderParameter(prop) %}
   {% set type = prop.type %}
 
-<li class="stack">
-  <div>
-    <div class="code-sections__label">{{ prop.name }}</div>
-    <div class="type--xsmall">{{ renderSingleType(prop.type, prop) }}</div>
-  </div>
+<dt>
+  <div class="code-sections__label">{{ prop.name }}</div>
+  <div class="type--xsmall">{{ renderSingleType(prop.type, prop) }}</div>
+</dt>
+<dd>
 
 {% set description %}
   {{ renderComment(prop) }}
@@ -297,41 +276,35 @@
 {# OPTION: type (class) or object (property) #}
 {% if type.key === 'object' %}
   {% if type.properties | length %}
-    <div class="code-sections">
-      <ul class="stack">
-        {% for name, prop in type.properties | dictsort %}
-          {{ internalRenderParameter(prop) }}
-        {% endfor %}
-      </ul>
-    </div>
+    <dl class="code-sections__list">
+      {% for name, prop in type.properties | dictsort %}
+        {{ internalRenderParameter(prop) }}
+      {% endfor %}
+    </dl>
   {% endif %}
 
 {# OPTION: function #}
 {% elif type.key === 'function' %}
   {% if type.parameters.length or type.returnType.primitiveType !== 'void' %}
-    <div class="code-sections">
-      <ul class="stack">
-        {% for parameter in type.parameters %}
-          {{ internalRenderParameter(parameter) }}
-        {% endfor %}
-        {% if type.returnType.primitiveType !== 'void' %}
-          {{ internalRenderParameter(type.returnProperty) }}
-        {% endif %}
-      </ul>
-    </div>
+    <dl class="code-sections__list">
+      {% for parameter in type.parameters %}
+        {{ internalRenderParameter(parameter) }}
+      {% endfor %}
+      {% if type.returnType.primitiveType !== 'void' %}
+        {{ internalRenderParameter(type.returnProperty) }}
+      {% endif %}
+    </dl>
   {% endif %}
 
 {# OPTION: event #}
 {% elif type.key === 'ref' and type.name === 'events.Event' %}
-  <div class="code-sections">
-    <ul class="stack">
-      {{ internalRenderListenerAsItem(type.templates[0]) }}
-    </ul>
-  </div>
+  <dl class="code-sections__list">
+    {{ internalRenderListenerAsItem(type.templates[0]) }}
+  </dl>
 
 {% endif %}
 
-</li>
+</dd>
 {% endmacro %}
 
 {#
@@ -416,16 +389,16 @@
     {% set type = prop.type %}
     <div class="code-sections__signature">
       {% if type.isReturnsAsync %}
-        <code>
+        <div>
           {{ prop.name }}{{ renderFunctionParameters(type.parametersForAsync) }}:
           {{ renderSingleType(type.returnTypeForAsync) }}
-        </code><br />
+        </div>
       {% endif %}
-      <code>
+      <div>
         {{ prop.name }}{{ renderFunctionParameters(type.parameters) }}:
         {{ renderSingleType(type.returnType) }}
-      </code>
-    </div>
+      </div>
+    </code>
   {% endif %}
 
 {% endmacro %}

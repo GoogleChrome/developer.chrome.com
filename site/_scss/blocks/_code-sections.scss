@@ -1,3 +1,31 @@
+
+
+.code-sections__list {
+  > dt:not(:first-child) {
+    border-top: 1px solid #dadce0;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  > dd > * {
+    margin-top: 1rem;
+  }
+
+  > h4 {
+    text-transform: uppercase;
+    color: rgb(154, 160, 166);
+    font-weight: 500;
+    font-size: .75rem;
+    line-height: 1.3333333333;
+  }
+
+  // nb. This is intentionally recursive.
+  .code-sections__list {
+    border: 1px solid var(--color-hairline);
+    padding: calc(1rem - 1px);
+  }
+}
+
 .code-sections {
   ul {
     padding-left: 0;
@@ -129,8 +157,12 @@
   padding-top: get-size(300);
 }
 
-.code-sections li {
-  border-top: 1px solid var(--color-hairline);
+.code-sections__mode {
+  color: var(--color-code-comment);
+  text-transform: uppercase;
+}
+
+.code-sections > li {
   display: flex;
   flex-direction: column;
   padding-top: get-size(300);
@@ -145,6 +177,7 @@
   }
 
   > :not(:first-child) {
+    border-top: 1px solid var(--color-hairline);
     flex-grow: 1;
   }
 }
