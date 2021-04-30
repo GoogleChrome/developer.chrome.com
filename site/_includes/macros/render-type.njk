@@ -2,11 +2,12 @@
 {#
   Top-level rendering of a model.Property.
 #}
-{% macro renderTopProperty(prop) %}
+{% macro renderTopProperty(prop, prefix) %}
 
   {% set type = prop.type %}
 
-  {% set declarativeNote = '' %}
+<div class="type stack">
+  <h3 id="{{ prefix }}-{{ prop.name }}">{{ prop.name }}</h3>
 
 {# Render the function signature. #}
 {% if type.key === 'function' %}
@@ -14,24 +15,20 @@
 {% elif type.key === 'ref' and type.name === 'events.Event' %}
   {% if type.templates[0].primitiveType === 'void' %}
     {# This is a declarative event listener as it has no listener function type. #}
-    {% set declarativeNote %}
-      <p>
-        Provides the <a href="/docs/extensions/reference/events/#declarative-event-handlers">Declarative Event API</a> consisting of <code>addRules</code>, <code>removeRules</code>, and <code>getRules</code>.
-      </p>
-    {% endset %}
+    <p>
+      Provides the <a href="/docs/extensions/reference/events/#declarative-event-handlers">Declarative Event API</a> consisting of <code>addRules</code>, <code>removeRules</code>, and <code>getRules</code>.
+    </p>
   {% else %}
     {# This isn't really part of the type but we show users how to add a listener. #}
-    <div class="code-sections__signature">
+    <div class="type--label">
       <code>
-        {{ prop.name }}.addListener(listener: <span class="code-sections__signature-type">function</span>)
+        {{ prop.name }}.addListener(listener: <span class="color-cyan-medium">function</span>)
       </code>
     </div>
   {% endif %}
 {% endif %}
 
-<div class="type stack code-sections__description">
   {{ renderComment(prop) }}
-  {{ declarativeNote | safe }}
 </div>
 
 {{ renderTopType(type, prop) }}
@@ -58,7 +55,7 @@
       {{ renderOptionalParametersSection(type.parametersForAsync, 'Parameters') }}
 
       <div class="code-sections">
-        <h4 class="type--label case-upper">Result</h4>
+        <h4 class="type--label code-sections__mode">Result</h4>
 
         <ul class="stack">
           <li class="stack">
@@ -88,7 +85,7 @@
       {{ renderOptionalParametersSection(type.parameters, 'Parameters') }}
       {% if type.returnProperty and type.returnType.primitiveType !== 'void' %}
         <div class="code-sections">
-          <h4 class="type--label case-upper">Returns</h4>
+          <h4 class="type--label code-sections__mode">Returns</h4>
 
           <ul class="stack">
             {{ internalRenderParameter(type.returnProperty) }}
@@ -105,7 +102,7 @@
       {{ renderOptionalTypesArray(type.templates[2].choices, 'Actions', prop) }}
     {% else %}
       <div class="code-sections">
-        <h4 class="type--label case-upper">Event</h4>
+        <h4 class="type--label code-sections__mode">Event</h4>
         <ul class="stack">
           {{ internalRenderListenerAsItem(type.templates[0]) }}
         </ul>
@@ -115,7 +112,7 @@
   {% elif type.key === 'literal' %}
     {# Top-level literal number or string. #}
     <div class="code-sections">
-      <h4 class="type--label case-upper">Value</h4>
+      <h4 class="type--label code-sections__mode">Value</h4>
 
       <div class="code-sections__overline code-sections__label">
         {{ renderSingleType(type, prop) }}
@@ -134,7 +131,7 @@
 
     {% if type.properties | length %}
       <div class="code-sections">
-        <h4 class="type--label case-upper">Properties</h4>
+        <h4 class="type--label code-sections__mode">Properties</h4>
 
         <ul class="stack">
           {% for name, prop in type.properties | dictsort %}
@@ -148,7 +145,7 @@
     {# Some other kind of type. #}
 
     <div class="code-sections">
-      <h4 class="type--label case-upper">Type</h4>
+      <h4 class="type--label code-sections__mode">Type</h4>
 
       <div class="code-sections__overline code-sections__label">
         {{ renderSingleType(type, prop) }}
@@ -167,7 +164,7 @@
   {% if parameters.length %}
     <div class="code-sections">
       {% if label %}
-        <h4 class="type--label case-upper">{{ label }}</h4>
+        <h4 class="type--label code-sections__mode">{{ label }}</h4>
       {% endif %}
 
       <ul class="stack">
@@ -188,7 +185,7 @@
   {% if types.length %}
     <div class="code-sections">
       {% if label %}
-        <h4 class="type--label case-upper">{{ label }}</h4>
+        <h4 class="type--label code-sections__mode">{{ label }}</h4>
       {% endif %}
 
       <div class="code-sections__overline code-sections__label">
@@ -208,9 +205,9 @@
   Renders a comment, its optional version information and deprecation notice.
 #}
 {% macro renderComment(prop) %}
-  {% set warningText %}{{ renderAvailabilityFeature(prop.feature) }}{% endset %}
-  {% if warningText | trim %}
-    <p class="code-sections__deprecated">{{ warningText | trim | safe }}</p>
+  {{ renderAvailabilityFeature(prop.feature, prop) }}
+  {% if prop.deprecated %}
+    <p class="code-sections__deprecated">{{ prop.deprecated | mdInline | safe }}<p>
   {% endif %}
   {# This |md filter will add <p> as appropriate. #}
   {{ prop.description | md | safe }}
@@ -414,7 +411,7 @@
 
   {% if prop.type.key === 'function' %}
     {% set type = prop.type %}
-    <div class="code-sections__signature">
+    <div class="type--label">
       {% if type.isReturnsAsync %}
         <code>
           {{ prop.name }}{{ renderFunctionParameters(type.parametersForAsync) }}:
@@ -437,7 +434,7 @@
   (
     {%- for parameter in parameters -%}
       {{ parameter.name }}{% if parameter.optional %}?{% endif %}:
-      <span class="code-sections__signature-type">{{ renderSingleType(parameter.type) | trim }}</span>
+      <span class="color-cyan-medium">{{ renderSingleType(parameter.type) | trim }}</span>
       {%- if not loop.last %}, {% endif -%}
     {%- endfor -%}
   )
@@ -470,12 +467,11 @@
 
   {% if array.length %}
     <h2 class="type--h3" id="{{ id }}">{{ label }}</h2>
+    <div class="stack flow-space-300">
     {% for prop in array %}
-      <div class="flow-space-300">
-        <h3 class="type--h4" id="{{ prefix }}-{{ prop.name }}">{{ prop.name }}</h3>
-        {{ renderTopProperty(prop, true) }}
-      </div>
+      {{ renderTopProperty(prop, prefix) }}
     {% endfor %}
+    </div>
   {% endif %}
 
 {% endmacro %}
@@ -486,45 +482,62 @@
 
   This returns valid HTML, so it should be rendered with `| safe`.
 #}
-{% macro renderAvailabilityFeature(feature) %}
+{% macro renderAvailabilityFeature(feature, prop) %}
 
-  {% if feature.supportedInChannel === 'dev' %}
-    Dev channel only.
-  {% elif feature.supportedInChannel === 'beta' %}
-    Beta and Dev channels only.
-  {% elif feature.supportedInChannel === 'canary' or feature.supportedInChannel === 'trunk' %}
-    In development.
-  {% elif feature.unknownVersion %}
-    {# This is stable but not yet visible in the version history data. It's probably coming next
-      Chrome release. #}
-    Unknown version.
-  {% elif feature.availableFromVersion %}
-    {# This implies stable. We don't specifically announce `supportedInChannel` of stable. #}
-    Since Chrome {{ feature.availableFromVersion }}.
-  {% endif %}
-  {% if feature.maxManifestVersion %}
-    Manifest V{{ feature.maxManifestVersion }}
-    {% if feature.maxManifestVersion === 2 %}
-      {# Nothing is actually before MV2. #}
-      only.
-    {% else %}
-      and below.
+  {% set inner %}
+    {% if feature.supportedInChannel === 'dev' %}
+      <span class="aside--warning tag-pill type--label rounded-lg">
+        Dev channel
+      </span>
+    {% elif feature.supportedInChannel === 'beta' %}
+      <span class="aside--warning tag-pill type--label rounded-lg">
+        Beta channel
+      </span>
+    {% elif feature.supportedInChannel === 'canary' or feature.supportedInChannel === 'trunk' %}
+      <span class="aside--warning tag-pill type--label rounded-lg">
+        In development
+      </span>
+    {% elif feature.unknownVersion %}
+      {# This is stable but not yet visible in the version history data. It's probably coming next
+        Chrome release. #}
+      <span class="aside--warning tag-pill type--label rounded-lg">
+        Unknown version
+      </span>
+    {% elif feature.availableFromVersion %}
+      <span class="aside--default tag-pill type--label rounded-lg">
+        Chrome {{ feature.availableFromVersion }}+
+      </span>
     {% endif %}
-  {% endif %}
-  {% if feature.minManifestVersion %}
-    Manifest V{{ feature.minManifestVersion }} and above.
-  {% endif %}
-  {% if feature.disallowForServiceWorkers %}
-    Unavailable in Service Workers.
-  {% endif %}
-  {% if prop.deprecated !== undefined or feature.deprecatedSinceVersion %}
-    <strong>
-      Deprecated
-      {%- if feature.deprecatedSinceVersion > 0 %}
-        since Chrome {{ feature.deprecatedSinceVersion }}
-      {%- endif -%}
-    </strong>.
-    {{ prop.deprecated | mdInline | safe }}
+
+    {% if feature.maxManifestVersion %}
+      <span class="aside--caution tag-pill type--label rounded-lg" title="Maximum manifest vesion">
+        Manifest V{{ feature.maxManifestVersion }}
+      </span>
+    {% endif %}
+    {% if feature.minManifestVersion %}
+      <span class="aside--gotchas tag-pill type--label rounded-lg">
+        Manifest V{{ feature.minManifestVersion }}+
+      </span>
+    {% endif %}
+
+    {% if feature.disallowForServiceWorkers %}
+      <span class="aside--gotchas tag-pill type--label rounded-lg" title="Not available in Service Workers">
+        Foreground only
+      </span>
+    {% endif %}
+
+    {% if prop.deprecated !== undefined or feature.deprecatedSinceVersion %}
+      <span class="aside--warning tag-pill type--label rounded-lg">
+        Deprecated
+        {%- if feature.deprecatedSinceVersion > 0 %}
+          {{ feature.deprecatedSinceVersion }}+
+        {%- endif -%}
+      </span>
+    {% endif %}
+  {% endset %}
+
+  {% if inner | trim %}
+    <div class="display-flex flex-flow-row-wrap">{{ inner | trim | safe }}</div>
   {% endif %}
 
 {% endmacro %}
