@@ -2,12 +2,11 @@
 {#
   Top-level rendering of a model.Property.
 #}
-{% macro renderTopProperty(prop) %}
+{% macro renderTopProperty(prop, prefix) %}
 
   {% set type = prop.type %}
 
-<div class="type stack flow-space-300">
-  <h3 id="{{ prefix }}-{{ prop.name }}">{{ prop.name }}</h3>
+<h3 id="{{ prefix }}-{{ prop.name }}">{{ prop.name }}</h3>
 
 {# Render the function signature. #}
 {% if type.key === 'function' %}
@@ -15,11 +14,9 @@
 {% elif type.key === 'ref' and type.name === 'events.Event' %}
   {% if type.templates[0].primitiveType === 'void' %}
     {# This is a declarative event listener as it has no listener function type. #}
-    {% set declarativeNote %}
-      <p>
-        Provides the <a href="/docs/extensions/reference/events/#declarative-event-handlers">Declarative Event API</a> consisting of <code>addRules</code>, <code>removeRules</code>, and <code>getRules</code>.
-      </p>
-    {% endset %}
+    <p>
+      Provides the <a href="/docs/extensions/reference/events/#declarative-event-handlers">Declarative Event API</a> consisting of <code>addRules</code>, <code>removeRules</code>, and <code>getRules</code>.
+    </p>
   {% else %}
     {# This isn't really part of the type but we show users how to add a listener. #}
     <div class="code-sections__signature">
@@ -30,11 +27,7 @@
   {% endif %}
 {% endif %}
 
-<div class="type stack code-sections__description">
-  {{ renderComment(prop) }}
-  {{ declarativeNote | safe }}
-</div>
-
+{{ renderComment(prop) }}
 {{ renderTopType(type, prop) }}
 
 {% endmacro %}
@@ -387,7 +380,7 @@
 
   {% if prop.type.key === 'function' %}
     {% set type = prop.type %}
-    <div class="code-sections__signature">
+    <code class="code-sections__signature">
       {% if type.isReturnsAsync %}
         <div>
           {{ prop.name }}{{ renderFunctionParameters(type.parametersForAsync) }}:
@@ -444,10 +437,7 @@
   {% if array.length %}
     <h2 class="type--h3" id="{{ id }}">{{ label }}</h2>
     {% for prop in array %}
-      <div class="flow-space-300">
-        <h3 class="type--h4" id="{{ prefix }}-{{ prop.name }}">{{ prop.name }}</h3>
-        {{ renderTopProperty(prop, true) }}
-      </div>
+      {{ renderTopProperty(prop, true) }}
     {% endfor %}
   {% endif %}
 
