@@ -8,7 +8,7 @@ description: Technical reference information about the VersionHistory web servic
 This page contains technical reference information about the VersionHistory web
 service API.
 
-All API access is over HTTPS, and accessed from `https://versionhistory.googleapis.com/v1/chrome`.
+All API access is over HTTPS, and accessed from `https://versionhistory.googleapis.com/v1`.
 
 ## Version
 
@@ -19,7 +19,7 @@ A version is a particular instance of Chrome that users are running.
 Lists all Chrome versions for the given platform and channel.
 
 ```http
-GET /platforms/{platform}/channels/{channel}/versions
+GET /{product}/platforms/{platform}/channels/{channel}/versions
 ```
 
 <table>
@@ -30,6 +30,10 @@ GET /platforms/{platform}/channels/{channel}/versions
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><code>product</code></td>
+      <td>A <a href="#product-identifiers">product identifier</a>.</td>
+    </tr>
     <tr>
       <td><code>platform</code></td>
       <td>A <a href="#platform-identifiers">platform identifier</a>.</td>
@@ -53,7 +57,7 @@ during that interval.
 Lists all releases for the given platform, channel, and version.
 
 ```http
-GET /platforms/{platform}/channels/{channel}/versions/{version}/releases
+GET /{product}/platforms/{platform}/channels/{channel}/versions/{version}/releases
 ```
 
 <table>
@@ -64,6 +68,10 @@ GET /platforms/{platform}/channels/{channel}/versions/{version}/releases
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><code>product</code></td>
+      <td>A <a href="#product-identifiers">product identifier</a>.</td>
+    </tr>
     <tr>
       <td><code>platform</code></td>
       <td>A <a href="#platform-identifiers">platform identifier</a>.</td>
@@ -79,22 +87,77 @@ GET /platforms/{platform}/channels/{channel}/versions/{version}/releases
   </tbody>
 </table>
 
+## Product
+A product is piece of software such as Chrome or Fuchsia.
+
+### Product identifiers {: #product-identifiers }
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chrome</td>
+      <td><code>chrome</code></td>
+    </tr>
+    <tr>
+      <td>Fuchsia Web Engine</td>
+      <td><code>fuchsiawebengine</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
 ## Platform
 
-A platform is one of the computing platforms that Chrome runs on, such
+A platform is one of the computing platforms that a product runs on, such
 as Windows, Android, etc.
 
 ### Get all platforms
 
 ```http
-GET /platforms
+GET /{product}/platforms
 ```
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>product</code></td>
+      <td>A <a href="#product-identifiers">product identifier</a>.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Get all platform and channel combinations
 
 ```http
-GET /platforms/all/channels
+GET /{product}/platforms/all/channels
 ```
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>product</code></td>
+      <td>A <a href="#product-identifiers">product identifier</a>.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Platform identifiers {: #platform-identifiers }
 
@@ -142,6 +205,10 @@ GET /platforms/all/channels
       <td>iOS</td>
       <td><code>ios</code></td>
     </tr>
+    <tr>
+      <td>Lacros</td>
+      <td><code>lacros</code></td>
+    </tr>
   </tbody>
 </table>
 
@@ -155,7 +222,7 @@ of Chrome's channels.
 Lists the valid channels for a given platform:
 
 ```http
-GET /platforms/{platform}/channels
+GET /{product}/platforms/{platform}/channels
 ```
 
 <table>
@@ -166,6 +233,10 @@ GET /platforms/{platform}/channels
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><code>product</code></td>
+      <td>A <a href="#product-identifiers">product identifier</a>.</td>
+    </tr>
     <tr>
       <td><code>platform</code></td>
       <td>A <a href="#platform-identifiers">platform identifier</a>.</td>
@@ -185,6 +256,10 @@ The VersionHistory API supports the following channel identifiers:
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Extended Stable</td>
+      <td><code>extended</code></td>
+    </tr>
     <tr>
       <td>Stable</td>
       <td><code>stable</code></td>
@@ -222,7 +297,7 @@ Add a `filter` query parameter to filter results. Only the
 Example:
 
 ```http
-GET /platforms/win/channels/stable/versions/all/releases?filter=fraction=1
+GET /chrome/platforms/win/channels/stable/versions/all/releases?filter=fraction=1
 ```
 
 The value of `filter` should be a comma-separated list of expressions. Each
@@ -282,7 +357,7 @@ Add a `order_by` query parameter to order results. Only the
 Example:
 
 ```http
-GET /platforms/win/channels/stable/versions/all/releases?order_by=starttime
+GET /chrome/platforms/win/channels/stable/versions/all/releases?order_by=starttime
 ```
 
 `order_by` accepts a comma-separated list of the following
@@ -293,7 +368,7 @@ Add a space character (`%20`) followed by `asc` or `desc` after the `order_by` v
 or descending ordering. Example:
 
 ```http
-GET /platforms/win/channels/stable/versions/all/releases?order_by=starttime%20asc
+GET /chrome/platforms/win/channels/stable/versions/all/releases?order_by=starttime%20asc
 ```
 
 * Channel ordering is done in the following order: `stable`, `beta`,
