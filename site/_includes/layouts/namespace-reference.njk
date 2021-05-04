@@ -18,14 +18,12 @@
   </div>
 
   <h2 class="type--h3">Summary</h2>
-  <div class="code-sections code-sections--summary">
-    <ul class="stack flow-space-300">
-      {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
-      {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
-      {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
-      {{ macros.renderSummarySection(namespace.name, 'Events', 'event', namespace.events) }}
-    </ul>
-  </div>
+  <ul class="code-sections code-sections--summary flow-space-300 stack">
+    {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
+    {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
+    {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
+    {{ macros.renderSummarySection(namespace.name, 'Events', 'event', namespace.events) }}
+  </ul>
 
   {{ macros.renderPrimarySection(namespace.name, 'types', 'Types', 'type', namespace.types) }}
   {{ macros.renderPrimarySection(namespace.name, 'properties', 'Properties', 'property', namespace.properties) }}
@@ -60,10 +58,10 @@
         </div>
       {% endif %}
 
-      {% set availabilityText %}{{ macros.renderAvailabilityFeature(feature) }}{% endset %}
+      {% set availabilityHtml %}{{ macros.renderAvailabilityFeature(feature) }}{% endset %}
 
-      <div class="code-sections code-sections--summary">
-        <ul class="stack flow-space-300">
+      <div>{# This div prevents flow-space-300 from applying to the parent stack. #}
+        <ul class="code-sections code-sections--summary flow-space-300 stack">
           <li>
             <div class="code-sections__label">Description</div>
             <div class="type">
@@ -82,11 +80,11 @@
             </li>
           {% endif %}
 
-
-          {% if availabilityText | trim %}
-            <li>
+          {% if availabilityHtml | trim %}
+            <li class="align-center">
               <div class="code-sections__label">Availability</div>
-              <div>{{ availabilityText | trim }}</div>
+              {{ availabilityHtml | safe }}
+              {# As of Apr 2021, namespaces are never deprecated. #}
             </li>
           {% endif %}
         </ul>
