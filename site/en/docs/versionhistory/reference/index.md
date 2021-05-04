@@ -87,17 +87,30 @@ GET /{product}/platforms/{platform}/channels/{channel}/versions/{version}/releas
   </tbody>
 </table>
 
-## Product A product is piece of software such as Chrome or Fuchsia. 
+## Product
+
+A product is piece of software such as Chrome or Fuchsia Web Engine.
+
 ### Product identifiers {: #product-identifiers }
 
-<table> <thead> <tr> <th>Description</th> <th>Value</th> </tr> </thead> <tbody> <tr> <td>Chrome</td> <td><code>chrome</code></td> </tr>
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chrome</td>
+      <td><code>chrome</code></td>
+    </tr>
     <tr>
       <td>Fuchsia Web Engine</td>
       <td><code>fuchsiawebengine</code></td>
     </tr>
   </tbody>
 </table>
-
 
 ## Platform
 
