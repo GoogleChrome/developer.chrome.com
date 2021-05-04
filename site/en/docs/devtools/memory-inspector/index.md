@@ -82,7 +82,7 @@ The **Memory inspector** consists of 3 main areas:
 
 Let's inspect the memory together. 
 
-1. Follow these steps to [start](/#open-debug) the debugging.
+1. Follow these steps to [start](#open-debug) the debugging.
 2. Change the address to `0x00000027` in the **address input**. 
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/S8m0VP5MuCr9YkZQx7mR.png", alt="address input", width="800", height="602" %}
 3. Observe the **ASCII representation** and the **value interpretations**. All values are empty at the moment. 

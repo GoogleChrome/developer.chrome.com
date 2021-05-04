@@ -46,13 +46,13 @@ Chromium issue: [862450](https://crbug.com/862450)
 ## New Memory inspector {: #memory-inspector }
 Use the new **Memory inspector** to inspect an `ArrayBuffer` in JavaScript, as well as the Wasm memory. 
 
-Open [this demo page](https://memory-inspector.glitch.me/demo-js.html). In the **Sources** panel, open the **demo-js.js** file, and set a breakpoint at line 15.
+Open [this demo page](https://memory-inspector.glitch.me/demo-js.html). In the **Sources** panel, open the **demo-js.js** file, and set a breakpoint at line 18.
 
 Refresh the page. Expand the **Scope** section in the right **debugger** pane. Notice the new icon next to the **buffer** value. Click on it to reveal the **Memory Inspector**.
 
 Check out the documentation to learn more about [inspecting JavaScript `ArrayBuffer` and `WebAssembly.Memory`](/docs/devtools/memory-inspector/) with this new Memory inspector. 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7CY7ijbHVfFFl7DM3lLT.png", alt="Memory inspector", width="800", height="499" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aDyRZhv31ZQq8X22MkgF.png", alt="Memory inspector", width="800", height="527" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7de6c9a80d7214559939399310b7ef1184554d92 #}
 Chromium issue: [1166577](https://crbug.com/1166577)
