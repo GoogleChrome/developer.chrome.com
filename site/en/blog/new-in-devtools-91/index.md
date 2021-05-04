@@ -22,7 +22,7 @@ Interested in helping improve DevTools? Sign up to participate in [Google User R
 ## Web Vitals information pop up in the Performance panel {: #web-vitals }
 Hover on a Web Vitals marker in the **Performance** panel to understand what's the indicator about - whether the performance is good, needs improvement, or poor.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BTpc3iOnzmLhNvv9XZwF.png", alt="Web Vitals information pop up", width="800", height="524" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0vRGvO6a3tPuScMRO8ce.png", alt="Web Vitals information pop up", width="800", height="527" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a5ee192a42493f0b31f360da9caee458d18fb0c5 #}
 
