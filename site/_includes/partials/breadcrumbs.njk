@@ -9,7 +9,7 @@
       {% for part in all -%}
 
         {% if not loop.first -%}
-          {{ icon('keyboard-arrow-right') }}
+          {{ icon('keyboard-arrow-right', {hidden: true}) }}
         {%- endif %}
 
         {% if part.url %}
