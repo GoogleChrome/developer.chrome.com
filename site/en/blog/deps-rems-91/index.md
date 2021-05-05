@@ -27,7 +27,7 @@ different website.
 
 Chrome 91 deprecates this ability. [Removing
 support](https://chromestatus.com/feature/5148698084376576) for cross origin
-iframes’ ability to call `alert()`, `confirm()`, and `prompt()` will prevent
+iframes' ability to call `alert()`, `confirm()`, and `prompt()` will prevent
 this kind of spoofing, and unblock further UI simplifications. For example, this
 means notexample.com will no longer be able to call `window.alert()`,
 `window.prompt()`, or `window.confirm()` if embedded in an iframe on
