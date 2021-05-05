@@ -5,8 +5,8 @@ subhead: >
   Allow related domain names owned by the same entity to declare themselves as belonging to the same first party.
 description: >
   Allow related domain names owned by the same entity to declare themselves as belonging to the same first party.
-date: 2021-04-23
-updated: 2021-04-23
+date: 2021-05-06
+updated: 2021-05-06
 authors:
   - samdutton
 ---

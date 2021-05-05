@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: What is the Privacy Sandbox?
 subhead: The Privacy Sandbox is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms.
 description: "What's in it, who's behind it, and what it's for."
-date: 2021-04-23
-updated: 2021-04-23
+date: 2021-05-06
+updated: 2021-05-06
 authors:
 	- samdutton
 ---
@@ -31,31 +31,25 @@ without enabling users to be tracked across sites.
 * Phase out support for [third-party cookies](https://web.dev/samesite-cookies-explained/) when new 
 solutions are in place.
 
+
 ## What are the Privacy Sandbox proposals?
 
 Chrome and other ecosystem stakeholders have offered more than 30 proposals to date, which can be 
 found in the [public resources of W3C groups](https://www.w3.org/Privacy/). These proposals cover a 
 wide variety of use cases and requirements.
 
-The key proposals are listed below. 
+The key use cases and proposals are listed below. 
 
 
-{% Details %}
-{% DetailsSummary %}
 ### Relevant content and ads
-{% endDetailsSummary %}
 
-* [FLoC](/docs/privacy-sandbox/floc): Privacy-preserving interest-based ad selection: "relevant ads". 
+* [FLoC](/docs/privacy-sandbox/floc): Privacy-preserving interest-based ad and content selection: 
+"relevant ads". 
 * [FLEDGE](/docs/privacy-sandbox/fledge): Ad selection for remarketing. Descendant of 
 [TURTLEDOVE](https://github.com/WICG/turtledove).
 
-{% endDetails %}
 
-
-{% Details %}
-{% DetailsSummary %}
 ### Measurement and attribution
-{% endDetailsSummary %}
 
 * [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting): Attribute ad 
 clicks and ad views. Previously known as the Event Conversion Measurement API.
@@ -63,39 +57,22 @@ clicks and ad views. Previously known as the Event Conversion Measurement API.
 of a particular ad campaign (how many distinct users saw the ad) by collapsing information across 
 multiple sites into a single, privacy-preserving report.
 
-{% endDetails %}
 
-
-{% Details %}
-{% DetailsSummary %}
 ### First-party protections
-{% endDetailsSummary %}
 
 * [SameSite cookie changes](https://web.dev/samesite-cookies-explained/): secure sites by explicitly 
 marking your cross-site cookies.
 * [First Party Sets](/docs/privacy-sandbox/first-party-sets): Allow related domain names owned by 
 the same entity to declare themselves as belonging to the same first party.
 
-{% endDetails %}
 
-
-
-{% Details %}
-{% DetailsSummary %}
 ### Fraud detection
-{% endDetailsSummary %}
 
 * [Trust Tokens](/docs/privacy-sandbox/trust-tokens): Convey trust in a user from one context to 
 another, in order to help combat fraud and distinguish bots from humans.
 
-{% endDetails %}
 
-
-
-{% Details %}
-{% DetailsSummary %}
 ### Limiting data collection
-{% endDetailsSummary %}
 
 * [Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8): Allow websites to get information 
 about a user's browser or device, but enable the browser to set a quota on the total amount of 
@@ -107,24 +84,14 @@ effectively hiding their IP addresses from a site host. Gnatcatcher also ensures
 requiring access to IP addresses for legitimate purposes such as abuse prevention can do so, subject 
 to certification and auditing.
 
-{% endDetails %}
 
-
-
-{% Details %}
-{% DetailsSummary %}
 ### Identity
-{% endDetailsSummary %}
-
 
 * [WebID](https://github.com/WICG/WebID): Support federated identity (where a user can sign into a 
 website through a third-party service) without sharing the user's email address or other identifying 
 information with the third-party service or the website, unless the user explicitly agrees to do so. 
 WebID enables federated sign-in without the use of redirects, pop-ups or third-party cookies which 
 can be used to identify and track users across sites.
-
-
-{% endDetails %}
 
 
 ## Who is working on the Privacy Sandbox?
@@ -142,9 +109,11 @@ updates for individual APIs.
 
 ---
 
+
 ## Engage and share feedback
 
-* **GitHub**: read the explainer for the proposal on GitHub and raise questions or comments in the Issues tab.  
+* **GitHub**: read the explainer for the proposal on GitHub and raise questions or comments in the 
+Issues tab for the explainer.  
 [Links to explainers](#explainers) are provided below.
 * **W3C**: Use cases can be discussed and industry feedback shared in the W3C [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/), the [Privacy Community Group](https://www.w3.org/community/privacycg/participants), 
 and the [Web Incubator Community Group](https://github.com/WICG).
@@ -170,9 +139,10 @@ tab for each explainer.
 ### Articles and videos for web developers
 
 * [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
+* [SameSite cookies explained](https://web.dev/samesite-cookies-explained/)
 * [Getting started with Trust Tokens](https://web.dev/trust-tokens)
 * [A more private way to measure ad conversions](https://web.dev/conversion-measurement/)
-* [SameSite cookies explained](https://web.dev/samesite-cookies-explained/)
+* [What is Federated Learning of Cohorts (FLoC)?](https://web.dev/floc/)
 * [Introducing the Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8)
 
 ### Principles and concepts behind the proposals
