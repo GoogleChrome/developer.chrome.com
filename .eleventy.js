@@ -13,9 +13,9 @@ const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
 const mdFilters = require('./site/_filters/md');
 const {minifyJs} = require('./site/_filters/minify-js');
-const {updateSvgForInclude} = require('./site/_filters/svg');
 const {slugify} = require('./site/_filters/slugify');
 const {toc} = require('./site/_filters/toc');
+const {updateSvgForInclude} = require('webdev-infra/filters/svg');
 
 // Shortcodes
 const {Details} = require('./site/_shortcodes/Details');
