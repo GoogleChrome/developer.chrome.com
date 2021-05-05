@@ -125,7 +125,7 @@
     "unist-util-to-list-of-char": "^0.1.2",
     "unist-util-visit": "^2.0.3",
     "uslug": "^1.0.4",
-    "webdev-infra": "^1.0.11",
+    "webdev-infra": "^1.0.13",
     "wicg-inert": "^3.0.3"
   }
 }
