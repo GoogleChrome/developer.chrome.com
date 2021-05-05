@@ -19,9 +19,9 @@ stable version in late May, 2021.
 
 ## Remove alert(), confirm(), and prompt() for cross origin iframes
 
-Chrome allows iframes to trigger Javascript dialogs. For example it shows “<URL>
-says ...” when the iframe is the same origin as the top frame, and “An embedded
-page on this page says...” when the iframe is cross-origin. This is confusing,
+Chrome allows iframes to trigger Javascript dialogs. For example it shows "<URL>
+says ..." when the iframe is the same origin as the top frame, and "An embedded
+page on this page says..." when the iframe is cross-origin. This is confusing,
 and has led to spoofs where sites pretend the message comes from Chrome or a
 different website.
 
