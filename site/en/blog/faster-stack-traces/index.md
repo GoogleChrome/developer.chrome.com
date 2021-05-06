@@ -73,7 +73,7 @@ object.bar();
 
 Here we have a function `foo` that is installed under the name `"bar"` on `object`. Running this snippet in Chromium yields the following output:
 
-```txt
+```plain
 Error
     at Object.foo [as bar] (error-methodname.js:2)
     at error-methodname.js:6
