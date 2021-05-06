@@ -111,6 +111,7 @@ View and debug network activity.
 - [Get Started][30]
 - [Network Issues Guide][31]
 - [Network Panel Reference][32]
+- [Inspect Resources][43]
 
 ### Performance panel {: #performance }
 
@@ -153,7 +154,6 @@ storage, cookies, Application Cache, images, fonts, and stylesheets.
 - [Debug Progressive Web Apps][40]
 - [Inspect and Manage Storage, Databases, and Caches][41]
 - [Inspect and Delete Cookies][42]
-- [Inspect Resources][43]
 
 ### Security panel {: #security }
 
@@ -229,7 +229,7 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [40]: /docs/devtools/progressive-web-apps
 [41]: /docs/devtools/manage-data/local-storage
 [42]: /docs/devtools/manage-data/cookies
-[43]: /docs/devtools/manage-data/page-resources
+[43]: /docs/devtools/resources
 [44]: /docs/devtools/security
 [45]: https://crbug.com/new
 [46]: https://twitter.com/ChromeDevTools
