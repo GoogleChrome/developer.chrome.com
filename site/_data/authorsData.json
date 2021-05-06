@@ -584,22 +584,40 @@
     "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg"
   },
   "mustafa": {
-  "name": {
-    "given": "Mustafa",
-    "family": "Kurtuldu"
+    "name": {
+      "given": "Mustafa",
+      "family": "Kurtuldu"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "descriptions": {
+      "en": "Senior UX designer on Chrome, UX lead on installability & PWAs"
+    },
+    "country": "US",
+    "homepage": "https://designtoday.info",
+    "twitter": "mustafa_x",
+    "github": "mustafa-x",
+    "glitch": "mustafa-x",
+    "image": "image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/ShCbqP0E2I9TaNyA7d5a.jpg"
   },
-  "org": {
-    "name": "Google",
-    "unit": "Chrome"
-  },
-  "descriptions": {
-    "en": "Senior UX designer on Chrome, UX lead on installability & PWAs"
-  },
-  "country": "US",
-  "homepage": "https://designtoday.info",
-  "twitter": "mustafa_x",
-  "github": "mustafa-x",
-  "glitch": "mustafa-x",
-  "image": "image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/ShCbqP0E2I9TaNyA7d5a.jpg"
-}
+  "bmeurer": {
+    "name": {
+      "given": "Benedikt",
+      "family": "Meurer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "DE",
+    "twitter": "bmeurer",
+    "github": "bmeurer",
+    "email": "bmeurer@chromium.org",
+    "descriptions": {
+      "en": "Googler working on Chrome DevTools."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XQZ4QLusg8Iq5kP4s04d.jpg"
+  }
 }
