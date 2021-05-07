@@ -604,7 +604,7 @@ Keyword Spam: We don't allow extensions with misleading, improperly formatted, n
 irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
 description, developer name, title, icon, screenshots, and promotional images. Developers must
 provide a clear and well-written description. We also don't allow unattributed or anonymous user
-testimonials in the app's description.
+testimonials in the extension's description.
 ```
 
 This policy is to ensure quality of the products on the Chrome Web Store and prevent products from

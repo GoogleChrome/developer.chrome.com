@@ -35,13 +35,6 @@ You should keep users' data for at least 30 days after they cancel their subscri
 your app. Users might be unsubscribed for reasons beyond their control, and even if they do
 intentionally unsubscribe or uninstall the app, they might come back.
 
-## Cache license data
-
-If you use Chrome Web Store Payments, you can use the Licensing API to programmatically check for
-payment, as described in [Checking for Payment][4].
-
-But don't query the license server too often: [Cache the results][5].
-
 ## Create a compelling store listing
 
 The better your app's listing in the store, the more users will find and try your app. When choosing
@@ -207,9 +200,5 @@ change; if that happens, your web app might be recategorized.
 [1]: /docs/apps
 [2]: /docs/webstore/launching#pre-launch-checklist
 [3]: /docs/webstore/identify_user
-[4]: /docs/webstore/check_for_payment
-[5]: /docs/webstore/check_for_payment#cache
-[6]: #top
 [7]: /docs/webstore/branding
 [8]: /docs/webstore/images
-[9]: #top
