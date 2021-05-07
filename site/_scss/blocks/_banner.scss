@@ -3,19 +3,15 @@
   background: var(--color-bg-shade);
   display: flex;
   justify-content: center;
-  padding: get-size(200);
+  padding: get-size(300);
 
   &--info {
-    --link-color: var(--color-blue-darkest);
-    --link-visited-color: var(--color-blue-darkest);
-    --link-rgb-background: transparent;
+    --button-color: var(--color-blue-medium);
     background-color: var(--color-blue-lighter);
   }
 
   &--warning {
-    --link-color: var(--color-red-darkest);
-    --link-visited-color: var(--color-red-darkest);
-    --link-rgb-background: transparent;
+    --button-color: var(--color-red-medium);
     background-color: var(--color-red-lightest);
   }
 
@@ -27,7 +23,7 @@
     width: 100%;
 
     @include media-query('md') {
-      align-items: center;
+      align-items: baseline;
       flex-direction: row;
     }
   }
@@ -48,13 +44,7 @@
     }
   }
 
-  // FIXME(robdodson): The button-text elements self-define negative margins
-  // that throw off flexbox alignment. This is a hack to make them work inside
-  // of the banner, but the button-text element itself needs to be fixed to
-  // remove this quirk. It's currently only used in the featured cards on the
-  // homepage, so maybe something is off with the way those cards were using
-  // the buttons that necessitated the negative margin.
-  .button-text {
-    margin: 0;
+  &__action {
+    @include apply-utility('weight', 'medium');
   }
 }

@@ -13,6 +13,7 @@
   @extend %type--small;
   @include apply-utility('font', 'google-sans');
   border-radius: get-size(100);
+  color: var(--button-color, inherit);
   padding: get-size(200) get-size(400);
 }
 
