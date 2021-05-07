@@ -10,6 +10,14 @@ alt: >
   Chromium Chronicle image
 tags:
   - chromium-chronicle
+banner:
+  type: info
+  text: Two line text string with two actions. One to two lines is preferable on mobile and tablet
+  actions:
+    - text: Action
+      href: https://google.com
+    - text: Action
+      href: https://google.com
 ---
 
 **Episode 20:** by John Chen in Bellevue, WA (April, 2021)<br>
