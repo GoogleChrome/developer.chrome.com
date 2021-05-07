@@ -1,11 +1,29 @@
-
 {% if banner %}
-  <div class="wrapper banner gap-top-300 rounded-500 banner--{{ banner.type }}">
-    <div class="banner__text">
-      {{ banner.text }}
+  {# Supports 'info' or 'warning' banners. #}
+  <div class="banner banner--{{ banner.type or 'info' }}">
+    <div class="banner__inner">
+      <div class="banner__text">
+        {# These inline block wrappers are a little hack to make content #}
+        {# properly align with the last baseline. #}
+        {# https://stackoverflow.com/questions/32209427/align-flex-box-items-to-baseline-of-last-text-line-in-a-block #}
+        {# Because the button-text element has padding we can't rely on #}
+        {# align-items: last baseline. But the inline-block hack seems to #}
+        {# do the trick. #}
+        <div class="display-inline-block">
+          {{ banner.text }}
+        </div>
+      </div>
+      <div class="banner__actions">
+        <div class="display-inline-block">
+          {% if banner.actions %}
+            {% for action in banner.actions %}
+              <a class="banner__action material-button button-text" href="{{ action.href }}">
+                {{ action.text }}
+              </a>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
     </div>
-    {% if banner.action and banner.action_href %}
-      <a class="link" href="{{ banner.action_href }}">{{ banner.action }}</a>
-    {% endif %}
   </div>
 {% endif %}
