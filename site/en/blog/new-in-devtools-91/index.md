@@ -132,7 +132,7 @@ The **Issues** tab now categorize issues into page errors, upcoming breaking cha
 - **Upcoming breaking changes (yellow)**. Issues that inform about an upcoming, incompatible change of the web platform that may result in a loss of page functionality (e.g. warning of upcoming [CORS RFC 1918 changes](https://web.dev/cors-rfc1918-feedback)).
 - **Possible improvements (blue)**. Potential improvements on the page, but are currently not impairing basic functionality of the page (e.g. accessibility issues)
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/urhDPcFLC8LO4ibV20Hd.png", alt="Categorize issue types with colors and icons", width="800", height="501" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mVZ8FNWGvj8siFq7vz00.png", alt="Categorize issue types with colors and icons", width="800", height="489" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/8fb5eae8cb55c4fac5acd2a8e2a59b7a84310c82 #}
 
