@@ -155,7 +155,7 @@ reload the popup without closing the DevTools panel.
 ## Declare permissions {: #declare_permission }
 
 While extensions have similar capabilities as web pages they often need permission to use certain
-features, such as [cookies][7], [storage][8] and [Cross-Origin XMLHttpRequsts][9]. Refer to the
+features, such as [cookies][7], [storage][8] and [Cross-Origin XMLHttpRequests][9]. Refer to the
 [permissions article][10] and the available [Chrome APIs][11] to ensure an extension is requesting
 the correct permissions in its [manifest][12].
 
