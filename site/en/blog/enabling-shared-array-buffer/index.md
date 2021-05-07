@@ -1,20 +1,30 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 91
+title: SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome 92
 authors:
   - jakearchibald
 description: >
   SharedArrayBuffer will arrive in Android Chrome 88. It will only be available
-  to pages that are cross-origin isolated. Starting in Desktop Chrome 91 it will
+  to pages that are cross-origin isolated. Starting in Desktop Chrome 92 it will
   also only be available to cross-origin isolated pages. You can register for an
   origin trial to retain the current behavior until Desktop Chrome 96.
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
 date: 2021-01-18
-updated: 2021-04-22
+updated: 2021-05-06
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
 alt: A collection of padlocks.
 ---
+
+{% Aside %}
+
+**Update, May 2021**
+
+Due to unexpected circumstances, the restriction on `SharedArrayBuffer` on
+desktop described in this article is postponed to Chrome 92 (originally Chrome
+91).
+
+{% endAside %}
 
 It's fair to say [`SharedArrayBuffer`][mdn] has had a bit of a rough landing on the
 web, but things are settling down. Here's what you need to know:
@@ -25,7 +35,7 @@ web, but things are settling down. Here's what you need to know:
   Chrome 88. However, it's only available to pages that are [cross-origin
   isolated](#cross-origin-isolation).
 - `SharedArrayBuffer` is currently available in Desktop Chrome, but from Chrome
-  91 it will be limited to cross-origin isolated pages. If you don't think you
+  92 it will be limited to cross-origin isolated pages. If you don't think you
   can make this change in time, you can [register for an origin trial](#origin-trial) to retain
   the current behavior until at least Chrome 96.
 - If you intend to enable cross-origin isolation to continue using
@@ -55,7 +65,7 @@ API](https://web.dev/coop-coep/#observe-issues-using-the-reporting-api), so you
 can gather data on requests that failed as a result of
 `Cross-Origin-Embedder-Policy` and `Cross-Origin-Opener-Policy`.
 
-If you don't think you can make these changes in time for Chrome 91, you can
+If you don't think you can make these changes in time for Chrome 92, you can
 [register for an origin trial](#origin-trial) to retain current Desktop Chrome
 behavior until at least Chrome 96.
 
@@ -163,7 +173,7 @@ version 79 (July 2020).
 Then, in January 2021, I wrote this article, and you read it. Hello.
 
 And that's where we are now. Chrome 88 brings `SharedArrayBuffer` back to
-Android for pages that are cross-origin isolated, and Chrome 91 brings the same
+Android for pages that are cross-origin isolated, and Chrome 92 brings the same
 requirements to desktop, both for consistency, and to achieve total cross-origin
 isolation.
 
@@ -186,7 +196,7 @@ Do not use a meta tag.
 {% endAside %}
 
 To verify that it's working properly, install [Chrome
-91 beta](https://www.google.com/chrome/beta/) for testing.
+92](https://www.google.com/chrome/dev/) for testing.
 
 ## Further reading {: #resources }
 
