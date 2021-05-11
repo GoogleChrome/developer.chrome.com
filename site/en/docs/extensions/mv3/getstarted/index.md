@@ -9,7 +9,7 @@ description: Step-by-step instructions on how to create a Chrome Extension.
 {# TODO: Reword this intro. "Components" is probably not the best word to use here any more as "web
 components" are a cross-browser tech for creating reusable custom elements or "components". #}
 
-Extensions are made of different, but cohesive, components. Components can include [background
+All extensions are made of different, but cohesive, components. Components can include [background
 scripts][1], [content scripts][2], an [options page][3], [UI elements][4] and various logic files.
 Extension components are created with web development technologies: HTML, CSS, and JavaScript. An
 extension's components will depend on its functionality and may not require every option.
