@@ -91,8 +91,7 @@ the Chrome Web Store and disabling of your extension's user base.
 ## Is there a way to appeal this decision?
 
 Yes, appeals can be made through the instructions included in the notification email you will
-receive to the email address listed under your CWS developer account. Our enforcement team will
-process the appeal within 48 hours.
+receive to the email address listed under your CWS developer account.
 
 [1]: https://support.google.com/adspolicy/answer/6020955
 [2]: https://support.google.com/adspolicy/answer/6020954
