@@ -8,6 +8,10 @@ date: 2020-08-20
 description: "Use the Memory inspector to inspect an ArrayBuffer in JavaScript, as well as a WebAssembly.Memory"
 ---
 
+{% Aside %}
+This feature is available from Chrome 91 onwards. You can check your version with `chrome://version/`. 
+{% endAside %}
+
 Use the new **Memory inspector** to inspect an `ArrayBuffer` in JavaScript, as well as a `WebAssembly.Memory`. 
 ## Open the Memory Inspector {: #open }
 
