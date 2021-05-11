@@ -190,7 +190,7 @@ element in your update manifest. For example:
 This would ensure that users would autoupdate to version 2 only if they are running Google Chrome
 3.0.193.0 or greater.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://chrome.google.com/webstore/developer/dashboard
 [4]: hosting
