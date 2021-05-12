@@ -1,31 +1,47 @@
 ---
-layout: "layouts/doc-post.njk"
-title: Offline-First Trusted Web Activities
-date: 2021-05-11
-description: How to display a fallback offline screen, if the first time the user opens the app, there's no connectivity.
+layout: "layouts/doc-post.njk" 
+title: Offline-First Trusted Web Activities 
+date: 2021-05-11 
+description: How to display a fallback offline screen, if the first time the user opens the app, there's no connectivity. 
 authors:
-  - demianrenzulli
+    - demianrenzulli
 ---
 
-The first time a user launches a Progressive Web App (PWA) via Trusted Web Activity, the service worker won't yet be available, since [the registration process](https://developers.google.com/web/fundamentals/primers/service-workers/registration) hasn't taken place yet.
+The first time a user launches a Progressive Web App (PWA) via Trusted Web
+Activity, the service worker won't yet be available, since [the registration
+process](https://developers.google.com/web/fundamentals/primers/service-workers/registration)
+hasn't taken place yet.
 
-For that reason, if the user doesn't have connectivity during the first app launch, instead of the custom offline experience, the network error page is shown.
+For that reason, if the user doesn't have connectivity during the first app
+launch, instead of the custom offline experience, the network error page is
+shown.
 
-An example of this scenario might take place after the user downloads the PWA from the Play Store. If the user doesn't have connectivity when trying to open the app for the first time, the service worker won't be yet available to show the offline fallback page, therefore, the standard error page will be shown, leading to a bad experience.
+An example of this scenario might take place after the user downloads the PWA
+from the Play Store. If the user doesn't have connectivity when trying to open
+the app for the first time, the service worker won't be yet available to show
+the offline fallback page, therefore, the standard error page will be shown,
+leading to a bad experience.
 
-{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/SixNJuHH01eY6u96Owo1.png", alt="twa offline - standard offline page", width="533", height="372" %}
+{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/SixNJuHH01eY6u96Owo1.png",
+alt="twa offline - standard offline page", width="533", height="372" %}
 
-This guide explains how to display your own Activity in this situation, by checking the status of the network before launching the Trusted Web Activity, in order to decide if an offline Android screen should be shown.
+This guide explains how to display your own Activity in this situation, by
+checking the status of the network before launching the Trusted Web Activity, in
+order to decide if an offline Android screen should be shown.
 
-{% Aside %}
-A prerequisite of this guide is to have a Trusted Web Activity app running. Follow the steps in the [Integration Guide](https://developer.chrome.com/docs/android/trusted-web-activity/integration-guide/) to create a basic Trusted Web Activity project.
-{% endAside%}
+{% Aside %} A prerequisite of this guide is to have a Trusted Web Activity app
+running. Follow the steps in the [Integration
+Guide](https://developer.chrome.com/docs/android/trusted-web-activity/integration-guide/)
+to create a basic Trusted Web Activity project. {% endAside%}
 
 ## Create a custom LauncherActivity
 
-The first step is to create a custom launcher activity. This is the `Activity` that will contain the offline screen to show if the first time the user opens the app there's no connectivity.
+The first step is to create a custom launcher activity. This is the `Activity`
+that will contain the offline screen to show if the first time the user opens
+the app there's no connectivity.
 
-Call the Activity `OfflineFirstTWALauncherActivity`, and make it extend: `com.google.androidbrowserhelper.trusted.LauncherActivity`.
+Call the Activity `OfflineFirstTWALauncherActivity`, and make it extend:
+`com.google.androidbrowserhelper.trusted.LauncherActivity`.
 
 ```java
 import com.google.androidbrowserhelper.trusted.LauncherActivity;
@@ -56,11 +72,15 @@ Next, register the Activity in `AndroidManifest.xml`:
 </activity>
 ```
 
-The previous code registers `OfflineFirstTWALauncherActivity` as a launcher Activity and defines [https://airhorner.com](https://airhorner.com) as the URL to open when the TWA launches. 
+The previous code registers `OfflineFirstTWALauncherActivity` as a launcher
+Activity and defines [https://airhorner.com](https://airhorner.com) as the URL
+to open when the TWA launches. 
 
 ## Handle offline scenarios
 
-First, inside the Activity, override the method `shouldLaunchImmediately()` and make it return `false`, so that the Trusted Web Activity won't launch immediately, and you can add some extra checks before the initial launch:
+First, inside the Activity, override the method `shouldLaunchImmediately()` and
+make it return `false`, so that the Trusted Web Activity won't launch
+immediately, and you can add some extra checks before the initial launch:
 
 ```java
 @Override
@@ -71,7 +91,9 @@ protected boolean shouldLaunchImmediately() {
 }
 ```
 
-Override the `onCreate()` method to check the network status before the TWA launches. Add a call to `tryLaunchTwa()`, a helper method that will contain that logic:
+Override the `onCreate()` method to check the network status before the TWA
+launches. Add a call to `tryLaunchTwa()`, a helper method that will contain that
+logic:
 
 ```java
 @Override
@@ -100,9 +122,15 @@ private void tryLaunchTwa() {
 
 The previous code handles three scenarios:
 
-- If the TWA has launched previously, this means that the service worker has been registered, and the PWA will be able to respond offline. In that case, call the method `launchTwa()` defined in the parent class to launch the Trusted Web Activity directly.
-- If the TWA hasn't launched previously and the user is online, launch the Trusted Web Activity for the first time using the `firstTimeLaunchTwa()` method that you'll implement later.
-- If the TWA hasn't already launched and the user is offline, render the native offline fallback screen.
+- If the TWA has launched previously, this means that the service worker has
+  been registered, and the PWA will be able to respond offline. In that case,
+  call the method `launchTwa()` defined in the parent class to launch the
+  Trusted Web Activity directly.
+- If the TWA hasn't launched previously and the user is online, launch the
+  Trusted Web Activity for the first time using the `firstTimeLaunchTwa()`
+  method that you'll implement later.
+- If the TWA hasn't already launched and the user is offline, render the native
+  offline fallback screen.
 
 ## Implement helper methods
 
@@ -117,7 +145,8 @@ private boolean isOnline() {
 }
 ```
 
-Next, implement `hasTwaLaunchedSuccessfully()` used to check if the TWA has launched at least once:
+Next, implement `hasTwaLaunchedSuccessfully()` used to check if the TWA has
+launched at least once:
 
 ```java
 private boolean hasTwaLaunchedSuccessfully() {
@@ -127,9 +156,12 @@ private boolean hasTwaLaunchedSuccessfully() {
 }
 ```
 
-The previous code calls the `launchTWA()` from the parent class, and saves the `twa_launched_successfully` flag in shared preferences, to indicate that the TWA has launched successfully, at least once.
+The previous code calls the `launchTWA()` from the parent class, and saves the
+`twa_launched_successfully` flag in shared preferences, to indicate that the TWA
+has launched successfully, at least once.
 
-The remaining helper method: `renderOfflineFallback()` renders an Android offline screen. 
+The remaining helper method: `renderOfflineFallback()` renders an Android
+offline screen. 
 
 ```java
 private void renderOfflineFallback() {
@@ -145,12 +177,21 @@ private void renderOfflineFallback() {
 }
 ```
 
-Fort his demo, we have defined the `activity_offline_first_twa` layout, which contains a button to retry, which will, in time, to execute `firstTimeLaunchTwa()` after checking connection:
+Fort his demo, we have defined the `activity_offline_first_twa` layout, which
+contains a button to retry, which will, in time, to execute
+`firstTimeLaunchTwa()` after checking connection:
 
-{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/pzkHBtYxsTXIdsfjFfYF.png", alt="twa offline - custom offline screen", width="533", height="394" %}
+{% Img src="image/26V1DWN36MZr3mUo8ChSBlCpzp43/pzkHBtYxsTXIdsfjFfYF.png",
+alt="twa offline - custom offline screen", width="533", height="394" %}
 
 ## Conclusion
 
-- The first time a user launches a Progressive Web App (PWA) via Trusted Web Activity, the service worker won't yet be available.
-- To avoid showing the standard offline screen if the user has no connectivity, you can detect the offline condition and show a fallback offline screen instead.
-- In this guide you learned how to implement that strategy. If you are interested in checking the code we used throughout this guide, the complete solution can be found [here](https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/twa-offline-first).
+- The first time a user launches a Progressive Web App (PWA) via Trusted Web
+  Activity, the service worker won't yet be available.
+- To avoid showing the standard offline screen if the user has no connectivity,
+  you can detect the offline condition and show a fallback offline screen
+  instead.
+- In this guide you learned how to implement that strategy. If you are
+  interested in checking the code we used throughout this guide, the complete
+  solution can be found
+  [here](https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/twa-offline-first).
