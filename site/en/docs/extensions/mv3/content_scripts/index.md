@@ -254,9 +254,10 @@ chrome.action.onClicked.addListener((message, callback) => {
 });
 ```
 
-Be aware that the injected function is a copy the function referenced in the
+Be aware that the injected function is a copy of the function referenced in the
 `chrome.scripting.executeScript` call, not the original function itself. As a result, the function's
-body must be self contained; references to variables outside of the function will cause the content script to throw a [`ReferenceError`][ref-error].
+body must be self contained; references to variables outside of the function will cause the content
+script to throw a [`ReferenceError`][ref-error].
 
 {% if false %}
 When injecting as a function, you can also pass arguments to the function.
