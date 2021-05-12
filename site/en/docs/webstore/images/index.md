@@ -19,7 +19,7 @@ browser:
 - [Promotional images][4]
 - [Screenshots][5]
 
-Only the app icon, a small promotional image, and a screenshot are mandatory. However, providing
+Only the extension icon, a small promotional image, and a screenshot are mandatory. However, providing
 attractive versions of both required and optional images increases your app's chances of getting
 noticed. For example, your app can't be featured unless you provide a large or marquee promotional
 image.
