@@ -232,7 +232,7 @@ document.body.style.backgroundColor = 'orange';
 //// background.js ////
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
-    target: { tabId: tabId },
+    target: { tabId: tab.id },
     files: ['content-script.js']
   });
 });
@@ -248,7 +248,7 @@ function injectedFunction() {
 
 chrome.action.onClicked.addListener((message, callback) => {
   chrome.scripting.executeScript({
-    target: { tabId: tabId },
+    target: { tabId: tab.id },
     function: injectedFunction
   });
 });
@@ -268,7 +268,7 @@ function injectedFunction(color) {
 
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
-    target: { tabId: tabId },
+    target: { tabId: tab.id },
     function: injectedFunction,
     arguments: ['orange']
   });
