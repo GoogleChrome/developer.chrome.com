@@ -28,8 +28,7 @@ This document is a work in progress, unfinished and not to be shared externally.
 The Privacy Sandbox initiative has two core aims:
 * Develop replacement solutions to support legitimate third-party use cases and business models 
 without enabling users to be tracked across sites.
-* Phase out support for [third-party cookies](https://web.dev/samesite-cookies-explained/) when new 
-solutions are in place.
+* Phase out support for third-party cookies when new solutions are in place.
 
 
 ## What are the Privacy Sandbox proposals?
@@ -77,6 +76,11 @@ another, in order to help combat fraud and distinguish bots from humans.
 * [Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8): Allow websites to get information 
 about a user's browser or device, but enable the browser to set a quota on the total amount of 
 information a site can access, so that a user cannot be identified.
+* [User-Agent Client Hints](https://web.dev/user-agent-client-hints/): The User-Agent string is a 
+significant passive [fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) 
+surface, as well as being difficult to process. Client Hints enable developers to actively 
+request information about the user's device or conditions, rather than needing to parse this data 
+from the User-Agent (UA) string.
 * [Gnatcatcher](https://github.com/bslassey/ip-blindness): Limit the ability to identify individual 
 users by accessing their IP address. There are two parts to the proposal: [Willful IP Blindness](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) provides a way for websites to let browsers know 
 they are not observing IP addresses and [Near-path NAT](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) allows groups of users to send their traffic through the same privatizing server, 

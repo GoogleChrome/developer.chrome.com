@@ -35,8 +35,8 @@ help sites combat fraud and distinguish bots from real humans—without passive 
 * An **issuer** website can issue tokens to the web browser of a user who shows that they're
 trustworthy, for example through continued account usage, by completing a transaction, or by getting
 an acceptable [reCAPTCHA score](https://developers.google.com/recaptcha).
-* A **redeemer** website can confirm that a user is not fake by checking if they have tokens from a
-trusted issuer, and then redeem tokens as necessary.
+* A **redeemer** website can confirm that a user is not fake by checking if they have tokens from an 
+issuer the redeemer trusts, and then redeeming tokens as necessary.
 
 Trust tokens are encrypted, so it isn't possible to identify an individual or connect trusted and 
 untrusted instances to discover user identity.
@@ -68,11 +68,10 @@ website (such as a social media site or email service) to be conveyed to another
 publisher or online store) without identifying the user or linking identities across sites.
   
 {% Aside 'key-term' %}  
-**Fingerprinting** enables sites to identify and track individual users by getting data about their
-device, operating system, and browser setup (such as language preferences, [user agent]
-(https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent), and available fonts) or 
-changes in device state. This may be done on the server by checking request headers or on the client
-with JavaScript.
+[Fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) enables sites to identify 
+and track individual users by getting data about their device, operating system, and browser setup 
+(such as language preferences, [user agent](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent), and available fonts) or changes in device state. This may be done on the server by 
+checking request headers or on the client with JavaScript.
 
 Fingerprinting uses mechanisms that users aren't aware of and can't control. Sites such as 
 [Panopticlick](https://panopticlick.eff.org/) and [amiunique.org](https://amiunique.org/) show how

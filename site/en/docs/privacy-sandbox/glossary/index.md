@@ -37,9 +37,7 @@ A conversion attributed to an ad that was 'clicked'.
 
 ## Conversion
 
-The completion of an action on an advertiser's website by a user who has previously interacted with
-an ad from that advertiser. For example, purchase of a product or sign-up for a newsletter after
-clicking an ad that links to the advertiser's site.
+The completion of some desired goal following action by a user. For example, purchase of a product or sign-up for a newsletter after clicking an ad that links to the advertiser's site.
 
 ## Cookie
 
@@ -167,8 +165,9 @@ The total number of people who see an ad (or who visit a web page that displays 
 
 ## Remarketing
 
-Advertising to people who've already visited your site. For example, an online store could show ads
-for a toy sale to people who previously viewed toys on their site.
+Reaching people on other sites who have previously visited your site. For example, an online store 
+could show ads for a toy sale to people who previously viewed toys on their site. For example, an 
+online store could show ads for a toy sale to people who previously viewed toys on their site.
 
 ## Site
 
