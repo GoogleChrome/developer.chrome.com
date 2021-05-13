@@ -82,6 +82,9 @@ fingerprint data can be combined to identify you as an individual.
 
 ## How do Trust Tokens work?
 
+In this example a publisher website wants to check if a user is a real human, and not a bot, before displaying an ad.
+
+
 1. A user visits a website (known as an **issuer**) and performs actions that lead the site to 
 believe that the user is a real human, such as making purchases, using an email account or 
 successfully completing reCAPTCHA.
