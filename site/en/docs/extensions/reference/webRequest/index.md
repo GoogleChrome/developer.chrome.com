@@ -357,8 +357,8 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 
 For more example code, see the [web request samples][16].
 
-[1]: /docs/extensions/mv2/tabs
-[2]: /docs/extensions/mv2/declare_permissions
+[1]: /docs/extensions/reference/tabs
+[2]: /docs/extensions/mv3/declare_permissions
 [3]: #life_cycle_footnote
 [4]: #implementation-details
 [5]: #life_cycle_footnote
@@ -366,11 +366,11 @@ For more example code, see the [web request samples][16].
 [7]: https://fetch.spec.whatwg.org/#origin-header
 [8]:
   https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md
-[9]: /docs/extensions/mv2/declare_permissions
+[9]: /docs/extensions/mv3/declare_permissions
 [10]: /docs/extensions/events
 [11]: #type-BlockingResponse
 [12]: #type-BlockingResponse
 [13]: #type-RequestFilter
-[14]: /docs/extensions/mv2/match_patterns
+[14]: /docs/extensions/mv3/match_patterns
 [15]: #type-RequestFilter
-[16]: /docs/extensions/mv2/samples#search:webrequest
+[16]: /docs/extensions/mv3/samples#search:webrequest
