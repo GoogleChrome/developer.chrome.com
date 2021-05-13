@@ -42,10 +42,10 @@ Trust tokens are encrypted, so it isn't possible to identify an individual or co
 untrusted instances to discover user identity.
 
 {% Aside 'caution' %}
-Trust Tokens are a way to **convey** trust in a user, not **establish** trust in a user. 
-
 Trust Tokens are not a replacement for reCAPTCHA or other mechanisms for determining whether or not 
 a user is who they say they are.
+
+Trust Tokens are a way to **convey** trust in a user, not **establish** trust in a user. 
 {% endAside %}
 
 
@@ -103,6 +103,10 @@ trusted by the issuer to be a real human.
 1. The ad platform provides the data required to display an ad.
 1. The publisher site displays the ad.
 1. An ad view impression is counted.
+
+{% Aside %}
+For more detail about the JavaScript calls in this example, see [Sample API usage](https://web.dev/trust-tokens/#sample-api-usage).
+{% endAside %}
 
 ---
 
