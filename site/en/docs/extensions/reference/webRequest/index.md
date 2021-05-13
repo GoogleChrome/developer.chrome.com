@@ -153,19 +153,34 @@ Starting from Chrome 72, if you need to modify responses before [Cross Origin Re
 Starting from Chrome 72, the following request headers are **not provided** and cannot be modified
 or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`:
 
-- Accept-Language
-- Accept-Encoding
-- Referer
-- Cookie
+- `Accept-Language`
+- `Accept-Encoding`
+- `Referer`
+- `Cookie`
 
 Starting from Chrome 72, the `Set-Cookie` response header is **not provided** and cannot be modified
 or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
 
-Starting from Chrome 89, the `X-Frame-Options` response header cannot be effectively modified
+Starting from Chrome 84, the `Accept-CH` response header is **not provided** and cannot be modified
 or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
 
-Starting from Chrome 91, the `Content-Security-Policy` response header cannot be modified or removed
-without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
+Starting from Chrome 86, the `Accept-CH-Lifetime` response header is **not provided** and cannot be
+modified or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
+
+Starting from Chrome 88, the `Critical-CH` response header is **not provided** and cannot be
+modified or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
+
+Starting from Chrome 89, the `Origin-Agent-Cluster` request header and `X-Frame-Options` response
+header are **not provided** and cannot be effectively modified or removed without specifying
+`'extraHeaders'` in `opt_extraInfoSpec`.
+
+Starting from Chrome 91, the `Content-Security-Policy`, `Content-Security-Policy-Report-Only`, and
+`Link` response headers are **not provided** and cannot be modified or removed without specifying
+`'extraHeaders'` in `opt_extraInfoSpec`.
+
+Starting from Chrome 92, the `Timing-Allow-Origin` and `BFCache-Opt-In` response headers are **not
+provided** and cannot be modified or removed without specifying `'extraHeaders'` in
+`opt_extraInfoSpec`.
 
 {% Aside %}
 
