@@ -161,6 +161,9 @@ or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
 Starting from Chrome 89, the `X-Frame-Options` response header cannot be effectively modified
 or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
 
+Starting from Chrome 91, the `Content-Security-Policy` response header cannot be modified or removed
+without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
+
 {% Aside %}
 
 **Note:** Specifying `'extraHeaders'` in `opt_extraInfoSpec` may have a negative impact on
