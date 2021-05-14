@@ -619,5 +619,23 @@
       "en": "Googler working on Chrome DevTools."
     },
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XQZ4QLusg8Iq5kP4s04d.jpg"
+  },
+  "demianrenzulli": {
+    "name": {
+      "given": "Demian",
+      "family": "Renzulli"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Web Ecosystems Consultant"
+    },
+    "descriptions": {
+      "en": "Demián is a Web Ecosystems Consultant working at Google New York."
+    },
+    "country": "US",
+    "twitter": "drenzulli",
+    "github": "demianrenzulli",
+    "glitch": "demianrenzulli",
+    "image": "image/26V1DWN36MZr3mUo8ChSBlCpzp43/Jsv3fxDmq9T74z5q7zzU.jpg"
   }
 }
