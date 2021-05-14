@@ -2,17 +2,17 @@
 layout: 'layouts/doc-post.njk'
 title: 'First-Party Sets'
 subhead: >
-  Allow related domain names owned by the same entity to declare themselves as belonging to the same first party.
+  Allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
 description: >
-  Allow related domain names owned by the same entity to declare themselves as belonging to the same first party.
-date: 2021-05-06
-updated: 2021-05-06
+  Allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
+date: 2021-05-17
+updated: 2021-05-17
 authors:
   - samdutton
 ---
 
 {% Aside 'warning' %}
-[For Googlers, April 2021.]
+[For Googlers, May 2021.]
 
 This document is a work in progress, unfinished and not to be shared externally.
 {% endAside %}

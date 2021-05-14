@@ -2,16 +2,16 @@
 layout: 'layouts/doc-post.njk'
 title: Is it ready yet?
 subhead: Implementation status for Privacy Sandbox APIs.
-description: Implementation status for Privacy Sandbox APIs.
-date: 2021-05-06
-updated: 2021-05-06
+description: Implementation status for Privacy Sandbox APIs. Last updated 2021/05/17.
+date: 2021-05-17
+updated: 2021-05-17
 authors:
   - samdutton
 ---
 
 
 {% Aside 'warning' %}
-[For Googlers, April 2021.]
+[For Googlers, May 2021.]
 
 This document is a work in progress, unfinished and not to be shared externally.
 {% endAside %}
@@ -47,7 +47,7 @@ Previously known as Event Conversion Measurement.
 * [API proposal](https://github.com/privacycg/first-party-sets)): see [issues](hhttps://github.com/privacycg/first-party-sets/issues) and [proposal on WICG](https://discourse.wicg.io/t/proposal-first-party-sets/3331) for API questions and discussion.
 * Find out more: [The Chromium Projects: First-Party Sets](https://www.chromium.org/updates/first-party-sets).  
 
-## Federated Learning of Cohorts (FLoC)
+## FLoC
 * [In origin trial](https://web.dev/origin-trials): Chrome 89–91. See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) for updates.
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561).
 * [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=floc).
@@ -56,7 +56,7 @@ Previously known as Event Conversion Measurement.
 * [GitHub](https://github.com/WICG/floc): see [issues](https://github.com/WICG/floc/issues) for 
 API questions and discussion.
 * [Chrome Platform Status](https://www.chromestatus.com/features/5710139774468096).
-* Find out more: [What is Federated Learning of Cohorts (FLoC)?](https://web.dev/floc/)
+* Find out more: [What is FLoC?](https://web.dev/floc/)
 
 ## FLEDGE
 Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).

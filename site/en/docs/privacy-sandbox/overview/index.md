@@ -2,15 +2,15 @@
 layout: layouts/doc-post.njk
 title: What is the Privacy Sandbox?
 subhead: The Privacy Sandbox is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms.
-description: "What's in it, who's behind it, and what it's for."
-date: 2021-05-06
-updated: 2021-05-06
+description: "What's in it, how to get involved, and what it's for."
+date: 2021-05-17
+updated: 2021-05-17
 authors:
 	- samdutton
 ---
 
 {% Aside 'warning' %}
-[For Googlers, April 2021.]
+[For Googlers, May 2021.]
 
 This document is a work in progress, unfinished and not to be shared externally.
 {% endAside %}
@@ -26,8 +26,8 @@ This document is a work in progress, unfinished and not to be shared externally.
 ## Why do we need the Privacy Sandbox?
 
 The Privacy Sandbox initiative has two core aims:
-* Develop replacement solutions to support legitimate third-party use cases and business models 
-without enabling users to be tracked across sites.
+* Develop replacement solutions to support web use cases and business models without enabling users 
+to be tracked across sites.
 * Phase out support for third-party cookies when new solutions are in place.
 
 
@@ -37,7 +37,7 @@ Chrome and other ecosystem stakeholders have offered more than 30 proposals to d
 found in the [public resources of W3C groups](https://www.w3.org/Privacy/). These proposals cover a 
 wide variety of use cases and requirements.
 
-The key use cases and proposals are listed below. 
+The key proposals developed by the Chrome team are listed below. 
 
 
 ### Relevant content and ads
@@ -50,11 +50,10 @@ The key use cases and proposals are listed below.
 
 ### Measurement and attribution
 
-* [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting): Attribute ad 
-clicks and ad views. Previously known as the Event Conversion Measurement API.
-* [Aggregation Reporting](https://github.com/csharrison/aggregate-reporting-api): Measure the reach 
-of a particular ad campaign (how many distinct users saw the ad) by collapsing information across 
-multiple sites into a single, privacy-preserving report.
+* [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting): Correlate ad clicks or ad 
+views with conversions. Previously known as the Event Conversion Measurement API.
+* [Aggregation Reporting](https://github.com/csharrison/aggregate-reporting-api): Collapse ad 
+measurement information across multiple sites into a single, privacy-preserving report.
 
 
 ### First-party protections
@@ -137,7 +136,7 @@ tab for each explainer.
 * [Gnatcatcher](https://github.com/bslassey/ip-blindness)
 * [Aggregated Reporting API](https://github.com/csharrison/aggregate-reporting-api)
 * [Attribution Reporting](https://github.com/csharrison/conversion-measurement-api)
-* [Federated Learning of Cohorts](https://github.com/jkarlin/floc)
+* [FLoC](https://github.com/jkarlin/floc)
 * [FLEDGE](https://github.com/michaelkleber/turtledove)
 
 ### Articles and videos for web developers
@@ -146,7 +145,7 @@ tab for each explainer.
 * [SameSite cookies explained](https://web.dev/samesite-cookies-explained/)
 * [Getting started with Trust Tokens](https://web.dev/trust-tokens)
 * [A more private way to measure ad conversions](https://web.dev/conversion-measurement/)
-* [What is Federated Learning of Cohorts (FLoC)?](https://web.dev/floc/)
+* [What is FLoC?](https://web.dev/floc/)
 * [Introducing the Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8)
 
 ### Principles and concepts behind the proposals

@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Federated Learning of Cohorts (FLoC)'
+title: 'FLoC'
 subhead: >
   Allow sites to guess your interests without being able to uniquely identify you.
 description: >
@@ -8,14 +8,14 @@ description: >
  web, their browser is assigned to an "interest cohort" along with thousands of others with a 
  similar browsing history. This is done without sharing individual browsing data with the browser 
  vendor or anyone else.
-date: 2021-02-28
-updated: 2021-05-06
+date: 2021-05-17
+updated: 2021-05-17
 authors:
   - samdutton
 ---
 
 {% Aside 'warning' %}
-[For Googlers, April 2021.]
+[For Googlers, May 2021.]
 
 This document is a work in progress, unfinished and not to be shared externally.
 {% endAside %}
@@ -31,15 +31,9 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 ## Why do we need FLoC?
 
-Many businesses rely on advertising to drive traffic to their sites, and many websites fund content 
-by enabling third parties to show ads. People generally prefer to see ads that are relevant and 
-useful to them, and relevant ads also bring more business to advertisers and 
-[more revenue to the websites that host them](https://services.google.com/fh/files/misc/disabling_third-party_cookies_publisher_revenue.pdf). Ad space is more valuable when it displays 
-relevant ads. Thus, selecting relevant ads increases revenue for ad-supported websites.
-
-However, many people are concerned about the privacy implications of tailored advertising, which 
-currently relies on techniques such as tracking cookies and device fingerprinting which can reveal 
-your browsing history to advertisers or ad platforms. The FLoC proposal aims to allow ad selection 
+Many people are concerned about the privacy implications of tailored advertising, which currently 
+relies on techniques such as tracking cookies and device fingerprinting which can reveal your 
+browsing history to advertisers or ad platforms. The FLoC proposal aims to allow ad selection 
 without compromising privacy.
 
 
@@ -52,11 +46,11 @@ As a user moves around the web, their browser uses the FLoC algorithm to work ou
 history. The browser recalculates its cohort periodically, on the user's device, without sharing 
 individual browsing data with the browser vendor or anyone else.
 
-Advertisers (sites that pay for advertisements) can include code on their own websites in order to 
-gather and provide cohort data to their adtech platforms (companies that provide software and tools 
-to deliver advertising). For example, an adtech platform might learn from an online shoe store that 
-browsers from cohorts 1101 and 1354 seem interested in the store's hiking gear. From other 
-advertisers, the adtech platform learns about other interests of those cohorts.
+Advertisers (sites that pay for advertisements) can include code on their own websites to gather and 
+provide cohort data to their adtech platforms (companies that provide software and tools to deliver 
+advertising). For example, an adtech platform might learn from an online shoe store that browsers 
+from cohorts 1101 and 1354 seem interested in the store's hiking gear. From other advertisers, the 
+adtech platform learns about other interests of those cohorts.
 
 Subsequently, the ad platform can use this data to select relevant ads (such as an ad for hiking 
 boots from the shoe store) when a browser from one of those cohorts requests a page from a site that 
@@ -77,8 +71,8 @@ that content to other visitors from those cohorts.
 
 ## How does FLoC work?
 
-[What is Federated Learning of Cohorts?](https://web.dev/floc/#how-does-floc-work) provides a 
-simple, step-by-step explanation of how FloC works. 
+[What is FLoC?](https://web.dev/floc/#how-does-floc-work) provides a simple, step-by-step 
+explanation of how FloC works. 
 
 The diagram below shows an example of the different roles in selecting and delivering a relevant ad 
 by using FLoC.
@@ -101,6 +95,6 @@ follow discussion](https://github.com/WICG/floc/issues).
 
 ## Find out more
 
-* [What is Federated Learning of Cohorts (FLoC)?](https://www.web.dev)
+* [What is FLoC?](https://www.web.dev)
 * [FLoC API technical explainer](https://github.com/WICG/floc)
 * [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
