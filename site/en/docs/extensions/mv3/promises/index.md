@@ -55,12 +55,14 @@ Not all methods in extensions APIs support promises. Sometimes that's because we
 promise support on the method yet; in many cases it's because using a promise isn't feasible for the
 method.
 
-{% if false %}
 You can check if an API method support promises by checking its API reference page:
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/lDjGweNENKyqGSA2nZrp.png", alt="Screenshot of an API
-reference page with promises support noted", width="800", height="467" %}
-{% endif %}
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/3gwYoRgPRWOrs5N2j5mP.png", alt="Screenshot showing a
+method that supports promises", width="800", height="280" %}
+
+The screenshot above shows a method from the `chrome.tabs` API. You can see that this method
+supports promises because it displays the `Promise` pill, and also shows syntax for both the promise
+and callback forms.
 
 ## How to use promises
 
