@@ -283,7 +283,7 @@ You must provide at least 1—and preferably the maximum allowed 5—screenshots
 displayed in the extension's store listing. If your extension supports multiple locales, you can provide
 locale-specific screenshots as described in [Internationalizing Your App][28].
 
-When you edit your app's listing, mousing over a screenshot's thumbnail brings up controls that let
+When you edit your extensions's listing, mousing over a screenshot's thumbnail brings up controls that let
 you delete the screenshot or change its position.
 
 Each screenshot should be as follows:
@@ -291,7 +291,7 @@ Each screenshot should be as follows:
 - Square corners, no padding (full bleed)
 - 1280x800 or 640x400 pixels
 
-<div class="aside aside--note"><b>Note</b>: 1280x800 screenshots are preferrable, as larger screenshots look better on high-resolution displays. Currently, all screenshots are downscaled to 640x400 pixels. If your screenshots do not look good when downscaled (for example, they have a lot of text) or if 1280x800 is too big for your app (for example, screenshots for a low-resolution game), you can upload 640x400 screenshots.</div>
+<div class="aside aside--note"><b>Note</b>: 1280x800 screenshots are preferrable, as larger screenshots look better on high-resolution displays. Currently, all screenshots are downscaled to 640x400 pixels. If your screenshots do not look good when downscaled (for example, they have a lot of text) or if 1280x800 is too big for your extension (for example, screenshots for a low-resolution game), you can upload 640x400 screenshots.</div>
 
 As an example, here are two screenshot images for an extension:
 
