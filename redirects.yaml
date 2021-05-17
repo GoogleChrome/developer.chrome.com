@@ -61,14 +61,10 @@ redirects:
   to: /docs/extensions/webstore
 - from: /docs/webstore/get_started
   to: /docs/extensions/webstore
-- from: /docs/webstore/payments-iap
-  to: /docs/extensions/webstore/money
 - from: /docs/webstore/inline_installation
   to: /docs/extensions/webstore
 - from: /docs/webstore/authentication
   to: /docs/extensions/webstore
-- from: /docs/webstore/one_time_payments
-  to: /docs/extensions/webstore/money
 
 # Fixes #675
 - from: /extensions/manifestVersion
