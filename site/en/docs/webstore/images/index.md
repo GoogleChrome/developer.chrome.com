@@ -207,19 +207,19 @@ give a sense of tangibility are OK, but avoid dramatic angles.
 You must provide one small, 440x280-pixel promotional image. You can also provide other images that
 the store can use to promote your extension.
 
-<div class="aside aside--note"><b>Note</b>: Unlike <a href="#screenshots">screenshots</a>, promotional images are not currently locale-specific. If your app supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the app's capabilities, or targeting the promo images to the locale in which you have the most users.</div>
+<div class="aside aside--note"><b>Note</b>: Unlike <a href="#screenshots">screenshots</a>, promotional images are not currently locale-specific. If your extension supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the extension's capabilities, or targeting the promo images to the locale in which you have the most users.</div>
 
 **Note**: If your images refer to Google brands, follow the [Branding Guidelines][18].
 
 Although only a small promotional image is required, you can also supply larger promotional images
-if you'd like your app to be featured more prominently in the Chrome Web Store. You can provide one
+if you'd like your extension to be featured more prominently in the Chrome Web Store. You can provide one
 of each of the following:
 
 - Small: 440x280 pixels **(required)**
 - Large: 920x680 pixels
 - Marquee: 1400x560 pixels
 
-<div class="aside aside--note"><b>Note</b>: Apps that don't have a small promotional image will be shown <b>after</b> apps that do have that image. If your app was published before the small promotional image was required, you should add that image so your app can be displayed more prominently.</div>
+<div class="aside aside--note"><b>Note</b>: Extensions that don't have a small promotional image will be shown <b>after</b> extensions that do have that image. If your extension was published before the small promotional image was required, you should add that image so your extension can be displayed more prominently.</div>
 
 Promotional images are your chance to capture users' attention and entice them to learn more. Don't
 just use a screenshot; your images should primarily communicate the brand. Here are some rules of
@@ -233,7 +233,7 @@ thumb for designing your images:
 - Fill the entire region.
 - Make sure the edges are well defined.
 
-The following graphics are examples of the promotional images for an app:
+The following graphics are examples of the promotional images for an extension:
 
 <table>
   <thead>
@@ -292,17 +292,11 @@ Each screenshot should be as follows:
 
 <div class="aside aside--note"><b>Note</b>: 1280x800 screenshots are preferrable, as larger screenshots look better on high-resolution displays. Currently, all screenshots are downscaled to 640x400 pixels. If your screenshots do not look good when downscaled (for example, they have a lot of text) or if 1280x800 is too big for your app (for example, screenshots for a low-resolution game), you can upload 640x400 screenshots.</div>
 
-As an example, here are five screenshot images for an app:
+As an example, here are two screenshot images for an extension:
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FjacdYh8XHvRwHoiP8UN.jpeg", alt="Screenshot 1", height="500", width="800" %}
+{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/tn6IOh8ZCrflIOcu8isV.png", alt="Screenshot 1", height="500", width="800" %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/6krgGzrhfz7nTHdRzJPI.jpeg", alt="Screenshot 2", height="500", width="800" %}
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/WG7svtEYGdzprL9jkC7A.jpeg", alt="Screenshot 3", height="500", width="800" %}
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xJJTI5ixv2rqG1FZ09kQ.jpeg", alt="Screenshot 4", height="500", width="800" %}
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oPzkJXhVmZWLTENXhQMf.jpeg", alt="Screenshot 5", height="500", width="800" %}
+{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/LlJiqs3gSxmXVsaoAhJX.jpg", alt="Screenshot 2", height="500", width="800" %}
 
 ## What next?
 
