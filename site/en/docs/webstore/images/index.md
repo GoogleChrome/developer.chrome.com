@@ -15,18 +15,18 @@ app][2].
 You need to supply several kinds of images to be used in the Chrome Web Store and the Google Chrome
 browser:
 
-- [App icon][3]
+- [Extension icon][3]
 - [Promotional images][4]
 - [Screenshots][5]
 
 Only the extension icon, a small promotional image, and a screenshot are mandatory. However, providing
 attractive versions of both required and optional images increases your app's chances of getting
-noticed. For example, your app can't be featured unless you provide a large or marquee promotional
+noticed. For example, your extension can't be featured in marquee unless you provide a marquee promotional
 image.
 
 ## App icon
 
-You must provide a 128x128-pixel app icon image in the [ZIP file of your app][6]. Some requirements
+You must provide a 128x128-pixel extension icon image in the [ZIP file of your app][6]. Some requirements
 for the image:
 
 - The actual icon size should be **96x96** (for square icons); an additional 16 pixels per side
@@ -73,7 +73,7 @@ Here are some icons that follow these guidelines.
 
 ### Icon size
 
-All app icons should have the same visual weight, occupying roughly the same area. As the following
+All extension icons should have the same visual weight, occupying roughly the same area. As the following
 figure shows, when you size an icon to fill the available area, square and circular icons are
 significantly larger than they should be, compared to icons with other shapes.
 
@@ -205,7 +205,7 @@ give a sense of tangibility are OK, but avoid dramatic angles.
 ## Promotional images
 
 You must provide one small, 440x280-pixel promotional image. You can also provide other images that
-the store can use to promote your app.
+the store can use to promote your extension.
 
 <div class="aside aside--note"><b>Note</b>: Unlike <a href="#screenshots">screenshots</a>, promotional images are not currently locale-specific. If your app supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the app's capabilities, or targeting the promo images to the locale in which you have the most users.</div>
 
@@ -245,11 +245,11 @@ The following graphics are examples of the promotional images for an app:
   <tbody>
     <tr>
       <td>
-        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xB3wghefUGHWB2CqzYxw.jpg", 
+        {% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/9KruJ8pLUNTrzXIXP6JN.png", 
                alt="Small promo image", height="140", width="220" %}
       </td>
       <td>
-        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PQvoyo0sb9SHh9kTaxip.jpg", 
+        {% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/uvSRznxKJngidMKDIeqN.png", 
                alt="Large promo image", height="340", width="460" %}
       </td>
     </tr>
@@ -258,7 +258,7 @@ The following graphics are examples of the promotional images for an app:
 
 Marquee image (1400x560):
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DETytGVTDQk2HMmnjOFr.jpg", 
+{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/tn6IOh8ZCrflIOcu8isV.png", 
         alt="Marquee", height="280", width="700" %}
 
 <div class="aside aside--note"><b>Note</b>: You can find the review status of your promo image in each item's listing within your developer dashboard. Click on 'Edit' on the item's listing, and scroll down to the Promotional Images section. If you have questions about the status of your promo images, contact <a href="mailto:cws-assets@google.com">cws-assets@google.com</a>.</div>
