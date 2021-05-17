@@ -20,13 +20,14 @@ browser:
 - [Screenshots][5]
 
 Only the extension icon, a small promotional image, and a screenshot are mandatory. However, providing
-attractive versions of both required and optional images increases your app's chances of getting
+attractive versions of both required and optional images increases your extension's chances of getting
 noticed. For example, your extension can't be featured in marquee unless you provide a marquee promotional
 image.
 
-## App icon
+## Extension icon
 
-You must provide a 128x128-pixel extension icon image in the [ZIP file of your app][6]. Some requirements
+You must provide a 128x128-pixel extension icon image in the [ZIP file of your 
+][6]. Some requirements
 for the image:
 
 - The actual icon size should be **96x96** (for square icons); an additional 16 pixels per side
@@ -38,7 +39,7 @@ for the image:
 Since Chrome 15, the image that you provide is dynamically resized in the New Tab page. Its size is
 determined by the overall browser window size.
 
-<div class="aside aside--note"><b>Note</b>: To make sure your icon looks good, preview your app's listing in the Chrome Web Store. If you're working on an installable web app, you also need to view your icon in the New Tab page. To do so, you can <a href="https://developers.google.com/chrome/apps/docs/developers_guide#installing">load the unpacked app</a>, bring up the New Tab page, and then look at the icon against a variety of backgrounds by applying a few <a href="https://tools.google.com/chrome/intl/en/themes/">themes</a>.</div>
+<div class="aside aside--note"><b>Note</b>: To make sure your icon looks good, preview your extension's listing in the Chrome Web Store. If you're working on an installable web app, you also need to view your icon in the New Tab page. To do so, you can <a href="https://developers.google.com/chrome/apps/docs/developers_guide#installing">load the unpacked app</a>, bring up the New Tab page, and then look at the icon against a variety of backgrounds by applying a few <a href="https://tools.google.com/chrome/intl/en/themes/">themes</a>.</div>
 
 When you design the icon, keep the following advice in mind:
 
@@ -168,7 +169,7 @@ nor circular guidelines, but it fits near them both.
 
 ### Perspective
 
-For flexibility and consistency, app icons should be front-facing. Subtle tweaks of perspective that
+For flexibility and consistency, extension icons should be front-facing. Subtle tweaks of perspective that
 give a sense of tangibility are OK, but avoid dramatic angles.
 
 <table>
@@ -278,8 +279,8 @@ Here is a description of the review statuses:
 
 ## Screenshots
 
-You must provide at least 1—and preferably the maximum allowed 5—screenshots of your app to be
-displayed in the app's store listing. If your app supports multiple locales, you can provide
+You must provide at least 1—and preferably the maximum allowed 5—screenshots of your extension to be
+displayed in the extension's store listing. If your extension supports multiple locales, you can provide
 locale-specific screenshots as described in [Internationalizing Your App][28].
 
 When you edit your app's listing, mousing over a screenshot's thumbnail brings up controls that let
@@ -294,7 +295,7 @@ Each screenshot should be as follows:
 
 As an example, here are two screenshot images for an extension:
 
-{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/tn6IOh8ZCrflIOcu8isV.png", alt="Screenshot 1", height="500", width="800" %}
+{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/ZR47lUf4fWymaVWR9kDT.jpg", alt="Screenshot 1", height="500", width="800" %}
 
 {% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/LlJiqs3gSxmXVsaoAhJX.jpg", alt="Screenshot 2", height="500", width="800" %}
 
