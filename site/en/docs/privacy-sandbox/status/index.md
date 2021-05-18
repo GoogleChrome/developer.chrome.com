@@ -36,7 +36,7 @@ Previously known as Event Conversion Measurement.
 * Find out more: [Getting started with Trust Tokens](https://web.dev/trust-tokens/)
 
 ## First-Party Sets
-* [Current origin trial](https://web.dev/origin-trials/): Chrome 89 to 91. 
+* [Current origin trial](https://web.dev/origin-trials/): Chrome 89 to 93. 
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
 * [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
 * [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets).
