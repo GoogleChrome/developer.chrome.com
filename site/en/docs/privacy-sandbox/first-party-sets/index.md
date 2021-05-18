@@ -15,7 +15,7 @@ authors:
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials/) Chrome 89 to 91.
+* [In origin trial](https://web.dev/origin-trials/) Chrome 89 to 93.
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
 * [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
 * [Chromium Projects](https://www.chromium.org/updates/first-party-sets).
