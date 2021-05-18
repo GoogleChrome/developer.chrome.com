@@ -6,7 +6,7 @@ subhead: >
 description: >
  FLoC enables interest-based advertising in a way that preserves privacy. As a user moves around the 
  web, their browser is assigned to an "interest cohort" along with thousands of others with a 
- similar browsing history. This is done without sharing individual browsing data with the browser 
+ similar browsing history. This is done without sharing individual browsing history with the browser 
  vendor or anyone else.
 date: 2021-05-18
 updated: 2021-05-18

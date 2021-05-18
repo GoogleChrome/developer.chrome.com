@@ -1,7 +1,7 @@
 ---
 layout: layouts/doc-post.njk
 title: What is the Privacy Sandbox?
-subhead: The Privacy Sandbox is a series of proposals to satisfy third-party use cases without third-party cookies or other tracking mechanisms.
+subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "What's in it, how to get involved, and what it's for."
 date: 2021-05-18
 updated: 2021-05-18
@@ -28,8 +28,7 @@ to be tracked across sites, and avoiding cross-site tracking users aren't aware 
 ## What are the Privacy Sandbox proposals?
 
 Chrome and other ecosystem stakeholders have offered more than 30 proposals to date, which can be 
-found in the [public resources of W3C groups](https://www.w3.org/Privacy/). These proposals cover a 
-wide variety of use cases and requirements.
+found in the [public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo). These proposals cover a wide variety of use cases and requirements.
 
 The key proposals developed by the Chrome team are listed below. 
 
@@ -45,9 +44,8 @@ The key proposals developed by the Chrome team are listed below.
 ### Measurement and attribution
 
 * [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting): Correlate ad clicks or ad 
-views with conversions. Previously known as the Event Conversion Measurement API.
-* [Aggregation Reporting](https://github.com/csharrison/aggregate-reporting-api): Collapse 
-measurement information across multiple sites into a single, privacy-preserving report.
+views with conversions. Previously known as the Event Conversion Measurement API. Enables two types 
+of reports: event-level and aggregate.
 
 
 ### First-party protections
@@ -69,17 +67,20 @@ another, in order to help combat fraud and distinguish bots from humans.
 * [Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8): Allow websites to get information 
 about a user's browser or device, but enable the browser to set a quota on the total amount of 
 information a site can access, so that a user cannot be identified.
-* [User-Agent Client Hints](https://web.dev/user-agent-client-hints/): The User-Agent string is a 
-significant passive [fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) 
+* [User-Agent Client Hints](https://web.dev/user-agent-client-hints/): 
+The [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) (UA) string 
+is a significant passive [fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) 
 surface, as well as being difficult to process. Client Hints enable developers to actively 
-request information about the user's device or conditions, rather than needing to parse this data 
-from the User-Agent (UA) string.
+request only the information they need about the user's device or conditions, rather than needing to 
+parse this data from the User-Agent string.
 * [Gnatcatcher](https://github.com/bslassey/ip-blindness): Limit the ability to identify individual 
-users by accessing their IP address. There are two parts to the proposal: [Willful IP Blindness](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) provides a way for websites to let browsers know 
-they are not observing IP addresses and [Near-path NAT](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) allows groups of users to send their traffic through the same privatizing server, 
-effectively hiding their IP addresses from a site host. Gnatcatcher also ensures that sites 
-requiring access to IP addresses for legitimate purposes such as abuse prevention can do so, subject 
-to certification and auditing.
+users by accessing their IP address. There are two parts to the proposal: 
+[Willful IP Blindness](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) 
+provides a way for websites to let browsers know they are not connecting IP addresses with users, 
+and [Near-path NAT](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) allows 
+groups of users to send their traffic through the same privatizing server, effectively hiding their 
+IP addresses from a site host. Gnatcatcher also ensures that sites requiring access to IP addresses 
+for legitimate purposes such as abuse prevention can do so, subject to certification and auditing.
 
 
 ### Identity
@@ -95,7 +96,9 @@ can be used to identify and track users across sites.
 
 By early 2021 there were: 
 * 30+ Privacy Sandbox proposals offered by Chrome and others.
-* 400+ participants who joined W3C groups to provide input including the [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) and the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
+* 400+ participants who joined W3C groups to provide input including the 
+[Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) and 
+the [Privacy Community Group](https://www.w3.org/community/privacycg/participants).
 * Five API implementations available for testing in Chrome.
 
 

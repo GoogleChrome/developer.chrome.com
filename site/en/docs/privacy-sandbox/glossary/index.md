@@ -149,18 +149,19 @@ Arbitrary number used once only in cryptographic communication.
 
 ## Origin 
 
-The origin of a request, including the server name but no path information. For example:
+The origin of a request, including the scheme and server name, but no path information. For example:
 `https://web.dev`
 
 ## Origin trial {: #origin-trial}
-Origin trials provide access to a new or experimental feature, to build functionality users can try 
-out for a limited time before the feature is made available to everyone. When Chrome offers an 
-origin trial for a feature, you can register for the trial to enable the feature for all users on 
-your [origin](https://web.dev/same-site-same-origin/#origin), without requiring users to toggle any 
-flags or switch to an alternative build of Chrome (though they may need to upgrade). Origin trials 
-enable developers to build demos and prototypes using new features. The trials also help Chrome 
-engineers understand how new features are used, and how they may interact with other web 
-technologies. Find out more: [Getting started with Chrome's origin trials](https://web.dev/origin-trials/).
+Origin trials provide access to a new or experimental feature, to make it possible to build 
+functionality that users can try out for a limited time before the feature is made available to 
+everyone. When Chrome offers an origin trial for a feature, an [origin](#origin) can be registered 
+for the trial to enable the feature for all users on that origin, without requiring users to toggle 
+any flags or switch to an alternative build of Chrome (though they may need to upgrade). Origin 
+trials enable developers to build demos and prototypes using new features. The trials also help 
+Chrome engineers understand how 
+new features are used, and how they may interact with other web technologies. Find out more: 
+[Getting started with Chrome's origin trials](https://web.dev/origin-trials/).
 
 ## Passive surface {: #passive-surface }
 

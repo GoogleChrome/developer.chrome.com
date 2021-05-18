@@ -9,7 +9,9 @@ authors:
   - samdutton
 ---
 
-
+{% Aside 'caution' %}
+There may be multiple separate origin trial periods for each API.
+{% endAside %}
 
 ## Attribution Reporting
 Previously known as Event Conversion Measurement.

@@ -29,12 +29,12 @@ libraries from [CDNs](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cd
 may also want to correlate user activity across different sites by using mechanisms such as 
 [cookies](/docs/privacy-sanddbox/glossary#origin).
 
-Browsers are proposing privacy models that restrict access to user identity within a first-party 
+Browsers are proposing privacy models that restrict access to user identity within a cross-site 
 context. However, many organizations have related sites with different domain names, or with domains 
-for different countries such as `example.com` and `example.co.uk`. It should be possible to allow related 
-domain names owned by the same entity to declare themselves as belonging to the same first party, so 
-browsers treat those domains as first-party in situations where first party and third party are 
-treated differently. 
+for different countries such as `example.com` and `example.co.uk`. It should be possible to allow 
+related domain names with an appropriate relationship, perhaps common ownership, to declare 
+themselves as belonging to the same first party, so browsers treat those domains as first-party in 
+situations where first party and third party are treated differently. 
 
 Any solution would also need to prevent abuse of the system. For example, it should not be possible 
 to declare organizations that include unrelated sites with different owners, in order to gain 
@@ -71,16 +71,17 @@ Suppose `a.example`, `b.example`, and `c.example` wish to form a first-party set
 The owner domain hosts a manifest file that lists its member domains. A browser can ask a member 
 website to specify its owner, and then check the owner's manifest to verify the relationship.
 
-Browser policies will prevent abuse or misuse. For example, First-Party Sets must not enable the 
-exchange of user information across unrelated sites, or the grouping of sites that are not owned by 
-the same entity. Owner sites will need to submit their proposed group of domains to a public tracker 
-(such as a dedicated GitHub repository) along with information needed to satisfy browser policy. 
-Verification of the owner’s control over member domains may also require a challenge to be served 
-at a `.well-known` URL on each of the domains in the set.
+Browser policies are expected to prevent abuse or misuse. For example, First-Party Sets must not 
+enable the exchange of user information across unrelated sites, or the grouping of sites that are 
+not owned by the same entity. One possible way for a site to register could be for the site to submit 
+their proposed group of domains to a public tracker (such as a dedicated GitHub repository) along 
+with information needed to satisfy browser policy. Verification of the owner’s control over member 
+domains may also require a challenge to be served at a `.well-known` URL on each of the domains in 
+the set.
 
-The matching proposal for First-Party Sets is the `SameParty` cookie attribute. Specifying the 
-SameParty attribute on a cookie instructs the browser to include the cookie when its context is part 
-of the same First-Party Set as the top-level context.
+The complementary proposal to First-Party Sets is the `SameParty` cookie attribute. Specifying the 
+`SameParty` attribute on a cookie instructs the browser to include the cookie when its context is 
+part of the same First-Party Set as the top-level context.
 
 For example, for the First-Party Set described above, if a.example sets this cookie:
 
