@@ -22,12 +22,12 @@ authors:
 
 ## Why do we need First-Party Sets?
 
-Web pages are composed of content from multiple [origins](/docs/privacy-sanddbox/glossary#origin). 
+Web pages are composed of content from multiple [origins](/docs/privacy-sandbox/glossary#origin). 
 Some content is first-party and comes from the top-level site the user is visiting. Other content 
 may come from third parties, such as ads, embedded media, or shared resources such as JavaScript 
 libraries from [CDNs](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/). Third parties 
 may also want to correlate user activity across different sites by using mechanisms such as 
-[cookies](/docs/privacy-sanddbox/glossary#origin).
+[cookies](/docs/privacy-sandbox/glossary#origin).
 
 Browsers are proposing privacy models that restrict access to user identity within a cross-site 
 context. However, many organizations have related sites with different domain names, or with domains 
@@ -83,12 +83,12 @@ The complementary proposal to First-Party Sets is the `SameParty` cookie attribu
 `SameParty` attribute on a cookie instructs the browser to include the cookie when its context is 
 part of the same First-Party Set as the top-level context.
 
-For example, for the First-Party Set described above, if a.example sets this cookie:
+For example, for the First-Party Set described above, a.example can set the following cookie:
 
 ```Set-Cookie: session=123; Secure; SameSite=Lax; SameParty```
 
-Then when a visitor is on b.example or c.example and a request goes to a.example, then the `session` 
-cookie will be included on that request.
+This means that when a visitor on b.example or c.example makes a request to a.example, the `session` 
+cookie is included on that request.
 
 
 ---
