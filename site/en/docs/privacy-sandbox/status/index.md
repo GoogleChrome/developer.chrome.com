@@ -3,18 +3,12 @@ layout: 'layouts/doc-post.njk'
 title: Is it ready yet?
 subhead: Implementation status for Privacy Sandbox APIs.
 description: Implementation status for Privacy Sandbox APIs. Last updated 2021/05/17.
-date: 2021-05-17
-updated: 2021-05-17
+date: 2021-05-18
+updated: 2021-05-18
 authors:
   - samdutton
 ---
 
-
-{% Aside 'warning' %}
-[For Googlers, May 2021.]
-
-This document is a work in progress, unfinished and not to be shared externally.
-{% endAside %}
 
 
 ## Attribution Reporting

@@ -8,17 +8,11 @@ description: >
  web, their browser is assigned to an "interest cohort" along with thousands of others with a 
  similar browsing history. This is done without sharing individual browsing data with the browser 
  vendor or anyone else.
-date: 2021-05-17
-updated: 2021-05-17
+date: 2021-05-18
+updated: 2021-05-18
 authors:
   - samdutton
 ---
-
-{% Aside 'warning' %}
-[For Googlers, May 2021.]
-
-This document is a work in progress, unfinished and not to be shared externally.
-{% endAside %}
 
 
 ## Implementation status
@@ -66,8 +60,6 @@ in order to inform ad auction bidding behavior.
 * Recommend content to users. For example, suppose a news site observes that their sports podcast 
 page has become especially popular with visitors from cohorts 1234 and 14159. They can recommend 
 that content to other visitors from those cohorts.
-
-
 
 ## How does FLoC work?
 

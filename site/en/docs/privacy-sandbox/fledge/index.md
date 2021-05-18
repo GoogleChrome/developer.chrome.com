@@ -5,17 +5,11 @@ subhead: >
   A solution for remarketing use cases, designed so it cannot be used by third parties to track user browsing behaviour.
 description: >
   FLEDGE satisfies remarketing use cases, but is designed so it cannot be used by third parties to track user browsing behaviour. The API enables on-device "auctions" by the browser to choose relevant ads, based on websites the user has previously visited. 
-date: 2021-05-17
-updated: 2021-05-17
+date: 2021-05-18
+updated: 2021-05-18
 authors:
   - samdutton
 ---
-
-{% Aside 'warning' %}
-[For Googlers, May 2021.]
-
-This document is a work in progress, unfinished and not to be shared externally.
-{% endAside %}
 
 
 ## Implementation status
@@ -34,9 +28,10 @@ FLEDGE is a descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
 ## Why do we need FLEDGE?
 
 Understanding user interests can enable more relevant ads than simply choosing ads based on site 
-content (contextual targeting) or by using information about the user (first-party-data targeting).
-Traditionally, ad platforms have learned about user interests by tracking their behaviour across 
-sites. We need a way to present users with relevant ads without cross-site tracking.
+content (contextual targeting) or by using information that the user provided to the site on which 
+the ad appears (first-party-data targeting). Traditionally, ad platforms have learned about user 
+interests by tracking their behaviour across sites. We need a way to present users with relevant ads 
+without cross-site tracking.
 
 FLEDGE satisfies [remarketing](/privacy-sandbox/glossary/#remarketing) use cases, but is designed so 
 it cannot be used by third parties to track user browsing behaviour. The API enables on-device 
@@ -54,8 +49,6 @@ with other information about a user—in particular, the identity of a person or
 An advertiser cannot learn about what pages a user views on a publisher site.
 * Websites, and the ad networks used by those sites, cannot learn about their visitors' ad interests 
 or interest groups: ad selection is done on the user's browser.
-
-
 
 In other words, FLEDGE keeps your interests and browsing activity private. For example, if you visit 
 an online store and show an interest in running shoes, and then visit a news site, the advertiser 

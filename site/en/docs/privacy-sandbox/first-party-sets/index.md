@@ -5,17 +5,11 @@ subhead: >
   Allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
 description: >
   Allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
-date: 2021-05-17
-updated: 2021-05-17
+date: 2021-05-18
+updated: 2021-05-18
 authors:
   - samdutton
 ---
-
-{% Aside 'warning' %}
-[For Googlers, May 2021.]
-
-This document is a work in progress, unfinished and not to be shared externally.
-{% endAside %}
 
 
 ## Implementation status
@@ -45,8 +39,6 @@ treated differently.
 Any solution would also need to prevent abuse of the system. For example, it should not be possible 
 to declare organizations that include unrelated sites with different owners, in order to gain 
 first-party privileges.
-
-
 
 ## How do First-Party Sets work?
 
@@ -85,6 +77,17 @@ the same entity. Owner sites will need to submit their proposed group of domains
 (such as a dedicated GitHub repository) along with information needed to satisfy browser policy. 
 Verification of the owner’s control over member domains may also require a challenge to be served 
 at a `.well-known` URL on each of the domains in the set.
+
+The matching proposal for First-Party Sets is the `SameParty` cookie attribute. Specifying the 
+SameParty attribute on a cookie instructs the browser to include the cookie when its context is part 
+of the same First-Party Set as the top-level context.
+
+For example, for the First-Party Set described above, if a.example sets this cookie:
+
+```Set-Cookie: session=123; Secure; SameSite=Lax; SameParty```
+
+Then when a visitor is on b.example or c.example and a request goes to a.example, then the `session` 
+cookie will be included on that request.
 
 
 ---
