@@ -9,10 +9,34 @@ description: >
 This page has advice on how you should implement your app and list it in the store. As the store
 matures and we learn from developers' experiences, these recommendations will be updated.
 
-## Design a great app
+## Design a high-quality extension
 
-This is the hard part. For advice, you can read articles about [app design][1]. Also, follow the
-[pre-launch checklist][2].
+We encourage you to develop extensions that are of high quality. High-quality extensions conform to
+standards of performance, security, and user experience, as summarized by the following guidelines:
+
+* **Compliance:** Does the extension comply with our [program policies]? Extensions that violate any
+of these policies will not be considered for a badge and may be removed from the store.
+
+* **Manifest V3:** Is the extension built on Manifest V3? Manifest V3 reflects the aims of our
+  platform vision, and all High Quality extensions must be technically compliant (see this
+  [MV3 overview][mv3-overview]).
+
+* **Security:** Is the extension safe for users? Before an extension receives a High Quality badge,
+  it undergoes a deep code review to ensure it does not pose security threats, does not use
+  deceptive installation tactics and meets Chrome Web Store’s data privacy requirements (see this
+  [FAQ][user-data-faq]).
+
+* **Performance:** Does the extension function at an outstanding level? All High Quality extensions
+  should not simply perform their intended action, but perform at an extremely high level. 
+
+* **User experience:** Is the extension a joy to use? Reviewers look for extensions that are easy to
+  install and manage, with a good-looking, intuitive and seamless user experience.
+
+* **Store listing:** Does the store listing page provide quality and well-designed images (icon,
+  tile, marquee, and screenshots)? Images should not be blurry or too busy. Additionally, the store
+  listing page should be complete with all fields filled out (see [Supplying images] [supplying-images]
+  and [Completing your store listing] [completing-listing] for more listing tips).
+
 
 ## Support Google Accounts
 
@@ -37,10 +61,9 @@ intentionally unsubscribe or uninstall the app, they might come back.
 
 ## Cache license data
 
-If you use Chrome Web Store Payments, you can use the Licensing API to programmatically check for
-payment, as described in [Checking for Payment][4].
-
-But don't query the license server too often: [Cache the results][5].
+If you use a payment processor or other licensing manager, you may also want to cache the results
+so that **(a)** Your user can still use the extension when they are offline, and **(b)** you
+reduce the number of queries to the license server, reducing quota usage and traffic.
 
 ## Create a compelling store listing
 
@@ -54,158 +77,22 @@ See [Supplying Images][8] for guidelines on the images you should supply to the 
 
 ### Choose your app's category well
 
-The Chrome Developer Dashboard lets you specify a primary and secondary category for each web app.
-The primary category determines where your app appears in the store (the secondary category isn't
-used to display your app).
+The developer console lets you specify a category for each extension. Choose the category
+that is most appropriate:
 
-Each category is organized into logical groups. The store displays your web app under the group
-heading and in the filtered category. If no category matches your web app, you can select 'Other';
-the store will only display your web app under the group heading. For example, if you choose
-"Developer Tools" within the Productivity group, your app appears in the store under both the
-Productivity and Developer Tools lists. Alternatively, if you choose "Other", your app appears in
-the Productivity list only.
+* Accessibility
+* Blogging
+* Developer Tools
+* Fun
+* News & Weather
+* Photos
+* Productivity
+* Search Tools
+* Shopping
+* Social & Communication
+* Sports
 
-You can also list additional categories or keywords to describe your app. These may be used to
-improve search relevance in the future, or to influence future versions of the category list. The
-following list describes the categories that you can choose for your web app. The categories might
-change; if that happens, your web app might be recategorized.
 
-<table>
-  <thead>
-    <tr>
-      <th>Group</th>
-      <th>Categories</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Business Tools</td>
-      <td>
-        Accounting & Finance<br>
-        Admin & Management<br>
-        ERP & Logistics<br>
-        HR & Legal<br>
-        Marketing & Analytics<br>
-        Sales & CRM
-      </td>
-      <td>Apps to help businesses run successfully.</td>
-    </tr>
-    <tr>
-      <td>Education</td>
-      <td>
-        Academic Resources<br>
-        Family<br>
-        Foreign Languages<br>
-        School Administration<br>  
-        Teacher Tools<br>
-        Test Preparation
-      </td>
-      <td>Apps that teach the user something or can be helpful in a classroom environment.</td>
-    </tr>
-    <tr>
-      <td>Entertainment</td>
-      <td>
-        Books<br>
-        Music<br>
-        Online Video<br>
-        Photos<br>
-        Radio<br>
-        TV & Movies
-      </td>
-      <td>
-        All leisure apps except for games.<br>
-        <b>Note</b>: An app can be in either Entertainment or Games, but it should never be in both.
-      </td>
-    </tr>
-    <tr>
-      <td>Games</td>
-      <td>
-        Action & Adventure Games<br>
-        Arcade Games<br>
-        Board Games<br>
-        Card Games<br>
-        Educational Games<br>
-        Puzzle Games<br>
-        Role Playing Games<br>
-        Sports Games<br>
-        Strategy Games<br>
-        Virtual Worlds
-      </td>
-      <td>All kinds of games that users can play. Also see Education and Entertainment.</td>
-    </tr>
-    <tr>
-      <td>Lifestyle</td>
-      <td>
-        Astrology<br>
-        Fashion<br>
-        Food<br>
-        Health & Fitness<br>
-        Money<br>
-        Religion<br> 
-        Shopping<br>
-        Travel
-      </td>
-      <td>Apps for everyday life.</td>
-    </tr>
-    <tr>
-      <td>News & Weather</td>
-      <td>
-        Blogs<br>
-        Magazines<br>
-        News Aggregators<br>
-        Newspapers<br>
-        Social News<br>
-        Sports<br>
-        Weather Forecasts
-      </td>
-      <td>Apps that feature news about current events or weather.</td>
-    </tr>
-    <tr>
-      <td>Productivity</td>
-      <td>
-        Calendar & Scheduling<br>
-        Creative Tools<br>
-        Design Essentials<br> 
-        Developer Tools<br>
-        Office Applications<br>  
-        Online Documents & File Storage<br>
-        Search & Browsing Tools<br>
-        Task Management
-      </td>
-      <td>
-        Apps that someone might spend a significant amount of time using to get something done. 
-        Also see Utilities.
-      </td>
-    </tr>
-    <tr>
-      <td>Social & Communication</td>
-      <td>
-        Blogging<br>
-        Chat & IM<br>
-        Dating<br>
-        Email & Contacts<br>
-        Phone & SMS<br>
-        Social Networking
-      </td>
-      <td>Apps that help people communicate with each other.</td>
-    </tr>
-    <tr>
-      <td>Utilities</td>
-      <td>
-        Alarms & Clocks<br>
-        Bookmarks<br>
-        Calculators<br>
-        Dictionaries<br>
-        Notepads
-      </td>
-      <td>Useful apps that have a narrower scope than the ones in the Productivity category.</td>
-    </tr>
-  </tbody>
-</table>
-
-[1]: /docs/apps
-[2]: /docs/webstore/launching#pre-launch-checklist
 [3]: /docs/webstore/identify_user
 [4]: /docs/webstore/check_for_payment
 [5]: /docs/webstore/check_for_payment#cache
@@ -213,3 +100,8 @@ change; if that happens, your web app might be recategorized.
 [7]: /docs/webstore/branding
 [8]: /docs/webstore/images
 [9]: #top
+[mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
+[program policies]: /docs/webstore/program_policies/
+[user-daat-faq]: /docs/webstore/user_data/
+[supplying-images]: /docs/webstore/images/
+[completing-listing]: /docs/webstore/cws-dashboard-listing/
