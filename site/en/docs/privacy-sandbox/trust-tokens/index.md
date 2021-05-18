@@ -45,7 +45,7 @@ untrusted instances to discover user identity.
 Trust Tokens are not a replacement for reCAPTCHA or other mechanisms for determining whether or not 
 a user is who they say they are.
 
-Trust Tokens are a way to **convey** trust in a user, not **establish** trust in a user. 
+Trust Tokens are a way to **convey** trust in a user, not **establish** trust in a user.
 {% endAside %}
 
 
@@ -90,8 +90,8 @@ successfully completing reCAPTCHA.
 1. The Trust Tokens JavaScript API is used to request trust tokens from the issuer site.
 1. The issuer site responds with token data.
 1. The user's browser securely stores data for the trust token.
-1. The user visits a website (such as a news publisher) that wants to verify if the user is a real 
-human: for example, when displaying ads.
+1. The user visits a different website (such as a news publisher) that wants to verify if the user 
+is a real human: for example, when displaying ads.
 1. The site uses the Trust Tokens API to check if the user's browser has trust tokens stored for 
 issuers that the site trusts.
 1. Trust tokens are found for the issuer the user visited previously.
@@ -118,6 +118,8 @@ follow discussion](https://github.com/WICG/trust-token-api/issues).
 * **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants).
 * **IETF**: Provide technical input for the underlying protocol in the IETF 
 [Privacy&nbsp;Pass&nbsp;working group](https://datatracker.ietf.org/wg/privacypass/about/).
+* **Developer support**: Ask questions and join discussions on the 
+[Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 
 ## Find out more

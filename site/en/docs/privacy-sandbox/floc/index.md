@@ -23,7 +23,7 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials): Chrome 89–91. See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) for updates.
+* [In origin trial](https://web.dev/origin-trials): Chrome 91 Beta. See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) for updates.
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561).
 * [Demo](https://floc.glitch.me).
 * [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) in 
@@ -33,8 +33,8 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 Many people are concerned about the privacy implications of tailored advertising, which currently 
 relies on techniques such as tracking cookies and device fingerprinting which can reveal your 
-browsing history to advertisers or ad platforms. The FLoC proposal aims to allow ad selection 
-without compromising privacy.
+browsing history across sites to advertisers or ad platforms. The FLoC proposal aims to allow ad 
+selection in a way that better protects privacy.
 
 
 ## What is the FLoC proposal?
@@ -91,6 +91,8 @@ alt="Diagram showing, step by step, the different roles in selecting and deliver
 * **GitHub**: Read the [proposal](https://github.com/WICG/floc), [raise questions and 
 follow discussion](https://github.com/WICG/floc/issues).
 * **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants).
+* **Developer support**: Ask questions and join discussions on the 
+[Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 
 ## Find out more

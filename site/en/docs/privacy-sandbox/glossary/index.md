@@ -20,12 +20,28 @@ This document is a work in progress, unfinished and not to be shared externally.
 [Let us know](.) [URL TBC] if something is missing!
 {% endAside %}
 
-## Blink
+## Ad platform (Adtech) {: #adtech }
+
+A company that provides services to deliver ads.
+
+## Advertiser {: #advertiser }
+
+A company that pays to advertise its products.
+
+## Attribution {: #attribution }
+
+Identification of user actions that contribute to an outcome. For example: correlation of ad clicks 
+or views with [conversions](#conversion).
+
+## Blink {: #blink }
+
 The [rendering engine](https://en.wikipedia.org/wiki/Browser_engine) used by Chrome, developed as 
 part of the [Chromium](#chromium) project.
 
-## Chromium
-An open-source web browser project. Chrome, Microsoft Edge and Opera are based on Chromium.
+## Chromium {: #chromium }
+
+An open-source web browser project. Chrome, Microsoft Edge, Opera and other browsers are based on 
+Chromium.
 
 ## Click-through rate (CTR) {: #ctr }
 
@@ -37,20 +53,22 @@ A conversion attributed to an ad that was 'clicked'.
 
 ## Conversion
 
-The completion of some desired goal following action by a user. For example, purchase of a product or sign-up for a newsletter after clicking an ad that links to the advertiser's site.
+The completion of some desired goal following action by a user. For example, purchase of a product 
+or sign-up for a newsletter after clicking an ad that links to the advertiser's site.
 
 ## Cookie
 
-A website can ask a web browser to store a small piece of textual data called a cookie on a user's 
-computer. Cookies can be used to save data about a user (or a reference to data in a back-end data store) 
-as the user moves across the web. For example: an online store can retain shopping cart details even 
-if a user is not logged in, or the site could record the user's browsing activity on their site. See 
-[First-party cookie](#first-party-cookie) and [Third-party cookie](#third-party-cookie).
+A website can ask a web browser to store a small piece of textual data (called a cookie) on a user's 
+computer. Cookies can be used by a website to save data about a user (or a reference to data stored 
+on the website's backend servers) as the user moves across the web. For example: an 
+online store can retain shopping cart details even if a user is not logged in, or the site could 
+record the user's browsing activity on their site. See [First-party cookie](#first-party-cookie) and 
+[Third-party cookie](#third-party-cookie).
 
-## Differential privacy
+## Differential privacy  {: #differential-privacy }
 
-Share information about a dataset to reveal patterns of behaviour without revealing private
-information about individuals or whether they belong to the dataset.
+Techniques to enable sharing of information about a dataset to reveal patterns of behaviour without 
+revealing private information about individuals or whether they belong to the dataset.
 
 ## Domain
 
@@ -62,8 +80,8 @@ See [Top-Level Domain](#tld) and [eTLD](#etld).
 For example:
 
 ```text
-text co.uk 
-appspot.com 
+co.uk 
+github.io 
 glitch.me
 ``` 
 
@@ -117,7 +135,13 @@ who is not logged in. See also [Third-party cookies](#third-party-cookie).
 
 ## Impression {: #impression }
 
-View of an ad. (See also [click-through rate](#ctr).)
+* View of an ad. (See also [click-through rate](#ctr).) 
+* An ad slot: an empty rectangle on a web page where an ad can be displayed. Ad slots 
+constitute [inventory](#inventory).
+
+## Inventory {: #inventory}
+
+The ad slots available on a site: the empty rectangles where ads can be displayed.
 
 ## k-anonymity
 
@@ -138,7 +162,7 @@ The origin of a request, including the server name but no path information. For 
 Origin trials provide access to a new or experimental feature, to build functionality users can try 
 out for a limited time before the feature is made available to everyone. When Chrome offers an 
 origin trial for a feature, you can register for the trial to enable the feature for all users on 
-your [origin](https://web.dev/same-site-same-origin/#origin), without requiring uses to toggle any 
+your [origin](https://web.dev/same-site-same-origin/#origin), without requiring users to toggle any 
 flags or switch to an alternative build of Chrome (though they may need to upgrade). Origin trials 
 enable developers to build demos and prototypes using new features. The trials also help Chrome 
 engineers understand how new features are used, and how they may interact with other web 
@@ -156,8 +180,7 @@ having an accept-language header for every response to every server.
 
 ## Publisher
 
-The Privacy Sandbox proposal explainers are mostly about ads, so the kinds of publishers referred to
-are ones that put ads on their websites.
+In the Privacy Sandbox context, a site that displays ads. 
 
 ## Reach
 
@@ -166,8 +189,7 @@ The total number of people who see an ad (or who visit a web page that displays 
 ## Remarketing
 
 Reaching people on other sites who have previously visited your site. For example, an online store 
-could show ads for a toy sale to people who previously viewed toys on their site. For example, an 
-online store could show ads for a toy sale to people who previously viewed toys on their site.
+could show ads for a toy sale to people who previously viewed toys on their site. 
 
 ## Site
 

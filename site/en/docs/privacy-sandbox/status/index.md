@@ -44,11 +44,11 @@ Previously known as Event Conversion Measurement.
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
 * [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
 * [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets).
-* [API proposal](https://github.com/privacycg/first-party-sets)): see [issues](hhttps://github.com/privacycg/first-party-sets/issues) and [proposal on WICG](https://discourse.wicg.io/t/proposal-first-party-sets/3331) for API questions and discussion.
+* [API proposal](https://github.com/privacycg/first-party-sets): see [issues](hhttps://github.com/privacycg/first-party-sets/issues) for API questions and discussion.
 * Find out more: [The Chromium Projects: First-Party Sets](https://www.chromium.org/updates/first-party-sets).  
 
 ## FLoC
-* [In origin trial](https://web.dev/origin-trials): Chrome 89–91. See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) for updates.
+* [In origin trial](https://web.dev/origin-trials): Chrome 91 Beta. See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) for updates.
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561).
 * [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=floc).
 * [API proposal](https://github.com/WICG/floc) is under discussion with 
@@ -60,6 +60,7 @@ API questions and discussion.
 
 ## FLEDGE
 Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
+* [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI/m/LqT59250CAAJ).
 * [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=fledge).
 * [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is under discussion with 
 [WICG](https://www.w3.org/community/wicg/) and interest groups.

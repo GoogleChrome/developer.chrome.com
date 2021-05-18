@@ -35,15 +35,17 @@ libraries from [CDNs](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cd
 may also want to correlate user activity across different sites by using mechanisms such as 
 [cookies](/docs/privacy-sanddbox/glossary#origin).
 
-Browsers are proposing privacy models that restrict access to user identity outside of a first-party 
-context. However, many organizations have related sites with different domain names or with domains 
-for different countries (such as `bbc.co.uk` and `bbc.com`). It should be possible to allow related 
+Browsers are proposing privacy models that restrict access to user identity within a first-party 
+context. However, many organizations have related sites with different domain names, or with domains 
+for different countries such as `example.com` and `example.co.uk`. It should be possible to allow related 
 domain names owned by the same entity to declare themselves as belonging to the same first party, so 
 browsers treat those domains as first-party in situations where first party and third party are 
 treated differently. 
 
-Any solution would also need to prevent abuse of the system. For example, ad networks must not be 
-able to define organizations that include all the sites they advertise on.
+Any solution would also need to prevent abuse of the system. For example, it should not be possible 
+to declare organizations that include unrelated sites with different owners, in order to gain 
+first-party privileges.
+
 
 
 ## How do First-Party Sets work?
@@ -74,11 +76,16 @@ Suppose `a.example`, `b.example`, and `c.example` wish to form a first-party set
 }
 ```
 
-In other words, an owner domain hosts a manifest file that lists its member domains.  A browser can 
-ask a member website to specify its owner, and then check the owner's manifest to verify the 
-relationship. Additional browser policies would prevent abuse or misuse. For example, First-Party 
-Sets must not enable the exchange of user information across unrelated sites, or the grouping of 
-sites that are not owned by the same entity.
+The owner domain hosts a manifest file that lists its member domains. A browser can ask a member 
+website to specify its owner, and then check the owner's manifest to verify the relationship.
+
+Browser policies will prevent abuse or misuse. For example, First-Party Sets must not enable the 
+exchange of user information across unrelated sites, or the grouping of sites that are not owned by 
+the same entity. Owner sites will need to submit their proposed group of domains to a public tracker 
+(such as a dedicated GitHub repository) along with information needed to satisfy browser policy. 
+Verification of the owner’s control over member domains may also require a challenge to be served 
+at a `.well-known` URL on each of the domains in the set.
+
 
 ---
 
@@ -87,7 +94,8 @@ sites that are not owned by the same entity.
 * **Origin trial**: Register and take part in the [Chrome origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
 * **GitHub**: Read the [proposal](https://github.com/privacycg/first-party-sets), [raise questions and 
 follow discussion](https://github.com/privacycg/first-party-sets/issues).
-* **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants).
+* **Developer support**: Ask questions and join discussions on the 
+[Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 
 ## Find out more

@@ -27,7 +27,7 @@ This document is a work in progress, unfinished and not to be shared externally.
 
 The Privacy Sandbox initiative has two core aims:
 * Develop replacement solutions to support web use cases and business models without enabling users 
-to be tracked across sites.
+to be tracked across sites, and avoiding cross-site tracking users aren't aware of.
 * Phase out support for third-party cookies when new solutions are in place.
 
 
@@ -52,7 +52,7 @@ The key proposals developed by the Chrome team are listed below.
 
 * [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting): Correlate ad clicks or ad 
 views with conversions. Previously known as the Event Conversion Measurement API.
-* [Aggregation Reporting](https://github.com/csharrison/aggregate-reporting-api): Collapse ad 
+* [Aggregation Reporting](https://github.com/csharrison/aggregate-reporting-api): Collapse 
 measurement information across multiple sites into a single, privacy-preserving report.
 
 
@@ -120,6 +120,8 @@ Issues tab for the explainer.
 [Links to explainers](#explainers) are provided below.
 * **W3C**: Use cases can be discussed and industry feedback shared in the W3C [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/), the [Privacy Community Group](https://www.w3.org/community/privacycg/participants), 
 and the [Web Incubator Community Group](https://github.com/WICG).
+* **Developer support**: Ask questions and join discussions on the 
+[Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 
 ## Find out more
