@@ -202,7 +202,7 @@ port.postMessage(...);
 
 ## Sending messages from web pages {: #external-webpage }
 
-Similar to [cross-extension messaging][27], your app or extension can receive and respond to
+Similar to [cross-extension messaging][27], your extension can receive and respond to
 messages from regular web pages. To use this feature, you must first specify in your manifest.json
 which web sites you want to communicate with. For example:
 
@@ -230,7 +230,7 @@ chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: url},
   });
 ```
 
-From your app or extension, you may listen to messages from web pages via the
+From your extension, you may listen to messages from web pages via the
 [runtime.onMessageExternal][31] or [runtime.onConnectExternal][32] APIs, similar to [cross-extension
 messaging][33]. Only the web page can initiate a connection. Here is an example:
 
@@ -246,7 +246,7 @@ chrome.runtime.onMessageExternal.addListener(
 
 ## Native messaging {: #native-messaging }
 
-Extensions and apps [can exchange messages][34] with native applications that are registered as a
+Extensions [can exchange messages][34] with native applications that are registered as a
 [native messaging host][35]. To learn more about this feature, see [Native messaging][36].
 
 ## Security considerations {: #security-considerations }
@@ -300,8 +300,7 @@ chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, function(response) {
 ## Examples {: #examples }
 
 You can find simple examples of communication via messages in the [examples/api/messaging][40]
-directory. The [native messaging sample][41] demonstrates how a Chrome app can communicate with a
-native app. For more examples and for help in viewing the source code, see [Samples][42].
+directory.
 
 [1]: #simple
 [2]: #connect

@@ -270,7 +270,7 @@ the steps in [Viewing Warnings][27].
     <tr id="management">
       <td><code>"management"</code></td>
       <td>Grants the extension access to the <a href="/docs/extensions/reference/management">chrome.management</a> API.</td>
-      <td><strong>Manage your apps, extensions, and themes</strong></td>
+      <td><strong>Manage your extensions and themes</strong></td>
     </tr>
     <tr id="nativeMessaging">
       <td><code>"nativeMessaging"</code></td>
