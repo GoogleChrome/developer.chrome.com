@@ -21,15 +21,14 @@ of these policies will not be considered for a badge and may be removed from the
   platform vision, and all High Quality extensions must be technically compliant (see this
   [MV3 overview][mv3-overview]).
 
-* **Security:** Is the extension safe for users? Before an extension receives a High Quality badge,
-  it undergoes a deep code review to ensure it does not pose security threats, does not use
-  deceptive installation tactics and meets Chrome Web Store’s data privacy requirements (see this
-  [FAQ][user-data-faq]).
+* **Security:** Is the extension safe for users? Make sure your extension does not pose security
+  threats, does not use deceptive installation tactics and meets Chrome Web Store's data privacy
+  requirements (see this [FAQ][user-data-faq]).
 
-* **Performance:** Does the extension function at an outstanding level? All High Quality extensions
-  should not simply perform their intended action, but perform at an extremely high level. 
+* **Performance:** Does the extension function at an outstanding level? High-quality extensions
+  don't just perform their intended action, but perform at an extremely high level. 
 
-* **User experience:** Is the extension a joy to use? Reviewers look for extensions that are easy to
+* **User experience:** Is the extension a joy to use? Make sure your extensions are easy to
   install and manage, with a good-looking, intuitive and seamless user experience.
 
 * **Store listing:** Does the store listing page provide quality and well-designed images (icon,
