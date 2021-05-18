@@ -13,7 +13,7 @@ authors:
 ---
 
 {% Aside 'caution' %}
-The Attribution Reporting API was previously known as the Event Conversion Measurement API.
+The Attribution Reporting API was previously known as the Conversion Measurement API.
 {% endAside %}
 
 
@@ -107,5 +107,5 @@ The API offers two types of attribution reports than can be used for different u
 - [A more private way to measure ad conversions](https://web.dev/conversion-measurement/): overview of the first iteration of this API for web developers
 - [A more private way to measure ad conversions - Video](https://www.youtube.com/watch?v=jcDfOoWwZcM): demo of the first iteration of this API (clicks only)
 - [Using the Event Conversion Measurement API](https://web.dev/using-conversion-measurement/): how to experiment with the first iteration of this API for web developers
-- [API technical explainer](https://github.com/WICG/conversion-measurement-api/)
+- API technical explainers: [event-level reports, clicks](https://github.com/WICG/conversion-measurement-api/), [event-level reports, views](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md), [aggregate reports (both clicks and views)](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md),
 - [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
