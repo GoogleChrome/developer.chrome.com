@@ -68,7 +68,7 @@ explanation of how FloC works.
 The diagram below shows an example of the different roles in selecting and delivering a relevant ad 
 by using FLoC.
 
-{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/Wn3jzSPSeiHiR2p6Yr1f.png", 
+{% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/oH6SuZegrVJMbkTsl9mq.png", 
 alt="Diagram showing, step by step, the different roles in selecting and delivering a relevant ad by 
 	using FLoC: FLoC service, Browser, Advertisers, Publisher (to observe cohorts), Adtech,
   Publisher (to display ads)", width="800", height="359" %}
