@@ -16,11 +16,13 @@ authors:
 The Attribution Reporting API was previously known as the Event Conversion Measurement API.
 {% endAside %}
 
+
 ## Implementation status
 
 - A first implementation of this API is available in an [origin trial](https://web.dev/origin-trials/), from Chrome 86 to 91. [Register for this origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) or [see the demo for the first implementation of this API](https://goo.gle/demo-event-level-conversion-measurement-api). This first implementation only supports click-through measurement but future implementations will support more features.
 - After Chrome 91, another origin trial will be available for the next iteration of this API.
 - [Chrome Platform Status](https://www.chromestatus.com/feature/6412002824028160)
+
 
 ## Glossary
 
@@ -34,6 +36,7 @@ You may also want to consult the complete [Privacy Sandbox glossary](/docs/priva
 - **Publishers**: companies that display ads on their websites.
 - **Click-through conversion**: conversion that is attributed to an ad click.
 - **View-through conversion**: conversion that is attributed to an ad impression (if the user doesn't interact with the ad, then later converts).
+
 
 ## Who needs to know about this API: adtech platforms, advertisers, and publishers
 
@@ -51,32 +54,43 @@ You may also want to consult the complete [Privacy Sandbox glossary](/docs/priva
 There may be use cases that are non-ads-related. [Engage](#engage) to share your use case!
 {% endAside %}
 
+
 ## Why is this API needed? {: #why-is-this-api-needed }
 
 In order to measure the effectiveness of ad campaigns, advertisers and publishers need to know when an ad click or view leads to a conversion, such as a purchase or sign-up.
 Today, ad conversion attribution measurement often relies on [third-party cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies). **But browsers are restricting access to these.**
+
 This API is being designed and iterated on in order to address in a privacy-preserving way attribution use cases that were solved by third-party cookies.
+
 {% Aside %}
 **How does the Attribution Reporting API compare to third-party cookies?**
 
 - Unlike third-party cookies, it's **purpose-built** to measure conversions.
 - It's **more private**: it makes it difficult to recognize a user across two different top-level
   sites, for example to link publisher-side and advertiser-side user profiles.
-  {% endAside %}
+{% endAside %}
+
 
 ## How does the Attribution Reporting API work and what are its features?
 
 {% Aside %}
-This API is being incubated and developed in the open. It is subject to change. Your feedback is welcome. See [how to engage](#engage).
+This API is being incubated and developed in the open. It is subject to change. Your feedback is 
+welcome. See [how to engage](#engage).
 {% endAside %}
-The Attribution Reporting API enables the measurement of two events linked together: an event on a publisher's website, such as a user viewing or clicking an ad, with a subsequent conversion on an advertiser site.
+
+The Attribution Reporting API enables the measurement of two events that are linked together: an 
+event on a publisher's website, such as a user viewing or clicking an ad, with a subsequent 
+conversion on an advertiser site.
+
 This API supports click-through conversion attribution measurement (available in the first implementation of this API, origin trial) and view-through attribution measurement ([see public explainer](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
+
 The API offers two types of attribution reports than can be used for different use cases:
 
 - **Event-level reports** associate a particular ad click or view (on the ad side) with data on the conversion side. To preserve user privacy by preventing the joining of user identity across sites, conversion-side data is very limited, and noised. As an extra privacy protection, reports are not sent immediately.
 - **Aggregate reports** are not tied with a specific event on the ad side. These reports provide richer, higher-fidelity conversion data than event-level reports. A combination of privacy techniques across cryptography, distribution of trust, and differential privacy help reduce the risk of identity joining across sites.
   Both report types can be used simultaneously. They're complementary.
   Other features that are designed in this API include [cross-device attribution reporting](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md) and [app-to-web attribution reporting](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md).
+
 
 ## Engage and share feedback {: #engage }
 
@@ -86,6 +100,7 @@ The API offers two types of attribution reports than can be used for different u
 - **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants) and join the [Privacy Community Group](https://www.w3.org/community/privacycg/) for discussions around the WebKit/Safari API.
 - **Developer support**: Ask questions and join discussions on the
   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+
 
 ## Find out more
 

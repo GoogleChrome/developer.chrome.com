@@ -51,9 +51,10 @@ An advertiser cannot learn about what pages a user views on a publisher site.
 or interest groups: ad selection is done on the user's browser.
 
 In other words, FLEDGE keeps your interests and browsing activity private. For example, if you visit 
-an online shoe store and show an interest in running shoes, and then visit a news site, the
-advertiser (the shoe store) doesn't learn what pages you're viewing and the publisher site that
-displays ads (the news site) doesn't learn about your interest in running shoes.
+an online shoe store and show an interest in running shoes, and then visit a news site that
+displays ads (a publisher), the advertiser (the shoe store) doesn't learn what pages you're viewing
+on the news site and the publisher (the news site) doesn't learn about your interest in running
+shoes.
 
 
 ## How does FLEDGE work?
