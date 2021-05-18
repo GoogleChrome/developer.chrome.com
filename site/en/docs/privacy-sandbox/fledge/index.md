@@ -51,15 +51,16 @@ An advertiser cannot learn about what pages a user views on a publisher site.
 or interest groups: ad selection is done on the user's browser.
 
 In other words, FLEDGE keeps your interests and browsing activity private. For example, if you visit 
-an online store and show an interest in running shoes, and then visit a news site, the advertiser 
-(the running store) doesn't learn what pages you're viewing and the ad publisher (the news site) 
-doesn't learn about your interest in running shoes. 
+an online shoe store and show an interest in running shoes, and then visit a news site, the
+advertiser (the shoe store) doesn't learn what pages you're viewing and the publisher site that
+displays ads (the news site) doesn't learn about your interest in running shoes.
 
 
 ## How does FLEDGE work?
 
-When a user visits an advertiser's website, the site can ask the user's browser to associate the 
-user with specific interest groups for a certain period of time (for example 30 days).
+When a user visits a page on a site that wants to advertise its products or services (an advertiser) 
+the site can ask the user's browser to associate the user with specific interest groups for a 
+certain period of time (for example 30 days).
 
 The interest group could be unique to the advertiser's website, so that it functions as a
 remarketing list. Alternatively, multiple websites could agree to assign users to the same interest
@@ -79,8 +80,8 @@ group' by calling joinAdInterestGroup(), passing data including ads relevant to 
 the ad platform host name, and URLs to access bidding logic and bidding signals.
 1. The user visits a site such as a news publisher, that displays ads and is configured to accept 
 ads selected using FLEDGE.
-1. The user's browser runs an 'auction' to choose an ad for inventory (ad slots) that accept 
-FLEDGE-selected ad. The 'seller' in this auction might be the site itself or a third party acting on 
+1. The user's browser runs an 'auction' to choose an ad for inventory (ad slots) that can accept 
+FLEDGE-selected ads. The 'seller' in this auction might be the site itself or a third party acting on 
 its behalf, such as a supply-side platform. The 'buyers' are third parties bidding for the site's ad 
 inventory, such as demand-side platforms acting on behalf of advertisers. The seller in this ad 
 auction has three jobs:<br>

@@ -46,9 +46,8 @@ advertising). For example, an adtech platform might learn from an online shoe st
 from cohorts 1101 and 1354 seem interested in the store's hiking gear. From other advertisers, the 
 adtech platform learns about other interests of those cohorts.
 
-Subsequently, the ad platform can use this data to select relevant ads (such as an ad for hiking 
-boots from the shoe store) when a browser from one of those cohorts requests a page from a site that 
-displays ads, such as a news website.
+Subsequently, the ad platform can use this data to select relevant ads when a browser from one of 
+those cohorts visits a page from a site that displays ads, such as a news website.
 
 
 ## What can FLoC be used for?
