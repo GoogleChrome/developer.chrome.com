@@ -70,7 +70,7 @@ See [Top-Level Domain](#tld) and [eTLD](#etld).
 
 ## eTLD, eTLD+1 {: #etld }
 
-'Effective top level domains' are defined by the [Public Suffix List](https://publicsuffix.org/list/). 
+**Effective Top Level Domains** are defined by the [Public Suffix List](https://publicsuffix.org/list/). 
 For example:
 
 ```text
@@ -150,7 +150,7 @@ Arbitrary number used once only in cryptographic communication.
 ## Origin 
 
 The origin of a request, including the scheme and server name, but no path information. For example:
-`https://web.dev`
+`https://developer.chrome.com`
 
 ## Origin trial {: #origin-trial}
 Origin trials provide access to a new or experimental feature, to make it possible to build 

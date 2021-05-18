@@ -15,7 +15,7 @@ There may be multiple separate origin trial periods for each API.
 
 ## Attribution Reporting
 Previously known as Event Conversion Measurement.
-* [In origin trial](https://web.dev/origin-trials/): Chrome 86 to 91. 
+* [Current origin trial](https://web.dev/origin-trials/): Chrome 86 to 91. 
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
 * [Chrome Platform Status](https://www.chromestatus.com/features/6412002824028160).
 * [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement).
@@ -25,7 +25,7 @@ Previously known as Event Conversion Measurement.
 * Find out more: [A more private way to measure ad conversions](https://web.dev/conversion-measurement)
 
 ## Trust Tokens
-* [In origin trial](https://web.dev/origin-trials/): Chrome 84 to 91. 
+* [Current origin trial](https://web.dev/origin-trials/): Chrome 84 to 91. 
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
 * [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
 * [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens).
@@ -36,7 +36,7 @@ Previously known as Event Conversion Measurement.
 * Find out more: [Getting started with Trust Tokens](https://web.dev/trust-tokens/)
 
 ## First-Party Sets
-* [In origin trial](https://web.dev/origin-trials/): Chrome 89 to 91. 
+* [Current origin trial](https://web.dev/origin-trials/): Chrome 89 to 91. 
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
 * [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
 * [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets).
@@ -44,7 +44,7 @@ Previously known as Event Conversion Measurement.
 * Find out more: [The Chromium Projects: First-Party Sets](https://www.chromium.org/updates/first-party-sets).  
 
 ## FLoC
-* [In origin trial](https://web.dev/origin-trials): Chrome 91 Beta. See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) for updates.
+* [Current origin trial](https://web.dev/origin-trials): Chrome 91 Beta. See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) for updates.
 * [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561).
 * [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=floc).
 * [API proposal](https://github.com/WICG/floc) is under discussion with 
