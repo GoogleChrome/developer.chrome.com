@@ -22,7 +22,17 @@ browser:
 Only the extension icon, a small promotional image, and a screenshot are mandatory. However, providing
 attractive versions of both required and optional images increases your extension's chances of getting
 noticed. For example, your extension can't be featured in marquee unless you provide a marquee promotional
-image.
+image. Follow the below image best practices to increase your chance of being featured.
+
+## Image best practices
+
+- Do not include any content that reflects or suggests Chrome Web Store performance, ranking, user testimonials, accolades or awards, recencey, or promotional information. For example, do not use words like "Editors' Pick,” “Best,” “#1,” “Top,” “New,” “Free,” or “Million Downloads.”
+- Avoid overloading images with text in small font sizes or backgrounds that compete with text.
+- Use high quality images with the proper aspect ratio.
+- Do not include images that are blurry, distorted, or pixelated in a way that is not an intentional aspect of your brand. 
+- Do not include images that are stretched or compressed.
+- Rotate images appropriately. Do not upload images upside down, sideways, or otherwise skewed.
+- Avoid inappropriate or repetitive image elements, such as third-party trademarked characters or logos without proper permission.
 
 ## Extension icon
 
@@ -35,9 +45,6 @@ for the image:
   size][7].
 - The image must be in PNG format.
 - The image should work well on both light and dark backgrounds.
-
-Since Chrome 15, the image that you provide is dynamically resized in the New Tab page. Its size is
-determined by the overall browser window size.
 
 <div class="aside aside--note"><b>Note</b>: To make sure your icon looks good, preview your extension's listing in the Chrome Web Store. If you're working on an installable web app, you also need to view your icon in the New Tab page. To do so, you can <a href="https://developers.google.com/chrome/apps/docs/developers_guide#installing">load the unpacked app</a>, bring up the New Tab page, and then look at the icon against a variety of backgrounds by applying a few <a href="https://tools.google.com/chrome/intl/en/themes/">themes</a>.</div>
 
@@ -279,8 +286,9 @@ Here is a description of the review statuses:
 
 ## Screenshots
 
-You must provide at least 1—and preferably the maximum allowed 5—screenshots of your extension to be
-displayed in the extension's store listing. If your extension supports multiple locales, you can provide
+Use screenshots to convey capabilities, the look and feel, and experience of your extension to users. You must provide at least 1—and preferably the maximum allowed 5—screenshots of your extension to be displayed in the extension's store listing. Screenshots should demonstrate the actual user experience, focusing on the core features and content so users can anticipate what the extension's experience will be like.
+
+If your extension supports multiple locales, you can provide
 locale-specific screenshots as described in [Internationalizing Your App][28].
 
 When you edit your extensions's listing, mousing over a screenshot's thumbnail brings up controls that let
