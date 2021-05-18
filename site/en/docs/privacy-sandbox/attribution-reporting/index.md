@@ -4,7 +4,7 @@ title: 'Attribution Reporting'
 subhead: >
   Measure when user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 description: >
-  The Attribution Reporting API enables the correlation of an event on a publisher's website with a subsequent conversion on an advertiser site without involving mechanisms that can be used to recognize a user across sites.
+  The Attribution Reporting API makes it possible to measure when user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 date: 2021-05-18
 updated: 2021-05-18
 authors:
