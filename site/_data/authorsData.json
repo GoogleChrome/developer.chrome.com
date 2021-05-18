@@ -367,13 +367,6 @@
     },
     "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/QDNnPHloDqEwqRW5ASvt.jpg"
   },
-  "samdutton": {
-    "name": {
-      "given": "Sam",
-      "family": "Dutton"
-    },
-    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/Oci8M3M98YmwQJGHkHS9.jpg"
-  },
   "tvanderlippe": {
     "name": {
       "given": "Tim",
@@ -637,5 +630,41 @@
     "github": "demianrenzulli",
     "glitch": "demianrenzulli",
     "image": "image/26V1DWN36MZr3mUo8ChSBlCpzp43/Jsv3fxDmq9T74z5q7zzU.jpg"
+  },
+  "samdutton": {
+    "name": {
+      "given": "Sam",
+      "family": "Dutton"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "descriptions": {
+      "en": "Developer Advocate, Google Chrome"
+    },
+    "country": "UK",
+    "homepage": "https://samdutton.com",
+    "twitter": "sw12",
+    "github": "samdutton",
+    "glitch": "samdutton",
+    "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/F3Df3SeugXYQEUUiMslu.jpg"
+  },
+    "maudn": {
+    "name": {
+      "given": "Maud",
+      "family": "Nalpas"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "descriptions": {
+      "en": "Developer Advocate for Chrome and web"
+    },
+    "country": "DE",
+    "twitter": "maudnals",
+    "github": "maudnals",
+    "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/fJP5RRP6pcCnfctkaQhu.jpg"
   }
 }
