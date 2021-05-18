@@ -31,6 +31,6 @@ screen appears as shown here:
 Once you pay the registration fee and agree to the terms, you will not see this registration page
 again.
 
-<div class="aside aside--note"><strong>Group publishers</strong> note that only members of the group who've paid the registration fee can publish updates.</div>
+<div class="aside aside--note"><a href="https://developer.chrome.com/docs/webstore/group-publishers/"><strong>Group publishers</strong></a> note that only members of the group who've paid the registration fee can publish updates.</div>
 
 [1]: https://chrome.google.com/webstore/devconsole
