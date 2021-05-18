@@ -44,14 +44,14 @@ You may also want to consult the complete [Privacy Sandbox glossary](/docs/priva
   may similarly be interested in using this API to replace existing techniques.
 - **Advertisers and publishers relying on adtech platforms for advertising or conversion
   measurement** don't need to use the API directly, but the
-  [rationale for this API](/#why-is-this-api-needed) may be of
+  [rationale for this API](#why-is-this-api-needed) may be of
   interest, particularly if you are working with adtech platforms that may integrate the API.
 
 {% Aside %}
-There may be use cases that are non-ads-related. [Engage](/#engage) to share your use case!
+There may be use cases that are non-ads-related. [Engage](#engage) to share your use case!
 {% endAside %}
 
-## Why is this API needed?
+## Why is this API needed? {: #why-is-this-api-needed }
 
 In order to measure the effectiveness of ad campaigns, advertisers and publishers need to know when an ad click or view leads to a conversion, such as a purchase or sign-up.
 Today, ad conversion attribution measurement often relies on [third-party cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies). **But browsers are restricting access to these.**
@@ -67,7 +67,7 @@ This API is being designed and iterated on in order to address in a privacy-pres
 ## How does the Attribution Reporting API work and what are its features?
 
 {% Aside %}
-This API is being incubated and developed in the open. It is subject to change. Your feedback is welcome. See [how to engage](/#engage).
+This API is being incubated and developed in the open. It is subject to change. Your feedback is welcome. See [how to engage](#engage).
 {% endAside %}
 The Attribution Reporting API enables the measurement of two events linked together: an event on a publisher's website, such as a user viewing or clicking an ad, with a subsequent conversion on an advertiser site.
 This API supports click-through conversion attribution measurement (available in the first implementation of this API, origin trial) and view-through attribution measurement ([see public explainer](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
@@ -78,7 +78,7 @@ The API offers two types of attribution reports than can be used for different u
   Both report types can be used simultaneously. They're complementary.
   Other features that are designed in this API include [cross-device attribution reporting](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md) and [app-to-web attribution reporting](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md).
 
-## Engage and share feedback
+## Engage and share feedback {: #engage }
 
 - **Origin trial**: [register for the first origin trial (click only)](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) or [see the first demo (click only)](https://goo.gle/demo-event-level-conversion-measurement-api).
 - To stay tuned about the next implementation of this API that will offer more features and be available for experimentation in Chrome (origin trial), join the [mailing list for developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).

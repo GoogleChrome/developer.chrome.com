@@ -30,9 +30,9 @@ may also want to correlate user activity across different sites by using mechani
 [cookies](/docs/privacy-sandbox/glossary#origin).
 
 Browsers are proposing privacy models that restrict access to user identity within a cross-site 
-context. However, many organizations have related sites with different domain names, or with domains 
-for different countries such as `example.com` and `example.co.uk`. It should be possible to allow 
-related domain names with an appropriate relationship, perhaps common ownership, to declare 
+context. However, many organizations have related sites with different domain names, such as domains 
+for different countries (`example.com` and `example.co.uk`, for example). It should be possible to 
+allow related domain names with an appropriate relationship, perhaps common ownership, to declare 
 themselves as belonging to the same first party, so browsers treat those domains as first-party in 
 situations where first party and third party are treated differently. 
 
