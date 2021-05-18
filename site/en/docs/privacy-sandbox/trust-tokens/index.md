@@ -81,7 +81,8 @@ In this example a publisher website wants to check if a user is a real human, an
 1. A user visits a website (known as an **issuer**) and performs actions that lead the site to 
 believe that the user is a real human, such as making purchases, using an email account or 
 successfully completing reCAPTCHA.
-1. The Trust Tokens JavaScript API is used to request trust tokens from the issuer site.
+1. The issuer site uses the Trust Tokens JavaScript API to trigger a request for trust tokens for 
+the user's browser.
 1. The issuer site responds with token data.
 1. The user's browser securely stores data for the trust token.
 1. The user visits a different website (such as a news publisher) that wants to verify if the user 
@@ -90,9 +91,9 @@ is a real human: for example, when displaying ads.
 issuers that the site trusts.
 1. Trust tokens are found for the issuer the user visited previously.
 1. The publisher site makes a request to the issuer to redeem the trust tokens.
-1. The issuer site responds with a "Signed Redemption Record" (SRR).
-1. The publisher site makes a request to an ad platform, including the SRR to show that the user is 
-trusted by the issuer to be a real human.
+1. The issuer site responds with a Redemption Record.
+1. The publisher site makes a request to an ad platform, including the Redemption Record to show 
+that the user is trusted by the issuer to be a real human.
 1. The ad platform provides the data required to display an ad.
 1. The publisher site displays the ad.
 1. An ad view impression is counted.
