@@ -135,14 +135,14 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
         URLs.</td>
     </tr>
     <tr id="css">
-      <td><code>css<code></code></code></td>
+      <td><code>css</code></td>
       <td>array of strings</td>
       <td><em>Optional.</em> The list of CSS files to be injected into matching pages. These are
         injected in the order they appear in this array, before any DOM is constructed or displayed
         for the page.</td>
     </tr>
     <tr id="js">
-      <td><code>js<code></code></code></td>
+      <td><code>js</code></td>
       <td>
         <nobr>array of strings</nobr>
       </td>
