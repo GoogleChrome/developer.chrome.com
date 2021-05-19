@@ -25,15 +25,29 @@ Chrome's autoplay policies changed in April of 2018 and I'm here to tell
 you why and how this affects video playback with sound. Spoiler
 alert: users are going to love it!
 
-<div class="w-columns">
-  <figure class="w-figure">
-    {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/iEG2wgEqo8Sx40QqfS8E.jpeg", alt="Liam Neeson: I will find you and I will pause you.", width="398", height="374" %}
-    {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/pl6fnOXI5RWtyXXsfYPg.jpeg", alt="Sean Bean: One does not simply autoplay videoas.", width="335", height="335" %}
-    <figcaption class="w-figcaption">
-      Internet memes tagged "autoplay" found on <a href="https://imgflip.com/i/ngd6c">Imgflip</a> and <a href="https://imgur.com/a/p1ZjC">Imgur</a>.
-    </figcaption>
-  </figure>
-</div>
+
+
+
+<figure class="w-figure">
+  {% Columns %}
+
+  {% Column %}
+
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/iEG2wgEqo8Sx40QqfS8E.jpeg", alt="Liam Neeson: I will find you and I will pause you.", width="398", height="374" %}
+
+  {% endColumn %}
+
+  {% Column %}
+
+  {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/pl6fnOXI5RWtyXXsfYPg.jpeg", alt="Sean Bean: One does not simply autoplay videoas.", width="335", height="335" %}
+
+  {% endColumn %}
+
+  {% endColumns %}
+  <figcaption class="w-figcaption">
+    Internet memes tagged "autoplay" found on <a href="https://imgflip.com/i/ngd6c">Imgflip</a> and <a href="https://imgur.com/a/p1ZjC">Imgur</a>.
+  </figcaption>
+</figure>
 
 ## New behaviors
 
@@ -211,7 +225,7 @@ You can also add an "unmute" button depending on the flow of the app.
 
 {% Aside %}If an `AudioContext` is created before the document receives a user
 gesture, it will be created in the "suspended" state, and you will need to call
-`resume()` after the user gesture.
+`resume()` after the user gesture.{% endAside %}
 
 If you create your `AudioContext` on page load, you'll have to call `resume()`
 at some time after the user interacted with the page (e.g., after a user clickes
@@ -223,7 +237,7 @@ gesture if `start()` is called on any attached node.
 window.onload = function() {
   var context = new AudioContext();
   // Setup all nodes
-  ...
+  // ...
 }
 
 // One-liner to resume playback when user interacted with the page.
@@ -241,7 +255,7 @@ page.
 document.querySelector('button').addEventListener('click', function() {
   var context = new AudioContext();
   // Setup all nodes
-  ...
+  // ...
 });
 ```
 
