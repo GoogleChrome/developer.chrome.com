@@ -315,7 +315,7 @@ Next, read [Publishing Your App][39].
 [8]: https://developers.google.com/chrome/apps/docs/developers_guide#installing
 [9]: https://tools.google.com/chrome/intl/en/themes/
 [10]: #perspective
-[11]: #imagebestpractices
+[11]: #image-best-practices
 [17]: #screenshots
 [18]: /docs/webstore/branding
 [27]: mailto:cws-assets@google.com
