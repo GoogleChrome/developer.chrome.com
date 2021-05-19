@@ -5,8 +5,7 @@ date: 2018-06-11
 description: Guidelines about the kinds of images you need to supply to the Chrome Web Store.
 ---
 
-You need to supply several kinds of images to be used in the Chrome Web Store and the Google Chrome
-browser:
+You need to supply several kinds of images to be used in the Chrome Web Store:
 
 - [Extension icon][3]
 - [Promotional images][4]
@@ -39,8 +38,6 @@ for the image:
   size][7].
 - The image must be in PNG format.
 - The image should work well on both light and dark backgrounds.
-
-<div class="aside aside--note"><b>Note</b>: To make sure your icon looks good, preview your extension's listing in the Chrome Web Store. If you're working on an installable web app, you also need to view your icon in the New Tab page. To do so, you can <a href="https://developers.google.com/chrome/apps/docs/developers_guide#installing">load the unpacked app</a>, bring up the New Tab page, and then look at the icon against a variety of backgrounds by applying a few <a href="https://tools.google.com/chrome/intl/en/themes/">themes</a>.</div>
 
 When you design the icon, keep the following advice in mind:
 
