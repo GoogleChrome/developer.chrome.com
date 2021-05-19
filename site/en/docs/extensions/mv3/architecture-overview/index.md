@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 date: 2012-09-18
-updated: 2018-06-07
+updated: 2021-05-12
 description: A high-level explanation of the software architecture of Chrome Extensions.
 ---
 
@@ -30,9 +30,9 @@ as the most important files and the capabilities the extension might use.
   "version": "2.1",
   "description": "Gets information from Google.",
   "icons": {
-    "128": "icon_16.png",
-    "128": "icon_32.png",
-    "128": "icon_48.png",
+    "16": "icon_16.png",
+    "32": "icon_32.png",
+    "48": "icon_48.png",
     "128": "icon_128.png"
   },
   "background": {
