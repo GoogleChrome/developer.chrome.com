@@ -15,7 +15,7 @@ browser:
 Only the extension icon, a small promotional image, and a screenshot are mandatory. However, providing
 attractive versions of both required and optional images increases your extension's chances of getting
 noticed. For example, your extension can't be featured in marquee unless you provide a marquee promotional
-image. Follow the below image best practices to increase your chance of being featured.
+image. Follow the image best practices to increase your chance of being featured.
 
 ## Image best practices
 
