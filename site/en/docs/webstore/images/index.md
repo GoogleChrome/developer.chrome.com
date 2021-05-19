@@ -18,7 +18,7 @@ image. Follow our [Image best practices][11] to increase your chance of being fe
 
 ## Image best practices
 
-- Do not include any content that reflects or suggests Chrome Web Store performance, ranking, user testimonials, accolades or awards, recencey, or promotional information. For example, do not use words like "Editors' Pick,” “Best,” “#1,” “Top,” “New,” “Free,” or “Million Downloads.”
+- Do not include any content that reflects or suggests Chrome Web Store performance, ranking, user testimonials, accolades or awards, recencey, or promotional information. For example, do not use words like "Editors' Pick," "Best," "#1," "Top," "New," "Free," or "Million Downloads."
 - Avoid overloading images with text in small font sizes or backgrounds that compete with text.
 - Use consistent design elements (logos, fonts, colors) across all images for a cohesive look.
 - Use high quality images with the proper aspect ratio.
