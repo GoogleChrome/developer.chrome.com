@@ -11,7 +11,6 @@ authors:
   - beaufortfrancois
 tags:
   - autoplay
-  - blog
   - media
 ---
 
