@@ -22,7 +22,7 @@
     justify-content: space-between;
     width: 100%;
 
-    @include media-query('md') {
+    @include media-query('lg') {
       align-items: baseline;
       flex-direction: row;
     }
@@ -36,8 +36,9 @@
     display: flex;
     justify-content: flex-end;
     margin-top: get-size(300);
+    white-space: nowrap;
 
-    @include media-query('md') {
+    @include media-query('lg') {
       align-items: flex-end;
       margin-left: get-size(300);
       margin-top: 0;
@@ -47,4 +48,8 @@
   &__action {
     @include apply-utility('weight', 'medium');
   }
+}
+
+[data-banner-dismissed] .banner {
+  display: none;
 }

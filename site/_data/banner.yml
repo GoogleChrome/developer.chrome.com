@@ -1,5 +1,11 @@
+# This file can be used to display a site-wide banner.
+# The actions should contain at least one action with an href.
+# Clicking on any action will dismiss the banner.
+# An action without an href will use a <button> instead of an <a>.
+
 type: info
 text: I/O is back, online, and free for everyone! I/O connects developers from around the world for thoughtful discussions and hands-on learning with Google experts.
 actions:
   - text: Register now
     href: https://events.google.com/io/?utm_source=web&utm_medium=embedded_marketing
+  - text: Dismiss
