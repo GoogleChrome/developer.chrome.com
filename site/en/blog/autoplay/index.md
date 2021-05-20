@@ -98,17 +98,16 @@ A user's MEI is available at the `about://media-engagement` internal page.
 ### Developer switches
 
 As a developer, you may want to change Chrome autoplay policy behavior locally
-to test your website depending on user engagement.
+to test your website for different levels of user engagement.
 
 - You can disable the autoplay policy entirely by using a [command line flag]:
   `chrome.exe --autoplay-policy=no-user-gesture-required`.
   This allows you to test your website as if user were strongly engaged with
   your site and playback autoplay would be always allowed.
 
-- You can also decide to make sure autoplay is never allowed by
-  disabling MEI, applying autoplay policy to Web Audio, and whether
-  sites with the highest overall MEI get playback autoplay by default for new
-  users. This can be done with flags: `chrome.exe
+- You can also decide to make sure autoplay is never allowed by disabling MEI.
+  You can also decide whether sites with the highest overall MEI get playback
+  autoplay by default for new users. This can be done with flags: `chrome.exe
   --disable-features=PreloadMediaEngagementData,
   MediaEngagementBypassAutoplayPolicies`.
 
