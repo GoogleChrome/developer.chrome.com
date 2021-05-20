@@ -14,8 +14,8 @@ matures and we learn from developers' experiences, these recommendations will be
 We encourage you to develop extensions that are of high quality. High-quality extensions conform to
 standards of performance, security, and user experience, as summarized by the following guidelines:
 
-* **Compliance:** Does the extension comply with our [program policies]? Extensions that violate any
-of these policies will not be considered for a badge and may be removed from the store.
+* **Compliance:** Does the extension comply with our [program policies]? Extensions must not violate
+any of these policies.
 
 * **Manifest V3:** Is the extension built on Manifest V3? Manifest V3 reflects the aims of our
   platform vision, and all High Quality extensions must be technically compliant (see this
