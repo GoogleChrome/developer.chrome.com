@@ -33,28 +33,38 @@ its documentation, and related policy or other changes.
 ### ES modules for service workers
 #### Launched in Chrome 91
 
-JavaScript supports modules in service workers. Setting 'module' type by the constructor's type attribute, worker scripts are loaded as ES modules and the import statement is available on worker contexts. (https://www.chromestatus.com/guide/edit/4609574738853888)
+JavaScript supports modules in service workers. Setting 'module' type by the constructor's type
+attribute, worker scripts are loaded as ES modules and the import statement is available on worker
+contexts. (https://www.chromestatus.com/guide/edit/4609574738853888)
 
 ### chrome.action.getUserSettings() available
 #### Launched in Chrome 91
 
-The new `chrome.action.getUserSettings()` API allows extensions to determine if the user has pinned the extension to the main toolbar.
+The new
+[chrome.action.getUserSettings()](/docs/extensions/reference/action/#method-getUserSettings)
+API allows extensions to determine if the user has pinned the extension to the main toolbar.
 
 ### chrome.scripting.removeCSS() available
 #### Launched in Chrome 90
 
-The `chrome.scripting.removeCSS()` API allows extensions to remove CSS that was previously inserted
-via `chrome.scripting.insertCSS()`.  It replaces `chrome.tabs.removeCSS()`.
+The [chrome.scripting.removeCSS()](/docs/extensions/reference/scripting/#method-removeCSS)
+API allows extensions to remove CSS that was previously inserted
+via [chrome.scripting.insertCSS()](/docs/extensions/reference/scripting/#method-insertCSS).
+It replaces [chrome.tabs.removeCSS()](/docs/extensions/reference/tabs/#method-removeCSS)`.
 
 ### chrome.scripting.executeScript() results include frameId
 #### Launched in Chrome 90
 
-Results returned from `chrome.scripting.executeScript()` now include the frameId.  The frameId indicates the frame from which the result is from, allowing extensions to easily associate results with the individual frames when injecting in multiple frames.
+Results returned from
+[chrome.scripting.executeScript()](/docs/extensions/reference/scripting/#method-executeScript)
+now include the frameId. The frameId indicates the frame from which the result is from, allowing
+extensions to easily associate results with the individual frames when injecting in multiple frames.
 
 ### New API for tab groups
 #### Launched in Chrome 89
 
-Added the `chrome.tabGroups` API to let extensions read and manipulate tab groups. Manifest V3 only.
+Added the [chrome.tabGroups](/docs/extensions/reference/tabGroups/) API to let extensions read and
+manipulate tab groups. Manifest V3 only.
 
 ### Customizable permissions for MV3 Web Accessible Resources
 #### Launched in Chrome 89
