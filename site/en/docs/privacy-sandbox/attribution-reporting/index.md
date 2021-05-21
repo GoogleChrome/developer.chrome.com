@@ -82,7 +82,7 @@ The Attribution Reporting API enables the measurement of two events that are lin
 event on a publisher's website, such as a user viewing or clicking an ad, with a subsequent 
 conversion on an advertiser site.
 
-This API supports click-through conversion attribution measurement (available in the first implementation of this API, currently in [origin trial](https://web.dev/conversion-measurement/#browser-support-and-similar-apis)) and view-through attribution measurement ([see public explainer](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
+This API supports click-through conversion attribution measurement (available in the first implementation of this API, currently in [origin trial](/conversion-measurement/#browser-support-and-similar-apis)) and view-through attribution measurement ([see public explainer](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
 
 The API offers two types of attribution reports than can be used for different use cases:
 
