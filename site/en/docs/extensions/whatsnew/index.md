@@ -35,7 +35,7 @@ its documentation, and related policy or other changes.
 
 JavaScript supports modules in service workers. In your manifest, specify a module in your manifest:
 
-```
+```js
 "background": {
   "service_worker": "script.js",
   "type": "module"
