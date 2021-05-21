@@ -105,9 +105,9 @@ to test your website for different levels of user engagement.
   This allows you to test your website as if user were strongly engaged with
   your site and playback autoplay would be always allowed.
 
-- You can also decide to make sure autoplay is never allowed by disabling MEI,
-  and you can decide whether sites with the highest overall MEI get playback
-  autoplay by default for new users. This can be done with flags: `chrome.exe
+- You can also decide to make sure autoplay is never allowed by disabling MEI and
+  whether sites with the highest overall MEI get autoplay by default for
+  new users. Do this with flags: `chrome.exe
   --disable-features=PreloadMediaEngagementData,
   MediaEngagementBypassAutoplayPolicies`.
 
