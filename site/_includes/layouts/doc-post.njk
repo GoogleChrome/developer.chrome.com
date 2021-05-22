@@ -4,15 +4,15 @@
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
-{% set tocContents %}
+{# {% set tocContents %}
   {{- content | toc | safe -}}
-{% endset %}
+{% endset %} #}
 
 {% block content %}
   <div class="display-flex gap-top-300 lg:gap-top-400">
     {% include 'partials/navigation-tree.njk' %}
 
-    <article class="post stack measure-long width-full pad-left-400 pad-right-400">
+    <article class="post stack measure-long width-full pad-left-400 pad-right-400" style="max-width: 1024px;">
       <div class="stack flow-space-200">
         {% include 'partials/post-headline.njk' %}
       </div>
@@ -27,7 +27,10 @@
       {% include 'partials/draft.njk' %}
 
       <div class="stack stack--block type center-images">
-        {{ content | safe }}
+        {# TODO: Kind of a gross block name. #}
+        {% block inner %}
+          {{ content | safe }}
+        {% endblock%}
       </div>
 
       {% include 'partials/updated.njk' %}

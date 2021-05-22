@@ -1,12 +1,99 @@
 ---
-layout: "layouts/doc-post.njk"
+layout: "layouts/program-policies.njk"
 title: "Developer Program Policies"
 date: 2014-02-28
 updated: 2021-02-04
 description: Chrome Web Store developer program policies.
+cards:
+  - heading: Best Practices and Guidelines
+    icon: 'icon.svg'
+    copy: >
+      To help ensure the best experience for both users and developers, please review the below guidelines prior to submitting your extension to the Chrome Web Store. Following all of these guidelines doesn’t mean your extension will be automatically approved, but they will help you to avoid common mistakes that often delay the review process.
+    links:
+      - text: Best Practices and Guidelines
+        href: '#'
+  - heading: Fostering a Safe Ecosystem
+    icon: 'icon.svg'
+    copy: >
+      The Chrome Web Store is committed to providing a safe and secure environment for users. Extensions which contain objectionable content or place users at risk are strictly prohibited.
+    links:
+      - text: Sexually Explicit Material
+        href: '#'
+      - text: Malicious and Prohibited Products
+        href: '#'
+      - text: Hate Speech and Violent Behavior
+        href: '#'
+      - text: Regulated Goods and Services
+        href: '#'
+  - heading: Protecting User Privacy
+    icon: 'icon.svg'
+    copy: >
+      We want to make sure users feel confident that the products they find in the Chrome Web Store are safe, transparent, and prioritize user privacy. Integrating these considerations within your product's design is critical
+    links:
+      - text: Privacy Policies
+        href: '#'
+      - text: Limited Use
+        href: '#'
+      - text: Use of Permissions
+        href: '#'
+      - text: Disclosure Requirements
+        href: '#'
+      - text: Handling Requirements
+        href: '#'
+      - text: Acquisition Disclosure
+        href: '#'
+  - heading: Ensuring Responsible Marketing and Monetization
+    icon: 'icon.svg'
+    copy: >
+      Extensions must be marketed responsibly. When developers copy someone else's work or deceive users, it hurts users and the developer community. Don't rely on misleading behavior or unfair use of other people's work.
+    links:
+      - text: Impersonation & Intellectual Property
+        href: '#'
+      - text: Deceptive Installation Tactics
+        href: '#'
+      - text: Accepting Payment from Users
+        href: '#'
+      - text: Misleading or Unexpected Behavior
+        href: '#'
+      - text: Ads
+        href: '#'
+  - heading: Building Quality Products
+    icon: 'icon.svg'
+    copy: >
+      Developers are important partners in maintaining a great user experience in the Chrome Web Store. Your extensions should include features, content, and UI that provide unique value to the Chrome Web Store. At a minimum, extensions should provide users with a basic degree of functionality and a respectful user experience. We may reject extensions unless they provide a unique, high-quality experience. Spamming the store may lead to your removal as a developer from the Chrome web Store.
+    links:
+      - text: Featured Products
+        href: '#'
+      - text: Spam & Abuse
+        href: '#'
+      - text: Quality Guidelines
+        href: '#'
+      - text: Listing Requirements
+        href: '#'
+      - text: Minimum Functionality
+        href: '#'
+      - text: Low Quality
+        href: '#'
+  - heading: Technical Requirements
+    icon: 'icon.svg'
+    copy: >
+      In addition to compliance with the policies set out elsewhere in the Developer Program Policies, extensions must follow certain technical guidelines to ensure a positive user experience.
+    links:
+      - text: Code Readability Requirements
+        href: '#'
+      - text: API Use
+        href: '#'
+      - text: Unpublished Extensions
+        href: '#'
+      - text: Additional Requirements for Manifest V3
+        href: '#'
+      - text: Two Step Authentication
+        href: '#'
+      - text: Submission Requirements
+        href: '#'
 ---
 
-<div class="aside aside--caution"><b>Important:</b> As of 06/12/2018, inline installation is deprecated. For more information, read our <a href="https://blog.chromium.org/2018/06/improving-extension-transparency-for.html">Chromium Blog post</a> and <a href="/extensions/inline_faq">Migration FAQ</a>.</div>
+<!-- <div class="aside aside--caution"><b>Important:</b> As of 06/12/2018, inline installation is deprecated. For more information, read our <a href="https://blog.chromium.org/2018/06/improving-extension-transparency-for.html">Chromium Blog post</a> and <a href="/extensions/inline_faq">Migration FAQ</a>.</div>
 
 [Branding Guidelines][3] | [Rating Guidelines][4] | **Program Policies** | [User Data FAQ][5] |
 [Developer Agreement][6]
@@ -498,4 +585,4 @@ flagged as Spam to ensure that you receive all communications in a timely manner
 [21]: /docs/extensions/mv2/single_purpose
 [22]: http://checkout.google.com/termsOfService?type=Seller
 [23]: http://checkout.google.com/seller/content_policies.html
-[24]: http://www.google.com/support/bin/static.py?page=ts.cs&ts=1114905
+[24]: http://www.google.com/support/bin/static.py?page=ts.cs&ts=1114905 -->

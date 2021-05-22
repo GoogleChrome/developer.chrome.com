@@ -28,6 +28,7 @@ const {YouTube} = require('./site/_shortcodes/YouTube');
 const {Columns, Column} = require('./site/_shortcodes/Columns');
 const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
 const {Aside} = require('./site/_shortcodes/Aside');
+const {PolicyCard} = require('./site/_shortcodes/PolicyCard');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -111,6 +112,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('IFrame', IFrame);
   eleventyConfig.addShortcode('Glitch', Glitch);
   eleventyConfig.addShortcode('Img', Img);
+  eleventyConfig.addShortcode('PolicyCard', PolicyCard);
   eleventyConfig.addShortcode('Video', Video);
   eleventyConfig.addShortcode('YouTube', YouTube);
   eleventyConfig.addPairedShortcode('Details', Details);

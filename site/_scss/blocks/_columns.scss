@@ -8,3 +8,18 @@
     grid-auto-flow: column;
   }
 }
+
+// TODO(robdodson): Should we update the existing columns shortcode to use
+// this class instead? It'll need to be configured so it still uses a 1fr 1fr
+// behavior but that seem doable.
+:root {
+  --grid-col-breakpoint: 15rem;
+  --grid-col-gap: 1rem;
+}
+
+
+.grid-columns {
+  display: grid;
+  gap: var(--grid-col-gap);
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-col-breakpoint), 1fr));
+}
