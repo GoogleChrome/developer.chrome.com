@@ -105,7 +105,7 @@ For questions, check the [chrome-custom-tabs][5] tag on StackOverflow.
 [5]: https://stackoverflow.com/questions/tagged/chrome-custom-tabs
 [6]: https://research.google/pubs/pub46739/
 [7]: https://android-developers.googleblog.com/2015/09/chrome-custom-tabs-smooth-transition.html
-[8]: /docs/android/trusted-web-activity
+[8]: /docs/android/trusted-web-activity/overview/
 [9]: https://web.dev/progressive-web-apps/
 [10]: https://developers.google.com/digital-asset-links
 [11]: /docs/android/custom-tabs/integration-guide/
