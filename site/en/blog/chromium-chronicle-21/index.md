@@ -49,7 +49,7 @@ There are existing [wrappers around common UI areas][wrappers] (settings,
 launcher, files app, etc).
 
 The `uiauto.Run` function used above takes a list of actions. In this
-context, an action is just a `func(context.Context)` error. With such a
+context, an action is just a `func(context.Context) error`. With such a
 simple API, **other kinds of actions can be mixed in with UI actions**.
 For example, using the keyboard is as easy as:
 
@@ -64,8 +64,7 @@ if err := uiauto.Combine("do some random stuff",
 )(ctx); err != nil { /* do error handling */ }
 ```
 
-For a more in depth guide, please look at
-[Tast Codelab: Chrome UI Automation][codelab-3]
+For a more in depth guide, see [Tast Codelab: Chrome UI Automation][codelab-3]
 
 When writing these tests, it is very useful to dump the Chrome a11y tree
 for debugging. Simply add the following code to do so:
