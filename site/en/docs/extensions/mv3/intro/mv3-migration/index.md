@@ -247,14 +247,15 @@ of which can map to a set of resources to a set of URLs and extension IDs:
 {% endColumns %}
 
 {% Aside %}
-The `matches`, `extension_ids`, and `use_dynamic_url` keys are not available
+The `extension_ids`, and `use_dynamic_url` keys are not available
 yet. Support for these properties will be coming in a future release.
 {% endAside %}
 
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
 resource access. The updated API lets extensions more tightly control what
-other sites or extensions can access extension resources.
+other sites or extensions can access extension resources. You must specify
+a value for `matches` in order for the manifest to be valid.
 
 
 ## Code execution  {: #code-execution }
