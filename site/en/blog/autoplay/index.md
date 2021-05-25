@@ -14,12 +14,13 @@ tags:
   - media
 ---
 
-{% Aside %}The Autoplay Policy launched in Chrome 66 for audio and video
-elements and is effectively blocking roughly half of unwanted media autoplays in
-Chrome. For the Web Audio API, the autoplay policy launched in Chrome 71. This
-affects web games, some WebRTC applications, and other web pages using audio
-features. More details can be found in the [Web Audio API](#webaudio) section
-below.{% endAside %}
+{% Aside %}
+The Autoplay Policy launched in Chrome 66 for audio and video elements and is
+effectively blocking roughly half of unwanted media autoplays in Chrome. For the
+Web Audio API, the autoplay policy launched in Chrome 71. This affects web
+games, some WebRTC applications, and other web pages using audio features. More
+details can be found in the [Web Audio API](web-audio) section below.
+{% endAside %}
 
 Chrome's autoplay policies changed in April of 2018 and I'm here to tell
 you why and how this affects video playback with sound. Spoiler
@@ -65,17 +66,17 @@ Chrome's autoplay policies are simple:
     - On desktop, the user's [Media Engagement Index](#media-engagement-index)
       threshold has been crossed, meaning the user has previously played video
       with sound.
-    - The user has [added the site to their home screen] on mobile or
+    - The user has [added the site to their home screen](customize-install) on mobile or
       [installed the PWA](installed-the-pwa) on desktop.
 - Top frames can [delegate autoplay permission](#iframe-delegation) to their iframes to
   allow autoplay with sound.
 
 
-### Media Engagement Index (MEI)
+### Media Engagement Index
 
-The MEI measures an individual's propensity to consume media on a site.
-Chrome's [current approach] is a ratio of visits to significant media playback
-events per origin:
+The Media Engagement Index (MEI) measures an individual's propensity to consume
+media on a site. Chrome's approach is a ratio of visits to significant media
+playback events per origin:
 
 - Consumption of the media (audio/video) must be greater than seven seconds.
 - Audio must be present and unmuted.
@@ -91,7 +92,7 @@ A user's MEI is available at the `about://media-engagement` internal page.
 <figure class="w-figure">
   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/x0XKHYcLKjmDzjfxQxFg.png", alt="Screenshot of about://media-engagement internal page.", width="800", height="280" %}
   <figcaption class="w-figcaption">
-    Screenshot of the <code>chrome://media-engagement</code> internal page.
+    Screenshot of the <code>about://media-engagement</code> internal page in Chrome.
   </figcaption>
 </figure>
 
@@ -131,8 +132,10 @@ When the permissions policy for autoplay is disabled, calls to `play()` without 
 user gesture will reject the promise with a `NotAllowedError` DOMException. And
 the autoplay attribute will also be ignored.
 
-{% Aside 'warning' %} Older articles incorrectly recommend using the attribute
-`gesture=media` which is not supported.{% endAside %}
+{% Aside 'warning' %}
+Older articles incorrectly recommend using the attribute `gesture=media` which
+is not supported.
+{% endAside %}
 
 ### Examples
 
@@ -176,11 +179,13 @@ don't show a pause button when the video is not actually playing. It is so
 important that I'm going to write it one more time below for those who simply
 skim through that post.
 
-{% Aside 'gotchas' %}Don't assume a video will play, and don't show a pause
-button when the video is not actually playing.{% endAside %}
+{% Aside 'gotchas' %}
+Don't assume a video will play, and don't show a pause button when the video is
+not actually playing.
+{% endAside %}
 
 You should always look at the [Promise](promise) returned by the play function
-to see if it was [rejected]:
+to see if it was [rejected](rejected):
 
 ```js
 var promise = document.querySelector('video').play();
@@ -195,9 +200,10 @@ if (promise !== undefined) {
 }
 ```
 
-{% Aside 'caution' %}Don't play interstitial ads without showing any media
-controls as they may not autoplay and users will have no way of starting
-playback.{% endAside %}
+{% Aside 'caution' %}
+Don't play interstitial ads without showing any media controls as they may not
+autoplay and users will have no way of starting playback.
+{% endAside %}
 
 One cool way to engage users is to use muted autoplay and let them chose
 to unmute. (See the example below.) Some websites already do this effectively,
@@ -222,12 +228,14 @@ a user interaction before starting audio playback so that users is aware of
 something happening. Think of a "play" button or "on/off" switch for instance.
 You can also add an "unmute" button depending on the flow of the app.
 
-{% Aside %}If an `AudioContext` is created before the document receives a user
-gesture, it will be created in the "suspended" state, and you will need to call
-`resume()` after the user gesture.{% endAside %}
+{% Aside %}
+If an `AudioContext` is created before the document receives a user gesture, it
+will be created in the "suspended" state, and you will need to call `resume()`
+after the user gesture.
+{% endAside %}
 
 If you create your `AudioContext` on page load, you'll have to call `resume()`
-at some time after the user interacted with the page (e.g., after a user clickes
+at some time after the user interacted with the page (e.g., after a user clicks
 a button). Alternatively, the `AudioContext` will be resumed after a user
 gesture if `start()` is called on any attached node.
 
@@ -259,15 +267,17 @@ document.querySelector('button').addEventListener('click', function() {
 ```
 
 To detect whether the browser requires a user interaction to play audio, check
-`AudioContext.state` after you've created it. If your media is allowed to play,
-it should immediately switch to `running`. Otherwise it will be `suspended`. If
-you listen to the `statechange` event, you can detect changes asynchronously.
+`AudioContext.state` after you've created it. If playing is allowed, it should
+immediately switch to `running`. Otherwise it will be `suspended`. If you listen
+to the `statechange` event, you can detect changes asynchronously.
 
 To see an example, check out the small [Pull Request](pull-request) that fixes
 Web Audio playback for these autoplay policy rules for [https://airhorner.com].
 
-{% Aside %}You can find asummary of [Chrome's autoplay
-feature](chromes-autoplay-feature) on the Chromium site.{% endAside %}
+{% Aside %}
+You can find asummary of [Chrome's autoplay feature](chromes-autoplay-feature)
+on the Chromium site.
+{% endAside %}
 
 
 [200x140]: https://chromium.googlesource.com/chromium/src/+/1c63b1b71d28851fc495fdee9a2c724ea148e827/chrome/browser/media/media_engagement_contents_observer.cc#38
@@ -275,9 +285,9 @@ feature](chromes-autoplay-feature) on the Chromium site.{% endAside %}
 [autoplayallowed]: https://chromeenterprise.google/policies/#AutoplayAllowed
 [autoplayallowlist]: https://chromeenterprise.google/policies/#AutoplayAllowlist
 [chromes-autoplay-feature]: https://sites.google.com/a/chromium.org/dev/audio-video/autoplay
-[current approach]: https://docs.google.com/document/d/1_278v_plodvgtXSgnEJ0yjZJLg14Ogf-ekAFNymAJoU/edit
+[customize-install]: https://web.dev/customize-install
 [https://airhorner.com]: https://airhorner.com
-[installed-the-pwa]: /web/progressive-web-apps/desktop
+[installed-the-pwa]: https://web.dev/progressive-web-apps/
 [internal switch]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [internal switches]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
@@ -286,5 +296,5 @@ feature](chromes-autoplay-feature) on the Chromium site.{% endAside %}
 [policy-list]: https://chromeenterprise.google/policies/
 [promise]: /web/fundamentals/getting-started/primers/promises
 [pull-request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
-[rejected]: /web/updates/2017/06/play-request-was-interrupted
+[rejected]: https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
 [web-audio]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
