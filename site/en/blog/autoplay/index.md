@@ -91,7 +91,7 @@ A user's MEI is available at the `about://media-engagement` internal page.
 <figure class="w-figure">
   {% Img src="image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/x0XKHYcLKjmDzjfxQxFg.png", alt="Screenshot of about://media-engagement internal page.", width="800", height="280" %}
   <figcaption class="w-figcaption">
-    Screenshot of the <code>chrome://media-engagement</code> internal page.
+    Screenshot of the <code>about://media-engagement</code> internal page in Chrome.
   </figcaption>
 </figure>
 
