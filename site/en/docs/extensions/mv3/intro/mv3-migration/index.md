@@ -254,8 +254,9 @@ yet. Support for these properties will be coming in a future release.
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
 resource access. The updated API lets extensions more tightly control what
-other sites or extensions can access extension resources. You must specify
-a value for `matches` in order for the manifest to be valid.
+other sites or extensions can access extension resources. See the [web 
+accessible resources](/docs/extensions/mv3/manifest/web_accessible_resources/)
+documentation for usage information.
 
 
 ## Code execution  {: #code-execution }
@@ -478,4 +479,3 @@ As well as the undocumented:
 
 If your extensions use any of these deprecated APIs, you'll need to make the
 appropriate changes when you migrate to MV3.
-
