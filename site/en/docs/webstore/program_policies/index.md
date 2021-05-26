@@ -6,14 +6,16 @@ updated: 2021-02-04
 description: Chrome Web Store developer program policies.
 cards:
   - heading: Best Practices and Guidelines
-    icon: 'icon.svg'
+    icon: 'star-border'
+    color: 'yellow'
     copy: >
       To help ensure the best experience for both users and developers, please review the below guidelines prior to submitting your extension to the Chrome Web Store. Following all of these guidelines doesn’t mean your extension will be automatically approved, but they will help you to avoid common mistakes that often delay the review process.
     links:
       - text: Best Practices and Guidelines
-        href: '#'
+        href: '/docs/webstore/program_policies/best_practices'
   - heading: Fostering a Safe Ecosystem
-    icon: 'icon.svg'
+    icon: 'favorite'
+    color: 'red'
     copy: >
       The Chrome Web Store is committed to providing a safe and secure environment for users. Extensions which contain objectionable content or place users at risk are strictly prohibited.
     links:
@@ -24,14 +26,15 @@ cards:
       - text: Hate Speech and Violent Behavior
         href: '#'
       - text: Regulated Goods and Services
-        href: '#'
+        href: '#regulated-goods'
   - heading: Protecting User Privacy
-    icon: 'icon.svg'
+    icon: 'security'
+    color: 'blue'
     copy: >
       We want to make sure users feel confident that the products they find in the Chrome Web Store are safe, transparent, and prioritize user privacy. Integrating these considerations within your product's design is critical
     links:
       - text: Privacy Policies
-        href: '#'
+        href: '#privacy-policies'
       - text: Limited Use
         href: '#'
       - text: Use of Permissions
@@ -43,7 +46,8 @@ cards:
       - text: Acquisition Disclosure
         href: '#'
   - heading: Ensuring Responsible Marketing and Monetization
-    icon: 'icon.svg'
+    icon: 'monetization'
+    color: 'green'
     copy: >
       Extensions must be marketed responsibly. When developers copy someone else's work or deceive users, it hurts users and the developer community. Don't rely on misleading behavior or unfair use of other people's work.
     links:
@@ -58,7 +62,8 @@ cards:
       - text: Ads
         href: '#'
   - heading: Building Quality Products
-    icon: 'icon.svg'
+    icon: 'build'
+    color: 'purple'
     copy: >
       Developers are important partners in maintaining a great user experience in the Chrome Web Store. Your extensions should include features, content, and UI that provide unique value to the Chrome Web Store. At a minimum, extensions should provide users with a basic degree of functionality and a respectful user experience. We may reject extensions unless they provide a unique, high-quality experience. Spamming the store may lead to your removal as a developer from the Chrome web Store.
     links:
@@ -75,7 +80,8 @@ cards:
       - text: Low Quality
         href: '#'
   - heading: Technical Requirements
-    icon: 'icon.svg'
+    icon: 'code'
+    color: 'cyan'
     copy: >
       In addition to compliance with the policies set out elsewhere in the Developer Program Policies, extensions must follow certain technical guidelines to ensure a positive user experience.
     links:
@@ -92,6 +98,23 @@ cards:
       - text: Submission Requirements
         href: '#'
 ---
+
+## Regulated Goods and Services {: #regulated-goods }
+- Don't engage in or promote unlawful activities in your product, such as rape, illegal sex work, or the sale of prescription drugs without a prescription. We will remove content which promotes, glorifies, or encourages dangerous or illegal activity that may result in physical harm to those involved.
+
+- We don't allow content or services that facilitate online gambling, including but not limited to online casinos, sports betting, lotteries, or games of skill that offer prizes of cash or other value.
+
+- We do not allow the facilitation of the sale of regulated products or services. Regulated goods include pharmaceuticals, alcohol, tobacco, fireworks, weapons, gambling or health/medical devices.
+
+## Privacy Policies {: #privacy-policies }
+- If your Product handles any user data, then you must post an accurate and up to date privacy policy.
+
+- The privacy policy must, together with any in-product disclosures, comprehensively disclose:
+  - How your Product collects, uses, and shares user data
+  - All parties the user data will be shared with
+
+- You must make the policy accessible by providing a link in the designated Chrome Web Store Developer Dashboard field.
+
 
 <!-- <div class="aside aside--caution"><b>Important:</b> As of 06/12/2018, inline installation is deprecated. For more information, read our <a href="https://blog.chromium.org/2018/06/improving-extension-transparency-for.html">Chromium Blog post</a> and <a href="/extensions/inline_faq">Migration FAQ</a>.</div>
 

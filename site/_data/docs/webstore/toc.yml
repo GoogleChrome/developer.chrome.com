@@ -25,7 +25,10 @@
 - title: i18n.docs.webstore.policies
   sections:
     - url: /docs/webstore/terms/
-    - url: /docs/webstore/program_policies/
+    - title: i18n.docs.webstore.program_policies
+      sections:
+        - url: /docs/webstore/program_policies/
+        - url: /docs/webstore/program_policies/best_practices
     - url: /docs/webstore/spam-faq/
     - url: /docs/webstore/deceptive_installation_tactics/
     - url: /docs/webstore/user_data/
