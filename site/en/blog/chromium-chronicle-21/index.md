@@ -1,7 +1,7 @@
 ---
 title: "The Chromium Chronicle #21: Chrome OS E2E UI Automation"
 description: >
-  Tast is a new UI library has been created that uses the Chrome a11y tree
+  Tast is a new UI library has been created that uses the Chrome a11y (accessibility) tree
   to control the Chrome OS UI. The library enables developers to easily
   create E2E tests against any visible UI surface.
 layout: 'layouts/blog-post.njk'
@@ -18,7 +18,7 @@ tags:
 
 Historically, automating the Chrome OS UI in E2E tests across the entire
 fleet of devices has been difficult. In Tast, a new UI library has been
-created that uses the Chrome a11y tree to control the Chrome OS UI. **This
+created that uses the Chrome a11y (accessibility) tree to control the Chrome OS UI. **This
 library enables developers to easily create E2E tests against any visible
 UI surface (Chrome OS desktop UI, native apps, web apps, Chrome Browser UI).**
 
