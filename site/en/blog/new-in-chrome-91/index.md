@@ -1,15 +1,15 @@
 ---
 title: New in Chrome 91
 description: >
-  Chrome 91 is rolling out now! Web apps that interact with files, can now
-  suggest file names and directories when using the file system access API.
-  Plus, you can now read files from the clipboard. If your site has more than
-  one domain, and shares the same account management backend, you can tell
+  Chrome 91 is rolling out! Web apps that interact with files can now
+  suggest file names and directories when using the File System Access API.
+  You can also read files from the clipboard! If your site has more than
+  one domain, and they share the same account management backend, you can tell
   Chrome they're the same, allowing the password manager to suggest the right
-  credentials. All the videos from I/O are now available. And there's plenty
+  credentials. Plus, all the videos from I/O are now available, and there's plenty
   more.
 layout: 'layouts/blog-post.njk'
-date: 2021-05-25
+date: 2021-05-26
 authors:
   - petelepage
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hcxe0ZGQy0gh5pemX88c.png'
@@ -25,12 +25,12 @@ tags:
 Here's what you need to know:
 
 * Web apps that interact with files, can now
-  [suggest file names and directories](#filenames) when using the file system access API.
-* You can now [read files from the clipboard](#clipboard).
-* If your [site has more than one domain](credentials), and shares the same
+  [suggest file names and directories](#filenames) when using the File System Access API.
+* You can [read files from the clipboard](#clipboard).
+* If your [site has more than one domain](credentials), and they share the same
   account management backend, you can tell Chrome they're the same, allowing
   the password manager to suggest the right credentials.
-* All the videos from I/O are now available.
+* All the videos from I/O are available on [Chrome Developers YouTube channel](io-playlist)!
 * And there's plenty [more](#more).
 
 I'm [Pete LePage](https://twitter.com/petele), working, and shooting
@@ -39,12 +39,12 @@ from home, let's dive in and see what's new for developers in Chrome 91!
 ## Suggested names for File System Access API {: #filenames }
 
 One of my favorite APIs to come out of the Fugu project this year is the
-file system access APIs. Once the user has granted permission, apps can
+File System Access APIs. Once the user has granted permission, apps can
 interact with files on the users local device, in the same way other installed
 apps do, allowing you to create a more natural user experience.
 
 Starting in Chrome 91, you can now suggest the name and location of a file or
-directory to interact with. You can do this by passing a `suggestedName`
+directory to interact with. To do so, pass a `suggestedName`
 property as part of the `showSaveFilePicker` options.
 
 ```js/1
@@ -76,8 +76,8 @@ Check out Tom's [File System Access][fs-post] post for complete details.
 ## Reading files from the clipboard {: clipboard }
 
 There's one other cool new API for interacting with files that lands in
-Chrome 91. On desktop, web apps can now read files from the clipboard. Reading
-files from the clipboard has been available in Safari since 2018.
+Chrome 91. On desktop, web apps can now read files from the clipboard. (Reading
+files from the clipboard has been available in Safari since 2018.)
 
 Of course, you don't get unrestricted access to the clipboard, so you'll need
 to set-up a `paste` event listener. Then, in the event handler, you can
@@ -95,10 +95,10 @@ async function onPaste(e) {
 
 ## Share credentials on affiliated sites {: #credentials }
 
-If your site has multiple domains, and shares the same account management
+If your site has multiple domains, and they share the same account management
 backend, you can now associate your sites with one another, allowing users to
 save credentials once, and have the Chrome password manager suggest them to
-any of your designated affiliated sites.
+any of your affiliated sites.
 
 This is ideal when your site is served from different top level domains,
 like `google.com`, and `google.ca`. Or maybe you've got multiple domains
@@ -141,7 +141,7 @@ Of course there's plenty more.
 All the [videos from I/O 2021][io-playlist] are online now, there's some great
 content there, so check it out!
 
-[Web Transport][web-transport] - previously called Quic Transport has
+[Web Transport][web-transport]-previously called Quic Transport has
 undergone a number of changes and is starting a new origin trial.
 
 Web Assembly SIMD has finished its origin trial and is available to all users.
@@ -177,8 +177,8 @@ additional changes in Chrome 91.
 
 ## Subscribe
 
-Want to stay up to date with our videos, then [subscribe](https://goo.gl/6FP1a5)
-to our [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
+To stay up to date, [subscribe](https://goo.gl/6FP1a5)
+to [Chrome Developers YouTube channel](https://www.youtube.com/user/ChromeDevelopers/),
 and you'll get an email notification whenever we launch a new video.
 
 I'm Pete LePage, and as soon as Chrome 92 is released, I'll be right here to
