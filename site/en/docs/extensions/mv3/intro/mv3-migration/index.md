@@ -130,7 +130,7 @@ permissions requests by the Chrome Web Store review process.
 {% endAside %}
 
 
-### Content security policy  {: #fcontent-security-policy }
+### Content security policy  {: #content-security-policy }
 
 An extension's [content security policy](https://content-security-policy.com/)
 (CSP) was specified in MV2 as a string; in MV3 it is an object with members
