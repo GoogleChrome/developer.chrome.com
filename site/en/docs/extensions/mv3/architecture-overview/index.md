@@ -38,8 +38,8 @@ as the most important files and the capabilities the extension might use.
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["https://*.google.com/", "activeTab"],
-  "browser_action": {
+  "permissions": ["activeTab"],
+  "action": {
     "default_icon": "icon_16.png",
     "default_popup": "popup.html"
   }
