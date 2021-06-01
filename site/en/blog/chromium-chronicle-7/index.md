@@ -28,27 +28,23 @@ compiles a particular source file, with modifications as needed.
 Start by going to your output directory and using autoninja (or ninja) to
 **compile the file of interest** (and any dependencies) **using the `^` suffix**.
 This suffix tells ninja to build the output of the specified `file—version.o`
-in this case. Then, touch the file, and **compile it (and only it) again with
-the `-v` (verbose) flag** to ninja:
+in this case. Then, use the `commands` tool to print the compile command:
 
 On Linux or OSX:
 
 ```bash
 autoninja ../../base/version.cc^
-touch ../../base/version.cc
-autoninja -v ../../base/version.cc^
+autoninja -t commands -s ../../base/version.cc^
 ```
 
 In the Windows cmd shell `^` is a special character and must be escaped:
 
 ```bash
 C:\> autoninja ../../base/version.cc^^
-C:\> touch ../../base/version.cc
-C:\> autoninja -v ../../base/version.cc^^
+C:\> autoninja -t commands -s ../../base/version.cc^^
 ```
 
-Typical output of the `autoninja -v` command looks like this (significantly
-trimmed):
+Typical output of the `commands` tool looks like this (significantly trimmed):
 
 ```bash
 ..\..\third_party\llvm-build\Release+Asserts\bin\clang-cl.exe /nologo /showIncludes -imsvc ...
