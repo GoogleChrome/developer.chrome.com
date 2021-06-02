@@ -19,7 +19,7 @@ Here's a list of everything that's been covered in the *What's New In DevTools* 
 * [Report Quirks mode issues in the Issues tab](/blog/new-in-devtools-92/#quirks-mode)
 * [Include Compute Intersections in the Performance panel](/blog/new-in-devtools-92/#computed-intersections)
 * [Lighthouse 7.5 in the Lighthouse panel](/blog/new-in-devtools-92/#lighthouse)
-* [Deprecated “Restart frame” context menu in the call stack](/blog/new-in-devtools-92/#restart-frame)
+* [Deprecated "Restart frame" context menu in the call stack](/blog/new-in-devtools-92/#restart-frame)
 * [[Experimental] Protocol monitor](/blog/new-in-devtools-92/#protocol-monitor)
 * [[Experimental] Puppeteer Recorder](/blog/new-in-devtools-92/#puppeteer-recorder)
 
