@@ -11,9 +11,6 @@ Thumbs.db
 .vscode
 .lighthouseci
 
-**/_example
-**/README.md
-
 # Code coverage generated files
 .nyc_output
 /coverage
