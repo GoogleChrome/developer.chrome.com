@@ -31,7 +31,7 @@ const chalk = require('chalk');
 const warning = chalk.black.bgYellow;
 
 // Default files that should always be ignored.
-const ignores = ['node_modules', '**/README.md', '**/_example', '*.swp'];
+const ignores = fs.readFileSync('../../.gitignore').toString().split("\n");
 
 const isProduction = process.env.NODE_ENV === 'production';
 // This will automatically be set to true by GitHub Actions.
