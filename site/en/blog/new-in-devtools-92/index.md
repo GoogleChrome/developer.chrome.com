@@ -168,7 +168,7 @@ Check out the [release notes](https://github.com/GoogleChrome/lighthouse/release
 Chromium issue: [772558](https://crbug.com/772558)
 
 
-## Deprecated “Restart frame” context menu in the call stack {: #restart-frame }
+## Deprecated "Restart frame" context menu in the call stack {: #restart-frame }
 
 The **Restart frame** option is now deprecated. This feature requires further development to work well, it is currently broken and often crashes.  
 
