@@ -110,7 +110,7 @@ The XHR label is now renamed to **Fetch/XHR**. This change makes it clearer that
 Chromium issue: [1201398](https://crbug.com/1201398)
 
 
-### Filter Wasm resource type in the network panel {: #wasm }
+### Filter Wasm resource type in the Network panel {: #wasm }
 You can now click on the new **Wasm** button to filter the Wasm network requests.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vuTMcfCjDWFfVtDN6Dpf.png", alt="Filter by Wasm", width="800", height="515" %}
