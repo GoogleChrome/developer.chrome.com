@@ -17,6 +17,7 @@ tags:
 
 {% Aside %}
 Interested in helping improve DevTools? Sign up to participate in [Google User Research here](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458).
+
 {% endAside %}
 
 
@@ -114,7 +115,7 @@ You can now click on the new **Wasm** button to filter the Wasm network requests
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vuTMcfCjDWFfVtDN6Dpf.png", alt="Filter by Wasm", width="800", height="515" %}
 
-[# https://chromium.googlesource.com/devtools/devtools-frontend/+/db3b40161aeb0856d33e0e4545b2b5bd8e79fb86 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/db3b40161aeb0856d33e0e4545b2b5bd8e79fb86 #}
 
 Chromium issue: [1103638](https://crbug.com/1103638)
 
@@ -172,7 +173,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 The **Restart frame** option is now deprecated. This feature requires further development to work well, it is currently broken and often crashes.  
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Alvnt4FkoEFoP0SkdKgi.png", alt="Deprecated 'Restart frame' context menu", width="800", height="486" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Alvnt4FkoEFoP0SkdKgi.png", alt="Deprecated Restart frame context menu", width="800", height="486" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4494098b6840f608347c1edf3c048691056eada4 #}
 
