@@ -38,7 +38,7 @@ flag for experimentation. You guessed it, `chrome://flags` is where this happens
 ask you to set is `chrome://flags/#enable-experimental-web-platform-features`, which, as the name
 suggests, enables experimental web platform features.
 
-{% Aside 'warning' %} As the name suggests, experimental web platform features are _experimental_.
+{% Aside 'warning' %} As the name suggests, experimental web platform features are <em>experimental</em>.
 We do not recommend you set flags on your daily production browser. Instead, we prefer you to use a
 development browser version like the Beta, Dev, or Canary channel for your development needs where
 you can set flags as required, and the Stable channel for everything else.
@@ -46,7 +46,7 @@ Also be sure to only set flags based on instructions from sources you trust. {% 
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/Fnn0rmiT8XY9IaOGdvL4.png", alt="Toggling the 'experimental web platform features' flag.", width="800", height="125" %}
 
-{% Aside %} Browser flags are distinct from [origin trials](https://web.dev/origin-trials/).
+{% Aside %} Browser flags are distinct from <a href="/blog/origin-trials/">origin trials</a>.
 
 Origin trials are set by website owners and opt a user's browser into supporting a given feature. Only
 features deemed safe for testing with real users are available for origin trials.
