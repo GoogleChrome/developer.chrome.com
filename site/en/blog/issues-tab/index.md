@@ -7,7 +7,7 @@ authors:
   - janscheffler
   - sigurds
 date: 2020-09-24
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JHFSiflWmymyILCC18s7.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XIBgHd0BAs0tNwtv7guE.jpg'
 alt: ''
 tags:
   - devtools-engineering
