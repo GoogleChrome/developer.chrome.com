@@ -76,7 +76,7 @@ on progress with third-party origin trials.
 ## How to provide feedback
 
 If you're registering for a third-party origin trial and have feedback to share on the process or
-ideas on how we can improve it, please [create an
+ideas on how we can improve it, [create an
 issue](https://github.com/GoogleChrome/OriginTrials/issues/new) on the Origin Trials GitHub code
 repo.
 
