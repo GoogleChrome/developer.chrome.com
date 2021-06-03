@@ -77,6 +77,11 @@ URLs get rewritten to `chrome://`, in Edge to `edge://`, and so on for all vendo
 web thing together, and this is `about://` all of us! Whenever you see instructions that include the
 `about://` scheme, your Chromium browser of choice will do the right thing.
 
+{% Aside %}
+A notable exception to the rewriting mechanism is [`about:blank`](about:blank) (without the `//`), which
+displays a blank, empty document.
+{% endAside %}
+
 ## Acknowledgements
 
 Hero image by [Photos by Lanty](https://unsplash.com/@photos_by_lanty) on
