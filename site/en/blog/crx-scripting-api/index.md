@@ -12,9 +12,9 @@ tags:
   - extensions
 ---
 
-Manifest V3 introduces a number of changes to Chrome's extension platform, a handful of which are
-notable or significant changes. In this post, we'll be exploring the motivations and changes
-introduced by one of the more notable changes: the introduction of the `chrome.scripting` API.
+Manifest V3 introduces a number of changes to Chrome's extension platform. In this post, we'll be
+exploring the motivations and changes introduced by one of the more notable changes: the
+introduction of the `chrome.scripting` API.
 
 ## What is chrome.scripting?
 
