@@ -83,7 +83,7 @@ chrome.tabs.executeScript({
 });
 ```
 
-We also wanted to clean up some other, more subtle footguns with the Manifest V2 version's design,
+We also wanted to clean up some other, more subtle issues with the Manifest V2 version's design,
 like as the `matchAboutBlank` property on the options object.
 
 While we could have changed the signature of this method within the Tabs API, we felt that between
@@ -279,7 +279,8 @@ improving the developer experience. By introducing `chrome.scripting` in Manifes
 to help clean up the Tabs API, to reimagine `executeScript` for a more secure extensions platform,
 and to lay the groundwork for new scripting capabilities that will be coming later this year.
 
-If you have any thoughts or feedback on what we've shared here, head over to the [chromium-extensions](crx-group) Google Group.
+If you have any thoughts or feedback on what we've shared here or Manifest V3 in general, head over
+to the [chromium-extensions](crx-group) Google Group and tell us what you think.
 
 [content-scripts]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts
 [crx-group]: https://groups.google.com/a/chromium.org/g/chromium-extensions
