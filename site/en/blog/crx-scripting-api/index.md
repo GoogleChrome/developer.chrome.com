@@ -183,11 +183,11 @@ frame in the tab.
 // Manifest V2 extension
 chrome.browserAction.onClicked.addListener((tab) => {
   chrome.tabs.executeScript(tab.id, {
-    frame: targetFrame1,
+    frameId: targetFrame1,
     file: 'content-script.js',
   });
   chrome.tabs.executeScript(tab.id, {
-    frame: targetFrame2,
+    frameId: targetFrame2,
     file: 'content-script.js',
   });
 });
