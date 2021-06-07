@@ -136,7 +136,6 @@ page.
 
 ```js
 // Manifest V2 extension
-
 let userReq = await fetch('https://example.com/greetUser.js');
 let userBody = await userReq.text();
 let user = eval(userBody);
@@ -157,7 +156,6 @@ developers to modify an extension's runtime behavior based on user settings or a
 
 ```js
 // Manifest V3 extension
-
 let userReq = await fetch('https://example.com/user-data.json');
 let user = await userReq.json();
 let givenName = user.givenName || '<GIVEN_NAME>';
@@ -247,7 +245,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
     // results == ['success', null]
     for (let result of results) {
       if (result !== 'success') {
-        console.log(`An error occurred, but where?`);
+        console.log('An error occurred, but where?');
       }
     }
   });
@@ -262,7 +260,7 @@ easier for developers to identify and react to situations where injection fails 
 // Manifest V3 extension
 chrome.action.onClicked.addListener(async (tab) => {
   let results = await chrome.scripting.executeScript({
-    target: {tabId: tab.id, allFrames: true ,
+    target: {tabId: tab.id, allFrames: true},
     files: ['content-script.js'],
   });
   // results == [{frameId: 0, result: 'success'}, {frameId: 1234, result: null}]
