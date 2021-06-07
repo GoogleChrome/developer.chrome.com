@@ -137,14 +137,14 @@ page.
 ```js
 // Manifest V2 extension
 
-let userReq = await fetch('https://example.com/user.js');
+let userReq = await fetch('https://example.com/greetUser.js');
 let userBody = await userReq.text();
 let user = eval(userBody);
-let givenName = user.givenName;
 
 chrome.browserAction.onClicked.addListener((tab) => {
   chrome.tabs.executeScript({
-    code: `alert(\`Hello, ${givenName}\`)`
+    // user.greetUser == 'alert("Hello, <GIVEN_NAME>!")'
+    code: user.greetUser
   });
 });
 ```
@@ -158,11 +158,12 @@ developers to modify an extension's runtime behavior based on user settings or a
 ```js
 // Manifest V3 extension
 
-let userReq = await fetch('https://example.com/user.json');
-let { givenName = "[Username]" } = await userReq.json();
+let userReq = await fetch('https://example.com/user-data.json');
+let user = await userReq.json();
+let givenName = user.givenName || '<GIVEN_NAME>';
 
 function greetUser(name) {
-  alert(`Hello, ${name}`);
+  alert(`Hello, ${name}!`);
 }
 chrome.action.onClicked.addListener((tab) => {
   chrome.tabs.executeScript(tab.id, {
@@ -183,11 +184,11 @@ frame in the tab.
 chrome.browserAction.onClicked.addListener((tab) => {
   chrome.tabs.executeScript(tab.id, {
     frame: targetFrame1,
-    file: "content-script.js",
+    file: 'content-script.js',
   });
   chrome.tabs.executeScript(tab.id, {
     frame: targetFrame2,
-    file: "content-script.js",
+    file: 'content-script.js',
   });
 });
 ```
@@ -200,8 +201,8 @@ tab. You can use use `chrome.webNavigation.getAllFrames` to get a list of all fr
 // Manifest V3 extension
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
-    target: { tabId: tab.id, frames: [targetFrame1, targetFrame2] },
-    files: ["content-script.js"],
+    target: {tabId: tab.id, frames: [targetFrame1, targetFrame2]},
+    files: ['content-script.js'],
   });
 });
 ```
@@ -229,7 +230,7 @@ if (url.pathname.endsWith('.html')) {
 'success';
 ```
 
-When we run the Manifest V2 version, we get back an array of `["success", null]`. Which result
+When we run the Manifest V2 version, we get back an array of `['success', null]`. Which result
 corresponds to the main frame and which is for the iframe? The return value doesn't tell us, so we
 don't know for sure.
 
@@ -238,11 +239,11 @@ don't know for sure.
 chrome.browserAction.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     allFrames: true,
-    file: "content-script.js",
+    file: 'content-script.js';,
   }, (results) => {
-    // results == ["success", null]
+    // results == ['success', null]
     for (let result of results) {
-      if (result !== "success") {
+      if (result !== 'success') {
         console.log(`An error occurred, but where?`);
       }
     }
@@ -258,13 +259,12 @@ easier for developers to identify and react to situations where injection fails 
 // Manifest V3 extension
 chrome.action.onClicked.addListener(async (tab) => {
   let results = await chrome.scripting.executeScript({
-    target: { tabId: tab.id, allFrames: true },
-    files: ["content-script.js"],
+    target: {tabId: tab.id, allFrames: true ,
+    files: ['content-script.js'],
   });
-  // results == [{ frameId: 0, result: "success" }, { frameId: 1234, result: null }]
-
+  // results == [{frameId: 0, result: 'success'}, {frameId: 1234, result: null}]
   for (let output of results) {
-    if (output.result !== "success") {
+    if (output.result !== 'success') {
       console.log(`An error occurred in frame ${output.frameId}`);
     }
   }
