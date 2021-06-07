@@ -47,18 +47,18 @@ bit of a grab bag of features and over the years this collection has only grown.
 [Image: a beautiful junk drawer. Caption: Artist's rendition of the Tabs API.]
 
 By the time Manifest V3 was released, the Tabs API had grown to cover basic tab management,
-selection management, window organization, messaging, zoom control, basic navigation,
-scripting, and a few other smaller capabilities. While these are all important, it can be a bit
-overwhelming for developers when they're getting started and for the Chrome team as we maintain the
-platform and consider requests from the developer community.
+selection management, window organization, messaging, zoom control, basic navigation, scripting, and
+a few other smaller capabilities. While these are all important, it can be a bit overwhelming for
+developers when they're getting started and for the Chrome team as we maintain the platform and
+consider requests from the developer community.
 
 Another complicating factor is that the `tabs` permission is not well understood. While many other
 permissions restrict access to a given API (e.g. [`storage`][storage-api]), this permission is a bit
 unusual in that it only grants the extension access to sensitive properties on Tab instances (and by
 extension also impacts the Windows API). Understandably, many extension developers mistakenly think
 they need this permission in order to access methods on the Tabs API like `chrome.tabs.create` or,
-more germanely, `chrome.tabs.executeScript`. Moving functionality out of the Tabs API helps clear
-up some of this confusion.
+more germanely, `chrome.tabs.executeScript`. Moving functionality out of the Tabs API helps clear up
+some of this confusion.
 
 ### Breaking changes
 
@@ -105,10 +105,10 @@ content script registration, or unregister content scripts at runtime.
 While we knew that we wanted to tackle this feature request in Manifest V3, none of our existing
 APIs felt like the right home. We also considered aligning with Firefox on their [Content Scripts
 API][content-scripts], but very early on we identified a couple major drawbacks to this approach.
-First, we knew that we would have incompatible signatures (e.g. dropping `code` support). Second,
-our API had a different set of design constraints (e.g. needing a registration to persist beyond a
-service worker's lifetime). Finally, this namespace would also pigeonhole us to content script
-functionality where we're thinking about scripting in extensions more broadly.
+First, we knew that we would have incompatible signatures (e.g. dropping support for the `code`
+property) Second, our API had a different set of design constraints (e.g. needing a registration to
+persist beyond a service worker's lifetime). Finally, this namespace would also pigeonhole us to
+content script functionality where we're thinking about scripting in extensions more broadly.
 
 On the executeScript front, we also wanted to expand what this API could do beyond what the Tabs API
 version supported. More specifically, we wanted to support functions and arguments, more easily
