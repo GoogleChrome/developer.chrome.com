@@ -87,7 +87,7 @@ We also wanted to clean up some other, more subtle issues with the Manifest V2 v
 like the `matchAboutBlank` property on the options object.
 
 While we could have changed the signature of this method within the Tabs API, we felt that between
-these breaking changes and the introduction of new capabilities (covered in the next section) a
+these breaking changes and the introduction of new capabilities (covered in the next section), a
 clean break would be easier for everyone.
 
 ### Expanding scripting capabilities
@@ -97,9 +97,9 @@ additional scripting capabilities to Chrome's extension platform. Specifically, 
 support for declarative content scripts and to expand the capabilities of the `executeScript`
 method.
 
-Declarative content scripts support has been an outstanding Chromium feature request for several
-years. Today, Manifest V2 and V3 Chrome extensions can only statically declare content scripts in
-their manifest.json file; the platform doesn't provide a way to register new content scripts, tweak
+Declarative content scripts support has been a long-standing feature request in Chromium. Today,
+Manifest V2 and V3 Chrome extensions can only statically declare content scripts in their
+manifest.json file; the platform doesn't provide a way to register new content scripts, tweak
 content script registration, or unregister content scripts at runtime.
 
 While we knew that we wanted to tackle this feature request in Manifest V3, none of our existing
@@ -110,8 +110,8 @@ property) Second, our API had a different set of design constraints (e.g. needin
 persist beyond a service worker's lifetime). Finally, this namespace would also pigeonhole us to
 content script functionality where we're thinking about scripting in extensions more broadly.
 
-On the executeScript front, we also wanted to expand what this API could do beyond what the Tabs API
-version supported. More specifically, we wanted to support functions and arguments, more easily
+On the `executeScript` front, we also wanted to expand what this API could do beyond what the Tabs
+API version supported. More specifically, we wanted to support functions and arguments, more easily
 target specific frames, and target non-"tab" contexts.
 
 Moving forward, we're also considering how extensions can interact with installed PWAs and other
@@ -191,9 +191,9 @@ chrome.browserAction.onClicked.addListener((tab) => {
 });
 ```
 
-In Manifest V3, we replaced the optional `frame` string property in the options object with an
-optional `frames` array of strings, allowing developers to target a specific set of frames within a
-tab. You can use use `chrome.webNavigation.getAllFrames` to get a list of all frames in a tab.
+In Manifest V3, we replaced the optional `frame` integer property in the options object with an
+optional `frames` array of integers; this allows developers to target multiple frames in a single
+API call. You can use use `chrome.webNavigation.getAllFrames` to get a list of all frames in a tab.
 
 ```js
 // Manifest V3 extension
