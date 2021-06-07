@@ -1,5 +1,5 @@
 ---
-title: "Introducing the chrome.scripting API"
+title: "Introducing chrome.scripting"
 # description: >
 #   Why and how we implemented color vision deficiency simulation in DevTools and the Blink Renderer.
 layout: "layouts/blog-post.njk"
@@ -16,7 +16,7 @@ Manifest V3 introduces a number of changes to Chrome's extension platform, a han
 notable or significant changes. In this post, we'll be exploring the motivations and changes
 introduced by one of the more notable changes: the introduction of the `chrome.scripting` API.
 
-## What is `chrome.scripting`?
+## What is chrome.scripting?
 
 As the name might suggest, `chrome.scripting` is a new namespace introduced in Manifest V3
 responsible for script and style injection capabilities.
