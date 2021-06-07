@@ -52,7 +52,7 @@ scripting, and a few other smaller capabilities. While these are all important, 
 overwhelming for developers when they're getting started and for the Chrome team as we maintain the
 platform and consider requests from the developer community.
 
-Another complicating factor is that the tabs permission is not well understood. While many other
+Another complicating factor is that the `tabs` permission is not well understood. While many other
 permissions restrict access to a given API (e.g. [`storage`][storage-api]), this permission is a bit
 unusual in that it only grants the extension access to sensitive properties on Tab instances (and by
 extension also impacts the Windows API). Understandably, many extension developers mistakenly think
