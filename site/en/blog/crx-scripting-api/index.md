@@ -144,7 +144,7 @@ let user = eval(userBody);
 chrome.browserAction.onClicked.addListener((tab) => {
   chrome.tabs.executeScript({
     // user.greetUser == 'alert("Hello, <GIVEN_NAME>!")'
-    code: user.greetUser
+    code: user.greetUser,
   });
 });
 ```
@@ -201,7 +201,10 @@ tab. You can use use `chrome.webNavigation.getAllFrames` to get a list of all fr
 // Manifest V3 extension
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
-    target: {tabId: tab.id, frames: [targetFrame1, targetFrame2]},
+    target: {
+      tabId: tab.id,
+      frames: [targetFrame1, targetFrame2],
+    },
     files: ['content-script.js'],
   });
 });
