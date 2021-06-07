@@ -60,8 +60,6 @@ they need this permission in order to access methods on the Tabs API like `chrom
 more germanely, `chrome.tabs.executeScript`. Moving functionality out of the Tabs API helps clear
 up some of this confusion.
 
-Manifest version bumps are a rare opportunity for us to address these kinds of abstract concerns. As we scoped out Manifest V3 and considered ways to iterate on the platform, we felt this transition was a great time to move scripting functionality to a new API and to narrow the scope of the existing Tabs API.
-
 ### Breaking changes
 
 When designing Manifest V3, one of the major issues that we wanted to address was abuse and malware
@@ -107,20 +105,24 @@ content script registration, or unregister content scripts at runtime.
 While we knew that we wanted to tackle this feature request in Manifest V3, none of our existing
 APIs felt like the right home. We also considered aligning with Firefox on their [Content Scripts
 API][content-scripts], but very early on we identified a couple major drawbacks to this approach.
-First, we knew that we would have incompatible signatures (e.g. dropping`code` support). Second, our
-API had a different set of design constraints (e.g. needing a registration to persist beyond a
+First, we knew that we would have incompatible signatures (e.g. dropping `code` support). Second,
+our API had a different set of design constraints (e.g. needing a registration to persist beyond a
 service worker's lifetime). Finally, this namespace would also pigeonhole us to content script
 functionality where we're thinking about scripting in extensions more broadly.
 
-On the executeScript front, we also wanted to expand what this API could do beyond what the Tabs API version supported. More specifically, we wanted to support functions and arguments, more easily target specific frames, and target non-"tab" contexts.
+On the executeScript front, we also wanted to expand what this API could do beyond what the Tabs API
+version supported. More specifically, we wanted to support functions and arguments, more easily
+target specific frames, and target non-"tab" contexts.
 
-## Changes in Manifest V3
+Moving forward, we're also considering how extensions can interact with installed PWAs and other
+contexts that don't conceptually map to "tabs."
 
-In the previous section I mentioned that we're planning to add dynamic content script support. While
-I'd love to dig more into what this might look like or how it might work, design goals, or
-capabilities, unfortunately we're not quite ready to share those details.
+## Changes between tabs.executeScript and scripting.executeScript
 
-In the remainder of this post, I'd like to take a closer look at the similarities and differences between `chrome.tabs.executeScript` and `chrome.scripting.executeScript`.
+In the remainder of this post, I'd like to take a closer look at the similarities and differences
+between `chrome.tabs.executeScript` and `chrome.scripting.executeScript`.
+
+### Injecting a function with arguments
 
 While considering how the platform would need to evolve in light of remotely hosted code
 restrictions, we wanted to find a balance between the raw power of arbitrary code execution and only
@@ -134,7 +136,12 @@ page.
 
 ```js
 // Manifest V2 extension
-let givenName = "Default";
+
+let userReq = await fetch('https://example.com/user.js');
+let userBody = await userReq.text();
+let user = eval(userBody);
+let givenName = user.givenName;
+
 chrome.browserAction.onClicked.addListener((tab) => {
   chrome.tabs.executeScript({
     code: `alert(\`Hello, ${givenName}\`)`
@@ -150,39 +157,44 @@ developers to modify an extension's runtime behavior based on user settings or a
 
 ```js
 // Manifest V3 extension
-let givenName = "Default";
+
+let userReq = await fetch('https://example.com/user.json');
+let { givenName = "[Username]" } = await userReq.json();
 
 function greetUser(name) {
   alert(`Hello, ${name}`);
 }
 chrome.action.onClicked.addListener((tab) => {
-  chrome.tabs.executeScript({
-    target: { tabId: tab.id },
+  chrome.tabs.executeScript(tab.id, {
     func: greetUser,
     args: [givenName],
   });
 });
 ```
 
-We also wanted to make frames more of a first-class citizen of the API. The Manifest V2 version of
-`executeScript` allowed developers to target either all frames in a tab or a specific frame in the
-tab. In Manifest V3, we replaced the optional `frame` string property in the options object with an
-optional `frames` array of strings.
+### Targeting frames
 
+We also wanted to improve how developers interact with frames in the revised API. The Manifest V2
+version of `executeScript` allowed developers to target either all frames in a tab or a specific
+frame in the tab.
 
 ```js
 // Manifest V2 extension
-chrome.action.onClicked.addListener((tab) => {
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id, frame: targetFrame1 },
-    files: ["content-script.js"],
+chrome.browserAction.onClicked.addListener((tab) => {
+  chrome.tabs.executeScript(tab.id, {
+    frame: targetFrame1,
+    file: "content-script.js",
   });
-  chrome.scripting.executeScript({
-    target: { tabId: tab.id, frame: targetFrame2 },
-    files: ["content-script.js"],
+  chrome.tabs.executeScript(tab.id, {
+    frame: targetFrame2,
+    file: "content-script.js",
   });
 });
 ```
+
+In Manifest V3, we replaced the optional `frame` string property in the options object with an
+optional `frames` array of strings, allowing developers to target a specific set of frames within a
+tab. You can use use `chrome.webNavigation.getAllFrames` to get a list of all frames in a tab.
 
 ```js
 // Manifest V3 extension
@@ -194,16 +206,82 @@ chrome.action.onClicked.addListener((tab) => {
 });
 ```
 
-We've also improved the way we return script injection results in Manifest V3. In Manifest V2,
-`executeScript` would return an array of results. Unfortunately, this implementation didn't provide
-enough information about which frame a given result applied to,  which meant that if an error occurred when injecting into `allFrames: true` it was very difficult to track down which frame had the error.
+### Script injection results
 
-In Manifest V3, we've added more details to the result objects returned in order to clearly
-identify the tab and frame that the injection occurred. This makes it much easier for developers to
-identify and react to situations where injection fails unexpectedly.
+We've also improved the way we return script injection results in Manifest V3. A "result" is
+basically the final statement evaluated in a script. Think of it like the value returned when you
+execute a block of code in the Chrome DevTools console.
 
-Moving forward, we're also considering how extensions can interact with installed PWAs and other
-contexts that don't conceptually map to "tabs."
+In Manifest V2, `executeScript` and `insertCSS` would return an array of bare execution results.
+This is fine for a single injection point, but if you're injecting into all frames in a tab it can
+be difficult to track down which frame encountered the error.
 
-[storage-api]: #link-to-storage-api-docs
+For a concrete example, let's take a look at the results returned by a Manifest V2 and Manifest V3.
+Both versions of the extension will share the same content script behavior. And for both examples,
+we'll be injecting on the same [demo page][iframe-demo].
+
+```js
+//// content-script.js
+var url = new URL(window.location.href);
+if (url.pathname.endsWith('.html')) {
+  throw new Error('Incompatible URL path!');
+}
+'success';
+```
+
+When we run the Manifest V2 version, we get back an array of `["success", null]`. Which result
+corresponds to the main frame and which is for the iframe? The return value doesn't tell us, so we
+don't know for sure.
+
+```js
+// Manifest V2 extension
+chrome.browserAction.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    allFrames: true,
+    file: "content-script.js",
+  }, (results) => {
+    // results == ["success", null]
+    for (let result of results) {
+      if (result !== "success") {
+        console.log(`An error occurred, but where?`);
+      }
+    }
+  });
+});
+```
+
+In the Manifest V3 version, results now contains an array of objects instead of an array of strings,
+and the result objects clearly identify the ID of the frame for each result. This makes it much
+easier for developers to identify and react to situations where injection fails unexpectedly.
+
+```js
+// Manifest V3 extension
+chrome.action.onClicked.addListener(async (tab) => {
+  let results = await chrome.scripting.executeScript({
+    target: { tabId: tab.id, allFrames: true },
+    files: ["content-script.js"],
+  });
+  // results == [{ frameId: 0, result: "success" }, { frameId: 1234, result: null }]
+
+  for (let output of results) {
+    if (output.result !== "success") {
+      console.log(`An error occurred in frame ${output.frameId}`);
+    }
+  }
+});
+```
+
+## Wrap up
+
+Manifest version bumps present a rare opportunity to make rethink and modernize extensions APIs. Our
+goal with Manifest V3 is to improve the end user experience by making extensions safer while also
+improving the developer experience. By introducing `chrome.scripting` in Manifest V3, we were able
+to help clean up the Tabs API, to reimagine `executeScript` for a more secure extensions platform,
+and to lay the groundwork for new scripting capabilities that will be coming later this year.
+
+If you have any thoughts or feedback on what we've shared here, head over to the [chromium-extensions](crx-group) Google Group.
+
 [content-scripts]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts
+[crx-group]: https://groups.google.com/a/chromium.org/g/chromium-extensions
+[iframe-demo]: https://simple-iframe-demo.glitch.me/
+[storage-api]: #link-to-storage-api-docs
