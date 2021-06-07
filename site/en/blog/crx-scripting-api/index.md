@@ -84,7 +84,7 @@ chrome.tabs.executeScript({
 ```
 
 We also wanted to clean up some other, more subtle issues with the Manifest V2 version's design,
-like as the `matchAboutBlank` property on the options object.
+like the `matchAboutBlank` property on the options object.
 
 While we could have changed the signature of this method within the Tabs API, we felt that between
 these breaking changes and the introduction of new capabilities (covered in the next section) a
