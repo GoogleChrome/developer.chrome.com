@@ -47,7 +47,7 @@ bit of a grab bag of features and over the years this collection has only grown.
 [Image: a beautiful junk drawer. Caption: Artist's rendition of the Tabs API.]
 
 By the time Manifest V3 was released, the Tabs API had grown to cover basic tab management,
-selection management, window organization, positioning, messaging, zoom control, basic navigation,
+selection management, window organization, messaging, zoom control, basic navigation,
 scripting, and a few other smaller capabilities. While these are all important, it can be a bit
 overwhelming for developers when they're getting started and for the Chrome team as we maintain the
 platform and consider requests from the developer community.
