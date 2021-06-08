@@ -207,9 +207,7 @@ API call. You can use use `chrome.webNavigation.getAllFrames` to get a list of a
 ```js
 // Manifest V3 extension
 chrome.action.onClicked.addListener(async (tab) => {
-  let frames = await new Promise((resolve) => {
-    chrome.webNavigation.getAllFrames({tabId: tab.id}, resolve);
-  });
+  let frames = await chrome.webNavigation.getAllFrames({tabId: tab.id});
   let frame1 = frame[0].frameId;
   let frame2 = frame[1].frameId;
 
