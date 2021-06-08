@@ -44,8 +44,6 @@ One of the issues that has been bothering the Extensions Team for the past few y
 provided were related to the broad concept of a browser tab. Even at that point, though, it was a
 bit of a grab bag of features and over the years this collection has only grown.
 
-[Image: a beautiful junk drawer. Caption: Artist's rendition of the Tabs API.]
-
 By the time Manifest V3 was released, the Tabs API had grown to cover basic tab management,
 selection management, window organization, messaging, zoom control, basic navigation, scripting, and
 a few other smaller capabilities. While these are all important, it can be a bit overwhelming for
