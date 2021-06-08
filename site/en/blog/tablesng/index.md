@@ -150,7 +150,7 @@ repainted. If you are testing this out, you may run into that. {% endAside %}
 ## Rearchitecting the web
 
 The Chrome team has not only been introducing new features to make web authoring
-more robust, but they’ve also been working hard to improve existing APIs and
+more robust, but they've also been working hard to improve existing APIs and
 their compatibility. In fact, TablesNG is just one of many re-architecture
 projects that this team has taken on over the past eight years. Others, though
 not all of the projects, include:
