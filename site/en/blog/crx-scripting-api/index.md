@@ -6,7 +6,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - dotproto
 date: 2021-06-07
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HD1U7BxDVRDcTxNaQJ4C.jpg'
+hero: 'image/WlD8wC6g8khYWPJUsQceQkhXSlv1/7SI8nw8jvSCspg2q71ya.png'
 alt: ''
 tags:
   - extensions
