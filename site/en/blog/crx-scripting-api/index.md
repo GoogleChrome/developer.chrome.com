@@ -274,7 +274,7 @@ chrome.action.onClicked.addListener(async (tab) => {
 
 ## Wrap up
 
-Manifest version bumps present a rare opportunity to make rethink and modernize extensions APIs. Our
+Manifest version bumps present a rare opportunity to rethink and modernize extensions APIs. Our
 goal with Manifest V3 is to improve the end user experience by making extensions safer while also
 improving the developer experience. By introducing `chrome.scripting` in Manifest V3, we were able
 to help clean up the Tabs API, to reimagine `executeScript` for a more secure extensions platform,
