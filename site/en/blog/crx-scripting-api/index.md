@@ -61,7 +61,7 @@ some of this confusion.
 ### Breaking changes
 
 When designing Manifest V3, one of the major issues that we wanted to address was abuse and malware
-enabled by "remotely hosted code." It's common for abusive extension authors to execute scripts
+enabled by "remotely-hosted code." It's common for abusive extension authors to execute scripts
 fetched from remote servers to steal user data, inject malware, and evade detection. While good
 actors also use this capability, we ultimately felt that it was simply too dangerous to remain as it
 was.
@@ -123,7 +123,7 @@ between [`chrome.tabs.executeScript`][tabs-executescript] and
 
 ### Injecting a function with arguments
 
-While considering how the platform would need to evolve in light of remotely hosted code
+While considering how the platform would need to evolve in light of remotely-hosted code
 restrictions, we wanted to find a balance between the raw power of arbitrary code execution and only
 allowing static content scripts. The solution we struck on was to allow extensions to inject a
 function as a content script and to pass an array of values as arguments.
