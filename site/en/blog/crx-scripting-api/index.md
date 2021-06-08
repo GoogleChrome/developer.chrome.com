@@ -257,7 +257,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
     // results == [1, 0]
     for (let result of results) {
       if (result > 0) {
-        // Do something with the frame… which one was it?
+        // Do something with the frame... which one was it?
       }
     }
   });
