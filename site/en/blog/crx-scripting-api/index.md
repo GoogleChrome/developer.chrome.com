@@ -244,7 +244,7 @@ var headers = document.querySelectorAll('p');
 headers.length;
 ```
 
-When we run the Manifest V2 version, we get back an array of `[1, 5, 0]`. Which result corresponds
+When we run the Manifest V2 version, we get back an array of `[1, 0, 5]`. Which result corresponds
 to the main frame and which is for the iframe? The return value doesn't tell us, so we don't know
 for sure.
 
@@ -255,7 +255,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
     allFrames: true,
     file: 'content-script.js',
   }, (results) => {
-    // results == [1, 0]
+    // results == [1, 0, 5]
     for (let result of results) {
       if (result > 0) {
         // Do something with the frame... which one was it?
@@ -279,7 +279,7 @@ chrome.action.onClicked.addListener(async (tab) => {
   });
   // results == [
   //   {frameId: 0, result: 1},
-  //   {frameId: 1235, result: 5}]
+  //   {frameId: 1235, result: 5},
   //   {frameId: 1234, result: 0}
   // ]
 
