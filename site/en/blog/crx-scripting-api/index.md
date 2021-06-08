@@ -238,7 +238,7 @@ Manifest V3 version of the same extension. Both versions of the extension will i
 content script and we'll be comparing results on the same [demo page][iframe-demo].
 
 ```js
-//// content-script.js
+// content-script.js
 var headers = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
 headers.length;
 ```
