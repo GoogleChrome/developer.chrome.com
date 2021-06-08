@@ -62,10 +62,10 @@ some of this confusion.
 ### Breaking changes
 
 When designing Manifest V3, one of the major issues that we wanted to address was abuse and malware
-enabled by "remotely-hosted code" - code that is executed, but not included in the extension package. It's common for abusive extension authors to execute scripts
-fetched from remote servers to steal user data, inject malware, and evade detection. While good
-actors also use this capability, we ultimately felt that it was simply too dangerous to remain as it
-was.
+enabled by "remotely-hosted code" - code that is executed, but not included in the extension
+package. It's common for abusive extension authors to execute scripts fetched from remote servers to
+steal user data, inject malware, and evade detection. While good actors also use this capability, we
+ultimately felt that it was simply too dangerous to remain as it was.
 
 There are a couple different ways that extensions can execute unbundled code, but the relevant one
 here is the Manifest V2 `chrome.tabs.executeScript` method. This method allows an extension to
@@ -85,8 +85,8 @@ feature.
 })();
 ```
 
-We also wanted to clean up some other, more subtle issues with the Manifest V2 version's design,
-and make the API a more polished and predictable tool.
+We also wanted to clean up some other, more subtle issues with the Manifest V2 version's design, and
+make the API a more polished and predictable tool.
 
 While we could have changed the signature of this method within the Tabs API, we felt that between
 these breaking changes and the introduction of new capabilities (covered in the next section), a
@@ -265,9 +265,10 @@ chrome.browserAction.onClicked.addListener((tab) => {
 });
 ```
 
-In the Manifest V3 version, `results` now contains an array of result objects instead of an array of just the evaluation results,
-and the result objects clearly identify the ID of the frame for each result. This makes it much
-easier for developers to utilize the result and take action on a specific frame.
+In the Manifest V3 version, `results` now contains an array of result objects instead of an array of
+just the evaluation results, and the result objects clearly identify the ID of the frame for each
+result. This makes it much easier for developers to utilize the result and take action on a specific
+frame.
 
 ```js
 // Manifest V3 extension
@@ -294,8 +295,8 @@ chrome.action.onClicked.addListener(async (tab) => {
 
 ## Wrap up
 
-Manifest version bumps present a rare opportunity to rethink and modernize extensions APIs. Our
-goal with Manifest V3 is to improve the end user experience by making extensions safer while also
+Manifest version bumps present a rare opportunity to rethink and modernize extensions APIs. Our goal
+with Manifest V3 is to improve the end user experience by making extensions safer while also
 improving the developer experience. By introducing `chrome.scripting` in Manifest V3, we were able
 to help clean up the Tabs API, to reimagine `executeScript` for a more secure extensions platform,
 and to lay the groundwork for new scripting capabilities that will be coming later this year.
