@@ -3,7 +3,7 @@ title: TablesNG Resolves 72 Chromium Bugs for Better Interoperability
 description: --
   Chromium is updating its hardware-acceleration capabilities to SVG animations, percentage-based transformations, clip-path, background images, and more.
 layout: 'layouts/blog-post.njk'
-date: 2021-06-04
+date: 2021-06-09
 authors:
   - unakravets
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/4cBeoycli1TWiwNJBcq1.jpeg'
@@ -45,7 +45,7 @@ The reason we've had this bug around for so long is because `position: sticky` w
 -- demo of long table with video of current behavior --
 
 
-{% Aside ‘warning' %}
+{% Aside 'warning' %}
 If you're using `position: sticky` on a table, make sure it doesn't have borders. Border painting is currently an open cross-browser compatibility issue, as borders belong to the table, not the header row itself.
 {% endAside %}
 
@@ -69,7 +69,7 @@ Pixel alignment in tables is another interoperability issue that has been fixed 
 
 -- video of older chrome tables example zooming in and out next to new one --
 
-{% Aside ‘warning' %}
+{% Aside 'warning' %}
 There is a known bug with table zoom and how borders are repainted. If you are testing this out, you may run into it
 {% endAside %}
 
