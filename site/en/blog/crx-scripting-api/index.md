@@ -191,8 +191,8 @@ chrome.browserAction.onClicked.addListener((tab) => {
 });
 ```
 
-In Manifest V3, we replaced the optional `frame` integer property in the options object with an
-optional `frames` array of integers; this allows developers to target multiple frames in a single
+In Manifest V3, we replaced the optional `frameId` integer property in the options object with an
+optional `frameIds` array of integers; this allows developers to target multiple frames in a single
 API call. You can use use `chrome.webNavigation.getAllFrames` to get a list of all frames in a tab.
 
 ```js
