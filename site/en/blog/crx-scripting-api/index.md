@@ -168,7 +168,7 @@ chrome.action.onClicked.addListener(async(tab) => {
   let givenName = user.givenName || '<GIVEN_NAME>';
 
   chrome.scripting.executeScript({
-    target: { tabId: tab.id },
+    target: {tabId: tab.id},
     func: greetUser,
     args: [givenName],
   });
