@@ -14,7 +14,7 @@ tags:
 
 Manifest V3 introduces a number of changes to Chrome's extension platform. In this post, we'll be
 exploring the motivations and changes introduced by one of the more notable changes: the
-introduction of the `chrome.scripting` API.
+introduction of the [`chrome.scripting`][scripting-api] API.
 
 ## What is chrome.scripting?
 
@@ -22,10 +22,10 @@ As the name might suggest, `chrome.scripting` is a new namespace introduced in M
 responsible for script and style injection capabilities.
 
 Developers that have created Chrome extensions in the past may be familiar with Manifest V2 methods
-on the Tabs API like `chrome.tabs.executeScript` and `chrome.tabs.insertCSS`. These methods allow
-extensions to inject scripts and stylesheets into pages, respectively. In Manifest V3, these
-capabilities have moved to `chrome.scripting` and we plan to expand this API with some new
-capabilities in the future.
+on the [Tabs API][tabs-api] like [`chrome.tabs.executeScript`][tabs-executescript] and
+[`chrome.tabs.insertCSS`][tabs-insertcss]. These methods allow extensions to inject scripts and
+stylesheets into pages, respectively. In Manifest V3, these capabilities have moved to
+`chrome.scripting` and we plan to expand this API with some new capabilities in the future.
 
 ## Why create a new API?
 
@@ -118,7 +118,8 @@ contexts that don't conceptually map to "tabs."
 ## Changes between tabs.executeScript and scripting.executeScript
 
 In the remainder of this post, I'd like to take a closer look at the similarities and differences
-between `chrome.tabs.executeScript` and `chrome.scripting.executeScript`.
+between [`chrome.tabs.executeScript`][tabs-executescript] and
+[`chrome.scripting.executeScript`][scripting-executescript].
 
 ### Injecting a function with arguments
 
@@ -285,3 +286,8 @@ to the [chromium-extensions](crx-group) Google Group and tell us what you think.
 [crx-group]: https://groups.google.com/a/chromium.org/g/chromium-extensions
 [iframe-demo]: https://simple-iframe-demo.glitch.me/
 [storage-api]: #link-to-storage-api-docs
+[tabs-api]: /docs/extensions/reference/tabs/
+[tabs-executescript]: /docs/extensions/reference/tabs/#method-executeScript
+[tabs-insertcss]: /docs/extensions/reference/tabs/#method-insertCSS
+[scripting-api]: /docs/extensions/reference/scripting/
+[scripting-executescript]: /docs/extensions/reference/scripting/#method-executeScript
