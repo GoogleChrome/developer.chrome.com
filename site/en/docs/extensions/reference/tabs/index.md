@@ -93,6 +93,31 @@ function toggleMuteState(tabId) {
 }
 ```
 
+### Move the current tab to the first position when clicked
+
+This example shows how to move a tab while a drag may or may not be in progress.
+
+{% Aside %}
+
+Manifest V3 required due to the use of Promises and chrome.tabs.onActivated(), replacing chrome.tabs.onSelectionChanged(). The use of catch(error) in a Promise context is a way to ensure that an error that otherwise populates chrome.runtime.lastError is not unchecked. chrome.tabs.move is used in this example, but the same waiting pattern can be used for other calls that modify tabs while a drag may be in progress.
+
+{% endAside %}
+
+```js
+// background.js
+
+chrome.tabs.onActivated.addListener(activeInfo => move(activeInfo));
+
+function move(activeInfo) {
+  chrome.tabs.move(activeInfo.tabId, {index: 0})
+    .then(response => console.log("Success."))
+    .catch(error => {
+      if (error == "Error: Tabs cannot be edited right now (user may be dragging a tab).")
+        setTimeout(() => move(activeInfo), 500);
+    });
+}
+```
+
 ### More samples
 
 For more examples that demonstrate the Tabs API, see the [mv2-archive/api/tabs][mv2-tabs-samples]
