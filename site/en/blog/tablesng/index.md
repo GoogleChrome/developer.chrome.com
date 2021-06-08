@@ -36,21 +36,22 @@ The new spec, CSS Table Module Level 3, has been written after Edge reimplemente
 - Improved painting for backgrounds and borders
 
 ## `position: sticky` in rows
-One of the biggest asks and most frustrating things about styling tables in the past was the lack of support for `position-sticky` in rows, which would enable a table header to remain on the page as you scroll, and give context to long data tables. By the time you scroll the header out of view and you’re looking at a table full of numbers, it’s easy to forget what those numbers mean.
+One of the biggest asks and most frustrating things about styling tables in the past was the lack of support for `position-sticky` in rows, which would enable a table header to remain on the page as you scroll, and give context to long data tables. By the time you scroll the header out of view and you're looking at a table full of numbers, it's easy to forget what those numbers mean.
 
 -- demo of long table with video of previous behavior --
 
-The reason we’ve had this bug around for so long is because `position: sticky` was specified well after HTML tables came out. Before this fix, headers with an intended `position: sticky` were just [converted into](https://github.com/w3c/csswg-drafts/issues/3136) `position: static`, but now, you can use `position: sticky` anywhere in the tables: on headers or vertical axis labels. 
+The reason we've had this bug around for so long is because `position: sticky` was specified well after HTML tables came out. Before this fix, headers with an intended `position: sticky` were just [converted into](https://github.com/w3c/csswg-drafts/issues/3136) `position: static`, but now, you can use `position: sticky` anywhere in the tables: on headers or vertical axis labels. 
 
 -- demo of long table with video of current behavior --
 
 
-{% Aside ‘warning’ %}
-If you’re using `position: sticky` on a table, make sure it doesn’t have borders. Border painting is currently an open cross-browser compatibility issue, as borders belong to the table, not the header row itself.
+{% Aside ‘warning' %}
+If you're using `position: sticky` on a table, make sure it doesn't have borders. Border painting is currently an open cross-browser compatibility issue, as borders belong to the table, not the header row itself.
 {% endAside %}
 
 -- potential video of this behavior in 3 browsers? --
-## Collapse border painting and background painting (Improved painting)
+
+## Collapsed border painting and background painting (Improved painting)
 
 One of the oldest table [bugs](https://bugs.chromium.org/p/chromium/issues/detail?id=2902), which dates back to September 2008, was filed almost as soon as Chrome was released, and was never able to be fixed due to the old table architecture. The issue surrounds table painting:
 
@@ -68,13 +69,13 @@ Pixel alignment in tables is another interoperability issue that has been fixed 
 
 -- video of older chrome tables example zooming in and out next to new one --
 
-{% Aside ‘warning’ %}
+{% Aside ‘warning' %}
 There is a known bug with table zoom and how borders are repainted. If you are testing this out, you may run into it
 {% endAside %}
 
 ## Rearchitecting the web
 
-The Chrome team has not only been introducing new features to make web authoring more robust, but they’ve also been working hard to improve existing APIs and their compatibility. In fact, TablesNG is just one of many re-architecture projects that this team has taken on over the past eight years. Others, though not all of the projects, include:
+The Chrome team has not only been introducing new features to make web authoring more robust, but they've also been working hard to improve existing APIs and their compatibility. In fact, TablesNG is just one of many re-architecture projects that this team has taken on over the past eight years. Others, though not all of the projects, include:
 
 - LayoutNG: a ground-up rewrite of all layout algorithms, for greatly improved reliability and more predictable performance.
 - BlinkNG: a systematic cleanup and refactoring of the Blink rendering engine into cleanly separated pipeline phases. This allows for better caching, higher reliability, and re-entrant / delayed-rendering features such as content-visibility and container queries.
