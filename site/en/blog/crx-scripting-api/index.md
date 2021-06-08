@@ -237,7 +237,7 @@ don't know for sure.
 ```js
 // Manifest V2 extension
 chrome.browserAction.onClicked.addListener((tab) => {
-  chrome.scripting.executeScript({
+  chrome.tabs.executeScript({
     allFrames: true,
     file: 'content-script.js';,
   }, (results) => {
