@@ -106,7 +106,7 @@ While we knew that we wanted to tackle this feature request in Manifest V3, none
 APIs felt like the right home. We also considered aligning with Firefox on their [Content Scripts
 API][content-scripts], but very early on we identified a couple major drawbacks to this approach.
 First, we knew that we would have incompatible signatures (e.g. dropping support for the `code`
-property) Second, our API had a different set of design constraints (e.g. needing a registration to
+property). Second, our API had a different set of design constraints (e.g. needing a registration to
 persist beyond a service worker's lifetime). Finally, this namespace would also pigeonhole us to
 content script functionality where we're thinking about scripting in extensions more broadly.
 
