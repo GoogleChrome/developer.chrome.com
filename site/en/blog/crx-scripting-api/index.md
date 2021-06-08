@@ -137,13 +137,12 @@ page.
 ```js
 // Manifest V2 extension
 let userReq = await fetch('https://example.com/greetUser.js');
-let userBody = await userReq.text();
-let user = eval(userBody);
+let userScript = await userReq.text();
 
 chrome.browserAction.onClicked.addListener((tab) => {
   chrome.tabs.executeScript({
-    // user.greetUser == 'alert("Hello, <GIVEN_NAME>!")'
-    code: user.greetUser,
+    // userScript == 'alert("Hello, <GIVEN_NAME>!")'
+    code: userScript,
   });
 });
 ```
