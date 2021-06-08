@@ -62,7 +62,7 @@ some of this confusion.
 ### Breaking changes
 
 When designing Manifest V3, one of the major issues that we wanted to address was abuse and malware
-enabled by "remotely-hosted code." It's common for abusive extension authors to execute scripts
+enabled by "remotely-hosted code" - code that is executed, but not included in the extension package. It's common for abusive extension authors to execute scripts
 fetched from remote servers to steal user data, inject malware, and evade detection. While good
 actors also use this capability, we ultimately felt that it was simply too dangerous to remain as it
 was.
