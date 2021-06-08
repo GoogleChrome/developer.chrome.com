@@ -6,7 +6,7 @@ description: >
 layout: "layouts/blog-post.njk"
 authors:
   - dotproto
-date: 2021-06-07
+date: 2021-06-08
 hero: 'image/WlD8wC6g8khYWPJUsQceQkhXSlv1/7SI8nw8jvSCspg2q71ya.png'
 alt: ''
 tags:
