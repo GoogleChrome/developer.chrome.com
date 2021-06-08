@@ -162,7 +162,7 @@ developers to modify an extension's runtime behavior based on user settings or a
 function greetUser(name) {
   alert(`Hello, ${name}!`);
 }
-chrome.action.onClicked.addListener(async(tab) => {
+chrome.action.onClicked.addListener(async (tab) => {
   let userReq = await fetch('/https://example.com/user-data.json');
   let user = await userReq.json();
   let givenName = user.givenName || '<GIVEN_NAME>';
@@ -179,7 +179,8 @@ chrome.action.onClicked.addListener(async(tab) => {
 
 We also wanted to improve how developers interact with frames in the revised API. The Manifest V2
 version of `executeScript` allowed developers to target either all frames in a tab or a specific
-frame in the tab.
+frame in the tab. You can use use `chrome.webNavigation.getAllFrames` to get a list of all frames in
+a tab.
 
 ```js
 // Manifest V2 extension
@@ -202,7 +203,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
 
 In Manifest V3, we replaced the optional `frameId` integer property in the options object with an
 optional `frameIds` array of integers; this allows developers to target multiple frames in a single
-API call. You can use use `chrome.webNavigation.getAllFrames` to get a list of all frames in a tab.
+API call.
 
 ```js
 // Manifest V3 extension
@@ -239,13 +240,13 @@ content script and we'll be comparing results on the same [demo page][iframe-dem
 
 ```js
 // content-script.js
-var headers = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+var headers = document.querySelectorAll('p');
 headers.length;
 ```
 
-When we run the Manifest V2 version, we get back an array of `[0, 1]`. Which result
-corresponds to the main frame and which is for the iframe? The return value doesn't tell us, so we
-don't know for sure.
+When we run the Manifest V2 version, we get back an array of `[1, 5, 0]`. Which result corresponds
+to the main frame and which is for the iframe? The return value doesn't tell us, so we don't know
+for sure.
 
 ```js
 // Manifest V2 extension
@@ -275,11 +276,17 @@ chrome.action.onClicked.addListener(async (tab) => {
     target: {tabId: tab.id, allFrames: true},
     files: ['content-script.js'],
   });
-  // results == [{frameId: 0, result: 1}, {frameId: 1234, result: 0}]
+  // results == [
+  //   {frameId: 0, result: 1},
+  //   {frameId: 1235, result: 5}]
+  //   {frameId: 1234, result: 0}
+  // ]
+
   for (let result of results) {
     if (result.result > 0) {
-      console.log(`Headers found in tab: ${tab.id}, frame: ${result.frameId}`);
-      // Headers found in tab: 7, frame: 0
+      console.log(`Found ${result} p tag(s) in frame ${result.frameId}`);
+      // Found 1 p tag(s) in frame 0
+      // Found 5 p tag(s) in frame 1235
     }
   }
 });
