@@ -236,7 +236,8 @@ injecting into multiple frames so there's no way to tell which result is associa
 frame.
 
 For a concrete example, let's take a look at the `results` arrays returned by a Manifest V2 and a
-Manifest V3 version of the same extension. Both versions of the extension will inject the same content script and we'll be comparing results on the same [demo page][iframe-demo].
+Manifest V3 version of the same extension. Both versions of the extension will inject the same
+content script and we'll be comparing results on the same [demo page][iframe-demo].
 
 ```js
 //// content-script.js
