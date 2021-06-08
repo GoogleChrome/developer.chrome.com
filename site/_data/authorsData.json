@@ -650,7 +650,7 @@
     "glitch": "samdutton",
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/F3Df3SeugXYQEUUiMslu.jpg"
   },
-    "maudn": {
+  "maudn": {
     "name": {
       "given": "Maud",
       "family": "Nalpas"
@@ -682,5 +682,23 @@
     "country": "US",
     "twitter": "atotic",
     "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/yb4nAlmupGwqaiUypp7b.jpg"
-    }
+  },
+  "thomassteiner": {
+    "name": {
+      "given": "Thomas",
+      "family": "Steiner"
+    },
+    "homepage": "https://blog.tomayac.com/",
+    "twitter": "tomayac",
+    "github": "tomayac",
+    "glitch": "tomayac",
+    "descriptions": {
+      "en": "Tom is a Developer Advocate"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "DE",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
   }
