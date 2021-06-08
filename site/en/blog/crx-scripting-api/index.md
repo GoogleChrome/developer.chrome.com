@@ -101,7 +101,7 @@ method.
 
 Declarative content scripts support has been a long-standing feature request in Chromium. Today,
 Manifest V2 and V3 Chrome extensions can only statically declare content scripts in their
-manifest.json file; the platform doesn't provide a way to register new content scripts, tweak
+`manifest.json` file; the platform doesn't provide a way to register new content scripts, tweak
 content script registration, or unregister content scripts at runtime.
 
 While we knew that we wanted to tackle this feature request in Manifest V3, none of our existing
