@@ -1,7 +1,8 @@
 ---
 title: "Introducing chrome.scripting"
-# description: >
-#   Why and how we implemented color vision deficiency simulation in DevTools and the Blink Renderer.
+description: >
+  The Scripting API is a new Manifest V3 API focused on, well, scripting. Let's dig into the
+  motivations for this change and how it's different.
 layout: "layouts/blog-post.njk"
 authors:
   - dotproto
@@ -12,8 +13,8 @@ tags:
   - extensions
 ---
 
-Manifest V3 introduces a number of changes to Chrome's extension platform. In this post, we'll be
-exploring the motivations and changes introduced by one of the more notable changes: the
+[Manifest V3][mv3-docs] introduces a number of changes to Chrome's extension platform. In this post,
+we'll be exploring the motivations and changes introduced by one of the more notable changes: the
 introduction of the [`chrome.scripting`][scripting-api] API.
 
 ## What is chrome.scripting?
@@ -286,3 +287,4 @@ and to lay the groundwork for new scripting capabilities that will be coming lat
 [tabs-api]: /docs/extensions/reference/tabs/
 [tabs-executescript]: /docs/extensions/reference/tabs/#method-executeScript
 [tabs-insertcss]: /docs/extensions/reference/tabs/#method-insertCSS
+[mv3-docs]: /docs/extensions/mv3/intro/
