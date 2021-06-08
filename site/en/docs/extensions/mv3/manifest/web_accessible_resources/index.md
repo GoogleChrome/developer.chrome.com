@@ -19,7 +19,7 @@ Prior to Manifest V2 all resources within an extension could be accessed from an
 web. This allowed a malicious website to [fingerprint][6] the extensions that a user has installed
 or exploit vulnerabilities (for example [XSS bugs][7]) within installed extensions. 
 
-Beginning with Manifest V2, access to those resources was limited to protect the privacy of users. MV2
+Beginning with Manifest V3, access to those resources was limited to protect the privacy of users. MV3
 extensions exposed only those resources explicitly designated as web accessible.
 
 Manifest V3 provides finer-grained control, letting you expose individual resources to specified
