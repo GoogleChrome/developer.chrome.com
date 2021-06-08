@@ -266,7 +266,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
 
 In the Manifest V3 version, `results` now contains an array of result objects instead of an array of just the evaluation results,
 and the result objects clearly identify the ID of the frame for each result. This makes it much
-easier for developers to identify and react to situations where injection fails unexpectedly.
+easier for developers to utilize the result and take action on a specific frame.
 
 ```js
 // Manifest V3 extension
