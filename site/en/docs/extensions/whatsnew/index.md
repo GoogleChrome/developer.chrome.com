@@ -4,10 +4,10 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 
 # This appears below the title and is an optional teaser
-# subhead: 
+# subhead:
 
 # This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in 
+# /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 
@@ -29,6 +29,12 @@ date: 2021-02-25
 
 Check this page often to learn about changes to the Chrome extensions platform,
 its documentation, and related policy or other changes.
+
+### 2021.06.08: Introducing chrome.scripting (blog post)
+
+The [Scripting API](/docs/extensions/reference/scripting/) is a new Manifest V3 API focused on,
+well, scripting. In this post we dig into the motivations for this change and take a closer look at
+some of the new capabilities it introduces. [Read the post](/blog/crx-scripting-api).
 
 ### 2021.01.19: Manifest V3 launched
 
