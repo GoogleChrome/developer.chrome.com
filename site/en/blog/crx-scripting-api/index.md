@@ -211,15 +211,14 @@ chrome.action.onClicked.addListener((tab) => {
 
 We've also improved the way we return script injection results in Manifest V3. A "result" is
 basically the final statement evaluated in a script. Think of it like the value returned when you
-execute a block of code in the Chrome DevTools console.
+call `eval()` or execute a block of code in the Chrome DevTools console.
 
-In Manifest V2, `executeScript` and `insertCSS` would return an array of bare execution results.
-This is fine for a single injection point, but if you're injecting into all frames in a tab it can
-be difficult to track down which frame encountered the error.
+In Manifest V2, `executeScript` and `insertCSS` would return an array of plain execution results.
+This is fine if you only have a single injection point, but when injecting into all frames in a tab
+there's no way to tell which result is associated with which frame.
 
-For a concrete example, let's take a look at the results returned by a Manifest V2 and Manifest V3.
-Both versions of the extension will share the same content script behavior. And for both examples,
-we'll be injecting on the same [demo page][iframe-demo].
+For a concrete example, let's take a look at the results arrays returned by a Manifest V2 and a
+Manifest V3 version of the same extension. Both versions of the extension will inject the same content script and we'll be comparing results on the same [demo page][iframe-demo].
 
 ```js
 //// content-script.js
@@ -279,15 +278,11 @@ improving the developer experience. By introducing `chrome.scripting` in Manifes
 to help clean up the Tabs API, to reimagine `executeScript` for a more secure extensions platform,
 and to lay the groundwork for new scripting capabilities that will be coming later this year.
 
-If you have any thoughts or feedback on what we've shared here or Manifest V3 in general, head over
-to the [chromium-extensions](crx-group) Google Group and tell us what you think.
-
 [content-scripts]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts
-[crx-group]: https://groups.google.com/a/chromium.org/g/chromium-extensions
 [iframe-demo]: https://simple-iframe-demo.glitch.me/
+[scripting-api]: /docs/extensions/reference/scripting/
+[scripting-executescript]: /docs/extensions/reference/scripting/#method-executeScript
 [storage-api]: #link-to-storage-api-docs
 [tabs-api]: /docs/extensions/reference/tabs/
 [tabs-executescript]: /docs/extensions/reference/tabs/#method-executeScript
 [tabs-insertcss]: /docs/extensions/reference/tabs/#method-insertCSS
-[scripting-api]: /docs/extensions/reference/scripting/
-[scripting-executescript]: /docs/extensions/reference/scripting/#method-executeScript
