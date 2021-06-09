@@ -96,8 +96,7 @@ clean break would be easier for everyone.
 
 Another consideration that fed into the Manifest V3 design process was a desire to introduce
 additional scripting capabilities to Chrome's extension platform. Specifically, we wanted to add
-support for dynamic content scripts and to expand the capabilities of the `executeScript`
-method.
+support for dynamic content scripts and to expand the capabilities of the `executeScript` method.
 
 Dynamic content scripts support has been a long-standing feature request in Chromium. Today,
 Manifest V2 and V3 Chrome extensions can only statically declare content scripts in their
