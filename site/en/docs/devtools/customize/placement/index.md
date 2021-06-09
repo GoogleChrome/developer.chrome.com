@@ -40,12 +40,10 @@ left, or undock to a DevTools to a separate bottom.
 ## Change placement from the Command Menu {: #commandmenu }
 
 1.  [Open the Command Menu][1].
-2.  Run one of the following commands: `Dock To Bottom`, `Undock Into Separate Window`. Currently
-    there is no command for docking to left, but you can access it from the [main menu][2].
+2.  Run one of the following commands: `Dock to left`, `Dock to right`, `Dock to bottom`, `Undock Into Separate Window` or `Restore last dock position`. To toggle `Restore last dock position`, press <kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> (Linux/Windows) or <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> (Mac).
 
     {% Img src="image/admin/VAHPOl8MveN1GYVP8o4C.png", alt="The undock command.", width="800", height="442" %}
 
     **Figure 5**. The undock command.
 
 [1]: /docs/devtools/command-menu
-[2]: #menu
