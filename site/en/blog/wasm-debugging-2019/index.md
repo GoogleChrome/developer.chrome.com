@@ -6,7 +6,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - ingvarstepanyan
 date: 2019-12-05
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OLwAS705RrpdJkBymTRB.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/59E79cYprjy3EuTSq0u6.jpg'
 alt: ''
 tags:
   - devtools-engineering

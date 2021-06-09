@@ -6,7 +6,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - jobay
 date: 2020-11-10
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YhoLsiCeOqeg8yGr0pXi.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/tQ0RWQoMfnbeCKVjI3Nr.jpg'
 alt: ''
 tags:
   - devtools-engineering

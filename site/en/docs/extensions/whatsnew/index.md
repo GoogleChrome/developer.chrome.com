@@ -4,10 +4,10 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 
 # This appears below the title and is an optional teaser
-# subhead: 
+# subhead:
 
 # This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in 
+# /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 
@@ -99,5 +99,12 @@ V3](/docs/extensions/mv3/intro/mv3-overview/) for a summary of new and changed f
 may continue to use Manifest V2 for now, but this will be phased out in the near future. We strongly
 recommend that you use MV3 for any new extensions, and begin to migrate existing extensions to MV3
 as soon as possible.
+### 2021.06.08: Introducing chrome.scripting (blog post)
+
+The [Scripting API](/docs/extensions/reference/scripting/) is a new Manifest V3 API focused on,
+well, scripting. In this post we dig into the motivations for this change and take a closer look at
+some of the new capabilities it introduces. [Read the post](/blog/crx-scripting-api).
+
+### 2021.01.19: Manifest V3 launched
 
 

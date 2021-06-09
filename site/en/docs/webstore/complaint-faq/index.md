@@ -64,5 +64,5 @@ level of investigation needed to determine the root cause/explanation. For examp
 stats on the dashboard, extensions between developers, and developer account recovery have been
 known to require longer investigation times.
 
-[1]: /docs/webstore/faq#faq-gen-24
-[2]: /docs/webstore/faq#faq-gen-24
+[1]: /docs/webstore/faq/#faq-gen-24
+[2]: /docs/webstore/faq/#how-can-i-raise-p2b-concerns
