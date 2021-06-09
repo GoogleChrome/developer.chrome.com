@@ -178,7 +178,7 @@ chrome.action.onClicked.addListener(async (tab) => {
 
 We also wanted to improve how developers interact with frames in the revised API. The Manifest V2
 version of `executeScript` allowed developers to target either all frames in a tab or a specific
-frame in the tab. You can use use `chrome.webNavigation.getAllFrames` to get a list of all frames in
+frame in the tab. You can use `chrome.webNavigation.getAllFrames` to get a list of all frames in
 a tab.
 
 ```js
