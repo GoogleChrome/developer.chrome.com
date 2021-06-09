@@ -208,8 +208,8 @@ API call.
 // Manifest V3 extension
 chrome.action.onClicked.addListener(async (tab) => {
   let frames = await chrome.webNavigation.getAllFrames({tabId: tab.id});
-  let frame1 = frame[0].frameId;
-  let frame2 = frame[1].frameId;
+  let frame1 = frames[0].frameId;
+  let frame2 = frames[1].frameId;
 
   chrome.scripting.executeScript({
     target: {
