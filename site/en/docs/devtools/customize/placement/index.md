@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Change placement: undock, dock to bottom, dock to left"
 authors:
   - kaycebasques
-date: 2019-05-14
+date: 2021-06-09
 #updated: YYYY-MM-DD
 description:
   "How to move Chrome DevTools to the bottom or left of your viewport, or to a separate window."
