@@ -7,7 +7,7 @@ browser action. A popup is below the icon.
 
 ![](browser-action.png)
 
-If you want to create an icon that isn't always visible, use a [page action][1] instead of a browser
+If you want to create an icon that isn't always active, use a [page action][1] instead of a browser
 action.
 
 ## Manifest
