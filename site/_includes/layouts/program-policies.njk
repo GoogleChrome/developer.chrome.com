@@ -1,7 +1,8 @@
 {% extends 'layouts/doc-post.njk' %}
 {% from 'macros/icon.njk' import icon with context %}
 
-{% block inner %}
+{% block content %}
+  {{ content | safe }}
   <div class="grid-columns" style="--grid-col-breakpoint: 20rem; --grid-col-gap: 2rem;">
     {% for card in cards %}
       <section class="display-flex hairline rounded-lg pad-300">
@@ -22,5 +23,4 @@
       </section>
     {% endfor %}
   </div>
-  {{ content | safe }}
 {% endblock%}

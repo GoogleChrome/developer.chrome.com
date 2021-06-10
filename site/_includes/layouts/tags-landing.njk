@@ -4,7 +4,7 @@
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
-{% block content %}
+{% block main %}
 <div class="tags-grid measure-1280 gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400 center-margin">
   {% for tag in pagination.items %}
     {# Get the current first letter of the tag title #}
@@ -23,11 +23,11 @@
         <h2 class="type--label color-secondary-text"><span class="visually-hidden">Tags that start with: </span>{{ letterTitle }}</h2>
         <ul role="list" class="pad-0 gap-top-300 gap-bottom-0">
     {% endif %}
-    
+
     <li>
       <a class="type--h6 color-primary surface" href="{{ helpers.join('/', locale, 'tags', tag.key, '/')  }}">{{ tag.title }}</a>
     </li>
-    
+
     {# If this is the last element of our loop close the div #}
     {% if loop.last %}
       </div>

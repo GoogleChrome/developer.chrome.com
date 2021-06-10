@@ -8,6 +8,11 @@
   position: relative;
 
   @for $i from 1 through 6 {
+    // Defines .type--h1 through .type--h6 classes
+    // and also .type .type--h1 through .type .type--h6.
+    // If we didn't do this second step, then the next selector which sets
+    // h1-h6 to be a step size down would be more powerful than our utility
+    // classes and you wouldn't be able to override it by doing <h1 class="type--h3">
     &--h#{$i},
     & &--h#{$i} {
       @extend %type--h#{$i};

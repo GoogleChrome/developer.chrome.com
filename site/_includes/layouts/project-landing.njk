@@ -1,4 +1,4 @@
-{# 
+{#
   This page grabs data from _data/docs/${project_key}/toc.yml. (The `page.fileSlug` value will also
   work, as the URL for this page looks like "/en/docs/{project_key}".)
   For each page in the set of links, it fetches the page's frontmatter and uses that to render the
@@ -11,7 +11,7 @@
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
-{% block content %}
+{% block main %}
   <div class="gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400">
     <div class="project-hero center-margin text-align-center">
       {% from 'macros/project-icon.njk' import projectIcon with context %}
