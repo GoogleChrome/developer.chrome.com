@@ -26,7 +26,7 @@ some of the new capabilities it introduces. [Read the post](/blog/crx-scripting-
 ### ES modules for service workers
 #### Launched in Chrome 91
 
-JavaScript supports modules in service workers. In your manifest, specify a module in your manifest:
+Chrome now supports modules in service workers. In your manifest, specify a module in your manifest:
 
 ```js
 "background": {
