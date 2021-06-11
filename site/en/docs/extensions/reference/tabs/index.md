@@ -108,7 +108,7 @@ while a drag may be in progress.
 {% endAside %}
 
 ```js
-// background.js
+//// background.js
 
 chrome.tabs.onActivated.addListener(activeInfo => move(activeInfo));
 
