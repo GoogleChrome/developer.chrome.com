@@ -35,7 +35,7 @@ JavaScript supports modules in service workers. In your manifest, specify a modu
 }
 ```
 
-This loads the worker script as an ES module, which allows you to use the `import` keyword in the
+This loads the worker script as an ES module, which lets you use the `import` keyword in the
 worker's script to import other modules.
 
 
@@ -60,13 +60,13 @@ It replaces [chrome.tabs.removeCSS()](/docs/extensions/reference/tabs/#method-re
 Results returned from
 [chrome.scripting.executeScript()](/docs/extensions/reference/scripting/#method-executeScript)
 now include the [frameId](/docs/extensions/reference/webNavigation/#a-note-about-frame-ids).
-The `frameId` property indicates the frame from which the result is from, allowing
-extensions to easily associate results with the individual frames when injecting in multiple frames.
+The `frameId` property indicates the frame that the result is from, letting
+extensions easily associate results with the individual frames when injecting in multiple frames.
 
 ### New API for tab groups (MV3 only)
 #### Launched in Chrome 89
 
-The new [chrome.tabGroups](/docs/extensions/reference/tabGroups/) API to lets extensions read
+The new [chrome.tabGroups](/docs/extensions/reference/tabGroups/) API lets extensions read
 and manipulate tab groups. Manifest V3 only.
 
 ### Customizable permissions for MV3 Web Accessible Resources
@@ -84,7 +84,7 @@ automates some of the mechanical aspects of converting extensions to Manifest V3
 [announcement blog post](/blog/extension-manifest-converter/) and [get it from
 GitHub](https://github.com/GoogleChromeLabs/extension-manifest-converter).
 
-### Manifest V3 launched
+### Manifest V3 general availability
 #### Launched in Chrome 88
 
 Manifest V3 is a major update to the extensions platform; see [Overview of Manifest
