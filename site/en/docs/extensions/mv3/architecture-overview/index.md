@@ -52,14 +52,12 @@ Extensions must have an icon that sits in the browser toolbar. Toolbar icons all
 keep users aware of which extensions are installed. Most users will interact with an extension that
 uses a [popup][2] by clicking on the icon.
 
-This <a href="/extensions/samples#search:google%20mail%20checker">Google Mail Checker extension</a>
-uses a [browser action][4]:
+This Manifest V2 [Google Mail Checker extension][sample-gmail] uses a [browser action][4]:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mG1Uyd3uzcP7sSyKXWkh.png",
        alt="A screenshot of the Google Mail Checker extension", height="79", width="90" %}
 
-This <a href="/extensions/samples#search:mappy">Mappy extension</a> uses a
-[page action][6] and [content script][7]:
+This Manifest V2 [Mappy extension][sample-mappy] uses a [page action][6] and [content script][7]:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LrHTrkZVBN96DqNQjtyF.png",
        alt="A screenshot of the Mappy extension", height="103", width="90" %}
@@ -296,3 +294,6 @@ following resources.
 [40]: /docs/extensions/mv3/tut_debugging
 [41]: /docs/extensions/reference
 [42]: /docs/extensions/mv3/devguide
+
+[sample-gmail]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/extensions/gmail
+[sample-mappy]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/extensions/mappy
