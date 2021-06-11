@@ -35,8 +35,8 @@ JavaScript supports modules in service workers. In your manifest, specify a modu
 }
 ```
 
-This loads the worker script as an ES module, so you can import it in other worker
-scripts.
+This loads the worker script as an ES module, which allows you to use the `import` keyword in the
+worker's script to import other modules.
 
 
 ### chrome.action.getUserSettings() available
@@ -52,7 +52,7 @@ method allows extensions to determine if the user has pinned the extension to th
 The new [chrome.scripting.removeCSS()](/docs/extensions/reference/scripting/#method-removeCSS)
 method allows extensions to remove CSS that was previously inserted
 via [chrome.scripting.insertCSS()](/docs/extensions/reference/scripting/#method-insertCSS).
-It replaces [chrome.tabs.removeCSS()](/docs/extensions/reference/tabs/#method-removeCSS)`.
+It replaces [chrome.tabs.removeCSS()](/docs/extensions/reference/tabs/#method-removeCSS).
 
 ### chrome.scripting.executeScript() results include frameId
 #### Launched in Chrome 90
@@ -60,13 +60,13 @@ It replaces [chrome.tabs.removeCSS()](/docs/extensions/reference/tabs/#method-re
 Results returned from
 [chrome.scripting.executeScript()](/docs/extensions/reference/scripting/#method-executeScript)
 now include the [frameId](/docs/extensions/reference/webNavigation/#a-note-about-frame-ids).
-The frameId indicates the frame from which the result is from, allowing
+The `frameId` property indicates the frame from which the result is from, allowing
 extensions to easily associate results with the individual frames when injecting in multiple frames.
 
 ### New API for tab groups (MV3 only)
 #### Launched in Chrome 89
 
-There is now a [chrome.tabGroups](/docs/extensions/reference/tabGroups/) API to let extensions read
+The new [chrome.tabGroups](/docs/extensions/reference/tabGroups/) API to lets extensions read
 and manipulate tab groups. Manifest V3 only.
 
 ### Customizable permissions for MV3 Web Accessible Resources
