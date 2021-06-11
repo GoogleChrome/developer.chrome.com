@@ -39,6 +39,7 @@ Want to try it out? To learn how to open the Memory Inspector and view your arra
 
 
 ## Designing the Memory Inspector
+
 In this part we’ll have a look at how the Memory Inspector is designed using Web Components, and we’ll show one of the design goals that we had and how we implemented it. If you are curious and want to see more, have a look at our [design doc](https://docs.google.com/document/d/1LUOat3Q3pQ08IsnBQLrvL-4zWXSTgIuArb5ig3lEm-Y) for the Memory Inspector.
 
 You might have seen our blogpost on [Migrating to Web Components](/blog/migrating-to-web-components/), where Jack has published our internal guide on how to build UI components using Web Components. The migration to Web Components coincided with our work on the Memory Inspector, and as a result, we decided to give the new system a try. Below is a diagram that shows the components that we have built to create the Memory Inspector (note that internally we call it **Linear Memory Inspector**):
@@ -60,7 +61,7 @@ Each of the components is designed to only represent one small component of the 
 The `LinearMemoryInspector` adds itself as a listener on the `LinearMemoryNavigator`. The `addressChanged` function is to be triggered on an `address-changed` event. As soon as the user is now editing the address input, this sends out the aforementioned event, such that the `addressChanged` function is called. This function now saves the address internally, and updates its subcomponents using the a `data(address, ..)` setter. The subcomponents save the address internally and re-render their views, showing the content at that particular address.
 
 
-### Design Goal: Making Performance and Memory Consumption Independent of the Buffer Size
+### Design goal: making performance and memory consumption independent of the buffer size
 
 One aspect during the design of the Memory Inspector that we had in mind was that the performance of the Memory Inspector should be independent of the buffer size.
 
@@ -81,6 +82,7 @@ That event kicks off fetching the new range, which is then propagated to the `Li
 
 
 ## Oh, and did you know? You can even inspect memory in Wasm and C/C++ code
+
 The Memory Inspector is not only available for `ArrayBuffers` in JavaScript, but can also be used for inspecting Wasm Memory and memory pointed to by C/C++ references/pointers (using our DWARF-extension - give it a try if you haven’t yet! See [Debugging WebAssembly with modern tools here](/blog/wasm-debugging-2020/). A small outlook on the Memory Inspector in action for native debugging of C++ on the web:
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GcHy7qArrsUhF8UaJVIT.png", alt="Inspect memory in Wasm", width="800", height="441" %} -->
@@ -92,4 +94,5 @@ The Memory Inspector is not only available for `ArrayBuffers` in JavaScript, but
 
 
 ## Conclusion
+
 This article presented the Memory Inspector and showed a glimpse of its design. We hope that the Memory Inspector will help you to understand what’s happening in your ArrayBuffer :-). If you have suggestions to improve it let us know and [file a bug](https://crbug.com/new)!
