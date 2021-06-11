@@ -39,6 +39,7 @@ as the most important files and the capabilities the extension might use.
     "service_worker": "background.js"
   },
   "permissions": ["activeTab"],
+  "host_permissions": ["*://*.example.com/*"],
   "action": {
     "default_icon": "icon_16.png",
     "default_popup": "popup.html"
