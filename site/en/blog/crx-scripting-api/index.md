@@ -32,7 +32,7 @@ stylesheets into pages, respectively. In Manifest V3, these capabilities have mo
 
 With a change like this, one of the first questions that tends to come up is, "why?"
 
-A few different factors lead to the Chrome team deciding to introduce a new namespace for scripting.
+A few different factors led to the Chrome team deciding to introduce a new namespace for scripting.
 First, the Tabs API is a bit of a junk drawer for features. Second, we needed to make breaking
 changes to the existing `executeScript` API. Third, we knew that we wanted to expand scripting
 capabilities for extensions. Together, these concerns clearly defined a need for a new namespace to
@@ -41,7 +41,7 @@ house scripting capabilities.
 ### The junk drawer
 
 One of the issues that has been bothering the Extensions Team for the past few years is that the
-`chrome.tabs` API is overloaded. When this API was first introduced most of the capabilities it
+`chrome.tabs` API is overloaded. When this API was first introduced, most of the capabilities it
 provided were related to the broad concept of a browser tab. Even at that point, though, it was a
 bit of a grab bag of features and over the years this collection has only grown.
 
