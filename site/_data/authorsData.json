@@ -667,6 +667,24 @@
     "github": "maudnals",
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/fJP5RRP6pcCnfctkaQhu.jpg"
   },
+  "kimanh": {
+    "name": {
+      "given": "Kim-Anh",
+      "family": "Tran"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "DE",
+    "twitter": "kianhuu",
+    "github": "ktran",
+    "email": "kimanh@chromium.org",
+    "descriptions": {
+      "en": "Googler working on Chrome DevTools."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/WMxar1rRgocnv8LEo3hG.jpg"
+  },
   "thomassteiner": {
     "name": {
       "given": "Thomas",
