@@ -6,7 +6,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - jackfranklin
 date: 2020-12-08
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/MSQL3122aVqW6nsnBVdO.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/obi72DM6B0c8UeT45XEN.jpg'
 alt: ''
 tags:
   - devtools-engineering
