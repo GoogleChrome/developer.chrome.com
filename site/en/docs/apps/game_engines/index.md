@@ -28,7 +28,7 @@ PlayCanvas demo on Chrome Web Store: [Swooop][4]
 PlayCanvas is a free and open source WebGL Game Engine targeting mobile and desktop. Its browser
 based development tools support real-time collaboration.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://playcanvas.com
 [4]: https://chrome.google.com/webstore/detail/swooop/jblimahfbhdcengjfbdpdngcfcghladf?hl=en-US

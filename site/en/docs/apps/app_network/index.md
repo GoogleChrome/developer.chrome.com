@@ -249,7 +249,7 @@ chrome.sockets.tcpServer.onAccept.removeListener(onAccept);
 chrome.sockets.tcpServer.disconnect(serverSocketId);
 ```
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: sockets_udp
 [4]: sockets_tcp
