@@ -4,11 +4,11 @@ api: webRequest
 
 ## Manifest
 
-You must declare the "webRequest" permission in the [extension manifest][manifest-json] to use the
-web request API, along with the necessary [host permissions][declare-perms]. To intercept a
-sub-resource request, the extension needs to have access to both the requested URL and its
-initiator. If you want to use the web request API in a blocking fashion, you need to request the
-"webRequestBlocking" permission in addition. For example:
+You must declare the "webRequest" permission in the [extension manifest][1] to use the web request
+API, along with the necessary [host permissions][2]. To intercept a sub-resource request, the
+extension needs to have access to both the requested URL and its initiator. If you want to use the
+web request API in a blocking fashion, you need to request the "webRequestBlocking" permission in
+addition. For example:
 
 ```json
 {
@@ -34,40 +34,37 @@ The event life cycle for successful requests is illustrated here, followed by ev
 
 `onBeforeRequest` (optionally synchronous)
 
-: Fires when a request is about to occur. This event is sent before any TCP connection is made and
-  can be used to cancel or redirect requests.
+: Fires when a request is about to occur. This event is sent before any TCP connection is made and can
+  be used to cancel or redirect requests.
 
 `onBeforeSendHeaders` (optionally synchronous)
 
 : Fires when a request is about to occur and the initial headers have been prepared. The event is
-  intended to allow extensions to add, modify, and delete request headers
-  [(\*)][footnote-lifecycle]. The `onBeforeSendHeaders` event is passed to all subscribers, so
-  different subscribers may attempt to modify the request; see the [Implementation
-  details][impl-details] section for how this is handled. This event can be used to cancel the
-  request.
+  intended to allow extensions to add, modify, and delete request headers [(\*)][3]. The
+  `onBeforeSendHeaders` event is passed to all subscribers, so different subscribers may attempt to
+  modify the request; see the [Implementation details][4] section for how this is handled. This event
+  can be used to cancel the request.
 
 `onSendHeaders`
 
 : Fires after all extensions have had a chance to modify the request headers, and presents the final
-  [(\*)][footnote-lifecycle] version. The event is triggered before the headers are sent to the
-  network. This event is informational and handled asynchronously. It does not allow modifying or
-  cancelling the request.
+  [(\*)][5] version. The event is triggered before the headers are sent to the network. This event is
+  informational and handled asynchronously. It does not allow modifying or cancelling the request.
 
 `onHeadersReceived` (optionally synchronous)
 
 : Fires each time that an HTTP(S) response header is received. Due to redirects and authentication
   requests this can happen multiple times per request. This event is intended to allow extensions to
   add, modify, and delete response headers, such as incoming Content-Type headers. The caching
-  directives are processed before this event is triggered, so modifying headers such as
-  `Cache-Control` has no influence on the browser's cache. It also allows you to cancel or redirect
-  the request.
+  directives are processed before this event is triggered, so modifying headers such as Cache-Control
+  has no influence on the browser's cache. It also allows you to cancel or redirect the request.
 
 `onAuthRequired` (optionally synchronous)
 
-: Fires when a request requires authentication of the user. This event can be handled synchronously
-  to provide authentication credentials. Note that extensions may provide invalid credentials. Take
-  care not to enter an infinite loop by repeatedly providing invalid credentials. This can also be
-  used to cancel the request.
+: Fires when a request requires authentication of the user. This event can be handled synchronously to
+  provide authentication credentials. Note that extensions may provide invalid credentials. Take care
+  not to enter an infinite loop by repeatedly providing invalid credentials. This can also be used to
+  cancel the request.
 
 `onBeforeRedirect`
 
@@ -93,7 +90,7 @@ The web request API guarantees that for each request either `onCompleted` or `on
 fired as the final event with one exception: If a request is redirected to a `data://` URL,
 `onBeforeRedirect` is the last reported event.
 
-<a id="life-cycle-footnote">*</a>
+<a id="#life_cycle_footnote">*</a>
 Note that the web request API presents an abstraction of the network stack to the extension.
 Internally, one URL request can be split into several HTTP requests (for example to fetch individual
 byte ranges from a large file) or can be handled by the network stack without communicating with the
@@ -138,49 +135,31 @@ removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`:
 {% Aside %}
 
 **Note:** Modifying the `Origin` request header might not work as intended and may result in
-unexpected errors in the response's [CORS checks][cors-checks]. This is because while extensions can
-only modify the [Origin][origin-header] request header, they can't change the `request origin` or
-initiator, which is a concept defined in the Fetch spec to represent who initiates the request. In
-such a scenario, the server may allow the CORS access for the modified request and put the header's
-`Origin` into the `Access-Control-Allow-Origin` header in the response. But it won't match the
-immutable `request origin` and result in a CORS failure.
+unexpected errors in the response's [CORS checks][6]. This is because while extensions can only
+modify the [Origin][7] request header, they can't change the `request origin` or initiator, which is
+a concept defined in the Fetch spec to represent who initiates the request. In such a scenario, the
+server may allow the CORS access for the modified request and put the header's `Origin` into the
+`Access-Control-Allow-Origin` header in the response. But it won't match the immutable
+`request origin` and result in a CORS failure.
 
 {% endAside %}
 
 Starting from Chrome 72, if you need to modify responses before [Cross Origin Read Blocking
-(CORB)][corb] can block the response, you need to specify `'extraHeaders'` in `opt_extraInfpSpec`.
+(CORB)][8] can block the response, you need to specify `'extraHeaders'` in `opt_extraInfpSpec`.
 
 Starting from Chrome 72, the following request headers are **not provided** and cannot be modified
 or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`:
 
-- `Accept-Language`
-- `Accept-Encoding`
-- `Referer`
-- `Cookie`
+- Accept-Language
+- Accept-Encoding
+- Referer
+- Cookie
 
 Starting from Chrome 72, the `Set-Cookie` response header is **not provided** and cannot be modified
 or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
 
-Starting from Chrome 84, the `Accept-CH` response header is **not provided** and cannot be modified
+Starting from Chrome 89, the `X-Frame-Options` response header cannot be effectively modified
 or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
-
-Starting from Chrome 86, the `Accept-CH-Lifetime` response header is **not provided** and cannot be
-modified or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
-
-Starting from Chrome 88, the `Critical-CH` response header is **not provided** and cannot be
-modified or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
-
-Starting from Chrome 89, the `Origin-Agent-Cluster` request header and `X-Frame-Options` response
-header are **not provided** and cannot be effectively modified or removed without specifying
-`'extraHeaders'` in `opt_extraInfoSpec`.
-
-Starting from Chrome 91, the `Content-Security-Policy`, `Content-Security-Policy-Report-Only`, and
-`Link` response headers are **not provided** and cannot be modified or removed without specifying
-`'extraHeaders'` in `opt_extraInfoSpec`.
-
-Starting from Chrome 92, the `Timing-Allow-Origin` and `BFCache-Opt-In` response headers are **not
-provided** and cannot be modified or removed without specifying `'extraHeaders'` in
-`opt_extraInfoSpec`.
 
 {% Aside %}
 
@@ -190,16 +169,16 @@ performance, hence it should only be used when really necessary.
 {% endAside %}
 
 The webRequest API only exposes requests that the extension has permission to see, given its [host
-permissions][declare-perms]. Moreover, only the following schemes are accessible: `http://`,
-`https://`, `ftp://`, `file://`, `ws://` (since Chrome 58), `wss://` (since Chrome 58), `urn:`
-(since Chrome 91), or `chrome-extension://`. In addition, even certain requests with URLs using one
-of the above schemes are hidden. These include `chrome-extension://other_extension_id` where
-`other_extension_id` is not the ID of the extension to handle the request,
-`https://www.google.com/chrome`, and other sensitive requests core to browser functionality. Also
-synchronous XMLHttpRequests from your extension are hidden from blocking event handlers in order to
-prevent deadlocks. Note that for some of the supported schemes the set of available events might be
-limited due to the nature of the corresponding protocol. For example, for the file: scheme, only
-`onBeforeRequest`, `onResponseStarted`, `onCompleted`, and `onErrorOccurred` may be dispatched.
+permissions][9]. Moreover, only the following schemes are accessible: `http://`, `https://`,
+`ftp://`, `file://`, `ws://` (since Chrome 58), `wss://` (since Chrome 58), `urn:` (since Chrome 91), or
+`chrome-extension://`. In addition, even certain requests with URLs using one of the above schemes
+are hidden. These include `chrome-extension://other_extension_id` where `other_extension_id` is not
+the ID of the extension to handle the request, `https://www.google.com/chrome`, and other sensitive
+requests core to browser functionality. Also synchronous XMLHttpRequests from your extension are
+hidden from blocking event handlers in order to prevent deadlocks. Note that for some of the
+supported schemes the set of available events might be limited due to the nature of the
+corresponding protocol. For example, for the file: scheme, only `onBeforeRequest`,
+`onResponseStarted`, `onCompleted`, and `onErrorOccurred` may be dispatched.
 
 Starting from Chrome 58, the webRequest API supports intercepting the WebSocket handshake request.
 Since the handshake is done by means of an HTTP upgrade request, its flow fits into HTTP-oriented
@@ -228,8 +207,8 @@ in case of HTTP redirection or HTTP authentication.
 ### Registering event listeners
 
 To register an event listener for a web request, you use a variation on the [usual `addListener()`
-function][api-events]. In addition to specifying a callback function, you have to specify a filter
-argument and you may specify an optional extra info argument.
+function][10]. In addition to specifying a callback function, you have to specify a filter argument
+and you may specify an optional extra info argument.
 
 The three arguments to the web request API's `addListener()` have the following definitions:
 
@@ -254,28 +233,27 @@ information in this dictionary depends on the specific event type as well as the
 If the optional `opt_extraInfoSpec` array contains the string `'blocking'` (only allowed for
 specific events), the callback function is handled synchronously. That means that the request is
 blocked until the callback function returns. In this case, the callback can return a
-[`webRequest.BlockingResponse`][blocking-response] that determines the further life cycle of the
-request. Depending on the context, this response allows cancelling or redirecting a request
-(`onBeforeRequest`), cancelling a request or modifying headers (`onBeforeSendHeaders`,
-`onHeadersReceived`), and cancelling a request or providing authentication credentials
-(`onAuthRequired`).
+[`webRequest.BlockingResponse`][11] that determines the further life cycle of the request. Depending
+on the context, this response allows cancelling or redirecting a request (`onBeforeRequest`),
+cancelling a request or modifying headers (`onBeforeSendHeaders`, `onHeadersReceived`), and
+cancelling a request or providing authentication credentials (`onAuthRequired`).
 
 If the optional `opt_extraInfoSpec` array contains the string `'asyncBlocking'` instead (only
-allowed for `onAuthRequired`), the extension can generate the
-[`webRequest.BlockingResponse`][blocking-response] asynchronously.
+allowed for `onAuthRequired`), the extension can generate the [`webRequest.BlockingResponse`][12]
+asynchronously.
 
-The [`webRequest.RequestFilter`][request-filter] `filter` allows limiting the requests for which
-events are triggered in various dimensions:
+The [`webRequest.RequestFilter`][13] `filter` allows limiting the requests for which events are
+triggered in various dimensions:
 
 URLs
 
-: [URL patterns][match-patterns] such as `*://www.google.com/foo*bar`.
+: [URL patterns][14] such as `*://www.google.com/foo*bar`.
 
 Types
 
-: Request types such as `main_frame` (a document that is loaded for a top-level frame), `sub_frame`
-  (a document that is loaded for an embedded frame), and `image` (an image on a web site). See
-  [`webRequest.RequestFilter`][request-filter].
+: Request types such as `main_frame` (a document that is loaded for a top-level frame), `sub_frame` (a
+  document that is loaded for an embedded frame), and `image` (an image on a web site). See
+  [`webRequest.RequestFilter`][15].
 
 Tab ID
 
@@ -289,7 +267,7 @@ Depending on the event type, you can specify strings in `opt_extraInfoSpec` to a
 information about the request. This is used to provide detailed information on request's data only
 if explicitly requested.
 
-## Implementation details {: #implementation-details }
+## Implementation details
 
 Several implementation details can be important to understand when developing an extension that uses
 the web request API:
@@ -374,14 +352,22 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 );
 ```
 
-[api-events]: /docs/extensions/events
-[manifest-json]: /docs/extensions/mv3/manifest/
-[blocking-response]: #type-BlockingResponse
-[corb]: https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md
-[cors-checks]: https://fetch.spec.whatwg.org/#cors-check
-[declare-perms]: /docs/extensions/mv3/declare_permissions
-[footnote-lifecycle]: #life-cycle-footnote
-[impl-details]: #implementation-details
-[match-patterns]: /docs/extensions/mv3/match_patterns
-[origin-header]: https://fetch.spec.whatwg.org/#origin-header
-[request-filter]: #type-RequestFilter
+For more example code, see the [web request samples][16].
+
+[1]: /docs/extensions/mv2/tabs
+[2]: /docs/extensions/mv2/declare_permissions
+[3]: #life_cycle_footnote
+[4]: #implementation-details
+[5]: #life_cycle_footnote
+[6]: https://fetch.spec.whatwg.org/#cors-check
+[7]: https://fetch.spec.whatwg.org/#origin-header
+[8]:
+  https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md
+[9]: /docs/extensions/mv2/declare_permissions
+[10]: /docs/extensions/events
+[11]: #type-BlockingResponse
+[12]: #type-BlockingResponse
+[13]: #type-RequestFilter
+[14]: /docs/extensions/mv2/match_patterns
+[15]: #type-RequestFilter
+[16]: /docs/extensions/mv2/samples#search:webrequest
