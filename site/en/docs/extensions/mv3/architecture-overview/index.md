@@ -27,8 +27,9 @@ as the most important files and the capabilities the extension might use.
 ```json
 {
   "name": "My Extension",
+  "description": "A nice little demo extension.",
   "version": "2.1",
-  "description": "Gets information from Google.",
+  "manifest_version": 3,
   "icons": {
     "16": "icon_16.png",
     "32": "icon_32.png",
@@ -75,12 +76,12 @@ page.
 Additionally, each file can also be accessed using an absolute URL.
 
 ```text
-chrome-extension://<extensionID>/<pathToFile>
+chrome-extension://&lt;extensionID>/<pathToFile>
 ```
 
-In the absolute URL, the _<extensionID>_ is a unique identifier that the extension system generates
-for each extension. The IDs for all loaded extensions can be viewed by going to the URL
-**chrome://extensions**. The _<pathToFile>_ is the location of the file under the extension's top
+In the absolute URL, the _&lt;extensionID>_ is a unique identifier that the extension system
+generates for each extension. The IDs for all loaded extensions can be viewed by going to the URL
+**chrome://extensions**. The _&lt;pathToFile>_ is the location of the file under the extension's top
 folder; it matches the relative URL.
 
 While working on an unpacked extension the extension ID can change. Specifically, the ID of an
