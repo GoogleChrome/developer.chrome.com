@@ -85,12 +85,7 @@ That event kicks off fetching the new range, which is then propagated to the `Li
 
 The Memory Inspector is not only available for `ArrayBuffers` in JavaScript, but can also be used for inspecting Wasm Memory and memory pointed to by C/C++ references/pointers (using our DWARF-extension - give it a try if you haven’t yet! See [Debugging WebAssembly with modern tools here](/blog/wasm-debugging-2020/). A small outlook on the Memory Inspector in action for native debugging of C++ on the web:
 
-<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GcHy7qArrsUhF8UaJVIT.png", alt="Inspect memory in Wasm", width="800", height="441" %} -->
-{% Glitch {
-  id: 'memory-inspector',
-  path: 'demo-cpp.html',
-  height: 700
-} %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GcHy7qArrsUhF8UaJVIT.png", alt="Inspect memory in C++", width="800", height="441" %}
 
 
 ## Conclusion
