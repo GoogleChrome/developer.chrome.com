@@ -703,5 +703,20 @@
     },
     "country": "DE",
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
+  },
+  "chrishtr": {
+    "name": {
+      "given": "Chris",
+      "family": "Harrelson"
+    },
+    "twitter": "chrishtr",
+    "descriptions": {
+      "en": "Rendering lead for Chrome"
+    },
+    "org": {
+      "name": "Google"
+    },
+    "country": "US",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/t755awh2DwVKBMxvupUA.jpeg"
   }
 }
