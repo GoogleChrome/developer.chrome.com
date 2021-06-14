@@ -1,0 +1,11 @@
+# This file can be used to display a site-wide banner.
+# The actions should contain at least one action with an href.
+# Clicking on any action will dismiss the banner.
+# An action without an href will use a <button> instead of an <a>.
+
+type: info
+text: We are looking for web developers to participate in user research, product testing, discussion groups and more. Apply now to join our WebDev Insights Community.
+actions:
+  - text: Apply
+    href: https://www.brandinvitation.com/wix/p3474224.aspx?said=QWERD5A&pcid=CLCS&aud=na&cid=na&enpt=lp&lang=9&l=9&udv=dcb
+  - text: Dismiss

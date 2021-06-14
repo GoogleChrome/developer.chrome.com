@@ -48,7 +48,7 @@ the reference code.
 
 Let's get started. Go to [Step 1 - Create and run a Chrome App »][14]
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: http://goo.gl/qNNUX
 [4]: ../app_codelab_basics

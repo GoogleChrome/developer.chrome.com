@@ -19,11 +19,11 @@ You can raise concerns with Google about Chrome Web Store and Chrome extensions 
   The email includes a link to a support form; you can use the form to receive further
   clarifications or to appeal the removal decision.
 - General concerns: For all other concerns, including technical, payment, and questions about terms
-  and policies, contact Google through the form linked in the [Chrome Web Store FAQs][1].
+  and policies, contact Google through the form linked in the [Chrome Web Store FAQs][cwsfaq-support].
 
 ## How can I as a developer in the EU raise concerns related to the Platform To Business (P2B) regulations in Europe? {: #how-can-i-as-a-developer-in-the-eu-raise-concerns-related-to-the-platform-to-business-p2b-regulations-in-europe }
 
-You can file concerns through the general form linked to in the [Chrome Web Store FAQs][2].
+You can file concerns through the general form linked to in the [Chrome Web Store FAQs][cwsfaq-p2b].
 
 ## Can I raise concerns to the team through the various online forums? {: #can-i-raise-concerns-to-the-team-through-the-various-online-forums }
 
@@ -64,5 +64,5 @@ level of investigation needed to determine the root cause/explanation. For examp
 stats on the dashboard, extensions between developers, and developer account recovery have been
 known to require longer investigation times.
 
-[1]: /docs/webstore/faq/#faq-gen-24
-[2]: /docs/webstore/faq/#how-can-i-raise-p2b-concerns
+[cwsfaq-support]: /docs/webstore/faq/#additional-troubleshooting
+[cwsfaq-p2b]: /docs/webstore/faq/#how-can-i-raise-p2b-concerns
