@@ -1,7 +1,7 @@
 ---
 title: TablesNG Resolves 72 Chromium Bugs for Better Interoperability
 description: --
-  Chromium is updating its hardware-acceleration capabilities to SVG animations, percentage-based transformations, clip-path, background images, and more.
+  A new rendering engine for tables makes it more consistent to author tabular data across the web.
 layout: 'layouts/blog-post.njk'
 date: 2021-06-09
 authors:
@@ -9,7 +9,7 @@ authors:
   - atotic
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/4cBeoycli1TWiwNJBcq1.jpeg'
 alt: --
-  A series of racing bikes
+  A set of tables from a birds-eye view
 tags:
   - chrome-91
 ---
