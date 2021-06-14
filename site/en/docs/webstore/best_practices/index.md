@@ -18,8 +18,8 @@ standards of performance, security, and user experience, as summarized by the fo
 any of these policies.
 
 * **Manifest V3:** Is the extension built on Manifest V3? Manifest V3 reflects the aims of our
-  platform vision, and all High Quality extensions must be technically compliant (see this
-  [MV3 overview][mv3-overview]).
+  platform vision, and all High Quality extensions should use it. (See this
+  [MV3 overview][mv3-overview].)
 
 * **Security:** Is the extension safe for users? Make sure your extension does not pose security
   threats, does not use deceptive installation tactics and meets Chrome Web Store's data privacy
