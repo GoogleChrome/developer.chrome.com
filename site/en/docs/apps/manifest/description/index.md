@@ -19,7 +19,7 @@ extension. The description should be suitable for both the browser's extension m
 [Chrome Web Store][3]. You can specify locale-specific strings for this field; see
 [Internationalization][4] for details.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://chrome.google.com/webstore
 [4]: /extensions/i18n

@@ -18,7 +18,7 @@ This guide shows you how to use [Chrome DevTools][2] to inspect Web SQL data.
 
 ## View Web SQL Data {: #view }
 
-1.  Click the **Sources** tab to open the **Sources** panel. The **Manifest** pane usually opens by
+1.  Click the **Sources** tab to open the **Application** panel. The **Manifest** pane usually opens by
     default.
 
     {% Img src="image/admin/5z7Wz6UKaPOlgwmsaDMm.png", alt="The Manifest pane.", width="800", height="619" %}

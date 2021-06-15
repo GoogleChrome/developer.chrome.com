@@ -82,6 +82,6 @@ to create a pull request yet, or if you need to stage something private.
 
 ### Automatic deploys
 
-The site will build and deploy the master branch automatically every hour,
-Mon-Fri. If you've just merged an article then it should go live at the top
+The site will build and deploy the `main` branch automatically every hour,
+Mon–Fri. If you've just merged an article then it should go live at the top
 of the next hour.

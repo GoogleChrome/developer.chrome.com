@@ -136,7 +136,7 @@ These command line options to Chrome may help you iterate:
 - `--app-id=ajjhbohkjpincjgiieeomimlgnll` launches an app already loaded into Chrome. It does not
   restart any previously running app, but it does launch the new app with any updated content.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: publish_app
 [4]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/hello-world

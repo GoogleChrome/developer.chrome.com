@@ -96,7 +96,7 @@ The API offers two types of attribution reports than can be used for different u
 
 - **Origin trial**: [register for the first origin trial (click only)](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) or [see the first demo (click only)](https://goo.gle/demo-event-level-conversion-measurement-api).
 - To stay tuned about the next implementation of this API that will offer more features and be available for experimentation in Chrome (origin trial), join the [mailing list for developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
-- **GitHub**: Read the [proposal]https://github.com/WICG/conversion-measurement-api/), [raise questions and follow the discussion](https://github.com/WICG/conversion-measurement-api/issues).
+- **GitHub**: Read the [proposal](https://github.com/WICG/conversion-measurement-api/), [raise questions and follow the discussion](https://github.com/WICG/conversion-measurement-api/issues).
 - **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants) and join the [Privacy Community Group](https://www.w3.org/community/privacycg/) for discussions around the WebKit/Safari API.
 - **Developer support**: Ask questions and join discussions on the
   [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).

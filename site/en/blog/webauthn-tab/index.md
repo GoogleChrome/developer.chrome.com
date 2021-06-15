@@ -7,7 +7,7 @@ authors:
   - fawazm
   - nsatragno
 date: 2020-10-22
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lBGv7MQnhx3pF410gQ0P.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ygT7kttpahJLoRLXI2QI.jpg'
 alt: ''
 tags:
   - devtools-engineering

@@ -1,6 +1,6 @@
 {% if banner %}
   {# Supports 'info' or 'warning' banners. #}
-  <div class="banner banner--{{ banner.type or 'info' }}">
+  <announcement-banner class="banner banner--{{ banner.type or 'info' }}" storage-key="user-banner">
     <div class="banner__inner">
       <div class="banner__text">
         {# These inline block wrappers are a little hack to make content #}
@@ -17,13 +17,19 @@
         <div class="display-inline-block">
           {% if banner.actions %}
             {% for action in banner.actions %}
-              <a class="banner__action material-button button-text" href="{{ action.href }}">
-                {{ action.text }}
-              </a>
+              {% if action.href %}
+                <a class="banner__action material-button button-text" href="{{ action.href }}" data-banner-close-btn>
+                  {{ action.text }}
+                </a>
+              {% else %}
+                <button class="banner__action material-button button-text" data-banner-close-btn>
+                  {{ action.text }}
+                </button>
+              {% endif %}
             {% endfor %}
           {% endif %}
         </div>
       </div>
     </div>
-  </div>
+  </announcement-banner>
 {% endif %}

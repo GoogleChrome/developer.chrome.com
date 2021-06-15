@@ -650,7 +650,7 @@
     "glitch": "samdutton",
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/F3Df3SeugXYQEUUiMslu.jpg"
   },
-    "maudn": {
+  "maudn": {
     "name": {
       "given": "Maud",
       "family": "Nalpas"
@@ -682,5 +682,42 @@
       "en": "Dives into Chromium source code"
     },
     "image": "image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8SV7KI2QNVXph2L5Cga2.jpeg"
+  },
+  "kimanh": {
+    "name": {
+      "given": "Kim-Anh",
+      "family": "Tran"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "DE",
+    "twitter": "kianhuu",
+    "github": "ktran",
+    "email": "kimanh@chromium.org",
+    "descriptions": {
+      "en": "Googler working on Chrome DevTools."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/WMxar1rRgocnv8LEo3hG.jpg"
+  },
+  "thomassteiner": {
+    "name": {
+      "given": "Thomas",
+      "family": "Steiner"
+    },
+    "homepage": "https://blog.tomayac.com/",
+    "twitter": "tomayac",
+    "github": "tomayac",
+    "glitch": "tomayac",
+    "descriptions": {
+      "en": "Tom is a Developer Advocate"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "DE",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
   }
 }

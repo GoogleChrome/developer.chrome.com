@@ -26,10 +26,12 @@ alt="TWA offline: the standard offline page", width="533", height="372" %}
 This guide explains how to display your own activity in this situation by
 checking the status of the network before launching the Trusted Web Activity.
 
-{% Aside %} A prerequisite of this guide is to have a Trusted Web Activity app
+{% Aside %} 
+A prerequisite of this guide is to have a Trusted Web Activity app
 running. Follow the steps in the [Integration
-Guide](https://developer.chrome.com/docs/android/trusted-web-activity/integration-guide/)
-to create a basic Trusted Web Activity project. {% endAside%}
+Guide][1]
+to create a basic Trusted Web Activity project. 
+{% endAside%}
 
 ## Create a custom LauncherActivity
 
@@ -192,3 +194,5 @@ alt="twa offline - custom offline screen", width="533", height="394" %}
   interested in checking the code we used throughout this guide, you can find
   the complete solution in the [Offline First TWA
   Demo](https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/twa-offline-first).
+
+[1]: /docs/android/trusted-web-activity/integration-guide/
