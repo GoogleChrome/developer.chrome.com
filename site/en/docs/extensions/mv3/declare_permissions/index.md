@@ -95,8 +95,7 @@ The following table lists the currently available permissions:
     <tr id="clipboardWrite">
       <td><code>"clipboardWrite"</code></td>
       <td>Indicates the extension uses <code>document.execCommand('copy')</code> or
-        <code>document.execCommand('cut')</code>. This permission is is recommended
-        for all extensions.</td>
+        <code>document.execCommand('cut')</code>.
     </tr>
     <tr id="contentSettings">
       <td><code>"contentSettings"</code></td>
