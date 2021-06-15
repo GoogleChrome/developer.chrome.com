@@ -33,10 +33,10 @@ any of these policies.
   good-looking, intuitive, and seamless user experience while also respecting the end user's
   privacy.
 
-* **Store listing:** Does the store listing page provide quality and well-designed images (icon,
-  tile, marquee, and screenshots)? Images should not be blurry or too busy. Additionally, the store
-  listing page should be complete with all fields filled out (see [Supplying images] [supplying-images]
-  and [Completing your store listing] [completing-listing] for more listing tips).
+* **Store listing:** The extension's [Chrome Web Store listing][completing-listing] should sets the
+  user's expectations and clearly communicates what the extension does.   All image assets (icon,
+  tile, marquee, and screenshots) [should be provided][supplying-images]. Images should not be
+  blurry or too busy. [Privacy information][dashboard-privacy] (permissions justifications, the extension's privacy policy, data use disclosures, etc.) must be accurate and up to date.
 
 
 ## Support Google Accounts
@@ -101,8 +101,9 @@ that is most appropriate:
 [7]: /docs/webstore/branding
 [8]: /docs/webstore/images
 [9]: #top
+[completing-listing]: /docs/webstore/cws-dashboard-listing/
+[dashboard-privacy]: /docs/webstore/cws-dashboard-privacy/
 [mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
 [program policies]: /docs/webstore/program_policies/
-[user-daat-faq]: /docs/webstore/user_data/
 [supplying-images]: /docs/webstore/images/
-[completing-listing]: /docs/webstore/cws-dashboard-listing/
+[user-data-faq]: /docs/webstore/user_data/
