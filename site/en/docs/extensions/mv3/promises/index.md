@@ -56,8 +56,8 @@ promise support on the method yet; in many cases it's because using a promise is
 method.
 
 You can check if an API method support promises by checking its API reference page:
-
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/3gwYoRgPRWOrs5N2j5mP.png", alt="Screenshot showing a
+ 
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/AYQVtnh19vNMHoXzxZB1.png", alt="Screenshot showing a
 method that supports promises", width="800", height="280" %}
 
 The screenshot above shows a method from the `chrome.tabs` API. You can see that this method
