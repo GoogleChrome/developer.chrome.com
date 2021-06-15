@@ -247,8 +247,7 @@ of which can map to a set of resources to a set of URLs and extension IDs:
 {% endColumns %}
 
 {% Aside %}
-The `matches`, `extension_ids`, and `use_dynamic_url` keys are not available
-yet. Support for these properties will be coming in a future release.
+The `use_dynamic_url` key is not yet available. Support for this property will be available in a future release.
 {% endAside %}
 
 Previously, the list of web accessible resources applied to all websites and
