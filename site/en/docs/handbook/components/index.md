@@ -645,6 +645,24 @@ for unordered lists.
 - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
 
+### Definition list
+
+```md
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+```
+
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+
 ## Tables
 
 By default tables are only as wide as their content and are horizontally

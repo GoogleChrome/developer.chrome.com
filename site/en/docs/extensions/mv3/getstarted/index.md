@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Getting started"
 date: 2014-02-28
-updated: 2020-11-18
+updated: 2021-05-27
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 
@@ -81,7 +81,7 @@ Chrome is now aware that the extension includes a service worker. When you reloa
 Chrome will scan the specified file for additional instructions, such as important events it needs
 to listen for.
 
-This extension will need information from a persistent variable as soon as its installed. Start by
+This extension will need information from a persistent variable as soon as it's installed. Start by
 including a listening event for [`runtime.onInstalled`][11] in the background script. Inside the
 `onInstalled` listener, the extension will set a value using the [storage][12] API. This will allow
 multiple extension components to access that value and update it.
@@ -235,7 +235,7 @@ favicon. These images are designated in the manifest under [`icons`][19].
 ```
 
 If the extension is reloaded at this stage, it will include the provided icon rather than the
-default placeholder, and clicking the action will open a popup with button with default colors.
+default placeholder, and clicking the action will open a popup that displays a button showing the default color.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/j3Ff3oF0tEl9tE5ed6L0.png",
        alt="Popup", height="99", width="73" %}

@@ -358,7 +358,7 @@ on your Android device.
 The Chrome ADT for Android is currently in a pre-alpha release. To try it out, view the
 [ChromeADT.apk release notes][50] for installation and usage instructions.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://github.com/MobileChromeApps/mobile-chrome-apps/issues
 [4]: http://groups.google.com/a/chromium.org/group/chromium-apps/topics

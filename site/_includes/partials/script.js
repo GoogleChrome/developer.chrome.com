@@ -38,12 +38,29 @@
   );
   ga('send', 'pageview');
 
+  // Check if the user has accepted cookies. If so, set an attribute on
+  // the html element which will hide the banner.
   try {
-    const ctaUrl = 'https://policies.google.com/technologies/cookies';
-    const savedCtaUrl = localStorage.getItem('user-cookies');
+    const cookiesCtaUrl = '{{ site.cookiesCtaUrl }}';
+    const savedCookiesCtaUrl = localStorage.getItem('user-cookies');
 
-    if (savedCtaUrl === ctaUrl) {
-      document.documentElement.classList.add('banner--hide');
+    if (savedCookiesCtaUrl === cookiesCtaUrl) {
+      document.documentElement.setAttribute('data-cookies-accepted', '');
+    }
+  } catch (e) {
+    // ignore
+  }
+
+  // If we're displaying a promotional banner, check if the user has dismissed
+  // it. If so, set an attribute on the html element to hide the banner.
+  // Note that it's possible for a banner to have more than one action but
+  // we always use the url from the first action as the localStorage value.
+  try {
+    const bannerCtaUrl = '{{ banner.actions[0].href }}';
+    const savedBannerCtaUrl = localStorage.getItem('user-banner');
+
+    if (savedBannerCtaUrl === bannerCtaUrl) {
+      document.documentElement.setAttribute('data-banner-dismissed', '');
     }
   } catch (e) {
     // ignore

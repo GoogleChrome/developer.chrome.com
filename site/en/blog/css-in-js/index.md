@@ -6,7 +6,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - orkon
 date: 2021-02-26
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fD43v6RiVCDlmo3WhVPe.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aTuhqfcKgYd7YkLl4A0V.jpg'
 alt: ''
 tags:
   - devtools-engineering

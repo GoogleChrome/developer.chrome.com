@@ -4,8 +4,8 @@ crx:
   - url: extensions
   - url: webstore
   - url: apps
-  - url: privacy-sandbox
 architecture:
+  - url: privacy-sandbox
   - url: native-client
   - url: multidevice
   - url: android

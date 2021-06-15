@@ -13,8 +13,9 @@ alt: "New install surface for progressive web apps"
 
 {% Aside 'caution' %}
 This is an experimental UI, and could potentially change in the future depending on developer, user, 
-and partner feedback. We are also planning on expanding the UI to consider use cases where users need to be 
-educated about powerful features like WebSockets. 
+and partner feedback. We are also planning on expanding the UI to more clearly set expectations
+around what installation means, and to provide users with additional signals for making a well
+informed decision regarding installing a particular application.
 {% endAside %}
 
 
@@ -189,6 +190,6 @@ Longer descriptions are truncated.
 
 
 ## Feedback  
-In the coming months we would love to see how developers explore this new UI patterned and we 
-would like to get feedback from you. Reachout to us on 
+In the coming months we would love to see how developers explore this new UI pattern and we 
+would like to get feedback from you. Reach out to us on 
 [Twitter](https://twitter.com/ChromiumDev). 

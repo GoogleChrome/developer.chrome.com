@@ -6,7 +6,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - jackfranklin
 date: 2021-01-21
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nBjAqf1PuX7O2nvJbJck.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ShvSfdJZ23szdvD43kdA.jpg'
 alt: ''
 tags:
   - devtools-engineering
