@@ -14,22 +14,22 @@ alt: >
 ---
 
 I'm Chris Harrelson,
-the engineering lead for Rendering in Blink.
+the engineering lead for Rendering (HTML & CSS -> pixels) in Blink.
 I've been deep in the trenches of rendering performance on the web for over eight years,
 with a personal goal of doing whatever I can to make delivering excellent UX on the web faster,
 more reliable, and easier.
 In this blog post and many more to come,
-I'm excited to tell you about what we've done in that time to make Chromium's rendering engine cutting-edge.
-It's been an enormous labor of love from many people—
-me and my team as well as others that you'll also hear from. I hope you enjoy it!
+I'm excited for us to tell you about what we've done in that time to build a new, cutting-edge Chromium rendering engine architecture.
+To achieve this has been an enormous labor of love,
+and I hope you enjoy hearing about it!
 
-In 2021, we will largely complete the process of designing, building and shipping RenderingNG,
-a next-generation rendering architecture for Chromium.
-This architecture has been in progress for almost 8 years,
+In 2021, we will largely complete the process of designing, building and shipping this architecture. Let's call it RenderingNG,
+since it is truly a next-generation rendering architecture that greatly outperforms what came before.
+RenderingNG has been in progress for almost 8 years,
 and represents the collective work of many dedicated developers.
 It unlocks a huge amount of potential for the next generation of fast, fluid, reliable,
 responsive and interactive web content.
-It's also a baseline that we hope defines a new minimum standard for all web rendering engines that web developers can rely on.
+It's also a baseline that we hope defines a new minimum standard for all web rendering engines that developers can rely on.
 
 {% Img
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/kK620nxnffgeKaLLV9TJ.jpg",
@@ -50,15 +50,14 @@ principles that guide our work, and examples of those principles in practice.
 ## North star
 
 The north star goal motivating RenderingNG is that the browser engine implementation,
-and the richness of its rendering APIs, should not be a limiting factor of the UX of your web apps.
+and the richness of its rendering APIs, should not be a limiting factor of  UX on the web.
 
 You should not need to worry about browser bugs making features unreliable,
 or breaking your site's rendering.
 
-There should be no mysterious performance cliffs,
-with the browser slowing down your web app.
+There should be no mysterious performance cliffs.
 
-You should not need to work around missing built-in features that would make UX development easy.
+You should not need to work around missing built-in features.
 
 It should Just Work.
 
@@ -69,13 +68,13 @@ and there were many performance cliffs.
 Now we have an architecture that systematically squashes many of those problems,
 and also unblocks advanced features that were not considered feasible before.
 
-- ✔️ Core features are rock solid across different platform/device/OS combos.
-- ✔️ Performance is predictable and reliable.
+- ✔️ Has rock-solid core features across different platform/device/OS combos.
+- ✔️ Has predictable and reliable performance.
 - ✔️ Maximizes usage of hardware capabilities (cores, GPU, screen resolution, refresh rates, low-level raster APIs).
 - ✔️ Performs only the work that's needed to display visible content.
 - ✔️ Has built-in support for common visual design, animation and interaction design patterns.
 - ✔️ Provides developer APIs to easily manage rendering costs.
-- ✔️ Provides rendering pipeline extension points for easy-to-use developer add-ins.
+- ✔️ Provides rendering pipeline extension points for developer add-ins.
 - ✔️ Optimizes all content - HTML+CSS, 2D Canvas, 3D canvas, images, video, fonts.
 
 ### Comparison with other browser rendering engines
@@ -121,13 +120,13 @@ For this reason, reliability is the single most important part of RenderingNG.
 And reliability is the result of good testing,
 quality feedback loops, metrics, and software design patterns.
 
-To give a sense of how important I think Reliability is,
+To give a sense of how important I think reliability is,
 we spent most of the last eight years nailing just this part.
-First understanding the system deeply—learning from bug reports where the weak points were and fixing them,
-bootstrapping comprehensive tests,
+First, we built a deep knowledge of the system—learning from bug reports where the weak points were and fixing them,
+bootstrapping comprehensive tests, and
 understanding the performance needs of sites and limitations of Chromium's performance.
-Then carefully designing and rolling out key design patterns and data structures.
-Only then have we been ready to add truly next-generation primitives for responsive design,
+Then we carefully and incrementally designed and rolled out key design patterns and data structures.
+Only then were we ready to add truly next-generation primitives for responsive design,
 scalability and customization of rendering.
 
 
@@ -179,7 +178,7 @@ It takes a village to raise the interoperable web!
 Reliably delivering quality software is, in turn,
 a whole lot easier if the code is easy to understand,
 and designed in a way that minimizes the likelihood of bugs.
-I'll have a lot more to say about RenderingNG's software design in subsequent blog posts.
+We'll have a lot more to say about RenderingNG's software design in subsequent blog posts.
 
 ### Scalable performance
 
@@ -197,10 +196,10 @@ and scaling down—maximizing efficiency and reducing demand on the system when 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/Hdfm4k1cSwfJpffgx3eH.jpg",
 alt="", width="800", height="533" %}
 
-To get there, we'll need to make maximum use of caching,
+To get there, we needed to make maximum use of caching,
 performance isolation and GPU hardware acceleration.
 Let's consider each in turn. And to make it concrete,
-let's see how each of them contributes to the performance of one extremely important interaction on web pages: scrolling.
+let's think about how each of them contributes to the performance of one extremely important interaction on web pages: scrolling.
 
 ### Caching
 
@@ -229,7 +228,7 @@ because it runs on a different thread that doesn't have to depend on the JavaScr
 We put a ton of effort into RenderingNG to make sure that every possible scroll is threaded,
 through caching that goes well beyond just a display list to more complex situations.
 Examples include code to represent fixed- and sticky-positioned elements,
-passive event listeners, and high-quality LCD text rendering.
+passive event listeners, and high-quality text rendering.
 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/9qci9TU2xIEGshIPf8zZ.jpg",
 alt="Sketch shows that with RenderingNG performance stays solid.",
@@ -279,18 +278,18 @@ to render a single web page document from multiple threads.
 - [Container queries](https://web.dev/new-responsive/): allow a single component to responsively lay itself out.
 This unblocks a whole universe of plug-and-play components, and is currently an experimental implementation.
 - [Origin isolation](https://web.dev/why-coop-coep/): allow sites to opt into more performance isolation between iframes.
-- Off-main-thread [paint worklets](https://web.dev/houdini-how/): give developers a way to extend how elements are painted,
+- Off-main-thread [paint worklets](https://web.dev/houdini-how/): gives developers a way to extend how elements are painted,
 with code that runs on the compositor thread.
 
 In addition to explicit web APIs,
 RenderingNG allowed us to ship several very significant "automatic features" that benefit all sites:
 
 - [Site Isolation](/web/updates/2018/07/site-isolation):
-running cross-origin iframes in different processes,
+puts cross-origin iframes in different CPU processes,
 for better security and performance isolation.
 - [Vulkan](https://www.vulkan.org/),
 [D3D12](https://docs.microsoft.com/en-us/windows/win32/direct3d12/directx-12-programming-guide), and
-[Metal](https://developer.apple.com/metal/): lower-level APIs that use GPUs more efficiently than OpenGL.
+[Metal](https://developer.apple.com/metal/): takes advantage of lower-level APIs that use GPUs more efficiently than OpenGL.
 - More composited animations:
 [SVG](/blog/hardware-accelerated-animations/), background color.
 
