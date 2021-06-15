@@ -3,7 +3,7 @@ title: TablesNG Resolves 72 Chromium Bugs for Better Interoperability
 description: --
   A new rendering engine for tables makes it more consistent to author tabular data across the web.
 layout: 'layouts/blog-post.njk'
-date: 2021-06-09
+date: 2021-06-15
 authors:
   - unakravets
   - atotic
