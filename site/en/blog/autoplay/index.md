@@ -64,7 +64,7 @@ Chrome's autoplay policies are simple:
       threshold has been crossed, meaning the user has previously played video
       with sound.
     - The user has [added the site to their home screen](/customize-install/) on mobile or
-      [installed the PWA][installed-the-pwa] on desktop.
+      [installed the PWA](/progressive-web-apps/) on desktop.
 - Top frames can [delegate autoplay permission](#iframe-delegation) to their iframes to
   allow autoplay with sound.
 
@@ -280,14 +280,12 @@ on the Chromium site.
 
 
 [200x140]: https://chromium.googlesource.com/chromium/src/+/1c63b1b71d28851fc495fdee9a2c724ea148e827/chrome/browser/media/media_engagement_contents_observer.cc#38
-[added-the-site]: /customize-install/
 [autoplayallowed]: https://chromeenterprise.google/policies/#AutoplayAllowed
 [autoplayallowlist]: https://chromeenterprise.google/policies/#AutoplayAllowlist
 [chrome's autoplay feature]: https://sites.google.com/a/chromium.org/dev/audio-video/autoplay
 [command line flag]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [do this with flags]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
-[https://airhorner.com]: https://airhorner.com
-[installed-the-pwa]: /progressive-web-apps/
+[https://airhorner.com]: https://airhorner.com/progressive-web-apps/
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
 [permissions policy]: https://w3c.github.io/webappsec-permissions-policy/
 [permissions policy for autoplay]: https://github.com/WICG/feature-policy/blob/main/features.md
