@@ -452,7 +452,7 @@ Out of process means doing it in the Viz process instead of the web page's rende
 
 SkiaRenderer
 : a new display compositor implementation that can support execution on a range of different
-underlying GPU APIs such as Vulkan, D3D12 or Metal
+underlying GPU APIs such as Vulkan, D3D12 or Metal.
 
 ## Conclusion
 
