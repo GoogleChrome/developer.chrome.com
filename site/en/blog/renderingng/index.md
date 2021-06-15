@@ -294,7 +294,7 @@ for better security and performance isolation.
 - More composited animations:
 [SVG](/blog/hardware-accelerated-animations/), background color.
 
-Upcoming features unblocked by RenderingNG that we're excited about include:
+Additional upcoming features unblocked by RenderingNG that we're excited about include:
 
 - [Scroll-linked animations](https://drafts.csswg.org/scroll-animations-1/).
 - [Hidden, yet searchable and accessible DOM](https://github.com/whatwg/html/issues/6040).
