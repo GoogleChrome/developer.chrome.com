@@ -247,7 +247,8 @@ of which can map to a set of resources to a set of URLs and extension IDs:
 {% endColumns %}
 
 {% Aside %}
-The `use_dynamic_url` key is not yet available. Support for this property will be available in a future release.
+The `use_dynamic_url` key is not yet available. Support for this property will be available in a
+future release.
 {% endAside %}
 
 Previously, the list of web accessible resources applied to all websites and
@@ -476,4 +477,3 @@ As well as the undocumented:
 
 If your extensions use any of these deprecated APIs, you'll need to make the
 appropriate changes when you migrate to MV3.
-
