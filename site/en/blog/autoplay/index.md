@@ -63,8 +63,8 @@ Chrome's autoplay policies are simple:
     - On desktop, the user's [Media Engagement Index](#media-engagement-index)
       threshold has been crossed, meaning the user has previously played video
       with sound.
-    - The user has [added the site to their home screen](customize-install) on mobile or
-      [installed the PWA](installed-the-pwa) on desktop.
+    - The user has [added the site to their home screen](/customize-install/) on mobile or
+      [installed the PWA][installed-the-pwa] on desktop.
 - Top frames can [delegate autoplay permission](#iframe-delegation) to their iframes to
   allow autoplay with sound.
 
@@ -99,14 +99,14 @@ As a developer, you may want to change Chrome autoplay policy behavior locally
 to test your website for different levels of user engagement.
 
 - You can disable the autoplay policy entirely by using a [command line
-  flag](command-line-flag):
+  flag]:
   `chrome.exe --autoplay-policy=no-user-gesture-required`.
   This allows you to test your website as if user were strongly engaged with
   your site and playback autoplay would be always allowed.
 
 - You can also decide to make sure autoplay is never allowed by disabling MEI and
   whether sites with the highest overall MEI get autoplay by default for
-  new users. [Do this with flags](do-this-with-flags): `chrome.exe
+  new users. [Do this with flags][do this with flags]: `chrome.exe
   --disable-features=PreloadMediaEngagementData,
   MediaEngagementBypassAutoplayPolicies`.
 
@@ -161,12 +161,13 @@ privilege to the iframe in order for the content to autoplay.
 
 It is possible to change the autoplay behavior with Chrome enterprise policies
 for use cases such as kiosks or unattended systems. Check out the [Policy
-List](policy-list) help page to learn how to set the autoplay related enterprise
+List][policy list] help page to learn how to set the autoplay related enterprise
 policies:
 
-- The [`AutoplayAllowed`](autoplayallowed) policy controls whether autoplay is allowed or not.
-- The [`AutoplayAllowlist`](autoplayallowlist) policy allows you to specify an allowlist of URL
-  patterns where autoplay will always be enabled.
+- The <code>[AutoplayAllowed][autoplayallowed]</code> policy controls whether
+  autoplay is allowed or not.
+- The <code>[AutoplayAllowlist][autoplayallowlist]</code> policy allows you to
+  specify an allowlist of URL patterns where autoplay will always be enabled.
 
 ## Best practices for web developers
 
@@ -182,8 +183,8 @@ Don't assume a video will play, and don't show a pause button when the video is
 not actually playing.
 {% endAside %}
 
-You should always look at the [Promise](promise_) returned by the play function
-to see if it was [rejected](rejected_):
+You should always look at the [Promise][promise] returned by the play function to see if
+it was [rejected]:
 
 ```js
 var promise = document.querySelector('video').play();
@@ -220,7 +221,7 @@ including Facebook, Instagram, Twitter, and YouTube.
 
 ### Web Audio
 
-The [Web Audio API](web-audio-api) has been covered by autoplay since Chrome 71.
+The [Web Audio API][web audio api] has been covered by autoplay since Chrome 71.
 There are a few things to know about it. First, it is good practice to wait for
 a user interaction before starting audio playback so that users is aware of
 something happening. Think of a "play" button or "on/off" switch for instance.
@@ -269,30 +270,29 @@ To detect whether the browser requires a user interaction to play audio, check
 immediately switch to `running`. Otherwise it will be `suspended`. If you listen
 to the `statechange` event, you can detect changes asynchronously.
 
-To see an example, check out the small [Pull Request](pull-request) that fixes
+To see an example, check out the small [Pull Request][pull request] that fixes
 Web Audio playback for these autoplay policy rules for [https://airhorner.com].
 
 {% Aside %}
-You can find a summary of [Chrome's autoplay feature](chromes-autoplay-feature)
+You can find a summary of [Chrome's autoplay feature][chrome's autoplay feature]
 on the Chromium site.
 {% endAside %}
 
 
 [200x140]: https://chromium.googlesource.com/chromium/src/+/1c63b1b71d28851fc495fdee9a2c724ea148e827/chrome/browser/media/media_engagement_contents_observer.cc#38
-[added the site to their home screen]: /web/updates/2017/02/improved-add-to-home-screen
+[added-the-site]: /customize-install/
 [autoplayallowed]: https://chromeenterprise.google/policies/#AutoplayAllowed
 [autoplayallowlist]: https://chromeenterprise.google/policies/#AutoplayAllowlist
-[chromes-autoplay-feature]: https://sites.google.com/a/chromium.org/dev/audio-video/autoplay
-[command-line-flag]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
-[customize-install]: https://web.dev/customize-install
-[do-this-with-flags]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
+[chrome's autoplay feature]: https://sites.google.com/a/chromium.org/dev/audio-video/autoplay
+[command line flag]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
+[do this with flags]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [https://airhorner.com]: https://airhorner.com
-[installed-the-pwa]: https://web.dev/progressive-web-apps/
+[installed-the-pwa]: /progressive-web-apps/
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
-[permissions policy]: https://wicg.github.io/feature-policy/
+[permissions policy]: https://w3c.github.io/webappsec-permissions-policy/
 [permissions policy for autoplay]: https://github.com/WICG/feature-policy/blob/main/features.md
-[policy-list]: https://chromeenterprise.google/policies/
-[promise_]: /web/fundamentals/getting-started/primers/promises
-[pull-request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
-[rejected_]: https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
-[web-audio-api]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
+[policy list]: https://chromeenterprise.google/policies/
+[promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+[pull request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
+[rejected]: https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
+[web audio api]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
