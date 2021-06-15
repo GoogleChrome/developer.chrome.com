@@ -5,7 +5,7 @@ description: >
   In 2021, we will largely complete the process of designing, building and shipping RenderingNG, a next-generation rendering architecture for Chromium.
 subhead: >
   Ready for the next generation of web content
-date: 2021-06-14
+date: 2021-06-15
 authors:
   - chrishtr
 hero: 'image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/Hdfm4k1cSwfJpffgx3eH.jpg'
@@ -32,7 +32,7 @@ responsive and interactive web content.
 It's also a baseline that we hope defines a new minimum standard for all web rendering engines that developers can rely on.
 
 {% Img
-src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/kK620nxnffgeKaLLV9TJ.jpg",
+src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/m1d1iB6Ts2HqWRAx8cX5.jpg",
 alt="Sketch of the different elements of RenderingNG",
 width="800", height="789" %}
 
@@ -275,8 +275,8 @@ and cache rendering for not-currently-shown SPA views.
 This project is also another major milestone for the web.
 It's the very first web API that allows JavaScript (or WebAssembly!)
 to render a single web page document from multiple threads.
-- [Container queries](https://web.dev/new-responsive/): allow a single component to responsively lay itself out.
-This unblocks a whole universe of plug-and-play components, and is currently an experimental implementation.
+- [Container queries](https://web.dev/new-responsive/): allow a single component to responsively lay itself out,
+unblocking a whole universe of plug-and-play components (currently an experimental implementation).
 - [Origin isolation](https://web.dev/why-coop-coep/): allow sites to opt into more performance isolation between iframes.
 - Off-main-thread [paint worklets](https://web.dev/houdini-how/): gives developers a way to extend how elements are painted,
 with code that runs on the compositor thread.
@@ -311,10 +311,72 @@ Disentangles compositing from style, layout and paint,
 allowing much-improved reliability and predictable performance, increased throughput,
 and using less memory without sacrificing performance.
 
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Progress</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2014</td>
+      <td>Start</td>
+    </tr>
+    <tr>
+      <td>2015</td>
+      <td>Ship display lists.</td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>Ship new invalidation.</td>
+    </tr>
+    <tr>
+      <td>2018</td>
+      <td>Ship property trees part 1.</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>Ship property trees part 2.</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>Ship SVG. Ship rest. Finish!</td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
+
 ### LayoutNG
 
 A ground-up rewrite of all layout algorithms,
 for greatly improved reliability and more predictable performance.
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Progress</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2016</td>
+      <td>Start</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>Ship block flow.</td>
+    </tr>
+    <tr>
+      <td>2020</td>
+      <td>Ship flex, editing.</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>Ship everything else. Finish!</td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
 
 ### BlinkNG
 
@@ -329,10 +391,84 @@ GPU acceleration provides an enormous speedup for most content,
 because every pixel can be processed in parallel.
 It is also an effective method for improving performance on low-end devices, which tend to still have a GPU.
 
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Progress</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2014</td>
+      <td>Start! Canvas support? Shipped on opt-in content on Android.</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>Threaded GPU Rasterization.</td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>Ship on Mac.</td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>GPU is used on &gt;60% of Android page views.</td>
+    </tr>
+    <tr>
+      <td>2018</td>
+      <td>Ship on Windows, CrOS, and Android Go.</td>
+    </tr>
+    <tr>
+      <td>2020</td>
+      <td>Ship remaining Android content. Finish!</td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
+
 ### Threaded scrolling, animations, and decode
 
 A long-term effort to move all scrolling, non-layout-inducing animations,
 and image decoding off of the main thread.
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Progress</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2011</td>
+      <td>Initial support for threaded scroll and animation.</td>
+    </tr>
+    <tr>
+      <td>2015</td>
+      <td>Layer squashing.</td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>Universal overflow scrolling.</td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>Image decodes on compositor thread.</td>
+    </tr>
+    <tr>
+      <td>2018</td>
+      <td>Image Animations on compositor thread.</td>
+    </tr>
+    <tr>
+      <td>2020</td>
+      <td>Always composite fixed-position.</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>Percentage transform animations, SVG animations.</td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
 
 ### Viz
 
@@ -341,108 +477,74 @@ optimizes memory, and allows optimal use of hardware capabilities.
 It also has other benefits less visible to web developers but very visible to users,
 such as unblocking Site Isolation and decoupling the rendering pipeline from browser UI rendering.
 
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Progress</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2016</td>
+      <td>Start</td>
+    </tr>
+    <tr>
+      <td>2018</td>
+      <td>OOP-R shipped on Android, Mac and Windows.</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>OOP-D shipped. OOP-R shipped everywhere (except Canvas). SkiaRenderer shipped on Linux.</td>
+    </tr>
+    <tr>
+      <td>2020</td>
+      <td>SkiaRenderer shipped on Windows & Android. Vulkan shipped on Android.</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>SkiaRenderer shipped on Mac (& CrOS soon). Finish!</td>
+    </tr>
+    <tr>
+  </tbody>
+</table>
+
 ### Threaded and accelerated canvas rendering
 
 This is the project that put in place the architectural pieces that made OffscreenCanvas possible.
 
-<table class="width-full">
+<table>
   <thead>
     <tr>
-      <td></td>
-      <th>2011</th>
-      <th>2014</th>
-      <th>2015</th>
-      <th>2016</th>
-      <th>2017</th>
-      <th>2018</th>
-      <th>2019</th>
-      <th>2020</th>
-      <th>2021</th>
-    </tr>
+      <th>Year</th>
+      <th>Progress</th>
   </thead>
   <tbody>
     <tr>
-      <th>CompositeAfterPaint</th>
-      <td></td>
+      <td>2015</td>
       <td>Start</td>
-      <td>Ship display lists</td>
-      <td></td>
-      <td>Ship new invalidation</td>
-      <td>Ship property trees part 1</td>
-      <td>Ship property trees part 2</td>
-      <td></td>
-      <td>Ship SVG. Ship rest. Finish!</td>
     </tr>
     <tr>
-      <th>LayoutNG</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>Start</td>
-      <td></td>
-      <td></td>
-      <td>Ship block flow</td>
-      <td>Ship flex, editing</td>
-      <td>Ship everything else. Finish!</td>
+      <td>2018</td>
+      <td>Ship OffscreenCanvas.</td>
     </tr>
     <tr>
-      <th>GPU Acelaration everywhere</th>
-      <td></td>
-      <td>Start!
-      <br>Canvas support?
-      <br>Shipped on opt-in content on Android.</td>
-      <td>Threaded GPU Rasterization</td>
-      <td>Ship on Mac</td>
-      <td>GPU is used on &gt;60% of Android page views.</td>
-      <td>Ship on Windows, CrOS, and Android Go</td>
-      <td></td>
-      <td>Ship remaining Android content. Finish!</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>Threaded scrolling, animation, and decode</th>
-      <td>Initial support for threaded scroll and animation</td>
-      <td></td>
-      <td>Layer squashing</td>
-      <td>Universal overflow scrolling</td>
-      <td>Image decodes on compositor thread</td>
-      <td>Image Animations on compositor thread</td>
-      <td></td>
-      <td>Always composite fixed-position</td>
-      <td>Percentage transform animations, SVG animations.</td>
-    </tr>
-    <tr>
-      <th>Viz</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>Start</td>
-      <td></td>
-      <td>OOP-R shipped on Android, Mac and Windows.</td>
-      <td>OOP-D shipped. OOP-R shipped everywhere (except Canvas). SkiaRenderer shipped on Linux.</td>
-      <td>SkiaRenderer shipped on Windows & Android. Vulkan shipped on Android.</td>
-      <td>SkiaRenderer shipped on Mac (& CrOS soon). Finish!</td>
-    </tr>
-    <tr>
-      <th>Threaded / accelerated canvas</th>
-      <td></td>
-      <td></td>
-      <td>Start</td>
-      <td></td>
-      <td></td>
-      <td>Ship OffscreenCanvas</td>
+      <td>2019</td>
       <td>ImageBitmapRenderingContext. Finish!</td>
-      <td></td>
+    </tr>
+    <tr>
+      <td>2021</td>
       <td>Ship OOPR. Finish!</td>
     </tr>
+    <tr>
   </tbody>
 </table>
 
-### Definition of terms in the above chart
+Definition of terms in the above charts:
 
 OOP-D
 : Out of process display compositor.
-Display compositing is the same kind of activity as an OS compositor.
+Display compositing is the same kind of activity as an
+[OS compositor](https://en.wikipedia.org/wiki/Compositing_window_manager).
 Out of process means doing it in the Viz process instead of the web page's render process or the browser UI process.
 
 OOP-R
@@ -462,4 +564,6 @@ as we are able to build on top of the solid basis of RenderingNG.
 Stay tuned for many more future posts that will go into a lot more detail about the new architecture,
 how it came to be, and how it works.
 
-_Devices photo by <a href="https://unsplash.com/@eirikso?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Eirik Solheim</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>_
+_Devices photo by
+[Eirik Solheim](https://unsplash.com/@eirikso?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on
+[Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_
