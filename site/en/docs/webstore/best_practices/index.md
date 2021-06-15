@@ -29,8 +29,9 @@ any of these policies.
   don't just perform their intended action, they do so while using as few system resources as
   possible.
 
-* **User experience:** Is the extension a joy to use? Make sure your extensions are easy to
-  install and manage, with a good-looking, intuitive and seamless user experience.
+* **User experience:** Is the extension a joy to use? The extension itself should provide a
+  good-looking, intuitive, and seamless user experience while also respecting the end user's
+  privacy.
 
 * **Store listing:** Does the store listing page provide quality and well-designed images (icon,
   tile, marquee, and screenshots)? Images should not be blurry or too busy. Additionally, the store
