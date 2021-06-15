@@ -17,9 +17,9 @@ standards of performance, security, and user experience, as summarized by the fo
 * **Compliance:** Does the extension comply with our [program policies]? Extensions must not violate
 any of these policies.
 
-* **Manifest V3:** Is the extension built on Manifest V3? Manifest V3 reflects the aims of our
-  platform vision, and all High Quality extensions should use it. (See this
-  [MV3 overview][mv3-overview].)
+* **Manifest V3:** Is the extension built on Manifest V3? Manifest V3 is the current version of the
+  Chrome extension platform and all High Quality extensions should use it. (See the [Manifest V3
+  overview][mv3-overview].)
 
 * **Security:** Is the extension safe for users? Make sure your extension does not pose security
   threats, does not use deceptive installation tactics and meets Chrome Web Store's data privacy
