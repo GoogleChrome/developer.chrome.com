@@ -26,7 +26,8 @@ any of these policies.
   requirements (see this [FAQ][user-data-faq]).
 
 * **Performance:** Does the extension function at an outstanding level? High-quality extensions
-  don't just perform their intended action, but perform at an extremely high level. 
+  don't just perform their intended action, they do so while using as few system resources as
+  possible.
 
 * **User experience:** Is the extension a joy to use? Make sure your extensions are easy to
   install and manage, with a good-looking, intuitive and seamless user experience.
