@@ -12,7 +12,7 @@ extension from being enabled in incognito mode.
 
 ## Spanning mode {: #spanning }
 
-The default mode is `"spanning"`, which means that it will run in a single
+The default mode is `"spanning"`, which means that the extension will run in a single
 shared process. Any events or messages from an incognito tab will be sent to the shared process,
 with an _incognito_ flag indicating where it came from. Because incognito tabs cannot use this
 shared process, an extension using the `"spanning"` incognito mode will not be able to load pages
