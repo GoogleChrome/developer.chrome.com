@@ -333,7 +333,7 @@ It is also an effective method for improving performance on low-end devices, whi
 ### Threaded scrolling, animations, and decode
 
 A long-term effort to move all scrolling, non-layout-inducing animations,
-and image decoding to the compositor thread.
+and image decoding off of the main thread.
 
 ### Viz
 
