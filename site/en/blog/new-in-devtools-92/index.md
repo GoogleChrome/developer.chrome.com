@@ -26,7 +26,7 @@ A highly requested feature. You can now preview and author CSS Grid with the new
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mV9Ac7QAD8vVPoiqmii6.png", alt="CSS Grid editor", width="800", height="486" %}
 
-When an HTML element on your page has `display: grid` or `display: grid` applied to it, you can see an icon appear next to it in the Styles pane. Click the icon to toggle the CSS grid editor. Here you can preview the potential changes with the on screen icons (e.g. `justify-content: space-around`) and author the grid appearance with just one click. 
+When an HTML element on your page has `display: grid` or `display: inline-grid` applied to it, you can see an icon appear next to it in the Styles pane. Click the icon to toggle the CSS grid editor. Here you can preview the potential changes with the on screen icons (e.g. `justify-content: space-around`) and author the grid appearance with just one click. 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dbd631539c7eeac02ea68a37096ce3bc7d9487d9 #}
 

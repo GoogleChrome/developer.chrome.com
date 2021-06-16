@@ -36,11 +36,11 @@ as the most important files and the capabilities the extension might use.
     "128": "icon_128.png"
   },
   "background": {
-    "persistent": false,
-    "scripts": ["background_script.js"]
+    "service_worker": "background.js"
   },
-  "permissions": ["https://*.google.com/", "activeTab"],
-  "browser_action": {
+  "permissions": ["activeTab"],
+  "host_permissions": ["*://*.example.com/*"],
+  "action": {
     "default_icon": "icon_16.png",
     "default_popup": "popup.html"
   }

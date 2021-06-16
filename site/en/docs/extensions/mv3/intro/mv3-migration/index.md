@@ -247,14 +247,16 @@ of which can map to a set of resources to a set of URLs and extension IDs:
 {% endColumns %}
 
 {% Aside %}
-The `use_dynamic_url` key is not yet available. Support for this property will be available in a
-future release.
+The `use_dynamic_url` key is not yet available. Support for this property will
+be coming in a future release.
 {% endAside %}
 
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
 resource access. The updated API lets extensions more tightly control what
-other sites or extensions can access extension resources.
+other sites or extensions can access extension resources. See the [web 
+accessible resources](/docs/extensions/mv3/manifest/web_accessible_resources/)
+documentation for usage information.
 
 
 ## Code execution  {: #code-execution }
