@@ -63,8 +63,8 @@ Chrome's autoplay policies are simple:
     - On desktop, the user's [Media Engagement Index](#media-engagement-index)
       threshold has been crossed, meaning the user has previously played video
       with sound.
-    - The user has [added the site to their home screen](/customize-install/) on mobile or
-      [installed the PWA](/progressive-web-apps/) on desktop.
+    - The user has [added the site to their home screen][customize-install] on mobile or
+      [installed the PWA][progressive-web-apps] on desktop.
 - Top frames can [delegate autoplay permission](#iframe-delegation) to their iframes to
   allow autoplay with sound.
 
@@ -284,12 +284,14 @@ on the Chromium site.
 [autoplayallowlist]: https://chromeenterprise.google/policies/#AutoplayAllowlist
 [chrome's autoplay feature]: https://sites.google.com/a/chromium.org/dev/audio-video/autoplay
 [command line flag]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
+[customize-install]: https://web.dev/customize-install/
 [do this with flags]: https://www.chromium.org/developers/how-tos/run-chromium-with-flags
 [https://airhorner.com]: https://airhorner.com/progressive-web-apps/
 [noticed]: https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/
 [permissions policy]: https://w3c.github.io/webappsec-permissions-policy/
 [permissions policy for autoplay]: https://github.com/WICG/feature-policy/blob/main/features.md
 [policy list]: https://chromeenterprise.google/policies/
+[progressive-web-apps]: https://web.dev/progressive-web-apps/
 [promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [pull request]: https://github.com/GoogleChromeLabs/airhorn/pull/37
 [rejected]: https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
