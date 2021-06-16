@@ -667,6 +667,22 @@
     "github": "maudnals",
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/fJP5RRP6pcCnfctkaQhu.jpg"
   },
+  "atotic": {
+    "name": {
+      "given": "Aleks",
+      "family": "Totic"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Blink DOM"
+    },
+    "descriptions": {
+      "en": "Software engineer on Blink DOM"
+    },
+    "country": "US",
+    "twitter": "atotic",
+    "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/yb4nAlmupGwqaiUypp7b.jpg"
+  },
   "kimanh": {
     "name": {
       "given": "Kim-Anh",
