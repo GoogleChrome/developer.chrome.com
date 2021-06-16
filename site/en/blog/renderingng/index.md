@@ -18,18 +18,17 @@ the engineering lead for Rendering (HTML & CSS -> pixels) in Blink.
 I've been deep in the trenches of rendering performance on the web for over eight years,
 with a personal goal of doing whatever I can to make delivering excellent UX on the web faster,
 more reliable, and easier.
-In this blog post and many more to come,
 I'm excited for us to tell you about what we've done in that time to build a new, cutting-edge Chromium rendering engine architecture.
 To achieve this has been an enormous labor of love,
 and I hope you enjoy hearing about it!
 
 In 2021, we will largely complete the process of designing, building and shipping this architecture. Let's call it RenderingNG,
 since it is truly a next-generation rendering architecture that greatly outperforms what came before.
-RenderingNG has been in progress for almost 8 years,
-and represents the collective work of many dedicated developers.
+RenderingNG has been in progress for at least eight years,
+and represents the collective work of many dedicated Chromium developers.
 It unlocks a huge amount of potential for the next generation of fast, fluid, reliable,
 responsive and interactive web content.
-It's also a baseline that we hope defines a new minimum standard for all web rendering engines that developers can rely on.
+It's also a baseline that I believe defines a new minimum standard for all web rendering engines that developers can rely on.
 
 {% Img
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/m1d1iB6Ts2HqWRAx8cX5.jpg",
@@ -44,7 +43,7 @@ In this first post, I'll start with:
 - Our North Star goal.
 - The pyramid of success:
 principles that guide our work, and examples of those principles in practice.
-- The features and capabilities that are now possible.
+- The features and capabilities that RenderingNG makes possible.
 - A high-level overview of the major project components of RenderingNG.
 
 ## North star
@@ -66,7 +65,8 @@ Before RenderingNG, we could (and did) add rendering features and improve perfor
 but struggled to make those features reliable for developers,
 and there were many performance cliffs.
 Now we have an architecture that systematically squashes many of those problems,
-and also unblocks advanced features that were not considered feasible before.
+and also unblocks advanced features that were not considered feasible before. It:
+``
 
 - ✔️ Has rock-solid core features across different platform/device/OS combos.
 - ✔️ Has predictable and reliable performance.
@@ -188,7 +188,7 @@ We want interactions with all web sites to be smooth and responsive,
 yet not sacrifice the stability of the device.
 
 But we don't just want performance,
-we want scalable performance with an architecture that performs reliably well on low-end and high-end machines,
+we want scalable performance—an architecture that performs reliably well on low-end and high-end machines,
 and across OS platforms.
 I call this scaling up—taking advantage of all that the hardware device can achieve,
 and scaling down—maximizing efficiency and reducing demand on the system when needed.
@@ -241,10 +241,9 @@ in many cases, every pixel can be drawn in parallel with every other pixel,
 resulting in an enormous speed increase.
 A key component of RenderingNG is GPU raster/draw everywhere.
 This uses the GPU on all platforms, and all devices, to hyper-accelerate the rendering and animating of web content.
-This is especially a benefit on low-end devices,
+This is especially important on low-end devices or very high-end ones,
 which often have a much more capable GPU than other parts of the device.
 
-GPU hardware acceleration is especially important for very high-resolution screens or low-end hardware.
 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/2kly2kdoelhTeDqUHEPn.jpg",
 alt="Sketch shows that with RenderingNG performance does not degrade so much.",
@@ -272,12 +271,12 @@ allows sites to easily avoid rendering work for offscreen content,
 and cache rendering for not-currently-shown SPA views.
 - [OffscreenCanvas](/web/updates/2018/08/offscreen-canvas): allows canvas rendering
 (both the 2D canvas API and WebGL) to run on its own thread for reliably excellent performance.
-This project is also another major milestone for the web.
-It's the very first web API that allows JavaScript (or WebAssembly!)
+This project is also another major milestone for the web—
+it's the very first web API that allows JavaScript (or WebAssembly!)
 to render a single web page document from multiple threads.
-- [Container queries](https://web.dev/new-responsive/): allow a single component to responsively lay itself out,
+- [Container queries](https://web.dev/new-responsive/): allows a single component to responsively lay itself out,
 unblocking a whole universe of plug-and-play components (currently an experimental implementation).
-- [Origin isolation](https://web.dev/why-coop-coep/): allow sites to opt into more performance isolation between iframes.
+- [Origin isolation](https://web.dev/why-coop-coep/): allows sites to opt into more performance isolation between iframes.
 - Off-main-thread [paint worklets](https://web.dev/houdini-how/): gives developers a way to extend how elements are painted,
 with code that runs on the compositor thread.
 
@@ -299,7 +298,7 @@ Additional upcoming features unblocked by RenderingNG that we're excited about i
 - [Hidden, yet searchable and accessible DOM](https://github.com/whatwg/html/issues/6040).
 - [Shared element transitions](https://github.com/WICG/shared-element-transitions).
 - [Custom layout](https://www.w3.org/TR/css-layout-api-1/).
-- Off-main-thread compositing; decoupling threading and compositing (this one will get its own follow-on blog post!)
+- Off-main-thread compositing; decoupling threading and compositing.
 
 ## Key projects that make up RenderingNG
 
@@ -309,7 +308,7 @@ Below is a list of the key projects within RenderingNG. Subsequent blog posts wi
 
 Disentangles compositing from style, layout and paint,
 allowing much-improved reliability and predictable performance, increased throughput,
-and using less memory without sacrificing performance.
+and using less memory without sacrificing performance. It began in 2014 and will finish this year.
 
 <table>
   <thead>
@@ -320,7 +319,6 @@ and using less memory without sacrificing performance.
   <tbody>
     <tr>
       <td>2014</td>
-      <td>Start</td>
     </tr>
     <tr>
       <td>2015</td>
@@ -340,7 +338,7 @@ and using less memory without sacrificing performance.
     </tr>
     <tr>
       <td>2021</td>
-      <td>Ship SVG. Ship rest. Finish!</td>
+      <td>Ship SVG.</td>
     </tr>
     <tr>
   </tbody>
@@ -349,7 +347,8 @@ and using less memory without sacrificing performance.
 ### LayoutNG
 
 A ground-up rewrite of all layout algorithms,
-for greatly improved reliability and more predictable performance.
+for greatly improved reliability and more predictable performance. It began in 2016
+and is planned to finish this year.
 
 <table>
   <thead>
@@ -360,7 +359,6 @@ for greatly improved reliability and more predictable performance.
   <tbody>
     <tr>
       <td>2016</td>
-      <td>Start</td>
     </tr>
     <tr>
       <td>2019</td>
@@ -372,7 +370,7 @@ for greatly improved reliability and more predictable performance.
     </tr>
     <tr>
       <td>2021</td>
-      <td>Ship everything else. Finish!</td>
+      <td>Ship everything else.</td>
     </tr>
     <tr>
   </tbody>
@@ -382,7 +380,7 @@ for greatly improved reliability and more predictable performance.
 
 A systematic cleanup and refactoring of the Blink rendering engine into cleanly separated pipeline phases.
 This allows for better caching, higher reliability,
-and re-entrant / delayed-rendering features such as content-visibility and container queries.
+and re-entrant / delayed-rendering features such as content-visibility and container queries. It began in 2014, and incremental improvement and has been ongoing since. It will complete in 2021.
 
 ### GPU Acceleration everywhere
 
@@ -400,7 +398,7 @@ It is also an effective method for improving performance on low-end devices, whi
   <tbody>
     <tr>
       <td>2014</td>
-      <td>Start! Canvas support? Shipped on opt-in content on Android.</td>
+      <td>Canvas support. Shipped on opt-in content on Android.</td>
     </tr>
     <tr>
       <td>2019</td>
@@ -416,11 +414,11 @@ It is also an effective method for improving performance on low-end devices, whi
     </tr>
     <tr>
       <td>2018</td>
-      <td>Ship on Windows, CrOS, and Android Go.</td>
+      <td>Ship on Windows, ChromeOS, and Android Go.</td>
     </tr>
     <tr>
       <td>2020</td>
-      <td>Ship remaining Android content. Finish!</td>
+      <td>Ship remaining Android content.</td>
     </tr>
     <tr>
   </tbody>
@@ -429,7 +427,7 @@ It is also an effective method for improving performance on low-end devices, whi
 ### Threaded scrolling, animations, and decode
 
 A long-term effort to move all scrolling, non-layout-inducing animations,
-and image decoding off of the main thread.
+and image decoding off of the main thread. It began in 2011 and is ongoing.
 
 <table>
   <thead>
@@ -475,7 +473,7 @@ and image decoding off of the main thread.
 A centralized raster and draw process for Chromium that increases throughput,
 optimizes memory, and allows optimal use of hardware capabilities.
 It also has other benefits less visible to web developers but very visible to users,
-such as unblocking Site Isolation and decoupling the rendering pipeline from browser UI rendering.
+such as unblocking Site Isolation and decoupling the rendering pipeline from browser UI rendering. It began in 2016 and will complete in 2021.
 
 <table>
   <thead>
@@ -486,7 +484,6 @@ such as unblocking Site Isolation and decoupling the rendering pipeline from bro
   <tbody>
     <tr>
       <td>2016</td>
-      <td>Start</td>
     </tr>
     <tr>
       <td>2018</td>
@@ -502,7 +499,7 @@ such as unblocking Site Isolation and decoupling the rendering pipeline from bro
     </tr>
     <tr>
       <td>2021</td>
-      <td>SkiaRenderer shipped on Mac (& CrOS soon). Finish!</td>
+      <td>SkiaRenderer shipped on Mac (and ChromeOS soon).</td>
     </tr>
     <tr>
   </tbody>
@@ -510,7 +507,7 @@ such as unblocking Site Isolation and decoupling the rendering pipeline from bro
 
 ### Threaded and accelerated canvas rendering
 
-This is the project that put in place the architectural pieces that made OffscreenCanvas possible.
+This is the project that put in place the architectural pieces that made OffscreenCanvas possible. It began in 2015 and will finish in 2021.
 
 <table>
   <thead>
@@ -521,7 +518,6 @@ This is the project that put in place the architectural pieces that made Offscre
   <tbody>
     <tr>
       <td>2015</td>
-      <td>Start</td>
     </tr>
     <tr>
       <td>2018</td>
@@ -533,7 +529,7 @@ This is the project that put in place the architectural pieces that made Offscre
     </tr>
     <tr>
       <td>2021</td>
-      <td>Ship OOPR. Finish!</td>
+      <td>Ship OOPR.</td>
     </tr>
     <tr>
   </tbody>
@@ -557,8 +553,8 @@ underlying GPU APIs such as Vulkan, D3D12 or Metal.
 
 ## Conclusion
 
-I couldn't be more excited about the pace of improvement of rendering on the web and Chromium,
-a pace that I expect will continue to accelerate in coming years
+I couldn't be more excited about the rate of improvement of rendering on the web and Chromium.
+I expect the pace will continue to accelerate in coming years
 as we are able to build on top of the solid basis of RenderingNG.
 
 Stay tuned for many more future posts that will go into a lot more detail about the new architecture,
