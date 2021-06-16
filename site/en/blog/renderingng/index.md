@@ -5,10 +5,9 @@ description: >
   In 2021, we will largely complete the process of designing, building and shipping RenderingNG, a next-generation rendering architecture for Chromium.
 subhead: >
   Ready for the next generation of web content
-date: 2021-06-15
+date: 2021-06-16
 authors:
   - chrishtr
-hero: 'image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/Hdfm4k1cSwfJpffgx3eH.jpg'
 alt: >
   A pile of different devices.
 ---
@@ -30,14 +29,16 @@ It unlocks a huge amount of potential for the next generation of fast, fluid, re
 responsive and interactive web content.
 It's also a baseline that I believe defines a new minimum standard for all web rendering engines that developers can rely on.
 
+<figure>
 {% Img
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/m1d1iB6Ts2HqWRAx8cX5.jpg",
 alt="Sketch of the different elements of RenderingNG",
 width="800", height="789" %}
+  <figcaption>RenderingNG</figcaption>
+</figure>
 
 This blog post is the first in a series,
 where we'll explain what we built, why we built it, and how it works.
-
 In this first post, I'll start with:
 
 - Our North Star goal.
@@ -55,8 +56,7 @@ You should not need to worry about browser bugs making features unreliable,
 or breaking your site's rendering.
 
 There should be no mysterious performance cliffs.
-
-You should not need to work around missing built-in features.
+And, you should not need to work around missing built-in features.
 
 It should Just Work.
 
@@ -66,16 +66,15 @@ but struggled to make those features reliable for developers,
 and there were many performance cliffs.
 Now we have an architecture that systematically squashes many of those problems,
 and also unblocks advanced features that were not considered feasible before. It:
-``
 
-- ✔️ Has rock-solid core features across different platform/device/OS combos.
-- ✔️ Has predictable and reliable performance.
-- ✔️ Maximizes usage of hardware capabilities (cores, GPU, screen resolution, refresh rates, low-level raster APIs).
-- ✔️ Performs only the work that's needed to display visible content.
-- ✔️ Has built-in support for common visual design, animation and interaction design patterns.
-- ✔️ Provides developer APIs to easily manage rendering costs.
-- ✔️ Provides rendering pipeline extension points for developer add-ins.
-- ✔️ Optimizes all content - HTML+CSS, 2D Canvas, 3D canvas, images, video, fonts.
+- Has rock-solid core features across different platform/device/OS combos.
+- Has predictable and reliable performance.
+- Maximizes usage of hardware capabilities (cores, GPU, screen resolution, refresh rates, low-level raster APIs).
+- Performs only the work that's needed to display visible content.
+- Has built-in support for common visual design, animation and interaction design patterns.
+- Provides developer APIs to easily manage rendering costs.
+- Provides rendering pipeline extension points for developer add-ins.
+- Optimizes all content - HTML+CSS, 2D Canvas, 3D canvas, images, video, fonts.
 
 ### Comparison with other browser rendering engines
 
@@ -163,7 +162,7 @@ other browser vendors, independent contributors, and spec authors contribute the
 It takes a village to raise the interoperable web!
 
 <figure>
- {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/HrG58ui406RT0IB7C7VB.png",
+ {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/EALd0RHmBdnxkPNmh5Mu.png",
  alt="Tests passing in different engines",
  width="800", height="406",
  class="screenshot" %}
@@ -230,7 +229,7 @@ through caching that goes well beyond just a display list to more complex situat
 Examples include code to represent fixed- and sticky-positioned elements,
 passive event listeners, and high-quality text rendering.
 
-{% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/9qci9TU2xIEGshIPf8zZ.jpg",
+{% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/ooz0P0bUN3x69HDzJWaW.jpg",
 alt="Sketch shows that with RenderingNG performance stays solid.",
 width="800", height="559" %}
 
@@ -388,6 +387,7 @@ A long-term effort to roll out GPU rasterization, draw and animation on all plat
 GPU acceleration provides an enormous speedup for most content,
 because every pixel can be processed in parallel.
 It is also an effective method for improving performance on low-end devices, which tend to still have a GPU.
+It began in 2014 and completed in 2020.
 
 <table>
   <thead>
@@ -401,10 +401,6 @@ It is also an effective method for improving performance on low-end devices, whi
       <td>Canvas support. Shipped on opt-in content on Android.</td>
     </tr>
     <tr>
-      <td>2019</td>
-      <td>Threaded GPU Rasterization.</td>
-    </tr>
-    <tr>
       <td>2016</td>
       <td>Ship on Mac.</td>
     </tr>
@@ -415,6 +411,10 @@ It is also an effective method for improving performance on low-end devices, whi
     <tr>
       <td>2018</td>
       <td>Ship on Windows, ChromeOS, and Android Go.</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>Threaded GPU Rasterization.</td>
     </tr>
     <tr>
       <td>2020</td>
