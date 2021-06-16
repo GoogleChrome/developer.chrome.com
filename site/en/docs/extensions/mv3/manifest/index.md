@@ -67,6 +67,7 @@ discusses each field.
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/nacl_modules">nacl_modules</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span>...<span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"natively_connectable"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"oauth2"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
+  <span class="token property">"<a href="/docs/extensions/mv3/manifest/offline_enabled">offline_enabled</a>"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/reference/omnibox">omnibox</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"keyword"</span><span class="token operator">:</span> <span class="token string">"aString"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
