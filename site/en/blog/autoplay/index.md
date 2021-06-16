@@ -223,7 +223,7 @@ including Facebook, Instagram, Twitter, and YouTube.
 
 The [Web Audio API][web audio api] has been covered by autoplay since Chrome 71.
 There are a few things to know about it. First, it is good practice to wait for
-a user interaction before starting audio playback so that users is aware of
+a user interaction before starting audio playback so that users are aware of
 something happening. Think of a "play" button or "on/off" switch for instance.
 You can also add an "unmute" button depending on the flow of the app.
 
