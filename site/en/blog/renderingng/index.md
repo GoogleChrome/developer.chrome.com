@@ -317,9 +317,6 @@ and using less memory without sacrificing performance. It began in 2014 and will
   </thead>
   <tbody>
     <tr>
-      <td>2014</td>
-    </tr>
-    <tr>
       <td>2015</td>
       <td>Ship display lists.</td>
     </tr>
@@ -356,9 +353,6 @@ and is planned to finish this year.
       <th>Progress</th>
   </thead>
   <tbody>
-    <tr>
-      <td>2016</td>
-    </tr>
     <tr>
       <td>2019</td>
       <td>Ship block flow.</td>
@@ -483,9 +477,6 @@ such as unblocking Site Isolation and decoupling the rendering pipeline from bro
   </thead>
   <tbody>
     <tr>
-      <td>2016</td>
-    </tr>
-    <tr>
       <td>2018</td>
       <td>OOP-R shipped on Android, Mac and Windows.</td>
     </tr>
@@ -507,7 +498,8 @@ such as unblocking Site Isolation and decoupling the rendering pipeline from bro
 
 ### Threaded and accelerated canvas rendering
 
-This is the project that put in place the architectural pieces that made OffscreenCanvas possible. It began in 2015 and will finish in 2021.
+This is the project that put in place the architectural pieces that made OffscreenCanvas possible.
+It began in 2015 and will finish in 2021.
 
 <table>
   <thead>
@@ -516,9 +508,6 @@ This is the project that put in place the architectural pieces that made Offscre
       <th>Progress</th>
   </thead>
   <tbody>
-    <tr>
-      <td>2015</td>
-    </tr>
     <tr>
       <td>2018</td>
       <td>Ship OffscreenCanvas.</td>
