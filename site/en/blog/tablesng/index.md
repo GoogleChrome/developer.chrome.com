@@ -42,7 +42,7 @@ method](https://codeburst.io/a-brief-history-of-trends-in-web-design-845b6acb35b
 to create complex page layouts for many years. They are still found all over the web, 
 although modern usage is generally to display tabular data.
 However, there are big differences in table behavior across browsers, 
-many of which came about to to the tables specification being incomplete and lacking detail.
+many of which came about due to the tables specification being incomplete and lacking detail.
 Tables were also implemented in browsers before many CSS features:
 orthogonal writing modes, `position:relative`, `box-sizing`, flexbox containers,
 and more. So support for many of these features was inconsistent.
@@ -105,9 +105,9 @@ compatibility issue, as borders belong to the table, not the header row itself.
 
 One of the oldest table
 [bugs](https://bugs.chromium.org/p/chromium/issues/detail?id=2902) dates
-back to September 2008. It filed almost as soon as Chrome was released, and was
+back to September 2008. It was filed almost as soon as Chrome was released, and was
 never able to be fixed due to the old table architecture. The issue surrounds
-table painting and collapsed borders:
+table painting and collapsed borders.
 
 The way that tables are painted, in order of `z-index`, is: cells > rows >
 sections > tables. They then are painted by the order they appear in the DOM
