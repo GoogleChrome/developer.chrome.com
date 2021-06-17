@@ -20,7 +20,7 @@
  * @param {string} idPrefix Id prefix used to find a matching element.
  * @return {string} A salt that is unique on the page.
  */
- export const generateIdSalt = (idPrefix) => {
+export const generateIdSalt = idPrefix => {
   const salt = Math.random().toString(36).substr(2, 9);
   return document.getElementById(idPrefix + salt)
     ? generateIdSalt(idPrefix)

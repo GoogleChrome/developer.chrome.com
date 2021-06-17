@@ -21,7 +21,6 @@ import {BaseElement} from './base-element';
 import {html} from 'lit-element';
 import {generateIdSalt} from '../utils/salt';
 
-
 export class WebTabs extends BaseElement {
   constructor() {
     super();
@@ -33,7 +32,6 @@ export class WebTabs extends BaseElement {
     super.connectedCallback();
     this._id = `tabs-${generateIdSalt('tabs-')}`;
     this._selected = 0;
-
   }
 
   onSelect(e) {
@@ -51,8 +49,8 @@ export class WebTabs extends BaseElement {
       const tab = this.querySelector(tabId);
       if (this._selected !== tabIndex) {
         tabPanel.setAttribute('hidden', 'hidden');
-        tab?.setAttribute('tabindex', '-1')
-        tab?.setAttribute('aria-selected', 'false')
+        tab?.setAttribute('tabindex', '-1');
+        tab?.setAttribute('aria-selected', 'false');
       } else {
         tabPanel.removeAttribute('hidden');
         tab?.setAttribute('tabindex', '0');
@@ -83,9 +81,11 @@ export class WebTabs extends BaseElement {
         aria-selected="${i === this._selected}"
         aria-controls="${tabPanelId}"
         tabindex="${i === this._selected ? 0 : -1}"
-        @click="${this.onSelect}">${title}</button>
-      `;
-    })
+        @click="${this.onSelect}"
+      >
+        ${title}
+      </button>`;
+    });
   }
 
   render() {
@@ -96,7 +96,7 @@ export class WebTabs extends BaseElement {
         ${tabs}
       </div>
       ${this._tabPanels}
-    `
+    `;
   }
 }
 
