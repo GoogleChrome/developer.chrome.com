@@ -22,12 +22,12 @@ element for the pagination (stock) navigation #}
 
   {% if paginationObject.href.previous %}
     <a class="pagination__button type--small gap-right-200 text-align-center" href="{{ paginationObject.href.previous }}">
-      {{ icon('arrow-back') }}
+      {{ icon('arrow-back', {label: 'back'}) }}
       <span>{{ 'i18n.common.newer_posts' | i18n(locale) }}</span>
     </a>
   {% else %}
     <span class="pagination__button type--small gap-right-200 text-align-center">
-      {{ icon('arrow-back') }}
+      {{ icon('arrow-back', {label: 'back'}) }}
       <span>{{ 'i18n.common.newer_posts' | i18n(locale) }}</span>
     </span>
   {% endif %}
@@ -35,12 +35,12 @@ element for the pagination (stock) navigation #}
   {% if paginationObject.href.next %}
     <a class="pagination__button type--small gap-left-200 text-align-center" href="{{ paginationObject.href.next }}">
       <span>{{ 'i18n.common.older_posts' | i18n(locale) }}</span>
-      {{ icon('arrow-forward') }}
+      {{ icon('arrow-forward', {label: 'next'}) }}
     </a>
   {% else %}
     <span class="pagination__button type--small gap-left-200 text-align-center">
       <span>{{ 'i18n.common.older_posts' | i18n(locale) }}</span>
-      {{ icon('arrow-forward') }}
+      {{ icon('arrow-forward', {label: 'next'}) }}
     </span>
   {% endif %}
 

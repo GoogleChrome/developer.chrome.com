@@ -92,7 +92,7 @@ DevTools extension can add UI elements to the DevTools window:
   using, and where the DevTools window is docked.)
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png",
-    className="screenshot",
+    class="screenshot",
     alt="DevTools window showing Elements panel and Styles sidebar pane.", height="302", width="770" %}
 
 Each panel is its own HTML file, which can include other resources (JavaScript, CSS, images, and so
@@ -442,7 +442,7 @@ Browse the source of these DevTools extension examples:
 - [Ember Inspector][39] - Shared extension core with adapters for both Chrome and Firefox.
 - [Coquette-inspect][40] - A clean React-based extension with a debugging agent injected into the
   host page.
-- our [DevTools Extension Gallery][41] and [Sample Extensions][42] have more worthwhile apps to
+- our [DevTools Extension Gallery][41] and [Sample Extensions][42] have more worthwhile extensions to
   install, try out, and learn from.
 
 ## More information {: #more }

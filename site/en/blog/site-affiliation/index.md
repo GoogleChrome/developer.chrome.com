@@ -14,6 +14,7 @@ description: >
 authors:
   - mihajlija
 date: 2021-04-22
+updated: 2021-04-28
 hero: "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/c5KORd65eNdEeszLJWk1.jpeg"
 alt: "A bunch of passwords."
 tags:
@@ -167,9 +168,13 @@ at `/.well-known/assetlinks.json` on the respective domains.
     Allow: /.well-known/
     ```
 
+1.  Submit [a
+    form](https://docs.google.com/forms/d/1e4vVbcI7rqQls5HQ4F4bH_4bHcqfC8r0oEY5CxjSrag/viewform)
+    to request starting crawling `assetlinks.json`s on your affiliations.
+
 {% Aside %}
-Be aware that once you set up a DAL file, it may take a while for Googlebot to fetch the
-resource and recognize the association.
+It may take a while for Googlebot to fetch the resource and recognize the
+association.
 {% endAside %}
 
 ## Associate multiple websites with one another

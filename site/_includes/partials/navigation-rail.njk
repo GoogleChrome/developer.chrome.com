@@ -23,7 +23,7 @@
       {% set iconName = name + '-active' if activeState else name %}
       <a href="{{ item.url }}" class="navigation-rail__link" {{ activeState | safe }}>
         <div class="navigation-rail__icon">
-          {{ icon(iconName) }}
+          {{ icon(iconName, {hidden: true}) }}
         </div>
         <span>{{ item.text | i18n(locale) }}</span>
       </a>

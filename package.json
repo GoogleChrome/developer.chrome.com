@@ -39,15 +39,13 @@
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-cache-assets": "^2.0.3",
     "@11ty/eleventy-plugin-rss": "^1.0.9",
-    "@lhci/cli": "^0.5.0",
+    "@lhci/cli": "^0.7.2",
     "@rollup/plugin-node-resolve": "^8.4.0",
-    "@types/node-fetch": "^2.5.8",
-    "@types/tmp": "^0.2.0",
     "algoliasearch": "^4.6.0",
     "async-transforms": "^1.0.6",
-    "browser-media-mime-type": "^1.0.0",
     "chokidar": "^3.5.1",
     "chokidar-cli": "^2.1.0",
+    "chrome-types-helpers": "^0.1.6",
     "common-tags": "^1.8.0",
     "compression": "^1.7.4",
     "concurrently": "^5.2.0",
@@ -58,7 +56,6 @@
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "html-minifier": "^4.0.0",
-    "imgix-core-js": "^2.3.2",
     "lit-element": "^2.4.0",
     "lit-html": "^1.3.0",
     "node-fetch": "^2.6.0",
@@ -69,7 +66,6 @@
     "remove-markdown": "^0.3.0",
     "rollup": "^2.22.2",
     "striptags": "^3.1.1",
-    "typedoc": "^0.20.24",
     "unistore": "^3.5.2"
   },
   "devDependencies": {
@@ -80,7 +76,9 @@
     "@rollup/plugin-json": "^4.1.0",
     "@types/cheerio": "^0.22.22",
     "@types/node": "^13.11.1",
+    "@types/node-fetch": "^2.5.10",
     "@types/resize-observer-browser": "^0.1.4",
+    "@types/tmp": "^0.2.0",
     "ava": "^3.12.1",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.3",
@@ -127,6 +125,7 @@
     "unist-util-to-list-of-char": "^0.1.2",
     "unist-util-visit": "^2.0.3",
     "uslug": "^1.0.4",
+    "webdev-infra": "^1.0.13",
     "wicg-inert": "^3.0.3"
   }
 }

@@ -5,28 +5,31 @@ date: 2018-06-11
 description: Guidelines about the kinds of images you need to supply to the Chrome Web Store.
 ---
 
-{% Aside 'warning' %}
-**Important:** Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS
-will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to
-support extensions on all platforms. [Read the announcement][1] and learn more about [migrating your
-app][2].
-{% endAside %}
+You need to supply several kinds of images to be used in the Chrome Web Store:
 
-You need to supply several kinds of images to be used in the Chrome Web Store and the Google Chrome
-browser:
-
-- [App icon][3]
+- [Extension icon][3]
 - [Promotional images][4]
 - [Screenshots][5]
 
-Only the app icon, a small promotional image, and a screenshot are mandatory. However, providing
-attractive versions of both required and optional images increases your app's chances of getting
-noticed. For example, your app can't be featured unless you provide a large or marquee promotional
-image.
+Only the extension icon, a small promotional image, and a screenshot are mandatory. However, providing
+attractive versions of both required and optional images increases your extension's chances of getting
+noticed. For example, your extension can't be featured in marquee unless you provide a marquee promotional
+image. Follow our [Image best practices][11] to increase your chance of being featured.
 
-## App icon
+## Image best practices
 
-You must provide a 128x128-pixel app icon image in the [ZIP file of your app][6]. Some requirements
+- Avoid overloading images with text in small font sizes or backgrounds that compete with text.
+- Use consistent design elements (logos, fonts, colors) across all images for a cohesive look.
+- Use high quality images with the proper aspect ratio.
+- Do not include images that are blurry, distorted, or pixelated in a way that is not an intentional aspect of your brand. 
+- Do not include images that are stretched or compressed.
+- Rotate images appropriately. Do not upload images upside down, sideways, or otherwise skewed.
+- Avoid inappropriate or repetitive image elements, such as third-party trademarked characters or logos without proper permission.
+
+## Extension icon
+
+You must provide a 128x128-pixel extension icon image in the [ZIP file of your 
+][6]. Some requirements
 for the image:
 
 - The actual icon size should be **96x96** (for square icons); an additional 16 pixels per side
@@ -34,11 +37,6 @@ for the image:
   size][7].
 - The image must be in PNG format.
 - The image should work well on both light and dark backgrounds.
-
-Since Chrome 15, the image that you provide is dynamically resized in the New Tab page. Its size is
-determined by the overall browser window size.
-
-<div class="aside aside--note"><b>Note</b>: To make sure your icon looks good, preview your app's listing in the Chrome Web Store. If you're working on an installable web app, you also need to view your icon in the New Tab page. To do so, you can <a href="https://developers.google.com/chrome/apps/docs/developers_guide#installing">load the unpacked app</a>, bring up the New Tab page, and then look at the icon against a variety of backgrounds by applying a few <a href="https://tools.google.com/chrome/intl/en/themes/">themes</a>.</div>
 
 When you design the icon, keep the following advice in mind:
 
@@ -73,7 +71,7 @@ Here are some icons that follow these guidelines.
 
 ### Icon size
 
-All app icons should have the same visual weight, occupying roughly the same area. As the following
+All extension icons should have the same visual weight, occupying roughly the same area. As the following
 figure shows, when you size an icon to fill the available area, square and circular icons are
 significantly larger than they should be, compared to icons with other shapes.
 
@@ -168,7 +166,7 @@ nor circular guidelines, but it fits near them both.
 
 ### Perspective
 
-For flexibility and consistency, app icons should be front-facing. Subtle tweaks of perspective that
+For flexibility and consistency, extension icons should be front-facing. Subtle tweaks of perspective that
 give a sense of tangibility are OK, but avoid dramatic angles.
 
 <table>
@@ -205,21 +203,21 @@ give a sense of tangibility are OK, but avoid dramatic angles.
 ## Promotional images
 
 You must provide one small, 440x280-pixel promotional image. You can also provide other images that
-the store can use to promote your app.
+the store can use to promote your extension.
 
-<div class="aside aside--note"><b>Note</b>: Unlike <a href="#screenshots">screenshots</a>, promotional images are not currently locale-specific. If your app supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the app's capabilities, or targeting the promo images to the locale in which you have the most users.</div>
+<div class="aside aside--note"><b>Note</b>: Unlike <a href="#screenshots">screenshots</a>, promotional images are not currently locale-specific. If your extension supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the extension's capabilities, or targeting the promo images to the locale in which you have the most users.</div>
 
 **Note**: If your images refer to Google brands, follow the [Branding Guidelines][18].
 
 Although only a small promotional image is required, you can also supply larger promotional images
-if you'd like your app to be featured more prominently in the Chrome Web Store. You can provide one
+if you'd like your extension to be featured more prominently in the Chrome Web Store. You can provide one
 of each of the following:
 
 - Small: 440x280 pixels **(required)**
 - Large: 920x680 pixels
 - Marquee: 1400x560 pixels
 
-<div class="aside aside--note"><b>Note</b>: Apps that don't have a small promotional image will be shown <b>after</b> apps that do have that image. If your app was published before the small promotional image was required, you should add that image so your app can be displayed more prominently.</div>
+<div class="aside aside--note"><b>Note</b>: Extensions that don't have a small promotional image will be shown <b>after</b> extensions that do have that image. If your extension was published before the small promotional image was required, you should add that image so your extension can be displayed more prominently.</div>
 
 Promotional images are your chance to capture users' attention and entice them to learn more. Don't
 just use a screenshot; your images should primarily communicate the brand. Here are some rules of
@@ -233,7 +231,7 @@ thumb for designing your images:
 - Fill the entire region.
 - Make sure the edges are well defined.
 
-The following graphics are examples of the promotional images for an app:
+The following graphics are examples of the promotional images for an extension:
 
 <table>
   <thead>
@@ -245,11 +243,11 @@ The following graphics are examples of the promotional images for an app:
   <tbody>
     <tr>
       <td>
-        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xB3wghefUGHWB2CqzYxw.jpg", 
+        {% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/9KruJ8pLUNTrzXIXP6JN.png", 
                alt="Small promo image", height="140", width="220" %}
       </td>
       <td>
-        {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PQvoyo0sb9SHh9kTaxip.jpg", 
+        {% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/uvSRznxKJngidMKDIeqN.png", 
                alt="Large promo image", height="340", width="460" %}
       </td>
     </tr>
@@ -258,7 +256,7 @@ The following graphics are examples of the promotional images for an app:
 
 Marquee image (1400x560):
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/DETytGVTDQk2HMmnjOFr.jpg", 
+{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/tn6IOh8ZCrflIOcu8isV.png", 
         alt="Marquee", height="280", width="700" %}
 
 <div class="aside aside--note"><b>Note</b>: You can find the review status of your promo image in each item's listing within your developer dashboard. Click on 'Edit' on the item's listing, and scroll down to the Promotional Images section. If you have questions about the status of your promo images, contact <a href="mailto:cws-assets@google.com">cws-assets@google.com</a>.</div>
@@ -278,11 +276,12 @@ Here is a description of the review statuses:
 
 ## Screenshots
 
-You must provide at least 1—and preferably the maximum allowed 5—screenshots of your app to be
-displayed in the app's store listing. If your app supports multiple locales, you can provide
+Use screenshots to convey capabilities, the look and feel, and experience of your extension to users. You must provide at least 1—and preferably the maximum allowed 5—screenshots of your extension to be displayed in the extension's store listing. Screenshots should demonstrate the actual user experience, focusing on the core features and content so users can anticipate what the extension's experience will be like.
+
+If your extension supports multiple locales, you can provide
 locale-specific screenshots as described in [Internationalizing Your App][28].
 
-When you edit your app's listing, mousing over a screenshot's thumbnail brings up controls that let
+When you edit your extensions's listing, mousing over a screenshot's thumbnail brings up controls that let
 you delete the screenshot or change its position.
 
 Each screenshot should be as follows:
@@ -290,19 +289,13 @@ Each screenshot should be as follows:
 - Square corners, no padding (full bleed)
 - 1280x800 or 640x400 pixels
 
-<div class="aside aside--note"><b>Note</b>: 1280x800 screenshots are preferrable, as larger screenshots look better on high-resolution displays. Currently, all screenshots are downscaled to 640x400 pixels. If your screenshots do not look good when downscaled (for example, they have a lot of text) or if 1280x800 is too big for your app (for example, screenshots for a low-resolution game), you can upload 640x400 screenshots.</div>
+<div class="aside aside--note"><b>Note</b>: 1280x800 screenshots are preferrable, as larger screenshots look better on high-resolution displays. Currently, all screenshots are downscaled to 640x400 pixels. If your screenshots do not look good when downscaled (for example, they have a lot of text) or if 1280x800 is too big for your extension (for example, screenshots for a low-resolution game), you can upload 640x400 screenshots.</div>
 
-As an example, here are five screenshot images for an app:
+As an example, here are two screenshot images for an extension:
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FjacdYh8XHvRwHoiP8UN.jpeg", alt="Screenshot 1", height="500", width="800" %}
+{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/ZR47lUf4fWymaVWR9kDT.jpg", alt="Screenshot 1", height="500", width="800" %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/6krgGzrhfz7nTHdRzJPI.jpeg", alt="Screenshot 2", height="500", width="800" %}
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/WG7svtEYGdzprL9jkC7A.jpeg", alt="Screenshot 3", height="500", width="800" %}
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xJJTI5ixv2rqG1FZ09kQ.jpeg", alt="Screenshot 4", height="500", width="800" %}
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oPzkJXhVmZWLTENXhQMf.jpeg", alt="Screenshot 5", height="500", width="800" %}
+{% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/LlJiqs3gSxmXVsaoAhJX.jpg", alt="Screenshot 2", height="500", width="800" %}
 
 ## What next?
 
@@ -318,6 +311,7 @@ Next, read [Publishing Your App][39].
 [8]: https://developers.google.com/chrome/apps/docs/developers_guide#installing
 [9]: https://tools.google.com/chrome/intl/en/themes/
 [10]: #perspective
+[11]: #image-best-practices
 [17]: #screenshots
 [18]: /docs/webstore/branding
 [27]: mailto:cws-assets@google.com

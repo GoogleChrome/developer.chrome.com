@@ -3,7 +3,7 @@
 <navigation-tree role="navigation" class="flex-shrink-none" aria-label="{{ 'i18n.common.project_docs' | i18n(locale) }}" tabindex="-1">
   <div class="display-flex lg:display-none align-center pad-200 hairline-bottom">
     <button class="navigation-tree__back button display-flex align-center justify-content-center width-700 height-700" aria-label="back">
-      {{ icon('arrow-back') }}
+      {{ icon('arrow-back', {label: 'back'}) }}
     </button>
     {% set projectPost = helpers.findByProjectKey(collections.all, project_key, locale) %}
     <div class="navigation-tree__title pad-left-200 pad-right-200 user-select-none">{{ projectPost.data.title }}</div>

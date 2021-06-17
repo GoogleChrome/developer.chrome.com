@@ -18,14 +18,12 @@
   </div>
 
   <h2 class="type--h3">Summary</h2>
-  <div class="code-sections code-sections--summary">
-    <ul class="stack flow-space-300">
-      {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
-      {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
-      {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
-      {{ macros.renderSummarySection(namespace.name, 'Events', 'event', namespace.events) }}
-    </ul>
-  </div>
+  <ul class="code-sections code-sections--summary flow-space-300 stack">
+    {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
+    {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
+    {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
+    {{ macros.renderSummarySection(namespace.name, 'Events', 'event', namespace.events) }}
+  </ul>
 
   {{ macros.renderPrimarySection(namespace.name, 'types', 'Types', 'type', namespace.types) }}
   {{ macros.renderPrimarySection(namespace.name, 'properties', 'Properties', 'property', namespace.properties) }}
@@ -40,18 +38,19 @@
 {% block content %}
   <div class="display-flex gap-top-300 lg:gap-top-400">
     {% include 'partials/navigation-tree.njk' %}
+    {% set feature = namespace.feature %}
 
     <article class="stack measure-long center-margin pad-left-400 pad-right-400">
       <h1 class="type--h2">{{ title }}</h1>
 
-      {% if namespace.source === 'platform_app.d.ts' %}
+      {% if feature.platformAppsOnly %}
         <div class="aside aside--warning">
           This API is part of the deprecated Chrome Apps platform.
           Learn more about <a href="/docs/apps/migration">migrating your app</a>.
         </div>
       {% endif %}
 
-      {% if namespace.platforms.length === 1 and namespace.platforms[0] === 'chromeos' %}
+      {% if feature.chromeOsOnly %}
         {# There are some historic cases of multi-platform support in Platform Apps, but
             the only restriction these days is CrOS vs everywhere. #}
         <div class="aside aside--note">
@@ -59,50 +58,33 @@
         </div>
       {% endif %}
 
-      <div class="code-sections code-sections--summary">
-        <ul class="stack flow-space-300">
+      {% set availabilityHtml %}{{ macros.renderAvailabilityFeature(feature) }}{% endset %}
+
+      <div>{# This div prevents flow-space-300 from applying to the parent stack. #}
+        <ul class="code-sections code-sections--summary flow-space-300 stack">
           <li>
             <div class="code-sections__label">Description</div>
             <div class="type">
-              {{ namespace.comment | safe }}
+              {{ namespace.description | md | safe }}
             </div>
           </li>
-          {% if namespace.permissions.length %}
+          {% if feature.permissions.length %}
             <li>
               <div class="code-sections__label">Permissions</div>
               <div>
-                {% for permission in permissions %}
+                {% for permission in feature.permissions %}
                   <code>{{ permission }}</code><br />
                 {% endfor %}
                 {{ extra_permissions_html | safe }}
               </div>
             </li>
           {% endif %}
-          {% if namespace.channel !== 'stable' or namespace.version.low or namespace.maxManifestVersion or namespace.minManifestVersion %}
-            <li>
+
+          {% if availabilityHtml | trim %}
+            <li class="align-center">
               <div class="code-sections__label">Availability</div>
-              <div>
-                {% if namespace.channel === 'dev' %}
-                  Dev channel only.
-                {% elif namespace.channel === 'beta' %}
-                  Beta and Dev channels only.
-                {% elif namespace.version.low %}
-                  Since Chrome {{ namespace.version.low }}.
-                  {# No namespace is currently deprecated. #}
-                {% endif %}
-                {% if namespace.maxManifestVersion %}
-                  Manifest V{{ namespace.maxManifestVersion }}
-                  {% if namespace.maxManifestVersion === 2 %}
-                    {# Nothing is actually before MV2. #}
-                    only.
-                  {% else %}
-                    and below.
-                  {% endif %}
-                {% endif %}
-                {% if namespace.minManifestVersion %}
-                  Manifest V{{ namespace.minManifestVersion }} and above.
-                {% endif %}
-              </div>
+              {{ availabilityHtml | safe }}
+              {# As of Apr 2021, namespaces are never deprecated. #}
             </li>
           {% endif %}
         </ul>

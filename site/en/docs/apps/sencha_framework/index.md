@@ -487,7 +487,7 @@ filer.write(
 When the download process is finished, `MediaExplorer` updates the media file list and the media
 player tree panel.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: http://www.sencha.com/products/extjs
 [4]: https://github.com/GoogleChrome/sencha-video-player-app

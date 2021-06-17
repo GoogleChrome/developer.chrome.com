@@ -23,33 +23,30 @@
  */
 
 require('dotenv').config();
-const {AssetCache} = require('@11ty/eleventy-cache-assets');
-const {build} = require('../../tools/types/build.js');
+
+// TODO(samthor): This is in package.json and installed yet ESLint complains it does not exist.
+// eslint-disable-next-line node/no-missing-require
+const chromeTypesHelpers = require('chrome-types-helpers');
+const {fetchFromCache} = require('./lib/cache');
+
+const LATEST_VERSION_JSON =
+  'https://unpkg.com/chrome-types@latest/history.json';
 
 /**
- * Bump this value if the parser changes, so folks' caches are invalidated.
- */
-const typesRevision = '2021-03-05';
-
-/**
- * Building the JSON types is reasonably expensive. Don't do this often. When deploying to prod,
- * there will never be cache, so it will always be fresh.
- */
-const typesExipry = '7d';
-
-/**
- * @return {Promise<{[name: string]: RenderNamespace}>}
+ * @return {Promise<{[name: string]: chromeTypesHelpers.Namespace}>}
  */
 module.exports = async () => {
   if (process.env.ELEVENTY_IGNORE_EXTENSIONS) {
     return {};
   }
-  const asset = new AssetCache('generated_types_info#' + typesRevision);
-  if (asset.isCacheValid(typesExipry)) {
-    return asset.getCachedValue();
-  }
 
-  const types = await build();
-  await asset.save(types, 'json');
-  return types;
+  // This fetches the latest pubilshed historic version data, which is automaticaly published from
+  // https://github.com/GoogleChrome/chrome-types in a GitHub action.
+  /** @type {chromeTypesHelpers.VersionDataFile} */
+  const data = await fetchFromCache(LATEST_VERSION_JSON);
+
+  const {symbols} = data;
+
+  const out = await chromeTypesHelpers.prepareNamespaces({symbols});
+  return out.namespaces;
 };

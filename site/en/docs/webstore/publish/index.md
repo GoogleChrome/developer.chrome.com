@@ -121,10 +121,28 @@ you uncheck the checkbox, your item will **not** be published immediately after 
 complete. Instead, you'll be able to manually publish it at a time of your choosing once the review
 is complete.
 
+{% Aside %}
+If you submit your item for review with "Publish automatically" set, you can still turn off
+automatic publishing using the **Defer publish** option described below.
+{% endAside %}
+
+
+{# TODO: add screen shot here #}
+
 ### Review of submitted items {: #review-of-submitted-items }
 
 After you submit the item for review, it will undergo a review process. The time for this review
 depends on the nature of your item. See the [FAQ on review times][16] for more details.
+
+While an item is pending review, you can still turn off automatic publishing by choosing **Defer
+publish** option from the developer console's &#x22EE; menu as shown below:
+
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png", alt="Screenshot showing
+the 'more' menu's defer publish option", width="386", height="284" %}
+
+This lets you pause the rollout of a submitted item if you discover an error after submitting it or
+if you simply want to change your rollout time.
+
 
 [1]: /docs/webstore/update
 [2]: /docs/webstore/group-publishers

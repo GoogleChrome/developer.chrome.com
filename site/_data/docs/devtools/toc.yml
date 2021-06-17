@@ -73,6 +73,7 @@
     - url: /docs/devtools/remote-debugging/webviews/
 - title: i18n.docs.devtools.memory
   sections:
+    - url: /docs/devtools/memory-inspector/
     - url: /docs/devtools/memory-problems/
     - url: /docs/devtools/memory-problems/memory-101/
     - url: /docs/devtools/memory-problems/heap-snapshots/
