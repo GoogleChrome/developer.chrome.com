@@ -367,13 +367,6 @@
     },
     "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/QDNnPHloDqEwqRW5ASvt.jpg"
   },
-  "samdutton": {
-    "name": {
-      "given": "Sam",
-      "family": "Dutton"
-    },
-    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/Oci8M3M98YmwQJGHkHS9.jpg"
-  },
   "tvanderlippe": {
     "name": {
       "given": "Tim",
@@ -637,5 +630,94 @@
     "github": "demianrenzulli",
     "glitch": "demianrenzulli",
     "image": "image/26V1DWN36MZr3mUo8ChSBlCpzp43/Jsv3fxDmq9T74z5q7zzU.jpg"
+  },
+  "samdutton": {
+    "name": {
+      "given": "Sam",
+      "family": "Dutton"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "descriptions": {
+      "en": "Developer Advocate, Google Chrome"
+    },
+    "country": "UK",
+    "homepage": "https://samdutton.com",
+    "twitter": "sw12",
+    "github": "samdutton",
+    "glitch": "samdutton",
+    "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/F3Df3SeugXYQEUUiMslu.jpg"
+  },
+  "maudn": {
+    "name": {
+      "given": "Maud",
+      "family": "Nalpas"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "descriptions": {
+      "en": "Developer Advocate for Chrome and web"
+    },
+    "country": "DE",
+    "twitter": "maudnals",
+    "github": "maudnals",
+    "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/fJP5RRP6pcCnfctkaQhu.jpg"
+  },
+  "atotic": {
+    "name": {
+      "given": "Aleks",
+      "family": "Totic"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Blink DOM"
+    },
+    "descriptions": {
+      "en": "Software engineer on Blink DOM"
+    },
+    "country": "US",
+    "twitter": "atotic",
+    "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/yb4nAlmupGwqaiUypp7b.jpg"
+  },
+  "kimanh": {
+    "name": {
+      "given": "Kim-Anh",
+      "family": "Tran"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "DE",
+    "twitter": "kianhuu",
+    "github": "ktran",
+    "email": "kimanh@chromium.org",
+    "descriptions": {
+      "en": "Googler working on Chrome DevTools."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/WMxar1rRgocnv8LEo3hG.jpg"
+  },
+  "thomassteiner": {
+    "name": {
+      "given": "Thomas",
+      "family": "Steiner"
+    },
+    "homepage": "https://blog.tomayac.com/",
+    "twitter": "tomayac",
+    "github": "tomayac",
+    "glitch": "tomayac",
+    "descriptions": {
+      "en": "Tom is a Developer Advocate"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "DE",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
   }
 }

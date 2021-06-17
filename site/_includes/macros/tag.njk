@@ -6,12 +6,14 @@
 #}
 {% if item.startsWith('chrome-') %}
   {% set title = item | replace('-', ' ') | capitalize %}
-{% else %}
+{% elif supportedTags[item] and supportedTags[item].title%}
   {% set title = supportedTags[item].title | i18n(locale) %}
 {% endif %}
 
-<a
-  class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg"
-  href="{{ url }}"
-  >{{ title }}</a>
+{% if title and url %}
+  <a
+    class="tag-pill surface decoration-none hairline color-secondary-text type--label weight-regular rounded-lg"
+    href="{{ url }}"
+    >{{ title }}</a>
+{% endif %}
 {% endmacro %}

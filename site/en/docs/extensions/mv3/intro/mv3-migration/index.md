@@ -9,7 +9,7 @@ title: Migrating to Manifest V3
 subhead: 'Getting you headed in the right direction.'
 
 # This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in 
+# /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: 'A high-level guide to how you can migrate your MV2 extensions to MV3.'
 
@@ -30,7 +30,7 @@ will require very little change to make them MV3 compliant, while others will
 need to be redesigned to some degree. Developers experienced with MV2, and who
 are creating new MV3 extensions, may also find this helpful. For a quick
 reference guide see the [migration
-checklist](/docs/extensions/mv3/mv3-migration-checklist). 
+checklist](/docs/extensions/mv3/mv3-migration-checklist).
 
 Manifest V3 offers a number of improvements reflecting the aims of our
 [platform vision](/docs/extensions/mv3/intro/platform-vision).
@@ -130,7 +130,7 @@ permissions requests by the Chrome Web Store review process.
 {% endAside %}
 
 
-### Content security policy  {: #fcontent-security-policy }
+### Content security policy  {: #content-security-policy }
 
 An extension's [content security policy](https://content-security-policy.com/)
 (CSP) was specified in MV2 as a string; in MV3 it is an object with members
@@ -153,7 +153,7 @@ representing alternative CSP contexts:
 ```
 {% endColumns %}
 
-**`extension_pages`**:  This policy covers pages in your extension, including html files and service workers. 
+**`extension_pages`**:  This policy covers pages in your extension, including html files and service workers.
 
 
 {% Aside %}
@@ -173,7 +173,7 @@ directives may only have the following values:
 *   `none`
 *   Any localhost source, (`http://localhost`,  `http://127.0.0.1`, or any port on those domains)
 
-CSP modifications for `sandbox` have no such new restrictions. 
+CSP modifications for `sandbox` have no such new restrictions.
 
 
 ### Action API unification  {: #action-api-unification }
@@ -247,14 +247,16 @@ of which can map to a set of resources to a set of URLs and extension IDs:
 {% endColumns %}
 
 {% Aside %}
-The `matches`, `extension_ids`, and `use_dynamic_url` keys are not available
-yet. Support for these properties will be coming in a future release.
+The `use_dynamic_url` key is not available yet. Support for this property will
+be coming in a future release.
 {% endAside %}
 
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
 resource access. The updated API lets extensions more tightly control what
-other sites or extensions can access extension resources.
+other sites or extensions can access extension resources. See the [web 
+accessible resources](/docs/extensions/mv3/manifest/web_accessible_resources/)
+documentation for usage information.
 
 
 ## Code execution  {: #code-execution }
@@ -404,7 +406,7 @@ All other extensions must now use
 [declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest) for
 network request modification. This moves the actual modification of the network
 request into the Chrome browser: the extension no longer can read the actual
-network request, and in most cases needs no host permissions. 
+network request, and in most cases needs no host permissions.
 
 {% Aside %}
 Request redirects and header modifications **do** require the user to grant host permissions.
@@ -477,4 +479,3 @@ As well as the undocumented:
 
 If your extensions use any of these deprecated APIs, you'll need to make the
 appropriate changes when you migrate to MV3.
-

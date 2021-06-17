@@ -341,7 +341,7 @@ For more details on calling `detectLanguage(inputText)`, see the [API reference]
 
 [1]: /docs/extensions/mv2/i18n-messages
 [2]: /docs/extensions/mv2/tabs
-[3]: #overview-locales
+[3]: #supported-locales
 [4]: #examples-getMessage
 [5]: #overview-predefined
 [6]: /docs/extensions/mv2/i18n-messages

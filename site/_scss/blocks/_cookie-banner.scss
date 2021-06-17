@@ -1,3 +1,7 @@
+[data-cookies-accepted] .cookie-banner {
+  display: none;
+}
+
 .cookie-banner {
   @include apply-utility('stack', '700');
   background-color: var(--color-bg);

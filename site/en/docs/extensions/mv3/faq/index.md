@@ -170,7 +170,7 @@ can add [some limited UI elements to Chrome itself.][49]
 
 Extensions can store up to 5MB of data in localStorage.
 
-### How do I create an options menu for my application? {: #faq-dev-10 }
+### How do I create an options menu for my extension? {: #faq-dev-10 }
 
 You can let users set options for your extension by creating an [options page][50], which is a
 simple HTML page that will be loaded when a user clicks the "options" button for your extension.
