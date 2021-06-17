@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2021 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,15 @@
  * limitations under the License.
  */
 
-// Utilities
-import './store.js';
-
-// Web Components
-// These are components that appear on _every_ page.
-import './web-components/search-box';
-import './web-components/side-nav';
-import './web-components/top-nav';
-import './web-components/web-tabs';
-import './third-party/announcement-banner/announcement-banner';
+/**
+ * Generates salt string. When combined with idPrefix, it is guaranteed
+ * to be unique on the page (no other element has id 'idPrefix+salt').
+ * @param {string} idPrefix Id prefix used to find a matching element.
+ * @return {string} A salt that is unique on the page.
+ */
+ export const generateIdSalt = (idPrefix) => {
+  const salt = Math.random().toString(36).substr(2, 9);
+  return document.getElementById(idPrefix + salt)
+    ? generateIdSalt(idPrefix)
+    : salt;
+};
