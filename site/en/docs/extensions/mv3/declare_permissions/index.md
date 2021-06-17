@@ -72,7 +72,7 @@ The following table lists the currently available permissions:
           quits Chrome.</p>
         <div class="aside aside--note"><b>Note:</b> Disabled extensions are treated as if they aren't
           installed.</div>
-	<p>You typically use the "background" permission with <a
+	<p>You should use the "background" permission with <a
           href="/docs/extensions/mv3/background_pages/">background scripts</a>.</p></td>
     </tr>
     <tr id="bookmarks">

@@ -203,7 +203,7 @@ and, potentially, attack your extension. Instead, prefer HTTPS whenever possible
 
 ### Adjusting the content security policy {: #interaction-with-csp }
 
-If you modify the default [Content Security Policy][12] for extensions by adding a
+If you modify the default [Content Security Policy][12] for your extension by adding a
 `content_security_policy` attribute to your manifest, you'll need to ensure that any hosts to which
 you'd like to connect are allowed. While the default policy doesn't restrict connections to hosts,
 be careful when explicitly adding either the `connect-src` or `default-src` directives.
