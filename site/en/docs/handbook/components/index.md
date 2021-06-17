@@ -614,6 +614,27 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque iure eveniet
 assumenda ea natus perspiciatis, atque totam fugit labore amet facere,
 dignissimos sequi cumque repellat dolorum, quaerat voluptatibus sit!
 
+### Captions
+
+To include a caption along with an image, use `<figure>` with `<figcaption>` and
+place the `Img` shortcode snippet inside:
+
+```md
+<figure>
+{% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
+  <figcaption>
+    A good boy.
+  </figcaption>
+</figure>
+```
+
+<figure>
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+  <figcaption>
+    A good boy.
+  </figcaption>
+</figure>
+
 ## Lists
 See the [Lists section of the Grammar, mechanics, and usage post](https://web.dev/handbook/grammar/#lists)
 for information about when to use each list type.
