@@ -13,10 +13,10 @@ alt: >
 ---
 
 I'm Chris Harrelson,
-the engineering lead for Rendering (HTML & CSS -> pixels) in Blink.
+the engineering lead for Rendering (transforming HTML and CSS to pixels) in Blink.
 I've been deep in the trenches of rendering performance on the web for over eight years,
 with a personal goal of doing whatever I can to make delivering excellent UX on the web faster,
-more reliable, and easier.
+easier, and more reliable.
 I'm excited for us to tell you about what we've done in that time to build a new, cutting-edge Chromium rendering engine architecture.
 To achieve this has been an enormous labor of love,
 and I hope you enjoy hearing about it!
@@ -41,7 +41,7 @@ This blog post is the first in a series,
 where we'll explain what we built, why we built it, and how it works.
 In this first post, I'll start with:
 
-- Our North Star goal.
+- Our north star goal.
 - The pyramid of success:
 principles that guide our work, and examples of those principles in practice.
 - The features and capabilities that RenderingNG makes possible.
@@ -58,7 +58,7 @@ or breaking your site's rendering.
 There should be no mysterious performance cliffs.
 And, you should not need to work around missing built-in features.
 
-It should Just Work.
+It should just work.
 
 I believe RenderingNG is a huge step towards this north star goal.
 Before RenderingNG, we could (and did) add rendering features and improve performance,
@@ -67,14 +67,14 @@ and there were many performance cliffs.
 Now we have an architecture that systematically squashes many of those problems,
 and also unblocks advanced features that were not considered feasible before. It:
 
-- Has rock-solid core features across different platform/device/OS combos.
+- Has rock-solid core features across different platform, device, and operating system combos.
 - Has predictable and reliable performance.
 - Maximizes usage of hardware capabilities (cores, GPU, screen resolution, refresh rates, low-level raster APIs).
 - Performs only the work that's needed to display visible content.
 - Has built-in support for common visual design, animation and interaction design patterns.
 - Provides developer APIs to easily manage rendering costs.
 - Provides rendering pipeline extension points for developer add-ins.
-- Optimizes all content - HTML+CSS, 2D Canvas, 3D canvas, images, video, fonts.
+- Optimizes all content—HTML, CSS, 2D Canvas, 3D canvas, images, video, and fonts.
 
 ### Comparison with other browser rendering engines
 
@@ -86,9 +86,9 @@ the ultimate goal is to advance the baseline for all browsers, so that developer
 
 ## The pyramid of success
 
-My philosophy is that success is the result of first achieving Reliability,
-then Scalable Performance,
-and finally Extensibility.
+My philosophy is that success is the result of first achieving reliability,
+then scalable performance,
+and finally extensibility.
 
 {% Img
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/9etubUUi0q6g05dqPurk.jpg",
@@ -138,7 +138,7 @@ In fact, the opposite is true!
 Those years saw a steady and sustained increase in reliability and performance
 as we refactored and rolled out each improvement step-by-step.
 
-### Testing and Metrics
+### Testing and metrics
 
 Over the past 8 years,
 we have added tens of thousands of unit,
@@ -181,7 +181,7 @@ We'll have a lot more to say about RenderingNG's software design in subsequent b
 
 ### Scalable performance
 
-Achieving great performance—across the dimensions of speed, memory and power use—
+Achieving great performance—across the dimensions of speed, memory, and power use—
 is the next most important aspect of RenderingNG.
 We want interactions with all web sites to be smooth and responsive,
 yet not sacrifice the stability of the device.
@@ -196,7 +196,7 @@ and scaling down—maximizing efficiency and reducing demand on the system when 
 alt="", width="800", height="533" %}
 
 To get there, we needed to make maximum use of caching,
-performance isolation and GPU hardware acceleration.
+performance isolation, and GPU hardware acceleration.
 Let's consider each in turn. And to make it concrete,
 let's think about how each of them contributes to the performance of one extremely important interaction on web pages: scrolling.
 
@@ -230,15 +230,15 @@ Examples include code to represent fixed- and sticky-positioned elements,
 passive event listeners, and high-quality text rendering.
 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/ooz0P0bUN3x69HDzJWaW.jpg",
-alt="Sketch shows that with RenderingNG performance stays solid.",
+alt="Sketch shows that with RenderingNG performance stays solid even when JavaScript is very slow.",
 width="800", height="559" %}
 
 ### GPU acceleration
 
-A GPU makes generating pixels and drawing to the screen dramatically faster—
-in many cases, every pixel can be drawn in parallel with every other pixel,
+A GPU makes generating pixels and drawing to the screen dramatically faster—in
+many cases, every pixel can be drawn in parallel with every other pixel,
 resulting in an enormous speed increase.
-A key component of RenderingNG is GPU raster/draw everywhere.
+A key component of RenderingNG is GPU raster and draw everywhere.
 This uses the GPU on all platforms, and all devices, to hyper-accelerate the rendering and animating of web content.
 This is especially important on low-end devices or very high-end ones,
 which often have a much more capable GPU than other parts of the device.
@@ -248,7 +248,7 @@ which often have a much more capable GPU than other parts of the device.
 alt="Sketch shows that with RenderingNG performance does not degrade so much.",
 width="800", height="559" %}
 
-## Extensibility: the right tools for the job
+## Extensibility: The right tools for the job
 
 Once we have reliability and scalable performance,
 we're now ready to build on top a host of tools to help developers extend the built-in parts of HTML,
@@ -261,17 +261,17 @@ progressive rendering, smoothness and responsiveness, and threaded rendering.
 The following open web APIs, championed by Chromium, were made possible by RenderingNG,
 and were previously considered infeasible.
 
-All of them were developed with open specifications and collaboration with open web partners—
-engineers at other browsers, experts, and web developers.
+All of them were developed with open specifications and collaboration with open web
+partners—engineers at other browsers, experts, and web developers.
 In subsequent blog posts, we will dive into each of these and explain how RenderingNG makes them possible.
 
 - [content-visibility](https://web.dev/content-visibility/):
 allows sites to easily avoid rendering work for offscreen content,
-and cache rendering for not-currently-shown SPA views.
+and cache rendering for not-currently-shown single page application views.
 - [OffscreenCanvas](/web/updates/2018/08/offscreen-canvas): allows canvas rendering
 (both the 2D canvas API and WebGL) to run on its own thread for reliably excellent performance.
-This project is also another major milestone for the web—
-it's the very first web API that allows JavaScript (or WebAssembly!)
+This project is also another major milestone for the web—it's
+the very first web API that allows JavaScript (or WebAssembly!)
 to render a single web page document from multiple threads.
 - [Container queries](https://web.dev/new-responsive/): allows a single component to responsively lay itself out,
 unblocking a whole universe of plug-and-play components (currently an experimental implementation).
@@ -282,7 +282,7 @@ with code that runs on the compositor thread.
 In addition to explicit web APIs,
 RenderingNG allowed us to ship several very significant "automatic features" that benefit all sites:
 
-- [Site Isolation](/web/updates/2018/07/site-isolation):
+- [Site Isolation](https://developers.google.com/web/updates/2018/07/site-isolation):
 puts cross-origin iframes in different CPU processes,
 for better security and performance isolation.
 - [Vulkan](https://www.vulkan.org/),
@@ -373,7 +373,7 @@ and is planned to finish this year.
 
 A systematic cleanup and refactoring of the Blink rendering engine into cleanly separated pipeline phases.
 This allows for better caching, higher reliability,
-and re-entrant / delayed-rendering features such as content-visibility and container queries. It began in 2014, and incremental improvement and has been ongoing since. It will complete in 2021.
+and re-entrant or delayed-rendering features such as content-visibility and container queries. It began in 2014, and incremental improvement and has been ongoing since. It will complete in 2021.
 
 ### GPU Acceleration everywhere
 
@@ -400,7 +400,7 @@ It began in 2014 and completed in 2020.
     </tr>
     <tr>
       <td>2017</td>
-      <td>GPU is used on &gt;60% of Android page views.</td>
+      <td>GPU is used on over 60% of Android page views.</td>
     </tr>
     <tr>
       <td>2018</td>
@@ -408,7 +408,7 @@ It began in 2014 and completed in 2020.
     </tr>
     <tr>
       <td>2019</td>
-      <td>Threaded GPU Rasterization.</td>
+      <td>Threaded GPU rasterization.</td>
     </tr>
     <tr>
       <td>2020</td>
