@@ -218,3 +218,5 @@ Note that `await` is only valid in async functions and the top-level bodies of m
 
 [mdn-promise-chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises
 [mdn-promises]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
+[api-tabs-methods]: /docs/extensions/reference/tabs/#methods
+
