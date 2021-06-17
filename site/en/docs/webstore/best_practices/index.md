@@ -22,8 +22,11 @@ any of these policies.
   overview][mv3-overview].)
 
 * **Security:** Is the extension safe for users? Make sure your extension does not pose security
-  threats, does not use deceptive installation tactics and meets Chrome Web Store's data privacy
-  requirements (see this [FAQ][user-data-faq]).
+  threats and does not use deceptive installation tactics (see [Stay secure][stay-secure] for a more
+  in-depth discussion.)
+
+* **User privacy:** Make sure that your extension handles user data appropriately and conforms to
+  Chrome Web Store's data privacy requirements. (See this [FAQ][user-data-faq] for further details.)
 
 * **Performance:** Does the extension function at an outstanding level? High-quality extensions
   don't just perform their intended action, they do so while using as few system resources as
@@ -106,4 +109,5 @@ that is most appropriate:
 [mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
 [program policies]: /docs/webstore/program_policies/
 [supplying-images]: /docs/webstore/images/
+[stay-secure]: /docs/extensions/mv3/security/
 [user-data-faq]: /docs/webstore/user_data/
