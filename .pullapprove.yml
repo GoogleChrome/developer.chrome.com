@@ -75,7 +75,7 @@ groups:
   content:
     reviewers:
       teams:
-      - dcc-content
+      - ~dcc-content
       - ~dcc-eng
       - ~dcc-approvers
     reviews:
