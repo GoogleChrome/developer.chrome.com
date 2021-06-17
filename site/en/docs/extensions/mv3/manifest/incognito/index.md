@@ -20,12 +20,12 @@ from its extension package into the main frame of an incognito tab.
 
 ## Split mode {: #split }
 
-The `"split"` mode means that all
-pages in an incognito window will run in their own incognito process. If the extension
-contains a background page, that will also run in the incognito process. This incognito process runs
-along side the regular process, but has a separate memory-only cookie store. Each process sees
-events and messages only from its own context (for example, the incognito process will see only
-incognito tab updates). The processes are unable to communicate with each other.
+The `"split"` mode means that all pages in an incognito window will run in their own incognito
+process. If the extension contains a background page, that will also run in the incognito process.
+This incognito process runs along side the regular process, but has a separate memory-only cookie
+store. Each process sees events and messages only from its own context (for example, the incognito
+process will see only incognito tab updates). The processes are unable to communicate with each
+other.
 
 ## Not allowed {: #not_allowed }
 
