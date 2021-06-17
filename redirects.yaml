@@ -64,7 +64,11 @@ redirects:
 - from: /docs/webstore/inline_installation
   to: /docs/extensions/webstore
 - from: /docs/webstore/authentication
-  to: /docs/extensions/webstore
+  to: /docs/webstore
+- from: /docs/webstore/one_time_payments
+  to: /docs/webstore
+- from: /docs/webstore/payments-iap
+  to: /docs/webstore
 
 # Fixes #675
 - from: /extensions/manifestVersion

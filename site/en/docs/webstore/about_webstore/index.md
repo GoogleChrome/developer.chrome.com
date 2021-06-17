@@ -21,9 +21,9 @@ build Chrome-specific features into it.
 ## How do I start?
 
 1.  Read the [technical overview][4]
-2.  Publish your first extension by following the [Getting Started tutorial][5]
+2.  Publish your first extension by following the steps in [Publish in the Chrome Web Storel][5]
 
 [1]: http://chrome.google.com/webstore
 [3]: https://chrome.google.com/webstore/developer/dashboard
 [4]: /docs/webstore/overview
-[5]: /docs/webstore/get_started_simple
+[5]: /docs/webstore/publish

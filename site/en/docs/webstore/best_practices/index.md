@@ -11,8 +11,7 @@ matures and we learn from developers' experiences, these recommendations will be
 
 ## Design a great app
 
-This is the hard part. For advice, you can read articles about [app design][1]. Also, follow the
-[pre-launch checklist][2].
+This is the hard part. For advice, you can read articles about [app design][1].
 
 ## Support Google Accounts
 
@@ -198,7 +197,6 @@ change; if that happens, your web app might be recategorized.
 </table>
 
 [1]: /docs/apps
-[2]: /docs/webstore/launching#pre-launch-checklist
 [3]: /docs/webstore/identify_user
 [7]: /docs/webstore/branding
 [8]: /docs/webstore/images
