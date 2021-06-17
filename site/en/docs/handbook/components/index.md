@@ -683,6 +683,7 @@ Attribute `title` becomes the title of the corresponding tab panel.
   <web-tab title="Tab 3 (with code)">
 
     This is Tab 3. It has a code snippet inside.
+
     ```js
     const hello = 'world';
     ```
@@ -705,6 +706,7 @@ Attribute `title` becomes the title of the corresponding tab panel.
   <web-tab title="Tab 3 (with code)">
 
     This is Tab 3. It has a code snippet inside.
+
     ```js
     const hello = 'world';
     ```
