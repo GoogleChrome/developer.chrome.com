@@ -56,7 +56,7 @@ displayed in the system tray.
 {% endAside %}
 
 In addition to displaying information, all notification types can include up to two action items.
-When users click on an action item, your app can respond with the appropriate action. For example,
+When users click on an action item, your extension can respond with the appropriate action. For example,
 when the user clicks on "Reply", the email app opens and the user can complete the reply:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CozjuLjsi01Ch9KNBoAY.png",
@@ -79,7 +79,7 @@ defines available notification details and how those details are displayed.
 **Consider integrating with GCM!**
 
 [Keep your users informed][6] all the time, even
-when your app isn't opened. The [gcm-notifications sample][7] shows a simple
+when your extension isn't opened. The [gcm-notifications sample][7] shows a simple
 integration between GCM and Rich Notifications API.
 
 {% endAside %}
@@ -117,10 +117,6 @@ var opt = {
   imageUrl: "url_to_preview_image"
 }
 ```
-
-In Chrome Apps, due to a strict [Content Security Policy][8] these URLs must point to a local
-resource or use a [blob or data URL][9]. Use a 3:2 ratio for your image; otherwise a black border
-frames the image.
 
 ### Create list notification {: #list }
 
@@ -177,7 +173,7 @@ function replyBtnClick {
 ```
 
 Consider including event listeners and handlers within the [event page][12], so that notifications
-can pop-up even when the app or extension isn't running.
+can pop-up even when the extension isn't running.
 
 [1]: https://developers.google.com/web/updates/2017/04/native-mac-os-notifications
 [2]: /docs/extensions/reference/notifications
