@@ -18,7 +18,7 @@ Legal values for this key are:
 * 2: Use the [Manifest V2][mv2] format and associated feature set.
 
 The current version is Manifest V3. Manifest V2 is also currently permitted, but will be phased out
-in the near future. Other manifest versions greater than 3 are not planned yet.
+in the future. Other manifest versions greater than 3 are not planned yet.
 
 [mv3]: /docs/extensions/mv3/intro/mv3-overview/
 [mv2]: /docs/extensions/mv2/manifest/
