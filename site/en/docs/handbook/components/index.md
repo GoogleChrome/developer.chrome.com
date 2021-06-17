@@ -670,27 +670,45 @@ Attribute `title` becomes the title of the corresponding tab panel.
 
 ```html
 <web-tabs>
-  <web-tab title="Tab 1">
+  <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>
-  <web-tab title="Tab 2">
-    <p>Here goes content of Tab 2</p>
+  <web-tab title="Tab 2 (markup)">
+
+    Here goes content of Tab 2.
+
+    Please note the use of line breaks to get paragraphs in markdown.
+
   </web-tab>
-  <web-tab title="Tab 3">
-    <p>And this is content of Tab 3</p>
+  <web-tab title="Tab 3 (with code)">
+
+    This is Tab 3. It has a code snippet inside.
+    ```js
+    const hello = 'world';
+    ```
+
   </web-tab>
 </web-tabs>
 ```
 
 <web-tabs>
-  <web-tab title="Tab 1">
+  <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>
-  <web-tab title="Tab 2">
-    <p>Here goes content of Tab 2</p>
+  <web-tab title="Tab 2 (markup)">
+
+    Here goes content of Tab 2.
+
+    Please note the use of line breaks to get paragraphs in markdown.
+
   </web-tab>
-  <web-tab title="Tab 3">
-    <p>And this is content of Tab 3</p>
+  <web-tab title="Tab 3 (with code)">
+
+    This is Tab 3. It has a code snippet inside.
+    ```js
+    const hello = 'world';
+    ```
+
   </web-tab>
 </web-tabs>
 
