@@ -9,5 +9,6 @@
     "en",
     "es"
   ],
-  "defaultLocale": "en"
+  "defaultLocale": "en",
+  "cookiesCtaUrl": "https://policies.google.com/technologies/cookies"
 }

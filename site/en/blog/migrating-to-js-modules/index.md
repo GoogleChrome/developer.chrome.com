@@ -6,7 +6,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - tvanderlippe
 date: 2020-09-08
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5sHOu8thiBSDQL68V9Ed.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/1KUSYXX4fotRbCVxuCiH.jpg'
 alt: ''
 tags:
   - devtools-engineering

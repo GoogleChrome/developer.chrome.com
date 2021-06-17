@@ -6,6 +6,23 @@ description: "A list of everything that has been covered in the What's New In De
 
 Here's a list of everything that's been covered in the *What's New In DevTools* series.
 
+## Chrome 92 {: #chrome92 }
+
+* [CSS grid editor](/blog/new-in-devtools-92/#grid-editor)
+* [Support for `const` redeclarations in the Console](/blog/new-in-devtools-92/#const-redeclaration)
+* [Source order viewer](/blog/new-in-devtools-92/#source-order)
+* [New shortcut to view frame details](/blog/new-in-devtools-92/#frame-details)
+* [Enhanced CORS debugging support](/blog/new-in-devtools-92/#cors)
+* [Rename XHR label to Fetch/XHR](/blog/new-in-devtools-92/#fetch-xhr)
+* [Filter Wasm resource type in the Network panel](/blog/new-in-devtools-92/#wasm)
+* [User-Agent Client Hints for devices in the Network conditions tab](/blog/new-in-devtools-92/#sec-ua-ch)
+* [Report Quirks mode issues in the Issues tab](/blog/new-in-devtools-92/#quirks-mode)
+* [Include Compute Intersections in the Performance panel](/blog/new-in-devtools-92/#computed-intersections)
+* [Lighthouse 7.5 in the Lighthouse panel](/blog/new-in-devtools-92/#lighthouse)
+* [Deprecated "Restart frame" context menu in the call stack](/blog/new-in-devtools-92/#restart-frame)
+* [[Experimental] Protocol monitor](/blog/new-in-devtools-92/#protocol-monitor)
+* [[Experimental] Puppeteer Recorder](/blog/new-in-devtools-92/#puppeteer-recorder)
+
 ## Chrome 91 {: #chrome91 }
 
 * [Web Vitals information pop up](/blog/new-in-devtools-91/#web-vitals)

@@ -35,7 +35,7 @@ Chrome App developers must currently specify **`'manifest_version': 2`**:
 Manifest version 1 only applied to extensions and hosted apps, not Chrome Apps. It was
 [deprecated][4] in Chrome 18.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: manifest
 [4]: ../extensions/manifestVersion
