@@ -683,6 +683,22 @@
     },
     "image": "image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8SV7KI2QNVXph2L5Cga2.jpeg"
   },
+  "atotic": {
+    "name": {
+      "given": "Aleks",
+      "family": "Totic"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Blink DOM"
+    },
+    "descriptions": {
+      "en": "Software engineer on Blink DOM"
+    },
+    "country": "US",
+    "twitter": "atotic",
+    "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/yb4nAlmupGwqaiUypp7b.jpg"
+  },
   "kimanh": {
     "name": {
       "given": "Kim-Anh",
