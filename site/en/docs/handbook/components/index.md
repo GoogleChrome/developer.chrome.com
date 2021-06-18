@@ -668,48 +668,58 @@ Second Term
 Use `web-tabs` component to display information in a form of horizontal tabs.
 Attribute `title` becomes the title of the corresponding tab panel.
 
-```html
+````html
 <web-tabs>
   <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>
-  <web-tab title="Tab 2 (markup)">
+  <web-tab title="Tab 2 (markdown)">
 
-    Here goes content of Tab 2.
+    Here goes content of Tab 2. Now **with** some _markdown_.
 
-    Please note the use of line breaks to get paragraphs in markdown.
+    You must include a line break between the html and markdown to get the
+    markdown to work (this is a limiation of markdown parsers).
 
   </web-tab>
   <web-tab title="Tab 3 (with code)">
 
     This is Tab 3. It has a code snippet inside.
 
-    ```js
-    const hello = 'world';
-    ```
+    You must include a line break between the html and teh markdown to get the
+    markdown to work. Also, be sure to unindent the markdown otherwise syntax
+    highlighting will not work.
+
+```js
+const hello = 'world';
+```
 
   </web-tab>
 </web-tabs>
-```
+````
 
 <web-tabs>
   <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>
-  <web-tab title="Tab 2 (markup)">
+  <web-tab title="Tab 2 (markdown)">
 
-    Here goes content of Tab 2.
+    Here goes content of Tab 2. Now **with** some _markdown_.
 
-    Please note the use of line breaks to get paragraphs in markdown.
+    You must include a line break between the html and markdown to get the
+    markdown to work (this is a limiation of markdown parsers).
 
   </web-tab>
   <web-tab title="Tab 3 (with code)">
 
     This is Tab 3. It has a code snippet inside.
 
-    ```js
-    const hello = 'world';
-    ```
+    You must include a line break between the html and teh markdown to get the
+    markdown to work. Also, be sure to unindent the markdown otherwise syntax
+    highlighting will not work.
+
+```js
+const hello = 'world';
+```
 
   </web-tab>
 </web-tabs>
