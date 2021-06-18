@@ -496,6 +496,22 @@ such as unblocking Site Isolation and decoupling the rendering pipeline from bro
   </tbody>
 </table>
 
+Definitions of terms in the chart above:
+
+OOP-D
+: Out of process display compositor.
+Display compositing is the same kind of activity as an
+[OS compositor](https://en.wikipedia.org/wiki/Compositing_window_manager).
+Out of process means doing it in the Viz process instead of the web page's render process or the browser UI process.
+
+OOP-R
+: Out of process raster. Raster is converting display lists into pixels.
+Out of process means doing it in the Viz process instead of the web page's render process.
+
+SkiaRenderer
+: A new display compositor implementation that can support execution on a range of different
+underlying GPU APIs such as Vulkan, D3D12 or Metal.
+
 ### Threaded and accelerated canvas rendering
 
 This is the project that put in place the architectural pieces that made OffscreenCanvas possible.
