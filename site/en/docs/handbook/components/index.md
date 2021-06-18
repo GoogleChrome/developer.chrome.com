@@ -663,6 +663,58 @@ Second Term
 : This is one definition of the second term.
 : This is another definition of the second term.
 
+## Tabs
+
+Use `web-tabs` component to display information in a form of horizontal tabs.
+Attribute `title` becomes the title of the corresponding tab panel.
+
+```html
+<web-tabs>
+  <web-tab title="Tab 1 (html)">
+    <p>I'm content of Tab 1</p>
+  </web-tab>
+  <web-tab title="Tab 2 (markup)">
+
+    Here goes content of Tab 2.
+
+    Please note the use of line breaks to get paragraphs in markdown.
+
+  </web-tab>
+  <web-tab title="Tab 3 (with code)">
+
+    This is Tab 3. It has a code snippet inside.
+
+    ```js
+    const hello = 'world';
+    ```
+
+  </web-tab>
+</web-tabs>
+```
+
+<web-tabs>
+  <web-tab title="Tab 1 (html)">
+    <p>I'm content of Tab 1</p>
+  </web-tab>
+  <web-tab title="Tab 2 (markup)">
+
+    Here goes content of Tab 2.
+
+    Please note the use of line breaks to get paragraphs in markdown.
+
+  </web-tab>
+  <web-tab title="Tab 3 (with code)">
+
+    This is Tab 3. It has a code snippet inside.
+
+    ```js
+    const hello = 'world';
+    ```
+
+  </web-tab>
+</web-tabs>
+
+
 ## Tables
 
 By default tables are only as wide as their content and are horizontally
