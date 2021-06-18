@@ -1,0 +1,26 @@
+{% extends 'layouts/doc-post.njk' %}
+{% from 'macros/icon.njk' import icon with context %}
+
+{% block content %}
+  {{ content | safe }}
+  <div class="grid-columns" style="--grid-col-breakpoint: 20rem; --grid-col-gap: 2rem;">
+    {% for card in cards %}
+      <section class="display-flex hairline rounded-lg pad-300">
+        <div>
+          <span class="display-inline-flex pad-300 color-bg rounded-full bg-{{ card.color }}-medium align-center justify-content-center">{{ icon(card.icon) }}</span>
+        </div>
+        <div class="stack flow-space-200 gap-left-300">
+          <h2 class="type--h5" style="font-weight: 500;">{{ card.heading }}</h2>
+          <p class="type--caption">{{ card.copy }}</p>
+          <div class="cluster">
+            <div>
+              {% for link in card.links %}
+                <a class="tag-pill surface decoration-none hairline color-primary type--label weight-regular rounded-lg" href="{{ link.href }}">{{ link.text }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endfor %}
+  </div>
+{% endblock%}

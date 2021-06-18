@@ -1,4 +1,4 @@
-{# 
+{#
   This page grabs project data from _data/docs/projects.yml. It looks up each
   project by its url (for example, it looks for /docs/extensions) and uses the
   project's own frontmatter to render the project title and summary.
@@ -10,7 +10,7 @@
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
-{% block content %}
+{% block main %}
   <div class="stack gap-top-300 pad-left-400 pad-right-400">
     {% for key, value in i18n.projects -%}
       <h2 class="type--eyebrow color-secondary-text">{{ i18n.projects[key].heading }}</h2>

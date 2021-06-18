@@ -25,7 +25,13 @@
 - title: i18n.docs.webstore.policies
   sections:
     - url: /docs/webstore/terms/
-    - url: /docs/webstore/program_policies/
+    - title: i18n.docs.webstore.program_policies
+      sections:
+        - url: /docs/webstore/program_policies/
+        - url: /docs/webstore/program_policies/sexually_explicit_material
+        - url: /docs/webstore/program_policies/malicious_and_prohibited_products
+        - url: /docs/webstore/program_policies/hate_speech_and_violent_behavior
+        - url: /docs/webstore/program_policies/regulated_goods_and_services
     - url: /docs/webstore/spam-faq/
     - url: /docs/webstore/deceptive_installation_tactics/
     - url: /docs/webstore/user_data/

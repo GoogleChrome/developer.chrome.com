@@ -8,7 +8,13 @@
   position: relative;
 
   @for $i from 1 through 6 {
-    &--h#{$i} {
+    // Defines .type--h1 through .type--h6 classes
+    // and also .type .type--h1 through .type .type--h6.
+    // If we didn't do this second step, then the next selector which sets
+    // h1-h6 to be a step size down would be more powerful than our utility
+    // classes and you wouldn't be able to override it by doing <h1 class="type--h3">
+    &--h#{$i},
+    & &--h#{$i} {
       @extend %type--h#{$i};
     }
 
@@ -17,7 +23,7 @@
     // Because these headings come from markdown they're always h1-h6 without
     // a class applied.
     @if $i != 6 {
-      h#{$i}:not([class^='type--var']) {
+      h#{$i} {
         @extend %type--h#{$i + 1};
       }
     }
@@ -59,7 +65,7 @@
   &--h3-card {
     @extend %type--h3-card;
   }
-  
+
   // See _type.scss for explanation of this exception.
   &--h5-card {
     @extend %type--h5-card;

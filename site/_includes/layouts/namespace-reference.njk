@@ -35,7 +35,7 @@
   {{- content | toc | safe -}}
 {% endset %}
 
-{% block content %}
+{% block main %}
   <div class="display-flex gap-top-300 lg:gap-top-400">
     {% include 'partials/navigation-tree.njk' %}
     {% set feature = namespace.feature %}

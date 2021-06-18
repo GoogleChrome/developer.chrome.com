@@ -14,3 +14,5 @@ develop:
   en: 'Prepare your extension'
 api:
   en: 'Chrome Web Store API'
+program_policies:
+  en: 'Developer program policies'
