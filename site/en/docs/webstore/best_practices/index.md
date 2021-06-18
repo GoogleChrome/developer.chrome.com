@@ -41,7 +41,6 @@ any of these policies.
   tile, marquee, and screenshots) [should be provided][supplying-images]. Images should not be
   blurry or too busy. [Privacy information][dashboard-privacy] (permissions justifications, the extension's privacy policy, data use disclosures, etc.) must be accurate and up to date.
 
-
 ## Support Google Accounts
 
 If your app requires user login, we recommend that you provide at least some support for Google
@@ -98,9 +97,6 @@ that is most appropriate:
 
 
 [3]: /docs/webstore/identify_user
-[4]: /docs/webstore/check_for_payment
-[5]: /docs/webstore/check_for_payment#cache
-[6]: #top
 [7]: /docs/webstore/branding
 [8]: /docs/webstore/images
 [9]: #top
