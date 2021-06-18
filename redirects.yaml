@@ -44,25 +44,25 @@ redirects:
 
 # CWS payments/apps purge
 - from: /docs/webstore/hosted_apps
-  to: /docs/extensions/webstore
+  to: /docs/webstore
 - from: /docs/webstore/migrating
-  to: /docs/extensions/webstore
+  to: /docs/webstore
 - from: /docs/webstore/get_started_simple
-  to: /docs/extensions/webstore/publish/
+  to: /docs/webstore/publish/
 - from: /docs/webstore/apps_vs_extensions
-  to: /docs/extensions/webstore
+  to: /docs/webstore
 - from: /docs/webstore/distribution
-  to: /docs/extensions/webstore
+  to: /docs/webstore
 - from: /docs/webstore/launching
-  to: /docs/extensions/webstore
+  to: /docs/webstore
 - from: /docs/webstore/choosing
-  to: /docs/extensions/webstore
+  to: /docs/webstore
 - from: /docs/webstore/samples
-  to: /docs/extensions/webstore
+  to: /docs/webstore
 - from: /docs/webstore/get_started
-  to: /docs/extensions/webstore
+  to: /docs/webstore
 - from: /docs/webstore/inline_installation
-  to: /docs/extensions/webstore
+  to: /docs/webstore
 - from: /docs/webstore/authentication
   to: /docs/webstore
 - from: /docs/webstore/one_time_payments
