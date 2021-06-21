@@ -8,45 +8,42 @@ Message passing
 
 : These methods support message passing between tasks within the extension (such as background
   scripts) and with the native system on which the browser is running. See [Message
-  Passing][message-passing] for an overview of the subject.
-  
-  * [runtime.connect(extensionId: string, connectInfo: object): Port](/docs/extensions/reference/runtime/#method-connect)
-  * [runtime.connectNative(application: string): Port]()
-  * [runtime.sendMessage(extensionId?: string, message: any, options: object, responseCallback: function)]()
-  * [runtime.sendNativeMessage(application: string, message: object, responseCallback: function)]()
+  Passing][message-passing] for an overview of the subject. Methods in this category include
+  [connect](/docs/extensions/reference/runtime/#method-connect),
+  [connectNative](/docs/extensions/reference/runtime/#method-connectNative),
+  [sendMessage](/docs/extensions/reference/runtime/#method-sendMessage), and
+  [sendNativeMessage](/docs/extensions/reference/runtime/#method-sendNativeMessage).
 
 Accessing extension and platform metadata
 
-: These methods let you retrieve several specific pieces of metadata about the extension and the platform:
-  
-  * [runtime.getBackgroundPage(callback: function)]()
-  * [runtime.getManifest(): object]()
-  * [runtime.getPackageDirectoryEntry(callback: function)]()
-  * [runtime.getPlatformInfo(callback: function)]()
+: These methods let you retrieve several specific pieces of metadata about the extension and the
+  platform. Methods in this category include 
+  [getBackgroundPage](/docs/extensions/reference/runtime/#method-getBackgroundPage),
+  [getManifest](/docs/extensions/reference/runtime/#method-getManifest),
+  [getPackageDirectoryEntry](/docs/extensions/reference/runtime/#method-getPackageDirectoryEntry), and
+  [getPlatformInfo](/docs/extensions/reference/runtime/#method-getPlatformInfo).
 
 Managing extension lifecycle and options
 
 : These methods let you perform some meta-operations on the extension, and display the options page
-  to the extension user.
-
-  * [runtime.reload()]()
-  * [runtime.requestUpdateCheck(callback: function)]()
-  * [runtime.setUninstallURL(url: string, callback: function)]()
-  * [runtime.openOptionsPage(callback: function)]()
+  to the extension user. Methods in this category include 
+  [reload](/docs/extensions/reference/runtime/#method-reload),
+  [requestUpdateCheck](/docs/extensions/reference/runtime/#method-requestUpdateCheck),
+  [setUninstallURL](/docs/extensions/reference/runtime/#method-setUninstallURL), and
+  [openOptionsPage](/docs/extensions/reference/runtime/#method-openOptionsPage).
 
 Device restart support
 
 : These methods are available only on Chrome OS, and exist mainly to support kiosk implementations.
-
-  * [runtime.restart()]()
-  * [runtime.restartAfterDelay(seconds: number, callback: function)]()
+  Methods in this category include 
+  [restart](/docs/extensions/reference/runtime/#method-restart) and
+  [restartAfterDelay](/docs/extensions/reference/runtime/#method-restartAfterDelay).
 
 Helper utilities
 
-: This utility lets you convert the path of a resource in your extension to a URL that the browser
-  can resolve.
-
-  * [runtime.getURL(path: string): string]()
+: This utility provide utility such as the conversion of internal resource representations to
+  external formats. Methods in this category include 
+  [getURL](/docs/extensions/reference/runtime/#method-getURL).
 
 
 ## Manifest
