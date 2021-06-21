@@ -48,7 +48,7 @@ Helper utilities
 
 ## Manifest
 
-There are no permissions or other manifest requirements for the runtime API.
+There are no permissions or other manifest requirements to use the runtime API.
 
 
 
