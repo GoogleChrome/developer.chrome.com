@@ -2,8 +2,8 @@
 title: "Extension actions in Manifest V3"
 description: >
   Chrome extensions had Browser and Page Actions APIs for years, but Manifest V3 replaced both with
-  a generic Actions API. This post explores the history of these APIs what has changed in Manifest
-  V3.
+  a generic Actions API. This post explores the history of these APIs and what has changed in 
+  Manifest V3.
 layout: "layouts/blog-post.njk"
 authors:
   - dotproto
