@@ -2,13 +2,13 @@
 title: "Extension actions in Manifest V3"
 description: >
   Chrome extensions had Browser and Page Actions APIs for years, but Manifest V3 replaced both with
-  a generic Actions API. This post explores the history of these APIs what has changed in Manfiest
+  a generic Actions API. This post explores the history of these APIs what has changed in Manifest
   V3.
 layout: "layouts/blog-post.njk"
 authors:
   - dotproto
 date: 2021-06-23
-# hero: 'image/WlD8wC6g8khYWPJUsQceQkhXSlv1/7SI8nw8jvSCspg2q71ya.png'
+hero: 'image/WlD8wC6g8khYWPJUsQceQkhXSlv1/95SnF7CbCqSWiV03WjVF.png'
 alt: ''
 tags:
   - extensions
@@ -72,8 +72,8 @@ distinction without meaning. Worse, their subtle behavior differences made it ha
 determine which one to use. We realized that we could address these issues by combining the browser
 action and page action into a single "action."
 
-Enter the Action API; chrome.action is most directly analogous to chrome.browserAction, but it has a
-few notable differences.
+Enter the Action API; `chrome.action` is most directly analogous to `chrome.browserAction`, but it
+has a few notable differences.
 
 First, `chrome.action` introduces a new method named [`getUserSettings()`][method-gus]. This method
 gives extension developers a way to check if the user has pinned their extension's action to the
@@ -91,7 +91,10 @@ generic interfaces in order to minimize future API churn. It also lets other bro
 browser-specific UI concepts in the [UserSettings][type-user-settings] object returned by this
 method.
 
-Second, the icon and enabled/disabled state of an extension's action can be controlled using the Declarative Content API. This is important because it lets extensions react to the user's browsing behavior without accessing the content or even the URLs of the pages they visit. For example, let's see how an extension can enable its action when the user visits pages on example.com.
+Second, the icon and enabled/disabled state of an extension's action can be controlled using the
+Declarative Content API. This is important because it lets extensions react to the user's browsing
+behavior without accessing the content or even the URLs of the pages they visit. For example, let's
+see how an extension can enable its action when the user visits pages on example.com.
 
 ```js/10
 // Manifest V3
