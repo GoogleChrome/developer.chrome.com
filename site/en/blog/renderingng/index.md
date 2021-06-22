@@ -5,7 +5,7 @@ description: >
   In 2021, we will largely complete the process of designing, building and shipping RenderingNG, a next-generation rendering architecture for Chromium.
 subhead: >
   Ready for the next generation of web content
-date: 2021-06-16
+date: 2021-06-22
 authors:
   - chrishtr
 alt: >
