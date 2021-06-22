@@ -1,6 +1,58 @@
 ---
 api: runtime
 ---
+The runtime API provides methods to support a number of areas of functionality that your extensions
+can use:
+
+Message passing
+
+: These methods support message passing so that you can communicate with different parts of your extension (such as an extension popup and background scripts), other extensions, or native applications on the user's device. See [Message
+  Passing][message-passing] for an overview of the subject. Methods in this category include
+  [connect](/docs/extensions/reference/runtime/#method-connect),
+  [connectNative](/docs/extensions/reference/runtime/#method-connectNative),
+  [sendMessage](/docs/extensions/reference/runtime/#method-sendMessage), and
+  [sendNativeMessage](/docs/extensions/reference/runtime/#method-sendNativeMessage).
+
+Accessing extension and platform metadata
+
+: These methods let you retrieve several specific pieces of metadata about the extension and the
+  platform. Methods in this category include 
+  [getBackgroundPage](/docs/extensions/reference/runtime/#method-getBackgroundPage),
+  [getManifest](/docs/extensions/reference/runtime/#method-getManifest),
+  [getPackageDirectoryEntry](/docs/extensions/reference/runtime/#method-getPackageDirectoryEntry), and
+  [getPlatformInfo](/docs/extensions/reference/runtime/#method-getPlatformInfo).
+
+Managing extension lifecycle and options
+
+: These methods let you perform some meta-operations on the extension, and display the options page
+  to the extension user. Methods in this category include 
+  [reload](/docs/extensions/reference/runtime/#method-reload),
+  [requestUpdateCheck](/docs/extensions/reference/runtime/#method-requestUpdateCheck),
+  [setUninstallURL](/docs/extensions/reference/runtime/#method-setUninstallURL), and
+  [openOptionsPage](/docs/extensions/reference/runtime/#method-openOptionsPage).
+
+Device restart support
+
+: These methods are available only on Chrome OS, and exist mainly to support kiosk implementations.
+  Methods in this category include 
+  [restart](/docs/extensions/reference/runtime/#method-restart) and
+  [restartAfterDelay](/docs/extensions/reference/runtime/#method-restartAfterDelay).
+
+Helper utilities
+
+: These methods provide utility such as the conversion of internal resource representations to
+  external formats. Methods in this category include 
+  [getURL](/docs/extensions/reference/runtime/#method-getURL).
+
+
+## Manifest
+
+Most methods on the runtime API do not require any permission to use. However,
+[sendNativeMessage](/docs/extensions/reference/runtime/#method-sendNativeMessage) and
+[connectNative](/docs/extensions/reference/runtime/#method-connectNative) require the
+`nativeMessaging` permission to be declared in your manifest.
+
+
 
 ## Examples
 
