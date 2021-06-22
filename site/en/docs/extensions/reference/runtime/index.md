@@ -40,14 +40,17 @@ Device restart support
 
 Helper utilities
 
-: This utility provide utility such as the conversion of internal resource representations to
+: These methods provide utility such as the conversion of internal resource representations to
   external formats. Methods in this category include 
   [getURL](/docs/extensions/reference/runtime/#method-getURL).
 
 
 ## Manifest
 
-Most methods on the runtime API do not require any permission to use.  However, sendNativeMessage[linky] and connectNative[linky] require the `nativeMessaging` permission to be declared in your manifest.
+Most methods on the runtime API do not require any permission to use. However,
+[sendNativeMessage](/docs/extensions/reference/runtime/#method-sendNativeMessage) and
+[connectNative](/docs/extensions/reference/runtime/#method-connectNative) require the
+`nativeMessaging` permission to be declared in your manifest.
 
 
 
