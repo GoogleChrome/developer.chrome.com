@@ -6,9 +6,16 @@ authors:
   - titouan
 description: Chrome has some updates to share about the standardization of the Private Network Access - formerly known as CORS-RFC1918 - plans to restrict private network resource accesses, and how your websites can align with those changes.
 date: 2021-03-11
+updated: 2021-06-23
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A private sign in German
 ---
+
+**Updates**
+
+- **June 23, 2021**: Based on feedback reported we've decided to adjust the
+  timeline for private network requests initiated from non-secure contexts will
+  be blocked in Chrome 93 instead of 92.
 
 Last November, [we asked for feedback about the proposed web platform
 specification called CORS-RFC1918](https://web.dev/cors-rfc1918-feedback/) which
@@ -76,7 +83,7 @@ too (no [mixed content](https://web.dev/what-is-mixed-content/)).
 
 In Chrome 90 requests to the private network initiated from non-secure contexts
 are therefore officially marked as deprecated. Such requests will be blocked
-starting Chrome 92. This is a first step towards launching the full
+starting Chrome 93. This is a first step towards launching the full
 specification.
 
 #### Deprecation reports are filed via Reporting API
@@ -122,12 +129,12 @@ request from a non-secure context. These warnings look like the following:
   </figcaption>
 </figure>
 
-### Chrome 92 (advance notice)
+### Chrome 93 (advance notice)
 
 Chrome is giving web developers two milestones lead time to address the use of
 this deprecated feature in production before enforcement is enabled.
 
-Starting in Chrome 92, private network requests initiated from non-secure
+Starting in Chrome 93, private network requests initiated from non-secure
 contexts will be blocked by Chrome. No request will be sent. Instead, an error
 message will be logged in the DevTools console. For security reasons, this
 manifests as a TypeError for fetch requests from Javascript.
