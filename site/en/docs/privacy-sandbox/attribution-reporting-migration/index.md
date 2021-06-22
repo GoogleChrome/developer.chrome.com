@@ -65,8 +65,8 @@ You can see a migration example for a small demo app in this [pull request (draf
 <table class="simple width-full fixed-table with-heading-tint">
 <thead>
 <tr>
-<th>Legacy code</th>
-<th>New code</th>
+<th style="text-align: left;">Legacy code</th>
+<th style="text-align: left;">New code</th>
 </tr>
 </thead>
 <tbody>
@@ -82,8 +82,8 @@ You can see a migration example for a small demo app in this [pull request (draf
 <table class="simple width-full fixed-table with-heading-tint">
 <thead>
 <tr>
-<th>Legacy code</th>
-<th>New code</th>
+<th style="text-align: left;">Legacy code</th>
+<th style="text-align: left;">New code</th>
 </tr>
 </thead>
 <tbody>
@@ -99,8 +99,8 @@ You can see a migration example for a small demo app in this [pull request (draf
 <table class="simple width-full fixed-table with-heading-tint">
 <thead>
 <tr>
-<th>Legacy code</th>
-<th>New code</th>
+<th style="text-align: left;">Legacy code</th>
+<th style="text-align: left;">New code</th>
 </tr>
 </thead>
 <tbody>
@@ -144,8 +144,8 @@ window.open(
 <table class="simple width-full fixed-table with-heading-tint w-table--top-align">
 <thead>
 <tr>
-<th>Legacy code</th>
-<th>New code</th>
+<th style="text-align: left;">Legacy code</th>
+<th style="text-align: left;">New code</th>
 </tr>
 </thead>
 <tbody>
@@ -162,8 +162,8 @@ window.open(
 <thead>
 <tr>
 <th></th>
-<th>Legacy code</th>
-<th>New code</th>
+<th style="text-align: left;">Legacy code</th>
+<th style="text-align: left;">New code</th>
 </tr>
 </thead>
 <tbody>
@@ -178,12 +178,10 @@ window.open(
 <td>Sent as JSON in the request body.<br>
 <br>
 The report data is included <strong>in the request body as a JSON object</strong> with the
-following keys:
-<ul>
-    <li><code>source_event_id</code>: formerly <code>impression-data</code>, the 64-bit event id set on the attribution source<br></li>
-    <li><code>trigger_data</code>: formerly <code>conversion-data</code>, the 3-bit data set in the attribution trigger
-    redirect.</li>
-</ul>
+following keys:<br>
+<code>source_event_id</code>: formerly <code>impression-data</code>, the 64-bit event id set on the attribution source.<br>
+<code>trigger_data</code>: formerly <code>conversion-data</code>, the 3-bit data set in the attribution trigger
+redirect.<br><br>
 ⚠️ <code>credit</code> has been removed.
 
 </tr>
