@@ -6,8 +6,7 @@ can use:
 
 Message passing
 
-: These methods support message passing between tasks within the extension (such as background
-  scripts) and with the native system on which the browser is running. See [Message
+: These methods support message passing so that you can communicate with different parts of your extension (such as an extension popup and background scripts), other extensions, or native applications on the user's device. See [Message
   Passing][message-passing] for an overview of the subject. Methods in this category include
   [connect](/docs/extensions/reference/runtime/#method-connect),
   [connectNative](/docs/extensions/reference/runtime/#method-connectNative),
@@ -48,7 +47,7 @@ Helper utilities
 
 ## Manifest
 
-There are no permissions or other manifest requirements to use the runtime API.
+Most methods on the runtime API do not require any permission to use.  However, sendNativeMessage[linky] and connectNative[linky] require the `nativeMessaging` permission to be declared in your manifest.
 
 
 
