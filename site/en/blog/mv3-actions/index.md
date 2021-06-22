@@ -98,8 +98,8 @@ see how an extension can enable its action when the user visits pages on example
 
 ```js/10
 // Manifest V3
-chrome.runtime.onInstalled.addListener(function() {
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
     chrome.declarativeContent.onPageChanged.addRules([
       {
         conditions: [
