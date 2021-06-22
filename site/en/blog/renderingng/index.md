@@ -530,7 +530,7 @@ It began in 2015 and will finish in 2021.
     </tr>
     <tr>
       <td>2019</td>
-      <td>ImageBitmapRenderingContext. Finish!</td>
+      <td>Ship ImageBitmapRenderingContext.</td>
     </tr>
     <tr>
       <td>2021</td>
