@@ -74,13 +74,16 @@ Violent Extremism:
 Impersonation or Deceptive Behavior:
 
 : Don't pretend to be someone else, and don't represent that your product is authorized by, endorsed
-  by, or produced by another company or organization, if that is not the case. Developers should not
-  divert users or provide links to any other site that mimics Chrome Web Store or passes itself off as
-  Chrome Web Store. Your Product and its user experience also must not mimic functionality or warnings
-  from a user's operating system or browser. Any changes to device settings must be made with the
-  user's knowledge and consent and be easily reversible by the user.
+  by, or produced by another company or organization, if that is not the case. 
 
-  We do not allow products which deceive or mislead users, including in the content, title,
+: Developers should not divert users or provide links to any other site that mimics the Chrome Web
+  Store or passes itself off as the Chrome Web Store. Your Product and its user experience also must
+  not mimic functionality or warnings from a user's operating system or browser. 
+
+: Any changes to device settings must be made with the user's knowledge and consent and be easily
+  reversible by the user.
+
+: We do not allow products that deceive or mislead users, including in the content, title,
   description, or screenshots.
 
 : Don't misrepresent the functionality of your product or include non-obvious functionality that
@@ -88,13 +91,14 @@ Impersonation or Deceptive Behavior:
   the functionality so that users have a clear understanding of the product they are adding. For
   example, products should not contain:
 
-  - Claimed functionalities which are not possible to implement (e.g. "Who has viewed your IG
-    account")
-  - Developer or product names which misrepresent their current status or performance on the Chrome
-    Web Store (e.g. "Editor's Choice" or "Number One")
+  * Claimed functionalities that are not possible to implement (e.g. "Who has viewed your social
+    media account") or which are not directly provided by the extension (e.g. file converters which
+    only link to other file conversion services)
+  * Any metadata that misrepresents the extension's or developer's current status or performance
+    on the Chrome Web Store (e.g. "Editor's Choice" or "Number One")
 
-  If your product has a blank description field or is missing an icon or screenshots, it will be
-  rejected. If any of your product's content, title, icon, description or screenshots contains false
+: If your product has a blank description field or is missing an icon or screenshots, it will be
+  rejected. If any of your product's content, title, icon, description, or screenshots contains false
   or misleading information, we may remove it.
 
 Featured Products:
