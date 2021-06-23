@@ -6,6 +6,7 @@ description: >
 subhead: >
   Ready for the next generation of web content
 date: 2021-06-22
+updated: 2021-06-23
 authors:
   - chrishtr
 alt: >
