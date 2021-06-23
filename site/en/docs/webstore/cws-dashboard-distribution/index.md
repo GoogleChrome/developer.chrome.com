@@ -54,6 +54,24 @@ manage:
 Any members of the specified groups, along with your trusted testers, will be able to install the
 item.
 
+### Private visibility: domain publishing{: #private-visibility-domain-publish }
+
+{% Aside %}
+
+This enterprise feature is only available for Google Workspace domains where it has been enable by
+the domain administrator.
+
+{% endAside %}
+
+If domain publishing is enabled for your organization, an additional option appears in the
+distribution page of the developer console:
+
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/SmrqQb3mLZaYj0O3Kdiv.png", alt="Screenshot showing
+the domain publishing option in the developer console", width="643", height="200", class="screenshot" %}
+
+See [Enterprise publishing options][domain-publishing-overview] for an overview of this and other enterprise extension topics,
+along with links to other enterprise extension documentation.
+
 ## Setting the geographic distribution {: #setting-the-geographic-distribution }
 
 The **Distribution** setting lets you specify which geographic areas will see your item listing in
@@ -67,3 +85,4 @@ When you publish to the world, your item will be immediately visible to the regi
 and it'll be visible in the store's search results.
 
 [1]: #private-visibility-groups
+[domain-publishing-overview]: /docs/webstore/cws-enterprise/
