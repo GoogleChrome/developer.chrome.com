@@ -133,7 +133,7 @@ scalability and customization of rendering.
 alt="Sketch graph shows reliability, performance, and extensibility improving over time",
 width="800", height="360" %}
 
-This is not to say that nothing was improved over that time in Chrome.
+This is not to say that nothing was improved over that time in Chromium.
 In fact, the opposite is true!
 Those years saw a steady and sustained increase in reliability and performance
 as we refactored and rolled out each improvement step-by-step.
@@ -143,7 +143,7 @@ as we refactored and rolled out each improvement step-by-step.
 Over the past 8 years,
 we have added tens of thousands of unit,
 performance and integration tests.
-In addition, we have developed comprehensive metrics measuring many aspects of how Chrome's rendering behaves in local testing,
+In addition, we have developed comprehensive metrics measuring many aspects of how Chromium's rendering behaves in local testing,
 in performance benchmarks,
 and in the wild on real sites, with real users and devices.
 
@@ -534,27 +534,11 @@ It began in 2015 and will finish in 2021.
     </tr>
     <tr>
       <td>2021</td>
-      <td>Ship OOPR.</td>
+      <td>Ship OOP-R.</td>
     </tr>
     <tr>
   </tbody>
 </table>
-
-Definition of terms in the above charts:
-
-OOP-D
-: Out of process display compositor.
-Display compositing is the same kind of activity as an
-[OS compositor](https://en.wikipedia.org/wiki/Compositing_window_manager).
-Out of process means doing it in the Viz process instead of the web page's render process or the browser UI process.
-
-OOP-R
-: Out of process raster. Raster is converting display lists into pixels.
-Out of process means doing it in the Viz process instead of the web page's render process.
-
-SkiaRenderer
-: a new display compositor implementation that can support execution on a range of different
-underlying GPU APIs such as Vulkan, D3D12 or Metal.
 
 ## Conclusion
 
