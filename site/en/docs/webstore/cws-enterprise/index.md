@@ -8,7 +8,7 @@ description: How to distribute  extensions to enterprise users
 
 When you are in a Google Workspace organization, there are some additional options available for
 publishing extensions to your domain. This article summarizes these options, but they are detailed as
-part of the [Chrome enterprise documentation][int-chrome-management].
+part of the [Chrome enterprise documentation][ent-chrome-management].
 
 Some of these enterprise features involve how the Chrome Web Store works within a Google Workspace:
 
@@ -35,7 +35,8 @@ documentation for each topic to learn about them in more detail.
 ## Private Chrome Web Store for your organization {: #private-cws }
 
 Any Google Workspace organization can have its own private instance of Chrome Web Store. To access
-this, you need to use a slightly different URL than that of the public store:
+this, you need to use a slightly different URL than that of the public store, which specifies your
+Google Workspace domain:
 
 * **Public Chrome Web Store:** &emsp;
   `chrome.google.com/webstore/category/extensions`
@@ -72,7 +73,7 @@ Select this option to publish privately to your domain.
 For further instructions on how to publish to your organization's domain, see [Chrome Insider:
 Publishing custom extensions for the enterprise][ent-ext-blog-how].
 
-## Managing domain Chrome Web Store extensions
+## Managing domain Chrome Web Store extensions {: #manage-domain-extensions }
 
 There are also features that you don't use directly as an extension developer, but which you should
 be aware of.
@@ -96,7 +97,7 @@ unexpectedly; these changes can necessitate new training and procedures or inter
 integrations. For organizations with a private Chrome Web Store enabled, administrators can
 designate specific versions of extensions that users in the organization can install.
 
-## Non-webstore installations
+## Non-webstore installations {: #side-loading }
 
 There are ways to install enterprise extensions without using the Chrome Web Store, such as those
 described in this section.
@@ -108,24 +109,24 @@ other core business operation.
 See the [ExtensionInstallForcelist][ent-ext-admin-forcelist] documentation to learn more about
 this feature.
 
-## Troubleshooting tips for domain extensions
+## Troubleshooting tips for domain extensions {: #troubleshooting }
 
 This section addresses a few common issues that extension developers may encounter when publishing
 to a domain.
 
-### I don't see the "Only to my domain" option under the private publishing option.
+**I don't see the "Only to my domain" option under the private publishing option.**
 
 This option is only available to domain users when it has been enabled for the domain. Make sure that:
 
 * You are logged in using your domain identity, and not a public (gmail) or other non-domain identity.
 * Your administrator has configured domain publishing.
 
-### Why are my users not getting extension updates after I publish them?
+**Why are my users not getting extension updates after I publish them?**
 
 It can take a while for Chrome to pull updates from the Chrome Web Store. Make sure your users are
 staying logged into Chrome with their domain identity for at least a few hours at a time.
 
-### I published an extension to my domain; why don't I see it on the Chrome Web Store?
+**I published an extension to my domain but I don't see it on the Chrome Web Store.**
 
 Here are a few things to check:
 
