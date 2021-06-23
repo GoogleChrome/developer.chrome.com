@@ -54,10 +54,10 @@ with the disclosure requirements to provide adequate context to the user.
 Misleading interactive elements are not limited to those that lead to the Chrome Web Store listing.
 Confusing interactions after a user closes the extension listing are subject to our guidelines.
 
-## What is an “unrelated user action”?
+## What is an "unrelated user action"?
 
 Any interactive elements which require user response or participation, which is not closely related
-to the primary functionality of the extension, is considered to be an “unrelated user action”. \
+to the primary functionality of the extension, is considered to be an "unrelated user action".
 
 Unrelated user action includes, but is not limited to, requiring users to:
 
