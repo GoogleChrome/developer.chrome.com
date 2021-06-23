@@ -231,17 +231,25 @@ remediation steps required to restore the product.
 
 ## Deceptive Installation Tactics {: #deceptive_installation_tactics }
 
-Extensions must be marketed responsibly. Extensions that use or benefit from deceptive installation
-tactics will be removed from the Chrome Web Store.
+Extensions must be marketed responsibly. The set of functionalities promised by the extension must
+be stated clearly and in a transparent manner. The outcome of any user interaction should match the
+reasonable expectations that were set with the user. Extensions that use or benefit from deceptive
+installation tactics will be removed from the Chrome Web Store.
 
 Deceptive installation tactics include:
 
-- Unclear or inconspicuous disclosures on marketing collateral preceding the Chrome Web Store
+* Unclear or inconspicuous disclosures on marketing collateral preceding the Chrome Web Store
   product listing.
-- Misleading interactive elements as part of your distribution flow. This includes misleading
+
+* Misleading interactive elements as part of your distribution flow. This includes misleading
   call-to-action buttons or forms that imply an outcome other than the installation of an extension.
-- Adjusting the Chrome Web Store product listing window with the effect of withholding or hiding
+
+* Adjusting the Chrome Web Store product listing window with the effect of withholding or hiding
   extension metadata from the user.
+
+* Bundling other extensions or offers within the same installation flow.
+
+* Requiring unrelated user action to access advertised functionality. 
 
 For more information about this policy, please see the [Developer FAQ][11].
 
