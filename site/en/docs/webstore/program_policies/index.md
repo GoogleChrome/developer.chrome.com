@@ -161,6 +161,15 @@ Code Readability Requirements:
   - Shortening of variable and function names
   - Collapsing files together
 
+Two Step Verification:
+
+: To ensure the security of CWS accounts, Two Step Verification is required for all developer
+  accounts prior to publishing an extension. Developers can activate Two Step Verification for
+  their google accounts
+  [here](https://myaccount.google.com/security/signinoptions/two-step-verification/enroll-welcome).
+  More information on Google's Two Step Verification features can be found
+  [here](https://www.google.com/landing/2step/).
+
 Additional Requirements for Manifest V3:
 
 : Extensions using Manifest V3 must meet additional requirements related to the
