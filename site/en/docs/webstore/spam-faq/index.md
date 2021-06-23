@@ -42,7 +42,7 @@ certain valid use cases that require repetitive content. These allowed exception
 
 
 * Extensions that work only on specific hosts. Specifically, you may create bespoke versions of
-  your extension targeted to your customers' hosts.To qualify for the Specific Host exception,
+  your extension targeted to your customers' hosts. To qualify for the Specific Host exception,
   each version must request, in the manifest, access to permissions that are limited to that host. 
 * Extensions that are published privately within your domain. Extensions published as unlisted or
   public, even if distributed through a single domain, do not qualify for this Publish to Domain
