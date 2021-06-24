@@ -8,7 +8,7 @@ description: Frequently asked questions about Chrome Web Store's spam policy.
 
 This document provides answers to questions about how the Chrome Web Store spam policy may impact extensions (or any other items) that developers submit to the Chrome Web Store.
 
-<h2>Repetitive content</h2>
+## Repetitive content {: #repetitive-content }
 
 ### What is a repetitive content violation?
 
