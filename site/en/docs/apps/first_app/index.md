@@ -45,7 +45,7 @@ detail):
   "name": "Hello World!",
   "description": "My first Chrome App.",
   "version": "0.1",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "app": {
     "background": {
       "scripts": ["background.js"]
