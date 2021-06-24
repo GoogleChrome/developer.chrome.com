@@ -13,12 +13,11 @@ This document provides answers to questions about how the Chrome Web Store spam 
 ### What is a repetitive content violation?
 
 Our developer policy prohibits the [submission of repetitive
-content](https://developer.chrome.com/webstore/program_policies#spam). In general, this means you
+content](/docs/webstore/program_policies#spam). In general, this means you
 cannot submit multiple extensions that provide the same experience.
 
 More specifically, developers cannot submit content that provides the same user experience, even if
 the metadata or code are not identical. Some examples of repetitive content include:
-
 
 
 * Multiple extensions with highly similar functionality, content, and user experience. If these
@@ -40,7 +39,6 @@ While all extensions are checked by the CWS review team for violations of this p
 certain valid use cases that require repetitive content. These allowed exceptions include:
 
 
-
 * Extensions that work only on specific hosts. Specifically, you may create bespoke versions of
   your extension targeted to your customers' hosts. To qualify for the Specific Host exception,
   each version must request, in the manifest, access to permissions that are limited to that host. 
@@ -53,7 +51,6 @@ certain valid use cases that require repetitive content. These allowed exception
 
 In order to qualify for these exceptions, developers must include details regarding the use case
 exception in the extension's description and the single purpose field. For example:
-
 
 
 *   "THIS EXTENSION IS LIMITED TO [HOST NAME] ONLY"
@@ -200,4 +197,3 @@ with the publisher.
 
 This is allowed only as an auxiliary feature within the overall extension functionality. It cannot
 be the single purpose of the extension.
-
