@@ -13,9 +13,9 @@ alt: A private sign in German
 
 **Updates**
 
-- **June 23, 2021**: Based on feedback reported we've decided to adjust the
-  timeline for private network requests initiated from non-secure contexts will
-  be blocked in Chrome 93 instead of 92.
+- **June 23, 2021**: Based on the feedback, the timeline for
+  blocking private network requests initiated from non-secure contexts has been changed.
+  Such requests will be blocked in Chrome 93 instead of 92.
 
 Last November, [we asked for feedback about the proposed web platform
 specification called CORS-RFC1918](https://web.dev/cors-rfc1918-feedback/) which
