@@ -735,5 +735,33 @@
     },
     "country": "US",
     "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/t755awh2DwVKBMxvupUA.jpeg"
+  },
+  "rebeccasoares": {
+    "name": {
+      "given": "Rebecca",
+      "family": "Soares"
+    },
+    "descriptions": {
+      "en": "Policy Manager, Chrome Trust & Safety Team"
+    },
+    "org": {
+      "name": "Google"
+    },
+    "country": "US",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/t755awh2DwVKBMxvupUA.jpeg"
+  },
+  "ackermanb": {
+    "name": {
+      "given": "Benjamin",
+      "family": "Ackerman"
+    },
+    "descriptions": {
+      "en": "Chief Enforcement Officer, Chrome Trust & Safety Team"
+    },
+    "org": {
+      "name": "Google"
+    },
+    "country": "US",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/t755awh2DwVKBMxvupUA.jpeg"
   }
 }
