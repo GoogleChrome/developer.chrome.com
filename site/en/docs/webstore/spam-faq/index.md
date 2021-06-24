@@ -92,7 +92,7 @@ test variant of the extension must be clearly labeled:
   so that users can find it. You may also wish to link from the production variant to any others so
   that users can find those too. (If you have a version that you want to test without allowing
   general access, you should not list it as public, but instead [publish to test
-  accounts](https://developer.chrome.com/webstore/publish#publishing-to-test-accounts).)
+  accounts](/docs/webstore/publish#publishing-to-test-accounts).)
 
 
 
