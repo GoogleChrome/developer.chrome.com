@@ -131,8 +131,8 @@ directory. It can also be updated dynamically to point to a different relative p
 
 {% Aside %}
 
-The [`action.onClicked`][event-onclicked] event will not be dispatched if the extension action has
-specified a popup to show on click on the current tab.
+The `action.onClicked` event will not be dispatched if the extension action has specified a popup to
+show on click on the current tab.
 
 {% endAside %}
 
@@ -166,8 +166,130 @@ By default, toolbar actions are enabled (clickable) on every tab. You can contro
 `action.onClicked` event is dispatched to your extension; it does not affect the action's presence
 in the toolbar.
 
+## Examples
+
+The following examples show some common for actions in an extension. For a more robust demonstation
+of action capabilities, see the [Action API example][sample-example] in the
+[chrome-extension-samples][repo-samples] repository.
+
+### Show a popup
+
+It's common for extensions to display a popup when the user clicks the extension's action. To
+implement this in your own extension, declare the popup in your `manifest.json` and specify the
+content Chrome should display in the popup.
+
+```json
+// manifest.json
+{
+  "name": "Action popup demo",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Click to view a popup",
+    "default_popup": "popup.html"
+  }
+}
+```
+
+```html
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html {
+      min-height: 5em;
+      min-width: 10em;
+      background: salmon;
+    }
+  </style>
+</head>
+<body>
+  <p>Hello, world!</p>
+</body>
+</html>
+```
+
+### Injecting a content script on click
+
+A common pattern in the extension ecosystem is for extensions to expose their primary functionality
+using the extension's action. This example is one such extension; when the user clicks the action,
+we will inject a content script into the current page and that content script will display an alert
+to verify that everything worked as expected.
+
+```json
+// manifest.json
+{
+  "name": "Action script injection demo",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Click to show an alert",
+  },
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
+```
+
+```js
+// background.js
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: {tabId: tab.id},
+    files: ['content.js']
+  });
+});
+```
+
+```js
+// content.js
+alert('Hello, world!');
+```
+
+### Emulating pageActions with declarativeContent
+
+The chrome.action API replaced the browserAction and pageAction APIs in Manifest V3. By default,
+actions are very similar to browser actions, but it is possible to emulate the behavior of a page
+action using the action API.
+
+This example shows how an extension author could implement background logic to (a) disable the
+action by default and (b) use [declarativeContent][api-declarative-content] to enable the action on
+specific sites.
+
+```js
+// background.js
+
+// Wrap in a onInstalled callback in order to avoid unnecessary work
+// every time the background script is run
+chrome.runtime.onInstalled.addListener(() => {
+  // Page actions are disabled by default and  enabled on select tabs
+  chrome.action.disable();
+
+  // Clear all rules to ensure only our expected rules are set
+  chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
+    // Declare a rule to enable the action on example.com pages
+    let exampleRule = {
+      conditions: [
+        new chrome.declarativeContent.PageStateMatcher({
+          pageUrl: {hostSuffix: '.example.com'},
+        })
+      ],
+      actions: [new chrome.declarativeContent.ShowAction()],
+    };
+
+    // Finally, apply our new set of rules
+    chrome.declarativeContent.onPageChanged.addRules([exampleRule]);
+  });
+});
+```
+
+[api-declarative-content]: /docs/extensions/reference/declarativeContent/
 [css-color]: https://developer.mozilla.org/en-US/docs/Web/CSS/color
 [doc-manifest]: /docs/extensions/mv3/manifest
 [event-onclicked]: /docs/extensions/reference/action/#event-onClicked
 [html-canvas]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement
 [html-offscreencanvas]: https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas
+[repo-samples]: https://github.com/GoogleChrome/chrome-extensions-samples
+[sample-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
