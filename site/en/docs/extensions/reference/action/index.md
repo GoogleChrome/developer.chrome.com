@@ -13,7 +13,7 @@ not specified.
 ## Manifest
 
 In order to use the `chrome.action` API, you need to specify a `"manifest_version"` of `3` or higher
-and include the `action` key in your [manifest file][manifest].
+and include the `action` key in your [manifest file][doc-manifest].
 
 ```json
 {
@@ -53,8 +53,8 @@ is ever changed, you don't need to do any more work to provide different icons.
 
 The icon can also be set programmatically using the `action.setIcon()` method. This can be used to
 specify a different image path or to provide a dynamically-generated icon using the [HTML canvas
-element][canvas], or, if setting from an extension service worker, the [offscreen
-canvas][offscreencanvas] API.
+element][html-canvas], or, if setting from an extension service worker, the [offscreen
+canvas][html-offscreencanvas] API.
 
 ```js
 const canvas = new OffscreenCanvas(16, 16);
@@ -99,7 +99,7 @@ Note that the badge has limited space, and should typically use four characters 
 The badge does not have a default taken from the manifest; you can set it programmatically with
 `action.setBadgeBackgroundColor()` and `action.setBadgeText()`. When setting the color, the values
 can be either an array of four integers between 0 and 255 that make up the RGBA color of the
-badge or a string with a CSS color value.
+badge or a string with a [CSS color][css-color] value.
 
 ```js
 chrome.action.setBadgeBackgroundColor(
@@ -131,8 +131,8 @@ directory. It can also be updated dynamically to point to a different relative p
 
 {% Aside %}
 
-The `action.onClicked` event will not be dispatched if the extension action has specified a popup to
-show on click on the current tab.
+The [`action.onClicked`][event-onclicked] event will not be dispatched if the extension action has
+specified a popup to show on click on the current tab.
 
 {% endAside %}
 
@@ -166,6 +166,8 @@ By default, toolbar actions are enabled (clickable) on every tab. You can contro
 `action.onClicked` event is dispatched to your extension; it does not affect the action's presence
 in the toolbar.
 
-[manifest]: /docs/extensions/mv3/manifest
-[canvas]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement
-[offscreencanvas]: https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas
+[css-color]: https://developer.mozilla.org/en-US/docs/Web/CSS/color
+[doc-manifest]: /docs/extensions/mv3/manifest
+[event-onclicked]: /docs/extensions/reference/action/#event-onClicked
+[html-canvas]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement
+[html-offscreencanvas]: https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas
