@@ -120,7 +120,7 @@ scripting attacks. If the extension only loads resources from itself register th
   "name": "Very Secure Extension",
   "version": "1.0",
   "description": "Example of a Secure Extension",
-  "content_security_policy": "default-src 'self'"
+  "content_security_policy": "default-src 'self'; frame-ancestors 'none';",
   "manifest_version": 2
 }
 ```
@@ -132,7 +132,7 @@ If the extension needs to include scripts from specific hosts, they can be inclu
   "name": "Very Secure Extension",
   "version": "1.0",
   "description": "Example of a Secure Extension",
-  "content_security_policy": "default-src 'self' https://extension.resource.com"
+  "content_security_policy": "default-src 'self' https://extension.resource.com; frame-ancestors 'none';",
   "manifest_version": 2
 }
 ```
