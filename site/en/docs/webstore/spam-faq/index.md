@@ -190,9 +190,9 @@ This also includes ratings and reviews coming from other developers or users tha
 with the publisher.
 
 
-<h2>Extension functionality</h2>
+## Extension functionality {: #functionality }
 
-### Can I publish an extension that directs users to my app?
+### Can I publish an extension that directs users to my app? {: #app-promotion }
 
 This is allowed only as an auxiliary feature within the overall extension functionality. It cannot
 be the single purpose of the extension.
