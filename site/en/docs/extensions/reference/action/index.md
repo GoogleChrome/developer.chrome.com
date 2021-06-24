@@ -63,7 +63,7 @@ context.clearRect(0, 0, 16, 16);
 context.fillStyle = '#00FF00';  // Green
 context.fillRect(0, 0, 16, 16);
 const imageData = context.getImageData(0, 0, 16, 16);
-chrome.action.setIcon({imageData: imageData}, () => { ... });
+chrome.action.setIcon({imageData: imageData}, () => { /* ... */ });
 ```
 
 {% Aside %}
@@ -103,12 +103,19 @@ badge or a string with a CSS color value.
 
 ```js
 chrome.action.setBadgeBackgroundColor(
-    {color: [0, 255, 0, 0]},  // Green
-    () => { ... });
+  {color: [0, 255, 0, 0]},  // Green
+  () => { /* ... */ },
+);
 
 chrome.action.setBadgeBackgroundColor(
-    {color: '#00FF00'}  // Also green
-    () => { ... });
+  {color: '#00FF00',  // Also green
+  () => { /* ... */ },
+);
+
+chrome.action.setBadgeBackgroundColor(
+  {color: 'green'},  // Also, also green
+  () => { /* ... */ },
+);
 ```
 
 ### Popup
@@ -137,11 +144,16 @@ tab using the `tabId` property in the various setting methods on the `action` AP
 set the badge text on a specific tab, you would do something like the following:
 
 ```js
-const tabId = getTabId();
-const tabMessage = getTabMessage(tabId);
+function getTabId() { /* ... */}
+function getTabBadge() { /* ... */}
+
 chrome.action.setBadgeText(
-    {text: tabMessage, tabId: tabId},
-    () => { ... });
+  {
+    text: getTabBadge(tabId),
+    tabId: getTabId(),
+  },
+  () => { ... }
+);
 ```
 
 If the `tabId` property is omitted, the setting is treated as a global setting. Tab-specific
