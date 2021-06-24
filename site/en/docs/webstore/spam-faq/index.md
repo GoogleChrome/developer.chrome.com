@@ -182,8 +182,7 @@ No. The offer of incentives to download a Chrome Web Store extension is not allo
 game should not award in-game bonuses for installing an extension. The features of your extension
 should be incentive enough.
 
-
-### Can I review or rate my own extension?
+### Can I review or rate my own extension? {: #self-review }
 
 No. Submitting a rating or review of your own extension, using your own account or other accounts,
 may be interpreted as an attempt to manipulate the extension's placement in the Chrome Web Store.
