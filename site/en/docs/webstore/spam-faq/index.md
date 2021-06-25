@@ -91,8 +91,7 @@ test variant of the extension must be clearly labeled:
   accounts](/docs/webstore/publish#publishing-to-test-accounts).)
 
 
-
-### Can developers appeal a repetitive content violation?
+### Can developers appeal a repetitive content violation? {: #appeal }
 
 You can appeal a repetitive content violation if you think it was flagged in error. To appeal, see
 the instructions included in the notification email—this is sent to the email address listed under
@@ -151,23 +150,21 @@ Do not mention one word or phrase repeatedly in the description even if it is th
 the extension. For example, an extension that provides puzzles should not call out the word _puzzle_
 more than five times in the description.
 
-
-### Can the extension's short description be repeated in the extension's description?
+### Can the extension's short description be repeated in the extension's description? {: #short-description-repetition }
 
 No, the short description included in the extension's manifest.json should not be repeated in its
 Chrome Web Store's description. This string is automatically included above the description in the
 Chrome Web Store listing.
 
 
-<h2>User ratings, reviews, and installs</h2>
+## User ratings, reviews, and installs {: #ratings-and-reviews }
 
-### What does it mean to manipulate placement?
+### What does it mean to manipulate placement? {: #manipulate-placement }
 
 Manipulating placement refers to artificially manipulating how the Chrome Web Store orders and
 displays an extension. Such practices are expressly forbidden.
 
-
-### Can I provide incentives for users to download my extension?
+### Can I provide incentives for users to download my extension? {: #download-incentives }
 
 No. The offer of incentives to download a Chrome Web Store extension is not allowed. For example, a
 game should not award in-game bonuses for installing an extension. The features of your extension
