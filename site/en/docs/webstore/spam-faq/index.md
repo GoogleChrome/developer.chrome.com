@@ -66,7 +66,6 @@ Extensions claiming these exceptions will be reviewed to ensure qualification, a
 enforcement. Developers found to be circumventing enforcement by abusing these exceptions will face
 account level suspension. 
 
-
 ### Does this apply to affiliated developers?
 
 We don't allow any developer or their affiliates to submit repetitive content. If related developers
