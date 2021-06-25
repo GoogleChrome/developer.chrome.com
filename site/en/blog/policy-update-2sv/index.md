@@ -1,5 +1,5 @@
 ---
-title: "Chrome Extensions: Clarifying Our Extension Policies for a Safer, More Consistent Web Store"
+title: "Chrome extensions: clarifying our extension policies for a safer, more consistent web store"
 description: >
   Updating our security requirements and further clarifying a few policies to keep the quality of
   extensions high, and the experience for developers consistent.
@@ -8,8 +8,8 @@ authors:
   - rebeccasoares
   - ackermanb
 date: 2021-06-25
-hero: image/WlD8wC6g8khYWPJUsQceQkhXSlv1/GVDuhpIli5DeYmbiPlqG.jpg
-alt: A woodworking hand plane.
+hero: image/SHhb2PDKzXTggPGAYpv8JgR81pX2/xfq9HeQEyYWIuxsuTQOh.jpg
+alt: The Roman aquaduct at Segovia, Spain
 tags:
   - extensions
 
@@ -21,7 +21,7 @@ practices, and named undesirable behaviors in key areas like security and trust.
 updating our security requirements and further clarifying a few policies to keep the quality of
 extensions high, and the experience for developers consistent:
 
-## Deceptive Installation Tactics Update
+## Deceptive installation tactics update
 
 * Offering multiple extensions as part of the same installation flow isn’t allowed. Similarly,
   extensions can't disruptively upsell other extensions or apps. Such behaviors violate our Deceptive
@@ -36,7 +36,7 @@ extensions high, and the experience for developers consistent:
 
 * Requiring unrelated user action to access promised functionality is not allowed. 
 
-## Spam and Repetitive Content
+## Spam and repetitive content
 
 * Multiple extensions with highly similar functionality, content, and user experiences are considered
   repetitive. If these extensions are each small in content volume, and provide the same single
@@ -44,14 +44,14 @@ extensions high, and the experience for developers consistent:
   publishing multiple wallpaper extensions, when these would be better served as a single extension,
   is prohibited. 
 
-## Two Step Verification
+## Two step verification
 
 * Developers are required to enable Two Step Verification for their Google Account in order to publish
   new extensions, or to update existing extensions. 
 
 Taken together, these policy clarifications help preserve the wide variety of extensions in the
 Chrome Web Store – from productivity tools to shopping helpers – while also respecting user choice
-and strengthening security. These policy clarifications will go into effect on July 30, 2021. After
+and strengthening security. These policy clarifications will go into effect on August 2, 2021. After
 that date, developers will no longer be able to publish new or update existing extensions without
 enabling Two Step Verification, and extensions in violation of these clarified policies may be
 removed from the Chrome Web Store and disabled.
@@ -59,3 +59,7 @@ removed from the Chrome Web Store and disabled.
 We’re grateful to both users and developers for helping us make the Chrome Web Store a safe and
 secure way to extend the browser. As always, we welcome your feedback.
 
+---
+
+Photo by <a href="https://unsplash.com/@mdehevia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marco De Hevia</a> on <a href="https://unsplash.com/@mdehevia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
