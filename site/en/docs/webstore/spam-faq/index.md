@@ -73,13 +73,10 @@ or publishers submit multiple extensions that provide duplicate experiences or f
 is a repetitive content violation. Competing extensions from unrelated developers or publishers are
 not considered repetitive content.
 
-
 ### Can I have both a test version and a production version of my extension?
 
 We do allow publication of separate test and production variants of an extension. In this case the
 test variant of the extension must be clearly labeled:
-
-
 
 * The description must clearly identify the purpose of the variant. For example, "THIS EXTENSION IS
   FOR BETA TESTING" or "THIS EXTENSION IS A PRE-DEVELOPMENTAL BUILD FOR TESTING PURPOSES".
@@ -105,7 +102,7 @@ your CWS developer account.
 
 Developers can only consolidate their user base before enforcement action is taken against their
 extensions, beginning on August 27, 2020. If you do not remove the repetitive extensions before this
-policy is enforced against them, you will lose your user base. 
+policy is enforced against them, you will lose your user base.
 
 If you have repetitively submitted extensions and want to retain your user base:
 
@@ -116,8 +113,7 @@ If you have repetitively submitted extensions and want to retain your user base:
 * Publish these updates
 * Remove all other instances from the Chrome Web Store in order to avoid enforcement action
   against your extensions. 
-
-### Will any of the repetitive extensions be retained?
+### Will any of the repetitive extensions be retained?  {: #retention }
 
 No. On August 27, 2020, the Chrome Web Store will begin removing repetitively submitted extensions.
 None of them will be retained. This is why you should make sure to bring your listings into
@@ -133,25 +129,23 @@ Yes. Extensions that provide duplicate experiences—and which differ only in lo
 policy. Developers should implement any language-specific code within a single extension.
 
 
-<h2>Keyword spam</h2>
+## Keyword spam {: #keyword-spam }
 
-### How many sites/keywords/brands can be listed in the metadata?
+### How many sites/keywords/brands can be listed in the metadata? {: #keyword-repetition }
 
 At most five instances of a keyword. Keywords must be relevant to the extension's purpose. Do not
 repeat brand names in the description. When listing supported websites or brands in the description,
 do not list more than five. To provide a longer list of brands or websites, provide a link that
 users can refer to or embed the list in one of the extension's promotional screenshots.
 
-
-### Can the extension description contain information about additional topics related to the extension?
+### Can the extension description contain information about additional topics related to the extension? {: #unrelated-information }
 
 No. Don't provide information that is not directly relevant to the extension. For example, sports
 team wallpaper should not include team stats and history in the description of the wallpaper
 extension. Similarly, an extension targeted at a particular industry should not include general
 information about that industry in its description. 
 
-
-### What is the maximum number of times the extension's primary purpose can be mentioned in the description?
+### What is the maximum number of times the extension's primary purpose can be mentioned in the description? {: #purpose-repetition }
 
 Do not mention one word or phrase repeatedly in the description even if it is the primary purpose of
 the extension. For example, an extension that provides puzzles should not call out the word _puzzle_
