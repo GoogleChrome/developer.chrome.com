@@ -118,7 +118,6 @@ If you have repetitively submitted extensions and want to retain your user base:
 * Remove all other instances from the Chrome Web Store in order to avoid enforcement action
   against your extensions. 
 
-
 ### Will any of the repetitive extensions be retained?
 
 No. On August 27, 2020, the Chrome Web Store will begin removing repetitively submitted extensions.
