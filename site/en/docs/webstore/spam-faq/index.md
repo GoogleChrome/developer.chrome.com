@@ -10,7 +10,7 @@ This document provides answers to questions about how the Chrome Web Store spam 
 
 ## Repetitive content {: #repetitive-content }
 
-### What is a repetitive content violation?
+### What is a repetitive content violation? {: #definition }
 
 Our developer policy prohibits the [submission of repetitive
 content](/docs/webstore/program_policies#spam). In general, this means you
@@ -73,7 +73,7 @@ or publishers submit multiple extensions that provide duplicate experiences or f
 is a repetitive content violation. Competing extensions from unrelated developers or publishers are
 not considered repetitive content.
 
-### Can I have both a test version and a production version of my extension?
+### Can I have both a test version and a production version of my extension? {: #test-version }
 
 We do allow publication of separate test and production variants of an extension. In this case the
 test variant of the extension must be clearly labeled:
