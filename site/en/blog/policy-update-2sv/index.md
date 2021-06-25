@@ -23,7 +23,7 @@ extensions high, and the experience for developers consistent:
 
 ## Deceptive installation tactics update
 
-* Offering multiple extensions as part of the same installation flow isn’t allowed. Similarly,
+* Offering multiple extensions as part of the same installation flow isn't allowed. Similarly,
   extensions can't disruptively upsell other extensions or apps. Such behaviors violate our Deceptive
   Installation Tactics and Notification Abuse policies.
 
@@ -50,13 +50,13 @@ extensions high, and the experience for developers consistent:
   new extensions, or to update existing extensions. 
 
 Taken together, these policy clarifications help preserve the wide variety of extensions in the
-Chrome Web Store – from productivity tools to shopping helpers – while also respecting user choice
+Chrome Web Store &mdash; from productivity tools to shopping helpers &mdash; while also respecting user choice
 and strengthening security. These policy clarifications will go into effect on August 2, 2021. After
 that date, developers will no longer be able to publish new or update existing extensions without
 enabling Two Step Verification, and extensions in violation of these clarified policies may be
 removed from the Chrome Web Store and disabled.
 
-We’re grateful to both users and developers for helping us make the Chrome Web Store a safe and
+We're grateful to both users and developers for helping us make the Chrome Web Store a safe and
 secure way to extend the browser. As always, we welcome your feedback.
 
 ---
