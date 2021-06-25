@@ -118,8 +118,10 @@ No. On August 27, 2020, the Chrome Web Store will begin removing repetitively su
 None of them will be retained. This is why you should make sure to bring your listings into
 compliance and remove duplicates before August 27, 2020.
 
-Will extensions that provide duplicate experiences, but that are geo-focused & localised (language
-specific) be considered a violation of repetitive content policy? For example:
+### Will extensions that provide duplicate experiences, but that are geo-focused & localised (language
+specific) be considered a violation of repetitive content policy? {: #localization }
+
+For example:
 
  - Product ABC - UK
  - Product ABC - Germany
