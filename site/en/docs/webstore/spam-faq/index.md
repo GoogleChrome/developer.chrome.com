@@ -102,8 +102,7 @@ You can appeal a repetitive content violation if you think it was flagged in err
 the instructions included in the notification email—this is sent to the email address listed under
 your CWS developer account.
 
-
-### How can developers consolidate their user base?
+### How can developers consolidate their user base? {: #consolidation }
 
 Developers can only consolidate their user base before enforcement action is taken against their
 extensions, beginning on August 27, 2020. If you do not remove the repetitive extensions before this
