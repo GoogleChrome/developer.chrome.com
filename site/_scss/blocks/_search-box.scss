@@ -89,8 +89,12 @@ search-box[active] {
   --overlay-background-color: var(--color-primary);
   @extend %overlay;
   align-items: center;
-  display: inline-flex;
   text-decoration: none;
+
+  @include media-query('md') {
+    display: inline-flex;
+    flex-direction: row;
+  }
 }
 
 .search-box__link[aria-selected='true']::before {
@@ -106,9 +110,9 @@ search-box[active] {
 }
 
 .search-box__thumbnail {
-  margin-left: get-size(200);
+  margin: get-size(300) auto 0 auto;
 
   @include media-query('md') {
-    margin-left: get-size(300);
+    margin: 0 0 0 get-size(300);
   }
 }
