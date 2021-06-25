@@ -50,9 +50,9 @@ Violent or Bullying Behavior:
     group of people.
   - Content whose predominant purpose is to single out another person for abuse, malicious attack, or
     ridicule. Content that results in the unwanted sexualization of a person, including malicious
-    claims about a person's sexual activities, sexual orientation, or gender identity.\* A series of
-    posts/comments/photos that, taken together, clearly have the primary intention of harassment, even
-    if each individual piece of content is not severe.
+    claims about a person's sexual activities, sexual orientation, or gender identity.
+  - A series of posts/comments/photos that, taken together, clearly have the primary intention of
+    harassment, even if each individual piece of content is not severe.
 
 Hate Speech:
 

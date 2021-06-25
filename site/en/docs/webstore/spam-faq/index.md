@@ -33,7 +33,7 @@ the metadata or code are not identical. Some examples of repetitive content incl
 Multiple extensions that provide different user experiences are not considered repetitive content.
 
 
-### Are all extensions subject to the repetitive content policy?
+### Are all extensions subject to the repetitive content policy? {: #breadth }
 
 While all extensions are checked by the CWS review team for violations of this policy, we will allow
 certain valid use cases that require repetitive content. These allowed exceptions include:
@@ -54,7 +54,7 @@ exception in the extension's description and the single purpose field. For examp
 
 
 *   "THIS EXTENSION IS LIMITED TO [HOST NAME] ONLY"
-*   "THIS EXTENSION IS PUBLISHED TO [DOMAIN NAME] ONLY'
+*   "THIS EXTENSION IS PUBLISHED TO [DOMAIN NAME] ONLY"
 *   "THIS IS A WHITE LABEL ENTERPRISE EXTENSION FOR [CUSTOMER NAME]"
 *   "THIS EXTENSIONS WORKS WITH THE SPECIFIC VERSION [VERSION NAME] OF THE DESKTOP APPLICATION  [APPLICATION NAME]"
 
@@ -66,7 +66,7 @@ Extensions claiming these exceptions will be reviewed to ensure qualification, a
 enforcement. Developers found to be circumventing enforcement by abusing these exceptions will face
 account level suspension. 
 
-### Does this apply to affiliated developers?
+### Does this apply to affiliated developers? {: #affiliates }
 
 We don't allow any developer or their affiliates to submit repetitive content. If related developers
 or publishers submit multiple extensions that provide duplicate experiences or functionality, that
@@ -118,8 +118,7 @@ No. On August 27, 2020, the Chrome Web Store will begin removing repetitively su
 None of them will be retained. This is why you should make sure to bring your listings into
 compliance and remove duplicates before August 27, 2020.
 
-### Will extensions that provide duplicate experiences, but that are geo-focused & localised (language
-specific) be considered a violation of repetitive content policy? {: #localization }
+### Will extensions that provide duplicate experiences, but that are geo-focused & localised (language specific) be considered a violation of repetitive content policy? {: #localization }
 
 For example:
 
