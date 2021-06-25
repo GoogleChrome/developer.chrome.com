@@ -189,7 +189,6 @@ may be interpreted as an attempt to manipulate the extension's placement in the 
 This also includes ratings and reviews coming from other developers or users that are affiliated
 with the publisher.
 
-
 ## Extension functionality {: #functionality }
 
 ### Can I publish an extension that directs users to my app? {: #app-promotion }
