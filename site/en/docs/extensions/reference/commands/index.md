@@ -23,11 +23,15 @@ or Ctrl, but is not required. Modifiers (such as Ctrl) can not be used in combin
 Keys. Tab key was removed from list of supported keys in Chrome version 33 and above for
 accessibility reasons.
 
-\* Please note that on Mac 'Ctrl' is automatically converted to 'Command'. If you want 'Ctrl'
-instead, please specify 'MacCtrl' under `"mac"`. Specifying 'MacCtrl' under `"default"` will cause
-the extension to be uninstallable.
+{% Aside %}
 
-\* Additionally, on Chrome OS, you can specify 'Search' as a modifier.
+Please note that on Mac 'Ctrl' is automatically converted to 'Command'. If you want 'Ctrl' instead,
+please specify 'MacCtrl' under `"mac"`. Specifying 'MacCtrl' under `"default"` will cause the
+extension to be uninstallable.
+
+Additionally, on Chrome OS, you can specify 'Search' as a modifier.
+
+{% endAside %}
 
 Certain Chrome shortcuts (e.g. window management) always take priority over Extension Command
 shortcuts and can not be overwritten.
@@ -65,7 +69,7 @@ shortcuts and can not be overwritten.
 ```
 
 In your background page, you can bind a handler to each of the commands defined in the manifest
-(except for '\_execute_browser_action' and '\_execute_page_action') via onCommand.addListener. For
+(except for `\_execute_browser_action` and `\_execute_page_action`) via onCommand.addListener. For
 example:
 
 ```js
