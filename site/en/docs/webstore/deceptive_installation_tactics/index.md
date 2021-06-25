@@ -14,7 +14,6 @@ how they market their extensions. Unfortunately, we have seen instances of devel
 landing pages, bundled offers, and abusive design patterns to mislead users into installing an
 extension they may not want or need.
 
-
 ## What does a compliant "disclosure" consist of?
 
 A compliant disclosure explains to the user what they can expect from your Chrome extension.
@@ -62,9 +61,9 @@ to the primary functionality of the extension, is considered to be an "unrelated
 Unrelated user action includes, but is not limited to, requiring users to:
 
 *   Install another app, extension, or other software that is not necessary for the core function of
-    the extension 
+    the extension
 
-*   Interact with ads 
+*   Interact with ads
 
 *   Submit reviews
 
@@ -74,10 +73,9 @@ The following are considered to be related user actions and would be considered 
 
 ## Can I bundle multiple extensions or offers in the same installation flow?
 
-No. Every extension must have its own, distinct installation flow.  
+No. Every extension must have its own, distinct installation flow.
 
-
-## What are the requirements for Chrome Web Store listing windows? 
+## What are the requirements for Chrome Web Store listing windows?
 
 The Chrome listing includes essential information about the extension that the Chrome Web Store is
 able to review. The window should be sized such that the user can easily review all the content on
@@ -88,7 +86,6 @@ To comply with this requirement, the referrer page must ensure that the listing 
 than the size of the referrer, and does not have the effect of withholding or hiding extension
 metadata from the user. Referrer pages cannot utilize distracting elements, such as animations or
 audio, to interrupt the installation flow.
-
 
 ## I comply with Ads policies, do I comply with the Chrome Web Store policy?
 
@@ -104,11 +101,10 @@ network](https://support.google.com/adspolicy/answer/6020954) does violate Chrom
 
 Extensions must be marketed responsibly. It is up to the publishing entity to ensure that all parts
 of your extension and all installation flows are compliant with all Chrome Web Store Developer
-Program policies.  We will remove extensions from the Chrome Web Store irrespective of whether the
+Program policies. We will remove extensions from the Chrome Web Store irrespective of whether the
 developer or its contractors or affiliates engage in deceptive installation tactics. Repeated abuse
 may additionally result in the permanent termination of your publisher account and possibly the
-termination of any associated publisher account(s). 
-
+termination of any associated publisher account(s).
 
 ## What happens to an extension found engaging in deceptive installation tactics?
 
@@ -130,9 +126,7 @@ compliance per our program policies. Repeated warnings may result in removal of 
 the Chrome Web Store, the disabling of your extension's user base, the termination of your publisher
 account, and possibly the termination of any associated publisher account(s).
 
-
 ## Is there a way to appeal this decision?
 
 Yes, appeals can be made through the instructions included in the notification email you will
 receive to the email address listed under your CWS developer account.
-
