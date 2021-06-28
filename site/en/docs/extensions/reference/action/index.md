@@ -214,7 +214,7 @@ content that Chrome should display in the popup.
 
 A common pattern for extensions is to expose their primary functionality using the extension's
 action. The example below demonstrates this pattern. When the user clicks the action, the extension
-injects a content script into the current page. That content script then displays an alert to verify
+injects a content script into the current page. The content script then displays an alert to verify
 that everything worked as expected.
 
 ```json
@@ -260,10 +260,10 @@ use [declarativeContent][api-declarative-content] to enable the action on specif
 ```js
 // background.js
 
-// Wrap in a onInstalled callback in order to avoid unnecessary work
+// Wrap in an onInstalled callback in order to avoid unnecessary work
 // every time the background script is run
 chrome.runtime.onInstalled.addListener(() => {
-  // Page actions are disabled by default and  enabled on select tabs
+  // Page actions are disabled by default and enabled on select tabs
   chrome.action.disable();
 
   // Clear all rules to ensure only our expected rules are set
@@ -278,8 +278,9 @@ chrome.runtime.onInstalled.addListener(() => {
       actions: [new chrome.declarativeContent.ShowAction()],
     };
 
-    // Finally, apply our new set of rules
-    chrome.declarativeContent.onPageChanged.addRules([exampleRule]);
+    // Finally, apply our new array of rules
+    let rules = [exampleRule];
+    chrome.declarativeContent.onPageChanged.addRules(rules);
   });
 });
 ```
