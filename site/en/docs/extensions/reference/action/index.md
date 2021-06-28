@@ -168,15 +168,15 @@ in the toolbar.
 
 ## Examples
 
-The following examples show some common for actions in an extension. For a more robust demonstation
-of action capabilities, see the [Action API example][sample-example] in the
+The following examples show some common ways that actions are used in extensions. For a more robust
+demonstration of action capabilities, see the [Action API example][sample-example] in the
 [chrome-extension-samples][repo-samples] repository.
 
 ### Show a popup
 
-It's common for extensions to display a popup when the user clicks the extension's action. To
+It's common for an extension to display a popup when the user clicks the extension's action. To
 implement this in your own extension, declare the popup in your `manifest.json` and specify the
-content Chrome should display in the popup.
+content that Chrome should display in the popup.
 
 ```json
 // manifest.json
@@ -212,10 +212,10 @@ content Chrome should display in the popup.
 
 ### Injecting a content script on click
 
-A common pattern in the extension ecosystem is for extensions to expose their primary functionality
-using the extension's action. This example is one such extension; when the user clicks the action,
-we will inject a content script into the current page and that content script will display an alert
-to verify that everything worked as expected.
+A common pattern for extensions is to expose their primary functionality using the extension's
+action. The example below demonstrates this pattern. When the user clicks the action, the extension
+injects a content script into the current page. That content script then displays an alert to verify
+that everything worked as expected.
 
 ```json
 // manifest.json
@@ -251,13 +251,12 @@ alert('Hello, world!');
 ### Emulating pageActions with declarativeContent
 
 The chrome.action API replaced the browserAction and pageAction APIs in Manifest V3. By default,
-actions are very similar to browser actions, but it is possible to emulate the behavior of a page
-action using the action API.
+actions are similar to browser actions, but it is possible to emulate the behavior of a page action
+using the action API.
 
-This example shows how an extension author could implement background logic to (a) disable the
-action by default and (b) use [declarativeContent][api-declarative-content] to enable the action on
-specific sites.
-
+This example shows how an extension's background logic can (a) disable the action by default and (b)
+use [declarativeContent][api-declarative-content] to enable the action on specific sites.
+s
 ```js
 // background.js
 
