@@ -667,6 +667,22 @@
     "github": "maudnals",
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/fJP5RRP6pcCnfctkaQhu.jpg"
   },
+  "beaufortfrancois": {
+    "name": {
+      "given": "François",
+      "family": "Beaufort"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "FR",
+    "github": "beaufortfrancois",
+    "descriptions": {
+      "en": "Dives into Chromium source code"
+    },
+    "image": "image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8SV7KI2QNVXph2L5Cga2.jpeg"
+  },
   "atotic": {
     "name": {
       "given": "Aleks",
