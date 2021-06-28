@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2020-07-15
+updated: 2020-06-28
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
@@ -152,14 +152,13 @@ if you simply want to change your rollout time.
 
 [1]: /docs/webstore/update
 [2]: /docs/webstore/group-publishers
-[3]: /docs/extensions/mv2/overview/#hello-extensions
-[4]: /docs/extensions/mv2/overview#files
-[5]: /docs/extensions/mv2/manifest/icons
-[6]: /docs/extensions/mv2/overview#files
+[3]: /docs/extensions/mv3/overview/#hello-extensions
+[4]: /docs/extensions/mv3/overview#files
+[5]: /docs/extensions/mv3/manifest/icons
+[6]: /docs/extensions/mv3/overview#files
 [7]: /docs/extensions/reference/tabs#version
 [8]: https://developers.google.com/native-client/
-[9]:
-  /native-client/devguide/distributing#reducing-the-size-of-the-user-download-package
+[9]: /native-client/devguide/distributing#reducing-the-size-of-the-user-download-package
 [10]: /docs/webstore/register
 [11]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [12]: https://chrome.google.com/webstore/devconsole
