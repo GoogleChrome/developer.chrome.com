@@ -9,7 +9,13 @@ description: >
 
 This page describes how you publish a new extension or theme ("item") to the Chrome Web Store.
 
-<div class="aside aside--note">To publish updates to an existing item, or to update the percent rollout, see <a href="/webstore/update">Updating your Chrome Web Store item</a>. To learn about group publishers, see <a href="/webstore/group-publishers">Set up group publishing</a>.</div>
+{% Aside 'note' %}
+
+To publish updates to an existing item, or to update the percent rollout, see [Updating your Chrome
+Web Store item](/webstore/update). To learn about group publishers, see [Set up group
+publishing](/webstore/group-publishers).
+
+{% endAside %}
 
 Before you publish an extension, you need to load it locally and test that it works, as described in
 [Hello extensions][3]. Make sure that it runs correctly and that all its functionality works as you
