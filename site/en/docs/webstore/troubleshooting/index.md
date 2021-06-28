@@ -767,6 +767,7 @@ Extensions must be marketed responsibly. Extensions that use or benefit from dec
 installation tactics will be removed from the Chrome Web Store.
 
 Deceptive installation tactics include:
+
 - Unclear or inconspicuous disclosures on marketing collateral preceding the Chrome Web Store
   Product listing.
 - Misleading interactive elements as part of your distribution flow. This includes misleading
