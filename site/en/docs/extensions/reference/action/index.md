@@ -250,13 +250,13 @@ alert('Hello, world!');
 
 ### Emulating pageActions with declarativeContent
 
-The chrome.action API replaced the browserAction and pageAction APIs in Manifest V3. By default,
-actions are similar to browser actions, but it is possible to emulate the behavior of a page action
-using the action API.
+The chrome.action API replaced the [browserAction][api-browser-action] and
+[pageAction][api-page-action] APIs in Manifest V3. By default, actions are similar to browser
+actions, but it is possible to emulate the behavior of a page action using the action API.
 
 This example shows how an extension's background logic can (a) disable the action by default and (b)
 use [declarativeContent][api-declarative-content] to enable the action on specific sites.
-s
+
 ```js
 // background.js
 
@@ -284,6 +284,8 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 ```
 
+[api-browser-action]: /docs/extensions/reference/browserAction/
+[api-page-action]: /docs/extensions/reference/pageAction/
 [api-declarative-content]: /docs/extensions/reference/declarativeContent/
 [css-color]: https://developer.mozilla.org/en-US/docs/Web/CSS/color
 [doc-manifest]: /docs/extensions/mv3/manifest
