@@ -2,7 +2,7 @@
 title: "Extension actions in Manifest V3"
 description: >
   Chrome extensions had Browser and Page Actions APIs for years, but Manifest V3 replaced both with
-  a generic Actions API. This post explores the history of these APIs and what has changed in 
+  a generic Actions API. This post explores the history of these APIs and what has changed in
   Manifest V3.
 layout: "layouts/blog-post.njk"
 authors:
@@ -33,7 +33,7 @@ to trigger extension functionality on any page. Page actions, on the other hand,
 "represent actions that can be taken on the current page, but that aren't applicable to all pages"
 ([source][archive-page-action]).
 
-{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/O88qWNZJhzQMMyuvvVaX.png", alt="A page action (left) appears in the omnibox, indicating the extension can do something on this page. A browser action (right) is always visible.", width="464", height="154" %}
+{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/O88qWNZJhzQMMyuvvVaX.png", alt="A page action (left) appears in the omnibox, indicating the extension can do something on this page. A browser action (right) is always visible.", width="464", height="154", class="screenshot" %}
 
 In other words, browser actions gave extension developers a persistent UI surface in the browser
 while page actions appeared only when the extension could do something useful on the current page.
@@ -45,7 +45,7 @@ Roughly six years later, Chrome 49 introduced a new UI paradigm for extensions. 
 users understand what extensions they had, Chrome began displaying all active extensions to the
 right of the omnibox. Users could "overflow" extensions into the Chrome menu if they wanted.
 
-{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/O8NH8a5kiB22bCWcfNzV.png", alt="Hidden extension icons would appear in the Chrome menu.", width="360", height="214" %}
+{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/O8NH8a5kiB22bCWcfNzV.png", alt="Hidden extension icons would appear in the Chrome menu.", width="360", height="214", class="screenshot" %}
 
 In order to display an icon for each extension, this update also ushered in two important changes to
 how extensions behaved in Chrome's UI. First, all extensions began displaying icons in the toolbar.
@@ -53,7 +53,7 @@ If the extension didn't have an icon, Chrome would autogenerate one for it. Seco
 moved into the toolbar alongside browser actions and were given an affordance to differentiate
 between their "show" and "hide" states.
 
-{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/reWdHYiE6fPdQFj1uyfS.png", alt="A disabled page action (left) is rendered a grayscale image in the toolbar while an enabled one (right) appears with full color.", width="374", height="94" %}
+{% Img src="image/WlD8wC6g8khYWPJUsQceQkhXSlv1/reWdHYiE6fPdQFj1uyfS.png", alt="A disabled page action (left) is rendered a grayscale image in the toolbar while an enabled one (right) appears with full color.", width="374", height="94", class="screenshot" %}
 
 This change allowed page action extensions to continue working as expected, but it also diminished
 the role of page actions over time. One of the effects of the UI redesign was that page actions were
