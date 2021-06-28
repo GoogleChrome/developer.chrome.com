@@ -1,0 +1,6 @@
+type: info
+text: 'PWA Summit: a conference to help everyone succeed with PWAs is happening Oct 6 & 7. Apply now to submit a talk.'
+actions:
+  - text: Apply
+    href: https://pwasummit.org
+  - text: Dismiss
