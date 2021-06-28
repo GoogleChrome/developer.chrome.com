@@ -6,12 +6,14 @@ description: >
 subhead: >
   Ready for the next generation of web content
 date: 2021-06-22
-updated: 2021-06-23
+updated: 2021-06-28
 authors:
   - chrishtr
 alt: >
   A pile of different devices.
 ---
+
+_Illustrations by Una Kravets._
 
 I'm Chris Harrelson,
 the engineering lead for Rendering (transforming HTML and CSS to pixels) in Blink.
