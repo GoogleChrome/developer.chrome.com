@@ -12,8 +12,8 @@ This page describes how you publish a new extension or theme ("item") to the Chr
 {% Aside 'note' %}
 
 To publish updates to an existing item, or to update the percent rollout, see [Updating your Chrome
-Web Store item](/webstore/update). To learn about group publishers, see [Set up group
-publishing](/webstore/group-publishers).
+Web Store item](/docs/webstore/update). To learn about group publishers, see [Set up group
+publishing](/docs/webstore/group-publishers).
 
 {% endAside %}
 
