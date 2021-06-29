@@ -276,7 +276,7 @@ the very first web API that allows JavaScript (or WebAssembly!)
 to render a single web page document from multiple threads.
 - [Container queries](https://web.dev/new-responsive/): allows a single component to responsively lay itself out,
 unblocking a whole universe of plug-and-play components (currently an experimental implementation).
-- [Origin isolation](https://web.dev/why-coop-coep/): allows sites to opt into more performance isolation between iframes.
+- [Origin isolation](https://web.dev/origin-agent-cluster/): allows sites to opt into more performance isolation between iframes.
 - Off-main-thread [paint worklets](https://web.dev/houdini-how/): gives developers a way to extend how elements are painted,
 with code that runs on the compositor thread.
 
@@ -553,3 +553,5 @@ how it came to be, and how it works.
 _Devices photo by
 [Eirik Solheim](https://unsplash.com/@eirikso?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on
 [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_
+
+Illustrations by Una Kravets.
