@@ -33,16 +33,15 @@ We'll go into detail about each step below.
 
 ## Create your item's zip file {: #create-your-items-zip-file }
 
-To upload your item, you need to create a ZIP file that contains the [files for your extension][4].
-The item's manifest file must be included, and it must specify at least the following fields:
+To upload your item, you need to create a ZIP file that contains the files for your extension. The
+item's manifest file must be included, and it must specify at least the following fields:
 
 - `"name":`—Displayed in the Chrome Web Store and in the Chrome browser
 - `"version":`—The version of the metadata, incremented
 - `"icons":`—An array specifying the [icons][5] your item uses
 
 Your zip file may also include other images and any files that the item requires. The contents of
-the ZIP file and manifest depend on the specifics of your item; see [Extension files][6] for more
-details.
+the ZIP file and manifest depend on the specifics of your item.
 
 **Tips:**
 
@@ -153,12 +152,10 @@ if you simply want to change your rollout time.
 [1]: /docs/webstore/update
 [2]: /docs/webstore/group-publishers
 [3]: /docs/extensions/mv3/overview/#hello-extensions
-[4]: /docs/extensions/mv3/overview#files
 [5]: /docs/extensions/mv3/manifest/icons
-[6]: /docs/extensions/mv3/overview#files
-[7]: /docs/extensions/reference/tabs#version
-[8]: https://developers.google.com/native-client/
-[9]: /native-client/devguide/distributing#reducing-the-size-of-the-user-download-package
+[7]: /docs/extensions/mv3/manifest/version
+[8]: /docs/native-client/
+[9]: /docs/native-client/devguide/distributing/#reducing-the-size-of-the-user-download-package
 [10]: /docs/webstore/register
 [11]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [12]: https://chrome.google.com/webstore/devconsole
