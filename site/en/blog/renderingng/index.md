@@ -99,7 +99,7 @@ width="800", height="365" %}
 
 As with a real-life pyramid, each level provides a necessarily-solid foundation for the level above.
 
-### Reliability
+## Reliability
 
 {% Img
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/xzpN0AsbF2yocQSDXk7v.jpg",
@@ -180,7 +180,7 @@ a whole lot easier if the code is easy to understand,
 and designed in a way that minimizes the likelihood of bugs.
 We'll have a lot more to say about RenderingNG's software design in subsequent blog posts.
 
-### Scalable performance
+## Scalable performance
 
 Achieving great performance—across the dimensions of speed, memory, and power use—
 is the next most important aspect of RenderingNG.
