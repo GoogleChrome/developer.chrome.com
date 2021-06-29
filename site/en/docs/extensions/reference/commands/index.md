@@ -48,19 +48,12 @@ shortcuts and can not be overwritten.
       },
       "description": "Toggle feature foo"
     },
-    "_execute_browser_action": {
+    "_execute_action": {
       "suggested_key": {
         "windows": "Ctrl+Shift+Y",
         "mac": "Command+Shift+Y",
         "chromeos": "Ctrl+Shift+U",
         "linux": "Ctrl+Shift+J"
-      }
-    },
-    "_execute_page_action": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+E",
-        "windows": "Alt+Shift+P",
-        "mac": "Alt+Shift+P"
       }
     }
   },
@@ -69,8 +62,8 @@ shortcuts and can not be overwritten.
 ```
 
 In your background page, you can bind a handler to each of the commands defined in the manifest
-(except for `\_execute_browser_action` and `\_execute_page_action`) via onCommand.addListener. For
-example:
+(except for `\_execute_action`, `\_execute_browser_action`, and `\_execute_page_action`) via
+onCommand.addListener. For example:
 
 ```js
 chrome.commands.onCommand.addListener(function(command) {
@@ -78,10 +71,10 @@ chrome.commands.onCommand.addListener(function(command) {
 });
 ```
 
-The '\_execute_browser_action' and '\_execute_page_action' commands are reserved for the action of
-opening your extension's popups. They won't normally generate events that you can handle. If you
-need to take action based on your popup opening, consider listening for an 'onDomReady' event inside
-your popup's code.
+The `\_execute_action`, `\_execute_browser_action`, and `\_execute_page_action` commands are
+reserved for the action of opening your extension's popups. They won't normally generate events that
+you can handle. If you need to take action based on your popup opening, consider listening for an
+'onDomReady' event inside your popup's code.
 
 ## Scope
 
@@ -114,3 +107,133 @@ Example:
   ...
 }
 ```
+
+## Examples
+
+The following examples show
+
+### Basic command
+
+Commands allow extensions to map logic to keyboard shortcuts that can be invoked by the user. At
+it's most basic, a command only requires a command declaration in the extension's manifest and a
+listener registration as shown below.
+
+```json
+// manifest.json
+{
+  "name": "Command demo - basic",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "inject-script": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Inject a script on the page"
+    }
+  }
+}
+```
+
+```js
+// background.js
+chrome.commands.onCommand.addListener((command) => {
+  console.log(`Command "${command.name}" triggered`);
+});
+```
+
+### Action command
+
+As described in the [Usage][usage] section above, a command can also be mapped to the extension's
+action (Manifest V3), browser action (Manifest V2), or page action (Manifest V2). The below example
+programmatically injects a content script that shows an alert on the current page in response to the
+user either clicking the extension's action or triggering a keyboard shortcut.
+
+```json
+// manifest.json
+{
+  "name": "Commands demo - action invocation",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "action": {},
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+U",
+        "mac": "Command+U"
+      }
+    }
+  }
+}
+```
+
+```js
+// background.js
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: {tabId: tab.id},
+    func: contentScriptFunc,
+    args: ['action'],
+  });
+});
+
+function contentScriptFunc(name) {
+  alert(`"${name}" executed`);
+}
+
+// This callback WILL NOT be called for "_execute_action"
+chrome.commands.onCommand.addListener((command) => {
+  console.log(`Command "${command}" called`);
+});
+```
+
+### Verify commands registered
+
+If an extension attempts to register a shortcut that is already in use used by another extension,
+the second extension's shortcut will not register as expected. Developers can provide a more robust
+end user experience by anticipating this possibility and checking for collisions at install time.
+
+{% Aside %}
+
+`\_execute_action`, `\_execute_browser_action`, and `\_execute_page_action` will not appear in the
+list of commands returned by `command.getAll()`.
+
+{% endAside %}
+
+```js
+// background.js
+chrome.runtime.onInstalled.addListener((reason) => {
+  if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
+    checkCommandShortcuts();
+  }
+});
+
+// Only use this function during the initial install phase. After
+// installation the user may have intentionally unassigned commands.
+function checkCommandShortcuts() {
+  chrome.commands.getAll((commands) => {
+    let errors = [];
+
+    for (let {name, shortcut} of commands) {
+      if (shortcut === '') {
+        errors.push(name);
+      }
+    }
+
+    if (errors.length > 0) {
+      // Notify the user that shortcuts for one or more commands were not
+      // registered as expected & provide guidance on how to fix this.
+    }
+  });
+}
+```
+
+[usage]: #usage
