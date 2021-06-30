@@ -69,8 +69,8 @@ distribution page of the developer console:
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/SmrqQb3mLZaYj0O3Kdiv.png", alt="Screenshot showing
 the domain publishing option in the developer console", width="643", height="200", class="screenshot" %}
 
-See [Enterprise publishing options][domain-publishing-overview] for an overview of this and other enterprise extension topics,
-along with links to other enterprise extension documentation.
+See [Enterprise publishing options][domain-publishing-overview] for an overview of this and other
+enterprise extension topics, along with links to other enterprise extension documentation.
 
 ## Setting the geographic distribution {: #setting-the-geographic-distribution }
 
