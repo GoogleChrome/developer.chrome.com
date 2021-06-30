@@ -71,7 +71,7 @@ Modifier key strings
 
 ### Key combination requirements {: #key-combinations }
 
-- Extension Command shortcuts must include either `Ctrl`\* or `Alt`.
+- Extension command shortcuts must include either `Ctrl`\* or `Alt`.
 
     - Modifiers **cannot** be used in combination with Media Keys.
 
@@ -87,7 +87,7 @@ Modifier key strings
 - `Search` is an optional modifier exclusive to Chrome OS.
 
 - Certain operating system and Chrome shortcuts (e.g. window management) always take priority over
-  Extension Command shortcuts and can not be overwritten.
+  Extension command shortcuts and can not be overwritten.
 
 {% Aside 'note' %}
 
@@ -144,22 +144,22 @@ If you need to take action based on your popup opening, consider listening for a
 
 ## Scope
 
-By default, Commands are scoped to the Chrome browser. This means that when the browser does not
-have focus, Command shortcuts are inactive. Beginning in Chrome 35, extension developers can
-optionally mark a Command as "global". Global Commands also work while Chrome *does not* have focus.
+By default, commands are scoped to the Chrome browser. This means that when the browser does not
+have focus, command shortcuts are inactive. Beginning in Chrome 35, extension developers can
+optionally mark a command as "global". Global commands also work while Chrome *does not* have focus.
 
 {% Aside %}
 
-Chrome OS does not support global Commands.
+Chrome OS does not support global commands.
 
 {% endAside %}
 
-Keyboard shortcut suggestions for global Commands are limited to `Ctrl+Shift+[0..9]`. This is a
+Keyboard shortcut suggestions for global commands are limited to `Ctrl+Shift+[0..9]`. This is a
 protective measure to minimize the risk of overriding shortcuts in other applications since if, for
 example, `Alt+P` were to be allowed as global, the keyboard shortcut for opening a print dialog
 might not work in other applications.
 
-End users are free to remap global Commands to their preferred key combination using the UI exposed
+End users are free to remap global commands to their preferred key combination using the UI exposed
 at `chrome://extensions/shortcuts`.
 
 Example:
