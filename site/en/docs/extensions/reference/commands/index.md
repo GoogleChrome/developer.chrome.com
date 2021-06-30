@@ -71,11 +71,11 @@ Modifier key strings
 
 ### Key combination requirements {: #key-combinations }
 
-- Extension command shortcuts must include either `Ctrl`\* or `Alt`.
+- Extension command shortcuts must include either `Ctrl` or `Alt`.
 
     - Modifiers **cannot** be used in combination with Media Keys.
 
-- \* On macOS `Ctrl` is automatically converted into `Command`.
+- On macOS `Ctrl` is automatically converted into `Command`.
 
     - To use the Control key on macOS, replace `Ctrl` with `MacCtrl` when defining the `"mac"`
       shortcut.
