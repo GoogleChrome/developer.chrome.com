@@ -541,6 +541,49 @@ It began in 2015 and will finish in 2021.
   </tbody>
 </table>
 
+### VideoNG
+
+A long-term effort to provide provide efficient, reliable, and high quality video playback on the web.
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Progress</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2015</td>
+      <td>Shipped <a href="https://docs.google.com/document/d/1oUb_ap0TAa1sDci0wEQ6BEzd_lB7Eghv93NXyZ3952E/preview">Project Butter</a> and video overlays for smoother video rendering.</td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>Shipped unified Android and desktop decoding and rendering pipelines.</td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>Shipped HDR and color-corrected video rendering.</td>
+    </tr>
+    <tr>
+      <td>2018</td>
+      <td>Shipped Mojo-based video decoding pipeline.</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>Shipped Surface-based video rendering pipeline.</td>
+    </tr>
+      <td>2021</td>
+      <td>Shipped L1/4K protected content rendering support.</td>
+    </tr>
+  </tbody>
+</table>
+
+Definitions of terms in the chart above:
+
+Mojo : A next-generation IPC subsystem for Chromium.
+
+Surface : A concept that is part of the Viz project design.
+
 ## Conclusion
 
 I couldn't be more excited about the rate of improvement of rendering on the web and Chromium.
