@@ -17,24 +17,24 @@ The property key is used as the command's name. Command objects can take two pro
 `suggested_key`
 
 : An optional property that declares default keyboard shortcuts for the command. If omitted, the
-command will be unbound. This property can either take a string or an object value.
+  command will be unbound. This property can either take a string or an object value.
 
-: A string values specifies the default keyboard shortcut that should be used across all platforms.
+  - **A string value** specifies the default keyboard shortcut that should be used across all
+    platforms.
 
-: An object value allows the extension developer to customize the keyboard shortcut for each
-platform. When providing platform-specific shortcuts, valid object properties are `default`,
-`chromeos`, `linux`, `mac`, and `windows`.
+  - **An object value** allows the extension developer to customize the keyboard shortcut for each
+    platform. When providing platform-specific shortcuts, valid object properties are `default`,
+    `chromeos`, `linux`, `mac`, and `windows`.
 
-: See [Key combination requirements][header-key-combos] for
-additional details.
+  See [Key combination requirements][header-key-combos] for additional details.
 
 `description`
 
 : A string used to provide the user with a short description of the command's purpose. This string
-appears in extension keyboard shortcut management UI. Descriptions are required for standard
-commands, but are ignored for [Action commands][header-action].
+  appears in extension keyboard shortcut management UI. Descriptions are required for standard
+  commands, but are ignored for [Action commands][header-action].
 
-An extension can have many commands, but may specify at most 4 suggested keyboard shortcuts. The
+An extension can have many commands, but may specify at most four suggested keyboard shortcuts. The
 user can manually add more shortcuts from the `chrome://extensions/shortcuts` dialog.
 
 ### Supported Keys
@@ -156,8 +156,8 @@ Chrome OS does not support global Commands.
 
 Keyboard shortcut suggestions for global Commands are limited to `Ctrl+Shift+[0..9]`. This is a
 protective measure to minimize the risk of overriding shortcuts in other applications since if, for
-example, Alt+P were to be allowed as global, the keyboard shortcut for opening a print dialog might
-not work in other applications.
+example, `Alt+P` were to be allowed as global, the keyboard shortcut for opening a print dialog
+might not work in other applications.
 
 End users are free to remap global Commands to their preferred key combination using the UI exposed
 at `chrome://extensions/shortcuts`.
@@ -183,13 +183,13 @@ Example:
 
 ## Examples
 
-The following examples flex the core functionality of the Commands API
+The following examples flex the core functionality of the Commands API.
 
 ### Basic command
 
 Commands allow extensions to map logic to keyboard shortcuts that can be invoked by the user. At its
 most basic, a command only requires a command declaration in the extension's manifest and a listener
-registration as shown below.
+registration as shown in the following example.
 
 ```json
 // manifest.json
@@ -219,11 +219,9 @@ chrome.commands.onCommand.addListener((command) => {
 ### Action command
 
 As described in the [Usage][header-usage] section, you can also map a command to an extension's
-action, browser action, or page action. The below example injects a content script that shows an
+action, browser action, or page action. The following example injects a content script that shows an
 alert on the current page when the user either clicks the extension's action or triggers the
 keyboard shortcut.
-
-in response to the user either clicking...or triggering
 
 ```json
 // manifest.json
