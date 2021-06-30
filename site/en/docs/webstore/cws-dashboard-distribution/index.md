@@ -58,8 +58,8 @@ item.
 
 {% Aside %}
 
-This enterprise feature is only available for Google Workspace domains where it has been enable by
-the domain administrator.
+This feature is only available for Google Workspace domains where it has been enable by the domain
+administrator.
 
 {% endAside %}
 
