@@ -7,9 +7,9 @@ layout: "layouts/blog-post.njk"
 authors:
   - rebeccasoares
   - ackermanb
-date: 2021-06-25
+date: 2021-06-29
 hero: image/SHhb2PDKzXTggPGAYpv8JgR81pX2/xfq9HeQEyYWIuxsuTQOh.jpg
-alt: The Roman aquaduct at Segovia, Spain
+alt: The Roman aqueduct at Segovia, Spain
 tags:
   - extensions
 
