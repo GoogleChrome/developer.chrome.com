@@ -69,7 +69,7 @@ View iframe details by right clicking on the iframe element in the Elements pane
 
 This takes you to a view of the iframe's details in the Application panel where you can examine document details, security & isolation status, permissions policy, and more to debug potential issues.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YdENg6wjsgPNyMODdOHC.png", alt="Frame details view", width="800", height="486" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hEsg9Mc95n7w2tPrv6KH.png", alt="Frame details view", width="800", height="516" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/30ba780ff36307473aee2e2c959287ea8d0b3bd7 #}
 
