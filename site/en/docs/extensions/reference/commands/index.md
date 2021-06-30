@@ -12,26 +12,6 @@ The Commands API allows extension developers to define specific commands, and bi
 key combination. Each command an extension accepts must be declared as properties of the
 `"commands"` object in the [extension's manifest][doc-manifest].
 
-```json
-// manifest.json
-{
-  "name": "Command demo - basic",
-  "version": "1.0",
-  "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
-  },
-  "commands": {
-    "inject-script": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+Y"
-      },
-      "description": "Inject a script on the page"
-    }
-  }
-}
-```
-
 The property key is used as the command's name. Command objects can take two properties.
 
 `suggested_key`
@@ -54,13 +34,14 @@ additional details.
 appears in extension keyboard shortcut management UI. Descriptions are required for standard
 commands, but are ignored for [Action commands][header-action].
 
-An extension can have many commands, but at most 4 suggested keyboard shortcuts can be specified.
-The user can manually add more shortcuts from the `chrome://extensions/shortcuts` dialog.
+An extension can have many commands, but may specify at most 4 suggested keyboard shortcuts. The
+user can manually add more shortcuts from the `chrome://extensions/shortcuts` dialog.
 
 ### Supported Keys
 
-The following keys can be used in Extension Command shortcuts. Key definitions are case sensitive.
-Attempting to load an extension with an incorrectly cased key will result in a manifest parse error at installation time.
+The following keys are usable command shortcuts. Key definitions are case sensitive. Attempting to
+load an extension with an incorrectly cased key will result in a manifest parse error at
+installation time.
 
 Alpha keys
 
@@ -72,11 +53,11 @@ Numeric keys
 
 Standard key strings
 
-: General – `Comma`, `Period`, `Home`, `End`, `PageUp`, `PageDown`, `Space`, `Insert`, `Delete`
+: General–`Comma`, `Period`, `Home`, `End`, `PageUp`, `PageDown`, `Space`, `Insert`, `Delete`
 
-: Arrow keys – `Up`, `Down`, `Left`, `Right`
+: Arrow keys–`Up`, `Down`, `Left`, `Right`
 
-: Media Keys – `MediaNextTrack`, `MediaPlayPause`, `MediaPrevTrack`, `MediaStop`
+: Media Keys–`MediaNextTrack`, `MediaPlayPause`, `MediaPrevTrack`, `MediaStop`
 
 Modifier key strings
 
@@ -122,12 +103,12 @@ Key combinations that involve `Ctrl+Alt` are not permitted in order to avoid con
   "name": "My extension",
   ...
   "commands": {
-    "toggle-feature-foo": {
+    "run-foo": {
       "suggested_key": {
         "default": "Ctrl+Shift+Y",
         "mac": "Command+Shift+Y"
       },
-      "description": "Toggle feature foo"
+      "description": "Run \"foo\" on the current page."
     },
     "_execute_action": {
       "suggested_key": {
@@ -146,8 +127,8 @@ In your background page, you can bind a handler to each of the commands defined 
 using `onCommand.addListener`. For example:
 
 ```js
-chrome.commands.onCommand.addListener(function(command) {
-  console.log('Command:', command);
+chrome.commands.onCommand.addListener((command) => {
+  console.log(`Command: ${command}`);
 });
 ```
 
@@ -202,13 +183,31 @@ Example:
 
 ## Examples
 
-The following examples show
+The following examples flex the core functionality of the Commands API
 
 ### Basic command
 
-Commands allow extensions to map logic to keyboard shortcuts that can be invoked by the user. At
-it's most basic, a command only requires a command declaration in the extension's manifest and a
-listener registration as shown below.
+Commands allow extensions to map logic to keyboard shortcuts that can be invoked by the user. At its
+most basic, a command only requires a command declaration in the extension's manifest and a listener
+registration as shown below.
+
+```json
+// manifest.json
+{
+  "name": "Command demo - basic",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "inject-script": {
+      "suggested_key": "Ctrl+Shift+Y",
+      "description": "Inject a script on the page"
+    }
+  }
+}
+```
 
 ```js
 // background.js
@@ -219,10 +218,12 @@ chrome.commands.onCommand.addListener((command) => {
 
 ### Action command
 
-As described in the [Usage][header-usage] section above, a command can also be mapped to the
-extension's action, browser action, or page action. The below example programmatically injects a
-content script that shows an alert on the current page in response to the user either clicking the
-extension's action or triggering a keyboard shortcut.
+As described in the [Usage][header-usage] section, you can also map a command to an extension's
+action, browser action, or page action. The below example injects a content script that shows an
+alert on the current page when the user either clicks the extension's action or triggers the
+keyboard shortcut.
+
+in response to the user either clicking...or triggering
 
 ```json
 // manifest.json
@@ -268,9 +269,9 @@ chrome.commands.onCommand.addListener((command) => {
 
 ### Verify commands registered
 
-If an extension attempts to register a shortcut that is already in use used by another extension,
-the second extension's shortcut will not register as expected. Developers can provide a more robust
-end user experience by anticipating this possibility and checking for collisions at install time.
+If an extension attempts to register a shortcut that is already used by another extension, the
+second extension's shortcut will not register as expected. You can provide a more robust end user
+experience by anticipating this possibility and checking for collisions at install time.
 
 {% Aside %}
 
@@ -291,17 +292,17 @@ chrome.runtime.onInstalled.addListener((reason) => {
 // installation the user may have intentionally unassigned commands.
 function checkCommandShortcuts() {
   chrome.commands.getAll((commands) => {
-    let errors = [];
+    let missingShortcuts = [];
 
     for (let {name, shortcut} of commands) {
       if (shortcut === '') {
-        errors.push(name);
+        missingShortcuts.push(name);
       }
     }
 
-    if (errors.length > 0) {
-      // Notify the user that shortcuts for one or more commands were not
-      // registered as expected & provide guidance on how to fix this.
+    if (missingShortcuts.length > 0) {
+      // Update the extension UI to inform the user that one or more
+      // commands are currently unassigned.
     }
   });
 }
