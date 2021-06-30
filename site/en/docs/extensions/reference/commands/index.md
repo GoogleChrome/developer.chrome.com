@@ -8,33 +8,114 @@ You must have a `"manifest_version"` of at least `2` to use this API.
 
 ## Usage
 
-The commands API allows you to define specific commands, and bind them to a default key combination.
-Each command your extension accepts must be listed in the manifest as an attribute of the 'commands'
-manifest key. An extension can have many commands but only 4 suggested keys can be specified. The
-user can manually add more shortcuts from the chrome://extensions/configureCommands dialog.
+The Commands API allows extension developers to define specific commands, and bind them to a default
+key combination. Each command an extension accepts must be declared as properties of the
+`"commands"` object in the [extension's manifest][doc-manifest].
 
-Supported keys: A-Z, 0-9, Comma, Period, Home, End, PageUp, PageDown, Space, Insert, Delete, Arrow
-keys (Up, Down, Left, Right) and the Media Keys (MediaNextTrack, MediaPlayPause, MediaPrevTrack,
-MediaStop).
+```json
+// manifest.json
+{
+  "name": "Command demo - basic",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "inject-script": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Inject a script on the page"
+    }
+  }
+}
+```
 
-Note: All key combinations must include either Ctrl\* or Alt. Combinations that involve Ctrl+Alt are
-not permitted in order to avoid conflicts with the AltGr key. Shift can be used in addition to Alt
-or Ctrl, but is not required. Modifiers (such as Ctrl) can not be used in combination with the Media
-Keys. Tab key was removed from list of supported keys in Chrome version 33 and above for
-accessibility reasons.
+The property key is used as the command's name. Command objects can take two properties.
 
-{% Aside %}
+`suggested_key`
 
-Please note that on Mac 'Ctrl' is automatically converted to 'Command'. If you want 'Ctrl' instead,
-please specify 'MacCtrl' under `"mac"`. Specifying 'MacCtrl' under `"default"` will cause the
-extension to be uninstallable.
+: An optional property that declares default keyboard shortcuts for the command. If omitted, the
+command will be unbound. This property can either take a string or an object value.
 
-Additionally, on Chrome OS, you can specify 'Search' as a modifier.
+: A string values specifies the default keyboard shortcut that should be used across all platforms.
+
+: An object value allows the extension developer to customize the keyboard shortcut for each
+platform. When providing platform-specific shortcuts, valid object properties are `default`,
+`chromeos`, `linux`, `mac`, and `windows`.
+
+: See [Key combination requirements][header-key-combos] for
+additional details.
+
+`description`
+
+: A string used to provide the user with a short description of the command's purpose. This string
+appears in extension keyboard shortcut management UI. Descriptions are required for standard
+commands, but are ignored for [Action commands][header-action].
+
+An extension can have many commands, but at most 4 suggested keyboard shortcuts can be specified.
+The user can manually add more shortcuts from the `chrome://extensions/shortcuts` dialog.
+
+### Supported Keys
+
+The following keys can be used in Extension Command shortcuts. Key definitions are case sensitive.
+Attempting to load an extension with an incorrectly cased key will result in a manifest parse error at installation time.
+
+Alpha keys
+
+: `A` … `Z`
+
+Numeric keys
+
+: `0` … `9`
+
+Standard key strings
+
+: General – `Comma`, `Period`, `Home`, `End`, `PageUp`, `PageDown`, `Space`, `Insert`, `Delete`
+
+: Arrow keys – `Up`, `Down`, `Left`, `Right`
+
+: Media Keys – `MediaNextTrack`, `MediaPlayPause`, `MediaPrevTrack`, `MediaStop`
+
+Modifier key strings
+
+: `Ctrl`, `Alt`, `Shift`, `MacCtrl` (macOS only), `Command` (macOS only), `Search` (Chrome OS only)
+
+{% Aside 'note' %}
+
+`Tab` was removed from list of supported keys in Chrome 33 for accessibility reasons.
 
 {% endAside %}
 
-Certain Chrome shortcuts (e.g. window management) always take priority over Extension Command
-shortcuts and can not be overwritten.
+### Key combination requirements {: #key-combinations }
+
+- Extension Command shortcuts must include either `Ctrl`\* or `Alt`.
+
+    - Modifiers **cannot** be used in combination with Media Keys.
+
+- \* On macOS `Ctrl` is automatically converted into `Command`.
+
+    - To use the Control key on macOS, replace `Ctrl` with `MacCtrl` when defining the `"mac"`
+      shortcut.
+
+    - Including `MacCtrl` in other shortcuts will cause the extension to be uninstallable.
+
+- `Shift` is an optional modifier on all platforms.
+
+- `Search` is an optional modifier exclusive to Chrome OS.
+
+- Certain operating system and Chrome shortcuts (e.g. window management) always take priority over
+  Extension Command shortcuts and can not be overwritten.
+
+{% Aside 'note' %}
+
+Key combinations that involve `Ctrl+Alt` are not permitted in order to avoid conflicts with the
+`AltGr` key.
+
+{% endAside %}
+
+### Handling command events
 
 ```json
 {
@@ -62,8 +143,7 @@ shortcuts and can not be overwritten.
 ```
 
 In your background page, you can bind a handler to each of the commands defined in the manifest
-(except for `\_execute_action`, `\_execute_browser_action`, and `\_execute_page_action`) via
-onCommand.addListener. For example:
+using `onCommand.addListener`. For example:
 
 ```js
 chrome.commands.onCommand.addListener(function(command) {
@@ -71,23 +151,35 @@ chrome.commands.onCommand.addListener(function(command) {
 });
 ```
 
-The `\_execute_action`, `\_execute_browser_action`, and `\_execute_page_action` commands are
-reserved for the action of opening your extension's popups. They won't normally generate events that
-you can handle. If you need to take action based on your popup opening, consider listening for an
-'onDomReady' event inside your popup's code.
+### Action commands
+
+The `_execute_action` (Manifest V3), `_execute_browser_action` (Manifest V2), and
+`_execute_page_action` (Manifest V2) commands are reserved for the action of trigger your action,
+browser action, or page action respectively. These commands do not dispatch
+[command.onCommand][event-oncommand] events like standard commands.
+
+If you need to take action based on your popup opening, consider listening for a
+[DOMContentLoaded][html-dcl] event inside your popup's JavaScript.
 
 ## Scope
 
-By default, Commands are scoped to the Chrome browser, which means that while the browser does not
-have focus, the shortcut will be inactive. On desktop Chrome, Commands can instead have global
-scope, as of version 35, and will then also work while Chrome does \*not\* have focus. NOTE: The
-exception here is Chrome OS, where global commands are not allowed at the moment.
+By default, Commands are scoped to the Chrome browser. This means that when the browser does not
+have focus, Command shortcuts are inactive. Beginning in Chrome 35, extension developers can
+optionally mark a Command as "global". Global Commands also work while Chrome *does not* have focus.
 
-The user is free to designate any shortcut as global using the UI in chrome://extensions \\ Keyboard
-Shortcuts, but the extension developer is limited to specifying only Ctrl+Shift+\[0..9\] as global
-shortcuts. This is to minimize the risk of overriding shortcuts in other applications since if, for
-example, Alt+P were to be allowed as global, the printing shortcut might not work in other
-applications.
+{% Aside %}
+
+Chrome OS does not support global Commands.
+
+{% endAside %}
+
+Keyboard shortcut suggestions for global Commands are limited to `Ctrl+Shift+[0..9]`. This is a
+protective measure to minimize the risk of overriding shortcuts in other applications since if, for
+example, Alt+P were to be allowed as global, the keyboard shortcut for opening a print dialog might
+not work in other applications.
+
+End users are free to remap global Commands to their preferred key combination using the UI exposed
+at `chrome://extensions/shortcuts`.
 
 Example:
 
@@ -118,27 +210,6 @@ Commands allow extensions to map logic to keyboard shortcuts that can be invoked
 it's most basic, a command only requires a command declaration in the extension's manifest and a
 listener registration as shown below.
 
-```json
-// manifest.json
-{
-  "name": "Command demo - basic",
-  "version": "1.0",
-  "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
-  },
-  "commands": {
-    "inject-script": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+Y",
-        "mac": "Command+Shift+Y"
-      },
-      "description": "Inject a script on the page"
-    }
-  }
-}
-```
-
 ```js
 // background.js
 chrome.commands.onCommand.addListener((command) => {
@@ -148,10 +219,10 @@ chrome.commands.onCommand.addListener((command) => {
 
 ### Action command
 
-As described in the [Usage][usage] section above, a command can also be mapped to the extension's
-action (Manifest V3), browser action (Manifest V2), or page action (Manifest V2). The below example
-programmatically injects a content script that shows an alert on the current page in response to the
-user either clicking the extension's action or triggering a keyboard shortcut.
+As described in the [Usage][header-usage] section above, a command can also be mapped to the
+extension's action, browser action, or page action. The below example programmatically injects a
+content script that shows an alert on the current page in response to the user either clicking the
+extension's action or triggering a keyboard shortcut.
 
 ```json
 // manifest.json
@@ -203,8 +274,8 @@ end user experience by anticipating this possibility and checking for collisions
 
 {% Aside %}
 
-`\_execute_action`, `\_execute_browser_action`, and `\_execute_page_action` will not appear in the
-list of commands returned by `command.getAll()`.
+`_execute_action`, `_execute_browser_action`, and `_execute_page_action` will not appear in the list
+of commands returned by `command.getAll()`.
 
 {% endAside %}
 
@@ -236,4 +307,12 @@ function checkCommandShortcuts() {
 }
 ```
 
-[usage]: #usage
+[api-action]: /docs/extensions/reference/action/
+[api-browsesr-action]: /docs/extensions/reference/browserAction/
+[api-page-action]: /docs/extensions/reference/pageAction/
+[doc-manifest]: /docs/extension/mv3/manifest/
+[html-dcl]: https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
+[event-oncommand]: #event-onCommand
+[header-usage]: #usage
+[header-key-combos]: #key-combinations
+[header-action]: #action-commands
