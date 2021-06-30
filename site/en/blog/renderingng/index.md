@@ -553,6 +553,10 @@ A long-term effort to provide provide efficient, reliable, and high quality vide
   </thead>
   <tbody>
     <tr>
+      <td>2014</td>
+      <td>Introduced a Mojo-based rendering framework.</td>
+    </tr>
+    <tr>
       <td>2015</td>
       <td>Shipped <a href="https://docs.google.com/document/d/1oUb_ap0TAa1sDci0wEQ6BEzd_lB7Eghv93NXyZ3952E/preview">Project Butter</a> and video overlays for smoother video rendering.</td>
     </tr>
