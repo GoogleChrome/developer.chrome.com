@@ -584,9 +584,11 @@ A long-term effort to provide provide efficient, reliable, and high quality vide
 
 Definitions of terms in the chart above:
 
-Mojo : A next-generation IPC subsystem for Chromium.
+Mojo
+: A next-generation IPC subsystem for Chromium.
 
-Surface : A concept that is part of the Viz project design.
+Surface 
+: A concept that is part of the Viz project design.
 
 ## Conclusion
 
