@@ -315,6 +315,7 @@ and using less memory without sacrificing performance. It began in 2014 and will
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -352,6 +353,7 @@ and is planned to finish this year.
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -389,6 +391,7 @@ It began in 2014 and completed in 2020.
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -429,6 +432,7 @@ and image decoding off of the main thread. It began in 2011 and is ongoing.
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -475,6 +479,7 @@ such as unblocking Site Isolation and decoupling the rendering pipeline from bro
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -523,6 +528,7 @@ It began in 2015 and will finish in 2021.
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -540,6 +546,57 @@ It began in 2015 and will finish in 2021.
     <tr>
   </tbody>
 </table>
+
+### VideoNG
+
+A long-term effort to provide provide efficient, reliable, and high quality video playback on the web.
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Progress</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2014</td>
+      <td>Introduced a Mojo-based rendering framework.</td>
+    </tr>
+    <tr>
+      <td>2015</td>
+      <td>Shipped <a href="https://docs.google.com/document/d/1oUb_ap0TAa1sDci0wEQ6BEzd_lB7Eghv93NXyZ3952E/preview">Project Butter</a> and video overlays for smoother video rendering.</td>
+    </tr>
+    <tr>
+      <td>2016</td>
+      <td>Shipped unified Android and desktop decoding and rendering pipelines.</td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>Shipped HDR and color-corrected video rendering.</td>
+    </tr>
+    <tr>
+      <td>2018</td>
+      <td>Shipped Mojo-based video decoding pipeline.</td>
+    </tr>
+    <tr>
+      <td>2019</td>
+      <td>Shipped Surface-based video rendering pipeline.</td>
+    </tr>
+    <tr>
+      <td>2021</td>
+      <td>Shipped <a href="https://en.wikipedia.org/wiki/4K_resolution">4K</a> protected content rendering support on ChromeOS.</td>
+    </tr>
+  </tbody>
+</table>
+
+Definitions of terms in the chart above:
+
+Mojo
+: A next-generation IPC subsystem for Chromium.
+
+Surface 
+: A concept that is part of the Viz project design.
 
 ## Conclusion
 
