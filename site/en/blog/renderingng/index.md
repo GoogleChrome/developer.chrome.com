@@ -585,7 +585,7 @@ A long-term effort to provide provide efficient, reliable, and high quality vide
     </tr>
     <tr>
       <td>2021</td>
-      <td>Shipped <a href=">4K</https://en.wikipedia.org/wiki/4K_resolution> protected content rendering support on ChromeOS.</td>
+      <td>Shipped <a href="https://en.wikipedia.org/wiki/4K_resolution">4K</a> protected content rendering support on ChromeOS.</td>
     </tr>
   </tbody>
 </table>
