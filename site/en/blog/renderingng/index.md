@@ -577,7 +577,7 @@ A long-term effort to provide provide efficient, reliable, and high quality vide
       <td>Shipped Surface-based video rendering pipeline.</td>
     </tr>
       <td>2021</td>
-      <td>Shipped L1/4K protected content rendering support on ChromeOS.</td>
+    <td>Shipped <a href="https://en.wikipedia.org/wiki/Widevine">L1</a>/<a href=">4K</https://en.wikipedia.org/wiki/4K_resolution> protected content rendering support on ChromeOS.</td>
     </tr>
   </tbody>
 </table>
