@@ -315,6 +315,7 @@ and using less memory without sacrificing performance. It began in 2014 and will
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -352,6 +353,7 @@ and is planned to finish this year.
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -389,6 +391,7 @@ It began in 2014 and completed in 2020.
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -429,6 +432,7 @@ and image decoding off of the main thread. It began in 2011 and is ongoing.
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -475,6 +479,7 @@ such as unblocking Site Isolation and decoupling the rendering pipeline from bro
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -523,6 +528,7 @@ It began in 2015 and will finish in 2021.
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -550,6 +556,7 @@ A long-term effort to provide provide efficient, reliable, and high quality vide
     <tr>
       <th>Year</th>
       <th>Progress</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
@@ -576,7 +583,7 @@ A long-term effort to provide provide efficient, reliable, and high quality vide
       <td>2019</td>
       <td>Shipped Surface-based video rendering pipeline.</td>
     </tr>
-    </tr>
+    <tr>
       <td>2021</td>
       <td>Shipped <a href=">4K</https://en.wikipedia.org/wiki/4K_resolution> protected content rendering support on ChromeOS.</td>
     </tr>
