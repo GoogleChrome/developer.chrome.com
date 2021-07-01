@@ -576,6 +576,7 @@ A long-term effort to provide provide efficient, reliable, and high quality vide
       <td>2019</td>
       <td>Shipped Surface-based video rendering pipeline.</td>
     </tr>
+    </tr>
       <td>2021</td>
       <td>Shipped <a href=">4K</https://en.wikipedia.org/wiki/4K_resolution> protected content rendering support on ChromeOS.</td>
     </tr>
