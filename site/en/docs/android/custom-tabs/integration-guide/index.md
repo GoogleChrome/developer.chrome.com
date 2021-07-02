@@ -54,7 +54,10 @@ that specifies a [`Color`][21].
 
 ```java
 int colorInt = Color.parseColor("#FF0000"); //red
-builder.setToolbarColor(colorInt);
+CustomTabColorSchemeParams defaultColors = new CustomTabColorSchemeParams.Builder()
+    .setToolbarColor(colorInt)
+    .build();
+intentBuilder.setDefaultColorSchemeParams(defaultColors);
 ```
 
 ## Configure a custom action button
