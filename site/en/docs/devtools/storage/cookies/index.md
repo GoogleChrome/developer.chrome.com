@@ -16,18 +16,11 @@ page's cookies with Chrome DevTools.
 ## Open the Cookies pane {: #open }
 
 1.  [Open Chrome DevTools][2].
-2.  Click the **Application** tab to open the **Application** panel. The **Manifest** pane will
-    probably open.
-
-    {% Img src="image/admin/VdjVnm7S9Pbg4THMrlc0.png", alt="The Manifest pane", width="800", height="619" %}
-
-    **Figure 1**. The Manifest pane
-
-3.  Under **Storage** expand **Cookies**, then select an origin.
+2.  Click the **Application** tab to open the **Application** panel.  Under **Storage** expand **Cookies**, then select an origin.
 
     {% Img src="image/admin/Yl2rWrOQvnBHkZwjUzOi.png", alt="The Cookies pane", width="800", height="445" %}
 
-    **Figure 2**. The Cookies pane
+    **Figure 1**. The Cookies pane
 
 ## Fields {: #fields }
 
