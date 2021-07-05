@@ -449,7 +449,7 @@ background), and context (ambient light, surroundings, intended purpose of the t
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gYQKfU4hyzKlrK9w7wBr.png", alt="APCA in Color Picker", width="800", height="537" %}
 
-The APCA value in the example above is **38**. This value is calculated based on font weight and size, referring to this [APCA lookup table](https://bugs.chromium.org/p/chromium/issues/attachmentText?aid=486485).
+The example show the APCA threshold is **38%**. The contrast ratio must meet or exceed the listed value. This value is calculated based on font weight and size, referring to this [APCA lookup table](https://bugs.chromium.org/p/chromium/issues/attachmentText?aid=486485). 
 
 Chromium issue: [1121900][50]
 
