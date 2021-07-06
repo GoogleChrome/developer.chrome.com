@@ -103,12 +103,15 @@ search-box[active] {
 
 .search-box__snippet {
   color: var(--color-secondary-text);
+  word-break: break-all;
 }
 
 .search-box__thumbnail {
-  margin-left: get-size(200);
+  display: none;
+  margin: get-size(300) auto 0 auto;
 
   @include media-query('md') {
-    margin-left: get-size(300);
+    display: initial;
+    margin: 0 0 0 get-size(300);
   }
 }
