@@ -614,6 +614,27 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque iure eveniet
 assumenda ea natus perspiciatis, atque totam fugit labore amet facere,
 dignissimos sequi cumque repellat dolorum, quaerat voluptatibus sit!
 
+### Captions
+
+To include a caption along with an image, use `<figure>` with `<figcaption>` and
+place the `Img` shortcode snippet inside:
+
+```md
+<figure>
+{% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
+  <figcaption>
+    A good boy.
+  </figcaption>
+</figure>
+```
+
+<figure>
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+  <figcaption>
+    A good boy.
+  </figcaption>
+</figure>
+
 ## Lists
 See the [Lists section of the Grammar, mechanics, and usage post](https://web.dev/handbook/grammar/#lists)
 for information about when to use each list type.
@@ -668,48 +689,58 @@ Second Term
 Use `web-tabs` component to display information in a form of horizontal tabs.
 Attribute `title` becomes the title of the corresponding tab panel.
 
-```html
+````html
 <web-tabs>
   <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>
-  <web-tab title="Tab 2 (markup)">
+  <web-tab title="Tab 2 (markdown)">
 
-    Here goes content of Tab 2.
+    Here goes content of Tab 2. Now **with** some _markdown_.
 
-    Please note the use of line breaks to get paragraphs in markdown.
+    You must include a line break between the html and markdown to get the
+    markdown to work (this is a limiation of markdown parsers).
 
   </web-tab>
   <web-tab title="Tab 3 (with code)">
 
     This is Tab 3. It has a code snippet inside.
 
-    ```js
-    const hello = 'world';
-    ```
+    You must include a line break between the html and teh markdown to get the
+    markdown to work. Also, be sure to unindent the markdown otherwise syntax
+    highlighting will not work.
+
+```js
+const hello = 'world';
+```
 
   </web-tab>
 </web-tabs>
-```
+````
 
 <web-tabs>
   <web-tab title="Tab 1 (html)">
     <p>I'm content of Tab 1</p>
   </web-tab>
-  <web-tab title="Tab 2 (markup)">
+  <web-tab title="Tab 2 (markdown)">
 
-    Here goes content of Tab 2.
+    Here goes content of Tab 2. Now **with** some _markdown_.
 
-    Please note the use of line breaks to get paragraphs in markdown.
+    You must include a line break between the html and markdown to get the
+    markdown to work (this is a limiation of markdown parsers).
 
   </web-tab>
   <web-tab title="Tab 3 (with code)">
 
     This is Tab 3. It has a code snippet inside.
 
-    ```js
-    const hello = 'world';
-    ```
+    You must include a line break between the html and teh markdown to get the
+    markdown to work. Also, be sure to unindent the markdown otherwise syntax
+    highlighting will not work.
+
+```js
+const hello = 'world';
+```
 
   </web-tab>
 </web-tabs>

@@ -16,7 +16,22 @@ updated: 2021-06-09
 Check this page often to learn about changes to the Chrome extensions platform,
 its documentation, and related policy or other changes.
 
-### New "Introducing chrome.scripting" blog post
+### Developer program policies updated
+#### Published 2021.06.29
+
+The Chrome Web Store [Developer Program Policies](/docs/webstore/program_policies) have been updated
+with clarifications to the deceptive installation tactics, spam, and repetitive content policies.
+This update also includes a new two step verification requirement to publish on the Chrome Web
+Store. [Read the blog post](/blog/policy-update-2sv/) for more information.
+
+### New blog post: "Extension actions in Manifest V3"
+#### Published 2021.06.23
+
+Chrome extensions had Browser and Page Actions APIs for years, but Manifest V3 replaced both with a
+generic [Actions API](/docs/extensions/reference/action/). This post explores the history of these
+APIs and what has changed in Manifest V3. [Read the post](/blog/mv3-actions).
+
+### New blog post: "Introducing chrome.scripting"
 #### Published 2021.06.08
 
 The [Scripting API](/docs/extensions/reference/scripting/) is a new Manifest V3 API focused on,

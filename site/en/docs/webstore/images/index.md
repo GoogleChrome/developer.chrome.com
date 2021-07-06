@@ -28,8 +28,7 @@ image. Follow our [Image best practices][11] to increase your chance of being fe
 
 ## Extension icon
 
-You must provide a 128x128-pixel extension icon image in the [ZIP file of your 
-][6]. Some requirements
+You must provide a 128x128-pixel extension icon image in the [ZIP file of your extension][6]. Some requirements
 for the image:
 
 - The actual icon size should be **96x96** (for square icons); an additional 16 pixels per side

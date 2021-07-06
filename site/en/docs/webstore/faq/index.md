@@ -5,7 +5,7 @@ date: 2020-06-09
 description: Frequently asked questions about Chrome Web Store.
 ---
 
-The [Chrome Web Store][1] lets you publish free or paid apps where Google Chrome users can easily
+The [Chrome Web Store][1] lets you publish free or paid extensions where Google Chrome users can easily
 find them. This FAQ answers many common questions about the Chrome Web Store. If you don't find your
 answer here, check the [extension hosting changes FAQs][2], the [general extension FAQs][3], or the
 [chromium-apps group][4].
@@ -16,16 +16,16 @@ Please expand the _Table of Contents_ to quickly navigate this page.
 
 ### What is the Chrome Web Store? {: #faq-gen-01 }
 
-The Chrome Web Store is an open marketplace for [Chrome Apps][apps], [Google Chrome
-Extensions][ext], and [Google Chrome Themes][themes], where consumers may browse, install, and
+The Chrome Web Store is an open marketplace for [Google Chrome
+Extensions][ext] and [Google Chrome Themes][themes], where consumers may browse, install, and
 purchase items and install them in their browser. These items are built with web technologies and
 run inside of web browsers.
 
 ### How many people use Chrome? {: #faq-gen-02 }
 
 In 2015, Google announced one billion active users for Chrome. It's also important to note that
-Chrome Web Store apps can run in any browser that supports the web technologies used to build the
-app.
+Chrome Web Store extensions can run in any browser that supports the web technologies used to build the
+extension.
 
 ### Is there a road map for Chrome? {: #faq-gen-05 }
 
@@ -33,31 +33,26 @@ You can follow the [Google Chrome Releases blog][95] to learn about all the late
 being made to Chrome. You can create and track bugs and features in the [Chromium bug tracker][96],
 and we recommend that you download and install the [Dev channel build][97] of Chrome browser.
 
-### Which version of Chrome should I target for my Chrome Web Store apps? {: #faq-gen-06 }
+### Why would someone install an extension instead of just using a bookmark or typing in a URL? {: #faq-gen-07 }
 
-You should target Chrome 8 as a minimum, however the Chrome Web Store was made available to all
-users in Chrome 9.
-
-### Why would someone install a web app instead of just using a bookmark or typing in a URL? {: #faq-gen-07 }
-
-Installing an app ensures it is launchable from the New Tab Page via the Chrome apps launcher.
-Installing an app also allows you to grant it privileges such as unlimited local storage and
+Installing an extension ensures it is launchable from the New Tab Page via the Chrome extensions launcher.
+Installing an extension also allows you to grant it privileges such as unlimited local storage and
 background pages.
 
-### Is there an approval process for apps in the store? {: #faq-gen-08 }
+### Is there an approval process for extensions in the store? {: #faq-gen-08 }
 
-All apps go through an automated review process and in some cases, an app will be published without
+All extensions go through an automated review process and in some cases, an extension will be published without
 further manual review. There may be some instances in which a manual review will be required before
-the app is published based on our [program policies][98]. In some cases, where sensitive permissions
+the extension is published based on our [program policies][98]. In some cases, where sensitive permissions
 are requested, review times and/or approval times may be longer.
 
-### How will users find my app? {: #faq-gen-09 }
+### How will users find my extension? {: #faq-gen-09 }
 
-The Chrome Web Store will surface web apps in a variety of ways. Of course, each app gets a page in
+The Chrome Web Store will surface extensions in a variety of ways. Of course, each extension gets a page in
 the store, which will be searchable via the store and other search engines. There will be category
 lists in the store, as well as a variety of curated and algorithmically generated lists. We
-recommend that you broadly promote your web app, through marketing websites and other means, so that
-users will find your app even outside of the store.
+recommend that you broadly promote your extension, through marketing websites and other means, so that
+users will find your extension even outside of the store.
 
 ### Why am I being asked to pay a registration fee? {: #faq-gen-11 }
 
@@ -85,15 +80,15 @@ you have two options:
 
 We recommend option 1 if you want to get up and running as soon as possible.
 
-### What types of apps or extensions are not allowed in the store? {: #faq-gen-22 }
+### What types of extensions are not allowed in the store? {: #faq-gen-22 }
 
-While we try to allow most apps and extensions, a small number of extensions are explicitly
-disallowed in our [Developer Terms of Service][102] and [Program Policies][103]. Such apps or
+While we try to allow most extensions, a small number of extensions are explicitly
+disallowed in our [Developer Terms of Service][102] and [Program Policies][103]. Such
 extensions will be removed when they are brought to our attention.
 
-### How do I report an abusive app or extension? {: #faq-gen-23 }
+### How do I report an abusive extension? {: #faq-gen-23 }
 
-To report an app or extension which violates our Terms of Service, locate the corresponding listing
+To report an extension which violates our Terms of Service, locate the corresponding listing
 in the store and use the "Report abuse" link.
 
 ### How are items ranked in the store? {: #faq-gen-24 }
@@ -126,14 +121,14 @@ Here are a few tips to increase the likelihood that we'll feature your listing:
   videos)
 - Promote your listing independently so that it starts to rise in the rankings
 
-### How can my app or extension be selected for a collection? {: #faq-gen-26 }
+### How can my extension be selected for a collection? {: #faq-gen-26 }
 
 The collections are curated, and are not intended to be comprehensive. A collection is curated using
 the ranking criteria already listed and may be selected to provide helpful results for certain
 circumstantial situations, such as work-from-home extensions. Solicitations to be placed in a
 collection are not accepted.
 
-### How can I provide support for users of my app or extension? {: #faq-gen-27 }
+### How can I provide support for users of my extension? {: #faq-gen-27 }
 
 You can set up discussion groups to communicate with your users. One way of doing so is through
 [Google Groups][104].
@@ -166,15 +161,7 @@ more information, please review our [program policies][106].
 
 ### How do I write an extension? {: #faq-dev-01 }
 
-You can find all the information you need to develop extensions and apps at [/docs/extensions/][ext]
-and [/docs/apps/][apps], respectively.
-
-### Should I build a web app or an extension? {: #faq-gen-10 }
-
-Extensions are primarily used to extend functionality of the user's browser. For instance,
-extensions are commonly used to interact with the pages that a user views, add custom context menus,
-or manipulate tabs and windows. Web apps, on the other hand, are applications in their own right and
-rarely need to extend browser functionality.
+You can find all the information you need to develop extensions at [/docs/extensions/][ext].
 
 ### How can I push an update of my code to my users? {: #faq-dev-02 }
 
@@ -182,17 +169,17 @@ Visit [https://chrome.google.com/webstore/devconsole][110] and click on the list
 update. Once you upload a new version and click **Publish**, your update will automatically be
 pushed out to users over the next few hours.
 
-### Can I host my own app or extension? {: #faq-dev-03 }
+### Can I host my own extension? {: #faq-dev-03 }
 
-Yes, you may host your own app or extension, although you will need to take care of [packaging and
+Yes, you may host your own extension, although you will need to take care of [packaging and
 serving the][111] [auto-update manifest][112] yourself.
 
 ## Creating a listing
 
 ### In what format should I upload my code? {: #faq-listing-01 }
 
-To upload an item to the Chrome Web Store, submit a ZIP file containing the files used in your app,
-theme, or extension. Do not upload a .crx file; the submission will fail.
+To upload an item to the Chrome Web Store, submit a ZIP file containing the files used in your
+extension. Do not upload a .crx file; the submission will fail.
 
 ### How long will it take for my listing to appear in the store? {: #faq-listing-02 }
 
@@ -216,62 +203,63 @@ See [Supplying Images][116] for guidelines on supplying images for the store. So
 practices to consider:
 
 - Write a catchy title, a clear and descriptive short description, and a detailed long description.
-- Create screenshots that demonstrate how your app or extension works.
+- Create screenshots that demonstrate how your extension works.
 - Upload a screencast, such as a YouTube video or a Google Docs Presentation, to demonstrate how
-  your app or extension works.
+  your extension works.
 - Post a support link so that users don't clutter your comments thread with bug reports.
 
-### How can I import an existing app or extension into the store? {: #faq-listing-05 }
+### How can I import an existing extension into the store? {: #faq-listing-05 }
 
-You may import an app or extension with a pre-existing key into the store (see [instructions][117]).
+You may import an extension with a pre-existing key into the store (see [instructions][117]).
 
-### How can I export an app or extension from the store? {: #faq-listing-06 }
+### How can I export an extension from the store? {: #faq-listing-06 }
 
 Currently we do not support exporting a listing's sources or private key from the store.
 
-### Why did I receive a "Cannot parse the manifest" error when uploading my app or extension? {: #faq-listing-07 }
+### Why did I receive a "Cannot parse the manifest" error when uploading my extension? {: #faq-listing-07 }
 
 The manifest file needs to be in JSON format. Most likely, you've included a comment in the manifest
 file that is not recognized by the Chrome Web Store's JSON parser. Try removing any comments from
 the manifest file and try re-uploading.
 
-### I've verified my domain, and I have a wildcard app URL like \*://example.com, but the Chrome Web Store is still asking me to verify my domain. What gives? {: #faq-gen-15 }
+### I've verified my domain, and I have a wildcard URL like \*://example.com, but the Chrome Web Store is still asking me to verify my domain. What gives? {: #faq-gen-15 }
 
 If you use a wildcard like \*://example.com, make sure you have verified both http://example.com and
 https://example.com.
 
-### When I try to upload my app to the Chrome Web Store, I get this error: "(Server rejected) An error occurred: please try again later." What gives? {: #faq-gen-16 }
+### When I try to upload to the Chrome Web Store, I get this error: "(Server rejected) An error occurred: please try again later." What gives? {: #faq-gen-16 }
 
 This error occasionally occurs if you've been logged into the Chrome Web Store for a long time. If
-you sign out of your Google Account and then sign back in, you should be able to upload your app.
+you sign out of your Google Account and then sign back in, you should be able to upload your
+extension.
 
-### Can I control the regions where my app is listed? {: #faq-gen-18 }
+### Can I control the regions where my extension is listed? {: #faq-gen-18 }
 
-Yes, you can select which regions your application appears in. This might be because your app is
+Yes, you can select which regions your extension appears in. This might be because your extension is
 only applicable to the local market, or you might have specific obligations that mean you can only
-make your app available in certain regions.
+make your extension available in certain regions.
 
 ### How do I localize my listing in the store? {: #faq-gen-19 }
 
-There are two points where you need to localize your app for listing in a region that isn't your
+There are two points where you need to localize your extension for listing in a region that isn't your
 home market.
 
-1.  Your app package. See [Internationalizing Your App][118] for information on localizing your
-    app's presence inside Chrome.
+1.  Your extension package. See [Internationalizing Your App][118] for information on localizing your
+    extension's presence inside Chrome.
 2.  Your detailed listing. The developer dashboard now includes the ability for you to select all
     the regions that you want your application to appear in, allows you to localize the detailed
     description, price points relative to the market you are in, and screenshots.
 
 ### How do I localize my detailed description? {: #faq-gen-20 }
 
-You first need to [internationalize][119] your app and specify a "default_locale" attribute in your
-manifest. Once you upload your internationalized app, a selection box will appear at the top of your
-app listing, allowing you to switch between languages that you support and change the detailed
+You first need to [internationalize][119] your extension and specify a "default_locale" attribute in your
+manifest. Once you upload your internationalized extension, a selection box will appear at the top of your
+extension listing, allowing you to switch between languages that you support and change the detailed
 description.
 
 ### How do I show different screenshot images per region? {: #faq-gen-21 }
 
-Visit your app page in the [Chrome Web Store Developer Dashboard][120], change the currently
+Visit your extension page in the [Chrome Web Store Developer Dashboard][120], change the currently
 selected language to your desired choice (for example "en-GB") and upload a screenshot as normal.
 Once the image is uploaded you will be presented with an option to "Show this item in **all**
 locales" or "Show this item **only** in the 'en-GB' locale". Select the later to show the screenshot
@@ -307,31 +295,26 @@ For more information about the developer program policies, see:
 If your item's status says "pending review" for more than three weeks, you should [contact
 support][124].
 
-### Why isn't my app showing up on search? {: #faq-listing-09 }
+### Why isn't my extension showing up on search? {: #faq-listing-09 }
 
 It depends. There are several reasons why your item may not be showing up in search.
 
-- You just published your app. It might take a few hours before we index it.
-- Your app manifest is version 1. We have upgraded to manifest version 2, therefore all manifest v1
-  apps are unlisted. Please upgrade your item to manifest v2. See more details [here][125].
-- Your app contains an NPAPI. All apps containing NPAPI are now unlisted. For more details around
-  our NPAPI deprecation timelines, see our blog post [here][126].
-- Your app is a Google Application Marketplace app. All Google Application Marketplace apps will
-  only be visible on the corresponding management page for Google Application Marketplace, not on
-  chrome.google.com/webstore.
-- Your app is not listed in the region you are searching in. See more details [here][127].
+- You just published your extension. It might take a few hours before we index it.
+- Your extension manifest is out of date. Upgrade your item to a current valid manifest version as
+  described [here][125].
+- Your extension is not listed in the region you are searching in. See more details [here][127].
 
-### My app has been removed from the Chrome Web Store. What should I do? {: #faq-listing-10 }
+### My extension has been removed from the Chrome Web Store. What should I do? {: #faq-listing-10 }
 
 Application removals count as strikes against the good standing of your developer account. Multiple
 or egregious policy violations may result in termination of your developer account.
 
-- For all policy violation app removals, you will receive a removal notification email with more
-  details in the developer account listed as the owner of the app. Please make the appropriate
-  changes so your app complies with all [Developer Program Policies][128], [Branding
+- For all policy violation extension removals, you will receive a removal notification email with more
+  details in the developer account listed as the owner of the extension. Please make the appropriate
+  changes so your extension complies with all [Developer Program Policies][128], [Branding
   Guidelines][129] and [Terms of Services][130]. Once you have remedied the violation you can
   resubmit via your developer dashboard.
-- Please do not re-publish a removed application until the policy violation has been remedied. If
+- Please do not re-publish a removed extension until the policy violation has been remedied. If
   you have additional questions or feel your item was wrongly removed, you can reply directly to the
   removal email and appeal.
 - If you believe your developer account was wrongly terminated, you can appeal [here][131]. We will
@@ -344,203 +327,6 @@ We regularly run a script that looks for exact matches between the item name and
 address in Play and CWS. If there is an exact match, the "Available for Android" link will
 automatically show up on your item detail page the next time the script runs. At this point, there
 is no way to enter the information into your listing.
-
-## Installable web apps
-
-### What is the difference between packaged apps and hosted apps? {: #faq-app-01 }
-
-Hosted apps operate as traditional web apps (served via web servers and running inside of web
-browsers) and do not have access to the extended Chrome APIs that extensions can use. Packaged apps
-are bundled into the `.crx` file and can use the extensions APIs.
-
-### Can I sell a packaged app? {: #faq-app-02 }
-
-Yes, but there are risks in doing so. Specifically, it is easy for motivated people to bypass
-payments for packaged apps. This holds true even if you have used our Licensing API in your locally
-stored packaged app, since locally stored content is not secure and can be modified (including calls
-to the Licensing API). If you'd like to have the option of blocking access to your app by
-unauthorized users, selling a packaged app may not be the right solution for you. An alternative to
-consider is moving to a hosted app model with a server-side licensing check.
-
-### Why do you allow developers the option of paid packaged apps? {: #faq-app-02.5 }
-
-There are good reasons to offer a paid packaged app, even with the [limitations explained
-above][142]. Packaged apps let you easily provide functionality to your users without the overhead
-of managing a hosted service. Charging for a packaged app is a quick and simple way to enable a
-low-friction transaction if the app provides clear user value. However, it is up to the developer to
-decide which solution is right for them.
-
-### Can installable web apps have page actions? {: #faq-app-03 }
-
-No. Although packaged apps get most of the functionality of extensions, they can't have page
-actions.
-
-### Can installable web apps have browser actions? {: #faq-app-04 }
-
-No. Although packaged apps get most of the functionality of extensions, they can't have browser
-actions.
-
-### Can I use Google AdSense in my Chrome product? {: #faq-app-05 }
-
-According to the Google AdSense [program policies][143], Chrome-integrated websites ('hosted apps')
-may use AdSense; Chrome apps ('packaged apps'), extensions, and themes may not.
-
-### Can I use Google Analytics? {: #faq-app-06 }
-
-Yes. Packaged apps and extensions can use the [Chrome Platform Analytics][144] library. Hosted apps
-can use one of the Google Analytics libraries for standard websites (e.g., [analytics.js][145]).
-
-### What is the size limit for apps in the store? {: #faq-app-07 }
-
-The `.crx` file is currently limited to 2GB.
-
-### Do installable web apps run from the desktop, installed as separate apps, or otherwise operate independently of the browser? {: #faq-app-10 }
-
-No, Chrome Web Store apps are just web apps written with traditional web technologies, and are run
-via the browser.
-
-### What is actually installed by an installable web app? {: #faq-app-11 }
-
-Only the `.crx` package is actually installed into the browser; any contents not bundled into the
-`.crx` package will continue to be served by web servers. Installable web apps are not installed
-into the base operating system, desktop, or outside of the browser.
-
-### Do Chrome Web Store apps work in browsers other than Chrome? {: #faq-app-12 }
-
-Hosted apps are built with standard and common web technologies, and depending on the features you
-choose, will work in most or all browsers. The `.crx` package information you create to list the app
-in the store will not work with other browsers, but users do not need the `.crx` package to access a
-hosted web app in other browsers. (They can always directly access the app.) Packaged apps, because
-they are packaged in `.crx` files and might access the Google Chrome Extension APIs, will not work
-in other browsers.
-
-### Will users of other browsers be able to install apps directly from the Chrome Web Store? {: #faq-app-13 }
-
-Not at this point. However, they will be able to access your app via directly typing in the URL,
-launching bookmarks, and discovering your app via search engines. We hope that some form of
-installable web apps is a concept that appeals to other browsers and will eventually be a
-cross-browser feature.
-
-### Do installable web apps work on different operating systems? {: #faq-app-14 }
-
-Yes. They are just web apps, and are typically written with web technologies like HTML, CSS, and
-JavaScript.
-
-### How do I store my content for offline access? {: #faq-app-15 }
-
-This answer to this depends on the type of content and the storage requirements.
-
-- For a packaged app or extension, you can put all HTML, CSS, JavaScript, images, and other assets
-  into your `.crx` file. This embeds everything you need into the installable `.crx` file. This
-  bundling might be good for apps with content that rarely changes, such as ebooks. Chrome provides
-  an update mechanism to automatically deliver your updates to your users.
-- The [App Cache][146], an HTML5 feature, is a good way to locally cache resources such as HTML,
-  CSS, and JavaScript. These resources aren't included in the `.crx` file, but are downloaded the
-  first time the app is accessed. They are not downloaded again until the App Cache file itself is
-  changed. The App Cache is good for enabling fast startup, while retaining control over asset
-  versioning.
-- Local Storage, another HTML5 feature, is a key/value storage system that can store strings. Local
-  Storage is often used in place of some cookies, and it lives longer than the session. There is no
-  way, however, to send a populated Local Storage database on application install or load. You will
-  need to populate the Local Storage programmatically.
-- WebSQL DB is a full SQL database embedded in the Chrome browser. While stalled in the standards
-  process, this is a very powerful way to store highly structured data. Again, there is no way to
-  send a populated database on application install or load, so you will have to programmatically
-  populate the database. Also, this database can only store text, but you can use the data URI
-  scheme to store binary data.
-- In the future, the [File APIs][147] will be a useful addition to this array of offline storage
-  options, as they allow your web app to read and write files to a locally managed file store. These
-  APIs are not fully supported by Chrome, but follow the [Google Chrome Releases blog][148] to stay
-  up to date.
-
-For more details, read [a more detailed article on HTML5 offline options][149].
-
-### What makes a good web app? {: #faq-app-16 }
-
-While this is a subjective question, we have some notes in the article [Thinking in Web Apps][150].
-Briefly, and generally speaking, apps that are Big Screen, have a Rich Experience, are Good At One
-Thing, are Visually Appealing, and are Fast will be web apps that people love to use.
-
-### What is the screen resolution for Chrome Web Store apps? {: #faq-app-17 }
-
-Typical screen resolutions are 1024x768 and 1280x1024, but because users are free to resize their
-browser windows, we recommend fluid, full screen layouts that resize gracefully down to 1024x768
-(but then should scale up to very large, as well). Consider using Google Analytics to see what the
-most common screen resolutions are for your app's users.
-
-### Do apps run in full screen? {: #faq-app-18 }
-
-Apps can run in full screen mode using the [Fullscreen API][151]. See this [HTML5Rocks update][152]
-for more information on using this API in your application.
-
-### Will apps work on Android? {: #faq-app-19 }
-
-If your app is pure HTML, CSS3, and JavaScript and is hosted on your servers there is a good chance
-that it will work in the browser on Android. However, `.crx` files (including packaged apps) are not
-supported on Android. Users cannot install their apps onto the Android browser, but they can most
-likely use those apps by directly accessing the app's URL.
-
-### Will apps work on Google TV? {: #faq-app-20 }
-
-Google TV runs the Chrome browser, so it should be able to run your hosted web app. Installing apps
-directly from Chrome Web Store will not be available on Google TV at launch however. Users may
-directly type the URL for your hosted app, or use traditional search to find and start your app.
-
-### What can I do to protect the content of my web app? {: #faq-app-21 }
-
-You can determine if a user has paid for access to your app by using the Chrome Web Store Licensing
-API. If the user hasn't bought the app you deny access to that resource. Ultimately, Chrome Web
-Store apps are just web apps, so the same considerations for content protection must be taken into
-account.
-
-### What happens when a user clicks an external link in my app? {: #faq-app-22 }
-
-The same thing as if they clicked a link that's internal to your app: the browser follows the link,
-using the current tab.
-
-### How should my app handle the back button? {: #faq-app-23 }
-
-As with all web apps, you cannot rely on the back button always being present. Users might hide
-them, screen readers might not use them correctly, and so on. You should design your app to
-correctly support both back buttons and application-defined navigation.
-
-### How can I detect whether my app is running as an installed web app and via the Chrome app launcher (and not just via a bookmark or link)? {: #faq-app-24 }
-
-Use JavaScript to check whether `window.chrome.app.isInstalled` is defined. If it is, the app is
-running from the Chrome app launcher. Here's an example of the code you'd use:
-
-```js
-if (window.chrome.app.isInstalled) {
- // You're running as an installed app, via the app launcher!
- } else {
-  // You're running via a bookmark/link.
-}
-```
-
-### My app is available in multiple regions. Can I list it in different categories for each region? {: #faq-app-25 }
-
-No, the categories will be consistent across regions. If you list in one category, you will be
-listed in that category in all regions.
-
-## Extensions
-
-### Can I sell extensions in the store? {: #faq-extensions-01 }
-
-Yes! You can sell your Chrome Extension using [one-time payments][153].
-
-### Can I use the Licensing API with extensions? {: #faq-extensions-02 }
-
-Yes, see the section on [verifying payment and offering free trial][154] .
-
-## Themes
-
-### Can I sell themes in the store? {: #faq-themes-01 }
-
-Yes! You can sell your Chrome Theme using [one-time payments][156].
-
-### Can I use the Licensing API with themes? {: #faq-themes-02 }
-
-No, themes have no code or server-side components.
 
 ## Additional Troubleshooting
 
@@ -671,7 +457,7 @@ Business related issues by contacting CWS support.
 [122]: https://www.google.com/about/company/unwanted-software-policy.html
 [123]: /docs/webstore/program_policies
 [124]: https://support.google.com/chrome_webstore/contact/developer_support/?hl=en
-[125]: /docs/extensions/mv2/manifestVersion
+[125]: /docs/extensions/mv3/manifestVersion
 [126]: http://blog.chromium.org/2013/09/saying-goodbye-to-our-old-friend-npapi.html
 [127]: https://support.google.com/chrome_webstore/answer/1254182?hl=en&ref_topic=1734051
 [128]: /docs/webstore/program_policies

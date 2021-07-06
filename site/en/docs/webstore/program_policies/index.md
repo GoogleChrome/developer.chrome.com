@@ -2,11 +2,15 @@
 layout: "layouts/doc-post.njk"
 title: "Developer Program Policies"
 date: 2014-02-28
-updated: 2021-02-04
+updated: 2021-06-29
 description: Chrome Web Store developer program policies.
 ---
 
-<div class="aside aside--caution"><b>Important:</b> As of 06/12/2018, inline installation is deprecated. For more information, read our <a href="https://blog.chromium.org/2018/06/improving-extension-transparency-for.html">Chromium Blog post</a> and <a href="/extensions/inline_faq">Migration FAQ</a>.</div>
+{% Aside 'caution' %}
+
+**Important:** As of 06/12/2018, inline installation is deprecated. For more information, read our [Chromium Blog post](https://blog.chromium.org/2018/06/improving-extension-transparency-for.html) and [Migration FAQ](/extensions/inline_faq).
+
+{% endAside %}
 
 [Branding Guidelines][3] | [Rating Guidelines][4] | **Program Policies** | [User Data FAQ][5] |
 [Developer Agreement][6]
@@ -34,12 +38,12 @@ Sexually Explicit Material:
 
 : We don't allow content that contains nudity, graphic sex acts, sexually explicit material, or
   content that drives traffic to commercial pornography sites. We also don't allow content that
-  promotes incest, bestiality, necrophilia, or non-consensual sexual acts. Google has a zero-tolerance
-  policy against child pornography. If we become aware of content with child pornography, we will
-  report it to the appropriate authorities and delete the Google Accounts of those involved with the
-  distribution.
-  Content which contains non-sexual nudity - such as artistic, educational, scientific, or cultural
-  nudity - is generally allowed, but may impact the visibility of your Product.
+  promotes incest, bestiality, necrophilia, or non-consensual sexual acts. Google has a
+  zero-tolerance policy against child pornography. If we become aware of content with child
+  pornography, we will report it to the appropriate authorities and delete the Google Accounts of
+  those involved with the distribution. Content which contains non-sexual nudity - such as artistic,
+  educational, scientific, or cultural nudity - is generally allowed, but may impact the visibility
+  of your Product.
 
 Violent or Bullying Behavior:
 
@@ -48,18 +52,18 @@ Violent or Bullying Behavior:
 
   - Content which makes a specific threat of serious harm against an individual person or a defined
     group of people.
-  - Content whose predominant purpose is to single out another person for abuse, malicious attack, or
-    ridicule. Content that results in the unwanted sexualization of a person, including malicious
-    claims about a person's sexual activities, sexual orientation, or gender identity.\* A series of
-    posts/comments/photos that, taken together, clearly have the primary intention of harassment, even
-    if each individual piece of content is not severe.
+  - Content whose predominant purpose is to single out another person for abuse, malicious attack,
+    or ridicule. Content that results in the unwanted sexualization of a person, including malicious
+    claims about a person's sexual activities, sexual orientation, or gender identity.
+  - A series of posts/comments/photos that, taken together, clearly have the primary intention of
+    harassment, even if each individual piece of content is not severe.
 
 Hate Speech:
 
-: We don't allow content advocating against or inciting hatred towards groups of people based on their
-  race or ethnic origin, religion, disability, gender, age, veteran status, nationality, sexual
-  orientation, gender, gender identity, or any other characteristic that is associated with systematic
-  discrimination or marginalization.
+: We don't allow content advocating against or inciting hatred towards groups of people based on
+  their race or ethnic origin, religion, disability, gender, age, veteran status, nationality,
+  sexual orientation, gender, gender identity, or any other characteristic that is associated with
+  systematic discrimination or marginalization.
 
   Additionally, the visibility of your Product may be impacted if it contains generally hateful
   content not covered by the above definition.
@@ -68,19 +72,22 @@ Violent Extremism:
 
 : We remove content that recruits, fundraises, or promotes violence on behalf of extremist groups
   defined by the US State Department and other international organizations. Violent extremism is
-  defined as the use of violence and intimidation in the pursuit of political aims or goals outside of
-  societal norms.
+  defined as the use of violence and intimidation in the pursuit of political aims or goals outside
+  of societal norms.
 
 Impersonation or Deceptive Behavior:
 
 : Don't pretend to be someone else, and don't represent that your product is authorized by, endorsed
-  by, or produced by another company or organization, if that is not the case. Developers should not
-  divert users or provide links to any other site that mimics Chrome Web Store or passes itself off as
-  Chrome Web Store. Your Product and its user experience also must not mimic functionality or warnings
-  from a user's operating system or browser. Any changes to device settings must be made with the
-  user's knowledge and consent and be easily reversible by the user.
+  by, or produced by another company or organization, if that is not the case.
 
-  We do not allow products which deceive or mislead users, including in the content, title,
+: Developers should not divert users or provide links to any other site that mimics the Chrome Web
+  Store or passes itself off as the Chrome Web Store. Your Product and its user experience also must
+  not mimic functionality or warnings from a user's operating system or browser.
+
+: Any changes to device settings must be made with the user's knowledge and consent and be easily
+  reversible by the user.
+
+: We do not allow products that deceive or mislead users, including in the content, title,
   description, or screenshots.
 
 : Don't misrepresent the functionality of your product or include non-obvious functionality that
@@ -88,13 +95,14 @@ Impersonation or Deceptive Behavior:
   the functionality so that users have a clear understanding of the product they are adding. For
   example, products should not contain:
 
-  - Claimed functionalities which are not possible to implement (e.g. "Who has viewed your IG
-    account")
-  - Developer or product names which misrepresent their current status or performance on the Chrome
-    Web Store (e.g. "Editor's Choice" or "Number One")
+  * Claimed functionalities that are not possible to implement (e.g. "Who has viewed your social
+    media account") or which are not directly provided by the extension (e.g. file converters which
+    only link to other file conversion services)
+  * Any metadata that misrepresents the extension's or developer's current status or performance
+    on the Chrome Web Store (e.g. "Editor's Choice" or "Number One")
 
-  If your product has a blank description field or is missing an icon or screenshots, it will be
-  rejected. If any of your product's content, title, icon, description or screenshots contains false
+: If your product has a blank description field or is missing an icon or screenshots, it will be
+  rejected. If any of your product's content, title, icon, description, or screenshots contains false
   or misleading information, we may remove it.
 
 Featured Products:
@@ -161,6 +169,15 @@ Code Readability Requirements:
   - Shortening of variable and function names
   - Collapsing files together
 
+Two Step Verification:
+
+: To ensure the security of CWS accounts, Two Step Verification is required for all developer
+  accounts prior to publishing an extension or updating an existing extension. Developers can activate
+  Two Step Verification for their Google Accounts
+  [here](https://myaccount.google.com/security/signinoptions/two-step-verification/enroll-welcome).
+  More information on Google's Two Step Verification features can be found
+  [here](https://www.google.com/landing/2step/).
+
 Additional Requirements for Manifest V3:
 
 : Extensions using Manifest V3 must meet additional requirements related to the
@@ -218,17 +235,25 @@ remediation steps required to restore the product.
 
 ## Deceptive Installation Tactics {: #deceptive_installation_tactics }
 
-Extensions must be marketed responsibly. Extensions that use or benefit from deceptive installation
-tactics will be removed from the Chrome Web Store.
+Extensions must be marketed responsibly. The set of functionalities promised by the extension must
+be stated clearly and in a transparent manner. The outcome of any user interaction should match the
+reasonable expectations that were set with the user. Extensions that use or benefit from deceptive
+installation tactics will be removed from the Chrome Web Store.
 
 Deceptive installation tactics include:
 
-- Unclear or inconspicuous disclosures on marketing collateral preceding the Chrome Web Store
+* Unclear or inconspicuous disclosures on marketing collateral preceding the Chrome Web Store
   product listing.
-- Misleading interactive elements as part of your distribution flow. This includes misleading
+
+* Misleading interactive elements as part of your distribution flow. This includes misleading
   call-to-action buttons or forms that imply an outcome other than the installation of an extension.
-- Adjusting the Chrome Web Store product listing window with the effect of withholding or hiding
+
+* Adjusting the Chrome Web Store product listing window with the effect of withholding or hiding
   extension metadata from the user.
+
+* Bundling other extensions or offers within the same installation flow.
+
+* Requiring unrelated user action to access advertised functionality.
 
 For more information about this policy, please see the [Developer FAQ][11].
 
@@ -314,10 +339,31 @@ Other Requirements
 
 : The following types of personal or sensitive user data are also subject to additional requirements:
 
-  <table><tbody><tr><td><strong>Type of User Data</strong></td><td><strong>Requirement</strong></td></tr><tr><td>Financial or Payment Information</td><td>Don't publicly disclose financial or payment information</td></tr><tr><td>Authentication Information</td><td>Don't publicly disclose authentication information</td></tr><tr><td>Web Browsing Activity</td><td>Collection and use of web browsing activity is prohibited except to the extent required for a user-facing feature described prominently in the Product's Chrome Web Store page and in the Product's user interface.</td></tr></tbody></table>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Type of User Data</strong></td>
+        <td><strong>Requirement</strong></td>
+      </tr>
+      <tr>
+        <td>Financial or Payment Information</td>
+        <td>Don't publicly disclose financial or payment information</td>
+      </tr>
+      <tr>
+        <td>Authentication Information</td>
+        <td>Don't publicly disclose authentication information</td>
+      </tr>
+      <tr>
+        <td>Web Browsing Activity</td>
+        <td>Collection and use of web browsing activity is prohibited except to the extent required
+          for a user-facing feature described prominently in the Product's Chrome Web Store page and
+          in the Product's user interface.</td>
+      </tr>
+    </tbody>
+  </table>
 
-  If your Product uses inline installation pages, then any reference to the Product's Chrome Web Store
-  page also includes its inline installation pages.
+  If your Product uses inline installation pages, then any reference to the Product's Chrome Web
+  Store page also includes its inline installation pages.
 
 ### Limited Uses of User Data {: #limited_use }
 
@@ -371,26 +417,26 @@ the [content rating][18] of your products or extension are also in violation of 
 
 Ads Context and Attribution:
 
-: Ads must be presented in context or clearly state which product they are bundled with. Ads must also
-  be easily removable by either adjusting the settings or uninstalling the product altogether. Ads may
-  not simulate or impersonate system notifications or warnings.
+: Ads must be presented in context or clearly state which product they are bundled with. Ads must
+  also be easily removable by either adjusting the settings or uninstalling the product altogether.
+  Ads may not simulate or impersonate system notifications or warnings.
 
 Ad Walls:
 
-: Forcing the user to click on ads or submit personal information for advertising purposes in order to
-  fully use an app or extension provides a poor user experience and is prohibited.
+: Forcing the user to click on ads or submit personal information for advertising purposes in order
+  to fully use an app or extension provides a poor user experience and is prohibited.
 
 Interfering with Third-party Ads and Websites:
 
 : Ads associated with your product may not interfere with any ads on a third-party website or
-  application. You may show ads alongside a third-party website only if all of the following criteria
-  are met:
+  application. You may show ads alongside a third-party website only if all of the following
+  criteria are met:
 
   - This behavior is clearly disclosed to the user.
   - There is clear attribution of the ads' source wherever those ads appear.
   - The ads do not interfere with any native ads or functionality of the website.
-  - The ads do not mimic or impersonate the native ads or content on the third-party website, and the
-    ads adhere to the content policy on [impersonation and deceptive behavior][19].
+  - The ads do not mimic or impersonate the native ads or content on the third-party website, and
+    the ads adhere to the content policy on [impersonation and deceptive behavior][19].
 
 <div class="aside aside--note">Currently, AdSense may not be used to serve ads in Products, per <a href="https://support.google.com/adsense/bin/answer.py?hl=en&amp;answer=48182">AdSense policies</a>.</div>
 
