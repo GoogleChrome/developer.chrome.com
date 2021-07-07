@@ -93,14 +93,15 @@ welcome to join the discussion whether or not you've tried the API.
 
 ### Try the API
 
-{% Aside 'caution' %} If you're experimenting with the API in Chrome, you'll have access
-to all the features that are **currently** implemented. Not all features discussed in the
-[repository](https://github.com/WICG/conversion-measurement-api/) and
-[meeting](https://github.com/WICG/conversion-measurement-api/issues/80) are implemented in
-the Chrome origin trial. See the current feature status in [Status](#status). The features
+{% Aside 'caution' %}
+
+If you're experimenting with the API in Chrome, you'll have access
+to all the features that are **currently** implemented. Not all features discussed in the [repository](https://github.com/WICG/conversion-measurement-api/) and [meeting](https://github.com/WICG/conversion-measurement-api/issues/80) are implemented in the Chrome origin trial. See the current feature status in [Status](#status). The features
 available for experimentation are also a subset of what will ultimately be supported by
 the API, and are subject to change as the API is being incubated in the open and as
-ecosystem feedback is collected. {% endAside %}
+ecosystem feedback is collected.
+
+{% endAside %}
 
 #### Experiment locally or with a demo
 
