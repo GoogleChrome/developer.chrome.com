@@ -323,8 +323,7 @@ Privacy Policy Requirements
   Product collects, uses and shares user data, including the types of parties with whom it's shared.
   You must make the the policy accessible by providing a link:
 
-  - In the designated field in the Chrome Web Store Developer Dashboard, and
-  - In the Product's inline installation page (if applicable).
+  - In the designated field in the Chrome Web Store Developer Dashboard.
 
 Prominent Disclosure Requirement
 
