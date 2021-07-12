@@ -24,3 +24,6 @@ import './web-components/side-nav';
 import './web-components/top-nav';
 import './web-components/web-tabs';
 import './third-party/announcement-banner/announcement-banner';
+
+// Copyable heading links
+import './behaviors/copyable-heading-links';
