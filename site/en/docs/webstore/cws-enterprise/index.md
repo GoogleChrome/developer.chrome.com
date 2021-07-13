@@ -40,8 +40,9 @@ Google Workspace domain:
 * **Private Chrome Web Store:** &emsp;
   `chrome.google.com/webstore/a/example.com/category/extensions`
 
-The option that enables this is available to administrators at `Devices>Chrome>Apps & extensions>users
-& browsers>additional settings>chrome Web store permissions`:
+The option that enables this is available to administrators at **Devices > Chrome > Apps &
+extensions > users
+& browsers > additional settings > chrome Web store permissions**:
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/o8yqCGh07bdtYmRbKSKa.png", alt="Screenshot of option
 to enable private domain publishing",
@@ -62,7 +63,7 @@ side effect is that domain-published extensions usually get through the review p
 If domain publishing is enabled for your organization, an additional option appears in the
 distribution page of the developer console:
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/SmrqQb3mLZaYj0O3Kdiv.png", alt="Screenshot showing
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/zpV6tBHuf3HLBpRjGsNA.png", alt="Screenshot showing
 the domain publishing option in the developer console", width="643", height="200", class="screenshot" %}
 
 Select this option to publish privately to your domain.
@@ -130,9 +131,12 @@ Here are a few things to check:
   Chrome Web Store and when it is available for installation. This review can be quicker for
   domain-published extensions, but still takes some time.
 
+* Also note that extensions roll out over a period of time, so&mdash;especially if your organization
+  has a large user base&mdash;some users may see the update before others.
+
 * Make sure you're checking the [private Chrome Web Store][#private-cws] and not the public one.
 
-[ent-chrome-management]: https://chromeenterprise.google/browser/management/
+[ent-chrome-management]: https://support.google.com/chrome/a/answer/9296680
 [ent-ext-admin-forcelist]: https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist
 [ent-ext-admin-collections]: https://support.google.com/chrome/a/answer/2649489
 [ent-ext-admin-policies]: https://chromeenterprise.google/policies/atomic-groups/#Extensions
