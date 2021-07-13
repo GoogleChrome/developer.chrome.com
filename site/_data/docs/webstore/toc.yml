@@ -22,6 +22,7 @@
     - url: /docs/webstore/cws-dashboard-listing/
     - url: /docs/webstore/cws-dashboard-privacy/
     - url: /docs/webstore/cws-dashboard-distribution/
+    - url: /docs/webstore/cws-enterprise/
 - title: i18n.docs.webstore.policies
   sections:
     - url: /docs/webstore/terms/
