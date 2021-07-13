@@ -20,14 +20,9 @@ Some of these enterprise features involve how the Chrome Web Store works within 
 * **Blocklist and allowlist** &mdash; These options that let your admins manage which extensions can
   be used in your org.
 
-* **Version pinning** &mdash; Administrators can designate specific versions of extensions that
-  users in the organization can install.
-
-There are also features that operate independently of the Chrome Web Store, but also affect users'
-extensions experience. These features include:
-
-* **Force install** &mdash; Administrators can set policies that automatically install extensions
-  for users in the organization.
+* **Force install** &mdash; Administrators can set policies that automatically and silently install
+  extensions for users in the organization. Once installed, users cannot disable or remove these
+  extensions.
 
 The following sections provide a brief overview of these features. See the cited enterprise
 documentation for each topic to learn about them in more detail.
@@ -35,7 +30,9 @@ documentation for each topic to learn about them in more detail.
 ## Private Chrome Web Store for your organization {: #private-cws }
 
 Any Google Workspace organization can have its own private instance of Chrome Web Store. To access
-this, you need to use a slightly different URL than that of the public store, which specifies your
+it, users must be signed into Chrome with their organization credentials. 
+
+You also need to use a slightly different URL than that of the public store, which specifies your
 Google Workspace domain:
 
 * **Public Chrome Web Store:** &emsp;
@@ -92,19 +89,18 @@ use to explicitly control which extensions may or that may not be installed by m
 These and other enterprise extension controls are set by administrators using policies in the
 [extensions atomic policy group][ent-ext-admin-policies].
 
-**Version pinning:** In an enterprise context, it can be a problem when software versions update
-unexpectedly; these changes can necessitate new training and procedures or interfere with
-integrations. For organizations with a private Chrome Web Store enabled, administrators can
-designate specific versions of extensions that users in the organization can install.
-
 ## Non-webstore installations {: #side-loading }
 
-There are ways to install enterprise extensions without using the Chrome Web Store, such as those
-described in this section.
+There are ways to install enterprise extensions without requiring users to go to the Chrome Web
+Store, such as those described in this section.
 
-**Force install:** Administrators can set policies that automatically install extensions
-for users in the organization. This is typically used for extensions that support workflows and
-other core business operation.
+**Force install:** Administrators can set policies that automatically and silently install
+extensions for users in the organization. This is typically used for extensions that support
+workflows and other core business operations.
+
+{% Aside }
+Users can't remove extensions that are force installed.
+{% endAside }
   
 See the [ExtensionInstallForcelist][ent-ext-admin-forcelist] documentation to learn more about
 this feature.
