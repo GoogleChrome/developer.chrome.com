@@ -250,7 +250,7 @@ keyboard shortcut.
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: {tabId: tab.id},
-    func: contentScriptFunc,
+    function: contentScriptFunc,
     args: ['action'],
   });
 });
