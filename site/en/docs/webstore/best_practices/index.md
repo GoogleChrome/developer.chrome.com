@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Best Practices
 date: 2017-08-30
+updated: 2021-06-21
 description: >
   Best practices on how to implement your app and list it in the Chrome Web Store.
 ---
