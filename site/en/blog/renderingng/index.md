@@ -549,7 +549,7 @@ It began in 2015 and will finish in 2021.
 
 ### VideoNG
 
-A long-term effort to provide provide efficient, reliable, and high quality video playback on the web.
+A long-term effort to provide efficient, reliable, and high quality video playback on the web.
 
 <table>
   <thead>
