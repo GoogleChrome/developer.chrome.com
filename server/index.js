@@ -46,7 +46,7 @@ const cspHandler = (req, res, next) => {
   // TODO(samthor): This is an unsuitable policy but included as a start.
   res.setHeader(
     'Content-Security-Policy-Report-Only',
-      "object-src 'none'; " +
+    "object-src 'none'; " +
       "script-src 'self' 'unsafe-inline' https://www.google-analytics.com; " +
       "base-uri 'none'; " +
       "frame-ancestors 'self'; " +
