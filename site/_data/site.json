@@ -7,7 +7,12 @@
   "repo": "https://github.com/GoogleChrome/developer.chrome.com/",
   "locales": [
     "en",
-    "es"
+    "es",
+    "pt",
+    "ko",
+    "zn",
+    "ru",
+    "ja"
   ],
   "defaultLocale": "en",
   "cookiesCtaUrl": "https://policies.google.com/technologies/cookies"
