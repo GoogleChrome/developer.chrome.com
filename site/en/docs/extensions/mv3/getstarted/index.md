@@ -57,8 +57,11 @@ manifest, a generic icon will be created for the extension.
 The extension is now installed, but it doesn't currently do anything because we haven't told it what
 to do or when to do it. Let's fix that by adding some code to store a background color value.
 
-To do this, we will need to create a [background script][1] and add it to the extension's manifest.
-Start by creating a file named `background.js` inside the extension's directory.
+### Register the background script in the manifest {: #background_manifest }
+
+Background scripts, like many other important components, must be registered in the manifest.
+Registering a background script in the manifest tells the extension which file to reference, and how
+that file should behave.
 
 ```json/5-7
 {
@@ -80,10 +83,12 @@ Chrome is now aware that the extension includes a service worker. When you reloa
 Chrome will scan the specified file for additional instructions, such as important events it needs
 to listen for.
 
+### Create the background script {: #background_script }
+
 This extension will need information from a persistent variable as soon as it's installed. Start by
 including a listening event for [`runtime.onInstalled`][11] in the background script. Inside the
 `onInstalled` listener, the extension will set a value using the [storage][12] API. This will allow
-multiple extension components to access that value and update it.
+multiple extension components to access that value and update it. Inside the extension's directory create a file named `background.js` and add the following code.
 
 ```js
 let color = '#3aa757';
@@ -93,6 +98,8 @@ chrome.runtime.onInstalled.addListener(() => {
   console.log('Default background color set to %cgreen', `color: ${color}`);
 });
 ```
+
+### Add the storage permission {: #storage_permission }
 
 Most APIs, including the [storage][12] API, must be registered under the `"permissions"` field in
 the manifest for the extension to use them.
