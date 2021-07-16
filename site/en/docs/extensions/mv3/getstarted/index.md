@@ -75,10 +75,6 @@ that file should behave.
 }
 ```
 
-Background scripts, like many other important components, must be registered in the manifest.
-Registering a background script in the manifest tells the extension which file to reference, and how
-that file should behave.
-
 Chrome is now aware that the extension includes a service worker. When you reload the extension,
 Chrome will scan the specified file for additional instructions, such as important events it needs
 to listen for.
@@ -117,8 +113,10 @@ the manifest for the extension to use them.
 }
 ```
 
+### Inspect the background script
+
 Navigate back to the extension management page and click the **Reload** link. A new field, **Inspect
-views**, becomes available with a blue link, **background page**.
+views**, becomes available with a blue link, **service worker**.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/dx9EpIKK949olhe8qraK.png", alt="Inspect views", width="566", height="353" %}
 
