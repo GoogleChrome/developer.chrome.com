@@ -23,7 +23,7 @@ function Hreflang(url, site, collections) {
     }
     return out;
   }, []);
-  return hreflangs.join('\n');
+  return hreflangs.length > 1 ? hreflangs.join('\n') : '';
 }
 
 module.exports = {Hreflang};
