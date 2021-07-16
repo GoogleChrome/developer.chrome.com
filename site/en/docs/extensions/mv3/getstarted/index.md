@@ -363,7 +363,7 @@ Then register the options page in the manifest,
 }
 ```
 
-Reload the extension and click **DETAILS**.
+Reload the extension and right-click the extension icon in the toolbar then select **Options**. Alternatively, click DETAILS and scroll down the details page and select **Extension options**.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/aV46PP8KCjEqqenSJxxp.png", alt="Right click to open the options page", width="248", height="260" %}
 
