@@ -239,6 +239,7 @@ favicon. These images are designated in the manifest under [`icons`][19].
 }
 ```
 
+By default, extensions appear in the extensions menu (the puzzle piece). Pinning the extension will display the icon in the toolbar.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GdHNy255kS4hWD5vb1fc.png", alt="Pin the extension to the toolbar", width="502", height="278" %}
 
