@@ -20,6 +20,7 @@ Interested in helping improve DevTools? Sign up to participate in [Google User R
 
 {% endAside %}
 
+{% YouTube id="2baY3JpCxpo" %}
 
 ## CSS grid editor {: #grid-editor }
 A highly requested feature. You can now preview and author CSS Grid with the new CSS Grid editor! 
