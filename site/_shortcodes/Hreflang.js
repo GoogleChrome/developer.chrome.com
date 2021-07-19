@@ -1,4 +1,5 @@
 const {findByUrl} = require('../_data/lib/find');
+const path = require('path');
 
 /**
  * Outputs a list of <link hreflang=""> tags with alternate language versions
@@ -18,7 +19,7 @@ function Hreflang(url, site, collections) {
     const hreflang = urlParts.join('/');
     if (findByUrl(collections.all, hreflang)) {
       out.push(
-        `<link href="${site.url}${hreflang}" rel="alternate" hreflang="${locale}">`
+        `<link href="${path.join(site.url, hreflang)}" rel="alternate" hreflang="${locale}">`
       );
     }
     return out;

@@ -9,3 +9,8 @@
   white-space: nowrap;
   width: 1px;
 }
+
+// Temporary class until web.dev gets rid of w- prefix.
+.w-visually-hidden {
+  @extend .visually-hidden;
+}
