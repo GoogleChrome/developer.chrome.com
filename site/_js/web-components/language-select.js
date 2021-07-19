@@ -32,7 +32,6 @@ class LanguageSelect_ extends LanguageSelect {
   }
 
   onChange(e) {
-    console.log(this.supportedLanguages);
     const lang = e.target.value;
     if (!this.supportedLanguages.includes(lang)) {
       return;
