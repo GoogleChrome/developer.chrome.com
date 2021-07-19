@@ -1,3 +1,4 @@
+%visually-hidden,
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -12,5 +13,5 @@
 
 // Temporary class until web.dev gets rid of w- prefix.
 .w-visually-hidden {
-  @extend .visually-hidden;
+  @extend %visually-hidden;
 }

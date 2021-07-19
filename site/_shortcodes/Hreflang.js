@@ -19,7 +19,10 @@ function Hreflang(url, site, collections) {
     const hreflang = urlParts.join('/');
     if (findByUrl(collections.all, hreflang)) {
       out.push(
-        `<link href="${path.join(site.url, hreflang)}" rel="alternate" hreflang="${locale}">`
+        `<link href="${path.join(
+          site.url,
+          hreflang
+        )}" rel="alternate" hreflang="${locale}">`
       );
     }
     return out;
