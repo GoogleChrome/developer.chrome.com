@@ -24,4 +24,5 @@ import './web-components/side-nav';
 import './web-components/top-nav';
 import './web-components/share-button';
 import './web-components/web-tabs';
+import './web-components/language-select';
 import './third-party/announcement-banner/announcement-banner';
