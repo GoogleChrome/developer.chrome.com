@@ -17,8 +17,6 @@
 /**
  * @fileoverview A component for selecting the language version.
  */
-
-import cookies from 'js-cookie';
 import {LanguageSelect} from 'webdev-infra/web-components/LanguageSelect';
 
 /**
@@ -36,11 +34,6 @@ class LanguageSelect_ extends LanguageSelect {
     if (!this.supportedLanguages.includes(lang)) {
       return;
     }
-    const options = {
-      expires: 10 * 365, // 10 years
-      samesite: 'strict',
-    };
-    cookies.set('firebase-language-override', lang, options);
     if (lang !== this.current) {
       const pathParts = location.pathname.split('/');
       const replace = this.supportedLanguages.includes(pathParts[1]) ? 1 : 0;
