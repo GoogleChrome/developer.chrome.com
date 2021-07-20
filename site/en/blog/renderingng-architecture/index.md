@@ -51,7 +51,7 @@ and [extensibility](/blog/renderingng/#extensibility-the-right-tools-for-the-job
 
 ## RenderingNG components
 
-## Rendering pipeline structure
+### Rendering pipeline structure
 
 {% Img
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/jsWIjoou2iaN6ORvMfvM.jpeg",
