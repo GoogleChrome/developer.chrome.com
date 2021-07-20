@@ -7,12 +7,13 @@ description: How to distribute  extensions to enterprise users
 ---
 
 When you are in a Google Workspace organization, there are some additional options available for
-publishing extensions to your domain. This article summarizes these options, but they are detailed as
-part of the [Chrome enterprise documentation][ent-chrome-management].
+publishing extensions to your domain. This article summarizes these options, but they are detailed
+as part of the [Chrome enterprise documentation][ent-chrome-management].
 
 Some of these enterprise features involve how the Chrome Web Store works within a Google Workspace:
 
-* **Domain publishing** &mdash; Lets you publish only to your organization's private Chrome Web Store.
+* **Domain publishing** &mdash; Lets you publish only to your organization's private Chrome Web
+  Store.
 
 * **Collections** &mdash; These provide curated collections of extensions specific to your
   organization.
@@ -30,7 +31,7 @@ documentation for each topic to learn about them in more detail.
 ## Private Chrome Web Store for your organization {: #private-cws }
 
 Any Google Workspace organization can have its own private instance of Chrome Web Store. To access
-it, users must be signed into Chrome with their organization credentials. 
+it, users must be signed into Chrome with their organization credentials.
 
 You also need to use a slightly different URL than that of the public store, which specifies your
 Google Workspace domain:
@@ -41,12 +42,10 @@ Google Workspace domain:
   `chrome.google.com/webstore/a/example.com/category/extensions`
 
 The option that enables this is available to administrators at **Devices > Chrome > Apps &
-extensions > users
-& browsers > additional settings > chrome Web store permissions**:
+extensions > users & browsers > additional settings > chrome Web store permissions**:
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/o8yqCGh07bdtYmRbKSKa.png", alt="Screenshot of option
-to enable private domain publishing",
-width="800", height="121", class="screenshot"  %}
+to enable private domain publishing", width="800", height="121", class="screenshot"  %}
 
 
 ## Domain publishing {: #domain-publishing }
@@ -64,7 +63,8 @@ If domain publishing is enabled for your organization, an additional option appe
 distribution page of the developer console:
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/zpV6tBHuf3HLBpRjGsNA.png", alt="Screenshot showing
-the domain publishing option in the developer console", width="643", height="200", class="screenshot" %}
+the domain publishing option in the developer console", width="643", height="200",
+class="screenshot" %}
 
 Select this option to publish privately to your domain.
 
@@ -84,8 +84,8 @@ Picks, but appear in your private Chrome Web Store.
 The article [Create a Chrome app collection][ent-ext-admin-collections] provides instructions for
 administrators to add collections to your private Chrome Web Store.
 
-**Blocklist and allowlist:** These are options that your organization's administrators can
-use to explicitly control which extensions may or that may not be installed by members of the org.
+**Blocklist and allowlist:** These are options that your organization's administrators can use to
+explicitly control which extensions may or that may not be installed by members of the org.
 
 These and other enterprise extension controls are set by administrators using policies in the
 [extensions atomic policy group][ent-ext-admin-policies].
@@ -102,9 +102,9 @@ workflows and other core business operations.
 {% Aside }
 Users can't remove extensions that are force installed.
 {% endAside }
-  
-See the [ExtensionInstallForcelist][ent-ext-admin-forcelist] documentation to learn more about
-this feature.
+
+See the [ExtensionInstallForcelist][ent-ext-admin-forcelist] documentation to learn more about this
+feature.
 
 ## Troubleshooting tips for domain extensions {: #troubleshooting }
 
@@ -113,9 +113,11 @@ to a domain.
 
 **I don't see the "Only to my domain" option under the private publishing option.**
 
-This option is only available to domain users when it has been enabled for the domain. Make sure that:
+This option is only available to domain users when it has been enabled for the domain. Make sure
+that:
 
-* You are logged in using your domain identity, and not a public (gmail) or other non-domain identity.
+* You are logged in using your domain identity, and not a public (gmail) or other non-domain
+  identity.
 * Your administrator has configured domain publishing.
 
 **Why are my users not getting extension updates after I publish them?**
@@ -137,7 +139,7 @@ Here are a few things to check:
 * Make sure you're checking the [private Chrome Web Store][#private-cws] and not the public one.
 
 [ent-chrome-management]: https://support.google.com/chrome/a/answer/9296680
-[ent-ext-admin-forcelist]: https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist
 [ent-ext-admin-collections]: https://support.google.com/chrome/a/answer/2649489
+[ent-ext-admin-forcelist]: https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist
 [ent-ext-admin-policies]: https://chromeenterprise.google/policies/atomic-groups/#Extensions
 [ent-ext-blog-how]: https://cloud.google.com/blog/products/chrome-enterprise/publishing-extensions-for-the-enterprise
