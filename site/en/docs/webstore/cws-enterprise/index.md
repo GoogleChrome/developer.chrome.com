@@ -99,9 +99,9 @@ Store, such as those described in this section.
 extensions for users in the organization. This is typically used for extensions that support
 workflows and other core business operations.
 
-{% Aside }
+{% Aside %}
 Users can't remove extensions that are force installed.
-{% endAside }
+{% endAside %}
 
 See the [ExtensionInstallForcelist][ent-ext-admin-forcelist] documentation to learn more about this
 feature.
