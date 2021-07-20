@@ -20,17 +20,6 @@ select::-ms-expand {
   display: none;
 }
 
-// This will remove the dotted outline inside of the select when it is focused
-// in Firefox.
-// The trick is to make the text transparent (which makes the dotted outline
-// transparent) and then "display" the text again using a 0 offset text-shadow.
-// Note that this forces the text to be black when it is focused in Firefox.
-// To change that color, change the value of the text-shadow.
-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-}
-
 select:hover {
   border-color: var(--color-text);
 }
