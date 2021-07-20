@@ -47,7 +47,6 @@ extensions > users & browsers > additional settings > chrome Web store permissio
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/o8yqCGh07bdtYmRbKSKa.png", alt="Screenshot of option
 to enable private domain publishing", width="800", height="121", class="screenshot"  %}
 
-
 ## Domain publishing {: #domain-publishing }
 
 This lets you publish an extension that appears on your organization's private Chrome Web Store, so
