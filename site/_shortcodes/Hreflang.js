@@ -1,4 +1,5 @@
 const {findByUrl} = require('../_data/lib/find');
+const {getLocalizedPaths} = require('../_filters/urls');
 const path = require('path');
 
 /**
@@ -12,22 +13,16 @@ function Hreflang(url, site, collections) {
   if (!url) {
     return;
   }
-  const urlParts = url.split('/');
-  const replace = site.locales.includes(urlParts[1]) ? 1 : 0;
-  const hreflangs = site.locales.reduce((out, locale) => {
-    urlParts.splice(1, replace, locale);
-    const hreflang = urlParts.join('/');
-    if (findByUrl(collections.all, hreflang)) {
-      out.push(
-        `<link href="${path.join(
-          site.url,
-          hreflang
-        )}" rel="alternate" hreflang="${locale}">`
-      );
-    }
-    return out;
-  }, []);
-  return hreflangs.length > 1 ? hreflangs.join('\n') : '';
+  const hreflangs = getLocalizedPaths(url, site.locales).filter(hreflang =>
+    findByUrl(collections.all, hreflang[0])
+  );
+  const links = hreflangs.map(hreflang => {
+    return `<link href="${path.join(
+      site.url,
+      hreflang[0]
+    )}" rel="alternate" hreflang="${hreflang[1]}">`;
+  });
+  return links.length > 1 ? links.join('\n') : '';
 }
 
 module.exports = {Hreflang};
