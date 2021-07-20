@@ -34,10 +34,6 @@ class LanguageSelect_ extends LanguageSelect {
     if (!this.supportedLanguages.includes(lang)) {
       return;
     }
-    const options = {
-      expires: 10 * 365, // 10 years
-      samesite: 'strict',
-    };
     if (lang !== this.current) {
       const pathParts = location.pathname.split('/');
       const replace = this.supportedLanguages.includes(pathParts[1]) ? 1 : 0;
