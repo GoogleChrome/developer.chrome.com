@@ -22,5 +22,6 @@ import './store.js';
 import './web-components/search-box';
 import './web-components/side-nav';
 import './web-components/top-nav';
+import './web-components/share-button';
 import './web-components/web-tabs';
 import './third-party/announcement-banner/announcement-banner';
