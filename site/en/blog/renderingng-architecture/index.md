@@ -168,7 +168,7 @@ It's also important for
 
 Since the browser can have many tabs and windows,
 and all of them have browser UI pixels to draw,
-you might wonder why there is exactly one browser process?
+you might wonder: why there is exactly one browser process?
 The reason is that only one of them is focused at a time;
 in fact, non-visible browser tabs are mostly deactivated and drop all of their GPU memory.
 However, complex browser UI rendering features are increasingly being implemented
@@ -197,15 +197,15 @@ width="800", height="556" %}
 
 - The **main thread** runs scripts, the rendering event loop, the document lifecycle,
 hit testing, script event dispatching, and parsing of HTML, CSS and other data formats.
-  - **Main thread helpers:** creates image bitmaps and blobs that require encoding or decoding.
-  - **[Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API):**
-  runs script, and a rendering event loop for OffscreenCanvas.
-- The **Compositor thread:** processes input events,
+  - **Main thread helpers** perform tasks such as creating image bitmaps and blobs that require encoding or decoding.
+  - **[Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)**
+  run script, and a rendering event loop for OffscreenCanvas.
+- The **Compositor thread** processes input events,
 performs scrolling and animations of web content,
 computes optimal layerization of web content,
 and coordinates image decodes, paint worklets and raster tasks.
-  - **Compositor thread helpers:** coordinates Viz raster tasks,
-  and executes image decode tasks, paint worklets and fallback raster.
+  - **Compositor thread helpers:** coordinate Viz raster tasks,
+  and execute image decode tasks, paint worklets and fallback raster.
 - **Media, demuxer or audio output threads** decode,
 process and synchronize video and audio streams.
 (Remember that video executes in parallel with the main rendering pipeline.)
@@ -256,10 +256,10 @@ because scroll and animation can run in parallel.
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/Upqecg8lPRgKFlqLH61g.jpeg",
 alt="Browser process diagram", width="800", height="426" %}
 
-- **Render and compositing thread:** responds to input in the browser UI,
+- The **render and compositing thread** responds to input in the browser UI,
 routes other input to the correct render process; lays out and paints browser UI.
-- **Render and compositing thread helper:**
-executes image decode tasks and fallback raster or decode.
+- The **render and compositing thread helpers**
+execute image decode tasks and fallback raster or decode.
 
 The browser process render and compositing thread are similar
 to the code and functionality of a render process,
@@ -274,9 +274,9 @@ since there are none by design.
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/kCNDRcHDGun6wfUnEcbJ.jpeg",
 alt="Viz process diagram", width="800", height="479" %}
 
-- **GPU main thread:** rasters display lists and video frames into GPU texture tiles,
+- The **GPU main thread** rasters display lists and video frames into GPU texture tiles,
 and draws compositor frames to the screen.
-- **Display compositor thread:** aggregates and optimizes compositing from each render process,
+- The **Display compositor thread** aggregates and optimizes compositing from each render process,
 plus the browser process, into a single compositor frame for presentation to the screen.
 
 Raster and draw generally happen on the same thread,
@@ -294,7 +294,7 @@ One cause of slowdown on the GPU main thread is calls into non-Chromium code,
 such as vendor-specific GPU drivers, that may be slow in hard-to-predict ways.
 
 ## Component structure
-
+Within each render process main or compositor thread, there are logical software components that interact with each other in structured ways.
 ### Render process main thread components
 
 {% Img
@@ -302,13 +302,13 @@ src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/5pqtEVTK9xbbB7sc2s87.jpeg",
 alt="Blink renderer.", width="800", height="464" %}
 
 - **Blink renderer:**
-  - **Local frame tree:** represents the tree of local frames and the DOM within frames.
-  - **DOM and Canvas APIs:** implements of all of these APIs.
-  - **Document lifecycle runner:** executes the rendering pipeline steps up to and including the commit step.
-  - **Input event hit testing and dispatching:** executes hit tests to find out which
+  - The **local frame tree** represents the tree of local frames and the DOM within frames.
+  - The **DOM and Canvas APIs** component contains implementations of all of these APIs.
+  - The **Document lifecycle runner** executes the rendering pipeline steps up to and including the commit step.
+  - The **input event hit testing and dispatching** component executes hit tests to find out which
   DOM element is targeted by an event,
   and runs the input event dispatching algorithms and default behaviors.
-- **Rendering event loop scheduler and runner:** decides what to run on the event loop and when.
+- The **rendering event loop scheduler and runner** decides what to run on the event loop and when.
 It schedules rendering to happen at a cadence matching the device display.
 
 Local frame trees are a bit complicated to think about.
@@ -317,7 +317,7 @@ A frame is local to a render process if it is rendered in that process,
 and otherwise it is remote.
 
 You can imagine coloring frames according to their render process.
-In the next example, the green circles are all frames in one render process;
+In the preceding example, the green circles are all frames in one render process;
 the red ones are in a second, and the blue one is in a third.
 
 A local frame tree is a connected component of the same color in a frame tree.
@@ -334,13 +334,13 @@ alt="Frame tree", width="800", height="629" %}
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/zdmgrfrspiED4fOQtoca.jpeg",
 alt="Render process compositor components.", width="800", height="559" %}
 
-Render process compositor components include:
+The render process compositor components include:
 
-- **Data handler:** maintains a composited layer list, display lists and property trees.
-- **Lifecycle runner:** runs the animate, scroll, composite, raster,
+- A **data handler** that maintains a composited layer list, display lists and property trees.
+- A **lifecycle runner** that runs the animate, scroll, composite, raster,
 and decode and activate steps of the rendering pipeline.
 (Remember that animate and scroll can occur in both the main thread and the compositor.)
-- **Input and hit test handler:** performs input processing and hit testing at the resolution of composited layers,
+- An **input and hit test handler** performs input processing and hit testing at the resolution of composited layers,
 to determine if scrolling gestures can be run on the compositor thread,
 and which render process hit tests should target.
 
@@ -353,8 +353,8 @@ In this example there are three tabs:
 
 ```html
 <html>
-  <iframe #one src="foo.com/other-url"></iframe>
-  <iframe  #two src="bar.com"></iframe>
+  <iframe id=one src="foo.com/other-url"></iframe>
+  <iframe  id=two src="bar.com"></iframe>
 </html>
 ```
 
@@ -454,7 +454,7 @@ the bar.com render process, and the browser UI.
 
 {% Aside %}
 Note that each input event after the first can skip steps three and four,
-because the scroll has already begun and at that point can observe it,
+because the scroll has already begun and at that point scripts can observe it via the `scroll` event,
 but no longer interrupt.
 {% endAside %}
 
@@ -465,19 +465,19 @@ alt="", width="800", height="488" %}
 
 1. An input event (mouse, touch or keyboard) comes to the browser process.
 It performs an approximate hit test
-to determine that the bar.com render process should receive the click, and sends it there.
+to determine that the bar.com iframe render process should receive the click, and sends it there.
 1. The compositor thread for bar.com routes the click event to the main thread
 for bar.com and schedules a rendering event loop task to process it.
 1. The input event processor for bar.com's main thread hit tests to determine which
 DOM element in the iframe was clicked, and fires a click event for scripts to observe.
 Hearing no preventDefault, it navigates to the hyperlink.
-1. Upon load, the new state is rendered, with steps similar to the "render changed DOM" example above.
+1. Upon load of destination page of the hyperlink, the new state is rendered, with steps similar to the "render changed DOM" example above.
 (These subsequent changes are not depicted here.)
 
 ## Conclusion
 
 Phew, that was a lot of detail.
-As you can see, rendering in Chromium is quite complicated.
+As you can see, rendering in Chromium is quite complicated!
 It can take a lot of time to remember and internalize all the pieces,
 so don't be worried if it seems overwhelming.
 
@@ -490,8 +490,8 @@ and [extensibility](/blog/renderingng/#extensibility-the-right-tools-for-the-job
 
 Each of those components plays a critical role in enabling
 all of the performance and features modern web apps need.
-Next we'll publish deep-dives into each of them,
-and the important role they play.
+Soon we'll publish deep-dives into each of them,
+and the important roles they play.
 
 But before that, I'll also explain how the key data structures mentioned in this post
 (the ones indicated in blue at the sides of the rendering pipeline diagram)
