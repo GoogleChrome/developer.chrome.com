@@ -4,7 +4,7 @@ title: 'Overview of the RenderingNG architecture'
 description: >
   This post explains the components of the RenderingNG architecture,
   and how the rendering pipeline flows through them.
-date: 2021-07-20
+date: 2021-07-21
 authors:
   - chrishtr
 ---
@@ -18,10 +18,10 @@ and how the rendering pipeline flows through them.
 Starting at the highest level and drilling down from there,
 the tasks of rendering are:
 
-1. Render contents into pixels on the screen.
-1. Animate visual effects on the contents from one state to another.
-1. Scroll in response to input.
-1. Route input efficiently to the right places so that developer scripts and other subsystems can respond.
+1. _Render contents_ into pixels on the screen.
+1. _Animate visual effects_ on the contents from one state to another.
+1. _Scroll_ in response to input.
+1. _Route input_ efficiently to the right places so that developer scripts and other subsystems can respond.
 
 The contents to render are a stream of raw input events from touch screens,
 mice, keyboards, and other hardware devices.
@@ -33,13 +33,15 @@ Each frame includes:
 1. Canvases
 1. External resources, such as images, video, fonts, and SVG
 
-A frame is an HTML document, plus its URL.
+A _frame_ is an HTML document, plus its URL.
 A web page loaded in a browser tab has a top-level frame,
 child frames for each iframe included in the top-level document,
 and their recursive iframe descendants.
 
-A visual effect is a graphical operation applied to a bitmap,
+A _visual effect_ is a graphical operation applied to a bitmap,
 such as scroll, transform, clip, filter, opacity, or blend.
+
+## Architecture components
 
 In RenderingNG, these tasks are split logically across several stages and code components.
 The components end up in various CPU processes, threads,
@@ -49,8 +51,6 @@ Each plays an important role in achieving
 [scalable performance](/blog/renderingng/#scalable-performance)
 and [extensibility](/blog/renderingng/#extensibility-the-right-tools-for-the-job) for all web content.
 
-## RenderingNG components
-
 ### Rendering pipeline structure
 
 {% Img
@@ -59,8 +59,8 @@ alt="Diagram of the rendering pipeline as explained in the following text.",
 width="800", height="1273" %}
 
 Rendering proceeds in a pipeline with a number of stages and artifacts created along the way.
-Each stage represents code that does one well-defined task within rendering.
-The artifacts are data structures that are inputs or outputs of the stages;
+Each _stage_ represents code that does one well-defined task within rendering.
+The _artifacts_ are data structures that are inputs or outputs of the stages;
 in the diagram inputs or outputs are indicated with arrows.
 
 This blog post won't go into much detail about the artifacts;
@@ -81,21 +81,22 @@ which is why some have two colors.
 
 The stages are:
 
-1. Style: apply CSS to the DOM, and create computed styles.
-1. Animate: change computed styles and mutate property trees over time based on declarative timelines.
-1. Layout: determine the size and position of DOM elements on the screen, and create the immutable fragment tree.
-1. Pre-paint: compute property trees and
+1. _Style:_ apply CSS to the DOM, and create _computed styles_.
+1. _Animate:_ change computed styles and mutate _property trees_ over time based on declarative timelines.
+1. _Layout:_ determine the size and position of DOM elements on the screen,
+and create the _immutable fragment tree_.
+1. _Pre-paint:_ compute property trees and
 [invalidate](https://en.wikipedia.org/wiki/Cache_invalidation)
-any existing display lists and GPU texture tiles as appropriate.
-1. Scroll: update the scroll offset of documents and scrollable DOM elements, by mutating property trees.
-1. Paint: compute a display list that describes how to raster GPU texture tiles from the DOM.
-1. Commit: copy property trees and the display list to the compositor thread.
-1. Layerize: break up the display list into a composited layer list for independent rasterization and animation.
-1. Raster, decode and paint worklets: turn display lists, encoded images, and paint worklet code, respectively, into
+any existing _display lists_ and GPU _texture tiles_ as appropriate.
+1. _Scroll:_ update the scroll offset of documents and scrollable DOM elements, by mutating property trees.
+1. _Paint:_ compute a display list that describes how to raster GPU texture tiles from the DOM.
+1. _Commit:_ copy property trees and the display list to the compositor thread.
+1. _Layerize:_ break up the display list into a _composited layer list_ for independent rasterization and animation.
+1. _Raster, decode and paint worklets:_ turn display lists, encoded images, and paint worklet code, respectively, into
 [GPU texture tiles](https://en.wikipedia.org/wiki/Tiled_rendering).
-1. Activate: create a compositor frame representing how to draw and position GPU tiles to the screen, together with any visual effects.
-1. Aggregate: combine compositor frames from all the visible compositor frames into a single, global compositor frame.
-1. Draw: execute the aggregated compositor frame on the GPU to create pixels on-screen.
+1. _Activate:_ create a _compositor frame_ representing how to draw and position GPU tiles to the screen, together with any visual effects.
+1. _Aggregate:_ combine compositor frames from all the visible compositor frames into a single, global compositor frame.
+1. _Draw:_ execute the aggregated compositor frame on the GPU to create pixels on-screen.
 
 Stages of the rendering pipeline can be skipped if they aren't needed.
 For example, animations of visual effects, and scroll, can skip layout, pre-paint and paint.
@@ -127,13 +128,13 @@ and stability and security isolation from GPU hardware.
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/i2t9ihLrkRg5qxUkXOsd.jpeg",
 alt="Diagram of the various parts of the CPU processes", width="800", height="626" %}
 
-- The **render process** renders, animates, scrolls, and routes input for a single site and tab combination.
+- The _render process_ renders, animates, scrolls, and routes input for a single site and tab combination.
 There are many render processes.
-- The **browser process** renders, animates, and routes input for the browser UI
+- The _browser process_ renders, animates, and routes input for the browser UI
 (including the URL bar, tab titles and icons),
 and routes all remaining input to the appropriate render process.
 There is exactly one browser process.
-- The **Viz process** aggregates compositing from multiple render processes
+- The _Viz process_ aggregates compositing from multiple render processes
 plus the browser process.
 It rasters and draws using the GPU. There is exactly one Viz process.
 
@@ -192,21 +193,21 @@ Threads help achieve performance isolation and responsiveness in spite of slow t
 pipeline parallelization and multiple buffering.
 
 {% Img
-src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/rdgwp4YLNUeUyuc6Eld1.jpeg", alt="Diagram of the render process",
+src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/rdgwp4YLNUeUyuc6Eld1.jpeg", alt="A diagram of the render process as described in the article.",
 width="800", height="556" %}
 
-- The **main thread** runs scripts, the rendering event loop, the document lifecycle,
+- The _main thread_ runs scripts, the rendering event loop, the document lifecycle,
 hit testing, script event dispatching, and parsing of HTML, CSS and other data formats.
-  - **Main thread helpers** perform tasks such as creating image bitmaps and blobs that require encoding or decoding.
-  - **[Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)**
+  - _Main thread helpers_ perform tasks such as creating image bitmaps and blobs that require encoding or decoding.
+  - _[Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)_
   run script, and a rendering event loop for OffscreenCanvas.
-- The **Compositor thread** processes input events,
+- The _Compositor thread_ processes input events,
 performs scrolling and animations of web content,
 computes optimal layerization of web content,
 and coordinates image decodes, paint worklets and raster tasks.
-  - **Compositor thread helpers:** coordinate Viz raster tasks,
+  - _Compositor thread helpers:_ coordinate Viz raster tasks,
   and execute image decode tasks, paint worklets and fallback raster.
-- **Media, demuxer or audio output threads** decode,
+- _Media, demuxer or audio output threads_ decode,
 process and synchronize video and audio streams.
 (Remember that video executes in parallel with the main rendering pipeline.)
 
@@ -239,13 +240,13 @@ This is an example of
 It's also interesting to note that the render process threading architecture
 is an application of three different optimization patterns:
 
-- **Helper threads:** sending long-running subtasks off to additional threads,
+- _Helper threads:_ sending long-running subtasks off to additional threads,
 to keep the parent thread responsive to other requests happening simultaneously.
 The main thread helper and compositor helper threads are good examples of this technique.
-- **[Multiple buffering](https://en.wikipedia.org/wiki/Multiple_buffering):**
+- _[Multiple buffering](https://en.wikipedia.org/wiki/Multiple_buffering):_
 showing previously rendered content while rendering new content,
 to hide the latency of rendering. The compositor thread uses this technique.
-- **Pipeline parallelization:** running the rendering pipeline in multiple places simultaneously.
+- _Pipeline parallelization:_ running the rendering pipeline in multiple places simultaneously.
 This is how scrolling and animation can be fast,
 even if a main thread rendering update is happening,
 because scroll and animation can run in parallel.
@@ -254,11 +255,11 @@ because scroll and animation can run in parallel.
 
 {% Img
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/Upqecg8lPRgKFlqLH61g.jpeg",
-alt="Browser process diagram", width="800", height="426" %}
+alt="A browser process diagram showing the relationship between the Render and compositing thread, and the render and compositing thread helper.", width="800", height="426" %}
 
-- The **render and compositing thread** responds to input in the browser UI,
+- The _render and compositing thread_ responds to input in the browser UI,
 routes other input to the correct render process; lays out and paints browser UI.
-- The **render and compositing thread helpers**
+- The _render and compositing thread helpers_
 execute image decode tasks and fallback raster or decode.
 
 The browser process render and compositing thread are similar
@@ -272,11 +273,11 @@ since there are none by design.
 
 {% Img
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/kCNDRcHDGun6wfUnEcbJ.jpeg",
-alt="Viz process diagram", width="800", height="479" %}
+alt="A diagram showing that the Viz process includes the GPU main thread, and the display compositor thread.", width="800", height="479" %}
 
-- The **GPU main thread** rasters display lists and video frames into GPU texture tiles,
+- The _GPU main thread_ rasters display lists and video frames into GPU texture tiles,
 and draws compositor frames to the screen.
-- The **Display compositor thread** aggregates and optimizes compositing from each render process,
+- The _display compositor thread_ aggregates and optimizes compositing from each render process,
 plus the browser process, into a single compositor frame for presentation to the screen.
 
 Raster and draw generally happen on the same thread,
@@ -294,53 +295,56 @@ One cause of slowdown on the GPU main thread is calls into non-Chromium code,
 such as vendor-specific GPU drivers, that may be slow in hard-to-predict ways.
 
 ## Component structure
-Within each render process main or compositor thread, there are logical software components that interact with each other in structured ways.
+
+Within each render process main or compositor thread,
+there are logical software components that interact with each other in structured ways.
+
 ### Render process main thread components
 
 {% Img
 src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/5pqtEVTK9xbbB7sc2s87.jpeg",
-alt="Blink renderer.", width="800", height="464" %}
+alt="A diagram of the Blink renderer.", width="800", height="464" %}
 
-- **Blink renderer:**
-  - The **local frame tree** represents the tree of local frames and the DOM within frames.
-  - The **DOM and Canvas APIs** component contains implementations of all of these APIs.
-  - The **Document lifecycle runner** executes the rendering pipeline steps up to and including the commit step.
-  - The **input event hit testing and dispatching** component executes hit tests to find out which
+- _Blink renderer:_
+  - The _local frame tree_ represents the tree of local frames and the DOM within frames.
+  - The _DOM and Canvas APIs_ component contains implementations of all of these APIs.
+  - The _document lifecycle runner_ executes the rendering pipeline steps up to and including the commit step.
+  - The _input event hit testing and dispatching_ component executes hit tests to find out which
   DOM element is targeted by an event,
   and runs the input event dispatching algorithms and default behaviors.
-- The **rendering event loop scheduler and runner** decides what to run on the event loop and when.
+- The _rendering event loop scheduler and runner_ decides what to run on the event loop and when.
 It schedules rendering to happen at a cadence matching the device display.
 
-Local frame trees are a bit complicated to think about.
+{% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/RKXD237nuR9aHxw6O2Mc.jpeg",
+alt="A diagram of the frame tree.", width="800", height="629" %}
+
+_Local frame trees_ are a bit complicated to think about.
 Recall that a frame tree is the main page and its child iframes, recursively.
-A frame is local to a render process if it is rendered in that process,
-and otherwise it is remote.
+A frame is _local_ to a render process if it is rendered in that process,
+and otherwise it is _remote_.
 
 You can imagine coloring frames according to their render process.
-In the preceding example, the green circles are all frames in one render process;
+In the preceding image, the green circles are all frames in one render process;
 the red ones are in a second, and the blue one is in a third.
 
 A local frame tree is a connected component of the same color in a frame tree.
-There are four local frame trees in the next example: two for site A, one for site B, and one for site C.
+There are four local frame trees in the image: two for site A, one for site B, and one for site C.
 Each local frame tree gets its own Blink renderer component.
 A local frame tree's Blink renderer may or may not be in the same render process as other local frame trees
 (it's determined by the way render processes are selected, as described earlier).
 
-{% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/RKXD237nuR9aHxw6O2Mc.jpeg",
-alt="Frame tree", width="800", height="629" %}
-
 ### Render process compositor thread structure
 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/zdmgrfrspiED4fOQtoca.jpeg",
-alt="Render process compositor components.", width="800", height="559" %}
+alt="A diagram showing the render process compositor components.", width="800", height="559" %}
 
 The render process compositor components include:
 
-- A **data handler** that maintains a composited layer list, display lists and property trees.
-- A **lifecycle runner** that runs the animate, scroll, composite, raster,
+- A _data handler_ that maintains a composited layer list, display lists and property trees.
+- A _lifecycle runner_ that runs the animate, scroll, composite, raster,
 and decode and activate steps of the rendering pipeline.
 (Remember that animate and scroll can occur in both the main thread and the compositor.)
-- An **input and hit test handler** performs input processing and hit testing at the resolution of composited layers,
+- An _input and hit test handler_ performs input processing and hit testing at the resolution of composited layers,
 to determine if scrolling gestures can be run on the compositor thread,
 and which render process hit tests should target.
 
@@ -376,17 +380,17 @@ In this example there are three tabs:
 The process, thread and component structure for these tabs will look like this:
 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/nZBgx5iZHvSO2ncBhCfw.jpeg",
-alt="Diagram of process for the tabs.", width="800", height="432" %}
+alt="Diagram of the process for the tabs.", width="800", height="432" %}
 
 Now let's walk through one example each of the four main tasks of rendering,
 which as you may recall are:
 
-1. Render contents into pixels on the screen.
-1. Animate visual effects on the contents from one state to another.
-1. Scroll in response to input.
-1. Route input efficiently to the right places so that developer scripts and other subsystems can respond.
+1. _Render_ contents into pixels on the screen.
+1. _Animate_ visual effects on the contents from one state to another.
+1. _Scroll_ in response to input.
+1. _Route_ input efficiently to the right places so that developer scripts and other subsystems can respond.
 
-To render the changed DOM for tab one:
+To _render_ the changed DOM for tab one:
 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/PeiVVctKuse0JAwHrui2.jpeg",
 alt="", width="800", height="488" %}
@@ -413,7 +417,7 @@ the bar.com iframe render process, and the browser UI.
 1. Viz schedules a draw.
 1. Viz draws the aggregated compositor frame to the screen.
 
-To animate a CSS transform transition on tab two:
+To _animate_ a CSS transform transition on tab two:
 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/JBZ4Fo0wpEznvZIaz2wS.jpeg",
 alt="", width="800", height="488" %}
@@ -426,7 +430,7 @@ This then re-runs the compositor lifecycle. (Raster and decode tasks may occur, 
 1. Viz schedules a draw.
 1. Viz draws the aggregated compositor frame to the screen.
 
-To scroll the web page on tab three:
+To _scroll_ the web page on tab three:
 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/BTQMujxRdySU0rsgydwB.jpeg",
 alt="", width="800", height="456" %}
@@ -458,7 +462,7 @@ because the scroll has already begun and at that point scripts can observe it vi
 but no longer interrupt.
 {% endAside %}
 
-To route a click event on a hyperlink in iframe #two on tab one:
+To _route_ a click event on a hyperlink in iframe #two on tab one:
 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/GnXCsuXJkNegGDMQAhnx.jpeg",
 alt="", width="800", height="488" %}
@@ -471,7 +475,8 @@ for bar.com and schedules a rendering event loop task to process it.
 1. The input event processor for bar.com's main thread hit tests to determine which
 DOM element in the iframe was clicked, and fires a click event for scripts to observe.
 Hearing no preventDefault, it navigates to the hyperlink.
-1. Upon load of destination page of the hyperlink, the new state is rendered, with steps similar to the "render changed DOM" example above.
+1. Upon load of destination page of the hyperlink, the new state is rendered,
+with steps similar to the "render changed DOM" example above.
 (These subsequent changes are not depicted here.)
 
 ## Conclusion
