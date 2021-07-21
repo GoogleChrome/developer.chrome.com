@@ -19,7 +19,7 @@ tags:
   - chrome-78
 ---
 
-{% youtube id='Q81403HNZRc' %}
+{% YouTube id='Q81403HNZRc' %}
 
 Chrome 78 is rolling out now!
 
@@ -105,7 +105,7 @@ and APIs, and make it possible for you to provide feedback on their usability
 and effectiveness in broader deployment.
 
 <a href="/origintrials/#/trials/active">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/b8W2avaeSBFf7PhZcxAX.png", alt="", className="float-right" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/b8W2avaeSBFf7PhZcxAX.png", alt="", class="float-right", height="590", width="800" %}
 </a>
 
 Experimental features are typically only available behind a flag, but when we
@@ -131,7 +131,7 @@ of active origin trials, and sign up for them on the
 *An [Origin Trial for the Native File System API][fs-ot] starts in Chrome 78
 and is expected to run through Chrome 80.*
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/EL75pXlnIVUHlQ4fXSo8.jpg", alt="", className="float-right" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/EL75pXlnIVUHlQ4fXSo8.jpg", alt="", class="float-right", height="577", width="800" %}
 
 The Native File System API enables developers to build powerful web apps that
 interact with files on the user's local device. After a user grants a web app
@@ -165,7 +165,7 @@ with all the details, and how to sign up for the origin trial.
 ## Chrome Dev Summit 2019 {: #cds2019 }
 
 <a href="/devsummit/">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4L4iDgNCnYAykp3UXZRe.png", alt="", className="float-right" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4L4iDgNCnYAykp3UXZRe.png", alt="", class="float-right", height="420", width="800" %}
 </a>
 
 Don't forget to tune into the [Chrome Dev Summit][cds-site] on November
@@ -182,7 +182,7 @@ Don't forget to tune into the [Chrome Dev Summit][cds-site] on November
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 78.
 
-* [What's new in Chrome DevTools (78)](https://developers.google.com/web/updates/2019/09/devtools)
+* [What's new in Chrome DevTools (78)](/blog/new-in-devtools-78)
 * [Chrome 78 deprecations & removals](https://developers.google.com/web/updates/2019/09/chrome-78-deps-rems)
 * [ChromeStatus.com updates for Chrome 78](https://www.chromestatus.com/features#milestone%3D78)
 * [What's new in JavaScript in Chrome 78](https://v8.dev/blog/v8-release-78)

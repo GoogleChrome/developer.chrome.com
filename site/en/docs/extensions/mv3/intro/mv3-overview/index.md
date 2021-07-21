@@ -9,7 +9,7 @@ title: Overview of Manifest V3
 subhead: 'Key changes and features of Manifest V3.'
 
 # This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in 
+# /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: 'A description of the features and changes introduced by Manifest V3.'
 
@@ -85,14 +85,14 @@ privacy-preserving and performant way. The essence of this API is:
 *   Rather than intercepting a request and modifying it procedurally, the extension asks Chrome to evaluate and modify requests on its behalf.
 *   The extension declares a set of rules: patterns to match requests and actions to perform when matched. The browser then modifies network requests as defined by these rules.
 
-Using this declarative approach dramatically reduces the need for persistent host permissions. 
+Using this declarative approach dramatically reduces the need for persistent host permissions.
 
-!!!.aside
+{% Aside %}
 Some extensions may still require broad host permissions for certain use cases
 (such as redirecting requests). See [Conditional permissions and
 declarativeNetRequest](/docs/extensions/mv3/intro/mv3-migration#declarativenetrequest-conditional-perms)
 for further details.
-!!!
+{% endAside %}
 
 The blocking version of the
 [webRequest](/docs/extensions/reference/webRequest)
@@ -147,7 +147,6 @@ The following features will be added to MV3 soon:
 
 * **Dynamic content scripts:** the new Scripting API lets extensions register and unregister content scripts at runtime.
 * **New favicon API:** this new JavaScript API replaces "chrome://favicons" and gives  developers a way to retrieve websites' favicons.
-* **Tab groups:** the Tabs API will be expanded to support Chrome's [Tab Groups](https://blog.google/products/chrome/manage-tabs-with-google-chrome/) feature.
 * **In-memory storage:** a new StorageArea on the Storage API that can be used to store values in memory across service worker restarts.
 
 Look for announcements of these and other MV3 features as they become available.

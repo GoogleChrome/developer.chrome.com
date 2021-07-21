@@ -15,9 +15,28 @@ module.exports = {
       preset: 'lighthouse:no-pwa',
       assertions: {
         'categories:performance': ['error', {minScore: 0.9}],
-        // Canonical url will not match the domain while on localhost.
+
+        /**
+         * Canonical URL will not match the domain while being tested.
+         */
         canonical: 'off',
-        'tap-targets': 'off', // Disable temporarily until #476 is fixed.
+
+        /**
+         * Disable until #71 is fixed.
+         */
+        'tap-targets': 'off',
+
+        /**
+         * We don't care about preconnect to Analytics and friends.
+         */
+        'uses-rel-preconnect': 'off',
+
+        /**
+         * For now, we allow a single resource with a long cache TTL: Analytics, whose 2h TTL
+         * raises the ire of this assertion.
+         * (This was always a warning, but we can hide it for now.)
+         */
+        'uses-long-cache-ttl': ['warn', {maxLength: 1}],
       },
     },
   },

@@ -2,11 +2,11 @@ const test = require('ava');
 const {html} = require('common-tags');
 const cheerio = require('cheerio');
 
-const {video} = require('../../../site/_shortcodes/video');
+const {Video} = require('../../../site/_shortcodes/Video');
 
-test('video shortcode generates video html', t => {
+test('Video shortcode generates video html', t => {
   const path = 'video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4';
-  const parsed = cheerio.load(video({src: path}));
+  const parsed = cheerio.load(Video({src: path}));
   const expected = cheerio.load(
     html`
       <video controls>
@@ -27,7 +27,7 @@ test('video shortcode generates multiple sources when provided', t => {
     'video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mov',
     'video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.webm',
   ];
-  const parsed = cheerio.load(video({src: paths}));
+  const parsed = cheerio.load(Video({src: paths}));
   const expected = cheerio.load(
     html`
       <video controls>
@@ -37,7 +37,7 @@ test('video shortcode generates multiple sources when provided', t => {
         />
         <source
           src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mov"
-          type="video/quicktime"
+          type="video/mp4"
         />
         <source
           src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.webm"

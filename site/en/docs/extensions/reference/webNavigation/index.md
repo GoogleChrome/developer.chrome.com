@@ -28,7 +28,7 @@ directory. For other examples and for help in viewing the source code, see [Samp
 For a navigation that is successfully completed, events are fired in the following order:
 
 ```text
-onBeforeNavigate -> onCommitted -> onDOMContentLoaded -> onCompleted
+onBeforeNavigate -> onCommitted -> [onDOMContentLoaded] -> onCompleted
 ```
 
 Any error that occurs during the process results in an `onErrorOccurred` event. For a specific
@@ -42,6 +42,10 @@ event can fire any time after `onDOMContentLoaded`, even after `onCompleted`.
 
 If the history API is used to modify the state of a frame (e.g. using `history.pushState()`, a
 `onHistoryStateUpdated` event is fired. This event can fire any time after `onDOMContentLoaded`.
+
+If a navigation restored a page from the [Back Forward Cache][9], the `onDOMContentLoaded` event
+will not fire. The event is not fired because the content has already completed load when the page
+was first visited.
 
 If a navigation was triggered via [Chrome Instant][4] or [Instant Pages][5], a completely loaded
 page is swapped into the current tab. In that case, an `onTabReplaced` event is fired.
@@ -103,10 +107,11 @@ The following transition qualifiers exist:
 <table><tbody><tr><th>Transition qualifier</th><th>Description</th></tr><tr><td>"client_redirect"</td><td>One or more redirects caused by JavaScript or meta refresh tags on the page happened during the navigation.</td></tr><tr><td>"server_redirect"</td><td>One or more redirects caused by HTTP headers sent from the server happened during the navigation.</td></tr><tr><td>"forward_back"</td><td>The user used the Forward or Back button to initiate the navigation.</td></tr><tr><td>"from_address_bar"</td><td>The user initiated the navigation from the address bar (aka Omnibox).</td></tr></tbody></table>
 
 [1]: /docs/extensions/mv2/tabs
-[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/webNavigation/
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/webNavigation/
 [3]: /docs/extensions/mv2/samples
 [4]: https://support.google.com/chrome/answer/177873
 [5]: https://support.google.com/chrome/answer/1385029
 [6]: /docs/extensions/webRequest
 [7]: /docs/extensions/tabs
 [8]: /docs/extensions/history#transition_types
+[9]: https://web.dev/bfcache/

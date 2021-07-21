@@ -44,7 +44,7 @@ current state.
 2.  Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
 3.  Click the **LOAD UNPACKED** button and select the extension directory.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iYdLKFsJ1KSVGLhbLRvS.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iYdLKFsJ1KSVGLhbLRvS.png",
        alt="Load Extension", height="337", width="606" %}
 
 Ta-da! The extension has been successfully installed. Because no icons were included in the
@@ -76,7 +76,7 @@ that file should behave.
 The extension is now aware that it includes a non-persistent background script and will scan the
 registered file for important events it needs to listen for.
 
-This extension will need information from a persistent variable as soon as its installed. Start by
+This extension will need information from a persistent variable as soon as it's installed. Start by
 including a listening event for [`runtime.onInstalled`][11] in the background script. Inside the
 `onInstalled` listener, the extension will set a value using the [storage][12] API. This will allow
 multiple extension components to access that value and update it.
@@ -109,7 +109,7 @@ the manifest for the extension to use them.
 Navigate back to the extension management page and click the **Reload** link. A new field, **Inspect
 views**, becomes available with a blue link, **background page**.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/V96EHNVYQLVsjURz4Naz.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/V96EHNVYQLVsjURz4Naz.png",
        alt="Inspect Views", height="337", width="606" %}
 
 Click the link to view the background script's console log, "`The color is green.`"
@@ -252,7 +252,7 @@ The extension will need permission to access the [`declarativeContent`][21] API 
 }
 ```
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/j3Ff3oF0tEl9tE5ed6L0.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/j3Ff3oF0tEl9tE5ed6L0.png",
        alt="Popup", height="99", width="73" %}
 
 The browser will now show a full-color page action icon in the browser toolbar when users navigate
@@ -375,13 +375,13 @@ Then register the options page in the manifest,
 
 Reload the extension and click **DETAILS**.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3fNrYEoJMOPQ00L7tBtp.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3fNrYEoJMOPQ00L7tBtp.png",
        alt="Inspect Views", height="337", width="606" %}
 
 Scroll down the details page and select **Extension options** to view the options page, although it
 will currently appear blank.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/z1VEYxYlJev7llaXIQUL.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/z1VEYxYlJev7llaXIQUL.png",
        alt="Extension Options", height="726", width="645" %}
 
 Last step is to add the options logic. Create a file called `options.js` in the extension directory

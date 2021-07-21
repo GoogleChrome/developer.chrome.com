@@ -11,7 +11,7 @@ description: >
 The pricing and distribution tab lets you control how you charge for your item and who will see it
 on the Chrome Web Store.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ko8C7yl0tjGzVaTVDzkV.png", alt="Screenshot of the Chrome Web Store pricing and distribution page", height="474", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ko8C7yl0tjGzVaTVDzkV.png", alt="Screenshot of the Chrome Web Store pricing and distribution page", height="474", width="800" %}
 
 ## Setting the visibility {: #setting-the-visibility }
 
@@ -28,18 +28,18 @@ Use the **Visibility** settings to configure who can see your item in the Chrome
 Private allows your trusted testers to install the item. You designate trusted testers by listing
 them on your Chrome Web Store account home page.
 
-!!!.aside.aside--note
+{% Aside %}
 
 The trusted testers list is associated with your _account_, and not an individual item. To create
 multiple trusted tester accounts, you must use separate accounts. However, you can also [add
 groups][1]to your private listing, on a per-item basis.
 
-!!!
+{% endAside %}
 
 The following screenshot shows some trusted tester accounts listed in a Chrome Web Store developer
 account page:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SrVxYFc0lmMgXxtN30gA.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SrVxYFc0lmMgXxtN30gA.png",
        alt="Screenshot showing trusted tester accounts listed in a Chrome Web Store developer account page",
        height="395", width="800" %}
 
@@ -48,7 +48,7 @@ account page:
 In addition to your trusted tester accounts, you can also include any Google Groups that you own or
 manage:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oTlA3I2z8qNRiqSj9T2j.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oTlA3I2z8qNRiqSj9T2j.png",
        alt="Screenshot showing groups added to private visibility", height="520", width="800" %}
 
 Any members of the specified groups, along with your trusted testers, will be able to install the

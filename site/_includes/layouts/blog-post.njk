@@ -1,14 +1,15 @@
 {% extends "layouts/base.njk" %}
 
 {% block title_bar %}
+  {% set sharingEnabled = true %}
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
 {% block content %}
   {% if hero %}
     <div class="display-flex justify-content-center lg:pad-left-400 lg:pad-right-400">
-      {% img
-        className="hero-image object-fit-cover",
+      {% Img
+        class="hero-image object-fit-cover",
         src=hero,
         alt=alt,
         width="960",
@@ -34,5 +35,7 @@
     <div class="stack stack--block type center-images">
       {{ content | safe }}
     </div>
+
+    {% include 'partials/updated.njk' %}
   </article>
 {% endblock %}

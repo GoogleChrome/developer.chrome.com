@@ -6,13 +6,13 @@ updated: 2019-12-02
 description: How to migrate your Chrome packaged or hosted app.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 To transition away from a Chrome packaged or hosted app, the following options are available.
 
@@ -85,7 +85,7 @@ Starting with Chrome 75, the [`installReplacementWebApp()`][169] method can be u
 Chrome App, in response to a button click or other user gesture, to automatically trigger the
 installation flow for your replacement PWA.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Qw8PhA0V122tSWZTRyw9.png", alt="Shows button that can link to install PWA", height="468", width="598" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Qw8PhA0V122tSWZTRyw9.png", alt="Shows button that can link to install PWA", height="468", width="598" %}
 
 ### Q: I want to continue to have a UI affordance that enables users to launch my app from the taskbar/dock/homescreen. What should I do? {: #app-launcher }
 
@@ -206,7 +206,7 @@ service worker, with controls over the frequency of those updates.
 Web apps can use a standard platform API to copy and paste both [text][202] and [images
 programmatically.][203]
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://developers.google.com/web/progressive-web-apps/
 [4]: https://developers.google.com/web/updates/capabilities

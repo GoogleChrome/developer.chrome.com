@@ -1,4 +1,7 @@
 {
+  "autoplay": {
+    "title": "i18n.tags.autoplay"
+  },
   "news": {
     "title": "i18n.tags.news"
   },
@@ -17,14 +20,17 @@
   "cookies": {
     "title": "i18n.tags.cookies"
   },
-  "deprications": {
-    "title": "i18n.tags.deprications"
+  "deprecations": {
+    "title": "i18n.tags.deprecations"
   },
   "devices": {
     "title": "i18n.tags.devices"
   },
   "encryption": {
     "title": "i18n.tags.encryption"
+  },
+  "extensions": {
+    "title": "i18n.tags.extensions"
   },
   "feature-policy": {
     "title": "i18n.tags.feature-policy"
@@ -44,16 +50,31 @@
   "html": {
     "title": "i18n.tags.html"
   },
+  "media": {
+    "title": "i18n.tags.media"
+  },
   "new-in-chrome": {
     "title": "i18n.tags.new-in-chrome"
   },
   "privacy": {
     "title": "i18n.tags.privacy"
   },
+  "progressive-web-apps": {
+    "title": "i18n.tags.progressive-web-apps"
+  },
   "removals": {
     "title": "i18n.tags.removals"
   },
   "security": {
     "title": "i18n.tags.security"
+  },
+  "devtools": {
+    "title": "i18n.tags.devtools"
+  },
+  "new-in-devtools": {
+    "title": "i18n.tags.new-in-devtools"
+  },
+  "devtools-engineering": {
+    "title": "i18n.tags.devtools-engineering"
   }
 }

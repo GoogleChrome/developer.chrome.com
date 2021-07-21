@@ -6,13 +6,13 @@ updated: 2018-05-14
 description: How to present external content in your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 The [Chrome Apps security model][3] disallows external content in iframes and the use of inline
 scripting and `eval()`. You can override these restrictions, but your external content must be
@@ -22,11 +22,11 @@ Isolated content cannot directly access the app's data or any of the APIs. Use c
 XMLHttpRequests and post-messaging to communicate between the event page and sandboxed content and
 indirectly access the APIs.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **API Sample:** Want to play with the code? Check out the [sandbox][4] sample.
 
-!!!
+{% endAside %}
 
 ## Referencing external resources {: #external }
 
@@ -67,11 +67,11 @@ You may want to [save][6] these resources locally, so that they are available of
 
 ## Embed external web pages {: #webview }
 
-!!!.aside.aside--note
+{% Aside %}
 
 **API Sample:** Want to play with the code? Check out the [browser][7] sample.
 
-!!!
+{% endAside %}
 
 The [`webview`][8] tag allows you to embed external web content in your app, for example, a web
 page. It replaces iframes that point to remote URLs, which are disabled inside Chrome Apps. Unlike
@@ -142,12 +142,12 @@ Just like any other app pages, you can create a window that the sandboxed page o
 sample that creates two windows, one for the main app window that isn't sandboxed, and one for the
 sandboxed page:
 
-!!!.aside.aside--note
+{% Aside %}
 
 NOTE: A sandboxed window will not have access to the chrome.app APIs. If a callback is provided to
 app.window.create it will be run, but will not have the sandboxed window provided to it.
 
-!!!
+{% endAside %}
 
 ```js
 chrome.app.runtime.onLaunched.addListener(function() {
@@ -238,7 +238,7 @@ window.addEventListener('message', messageHandler);
 
 For more details, check out the [sandbox][11] sample.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: app_architecture#security
 [4]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/sandbox

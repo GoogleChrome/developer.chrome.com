@@ -9,7 +9,7 @@ title: Migrating to Manifest V3
 subhead: 'Getting you headed in the right direction.'
 
 # This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in 
+# /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: 'A high-level guide to how you can migrate your MV2 extensions to MV3.'
 
@@ -30,7 +30,7 @@ will require very little change to make them MV3 compliant, while others will
 need to be redesigned to some degree. Developers experienced with MV2, and who
 are creating new MV3 extensions, may also find this helpful. For a quick
 reference guide see the [migration
-checklist](/docs/extensions/mv3/mv3-migration-checklist). 
+checklist](/docs/extensions/mv3/mv3-migration-checklist).
 
 Manifest V3 offers a number of improvements reflecting the aims of our
 [platform vision](/docs/extensions/mv3/intro/platform-vision).
@@ -74,7 +74,7 @@ declarations, and web-accessible resources.
 Changing the value of the manifest_version element is the key to upgrading your
 extension. This determines whether you're using the MV2 or MV3 feature set:
 
-{% columns %}
+{% Columns %}
 ```json
 // Manifest v2
 
@@ -86,13 +86,13 @@ extension. This determines whether you're using the MV2 or MV3 feature set:
 
 "manifest_version": 3
 ```
-{% endcolumns %}
+{% endColumns %}
 
 ### Host permissions  {: #host-permissions }
 
 In MV3, you'll need to specify host permissions separately from other permissions:
 
-{% columns %}
+{% Columns %}
 ```js
 // Manifest v2
 "permissions": [
@@ -120,23 +120,23 @@ In MV3, you'll need to specify host permissions separately from other permission
   "*://*/*"
 ],
 ```
-{% endcolumns %}
+{% endColumns %}
 
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 You do not have to declare content script match patterns in `host_permissions`
 in order to inject content scripts.  However, they **are** treated as host
 permissions requests by the Chrome Web Store review process.
-!!!
+{% endAside %}
 
 
-### Content security policy  {: #fcontent-security-policy }
+### Content security policy  {: #content-security-policy }
 
 An extension's [content security policy](https://content-security-policy.com/)
 (CSP) was specified in MV2 as a string; in MV3 it is an object with members
 representing alternative CSP contexts:
 
-{% columns %}
+{% Columns %}
 ```json
 // Manifest v2
 
@@ -151,16 +151,16 @@ representing alternative CSP contexts:
   "sandbox": "..."
 }
 ```
-{% endcolumns %}
+{% endColumns %}
 
-**`extension_pages`**:  This policy covers pages in your extension, including html files and service workers. 
+**`extension_pages`**:  This policy covers pages in your extension, including html files and service workers.
 
 
-!!!.aside.aside--note
+{% Aside %}
 These page types are served from the `chrome-extension://` protocol. For
 instance, a page in your extension is
 `chrome-extension://<extension-id>/foo.html`.
-!!!
+{% endAside %}
 
 **`sandbox`**: This policy covers any [sandboxed extension
 pages](/docs/extensions/mv3/manifest/sandbox) that your extension uses.
@@ -173,7 +173,7 @@ directives may only have the following values:
 *   `none`
 *   Any localhost source, (`http://localhost`,  `http://127.0.0.1`, or any port on those domains)
 
-CSP modifications for `sandbox` have no such new restrictions. 
+CSP modifications for `sandbox` have no such new restrictions.
 
 
 ### Action API unification  {: #action-api-unification }
@@ -184,7 +184,7 @@ but over time they've become redundant so in MV3 we are unifying them into as
 single `action` API:
 
 
-{% columns %}
+{% Columns %}
 ```js
 // Manifest v2
 
@@ -211,12 +211,12 @@ chrome.pageAction.onClicked.addListener(tab => { … });
 // background.js
 chrome.action.onClicked.addListener(tab => { … });
 ```
-{% endcolumns %}
+{% endColumns %}
 
-!!!.aside.aside--note
+{% Aside %}
 In order to aid with the migration process, the Action API can be used in MV2
 beginning with Chrome 88.
-!!!
+{% endAside %}
 
 
 ### Web-accessible resources  {: #web-accessible-resources }
@@ -225,7 +225,7 @@ This change limits access to extension resources to specific sites/extensions.
 Instead of providing a list of files, you now provide a list of objects, each
 of which can map to a set of resources to a set of URLs and extension IDs:
 
-{% columns %}
+{% Columns %}
 ```json
 // Manifest v2
 
@@ -244,17 +244,19 @@ of which can map to a set of resources to a set of URLs and extension IDs:
   optional "use_dynamic_url": boolean
 }]
 ```
-{% endcolumns %}
+{% endColumns %}
 
-!!!.aside.aside--note
-The `matches`, `extension_ids`, and `use_dynamic_url` keys are not available
-yet. Support for these properties will be coming in a future release.
-!!!
+{% Aside %}
+The `use_dynamic_url` key is not yet available. Support for this property will
+be coming in a future release.
+{% endAside %}
 
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
 resource access. The updated API lets extensions more tightly control what
-other sites or extensions can access extension resources.
+other sites or extensions can access extension resources. See the [web 
+accessible resources](/docs/extensions/mv3/manifest/web_accessible_resources/)
+documentation for usage information.
 
 
 ## Code execution  {: #code-execution }
@@ -268,14 +270,23 @@ executes remotely hosted scripts, injects code strings into pages, or evals
 strings at runtime, you'll need to update your code execution strategies when
 migrating to MV3.
 
+{% Aside %}
+With Manifest V3 the `executeScript()` method also moves to a different API.
+
+* **MV2:**&emsp;[chrome.tabs.executeScript()](/docs/extensions/reference/tabs/#method-executeScript)
+* **MV3:**&emsp;[chrome.scripting.executeScript()](/docs/extensions/reference/scripting/#method-executeScript).
+
+If you use executeScript() anywhere in your code, you'll need to update that call to use the new
+API. The `insertCSS()` and `removeCSS()` methods similarly move from chrome.tabs to
+chrome.scripting.
+{% endAside %}
+
 
 ### Remotely hosted code  {: #remotely-hosted-code }
 
 _Remotely hosted code_ refers to any code that is not included in an
 extension's package as a loadable resource. For example, both of the following
 are considered remotely hosted code:
-
-
 
 *   JavaScript files pulled from a remote server
 *   a code string passed into eval at runtime
@@ -307,7 +318,7 @@ Instead of executing a string, you should move your code into a static
 JavaScript file included in the bundle, then execute it using the executeScript
 method's `file` property:
 
-{% columns %}
+{% Columns %}
 ```js
 // Manifest v2
 
@@ -328,12 +339,12 @@ chrome.scripting.executeScript({
 // content-script.js
 alert("test!");
 ```
-{% endcolumns %}
+{% endColumns %}
 
 Alternatively, if the logic being executed can be neatly wrapped in a function
 call, you can use the new `function` property:
 
-{% columns %}
+{% Columns %}
 ```js
 // Manifest v2
 
@@ -355,7 +366,7 @@ chrome.scripting.executeScript({
   function: showAlert
 });
 ```
-{% endcolumns %}
+{% endColumns %}
 
 ## Background service workers  {: #background-service-workers }
 
@@ -369,10 +380,10 @@ consider: see [Migrating from Background Pages to Service
 Workers](/docs/extensions/mv3/migrating_to_service_workers) for additional
 details.
 
-!!!.aside.aside--note
+{% Aside %}
 In order to aid with the migration process, MV2 extensions can use background
 service workers as of Chrome 87.
-!!!
+{% endAside %}
 
 
 ## Modifying network requests  {: #modifying-network-requests }
@@ -395,11 +406,11 @@ All other extensions must now use
 [declarativeNetRequest](/docs/extensions/reference/declarativeNetRequest) for
 network request modification. This moves the actual modification of the network
 request into the Chrome browser: the extension no longer can read the actual
-network request, and in most cases needs no host permissions. 
+network request, and in most cases needs no host permissions.
 
-!!!.aside.aside--note
+{% Aside %}
 Request redirects and header modifications **do** require the user to grant host permissions.
-!!!
+{% endAside %}
 
 
 ### How do you use declarativeNetRequest?  {: #how-use-declarativenetrequest }
@@ -414,10 +425,10 @@ This feature allows content blockers and other request-modifying extensions to
 implement their use cases without requiring host permissions, and without
 needing to read the actual requests.
 
-!!!.aside.aside--note
+{% Aside %}
 In order to aid with the migration process, the declarativeNetRequest API is
 available for use in MV2 extensions as of Chrome 84.
-!!!
+{% endAside %}
 
 
 ### Conditional permissions and declarativeNetRequest  {: #declarativenetrequest-conditional-perms }
@@ -425,9 +436,9 @@ available for use in MV2 extensions as of Chrome 84.
 Most use cases for declarativeNetRequest don't require any host permissions at
 all. However, some do.
 
-!!!.aside.aside--note
+{% Aside %}
 Request redirects and header modifications **do** require the user to grant host permissions.
-!!!
+{% endAside %}
 
 When extensions require host permissions for these use cases, we recommend a
 "tiered" permissions strategy. This means implementing the extension's core
@@ -468,4 +479,3 @@ As well as the undocumented:
 
 If your extensions use any of these deprecated APIs, you'll need to make the
 appropriate changes when you migrate to MV3.
-

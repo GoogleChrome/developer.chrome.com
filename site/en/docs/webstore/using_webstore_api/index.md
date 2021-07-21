@@ -26,8 +26,7 @@ Developers Console][1].
 7.  Find the lines labeled **Client ID** and **Client secret**. Note that there may be a client ID
     without a client secret for use with Compute Engine and App Engine. In that case, create a new
     client ID and client secret.
-8.  To create the client ID and client secret, click on **Create New Client ID**, select **Installed
-    Application**, and **Other** under **Installed application type**.
+8.  To create the client ID and client secret, click on **CREATE CREDENTIALS**, select **OAuth client ID** and select **Desktop app** under **Application type**.
 9.  Get an access token:
 
 Once you have the client ID and client secret, you can retrieve an access token to work with the
@@ -40,21 +39,21 @@ https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.g
 
 You will see a page asking you to accept permission for the requested scope.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note**: Make sure you are requesting the token using the Google Account which owns the Chrome Web
 Store apps you want to manage. This account can be different from the account you create the Google
 Developers Console project with. For example, you can create an application for other developers to
 manage their apps, in which case you only need to register a Google Developers Console project.
 
-!!!
+{% endAside %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vkcDhH8uyPOODVrKTpKH.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vkcDhH8uyPOODVrKTpKH.png",
        alt="A screenshot of the permission request UI.", height="310", width="481" %}
 
 Click the Accept button and you will see a code that looks something like this:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oCXSDgT7JuB3yvD8V1CJ.png", alt="A screenshot of the UI for copying code.", height="173", width="414" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oCXSDgT7JuB3yvD8V1CJ.png", alt="A screenshot of the UI for copying code.", height="173", width="414" %}
 
 Use this value to request an access token. For example, using `curl`, you can get an access token by
 executing the following command (replacing the values of $CLIENT\_ID, $CLIENT_SECRET, and \$CODE
@@ -79,25 +78,25 @@ This will return a result such as:
 You can now use the access_token to call the API. You can also use the refresh token to get future
 access tokens. Note that tokens expire after 40 minutes.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note**: For more information about getting OAuth 2.0 access tokens, see [Using OAuth 2.0 to Access
 Google APIs][3].
 
-!!!
+{% endAside %}
 
 ## Using the API {: #usingtheapi }
 
 Once you have an access token, your app can then use the Chrome Web Store Publish API. There are
 endpoints for creating items, updating items, and publishing items.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note**: Currently, there is no API for setting an item's metadata, such as description. This has
 to be done manually in the [Chrome Web Store Developer Dashboard.][4] More detail about the Web
 Store API can be found [here][5].
 
-!!!
+{% endAside %}
 
 ### Uploading a package to create a new store item {: #uploadnew }
 
@@ -120,11 +119,11 @@ Type the following example on the command line:
 https://www.googleapis.com/upload/chromewebstore/v1.1/items
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note**: For a full description of the insert method, see [Items:Insert][6].
 
-!!!
+{% endAside %}
 
 ### Uploading a package to update an existing store item {: #uploadexisitng }
 
@@ -147,11 +146,11 @@ Body content: the package file to upload
 https://www.googleapis.com/upload/chromewebstore/v1.1/items/$APP_ID
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note**: For a full description of the update method, see [Items:Update][7].
 
-!!!
+{% endAside %}
 
 ### Publishing an item to the public {: #publishpublic }
 
@@ -171,11 +170,11 @@ Header Parameters: $TOKEN: the access token
 https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note**: For a full description of publish method, see [Items:Publish][8].
 
-!!!
+{% endAside %}
 
 ### Publishing an item to trusted testers {: #trustedtesters }
 
@@ -195,11 +194,11 @@ Header Parameters: $TOKEN: the access token
 https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish?publishTarget=trustedTesters
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note**: For a full description of the publish method, see [Items:Publish][9].
 
-!!!
+{% endAside %}
 
 
 ### Checking the upload status of an item {: #checkstatus }
@@ -221,11 +220,11 @@ curl \
 https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID?projection=draft
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note**: For a full description of the get method, see [Items:Get][10].
 
-!!!
+{% endAside %}
 
 [1]: https://console.developers.google.com
 [3]: https://developers.google.com/accounts/docs/OAuth2

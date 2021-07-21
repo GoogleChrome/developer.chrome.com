@@ -5,9 +5,6 @@ steps:
   args: ['ci']
 - name: node
   entrypoint: npm
-  args: ['run', 'postinstall']
-- name: node
-  entrypoint: npm
   args: ['run', 'cloud-secrets']
   env:
   - 'PROJECT_ID=$PROJECT_ID'

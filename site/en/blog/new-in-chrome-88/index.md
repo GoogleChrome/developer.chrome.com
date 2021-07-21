@@ -20,7 +20,7 @@ tags:
 
 Chrome 88 is starting to roll out to stable now.
 
-{% youtube id='cqAO2xR7lzM' %}
+{% YouTube id='cqAO2xR7lzM' %}
 
 Here's what you need to know:
 
@@ -44,7 +44,7 @@ can upload them to the Chrome Web Store. Manifest v3 is a new extension
 platform, that makes Chrome extensions more secure, performant, and privacy
 respecting, by default.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XDUO2gCu8GcokIqjB6KE.png", alt="", className="float-right" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XDUO2gCu8GcokIqjB6KE.png", alt="", class="float-right", height="648", width="800" %}
 
 For example, it disallows remotely hosted code, which helps Chrome Web Store
 reviewers better understand what risks an extension poses. And should allow you
@@ -165,7 +165,7 @@ And of course there's plenty more.
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 88.
 
-* [What's new in Chrome DevTools (88)](https://developers.google.com/web/updates/2020/11/devtools)
+* [What's new in Chrome DevTools (88)](/blog/new-in-devtools-88)
 * [Chrome 88 deprecations & removals](https://developers.google.com/web/updates/2020/12/chrome-88-deps-rems)
 * [ChromeStatus.com updates for Chrome 88](https://www.chromestatus.com/features#milestone%3D88)
 * [What's new in JavaScript in Chrome 88](https://v8.dev/blog/v8-release-88)

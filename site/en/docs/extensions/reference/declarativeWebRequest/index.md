@@ -59,11 +59,11 @@ var matcher = new chrome.declarativeWebRequest.RequestMatcher({
 Requests to "https://www.example.com" would be rejected by the `RequestMatcher` due to the scheme.
 Also all requests for an embedded iframe would be rejected due to the `resourceType`.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** All conditions and actions are created via a constructor as shown in the example above.
 
-!!!
+{% endAside %}
 
 In order to cancel all requests to "example.com", you can define a rule as follows:
 
@@ -102,14 +102,14 @@ Register rules as follows:
 chrome.declarativeWebRequest.onRequest.addRules([rule2]);
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You should always register or unregister rules in bulk rather than individually because
 each of these operations recreates internal data structures. This re-creation is computationally
 expensive but facilitates a very fast URL matching algorithm for hundreds of thousands of URLs. The
 [Performance section][4] of the [Events][5] API provides further performance tips.
 
-!!!
+{% endAside %}
 
 ## Evaluation of conditions and actions {: #evaluation }
 

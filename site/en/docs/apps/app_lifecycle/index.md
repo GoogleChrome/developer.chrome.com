@@ -6,13 +6,13 @@ updated: 2014-11-14
 description: An overview of the lifecycle of Chrome Apps.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 The app runtime and event page are responsible for managing the app lifecycle. The app runtime
 manages app installation, controls the event page, and can shutdown the app at anytime. The event
@@ -23,7 +23,7 @@ page listens out for events from the app runtime and manages what gets launched 
 The app runtime loads the event page from a user's desktop and the `onLaunch()` event is fired. This
 event tells the event page what windows to launch and their dimensions.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JjrzyAmp9vghsqh71tKu.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JjrzyAmp9vghsqh71tKu.png",
        alt="how app lifecycle works", height="329", width="444" %}
 
 When the event page has no executing JavaScript, no pending callbacks, and no open windows, the
@@ -146,7 +146,7 @@ chrome.runtime.onSuspend.addListener(function() {
 });
 ```
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: storage
 [4]: app_storage#options

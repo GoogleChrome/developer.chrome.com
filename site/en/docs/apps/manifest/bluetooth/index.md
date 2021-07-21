@@ -6,13 +6,13 @@ updated: 2014-10-31
 description: Reference documentation for the bluetooth property of manifest.json.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 The `bluetooth` manifest property declares which permissions are available for the [bluetooth][3]
 API.
@@ -69,7 +69,7 @@ API.
   If `true`, gives permission to an app to use the advertisement functions in the
   [bluetoothLowEnergy][6] API
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: /apps/bluetooth
 [4]: /apps/bluetoothSocket

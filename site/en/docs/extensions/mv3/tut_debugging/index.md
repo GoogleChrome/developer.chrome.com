@@ -24,7 +24,7 @@ is on. Click the **Load Unpacked** button and select the broken extension direct
 extension is loaded, it should have three buttons: **Details**, **Remove** and **Errors** in red
 letters.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NPUXnZrLSG6T6zTCmbxj.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/NPUXnZrLSG6T6zTCmbxj.png",
        alt="Image displaying error button on extension management page", height="220", width="412" %}
 
 Click the **Errors** button to view the error log. The extensions system has found an issue in the
@@ -32,13 +32,13 @@ background script.
 
 `Uncaught TypeError: Cannot read property 'addListener' of undefined`
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5UNQ4gp40qQZIwOLTzxA.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/5UNQ4gp40qQZIwOLTzxA.png",
        alt="Extensions Management Page displaying background script error", height="556", width="646" %}
 
 Additionally, the Chrome DevTools panel can be opened for the background script by selecting the
 blue link next to **Inspect views**.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GvIXA3o7JvOxUg9BV12z.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GvIXA3o7JvOxUg9BV12z.png",
        alt="DevTools displaying background script error", height="222", width="743" %}
 
 Return to the code.
@@ -74,12 +74,12 @@ view the new log.
 
 `Uncaught ReferenceError: tabs is not defined`
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ygCnLz4Dst4mktOQhj4S.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ygCnLz4Dst4mktOQhj4S.png",
        alt="Extensions Management Page displaying popup error", height="559", width="642" %}
 
 Popup errors can also be viewed by inspecting the popup.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PTfS6FEsE6vkbtDVMcsM.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/PTfS6FEsE6vkbtDVMcsM.png",
        alt="DevTools displaying popup error", height="189", width="499" %}
 
 The error, `tabs is undefined`, says the extension doesn't know where to inject the content script.
@@ -119,7 +119,7 @@ button. The likely culprit is the content script, which runs inside the web page
 
 Open the DevTools panel of the web page the extension is trying to alter.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/q6cdFK0h7JEfaQKUMDg0.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/q6cdFK0h7JEfaQKUMDg0.png",
        alt="Extension error displayed in web page console", height="292", width="515" %}
 
 Only runtime errors, `console.warning` and `console.error` will be recorded on the Extensions
@@ -128,7 +128,7 @@ Management Page.
 To use DevTools from within the content script, click the dropdown arrow next to **top** and select
 the extension.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/uo8osbvVkG5HcJS00bAR.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/uo8osbvVkG5HcJS00bAR.png",
        alt="Uncaught ReferenceError: tabs is not defined", height="129", width="521" %}
 
 The error says `color` is not defined. The extension must not be passing the variable correctly.
@@ -149,13 +149,13 @@ The popup will often make all of the required network requests before even the s
 developers can open DevTools. To view these requests, refresh from inside the network panel. It will
 reload the popup without closing the DevTools panel.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/x8knWvTA11f4j1wVoNY8.gif",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/x8knWvTA11f4j1wVoNY8.gif",
        alt="Refresh inside the network panel to view popup network requests", height="520", width="566" %}
 
 ## Declare permissions {: #declare_permission }
 
 While extensions have similar capabilities as web pages they often need permission to use certain
-features, such as [cookies][7], [storage][8] and [Cross-Origin XMLHttpRequsts][9]. Refer to the
+features, such as [cookies][7], [storage][8] and [Cross-Origin XMLHttpRequests][9]. Refer to the
 [permissions article][10] and the available [Chrome APIs][11] to ensure an extension is requesting
 the correct permissions in its [manifest][12].
 

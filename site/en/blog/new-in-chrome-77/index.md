@@ -18,7 +18,7 @@ tags:
   - chrome-77
 ---
 
-{% youtube id='S8aVB3IfOR4' %}
+{% YouTube id='S8aVB3IfOR4' %}
 
 Chrome 77 is rolling out now!
 
@@ -40,13 +40,13 @@ seeing on screen. First Paint, and First Contentful Paint, only capture the
 beginning of the experience. First Meaningful Paint is better, but it's
 complex, and sometimes wrong.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Bwe8cTocyJGd5wNiaFMm.png", alt="" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Bwe8cTocyJGd5wNiaFMm.png", alt="", height="279", width="800" %}
 
 The **Largest Contentful Paint API**, available starting in Chrome 77, reports
 the render time of the largest content element visible in the viewport and
 makes it possible to measure when the main content of the page is loaded.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/n41KwUDKNUFZAKmWDTkr.png", alt="" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/n41KwUDKNUFZAKmWDTkr.png", alt="", height="311", width="800" %}
 
 To measure the Largest Contentful Paint, you'll need to use a Performance
 Observer, and look for `largest-contentful-paint` events.
@@ -163,7 +163,7 @@ Check out [Browser level lazy-loading for the web][wd-lazy] on web.dev for detai
 
 ## Chrome Dev Summit 2019 {: #cds2019 }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4L4iDgNCnYAykp3UXZRe.png", alt="", className="float-right" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4L4iDgNCnYAykp3UXZRe.png", alt="", class="float-right", height="420", width="800" %}
 
 **The Chrome Dev Summit is coming up November 11th and 12th.**
 
@@ -193,7 +193,7 @@ And there are new measurement units in the
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 77.
 
-* [What's new in Chrome DevTools (77)](https://developers.google.com/web/updates/2019/07/devtools)
+* [What's new in Chrome DevTools (77)](/blog/new-in-devtools-77)
 * [Chrome 77 deprecations & removals](https://developers.google.com/web/updates/2019/08/chrome-77-deps-rems)
 * [ChromeStatus.com updates for Chrome 77](https://www.chromestatus.com/features#milestone%3D77)
 * [What's new in JavaScript in Chrome 77](https://v8.dev/blog/v8-release-77)

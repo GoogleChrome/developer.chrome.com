@@ -132,7 +132,7 @@ removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`:
 
 - Origin
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Modifying the `Origin` request header might not work as intended and may result in
 unexpected errors in the response's [CORS checks][6]. This is because while extensions can only
@@ -142,7 +142,7 @@ server may allow the CORS access for the modified request and put the header's `
 `Access-Control-Allow-Origin` header in the response. But it won't match the immutable
 `request origin` and result in a CORS failure.
 
-!!!
+{% endAside %}
 
 Starting from Chrome 72, if you need to modify responses before [Cross Origin Read Blocking
 (CORB)][8] can block the response, you need to specify `'extraHeaders'` in `opt_extraInfpSpec`.
@@ -155,19 +155,22 @@ or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`:
 - Referer
 - Cookie
 
-Starting from Chrome 72, the Set-Cookie response header is **not provided** and cannot be modified
+Starting from Chrome 72, the `Set-Cookie` response header is **not provided** and cannot be modified
 or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
 
-!!!.aside.aside--note
+Starting from Chrome 89, the `X-Frame-Options` response header cannot be effectively modified
+or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`.
+
+{% Aside %}
 
 **Note:** Specifying `'extraHeaders'` in `opt_extraInfoSpec` may have a negative impact on
 performance, hence it should only be used when really necessary.
 
-!!!
+{% endAside %}
 
 The webRequest API only exposes requests that the extension has permission to see, given its [host
 permissions][9]. Moreover, only the following schemes are accessible: `http://`, `https://`,
-`ftp://`, `file://`, `ws://` (since Chrome 58), `wss://` (since Chrome 58), or
+`ftp://`, `file://`, `ws://` (since Chrome 58), `wss://` (since Chrome 58), `urn:` (since Chrome 91), or
 `chrome-extension://`. In addition, even certain requests with URLs using one of the above schemes
 are hidden. These include `chrome-extension://other_extension_id` where `other_extension_id` is not
 the ID of the extension to handle the request, `https://www.google.com/chrome`, and other sensitive
@@ -354,7 +357,7 @@ For more example code, see the [web request samples][16].
 [1]: /docs/extensions/mv2/tabs
 [2]: /docs/extensions/mv2/declare_permissions
 [3]: #life_cycle_footnote
-[4]: #implementation
+[4]: #implementation-details
 [5]: #life_cycle_footnote
 [6]: https://fetch.spec.whatwg.org/#cors-check
 [7]: https://fetch.spec.whatwg.org/#origin-header

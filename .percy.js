@@ -16,11 +16,11 @@ module.exports = {
     'snapshot-files': [
       'index.html',
       'releases/index.html',
-      'blog/index.html',
-      'demo/index.html',
       'docs/index.html',
-      'docs/extensions/index.html',
+      'docs/native-client/index.html',
+      'blog/welcome/index.html',
       'docs/extensions/what-are-extensions/index.html',
+      'docs/handbook/components/index.html'
     ].join(',')
   },
   'agent': {

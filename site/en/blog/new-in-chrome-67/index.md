@@ -18,7 +18,7 @@ tags:
   - chrome-67
 ---
 
-{% youtube id='UyLI3WlWqLM' %}
+{% YouTube id='UyLI3WlWqLM' %}
 
 * Progressive Web Apps are coming to the [desktop](#desktop-pwas)
 * The [generic sensor API](#generic-sensor-api) makes it way easier to get
@@ -34,7 +34,7 @@ Want the full list of changes? Check out the
 
 ## Desktop PWAs {: #desktop-pwas }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/jESgkJzlVwmOqipfF2pp.jpg", alt="Spotify's desktop progressive web app", className="float-left" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/jESgkJzlVwmOqipfF2pp.jpg", alt="Spotify's desktop progressive web app", class="float-left", height="533", width="800" %}
 
 Desktop Progressive Web Apps are now supported on Chrome OS 67, and we've
 already started working on support for Mac and Windows. Once installed,
@@ -58,7 +58,7 @@ your app can be installed. Then, when the user clicks the button, call prompt
 on the saved event; Chrome will then show the prompt to the user. If they
 click add, Chrome will add your PWA to their shelf and launcher.
 
-{% youtube id="NITk4kXMQDw", startTime="1678" %}
+{% YouTube id="NITk4kXMQDw", startTime="1678" %}
 
 Check out my [Google I/O talk](https://youtu.be/NITk4kXMQDw?t=1678) where
 Jenny and I go into detail about the technical and special design
@@ -167,7 +167,7 @@ to get caught up on all the latest from Google I/O!
 
 ### New in DevTools
 
-Be sure to check out [New in Chrome DevTools](https://developers.google.com/web/updates/2018/04/devtools), to
+Be sure to check out [New in Chrome DevTools](/blog/new-in-devtools-67), to
 learn what's new in for DevTools in Chrome 67.
 
 ### Subscribe

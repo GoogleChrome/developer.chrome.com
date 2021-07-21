@@ -6,20 +6,20 @@ updated: 2015-01-06
 description: How to wake your Chrome App at specified intervals and use notifications.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Want to start fresh from here?** Find the previous step's code in the [reference code zip][3]
 under **_cheat_code > solution_for_step2_**.
 
-!!!
+{% endAside %}
 
 In this step, you will learn:
 
@@ -142,26 +142,26 @@ clicked.
 
 Reload your app and spend a few moments activating (and deactivating) the alarm.
 
-!!!.aside.aside--note
+{% Aside %}
 
 Since the log messages are being sent to the Console via the event page (aka background script), you
 need to **right-click > Inspect Background Page** to see the log messages:
 
-!!!
+{% endAside %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oc61HiXGKKbfETFGyNCK.png", alt="Inspect background page messages", height="522", width="623" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oc61HiXGKKbfETFGyNCK.png", alt="Inspect background page messages", height="522", width="623" %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 It's also worthwhile to continue to use **right-click > Inspect Element** to make sure you do not
 have errors in other JavaScript files.
 
-!!!
+{% endAside %}
 
 Whenever you have the alarm activated, you should see log messages being printed in the Console
 every time the alarm "rings":
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZkL2Fy0sumTyDvJmfmo3.png", alt="Alarm messages printing to the Console", height="456", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZkL2Fy0sumTyDvJmfmo3.png", alt="Alarm messages printing to the Console", height="456", width="800" %}
 
 You should notice that:
 
@@ -224,7 +224,7 @@ chrome.alarms.getAll(function(alarms) {
 This will output an object such as
 `{name: "remindme", periodInMinutes: 0.1, scheduledTime: 1397587981166.858}` as seen below:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1tnuWJK9u6U79P9gNsri.png", alt="Use getAll() to inspect running alarms.", height="208", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1tnuWJK9u6U79P9gNsri.png", alt="Use getAll() to inspect running alarms.", height="208", width="800" %}
 
 ### Get ready for the next section {: #next-section }
 
@@ -236,7 +236,7 @@ visual notifications.
 Let's change the alarm notification to something the user can easily notice. Use
 [`chrome.notifications`][11] to show a desktop notification like the one below:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/05PL1Eb7DMVoXTDgbpk8.png", alt="Our Todo app notification", height="103", width="382" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/05PL1Eb7DMVoXTDgbpk8.png", alt="Our Todo app notification", height="103", width="382" %}
 
 When the user clicks on the notification, the Todo app window should come into view.
 
@@ -391,7 +391,7 @@ For more detailed information about some of the APIs introduced in this step, re
 
 Ready to continue onto the next step? Go to [Step 4 - Open external links with a webview »][36]
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: #launch

@@ -1,7 +1,7 @@
 {% set pageTitle = title + ' - ' + site.title %}
 
 {# We don't want any duplication. This is likely for the home page. #}
-{% if site.title === title %} 
+{% if site.title === title %}
   {% set pageTitle = title %}
 {% endif %}
 
@@ -9,8 +9,8 @@
 {% set pageUrlSafe %}{{ page.url | stripDefaultLocale }}{% endset %}
 {% set currentUrl = site.url + pageUrlSafe %}
 
-{% if not socialImage %} 
-  {% set socialImage = site.url + '/images/meta/social.png' %} 
+{% if not socialImage %}
+  {% set socialImage = site.url + '/images/meta/social.png' %}
 {% endif %}
 
 {% if not description %}
@@ -20,6 +20,8 @@
 
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}" />
+
+{% Hreflang page.url, site, collections %}
 
 <meta property="og:site_name" content="{{ siteTitle }}" />
 <meta property="og:title" content="{{ pageTitle }}" />

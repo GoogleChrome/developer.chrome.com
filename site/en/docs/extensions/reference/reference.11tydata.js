@@ -1,11 +1,4 @@
-const types = require('../../../../_collections/types.json');
 const striptags = require('striptags');
-
-const indexedTypes = {};
-for (const type of types) {
-  const {shortName} = type;
-  indexedTypes[shortName] = type;
-}
 
 /**
  * Strips HTML tags and newlines for use as a meta attribute.
@@ -26,11 +19,22 @@ function stripForMeta(raw) {
 /**
  * Finds the RenderNamespace for the specified API.
  *
- * @param {{api: string}} param
- * @return {RenderNamespace|undefined}
+ * @param {{api: string, chromeApiNamespaces: {[name: string]: any}}} data
+ * @return {any=}
  */
-function namespaceForData({api}) {
-  return indexedTypes[api];
+function namespaceForData(data) {
+  const {api, chromeApiNamespaces} = data;
+  if (!api) {
+    return undefined;
+  }
+
+  if (api in chromeApiNamespaces) {
+    return chromeApiNamespaces[api];
+  }
+
+  // This can be called several times by Eleventy. The first time it's called it's unlikely that
+  // the namespace data is available yet, so we can't warn here if it's missing.
+  return undefined;
 }
 
 module.exports = {
@@ -39,6 +43,25 @@ module.exports = {
       return namespaceForData(data);
     },
 
+    /**
+     * Finds all permissions, both specified in the .d.ts and any additional permissions
+     * specified here inside the front matter.
+     *
+     * @return {string[]}
+     */
+    permissions: data => {
+      const extraPermissions = data.extra_permissions ?? [];
+      const namespacePermissions = data.namespace?.permissions ?? [];
+
+      const all = new Set([...extraPermissions, ...namespacePermissions]);
+      const out = [...all];
+      out.sort();
+      return out;
+    },
+
+    /**
+     * @return {string}
+     */
     layout: data => {
       if (data.layout) {
         return data.layout; // don't clobber existing values
@@ -52,19 +75,29 @@ module.exports = {
       return data.layout;
     },
 
+    /**
+     * @return {string}
+     */
     title: data => {
       const namespace = namespaceForData(data);
-
-      // We can't use ?? here, as `data.title` is the empty string if missing.
-      return data.title || namespace?.name || '?';
+      if (data.title) {
+        return data.title;
+      }
+      if (namespace?.name) {
+        return `chrome.${namespace.name}`;
+      }
+      return '?';
     },
 
+    /**
+     * @return {string}
+     */
     description: data => {
       if (!data.api || data.description) {
         return data.description;
       }
       const namespace = namespaceForData(data);
-      return stripForMeta(namespace?.comment);
+      return stripForMeta(namespace?.description);
     },
   },
 };

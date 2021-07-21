@@ -63,13 +63,13 @@ Multiple background scripts can be registered for modularized code.
   }
 ```
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 The only occasion to keep a background script persistently active is if the extension uses
 [chrome.webRequest][4] API to block or modify network requests. The webRequest API is incompatible
 with non-persistent background pages.
 
-!!!
+{% endAside %}
 
 If an extension currently uses a persistent background page, refer to [Background Migration
 Guide][5] for instruction on how to switch to a non-persistent model.
@@ -192,8 +192,8 @@ chrome.runtime.onMessage.addListener(function(message, callback) {
 The lifetime of a background script is observable by monitoring when an entry for the extension
 appears and disappears from Chrome's task manager.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/occ8HD81vNq2zboXIbiu.png",
-       alt="Chrome with an extension's popup open.", height="623", width="730" %}
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/d6TkeAU0cdga3Xz7wVNx.png", alt="ALT_TEXT_HERE",
+width="741", height="632" %}
 
 Open the task manager by clicking the Chrome Menu, hovering over more tools and selecting "Task
 Manager".

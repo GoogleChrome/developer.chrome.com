@@ -1,11 +1,16 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest an idea for the site
 title: ''
-labels: 'feature request'
+labels:
+- 'feature request'
+- 'P2'
 assignees: ''
 
 ---
+
+⚠️ This is for feature requests with the https://developer.chrome.com site, not Chromium itself.
+If you want to file a bug with Chromium (the open-source project behind Google Chrome and other browsers), please use https://crbug.com.
 
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]

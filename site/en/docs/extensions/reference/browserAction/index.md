@@ -7,7 +7,7 @@ browser action. A popup is below the icon.
 
 ![](browser-action.png)
 
-If you want to create an icon that isn't always visible, use a [page action][1] instead of a browser
+If you want to create an icon that isn't always active, use a [page action][1] instead of a browser
 action.
 
 ## Manifest
@@ -19,13 +19,13 @@ Register your browser action in the [extension manifest][2] like this:
   "name": "My extension",
   ...
   "browser_action": {
-    "default_icon": {                    // optional
-      "16": "images/icon16.png",           // optional
-      "24": "images/icon24.png",           // optional
-      "32": "images/icon32.png"            // optional
+    "default_icon": {                // optional
+      "16": "images/icon16.png",     // optional
+      "24": "images/icon24.png",     // optional
+      "32": "images/icon32.png"      // optional
     },
-    "default_title": "Google Mail",      // optional; shown in tooltip
-    "default_popup": "popup.html"        // optional
+    "default_title": "Google Mail",  // optional, shown in tooltip
+    "default_popup": "popup.html"    // optional
   },
   ...
 }
@@ -97,8 +97,9 @@ Set the text and color of the badge using [`browserAction.setBadgeText`][13] and
 
 ### Popup
 
-If a browser action has a popup, the popup appears when the user clicks the icon. The popup can
-contain any HTML contents that you like, and it's automatically sized to fit its contents.
+If a browser action has a popup, the popup appears when the user clicks the extension's icon. The
+popup can contain any HTML contents that you like, and it's automatically sized to fit its contents.
+The popup cannot be smaller than 25x25 and cannot be larger than 800x600.
 
 To add a popup to your browser action, create an HTML file with the popup's contents. Specify the
 HTML file in the **default_popup** field of **browser_action** in the [manifest][15], or call the
@@ -129,7 +130,7 @@ directory. For other examples and for help in viewing the source code, see [Samp
 [3]: #icon
 [4]: #tooltip
 [5]: #badge
-[6]: #popups
+[6]: #popup
 [7]: http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html
 [8]: #manifest
 [9]: #method-setIcon
@@ -141,5 +142,5 @@ directory. For other examples and for help in viewing the source code, see [Samp
 [15]: #manifest
 [16]: #method-setPopup
 [17]: /extensions/pageAction
-[18]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/browserAction/
+[18]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/browserAction/
 [19]: /docs/extensions/mv2/samples

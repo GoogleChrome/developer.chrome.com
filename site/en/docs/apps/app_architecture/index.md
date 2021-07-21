@@ -6,13 +6,13 @@ updated: 2014-06-06
 description: An overview of the software architecture of Chrome Apps.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Chrome Apps integrate closely with a user's operating system. They are designed to be run outside of
 a browser tab, to run robustly in offline and poor connectivity scenarios and to have far more
@@ -33,7 +33,7 @@ tab. Also, the app container must load the main document of the Chrome App from 
 forces all Chrome Apps to be at least minimally functional when offline and it provides a place to
 enforce stricter security measures.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1elqMcady4myIQ5qqQxA.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/1elqMcady4myIQ5qqQxA.png",
        alt="how app container model works", height="172", width="671" %}
 
 ## Programming model {: #programming }
@@ -48,7 +48,7 @@ This page is invisible, only exists in the background, and can be closed automat
 runtime. It controls how windows open and close and when the app is started or terminated. There can
 only be one "event page" for a Chrome App.
 
-{% youtube id="yr1jgREbH8U" %}
+{% YouTube id="yr1jgREbH8U" %}
 
 ### App lifecycle at a glance {: #lifecycle }
 
@@ -78,9 +78,9 @@ external processes are isolated from the app. Since iframes run in the same proc
 surrounding page, they can only be used to load other app pages. You can use the `object` tag to
 [embed external content][8]; this content runs in a separate process from the app.
 
-{% youtube id="EDtiWN42lHs" %}
+{% YouTube id="EDtiWN42lHs" %}
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: app_lifecycle
 [4]: declare_permissions

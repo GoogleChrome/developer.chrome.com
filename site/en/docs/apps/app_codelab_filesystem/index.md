@@ -6,20 +6,20 @@ date: 2014-10-17
 description: How to write to the file system from your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Want to start fresh from here?** Find the previous step's code in the [reference code zip][3]
 under **_cheat_code > solution_for_step5_**.
 
-!!!
+{% endAside %}
 
 In this step, you will learn:
 
@@ -243,7 +243,7 @@ restart. (Hint: Add a listener to the `onRestarted` event in the background page
 You are done Step 6! Reload your app and add some todos. Click **Export to disk** to export your
 todos to a .txt file.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/D5YDP8PChoRlsCxAOkPa.png", alt="The Todo app with exported todos", height="650", width="659" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/D5YDP8PChoRlsCxAOkPa.png", alt="The Todo app with exported todos", height="650", width="659" %}
 
 ## For more information {: #recap }
 
@@ -259,7 +259,7 @@ For more detailed information about some of the APIs introduced in this step, re
 
 Ready to continue onto the next step? Go to [Step 7 - Publish your app »][26]
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: #launch

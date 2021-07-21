@@ -6,20 +6,20 @@ date: 2014-10-17
 description: How to publish your Chrome App in the Chrome Web Store.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Want to start fresh from here?** Find the previous step's code in the [reference code zip][3]
 under **_cheat_code > solution_for_step6_**.
 
-!!!
+{% endAside %}
 
 In this step, you will learn:
 
@@ -61,19 +61,19 @@ The process of uploading apps is simple:
 5.  Use the **choose file** dialog box to find the .zip file in your system. Select that file to
     upload.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Zl8a11fQ8j3Dmak4t6Fb.jpg", alt="Choose a zip to upload", height="365", width="644" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Zl8a11fQ8j3Dmak4t6Fb.jpg", alt="Choose a zip to upload", height="365", width="644" %}
 
 You are nearly done. If you are not quite ready for the next step, you can save the draft for later,
 or you can publish it to a group of testers.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UNBhXQl7cHVl3GeNFVfl.png", alt="Save a draft", height="174", width="643" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UNBhXQl7cHVl3GeNFVfl.png", alt="Save a draft", height="174", width="643" %}
 
 ## Add promotional materials {: #promotional-metadata }
 
 Before you can publicly publish your app, you need to add promotional assets and extra meta
 information about your application.You should see a screen that looks like this:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/XbR8jGkSRblieFkfGA6i.png", alt="Add meta information for your app", height="480", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/XbR8jGkSRblieFkfGA6i.png", alt="Add meta information for your app", height="480", width="800" %}
 
 The below fields are mandatory:
 
@@ -88,18 +88,18 @@ The below fields are mandatory:
 
 Once you are happy with everything, you can now publish your application to the public.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mDeJNuPD6lD5aTSt8UZY.png", alt="Publish your changes", height="174", width="643" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mDeJNuPD6lD5aTSt8UZY.png", alt="Publish your changes", height="174", width="643" %}
 
 ## View your app in the Chrome Web Store {: #view-in-webstore }
 
 You are done Step 7! You should have a link to your public Chrome App that you can share with the
 world.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ijRErXNW1lm0uTqhA7V7.png", alt="The Todo app in the Chrome Web Store", height="580", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ijRErXNW1lm0uTqhA7V7.png", alt="The Todo app in the Chrome Web Store", height="580", width="800" %}
 
 Congratulations on completing this Chrome Apps codelab!
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://github.com/mangini/io13-codelab/archive/master.zip
 [4]: #view-in-webstore

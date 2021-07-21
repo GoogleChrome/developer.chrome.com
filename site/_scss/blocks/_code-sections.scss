@@ -69,32 +69,6 @@
   }
 }
 
-// Ensure that .code-sections has a margin-top, except in cases where it's
-// already in a stack (as this will bring its margin).
-// purgecss tries to remove this bit.
-/* purgecss start ignore */
-/* stylelint-disable-next-line selector-max-compound-selectors */
-:not(.stack) > * + .code-sections {
-  margin-top: get-size(300);
-}
-/* purgecss end ignore */
-
-// This is used for method signatures. We need to:
-//  - use opacity to make them less pronounced
-//  - allow overflow-wrap as often we have very long preambles, e.g.:
-//    "chrome.browserAction.getBadgeBackgroundColor(details:"
-.code-sections__signature {
-  color: get-color('grey-700');
-  font-size: 0.875em;
-  opacity: 0.9;
-  overflow-wrap: break-word;
-  padding-bottom: 1em;
-}
-
-.code-sections__signature-type {
-  color: var(--color-cyan-medium);
-}
-
 .code-sections__optional {
   color: var(--color-pink-medium);
 }
@@ -111,6 +85,12 @@
   background: get-color('grey-50');
   border: 1px solid var(--color-hairline);
   padding: 1em;
+
+  > code {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
 }
 
 .code-sections__overline {
@@ -120,21 +100,17 @@
   padding-top: get-size(300);
 }
 
+.code-sections__mode {
+  color: var(--color-code-comment);
+  text-transform: uppercase;
+}
+
 .code-sections li {
   border-top: 1px solid var(--color-hairline);
   display: flex;
   flex-direction: column;
   padding-top: get-size(300);
   position: relative;
-
-  @include media-query('lg') {
-    flex-direction: row;
-  }
-
-  /* stylelint-disable-next-line selector-max-compound-selectors */
-  li li {
-    flex-direction: column !important;
-  }
 
   > :first-child {
     @include apply-utility('weight', 'medium');
@@ -150,15 +126,18 @@
 }
 
 .code-sections--summary {
-  border-left: 0;
   padding-left: 0;
 
-  li:first-child {
+  > li:first-child {
     border-top: 0;
     padding-top: 0;
   }
 
-  li {
+  > li {
+    @include media-query('lg') {
+      flex-direction: row;
+    }
+
     > :first-child {
       // This makes the "Description", "Types" and so on left-columns small.
       // We avoid "!important" here only because we are _below_ the

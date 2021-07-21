@@ -20,7 +20,7 @@ tags:
 
 Chrome 87 is starting to roll out to stable now.
 
-{% youtube id='NCKMMzVn1c8' %}
+{% YouTube id='NCKMMzVn1c8' %}
 
 Here's what you need to know:
 
@@ -35,7 +35,7 @@ from home, let's dive in and see what's new for developers in Chrome 87!
 
 ## Chrome Dev Summit {: #cds }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M6GzgK34vmmwUhsymAmI.png", alt="Chrome Dev Summit logo", className="float-right" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M6GzgK34vmmwUhsymAmI.png", alt="Chrome Dev Summit logo", class="float-right", height="311", width="800" %}
 
 The Chrome Dev Summit is back on December 9th and 10th with its 8th chapter.
 But this time, we're coming to you. We're bringing all the latest updates,
@@ -67,7 +67,7 @@ if (supports.pan && supports.tilt && supports.zoom) {
 }
 ```
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/CzXFGEZF3U05FAzXY42p.jpg", alt="Permission prompt for PTZ", className="float-right" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/CzXFGEZF3U05FAzXY42p.jpg", alt="Permission prompt for PTZ", class="float-right", height="382", width="800" %}
 
 Then, like all other powerful APIs, the user will need to grant permission
 to the camera, but also to PTZ functionality.
@@ -156,7 +156,7 @@ on web.dev.
 
 ## Origin Trial: Font access API {: #font-access }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/x5qv7Ylxb9i2mtWkBwVt.png", alt="Screen shot of Photopea image editor", className="float-right" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/x5qv7Ylxb9i2mtWkBwVt.png", alt="Screen shot of Photopea image editor", class="float-right", height="575", width="800" %}
 
 Bringing design apps like Figma, Gravit Designer, and Photopea, to the web is great,
 and we're seeing a lot more coming. While the web has the ability to offer a
@@ -227,7 +227,7 @@ try it yourself.
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 87.
 
-* [What's new in Chrome DevTools (87)](https://developers.google.com/web/updates/2020/10/devtools)
+* [What's new in Chrome DevTools (87)](/blog/new-in-devtools-87)
 * [Chrome 87 deprecations & removals](https://developers.google.com/web/updates/2020/10/chrome-87-deps-rems)
 * [ChromeStatus.com updates for Chrome 87](https://www.chromestatus.com/features#milestone%3D87)
 * [What's new in JavaScript in Chrome 87](https://v8.dev/blog/v8-release-87)

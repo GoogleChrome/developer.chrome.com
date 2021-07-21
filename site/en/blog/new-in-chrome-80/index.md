@@ -21,7 +21,7 @@ tags:
 Chrome 80 is rolling out now, and there's a ton of new stuff in it for
 developers!
 
-{% youtube id='lM0qZpxu0Fg' %}
+{% YouTube id='lM0qZpxu0Fg' %}
 
 There's support for:
 
@@ -208,7 +208,7 @@ Of course, there's plenty more!
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 80.
 
-* [What's new in Chrome DevTools (80)](https://developers.google.com/web/updates/2019/12/devtools)
+* [What's new in Chrome DevTools (80)](/blog/new-in-devtools-80)
 * [Chrome 80 deprecations & removals](https://developers.google.com/web/updates/2019/12/chrome-80-deps-rems)
 * [ChromeStatus.com updates for Chrome 80](https://www.chromestatus.com/features#milestone%3D80)
 * [What's new in JavaScript in Chrome 80](https://v8.dev/blog/v8-release-80)

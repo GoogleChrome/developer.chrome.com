@@ -18,7 +18,7 @@ tags:
 
 Chrome 86 is starting to roll out to stable now.
 
-{% youtube id='GNuG-5m4Ud0' %}
+{% YouTube id='GNuG-5m4Ud0' %}
 
 Here's what you need to know:
 
@@ -74,7 +74,7 @@ async function saveFile(fileHandle) {
 ```
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9zxgacmiGxvljxLSDkOD.jpg", alt="permission prompt screen shot" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9zxgacmiGxvljxLSDkOD.jpg", alt="permission prompt screen shot", height="281", width="800" %}
   <figcaption>
     Prompt to the user requesting permission to write to a file.
   </figcaption>
@@ -94,7 +94,7 @@ There's a lot more to the API, so check out the
 ## Origin Trial: WebHID {: #web-hid }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/s3z7rDiMGGKttmxRSSlL.jpg", alt="Game controller" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/s3z7rDiMGGKttmxRSSlL.jpg", alt="Game controller", height="534", width="800" %}
   <figcaption>
     Game controller.
   </figcaption>
@@ -125,7 +125,7 @@ Web based video chat apps can use the telephony buttons on specialized
 speakers, to start or end calls,  mute the audio, and more.
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/zzryfqePHZDWDS8W4OQy.jpg", alt="HID device picker" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/zzryfqePHZDWDS8W4OQy.jpg", alt="HID device picker", height="513", width="800" %}
   <figcaption>
     HID device picker.
   </figcaption>
@@ -239,7 +239,7 @@ our YouTube channel for more info!
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 86.
 
-* [What's new in Chrome DevTools (86)](https://developers.google.com/web/updates/2020/06/devtools)
+* [What's new in Chrome DevTools (86)](/blog/new-in-devtools-85)
 * [Chrome 86 deprecations & removals](https://developers.google.com/web/updates/2020/09/chrome-86-deps-rems)
 * [ChromeStatus.com updates for Chrome 86](https://www.chromestatus.com/features#milestone%3D86)
 * [What's new in JavaScript in Chrome 86](https://v8.dev/blog/v8-release-86)

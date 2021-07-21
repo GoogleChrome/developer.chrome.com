@@ -16,7 +16,7 @@ tags:
   - chrome-74
 ---
 
-{% youtube id='zBlItTR8BsY' %}
+{% YouTube id='zBlItTR8BsY' %}
 
 In Chrome 74, we've added support for:
 
@@ -38,7 +38,7 @@ what's new for developers in Chrome 74!
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 74.
 
-* [What's new in Chrome DevTools (74)](https://developers.google.com/web/updates/2019/03/devtools)
+* [What's new in Chrome DevTools (74)](/blog/new-in-devtools-74)
 * [Chrome 74 deprecations & removals](https://developers.google.com/web/updates/2019/03/chrome-74-deps-rems)
 * [ChromeStatus.com updates for Chrome 74](https://www.chromestatus.com/features#milestone%3D74)
 * [What's new in JavaScript in Chrome 74](https://v8.dev/blog/v8-release-74)
@@ -99,7 +99,7 @@ To read more about public and private classes, check out Mathias's post on
 
 ## `prefers-reduced-motion` {: #prefers-reduced-motion }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/nUa8d2JtpVfYhsWBCXPf.png", alt="", className="float-right" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/nUa8d2JtpVfYhsWBCXPf.png", alt="", class="float-right", height="493", width="472" %}
 
 Some users have reported getting motion sick when viewing parallax scrolling,
 zooming, and other motion effects. To address this, many operating systems

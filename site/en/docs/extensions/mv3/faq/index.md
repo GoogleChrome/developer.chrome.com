@@ -170,7 +170,7 @@ can add [some limited UI elements to Chrome itself.][49]
 
 Extensions can store up to 5MB of data in localStorage.
 
-### How do I create an options menu for my application? {: #faq-dev-10 }
+### How do I create an options menu for my extension? {: #faq-dev-10 }
 
 You can let users set options for your extension by creating an [options page][50], which is a
 simple HTML page that will be loaded when a user clicks the "options" button for your extension.
@@ -223,8 +223,8 @@ The steps you should follow to ensure this are:
     this way, which is a good indicator that the bug is in their own code.
 2.  Search the issue tracker at [http://crbug.com][55] to see whether someone has reported a similar
     issue. Most issues related to extensions are filed under **component=Platform>Extensions**, so
-    to look for an extension bug related to the chrome.tabs.executeScript function (for example),
-    search for "`component=Platform>Extensions Type=Bug chrome.tabs.executeScript`", which will give
+    to look for an extension bug related to the chrome.scripting.executeScript function (for example),
+    search for "`component=Platform>Extensions Type=Bug chrome.scripting.executeScript`", which will give
     you [this list of results][56].
 3.  If you find a bug that describes your issue, click the star icon to be notified when the bug
     receives an update. _Do not respond to the bug to say "me too" or ask "when will this be
@@ -327,7 +327,7 @@ The steps you should follow to ensure this are:
 [54]: #faq-lifecycle-events
 [55]: http://crbug.com
 [56]:
-  https://bugs.chromium.org/p/chromium/issues/list?can=2&q=component%3DPlatform>Extensions+Type%3DBug+chrome.tabs.executeScript
+  https://bugs.chromium.org/p/chromium/issues/list?can=2&q=component%3DPlatform>Extensions+Type%3DBug+chrome.scripting.executeScript
 [57]: http://crbug.com/new
 [58]: http://groups.google.com/a/chromium.org/group/chromium-extensions/topics
 [59]: http://crbug.com

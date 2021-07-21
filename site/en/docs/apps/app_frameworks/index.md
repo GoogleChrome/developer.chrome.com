@@ -6,19 +6,19 @@ updated: 2014-05-21
 description: An overview of the model view controller software architecture model.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 As modern browsers become more powerful with rich features, building full-blown web applications in
 JavaScript is not only feasible, but increasingly popular. Based on [trends][3] on [HTTP
 Archive][4], deployed JavaScript code size has grown 45% over the course of the year.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JYbQCeKcbI0rbDtXUGKi.png", alt="JS transfer size and JS requests", height="292", width="568" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/JYbQCeKcbI0rbDtXUGKi.png", alt="JS transfer size and JS requests", height="292", width="568" %}
 
 With JavaScript's popularity climbing, our client-side applications are much more complex than
 before. Application development requires collaboration from multiple developers. Writing
@@ -26,8 +26,8 @@ before. Application development requires collaboration from multiple developers.
 rich client-side features, is no exception.
 
 Design patterns are important to write maintainable and reusable code. A pattern is a reusable
-solution that can be applied to commonly occurring problems in software design—in our case —
-writing Chrome Apps. We recommend that developers decouple the app into a series of independent
+solution that can be applied to commonly occurring problems in software design—in our
+case—writing Chrome Apps. We recommend that developers decouple the app into a series of independent
 components following the MVC pattern.
 
 In the last few years, a series of JavaScript MVC frameworks have been developed, such as
@@ -43,7 +43,7 @@ multiple languages and generations of programmers.
 
 MVC is composed of three components:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BHGcFQr06iG3kquyozom.png", alt="model-view-controller", height="303", width="466" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/BHGcFQr06iG3kquyozom.png", alt="model-view-controller", height="303", width="466" %}
 
 ### Model {: #model }
 
@@ -54,7 +54,7 @@ has occurred.
 To understand this further, let's use the Todo list app, a simple, one page web app that tracks your
 task list.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7WQXOcG3PNRhnsjnsvjx.png", alt="model-view-controller", height="366", width="444" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/7WQXOcG3PNRhnsjnsvjx.png", alt="model-view-controller", height="366", width="444" %}
 
 The model here represents attributes associated with each todo item such as description and status.
 When a new todo item is created, it is stored in an instance of the model.
@@ -194,7 +194,7 @@ frameworks for writing secure and scalable Chrome Apps:
 - [JavaScript Patterns][30] (By Stoyan Stefonov)
 - [Maintainable JavaScript][31] (By Nicolas Z. Zakas)
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: http://httparchive.org/trends.php?s=intersection&minlabel=Jan+20+2011&maxlabel=Jan+15+2012
 [4]: http://httparchive.org/

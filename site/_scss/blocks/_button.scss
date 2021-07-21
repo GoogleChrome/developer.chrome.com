@@ -1,4 +1,3 @@
-/* purgecss start ignore */
 %button,
 .button {
   background: transparent;
@@ -6,7 +5,6 @@
   cursor: pointer;
   text-decoration: none;
 }
-/* purgecss end ignore */
 
 %material-button,
 .material-button {
@@ -15,7 +13,9 @@
   @extend %type--small;
   @include apply-utility('font', 'google-sans');
   border-radius: get-size(100);
+  color: var(--button-color, inherit);
   padding: get-size(200) get-size(400);
+  white-space: nowrap;
 }
 
 // Note: Because text buttons define their own left and top margin, they should

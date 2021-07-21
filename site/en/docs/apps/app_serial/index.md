@@ -6,23 +6,23 @@ updated: 2014-09-10
 description: How to communicate with serial devices from your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 This document describes how to use the [serial API][3] to read and write from serial devices. Chrome
 Apps can also connect to [USB][4] and [Bluetooth][5] devices.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Samples:** For examples that illustrate how Chrome Apps can connect to hardware devices through a
 serial port, see the [adkjs][6], [ledtoggle][7] and the [servo][8] samples.
 
-!!!
+{% endAside %}
 
 ## Manifest requirement {: #requirement }
 
@@ -156,7 +156,7 @@ it can receive data even when your app is not running, or you can update connect
 the fly, like bitrate, timeouts, control signals, and many others with the [serial.update][16]
 method. See the full reference of the [serial][17] API for more information.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: serial
 [4]: app_usb

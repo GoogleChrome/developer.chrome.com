@@ -16,7 +16,7 @@ tags:
   - chrome-72
 ---
 
-{% youtube id='coh1k7TY1P0' %}
+{% YouTube id='coh1k7TY1P0' %}
 
 In Chrome 72, we've added support for:
 
@@ -90,7 +90,7 @@ That's why some APIs require activation via a user gesture before they'll work.
 Unfortunately, browsers handle activation in different ways.
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/nxkCXLWEz4O6H8mXdanT.png", alt="" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/nxkCXLWEz4O6H8mXdanT.png", alt="", height="603", width="800" %}
   <figcaption>
     User activation API before and after user has interacted with the page.
   </figcaption>

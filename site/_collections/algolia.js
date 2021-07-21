@@ -17,7 +17,7 @@
 const removeMarkdown = require('remove-markdown');
 const {createHash} = require('crypto');
 
-const {generateSrc} = require('../_shortcodes/img');
+const {generateImgixSrc} = require('../_shortcodes/Img');
 const {drafts} = require('../_utils/drafts');
 const {stripDefaultLocale} = require('../_filters/urls');
 
@@ -69,7 +69,8 @@ module.exports = collections => {
       tags: item.data.tags || [],
       locale: item.data.locale,
       image:
-        item.data.hero && generateSrc(item.data.hero, {w: 100, auto: 'format'}),
+        item.data.hero &&
+        generateImgixSrc(item.data.hero, {w: 100, auto: 'format'}),
       objectID: createHash('md5').update(item.url).digest('hex'),
     };
 

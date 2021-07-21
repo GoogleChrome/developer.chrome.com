@@ -6,13 +6,13 @@ title: "externally_connectable"
 #description: TODO
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 The `externally_connectable` manifest property declares which extensions, apps, and web pages can
 connect to your app via [runtime.connect][3] and [runtime.sendMessage][4].
@@ -87,7 +87,7 @@ The externally_connectable manifest key can have the following properties:
   [runtime.MessageSender.tlsChannelId][12] if those methods request it to be. If `false`,
   [runtime.MessageSender.tlsChannelId][13] will never be set under any circumstance.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: ../runtime#method-connect
 [4]: ../runtime#method-sendMessage

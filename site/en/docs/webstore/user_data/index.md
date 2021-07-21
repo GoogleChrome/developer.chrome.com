@@ -334,7 +334,7 @@ information about their data collection and data usage in a simple and standardi
 Every item will need to provide these data collection disclosures and limited use certification in
 order to be updated or published.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/0XaRnPCCq1fB8eLzwu8w.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/0XaRnPCCq1fB8eLzwu8w.png",
        alt="Screenshot of the data collection privacy field set", height="599", width="800" %}
 
 ### 2\. What happens if I don't fill out the limited use form?

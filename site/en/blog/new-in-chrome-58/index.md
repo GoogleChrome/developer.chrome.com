@@ -17,7 +17,7 @@ tags:
   - chrome-58
 ---
 
-{% youtube id='y5-hH8DnqMk' %}
+{% YouTube id='y5-hH8DnqMk' %}
 
 * The [IndexedDB 2.0](#idb2) standard is now fully supported in Chrome, and
   features new schema management, bulk action methods, and more
@@ -65,7 +65,7 @@ Now you can make your Progressive Web App feel fully immersive by setting
 [web app manifest](https://developers.google.com/web/fundamentals/web-app-manifest).
 
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/uaDm5T4ifsA6lQJohjmg.png", alt="" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/uaDm5T4ifsA6lQJohjmg.png", alt="", height="450", width="800" %}
   <figcaption>
     A PWA launched from the home screen (left), launched from the home screen
     in <code>standalone</code> mode (middle), and launched from the home screen in

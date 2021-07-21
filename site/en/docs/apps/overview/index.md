@@ -6,18 +6,18 @@ updated: 2018-04-26
 description: An overview of Chrome Apps and why you might want to build them.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Chrome Apps let you use HTML5, CSS, and JavaScript to deliver an experience comparable to a native
 application.
 
-{% youtube id="lBUGTVIJVfM" %}
+{% YouTube id="lBUGTVIJVfM" %}
 
 ## Why build a Chrome App? {: #why-build }
 
@@ -89,9 +89,9 @@ Chromebooks.
 
 Use the full featured IDE in the [Chrome Dev Editor][8].
 
-{% youtube id="NNLnTz6yIc4" %}
+{% YouTube id="NNLnTz6yIc4" %}
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: apps/chrome_apps_on_mobile
 [4]: https://chrome.google.com/webstore/category/apps?_feature=chromeapp

@@ -42,9 +42,14 @@ Content scripts are unable to access other APIs directly.
 Content scripts live in an isolated world, allowing a content script to make changes to its
 JavaScript environment without conflicting with the page or other extensions' content Scripts.
 
-!!!.aside
-An *isolated world* is a private execution environment that isn't accessible from other extensions. A practical consequence of this isolation is that variables declared by one extension are not visible to another one. The concept was originally introduced with the initial launch of Chrome, providing isolation for browser tabs. 
-!!!
+{% Aside %}
+
+An *isolated world* is a private execution environment that isn't accessible to the page or other
+extensions. A practical consequence of this isolation is that JavaScript variables in an extension's
+content scripts are not visible to the host page or other extension content scripts. The concept was
+originally introduced with the initial launch of Chrome, providing isolation for browser tabs.
+
+{% endAside %}
 
 An extension may run in a web page with code similar to the example below.
 
@@ -76,19 +81,19 @@ button.addEventListener("click", () =>
 
 With this change, both alerts appear in sequence when the button is clicked.
 
-!!!.aside
+{% Aside %}
 Not only does each extension run in its own isolated world, but content scripts
 and the web page do too. This means that none of these (web page, content
 scripts, and any running extensions) can access the context and variables of
 the others.
-!!!
+{% endAside %}
 
 {# youtube id="laLudeUmXHM" #}
 
 ## Inject scripts {: #functionality }
 
-Content Scripts can be injected [declared statically][14], [declared dynamically][32], or
-[programmatically injected][13].
+Content Scripts can be injected [declared statically][14]{% if false %}, [declared dynamically][32],
+{% endif %} or [programmatically injected][13].
 
 ### Inject with static declarations {: #static-declarative }
 
@@ -130,14 +135,14 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
         URLs.</td>
     </tr>
     <tr id="css">
-      <td><code>css<code></code></code></td>
+      <td><code>css</code></td>
       <td>array of strings</td>
       <td><em>Optional.</em> The list of CSS files to be injected into matching pages. These are
         injected in the order they appear in this array, before any DOM is constructed or displayed
         for the page.</td>
     </tr>
     <tr id="js">
-      <td><code>js<code></code></code></td>
+      <td><code>js</code></td>
       <td>
         <nobr>array of strings</nobr>
       </td>
@@ -154,18 +159,21 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
   </tbody>
 </table>
 
+{% if false %}
 ### Inject with dynamic declarations {: #dynamic-declarative }
 
-!!!.aside.aside--caution
-This feature is not yet fully supported. It is currently in dev and is also available in Chrome Canary.
-!!!
+{% Aside 'caution' %}
+
+This feature is not yet fully supported. It is currently in dev and is also available in Chrome
+Canary.
+
+{% endAside %}
 
 You should use dynamic declarations in the following cases:
 
 - When the host is not well known
 - The script may need to be added/removed from a known host
 
-{% if false %}
 **TODO**
 
 - Uses the JS scripting API
@@ -177,18 +185,15 @@ You should use dynamic declarations in the following cases:
 See the [api
 proposal](https://docs.google.com/document/d/1p2jnIL3znAhD2VVuEbzOetgj1Qeya9yATa3B9gBGGUg/edit) for
 additional details.
-{% endif %}
-
 
 ```js
 chrome.scripting.registerContentScript(optionsObject, callback);
 ```
 
-
 ```js
 chrome.scripting.unregisterContentScript(idArray, callback);
 ```
-
+{% endif %}
 
 ### Inject programmatically {: #programmatic }
 
@@ -200,47 +205,61 @@ the page it's trying to inject scripts into. Host permissions can either be gran
 requesting them as part of your extension's manifest (see [`host_permissions`][33]) or temporarily
 via [activeTab][15].
 
-Below we'll look at an example that uses activeTab.
+Below we'll look at a couple different versions of an activeTab-based extension.
 
-```json/3-5
+```json/4-6
+//// manifest.json ////
 {
   "name": "My extension",
   ...
   "permissions": [
     "activeTab"
   ],
-  ...
+  "background": {
+    "service_worker": "background.js"
+  }
 }
 ```
 
-Content scripts can be injected as files.
+Content scripts can be injected as files…
 
 ```js
-chrome.runtime.onMessage.addListener((message, callback) => {
-  if (message == "runContentScript"){
-    chrome.scripting.executeScript({
-      file: 'contentScript.js'
-    });
-  }
+//// content-script.js ////
+document.body.style.backgroundColor = 'orange';
+```
+
+```js
+//// background.js ////
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    files: ['content-script.js']
+  });
 });
 ```
 
-Or an entire file can be injected.
+…or a function body can be injected and executed as a content script.
 
 ```js
+//// background.js ////
 function injectedFunction() {
   document.body.style.backgroundColor = 'orange';
 }
 
-chrome.runtime.onMessage.addListener((message, callback) => {
-  if (message == "changeColor"){
-    chrome.scripting.executeScript({
-      function: injectedFunction
-    });
-  }
+chrome.action.onClicked.addListener((message, callback) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: injectedFunction
+  });
 });
 ```
 
+Be aware that the injected function is a copy of the function referenced in the
+`chrome.scripting.executeScript` call, not the original function itself. As a result, the function's
+body must be self contained; references to variables outside of the function will cause the content
+script to throw a [`ReferenceError`][ref-error].
+
+{% if false %}
 When injecting as a function, you can also pass arguments to the function.
 
 ```js
@@ -248,18 +267,17 @@ function injectedFunction(color) {
   document.body.style.backgroundColor = color;
 }
 
-chrome.runtime.onMessage.addListener((message, callback) => {
-  if (message == "changeColor"){
-    chrome.scripting.executeScript({
-      function: injectedFunction,
-      arguments: ['orange']
-    });
-  }
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    function: injectedFunction,
+    arguments: ['orange']
+  });
 });
 ```
+{% endif %}
 
-
-#### Exclude matches and globs {: #matchAndGlob }
+### Exclude matches and globs {: #matchAndGlob }
 
 Specified page matching is customizable by including the following fields in a declarative
 registration.
@@ -428,7 +446,7 @@ chrome.scripting.registerContentScript({
 });
 ```
 
-#### Run time {: #run_time }
+### Run time {: #run_time }
 
 The `run_at` field controls when JavaScript files are injected into the web page. The
 preferred and default value is `"document_idle"`, but you can also specify `"document_start"` or
@@ -494,7 +512,7 @@ chrome.scripting.registerContentScript({
   </tbody>
 </table>
 
-#### Specify frames {: #frames }
+### Specify frames {: #frames }
 
 The `"all_frames"` field allows the extension to specify if JavaScript and CSS files should be
 injected into all frames matching the specified URL requirements or only into the topmost frame in a
@@ -650,3 +668,5 @@ window.setTimeout(() => animate(elmt_id), 200);
 [31]: #functionality
 [32]: #dynamic-declarative
 [33]: /docs/extensions/reference/permissions
+
+[ref-error]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError

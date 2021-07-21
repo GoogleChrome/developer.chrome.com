@@ -1,4 +1,5 @@
 - url: /docs/extensions/mv3
+- url: /docs/extensions/whatsnew
 - url: /docs/extensions/mv3/getstarted
 - title: i18n.docs.extensions.mv3
   sections:
@@ -32,6 +33,7 @@
     - url: /docs/extensions/mv3/content_scripts
     - url: /docs/extensions/mv3/background_pages
     - url: /docs/extensions/mv3/match_patterns
+    - url: /docs/extensions/mv3/promises
 - title: i18n.docs.extensions.indepth-security
   sections:
     - url: /docs/extensions/mv3/xhr

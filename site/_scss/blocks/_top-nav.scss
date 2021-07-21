@@ -1,4 +1,3 @@
-/* purgecss start ignore */
 top-nav {
   padding: map-get($top-nav-padding, 'sm');
 
@@ -15,6 +14,20 @@ top-nav {
       gap: get-size(800);
       grid-template-columns: 1fr 2fr 1fr;
     }
+  }
+
+  .top-nav__text {
+    display: inline-flex;
+    margin-left: 12px;
+    overflow: hidden;
+
+    // stylelint-disable max-nesting-depth
+    @include media-query('md-max') {
+      > svg {
+        margin-left: -82px;
+      }
+    }
+    // stylelint-enable max-nesting-depth
   }
 }
 
@@ -62,4 +75,3 @@ top-nav[data-search-active] {
     top: 0;
   }
 }
-/* purgecss end ignore */

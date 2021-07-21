@@ -16,7 +16,7 @@ tags:
   - chrome-62
 ---
 
-{% youtube id='jO8iVc4hEe8' %}
+{% YouTube id='jO8iVc4hEe8' %}
 
 * Chrome 62 makes the [network information API](#network-info) more useful
   by providing actual performance metrics instead of theoretical results.
@@ -67,7 +67,7 @@ and have a look at the [spec](https://wicg.github.io/netinfo) for a deeper dive.
 ## OpenType Variable Fonts {: #otvf }
 
 {# TODO(petele): video element, float-right, auto-play #}
-{% video src=[
+{% Video src=[
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/HQaiwi6EyEAvwCULkAxm.webm",
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/efTOGsBPgoU5eFfBGn2h.mp4"
   ]
@@ -105,7 +105,7 @@ by John Hudson for more details.
 ## Media capture from DOM elements {: #media-capture }
 
 {# TODO(petele): video element, float-right, auto-play #}
-{% video src=[
+{% Video src=[
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/xuyWY1N88dHHn5FTwJc0.webm",
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/oiR3xllAFPmMCpqX5EKP.mp4"
 ] %}

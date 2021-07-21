@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Architecture overview"
 date: 2012-09-18
-updated: 2018-06-07
+updated: 2021-05-12
 description: A high-level explanation of the software architecture of Chrome Extensions.
 ---
 
@@ -27,20 +27,21 @@ as the most important files and the capabilities the extension might use.
 ```json
 {
   "name": "My Extension",
+  "description": "A nice little demo extension.",
   "version": "2.1",
-  "description": "Gets information from Google.",
+  "manifest_version": 3,
   "icons": {
-    "128": "icon_16.png",
-    "128": "icon_32.png",
-    "128": "icon_48.png",
+    "16": "icon_16.png",
+    "32": "icon_32.png",
+    "48": "icon_48.png",
     "128": "icon_128.png"
   },
   "background": {
-    "persistent": false,
-    "scripts": ["background_script.js"]
+    "service_worker": "background.js"
   },
-  "permissions": ["https://*.google.com/", "activeTab"],
-  "browser_action": {
+  "permissions": ["activeTab"],
+  "host_permissions": ["*://*.example.com/*"],
+  "action": {
     "default_icon": "icon_16.png",
     "default_popup": "popup.html"
   }
@@ -51,16 +52,14 @@ Extensions must have an icon that sits in the browser toolbar. Toolbar icons all
 keep users aware of which extensions are installed. Most users will interact with an extension that
 uses a [popup][2] by clicking on the icon.
 
-This <a href="/extensions/samples#search:google%20mail%20checker">Google Mail Checker extension</a>
-uses a [browser action][4]:
+This Manifest V2 [Google Mail Checker extension][sample-gmail] uses a [browser action][4]:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mG1Uyd3uzcP7sSyKXWkh.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mG1Uyd3uzcP7sSyKXWkh.png",
        alt="A screenshot of the Google Mail Checker extension", height="79", width="90" %}
 
-This <a href="/extensions/samples#search:mappy">Mappy extension</a> uses a
-[page action][6] and [content script][7]:
+This Manifest V2 [Mappy extension][sample-mappy] uses a [page action][6] and [content script][7]:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LrHTrkZVBN96DqNQjtyF.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LrHTrkZVBN96DqNQjtyF.png",
        alt="A screenshot of the Mappy extension", height="103", width="90" %}
 
 ### Referring to files {: #relative-urls }
@@ -75,12 +74,12 @@ page.
 Additionally, each file can also be accessed using an absolute URL.
 
 ```text
-chrome-extension://<extensionID>/<pathToFile>
+chrome-extension://&lt;extensionID>/<pathToFile>
 ```
 
-In the absolute URL, the _<extensionID>_ is a unique identifier that the extension system generates
-for each extension. The IDs for all loaded extensions can be viewed by going to the URL
-**chrome://extensions**. The _<pathToFile>_ is the location of the file under the extension's top
+In the absolute URL, the _&lt;extensionID>_ is a unique identifier that the extension system
+generates for each extension. The IDs for all loaded extensions can be viewed by going to the URL
+**chrome://extensions**. The _&lt;pathToFile>_ is the location of the file under the extension's top
 folder; it matches the relative URL.
 
 While working on an unpacked extension the extension ID can change. Specifically, the ID of an
@@ -121,7 +120,7 @@ An extension using a page action and a popup can use the [declarative content][2
 in the background script for when the popup is available to users. When the conditions are met, the
 background script communicates with the popup to make it's icon clickable to users.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8oLwFaq0VFIQtw4mcA91.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/8oLwFaq0VFIQtw4mcA91.png",
        alt="A browser window containing a page action displaying a popup", height="316", width="325" %}
 
 ### Content scripts {: #contentScripts }
@@ -130,13 +129,13 @@ Extensions that read or write to web pages utilize a [content script][24]. The c
 contains JavaScript that executes in the contexts of a page that has been loaded into the browser.
 Content scripts read and modify the DOM of web pages the browser visits.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CNDAVsTnJeSskIXVnSQV.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CNDAVsTnJeSskIXVnSQV.png",
        alt="A browser window with a page action and a content script", height="316", width="388" %}
 
 Content scripts can communicate with their parent extension by exchanging [messages][25] and storing
 values using the [storage][26] API.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/466ftDp0EXB4E1XeaGh0.png",
        alt="Shows a communication path between the content script and the parent extension", height="316", width="388" %}
 
 ### Options page {: #optionsPage }
@@ -295,3 +294,6 @@ following resources.
 [40]: /docs/extensions/mv3/tut_debugging
 [41]: /docs/extensions/reference
 [42]: /docs/extensions/mv3/devguide
+
+[sample-gmail]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/extensions/gmail
+[sample-mappy]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/extensions/mappy

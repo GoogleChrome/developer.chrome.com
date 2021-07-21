@@ -6,13 +6,13 @@ title: "Manifest - Name and Short Name"
 #description: TODO
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 The `name` and `short_name` manifest properties are short, plain text strings that identify the app.
 You can specify locale-specific strings for both fields; see [Internationalization][3] for details.
@@ -36,7 +36,7 @@ as:
 - App launcher
 - New Tab page
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: /extensions/i18n
 [4]: https://chrome.google.com/webstore

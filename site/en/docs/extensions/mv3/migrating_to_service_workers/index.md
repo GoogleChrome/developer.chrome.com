@@ -13,13 +13,13 @@ introduction. To put it simply, background pages provide extension authors with 
 lives independent of any other window or tab. This allows extensions to observe and take action in
 response to events.
 
-In Manifest V3, the Chrome extension platform moves from background pages to *service
-workers*. As stated in [Service Workers: an Introduction][2], a "service worker is a script that your
-browser runs in the background, separate from a web page, opening the door to features that don't
-need a web page or user interaction." This is the technology that enables native-like experiences
-such as push notifications, rich offline support, background sync, and "Add to Home Screen" on the
-open web. Service workers were inspired in part by background pages in Chrome Extensions, but they
-iterate and improve on this model by tuning it for web-scale.
+In Manifest V3, the Chrome extension platform moves from background pages to *service workers*. As
+stated in [Service Workers: an Introduction][2], a "service worker is a script that your browser
+runs in the background, separate from a web page, opening the door to features that don't need a web
+page or user interaction." This is the technology that enables native-like experiences such as push
+notifications, rich offline support, background sync, and "Add to Home Screen" on the open web.
+Service workers were inspired in part by background pages in Chrome Extensions, but they iterate and
+improve on this model by tuning it for web-scale.
 
 When migrating to this new background context, you'll need to keep two main things in mind. First,
 service workers are terminated when not in use and restarted when needed (similar to event pages).
@@ -33,11 +33,11 @@ Like event pages, service workers are a special execution environment that are s
 events they're interested in and are terminated when they're no longer needed. The following
 sections provide recommendations for writing code in an ephemeral, evented execution context.
 
-!!!.aside.aside--note
+{% Aside %}
 
 Several of these concepts are covered in [Migrate to Event Driven Background Scripts][eventbgscripts].
 
-!!!
+{% endAside %}
 
 ## Top-level event listeners {: #event_listeners }
 
@@ -49,37 +49,39 @@ The below snippet shows how an existing extension initializes its browser action
 persistent background page.
 
 ```js
-chrome.storage.local.get(['badgeText'], ({badgeText}) => {
-  chrome.browserAction.setBadgeText({text: badgeText});
+//// background.js
+chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
+  chrome.action.setBadgeText({ text: badgeText });
 
-  // Listener is registered asynchronously.
-  chrome.browserAction.onClicked.addListener(handleActionClick);
+  // Listener is registered asynchronously
+  chrome.action.onClicked.addListener(handleActionClick);
 });
 ```
 
 While this approach works in a persistent background page, it is not guaranteed to work in a service
-worker due to the asynchronous nature of chrome.storage APIs. When a service worker is terminated,
-so are the event listeners associated with it. And since events are dispatched when a service worker
-starts, asynchronously registering events results in them being dropped because there's no listener
-registered when it is first spun up.
+worker due to the asynchronous nature of the [Storage APIs][storage]. When a service worker is
+terminated, so are the event listeners associated with it. And since events are dispatched when a
+service worker starts, asynchronously registering events results in them being dropped because
+there's no listener registered when it is first spun up.
 
 To address this, move the event listener registration to the top level of your script. This ensures
 that Chrome will be able to immediately find and invoke your action's click handler, even if your
 extension hasn't finished executing its async startup logic.
 
 ```js
-chrome.storage.local.get(['badgeText'], ({badgeText}) => {
-  chrome.action.setBadgeText({text: badgeText});
+//// background.js
+chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
+  chrome.action.setBadgeText({ text: badgeText });
 });
 
-// Listener is registered on on startup.
+// Listener is registered on startup
 chrome.action.onClicked.addListener(handleActionClick);
 ```
 
-!!!.aside
+{% Aside %}
 In Manifest V3 the `chrome.browserAction` and `chrome.pageAction` APIs are consolidated
 into a single chrome.action API.
-!!!
+{% endAside %}
 
 ### Persisting state with storage APIs {: #state }
 
@@ -89,20 +91,21 @@ some work, and get terminated repeatedly throughout a user's browser session. Th
 to extension developers accustomed to long-lived background pages as application data is not
 immediately available in global variables.
 
-This example is taken from a simple manifest version 2 extension that receives a name from a content
-script and persists it in a global variable for later use.
+This example is taken from a simple manifest version 2 extension that receives a name value from a
+content script and persists it in a global variable for later use.
 
 ```js
+//// background.js
 let name = undefined;
 
-chrome.runtime.onMessage.addListener(({type, name}) => {
-  if (msg.type === 'set-name') {
-    name = msg.name;
+chrome.runtime.onMessage.addListener(({ type, name }) => {
+  if (type === "set-name") {
+    name = name;
   }
 });
 
-chrome.browserAction.onClicked.addListener(tab => {
-  chrome.tabs.sendMessage(tab.id, {name});
+chrome.browserAction.onClicked.addListener((tab) => {
+  chrome.tabs.sendMessage(tab.id, { name });
 });
 ```
 
@@ -110,51 +113,54 @@ If we port this code directly to a service worker, it's possible that the servic
 terminated between when the name is set and the user clicks the browser action. If this happens, the
 set name will have been lost and name variable will again be undefined.
 
-We can fix this bug by treating the storage APIs as our source of truth.
+We can fix this bug by treating the [Storage APIs][storage] as our source of truth.
 
 ```js
-chrome.runtime.onMessage.addListener(({type, name}) => {
-  if (type === 'set-name') {
-    chrome.storage.local.set({name});
+//// background.js
+chrome.runtime.onMessage.addListener(({ type, name }) => {
+  if (type === "set-name") {
+    chrome.storage.local.set({ name });
   }
 });
 
-chrome.action.onClicked.addListener(tab => {
-  chrome.storage.local.get(['name'], ({name}) => {
-    chrome.tabs.sendMessage(tab.id, {name});
+chrome.action.onClicked.addListener((tab) => {
+  chrome.storage.local.get(["name"], ({ name }) => {
+    chrome.tabs.sendMessage(tab.id, { name });
   });
 });
 ```
 
-!!!.aside
+{% Aside %}
 In Manifest V3 the chrome.browserAction and chrome.pageAction APIs are consolidated
 into a single chrome.action API.
-!!!
+{% endAside %}
 
 ### Moving from timers to alarms {: #alarms }
 
 It's common for web developers to perform delayed or periodic operations using the `setTimeout` or
-`setInterval` methods. These APIs fail in service workers though, because the scheduler will cancel
-the timers when the service worker is terminated.
+`setInterval` methods. These APIs can fail in service workers, though, because the scheduler will
+cancel the timers when the service worker is terminated.
 
 ```js
-const TIMEOUT = 3 * 60 * 1000;  // 3 minutes in milliseconds
-window.setTimeout(function() {
+//// background.js
+const TIMEOUT = 3 * 60 * 1000; // 3 minutes in milliseconds
+window.setTimeout(() => {
   chrome.action.setIcon({
-    path: getRandomIconPath()
+    path: getRandomIconPath(),
   });
 }, TIMEOUT);
 ```
 
-Instead, we can use the alarms API. Like other listeners, alarm listeners should be registered in
-the top level of your script.
+Instead, we can use the [Alarms API][alarms]. Like other listeners, alarm listeners should be
+registered in the top level of your script.
 
 ```js
-chrome.alarms.create({delayInMinutes: 3.0});
+//// background.js
+chrome.alarms.create({ delayInMinutes: 3 });
 
-chrome.alarms.onAlarm.addListener(function() {
+chrome.alarms.onAlarm.addListener(() => {
   chrome.action.setIcon({
-    path: getRandomIconPath()
+    path: getRandomIconPath(),
   });
 });
 ```
@@ -190,9 +196,9 @@ still provides a full (temporary) window environment.
 ### Audio/video playback and capture {: #audio_vidio }
 
 It's not currently possible to play or capture media directly in a service worker. In order for a
-Manifest V3 extension to leverage the web's media playback and capture capabilities, the
-extension will need to create a window environment using either [chrome.windows.create()][14] or
-[chrome.tabs.create()][15]. Once created, the extension can use [message passing][16] to coordinate
+Manifest V3 extension to leverage the web's media playback and capture capabilities, the extension
+will need to create a window environment using either [chrome.windows.create()][12] or
+[chrome.tabs.create()][13]. Once created, the extension can use [message passing][16] to coordinate
 between the playback document and service worker.
 
 ### Rendering to a canvas {: #canvas }
@@ -202,8 +208,9 @@ create and cache assets. While service workers don't have access to DOM and ther
 `<canvas>` elements, service workers do have access to the [OffscreenCanvas API][17].
 
 ```js
-function makeCanvas(width, height) {
-  const canvas = document.createElement('canvas');
+//// background.js
+function buildCanvas(width, height) {
+  const canvas = document.createElement("canvas");
   canvas.width = width;
   canvas.height = height;
   return canvas;
@@ -211,11 +218,12 @@ function makeCanvas(width, height) {
 ```
 
 In the above block we're constructing a canvas element and painting the entire canvas turquoise. To
-migrate to offscreen canvas, replace `document.createElement('canvas')` with
-`new OffscreenCanvas(width, height)`.
+migrate to offscreen canvas, replace `document.createElement('canvas')` with `new
+OffscreenCanvas(width, height)`.
 
 ```js
-function makeCanvas(width, height) {
+//// background.js
+function buildCanvas(width, height) {
   const canvas = new OffscreenCanvas(width, height);
   return canvas;
 }
@@ -236,9 +244,10 @@ Operations with a Web Worker][18].
 [11]: https://github.com/developit/undom
 [12]: /docs/extensions/reference/windows#method-create
 [13]: /docs/extensions/reference/tabs#method-create
-[14]: /docs/extensions/reference/windows#method-create
-[15]: /docs/extensions/reference/tabs#method-create
 [16]: /docs/extensions/mv3/messaging
 [17]: https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface
 [18]: https://developers.google.com/web/updates/2018/08/offscreen-canvas
+[action]: /docs/extensions/reference/action/
+[alarms]: /docs/extensions/reference/alarms/
 [eventbgscripts]: /docs/extensions/mv3/background_migration/
+[storage]: /docs/extensions/reference/storage/

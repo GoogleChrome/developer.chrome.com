@@ -25,6 +25,7 @@
   height: 128px;
   justify-content: center;
   position: relative;
+  transform-style: preserve-3d;  // only needed for Firefox
   width: 128px;
 
   &::before,

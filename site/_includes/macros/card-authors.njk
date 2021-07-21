@@ -8,8 +8,8 @@
   {% if authors.length < 3 %}
     {% for item in authors %}
       {% set author = authorsData[item] %}
-      {% img
-        className="card-authors__image rounded-full flex-shrink-none width-600 height-600 object-fit-cover",
+      {% Img
+        class="card-authors__image rounded-full flex-shrink-none width-600 height-600 object-fit-cover",
         src=author.image,
         alt=author.name.given + author.name.family,
         width="40",

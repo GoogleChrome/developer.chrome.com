@@ -6,13 +6,13 @@ updated: 2015-09-25
 description: How to build Chrome Apps that work offline.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Because internet connections can be flakey or non-existent, you need to consider _offline first_:
 write your app as if it has no internet connection. Once your app works offline, add whatever
@@ -64,11 +64,11 @@ Chrome Apps are limited in where they can place their resources:
   data with a blob URL or (better yet) save and then load the data using the [Filesystem
   API][7].
   
-  !!!.aside.aside--note
+  {% Aside %}
 
   **Note:** Styles can be inline or in separate `.css` files.
 
-  !!!
+  {% endAside %}
 
 You can, however, load large media resources such as videos and sounds from external sites. One
 reason for this exception to the rule is that the `<video>` and `<audio>` elements have good fallback
@@ -112,13 +112,13 @@ The following table shows your options for saving data locally (see also [Manage
 
 <table class="simple"><tbody><tr><th>API</th><th>Best use</th><th>Notes</th></tr><tr><td>Chrome Storage API</td><td>Small amounts of string data</td><td>Great for settings and state. Easy to sync remotely (but you don't have to). Not good for larger amounts of data, due to quotas.</td></tr><tr><td>IndexedDB API</td><td>Structured data</td><td>Enables fast searches on data. Use with the <a href="declare_permissions">unlimitedStorage permission</a>.</td></tr><tr><td>Filesystem API</td><td>Anything else</td><td>Provides a sandboxed area where you can store files. Use with the <a href="declare_permissions">unlimitedStorage permission</a>.</td></tr></tbody></table>
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Packaged apps cannot use Web SQL Database or localStorage. The WebSQL specification has
 been deprecated for awhile now, and localStorage handles data synchronously (which means it can be
 slow). The Storage API handles data asynchronously.
 
-!!!
+{% endAside %}
 
 ## Saving data remotely {: #saving-remotely }
 
@@ -159,7 +159,7 @@ Make sure your app works well under the following circumstances:
 Also make sure that the app saves **no sensitive user data** (such as passwords) on the user's
 machine.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: storage
 [4]: https://developer.mozilla.org/en/Online_and_offline_events

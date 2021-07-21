@@ -16,7 +16,7 @@ tags:
   - chrome-55
 ---
 
-{% youtube id="OC7tgJP1D4s" %}
+{% YouTube id="OC7tgJP1D4s" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=OC7tgJP1D4s)
 

@@ -13,67 +13,17 @@
 {# Update "content" with additional headings and so forth, so we can pass it
    through the toc filter. #}
 {% set content %}
-  {% if namespace.source === 'platform_app.d.ts' %}
-    <div class="aside aside--warning">
-      This API is part of the deprecated Chrome Apps platform.
-      Learn more about <a href="/docs/apps/migration">migrating your app</a>.
-    </div>
-  {% endif %}
-
-  {% if namespace.platforms.length === 1 and namespace.platforms[0] === 'chromeos' %}
-    {# There are some historic cases of multi-platform support in Platform Apps, but
-        the only restriction these days is CrOS vs everywhere. #}
-    <div class="aside aside--note">
-      <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
-    </div>
-  {% endif %}
-
-  <div class="code-sections code-sections--summary">
-    <ul class="stack flow-space-300">
-      <li>
-        <div class="code-sections__label">Description</div>
-        <div class="type">
-          {{ namespace.comment | safe }}
-        </div>
-      </li>
-      {% if namespace.permissions.length %}
-        <li>
-          <div class="code-sections__label">Permissions</div>
-          <div>
-            {% for permission in namespace.permissions %}
-              <code>{{ permission }}</code>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-          </div>
-        </li>
-      {% endif %}
-      {% if namespace.channel !== 'stable' %}
-        <li>
-          <div class="code-sections__label">Availability</div>
-          <div>
-            {% if namespace.channel === 'dev' %}
-              Dev channel only.
-            {% else %}
-              Beta and Dev channels only.
-            {% endif %}
-          </div>
-        </li>
-      {% endif %}
-    </ul>
-  </div>
-
   <div class="type stack">
     {{ content | safe }}
   </div>
 
   <h2 class="type--h3">Summary</h2>
-  <div class="code-sections code-sections--summary">
-    <ul class="stack flow-space-300">
-      {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
-      {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
-      {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
-      {{ macros.renderSummarySection(namespace.name, 'Events', 'event', namespace.events) }}
-    </ul>
-  </div>
+  <ul class="code-sections code-sections--summary flow-space-300 stack">
+    {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
+    {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
+    {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
+    {{ macros.renderSummarySection(namespace.name, 'Events', 'event', namespace.events) }}
+  </ul>
 
   {{ macros.renderPrimarySection(namespace.name, 'types', 'Types', 'type', namespace.types) }}
   {{ macros.renderPrimarySection(namespace.name, 'properties', 'Properties', 'property', namespace.properties) }}
@@ -88,11 +38,60 @@
 {% block content %}
   <div class="display-flex gap-top-300 lg:gap-top-400">
     {% include 'partials/navigation-tree.njk' %}
+    {% set feature = namespace.feature %}
 
     <article class="stack measure-long center-margin pad-left-400 pad-right-400">
       <h1 class="type--h2">{{ title }}</h1>
 
+      {% if feature.platformAppsOnly %}
+        <div class="aside aside--warning">
+          This API is part of the deprecated Chrome Apps platform.
+          Learn more about <a href="/docs/apps/migration">migrating your app</a>.
+        </div>
+      {% endif %}
+
+      {% if feature.chromeOsOnly %}
+        {# There are some historic cases of multi-platform support in Platform Apps, but
+            the only restriction these days is CrOS vs everywhere. #}
+        <div class="aside aside--note">
+          <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
+        </div>
+      {% endif %}
+
+      {% set availabilityHtml %}{{ macros.renderAvailabilityFeature(feature) }}{% endset %}
+
+      <div>{# This div prevents flow-space-300 from applying to the parent stack. #}
+        <ul class="code-sections code-sections--summary flow-space-300 stack">
+          <li>
+            <div class="code-sections__label">Description</div>
+            <div class="type">
+              {{ namespace.description | md | safe }}
+            </div>
+          </li>
+          {% if feature.permissions.length %}
+            <li>
+              <div class="code-sections__label">Permissions</div>
+              <div>
+                {% for permission in feature.permissions %}
+                  <code>{{ permission }}</code><br />
+                {% endfor %}
+                {{ extra_permissions_html | safe }}
+              </div>
+            </li>
+          {% endif %}
+
+          {% if availabilityHtml | trim %}
+            <li class="align-center">
+              <div class="code-sections__label">Availability</div>
+              {{ availabilityHtml | safe }}
+              {# As of Apr 2021, namespaces are never deprecated. #}
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+
       {% include 'partials/toc-inner.njk' %}
+
       {{ content | safe }}
     </article>
 

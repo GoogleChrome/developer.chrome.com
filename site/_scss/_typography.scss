@@ -59,7 +59,7 @@
   &--h3-card {
     @extend %type--h3-card;
   }
-  
+
   // See _type.scss for explanation of this exception.
   &--h5-card {
     @extend %type--h5-card;
@@ -121,6 +121,21 @@
   pre,
   code {
     @extend %type--code;
+  }
+
+  // Both pre and code have their font-size set in ems, this is because we want
+  // their size to be relative in case someone uses them inside of an h1-h6.
+  // But for fenced code blocks, markdown will render a code element inside of
+  // a pre. This causes the code element's font-size to be too small because
+  // we have an em inside of an em. So in this scenario we tell the code element
+  // to just inherit the font-size from its parent pre.
+  pre code {
+    font-size: inherit;
+  }
+
+  figcaption {
+    @extend %type--caption;
+    text-align: center;
   }
 
   &--full-bleed {

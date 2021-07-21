@@ -37,15 +37,15 @@ have been defined in the _data/docs/*.yml file for this project.
       {% set postDescription = '' %}
       {% set postUrl = '' %}
 
-      {#
-        Check to see if the item is a regular post on the site or an external
-        link. External links will display a special icon and open in a new
-        window.
-      #}
-      {% set isExternal = helpers.isExternalLink(item.url) %}
-      {% if isExternal %}
+      {% if item.title %}
         {% set postTitle = item.title | i18n(locale) %}
-        {% set postDescription = item.description | i18n(locale) %}
+        {#
+          Ideally every page should have a description but the design doesn't
+          break if one is omitted.
+        #}
+        {% if item.description %}
+          {% set postDescription = item.description | i18n(locale) %}
+        {% endif %}
         {% set postUrl = item.url %}
       {% else %}
         {% set post = helpers.findByUrl(collections.all, item.url, locale) %}
@@ -57,13 +57,19 @@ have been defined in the _data/docs/*.yml file for this project.
       {% endif %}
 
       {% if postTitle %}
+        {#
+          Check to see if the item is a regular post on the site or an external
+          link. External links will display a special icon and open in a new
+          window.
+        #}
+        {% set isExternal = helpers.isExternalLink(item.url) %}
         <li>
           <div>
             {% if type === 'column' %}
-              {{ icon('document', 'project-sections__icon') }}
+              <span class="project-sections__icon"></span>
             {% endif %}
             <a
-              class="display-inline-flex align-center color-primary-shade decoration-none surface"
+              class="display-inline-flex align-center color-primary-shade decoration-none surface lg:gap-right-600"
               href="{{ postUrl }}"
               {%- if isExternal -%}
               target="_blank"
@@ -72,7 +78,7 @@ have been defined in the _data/docs/*.yml file for this project.
               >
                 {{ postTitle }}
                 {% if isExternal %}
-                  {{ icon('external-link', 'gap-left-100') }}
+                  {{ icon('external-link', {className: 'gap-left-100'}) }}
                 {% endif %}
             </a>
           </div>

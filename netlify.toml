@@ -2,7 +2,7 @@
 # unless otherwise overridden by more specific contexts.
 [build]
   publish = "dist/"
-  command = "npm run types && npm run production"
+  command = "npm run production"
   # Don't build NaCl docs during Netlify preview builds.
   # These take forever and we don't need them for PR previews.
   environment = { CI = "true", ELEVENTY_IGNORE_NACL = "true" }

@@ -18,7 +18,7 @@ tags:
   - chrome-71
 ---
 
-{% youtube id='SkIgtVvAR6w' %}
+{% YouTube id='SkIgtVvAR6w' %}
 
 In Chrome 71, we've added support for:
 
@@ -45,7 +45,7 @@ additional changes in Chrome 71.
 ## Display relative times with `Intl.RelativeTimeFormat()` {: #relative-times }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/FVgovCvB89Sbz4csuwhM.jpg", alt="" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/FVgovCvB89Sbz4csuwhM.jpg", alt="", height="353", width="591" %}
   <figcaption>
     Twitter showing relative time for latest post
   </figcaption>
@@ -84,7 +84,7 @@ post for full details.
 ## Specifying underline location for vertical text {: #underline }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/jboAMumW8Pu2fdCF3FRk.png", alt="" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/jboAMumW8Pu2fdCF3FRk.png", alt="", height="315", width="268" %}
   <figcaption>
     Vertical text with inconsistent underlines
   </figcaption>
@@ -139,11 +139,11 @@ try {
 }
 ```
 
-!!!.aside
+{% Aside %}
 To make sure your code works, I recommend wrapping your speech
 synthesis call in a `try`/`catch` block, so if the page isn't activated, it
 won't break the rest of your app.
-!!!
+{% endAside %}
 
 There's nothing worse than going to a site and having it surprise you,
 and the co-workers sitting around you.
@@ -173,23 +173,23 @@ see all the talks, check out the
 [Chrome Dev Summit 2018 playlist](https://www.youtube.com/playlist?list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF)
 on our YouTube channel.
 
-{% youtube id="25aCD5XL1Jk"%}
+{% YouTube id="25aCD5XL1Jk"%}
 
 Eva and Phil went into some neat techniques for using service workers in
 [Building Faster, More Resilient Apps with Service Workers](https://www.youtube.com/watch?v=25aCD5XL1Jk&t=0s&index=9&list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF).
 
-{% youtube id="ipNW6lJHVEs"%}
+{% YouTube id="ipNW6lJHVEs"%}
 
 Mariko and Jake talked about how they build [Squoosh](https://squoosh.app/) in
 [Complex JS-heavy Web Apps, Avoiding the Slow](https://www.youtube.com/watch?v=ipNW6lJHVEs&t=104s&index=11&list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF).
 
-{% youtube id="reztLS3vomE"%}
+{% YouTube id="reztLS3vomE"%}
 
 Katie and Houssein covered some great techniques to maximize the performance
 of your site in
 [Speed Essentials: Key Techniques for Fast Websites](https://www.youtube.com/watch?v=reztLS3vomE&t=1s&index=8&list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF).
 
-{% youtube id="CbU9GzgS0HY" %}
+{% YouTube id="CbU9GzgS0HY" %}
 
 Jake **dropped** the cake. And there are plenty of other great videos in the
 [Chrome DevSummit 2018 playlist](https://www.youtube.com/playlist?list=PLNYkxOF6rcIDjlCx1PcphPpmf43aKOAdF),

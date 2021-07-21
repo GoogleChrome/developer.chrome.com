@@ -11,6 +11,15 @@
     margin-top: get-size(300);
   }
 
+  // This duplicates the above ".aside" for users who just want colors.
+  &--default {
+    --link-color: var(--color-blue-darkest);
+    --link-visited-color: var(--color-blue-darkest);
+    --link-rgb-background: var(--rgb-blue-darkest);
+    background-color: var(--color-blue-lightest);
+    color: var(--color-blue-darkest);
+  }
+
   &--caution {
     --link-color: var(--color-yellow-darkest);
     --link-visited-color: var(--color-yellow-darkest);
@@ -43,7 +52,7 @@
     color: var(--color-purple-darkest);
   }
   
-  &--key {
+  &--key-term {
     --link-color: var(--color-pink-darkest);
     --link-visited-color: var(--color-pink-darkest);
     --link-rgb-background: var(--rgb-pink-darkest);

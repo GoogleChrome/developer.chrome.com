@@ -9,9 +9,7 @@ description: >
 
 {% include 'partials/extensions/mv2page-in-mv3.md' %}
 
-This tutorial demonstrates using Google Analytics to track the usage of your extension. If you are
-developing a platform app, see [Analytics for Apps][1] since apps have different restrictions from
-extensions.
+This tutorial demonstrates using Google Analytics to track the usage of your extension.
 
 ## Requirements {: #toc-requirements }
 
@@ -22,14 +20,15 @@ You will also need a [Google Analytics account][3] set up to track your extensio
 setting up the account, you can use any value in the Website's URL field, as your extension will not
 have an URL of its own.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/0X6Knat4ozKRyF15shTn.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/0X6Knat4ozKRyF15shTn.png",
        alt="The analytics setup with info for a chrome extension filled out", height="82", width="400" %}
 
 ## Installing the tracking code {: #toc-installing }
 
 The standard Google Analytics tracking code snippet fetches a file named `ga.js` from an SSL
-protected URL if the current page was loaded using the `https://` protocol. **Chrome extensions and
-applications may _only_ use the SSL-protected version of `ga.js`**. Loading `ga.js` over insecure
+protected URL if the current page was loaded using the `https://` protocol.
+
+**Chrome extensions may _only_ use the SSL-protected version of `ga.js`**. Loading `ga.js` over insecure
 HTTP is disallowed by Chrome's default [Content Security Policy][4]. This, plus the fact that Chrome
 extensions are hosted under the `chrome-extension://` schema, requires a slight modification to the
 usual tracking snippet to pull `ga.js` directly from `https://ssl.google-analytics.com/ga.js`
@@ -97,7 +96,7 @@ opened.
 By looking at the page view data for each page in your extension, you can get an idea of how many
 times your users interact with your extension per browser session:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3AR714uoz3NIMkuFLmIC.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3AR714uoz3NIMkuFLmIC.png",
        alt="Analytics view of the top content for a site", height="119", width="300" %}
 
 ## Monitoring analytics requests {: #toc-debugging }
@@ -107,7 +106,7 @@ the pages of your extension in the Developer Tools window (see the [debugging tu
 information). As the following figure shows, you should see requests for a file named
 **\_\_utm.gif** if everything is set up correctly.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lPW0DjyEMWYnhPc336QN.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lPW0DjyEMWYnhPc336QN.png",
        alt="Developer Tools window showing the __utm.gif request", height="418", width="683" %}
 
 ## Tracking events {: #toc-tracking-events }
@@ -141,7 +140,7 @@ for (var i = 0; i < buttons.length; i++) {
 The Google Analytics event tracking overview page will give you metrics regarding how many times
 each individual button is clicked:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qhlPcW6Wh0oQC8csWwrO.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qhlPcW6Wh0oQC8csWwrO.png",
        alt="Analytics view of the event tracking data for a site", height="482", width="300" %}
 
 By using this approach, you can see which parts of your extension are under-or-overutilized. This
@@ -162,4 +161,4 @@ An example extension that uses these techniques is available in the [samples rep
 [6]: /docs/extensions/mv3/tabs
 [7]: /docs/extensions/mv3/tut_debugging
 [8]: https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
-[9]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/tutorials/analytics/
+[9]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/tutorials/analytics/

@@ -9,7 +9,6 @@
 
 // https://every-layout.dev/layouts/stack/
 
-/* purgecss start ignore */
 %stack,
 .stack {
   display: flex;
@@ -27,7 +26,6 @@
     margin-top: var(--flow-space);
   }
 }
-/* purgecss end ignore */
 
 // The default .stack class uses flexbox, and flexbox ignores floats.
 // Authors like to use floats in blog posts and docs so this exception can be

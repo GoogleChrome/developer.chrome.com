@@ -5,12 +5,12 @@ date: 2018-06-11
 description: Guidlines for use of Google trademarks.
 ---
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 **Important:** Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS
 will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to
 support extensions on all platforms. [Read the announcement][1] and learn more about [migrating your
 app][2].
-!!!
+{% endAside %}
 
 <!-- TODO(kaycebasques): Remove this duplicate site nav. -->
 
@@ -18,12 +18,12 @@ app][2].
 [Developer Agreement][6]
 
 This page sets forth the guidelines for use of [Google trademarks][7] you should consider when
-naming and describing your application. Your use of any Google trademarks is always subject to the
+naming and describing your extension. Your use of any Google trademarks is always subject to the
 [Google Permissions][8].
 
 ## Using the Chrome Web Store badge
 
-You can let others know that your app, extension or theme is available in the Chrome Web Store by
+You can let others know that your extension or theme is available in the Chrome Web Store by
 using the "Available in the Chrome Web Store" badge on your site. You do not need pre-approval to
 use this badge. However, be sure that your use of the badge is consistent with the Chrome Web Store
 [terms of service][6] and these branding guidelines, or we may request that you modify or cease your
@@ -31,11 +31,11 @@ use of the badge.
 
 As the following images show, the badge has an optional border.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/RQMv2HZ0v6NKfFn7XCeU.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/RQMv2HZ0v6NKfFn7XCeU.png",
        alt="206x58 Chrome Web Store badge, no border",
        height="58", width="206" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LclHxMxqoswLNRcUW3m5.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LclHxMxqoswLNRcUW3m5.png",
        alt="206x58 Chrome Web Store badge, with border", height="58", width="206" %}
 
 Right-click any of the following links to download an image file for the badge.
@@ -61,57 +61,57 @@ follow these rules and restrictions:
   twenty-one years of age, violates other applicable laws or regulations or is otherwise
   objectionable.
 - Make sure that clicking the badge always links to your page in the Chrome Web Store, and that your
-  app, extension or theme is available in the store at all times that you use the badge.
+  extension or theme is available in the store at all times that you use the badge.
 
-## Choosing an application or developer name
+## Choosing an extension or developer name
 
-Don't use any Google trademarks or any confusingly similar marks as the name of your application or
+Don't use any Google trademarks or any confusingly similar marks as the name of your extension or
 company without [written permission from Google.][19]
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qn7cPDkh9kYbUmlRiJWO.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qn7cPDkh9kYbUmlRiJWO.png",
        alt="Trademark violation", height="146", width="146" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2C4YaKrZ3xqIocu0glTV.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2C4YaKrZ3xqIocu0glTV.png",
        alt="Trademark violation", height="146", width="146" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TXSCGhobjl0bfUdt8DJK.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TXSCGhobjl0bfUdt8DJK.png",
        alt="Trademark violation", height="146", width="146" %}
 
 ## Using Google logos
 
 Don't use Google trademarks or a modified version of a Google trademark as the logo for your
-application without written permission from Google. Feel free to continue using our badges in your
-application subject to the branding guidelines for each of those badges (for example, [YouTube][20],
+extension without written permission from Google. Feel free to continue using our badges in your
+extension subject to the branding guidelines for each of those badges (for example, [YouTube][20],
 [Google Checkout][21]).
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l1QxerNZuBZBa6dUFOIT.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l1QxerNZuBZBa6dUFOIT.png",
        alt="Google logo violation", height="146", width="146" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/e5R2FGF0ZlqmT7Nxg6Ew.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/e5R2FGF0ZlqmT7Nxg6Ew.png",
        alt="Google logo violation", height="146", width="146" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rPqMdiBSYbH6lj1Na2E1.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rPqMdiBSYbH6lj1Na2E1.png",
        alt="Acceptable logo", height="146", width="224" %}
 
-## Describing your application
+## Describing your extension
 
 If your product is compatible with a Google product, make reference to that Google product by using
 the text "for", "for use with", or "compatible with", and be sure to include the ™ symbol with the
 Google trademark. Example: "for Google Chrome™"
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KZSasHWcKsgBbhYvXc9H.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KZSasHWcKsgBbhYvXc9H.png",
        alt="Google compatible product logo", height="152", width="392" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l0a4lhaR5uN28BOtnnKN.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l0a4lhaR5uN28BOtnnKN.png",
        alt="Google compatible product logo", height="150", width="590" %}
 
 If you are making reference to a Google trademark in combination with your logo, the referencing
 text should be smaller in size than your logo.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MEkrcGvgRMGi9dnyB1qI.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MEkrcGvgRMGi9dnyB1qI.png",
        alt="Acceptable Google trademark in logo", height="164", width="320" %}
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xt1E8oSP6BCexzpaEknR.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xt1E8oSP6BCexzpaEknR.png",
        alt="Unacceptable Google trademark in logo", height="164", width="250" %}
 
 ## Using screenshots
@@ -121,7 +121,7 @@ services. For further details, check out the [Google Permissions][8] page.
 
 ## Giving proper attribution
 
-Do give proper attribution to Google for any use of their marks in your application title or in your
+Do give proper attribution to Google for any use of their marks in your extension title or in your
 description. Example:
 
 ```text

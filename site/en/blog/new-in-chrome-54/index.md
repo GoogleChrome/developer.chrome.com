@@ -23,7 +23,7 @@ of the script. It includes all of the relevant links I mentioned, and a few
 other helpful links. Leave your thoughts in the comments and let me know
 if this is useful to you!
 
-{% youtube id="qPD2yc8BoDk" %}
+{% YouTube id="qPD2yc8BoDk" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=qPD2yc8BoDk)
 

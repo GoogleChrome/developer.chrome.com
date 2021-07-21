@@ -1,5 +1,7 @@
-/* purgecss start ignore */
-.banner--hide announcement-banner,
+announcement-banner {
+  display: block;
+}
+
 announcement-banner[hidden] {
   display: none;
 }
@@ -17,4 +19,3 @@ announcement-banner {
     }
   }
 }
-/* purgecss end ignore */

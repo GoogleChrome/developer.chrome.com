@@ -2,40 +2,31 @@
 layout: "layouts/doc-post.njk"
 title: "Google Chrome Web Store Developer Agreement"
 date: 2014-02-28
-updated: 2020-07-10
+updated: 2021-05-04
 description: >
   The legal agreement governing the relationship between Chrome Web Store
   developers and the Chrome Web Store.
 ---
 
-<div class="aside aside--caution"><b>Important:</b> Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Chrome OS will continue to support Chrome Apps. Additionally, Chrome and the Web Store will continue to support extensions on all platforms. <a href="http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html">Read the announcement</a> and learn more about <a href="/apps/migration">migrating your app</a>.</div>
+<div class="aside aside--caution">
+This developer agreement was updated on May 4, 2021.
+</div>
 
 [Branding Guidelines][3] | [Rating Guidelines][4] | [Program Policies][5] | [User Data FAQ][6] |
 **Developer Agreement**
 
 ## Definitions {: #definitions }
 
-Google: Google Inc., a Delaware corporation with principal place of business at 1600 Amphitheatre
-Parkway, Mountain View, CA 94043, United States.
+Google:  Google LLC, a Delaware limited liability company with principal place of business at 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States; Google Ireland Limited, a company incorporated in Ireland with principal place of business at Gordon House, Barrow Street, Dublin 4, Ireland; or Google Asia Pacific Pte. Limited, a company incorporated in Singapore with principal place of business at 70 Pasir Panjang Road, #03-71, Mapletree Business City, Singapore 117371. Google may update the Google entities and their addresses from time to time.
 
-Developer or You: Any person or company who is registered to develop Products for publication and
-distribution on the Web Store in accordance with the terms of this Agreement.
+Developer or You: Any person or company who is registered to develop Products for publication and distribution on the Web Store in accordance with the terms of this Agreement.
 
-Web Store: The Google Chrome Web Store site operated by Google, where Developers can publish
-Products for direct distribution to users of Google Chrome.
+Web Store: The Google Chrome Web Store site operated by Google, where Developers can publish Products for direct distribution to users of Google Chrome.
 
-Payment Processor(s): Any party authorized by Google to provide payment processing services that
-enable Developers with optional Payment Accounts to charge Google Chrome users for Products
-distributed via the Web Store.
+Products: Software, content and digital materials created for use in connection with Google Chrome and distributed via the Web Store.
 
-Payment Account: A financial account issued by a Payment Processor to a Developer that authorizes
-the Payment Processor to collect and remit payments on the Developer's behalf for Products sold via
-the Web Store. In order to use the Web Store payments processing services, Developers must be
-approved by a Payment Processor for a Payment Account and maintain their account in good standing to
-charge for Products distributed in the Web Store.
+Taxes: All government-imposed taxes, except for taxes based on Google's net income, net worth, asset value, property value, or employment.
 
-Products: Software, content and digital materials created for use in connection with Google Chrome
-and distributed via the Web Store.
 
 ## 1\. Introduction {: #introduction }
 
@@ -46,13 +37,15 @@ acquire and maintain a valid Google account.
 ## 2\. Accepting this Agreement {: #accepting }
 
 2.1 Your use of the Web Store to distribute Products is governed by a legal agreement between you
-and Google consisting of the Google Terms of Service (found at
-[https://policies.google.com/terms][7]), Google Chrome and Chrome OS Additional Terms of Service
-(found at [http://www.google.com/chrome/intl/en/eula_text.html][8]) and this Google Chrome Web Store
-Developer Agreement (together, the "Agreement"). In order to use the Web Store to distribute
-Products, you may agree to this Agreement by clicking to accept where this option is made available
-to you or continuing to use the Web Store to distribute Products in accordance with section 14. You
-may not publish Products on the Web Store if you do not accept this Agreement.
+and Google consisting of the Google Terms of Service (found at https://policies.google.com/terms),
+Google Chrome and Chrome OS Additional Terms of Service (found at
+http://www.google.com/chrome/intl/en/eula\_text.html) and this Google Chrome Web Store Developer
+Agreement (together, the "Agreement"). You are contracting with the applicable Google entity based
+on where You reside. In order to use the Web Store to distribute Products, you must agree to this
+Agreement by clicking to accept where this option is made available to you or continuing to use the
+Web Store to distribute Products in accordance with section 14, and pay a one-time registration fee,
+in an amount determined in Google's sole discretion (the "Registration Fee"). You may not publish
+Products on the Web Store if you do not accept this Agreement and pay the Registration Fee.
 
 2.2 You may not use the Web Store and may not enter into this Agreement if you are (a) not of legal
 age to form a binding contract with Google, or (b) a person or entity barred from using Google
@@ -67,74 +60,18 @@ Agreement or use the Web Store on behalf of your employer or other entity.
 
 ## 3\. Pricing and Payments {: #pricing }
 
-3.1 This Agreement covers both Products you choose to distribute for free and Products for which you
-charge a fee.
+3.1 You are responsible for any Taxes and must pay the Registration Fee without any reduction for Taxes. 
 
-In order to charge a fee for your Products using the Web Store payment processing services, you must
-have a valid Payment Account under a separate agreement with a Payment Processor. If you already
-have a Payment Account with a Payment Processor before signing up for the Web Store, then the terms
-of this Agreement shall supersede your Payment Account terms and condition for Products sold via the
-Web Store.
+3.2 This Agreement covers both Products you choose to distribute for free and Products for which you charge a fee.
+If you charge a fee for your Product, you assume sole responsibility and liability for all related transactions and authentications, records, and taxes. Google will have no obligations with respect to such Products, including without limitation obligations to track and process payments, authenticate paid or previously paid downloads, maintain payment records, or pay, report, or charge taxes.
 
-You may set the price for your Products in the currencies permitted by the Payment Processor. The
-Web Store may display to users the price of Products in their native currency, but it is not
-responsible for the accuracy of currency rates or conversion
+3.3 You may also choose to distribute Products for free. You may not collect future charges from users for copies of the Products that those users were initially allowed to download for free. This is not intended to prevent distribution of free trial versions of the Product with an "upsell" option to obtain the full version of the Product: Such free trials for Products are encouraged. In this Agreement, "free" means there are no charges or fees of any kind for use of the Product.
 
-The price you set for Products will determine the amount of payment you will receive. A Transaction
-Fee, as defined below, will be charged on the sales price and apportioned to the Payment Processor.
-The remainder (sales price less Transaction Fee) will be remitted to you. The "Transaction Fee" is
-set forth at [http://developers.google.com/chrome/web-store/docs/#builtin][9] and may be revised by
-Google from time to time. Developer is responsible for determining if a Product is taxable and the
-applicable tax rate for the Payment Processor to collect for each taxing jurisdiction where Products
-are sold. Developer is responsible for remitting taxes to the appropriate taxing authority.
+3.4 You Support Your Product. You agree to supply and maintain valid and accurate contact information that will be displayed in each product detail page on the Store and made available to users for customer support and legal purposes. For paid Products or in-app transactions, you must respond to customer support inquiries within three (3) business days, and within 24 hours to any support or Product concerns stated to be urgent by Google.
 
-3.2 If you charge a fee for your Product without using the Payment Processor and the Web Store
-payment processing Services, then you will not be charged a Transaction Fee, and you assume sole
-responsibility and liability for all related transactions and authentications, records, and taxes.
-Google will have no obligations with respect to such Products, including without limitation
-obligations to track and process payments, authenticate paid or previously paid downloads, maintain
-payment records, or pay, report, or charge taxes.
+Failure to provide adequate support for your Products may result in low Product ratings, less prominent product exposure, or in some cases removal from the Web Store, such as if the extension no longer functions as described.
 
-3.3 You may also choose to distribute Products for free. If the Product is free, you will not be
-charged a Transaction Fee. You may not collect future charges from users for copies of the Products
-that those users were initially allowed to download for free. This is not intended to prevent
-distribution of free trial versions of the Product with an "upsell" option to obtain the full
-version of the Product: Such free trials for Products are encouraged. In this Agreement, "free"
-means there are no charges or fees of any kind for use of the Product.
-
-3.4 Special Refund Requirements. If you use the Payment Processor, the Payment Processor's standard
-terms and conditions regarding refunds will apply except the following terms apply to your
-distribution of Products on the Web Store.
-
-Products that can be previewed by the buyer (such as themes): No refund is required or allowed.
-
-Products that cannot be previewed by the buyer (such as applications): You authorize Google to give
-the buyer a full refund of the Product price if the buyer requests the refund within 30 minutes
-after purchase.
-
-3.5 You Support Your Product. You agree to supply and maintain valid and accurate contact
-information that will be displayed in each product detail page on the Store and made available to
-users for customer support and legal purposes. For paid Products or in-app transactions, you must
-respond to customer support inquiries within three (3) business days, and within 24 hours to any
-support or Product concerns stated to be urgent by Google.
-
-Failure to provide adequate support for your Products may result in low Product ratings, less
-prominent product exposure, or in some cases removal from the Web Store, such as if the extension no
-longer functions as described.
-
-Except in cases when multiple disputes are initiated by a user with abnormal dispute history,
-billing disputes received by Payment Processor for Products sold for less than
-$10 may be automatically charged back to the Developer, in addition to any handling fees charged by the Payment Processor. Chargeback requests for Products $10
-or more will be handled in accordance with the Payment Processor's standard policy.
-
-3.6 Reinstalls. Users are allowed unlimited reinstalls of each application distributed via the Web
-Store, provided however that if you remove a Product(s) from the Web Store pursuant to clauses (i),
-(ii), (iii) or (iv) of Section 7.1, such Product(s) shall be removed from all portions of the Web
-Store and users shall no longer have a right or ability to reinstall the affected Products. If you
-charge a fee for your Product without using the Payment Processor, then you are solely responsible
-for maintaining records of users who have previously paid for your Products, and Google will not be
-responsible for determining whether users attempting to reinstall your Products have previously paid
-for such Products.
+3.5 Reinstalls. Users are allowed unlimited reinstalls of each application distributed via the Web Store, provided however that if you remove a Product(s) from the Web Store pursuant to clauses (i), (ii), (iii) or (iv) of Section 7.1, such Product(s) shall be removed from all portions of the Web Store and users shall no longer have a right or ability to reinstall the affected Products. You are solely responsible for maintaining records of users who have previously paid for your Products, and Google will not be responsible for determining whether users attempting to reinstall your Products have previously paid for such Products.
 
 ## 4\. Use of the Web Store by You {: #use }
 
@@ -295,28 +232,21 @@ in accordance with the Google Chrome Brand Guidelines located at
 ## 7\. Product Takedowns, Review, and Updates {: #review }
 
 7.1 Your Takedowns. You may remove your Products from future distribution via the Web Store at any
-time, but you must comply with this Agreement (and with the Payment Processor's Payment Account
-terms of service if you use the Payment Processor) for any Products distributed through the Web
-Store, including but not limited to refund requirements. Removing your Products from future
-distribution via the Web Store does not (a) affect the license rights of users who have previously
-purchased or downloaded your Products, (b) remove your Products from user machines, hardware, or
-other devices, or from any part of the Web Store where previously downloaded applications are stored
-on behalf of users, or (c) change your obligation to deliver or support Products or services that
-have been previously purchased or downloaded by users. Notwithstanding the foregoing, in no event
-will Google maintain on any portion of the Web Store (including, without limitation, the part of the
-Web Store where previously purchased or downloaded applications are stored on behalf of users) any
-Product that you have removed from the Web Store and provided written notice to Google that such
-removal was due to (i) an allegation of infringement, or actual infringement, of any copyright,
-trademark, trade secret, trade dress, patent or other intellectual property right of any person,
-(ii) an allegation of defamation or actual defamation, (iii) an allegation of violation, or actual
-violation, of any third party's right of publicity or privacy, or (iv) an allegation or
-determination that such Product does not comply with applicable law.
-
-If you remove a Product from the Web Store pursuant to clauses (i), (ii), (iii) or (iv) of this
-Section 7.1, and an end user purchased such Product within a year before the date of takedown, at
-Google's request, you must refund to the affected end user all amounts paid by such end user for
-such affected Product, less the portion of the Transaction Fee specifically allocated to the credit
-card/payment processing for the associated transaction.
+time, but you must comply with this Agreement for any Products distributed through the Web Store.
+Removing your Products from future distribution via the Web Store does not (a) affect the license
+rights of users who have previously purchased or downloaded your Products, (b) remove your Products
+from user machines, hardware, or other devices, or from any part of the Web Store where previously
+downloaded applications are stored on behalf of users, or (c) change your obligation to deliver or
+support Products or services that have been previously purchased or downloaded by users.
+Notwithstanding the foregoing, in no event will Google maintain on any portion of the Web Store
+(including, without limitation, the part of the Web Store where previously purchased or downloaded
+applications are stored on behalf of users) any Product that you have removed from the Web Store and
+provided written notice to Google that such removal was due to (i) an allegation of infringement, or
+actual infringement, of any copyright, trademark, trade secret, trade dress, patent or other
+intellectual property right of any person, (ii) an allegation of defamation or actual defamation,
+(iii) an allegation of violation, or actual violation, of any third party's right of publicity or
+privacy, or (iv) an allegation or determination that such Product does not comply with applicable
+law.
 
 7.2 Google Review and Takedowns. While Google is not obligated to monitor the Products or their
 content, Google may at any time review or test your Products and their source code for compliance
@@ -342,15 +272,8 @@ difficulty), Google may prevent the Product from being made available in the Web
 Product from the Web Store, remotely disable or remove the Product from user systems or devices, or
 flag, filter, modify related materials (including but not limited to descriptions, screenshots, or
 metadata), or reclassify the Product. If you have any questions or concerns regarding a removal, you
-may contact us at [http://groups.google.com/a/chromium.org/group/chromium-apps/][13]. Google
-reserves the right to suspend or bar any Product from the Web Store.
-
-In the event that your Product is involuntarily removed because it is defective, malicious,
-infringes intellectual property rights of another person, defames, violates a third party's right of
-publicity or privacy, or does not comply with applicable law, and an end user purchased such Product
-within a year before the date of takedown: (i) you must refund to Google, all amounts received, plus
-any associated fees (i.e. chargebacks and payment transaction fees), and (ii) Google may withhold
-from your future sales the amount in subsection (i) above.
+may contact us at http://groups.google.com/a/chromium.org/group/chromium-apps/. Google reserves the
+right to suspend or bar any Product from the Web Store.
 
 7.3 From time to time, Google Chrome may check for available updates to Products, including but not
 limited to bug fixes or enhanced functionality. If you upload an update for your Product to the Web
@@ -442,27 +365,24 @@ trademark, trade secret, trade dress, patent or other intellectual property righ
 defames any person or violates their rights of publicity or privacy, and (c) any third party claims
 arising out of or relating to your Product or your use of the Web Store.
 
-13.2 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless the
-applicable Payment Processors (which may include Google and/or third parties) and the Payment
-Processors' affiliates, directors, officers, employees and agents from and against any and all third
-party claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages,
-costs and expenses (including reasonable attorneys fees) arising out of or accruing from taxes
-related to Your distribution of Product distributed via the Web Store.
+13.2 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Google
+and Google's affiliates, directors, officers, employees and agents from and against any and all
+third party claims, actions, suits or proceedings, as well as any and all losses, liabilities,
+damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from
+taxes related to Your distribution of Product distributed via the Web Store.
 
 ## 14\. Changes to the Agreement {: #changes }
 
 Google may make changes to this Agreement from time to time. When these changes are made, Google
 will make a new copy of the Agreement available on the Web Store site
-[http://developers.google.com/chrome/web-store/terms][16]. Google will also post a notification on
-the Web Store site describing the modifications made. The changes will become effective, and will be
-deemed accepted by you, (a) immediately for those who become Developers after the notification is
-posted, or (b) for pre-existing Developers, the modified Agreement will become effective upon your
-acceptance of the modified Agreement (except changes required by law which will be effective
-immediately) or 15 days after the posting of the notification if you continue to use the Web Store
-services.
+http://developers.google.com/chrome/web-store/terms. Google will also post a notification on the Web
+Store site for any material modifications . The changes will become effective, and will be deemed
+accepted by You, immediately or, in the case of material modifications, 15 days after the posting of
+the notification (except changes required by law which will be effective immediately).
 
-You may terminate this agreement within the notice period in this section. Termination pursuant to
-this section will become effective 15 days after such notification.
+If You do not agree with the modifications to the Agreement, You may terminate Your use of the Web
+Store, which will be Your sole and exclusive remedy. You agree that Your continued use of the Web
+Store constitutes Your agreement to the modified terms of this Agreement.
 
 ## 15\. General Legal Terms {: #legal }
 

@@ -16,7 +16,7 @@ tags:
   - chrome-60
 ---
 
-{% youtube id='vE7JTf2_-ws' %}
+{% YouTube id='vE7JTf2_-ws' %}
 
 * [Paint Timing API](#paint) allows you to measure time to first paint and
   time to first contentful paint with the Paint Timings AP.
@@ -43,7 +43,7 @@ The API exposes two metrics:
 * **Time to first contentful paint** - which marks the point when the browser
   renders the first bit of content from the DOM, text, an image, etc.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Bwe8cTocyJGd5wNiaFMm.png", alt="" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Bwe8cTocyJGd5wNiaFMm.png", alt="", height="279", width="800" %}
 
 Check out
 [Leveraging the Performance Metrics that Most Affect User Experience](https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics)
@@ -77,7 +77,7 @@ for more information.
 
 ## WebAssembly {: #wasm }
 
-{% youtube id="6v4E6oksar0" %}
+{% YouTube id="6v4E6oksar0" %}
 
 Web Assembly or wasm provides a new way to run code, written in languages like
 C and C++ on the web, at near native speed.

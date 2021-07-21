@@ -28,7 +28,7 @@ These pages contain guides and reference information for developers who want to
 create extensions for the Chrome browser. If you're not sure where to begin,
 have a look at the following starting pages:
 
-* [What are extensions?](/extensions/mv3/overview/) to help you understand just what an extension is.
+* [What are extensions?](/docs/extensions/mv3/overview/) to help you understand just what an extension is.
 * The [Getting started tutorial](/docs/extensions/mv3/getstarted/) if you're ready for hello, world.
 
 Beyond that, you might find useful entry points in these pages:
@@ -38,17 +38,17 @@ Beyond that, you might find useful entry points in these pages:
 * Look for answers in the [Extensions FAQ page](/docs/extensions/mv3/faq/)
 
 {% if process.env.HAS_MV3 %}
-!!!.aside
+{% Aside %}
 Now that Manifest V3 has launched, we've changed the default documentation to
 be for MV3. If you are maintaining a legacy Manifest V2 extension, see the [MV2
 documentation](/docs/extensions/mv2).	
-!!!
+{% endAside %}
 {% else %}
-!!!.aside
+{% Aside %}
 With Manifest V3 launching soon, we've changed the default documentation
 experience to be for MV3. The [Manifest V2 documentation](/docs/extensions/mv2)
 is still available.
-!!!
+{% endAside %}
 {% endif %}
 
 In addition to the documentation here, many developers find helpful community content at:

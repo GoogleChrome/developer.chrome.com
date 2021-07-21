@@ -44,9 +44,6 @@ voices it provides in the extension manifest, like this:
 
 An extension can specify any number of voices.
 
-Once loaded, an extension can replace the list of declared voices by calling
-`chrome.ttsEngine.updateVoices`.
-
 The `voice_name` parameter is required. The name should be descriptive enough that it identifies the
 name of the voice and the engine used. In the unlikely event that two extensions register voices
 with the same name, a client can specify the ID of the extension that should do the synthesis.
@@ -62,7 +59,12 @@ Finally, the `event_types` parameter is required if the engine can send events t
 on the progress of speech synthesis. At a minimum, supporting the `'end'` event type to indicate
 when speech is finished is highly recommended, otherwise Chrome cannot schedule queued utterances.
 
-!!!.aside.aside--note
+Once loaded, an extension can replace the list of declared voices by calling
+`chrome.ttsEngine.updateVoices`. (Note that the parameters used in the programatic call to
+`updateVoices` are in camel case: e.g., `voiceName`, unlike the manifest file which uses
+`voice_name`.)
+
+{% Aside %}
 
 **Note:** If your TTS engine does not support the `'end'` event type, Chrome cannot queue utterances
 because it has no way of knowing when your utterance has finished. To help mitigate this, Chrome
@@ -70,7 +72,7 @@ passes an additional boolean `enqueue` option to your engine's onSpeak handler, 
 option of implementing your own queueing. This is discouraged because then clients are unable to
 queue utterances that should get spoken by different speech engines.
 
-!!!
+{% endAside %}
 
 The possible event types that you can send correspond to the event types that the `speak()` method
 receives:
@@ -98,15 +100,15 @@ To generate speech at the request of clients, your extension must register liste
 `onSpeak` and `onStop`, like this:
 
 ```js
-var speakListener = function(utterance, options, sendTtsEvent) {
-  sendTtsEvent({'event_type': 'start', 'charIndex': 0})
+const speakListener = (utterance, options, sendTtsEvent) => {
+  sendTtsEvent({type: 'start', charIndex: 0})
 
   // (start speaking)
 
-  sendTtsEvent({'event_type': 'end', 'charIndex': utterance.length})
+  sendTtsEvent({type: 'end', charIndex: utterance.length})
 };
 
-var stopListener = function() {
+const stopListener = () => {
   // (stop all speech)
 };
 
@@ -114,18 +116,18 @@ chrome.ttsEngine.onSpeak.addListener(speakListener);
 chrome.ttsEngine.onStop.addListener(stopListener);
 ```
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 
 **Important:** If your extension does not register listeners for both `onSpeak` and `onStop`, it
 will not intercept any speech calls, regardless of what is in the manifest.
 
-!!!
+{% endAside %}
 
 The decision of whether or not to send a given speech request to an extension is based solely on
 whether the extension supports the given voice parameters in its manifest and has registered
 listeners for `onSpeak` and `onStop`. In other words, there's no way for an extension to receive a
 speech request and dynamically decide whether to handle it.
 
-[1]: /docs/extensions/tts#method-speak
-[2]: /docs/extensions/tts#method-stop
-[3]: /docs/extensions/tts#method-getVoices
+[1]: /docs/extensions/reference/tts/#method-speak
+[2]: /docs/extensions/reference/tts/#method-stop
+[3]: /docs/extensions/reference/tts/#method-getVoices

@@ -21,7 +21,7 @@ tags:
 
 Chrome 84 is starting to roll out to stable now.
 
-{% youtube id='1XBUeaqjTA4' %}
+{% YouTube id='1XBUeaqjTA4' %}
 
 Here's what you need to know:
 
@@ -43,7 +43,7 @@ let's dive in and see what's new for developers in Chrome 84!
 ## App icon shortcuts {: #app-icon-shortcuts }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ksYJMfb6G3OcRwDrtBsP.jpg", alt="" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ksYJMfb6G3OcRwDrtBsP.jpg", alt="", height="1109", width="800" %}
   <figcaption>
     App icon shortcuts for Twitter's PWA
   </figcaption>
@@ -96,7 +96,7 @@ for complete details.
 
 {# TODO(petele): video element, float-right, auto-play #}
 <figure class="float-right">
-{% video src=[
+{% Video src=[
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/7lVmOTOK52nmjWxrtL8n.webm",
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/EIl1SqvNe8jccnRgTZ3l.mp4"
   ]
@@ -149,7 +149,7 @@ for complete details.
 ## Wake lock API {: #wake-lock }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/z8SHisPaV1V3kk2MghIx.jpg", alt="" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/z8SHisPaV1V3kk2MghIx.jpg", alt="", height="639", width="800" %}
   <figcaption>
     Wake lock implementation on the Betty Crocker website.
   </figcaption>
@@ -219,7 +219,7 @@ to learn more about the API, and how you can start experimenting with it today.
 
 {# TODO(petele): video element, float-right, auto-play #}
 <figure class="float-right">
-{% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/kKpqmySxraoCo5aYUCeW.mp4" %}
+{% Video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/kKpqmySxraoCo5aYUCeW.mp4" %}
 </figure>
 
 And Web Assembly SIMD starts an [origin trial][ot-simd]. It introduces
@@ -245,7 +245,7 @@ out.
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 84.
 
-* [What's new in Chrome DevTools (84)](https://developers.google.com/web/updates/2020/05/devtools)
+* [What's new in Chrome DevTools (84)](/blog/new-in-devtools-84)
 * [Chrome 84 deprecations & removals](https://developers.google.com/web/updates/2020/05/chrome-84-deps-rems)
 * [ChromeStatus.com updates for Chrome 84](https://www.chromestatus.com/features#milestone%3D84)
 * [What's new in JavaScript in Chrome 84](https://v8.dev/blog/v8-release-84)

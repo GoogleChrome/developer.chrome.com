@@ -6,6 +6,7 @@ exports.plugins = [
 
   // Remark Lint Style Guide preset and overrides.
   require('remark-preset-lint-markdown-style-guide'),
+  ['lint-code-block-style', false],
   ['lint-blockquote-indentation', false],
   ['lint-emphasis-marker', false],
   ['lint-hard-break-spaces', false],

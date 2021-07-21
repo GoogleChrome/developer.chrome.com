@@ -20,7 +20,7 @@ tags:
 
 Chrome 85 is starting to roll out to stable now.
 
-{% youtube id='htAiPOarIwI' %}
+{% YouTube id='htAiPOarIwI' %}
 
 Here's what you need to know:
 
@@ -39,7 +39,7 @@ let's dive in and see what's new for developers in Chrome 85!
 ## Content Visibility {: #content-visibility }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/aPo72AQPvTn4s9kdI7Cm.png", alt="" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/aPo72AQPvTn4s9kdI7Cm.png", alt="", height="408", width="800" %}
   <figcaption>
     Browsers rendering process
   </figcaption>
@@ -66,7 +66,7 @@ To get the most impact out of `content-visibility`, apply it to parent
 sections with more complex layout algorithms, like `flexbox`, and `grid`, or
 that have children with contained layouts of their own.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/liWPW8kNA0dsiJGv28rg.jpg", alt="" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/liWPW8kNA0dsiJGv28rg.jpg", alt="", height="554", width="800" %}
 
 By chunking content and adding `content-visibility: auto;`, this page went
 from a rendering time of 232ms to only 30ms.
@@ -128,7 +128,7 @@ yours.
 ## App Icon Shortcuts {: #app-shortcuts }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9zcJuaBsNnskaZByurvY.png", alt="" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/9zcJuaBsNnskaZByurvY.png", alt="", height="420", width="800" %}
   <figcaption>
     App icon shortcut on Windows
   </figcaption>
@@ -224,7 +224,7 @@ And [AppCache removal has begun](https://web.dev/appcache-removal/).
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 85.
 
-* [What's new in Chrome DevTools (85)](https://developers.google.com/web/updates/2020/06/devtools)
+* [What's new in Chrome DevTools (85)](/blog/new-in-devtools-85)
 * [Chrome 85 deprecations & removals](https://developers.google.com/web/updates/2020/07/chrome-85-deps-rems)
 * [ChromeStatus.com updates for Chrome 85](https://www.chromestatus.com/features#milestone%3D85)
 * [What's new in JavaScript in Chrome 85](https://v8.dev/blog/v8-release-85)

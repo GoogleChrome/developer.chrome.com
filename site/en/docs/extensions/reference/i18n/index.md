@@ -26,12 +26,12 @@ English strings):
 
 ![In the manifest.json file, "Hello World" has been changed to "__MSG_extName__", and a new "default_locale" item has the value "en". In the JavaScript file, "Hello World" has been changed to chrome.i18n.getMessage("extName"). A new file named _locales/en/messages.json defines "extName".](i18n-after-1.gif)
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Important:** If an extension has a `_locales` directory, the [manifest][2] **must** define
 "default_locale".
 
-!!!
+{% endAside %}
 
 Some notes about internationalizing:
 
@@ -210,7 +210,7 @@ path_to_chrome.exe --lang=en_GB --user-data-dir=c:\chrome-profile-en_GB
 path_to_chrome.exe --lang=ko --user-data-dir=c:\chrome-profile-ko
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Specifying `--user-data-dir` is optional but handy. Having one data directory per locale
 lets you run the browser in several languages at the same time. A disadvantage is that because the
@@ -218,7 +218,7 @@ locales' data isn't shared, you have to install your extension multiple times—
 which can be challenging when you don't speak the language. For more information, see [Creating and
 Using Profiles][13].
 
-!!!
+{% endAside %}
 
 ##### Using the UI
 
@@ -341,7 +341,7 @@ For more details on calling `detectLanguage(inputText)`, see the [API reference]
 
 [1]: /docs/extensions/mv2/i18n-messages
 [2]: /docs/extensions/mv2/tabs
-[3]: #overview-locales
+[3]: #supported-locales
 [4]: #examples-getMessage
 [5]: #overview-predefined
 [6]: /docs/extensions/mv2/i18n-messages
@@ -352,8 +352,8 @@ For more details on calling `detectLanguage(inputText)`, see the [API reference]
 [11]: #testing-linux
 [12]: #testing-chromeos
 [13]: https://www.chromium.org/developers/creating-and-using-profiles
-[14]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/api/i18n/
-[15]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/extensions/news/
+[14]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/i18n/
+[15]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/extensions/news/
 [16]: /docs/extensions/mv2/samples
 [17]: /docs/extensions/mv2/i18n-messages
 [18]: #method-getMessage

@@ -16,11 +16,11 @@ An extension must fulfill a [single purpose][1] that is narrowly defined and eas
 single extension can include multiple components and a range of functionality, as long as everything
 contributes towards a common purpose.
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/bk1NEBu7WXWCXfNJCsms.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/bk1NEBu7WXWCXfNJCsms.png",
        alt="A screenshot of an extension's icon in the browser bar", height="35", width="91" %}
 
 User interfaces should be minimal and have intent. They can range from a simple icon, such as the [Google
-Mail Checker extension][2] shown on the right, to [overriding][3] an entire page.
+Mail Checker extension][2] shown above, to [overriding][3] an entire page.
 
 Extension files are zipped into a single `.crx` package that the user downloads and installs. This
 means extensions do not depend on content from the web, unlike ordinary web apps.
@@ -116,23 +116,16 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 3.  Keep up to date by reading the [Chromium blog][12]
 4.  Subscribe to the [chromium-extensions group][13]
 
-## Featured videos {: #Featured-videos }
-
-[Technical videos][14]
-[Developer snapshots][15]
-
 [1]: /docs/extensions/mv2/single_purpose
 [2]: /docs/extensions/mv2/samples#google-mail-checker
 [3]: /docs/extensions/mv2/override
 [4]: https://chrome.google.com/webstore/developer/dashboard
 [5]: https://chrome.google.com/webstore
 [6]: /docs/webstore
-[7]: /docs/extensions/mv2/samples#search:hello
+[7]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/tutorials/hello_extensions
 [8]: /docs/extensions/reference/browserAction
 [9]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
 [10]: /docs/extensions/mv2/getstarted
 [11]: /docs/extensions/mv2/overview
-[12]: http://blog.chromium.org/
-[13]: http://groups.google.com/a/chromium.org/group/chromium-extensions
-[14]: http://www.youtube.com/view_play_list?p=CA101D6A85FE9D4B
-[15]: http://www.youtube.com/view_play_list?p=38DF05697DE372B1
+[12]: https://blog.chromium.org/
+[13]: https://groups.google.com/a/chromium.org/group/chromium-extensions

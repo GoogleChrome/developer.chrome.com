@@ -5,7 +5,7 @@
 {% set pd = post.data %}
 <div class="masonry-grid__item featured-card hairline rounded-lg width-full">
   <div class="card-title-bar color-blue-medium">
-    {{ icon('blog') }}
+    {{ icon('blog', {hidden: true}) }}
     <span class="gap-left-300 flex-1 user-select-none">
       {{ 'i18n.nav.side_nav.blog' | i18n(locale) }}
     </span>
@@ -17,9 +17,9 @@
 
   {% if pd.hero %}
     <div class="featured-card__thumbnail gap-top-400">
-      <a class="display-block" href="{{ post.url }}">
-        {% img
-          className="rounded-100 object-fit-cover width-full",
+      <a class="display-block" href="{{ post.url }}" {% if not pd.alt %}aria-hidden="true" tabindex="-1"{% endif %}>
+        {% Img
+          class="rounded-100 object-fit-cover width-full",
           src=pd.hero,
           alt=pd.alt,
           width="278",
@@ -31,7 +31,7 @@
   {% endif %}
 
   <h2 class="type--h3-card gap-top-300">
-    <a class="color-text surface" href="{{ post.url }}">
+    <a class="color-text surface display-inline-flex" href="{{ post.url }}">
       {{ pd.title }}
     </a>
   </h2>

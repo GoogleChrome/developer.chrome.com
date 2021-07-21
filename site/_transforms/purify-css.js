@@ -35,11 +35,21 @@ const purifyCss = async (content, outputPath) => {
     });
 
     const purged = await new PurgeCSS().purge({
+      // Here we take the actual text of the current page and give it to
+      // PurgeCss to grep and look for any strings that match the regex listed
+      // in the `defaultExtractor`.
+      // In addition, we tell it to look at all of our js files.
+      // Really all it's doing is looking for strings like ".some-class" and if
+      // it appears in either the js bundle or the page html, it preserves that
+      // class in the CSS. All other classes/selectors/etc will get purged.
+      // The Tailwind docs have a nice explainer:
+      // https://tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html
       content: [
         {
           raw: content,
           extension: 'html',
         },
+        './site/_js/**/*.js',
       ],
       css: [
         {
@@ -47,9 +57,6 @@ const purifyCss = async (content, outputPath) => {
         },
       ],
       fontFace: true,
-      // whitelist utility classes used by custom elements.
-      // these type classes are used by search-box.
-      whitelist: ['type--h6', 'type--small', 'type--label', 'overflow-hidden'],
       defaultExtractor: content => {
         return content.match(/[A-Za-z0-9\\:_-]+/g) || [];
       },

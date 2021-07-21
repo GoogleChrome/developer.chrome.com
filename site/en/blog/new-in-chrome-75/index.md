@@ -18,7 +18,7 @@ tags:
   - chrome-75
 ---
 
-{% youtube id='_BtaAIhC2UU' %}
+{% YouTube id='_BtaAIhC2UU' %}
 
 In Chrome 75, we've added support for:
 
@@ -38,7 +38,7 @@ what's new for developers in Chrome 75!
 This covers only some of the key highlights, check the links below for
 additional changes in Chrome 75.
 
-* [What's new in Chrome DevTools (75)](https://developers.google.com/web/updates/2019/04/devtools)
+* [What's new in Chrome DevTools (75)](/blog/new-in-devtools-75)
 * [Chrome 75 deprecations & removals](https://developers.google.com/web/updates/2019/05/chrome-75-deps-rems)
 * [ChromeStatus.com updates for Chrome 75](https://www.chromestatus.com/features#milestone%3D75)
 * [What's new in JavaScript in Chrome 75](https://v8.dev/blog/v8-release-75)
@@ -46,7 +46,7 @@ additional changes in Chrome 75.
 
 ## Hint for low latency `canvas` contexts {: #desync }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/C063CtT60X6q0DOffXzv.jpg", alt="", className="float-right" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/C063CtT60X6q0DOffXzv.jpg", alt="", class="float-right", height="450", width="600" %}
 
 Drawing on screen with the canvas element requires the page to synchronize
 graphics updates with the DOM. This synchronization can sometimes cause latency.
@@ -77,7 +77,7 @@ for more details, including how to do feature detection for it.
 
 {# TODO(petele): video element, float-right, auto-play #}
 <figure class="float-right">
-{% video src=[
+{% Video src=[
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wEW1cwII7SQMcQMOYA0E.webm",
   "video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/GX39vDqBQeWIVByOb5m0.mp4"
 ]%}

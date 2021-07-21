@@ -6,13 +6,13 @@ updated: 2017-03-01
 description: A guide on building Chrome Apps with AngularJS.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 This guide gets you started building Chrome Apps with the [AngularJS][3] MVC framework. To
 illustrate Angular in action, we'll be referencing an actual app built using the framework, the
@@ -20,19 +20,19 @@ Google Drive Uploader. The [source code][4] is available on GitHub.
 
 ## About the app {: #first }
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UbxLa9XoyBXX4BgqNqeJ.png", alt="Google Drive Uploader", height="680", width="580" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UbxLa9XoyBXX4BgqNqeJ.png", alt="Google Drive Uploader", height="680", width="580" %}
 
 The Google Drive Uploader allows users to quickly view and interact with files stored in their
 Google Drive account as well as upload new files using the [HTML Drag and Drop APIs][5]. It's a
 great example of building an app which talks to one of [Google's APIs][6]; in this case, the Google
 Drive API.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** You can also build apps which talk to 3rd party APIs/services that are OAuth2-enabled. See
 [non-Google Account authentication][7].
 
-!!!
+{% endAside %}
 
 The Uploader uses OAuth2 to access the user's data. The [chrome.identity API][8] handles fetching an
 OAuth token for the logged-in user, so the hard work is done for us! Once we have a long-lived
@@ -113,12 +113,12 @@ chrome.app.runtime.onLaunched.addListener(function(launchData) {
 The window is created as a chromeless window (frame: 'none'). By default, windows render with the
 OS's default close/expand/minimize bar:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZCIALlecZwMUv7LW77hO.png", alt="Google Drive Uploader with no frame", height="75", width="508" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ZCIALlecZwMUv7LW77hO.png", alt="Google Drive Uploader with no frame", height="75", width="508" %}
 
 The Uploader uses `frame: 'none'` to render the window as a "blank slate" and creates a custom close
 button in `main.html`:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IDJ8RCDPcatsI60AQEni.png", alt="Google Drive Uploader with custom frame", height="50", width="504" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/IDJ8RCDPcatsI60AQEni.png", alt="Google Drive Uploader with custom frame", height="50", width="504" %}
 
 The entire navigational area is wrapped in a <nav> (see next section). To declutter the app a bit,
 the custom close button is hidden until the user interacts with this the area:
@@ -173,13 +173,13 @@ The Angular bits are highlighted in bold:
 This reads exactly as it looks: stamp out an <li> for every doc in our data model "docs". Each item
 contains a file icon, link to open the file on the web, and last updatedDate.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** To make the template valid HTML, we're using `data-*` attributes for Angular's
 [ngRepeat][19] iterator, but you don't have to. You could easily write the repeater as
 `<li ng-repeat="doc in docs">`.
 
-!!!
+{% endAside %}
 
 Next, we need to tell Angular which controller will oversee this template's rendering. For that, we
 use the [ngController][20] directive to tell the `DocsController` to have reign over the template
@@ -274,18 +274,18 @@ GDocs.prototype.auth = function(opt_callback) {
 };
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** Passing the optional callback gives us the flexibility of knowing when the OAuth token is
 ready.
 
-!!!
+{% endAside %}
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Note:** To simplify things a bit, we've created a library, [gdocs.js][26] to handle API tasks.
 
-!!!
+{% endAside %}
 
 Once we have the token, it's time to make requests against the Drive API and populate the model.
 
@@ -376,14 +376,14 @@ feed.
 
 If you run `fetchDocs()` right now, everything works and the list of files shows up:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qF2CspUxWPlHgeukJOkp.png", alt="Fetched list of files in Google Drive Uploader", height="680", width="580" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qF2CspUxWPlHgeukJOkp.png", alt="Fetched list of files in Google Drive Uploader", height="680", width="580" %}
 
 Woot!
 
 Wait,...we're missing those neat file icons. What gives? A quick check of the console shows a bunch
 of CSP-related errors:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/F7b9iaRTKc8cTHN9OEOE.png", alt="CSP errors in developer console", height="71", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/F7b9iaRTKc8cTHN9OEOE.png", alt="CSP errors in developer console", height="71", width="800" %}
 
 The reason is that we're trying to set the icons `img.src` to external URLs. This violates CSP. For
 example: `https://ssl.gstatic.com/docs/doclist/images/icon_10_document_list.png`. To fix this, we
@@ -428,7 +428,7 @@ var successCallback = function(resp, status, headers, config) {
 
 Now that CSP is happy with us again, we get nice file icons:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GP49lYVzl4rPNt868wtn.png", alt="Google Drive Uploader with file icons", height="680", width="580" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/GP49lYVzl4rPNt868wtn.png", alt="Google Drive Uploader with file icons", height="680", width="580" %}
 
 ## Going offline: caching external resources {: #six }
 
@@ -436,7 +436,7 @@ The obvious optimization that needs to be made: not make 100s of XHR requests fo
 every call to `fetchDocs()`. Verify this in the Developer Tools console by pressing the "Refresh"
 button several times. Every time, n images are fetched:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/YJgMcn00xGOFjNvWz9K1.png", alt="Console log 65: Fetched icon via XHR", height="19", width="180" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/YJgMcn00xGOFjNvWz9K1.png", alt="Console log 65: Fetched icon via XHR", height="19", width="180" %}
 
 Let's modify `successCallback` to add a caching layer. The additions are highlighted in bold:
 
@@ -515,7 +515,7 @@ case, we can reuse the technique from before and fetch the images. The only diff
 that each blob is written to the filesystem (see [writeFile()][27]). The console verifies this
 behavior:
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tS8fAphl6h2v9706ndyV.png", alt="Console log 100: Write completed", height="42", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tS8fAphl6h2v9706ndyV.png", alt="Console log 100: Write completed", height="42", width="800" %}
 
 Upon next run (or press of the "Refresh" button), the URL passed to
 `webkitResolveLocalFileSystemURL()` exists because the file has been previously cached. The app sets
@@ -548,7 +548,7 @@ gDriveApp.factory('gdocs', function() {
 });
 ```
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://angularjs.org/
 [4]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/gdrive

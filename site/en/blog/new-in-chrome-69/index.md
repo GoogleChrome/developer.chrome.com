@@ -18,7 +18,7 @@ tags:
   - chrome-69
 ---
 
-{% youtube id='WF2IjH35w8o' %}
+{% YouTube id='WF2IjH35w8o' %}
 
 It's been **ten years** since Chrome was first released. A lot has changed
 since then, but our goal of building a solid foundation for modern web
@@ -42,14 +42,14 @@ Want the full list of changes? Check out the
 
 ## CSS Scroll Snap {: #scroll-snap }
 
-!!!.aside.aside--warning
+{% Aside 'warning' %}
 This post refers to **CSS Scroll Snap**, which is the current standard,
 not to be confused with _CSS Scroll Snap Points_, which has been deprecated and
 is no longer on the standards track.
-!!!
+{% endAside %}
 
 <figure class="float-right">
-  {% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/pqZHxe4Ggn62Lf5dvJbK.mp4" %}
+  {% Video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/pqZHxe4Ggn62Lf5dvJbK.mp4" %}
   <figcaption>
     <a href="https://snap.glitch.me/carousel.html"
        target="_blank">View demo</a> |
@@ -91,7 +91,7 @@ for more details and samples you can try!
 ## Display cutouts (aka notches) {: #notch }
 
 <figure class="float-right">
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wwRk7hb36LukU6XBGZ8m.png", alt="mobile phone with display cutout" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wwRk7hb36LukU6XBGZ8m.png", alt="mobile phone with display cutout", height="400", width="795" %}
   <figcaption>
     Browsers add some extra margin on a mobile device with display cutout to
     prevent content from being covered by the cutout.
@@ -128,11 +128,11 @@ your content.
 }
 ```
 
-!!!.aside
+{% Aside %}
 **Remember:** It's important to test this well; you're telling the
 browser it's OK if some content gets hidden behind the display cutout.
 And don't forget to test in both portrait and landscape modes.
-!!!
+{% endAside %}
 
 There's a great post on the WebKit blog about
 [Designing Websites for iPhone X](https://webkit.org/blog/7929/designing-websites-for-iphone-x/),
@@ -173,7 +173,7 @@ and check out the [spec](https://github.com/WICG/web-locks).
 These are just a few of the changes in Chrome 69 for developers, of course,
 there's plenty more.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/JSmEr981V3yPV1qlGP7G.jpg", alt="conical gradient", width="125", className="float-right" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/JSmEr981V3yPV1qlGP7G.jpg", alt="conical gradient", width="125", class="float-right", height="350", width="350" %}
 
 * From the CSS4 spec, you can now create color transitions around the
   circumference of a circle, using
@@ -206,8 +206,8 @@ A special thanks to all the people who have helped to make the
 [28 episodes of New in Chrome](https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m)
 happen. Every single one of these people are awesome!
 
-{% columns %}
-  {% column %}
+{% Columns %}
+  {% Column %}
     Heather Duthie<br>
     Tim Malieckal<br>
     Rick Murphy<br>
@@ -215,9 +215,9 @@ happen. Every single one of these people are awesome!
     Kiran Puri<br>
     Nilesh Bell-Gorsia<br>
     Lee Carruthers
-  {% endcolumn%}
+  {% endColumn %}
 
-  {% column %}
+  {% Column %}
     Philip Maniaci<br>
     Chris Turiello<br>
     Andrew Barker<br>
@@ -225,9 +225,9 @@ happen. Every single one of these people are awesome!
     Izzy Cosentino<br>
     Norm Magnuson<br>
     Loren Borja
-  {% endcolumn%}
+  {% endColumn %}
 
-  {% column %}
+  {% Column %}
     Michelle Ortega<br>
     Varun Bajaj<br>
     Ted Maroney<br>
@@ -235,9 +235,9 @@ happen. Every single one of these people are awesome!
     Andrew Naugle<br>
     Michelle Michelson<br>
     Todd Rawiszer
-  {% endcolumn%}
+  {% endColumn %}
 
-  {% column %}
+  {% Column %}
     Anthony Mcgowen<br>
     Victoria Canty<br>
     Alexander Koht<br>
@@ -245,8 +245,8 @@ happen. Every single one of these people are awesome!
     Andre Szyszkowski<br>
     Kelsey Allen<br>
     Liam Spradlin
-  {% endcolumn%}
-{% endcolumns%}
+  {% endColumn %}
+{% endColumns %}
 
 Want to see how far New in Chrome has come since our first episode?
 Check out this fun 30 second [progression video](https://www.youtube.com/watch?v=kMRdS5pusU0)
@@ -260,7 +260,7 @@ have gotten better because of you!
 
 ### New in Chrome Bloopers
 
-{% youtube id="LScSTMOMEDM" %}
+{% YouTube id="LScSTMOMEDM" %}
 
 We put together a fun little blooper reel for you to enjoy! After watching
 it, I've learned a few things:

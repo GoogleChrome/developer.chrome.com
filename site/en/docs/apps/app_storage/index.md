@@ -6,13 +6,13 @@ updated: 2014-09-10
 description: How to handle storage in your Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 Almost every aspect of app development involves some element of sending or receiving data. Starting
 with the basics, you should use an MVC framework to help you design and implement your app so that
@@ -23,12 +23,12 @@ This doc briefly introduces the storage options for sending, receiving, and savi
 remainder of the doc shows you how to use Chrome's File System and Sync File System APIs (see also
 [fileSystem API][5] and [syncFileSystem API][6]).
 
-!!!.aside.aside--note
+{% Aside %}
 
 **API Samples:** Want to play with the code? Check out the [filesystem-access][7],
 [syncfs-editor][8] and [storage][9] samples.
 
-!!!
+{% endAside %}
 
 ## Storage options {: #options }
 
@@ -281,7 +281,7 @@ saved in a hidden Google Drive folder, **Chrome Syncable FileSystem**. The folde
 your 'My Drive' list but can be accessed by searching the folder name in the search box. (Note that
 the remote folder layout is **not** guaranteed to remain backwards compatible between releases.)
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: app_frameworks
 [4]: offline_apps

@@ -1,0 +1,35 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination__button {
+  align-items: center;
+  background: var(--color-secondary);
+  border-radius: 10000px;
+  color: var(--color-blue-medium);
+  display: flex;
+  padding: 0.5em 1.12em;
+  text-decoration: none;
+
+  svg {
+    height: 1.2em;
+    margin: 0 -0.125em;
+  }
+
+  // This button will only ever have <svg> and <span>, place a gap between them.
+  :first-child {
+    margin-right: 0.25em;
+  }
+
+  &:not([href]) {
+    background: rgba(var(--rgb-button-overlay), 0.12);
+    color: rgba(var(--rgb-button-overlay), 0.76);
+  }
+
+  &[href] {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -16,7 +16,7 @@ tags:
   - chrome-63
 ---
 
-{% youtube id='F3_-jTLaFSs' %}
+{% YouTube id='F3_-jTLaFSs' %}
 
 * Chrome 63 allows you to import [JavaScript modules dynamically](#dynamic).
 * My favorite interview coding question becomes a piece of cake with
@@ -93,11 +93,16 @@ certain patterns can be tricky to deal with. For example, the browsers
 [pull to refresh](https://developers.google.com/web/updates/2017/11/overscroll-behavior#p2r) feature,
 where swiping down at the top of the page, does a hard reload.
 
-{# TODO(petele): video element, float-left|right, auto-play #}
-{% columns %}
-{% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/ZxYy6AnumGb3lwTGN6Wq.mp4" %}
-{% video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wyoZdIhPdQ8em6ibRdg4.mp4" %}
-{% endcolumns %}
+{% Columns %}
+{% Column %}
+{% Video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XHUGqmZs8LZdCKZS0mpa.mp4", autoplay="true", muted="true", loop="true" %}
+Before, with full page refresh.
+{% endColumn %}
+{% Column %}
+{% Video src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/VgYcDIroTPSPhzWoMRuQ.mp4", autoplay="true", muted="true", loop="true" %}
+After, refresh only the content.
+{% endColumn %}
+{% endColumns %}
 
 In some cases, you might want to override that behavior and provide your own
 experience. That's what [Twitter's progressive web app](https://mobile.twitter.com)
@@ -121,7 +126,7 @@ page performance!
 
 ## Permission UI changes {: #permissions }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M1qtkctKj1pjGmSTbInN.jpg", alt="", className="float-right" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/M1qtkctKj1pjGmSTbInN.jpg", alt="", class="float-right", height="491", width="800" %}
 
 I love web push notifications but I've been really frustrated by the number of
 sites asking for permission on page load, without any context - and I'm not

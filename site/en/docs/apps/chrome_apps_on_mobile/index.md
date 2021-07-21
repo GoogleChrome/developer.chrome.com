@@ -6,19 +6,19 @@ date: 2014-04-15
 description: A guide on how to use Apache Cordova to set up your Chrome App to run on Android and iOS devices.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 _**The toolchain for running Chrome Apps on mobile is in early developer preview. Feel free to give
 us your feedback using the [Github issue tracker][3], our [Chrome Apps developer forum][4], on
 [Stack Overflow][5], or our [G+ Developers page][6].**_
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FNYKWfrpCKjWdrBh45zK.jpg", alt="A Chrome App running on both desktop and mobile", height="459", width="800" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/FNYKWfrpCKjWdrBh45zK.jpg", alt="A Chrome App running on both desktop and mobile", height="459", width="800" %}
 
 ## Overview {: #overview }
 
@@ -358,7 +358,7 @@ on your Android device.
 The Chrome ADT for Android is currently in a pre-alpha release. To try it out, view the
 [ChromeADT.apk release notes][50] for installation and usage instructions.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://github.com/MobileChromeApps/mobile-chrome-apps/issues
 [4]: http://groups.google.com/a/chromium.org/group/chromium-apps/topics
@@ -374,7 +374,7 @@ The Chrome ADT for Android is currently in a pre-alpha release. To try it out, v
 [14]: http://nodejs.org
 [15]: http://nodejs.org
 [16]: https://github.com/creationix/nvm
-[17]: http://ww'w.oracle.com/technetwork/java/javase/downloads/index.html
+[17]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 [18]: http://developer.android.com/sdk/index.html
 [19]: https://www.google.com/search?q=how+to+add+sdktools+to+path
 [20]: http://ant.apache.org/bindownload.cgi

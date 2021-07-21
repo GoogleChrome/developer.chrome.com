@@ -19,7 +19,7 @@ tags:
 
 Chrome 83 is starting to roll out to stable now.
 
-{% youtube id='RsMikJZhnSQ' %}
+{% YouTube id='RsMikJZhnSQ' %}
 
 Here's what you need to know:
 
@@ -38,10 +38,10 @@ Here's what you need to know:
 I'm [Pete LePage](https://twitter.com/petele), working and shooting from home,
 let's dive in and see what's new for developers in Chrome 83!
 
-!!!.aside
+{% Aside %}
 App shortcuts were supposed to be landing in Chrome 83, but were
 delayed until Chrome 84, scheduled for July 14th.
-!!!
+{% endAside %}
 
 ## Trusted types {: #trusted-types }
 
@@ -100,27 +100,27 @@ familiar to our users. The styling of form controls can be inconsistent
 across browsers and operating systems. And we frequently have to ship a
 number of CSS rules just to get a consistent look across devices.
 
-{% columns %}
+{% Columns %}
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/WSHGuVSVSsRyOdbnUN4F.png", alt="" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/WSHGuVSVSsRyOdbnUN4F.png", alt="", height="928", width="492" %}
   <figcaption>
     Before, default styling of form controls.
   </figcaption>
 </figure>
 <figure>
-  {% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/FhoI03qxVPRrOxY6lVJR.png", alt="" %}
+  {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/FhoI03qxVPRrOxY6lVJR.png", alt="", height="928", width="492" %}
   <figcaption>
     After, updated styling of form controls.
   </figcaption>
 </figure>
-{% endcolumns %}
+{% endColumns %}
 
 I've been really impressed by the work Microsoft has been doing to modernize
 the appearance of form controls. Beyond the nicer visual style, they bring
 better touch support, and better accessibility, including improved keyboard
 support!
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/t173v86PHOoikrehWzeh.gif", alt="" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/t173v86PHOoikrehWzeh.gif", alt="", height="294", width="620" %}
 
 The new form controls have already landed in Microsoft Edge, and are now
 available in Chrome 83. For more information, see
@@ -216,7 +216,7 @@ Such [core user experience needs][wd-ucpm] include loading experience,
 interactivity, and visual stability of page content, and combined are the
 foundation of the 2020 Core Web Vitals.
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/PJP3ZSo0RxY3cjvZlXhx.jpg", alt="" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/PJP3ZSo0RxY3cjvZlXhx.jpg", alt="", height="232", width="800" %}
 
 * [**Largest Contentful Paint**][wd-lcp] measures perceived load speed and
   marks the point in the page load timeline when the page's main content has
@@ -257,7 +257,7 @@ Curious about what's coming in the future? Check out the
 This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 83.
 
-* [What's new in Chrome DevTools (83)](https://developers.google.com/web/updates/2020/03/devtools)
+* [What's new in Chrome DevTools (83)](/blog/new-in-devtools-83)
 * [Chrome 83 deprecations & removals](https://developers.google.com/web/updates/2020/04/chrome-83-deps-rems)
 * [ChromeStatus.com updates for Chrome 83](https://www.chromestatus.com/features#milestone%3D83)
 * [What's new in JavaScript in Chrome 83](https://v8.dev/blog/v8-release-83)

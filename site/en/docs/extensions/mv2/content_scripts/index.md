@@ -77,7 +77,7 @@ Isolated worlds do not allow for content scripts, the extension, and the web pag
 variables or functions created by the others. This also gives content scripts the ability to enable
 functionality that should not be accessible to the web page.
 
-{% youtube id="laLudeUmXHM" %}
+{% YouTube id="laLudeUmXHM" %}
 
 ## Inject scripts {: #functionality }
 
@@ -152,14 +152,23 @@ They can include JavaScript files, CSS files or both. All auto-run content scrip
 }
 ```
 
-<table class="simple"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr id="matches"><td><code>matches</code></td><td>array of strings</td><td><em>Required.</em> Specifies which pages this content script will be injected into. See <a href="/docs/extensions/mv2/match_patterns">Match Patterns</a> for more details on the syntax of these strings and <a href="#matchAndGlob">Match patterns and globs</a> for information on how to exclude URLs.</td></tr><tr id="css"><td><code>css<code></code></code></td><td>array of strings</td><td><em>Optional.</em> The list of CSS files to be injected into matching pages. These are injected in the order they appear in this array, before any DOM is constructed or displayed for the page.</td></tr><tr id="js"><td><code>js<code></code></code></td><td><nobr>array of strings</nobr></td><td><em>Optional.</em> The list of JavaScript files to be injected into matching pages. These are injected in the order they appear in this array.</td></tr><tr id="match_about_blank"><td><code>match_about_blank</code></td><td>boolean</td><td><em>Optional.</em> Whether the script should inject into an <code>about:blank</code> frame where the parent or opener frame matches one of the patterns declared in <code>matches</code>. Defaults to false.</td></tr></tbody></table>
+| Name | Type | Description |
+| --- | --- | --- |
+| `matches` {: #matches } | <nobr>array of strings</nobr> | _Required._ Specifies which pages this content script will be injected into. See [Match Patterns](/docs/extensions/mv2/match_patterns) for more details on the  syntax of these strings and [Match patterns and globs](#matchAndGlob) for information on how to exclude URLs. |
+| `css` {: #css } | <nobr>array of strings</nobr> | _Optional._ The list of CSS files to be injected into matching pages. These are injected in the order they appear in this array, before any DOM is constructed or displayed for the page. |
+| `js` {: #js } | <nobr>array of strings</nobr> | _Optional._ The list of JavaScript files to be injected into matching pages. These are injected in the order they appear in this array. |
+| `match_about_blank` {: #match_about_blank } | boolean | _Optional._ Whether the script should inject into an `about:blank` frame where the parent or opener frame matches one of the patterns declared in `matches`. Defaults to `false`. |
 
 #### Exclude matches and globs {: #matchAndGlob }
 
 Specified page matching is customizable by including the following fields in the manifest
 registration.
 
-<table class="simple"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr id="exclude_matches"><td><code>exclude_matches</code></td><td>array of strings</td><td><em>Optional.</em> Excludes pages that this content script would otherwise be injected into. See <a href="/docs/extensions/mv2/match_patterns">Match Patterns</a> for more details on the syntax of these strings.</td></tr><tr id="include_globs"><td><code>include_globs</code></td><td>array of strings</td><td><em>Optional.</em> Applied after <code>matches</code> to include only those URLs that also match this glob. Intended to emulate the <a href="http://wiki.greasespot.net/Metadata_Block#.40include"><code>@include</code> </a>Greasemonkey keyword.</td></tr><tr id="exclude_globs"><td><code>exclude_globs</code></td><td>array of string</td><td><em>Optional.</em> Applied after <code>matches</code> to exclude URLs that match this glob. Intended to emulate the <a href="http://wiki.greasespot.net/Metadata_Block#.40include"><code>@exclude</code> </a>Greasemonkey keyword.</td></tr></tbody></table>
+| Name | Type | Description |
+| --- | --- | --- |
+| `exclude_matches` {: #exclude_matches } | <nobr>array of strings</nobr> | _Optional._ Excludes pages that this content script would otherwise be injected into. See [Match Patterns](/docs/extensions/mv2/match_patterns) for more details on the syntax of these strings. |
+| `include_globs` {: #include_globs } | <nobr>array of strings</nobr> | _Optional._ Applied after `matches` to include only those URLs that also match this glob. Intended to emulate the [`@include`](http://wiki.greasespot.net/Metadata_Block#.40include) Greasemonkey keyword. |
+| `exclude_globs` {: #exclude_globs } | <nobr>array of string</nobr> | _Optional._ Applied after `matches` to exclude URLs that match this glob. Intended to emulate the [`@exclude`](http://wiki.greasespot.net/Metadata_Block#.40include)Greasemonkey keyword. |
 
 The content script will be injected into a page if its URL matches any `matches` pattern and any
 `include_globs` pattern, as long as the URL doesn't also match an `exclude_matches` or
@@ -280,7 +289,11 @@ preffered and default field is `"document_idle"`, but can also be specified as `
 }
 ```
 
-<table class="simple"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr id="document_idle"><td><code>document_idle</code></td><td>string</td><td><em>Prefered.</em> Use <code>"document_idle"</code> whenever possible.<br><br>The browser chooses a time to inject scripts between <code>"document_end"</code> and immediately after the <a href="http://www.whatwg.org/specs/web-apps/current-work/#handler-onload"><code>window.onload </code></a>event fires. The exact moment of injection depends on how complex the document is and how long it is taking to load, and is optimized for page load speed.<br><br>Content scripts running at <code>"document_idle"</code> do not need to listen for the <code>window.onload</code> event, they are guaranteed to run after the DOM is complete. If a script definitely needs to run after <code>window.onload</code>, the extension can check if <code>onload</code> has already fired by using the <a href="http://www.whatwg.org/specs/web-apps/current-work/#dom-document-readystate"><code>document.readyState </code></a>property.</td></tr><tr id="document_start"><td><code>document_start</code></td><td>string</td><td>Scripts are injected after any files from <code>css</code>, but before any other DOM is constructed or any other script is run.</td></tr><tr id="document_end"><td><code>document_end</code></td><td>string</td><td>Scripts are injected immediately after the DOM is complete, but before subresources like images and frames have loaded.</td></tr></tbody></table>
+| Name | Type | Description |
+| --- | --- | --- |
+| `document_idle` {: #document_idle } | string | _Preferred._ Use `"document_idle"` whenever possible.<br><br>The browser chooses a time to inject scripts between `"document_end"` and immediately after the [`windowonload`](http://www.whatwg.org/specs/web-apps/current-work/#handler-onload) event fires. The exact moment of injection depends on how complex the document is and how long it is taking to load, and is optimized for page load speed.<br><br>Content scripts running at `"document_idle"` do not need to listen for the `window.onload` event, they are guaranteed to run after the DOM is complete. If a script definitely needs to run after `window.onload`, the extension can check if `onload` has already fired by using the [`document.readyState`](http://www.whatwg.org/specs/web-apps/current-work/#dom-document-readystate) property. |
+| `document_start` {: #document_start } | string | Scripts are injected after any files from `css`, but before any other DOM is constructed or any other script is run. |
+| `document_end` {: #document_end } | string | Scripts are injected immediately after the DOM is complete, but before subresources like images and frames have loaded. |
 
 #### Specify frames {: #frames }
 
@@ -303,7 +316,9 @@ tab.
 }
 ```
 
-<table class="simple"><tbody><tr><th>Name</th><th>Type</th><th>Description</th></tr><tr id="all_frames"><td><code>all_frames<code></code></code></td><td>boolean</td><td><em>Optional.</em> Defaults to <code>false</code>, meaning that only the top frame is matched.<br><br>If specified <code>true</code>, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements, it will not inject into child frames if the URL requirements are not met.</td></tr></tbody></table>
+| Name | Type | Description |
+| --- | --- | --- |
+| `all_frames` {: #all_frames } | boolean | _Optional._ Defaults to `false`, meaning that only the top frame is matched.<br><br>If specified `true`, it will inject into all frames, even if the frame is not the topmost frame in the tab. Each frame is checked independently for URL requirements, it will not inject into child frames if the URL requirements are not met. |
 
 ## Communication with the embedding page {: #host-page-communication }
 

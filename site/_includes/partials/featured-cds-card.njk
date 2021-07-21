@@ -2,7 +2,7 @@
 
 <div class="masonry-grid__item featured-card hairline rounded-lg width-full">
   <div class="card-title-bar color-blue-medium">
-    {{ icon('chrome-filled') }}
+    {{ icon('chrome-filled', {hidden: true}) }}
     <span class="gap-left-300 flex-1 user-select-none">
       Chrome Dev Summit 2020
     </span>
@@ -10,8 +10,8 @@
 
   <div class="featured-card__thumbnail gap-top-400">
     <a class="display-block" href="/devsummit">
-      {% img
-        className="rounded-100 object-fit-cover width-full",
+      {% Img
+        class="rounded-100 object-fit-cover width-full",
         src="image/foR0vJZKULb5AGJExlazy1xYDgI2/qYromlYBDPIcj7u7NUlp.png",
         alt="Chrome Dev Summit logo",
         width="278",

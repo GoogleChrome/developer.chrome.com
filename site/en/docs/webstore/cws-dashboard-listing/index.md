@@ -6,7 +6,7 @@ title: "Complete your listing information"
 description: How to add listing information for your Chrome Web Store item.
 ---
 
-{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4RwZvdR4eACU46OCy7rm.png",
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4RwZvdR4eACU46OCy7rm.png",
        alt="Screenshot of the Chrome Web Store developer dashboard item listing tab", height="472", width="800" %}
 
 Add the store listing information for your item that isn't in the ZIP file, such as a long
@@ -27,8 +27,36 @@ your item's store listing:
 - The **primary category** where your item should be listed.
 - Your item's **language** to help users find it.
 
-See [Supplying Images][1] for help on designing the images for your item, and [Branding
-Guidelines][2] for information on how you can use Google brands.
+## Learning more about images and branding
 
-[1]: /docs/webstore/images
-[2]: /docs/webstore/branding
+See [Supplying Images][cws-images] for help on designing the images for your item, and [Branding
+Guidelines][cws-branding] for information on how you can use Google brands.
+
+## Displaying your verified publisher status
+
+The Chrome Web Store highlights verified publishers by placing a linked, official URL in the
+"Offered by:" line of the store listing. This official URL appears under the listing title and is
+linked to the website, as shown in the following example:
+
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/Vkm8Uhstw2NFVSSt87Vl.png", alt="Offered by:
+cecerduino.com example", width="351", height="143" %}
+
+{% Aside %}
+If you are not a verified publisher, you can't display this official URL: instead, the "Offered by:"
+displays your publisher name instead.
+{% endAside %}
+
+To display your verified status, choose an official URL for your item from the **Official URL**
+pull-down as shown below:
+
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/m6b3XFmEakmH1ZqVhTwf.png", alt="Screenshot of
+official URL pulldown", width="800", height="184" %}
+
+The pull-down for this field contains only those sites that have been verified as belonging to you.
+To add a verified site that you own, click on **Add a new site**. This opens the Google Search
+Console, where you can add and verify a site. See [Verify your site ownership][verify-owner] for
+more details.
+
+[cws-branding]: /docs/webstore/branding
+[cws-images]: /docs/webstore/images
+[verify-owner]: https://support.google.com/webmasters/answer/9008080

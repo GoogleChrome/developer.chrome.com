@@ -13,13 +13,12 @@ Thumbs.db
 
 # Code coverage generated files
 .nyc_output
-coverage
+/coverage
 
 # Node modules and output
 node_modules
 dist
 **/_includes/css
-site/_collections/types.json
 
 # Eleventy
 # We generate our own .eleventyignore file dynamically during builds

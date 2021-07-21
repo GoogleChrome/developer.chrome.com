@@ -6,13 +6,13 @@ updated: 2017-03-01
 description: Chrome Apps can use all the APIs that are available to websites.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 In addition to the [chrome.\* APIs][3], extensions can use all the APIs that the browser provides to
 web pages and apps. If the browser doesn't support an API you want to use, you can bundle additional
@@ -83,7 +83,7 @@ APIs in bundled libraries
   that library's JavaScript files with your extension. Bundled libraries work in extensions just as
   they do in other web pages.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: /docs/extensions/reference/
 [4]: https://developer.mozilla.org/en/Gecko_DOM_Reference

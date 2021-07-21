@@ -31,9 +31,9 @@ There are some changes you may need to make based on changes to the API surface.
 - Remove `background.persistent` from manifest.json.
 - Update background scripts to adapt to the service worker execution context.
 
-!!!.aside.aside--gotchas
+{% Aside 'gotchas' %}
 Service workers must be registered at root level: they cannot be in a nested directory.
-!!!
+{% endAside %}
 
 **Are you using the `browser_action` or `page_action` property in manifest.json?**
 <br/>
@@ -50,13 +50,13 @@ Service workers must be registered at root level: they cannot be in a nested dir
 <br/>
 *This API is [replaced by `declarativeNetRequest`](/docs/extensions/mv3/intro/mv3-migration#modifying-network-requests) in MV3.*
 
-!!!.aside
+{% Aside %}
 This only applies to user-installed extensions; force installed extensions (extensions
 distributed using
 [ExtensionInstallForcelist](https://www.chromium.org/administrators/policy-list-3#ExtensionInstallForcelist)).
 These extensions &mdash; typically used in an enterprise setting &mdash; can
 still use the blocking version of `chrome.webRequest`. 
-!!!
+{% endAside %}
 
 - Migrate request modification logic to `chrome.declarativeNetRequest` rules.
 - Replace the `webRequestBlocking` permission with `declarativeNetRequest`.
@@ -64,9 +64,37 @@ still use the blocking version of `chrome.webRequest`.
 - Remove unnecessary host permissions; blocking a request or upgrading a request's protocol
   doesn't require host permissions with `declarativeNetRequest`.
 
+**Are you using these scripting/CSS methods in the chrome.tabs API?**
+<br/>
+*In Manifest V3, several methods move from `chrome.tabs` to the `chrome.scripting` API.*
+
+- Change any of the following MV2 calls to use the correct MV3 API:
+
+<table class="with-heading-tint">
+  <thead>
+    <tr>
+      <th>Manifest V2</th>
+      <th>Manifest V3</th>
+    </tr>
+  </thead>
+    <tr>
+      <td>tabs.executeScript()</td>
+      <td>scripting.executeScript()</td>
+    </tr>
+    <tr>
+      <td>tabs.insertCSS()</td>
+      <td>scripting.insertCSS()</td>
+    </tr>
+    <tr>
+      <td>tabs.removeCSS()</td>
+      <td>scripting.removeCSS()</td>
+    </tr>
+</table>
+
 **Are you executing remote code or arbitrary strings?**
 <br/>
-*You can no longer [execute external logic](/docs/extensions/mv3/intro/mv3-migration#remotely-hosted-code) using `chrome.tabs.executeScript({code: '...'})`, `eval()`, and `new Function()`.*
+*You can no longer [execute external
+logic](/docs/extensions/mv3/intro/mv3-migration#remotely-hosted-code) using `chrome.scripting.executeScript({code: '...'})`, `eval()`, and `new Function()`.*
 
 - Move all external code (JS, Wasm, CSS) into your extension bundle.
 - Update script and style references to load resources from the extension bundle.

@@ -1,0 +1,55 @@
+.banner {
+  @extend %type--small;
+  background: var(--color-bg-shade);
+  display: flex;
+  justify-content: center;
+  padding: get-size(300);
+
+  &--info {
+    --button-color: var(--color-blue-medium);
+    background-color: var(--color-blue-lighter);
+  }
+
+  &--warning {
+    --button-color: var(--color-red-medium);
+    background-color: var(--color-red-lightest);
+  }
+
+  &__inner {
+    @include apply-utility('measure', 'long');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    @include media-query('lg') {
+      align-items: baseline;
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+    max-width: 65ch;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: get-size(300);
+    white-space: nowrap;
+
+    @include media-query('lg') {
+      align-items: flex-end;
+      margin-left: get-size(300);
+      margin-top: 0;
+    }
+  }
+
+  &__action {
+    @include apply-utility('weight', 'medium');
+  }
+}
+
+[data-banner-dismissed] .banner {
+  display: none;
+}

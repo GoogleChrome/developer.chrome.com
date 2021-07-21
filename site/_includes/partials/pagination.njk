@@ -1,3 +1,5 @@
+{% from 'macros/icon.njk' import icon with context %}
+
 {# If an alias exists for a pagination element use the pagination navigation.
 This would typically exist for a collections that has went through the `add-pagination`
 function used to allow pagination to handle multi-dimensional arrays. This is used in the
@@ -10,11 +12,38 @@ element for the pagination (stock) navigation #}
   {% set paginationObject = pagination %}
 {% endif %}
 
-<nav>
+{% if paginationObject.href.previous or paginationObject.href.next %}
+<nav class="pagination gap-top-300 pad-left-400 pad-right-400">
+
+  {#
+    We expand this out to both options: button available and missing, as Lighthouse is unhappy with
+    a lone <a> without a href.
+  #}
+
   {% if paginationObject.href.previous %}
-    <a href="{{ paginationObject.href.previous }}">{{ 'i18n.common.previous' | i18n(locale) }}</a>
+    <a class="pagination__button type--small gap-right-200 text-align-center" href="{{ paginationObject.href.previous }}">
+      {{ icon('arrow-back', {label: 'back'}) }}
+      <span>{{ 'i18n.common.newer_posts' | i18n(locale) }}</span>
+    </a>
+  {% else %}
+    <span class="pagination__button type--small gap-right-200 text-align-center">
+      {{ icon('arrow-back', {label: 'back'}) }}
+      <span>{{ 'i18n.common.newer_posts' | i18n(locale) }}</span>
+    </span>
   {% endif %}
+
   {% if paginationObject.href.next %}
-    <a href="{{ paginationObject.href.next }}">{{ 'i18n.common.next' | i18n(locale) }}</a>
+    <a class="pagination__button type--small gap-left-200 text-align-center" href="{{ paginationObject.href.next }}">
+      <span>{{ 'i18n.common.older_posts' | i18n(locale) }}</span>
+      {{ icon('arrow-forward', {label: 'next'}) }}
+    </a>
+  {% else %}
+    <span class="pagination__button type--small gap-left-200 text-align-center">
+      <span>{{ 'i18n.common.older_posts' | i18n(locale) }}</span>
+      {{ icon('arrow-forward', {label: 'next'}) }}
+    </span>
   {% endif %}
+
+  </a>
 </nav>
+{% endif %}

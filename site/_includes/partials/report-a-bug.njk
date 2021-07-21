@@ -2,7 +2,7 @@
 
 <div class="masonry-grid__item featured-card bg-green-lighter rounded-lg width-full pad-300 md:pad-400">
   <div class="featured-card__title-bar color-green-darkest display-flex align-center">
-    {{ icon('docs') }}
+    {{ icon('docs', {hidden: true}) }}
     <span class="gap-left-300 flex-1 user-select-none">Docs</span>
   </div>
 
@@ -14,7 +14,7 @@
       <li>Create a test case</li>
       <li>Report the bug</li>
     </ol>
-    {% img
+    {% Img
       src="image/QMjXarRXcMarxQddwrEdPvHVM242/6sIefmW5LVABkFk32Wub.png",
       alt="Question icon inside a speech bubble",
       height="96",

@@ -16,7 +16,7 @@ tags:
   - chrome-61
 ---
 
-{% youtube id='2vJm1Gfn0ng' %}
+{% YouTube id='2vJm1Gfn0ng' %}
 
 * Chrome 61 now supports JavaScript [modules](#modules) natively, unifying the
   way modular JavaScript can be written.
@@ -60,7 +60,7 @@ affected by modules from the links below.
 
 ## Web Share API {: #share }
 
-{% img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/QUYSEpO7FD2S7aMGmIzf.png", alt="", className="float-right" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/QUYSEpO7FD2S7aMGmIzf.png", alt="", class="float-right", height="600", width="338" %}
 
 If you want users to be easily able to share your content on their favorite
 social network, you need to integrate sharing buttons into your site for

@@ -1,0 +1,35 @@
+{% if banner %}
+  {# Supports 'info' or 'warning' banners. #}
+  <announcement-banner class="banner banner--{{ banner.type or 'info' }}" storage-key="user-banner">
+    <div class="banner__inner">
+      <div class="banner__text">
+        {# These inline block wrappers are a little hack to make content #}
+        {# properly align with the last baseline. #}
+        {# https://stackoverflow.com/questions/32209427/align-flex-box-items-to-baseline-of-last-text-line-in-a-block #}
+        {# Because the button-text element has padding we can't rely on #}
+        {# align-items: last baseline. But the inline-block hack seems to #}
+        {# do the trick. #}
+        <div class="display-inline-block">
+          {{ banner.text }}
+        </div>
+      </div>
+      <div class="banner__actions">
+        <div class="display-inline-block">
+          {% if banner.actions %}
+            {% for action in banner.actions %}
+              {% if action.href %}
+                <a class="banner__action material-button button-text" href="{{ action.href }}" data-banner-close-btn>
+                  {{ action.text }}
+                </a>
+              {% else %}
+                <button class="banner__action material-button button-text" data-banner-close-btn>
+                  {{ action.text }}
+                </button>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </announcement-banner>
+{% endif %}

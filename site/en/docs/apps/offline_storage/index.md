@@ -6,13 +6,13 @@ updated: 2018-04-26
 description: How to store data client-side in your Chrome App so that it works offline.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 HTML5 introduced many storage APIs that let you store a large amount of data locally in your users'
 browsers. But the amount of space allocated for each app is, by default, restricted to a few
@@ -265,7 +265,7 @@ The plan is to put all HTML5 offline storage APIs—including IndexedDB, Applica
 System,{# LocalStorage, SessionStorage,#} and other APIs that might be specified—under the Quota
 Management API. You will be able to manage all storage allocation with it.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: #types
 [4]: #temporary

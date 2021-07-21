@@ -1,6 +1,7 @@
 {% extends "layouts/base.njk" %}
 
 {% block title_bar %}
+  {% set sharingEnabled = true %}
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 
@@ -29,6 +30,8 @@
       <div class="stack stack--block type center-images">
         {{ content | safe }}
       </div>
+
+      {% include 'partials/updated.njk' %}
     </article>
 
     {% include 'partials/toc-side.njk' %}

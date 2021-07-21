@@ -1,0 +1,121 @@
+version: 3
+
+# Global conditions that apply to all pull requests.
+# https://docs.pullapprove.com/config/pullapprove-conditions/
+pullapprove_conditions:
+# Don't tag in any reviewers if the PR is work in progress.
+- condition: '"WIP" not in title'
+  unmet_status: pending
+  explanation: 'Work in progress'
+- condition: 'not draft'
+  unmet_status: pending
+  explanation: 'Draft PR'
+
+groups:
+  # Extensions
+  # Handles any changes related to extensions, web store, and chrome apps.
+  # By default Simeon and Andy will be tagged in as reviewers, but anyone
+  # on the dcc-extensions, dcc-content, or dcc-approvers team can approve PRs.
+  extensions:
+    reviewers:
+      users:
+      - awfuchs
+      - dotproto
+      teams:
+      # Prefix a username or team with ~ to include them in the reviewer pool
+      # but skip them when sending review requests.
+      - ~dcc-extensions
+      - ~dcc-content
+      - ~dcc-eng
+      - ~dcc-approvers
+    reviews:
+      # Assign all possible reviewers
+      request: 99
+    conditions:
+      - >
+        files.include('site/en/docs/apps/*') or
+        files.include('site/en/docs/extensions/*') or
+        files.include('site/en/docs/webstore/*') or
+        files.include('site/_data/docs/apps/*') or
+        files.include('site/_data/docs/extensions/*') or
+        files.include('site/_data/docs/webstore/*') or
+        files.include('site/_data/i18n/docs/apps.yml') or
+        files.include('site/_data/i18n/docs/extensions.yml') or
+        files.include('site/_data/i18n/docs/webstore.yml')
+
+  # DevTools
+  # Handles any changes related to devtools.
+  # By default Jecelyn will be tagged in as a reviewer, but anyone
+  # on the dcc-devtools, dcc-content, dcc-eng, or dcc-approvers teams can
+  # approve PRs.
+  devtools:
+    reviewers:
+      users:
+      - chybie
+      teams:
+      # Prefix a username or team with ~ to include them in the reviewer pool
+      # but skip them when sending review requests.
+      - ~dcc-devtools
+      - ~dcc-content
+      - ~dcc-eng
+      - ~dcc-approvers
+    reviews:
+      # Assign all possible reviewers
+      request: 99
+    conditions:
+      - '"reviewers: devtools" in labels'
+      - >
+        files.include('site/en/docs/devtools/*') or
+        files.include('site/_data/docs/devtools/*') or
+        files.include('site/_data/i18n/docs/devtools.yml') or
+        files.include('site/en/blog/*').exclude('site/en/blog/blog.11tydata.js')
+
+  # Content
+  # Handles any changes related to site content.
+  content:
+    reviewers:
+      teams:
+      - ~dcc-content
+      - ~dcc-eng
+      - ~dcc-approvers
+    reviews:
+      # Assign everyone on the content team for reviews.
+      request: 99
+    conditions:
+      # Only tag the content team if the review has not been handled by
+      # one of the prior teams.
+      - 'len(groups.active) == 0'
+      - >
+        files.include('site/en/*') or
+        files.include('redirects.yaml') or
+        files.include('site/_data/docs/*') or
+        files.include('site/_data/i18n/*') or
+        files.include('site/_data/authorsData.json') or
+        files.include('site/_data/supportedTags.json')
+
+  # Code
+  # Handles any changes to programmatic files.
+  code:
+    reviewers:
+      teams:
+      - dcc-eng
+    reviews:
+      # The number of people who should be requested for review at any given
+      # time. Default is 1.
+      request: 2
+    conditions:
+      # The engineering team is the default owner for any code related files.
+      - >
+        contains_any_globs(files, [
+          '**/*.js',
+          '**/*.css',
+          '**/*.scss',
+          '**/*.html',
+          '**/*.htm',
+          '**/*.njk',
+          '**/*.toml',
+          '**/*.sh'
+        ]) or
+        files.include('*.yaml').exclude('redirects.yaml') or
+        files.include('*.yml').exclude('site/_data/docs/*').exclude('site/_data/i18n/*') or
+        files.include('*.json').exclude('site/_data/authorsData.json').exclude('site/_data/supportedTags.json')

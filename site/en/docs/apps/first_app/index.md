@@ -6,13 +6,13 @@ updated: 2015-06-22
 description: A tutorial on how to create a basic Chrome App.
 ---
 
-!!!.aside.aside--caution
+{% Aside 'caution' %}
 
 **Important:** Chrome will be removing support for Chrome Apps on all platforms. Chrome browser and
 the Chrome Web Store will continue to support extensions. [**Read the announcement**][1] and learn
 more about [**migrating your app**][2].
 
-!!!
+{% endAside %}
 
 This tutorial walks you through creating your first Chrome App. Chrome Apps are structured similarly
 to extensions so current developers will recognize the manifest and packaging methods. When you're
@@ -29,11 +29,11 @@ A Chrome App contains these components:
   modules.
 - All **icons** and other assets must be included in the package as well.
 
-!!!.aside.aside--note
+{% Aside %}
 
 **API Samples:** Want to play with the code? Check out the [hello-world][4] sample.
 
-!!!
+{% endAside %}
 
 ## Step 1: Create the manifest {: #one }
 
@@ -55,11 +55,11 @@ detail):
 }
 ```
 
-!!!.aside.aside--note
+{% Aside %}
 
 **Important:** Chrome Apps **must** use [manifest version 2][6].
 
-!!!
+{% endAside %}
 
 ## Step 2: Create the background script {: #two }
 
@@ -136,7 +136,7 @@ These command line options to Chrome may help you iterate:
 - `--app-id=ajjhbohkjpincjgiieeomimlgnll` launches an app already loaded into Chrome. It does not
   restart any previously running app, but it does launch the new app with any updated content.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: publish_app
 [4]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/hello-world
