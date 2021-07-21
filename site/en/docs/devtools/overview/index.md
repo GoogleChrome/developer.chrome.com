@@ -1,14 +1,23 @@
 ---
 layout: "layouts/doc-post.njk"
+"devtools"
+title: "Chrome DevTools"
+date: 2016-03-28
+updated: 2020-07-10
+
 title: "Overview"
 date: 2016-03-28
 #updated: YYYY-MM-DD
+
 description: "Get started with Google Chrome's built-in web developer tools."
 ---
 
 Chrome DevTools is a set of web developer tools built directly into the [Google Chrome][1] browser.
 DevTools can help you edit pages on-the-fly and diagnose problems quickly, which ultimately helps
 you build better websites, faster.
+
+"devtools"
+{% youtube id="VYyQv0CSZOE" %}
 
 {% YouTube id="VYyQv0CSZOE" %}
 
@@ -46,6 +55,17 @@ The DevTools UI can be a little overwhelming... there are so many tabs! But, if 
 to get familiar with each tab to understand what's possible, you may discover that DevTools can
 seriously boost your productivity.
 
+"devtools"
+!!!.aside.aside--note
+
+**Note:** In the DevTools docs, the top-level tabs are called panels.
+
+!!!
+
+### Device Mode {: #device-mode }
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/KCl7BybVtFjmOigO56Si.png", alt="Device Mode", width="800", height="613" %}
+=======
 {% Aside %}
 
 **Note:** In the DevTools docs, the top-level tabs are called panels.
@@ -64,6 +84,9 @@ Simulate mobile devices.
 
 ### Elements panel {: #elements }
 
+" devtools"
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UjVAPTnFGxLEc5RLDwBy.png", alt="Elements Panel", width="800", height="609" %}
+
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/UjVAPTnFGxLEc5RLDwBy.png", alt="Elements Panel", width="800", height="609" %}
 
 View and change the DOM and CSS.
@@ -78,6 +101,9 @@ View and change the DOM and CSS.
 
 ### Console panel {: #console }
 
+"devtools"
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hlgSxlGaLKLeQ45nGwUC.png", alt="Console Panel", width="800", height="469" %}
+
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/hlgSxlGaLKLeQ45nGwUC.png", alt="Console Panel", width="800", height="469" %}
 
 View messages and run JavaScript from the Console.
@@ -88,6 +114,9 @@ View messages and run JavaScript from the Console.
 - [Console API Reference][22]
 
 ### Sources panel {: #sources }
+
+"devtools"
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tYPZahEdu0RMGFFcCvyp.png", alt="Sources Panel", width="800", height="655" %}
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/tYPZahEdu0RMGFFcCvyp.png", alt="Sources Panel", width="800", height="655" %}
 
@@ -104,6 +133,9 @@ JavaScript, and save changes that you make in DevTools to disk.
 
 ### Network panel {: #network }
 
+"devtools"
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/XE91VMkc9x1jdMQR1Iep.png", alt="Network Panel", width="800", height="649" %}
+
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/XE91VMkc9x1jdMQR1Iep.png", alt="Network Panel", width="800", height="649" %}
 
 View and debug network activity.
@@ -111,6 +143,18 @@ View and debug network activity.
 - [Get Started][30]
 - [Network Issues Guide][31]
 - [Network Panel Reference][32]
+"devtools"
+
+### Performance panel {: #performance }
+
+!!!.aside.aside--note
+
+**Note:** In Chrome 58 the Timeline panel was renamed to the Performance panel.
+
+!!!
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/nCVPdzEUA2XIY5txAG1G.png", alt="Timeline Panel", width="800", height="649" %}
+
 - [Inspect Resources][43]
 
 ### Performance panel {: #performance }
@@ -133,6 +177,15 @@ Find ways to improve load and runtime performance.
 
 ### Memory panel {: #memory }
 
+"devtools"
+!!!.aside.aside--note
+
+**Note:** In Chrome 58 the Profiles panel was renamed to the Memory panel.
+
+!!!
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oR8gZtwxxhRLj77xYsWd.png", alt="Profiles Panel", width="800", height="655" %}
+
 {% Aside %}
 
 **Note:** In Chrome 58 the Profiles panel was renamed to the Memory panel.
@@ -146,6 +199,9 @@ Find ways to improve load and runtime performance.
 
 ### Application panel {: #application }
 
+"devtools"
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zVZBef8kCIP6uEm9em9y.png", alt="Application Panel", width="800", height="500" %}
+
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zVZBef8kCIP6uEm9em9y.png", alt="Application Panel", width="800", height="500" %}
 
 Inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session
@@ -154,6 +210,14 @@ storage, cookies, Application Cache, images, fonts, and stylesheets.
 - [Debug Progressive Web Apps][40]
 - [Inspect and Manage Storage, Databases, and Caches][41]
 - [Inspect and Delete Cookies][42]
+
+  "devtools"
+- [Inspect Resources][43]
+
+### Security panel {: #security }
+
+{% img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wB3jgziVHoF13hYf8Yi1.png", alt="Security Panel", width="800", height="573" %}
+
 
 ### Security panel {: #security }
 
@@ -188,6 +252,52 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [Slack][49]
 
 [1]: https://www.google.com/chrome/
+
+"devtools"
+[2]: /web/tools/chrome-devtools/open
+[3]: /web/tools/chrome-devtools/dom
+[4]: /web/tools/chrome-devtools/css
+[5]: /web/tools/chrome-devtools/javascript
+[6]: /web/tools/chrome-devtools/console/get-started
+[7]: /web/tools/chrome-devtools/speed/get-started
+[8]: /web/tools/chrome-devtools/network
+[9]: /web/tools/chrome-devtools/device-mode
+[10]: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+[11]: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
+[12]: /web/tools/chrome-devtools/dom
+[13]: /web/tools/chrome-devtools/css
+[14]: /web/tools/chrome-devtools/inspect-styles
+[15]: /web/tools/chrome-devtools/inspect-styles/edit-styles
+[16]: /web/tools/chrome-devtools/inspect-styles/edit-dom
+[17]: /web/tools/chrome-devtools/inspect-styles/animations
+[18]: /web/tools/chrome-devtools/coverage
+[19]: /web/tools/chrome-devtools/console/get-started
+[20]: /web/tools/chrome-devtools/console
+[21]: /web/tools/chrome-devtools/console/command-line-reference
+[22]: /web/tools/chrome-devtools/console/console-reference
+[23]: /web/tools/chrome-devtools/javascript
+[24]: /web/tools/chrome-devtools/javascript/breakpoints
+[25]: /web/tools/setup/setup-workflow
+[26]: /web/tools/chrome-devtools/snippets
+[27]: /web/tools/chrome-devtools/javascript/reference
+[28]: /web/updates/2018/01/devtools#overrides
+[29]: /web/tools/chrome-devtools/coverage
+[30]: /web/tools/chrome-devtools/network-performance
+[31]: /web/tools/chrome-devtools/network-performance/issues
+[32]: /web/tools/chrome-devtools/network-performance/reference
+[33]: /web/tools/chrome-devtools/speed/get-started
+[34]: /web/tools/chrome-devtools/evaluate-performance
+[35]: /web/tools/chrome-devtools/evaluate-performance/reference
+[36]: /web/tools/chrome-devtools/rendering-tools
+[37]: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
+[38]: /web/tools/chrome-devtools/memory-problems
+[39]: /web/tools/chrome-devtools/rendering-tools/js-execution
+[40]: /web/tools/chrome-devtools/progressive-web-apps
+[41]: /web/tools/chrome-devtools/manage-data/local-storage
+[42]: /web/tools/chrome-devtools/manage-data/cookies
+[43]: /web/tools/chrome-devtools/manage-data/page-resources
+[44]: /web/tools/chrome-devtools/security
+
 [2]: /docs/devtools/open
 [3]: /docs/devtools/dom
 [4]: /docs/devtools/css
