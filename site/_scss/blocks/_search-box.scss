@@ -111,7 +111,7 @@ search-box[active] {
   margin: get-size(300) auto 0 auto;
 
   @include media-query('md') {
-    display: initial;
+    display: block;
     margin: 0 get-size(300) 0 get-size(300);
   }
 }
