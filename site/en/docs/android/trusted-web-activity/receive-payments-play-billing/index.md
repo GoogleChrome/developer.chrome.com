@@ -208,8 +208,8 @@ try {
 
     // Call backend to validate the purchase.
     if (validatePurchaseOnBackend(purchaseToken)) {
-        // Acknowledge using the Digital Goods API. Use ‘onetime' for items
-        // that can only be purchased once and ‘repeatable for items
+        // Acknowledge using the Digital Goods API. Use 'onetime' for items
+        // that can only be purchased once and 'repeatable' for items
         // that can be purchased multiple times.
         await service.acknowledge(purchaseToken, 'onetime');
 
