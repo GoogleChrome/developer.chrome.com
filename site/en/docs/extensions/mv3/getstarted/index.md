@@ -57,7 +57,7 @@ manifest, a generic icon will be created for the extension.
 The extension is now installed, but it doesn't currently do anything because we haven't told it what
 to do or when to do it. Let's fix that by adding some code to store a background color value.
 
-### Register the background script in the manifest {: #background_manifest }
+### Register the background script in the manifest {: #background-manifest }
 
 Background scripts, like many other important components, must be registered in the manifest.
 Registering a background script in the manifest tells the extension which file to reference, and how
@@ -79,7 +79,7 @@ Chrome is now aware that the extension includes a service worker. When you reloa
 Chrome will scan the specified file for additional instructions, such as important events it needs
 to listen for.
 
-### Create the background script {: #background_script }
+### Create the background script {: #background-script }
 
 This extension will need information from a persistent variable as soon as it's installed. Start by
 including a listening event for [`runtime.onInstalled`][11] in the background script. Inside the
@@ -87,6 +87,8 @@ including a listening event for [`runtime.onInstalled`][11] in the background sc
 multiple extension components to access that value and update it. Inside the extension's directory create a file named `background.js` and add the following code.
 
 ```js
+// background.js
+
 let color = '#3aa757';
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -95,7 +97,7 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 ```
 
-### Add the storage permission {: #storage_permission }
+### Add the storage permission {: #storage-permission }
 
 Most APIs, including the [storage][12] API, must be registered under the `"permissions"` field in
 the manifest for the extension to use them.
@@ -113,7 +115,7 @@ the manifest for the extension to use them.
 }
 ```
 
-### Inspect the background script
+### Inspect the background script {: #inspect-background }
 
 Navigate back to the extension management page and click the **Reload** link. A new field, **Inspect
 views**, becomes available with a blue link, **service worker**.
@@ -244,8 +246,7 @@ By default, extensions appear in the extensions menu (the puzzle piece). Pinning
 If the extension is reloaded at this stage, it will include the provided icon rather than the
 default placeholder, and clicking the action will open a popup that displays a button showing the default color.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/j3Ff3oF0tEl9tE5ed6L0.png",
-       alt="Popup", height="99", width="73" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ku5Z8MMssgw6MKctpJVI.png", alt="Popup", width="187", height="153" %}
 
 The last step for the popup UI is adding color to the button. Create and add a file named
 `popup.js` with the following code to the extension's directory.
