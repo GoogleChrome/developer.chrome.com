@@ -22,7 +22,7 @@ import {LanguageSelect} from 'webdev-infra/web-components/LanguageSelect';
 /**
  * @type {HTMLElement}
  */
-class LanguageSelect_ extends LanguageSelect {
+class DccLanguageSelect extends LanguageSelect {
   constructor() {
     super();
     this.current = 'en';
@@ -44,4 +44,4 @@ class LanguageSelect_ extends LanguageSelect {
 }
 
 // @ts-ignore
-customElements.define('language-select', LanguageSelect_);
+customElements.define('language-select', DccLanguageSelect);
