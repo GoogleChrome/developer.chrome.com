@@ -23,9 +23,10 @@ the tasks of rendering are:
 1. _Scroll_ in response to input.
 1. _Route input_ efficiently to the right places so that developer scripts and other subsystems can respond.
 
-The contents to render are a stream of raw input events from touch screens,
+The _contents_ to render are a tree of _frames_ for each browser tab, plus the browser UI.
+And, a stream of raw input events from touch screens,
 mice, keyboards, and other hardware devices.
-And, a tree of frames for each browser tab, plus the browser UI.
+
 Each frame includes:
 
 1. DOM state
@@ -306,7 +307,7 @@ src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/5pqtEVTK9xbbB7sc2s87.jpeg",
 alt="A diagram of the Blink renderer.", width="800", height="464" %}
 
 - _Blink renderer:_
-  - The _local frame tree_ represents the tree of local frames and the DOM within frames.
+  - The _local frame tree fragment_ represents the tree of local frames and the DOM within frames.
   - The _DOM and Canvas APIs_ component contains implementations of all of these APIs.
   - The _document lifecycle runner_ executes the rendering pipeline steps up to and including the commit step.
   - The _input event hit testing and dispatching_ component executes hit tests to find out which
@@ -318,7 +319,7 @@ It schedules rendering to happen at a cadence matching the device display.
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/RKXD237nuR9aHxw6O2Mc.jpeg",
 alt="A diagram of the frame tree.", width="800", height="629" %}
 
-_Local frame trees_ are a bit complicated to think about.
+_Local frame tree fragments_ are a bit complicated to think about.
 Recall that a frame tree is the main page and its child iframes, recursively.
 A frame is _local_ to a render process if it is rendered in that process,
 and otherwise it is _remote_.
