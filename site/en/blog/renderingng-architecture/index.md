@@ -327,7 +327,7 @@ You can imagine coloring frames according to their render process.
 In the preceding image, the green circles are all frames in one render process;
 the red ones are in a second, and the blue one is in a third.
 
-A local frame tree is a connected component of the same color in a frame tree.
+A local frame tree fragment is a connected component of the same color in a frame tree.
 There are four local frame trees in the image: two for site A, one for site B, and one for site C.
 Each local frame tree gets its own Blink renderer component.
 A local frame tree's Blink renderer may or may not be in the same render process as other local frame trees
