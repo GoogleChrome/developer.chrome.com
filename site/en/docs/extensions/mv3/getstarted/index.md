@@ -47,8 +47,7 @@ current state.
 2.  Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
 3.  Click the **Load unpacked** button and select the extension directory.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iYdLKFsJ1KSVGLhbLRvS.png",
-       alt="Load Extension", height="337", width="606" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vOu7iPbaapkALed96rzN.png", alt="Loading an unpacked extension", width="563", height="355" %}
 
 Ta-da! The extension has been successfully installed. Because no icons were included in the
 manifest, a generic icon will be created for the extension.
@@ -58,8 +57,11 @@ manifest, a generic icon will be created for the extension.
 The extension is now installed, but it doesn't currently do anything because we haven't told it what
 to do or when to do it. Let's fix that by adding some code to store a background color value.
 
-To do this, we will need to create a [background script][1] and add it to the extension's manifest.
-Start by creating a file named `background.js` inside the extension's directory.
+### Register the background script in the manifest {: #background-manifest }
+
+Background scripts, like many other important components, must be registered in the manifest.
+Registering a background script in the manifest tells the extension which file to reference, and how
+that file should behave.
 
 ```json/5-7
 {
@@ -73,20 +75,20 @@ Start by creating a file named `background.js` inside the extension's directory.
 }
 ```
 
-Background scripts, like many other important components, must be registered in the manifest.
-Registering a background script in the manifest tells the extension which file to reference, and how
-that file should behave.
-
 Chrome is now aware that the extension includes a service worker. When you reload the extension,
 Chrome will scan the specified file for additional instructions, such as important events it needs
 to listen for.
 
+### Create the background script {: #background-script }
+
 This extension will need information from a persistent variable as soon as it's installed. Start by
 including a listening event for [`runtime.onInstalled`][11] in the background script. Inside the
 `onInstalled` listener, the extension will set a value using the [storage][12] API. This will allow
-multiple extension components to access that value and update it.
+multiple extension components to access that value and update it. Inside the extension's directory create a file named `background.js` and add the following code.
 
 ```js
+// background.js
+
 let color = '#3aa757';
 
 chrome.runtime.onInstalled.addListener(() => {
@@ -94,6 +96,8 @@ chrome.runtime.onInstalled.addListener(() => {
   console.log('Default background color set to %cgreen', `color: ${color}`);
 });
 ```
+
+### Add the storage permission {: #storage-permission }
 
 Most APIs, including the [storage][12] API, must be registered under the `"permissions"` field in
 the manifest for the extension to use them.
@@ -111,11 +115,12 @@ the manifest for the extension to use them.
 }
 ```
 
-Navigate back to the extension management page and click the **Reload** link. A new field, **Inspect
-views**, becomes available with a blue link, **background page**.
+### Inspect the background script {: #inspect-background }
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/V96EHNVYQLVsjURz4Naz.png",
-       alt="Inspect Views", height="337", width="606" %}
+Navigate back to the extension management page and click the **Reload** link. A new field, **Inspect
+views**, becomes available with a blue link, **service worker**.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/dx9EpIKK949olhe8qraK.png", alt="Inspect views", width="566", height="353" %}
 
 Click the link to view the background script's console log, "`Default background color set to
 green`"
@@ -234,11 +239,14 @@ favicon. These images are designated in the manifest under [`icons`][19].
 }
 ```
 
+By default, extensions appear in the extensions menu (the puzzle piece). Pinning the extension will display the icon in the toolbar.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GdHNy255kS4hWD5vb1fc.png", alt="Pin the extension to the toolbar", width="502", height="278" %}
+
 If the extension is reloaded at this stage, it will include the provided icon rather than the
 default placeholder, and clicking the action will open a popup that displays a button showing the default color.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/j3Ff3oF0tEl9tE5ed6L0.png",
-       alt="Popup", height="99", width="73" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ku5Z8MMssgw6MKctpJVI.png", alt="Popup", width="187", height="153" %}
 
 The last step for the popup UI is adding color to the button. Create and add a file named
 `popup.js` with the following code to the extension's directory.
@@ -354,15 +362,9 @@ Then register the options page in the manifest,
 }
 ```
 
-Reload the extension and click **DETAILS**.
+Reload the extension and right-click the extension icon in the toolbar then select **Options**. Alternatively, click DETAILS and scroll down the details page and select **Extension options**.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/3fNrYEoJMOPQ00L7tBtp.png",
-       alt="Inspect Views", height="337", width="606" %}
-
-Scroll down the details page and select **Extension options** to view the options page.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/z1VEYxYlJev7llaXIQUL.png",
-       alt="Extension Options", height="726", width="645" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/aV46PP8KCjEqqenSJxxp.png", alt="Right click to open the options page", width="248", height="260" %}
 
 The last step is to add the options logic. Create a file named `options.js` in the extension's
 directory with the following code.
