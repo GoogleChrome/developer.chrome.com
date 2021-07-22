@@ -160,8 +160,9 @@ key:
 * Manually:
     1. Open the [Google Play Console](https://play.google.com/apps/publish/).
     2. Select your app.
-    3. Choose **Release management** and then **App signing** from the panel on the left.
-    4. Copy the **SHA-256 certificate fingerprint** from under the **App signing certificate**
+    3. Choose **Setup** under the **Release** section, and then click **App integrity** from the panel on the left.
+    4. Click on **Create Release** and then **Create new release** (if you are releasing for the first time on Play Store). Follow the steps on the next screens.
+    5. Copy the **SHA-256 certificate fingerprint** from under the **App signing certificate**
        section.
     5. Use this value in your Digital Asset Link file.
 
