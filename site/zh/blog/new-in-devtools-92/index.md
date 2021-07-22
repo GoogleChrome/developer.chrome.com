@@ -23,6 +23,7 @@ tags:
 {% YouTube id="2baY3JpCxpo" %}
 
 ## CSS 网格编辑器 {: #grid-editor }
+
 一个呼声很高的功能。您现在可以用新的 CSS 网格编辑器预览并编辑 CSS 网格了！
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mV9Ac7QAD8vVPoiqmii6.png", alt="CSS 网格编辑器", width="800", height="486" %}
@@ -35,6 +36,7 @@ Chromium 议题: [1203241](https://crbug.com/1203241)
 
 
 ## 支持控制台中的 const 重声明 {: #const-redeclaration }
+
 在已有的对[`let` 和 `class` 重声明](/blog/new-in-devtools-80/#redeclarations)的支持之上，控制台现在也支持 const 重声明了。对于使用控制台来试验新 JavaScript 代码的 Web 开发者来说，无法重声明曾是一个常见的困扰。
 
 该功能允许开发者将代码复制粘贴进 DevTools 控制台，试运行它，对代码进行小的调整，再重复这个过程，并且不需要刷新页面。在此之前，如果控制台中的代码重声明了一个 `const` 变量，DevTools 会抛出一个语法错误。
@@ -52,6 +54,7 @@ Chromium 议题: [1076427](https://crbug.com/1076427)
 
 
 ## 来源顺序查看器 {: #source-order }
+
 您现在可以在屏幕上查看元素的来源顺序，从而更好地检查无障碍功能。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2QoBtjGjFxgDAkKaO3y2.png", alt="来源顺序查看器", width="800", height="515" %}
@@ -64,6 +67,7 @@ Chromium 议题: [1094406](https://crbug.com/1094406)
 
 
 ## 查看 iframe 详细信息的新快捷方式 {: #frame-details }
+
 右键点击“元素”面板中的 iframe 元素，选择**显示 iframe 详细信息**。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YdENg6wjsgPNyMODdOHC.png", alt="显示 iframe 详细信息", width="800", height="486" %}
@@ -78,6 +82,7 @@ Chromium 议题: [1192084](https://crbug.com/1192084)
 
 
 ## 增强的跨域资源共享调试支持 {: #cors }
+
 从现在起，“问题”标签页将会展示跨域资源共享（CORS）的错误。这些 CORS 错误可能由多种原因造成。点击展开每一个问题即可了解潜在的原因及其解决方案。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UpiZQCNnlENB8ZluzeFt.png", alt="问题标签页的 CORS 问题", width="800", height="490" %}
@@ -102,6 +107,7 @@ Chromium 议题: [1141824](https://crbug.com/1141824)
 ## “网络”面板的更新 {: #network }
 
 ### 重命名 XHR 标签为 Fetch/XHR {: #fetch-xhr }
+
 XHR 标签现被重命名为 **Fetch/XHR**。 这项更新可以让开发者更明确，该过滤项同时包含 [`XMLHttpRequest`](https://xhr.spec.whatwg.org/) 以及 [Fetch API](https://fetch.spec.whatwg.org/) 网络请求。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/I0QOVTO52JRpl0jJO6Zt.png", alt="Fetch/XHR 标签", width="800", height="516" %}
@@ -112,6 +118,7 @@ Chromium 议题: [1201398](https://crbug.com/1201398)
 
 
 ### 在“网络”面板中过滤 Wasm 资源类型 {: #wasm }
+
 您现在可以点击新的 **Wasm** 按钮来过滤 Wasm 网络请求。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vuTMcfCjDWFfVtDN6Dpf.png", alt="按 Wasm 过滤", width="800", height="515" %}
@@ -122,6 +129,7 @@ Chromium 议题: [1103638](https://crbug.com/1103638)
 
 
 ### “网络状况”标签页中设备的用户代理客户端提示 {: #sec-ua-ch }
+
 [用户代理客户端提示](https://web.dev/user-agent-client-hints) 现已应用于 **网络状况** 标签页下**用户代理**字段中的设备。
 
 用户代理客户端提示是客户端提示 API 的新扩展，使得开发者可以在保护用户隐私的前提下，有效地获取用户浏览器的信息。
@@ -149,6 +157,7 @@ Chromium 议题: [622660](https://crbug.com/622660)
 
 
 ## 在“性能”面板中添加“计算相交部分” {: #computed-intersections }
+
 DevTools 现在会在火焰图中显示**计算相交部分**了。这项更新可以帮助您发现 [intersection observers](https://web.dev/intersectionobserver-v2/) 事件，并调试这些事件潜在的性能开销。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Nx3K0Lpst0lICGbtpzsW.png", alt="性能面板中的计算相交部分", width="800", height="496" %}
