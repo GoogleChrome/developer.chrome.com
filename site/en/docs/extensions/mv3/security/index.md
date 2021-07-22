@@ -49,14 +49,14 @@ specified in the permissions.
   "description": "Example of a Secure Extension",
   "permissions": [
     "https://developer.chrome.com/*",
-    "https://*.google.com/"
+    "https://*.google.com/*"
   ],
   "manifest_version": 2
 }
 ```
 
 This extension requests access to anything on developer.chrome.com and subdomains of Google by
-listing `"https://developer.chrome.com/*"` and `"https://*.google.com/"` in the permissions. If the
+listing `"https://developer.chrome.com/*"` and `"https://*.google.com/*"` in the permissions. If the
 extension were compromised, it would still only have permission to interact with websites that meet
 the [match pattern][7]. The attacker would not be able to access `"https://user_bank_info.com"` or
 interact with `"https://malicious_website.com"`.
@@ -82,7 +82,7 @@ trusted sources.
     ],
     "matches": [
       "https://developer.chrome.com/*",
-      "https://*.google.com/"
+      "https://*.google.com/*"
     ],
     "accepts_tls_channel_id": false
   },
