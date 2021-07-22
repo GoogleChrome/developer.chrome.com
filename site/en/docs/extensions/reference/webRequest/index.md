@@ -145,7 +145,7 @@ server may allow the CORS access for the modified request and put the header's `
 {% endAside %}
 
 Starting from Chrome 72, if you need to modify responses before [Cross Origin Read Blocking
-(CORB)][8] can block the response, you need to specify `'extraHeaders'` in `opt_extraInfpSpec`.
+(CORB)][8] can block the response, you need to specify `'extraHeaders'` in `opt_extraInfoSpec`.
 
 Starting from Chrome 72, the following request headers are **not provided** and cannot be modified
 or removed without specifying `'extraHeaders'` in `opt_extraInfoSpec`:
