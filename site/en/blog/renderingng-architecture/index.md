@@ -441,7 +441,7 @@ alt="", width="800", height="456" %}
 1. The compositor determines if the main thread needs to know about the event.
 1. The event is sent, if necessary, to the main thread.
 1. The main thread fires input event listeners
-(pointerdown, touchstar, pointermove, touchmove or wheel)
+(`pointerdown`, `touchstar`, `pointermove`, `touchmove` or `wheel`)
 to see if listeners will call preventDefault the event.
 1. The main thread returns whether preventDefault was called to the compositor.
 1. If not, the input event is sent back to the browser process.
