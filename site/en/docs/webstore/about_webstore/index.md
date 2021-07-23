@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: What is the Chrome Web Store?
 date: 2015-03-21
+updated: 2021-07-28
 description: >
   An explanation of the Chrome Web Store and why you might want to use it.
 ---
@@ -20,10 +21,11 @@ build Chrome-specific features into it.
 
 ## How do I start?
 
-1.  Read the [technical overview][4]
-2.  Publish your first extension by following the steps in [Publish in the Chrome Web Storel][5]
+1.  Learn more about Chrome Extensions [technical overview][4]
+2.  Publish your first extension by following the steps in [Publish in the Chrome Web Store][5]
 
 [1]: http://chrome.google.com/webstore
 [3]: https://chrome.google.com/webstore/developer/dashboard
-[4]: /docs/webstore/overview
+[4]: /docs/extensions/mv3/overview/
 [5]: /docs/webstore/publish
+
