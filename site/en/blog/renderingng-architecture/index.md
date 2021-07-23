@@ -450,7 +450,7 @@ to see if listeners will call `preventDefault` on the event.
 1. The scroll is applied there, and the compositor thread for the bar.com
 render process ticks an animation in its compositor event loop.
 This then mutates scroll offset in the property trees and re-runs the compositor lifecycle.
-It also tells the main thread to fire a scroll event (not depicted here).
+It also tells the main thread to fire a `scroll` event (not depicted here).
 1. A compositor frame is sent to Viz.
 1. Viz aggregates the compositor frames for the foo.com render process,
 the bar.com render process, and the browser UI.
