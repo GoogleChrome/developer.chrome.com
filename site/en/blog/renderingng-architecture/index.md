@@ -29,10 +29,10 @@ mice, keyboards, and other hardware devices.
 
 Each frame includes:
 
-1. DOM state
-1. CSS
-1. Canvases
-1. External resources, such as images, video, fonts, and SVG
+- DOM state
+- CSS
+- Canvases
+- External resources, such as images, video, fonts, and SVG
 
 A _frame_ is an HTML document, plus its URL.
 A web page loaded in a browser tab has a top-level frame,
