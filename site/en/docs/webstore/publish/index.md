@@ -61,8 +61,6 @@ of your personal account, we suggest using a dedicated account.
 Before you can publish on the Chrome Web Store, you need to [register as a Chrome Web Store
 developer][10]. We suggest using a new account just for your item instead of your personal account.
 
-<div class="aside aside--note">On your developer account, the <strong>email address</strong> field is required. You cannot publish items if this field is blank.</div>
-
 If you already host your item in Google Play and you want your Chrome Web Store listing to show an
 "Available for Android" link, your item must have the same name as your Google Play listing, and
 both items must be owned by the same developer account. To transfer your Chrome Web Store item to a
