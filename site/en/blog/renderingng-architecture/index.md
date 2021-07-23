@@ -206,7 +206,7 @@ hit testing, script event dispatching, and parsing of HTML, CSS and other data f
 performs scrolling and animations of web content,
 computes optimal layerization of web content,
 and coordinates image decodes, paint worklets and raster tasks.
-  - _Compositor thread helpers:_ coordinate Viz raster tasks,
+  - _Compositor thread helpers_ coordinate Viz raster tasks,
   and execute image decode tasks, paint worklets and fallback raster.
 - _Media, demuxer or audio output threads_ decode,
 process and synchronize video and audio streams.
