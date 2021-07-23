@@ -442,8 +442,8 @@ alt="", width="800", height="456" %}
 1. The event is sent, if necessary, to the main thread.
 1. The main thread fires input event listeners
 (`pointerdown`, `touchstar`, `pointermove`, `touchmove` or `wheel`)
-to see if listeners will call preventDefault the event.
-1. The main thread returns whether preventDefault was called to the compositor.
+to see if listeners will call `preventDefault` on the event.
+1. The main thread returns whether `preventDefault` was called to the compositor.
 1. If not, the input event is sent back to the browser process.
 1. The browser process converts it to a scroll gesture by combining it with other recent events.
 1. The scroll gesture is sent once again to baz.com's render process compositor thread,
