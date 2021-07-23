@@ -436,11 +436,11 @@ To _scroll_ the web page on tab three:
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/BTQMujxRdySU0rsgydwB.jpeg",
 alt="", width="800", height="456" %}
 
-1. A sequence of input events (mouse, touch or keyboard) come to the browser process.
+1. A sequence of `input` events (mouse, touch or keyboard) come to the browser process.
 1. Each event is routed to baz.com's render process compositor thread.
 1. The compositor determines if the main thread needs to know about the event.
 1. The event is sent, if necessary, to the main thread.
-1. The main thread fires input event listeners
+1. The main thread fires `input` event listeners
 (`pointerdown`, `touchstar`, `pointermove`, `touchmove` or `wheel`)
 to see if listeners will call `preventDefault` on the event.
 1. The main thread returns whether `preventDefault` was called to the compositor.
@@ -463,19 +463,19 @@ because the scroll has already begun and at that point scripts can observe it vi
 but no longer interrupt.
 {% endAside %}
 
-To _route_ a click event on a hyperlink in iframe #two on tab one:
+To _route_ a `click` event on a hyperlink in iframe #two on tab one:
 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/GnXCsuXJkNegGDMQAhnx.jpeg",
 alt="", width="800", height="488" %}
 
-1. An input event (mouse, touch or keyboard) comes to the browser process.
+1. An `input` event (mouse, touch or keyboard) comes to the browser process.
 It performs an approximate hit test
 to determine that the bar.com iframe render process should receive the click, and sends it there.
-1. The compositor thread for bar.com routes the click event to the main thread
+1. The compositor thread for bar.com routes the `click` event to the main thread
 for bar.com and schedules a rendering event loop task to process it.
 1. The input event processor for bar.com's main thread hit tests to determine which
-DOM element in the iframe was clicked, and fires a click event for scripts to observe.
-Hearing no preventDefault, it navigates to the hyperlink.
+DOM element in the iframe was clicked, and fires a `click` event for scripts to observe.
+Hearing no `preventDefault`, it navigates to the hyperlink.
 1. Upon load of destination page of the hyperlink, the new state is rendered,
 with steps similar to the "render changed DOM" example above.
 (These subsequent changes are not depicted here.)
