@@ -72,9 +72,9 @@ _Key Data Structures and their roles in RenderingNG_.
 
 In the preceeding diagram, stages are notated with colors indicating in which thread or process they execute:
 
-- Render process main thread: green
-- Render process compositor: yellow
-- Viz process: orange
+- **Green:** render process main thread
+- **Yellow:** render process compositor
+- **Orange:** viz process
 
 In some cases they can execute in multiple places,
 depending on the circumstance,
