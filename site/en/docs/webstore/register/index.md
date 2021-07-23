@@ -11,10 +11,10 @@ account; here are some tips about which email to use:
 
 * It's a good idea to decouple your personal account and your Chrome Web Store publishing account.
   That's why we suggest using a new email account just for publishing your Chrome Web Store items.
-* If you recently deleted your Chrome Web Store developer account, you can't reuse its associated
+* If you recently [deleted your Chrome Web Store developer account][1], you can't reuse its associated
   email identity to create a new one. 
   {% Aside 'warning' %}
-  If you requested the deletion of your account by mistake, please contact developer support
+  If you requested the deletion of your account by mistake, please [contact developer support][2]
   immediately.
   {% endAside %}
 * Make sure to check this address frequently so that you're aware of any important alerts or
@@ -22,7 +22,7 @@ account; here are some tips about which email to use:
 
 
 
-To register, just access the [developer console][1]. The first time you do this, a registration
+To register, just access the [developer console][3]. The first time you do this, a registration
 screen appears as shown here:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/adH2VFqS92VdzPTjsHtB.png", 
@@ -33,4 +33,6 @@ again.
 
 <div class="aside aside--note"><a href="/docs/webstore/group-publishers/"><strong>Group publishers</strong></a> note that only members of the group who've paid the registration fee can publish updates.</div>
 
-[1]: https://chrome.google.com/webstore/devconsole
+[1]: /docs/webstore/account-deletion/
+[2]: https://support.google.com/chrome_webstore/contact/one_stop_support
+[3]: https://chrome.google.com/webstore/devconsole
