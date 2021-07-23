@@ -6,7 +6,7 @@ description: >
   An explanation of the Chrome Web Store and why you might want to use it.
 ---
 
-The [Chrome Web Store][1] lets you publish apps and extensions&mdash;either free or paid&mdash;where Google Chrome
+The [Chrome Web Store][1] lets you publish extensions&mdash;either free or paid&mdash;where Google Chrome
 users can easily find them. 
 
 Your published item can be free, or you can charge for it using any payment system you like.
@@ -15,7 +15,7 @@ To upload and publish items, use the [Chrome Developer Dashboard][3].
 
 ## Why should I use the Chrome Web Store?
 
-Publishing your app or extension in the Chrome Web Store lets you reach more people. You can also earn revenue or
+Publishing your extension in the Chrome Web Store lets you reach more people. You can also earn revenue or
 build Chrome-specific features into it.
 
 ## How do I start?
