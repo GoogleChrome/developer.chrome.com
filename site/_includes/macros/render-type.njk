@@ -207,7 +207,7 @@
 {% macro renderComment(prop) %}
   {{ renderAvailabilityFeature(prop.feature, prop) }}
   {% if prop.deprecated %}
-    <p class="code-sections__deprecated">{{ prop.deprecated | mdInline | safe }}<p>
+    <p class="code-sections__deprecated">{{ prop.deprecated | mdInline | safe }}</p>
   {% endif %}
   {# This |md filter will add <p> as appropriate. #}
   {{ prop.description | md | safe }}

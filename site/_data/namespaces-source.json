@@ -1,0 +1,5734 @@
+[
+  {
+    "id": 2,
+    "name": "cache/node_modules/workbox-core",
+    "kind": 1,
+    "kindString": "Module",
+    "flags": {
+      "isExternal": true
+    },
+    "children": [
+      {
+        "id": 335,
+        "name": "CacheDidUpdateCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 103,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 336,
+            "name": "CacheDidUpdateCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 337,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 328,
+                  "name": "CacheDidUpdateCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 328,
+        "name": "CacheDidUpdateCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 329,
+            "name": "cacheName",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 96,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "id": 332,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 99,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 330,
+            "name": "newResponse",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 97,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Response"
+            }
+          },
+          {
+            "id": 333,
+            "name": "oldResponse",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 100,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Response"
+            }
+          },
+          {
+            "id": 331,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 98,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 334,
+            "name": "state",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 101,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 291,
+              "name": "MapLikeObject"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              329,
+              332,
+              330,
+              333,
+              331,
+              334
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 95,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 344,
+        "name": "CacheKeyWillBeUsedCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 113,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 345,
+            "name": "CacheKeyWillBeUsedCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 346,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 338,
+                  "name": "CacheKeyWillBeUsedCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "union",
+                  "types": [
+                    {
+                      "type": "intrinsic",
+                      "name": "string"
+                    },
+                    {
+                      "type": "reference",
+                      "name": "Request"
+                    }
+                  ]
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 338,
+        "name": "CacheKeyWillBeUsedCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 341,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 109,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 339,
+            "name": "mode",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 107,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "id": 342,
+            "name": "params",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 110,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "intrinsic",
+              "name": "any"
+            }
+          },
+          {
+            "id": 340,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 108,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 343,
+            "name": "state",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 111,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 291,
+              "name": "MapLikeObject"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              341,
+              339,
+              342,
+              340,
+              343
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 106,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 352,
+        "name": "CacheWillUpdateCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 122,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 353,
+            "name": "CacheWillUpdateCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 354,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 347,
+                  "name": "CacheWillUpdateCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "union",
+                  "types": [
+                    {
+                      "type": "intrinsic",
+                      "name": "void"
+                    },
+                    {
+                      "type": "reference",
+                      "name": "Response"
+                    }
+                  ]
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 347,
+        "name": "CacheWillUpdateCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 350,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 119,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 348,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 117,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 349,
+            "name": "response",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 118,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Response"
+            }
+          },
+          {
+            "id": 351,
+            "name": "state",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 120,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 291,
+              "name": "MapLikeObject"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              350,
+              348,
+              349,
+              351
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 116,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 362,
+        "name": "CachedResponseWillBeUsedCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 133,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 363,
+            "name": "CachedResponseWillBeUsedCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 364,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 355,
+                  "name": "CachedResponseWillBeUsedCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "union",
+                  "types": [
+                    {
+                      "type": "intrinsic",
+                      "name": "void"
+                    },
+                    {
+                      "type": "reference",
+                      "name": "Response"
+                    }
+                  ]
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 355,
+        "name": "CachedResponseWillBeUsedCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 356,
+            "name": "cacheName",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 126,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "intrinsic",
+              "name": "string"
+            }
+          },
+          {
+            "id": 358,
+            "name": "cachedResponse",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 128,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Response"
+            }
+          },
+          {
+            "id": 359,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 129,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 360,
+            "name": "matchOptions",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 130,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "CacheQueryOptions"
+            }
+          },
+          {
+            "id": 357,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 127,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 361,
+            "name": "state",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 131,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 291,
+              "name": "MapLikeObject"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              356,
+              358,
+              359,
+              360,
+              357,
+              361
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 125,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 371,
+        "name": "FetchDidFailCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 143,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 372,
+            "name": "FetchDidFailCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 373,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 365,
+                  "name": "FetchDidFailCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 365,
+        "name": "FetchDidFailCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 366,
+            "name": "error",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 137,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Error"
+            }
+          },
+          {
+            "id": 369,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 140,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 367,
+            "name": "originalRequest",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 138,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 368,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 139,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 370,
+            "name": "state",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 141,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 291,
+              "name": "MapLikeObject"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              366,
+              369,
+              367,
+              368,
+              370
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 136,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 379,
+        "name": "FetchDidSucceedCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 152,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 380,
+            "name": "FetchDidSucceedCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 381,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 374,
+                  "name": "FetchDidSucceedCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "reference",
+                  "name": "Response"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 374,
+        "name": "FetchDidSucceedCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 377,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 149,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 375,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 147,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 376,
+            "name": "response",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 148,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Response"
+            }
+          },
+          {
+            "id": 378,
+            "name": "state",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 150,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 291,
+              "name": "MapLikeObject"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              377,
+              375,
+              376,
+              378
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 146,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 414,
+        "name": "HandlerDidCompleteCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 197,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 415,
+            "name": "HandlerDidCompleteCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 416,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 408,
+                  "name": "HandlerDidCompleteCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 408,
+        "name": "HandlerDidCompleteCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 410,
+            "name": "error",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 192,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Error"
+            }
+          },
+          {
+            "id": 411,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 193,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 409,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 191,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 412,
+            "name": "response",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 194,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Response"
+            }
+          },
+          {
+            "id": 413,
+            "name": "state",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 195,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 291,
+              "name": "MapLikeObject"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              410,
+              411,
+              409,
+              412,
+              413
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 190,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 397,
+        "name": "HandlerDidErrorCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 178,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 398,
+            "name": "HandlerDidErrorCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 399,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "name": "HandlerDidErrorCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "reference",
+                  "name": "Response"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 405,
+        "name": "HandlerDidRespondCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 187,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 406,
+            "name": "HandlerDidRespondCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 407,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 400,
+                  "name": "HandlerDidRespondCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 400,
+        "name": "HandlerDidRespondCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 402,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 183,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 401,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 182,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 403,
+            "name": "response",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 184,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Response"
+            }
+          },
+          {
+            "id": 404,
+            "name": "state",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 185,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 291,
+              "name": "MapLikeObject"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              402,
+              401,
+              403,
+              404
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 181,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 394,
+        "name": "HandlerWillRespondCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 169,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 395,
+            "name": "HandlerWillRespondCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 396,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 389,
+                  "name": "HandlerWillRespondCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "reference",
+                  "name": "Response"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 389,
+        "name": "HandlerWillRespondCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 392,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 166,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 390,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 164,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 391,
+            "name": "response",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 165,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Response"
+            }
+          },
+          {
+            "id": 393,
+            "name": "state",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 167,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 291,
+              "name": "MapLikeObject"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              392,
+              390,
+              391,
+              393
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 163,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 325,
+        "name": "HandlerWillStartCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 92,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 326,
+            "name": "HandlerWillStartCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 327,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 321,
+                  "name": "HandlerWillStartCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 321,
+        "name": "HandlerWillStartCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 323,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 89,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 322,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 88,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 324,
+            "name": "state",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 90,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 291,
+              "name": "MapLikeObject"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              323,
+              322,
+              324
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 87,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 315,
+        "name": "ManualHandlerCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 69,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 316,
+            "name": "ManualHandlerCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "The \"handler\" callback is invoked whenever a `Router` matches a URL/Request\nto a `Route` via its `RouteMatchCallback`. This handler callback should\nreturn a `Promise` that resolves with a `Response`.",
+              "text": "If a non-empty array or object is returned by the `RouteMatchCallback` it\nwill be passed in as this handler's `options.params` argument.\n"
+            },
+            "parameters": [
+              {
+                "id": 317,
+                "name": "options",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 308,
+                  "name": "ManualHandlerCallbackOptions"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "reference",
+                  "name": "Response"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 308,
+        "name": "ManualHandlerCallbackOptions",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "comment": {
+          "shortText": "Options passed to a `ManualHandlerCallback` function."
+        },
+        "children": [
+          {
+            "id": 309,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 46,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 310,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 47,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "intrinsic",
+                  "name": "string"
+                },
+                {
+                  "type": "reference",
+                  "name": "Request"
+                }
+              ]
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              309,
+              310
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 45,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 291,
+        "name": "MapLikeObject",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 2,
+            "character": 17
+          }
+        ],
+        "indexSignature": {
+          "id": 292,
+          "name": "__index",
+          "kind": 8192,
+          "kindString": "Index signature",
+          "flags": {
+            "isExternal": true
+          },
+          "parameters": [
+            {
+              "id": 293,
+              "name": "key",
+              "kind": 32768,
+              "flags": {
+                "isExternal": true
+              },
+              "type": {
+                "type": "intrinsic",
+                "name": "string"
+              }
+            }
+          ],
+          "type": {
+            "type": "intrinsic",
+            "name": "any"
+          }
+        }
+      },
+      {
+        "id": 386,
+        "name": "RequestWillFetchCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 160,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 387,
+            "name": "RequestWillFetchCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "parameters": [
+              {
+                "id": 388,
+                "name": "param",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 382,
+                  "name": "RequestWillFetchCallbackParam"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "reference",
+                  "name": "Request"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 382,
+        "name": "RequestWillFetchCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 384,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 157,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 383,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 156,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 385,
+            "name": "state",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 158,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 291,
+              "name": "MapLikeObject"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              384,
+              383,
+              385
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 155,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 312,
+        "name": "RouteHandlerCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 58,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 313,
+            "name": "RouteHandlerCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "The \"handler\" callback is invoked whenever a `Router` matches a URL/Request\nto a `Route` via its `RouteMatchCallback`. This handler callback should\nreturn a `Promise` that resolves with a `Response`.",
+              "text": "If a non-empty array or object is returned by the `RouteMatchCallback` it\nwill be passed in as this handler's `options.params` argument.\n"
+            },
+            "parameters": [
+              {
+                "id": 314,
+                "name": "options",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 303,
+                  "name": "RouteHandlerCallbackOptions"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "reference",
+                  "name": "Response"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 303,
+        "name": "RouteHandlerCallbackOptions",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "comment": {
+          "shortText": "Options passed to a `RouteHandlerCallback` function."
+        },
+        "children": [
+          {
+            "id": 304,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 37,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 307,
+            "name": "params",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 40,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "union",
+              "types": [
+                {
+                  "type": "array",
+                  "elementType": {
+                    "type": "intrinsic",
+                    "name": "string"
+                  }
+                },
+                {
+                  "type": "reference",
+                  "id": 291,
+                  "name": "MapLikeObject"
+                }
+              ]
+            }
+          },
+          {
+            "id": 305,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 38,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 306,
+            "name": "url",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 39,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "URL"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              304,
+              307,
+              305,
+              306
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 36,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 318,
+        "name": "RouteHandlerObject",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "comment": {
+          "shortText": "An object with a `handle` method of type `RouteHandlerCallback`.",
+          "text": "A `Route` object can be created with either an `RouteHandlerCallback`\nfunction or this `RouteHandler` object. The benefit of the `RouteHandler`\nis it can be extended (as is done by the `workbox-strategies` package).\n"
+        },
+        "children": [
+          {
+            "id": 319,
+            "name": "handle",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 80,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 312,
+              "name": "RouteHandlerCallback"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              319
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 79,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 300,
+        "name": "RouteMatchCallback",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 30,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 301,
+            "name": "RouteMatchCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "The \"match\" callback is used to determine if a `Route` should apply for a\nparticular URL and request. When matching occurs in response to a fetch\nevent from the client, the `event` object is also supplied. However, since\nthe match callback can be invoked outside of a fetch event, matching logic\nshould not assume the `event` object will always be available.\nIf the match callback returns a truthy value, the matching route's\n`RouteHandlerCallback` will be invoked immediately. If the value returned\nis a non-empty array or object, that value will be set on the handler's\n`options.params` argument."
+            },
+            "parameters": [
+              {
+                "id": 302,
+                "name": "options",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 295,
+                  "name": "RouteMatchCallbackOptions"
+                }
+              }
+            ],
+            "type": {
+              "type": "intrinsic",
+              "name": "any"
+            }
+          }
+        ]
+      },
+      {
+        "id": 295,
+        "name": "RouteMatchCallbackOptions",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "comment": {
+          "shortText": "Options passed to a `RouteMatchCallback` function."
+        },
+        "children": [
+          {
+            "id": 296,
+            "name": "event",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 14,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "ExtendableEvent"
+            }
+          },
+          {
+            "id": 297,
+            "name": "request",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 15,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "Request"
+            }
+          },
+          {
+            "id": 298,
+            "name": "sameOrigin",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 16,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "intrinsic",
+              "name": "boolean"
+            }
+          },
+          {
+            "id": 299,
+            "name": "url",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 17,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "URL"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              296,
+              297,
+              298,
+              299
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 13,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 417,
+        "name": "WorkboxPlugin",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "comment": {
+          "shortText": "An object with optional lifecycle callback properties for the fetch and\ncache operations."
+        },
+        "children": [
+          {
+            "id": 418,
+            "name": "cacheDidUpdate",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 205,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 335,
+              "name": "CacheDidUpdateCallback"
+            }
+          },
+          {
+            "id": 420,
+            "name": "cacheKeyWillBeUsed",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 207,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 344,
+              "name": "CacheKeyWillBeUsedCallback"
+            }
+          },
+          {
+            "id": 421,
+            "name": "cacheWillUpdate",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 208,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 352,
+              "name": "CacheWillUpdateCallback"
+            }
+          },
+          {
+            "id": 419,
+            "name": "cachedResponseWillBeUsed",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 206,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 362,
+              "name": "CachedResponseWillBeUsedCallback"
+            }
+          },
+          {
+            "id": 422,
+            "name": "fetchDidFail",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 209,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 371,
+              "name": "FetchDidFailCallback"
+            }
+          },
+          {
+            "id": 423,
+            "name": "fetchDidSucceed",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 210,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 379,
+              "name": "FetchDidSucceedCallback"
+            }
+          },
+          {
+            "id": 424,
+            "name": "handlerDidComplete",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 211,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 414,
+              "name": "HandlerDidCompleteCallback"
+            }
+          },
+          {
+            "id": 425,
+            "name": "handlerDidError",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 212,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 397,
+              "name": "HandlerDidErrorCallback"
+            }
+          },
+          {
+            "id": 426,
+            "name": "handlerDidRespond",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 213,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 405,
+              "name": "HandlerDidRespondCallback"
+            }
+          },
+          {
+            "id": 427,
+            "name": "handlerWillRespond",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 214,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 394,
+              "name": "HandlerWillRespondCallback"
+            }
+          },
+          {
+            "id": 428,
+            "name": "handlerWillStart",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 215,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 325,
+              "name": "HandlerWillStartCallback"
+            }
+          },
+          {
+            "id": 429,
+            "name": "requestWillFetch",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 216,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 386,
+              "name": "RequestWillFetchCallback"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              418,
+              420,
+              421,
+              419,
+              422,
+              423,
+              424,
+              425,
+              426,
+              427,
+              428,
+              429
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 204,
+            "character": 25
+          }
+        ]
+      },
+      {
+        "id": 430,
+        "name": "WorkboxPluginCallbackParam",
+        "kind": 256,
+        "kindString": "Interface",
+        "flags": {
+          "isExternal": true
+        },
+        "children": [
+          {
+            "id": 431,
+            "name": "cacheDidUpdate",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 219,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 328,
+              "name": "CacheDidUpdateCallbackParam"
+            }
+          },
+          {
+            "id": 433,
+            "name": "cacheKeyWillBeUsed",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 221,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 338,
+              "name": "CacheKeyWillBeUsedCallbackParam"
+            }
+          },
+          {
+            "id": 434,
+            "name": "cacheWillUpdate",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 222,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 347,
+              "name": "CacheWillUpdateCallbackParam"
+            }
+          },
+          {
+            "id": 432,
+            "name": "cachedResponseWillBeUsed",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 220,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 355,
+              "name": "CachedResponseWillBeUsedCallbackParam"
+            }
+          },
+          {
+            "id": 435,
+            "name": "fetchDidFail",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 223,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 365,
+              "name": "FetchDidFailCallbackParam"
+            }
+          },
+          {
+            "id": 436,
+            "name": "fetchDidSucceed",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 224,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 374,
+              "name": "FetchDidSucceedCallbackParam"
+            }
+          },
+          {
+            "id": 437,
+            "name": "handlerDidComplete",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 225,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 408,
+              "name": "HandlerDidCompleteCallbackParam"
+            }
+          },
+          {
+            "id": 438,
+            "name": "handlerDidError",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 226,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "HandlerDidErrorCallbackParam"
+            }
+          },
+          {
+            "id": 439,
+            "name": "handlerDidRespond",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 227,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 400,
+              "name": "HandlerDidRespondCallbackParam"
+            }
+          },
+          {
+            "id": 440,
+            "name": "handlerWillRespond",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 228,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 389,
+              "name": "HandlerWillRespondCallbackParam"
+            }
+          },
+          {
+            "id": 441,
+            "name": "handlerWillStart",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 229,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 321,
+              "name": "HandlerWillStartCallbackParam"
+            }
+          },
+          {
+            "id": 442,
+            "name": "requestWillFetch",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/types.d.ts",
+                "line": 230,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 382,
+              "name": "RequestWillFetchCallbackParam"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              431,
+              433,
+              434,
+              432,
+              435,
+              436,
+              437,
+              438,
+              439,
+              440,
+              441,
+              442
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 218,
+            "character": 17
+          }
+        ]
+      },
+      {
+        "id": 311,
+        "name": "HandlerCallbackOptions",
+        "kind": 4194304,
+        "kindString": "Type alias",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 49,
+            "character": 20
+          }
+        ],
+        "type": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "id": 303,
+              "name": "RouteHandlerCallbackOptions"
+            },
+            {
+              "type": "reference",
+              "id": 308,
+              "name": "ManualHandlerCallbackOptions"
+            }
+          ]
+        }
+      },
+      {
+        "id": 294,
+        "name": "PluginState",
+        "kind": 4194304,
+        "kindString": "Type alias",
+        "flags": {
+          "isExternal": true
+        },
+        "comment": {
+          "shortText": "Using a plain `MapLikeObject` for now, but could extend/restrict this\nin the future."
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 9,
+            "character": 20
+          }
+        ],
+        "type": {
+          "type": "reference",
+          "id": 291,
+          "name": "MapLikeObject"
+        }
+      },
+      {
+        "id": 320,
+        "name": "RouteHandler",
+        "kind": 4194304,
+        "kindString": "Type alias",
+        "flags": {
+          "isExternal": true
+        },
+        "comment": {
+          "shortText": "Either a `RouteHandlerCallback` or a `RouteHandlerObject`.\nMost APIs in `workbox-routing` that accept route handlers take either."
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/types.d.ts",
+            "line": 86,
+            "character": 20
+          }
+        ],
+        "type": {
+          "type": "union",
+          "types": [
+            {
+              "type": "reference",
+              "id": 312,
+              "name": "RouteHandlerCallback"
+            },
+            {
+              "type": "reference",
+              "id": 318,
+              "name": "RouteHandlerObject"
+            }
+          ]
+        }
+      },
+      {
+        "id": 267,
+        "name": "cacheNames",
+        "kind": 32,
+        "kindString": "Variable",
+        "flags": {
+          "isExternal": true,
+          "isConst": true
+        },
+        "comment": {
+          "shortText": "Get the current cache names and prefix/suffix used by Workbox.",
+          "text": "`cacheNames.precache` is used for precached assets,\n`cacheNames.googleAnalytics` is used by `workbox-google-analytics` to\nstore `analytics.js`, and `cacheNames.runtime` is used for everything else.\n\n`cacheNames.prefix` can be used to retrieve just the current prefix value.\n`cacheNames.suffix` can be used to retrieve just the current suffix value.\n",
+          "tags": [
+            {
+              "tag": "returns",
+              "text": "An object with `precache`, `runtime`, `prefix`, and\n    `googleAnalytics` properties.\n"
+            },
+            {
+              "tag": "memberof",
+              "text": "module:workbox-core\n"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/cacheNames.d.ts",
+            "line": 17,
+            "character": 14
+          }
+        ],
+        "type": {
+          "type": "reflection",
+          "declaration": {
+            "id": 268,
+            "name": "__type",
+            "kind": 65536,
+            "kindString": "Type literal",
+            "flags": {
+              "isExternal": true
+            },
+            "children": [
+              {
+                "id": 269,
+                "name": "googleAnalytics",
+                "kind": 1024,
+                "kindString": "Property",
+                "flags": {
+                  "isExternal": true,
+                  "isReadonly": true
+                },
+                "sources": [
+                  {
+                    "fileName": "node_modules/workbox-core/cacheNames.d.ts",
+                    "line": 18,
+                    "character": 13
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              },
+              {
+                "id": 270,
+                "name": "precache",
+                "kind": 1024,
+                "kindString": "Property",
+                "flags": {
+                  "isExternal": true,
+                  "isReadonly": true
+                },
+                "sources": [
+                  {
+                    "fileName": "node_modules/workbox-core/cacheNames.d.ts",
+                    "line": 19,
+                    "character": 13
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              },
+              {
+                "id": 271,
+                "name": "prefix",
+                "kind": 1024,
+                "kindString": "Property",
+                "flags": {
+                  "isExternal": true,
+                  "isReadonly": true
+                },
+                "sources": [
+                  {
+                    "fileName": "node_modules/workbox-core/cacheNames.d.ts",
+                    "line": 20,
+                    "character": 13
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              },
+              {
+                "id": 272,
+                "name": "runtime",
+                "kind": 1024,
+                "kindString": "Property",
+                "flags": {
+                  "isExternal": true,
+                  "isReadonly": true
+                },
+                "sources": [
+                  {
+                    "fileName": "node_modules/workbox-core/cacheNames.d.ts",
+                    "line": 21,
+                    "character": 13
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              },
+              {
+                "id": 273,
+                "name": "suffix",
+                "kind": 1024,
+                "kindString": "Property",
+                "flags": {
+                  "isExternal": true,
+                  "isReadonly": true
+                },
+                "sources": [
+                  {
+                    "fileName": "node_modules/workbox-core/cacheNames.d.ts",
+                    "line": 22,
+                    "character": 13
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              }
+            ],
+            "groups": [
+              {
+                "title": "Properties",
+                "kind": 1024,
+                "children": [
+                  269,
+                  270,
+                  271,
+                  272,
+                  273
+                ]
+              }
+            ],
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-core/cacheNames.d.ts",
+                "line": 17,
+                "character": 26
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": 274,
+        "name": "clientsClaim",
+        "kind": 64,
+        "kindString": "Function",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/clientsClaim.d.ts",
+            "line": 8,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 275,
+            "name": "clientsClaim",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "Claim any currently available clients once the service worker\nbecomes active. This is normally used in conjunction with `skipWaiting()`.",
+              "tags": [
+                {
+                  "tag": "memberof",
+                  "text": "module:workbox-core\n"
+                }
+              ]
+            },
+            "type": {
+              "type": "intrinsic",
+              "name": "void"
+            }
+          }
+        ]
+      },
+      {
+        "id": 276,
+        "name": "copyResponse",
+        "kind": 64,
+        "kindString": "Function",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/copyResponse.d.ts",
+            "line": 21,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 277,
+            "name": "copyResponse",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "Allows developers to copy a response and modify its `headers`, `status`,\nor `statusText` values (the values settable via a\n[`ResponseInit`]{@link https://developer.mozilla.org/en-US/docs/Web/API/Response/Response#Syntax}\nobject in the constructor).\nTo modify these values, pass a function as the second argument. That\nfunction will be invoked with a single object with the response properties\n`{headers, status, statusText}`. The return value of this function will\nbe used as the `ResponseInit` for the new `Response`. To change the values\neither modify the passed parameter(s) and return it, or return a totally\nnew object.",
+              "text": "This method is intentionally limited to same-origin responses, regardless of\nwhether CORS was used or not.\n",
+              "tags": [
+                {
+                  "tag": "memberof",
+                  "text": "module:workbox-core\n"
+                }
+              ]
+            },
+            "parameters": [
+              {
+                "id": 278,
+                "name": "response",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {},
+                "type": {
+                  "type": "reference",
+                  "name": "Response"
+                }
+              },
+              {
+                "id": 279,
+                "name": "modifier",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true,
+                  "isOptional": true
+                },
+                "comment": {},
+                "type": {
+                  "type": "reflection",
+                  "declaration": {
+                    "id": 280,
+                    "name": "__type",
+                    "kind": 65536,
+                    "kindString": "Type literal",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "sources": [
+                      {
+                        "fileName": "node_modules/workbox-core/copyResponse.d.ts",
+                        "line": 21,
+                        "character": 61
+                      }
+                    ],
+                    "signatures": [
+                      {
+                        "id": 281,
+                        "name": "__type",
+                        "kind": 4096,
+                        "kindString": "Call signature",
+                        "flags": {
+                          "isExternal": true
+                        },
+                        "parameters": [
+                          {
+                            "id": 282,
+                            "name": "responseInit",
+                            "kind": 32768,
+                            "kindString": "Parameter",
+                            "flags": {
+                              "isExternal": true
+                            },
+                            "type": {
+                              "type": "reference",
+                              "name": "ResponseInit"
+                            }
+                          }
+                        ],
+                        "type": {
+                          "type": "reference",
+                          "name": "ResponseInit"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "typeArguments": [
+                {
+                  "type": "reference",
+                  "name": "Response"
+                }
+              ],
+              "name": "Promise"
+            }
+          }
+        ]
+      },
+      {
+        "id": 283,
+        "name": "registerQuotaErrorCallback",
+        "kind": 64,
+        "kindString": "Function",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/registerQuotaErrorCallback.d.ts",
+            "line": 9,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 284,
+            "name": "registerQuotaErrorCallback",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "Adds a function to the set of quotaErrorCallbacks that will be executed if\nthere's a quota error.",
+              "tags": [
+                {
+                  "tag": "memberof",
+                  "text": "module:workbox-core\n"
+                }
+              ]
+            },
+            "parameters": [
+              {
+                "id": 285,
+                "name": "callback",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {},
+                "type": {
+                  "type": "reference",
+                  "name": "Function"
+                }
+              }
+            ],
+            "type": {
+              "type": "intrinsic",
+              "name": "void"
+            }
+          }
+        ]
+      },
+      {
+        "id": 286,
+        "name": "setCacheNameDetails",
+        "kind": 64,
+        "kindString": "Function",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/setCacheNameDetails.d.ts",
+            "line": 20,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 287,
+            "name": "setCacheNameDetails",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "Modifies the default cache names used by the Workbox packages.\nCache names are generated as `<prefix>-<Cache Name>-<suffix>`.",
+              "tags": [
+                {
+                  "tag": "memberof",
+                  "text": "module:workbox-core\n"
+                }
+              ]
+            },
+            "parameters": [
+              {
+                "id": 288,
+                "name": "details",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {},
+                "type": {
+                  "type": "reference",
+                  "name": "PartialCacheNameDetails"
+                }
+              }
+            ],
+            "type": {
+              "type": "intrinsic",
+              "name": "void"
+            }
+          }
+        ]
+      },
+      {
+        "id": 289,
+        "name": "skipWaiting",
+        "kind": 64,
+        "kindString": "Function",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-core/skipWaiting.d.ts",
+            "line": 9,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 290,
+            "name": "skipWaiting",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "This method is deprecated, and will be removed in Workbox v7.",
+              "text": "Calling self.skipWaiting() is equivalent, and should be used instead.\n",
+              "tags": [
+                {
+                  "tag": "memberof",
+                  "text": "module:workbox-core\n"
+                }
+              ]
+            },
+            "type": {
+              "type": "intrinsic",
+              "name": "void"
+            }
+          }
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "title": "Namespaces",
+        "kind": 2,
+        "children": [
+          92
+        ]
+      },
+      {
+        "title": "Interfaces",
+        "kind": 256,
+        "children": [
+          335,
+          328,
+          344,
+          338,
+          352,
+          347,
+          362,
+          355,
+          371,
+          365,
+          379,
+          374,
+          414,
+          408,
+          397,
+          405,
+          400,
+          394,
+          389,
+          325,
+          321,
+          315,
+          308,
+          291,
+          386,
+          382,
+          312,
+          303,
+          318,
+          300,
+          295,
+          417,
+          430
+        ]
+      },
+      {
+        "title": "Type aliases",
+        "kind": 4194304,
+        "children": [
+          311,
+          294,
+          320
+        ]
+      },
+      {
+        "title": "Variables",
+        "kind": 32,
+        "children": [
+          267
+        ]
+      },
+      {
+        "title": "Functions",
+        "kind": 64,
+        "children": [
+          274,
+          276,
+          283,
+          286,
+          289
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "fileName": "node_modules/workbox-core/index.d.ts",
+        "line": 1,
+        "character": 0
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "cache/node_modules/workbox-routing",
+    "kind": 1,
+    "kindString": "Module",
+    "flags": {
+      "isExternal": true
+    },
+    "children": [
+      {
+        "id": 3,
+        "name": "NavigationRoute",
+        "kind": 128,
+        "kindString": "Class",
+        "flags": {
+          "isExternal": true
+        },
+        "comment": {
+          "shortText": "NavigationRoute makes it easy to create a\n[Route]{@link module:workbox-routing.Route} that matches for browser\n[navigation requests]{@link https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests}.",
+          "text": "It will only match incoming Requests whose\n[`mode`]{@link https://fetch.spec.whatwg.org/#concept-request-mode}\nis set to `navigate`.\n\nYou can optionally only apply this route to a subset of navigation requests\nby using one or both of the `denylist` and `allowlist` parameters.\n",
+          "tags": [
+            {
+              "tag": "memberof",
+              "text": "module:workbox-routing"
+            }
+          ]
+        },
+        "children": [
+          {
+            "id": 4,
+            "name": "constructor",
+            "kind": 512,
+            "kindString": "Constructor",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "If both `denylist` and `allowlist` are provided, the `denylist` will\ntake precedence and the request will not match this route.",
+              "text": "The regular expressions in `allowlist` and `denylist`\nare matched against the concatenated\n[`pathname`]{@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/pathname}\nand [`search`]{@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search}\nportions of the requested URL.\n"
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/NavigationRoute.d.ts",
+                "line": 45,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 5,
+                "name": "new NavigationRoute",
+                "kind": 16384,
+                "kindString": "Constructor signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "If both `denylist` and `allowlist` are provided, the `denylist` will\ntake precedence and the request will not match this route.",
+                  "text": "The regular expressions in `allowlist` and `denylist`\nare matched against the concatenated\n[`pathname`]{@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/pathname}\nand [`search`]{@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/search}\nportions of the requested URL.\n"
+                },
+                "parameters": [
+                  {
+                    "id": 6,
+                    "name": "handler",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "shortText": "A callback\nfunction that returns a Promise resulting in a Response."
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 320,
+                      "name": "RouteHandler"
+                    }
+                  },
+                  {
+                    "id": 7,
+                    "name": "__namedParameters",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true,
+                      "isOptional": true
+                    },
+                    "type": {
+                      "type": "reference",
+                      "name": "NavigationRouteMatchOptions"
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "reference",
+                  "id": 3,
+                  "name": "NavigationRoute"
+                },
+                "overwrites": {
+                  "type": "reference",
+                  "id": 38,
+                  "name": "Route.constructor"
+                }
+              }
+            ],
+            "overwrites": {
+              "type": "reference",
+              "id": 37,
+              "name": "Route.constructor"
+            }
+          },
+          {
+            "id": 14,
+            "name": "catchHandler",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 17,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 318,
+              "name": "RouteHandlerObject"
+            },
+            "inheritedFrom": {
+              "type": "reference",
+              "id": 45,
+              "name": "Route.catchHandler"
+            }
+          },
+          {
+            "id": 11,
+            "name": "handler",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 14,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 318,
+              "name": "RouteHandlerObject"
+            },
+            "inheritedFrom": {
+              "type": "reference",
+              "id": 42,
+              "name": "Route.handler"
+            }
+          },
+          {
+            "id": 12,
+            "name": "match",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 15,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 300,
+              "name": "RouteMatchCallback"
+            },
+            "inheritedFrom": {
+              "type": "reference",
+              "id": 43,
+              "name": "Route.match"
+            }
+          },
+          {
+            "id": 13,
+            "name": "method",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 16,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "HTTPMethod"
+            },
+            "inheritedFrom": {
+              "type": "reference",
+              "id": 44,
+              "name": "Route.method"
+            }
+          },
+          {
+            "id": 15,
+            "name": "setCatchHandler",
+            "kind": 2048,
+            "kindString": "Method",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 35,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 16,
+                "name": "setCatchHandler",
+                "kind": 4096,
+                "kindString": "Call signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {},
+                "parameters": [
+                  {
+                    "id": 17,
+                    "name": "handler",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "text": "A callback\nfunction that returns a Promise resolving to a Response\n"
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 320,
+                      "name": "RouteHandler"
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "void"
+                },
+                "inheritedFrom": {
+                  "type": "reference",
+                  "id": 47,
+                  "name": "Route.setCatchHandler"
+                }
+              }
+            ],
+            "inheritedFrom": {
+              "type": "reference",
+              "id": 46,
+              "name": "Route.setCatchHandler"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Constructors",
+            "kind": 512,
+            "children": [
+              4
+            ]
+          },
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              8,
+              9,
+              10,
+              14,
+              11,
+              12,
+              13
+            ]
+          },
+          {
+            "title": "Methods",
+            "kind": 2048,
+            "children": [
+              15
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-routing/NavigationRoute.d.ts",
+            "line": 23,
+            "character": 14
+          }
+        ],
+        "extendedTypes": [
+          {
+            "type": "reference",
+            "id": 36,
+            "name": "Route"
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "RegExpRoute",
+        "kind": 128,
+        "kindString": "Class",
+        "flags": {
+          "isExternal": true
+        },
+        "comment": {
+          "shortText": "RegExpRoute makes it easy to create a regular expression based\n[Route]{@link module:workbox-routing.Route}.",
+          "text": "For same-origin requests the RegExp only needs to match part of the URL. For\nrequests against third-party servers, you must define a RegExp that matches\nthe start of the URL.\n\n[See the module docs for info.]{@link https://developers.google.com/web/tools/workbox/modules/workbox-routing}\n",
+          "tags": [
+            {
+              "tag": "memberof",
+              "text": "module:workbox-routing"
+            }
+          ]
+        },
+        "children": [
+          {
+            "id": 19,
+            "name": "constructor",
+            "kind": 512,
+            "kindString": "Constructor",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "If the regular expression contains\n[capture groups]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#grouping-back-references},\nthe captured values will be passed to the\n[handler's]{@link module:workbox-routing~handlerCallback} `params`\nargument."
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/RegExpRoute.d.ts",
+                "line": 32,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 20,
+                "name": "new RegExpRoute",
+                "kind": 16384,
+                "kindString": "Constructor signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "If the regular expression contains\n[capture groups]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#grouping-back-references},\nthe captured values will be passed to the\n[handler's]{@link module:workbox-routing~handlerCallback} `params`\nargument."
+                },
+                "parameters": [
+                  {
+                    "id": 21,
+                    "name": "regExp",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "shortText": "The regular expression to match against URLs."
+                    },
+                    "type": {
+                      "type": "reference",
+                      "name": "RegExp"
+                    }
+                  },
+                  {
+                    "id": 22,
+                    "name": "handler",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "shortText": "A callback\nfunction that returns a Promise resulting in a Response."
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 320,
+                      "name": "RouteHandler"
+                    }
+                  },
+                  {
+                    "id": 23,
+                    "name": "method",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true,
+                      "isOptional": true
+                    },
+                    "type": {
+                      "type": "reference",
+                      "name": "HTTPMethod"
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "reference",
+                  "id": 18,
+                  "name": "RegExpRoute"
+                },
+                "overwrites": {
+                  "type": "reference",
+                  "id": 38,
+                  "name": "Route.constructor"
+                }
+              }
+            ],
+            "overwrites": {
+              "type": "reference",
+              "id": 37,
+              "name": "Route.constructor"
+            }
+          },
+          {
+            "id": 27,
+            "name": "catchHandler",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 17,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 318,
+              "name": "RouteHandlerObject"
+            },
+            "inheritedFrom": {
+              "type": "reference",
+              "id": 45,
+              "name": "Route.catchHandler"
+            }
+          },
+          {
+            "id": 24,
+            "name": "handler",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 14,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 318,
+              "name": "RouteHandlerObject"
+            },
+            "inheritedFrom": {
+              "type": "reference",
+              "id": 42,
+              "name": "Route.handler"
+            }
+          },
+          {
+            "id": 25,
+            "name": "match",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 15,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 300,
+              "name": "RouteMatchCallback"
+            },
+            "inheritedFrom": {
+              "type": "reference",
+              "id": 43,
+              "name": "Route.match"
+            }
+          },
+          {
+            "id": 26,
+            "name": "method",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 16,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "HTTPMethod"
+            },
+            "inheritedFrom": {
+              "type": "reference",
+              "id": 44,
+              "name": "Route.method"
+            }
+          },
+          {
+            "id": 28,
+            "name": "setCatchHandler",
+            "kind": 2048,
+            "kindString": "Method",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 35,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 29,
+                "name": "setCatchHandler",
+                "kind": 4096,
+                "kindString": "Call signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {},
+                "parameters": [
+                  {
+                    "id": 30,
+                    "name": "handler",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "text": "A callback\nfunction that returns a Promise resolving to a Response\n"
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 320,
+                      "name": "RouteHandler"
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "void"
+                },
+                "inheritedFrom": {
+                  "type": "reference",
+                  "id": 47,
+                  "name": "Route.setCatchHandler"
+                }
+              }
+            ],
+            "inheritedFrom": {
+              "type": "reference",
+              "id": 46,
+              "name": "Route.setCatchHandler"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "title": "Constructors",
+            "kind": 512,
+            "children": [
+              19
+            ]
+          },
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              27,
+              24,
+              25,
+              26
+            ]
+          },
+          {
+            "title": "Methods",
+            "kind": 2048,
+            "children": [
+              28
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-routing/RegExpRoute.d.ts",
+            "line": 18,
+            "character": 14
+          }
+        ],
+        "extendedTypes": [
+          {
+            "type": "reference",
+            "id": 36,
+            "name": "Route"
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "name": "Route",
+        "kind": 128,
+        "kindString": "Class",
+        "flags": {
+          "isExternal": true
+        },
+        "comment": {
+          "shortText": "A `Route` consists of a pair of callback functions, \"match\" and \"handler\".\nThe \"match\" callback determine if a route should be used to \"handle\" a\nrequest by returning a non-falsy value if it can. The \"handler\" callback\nis called when there is a match and should return a Promise that resolves\nto a `Response`.",
+          "tags": [
+            {
+              "tag": "memberof",
+              "text": "module:workbox-routing\n"
+            }
+          ]
+        },
+        "children": [
+          {
+            "id": 37,
+            "name": "constructor",
+            "kind": 512,
+            "kindString": "Constructor",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "Constructor for Route class."
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 29,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 38,
+                "name": "new Route",
+                "kind": 16384,
+                "kindString": "Constructor signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "Constructor for Route class."
+                },
+                "parameters": [
+                  {
+                    "id": 39,
+                    "name": "match",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "shortText": "\nA callback function that determines whether the route matches a given\n`fetch` event by returning a non-falsy value."
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 300,
+                      "name": "RouteMatchCallback"
+                    }
+                  },
+                  {
+                    "id": 40,
+                    "name": "handler",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "shortText": "A callback\nfunction that returns a Promise resolving to a Response."
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 320,
+                      "name": "RouteHandler"
+                    }
+                  },
+                  {
+                    "id": 41,
+                    "name": "method",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true,
+                      "isOptional": true
+                    },
+                    "type": {
+                      "type": "reference",
+                      "name": "HTTPMethod"
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "reference",
+                  "id": 36,
+                  "name": "Route"
+                }
+              }
+            ]
+          },
+          {
+            "id": 45,
+            "name": "catchHandler",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true,
+              "isOptional": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 17,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 318,
+              "name": "RouteHandlerObject"
+            }
+          },
+          {
+            "id": 42,
+            "name": "handler",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 14,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 318,
+              "name": "RouteHandlerObject"
+            }
+          },
+          {
+            "id": 43,
+            "name": "match",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 15,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 300,
+              "name": "RouteMatchCallback"
+            }
+          },
+          {
+            "id": 44,
+            "name": "method",
+            "kind": 1024,
+            "kindString": "Property",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 16,
+                "character": 4
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "name": "HTTPMethod"
+            }
+          },
+          {
+            "id": 46,
+            "name": "setCatchHandler",
+            "kind": 2048,
+            "kindString": "Method",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Route.d.ts",
+                "line": 35,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 47,
+                "name": "setCatchHandler",
+                "kind": 4096,
+                "kindString": "Call signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {},
+                "parameters": [
+                  {
+                    "id": 48,
+                    "name": "handler",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "text": "A callback\nfunction that returns a Promise resolving to a Response\n"
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 320,
+                      "name": "RouteHandler"
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              }
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "title": "Constructors",
+            "kind": 512,
+            "children": [
+              37
+            ]
+          },
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              45,
+              42,
+              43,
+              44
+            ]
+          },
+          {
+            "title": "Methods",
+            "kind": 2048,
+            "children": [
+              46
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-routing/Route.d.ts",
+            "line": 13,
+            "character": 14
+          }
+        ],
+        "extendedBy": [
+          {
+            "type": "reference",
+            "id": 3,
+            "name": "NavigationRoute"
+          },
+          {
+            "type": "reference",
+            "id": 18,
+            "name": "RegExpRoute"
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "name": "Router",
+        "kind": 128,
+        "kindString": "Class",
+        "flags": {
+          "isExternal": true
+        },
+        "comment": {
+          "shortText": "The Router can be used to process a FetchEvent through one or more\n[Routes]{@link module:workbox-routing.Route} responding  with a Request if\na matching route exists.",
+          "text": "If no route matches a given a request, the Router will use a \"default\"\nhandler if one is defined.\n\nShould the matching Route throw an error, the Router will use a \"catch\"\nhandler if one is defined to gracefully deal with issues and respond with a\nRequest.\n\nIf a request matches multiple routes, the **earliest** registered route will\nbe used to respond to the request.\n",
+          "tags": [
+            {
+              "tag": "memberof",
+              "text": "module:workbox-routing\n"
+            }
+          ]
+        },
+        "children": [
+          {
+            "id": 50,
+            "name": "constructor",
+            "kind": 512,
+            "kindString": "Constructor",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "Initializes a new Router."
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                "line": 29,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 51,
+                "name": "new Router",
+                "kind": 16384,
+                "kindString": "Constructor signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "Initializes a new Router."
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 49,
+                  "name": "Router"
+                }
+              }
+            ]
+          },
+          {
+            "id": 55,
+            "name": "routes",
+            "kind": 262144,
+            "kindString": "Accessor",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "returns": "routes A `Map` of HTTP\nmethod name ('GET', etc.) to an array of all the corresponding `Route`\ninstances that are registered.\n"
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                "line": 35,
+                "character": 8
+              }
+            ],
+            "getSignature": [
+              {
+                "id": 56,
+                "name": "routes",
+                "kind": 524288,
+                "kindString": "Get signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "returns": "routes A `Map` of HTTP\nmethod name ('GET', etc.) to an array of all the corresponding `Route`\ninstances that are registered.\n"
+                },
+                "type": {
+                  "type": "reference",
+                  "typeArguments": [
+                    {
+                      "type": "reference",
+                      "name": "HTTPMethod"
+                    },
+                    {
+                      "type": "array",
+                      "elementType": {
+                        "type": "reference",
+                        "id": 36,
+                        "name": "Route"
+                      }
+                    }
+                  ],
+                  "name": "Map"
+                }
+              }
+            ]
+          },
+          {
+            "id": 59,
+            "name": "addCacheListener",
+            "kind": 2048,
+            "kindString": "Method",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                "line": 63,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 60,
+                "name": "addCacheListener",
+                "kind": 4096,
+                "kindString": "Call signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "Adds a message event listener for URLs to cache from the window.\nThis is useful to cache resources loaded on the page prior to when the\nservice worker started controlling it.",
+                  "text": "The format of the message data sent from the window should be as follows.\nWhere the `urlsToCache` array may consist of URL strings or an array of\nURL string + `requestInit` object (the same as you'd pass to `fetch()`).\n\n```\n{\n  type: 'CACHE_URLS',\n  payload: {\n    urlsToCache: [\n      './script1.js',\n      './script2.js',\n      ['./script3.js', {mode: 'no-cors'}],\n    ],\n  },\n}\n```\n"
+                },
+                "type": {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              }
+            ]
+          },
+          {
+            "id": 57,
+            "name": "addFetchListener",
+            "kind": 2048,
+            "kindString": "Method",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                "line": 40,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 58,
+                "name": "addFetchListener",
+                "kind": 4096,
+                "kindString": "Call signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "Adds a fetch event listener to respond to events when a route matches\nthe event's request."
+                },
+                "type": {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              }
+            ]
+          },
+          {
+            "id": 67,
+            "name": "findMatchingRoute",
+            "kind": 2048,
+            "kindString": "Method",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                "line": 95,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 68,
+                "name": "findMatchingRoute",
+                "kind": 4096,
+                "kindString": "Call signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "Checks a request and URL (and optionally an event) against the list of\nregistered routes, and if there's a match, returns the corresponding\nroute along with any params generated by the match.",
+                  "returns": "An object with `route` and `params` properties.\n    They are populated if a matching route was found or `undefined`\n    otherwise.\n"
+                },
+                "parameters": [
+                  {
+                    "id": 69,
+                    "name": "__namedParameters",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 295,
+                      "name": "RouteMatchCallbackOptions"
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "reflection",
+                  "declaration": {
+                    "id": 70,
+                    "name": "__type",
+                    "kind": 65536,
+                    "kindString": "Type literal",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "children": [
+                      {
+                        "id": 72,
+                        "name": "params",
+                        "kind": 1024,
+                        "kindString": "Property",
+                        "flags": {
+                          "isExternal": true,
+                          "isOptional": true
+                        },
+                        "sources": [
+                          {
+                            "fileName": "node_modules/workbox-routing/Router.d.ts",
+                            "line": 97,
+                            "character": 8
+                          }
+                        ],
+                        "type": {
+                          "type": "union",
+                          "types": [
+                            {
+                              "type": "array",
+                              "elementType": {
+                                "type": "intrinsic",
+                                "name": "string"
+                              }
+                            },
+                            {
+                              "type": "reference",
+                              "id": 291,
+                              "name": "MapLikeObject"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": 71,
+                        "name": "route",
+                        "kind": 1024,
+                        "kindString": "Property",
+                        "flags": {
+                          "isExternal": true,
+                          "isOptional": true
+                        },
+                        "sources": [
+                          {
+                            "fileName": "node_modules/workbox-routing/Router.d.ts",
+                            "line": 96,
+                            "character": 8
+                          }
+                        ],
+                        "type": {
+                          "type": "reference",
+                          "id": 36,
+                          "name": "Route"
+                        }
+                      }
+                    ],
+                    "groups": [
+                      {
+                        "title": "Properties",
+                        "kind": 1024,
+                        "children": [
+                          72,
+                          71
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": 61,
+            "name": "handleRequest",
+            "kind": 2048,
+            "kindString": "Method",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                "line": 76,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 62,
+                "name": "handleRequest",
+                "kind": 4096,
+                "kindString": "Call signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "Apply the routing rules to a FetchEvent object to get a Response from an\nappropriate Route's handler.",
+                  "returns": "A promise is returned if a\n    registered route can handle the request. If there is no matching\n    route and there's no `defaultHandler`, `undefined` is returned.\n"
+                },
+                "parameters": [
+                  {
+                    "id": 63,
+                    "name": "__namedParameters",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "type": {
+                      "type": "reflection",
+                      "declaration": {
+                        "id": 64,
+                        "name": "__type",
+                        "kind": 65536,
+                        "kindString": "Type literal",
+                        "flags": {
+                          "isExternal": true
+                        },
+                        "children": [
+                          {
+                            "id": 66,
+                            "name": "event",
+                            "kind": 1024,
+                            "kindString": "Property",
+                            "flags": {
+                              "isExternal": true
+                            },
+                            "sources": [
+                              {
+                                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                                "line": 78,
+                                "character": 8
+                              }
+                            ],
+                            "type": {
+                              "type": "reference",
+                              "name": "ExtendableEvent"
+                            }
+                          },
+                          {
+                            "id": 65,
+                            "name": "request",
+                            "kind": 1024,
+                            "kindString": "Property",
+                            "flags": {
+                              "isExternal": true
+                            },
+                            "sources": [
+                              {
+                                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                                "line": 77,
+                                "character": 8
+                              }
+                            ],
+                            "type": {
+                              "type": "reference",
+                              "name": "Request"
+                            }
+                          }
+                        ],
+                        "groups": [
+                          {
+                            "title": "Properties",
+                            "kind": 1024,
+                            "children": [
+                              66,
+                              65
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "reference",
+                  "typeArguments": [
+                    {
+                      "type": "reference",
+                      "name": "Response"
+                    }
+                  ],
+                  "name": "Promise"
+                }
+              }
+            ]
+          },
+          {
+            "id": 80,
+            "name": "registerRoute",
+            "kind": 2048,
+            "kindString": "Method",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                "line": 127,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 81,
+                "name": "registerRoute",
+                "kind": 4096,
+                "kindString": "Call signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "Registers a route with the router."
+                },
+                "parameters": [
+                  {
+                    "id": 82,
+                    "name": "route",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "text": "The route to register.\n"
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 36,
+                      "name": "Route"
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              }
+            ]
+          },
+          {
+            "id": 77,
+            "name": "setCatchHandler",
+            "kind": 2048,
+            "kindString": "Method",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                "line": 121,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 78,
+                "name": "setCatchHandler",
+                "kind": 4096,
+                "kindString": "Call signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "If a Route throws an error while handling a request, this `handler`\nwill be called and given a chance to provide a response."
+                },
+                "parameters": [
+                  {
+                    "id": 79,
+                    "name": "handler",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "text": "A callback\nfunction that returns a Promise resulting in a Response.\n"
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 320,
+                      "name": "RouteHandler"
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              }
+            ]
+          },
+          {
+            "id": 73,
+            "name": "setDefaultHandler",
+            "kind": 2048,
+            "kindString": "Method",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                "line": 113,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 74,
+                "name": "setDefaultHandler",
+                "kind": 4096,
+                "kindString": "Call signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "Define a default `handler` that's called when no routes explicitly\nmatch the incoming request.",
+                  "text": "Each HTTP method ('GET', 'POST', etc.) gets its own default handler.\n\nWithout a default handler, unmatched requests will go against the\nnetwork as if there were no service worker present.\n"
+                },
+                "parameters": [
+                  {
+                    "id": 75,
+                    "name": "handler",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "text": "A callback\nfunction that returns a Promise resulting in a Response."
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 320,
+                      "name": "RouteHandler"
+                    }
+                  },
+                  {
+                    "id": 76,
+                    "name": "method",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true,
+                      "isOptional": true
+                    },
+                    "type": {
+                      "type": "reference",
+                      "name": "HTTPMethod"
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              }
+            ]
+          },
+          {
+            "id": 83,
+            "name": "unregisterRoute",
+            "kind": 2048,
+            "kindString": "Method",
+            "flags": {
+              "isExternal": true
+            },
+            "sources": [
+              {
+                "fileName": "node_modules/workbox-routing/Router.d.ts",
+                "line": 133,
+                "character": 4
+              }
+            ],
+            "signatures": [
+              {
+                "id": 84,
+                "name": "unregisterRoute",
+                "kind": 4096,
+                "kindString": "Call signature",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "shortText": "Unregisters a route with the router."
+                },
+                "parameters": [
+                  {
+                    "id": 85,
+                    "name": "route",
+                    "kind": 32768,
+                    "kindString": "Parameter",
+                    "flags": {
+                      "isExternal": true
+                    },
+                    "comment": {
+                      "text": "The route to unregister.\n"
+                    },
+                    "type": {
+                      "type": "reference",
+                      "id": 36,
+                      "name": "Route"
+                    }
+                  }
+                ],
+                "type": {
+                  "type": "intrinsic",
+                  "name": "void"
+                }
+              }
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "title": "Constructors",
+            "kind": 512,
+            "children": [
+              50
+            ]
+          },
+          {
+            "title": "Properties",
+            "kind": 1024,
+            "children": [
+              54,
+              53,
+              52
+            ]
+          },
+          {
+            "title": "Accessors",
+            "kind": 262144,
+            "children": [
+              55
+            ]
+          },
+          {
+            "title": "Methods",
+            "kind": 2048,
+            "children": [
+              59,
+              57,
+              67,
+              61,
+              80,
+              77,
+              73,
+              83
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-routing/Router.d.ts",
+            "line": 22,
+            "character": 14
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "registerRoute",
+        "kind": 64,
+        "kindString": "Function",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-routing/registerRoute.d.ts",
+            "line": 24,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 32,
+            "name": "registerRoute",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "Easily register a RegExp, string, or function with a caching\nstrategy to a singleton Router instance.",
+              "text": "This method will generate a Route for you if needed and\ncall [registerRoute()]{@link module:workbox-routing.Router#registerRoute}.\n",
+              "returns": "The generated `Route`(Useful for\nunregistering).\n",
+              "tags": [
+                {
+                  "tag": "memberof",
+                  "text": "module:workbox-routing\n"
+                }
+              ]
+            },
+            "parameters": [
+              {
+                "id": 33,
+                "name": "capture",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "text": "\nIf the capture param is a `Route`, all other arguments will be ignored."
+                },
+                "type": {
+                  "type": "union",
+                  "types": [
+                    {
+                      "type": "reference",
+                      "name": "RegExp"
+                    },
+                    {
+                      "type": "intrinsic",
+                      "name": "string"
+                    },
+                    {
+                      "type": "reference",
+                      "id": 300,
+                      "name": "RouteMatchCallback"
+                    },
+                    {
+                      "type": "reference",
+                      "id": 36,
+                      "name": "Route"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": 34,
+                "name": "handler",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true,
+                  "isOptional": true
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 320,
+                  "name": "RouteHandler"
+                }
+              },
+              {
+                "id": 35,
+                "name": "method",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true,
+                  "isOptional": true
+                },
+                "type": {
+                  "type": "reference",
+                  "name": "HTTPMethod"
+                }
+              }
+            ],
+            "type": {
+              "type": "reference",
+              "id": 36,
+              "name": "Route"
+            }
+          }
+        ]
+      },
+      {
+        "id": 86,
+        "name": "setCatchHandler",
+        "kind": 64,
+        "kindString": "Function",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-routing/setCatchHandler.d.ts",
+            "line": 12,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 87,
+            "name": "setCatchHandler",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "If a Route throws an error while handling a request, this `handler`\nwill be called and given a chance to provide a response.",
+              "tags": [
+                {
+                  "tag": "memberof",
+                  "text": "module:workbox-routing\n"
+                }
+              ]
+            },
+            "parameters": [
+              {
+                "id": 88,
+                "name": "handler",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "text": "A callback\nfunction that returns a Promise resulting in a Response.\n"
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 320,
+                  "name": "RouteHandler"
+                }
+              }
+            ],
+            "type": {
+              "type": "intrinsic",
+              "name": "void"
+            }
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "name": "setDefaultHandler",
+        "kind": 64,
+        "kindString": "Function",
+        "flags": {
+          "isExternal": true
+        },
+        "sources": [
+          {
+            "fileName": "node_modules/workbox-routing/setDefaultHandler.d.ts",
+            "line": 15,
+            "character": 17
+          }
+        ],
+        "signatures": [
+          {
+            "id": 90,
+            "name": "setDefaultHandler",
+            "kind": 4096,
+            "kindString": "Call signature",
+            "flags": {
+              "isExternal": true
+            },
+            "comment": {
+              "shortText": "Define a default `handler` that's called when no routes explicitly\nmatch the incoming request.",
+              "text": "Without a default handler, unmatched requests will go against the\nnetwork as if there were no service worker present.\n",
+              "tags": [
+                {
+                  "tag": "memberof",
+                  "text": "module:workbox-routing\n"
+                }
+              ]
+            },
+            "parameters": [
+              {
+                "id": 91,
+                "name": "handler",
+                "kind": 32768,
+                "kindString": "Parameter",
+                "flags": {
+                  "isExternal": true
+                },
+                "comment": {
+                  "text": "A callback\nfunction that returns a Promise resulting in a Response.\n"
+                },
+                "type": {
+                  "type": "reference",
+                  "id": 320,
+                  "name": "RouteHandler"
+                }
+              }
+            ],
+            "type": {
+              "type": "intrinsic",
+              "name": "void"
+            }
+          }
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "title": "Classes",
+        "kind": 128,
+        "children": [
+          3,
+          18,
+          36,
+          49
+        ]
+      },
+      {
+        "title": "Functions",
+        "kind": 64,
+        "children": [
+          31,
+          86,
+          89
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "fileName": "node_modules/workbox-routing/index.d.ts",
+        "line": 1,
+        "character": 0
+      }
+    ]
+  }
+]

@@ -50,7 +50,7 @@ let SectionLinkItem;
  * @return {SectionLinkItem[]|undefined}
  */
 function expandSections(sections, pageUrl, locale) {
-  if (!pageUrl || !sections) {
+  if (!pageUrl || !sections?.length || !Array.isArray(sections)) {
     return;
   }
 

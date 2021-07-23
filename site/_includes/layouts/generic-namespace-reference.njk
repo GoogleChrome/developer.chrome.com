@@ -1,0 +1,53 @@
+{#
+  This is run for every generic API namespaces, e.g., for "workbox.foo".
+#}
+
+{% extends "layouts/base.njk" %}
+
+{% block title_bar %}
+  {% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
+
+{% import 'macros/render-generic-type.njk' as macros with context %}
+
+{# Update "content" with additional headings and so forth, so we can pass it
+   through the toc filter. #}
+{% set content %}
+  <div class="type stack">
+    {{ content | safe }}
+  </div>
+
+  {% for group in api.groups %}
+    <div class="api-ref--break"></div>
+    <h2 id="{{ group.key }}">{{ group.title }}</h2>
+    <div class="stack flow-space-300">
+    {% for node in group.contents %}
+      {{ macros.renderTopLevel(node) }}
+    {% endfor %}
+    </div>
+  {% endfor %}
+
+{% endset %}
+
+{% set tocContents %}
+  {{- content | toc | safe -}}
+{% endset %}
+
+{% block content %}
+  <div class="display-flex gap-top-300 lg:gap-top-400">
+    {% include 'partials/navigation-tree.njk' %}
+
+    {# The article is wrapped again so that the ToC aligns on its right on desktop #}
+    <div class="display-flex justify-content-center width-full">
+      <article class="stack measure-long width-full pad-left-400 pad-right-400 api-ref">
+        <h1 class="type--h2">{{ api.name }}</h1>
+
+        {% include 'partials/toc-inner.njk' %}
+
+        {{ content | safe }}
+      </article>
+
+      {% include 'partials/toc-side.njk' %}
+    </div>
+  </div>
+{% endblock %}

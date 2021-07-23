@@ -1,0 +1,300 @@
+
+
+{%- macro renderTopLevel(node) -%}
+
+  {% set headingIcon %}{{ iconForNode(node) }}{% endset %}
+
+
+  <h3 id="-{{ node.name }}">
+    <div class="display-flex align-center">
+      <div class="api-ref__icon {{ headingIcon }}"></div>
+      <span>{{ node.name }}</span>
+    </div>
+  </h3>
+  {% set commentNode = node %}
+  {% if node.kindString == 'Function' %}
+    {% set commentNode = node.signatures[0] %}
+  {% endif %}
+  {{ renderComment(commentNode) }}
+
+  {% if node.signatures[0] %}
+    <div>
+      <h4>Signature</h4>
+      {{ renderTypeSignature(node.signatures[0]) }}
+    </div>
+
+    {% if node.signatures[0].parameters.length > 0 %}
+      <div>
+        <h4>Parameters</h4>
+        {{ renderParametersList(node.signatures[0].parameters) }}
+      </div>
+    {% endif %}
+
+  {% elif node.type %}
+    <div>
+      <h4>Type</h4>
+      <code class="typeSignature">{{ renderType(node.type) }}</code>
+    </div>
+
+  {% elif node.children.length > 0 %}
+    <div class="properties">
+      {# Interfaces don't really have methods. #}
+      <h4>Properties{% if node.kindString == 'Class' %} and methods{% endif %}</h4>
+      {{ renderPropertiesList(node.children) }}
+    </div>
+
+  {% endif %}
+
+{%- endmacro -%}
+
+
+{%- macro iconForNode(node) -%}
+
+  {%- if node.signatures[0] -%}
+    api-ref__icon--function
+  {%- endif -%}
+
+{%- endmacro -%}
+
+
+{#
+  Renders properties of a specific Signature in a list for display.
+#}
+{% macro renderPropertiesList(properties) %}
+  {% for prop in properties %}
+    <h5>
+      <code class="plain">
+        {% if prop.flags.isStatic %}
+          <span class="staticKeyword">static</span>
+        {% endif %}
+
+        {% if prop.flags.isReadonly %}
+          <span class="readonlyKeyword">readonly</span>
+        {% endif %}
+
+        {% if prop.signatures[0] %}
+          {{ renderTypeSignature(prop.signatures[0]) }}
+        {% elif prop.type %}
+          <span class="propertyName">{{ prop.name }}</span>
+          {%- if prop.flags.isOptional -%} ? {%- endif -%}
+          : {{ renderType(prop.type) }}
+        {% else %}
+          <span class="propertyName">{{ prop.name }}</span>
+        {% endif %}
+      </code>
+    </h5>
+
+    {% set deep -%}
+      {{- renderComment(prop) -}}
+      {%- if prop.signatures[0].parameters.length > 0 %}
+        <div>
+          <h4>Parameters</h4>
+          {{ renderParametersList(prop.signatures[0].parameters) }}
+        </div>
+      {%- endif -%}
+    {%- endset %}
+    {% set deep = deep | trim %}
+    {% if deep %}
+      <div class="api-ref__deep stack">{{ deep | safe }}</div>
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+
+{#
+  Renders parameters of a specific Signature in a list for display.
+#}
+{% macro renderParametersList(parameters) %}
+  <dl class="params">
+    {% for parameter in parameters %}
+      <dt>
+        {{ parameter.name -}}
+        {%- if parameter.flags.isOptional -%} ? {%- endif -%}
+      </dt>
+      <dd>
+        <code class="plain">{{ renderType(parameter.type) }}</code>
+        {{ renderComment(parameter) }}
+      </dd>
+    {% endfor %}
+  </dl>
+{% endmacro %}
+
+
+{#
+  Renders a comment, its optional version information and deprecation notice.
+#}
+{% macro renderComment(node) %}
+
+  {% set isDeprecated = false %}
+  {% set deprecatedText = '' %}
+  {% for tag in node.comment.tags %}
+    {% if tag.tag == 'deprecated' %}
+      {% set isDeprecated = true %}
+      {% set deprecatedText = tag.text %}
+    {% endif %}
+  {% endfor %}
+
+  {% if isDeprecated %}
+    <p class="code-sections__deprecated">{{ deprecatedText | mdInline | safe }}</p>
+  {% endif %}
+
+  {% if node.comment.text and node.comment.shortText %}
+    {# This has multiple lines, hide most behind an openable toggle. #}
+    <details>
+      <summary>{{ node.comment.shortText | mdInline | safe }}</summary>
+      {{ node.comment.text | md | safe }}
+    </details>
+
+  {% else %}
+    {# Single line of comment, show all. Confusingly method params have text but other types have
+       shortText, so just check both. #}
+    {% set onlyText = node.comment.shortText or node.comment.text %}
+    {% if onlyText %}
+      {{ onlyText | md | safe }}
+    {% endif %}
+
+  {% endif %}
+
+{% endmacro %}
+
+
+{#
+  Render a node of kind Signature as a short monospace version.
+#}
+{% macro renderTypeSignature(node, includeTypes) %}
+
+  {% set returnType = null %}
+
+  <code class="plain">
+
+  {%- if node.kindString == 'Constructor signature' -%}
+    <span class="newKeyword">new</span>
+    <span class="functionName">{{ node.type.name }}</span>
+
+  {%- elif node.kindString == 'Call signature' -%}
+    {% set returnType = node.type %}
+    {% if returnType.name == 'Promise' %}
+      {% set returnType = returnType.typeArguments[0] %}
+      async
+    {% endif %}
+    <span class="functionName">{{ node.name }}</span>
+  {%- endif -%}
+
+  {{- renderFunctionParameters(node.parameters, includeTypes) -}}
+  {%- if returnType and returnType.name != 'void' -%}
+    : {{ renderType(returnType) -}}
+  {%- endif -%}
+
+  </code>
+
+{% endmacro %}
+
+
+{#
+  Renders the arguments of a method including parenthesis.
+#}
+{% macro renderFunctionParameters(parameters, includeTypes) -%}
+  (
+    {%- set comma = joiner(', ') -%}
+    {%- for parameter in parameters -%}
+      {{- comma() -}}
+      {{- parameter.name -}}
+      {%- if parameter.flags.isOptional -%}
+        ?
+      {%- endif -%}
+      {%- if includeTypes -%}
+        : <span class="color-cyan-medium">{{ renderType(parameter.type) }}</span>
+      {%- endif -%}
+    {%- endfor -%}
+  )
+{%- endmacro %}
+
+
+{#
+  Render a single type (or posible a reflection).
+#}
+{% macro renderType(type) -%}
+
+  {%- if type.type == 'reflection' -%}
+    {# Nested reflection, render it. #}
+    {{- renderReflection(type.declaration) -}}
+
+  {%- elif type.type == 'array' -%}
+    {# Array type. #}
+    {{- renderType(type.elementType) -}}[]
+
+  {%- elif type.type == 'literal' -%}
+    {# Literal type, like null, undefined or a specific string. #}
+    {%- if type.value == null -%}
+      null
+    {%- elif (type.value | typeof) == 'string' -%}
+      {# TODO: escaping #}
+      "{{- type.value -}}"
+    {%- else -%}
+      {{- type.value -}}
+    {%- endif -%}
+
+  {%- elif (type.type | typeof) == 'object' -%}
+    {# Object type. #}
+    {{- renderType(type.type) -}}
+
+  {%- elif type.type == 'union' -%}
+    {# Union type, joined by pipe symbol. #}
+    {# TODO: inner may need to be wrapped in parens #}
+    {%- set pipe = joiner(' | ') -%}
+    {%- for item in type.types -%}
+      {{- pipe() -}}{{- renderType(item) -}}
+    {%- endfor -%}
+
+  {%- elif type.type == 'intersection' -%}
+    {# Intesection type, joined by ampersand. #}
+    {# TODO: inner may need to be wrapped in parens #}
+    {%- set ampersand = joiner(' & ') -%}
+    {%- for item in type.types -%}
+      {{- ampersand() -}}{{- renderType(item) -}}
+    {%- endfor -%}
+
+  {%- elif type.name and type.name !== '__type' -%}
+    {# Likely 'number' or 'string'. #}
+    {{- type.name -}}
+
+  {%- else -%}
+
+    TODO
+
+  {%- endif -%}
+
+  {%- if type.typeArguments -%}
+    &lt;
+    {%- set comma = joiner(', ') -%}
+    {%- for arg in type.typeArguments -%}
+      {{- comma() -}}
+      {{- renderType(arg) -}}
+    {%- endfor -%}
+    &gt;
+  {%- endif -%}
+
+{%- endmacro %}
+
+
+{#
+  Render a declaration (as a single type).
+#}
+{%- macro renderReflection(node) -%}
+
+  {%- if node.kindString === 'Call signature' -%}
+    {# A specific call signature. #}
+    {# TODO: async-ify inlines too? #}
+    {{ renderFunctionParameters(node.parameters) }} => {{ renderType(node.type) }}
+
+  {%- elif node.signatures[0] -%}
+    {# Something with a signature, like a function that can be called. #}
+    {{- renderReflection(node.signatures[0]) -}}
+
+  {%- else -%}
+
+    TODO{ref}
+
+  {%- endif -%}
+
+{%- endmacro -%}
