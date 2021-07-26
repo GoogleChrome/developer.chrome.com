@@ -30,14 +30,19 @@
   transform: rotate(270deg);
 }
 
-.toc__sticky {
-  position: sticky;
-  top: get-size(200);
+toc-active {
+  display: block;
   max-height: calc(100vh - #{get-size(200)} * 2);
   overflow-x: hidden;
   overflow-y: auto;
+  position: sticky;
+  top: get-size(200);
 
   &::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  &::scrollbar {
     height: 8px;
     width: 8px;
   }
@@ -45,6 +50,10 @@
   &::-webkit-scrollbar-thumb {
     background: rgba(128,134,139,.26);
     border-radius: 8px;
+  }
+
+  [toc--active] {
+    font-weight: 600;
   }
 }
 
