@@ -30,7 +30,7 @@ tags:
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mV9Ac7QAD8vVPoiqmii6.png", alt="CSS 网格编辑器", width="800", height="486" %}
 
-当您页面中的 HTML 元素有 `display: grid` 或 `display: inline-grid` 的 CSS 声明时, 您会在样式边栏中看到该声明旁边出现了一个图标。点击该图标打开或关闭 CSS 网格编辑器。CSS 网格编辑器里的图标让您预览可能的变化（例如 `justify-content: space-around`）。接着，你可以一键点击任何图标以编辑网格。
+当您页面中的 HTML 元素有 `display: grid` 或 `display: inline-grid` 的 CSS 声明时, 您会在样式边栏中看到该声明旁边出现了一个图标。点击该图标打开或关闭 CSS 网格编辑器。CSS 网格编辑器里的图标让您预览可能的变化（例如 `justify-content: space-around`）。接着，您可以一键点击任何图标以编辑网格。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dbd631539c7eeac02ea68a37096ce3bc7d9487d9 #}
 
@@ -39,7 +39,7 @@ Chromium 议题: [1203241](https://crbug.com/1203241)
 
 ## 支持控制台中的 const 重声明 {: #const-redeclaration }
 
-控制台现在也支援 const 重声明，在此之前，DevTools 只支援[`let` 和 `class` 的重声明](/blog/new-in-devtools-80/#redeclarations)。无法在控制台中重声明是开发者们常见的困扰，尤其是当您在试验新 JavaScript 代码的时候。
+控制台现在也支持 const 重声明，在此之前，DevTools 只支持[`let` 和 `class` 的重声明](/blog/new-in-devtools-80/#redeclarations)。无法在控制台中重声明是开发者们常见的困扰，尤其是当您在试验新 JavaScript 代码的时候。
 
 这项新功能允许开发者将代码复制粘贴进 DevTools 控制台，进行测试和调整。您现在可以无限重复这个过程，并且不需要刷新页面。在此之前，如果控制台中的代码重声明了一个 `const` 变量，DevTools 就会抛出一个语法错误。
 
@@ -132,9 +132,9 @@ Chromium 议题: [1103638](https://crbug.com/1103638)
 
 ### **网络状况**面板中设备的用户代理客户端提示 {: #sec-ua-ch }
 
-**网络状况** 面板下的**用户代理**现已加入了[用户代理客户端提示（User agnet client hints）](https://web.dev/user-agent-client-hints) 。
+**网络状况** 面板下的**用户代理**现已加入了[用户代理客户端提示（User agent client hints）](https://web.dev/user-agent-client-hints) 。
 
-用户代理客户端提示是客户端提示 API （Client Hints API）的新扩展。在保护用户隐私的前提下，开发者们可以在利用这个API，有效地获取用户浏览器的信息。
+用户代理客户端提示是客户端提示 API （Client Hints API）的新扩展。在保护用户隐私的前提下，开发者们可以在利用这个 API ，有效地获取用户浏览器的信息。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/iMlkTtV9OUdfujSWdHnR.png", alt="网络状况标签页中设备的用户代理客户端提示", width="800", height="532" %}
 
