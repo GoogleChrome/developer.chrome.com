@@ -4,7 +4,7 @@ title: 'Overview of the RenderingNG architecture'
 description: >
   This post explains the components of the RenderingNG architecture,
   and how the rendering pipeline flows through them.
-date: 2021-07-21
+date: 2021-07-26
 authors:
   - chrishtr
 ---
