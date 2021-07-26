@@ -4,7 +4,7 @@ description: >
   Implementing a policy enforcement check for Chrome and the infrastructure
   has enabled us to verify that certain minimum standards for security are met.
 layout: 'layouts/blog-post.njk'
-date: 2021-07-21
+date: 2021-07-28
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
@@ -48,7 +48,7 @@ the enforcement of policy occurs before signing or installing software.
 
 ```python
 def CreateProvenance(self, build_manifest: Mapping[str, Any]):
-"""Builder generates and signs provenance given build manifest. Signed JWT is placed
+  """Builder generates and signs provenance given build manifest. Signed JWT is placed
   alongside built artifact."""
 ```
 
@@ -57,7 +57,7 @@ the policy is enforced to meet particular minimum security requirements of the b
 
 ```python
 def VerifyProvenance(self, artifact_hash: str, provenance: str):
-"""Provenance is verified using a policy engine service before signing an artifact."""
+  """Provenance is verified using a policy engine service before signing an artifact."""
 ```
 
 Requirements are divided into roughly 4 areas:
@@ -73,4 +73,3 @@ and configuration meet certain minimum standards for security.
 This is a critical control used to limit the ability
 of a potentially malicious insider or compromised insider account
 to modify the software that we distribute to users.
-
