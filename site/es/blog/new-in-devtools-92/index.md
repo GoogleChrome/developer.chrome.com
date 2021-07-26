@@ -59,7 +59,7 @@ Ahora puedes ver el orden de los elementos de la página en tu pantalla para mej
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2QoBtjGjFxgDAkKaO3y2.png", alt="Visor de orden del código", width="800", height="515" %}
 
-El orden del contenido en un un documento HTML es muy importante para el SEO y la accesibildad. Las nuevas funcionalidades de CSS permite a los desarrolladores crear contenido que parezca muy diferente en el orden en pantalla que como está plasmado en el documento HTML. Este es un problema de accesibilidad muy grande ya que un usuario que usa un lector de pantallas puede tener una diferente, y seguramente confusa, experiencia que un usuario que usa un navegador.
+El orden del contenido en un documento HTML es muy importante para el SEO y la accesibildad. Las nuevas funcionalidades de CSS permite a los desarrolladores crear contenido que parezca muy diferente en el orden en pantalla que como está plasmado en el documento HTML. Este es un problema de accesibilidad muy grande ya que un usuario que usa un lector de pantallas puede tener una diferente, y seguramente confusa, experiencia que un usuario que usa un navegador.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7f83e4b0190ed2dbc32feef6d8b0315279ad7d07 #}
 
