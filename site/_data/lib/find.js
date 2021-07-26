@@ -42,7 +42,7 @@ const internalFind = (collection, urlToFind) => {
 
   // If this is the first time we've looked up this URL, notify the user.
   if (!notifiedCache.has(urlToFind)) {
-    console.warn('Could not find URL:', urlToFind);
+    // console.warn('Could not find URL:', urlToFind);
     notifiedCache.add(urlToFind);
   }
 

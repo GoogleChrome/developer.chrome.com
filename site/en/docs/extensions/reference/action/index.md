@@ -224,7 +224,7 @@ that everything worked as expected.
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_title": "Click to show an alert",
+    "default_title": "Click to show an alert"
   },
   "permissions": ["activeTab", "scripting"],
   "background": {

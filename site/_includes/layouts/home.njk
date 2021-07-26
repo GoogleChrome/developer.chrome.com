@@ -12,7 +12,7 @@
     <div class="masonry-grid gap-top-500">
       {% set blog = 'blog-' + locale %}
       {{ featuredPostCard(collections[blog][0]) }}
-      {{ featuredDocsCard(featured_projects) }}
+      {{ featuredDocsCard(featuredProjects) }}
       {% include 'partials/report-a-bug.njk' %}
       {% if tweets and tweets.length %}
         {{ featuredTweetCard() }}

@@ -263,6 +263,11 @@ redirects:
 - from: /docs/extensions/declarativenetrequest
   to: /docs/extensions/reference/declarativeNetRequest
 
+  # MV2 docs that have been removed, but their MV3 version still exists
+
+- from: /docs/extensions/mv2/single_purpose
+  to: /docs/extensions/mv3/single_purpose/
+
   # Group redirects
 
 - from: /apps/apps/...
