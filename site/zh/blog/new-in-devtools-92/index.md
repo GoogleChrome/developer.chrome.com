@@ -1,6 +1,6 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "DevTools 新变化（Chrome 92）"
+title: "DevTools 新功能（Chrome 92）"
 authors:
   - jecelynyeen
 date: 2021-06-02
@@ -24,11 +24,11 @@ tags:
 
 ## CSS 网格编辑器 {: #grid-editor }
 
-一个呼声很高的功能。您现在可以用新的 CSS 网格编辑器预览并编辑 CSS 网格了！
+我们新增入了大家期待已久的 CSS 网格编辑器。 您现在更方便地预览并编辑 CSS 网格！
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mV9Ac7QAD8vVPoiqmii6.png", alt="CSS 网格编辑器", width="800", height="486" %}
 
-当您页面中的某个 HTML 元素有 `display: grid` 或 `display: inline-grid` 的 CSS 声明时, 您会在样式边栏中看到该声明旁边出现了一个图标。点击该图标可以打开/关闭 CSS 网格编辑器。在这里，您可以用屏幕中的图标来预览可能的变化（例如 `justify-content: space-around`），而且仅需一次点击即可编辑网格的展示。
+当您页面中的 HTML 元素有 `display: grid` 或 `display: inline-grid` 的 CSS 声明时, 您会在样式边栏中看到该声明旁边出现了一个图标。点击该图标打开或关闭 CSS 网格编辑器。CSS 网格编辑器里的图标让您预览可能的变化（例如 `justify-content: space-around`）。接着，你可以一键点击任何图标以编辑网格。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dbd631539c7eeac02ea68a37096ce3bc7d9487d9 #}
 
@@ -37,11 +37,11 @@ Chromium 议题: [1203241](https://crbug.com/1203241)
 
 ## 支持控制台中的 const 重声明 {: #const-redeclaration }
 
-在已有的对[`let` 和 `class` 重声明](/blog/new-in-devtools-80/#redeclarations)的支持之上，控制台现在也支持 const 重声明了。对于使用控制台来试验新 JavaScript 代码的 Web 开发者来说，无法重声明曾是一个常见的困扰。
+控制台现在也支援 const 重声明，在此之前，DevTools 只支援[`let` 和 `class` 的重声明](/blog/new-in-devtools-80/#redeclarations)。无法在控制台中重声明是开发者们常见的困扰，尤其是当您在试验新 JavaScript 代码的时候。
 
-该功能允许开发者将代码复制粘贴进 DevTools 控制台，试运行它，对代码进行小的调整，再重复这个过程，并且不需要刷新页面。在此之前，如果控制台中的代码重声明了一个 `const` 变量，DevTools 会抛出一个语法错误。
+这项新功能允许开发者将代码复制粘贴进 DevTools 控制台，进行测试和调整。您现在可以无限重复这个过程，并且不需要刷新页面。在此之前，如果控制台中的代码重声明了一个 `const` 变量，DevTools 就会抛出一个语法错误。
 
-请参见下面的示例。`const` 重声明的支持是**跨 REPL 脚本**的（参见变量 `a`）。请注意，以下场景是按照设计不被支持的：
+请参见下面的示例。`const` 重声明的支持是**跨 REPL 脚本**的（参见变量 `a`）。按照设计，以下场景是不被支持的：
 
 - 不允许在 REPL 脚本中重声明页面脚本的 `const` 变量
 - 不允许在同一个 REPL 脚本中重声明 `const` （参见变量 `b`）
@@ -68,11 +68,11 @@ Chromium 议题: [1094406](https://crbug.com/1094406)
 
 ## 查看 iframe 详细信息的新快捷方式 {: #frame-details }
 
-右键点击“元素”面板中的 iframe 元素，选择**显示 iframe 详细信息**。
+右键点击**元素**面板中的 iframe 元素，选择**显示 iframe 详细信息**。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YdENg6wjsgPNyMODdOHC.png", alt="显示 iframe 详细信息", width="800", height="486" %}
 
-这会让您在“应用”面板中查看该 iframe 的详细信息。您可以检查文档的详细信息、安全与隔离状态、权限策略等，从而调试潜在的问题。
+这会打开**应用**面板中的 iframe 版面。您可以在此检查文档的详细信息、安全与隔离状态、权限策略等，从而调试潜在的问题。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hEsg9Mc95n7w2tPrv6KH.png", alt="iframe 详细信息展示", width="800", height="516" %}
 
@@ -81,9 +81,9 @@ Chromium 议题: [1094406](https://crbug.com/1094406)
 Chromium 议题: [1192084](https://crbug.com/1192084)
 
 
-## 增强的跨域资源共享调试支持 {: #cors }
+## 优化跨域资源共享的调试支持 {: #cors }
 
-从现在起，“问题”标签页将会展示跨域资源共享（CORS）的错误。这些 CORS 错误可能由多种原因造成。点击展开每一个问题即可了解潜在的原因及其解决方案。
+从现在起，**问题**面板将会展示跨域资源共享（CORS）的错误。这些 CORS 的错误可能由多种原因造成。点击展开每一个问题即可了解潜在的原因及其解决方案。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UpiZQCNnlENB8ZluzeFt.png", alt="问题标签页的 CORS 问题", width="800", height="490" %}
 
@@ -104,7 +104,7 @@ Chromium 议题: [1192084](https://crbug.com/1192084)
 Chromium 议题: [1141824](https://crbug.com/1141824)
 
 
-## “网络”面板的更新 {: #network }
+## **网络**面板的更新 {: #network }
 
 ### 重命名 XHR 标签为 Fetch/XHR {: #fetch-xhr }
 
@@ -117,7 +117,7 @@ XHR 标签现被重命名为 **Fetch/XHR**。 这项更新可以让开发者更�
 Chromium 议题: [1201398](https://crbug.com/1201398)
 
 
-### 在“网络”面板中过滤 Wasm 资源类型 {: #wasm }
+### 在**网络**面板中过滤 Wasm 资源类型 {: #wasm }
 
 您现在可以点击新的 **Wasm** 按钮来过滤 Wasm 网络请求。
 
@@ -128,11 +128,11 @@ Chromium 议题: [1201398](https://crbug.com/1201398)
 Chromium 议题: [1103638](https://crbug.com/1103638)
 
 
-### “网络状况”标签页中设备的用户代理客户端提示 {: #sec-ua-ch }
+### **网络状况**面板中设备的用户代理客户端提示 {: #sec-ua-ch }
 
-[用户代理客户端提示](https://web.dev/user-agent-client-hints) 现已应用于 **网络状况** 标签页下**用户代理**字段中的设备。
+**网络状况** 面板下的**用户代理**现已加入了[用户代理客户端提示（User agnet client hints）](https://web.dev/user-agent-client-hints) 。
 
-用户代理客户端提示是客户端提示 API 的新扩展，使得开发者可以在保护用户隐私的前提下，有效地获取用户浏览器的信息。
+用户代理客户端提示是客户端提示 API （Client Hints API）的新扩展。在保护用户隐私的前提下，开发者们可以在利用这个API，有效地获取用户浏览器的信息。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/iMlkTtV9OUdfujSWdHnR.png", alt="网络状况标签页中设备的用户代理客户端提示", width="800", height="532" %}
 
@@ -141,9 +141,9 @@ Chromium 议题: [1103638](https://crbug.com/1103638)
 Chromium 议题: [1174299](https://crbug.com/1174299)
 
 
-## 在“问题”标签页中报告怪异模式问题 {: #quirks-mode }
+## 在**问题**面板中报告怪异模式问题 {: #quirks-mode }
 
-DevTools 现在会报告[怪异模式](https://quirks.spec.whatwg.org/)和[有限怪异模式](https://dom.spec.whatwg.org/#concept-document-limited-quirks)的问题了。
+DevTools 现在会报告[怪异模式 （quirks mode）](https://quirks.spec.whatwg.org/)和[有限怪异模式](https://dom.spec.whatwg.org/#concept-document-limited-quirks)的问题了。
 
 怪异模式和有限怪异模式是 Web 标准制定之前的传统浏览器模式。这些模式会模拟 Web 标准时代之前的页面布局行为，并常常会造成意外的视觉效果。
 
@@ -156,7 +156,7 @@ DevTools 现在会报告[怪异模式](https://quirks.spec.whatwg.org/)和[有�
 Chromium 议题: [622660](https://crbug.com/622660)
 
 
-## 在“性能”面板中添加“计算相交部分” {: #computed-intersections }
+## 在**性能**面板中添加“计算相交部分” {: #computed-intersections }
 
 DevTools 现在会在火焰图中显示**计算相交部分**了。这项更新可以帮助您发现 [intersection observers](https://web.dev/intersectionobserver-v2/) 事件，并调试这些事件潜在的性能开销。
 
@@ -169,7 +169,7 @@ Chromium 议题: [1199137](https://crbug.com/1199137)
 
 ## Lighthouse 面板中的 Lighthouse 7.5 {: #lighthouse }
 
-Lighthouse 面板现已运行 Lighthouse 7.5。现在针对已通过 CSS 定义了 `aspect-ratio` 的图片将不再展示“缺少明确的宽高”的警告。在此之前，Lighthouse 会对未定义宽高的图片展示此警告。
+**Lighthouse** 面板现已运行 Lighthouse 7.5。现在针对已通过 CSS 定义了 `aspect-ratio` 的图片将不再展示“缺少明确的宽高”的警告。在此之前，Lighthouse 会对未定义宽高的图片展示此警告。
 
 完整的更新列表请参见[发布版本通知](https://github.com/GoogleChrome/lighthouse/releases/tag/v7.5.0)。
 
@@ -181,7 +181,7 @@ Chromium 议题: [772558](https://crbug.com/772558)
 
 ## 在“调用堆栈”边栏中弃用上下文菜单的 "Restart frame" 项 {: #restart-frame }
 
-此 **Restart frame** 菜单项现已被弃用。该功能需要进一步的开发才能良好地工作，而现在它无法工作且常常崩溃。
+此 **Restart frame** 菜单项现已被弃用。该功能需要进一步的开发，现在它经常无法正常运作。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Alvnt4FkoEFoP0SkdKgi.png", alt="弃用 Restart frame 菜单项", width="800", height="486" %}
 
@@ -202,8 +202,8 @@ Chrome DevTools 使用 [Chrome DevTools 协议 (CDP)](https://chromedevtools.git
 
 以下两个新功能可以帮助 CDP 的测试：
 
-新的**保存**按钮可以让您将已记录的消息以 JSON 文件的形式下载
-一个可以让您直接发送原始 CDP 命令的新字段
+- 新的**保存**按钮可以让您将已记录的消息以 JSON 文件的形式下载
+- 一个可以让您直接发送原始 CDP 命令的新字段
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mRVrHC9WEet7cwA7QAeV.png", alt="协议监视器", width="800", height="496" %}
 
