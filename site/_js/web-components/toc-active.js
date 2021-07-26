@@ -72,9 +72,9 @@ export class TocActive extends BaseElement {
 
     /** @type {{[hash: string]: HTMLAnchorElement}} */
     const tocLinkDict = {};
-    const links = /** @type {NodeListOf<HTMLAnchorElement>} */ (
-      this.querySelectorAll('a[href]')
-    );
+    const links = /** @type {NodeListOf<HTMLAnchorElement>} */ (this.querySelectorAll(
+      'a[href]'
+    ));
     for (const link of links) {
       const rawHref = link.getAttribute('href') ?? '';
       if (rawHref.startsWith('#')) {
@@ -83,9 +83,9 @@ export class TocActive extends BaseElement {
     }
 
     // Add all the headings in the article to an IntersectionObserver.
-    const allArticleHeadings = /** @type {NodeListOf<HTMLElement>} */ (
-      target.querySelectorAll('[id]')
-    );
+    const allArticleHeadings = /** @type {NodeListOf<HTMLElement>} */ (target.querySelectorAll(
+      '[id]'
+    ));
     for (const articleHeading of allArticleHeadings) {
       this.observer.observe(articleHeading);
     }
