@@ -47,6 +47,8 @@ export class TocActive extends BaseElement {
           this.visibleHeadings.delete(t);
         }
 
+        // After any heading becomes visible or invisible (most likely due to
+        // scroll or on startup), check which one is most active in a rAF.
         if (rafPending) {
           return;
         }
@@ -89,7 +91,9 @@ export class TocActive extends BaseElement {
     }
 
     this.updateHeading = () => {
-      // Find the first visible anchor element inside the article.
+      // Find the first visible anchor element inside the article that has a
+      // matching link in the TOC.
+      // We assume the DOM order matches the display order.
       /** @type {HTMLAnchorElement?} */
       let found = null;
       for (const articleHeading of allArticleHeadings) {
@@ -106,19 +110,28 @@ export class TocActive extends BaseElement {
         return;
       }
 
-      if (this.previousActiveAnchor) {
-        this.previousActiveAnchor.removeAttribute('toc--active');
-      }
+      // We don't remove `toc-active` from a previous anchor if there's no new
+      // best found heading: this is possible in long articles where there's no
+      // visible headings in a large section of text.
+      // This basically makes it appear as if something is always active.
       if (found) {
+        if (this.previousActiveAnchor) {
+          this.previousActiveAnchor.removeAttribute('toc--active');
+        }
         found.setAttribute('toc--active', '');
+        this.previousActiveAnchor = found;
       }
-      this.previousActiveAnchor = found;
     };
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
     this.observer.disconnect();
+
+    if (this.previousActiveAnchor) {
+      this.previousActiveAnchor.removeAttribute('toc--active');
+      this.previousActiveAnchor = null;
+    }
   }
 }
 
