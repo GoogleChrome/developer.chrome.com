@@ -85,9 +85,9 @@
   $thumbColor: get-color('grey-500'),
   $trackColor: transparent
 ) {
+  /* stylelint-disable scss/selector-no-redundant-nesting-selector */
   & {
     // Sass Lint doesn't recognize these shiny new properties
-    // sass-lint:disable-block no-misspelled-properties
     scrollbar-color: $thumbColor $trackColor;
     scrollbar-width: thin;
   }

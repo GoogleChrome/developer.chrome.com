@@ -34,20 +34,6 @@ toc-active {
   position: sticky;
   top: get-size(200);
 
-  // &::-webkit-scrollbar {
-  //   height: 8px;
-  //   width: 8px;
-  // }
-  // &::scrollbar {
-  //   height: 8px;
-  //   width: 8px;
-  // }
-
-  // &::-webkit-scrollbar-thumb {
-  //   background: rgba(128,134,139,.26);
-  //   border-radius: 8px;
-  // }
-
   [toc--active] {
     font-weight: 600;
     letter-spacing: -0.35px;  // makes the text roughly the same width
