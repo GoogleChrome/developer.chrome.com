@@ -66,7 +66,7 @@ administrator.
 If domain publishing is enabled for your organization, an additional option appears in the
 distribution page of the developer console:
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/SmrqQb3mLZaYj0O3Kdiv.png", alt="Screenshot showing
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/zpV6tBHuf3HLBpRjGsNA.png", alt="Screenshot showing
 the domain publishing option in the developer console", width="643", height="200", class="screenshot" %}
 
 See [Enterprise publishing options][domain-publishing-overview] for an overview of this and other
