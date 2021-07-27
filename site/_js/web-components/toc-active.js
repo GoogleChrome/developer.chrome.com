@@ -75,10 +75,15 @@ export class TocActive extends BaseElement {
     const links = /** @type {NodeListOf<HTMLAnchorElement>} */ (this.querySelectorAll(
       'a[href]'
     ));
+    /** @type {HTMLAnchorElement?} */
+    let firstLink = null;
     for (const link of links) {
       const rawHref = link.getAttribute('href') ?? '';
       if (rawHref.startsWith('#')) {
         tocLinkDict[rawHref.substr(1)] = link;
+        if (firstLink === null) {
+          firstLink = link;
+        }
       }
     }
 
@@ -122,8 +127,18 @@ export class TocActive extends BaseElement {
         this.previousActiveAnchor = found;
 
         // Scroll this heading into view, ensuring that long ToCs will always have the
-        // active heading visible in the scroll area.
-        found.scrollIntoView({block: 'nearest'});
+        // active heading visible in the scroll area. If it's the first heading, actually
+        // scroll to the top of the container (first element child), so the heading appears.
+        /** @type {Element} */
+        let scrollTarget = found;
+        if (scrollTarget === firstLink && this.firstElementChild) {
+          scrollTarget = this.firstElementChild;
+        }
+
+        // This uses 'nearest' as Chrome scrolls the page awkwardly if it's set to 'center', due
+        // to the layered scroll views. Other browsers (even Safari which does not support this
+        // option) don't react in the same way.
+        scrollTarget.scrollIntoView({block: 'nearest'});
       }
     };
   }
