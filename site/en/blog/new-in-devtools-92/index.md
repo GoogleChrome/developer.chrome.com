@@ -193,8 +193,8 @@ Chrome DevTools uses the [Chrome DevTools Protocol (CDP)](https://chromedevtools
 
 Two new functions added to facilitate the testing of CDP:
 
-The new **Save** button allows you to download the recorded messages as a JSON file
-A new field that allows you to send a raw CDP command directly
+- The new **Save** button allows you to download the recorded messages as a JSON file
+- A new field that allows you to send a raw CDP command directly
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mRVrHC9WEet7cwA7QAeV.png", alt="Protocol monitor", width="800", height="496" %}
 
