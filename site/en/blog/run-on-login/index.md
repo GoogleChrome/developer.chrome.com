@@ -10,10 +10,6 @@ description: |
    Many operating systems offer the ability to launch applications automatically when the user logs in. This ability is now available for installed web applications.
 hero: image/SeARmcA1EicLXagFnVOe0ou9cqK2/e5ATqM7ge5Y3Sxdqf1T8.jpg
 alt: Laptop, coffee, and stationary tools on desk.
-tags:
-  - blog # blog is a required tag for the article to show up in the blog.
-  - progressive-web-apps
-  - capabilities
 ---
 Run on login gives the user the ability to choose which applications start
 automatically when they first log into their computer. This ability has been
