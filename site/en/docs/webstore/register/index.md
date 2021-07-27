@@ -9,7 +9,7 @@ Before you can publish items on the Chrome Web Store, you must register as a CWS
 one-time registration fee. You must provide a developer email when you create your developer
 account; here are some tips about which email to use:
 
-* Because you will receive important emails about your extension or you may want to delete one account, we suggest using a new email account just for publishing your Chrome Web Store items. 
+* Because you will receive important emails about your extension or you may want to delete one of your accounts, we suggest using a new email account just for publishing your Chrome Web Store items. 
 * Make sure to check this address frequently so that you're aware of any important alerts or
   announcements.
 * If you recently [deleted your Chrome Web Store developer account][1], you can't reuse its associated
@@ -30,6 +30,16 @@ again.
 
 <div class="aside aside--note"><a href="/docs/webstore/group-publishers/"><strong>Group publishers</strong></a> note that only members of the group who've paid the registration fee can publish updates.</div>
 
+## Next steps {: #next-steps }
+
+1.  [Create your item's zip file][4]
+2.  [Upload your item to the Chrome Web  Store][5]
+3.  [Set up a group publisher][6] to share the ownership of your items
+
 [1]: /docs/webstore/account-deletion/
 [2]: https://support.google.com/chrome_webstore/contact/one_stop_support
 [3]: https://chrome.google.com/webstore/devconsole
+[4]: /docs/webstore/publish/#create-your-items-zip-file
+[5]: /docs/webstore/publish/#upload-your-item
+[6]: /docs/webstore/group-publishers/
+
