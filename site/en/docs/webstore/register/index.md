@@ -9,18 +9,15 @@ Before you can publish items on the Chrome Web Store, you must register as a CWS
 one-time registration fee. You must provide a developer email when you create your developer
 account; here are some tips about which email to use:
 
-* It's a good idea to decouple your personal account and your Chrome Web Store publishing account.
-  That's why we suggest using a new email account just for publishing your Chrome Web Store items.
+* Because you will receive important emails about your extension or you may want to delete one account, we suggest using a new email account just for publishing your Chrome Web Store items. 
+* Make sure to check this address frequently so that you're aware of any important alerts or
+  announcements.
 * If you recently [deleted your Chrome Web Store developer account][1], you can't reuse its associated
   email identity to create a new one. 
   {% Aside 'warning' %}
   If you requested the deletion of your account by mistake, please [contact developer support][2]
   immediately.
   {% endAside %}
-* Make sure to check this address frequently so that you're aware of any important alerts or
-  announcements.
-
-
 
 To register, just access the [developer console][3]. The first time you do this, a registration
 screen appears as shown here:
