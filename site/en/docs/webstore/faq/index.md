@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Frequently Asked Questions
 date: 2020-06-09
+updated: 2021-07-27
 description: Frequently asked questions about Chrome Web Store.
 ---
 
@@ -64,6 +65,10 @@ If you are already using the developer dashboard but haven't paid this fee yet, 
 now pay it in order to continue accessing your developer dashboard. This one-time fee is now part of
 the standard [developer registration process][99].
 {% endAside %}
+
+### I'm having trouble registering my developer account {: #faq-gen-33 }
+
+If you encounter any problems during the developer registration process, try using an incognito window to register. 
 
 ### How can I sign up using my Google Apps email address (for example, admin@example.com)? {: #faq-gen-17 }
 
