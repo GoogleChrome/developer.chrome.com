@@ -120,6 +120,10 @@ export class TocActive extends BaseElement {
         }
         found.setAttribute('toc--active', '');
         this.previousActiveAnchor = found;
+
+        // Scroll this heading into view, ensuring that long ToCs will always have the
+        // active heading visible in the scroll area.
+        found.scrollIntoView({block: 'nearest'});
       }
     };
   }

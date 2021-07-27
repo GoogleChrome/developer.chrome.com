@@ -1,10 +1,6 @@
 .toc-container {
   max-width: 100%;
-  width: px-to-rem(240px);
-  
-  @include media-query('xl') {
-    margin-right: auto;
-  }
+  width: px-to-rem(320px);
 }
 
 .toc > summary {
