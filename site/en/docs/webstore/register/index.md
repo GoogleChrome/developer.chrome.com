@@ -27,13 +27,11 @@ To register, just access the [developer console][3]. The first time you do this,
 
 Once you pay the registration fee and agree to the terms, you will not see this registration page again.
 
-<div class="aside aside--note"><a href="/docs/webstore/group-publishers/"><strong>Group publishers</strong></a> note that only members of the group who've paid the registration fee can publish updates.</div>
-
 ## Next steps {: #next-steps }
 
 1.  [Create your item's zip file][4]
 2.  [Upload your item to the Chrome Web  Store][5]
-3.  [Set up a group publisher][6] to share the ownership of your items
+3.  [Set up a group publisher][6] to share the ownership of your extension
 
 [1]: /docs/webstore/account-deletion/
 [2]: https://support.google.com/chrome_webstore/contact/one_stop_support
