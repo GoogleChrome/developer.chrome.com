@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Register as a Chrome Web Store developer"
 date: 2020-08-19
+updated: 2020-06-27
 description: How to register as a Chrome Web Store developer.
 ---
 
