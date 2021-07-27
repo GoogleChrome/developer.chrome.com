@@ -7,7 +7,7 @@
   still have the right margin. Otherwise the article will shift out of place.
 #}
 <div class="toc-container display-none xl:display-block pad-left-400 pad-right-400 {% if not tocContents %}visibility-hidden{% endif %}">
-  <toc-active>
+  <toc-active class="scrollbar">
     <div class="type--h6 color-secondary-text">{{ 'i18n.common.toc' | i18n(locale) }}</div>
     <div class="toc__wrapper">{{ tocContents | safe }}</div>
   </toc-active>
