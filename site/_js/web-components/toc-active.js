@@ -126,19 +126,15 @@ export class TocActive extends BaseElement {
         found.setAttribute('toc--active', '');
         this.previousActiveAnchor = found;
 
-        // Scroll this heading into view, ensuring that long ToCs will always have the
-        // active heading visible in the scroll area. If it's the first heading, actually
-        // scroll to the top of the container (first element child), so the heading appears.
-        /** @type {Element} */
-        let scrollTarget = found;
-        if (scrollTarget === firstLink && this.firstElementChild) {
-          scrollTarget = this.firstElementChild;
+        // Scroll this heading into view, ensuring that long ToCs will always
+        // have the active heading visible in the scroll area. If it's the first
+        // heading, actually scroll to the top of the container (first element
+        // child), so the "Table of Contents" heading appears.
+        if (found === firstLink) {
+          this.scrollTop = 0;
+        } else {
+          localScrollIntoView(found, this);
         }
-
-        // This uses 'nearest' as Chrome scrolls the page awkwardly if it's set to 'center', due
-        // to the layered scroll views. Other browsers (even Safari which does not support this
-        // option) don't react in the same way.
-        scrollTarget.scrollIntoView({block: 'nearest'});
       }
     };
   }
@@ -150,6 +146,30 @@ export class TocActive extends BaseElement {
     if (this.previousActiveAnchor) {
       this.previousActiveAnchor.removeAttribute('toc--active');
       this.previousActiveAnchor = null;
+    }
+  }
+}
+
+/**
+ * This is a simplified version of `scrollIntoView`, as that causes odd
+ * interactions with nested scroll containers in Chrome.
+ *
+ * @param {Element} target
+ * @param {Element} container
+ */
+function localScrollIntoView(target, container) {
+  const bounds = target.getBoundingClientRect();
+  const containerBounds = container.getBoundingClientRect();
+
+  const offTop = containerBounds.top - bounds.top;
+  if (offTop > 0) {
+    // Target is above the element.
+    container.scrollTop -= offTop;
+  } else {
+    const offEnd = bounds.bottom - containerBounds.bottom;
+    if (offEnd > 0) {
+      // Target is below the element.
+      container.scrollTop += offEnd;
     }
   }
 }
