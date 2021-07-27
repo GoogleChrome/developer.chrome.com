@@ -60,6 +60,7 @@ const formatDateShort = (date, locale = 'en', opts = {}) => {
 /**
  * Returns a date string formatted like "2021-12-31".
  * @param {Date} date
+ * @returns {string}
  */
 const formatDateNumeric = date => {
   return date.toISOString().split('T')[0];

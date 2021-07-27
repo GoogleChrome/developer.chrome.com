@@ -28,7 +28,7 @@
         {%- if loop.index0 > 0 -%}, {% endif -%}{{ author.name.given }}&nbsp;{{ author.name.family }}
       {%- endfor -%}
     </p>
-    <time class="type--small color-secondary-text">{{ helpers.formatDateLong(date, locale) }}</time>
+    <time class="type--small color-secondary-text">{{ helpers.formatDateShort(date, locale) }}</time>
   </div>
 </div>
 

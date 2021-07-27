@@ -6,9 +6,8 @@ permalink: "/sitemap.xml"
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for page in collections.all %}
 {%- if not page.data.noindex and not page.data.draft %}
-  {# Use the page's canonicalUrl which ignores the language directories. #}
   {%- if page.url %}
-  {% set fullUrl %}{{ site.url }}{{ page.url }}{% endset %}
+  {% set fullUrl %}{{ site.url }}{{ page.url | stripDefaultLocale }}{% endset %}
   <url>
     <loc>{{ fullUrl }}</loc>
     {%- set lastMod = page.data.date -%}
