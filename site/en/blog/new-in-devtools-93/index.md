@@ -118,7 +118,7 @@ Currently on Chrome OS (CrOS), Chrome Apps and Android Apps that declare a "new-
 Chromium issue: [1185678](https://crbug.com/1185678)
 
 
-## Fixed CSS matching selectors
+## Fixed CSS matching selectors {: #matching-selectors }
 DevTools fixed the CSS matching selectors, it was not working in the last release.
 
 The comma separated selectors in the **Styles** pane are colored differently depending on whether they match the selected DOM node:
@@ -133,7 +133,7 @@ The comma separated selectors in the **Styles** pane are colored differently dep
 Chromium issue: [1219153](https://crbug.com/1219153)
 
 
-## Pretty-printing JSON responses in the Network panel
+## Pretty-printing JSON responses in the Network panel {: #pretty-print-json }
 You can now pretty print JSON responses in the **Network** panel.
 
 Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-print it.

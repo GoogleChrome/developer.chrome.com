@@ -6,6 +6,17 @@ description: "A list of everything that has been covered in the What's New In De
 
 Here's a list of everything that's been covered in the *What's New In DevTools* series.
 
+## Chrome 93 {: #chrome93 }
+
+* [Editable CSS container queries  in the Styles pane](/blog/new-in-devtools-93/#container-queries)
+* [Web bundle preview in the Network panel](/blog/new-in-devtools-93/#web-bundle)
+* [Attribution Reporting API debugging](/blog/new-in-devtools-93/#attribution-reporting)
+* [Improved CORS debugging](/blog/new-in-devtools-93/#cors)
+* [Lighthouse 8.1](/blog/new-in-devtools-93/#lighthouse)
+* [New note URL in the Manifest pane](/blog/new-in-devtools-93/#new-note-url)
+* [Fixed CSS matching selectors](/blog/new-in-devtools-93/#matching-selectors)
+* [Pretty-printing JSON responses in the Network panel](/blog/new-in-devtools-93/#pretty-print-json)
+
 ## Chrome 92 {: #chrome92 }
 
 * [CSS grid editor](/blog/new-in-devtools-92/#grid-editor)
