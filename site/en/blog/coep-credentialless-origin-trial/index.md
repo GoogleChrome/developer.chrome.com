@@ -152,7 +152,7 @@ are:
 * `Cross-Origin-Embedder-Policy: credentialless`
 * `Cross-Origin-Opener-Policy:same-origin`
 
-If you have any feedback on this functionality, please file an issue at [the
+If you have any feedback on this functionality, file an issue at [the
 GitHub repository](https://github.com/WICG/credentiallessness).
 
 ## What's coming next
