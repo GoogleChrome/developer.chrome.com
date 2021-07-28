@@ -81,7 +81,7 @@ Chromium issue: [1192084](https://crbug.com/1192084)
 
 ## Mejor soporte para depurar CORS {: #cors }
 
-Los errores de *Cross-origin resource sharing (CORS)* ahora aparecen en la pestaña de *Issues* y, además, muestra las diferencias razones por las que se producen los errores. Puedes hacer click en cada *Issue* para ver el detalle de la causa y las soluciones.
+Los errores de *Cross-origin resource sharing (CORS)* ahora aparecen en la pestaña de *Issues* y, además, se muestran las diferentes razones por las que se producen los errores. Puedes hacer click en cada *Issue* para ver el detalle de las potenciales causas y las soluciones.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UpiZQCNnlENB8ZluzeFt.png", alt="Problemas de CORS en la pestaña Issues", width="800", height="490" %}
 
