@@ -40,7 +40,7 @@ Chromium issue: [1203241](https://crbug.com/1203241)
 
 La pestaña de *Consola*  ahora soporta la redeclaración de variables `const`, sumándose así a las redeclaraciones de [`let` y `class` que ya existían.](/blog/new-in-devtools-80/#redeclarations).
 
-Esto permite a los desarrolladores hacer un copiado y pegado de código en la consola de DevTools para ver cómo funciona o experimentar, hacer pequeños cambios en el código y repetir el proceso sin necesidad de refrescar la página. Anteriormente, las DevTools mostraban un error de sintaxis al intentar redeclarar una variable `const` en la consola.
+Esto permite a los desarrolladores hacer un copiado y pegado de código en la consola de DevTools para ver cómo funciona o experimentar, hacer pequeños cambios en el código y repetir el proceso sin necesidad de refrescar la página. Anteriormente, DevTools mostraban un error de sintaxis al intentar redeclarar una variable `const` en la consola.
 
 Veamos un ejemplo. La redeclaración de `const` se admite en scripts REPL separados (mira el ejemplo de la variable `a` más abajo). Ten en cuenta que lo siguiente no se soporta por diseño:
 
