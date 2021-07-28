@@ -1,6 +1,6 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "Qué hay de nuevo en las DevTools (Chrome 92)"
+title: "Qué hay de nuevo en DevTools (Chrome 92)"
 authors:
   - midudev
 date: 2021-07-26
