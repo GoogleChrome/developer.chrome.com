@@ -38,7 +38,7 @@ Chromium issue: [1203241](https://crbug.com/1203241)
 
 ## Soporte para la redeclaración de `const` en la consola {: #const-redeclaration }
 
-La pestaña de *Consola*  ahora soporte la redeclaración de variables `const`, sumándose así a las redeclaraciones de [`let` y `class` que ya existían.](/blog/new-in-devtools-80/#redeclarations).
+La pestaña de *Consola*  ahora soporta la redeclaración de variables `const`, sumándose así a las redeclaraciones de [`let` y `class` que ya existían.](/blog/new-in-devtools-80/#redeclarations).
 
 Esto permite a los desarrolladores hacer un copiado y pegado de código en la consola de DevTools para ver cómo funciona o experimentar, hacer pequeños cambios en el código y repetir el proceso sin necesidad de refrescar la página. Anteriormente, las DevTools mostraban un error de sintaxis al intentar redeclarar una variable `const` en la consola.
 
