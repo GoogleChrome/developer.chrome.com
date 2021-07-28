@@ -62,10 +62,10 @@ def VerifyProvenance(self, artifact_hash: str, provenance: str):
 
 Requirements are divided into roughly 4 areas:
 
-- *Source control:* protects the data that went into the build.
-- *Build:* protects the process that converts the source into binary.
-- *Provenance:* attestation that contains verifiable build manifest.
-- *Policy:* rules that determine if a given artifact qualifies in a given context.
+- **Source control:** protects the data that went into the build.
+- **Build:** protects the process that converts the source into binary.
+- **Provenance:** attestation that contains verifiable build manifest.
+- **Policy:** rules that determine if a given artifact qualifies in a given context.
 
 Implementing a policy enforcement check as part of the CI and CD processes for Chrome and the infrastructure
 has enabled us to verify that the code
