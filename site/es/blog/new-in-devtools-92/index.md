@@ -210,7 +210,7 @@ Para activar este experimento, activa la casilla **Recorder** en **Settings > Ex
 
 {% endAside %}
 
-[La grabadora de Puppeteer](https://developer.chrome.com/blog/new-in-devtools-89/#record) ahora genera una lista de pasos basada en tu interacción con el navegador, donde antes las DevTools generaba directamente un script de Puppeteer. Un nuevo botón **Export** ha sido añadido que te permite exportar los pasos como un script de Puppeteer.
+[La grabadora de Puppeteer](https://developer.chrome.com/blog/new-in-devtools-89/#record) ahora genera una lista de pasos basada en tu interacción con el navegador, donde antes DevTools generaba directamente un script de Puppeteer. Un nuevo botón **Export** ha sido añadido que te permite exportar los pasos como un script de Puppeteer.
 
 Después de grabar los pasos, puedes usar el botón **Replay** para reproducir los pasos. [Sigue las instrucciones](https://developer.chrome.com/blog/new-in-devtools-89/#record) para aprender cómo empezar a utilizar este nuevo modo de grabación.
 
