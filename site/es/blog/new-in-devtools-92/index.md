@@ -141,7 +141,7 @@ DevTools ahora reporta los posibles problemas con el [modo Quirks](https://quirk
 
 El modo Quirks y Limited-Quirks son modos de navegadores antiguos cuando todavía los estándares web no fueron establecidos. Estos modos emulan la era pre-standard para como se comportaba el diseño en el navegador y en ocasiones causan efectos visuales inesperados.
 
-Cuando depuras problemas de diseño, los desarrolladores pueden pensar que son causados por CSS que han producido o errores en el HTML, mientras que el problema en realidad está en el modo de compatibilidad que la página se encuentra. Ahora DevTools proporciona sugerencias para solucionarlo.
+Cuando depuras problemas de diseño, los desarrolladores pueden pensar que son causados por CSS que han producido o errores en el HTML, mientras que el problema en realidad está en el modo de compatibilidad en que la página se encuentra. Ahora DevTools proporciona sugerencias para solucionarlo.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XqtqSZPa1S1YnmeIt0ee.png", alt="Reporta los problemas del modo Quirks en la pestaña Issues", width="800", height="490" %}
 
