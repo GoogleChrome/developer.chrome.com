@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: "Private Network Access update: Introducing a deprecation trial"
+title: "Private Network Access update: Introducing Deprecation Trial"
 authors:
   - titouan
 description: Chrome is deprecating access to private network endpoints from non-secure websites in Chrome 93 as part of the Private Network Access specification. Read on for recommended actions.
@@ -12,8 +12,7 @@ alt: A private sign in German
 
 **Updates**
 
-- **July 29, 2021**: Updated timeline is announced. This article has had a major
-  rewrite.
+- **July 29, 2021**: Updated timeline announcement and introduction of Deprecation Trial.
 - **June 23, 2021**: Based on the feedback, the timeline for
   blocking private network requests initiated from non-secure contexts has been changed.
   Such requests will be blocked in Chrome 93 instead of 92.
@@ -40,7 +39,8 @@ Chrome will introduce the following changes:
 If you need more time to mitigate the impact of the deprecation register for the
 Deprecation Trial.
 
-If you have [a valid reason] re-enable the feature using Chrome enterprise policy.
+If you have administrative control over your users via Chrome Enterprise,
+you can re-enable the feature using Chrome enterprise policy.
 
 To mitigate the impact of the new restrictions, use one of the following
 strategies:
