@@ -4,7 +4,9 @@ title: "Load cross-origin resources without CORP headers using `COEP: credential
 description: >
   `Cross-Origin-Embedder-Policy: credentialless` will be on origin trial starting Chrome 93. This new value allows web pages to enable cross-origin isolation without requiring cross-origin resources to respond with a `CORP: cross-origin` header by sending credentialless requests.
 subhead: >
-  A sentence of extra info to entice the reader.
+  Cross-origin resources served by third-parties often do not include adequate CORP
+  headers. If they can be requested without credentials, now you can enable cross-origin
+  isolation by marking them as such. 
 date: 2021-07-29
 authors:
   - agektmr
