@@ -1,20 +1,18 @@
 ---
 layout: 'layouts/blog-post.njk'
 title: Verify phone number on desktop using WebOTP API
-description: >
-  Starting from Chrome 93, websites can verify the phone number from the desktop Chrome.
-subhead: >
-  Starting from Chrome 93, websites can verify the phone number from the desktop Chrome.
-date: 2021-07-29
+description: Starting from Chrome 93, websites can verify the phone number from the desktop Chrome.
+subhead: Starting from Chrome 93, websites can verify the phone number from the desktop Chrome.
+date: 2021-07-28
 authors:
   - yigu
   - agektmr
 tags:
-  - privacy
+  - identity
+  - one-time-code
   - security
 hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/kdZZL6BSVaRD5PUMjMDn.jpg'
-alt: >
-  A laptop computer and a mobile device.
+alt: A laptop computer and a mobile device.
 ---
 
 WebOTP helps users enter a phone number verification code on a mobile website in
@@ -27,13 +25,13 @@ SMS OTPs (one-time passwords) are commonly used to verify a phone number, for
 example as a second step in authentication, or to verify payments on the web.
 However, the entire flow of switching from desktop to mobile, opening the SMS
 app, memorizing and entering the OTP on the original website back on desktop
-adds friction. It’s easy to make mistakes this way and it’s vulnerable to
+adds friction. It's easy to make mistakes this way and it's vulnerable to
 phishing attacks.
 
 The [WebOTP API](https://web.dev/web-otp) gives websites the ability to
 programmatically obtain the one-time password from a SMS message and
 automatically fill the form for users with just one tap without switching apps.
-The SMS has a specific format and it’s bound to the origin, so it mitigates the
+The SMS has a specific format and it's bound to the origin, so it mitigates the
 risk of phishing websites stealing the OTP as well.
 
 <figure class="w-figure" style="width:300px; margin:auto;">
@@ -44,7 +42,7 @@ risk of phishing websites stealing the OTP as well.
   <figcaption class="w-figcaption">
     WebOTP API in action.
   </figcaption>
-</figure>m
+</figure>
 
 One use case that has yet to be supported in WebOTP was targeting phone number
 verification requests from a remote desktop device or a laptop. In other words,
@@ -67,7 +65,7 @@ Prerequisites:
   mobile Chrome. For example, via
   [https://myaccount.google.com/](https://myaccount.google.com/) or
   [https://mail.google.com](https://mail.google.com). No need to turn on sync.
-* On your Android device, you need to sign-in to Android via “Settings->Google”.
+* On your Android device, you need to sign-in to Android via "Settings->Google".
 * [Chrome 93 must be the default
   browser](https://support.google.com/chrome/answer/95417/?co=GENIE.Platform%3DAndroid&oco=1)
   on the Android device.
@@ -91,7 +89,7 @@ these steps:
 
 Let's look back at how WebOTP API works:
 
-```
+```javascript
 …
   const otp = await navigator.credentials.get({
     otp: { transport:['sms'] }
@@ -103,7 +101,7 @@ Let's look back at how WebOTP API works:
 The SMS message must be [formatted with the origin-bound one-time
 codes](https://web.dev/web-otp/#format).
 
-```
+```text
 Your OTP is: 123456.
 
 @web-otp-demo.glitch.me #12345
