@@ -1,15 +1,14 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Verify phone number on desktop using WebOTP API
-description: Starting from Chrome 93, websites can verify the phone number from the desktop Chrome.
-subhead: Starting from Chrome 93, websites can verify the phone number from the desktop Chrome.
+title: Verify a phone number on desktop using WebOTP API
+description: Starting from Chrome 93, websites can verify phone numbers from desktop Chrome.
+subhead: Starting from Chrome 93, websites can verify phone numbers from desktop Chrome.
 date: 2021-07-28
 authors:
   - yigu
   - agektmr
 tags:
   - identity
-  - one-time-code
   - security
 hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/kdZZL6BSVaRD5PUMjMDn.jpg'
 alt: A laptop computer and a mobile device.
@@ -44,9 +43,9 @@ risk of phishing websites stealing the OTP as well.
   </figcaption>
 </figure>
 
-One use case that has yet to be supported in WebOTP was targeting phone number
-verification requests from a remote desktop device or a laptop. In other words,
-the API only works on a device that has telephony capabilities. The API now
+One use case that has yet to be supported in WebOTP is targeting phone number
+verification requests from a remote desktop device or a laptop—the
+API only works on devices that have telephony capabilities. The API now
 supports listening for SMSes received on other devices to assist users in
 completing phone number verification on desktop in Chrome 93.
 
@@ -54,11 +53,11 @@ completing phone number verification on desktop in Chrome 93.
 
 ## Try it out
 
-Prerequisites:
+### Prerequisites
 
 * A desktop or a laptop computer (Windows, Mac, Linux or Chrome OS).
-* An Android phone with [Google Play Services version >=
-  20.30.12](https://support.google.com/googleplay/answer/9037938).
+* An Android phone with [Google Play Services version
+  20.30.12 or higher](https://support.google.com/googleplay/answer/9037938).
 * Chrome 93 or later, both on desktop or laptop and mobile. [Chrome 93
   Beta](https://www.google.com/chrome/beta/) is available as of late July 2021.
 * You need to sign-in to the same Google account on both desktop Chrome and
@@ -76,18 +75,18 @@ To try this seamless phone number verification flow on desktop yourself, follow
 these steps:
 
 1. Go to [https://web-otp-demo.glitch.me/](https://web-otp-demo.glitch.me/) on
-   desktop. Click the Verify button.
+   desktop. Click the **Verify** button.
 2. Send the exact text message that was on the screen from a second phone to the
    Android device.
 3. When the SMS is delivered to the Android device, a dialog appears asking if
-   you want to verify the phone number on the desktop. Press "Submit" to
+   you want to verify the phone number on the desktop. Press **Submit** to
    approve.
 4. On the desktop, the verification code sent to the Android device should be
    autofilled in the input field.
 
 ## How WebOTP API works
 
-Let's look back at how WebOTP API works:
+Let's look at how WebOTP API works:
 
 ```javascript
 …
@@ -124,10 +123,13 @@ API](https://web.dev/web-otp/).
 Phone number verification via SMS is widely used and platform agnostic. Any use
 cases on mobile devices should be applicable to desktop devices.
 
-Using WebOTP API on desktop is as simple as running the same code as on mobile.
-In other words, websites can simply deploy the same code across platforms.
+Using WebOTP API on desktop is the same as on mobile,
+so websites can deploy the same code across platforms.
 
 ## Browser support and interoperability
+
+This feature is powered by Chrome Sync so it works Chrome only at the moment.
+Receiving and transmitting SMS on iOS or iPad OS in Chrome is not supported.
 
 While browser engines other than Chromium do not implement the WebOTP API,
 Safari shares the same [SMS format](https://wicg.github.io/sms-one-time-codes/)
@@ -137,12 +139,9 @@ one-time code format arrives with the matched origin on iPhone, the message gets
 forwarded to iMac. If the user focuses on the input field, Safari will suggest
 the OTP for the user to enter.
 
-This feature is powered by Chrome Sync so it works Chrome only at the moment.
-Receiving and transmitting SMS on iOS or iPad OS in Chrome is not supported.
-
 ## Feedback
 
-Your feedback is invaluable in making WebOTP API better, so go on and try it out
+Your feedback is invaluable in making WebOTP API better. Try it out
 and [let us know](https://bugs.chromium.org/p/chromium/issues/detail?id=1136506)
 what you think.
 
