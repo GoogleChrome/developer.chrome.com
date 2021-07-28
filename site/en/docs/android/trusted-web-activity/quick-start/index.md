@@ -34,13 +34,13 @@ you're using a physical phone).
 A Trusted Web Activity lets your Android App launch a full screen Browser Tab without
 any browser UI.
 This capability is restricted to websites that you own, and you prove this by setting
-up Digital Asset Links.
+up Digital Asset Links. We'll talk [more about them later](#creating-your-asset-link-file).
 
 
 When you launch a Trusted Web Activity, the browser will check that the Digital Asset Links check
 out, this is called **verification**.
 If verification fails, the browser will fall back to displaying your website as a
-[Custom Tab](/docs/android/custom-tabs).
+[Custom Tab](/docs/android/custom-tabs/overview/).
 
 ## Install and configure Bubblewrap {: #install-and-configure-bubblewrap }
 
@@ -110,11 +110,11 @@ library to power the generation of Trusted Web Activity projects. Find more inst
 use PWA Builder to create an Android App that opens your PWA in
 [this blogpost](https://www.davrous.com/2020/02/07/publishing-your-pwa-in-the-play-store-in-a-couple-of-minutes-using-pwa-builder/).
 
-### A note on signing keys
+### A note on signing keys {: #a-note-on-signing-keys }
 
 Digital Asset Links take into account the key that an APK has been signed with and a common cause for verification failing is to use the wrong signature. (Remember, failing verification means you'll launch your website as a Custom Tab with browser UI at the top of the page.) When Bubblewrap builds the application, an APK will be created with a key setup during the `init` step. However, when you publish your app in Google Play, another key may be created for you, depending on how you choose to handle signing keys. Learn more on [signing keys and how they relate to Bubblewrap and Google Play](/docs/android/trusted-web-activity/android-for-web-devs#upload-vs-signing-key).
 
-## Setting up your asset link file
+## Setting up your asset link file {: #creating-your-asset-link-file }
 
 Digital Asset Links consist essentially of a file on your website that points to your app and some
 metadata in your app that points to your website.
@@ -123,7 +123,7 @@ metadata in your app that points to your website.
   id='3bAQPnxLd4c'
 %}
 
-After creating your `assetlinks.json` file, upload it to your website at .well-known/assetlinks.json (relative to the root) so that your app can be verified properly by the browser. Check out a [deep dive on Digital Asset Links](/docs/android/trusted-web-activity/android-for-web-devs#digital-asset-links) for more information on how it relates to your signing key. 
+After creating your `assetlinks.json` file, upload it to your website at `.well-known/assetlinks.json` relative to the root) so that your app can be verified properly by the browser. Check out a [deep dive on Digital Asset Links](/docs/android/trusted-web-activity/android-for-web-devs#digital-asset-links) for more information on how it relates to your signing key.
 ## Checking your browser {: #checking-your-browser }
 
 A Trusted Web Activity will try to adhere to the user's default choice of browser.
