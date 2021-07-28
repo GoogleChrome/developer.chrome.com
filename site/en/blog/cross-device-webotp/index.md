@@ -49,7 +49,14 @@ API only works on devices that have telephony capabilities. The API now
 supports listening for SMSes received on other devices to assist users in
 completing phone number verification on desktop in Chrome 93.
 
-{% Video src="video/YLflGBAPWecgtKJLqCJHSzHqe2J2/mzxjCBSHEFLEg0Y8a9Ny.mov" %}
+<figure class="w-figure">
+  <video controls autoplay loop muted class="w-screenshot">
+    <source src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/video/vgdbNJBYHma2o62ZqYmcnkq3j0o1/iUUGcawm8LJpGH3PFxNZ.mp4" type="video/mp4">
+  </video>
+  <figcaption class="w-figcaption">
+    WebOTP API on desktop.
+  </figcaption>
+</figure>
 
 ## Try it out
 
@@ -70,6 +77,8 @@ completing phone number verification on desktop in Chrome 93.
   on the Android device.
 * Chrome 93 must be running either in foreground or background on the Android
   device.
+
+### Demo
 
 To try this seamless phone number verification flow on desktop yourself, follow
 these steps:
