@@ -51,7 +51,7 @@ completing phone number verification on desktop in Chrome 93.
 
 <figure class="w-figure">
   <video controls autoplay loop muted class="w-screenshot">
-    {% Video src="video/vgdbNJBYHma2o62ZqYmcnkq3j0o1/iUUGcawm8LJpGH3PFxNZ.mp4" autoplay=true, controls=true %}
+    {% Video src="video/vgdbNJBYHma2o62ZqYmcnkq3j0o1/iUUGcawm8LJpGH3PFxNZ.mp4", autoplay=true, controls=true %}
   </video>
   <figcaption class="w-figcaption">
     WebOTP API on desktop.
