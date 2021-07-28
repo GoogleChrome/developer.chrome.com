@@ -24,7 +24,7 @@ tags:
 
 ## Editor de CSS Grid {: #grid-editor }
 
-¡Cuanto tiempo esperando esta función! Ahora puedes **previsualizar el resultado de la declaración de Grid en CSS** y editarla desde un nuevo editor en el inspector de elementos.
+¡Cuánto tiempo esperando esta función! Ahora puedes **previsualizar el resultado de la declaración de Grid en CSS** y editarla desde un nuevo editor en el inspector de elementos.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mV9Ac7QAD8vVPoiqmii6.png", alt="Editor de CSS Grid", width="800", height="486" %}
 
