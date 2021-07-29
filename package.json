@@ -67,7 +67,8 @@
     "remove-markdown": "^0.3.0",
     "rollup": "^2.22.2",
     "striptags": "^3.1.1",
-    "unistore": "^3.5.2"
+    "unistore": "^3.5.2",
+    "webdev-infra": "^1.0.23"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
@@ -126,7 +127,6 @@
     "unist-util-to-list-of-char": "^0.1.2",
     "unist-util-visit": "^2.0.3",
     "uslug": "^1.0.4",
-    "webdev-infra": "^1.0.21",
     "wicg-inert": "^3.0.3"
   }
 }
