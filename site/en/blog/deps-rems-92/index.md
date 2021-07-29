@@ -17,7 +17,7 @@ stable version in late July, 2021.
 
 ## Payment handlers for standardized payment method identifiers
 
-This feature, which enabled web-based payment handlers to receive paymentrequest
+This feature, which enabled web-based payment handlers to receive `paymentrequest`
 events with non-URL, but standardized payment method identifiers, such as
 `"basic-card"` or `"tokenized-card"`, [has been
 removed](https://www.chromestatus.com/feature/5717324021628928).
