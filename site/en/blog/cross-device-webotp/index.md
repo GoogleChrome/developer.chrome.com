@@ -10,7 +10,7 @@ authors:
 tags:
   - identity
   - security
-hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/kdZZL6BSVaRD5PUMjMDn.jpg'
+hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/sx5olO6RBqttqsX9Zzgm.jpeg'
 alt: A laptop computer and a mobile device.
 ---
 
@@ -152,7 +152,7 @@ Your feedback is invaluable in making WebOTP API better. Try it out
 and [let us know](https://bugs.chromium.org/p/chromium/issues/detail?id=1136506)
 what you think.
 
-Photo by
-[Firmbee.com](https://unsplash.com/@firmbee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+Photo by [Luis
+Villasmil](https://unsplash.com/@luisviol?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 on
 [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
