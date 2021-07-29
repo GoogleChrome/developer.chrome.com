@@ -84,7 +84,7 @@ This means the requested cross-origin server won't be able to respond with a
 sensitive resource and the requester can always assume that the response only
 contains publicly available information.
 
-{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/Qm7vlqh5sabq8SI0d03A.png",
+{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/lbeAQd4Zxnzti7SdHdGt.png",
 alt="ALT_TEXT_HERE", width="800", height="397" %}
 
 This is also aligned with browsers' plan of [phasing out third-party
