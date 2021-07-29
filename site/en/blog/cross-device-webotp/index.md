@@ -144,9 +144,9 @@ While browser engines other than Chromium do not implement the WebOTP API,
 Safari shares the same [SMS format](https://wicg.github.io/sms-one-time-codes/)
 with its `input[autocomplete="one-time-code"]` support. In Safari, as long as a
 user has turned on iMessage auto-sync, when an SMS that contains an origin-bound
-one-time code format arrives with the matched origin on iPhone, the message gets
-forwarded to iMac. If the user focuses on the input field, Safari will suggest
-the OTP for the user to enter.
+one-time code format arrives with the matched origin on iOS or iPadOS, the
+message gets forwarded to macOS. If the user focuses on the input field, Safari
+will suggest the OTP for the user to enter.
 
 ## Feedback
 
