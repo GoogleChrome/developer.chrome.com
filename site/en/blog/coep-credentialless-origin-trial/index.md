@@ -85,7 +85,7 @@ sensitive resource and the requester can always assume that the response only
 contains publicly available information.
 
 {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/lbeAQd4Zxnzti7SdHdGt.png",
-alt="ALT_TEXT_HERE", width="800", height="397" %}
+alt="", width="800", height="397" %}
 
 This is also aligned with browsers' plan of [phasing out third-party
 cookies](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html).
