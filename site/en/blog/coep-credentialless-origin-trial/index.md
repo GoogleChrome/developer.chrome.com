@@ -50,8 +50,8 @@ with CORS or `Cross-Origin-Resource-Policy: cross-origin` to be loaded.
 While cross-origin isolation brings webpages better security and ability to
 enable powerful features, it's challenging for some of them [to meet all the
 conditions required](https://web.dev/cross-origin-isolation-guide/). One of the
-biggest challenges is to serve cross-origin resources with CORS or CORP:
-cross-origin in order to be loaded. Resources without those headers will not be
+biggest challenges is to serve cross-origin resources with CORS or `CORP:
+cross-origin` in order to be loaded. Resources without those headers will not be
 loaded by the browser even if they are successfully served.
 
 These cross-origin resources are usually served by third-parties and asking them
@@ -86,6 +86,11 @@ contains publicly available information.
 This is also aligned with browsers' plan of [phasing out third-party
 cookies](https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html).
 
+## Demo
+
+You can try various header options in this demo:
+[https://first-party-test.glitch.me](https://first-party-test.glitch.me)
+
 ## FAQ
 
 ### Can I send a credentialed request under a `credentialless` environment?
@@ -114,10 +119,11 @@ No. Loading cross-origin iframes under a `credentialless` environment still requ
 * `Cross-Origin-Embedder-Policy: credentialless` (or `require-corp`)
 * `Cross-Origin-Resource-Policy: cross-origin`
 
-The good news is, there's an ongoing discussion about allowing loading
+The good news is, there's [an ongoing discussion about allowing loading
 cross-origin iframes without those headers by giving iframes
-`crossorigin="anonymous"`. This will allow cross-origin iframes being loaded
-without headers but without credentials.
+`crossorigin="anonymous"`](https://github.com/camillelamy/explainers/blob/master/anonymous_iframes.md).
+This will allow cross-origin iframes being loaded without headers but without
+credentials.
 
 ### Will this feature be adopted by other browsers?
 
@@ -178,8 +184,8 @@ these updates are in place.
   COEP](https://web.dev/coop-coep/)
 * [Why you need "cross-origin isolated" for powerful
   features](https://web.dev/why-coop-coep/)
-* [A guide to enable cross-origin isolation Cross-origin isolation enables a web
-  page to use](https://web.dev/cross-origin-isolation-guide/)
+* [A guide to enable cross-origin
+  isolation](https://web.dev/cross-origin-isolation-guide/)
 * [SharedArrayBuffer updates in Android Chrome 88 and Desktop Chrome
   92](https://developer.chrome.com/blog/enabling-shared-array-buffer/)
 
