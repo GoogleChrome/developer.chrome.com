@@ -12,13 +12,14 @@ An integer specifying the version of the manifest file format your package requi
 "manifest_version": 3
 ```
 
-Legal values for this key are:
+Supported values for this key are:
 
-* 3: Use the [Manifest V3][mv3] format and associated feature set.
-* 2: Use the [Manifest V2][mv2] format and associated feature set.
+* `3`: Use the [Manifest V3][mv3] format and associated feature set.
+* `2`: Use the [Manifest V2][mv2] format and associated feature set.
 
 The current version is Manifest V3. Manifest V2 is also currently permitted, but will be phased out
-in the future. Other manifest versions greater than 3 are not planned yet.
+in the future. There will be other manifest versions in the future (V4 and beyond) but these aren't
+scheduled yet.
 
 [mv3]: /docs/extensions/mv3/intro/mv3-overview/
 [mv2]: /docs/extensions/mv2/manifest/
