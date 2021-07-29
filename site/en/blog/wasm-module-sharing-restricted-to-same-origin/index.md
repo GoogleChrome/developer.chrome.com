@@ -30,7 +30,8 @@ deployment, loading, and compilation.
 
 In the following example code, a Wasm module imported from
 `https://iframe.site.example` is shared with `https://main.site.example` via
-`postMessage()`. Notice these domains are same-site but cross-origin.
+`postMessage()`. Notice these domains are [same-site but
+cross-origin](https://web.dev/same-site-same-origin/).
 
 Wasm module on `https://iframe.site.example`:
 
@@ -85,7 +86,7 @@ header](https://web.dev/origin-agent-cluster/).
 
 In order to make Chrome work with origin-keyed agent clusters by default, we'll
 make `document.domain` read only. The Chrome team is aiming to land this change
-within 2021.
+sometime in 2022.
 
 * [Origin-keyed agent clusters
   explainer](https://github.com/WICG/origin-agent-cluster)
