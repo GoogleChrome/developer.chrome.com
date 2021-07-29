@@ -35,4 +35,11 @@ to the [Lucky Thirteen](https://en.wikipedia.org/wiki/Lucky_Thirteen_attack)
 attack. The first replacement AES cipher suites were defined for TLS in RFC3268,
 published around 19 years ago, and there have been several iterations since.
 
+## WebAssembly cross-origin module sharing
+
+WebAssembly module sharing between cross-origin but same-site environments [will
+be deprecated](https://chromestatus.com/feature/5650158039597056) to allow agent
+clusters to be scoped to origins long term. This follows a WebAssembly spec
+change, which has an impact on the platform as well.
+
 {% include 'partials/deprecations-policy.md' %}
