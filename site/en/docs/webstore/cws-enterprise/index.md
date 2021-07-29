@@ -49,9 +49,9 @@ to enable private domain publishing", width="800", height="121", class="screensh
 
 ## Domain publishing {: #domain-publishing }
 
-This lets you publish an extension that appears on your organization's private Chrome Web Store, so
-any users in your organization can install it. Nobody outside of your organization can see this
-private instance of the Chrome Web Store.
+This option lets you publish an extension that appears on your organization's private Chrome Web
+Store, so any users in your organization can install it. Nobody outside of your organization can see
+this private instance of the Chrome Web Store.
 
 {% Aside %}
 In addition to the privacy and availability benefits of publishing to your Workspace domain, a nice
