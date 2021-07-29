@@ -6,7 +6,7 @@ updated: 2021-03-12
 description: An overview of the purpose of Chrome Extensions and how they're developed.
 ---
 
-This page provides a brief introduction to Chrome extensions and walks through the creation of a 
+This page provides a brief introduction to Chrome extensions and walks through the creation of a
 "Hello, World!" extension.
 
 
@@ -39,6 +39,7 @@ diagram:
 
 Also shown in the diagram is an extension "plugged into" the Chrome browser. The extension can
 access and modify selected resources and actions in Chrome. There are two aspects to consider:
+
 {% endif %}
 
 Extensions let you "extend" the browser by using APIs to modify browser behavior and access web
@@ -64,13 +65,16 @@ users.
 {% Aside %}
 
 Some organizations use [enterprise policies] to install extensions on their user's devices. These
-extensions may either be fetched from the Chrome Web Store or hosted on the organization's web servers.
+extensions may either be fetched from the Chrome Web Store or hosted on the organization's web
+servers.
+
 {# TODO: See XXX for info on the capabilities and limitations of self hosting. #}
 
 {% endAside %}
 
-You can distribute your extensions through the [Chrome Developer Dashboard][dev-dashboard], publishing them to the [Chrome
-Web Store][cws]. For more information, see the Chrome Web Store [developer documentation][cws-docs].
+You can distribute your extensions through the [Chrome Developer Dashboard][dev-dashboard],
+publishing them to the [Chrome Web Store][cws]. For more information, see the Chrome Web Store
+[developer documentation][cws-docs].
 
 ### A note about extensions policy {: #policy }
 
@@ -78,15 +82,14 @@ Extensions on the Chrome Web Store must adhere to the [Chrome Web Store policies
 Here are some things to keep in mind as you begin:
 
 * An extension must fulfill a [single purpose] that is narrowly defined and easy to understand. A
-single extension can include multiple components and a range of functionality, as long as everything
-contributes towards a common purpose.
+  single extension can include multiple components and a range of functionality, as long as
+  everything contributes towards a common purpose.
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/XniXB3snAeMvLwI1am3O.png", alt="Screenshot of AMP validator extension pinned", width="169", height="62" %}
 
 * User interfaces should be minimal and have intent. They can range from a simple icon, such as the
-  [AMP validator][amp-validator] extension shown above, to opening a new window with a form, like
-the [Google Similar Pages][similar-pages-extension]
-  extension shown below.
+  AMP validator][amp-validator] extension shown above, to opening a new window with a form, like the
+  [Google Similar Pages][similar-pages-extension] extension shown below.
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/oR9iCEgY2889Z3mHHLll.png", alt="Screenshot of Google
 Similar Pages extension", width="334", height="597" %}
@@ -192,5 +195,5 @@ or by pressing `Ctrl+Shift+F` on your keyboard.
 [getstarted-tut]: /docs/extensions/mv3/getstarted
 [hello-sample]: /docs/extensions/mv3/samples#search:hello
 [hello-uploader]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/gmKIT88Ha1z8VBMJFOOH.png
-[similar-pages-extension]: https://chrome.google.com/webstore/detail/packagetrack-package-trac/hoipjclokbelgffomjhhiflphegpmlpe
+[similar-pages-extension]: https://chrome.google.com/webstore/detail/google-similar-pages/pjnfggphgdjblhfjaphkjhfpiiekbbej
 [single purpose]: /docs/extensions/mv3/single_purpose

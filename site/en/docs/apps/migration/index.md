@@ -206,7 +206,7 @@ service worker, with controls over the frequency of those updates.
 Web apps can use a standard platform API to copy and paste both [text][202] and [images
 programmatically.][203]
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://developers.google.com/web/progressive-web-apps/
 [4]: https://developers.google.com/web/updates/capabilities

@@ -44,7 +44,7 @@ They allow makers to connect to fun, quirky hardware, video conferencing apps
 to use the dedicated telephony buttons on specialized speakers. Or any number
 of other use cases.
 
-{% Video className="float-right", autoplay="true", muted="true", loop="true", src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/g8VCbIMljnxuemDFxl99.mp4" %}
+{% Video class="float-right", autoplay="true", muted="true", loop="true", src="video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/g8VCbIMljnxuemDFxl99.mp4" %}
 
 Using Web Serial, and [about 60 lines of code][pico-code],
 [@AndreBan][andre-tweet] created a [page][andre-page] that can interact with
@@ -56,7 +56,7 @@ You had to tap the phone to the right card, in the right order.
 
 <div style="clear:both;"></div>
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/VAuLti7I9ZQCwLUEWF5Y.png", className="float-right", alt="StreamDeck with Daft Punk Drum Pad", width="800", height="536" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/VAuLti7I9ZQCwLUEWF5Y.png", class="float-right", alt="StreamDeck with Daft Punk Drum Pad", width="800", height="536" %}
 
 And my favorite, [@bramus][bramus-tweet] used WebHID to connect to a
 StreamDeck, building a [Daft Punk drum pad][bramus-demo]. If you don't have
@@ -118,7 +118,7 @@ need, and you can copy and paste directly in to your site.
 
 ## Web Share and Web Share Target for Desktop {: #webshare }
 
-{% Video className="float-right", autoplay="true", muted="true", loop="true", src=["video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/0vmJ4uVRmhkufMBsNrEO.webm","video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/8rZz40MCN1qTifH2FHqG.mp4"] %}
+{% Video class="float-right", autoplay="true", muted="true", loop="true", src=["video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/0vmJ4uVRmhkufMBsNrEO.webm","video/0g2WvpbGRGdVs0aAPc6ObG7gkud2/8rZz40MCN1qTifH2FHqG.mp4"] %}
 
 If your site allows users to create, edit, or interact with files, you should
 be using the Web Share and Web Share Target APIs. These APIs have been
@@ -174,7 +174,7 @@ And of course there's plenty more.
 
 Chrome now allows top level `await` within JavaScript modules.
 
-{% Img className="float-right",  src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Yqyikwd9xFsj6jqnhYar.png", alt="New omnibox install icon for PWAs", width="380", height="180" %}
+{% Img class="float-right",  src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Yqyikwd9xFsj6jqnhYar.png", alt="New omnibox install icon for PWAs", width="380", height="180" %}
 
 To reduce confusion for users, we've updated the icon shown in the omnibox for
 installable PWAs.

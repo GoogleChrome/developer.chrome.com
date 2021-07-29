@@ -9,9 +9,7 @@ description: >
 
 {% include 'partials/extensions/mv2page-in-mv3.md' %}
 
-This tutorial demonstrates using Google Analytics to track the usage of your extension. If you are
-developing a platform app, see [Analytics for Apps][1] since apps have different restrictions from
-extensions.
+This tutorial demonstrates using Google Analytics to track the usage of your extension.
 
 ## Requirements {: #toc-requirements }
 
@@ -28,8 +26,9 @@ have an URL of its own.
 ## Installing the tracking code {: #toc-installing }
 
 The standard Google Analytics tracking code snippet fetches a file named `ga.js` from an SSL
-protected URL if the current page was loaded using the `https://` protocol. **Chrome extensions and
-applications may _only_ use the SSL-protected version of `ga.js`**. Loading `ga.js` over insecure
+protected URL if the current page was loaded using the `https://` protocol.
+
+**Chrome extensions may _only_ use the SSL-protected version of `ga.js`**. Loading `ga.js` over insecure
 HTTP is disallowed by Chrome's default [Content Security Policy][4]. This, plus the fact that Chrome
 extensions are hosted under the `chrome-extension://` schema, requires a slight modification to the
 usual tracking snippet to pull `ga.js` directly from `https://ssl.google-analytics.com/ga.js`

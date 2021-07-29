@@ -6,6 +6,56 @@ description: "A list of everything that has been covered in the What's New In De
 
 Here's a list of everything that's been covered in the *What's New In DevTools* series.
 
+## Chrome 93 {: #chrome93 }
+
+* [Editable CSS container queries  in the Styles pane](/blog/new-in-devtools-93/#container-queries)
+* [Web bundle preview in the Network panel](/blog/new-in-devtools-93/#web-bundle)
+* [Attribution Reporting API debugging](/blog/new-in-devtools-93/#attribution-reporting)
+* [Improved CORS debugging](/blog/new-in-devtools-93/#cors)
+* [Lighthouse 8.1](/blog/new-in-devtools-93/#lighthouse)
+* [New note URL in the Manifest pane](/blog/new-in-devtools-93/#new-note-url)
+* [Fixed CSS matching selectors](/blog/new-in-devtools-93/#matching-selectors)
+* [Pretty-printing JSON responses in the Network panel](/blog/new-in-devtools-93/#pretty-print-json)
+
+## Chrome 92 {: #chrome92 }
+
+* [CSS grid editor](/blog/new-in-devtools-92/#grid-editor)
+* [Support for `const` redeclarations in the Console](/blog/new-in-devtools-92/#const-redeclaration)
+* [Source order viewer](/blog/new-in-devtools-92/#source-order)
+* [New shortcut to view frame details](/blog/new-in-devtools-92/#frame-details)
+* [Enhanced CORS debugging support](/blog/new-in-devtools-92/#cors)
+* [Rename XHR label to Fetch/XHR](/blog/new-in-devtools-92/#fetch-xhr)
+* [Filter Wasm resource type in the Network panel](/blog/new-in-devtools-92/#wasm)
+* [User-Agent Client Hints for devices in the Network conditions tab](/blog/new-in-devtools-92/#sec-ua-ch)
+* [Report Quirks mode issues in the Issues tab](/blog/new-in-devtools-92/#quirks-mode)
+* [Include Compute Intersections in the Performance panel](/blog/new-in-devtools-92/#computed-intersections)
+* [Lighthouse 7.5 in the Lighthouse panel](/blog/new-in-devtools-92/#lighthouse)
+* [Deprecated "Restart frame" context menu in the call stack](/blog/new-in-devtools-92/#restart-frame)
+* [[Experimental] Protocol monitor](/blog/new-in-devtools-92/#protocol-monitor)
+* [[Experimental] Puppeteer Recorder](/blog/new-in-devtools-92/#puppeteer-recorder)
+
+## Chrome 91 {: #chrome91 }
+
+* [Web Vitals information pop up](/blog/new-in-devtools-91/#web-vitals)
+* [New Memory inspector](/blog/new-in-devtools-91/#memory-inspector)
+* [Visualize CSS scroll-snap](/blog/new-in-devtools-91/#css-croll-snap)
+* [New badge settings pane](/blog/new-in-devtools-91/#badge-settings)
+* [Enhanced image preview with aspect ratio information](/blog/new-in-devtools-91/#image-preview)
+* [New network conditions button with options to configure `Content-Encoding`s](/blog/new-in-devtools-91/#network-panel)
+* [shortcut to view computed value](/blog/new-in-devtools-91/#computed-value)
+* [`accent-color` keyword](/blog/new-in-devtools-91/#accent-color)
+* [Categorize issue types with colors and icons](/blog/new-in-devtools-91/#issue-category)
+* [Delete Trust tokens](/blog/new-in-devtools-91/#trust-tokens)
+* [Blocked features in the Frame details view](/blog/new-in-devtools-91/#permissions-policy)
+* [Filter experiments in the Experiments setting](/blog/new-in-devtools-91/#filter-experiment)
+* [New `Vary Header` column in the Cache storage pane](/blog/new-in-devtools-91/#vary-header)
+* [Support JavaScript private brand check](/blog/new-in-devtools-91/#javascript)
+* [Enhanced support for breakpoints debugging](/blog/new-in-devtools-91/#breakpoint)
+* [Support hover preview with `[]` notation](/blog/new-in-devtools-91/#expression-preview)
+* [Improved outline of HTML files](/blog/new-in-devtools-91/#html-outline)
+* [Proper error stack traces for Wasm debugging](/blog/new-in-devtools-91/#error-stack-traces)
+
+
 ## Chrome 90 {: #chrome90 }
 
 * [New CSS flexbox debugging tools](/blog/new-in-devtools-90#flexbox)

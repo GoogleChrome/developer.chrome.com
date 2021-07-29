@@ -18,12 +18,12 @@ app][2].
 [Developer Agreement][6]
 
 This page sets forth the guidelines for use of [Google trademarks][7] you should consider when
-naming and describing your application. Your use of any Google trademarks is always subject to the
+naming and describing your extension. Your use of any Google trademarks is always subject to the
 [Google Permissions][8].
 
 ## Using the Chrome Web Store badge
 
-You can let others know that your app, extension or theme is available in the Chrome Web Store by
+You can let others know that your extension or theme is available in the Chrome Web Store by
 using the "Available in the Chrome Web Store" badge on your site. You do not need pre-approval to
 use this badge. However, be sure that your use of the badge is consistent with the Chrome Web Store
 [terms of service][6] and these branding guidelines, or we may request that you modify or cease your
@@ -61,11 +61,11 @@ follow these rules and restrictions:
   twenty-one years of age, violates other applicable laws or regulations or is otherwise
   objectionable.
 - Make sure that clicking the badge always links to your page in the Chrome Web Store, and that your
-  app, extension or theme is available in the store at all times that you use the badge.
+  extension or theme is available in the store at all times that you use the badge.
 
-## Choosing an application or developer name
+## Choosing an extension or developer name
 
-Don't use any Google trademarks or any confusingly similar marks as the name of your application or
+Don't use any Google trademarks or any confusingly similar marks as the name of your extension or
 company without [written permission from Google.][19]
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qn7cPDkh9kYbUmlRiJWO.png",
@@ -80,8 +80,8 @@ company without [written permission from Google.][19]
 ## Using Google logos
 
 Don't use Google trademarks or a modified version of a Google trademark as the logo for your
-application without written permission from Google. Feel free to continue using our badges in your
-application subject to the branding guidelines for each of those badges (for example, [YouTube][20],
+extension without written permission from Google. Feel free to continue using our badges in your
+extension subject to the branding guidelines for each of those badges (for example, [YouTube][20],
 [Google Checkout][21]).
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l1QxerNZuBZBa6dUFOIT.png",
@@ -93,7 +93,7 @@ application subject to the branding guidelines for each of those badges (for exa
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rPqMdiBSYbH6lj1Na2E1.png",
        alt="Acceptable logo", height="146", width="224" %}
 
-## Describing your application
+## Describing your extension
 
 If your product is compatible with a Google product, make reference to that Google product by using
 the text "for", "for use with", or "compatible with", and be sure to include the ™ symbol with the
@@ -121,7 +121,7 @@ services. For further details, check out the [Google Permissions][8] page.
 
 ## Giving proper attribution
 
-Do give proper attribution to Google for any use of their marks in your application title or in your
+Do give proper attribution to Google for any use of their marks in your extension title or in your
 description. Example:
 
 ```text

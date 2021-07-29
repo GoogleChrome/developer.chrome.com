@@ -124,7 +124,7 @@
     },
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/1604956151251.jpg"
   },
-  "simeonv": {
+  "dotproto": {
     "name": {
       "given": "Simeon",
       "family": "Vincent"
@@ -137,7 +137,6 @@
       "en": "Extensions whisperer"
     },
     "country": "US",
-    "homepage": "https://robdodson.me",
     "twitter": "dotproto",
     "github": "dotproto",
     "glitch": "dotproto",
@@ -299,7 +298,7 @@
     "glitch": "agektmr",
     "email": "agektmr@google.com",
     "descriptions": {
-      "en": "Eiji is a Developer Advocate."
+      "en": "Developer Advocate for security, identity and payment on the web."
     },
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/r7YL1q3afKza6VUTF4QN.jpg"
   },
@@ -367,13 +366,6 @@
       "en": "Software Development Intern working on Chrome Web Identity and DevTools."
     },
     "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/QDNnPHloDqEwqRW5ASvt.jpg"
-  },
-  "samdutton": {
-    "name": {
-      "given": "Sam",
-      "family": "Dutton"
-    },
-    "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/Oci8M3M98YmwQJGHkHS9.jpg"
   },
   "tvanderlippe": {
     "name": {
@@ -545,5 +537,264 @@
       "en": "Googler working on Chrome DevTools."
     },
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KMNWpnRJTP6eHJs1wEw2.jpg"
+  },
+  "yoavweiss": {
+    "name": {
+      "given": "Yoav",
+      "family": "Weiss"
+    },
+    "twitter": "yoavweiss",
+    "github": "yoavweiss",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/isPv6ZIClCtYWtmkB1w0.jpg"
+  },
+  "solomonkinard": {
+    "name": {
+      "given": "Solomon",
+      "family": "Kinard"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "descriptions": {
+      "en": "Software Engineer, Chrome Extensions"
+    },
+    "country": "US",
+    "homepage": "https://kinard.com",
+    "twitter": "solomonkinard",
+    "github": "solomonkinard",
+    "glitch": "solomonkinard",
+    "image": "image/VK2OszK9GThIIwHngukz3x84Zfd2/rmArqpThpCHbCz9dWSWT.jpg"
+  },
+  "mihajlija": {
+    "name": {
+      "given": "Milica",
+      "family": "Mihajlija"
+    },
+    "homepage": "https://mihajlija.github.io/",
+    "twitter": "bibydigital",
+    "github": "mihajlija",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/lLsarI5KPmS0kwK9L4Ea.jpeg"
+  },
+  "mustafa": {
+    "name": {
+      "given": "Mustafa",
+      "family": "Kurtuldu"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "descriptions": {
+      "en": "Senior UX designer on Chrome, UX lead on installability & PWAs"
+    },
+    "country": "US",
+    "homepage": "https://designtoday.info",
+    "twitter": "mustafa_x",
+    "github": "mustafa-x",
+    "glitch": "mustafa-x",
+    "image": "image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/ShCbqP0E2I9TaNyA7d5a.jpg"
+  },
+  "bmeurer": {
+    "name": {
+      "given": "Benedikt",
+      "family": "Meurer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "DE",
+    "twitter": "bmeurer",
+    "github": "bmeurer",
+    "email": "bmeurer@chromium.org",
+    "descriptions": {
+      "en": "Googler working on Chrome DevTools."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XQZ4QLusg8Iq5kP4s04d.jpg"
+  },
+  "demianrenzulli": {
+    "name": {
+      "given": "Demian",
+      "family": "Renzulli"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Web Ecosystems Consultant"
+    },
+    "descriptions": {
+      "en": "Demián is a Web Ecosystems Consultant working at Google New York."
+    },
+    "country": "US",
+    "twitter": "drenzulli",
+    "github": "demianrenzulli",
+    "glitch": "demianrenzulli",
+    "image": "image/26V1DWN36MZr3mUo8ChSBlCpzp43/Jsv3fxDmq9T74z5q7zzU.jpg"
+  },
+  "samdutton": {
+    "name": {
+      "given": "Sam",
+      "family": "Dutton"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "descriptions": {
+      "en": "Developer Advocate, Google Chrome"
+    },
+    "country": "UK",
+    "homepage": "https://samdutton.com",
+    "twitter": "sw12",
+    "github": "samdutton",
+    "glitch": "samdutton",
+    "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/F3Df3SeugXYQEUUiMslu.jpg"
+  },
+  "maudn": {
+    "name": {
+      "given": "Maud",
+      "family": "Nalpas"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "descriptions": {
+      "en": "Developer Advocate for Chrome and web"
+    },
+    "country": "DE",
+    "twitter": "maudnals",
+    "github": "maudnals",
+    "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/fJP5RRP6pcCnfctkaQhu.jpg"
+  },
+  "beaufortfrancois": {
+    "name": {
+      "given": "François",
+      "family": "Beaufort"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "FR",
+    "github": "beaufortfrancois",
+    "descriptions": {
+      "en": "Dives into Chromium source code"
+    },
+    "image": "image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8SV7KI2QNVXph2L5Cga2.jpeg"
+  },
+  "atotic": {
+    "name": {
+      "given": "Aleks",
+      "family": "Totic"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Blink DOM"
+    },
+    "descriptions": {
+      "en": "Software engineer on Blink DOM"
+    },
+    "country": "US",
+    "twitter": "atotic",
+    "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/yb4nAlmupGwqaiUypp7b.jpg"
+  },
+  "kimanh": {
+    "name": {
+      "given": "Kim-Anh",
+      "family": "Tran"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "DE",
+    "twitter": "kianhuu",
+    "github": "ktran",
+    "email": "kimanh@chromium.org",
+    "descriptions": {
+      "en": "Googler working on Chrome DevTools."
+    },
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/WMxar1rRgocnv8LEo3hG.jpg"
+  },
+  "thomassteiner": {
+    "name": {
+      "given": "Thomas",
+      "family": "Steiner"
+    },
+    "homepage": "https://blog.tomayac.com/",
+    "twitter": "tomayac",
+    "github": "tomayac",
+    "glitch": "tomayac",
+    "descriptions": {
+      "en": "Tom is a Developer Advocate"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "DE",
+    "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
+  },
+  "chrishtr": {
+    "name": {
+      "given": "Chris",
+      "family": "Harrelson"
+    },
+    "twitter": "chrishtr",
+    "github": "chrishtr",
+    "descriptions": {
+      "en": "Rendering lead for Chrome"
+    },
+    "org": {
+      "name": "Google"
+    },
+    "country": "US",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/t755awh2DwVKBMxvupUA.jpeg"
+  },
+  "rebeccasoares": {
+    "name": {
+      "given": "Rebecca",
+      "family": "Soares"
+    },
+    "descriptions": {
+      "en": "Policy Manager, Chrome Trust & Safety Team"
+    },
+    "org": {
+      "name": "Google"
+    },
+    "country": "US",
+    "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/WWbi21K4D5om3zTba8hR.jpg"
+  },
+  "ackermanb": {
+    "name": {
+      "given": "Benjamin",
+      "family": "Ackerman"
+    },
+    "descriptions": {
+      "en": "Lead Security Analyst, Chrome Trust & Safety Team"
+    },
+    "org": {
+      "name": "Google"
+    },
+    "country": "US",
+    "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/kUhkXfBItc8GVTkWA2AB.jpg"
+  },
+  "yigu": {
+    "name": {
+      "given": "Yi",
+      "family": "Gu"
+    },
+    "descriptions": {
+      "en": "Google Chrome engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "twitter": "yigsgu",
+    "github": "yi-gu",
+    "country": "CA",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/qEqbB89jHxBWSyDjCeQh.jpg"
   }
 }

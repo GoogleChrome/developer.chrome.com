@@ -36,7 +36,7 @@ For more information, see Chrome's [sandbox implementation guide][sandbox-implem
 
 Make sure to avoid the following common mistakes:
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/H5cmSK3JieUkRBdPw9oj.jpg", alt="rule of two", className="float-left", height="597", width="800" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/H5cmSK3JieUkRBdPw9oj.jpg", alt="rule of two", class="float-left", height="597", width="800" %}
 
 * **Don't parse or interpret untrustworthy data using C++ in the
   browser process.**

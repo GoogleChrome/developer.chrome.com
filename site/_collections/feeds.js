@@ -29,7 +29,7 @@ module.exports = collection => {
     .getAllSorted()
     .reverse()
     .filter(i => i.data.locale === defaultLocale);
-  const tags = ['devtools'];
+  const tags = ['devtools', 'extensions'];
   /** @type FeedsCollection */
   const feeds = {};
   const blog = [];

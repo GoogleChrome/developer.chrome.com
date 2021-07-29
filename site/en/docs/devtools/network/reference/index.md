@@ -423,6 +423,18 @@ order they were received:
 1.  Open the **Headers** tab for the request you're interested in. See [View HTTP headers][15].
 2.  Click **view source**, next to the **Request Header** or **Response Header** section.
 
+
+#### Provisional headers are shown {: #provisional-headers }
+
+There are times where the headers will show a  warning message "Provisional headers are shown...".
+
+1. It could be due to the request not sent over the network (served from a local cache), which doesn't store the original request headers. In this case, you can [disable caching](#disable-cache) to see the full request headers.
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/AQfq69qS2Ig6lT9Y7vcc.png", alt="Provisional headers warning message", width="800", height="517" %}
+
+2. It could also be due to the network resource not valid (e.g. Try `fetch("https://jec.fyi.com/unknown-url/")` in the Console). DevTools could also display only provisional header due to security reasons.
+  {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xMKUHQxXLiRDiiUTol5J.png", alt="Provisional headers warning message", width="800", height="517" %}
+
+
 ### View query string parameters {: #query-string }
 
 To view the query string parameters of a URL in a human-readable format:

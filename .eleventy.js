@@ -11,16 +11,18 @@ const {
 const {i18n} = require('./site/_filters/i18n');
 const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
+const mdFilters = require('./site/_filters/md');
 const {minifyJs} = require('./site/_filters/minify-js');
-const {updateSvgForInclude} = require('./site/_filters/svg');
 const {slugify} = require('./site/_filters/slugify');
 const {toc} = require('./site/_filters/toc');
+const {updateSvgForInclude} = require('webdev-infra/filters/svg');
 
 // Shortcodes
 const {Details} = require('./site/_shortcodes/Details');
 const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
 const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
+const {Hreflang} = require('./site/_shortcodes/Hreflang');
 const {Img} = require('./site/_shortcodes/Img');
 const {Video} = require('./site/_shortcodes/Video');
 const {YouTube} = require('./site/_shortcodes/YouTube');
@@ -97,6 +99,9 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('stripDefaultLocale', stripDefaultLocale);
   eleventyConfig.addFilter('i18n', i18n);
   eleventyConfig.addFilter('githubLink', githubLink);
+  eleventyConfig.addFilter('md', mdFilters.render);
+  eleventyConfig.addFilter('mdInline', mdFilters.renderInline);
+  eleventyConfig.addFilter('modelToHref', mdFilters.modelToHref);
   eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
   eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
@@ -106,6 +111,7 @@ module.exports = eleventyConfig => {
   // Add shortcodes
   eleventyConfig.addShortcode('IFrame', IFrame);
   eleventyConfig.addShortcode('Glitch', Glitch);
+  eleventyConfig.addShortcode('Hreflang', Hreflang);
   eleventyConfig.addShortcode('Img', Img);
   eleventyConfig.addShortcode('Video', Video);
   eleventyConfig.addShortcode('YouTube', YouTube);

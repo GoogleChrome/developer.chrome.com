@@ -6,7 +6,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - sadym
 date: 2021-02-04
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/53IuclsjUVBaBME7MPRb.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CCqsB2L8tlZJCUt01tkY.jpg'
 alt: ''
 tags:
   - devtools-engineering

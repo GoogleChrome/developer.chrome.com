@@ -9,22 +9,19 @@
   <div class="home-container width-full center-margin pad-400">
 
     {{ heroCard() }}
-    <div class="masonry-grid gap-top-500">
-      {% set blog = 'blog-' + locale %}
-      {{ featuredPostCard(collections[blog][0]) }}
-      {{ featuredDocsCard(featured_projects) }}
-      {% include 'partials/report-a-bug.njk' %}
-      {% if tweets and tweets.length %}
-        {{ featuredTweetCard() }}
-      {% endif %}
+    <div class="gap-top-500 grid-gap-500 display-flex direction-column masonry:direction-row align-center masonry:align-start">
+      <div class="display-flex direction-column grid-gap-500">
+        {% set blog = 'blog-' + locale %}
+        {{ featuredPostCard(collections[blog][0]) }}
+        {% include 'partials/report-a-bug.njk' %}
+      </div>
+      <div class="display-flex direction-column grid-gap-500">
+        {{ featuredDocsCard(featuredProjects) }}
+        {% if tweets and tweets.length %}
+          {{ featuredTweetCard() }}
+        {% endif %}
+      </div>
     </div>
 
-    {#
-      Inline a script to cause the elements above to layout in a masonry grid.
-    #}
-    {% set masonry %}
-      {% include 'scripts/masonry.js' %}
-    {% endset %}
-    <script>{{ masonry | minifyJs | safe }}</script>
   </div>
 {% endblock %}

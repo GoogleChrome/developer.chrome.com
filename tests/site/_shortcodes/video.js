@@ -37,7 +37,7 @@ test('video shortcode generates multiple sources when provided', t => {
         />
         <source
           src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mov"
-          type="video/quicktime"
+          type="video/mp4"
         />
         <source
           src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.webm"

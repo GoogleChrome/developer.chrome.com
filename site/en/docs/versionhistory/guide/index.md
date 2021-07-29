@@ -11,11 +11,11 @@ This guide shows you how to use the VersionHistory web service API.
 
 ## Overview
 
-The VersionHistory API provides programmatic access to Google Chrome
-version history information. It is a [REST][rest] API that returns information
-as JSON.
+The VersionHistory API provides programmatic access to Google Chrome and Fuchsia
+Web Engine version history information. It is a [REST][rest] API that returns 
+information as JSON.
 
-All API access is over HTTPS, and accessed from `https://versionhistory.googleapis.com/v1/chrome`.
+All API access is over HTTPS, and accessed from `https://versionhistory.googleapis.com/v1`.
 
 ## Get all platforms
 
@@ -66,6 +66,10 @@ Example response
     {
       "name": "chrome/platforms/ios",
       "platformType": "IOS"
+    },
+    {
+      "name": "chrome/platforms/lacros",
+      "platformType": "LACROS"
     }
   ]
 }
@@ -92,6 +96,10 @@ Example response
 {
   "channels": [
     {
+      "name": "chrome/platforms/win/channels/extended",
+      "channelType": "EXTENDED"
+    },
+    {
       "name": "chrome/platforms/win/channels/stable",
       "channelType": "STABLE"
     },
@@ -112,6 +120,10 @@ Example response
       "channelType": "CANARY_ASAN"
     },
     {
+      "name": "chrome/platforms/win64/channels/extended",
+      "channelType": "EXTENDED"
+    },
+    {
       "name": "chrome/platforms/win64/channels/stable",
       "channelType": "STABLE"
     },
@@ -130,6 +142,10 @@ Example response
     {
       "name": "chrome/platforms/win64/channels/canary_asan",
       "channelType": "CANARY_ASAN"
+    },
+    {
+      "name": "chrome/platforms/mac/channels/extended",
+      "channelType": "EXTENDED"
     },
     {
       "name": "chrome/platforms/mac/channels/stable",
@@ -218,6 +234,18 @@ Example response
     {
       "name": "chrome/platforms/ios/channels/dev",
       "channelType": "DEV"
+    },
+    {
+      "name": "chrome/platforms/lacros/channels/beta",
+      "channelType": "BETA"
+    },
+    {
+      "name": "chrome/platforms/lacros/channels/dev",
+      "channelType": "DEV"
+    },
+    {
+      "name": "chrome/platforms/lacros/channels/canary",
+      "channelType": "CANARY"
     }
   ]
 }
@@ -244,6 +272,10 @@ Example response
 ```json
 {
   "channels": [
+    {
+      "name": "chrome/platforms/win/channels/extended",
+      "channelType": "EXTENDED"
+    },
     {
       "name": "chrome/platforms/win/channels/stable",
       "channelType": "STABLE"

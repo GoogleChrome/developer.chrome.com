@@ -55,7 +55,7 @@ The body of the Details component goes here, and **can** contain markdown.
 {% raw %}{% Details %}
 {% DetailsSummary %}
 ### Details component summary
-This is an optional preview. 
+This is an optional preview.
 {% endDetailsSummary %}
 
 This is the body of the Details component.
@@ -71,7 +71,7 @@ console.log(bar);
 {% Details %}
 {% DetailsSummary %}
 ### Details component summary
-This is an optional preview. 
+This is an optional preview.
 {% endDetailsSummary %}
 
 This is the body of the Details component.
@@ -566,17 +566,17 @@ Images with a white background should use the `.screenshot` class to give
 them a border so they don't appear to "float" on the page.
 
 ```md
-{% raw %}{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", className="screenshot" %}{% endraw %}
+{% raw %}{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", class="screenshot" %}{% endraw %}
 
 <!-- Add the .screenshot--filled modifier to give the screenshot padding and a grey background. -->
-{% raw %}{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", className="screenshot screenshot--filled" %}{% endraw %}
+{% raw %}{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", class="screenshot screenshot--filled" %}{% endraw %}
 ```
 
-{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", className="screenshot" %}
+{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", class="screenshot" %}
 
 <br>
 
-{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", className="screenshot screenshot--filled" %}
+{% Img src='image/BrQidfK9jaQyIHwdw91aVpkPiib2/TDNgfhI9byR4eeGQ0Xxv.png', alt='Screenshot', height="302", width="770", class="screenshot screenshot--filled" %}
 
 ### Full bleed images
 
@@ -600,7 +600,7 @@ class.
 ```md
 <!-- !important: note the commas after each property -->
 {% raw %}{% Img
-  className="float-right",
+  class="float-right",
   src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg",
   alt="ALT_TEXT_HERE",
   width="800",
@@ -608,11 +608,32 @@ class.
 %}{% endraw %}
 ```
 
-{% Img className="float-right", src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+{% Img class="float-right", src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque iure eveniet
 assumenda ea natus perspiciatis, atque totam fugit labore amet facere,
 dignissimos sequi cumque repellat dolorum, quaerat voluptatibus sit!
+
+### Captions
+
+To include a caption along with an image, use `<figure>` with `<figcaption>` and
+place the `Img` shortcode snippet inside:
+
+```md
+<figure>
+{% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
+  <figcaption>
+    A good boy.
+  </figcaption>
+</figure>
+```
+
+<figure>
+{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}
+  <figcaption>
+    A good boy.
+  </figcaption>
+</figure>
 
 ## Lists
 See the [Lists section of the Grammar, mechanics, and usage post](https://web.dev/handbook/grammar/#lists)
@@ -644,6 +665,86 @@ for unordered lists.
 - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
 - Lorem ipsum dolor sit amet…
+
+### Definition list
+
+```md
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+```
+
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+
+## Tabs
+
+Use `web-tabs` component to display information in a form of horizontal tabs.
+Attribute `title` becomes the title of the corresponding tab panel.
+
+````html
+<web-tabs>
+  <web-tab title="Tab 1 (html)">
+    <p>I'm content of Tab 1</p>
+  </web-tab>
+  <web-tab title="Tab 2 (markdown)">
+
+    Here goes content of Tab 2. Now **with** some _markdown_.
+
+    You must include a line break between the html and markdown to get the
+    markdown to work (this is a limiation of markdown parsers).
+
+  </web-tab>
+  <web-tab title="Tab 3 (with code)">
+
+    This is Tab 3. It has a code snippet inside.
+
+    You must include a line break between the html and teh markdown to get the
+    markdown to work. Also, be sure to unindent the markdown otherwise syntax
+    highlighting will not work.
+
+```js
+const hello = 'world';
+```
+
+  </web-tab>
+</web-tabs>
+````
+
+<web-tabs>
+  <web-tab title="Tab 1 (html)">
+    <p>I'm content of Tab 1</p>
+  </web-tab>
+  <web-tab title="Tab 2 (markdown)">
+
+    Here goes content of Tab 2. Now **with** some _markdown_.
+
+    You must include a line break between the html and markdown to get the
+    markdown to work (this is a limiation of markdown parsers).
+
+  </web-tab>
+  <web-tab title="Tab 3 (with code)">
+
+    This is Tab 3. It has a code snippet inside.
+
+    You must include a line break between the html and teh markdown to get the
+    markdown to work. Also, be sure to unindent the markdown otherwise syntax
+    highlighting will not work.
+
+```js
+const hello = 'world';
+```
+
+  </web-tab>
+</web-tabs>
+
 
 ## Tables
 

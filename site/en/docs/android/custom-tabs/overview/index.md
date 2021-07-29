@@ -84,7 +84,7 @@ any UI at all. It is recommended for developers who want to open their own
 ## Where is Custom Tabs available?
 
 Custom Tabs is a feature supported by browsers on the Android platform. It was originally
-introduced by [Chrome][2], on version 45. Currentely, the protocol is supported by most Android
+introduced by [Chrome][2], on version 45. Currently, the protocol is supported by most Android
 browsers.
 
 We are looking for feedback, questions and suggestions on this project, so we encourage you to file
@@ -105,7 +105,7 @@ For questions, check the [chrome-custom-tabs][5] tag on StackOverflow.
 [5]: https://stackoverflow.com/questions/tagged/chrome-custom-tabs
 [6]: https://research.google/pubs/pub46739/
 [7]: https://android-developers.googleblog.com/2015/09/chrome-custom-tabs-smooth-transition.html
-[8]: /docs/android/trusted-web-activity
+[8]: /docs/android/trusted-web-activity/overview/
 [9]: https://web.dev/progressive-web-apps/
 [10]: https://developers.google.com/digital-asset-links
 [11]: /docs/android/custom-tabs/integration-guide/

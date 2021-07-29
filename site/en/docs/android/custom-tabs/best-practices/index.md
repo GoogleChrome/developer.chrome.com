@@ -280,7 +280,7 @@ link to the content they are seeing in most use cases:
 
 ```java
     CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
-    intentBuilder.addDefaultShareMenuItem();
+    intentBuilder.setShareState(CustomTabsIntent.SHARE_STATE_ON);
 ```
 
 ## Customize the close button

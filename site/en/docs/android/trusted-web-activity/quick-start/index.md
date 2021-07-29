@@ -160,8 +160,9 @@ key:
 * Manually:
     1. Open the [Google Play Console](https://play.google.com/apps/publish/).
     2. Select your app.
-    3. Choose **Release management** and then **App signing** from the panel on the left.
-    4. Copy the **SHA-256 certificate fingerprint** from under the **App signing certificate**
+    3. Choose **Setup** under the **Release** section, and then click **App integrity** from the panel on the left.
+    4. Click on **Create Release** and then **Create new release** (if you are releasing for the first time on Play Store). Follow the steps on the next screens.
+    5. Copy the **SHA-256 certificate fingerprint** from under the **App signing certificate**
        section.
     5. Use this value in your Digital Asset Link file.
 
@@ -203,7 +204,7 @@ extra comma at the end of the list.
     "namespace": "android_app",
     "package_name": "com.appspot.pwa_directory",
     "sha256_cert_fingerprints": [
-      "FA:2A:03:CB:38:9C:F3:BE:28:E3:CA:7F:DA:2E:FA:4F:4A:96:F3:BC:45:2C:08:A2:16:A1:5D:FD:AB:46:BC:9D",
+      "FA:2A:03:CB:38:9C:F3:BE:28:E3:CA:7F:DA:2E:FA:4F:4A:96:F3:BC:45:2C:08:A2:16:A1:5D:FD:AB:46:BC:9D"
     ]
   }
 },{
@@ -212,7 +213,7 @@ extra comma at the end of the list.
     "namespace": "android_app",
     "package_name": "com.appspot.pwa_directory",
     "sha256_cert_fingerprints": [
-      "4F:FF:49:FF:C6:1A:22:E3:BB:6F:E6:E1:E6:5B:40:17:55:C0:A9:F9:02:D9:BF:28:38:0B:AE:A7:46:A0:61:8C",
+      "4F:FF:49:FF:C6:1A:22:E3:BB:6F:E6:E1:E6:5B:40:17:55:C0:A9:F9:02:D9:BF:28:38:0B:AE:A7:46:A0:61:8C"
     ]
   }
 }]

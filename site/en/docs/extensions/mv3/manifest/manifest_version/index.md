@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manifest Version"
 date: 2013-05-12
-updated: 2021-04-19
+updated: 2021-07-29
 description: Reference documentation for the manifest_version property of manifest.json.
 ---
 

@@ -31,8 +31,6 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install
         run: npm ci
-      - name: Install Canary Lighthouse CI
-        run: npm install @lhci/cli@next
       - name: Build
         env:
           ELEVENTY_IGNORE_NACL: true

@@ -548,7 +548,7 @@ gDriveApp.factory('gdocs', function() {
 });
 ```
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: https://angularjs.org/
 [4]: https://github.com/GoogleChrome/chrome-app-samples/tree/master/samples/gdrive
