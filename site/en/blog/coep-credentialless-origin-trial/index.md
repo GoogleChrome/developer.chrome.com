@@ -44,7 +44,7 @@ With a cross-origin isolated state, all cross-origin resources must be served
 with CORS or `Cross-Origin-Resource-Policy: cross-origin` to be loaded.
 
 {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/SmiNygdHglDvm1Et1hFQ.png",
-alt="ALT_TEXT_HERE", width="800", height="372" %}
+alt="", width="800", height="372" %}
 
 ## Challenges with enabling cross-origin isolation
 
