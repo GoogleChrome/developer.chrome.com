@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+<!-- lint disable no-smart-quotes -->
+
 If you have ever worked with browser automation, you probably know how overwhelming it can be. In this article I am going to describe the motivation standing behind the new browser automation protocol we currently work on: **WebDriver BiDi**. It’s a new browser automation protocol which can be used from all kinds of testing tools instead of WebDriver or Chrome DevTools Protocol (CDP). 
 
 Foreseeing question: “Does it mean Puppeteer will be deprecated?”. The answer is “No way!". Instead, WebDriver BiDi will allow Puppeteer to become a cross-browser automation tool. 
