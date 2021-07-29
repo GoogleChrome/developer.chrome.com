@@ -785,11 +785,12 @@
       "given": "Yi",
       "family": "Gu"
     },
-    "description": {
-      "en": "Software Engineer working on Chromium"
+    "descriptions": {
+      "en": "Google Chrome engineer"
     },
     "org": {
-      "name": "Google"
+      "name": "Google",
+      "unit": "Chrome"
     },
     "twitter": "yigsgu",
     "github": "yi-gu",
