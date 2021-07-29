@@ -95,7 +95,7 @@ await browser.close();
 
 The result is a mobile version of the search page.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JAsc7oQJ4Kt00BViPmi3.png", alt="mobile version of the search page", width="797", height="1600" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gYmV8ivFo8UtNP5ZFRb1.png", alt="mobile version of the search page", width="800", height="512" %}
 
 #### Geolocation emulation
 Modern browsers have the geolocation API, and developers with Puppeteer can easily emulate position.
