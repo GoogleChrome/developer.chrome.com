@@ -25,5 +25,4 @@ import './web-components/top-nav';
 import './web-components/share-button';
 import './web-components/web-tabs';
 import './web-components/language-select';
-import './web-components/toc-active';
 import './third-party/announcement-banner/announcement-banner';
