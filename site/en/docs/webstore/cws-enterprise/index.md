@@ -30,8 +30,8 @@ documentation for each topic to learn about them in more detail.
 
 ## Private Chrome Web Store for your organization {: #private-cws }
 
-Any Google Workspace organization can have its own private instance of Chrome Web Store. To access
-it, users must be signed into Chrome with their organization credentials.
+Any Google Workspace organization can have its own private instance of the Chrome Web Store. To
+access it, users must be signed into Chrome with their organization credentials.
 
 You also need to use a slightly different URL than that of the public store, which specifies your
 Google Workspace domain:
@@ -42,7 +42,7 @@ Google Workspace domain:
   `chrome.google.com/webstore/a/example.com/category/extensions`
 
 The option that enables this is available to administrators at **Devices > Chrome > Apps &
-extensions > users & browsers > additional settings > chrome Web store permissions**:
+extensions > Users & browsers > Additional settings > Chrome Web store permissions**:
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/o8yqCGh07bdtYmRbKSKa.png", alt="Screenshot of option
 to enable private domain publishing", width="800", height="121", class="screenshot"  %}
