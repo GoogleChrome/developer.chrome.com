@@ -125,30 +125,6 @@ runs all of the code up to that point, and then pauses on that line.
 
 **Figure 4**. Selecting **Continue to here**
 
-### Restart the top function of the call stack {: #restart-frame }
-
-While paused on a line of code, right-click anywhere in the Call Stack pane and select **Restart
-Frame** to pause on the first line of the top function in your call stack. The top function is the
-last function that was called.
-
-For example, suppose you're stepping through the following code:
-
-```js
-function factorial(n) {
-  var product = 0; // B
-  for (var i = 1; i <= n; i++) {
-    product += i;
-  }
-  return product; // A
-}
-```
-
-You're paused on `A`. After clicking **Restart Frame**, you'd be paused on `B`, without ever setting
-a breakpoint or pressing **Resume script execution**.
-
-{% Img src="image/admin/YPU4B9cT6LWCyeguEnRX.png", alt="Selecting 'Restart Frame'.", width="800", height="738" %}
-
-**Figure 5**. Selecting **Restart Frame**
 
 ### Resume script execution {: #resume }
 

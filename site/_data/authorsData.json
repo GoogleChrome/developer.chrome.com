@@ -298,7 +298,7 @@
     "glitch": "agektmr",
     "email": "agektmr@google.com",
     "descriptions": {
-      "en": "Eiji is a Developer Advocate."
+      "en": "Developer Advocate for security, identity and payment on the web."
     },
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/r7YL1q3afKza6VUTF4QN.jpg"
   },
@@ -795,5 +795,22 @@
     "country": "US",
     "github": "joycetoh8",
     "image": "image/ttTommHYbJXsEL29zNB1wXBvH4z1/25uXyGl2m7FtpUyogSpL.jpeg"
+  },
+  "yigu": {
+    "name": {
+      "given": "Yi",
+      "family": "Gu"
+    },
+    "descriptions": {
+      "en": "Google Chrome engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "twitter": "yigsgu",
+    "github": "yi-gu",
+    "country": "CA",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/qEqbB89jHxBWSyDjCeQh.jpg"
   }
 }

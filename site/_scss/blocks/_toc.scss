@@ -1,10 +1,6 @@
 .toc-container {
   max-width: 100%;
-  width: px-to-rem(240px);
-  
-  @include media-query('xl') {
-    margin-right: auto;
-  }
+  width: px-to-rem(320px);
 }
 
 .toc > summary {
@@ -29,6 +25,22 @@
 .toc[open] .toc__icon > svg {
   transform: rotate(270deg);
 }
+
+toc-active {
+  display: block;
+  max-height: calc(100vh - #{get-size(200)} * 2);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  position: sticky;
+  top: get-size(200);
+
+  [toc--active] {
+    font-weight: 600;
+    letter-spacing: -0.35px;  // makes the text roughly the same width
+  }
+}
+
 
 // The eleventy-plugin-toc doesn't let us put classes on ul/ol or li children
 // so we have to style them all with descendant selectors.
