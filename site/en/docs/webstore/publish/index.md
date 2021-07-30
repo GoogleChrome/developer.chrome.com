@@ -66,7 +66,45 @@ If you already host your item in Google Play and you want your Chrome Web Store 
 
 ### Setup your account {: #setup-a-developer-account }
 
+Once you've registered, you can find the Account page on the left menu.
 
+PICTURE HERE
+
+In the account page you can provide your developer profile information, configure management settings and enable email notifications. However, only the name, email and privacy policy link are mandatory.
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Publisher name</strong></td>
+      <td>This name appears under the items' title. If you are a <a href="/docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status">verified publisher</a>, you can display an official publisher URL.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Email Address</strong></td>
+      <td>
+          This email will only be displayed under your items' contact information. Any notifications will be sent to your CWS developer account email.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Privacy Policy</strong></td>
+      <td>
+       Provide a privacy policy link for all your items. It should include how data is collected, used, and disclosed. See the <a href="/docs/webstore/user_data/">User Data FAQ</a> for more details.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Physical address</strong></td>
+      <td>
+       Only items that offer a functionality to purchase items, additional features or subscriptions must include a physical address.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Upload your item {: #upload-your-item }
 
@@ -163,5 +201,6 @@ if you simply want to change your rollout time.
 [14]: /docs/webstore/cws-dashboard-privacy
 [15]: /docs/webstore/cws-dashboard-distribution
 [16]: /docs/webstore/faq#faq-listing-108
-[17]: /docs/webstore/cws-dashboard-distribution/#private-visibility-trusted-testers
-[18]: /docs/webstore/account-deletion/
+
+
+
