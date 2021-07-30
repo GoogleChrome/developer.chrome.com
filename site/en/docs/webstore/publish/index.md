@@ -24,7 +24,7 @@ intend.
 To publish your item to the Chrome Web Store, follow these steps:
 
 1.  Create your item's zip file
-2.  Create a developer account
+2.  Create and setup a developer account
 3.  Upload your item
 4.  Add assets for your listing
 5.  Submit your item for publishing
@@ -53,20 +53,20 @@ the ZIP file and manifest depend on the specifics of your item.
   ZIP file in a way that reduces the size of the user download package. For details, see [Reducing
   the size of the user download package][9].
 
-Before you upload your item, you'll be asked to pick a developer account to own your items. Instead
-of your personal account, we suggest using a dedicated account.
 
-## Create a developer account {: #create-a-developer-account }
+## Create and setup a developer account {: #create-setup-a-developer-account }
 
-Before you can publish on the Chrome Web Store, you need to [register as a Chrome Web Store
-developer][10]. We suggest using a new account just for your item instead of your personal account.
+Before you can publish your item on the Chrome Web Store, you'll be asked to pick a developer account to own your items and setup your developer account. 
 
-<div class="aside aside--note">On your developer account, the <strong>email address</strong> field is required. You cannot publish items if this field is blank.</div>
+### Create your account {: #create-a-developer-account }
 
-If you already host your item in Google Play and you want your Chrome Web Store listing to show an
-"Available for Android" link, your item must have the same name as your Google Play listing, and
-both items must be owned by the same developer account. To transfer your Chrome Web Store item to a
-different developer, submit this [form][11].
+First you will need to [register as a Chrome Web Store developer][10]. We suggest using a new account just for your item instead of your personal account.
+
+If you already host your item in Google Play and you want your Chrome Web Store listing to show an "Available for Android" link, your item must have the same name as your Google Play listing, and both items must be owned by the same developer account. To transfer your Chrome Web Store item to a different developer, submit this [form][11].
+
+### Setup your account {: #setup-a-developer-account }
+
+
 
 ## Upload your item {: #upload-your-item }
 
@@ -163,3 +163,5 @@ if you simply want to change your rollout time.
 [14]: /docs/webstore/cws-dashboard-privacy
 [15]: /docs/webstore/cws-dashboard-distribution
 [16]: /docs/webstore/faq#faq-listing-108
+[17]: /docs/webstore/cws-dashboard-distribution/#private-visibility-trusted-testers
+[18]: /docs/webstore/account-deletion/
