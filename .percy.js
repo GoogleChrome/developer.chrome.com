@@ -20,6 +20,7 @@ module.exports = {
       'docs/native-client/index.html',
       'blog/welcome/index.html',
       'docs/extensions/what-are-extensions/index.html',
+      'docs/extensions/reference/action/index.html',
       'docs/handbook/components/index.html'
     ].join(',')
   },
