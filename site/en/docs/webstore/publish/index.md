@@ -68,7 +68,7 @@ If you already host your item in Google Play and you want your Chrome Web Store 
 
 Once you've registered, you can find the Account page on the left menu.
 
-PICTURE HERE
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/lBcTQm6QF1FBzOmLEfG1.png", alt="Chrome Web Store Account page", width="800", height="404" %}
 
 In the account page you can provide your developer profile information, configure management settings and enable email notifications. However, only the name, email and privacy policy link are mandatory.
 
