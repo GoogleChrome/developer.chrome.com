@@ -2,7 +2,6 @@
 layout: "layouts/blog-post.njk"
 title: "DevTools 新功能（Chrome 92）"
 authors:
-  - hanselfmu
   - jecelynyeen
 date: 2021-06-02
 updated: 2021-06-02
