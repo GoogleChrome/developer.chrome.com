@@ -779,23 +779,5 @@
     },
     "country": "US",
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/kUhkXfBItc8GVTkWA2AB.jpg"
-  },
-  "hanselfmu": {
-    "name": {
-      "given": "Changhao",
-      "family": "Han"
-    },
-    "org": {
-      "name": "Google",
-      "unit": "Software engineer"
-    },
-    "country": "DE",
-    "twitter": "han_changhao",
-    "github": "hanselfmu",
-    "email": "changhaohan@google.com",
-    "descriptions": {
-      "en": "Software engineer working on Chrome DevTools at Google."
-    },
-    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oEV9Pd48COn9JnMrUYzZ.jpg"
   }
 }
