@@ -124,6 +124,7 @@ metadata in your app that points to your website.
 %}
 
 After creating your `assetlinks.json` file, upload it to your website at `.well-known/assetlinks.json` relative to the root) so that your app can be verified properly by the browser. Check out a [deep dive on Digital Asset Links](/docs/android/trusted-web-activity/android-for-web-devs#digital-asset-links) for more information on how it relates to your signing key.
+
 ## Checking your browser {: #checking-your-browser }
 
 A Trusted Web Activity will try to adhere to the user's default choice of browser.
