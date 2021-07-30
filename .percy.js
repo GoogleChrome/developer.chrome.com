@@ -1,7 +1,7 @@
 module.exports = {
   'version': 1,
   'snapshot': {
-    'widths': [375, 865, 1280],
+    'widths': [375, 865, 1280, 1600],
     'percy-css': `
       iframe, .cookie-banner {
         display: none !important;
