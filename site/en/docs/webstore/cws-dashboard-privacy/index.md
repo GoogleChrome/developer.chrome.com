@@ -60,9 +60,11 @@ You must disclose how your extension collects and uses user data. These disclosu
 * The nature of the data that the extensions collects from users
 * Your certification that the extension complies with the policy on limited use
 
-Your disclosures are displayed to Chrome users, and should be consistent with the existing privacy
-policies that you provide to the Chrome Web Store.
+{% Aside 'note' %}
 
+Your disclosures are displayed to Chrome users, and should be consistent with the existing privacy policy URL that you provided to the Chrome Web Store under your [developer account page][3].
+
+{% endAside %}
 
 **Data usage**&emsp;Use this field to disclose and certify your data collection practices. Use the first
 group of checkboxes to disclose which types of data your extension collects. Use the second group of
@@ -73,3 +75,4 @@ use certification fields", width="800", height="495" %}
 
 [1]: /docs/webstore/program_policies/#extensions
 [2]: /docs/extensions/mv2/security/#permissions
+[3]: /docs/webstore/publish#setup-a-developer-account
