@@ -66,11 +66,11 @@ If you already host your item in Google Play and you want your Chrome Web Store 
 
 ### Setup your account {: #setup-a-developer-account }
 
-Once you've registered, you can find the Account page on the left menu.
+Once you've registered, you can finish setting up your developer account in the Account page located on the left menu.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/lBcTQm6QF1FBzOmLEfG1.png", alt="Chrome Web Store Account page", width="800", height="404" %}
 
-In the account page you can provide your developer profile information, configure management settings and enable email notifications. However, only the name, email and privacy policy link are mandatory.
+Here you can provide your developer profile information, configure management settings and enable email notifications. However, only the name, email and privacy policy link are mandatory.
 
 <table>
   <thead>
@@ -82,7 +82,7 @@ In the account page you can provide your developer profile information, configur
   <tbody>
     <tr>
       <td><strong>Publisher name</strong></td>
-      <td>This name appears under the items' title. If you are a <a href="/docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status">verified publisher</a>, you can display an official publisher URL.
+      <td>This name appears under the items' title. If you are a <a href="/docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status">verified publisher</a>, you can display an official publisher URL instead.
       </td>
     </tr>
     <tr>
@@ -94,7 +94,7 @@ In the account page you can provide your developer profile information, configur
     <tr>
       <td><strong>Privacy Policy</strong></td>
       <td>
-       Provide a privacy policy link for all your items. It should include how data is collected, used, and disclosed. See the <a href="/docs/webstore/user_data/">User Data FAQ</a> for more details.
+       This privacy policy link is for all your items. It should include how data is collected, used, and disclosed. See the <a href="/docs/webstore/user_data/">User Data FAQ</a> for more details.
       </td>
     </tr>
     <tr>
