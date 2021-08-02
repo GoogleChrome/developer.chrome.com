@@ -66,10 +66,6 @@ now pay it in order to continue accessing your developer dashboard. This one-tim
 the standard [developer registration process][99].
 {% endAside %}
 
-### I'm having trouble registering my developer account {: #faq-gen-33 }
-
-If you encounter any problems during the developer registration process, try using an incognito window to register. 
-
 ### How can I sign up using my Google Apps email address (for example, admin@example.com)? {: #faq-gen-17 }
 
 If you can't sign into the Chrome Web Store Developer Dashboard with your Google Apps email address,
