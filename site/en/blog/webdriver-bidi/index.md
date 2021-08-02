@@ -1,7 +1,7 @@
 ---
 title: "WebDriver BiDi - The future of cross-browser automation"
 description: >
-  Gwtting to know what is WebDriver BiDi and why it is the future of cross-browser automation
+  Getting to know what is WebDriver BiDi and why it is the future of cross-browser automation
 layout: "layouts/blog-post.njk"
 authors:
   - sadym
