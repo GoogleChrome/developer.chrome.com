@@ -5,7 +5,7 @@ subhead: |
   Installed PWAs can now be configured to run on login.
 authors:
   - ajara
-date: 2021-07-29
+date: 2021-08-02
 description: |
    Many operating systems offer the ability to launch applications automatically when the user logs in. This ability is now available for installed web applications.
 hero: image/SeARmcA1EicLXagFnVOe0ou9cqK2/e5ATqM7ge5Y3Sxdqf1T8.jpg
