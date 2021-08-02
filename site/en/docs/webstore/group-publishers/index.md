@@ -9,6 +9,7 @@ description: How to share ownership of your Chrome Web Store items with other de
 You can share ownership of your items in Google Chrome Web Store with other developers by setting up
 a *group publisher*. This page explains how group publishers work and how to set one up.
 
+
 ## About group publishers
 
 Use a group publisher to establish an entity that owns Chrome Web Store items, allowing multiple
@@ -106,7 +107,7 @@ group to see the changes.
 ## Adding developers to the group publisher
 
 Your developer console will show the new group publisher account and the linked
-Google Group. You can [add or remove developers](https://groups.google.com/).
+Google Group. You can [add or remove developers](https://groups.google.com/). In order for a group member to publish updates, that member must [register as a CWS developer][cws-register] and pay the one-time registration fee.
 
 {% Aside "caution" %}
 Be careful with the membership of your group publisher groups. Any Chrome Web Store developer who is
