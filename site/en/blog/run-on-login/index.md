@@ -22,8 +22,8 @@ Users want to automatically run a set of applications they always use. A
 typical example is high-engagement applications like email clients, chat apps,
 monitoring dashboards, and real-time data display apps, to name just a few.
 
-Auto-starting these apps at login streamlines the user experience by avoiding
-having to find these apps to launch in menus.
+Auto-starting these apps at login streamlines the user experience by saving
+users from having to find these apps to launch in menus.
 
 Which applications the user wants to start automatically will vary from user
 to user. That is why it is important that installed web applications have this
