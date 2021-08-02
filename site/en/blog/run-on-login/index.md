@@ -11,7 +11,7 @@ description: |
 hero: image/SeARmcA1EicLXagFnVOe0ou9cqK2/e5ATqM7ge5Y3Sxdqf1T8.jpg
 alt: Laptop, coffee, and stationary tools on desk.
 ---
-Run on login gives the user the ability to choose which applications start
+Run on login lets the user choose which applications start
 automatically when they first log into their computer. This ability has been
 available in many operating systems for a long time, but was reserved for
 platform specific applications. Now it is available for installed web applications too.
