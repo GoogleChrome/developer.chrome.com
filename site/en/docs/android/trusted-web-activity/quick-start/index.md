@@ -145,11 +145,11 @@ D/TWAProviderPicker(17168): Found TWA provider, finishing search: com.google.and
 
 Hopefully, if you've followed this guide, you'll have a working Trusted Web Activity and have enough
 knowledge to debug what's going on when verification fails.
-If not, please have a look at more [Android concepts for web developers](/docs/android/trusted-web-activity/android-for-web-devs) or file a GitHub issue against
+If not, have a look at more [Android concepts for web developers](/docs/android/trusted-web-activity/android-for-web-devs) or file a GitHub issue against
 [these docs](https://github.com/google/WebFundamentals/issues).
 
 For your next steps, I'd recommend you start off by
 [creating an icon for your app](https://developer.android.com/studio/write/image-asset-studio#launcher).
 With that done, you can consider deploying your app to the Play Store.
 
-[1]: https://github.com/GoogleChromeLabs/bubblewrap/blob/master/packages/cli/README.md
+[1]: https://github.com/GoogleChromeLabs/bubblewrap/blob/main/packages/cli/README.md
