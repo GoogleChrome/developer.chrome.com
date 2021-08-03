@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-const debug = true;
+const debug = false;
 
 const {doRedirect} = require('./env');
 const readdirp = require('readdirp');
