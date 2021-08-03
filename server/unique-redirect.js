@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-const debug = false;
+const debug = true;
 
+const {doRedirect} = require('./env');
 const readdirp = require('readdirp');
 const path = require('path');
 
@@ -257,7 +258,6 @@ async function buildMatcher(source = 'dist/', avoidDirs = defaultAvoidDirs) {
       continue;
     }
 
-    // TODO(samthor): Debugging information only.
     debug && console.warn(root, '=>', redirsAtRoot);
   }
 
@@ -299,6 +299,7 @@ function buildUniqueRedirectHandler() {
         // If we can't match, continue on to a 404 handler.
         let redirectTo = match(url);
         if (!redirectTo) {
+          debug && console.warn('unique handler could not match:', url);
           return next();
         }
 
@@ -306,7 +307,9 @@ function buildUniqueRedirectHandler() {
         if (enPrefixAdded && redirectTo.startsWith('/en/')) {
           redirectTo = redirectTo.substr('/en'.length);
         }
-        return res.redirect(301, redirectTo);
+        debug && console.warn('unique handler matched:', url, '=>', redirectTo);
+
+        return doRedirect(redirectTo);
       };
     })
     .catch(err => console.error('failed to build uniqueRedirectHandler', err));

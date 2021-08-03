@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+const {doRedirect} = require('./env');
 const {buildHandlers: buildRedirectsYamlHandlers} = require('redirects-yaml');
 const YAML = require('js-yaml');
 const fs = require('fs');
@@ -68,7 +69,7 @@ function buildRedirectHandler(filename, staticPaths = undefined, code = 301) {
   return (req, res, next) => {
     const target = handler(req.url);
     if (target !== null && target !== req.url) {
-      return res.redirect(code, target);
+      return doRedirect(target, code);
     }
 
     // If we didn't match normally but the URL contains a dot, then check it again with those
@@ -81,7 +82,7 @@ function buildRedirectHandler(filename, staticPaths = undefined, code = 301) {
       }
       const target = handler(update);
       if (target !== null && target !== req.url) {
-        return res.redirect(code, target);
+        return doRedirect(target, code);
       }
     }
 

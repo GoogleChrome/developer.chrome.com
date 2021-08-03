@@ -14,8 +14,7 @@
  * limitations under the License.
  */
 
-const isGAEProd = Boolean(process.env.GAE_APPLICATION);
-
+const {isGAEProd} = require('./env');
 const express = require('express');
 const compression = require('compression');
 const {notFoundHandler} = require('./not-found');
