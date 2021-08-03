@@ -6,7 +6,7 @@ layout: "layouts/blog-post.njk"
 authors:
   - mathiasbynens
 date: 2020-11-19
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/A4BYzXsym40Ehje2Z7sx.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/HD1U7BxDVRDcTxNaQJ4C.jpg'
 alt: ''
 tags:
   - devtools-engineering

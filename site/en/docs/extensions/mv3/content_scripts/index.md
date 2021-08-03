@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Content scripts"
 date: 2012-09-17
-updated: 2021-06-01
+updated: 2021-08-02
 description: An explanation of content scripts and how to use them in your Chrome Extension.
 ---
 
@@ -246,7 +246,7 @@ function injectedFunction() {
   document.body.style.backgroundColor = 'orange';
 }
 
-chrome.action.onClicked.addListener((message, callback) => {
+chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
     function: injectedFunction

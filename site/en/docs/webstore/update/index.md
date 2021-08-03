@@ -124,6 +124,6 @@ To increase the rollout fraction for your item, enter the increased percentage t
 [3]: /docs/webstore/cws-dashboard-listing
 [4]: /docs/webstore/cws-dashboard-privacy
 [5]: /docs/webstore/cws-dashboard-distribution
-[6]: #update-your-percent-rollout
+[6]: #update-rollout
 [7]: /docs/webstore/faq#faq-listing-108
 [8]: #partial-rollout

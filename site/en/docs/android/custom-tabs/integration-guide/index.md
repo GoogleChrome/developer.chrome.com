@@ -53,8 +53,11 @@ The snippet below changes the background color for the address bar. colorInt is 
 that specifies a [`Color`][21].
 
 ```java
-int coolorInt = Color.parseColor("#FF0000"); //red
-builder.setToolbarColor(colorInt);
+int colorInt = Color.parseColor("#FF0000"); //red
+CustomTabColorSchemeParams defaultColors = new CustomTabColorSchemeParams.Builder()
+    .setToolbarColor(colorInt)
+    .build();
+intentBuilder.setDefaultColorSchemeParams(defaultColors);
 ```
 
 ## Configure a custom action button

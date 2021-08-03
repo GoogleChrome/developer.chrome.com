@@ -42,6 +42,34 @@ redirects:
 - from: /docs/webstore/pricing/
   to: /docs/webstore/money/
 
+# CWS payments/apps purge
+- from: /docs/webstore/hosted_apps
+  to: /docs/webstore
+- from: /docs/webstore/migrating
+  to: /docs/webstore
+- from: /docs/webstore/get_started_simple
+  to: /docs/webstore/publish/
+- from: /docs/webstore/apps_vs_extensions
+  to: /docs/webstore
+- from: /docs/webstore/distribution
+  to: /docs/webstore
+- from: /docs/webstore/launching
+  to: /docs/webstore
+- from: /docs/webstore/choosing
+  to: /docs/webstore
+- from: /docs/webstore/samples
+  to: /docs/webstore
+- from: /docs/webstore/get_started
+  to: /docs/webstore
+- from: /docs/webstore/inline_installation
+  to: /docs/webstore
+- from: /docs/webstore/authentication
+  to: /docs/webstore
+- from: /docs/webstore/one_time_payments
+  to: /docs/webstore
+- from: /docs/webstore/payments-iap
+  to: /docs/webstore
+
 # Fixes #675
 - from: /extensions/manifestVersion
   to: /docs/extensions/mv3/manifest/version/
@@ -234,6 +262,11 @@ redirects:
 
 - from: /docs/extensions/declarativenetrequest
   to: /docs/extensions/reference/declarativeNetRequest
+
+  # MV2 docs that have been removed, but their MV3 version still exists
+
+- from: /docs/extensions/mv2/single_purpose
+  to: /docs/extensions/mv3/single_purpose/
 
   # Group redirects
 

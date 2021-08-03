@@ -45,9 +45,19 @@ const stripDefaultLocale = url => {
   return url;
 };
 
+const getLocalizedPaths = (urlPath, locales) => {
+  const urlParts = urlPath.split('/');
+  return locales.map(locale => {
+    const replace = locales.includes(urlParts[1]) ? 1 : 0;
+    urlParts.splice(1, replace, locale);
+    return [urlParts.join('/'), locale];
+  });
+};
+
 module.exports = {
   absolute,
   trailingSlash,
   leadingAndTrailingSlash,
   stripDefaultLocale,
+  getLocalizedPaths,
 };

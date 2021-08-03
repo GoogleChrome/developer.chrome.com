@@ -2,14 +2,20 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2020-07-15
+updated: 2020-06-27
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
 
 This page describes how you publish a new extension or theme ("item") to the Chrome Web Store.
 
-<div class="aside aside--note">To publish updates to an existing item, or to update the percent rollout, see <a href="/webstore/update">Updating your Chrome Web Store item</a>. To learn about group publishers, see <a href="/webstore/group-publishers">Set up group publishing</a>.</div>
+{% Aside 'note' %}
+
+To publish updates to an existing item, or to update the percent rollout, see [Updating your Chrome
+Web Store item](/docs/webstore/update). To learn about group publishers, see [Set up group
+publishing](/docs/webstore/group-publishers).
+
+{% endAside %}
 
 Before you publish an extension, you need to load it locally and test that it works, as described in
 [Hello extensions][3]. Make sure that it runs correctly and that all its functionality works as you
@@ -27,16 +33,15 @@ We'll go into detail about each step below.
 
 ## Create your item's zip file {: #create-your-items-zip-file }
 
-To upload your item, you need to create a ZIP file that contains the [files for your extension][4].
-The item's manifest file must be included, and it must specify at least the following fields:
+To upload your item, you need to create a ZIP file that contains the files for your extension. The
+item's manifest file must be included, and it must specify at least the following fields:
 
 - `"name":`—Displayed in the Chrome Web Store and in the Chrome browser
 - `"version":`—The version of the metadata, incremented
 - `"icons":`—An array specifying the [icons][5] your item uses
 
 Your zip file may also include other images and any files that the item requires. The contents of
-the ZIP file and manifest depend on the specifics of your item; see [Extension files][6] for more
-details.
+the ZIP file and manifest depend on the specifics of your item.
 
 **Tips:**
 
@@ -55,8 +60,6 @@ of your personal account, we suggest using a dedicated account.
 
 Before you can publish on the Chrome Web Store, you need to [register as a Chrome Web Store
 developer][10]. We suggest using a new account just for your item instead of your personal account.
-
-<div class="aside aside--note">On your developer account, the <strong>email address</strong> field is required. You cannot publish items if this field is blank.</div>
 
 If you already host your item in Google Play and you want your Chrome Web Store listing to show an
 "Available for Android" link, your item must have the same name as your Google Play listing, and
@@ -122,10 +125,11 @@ complete. Instead, you'll be able to manually publish it at a time of your choos
 is complete.
 
 {% Aside %}
+
 If you submit your item for review with "Publish automatically" set, you can still turn off
 automatic publishing using the **Defer publish** option described below.
-{% endAside %}
 
+{% endAside %}
 
 {# TODO: add screen shot here #}
 
@@ -137,23 +141,19 @@ depends on the nature of your item. See the [FAQ on review times][16] for more d
 While an item is pending review, you can still turn off automatic publishing by choosing **Defer
 publish** option from the developer console's &#x22EE; menu as shown below:
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png", alt="Screenshot showing
-the 'more' menu's defer publish option", width="386", height="284" %}
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png",
+       alt="Screenshot showing the 'more' menu's defer publish option", width="386", height="284" %}
 
 This lets you pause the rollout of a submitted item if you discover an error after submitting it or
 if you simply want to change your rollout time.
 
-
 [1]: /docs/webstore/update
 [2]: /docs/webstore/group-publishers
-[3]: /docs/extensions/mv2/overview/#hello-extensions
-[4]: /docs/extensions/mv2/overview#files
-[5]: /docs/extensions/mv2/manifest/icons
-[6]: /docs/extensions/mv2/overview#files
-[7]: /docs/extensions/reference/tabs#version
-[8]: https://developers.google.com/native-client/
-[9]:
-  /native-client/devguide/distributing#reducing-the-size-of-the-user-download-package
+[3]: /docs/extensions/mv3/overview/#hello-extensions
+[5]: /docs/extensions/mv3/manifest/icons
+[7]: /docs/extensions/mv3/manifest/version
+[8]: /docs/native-client/
+[9]: /docs/native-client/devguide/distributing/#reducing-the-size-of-the-user-download-package
 [10]: /docs/webstore/register
 [11]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [12]: https://chrome.google.com/webstore/devconsole

@@ -55,12 +55,14 @@ Not all methods in extensions APIs support promises. Sometimes that's because we
 promise support on the method yet; in many cases it's because using a promise isn't feasible for the
 method.
 
-{% if false %}
-You can check if an API method support promises by checking its API reference page:
+You see if an API method support promises by checking its API reference page:
+ 
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/AYQVtnh19vNMHoXzxZB1.png", alt="Screenshot showing a
+method that supports promises", width="800", height="280" %}
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/lDjGweNENKyqGSA2nZrp.png", alt="Screenshot of an API
-reference page with promises support noted", width="800", height="467" %}
-{% endif %}
+The screenshot above shows a method from the [`chrome.tabs`][api-tabs-methods] API. You can see that
+this method supports promises because one of the method's signatures returns a promise. To make this
+easier to see at a glance, the reference docs also display a `Promise` pill below the signatures.
 
 ## How to use promises
 
@@ -216,3 +218,5 @@ Note that `await` is only valid in async functions and the top-level bodies of m
 
 [mdn-promise-chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises
 [mdn-promises]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
+[api-tabs-methods]: /docs/extensions/reference/tabs/#methods
+

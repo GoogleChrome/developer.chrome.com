@@ -1,5 +1,16 @@
 version: 3
 
+# Global conditions that apply to all pull requests.
+# https://docs.pullapprove.com/config/pullapprove-conditions/
+pullapprove_conditions:
+# Don't tag in any reviewers if the PR is work in progress.
+- condition: '"WIP" not in title'
+  unmet_status: pending
+  explanation: 'Work in progress'
+- condition: 'not draft'
+  unmet_status: pending
+  explanation: 'Draft PR'
+
 groups:
   # Extensions
   # Handles any changes related to extensions, web store, and chrome apps.
@@ -64,7 +75,7 @@ groups:
   content:
     reviewers:
       teams:
-      - dcc-content
+      - ~dcc-content
       - ~dcc-eng
       - ~dcc-approvers
     reviews:
