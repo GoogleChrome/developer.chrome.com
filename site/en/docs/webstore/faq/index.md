@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Frequently Asked Questions
 date: 2020-06-09
+updated: 2021-07-27
 description: Frequently asked questions about Chrome Web Store.
 ---
 

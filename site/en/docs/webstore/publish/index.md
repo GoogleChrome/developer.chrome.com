@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2020-06-28
+updated: 2020-06-27
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
@@ -52,7 +52,6 @@ the ZIP file and manifest depend on the specifics of your item.
 - If your item uses [Native Client][8], you can structure your application directory hierarchy and
   ZIP file in a way that reduces the size of the user download package. For details, see [Reducing
   the size of the user download package][9].
-
 
 ## Create and setup a developer account {: #create-setup-a-developer-account }
 
