@@ -14,6 +14,15 @@
  * limitations under the License.
  */
 
+/**
+ * @fileoverview Provides a runtime redirect handler that, for missing pages, finds the nearest
+ * matching URL and sends the user there instead. This helps deal with a large number of 404's
+ * found due to the site's relaunch in 2020.
+ */
+
+/**
+ * Set to true to emit lots of debugging information about the unique redirect handler.
+ */
 const debug = false;
 
 const {doRedirect} = require('./env');
