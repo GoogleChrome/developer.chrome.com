@@ -15,13 +15,7 @@
  */
 
 declare global {
-  export interface PaginatedPage extends VirtualCollectionItem {
-    date: Date;
-    href: string;
-    elements: FrontMatterData[];
-    pagination: EleventyPagination;
-    permalink: string;
-  }
+  export type PostTypes = 'blogPost' | 'doc' | 'landing' | 'release';
 }
 
 // empty export to keep file a module

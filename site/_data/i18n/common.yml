@@ -90,6 +90,7 @@ toc:
 
 tags:
   en: 'Tags'
+  es: 'Etiquetas'
 
 documentation:
   en: 'Documentation'
@@ -101,11 +102,13 @@ skip_to_content:
   en: 'Skip to content'
   es: 'Saltar al contenido'
 
-newer_posts:
-  en: 'Newer posts'
+next:
+  en: 'Next'
+  es: 'Siguiente'
 
-older_posts:
-  en: 'Older posts'
+back:
+  en: 'Back'
+  es: 'Atrás'
 
 external_link:
   en: 'External link'
@@ -114,9 +117,6 @@ external_link:
 close:
   en: 'Close'
   es: 'Cerrar'
-
-back:
-  en: 'Back'
 
 older_releases:
   en: 'Older releases'
@@ -153,3 +153,10 @@ published_on:
 
 updated_on:
   en: 'Updated on'
+
+authors:
+  en: 'Authors'
+  es: 'Autores'
+
+website:
+  en: Website

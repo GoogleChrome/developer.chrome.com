@@ -16,5 +16,6 @@
   ],
   "defaultLocale": "en",
   "cookiesCtaUrl": "https://policies.google.com/technologies/cookies",
-  "defaultSocialImage": "image/foR0vJZKULb5AGJExlazy1xYDgI2/xvNiBdV0ZwwLUE4SEdbf.png"
+  "defaultSocialImage": "image/foR0vJZKULb5AGJExlazy1xYDgI2/xvNiBdV0ZwwLUE4SEdbf.png",
+  "paginationCount": 24
 }

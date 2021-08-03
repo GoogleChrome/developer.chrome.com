@@ -15,20 +15,18 @@
  */
 
 declare global {
-  export interface EleventyData {
-    [key: string]: TODO;
-    locale?: string;
-    tags?: string[];
+  export interface EleventyData extends Partial<FrontMatterData> {
+    title: string;
+    locale: string;
     eleventyComputed?: {
       [key: string]: (data: EleventyData) => TODO;
     };
     paged?: TODO;
-    pagination?: EleventyPagination;
-    title?: string;
-    description?: string;
-    permalink?: string;
+    permalink?: string | boolean;
     layout?: string;
     page?: EleventyPage;
+    pagination?: EleventyPagination;
+    [key: string]: TODO;
   }
 }
 
