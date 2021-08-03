@@ -4,6 +4,7 @@ title: Verify a phone number on desktop using WebOTP API
 description: Starting from Chrome 93, websites can verify phone numbers from desktop Chrome.
 subhead: Starting from Chrome 93, websites can verify phone numbers from desktop Chrome.
 date: 2021-07-28
+updated: 2021-08-03
 authors:
   - yigu
   - agektmr
@@ -58,7 +59,7 @@ completing phone number verification on desktop in Chrome 93.
 
 ## Try it out
 
-### Prerequisites
+### Prerequisites {: #prerequisites}
 
 * A desktop or a laptop computer (Windows, Mac, Linux or Chrome OS).
 * An Android phone with [Google Play Services version
@@ -124,6 +125,21 @@ the verification process.
 
 Learn more at [Verify phone numbers on the web with the WebOTP
 API](https://web.dev/web-otp/).
+
+{% Aside 'gotchas' %}
+
+If the demo doesn't work for you, please check the following:
+
+1. Double check that [all the prerequisites meet](#prerequisites).
+2. If the sender's phone number is in the receiver's contact list, the SMS won't
+   trigger the WebOTP dialog because [it's by
+   design](https://developers.google.com/identity/sms-retriever/user-consent/request#2_start_listening_for_incoming_messages).
+   Please try with another phone number.
+3. If the problem still persists, open `chrome://sync-internals` on Android
+   Chrome that receives the SMS and press **Stop Sync** then **Request Start**
+   to restart the sync.
+
+{% endAside %}
 
 ## How to use WebOTP API on desktop
 
