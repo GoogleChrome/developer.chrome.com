@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2020-06-27
+updated: 2021-08-04
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
@@ -12,8 +12,8 @@ This page describes how you publish a new extension or theme ("item") to the Chr
 {% Aside 'note' %}
 
 To publish updates to an existing item, or to update the percent rollout, see [Updating your Chrome
-Web Store item](/docs/webstore/update). To learn about group publishers, see [Set up group
-publishing](/docs/webstore/group-publishers).
+Web Store item][1]. To learn about group publishers, see [Set up group
+publishing][2].
 
 {% endAside %}
 
@@ -55,7 +55,7 @@ the ZIP file and manifest depend on the specifics of your item.
 
 ## Create and setup a developer account {: #create-setup-a-developer-account }
 
-Before you can publish your item on the Chrome Web Store, you'll be asked to pick a developer account to own your items and setup your developer account. 
+Before you can publish your item on the Chrome Web Store, you need to pick a developer account to own your items, then set up your account in the Chrome Web Store.
 
 ### Create your account {: #create-a-developer-account }
 
@@ -71,39 +71,12 @@ Once you've registered, you can finish setting up your developer account in the 
 
 Here you can provide your developer profile information, configure management settings and enable email notifications. However, only the name, email and privacy policy link are mandatory.
 
-<table>
-  <thead>
-    <tr>
-      <th>Field</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Publisher name</strong></td>
-      <td>This name appears under the items' title. If you are a <a href="/docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status">verified publisher</a>, you can display an official publisher URL instead.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Email Address</strong></td>
-      <td>
-          This email will only be displayed under your items' contact information. Any notifications will be sent to your CWS developer account email.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Privacy Policy</strong></td>
-      <td>
-       This privacy policy link is for all your items. It should include how data is collected, used, and disclosed. See the <a href="/docs/webstore/user_data/">User Data FAQ</a> for more details.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Physical address</strong></td>
-      <td>
-       Only items that offer a functionality to purchase items, additional features or subscriptions must include a physical address.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Field                | Description                                                                                                                                                 |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Publisher name**   | This name appears under the title of each of your items. If you are a [verified publisher][17], you can display an official publisher URL instead.          |
+| **Email Address**    | This email will only be displayed under your items' contact information. Any notifications will be sent to your CWS developer account email.                |
+| **Privacy Policy**   | This privacy policy link is for all your items. It should include how data is collected, used, and disclosed. See the [User Data FAQ][18] for more details. |
+| **Physical address** | Only items that offer a functionality to purchase items, additional features or subscriptions must include a physical address.                              |
 
 ## Upload your item {: #upload-your-item }
 
@@ -200,6 +173,8 @@ if you simply want to change your rollout time.
 [14]: /docs/webstore/cws-dashboard-privacy
 [15]: /docs/webstore/cws-dashboard-distribution
 [16]: /docs/webstore/faq#faq-listing-108
+[17]: /docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status
+[18]: /docs/webstore/user_data/
 
 
 
