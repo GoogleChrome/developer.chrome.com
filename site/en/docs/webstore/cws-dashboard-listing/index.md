@@ -71,9 +71,13 @@ To add a verified site that you own, click on **Add a new site**. This opens the
 Console, where you can add and verify a site. See [Verify your site ownership][4] for
 more details.
 
-### Add your extension homepage {: #home-url }
+### Adding a homepage URL {: #home-url }
 
-### Provide a support URL {: #support-url }
+If you want to explain what your extension does in more detail, you can include a direct link to your extension's website located under the Additional information of your item.
+
+### Providing a support URL {: #support-url }
+
+The CWS provides a built in user support management system, but you can include a link to your own feedback management platform. Note that you first must enable the "Support tab" under the Account settings. 
 
 [1]: /docs/webstore/spam-faq/#keyword-spam
 [2]: /docs/webstore/branding
