@@ -10,8 +10,10 @@ description: How to add listing information for your Chrome Web Store item.
        alt="Screenshot of the Chrome Web Store developer dashboard item listing tab", height="472", width="800" %}
 
 Add the store listing information for your item that isn't in the ZIP file, such as a long
-description, screenshots, videos, and links to related sites. You'll need the following to finish
-your item's store listing:
+description, screenshots, videos, links to related sites and Google Analytics link. 
+
+## Product details 
+You'll need to fill out the following details about your item:
 
 - A **detailed description** of your item. Write your description to entice users to download your
   item. Make sure to start your description with a concise statement of what your item does, so
@@ -22,22 +24,25 @@ your item's store listing:
 Be detailed but make sure your description complies with the [Keyword Spam][1] policy.
 {% endAside %}
 
-- At least one 1280x800 or 640x400 **screenshot** or YouTube **video** to show off what your item
-  does. These are displayed in your item's Chrome Web Store listing in the following order:
-  1.  Any localized video that you provide.
-  2.  Any localized screenshots that you provide.
-  3.  Any global (non-localized) video.
-  4.  Global screenshots.
-- A 440x280 **small tile icon** that will be displayed on the Chrome Web Store wall.
 - The **primary [category][5]** where your item should be listed.
 - Your item's **language** to help users find it.
 
-## Learning more about images and branding
+## Graphic assets {: #graphic-assets }
+
+- At least one 1280x800 or 640x400 **screenshot** or YouTube **video** to show off what your item
+  does. These are displayed in your item's Chrome Web Store listing in the following order:
+  1.  Any localized video that you provide.
+  1.  Any localized screenshots that you provide.
+  1.  Any global (non-localized) video.
+  1.  Global screenshots.
+- A 440x280 **small tile icon** that will be displayed on the Chrome Web Store wall.
 
 See [Supplying Images][2] for help on designing the images for your item, and [Branding
-Guidelines][3] for information on how you can use Google brands.
+Guidelines][3] for information on how you can use Google brands. 
 
-## Displaying your verified publisher status
+## Additional fields {: #additional-fields }
+
+### Displaying your verified publisher status
 
 The Chrome Web Store highlights verified publishers by placing a linked, official URL in the
 "Offered by:" line of the store listing. This official URL appears under the listing title and is
@@ -61,6 +66,10 @@ The pull-down for this field contains only those sites that have been verified a
 To add a verified site that you own, click on **Add a new site**. This opens the Google Search
 Console, where you can add and verify a site. See [Verify your site ownership][4] for
 more details.
+
+### Add your extension homepage {: #home-url }
+
+### Provide a support URL {: #support-url }
 
 [1]: /docs/webstore/spam-faq/#keyword-spam
 [2]: /docs/webstore/branding
