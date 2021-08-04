@@ -27,6 +27,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
+    "server/**/*",
     "site/**/*",
     "tools/**/*",
     "types/**/*.d.ts"
