@@ -60,7 +60,7 @@ automatically update the extension for users after the new version is published.
 [3]: /docs/webstore
 [4]: https://chrome.google.com/webstore/developer/dashboard
 [5]: /docs/webstore/publish
-[6]: https://support.google.com/chrome/a/answer/188453
+[6]: https://support.google.com/chrome/a/answer/7666985
 [7]: /docs/extensions/mv3/getstarted#unpacked
 [8]: /docs/extensions/mv3/linux_hosting
 [9]: /docs/extensions/mv2/hosting_changes
