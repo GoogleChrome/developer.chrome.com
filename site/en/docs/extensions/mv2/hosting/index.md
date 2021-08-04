@@ -32,14 +32,14 @@ There are three exceptions to the Chrome Web Store hosting rule:
 The Chrome Browser periodically checks for new versions of installed extensions and updates them
 without user intervention.
 
-To release an update to an extension, increase the number in the `"version"` field of the manifest.
+To release an update to an extension, increase the number in the [`"version"` field][version] of
+the manifest.
 
 ```json
 {
   ...
   "version": "1.5",
   ...
-  }
 }
 ```
 
@@ -48,7 +48,6 @@ To release an update to an extension, increase the number in the `"version"` fie
   ...
   "version": "1.6",
   ...
-  }
 }
 ```
 
@@ -66,3 +65,5 @@ automatically update the extension for users after the new version is published.
 [8]: /linux_hosting
 [9]: /hosting_changes
 [10]: https://chrome.google.com/webstore/developer/dashboard
+
+[version]: /docs/extensions/mv2/manifest/version/
