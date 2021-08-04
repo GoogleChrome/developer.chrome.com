@@ -14,8 +14,18 @@
  * limitations under the License.
  */
 
+/**
+ * @fileoverview Provides a runtime redirect handler that, for missing pages, finds the nearest
+ * matching URL and sends the user there instead. This helps deal with a large number of 404's
+ * found due to the site's relaunch in 2020.
+ */
+
+/**
+ * Set to true to emit lots of debugging information about the unique redirect handler.
+ */
 const debug = false;
 
+const {doRedirect} = require('./env');
 const readdirp = require('readdirp');
 const path = require('path');
 
@@ -257,7 +267,6 @@ async function buildMatcher(source = 'dist/', avoidDirs = defaultAvoidDirs) {
       continue;
     }
 
-    // TODO(samthor): Debugging information only.
     debug && console.warn(root, '=>', redirsAtRoot);
   }
 
@@ -299,6 +308,7 @@ function buildUniqueRedirectHandler() {
         // If we can't match, continue on to a 404 handler.
         let redirectTo = match(url);
         if (!redirectTo) {
+          debug && console.warn('unique handler could not match:', url);
           return next();
         }
 
@@ -306,7 +316,9 @@ function buildUniqueRedirectHandler() {
         if (enPrefixAdded && redirectTo.startsWith('/en/')) {
           redirectTo = redirectTo.substr('/en'.length);
         }
-        return res.redirect(301, redirectTo);
+        debug && console.warn('unique handler matched:', url, '=>', redirectTo);
+
+        return doRedirect(redirectTo);
       };
     })
     .catch(err => console.error('failed to build uniqueRedirectHandler', err));
