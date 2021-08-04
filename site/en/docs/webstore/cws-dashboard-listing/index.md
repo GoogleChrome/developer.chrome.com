@@ -17,6 +17,11 @@ your item's store listing:
   item. Make sure to start your description with a concise statement of what your item does, so
   users can understand the main idea and features at a glance. Your description can then go on to
   provide more detail, promotional copy, update logs, and so forth.
+  
+{% Aside 'caution' %}
+Be detailed but make sure your description complies with the [Keyword Spam][1] policy.
+{% endAside %}
+
 - At least one 1280x800 or 640x400 **screenshot** or YouTube **video** to show off what your item
   does. These are displayed in your item's Chrome Web Store listing in the following order:
   1.  Any localized video that you provide.
@@ -29,8 +34,8 @@ your item's store listing:
 
 ## Learning more about images and branding
 
-See [Supplying Images][cws-images] for help on designing the images for your item, and [Branding
-Guidelines][cws-branding] for information on how you can use Google brands.
+See [Supplying Images][2] for help on designing the images for your item, and [Branding
+Guidelines][3] for information on how you can use Google brands.
 
 ## Displaying your verified publisher status
 
@@ -54,9 +59,10 @@ official URL pulldown", width="800", height="184" %}
 
 The pull-down for this field contains only those sites that have been verified as belonging to you.
 To add a verified site that you own, click on **Add a new site**. This opens the Google Search
-Console, where you can add and verify a site. See [Verify your site ownership][verify-owner] for
+Console, where you can add and verify a site. See [Verify your site ownership][4] for
 more details.
 
-[cws-branding]: /docs/webstore/branding
-[cws-images]: /docs/webstore/images
-[verify-owner]: https://support.google.com/webmasters/answer/9008080
+[1]: /docs/webstore/spam-faq/#keyword-spam
+[2]: /docs/webstore/branding
+[3]: /docs/webstore/images
+[4]: https://support.google.com/webmasters/answer/9008080
