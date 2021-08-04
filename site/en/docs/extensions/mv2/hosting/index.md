@@ -57,13 +57,13 @@ automatically update the extension for users after the new version is published.
 
 [1]: https://chrome.google.com/webstore/category/extensions
 [2]: http://blog.chromium.org/2015/05/continuing-to-protect-chrome-users-from.html
-[3]: /webstore
+[3]: /docs/webstore
 [4]: https://chrome.google.com/webstore/developer/dashboard
-[5]: /webstore/publish
+[5]: /docs/webstore/publish
 [6]: https://support.google.com/chrome/a/answer/188453
-[7]: /docs/extensions/mv2/getstarted#unpacked
-[8]: /linux_hosting
-[9]: /hosting_changes
+[7]: /docs/extensions/mv3/getstarted#unpacked
+[8]: /docs/extensions/mv3/linux_hosting
+[9]: /docs/extensions/mv2/hosting_changes
 [10]: https://chrome.google.com/webstore/developer/dashboard
 
 [version]: /docs/extensions/mv2/manifest/version/
