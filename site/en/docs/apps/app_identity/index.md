@@ -260,7 +260,7 @@ The best practice we suggest is to use silent mode when there is no user gesture
 interactive mode if there is a user gesture (for example, the user clicked the Sign In button in
 your app). Note that we do not enforce gesture requirement.
 
-[1]: https://blog.chromium.org/2020/01/moving-forward-from-chrome-apps.html
+[1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
 [3]: identity
 [4]: https://github.com/GoogleChrome/chrome-app-samples#_feature_identity

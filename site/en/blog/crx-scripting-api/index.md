@@ -162,7 +162,7 @@ function greetUser(name) {
   alert(`Hello, ${name}!`);
 }
 chrome.action.onClicked.addListener(async (tab) => {
-  let userReq = await fetch('/https://example.com/user-data.json');
+  let userReq = await fetch('https://example.com/user-data.json');
   let user = await userReq.json();
   let givenName = user.givenName || '<GIVEN_NAME>';
 

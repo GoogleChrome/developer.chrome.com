@@ -47,15 +47,6 @@ uses the `"service_worker"` key, which specifies a single JavaScript file.
 }
 ```
 
-You may want to modularize your event handling code by dividing it across multiple JavaScript files. In this case, you must import these scripts from within the main service worker file:
-
-```js
-{
-    ...
-    ...
-  }
-```
-
 ## Initialize the extension {: #initialization }
 
 Listen to the [`runtime.onInstalled`][6] event to initialize an extension on installation. Use this
@@ -195,7 +186,7 @@ allow for as much cleanup as may be needed and will not help in case of a crash.
 
 [1]: /docs/extensions/mv3/messaging
 [2]: /docs/extensions/runtime#method-getBackgroundPage
-[3]: /docs/extensions/reference/tabs
+[3]: /docs/extensions/mv3/manifest/
 [4]: /docs/extensions/webRequest
 [5]: /docs/extensions/mv3/background_migration
 [6]: /docs/extensions/reference/runtime#event-onInstalled

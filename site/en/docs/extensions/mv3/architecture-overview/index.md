@@ -27,8 +27,9 @@ as the most important files and the capabilities the extension might use.
 ```json
 {
   "name": "My Extension",
+  "description": "A nice little demo extension.",
   "version": "2.1",
-  "description": "Gets information from Google.",
+  "manifest_version": 3,
   "icons": {
     "16": "icon_16.png",
     "32": "icon_32.png",
@@ -51,14 +52,12 @@ Extensions must have an icon that sits in the browser toolbar. Toolbar icons all
 keep users aware of which extensions are installed. Most users will interact with an extension that
 uses a [popup][2] by clicking on the icon.
 
-This <a href="/extensions/samples#search:google%20mail%20checker">Google Mail Checker extension</a>
-uses a [browser action][4]:
+This Manifest V2 [Google Mail Checker extension][sample-gmail] uses a [browser action][4]:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/mG1Uyd3uzcP7sSyKXWkh.png",
        alt="A screenshot of the Google Mail Checker extension", height="79", width="90" %}
 
-This <a href="/extensions/samples#search:mappy">Mappy extension</a> uses a
-[page action][6] and [content script][7]:
+This Manifest V2 [Mappy extension][sample-mappy] uses a [page action][6] and [content script][7]:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LrHTrkZVBN96DqNQjtyF.png",
        alt="A screenshot of the Mappy extension", height="103", width="90" %}
@@ -75,12 +74,12 @@ page.
 Additionally, each file can also be accessed using an absolute URL.
 
 ```text
-chrome-extension://<extensionID>/<pathToFile>
+chrome-extension://&lt;extensionID>/<pathToFile>
 ```
 
-In the absolute URL, the _<extensionID>_ is a unique identifier that the extension system generates
-for each extension. The IDs for all loaded extensions can be viewed by going to the URL
-**chrome://extensions**. The _<pathToFile>_ is the location of the file under the extension's top
+In the absolute URL, the _&lt;extensionID>_ is a unique identifier that the extension system
+generates for each extension. The IDs for all loaded extensions can be viewed by going to the URL
+**chrome://extensions**. The _&lt;pathToFile>_ is the location of the file under the extension's top
 folder; it matches the relative URL.
 
 While working on an unpacked extension the extension ID can change. Specifically, the ID of an
@@ -295,3 +294,6 @@ following resources.
 [40]: /docs/extensions/mv3/tut_debugging
 [41]: /docs/extensions/reference
 [42]: /docs/extensions/mv3/devguide
+
+[sample-gmail]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/extensions/gmail
+[sample-mappy]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/extensions/mappy

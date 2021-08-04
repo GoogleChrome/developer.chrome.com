@@ -11,6 +11,9 @@ accessibility:
 amp:
   en: AMP
 
+autoplay:
+  en: autoplay
+
 chromium-chronicle:
   en: Chromium Chronicle
 
@@ -46,6 +49,9 @@ houdini:
 
 html:
   en: HTML
+
+media:
+  en: Media
 
 new-in-chrome:
   en: New in Chrome

@@ -1,4 +1,7 @@
 {
+  "autoplay": {
+    "title": "i18n.tags.autoplay"
+  },
   "news": {
     "title": "i18n.tags.news"
   },
@@ -46,6 +49,9 @@
   },
   "html": {
     "title": "i18n.tags.html"
+  },
+  "media": {
+    "title": "i18n.tags.media"
   },
   "new-in-chrome": {
     "title": "i18n.tags.new-in-chrome"

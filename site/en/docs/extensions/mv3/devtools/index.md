@@ -442,7 +442,7 @@ Browse the source of these DevTools extension examples:
 - [Ember Inspector][39] - Shared extension core with adapters for both Chrome and Firefox.
 - [Coquette-inspect][40] - A clean React-based extension with a debugging agent injected into the
   host page.
-- our [DevTools Extension Gallery][41] and [Sample Extensions][42] have more worthwhile apps to
+- our [DevTools Extension Gallery][41] and [Sample Extensions][42] have more worthwhile extensions to
   install, try out, and learn from.
 
 ## More information {: #more }

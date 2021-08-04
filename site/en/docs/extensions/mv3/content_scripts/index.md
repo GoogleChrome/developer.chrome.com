@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Content scripts"
 date: 2012-09-17
-updated: 2021-01-20
+updated: 2021-08-02
 description: An explanation of content scripts and how to use them in your Chrome Extension.
 ---
 
@@ -40,13 +40,13 @@ Content scripts are unable to access other APIs directly.
 ## Work in isolated worlds {: #isolated_world }
 
 Content scripts live in an isolated world, allowing a content script to make changes to its
-JavaScript environment without conflicting with the page or other extensions' content Scripts.
+JavaScript environment without conflicting with the page or other extensions' content scripts.
 
 {% Aside %}
 
 An *isolated world* is a private execution environment that isn't accessible to the page or other
 extensions. A practical consequence of this isolation is that JavaScript variables in an extension's
-content scripts are not visible to the host page or other extension content scripts. The concept was
+content scripts are not visible to the host page or other extensions' content scripts. The concept was
 originally introduced with the initial launch of Chrome, providing isolation for browser tabs.
 
 {% endAside %}
@@ -92,7 +92,7 @@ the others.
 
 ## Inject scripts {: #functionality }
 
-Content Scripts can be injected [declared statically][14]{% if false %}, [declared dynamically][32],
+Content scripts can be [declared statically][14]{% if false %}, [declared dynamically][32],
 {% endif %} or [programmatically injected][13].
 
 ### Inject with static declarations {: #static-declarative }
@@ -111,8 +111,8 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
  "content_scripts": [
    {
      "matches": ["http://*.nytimes.com/*"],
-     "css": ["myStyles.css"],
-     "js": ["contentScript.js"]
+     "css": ["my-styles.css"],
+     "js": ["content-script.js"]
    }
  ],
  ...
@@ -197,7 +197,7 @@ chrome.scripting.unregisterContentScript(idArray, callback);
 
 ### Inject programmatically {: #programmatic }
 
-Use programmatic injection for content scripts that need to run in respond to events or on specific
+Use programmatic injection for content scripts that need to run in response to events or on specific
 occasions.
 
 In order to inject a content script programmatically, your extension needs host permissions for
@@ -205,7 +205,7 @@ the page it's trying to inject scripts into. Host permissions can either be gran
 requesting them as part of your extension's manifest (see [`host_permissions`][33]) or temporarily
 via [activeTab][15].
 
-Below we'll look at a couple different versions of an activeTab-based extension.
+Below we'll look at different versions of an activeTab-based extension.
 
 ```json/4-6
 //// manifest.json ////
@@ -246,7 +246,7 @@ function injectedFunction() {
   document.body.style.backgroundColor = 'orange';
 }
 
-chrome.action.onClicked.addListener((message, callback) => {
+chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
     function: injectedFunction

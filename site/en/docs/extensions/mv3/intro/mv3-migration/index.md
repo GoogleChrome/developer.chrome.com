@@ -247,7 +247,7 @@ of which can map to a set of resources to a set of URLs and extension IDs:
 {% endColumns %}
 
 {% Aside %}
-The `use_dynamic_url` key is not available yet. Support for this property will
+The `use_dynamic_url` key is not yet available. Support for this property will
 be coming in a future release.
 {% endAside %}
 

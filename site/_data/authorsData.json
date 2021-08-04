@@ -298,7 +298,7 @@
     "glitch": "agektmr",
     "email": "agektmr@google.com",
     "descriptions": {
-      "en": "Eiji is a Developer Advocate."
+      "en": "Developer Advocate for security, identity and payment on the web."
     },
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/r7YL1q3afKza6VUTF4QN.jpg"
   },
@@ -667,6 +667,38 @@
     "github": "maudnals",
     "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/fJP5RRP6pcCnfctkaQhu.jpg"
   },
+  "beaufortfrancois": {
+    "name": {
+      "given": "François",
+      "family": "Beaufort"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "country": "FR",
+    "github": "beaufortfrancois",
+    "descriptions": {
+      "en": "Dives into Chromium source code"
+    },
+    "image": "image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8SV7KI2QNVXph2L5Cga2.jpeg"
+  },
+  "atotic": {
+    "name": {
+      "given": "Aleks",
+      "family": "Totic"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Blink DOM"
+    },
+    "descriptions": {
+      "en": "Software engineer on Blink DOM"
+    },
+    "country": "US",
+    "twitter": "atotic",
+    "image": "image/HodOHWjMnbNw56hvNASHWSgZyAf2/yb4nAlmupGwqaiUypp7b.jpg"
+  },
   "kimanh": {
     "name": {
       "given": "Kim-Anh",
@@ -703,5 +735,84 @@
     },
     "country": "DE",
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
+  },
+  "ajara": {
+    "name": {
+      "given": "Adriana",
+      "family": "Jara"
+    },
+    "homepage": "https://blog.tomayac.com/",
+    "twitter": "tropicadri",
+    "github": "tropicadri",
+    "descriptions": {
+      "en": "Adriana is a developer relations engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "US",
+    "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/suAORxTqXSSw91SaRaTm.jpg"
+  },
+  "chrishtr": {
+    "name": {
+      "given": "Chris",
+      "family": "Harrelson"
+    },
+    "twitter": "chrishtr",
+    "github": "chrishtr",
+    "descriptions": {
+      "en": "Rendering lead for Chrome"
+    },
+    "org": {
+      "name": "Google"
+    },
+    "country": "US",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/t755awh2DwVKBMxvupUA.jpeg"
+  },
+  "rebeccasoares": {
+    "name": {
+      "given": "Rebecca",
+      "family": "Soares"
+    },
+    "descriptions": {
+      "en": "Policy Manager, Chrome Trust & Safety Team"
+    },
+    "org": {
+      "name": "Google"
+    },
+    "country": "US",
+    "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/WWbi21K4D5om3zTba8hR.jpg"
+  },
+  "ackermanb": {
+    "name": {
+      "given": "Benjamin",
+      "family": "Ackerman"
+    },
+    "descriptions": {
+      "en": "Lead Security Analyst, Chrome Trust & Safety Team"
+    },
+    "org": {
+      "name": "Google"
+    },
+    "country": "US",
+    "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/kUhkXfBItc8GVTkWA2AB.jpg"
+  },
+  "yigu": {
+    "name": {
+      "given": "Yi",
+      "family": "Gu"
+    },
+    "descriptions": {
+      "en": "Google Chrome engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "twitter": "yigsgu",
+    "github": "yi-gu",
+    "country": "CA",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/qEqbB89jHxBWSyDjCeQh.jpg"
   }
 }

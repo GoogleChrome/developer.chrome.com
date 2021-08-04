@@ -82,11 +82,11 @@ The Attribution Reporting API enables the measurement of two events that are lin
 event on a publisher's website, such as a user viewing or clicking an ad, with a subsequent 
 conversion on an advertiser site.
 
-This API supports click-through conversion attribution measurement (available in the first implementation of this API, origin trial) and view-through attribution measurement ([see public explainer](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
+This API supports click-through conversion attribution measurement (available in the first implementation of this API, currently in [origin trial](https://web.dev/conversion-measurement/#browser-support)) and view-through attribution measurement ([see public explainer](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
 
 The API offers two types of attribution reports than can be used for different use cases:
 
-- **Event-level reports** associate a particular ad click or view (on the ad side) with data on the conversion side. To preserve user privacy by preventing the joining of user identity across sites, conversion-side data is very limited, and noised. As an extra privacy protection, reports are not sent immediately.
+- **Event-level reports** associate a particular ad click or view (on the ad side) with data on the conversion side. To preserve user privacy by preventing the joining of user identity across sites, conversion-side data is very limited, and the data is 'noised' (meaning that for a small percentage of cases, random data is sent). As an extra privacy protection, reports are not sent immediately.
 - **Aggregate reports** are not tied with a specific event on the ad side. These reports provide richer, higher-fidelity conversion data than event-level reports. A combination of privacy techniques across cryptography, distribution of trust, and differential privacy help reduce the risk of identity joining across sites.
   Both report types can be used simultaneously. They're complementary.
   Other features that are designed in this API include [cross-device attribution reporting](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md) and [app-to-web attribution reporting](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md).
@@ -109,3 +109,4 @@ The API offers two types of attribution reports than can be used for different u
 - [Using the Event Conversion Measurement API](https://web.dev/using-conversion-measurement/): how to experiment with the first iteration of this API for web developers
 - API technical explainers: [event-level reports, clicks](https://github.com/WICG/conversion-measurement-api/), [event-level reports, views](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md), [aggregate reports (both clicks and views)](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md),
 - [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
+- [Migration guide (Chrome 92): Conversion Measurement API to Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-migration)

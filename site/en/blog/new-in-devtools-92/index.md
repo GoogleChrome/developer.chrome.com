@@ -20,13 +20,14 @@ Interested in helping improve DevTools? Sign up to participate in [Google User R
 
 {% endAside %}
 
+{% YouTube id="2baY3JpCxpo" %}
 
 ## CSS grid editor {: #grid-editor }
 A highly requested feature. You can now preview and author CSS Grid with the new CSS Grid editor! 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mV9Ac7QAD8vVPoiqmii6.png", alt="CSS Grid editor", width="800", height="486" %}
 
-When an HTML element on your page has `display: grid` or `display: grid` applied to it, you can see an icon appear next to it in the Styles pane. Click the icon to toggle the CSS grid editor. Here you can preview the potential changes with the on screen icons (e.g. `justify-content: space-around`) and author the grid appearance with just one click. 
+When an HTML element on your page has `display: grid` or `display: inline-grid` applied to it, you can see an icon appear next to it in the Styles pane. Click the icon to toggle the CSS grid editor. Here you can preview the potential changes with the on screen icons (e.g. `justify-content: space-around`) and author the grid appearance with just one click. 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dbd631539c7eeac02ea68a37096ce3bc7d9487d9 #}
 
@@ -69,7 +70,7 @@ View iframe details by right clicking on the iframe element in the Elements pane
 
 This takes you to a view of the iframe's details in the Application panel where you can examine document details, security & isolation status, permissions policy, and more to debug potential issues.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YdENg6wjsgPNyMODdOHC.png", alt="Frame details view", width="800", height="486" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hEsg9Mc95n7w2tPrv6KH.png", alt="Frame details view", width="800", height="516" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/30ba780ff36307473aee2e2c959287ea8d0b3bd7 #}
 
@@ -192,8 +193,8 @@ Chrome DevTools uses the [Chrome DevTools Protocol (CDP)](https://chromedevtools
 
 Two new functions added to facilitate the testing of CDP:
 
-The new **Save** button allows you to download the recorded messages as a JSON file
-A new field that allows you to send a raw CDP command directly
+- The new **Save** button allows you to download the recorded messages as a JSON file
+- A new field that allows you to send a raw CDP command directly
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mRVrHC9WEet7cwA7QAeV.png", alt="Protocol monitor", width="800", height="496" %}
 
