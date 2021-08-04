@@ -74,6 +74,5 @@ if (!isGAEProd) {
 app.use(...handlers);
 
 const listener = app.listen(process.env.PORT || 8080, () => {
-  // eslint-disable-next-line
-  console.log('The server is listening on port ' + listener.address().port);
+  console.log('The server is listening at:', listener.address());
 });

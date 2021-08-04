@@ -16,7 +16,6 @@
 
 const {doRedirect} = require('./env');
 const redirectsYaml = require('redirects-yaml');
-const {buildHandlers: buildRedirectsYamlHandlers} = redirectsYaml;
 const YAML = require('js-yaml');
 const fs = require('fs');
 const path = require('path');
@@ -48,7 +47,7 @@ function buildCheckHandlerInternal(redirects, staticPaths = undefined) {
     };
   }
 
-  return buildRedirectsYamlHandlers(redirects, checker);
+  return redirectsYaml.buildHandlers(redirects, checker);
 }
 
 /**
