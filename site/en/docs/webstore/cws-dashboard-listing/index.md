@@ -29,7 +29,7 @@ Be detailed but make sure your description complies with the [Keyword Spam][1] p
   3.  Any global (non-localized) video.
   4.  Global screenshots.
 - A 440x280 **small tile icon** that will be displayed on the Chrome Web Store wall.
-- The **primary category** where your item should be listed.
+- The **primary [category][5]** where your item should be listed.
 - Your item's **language** to help users find it.
 
 ## Learning more about images and branding
@@ -66,3 +66,4 @@ more details.
 [2]: /docs/webstore/branding
 [3]: /docs/webstore/images
 [4]: https://support.google.com/webmasters/answer/9008080
+[5]: /docs/webstore/best_practices/#choose-your-apps-category-well
