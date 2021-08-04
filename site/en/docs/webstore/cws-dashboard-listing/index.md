@@ -10,7 +10,7 @@ description: How to add listing information for your Chrome Web Store item.
        alt="Screenshot of the Chrome Web Store developer dashboard item listing tab", height="472", width="800" %}
 
 Add the store listing information for your item that isn't in the ZIP file, such as a long
-description, screenshots, videos, links to related sites and Google Analytics link. 
+description, screenshots, videos and links to related sites. 
 
 ## Product details 
 You'll need to fill out the following details about your item:
@@ -29,6 +29,8 @@ Be detailed but make sure your description complies with the [Keyword Spam][1] p
 
 ## Graphic assets {: #graphic-assets }
 
+At a minimum, you should provide the following promotional images:
+
 - At least one 1280x800 or 640x400 **screenshot** or YouTube **video** to show off what your item
   does. These are displayed in your item's Chrome Web Store listing in the following order:
   1.  Any localized video that you provide.
@@ -41,6 +43,8 @@ See [Supplying Images][2] for help on designing the images for your item, and [B
 Guidelines][3] for information on how you can use Google brands. 
 
 ## Additional fields {: #additional-fields }
+
+You can include any of these optional links related to your item. 
 
 ### Displaying your verified publisher status
 
