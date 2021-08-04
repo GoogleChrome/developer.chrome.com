@@ -4,7 +4,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2021-06-09
+updated: 2021-08-04
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -13,8 +13,14 @@ updated: 2021-06-09
 <!--lint disable no-duplicate-headings-->
 <!--lint disable first-heading-level-->
 
-Check this page often to learn about changes to the Chrome extensions platform,
-its documentation, and related policy or other changes.
+Check this page often to learn about changes to the Chrome extensions platform, its documentation,
+and related policy or other changes.
+
+### Two step verification enforcement
+#### Published 2021.08.04
+
+The [policy update blog post](/blog/policy-update-2sv/) published on 2021.06.29 has been updated to
+correct the two step verification deployment timeline.
 
 ### Developer program policies updated
 #### Published 2021.06.29
