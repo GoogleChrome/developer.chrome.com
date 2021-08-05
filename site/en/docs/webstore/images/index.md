@@ -279,12 +279,12 @@ Marquee image (1400x560):
 
 Here is a description of the review statuses:
 
-- Pending Review status: The image has not yet been reviewed, and is not being displayed in the
+- **Pending Review status**: The image has not yet been reviewed, and is not being displayed in the
   store. Images should be reviewed within one week from submission.
-- No status: The image has been approved, and is being displayed in the store. \[\*Images from
+- **No status**: The image has been approved, and is being displayed in the store. \[\*Images from
   'Draft' or 'Trusted testers' items will not show an image status. You will need to publish the
   item in order to get your promo image approved.\]
-- Rejected: The image has been reviewed and rejected, and is not being displayed in the store. The
+- **Rejected**: The image has been reviewed and rejected, and is not being displayed in the store. The
   reason(s) for rejection will be displayed in the Promotional Images section of the item's Edit
   page. We encourage you to review the reasons, and to make the necessary changes before
   re-uploading new improved images. New uploaded images will immediately have a Pending Review
@@ -292,7 +292,7 @@ Here is a description of the review statuses:
 
 ## Screenshots {: #screenshots }
 
-Use screenshots to convey capabilities, the look and feel, and experience of your extension to users. You must provide at least 1—and preferably the maximum allowed 5—screenshots of your extension to be displayed in the extension's store listing. Screenshots should demonstrate the actual user experience, focusing on the core features and content so users can anticipate what the extension's experience will be like.
+Use screenshots to convey capabilities, the look and feel, and experience of your extension to users. You must provide at **least 1**—and preferably the maximum allowed 5—screenshots of your extension to be displayed in the extension's store listing. Screenshots should demonstrate the actual user experience, focusing on the core features and content so users can anticipate what the extension's experience will be like.
 
 If your extension supports multiple locales, you can provide
 locale-specific screenshots as described in [Internationalizing Your App][10].
