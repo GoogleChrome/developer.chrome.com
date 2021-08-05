@@ -274,7 +274,7 @@ Marquee image (1400x560):
 
 {% Aside 'note' %}
 
-**Note:** You can find the review status of your promo image in each item's listing within your developer dashboard. Click on 'Edit' on the item's listing, and scroll down to the Promotional Images section. If you have questions about the status of your promo images, contact [cws-assets@google.com][9]
+**Note:** You can find the review status of your promo image in each item's listing within your developer dashboard. Click on 'Edit' on the item's listing, and scroll down to the Promotional Images section.
 
 {% endAside %}
 
@@ -333,6 +333,5 @@ Next, read [Submit your extension for publishing][11].
 [6]: #icon-size
 [7]: #icon-perspective
 [8]: /docs/webstore/branding
-[9]: mailto:cws-assets@google.com
 [10]: /docs/webstore/i18n
 [11]: /docs/webstore/publish/#submit-your-item-for-publishing
