@@ -7,9 +7,13 @@ description: >
   How to use the Payment & Distribution tab of the Chrome Web Store dashboard.
 ---
 
-In the payments and distribution tab you can declare if your extension is be free or contains paid services. You can also choose who will see it on the Chrome Web Store.
+In the payments and distribution tab you can declare if your extension is free or contains paid services. You can also choose who will see it on the Chrome Web Store.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/QQZihsAu4qF7vKH7n648.png", alt="Screenshot of the Chrome Web Store payment and distribution page", width="800", height="388" %}
+
+## Declaring in-app purchases {: #in-app-purchases }
+
+If you plan to use a third party service to offer additional paid features or subscriptions, choose **Contains in-app purchases**. This option will display an "in-app purchases" badge on your extension's detail page.
 
 ## Setting the visibility {: #setting-the-visibility }
 
