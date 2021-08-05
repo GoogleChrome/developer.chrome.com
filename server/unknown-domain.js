@@ -26,6 +26,8 @@ const {siteDomain} = require('./env');
  * This is a stop-gap until Google's infrastructure can be updated so that it
  * no longer serves the underlying App Engine instance on other locations.
  *
+ * (Note: this doesn't run during local dev, only when deployed to App Engine).
+ *
  * @type {express.RequestHandler}
  */
 const domainRedirectHandler = (req, res, next) => {
@@ -33,8 +35,13 @@ const domainRedirectHandler = (req, res, next) => {
     return next();
   }
 
+  // Ignore the appspot.com suffix, in case we want to hit the appid directly.
+  if (req.hostname.endsWith('.appspot.com')) {
+    return next();
+  }
+
+  // Don't forward POST or anything odd.
   if (!['GET', 'HEAD'].includes(req.method)) {
-    // Don't forward POST or anything odd.
     res.sendStatus(405);
     return res.end();
   }
