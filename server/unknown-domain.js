@@ -18,18 +18,18 @@
 // eslint-disable-next-line no-unused-vars
 const express = require('express');
 
-const INVALID_HOSTNAME = 'developers.chrome.com';
-const RESULT_HOSTNAME = 'developer.chrome.com';
+const {siteDomain} = require('./env');
 
 /**
- * We no longer support the "plural" domain developers.chrome.com. For now,
- * the redirect happens in this Express server, in the long term we should
- * set up a redirect with Google infrastructure.
+ * We don't support other serving locations other than "developer.chrome.com".
+ *
+ * This is a stop-gap until Google's infrastructure can be updated so that it
+ * no longer serves the underlying App Engine instance on other locations.
  *
  * @type {express.RequestHandler}
  */
-const pluralDomainRedirectHandler = (req, res, next) => {
-  if (req.hostname !== INVALID_HOSTNAME) {
+const domainRedirectHandler = (req, res, next) => {
+  if (req.hostname === siteDomain) {
     return next();
   }
 
@@ -39,8 +39,20 @@ const pluralDomainRedirectHandler = (req, res, next) => {
     return res.end();
   }
 
-  const u = new URL(req.url, `https://${RESULT_HOSTNAME}`);
+  let url = req.url;
+
+  // Special-case "code.google.com", which has a "/chrome/" prefix.
+  if (req.hostname === 'code.google.com') {
+    const stripPrefix = '/chrome';
+
+    // We don't see requests for a URL without a slash, they all arrive with one.
+    if (url.startsWith(stripPrefix + '/')) {
+      url = url.substr(stripPrefix.length);
+    }
+  }
+
+  const u = new URL(url, `https://${siteDomain}`);
   return res.redirect(u.toString(), 301);
 };
 
-module.exports = pluralDomainRedirectHandler;
+module.exports = domainRedirectHandler;

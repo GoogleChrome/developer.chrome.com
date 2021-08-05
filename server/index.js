@@ -20,7 +20,7 @@ const compression = require('compression');
 const {notFoundHandler} = require('./not-found');
 const {buildRedirectHandler} = require('./redirect');
 const {buildUniqueRedirectHandler} = require('./unique-redirect');
-const pluralDomainRedirectHandler = require('./plural-domain');
+const unknownDomainRedirectHandler = require('./unknown-domain');
 
 const app = express();
 
@@ -58,7 +58,6 @@ const cspHandler = (_req, res, next) => {
 };
 
 const handlers = [
-  pluralDomainRedirectHandler,
   cspHandler,
   immutableRootHandler,
   ...staticPaths.map(staticPath => express.static(staticPath)),
@@ -67,7 +66,12 @@ const handlers = [
   notFoundHandler,
 ];
 
-if (!isGAEProd) {
+if (isGAEProd) {
+  // In production, ensure we're being served from the canonical domain.
+  handlers.unshift(unknownDomainRedirectHandler);
+} else {
+  // In production, the GFEs do gzip compression for us. Just set up for dev
+  // so that audits are happy.
   handlers.unshift(compression());
 }
 
