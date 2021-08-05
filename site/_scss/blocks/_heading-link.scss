@@ -1,5 +1,10 @@
 .heading-link {
   color: currentColor;
+  color: var(--color-secondary-text);
+  float: left;
+  margin-left: get-size(400) * -1;
+  text-align: center;
   text-decoration: none;
   visibility: hidden;
+  width: get-size(400);
 }
