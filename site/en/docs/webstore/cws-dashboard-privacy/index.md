@@ -76,7 +76,15 @@ checkboxes to certify that you comply with each of the disclosure statements.
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/PwmNuP356TsVi80bxWAj.png", alt="Screenshot of data
 use certification fields", width="800", height="495" %}
 
+## You are almost ready to publish this item! 
+If you haven't done so yet, complete your listing by 
+-  Providing your [distribution preferences][5].
+-  Filling out your [store listing][6]
+
+
 [1]: /docs/webstore/program_policies/#extensions
 [2]: /docs/extensions/mv2/security/#permissions
 [3]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code
 [4]: /docs/extensions/mv3/intro/mv3-overview/
+[5]: /docs/webstore/cws-dashboard-distribution/
+[6]: /docs/webstore/cws-dashboard-listing/
