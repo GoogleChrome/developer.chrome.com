@@ -114,3 +114,6 @@ external_link:
 close:
   en: 'Close'
   es: 'Cerrar'
+
+back:
+  en: 'Back'
