@@ -3,7 +3,7 @@ title: Deprecations and removals in Chrome 91
 description: >
   A round up of the deprecations and removals in Chrome 91 to help you plan.
 layout: 'layouts/blog-post.njk'
-date: 2021-05-07
+date: 2021-08-03
 alt: >
   Deprecations and removals hero logo
 tags:
