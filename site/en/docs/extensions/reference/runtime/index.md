@@ -16,7 +16,7 @@ Message passing
 Accessing extension and platform metadata
 
 : These methods let you retrieve several specific pieces of metadata about the extension and the
-  platform. Methods in this category include 
+  platform. Methods in this category include
   [getBackgroundPage](/docs/extensions/reference/runtime/#method-getBackgroundPage),
   [getManifest](/docs/extensions/reference/runtime/#method-getManifest),
   [getPackageDirectoryEntry](/docs/extensions/reference/runtime/#method-getPackageDirectoryEntry), and
@@ -25,7 +25,7 @@ Accessing extension and platform metadata
 Managing extension lifecycle and options
 
 : These methods let you perform some meta-operations on the extension, and display the options page
-  to the extension user. Methods in this category include 
+  to the extension user. Methods in this category include
   [reload](/docs/extensions/reference/runtime/#method-reload),
   [requestUpdateCheck](/docs/extensions/reference/runtime/#method-requestUpdateCheck),
   [setUninstallURL](/docs/extensions/reference/runtime/#method-setUninstallURL), and
@@ -34,14 +34,14 @@ Managing extension lifecycle and options
 Device restart support
 
 : These methods are available only on Chrome OS, and exist mainly to support kiosk implementations.
-  Methods in this category include 
+  Methods in this category include
   [restart](/docs/extensions/reference/runtime/#method-restart) and
   [restartAfterDelay](/docs/extensions/reference/runtime/#method-restartAfterDelay).
 
 Helper utilities
 
 : These methods provide utility such as the conversion of internal resource representations to
-  external formats. Methods in this category include 
+  external formats. Methods in this category include
   [getURL](/docs/extensions/reference/runtime/#method-getURL).
 
 
@@ -59,7 +59,7 @@ Most methods on the runtime API do not require any permission to use. However,
 ### Use [`getURL`][get-url] to add an extension image to a page {: #example-get-url }
 
 In order for a web page to access an asset hosted on another domain, it must specify the resource's
-full URL (e.g. `<img src-"https://example.com/logo.png">`). The same is true for when a web page
+full URL (e.g. `<img src="https://example.com/logo.png">`). The same is true for when a web page
 wants to include assets included in an extension. The two main differences here are that the
 extension's assets must be exposed as [web accessible resources][war] and that typically content
 scripts are responsible for injecting extension assets.
@@ -123,8 +123,8 @@ extension.
 
 
 ```js
-chrome.runtime.onInstalled.addListener(reason => {
-  if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
+chrome.runtime.onInstalled.addListener(details => {
+  if (details.reason === chrome.runtime.OnInstalledReason.INSTALL) {
     chrome.runtime.setUninstallURL('https://example.com/extension-survey');
   }
 });

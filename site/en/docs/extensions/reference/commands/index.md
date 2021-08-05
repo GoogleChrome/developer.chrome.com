@@ -212,7 +212,7 @@ registration as shown in the following example.
 ```js
 // background.js
 chrome.commands.onCommand.addListener((command) => {
-  console.log(`Command "${command.name}" triggered`);
+  console.log(`Command "${command}" triggered`);
 });
 ```
 

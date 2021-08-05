@@ -22,6 +22,7 @@ const {Details} = require('./site/_shortcodes/Details');
 const {DetailsSummary} = require('./site/_shortcodes/DetailsSummary');
 const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
+const {Hreflang} = require('./site/_shortcodes/Hreflang');
 const {Img} = require('./site/_shortcodes/Img');
 const {Video} = require('./site/_shortcodes/Video');
 const {YouTube} = require('./site/_shortcodes/YouTube');
@@ -110,6 +111,7 @@ module.exports = eleventyConfig => {
   // Add shortcodes
   eleventyConfig.addShortcode('IFrame', IFrame);
   eleventyConfig.addShortcode('Glitch', Glitch);
+  eleventyConfig.addShortcode('Hreflang', Hreflang);
   eleventyConfig.addShortcode('Img', Img);
   eleventyConfig.addShortcode('Video', Video);
   eleventyConfig.addShortcode('YouTube', YouTube);

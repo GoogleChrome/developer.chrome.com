@@ -1,7 +1,7 @@
 {% set pageTitle = title + ' - ' + site.title %}
 
 {# We don't want any duplication. This is likely for the home page. #}
-{% if site.title === title %} 
+{% if site.title === title %}
   {% set pageTitle = title %}
 {% endif %}
 
@@ -9,8 +9,8 @@
 {% set pageUrlSafe %}{{ page.url | stripDefaultLocale }}{% endset %}
 {% set currentUrl = site.url + pageUrlSafe %}
 
-{% if not socialImage %} 
-  {% set socialImage = site.url + '/images/meta/social.png' %} 
+{% if not socialImage %}
+  {% set socialImage = site.url + '/images/meta/social.png' %}
 {% endif %}
 
 {% if not description %}
@@ -21,6 +21,8 @@
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}" />
 
+{% Hreflang page.url, site, collections %}
+
 <meta property="og:site_name" content="{{ siteTitle }}" />
 <meta property="og:title" content="{{ pageTitle }}" />
 <meta property="og:type" content="website" />
@@ -28,7 +30,8 @@
 
 {% if hero %}
   {# Twitter thumbanils are 507px on their website, so this is a 3x version. #}
-  {% set heroSrc = 'https://' + site.imgix + '/' + hero + '?auto=format&w=1521' %}
+  {# This skips the filter and always rasterizes the image (auto=format) in case we have a SVG. #}
+  {% set heroSrc = 'https://' + site.imgixDomain + '/' + hero + '?auto=format&w=1521' %}
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="{{ heroSrc }}" />
   <meta name="twitter:image" content="{{ heroSrc }}" />

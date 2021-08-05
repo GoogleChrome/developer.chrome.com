@@ -2,16 +2,12 @@
 {% from 'macros/project-icon.njk' import projectIcon with context %}
 
 {% macro featuredDocsCard(projects) %}
-<div class="masonry-grid__item featured-card hairline rounded-lg width-full">
+<div class="featured-card hairline rounded-lg width-full">
   <div class="card-title-bar color-blue-medium">
     {{ icon('docs', {hidden: true}) }}
     <span class="gap-left-300 flex-1 user-select-none">
       {{ 'i18n.nav.side_nav.docs' | i18n(locale) }}
     </span>
-    {# <div class="card-title-bar__controls">
-      {{ icon('keyboard-arrow-left') }}
-      {{ icon('keyboard-arrow-right') }}
-    </div> #}
   </div>
 
   <div class="display-grid grid-cols-2 grid-gap-300 lg:grid-gap-500 gap-top-400">

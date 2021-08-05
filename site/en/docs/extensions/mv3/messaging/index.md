@@ -208,7 +208,7 @@ which websites you want to communicate with. For example:
 
 ```json
 "externally_connectable": {
-  "matches": ["*://*.example.com/*"]
+  "matches": ["https://*.example.com/*"]
 }
 ```
 

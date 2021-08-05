@@ -506,12 +506,18 @@
     {% elif feature.unknownVersion %}
       {# This is stable but not yet visible in the version history data. It's probably coming next
         Chrome release. #}
-      <span class="aside--warning tag-pill type--label rounded-lg">
+      <span class="aside--warning tag-pill type--label rounded-lg" title="No version data available">
         Unknown version
       </span>
     {% elif feature.availableFromVersion %}
       <span class="aside--default tag-pill type--label rounded-lg">
         Chrome {{ feature.availableFromVersion }}+
+      </span>
+    {% endif %}
+
+    {% if feature.chromeOsOnly %}
+      <span class="aside--key-term tag-pill type--label rounded-lg">
+        Chrome OS only
       </span>
     {% endif %}
 

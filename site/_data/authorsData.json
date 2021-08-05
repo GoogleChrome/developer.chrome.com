@@ -298,7 +298,7 @@
     "glitch": "agektmr",
     "email": "agektmr@google.com",
     "descriptions": {
-      "en": "Eiji is a Developer Advocate."
+      "en": "Developer Advocate for security, identity and payment on the web."
     },
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/r7YL1q3afKza6VUTF4QN.jpg"
   },
@@ -736,6 +736,24 @@
     "country": "DE",
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
   },
+  "ajara": {
+    "name": {
+      "given": "Adriana",
+      "family": "Jara"
+    },
+    "homepage": "https://blog.tomayac.com/",
+    "twitter": "tropicadri",
+    "github": "tropicadri",
+    "descriptions": {
+      "en": "Adriana is a developer relations engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "US",
+    "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/suAORxTqXSSw91SaRaTm.jpg"
+  },
   "chrishtr": {
     "name": {
       "given": "Chris",
@@ -779,5 +797,22 @@
     },
     "country": "US",
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/kUhkXfBItc8GVTkWA2AB.jpg"
+  },
+  "yigu": {
+    "name": {
+      "given": "Yi",
+      "family": "Gu"
+    },
+    "descriptions": {
+      "en": "Google Chrome engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "twitter": "yigsgu",
+    "github": "yi-gu",
+    "country": "CA",
+    "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/qEqbB89jHxBWSyDjCeQh.jpg"
   }
 }

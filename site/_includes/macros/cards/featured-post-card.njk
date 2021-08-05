@@ -3,16 +3,12 @@
 
 {% macro featuredPostCard(post) %}
 {% set pd = post.data %}
-<div class="masonry-grid__item featured-card hairline rounded-lg width-full">
+<div class="featured-card hairline rounded-lg width-full">
   <div class="card-title-bar color-blue-medium">
     {{ icon('blog', {hidden: true}) }}
     <span class="gap-left-300 flex-1 user-select-none">
       {{ 'i18n.nav.side_nav.blog' | i18n(locale) }}
     </span>
-    {# <div class="card-title-bar__controls">
-      {{ icon('keyboard-arrow-left') }}
-      {{ icon('keyboard-arrow-right') }}
-    </div> #}
   </div>
 
   {% if pd.hero %}

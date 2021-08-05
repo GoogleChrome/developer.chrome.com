@@ -135,6 +135,10 @@ is that you can automate unit tests for your site across different platforms.
 - [Device Anywhere (commercial)][13] doesn't use emulators but real devices which you can control
   remotely. This is very useful in the event where you need to reproduce a problem on a specific
   device and can't see the bug on any of the options in the previous guides.
+- [LambdaTest (commercial)][14] will help you to perform manual cross browser testing on a combination
+  of 2000+ browsers & operating systems. Users will be able to record video of complex bugs and eve
+  share it via integrations like MS Teams, Slack and more. Users can speed-up their testing by 
+  running tests in parallel.
 
 [1]: https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode
 [2]: https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/emulation
@@ -150,3 +154,4 @@ is that you can automate unit tests for your site across different platforms.
 [11]: https://www.browserstack.com/automate
 [12]: https://saucelabs.com/
 [13]: https://www.sigos.com/app-experience/
+[14]: https://www.lambdatest.com/
