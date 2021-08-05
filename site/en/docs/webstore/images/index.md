@@ -7,16 +7,16 @@ description: Guidelines about the kinds of images you need to supply to the Chro
 
 You need to supply several kinds of images to be used in the Chrome Web Store:
 
-- [Extension icon][3]
-- [Promotional images][4]
-- [Screenshots][5]
+- [Extension icon][1]
+- [Promotional images][2]
+- [Screenshots][3]
 
 Only the extension icon, a small promotional image, and a screenshot are mandatory. However, providing
 attractive versions of both required and optional images increases your extension's chances of getting
 noticed. For example, your extension can't be featured in marquee unless you provide a marquee promotional
-image. Follow our [Image best practices][11] to increase your chance of being featured.
+image. Follow our [Image best practices][4] to increase your chance of being featured.
 
-## Image best practices
+## Image best practices {: #best-practices }
 
 - Avoid overloading images with text in small font sizes or backgrounds that compete with text.
 - Use consistent design elements (logos, fonts, colors) across all images for a cohesive look.
@@ -26,14 +26,14 @@ image. Follow our [Image best practices][11] to increase your chance of being fe
 - Rotate images appropriately. Do not upload images upside down, sideways, or otherwise skewed.
 - Avoid inappropriate or repetitive image elements, such as third-party trademarked characters or logos without proper permission.
 
-## Extension icon
+## Extension icon {: #icons }
 
-You must provide a 128x128-pixel extension icon image in the [ZIP file of your extension][6]. Some requirements
+You must provide a 128x128-pixel extension icon image in the [ZIP file of your extension][5]. Some requirements
 for the image:
 
 - The actual icon size should be **96x96** (for square icons); an additional 16 pixels per side
   should be transparent padding, adding up to 128x128 total image size. For details, see [Icon
-  size][7].
+  size][6].
 - The image must be in PNG format.
 - The image should work well on both light and dark backgrounds.
 
@@ -44,7 +44,7 @@ When you design the icon, keep the following advice in mind:
   dark backgrounds.
 - Avoid large drop shadows; the UI might add shadows. It's OK to use small shadows for contrast.
 - If you have a bevel at the bottom of your icon, we recommend 4 pixels of depth.
-- Make the icon face the viewer, rather than having built-in perspective. See [Perspective][10] for
+- Make the icon face the viewer, rather than having built-in perspective. See [Perspective][7] for
   details.
 
 Here are some icons that follow these guidelines.
@@ -68,7 +68,7 @@ Here are some icons that follow these guidelines.
 
 <div class="aside aside--note"><b>Note</b>: If you upload an image that has no alpha, it will be placed in a frame with rounded corners (12-pixel corner radius).</div>
 
-### Icon size
+### Icon size {: #icon-size }
 
 All extension icons should have the same visual weight, occupying roughly the same area. As the following
 figure shows, when you size an icon to fill the available area, square and circular icons are
@@ -163,7 +163,7 @@ nor circular guidelines, but it fits near them both.
   </tr>
 </table>
 
-### Perspective
+### Perspective {: #icon-perspective }
 
 For flexibility and consistency, extension icons should be front-facing. Subtle tweaks of perspective that
 give a sense of tangibility are OK, but avoid dramatic angles.
@@ -199,14 +199,14 @@ give a sense of tangibility are OK, but avoid dramatic angles.
   </tbody>
 </table>
 
-## Promotional images
+## Promotional images {: #promo }
 
 You must provide one small, 440x280-pixel promotional image. You can also provide other images that
 the store can use to promote your extension.
 
 <div class="aside aside--note"><b>Note</b>: Unlike <a href="#screenshots">screenshots</a>, promotional images are not currently locale-specific. If your extension supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the extension's capabilities, or targeting the promo images to the locale in which you have the most users.</div>
 
-**Note**: If your images refer to Google brands, follow the [Branding Guidelines][18].
+**Note**: If your images refer to Google brands, follow the [Branding Guidelines][8].
 
 Although only a small promotional image is required, you can also supply larger promotional images
 if you'd like your extension to be featured more prominently in the Chrome Web Store. You can provide one
@@ -273,12 +273,12 @@ Here is a description of the review statuses:
   re-uploading new improved images. New uploaded images will immediately have a Pending Review
   status.
 
-## Screenshots
+## Screenshots {: #screenshots }
 
 Use screenshots to convey capabilities, the look and feel, and experience of your extension to users. You must provide at least 1—and preferably the maximum allowed 5—screenshots of your extension to be displayed in the extension's store listing. Screenshots should demonstrate the actual user experience, focusing on the core features and content so users can anticipate what the extension's experience will be like.
 
 If your extension supports multiple locales, you can provide
-locale-specific screenshots as described in [Internationalizing Your App][28].
+locale-specific screenshots as described in [Internationalizing Your App][10].
 
 When you edit your extensions's listing, mousing over a screenshot's thumbnail brings up controls that let
 you delete the screenshot or change its position.
@@ -298,21 +298,16 @@ As an example, here are two screenshot images for an extension:
 
 ## What next?
 
-Next, read [Publishing Your App][39].
+Next, read [Publishing Your App][11].
 
-[1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: /apps/migration
-[3]: #icons
-[4]: #promo
-[5]: #screenshots
-[6]: /docs/webstore/publish#step2
-[7]: #iconsize
-[8]: https://developers.google.com/chrome/apps/docs/developers_guide#installing
-[9]: https://tools.google.com/chrome/intl/en/themes/
-[10]: #perspective
-[11]: #image-best-practices
-[17]: #screenshots
-[18]: /docs/webstore/branding
-[27]: mailto:cws-assets@google.com
-[28]: /docs/webstore/i18n
-[39]: /docs/webstore/publish
+[1]: #icons
+[2]: #promo
+[3]: #screenshots
+[4]: #best-practices
+[5]: /docs/webstore/publish#create-your-items-zip-file
+[6]: #icon-size
+[7]: #icon-perspective
+[8]: /docs/webstore/branding
+[9]: mailto:cws-assets@google.com
+[10]: /docs/webstore/i18n
+[11]: /docs/webstore/publish
