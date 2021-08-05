@@ -16,7 +16,7 @@ and marks it as active.
   {% if item.sections %}
     <button class="navigation-tree__link button" data-expandable aria-expanded="{{ item.active }}">
       <div class="navigation-tree__icon">
-        {{ icon('arrow-right', {label: 'toggle', hidden: true}) }}
+        {{ icon('arrow-right', {hidden: true}) }}
       </div>
       <span>{{ item.title | i18n }}</span>
     </button>
@@ -34,7 +34,7 @@ and marks it as active.
       {% set postTitle = item.title | i18n(locale) %}
       <a href="{{ item.url }}" class="navigation-tree__link" target="_blank" rel="noopener">
         <span class="display-inline-flex align-center">
-          {{ postTitle }} {{ icon('external-link', {label: 'external link', className: 'width-300 gap-left-100'}) }}
+          {{ postTitle }} {{ icon('external-link', {label: 'i18n.common.external_link' | i18n(locale), className: 'width-300 gap-left-100'}) }}
         </span>
       </a>
     {% else %}
