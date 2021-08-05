@@ -9,7 +9,7 @@ description: >
 
 In the payments and distribution tab you can declare if your extension is be free or contains paid services. You can also choose who will see it on the Chrome Web Store.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ko8C7yl0tjGzVaTVDzkV.png", alt="Screenshot of the Chrome Web Store pricing and distribution page", height="474", width="800" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/QQZihsAu4qF7vKH7n648.png", alt="Screenshot of the Chrome Web Store payment and distribution page", width="800", height="388" %}
 
 ## Setting the visibility {: #setting-the-visibility }
 
