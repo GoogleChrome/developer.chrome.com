@@ -66,7 +66,11 @@ Here are some icons that follow these guidelines.
   </tr>
 </table>
 
-<div class="aside aside--note"><b>Note</b>: If you upload an image that has no alpha, it will be placed in a frame with rounded corners (12-pixel corner radius).</div>
+{% Aside 'note' %}
+
+**Note:** If you upload an image that has no alpha, it will be placed in a frame with rounded corners (12-pixel corner radius).
+
+{% endAside %}
 
 ### Icon size {: #icon-size }
 
@@ -204,7 +208,12 @@ give a sense of tangibility are OK, but avoid dramatic angles.
 You must provide one small, 440x280-pixel promotional image. You can also provide other images that
 the store can use to promote your extension.
 
-<div class="aside aside--note"><b>Note</b>: Unlike <a href="#screenshots">screenshots</a>, promotional images are not currently locale-specific. If your extension supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the extension's capabilities, or targeting the promo images to the locale in which you have the most users.</div>
+{% Aside 'note' %}
+
+**Note:** Unlike [screenshots][3], promotional images are not currently locale-specific. If your extension supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the extension's capabilities, or targeting the promo images to the locale in which you have the most users.
+
+{% endAside %}
+
 
 **Note**: If your images refer to Google brands, follow the [Branding Guidelines][8].
 
@@ -216,7 +225,11 @@ of each of the following:
 - Large: 920x680 pixels
 - Marquee: 1400x560 pixels
 
-<div class="aside aside--note"><b>Note</b>: Extensions that don't have a small promotional image will be shown <b>after</b> extensions that do have that image. If your extension was published before the small promotional image was required, you should add that image so your extension can be displayed more prominently.</div>
+{% Aside 'note' %}
+
+**Note:** Extensions that don't have a small promotional image will be shown **after** extensions that do have that image. If your extension was published before the small promotional image was required, you should add that image so your extension can be displayed more prominently.
+
+{% endAside %}
 
 Promotional images are your chance to capture users' attention and entice them to learn more. Don't
 just use a screenshot; your images should primarily communicate the brand. Here are some rules of
@@ -258,7 +271,11 @@ Marquee image (1400x560):
 {% Img src="image/nPi5hOhvGtatFrSN6ugwlPVHcs43/tn6IOh8ZCrflIOcu8isV.png", 
         alt="Marquee", height="280", width="700" %}
 
-<div class="aside aside--note"><b>Note</b>: You can find the review status of your promo image in each item's listing within your developer dashboard. Click on 'Edit' on the item's listing, and scroll down to the Promotional Images section. If you have questions about the status of your promo images, contact <a href="mailto:cws-assets@google.com">cws-assets@google.com</a>.</div>
+{% Aside 'note' %}
+
+**Note:** You can find the review status of your promo image in each item's listing within your developer dashboard. Click on 'Edit' on the item's listing, and scroll down to the Promotional Images section. If you have questions about the status of your promo images, contact [cws-assets@google.com][9]
+
+{% endAside %}
 
 Here is a description of the review statuses:
 
@@ -288,7 +305,12 @@ Each screenshot should be as follows:
 - Square corners, no padding (full bleed)
 - 1280x800 or 640x400 pixels
 
-<div class="aside aside--note"><b>Note</b>: 1280x800 screenshots are preferrable, as larger screenshots look better on high-resolution displays. Currently, all screenshots are downscaled to 640x400 pixels. If your screenshots do not look good when downscaled (for example, they have a lot of text) or if 1280x800 is too big for your extension (for example, screenshots for a low-resolution game), you can upload 640x400 screenshots.</div>
+{% Aside 'note' %}
+
+**Note:** 1280x800 screenshots are preferrable, as larger screenshots look better on high-resolution displays. Currently, all screenshots are downscaled to 640x400 pixels. If your screenshots do not look good when downscaled (for example, they have a lot of text) or if 1280x800 is too big for your extension (for example, screenshots for a low-resolution game), you can upload 640x400 screenshots.
+
+{% endAside %}
+
 
 As an example, here are two screenshot images for an extension:
 
