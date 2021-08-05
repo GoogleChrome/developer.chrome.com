@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Fill out the privacy fields
 date: 2020-06-12
+updated: 2021-08-05
 description: >
   Use the privacy tab to help the Chrome Web Store team review your extension as quickly
   as possible.
@@ -45,6 +46,10 @@ Your extension should avoid using remote code except where absolutely necessary.
 remote code will need extra scrutiny, resulting in longer review times. Extensions that call remote
 code and do not declare and justify it using the field shown above will be rejected.
 
+{% Aside 'warning' %}
+In **MV3** you can no longer load and execute a remotely hosted file. [Read about this][3].
+{% endAside %}
+
 **Remote Code**&emsp;Use this field to tell reviewers whether your extension executes remote code and, if
 so, why this is necessary. If your extension doesn't need to execute remote code, make sure that it
 does not and select "No, I am not using remote code."
@@ -73,3 +78,5 @@ use certification fields", width="800", height="495" %}
 
 [1]: /docs/webstore/program_policies/#extensions
 [2]: /docs/extensions/mv2/security/#permissions
+[3]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code
+[4]: /docs/extensions/mv3/intro/mv3-overview/
