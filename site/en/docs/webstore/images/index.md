@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Supplying Images
 date: 2018-06-11
+updated: 2021-08-05
 description: Guidelines about the kinds of images you need to supply to the Chrome Web Store.
 ---
 
@@ -322,7 +323,7 @@ As an example, here are two screenshot images for an extension:
 
 ## What next?
 
-Next, read [Publishing Your App][11].
+Next, read [Submit your extension for publishing][11].
 
 [1]: #icons
 [2]: #promo
@@ -334,4 +335,4 @@ Next, read [Publishing Your App][11].
 [8]: /docs/webstore/branding
 [9]: mailto:cws-assets@google.com
 [10]: /docs/webstore/i18n
-[11]: /docs/webstore/publish
+[11]: /docs/webstore/publish/#submit-your-item-for-publishing
