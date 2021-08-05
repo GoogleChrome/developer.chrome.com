@@ -1,15 +1,13 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Prepare to publish: set up pricing and distribution"
-#date: TODO
-#updated: TODO
+title: "Prepare to publish: set up payment and distribution"
+date: 2021-07-29
+updated: 2021-08-06
 description: >
-  How to use the Pricing & Distribution tab of the Chrome Web Store dashboard
-  to control how you charge for your Chrome Web Store item.
+  How to use the Payment & Distribution tab of the Chrome Web Store dashboard.
 ---
 
-The pricing and distribution tab lets you control how you charge for your item and who will see it
-on the Chrome Web Store.
+In the payments and distribution tab you can declare if your extension is be free or contains paid services. You can also choose who will see it on the Chrome Web Store.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ko8C7yl0tjGzVaTVDzkV.png", alt="Screenshot of the Chrome Web Store pricing and distribution page", height="474", width="800" %}
 
