@@ -24,6 +24,11 @@ const express = require('express');
 const isGAEProd = Boolean(process.env.GAE_APPLICATION);
 
 /**
+ * The domain being served.
+ */
+const siteDomain = 'developer.chrome.com';
+
+/**
  * @param {express.Response} res
  * @param {number} code
  * @param {string} target
@@ -36,4 +41,4 @@ function doRedirect(res, target, code = 301) {
   res.redirect(code, target);
 }
 
-module.exports = {isGAEProd, doRedirect};
+module.exports = {isGAEProd, doRedirect, siteDomain};
