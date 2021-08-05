@@ -73,11 +73,13 @@ more details.
 
 ### Adding a homepage URL {: #home-url }
 
-If you want to explain what your extension does in more detail, you can include a direct link to your extension's website located under the Additional information of your item.
+If you want to explain in more detail what your extension does, you can include a direct link to your extension's website. It will be located under the Additional information of your item.
 
 ### Providing a support URL {: #support-url }
 
-The CWS provides a built in user support management system, but you can include a link to your own feedback management platform. Note that you first must enable the "Support tab" under the Account settings. 
+The CWS provides a built in user support management under the "Support tab", but you can include a link to your own feedback management platform. Note that you first must activate "Enable User Feedback" under the Account settings. 
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="800", height="185" %}
 
 [1]: /docs/webstore/spam-faq/#keyword-spam
 [2]: /docs/webstore/branding
