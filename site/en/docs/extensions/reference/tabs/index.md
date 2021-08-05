@@ -131,10 +131,6 @@ directory of the [chrome-extensions-samples][samples-repo] repository.
 
 [manifest]: /docs/extensions/mv3/manifest/
 [promises]: /docs/extensions/mv3/promises/
-[prop-url]: #property-Tab-url
-[prop-pendingurl]: #property-Tab-pendingUrl
-[prop-title]: #property-Tab-title
-[prop-faviconurl]: #property-Tab-favIconUrl
 [tab]: #type-Tab
 [mv2-tabs-samples]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/tabs/
 [samples-repo]: https://github.com/GoogleChrome/chrome-extensions-samples
