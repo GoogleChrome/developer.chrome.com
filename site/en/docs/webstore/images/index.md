@@ -290,12 +290,14 @@ Here is a description of the review statuses:
   re-uploading new improved images. New uploaded images will immediately have a Pending Review
   status.
 
+To replace a promotional image, hover over the image to bring up the remove image control.
+
 ## Screenshots {: #screenshots }
 
 Use screenshots to convey capabilities, the look and feel, and experience of your extension to users. You must provide at **least 1**—and preferably the maximum allowed 5—screenshots of your extension to be displayed in the extension's store listing. Screenshots should demonstrate the actual user experience, focusing on the core features and content so users can anticipate what the extension's experience will be like.
 
 If your extension supports multiple locales, you can provide
-locale-specific screenshots as described in [Internationalizing Your App][10].
+locale-specific screenshots as described in [Internationalizing Your Extension][10].
 
 When you edit your extensions's listing, mousing over a screenshot's thumbnail brings up controls that let
 you delete the screenshot or change its position.
