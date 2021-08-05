@@ -13,7 +13,7 @@ specifying the appropriate values for [cross_origin_embedder_policy][coep-refdoc
 example will allow the extension to opt into cross-origin isolation for its origin.
 
 
-```
+```js
 {
     "name": "CrossOriginIsolation",
     "manifest_version": 3,
@@ -38,7 +38,7 @@ for more information on this.
 Even if an extension opts into cross-origin isolation, not all extension contexts will be
 cross-origin isolated. For example, cross-origin isolation [is not fully
 implemented](https://bugs.chromium.org/p/chromium/issues/detail?id=1131404) for service and shared
-workers currently. Similarly, a cross-origin isolated extension’s web-accessible subframe on a
+workers currently. Similarly, a cross-origin isolated extension's web-accessible subframe on a
 regular web page is not considered cross-origin isolated currently. 
 
 {% endAside %}

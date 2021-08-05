@@ -8,7 +8,7 @@ description: Reference documentation for the cross_origin_opener_policy property
 
 The `cross_origin_opener_policy` manifest key lets extensions specify a value for the
 [Cross-Origin-Opener-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)
-(COOP) response header for requests to the extension’s origin.  This includes the extension's
+(COOP) response header for requests to the extension's origin.  This includes the extension's
 background context (service worker or background page), popup, options page, tabs that are open to
 an extension resource, etc. 
 
@@ -16,7 +16,7 @@ Together with the `cross_origin_embedder_policy` manifest key, this key lets ext
 cross-origin isolation.
 
 
-### Manifest declaration 
+## Manifest declaration 
 
 {% Aside %}
 This key was introduced in Chrome 93
@@ -26,7 +26,7 @@ The `cross_origin_opener_policy` manifest key takes a dictionary with a single k
 which the extension can use to specify the response header value. For example:
 
 
-```
+```js
 {
     ….
     "cross_origin_opener_policy": {
