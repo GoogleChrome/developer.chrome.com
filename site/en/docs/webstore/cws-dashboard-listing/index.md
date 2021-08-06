@@ -31,6 +31,7 @@ Be detailed but make sure your description complies with the [Keyword Spam][1] p
 
 At a minimum, you should provide the following promotional images:
 
+- A 128x128 **store icon**.
 - At least one 1280x800 or 640x400 **screenshot** or YouTube **video** to show off what your item
   does. These are displayed in your item's Chrome Web Store listing in the following order:
   1.  Any localized video that you provide.
@@ -38,6 +39,8 @@ At a minimum, you should provide the following promotional images:
   1.  Any global (non-localized) video.
   1.  Global screenshots.
 - A 440x280 **small tile icon** that will be displayed on the Chrome Web Store wall.
+
+### Learning more about images and branding
 
 See [Supplying Images][2] for help on designing the images for your item, and [Branding
 Guidelines][3] for information on how you can use Google brands. 
@@ -75,6 +78,8 @@ more details.
 
 If you want to explain in more detail what your extension does, you can include a direct link to your extension's website. It will be located under the Additional information of your item.
 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/j71L391YIhEAIZTVUuBw.png", alt="Homepage URL in Chrome Web Store item page", width="306", height="106" %}
+
 ### Providing a support URL {: #support-url }
 
 The CWS provides a built in user support management under the "Support tab", but you can include a link to your own feedback management platform. Note that you first must activate "Enable User Feedback" under the Account settings. 
@@ -82,7 +87,7 @@ The CWS provides a built in user support management under the "Support tab", but
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="800", height="185" %}
 
 [1]: /docs/webstore/spam-faq/#keyword-spam
-[2]: /docs/webstore/branding
-[3]: /docs/webstore/images
+[2]: /docs/webstore/images
+[3]: /docs/webstore/branding
 [4]: https://support.google.com/webmasters/answer/9008080
 [5]: /docs/webstore/best_practices/#choose-your-apps-category-well
