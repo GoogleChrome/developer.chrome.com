@@ -30,7 +30,7 @@ authors:
   - kaycebasques
 
 # Optional
-# How to a new tag
+# How to add a new tag
 # https://developer.chrome.com/docs/handbook/how-to/add-a-tag/
 tags:
   - privacy
@@ -41,9 +41,18 @@ tags:
 # https://developer.chrome.com/docs/handbook/how-to/add-media/
 hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
 
-# Required if there is a hero image
+# Optional
+# By default the hero image will be used for twitter and facebook cards, so if
+# you have a hero image then you don't need to provide a socialImage.
+# This should really only be used in the case where you don't want a hero image
+# but you DO want a twitter/facebook card image.
+# Social images should be at least 1920 x 960
+# https://developer.chrome.com/docs/handbook/how-to/add-media/
+socialImage: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
+
+# Required if there is a hero or social image
 alt: >
-  An alternative text description of your hero image.
+  An alternative text description of your hero or social image.
 ---
 
 A few rules:
