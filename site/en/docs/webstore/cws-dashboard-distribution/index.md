@@ -7,7 +7,7 @@ description: >
   How to use the Payment & Distribution tab of the Chrome Web Store dashboard.
 ---
 
-In the payments and distribution tab you can declare if your extension is free or contains paid services. You can also choose who will see it on the Chrome Web Store.
+In the payments and distribution tab you can declare if your extension is free or contains in-app purchases. You can also choose who will see it on the Chrome Web Store.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/QQZihsAu4qF7vKH7n648.png", alt="Screenshot of the Chrome Web Store payment and distribution page", width="800", height="388" %}
 
@@ -24,6 +24,10 @@ Use the **Visibility** settings to configure who can see your item in the Chrome
   anyone to install your item if they know its Chrome Web Store URL.
 - **Private**—This option limits installation of your item to specified users only. This is
   typically used for testing before public launch of an item.
+
+{% Aside 'gotchas' %}
+All visibility settings have the same policy requirements and will go through the same review process.
+{% endAside %}
 
 ### Private visibility: Trusted testers {: #private-visibility-trusted-testers }
 
