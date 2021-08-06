@@ -11,15 +11,15 @@
   width: get-size(400);
 
   &::after {
-    color: var(--color-secondary-text);
-    position: absolute;
-    content: '#';
-    transform: scale(0.666);
-    transform-origin: 75% 50%;
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
+    color: var(--color-secondary-text);
+    content: '#';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: 75% 50%;
+    transform: scale(0.666);
 
     @include media-query('lg') {
       // On large screens, move farther from the heading (more to the left).
