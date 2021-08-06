@@ -2,9 +2,9 @@
  * Returns a formatted date string.
  * See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
  * for a list of options.
- * @param {Date} date
+ * @param {Date|string} date
  * @param {string} [locale="en"]
- * @param {object} opts
+ * @param {object} [opts]
  * @returns {string}
  */
 const formatDate = (date, locale = 'en', opts = {}) => {
@@ -20,9 +20,9 @@ const formatDate = (date, locale = 'en', opts = {}) => {
 
 /**
  * Returns a date string formatted like "Monday, July 26, 2021".
- * @param {Date} date
+ * @param {Date|string} date
  * @param {string} [locale="en"]
- * @param {object} opts
+ * @param {object} [opts]
  * @returns {string}
  */
 const formatDateLong = (date, locale = 'en', opts = {}) => {
@@ -40,9 +40,9 @@ const formatDateLong = (date, locale = 'en', opts = {}) => {
 
 /**
  * Returns a date string formated like "July 26, 2021".
- * @param {Date} date
+ * @param {Date|string} date
  * @param {string} [locale="en"]
- * @param {object} opts
+ * @param {object} [opts]
  * @returns {string}
  */
 const formatDateShort = (date, locale = 'en', opts = {}) => {
