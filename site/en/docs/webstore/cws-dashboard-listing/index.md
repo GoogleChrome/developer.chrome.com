@@ -76,18 +76,26 @@ more details.
 
 ### Adding a homepage URL {: #home-url }
 
-If you want to explain in more detail what your extension does, you can include a direct link to your extension's website. It will be located under the Additional information of your item.
+If you want to explain how your extension works in more detail, you can provide a direct link to your extension's website in the **Homepage URL**. It will be located under the Additional information of your item.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/j71L391YIhEAIZTVUuBw.png", alt="Homepage URL in Chrome Web Store item page", width="306", height="106" %}
 
 ### Providing a support URL {: #support-url }
 
-The CWS provides a built in user support management under the "Support tab", but you can include a link to your own feedback management platform. Note that you first must activate "Enable User Feedback" under the Account settings. 
+The CWS provides a built in user support system under your items' "Support tab", but you can use your own support page by including a link in the **Support URL**. Note that first you must activate "Enable User Feedback" in the Account settings page. 
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="800", height="185" %}
+
+## You are almost ready to publish this item! 
+If you haven't done so yet, complete your listing by 
+-  Filling out your [privacy practices][6] 
+-  Providing your [distribution preferences][7].
+
 
 [1]: /docs/webstore/spam-faq/#keyword-spam
 [2]: /docs/webstore/images
 [3]: /docs/webstore/branding
 [4]: https://support.google.com/webmasters/answer/9008080
 [5]: /docs/webstore/best_practices/#choose-your-apps-category-well
+[6]: /docs/webstore/cws-dashboard-privacy
+[7]: /docs/webstore/cws-dashboard-distribution
