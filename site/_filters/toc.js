@@ -40,8 +40,8 @@ const headingRe = /<(h[23])(|\s.*?)>(.*?)<\/\1>/gm;
 // Matches an ID attribute, returning the value in the 1st group.
 const idRe = /\bid="(.+?)"/;
 
-// Matches e.g., " #" so we can remove it.
-const trailingHashRe = /\s+#$/;
+// Matches e.g., " #" or "# " so we can remove it.
+const trailingHashRe = /(\s+#$)|(^#\s+)/g;
 
 /**
  * @typedef {{
