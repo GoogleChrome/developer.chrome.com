@@ -30,7 +30,7 @@ your extension.
 Your extension should request the [minimum permissions][2] consistent with the purpose of the
 extension. Requesting broader permissions than necessary may cause your extension to be rejected.
 
-**Permissions list**&emsp;This section contains a list of permissions that your extension uses (as
+**Permissions justification**&emsp;This section contains a list of permissions that your extension uses (as
 declared in your manifest), with a field for you to state the justification for each permission.
 Fill out these fields to tell the reviewers why your extension needs to use each permission. If
 there are permissions listed here that you don't require, remove them from your manifest before
@@ -47,7 +47,7 @@ remote code will need extra scrutiny, resulting in longer review times. Extensio
 code and do not declare and justify it using the field shown above will be rejected.
 
 {% Aside 'warning' %}
-In **MV3** you can no longer load and execute a remotely hosted file. [Read about this][3].
+In **MV3** you can no longer load and execute a [remotely hosted file][3].
 {% endAside %}
 
 **Remote Code**&emsp;Use this field to tell reviewers whether your extension executes remote code and, if
@@ -83,7 +83,7 @@ If you haven't done so yet, complete your listing by
 
 
 [1]: /docs/webstore/program_policies/#extensions
-[2]: /docs/extensions/mv2/security/#permissions
+[2]: /docs/extensions/mv3/security/#permissions
 [3]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code
 [4]: /docs/extensions/mv3/intro/mv3-overview/
 [5]: /docs/webstore/cws-dashboard-distribution/
