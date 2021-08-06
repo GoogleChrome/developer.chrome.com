@@ -65,9 +65,11 @@ You must disclose how your extension collects and uses user data. These disclosu
 * The nature of the data that the extensions collects from users
 * Your certification that the extension complies with the policy on limited use
 
-Your disclosures are displayed to Chrome users, and should be consistent with the existing privacy
-policies that you provide to the Chrome Web Store.
+{% Aside 'note' %}
 
+Your disclosures are displayed to Chrome users, and should be consistent with the existing privacy policy URL that you provided to the Chrome Web Store under your [developer account page][4].
+
+{% endAside %}
 
 **Data usage**&emsp;Use this field to disclose and certify your data collection practices. Use the first
 group of checkboxes to disclose which types of data your extension collects. Use the second group of
@@ -85,6 +87,6 @@ If you haven't done so yet, complete your listing by
 [1]: /docs/webstore/program_policies/#extensions
 [2]: /docs/extensions/mv3/security/#permissions
 [3]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code
-[4]: /docs/extensions/mv3/intro/mv3-overview/
+[4]: /docs/webstore/publish#setup-a-developer-account
 [5]: /docs/webstore/cws-dashboard-distribution/
 [6]: /docs/webstore/cws-dashboard-listing/
