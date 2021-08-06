@@ -1,10 +1,30 @@
 .heading-link {
-  color: currentColor;
-  color: var(--color-secondary-text);
+  // We hide the actual '#' contents of this in favor of a smaller visible
+  // target (created with ::after below).
+  color: transparent;
   float: left;
   margin-left: get-size(400) * -1;
+  position: relative;
   text-align: center;
   text-decoration: none;
   visibility: hidden;
   width: get-size(400);
+
+  &::after {
+    color: var(--color-secondary-text);
+    position: absolute;
+    content: '#';
+    transform: scale(0.666);
+    transform-origin: 75% 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include media-query('lg') {
+      // On large screens, move farther from the heading (more to the left).
+      // (Don't do this on small screens as it's too close to the page edge).
+      transform-origin: 25% 50%;
+    }
+  }
 }
