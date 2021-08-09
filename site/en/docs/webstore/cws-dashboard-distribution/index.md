@@ -7,7 +7,7 @@ description: >
   How to use the Payment & Distribution tab of the Chrome Web Store dashboard.
 ---
 
-In the payments and distribution tab you can declare if your extension is free or contains in-app purchases. You can also choose who will see it on the Chrome Web Store.
+In the Payment and Distribution tab you can declare if your extension is free or contains in-app purchases. You can also choose who will see it on the Chrome Web Store.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/QQZihsAu4qF7vKH7n648.png", alt="Screenshot of the Chrome Web Store payment and distribution page", width="800", height="388" %}
 
@@ -92,7 +92,7 @@ and it'll be visible in the store's search results.
 
 ## You are ready to submit this item! 
 
-After filling out the [store listing][4], the [privacy][5] and the distribution tab, you can follow the final steps to [publish your item][3].
+After filling out the [Listing][4] tab and the [Privacy][5] tab, you can now [publish your item][3].
 
 
 [1]: #private-visibility-google-groups

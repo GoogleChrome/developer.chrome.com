@@ -87,7 +87,10 @@ many times before submitting it for review.
 When your item, its Chrome Web Store listing, and all the sites it relies on are ready, you can
 publish your item.
 
-<div class="aside aside--note">You cannot have more than 20 <em>extensions</em> published on the Chrome Web Store. There is no such limit on the number of themes.</div>
+{% Aside %}
+You cannot have more than 20 _extensions_ published on the Chrome Web Store. There is no such limit on the number of themes.
+
+{% endAside %}
 
 Here's how to upload your item:
 
@@ -114,7 +117,7 @@ detail about how to fill in each tab.
   Store.
 - The [Privacy][14] tab is where you include declarations about how your item uses privacy and
   security related features.
-- The [Pricing and Distribution][15] tab lets you control which countries will list your item and
+- The [Payment and Distribution][15] tab lets you control which countries will list your item and
   which set of users will see it.
 
 ### To publish your item: {: #publish-item}
