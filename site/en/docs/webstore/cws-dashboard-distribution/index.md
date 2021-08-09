@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Prepare to publish: set up payment and distribution"
 date: 2021-07-29
-updated: 2021-08-06
+updated: 2021-08-09
 description: >
   How to use the Payment & Distribution tab of the Chrome Web Store dashboard.
 ---

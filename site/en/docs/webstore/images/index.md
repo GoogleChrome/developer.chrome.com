@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Supplying Images
 date: 2018-06-11
-updated: 2021-08-05
+updated: 2021-08-09
 description: Guidelines about the kinds of images you need to supply to the Chrome Web Store.
 ---
 
