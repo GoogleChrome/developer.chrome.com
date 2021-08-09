@@ -27,7 +27,7 @@ Previously known as Conversion Measurement.
 
 ### All resources
 
-- [Attribution Reporting: a primer](/docs/privacy-sandbox/attribution-reporting-primer)
+- [Introduction to Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [(⚠️ obsolete) A more private way to measure ad conversions](https://web.dev/conversion-measurement)
 
 ## Trust Tokens
