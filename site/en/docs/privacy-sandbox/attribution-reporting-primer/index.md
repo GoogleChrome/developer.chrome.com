@@ -13,15 +13,15 @@ authors:
 This API is a proposal and will expand over time. This blog post describes its current
 state, and will be updated as the API evolves. {% endAside %}
 
-Last updates:
+Updates:
 
 - Early 2021: aggregate reports and view-through measurement are added to the proposal.
 - Early 2021: the API is renamed to "Attribution Reporting API".
 
 {% Aside 'caution' %}
 
-- This post focuses on advertising use cases, but the Attribution Reporting API can be
-  used for use cases that are unrelated to advertising.
+- This post focuses on advertising use cases, but the Attribution Reporting API can
+  serve use cases that are not related to advertising as well.
 - The advertising use cases for this API focus on linking ad clicks or views to
   conversions (Conversion Measurement).  
   {% endAside %}
@@ -37,7 +37,7 @@ This proposal is being incubated in the open. The proposal and discussions live 
 [WICG GitHub repository](https://github.com/WICG/conversion-measurement-api).
 
 {% Aside %}  
-This API is part of the Privacy Sandbox, a series of proposals to satisfy third-party use
+This API is a part of Privacy Sandbox, a series of proposals to satisfy third-party use
 cases without third-party cookies or other cross-site tracking mechanisms. See [Privacy
 Sandbox proposals](https://developers.chrome.com/docs/privacy-sandbox).  
 {% endAside %}
@@ -47,19 +47,17 @@ Sandbox proposals](https://developers.chrome.com/docs/privacy-sandbox).
 Today, ad conversion measurement often relies on [third-party
 cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies).
 Browsers are restricting access to third-party cookies because these can be used to track
-users across sites and hinder user privacy. This API addresses in a privacy-preserving way
-the measurement solved by third-party cookies.
+users across sites and hinder user privacy. This API enables those measurements 
+in a privacy-preserving way, without third-party cookies.
 
 ## Who needs to know about this API?
 
 - Adtech platforms such as [demand-side
   platforms](https://en.wikipedia.org/wiki/Demand-side_platform) (DSP) or [data management
-  platforms](https://en.wikipedia.org/wiki/Data_management_platform) (DMP) are likely to
-  be interested in using this API to support functionality that currently relies on
-  third-party cookies.
+  platforms](https://en.wikipedia.org/wiki/Data_management_platform) (DMP) may use
+  this API to support functionality that currently relies on third-party cookies.
 - Advertisers and publishers relying on custom code for advertising or conversion
-  measurement may similarly be interested in using this API to replace existing
-  techniques.
+  measurement may use this API to replace existing techniques.
 - Advertisers and publishers relying on adtech platforms for conversion measurement don't
   need to use the API directly, but may be interested in understanding it if they're
   working with adtech platforms that may integrate the API.
@@ -67,11 +65,11 @@ the measurement solved by third-party cookies.
 ## Participate
 
 {% Aside %}  
-**Your participation is needed!** A wide variety of conversion measurement and
-optimization use cases may need to be supported by this API. Ecosystem input is vital to
+**Your participation is needed!** This API may need to support a wide variety of conversion 
+measurement and optimization use cases. Ecosystem input is vital to
 ensure that solutions to support these use cases are discussed in the open. {% endAside %}
 
-To engage, join the discussion and/or try the API. Doing both is optimal, but you're
+To engage, join the discussion and try the API. Doing both is optimal, but you're
 welcome to join the discussion whether or not you've tried the API.
 
 ### Join the discussion
@@ -105,7 +103,7 @@ ecosystem feedback is collected.
 
 #### Experiment locally or with a demo
 
-1.  Enable the API locally in your browser by turning on the flag
+1.  To enable the API locally in your browser, turn on the flag
     `#enable-experimental-web-platform-features`. A Chrome flag is a toggle that tells
     your browser to enable certain experimental functionalities. To turn on that flag,
     paste `chrome://flags/#enable-experimental-web-platform-features` in Chrome's search
@@ -140,7 +138,7 @@ repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 ## Demo
 
-A few demos are available for you to try:
+A few demos are available for you to try.
 
 - Event-level reports, clicks only:
 
@@ -162,7 +160,7 @@ All the features this API supports are proposals. **Each of these proposals is o
 discussion and feedback**, including those that have an initial browser implementation
 ready.
 
-This API is being incubated and developed in the open. [Participate](#participate).
+This API is being incubated and developed in the open. [Consider participating](#participate) in the discussion.
 
 {% endAside %}
 
