@@ -341,7 +341,7 @@ for multiple previous attribution sources.
   proposed a different API to measure ad conversions, called [Private Click
   Measurement](https://developer.apple.com/videos/play/wwdc2021/10033/).
 
-Though the two APIs are different, Chrome and WebKit are working together to simplify the
+Though the two APIs are different, Chrome and WebKit are working together in the open to simplify the
 developer experience, for example by aligning on the attribute names and on the [JSON
 structure for reports](https://github.com/privacycg/private-click-measurement/issues/30).
 
@@ -388,9 +388,9 @@ Ad links can be configured with attributes that are specific to ad conversions:
 - The cut-off date for when conversions can no longer be counted for this ad.
 
 Note: it's also possible to register an attribution source for navigations [initiated by
-`window.open()`](https://github.com/WICG/conversion-measurement-api#registering-attribution-sources-for-windowopen-navigations))
+`window.open()`](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_clicks.md#registering-attribution-sources-for-windowopen-navigation)
 or, for views, via a [JavaScript
-API](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md#registering-attribution-sources-with-javascript).
+API](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_views.md#registering-attribution-sources-with-javascript).
 
 When the user clicks or sees a specially configured ad, the browser—on the user's local
 device—records this event, alongside the attribution configuration data that was
