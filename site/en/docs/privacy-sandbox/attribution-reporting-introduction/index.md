@@ -3,8 +3,8 @@ layout: 'layouts/doc-post.njk'
 title: 'Introduction to Attribution Reporting (Conversion Measurement)'
 subhead: >
   Introduction and key concepts to understand the Attribution Reporting API.
-date: 2021-07-09
-updated: 2021-07-09
+date: 2021-08-09
+updated: 2021-08-09
 authors:
   - maudn
 ---
@@ -47,7 +47,7 @@ Sandbox proposals](https://developers.chrome.com/docs/privacy-sandbox).
 Today, ad conversion measurement often relies on [third-party
 cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies).
 Browsers are restricting access to third-party cookies because these can be used to track
-users across sites and hinder user privacy. This API enables those measurements 
+users across sites and hinder user privacy. This API enables those measurements
 in a privacy-preserving way, without third-party cookies.
 
 ## Who needs to know about this API?
@@ -65,7 +65,7 @@ in a privacy-preserving way, without third-party cookies.
 ## Participate
 
 {% Aside %}  
-**Your participation is needed!** This API may need to support a wide variety of conversion 
+**Your participation is needed!** This API may need to support a wide variety of conversion
 measurement and optimization use cases. Ecosystem input is vital to
 ensure that solutions to support these use cases are discussed in the open. {% endAside %}
 
