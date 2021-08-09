@@ -8,12 +8,17 @@ authors:
   - rebeccasoares
   - ackermanb
 date: 2021-06-29
+updated: 2021-08-04
 hero: image/SHhb2PDKzXTggPGAYpv8JgR81pX2/xfq9HeQEyYWIuxsuTQOh.jpg
 alt: The Roman aqueduct at Segovia, Spain
 tags:
   - extensions
 
 ---
+
+**Update Aug 4, 2021:** It may take several weeks for the Two Step Verification requirement to be
+enforced across all Chrome Web Store accounts. This post has been updated to reflect this
+clarification.
 
 Over the years we've made a number of product and policy improvements to help ensure that people can
 safely install extensions on the Chrome Web Store. As part of this work, we've updated best
@@ -51,10 +56,16 @@ extensions high, and the experience for developers consistent:
 
 Taken together, these policy clarifications help preserve the wide variety of extensions in the
 Chrome Web Store &mdash; from productivity tools to shopping helpers &mdash; while also respecting
-user choice and strengthening security. These policy clarifications will go into effect on August 2,
-2021. After that date, developers will no longer be able to publish new or update existing
-extensions without enabling Two Step Verification, and extensions in violation of these clarified
-policies may be removed from the Chrome Web Store and disabled.
+user choice and strengthening security.
+
+The Deceptive Installation Tactics and Repetitive Content policy clarifications will go into effect
+on August 2, 2021. After that date, extensions in violation of these clarified policies may be
+removed from the Chrome Web Store and disabled.
+
+The Chrome Web Store will begin enforcing the Two Step Verification requirement in August, 2021.
+Once this enforcement is applied to a given developer's account, they will no longer be able to
+publish new or update existing extensions until they enable Two Step Verification. It may take
+several weeks for this requirement to be enforced across all accounts.
 
 We're grateful to both users and developers for helping us make the Chrome Web Store a safe and
 secure way to extend the browser. As always, we welcome your feedback.
@@ -62,4 +73,3 @@ secure way to extend the browser. As always, we welcome your feedback.
 ---
 
 Photo by <a href="https://unsplash.com/@mdehevia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marco De Hevia</a> on <a href="https://unsplash.com/@mdehevia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-

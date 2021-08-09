@@ -150,7 +150,7 @@ You can register for it to allowlist your website to make the
 `Cross-Origin-Embedder-Policy: credentialless` header to take effect.
 
 1. [Request a
-   token](https://developer.chrome.com/origintrials/#/view_trial/303992974847508481)
+   token](https://developer.chrome.com/origintrials/#/view_trial/3036552048754556929)
    for your origin.
 2. Apply an `Origin-Trial` HTTP header to the document you want to apply
    `Cross-Origin-Embedder-Policy: credentialless` header. The resulting response

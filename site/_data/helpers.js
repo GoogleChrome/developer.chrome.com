@@ -6,7 +6,12 @@ const {
 } = require('./lib/links');
 const {hashForProd} = require('./lib/hash');
 const {findByUrl, findByProjectKey} = require('./lib/find');
-const {formatDate, formatDateLong, formatDateShort} = require('./lib/date');
+const {
+  formatDate,
+  formatDateLong,
+  formatDateShort,
+  formatDateNumeric,
+} = require('./lib/date');
 const {buildBreadcrumbs} = require('./lib/breadcrumbs');
 
 module.exports = {
@@ -21,5 +26,6 @@ module.exports = {
   formatDate,
   formatDateLong,
   formatDateShort,
+  formatDateNumeric,
   buildBreadcrumbs,
 };

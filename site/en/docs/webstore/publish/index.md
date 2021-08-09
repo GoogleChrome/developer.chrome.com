@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2020-06-27
+updated: 2021-08-04
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
@@ -12,8 +12,8 @@ This page describes how you publish a new extension or theme ("item") to the Chr
 {% Aside 'note' %}
 
 To publish updates to an existing item, or to update the percent rollout, see [Updating your Chrome
-Web Store item](/docs/webstore/update). To learn about group publishers, see [Set up group
-publishing](/docs/webstore/group-publishers).
+Web Store item][1]. To learn about group publishers, see [Set up group
+publishing][2].
 
 {% endAside %}
 
@@ -24,7 +24,7 @@ intend.
 To publish your item to the Chrome Web Store, follow these steps:
 
 1.  Create your item's zip file
-2.  Create a developer account
+2.  Create and setup a developer account
 3.  Upload your item
 4.  Add assets for your listing
 5.  Submit your item for publishing
@@ -53,18 +53,30 @@ the ZIP file and manifest depend on the specifics of your item.
   ZIP file in a way that reduces the size of the user download package. For details, see [Reducing
   the size of the user download package][9].
 
-Before you upload your item, you'll be asked to pick a developer account to own your items. Instead
-of your personal account, we suggest using a dedicated account.
+## Create and setup a developer account {: #create-setup-a-developer-account }
 
-## Create a developer account {: #create-a-developer-account }
+Before you can publish your item on the Chrome Web Store, you need to pick a developer account to own your items, then set up your account in the Chrome Web Store.
 
-Before you can publish on the Chrome Web Store, you need to [register as a Chrome Web Store
-developer][10]. We suggest using a new account just for your item instead of your personal account.
+### Create your account {: #create-a-developer-account }
 
-If you already host your item in Google Play and you want your Chrome Web Store listing to show an
-"Available for Android" link, your item must have the same name as your Google Play listing, and
-both items must be owned by the same developer account. To transfer your Chrome Web Store item to a
-different developer, submit this [form][11].
+First you will need to [register as a Chrome Web Store developer][10]. We suggest using a new account just for your item instead of your personal account.
+
+If you already host your item in Google Play and you want your Chrome Web Store listing to show an "Available for Android" link, your item must have the same name as your Google Play listing, and both items must be owned by the same developer account. To transfer your Chrome Web Store item to a different developer, submit this [form][11].
+
+### Setup your account {: #setup-a-developer-account }
+
+Once you've registered, you can finish setting up your developer account in the Account page located on the left menu.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/lBcTQm6QF1FBzOmLEfG1.png", alt="Chrome Web Store Account page", width="800", height="404" %}
+
+Here you can provide your developer profile information, configure management settings and enable email notifications. However, only the name, email and privacy policy link are mandatory.
+
+| Field                | Description                                                                                                                                                 |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Publisher name**   | This name appears under the title of each of your items. If you are a [verified publisher][17], you can display an official publisher URL instead.          |
+| **Email Address**    | This email will only be displayed under your items' contact information. Any notifications will be sent to your CWS developer account email.                |
+| **Privacy Policy**   | This privacy policy link is for all your items. It should include how data is collected, used, and disclosed. See the [User Data FAQ][18] for more details. |
+| **Physical address** | Only items that offer a functionality to purchase items, additional features or subscriptions must include a physical address.                              |
 
 ## Upload your item {: #upload-your-item }
 
@@ -161,3 +173,8 @@ if you simply want to change your rollout time.
 [14]: /docs/webstore/cws-dashboard-privacy
 [15]: /docs/webstore/cws-dashboard-distribution
 [16]: /docs/webstore/faq#faq-listing-108
+[17]: /docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status
+[18]: /docs/webstore/user_data/
+
+
+

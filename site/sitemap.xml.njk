@@ -1,0 +1,24 @@
+---
+noindex: true
+permalink: "/sitemap.xml"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all %}
+{%- if not page.data.noindex and not page.data.draft %}
+  {%- if page.url %}
+  {% set fullUrl %}{{ site.url }}{{ page.url | stripDefaultLocale }}{% endset %}
+  <url>
+    <loc>{{ fullUrl }}</loc>
+    {%- set lastMod = page.data.date -%}
+    {%- if page.data.updated -%}
+      {%- set lastMod = page.data.updated -%}
+    {%- endif -%}
+    {%- if lastMod %}
+    <lastmod>{{ helpers.formatDateNumeric(lastMod) }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endif %}
+{%- endif %}
+{%- endfor %}
+</urlset>

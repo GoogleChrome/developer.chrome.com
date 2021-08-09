@@ -14,15 +14,21 @@ There may be multiple separate origin trial periods for each API.
 {% endAside %}
 
 ## Attribution Reporting
-Previously known as Event Conversion Measurement.
-* [Current origin trial](https://web.dev/origin-trials/): Chrome 86 to 91. 
-* [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
-* [Chrome Platform Status](https://www.chromestatus.com/features/6412002824028160).
-* [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement).
-* [GitHub](https://github.com/WICG/conversion-measurement-api/): see 
+
+Previously known as Conversion Measurement.
+
+- [Current origin trial](https://web.dev/origin-trials/): Chrome 86 to 91.
+- [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
+- [Chrome Platform Status](https://www.chromestatus.com/features/6412002824028160).
+- [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement).
+- [GitHub](https://github.com/WICG/conversion-measurement-api/): see
 [issues](https://github.com/WICG/conversion-measurement-api/issues) for API questions and discussion.
-* [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
-* Find out more: [A more private way to measure ad conversions](https://web.dev/conversion-measurement)
+- [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
+
+### All resources
+
+- [Introduction to Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction)
+- [(⚠️ obsolete) A more private way to measure ad conversions](https://web.dev/conversion-measurement)
 
 ## Trust Tokens
 * [Current origin trial](https://web.dev/origin-trials/): Chrome 84 to 91. 

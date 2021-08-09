@@ -30,6 +30,7 @@
 
 {% if hero %}
   {# Twitter thumbanils are 507px on their website, so this is a 3x version. #}
+  {# This skips the filter and always rasterizes the image (auto=format) in case we have a SVG. #}
   {% set heroSrc = 'https://' + site.imgixDomain + '/' + hero + '?auto=format&w=1521' %}
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="{{ heroSrc }}" />
