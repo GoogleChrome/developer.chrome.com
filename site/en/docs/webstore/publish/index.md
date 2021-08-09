@@ -117,7 +117,7 @@ detail about how to fill in each tab.
 - The [Pricing and Distribution][15] tab lets you control which countries will list your item and
   which set of users will see it.
 
-To publish your item:
+### To publish your item: {: #publish-item}
 
 1.  Make sure you've completed the details on all the tabs described above.
 2.  Click the **Submit for Review** button.

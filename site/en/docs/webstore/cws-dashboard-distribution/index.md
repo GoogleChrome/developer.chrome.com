@@ -90,5 +90,13 @@ the Chrome Web Store. You can either:
 When you publish to the world, your item will be immediately visible to the region(s) you select,
 and it'll be visible in the store's search results.
 
+## You are ready to submit this item! 
+
+After filling out the [store listing][4], the [privacy][5] and the distribution tab, you can follow the final steps to [publish your item][3].
+
+
 [1]: #private-visibility-google-groups
 [2]: /docs/webstore/cws-enterprise/
+[3]: /docs/webstore/publish/#publish-item
+[4]: /docs/webstore/cws-dashboard-privacy/
+[5]: /docs/webstore/cws-dashboard-listing/
