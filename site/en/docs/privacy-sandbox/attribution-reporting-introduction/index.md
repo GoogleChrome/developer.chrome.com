@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Attribution Reporting (Conversion Measurement): a primer'
+title: 'Introduction to Attribution Reporting (Conversion Measurement)'
 subhead: >
   Introduction and key concepts to understand the Attribution Reporting API.
 date: 2021-07-09
