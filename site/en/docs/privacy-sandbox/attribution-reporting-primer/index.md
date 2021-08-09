@@ -388,7 +388,7 @@ Ad links can be configured with attributes that are specific to ad conversions:
 - The cut-off date for when conversions can no longer be counted for this ad.
 
 Note: it's also possible to register an attribution source for navigations [initiated by
-`window.open()`](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_clicks.md#registering-attribution-sources-for-windowopen-navigation)
+`window.open()`](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_clicks.md#registering-attribution-sources-for-windowopen-navigations)
 or, for views, via a [JavaScript
 API](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_views.md#registering-attribution-sources-with-javascript).
 
