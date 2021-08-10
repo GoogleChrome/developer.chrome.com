@@ -193,10 +193,12 @@ quickly.
 
 ### How can I remove my listing from the store? {: #faq-listing-03 }
 
-Visit [https://chrome.google.com/webstore/developer/dashboard][115]. Click the item you want to
+Visit the [developer dashboard][115]. Click the item you want to
 remove from the store, so that the edit page for that item appears. Then click the "more options"
 icon in the top right-hand corner and select **Unpublish**. Your listing will no longer be visible
 in the store.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GdnJe3SsuL84LFkLODZl.png", alt="Screenshot of how to unpublish an item", width="299", height="205" %}
 
 ### What are the screenshot and text requirements for the store? {: #faq-listing-04 }
 
