@@ -81,7 +81,16 @@
                 </div>
               </li>
             {% endif %}
-
+            {% if feature.manifestKeys.length %}
+              <li>
+                <div class="code-sections__label">Manifest Keys</div>
+                <div>
+                  {% for manifestKey in feature.manifestKeys %}
+                    <code>{{ manifestKey }}</code><br />
+                  {% endfor %}
+                </div>
+              </li>
+            {% endif %}
             {% if availabilityHtml | trim %}
               <li class="align-center">
                 <div class="code-sections__label">Availability</div>
