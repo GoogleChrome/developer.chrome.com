@@ -15,9 +15,9 @@ There may be multiple separate origin trial periods for each API.
 
 ## Attribution Reporting
 
-Previously known as Conversion Measurement.
+_Previously known as Conversion Measurement._
 
-- [Current origin trial](https://web.dev/origin-trials/): Chrome 86 to 91.
+- [Current origin trial](https://web.dev/origin-trials/): Chrome 86 to 93 (see [Origin Trial extended through Chrome 93](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM))
 - [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
 - [Chrome Platform Status](https://www.chromestatus.com/features/6412002824028160).
 - [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement).
@@ -25,10 +25,19 @@ Previously known as Conversion Measurement.
 [issues](https://github.com/WICG/conversion-measurement-api/issues) for API questions and discussion.
 - [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
 
+### Status: details
+
+See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
+
 ### All resources
 
+- [Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting)
 - [Introduction to Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction)
-- [(⚠️ obsolete) A more private way to measure ad conversions](https://web.dev/conversion-measurement)
+- [API technical explainers](https://github.com/WICG/conversion-measurement-api/)
+- (⚠️ obsolete) [A more private way to measure ad conversions](https://web.dev/conversion-measurement/): overview of the first iteration of this API for web developers
+- (⚠️ obsolete) [A more private way to measure ad conversions - Video](https://www.youtube.com/watch?v=jcDfOoWwZcM): demo of the first iteration of this API (clicks only)
+- (⚠️ obsolete) [Using the Event Conversion Measurement API](https://web.dev/using-conversion-measurement/): how to experiment with the first iteration of this API for web developers
+- [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 
 ## Trust Tokens
 * [Current origin trial](https://web.dev/origin-trials/): Chrome 84 to 91. 

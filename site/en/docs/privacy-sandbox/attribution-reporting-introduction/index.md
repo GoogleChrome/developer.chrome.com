@@ -250,7 +250,7 @@ privacy-preserving ads APIs in order to cover end-to-end use cases:
 
 ## Status
 
-**🕙 Last updated: July 2021**
+**🕙 Last updated: August 2021**
 
 Statuses:
 
@@ -258,8 +258,12 @@ Statuses:
 - `🥚 Proposal`: an initial design is ready and under public incubation.
 - `🏗️ Under development (BROWSER_NAME)`: the feature is being implemented in
   BROWSER_NAME.
-- `🧪 Experiment (BROWSER_NAME)`: an experiment is available in BROWSER_NAME.
+- `🧪 Experiment (BROWSER_NAME)`: an experiment is available in BROWSER_NAME. In Chrome, an experiment is called an origin trial.
 - `🚀 Stable (BROWSER_NAME)`: the feature is shipped by default in BROWSER_NAME.
+
+{% Aside %}  
+[Current origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (Chrome experiment 🧪)
+{% endAside %}
 
 {% Aside 'caution' %}  
 Multiple origin trials (experiments) will be run. Each round is used to improve and adjust
