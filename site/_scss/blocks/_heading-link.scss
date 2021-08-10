@@ -4,11 +4,15 @@
   color: transparent;
   float: left;
   margin-left: get-size(400) * -1;
+  opacity: 0.4;
   position: relative;
   text-align: center;
   text-decoration: none;
-  visibility: hidden;
   width: get-size(400);
+
+  &:hover {
+    opacity: 1;
+  }
 
   &::after {
     bottom: 0;
