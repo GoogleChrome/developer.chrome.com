@@ -3,7 +3,11 @@
 {% macro blogCard(post) %}
 {% set pd = post.data %}
 <div class="blog-card rounded-lg pad-300 md:pad-400 width-full">
-  {% if pd.hero %}
+
+  {% set thumbnail = pd.hero or pd.thumbnail %}
+  {% set alt = pd.alt %}
+
+  {% if thumbnail %}
     {#
       The thumbnail image defines its own bottom margin because it's optional
       and needs to push the title down. If the title defined its own top
@@ -11,11 +15,11 @@
       between the title and the top of the card.
     #}
     <div class="blog-card__thumbnail gap-bottom-300">
-      <a class="display-block" href="{{ post.url }}" {% if not pd.alt %}aria-hidden="true" tabindex="-1"{% endif %}>
+      <a class="display-block" href="{{ post.url }}" {% if not alt %}aria-hidden="true" tabindex="-1"{% endif %}>
         {% Img
           class="rounded-100 object-fit-cover width-full",
-          src=pd.hero,
-          alt=pd.alt,
+          src=thumbnail,
+          alt=alt,
           width="278",
           height="156",
           sizes="(min-width: 36em) 330px, calc(100vw - 82px)"
@@ -30,7 +34,7 @@
     </a>
   </h2>
 
-{% if not pd.hero %}
+{% if not thumbnail %}
   <p class="type--caption gap-top-200">
      {{ pd.description }}
   </p>

@@ -42,13 +42,11 @@ tags:
 hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
 
 # Optional
-# By default the hero image will be used for twitter and facebook cards, so if
-# you have a hero image then you don't need to provide a socialImage.
-# This should really only be used in the case where you don't want a hero image
-# but you DO want a twitter/facebook card image.
-# Social images should be at least 1920 x 960
-# https://developer.chrome.com/docs/handbook/how-to/add-media/
-socialImage: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
+# You can provide an optional cropping of your hero image to be used as a
+# thumbnail. Note the alt text will be the same for both the thumbnail and
+# the hero.
+# Thumbnail images should be at least 828 x 416
+# thumbnail: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
 
 # Required if there is a hero or social image
 alt: >

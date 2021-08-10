@@ -24,7 +24,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ currentUrl }}" />
 
-{% set socialImage = socialImage or hero or site.defaultSocialImage %}
+{% set socialImage = thumbnail or hero or site.defaultSocialImage %}
 
 {% if socialImage %}
   {# Twitter thumbanils are 507px on their website, so this is a 3x version. #}
