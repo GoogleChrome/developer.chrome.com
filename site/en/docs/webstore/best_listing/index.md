@@ -1,18 +1,22 @@
 ---
 layout: "layouts/doc-post.njk"
-title: Create a great listing page
-date: 2017-08-30
-updated: 2021-06-21
+title: Creating a great listing page
+date: 2021-08-10
 description: >
   Best practices on how to make a high-quality, engaging listing page for your item in the Chrome
   Web Store.
 ---
 
-The Chrome Web Store's focus on surfacing quality items to users encompases the entire user experience,
-including the store listing page. Build trust with users and make a strong first impression with a
-compelling and accurate store listing page.  Learn how to create a quality store listing page that
-clearly communicates what your item will offer from the description, images, and other metadata
-provided. You can build and maintain your store listing page through the developer dashboard.
+The Chrome Web Store works hard to surface quality items for users to discover.  Making sure yours
+is a "quality item" can help ensure its more prominence in the store, potentially increasing your
+installed base.
+
+Our focus on surfacing quality items to users encompases the entire user experience&mdash;including
+the store listing page. Build trust with users by making a strong first impression, with a
+compelling and accurate store listing page.  A quality listing page 
+clearly communicates what your item will offer, using the item description, images, and other
+listing metadata.
+You can build and maintain your store listing page using the [developer dashboard][devconsole].
 
 
 ## Text
@@ -37,19 +41,19 @@ Include generic descriptions like "best extension ever".
 {% endCompare %}
 
 {% Aside %}
-The summary is plain text string (no HTML or other formatting) that describes the extension.
+The summary is a plain text string (no HTML or other formatting) that describes the extension.
 The description should be suitable for both the browser's extension management UI and the Chrome
 Web Store. You can specify locale-specific strings for this
-field; see [Internationalization](/docs/extensions/reference/i18n/) for details.
+field; see [Internationalization][i18n] for details.
 {% endAside %}
 
 
 ### Item description
 
 Your item description is intended to give users a more in-depth overview of the main features and
-functionalities of your item. Item descriptions appear on the item listing page, underneath the
-screenshots. Descriptions should be concise, informative, and accurate, and should contain more than
-just one sentence. The ideal format is a paragraph followed by a short list of main features. Let
+capabilities of your item. Item descriptions appear on the item listing page, underneath the
+screenshots. Make your descriptions concise, informative, and accurate, using more than
+just one sentence. The ideal format is an overview paragraph followed by a short list of main features. Let
 users know why they'll love it. Avoid typos and symbols that commonly distract the user.
 
 {% Compare 'better' %}
@@ -108,15 +112,23 @@ the extension.
 *   1280x800 or 640x400 pixels
 
 {% Aside %}
-Tip: If your extension supports multiple locales, you can provide locale-specific screenshots as
-described in [Internationalizing your app][i18n-your-app].
+Screenshots at full 1280x800 resolution may look better on high-resolution displays. You can use
+640x400 screenshots instead&mdash;for example if 1280x800 is too big to show your extension
+properly.
 {% endAside %}
 
+{% Compare 'better' %}
+Make sure your screenshots are clear and sized correctly. Use visual aids in the screenshots to help
+explain how it works.
+{% endCompare %}
+
+{% Compare 'worse' %}
+Use screenshots that are distorted, are of low quality, or have overwhelming amounts of text.
+{% endCompare %}
+
 {% Aside %}
-Note: 1280x800 screenshots are preferable, as larger screenshots look better on high-resolution
-displays. Currently, all screenshots are downscaled to 640x400 pixels. If your screenshots do not
-look good when downscaled (for example, they have a lot of text) or if 1280x800 is too big for your
-extension (for example, screenshots for a low-resolution game), you can upload 640x400 screenshots.
+Tip: If your extension supports multiple locales, you can provide locale-specific screenshots as
+described in [Internationalizing your app][i18n-your-app].
 {% endAside %}
 
 
@@ -165,6 +177,7 @@ these fields are filled out in the developer dashboard so users know where they 
 information about your item.
 
 
+[devconsole]: https://chrome.google.com/webstore/devconsole
 [extension icon best practices]: /docs/webstore/images/#extension-icon
+[i18n]: /docs/extensions/reference/i18n/
 [i18n-your-app]: /docs/webstore/i18n/
-

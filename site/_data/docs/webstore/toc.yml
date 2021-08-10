@@ -4,6 +4,7 @@
   sections:
     - url: /docs/webstore/get_started_simple/
     - url: /docs/webstore/best_practices/
+    - url: /docs/webstore/best_listing/
     - url: /docs/webstore/i18n/
     - url: /docs/webstore/identify_user/
 - title: i18n.docs.webstore.publish
