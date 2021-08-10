@@ -144,7 +144,7 @@ Chrome DevTools will display a warning next to the trial name if the trial is no
 region, the token has expired, or if there are other restrictions.
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/iW93yyW0wFk7qCeIkqLx.png", alt="Chrome DevTools 
-origin trials information in the Application panel showing expired tokebn", width="800", height="424" %}
+origin trials information in the Application panel showing expired token", width="800", height="424" %}
 
 {% Aside 'gotchas' %}
 If a page provides an origin trial dynamically via script, it may not be shown initially in the 
@@ -395,7 +395,7 @@ page for First Party Sets & SameParty with Trial Available details highlighted",
 For trials that have ended, DevTools will display something like this:
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/iW93yyW0wFk7qCeIkqLx.png", alt="Chrome DevTools 
-origin trials information in the Application panel showing ValidTokenNotProvided and Stauts Expired", 
+origin trials information in the Application panel showing ValidTokenNotProvided and Status Expired", 
 width="800", height="424" %}
 
 You will be sent automated emails when feedback is required or a token is about to expire, though 
