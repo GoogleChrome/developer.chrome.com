@@ -192,6 +192,15 @@ Redirects are **not supported** for WebSocket requests.
 Starting from Chrome 72, an extension will be able to intercept a request only if it has host
 permissions to both the requested URL and the request initiator.
 
+Starting from Chrome 96, the webRequest API supports intercepting the WebTransport over HTTP/3
+handshake request. Since the handshake is done by means of an HTTP CONNECT request, its flow fits
+into HTTP-oriented webRequest model. Note that:
+
+- Once the session is established, extensions cannot observe or intervene in the session via the
+  webRequest API.
+- Modifying HTTP request headers in 'onBeforeSendHeaders' is ignored.
+- Redirects and authentications are **not supported** in WebTransport over HTTP/3.
+
 ## Concepts
 
 As the following sections explain, events in the web request API use request IDs, and you can
