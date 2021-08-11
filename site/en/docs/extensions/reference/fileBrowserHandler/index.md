@@ -4,7 +4,7 @@ api: fileBrowserHandler
 
 The Chrome OS file browser comes up when the user either presses Alt+Shift+M or connects an external storage device, such as an SD card, USB key, external drive, or digital camera. Besides showing the files on external devices, the file browser can also display files that the user has previously saved to the system.
 
-When the user selects one or more files, the file browser adds buttons representing the valid handlers for those files. For example, in the following screenshot, selecting a file with a ".jpg" suffix results in an "Upload to Picasa" button that the user can click.
+When the user selects one or more files, the file browser adds buttons representing the valid handlers for those files. For example, in the following screenshot, selecting a file with a ".png" suffix results in an "Save to Gallery" button that the user can click.
 
 ![File browser screenshot](filebrowserhandler.png)
 
@@ -21,7 +21,7 @@ You must declare the "fileBrowserHandler" permission in the [extension manifest]
       "id": "upload",
       "default_title": "Save to Gallery", // What the button will display
       "file_filters": [
-        "filesystem:*.jpg", // To match all files, use "filesystem:*.*"
+        "filesystem:*.jpg",  // To match all files, use "filesystem:*.*"
         "filesystem:*.jpeg",
         "filesystem:*.png"
       ]
@@ -30,9 +30,11 @@ You must declare the "fileBrowserHandler" permission in the [extension manifest]
   "permissions" : [
     "fileBrowserHandler"
   ],
-  "icons": { "16": "icon16.png",
-              "48": "icon48.png",
-            "128": "icon128.png" },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   ...
 }
 ```
@@ -45,17 +47,21 @@ You must declare the "fileBrowserHandler" permission in the [extension manifest]
 
 ## Implementing a file browser handler
 
-To use this API, you must implement a function that handles the `onExecute` event of `chrome.fileBrowserHandler`. Your function will be called whenever the user clicks the button that represents your file browser handler. In your function, use the [HTML5 FileSystem API](http://www.html5rocks.com/tutorials/file/filesystem/) to get access to the file contents. Here is an example:
+To use this API, you must implement a function that handles the `onExecute` event of `chrome.fileBrowserHandler`. Your function will be called whenever the user clicks the button that represents your file browser handler. In your function, use the [File System API](https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileEntry) to get access to the file contents. Here is an example:
 
 ```js
-chrome.fileBrowserHandler.onExecute.addListener(function(id, details) {
-  if (id == 'upload') {
-    var fileEntries = details.entries;
-    for (var i = 0, entry; entry = fileEntries[i]; ++i) {
-      entry.file(function(file) {
-        // send file somewhere
-      });
-    }
+chrome.fileBrowserHandler.onExecute.addListener(async (id, details) => {
+  if (id !== 'upload') {
+    return;  // check if you have multiple file_browser_handlers
+  }
+
+  for (const entry of detail.entries) {
+    // the FileSystemFileEntry doesn't have a Promise API, wrap in one
+    const file = await new Promise((resolve, reject) => {
+      entry.file(resolve, reject);
+    });
+    const buffer = await file.arrayBuffer();
+    // do something with buffer
   }
 });
 ```
@@ -68,4 +74,4 @@ id
 
 details
 
-: An object describing the event. You can get the file or files that the user has selected from the `entries` field of this object, which is an array of FileSystem `Entry` objects.
+: An object describing the event. You can get the file or files that the user has selected from the `entries` field of this object, which is an array of `FileSystemFileEntry` objects.
