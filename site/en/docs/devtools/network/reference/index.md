@@ -671,6 +671,7 @@ to enable large rows.
 **Figure 38**. Large Request Rows, outlined in blue
 
 ### Hide the Overview pane {: #hide-overview }
+Hide-Overview icon is not available in latest Chrome versions.
 
 By default, DevTools shows the [Overview pane][28]. Click **Hide overview**
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ghte2yf6yUoWNtBfUY6c.png", alt="Hide overview", width="34", height="22" %}
