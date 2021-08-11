@@ -30,9 +30,9 @@
         {%- set author = authorsData[authorId] -%}
         {{- sep() -}}
         {%- if author -%}
-          {{ authorId }}
-        {%- else -%}
           {{ author.name.given }}&nbsp;{{ author.name.family }}
+        {%- else -%}
+          {{ authorId }}
         {%- endif -%}
       {%- endfor -%}
     </p>
