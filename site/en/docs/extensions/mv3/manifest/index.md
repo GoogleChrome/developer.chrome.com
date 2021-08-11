@@ -41,7 +41,7 @@ discusses each field.
   <span class="token property">"<a href="/docs/extensions/reference/commands">commands</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"content_capabilities"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/content_scripts">content_scripts</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/apps/content_security_policy">content_security_policy</a>"</span><span class="token operator">:</span> <span class="token string">"policyString"</span><span class="token punctuation">,</span>
+  <span class="token property">"<a href="/docs/extensions/mv3/intro/mv3-migration/#content-security-policy">content_security_policy</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"converted_from_user_script"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"current_locale"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"declarative_net_request"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
