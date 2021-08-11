@@ -81,7 +81,17 @@
                 </div>
               </li>
             {% endif %}
-
+            {% if feature.manifestRequirements.length %}
+              <li>
+                <div class="code-sections__label">Manifest Keys</div>
+                <div>
+                  <p>The following keys must be declared <a href="/docs/extensions/mv3/manifest/">in the manifest</a> to use this API.</p>
+                  {% for manifestKey in feature.manifestRequirements %}
+                    <code>{{ manifestKey }}</code><br />
+                  {% endfor %}
+                </div>
+              </li>
+            {% endif %}
             {% if availabilityHtml | trim %}
               <li class="align-center">
                 <div class="code-sections__label">Availability</div>

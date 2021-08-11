@@ -65,9 +65,9 @@ privacy-preserving way, without third-party cookies.
 ## Participate
 
 {% Aside %}  
-**Your participation is needed!** This API may need to support a wide variety of
-conversion measurement and optimization use cases. Ecosystem input is vital to ensure that
-solutions to support these use cases are discussed in the open. {% endAside %}
+**Your participation is needed!** This API may need to support a wide variety of conversion
+measurement and optimization use cases. Ecosystem input is vital to
+ensure that solutions to support these use cases are discussed in the open. {% endAside %}
 
 To engage, join the discussion and try the API. Doing both is optimal, but you're welcome
 to join the discussion whether or not you've tried the API.
