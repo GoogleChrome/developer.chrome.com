@@ -2,8 +2,8 @@
 layout: "layouts/doc-post.njk"
 title: "Deleting Chrome Web Store developer accounts"
 date: 2020-07-06
-updated: 2021-08-12
-description: How to delete a developer or group publisher account on Chrome Web Store.
+updated: 2021-08-11
+description: How to delete a developer or group publisher account on the Chrome Web Store.
 ---
 
 This page describes how to delete a CWS account—either a developer or group publisher account.
