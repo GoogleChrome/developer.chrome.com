@@ -4,8 +4,8 @@ title: Troubleshooting Chrome's origin trials
 subhead: Origin trials are a way to test a new or experimental web platform feature. This guide explains how to troubleshoot common problems with trial tokens in meta tags, headers, and scripts. You'll also learn about debugging support in Chrome DevTools.
 authors:
   - samdutton
-date: 2021-08-10
-updated: 2021-08-10
+date: 2021-08-11
+updated: 2021-08-11
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
