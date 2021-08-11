@@ -20,8 +20,8 @@ Updates:
 
 {% Aside 'caution' %}
 
-- This post focuses on advertising use cases, but the Attribution Reporting API can
-  serve use cases that are not related to advertising as well.
+- This post focuses on advertising use cases, but the Attribution Reporting API can serve
+  use cases that are not related to advertising as well.
 - The advertising use cases for this API focus on linking ad clicks or views to
   conversions (Conversion Measurement).  
   {% endAside %}
@@ -47,15 +47,15 @@ Sandbox proposals](https://developers.chrome.com/docs/privacy-sandbox).
 Today, ad conversion measurement often relies on [third-party
 cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies).
 Browsers are restricting access to third-party cookies because these can be used to track
-users across sites and hinder user privacy. This API enables those measurements
-in a privacy-preserving way, without third-party cookies.
+users across sites and hinder user privacy. This API enables those measurements in a
+privacy-preserving way, without third-party cookies.
 
 ## Who needs to know about this API?
 
 - Adtech platforms such as [demand-side
   platforms](https://en.wikipedia.org/wiki/Demand-side_platform) (DSP) or [data management
-  platforms](https://en.wikipedia.org/wiki/Data_management_platform) (DMP) may use
-  this API to support functionality that currently relies on third-party cookies.
+  platforms](https://en.wikipedia.org/wiki/Data_management_platform) (DMP) may use this
+  API to support functionality that currently relies on third-party cookies.
 - Advertisers and publishers relying on custom code for advertising or conversion
   measurement may use this API to replace existing techniques.
 - Advertisers and publishers relying on adtech platforms for conversion measurement don't
@@ -65,12 +65,12 @@ in a privacy-preserving way, without third-party cookies.
 ## Participate
 
 {% Aside %}  
-**Your participation is needed!** This API may need to support a wide variety of conversion
-measurement and optimization use cases. Ecosystem input is vital to
-ensure that solutions to support these use cases are discussed in the open. {% endAside %}
+**Your participation is needed!** This API may need to support a wide variety of
+conversion measurement and optimization use cases. Ecosystem input is vital to ensure that
+solutions to support these use cases are discussed in the open. {% endAside %}
 
-To engage, join the discussion and try the API. Doing both is optimal, but you're
-welcome to join the discussion whether or not you've tried the API.
+To engage, join the discussion and try the API. Doing both is optimal, but you're welcome
+to join the discussion whether or not you've tried the API.
 
 ### Join the discussion
 
@@ -93,8 +93,11 @@ welcome to join the discussion whether or not you've tried the API.
 
 {% Aside 'caution' %}
 
-If you're experimenting with the API in Chrome, you'll have access
-to all the features that are **currently** implemented. Not all features discussed in the [repository](https://github.com/WICG/conversion-measurement-api/) and [meeting](https://github.com/WICG/conversion-measurement-api/issues/80) are implemented in the Chrome origin trial. See the current feature status in [Status](#status). The features
+If you're experimenting with the API in Chrome, you'll have access to all the features
+that are **currently** implemented. Not all features discussed in the
+[repository](https://github.com/WICG/conversion-measurement-api/) and
+[meeting](https://github.com/WICG/conversion-measurement-api/issues/80) are implemented in
+the Chrome origin trial. See the current feature status in [Status](#status). The features
 available for experimentation are also a subset of what will ultimately be supported by
 the API, and are subject to change as the API is being incubated in the open and as
 ecosystem feedback is collected.
@@ -160,7 +163,8 @@ All the features this API supports are proposals. **Each of these proposals is o
 discussion and feedback**, including those that have an initial browser implementation
 ready.
 
-This API is being incubated and developed in the open. [Consider participating](#participate) in the discussion.
+This API is being incubated and developed in the open. [Consider
+participating](#participate) in the discussion.
 
 {% endAside %}
 
@@ -258,12 +262,14 @@ Statuses:
 - `🥚 Proposal`: an initial design is ready and under public incubation.
 - `🏗️ Under development (BROWSER_NAME)`: the feature is being implemented in
   BROWSER_NAME.
-- `🧪 Experiment (BROWSER_NAME)`: an experiment is available in BROWSER_NAME. In Chrome, an experiment is called an origin trial.
+- `🧪 Experiment (BROWSER_NAME)`: an experiment is available in BROWSER_NAME. In Chrome,
+  an experiment is called an origin trial.
 - `🚀 Stable (BROWSER_NAME)`: the feature is shipped by default in BROWSER_NAME.
 
 {% Aside %}  
-[Current origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (Chrome experiment 🧪)
-{% endAside %}
+[Current origin
+trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (Chrome
+experiment 🧪) {% endAside %}
 
 {% Aside 'caution' %}  
 Multiple origin trials (experiments) will be run. Each round is used to improve and adjust
@@ -343,9 +349,10 @@ for multiple previous attribution sources.
   proposed a different API to measure ad conversions, called [Private Click
   Measurement](https://developer.apple.com/videos/play/wwdc2021/10033/).
 
-Though the two APIs are different, Chrome and WebKit are working together in the open to simplify the
-developer experience, for example by aligning on the attribute names and on the [JSON
-structure for reports](https://github.com/privacycg/private-click-measurement/issues/30).
+Though the two APIs are different, Chrome and WebKit are working together in the open to
+simplify the developer experience, for example by aligning on the attribute names and on
+the [JSON structure for
+reports](https://github.com/privacycg/private-click-measurement/issues/30).
 
 {% Details %}  
 {% DetailsSummary 'h3' %}  
@@ -422,7 +429,8 @@ Reports are sent by the browser after a delay⏤days or sometimes weeks after a 
 ### Aggregate reports
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/HAl0ppkoxoGCtttWDk2A.png", alt="ALT_TEXT_HERE", width="800", height="1140" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/HAl0ppkoxoGCtttWDk2A.png",
+alt="ALT_TEXT_HERE", width="800", height="1140" %}
   <figcaption>Aggregate reports are generated as follows: the browser matches detailed clicks or views ("attribution source events") with detailed conversion data ("attribution trigger data") defined by an adtech. Adtech-defined code runs in a worklet to define contributions that will be sent by the browser in order to be used to compute aggregate reports. Aggregation services are responsible for privately computing aggregate reports for adtech.</figcaption>
 </figure>
 
