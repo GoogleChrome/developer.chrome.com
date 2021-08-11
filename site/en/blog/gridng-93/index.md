@@ -17,7 +17,7 @@ tags:
 
 With next month's release of Microsoft Edge 93, we'll be releasing a rewrite of CSS Grid 1 module ("GridNG"), which substantially improves compatibility with other implementations of CSS Grid and addresses one of the top compatibility pain points for web developers. In this post, we'll share more about the rewrite and what you can expect to see in Edge and other Chromium browsers.
 
-You can try the updated implementation today – just install the latest Microsoft Edge Beta build, and please report any issues you find in [Chromium's bug tracker](https://bugs.chromium.org/p/chromium/issues/entry)!
+You can try the updated implementation today–just install the latest Microsoft Edge Beta build, and please report any issues you find in [Chromium's bug tracker](https://bugs.chromium.org/p/chromium/issues/entry)!
 
 [LayoutNG](https://developers.google.com/web/updates/2019/06/layoutNG) has been a multi-year rewrite of the layout engine in Blink, Chromium's underlying rendering engine. Since its inception, it has improved performance and fixed longstanding issues from the legacy layout engine. Since LayoutNG's initial launch with support for inline and block layout in Chrome and Microsoft Edge 76, other layout primitives (CSS Table Layout, CSS Flexbox) have been incrementally rewritten, stabilized, and launched.
 
@@ -52,13 +52,13 @@ SVG content embedded in grids showed similar issues, where the aspect ratio was 
   <figcaption>An SVG illustration that appears stretched horizontally	An SVG illustration that appears displayed correctly</figcaption>
 </figure>
 
-On the left is the legacy layout – the SVG content is stretched instead of preserved as expected and specified, as seen on the right.
+On the left is the legacy layout–the SVG content is stretched instead of preserved as expected and specified, as seen on the right.
 
 GridNG took advantage of other advances in LayoutNG, (specifically the improved layout of replaced elements) along with adhering to the spec when rewriting the component, to fix this class of issues.
 
 Besides compatibility, performance was another consistent issue reported by developers. Because of the primitives that LayoutNG operates on, along with improved caching mechanisms, GridNG has better performance in key scenarios, while avoiding the invalidation issues that were reported against the legacy architecture. The most prominent example is the layout of nested grids, which had exponential complexity, which you can see in [this demo site](https://exponential-layout.glitch.me/).
 
-This performance cliff was easily hit by developers and affects live sites (you can see instances of this in [this Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1591366) and its duplicates). Thanks to our improvements in GridNG, web developers will no longer face these performance issues – which have long affected multiple browser engines – in Chromium. There is still some remaining work to be done to get back to parity or better with the legacy implementation for all Blink's perf regression microbenchmarks, but we are happy to address one of the major issues preventing developers from employing complex nested grid layouts.
+This performance cliff was easily hit by developers and affects live sites (you can see instances of this in [this Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1591366) and its duplicates). Thanks to our improvements in GridNG, web developers will no longer face these performance issues–which have long affected multiple browser engines–in Chromium. There is still some remaining work to be done to get back to parity or better with the legacy implementation for all Blink's perf regression microbenchmarks, but we are happy to address one of the major issues preventing developers from employing complex nested grid layouts.
 
 One final benefit of finishing off GridNG is that it opens the door to implement subgrid ([CSS Grid level 2](https://www.w3.org/TR/css-grid-2/)). This has been a feature request of Blink for a long time, with [almost 600 stars](https://bugs.chromium.org/p/chromium/issues/detail?id=618969) in Chromium's bug tracker at the time of writing. Since the constraints of the legacy layout engine, and the NG conversion effort are no longer factors, we're excited to start work to help developers achieve the layouts that subgrid unlocks.
 
