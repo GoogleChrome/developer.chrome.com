@@ -120,10 +120,14 @@ properly.
 {% Compare 'better' %}
 Make sure your screenshots are clear and sized correctly. Use visual aids in the screenshots to help
 explain how it works.
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/w5wKTaZ5uDJe6EGQblak.png", alt="A fictional
+screenshot that is clear", width="800", height="467" %}
 {% endCompare %}
 
 {% Compare 'worse' %}
 Use screenshots that are distorted, are of low quality, or have overwhelming amounts of text.
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/j9iGWTYXD7xxbsCYvmfh.png", alt="A fictional
+screenshot that is blurry", width="800", height="467" %}
 {% endCompare %}
 
 {% Aside %}
@@ -164,10 +168,20 @@ Here are some rules of thumb for designing your promotional images:
 
 {% Compare 'better' %}
 Keep the image simple and clean, using colors and branding that matches your other assets.
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/kc5spLGOAa06QvOn6VdI.png", alt="A fictional promo
+tile image that works", width="800", height="467" %}
 {% endCompare %}
 
 {% Compare 'worse' %}
-Include too much text that makes the image look overly "busy".
+Include too much text so that it's hard to read or makes the image look overly "busy".
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/rvcp453BSjDvdO3WlmIo.png", alt="A fictional promo
+tile image that has problems", width="800", height="467" %}
+{% endCompare %}
+
+{% Compare 'worse' %}
+Include claims that misrepresent your extension's status.
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/NcoamGn5czoqDzW7SQuG.png", alt="A fictional listing
+image that includes a misleading badge", width="800", height="467" %}
 {% endCompare %}
 
 ## Additional fields
