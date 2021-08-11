@@ -8,8 +8,8 @@ description: >
 ---
 
 The Chrome Web Store works hard to surface quality items for users to discover.  Making sure yours
-is a "quality item" can help ensure its more prominence in the store, potentially increasing your
-installed base.
+is a "quality item" can help ensure its prominence in the store, potentially increasing your
+user base.
 
 Our focus on surfacing quality items to users encompases the entire user experience&mdash;including
 the store listing page. Build trust with users by making a strong first impression, with a
