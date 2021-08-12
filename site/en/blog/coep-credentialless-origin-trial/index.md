@@ -8,6 +8,7 @@ subhead: >
   headers. If they can be requested without credentials, now you can enable cross-origin
   isolation by marking them as such. 
 date: 2021-07-29
+updated: 2021-08-03
 authors:
   - agektmr
 tags:
@@ -17,7 +18,11 @@ alt: >
   Anonymous people are walking a corridor.
 ---
 
-We are experimenting with the new Cross-Origin Embedder Policy (COEP) value `credentialless` which allows the browser to load cross-origin resources without Cross-Origin Resource Policy (CORP) value `cross-origin`, by sending a request `credentialless`. This helps developers to adopt cross-origin isolation more easily.
+We are experimenting with the new Cross-Origin Embedder Policy (COEP) value
+`credentialless` which allows the browser to load cross-origin resources which
+don't use the Cross-Origin Resource Policy (CORP), by sending a request without
+credentials, such as cookies. This helps developers to adopt cross-origin
+isolation more easily.
 
 ## Why we need cross-origin isolation
 
@@ -27,9 +32,8 @@ mitigate that risk, browsers offer an opt-in-based isolated environment called
 [cross-origin isolation](https://web.dev/coop-coep/). With a cross-origin
 isolated state, the webpage can use privileged features including
 [`SharedArrayBuffer`](https://developer.chrome.com/blog/enabling-shared-array-buffer/),
-[`performance.measureUserAgentSpecificMemory()`](https://web.dev/monitor-total-page-memory-usage/),
-[JS Self-Profiling API](https://github.com/WICG/js-self-profiling) and
-[high-precision timers with better
+[`performance.measureUserAgentSpecificMemory()`](https://web.dev/monitor-total-page-memory-usage/)
+and [high-precision timers with better
 resolution](https://developer.chrome.com/blog/cross-origin-isolated-hr-timers/)
 while isolating the origin from others unless they are opted in.
 
@@ -41,22 +45,22 @@ Cross-Origin-Opener-Policy: same-origin
 ```
 
 With a cross-origin isolated state, all cross-origin resources must be served
-with CORS or `Cross-Origin-Resource-Policy: cross-origin` to be loaded.
+with CORS or set a `Cross-Origin-Resource-Policy` header to be loaded.
 
 {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/SmiNygdHglDvm1Et1hFQ.png",
 alt="", width="800", height="372" %}
 
 ## Challenges with enabling cross-origin isolation
 
-While cross-origin isolation brings webpages better security and ability to
-enable powerful features, it's challenging for some of them [to meet all the
-conditions required](https://web.dev/cross-origin-isolation-guide/). One of the
-biggest challenges is to serve cross-origin resources with CORS or `CORP:
-cross-origin` in order to be loaded. Resources without those headers will not be
-loaded by the browser even if they are successfully served.
+While cross-origin isolation brings webpages better security and the ability to
+enable powerful features, deploying it can be
+[difficult](https://web.dev/cross-origin-isolation-guide/). One of the biggest
+challenges is the requirement to enable CORS or CORP for all cross-origin
+resources. Resources without those headers will not be loaded by the browser on
+a cross-origin isolated page.
 
-These cross-origin resources are usually served by third-parties and asking them
-to make such changes turned out to be a big ask.
+These cross-origin resources are usually served by third-parties for whom it may
+not be easy to add the necessary headers.
 
 But what if we know the resource is safe enough to be loaded? In fact, the only
 resources that are at risk are ones requested with credentials, because they
@@ -67,10 +71,10 @@ available and safe to load.
 ## `credentialless` to the rescue
 
 That's where `COEP: credentialless` comes in. `credentialless` is a new value
-option for the `Cross-Origin-Embedder-Policy` header. Similar to `require-corp`,
-it can enable cross-origin isolation, but instead of requiring a
-`CORP:cross-origin` header for no-cors cross-origin requests, they are instead
-sent without credentials (for example, cookies).
+for the `Cross-Origin-Embedder-Policy` header. Similar to `require-corp`, it can
+enable cross-origin isolation, but instead of requiring a `CORP:cross-origin`
+header for no-cors cross-origin requests, they are instead sent without
+credentials (for example, cookies).
 
 You will be able to enable cross-origin isolation alternatively with the
 following two headers:
@@ -101,8 +105,8 @@ You can try various header options in this demo:
 
 Absolutely, at the cost of shifting the request's mode to require a CORS check
 on the response. For HTML tags such as `<audio>`, `<img>`, `<link>`, `<script>`,
-and `<video>`, just append `crossorigin="use-credentials"` explicitly to let the
-browser inform to send credentialed requests.
+and `<video>`, just append `crossorigin="use-credentials"` explicitly to inform
+the browser to send credentialed requests.
 
 For example, even if a document on `https://www.example.com` has
 `Cross-Origin-Embedder-Policy: credentialless` header, `<img
