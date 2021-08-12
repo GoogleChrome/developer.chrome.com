@@ -4,7 +4,7 @@ title: "Network features reference"
 authors:
   - kaycebasques
 date: 2015-04-13
-#updated: YYYY-MM-DD
+updated: 2021-08-12
 description: "A comprehensive reference of Chrome DevTools Network panel features."
 ---
 
@@ -59,9 +59,7 @@ DevTools saves all requests until you disable **Preserve log**.
 
 Capture screenshots to analyze what users see as they wait for your page to load.
 
-To enable screenshots, click **Capture screenshots**
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MzwAIIiGa9ZOUqfsCBaj.png", alt="Capture screenshots", width="26", height="16" %}
-on the Network panel. It turns blue when enabled.
+To enable screenshots, open **Settings** inside the Network panel and check **Capture screenshots**.
 
 Reload the page while the Network panel is in focus to capture screenshots.
 
@@ -73,10 +71,9 @@ Once captured, you can interact with screenshots in the following ways:
   captured.
 - Double-click a thumbnail to zoom in on it.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/cqE56LuAWj7R8H3xFCXt.png", alt="Hovering over a screenshot.", width="800", height="509" %}
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/RM2QuyGbgYhQu61CSyCw.png", alt="Capture screenshots enabled", width="800", height="614" %}
 
-**Figure 4**. Hovering over a screenshot. The yellow, vertical line in the Overview pane and the
-Waterfall represent the time at which the screenshot was captured.
+**Figure 4**. Capture screenshots enabled, showing loading screenshots over time.
 
 ### Replay XHR request {: #replay-xhr }
 
@@ -658,27 +655,19 @@ Use large rows when you want more whitespace in your network requests table. Som
 provide a little more information when using large rows. For example, the bottom value of the
 **Size** column is the uncompressed size of a request.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/OkTz8xZwi0zVh2GWltnE.png", alt="An example of large request rows in the Requests pane.", width="800", height="478" %}
+Open **Settings** and click **Use large request rows** to enable large rows.
 
-**Figure 37**. An example of large request rows in the Requests pane
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/rhXHHi7yxFm6IqiwQ7C3.png", alt="The use large request rows checkbox", width="800", height="614" %}
 
-Click **Use large request rows**
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/lvgZdF4HI4aDB451wS5G.png", alt="Use large request rows", width="28", height="20" %}
-to enable large rows.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/inNDJZFVu1zUQ4jz1XhV.svg", alt="The Large Request Rows button", width="705", height="450" %}
-
-**Figure 38**. Large Request Rows, outlined in blue
+**Figure 37**. Large Request Rows, outlined in blue
 
 ### Hide the Overview pane {: #hide-overview }
 
-By default, DevTools shows the [Overview pane][28]. Click **Hide overview**
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Ghte2yf6yUoWNtBfUY6c.png", alt="Hide overview", width="34", height="22" %}
-to hide it.
+By default, DevTools shows the [Overview pane][28]. Open **Settings** and uncheck the **Show overview** checkbox to hide it.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/SjuObPgFeP2thIv8NWem.svg", alt="The Hide Overview button", width="705", height="450" %}
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/uWWJfuFbpiClEFjPTdVD.png", alt="The show overview checkbox", width="800", height="614" %}
 
-**Figure 39**. Hide Overview, outlined in blue
+**Figure 38**. Hide Overview, outlined in blue
 
 [1]: #network-conditions
 [2]: https://web.dev/progressive-web-apps
