@@ -43,7 +43,7 @@ declare global {
     /**
      * The rendered content of this template. This does not include layout wrappers.
      */
-    templateContent: unknown;
+    templateContent: string;
     /**
      * @UNDOCUMENTED
      */

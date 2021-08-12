@@ -5,12 +5,11 @@
  * @param {EleventyCollectionItem} item
  * @return {boolean}
  */
-const drafts = item => {
-  if (process.env.NODE_ENV !== 'production') {
-    return true;
-  } else {
+const filterDrafts = item => {
+  if (process.env.NODE_ENV === 'production') {
     return !item.data.draft;
   }
+  return true; // include everything in non-prod
 };
 
-module.exports = {drafts};
+module.exports = {filterDrafts};

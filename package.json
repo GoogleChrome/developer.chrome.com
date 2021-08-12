@@ -64,7 +64,6 @@
     "querystring": "^0.2.0",
     "readdirp": "^3.4.0",
     "redirects-yaml": "^2.0.3",
-    "remove-markdown": "^0.3.0",
     "rollup": "^2.22.2",
     "striptags": "^3.1.1",
     "unistore": "^3.5.2",

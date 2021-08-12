@@ -30,7 +30,8 @@
     "server/**/*",
     "site/**/*",
     "tools/**/*",
-    "types/**/*.d.ts"
+    "types/**/*.d.ts",
+    "*.js",
   ],
   "exclude": [
     ".github",
@@ -38,7 +39,6 @@
     "dist",
     "node_modules",
     "test",
-    "./*.js",
-    "site/_js/prettify.js"
-  ]
+    "site/_js/prettify.js",
+  ],
 }

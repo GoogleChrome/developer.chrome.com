@@ -16,7 +16,9 @@
 
 const {defaultLocale} = require('../_data/site.json');
 const {i18n} = require('../_filters/i18n');
-const {drafts} = require('../_utils/drafts');
+const {filterDrafts} = require('../_utils/drafts');
+
+const MAX_POSTS = 10;
 
 /**
  * @param {EleventyData} data
@@ -43,12 +45,10 @@ function tagsForData(data) {
  * @returns {FeedsCollection} Key value pair of tag name with `FeedsCollectionItem`.
  */
 module.exports = collection => {
-  const MAX_POSTS = 10;
   const posts = collection
     .getAllSorted()
     .reverse()
-    .filter(i => i.data.locale === defaultLocale)
-    .filter(drafts)
+    .filter(i => i.data.locale === defaultLocale && filterDrafts(i))
     .filter(item => {
       if (item.data.noindex || item.data.permalink === false) {
         return false;

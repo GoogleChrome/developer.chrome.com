@@ -14,12 +14,16 @@
  * limitations under the License.
  */
 
-const removeMarkdown = require('remove-markdown');
-const {createHash} = require('crypto');
+/**
+ * @fileoverview Collection of indexable posts rewritten to our expected format
+ * for indexing via Algolia.
+ */
 
+const {createHash} = require('crypto');
 const {generateImgixSrc} = require('../_shortcodes/Img');
-const {drafts} = require('../_utils/drafts');
+const {filterDrafts} = require('../_utils/drafts');
 const {stripDefaultLocale} = require('../_filters/urls');
+const striptags = require('striptags');
 
 /**
  * Shrink the size of the given fulltext to fit within a certain limit, at the
@@ -47,38 +51,55 @@ function limitText(content, limit = 7500) {
  * @returns {AlgoliaCollectionItem[]}
  */
 module.exports = collections => {
-  const allSorted = collections.getAllSorted().filter(drafts);
-  /** @type {AlgoliaCollectionItem[]} */
-  const algoliaCollectionItems = [];
+  const toIndex = collections.getAllSorted().filter(item => {
+    const {data} = item;
 
-  for (const item of allSorted) {
-    if (item.data.disable_algolia || item.data.permalink === false) {
-      continue;
+    // Filter out pages we don't want to index.
+    if (
+      data.disable_algolia ||
+      data.noindex ||
+      data.draft ||
+      data.permalink === false
+    ) {
+      return false;
     }
 
-    if (item.data.tags && typeof item.data.tags === 'string') {
-      item.data.tags = [item.data.tags];
-    }
+    return true;
+  });
+
+  return toIndex.map(item => {
+    const image = item.data.hero
+      ? generateImgixSrc(item.data.hero, {w: 100, auto: 'format'})
+      : '';
 
     /** @type {AlgoliaCollectionItem} */
     const algoliaCollectionItem = {
       title: item.data.title,
       description: item.data.description,
-      content: limitText(removeMarkdown(item.template.frontMatter.content)),
+      content: undefined,
       url: stripDefaultLocale(item.url),
-      tags: item.data.tags || [],
+      tags: [item.data.tags ?? []].flat(),
       locale: item.data.locale,
-      image:
-        item.data.hero &&
-        generateImgixSrc(item.data.hero, {w: 100, auto: 'format'}),
+      image,
       objectID: createHash('md5').update(item.url).digest('hex'),
     };
+
+    // The item is dumped to JSON, but we can't get at the underlying post's
+    // templateContent until the rendering state of 11ty. Define a getter
+    // which will be called at the later point.
+    Object.defineProperty(algoliaCollectionItem, 'content', {
+      get() {
+        // Strip HTML tags and limit to a sensible size for indexing.
+        const text = striptags(item.templateContent ?? '');
+        return limitText(text);
+      },
+      enumerable: true,
+    });
 
     if (item.data.type) {
       algoliaCollectionItem.type = item.data.type;
     }
 
-    algoliaCollectionItems.push(algoliaCollectionItem);
-  }
-  return algoliaCollectionItems;
+    return algoliaCollectionItem;
+  });
 };

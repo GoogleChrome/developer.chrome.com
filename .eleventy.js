@@ -1,5 +1,5 @@
 const yaml = require('js-yaml');
-const {drafts} = require('./site/_utils/drafts');
+const {filterDrafts} = require('./site/_utils/drafts');
 
 // Filters
 const {
@@ -80,7 +80,7 @@ module.exports = eleventyConfig => {
 
   // Add collections
   locales.forEach(locale => eleventyConfig.addCollection(`blog-${locale}`, collections => {
-    let blogCollection = collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).filter(drafts).reverse();
+    let blogCollection = collections.getFilteredByGlob(`./site/${locale}/blog/*/*.md`).filter(filterDrafts).reverse();
     // If we're running inside of Percy then just show the first six blog posts.
     if (process.env.PERCY_BRANCH) {
       blogCollection = blogCollection.slice(blogCollection.length - 6);
