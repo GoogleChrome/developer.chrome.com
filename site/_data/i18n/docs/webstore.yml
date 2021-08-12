@@ -1,3 +1,8 @@
+developer_dashboard:
+  en: 'Developer Dashboard'
+developer_dashboard_description:
+  en: >
+    Publish and manage your extensions and themes.
 overviews:
   en: 'Overviews'
 payments:
