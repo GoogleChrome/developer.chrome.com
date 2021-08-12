@@ -44,14 +44,16 @@ Play gives you two options for how you can handle this:
   also lose the ability to update your app.
 
 During the `bubblewrap init` setup, when you get to the **"Signing key information (5/5)"** portion,
-you'll be prompted to enter a **"Key store location"** and **"Key name"**, or use the defaults. If
-Bubblewrap doesn't find an existing keystore with that key at the location, it will create one for
-you and also prompt you for passwords. Take note of the passwords you entered as you'll need them
-during the build process (`bubblewrap build`) where it will use the key to sign your app. If you opt
-in to Play App Signing, then the signing key that Bubblewrap generated and used to sign your app
-becomes the "upload key". Whether you choose to use the Bubblewrap generated key as your signing or
-upload key, you should guard and keep the key private. We don't recommend committing it to version
-control. Instead, limit the number of individuals with access to it.
+you'll be prompted to enter a **"Key store location"** and **"Key name"**, or use the defaults. The
+default key store location is the file `android.keystore` in your project directory and the default
+key name is `android`. If Bubblewrap doesn't find an existing keystore with that key name at the
+location, it will create one for you and also prompt you for passwords. Take note of the passwords
+you entered as you'll need them during the build process (`bubblewrap build`) where it will use the
+key to sign your app. If you opt in to Play App Signing, then the signing key that Bubblewrap
+generated and used to sign your app becomes the "upload key". Whether you choose to use the
+Bubblewrap generated key as your signing or upload key, you should guard and keep the key private.
+We don't recommend committing it to version control. Instead, limit the number of individuals with
+access to it.
 
 ## Digital Asset Links {: #digital-asset-links }
 
@@ -76,6 +78,22 @@ your `assetlinks.json` file. Then upload it to your website at `.well-known/asse
 
 ### Get the SHA256 certificate fingerprint {: #get-sha256-cert-fingerprint }
 
+To create the `assetlinks.json` file, you'll need the SHA 256 certificate fingerprint associated
+with your app's signing key. The important thing to note is that the fingerprints associated with
+your [signing and upload keys](#upload-vs-signing-key) will be different. It's important to keep
+this distinction in mind, especially if you observe your app launching as a Chrome Custom Tab (with
+the browser bar visible). Then, it's likely your `assetlinks.json` file does not have the
+fingerprint that corresponds to the appropriate key.
+
+It's useful to have both your signing and upload certificate's fingerprint in your assetlinks.json
+to more easily debug your app locally. See [Adding More Keys](#adding-more-keys) below for more
+information on how to have both keys in the `assetlinks.json.
+
+There are a couple of different ways to get the fingerprint which are detailed in the next sections.
+They should all give you the same fingerprints so feel free to choose the method that is most
+convenient.
+
+#### Via Play Console
 Depending on if you opt in to Play App Signing or not, you may have one or two keys.  To retrieve
 the appropriate SHA256 fingerprint for each key:
 
@@ -84,15 +102,31 @@ the appropriate SHA256 fingerprint for each key:
 3. In the navigation menu on the left, under **Release**, go to **Setup** -> **App Integrity**.
 4. Copy the SHA256 for the appropriate key:
 
+{% Img src="image/ttTommHYbJXsEL29zNB1wXBvH4z1/Ce3CxXhEO8ibSQRYE9Ik.png", alt="Retrieve the appropriate SHA256 certificate fingerprint for your signing or upload key", width="800", height="385" %}
+
     - **Signing key**: Copy the SHA256 fingerprint for the **"App signing key certificate"**. This
       fingerprint will correspond to your app if you download it from the Google Play Store since
       Google Play distributes your app signed with the signing key.
+
     - **Upload key**: Copy the SHA256 fingerprint for the **"Upload key certificate"**. This
       fingerprint will correspond to your app if you install it locally (via ADB over USB for
       example). That APK (on your local machine) was built by Bubblewrap, and therefore, signed by
       the key it created for you as well (during the `init` setup). Remember that this may be the
       signing key for your locally installed app, but this actually becomes the "upload key" once
       you publish your app through Play.
+
+#### Via `keytool`
+
+[keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html) is a key and
+certificate management tool. You can use keytool to extract the SHA 256 fingerprint associated with
+the APK or AAB Bubblewrap generated. Note that this fingerprint is for the local signing key and if
+you upload your app to Play and opt in to Play App Signing, this key becomes the "upload key". 
+
+```shell
+keytool -printcert -jarfile [path to APK or AAB] | grep SHA256
+```
+
+#### Via Asset Link Tool
 
 Another way to get the correct Digital Asset Links file for your app, is to use the [Asset Link
 Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool):
@@ -110,13 +144,7 @@ Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool):
 The same idea applies as before with signing or upload keys. If you installed your app from the
 Google Play Store, the Asset Link Tool will get you the fingerprint for your app's signing key. If
 you installed the app directly from your local machine, then the fingerprint is for the key
-Bubblewrap generated. It's important to keep this distinction in mind, especially if you observe
-your app launching as a Custom Tab (with the browser bar visible). It's likely your
-`assetlinks.json` file does not have the fingerprint that corresponds to the appropriate key.
-
-It's useful to have both your signing and upload certificate's fingerprint in your `assetlinks.json`
-file to more easily debug your app locally. See [Adding More Keys](#adding-more-keys) below for more
-information on how to have both keys in the `assetlinks.json` file.
+Bubblewrap generated.
 
 ### Ensuring your asset link file is accessible {: #ensuring-your-asset-link-file-is-accessible }
 
