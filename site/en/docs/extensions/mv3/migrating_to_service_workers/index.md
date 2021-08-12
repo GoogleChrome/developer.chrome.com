@@ -49,7 +49,7 @@ The below snippet shows how an existing extension initializes its browser action
 persistent background page.
 
 ```js
-//// background.js
+// background.js
 chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
   chrome.action.setBadgeText({ text: badgeText });
 
@@ -58,7 +58,7 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
 });
 ```
 
-While this approach works in a persistent background page, it is not guaranteed to work in a service
+While this approach works in a persistent background page, it is _not_ guaranteed to work in a service
 worker due to the asynchronous nature of the [Storage APIs][storage]. When a service worker is
 terminated, so are the event listeners associated with it. And since events are dispatched when a
 service worker starts, asynchronously registering events results in them being dropped because
@@ -69,7 +69,7 @@ that Chrome will be able to immediately find and invoke your action's click hand
 extension hasn't finished executing its async startup logic.
 
 ```js
-//// background.js
+// service-worker.js
 chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
   chrome.action.setBadgeText({ text: badgeText });
 });
@@ -79,8 +79,8 @@ chrome.action.onClicked.addListener(handleActionClick);
 ```
 
 {% Aside %}
-In Manifest V3 the `chrome.browserAction` and `chrome.pageAction` APIs are consolidated
-into a single chrome.action API.
+In Manifest V3, the `chrome.browserAction` and `chrome.pageAction` APIs have been consolidated
+into a single `chrome.action` API.
 {% endAside %}
 
 ### Persisting state with storage APIs {: #state }
@@ -91,32 +91,35 @@ some work, and get terminated repeatedly throughout a user's browser session. Th
 to extension developers accustomed to long-lived background pages as application data is not
 immediately available in global variables.
 
-This example is taken from a simple manifest version 2 extension that receives a name value from a
-content script and persists it in a global variable for later use.
+For example, here's an example from a simple Manifest V2 extension, which receives a name from a
+content script and persists it for later:
 
 ```js
-//// background.js
-let name = undefined;
+// service-worker-problem.js
+
+// Don't do this! The service worker will be created and destroyed over the lifetime of your
+// exension, and this variable will be reset.
+let savedName = undefined;
 
 chrome.runtime.onMessage.addListener(({ type, name }) => {
   if (type === "set-name") {
-    name = name;
+    savedName = name;
   }
 });
 
 chrome.browserAction.onClicked.addListener((tab) => {
-  chrome.tabs.sendMessage(tab.id, { name });
+  chrome.tabs.sendMessage(tab.id, { name: savedName });
 });
 ```
 
-If we port this code directly to a service worker, it's possible that the service worker will be
+If we port this code directly to MV3, requiring service workers, it's possible that the code will be
 terminated between when the name is set and the user clicks the browser action. If this happens, the
-set name will have been lost and name variable will again be undefined.
+set name will have been lost&mdash;and `savedName` will again be `undefined`.
 
-We can fix this bug by treating the [Storage APIs][storage] as our source of truth.
+We can fix this bug by treating the [Storage APIs][storage] as our source of truth:
 
 ```js
-//// background.js
+// service-worker-solution.js
 chrome.runtime.onMessage.addListener(({ type, name }) => {
   if (type === "set-name") {
     chrome.storage.local.set({ name });
@@ -130,11 +133,6 @@ chrome.action.onClicked.addListener((tab) => {
 });
 ```
 
-{% Aside %}
-In Manifest V3 the chrome.browserAction and chrome.pageAction APIs are consolidated
-into a single chrome.action API.
-{% endAside %}
-
 ### Moving from timers to alarms {: #alarms }
 
 It's common for web developers to perform delayed or periodic operations using the `setTimeout` or
@@ -142,9 +140,11 @@ It's common for web developers to perform delayed or periodic operations using t
 cancel the timers when the service worker is terminated.
 
 ```js
-//// background.js
+// background.js
+
+// This worked in MV2.
 const TIMEOUT = 3 * 60 * 1000; // 3 minutes in milliseconds
-window.setTimeout(() => {
+setTimeout(() => {
   chrome.action.setIcon({
     path: getRandomIconPath(),
   });
@@ -155,7 +155,7 @@ Instead, we can use the [Alarms API][alarms]. Like other listeners, alarm listen
 registered in the top level of your script.
 
 ```js
-//// background.js
+// service-worker.js
 chrome.alarms.create({ delayInMinutes: 3 });
 
 chrome.alarms.onAlarm.addListener(() => {
@@ -169,10 +169,12 @@ chrome.alarms.onAlarm.addListener(() => {
 
 [Service workers][5] are a specialized kind of [web worker][6], which are quite different from the
 web pages most web developers are used to working with. On a typical web page (or extension
-background page), the global execution context for JavaScript is a [Window][7]. This object exposes
-the capabilities that web developers are used to working with: window, element, IndexedDB, cookie,
-localStorage, fetch, etc. The [global scope for service worker][8] is significantly more limited and
-doesn't have many of these features. Most notably, service workers don't have access to the DOM.
+background page), the global execution context for JavaScript is of type [`Window`][7]. This object
+exposes the capabilities that web developers are used to working with: `window`, element, IndexedDB,
+`cookie`, `localStorage`, etc.
+
+The [global scope for service worker][8] is significantly more limited and doesn't have many of
+these features. Most notably, service workers don't have access to the DOM. Workers no longer provide `XMLHttpRequest`, but instead support the more modern [`fetch`][fetch-link].
 
 The following sections cover some of the major use cases impacted by the move to service workers and
 recommendations on how to adapt.
@@ -180,35 +182,35 @@ recommendations on how to adapt.
 ### Parsing and traversing with XML/HTML {: #documents }
 
 Since service workers don't have access to DOM, it's not possible for an extension's service worker
-to access the [DOMParser][9] API or create iframes to parse and traverse documents. Extension
-developers have two ways to work around this limitation: create a new tab or use a library. Which
-you choose will depend on your use case.
+to access the [`DOMParser`][9] API or create an `<iframe>` to parse and traverse documents.
+Extension developers have two ways to work around this limitation: create a new tab or use a
+library. Which you choose will depend on your use case.
 
-Libraries such as [jsdom][10] can be used to emulate a typical browser window environment, complete
-with DOMParser, event propagation, and other capabilities like requestAnimationFrame. Lighter weight
-alternatives like [undom][11] provide just enough DOM to power many frontend frameworks and
-libraries.
+Libraries such as [`jsdom`][10] can be used to emulate a typical browser window environment,
+complete with DOMParser, event propagation, and other capabilities like `requestAnimationFrame`.
+Lighter-weight alternatives like [`undom`][11] provide just enough DOM to power many frontend
+frameworks and libraries.
 
-Extensions that need a full native browser environment can use the [chrome.windows.create()][12] and
-[chrome.tabs.create()][13] APIs from inside a service worker. Additionally, an extension's popup
-still provides a full (temporary) window environment.
+Extensions that need a full native browser environment can use the [`chrome.windows.create()`][12]
+and [`chrome.tabs.create()`][13] APIs from inside a service worker to create a real browser window. 
+Additionally, an extension's popup still provides a full (temporary) window environment.
 
 ### Audio/video playback and capture {: #audio_vidio }
 
 It's not currently possible to play or capture media directly in a service worker. In order for a
 Manifest V3 extension to leverage the web's media playback and capture capabilities, the extension
-will need to create a window environment using either [chrome.windows.create()][12] or
-[chrome.tabs.create()][13]. Once created, the extension can use [message passing][16] to coordinate
-between the playback document and service worker.
+will need to create a window environment using either [`chrome.windows.create()`][12] or
+[`chrome.tabs.create()`][13]. Once created, the extension can use [message passing][16] to
+coordinate between the playback document and service worker.
 
 ### Rendering to a canvas {: #canvas }
 
 In some cases developers use background pages to render content for display in other contexts or to
-create and cache assets. While service workers don't have access to DOM and therefore cannot use
-`<canvas>` elements, service workers do have access to the [OffscreenCanvas API][17].
+create and cache assets. While Service Wrkers don't have access to DOM and therefore cannot use
+`<canvas>` elements, service workers do have access to the [Offscreen Canvas API][17].
 
 ```js
-//// background.js
+// background.js
 function buildCanvas(width, height) {
   const canvas = document.createElement("canvas");
   canvas.width = width;
@@ -217,19 +219,18 @@ function buildCanvas(width, height) {
 }
 ```
 
-In the above block we're constructing a canvas element and painting the entire canvas turquoise. To
-migrate to offscreen canvas, replace `document.createElement('canvas')` with `new
-OffscreenCanvas(width, height)`.
+In the above block we're constructing a canvas element. To migrate to offscreen canvas, replace
+`document.createElement('canvas')` with `new OffscreenCanvas(width, height)`.
 
 ```js
-//// background.js
+// service-worker.js
 function buildCanvas(width, height) {
   const canvas = new OffscreenCanvas(width, height);
   return canvas;
 }
 ```
 
-For additional guidance on working with OffscreenCanvas, see [OffscreenCanvas—Speed up Your Canvas
+For additional guidance on working with `OffscreenCanvas`, see [OffscreenCanvas—Speed up Your Canvas
 Operations with a Web Worker][18].
 
 [2]: https://developers.google.com/web/fundamentals/primers/service-workers/
@@ -251,3 +252,4 @@ Operations with a Web Worker][18].
 [alarms]: /docs/extensions/reference/alarms/
 [eventbgscripts]: /docs/extensions/mv3/background_migration/
 [storage]: /docs/extensions/reference/storage/
+[fetch-link]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API

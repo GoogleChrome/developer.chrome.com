@@ -32,9 +32,12 @@ discusses each field.
   <span class="token property">"action"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"author"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"automation"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
-  <span class="token property">"<a href="/docs/extensions/mv3/background_pages">background</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">"<a href="/docs/extensions/mv3/service_workers">background</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token comment">// Required</span>
-    <span class="token property">"<a href="/docs/extensions/mv3/migrating_to_service_workers">service_worker</a>"</span><span class="token operator">:</span>
+    <span class="token property">"<a href="/docs/extensions/mv3/service_workers">service_worker</a>"</span><span class="token operator">:</span>
+    <span class="token string">"service-worker.js"</span>,
+    <span class="token comment">// Optional</span>
+    <span class="token string">"<a href="/docs/extensions/mv3/migrating_to_service_workers">module</a>"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/settings_override">chrome_settings_overrides</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/override">chrome_url_overrides</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
