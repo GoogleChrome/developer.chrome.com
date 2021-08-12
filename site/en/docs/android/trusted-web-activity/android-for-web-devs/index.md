@@ -94,6 +94,7 @@ They should all give you the same fingerprints so feel free to choose the method
 convenient.
 
 #### Via Play Console
+
 Depending on if you opt in to Play App Signing or not, you may have one or two keys.  To retrieve
 the appropriate SHA256 fingerprint for each key:
 
