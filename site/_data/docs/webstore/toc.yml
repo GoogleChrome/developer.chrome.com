@@ -1,4 +1,7 @@
 - url: /docs/webstore/about_webstore/
+- url: https://chrome.google.com/webstore/developer/dashboard
+  title: i18n.docs.webstore.developer_dashboard
+  description: i18n.docs.webstore.developer_dashboard_description
 - url: /docs/webstore/faq/
 - title: i18n.docs.webstore.develop
   sections:
