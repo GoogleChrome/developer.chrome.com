@@ -23,6 +23,7 @@
   sections:
     - url: /docs/webstore/images/
     - url: /docs/webstore/cws-dashboard-listing/
+    - url: /docs/webstore/best_listing/
     - url: /docs/webstore/cws-dashboard-privacy/
     - url: /docs/webstore/cws-dashboard-distribution/
     - url: /docs/webstore/cws-enterprise/

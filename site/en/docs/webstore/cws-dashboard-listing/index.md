@@ -6,6 +6,9 @@ title: "Complete your listing information"
 description: How to add listing information for your Chrome Web Store item.
 ---
 
+This page describes the fields you must fill out to complete your store listing. To learn how to
+make your listing more compelling, be sure to read [Creating a great listing page][best-listing].
+
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/4RwZvdR4eACU46OCy7rm.png",
        alt="Screenshot of the Chrome Web Store developer dashboard item listing tab", height="472", width="800" %}
 
@@ -32,6 +35,11 @@ your item's store listing:
 See [Supplying Images][cws-images] for help on designing the images for your item, and [Branding
 Guidelines][cws-branding] for information on how you can use Google brands.
 
+{% Aside %}
+The quality of the images you supply can affect your item's prominence on the Chrome Web Store. Be
+sure and read [Creating a great listing page][best-listing] for more details.
+{% endAside %}
+
 ## Displaying your verified publisher status
 
 The Chrome Web Store highlights verified publishers by placing a linked, official URL in the
@@ -57,6 +65,7 @@ To add a verified site that you own, click on **Add a new site**. This opens the
 Console, where you can add and verify a site. See [Verify your site ownership][verify-owner] for
 more details.
 
+[best-listing]: /docs/webstore/best_listing
 [cws-branding]: /docs/webstore/branding
 [cws-images]: /docs/webstore/images
 [verify-owner]: https://support.google.com/webmasters/answer/9008080

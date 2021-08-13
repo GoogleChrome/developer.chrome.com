@@ -76,6 +76,8 @@ The better your app's listing in the store, the more users will find and try you
 your app's name, writing its description, and designing its logo, keep in mind Google's [Branding
 Guidelines][cws-branding].
 
+To learn more, see [Creating a great listing page][great-listing-page].
+
 ### Provide great images
 
 See [Supplying Images][cws-images] for guidelines on the images you should supply to the store.
@@ -101,6 +103,7 @@ that is most appropriate:
 [cws-branding]: /docs/webstore/branding
 [cws-images]: /docs/webstore/images
 [dashboard-privacy]: /docs/webstore/cws-dashboard-privacy/
+[great-listing-page]: /docs/webstore/best_listing/
 [identify-user]: /docs/webstore/identify_user
 [mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
 [program policies]: /docs/webstore/program_policies/
