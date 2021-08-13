@@ -15,17 +15,10 @@ You need to supply several kinds of images to be used in the Chrome Web Store:
 Only the extension icon, a small promotional image, and a screenshot are mandatory. However, providing
 attractive versions of both required and optional images increases your extension's chances of getting
 noticed. For example, your extension can't be featured in marquee unless you provide a marquee promotional
-image. Follow our [Image best practices][best-practices] to increase your chance of being featured.
 
-## Image best practices {: #best-practices }
-
-- Avoid overloading images with text in small font sizes or backgrounds that compete with text.
-- Use consistent design elements (logos, fonts, colors) across all images for a cohesive look.
-- Use high quality images with the proper aspect ratio.
-- Do not include images that are blurry, distorted, or pixelated in a way that is not an intentional aspect of your brand. 
-- Do not include images that are stretched or compressed.
-- Rotate images appropriately. Do not upload images upside down, sideways, or otherwise skewed.
-- Avoid inappropriate or repetitive image elements, such as third-party trademarked characters or logos without proper permission.
+You can improve your item's performance in the Chrome Web Store by following our best practices for
+images and other listing information. To learn more about these best practices, see [Creating a
+compelling listing page][best-listing].
 
 ## Extension icon {: #icons }
 
@@ -211,7 +204,7 @@ the store can use to promote your extension.
 
 {% Aside 'note' %}
 
-**Note:** Unlike [screenshots][screenshots], promotional images are not currently locale-specific. If your extension supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the extension's capabilities, or targeting the promo images to the locale in which you have the most users.
+Unlike [screenshots][screenshots], promotional images are not currently locale-specific. If your extension supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the extension's capabilities, or targeting the promo images to the locale in which you have the most users.
 
 {% endAside %}
 
@@ -310,7 +303,7 @@ Each screenshot should be as follows:
 
 {% Aside 'note' %}
 
-**Note:** 1280x800 screenshots are preferrable, as larger screenshots look better on high-resolution displays. Currently, all screenshots are downscaled to 640x400 pixels. If your screenshots do not look good when downscaled (for example, they have a lot of text) or if 1280x800 is too big for your extension (for example, screenshots for a low-resolution game), you can upload 640x400 screenshots.
+1280x800 screenshots are preferrable, as larger screenshots look better on high-resolution displays. Currently, all screenshots are downscaled to 640x400 pixels. If your screenshots do not look good when downscaled (for example, they have a lot of text) or if 1280x800 is too big for your extension (for example, screenshots for a low-resolution game), you can upload 640x400 screenshots.
 
 {% endAside %}
 
@@ -325,7 +318,7 @@ As an example, here are two screenshot images for an extension:
 
 Next, read [Submit your extension for publishing][submit-item].
 
-[best-practices]: #best-practices
+[best-listing]: /docs/webstore/best_listing
 [branding]: /docs/webstore/branding
 [icons]: #icons
 [icon-perspective]: #icon-perspective
@@ -335,3 +328,4 @@ Next, read [Submit your extension for publishing][submit-item].
 [screenshots]: #screenshots
 [submit-item]: /docs/webstore/publish/#submit-your-item-for-publishing
 [zip-file]: /docs/webstore/publish#create-your-items-zip-file
+

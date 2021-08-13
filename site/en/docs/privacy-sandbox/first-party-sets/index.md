@@ -6,7 +6,7 @@ subhead: >
 description: >
   First-Party Sets enables related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
 date: 2021-05-18
-updated: 2021-05-18
+updated: 2021-08-12
 authors:
   - samdutton
 ---
@@ -22,6 +22,10 @@ authors:
 
 
 ## Why do we need First-Party Sets?
+
+{% YouTube
+  id='cNJ8mZ-J3F8' 
+%}
 
 Web pages are composed of content from multiple [origins](/docs/privacy-sandbox/glossary#origin).
 Some content is first-party and comes from the top-level site the user is visiting. Other content

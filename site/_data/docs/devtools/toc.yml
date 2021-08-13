@@ -53,7 +53,7 @@
     - url: /docs/devtools/javascript/snippets/
     - url: /docs/devtools/javascript/sources/
     - url: /docs/devtools/javascript/background-services/
-    - url: /docs/devtools/javascript/blackbox-chrome-extension-scripts/
+    - url: /docs/devtools/javascript/ignore-chrome-extension-scripts/
     - url: /docs/devtools/javascript/disable/
 - title: i18n.docs.devtools.performance
   sections:

@@ -79,11 +79,14 @@ const iterateDirs = function* (p) {
 
 /**
  * @param {string} url
- * @return url stripped of "/index.html" on right
+ * @return url stripped of "/index.html" or ".html" on right
  */
-const stripIndexHtml = url => {
+const stripHtmlSuffix = url => {
   if (url.endsWith('/index.html')) {
     return url.substr(0, url.length - '/index.html'.length);
+  }
+  if (url.endsWith('.html')) {
+    return url.substr(0, url.length - '.html'.length) + '/';
   }
   return url;
 };
@@ -113,7 +116,7 @@ async function findPaths(source) {
     fileFilter: 'index.html',
     type: 'files',
   });
-  return results.map(({path: p}) => '/' + stripIndexHtml(p));
+  return results.map(({path: p}) => '/' + stripHtmlSuffix(p));
 }
 
 /**
@@ -273,7 +276,7 @@ async function buildMatcher(source = 'dist/', avoidDirs = defaultAvoidDirs) {
   }
 
   return url => {
-    url = stripIndexHtml(url);
+    url = stripHtmlSuffix(url);
     const result = matchUrl(url);
     if (result === url) {
       return undefined; // this should never happen but just for safety

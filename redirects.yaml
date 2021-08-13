@@ -42,6 +42,9 @@ redirects:
 - from: /docs/webstore/pricing/
   to: /docs/webstore/money/
 
+- from: /docs/devtools/javascript/blackbox-chrome-extension-scripts/
+  to: /docs/devtools/javascript/ignore-chrome-extension-scripts/
+
 # CWS payments/apps purge
 - from: /docs/webstore/hosted_apps
   to: /docs/webstore
@@ -166,7 +169,7 @@ redirects:
   to: https://developers.google.com/web/tools/chrome-devtools
 
 - from: /devtools/docs/blackboxing
-  to: https://developers.google.com/web/tools/chrome-devtools/javascript/reference#blackbox
+  to: https://developers.google.com/web/tools/chrome-devtools/javascript/reference#ignore-list
 
 - from: /devtools/docs/commandline-api
   to: https://developers.google.com/web/tools/chrome-devtools/console/utilities
