@@ -4,7 +4,6 @@
   sections:
     - url: /docs/webstore/get_started_simple/
     - url: /docs/webstore/best_practices/
-    - url: /docs/webstore/best_listing/
     - url: /docs/webstore/i18n/
     - url: /docs/webstore/identify_user/
 - title: i18n.docs.webstore.publish
@@ -21,6 +20,7 @@
   sections:
     - url: /docs/webstore/images/
     - url: /docs/webstore/cws-dashboard-listing/
+    - url: /docs/webstore/best_listing/
     - url: /docs/webstore/cws-dashboard-privacy/
     - url: /docs/webstore/cws-dashboard-distribution/
     - url: /docs/webstore/cws-enterprise/

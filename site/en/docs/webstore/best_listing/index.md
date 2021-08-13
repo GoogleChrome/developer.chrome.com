@@ -7,16 +7,15 @@ description: >
   Web Store.
 ---
 
-The Chrome Web Store works hard to surface quality items for users to discover.  Making sure yours
+The Chrome Web Store works hard to help users discover and install quality items. Making sure yours
 is a "quality item" can help ensure its prominence in the store, potentially increasing your
 user base.
 
-Our focus on surfacing quality items to users encompases the entire user experience&mdash;including
-the store listing page. Build trust with users by making a strong first impression, with a
-compelling and accurate store listing page.  A quality listing page 
-clearly communicates what your item will offer, using the item description, images, and other
-listing metadata.
-You can build and maintain your store listing page using the [developer dashboard][devconsole].
+Our focus on surfacing quality items to users encompases the entire user experience&mdash;this
+includes the store listing page. Build trust with users by making a strong first impression, with a
+compelling and accurate store listing page.  A quality listing page clearly communicates what your
+item will offer, using the item description, images, and other listing metadata.  You can build and
+maintain your store listing page using the [developer dashboard][devconsole].
 
 
 ## Text
@@ -63,7 +62,7 @@ Focus on the keywords that represent the most important features of your extensi
 {% Compare 'worse' %}
 Add unnecessary keywords to your description in an attempt to improve search results.
 Repetitive or irrelevant use of keywords can create an unpleasant user experience and result in an
-item being suspended on Chrome Web Store.
+item being suspended from the Chrome Web Store.
 {% endCompare %}
 
 
@@ -103,7 +102,6 @@ Screenshots should reflect the most up-to-date functionality corresponding to th
 the extension. 
 
 *   Do not include screenshots that are blurry, distorted, or pixelated in a way that is not an intentional aspect of your brand or user experience
-*   Do not include images that are stretched or compressed
 *   Rotate screenshots appropriately. Do not upload images upside down, sideways, or otherwise skewed
 *   Branding on screenshots/videos should be consistent with other branding elements on the store listing page (icon, promotional images, etc), so users can immediately associate them with your extension and brand
 *   Include visual aids like infographics, images and videos to explain the onboarding flow, user experience, and/or main functionalities of the item
@@ -172,11 +170,13 @@ Keep the image simple and clean, using colors and branding that matches your oth
 tile image that works", width="800", height="467" %}
 {% endCompare %}
 
+{% if false %}
 {% Compare 'worse' %}
 Include too much text so that it's hard to read or makes the image look overly "busy".
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/rvcp453BSjDvdO3WlmIo.png", alt="A fictional promo
 tile image that has problems", width="800", height="467" %}
 {% endCompare %}
+{% endif %}
 
 {% Compare 'worse' %}
 Include claims that misrepresent your extension's status.
