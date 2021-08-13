@@ -14,7 +14,7 @@ You need to supply several kinds of images to be used in the Chrome Web Store:
 
 Only the extension icon, a small promotional image, and a screenshot are mandatory. However, providing
 attractive versions of both required and optional images increases your extension's chances of getting
-noticed. For example, your extension can't be featured in marquee unless you provide a marquee promotional
+noticed. For example, your extension can't be featured in marquee unless you provide a marquee promotional image.
 
 You can improve your item's performance in the Chrome Web Store by following our best practices for
 images and other listing information. To learn more about these best practices, see [Creating a

@@ -58,7 +58,7 @@ sure and read [Creating a great listing page][best-listing] for more details.
 
 You can include any of these optional links related to your item. 
 
-## Displaying your verified publisher status
+### Displaying your verified publisher status
 
 The Chrome Web Store highlights verified publishers by placing a linked, official URL in the
 "Offered by:" line of the store listing. This official URL appears under the listing title and is
