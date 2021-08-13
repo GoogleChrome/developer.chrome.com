@@ -12,7 +12,8 @@ description: How to add listing information for your Chrome Web Store item.
 Add the store listing information for your item that isn't in the ZIP file, such as a long
 description, screenshots, videos and links to related sites. 
 
-## Product details 
+## Product details
+
 You'll need to fill out the following details about your item:
 
 - A **detailed description** of your item. Write your description to entice users to download your
