@@ -5,7 +5,7 @@ description: >
 layout: "layouts/blog-post.njk"
 authors:
   - hanselfmu
-date: 2021-08-XX
+date: 2021-08-16
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/tdrObCiQFtDjKT6qgd8e.jpg'
 alt: ''
 tags:
