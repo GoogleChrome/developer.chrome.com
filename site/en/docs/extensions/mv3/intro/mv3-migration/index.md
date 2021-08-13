@@ -288,7 +288,7 @@ resubmitting to the Chrome Web Store.
 
 
 In Manifest V2 it was possible to execute an arbitrary string of code using
-[`tabs.executeScript`](/docs/extensions/reference/tabs/#method-executeScript and the `code`
+[`tabs.executeScript`](/docs/extensions/reference/tabs/#method-executeScript) and the `code`
 property on the options object. Manifest V3 does not allow arbitrary code execution. In order to
 adapt to this requirement, extension developers can either use the
 [`scripting.executeScript`](/docs/extensions/reference/scripting/#method-executeScript) API to
