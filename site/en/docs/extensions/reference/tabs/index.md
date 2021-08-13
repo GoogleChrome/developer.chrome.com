@@ -55,8 +55,8 @@ This example demonstrates how the background script can retrieve the currently f
 
 {% Aside %}
 
-This example requires Manifest due to the use of [Promises][promises]. Additionally, content scripts
-cannot use `tabs.query`.
+This example requires Manifest V3 due to the use of [Promises][promises]. Additionally, content
+scripts cannot use `tabs.query`.
 
 {% endAside %}
 
