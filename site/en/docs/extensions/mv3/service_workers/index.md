@@ -33,8 +33,8 @@ specified instructions, then unload.
 
 ## Register background scripts {: #manifest }
 
-Extensions register their background service workers in the [manifest][3] under the `"background"` field. This field
-uses the `"service_worker"` key, which specifies a single JavaScript file.
+Extensions register their background service workers in the [manifest][3] under the `"background"`
+field. This field uses the `"service_worker"` key, which specifies a single JavaScript file.
 
 ```json/3-6
 {
@@ -46,6 +46,10 @@ uses the `"service_worker"` key, which specifies a single JavaScript file.
   ...
 }
 ```
+
+{% Aside %}
+The script used for `"service_worker"` must be located in your extension's root directory.
+{% endAside %}
 
 You can optionally specify an extra field of `"type": "module"` to include the service worker as an
 ES Module, which allows you to `import` futher code. See [ES modules in service workers][sw-module]

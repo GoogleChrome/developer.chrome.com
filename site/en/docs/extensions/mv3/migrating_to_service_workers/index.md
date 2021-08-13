@@ -24,8 +24,26 @@ improve on this model by tuning it for web-scale.
 When migrating to this new background context, you'll need to keep two main things in mind. First,
 service workers are terminated when not in use and restarted when needed (similar to event pages).
 Second, service workers don't have access to DOM. We'll explore how to adapt to these challenges in
-the [Thinking with Events][3] and [Working with Workers][4] sections below, respectively. If you
-already use an event page, skip straight to the second section.
+the [Thinking with Events][3] and [Working with Workers][4] sections below, respectively.
+
+## Update your manifest {: #manifest }
+
+Extensions register their background service workers in the [manifest][3] under the `"background"`
+field. This field uses the `"service_worker"` key, which specifies a single JavaScript file.
+In Manifest V2, this field was called `"scripts"` and allowed multiple scripts.
+
+```json/3-6
+{
+  "name": "Awesome Test Extension",
+  ...
+  "background": {
+    "service_worker": "background.js"
+  },
+  ...
+}
+```
+
+Find out more on the [Manage events with service workers][manage-sw] reference page.
 
 ## Thinking with events {: #events }
 
@@ -34,9 +52,8 @@ events they're interested in and are terminated when they're no longer needed. T
 sections provide recommendations for writing code in an ephemeral, evented execution context.
 
 {% Aside %}
-
-Several of these concepts are covered in [Migrate to Event Driven Background Scripts][eventbgscripts].
-
+Several of these concepts are covered in the Manifest V2 page, [Migrate to Event Driven Background
+Scripts][eventbgscripts].
 {% endAside %}
 
 ## Top-level event listeners {: #event_listeners }
@@ -250,6 +267,7 @@ Operations with a Web Worker][18].
 [18]: https://developers.google.com/web/updates/2018/08/offscreen-canvas
 [action]: /docs/extensions/reference/action/
 [alarms]: /docs/extensions/reference/alarms/
-[eventbgscripts]: /docs/extensions/mv3/background_migration/
+[eventbgscripts]: /docs/extensions/mv2/background_migration/
 [storage]: /docs/extensions/reference/storage/
 [fetch-link]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+[manage-sw]: /docs/extensions/mv3/background_pages/#manifest
