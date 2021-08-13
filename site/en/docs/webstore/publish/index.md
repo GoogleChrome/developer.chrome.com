@@ -34,9 +34,9 @@ We'll go into detail about each step below.
 ## Create your item's zip file {: #create-your-items-zip-file }
 
 To upload your item, you need to create a ZIP file that contains the 
-manifest file located in the **root** and the files for your extension. The manifest file must specify at least the following fields:
+manifest file located in the **root directory** and the files for your extension. The manifest file must specify at least the following fields:
 
-- `"name":`—This [name][name] is displayed in the Chrome Web Store and in the Chrome browser
+- `"name":`—This [name][name] appears in the Chrome Web Store and in the Chrome browser
 - `"version":`—The [version][version] of the metadata, incremented
 - `"icons":`—An array specifying the [icons][icons] your item uses
 - `"description":`—A string of no more than 132 characters [describing][description] your extension

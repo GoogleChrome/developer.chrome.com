@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Prepare to publish: set up payment and distribution"
-date: 2021-07-29
+date: 2020-12-07
 updated: 2021-08-09
 description: >
   How to use the Payment & Distribution tab of the Chrome Web Store dashboard.
@@ -38,7 +38,7 @@ them on your Chrome Web Store account home page.
 
 The trusted testers list is associated with your _account_, and not an individual item. To create
 multiple trusted tester accounts, you must use separate accounts. However, you can also [add
-groups][1] to your private listing, on a per-item basis.
+groups][private-google-groups] to your private listing, on a per-item basis.
 
 {% endAside %}
 
@@ -75,7 +75,7 @@ distribution page of the developer console:
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/zpV6tBHuf3HLBpRjGsNA.png", alt="Screenshot showing
 the domain publishing option in the developer console", width="643", height="200", class="screenshot" %}
 
-See [Enterprise publishing options][2] for an overview of this and other
+See [Enterprise publishing options][enterprise] for an overview of this and other
 enterprise extension topics, along with links to other enterprise extension documentation.
 
 ## Setting the geographic distribution {: #setting-the-geographic-distribution }
@@ -92,11 +92,11 @@ and it'll be visible in the store's search results.
 
 ## You are ready to submit this item! 
 
-After filling out the [Listing][4] tab and the [Privacy][5] tab, you can now [publish your item][3].
+After filling out the [Listing][listing] tab and the [Privacy][privacy] tab, you can now [publish your item][publish].
 
 
-[1]: #private-visibility-google-groups
-[2]: /docs/webstore/cws-enterprise/
-[3]: /docs/webstore/publish/#publish-item
-[4]: /docs/webstore/cws-dashboard-privacy/
-[5]: /docs/webstore/cws-dashboard-listing/
+[private-google-groups]: #private-visibility-google-groups
+[enterprise]: /docs/webstore/cws-enterprise/
+[publish]: /docs/webstore/publish/#publish-item
+[privacy]: /docs/webstore/cws-dashboard-privacy/
+[listing]: /docs/webstore/cws-dashboard-listing/

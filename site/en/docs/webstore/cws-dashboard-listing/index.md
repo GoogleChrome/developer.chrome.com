@@ -1,7 +1,7 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Complete your listing information"
-#date: TODO
+date: 2020/12/07
 updated: 2021-08-09
 description: How to add listing information for your Chrome Web Store item.
 ---
@@ -22,10 +22,10 @@ You'll need to fill out the following details about your item:
   provide more detail, promotional copy, update logs, and so forth.
   
 {% Aside 'caution' %}
-Be detailed but make sure your description complies with the [Keyword Spam][1] policy.
+Be detailed but make sure your description complies with the [Keyword Spam][keyword-spam] policy.
 {% endAside %}
 
-- The **primary [category][5]** where your item should be listed.
+- The **primary [category][categories]** where your item should be listed.
 - Your item's **language** to help users find it.
 
 ## Graphic assets {: #graphic-assets }
@@ -43,8 +43,8 @@ At a minimum, you should provide the following promotional images:
 
 ### Learning more about images and branding
 
-See [Supplying Images][2] for help on designing the images for your item, and [Branding
-Guidelines][3] for information on how you can use Google brands. 
+See [Supplying Images][images] for help on designing the images for your item, and [Branding
+Guidelines][branding] for information on how you can use Google brands. 
 
 ## Additional fields {: #additional-fields }
 
@@ -72,12 +72,12 @@ official URL pulldown", width="800", height="184" %}
 
 The pull-down for this field contains only those sites that have been verified as belonging to you.
 To add a verified site that you own, click on **Add a new site**. This opens the Google Search
-Console, where you can add and verify a site. See [Verify your site ownership][4] for
+Console, where you can add and verify a site. See [Verify your site ownership][verify-ownership] for
 more details.
 
 ### Adding a homepage URL {: #home-url }
 
-If you want to explain how your extension works in more detail, you can provide a direct link to your extension's website in the **Homepage URL**. It will be located under the Additional information of your item.
+To explain how your extension works in more detail, you can provide a direct link to your extension's website in the **Homepage URL**. This link appears under the Additional information of your item.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/j71L391YIhEAIZTVUuBw.png", alt="Homepage URL in Chrome Web Store item page", width="306", height="106" %}
 
@@ -89,14 +89,14 @@ The CWS provides a built in user support system under your items' "Support tab",
 
 ## You are almost ready to publish this item! 
 If you haven't done so yet, complete your listing by 
--  Filling out your [privacy practices][6] 
--  Providing your [distribution preferences][7].
+-  Filling out your [privacy practices][privacy] 
+-  Providing your [distribution preferences][distribution].
 
 
-[1]: /docs/webstore/spam-faq/#keyword-spam
-[2]: /docs/webstore/images
-[3]: /docs/webstore/branding
-[4]: https://support.google.com/webmasters/answer/9008080
-[5]: /docs/webstore/best_practices/#choose-your-apps-category-well
-[6]: /docs/webstore/cws-dashboard-privacy
-[7]: /docs/webstore/cws-dashboard-distribution
+[branding]: /docs/webstore/branding
+[categories]: /docs/webstore/best_practices/#choose-your-apps-category-well
+[distribution]: /docs/webstore/cws-dashboard-distribution
+[images]: /docs/webstore/images
+[keyword-spam]: /docs/webstore/spam-faq/#keyword-spam
+[privacy]: /docs/webstore/cws-dashboard-privacy
+[verify-ownership]: https://support.google.com/webmasters/answer/9008080

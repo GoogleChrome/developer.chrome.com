@@ -14,7 +14,7 @@ quickly as possible.
 
 ## State the extension's purpose
 
-The [Extension Quality Guidelines][1] state that an extension must have a single purpose that is
+The [Extension Quality Guidelines][extension-policies] state that an extension must have a single purpose that is
 narrow and easy to understand. Make sure that this field clearly communicates this purpose for your
 extension.
 
@@ -27,7 +27,7 @@ your extension.
 
 ## List and justify any permissions
 
-Your extension should request the [minimum permissions][2] consistent with the purpose of the
+Your extension should request the [minimum permissions][minimum-permissions] consistent with the purpose of the
 extension. Requesting broader permissions than necessary may cause your extension to be rejected.
 
 **Permissions justification**&emsp;This section contains a list of permissions that your extension uses (as
@@ -47,7 +47,7 @@ remote code will need extra scrutiny, resulting in longer review times. Extensio
 code and do not declare and justify it using the field shown above will be rejected.
 
 {% Aside 'warning' %}
-In **MV3** you can no longer load and execute a [remotely hosted file][3].
+In **MV3** you can no longer load and execute a [remotely hosted file][remote-code].
 {% endAside %}
 
 **Remote Code**&emsp;Use this field to tell reviewers whether your extension executes remote code and, if
@@ -67,7 +67,7 @@ You must disclose how your extension collects and uses user data. These disclosu
 
 {% Aside 'note' %}
 
-Your disclosures are displayed to Chrome users, and should be consistent with the existing privacy policy URL that you provided to the Chrome Web Store under your [developer account page][4].
+Your disclosures are displayed to Chrome users, and should be consistent with the existing privacy policy URL that you provided to the Chrome Web Store under your [developer account page][setup-account].
 
 {% endAside %}
 
@@ -81,13 +81,14 @@ use certification fields", width="800", height="495" %}
 ## You are almost ready to publish this item!
 
 If you haven't done so yet, complete your listing by 
--  Providing your [distribution preferences][5]
--  Filling out your [store listing][6]
+-  Providing your [distribution preferences][distribution]
+-  Filling out your [store listing][listing]
 
 
-[1]: /docs/webstore/program_policies/#extensions
-[2]: /docs/extensions/mv3/security/#permissions
-[3]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code
-[4]: /docs/webstore/publish#setup-a-developer-account
-[5]: /docs/webstore/cws-dashboard-distribution/
-[6]: /docs/webstore/cws-dashboard-listing/
+[distribution]: /docs/webstore/cws-dashboard-distribution/
+[extension-policies]: /docs/webstore/program_policies/#extensions
+[listing]: /docs/webstore/cws-dashboard-listing/
+[minimum-permissions]: /docs/extensions/mv3/security/#permissions
+[remote-code]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code
+[setup-account]: /docs/webstore/publish#setup-a-developer-account
+
