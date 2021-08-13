@@ -71,6 +71,7 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
   chrome.action.setBadgeText({ text: badgeText });
 
   // Listener is registered asynchronously
+  // This is NOT guaranteed to work in MV3/service workers! Don't do this!
   chrome.action.onClicked.addListener(handleActionClick);
 });
 ```
@@ -86,7 +87,7 @@ that Chrome will be able to immediately find and invoke your action's click hand
 extension hasn't finished executing its async startup logic.
 
 ```js
-// service-worker.js
+// background.js
 chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
   chrome.action.setBadgeText({ text: badgeText });
 });
@@ -96,8 +97,8 @@ chrome.action.onClicked.addListener(handleActionClick);
 ```
 
 {% Aside %}
-In Manifest V3, the `chrome.browserAction` and `chrome.pageAction` APIs have been consolidated
-into a single `chrome.action` API.
+Manifest V3 consolidates `chrome.browserAction` and `chrome.pageAction` into a single
+`chrome.action` API.
 {% endAside %}
 
 ### Persisting state with storage APIs {: #state }
@@ -108,11 +109,10 @@ some work, and get terminated repeatedly throughout a user's browser session. Th
 to extension developers accustomed to long-lived background pages as application data is not
 immediately available in global variables.
 
-For example, here's an example from a simple Manifest V2 extension, which receives a name from a
-content script and persists it for later:
+The following Manifest V2 example recieves a name from a content script and persists it for later:
 
 ```js
-// service-worker-problem.js
+// background.js
 
 // Don't do this! The service worker will be created and destroyed over the lifetime of your
 // exension, and this variable will be reset.
@@ -136,7 +136,7 @@ set name will have been lost&mdash;and `savedName` will again be `undefined`.
 We can fix this bug by treating the [Storage APIs][storage] as our source of truth:
 
 ```js
-// service-worker-solution.js
+// background.js
 chrome.runtime.onMessage.addListener(({ type, name }) => {
   if (type === "set-name") {
     chrome.storage.local.set({ name });
@@ -172,7 +172,7 @@ Instead, we can use the [Alarms API][alarms]. Like other listeners, alarm listen
 registered in the top level of your script.
 
 ```js
-// service-worker.js
+// background.js
 chrome.alarms.create({ delayInMinutes: 3 });
 
 chrome.alarms.onAlarm.addListener(() => {
@@ -191,7 +191,7 @@ exposes the capabilities that web developers are used to working with: `window`,
 `cookie`, `localStorage`, etc.
 
 The [global scope for service worker][8] is significantly more limited and doesn't have many of
-these features. Most notably, service workers don't have access to the DOM. Workers no longer provide `XMLHttpRequest`, but instead support the more modern [`fetch`][fetch-link].
+these features. Most notably, service workers don't have access to the DOM. Workers no longer provide `XMLHttpRequest`, but instead support the more modern [`fetch()`][fetch-link].
 
 The following sections cover some of the major use cases impacted by the move to service workers and
 recommendations on how to adapt.
@@ -223,11 +223,12 @@ coordinate between the playback document and service worker.
 ### Rendering to a canvas {: #canvas }
 
 In some cases developers use background pages to render content for display in other contexts or to
-create and cache assets. While Service Wrkers don't have access to DOM and therefore cannot use
-`<canvas>` elements, service workers do have access to the [Offscreen Canvas API][17].
+create and cache assets. While service workers don't have access to DOM and therefore cannot use
+`<canvas>` elements, service workers do have access to the [OffscreenCanvas API][17].
 
 ```js
 // background.js
+// for MV2 background pages
 function buildCanvas(width, height) {
   const canvas = document.createElement("canvas");
   canvas.width = width;
@@ -240,7 +241,8 @@ In the above block we're constructing a canvas element. To migrate to offscreen 
 `document.createElement('canvas')` with `new OffscreenCanvas(width, height)`.
 
 ```js
-// service-worker.js
+// background.js
+// for MV3 service workers
 function buildCanvas(width, height) {
   const canvas = new OffscreenCanvas(width, height);
   return canvas;
