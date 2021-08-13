@@ -25,10 +25,10 @@ any URL that starts with a permitted scheme. Each match pattern has 3 parts:
 Here's the basic syntax:
 
 ```text
-<url-pattern> := <scheme>://<host><path>
-<scheme> := '*' | 'http' | 'https' | 'file' | 'ftp' | 'urn'
-<host> := '*' | '*.' <any char except '/' and '*'>+
-<path> := '/' <any chars>
+&lt;url-pattern> := &lt;scheme>://&lt;host>&lt;path>
+&lt;scheme> := '*' | 'http' | 'https' | 'file' | 'ftp' | 'urn'
+&lt;host> := '*' | '*.' &lt;any char except '/' and '*'>+
+&lt;path> := '/' &lt;any chars>
 ```
 
 The meaning of '`*`' depends on whether it's in the _scheme_, _host_, or _path_ part. If the
