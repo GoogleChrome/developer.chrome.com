@@ -33,7 +33,7 @@ redirects:
 - from: /docs/extensions/mv3/background_pages
   to: /docs/extensions/mv3/service_workers
 
-  - from: /docs/multidevice/android/customtabs/
+- from: /docs/multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
 
 - from: /multidevice/android/customtabs/
