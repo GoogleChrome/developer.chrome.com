@@ -8,7 +8,7 @@ description: How to implement cross-origin XHR in your Chrome Extension.
 
 {% Aside 'warning' %}
 In Manifest V3, `XMLHttpRequest` is not supported in background pages (provided by Service Workers).
-Please consider using its modern replacement, `fetch`.
+Please consider using its modern replacement, `fetch()`.
 {% endAside %}
 
 Regular web pages can use the [`XMLHttpRequest`][1] object to send and receive data from remote
