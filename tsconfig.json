@@ -32,6 +32,7 @@
     "tools/**/*",
     "types/**/*.d.ts",
     "*.js",
+    ".eleventy.js",
   ],
   "exclude": [
     ".github",

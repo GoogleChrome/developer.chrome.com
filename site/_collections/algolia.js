@@ -21,7 +21,6 @@
 
 const {createHash} = require('crypto');
 const {generateImgixSrc} = require('../_shortcodes/Img');
-const {filterDrafts} = require('../_utils/drafts');
 const {stripDefaultLocale} = require('../_filters/urls');
 const striptags = require('striptags');
 
@@ -54,7 +53,8 @@ module.exports = collections => {
   const toIndex = collections.getAllSorted().filter(item => {
     const {data} = item;
 
-    // Filter out pages we don't want to index.
+    // Filter out pages we don't want to index. This includes drafts, which we
+    // always filter (even in dev, since we're not really indexing here).
     if (
       data.disable_algolia ||
       data.noindex ||
@@ -85,11 +85,15 @@ module.exports = collections => {
     };
 
     // The item is dumped to JSON, but we can't get at the underlying post's
-    // templateContent until the rendering state of 11ty. Define a getter
-    // which will be called at the later point.
+    // templateContent until the rendering state of 11ty: the templateContent
+    // prop itself is a getter.
+    // (templateContent returns the final rendered HTML for this page, not
+    // including the layout).
+    // So, define our own getter which will work at that later point.
     Object.defineProperty(algoliaCollectionItem, 'content', {
       get() {
         // Strip HTML tags and limit to a sensible size for indexing.
+        // As stated above, there's no more Markdown in this content.
         const text = striptags(item.templateContent ?? '');
         return limitText(text);
       },

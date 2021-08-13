@@ -16,7 +16,7 @@
 
 const {defaultLocale} = require('../_data/site.json');
 const {i18n} = require('../_filters/i18n');
-const {filterDrafts} = require('../_utils/drafts');
+const {filterOutDrafts} = require('../_utils/drafts');
 
 const MAX_POSTS = 10;
 
@@ -48,7 +48,7 @@ module.exports = collection => {
   const posts = collection
     .getAllSorted()
     .reverse()
-    .filter(i => i.data.locale === defaultLocale && filterDrafts(i))
+    .filter(i => i.data.locale === defaultLocale && filterOutDrafts(i))
     .filter(item => {
       if (item.data.noindex || item.data.permalink === false) {
         return false;
