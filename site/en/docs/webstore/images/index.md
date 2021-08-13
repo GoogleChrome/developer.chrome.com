@@ -2,20 +2,20 @@
 layout: "layouts/doc-post.njk"
 title: Supplying Images
 date: 2018-06-11
-updated: 2021-08-09
+updated: 2021-08-13
 description: Guidelines about the kinds of images you need to supply to the Chrome Web Store.
 ---
 
 You need to supply several kinds of images to be used in the Chrome Web Store:
 
-- [Extension icon][1]
-- [Promotional images][2]
-- [Screenshots][3]
+- [Extension icon][icons]
+- [Promotional images][images]
+- [Screenshots][screenshots]
 
 Only the extension icon, a small promotional image, and a screenshot are mandatory. However, providing
 attractive versions of both required and optional images increases your extension's chances of getting
 noticed. For example, your extension can't be featured in marquee unless you provide a marquee promotional
-image. Follow our [Image best practices][4] to increase your chance of being featured.
+image. Follow our [Image best practices][best-practices] to increase your chance of being featured.
 
 ## Image best practices {: #best-practices }
 
@@ -29,12 +29,12 @@ image. Follow our [Image best practices][4] to increase your chance of being fea
 
 ## Extension icon {: #icons }
 
-You must provide a 128x128-pixel extension icon image in the [ZIP file of your extension][5]. Some requirements
+You must provide a 128x128-pixel extension icon image in the [ZIP file of your extension][zip-file]. Some requirements
 for the image:
 
 - The actual icon size should be **96x96** (for square icons); an additional 16 pixels per side
   should be transparent padding, adding up to 128x128 total image size. For details, see [Icon
-  size][6].
+  size][icon-size].
 - The image must be in PNG format.
 - The image should work well on both light and dark backgrounds.
 
@@ -45,7 +45,7 @@ When you design the icon, keep the following advice in mind:
   dark backgrounds.
 - Avoid large drop shadows; the UI might add shadows. It's OK to use small shadows for contrast.
 - If you have a bevel at the bottom of your icon, we recommend 4 pixels of depth.
-- Make the icon face the viewer, rather than having built-in perspective. See [Perspective][7] for
+- Make the icon face the viewer, rather than having built-in perspective. See [Perspective][icon-perspective] for
   details.
 
 Here are some icons that follow these guidelines.
@@ -69,7 +69,7 @@ Here are some icons that follow these guidelines.
 
 {% Aside 'note' %}
 
-**Note:** If you upload an image that has no alpha, it will be placed in a frame with rounded corners (12-pixel corner radius).
+If you upload an image that has no alpha, it will be placed in a frame with rounded corners (12-pixel corner radius).
 
 {% endAside %}
 
@@ -211,12 +211,12 @@ the store can use to promote your extension.
 
 {% Aside 'note' %}
 
-**Note:** Unlike [screenshots][3], promotional images are not currently locale-specific. If your extension supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the extension's capabilities, or targeting the promo images to the locale in which you have the most users.
+**Note:** Unlike [screenshots][screenshots], promotional images are not currently locale-specific. If your extension supports multiple locales, we recommend either avoiding text by focusing on graphical representations of the extension's capabilities, or targeting the promo images to the locale in which you have the most users.
 
 {% endAside %}
 
 
-**Note**: If your images refer to Google brands, follow the [Branding Guidelines][8].
+**Note**: If your images refer to Google brands, follow the [Branding Guidelines][branding].
 
 Although only a small promotional image is required, you can also supply larger promotional images
 if you'd like your extension to be featured more prominently in the Chrome Web Store. You can provide one
@@ -228,7 +228,7 @@ of each of the following:
 
 {% Aside 'note' %}
 
-**Note:** Extensions that don't have a small promotional image will be shown **after** extensions that do have that image. If your extension was published before the small promotional image was required, you should add that image so your extension can be displayed more prominently.
+Extensions that don't have a small promotional image will be shown **after** extensions that do have that image. If your extension was published before the small promotional image was required, you should add that image so your extension can be displayed more prominently.
 
 {% endAside %}
 
@@ -274,7 +274,7 @@ Marquee image (1400x560):
 
 {% Aside 'note' %}
 
-**Note:** You can find the review status of your promo image in each item's listing within your developer dashboard. Click on 'Edit' on the item's listing, and scroll down to the Promotional Images section.
+You can find the review status of your promo image in each item's listing within your developer dashboard. Click on 'Edit' on the item's listing, and scroll down to the Promotional Images section.
 
 {% endAside %}
 
@@ -298,7 +298,7 @@ To replace a promotional image, hover over the image to bring up the remove imag
 Use screenshots to convey capabilities, the look and feel, and experience of your extension to users. You must provide at **least 1**—and preferably the maximum allowed 5—screenshots of your extension to be displayed in the extension's store listing. Screenshots should demonstrate the actual user experience, focusing on the core features and content so users can anticipate what the extension's experience will be like.
 
 If your extension supports multiple locales, you can provide
-locale-specific screenshots as described in [Internationalizing Your Extension][10].
+locale-specific screenshots as described in [Internationalizing Your Extension][internationalize].
 
 When you edit your extensions's listing, mousing over a screenshot's thumbnail brings up controls that let
 you delete the screenshot or change its position.
@@ -323,15 +323,15 @@ As an example, here are two screenshot images for an extension:
 
 ## What next?
 
-Next, read [Submit your extension for publishing][11].
+Next, read [Submit your extension for publishing][submit-item].
 
-[1]: #icons
-[2]: #promo
-[3]: #screenshots
-[4]: #best-practices
-[5]: /docs/webstore/publish#create-your-items-zip-file
-[6]: #icon-size
-[7]: #icon-perspective
-[8]: /docs/webstore/branding
-[10]: /docs/webstore/i18n
-[11]: /docs/webstore/publish/#submit-your-item-for-publishing
+[best-practices]: #best-practices
+[branding]: /docs/webstore/branding
+[icons]: #icons
+[icon-perspective]: #icon-perspective
+[icon-size]: #icon-size
+[images]: #promo
+[internationalize]: /docs/webstore/i18n
+[screenshots]: #screenshots
+[submit-item]: /docs/webstore/publish/#submit-your-item-for-publishing
+[zip-file]: /docs/webstore/publish#create-your-items-zip-file
