@@ -139,14 +139,14 @@ You can set up discussion groups to communicate with your users. One way of doin
 No, you can't remove user comments. However, we encourage you to respond to user feedback in the
 comments to show that you are addressing their concerns.
 
-You may also report fake reviews via the Developer Support Form.
+You may also report fake reviews via the Developer [Support Form][cws-support].
 
 ### Is there a limit to the number of items I can have on the Chrome Web Store? {: #faq-gen-29 }
 
 You can upload as many items to the Chrome Web Store as you like, but by default, you are limited to
 having a total of 20 published items at any one time. This limit applies to the sum of your Chrome
 Apps and Chrome Extensions as a total—it is not 20 of each item. If you reach this limit, [you may
-request a limit increase][105]. The Chrome Web Store staff will review your existing items and your
+request a limit increase][cws-support]. The Chrome Web Store staff will review your existing items and your
 developer account history, and if approved, you will be granted an increase. Please note that if
 your developer account has been suspended in the past, or you have had items taken down previously
 for policy violations, or your items consistently receive low quality ratings, your request may be
@@ -193,10 +193,12 @@ quickly.
 
 ### How can I remove my listing from the store? {: #faq-listing-03 }
 
-Visit [https://chrome.google.com/webstore/developer/dashboard][115]. Click the item you want to
+Visit the [developer dashboard][dev-dashboard]. Click the item you want to
 remove from the store, so that the edit page for that item appears. Then click the "more options"
 icon in the top right-hand corner and select **Unpublish**. Your listing will no longer be visible
 in the store.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GdnJe3SsuL84LFkLODZl.png", alt="Screenshot of how to unpublish an item", width="299", height="205" %}
 
 ### What are the screenshot and text requirements for the store? {: #faq-listing-04 }
 
@@ -245,7 +247,7 @@ make your extension available in certain regions.
 There are two points where you need to localize your extension for listing in a region that isn't your
 home market.
 
-1.  Your extension package. See [Internationalizing Your App][118] for information on localizing your
+1.  Your extension package. See [Internationalizing Your App][internationalize] for information on localizing your
     extension's presence inside Chrome.
 2.  Your detailed listing. The developer dashboard now includes the ability for you to select all
     the regions that you want your application to appear in, allows you to localize the detailed
@@ -253,14 +255,14 @@ home market.
 
 ### How do I localize my detailed description? {: #faq-gen-20 }
 
-You first need to [internationalize][119] your extension and specify a "default_locale" attribute in your
+You first need to [internationalize][internationalize] your extension and specify a "default_locale" attribute in your
 manifest. Once you upload your internationalized extension, a selection box will appear at the top of your
 extension listing, allowing you to switch between languages that you support and change the detailed
 description.
 
 ### How do I show different screenshot images per region? {: #faq-gen-21 }
 
-Visit your extension page in the [Chrome Web Store Developer Dashboard][120], change the currently
+Visit your extension page in the [Chrome Web Store Developer Dashboard][dev-dashboard], change the currently
 selected language to your desired choice (for example "en-GB") and upload a screenshot as normal.
 Once the image is uploaded you will be presented with an option to "Show this item in **all**
 locales" or "Show this item **only** in the 'en-GB' locale". Select the later to show the screenshot
@@ -294,7 +296,7 @@ For more information about the developer program policies, see:
 [/webstore/program_policies][123].
 
 If your item's status says "pending review" for more than three weeks, you should [contact
-support][124].
+support][cws-support].
 
 ### Why isn't my extension showing up on search? {: #faq-listing-09 }
 
@@ -318,7 +320,7 @@ or egregious policy violations may result in termination of your developer accou
 - Please do not re-publish a removed extension until the policy violation has been remedied. If
   you have additional questions or feel your item was wrongly removed, you can reply directly to the
   removal email and appeal.
-- If you believe your developer account was wrongly terminated, you can appeal [here][131]. We will
+- If you believe your developer account was wrongly terminated, you can appeal [here][cws-support]. We will
   only reinstate accounts if an error was made, and a re-review finds that your account does not
   violate the developer terms.
 
@@ -332,7 +334,7 @@ is no way to enter the information into your listing.
 ## Additional Troubleshooting
 
 If you've fixed all errors produced by the tools and continue experiencing issues, please [contact
-us][158] with any additional details regarding the problem. Please send us a screenshot of the
+us][cws-support] with any additional details regarding the problem. Please send us a screenshot of the
 problem and include your .crx file.
 
 ### How can I raise P2B concerns?
@@ -441,54 +443,28 @@ Business related issues by contacting CWS support.
 [102]: /docs/webstore/terms
 [103]: /docs/webstore/intl/en/program_policies.html
 [104]: http://groups.google.com
-[105]: https://support.google.com/chrome_webstore/contact/developer_support
 [106]: /docs/webstore/program_policies
 [110]: https://chrome.google.com/webstore/devconsole
 [111]: http://code.google.com/chrome/extensions/packaging.html
 [112]: http://code.google.com/chrome/extensions/autoupdate.html
 [114]: #faq-listing-108
-[115]: https://chrome.google.com/webstore/developer/dashboard
 [116]: images
 [117]:
   http://groups.google.com/group/chromium-extensions/browse_thread/thread/defbf282d11a8cc4/a2d1aedb84bc60b9
-[118]: /docs/webstore/i18n
-[119]: /docs/webstore/i18n
-[120]: https://chrome.google.com/webstore/developer/dashboard
 [121]: #faq-listing-108
 [122]: https://www.google.com/about/company/unwanted-software-policy.html
 [123]: /docs/webstore/program_policies
-[124]: https://support.google.com/chrome_webstore/contact/developer_support/?hl=en
+
 [125]: /docs/extensions/mv3/manifestVersion
-[126]: http://blog.chromium.org/2013/09/saying-goodbye-to-our-old-friend-npapi.html
 [127]: https://support.google.com/chrome_webstore/answer/1254182?hl=en&ref_topic=1734051
 [128]: /docs/webstore/program_policies
 [129]: /docs/webstore/branding
 [130]: /docs/webstore/terms
-[131]: https://support.google.com/chrome_webstore/contact/cws_dev_appeals
-[133]: //developers.google.com/wallet/digital/docs/
-[134]: /docs/webstore/check_for_payment
-[135]: https://developers.google.com/commerce/wallet/digital/
-[136]: https://developers.google.com/chrome/web-store/docs/payments-otp#verifying-payment
-[137]: /docs/webstore/pricing#seller
-[138]: /docs/webstore/pricing#seller
-[139]: https://chrome.google.com/webstore/developer/dashboard
-[140]: /docs/webstore/pricing#matrix
-[142]: #faq-app-02
-[143]: https://support.google.com/adsense/answer/48182?hl=en&ref_topic=1261918
-[144]: /apps/analytics
-[145]: https://developers.google.com/analytics/devguides/collection/analyticsjs/
-[146]: http://www.html5rocks.com/tutorials/appcache/beginner/
-[147]: http://www.w3.org/TR/FileAPI/
-[148]: http://googlechromereleases.blogspot.com/
-[149]: http://www.html5rocks.com/tutorials/offline/whats-offline/
-[150]: https://developers.google.com/chrome/apps/
-[151]: http://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html
-[152]: http://updates.html5rocks.com/2011/10/Let-Your-Content-Do-the-Talking-Fullscreen-API
-[153]: https://developers.google.com/chrome/web-store/docs/payments-otp
-[154]: https://developers.google.com/chrome/web-store/docs/payments-otp#verifying-payment
-[156]: https://developers.google.com/chrome/web-store/docs/payments-otp
-[158]: https://support.google.com/chrome_webstore/contact/developer_support/?hl=en
 
 [apps]: /docs/apps/
+[cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
 [ext]: /docs/extensions/
+[dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
+[internationalize]: /docs/webstore/i18n
 [themes]: /docs/extensions/mv3/themes/
+
