@@ -47,11 +47,10 @@
     </div>
   {% endif %}
 
-  {% if pd.authors and pd.authors.length %}
-    <div class="gap-top-300">
-      {{ cardAuthors(pd.authors, pd.date) }}
-    </div>
-  {% endif %}
+  {# Always render "authors" even with zero authors, as this renders the date #}
+  <div class="gap-top-300">
+    {{ cardAuthors(pd.authors, pd.date) }}
+  </div>
 
 </div>
 {% endmacro %}
