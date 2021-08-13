@@ -1,27 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-
-# The page title. This appears at the top of the doc and as the page name
-# in Google Search.
 title: Migrating to Manifest V3
-
-# This appears below the title and is an optional teaser
 subhead: 'Getting you headed in the right direction.'
-
-# This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in
-# Google Search.
 description: 'A high-level guide to how you can migrate your MV2 extensions to MV3.'
-
-# The publish date
 date: 2020-11-09
-
-# An optional updated date
-# updated: 2020-10-16
-
-# A list of authors. These usernames correspond to the keys in the
-# _data/authorsData.json file.
-
+updated: 2021-08-13
 ---
 
 This guide provides developers with the information they need to begin
@@ -183,7 +166,6 @@ and `page_action`. These APIs filled distinct roles when they were introduced,
 but over time they've become redundant so in MV3 we are unifying them into as
 single `action` API:
 
-
 {% Columns %}
 ```js
 // Manifest V2
@@ -212,12 +194,6 @@ chrome.pageAction.onClicked.addListener(tab => { … });
 chrome.action.onClicked.addListener(tab => { … });
 ```
 {% endColumns %}
-
-{% Aside %}
-In order to aid with the migration process, the Action API can be used in MV2
-beginning with Chrome 88.
-{% endAside %}
-
 
 ### Web-accessible resources  {: #web-accessible-resources }
 
@@ -312,7 +288,7 @@ resubmitting to the Chrome Web Store.
 
 
 In Manifest V2 it was possible to execute an arbitrary string of code using
-[`tabs.executeScript`][/docs/extensions/reference/tabs/#method-executeScript] and the `code`
+[`tabs.executeScript`](/docs/extensions/reference/tabs/#method-executeScript and the `code`
 property on the options object. Manifest V3 does not allow arbitrary code execution. In order to
 adapt to this requirement, extension developers can either use the
 [`scripting.executeScript`](/docs/extensions/reference/scripting/#method-executeScript) API to
@@ -352,7 +328,9 @@ alert('File test alert');
 {% endColumns %}
 
 If you need more dynamism, the new `func` property allows you to inject a function as a content
-script and pass variables using the `args` property.
+script and pass variables using the `args` property. Note that the function is not run as if it
+was located within the content script; rather, its source is sent to the target tab and it is run
+there.
 
 {% Columns %}
 ```js
@@ -380,7 +358,7 @@ let name = 'World';
 chrome.scripting.executeScript({
   target: {tabId: tab.id},
   func: showAlert,
-  args: [name]
+  args: [name],
 });
 ```
 {% endColumns %}
