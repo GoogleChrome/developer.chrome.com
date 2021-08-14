@@ -52,7 +52,7 @@ The script used for `"service_worker"` must be located in your extension's root 
 {% endAside %}
 
 You can optionally specify an extra field of `"type": "module"` to include the service worker as an
-ES Module, which allows you to `import` futher code. See [ES modules in service workers][sw-module]
+ES Module, which allows you to `import` further code. See [ES modules in service workers][sw-module]
 for more information. For example:
 
 ```json/2-3
