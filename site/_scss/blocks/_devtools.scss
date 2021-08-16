@@ -1,38 +1,24 @@
 // These styles exist for DevTools' tutorial. They're removed in other files.
 
-input.devtools-css-check {
-  color: blue;
-
-  &:invalid {
-    background: red;
-    color: white;
-  }
-
-  &:valid::after {
-    padding-left: 0.5ch;
-    content: 'Correct!';
-  }
-}
-
 .devtools-css-check {
   input {
-    color: blue;
+    color: #00f;
 
     &:invalid {
-      background: red;
-      color: white;
+      background: #c00;
+      color: #fff;
     }
   }
 
   input:not(:invalid) + span::after {
-    padding-left: 0.5ch;
     content: 'Correct!';
+    padding-left: 0.5ch;
   }
 }
 
-p.aloha {
+.aloha {
+  border: 1px dashed #f00;
   display: inline-block;
-  border: 1px dashed red;
   padding: 1em;
 
   &.hover {
@@ -42,24 +28,31 @@ p.aloha {
   }
 }
 
+// stylelint-disable color-named
 @keyframes rainbow {
   0% {
     background: violet;
   }
+
   25% {
     background: orange;
   }
+
   50% {
     background: yellow;
   }
+
   75% {
     background: blue;
   }
+
   100% {
     background: violet;
   }
 }
+
+// stylelint-disable selector-class-pattern
 .color_me {
-  background: yellow;
   animation: rainbow 10s linear infinite;
+  background: yellow;
 }
