@@ -123,8 +123,9 @@ for instructions.
 
 ### Chrome 94
 
-Starting in Chrome 93, non-secure contexts (broadly, websites that are not
-delivered over HTTPS) are forbidden from making requests to the private network.
+Starting in Chrome 94, public non-secure contexts (broadly, websites that are not
+delivered over HTTPS or from a private IP address) are forbidden from making requests
+to the private network.
 This was previously planned for Chrome 92, hence deprecation messages might
 still mention the earlier milestone.
 
