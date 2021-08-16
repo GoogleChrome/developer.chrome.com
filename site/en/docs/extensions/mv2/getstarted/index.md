@@ -328,6 +328,11 @@ The extension is now fully functional! Reload the extension, refresh this page, 
 click the button to turn it green! However, some users may want to change the background to a
 different color.
 
+{% Aside 'gotchas' %}
+You can't script any internal Chrome page, like "chrome://extensions". Be sure to try out the
+extension on a real webpage, like https://google.com.
+{% endAside %}
+
 ## Give users options {: #options }
 
 The extension currently only allows users to change the background to green. Including an options
