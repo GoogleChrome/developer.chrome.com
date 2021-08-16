@@ -55,7 +55,7 @@ You can optionally specify an extra field of `"type": "module"` to include the s
 ES Module, which allows you to `import` further code. See [ES modules in service workers][sw-module]
 for more information. For example:
 
-```json/2-3
+```json/2-2
   "background": {
     "service_worker": "background.js",
     "type": "module"
