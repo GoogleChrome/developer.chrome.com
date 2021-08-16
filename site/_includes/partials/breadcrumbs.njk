@@ -12,10 +12,26 @@
           {{ icon('keyboard-arrow-right', {hidden: true}) }}
         {%- endif %}
 
-        {% if part.url %}
-          <a class="link type--h6 decoration-none no-visited" href="{{ part.url }}">{{ part.title }}</a>
+        {% if headingBreadcrumb and loop.last %}
+          {# This is the last segment and we need to be a large <h1>. #}
+
+          {% if part.url %}
+            <h1 class="type--h5"><a class="link decoration-none no-visited" href="{{ part.url }}">{{ part.title }}</a></h1>
+          {% else %}
+            <h1 class="type--h5">{{ part.title }}</h1>
+          {% endif %}
+
         {% else %}
-          <span class="type--h5">{{ part.title }}</span>
+          {# This is a normal segment. #}
+
+          {% if part.url %}
+            <a class="link type-h6 decoration-none no-visited" href="{{ part.url }}">{{ part.title }}</a>
+          {% elif not loop.last %}
+            <span class="type-h6">{{ part.title }}</span>
+          {% else %}
+            {# This is the last text item of a segment, so make it large. #}
+            <span class="type-h5">{{ part.title }}</span>
+          {% endif %}
         {% endif %}
 
       {%- endfor %}
