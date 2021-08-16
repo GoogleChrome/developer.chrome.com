@@ -17,7 +17,7 @@ tags:
 
 ## Why did we make CSS Grid Tooling?
 
-[CSS Grid](https://web.dev/learn/css/grid/) is a very powerful CSS layout system that allows web developers to build a complex two-dimensional layout and set out rules about how each and every child item in a grid is sized, aligned, and ordered. CSS Grid was introduced after Flexbox became popular, and together, they can help developers achieve better responsive design without complicated alignment hacks or JavaScript-assisted layout.
+[CSS Grid](https://web.dev/learn/css/grid/) is a very powerful CSS layout system that allows web developers to build a complex two-dimensional layout and set out rules about how each and every child item in a grid is sized, aligned, and ordered. CSS Grid was introduced after [Flexbox](https://web.dev/learn/css/flexbox/) became popular, and together, they can help developers achieve better responsive design without complicated alignment hacks or JavaScript-assisted layout.
 
 As a relatively new layout system, CSS Grid is also hard to get right. Its syntax is quite versatile (just search *grid cheatsheet*), there are many ways to achieve the same layout, and flexible sizing and implicit tracks make it harder to reason about why the layout *is* or *isn’t* behaving as it should. This is why we set out to provide dedicated CSS Grid tooling in DevTools, so that developers can have a better understanding of what their CSS code is doing, and how to get to the right layout.
 
@@ -25,7 +25,7 @@ As a relatively new layout system, CSS Grid is also hard to get right. Its synta
 
 ### A joint effort between Chrome and Edge
 
-CSS Grid Tooling captured attention from both Chrome DevTools and Edge DevTools. We decided to collaborate from the beginning. We shared our product, engineering, and design resources from both teams, and coordinated weekly to make this happen.
+CSS Grid tooling captured attention from both Chrome DevTools and Edge DevTools. We decided to collaborate from the beginning. We shared our product, engineering, and design resources from both teams, and coordinated weekly to make this happen.
 
 ### Summary of features
 
@@ -34,7 +34,7 @@ There are three main features for CSS Grid tooling:
 1. Grid-specific, persistent overlay that helps with dimensional and ordering information
 2. Badges in the DOM Tree that  highlight CSS Grid containers and toggle Grid overlays
 3. A sidebar pane that allows developers to personalize the display of DOM overlays (e.g., changing the color and width of rules)
-4. A CSS Grid editor in the Styles pane
+4. A CSS Grid editor in the **Styles** pane
 
 Let’s take a deeper look at them next.
 
@@ -125,11 +125,11 @@ We then send a polling request, and when there are *tracked* style updates for D
 
 ## Layout pane
 
-Although DOM Tree badges help the discoverability of CSS Grids, sometimes we want to see a list of all the CSS Grids in a certain page, and easily toggle their persistent overlays on and off to debug their layouts. Therefore, we decided to create a dedicated sidebar pane just for layout toolings. This gives us a dedicated space to gather all the Grid containers, and to configure all the options for Grid overlays. This Layout pane also enables us to put future layout-heavy toolings (e.g. Flexbox, Container Queries) here as well.
+Although DOM Tree badges help the discoverability of CSS Grids, sometimes we want to see a list of all the CSS Grids in a certain page, and easily toggle their persistent overlays on and off to debug their layouts. Therefore, we decided to create a dedicated sidebar pane just for layout toolings. This gives us a dedicated space to gather all the Grid containers, and to configure all the options for Grid overlays. This **Layout** pane also enables us to put future layout-heavy toolings (e.g. [Flexbox](/blog/new-in-devtools-90#flexbox), [Container queries](/blog/new-in-devtools-93/#container-queries)) here as well.
 
 ### Find elements by computed styles
 
-In order to show the list of CSS Grid containers in the Layout pane, we need to find DOM nodes by computed styles. This turned out to be not straightforward either, because not all the DOM nodes are known to DevTools when DevTools is open. Instead, DevTools only knows a *small* subset of nodes, usually at the top level of the DOM hierarchy, just to get Devtools DOM Tree started. For performance reasons, other nodes will only be fetched upon further request. This means that we need [a new CDP command](https://chromium-review.googlesource.com/c/chromium/src/+/2340975) to collect all the nodes in the page and filter them by their computed styles:
+In order to show the list of CSS Grid containers in the **Layout** pane, we need to find DOM nodes by computed styles. This turned out to be not straightforward either, because not all the DOM nodes are known to DevTools when DevTools is open. Instead, DevTools only knows a *small* subset of nodes, usually at the top level of the DOM hierarchy, just to get Devtools DOM Tree started. For performance reasons, other nodes will only be fetched upon further request. This means that we need [a new CDP command](https://chromium-review.googlesource.com/c/chromium/src/+/2340975) to collect all the nodes in the page and filter them by their computed styles:
 
 ```
 # Finds nodes with a given computed style in a subtree.
@@ -151,4 +151,4 @@ This enables DevTools frontend to get a list of CSS Grid containers in a page, p
 
 ## Conclusion
 
-CSS Grid tooling was one of the first DevTools design tooling projects to support a Web Platform feature. It debuted many fundamental toolings in DevTools, e.g. persistent overlays, DOM Tree badges, and the Layout pane, and paved the way for future layout toolings in Chrome DevTools like Flexbox and Container Queries. It also laid the foundation for Grid and Flexbox editors, which allow developers to change Grid and Flexbox alignments in an interactive way. We'll go through them in the future.
+CSS Grid tooling was one of the first DevTools design tooling projects to support a Web Platform feature. It debuted many fundamental toolings in DevTools, e.g. persistent overlays, DOM Tree badges, and the **Layout** pane, and paved the way for future layout toolings in Chrome DevTools like Flexbox and Container queries. It also laid the foundation for Grid and Flexbox editors, which allow developers to change Grid and Flexbox alignments in an interactive way. We'll go through them in the future.
