@@ -28,8 +28,8 @@ allowing attackers to redirect them to malicious servers.
 
 Chrome will introduce the following changes:
 
-* Blocking requests to private networks from insecure websites starting in
-  Chrome 93.
+* Blocking requests to private networks from insecure public websites starting in
+  Chrome 94.
 * Introducing a [Deprecation Trial](#whats-deprecation-trial) which will end in Chrome
   99. It will allow developers to request a time extension for chosen origins,
   which will not be affected during the Deprecation Trial.
