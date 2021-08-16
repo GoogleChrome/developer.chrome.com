@@ -28,12 +28,13 @@ function getLinkActiveState(itemUrl, pageUrl) {
 }
 
 /**
- * @type {{
- *   sections?: Section[],
+ * @typedef {{
+ *   sections?: SectionLinkItem[],
  *   url?: string,
  *   parent: SectionLinkItem|undefined,
  *   active: boolean,
  * }}
+ * @type {{never}}
  */
 // eslint-disable-next-line no-unused-vars
 let SectionLinkItem;
@@ -57,12 +58,14 @@ function expandSections(sections, pageUrl, locale) {
   let target;
   let matchLength = 0;
 
+  /** @type {(curr: SectionLinkItem) => boolean} */
   const internalExpand = curr => {
     if (curr.url) {
       const check = path.join('/', locale, '/', curr.url, '/');
       if (check === pageUrl) {
         target = curr;
         matchLength = pageUrl.length;
+        return true; // exact match
       }
 
       // If we don't have an exact match, update the best match.
@@ -76,8 +79,11 @@ function expandSections(sections, pageUrl, locale) {
 
     for (const section of curr.sections ?? []) {
       section.parent = curr;
-      internalExpand(section);
+      if (internalExpand(section)) {
+        return true;
+      }
     }
+    return false;
   };
 
   // We clone the input sections so they're not modified for the next page.
