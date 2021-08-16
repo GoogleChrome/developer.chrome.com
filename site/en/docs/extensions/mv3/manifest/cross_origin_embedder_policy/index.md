@@ -7,13 +7,13 @@ description: Reference documentation for the cross_origin_embedder_policy proper
 ---
 
 The `cross_origin_embedder_policy` manifest key allows the extension to specify a value for the
-[Cross-Origin-Embedder-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)
+[Cross-Origin-Embedder-Policy][mdn-coep]
 (COEP) response header for requests to the extension's origin.  This includes the extension's
 background context (service worker or background page), popup, options page, tabs that are open to
 an extension resource, etc. 
 
-Together with the `cross_origin_opener_policy` manifest key, this key allows the extension to opt
-into cross-origin isolation.
+Together with the [cross_origin_opener_policy] manifest key, this key allows the extension to opt
+into [cross-origin isolation][coi-overview].
 
 
 ## Manifest declaration 
@@ -36,5 +36,10 @@ which the extension can use to specify the response header value. For example:
 }
 ```
 
-See the [Cross-origin isolation overview](/docs/extensions/mv3/cross-origin-isolation) for more
+See the [Cross-origin isolation overview][coi-overview] for more
 information about using this key.
+
+
+[coi-overview]: /docs/extensions/mv3/cross-origin-isolation/
+[cross_origin_opener_policy]: /docs/extensions/mv3/manifest/cross_origin_opener_policy/
+[mdn-coep]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy

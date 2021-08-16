@@ -13,7 +13,7 @@ specifying the appropriate values for [cross_origin_embedder_policy][coep-refdoc
 example will allow the extension to opt into cross-origin isolation for its origin.
 
 
-```js
+```json
 {
     "name": "CrossOriginIsolation",
     "manifest_version": 3,
