@@ -8,6 +8,9 @@
   {% set title = item | replace('-', ' ') | capitalize %}
 {% elif supportedTags[item] and supportedTags[item].title%}
   {% set title = supportedTags[item].title | i18n(locale) %}
+{% else %}
+  {# Fall back to the raw text of the tag. #}
+  {% set title = item %}
 {% endif %}
 
 {% if title and url %}
