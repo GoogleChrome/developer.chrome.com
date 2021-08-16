@@ -21,13 +21,13 @@ the wallpaper API. For example:
 ## Examples
 
 For example, to set the wallpaper as the image at
-`http://example.com/a_file.png`, you can call `chrome.wallpaper.setWallpaper`
+`https://example.com/a_file.png`, you can call `chrome.wallpaper.setWallpaper`
 this way:
 
 ```js
 chrome.wallpaper.setWallpaper(
   {
-    'url': 'http://example.com/a_file.jpg',
+    'url': 'https://example.com/a_file.jpg',
     'layout': 'CENTER_CROPPED',
     'filename': 'test_wallpaper'
   },

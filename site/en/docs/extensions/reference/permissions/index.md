@@ -34,15 +34,15 @@ using the same format as the [permissions][2] field:
 {
   "name": "My extension",
   ...
-  "optional_permissions": [ "tabs", "http://www.google.com/" ],
+  "optional_permissions": ["tabs"],
+  "host_permissions": ["https://www.google.com/"],
   ...
 }
 ```
 
-If you want to request hosts that you only discover at runtime, include `"http://*/"` and/or
-`"https://*/"` in your Manifest V2 extension's `optional_permission` field or in your Manifest V3
-extension's `host_permissions` field. This lets you specify any origin in [Permissions.origins][3]
-as long as it has a matching scheme.
+If you want to request hosts that you only discover at runtime, include `"https://*/"` in your
+in your Manifest V3 extension's `host_permissions` field (or `optional_permissions` for Manifest
+V2). This lets you specify any origin in [Permissions.origins][3] as long as it has a matching scheme.
 
 **Permissions that can _not_ be specified as optional**
 
@@ -56,21 +56,23 @@ Most Chrome extension permissions can be specified as optional, with the followi
     </tr>
     <tr id="debugger">
       <td><code>"debugger"</code></td>
-      <td>The <a href="debugger">chrome.debugger</a> API serves as an alternate transport for
-        Chrome's <a href="/devtools/docs/debugger-protocol">remote debugging protocol </a>.</td>
+      <td>The <a href="../debugger">chrome.debugger</a> API serves as an alternate transport for
+        Chrome's <a href="https://chromedevtools.github.io/devtools-protocol/">remote debugging
+        protocol</a>.</td>
     </tr>
     <tr id="declarativeNetRequest">
       <td><code>"declarativeNetRequest"</code></td>
-      <td>Grants the extension access to the <a
-          href="declarativeNetRequest">chrome.declarativeNetRequest</a> API.</td>
+      <td>Grants the extension access to the
+        <a href="../declarativeNetRequest">chrome.declarativeNetRequest</a> API.</td>
     </tr>
     <tr id="devtools">
       <td><code>"devtools"</code></td>
-      <td>Allows extension to expand <a href="devtools">Chrome DevTools</a> functionality.</td>
+      <td>Allows extension to expand <a href="/docs/extensions/mv3/devtools/">Chrome DevTools</a>
+        functionality.</td>
     </tr>
     <tr id="experimental">
       <td><code>"experimental"</code></td>
-      <td><strong><a href="http://tools.google.com/dlpage/chromesxs">Canary</a> and <a
+      <td><strong><a href="https://www.google.com/chrome/canary/">Canary</a> and <a
             href="https://www.chromium.org/getting-involved/dev-channel">Dev channel</a>
           only.</strong> Grants the extension access to <a
           href="experimental">chrome.experimental</a> APIs.</td>
@@ -82,25 +84,25 @@ Most Chrome extension permissions can be specified as optional, with the followi
     </tr>
     <tr id="mdns">
       <td><code>"mdns"</code></td>
-      <td>Grants the extension access to the <a href="mdns">chrome.mdns</a> API.</td>
+      <td>Grants the extension access to the <a href="../mdns">chrome.mdns</a> API.</td>
     </tr>
     <tr id="proxy">
       <td><code>"proxy"</code></td>
-      <td>Grants the extension access to the <a href="mdns">chrome.proxy</a> API to manage Chrome's
-        proxy settings.</td>
+      <td>Grants the extension access to the <a href="../proxy">chrome.proxy</a> API to manage
+        Chrome's proxy settings.</td>
     </tr>
     <tr id="tts">
       <td><code>"tts"</code></td>
-      <td>The <a href="tts">chrome.tts</a> API plays synthesized text-to-speech (TTS).</td>
+      <td>The <a href="../tts">chrome.tts</a> API plays synthesized text-to-speech (TTS).</td>
     </tr>
     <tr id="ttsEngine">
       <td><code>"ttsEngine"</code></td>
-      <td>The <a href="ttsEngine">chrome.ttsEngine</a> API implements a text-to-speech(TTS) engine
-        using an extension.</td>
+      <td>The <a href="../ttsEngine">chrome.ttsEngine</a> API implements a text-to-speech (TTS)
+        engine using an extension.</td>
     </tr>
     <tr id="wallpaper">
       <td><code>"wallpaper"</code></td>
-      <td><strong>ChromeOS only</strong>. Use the <a href="ttsEngine">chrome.wallpaper</a> API
+      <td><strong>ChromeOS only</strong>. Use the <a href="../wallpaper">chrome.wallpaper</a> API
         change the ChromeOS wallpaper.</td>
     </tr>
   </tbody>
@@ -114,13 +116,13 @@ their warnings.
 Request the permissions from within a user gesture using `permissions.request()`:
 
 ```js
-document.querySelector('#my-button').addEventListener('click', function(event) {
+document.querySelector('#my-button').addEventListener('click', (event) => {
   // Permissions must be requested from inside a user gesture, like a button's
   // click handler.
   chrome.permissions.request({
     permissions: ['tabs'],
-    origins: ['http://www.google.com/']
-  }, function(granted) {
+    origins: ['https://www.google.com/']
+  }, (granted) => {
     // The callback argument will be true if the user granted the permissions.
     if (granted) {
       doSomething();
@@ -145,8 +147,8 @@ To check whether your extension has a specific permission or set of permissions,
 ```js
 chrome.permissions.contains({
   permissions: ['tabs'],
-  origins: ['http://www.google.com/']
-}, function(result) {
+  origins: ['https://www.google.com/']
+}, (result) => {
   if (result) {
     // The extension has the permissions.
   } else {
@@ -163,8 +165,8 @@ calling `permissions.request()` usually adds the permission back without prompti
 ```js
 chrome.permissions.remove({
   permissions: ['tabs'],
-  origins: ['http://www.google.com/']
-}, function(removed) {
+  origins: ['https://www.google.com/']
+}, (removed) => {
   if (removed) {
     // The permissions have been removed.
   } else {

@@ -143,8 +143,8 @@ Find more information about open web platform APIs and technologies for mobile o
 ## Known issues
 
 Development is still underway, and there are many additional features being added to Google Chrome
-for Android. For current status, see the issues list at [mcrbug.com][44] and star the ones you need
-the most. If you find a new issue, log it using [new.mcrbug.com][45].
+for Android. For current status, see the issues list at [crbug.com][44] and star the ones you need
+the most. If you find a new issue, log it using [new.crbug.com][45].
 
 ## Share your thoughts
 
@@ -194,6 +194,6 @@ Overflow][46] using the `[google-chrome]` and `[android]` tags.
 [41]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 [42]: http://chromestatus.com/
 [43]: https://web.dev/responsive-web-design-basics/
-[44]: http://mcrbug.com
-[45]: http://new.mcrbug.com
+[44]: https://crbug.com
+[45]: https://new.crbug.com
 [46]: http://stackoverflow.com/questions/tagged/google-chrome+android
