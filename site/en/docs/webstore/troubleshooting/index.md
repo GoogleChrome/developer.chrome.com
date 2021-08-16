@@ -20,7 +20,8 @@ Corresponds to notification ID: Purple Potassium
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][1]:
 
-```text
+{% Aside %}
+
 Use of Permissions
 
 Request access to the narrowest permissions necessary to implement your Product's features or
@@ -29,7 +30,8 @@ with the least access to data or functionality.
 
 Don't attempt to "future proof" your Product by requesting a permission that might benefit
 services or features that have not yet been implemented.
-```
+
+{% endAside %}
 
 This policy is to prevent excessive and unnecessary access to user data by extensions.
 
@@ -50,7 +52,8 @@ Corresponds to notification ID: Yellow Zinc
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][2]:
 
-```text
+{% Aside %}
+
 Content Policies
 
 ⋮
@@ -58,7 +61,8 @@ Content Policies
 If your Product has a blank description field or is missing an icon or screenshots, it will be
 rejected. If any of your Product's content, title, icon, description or screenshots contains false
 or misleading information, we may remove it.
-```
+
+{% endAside %}
 
 This policy is to ensure quality of the products on the Chrome Web Store and for users to know about
 the product that they are downloading before they download.
@@ -82,7 +86,8 @@ Corresponds to notification ID: Red Nickel/Red Potassium/Red Silicon
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][3]:
 
-```text
+{% Aside %}
+
 Impersonation or Deceptive Behavior:
 
 Don't pretend to be someone else, and don't represent that your product is authorized by, endorsed
@@ -106,7 +111,8 @@ Product they are adding. For example, Products should not contain:
 If your Product has a blank description field or is missing an icon or screenshots, it will be
 rejected. If any of your Product's content, title, icon, description or screenshots contains false
 or misleading information, we may remove it.
-```
+
+{% endAside %}
 
 This policy is to prevent extensions that are deceiving or misleading the users.
 
@@ -141,7 +147,8 @@ Corresponds to notification ID: Purple Lithium
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][4]:
 
-```text
+{% Aside %}
+
 Posting a Privacy Policy & Secure Transmission
 
 If your Product handles personal or sensitive user data (including personally identifiable
@@ -151,7 +158,8 @@ personal communications), then your Product must:
 
 - Post a privacy policy, and
 - Handle the user data securely, including transmitting it via modern cryptography.
-```
+
+{% endAside %}
 
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
@@ -182,14 +190,16 @@ Corresponds to notification ID: Grey Zinc
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][5]:
 
-```text
+{% Aside %}
+
 Illegal Activities:
 
 Keep it legal. Don't engage or promote unlawful activities in your Product, such as rape, illegal
 sex work, or the sale of prescription drugs without a prescription. We will remove content which
 promotes, glorifies, or encourages dangerous or illegal activity that may result in physical harm
 to those involved.
-```
+
+{% endAside %}
 
 This policy is to prevent the use of extensions and the Chrome Web Store as a platform for illegally
 selling drugs
@@ -212,13 +222,15 @@ Corresponds to notification ID: Grey Copper
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][6]:
 
-```text
+{% Aside %}
+
 Gambling:
 
 We don't allow content or services that facilitate online gambling, including but not limited to
 online casinos, sports betting, lotteries, or games of skill that offer prizes of cash or other
 value.
-```
+
+{% endAside %}
 
 Do not post content or provide services that facilitate online gambling.
 
@@ -243,7 +255,8 @@ Corresponds to notification ID: Grey Lithium
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][7]:
 
-```text
+{% Aside %}
+
 Sexually Explicit Material:
 
 We don't allow content that contains nudity, graphic sex acts, sexually explicit material, or
@@ -255,7 +268,8 @@ those involved with the distribution.
 
 Content which contains non-sexual nudity - such as artistic, educational, scientific, or cultural
 nudity - is generally allowed, but may impact the visibility of your Product.
-```
+
+{% endAside %}
 
 This policy is to prevent the use of extensions and the Chrome Web Store as a platform for
 pornography.
@@ -279,7 +293,8 @@ Corresponds to notification ID: Grey Magnesium
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][8]:
 
-```text
+{% Aside %}
+
 Hate Speech:
 
 We don't allow content advocating against or inciting hatred towards groups of people based on
@@ -289,7 +304,8 @@ systematic discrimination or marginalization.
 
 Additionally, the visibility of your Product may be impacted if it contains generally hateful
 content not covered by the above definition.
-```
+
+{% endAside %}
 
 This policy is to prevent the use of extensions and the Chrome Web Store as a platform to spread
 hateful content.
@@ -313,7 +329,8 @@ Corresponds to notification ID: Grey Nickel
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][9]:
 
-```text
+{% Aside %}
+
 Content Policies:
 
 Our content policies apply to your Product's content, including any ads it shows to users and any
@@ -321,7 +338,8 @@ user-generated content it hosts or links to. Further, they apply to any content 
 developer account that is publicly displayed in Chrome Web Store, including your developer name
 and the landing page of your listed developer website. Products that include content that may not
 be suitable for all ages should be marked "Mature" on the Developer Dashboard.
-```
+
+{% endAside %}
 
 This policy is to prevent non-family-safe content from reaching an inappropriate audience.
 
@@ -342,7 +360,8 @@ Corresponds to notification ID: Grey Potassium
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][10]:
 
-```text
+{% Aside %}
+
 Violent or Bullying Behavior:
 
 Depictions of gratuitous violence are not allowed. Products should not contain materials that
@@ -356,7 +375,8 @@ threaten, harass, or bully other users. For example, Products should not contain
   a person's sexual activities, sexual orientation, or gender identity.
 - A series of posts/comments/photos that, taken together, clearly have the primary intention of
   harassment, even if each individual piece of content is not severe.
-```
+
+{% endAside %}
 
 This policy is to prevent the use of extensions and the Chrome Web Store as a platform to spread the
 content mentioned in the policy text above
@@ -379,7 +399,8 @@ Corresponds to notification ID: Red Magnesium/Red Copper/Red Lithium
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][11]:
 
-```text
+{% Aside %}
+
 Extensions Quality Guidelines
 
 An extension must have a single purpose that is narrow and easy-to-understand. Do not create an
@@ -392,7 +413,8 @@ should have the ability to install and uninstall them separately. Common violati
   delivered as separate extensions, so that users can select the services they want.
 - Email notifiers combined with a news aggregator.
 - PDF converters which also aim to change a users default search engine.
-```
+
+{% endAside %}
 
 This policy is aimed at maintaining the quality of extensions on the Chrome Web Store. As mentioned
 in the policy text, if there are multiple unrelated functionalities, they should be provided in
@@ -420,7 +442,8 @@ Corresponds to notification ID: Purple Nickel
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][12]:
 
-```text
+{% Aside %}
+
 Prominent Disclosure Requirement
 
 If your Product handles personal or sensitive user data that is not closely related to
@@ -429,7 +452,8 @@ then prior to the collection, it must:
 
 - Prominently disclose how the user data will be used, and
 - Obtain the user's affirmative consent for such use
-```
+
+{% endAside %}
 
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
@@ -455,7 +479,8 @@ Corresponds to notification ID: Purple Copper
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][13]:
 
-```text
+{% Aside %}
+
 Posting a Privacy Policy & Secure Transmission
 
 If your Product handles personal or sensitive user data (including personally identifiable
@@ -465,7 +490,8 @@ personal communications), then your Product must:
 
 - Post a privacy policy, and
 - Handle the user data securely, including transmitting it via modern cryptography.
-```
+
+{% endAside %}
 
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
@@ -489,7 +515,8 @@ Corresponds to notification ID: Purple Magnesium
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][14]:
 
-```text
+{% Aside %}
+
 Other Requirements
 
 The following types of personal or sensitive user data are also subject to additional
@@ -500,7 +527,8 @@ requirements:
 - Web Browsing Activity—Collection and use of web browsing activity is prohibited except to the
   extent required for a user-facing feature described prominently in the Product's Chrome Web
   Store page and in the Product's user interface.
-```
+
+{% endAside %}
 
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
@@ -526,7 +554,8 @@ Corresponds to notification ID: Grey Silicon
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][15]:
 
-```text
+{% Aside %}
+
 Prohibited Products:
 
 We don't allow Products or services that:
@@ -536,7 +565,8 @@ We don't allow Products or services that:
 - Encourage, facilitate, or enable the unauthorized access, download, or streaming of copyrighted
   content or media
 - Mine cryptocurrency
-```
+
+{% endAside %}
 
 This policy is to prevent the use of extensions and the Chrome Web Store as a platform to mine
 cryptocurrencies.
@@ -560,7 +590,8 @@ Corresponds to notification ID: Blue Zinc/Blue Copper/Blue Lithium/Blue Magnesiu
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][16]:
 
-```text
+{% Aside %}
+
 Prohibited Products:
 
 We don't allow Products or services that:
@@ -570,7 +601,8 @@ We don't allow Products or services that:
 - Encourage, facilitate, or enable the unauthorized access, download, or streaming of copyrighted
   content or media
 - Mine cryptocurrency
-```
+
+{% endAside %}
 
 This policy is to prevent the use of extensions and the Chrome Web Store as a platform to provide
 access to content protected by paywalls, login restrictions or intellectual property rights.
@@ -597,7 +629,8 @@ Corresponds to notification ID: Yellow Argon
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][17]:
 
-```text
+{% Aside %}
+
 Spam & Placement in the Store
 
 Keyword Spam: We don't allow extensions with misleading, improperly formatted, non-descriptive,
@@ -605,7 +638,8 @@ irrelevant, excessive, or inappropriate metadata, including but not limited to t
 description, developer name, title, icon, screenshots, and promotional images. Developers must
 provide a clear and well-written description. We also don't allow unattributed or anonymous user
 testimonials in the extension's description.
-```
+
+{% endAside %}
 
 This policy is to ensure quality of the products on the Chrome Web Store and prevent products from
 manipulating their placement in the Store
@@ -633,12 +667,14 @@ Corresponds to notification ID: Yellow Lithium
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][18]:
 
-```text
+{% Aside %}
+
 Spam & Placement in the Store
 
 Functionality: Do not post an extension with a single purpose of installing or launching another
 app, theme, webpage, or extension.
-```
+
+{% endAside %}
 
 This policy is to ensure quality of the products on the Chrome Web Store and prevent products from
 manipulating their placement in the Store
@@ -659,13 +695,15 @@ Corresponds to notification ID: Yellow Magnesium
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][19]:
 
-```text
+{% Aside %}
+
 Spam & Placement in the Store
 
 Functionality: Do not post an extension with a single purpose of installing or launching another
 app, theme, webpage, or extension. Extensions with broken functionality - such as dead sites or
 non-functioning features - are not allowed.
-```
+
+{% endAside %}
 
 This policy is to ensure quality of the products on the Chrome Web Store.
 
@@ -685,7 +723,8 @@ Corresponds to notification ID: Yellow Nickel
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][20]:
 
-```text
+{% Aside %}
+
 Spam & Placement in the Store
 
 Repetitive Content: We don't allow any developer or their affiliates to submit multiple extensions
@@ -705,7 +744,8 @@ the user the ability to confirm the content and intended recipients.
 
 In addition to these requirements, all extensions must comply with Google's Webmaster Quality
 Guidelines.
-```
+
+{% endAside %}
 
 This policy is to ensure quality of the products on the Chrome Web Store. The Spam policy is to
 prevent extensions that are harmful for the user's browsing experience and extensions that
@@ -733,13 +773,15 @@ Corresponds to notification ID: Blue Nickel/Blue Potassium
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][21]:
 
-```text
+{% Aside %}
+
 API Use
 
 Extensions must use existing Chrome APIs for their designated use case. Use of any other method,
 for which an API currently exists, would be considered a violation. For example, overriding the
 Chrome New Tab Page through any means other than the URL Overrides API is not permitted.
-```
+
+{% endAside %}
 
 This policy is to ensure quality of the products on the Chrome Web Store.
 
@@ -760,7 +802,8 @@ Corresponds to notification ID: Red Zinc
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][22]:
 
-```text
+{% Aside %}
+
 Deceptive Installation Tactics
 
 Extensions must be marketed responsibly. Extensions that use or benefit from deceptive
@@ -775,7 +818,8 @@ Deceptive installation tactics include:
   extension.
 - Adjusting the Chrome Web Store Product listing window with the effect of withholding or hiding
   extension metadata from the user.
-```
+
+{% endAside %}
 
 This policy is to ensure users are not deceived into installing extensions.
 
@@ -800,12 +844,14 @@ Corresponds to notification ID: Red Titanium
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][23]:
 
-```text
+{% Aside %}
+
 Code Readability Requirements:
 
 Developers must not obfuscate code or conceal functionality of their extension. This also applies
 to any external code or resource fetched by the extension package.
-```
+
+{% endAside %}
 
 This policy is to ensure the quality of the extensions and code submitted to the Chrome Web Store.
 
