@@ -815,5 +815,22 @@
     "github": "yi-gu",
     "country": "CA",
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/qEqbB89jHxBWSyDjCeQh.jpg"
+  },
+  "hanselfmu": {
+    "name": {
+      "given": "Changhao",
+      "family": "Han"
+    },
+    "descriptions": {
+      "en": "Google engineer working on Chrome DevTools."
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "twitter": "han_changhao",
+    "github": "hanselfmu",
+    "country": "DE",
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oEV9Pd48COn9JnMrUYzZ.jpg"
   }
 }
