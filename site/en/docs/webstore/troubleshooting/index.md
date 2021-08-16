@@ -17,8 +17,8 @@ Each section describes the issues that correspond to a particular category of vi
 
 Corresponds to notification ID: Purple Potassium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][1]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][1]:
 
 ```text
 Use of Permissions
@@ -47,8 +47,8 @@ This policy is to prevent excessive and unnecessary access to user data by exten
 
 Corresponds to notification ID: Yellow Zinc
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][2]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][2]:
 
 ```text
 Content Policies
@@ -79,8 +79,8 @@ the product that they are downloading before they download.
 
 Corresponds to notification ID: Red Nickel/Red Potassium/Red Silicon
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][3]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][3]:
 
 ```text
 Impersonation or Deceptive Behavior:
@@ -138,8 +138,8 @@ information.
 
 Corresponds to notification ID: Purple Lithium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][4]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][4]:
 
 ```text
 Posting a Privacy Policy & Secure Transmission
@@ -179,8 +179,8 @@ that users are aware of what data is collected, and how it is collected, used an
 
 Corresponds to notification ID: Grey Zinc
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][5]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][5]:
 
 ```text
 Illegal Activities:
@@ -209,8 +209,8 @@ The extension is doing anything illegal. See the policy extract above for exampl
 
 Corresponds to notification ID: Grey Copper
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][6]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][6]:
 
 ```text
 Gambling:
@@ -240,8 +240,8 @@ Do not post content or provide services that facilitate online gambling.
 
 Corresponds to notification ID: Grey Lithium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][7]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][7]:
 
 ```text
 Sexually Explicit Material:
@@ -276,8 +276,8 @@ pornography.
 
 Corresponds to notification ID: Grey Magnesium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][8]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][8]:
 
 ```text
 Hate Speech:
@@ -310,8 +310,8 @@ hateful content in the policy text above
 
 Corresponds to notification ID: Grey Nickel
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][9]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][9]:
 
 ```text
 Content Policies:
@@ -339,8 +339,8 @@ dashboard and resubmit the extension.
 
 Corresponds to notification ID: Grey Potassium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][10]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][10]:
 
 ```text
 Violent or Bullying Behavior:
@@ -376,8 +376,8 @@ The extension contains content or is directing users to content mentioned in the
 
 Corresponds to notification ID: Red Magnesium/Red Copper/Red Lithium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][11]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][11]:
 
 ```text
 Extensions Quality Guidelines
@@ -417,8 +417,8 @@ separate extensions.
 
 Corresponds to notification ID: Purple Nickel
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][12]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][12]:
 
 ```text
 Prominent Disclosure Requirement
@@ -452,8 +452,8 @@ obtained before data collection.
 
 Corresponds to notification ID: Purple Copper
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][13]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][13]:
 
 ```text
 Posting a Privacy Policy & Secure Transmission
@@ -486,8 +486,8 @@ other Dev Tool to watch the network requests the extension makes.
 
 Corresponds to notification ID: Purple Magnesium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][14]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][14]:
 
 ```text
 Other Requirements
@@ -523,8 +523,8 @@ and is not disclosed publicly.
 
 Corresponds to notification ID: Grey Silicon
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][15]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][15]:
 
 ```text
 Prohibited Products:
@@ -557,8 +557,8 @@ cryptocurrencies.
 
 Corresponds to notification ID: Blue Zinc/Blue Copper/Blue Lithium/Blue Magnesium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][16]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][16]:
 
 ```text
 Prohibited Products:
@@ -594,8 +594,8 @@ access to content protected by paywalls, login restrictions or intellectual prop
 
 Corresponds to notification ID: Yellow Argon
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][17]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][17]:
 
 ```text
 Spam & Placement in the Store
@@ -630,8 +630,8 @@ The following are examples of this type of violation:
 
 Corresponds to notification ID: Yellow Lithium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][18]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][18]:
 
 ```text
 Spam & Placement in the Store
@@ -656,8 +656,8 @@ unpublish them.
 
 Corresponds to notification ID: Yellow Magnesium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][19]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][19]:
 
 ```text
 Spam & Placement in the Store
@@ -682,8 +682,8 @@ listing.
 
 Corresponds to notification ID: Yellow Nickel
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][20]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][20]:
 
 ```text
 Spam & Placement in the Store
@@ -730,8 +730,8 @@ manipulate their placement on the Chrome Web Store.
 
 Corresponds to notification ID: Blue Nickel/Blue Potassium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][21]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][21]:
 
 ```text
 API Use
@@ -757,8 +757,8 @@ This policy is to ensure quality of the products on the Chrome Web Store.
 
 Corresponds to notification ID: Red Zinc
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][22]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][22]:
 
 ```text
 Deceptive Installation Tactics
@@ -797,8 +797,8 @@ user base.
 
 Corresponds to notification ID: Red Titanium
 
-This section explains discusses extensions that are in violation of the following section of the
-Chrome Web Store [developer program policies][23]:
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][23]:
 
 ```text
 Code Readability Requirements:
