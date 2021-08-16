@@ -87,7 +87,7 @@ fingerprint that corresponds to the appropriate key.
 
 It's useful to have both your signing and upload certificate's fingerprint in your assetlinks.json
 to more easily debug your app locally. See [Adding More Keys](#adding-more-keys) below for more
-information on how to have both keys in the `assetlinks.json.
+information on how to have both keys in the `assetlinks.json` file.
 
 There are a couple of different ways to get the fingerprint which are detailed in the next sections.
 They should all give you the same fingerprints so feel free to choose the method that is most
@@ -105,16 +105,16 @@ the appropriate SHA256 fingerprint for each key:
 
 {% Img src="image/ttTommHYbJXsEL29zNB1wXBvH4z1/Ce3CxXhEO8ibSQRYE9Ik.png", alt="Retrieve the appropriate SHA256 certificate fingerprint for your signing or upload key", width="800", height="385" %}
 
-    - **Signing key**: Copy the SHA256 fingerprint for the **"App signing key certificate"**. This
-      fingerprint will correspond to your app if you download it from the Google Play Store since
-      Google Play distributes your app signed with the signing key.
+- **Signing key**: Copy the SHA256 fingerprint for the **"App signing key certificate"**. This
+  fingerprint will correspond to your app if you download it from the Google Play Store since
+  Google Play distributes your app signed with the signing key.
 
-    - **Upload key**: Copy the SHA256 fingerprint for the **"Upload key certificate"**. This
-      fingerprint will correspond to your app if you install it locally (via ADB over USB for
-      example). That APK (on your local machine) was built by Bubblewrap, and therefore, signed by
-      the key it created for you as well (during the `init` setup). Remember that this may be the
-      signing key for your locally installed app, but this actually becomes the "upload key" once
-      you publish your app through Play.
+- **Upload key**: Copy the SHA256 fingerprint for the **"Upload key certificate"**. This
+  fingerprint will correspond to your app if you install it locally (via ADB over USB for
+  example). That APK (on your local machine) was built by Bubblewrap, and therefore, signed by
+  the key it created for you as well (during the `init` setup). Remember that this may be the
+  signing key for your locally installed app, but this actually becomes the "upload key" once
+  you publish your app through Play.
 
 #### Via `keytool`
 
