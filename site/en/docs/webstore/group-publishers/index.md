@@ -91,7 +91,7 @@ publisher, then click **Convert to group publisher**.
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/TgfQPjITmgIX0aYcDl1L.png", alt="Screenshot of Allow
         posting by email option", width="685", height="179" %}
 
-1. Make sure that the Google Group, has "Message moderation" set to “No moderation” and "Spam message handling" set to "Post suspicious messages to the group" to ensure that CWS notifications will reach all members of the group.
+1. Make sure that the Google Group, has "Message moderation" set to "No moderation" and "Spam message handling" set to "Post suspicious messages to the group" to ensure that CWS notifications will reach all members of the group.
 
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/DSSEzpIU7RmSOkzXapeX.png", alt="Screenshot of Message moderation and Spam message handling", width="655", height="274" %}
 
