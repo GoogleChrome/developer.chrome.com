@@ -1,0 +1,65 @@
+// These styles exist for DevTools' tutorial. They're removed in other files.
+
+input.devtools-css-check {
+  color: blue;
+
+  &:invalid {
+    background: red;
+    color: white;
+  }
+
+  &:valid::after {
+    padding-left: 0.5ch;
+    content: 'Correct!';
+  }
+}
+
+.devtools-css-check {
+  input {
+    color: blue;
+
+    &:invalid {
+      background: red;
+      color: white;
+    }
+  }
+
+  input:not(:invalid) + span::after {
+    padding-left: 0.5ch;
+    content: 'Correct!';
+  }
+}
+
+p.aloha {
+  display: inline-block;
+  border: 1px dashed red;
+  padding: 1em;
+
+  &.hover {
+    &:hover {
+      background: #6393f0;
+    }
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background: violet;
+  }
+  25% {
+    background: orange;
+  }
+  50% {
+    background: yellow;
+  }
+  75% {
+    background: blue;
+  }
+  100% {
+    background: violet;
+  }
+}
+.color_me {
+  background: yellow;
+  animation: rainbow 10s linear infinite;
+}
