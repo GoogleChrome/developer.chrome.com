@@ -273,8 +273,8 @@ practices, including:
   to abuse.
 
 We will not ship the secure context restriction until at least two milestones
-after WebTransport is fully rolled out. This is why the Deprecation Trial is
-currently planned to expire in Chrome 99.
+after WebTransport is fully rolled out. The Deprecation Trial will be extended if
+need be.
 
 #### Reverse embedding {: #reverse-embedding}
 
