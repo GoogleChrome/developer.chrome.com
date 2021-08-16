@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: "Private Network Access update: Introducing Deprecation Trial"
 authors:
   - titouan
-description: Chrome is deprecating access to private network endpoints from non-secure websites in Chrome 93 as part of the Private Network Access specification. Read on for recommended actions.
+description: Chrome is deprecating access to private network endpoints from non-secure public websites in Chrome 94 as part of the Private Network Access specification. Read on for recommended actions.
 date: 2021-07-29
 updated: 2021-07-29
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
