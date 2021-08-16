@@ -1,8 +1,8 @@
 ---
 layout: "layouts/doc-post.njk"
 title: "Troubleshooting Chrome Web Store violations"
-#date: TODO
-#updated: TODO
+date: 2020-11-16
+updated: 2021-08-16
 description: >
   Guidelines for understanding why an item was rejected or removed from the Chrome Web Store
   and how to fix the problem.
