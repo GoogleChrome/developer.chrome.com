@@ -22,7 +22,7 @@ Store [developer program policies][1]:
 
 {% Aside %}
 
-Use of Permissions
+**Use of Permissions**
 
 Request access to the narrowest permissions necessary to implement your Product's features or
 services. If more than one permission could be used to implement a feature, you must request those
@@ -54,7 +54,7 @@ Store [developer program policies][2]:
 
 {% Aside %}
 
-Content Policies
+**Content Policies**
 
 ⋮
 
@@ -88,7 +88,7 @@ Store [developer program policies][3]:
 
 {% Aside %}
 
-Impersonation or Deceptive Behavior:
+**Impersonation or Deceptive Behavior:**
 
 Don't pretend to be someone else, and don't represent that your product is authorized by, endorsed
 by, or produced by another company or organization, if that is not the case. Developers should not
@@ -149,7 +149,7 @@ Store [developer program policies][4]:
 
 {% Aside %}
 
-Posting a Privacy Policy & Secure Transmission
+**Posting a Privacy Policy & Secure Transmission**
 
 If your Product handles personal or sensitive user data (including personally identifiable
 information, financial and payment information, health information, authentication information,
@@ -192,7 +192,7 @@ Store [developer program policies][5]:
 
 {% Aside %}
 
-Illegal Activities:
+**Illegal Activities:**
 
 Keep it legal. Don't engage or promote unlawful activities in your Product, such as rape, illegal
 sex work, or the sale of prescription drugs without a prescription. We will remove content which
@@ -224,7 +224,7 @@ Store [developer program policies][6]:
 
 {% Aside %}
 
-Gambling:
+**Gambling:**
 
 We don't allow content or services that facilitate online gambling, including but not limited to
 online casinos, sports betting, lotteries, or games of skill that offer prizes of cash or other
@@ -257,7 +257,7 @@ Store [developer program policies][7]:
 
 {% Aside %}
 
-Sexually Explicit Material:
+**Sexually Explicit Material:**
 
 We don't allow content that contains nudity, graphic sex acts, sexually explicit material, or
 content that drives traffic to commercial pornography sites. We also don't allow content that
@@ -295,7 +295,7 @@ Store [developer program policies][8]:
 
 {% Aside %}
 
-Hate Speech:
+**Hate Speech:**
 
 We don't allow content advocating against or inciting hatred towards groups of people based on
 their race or ethnic origin, religion, disability, gender, age, veteran status, nationality,
@@ -331,7 +331,7 @@ Store [developer program policies][9]:
 
 {% Aside %}
 
-Content Policies:
+**Content Policies:**
 
 Our content policies apply to your Product's content, including any ads it shows to users and any
 user-generated content it hosts or links to. Further, they apply to any content from your
@@ -362,7 +362,7 @@ Store [developer program policies][10]:
 
 {% Aside %}
 
-Violent or Bullying Behavior:
+**Violent or Bullying Behavior:**
 
 Depictions of gratuitous violence are not allowed. Products should not contain materials that
 threaten, harass, or bully other users. For example, Products should not contain:
@@ -401,7 +401,7 @@ Store [developer program policies][11]:
 
 {% Aside %}
 
-Extensions Quality Guidelines
+**Extensions Quality Guidelines**
 
 An extension must have a single purpose that is narrow and easy-to-understand. Do not create an
 extension that requires users to accept bundles of unrelated functionality. If two pieces of
@@ -444,7 +444,7 @@ Store [developer program policies][12]:
 
 {% Aside %}
 
-Prominent Disclosure Requirement
+**Prominent Disclosure Requirement**
 
 If your Product handles personal or sensitive user data that is not closely related to
 functionality described prominently in the Product's Chrome Web Store page and user interface,
@@ -481,7 +481,7 @@ Store [developer program policies][13]:
 
 {% Aside %}
 
-Posting a Privacy Policy & Secure Transmission
+**Posting a Privacy Policy & Secure Transmission**
 
 If your Product handles personal or sensitive user data (including personally identifiable
 information, financial and payment information, health information, authentication information,
@@ -517,7 +517,7 @@ Store [developer program policies][14]:
 
 {% Aside %}
 
-Other Requirements
+**Other Requirements**
 
 The following types of personal or sensitive user data are also subject to additional
 requirements:
@@ -556,7 +556,7 @@ Store [developer program policies][15]:
 
 {% Aside %}
 
-Prohibited Products:
+**Prohibited Products:**
 
 We don't allow Products or services that:
 
@@ -592,7 +592,7 @@ Store [developer program policies][16]:
 
 {% Aside %}
 
-Prohibited Products:
+**Prohibited Products:**
 
 We don't allow Products or services that:
 
@@ -631,7 +631,7 @@ Store [developer program policies][17]:
 
 {% Aside %}
 
-Spam & Placement in the Store
+**Spam & Placement in the Store**
 
 Keyword Spam: We don't allow extensions with misleading, improperly formatted, non-descriptive,
 irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
@@ -669,7 +669,7 @@ Store [developer program policies][18]:
 
 {% Aside %}
 
-Spam & Placement in the Store
+**Spam & Placement in the Store**
 
 Functionality: Do not post an extension with a single purpose of installing or launching another
 app, theme, webpage, or extension.
@@ -697,7 +697,7 @@ Store [developer program policies][19]:
 
 {% Aside %}
 
-Spam & Placement in the Store
+**Spam & Placement in the Store**
 
 Functionality: Do not post an extension with a single purpose of installing or launching another
 app, theme, webpage, or extension. Extensions with broken functionality - such as dead sites or
@@ -725,7 +725,7 @@ Store [developer program policies][20]:
 
 {% Aside %}
 
-Spam & Placement in the Store
+**Spam & Placement in the Store**
 
 Repetitive Content: We don't allow any developer or their affiliates to submit multiple extensions
 that provide duplicate experiences or functionality on the Chrome Web Store.
@@ -775,7 +775,7 @@ Store [developer program policies][21]:
 
 {% Aside %}
 
-API Use
+**API Use**
 
 Extensions must use existing Chrome APIs for their designated use case. Use of any other method,
 for which an API currently exists, would be considered a violation. For example, overriding the
@@ -804,7 +804,7 @@ Store [developer program policies][22]:
 
 {% Aside %}
 
-Deceptive Installation Tactics
+**Deceptive Installation Tactics**
 
 Extensions must be marketed responsibly. Extensions that use or benefit from deceptive
 installation tactics will be removed from the Chrome Web Store.
@@ -846,7 +846,7 @@ Store [developer program policies][23]:
 
 {% Aside %}
 
-Code Readability Requirements:
+**Code Readability Requirements:**
 
 Developers must not obfuscate code or conceal functionality of their extension. This also applies
 to any external code or resource fetched by the extension package.
