@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Set up a group publisher
 date: 2020-06-20
-updated: 2021-08-02
+updated: 2021-08-12
 description: How to share ownership of your Chrome Web Store items with other developers.
 ---
 <!--lint disable code-block-style-->
@@ -18,7 +18,7 @@ developers to share ownership of a published item. Consider how this differs fro
 individual publisher role.
 
 {% Aside %}
-When you [register as a Chrome Web Store developer][cws-register], your developer account is
+When you [register as a Chrome Web Store developer][register], your developer account is
 automatically enrolled as an individual publisher.
 {% endAside %}
 
@@ -76,7 +76,7 @@ If you haven't already done so, you may wish to create a private Google Group be
 {% endAside %}
 
 1. Sign in to the [Chrome Web Store developer
-  console](https://chrome.google.com/webstore/devconsole) and go to the **Account** tab.
+  console][devconsole] and go to the **Account** tab.
 
 1. Scroll down to the **Google group publishing** field:
 
@@ -88,14 +88,18 @@ publisher, then click **Convert to group publisher**.
 
 1. Make sure that the Google Group has mail turned on, as shown below:
 
-    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/TU0AD2DYks5nPZGNWGLb.png", alt="Screenshot of Allow
-    posting by email option", width="800", height="104" %}
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/TgfQPjITmgIX0aYcDl1L.png", alt="Screenshot of Allow
+        posting by email option", width="685", height="179" %}
+
+1. Make sure that the Google Group, has "Message moderation" set to “No moderation” and "Spam message handling" set to "Post suspicious messages to the group" to ensure that CWS notifications will reach all members of the group.
+
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/DSSEzpIU7RmSOkzXapeX.png", alt="Screenshot of Message moderation and Spam message handling", width="655", height="274" %}
 
 1. Make sure that the Google Group doesn't allow anyone to join without being
-validated. Use either "Only invited users" or "Anyone can ask", as shown below:
+validated. Use either "Invited users only" or "Anyone on the web can ask", as shown below:
 
-    {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/LV2itIZXoZTLdgetsUwz.png", alt="Screenshot of
-    selecting the only-invited-users option", width="800", height="211" %}
+    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/o6vgTMnt8Q1T6t91dPzk.png", alt="Screenshot of
+        selecting the only-invited-users option", width="714", height="214" %}
 
 These steps create a new group publisher account. The Google Group you selected is linked to this
 new publisher account, and the group email is the new group publisher account's email.
@@ -108,7 +112,7 @@ group to see the changes.
 ## Adding developers to the group publisher
 
 Your developer console will show the new group publisher account and the linked
-Google Group. You can [add or remove developers](https://groups.google.com/). In order for a group member to publish updates, that member must [register as a CWS developer][cws-register] and pay the one-time registration fee.
+Google Group. You can [add or remove developers][google-group]. In order for a group member to publish updates, that member must [register as a CWS developer][cws-register] and pay the one-time registration fee.
 
 {% Aside "caution" %}
 Be careful with the membership of your group publisher groups. Any Chrome Web Store developer who is
@@ -134,7 +138,7 @@ In this case you are not a direct member of Group B, and cannot publish using th
 ## Publishing using a group publisher
 
 In the top right-hand corner of the [Chrome Web Store developer
-console](https://chrome.google.com/webstore/devconsole) is a pull-down that contains the following
+console][devconsole] is a pull-down that contains the following
 items:
 
 * Your developer user name (your individual publisher)
@@ -179,5 +183,5 @@ To verify that the item was transferred:
 
 [cws-register]: /docs/webstore/register/
 [devconsole]: https://chrome.google.com/webstore/devconsole
+[google-group]: https://groups.google.com
 [use-publisher]: #publishing-using-a-group-publisher
-
