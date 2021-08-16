@@ -7,7 +7,7 @@ description: >
   The shared element transition API allows page transitions within single-page apps, and is available as an origin trial now! Navigation transitions between pages and sites are coming later.
 date: 2021-08-16
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/6bO4bz5DfFIZxiBMd1oW.jpg
-alt: A collection of broken clocks
+alt: A layout plan for a web page.
 ---
 
 When you navigate around apps on your phone, there's usually some sort of transition, from a simple fade or slide from one screen to another, to more complex transitions that move different elements independently:
