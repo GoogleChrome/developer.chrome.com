@@ -121,7 +121,7 @@ for instructions.
 
 ## What's changing in Chrome
 
-### Chrome 93
+### Chrome 94
 
 Starting in Chrome 93, non-secure contexts (broadly, websites that are not
 delivered over HTTPS) are forbidden from making requests to the private network.
