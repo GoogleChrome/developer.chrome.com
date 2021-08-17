@@ -10,11 +10,13 @@
     </button>
 
     {# Logo #}
+    {# This is referenced by the sidebar in 'navigation-rail.njk', don't change these IDs or SVGs
+       without also updating there #}
     <div class="top-nav__logo display-flex justify-content-start">
       <a class="display-inline-flex" href="/" aria-label="developer.chrome.com">
-        {{ icon('logo', {hidden: true}) }}
-        <div class="top-nav__text">
-          {{ icon('logo-lockup', {hidden: true}) }}
+        {{ icon('logo', {id: 'chromeLogo', hidden: true}) }}
+        <div class="logo__text">
+          {{ icon('logo-lockup', {id: 'chromeDevelopersText', hidden: true}) }}
         </div>
       </a>
     </div>
