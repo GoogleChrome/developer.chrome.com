@@ -25,7 +25,7 @@ Although, on the web, we don't tend to get those kinds of effects. Creating a tr
 
 Even in a simple case, where content fades from one screen to another, it means rendering your page with both states at once, performing a cross-fade, then removing the old state.
 
-This is harder than it sounds. You need to make sure that the outgoing page can't receive additional interactions, and that  the outgoing state doesn't jank the transition by updating its own state. You also need to ensure the presence of both states doesn't create a confusing experience for those using accessibility technology.
+This is harder than it sounds. You need to make sure that the outgoing page can't receive additional interactions, and that the outgoing state doesn't jank the transition by updating its own state. You also need to ensure the presence of both states doesn't create a confusing experience for those using accessibility technology.
 
 Platforms like Android and iOS have tools to make this stuff easier, so why can't we? That's where the shared element transitions API comes in! It's a [proposal we're working on](https://github.com/WICG/shared-element-transitions/) that provides a high-level way to transition between page states.
 
@@ -151,9 +151,9 @@ async function navigateToSettingsPage() {
 
 `sharedElements` is the difference here, both in the prepare step and the start step.
 
-In this case, `element1` will animate independently from the rest of the page, moving from its original position & size to its end position & size (or staying still if it doesn't move).
+In this case, `element1` will animate independently from the rest of the page, moving from its original position and size to its end position and size (or staying still if it doesn't move).
 
-The elements don't need to be the same node. In this case, `element2` will transition to `element4`, because they're each 2nd in the provided array.
+The elements don't need to be the same node. In this case, `element2` will transition to `element4`, because they're each second in the provided array.
 
 #### Limitations of shared element transitions
 
