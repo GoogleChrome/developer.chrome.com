@@ -55,7 +55,7 @@ and [extensibility](/blog/renderingng/#extensibility-the-right-tools-for-the-job
 ### Rendering pipeline structure
 
 {% Img
-src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/jsWIjoou2iaN6ORvMfvM.jpeg",
+src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/zbb7OLj0rB1Hq57khU2g.jpeg",
 alt="Diagram of the rendering pipeline as explained in the following text.",
 width="800", height="1273" %}
 
