@@ -113,7 +113,7 @@ const tabId = getTabId();
 chrome.scripting.executeScript(
     {
       target: {tabId: tabId},
-      function: getTitle,
+      func: getTitle,
     },
     () => { ... });
 ```
@@ -134,7 +134,7 @@ const tabId = getTabId();
 chrome.scripting.executeScript(
     {
       target: {tabId: tabId},
-      function: changeBackgroundColor,
+      func: changeBackgroundColor,
     },
     () => { ... });
 ```
@@ -174,7 +174,7 @@ const tabId = getTabId();
 chrome.scripting.executeScript(
     {
       target: {tabId: tabId, allFrames: true},
-      function: getTitle,
+      func: getTitle,
     },
     (injectionResults) => {
       for (const frameResult of injectionResults)
