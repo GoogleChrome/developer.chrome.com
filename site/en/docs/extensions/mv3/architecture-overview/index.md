@@ -154,7 +154,7 @@ method instead.
 
 ### Asynchronous vs. synchronous methods {: #sync }
 
-Most Chrome API methods are asynchronous: they return immediately without waiting for the operation
+Most Chrome API methods are synchronous: they return immediately without waiting for the operation
 to finish. If an extension needs to know the outcome of an asynchronous operation it can pass a
 callback function into the method. The callback is executed later, potentially much later, after the
 method returns.
