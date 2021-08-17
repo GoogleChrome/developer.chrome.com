@@ -5,7 +5,7 @@ authors:
   - jakearchibald
 description: >
   The shared element transition API allows page transitions within single-page apps, and is available as an origin trial now! Navigation transitions between pages and sites are coming later.
-date: 2021-08-16
+date: 2021-08-17
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/6bO4bz5DfFIZxiBMd1oW.jpg
 alt: A layout plan for a web page.
 ---
