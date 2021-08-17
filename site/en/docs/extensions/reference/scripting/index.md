@@ -139,8 +139,22 @@ chrome.scripting.executeScript(
     () => { ... });
 ```
 
-You can work around this by using the [Storage API][storage] or by
-[passing messages][messaging].
+You can work around this by using the `args` property:
+
+```js
+const color = getUserColor();
+function changeBackgroundColor(backgroundColor) {
+  document.body.style.backgroundColor = backgroundColor;
+}
+const tabId = getTabId();
+chrome.scripting.executeScript(
+    {
+      target: {tabId: tabId},
+      func: changeBackgroundColor,
+      args: [color],
+    },
+    () => { ... });
+```
 
 #### Runtime strings
 
