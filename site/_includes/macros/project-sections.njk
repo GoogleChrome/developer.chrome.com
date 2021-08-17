@@ -63,25 +63,36 @@ have been defined in the _data/docs/*.yml file for this project.
           window.
         #}
         {% set isExternal = helpers.isExternalLink(item.url) %}
+
+        {#
+          Create the inner part of this section so we can render it again below.
+          We only need to wrap it in a div for the outermost case.
+        #}
+        {% set inner %}
+          {% if type === 'column' %}
+            <span class="project-sections__icon"></span>
+          {% endif %}
+          <a
+            class="display-inline-flex align-center color-primary-shade decoration-none surface lg:gap-right-600"
+            href="{{ postUrl }}"
+            {%- if isExternal -%}
+            target="_blank"
+            rel="noopener"
+            {%- endif -%}
+            >
+              {{ postTitle }}
+              {% if isExternal %}
+                {{ icon('external-link', {className: 'gap-left-100'}) }}
+              {% endif %}
+          </a>
+        {% endset %}
+
         <li>
-          <div>
-            {% if type === 'column' %}
-              <span class="project-sections__icon"></span>
-            {% endif %}
-            <a
-              class="display-inline-flex align-center color-primary-shade decoration-none surface lg:gap-right-600"
-              href="{{ postUrl }}"
-              {%- if isExternal -%}
-              target="_blank"
-              rel="noopener"
-              {%- endif -%}
-              >
-                {{ postTitle }}
-                {% if isExternal %}
-                  {{ icon('external-link', {className: 'gap-left-100'}) }}
-                {% endif %}
-            </a>
-          </div>
+          {% if type == 'row' %}
+            <div>{{ inner | safe }}</div>
+          {% else %}
+            {{ inner | safe }}
+          {% endif %}
           {% if type !== 'nested-column' %}
             <div class="project-sections__description measure-long">{{ postDescription }}</div>
           {% endif %}

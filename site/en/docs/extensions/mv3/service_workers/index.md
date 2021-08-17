@@ -33,8 +33,8 @@ specified instructions, then unload.
 
 ## Register background scripts {: #manifest }
 
-Extensions register their background service workers in the [manifest][3] under the `"background"` field. This field
-uses the `"service_worker"` key, which specifies a single JavaScript file.
+Extensions register their background service workers in the [manifest][3] under the `"background"`
+field. This field uses the `"service_worker"` key, which specifies a single JavaScript file.
 
 ```json/3-6
 {
@@ -47,13 +47,28 @@ uses the `"service_worker"` key, which specifies a single JavaScript file.
 }
 ```
 
+{% Aside %}
+The script used for `"service_worker"` must be located in your extension's root directory.
+{% endAside %}
+
+You can optionally specify an extra field of `"type": "module"` to include the service worker as an
+ES Module, which allows you to `import` further code. See [ES modules in service workers][sw-module]
+for more information. For example:
+
+```json/2-2
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+```
+
 ## Initialize the extension {: #initialization }
 
 Listen to the [`runtime.onInstalled`][6] event to initialize an extension on installation. Use this
 event to set a state or for one-time initialization, such as a [context menu][7].
 
 ```js
-chrome.runtime.onInstalled.addListener(function() {
+chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     "id": "sampleContextMenu",
     "title": "Sample Context Menu",
@@ -71,16 +86,16 @@ extension from missing important triggers.
 Listeners must be registered synchronously from the start of the page.
 
 ```js
-chrome.runtime.onInstalled.addListener(function() {
+chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     "id": "sampleContextMenu",
     "title": "Sample Context Menu",
-    "contexts": ["selection"]
+    "contexts": ["selection"],
   });
 });
 
 // This will run when a bookmark is created.
-chrome.bookmarks.onCreated.addListener(function() {
+chrome.bookmarks.onCreated.addListener(() => {
   // do something
 });
 ```
@@ -88,10 +103,10 @@ chrome.bookmarks.onCreated.addListener(function() {
 Do not register listeners asynchronously, as they will not be properly triggered.
 
 ```js
-chrome.runtime.onInstalled.addListener(function() {
+chrome.runtime.onInstalled.addListener(() => {
   // ERROR! Events must be registered synchronously from the start of
   // the page.
-  chrome.bookmarks.onCreated.addListener(function() {
+  chrome.bookmarks.onCreated.addListener(() => {
     // do something
   });
 });
@@ -102,8 +117,8 @@ listeners for an event are removed, Chrome will no longer load the extension's b
 that event.
 
 ```js
-chrome.runtime.onMessage.addListener(function(message, sender, reply) {
-    chrome.runtime.onMessage.removeListener(event);
+chrome.runtime.onMessage.addListener((message, sender, reply) => {
+ chrome.runtime.onMessage.removeListener(event);
 });
 ```
 
@@ -115,9 +130,16 @@ about. If an extension is listening for the [`tabs.onUpdated`][9] event, try usi
 filters.
 
 ```js
-chrome.webNavigation.onCompleted.addListener(function() {
-    alert("This is my favorite website!");
-}, {url: [{urlMatches : 'https://www.google.com/'}]});
+const filter = {
+  url: [
+    {
+      urlMatches: 'https://www.google.com/',
+    },
+  ],
+};
+chrome.webNavigation.onCompleted.addListener(() => {
+  console.info("The user has loaded my favorite website!");
+}, filter);
 ```
 
 ## React to listeners {: #react }
@@ -126,14 +148,15 @@ Listeners exist to trigger functionality once an event has fired. To react to an
 the desired reaction inside of the listener event.
 
 ```js
-chrome.runtime.onMessage.addListener(function(message, callback) {
-  if (message.data == "setAlarm") {
+chrome.runtime.onMessage.addListener((message, callback) => {
+  const tabId = getForegroundTabId();
+  if (message.data === "setAlarm") {
     chrome.alarms.create({delayInMinutes: 5})
-  } else if (message.data == "runLogic") {
-    chrome.scripting.executeScript({file: 'logic.js'});
-  } else if (message.data == "changeColor") {
+  } else if (message.data === "runLogic") {
+    chrome.scripting.executeScript({file: 'logic.js', tabId});
+  } else if (message.data === "changeColor") {
     chrome.scripting.executeScript(
-        {code: 'document.body.style.backgroundColor="orange"'});
+        {func: () => document.body.style.backgroundColor="orange", tabId});
   };
 });
 ```
@@ -148,22 +171,22 @@ chrome.storage.local.set({variable: variableInformation});
 ```
 
 If an extension uses [message passing][12], ensure all ports are closed. The background script will
-not unload until all message ports have shut. Listening to the [runtime.Port.onDisconnect][13] event
-will give insight to when open ports are closing. Manually close them with
-[runtime.Port.disconnect][14].
+not unload until all message ports have shut. Listening to the [`runtime.Port.onDisconnect`][13]
+event will give insight to when open ports are closing. Manually close them with
+[`runtime.Port.disconnect`][14].
 
 ```js
-chrome.runtime.onMessage.addListener(function(message, callback) {
-  if (message == 'hello') {
+chrome.runtime.onMessage.addListener((message, callback) => {
+  if (message === 'hello') {
     sendResponse({greeting: 'welcome!'})
-  } else if (message == 'goodbye') {
+  } else if (message === 'goodbye') {
     chrome.runtime.Port.disconnect();
   }
 });
 ```
 
-The lifetime of a background service worker is observable by monitoring when an entry for the extension
-appears and disappears from Chrome's task manager.
+The lifetime of a background service worker is observable by monitoring when an entry for the
+extension appears and disappears from Chrome's task manager.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/occ8HD81vNq2zboXIbiu.png",
        alt="Chrome with an extension's popup open.", height="623", width="730" %}
@@ -175,14 +198,15 @@ Service workers unload on their own after a few seconds of inactivity. If any la
 is required, listen to the [`runtime.onSuspend`][15] event.
 
 ```js
-chrome.runtime.onSuspend.addListener(function() {
+chrome.runtime.onSuspend.addListener(() => {
   console.log("Unloading.");
   chrome.browserAction.setBadgeText({text: ""});
 });
 ```
 
-However, persisting data should be prefered over relying on [`runtime.onSuspend`][16]. It doesn't
-allow for as much cleanup as may be needed and will not help in case of a crash.
+However, persisting data in the storage API should be prefered over relying on
+[`runtime.onSuspend`][16]. It doesn't allow for as much cleanup as may be needed and will not help
+in case of a crash.
 
 [1]: /docs/extensions/mv3/messaging
 [2]: /docs/extensions/runtime#method-getBackgroundPage
@@ -200,3 +224,4 @@ allow for as much cleanup as may be needed and will not help in case of a crash.
 [14]: /docs/extensions/reference/runtime#property-Port-disconnect
 [15]: /docs/extensions/reference/runtime#event-onSuspend
 [16]: /docs/extensions/reference/runtime#event-onSuspend
+[sw-module]: https://web.dev/es-modules-in-sw/

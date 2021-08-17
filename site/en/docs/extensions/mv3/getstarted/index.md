@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Getting started"
 date: 2014-02-28
-updated: 2021-05-27
+updated: 2021-07-22
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 

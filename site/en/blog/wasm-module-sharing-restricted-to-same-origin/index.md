@@ -10,7 +10,7 @@ authors:
   - agektmr
 tags:
   - security
-hero: 'image/YLflGBAPWecgtKJLqCJHSzHqe2J2/yPKZBcoGP1HTtUUtv3nw.jpg'
+hero: 'image/QMjXarRXcMarxQddwrEdPvHVM242/xmcGF7REnAOLpRjSI6do.jpg'
 alt: >
   'A typewriter typing "Sharing"'
 ---

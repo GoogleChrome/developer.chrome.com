@@ -1,17 +1,19 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Prepare to publish: set up pricing and distribution"
-#date: TODO
-#updated: TODO
+title: "Prepare to publish: set up payment and distribution"
+date: 2020-12-07
+updated: 2021-08-13
 description: >
-  How to use the Pricing & Distribution tab of the Chrome Web Store dashboard
-  to control how you charge for your Chrome Web Store item.
+  How to use the Payment & Distribution tab of the Chrome Web Store dashboard.
 ---
 
-The pricing and distribution tab lets you control how you charge for your item and who will see it
-on the Chrome Web Store.
+In the Payment and Distribution tab you can declare if your extension is free or contains in-app purchases. You can also choose who will see it on the Chrome Web Store.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/ko8C7yl0tjGzVaTVDzkV.png", alt="Screenshot of the Chrome Web Store pricing and distribution page", height="474", width="800" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/QQZihsAu4qF7vKH7n648.png", alt="Screenshot of the Chrome Web Store payment and distribution page", width="800", height="388" %}
+
+## Declaring in-app purchases {: #in-app-purchases }
+
+If you plan to use a third party service to offer additional paid features or subscriptions, choose **Contains in-app purchases**. This option will display an "in-app purchases" badge on your extension's detail page.
 
 ## Setting the visibility {: #setting-the-visibility }
 
@@ -23,6 +25,10 @@ Use the **Visibility** settings to configure who can see your item in the Chrome
 - **Private**—This option limits installation of your item to specified users only. This is
   typically used for testing before public launch of an item.
 
+{% Aside 'gotchas' %}
+All visibility settings have the same policy requirements and will go through the same review process.
+{% endAside %}
+
 ### Private visibility: Trusted testers {: #private-visibility-trusted-testers }
 
 Private allows your trusted testers to install the item. You designate trusted testers by listing
@@ -32,7 +38,7 @@ them on your Chrome Web Store account home page.
 
 The trusted testers list is associated with your _account_, and not an individual item. To create
 multiple trusted tester accounts, you must use separate accounts. However, you can also [add
-groups][1]to your private listing, on a per-item basis.
+groups][private-google-groups] to your private listing, on a per-item basis.
 
 {% endAside %}
 
@@ -69,7 +75,7 @@ distribution page of the developer console:
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/zpV6tBHuf3HLBpRjGsNA.png", alt="Screenshot showing
 the domain publishing option in the developer console", width="643", height="200", class="screenshot" %}
 
-See [Enterprise publishing options][domain-publishing-overview] for an overview of this and other
+See [Enterprise publishing options][enterprise] for an overview of this and other
 enterprise extension topics, along with links to other enterprise extension documentation.
 
 ## Setting the geographic distribution {: #setting-the-geographic-distribution }
@@ -84,5 +90,13 @@ the Chrome Web Store. You can either:
 When you publish to the world, your item will be immediately visible to the region(s) you select,
 and it'll be visible in the store's search results.
 
-[1]: #private-visibility-groups
-[domain-publishing-overview]: /docs/webstore/cws-enterprise/
+## You are ready to submit this item! 
+
+After filling out the [Listing][listing] tab and the [Privacy][privacy] tab, you can now [publish your item][publish].
+
+
+[private-google-groups]: #private-visibility-google-groups
+[enterprise]: /docs/webstore/cws-enterprise/
+[publish]: /docs/webstore/publish/#publish-item
+[privacy]: /docs/webstore/cws-dashboard-privacy/
+[listing]: /docs/webstore/cws-dashboard-listing/

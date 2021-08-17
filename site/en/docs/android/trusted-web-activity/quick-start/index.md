@@ -34,15 +34,13 @@ you're using a physical phone).
 A Trusted Web Activity lets your Android App launch a full screen Browser Tab without
 any browser UI.
 This capability is restricted to websites that you own, and you prove this by setting
-up Digital Asset Links.
-Digital Asset Links consist essentially of a file on your website that points to your app and some
-metadata in your app that points to your website.
-We'll talk [more about them later](#a-note-on-signing-keys).
+up Digital Asset Links. We'll talk [more about them later](#creating-your-asset-link-file).
+
 
 When you launch a Trusted Web Activity, the browser will check that the Digital Asset Links check
 out, this is called **verification**.
 If verification fails, the browser will fall back to displaying your website as a
-[Custom Tab](/docs/android/custom-tabs).
+[Custom Tab](/docs/android/custom-tabs/overview/).
 
 ## Install and configure Bubblewrap {: #install-and-configure-bubblewrap }
 
@@ -114,123 +112,20 @@ use PWA Builder to create an Android App that opens your PWA in
 
 ### A note on signing keys {: #a-note-on-signing-keys }
 
-Digital Asset Links take into account the key that an APK has been signed with and a common
-cause for verification failing is to use the wrong signature.
-(Remember, failing verification means you'll launch your website as a Custom Tab with
-browser UI at the top of the page.)
-When Bubblewrap builds the application, an APK will be created with a key setup during the `init`
-step.
+Digital Asset Links take into account the key that an APK has been signed with and a common cause for verification failing is to use the wrong signature. (Remember, failing verification means you'll launch your website as a Custom Tab with browser UI at the top of the page.) When Bubblewrap builds the application, an APK will be created with a key setup during the `init` step. However, when you publish your app in Google Play, another key may be created for you, depending on how you choose to handle signing keys. Learn more on [signing keys and how they relate to Bubblewrap and Google Play](/docs/android/trusted-web-activity/android-for-web-devs#upload-vs-signing-key).
 
 ## Setting up your asset link file {: #creating-your-asset-link-file }
+
+Digital Asset Links consist essentially of a file on your website that points to your app and some
+metadata in your app that points to your website.
 
 {% YouTube
   id='3bAQPnxLd4c'
 %}
 
-### Play Store Signing {: #play-store-signing }
+After creating your `assetlinks.json` file, upload it to your website at `.well-known/assetlinks.json` relative to the root) so that your app can be verified properly by the browser. Check out a [deep dive on Digital Asset Links](/docs/android/trusted-web-activity/android-for-web-devs#digital-asset-links) for more information on how it relates to your signing key.
 
-If you opt in to
-[App signing by Google Play](https://developer.android.com/studio/publish/app-signing#app-signing-google-play),
-Google manages your app's signing key.
-
-When opted in, the key used to sign the APK that is downloaded from the Play Store
-will be different from the key that Bubblewrap used when building the APK. This means that the
-`assetlinks.json` file will need to be updated with the new signature.
-
-There are two ways you can get the correct Digital Asset Link file for a Google managed app signing
-key:
-
-* With the [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool):
-    1. Install the
-     [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool) from
-     the Play Store.
-    2. Download your app from the Google Play Store and open launch.
-    3. When the app launches, you'll be given a list of all applications installed on your device by
-   `applicationId`.
-     Filter the list by the `applicationId` you chose earlier and click on that entry.
-    4. You'll see a page listing your app's signature and with a generated Digital Asset Link.
-     Click on the Copy or Share buttons at the bottom to export it however you like (e.g., save to
-     Google Keep, email it to yourself).
-* Manually:
-    1. Open the [Google Play Console](https://play.google.com/apps/publish/).
-    2. Select your app.
-    3. Choose **Setup** under the **Release** section, and then click **App integrity** from the panel on the left.
-    4. Click on **Create Release** and then **Create new release** (if you are releasing for the first time on Play Store). Follow the steps on the next screens.
-    5. Copy the **SHA-256 certificate fingerprint** from under the **App signing certificate**
-       section.
-    5. Use this value in your Digital Asset Link file.
-
-It is possible to have both keys in the `assetlinks.json`. See
-[Adding More Keys](#adding-more-keys) below for more information on how to do it.
-
-### Ensuring your asset link file is accessible {: #ensuring-your-asset-link-file-is-accessible }
-
-Now that you've uploaded it, make sure you can access your asset link file in a browser.
-Check that `https://example.com/.well-known/assetlinks.json` resolves to the file you just uploaded.
-
-#### Jekyll based websites
-
-If your website is generated by Jekyll (such as GitHub Pages), you'll need to add a line of
-configuration so that the `.well-known` directory is included in the output.
-GitHub help has [more information on this topic](https://help.github.com/en/articles/files-that-start-with-an-underscore-are-missing).
-Create a file called `_config.yml` at the root of your site (or add to it if it already exists) and
-enter:
-
-```yml
-# Folders with dotfiles are ignored by default.
-include: [.well-known]
-```
-
-### Adding more keys {: #adding-more-keys }
-
-A Digital Asset Link file can contain more than one app, and for each app, it can contain more than
-one key.
-For example, to add a second key, just use the
-[Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool) to
-determine the key and add it as a second entry to the `sha256_cert_fingerprints` field.
-The code in Chrome that parses this JSON is quite strict, so make sure you don't accidentally add an
-extra comma at the end of the list.
-
-```json
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.appspot.pwa_directory",
-    "sha256_cert_fingerprints": [
-      "FA:2A:03:CB:38:9C:F3:BE:28:E3:CA:7F:DA:2E:FA:4F:4A:96:F3:BC:45:2C:08:A2:16:A1:5D:FD:AB:46:BC:9D"
-    ]
-  }
-},{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.appspot.pwa_directory",
-    "sha256_cert_fingerprints": [
-      "4F:FF:49:FF:C6:1A:22:E3:BB:6F:E6:E1:E6:5B:40:17:55:C0:A9:F9:02:D9:BF:28:38:0B:AE:A7:46:A0:61:8C"
-    ]
-  }
-}]
-```
-
-## Troubleshooting {: trouble-shooting }
-
-### Viewing relevant logs {: viewing-relevant-logs }
-Chrome logs the reason that Digital Asset Links verification fails and you can view the logs on an
-Android device with `adb logcat`.
-If you're developing on Linux/Mac, you can see the relevant logs from a connected device
-with:
-
-```shell
-> adb logcat -v brief | grep -e OriginVerifier -e digital_asset_links
-```
-
-For example, if you see the message `Statement failure matching fingerprint.`, you should use the
-Asset Link Tool to see your app's signature and make sure it matches that in your `assetlinks.json`
-file (Be wary of confusing your debug and release keys. Look at the
-[A note on signing keys](#a-note-on-signing-keys) section.)
-
-### Checking your browser {: #checking-your-browser }
+## Checking your browser {: #checking-your-browser }
 
 A Trusted Web Activity will try to adhere to the user's default choice of browser.
 If the user's default browser supports Trusted Web Activities, it will be launched.
@@ -250,11 +145,11 @@ D/TWAProviderPicker(17168): Found TWA provider, finishing search: com.google.and
 
 Hopefully, if you've followed this guide, you'll have a working Trusted Web Activity and have enough
 knowledge to debug what's going on when verification fails.
-If not, please have a look at the Troubleshooting section or file a GitHub issue against
+If not, have a look at more [Android concepts for web developers](/docs/android/trusted-web-activity/android-for-web-devs) or file a GitHub issue against
 [these docs](https://github.com/google/WebFundamentals/issues).
 
 For your next steps, I'd recommend you start off by
 [creating an icon for your app](https://developer.android.com/studio/write/image-asset-studio#launcher).
 With that done, you can consider deploying your app to the Play Store.
 
-[1]: https://github.com/GoogleChromeLabs/bubblewrap/blob/master/packages/cli/README.md
+[1]: https://github.com/GoogleChromeLabs/bubblewrap/blob/main/packages/cli/README.md

@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Set up a group publisher
 date: 2020-06-20
+updated: 2021-08-02
 description: How to share ownership of your Chrome Web Store items with other developers.
 ---
 <!--lint disable code-block-style-->

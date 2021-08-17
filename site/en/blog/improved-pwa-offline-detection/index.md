@@ -13,7 +13,6 @@ authors:
 tags:
   - chrome-89
   - chrome-90
-  - chrome-92
   - progressive-web-apps
 ---
 

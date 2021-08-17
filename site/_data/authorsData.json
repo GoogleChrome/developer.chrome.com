@@ -799,6 +799,22 @@
     "country": "US",
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/kUhkXfBItc8GVTkWA2AB.jpg"
   },
+  "joycetoh": {
+    "name": {
+      "given": "Joyce",
+      "family": "Toh"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "descriptions": {
+      "en": "Joyce is a Developer Relations Engineer for Chrome OS."
+    },
+    "country": "US",
+    "github": "joycetoh8",
+    "image": "image/ttTommHYbJXsEL29zNB1wXBvH4z1/25uXyGl2m7FtpUyogSpL.jpeg"
+  },
   "yigu": {
     "name": {
       "given": "Yi",
@@ -815,5 +831,22 @@
     "github": "yi-gu",
     "country": "CA",
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/qEqbB89jHxBWSyDjCeQh.jpg"
+  },
+  "hanselfmu": {
+    "name": {
+      "given": "Changhao",
+      "family": "Han"
+    },
+    "descriptions": {
+      "en": "Google engineer working on Chrome DevTools."
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "twitter": "han_changhao",
+    "github": "hanselfmu",
+    "country": "DE",
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oEV9Pd48COn9JnMrUYzZ.jpg"
   }
 }
