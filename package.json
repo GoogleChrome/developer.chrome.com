@@ -68,7 +68,7 @@
     "rollup": "^2.22.2",
     "striptags": "^3.1.1",
     "unistore": "^3.5.2",
-    "webdev-infra": "^1.0.24"
+    "webdev-infra": "^1.0.27"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
