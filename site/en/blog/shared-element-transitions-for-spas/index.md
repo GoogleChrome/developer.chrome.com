@@ -165,7 +165,7 @@ The elements don't need to be the same node. In this case, `element2` will trans
 
 **Shared transition elements cannot have background effects.** Things like [`mix-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode) and [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) won't interact correctly with the background during a transition.
 
-**Control over the transition is limited.** Right now, when one element transitions to another, their 'screenshots' quickly cross-fade while they scale and translate into position. Future versions of the API will add additional configuration, but this will always be limited to things that can be done with a screenshot of state, such as transforms, opacity, and crops.
+**Control over the transition is limited.** Right now, when one element transitions to another, their "screenshots" quickly cross-fade while they scale and translate into position. Future versions of the API will add additional configuration, but this will always be limited to things that can be done with a screenshot of state, such as transforms, opacity, and crops.
 
 ## In future: Multi-page apps
 
