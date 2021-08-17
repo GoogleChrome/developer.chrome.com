@@ -40,7 +40,7 @@ up Digital Asset Links. We'll talk [more about them later](#creating-your-asset-
 When you launch a Trusted Web Activity, the browser will check that the Digital Asset Links check
 out, this is called **verification**.
 If verification fails, the browser will fall back to displaying your website as a
-[Custom Tab](/docs/android/custom-tabs/overview/).
+[Custom Tab](/docs/android/custom-tabs/).
 
 ## Install and configure Bubblewrap {: #install-and-configure-bubblewrap }
 

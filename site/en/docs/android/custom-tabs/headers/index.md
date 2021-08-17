@@ -204,15 +204,15 @@ allowed only for clients and servers of the same origin, verified by a digital a
 
 [1]: https://developer.android.com/reference/android/provider/Browser#EXTRA_HEADERS
 [2]: https://docs.google.com/document/d/1sN6Y31giDbdGj6R4p3QJ20gD1ggBIosae7yrsSZ3Ins/edit#heading=h.ey2vxjsxytw6
-[3]: /docs/android/custom-tabs/overview/
+[3]: /docs/android/custom-tabs/
 [4]: https://fetch.spec.whatwg.org/#cors-safelisted-request-header
 [5]: https://developers.google.com/digital-asset-links/v1/getting-started
 [6]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 [7]: https://fetch.spec.whatwg.org/#cors-safelisted-request-header
-[8]: /docs/android/custom-tabs/overview/
+[8]: /docs/android/custom-tabs/
 [9]: https://developer.android.com/reference/android/provider/Browser#EXTRA_HEADERS
 [10]: https://developers.google.com/digital-asset-links/v1/getting-started
-[11]: /docs/android/custom-tabs/overview/
+[11]: /docs/android/custom-tabs/
 [12]: /docs/android/custom-tabs/integration-guide#connect_to_the_custom_tabs_service
 [13]: https://github.com/GoogleChrome/android-browser-helper/tree/master/demos
 
