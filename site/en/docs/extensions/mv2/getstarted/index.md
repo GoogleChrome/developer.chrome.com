@@ -329,8 +329,8 @@ click the button to turn it green! However, some users may want to change the ba
 different color.
 
 {% Aside 'gotchas' %}
-You can't script any internal Chrome page, like "chrome://extensions". Be sure to try out the
-extension on a real webpage, like https://google.com.
+You can't run a content script on an internal Chrome page, such as "chrome://extensions". Be sure
+to try out the extension on a real webpage, like https://google.com.
 {% endAside %}
 
 ## Give users options {: #options }
