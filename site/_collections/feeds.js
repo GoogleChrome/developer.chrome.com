@@ -16,6 +16,25 @@
 
 const {defaultLocale} = require('../_data/site.json');
 const {i18n} = require('../_filters/i18n');
+const {drafts} = require('../_utils/drafts');
+
+/**
+ * @param {EleventyData} data
+ */
+function tagsForData(data) {
+  let tags = [data.tags ?? []].flat();
+
+  // Don't create a feed for every 'chrome-xx' post, just create a single 'chrome' feed.
+  tags = tags.map(tag => {
+    if (tag.startsWith('chrome-')) {
+      return 'chrome';
+    }
+    return tag;
+  });
+
+  const s = new Set(tags);
+  return [...s];
+}
 
 /**
  * Returns an array of `FeedsCollectionItem` to generate the RSS feeds.
@@ -28,10 +47,19 @@ module.exports = collection => {
   const posts = collection
     .getAllSorted()
     .reverse()
-    .filter(i => i.data.locale === defaultLocale);
-  const tags = ['devtools', 'extensions'];
+    .filter(i => i.data.locale === defaultLocale)
+    .filter(drafts)
+    .filter(item => {
+      if (item.data.noindex || item.data.permalink === false) {
+        return false;
+      }
+      return true;
+    });
+
   /** @type FeedsCollection */
-  const feeds = {};
+  const tagsFeeds = {};
+
+  /** @type {EleventyCollectionItem[]} */
   const blog = [];
 
   for (const post of posts) {
@@ -40,50 +68,40 @@ module.exports = collection => {
       blog.push(post);
     }
 
-    // Check if post belongs to supported tags
-    for (const tag of tags) {
-      let postTags = [];
+    const postTags = tagsForData(post.data);
 
-      if (Array.isArray(post.data.tags)) {
-        postTags = post.data.tags;
-        // If tags is a string, turn it into an array.
-      } else if (typeof post.data.tags === 'string') {
-        postTags.push(post.data.tags);
+    for (const tag of postTags) {
+      // If tag does not exist in feeds yet, create FeedsCollectionItem
+      if (!tagsFeeds[tag]) {
+        tagsFeeds[tag] = {
+          items: [],
+          permalink: `/feeds/${tag}.xml`,
+          title: i18n(`i18n.tags.${tag}`),
+          url: `/tags/${tag}`,
+        };
       }
 
-      if (postTags.includes(tag)) {
-        // If tag does not exist in feeds yet, create FeedsCollectionItem
-        if (!feeds[tag]) {
-          feeds[tag] = {
-            items: [],
-            permalink: `/feeds/${tag}.xml`,
-            title: i18n(`i18n.tags.${tag}`),
-            url: `/tags/${tag}`,
-          };
-        }
-
-        if (feeds[tag].items.length < MAX_POSTS) {
-          feeds[tag].items.push(post);
-        }
+      if (tagsFeeds[tag].items.length < MAX_POSTS) {
+        tagsFeeds[tag].items.push(post);
       }
     }
   }
 
-  if (blog.length) {
-    feeds['blog'] = {
+  // We write these feeds out in their own object so it's obvious that they will "win" over any
+  // tagged feeds of the same name.
+  /** @type {FeedsCollection} */
+  const specialFeeds = {
+    blog: {
       items: blog,
       permalink: '/feeds/blog.xml',
       title: i18n('i18n.common.blog'),
       url: '/blog',
-    };
-  }
-
-  if (posts.length) {
-    feeds['all'] = {
+    },
+    all: {
       items: posts.slice(0, MAX_POSTS),
       permalink: '/feeds/all.xml',
-    };
-  }
+    },
+  };
 
-  return feeds;
+  return {...tagsFeeds, ...specialFeeds};
 };
