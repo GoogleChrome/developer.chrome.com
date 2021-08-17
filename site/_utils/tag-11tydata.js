@@ -30,6 +30,13 @@ const {i18n} = require('../_filters/i18n');
 module.exports = locale => ({
   eleventyComputed: {
     title: data => data.paged.title,
+    feedName: data => {
+      const key = data.paged.key ?? 'blog';
+      if (key.startsWith('chrome-')) {
+        return 'chrome';
+      }
+      return key;
+    },
   },
   pagination: {
     /**
@@ -42,13 +49,15 @@ module.exports = locale => ({
 
       for (const tag of tags) {
         const posts = tag.posts[locale];
-        if (posts.length > 0) {
-          paginated = paginated.concat(
-            addPagination(posts, locale + '/tags/' + tag.key, {
-              title: tag.isGeneratedTag ? tag.title : i18n(tag.title, locale),
-            })
-          );
+        if (!posts?.length) {
+          continue;
         }
+
+        const more = addPagination(posts, locale + '/tags/' + tag.key, {
+          title: tag.isGeneratedTag ? tag.title : i18n(tag.title, locale),
+          key: tag.key,
+        });
+        paginated = paginated.concat(more);
       }
 
       return paginated;

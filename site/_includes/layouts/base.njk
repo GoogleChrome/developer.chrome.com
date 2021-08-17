@@ -8,7 +8,9 @@
     {%- endif %}
 
     {% include "partials/meta.njk" %}
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feeds/blog.xml">
+    {% block feed %}
+      <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feeds/blog.xml">
+    {% endblock %}
 
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/regular/latin.woff2">
     <link rel="preload" as="font" crossorigin href="/fonts/google-sans-v2003/medium/latin.woff2">
