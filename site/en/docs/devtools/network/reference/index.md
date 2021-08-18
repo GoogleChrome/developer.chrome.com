@@ -658,7 +658,8 @@ provide a little more information when using large rows. For example, the bottom
 
 Open **Settings** and click **Use large request rows** to enable large rows.
 
-{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/rhXHHi7yxFm6IqiwQ7C3.png", alt="The use large request rows checkbox", width="800", height="614" %}
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/rhXHHi7yxFm6IqiwQ7C3.png",
+  alt="The use large request rows checkbox", width="800", height="614" %}
 
 **Figure 37**. Large Request Rows, outlined in blue
 
