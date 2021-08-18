@@ -20,8 +20,10 @@ autoplay:
 capabilities:
   en: Capabilities
 
+# This is used for the title of the Chrome RSS feed and the 'chrome' aggregate tag page.
+# It does not need translation.
 chrome:
-  en: Google Chrome
+  en: Chrome
 
 chromium-chronicle:
   en: Chromium Chronicle
