@@ -20,7 +20,7 @@ autoplay:
 capabilities:
   en: Capabilities
 
-# This is used for the title of the Chrome RSS feed and the 'chrome' aggregate tag page.
+# This is used for the title of the shared Chrome RSS feed that 'chrome-xx' posts create.
 # It does not need translation.
 chrome:
   en: Chrome
