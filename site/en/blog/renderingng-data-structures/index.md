@@ -4,10 +4,23 @@ title: 'Key data structures and their roles in RenderingNG'
 description: >
   This post explains the components of the RenderingNG architecture,
   and how the rendering pipeline flows through them.
-date: 2021-08-17
+date: 2021-08-18
 authors:
   - chrishtr
+  - danielcheng
+  - progers
+  - kojiishi
+  - iankilpatrick
+  - kylecharbonneau
 ---
+
+- Daniel Cheng, Security Architecture engineer: frame trees.
+- Ian Kilpatrick, Layout tech lead: fragment trees.
+- Koji Ishi, Layout engineer: inline fragments.
+- Chris Harrelson, Rendering lead for Chrome: property trees.
+- Philip Rogers, Paint and Compositing tech lead: display lists and paint chunks.
+- Kyle Charbonneau, Viz team engineer: compositor frames.
+- Illustrations by Una Kravets.
 
 Previous posts in this series gave an overview of the
 [goals, key properties](/blog/renderingng/)
@@ -36,10 +49,14 @@ showing how the data structures apply to it.
 ```html
 <html>
   <div style="overflow: hidden; width: 100px; height: 100px;">
-    <iframe style="filter: blur(3px); transform: rotateZ(1deg); width: 100px; height: 300px"
-  id=one src="foo.com/etc"></iframe>
+    <iframe style="filter: blur(3px);
+      transform: rotateZ(1deg);
+      width: 100px; height: 300px"
+      id="one" src="foo.com/etc"></iframe>
   </div>
-  <iframe style="top:200px; transform: scale(1.1) translateX(200px)" id=two src="bar.com"></iframe>
+  <iframe style="top:200px;
+    transform: scale(1.1) translateX(200px)"
+    id="two" src="bar.com"></iframe>
 </html>
 ```
 
@@ -208,28 +225,23 @@ For example, consider this DOM:
 When the inline formatting context for this situation is represented as a tree,
 it looks like the following:
 
-<ul>
-  <li>Line box
-    <ul>
-      <li>Box &lt;span&gt;
-        <ul>
-          <li>Text "Hi"</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Line box
-    <ul>
-      <li>Box &lt;b&gt;
-        <ul>
-          <li>Text "There"</li>
-        </ul>
-      </li>
-      <li>Text "."</li>
-    </ul>
-  </li>
-</ul>
-
+```json
+{
+  "Line box": {
+    "Box <span>": {
+      "Text": "Hi"
+    }
+  },
+  "Line box": {
+    "Box <b>": {
+      "Text": "There"
+    }
+  },
+  {
+    "Text": "."
+  }
+}
+```
 
 The flat list looks like this:
 
@@ -377,10 +389,13 @@ for lots of detail on this subject.
 ```html
 <html>
   <div style="overflow: scroll; width: 100px; height: 100px;">
-    <iframe style="filter: blur(3px); transform: rotateZ(1deg); width: 100px; height: 300px"
+    <iframe style="filter: blur(3px);
+      transform: rotateZ(1deg);
+      width: 100px; height: 300px"
   id="one" srcdoc="iframe one"></iframe>
   </div>
-  <iframe style="top:200px; transform: scale(1.1) translateX(200px)" id=two
+  <iframe style="top:200px;
+      transform: scale(1.1) translateX(200px)" id=two
       srcdoc="iframe two"></iframe>
 </html>
 ```
@@ -388,9 +403,9 @@ for lots of detail on this subject.
 For the preceding example (which is slightly different than the one in the introduction),
 here are the key elements of the property trees generated:
 
-{% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/ahpRNDTL3cijYyzazyz0.jpg",
+{% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/C2O9E1zlHNvPQRFhZSnJ.jpg",
 alt="An example of the various elements in the property tree.",
-width="800", height="1157" %}
+width="800", height="1162" %}
 
 {% Aside %}
 There are several more complexities that I have omitted from this diagram,
@@ -422,15 +437,34 @@ width="141", height="141" %}
 <div id="green" style="background:green; width:80px;">
     Hello world
 </div>
-<div id="blue" style="width:100px; height:100px; background:blue; position:absolute; top:0; left:0; z-index:-1;">
+<div id="blue" style="width:100px;
+  height:100px; background:blue;
+  position:absolute;
+  top:0; left:0; z-index:-1;">
 </div>
 ```
 
 This HTML and CSS would produce the following display list,
-where each blue square is a display item:
+where each cell is a display item:
 
-{% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/JxoGsos40WezgfxHTu8Z.png",
-alt="ALT_TEXT_HERE", width="607", height="216" %}
+<table class="with-borders">
+  <thead>
+    <tr>
+      <th>View's background</th>
+      <th><code>#blue</code> background</th>
+      <th><code>#green</code> background</th>
+      <th><code>#green</code> inline text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>drawRect</code> with size 800x600 and color white.</td>
+      <td><code>drawRect</code> with size 100x100 at position 0,0 and color blue.</td>
+      <td><code>drawRect</code> with size 80x18 at position 8,8 and color green.</td>
+      <td><code>drawTextBlob</code> with position 8,8 and text "Hello world".</td>
+    </tr>
+  </tbody>
+</table>
 
 The display item list is ordered back-to-front.
 In the example above, the green div is before the blue div in DOM order,
@@ -451,14 +485,30 @@ width="141", height="141" %}
 <div id="green" style="background:green; width:80px;">
     Hello world
 </div>
-<div id="gray" style="width:35px; height:20px; background:gray;margin-top:-10px;"></div>
+<div id="gray" style="width:35px; height:20px;
+  background:gray;margin-top:-10px;"></div>
 ```
 
-This would produce the following display list, where each blue square is a display item:
+This would produce the following display list, where each cell is a display item:
 
-{% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/tqmkge05ixGxCRSMmi95.png",
-alt="ALT_TEXT_HERE",
-width="607", height="216" %}
+<table class="with-borders">
+  <thead>
+    <tr>
+      <th>View's background</th>
+      <th><code>#green</code> background</th>
+      <th><code>#grey</code> background</th>
+      <th><code>#green</code> inline text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>drawRect</code> with size 800x600 and color white.</td>
+      <td><code>drawRect</code> with size 80x18 at position 8,8 and color green.</td>
+      <td><code>drawRect</code> with size 35x20 at position 8,16 and color grey.</td>
+      <td><code>drawTextBlob</code> with position 8,8 and text "Hello world".</td>
+    </tr>
+  </tbody>
+</table>
 
 The display item list is stored and reused by later updates.
 If a layout object has not changed during the paint tree walk,
@@ -477,24 +527,44 @@ This is demonstrated in the following example:
 alt="A pink box with a tilted orange box.", width="140", height="141" %}
 
 ```html
-<div id="scroll" style="background:pink; width:100px; height:100px; overflow:scroll; position:absolute; top:0; left:0;">
+<div id="scroll" style="background:pink; width:100px;
+   height:100px; overflow:scroll;
+   position:absolute; top:0; left:0;">
     Hello world
-    <div id="orange" style="width:75px; height:200px; background:orange; transform:rotateZ(25deg);">
+    <div id="orange" style="width:75px; height:200px;
+      background:orange; transform:rotateZ(25deg);">
         I'm falling
     </div>
 </div>
 ```
 
-This would produce the following display list, where each blue square is a display item:
+This would produce the following display list, where each cell is a display item:
 
-{% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/yv8vZx1OU0hHVhXn76vf.png",
-alt="ALT_TEXT_HERE",
-width="607", height="173" %}
+<table class="with-borders">
+  <thead>
+    <tr>
+      <th>View's background</th>
+      <th><code>#scroll</code> background</th>
+      <th><code>#scroll</code> inline text</th>
+      <th><code>#orange</code> background</th>
+      <th><code>#orange</code> inline text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>drawRect</code> with size 800x600 and color white.</td>
+      <td><code>drawRect</code> with size 100x100 at position 0,0 and color pink.</td>
+      <td><code>drawTextBlob</code> with position 0,0 and text "Hello world".</td>
+      <td><code>drawRect</code> with size 75x200 at position 0,0 and color orange.</td>
+      <td><code>drawTextBlob</code> with position 0,0 and text "I'm falling".</td>
+    </tr>
+  </tbody>
+</table>
 
 The transform property tree and paint chunks would then be (simplified for brevity):
 
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/1vRNJYOyFNsur4ZMFyvF.png",
-alt="ALT_TEXT_HERE",
+alt="An image of the preceding table, the first two cells in chunk 1, the third in chunk 2, the last two cells in chunk 3.",
 width="607", height="196" %}
 
 The ordered list of paint chunks,
@@ -530,19 +600,22 @@ from the previous section on property trees,
 there are six paint chunks.
 Together with their (transform, clip, effect, scroll) property tree states, they are:
 
-- Document background: (Document scroll, Document clip, root, Document scroll)
-- Horizontal, vertical and scroll corner for div (three separate paint chunks): (Document scroll, Document clip, #one blur, Document scroll)
-- Iframe `#one` (#one rotate, overflow scroll clip, #one blur, div scroll)
-- Iframe `#two` (#two scale, Document clip, root, Document scroll)
-- Compositor frames: surfaces, render surfaces and GPU texture tiles
+- Document background: document scroll, document clip, root, document scroll.
+- Horizontal, vertical and scroll corner for div (three separate paint chunks):
+document scroll, document clip, `#one` blur, document scroll.
+- Iframe `#one`: `#one` rotate, overflow scroll clip, `#one` blur, div scroll.
+- Iframe `#two`: `#two` scale, document clip, root, document scroll.
 
-As discussed in the previous post (a worked example is here),
+## Compositor frames: surfaces, render surfaces and GPU texture tiles
+
+As discussed in the previous post (a worked example is
+[here](/blog/renderingng-architecture/#an-example-in-practice)),
 the browser and render processes manage raster of content
 and then submit compositor frames to the Viz process for presentation to the screen.
 Compositor frames are how RenderingNG represents how to stitch rasterized content together
 and efficiently draw it using the GPU.
 
-## Tiles
+### Tiles
 
 In theory,
 a render process or browser process compositor could rasterize pixels
@@ -568,7 +641,7 @@ When a scroll occurs, a fifth tile begins to appear.
 One of the tiles happens to only have one color (sky blue),
 and there is a video and an iframe on top. Which leads to the next topic.
 
-## Quads and surfaces
+### Quads and surfaces
 
 GPU texture tiles are a special kind of quad,
 which is just a fancy name for one category of texture or another.
@@ -604,7 +677,7 @@ Another compositor frame can then refer to it later via a _surface draw quad_,
 and therefore Viz knows what to draw.
 (Note that surface draw quads contain surface ids only, and not textures.)
 
-## Intermediate render passes
+### Intermediate render passes
 
 Some visual effects, such as many filters or advanced blend modes,
 require that two or more quads are drawn to an intermediate texture.
@@ -619,7 +692,7 @@ The possibility of multiple render passes explains the name
 "render pass"—each pass has to be executed sequentially on the GPU, in multiple "passes",
 whereas a single pass can be completed in a single massively parallel GPU computation.
 
-## Aggregation
+### Aggregation
 
 Multiple compositor frames are submitted to Viz,
 and they need to be drawn to the screen together.
@@ -637,45 +710,32 @@ and applies them based on global knowledge not accessible to individual render c
 
 Here are the actual compositor frames that represent the example from the beginning of this post.
 
-<ul>
-  <li>foo.com/index.html surface: id=0
-	  <ul>
-      <li><strong>Render pass 0:</strong> draw to output.
-		    <ul>
-          <li>Render pass draw quad: draw with 3px blur and clip into render pass 0.
-			      <ul>
-              <li>Render pass 1:
-				        <ul>
-                  <li>Draw quads for tile contents of <code>#one</code> iframe, with x and y positions for each.</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-		      <li>Surface draw quad: with id 2, drawn with scale + translate transform</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-
-  <li>Browser UI surface: id=1
-	  <ul>
-      <li><strong>Render pass 0:</strong> draw to output.
-		    <ul>
-          <li>Draw quads for browser UI (tiled also)</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Bar.com/index.html surface: id=2
-    <ul>
-  	  <li><strong>Render pass 0:</strong> draw to output.
-        <ul>
-          <li>Draw quads for contents of <code>#two</code> iframe, with x and y positions for each.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+```json
+{
+  "foo.com/index.html surface: id=0": {
+    "Render pass 0 draw to output.": {
+      "Render pass draw quad: draw with 3px blur and clip into render pass 0.": {
+        "Render pass 1": {
+          "Draw quads for tile contents of #one iframe, with x and y positions for each."
+        }
+      }
+    },
+    {
+      "Surface draw quad: with id 2, drawn with scale and translate transform"
+    }
+  },
+  "Browser UI surface id=1": {
+    "Render pass 0 draw to output.": {
+      "Draw quads for browser UI (tiled also)"
+    }
+  },
+  "Bar.com/index.html surface id=2": {
+    "Render pass 0 draw to output.": {
+      "Draw quads for contents of #two iframe, with x and y positions for each."
+    }
+  }
+}
+```
 
 ## Conclusion
 
@@ -685,5 +745,3 @@ this concludes the overview of RenderingNG.
 Next up will be deep-dives on the challenges and technology within many of the sub-components
 of the rendering pipeline, all the way from beginning to end.
 Those will be coming soon!
-
-_Illustrations by Una Kravets._
