@@ -1,4 +1,5 @@
-# The top-level keys in this file are used to generate tag pages under /tags/<tag>.
+# The top-level keys in this file are used to generate tag pages under /tags/<tag>, presuming
+# they have at least one matching post.
 
 news:
   en: News
