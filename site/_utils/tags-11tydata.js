@@ -37,13 +37,15 @@ module.exports = locale => ({
       const filtered = [];
       for (const tag of tags) {
         const posts = tag.posts[locale];
-        if (posts.length > 0) {
-          filtered.push({
-            key: tag.key,
-            posts,
-            title: i18n(tag.title, locale),
-          });
+        if (!posts.length) {
+          continue;
         }
+
+        filtered.push({
+          key: tag.key,
+          posts,
+          title: tag.overrideTitle ?? i18n(tag.title, locale),
+        });
       }
 
       return filtered.sort((a, b) =>

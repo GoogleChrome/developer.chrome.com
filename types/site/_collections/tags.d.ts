@@ -23,6 +23,7 @@ declare global {
   export interface Tag {
     key: string;
     title: string;
+    overrideTitle?: string;
     posts: {
       [locale: string]: EleventyCollectionItem[];
     };

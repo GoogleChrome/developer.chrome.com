@@ -49,12 +49,12 @@ module.exports = locale => ({
 
       for (const tag of tags) {
         const posts = tag.posts[locale];
-        if (!posts?.length) {
+        if (!posts.length) {
           continue;
         }
 
         const more = addPagination(posts, locale + '/tags/' + tag.key, {
-          title: i18n(tag.title, locale),
+          title: tag.overrideTitle ?? i18n(tag.title, locale),
           key: tag.key,
         });
         paginated = paginated.concat(more);

@@ -97,6 +97,7 @@ module.exports = function (collections) {
            */
           posts: locales.reduce((o, key) => ({...o, [key]: []}), {}),
           title: 'i18n.tags.chrome',
+          overrideTitle: chromeTag.replace('chrome-', 'Chrome '),
         };
       }
       tags[chromeTag].posts[item.data.locale].push(item);
