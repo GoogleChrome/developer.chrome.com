@@ -9,7 +9,7 @@ description: >
  similar browsing history. This is done without sharing individual browsing history with the browser 
  vendor or anyone else.
 date: 2021-05-18
-updated: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---
