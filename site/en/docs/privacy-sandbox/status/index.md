@@ -4,7 +4,7 @@ title: Is it ready yet?
 subhead: Implementation status for Privacy Sandbox APIs.
 description: Implementation status for Privacy Sandbox APIs. Last updated 2021-05-18.
 date: 2021-05-18
-updated: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---
@@ -17,18 +17,16 @@ There may be multiple separate origin trial periods for each API.
 
 _Previously known as Conversion Measurement._
 
-- [Current origin trial](https://web.dev/origin-trials/): Chrome 86 to 93 (see [Origin
-  Trial extended through Chrome
-  93](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM))
+- [Current origin trial](https://web.dev/origin-trials/): from Chrome 86, [now extended](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM) to Chrome&nbsp;93. 
 - [Register for origin
   trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
+- [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
 - [Chrome Platform Status](https://www.chromestatus.com/features/6412002824028160).
 - [Blink
   status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement).
 - [GitHub](https://github.com/WICG/conversion-measurement-api/): see
   [issues](https://github.com/WICG/conversion-measurement-api/issues) for API questions
   and discussion.
-- [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
 
 ### Status: details
 
@@ -54,16 +52,17 @@ See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
 
 ## Trust Tokens
 
-- [Current origin trial](https://web.dev/origin-trials/): Chrome 84 to 91.
+- [Current origin trial](https://web.dev/origin-trials/): from Chrome 84, 
+[now extended](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ) to Chrome 94.
 - [Register for origin
   trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- [Demo](https://trust-token-demo.glitch.me/).
 - [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
 - [Blink
   status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens).
 - [GitHub](https://github.com/WICG/trust-token-api): see
   [issues](https://github.com/WICG/trust-token-api/issues) for API questions and
   discussion.
-- [Demo](https://trust-token-demo.glitch.me/).
 - [Chrome DevTools
   integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 - Find out more: [Getting started with Trust Tokens](https://web.dev/trust-tokens/)
@@ -84,11 +83,10 @@ See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
 
 ## FLoC
 
-- [Current origin trial](https://web.dev/origin-trials): Chrome 91 Beta. See [Intent to
+- Initial [origin trial](https://web.dev/origin-trials) now closed. See [Intent to
   Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) for
   updates.
-- [Register for origin
-  trial](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561).
+- [Demo](https://floc.glitch.me/) of initial version (origin trial now closed).
 - [Blink status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=floc).
 - [API proposal](https://github.com/WICG/floc) is under discussion with
   [WICG](https://www.w3.org/community/wicg/) and interest groups.
@@ -130,6 +128,7 @@ Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
 
 - [Getting started with Chrome's origin trials](https://web.dev/origin-trials/)
 - [What are third-party origin trials?](https://web.dev/third-party-origin-trials)
+- [Troubleshooting Chrome's origin trials](https://developer.chrome.com/blog/origin-trial-troubleshooting/)
 - [Origin trials guide for web
   developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 - [Origin trial
