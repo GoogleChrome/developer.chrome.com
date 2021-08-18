@@ -3,23 +3,37 @@
 {% extends 'partials/title-bar.njk' %}
 
 {% block title_bar_content %}
-  <nav class="breadcrumbs cluster" aria-label="{{ 'i18n.common.breadcrumbs' | i18n(locale) }}">
-    <div class="align-center flow-space-200">
-      {% set all = helpers.buildBreadcrumbs(page.url, collections) %}
-      {% for part in all -%}
+  <nav class="breadcrumbs flow-space-200" aria-label="{{ 'i18n.common.breadcrumbs' | i18n(locale) }}">
+    {% set all = helpers.buildBreadcrumbs(page.url, collections) %}
+    {% for part in all -%}
 
-        {% if not loop.first -%}
-          {{ icon('keyboard-arrow-right', {hidden: true}) }}
-        {%- endif %}
+      {% if not loop.first -%}
+        {{ icon('keyboard-arrow-right', {hidden: true}) }}
+      {%- endif %}
+
+      {% if headingBreadcrumb and loop.last %}
+        {# This is the last segment and we need to be a large <h1>. #}
+
+        {% if part.url %}
+          <h1 class="type--h5"><a class="link decoration-none no-visited" href="{{ part.url }}">{{ part.title }}</a></h1>
+        {% else %}
+          <h1 class="type--h5">{{ part.title }}</h1>
+        {% endif %}
+
+      {% else %}
+        {# This is a middle or normal segment. #}
 
         {% if part.url %}
           <a class="link type--h6 decoration-none no-visited" href="{{ part.url }}">{{ part.title }}</a>
+        {% elif not loop.last %}
+          <span class="type--h6">{{ part.title }}</span>
         {% else %}
+          {# This is the last text item of a segment, so make it large. #}
           <span class="type--h5">{{ part.title }}</span>
         {% endif %}
+      {% endif %}
 
-      {%- endfor %}
-    </div>
+    {%- endfor %}
   </nav>
   {% if sharingEnabled %}
     <share-button message="{{ title }}">

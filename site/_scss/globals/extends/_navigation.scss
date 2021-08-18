@@ -52,7 +52,7 @@
   }
 }
 
-%navigation__link[aria-current='page'] {
+%navigation__link[data-state='active'] {
   background: var(--color-secondary);
   color: var(--color-side-nav-active);
 }
