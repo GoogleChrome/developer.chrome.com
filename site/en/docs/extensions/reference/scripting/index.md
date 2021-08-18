@@ -163,7 +163,7 @@ If injecting CSS within a page, you can also specify a string to be used in the
 can't execute a string using `scripting.executeScript()`.
 
 ```js
-const css = 'body { background-color = "red"; }';
+const css = 'body { background-color: red; }';
 const tabId = getTabId();
 chrome.scripting.insertCSS(
     {
