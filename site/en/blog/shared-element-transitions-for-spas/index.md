@@ -6,6 +6,7 @@ authors:
 description: >
   The shared element transition API allows page transitions within single-page apps, and is available as an origin trial now! Navigation transitions between pages and sites are coming later.
 date: 2021-08-17
+updated: 2021-08-18
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/6bO4bz5DfFIZxiBMd1oW.jpg
 alt: A layout plan for a web page.
 ---
@@ -161,7 +162,7 @@ The elements don't need to be the same node. In this case, `element2` will trans
 
 **Shared transition elements will render on top of other elements.** If other elements render on top of the transitioned elements, they'll pop underneath for the transition. We're not sure yet if this should be a general limitation, or if it should be fixed.
 
-**Shared transition elements must have `contain: paint`.** This makes it difficult to transition elements that have paint effects outside their content rectangle, such as shadows, blurs, and outlines. Hopefully this will change in future.
+**Shared transition elements must have [`contain: paint`](https://web.dev/content-visibility/#containment).** This makes it difficult to transition elements that have paint effects outside their content rectangle, such as shadows, blurs, and outlines. Hopefully this will change in future.
 
 **Shared transition elements cannot have background effects.** Things like [`mix-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode) and [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) won't interact correctly with the background during a transition.
 
