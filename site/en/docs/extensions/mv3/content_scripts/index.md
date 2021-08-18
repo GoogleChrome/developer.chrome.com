@@ -571,8 +571,9 @@ var port = chrome.runtime.connect();
 
 window.addEventListener("message", (event) => {
   // We only accept messages from ourselves
-  if (event.source != window)
+  if (event.source != window) {
     return;
+  }
 
   if (event.data.type && (event.data.type == "FROM_PAGE")) {
     console.log("Content script received: " + event.data.text);
@@ -596,11 +597,12 @@ similar means.
 
 While isolated worlds provide a layer of protection, using content scripts can create
 vulnerabilities in an extension and the web page. If the content script receives content from a
-separate website, such as making an [XMLHttpRequest][28], be careful to filter content [cross-site
-scripting][29] attacks before injecting it. Only communicate over HTTPS in order to avoid
-["man-in-the-middle"][30] attacks.
+separate website, such as making an [`XMLHttpRequest`][28], be careful to filter content
+[cross-site scripting][29] attacks before injecting it. Only communicate over HTTPS in order to
+avoid ["man-in-the-middle"][30] attacks.
 
-Be sure to filter for malicious web pages. For example, the following patterns are dangerous:
+Be sure to filter for malicious web pages. For example, the following patterns are dangerous, and
+disallowed in MV3:
 
 {% Compare 'worse' %}
 ```js
