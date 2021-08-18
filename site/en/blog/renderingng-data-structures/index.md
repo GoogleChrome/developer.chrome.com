@@ -23,9 +23,9 @@ that represent which web documents are in which render process and Blink rendere
 that represents the output of (and input to) the layout constraint algorithm.
 - _Property trees_, which represent the transform, clip, effect,
 and scroll hierarchy of a web document,
-are used throughout the pipeline.
-- _Display lists and paint chunks_ are the inputs to the raster and layerization algorithms.
-- _Compositor frames_ contain surfaces, render surfaces,
+and are used throughout the pipeline.
+- _Display lists and paint chunks_, the inputs to the raster and layerization algorithms.
+- _Compositor frames_, containing surfaces, render surfaces,
 and GPU texture tiles that are used to draw using the GPU.
 
 Let's now walk through each of these data structures.
@@ -105,7 +105,7 @@ and then [aggregates](/blog/renderingng-architecture/#rendering-pipeline-structu
 
 The `foo.com` main frame and the `foo.com/other-page` subframe
 are part of the same frame tree and rendered in the same process.
-However, the two frames still have independent document lifecycles
+However, the two frames still have independent [document lifecycles](/blog/renderingng-architecture/#render-process-main-thread-components)
 as they are part of different local frame tree fragments.
 For this reason, it is not possible to generate one compositor frame for both in one update.
 The render process does not have enough information
@@ -132,7 +132,7 @@ This process is not instantaneous,
 so the replicated visual properties also include a sync token.
 The Viz compositor uses this sync token to wait for all the local frame tree fragments
 to submit a compositor frame with the current sync token.
-This process avoids, to avoid mixing compositor frames with different visual properties.
+This process avoids mixing compositor frames with different visual properties.
 
 ## The immutable fragment tree
 
@@ -145,10 +145,10 @@ src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/l8VFPp007SmmhPWUdoJW.jpg",
 alt="Representation of the fragments in each tree, with one fragment being marked as needing layout.",
 width="800", height="441" %}
 
-Each fragment represents a part of an element.
+Each fragment represents a part of a DOM element.
 Typically there is only one fragment per element,
 but there can be more if it is split across different pages when printing,
-or columns when in a multi-column element.
+or columns when in a multi-column context.
 
 After layout, each fragment becomes immutable and is never changed again.
 Importantly, we also place a few additional restrictions. We don't:
@@ -169,11 +169,11 @@ This means (typically) we only need to rebuild the spine of the tree.
 We'll explore how we do this in a future post.
 
 In the future, this immutable design will allow us to do interesting things
-like passing this data structure across thread boundaries if needed
+like passing the immutable fragment tree across thread boundaries if needed
 (to perform subsequent phases on a different thread),
 generate multiple trees for a smooth layout animation,
 or perform parallel speculative layouts.
-It gives us the potential of multi-threading layout itself.
+It also gives us the potential of multi-threading layout itself.
 
 ### Inline Fragment Items
 
@@ -271,12 +271,12 @@ and CSS can apply various styles to elements.
 
 These come mostly in four flavors of effect:
 
-- **Layout:** inputs to the layout constraint algorithm
-- **Paint:** how to paint and raster the element
+- **Layout:** inputs to the layout constraint algorithm.
+- **Paint:** how to paint and raster the element.
 (but not its descendants)
-- **Visual:** raster/draw effects applied to the DOM subtree,
+- **Visual:** raster/draw effects applied to the DOM subtree.
 such as transforms, filters, and clipping
-- **Scrolling:** axis-aligned and rounded corner
+- **Scrolling:** axis-aligned and rounded corner.
 clipping and scrolling of the contained subtree
 
 Property trees are data structures that explain how visual and scrolling effects apply to DOM elements.
@@ -350,7 +350,7 @@ and in which order.
 This tells us where it is on screen and how to draw it.
 
 {% Aside %}
-There are four trees because scrolling only applies to the contained subtree.
+(*) There are four trees because scrolling only applies to the contained subtree.
 An element is contained by a scroller if it scrolls with it,
 and `position:absolute` and `position: fixed`
 elements often escape ancestor scrolling elements,
@@ -364,7 +364,7 @@ the topology of the clipping and scrolling aspects of property trees
 is sometimes quite different than for visual effects.
 This is also why most visual effects induce a containing block for all descendants
 ([example](https://github.com/w3c/fxtf-drafts/issues/11)).
-The structure of property trees in all their glory is quite complicated;
+The full structure of property trees is quite complicated;
 see the long code comments
 [here](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/paint/object_paint_properties.h;l=96)
 for lots of detail on this subject.
@@ -581,7 +581,7 @@ alt="GPU texture tiles.", width="800", height="604" %}
 These rasterized tiles are wrapped in a render pass, which is a list of quads.
 The render pass doesn't contain any pixel information;
 instead, it has instructions on where and how to draw each quad to produce the desired pixel output.
-There is a draw quad for each GPU texture tile.
+There is a _draw quad_ for each GPU texture tile.
 The display compositor just has to iterate through the list of quads,
 drawing each one with the specified visual effects,
 to produce the desired pixel output for the render pass.
@@ -608,7 +608,7 @@ and therefore Viz knows what to draw.
 
 Some visual effects, such as many filters or advanced blend modes,
 require that two or more quads are drawn to an intermediate texture.
-Then the intermediate texture is drawn into a destination buffer on the GPU,
+Then the intermediate texture is drawn into a destination buffer on the GPU (or possibly another intermediate texture),
 applying the visual effect at the same time.
 To allow for this, a compositor frame actually contains a list of render passes.
 There is always a root render pass,
@@ -681,7 +681,7 @@ Here are the actual compositor frames that represent the example from the beginn
 
 Thanks for reading!
 Together with the previous two posts,
-this concludes the overview of the rendering pipeline.
+this concludes the overview of RenderingNG.
 Next up will be deep-dives on the challenges and technology within many of the sub-components
 of the rendering pipeline, all the way from beginning to end.
 Those will be coming soon!
