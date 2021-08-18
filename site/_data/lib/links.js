@@ -34,7 +34,7 @@ function getLinkActiveState(itemUrl, pageUrl) {
  *   parent: SectionLinkItem|undefined,
  *   active: boolean,
  * }}
- * @type {{never}}
+ * @type {never}
  */
 // eslint-disable-next-line no-unused-vars
 let SectionLinkItem;
