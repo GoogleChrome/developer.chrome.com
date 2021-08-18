@@ -48,6 +48,20 @@ redirects:
 - from: /docs/devtools/javascript/blackbox-chrome-extension-scripts/
   to: /docs/devtools/javascript/ignore-chrome-extension-scripts/
 
+# Removal of /overview pages
+
+- from: /docs/android/custom-tabs/overview/
+  to: /docs/android/custom-tabs/
+
+- from: /docs/android/trusted-web-activity/overview/
+  to: /docs/android/trusted-web-activity/
+
+- from: /multidevice/webview/overview/
+  to: /multidevice/android/
+
+- from: /multidevice/webview/overview/
+  to: /multidevice/webview/
+
 # CWS payments/apps purge
 - from: /docs/webstore/hosted_apps
   to: /docs/webstore
