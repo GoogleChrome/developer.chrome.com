@@ -6,6 +6,10 @@
   {% include 'partials/breadcrumbs-tag.njk' %}
 {% endblock %}
 
+{% block feed %}
+  <link rel="alternate" type="application/rss+xml" title="{{ title }}" href="{{ site.url }}/feeds/{{ feedName }}.xml">
+{% endblock %}
+
 {% block content %}
   {% set paginationObject = paged.pagination %}
   <div class="measure-1280 width-full gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400 center-margin">

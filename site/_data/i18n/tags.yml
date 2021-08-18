@@ -14,6 +14,12 @@ amp:
 autoplay:
   en: autoplay
 
+capabilities:
+  en: Capabilities
+
+chrome:
+  en: Google Chrome
+
 chromium-chronicle:
   en: Chromium Chronicle
 
@@ -76,3 +82,9 @@ new-in-devtools:
 
 devtools-engineering:
   en: DevTools Engineering
+
+origin-trials:
+  en: Origin Trials
+
+identity:
+  en: Identity

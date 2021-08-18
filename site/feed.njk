@@ -30,7 +30,13 @@ pagination:
       {% for authorId in item.data.authors %}
       {% set author = authorsData[authorId] %}
       <author>
-        <name>{{ author.name.given }} {{ author.name.family }}</name>
+        <name>
+          {%- if author -%}
+            {{ author.name.given }} {{ author.name.family }}
+          {%- else -%}
+            {{ authorId }}
+          {%- endif -%}
+        </name>
       </author>
       {% endfor %}
     {% else %}

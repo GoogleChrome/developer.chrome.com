@@ -48,22 +48,19 @@ module.exports = function (collections) {
    */
   allSortedForLoop: for (const item of allSorted) {
     // If there are no tags or the tags isn't a string or array, skip the post.
-    if (
-      !item.data.tags ||
-      (typeof item.data.tags !== 'string' && !Array.isArray(item.data.tags))
-    ) {
+    /** @type {string[]} */
+    const allTags = [item.data.tags ?? []].flat();
+    if (!allTags.length) {
+      delete item.data.tags;
       continue allSortedForLoop;
     }
-    // If tags is a string, turn it into an array.
-    if (typeof item.data.tags === 'string') {
-      item.data.tags = [item.data.tags];
-    }
-    /** @type {string[]} */
-    const allTags = item.data.tags;
+
+    // Ensure that tags on the front matter is an array.
+    item.data.tags = allTags;
 
     // Handles posts that are also a Chrome release, `chrome-*`, therefore there are no supported tags.
     // Iterates through all possibilities as some posts may apply to many Chrome releases.
-    const chromeTags = allTags.filter(tag => /^chrome-\d+$/.test(tag));
+    const chromeTags = allTags.filter(tag => tag.startsWith('chrome-'));
     while (chromeTags.length) {
       const chromeTag = /** @type {string} */ (chromeTags.shift());
 
