@@ -71,7 +71,8 @@ Once captured, you can interact with screenshots in the following ways:
   captured.
 - Double-click a thumbnail to zoom in on it.
 
-{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/RM2QuyGbgYhQu61CSyCw.png", alt="Capture screenshots enabled", width="800", height="614" %}
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/RM2QuyGbgYhQu61CSyCw.png",
+  alt="Capture screenshots enabled", width="800", height="614" %}
 
 **Figure 4**. Capture screenshots enabled, showing loading screenshots over time.
 
