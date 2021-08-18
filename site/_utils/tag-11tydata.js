@@ -54,7 +54,7 @@ module.exports = locale => ({
         }
 
         const more = addPagination(posts, locale + '/tags/' + tag.key, {
-          title: tag.isGeneratedTag ? tag.title : i18n(tag.title, locale),
+          title: i18n(tag.title, locale),
           key: tag.key,
         });
         paginated = paginated.concat(more);

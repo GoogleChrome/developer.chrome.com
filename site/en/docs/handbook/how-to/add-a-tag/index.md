@@ -15,15 +15,6 @@ news:
   en: News
 ```
 
-- Add your tag to `site/_data/supportedTags.json`. For the `title` field, use
-the same key you used in `site/_data/i18n/tags.yml`.
-
-```json
-"news": {
-  "title": "i18n.tags.news"
-},
-```
-
 ## Add the tag to your post
 
 In the front matter for your post you can add a list of tags:

@@ -1,3 +1,5 @@
+# The top-level keys in this file are used to generate tag pages under /tags/<tag>.
+
 news:
   en: News
   es: Noticias

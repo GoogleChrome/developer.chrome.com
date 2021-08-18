@@ -26,7 +26,6 @@ declare global {
     posts: {
       [locale: string]: EleventyCollectionItem[];
     };
-    isGeneratedTag: boolean;
   }
   export interface Tags {
     [tag: string]: Tag;

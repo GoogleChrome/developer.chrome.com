@@ -41,7 +41,7 @@ module.exports = locale => ({
           filtered.push({
             key: tag.key,
             posts,
-            title: tag.isGeneratedTag ? tag.title : i18n(tag.title, locale),
+            title: i18n(tag.title, locale),
           });
         }
       }
