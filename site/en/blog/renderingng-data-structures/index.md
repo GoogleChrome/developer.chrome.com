@@ -14,14 +14,6 @@ authors:
   - kylecharbonneau
 ---
 
-- Daniel Cheng, Security Architecture engineer: frame trees.
-- Ian Kilpatrick, Layout tech lead: fragment trees.
-- Koji Ishi, Layout engineer: inline fragments.
-- Chris Harrelson, Rendering lead for Chrome: property trees.
-- Philip Rogers, Paint and Compositing tech lead: display lists and paint chunks.
-- Kyle Charbonneau, Viz team engineer: compositor frames.
-- Illustrations by Una Kravets.
-
 Previous posts in this series gave an overview of the
 [goals, key properties](/blog/renderingng/)
 and [high-level component pieces](/blog/renderingng-architecture/)
@@ -710,32 +702,45 @@ and applies them based on global knowledge not accessible to individual render c
 
 Here are the actual compositor frames that represent the example from the beginning of this post.
 
-```json
-{
-  "foo.com/index.html surface: id=0": {
-    "Render pass 0 draw to output.": {
-      "Render pass draw quad: draw with 3px blur and clip into render pass 0.": {
-        "Render pass 1": {
-          "Draw quads for tile contents of #one iframe, with x and y positions for each."
-        }
-      }
-    },
-    {
-      "Surface draw quad: with id 2, drawn with scale and translate transform"
-    }
-  },
-  "Browser UI surface id=1": {
-    "Render pass 0 draw to output.": {
-      "Draw quads for browser UI (tiled also)"
-    }
-  },
-  "Bar.com/index.html surface id=2": {
-    "Render pass 0 draw to output.": {
-      "Draw quads for contents of #two iframe, with x and y positions for each."
-    }
-  }
-}
-```
+<ul>
+  <li><code>foo.com/index.html</code> surface: id=0
+	  <ul>
+      <li><strong>Render pass 0:</strong> draw to output.
+		    <ul>
+          <li>Render pass draw quad: draw with 3px blur and clip into render pass 0.
+			      <ul>
+              <li><strong>Render pass 1:</strong>
+				        <ul>
+                  <li>Draw quads for tile contents of <code>#one</code> iframe, with x and y positions for each.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+		      <li>Surface draw quad: with id 2, drawn with scale and translate transform.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>Browser UI surface: id=1
+	  <ul>
+      <li><strong>Render pass 0:</strong> draw to output.
+		    <ul>
+          <li>Draw quads for browser UI (tiled also)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code>bar.com/index.html</code> surface: id=2
+    <ul>
+  	  <li><strong>Render pass 0:</strong> draw to output.
+        <ul>
+          <li>Draw quads for contents of <code>#two</code> iframe, with x and y positions for each.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 ## Conclusion
 
@@ -745,3 +750,5 @@ this concludes the overview of RenderingNG.
 Next up will be deep-dives on the challenges and technology within many of the sub-components
 of the rendering pipeline, all the way from beginning to end.
 Those will be coming soon!
+
+_Illustrations by Una Kravets._
