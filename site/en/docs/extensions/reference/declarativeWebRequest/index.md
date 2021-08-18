@@ -31,13 +31,13 @@ you want to trigger a message.
 
 All other actions require host permissions to all URLs.
 
-As an example, if `"*://*.google.com/*"` is the only host permission an extension has, then such an
+As an example, if `"https://*.google.com/*"` is the only host permission an extension has, then such an
 extension may set up a rule to
 
-- cancel a request to "http://www.google.com" or "http://anything.else.com"
-- send a message when navigating to "http://www.google.com" but not to "http://something.else.com"
+- cancel a request to "https://www.google.com" or "https://anything.else.com"
+- send a message when navigating to "https://www.google.com" but not to "https://something.else.com"
 
-The extension cannot set up a rule to redirect "http://www.google.com" to "http://mail.google.com".
+The extension cannot set up a rule to redirect "https://www.google.com" to "https://mail.google.com".
 
 ## Rules
 
@@ -46,7 +46,7 @@ rules to the `chrome.declarativeWebRequest.onRequest` event object.
 
 The Declarative Web Request API supports a single type of match criteria, the `RequestMatcher`. The
 `RequestMatcher` matches network requests if and only if all listed criteria are met. The following
-`RequestMatcher` would match a network request when the user enters "http://www.example.com" in the
+`RequestMatcher` would match a network request when the user enters "https://www.example.com" in the
 URL bar:
 
 ```js

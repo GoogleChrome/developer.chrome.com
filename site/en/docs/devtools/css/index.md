@@ -4,7 +4,7 @@ title: "View and change CSS"
 authors:
   - kaycebasques
 date: 2017-06-08
-#updated: YYYY-MM-DD
+updated: 2021-08-16
 description: "Learn how to use Chrome DevTools to view and change a page's CSS."
 ---
 
@@ -15,14 +15,28 @@ Chrome DevTools.
 
 1.  Right-click the `Inspect Me!` text below and select **Inspect**. The **Elements** panel of
     DevTools opens. The `Inspect Me!` element is highlighted in the **DOM Tree**.
+
+    <p class="aloha" data-message="wackadoo!">Inspect Me!</p>
+
 2.  In the **DOM Tree**, find the value of the `data-message` attribute for the `Inspect Me!`
     element.
 3.  Enter the value in the text box below.
+
+    <div class="devtools-css-check">
+      <input type="text" required pattern="wackadoo!" />
+      <span></span>
+    </div>
+
 4.  The **Styles** tab on the **Elements** panel lists the CSS rules being applied to whatever
     element is currently selected in the **DOM Tree**, which should still be the `Inspect Me!`
     element in this case. Find the `aloha` class rule. The fact that you see this rule means that
     it's being applied to the `Inspect Me!` element.
 5.  The `aloha` class is declaring a value for `padding`. Enter that value in the text box below.
+
+    <div class="devtools-css-check">
+      <input type="text" required pattern="1em" />
+      <span></span>
+    </div>
 
 {% Img src="image/admin/wYBJBK3aGW4fvklHISIH.png", alt="The inspected element is highlighted in the DOM Tree", width="800", height="562" %}
 
@@ -40,13 +54,10 @@ the **Styles** tab
 
 Use the **Styles** tab when you want to change or add CSS declarations to an element.
 
-{% Aside %}
-
-**Note:** Complete the [View an element's CSS][2] tutorial before doing this one.
-
-{% endAside %}
-
 1.  Right-click the `Add A Background Color To Me!` text below and select **Inspect**.
+
+    <p class="aloha">Add A Background Color To Me!</p>
+
 2.  Click `element.style` near the top of the **Styles** tab.
 3.  Type `background-color` and press Enter.
 4.  Type `honeydew` and press Enter. In the **DOM Tree** you can see that an inline style
@@ -62,13 +73,11 @@ Use the **Styles** tab when you want to change or add CSS declarations to an ele
 Use the **Styles** tab to see how an element looks when a CSS class is applied to or removed from an
 element.
 
-{% Aside %}
-
-**Note:** Complete the [View an element's CSS][3] tutorial before doing this one.
-
-{% endAside %}
-
 1.  Right-click the `Add A Class To Me!` element below and select **Inspect**.
+
+    <p class="aloha">Add A Class To Me!</p>
+    <div hidden class="color_me"><!-- Forces color_me to be kept on this page --></div>
+
 2.  Click **.cls**. DevTools reveals a text box where you can add classes to the selected element.
 3.  Type `color_me` in the **Add new class** text box and then press Enter. A checkbox appears below
     the **Add new class** text box, where you can toggle the class on and off. If the
@@ -83,15 +92,12 @@ element.
 ## Add a pseudostate to a class {: #pseudostates }
 
 Use the **Styles** tab to permanently apply a CSS pseudostate to an element. DevTools supports
-`:active`, `:focus`, `:hover`, and `:visited`.
-
-{% Aside %}
-
-**Note:** Complete the [View an element's CSS][4] tutorial before doing this one.
-
-{% endAside %}
+`:active`, `:focus`, `:hover`, `:visited`, and others.
 
 1.  Hover over the `Hover Over Me!` text below. The background color changes.
+
+    <p class="aloha hover">Hover Over Me!</p>
+
 2.  Right-click the `Hover Over Me!` text and select **Inspect**.
 3.  In the **Styles** tab, click **:hov**.
 4.  Check the **:hover** checkbox. The background color changes like before, even though you're not
@@ -106,13 +112,10 @@ Use the **Styles** tab to permanently apply a CSS pseudostate to an element. Dev
 Use the **Box Model** interactive diagram in the **Styles** tab to change the width, height,
 padding, margin, or border length of an element.
 
-{% Aside %}
-
-**Note:** Complete the [View an element's CSS][5] tutorial before doing this one.
-
-{% endAside %}
-
 1.  Right-click the `Change My Margin!` element below and select **Inspect**.
+
+    <p class="aloha">Change My Margin!</p>
+
 2.  In the **Box Model** diagram in the **Styles** tab, hover over **padding**. The element's
     padding is highlighted in the viewport.
 
@@ -137,7 +140,3 @@ padding, margin, or border length of an element.
 **Figure 7**. Changing the element's left-margin
 
 [1]: /docs/devtools/customize/#placement
-[2]: #view
-[3]: #view
-[4]: #view
-[5]: #view

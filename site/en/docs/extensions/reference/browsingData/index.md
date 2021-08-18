@@ -122,7 +122,7 @@ origins ought to be effected. Currently, origins are divided into three categori
   action. If you don't specify an `originTypes`, the API defaults to removing data from unprotected
   web origins.
 - `protectedWeb` covers those web origins that have been installed as hosted applications.
-  Installing [Angry Birds][2], for example, protects the origin `http://chrome.angrybirds.com`, and
+  Installing [Angry Birds][2], for example, protects the origin `https://chrome.angrybirds.com`, and
   removes it from the `unprotectedWeb` category. Please do be careful when triggering deletion of
   data for these origins: make sure your users know what they're getting, as this will irrevocably
   remove their game data. No one wants to knock tiny pig houses over more often than necessary.

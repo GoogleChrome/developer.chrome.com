@@ -66,21 +66,6 @@ now pay it in order to continue accessing your developer dashboard. This one-tim
 the standard [developer registration process][99].
 {% endAside %}
 
-### How can I sign up using my Google Apps email address (for example, admin@example.com)? {: #faq-gen-17 }
-
-If you can't sign into the Chrome Web Store Developer Dashboard with your Google Apps email address,
-you have two options:
-
-1.  Go to [https://www.google.com/accounts/NewAccount][100], and create a Google Account whose login
-    email is your Google Apps email address. Once you do this, you'll be able to log in using that
-    email address. Note, however, that you'll have two accounts with the same login email address: a
-    Google Account and a Google Apps account.
-2.  Wait until the domain is transferred to the new Google Apps account infrastructure. Transitioned
-    Google Apps accounts will be able to log into the Chrome Web Store Developer Dashboard. For more
-    information, read the [help for the new Google Apps infrastructure][101].
-
-We recommend option 1 if you want to get up and running as soon as possible.
-
 ### What types of extensions are not allowed in the store? {: #faq-gen-22 }
 
 While we try to allow most extensions, a small number of extensions are explicitly
@@ -173,7 +158,7 @@ pushed out to users over the next few hours.
 ### Can I host my own extension? {: #faq-dev-03 }
 
 Yes, you may host your own extension, although you will need to take care of [packaging and
-serving the][111] [auto-update manifest][112] yourself.
+serving][111] the [auto-update manifest][112] yourself.
 
 ## Creating a listing
 
@@ -342,10 +327,10 @@ problem and include your .crx file.
 European developers can raise concerns about clarity of terms, policies, or other Platform To
 Business related issues by contacting CWS support.
 
-[1]: http://chrome.google.com/webstore
+[1]: https://chrome.google.com/webstore
 [2]: /docs/extensions/mv2/hosting_changes
 [3]: /docs/extensions/mv2/faq
-[4]: http://groups.google.com/a/chromium.org/group/chromium-apps
+[4]: https://groups.google.com/a/chromium.org/group/chromium-apps
 [5]: #faq-gen-01
 [6]: #faq-gen-02
 [7]: #faq-gen-05
@@ -433,24 +418,22 @@ Business related issues by contacting CWS support.
 [89]: #faq-extensions-02
 [90]: #faq-themes-01
 [91]: #faq-themes-02
-[95]: http://googlechromereleases.blogspot.com/
-[96]: http://crbug.com
-[97]: http://www.chromium.org/getting-involved/dev-channel
+[95]: https://chromereleases.googleblog.com/
+[96]: https://crbug.com
+[97]: https://www.chromium.org/getting-involved/dev-channel
 [98]: /docs/webstore/program_policies
 [99]: /docs/webstore/register
 [100]: https://www.google.com/accounts/NewAccount
-[101]: http://www.google.com/support/a/bin/topic.py?topic=28917
 [102]: /docs/webstore/terms
 [103]: /docs/webstore/intl/en/program_policies.html
-[104]: http://groups.google.com
+[104]: https://groups.google.com
 [106]: /docs/webstore/program_policies
 [110]: https://chrome.google.com/webstore/devconsole
-[111]: http://code.google.com/chrome/extensions/packaging.html
-[112]: http://code.google.com/chrome/extensions/autoupdate.html
+[111]: https://code.google.com/chrome/extensions/packaging.html
+[112]: https://code.google.com/chrome/extensions/autoupdate.html
 [114]: #faq-listing-108
 [116]: images
-[117]:
-  http://groups.google.com/group/chromium-extensions/browse_thread/thread/defbf282d11a8cc4/a2d1aedb84bc60b9
+[117]: https://groups.google.com/group/chromium-extensions/browse_thread/thread/defbf282d11a8cc4/a2d1aedb84bc60b9
 [121]: #faq-listing-108
 [122]: https://www.google.com/about/company/unwanted-software-policy.html
 [123]: /docs/webstore/program_policies
