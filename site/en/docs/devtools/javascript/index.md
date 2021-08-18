@@ -24,8 +24,7 @@ debugging.
 
 2.  Enter `5` in the **Number 1** text box.
 3.  Enter `1` in the **Number 2** text box.
-4.  Click **Add Number 1 and Number 2**. The label below the button says `5 + 1 = 51`. The result
-    should be `6`. This is the bug you're going to fix.
+4.  Click **Add Number 1 and Number 2**. The label below the button says `5 + 1 = 51`. The result should be `6`. This is the bug you're going to fix.
 
     {% Img src="image/admin/dCZqJCgs1FHWJAeJ1Nub.png", alt="The result of 5 + 1 is 51. It should be 6.", width="800", height="707" %}
 
