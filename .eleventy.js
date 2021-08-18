@@ -41,7 +41,7 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Supported locales
-const locales = require('./site/_data/site').locales;
+const locales = require('./site/_data/site.json').locales;
 
 // Collections
 const algoliaCollection = require('./site/_collections/algolia');
