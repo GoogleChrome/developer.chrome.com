@@ -4,7 +4,8 @@
   flex-flow: row wrap;
   justify-content: center;
 
-  svg {
+  > a,
+  > svg {
     fill: var(--color-secondary-text);
     margin: 0 var(--flow-space);
   }

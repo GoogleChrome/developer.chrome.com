@@ -13,7 +13,7 @@
     <a class="link type--h6 decoration-none no-visited" href="/tags/">{{ 'i18n.common.tags' | i18n(locale) }}</a>
     {{ icon('keyboard-arrow-right', {hidden: true}) }}
     <h1 class="type--h5">{{ title }}</h1>
-    <a href="/feeds/{{ feedName }}.xml" target="_blank" aria-label="RSS for {{ title }}">
+    <a class="display-flex" href="/feeds/{{ feedName }}.xml" target="_blank" aria-label="RSS for {{ title }}">
       {{ icon('rss', {hidden: true}) }}
     </a>
   </nav>
