@@ -665,7 +665,8 @@ Open **Settings** and click **Use large request rows** to enable large rows.
 
 ### Hide the Overview pane {: #hide-overview }
 
-By default, DevTools shows the [Overview pane][28]. Open **Settings** and uncheck the **Show overview** checkbox to hide it.
+By default, DevTools shows the [Overview pane][28]. Open **Settings** and uncheck the **Show
+overview** checkbox to hide it.
 
 {% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/uWWJfuFbpiClEFjPTdVD.png",
   alt="The show overview checkbox", width="800", height="614" %}
