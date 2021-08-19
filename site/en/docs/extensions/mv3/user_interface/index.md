@@ -2,11 +2,11 @@
 layout: "layouts/doc-post.njk"
 title: "Design the user interface"
 date: 2018-03-16
-updated: 2021-08-11
+updated: 2021-08-18
 description: UI and design guidelines for Chrome Extensions.
 ---
 
-<-- Note to editors: this is largely identical to the MV2 version, but removes 
+<!-- Note to editors: this is largely identical to the MV2 version, but removes 
     browser_action and page_action in favor of action -->
 
 The extension user interface should be purposeful and minimal. Just like extensions themselves, the
@@ -17,7 +17,7 @@ to implement different UI elements within an extension.
 
 ## Allow the extension on all pages {: #action }
 
-Use a [action][1] when an extension's features are functional in most situations.
+Use an [action][1] when an extension's features are functional in most situations.
 It will be displayed to the right of the user's URL bar, hidden under the Extensions overflow menu by default, and a user can 'pin' it to be always visible.
 
 ### Register browser action {: #browser }
@@ -68,9 +68,8 @@ See the [example as part of declarativeContent](docs/extensions/reference/action
 
 ## Provide the extension icons
 
-Extensions require at least one icon to represent it. Provide icons in PNG format form the best
-visual results, although any format supported by WebKit including BMP, GIF, ICO, and JPEG is
-accepted.
+An extension requires at least one icon to represent it. Provide icons in PNG format for the best
+visual results, although any format supported by WebKit including BMP, GIF, ICO, and JPEG is accepted.
 
 ### Designate toolbar icons {: #icons }
 
@@ -137,11 +136,11 @@ clicking one of the provided buttons.
     <title>Water Popup</title>
   </head>
   <body>
-      <img src='./stay_hydrated.png' id='hydrateImage'>
-      <button id='sampleSecond' value='0.1'>Sample Second</button>
-      <button id='15min' value='15'>15 Minutes</button>
-      <button id='30min' value='30'>30 Minutes</button>
-      <button id='cancelAlarm'>Cancel Alarm</button>
+      <img src="./stay_hydrated.png" id="hydrateImage">
+      <button id="sampleSecond" value="0.1">Sample Second</button>
+      <button id="min15" value="15">15 Minutes</button>
+      <button id="min30" value="30">30 Minutes</button>
+      <button id="cancelAlarm">Cancel Alarm</button>
     <script src="popup.js"></script>
   </body>
 </html>
@@ -267,7 +266,7 @@ the keyword.
 ```
 
 When the user types "nt" into the omnibox, it activates the extension. To signal this to the user,
-it greyscales the provided 16x16 icon and includes it in the omnibox next to the extension name.
+it grayscales the provided 16x16 icon and includes it in the omnibox next to the extension name.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/T0jCZDUVfuEANigPV6bY.png",
        alt="Active Omnibox Extension", height="70", width="576" %}
@@ -343,7 +342,7 @@ const kLocales = {
 ```
 
 The Global Google Search context menu example creates multiple options from the list in
-[locales.js][33] . When an extension contains more than one context menu, Google Chrome
+[locales.js][33]. When an extension contains more than one context menu, Google Chrome
 automatically collapses them into a single parent menu.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/LhrliaEhN82maJmeNp7f.png",
@@ -461,7 +460,7 @@ pages.
 [24]: /docs/extensions/reference/i18n
 [25]: /docs/extensions/mv3/i18n-messages
 [26]: /docs/extensions/reference/omnibox
-[27]: /docs/extensions/mv3/samples#search:omnibox%20new
+[27]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/omnibox/new-tab-search
 [28]: /docs/extensions/reference/omnibox#event-onInputEntered
 [29]: /docs/extensions/reference/contextMenus
 [30]: /docs/extensions/reference/contextMenus#method-create
@@ -476,4 +475,5 @@ pages.
 [39]: /docs/extensions/mv3/user_interface#browser
 [40]: /docs/extensions/mv3/migrating_to_service_workers
 [42]: /docs/extensions/mv3/override
+[43]: /docs/extensions/mv3/user_interface/#popup
 
