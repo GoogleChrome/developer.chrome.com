@@ -504,12 +504,12 @@ This would produce the following display list, where each cell is a display item
 
 The display item list is stored and reused by later updates.
 If a layout object has not changed during the paint tree walk,
- its display items are copied from the previous list.
- An additional optimization relies on a property of the CSS paint order specification:
- stacking contexts paint atomically.
- If no layout object has changed within a stacking context,
- the paint tree walk skips the stacking context
- and copies the entire sequence of display items from the previous list.
+its display items are copied from the previous list.
+An additional optimization relies on a property of the CSS paint order specification:
+stacking contexts paint atomically.
+If no layout object has changed within a stacking context,
+the paint tree walk skips the stacking context
+and copies the entire sequence of display items from the previous list.
 
 The current property tree state is maintained during the paint tree walk
 and the display item list is grouped into "chunks" of display items that share the same property tree state.
