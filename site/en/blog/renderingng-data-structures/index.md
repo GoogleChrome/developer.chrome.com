@@ -571,17 +571,17 @@ A good general approach is to merge chunks by default,
 and not merge paint chunks that have property tree states that are expected to change on the compositor thread,
 such as with compositor-thread scrolling or compositor-thread transform animations.
 
-The above example should ideally produce two composited layers:
+The preceding example should ideally produce two composited layers:
 
 - A 800x600 composited layer containing the drawing commands:
-  1. drawRect with size 800x600 and color white
-  2. drawRect with size 100x100 at position 0,0 and color pink
+  1. `drawRect` with size 800x600 and color white
+  2. `drawRect` with size 100x100 at position 0,0 and color pink
 - A 144x224 composited layer containing the drawing commands:
-  1. drawTextBlob with position 0,0 and text "Hello world"
+  1. `drawTextBlob` with position 0,0 and text "Hello world"
   2. translate 0,18
-  3. rotateZ(25deg)
-  4. drawRect with size 75x200 at position 0,0 and color orange
-  5. drawTextBlob with position 0,0 and text "I'm falling"
+  3. `rotateZ(25deg)`
+  4. `drawRect` with size 75x200 at position 0,0 and color orange
+  5. `drawTextBlob` with position 0,0 and text "I'm falling"
 
 If the user scrolls `#scroll`,
 the second composited layer is moved, but no rasterization is needed.
