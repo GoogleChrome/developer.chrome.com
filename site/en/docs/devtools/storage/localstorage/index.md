@@ -13,14 +13,8 @@ key-value pairs.
 
 ## View localStorage keys and values {: #view }
 
-1.  Click the **Application** tab to open the **Application** panel. The **Manifest** pane is shown
-    by default.
-
-    {% Img src="image/admin/D0n4Y2LgEnwi2x98f4Su.png", alt="The Manifest pane", width="800", height="619" %}
-
-    **Figure 1**. The Manifest pane
-
-2.  Expand the **Local Storage** menu.
+1.  Click the **Application** tab to open the **Application** panel.
+    Expand the **Local Storage** menu.
 
     {% Img src="image/admin/HV8eHezUc8qcKPyDnS1S.png", alt="The Local Storage Menu", width="800", height="525" %}
 
