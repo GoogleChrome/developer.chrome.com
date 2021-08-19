@@ -25,12 +25,12 @@ tags:
 Теперь вы можете просматривать и редактировать [выражения от контейнера](https://web.dev/new-responsive/#responsive-to-the-container) в панели **Styles**.
 
 
-Выражения от контейнера обеспечивают более динамичный подход к адаптивному дизайну. Директива `@container` работает аналогично медиавыражению с `@media`. Однако вместо того, чтобы запрашивать информацию об области просмотра у пользовательского агента `@container` запрашивает информацию у родительского контейнера, соответствующего определённым критериям.
+Выражения от контейнера обеспечивают более динамичный подход к адаптивному дизайну. Директива `@container` работает аналогично медиавыражению с `@media`. Однако вместо того, чтобы запрашивать информацию о вьюпорте браузера `@container` запрашивает информацию у родительского контейнера, соответствующего определённым критериям.
 
 
 В панели **Elements** кликните на DOM-элемент с директивой `@container` и в панели **Styles** DevTools отобразиться информация о `@container`. Кликните на директиву чтобы изменить размеры. В панели **Styles** также отобразится информация о соответствующем контейнере. Если навести курсор, то элемент-контейнер подсветится на странице и можно будет проверить его размеры. Кликните на строку чтобы выбрать элемент-контейнер.
 
-Функция выражений от контейнера пока экспериментальная. Пожалуйста, включите флаг `#enable-container-queries` по адресу `chrome://flags` чтобы протестировать её.
+Выражения от контейнеров пока экспериментальные. Пожалуйста, включите флаг `#enable-container-queries` по адресу `chrome://flags` чтобы протестировать её.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3NzGBpukHQfUZUKUpUgf.png", alt="Редактируемые выражения от контейнера в панели Styles", width="800", height="554" %}
 
@@ -38,19 +38,19 @@ tags:
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a7e1eac63bee3728b41ae440f2ec250559e9c667 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ef157dab2ccf321941548a51d350f9383a78d283 #}
 
-Chromium ишью: [1146422](https://crbug.com/1146422)
+Задача в трекере Chromium: [1146422](https://crbug.com/1146422)
 
 
 ## Предварительный просмотр веб-бандлов в панели Network {: #web-bundle }
-[Веб-бандлы](https://web.dev/web-bundles/) это способ инкапсуляции одного или нескольких HTTP-ресурсов в один файл. Теперь вы можете просмортеть содержимое веб-бандла на вкладке **Network**.
+[Веб-бандлы](https://web.dev/web-bundles/) это способ объединения одного или нескольких HTTP-ресурсов в один файл. Теперь вы можете просмортеть содержимое веб-бандла на вкладке **Network**.
 
-Функция веб-бандлов пока экспериментальная. Пожалуйста, включите флаг `#enable-experimental-web-platform-features` по адресу `chrome://flags` чтобы протестировать её.
+Веб-бандлы пока экспериментальные. Пожалуйста, включите флаг `#enable-experimental-web-platform-features` по адресу `chrome://flags` чтобы протестировать её.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PEv1mNA14K18t5P3N6Yj.png", alt="просмотр веб-бандлов", width="800", height="492" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/e7672c40f2febc80786632c188b6029b2f2ac7b7 #}
 
-Chromium ишью: [1182537](https://crbug.com/1182537) 
+Задача в трекере Chromium: [1182537](https://crbug.com/1182537) 
 
 
 ## Отладка Attribution Reporting API {: #attribution-reporting }
@@ -60,7 +60,7 @@ Chromium ишью: [1182537](https://crbug.com/1182537)
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Ошибки, связанные с Attribution Reporting API, во вкладке Issues", width="800", height="501" %}
 
-Chromium ишью: [1190735](https://crbug.com/1190735)
+Задача в трекере Chromium: [1190735](https://crbug.com/1190735)
 
 
 ## Улучшенная обработка строк в консоли {: #string }
@@ -70,24 +70,24 @@ Chromium ишью: [1190735](https://crbug.com/1190735)
 
 В 90 версии Chrome обновились DevTools и теперь во вкладке **Console** [строки всегда форматируются как валидные JSON-литералы](/blog/new-in-devtools-90/#double-quotes). Мы получили фидбэк от разработчиков, что это изменение слегка сбивает с толку. Некоторые посчитали, что экранирование слишком громосткое и затрудняет чтение вывода. 
 
-Во вкладке **Console** строки теперь форматируются как валидные JavaScript-литералы, а вам предоставляется выбор из 3 опций копирования строки. Опция **Copy as JavaScript literal** экранирует спец.символы и обернёт строку в одинарные, двойные или обратные кавычки в зависимости от содержимого. Опция **Copy string contents** напротив, скопирует всё содержимое строки без изменений (включая переносы и спец.символы) в буфер обмена. И наконец опция **Copy as JSON literal** при копировании в буфер обмена отформатирует строку так, чтобы она стала валидным JSON-литералом.
+Во вкладке **Console** строки теперь форматируются как валидные JavaScript-литералы, а вам предоставляется выбор из 3 опций копирования строки. Опция **Copy as JavaScript literal** экранирует спецсимволы и обернёт строку в одинарные, двойные кавычки или бэктики в зависимости от содержимого. Опция **Copy string contents** напротив, скопирует всё содержимое строки без изменений (включая переносы и спецсимволы) в буфер обмена. И наконец опция **Copy as JSON literal** при копировании в буфер обмена отформатирует строку так, чтобы она стала валидным JSON-литералом.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9242d13569e9fe67ac01e75d28fa2b6e6bf310d2 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5715a7b9800532d8b28e2c9fa2d3c1e220ba54a8 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/29236e333a856ae5a952fe4182545b1e2bde5539 #}
 
-Chromium ишью: [1208389](https://crbug.com/1208389)
+Задача в трекере Chromium: [1208389](https://crbug.com/1208389)
 
 
 ## Улучшенная отладка CORS {: #cors }
 
-Связанные с CORS ошибки TypeErrors во вкладке **Console** теперь связаны с вкладвами Network и Issues.
+Связанные с CORS ошибки TypeErrors во вкладке **Console** теперь связаны с вкладками Network и Issues.
 
 Кликните на две новые иконки рядом с текстом ошибки CORS чтобы увидеть сетевой запрос или прочитать расширенное сообщение об ошибке и понять варианты решения на вкладке Issues. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VzoUggSoM0FnkDlIFPhq.png", alt="Иконки рядом с текстом ошибки CORS", width="800", height="485" %}
 
-Chromium ишью: [1213393](https://crbug.com/1213393)
+Задача в трекере Chromium: [1213393](https://crbug.com/1213393)
 
 
 ## Lighthouse 8.1 {: #lighthouse }
@@ -106,14 +106,11 @@ Chromium ишью: [1213393](https://crbug.com/1213393)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/62b16561e433f4aa1645826923222699ac4bad38 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/16d96a25f24c934ef4dcbbc7b827015abdd228a1 #}
 
-Chromium ишью: [772558](https://crbug.com/772558)
+Задача в трекере Chromium: [772558](https://crbug.com/772558)
 
 
 ## Отображение `new_note_url` в панели Manifest {: #new-note-url }
 В панели Manifest теперь отображается [`new_note_url`](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking).
-
-
-Currently on Chrome OS (CrOS), Chrome Apps and Android Apps that declare a "new-note" capability may be selected as a note-taking app in the Stylus settings (shows up if the CrOS device has been used with a stylus). When selected as a note-taking app, the app can be launched from the stylus palette's "Create Note" button. Adding `new-note-url` field in the application manifest is part of the effort to add equivalent functionality to web apps.
 
 В настоящее время в Chrome OS (CrOS), приложениях Chrome и Android, в которых есть возможность «создания заметки», могут быть выбраны в качестве прилолжения для заметок в настройках стилуса (показываются если устройство на CrOS используется со стилусом). Когда приложение помечено как возможное для создания заметок, то оно может быть вырбрано в выпадающем меню по кнопке «Создать заметку». Добавление поля `new-note-url` в манифесте приложения является частью усилий по добавлению аналогичных функций в веб-приложения.
 
@@ -121,7 +118,7 @@ Currently on Chrome OS (CrOS), Chrome Apps and Android Apps that declare a "new-
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/51f8aaf568db256f3390c37393d294c82017565e #}
 
-Chromium ишью: [1185678](https://crbug.com/1185678)
+Задача в трекере Chromium: [1185678](https://crbug.com/1185678)
 
 
 ## Правка перечисления CSS-селекторов {: #matching-selectors }
@@ -136,7 +133,7 @@ Chromium ишью: [1185678](https://crbug.com/1185678)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/123eac3c8ceeb2e788aa4756d3104db0265f9ad3 #}
 
-Chromium ишью: [1219153](https://crbug.com/1219153)
+Задача в трекере Chromium: [1219153](https://crbug.com/1219153)
 
 
 ## Форматирование JSON-ответов во вкладке Network {: #pretty-print-json }
@@ -148,4 +145,4 @@ Chromium ишью: [1219153](https://crbug.com/1219153)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283cd0a96204b1592f59fda2fcb #}
 
-Chromium баг: [998674](https://crbug.com/998674) 
+Баг в трекере Chromium: [998674](https://crbug.com/998674) 
