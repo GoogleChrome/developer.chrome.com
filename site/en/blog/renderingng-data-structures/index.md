@@ -254,9 +254,9 @@ These components access the flat data-structure through a convenience cursor.
 
 The [cursor](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/layout/ng/inline/ng_inline_cursor.h)
 has APIs such as
-MoveToNext,
-MoveToNextLine,
-CursorForChildren.
+`MoveToNext`,
+`MoveToNextLine`,
+`CursorForChildren`.
 This cursor representation is very powerful for text content:
 
 - Iterating in the depth-first search order is very fast.
