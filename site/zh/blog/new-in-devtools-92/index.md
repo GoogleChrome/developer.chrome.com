@@ -15,6 +15,9 @@ tags:
   - chrome-92
 ---
 
+*感谢 [韩昌浩 @hanselfmu](https://github.com/hanselfmu) 提供的翻译*。
+
+
 <!-- lint disable no-smart-quotes -->
 
 {% Aside %}
@@ -235,5 +238,3 @@ Chromium 议题: [1204004](https://crbug.com/1204004), [1204466](https://crbug.c
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a2ffe4a8d202e56d640c2f8744c905354e2bca8e #}
 
 Chromium 议题: [1199787](https://crbug.com/1199787)
-
-*Translation provided by [@hanselfmu](https://github.com/hanselfmu)*.
