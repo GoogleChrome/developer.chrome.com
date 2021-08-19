@@ -75,12 +75,12 @@ width="800", height="347" %}
 
 A frame rendered in a different process is represented as a remote frame.
 A remote frame holds the minimum information needed to act as a placeholder in rendering,
-such as its dimensions.
+such as its dimensions, for example.
 The remote frame otherwise does not contain any information needed to render its actual contents.
 
 In contrast,
 a local frame represents a frame that will go through the standard rendering pipeline
-detailed in previous posts.
+described in previous posts.
 The local frame contains all the information needed to turn the data for that frame
 (such as the DOM tree and style data) into something that can be rendered and displayed.
 
@@ -109,8 +109,8 @@ width="800", height="478" %}
 
 To produce one compositor frame for the web page,
 Viz simultaneously requests a compositor frame from the root frame of each of the three local frame trees,
-and then [aggregates](/blog/renderingng-architecture/#rendering-pipeline-structure) them
-(see also the compositor frames section later in this post).
+and then [aggregates](/blog/renderingng-architecture/#rendering-pipeline-structure) them.
+(See also the compositor frames section later in this post.)
 
 The `foo.com` main frame and the `foo.com/other-page` subframe
 are part of the same frame tree and rendered in the same process.
@@ -123,7 +123,7 @@ directly into the compositor frame for the `foo.com` main frame.
 For example, the out-of-process `bar.com` parent frame may affect the display of the `foo.com/other-url` iframe,
 by transforming the iframe with CSS or occluding parts of the iframe with other elements in its DOM.
 
-### The Visual Property Update Waterfall
+### The visual property update waterfall
 
 Visual properties like the device scale factor and the viewport size affect the rendered output
 and must be synchronized between the local frame tree fragments.
@@ -162,8 +162,8 @@ or columns when in a multi-column context.
 After layout, each fragment becomes immutable and is never changed again.
 Importantly, we also place a few additional restrictions. We don't:
 
-- Allow any "up" references in the tree
-(a child can't have a pointer to its parent).
+- Allow any "up" references in the tree.
+(A child can't have a pointer to its parent.)
 - Only "bubble" data up the tree
 (a child only reads information from its children, not from its parent).
 
@@ -184,7 +184,7 @@ generate multiple trees for a smooth layout animation,
 or perform parallel speculative layouts.
 It also gives us the potential of multi-threading layout itself.
 
-### Inline Fragment Items
+### Inline fragment items
 
 Inline content (styled text predominantly) uses a slightly different representation.
 Rather than a tree structure with boxes and pointers,
@@ -245,12 +245,12 @@ The flat list looks like this:
 - (Text "there", 0)
 - (Text ".", 0)
 
-There are many consumers of this data-structure: accessibility APIs,
-geometry APIs such as
+There are many consumers of this data structure: accessibility APIs,
+and geometry APIs such as
 [getClientRects](https://developer.mozilla.org/en-US/docs/Web/API/Range/getClientRects),
 and [contenteditable](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable).
 Each has different requirements.
-These components access the flat data-structure through a convenience cursor.
+These components access the flat data structure through a convenience cursor.
 
 The [cursor](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/layout/ng/inline/ng_inline_cursor.h)
 has APIs such as
@@ -276,10 +276,10 @@ and CSS can apply various styles to elements.
 These come mostly in four flavors of effect:
 
 - **Layout:** inputs to the layout constraint algorithm.
-- **Paint:** how to paint and raster the element.
-(but not its descendants)
+- **Paint:** how to paint and raster the element
+(but not its descendants).
 - **Visual:** raster/draw effects applied to the DOM subtree,
-such as transforms, filters, and clipping
+such as transforms, filters, and clipping.
 - **Scrolling:** axis-aligned and rounded corner.
 clipping and scrolling of the contained subtree
 
@@ -319,11 +319,11 @@ geometry.
 [largest contentful paint](https://web.dev/lcp/) in Core Web Vitals.
 
 Every web document has four separate property trees: transform, clip, effect and scroll.(*)
-The transform tree represents CSS transforms and scrolling
-(a scroll transform is represented as a 2D transform matrix).
+The transform tree represents CSS transforms and scrolling.
+(A scroll transform is represented as a 2D transform matrix.)
 The clip tree represents
 [overflow clips](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow).
-The effect tree represents all other visual effects—opacity, filters, masks,
+The effect tree represents all other visual effects: opacity, filters, masks,
 blend modes, and other kinds of clips such as clip-path.
 The scroll tree represents information about scrolling,
 such as how scrolls
@@ -347,7 +347,7 @@ then of course the transform applies before the filter.
 Each DOM element has a _property tree state_,
 which is a 4-tuple (transform, clip, effect, scroll)
 that indicates the nearest ancestor clip,
-transform and effect tree nodes that take effect on that element.
+transform, and effect tree nodes that take effect on that element.
 This is very convenient, because with this information we know exactly the list of clips,
 transforms, and effects that apply to that element,
 and in which order.
@@ -371,7 +371,7 @@ This is also why most visual effects induce a containing block for all descendan
 The full structure of property trees is quite complicated;
 see the long code comments
 [here](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/paint/object_paint_properties.h;l=96)
-for lots of detail on this subject.
+for information on this subject.
 {% endAside %}
 
 ### Example
@@ -406,8 +406,8 @@ such as nodes representing the
 and nodes used for engine-internal performance optimizations,
 such as
 [paint offset and isolation](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/paint/object_paint_properties.h;l=96).
-In addition, this diagram does not indicate the links between the trees
-(for example, the 3px blur applies within the `#one rotate` transform space.
+In addition, this diagram does not indicate the links between the trees.
+For example, the 3px blur applies within the `#one rotate` transform space.
 {% endAside %}
 
 ## Display lists and paint chunks
@@ -587,7 +587,7 @@ If the user scrolls `#scroll`,
 the second composited layer is moved, but no rasterization is needed.
 
 For the example
-[here](https://output.jsbin.com/goqojuz/quiet)
+[here](https://output.jsbin.com/goqojuz/quiet),
 from the previous section on property trees,
 there are six paint chunks.
 Together with their (transform, clip, effect, scroll) property tree states, they are:
@@ -663,11 +663,11 @@ and an empty rectangle where the render compositor content will be embedded.
 Another example is site isolated iframes. This embedding is accomplished through _surfaces_.
 
 When a compositor submits a compositor frame, it is accompanied by an identifier,
-called a _surface id_, allowing other compositor frames to embed it by reference.
-The newest compositor frame submitted with a particular surface id is stored by Viz.
+called a _surface ID_, allowing other compositor frames to embed it by reference.
+The newest compositor frame submitted with a particular surface ID is stored by Viz.
 Another compositor frame can then refer to it later via a _surface draw quad_,
 and therefore Viz knows what to draw.
-(Note that surface draw quads contain surface ids only, and not textures.)
+(Note that surface draw quads contain surface IDs only, and not textures.)
 
 ### Intermediate render passes
 
@@ -681,7 +681,7 @@ which is drawn last and whose destination corresponds to the frame buffer,
 and there may be more.
 
 The possibility of multiple render passes explains the name
-"render pass"—each pass has to be executed sequentially on the GPU, in multiple "passes",
+"render pass." Each pass has to be executed sequentially on the GPU, in multiple "passes",
 whereas a single pass can be completed in a single massively parallel GPU computation.
 
 ### Aggregation
@@ -716,7 +716,7 @@ Here are the actual compositor frames that represent the example from the beginn
               </li>
             </ul>
           </li>
-		      <li>Surface draw quad: with id 2, drawn with scale and translate transform.</li>
+		      <li>Surface draw quad: with ID 2, drawn with scale and translate transform.</li>
         </ul>
       </li>
     </ul>
