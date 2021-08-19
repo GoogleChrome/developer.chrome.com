@@ -278,7 +278,7 @@ These come mostly in four flavors of effect:
 - **Layout:** inputs to the layout constraint algorithm.
 - **Paint:** how to paint and raster the element.
 (but not its descendants)
-- **Visual:** raster/draw effects applied to the DOM subtree.
+- **Visual:** raster/draw effects applied to the DOM subtree,
 such as transforms, filters, and clipping
 - **Scrolling:** axis-aligned and rounded corner.
 clipping and scrolling of the contained subtree
@@ -488,7 +488,7 @@ This would produce the following display list, where each cell is a display item
     <tr>
       <th>View's background</th>
       <th><code>#green</code> background</th>
-      <th><code>#grey</code> background</th>
+      <th><code>#gray</code> background</th>
       <th><code>#green</code> inline text</th>
     </tr>
   </thead>
@@ -635,7 +635,7 @@ and there is a video and an iframe on top. Which leads to the next topic.
 
 ### Quads and surfaces
 
-GPU texture tiles are a special kind of quad,
+GPU texture tiles are a special kind of _quad_,
 which is just a fancy name for one category of texture or another.
 A quad identifies the input texture, and indicates how to transform and apply visual effects to it.
 For example, regular content tiles have a transform indicating their x, y position in the tile grid.
@@ -643,7 +643,7 @@ For example, regular content tiles have a transform indicating their x, y positi
 {% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/gIYqoKgiVmAWRqYOZ5P8.jpg",
 alt="GPU texture tiles.", width="800", height="604" %}
 
-These rasterized tiles are wrapped in a render pass, which is a list of quads.
+These rasterized tiles are wrapped in a _render pass_, which is a list of quads.
 The render pass doesn't contain any pixel information;
 instead, it has instructions on where and how to draw each quad to produce the desired pixel output.
 There is a _draw quad_ for each GPU texture tile.
@@ -654,8 +654,8 @@ Compositing draw quads for a render pass can be done efficiently on the GPU,
 because the allowed visual effects are carefully chosen to be those that map directly to GPU features.
 
 There are additional types of draw quads beyond rasterized tiles.
-For example, there are solid color draw quads that are not backed by a texture at all,
-or texture draw quads for non-tile textures like video or canvas.
+For example, there are _solid color draw quads_ that are not backed by a texture at all,
+or _texture draw quads_ for non-tile textures like video or canvas.
 
 It is also possible for a compositor frame to embed another compositor frame.
 For example, the browser compositor produces a compositor frame with the browser UI,
