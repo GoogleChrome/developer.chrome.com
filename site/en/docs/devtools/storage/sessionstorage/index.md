@@ -13,31 +13,25 @@ key-value pairs.
 
 ## View sessionStorage keys and values {: #view }
 
-1.  Click the **Application** tab to open the **Application** panel. The **Manifest** pane is shown
-    by default.
-
-    {% Img src="image/admin/Rt9sE5wcM4XChjHAEbwm.png", alt="The Manifest pane", width="800", height="619" %}
-
-    **Figure 1**. The Manifest pane
-
-2.  Expand the **Session Storage** menu.
+1.  Click the **Application** tab to open the **Application** panel.
+    Expand the **Session Storage** menu.
 
     {% Img src="image/admin/FNTagOn8cnsylvpMAqls.png", alt="The Session Storage Menu", width="800", height="579" %}
 
-    **Figure 2**. The **Session Storage** menu shows two domains: **https://developers.google.com**
+    **Figure 1**. The **Session Storage** menu shows two domains: **https://developers.google.com**
     and **https://www.youtube.com**
 
-3.  Click a domain to view its key-value pairs.
+2.  Click a domain to view its key-value pairs.
 
     {% Img src="image/admin/fJijNAIrM9DFmAGxkXAU.png", alt="The sessionStorage key-value pairs for the https://www.youtube.com domain", width="800", height="579" %}
 
-    **Figure 3**. The `sessionStorage` key-value pairs for the **https://www.youtube.com** domain
+    **Figure 2**. The `sessionStorage` key-value pairs for the **https://www.youtube.com** domain
 
-4.  Click a row of the table to view the value in the viewer below the table.
+3.  Click a row of the table to view the value in the viewer below the table.
 
     {% Img src="image/admin/YxEayGVMtIP0yExSuWVk.png", alt="Viewing the value of the yt-remote-cast-available key", width="800", height="579" %}
 
-    **Figure 4**. Viewing the value of the `yt-remote-cast-available` key
+    **Figure 3**. Viewing the value of the `yt-remote-cast-available` key
 
 ## Create a new sessionStorage key-value pair {: #create }
 
@@ -47,7 +41,7 @@ key-value pairs.
 
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/wHbbYT8MsU3U68Op2yWj.png", alt="The empty part of the table to double-click in order to create a new key-value pair", width="800", height="579" %}
 
-    **Figure 5**. The empty part of the table to double-click in order to create a new key-value
+    **Figure 4**. The empty part of the table to double-click in order to create a new key-value
     pair
 
 ## Edit sessionStorage keys or values {: #edit }
@@ -57,7 +51,7 @@ key-value pairs.
 
     {% Img src="image/admin/tEPwnClhMoj3lQGkIpa8.png", alt="Editing a sessionStorage key", width="800", height="579" %}
 
-    **Figure 6**. Editing a `sessionStorage` key
+    **Figure 5**. Editing a `sessionStorage` key
 
 ## Delete sessionStorage key-value pairs {: #delete }
 
@@ -82,13 +76,13 @@ JavaScript contexts, it's possible to interact with `sessionStorage` from the **
 
     {% Img src="image/admin/6CdoUiGdkS5zpuBeF9pE.png", alt="Changing the JavaScript context of the Console", width="800", height="525" %}
 
-    **Figure 7**. Changing the JavaScript context of the **Console**
+    **Figure 6**. Changing the JavaScript context of the **Console**
 
 2.  Run your `sessionStorage` expressions in the Console, the same as you would in your JavaScript.
 
     {% Img src="image/admin/y85mudOFG83xUq9rIUJE.png", alt="Interacting with sessionStorage from the Console", width="800", height="579" %}
 
-    **Figure 8**. Interacting with `sessionStorage` from the **Console**
+    **Figure 7**. Interacting with `sessionStorage` from the **Console**
 
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
