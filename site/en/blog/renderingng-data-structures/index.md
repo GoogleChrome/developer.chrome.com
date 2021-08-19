@@ -92,7 +92,7 @@ Consider a more complicated example with `foo.com` as the main frame:
 <iframe src="bar.com"></iframe>
 ```
 
-And the following bar.com subframe:
+And the following `bar.com` subframe:
 
 ```html
 <iframe src="foo.com/etc"></iframe>
