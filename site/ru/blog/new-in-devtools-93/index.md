@@ -15,7 +15,7 @@ tags:
   - chrome-93
 ---
 
-**Переводы предоставлены [Alena Batitskaya](https://github.com/solarrust).**
+*Переводы предоставлены [Alena Batitskaya](https://github.com/solarrust).*
 
 {% Aside %} Заинтересованы в улучшении DevTools? Зарегистрируйтесь и примите
 участие в [исследовании пользовательского опыта
