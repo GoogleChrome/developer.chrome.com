@@ -24,34 +24,36 @@
     <div class="tag-card">
       <h2 class="type--label color-secondary-text">Releases</h2>
       <ul role="list" class="pad-0 gap-top-300 gap-bottom-0">
-{{ renderTag(stableReleaseTag) }}
-{{ renderTag(betaReleaseTag) }}
+        {% for tag in namedChromeReleaseTags %}
+          {{ renderTag(tag) }}
+        {% endfor %}
       </ul>
     </div>
 
+    {# Option #1: a <details> which opens to show all releases #}
     <div class="tag-card">
       <details>
         <summary class="type--label color-secondary-text">Other</summary>
         <ul role="list" class="pad-0 gap-top-300 gap-bottom-0">
-        {% for tag in chromeReleaseTags %}
-          {{ renderTag(tag) }}
-        {% endfor %}
+          {% for tag in chromeReleaseTags %}
+            {{ renderTag(tag) }}
+          {% endfor %}
         </ul>
       </details>
     </div>
 
+    {# Option #2: a <select> which, on change, loads the right page #}
+    {# TODO: actually doesn't load yet #}
     <div class="tag-card">
       <h2 class="type--label color-secondary-text">Other</h2>
-
-<select class="type--label gap-top-300 gap-bottom-300">
-  <option>Choose release&hellip;</option>
-  <optgroup label="Release">
-{% for tag in chromeReleaseTags %}
-    <option value="{{ tag.key }}">{{ tag.title }}</option>
-{% endfor %}
-  </option>
-</select>
-
+      <select class="type--label gap-top-300 gap-bottom-300">
+        <option>Choose release&hellip;</option>
+        <optgroup label="Release">
+          {% for tag in chromeReleaseTags %}
+            <option value="{{ tag.key }}">{{ tag.title }}</option>
+          {% endfor %}
+        </option>
+      </select>
     </div>
 
   </div>
