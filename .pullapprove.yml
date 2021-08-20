@@ -90,8 +90,7 @@ groups:
         files.include('redirects.yaml') or
         files.include('site/_data/docs/*') or
         files.include('site/_data/i18n/*') or
-        files.include('site/_data/authorsData.json') or
-        files.include('site/_data/supportedTags.json')
+        files.include('site/_data/authorsData.json')
 
   # Code
   # Handles any changes to programmatic files.
@@ -118,4 +117,4 @@ groups:
         ]) or
         files.include('*.yaml').exclude('redirects.yaml') or
         files.include('*.yml').exclude('site/_data/docs/*').exclude('site/_data/i18n/*') or
-        files.include('*.json').exclude('site/_data/authorsData.json').exclude('site/_data/supportedTags.json')
+        files.include('*.json').exclude('site/_data/authorsData.json')

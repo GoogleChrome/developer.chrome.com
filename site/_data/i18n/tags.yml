@@ -1,3 +1,6 @@
+# The top-level keys in this file are used to generate tag pages under /tags/<tag>, presuming
+# they have at least one matching post.
+
 news:
   en: News
   es: Noticias
@@ -17,8 +20,10 @@ autoplay:
 capabilities:
   en: Capabilities
 
+# This is used for the title of the shared Chrome RSS feed that 'chrome-xx' posts create.
+# It does not need translation.
 chrome:
-  en: Google Chrome
+  en: Chrome
 
 chromium-chronicle:
   en: Chromium Chronicle
