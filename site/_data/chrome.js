@@ -57,8 +57,9 @@ async function dataForVersion(channel, version) {
     return null;
   }
 
-  // This contains useful keys "stable_date", "earliest_beta" and "final_beta", among others, most
-  // of which are currently ignored.
+  // The underlying data contains useful keys "stable_date", "earliest_beta" and "final_beta",
+  // among others, most of which are currently ignored.
+
   return {
     mstone: version,
     key: channel,
@@ -106,7 +107,9 @@ module.exports = async function buildVersionInformation() {
   // might be the same version for multiple channels, but Eleventy is caching the result for us.
   for (const [channel, mstone] of Object.entries(channelRelease)) {
     const data = await dataForVersion(channel, mstone);
-    channels[channel] = data;
+    if (data) {
+      channels[channel] = data;
+    }
   }
 
   return {channels};
