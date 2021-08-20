@@ -7,7 +7,7 @@ date: 2021-08-19
 updated: 2021-08-19
 description:
   "Редактируемые выражения от контейнера, предварительный просмотр веб-бандлов, улучшенная обработка строк в консоли и многое другое."
-hero: 'iimage/dPDCek3EhZgLQPGtEG3y0fTn4v82/lF3ZTjr5zftuNIMofL6g.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/lF3ZTjr5zftuNIMofL6g.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -17,12 +17,12 @@ tags:
 
 *Переводы предоставлены [Alena Batitskaya](https://github.com/solarrust).*
 
-{% Aside %} Заинтересованы в улучшении DevTools? Зарегистрируйтесь и примите
+{% Aside %}
+Заинтересованы в улучшении DevTools? Зарегистрируйтесь и примите
 участие в [исследовании пользовательского опыта
 здесь](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458).
 
 {% endAside %}
-
 
 ## Редактируемые выражения от контейнера в панели Styles {: #container-queries }
 
