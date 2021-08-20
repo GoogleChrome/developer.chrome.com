@@ -8,10 +8,9 @@ date: 2015-04-13
 description: "Learn how to view, edit, and delete a page's HTTP cookies using Chrome DevTools."
 ---
 
-[HTTP Cookies][1] are mainly used to manage user sessions, store user personalization preferences,
-and track user behavior. They are also the cause of all of those annoying "this page uses cookies"
-consent forms that you see across the web. This guide teaches you how to view, edit, and delete a
-page's cookies with Chrome DevTools.
+[HTTP Cookies][1] are mainly used to manage user sessions, store user personalization preferences, and track user behavior.
+They are also the cause of all of those annoying "this page uses cookies" consent forms that you see across the web.
+This guide teaches you how to view, edit, and delete a page's cookies with Chrome DevTools.
 
 ## Open the Cookies pane {: #open }
 
