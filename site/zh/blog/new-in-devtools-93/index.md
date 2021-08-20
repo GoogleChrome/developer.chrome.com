@@ -7,13 +7,15 @@ date: 2021-07-28
 updated: 2021-07-28
 description:
   "可编辑的 CSS 容器查询（container queries），web bundle 预览，更好地处理控制台里面的字符串以及更多。"
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xFq1Fb2KOrQfq1RG6x5e.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mcT2bC9fEzrOLuVMOBlf.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-93
 ---
+
+*感谢[流浪大法师](https://webfrontend.dev/)提供的翻译。*
 
 {% Aside %}
 有兴趣帮忙改进 DevTools 吗？请注册并参与 [Google 用户体验调研](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=zh&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458)。
