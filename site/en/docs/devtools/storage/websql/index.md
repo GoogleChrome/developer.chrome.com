@@ -18,7 +18,7 @@ This guide shows you how to use [Chrome DevTools][2] to inspect Web SQL data.
 
 ## View Web SQL Data {: #view }
 
-1.  Click the **Sources** tab to open the **Application** panel.Expand the **Web SQL** section to view databases and tables. In **Figure 1** below
+1.  Click the **Sources** tab to open the **Application** panel. Expand the **Web SQL** section to view databases and tables. In **Figure 1** below
     **html5meetup** is a database and **rooms** is a table.
 
     {% Img src="image/admin/FZ9fEvSHrRCv1dWXVI1B.png", alt="The Web SQL pane.", width="800", height="489" %}
