@@ -139,6 +139,9 @@ is that you can automate unit tests for your site across different platforms.
   of 2000+ browsers & operating systems. Users will be able to record video of complex bugs and eve
   share it via integrations like MS Teams, Slack and more. Users can speed-up their testing by 
   running tests in parallel.
+  - [TestingBot (commercial)][15] helps you to do both manual testing and automated testing on
+  3000+ browser & operating system combinations. Test both your websites and mobile apps on TestingBot's
+  emulators and physical devices.
 
 [1]: https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode
 [2]: https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/emulation
@@ -155,3 +158,4 @@ is that you can automate unit tests for your site across different platforms.
 [12]: https://saucelabs.com/
 [13]: https://www.sigos.com/app-experience/
 [14]: https://www.lambdatest.com/
+[15]: https://testingbot.com/
