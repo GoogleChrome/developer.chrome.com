@@ -15,6 +15,8 @@ tags:
   - chrome-93
 ---
 
+<!-- lint disable no-smart-quotes -->
+
 *感谢[流浪大法师](https://webfrontend.dev/)提供的翻译。*
 
 {% Aside %}
