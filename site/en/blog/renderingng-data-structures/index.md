@@ -25,17 +25,16 @@ These data structures are:
 - _Frame trees_, which are composed of local and remote nodes
 that represent which web documents are in which render process and Blink renderer.
 - The _immutable fragment tree_,
-that represents the output of (and input to) the layout constraint algorithm.
+represents the output of (and input to) the layout constraint algorithm.
 - _Property trees_, which represent the transform, clip, effect,
 and scroll hierarchy of a web document,
 and are used throughout the pipeline.
-- _Display lists and paint chunks_, the inputs to the raster and layerization algorithms.
+- _Display lists and paint chunks_, are the inputs to the raster and layerization algorithms.
 - _Compositor frames_, containing surfaces, render surfaces,
 and GPU texture tiles that are used to draw using the GPU.
 
-Let's now walk through each of these data structures.
-But first, let's set up the following simple example that builds on one from the previous post.
-We'll use this example a few times in this post,
+Before walking through these data structures, I want to show the following simple example
+what builds on one from the previous post. I'll use this example a few times in this post,
 showing how the data structures apply to it.
 
 ```html
@@ -313,12 +312,12 @@ RenderingNG uses property trees for many purposes, including:
 [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 geometry.
 - Avoiding work for offscreen elements and GPU texture tiles.
-- Efficient and accurate invalidation of paint and raster.
+- Efficiently and accurately invalidating paint and raster.
 - Measuring
 [layout shift](https://web.dev/cls/) and
 [largest contentful paint](https://web.dev/lcp/) in Core Web Vitals.
 
-Every web document has four separate property trees: transform, clip, effect and scroll.(*)
+Every web document has four separate property trees: transform, clip, effect, and scroll.(*)
 The transform tree represents CSS transforms and scrolling.
 (A scroll transform is represented as a 2D transform matrix.)
 The clip tree represents
@@ -337,7 +336,7 @@ The topology of each tree is like a sparse representation of the DOM.
 For example, if there are three DOM elements with overflow clips,
 then there will be three clip tree nodes,
 and the structure of the clip tree will follow
-the containing-block relationship between the overflow clips.
+the containing block relationship between the overflow clips.
 There are also links between the trees.
 These links indicate the relative DOM hierarchy,
 and hence order of application, of the nodes.
@@ -602,8 +601,8 @@ document scroll, document clip, `#one` blur, document scroll.
 
 As discussed in the previous post (a worked example is
 [here](/blog/renderingng-architecture/#an-example-in-practice)),
-the browser and render processes manage raster of content
-and then submit compositor frames to the Viz process for presentation to the screen.
+the browser and render processes manage rasterization of content
+then submit compositor frames to the Viz process for presentation to the screen.
 Compositor frames are how RenderingNG represents how to stitch rasterized content together
 and efficiently draw it using the GPU.
 
@@ -722,7 +721,7 @@ Here are the actual compositor frames that represent the example from the beginn
     </ul>
   </li>
 
-  <li>Browser UI surface: id=1
+  <li>Browser UI surface: ID=1
 	  <ul>
       <li><strong>Render pass 0:</strong> draw to output.
 		    <ul>
@@ -731,7 +730,7 @@ Here are the actual compositor frames that represent the example from the beginn
       </li>
     </ul>
   </li>
-  <li><code>bar.com/index.html</code> surface: id=2
+  <li><code>bar.com/index.html</code> surface: ID=2
     <ul>
   	  <li><strong>Render pass 0:</strong> draw to output.
         <ul>
