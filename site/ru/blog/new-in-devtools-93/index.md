@@ -230,7 +230,7 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/123eac3c8ceeb2e78
 Теперь вы можете отформатировать JSON-ответы во вкладке **Network**.
 
 Откройте ответ в формате JSON во вкладке **Network** и нажмите на иконку `{}`,
-чтобы отформатировать его.
+чтобы его отформатировать.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/x2NKXwJPzjycjeD7cLH6.png", alt="
 Форматирование JSON-ответов во вкладке Network", width="800", height="523" %}
