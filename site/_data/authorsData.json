@@ -333,7 +333,9 @@
     "email": "jec@google.com",
     "descriptions": {
       "en": "Developer advocate working on Chrome DevTools at Google.",
-      "es": "Developer advocate, trabajando en Chrome DevTools en Google."
+      "es": "Developer advocate, trabajando en Chrome DevTools en Google.",
+      "zh": "现为谷歌 Chrome DevTools 的开发者推广工程师。",
+      "ru": "Developer advocate, rabotayushchiy nad Chrome DevTools v Google."
     },
     "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/4HPVWldl8gHYH8npWFHu.jpg"
   },
