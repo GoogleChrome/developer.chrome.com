@@ -2,18 +2,20 @@
 layout: "layouts/blog-post.njk"
 title: "Новинки DevTools (Chrome 93)"
 authors:
-  - solarrust
+  - jecelynyeen
 date: 2021-08-19
 updated: 2021-08-19
 description:
   "Редактируемые выражения от контейнера, предварительный просмотр веб-бандлов, улучшенная обработка строк в консоли и многое другое."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xFq1Fb2KOrQfq1RG6x5e.jpg'
+hero: 'iimage/dPDCek3EhZgLQPGtEG3y0fTn4v82/lF3ZTjr5zftuNIMofL6g.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-93
 ---
+
+**Переводы предоставлены [Alena Batitskaya](https://github.com/solarrust).**
 
 {% Aside %} Заинтересованы в улучшении DevTools? Зарегистрируйтесь и примите
 участие в [исследовании пользовательского опыта
