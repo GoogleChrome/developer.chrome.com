@@ -1,0 +1,30 @@
+.release-card__icon {
+  width: get-size(600) * 3;
+  max-width: 25vw;
+  margin: 0 auto;
+  color: black;
+  background: red;
+  border-radius: 128px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+
+  &::after {
+    content: '';
+    padding-bottom: 100%;
+    position: relative;
+  }
+}
+
+.release-card__icon-stable {
+  color: var(--color-green-darkest);
+  background: var(--color-green-lighter);
+}
+
+.release-card__icon-beta {
+  color: var(--color-blue-darkest);
+  background: var(--color-blue-lighter);
+}
