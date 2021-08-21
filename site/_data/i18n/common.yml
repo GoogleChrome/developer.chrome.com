@@ -118,5 +118,14 @@ close:
 back:
   en: 'Back'
 
-current_stable:
+current_release_description:
+  en: 'The current stable version of Chrome is'
+
+future_release_description:
+  en: 'The current beta version of Chrome is'
+
+current_release_label:
   en: 'Current stable version'
+
+future_release_label:
+  en: 'Beta will promote to stable on'
