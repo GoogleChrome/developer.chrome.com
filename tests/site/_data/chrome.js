@@ -61,13 +61,12 @@ test('returns version information', async t => {
   const expected = {
     channels: {
       stable: {
-        channel: 'stable',
+        key: 'stable',
         mstone: 42,
-        stable_date: '2020-01-01T00:00:00',
+        stableDate: new Date('2020-01-01T00:00:00'),
       },
-      beta: {channel: 'beta', mstone: 43},
     },
   };
 
-  t.assert(JSON.stringify(expected) === JSON.stringify(actual));
+  t.deepEqual(expected, actual);
 });
