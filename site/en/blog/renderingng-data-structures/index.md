@@ -279,7 +279,7 @@ These come mostly in four flavors of effect:
 (but not its descendants).
 - **Visual:** raster/draw effects applied to the DOM subtree,
 such as transforms, filters, and clipping.
-- **Scrolling:** axis-aligned and rounded corner.
+- **Scrolling:** axis-aligned and rounded corner
 clipping and scrolling of the contained subtree
 
 Property trees are data structures that explain how visual and scrolling effects apply to DOM elements.
