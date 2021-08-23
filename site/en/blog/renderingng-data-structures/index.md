@@ -27,10 +27,10 @@ that represent which web documents are in which render process and which Blink r
 - The _immutable fragment tree_,
 represents the output of (and input to) the layout constraint algorithm.
 - _Property trees_, which represent the transform, clip, effect,
-and scroll hierarchy of a web document,
+and scroll hierarchies of a web document,
 and are used throughout the pipeline.
-- _Display lists and paint chunks_, are the inputs to the raster and layerization algorithms.
-- _Compositor frames_, containing surfaces, render surfaces,
+- _Display lists and paint chunks_ are the inputs to the raster and layerization algorithms.
+- _Compositor frames_ encapsulate surfaces, render surfaces,
 and GPU texture tiles that are used to draw using the GPU.
 
 Before walking through these data structures, I want to show the following simple example
@@ -174,7 +174,6 @@ a web app updating a small portion of the UI in response to the user clicking on
 Ideally, layout should only do work proportional to what actually changed on-screen.
 We can achieve this by reusing as many parts of the previous tree as possible.
 This means (typically) we only need to rebuild the spine of the tree.
-We'll explore how we do this in a future post.
 
 In the future, this immutable design will allow us to do interesting things
 like passing the immutable fragment tree across thread boundaries if needed
@@ -203,7 +202,7 @@ as it was built initially in a similar way as a text editor.
 The flat list is created for each
 [inline formatting context](https://developer.mozilla.org/en-US/docs/Web/CSS/Inline_formatting_context)
 in the order of a depth-first search of its inline layout subtree.
-Each entry in the list is a tuple of (object, # descendants).
+Each entry in the list is a tuple of (object, number of descendants).
 For example, consider this DOM:
 
 ```html
@@ -280,7 +279,7 @@ These come mostly in four flavors of effect:
 - **Visual:** raster/draw effects applied to the DOM subtree,
 such as transforms, filters, and clipping.
 - **Scrolling:** axis-aligned and rounded corner
-clipping and scrolling of the contained subtree
+clipping and scrolling of the contained subtree.
 
 Property trees are data structures that explain how visual and scrolling effects apply to DOM elements.
 They provide the means to answer questions such as: where,
@@ -306,7 +305,7 @@ as they can reuse each others' caches.
 
 RenderingNG uses property trees for many purposes, including:
 
-- Separating compositing from paint, and compositing off the main thread.
+- Separating compositing from paint, and compositing from the main thread.
 - Determining an optimal compositing / draw strategy.
 - Measuring
 [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
@@ -599,7 +598,7 @@ document scroll, document clip, `#one` blur, document scroll.
 
 ## Compositor frames: surfaces, render surfaces and GPU texture tiles
 
-As discussed in the previous post (a worked example is
+As discussed in the [previous post](/blog/renderingng-architecture/) (a worked example is
 [here](/blog/renderingng-architecture/#an-example-in-practice)),
 the browser and render processes manage rasterization of content
 then submit compositor frames to the Viz process for presentation to the screen.
