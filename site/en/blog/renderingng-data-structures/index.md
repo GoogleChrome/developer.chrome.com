@@ -358,7 +358,7 @@ An element is contained by a scroller if it scrolls with it,
 and `position:absolute` and `position: fixed`
 elements often escape ancestor scrolling elements,
 in situations where the scrolling element is not in the containing block chain
-([containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block),
+(the containing block chain for a DOM element is its containing block, plus that containing block's containing block, and so on up to the root element),
 recursively) of the fixed- or absolute-positioned element.
 
 However, all other visual effects apply to the entire DOM subtree.
