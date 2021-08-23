@@ -324,7 +324,8 @@ problem and include your .crx file.
 ### How can I raise P2B concerns?
 
 European developers can raise concerns about clarity of terms, policies, or other Platform To
-Business related issues by contacting [CWS support][[cws-support].
+Business related issues by contacting [CWS support][cws-support].
+
 
 [1]: https://chrome.google.com/webstore
 [2]: /docs/extensions/mv2/hosting_changes
