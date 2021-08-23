@@ -23,7 +23,7 @@ Now let's dig into the key data structures that are inputs and outputs to the re
 These data structures are:
 
 - _Frame trees_, which are composed of local and remote nodes
-that represent which web documents are in which render process and Blink renderer.
+that represent which web documents are in which render process and which Blink renderer.
 - The _immutable fragment tree_,
 represents the output of (and input to) the layout constraint algorithm.
 - _Property trees_, which represent the transform, clip, effect,
