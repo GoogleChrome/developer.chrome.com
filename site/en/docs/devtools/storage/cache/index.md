@@ -88,7 +88,7 @@ column of the **Network Log** has the information you're looking for. See [Log n
 
     {% Img src="image/admin/C0MQhJ0YhFIuKudvcghG.png", alt="The Clear Site Data button.", width="800", height="572" %}
 
-    **Figure 0**. The **Clear Site Data** button.
+    **Figure 9**. The **Clear Site Data** button.
 
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
