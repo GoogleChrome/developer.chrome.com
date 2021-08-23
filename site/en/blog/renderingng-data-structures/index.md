@@ -262,7 +262,7 @@ This cursor representation is very powerful for text content, for multiple reaso
 This is used very often because it is similar to caret movements.
 Since it's a flat list, depth-first search is just incrementing the array offset,
 providing fast iterations and memory locality.
-- It also provides breadth-first search, which is necessary when, for example,
+- It provides breadth-first search, which is necessary when, for example,
 painting the background of line and inline boxes.
 - Knowing the number of descendants makes moving to the next sibling fast
 (just increment the array offset by that number).
