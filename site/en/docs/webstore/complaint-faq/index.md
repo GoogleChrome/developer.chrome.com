@@ -27,7 +27,7 @@ You can file concerns through the general [CWS Support form][cws-support-form].
 ## Can I raise concerns to the team through the various online forums? {: #can-i-raise-concerns-to-the-team-through-the-various-online-forums }
 
 The team monitors and responds to various online forums where Chrome extensions are discussed. These forums
-are primarily geared towards discussions about Chrome extension development in general and not intended to be
+are primarily geared towards discussions about Chrome extension development and not intended to be
 support channels. Use the [CWS Support form][cws-support-form] to raise any concerns.
 
 ## What is the process for appealing extension take downs or rejections? {: #what-is-the-process-for-appealing-extension-take-downs-or-rejections }
