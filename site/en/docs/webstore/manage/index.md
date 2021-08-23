@@ -29,7 +29,7 @@ To stay informed of your item's status, you can:
  
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/FgPIwRl3QEbNowNV1zRn.png", alt="How to enable email notifications", width="658", height="219" %}
 
--  **Check your publisher email**. After enabling email notifications check your inbox often. Make sure that the CWS emails aren't being sent to your spam folder by adding **chromewebstore-noreply@google.com** to your contacts or create an email filter.
+-  **Check your publisher email**. After enabling email notifications check your inbox often. To ensure that CWS emails don't get flagged as Spam, add **chromewebstore-noreply@google.com** to your contacts so that you receive all communications in a timely manner.
    
 ## Comply with Chrome Web Store policies
 
