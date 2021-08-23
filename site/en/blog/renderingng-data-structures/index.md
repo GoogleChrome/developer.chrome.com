@@ -292,7 +292,7 @@ Visual and scrolling effects on the web are very complicated in their full glory
 So the most important thing property trees do is translate that complexity
 into a single data structure that precisely represents their structure and meaning,
 while at the same time removing the rest of the complexity of the DOM and CSS.
-This lets us implement algorithms for compositing and scrolling with much more confidence:
+This lets us implement algorithms for compositing and scrolling with much more confidence. In particular:
 
 - Potentially error-prone geometry and other calculations
 can be centralized into one place.
