@@ -7,7 +7,7 @@
     <meta name="robots" content="noindex">
     {%- endif %}
 
-    {% include "partials/meta.njk" %}
+    {% include 'partials/meta.njk' %}
     {% block feed %}
       <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feeds/blog.xml">
     {% endblock %}
@@ -35,7 +35,7 @@
       {% endfor %}
     {% endif %}
 
-    <script>{% include 'partials/script.js' %}</script>
+    <script>{% includeRaw 'partials/script.js' %}</script>
   </head>
   <body>
     <div class="scaffold">

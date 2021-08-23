@@ -61,7 +61,7 @@ in the shortode.
 #### Img Properties (`ImgArgs`)
 
 ```typescript
-{% include '../../../../../../node_modules/webdev-infra/types/shortcodes/Img.d.ts' %}
+{% includeRaw '../../../../../../node_modules/webdev-infra/types/shortcodes/Img.d.ts' %}
 ```
 
 The `{% raw %}`{% Img %}`{% endraw%}` `params` object exposes the entire [Imgix
@@ -99,5 +99,5 @@ directly.
 #### Video Properties (`VideoArgs`)
 
 ```typescript
-{% include '../../../../../../node_modules/webdev-infra/types/shortcodes/Video.d.ts' %}
+{% includeRaw '../../../../../../node_modules/webdev-infra/types/shortcodes/Video.d.ts' %}
 ```
