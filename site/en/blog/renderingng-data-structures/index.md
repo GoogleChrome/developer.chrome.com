@@ -256,7 +256,7 @@ has APIs such as
 `MoveToNext`,
 `MoveToNextLine`,
 `CursorForChildren`.
-This cursor representation is very powerful for text content:
+This cursor representation is very powerful for text content, for multiple reasons:
 
 - Iterating in the depth-first search order is very fast.
 This is used very often because it is similar to caret movements.
