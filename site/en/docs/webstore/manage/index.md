@@ -11,7 +11,7 @@ This page describes how to manage an extension or theme ("item") that was previo
 ## About the lifecycle of an item in the Chrome Web Store 
 
 All Chrome Web Store items go through an automated review process. 
-In some instances a manual review is required, specially when sensitive permissions are requested. 
+In some instances a manual review is required, especially when sensitive permissions are requested. 
 For this reason review times and/or approval times can take longer. 
 Since a Chrome Web Store item goes through several stages, it's important to keep track of your item's status. See the lifecycle diagram below:
 
@@ -19,7 +19,7 @@ Since a Chrome Web Store item goes through several stages, it's important to kee
 
 ## Check your item's status
  
-The status of your item appears in the [developer dashboard][dev-dashboard] next to each item. The status can be Published, Pending, Rejected or Taken Down.
+The status of your item appears in the [developer dashboard][dev-dashboard] next to each item. The status can be Published, Pending, Rejected, or Taken Down.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bUbtISU01bab8WyWqonX.png", alt="Developer dashboard status types", width="800", height="221" %}
 
