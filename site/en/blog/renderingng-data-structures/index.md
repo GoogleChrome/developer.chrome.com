@@ -163,7 +163,7 @@ Importantly, we also place a few additional restrictions. We don't:
 
 - Allow any "up" references in the tree.
 (A child can't have a pointer to its parent.)
-- Only "bubble" data up the tree
+- "bubble" data down the tree
 (a child only reads information from its children, not from its parent).
 
 These restrictions allow us to reuse a fragment for a subsequent layout.
