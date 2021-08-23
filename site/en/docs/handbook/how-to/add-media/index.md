@@ -91,9 +91,9 @@ Flipped
 {% endColumns %}
 
 {% Aside %}
-Please call out in a review if you're calling a specific Imgix API, so we can be
-aware of custom use-cases and potentially support them through our own shortcode
-directly.
+Be sure to call out in a review if you're calling a specific Imgix API, so the
+team can be aware of custom use-cases and potentially support them through our
+own shortcode directly.
 {% endAside %}
 
 #### Video Properties (`VideoArgs`)
