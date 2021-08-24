@@ -38,7 +38,7 @@ The First-Party Sets proposal is currently [in the testing
 phase](https://privacysandbox.com/timeline/), read on to find out how it works
 and how you can try it out.
 
-# What is the difference between first-party and third-party cookies? 
+## What is the difference between first-party and third-party cookies? 
 
 Cookies are not inherently first-party or third-party, it depends on the current
 context where the cookie is included. That's either on a request in the
@@ -81,7 +81,7 @@ and excluded in third-party contexts.
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/oNCKndk5TJyiqcPgvv5E.png", alt="ALT_TEXT_HERE", width="400", height="362" %}
 
-# First-Party Sets policy
+## First-Party Sets policy
 
 [First-Party Sets proposes](https://github.com/privacycg/first-party-sets) a
 method for **explicitly defining this relationship across multiple sites that
@@ -134,7 +134,7 @@ Learn more about the [proposed policy for First-Party
 Sets](https://github.com/privacycg/first-party-sets/blob/main/ua_policy_proposal.md).
 {% endAside %}
 
-# How to define a first-party set
+## How to define a first-party set
 
 Once you identify the members and the owner of your organization's first-party
 set, a crucial step will be to submit your proposed set for approval. The exact
@@ -193,7 +193,7 @@ the same credentials to be suggested by the Chrome password manager across the
 affiliated sites.
 {% endAside %}
 
-# How do First-Party Sets affect cookies?
+## How do First-Party Sets affect cookies?
 
 The matching ingredient for cookies is the proposed [``SameParty``
 attribute](https://github.com/cfredric/sameparty). Specifying ``SameParty``
@@ -246,7 +246,7 @@ allows them to to set or send cookies in same-party, cross-site contexts—not
 that cookies are directly shared.
 {% endAside %}
 
-# What use cases are right for First-Party Sets?
+## What use cases are right for First-Party Sets?
 
 First-Party Sets are a good match for cases when an organisation needs a form of
 shared identity across different top-level sites. Shared identity in this case
@@ -271,7 +271,7 @@ Your organization may have different top-level domains for:
 +   **Sandbox domains** that users never directly interact with, but exist for
     security reasons: `googleusercontent.com`, `githubusercontent.com`
 
-# How do you get involved?
+## How do you get involved?
 
 If you have a set of sites that matches the criteria above then there are a
 number of options to get involved. The lightest investment is to read and join
@@ -307,7 +307,7 @@ more in [Getting started with Chrome's origin
 trials](https://web.dev/origin-trials/).
 {% endAside %}
 
-# How to update cookies for the origin trial
+## How to update cookies for the origin trial
 
 If you are joining the origin trial and testing the `SameParty` attribute on
 your cookies, here are two patterns to consider.  
@@ -344,7 +344,7 @@ set and the browser is in the origin trial. Consider this approach like a
 concurrent launch of an updated feature before turning down the previous
 version. 
 
-# Why might you not need a first-party set?
+## Why might you not need a first-party set?
 
 For the majority of sites, their site boundary is an acceptable place to draw
 the partition or privacy boundary. This is the route that's being proposed with
