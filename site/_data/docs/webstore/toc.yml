@@ -13,6 +13,7 @@
   sections:
     - url: /docs/webstore/register/
     - url: /docs/webstore/publish/
+    - url: /docs/webstore/manage/
     - url: /docs/webstore/update/
     - url: /docs/webstore/troubleshooting/
     - url: /docs/webstore/branding/
