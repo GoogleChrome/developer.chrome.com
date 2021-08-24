@@ -271,6 +271,10 @@ over time.
 
 Chromium issue: [887173][41]
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: https://crbug.com/1166710
 [2]: https://crbug.com/1175699
 [3]: https://web.dev/vitals/
