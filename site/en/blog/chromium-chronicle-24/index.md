@@ -12,7 +12,7 @@ tags:
   - chromium-chronicle
 ---
 
-**Episode 24:** by Łukasz Anforowic in Bellevue, WA (August, 2021)<br>
+**Episode 24:** by Łukasz Anforowicz in Bellevue, WA (August, 2021)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
 Can you spot the bug in the code below?  Would you see
