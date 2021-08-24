@@ -71,7 +71,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 ## New checkbox to invert the network filters {: #invert-network-filter }
 Use the new **Invert** checkbox to invert the filters in the Network panel.
 
-For example, you can type “status-code: 404” to filter the network requests with status 404. Enable the **Invert** checkbox to negate the filter (show all network requests which are not with status 404).
+For example, you can type "status-code: 404" to filter the network requests with status 404. Enable the **Invert** checkbox to negate the filter (show all network requests which are not with status 404).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xx1ju91Mu3qflyG6E40W.png", alt="Invert the network filters", width="800", height="474" %}
 
