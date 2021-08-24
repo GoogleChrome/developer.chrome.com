@@ -8,3 +8,4 @@ Use the following options to discuss the new features and changes in the post, o
 - Submit a suggestion or feedback to us via [crbug.com](https://crbug.com).
 - Report a DevTools issue using the **More options** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Help** > **Report a DevTools issues** in DevTools.
 - Tweet at <a href="https://twitter.com/intent/tweet?text=@ChromeDevTools" target="_blank">@ChromeDevTools</a>.
+- Leave comments on our What's new in DevTools [YouTube videos](https://goo.gle/devtools-youtube).
