@@ -156,7 +156,7 @@ In the example of the `brandx` first-party set, the owner-domain hosts the
 following at  
 ``https://brandx.site/.well-known/first-party-set``:
 
-```
+```text
     {
       "owner": "brandx.site",
       "version": 1,
@@ -168,13 +168,13 @@ Each member of the set also hosts a static JSON resource pointing back to the
 owner of the set.  
 At ``https://fly-brandx.site/.well-known/first-party-set`` we have:
 
-```
+```text
     { "owner": "brandx.site" }
 ```
 
 And at ``https://drive-brandx.site/.well-known/first-party-set``:
 
-```
+```text
     { "owner": "brandx.site" }
 ```
 
@@ -202,7 +202,7 @@ first-party set as the top-level context.
 
 That means that if ``brandx.site`` sets this cookie:
 
-```
+```text
     Set-Cookie: session=123; Secure; SameSite=Lax; SameParty
 ```
 
