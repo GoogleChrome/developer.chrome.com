@@ -850,5 +850,79 @@
     "github": "hanselfmu",
     "country": "DE",
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oEV9Pd48COn9JnMrUYzZ.jpg"
+  },
+  "danielcheng": {
+    "name": {
+      "given": "Daniel",
+      "family": "Cheng"
+    },
+    "descriptions": {
+      "en": "Security Architecture engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "github": "zetafunction",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/bkhHWyJ094v913iIMo2C.jpg"
+  },
+  "progers": {
+    "name": {
+      "given": "Philip",
+      "family": "Rogers"
+    },
+    "descriptions": {
+      "en": "Paint and Compositing tech lead"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "github": "progers",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/euJh3BcGWhuuJG7keukf.jpg"
+  },
+  "kojiishi": {
+    "name": {
+      "given": "Koji",
+      "family": "Ishi"
+    },
+    "descriptions": {
+      "en": "Layout engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "github": "kojiishi",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/3we9yRG0YsHoQ3O9CU7M.jpg"
+  },
+  "iankilpatrick": {
+    "name": {
+      "given": "Ian",
+      "family": "Kilpatrick"
+    },
+    "descriptions": {
+      "en": "Layout tech lead"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "github": "bfgeek",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/sSG6wOWF6LiAytFXAi8L.jpg"
+  },
+  "kylecharbonneau": {
+    "name": {
+      "given": "Kyle",
+      "family": "Charbonneau"
+    },
+    "descriptions": {
+      "en": "Viz engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/GLfwUjU4lr5ceazmYP1X.jpg"
   }
 }
