@@ -16,7 +16,7 @@ There are two key ways in which you can update your item:
 - [Upgrade the item][upgrade-item], publishing a new version of the item on the Chrome Web Store and pushing it
   to the user base.
 - [Update the % rollout][update-rollout] for items that were previously published with partial rollout.
-  (Available to items with over **10,000 7-day active users**)
+  (Available to items with over 10,000 7-day active users)
 
 These update options are described in the following sections.
 
@@ -40,26 +40,22 @@ There are several ways to publish to a different channel in the [Distribution ta
 - To move a published item back to private (e.g. from production back to testing), you must
   [unpublish][unpublish], change the visibility to Private, and then republish. The unpublishing step is
   necessary to move an item "backwards" from production to testing.
-- You can create a separate Chrome Web Store item for your [testing program][private]— this is an option if you
+- You can create a separate Chrome Web Store item for your [testing program][visibility-private]— this is an option if you
   want to continue a testing program in parallel with a published version. 
 
 {% Aside 'gotchas' %}
 
-The CWS does allow the publication of the same extension for testing and production . To avoid
-being flagged as Repetitive Content, follow [these guidelines][test-production-extension] 
+The CWS allows the publication of a testing and a production version of am item. [Follow these guidelines][test-production-extension] 
+to avoid
+being flagged as Repetitive Content.
 
 {% endAside %}
 
 ### Uploading an updated zip file {: #uploading-an-updated-zip-file }
 
 If you're changing any code, the manifest, or other assets packaged with your extension, you must
-make a new zip file and upload the new package. 
-
-{% Aside 'gotchas' %}
-
-Make sure you increase the **version number**. Each new version must have a larger version number than the previous version.
-
-{% endAside %}
+make a new zip file and upload the new package. Make sure you increase the **version number**. Each
+new version must have a larger version number than the previous version.
 
 In the developer dashboard entry for your item, on
 the Package tab, use the Upload New Package button to upload the zip file:
