@@ -82,8 +82,8 @@ which is why some have two colors.
 
 The stages are:
 
-1. _Style:_ apply CSS to the DOM, and create _computed styles_.
 1. _Animate:_ change computed styles and mutate _property trees_ over time based on declarative timelines.
+1. _Style:_ apply CSS to the DOM, and create _computed styles_.
 1. _Layout:_ determine the size and position of DOM elements on the screen,
 and create the _immutable fragment tree_.
 1. _Pre-paint:_ compute property trees and
