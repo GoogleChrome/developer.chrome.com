@@ -16,7 +16,7 @@ There are two key ways in which you can update your item:
 - [Upgrade the item][upgrade-item], publishing a new version of the item on the Chrome Web Store and pushing it
   to the user base.
 - [Update the % rollout][update-rollout] for items that were previously published with partial rollout.
-  (Available to very popular items.)
+  (Available to items with over **10,000 7-day active users**)
 
 These update options are described in the following sections.
 
@@ -28,7 +28,8 @@ the item for a new review.
 
 {% Aside %}
 
-Your upgrade will be published to the same channel (for example public or trusted testers) as previous versions. Publishing to a different channel may require special steps, as described below.
+Your upgrade will be published to the same channel (for example public or trusted testers) as
+previous versions. Publishing to a different channel may require special steps, as described below.
 
 {% endAside %}
 
@@ -67,7 +68,7 @@ update this information on the same tabs used for creating a new item:
 
 ### Partial rollout {: #partial-rollout }
 
-If your item has a large user base, its distribution tab will include a **Percentage rollout**
+If your item has a large user base (over 10,000), its distribution tab will include a **Percentage rollout**
 option to restrict the update to just a fraction of the user base:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oZxWW5oMsh7fUSzwvRNp.png",
@@ -79,7 +80,8 @@ minimal impact.
 
 {% Aside %}
 
-This is only available for new versions of an **already-published** item with over **10,000 7-day active users**
+This is only available for new versions of an **already-published** item with over **10,000 7-day
+active users**
 
 {% endAside %}
 
