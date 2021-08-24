@@ -142,7 +142,7 @@ DevTools now adopts native HTML tooltips across all components. DevTools has had
 
 Unfortunately, maintaining a custom tooltip implementation is complicated and we regularly run into complicated bugs.
 
-After reweighting the benefits of the custom implementations, we find that the native HTML tooltips are sufficient for DevTools and adopting the tooltips prevents a vast variety or problems for our users.
+After reweighting the benefits of the custom implementations, we find that the native HTML tooltips are sufficient for DevTools and adopting the tooltips prevents a vast variety of problems for our users.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bOFfHPAwX3qiVcgANPmh.png", alt="DevTools tooltip", width="800", height="452" %}
 
