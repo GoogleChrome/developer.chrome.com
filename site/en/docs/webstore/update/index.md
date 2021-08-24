@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Updating your Chrome Web Store item"
+title: "Update your Chrome Web Store item"
 description: >
   How to update an extension or theme ("item") that you previously
   published on the Chrome Web Store.
