@@ -158,6 +158,10 @@ used for indentation. To override the default behavior and use <kbd>Tab</kbd> to
 There's been a lot of work recently around making the DevTools UI itself more keyboard navigable.
 Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to learn more.
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/en-US/docs/Web/CSS/filter
 [3]: https://crbug.com/931145

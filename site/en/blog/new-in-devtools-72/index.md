@@ -92,6 +92,10 @@ Also, you can now access the Audits panel from the Command Menu by typing `Light
 
 **Figure 5**. Typing `lighthouse` into the Command Menu
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: #metrics
 [2]: #highlight
 [3]: #copy

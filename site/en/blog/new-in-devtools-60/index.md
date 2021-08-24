@@ -216,6 +216,9 @@ been working on over the past year and the big themes that they're tackling in t
 
 {% YouTube id="PjjlwAvV8Jg" %}
 
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: #lighthouse
 [2]: #badges
 [3]: #continue
