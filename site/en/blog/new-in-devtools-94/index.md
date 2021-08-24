@@ -136,6 +136,20 @@ You can now change the color format of any element in the Computed pane by <kbd>
 
 Chromium issue: [1226371](https://crbug.com/1226371)
 
+## Replace custom tooltips with native HTML tooltips {: #tooltip }
+
+DevTools now adopts native HTML tooltips across all components. DevTools has had a custom tooltip implementation for a long time due to the lack of styling of a native HTML tooltip.
+
+Unfortunately, maintaining a custom tooltip implementation is complicated and we regularly run into complicated bugs.
+
+After reweighting the benefits of the custom implementations, we find that the native HTML tooltips are sufficient for DevTools and adopting the tooltips prevents a vast variety or problems for our users.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bOFfHPAwX3qiVcgANPmh.png", alt="DevTools tooltip", width="800", height="452" %}
+
+{# https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/3008794 #}
+
+Chromium issue: [1223391](https://crbug.com/1223391)
+
 
 ## [Experimental] Hide issues in the Issues tab {: #hide-issues }
 {% Aside %}
@@ -151,15 +165,3 @@ In the **Issue** tab, hover an issue, click on the issue menu &nbsp; {% Img src=
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0200fc96fecec0e209e84c21359ab53393860978 #}
 
 Chromium issue: [1175722](https://crbug.com/1175722)
-
-
-## Download the Chrome preview channels {: #preview-channels }
-Consider using the Chrome [Canary](https://www.google.com/chrome/canary/), [Dev](https://www.google.com/chrome/dev/) or [Beta](https://www.google.com/chrome/beta/) as your default development browser. These preview channels give you access to the latest DevTools features.
-
-
-## Getting in touch with the Chrome DevTools team {: #contact-us }
-Use the following options to discuss the new features and changes in the post, or anything else related to DevTools.
-
-- Submit a suggestion or feedback to us via [crbug.com](https://crbug.com).
-- Report a DevTools issue using the **More options** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Help** > **Report a DevTools issues** in DevTools.
-- Tweet at <a href="https://twitter.com/intent/tweet?text=@ChromeDevTools" target="_blank">@ChromeDevTools</a>.
