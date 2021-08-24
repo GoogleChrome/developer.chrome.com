@@ -4,7 +4,7 @@ title: 'Key data structures and their roles in RenderingNG'
 description: >
   This post explains the components of the RenderingNG architecture,
   and how the rendering pipeline flows through them.
-date: 2021-08-19
+date: 2021-08-24
 authors:
   - chrishtr
   - danielcheng
