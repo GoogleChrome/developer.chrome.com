@@ -68,8 +68,6 @@ the Package tab, use the Upload New Package button to upload the zip file:
        alt="Screenshot of the Chrome Web Store developer dashboard package tab for an item",
        height="368", width="800" %}
 
-
-
 ### Uploading new listing metadata {: #uploading-new-listing-metadata }
 
 If you're changing anything about the Chrome Web Store listing for your item, its distribution, or
@@ -111,6 +109,14 @@ users.
 When you submit an update for review, it doesn't yet affect your published item. Existing users will
 see no change and new users can continue to install the previously published, current version. Only
 when the item is later published will these users be affected.
+
+{% Aside 'gotchas' %}
+
+When an update requires additional permissions, end users will be prompted to accept them or disable
+the extension.
+
+{% endAside %}
+
 
 To submit your update for review:
 
