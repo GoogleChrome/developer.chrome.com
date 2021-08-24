@@ -1,6 +1,22 @@
 ## What's New in DevTools {: #whats-new }
 A list of everything that has been covered in the [What's New In DevTools](//tags/new-in-devtools/) series.
 
+### Chrome 94 {: #chrome94 }
+
+* [Use DevTools in your preferred language](/blog/new-in-devtools-94/#localized)
+* [New Nest Hub devices in the Device list](/blog/new-in-devtools-94/#nest-hub)
+* [Origin trials in the Frame details view](/blog/new-in-devtools-94/#origin-trials)
+* [New CSS container queries badge](/blog/new-in-devtools-94/#container-queries)
+* [New checkbox to invert the network filters](/blog/new-in-devtools-94/#nvert-network-filter)
+* [Upcoming deprecation of the Console sidebar](/blog/new-in-devtools-94/#deprecated)
+* [Display raw `Set-Cookies` headers in the Issues tab and Network panel](/blog/new-in-devtools-94/#raw-cookies)
+* [Consistent display native accessors as own properties in the Console](/blog/new-in-devtools-94/#native-accessors)
+* [Proper error stack traces for inline scripts with #sourceURL](/blog/new-in-devtools-94/#inline-script)
+* [Change color format in the Computed pane](/blog/new-in-devtools-94/#color-unit)
+* [Replace custom tooltips with native HTML tooltips](/blog/new-in-devtools-94/#tooltip)
+* [[Experimental] Hide issues in the Issues tab](/blog/new-in-devtools-94/#hide-issues)
+
+
 ### Chrome 93 {: #chrome93 }
 
 * [Editable CSS container queries  in the Styles pane](/blog/new-in-devtools-93/#container-queries)

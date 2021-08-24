@@ -165,3 +165,6 @@ In the **Issue** tab, hover an issue, click on the issue menu &nbsp; {% Img src=
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0200fc96fecec0e209e84c21359ab53393860978 #}
 
 Chromium issue: [1175722](https://crbug.com/1175722)
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
