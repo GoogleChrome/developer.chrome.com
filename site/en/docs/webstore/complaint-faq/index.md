@@ -18,8 +18,8 @@ You can use the [CWS Support form][cws-support-form] to raise concerns with Goog
 - **Account removals:** You may have received an email notification about your account being
   removed. If you believe your developer account was wrongly terminated, you can request further clarifications or to appeal the removal
   decision.
-- **General concerns:** You can also contact Google for all other concerns, account transfer,
-  technical support, developer dashboard, and any questions about terms and policies. 
+- **General concerns:** You can also contact Google for all other concerns, account transfers,
+  technical support, developer dashboard issues, or any questions about terms and policies. 
 
 ## How can I as a developer in the EU raise concerns related to the Platform To Business (P2B) regulations in Europe? {: #how-can-i-as-a-developer-in-the-eu-raise-concerns-related-to-the-platform-to-business-p2b-regulations-in-europe }
 
@@ -47,7 +47,7 @@ through mediation.
 
 ## What is the process for appealing account removals? {: #what-is-the-process-for-appealing-account-removals }
 
-You can fill out the [CWS Support form][cws-support-form] in order to receive further clarifications
+You can fill out the [CWS Support form][cws-support-form] to receive further clarifications
 or to appeal the removal decision. Within **seven days**, the review team will respond with further
 clarification or provide a decision to any appeal requests. The CWS will only reinstate accounts if
 an error was made, and a re-review finds that your account does not violate the [developer
