@@ -69,6 +69,6 @@ consider these alternatives:
 
 - Use `base::IdType32<TagType>` instead of using `int32_t` as an identifier.
 - Use `base::TokenType<TagType>` instead of a non-specific `base::UnguessableToken`.
-- Use a class enum instead of a bool
+- Use an enum class instead of a bool
 (for example, `kForReload`, `kNotForReload` instead of `true`, `false`).
 - Replace other non-specific types with `base::StrongAlias<TagType, SomeWrappedType>`.
