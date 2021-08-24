@@ -90,12 +90,12 @@ The Console sidebar will be removed in favor of moving the filter UI to the tool
 Chromium issue: [1232937](https://crbug.com/1232937)
 
 
-## Display raw `Set-Cookies` headers in the Issues tab and Network panel {: #raw-cookies }
-DevTools now displays raw `Set-Cookies` headers in the **Issues** tab.
+## Display raw `Set-Cookie` headers in the Issues tab and Network panel {: #raw-cookies }
+DevTools now displays raw `Set-Cookie` headers in the **Issues** tab.
 
-Previously, DevTools did not show malformed cookies (incorrect `Set-Cookies` header) in the Network panel. With the new `response-header-set-cookie` filter added in the **Network** panel, users can filter the raw `Set-Cookies` header response. DevTools will link the raw `Set-Cookies` headers in the **Issues** tab to the **Network** panel.
+Previously, DevTools did not show malformed cookies (incorrect `Set-Cookie` header) in the Network panel. With the new `response-header-set-cookie` filter added in the **Network** panel, users can filter the raw `Set-Cookie` header response. DevTools will link the raw `Set-Cookie` headers in the **Issues** tab to the **Network** panel.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PbozcNJRd6rTME5hhqIq.png", alt="Raw 'Set-Cookies' headers in the Issues tab and Network panel", width="800", height="563" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PbozcNJRd6rTME5hhqIq.png", alt="Raw 'Set-Cookie' headers in the Issues tab and Network panel", width="800", height="563" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6dedde59f9d64290756a826f73dfe24cf382a470 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/27aa364d1b194a7a778e7649e1f144abbed5957f #}
