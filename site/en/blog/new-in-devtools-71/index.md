@@ -177,6 +177,10 @@ Other supported types are `key`, `touch`, and `control`.
 
 Check out [Command Line Reference][16] for other handy functions that you can call from the Console.
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: #hover
 [2]: #store
 [3]: #HAR

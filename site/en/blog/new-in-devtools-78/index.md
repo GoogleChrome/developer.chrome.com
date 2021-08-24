@@ -130,6 +130,10 @@ your bug or implement your feature request!
 
 Figure 10. **Main Menu** > **Help** > **Report a DevTools issue**.
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: /blog/new-in-devtools-59#block-requests
 [2]: /blog/new-in-devtools-65#overrides
 [3]: https://web.dev/render-blocking-resources

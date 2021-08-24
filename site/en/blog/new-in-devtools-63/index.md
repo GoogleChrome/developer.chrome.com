@@ -124,6 +124,10 @@ now you can send custom tags:
 **Figure 3**. After clicking **Sync**, DevTools sends a background sync event with the custom tag
 `update-content` to the service worker
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: #multi-client
 [2]: #workspaces
 [3]: #audits

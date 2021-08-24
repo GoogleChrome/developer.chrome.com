@@ -157,6 +157,10 @@ where I really wanted to pause all along.
 
 **Figure 8**. The `click` breakpoint now pauses on the app's listener code
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: #ignore-script
 [2]: #auto-adjust
 [3]: #pretty-printing

@@ -200,6 +200,10 @@ This also comes in handy when debugging or optimizing code. For example, if you 
 certain phase of your lifecycle, call `window.performance.mark()` at the beginning and end of your
 lifecycle function. React does this in development mode.
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: #watch
 [2]: #nodes
 [3]: #performance

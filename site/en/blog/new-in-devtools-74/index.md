@@ -160,6 +160,10 @@ The [Timings section][10] of a Performance recording now marks First Paint.
 Check out [Get Started With Viewing And Changing The DOM][11] for a hands-on tour of DOM-related
 features.
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: https://web.dev/tap-targets
 [2]: https://developers.google.com/web/tools/lighthouse
 [3]: https://web.dev/measure

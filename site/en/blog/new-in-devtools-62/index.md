@@ -198,6 +198,10 @@ Starting in Chrome 62, the **Coverage** tab now tells you which code within a fu
 
 **Figure 11**. An example of the **Coverage** tab in Chrome 62. Line 4 is marked unused
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: #await
 [2]: #screenshot-areas
 [3]: #node-screenshots

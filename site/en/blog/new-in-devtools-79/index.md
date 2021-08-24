@@ -150,6 +150,10 @@ Control+N to move your cursor to the line below.
 
 Chromium issue [#983874][19]
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: https://web.dev/samesite-cookies-explained#changes-to-the-default-behavior-without-samesite
 [2]: https://chromedevtools.github.io/devtools-protocol/
 [3]: https://crbug.com/856777

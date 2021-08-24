@@ -143,3 +143,6 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283cd0a96204b1592f59fda2fcb #}
 
 Chromium bug: [998674](https://crbug.com/998674) 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
