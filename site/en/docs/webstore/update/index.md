@@ -33,25 +33,42 @@ previous versions. Publishing to a different channel may require special steps, 
 
 {% endAside %}
 
-There are several ways to publish to a different channel:
+There are several ways to publish to a different channel in the [Distribution tab][visibility]:
 
 - To move an item from testing to production: change your visibility from Private to Public or to
   Unlisted and then republish.
 - To move a published item back to private (e.g. from production back to testing), you must
-  unpublish, change the visibility to Private, and then republish. The unpublishing step is
+  [unpublish][unpublish], change the visibility to Private, and then republish. The unpublishing step is
   necessary to move an item "backwards" from production to testing.
-- You can create a separate Chrome Web Store item for your testing program— this is an option if you
-  want to continue a testing program in parallel with a published version.
+- You can create a separate Chrome Web Store item for your [testing program][private]— this is an option if you
+  want to continue a testing program in parallel with a published version. 
+
+{% Aside 'gotchas' %}
+
+The CWS does allow the publication of the same extension for testing and production . To avoid
+being flagged as Repetitive Content, follow [these guidelines][test-production-extension] 
+
+{% endAside %}
 
 ### Uploading an updated zip file {: #uploading-an-updated-zip-file }
 
 If you're changing any code, the manifest, or other assets packaged with your extension, you must
-make a new zip file and upload the new package. In the developer dashboard entry for your item, on
+make a new zip file and upload the new package. 
+
+{% Aside 'gotchas' %}
+
+Make sure you increase the **version number**. Each new version must have a larger version number than the previous version.
+
+{% endAside %}
+
+In the developer dashboard entry for your item, on
 the Package tab, use the Upload New Package button to upload the zip file:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MXJosZfPAB5V2AcGfYSy.png", 
        alt="Screenshot of the Chrome Web Store developer dashboard package tab for an item",
        height="368", width="800" %}
+
+
 
 ### Uploading new listing metadata {: #uploading-new-listing-metadata }
 
@@ -140,5 +157,10 @@ Changing the %rollout does *not* trigger a new review.
 [cws-privacy]: /docs/webstore/cws-dashboard-privacy
 [review-times]: /docs/webstore/faq#faq-listing-108
 [partial-rollout]: #partial-rollout
+[unpublish]: /docs/webstore/faq/#faq-listing-03
 [update-rollout]: #update-rollout
 [upgrade-item]: #upgrade-your-item
+[visibility]: /docs/webstore/cws-dashboard-distribution#setting-the-visibility
+[visibility-private]: /docs/webstore/cws-dashboard-distribution/#private-visibility-trusted-testers
+[test-production-extension]: /docs/webstore/spam-faq/#test-version
+
