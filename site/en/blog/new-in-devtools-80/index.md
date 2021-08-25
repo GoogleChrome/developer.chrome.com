@@ -162,6 +162,10 @@ and V8's garbage collector has cleaned it up.
 
 Chromium issue [#1004203][14]
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: https://crbug.com/1004193
 [2]: http://dwarfstd.org/
 [3]: https://developers.google.com/web/updates/2019/12/webassembly

@@ -161,6 +161,10 @@ path to watch** to add that property to the Watch pane.
 The **Show timestamps** checkbox previously in **Console Settings**
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/jYHojXbVbXa7SfX2r5zA.png", alt="The Console Settings button", width="28", height="28" %} has moved to [Settings][15].
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: #eagerevaluation
 [2]: #hints
 [3]: #autocomplete

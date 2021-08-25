@@ -1,0 +1,23 @@
+.release-card__icon {
+  align-items: center;
+  background: var(--color-green-lighter);
+  border-radius: 128px;
+  color: var(--color-green-darkest);
+  display: flex;
+  font-size: 42px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 25vw;
+  width: get-size(600) * 3;
+
+  &::after {
+    content: '';
+    padding-bottom: 100%;
+    position: relative;
+  }
+}
+
+.release-card__icon-beta {
+  background: var(--color-blue-lighter);
+  color: var(--color-blue-darkest);
+}

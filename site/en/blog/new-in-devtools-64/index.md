@@ -120,6 +120,10 @@ This feature is shipping in Chrome 65, which will land approximately 6 weeks aft
 out [Local Overrides][11] to learn more. If you're on Windows or Mac, you can try Chrome 65 now by
 downloading [Chrome Canary][12].
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: #perf-monitor
 [2]: #console-sidebar
 [3]: #group-similar

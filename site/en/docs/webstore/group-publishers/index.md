@@ -18,7 +18,7 @@ developers to share ownership of a published item. Consider how this differs fro
 individual publisher role.
 
 {% Aside %}
-When you [register as a Chrome Web Store developer][register], your developer account is
+When you [register as a Chrome Web Store developer][cws-register], your developer account is
 automatically enrolled as an individual publisher.
 {% endAside %}
 

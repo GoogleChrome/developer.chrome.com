@@ -180,6 +180,9 @@ redirects:
 - from: /docs/devtools/rendering-tools/
   to: /docs/devtools/evaluate-performance/
 
+- from: /docs/devtools/updates/
+  to: /tags/new-in-devtools/
+
 # TODO(kaycebasques): Update these old DevTools redirects
 
 - from: /devtools/

@@ -142,6 +142,10 @@ Figure 7. The new Push Messages and Notifications panes in the Application panel
 
 [Chromium issue #927726][24]
 
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/whats-new.md' %}
+
 [1]: https://twitter.com/argyleink
 [2]: https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc
 [3]: https://twitter.com/argyleink/status/1142216452184821760
