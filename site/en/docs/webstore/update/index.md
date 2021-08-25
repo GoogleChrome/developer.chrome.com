@@ -22,6 +22,8 @@ These update options are described in the following sections.
 
 ## Upgrade your item {: #upgrade-your-item }
 
+To upgrade your item, use the [Chrome Developer Dashboard][dev-console].
+
 To upgrade an existing Chrome Web Store item, you need to upload a new zip file for your item,
 including all changed and unchanged files; update any changed metadata for your listing; and submit
 the item for a new review.
@@ -33,9 +35,9 @@ previous versions. Publishing to a different channel may require special steps, 
 
 {% endAside %}
 
-There are several ways to publish to a different channel in the [Distribution tab][visibility]:
+In the [Distribution tab][visibility] there are several ways to publish to a different channel:
 
-- To move an item from testing to production: change your visibility from Private to Public or to
+- To move an item from testing to production, change your visibility from Private to Public or to
   Unlisted and then republish.
 - To move a published item back to private (e.g. from production back to testing), you must
   [unpublish][unpublish], change the visibility to Private, and then republish. The unpublishing step is
@@ -45,13 +47,13 @@ There are several ways to publish to a different channel in the [Distribution ta
 
 {% Aside 'gotchas' %}
 
-The CWS allows the publication of a testing and a production version of am item. [Follow these guidelines][test-production-extension] 
+The CWS allows the publication of testing and production versions. Make sure you [follow these guidelines][test-production-extension] 
 to avoid
 being flagged as Repetitive Content.
 
 {% endAside %}
 
-### Uploading an updated zip file {: #uploading-an-updated-zip-file }
+### Upload an updated zip file {: #uploading-an-updated-zip-file }
 
 If you're changing any code, the manifest, or other assets packaged with your extension, you must
 make a new zip file and upload the new package. Make sure you increase the **version number**. Each
@@ -64,7 +66,7 @@ the Package tab, use the Upload New Package button to upload the zip file:
        alt="Screenshot of the Chrome Web Store developer dashboard package tab for an item",
        height="368", width="800" %}
 
-### Uploading new listing metadata {: #uploading-new-listing-metadata }
+### Update the listing metadata {: #uploading-new-listing-metadata }
 
 If you're changing anything about the Chrome Web Store listing for your item, its distribution, or
 details of your privacy policy, you must update the information on the developer dashboard. You
@@ -77,10 +79,10 @@ update this information on the same tabs used for creating a new item:
 - The [Payment and Distribution][cws-distribution] tab lets you declare in app-purchases and control which countries will list your item and
   which set of users will see it.
 
-### Partial rollout {: #partial-rollout }
+### Set partial rollout percentage {: #partial-rollout }
 
-If your item has a large user base (over 10,000), its distribution tab will include a **Percentage rollout**
-option to restrict the update to just a fraction of the user base:
+If your item has a large user base (over 10,000), the distribution tab will include a **Percentage rollout**
+option to restrict the update only to a fraction of the user base:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oZxWW5oMsh7fUSzwvRNp.png",
        alt="Screenshot of the Chrome Web Store fractional rollout field",
@@ -100,7 +102,7 @@ Once an item with partial rollout has been published, you can later [increase th
 without needing to resubmit the item for review, until you eventually reach 100% of
 users.
 
-### Submitting the update {: #submitting-the-update }
+### Submit the update {: #submitting-the-update }
 
 When you submit an update for review, it doesn't yet affect your published item. Existing users will
 see no change and new users can continue to install the previously published, current version. Only
@@ -112,7 +114,6 @@ When an update requires additional permissions, end users will be prompted to ac
 the extension.
 
 {% endAside %}
-
 
 To submit your update for review:
 
@@ -157,6 +158,7 @@ Changing the %rollout does *not* trigger a new review.
 [cws-distribution]: /docs/webstore/cws-dashboard-distribution
 [cws-listing]: /docs/webstore/cws-dashboard-listing
 [cws-privacy]: /docs/webstore/cws-dashboard-privacy
+[dev-console]: https://chrome.google.com/webstore/devconsole
 [review-times]: /docs/webstore/faq#faq-listing-108
 [partial-rollout]: #partial-rollout
 [unpublish]: /docs/webstore/faq/#faq-listing-03
