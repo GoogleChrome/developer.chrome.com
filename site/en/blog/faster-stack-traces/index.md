@@ -115,3 +115,6 @@ With the above improvements, we've significantly reduced the overhead of DevTool
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/r8HDWdZo2ykpJ1xflDH8.mp4", autoplay="true", muted="true", loop="true" %}
 
 We know there are still various possible improvements - for example the overhead when using `MutationObserver`s is still noticeable, as reported in [chromium:1077657](https://crbug.com/1077657) - but for the time being, we've addressed the major pain points, and we might come back in the future to further streamline the debugging performance.
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/engineering-blog.md' %}

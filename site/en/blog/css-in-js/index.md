@@ -138,3 +138,6 @@ With all these pieces in place, CSS-in-JS editing already works but we wanted to
 To recap our story here, we went through the relevant use cases related to CSS-in-JS that DevTools didn't support and walked through the solution to support those use cases. The interesting part of this implementation is that we were able to leverage existing functionality by making CSSOM CSS rules have a regular source text, avoiding the need to completely re-architect style editing in DevTools.
 
 For more background, check out [our design proposal](https://goo.gle/devtools-css-in-js) or the Chromium [tracking bug](https://bugs.chromium.org/p/chromium/issues/detail?id=946975) which references all related patches.
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/engineering-blog.md' %}

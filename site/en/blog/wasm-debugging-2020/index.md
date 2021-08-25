@@ -426,3 +426,6 @@ working on from here on:
 Meanwhile, please help us out by trying the current beta on your own code and reporting any found
 issues to
 [https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue](https://bugs.chromium.org/p/chromium/issues/entry?template=DevTools+issue).
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/engineering-blog.md' %}

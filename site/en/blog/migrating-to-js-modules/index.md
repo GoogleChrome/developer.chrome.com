@@ -250,3 +250,6 @@ Migrations of this scale are difficult to follow and require a lot of domain kno
 Transferring that domain knowledge to others working in the same codebase is not desirable per se for the job they are doing.
 Knowing what to share and what details not to share is an art, but a necessary one.
 It is therefore crucial to reduce the amount of large migrations, or at the very least not perform them at the same time.
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/engineering-blog.md' %}

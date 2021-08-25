@@ -120,3 +120,6 @@ To keep issues actionable, we want to make it easier to discover which part of a
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Igbkg2AiyWGqET8GAfOZ.mp4", autoplay="true", muted="true", loop="true" %}
 
 If you have any suggestions to improve the Issues tab, let us know by filing a [bug](https://crbug.com/new)!
+
+{% include 'partials/devtools/reach-out.md' %}
+{% include 'partials/devtools/engineering-blog.md' %}
