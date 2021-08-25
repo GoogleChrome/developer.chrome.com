@@ -24,6 +24,7 @@ tags:
 
 {% endAside %}
 
+{% YouTube id="1VaPAnUGRz8" %}
 
 ## 样式窗格（Styles pane）可编辑 CSS 容器查询（container queries） {: #container-queries }
 现在，您可以在**样式**窗格（Styles pane）那里查看以及编辑 [CSS 容器查询（container queries）](https://web.dev/new-responsive/#responsive-to-the-container)。

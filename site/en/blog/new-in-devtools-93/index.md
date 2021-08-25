@@ -20,6 +20,7 @@ Interested in helping improve DevTools? Sign up to participate in [Google User R
 
 {% endAside %}
 
+{% YouTube id="1VaPAnUGRz8" %}
 
 ## Editable CSS container queries in the Styles pane {: #container-queries }
 You can now view and edit [CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) in the **Styles** pane.
