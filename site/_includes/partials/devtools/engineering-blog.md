@@ -1,5 +1,7 @@
 ## More... {: #devtools-eng }
 
+<!-- lint disable no-unescaped-template-tags -->
+
 {% from 'macros/icon.njk' import icon with context %}
 {% set tagn = 'devtools-engineering' %}
 
