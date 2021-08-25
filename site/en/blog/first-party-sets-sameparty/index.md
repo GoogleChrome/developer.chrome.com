@@ -10,7 +10,8 @@ thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg'
 alt: A diagram showing First-Party Sets. One set contains domains example.com,
   example.rs, and example.co.uk. The other set containts brandx.site,
   fly-brandx.site, and drive-brandx.site.
-tags:
+tags: 
+  - privacy
 authors:
   - rowan_m
   - mihajlija
@@ -295,7 +296,7 @@ You can try this on the demo site at
 [https://fps-member1.glitch.me/](https://fps-member1.glitch.me/) after starting
 Chrome with the following flag:  
 
-```
+```text
 --use-first-party-set=https://fps-member1.glitch.me,https://fps-member2.glitch.me,https://fps-member3.glitch.me
 ```
 
