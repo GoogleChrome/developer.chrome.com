@@ -70,7 +70,7 @@ const prettyUrls = ($, outputPath, locale) => {
     const $link = $(elem);
 
     const href = $link.attr('href');
-    if (!href && $link.attr('id')) {
+    if (!href && !$link.attr('id')) {
       console.warn(
         `Found <a> in ${outputPath} with no href/id (text=\`${$link.text()}\`)`
       );
