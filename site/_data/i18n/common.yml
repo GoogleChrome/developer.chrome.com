@@ -118,6 +118,9 @@ close:
 back:
   en: 'Back'
 
+older_releases:
+  en: 'Older releases'
+
 current_release_description:
   en: 'The current stable version of Chrome is'
 
@@ -129,3 +132,15 @@ current_release_label:
 
 future_release_label:
   en: 'Beta will promote to stable on'
+
+release_stable:
+  en: 'Stable'
+
+release_beta:
+  en: 'Beta'
+
+release_dev:
+  en: 'Dev'
+
+release_canary:
+  en: 'Canary'

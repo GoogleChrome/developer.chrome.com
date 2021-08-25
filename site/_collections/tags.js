@@ -75,6 +75,7 @@ module.exports = function (collections) {
     const chromeTags = allTags.filter(tag => tag.startsWith('chrome-'));
     while (chromeTags.length) {
       const chromeTag = /** @type {string} */ (chromeTags.shift());
+      const release = +chromeTag.substr('chrome-'.length);
 
       /**
        * Creates the sub-object for a chrome release if it does not exist in the `tags` const above.
@@ -97,7 +98,16 @@ module.exports = function (collections) {
            */
           posts: locales.reduce((o, key) => ({...o, [key]: []}), {}),
           title: 'i18n.tags.chrome',
+
+          /**
+           * For Chrome releases, use a literal string title (don't translate "Chrome xx").
+           */
           overrideTitle: chromeTag.replace('chrome-', 'Chrome '),
+
+          /**
+           * This is the numeric Chrome release for this tag.
+           */
+          release,
         };
       }
       tags[chromeTag].posts[item.data.locale].push(item);
