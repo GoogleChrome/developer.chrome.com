@@ -18,17 +18,15 @@
 
 <div class="measure-1280 gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400 center-margin">
 
-  {# TODO: i18n these #}
-
   <div class="tag-card__header gap-bottom-600">
-    <h2 class="type--label color-secondary-text case-upper">Releases</h2>
+    <h2 class="type--label color-secondary-text case-upper">{{ 'i18n.nav.side_nav.releases' | i18n(locale) }}</h2>
     <ul role="list" class="pad-0 gap-top-300 gap-bottom-0">
       {% for tag in namedChromeReleaseTags %}
         {{ renderTag(tag) }}
       {% endfor %}
       <select-loader>
         <select class="type--label gap-top-300 gap-bottom-300 color-primary">
-          <option disabled selected>Older releases</option>
+          <option disabled selected>{{ 'i18n.common.older_releases' | i18n(locale) }}</option>
           {% for tag in chromeReleaseTags %}
             <option href="{{ helpers.join('/', locale, 'tags', tag.key, '/') }}">{{ tag.title }}</option>
           {% endfor %}

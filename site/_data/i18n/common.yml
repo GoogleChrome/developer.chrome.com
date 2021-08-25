@@ -118,6 +118,9 @@ close:
 back:
   en: 'Back'
 
+older_releases:
+  en: 'Older releases'
+
 current_release_description:
   en: 'The current stable version of Chrome is'
 
