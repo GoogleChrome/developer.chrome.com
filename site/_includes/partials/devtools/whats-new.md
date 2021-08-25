@@ -1,5 +1,5 @@
 ## What's New in DevTools {: #whats-new }
-A list of everything that has been covered in the [What's New In DevTools](//tags/new-in-devtools/) series.
+A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
 ### Chrome 94 {: #chrome94 }
 
