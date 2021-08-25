@@ -25,6 +25,10 @@ import './web-components/top-nav';
 import './web-components/share-button';
 import './web-components/web-tabs';
 import './web-components/language-select';
-import './web-components/toc-active';
-import './web-components/select-loader';
 import './third-party/announcement-banner/announcement-banner';
+
+// This is only used on content pages.
+import './web-components/toc-active';
+
+// This component is only used on the tags page, but we don't split load yet.
+import './web-components/select-loader';
