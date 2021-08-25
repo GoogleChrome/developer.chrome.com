@@ -149,7 +149,7 @@ It represents the position and size of all elements on the page
 (without transforms applied).
 
 {% Img
-src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/l8VFPp007SmmhPWUdoJW.jpg",
+src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/EmO3PAWQ6QzMgwJweFvl.jpeg",
 alt="Representation of the fragments in each tree, with one fragment being marked as needing layout.",
 width="800", height="441" %}
 
