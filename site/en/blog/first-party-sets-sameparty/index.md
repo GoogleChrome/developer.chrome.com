@@ -64,8 +64,8 @@ Cookie inclusion is determined by the cookie's ``SameSite`` attribute:
 
 +   [**Same-site
     context**](https://web.dev/same-site-same-origin/#same-site-cross-site) with
-    ``SameSite=Lax``, ``Strict``, or ``None`` → **first-party**
-+   **Cross-site context** with ``SameSite=None`` → **third-party**
+    ``SameSite=Lax``, ``Strict``, or ``None`` makes the cookie **first-party**.
++   **Cross-site context** with ``SameSite=None`` makes the cookie **third-party**.
 
 However, this isn't always so clear cut. Imagine ``brandx.site`` is a travel
 booking site and they also use ``fly-brandx.site`` and ``drive-brandx.site`` to
@@ -78,7 +78,7 @@ Request Forgery (CSRF) protection. If ``evil.site`` includes a request to
 ``brandx.site`` then it would include that cookie!  
 
 The cookie is cross-site, but all those sites are owned and operated by the same
-organisation. Visitors also understand it's the same organisation and want the
+organization. Visitors also understand it's the same organization and want the
 same session, in other words—a shared identity, across them. 
 
 With First-Party Sets there's a route to define the situations where a
@@ -133,7 +133,7 @@ The origin trial has a defined policy which is not final, but the principles are
 likely to remain the same:
 
 +   The domains in a first-party set must be owned and operated by the same
-    organisation.
+    organization.
 +   The domains should be recognisable to users as a group.
 +   The domains should share a common privacy policy.
 
@@ -256,7 +256,7 @@ that cookies are directly shared.
 
 ## What use cases are right for First-Party Sets? {: #usecases }
 
-First-Party Sets are a good match for cases when an organisation needs a form of
+First-Party Sets are a good match for cases when an organization needs a form of
 shared identity across different top-level sites. Shared identity in this case
 means anything from a full single sign-on solution to just needing a shared
 preference across sites.  
