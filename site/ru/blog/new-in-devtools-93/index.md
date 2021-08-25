@@ -15,6 +15,8 @@ tags:
   - chrome-93
 ---
 
+<!-- lint disable no-dash-spaces -->
+
 *Переводы предоставлены [Alena Batitskaya](https://github.com/solarrust). Редактор — [Maxim Salnikov](https://twitter.com/webmaxru).*
 
 {% Aside %}
