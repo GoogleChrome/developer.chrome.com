@@ -81,9 +81,11 @@ The cookie is cross-site, but all those sites are owned and operated by the same
 organization. Visitors also understand it's the same organization and want the
 same session, in other words—a shared identity, across them. 
 
+{% Aside %}
 With First-Party Sets there's a route to define the situations where a
 **cross-site context** is still **first-party**. The cookie can be included
 within the first-party set and excluded in third-party contexts.
+{% endAside %}
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/oNCKndk5TJyiqcPgvv5E.png", alt="", width="400", height="362" %}
 
