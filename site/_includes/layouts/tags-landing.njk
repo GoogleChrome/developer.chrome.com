@@ -20,45 +20,24 @@
 
   {# TODO: i18n these #}
 
-  <div class="tags-grid tags-grid__header">
-    <div class="tag-card">
-      <h2 class="type--label color-secondary-text">Releases</h2>
-      <ul role="list" class="pad-0 gap-top-300 gap-bottom-0">
-        {% for tag in namedChromeReleaseTags %}
-          {{ renderTag(tag) }}
-        {% endfor %}
-      </ul>
-    </div>
-
-    {# Option #1: a <details> which opens to show all releases #}
-    <div class="tag-card">
-      <details>
-        <summary class="type--label color-secondary-text">Other</summary>
-        <ul role="list" class="pad-0 gap-top-300 gap-bottom-0">
+  <div class="tag-card__header gap-bottom-600">
+    <h2 class="type--label color-secondary-text case-upper">Releases</h2>
+    <ul role="list" class="pad-0 gap-top-300 gap-bottom-0">
+      {% for tag in namedChromeReleaseTags %}
+        {{ renderTag(tag) }}
+      {% endfor %}
+      <select-loader>
+        <select class="type--label gap-top-300 gap-bottom-300 color-primary">
+          <option disabled selected>Older releases</option>
           {% for tag in chromeReleaseTags %}
-            {{ renderTag(tag) }}
+            <option href="{{ helpers.join('/', locale, 'tags', tag.key, '/') }}">{{ tag.title }}</option>
           {% endfor %}
-        </ul>
-      </details>
-    </div>
-
-    {# Option #2: a <select> which, on change, loads the right page #}
-    {# TODO: actually doesn't load yet #}
-    <div class="tag-card">
-      <h2 class="type--label color-secondary-text">Other</h2>
-      <select class="type--label gap-top-300 gap-bottom-300">
-        <option>Choose release&hellip;</option>
-        <optgroup label="Release">
-          {% for tag in chromeReleaseTags %}
-            <option value="{{ tag.key }}">{{ tag.title }}</option>
-          {% endfor %}
-        </option>
-      </select>
-    </div>
-
+        </select>
+      </select-loader>
+    </ul>
   </div>
 
-  <div class="tags-grid tags-grid__index">
+  <div class="tags-grid">
 
     {% for tag in displayTags %}
       {# Get the current first letter of the tag title #}

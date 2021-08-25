@@ -14,25 +14,17 @@
   }
 
   .tag-card {
+    border-top: 1px solid var(--color-hairline);
     padding: get-size(300) 0;
   }
 }
 
-// stylelint-disable max-nesting-depth
-.tags-grid__header {
-  .tag-card {
-    // Mobile-only
-    // Every card except for the first one should have a top border.
-    &:not(:first-child) {
-      @include media-query('md-max') {
-        border-top: 1px solid var(--color-hairline);
-      }
+.tag-card__header {
+  // Mobile-only
+  // Every card except for the first one should have a top border.
+  &:not(:first-child) {
+    @include media-query('md-max') {
+      border-top: 1px solid var(--color-hairline);
     }
-  }
-}
-
-.tags-grid__index {
-  .tag-card {
-    border-top: 1px solid var(--color-hairline);
   }
 }

@@ -26,4 +26,5 @@ import './web-components/share-button';
 import './web-components/web-tabs';
 import './web-components/language-select';
 import './web-components/toc-active';
+import './web-components/select-loader';
 import './third-party/announcement-banner/announcement-banner';
