@@ -19,7 +19,9 @@ authors:
 
 Many organizations have related sites with different domain names, such as
 `brandx.site` and `fly-brandx.site`—or domains for different countries such as
-`example.com`, `example.rs`, `example.co.uk` and so on. Browsers are moving
+`example.com`, `example.rs`, `example.co.uk` and so on. 
+
+Browsers are moving
 towards [making third-party cookies
 obsolete](https://blog.google/products/ads-commerce/a-more-privacy-first-web/)
 to improve privacy on the web, but sites like these often rely on cookies for
