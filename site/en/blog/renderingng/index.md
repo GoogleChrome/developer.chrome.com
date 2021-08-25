@@ -12,6 +12,7 @@ authors:
 alt: >
   A pile of different devices.
 ---
+(See also the subsequent posts that give an [architectural overview](https://developer.chrome.com/blog/renderingng-architecture/) and describe [key data structures](https://developer.chrome.com/blog/renderingng-data-structures/).)
 
 I'm Chris Harrelson,
 the engineering lead for Rendering (transforming HTML and CSS to pixels) in Blink.
