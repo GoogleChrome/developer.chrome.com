@@ -164,11 +164,11 @@ following at
 ``https://brandx.site/.well-known/first-party-set``:
 
 ```text
-    {
-      "owner": "brandx.site",
-      "version": 1,
-      "members": ["fly-brandx.site", "drive-brandx.site"]
-    }
+{
+  "owner": "brandx.site",
+  "version": 1,
+  "members": ["fly-brandx.site", "drive-brandx.site"]
+}
 ```
 
 Each member of the set also hosts a static JSON resource pointing back to the
@@ -176,16 +176,16 @@ owner of the set.
 At ``https://fly-brandx.site/.well-known/first-party-set`` we have:
 
 ```text
-    { "owner": "brandx.site" }
+{ "owner": "brandx.site" }
 ```
 
 And at ``https://drive-brandx.site/.well-known/first-party-set``:
 
 ```text
-    { "owner": "brandx.site" }
+{ "owner": "brandx.site" }
 ```
 
-There are a few constraints for first-party set:
+There are a few constraints for first-party sets:
 
 +   A set may only have one owner.
 +   A member may only belong to one set, no overlapping or mixing.
@@ -210,7 +210,7 @@ first-party set as the top-level context.
 That means that if ``brandx.site`` sets this cookie:
 
 ```text
-    Set-Cookie: session=123; Secure; SameSite=Lax; SameParty
+Set-Cookie: session=123; Secure; SameSite=Lax; SameParty
 ```
 
 Then when the visitor is on ``fly-brandx.site`` and a request goes to
@@ -234,8 +234,8 @@ attribute as giving you a setting between ``SameSite=Lax`` and
 
 There are some additional requirements:
 
-+   ``SameParty`` cookies **must** include ``Secure``
-+   ``SameParty`` cookies **must not** include ``SameSite=Strict``
++   ``SameParty`` cookies **must** include ``Secure``.
++   ``SameParty`` cookies **must not** include ``SameSite=Strict``.
 
 ``Secure`` is mandated as this is still cross-site and you should mitigate those
 risks by ensuring secure (HTTPS) connections. Likewise, because this is a
@@ -295,7 +295,9 @@ You can try this on the demo site at
 [https://fps-member1.glitch.me/](https://fps-member1.glitch.me/) after starting
 Chrome with the following flag:  
 
-`--use-first-party-set=https://fps-member1.glitch.me,https://fps-member2.glitch.me,https://fps-member3.glitch.me`
+```
+--use-first-party-set=https://fps-member1.glitch.me,https://fps-member2.glitch.me,https://fps-member3.glitch.me
+```
 
 This is helpful if you want to test in your development environment, or want to
 try adding the `SameParty` attribute in a live environment to see how a
@@ -382,6 +384,6 @@ a set:
 +   You provide third-party social sign-in services. Identity providers using
     things like OAuth or OpenId connect often rely on third-party cookies for a
     smoother sign-in experience for users. It's a valid use case, but it's not
-    one for a First-Party Set as there's a clear difference in organizations.
+    suitable for First-Party Sets as there's a clear difference in organizations.
     Early proposals like [WICG/WebID](https://github.com/WICG/WebID) are
     exploring ways to enable these use cases. 
