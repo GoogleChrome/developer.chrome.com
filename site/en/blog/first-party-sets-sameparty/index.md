@@ -5,7 +5,7 @@ description: >
   First-Party Sets can allow related domain names that are owned and operated by
   the same entity to be treated as first-party in situations where first party and
   third party are otherwise treated differently. 
-date: 2021-08-24
+date: 2021-08-25
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JL7L7S2qKI53pTWACfcv.jpg'
 alt: A diagram showing First-Party Sets. One set contains domains example.com,
   example.rs, and example.co.uk. The other set containts brandx.site,
