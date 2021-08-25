@@ -170,7 +170,7 @@ window.open(
 <tr>
 <td>Requests to expect from the browser</td>
 <td><code>.well-known/register-conversion?impression-data=&conversion-data={DATA}&attribution-credit=100</code></td>
-<td><code>.well-known/attribution-reporting/report-attribution</td>
+<td><code>.well-known/attribution-reporting/trigger-attribution</td>
 </tr>
 <tr>
 <td>Incoming reports</td>
