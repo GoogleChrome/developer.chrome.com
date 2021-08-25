@@ -14,6 +14,8 @@ tags:
   - chrome-66
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 New features and major changes coming to DevTools in Chrome 66 include:
 
 - [Ignore script in the **Network** panel][1]

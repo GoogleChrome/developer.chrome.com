@@ -14,6 +14,8 @@ tags:
   - chrome-68
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 New to DevTools in Chrome 68:
 
 - [Eager Evaluation][1]. As you type expressions, the Console previews the result.

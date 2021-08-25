@@ -14,6 +14,8 @@ tags:
   - chrome-65
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 New features coming to DevTools in Chrome 65 include:
 
 - [**Local Overrides**][1]

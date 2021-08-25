@@ -14,6 +14,8 @@ tags:
   - chrome-81
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 {% YouTube id="HJNaNDspffM" %}
 
 ## Moto G4 support in Device Mode {: #motog4 }

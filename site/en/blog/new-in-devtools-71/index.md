@@ -14,6 +14,8 @@ tags:
   - chrome-71
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 New features and major changes coming to Chrome DevTools in Chrome 71 include:
 
 - [Hover over a Live Expression to highlight a DOM node][1]

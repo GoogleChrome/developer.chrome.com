@@ -15,6 +15,8 @@ tags:
   - chrome-75
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 Hello! Here's what's new in [Chrome DevTools][1] in Chrome 75.
 
 ## Video version of this page {: #video }

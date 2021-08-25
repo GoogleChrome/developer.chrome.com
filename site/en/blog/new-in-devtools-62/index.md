@@ -16,6 +16,8 @@ tags:
   - chrome-62
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 New features and changes coming to DevTools in Chrome 62:
 
 - [Support for top-level `await` operators in the **Console**][1].

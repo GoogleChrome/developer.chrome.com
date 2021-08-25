@@ -15,6 +15,8 @@ tags:
   - chrome-78
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 {% YouTube id="VNkctDLYP6o" %}
 
 ## Multi-client support in the Audits panel {: #multiclient }

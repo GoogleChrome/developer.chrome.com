@@ -16,6 +16,8 @@ tags:
   - chrome-74
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 Welcome back! Here's what's new.
 
 ## Video version of this page {: #video }

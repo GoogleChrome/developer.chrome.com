@@ -14,6 +14,8 @@ tags:
   - chrome-77
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 {% YouTube id="R8KzoMoKhnM" %}
 
 ## Copy element's styles {: #copystyles }

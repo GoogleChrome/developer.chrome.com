@@ -14,6 +14,8 @@ tags:
   - chrome-73
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 Here's what's new in DevTools in Chrome 73.
 
 ## Video version of these release notes {: #video }

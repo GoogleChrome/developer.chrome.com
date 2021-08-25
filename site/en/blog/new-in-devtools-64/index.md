@@ -14,6 +14,8 @@ tags:
   - chrome-64
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 Welcome back! New features coming to DevTools in Chrome 64 include:
 
 - [Performance Monitor][1]. View a page's performance in real-time.

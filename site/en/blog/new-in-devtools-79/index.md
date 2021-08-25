@@ -16,6 +16,8 @@ tags:
   - chrome-79
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 ## New features for cookies {: #cookies }
 
 ### Debug why a cookie was blocked {: #blockedcookies }

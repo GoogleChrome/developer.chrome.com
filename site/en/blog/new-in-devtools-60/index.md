@@ -14,6 +14,8 @@ tags:
   - chrome-60
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 Welcome! New features and major changes coming to DevTools in Chrome 60 include:
 
 - [A new Audits panel][1], including tests for progressive web apps, performance, accessibility, and

@@ -15,6 +15,8 @@ tags:
   - chrome-63
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 Welcome back! New features coming to DevTools in Chrome 63 include:
 
 - [Multi-client remote debugging support][1].

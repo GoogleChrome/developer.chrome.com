@@ -14,6 +14,8 @@ tags:
   - chrome-84
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 {% YouTube id="dgYAlcJonxo" %}
 
 ## Fix site issues with the new Issues tab {: #issues }

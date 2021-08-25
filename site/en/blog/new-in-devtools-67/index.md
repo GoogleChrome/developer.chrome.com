@@ -16,6 +16,8 @@ tags:
   - chrome-67
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 New features and major changes coming to DevTools in Chrome 67 include:
 
 - [Search across all network headers][1]

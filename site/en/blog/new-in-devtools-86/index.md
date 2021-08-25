@@ -16,11 +16,7 @@ tags:
   - chrome-86
 ---
 
-{% Aside %}
-
-Interested in helping improve DevTools? Sign up to participate in [Google User Research here][1].
-
-{% endAside %}
+{% include 'partials/devtools/banner.md' %}
 
 {% YouTube id="koUsK58dpNo" %}
 

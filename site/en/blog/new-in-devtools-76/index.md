@@ -14,6 +14,8 @@ tags:
   - chrome-76
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 Hello! Here's what's new in [Chrome DevTools][1] in Chrome 76.
 
 {% YouTube id="GLUB2yzk0ZQ" %}

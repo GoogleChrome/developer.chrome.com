@@ -15,6 +15,8 @@ tags:
   - chrome-70
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 Welcome back! It's been about 12 weeks since our last update, which was for Chrome 68. We skipped
 Chrome 69 because we didn't have enough new features or UI changes to warrant a post.
 

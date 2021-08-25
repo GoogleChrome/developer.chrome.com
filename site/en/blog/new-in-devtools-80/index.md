@@ -16,6 +16,8 @@ tags:
   - chrome-80
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 {% YouTube id="2EiPb1opH3g" %}
 
 ## Support for `let` and `class` redeclarations in the Console {: #redeclarations }

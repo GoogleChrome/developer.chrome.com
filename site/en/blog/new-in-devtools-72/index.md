@@ -16,11 +16,7 @@ tags:
   - chrome-72
 ---
 
-{% Aside %}
-
-**Note:** We'll publish the video version of this page in early February 2019.
-
-{% endAside %}
+{% include 'partials/devtools/banner.md' %}
 
 New features and major changes coming to Chrome DevTools in Chrome 72 include:
 

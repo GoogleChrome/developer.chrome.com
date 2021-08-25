@@ -15,6 +15,8 @@ tags:
   - chrome-83
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 {% YouTube id="MLNERCykDPg" %}
 
 ## Emulate vision deficiencies {: #vision-deficiencies }

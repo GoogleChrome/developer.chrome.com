@@ -15,6 +15,8 @@ tags:
   - chrome-85
 ---
 
+{% include 'partials/devtools/banner.md' %}
+
 {% YouTube id="NOal2gTzftI" %}
 
 ## Style editing for CSS-in-JS frameworks {: #css-in-js }
