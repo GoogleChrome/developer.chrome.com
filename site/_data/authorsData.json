@@ -850,5 +850,16 @@
     "github": "hanselfmu",
     "country": "DE",
     "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oEV9Pd48COn9JnMrUYzZ.jpg"
+  },
+  "rowan_m": {
+    "name": {
+      "given": "Rowan",
+      "family": "Merewood"
+    },
+    "country": "UK",
+    "twitter": "rowan_m",
+    "github": "rowan-m",
+    "glitch": "rowan-m",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/36DbfIY65yZEBUfN0VZ3.jpeg"
   }
 }

@@ -2,15 +2,17 @@
 layout: 'layouts/blog-post.njk'
 title: First-Party Sets and the SameParty attribute
 description: >
-  Later this year, we plan to shorten the release cycle and ship a new version
-  of Google Chrome to the stable channel every four weeks, down from the
-  current six-week cycle.
+  First-Party Sets can allow related domain names that are owned and operated by
+  the same entity to be treated as first-party in situations where first party and
+  third party are otherwise treated differently. 
 date: 2021-08-24
 thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JNtmMZl7o44LwUk7mE5G.png'
-alt: Side of road in the evening with light trails from vehicles.
+alt: A diagram showing First-Party Sets. One set contains domains example.com,
+  example.rs, and example.co.uk. The other set containts brandx.site,
+  fly-brandx.site, and drive-brandx.site.
 tags:
 authors:
-  - merewood
+  - rowan_m
   - mihajlija
 ---
 
@@ -53,13 +55,13 @@ However, if you're on ``my-blog.site`` which embeds an iframe player for
 ``video.site``, when the request is made from `my-blog.site` to `video.site`
 that's cross-site context and the ``theme`` cookie is _third-party_.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zHa3CTG1l3lYA6C3P433.png", alt="ALT_TEXT_HERE", width="800", height="514" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zHa3CTG1l3lYA6C3P433.png", alt="", width="800", height="514" %}
 
 Cookie inclusion is determined by the cookie's ``SameSite`` attribute:
 
 +   [**Same-site
     context**](https://web.dev/same-site-same-origin/#same-site-cross-site) with
-    ``SameSite=Lax``, ``Strict``, or ``None``→ **first-party**
+    ``SameSite=Lax``, ``Strict``, or ``None`` → **first-party**
 +   **Cross-site context** with ``SameSite=None`` → **third-party**
 
 However, this isn't always so clear cut. Imagine ``brandx.site`` is a travel
@@ -74,12 +76,13 @@ Request Forgery (CSRF) protection. If ``evil.site`` includes a request to
 
 The cookie is cross-site, but all those sites are owned and operated by the same
 organisation. Visitors also understand it's the same organisation and want the
-same session, in other words—a shared identity, across them. With First-Party
-Sets there's a route to define the situations where a **cross-site context** is
-still **first-party**. The cookie can be included within the first-party set
-and excluded in third-party contexts.
+same session, in other words—a shared identity, across them. 
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/oNCKndk5TJyiqcPgvv5E.png", alt="ALT_TEXT_HERE", width="400", height="362" %}
+With First-Party Sets there's a route to define the situations where a
+**cross-site context** is still **first-party**. The cookie can be included
+within the first-party set and excluded in third-party contexts.
+
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/oNCKndk5TJyiqcPgvv5E.png", alt="", width="400", height="362" %}
 
 ## First-Party Sets policy
 
@@ -94,13 +97,13 @@ the various Privacy Sandbox proposals is based on the concept of partitioning
 identity to prevent cross-site tracking—drawing a boundary between sites that
 limits access to any information that can be used to identify users. 
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bTGzUkmiyY1d0ZssO8Jq.png", alt="ALT_TEXT_HERE", width="800", height="305" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bTGzUkmiyY1d0ZssO8Jq.png", alt="", width="800", height="305" %}
 
 While the default option is to partition by site, which solves many first-party
 use cases, the ``brandx.site`` example shows that a first-party can be larger
 than just one site.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/mGJiTbDhAYa9ZpChapX3.png", alt="ALT_TEXT_HERE", width="400", height="356" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/mGJiTbDhAYa9ZpChapX3.png", alt="", width="400", height="356" %}
 
 An important part of the First-Party Sets proposal is to ensure that policy
 across browsers prevents abuse or misuse. For example, First-Party Sets must not
@@ -114,9 +117,11 @@ to submit their proposed group of domains to a public tracker (such as a
 dedicated GitHub repository) along with information needed to satisfy browser
 policy.  
 
+{% Aside %}
 The acceptance process for a new first-party set is under discussion with the
 W3C and one of the considered options is for verification to be handled by an
 independent entity, not a browser company.   
+{% endAside %}
 
 Once the first-party set assertion has been verified as per policy, browsers may
 then fetch lists of sets via an update process.    
@@ -144,8 +149,8 @@ process is still under discussion.
 A first-party set is _not_ meant to be an exhaustive list of
 sites that belong to the same organization. You _only_ need to create a set
 between sites if you explicitly need a cross-site cookie allowed across them.
-Make sure you check out "What use cases are right for the First-Party Sets
-Origin Trial?" below.   
+Make sure you check out [What use cases are right for the First-Party Sets
+Origin Trial?](#usecases) below.   
 {% endAside %}
 
 To declare a first-party set, static JSON resources that list members and owners
@@ -211,7 +216,7 @@ Then when the visitor is on ``fly-brandx.site`` and a request goes to
 If some other site which is not a part of the first-party set, for example
 `hotel.xyz`, sends a request to `brandx.site`, the cookie would not be included.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bmNqQh85YU16Bw2YEi5L.png", alt="ALT_TEXT_HERE", width="800", height="483" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bmNqQh85YU16Bw2YEi5L.png", alt="", width="800", height="483" %}
 
 Until `SameParty` is widely supported, use `SameSite` attribute along with it to
 define fallback behavior for cookies. You can think of the ``SameParty``
@@ -227,7 +232,7 @@ attribute as giving you a setting between ``SameSite=Lax`` and
 
 There are some additional requirements:
 
-+   ``SameParty`` cookies **must** include ``Secure`
++   ``SameParty`` cookies **must** include ``Secure``
 +   ``SameParty`` cookies **must not** include ``SameSite=Strict``
 
 ``Secure`` is mandated as this is still cross-site and you should mitigate those
@@ -246,7 +251,7 @@ allows them to to set or send cookies in same-party, cross-site contexts—not
 that cookies are directly shared.
 {% endAside %}
 
-## What use cases are right for First-Party Sets?
+## What use cases are right for First-Party Sets? {: #usecases }
 
 First-Party Sets are a good match for cases when an organisation needs a form of
 shared identity across different top-level sites. Shared identity in this case
@@ -254,7 +259,7 @@ means anything from a full single sign-on solution to just needing a shared
 preference across sites.  
 
 {% Aside %}
-ou can identify possible candidates for these use cases because they will
+You can identify possible candidates for these use cases because they will
 be instances where you have already marked a cookie as ``SameSite=None`` even
 though it's only for cross-site contexts where you own all the sites involved.  
 {% endAside %}
@@ -304,13 +309,15 @@ Origin trials are Chrome's way of enabling external developers to test
 early proposals in real-world scenarios to provide the feedback needed to evolve
 and iterate towards something that meets the needs of the web platform. Learn
 more in [Getting started with Chrome's origin
-trials](https://web.dev/origin-trials/).
+trials](/blog/origin-trials/).
 {% endAside %}
 
 ## How to update cookies for the origin trial
 
 If you are joining the origin trial and testing the `SameParty` attribute on
 your cookies, here are two patterns to consider.  
+
+### Option 1
 
 First, where you have cookies that you have labelled as `SameSite=None` but you
 would like to restrict to first-party contexts, you can add the `SameParty`
@@ -327,6 +334,8 @@ cross-site as usual. Consider this as a progressive enhancement approach.
 **After:**  
 `set-cookie: cname=cval; SameSite=None; Secure; SameParty`  
 
+### Option 2
+
 The second option is more work, but allows you to fully separate the origin
 trial from existing functionality and specifically allows testing of the
 `SameSite=Lax; SameParty` combination.  
@@ -335,8 +344,11 @@ trial from existing functionality and specifically allows testing of the
 `set-cookie: cname=cval; SameSite=None; Secure`  
 
 **After:**  
-`set-cookie: cname=cval; SameSite=None; Secure  
-set-cookie: cname-fps=cval; SameSite=Lax; Secure; SameParty`  
+
+```text
+set-cookie: cname=cval; SameSite=None; Secure
+set-cookie: cname-fps=cval; SameSite=Lax; Secure; SameParty  
+```
 
 When checking for the cookie on incoming requests, you should only expect to see
 the `cname-fps` cookie on a cross-site request if the sites involved are in the
@@ -371,4 +383,3 @@ a set:
     one for a First-Party Set as there's a clear difference in organizations.
     Early proposals like [WICG/WebID](https://github.com/WICG/WebID) are
     exploring ways to enable these use cases. 
-    
