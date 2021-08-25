@@ -6,7 +6,7 @@ description: >
   the same entity to be treated as first-party in situations where first party and
   third party are otherwise treated differently. 
 date: 2021-08-24
-thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JNtmMZl7o44LwUk7mE5G.png'
+thumbnail: 'image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/7MduSVLFftNemfmft8Pc.jpg'
 alt: A diagram showing First-Party Sets. One set contains domains example.com,
   example.rs, and example.co.uk. The other set containts brandx.site,
   fly-brandx.site, and drive-brandx.site.
