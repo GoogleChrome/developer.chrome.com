@@ -77,6 +77,12 @@ this breakage period may be skipped
 [upon request](https://sites.google.com/a/chromium.org/dev/blink/launching-features#sites-canvas-main-content:~:text=If%20you%20wish%20to%20skip%20the,Ship%20imply%20approval%20of%20the%20request.).
 {% endAside %}
 
+## View origin trials information in DevTools {: #devtools}
+
+Available from Chrome 94. You can now get information about a site's origin trials in DevTools under the **Application** panel.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VICXjdGL5Rz09TAPg1sW.png", alt="Origin trials in the Frame details view", width="800", height="465" %}
+
 ## Find out more
 
 -  [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
@@ -85,6 +91,7 @@ this breakage period may be skipped
 -  [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
 -  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
 -  [What are third-party origin trials?](/blog/third-party-origin-trials/)
+-  [View origin trials information in DevTools](/blog/new-in-devtools-94/#origin-trials)
 ---
 
 Photo by [Louis Reed
