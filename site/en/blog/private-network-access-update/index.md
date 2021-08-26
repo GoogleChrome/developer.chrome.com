@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: "Private Network Access update: Introducing Deprecation Trial"
+title: "Private Network Access update: Introducing a deprecation trial"
 authors:
   - titouan
 description: Chrome is deprecating access to private network endpoints from non-secure public websites in Chrome 94 as part of the Private Network Access specification. Read on for recommended actions.
@@ -14,7 +14,7 @@ tags:
 
 **Updates**
 
-- **August 25, 2021**: Updated timeline announcement and introduction of Deprecation Trial.
+- **August 25, 2021**: Updated timeline announcement and introduction of a deprecation trial.
 - **June 23, 2021**: Based on the feedback, the timeline for
   blocking private network requests initiated from non-secure contexts has been changed.
   Such requests will be blocked in Chrome 93 instead of 92.
@@ -32,14 +32,14 @@ Chrome will introduce the following changes:
 
 * Blocking requests to private networks from insecure public websites starting in
   Chrome 94.
-* Introducing a [Deprecation Trial](#whats-deprecation-trial) which will end in Chrome
+* Introducing a [deprecation trial](#whats-deprecation-trial) which will end in Chrome
   101. It will allow developers to request a time extension for chosen origins,
-  which will not be affected during the Deprecation Trial.
+  which will not be affected during the deprecation trial.
 * Introducing a Chrome enterprise policy which will allow managed Chrome
   deployments to bypass the deprecation permanently. Available in Chrome 92.
 
 If you need more time to mitigate the impact of the deprecation register for the
-Deprecation Trial.
+deprecation trial.
 
 If you have administrative control over your users via Chrome Enterprise,
 you can re-enable the feature using Chrome enterprise policy.
@@ -68,11 +68,11 @@ strategies:
   accompanying trial are deferred to Chrome 94. In addition, *private* websites
   are no longer affected by the deprecation.
 * August 2021: Chrome 94 rolls out to Beta. Web developers can start signing up
-  for the Deprecation Trial.
+  for the deprecation trial.
 * September 2021: Chrome 94 rolls out to Stable. Web developers should have signed
-  up for the Deprecation Trial and deployed trial tokens to production.
+  up for the deprecation trial and deployed trial tokens to production.
 * April 2022: Chrome 102 rolls out to Beta.
-* May 2022: Chrome 102 rolls out to Stable. The Deprecation Trial ends. Chrome
+* May 2022: Chrome 102 rolls out to Stable. The deprecation trial ends. Chrome
   blocks all private network requests from public, non-secure contexts.
 
 ## What is Private Network Access 
@@ -102,17 +102,17 @@ Access (CORS-RFC1918). ", width="800", height="512" %}
 Learn more at [Feedback wanted: CORS for private networks
 (RFC1918)](https://web.dev/cors-rfc1918-feedback/).
 
-## What's a Deprecation Trial {: #whats-deprecation-trial}
+## What's a deprecation trial {: #whats-deprecation-trial}
 
-Deprecation Trials (formerly known as Reverse Origin Trials) are a form of
-Origin Trials used to ease the deprecation of web features. Deprecation Trials
+Deprecation trials (formerly known as reverse origin trials) are a form of
+origin trials used to ease the deprecation of web features. Deprecation trials
 allow Chrome to deprecate certain web features and prevent websites from forming
 new dependencies on them, while at the same time giving current dependent
 websites extra time to migrate off of them.
 
-During a Deprecation Trial, the deprecated features are unavailable to all
+During a deprecation trial, the deprecated features are unavailable to all
 websites by default. Developers who still need to use the affected features must
-sign up for the Deprecation Trial and obtain tokens for specified web origins,
+sign up for the deprecation trial and obtain tokens for specified web origins,
 then modify their websites to serve those tokens in HTTP headers or meta tags
 (except in this case). If a website serves valid tokens matching their origin,
 Chrome will allow the use of the deprecated feature for a limited amount of
@@ -120,8 +120,8 @@ time.
 
 For more information, check out [Getting started with Chrome's origin
 trials](https://developer.chrome.com/blog/origin-trials/) and the [web developer
-guide to Origin
-Trials](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
+guide to origin
+trials](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 for instructions.
 
 ## What's changing in Chrome
@@ -134,7 +134,7 @@ to the private network.
 This was previously planned for Chrome 92, hence deprecation messages might
 still mention the earlier milestone.
 
-This deprecation is accompanied by a Deprecation Trial, allowing web developers
+This deprecation is accompanied by a deprecation trial, allowing web developers
 whose websites make use of the deprecated feature to continue using it until
 Chrome 102 by registering for tokens. See [below](#register-deprecation-trial)
 for instructions on how to register and enable the trial on your website.
@@ -146,19 +146,19 @@ settings, to avoid breakage.
 
 ### Chrome 102
 
-The Deprecation Trial ends. All websites must be migrated off of the deprecated
+The deprecation trial ends. All websites must be migrated off of the deprecated
 feature, or their clients enrolled in Chrome Enterprise to continue disabling
 the feature.
 
 ## Recommended developer actions
 
 The first step for affected websites is most likely to buy some time until a
-proper fix can be deployed: either by registering for the [Deprecation
-Trial](https://dev.chromium.org/blink/launching-features#:~:text=Step%203%20(Optional)%3A%20Deprecation%20Trial),
+proper fix can be deployed: either by registering for the [deprecation
+trial](https://dev.chromium.org/blink/launching-features#:~:text=Step%203%20(Optional)%3A%20Deprecation%20Trial),
 or by using enterprise policies. Then, the recommended course of action varies
 depending on the circumstances of each affected website.
 
-### Register for the Deprecation Trial {: #register-deprecation-trial}
+### Register for the deprecation trial {: #register-deprecation-trial}
 
 First, register for the "Private Network Access from non-secure contexts" trial
 using [the web developers
@@ -176,8 +176,8 @@ only parsed from the response body after subresource requests might have been
 issued. This presents a challenge for websites not in control of response
 headers, such as github.io static websites served by a third party.
 
-For more details, see the [web developer guide to Origin
-Trials](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md).
+For more details, see the [Web developer guide to origin
+trials](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md).
 
 ### Enable enterprise policies {: #enterprise-policies}
 
@@ -268,8 +268,8 @@ platform moves toward encouraging HTTPS use in stronger ways over time.
 Regardless of Private Network Access, this would likely be a wise investment
 anyway.
 
-We expect WebTransport over HTTP/3 to ship in Chrome 96 (it has begun an [Origin
-Trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/aaLFxzw5zL4/m/H3V_l-qlAgAJ))
+We expect WebTransport over HTTP/3 to ship in Chrome 96 (it has begun an [origin
+trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/aaLFxzw5zL4/m/H3V_l-qlAgAJ))
 with mitigations to protect against key sharing and other substandard security
 practices, including:
 
@@ -278,7 +278,7 @@ practices, including:
   to abuse.
 
 We will not ship the secure context restriction until at least two milestones
-after WebTransport is fully rolled out. The Deprecation Trial will be extended if
+after WebTransport is fully rolled out. The deprecation trial will be extended if
 need be.
 
 #### Reverse embedding {: #reverse-embedding}
@@ -300,7 +300,9 @@ doesn't have access to some of the more powerful features of the web.
 
 ## Plans for the future
 
-Restricting private network requests to secure contexts is only the first step in launching Private Network Access. Chrome is working towards implementing the rest of the specification in the coming months. Stay tuned for updates!
+Restricting private network requests to secure contexts is only the first step in
+launching Private Network Access. Chrome is working towards implementing the rest of
+the specification in the coming months. Stay tuned for updates!
 
 ### Restricting localhost access from private websites
 
@@ -308,7 +310,7 @@ The changes in Chrome 94 only affect *public* websites accessing private IP addr
 or localhost. The Private Network Access specification also classifies requests from
 *private* websites to localhost as problematic. Chrome will eventually deprecate these
 too. This presents a slightly different set of challenges however, as many private
-websites do not have domain names, complicating the use of Deprecation Trial tokens.
+websites do not have domain names, complicating the use of deprecation trial tokens.
 
 ### CORS preflight requests 
 
