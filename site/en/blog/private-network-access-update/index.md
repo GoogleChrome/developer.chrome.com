@@ -245,7 +245,6 @@ This solution does not require control over your users' DNS resolution. It does
 require that the target server run a minimal WebTransport server (HTTP/3 server
 with some modifications).
 
-
 You can bypass the lack of a valid TLS certificate signed by a trusted CA by
 using [WebTransport](https://w3c.github.io/webtransport) and its [certificate
 pinning
