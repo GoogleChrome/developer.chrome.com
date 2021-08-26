@@ -5,7 +5,7 @@ authors:
   - titouan
 description: Chrome is deprecating access to private network endpoints from non-secure public websites in Chrome 94 as part of the Private Network Access specification. Read on for recommended actions.
 date: 2021-07-29
-updated: 2021-07-29
+updated: 2021-08-25
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A private sign in German
 ---
