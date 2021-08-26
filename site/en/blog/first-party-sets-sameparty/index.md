@@ -387,5 +387,5 @@ a set:
     things like OAuth or OpenId connect often rely on third-party cookies for a
     smoother sign-in experience for users. It's a valid use case, but it's not
     suitable for First-Party Sets as there's a clear difference in organizations.
-    Early proposals like [WICG/WebID](https://github.com/WICG/WebID) are
+    Early proposals like [WebID](https://github.com/WICG/WebID) are
     exploring ways to enable these use cases. 
