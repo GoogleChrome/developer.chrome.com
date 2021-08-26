@@ -16,7 +16,7 @@ There are two key ways in which you can update your item:
 - [Upgrade the item][upgrade-item], publishing a new version of the item on the Chrome Web Store and pushing it
   to the user base.
 - [Update the % rollout][update-rollout] for items that were previously published with partial rollout.
-  (Available to items with over 10,000 7-day active users)
+  (Available to items with over 10,000 seven-day active users)
 
 These update options are described in the following sections.
 
@@ -35,19 +35,18 @@ previous versions. Publishing to a different channel may require special steps, 
 
 {% endAside %}
 
-In the [Distribution tab][visibility] there are several ways to publish to a different channel:
+Use the [Distribution tab][visibility] to publish to a different channel.
 
 - To move an item from testing to production, change your visibility from Private to Public or to
   Unlisted and then republish.
 - To move a published item back to private (e.g. from production back to testing), you must
   [unpublish][unpublish], change the visibility to Private, and then republish. The unpublishing step is
   necessary to move an item "backwards" from production to testing.
-- You can create a separate Chrome Web Store item for your [testing program][visibility-private]— this is an option if you
-  want to continue a testing program in parallel with a published version. 
+- To continue a testing program in parallel with a published version, you can create a separate Chrome Web Store item for your [testing program][visibility-private].
 
 {% Aside 'gotchas' %}
 
-The CWS allows the publication of testing and production versions. Make sure you [follow these guidelines][test-production-extension] 
+The Chrome Web Store allows the publication of testing and production versions. Make sure you [follow these guidelines][test-production-extension] 
 to avoid
 being flagged as Repetitive Content.
 
@@ -56,7 +55,7 @@ being flagged as Repetitive Content.
 ### Upload an updated zip file {: #uploading-an-updated-zip-file }
 
 If you're changing any code, the manifest, or other assets packaged with your extension, you must
-make a new zip file and upload the new package. Make sure you increase the **version number**. Each
+make a new zip file and upload the new package. Make sure you increment the **version number**. Each
 new version must have a larger version number than the previous version.
 
 In the developer dashboard entry for your item, on
@@ -76,7 +75,7 @@ update this information on the same tabs used for creating a new item:
   Store.
 - The [Privacy][cws-privacy] tab is where you include declarations about how your item uses privacy and
   security related features.
-- The [Payment and Distribution][cws-distribution] tab lets you declare in app-purchases and control which countries will list your item and
+- The [Payment and Distribution][cws-distribution] tab lets you declare in-app purchases and control which countries will list your item and
   which set of users will see it.
 
 ### Set partial rollout percentage {: #partial-rollout }
@@ -93,13 +92,13 @@ minimal impact.
 
 {% Aside %}
 
-This is only available for new versions of an **already-published** item with over **10,000 7-day
+This is only available for new versions of an **already-published** item with over **10,000 seven-day
 active users**
 
 {% endAside %}
 
 Once an item with partial rollout has been published, you can later [increase the percent rollout][update-rollout] 
-without needing to resubmit the item for review, until you eventually reach 100% of
+without resubmitting the item for review, until you eventually reach 100% of
 users.
 
 ### Submit the update {: #submitting-the-update }
@@ -110,7 +109,7 @@ when the item is later published will these users be affected.
 
 {% Aside 'gotchas' %}
 
-When an update requires additional permissions, end users will be prompted to accept them or disable
+When an update requires additional permissions, users will be prompted to accept them or disable
 the extension.
 
 {% endAside %}
