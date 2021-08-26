@@ -12,7 +12,7 @@ alt: A private sign in German
 
 **Updates**
 
-- **July 29, 2021**: Updated timeline announcement and introduction of Deprecation Trial.
+- **August 25, 2021**: Updated timeline announcement and introduction of Deprecation Trial.
 - **June 23, 2021**: Based on the feedback, the timeline for
   blocking private network requests initiated from non-secure contexts has been changed.
   Such requests will be blocked in Chrome 93 instead of 92.
