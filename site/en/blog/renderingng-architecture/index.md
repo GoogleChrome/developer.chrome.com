@@ -7,6 +7,8 @@ description: >
 date: 2021-07-26
 authors:
   - chrishtr
+tags:
+  - rendering
 ---
 
 
