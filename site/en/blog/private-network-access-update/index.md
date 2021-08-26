@@ -142,7 +142,7 @@ disable the deprecation either entirely or on specific origins, indefinitely.
 This allows managed Chrome installations, for example, those in corporate
 settings, to avoid breakage.
 
-### Chrome 99
+### Chrome 102
 
 The Deprecation Trial ends. All websites must be migrated off of the deprecated
 feature, or their clients enrolled in Chrome Enterprise to continue disabling
