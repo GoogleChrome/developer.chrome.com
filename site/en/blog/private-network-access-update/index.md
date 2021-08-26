@@ -1,61 +1,91 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: Private Network Access (CORS-RFC1918) updates
+title: "Private Network Access update: Introducing a deprecation trial"
 authors:
-  - agektmr
   - titouan
-description: Chrome has some updates to share about the standardization of the Private Network Access - formerly known as CORS-RFC1918 - plans to restrict private network resource accesses, and how your websites can align with those changes.
-date: 2021-03-11
-updated: 2021-06-23
+description: Chrome is deprecating access to private network endpoints from non-secure public websites in Chrome 94 as part of the Private Network Access specification. Read on for recommended actions.
+date: 2021-08-26
+updated: 2021-08-26
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A private sign in German
+tags:
+  - chrome-94
 ---
 
 **Updates**
 
-- **June 23, 2021**: Based on the feedback, the timeline for
-  blocking private network requests initiated from non-secure contexts has been changed.
-  Such requests will be blocked in Chrome 93 instead of 92.
+- **August 25, 2021**: Updated timeline announcement and introduction of a deprecation trial.
 
-Last November, [we asked for feedback about the proposed web platform
-specification called CORS-RFC1918](https://web.dev/cors-rfc1918-feedback/) which
-restricts the ability of public websites to make requests to servers in more
-private networks. Thank you all who have provided feedback.
+Chrome is deprecating access to private network endpoints from non-secure
+websites as part of the [Private Network
+Access](https://wicg.github.io/private-network-access/) specification. The aim
+is to protect users from cross-site request forgery (CSRF) attacks targeting
+routers and other devices on private networks. These [attacks have affected
+hundreds of thousands of
+users](https://securityaffairs.co/wordpress/22743/cyber-crime/soho-pharming-attack.html),
+allowing attackers to redirect them to malicious servers.
 
-We have some updates to share about the standardization, Chrome's plans to
-restrict private network resource accesses, and how your websites can align with
-those changes.
+Chrome will introduce the following changes:
 
-* CORS-RFC1918 is now renamed to **Private Network Access**, a name that we
-  believe conveys a clearer intent.
-* Chrome will introduce the following changes in Chrome 90:
-    * Requests to the private network from a non-secure context will be
-      deprecated.
-    * Deprecation reports will be sent to websites through the [Reporting
-      API](https://developers.google.com/web/updates/2018/09/reportingapi).
-    * DevTools warnings and issues will be logged when requests are initiated
-      from non-secure contexts.
-* Recommendations for mitigating the impact of the changes:
-    * Receive reports when there are unexpected non-secure private network
-      requests.
-    * Avoid crossing address spaces.  
-    * Serve embedder page and embedded content over HTTPS.
+* Blocking requests to private networks from insecure public websites starting in
+  Chrome 94.
+* Introducing a [deprecation trial](#whats-deprecation-trial) which will end in Chrome
+  101. It will allow developers to request a time extension for chosen origins,
+  which will not be affected during the deprecation trial.
+* Introducing a Chrome enterprise policy which will allow managed Chrome
+  deployments to bypass the deprecation permanently. Available in Chrome 92.
 
-## What is Private Network Access
+If you need more time to mitigate the impact of the deprecation register for the
+deprecation trial.
+
+If you have administrative control over your users via Chrome Enterprise,
+you can re-enable the feature using Chrome enterprise policy.
+
+To mitigate the impact of the new restrictions, use one of the following
+strategies:
+
+* [Upgrade your website to HTTPS, and if necessary the target
+  server](#both-ends-https).
+* [Upgrade your website to HTTPS and use WebTransport](#web-transport).
+* [Reverse the embedding relationship](#reverse-embedding).
+
+## Timeline
+
+* November 2020: [Call for feedback](https://web.dev/cors-rfc1918-feedback/)
+  about the upcoming changes.
+* March 2021: After reviewing feedback and doing outreach, upcoming changes are
+  announced. The specification is renamed from CORS-RFC1918 to Private Network
+  Access.
+* April 2021: Chrome 90 rolls out to Stable, surfacing deprecation warnings.
+* June 2021: Chrome 92 rolls out to Beta, forbidding private network requests
+  from insecure contexts. After feedback from developers requesting more time to
+  adjust, the deprecation is deferred to Chrome 93, to be accompanied with a
+  Deprecation Trial.
+* July 2021: After further feedback from developers, the deprecation and the
+  accompanying trial are deferred to Chrome 94. In addition, *private* websites
+  are no longer affected by the deprecation.
+* August 2021: Chrome 94 rolls out to Beta. Web developers can start signing up
+  for the deprecation trial.
+* September 2021: Chrome 94 rolls out to Stable. Web developers should have signed
+  up for the deprecation trial and deployed trial tokens to production.
+* April 2022: Chrome 102 rolls out to Beta.
+* May 2022: Chrome 102 rolls out to Stable. The deprecation trial ends. Chrome
+  blocks all private network requests from public, non-secure contexts.
+
+## What is Private Network Access 
 
 [Private Network Access](https://wicg.github.io/private-network-access/)
 (formerly known as CORS-RFC1918) restricts the ability of websites to send
-requests to servers on the private network. According to the specification, such
-requests are only allowed from secure contexts. In addition, the specification
-extends the Cross-Origin Resource Sharing (CORS) protocol so that websites now
-have to explicitly request a grant from servers on the private network before
-being allowed to send arbitrary requests.
+requests to servers on private networks. It allows such requests only from
+secure contexts. The specification also extends the Cross-Origin Resource
+Sharing (CORS) protocol so that websites now have to explicitly request a grant
+from servers on private networks before being allowed to send arbitrary
+requests.
 
-**Private network requests** are requests whose target server's IP address is
-more private than that from which the request initiator was fetched. For
-example, a request from a public website (`https://example.com`) to a private
-website (`http://router.local`), or a request from a private website to
-localhost.
+*Private network requests* are requests whose target server's IP address is more
+private than that from which the request initiator was fetched. For example, a
+request from a public website (`https://example.com`) to a private website
+(`http://router.local`), or a request from a private website to localhost.
 
 <figure>
 {% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/nSGfU9xMJxIy6lMjJiMx.png",
@@ -69,172 +99,224 @@ Access (CORS-RFC1918). ", width="800", height="512" %}
 Learn more at [Feedback wanted: CORS for private networks
 (RFC1918)](https://web.dev/cors-rfc1918-feedback/).
 
+## What's a deprecation trial {: #whats-deprecation-trial}
+
+Deprecation trials (formerly known as reverse origin trials) are a form of
+origin trials used to ease the deprecation of web features. Deprecation trials
+allow Chrome to deprecate certain web features and prevent websites from forming
+new dependencies on them, while at the same time giving current dependent
+websites extra time to migrate off of them.
+
+During a deprecation trial, the deprecated features are unavailable to all
+websites by default. Developers who still need to use the affected features must
+sign up for the deprecation trial and obtain tokens for specified web origins,
+then modify their websites to serve those tokens in HTTP headers or meta tags
+(except in this case). If a website serves valid tokens matching their origin,
+Chrome will allow the use of the deprecated feature for a limited amount of
+time.
+
+For more information, check out [Getting started with Chrome's origin
+trials](https://developer.chrome.com/blog/origin-trials/) and the [web developer
+guide to origin
+trials](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
+for instructions.
+
 ## What's changing in Chrome
 
-### Chrome 90
+### Chrome 94
 
-#### Requests to the private network from non-secure contexts are deprecated
+Starting in Chrome 94, public non-secure contexts (broadly, websites that are not
+delivered over HTTPS or from a private IP address) are forbidden from making requests
+to the private network.
+This was previously planned for Chrome 92, hence deprecation messages might
+still mention the earlier milestone.
 
-In the Private Network Access specification, requests to the private network
-from public websites are allowed only if the initiating context is secure. A
-document is considered secure, if its contents were served over
-[HTTPS](https://web.dev/why-https-matters/) and all its ancestor documents were
-too (no [mixed content](https://web.dev/what-is-mixed-content/)).
+This deprecation is accompanied by a deprecation trial, allowing web developers
+whose websites make use of the deprecated feature to continue using it until
+Chrome 102 by registering for tokens. See [below](#register-deprecation-trial)
+for instructions on how to register and enable the trial on your website.
 
-In Chrome 90 requests to the private network initiated from non-secure contexts
-are therefore officially marked as deprecated. Such requests will be blocked
-starting Chrome 93. This is a first step towards launching the full
-specification.
+A pair of [Chrome enterprise policies](#enterprise-policies) can be leveraged to
+disable the deprecation either entirely or on specific origins, indefinitely.
+This allows managed Chrome installations, for example, those in corporate
+settings, to avoid breakage.
 
-#### Deprecation reports are filed via Reporting API
+### Chrome 102
 
-[The Reporting
-API](https://developers.google.com/web/updates/2018/09/reportingapi) is a
-standard logging functionality for the web. By setting up an endpoint, websites
-can instruct the browser to send reports to the endpoint.
-
-[Deprecation Reports](https://wicg.github.io/deprecation-reporting/) are one of
-the report types the Reporting API supports. This allows websites to receive
-reports when they use deprecated functionality. This helps the websites keep
-track of what's going to be unavailable in the future.
-
-Starting in Chrome 90, Chrome will send a deprecation report to a website's
-reporting endpoint every time the website initiates a private network request
-from a non-secure context.
-
-Deprecation reports are [POSTed as
-JSON](https://wicg.github.io/deprecation-reporting/#sample-reports) to websites'
-reporting endpoints, as configured by the `Reporting-To` header.
-
-See [Receive reports when there are unexpected non-secure private network
-requests](#receive-reports) to learn how to set up a reporting endpoint.
-
-#### DevTools warnings and issues logged when requests are initiated from non-secure contexts
-
-Starting in Chrome 90, Chrome will log a deprecation warning to the console and
-surface issues in DevTools every time a website initiates a private network
-request from a non-secure context. These warnings look like the following:
-
-<figure>
-{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/CJeTlpkOuJMc4ju8Dg8F.png", alt="A deprecation warning is displayed in the DevTools console when requests are initiated from non-secure contexts.", width="800", height="625" %}
-  <figcaption>
-    A deprecation warning is displayed in the DevTools console when requests are initiated from non-secure contexts.
-  </figcaption>
-</figure>
-
-<figure>
-{% Img src="image/YLflGBAPWecgtKJLqCJHSzHqe2J2/tqJcP5z0Mk7JHIFu3y0f.png", alt="An issue is displayed in the DevTools Issues panel when requests are initiated from non-secure contexts.", width="800", height="553" %}
-  <figcaption>
-    An issue is displayed in the DevTools Issues panel when requests are initiated from non-secure contexts.
-  </figcaption>
-</figure>
-
-### Chrome 93 (advance notice)
-
-Chrome is giving web developers two milestones lead time to address the use of
-this deprecated feature in production before enforcement is enabled.
-
-Starting in Chrome 93, private network requests initiated from non-secure
-contexts will be blocked by Chrome. No request will be sent. Instead, an error
-message will be logged in the DevTools console. For security reasons, this
-manifests as a TypeError for fetch requests from Javascript.
+The deprecation trial ends. All websites must be migrated off of the deprecated
+feature, or their clients enrolled in Chrome Enterprise to continue disabling
+the feature.
 
 ## Recommended developer actions
 
-If you know you have a website that fetches subresources from a private network,
-here are instructions on how you can mitigate the impact of the upcoming
-deprecation.
+The first step for affected websites is most likely to buy some time until a
+proper fix can be deployed: either by registering for the [deprecation
+trial](https://dev.chromium.org/blink/launching-features#:~:text=Step%203%20(Optional)%3A%20Deprecation%20Trial),
+or by using enterprise policies. Then, the recommended course of action varies
+depending on the circumstances of each affected website.
 
-### Receive reports when there are unexpected non-secure private network requests {: #receive-reports}
+### Register for the deprecation trial {: #register-deprecation-trial}
 
-We highly recommend that you set up a reporting endpoint server and send a
-`Reporting-To` header on your website's documents to keep track of unexpected
-non-secure private network requests. This will also serve to warn you of other
-upcoming deprecations and errors your clients encounter in the wild.
+First, register for the "Private Network Access from non-secure contexts" trial
+using [the web developers
+console](https://developer.chrome.com/origintrials/#/view_trial/4081387162304512001),
+and obtain a trial token for each affected origin. Then configure your web
+servers to attach the origin-specific `Origin-Trial: $token` header on
+responses. Note that this header need only be set on main resource and
+navigation responses, and then only when the resulting document will make use of
+the deprecated feature. It is useless (though harmless) to attach this header to
+subresource responses.
 
-To receive reports, there are a couple of known SaaS solutions.
+Since this trial must be enabled or disabled before a document is allowed to
+make any requests, it *cannot* be enabled through a `<meta>` tag. Such tags are
+only parsed from the response body after subresource requests might have been
+issued. This presents a challenge for websites not in control of response
+headers, such as github.io static websites served by a third party.
 
-* [https://report-uri.com](https://report-uri.com)
-* [https://uriports.com](https://uriports.com)
+For more details, see the [Web developer guide to origin
+trials](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md).
 
-{% Aside %}
-We are not aware of any open source solutions that can accumulate reports in a
-database. If you know any other solutions, especially open source ones, [let us
-know](https://github.com/GoogleChrome/web.dev/issues) so we can add them to the
-list.
-{% endAside %}
+### Enable enterprise policies {: #enterprise-policies}
 
-Once the endpoint is set up, send the endpoint URL with a `Reporting-To`
-header with the top-level document.
+If you have administrative control over your users via Chrome Enterprise, then
+you can re-enable the deprecated feature using either of the following
+enterprise policies:
 
-```http
-Reporting-Endpoints: default="https://reporting-endpoint.glitch.me/post"
-Report-To: { group: 'default', max_age: 86400, endpoints: [{ url: 'https://reporting-endpoint.glitch.me/post'}]}
-```
+* [InsecurePrivateNetworkRequestsAllowed](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowed)
+* [InsecurePrivateNetworkRequestsAllowedForUrls](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowedForUrls)
 
-{% Aside %}
-The Reporting API is undergoing transition to [a new
-version](https://w3c.github.io/reporting/) (from `Reporting-To` to
-`Reporting-Endpoint`). Chrome is planning to release it soon, but will leave the
-older API in place for some time. Firefox is also [considering the new
-API](https://bugzilla.mozilla.org/show_bug.cgi?id=1620573). You may want to use
-both APIs during the transition.
-{% endAside %}
+### Accessing localhost
 
-### Avoid crossing address spaces
+If your website needs to issue requests to localhost, then you just need to
+[upgrade your website to HTTPS](https://web.dev/why-https-matters/).
 
-The simplest way around the issues caused by private network requests is to
-avoid straddling the boundary between public and private IP addresses. There are
-two ways to achieve this.
+Requests targeting `http://localhost` (or `http://127.*.*.*`, `http://[::1]`)
+are not blocked by Mixed Content, even when issued from secure contexts.
 
-#### Serve the subresources from a more public address space
+Note that the WebKit engine and browsers based on it (most notably, Safari)
+deviate from the W3C Mixed Content specification here and [forbid these requests
+as Mixed Content](https://bugs.webkit.org/show_bug.cgi?id=171934). They also do
+not implement Private Network Access, so websites might wish to redirect clients
+using such browsers to a plaintext HTTP version of the website, which would
+still be allowed by such browsers to make requests to localhost.
 
-If the embedder website is served from a public IP address, serve the
-subresources from a public IP address.
+### Accessing private IP addresses
 
-If the embedder website is served from a private IP address, serve the
-subresources from a private IP address instead of localhost. This is relatively
-easy to do, since once can use the private IP address pointing to the current
-host.
+If your website needs to issue requests to a target server on a private IP
+address, then simply upgrading the initiator website to HTTPS does not work.
+Mixed Content prevents secure contexts from making requests over plaintext HTTP,
+so the newly-secured website will still find itself unable to make the requests.
+There are a few ways to solve this issue:
 
-#### Serve the embedder website from a less public address space
+* Upgrade both ends to HTTPS.
+* Use WebTransport to securely connect to the target server.
+* Reverse the embedding relationship.
 
-If the subresource is served from a private IP address, serve the embedder
-website from a private IP address as well.
+#### Upgrade both ends to HTTPS {: #both-ends-https}
 
-If the subresource is served from localhost, serve the embedder website from
-localhost as well.
+This solution requires control over users' DNS resolution, such as might be the
+case in intranet contexts, or if users obtain the addresses of their name
+servers from a DHCP server in your control. It also requires that you possess a
+public domain name.
 
-### Serve embedder page and embedded content over HTTPS
+The main problem with serving private websites over HTTPS is that public key
+infrastructure certificate authorities (PKI CA) only provide TLS certificates to
+websites with public domain names. To work around this:
 
-Another straightforward way of ensuring that your website can continue
-performing the same fetches is to issue the fetches from secure contexts. This
-boils down to serving your website over HTTPS, as well as all the ancestor
-frames of the initiator.
+1. Register a public domain name (for example, `intranet.example`) and publish
+   DNS records pointing that domain name to a public server of your choosing. 
+2. Obtain a TLS certificate for `intranet.example`. 
+3. Inside your private network, configure DNS to resolve `intranet.example` to
+   the target server's private IP address. 
+4. Configure your private server to use the TLS certificate for
+   `intranet.example`. This allows your users to access the private server at
+   `https://intranet.example`. 
 
-Because of mixed content restrictions, an HTTPS website cannot fetch
-subresources from a non-HTTPS origin. It follows that the private network
-resources must be fetched over HTTPS as well. This requires a domain name for
-your private network server. If you control DNS resolution in your private
-network, this is not a big hurdle. Otherwise, one can run into difficulties due
-to routers filtering out private IP addresses from DNS responses. Please reach
-out if you find yourself in this situation, Chrome would love to know more about
-your use case and discuss available options.
+You can then upgrade the website that initiates the requests to HTTPS and
+continue making the requests as before.
+
+This solution is future-proof and reduces the trust you place in your network,
+expanding the use of end-to-end encryption within your private network.
+
+#### WebTransport {: #web-transport}
+
+This solution does not require control over your users' DNS resolution. It does
+require that the target server run a minimal WebTransport server (HTTP/3 server
+with some modifications).
+
+You can bypass the lack of a valid TLS certificate signed by a trusted CA by
+using [WebTransport](https://w3c.github.io/webtransport) and its [certificate
+pinning
+mechanism](https://w3c.github.io/webtransport/#dom-webtransportoptions-servercertificatefingerprints).
+This allows establishing secure connections to local devices that might have a
+self-signed certificate for example. WebTransport connections allow
+bidirectional data transfer, but not fetch requests. You can combine this
+approach with a service worker to transparently proxy HTTP requests over the
+connection, from the point of view of your web application. On the server side,
+a corresponding translation layer can convert the WebTransport messages to HTTP
+requests.
+
+We acknowledge that this represents a fair amount of work, but it should be
+significantly easier than building on top of WebRTC; our hope is also that some
+amount of the necessary investment gets implemented as reusable libraries. We
+also believe it especially worthwhile considering the fact that non-secure
+contexts are likely to lose access to more and more web platform features as the
+platform moves toward encouraging HTTPS use in stronger ways over time.
+Regardless of Private Network Access, this would likely be a wise investment
+anyway.
+
+We expect WebTransport over HTTP/3 to ship in Chrome 96 (it has begun an [origin
+trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/aaLFxzw5zL4/m/H3V_l-qlAgAJ))
+with mitigations to protect against key sharing and other substandard security
+practices, including:
+
+* A short maximum expiration time for pinned certificates.
+* A browser-specific mechanism for revoking certain keys that have been subject
+  to abuse.
+
+We will not ship the secure context restriction until at least two milestones
+after WebTransport is fully rolled out. The deprecation trial will be extended if
+need be.
+
+#### Reverse embedding {: #reverse-embedding}
+
+This solution does not require any administrative control over the network, and
+can be used when the target server is not powerful enough to run HTTPS.
+
+Instead of fetching private subresources from a public web app, a skeleton of
+the app can be served from the private server, which then fetches all its
+subresources (such as scripts or images) from a public server, such as a CDN.
+The resulting web app can then make requests to the private server, as these are
+considered same-origin. It can even make requests to other servers with private
+IPs (but not localhost), though this might change in the long term.
+
+By hosting only a skeleton on the private server, you can update the web app by
+pushing new resources to the public server, just as you would update a public
+web app. On the other hand, the resulting web app is not a secure context, so it
+doesn't have access to some of the more powerful features of the web.
 
 ## Plans for the future
 
-Restricting private network requests to secure contexts is only the first step
-in launching Private Network Access. Chrome is working towards implementing the
-rest of the specification in the coming months. Stay tuned for updates!
+Restricting private network requests to secure contexts is only the first step in
+launching Private Network Access. Chrome is working towards implementing the rest of
+the specification in the coming months. Stay tuned for updates!
 
-### CORS preflight requests
+### Restricting localhost access from private websites
+
+The changes in Chrome 94 only affect *public* websites accessing private IP addresses
+or localhost. The Private Network Access specification also classifies requests from
+*private* websites to localhost as problematic. Chrome will eventually deprecate these
+too. This presents a slightly different set of challenges however, as many private
+websites do not have domain names, complicating the use of deprecation trial tokens.
+
+### CORS preflight requests 
 
 The second part of Private Network Access is to gate private network requests
-initiated from *secure* contexts with 
-[CORS preflight requests](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls). 
-The idea is that even when the request was initiated from a secure context, 
-the target server is asked to provide an explicit grant to the initiator. 
-The request is only sent if the grant is successful.
+initiated from secure contexts with [CORS preflight
+requests](https://web.dev/cross-origin-resource-sharing/#preflight-requests-for-complex-http-calls).
+The idea is that even when the request was initiated from a secure context, the
+target server is asked to provide an explicit grant to the initiator. The
+request is only sent if the grant is successful.
 
 In short, a CORS preflight request is an HTTP `OPTIONS` request carrying some
 `Access-Control-Request-*` headers indicating the nature of the subsequent
@@ -246,12 +328,12 @@ Find more details about this in the
 
 ### Restrict navigation fetches
 
-Chrome is deprecating and eventually blocking subresource requests to the
-private network. This will not affect navigations to the private network, which
-can also be used in
-[CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery) attacks.
+Chrome is deprecating and eventually blocking subresource requests to private
+networks. This will not affect navigations to private networks, which can also
+be used in [CSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery)
+attacks.
 
-The Private Network Access specification does not make a distinction between the
+The Private Network Access specification doesn't make a distinction between the
 two kinds of fetches, which will eventually be subject to the same restrictions.
 
 Cover photo by [Markus
