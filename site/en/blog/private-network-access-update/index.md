@@ -8,6 +8,8 @@ date: 2021-08-26
 updated: 2021-08-26
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A private sign in German
+tags:
+  - chrome-94
 ---
 
 **Updates**
