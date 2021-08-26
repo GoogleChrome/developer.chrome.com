@@ -134,7 +134,7 @@ still mention the earlier milestone.
 
 This deprecation is accompanied by a Deprecation Trial, allowing web developers
 whose websites make use of the deprecated feature to continue using it until
-Chrome 99 by registering for tokens. See [below](#register-deprecation-trial)
+Chrome 102 by registering for tokens. See [below](#register-deprecation-trial)
 for instructions on how to register and enable the trial on your website.
 
 A pair of [Chrome enterprise policies](#enterprise-policies) can be leveraged to
