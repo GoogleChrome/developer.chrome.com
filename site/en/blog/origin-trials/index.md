@@ -79,7 +79,7 @@ this breakage period may be skipped
 
 ## View origin trials information in DevTools {: #devtools}
 
-Available from Chrome 94. You can now get information about a site's origin trials in DevTools under the **Application** panel.
+Available from Chrome 94. You can now get information about a site's origin trials in [DevTools](/docs/devtools/) under the **Application** panel.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VICXjdGL5Rz09TAPg1sW.png", alt="Origin trials in the Frame details view", width="800", height="465" %}
 
