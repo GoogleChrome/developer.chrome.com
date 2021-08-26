@@ -14,7 +14,7 @@ tags:
   - chrome-61
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 New features and major changes coming to DevTools in Chrome 61 include:
 
@@ -99,8 +99,8 @@ DevTools, other than that debugging works as you'd expect it to. Try setting som
 stepping through [Paul Irish's ES6-Module-implementation][11] of [TodoMVC][12] to see for yourself.
 
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: #throttling
 [2]: #storage

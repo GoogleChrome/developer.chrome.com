@@ -15,7 +15,7 @@ tags:
   - chrome-87
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id="bE3O6EhLjPc" %}
 
@@ -222,8 +222,8 @@ To reset all shortcuts, click on **Restore default shortcuts**.
 Chromium issue: [174309][28]
 
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]:
   https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838

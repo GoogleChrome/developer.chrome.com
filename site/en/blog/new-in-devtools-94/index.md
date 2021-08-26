@@ -15,7 +15,7 @@ tags:
   - chrome-94
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 
 ## Use DevTools in your preferred language {: #localized }
@@ -164,5 +164,5 @@ In the **Issue** tab, hover an issue, click on the issue menu &nbsp; {% Img src=
 
 Chromium issue: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}

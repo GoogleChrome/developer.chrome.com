@@ -15,7 +15,7 @@ tags:
   - chrome-93
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 
 ## Editable CSS container queries in the Styles pane {: #container-queries }
@@ -141,5 +141,5 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 
 Chromium bug: [998674](https://crbug.com/998674) 
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}

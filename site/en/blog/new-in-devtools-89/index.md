@@ -16,7 +16,7 @@ tags:
   - chrome-89
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id="msHeKmMEeHU" %}
 
@@ -452,8 +452,8 @@ The example show the APCA threshold is **38%**. The contrast ratio must meet or 
 Chromium issue: [1121900][50]
 
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]:
   https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458

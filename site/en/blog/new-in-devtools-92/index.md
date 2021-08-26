@@ -15,7 +15,7 @@ tags:
   - chrome-92
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
@@ -223,5 +223,5 @@ Please note that this is an early-stage experiment. We plan to improve and expan
 Chromium issue: [1199787](https://crbug.com/1199787)
 
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}

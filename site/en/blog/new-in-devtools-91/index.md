@@ -15,7 +15,7 @@ tags:
   - chrome-91
 ---
 
-{% include 'partials/devtools/banner.md' %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id="YCrEmhfwsgg" %}
 
@@ -247,5 +247,5 @@ The old version of Chrome on the left does not show the source location (e.g. `d
 Chromium issue: [1189161](https://crbug.com/1189161)
 
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
