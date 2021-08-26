@@ -301,6 +301,14 @@ doesn't have access to some of the more powerful features of the web.
 
 Restricting private network requests to secure contexts is only the first step in launching Private Network Access. Chrome is working towards implementing the rest of the specification in the coming months. Stay tuned for updates!
 
+### Restricting localhost access from private websites
+
+The changes in Chrome 94 only affect *public* websites accessing private IP addresses
+or localhost. The Private Network Access specification also classifies requests from
+*private* websites to localhost as problematic. Chrome will eventually deprecate these
+too. This presents a slightly different set of challenges however, as many private
+websites do not have domain names, complicating the use of Deprecation Trial tokens.
+
 ### CORS preflight requests 
 
 The second part of Private Network Access is to gate private network requests
