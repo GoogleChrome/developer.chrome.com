@@ -19,7 +19,7 @@ tags:
 
 *感谢[流浪大法师](https://webfrontend.dev/)提供的翻译。*
 
-{% include 'partials/devtools/banner-zh.md' %}
+{% include 'partials/devtools/zh/banner.md' %}
 
 
 ## 样式窗格（Styles pane）可编辑 CSS 容器查询（container queries） {: #container-queries }
@@ -144,4 +144,4 @@ Chromium 议题: [1219153](https://crbug.com/1219153)
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/reach-out-zh.md' %}
+{% include 'partials/devtools/zh/reach-out.md' %}

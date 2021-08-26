@@ -1,5 +1,5 @@
-## 下载 Chrome Canary、开发者或测试版 {: #preview-channels }
-您可以考虑把 Chrome [Canary 版](https://www.google.com/chrome/canary/), [开发者版（Dev）](https://www.google.com/chrome/dev/) 或[测试版（Beta）](https://www.google.com/chrome/beta/) 设置为默认开发浏览器。这些版本能让你抢先体验处于 DevTools 开发阶段的新功能、测试最新的网络平台 API ，让您抢先在用户之前发现您网站上的问题！
+## 下载 Chrome 预览版本 {: #preview-channels }
+您可以考虑把 Chrome [Canary 版](https://www.google.com/chrome/canary/), [开发者版（Dev）](https://www.google.com/chrome/dev/) 或[测试版（Beta）](https://www.google.com/chrome/beta/) 设置为默认开发浏览器。这些预览版本能让你抢先体验处于 DevTools 开发阶段的新功能、测试最新的网络平台 API ，让您抢先在用户之前发现您网站上的问题！
 
 
 ## 联系 Chrome DevTools 团队 {: #contact-us }

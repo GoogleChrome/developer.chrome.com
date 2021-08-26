@@ -17,7 +17,7 @@ tags:
 
 *Traducción cedida por [Miguel Ángel](https://twitter.com/midudev).*
 
-{% include 'partials/devtools/banner-es.md' %}
+{% include 'partials/devtools/es/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
