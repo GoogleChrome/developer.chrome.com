@@ -31,7 +31,7 @@ Chrome will introduce the following changes:
 * Blocking requests to private networks from insecure public websites starting in
   Chrome 94.
 * Introducing a [Deprecation Trial](#whats-deprecation-trial) which will end in Chrome
-  99. It will allow developers to request a time extension for chosen origins,
+  102. It will allow developers to request a time extension for chosen origins,
   which will not be affected during the Deprecation Trial.
 * Introducing a Chrome enterprise policy which will allow managed Chrome
   deployments to bypass the deprecation permanently. Available in Chrome 92.
