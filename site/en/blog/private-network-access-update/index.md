@@ -69,9 +69,9 @@ strategies:
   for the Deprecation Trial.
 * September 2021: Chrome 94 rolls out to Stable. Web developers should have signed
   up for the Deprecation Trial and deployed trial tokens to production.
-* February 2022: Chrome 99 rolls out to Beta.
-* March 2022: Chrome 99 rolls out to Stable. The Deprecation Trial ends. Chrome
-  blocks all private network requests from non-secure contexts.
+* April 2022: Chrome 102 rolls out to Beta.
+* May 2022: Chrome 102 rolls out to Stable. The Deprecation Trial ends. Chrome
+  blocks all private network requests from public, non-secure contexts.
 
 ## What is Private Network Access 
 
