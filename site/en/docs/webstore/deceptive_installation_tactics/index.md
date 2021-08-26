@@ -129,7 +129,9 @@ account, and possibly the termination of any associated publisher account(s).
 
 ## Is there a way to appeal this decision?
 
-Yes, appeals can be made by using the [CWS Support form][cws-support-form]. To learn more, see the [Complaint handling
+If you received a warning email or your publisher account was terminated, you can fill out the [CWS
+Support form][cws-support-form] to receive further clarifications and appeal the decision.
+To learn more, see the [Complaint handling
 process FAQ][complaint-faq].
 
 [abuse-ad]: https://support.google.com/adspolicy/answer/6020954
