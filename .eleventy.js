@@ -69,7 +69,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('site/en/**/*.{jpg,jpeg,png,webp,gif}');
 
   // Make .yml files work in the _data directory.
-  eleventyConfig.addDataExtension('yml', contents => yaml.safeLoad(contents));
+  eleventyConfig.addDataExtension('yml', contents => yaml.load(contents));
 
   // Configure markdown-it plugins
   eleventyConfig.setLibrary('md', md);
