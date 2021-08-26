@@ -62,9 +62,12 @@ strategies:
   from insecure contexts. After feedback from developers requesting more time to
   adjust, the deprecation is deferred to Chrome 93, to be accompanied with a
   Deprecation Trial.
-* July 2021: Chrome 93 rolls out to Beta. Web developers can start signing up
+* July 2021: After further feedback from developers, the deprecation and the
+  accompanying trial are deferred to Chrome 94. In addition, *private* websites
+  are no longer affected by the deprecation.
+* August 2021: Chrome 94 rolls out to Beta. Web developers can start signing up
   for the Deprecation Trial.
-* August 2021: Chrome 93 rolls out to Stable. Web developers should have signed
+* September 2021: Chrome 94 rolls out to Stable. Web developers should have signed
   up for the Deprecation Trial and deployed trial tokens to production.
 * February 2022: Chrome 99 rolls out to Beta.
 * March 2022: Chrome 99 rolls out to Stable. The Deprecation Trial ends. Chrome
