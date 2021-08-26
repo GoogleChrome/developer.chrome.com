@@ -15,9 +15,6 @@ tags:
 **Updates**
 
 - **August 25, 2021**: Updated timeline announcement and introduction of a deprecation trial.
-- **June 23, 2021**: Based on the feedback, the timeline for
-  blocking private network requests initiated from non-secure contexts has been changed.
-  Such requests will be blocked in Chrome 93 instead of 92.
 
 Chrome is deprecating access to private network endpoints from non-secure
 websites as part of the [Private Network
