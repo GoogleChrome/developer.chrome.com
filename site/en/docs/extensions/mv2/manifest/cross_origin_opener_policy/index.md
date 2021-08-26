@@ -39,6 +39,6 @@ which the extension can use to specify the response header value. For example:
 See the [Cross-origin isolation overview](coi-overview) for more
 information about using this key.
 
-[coi-overview]: /docs/extensions/mv3/cross-origin-isolation/
-[cross_origin_embedder_policy]: /docs/extensions/mv3/manifest/cross_origin_embedder_policy/
+[coi-overview]: /docs/extensions/mv2/cross-origin-isolation/
+[cross_origin_embedder_policy]: /docs/extensions/mv2/manifest/cross_origin_embedder_policy/
 [mdn-coop]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy

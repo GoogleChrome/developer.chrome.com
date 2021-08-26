@@ -40,6 +40,6 @@ See the [Cross-origin isolation overview][coi-overview] for more
 information about using this key.
 
 
-[coi-overview]: /docs/extensions/mv3/cross-origin-isolation/
-[cross_origin_opener_policy]: /docs/extensions/mv3/manifest/cross_origin_opener_policy/
+[coi-overview]: /docs/extensions/mv2/cross-origin-isolation/
+[cross_origin_opener_policy]: /docs/extensions/mv2/manifest/cross_origin_opener_policy/
 [mdn-coep]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy
