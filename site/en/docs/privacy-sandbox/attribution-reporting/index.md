@@ -129,3 +129,4 @@ The API offers two types of attribution reports than can be used for different u
   API](https://web.dev/using-conversion-measurement/): how to experiment with the first
   iteration of this API for web developers
 - [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
+- [Debug the API with Chrome DevTools](/blog/new-in-devtools-93/#attribution-reporting)
