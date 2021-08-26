@@ -22,14 +22,13 @@ Many organizations have related sites with different domain names, such as
 `brandx.site` and `fly-brandx.site`—or domains for different countries such as
 `example.com`, `example.rs`, `example.co.uk` and so on. 
 
-Browsers are moving
-towards [making third-party cookies
+Browsers are moving towards [making third-party cookies
 obsolete](https://blog.google/products/ads-commerce/a-more-privacy-first-web/)
 to improve privacy on the web, but sites like these often rely on cookies for
 functionalities that require maintaining and accessing state across domains
 (such as single sign-on and consent management). 
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JNtmMZl7o44LwUk7mE5G.png", alt="ALT_TEXT_HERE", width="800", height="316" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/JNtmMZl7o44LwUk7mE5G.png", alt="", width="800", height="316" %}
 
 First-Party Sets can allow related domain names that are owned and operated by
 the same entity to be treated as first-party in situations where first party and
@@ -58,7 +57,7 @@ However, if you're on ``my-blog.site`` which embeds an iframe player for
 ``video.site``, when the request is made from `my-blog.site` to `video.site`
 that's cross-site context and the ``theme`` cookie is _third-party_.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zHa3CTG1l3lYA6C3P433.png", alt="", width="800", height="514" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/zHa3CTG1l3lYA6C3P433.png", alt="Diagram showing a cookie from video.site in two contexts. The cookie is same-site when the top-level context is also video.site. The cookie is cross-site when the top-level context is my-blog.site with video.site in an iframe.", width="800", height="514" %}
 
 Cookie inclusion is determined by the cookie's ``SameSite`` attribute:
 
@@ -87,7 +86,7 @@ With First-Party Sets there's a route to define the situations where a
 within the first-party set and excluded in third-party contexts.
 {% endAside %}
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/oNCKndk5TJyiqcPgvv5E.png", alt="", width="400", height="362" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/oNCKndk5TJyiqcPgvv5E.png", alt="Diagram showing how a cookie may still be included in a cross-site context if the sites are part of the same First-Party Set, but that it would be rejected for cross-site contexts outside of the set.", width="400", height="362" %}
 
 ## First-Party Sets policy
 
@@ -102,13 +101,13 @@ the various Privacy Sandbox proposals is based on the concept of partitioning
 identity to prevent cross-site tracking—drawing a boundary between sites that
 limits access to any information that can be used to identify users. 
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bTGzUkmiyY1d0ZssO8Jq.png", alt="", width="800", height="305" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bTGzUkmiyY1d0ZssO8Jq.png", alt="Diagram showing the unpartitioned state where the same third-party cookie is accessible in multiple cross-site contexts in contrast to a partitioned model where each top-level context has a separate instance of the cross-site cookie preventing linking activity across those sites.", width="800", height="305" %}
 
 While the default option is to partition by site, which solves many first-party
 use cases, the ``brandx.site`` example shows that a first-party can be larger
 than just one site.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/mGJiTbDhAYa9ZpChapX3.png", alt="", width="400", height="356" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/mGJiTbDhAYa9ZpChapX3.png", alt="Diagram showing how the same instance of a cookie for one set may be included in cross-site contexts when all those sites are part of the same set.", width="400", height="356" %}
 
 An important part of the First-Party Sets proposal is to ensure that policy
 across browsers prevents abuse or misuse. For example, First-Party Sets must not
@@ -221,7 +220,7 @@ Then when the visitor is on ``fly-brandx.site`` and a request goes to
 If some other site which is not a part of the first-party set, for example
 `hotel.xyz`, sends a request to `brandx.site`, the cookie would not be included.
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bmNqQh85YU16Bw2YEi5L.png", alt="", width="800", height="483" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/bmNqQh85YU16Bw2YEi5L.png", alt="Diagram showing the brandx.site cookie allowed or blocked in cross-site contexts as described.", width="800", height="483" %}
 
 Until `SameParty` is widely supported, use `SameSite` attribute along with it to
 define fallback behavior for cookies. You can think of the ``SameParty``
