@@ -35,7 +35,7 @@ be rejected.
 uses (as declared in your manifest), with a field for you to state the justification for each
 permission. Fill out these fields to tell the reviewers why your extension needs to use each
 permission. If there are permissions listed here that you don't require, remove them from your
-manifest before continuing.
+manifest and [upload][upload-item] a new version of your extension before continuing.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xTk11mZFXz9K0RkLAcmb.png",
        alt="Screenshot of the permissions list privacy field set",
@@ -95,4 +95,4 @@ If you haven't done so yet, complete your listing by
 [minimum-permissions]: /docs/extensions/mv3/security/#permissions
 [remote-code]: /docs/extensions/mv3/intro/mv3-overview/#remotely-hosted-code
 [setup-account]: /docs/webstore/publish#setup-a-developer-account
-
+[upload-item]: /docs/webstore/publish/#upload-your-item
