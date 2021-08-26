@@ -12,6 +12,8 @@ authors:
   - kojiishi
   - iankilpatrick
   - kylecharbonneau
+tags:
+  - rendering
 ---
 
 Previous posts in this series gave an overview of the

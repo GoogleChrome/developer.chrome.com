@@ -9,8 +9,8 @@ date: 2021-06-22
 updated: 2021-06-23
 authors:
   - chrishtr
-alt: >
-  A pile of different devices.
+tags:
+  - rendering
 ---
 
 I'm Chris Harrelson,
