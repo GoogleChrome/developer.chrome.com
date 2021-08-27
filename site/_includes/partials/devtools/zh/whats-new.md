@@ -1,6 +1,7 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 [What's New In DevTools](/tags/new-in-devtools/) 英文系列。以下是部分已翻译成中文的内容。有兴趣参与中文翻译的朋友，请联系我们的开发者推广工程师 [Jecelyn Yeen](https://twitter.com/JecelynYeen)。
 
+<!-- lint disable no-smart-quotes -->
 
 ### Chrome 93 {: #chrome93 }
 
