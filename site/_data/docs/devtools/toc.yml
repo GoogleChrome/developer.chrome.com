@@ -36,6 +36,7 @@
     - url: /docs/devtools/storage/localstorage/
     - url: /docs/devtools/storage/indexeddb/
     - url: /docs/devtools/storage/sessionstorage/
+    - url: /docs/devtools/storage/applicationcache/
     - url: /docs/devtools/storage/websql/
     - url: /docs/devtools/storage/cache/
 - url: /docs/devtools/issues/
