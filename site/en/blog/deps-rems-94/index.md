@@ -3,7 +3,7 @@ title: Deprecations and removals in Chrome 94
 description: >
   A round up of the deprecations and removals in Chrome 94 to help you plan.
 layout: 'layouts/blog-post.njk'
-date: 2021-07-29
+date: 2021-08-27
 tags:
   - deprecations
   - removals
