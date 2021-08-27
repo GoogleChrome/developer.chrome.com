@@ -9,8 +9,8 @@ description: Overview of cross-origin isolation for extensions
 [Cross-origin isolation][web-coi-guide] enables a web page to use powerful features such as
 [`SharedArrayBuffer`][mdn-sharedarraybuffer]. An extension can opt into cross-origin isolation by
 specifying the appropriate values for the [`cross_origin_embedder_policy`][doc-coep] and
-[`cross_origin_opener_policy`][doc-coop] manifest members. For example, a manifest like the one
-below will opt the extension's origin into cross-origin isolation.
+[`cross_origin_opener_policy`][doc-coop] manifest keys. For example, a manifest like the one below
+will opt the extension's origin into cross-origin isolation.
 
 ```json
 {
