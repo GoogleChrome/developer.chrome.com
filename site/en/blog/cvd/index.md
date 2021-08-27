@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 <!-- lint disable no-smart-quotes -->
 
 This article describes why and how we implemented color vision deficiency simulation in DevTools and the Blink Renderer.

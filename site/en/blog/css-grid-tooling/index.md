@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 <!-- lint disable no-smart-quotes -->
 
 ## Why did we make CSS Grid Tooling?

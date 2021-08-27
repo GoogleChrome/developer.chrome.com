@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 ## DevTools startup now is ~13% faster 🎉 (from 11.2s down to 10s)
 TL;DR; The result is achieved by removing a redundant serialization.
 

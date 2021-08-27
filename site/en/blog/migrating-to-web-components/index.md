@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 When DevTools was first created many, many years ago the team chose to build a bespoke UI framework. This was a reasonable choice at the time and has served DevTools well.
 
 But since then various features have landed in the platform and one of those, Web Components, is a great fit for building new UI elements in DevTools. By leaning on what the platform provides we can greatly reduce the amount of bespoke UI code we have to maintain and invest more in building features for DevTools, rather than supporting bespoke infrastructure.

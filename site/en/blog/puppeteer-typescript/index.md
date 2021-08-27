@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 We're big fans of TypeScript on the DevTools team—so much so that new code in DevTools is being authored in it and we're in the middle of a big migration of the entire codebase to being type-checked by TypeScript. You can find out more about that migration in [our talk at Chrome Dev Summit 2020](https://youtu.be/BHogHiiyuQk). It therefore made perfect sense to look at migrating [Puppeteer's codebase](https://pptr.dev/) to TypeScript, too.
 
 ## Planning the migration

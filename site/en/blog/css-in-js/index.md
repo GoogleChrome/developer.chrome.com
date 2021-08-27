@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 This article talks about CSS-in-JS support in DevTools that landed since Chrome 85 and, in general, what we mean by CSS-in-JS and how it's different from regular CSS that has been supported by DevTools for a long time.
 
 ## What is CSS-in-JS?

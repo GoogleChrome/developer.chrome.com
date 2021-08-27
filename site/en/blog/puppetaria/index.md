@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 ## Puppeteer and its approach to selectors {: .intro }
 
 Puppeteer is a browser automation library for Node: it lets you control a browser using a simple and modern JavaScript API.

@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 <!-- lint disable no-smart-quotes -->
 
 Following up on our [migration to JavaScript modules](/blog/migrating-to-js-modules/) and [migration to Web Components](/blog/migrating-to-web-components/), today we are continuing our blog post series on **the changes we are making to Devtools' architecture and how it is built**.

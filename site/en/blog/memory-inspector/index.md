@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 <!-- lint disable no-smart-quotes -->
 
 This article introduces the Memory Inspector that has landed in Chrome 91. It allows you to inspect your ArrayBuffer, TypedArray, DataView, and Wasm Memory. 

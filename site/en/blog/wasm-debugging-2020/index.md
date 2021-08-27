@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 {% YouTube id='VBMHswhun-s' %}
 
 ## The road so far {: #past }

@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 ## Background
 
 Until recently, the only WebAssembly debugging that Chrome DevTools supported was viewing 

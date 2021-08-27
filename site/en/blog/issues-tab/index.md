@@ -14,6 +14,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 In the last quarter of 2019, the Chrome DevTools team started improving the developer experience in DevTools around cookies. This was particularly important because Google Chrome and other browsers had begun to change their default cookie behavior. 
 
 While researching the tools that DevTools already provides, we often found ourselves in a situation like the following:
