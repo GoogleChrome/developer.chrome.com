@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 We're big fans of TypeScript on the DevTools team—so much so that new code in DevTools is being authored in it and we're in the middle of a big migration of the entire codebase to being type-checked by TypeScript. You can find out more about that migration in [our talk at Chrome Dev Summit 2020](https://youtu.be/BHogHiiyuQk). It therefore made perfect sense to look at migrating [Puppeteer's codebase](https://pptr.dev/) to TypeScript, too.
 
 ## Planning the migration
@@ -84,3 +86,6 @@ Once we had the entire source code migrated to TypeScript, we could turn our **f
 By migrating the tests to TypeScript (following the same process, going file by file), we found issues with our TypeScript that would otherwise have been left up to users to find for us. Now **our tests not only cover all our functionality, but act as a quality check of our TypeScript too**!
 
 We've already benefited hugely from TypeScript as engineers who work on the Puppeteer codebase. Coupled with our much improved CI environment, it's enabled us to become more productive when working on Puppeteer and have TypeScript catch bugs that otherwise would have made it into an npm release. We're excited to get high quality TypeScript definitions shipped to enable all the developers using Puppeteer to benefit from this work too.
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

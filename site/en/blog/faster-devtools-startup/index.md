@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 ## DevTools startup now is ~13% faster 🎉 (from 11.2s down to 10s)
 TL;DR; The result is achieved by removing a redundant serialization.
 
@@ -113,3 +115,6 @@ Based on these experiments, DevTools opens **~13% faster (from 11.2s down to 10s
 [Full tracing metrics comparison table](https://docs.google.com/spreadsheets/d/1WuWWORPwMre3m4N_MmJvtJ0xTfq-oBnz87cGtB532Ms/edit?resourcekey=0-Xxv_HIGfVaIZvbmDrmZ2GA)
 
 As a result, DevTools opens and **works faster with less CPU usage**. 🎉
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

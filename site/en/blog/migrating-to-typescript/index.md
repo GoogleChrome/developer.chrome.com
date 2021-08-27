@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 <!-- lint disable no-smart-quotes -->
 
 Following up on our [migration to JavaScript modules](/blog/migrating-to-js-modules/) and [migration to Web Components](/blog/migrating-to-web-components/), today we are continuing our blog post series on **the changes we are making to Devtools' architecture and how it is built**.
@@ -165,3 +167,6 @@ Sadly, the solutions that are available to us today are not always suitable for 
 ## Current state of TypeScript in DevTools
 
 At this moment, we have removed the Closure compiler type checker from our codebase and solely rely on the TypeScript compiler. We are able to write TypeScript-authored files and make use of TypeScript-specific features (such as interfaces, generics, etc...), which helps us on a daily basis. We have increased confidence that the TypeScript compiler will catch type errors and regressions, which is what we’d hoped would happen when we first started work on this migration. This migration, like so many, was slow, nuanced, and oftentimes challenging, but as we yield the benefits, we believe it was worth it.
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}
