@@ -88,5 +88,5 @@ Stay tuned for future updates!
 The original blog post used to state that Emscripten doesn't support DWARF yet. This has been fixed since, and Emscripten preserves debug information end-to-end, throughout any transformations and optimisations.
 {% endAside %}
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/engineering-blog.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

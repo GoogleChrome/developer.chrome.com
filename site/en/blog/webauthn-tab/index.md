@@ -182,5 +182,5 @@ Here're some resources if you would like to learn more about WebAuthn:
 - [Web Authentication API (WebAuthn) spec](https://www.w3.org/TR/webauthn)
 - [WebAuthn explanation and guide](https://webauthn.guide)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/engineering-blog.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

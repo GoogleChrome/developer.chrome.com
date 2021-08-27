@@ -121,5 +121,5 @@ To keep issues actionable, we want to make it easier to discover which part of a
 
 If you have any suggestions to improve the Issues tab, let us know by filing a [bug](https://crbug.com/new)!
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/engineering-blog.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

@@ -251,5 +251,5 @@ Transferring that domain knowledge to others working in the same codebase is not
 Knowing what to share and what details not to share is an art, but a necessary one.
 It is therefore crucial to reduce the amount of large migrations, or at the very least not perform them at the same time.
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/engineering-blog.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

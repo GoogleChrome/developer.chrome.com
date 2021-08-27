@@ -114,5 +114,5 @@ Based on these experiments, DevTools opens **~13% faster (from 11.2s down to 10s
 
 As a result, DevTools opens and **works faster with less CPU usage**. 🎉
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/engineering-blog.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

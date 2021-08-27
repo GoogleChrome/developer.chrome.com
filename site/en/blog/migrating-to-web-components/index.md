@@ -22,5 +22,5 @@ To help with the transition, we created a guide to building UI elements in DevTo
 Today, we're making this document publicly available at [goo.gle/building-ui-devtools](https://goo.gle/building-ui-devtools
 ). If you've ever wondered more about how Web Components are used in large, real world applications, or some of the challenges that come with integrating components into a large, pre-existing codebase, this document could help and provide some answers. If you have any questions about our guidelines, feel free to [tweet me](https://www.twitter.com/Jack_Franklin).
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/engineering-blog.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

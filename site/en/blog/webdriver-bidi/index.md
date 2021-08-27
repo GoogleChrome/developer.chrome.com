@@ -184,5 +184,5 @@ Another important aspect of BiDi is Web Platform Tests. Currently they cover Web
 ## What is the current state?
 Current state of prototype and specification can be tracked here: [WebDriver BiDi prototyping progress](https://docs.google.com/spreadsheets/d/1acM-kHlubpwnW1mFboS9hePawq3u1kf21oQzD16q-Ao/edit?resourcekey=0-PuLHQYLmDJUOXH_mFO-QiA#gid=0)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/engineering-blog.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

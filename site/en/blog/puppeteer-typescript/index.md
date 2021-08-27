@@ -85,5 +85,5 @@ By migrating the tests to TypeScript (following the same process, going file by 
 
 We've already benefited hugely from TypeScript as engineers who work on the Puppeteer codebase. Coupled with our much improved CI environment, it's enabled us to become more productive when working on Puppeteer and have TypeScript catch bugs that otherwise would have made it into an npm release. We're excited to get high quality TypeScript definitions shipped to enable all the developers using Puppeteer to benefit from this work too.
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/engineering-blog.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}
