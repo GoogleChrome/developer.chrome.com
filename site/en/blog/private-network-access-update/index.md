@@ -5,7 +5,7 @@ authors:
   - titouan
 description: Chrome is deprecating access to private network endpoints from non-secure public websites in Chrome 94 as part of the Private Network Access specification. Read on for recommended actions.
 date: 2021-08-26
-updated: 2021-08-26
+updated: 2021-08-27
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A private sign in German
 tags:
@@ -178,9 +178,9 @@ trials](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-gui
 
 ### Enable enterprise policies {: #enterprise-policies}
 
-If you have administrative control over your users via Chrome Enterprise, then
-you can re-enable the deprecated feature using either of the following
-enterprise policies:
+If you have administrative control over your users via Chrome Enterprise or
+Windows Group Policy, then you can re-enable the deprecated feature using either
+of the following enterprise policies:
 
 * [InsecurePrivateNetworkRequestsAllowed](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowed)
 * [InsecurePrivateNetworkRequestsAllowedForUrls](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowedForUrls)
