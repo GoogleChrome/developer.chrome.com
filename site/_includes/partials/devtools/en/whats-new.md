@@ -22,6 +22,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Editable CSS container queries  in the Styles pane](/blog/new-in-devtools-93/#container-queries)
 * [Web bundle preview in the Network panel](/blog/new-in-devtools-93/#web-bundle)
 * [Attribution Reporting API debugging](/blog/new-in-devtools-93/#attribution-reporting)
+* [Better string handling in the Console](/blog/new-in-devtools-93/#string)
 * [Improved CORS debugging](/blog/new-in-devtools-93/#cors)
 * [Lighthouse 8.1](/blog/new-in-devtools-93/#lighthouse)
 * [New note URL in the Manifest pane](/blog/new-in-devtools-93/#new-note-url)
