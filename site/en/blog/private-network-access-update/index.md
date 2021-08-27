@@ -5,7 +5,7 @@ authors:
   - titouan
 description: Chrome is deprecating access to private network endpoints from non-secure public websites in Chrome 94 as part of the Private Network Access specification. Read on for recommended actions.
 date: 2021-08-26
-updated: 2021-08-26
+updated: 2021-08-27
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A private sign in German
 tags:
@@ -32,14 +32,14 @@ Chrome will introduce the following changes:
 * Introducing a [deprecation trial](#whats-deprecation-trial) which will end in Chrome
   101. It will allow developers to request a time extension for chosen origins,
   which will not be affected during the deprecation trial.
-* Introducing a Chrome enterprise policy which will allow managed Chrome
-  deployments to bypass the deprecation permanently. Available in Chrome 92.
+* Introducing a Chrome policy which will allow managed Chrome deployments to
+  bypass the deprecation permanently. Available in Chrome 92.
 
 If you need more time to mitigate the impact of the deprecation register for the
 deprecation trial.
 
-If you have administrative control over your users via Chrome Enterprise,
-you can re-enable the feature using Chrome enterprise policy.
+If you have administrative control over your users, you can re-enable the
+feature using Chrome policies.
 
 To mitigate the impact of the new restrictions, use one of the following
 strategies:
@@ -136,24 +136,23 @@ whose websites make use of the deprecated feature to continue using it until
 Chrome 102 by registering for tokens. See [below](#register-deprecation-trial)
 for instructions on how to register and enable the trial on your website.
 
-A pair of [Chrome enterprise policies](#enterprise-policies) can be leveraged to
-disable the deprecation either entirely or on specific origins, indefinitely.
-This allows managed Chrome installations, for example, those in corporate
-settings, to avoid breakage.
+A pair of [Chrome policies](#policies) can be leveraged to disable the
+deprecation either entirely or on specific origins, indefinitely. This allows
+managed Chrome installations, for example, those in corporate settings, to
+avoid breakage.
 
 ### Chrome 102
 
 The deprecation trial ends. All websites must be migrated off of the deprecated
-feature, or their clients enrolled in Chrome Enterprise to continue disabling
-the feature.
+feature, or their users' policies configured to continue enabling the feature.
 
 ## Recommended developer actions
 
 The first step for affected websites is most likely to buy some time until a
 proper fix can be deployed: either by registering for the [deprecation
 trial](https://dev.chromium.org/blink/launching-features#:~:text=Step%203%20(Optional)%3A%20Deprecation%20Trial),
-or by using enterprise policies. Then, the recommended course of action varies
-depending on the circumstances of each affected website.
+or by using policies. Then, the recommended course of action varies depending on
+the circumstances of each affected website.
 
 ### Register for the deprecation trial {: #register-deprecation-trial}
 
@@ -176,14 +175,16 @@ headers, such as github.io static websites served by a third party.
 For more details, see the [Web developer guide to origin
 trials](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md).
 
-### Enable enterprise policies {: #enterprise-policies}
+### Enable policies {: #policies}
 
-If you have administrative control over your users via Chrome Enterprise, then
-you can re-enable the deprecated feature using either of the following
-enterprise policies:
+If you have administrative control over your users, you can re-enable the
+deprecated feature using either of the following policies:
 
 * [InsecurePrivateNetworkRequestsAllowed](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowed)
 * [InsecurePrivateNetworkRequestsAllowedForUrls](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowedForUrls)
+
+For more details about managing policies for your users, see this [help center
+article](https://support.google.com/chrome/a/answer/9037717).
 
 ### Accessing localhost
 
