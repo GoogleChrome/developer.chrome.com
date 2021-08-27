@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Deceptive Installation Tactics FAQ
 date: 2019-06-24
+updated: 2021-08-25
 description: >
   Frequently asked questions about Chrome Web Store's policies on deceptive
   installation tactics.
@@ -92,9 +93,9 @@ audio, to interrupt the installation flow.
 Not necessarily. While CWS and Ads policies overlap, they are distinct and impact different
 components of your extension. It is the responsibility of the developer to comply with both.
 However, a violation of the [Google Ads
-Misrepresentation](https://support.google.com/adspolicy/answer/6020955) Policy or [Abusing the ad
-network](https://support.google.com/adspolicy/answer/6020954) does violate Chrome Web Store
-[Developer Program Policies](https://developer.chrome.com/docs/webstore/program_policies/).
+Misrepresentation][ads-misrepresentation] Policy or [Abusing the ad
+network][abuse-ad] does violate Chrome Web Store
+[Developer Program Policies][program-policies]
 
 
 ## What if I use affiliates that independently create and advertise my extensions?
@@ -128,5 +129,14 @@ account, and possibly the termination of any associated publisher account(s).
 
 ## Is there a way to appeal this decision?
 
-Yes, appeals can be made through the instructions included in the notification email you will
-receive to the email address listed under your CWS developer account.
+If you received a warning email or your publisher account was terminated, you can fill out the [CWS
+Support form][cws-support-form] to receive further clarifications and appeal the decision.
+To learn more, see the [Complaint handling
+process FAQ][complaint-faq].
+
+[abuse-ad]: https://support.google.com/adspolicy/answer/6020954
+[ads-misrepresentation]: https://support.google.com/adspolicy/answer/6020955
+[complaint-faq]: /docs/webstore/complaint-faq
+[cws-support-form]: https://support.google.com/chrome_webstore/contact/one_stop_support
+[program-policies]: /docs/webstore/program_policies
+
