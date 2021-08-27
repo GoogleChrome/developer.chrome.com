@@ -146,3 +146,4 @@ Chromium 议题: [1219153](https://crbug.com/1219153)
 Chromium bug: [998674](https://crbug.com/998674)
 
 {% include 'partials/devtools/zh/reach-out.md' %}
+{% include 'partials/devtools/zh/whats-new.md' %}
