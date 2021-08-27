@@ -15,9 +15,7 @@ tags:
   - chrome-94
 ---
 
-{% Aside %}
-Interested in helping improve DevTools? Sign up to participate in [Google User Research here](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458).
-{% endAside %}
+{% include 'partials/devtools/en/banner.md' %}
 
 
 ## Use DevTools in your preferred language {: #localized }
@@ -166,5 +164,5 @@ In the **Issue** tab, hover an issue, click on the issue menu &nbsp; {% Img src=
 
 Chromium issue: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}

@@ -15,6 +15,8 @@ tags:
   - chrome-85
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 {% YouTube id="NOal2gTzftI" %}
 
 ## Style editing for CSS-in-JS frameworks {: #css-in-js }
@@ -184,8 +186,8 @@ differentiate conditional breakpoints and logpoints.
 Chromium issue [#1041830][30]
 
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: https://drafts.csswg.org/cssom/
 [2]: https://developers.google.com/web/updates/2019/02/constructable-stylesheets

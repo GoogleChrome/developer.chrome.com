@@ -15,6 +15,8 @@ tags:
   - chrome-75
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 Hello! Here's what's new in [Chrome DevTools][1] in Chrome 75.
 
 ## Video version of this page {: #video }
@@ -159,8 +161,8 @@ There's been a lot of work recently around making the DevTools UI itself more ke
 Check out Rob's [Navigate Chrome DevTools With Assistive Technology][28] to learn more.
 
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: /docs/devtools
 [2]: https://developer.mozilla.org/en-US/docs/Web/CSS/filter

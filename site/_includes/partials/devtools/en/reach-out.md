@@ -1,5 +1,5 @@
-## Download the Chrome preview channels {: #preview-channels }
-Consider using the Chrome [Canary](https://www.google.com/chrome/canary/), [Dev](https://www.google.com/chrome/dev/) or [Beta](https://www.google.com/chrome/beta/) as your default development browser. These preview channels give you access to the latest DevTools features.
+## Download the preview channels {: #preview-channels }
+Consider using the Chrome [Canary](https://www.google.com/chrome/canary/), [Dev](https://www.google.com/chrome/dev/) or [Beta](https://www.google.com/chrome/beta/) as your default development browser. These preview channels give you access to the latest DevTools features, test cutting-edge web platform APIs, and find issues on your site before your users do!
 
 
 ## Getting in touch with the Chrome DevTools team {: #contact-us }

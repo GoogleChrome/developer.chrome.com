@@ -16,11 +16,7 @@ tags:
   - chrome-86
 ---
 
-{% Aside %}
-
-Interested in helping improve DevTools? Sign up to participate in [Google User Research here][1].
-
-{% endAside %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id="koUsK58dpNo" %}
 
@@ -284,8 +280,8 @@ you have input.
 Chromium issue: [1067184][38]
 
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]:
   https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838

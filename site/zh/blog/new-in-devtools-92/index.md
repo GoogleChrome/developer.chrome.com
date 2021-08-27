@@ -19,11 +19,7 @@ tags:
 
 
 <!-- lint disable no-smart-quotes -->
-
-{% Aside %}
-有兴趣帮忙改进 DevTools 吗？请注册并参与 [Google 用户体验调研](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=zh&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458)。
-
-{% endAside %}
+{% include 'partials/devtools/zh/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
@@ -238,3 +234,5 @@ Chromium 议题: [1204004](https://crbug.com/1204004), [1204466](https://crbug.c
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a2ffe4a8d202e56d640c2f8744c905354e2bca8e #}
 
 Chromium 议题: [1199787](https://crbug.com/1199787)
+
+{% include 'partials/devtools/zh/reach-out.md' %}

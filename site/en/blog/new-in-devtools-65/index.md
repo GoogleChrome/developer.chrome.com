@@ -14,6 +14,8 @@ tags:
   - chrome-65
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 New features coming to DevTools in Chrome 65 include:
 
 - [**Local Overrides**][1]
@@ -296,8 +298,8 @@ You can also use Puppeteer to expose DevTools features while browsing without ev
 opening DevTools. See [Using DevTools Features Without Opening DevTools][22] for an example.
 
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: #overrides
 [2]: #a11y

@@ -15,6 +15,8 @@ tags:
   - chrome-63
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 Welcome back! New features coming to DevTools in Chrome 63 include:
 
 - [Multi-client remote debugging support][1].
@@ -125,8 +127,8 @@ now you can send custom tags:
 `update-content` to the service worker
 
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: #multi-client
 [2]: #workspaces

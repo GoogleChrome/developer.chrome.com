@@ -19,10 +19,7 @@ tags:
 
 *感谢[流浪大法师](https://webfrontend.dev/)提供的翻译。*
 
-{% Aside %}
-有兴趣帮忙改进 DevTools 吗？请注册并参与 [Google 用户体验调研](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=zh&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458)。
-
-{% endAside %}
+{% include 'partials/devtools/zh/banner.md' %}
 
 
 ## 样式窗格（Styles pane）可编辑 CSS 容器查询（container queries） {: #container-queries }
@@ -146,3 +143,5 @@ Chromium 议题: [1219153](https://crbug.com/1219153)
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283cd0a96204b1592f59fda2fcb #}
 
 Chromium bug: [998674](https://crbug.com/998674)
+
+{% include 'partials/devtools/zh/reach-out.md' %}
