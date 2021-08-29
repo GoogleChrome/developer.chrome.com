@@ -9,7 +9,9 @@ authors:
   - chrishtr
 ---
 
-(See also the subsequent post describing [key data structures](https://developer.chrome.com/blog/renderingng-data-structures/).)
+{% Aside %}
+Check out the next post in the series: [Key data structures and their roles in RenderingNG](/blog/renderingng-data-structures/).
+{% endAside %}
 
 In a [previous post](/blog/renderingng/),
 I gave an overview of the RenderingNG architecture goals and key properties.
