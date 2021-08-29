@@ -11,6 +11,9 @@ tags:
   - rendering
 ---
 
+{% Aside %}
+Check out the next post in the series: [Key data structures and their roles in RenderingNG](/blog/renderingng-data-structures/).
+{% endAside %}
 
 In a [previous post](/blog/renderingng/),
 I gave an overview of the RenderingNG architecture goals and key properties.
