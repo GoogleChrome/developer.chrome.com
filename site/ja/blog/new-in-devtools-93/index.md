@@ -161,10 +161,7 @@ If your site exposes source maps to Lighthouse, look for the **View Treemap** bu
 <!--
 The report also includes a new metric filter (Refer to the **Show audits relevant to** filter in the screenshot). Pick a metric to focus on the opportunities and diagnostics most relevant to improving just that metric.
 -->
-レポートには新しいメトリクスフィルタも追加されています（スクリーンショットの**Show audits relevant to**フィルタを参照）。
-メトリクスを選択してください。
-単純にそのメトリクスの改善にもっとも関係のある
-OpportunitiesとDiagnosticsにフォーカスを当てるために
+レポートには新しいメトリクスフィルタも追加されています（スクリーンショットの**Show audits relevant to**フィルタを参照）。そのメトリクスだけを改善するためにもっとも適切なOpportunitiesとDiagnosticsにフォーカスを当てるためにメトリクスを選択してください。
 
 <!--
 The **Performance Category** had a number of scoring changes to align with other performance tools and to better reflect the state of the web.
@@ -180,7 +177,6 @@ Check out the [release notes](https://github.com/GoogleChrome/lighthouse/release
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/16d96a25f24c934ef4dcbbc7b827015abdd228a1 #}
 
 Chromium issue: [772558](https://crbug.com/772558)
-
 
 
 <!--
