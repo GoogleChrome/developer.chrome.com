@@ -35,7 +35,8 @@
       {% endfor %}
     {% endif %}
 
-    <script>{% includeRaw 'partials/script.js' %}</script>
+    {# This needs to be include'd, because it expands 11ty variables #}
+    <script>{% include 'partials/script.js' %}</script>
   </head>
   <body>
     <div class="scaffold">
