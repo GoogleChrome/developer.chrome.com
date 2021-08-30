@@ -17,7 +17,7 @@
 /**
  * @fileoverview This is inline script run on every page.
  *
- * Note that this is included by 11ty, so {{ }}'s are expanded.
+ * Note that this is included by 11ty, so { { } } (without spaces)'s are expanded.
  */
 
 /* eslint-disable no-undef */
