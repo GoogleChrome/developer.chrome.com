@@ -7,7 +7,7 @@ date: 2021-07-28
 updated: 2021-07-28
 description:
   "Consultas de contêiner CSS editáveis, prévia de web-bundles, melhor manejo de strings no Console e muito mais."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xFq1Fb2KOrQfq1RG6x5e.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/TiDoAuzLse9uUSoylxNA.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -17,7 +17,7 @@ tags:
 
 *Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/).*
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/pt/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -145,5 +145,5 @@ Abra uma resposta JSON no painel **Network**, clique no ícone `{}` para transfo
 
 Chromium bug: [998674](https://crbug.com/998674) 
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/pt/reach-out.md' %}
+{% include 'partials/devtools/pt/whats-new.md' %}
