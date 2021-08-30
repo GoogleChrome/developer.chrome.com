@@ -15,14 +15,9 @@ tags:
   - chrome-93
 ---
 
-{% Aside %}
-<!--
-Interested in helping improve DevTools? Sign up to participate in [Google User Research here](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458).
--->
-DevToolsの改善に興味がある方はサインアップして [Google User Research](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458) にご協力ください。
+{% include 'partials/devtools/ja/banner.md' %}
 
-{% endAside %}
-
+{% YouTube id="1VaPAnUGRz8" %}
 
 <!--
 ## Editable CSS container queries in the Styles pane {: #container-queries }
@@ -182,7 +177,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 <!--
 ## Display new note URL in the Manifest pane {: #new-note-url }
 -->
-Manifestペインでnew note URLを表示 {: #new-note-url }
+## Manifestペインでnew note URLを表示 {: #new-note-url }
 <!--
 The Manifest pane now displays the the [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking). 
 -->
@@ -248,3 +243,6 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283cd0a96204b1592f59fda2fcb #}
 
 Chromium bug: [998674](https://crbug.com/998674) 
+
+{% include 'partials/devtools/ja/reach-out.md' %}
+{% include 'partials/devtools/ja/whats-new.md' %}
