@@ -77,7 +77,7 @@ cookie for some form of session or saving state. Publishing the I2P means you
 should expect to see the feature available behind a flag in a coming release. If
 you think CHIPS would be useful for your cookies, you should track the [I2P
 thread](https://groups.google.com/a/chromium.org/g/blink-dev/c/hvMJ33kqHRo) or
-the [Chrome Status entry](https://chromestatus.com/features/5179189105786880)
+the [Chrome Status entry](https://chromestatus.com/feature/5179189105786880)
 for availability. We will also have more articles and demos ready for you to see
 the feature in action.
 
