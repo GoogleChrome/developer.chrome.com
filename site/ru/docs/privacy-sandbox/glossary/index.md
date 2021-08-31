@@ -37,7 +37,7 @@ authors:
 
 ## Конверсия по кликам (CTC) {: #ctc }
 
-A conversion attributed to an ad that was 'clicked'.
+Конверсия, связанная с кликом по объявлению.
 
 ## Конверсия
 
@@ -45,7 +45,7 @@ A conversion attributed to an ad that was 'clicked'.
 
 ## Файл cookie
 
-A website can ask a web browser to store a small piece of textual data (called a cookie) on a user's computer. Cookies can be used by a website to save data about a user (or a reference to data stored on the website's backend servers) as the user moves across the web. For example: an online store can retain shopping cart details even if a user is not logged in, or the site could record the user's browsing activity on their site. See [First-party cookie](#first-party-cookie) and [Third-party cookie](#third-party-cookie).
+В веб-браузерах существует механизм, позволяющий сайтам сохранять на компьютере пользователя небольшие фрагменты текстовых данных: файлы cookie. С их помощью сайты могут запоминать данные о посетителях, перемещающихся по страницам (или ссылки на данные, хранящиеся на внутренних серверах сайта). Например, таким образом можно сохранять содержимое корзины в интернет-магазине, даже если пользователь не вошел в систему, или отслеживать действия пользователя на сайте. См. [«Собственные файлы cookie»](#first-party-cookie) и [«Сторонние файлы cookie»](#third-party-cookie).
 
 ## Дифференциальная конфиденциальность {: # Differential-privacy }
 
@@ -120,7 +120,7 @@ glitch.me
 
 ## Испытание Origin Trial {: #origin-trial}
 
-Origin trials provide access to a new or experimental feature, to make it possible to build functionality that users can try out for a limited time before the feature is made available to everyone. When Chrome offers an origin trial for a feature, an [origin](#origin) can be registered for the trial to enable the feature for all users on that origin, without requiring users to toggle any flags or switch to an alternative build of Chrome (though they may need to upgrade). Origin trials enable developers to build demos and prototypes using new features. The trials also help Chrome engineers understand how new features are used, and how they may interact with other web technologies. Find out more: [Getting started with Chrome's origin trials](https://web.dev/origin-trials/).
+Испытания Origin Trial предоставляют доступ к новым и экспериментальным функциям, при помощи которых можно создавать новую функциональность и давать пользователям возможность тестировать ее в течение ограниченного периода времени, прежде чем функция становится общедоступной. Когда в Chrome для той или иной функции доступно испытание Origin Trial, вы можете зарегистрировать [источник](#origin) для участия в этом испытании, чтобы активировать функцию для всех пользователей, просматривающих страницы с этого источника, без необходимости включения скрытых настроек или перехода на альтернативную сборку Chrome (хотя может потребоваться обновление). Испытания Origin Trial позволяют разработчикам использовать новые функции при создании демонстраций и прототипов. Они также помогают инженерам Chrome лучше понять сценарии использования новых функций и то, как они взаимодействуют с другими веб-технологиями. Подробнее см. в статье [«Начало работы с испытаниями Chrome Origin Trial»](https://web.dev/origin-trials/).
 
 ## Пассивная поверхность {: #passive-surface }
 
@@ -160,7 +160,7 @@ Origin trials provide access to a new or experimental feature, to make it possib
 
 Домены верхнего уровня, такие как .com и .org, перечислены в [базе данных корневой зоны](https://www.iana.org/domains/root/db).
 
-Note that some 'sites' are actually just subdomains. For example, translate.google.com and maps.google.com are just subdomains of google.com (which is the [eTLD + 1](#etld)).
+Обратите внимание: некоторые «сайты» на самом деле расположены на поддоменах. Например, translate.google.com и maps.google.com — это поддомены google.com (т. е. [eTLD + 1](#etld)).
 
 ## .well-known
 
