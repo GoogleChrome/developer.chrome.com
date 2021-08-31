@@ -1,12 +1,8 @@
 ---
 layout: layouts/doc-post.njk
-title: First-Party Sets
-subhead: |2
-
-  Allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
-description: |2
-
-  First-Party Sets enables related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
+title: Наборы собственных доменов
+subhead: Механизм, позволяющий связанным доменным именам, имеющим общего владельца, объявлять принадлежность к одному и тому же источнику.
+description: Наборы собственных доменов позволяют объявить принадлежность связанных доменных имен, имеющих общего владельца, к одному и тому же источнику.
 date: '2021-05-18'
 updated: '2021-08-12'
 authors:
@@ -17,26 +13,26 @@ authors:
 
 ## Статус реализации
 
-- [In origin trial](https://web.dev/origin-trials/) Chrome 89 to 93.
+- [Доступно в рамках испытания Origin Trial](https://web.dev/origin-trials/) в Chrome с 89 по 93.
 - [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
-- [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
-- [Chromium Projects](https://www.chromium.org/updates/first-party-sets).
+- [Статус платформы Chrome](https://chromestatus.com/feature/5640066519007232).
+- [Проекты Chromium](https://www.chromium.org/updates/first-party-sets).
 
-## Why do we need First-Party Sets?
+## Зачем нужны наборы собственных доменов?
 
 {% YouTube id='cNJ8mZ-J3F8' %}
 
-Web pages are composed of content from multiple [origins](/docs/privacy-sandbox/glossary#origin). Some content is first-party and comes from the top-level site the user is visiting. Other content may come from third parties, such as ads, embedded media, or shared resources such as JavaScript libraries from [CDNs](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/). Third parties may also want to correlate user activity across different sites by using mechanisms such as [cookies](/docs/privacy-sandbox/glossary#origin).
+Веб-страницы состоят из контента из различных [источников](/docs/privacy-sandbox/glossary#origin). Некоторый контент является собственным, т. е. загружается с основного сайта, на который зашел посетитель. Другой контент загружается из сторонних источников — это может быть реклама, встраиваемые медиаобъекты, а также общие ресурсы, такие как JavaScript-библиотеки из [сетей доставки контента (CDN)](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/). Сторонние источники также могут сопоставлять активность пользователя на различных сайтах, используя такие механизмы, как [файлы cookie](/docs/privacy-sandbox/glossary#origin).
 
-Browsers are proposing privacy models that restrict access to user identity within a cross-site context. However, many organizations have related sites with different domain names, such as domains for different countries (`example.com` and `example.co.uk`, for example). It should be possible to allow related domain names with an appropriate relationship, perhaps common ownership, to declare themselves as belonging to the same first party, so browsers treat those domains as first-party in situations where first party and third party are treated differently.
+Разработчики браузеров предлагают модели обеспечения конфиденциальности, ограничивающие доступ к личным данным пользователя в межсайтовом контексте. Однако у многих организаций есть связанные между собой сайты, расположенные на различных доменных именах, например версии для разных стран (такие как `example.com` и `example.co.uk`). Необходимо, чтобы доменные имена, связанные определенным образом (например, имеющие общего владельца), могли заявить о своей принадлежности к одному источнику, чтобы в тех случаях, когда происходит разграничение между собственными и сторонними доменами, такие домены воспринимались браузерами как собственные домены сайта.
 
-Any solution would also need to prevent abuse of the system. For example, it should not be possible to declare organizations that include unrelated sites with different owners, in order to gain first-party privileges.
+Кроме того, любое решение должно быть устойчивым к злоупотреблению системой. Например, необходимо исключить возможность добавления организаций, включающих не связанные между собой сайты с разными владельцами, с целью получения привилегий собственного домена.
 
 ## Как работают собственные наборы?
 
-A website can declare that it is a member (or owner) of a set of web domains by serving a manifest file that defines its relationship to the other domains: a JSON file at a `.well-known/first-party-set` address.
+Сайт может объявить о том, что является участником (или владельцем) набора доменов, опубликовав файл манифеста, в котором описаны связи с другими доменами. Этот файл имеет формат JSON и располагается по адресу `.well-known/first-party-set`.
 
-Suppose `a.example`, `b.example`, and `c.example` wish to form a first-party set owned by `a.example`. The sites would then serve the following resources:
+Предположим, нам нужно объединить `a.example`, `b.example` и `c.example` в набор собственных доменов, где `a.example` будет выступать в качестве владельца. Для этого сайты должны опубликовать следующие ресурсы:
 
 ```json
 // https://a.example/.well-known/first-party-set
@@ -57,28 +53,28 @@ Suppose `a.example`, `b.example`, and `c.example` wish to form a first-party set
 }
 ```
 
-The owner domain hosts a manifest file that lists its member domains. A browser can ask a member website to specify its owner, and then check the owner's manifest to verify the relationship.
+Домен-владелец размещает файл манифеста, в котором перечислены домены участников. Браузер может запросить у сайта-участника информацию о владельце, а затем свериться с манифестом владельца, чтобы подтвердить связь между ними.
 
-Browser policies are expected to prevent abuse or misuse. For example, First-Party Sets must not enable the exchange of user information across unrelated sites, or the grouping of sites that are not owned by the same entity. One possible way for a site to register could be for the site to submit their proposed group of domains to a public tracker (such as a dedicated GitHub repository) along with information needed to satisfy browser policy. Verification of the owner’s control over member domains may also require a challenge to be served at a `.well-known` URL on each of the domains in the set.
+Предполагается, что политики браузеров будут предотвращать злоупотребление. Например, наборы собственных доменов не должны допускать обмена пользовательской информацией между не связанными друг с другом сайтами или объединения в группы сайтов с разными владельцами. Один из возможных способов регистрации сайтов — это требовать от них публикации файла с описанием группы доменов в общедоступном трекере (например, в специализированном GitHub-репозитории) вместе с информацией, необходимой для удовлетворения политики браузера. Для каждого из доменов в группе также может потребоваться публикация в каталоге `.well-known` специального файла для подтверждения, что домен действительно находится под управлением владельца группы.
 
-The complementary proposal to First-Party Sets is the `SameParty` cookie attribute. Specifying the `SameParty` attribute on a cookie instructs the browser to include the cookie when its context is part of the same First-Party Set as the top-level context.
+В дополнение к наборам собственных доменов также предлагается ввести атрибут `SameParty` для файлов cookie. Атрибут `SameParty` в файле cookie сообщает браузеру, что действие этого файла должно распространяться на контексты, являющиеся частью того же набора собственных доменов, что и основной контекст.
 
-For example, for the First-Party Set described above, a.example can set the following cookie:
+Например, в случае с описанным выше набором собственных доменов сайт a.example может установить следующий файл cookie:
 
 `Set-Cookie: session=123; Secure; SameSite=Lax; SameParty`
 
-This means that when a visitor on b.example or c.example makes a request to a.example, the `session` cookie is included on that request.
+Теперь, если посетитель, находящийся на сайте b.example или c.example, отправит запрос на сайт a.example, этот запрос будет включать файл cookie `session`.
 
 ---
 
 ## Участвуйте и делитесь отзывами
 
-- **Origin trial**: Register and take part in the [Chrome origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
-- **GitHub**: Read the [proposal](https://github.com/privacycg/first-party-sets), [raise questions and follow discussion](https://github.com/privacycg/first-party-sets/issues).
-- **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+- **Испытание Origin Trial**: зарегистрируйтесь и примите участие в [испытании Chrome Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+- **GitHub**: ознакомьтесь с [текстом предложения](https://github.com/privacycg/first-party-sets) и [обсуждением, где можно задать свои вопросы](https://github.com/privacycg/first-party-sets/issues).
+- **Поддержка разработчиков**: задавайте вопросы и участвуйте в обсуждениях в [репозитории поддержки разработчиков Privacy Sandbox](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
-## Find out more
+## Дополнительная информация
 
-- [First-Party Sets technical explainer](https://github.com/privacycg/first-party-sets)
-- [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
-- [Chromium Projects](https://www.chromium.org/updates/first-party-sets).
+- [Техническое описание наборов собственных доменов](https://github.com/privacycg/first-party-sets)
+- [Статус платформы Chrome](https://chromestatus.com/feature/5640066519007232).
+- [Проекты Chromium](https://www.chromium.org/updates/first-party-sets).
