@@ -7,7 +7,7 @@
 
 Инициатива Privacy Sandbox преследует две основные цели:
 
-- Develop replacement solutions to support web use cases and business models without enabling users to be tracked across sites, and avoiding cross-site tracking users aren't aware of.
+- Разработка альтернативных решений для поддержки распространенных в вебе сценариев использования и бизнес-моделей таким образом, чтобы исключить отслеживание пользователей при перемещении между сайтами, а также межсайтовое отслеживание без ведома пользователя.
 - Постепенное прекращение поддержки сторонних файлов cookie с переходом на новые решения.
 
 ## Что предлагает инициатива Privacy Sandbox?
@@ -37,8 +37,8 @@
 ### Ограничение сбора данных
 
 - [**Бюджет конфиденциальности**](https://www.youtube.com/watch?v=0STgfjSA6T8): механизм, дающий сайтам возможность получать информацию об используемом браузере или устройстве, но при этом позволяющий браузеру ограничивать общий объем доступной сайту информации, чтобы не дать ему идентифицировать пользователя.
-- [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/): The [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) (UA) string is a significant passive [fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) surface, as well as being difficult to process. Client Hints enable developers to actively request only the information they need about the user's device or conditions, rather than needing to parse this data from the User-Agent string.
-- [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): Limit the ability to identify individual users by accessing their IP address. There are two parts to the proposal: [**Willful IP Blindness**](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) provides a way for websites to let browsers know they are not connecting IP addresses with users, and [**Near-path NAT**](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md) allows groups of users to send their traffic through the same privatizing server, effectively hiding their IP addresses from a site host. Gnatcatcher also ensures that sites requiring access to IP addresses for legitimate purposes such as abuse prevention can do so, subject to certification and auditing.
+- [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/): строка [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) (UA) — одна из важных пассивных поверхностей [фингерпринтинга](https://w3c.github.io/fingerprinting-guidance/#passive) и вдобавок ее сложно анализировать. С помощью Client Hints (клиентских подсказок) разработчики могут активно запрашивать только ту информацию об устройстве или настройках пользователя, которая им необходима, вместо того чтобы извлекать эти данные из строки User-Agent.
+- [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): позволяет ограничить возможность идентификации конкретных пользователей по IP-адресу. Предложение состоит из двух частей: [<strong data-md="">добровольный отказ от обработки IP-адресов</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) позволяет сайтам сообщать браузеру, что они не идентифицируют пользователей по IP-адресу, в то время как <a href="https://github.com/%20bslassey%20/%20ip-blindness%20/%20blob%20/%20master%20/%20near_path_nat.md%20" data-md-type=" link "><strong data-md-type=" double_emphasis ">Near-path NAT</strong></a> позволяет группам пользователей направлять свой трафик через один и тот же анонимизирующий сервер, фактически скрывая свои IP-адреса от владельцев сайтов. Gnatcatcher также предоставляет сайтам возможность получать доступ к IP-адресам в легитимных целях, таких как предотвращение злоупотребления, при условии прохождения сертификации и аудита.
 
 ### Идентификация
 
@@ -82,7 +82,7 @@
 ### Статьи и видео для веб-разработчиков
 
 - [Погружение в Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
-- [SameSite cookies explained](https://web.dev/samesite-cookies-explained/)
+- [Объяснение SameSite — атрибута файлов cookie](https://web.dev/samesite-cookies-explained/)
 - [Знакомство с токенами доверия](https://web.dev/trust-tokens)
 - [Более конфиденциальный способ измерения конверсий рекламы](https://web.dev/conversion-measurement/)
 - [Что такое FLoC?](https://web.dev/floc/)
