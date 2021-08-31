@@ -11,10 +11,10 @@ authors:
 
 ## Статус реализации
 
-- [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 94.
+- [Доступно в рамках испытания Origin Trial](https://web.dev/origin-trials/) в Chrome с 84 по 94.
 - [Регистрация для участия в испытании](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
 - [Демонстрация](https://trust-token-demo.glitch.me/).
-- [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
+- [Интеграция с Chrome DevTools](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 - [Статус платформы Chrome](https://www.chromestatus.com/feature/5078049450098688).
 
 ## Что такое токены доверия?
