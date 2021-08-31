@@ -11,7 +11,7 @@ layout: 'layouts/blog-post.njk'
 date: 2021-08-31
 authors:
   - petelepage
-hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hcxe0ZGQy0gh5pemX88c.png'
+hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/WHMxxltpvNS4t3YAEkLL.png'
 alt: >
   New in Chrome hero logo
 tags:
