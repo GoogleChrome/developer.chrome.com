@@ -72,7 +72,7 @@ Keep these important notes in mind:
 To create a group publisher, follow these steps:
 
 {% Aside %}
-If you haven't already done so, you may wish to create a private Google Group before you begin.
+If you haven't already done so, you may wish to create a private [Google Group][google-group] before you begin.
 {% endAside %}
 
 1. Sign in to the [Chrome Web Store developer
@@ -86,7 +86,7 @@ If you haven't already done so, you may wish to create a private Google Group be
 1. Select the Google Group that you want to associate with the new group
 publisher, then click **Convert to group publisher**.
 
-1. Make sure that the Google Group has mail turned on, as shown below:
+1. Make sure that the [Google Group][google-group] has mail turned on, as shown below:
 
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/TgfQPjITmgIX0aYcDl1L.png", alt="Screenshot of Allow
         posting by email option", width="685", height="179" %}
