@@ -155,7 +155,7 @@ if you simply want to change your rollout time.
 After you submit the item for review, it will undergo a review process. The time for this review
 depends on the nature of your item. See the [FAQ on review times][review-times] for more details.
 
-To receive email notifications about your item status or any action required, you can enable them under Account settings. 
+There are important emails like take down or rejection notifications that are enabled by default. To receive an email notification when your item is published or staged, you can enable notifications in the Account page.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/l27aRFGCN4MJURmpoCQN.png", alt="Screenshot of enable staged and reviewed items", width="709", height="238" %}
 
