@@ -11,10 +11,10 @@ authors:
 
 ## Status de implementação
 
-- [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 94.
+- [Em ensaio de origem](https://web.dev/origin-trials/): Chrome 84 a 94.
 - [Cadastre-se para o ensaio](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
 - [Demo](https://trust-token-demo.glitch.me/).
-- [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
+- [Integração do Chrome DevTools](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 - [Status da plataforma Chrome](https://www.chromestatus.com/feature/5078049450098688).
 
 ## O que são Trust Tokens?
