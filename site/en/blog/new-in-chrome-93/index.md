@@ -6,7 +6,7 @@ description: >
   URL handlers, making it possible for users to jump straight into your PWA.
   The Multi-Screen Window Placement API has been updated based on your
   feedback, and starts a second origin trial. We're shortening the release
-  cycle for stable to 4-weeks. And there's plenty more.
+  cycle for stable to four weeks. And there's plenty more.
 layout: 'layouts/blog-post.njk'
 date: 2021-08-31
 authors:
@@ -33,17 +33,17 @@ Here's what you need to know:
 * And there's plenty [more](#more).
 
 I'm [Pete LePage](https://petelepage.com), working, and shooting
-from home, let's dive in and see what's new for developers in Chrome 93!
+from home, let's dive in and see what's new for developers in Chrome 93.
 
 ## CSS Module Scripts {: #css-modules }
 
 You can now load CSS style sheets with `import` statements, just like
 JavaScript modules. The style sheets can then be applied to the document or
-shadow roots in the same manner as construct-able stylesheets.
+shadow roots in the same manner as constructable stylesheets.
 
 The new CSS Module Scripts feature is great for custom elements. And unlike
 other ways of applying CSS from JavaScript, there is no need to create
-elements, or mess with Java Script strings of CSS text.
+elements, or mess with JavaScript strings of CSS text.
 
 To use it, import the style sheet with `assert {type: 'css'}`, then apply it
 to the `document` or `shadowRoot` by calling `adoptedStyleSheets`.
@@ -62,7 +62,7 @@ web.dev for complete details.
 
 ## Multi-Screen Window Placement API {: #window-placement }
 
-For some apps, opening new windows, and putting them in specific places,
+For some apps, opening new windows and putting them in specific places
 or specific displays is an important feature. For example, when using Slides to
 present, I want the slides to appear full screen on the primary display, and
 my speaker notes to appear on the other display.
@@ -80,7 +80,7 @@ const isExtended = window.screen.isExtended;
 ```
 
 But, the key functionality is in `window.getScreens()`, which provides all the
-details  about the attached displays.
+details about the attached displays.
 
 ```js
 const screens = await window.getScreens();
@@ -93,7 +93,7 @@ const screens = await window.getScreens();
 // }
 ```
 
-For example, you can determine the primary screen, then use `requestFullscreen`
+For example, you can determine the primary screen, then use `requestFullscreen()`
 to display an element on that screen.
 
 ```js
@@ -122,12 +122,12 @@ screens.addEventListener('screenschange', (event) => {
 
 Check out Tom's article
 [Managing several displays with the Multi-Screen Window Placement API][wd-multi-screen]
-on web.dev for a deeper dive!
+on web.dev for a deeper dive.
 
 ## Shortened release cycle {:# shortened-release-cycle }
 
 In March, we announced our plans to [shorten the release cycle][dcc-shorter-cycle]
-and ship a new version of Chrome every 4 weeks.
+and ship a new version of Chrome every four weeks.
 
 That time has arrived, and we'll ship Chrome 94 on September 21st. You can find
 planned release dates for each version on the [Chrome Calendar][chrome-cal].
@@ -144,7 +144,7 @@ want it to open in the PWA, **not** a browser tab.
 
 By specifying [`url_handlers`][wd-url-handlers] in your
 [web app manifest][wd-manifest], and adding a `web-app-origin-association`
-file to your `.well-known` directory, you can tell the browser that if a
+file to your `.well-known/` directory, you can tell the browser that if a
 user clicks a link to your PWA, it should open within the installed PWA.
 
 Example `url_handlers` in the `manifest.json` file:
@@ -200,7 +200,7 @@ Web Apps. The PWA Summit is a collaboration between folks from a handful of
 different companies involved in the creation of PWA technologies: Google,
 Intel, Microsoft, and Samsung.
 
-There are a ton of great talks and content! You can learn more and register at
+There are a ton of great talks and content. You can learn more and register at
 [PWASummit.org][pwa-summit].
 
 ## And more! {: #more }
