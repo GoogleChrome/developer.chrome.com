@@ -18,7 +18,7 @@ declare global {
   /**
    * This is the single item that ends up being rendered for e.g. an individual tag page.
    */
-  export interface PaginatedPage<T = EleventyCollectionItem> {
+  export interface PaginatedPage<T = EleventyCollectionItem, X = {}> {
 
     /**
      * The date for the very first entry that was used to create all the pages
@@ -56,11 +56,13 @@ declare global {
       },
     },
 
-    // TODO(samthor): The following are added as "additional" data by the tags filter, so we can't
-    // make them required.
-
-    title?: string,
-    key?: string,
+    /**
+     * Extra data from the additional type.
+     *
+     * TODO(samthor): There's no reason this needs to be directly _on_ the PaginatedPage itself.
+     * It could literally be a property.
+     */
+    [other: keyof X]: X[other];
   }
 }
 

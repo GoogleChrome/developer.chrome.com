@@ -46,7 +46,7 @@ module.exports = locale => ({
      * @return {PaginatedPage[]}
      */
     before: tags => {
-      /** @type PaginatedPage[] */
+      /** @type {PaginatedPage<EleventyCollectionItem, {title: string, key: string}>[]} */
       let paginated = [];
 
       for (const tag of tags) {

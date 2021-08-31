@@ -43,12 +43,13 @@ const createPermalink = (baseUrl, i) => createHref(baseUrl, i) + 'index.html';
  * Take array of elements and returns an array of paginated pages for the elements.
  *
  * @template T
+ * @template X
  * @param {(T & {date: Date})[]} items Collection item's for pagination.
  * @param {string} baseUrl Left side of URL.
- * @param {{[key: string]: unknown}} additional
- * @return {PaginatedPage<T>[]}
+ * @param {X=} additional Additional keyed data to add to the output.
+ * @return {PaginatedPage<T, X>[]}
  */
-module.exports = (items, baseUrl, additional = {}) => {
+module.exports = (items, baseUrl, additional) => {
   if (items.length === 0) {
     return [];
   }
