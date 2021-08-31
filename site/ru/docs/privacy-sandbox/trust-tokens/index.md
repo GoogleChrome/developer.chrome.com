@@ -16,57 +16,55 @@ authors:
 ## Статус реализации
 
 - [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 94.
-- [Register for the trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
-- [Demo](https://trust-token-demo.glitch.me/).
+- [Регистрация для участия в испытании](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- [Демонстрация](https://trust-token-demo.glitch.me/).
 - [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
-- [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
+- [Статус платформы Chrome](https://www.chromestatus.com/feature/5078049450098688).
 
 ## Что такое токены доверия?
 
 {% YouTube id='bXB1Iwq6Eq4' %}
 
-Trust Tokens enable trust in a user's authenticity to be conveyed from one context to another, to help sites combat fraud and distinguish bots from real humans—without passive tracking.
+Токены доверия позволяют передавать доверие к подлинности пользователя из одного контекста в другой, помогая сайтам бороться с мошенничеством и отличать ботов от реальных людей — без пассивного отслеживания.
 
-- An **issuer** website can issue tokens to the web browser of a user who shows that they're trustworthy, for example through continued account usage, by completing a transaction, or by getting an acceptable [reCAPTCHA score](https://developers.google.com/recaptcha).
-- A **redeemer** website can confirm that a user is not fake by checking if they have tokens from an issuer the redeemer trusts, and then redeeming tokens as necessary.
+- Сайт-**эмитент** может выдавать токены браузеру пользователя, если тот продемонстрирует свою благонадежность: будет в течение длительного периода использовать свою учетную запись, выполнит транзакцию, получит достаточно высокий [балл reCAPTCHA](https://developers.google.com/recaptcha) и т. д.
+- Сайт-**получатель** может подтвердить, что пользователь является реальным человеком, проверив наличие у него токенов, выданных эмитентом, которому получатель доверяет, а затем, если это необходимо, воспользоваться токенами.
 
-Trust tokens are encrypted, so it isn't possible to identify an individual or connect trusted and untrusted instances to discover user identity.
+Токены доверия зашифрованы, поэтому не позволяют идентифицировать человека или связать доверенные и недоверенные сеансы, чтобы установить личность.
 
-{% Aside 'caution' %} Trust Tokens are not a replacement for reCAPTCHA or other mechanisms for determining whether or not a user is who they say they are.
+{% Aside 'caution' %} Токены доверия — это не замена reCAPTCHA и иных механизмов проверки того, является ли пользователь тем, за кого себя выдает.
 
-Trust Tokens are a way to **convey** trust in a user, not **establish** trust in a user. {% endAside %}
+Токены доверия — это способ **передать** доверие к пользователю, а не **установить**, заслуживает ли он доверия. {% endAside %}
 
-## Why do we need Trust Tokens?
+## Зачем нужны токены доверия?
 
-The web needs ways to establish and convey trust signals which show that a user is who they say they are, and not a bot pretending to be a human or a malicious third-party defrauding a real person or service. Fraud protection is particularly important for advertisers, ad providers, and [CDNs](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/).
+Интернет нуждается в способах установки и передачи сигналов доверия, показывающих, что пользователь действительно является тем, за кого себя выдает, а не ботом, маскирующимся под человека, или злоумышленником, пытающимся обмануть реального человека или сервис. Защита от мошенничества особенно важна для рекламодателей, поставщиков рекламы и сетей [CDN](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/).
 
 Unfortunately, many existing mechanisms to gauge and propagate trustworthiness—to work out if an interaction with a site is from a real human, for example—take advantage of techniques that can also be used for fingerprinting. Mechanisms to convey trust must preserve privacy, enabling trust to be propagated across sites without individual user tracking.
 
 With the Trust Tokens API, a website can issue cryptographic tokens to a user it trusts, which can later be used elsewhere. The tokens are stored securely by the user's browser, and can then be redeemed in other contexts to confirm the user's authenticity. This allows trust of a user on one website (such as a social media site or email service) to be conveyed to another website (such as a publisher or online store) without identifying the user or linking identities across sites.
 
-{% Aside 'key-term' %}
- [Fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) enables sites to identify and track individual users by getting data about their device, operating system, and browser setup (such as language preferences, [user agent](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent), and available fonts) or changes in device state. This may be done on the server by checking request headers or on the client with JavaScript.
+{% Aside 'key-term' %}<br> [Фингерпринтинг](https://w3c.github.io/fingerprinting-guidance/#passive) позволяет сайтам идентифицировать и отслеживать отдельных пользователей, получая данные об их устройстве, операционной системе и настройках браузера (например, языковых настройках, строке [user-agent](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) и доступных шрифтах), а также изменениях в состоянии устройства. Это можно делать как на стороне сервера путем проверки заголовков запросов, так и на стороне клиента при помощи JavaScript.
 
-Fingerprinting uses mechanisms that users aren't aware of and can't control. Sites such as [Panopticlick](https://panopticlick.eff.org/) and [amiunique.org](https://amiunique.org/) show how fingerprint data can be combined to identify you as an individual.
- {% endAside %}
+Фингерпринтинг использует механизмы, о которых пользователи не знают и которые не могут контролировать. Сайты, такие как [Panopticlick](https://panopticlick.eff.org/) и [amiunique.org](https://amiunique.org/), показывают, как данные, полученные в результате фингерпринтинга, можно объединить, чтобы идентифицировать вашу личность.<br> {% endAside %}
 
 ## Как работают токены доверия?
 
-In this example a publisher website wants to check if a user is a real human, and not a bot, before displaying an ad.
+В этом примере сайт издателя перед показом рекламы хочет проверить, является ли пользователь настоящим человеком, а не ботом.
 
-1. A user visits a website (known as an **issuer**) and performs actions that lead the site to believe that the user is a real human, such as making purchases, using an email account or successfully completing reCAPTCHA.
+1. Пользователь заходит на сайт (известный как **эмитент**) и выполняет действия, которыми подтверждает, что он реальный человек: делает покупки, использует электронную почту, успешно проходит тест reCAPTCHA и т. д.
 2. The issuer site uses the Trust Tokens JavaScript API to trigger a request for trust tokens for the user's browser.
-3. The issuer site responds with token data.
-4. The user's browser securely stores data for the trust token.
-5. The user visits a different website (such as a news publisher) that wants to verify if the user is a real human: for example, when displaying ads.
-6. The site uses the Trust Tokens API to check if the user's browser has trust tokens stored for issuers that the site trusts.
-7. Trust tokens are found for the issuer the user visited previously.
-8. The publisher site makes a request to the issuer to redeem the trust tokens.
-9. The issuer site responds with a Redemption Record.
-10. The publisher site makes a request to an ad platform, including the Redemption Record to show that the user is trusted by the issuer to be a real human.
-11. The ad platform provides the data required to display an ad.
-12. The publisher site displays the ad.
-13. An ad view impression is counted.
+3. Сайт-эмитент возвращает данные токена.
+4. Браузер пользователя безопасно сохраняет данные токена доверия.
+5. Пользователь заходит на другой сайт (такой, как новостной портал), который хочет проверить, является ли пользователь настоящим человеком, — например, чтобы показать рекламу.
+6. При помощи API токенов доверия сайт проверяет, сохранены ли в браузере пользователя токены доверия от эмитентов, которым сайт доверяет.
+7. В браузере обнаруживаются токены доверия от эмитента, сайт которого пользователь уже посещал.
+8. Сайт издателя отправляет эмитенту запрос, чтобы использовать токены доверия.
+9. Сайт-эмитент отвечает записью об использовании токенов.
+10. Сайт издателя отправляет рекламной платформе запрос, в котором указывает запись об использовании токенов, таким образом подтверждая, что эмитент доверяет пользователю и считает его реальным человеком.
+11. Рекламная платформа предоставляет данные, необходимые для показа рекламы.
+12. Объявление отображается на сайте издателя.
+13. Сайт засчитывает показ объявления.
 
 {% Aside %} For more detail about the JavaScript calls in this example, see [Sample API usage](https://web.dev/trust-tokens/#sample-api-usage). {% endAside %}
 
@@ -74,16 +72,16 @@ In this example a publisher website wants to check if a user is a real human, an
 
 ## Участвуйте и делитесь отзывами
 
-- **Origin trial**: Register and take part in the [Chrome origin trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
-- **Demo**: Try out trust token [issuance and redemption](https://trust-token-demo.glitch.me/).
-- **GitHub**: Read the [proposal](https://github.com/WICG/trust-token-api), [raise questions and follow discussion](https://github.com/WICG/trust-token-api/issues).
-- **W3C**: Discuss industry use cases in the [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
-- **IETF**: Provide technical input for the underlying protocol in the IETF [Privacy Pass working group](https://datatracker.ietf.org/wg/privacypass/about/).
-- **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+- **Испытание Origin Trial**: зарегистрируйтесь и примите участие в [испытании Chrome Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- **Демонстрация**: попробуйте [генерировать и использовать](https://trust-token-demo.glitch.me/) токены доверия.
+- **GitHub**: ознакомьтесь с [текстом предложения](https://github.com/WICG/trust-token-api) и [обсуждением, где можно задать свои вопросы](https://github.com/WICG/trust-token-api/issues).
+- **W3C**: обсудите сценарии использования из отрасли в группе [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
+- **IETF**: предоставьте технические замечания по поводу внутреннего протокола в [рабочей группе IETF Privacy Pass](https://datatracker.ietf.org/wg/privacypass/about/).
+- **Поддержка разработчиков**: задавайте вопросы и участвуйте в обсуждениях в [репозитории поддержки разработчиков Privacy Sandbox](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
-## Find out more
+## Дополнительная информация
 
-- [Trust Token API technical explainer](https://github.com/dvorak42/trust-token-api)
-- [Getting started with Trust Tokens](https://web.dev/trust-tokens/): an overview for web developers
-- [Getting started with Chrome's origin trials](https://web.dev/origin-trials)
-- [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
+- [Техническое описание API токенов доверия](https://github.com/dvorak42/trust-token-api)
+- [Начало работы с токенами доверия](https://web.dev/trust-tokens/): обзор для веб-разработчиков
+- [Знакомство с испытаниями Chrome Origin Trial](https://web.dev/origin-trials)
+- [Погружение в Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
