@@ -14,7 +14,7 @@ authors:
 ## Статус реализации
 
 - [Доступно в рамках испытания Origin Trial](https://web.dev/origin-trials/) в Chrome с 89 по 93.
-- [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+- [Регистрация для участия в испытании Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
 - [Статус платформы Chrome](https://chromestatus.com/feature/5640066519007232).
 - [Проекты Chromium](https://www.chromium.org/updates/first-party-sets).
 
