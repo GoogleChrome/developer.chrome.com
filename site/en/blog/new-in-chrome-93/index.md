@@ -19,7 +19,7 @@ tags:
   - chrome-93
 ---
 
-{# YouTube id='COMING_SOON' #}
+{% YouTube id='R5RUVO_g2NI' %}
 
 Here's what you need to know:
 
@@ -138,6 +138,10 @@ If you're building a Progressive Web App, there are two new origin trials
 worth checking out.
 
 ### URL handlers for PWAs {: #url-handlers }
+
+{% Aside %}
+This likely slipped to Chrome 94.
+{% endAside %}
 
 If you have a PWA installed, and you click on a link to that PWA, you probably
 want it to open in the PWA, **not** a browser tab.
