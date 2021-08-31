@@ -60,10 +60,12 @@ function buildCheckHandlerInternal(redirects, staticPaths = undefined) {
  * @return {express.RequestHandler}
  */
 function buildRedirectHandler(filename, staticPaths = undefined, code = 301) {
-  const raw = fs.readFileSync(filename, 'utf-8');
-  const yaml = YAML.load(raw);
+  const raw = YAML.load(fs.readFileSync(filename, 'utf-8'));
+  const {
+    redirects,
+  } = /** @type {{ redirects: redirectsYaml.RedirectLine[] }} */ (raw);
 
-  const handler = buildCheckHandlerInternal(yaml.redirects, staticPaths);
+  const handler = buildCheckHandlerInternal(redirects, staticPaths);
 
   /** @type {express.RequestHandler} */
   return (req, res, next) => {

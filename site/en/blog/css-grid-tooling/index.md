@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 <!-- lint disable no-smart-quotes -->
 
 ## Why did we make CSS Grid Tooling?
@@ -152,3 +154,6 @@ This enables DevTools frontend to get a list of CSS Grid containers in a page, p
 ## Conclusion
 
 CSS Grid tooling was one of the first DevTools design tooling projects to support a Web Platform feature. It debuted many fundamental toolings in DevTools, e.g. persistent overlays, DOM Tree badges, and the **Layout** pane, and paved the way for future layout toolings in Chrome DevTools like Flexbox and Container queries. It also laid the foundation for Grid and Flexbox editors, which allow developers to change Grid and Flexbox alignments in an interactive way. We'll go through them in the future.
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

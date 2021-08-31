@@ -9,7 +9,7 @@ description: >
  similar browsing history. This is done without sharing individual browsing history with the browser 
  vendor or anyone else.
 date: 2021-05-18
-updated: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---
@@ -17,9 +17,8 @@ authors:
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials): Chrome 91 Beta. See [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) for updates.
-* [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561).
-* [Demo](https://floc.glitch.me).
+* Initial [origin trial](https://web.dev/origin-trials) now closed. 
+* [Demo](https://floc.glitch.me/) of initial version (origin trial now closed).
 * [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) in 
 [Blink](https://www.chromium.org/blink).
 

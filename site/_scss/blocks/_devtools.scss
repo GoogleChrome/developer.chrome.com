@@ -1,0 +1,58 @@
+// These styles exist for DevTools' tutorial. They're removed in other files.
+
+.devtools-css-check {
+  input {
+    color: #00f;
+
+    &:invalid {
+      background: #c00;
+      color: #fff;
+    }
+  }
+
+  input:not(:invalid) + span::after {
+    content: 'Correct!';
+    padding-left: 0.5ch;
+  }
+}
+
+.aloha {
+  border: 1px dashed #f00;
+  display: inline-block;
+  padding: 1em;
+
+  &.hover {
+    &:hover {
+      background: #6393f0;
+    }
+  }
+}
+
+// stylelint-disable color-named
+@keyframes rainbow {
+  0% {
+    background: violet;
+  }
+
+  25% {
+    background: orange;
+  }
+
+  50% {
+    background: yellow;
+  }
+
+  75% {
+    background: blue;
+  }
+
+  100% {
+    background: violet;
+  }
+}
+
+// stylelint-disable selector-class-pattern
+.color_me {
+  animation: rainbow 10s linear infinite;
+  background: yellow;
+}

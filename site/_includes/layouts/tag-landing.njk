@@ -3,7 +3,12 @@
 {% extends "layouts/base.njk" %}
 
 {% block title_bar %}
+  {% set headingBreadcrumb = true %}
   {% include 'partials/breadcrumbs-tag.njk' %}
+{% endblock %}
+
+{% block feed %}
+  <link rel="alternate" type="application/rss+xml" title="{{ title }}" href="{{ site.url }}/feeds/{{ feedName }}.xml">
 {% endblock %}
 
 {% block content %}

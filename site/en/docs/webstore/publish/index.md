@@ -11,7 +11,7 @@ This page describes how you publish a new extension or theme ("item") to the Chr
 
 {% Aside 'note' %}
 
-To publish updates to an existing item, or to update the percent rollout, see [Updating your Chrome
+To publish updates to an existing item, or to update the percent rollout, see [Update your Chrome
 Web Store item][update]. To learn about group publishers, see [Set up group
 publishing][group-publishers].
 
@@ -155,6 +155,9 @@ if you simply want to change your rollout time.
 After you submit the item for review, it will undergo a review process. The time for this review
 depends on the nature of your item. See the [FAQ on review times][review-times] for more details.
 
+To receive email notifications about your item status or any action required, you can enable them under Account settings. 
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/l27aRFGCN4MJURmpoCQN.png", alt="Screenshot of enable staged and reviewed items", width="709", height="238" %}
 
 [cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [description]: /docs/apps/manifest/description/

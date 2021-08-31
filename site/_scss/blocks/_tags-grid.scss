@@ -2,10 +2,29 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: get-size(600);
-  
+
   @include media-query('md') {
     column-gap: get-size(1000);
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     row-gap: get-size(600);
+  }
+
+  @include media-query('lg') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tag-card {
+    border-top: 1px solid var(--color-hairline);
+    padding: get-size(300) 0;
+  }
+}
+
+.tag-card__header {
+  // Mobile-only
+  // Every card except for the first one should have a top border.
+  &:not(:first-child) {
+    @include media-query('md-max') {
+      border-top: 1px solid var(--color-hairline);
+    }
   }
 }

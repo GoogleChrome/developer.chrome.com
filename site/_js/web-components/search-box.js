@@ -311,7 +311,12 @@ export class SearchBox extends BaseElement {
             r[highlightKey] = highlightValue.value;
           }
         }
-        r.snippet = r._snippetResult.content.value;
+        // Some pages don't get indexed with fulltext content, but they do have
+        // a meta description, so fall back to that.
+        r.snippet =
+          r._snippetResult.content?.value ||
+          r._snippetResult.description?.value ||
+          '';
         return r;
       });
 

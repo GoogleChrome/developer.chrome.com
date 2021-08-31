@@ -15,6 +15,8 @@ tags:
   - chrome-70
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 Welcome back! It's been about 12 weeks since our last update, which was for Chrome 68. We skipped
 Chrome 69 because we didn't have enough new features or UI changes to warrant a post.
 
@@ -199,6 +201,10 @@ Performance recordings.
 This also comes in handy when debugging or optimizing code. For example, if you want to optimize a
 certain phase of your lifecycle, call `window.performance.mark()` at the beginning and end of your
 lifecycle function. React does this in development mode.
+
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: #watch
 [2]: #nodes

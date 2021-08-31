@@ -52,7 +52,7 @@ const walk = dir => {
         results[name] = walk(file);
       } else {
         /* Is a file */
-        results[name] = yaml.safeLoad(fs.readFileSync(file, 'utf-8'));
+        results[name] = yaml.load(fs.readFileSync(file, 'utf-8'));
       }
     });
   return results;

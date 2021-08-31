@@ -9,11 +9,12 @@
 {% extends 'partials/title-bar.njk' %}
 
 {% block title_bar_content %}
-  <nav class="breadcrumbs cluster" aria-label="{{ 'i18n.common.breadcrumbs' | i18n(locale) }}">
-    <div class="align-center flow-space-200">
-      <a class="type--h6 color-primary surface decoration-none" href="/tags/">{{ 'i18n.common.tags' | i18n(locale) }}</a>
-      {{ icon('keyboard-arrow-right', {hidden: true}) }}
-      <span class="type--h5">{{ title }}</span>
-    </div>
+  <nav class="breadcrumbs flow-space-200" aria-label="{{ 'i18n.common.breadcrumbs' | i18n(locale) }}">
+    <a class="link type--h6 decoration-none no-visited" href="/tags/">{{ 'i18n.common.tags' | i18n(locale) }}</a>
+    {{ icon('keyboard-arrow-right', {hidden: true}) }}
+    <h1 class="type--h5">{{ title }}</h1>
+    <a class="display-flex" href="/feeds/{{ feedName }}.xml" target="_blank" aria-label="RSS for {{ title }}">
+      {{ icon('rss', {hidden: true}) }}
+    </a>
   </nav>
 {% endblock %}

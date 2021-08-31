@@ -16,9 +16,7 @@ tags:
   - chrome-89
 ---
 
-{% Aside %}
-Interested in helping improve DevTools? Sign up to participate in [Google User Research here][1].
-{% endAside %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id="msHeKmMEeHU" %}
 
@@ -452,6 +450,10 @@ background), and context (ambient light, surroundings, intended purpose of the t
 The example show the APCA threshold is **38%**. The contrast ratio must meet or exceed the listed value. This value is calculated based on font weight and size, referring to this [APCA lookup table](https://bugs.chromium.org/p/chromium/issues/attachmentText?aid=486485). 
 
 Chromium issue: [1121900][50]
+
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]:
   https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458

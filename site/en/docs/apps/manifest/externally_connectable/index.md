@@ -15,7 +15,7 @@ more about [**migrating your app**][2].
 {% endAside %}
 
 The `externally_connectable` manifest property declares which extensions, apps, and web pages can
-connect to your app via [runtime.connect][3] and [runtime.sendMessage][4].
+connect to your app via [`runtime.connect`][3] and [`runtime.sendMessage`][4].
 
 For a tutorial on message passing see [cross-extension and app messaging][5] and [sending messages
 from web pages][6].
@@ -78,14 +78,14 @@ The externally_connectable manifest key can have the following properties:
   scripts._ If left empty or unspecified, no web pages can connect.
 
   Patterns cannot include wildcard domains nor subdomains of [(effective) top level domains][9];
-  `*://google.com/*` and `http://*.chromium.org/*` are valid, while `<all_urls>`, `http://*/*`,
-  `*://*.com/*`, and even `http://*.appspot.com/*` are not.
+  `*://google.com/*` and `https://*.chromium.org/*` are valid, while `<all_urls>`, `https://*/*`,
+  `*://*.com/*`, and even `https://*.appspot.com/*` are not.
 
 - **`accepts_tls_channel_id` (boolean)** - optional
 
-  If `true`, messages sent via [runtime.connect][10] or [runtime.sendMessage][11] will set
-  [runtime.MessageSender.tlsChannelId][12] if those methods request it to be. If `false`,
-  [runtime.MessageSender.tlsChannelId][13] will never be set under any circumstance.
+  If `true`, messages sent via [`runtime.connect`][10] or [`runtime.sendMessage`][11] will set
+  [`runtime.MessageSender.tlsChannelId`][12] if those methods request it to be. If `false`,
+  [`runtime.MessageSender.tlsChannelId`][13] will never be set under any circumstance.
 
 [1]: https://blog.chromium.org/2020/08/changes-to-chrome-app-support-timeline.html
 [2]: /apps/migration
@@ -95,7 +95,7 @@ The externally_connectable manifest key can have the following properties:
 [6]: ../messaging#external-webpage
 [7]: /apps/runtime#method-connect
 [8]: /apps/runtime#method-sendMessage
-[9]: http://publicsuffix.org/list/
+[9]: https://publicsuffix.org/list/
 [10]: /apps/runtime#method-connect
 [11]: /apps/runtime#method-sendMessage
 [12]: /apps/runtime#property-MessageSender-tlsChannelId

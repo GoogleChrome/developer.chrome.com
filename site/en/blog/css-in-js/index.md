@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 This article talks about CSS-in-JS support in DevTools that landed since Chrome 85 and, in general, what we mean by CSS-in-JS and how it's different from regular CSS that has been supported by DevTools for a long time.
 
 ## What is CSS-in-JS?
@@ -138,3 +140,6 @@ With all these pieces in place, CSS-in-JS editing already works but we wanted to
 To recap our story here, we went through the relevant use cases related to CSS-in-JS that DevTools didn't support and walked through the solution to support those use cases. The interesting part of this implementation is that we were able to leverage existing functionality by making CSSOM CSS rules have a regular source text, avoiding the need to completely re-architect style editing in DevTools.
 
 For more background, check out [our design proposal](https://goo.gle/devtools-css-in-js) or the Chromium [tracking bug](https://bugs.chromium.org/p/chromium/issues/detail?id=946975) which references all related patches.
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

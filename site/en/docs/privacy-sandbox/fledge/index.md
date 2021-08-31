@@ -43,8 +43,8 @@ With FLEDGE:
 * The user's browser, not the advertiser or ad tech platform, stores advertiser-defined interest
 groups that the user's browser is associated with.
 * The user’s browser combines interest group data with ad buyer/seller data and business logic to
-conduct an "auction" locally on the user's device to select an ad, rather than sharing data with a
-third party. This ad auction happens locally on the user's device.
+conduct an "auction" to select an ad. This ad auction happens locally on the user's device, rather 
+than sharing data with a third party.
 * Ads can be selected for an interest group, but an advertiser cannot combine interest group data
 with other information about a user—in particular, the identity of a person or the pages they visit.
 An advertiser cannot learn about what pages a user views on a publisher site.

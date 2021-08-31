@@ -37,9 +37,9 @@ You also need to use a slightly different URL than that of the public store, whi
 Google Workspace domain:
 
 * **Public Chrome Web Store:** &emsp;
-  `chrome.google.com/webstore/category/extensions`
+  `chrome.google.com/webstore`
 * **Private Chrome Web Store:** &emsp;
-  `chrome.google.com/webstore/a/example.com/category/extensions`
+  `chrome.google.com/webstore/a/example.com`
 
 The option that enables this is available to administrators at **Devices > Chrome > Apps &
 extensions > Users & browsers > Additional settings > Chrome Web store permissions**:

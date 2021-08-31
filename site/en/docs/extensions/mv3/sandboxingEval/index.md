@@ -151,16 +151,15 @@ time.
 
 [1]: /docs/extensions/mv3/contentSecurityPolicy
 [2]: /docs/extensions/mv3/contentSecurityPolicy
-[3]: http://angularjs.org/
-[4]: http://crbug.com/107538
-[5]:
-  http://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#sandboxed-origin-browsing-context-flag
+[3]: https://angularjs.org/
+[4]: https://crbug.com/107538
+[5]: https://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#sandboxed-origin-browsing-context-flag
 [6]: /docs/extensions/mv3/samples#sandboxed-frame
-[7]: http://handlebarsjs.com
+[7]: https://handlebarsjs.com
 [8]: /docs/extensions/examples/howto/sandbox/sandbox.html
 [9]: /docs/extensions/mv3/event_pages
 [10]: /docs/extensions/examples/howto/sandbox/eventpage.html
 [11]: /docs/extensions/examples/howto/sandbox/eventpage.js
 [12]: https://developer.mozilla.org/en/DOM/window.postMessage
 [13]: /docs/extensions/mv3/desktop_notifications
-[14]: http://www.youtube.com/watch?v=GBxv8SaX0gg
+[14]: https://www.youtube.com/watch?v=GBxv8SaX0gg

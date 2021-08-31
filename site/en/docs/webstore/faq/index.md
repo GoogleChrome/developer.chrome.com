@@ -44,7 +44,7 @@ background pages.
 
 All extensions go through an automated review process and in some cases, an extension will be published without
 further manual review. There may be some instances in which a manual review will be required before
-the extension is published based on our [program policies][98]. In some cases, where sensitive permissions
+the extension is published based on our [program policies][program-policies]. In some cases, where sensitive permissions
 are requested, review times and/or approval times may be longer.
 
 ### How will users find my extension? {: #faq-gen-09 }
@@ -66,25 +66,10 @@ now pay it in order to continue accessing your developer dashboard. This one-tim
 the standard [developer registration process][99].
 {% endAside %}
 
-### How can I sign up using my Google Apps email address (for example, admin@example.com)? {: #faq-gen-17 }
-
-If you can't sign into the Chrome Web Store Developer Dashboard with your Google Apps email address,
-you have two options:
-
-1.  Go to [https://www.google.com/accounts/NewAccount][100], and create a Google Account whose login
-    email is your Google Apps email address. Once you do this, you'll be able to log in using that
-    email address. Note, however, that you'll have two accounts with the same login email address: a
-    Google Account and a Google Apps account.
-2.  Wait until the domain is transferred to the new Google Apps account infrastructure. Transitioned
-    Google Apps accounts will be able to log into the Chrome Web Store Developer Dashboard. For more
-    information, read the [help for the new Google Apps infrastructure][101].
-
-We recommend option 1 if you want to get up and running as soon as possible.
-
 ### What types of extensions are not allowed in the store? {: #faq-gen-22 }
 
 While we try to allow most extensions, a small number of extensions are explicitly
-disallowed in our [Developer Terms of Service][102] and [Program Policies][103]. Such
+disallowed in our [Developer Terms of Service][terms-of-services] and [Program Policies][program-policies]. Such
 extensions will be removed when they are brought to our attention.
 
 ### How do I report an abusive extension? {: #faq-gen-23 }
@@ -156,7 +141,7 @@ denied.
 
 As of October 1st 2018, developers must not obfuscate code or conceal functionality of their
 extensions. This also applies to any external code or resource fetched by the extension package. For
-more information, please review our [program policies][106].
+more information, please review our [program policies][program-policies].
 
 ## Development
 
@@ -173,7 +158,7 @@ pushed out to users over the next few hours.
 ### Can I host my own extension? {: #faq-dev-03 }
 
 Yes, you may host your own extension, although you will need to take care of [packaging and
-serving the][111] [auto-update manifest][112] yourself.
+serving][111] the [auto-update manifest][112] yourself.
 
 ## Creating a listing
 
@@ -186,7 +171,7 @@ extension. Do not upload a .crx file; the submission will fail.
 
 The item won't appear in the web store until it has successfully completed the review process.
 (Although the item's unique ID is generated as soon as you upload your first zip file.) For further
-details, see [How long will it take to review my item?][114].
+details, see [How long will it take to review my item?][how-long-do-reviews-take].
 
 Extensions which are published to the same domain as the publisher address may be approved more
 quickly.
@@ -272,7 +257,7 @@ to only users of the "en-GB" Chrome Web Store.
 
 This means that you've submitted your item for publishing and it is currently in the queue to be
 reviewed. The item will not appear in the store until it passes this review. (See also [How long
-will it take to review my item?][121])
+will it take to review my item?][how-long-do-reviews-take])
 
 ### How long will it take to review my item? {: #faq-listing-108 }
 
@@ -314,12 +299,11 @@ or egregious policy violations may result in termination of your developer accou
 
 - For all policy violation extension removals, you will receive a removal notification email with more
   details in the developer account listed as the owner of the extension. Please make the appropriate
-  changes so your extension complies with all [Developer Program Policies][128], [Branding
-  Guidelines][129] and [Terms of Services][130]. Once you have remedied the violation you can
+  changes so your extension complies with all [Developer Program Policies][program-policies], [Branding
+  Guidelines][branding] and [Terms of Services][terms-of-services]. Once you have remedied the violation you can
   resubmit via your developer dashboard.
 - Please do not re-publish a removed extension until the policy violation has been remedied. If
-  you have additional questions or feel your item was wrongly removed, you can reply directly to the
-  removal email and appeal.
+  you have additional questions, follow the instructions in the [CWS Complaint Handling FAQ][complaint-handling].
 - If you believe your developer account was wrongly terminated, you can appeal [here][cws-support]. We will
   only reinstate accounts if an error was made, and a re-review finds that your account does not
   violate the developer terms.
@@ -333,19 +317,20 @@ is no way to enter the information into your listing.
 
 ## Additional Troubleshooting
 
-If you've fixed all errors produced by the tools and continue experiencing issues, please [contact
-us][cws-support] with any additional details regarding the problem. Please send us a screenshot of the
+If you've fixed all errors produced by the tools and continue experiencing issues, please [contact us][cws-support] 
+with any additional details regarding the problem. Please send us a screenshot of the
 problem and include your .crx file.
 
 ### How can I raise P2B concerns?
 
 European developers can raise concerns about clarity of terms, policies, or other Platform To
-Business related issues by contacting CWS support.
+Business related issues by contacting [CWS support][cws-support].
 
-[1]: http://chrome.google.com/webstore
+
+[1]: https://chrome.google.com/webstore
 [2]: /docs/extensions/mv2/hosting_changes
 [3]: /docs/extensions/mv2/faq
-[4]: http://groups.google.com/a/chromium.org/group/chromium-apps
+[4]: https://groups.google.com/a/chromium.org/group/chromium-apps
 [5]: #faq-gen-01
 [6]: #faq-gen-02
 [7]: #faq-gen-05
@@ -382,7 +367,6 @@ Business related issues by contacting CWS support.
 [38]: #faq-gen-20
 [39]: #faq-gen-21
 [40]: #faq-listing-08
-[41]: #faq-listing-108
 [42]: #faq-listing-09
 [43]: #faq-listing-10
 [44]: #faq-listing-11
@@ -433,38 +417,32 @@ Business related issues by contacting CWS support.
 [89]: #faq-extensions-02
 [90]: #faq-themes-01
 [91]: #faq-themes-02
-[95]: http://googlechromereleases.blogspot.com/
-[96]: http://crbug.com
-[97]: http://www.chromium.org/getting-involved/dev-channel
-[98]: /docs/webstore/program_policies
+[95]: https://chromereleases.googleblog.com/
+[96]: https://crbug.com
+[97]: https://www.chromium.org/getting-involved/dev-channel
 [99]: /docs/webstore/register
 [100]: https://www.google.com/accounts/NewAccount
-[101]: http://www.google.com/support/a/bin/topic.py?topic=28917
-[102]: /docs/webstore/terms
-[103]: /docs/webstore/intl/en/program_policies.html
-[104]: http://groups.google.com
-[106]: /docs/webstore/program_policies
+[104]: https://groups.google.com
 [110]: https://chrome.google.com/webstore/devconsole
-[111]: http://code.google.com/chrome/extensions/packaging.html
-[112]: http://code.google.com/chrome/extensions/autoupdate.html
-[114]: #faq-listing-108
+[111]: https://code.google.com/chrome/extensions/packaging.html
+[112]: https://code.google.com/chrome/extensions/autoupdate.html
 [116]: images
-[117]:
-  http://groups.google.com/group/chromium-extensions/browse_thread/thread/defbf282d11a8cc4/a2d1aedb84bc60b9
-[121]: #faq-listing-108
+[117]: https://groups.google.com/group/chromium-extensions/browse_thread/thread/defbf282d11a8cc4/a2d1aedb84bc60b9
 [122]: https://www.google.com/about/company/unwanted-software-policy.html
 [123]: /docs/webstore/program_policies
 
 [125]: /docs/extensions/mv3/manifestVersion
 [127]: https://support.google.com/chrome_webstore/answer/1254182?hl=en&ref_topic=1734051
-[128]: /docs/webstore/program_policies
-[129]: /docs/webstore/branding
-[130]: /docs/webstore/terms
 
 [apps]: /docs/apps/
+[branding]: /docs/webstore/branding
+[complaint-handling]: /docs/webstore/complaint-faq
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
 [ext]: /docs/extensions/
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
+[how-long-do-reviews-take]: #faq-listing-108
 [internationalize]: /docs/webstore/i18n
+[terms-of-services]: /docs/webstore/terms
 [themes]: /docs/extensions/mv3/themes/
+[program-policies]: /docs/webstore/program_policies
 

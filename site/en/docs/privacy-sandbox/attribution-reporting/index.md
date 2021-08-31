@@ -6,7 +6,7 @@ subhead: >
 description: >
   The Attribution Reporting API makes it possible to measure when user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 date: 2021-05-18
-updated: 2021-08-09
+updated: 2021-08-24
 authors:
   - maudn
   - samdutton
@@ -21,8 +21,11 @@ See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
 
 ## Glossary
 
-{% Aside %} You may also want to consult the complete [Privacy Sandbox
-glossary](/docs/privacy-sandbox/glossary/). {% endAside %}
+{% Aside %} 
+
+You may also want to consult the complete [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/). 
+
+{% endAside %}
 
 - **Adtech platforms**: companies that provide software and tools to enable brands or
   agencies to target, deliver, and analyze their digital advertising.
@@ -44,8 +47,9 @@ glossary](/docs/privacy-sandbox/glossary/). {% endAside %}
   need to use the API directly, but may be interested in understanding it if they're
   working with adtech platforms that may integrate the API.
 
-{% Aside %} There may be use cases that are non-ads-related. [Engage](#engage) to share
-your use case! {% endAside %}
+{% Aside %} 
+There may be use cases that are non-ads-related. [Engage](#engage) to share your use case! 
+{% endAside %}
 
 ## Why is this API needed? {: #why-is-this-api-needed }
 
@@ -57,8 +61,10 @@ privacy-preserving way, without third-party cookies.
 
 ## How does the Attribution Reporting API work and what are its features?
 
-{% Aside %} This API is being incubated and developed in the open. It is subject to
-change. Your feedback is welcome. See [how to engage](#engage). {% endAside %}
+{% Aside %} 
+This API is being incubated and developed in the open. It is subject to
+change. Your feedback is welcome. See [how to engage](#engage). 
+{% endAside %}
 
 The Attribution Reporting API enables the measurement of two events that are linked
 together: an event on a publisher's website, such as a user viewing or clicking an ad,
@@ -68,7 +74,7 @@ This API supports click-through conversion attribution measurement (available in
 implementation of this API, currently in [origin
 trial](https://web.dev/conversion-measurement/#browser-support)) and view-through
 attribution measurement ([see public
-explainer](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting.md)).
+explainer](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_views.md)).
 
 The API offers two types of attribution reports than can be used for different use cases:
 
@@ -123,3 +129,4 @@ The API offers two types of attribution reports than can be used for different u
   API](https://web.dev/using-conversion-measurement/): how to experiment with the first
   iteration of this API for web developers
 - [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
+- [Debug the API with Chrome DevTools](/blog/new-in-devtools-93/#attribution-reporting)

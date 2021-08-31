@@ -61,7 +61,7 @@ in the shortode.
 #### Img Properties (`ImgArgs`)
 
 ```typescript
-{% include '../../../../../../node_modules/webdev-infra/types/shortcodes/Img.d.ts' %}
+{% includeRaw '../../node_modules/webdev-infra/types/shortcodes/Img.d.ts' %}
 ```
 
 The `{% raw %}`{% Img %}`{% endraw%}` `params` object exposes the entire [Imgix
@@ -91,13 +91,13 @@ Flipped
 {% endColumns %}
 
 {% Aside %}
-Please call out in a review if you're calling a specific Imgix API, so we can be
-aware of custom use-cases and potentially support them through our own shortcode
-directly.
+Be sure to call out in a review if you're calling a specific Imgix API, so the
+team can be aware of custom use-cases and potentially support them through our
+own shortcode directly.
 {% endAside %}
 
 #### Video Properties (`VideoArgs`)
 
 ```typescript
-{% include '../../../../../../node_modules/webdev-infra/types/shortcodes/Video.d.ts' %}
+{% includeRaw '../../node_modules/webdev-infra/types/shortcodes/Video.d.ts' %}
 ```
