@@ -19,7 +19,7 @@ Seguindo as mudanças na [proposta da API](https://github.com/WICG/conversion-me
 - O formato dos relatórios. Os relatórios agora são enviados em formato JSON no corpo da solicitação.
 - O conteúdo dos relatórios: o `credit` foi removido, junto com os relatórios que teriam 0 crédito.
 
-What remains unchanged in Chrome 92 is the set of supported features: event-level reports, for clicks only. **Expect updates on this**. After this change, other updates and features will be released in future Chrome versions.
+O que permanece inalterado no Chrome 92 é o conjunto de recursos suportados: relatórios em nível de evento, apenas para cliques. **Aguarde atualizações nessa área**. Depois dessa mudança, outras atualizações e recursos serão lançados em futuras versões do Chrome.
 
 {% Aside%} Para receber atualizações sobre o ensaio de origem para esta API e os próximos recursos, inscreva-se na [lista de e-mails](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev). {% endAside%}
 
