@@ -15,6 +15,8 @@ tags:
   - chrome-93
 ---
 
+*Thanks [name](url) for the translations, [name](url) and [name](url} for the reviews!*
+
 {% include 'partials/devtools/ja/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
