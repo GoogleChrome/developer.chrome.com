@@ -1,12 +1,8 @@
 ---
 layout: layouts/doc-post.njk
 title: Токены доверия
-subhead: |2
-
-  Trust Tokens is a new API to help combat fraud and distinguish bots from real humans, without passive tracking.
-description: |2
-
- "The Trust Tokens API enables trust of a user in one context to be conveyed to another context, without identifying the user or linking identities between the two contexts. The API enables an origin to issue cryptographic tokens to a user it trusts. The tokens are stored by the user's browser. The browser can then use the tokens in other contexts to evaluate the user's authenticity."
+subhead: Trust Tokens (Токены доверия) — это новый API, помогающий противодействовать мошенничеству и отличать ботов от реальных людей без использования пассивного отслеживания.
+description: Trust Tokens API позволяет передавать доверие к пользователю из одного контекста в другой, не раскрывая его личность и не давая возможности идентифицировать контексты как принадлежащие одному пользователю. При помощи API источники могут генерировать криптографические токены для пользователей, которым доверяют. Токены сохраняются в браузере и впоследствии могут использоваться в других контекстах для оценки благонадежности пользователя.
 date: '2021-05-18'
 updated: '2021-08-18'
 authors:
@@ -40,9 +36,9 @@ authors:
 
 Интернет нуждается в способах установки и передачи сигналов доверия, показывающих, что пользователь действительно является тем, за кого себя выдает, а не ботом, маскирующимся под человека, или злоумышленником, пытающимся обмануть реального человека или сервис. Защита от мошенничества особенно важна для рекламодателей, поставщиков рекламы и сетей [CDN](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/).
 
-Unfortunately, many existing mechanisms to gauge and propagate trustworthiness—to work out if an interaction with a site is from a real human, for example—take advantage of techniques that can also be used for fingerprinting. Mechanisms to convey trust must preserve privacy, enabling trust to be propagated across sites without individual user tracking.
+К сожалению, многие существующие механизмы оценки и распространения доверия — например, используемые для подтверждения того, что посетитель сайта — реальный человек, — используют технологии, которые также могут применяться для фингерпринтинга. Механизмы передачи доверия должны сохранять конфиденциальность пользователей, чтобы обеспечить распространение доверия между сайтами без отслеживания отдельных пользователей.
 
-With the Trust Tokens API, a website can issue cryptographic tokens to a user it trusts, which can later be used elsewhere. The tokens are stored securely by the user's browser, and can then be redeemed in other contexts to confirm the user's authenticity. This allows trust of a user on one website (such as a social media site or email service) to be conveyed to another website (such as a publisher or online store) without identifying the user or linking identities across sites.
+С помощью Trust Tokens API сайт может выдавать доверенным пользователям криптографически защищенные токены, которыми затем можно воспользоваться в другом месте. Токены безопасным образом хранятся в браузере пользователя и могут быть использованы в других контекстах для подтверждения благонадежности пользователя. Благодаря этому доверие к пользователю на одном сайте (например, в соцсети или почтовом сервисе) может быть передано на другой сайт (например, сайт издателя или интернет-магазина), не раскрывая личность пользователя и не давая возможности сопоставлять друг с другом сеансы на разных сайтах.
 
 {% Aside 'key-term' %}<br> [Фингерпринтинг](https://w3c.github.io/fingerprinting-guidance/#passive) позволяет сайтам идентифицировать и отслеживать отдельных пользователей, получая данные об их устройстве, операционной системе и настройках браузера (например, языковых настройках, строке [user-agent](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) и доступных шрифтах), а также изменениях в состоянии устройства. Это можно делать как на стороне сервера путем проверки заголовков запросов, так и на стороне клиента при помощи JavaScript.
 
@@ -53,7 +49,7 @@ With the Trust Tokens API, a website can issue cryptographic tokens to a user it
 В этом примере сайт издателя перед показом рекламы хочет проверить, является ли пользователь настоящим человеком, а не ботом.
 
 1. Пользователь заходит на сайт (известный как **эмитент**) и выполняет действия, которыми подтверждает, что он реальный человек: делает покупки, использует электронную почту, успешно проходит тест reCAPTCHA и т. д.
-2. The issuer site uses the Trust Tokens JavaScript API to trigger a request for trust tokens for the user's browser.
+2. Сайт-эмитент использует JavaScript Trust Tokens API, чтобы сгенерировать запрос на получение токенов доверия для браузера пользователя.
 3. Сайт-эмитент возвращает данные токена.
 4. Браузер пользователя безопасно сохраняет данные токена доверия.
 5. Пользователь заходит на другой сайт (такой, как новостной портал), который хочет проверить, является ли пользователь настоящим человеком, — например, чтобы показать рекламу.
@@ -66,7 +62,7 @@ With the Trust Tokens API, a website can issue cryptographic tokens to a user it
 12. Объявление отображается на сайте издателя.
 13. Сайт засчитывает показ объявления.
 
-{% Aside %} For more detail about the JavaScript calls in this example, see [Sample API usage](https://web.dev/trust-tokens/#sample-api-usage). {% endAside %}
+{% Aside %} Подробнее о вызовах JavaScript, используемых в этом примере, см. [«Пример использования API»](https://web.dev/trust-tokens/#sample-api-usage). {% endAside %}
 
 ---
 
