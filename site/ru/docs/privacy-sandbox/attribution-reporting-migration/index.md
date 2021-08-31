@@ -25,7 +25,7 @@ authors:
 
 ## Когда изменения вступят в силу?
 
-These changes take effect starting from [Chrome 92](https://chromestatus.com/features/schedule), stable on July 20th 2021. Chrome 92 beta was released on June 3rd 2021.
+Изменения вступят в силу начиная с [Chrome 92](https://chromestatus.com/features/schedule), стабильная версия выйдет 20 июля 2021 года. Бета-версия Chrome 92 вышла 3 июня 2021 года.
 
 ## What should you do?
 
