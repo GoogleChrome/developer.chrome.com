@@ -27,7 +27,7 @@ authors:
 
 Изменения вступят в силу начиная с [Chrome 92](https://chromestatus.com/features/schedule), стабильная версия выйдет 20 июля 2021 года. Бета-версия Chrome 92 вышла 3 июня 2021 года.
 
-## What should you do?
+## Что вы должны сделать?
 
 {% Aside %} В будущих версиях API появятся другие изменения. Они будут использовать новое именование, принятое в Chrome 92. {% endAside %}
 
@@ -38,7 +38,7 @@ authors:
 
 ## Миграция
 
-### Example migration
+### Пример миграции
 
 С примером миграции небольшого демонстрационного приложения можно ознакомиться в этом [pull-запросе (черновике)](https://github.com/GoogleChromeLabs/trust-safety-demo/pull/4/files).
 
@@ -46,8 +46,8 @@ authors:
 
 <table class="simple width-full fixed-table with-heading-tint">
 <thead><tr>
-<th style="text-align: left;">Legacy code</th>
-<th style="text-align: left;">New code</th>
+<th style="text-align: left;">Устаревший код</th>
+<th style="text-align: left;">Новый код</th>
 </tr></thead>
 <tbody><tr>
 <td><code>allow='conversion-measurement'</code></td>
@@ -59,8 +59,8 @@ authors:
 
 <table class="simple width-full fixed-table with-heading-tint">
 <thead><tr>
-<th style="text-align: left;">Legacy code</th>
-<th style="text-align: left;">New code</th>
+<th style="text-align: left;">Устаревший код</th>
+<th style="text-align: left;">Новый код</th>
 </tr></thead>
 <tbody><tr>
 <td><code>document.featurePolicy.features()&lt;br&gt;.includes('conversion-measurement')</code></td>
@@ -72,8 +72,8 @@ authors:
 
 <table class="simple width-full fixed-table with-heading-tint">
 <thead><tr>
-<th style="text-align: left;">Legacy code</th>
-<th style="text-align: left;">New code</th>
+<th style="text-align: left;">Устаревший код</th>
+<th style="text-align: left;">Новый код</th>
 </tr></thead>
 <tbody>
 <tr>
@@ -113,8 +113,8 @@ window.open(
 
 <table class="simple width-full fixed-table with-heading-tint w-table--top-align">
 <thead><tr>
-<th style="text-align: left;">Legacy code</th>
-<th style="text-align: left;">New code</th>
+<th style="text-align: left;">Устаревший код</th>
+<th style="text-align: left;">Новый код</th>
 </tr></thead>
 <tbody><tr>
 <td><code>.well-known/register-conversion?conversion-data={DATA}</code></td>
@@ -127,8 +127,8 @@ window.open(
 <table class="simple width-full fixed-table with-heading-tint">
 <thead><tr>
 <th></th>
-<th style="text-align: left;">Legacy code</th>
-<th style="text-align: left;">New code</th>
+<th style="text-align: left;">Устаревший код</th>
+<th style="text-align: left;">Новый код</th>
 </tr></thead>
 <tbody><tr>
 <td>Запросы, отправляемые браузером</td>
