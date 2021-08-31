@@ -12,10 +12,9 @@
 {% endblock %}
 
 {% block content %}
-  {% set paginationObject = paged.pagination %}
   <div class="measure-1280 width-full gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400 center-margin">
     <div class="blog-grid">
-      {% for post in paginationObject.items %}
+      {% for post in paged.contents.items %}
         {{ blogCard(post) }}
       {% endfor %}
     </div>

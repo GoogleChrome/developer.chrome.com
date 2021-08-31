@@ -15,7 +15,7 @@
  */
 
 declare global {
-  export interface EleventyData {
+  export interface EleventyData<P = EleventyCollectionItem> {
     [key: string]: TODO;
     locale?: string;
     tags?: string[];
@@ -23,7 +23,7 @@ declare global {
       [key: string]: (data: EleventyData) => TODO;
     };
     paged?: TODO;
-    pagination?: EleventyPagination;
+    pagination?: Partial<EleventyPagination<P>>;
     title?: string;
     description?: string;
     permalink?: string;

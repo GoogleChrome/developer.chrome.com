@@ -15,13 +15,52 @@
  */
 
 declare global {
+  /**
+   * This is the single item that ends up being rendered for e.g. an individual tag page.
+   */
   export interface PaginatedPage<T = EleventyCollectionItem> {
-    date: Date;
-    description?: string;
-    href: string;
-    pagination: EleventyPagination<T>;
-    permalink: string;
-    title?: string;
+
+    /**
+     * The date for the very first entry that was used to create all the pages
+     * paginated for this entry/tag/author/etc.
+     */
+    date: Date,
+
+    /**
+     * The user-visible URL for this page, e.g. "/en/blah/".
+     */
+    href: string,
+
+    /**
+     * The on-disk target for this page, e.g., "/en/blah/index.html".
+     */
+    permalink: string,
+
+    /**
+     * This mirrors the actual EleventyPagination type, but is "made up" for multidimensional
+     * pagination, e.g., tags, that themselves have a number of inner items. It's not called
+     * "pagination" so we avoid confusion: it's _NOT_ the same object, it's nested.
+     *
+     * TODO: We only use items, and the next/previous href here. The rest just mirrors 11ty's
+     * real object just in case we try to use it that way.
+     */
+    contents: {
+      items: T[],
+      pageNumber: number,
+      hrefs: string[],
+      href: {
+        next: string?,
+        previous: string?,
+        first: string,
+        last: string,
+      },
+    },
+
+    // TODO(samthor): The following are added as "additional" data by the tags filter, so we can't
+    // make them required.
+
+    title?: string,
+    key?: string,
   }
 }
 

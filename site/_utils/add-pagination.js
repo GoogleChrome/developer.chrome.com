@@ -23,6 +23,7 @@
 
 /**
  * Generates href for paginated page.
+ *
  * @param {string} baseUrl
  * @param {number} i
  * @return {string}
@@ -31,6 +32,7 @@ const createHref = (baseUrl, i) => baseUrl + (i === 0 ? '/' : `/${i + 1}/`);
 
 /**
  * Generates permalink for paginated page.
+ *
  * @param {string} baseUrl
  * @param {number} i
  * @return {string}
@@ -39,10 +41,12 @@ const createPermalink = (baseUrl, i) => createHref(baseUrl, i) + 'index.html';
 
 /**
  * Take array of elements and returns an array of paginated pages for the elements.
- * @param {any[]} items Collection item's for pagination.
- * @param {string} baseUrl Beginning of url.
+ *
+ * @template T
+ * @param {(T & {date: Date})[]} items Collection item's for pagination.
+ * @param {string} baseUrl Left side of URL.
  * @param {{[key: string]: unknown}} additional
- * @return {PaginatedPage[]}
+ * @return {PaginatedPage<T>[]}
  */
 module.exports = (items, baseUrl, additional = {}) => {
   if (items.length === 0) {
@@ -52,7 +56,7 @@ module.exports = (items, baseUrl, additional = {}) => {
   baseUrl = baseUrl.startsWith('/') ? baseUrl : '/' + baseUrl;
   baseUrl = baseUrl.replace(/\/$/, '');
 
-  /** @type PaginatedPage[] */
+  /** @type PaginatedPage<T>[] */
   const paginated = [];
   const count = 24;
   const total = Math.ceil(items.length / count);
@@ -67,7 +71,7 @@ module.exports = (items, baseUrl, additional = {}) => {
       ...additional,
       date,
       href: createHref(baseUrl, i),
-      pagination: {
+      contents: {
         items: items.slice(start, start + count),
         pageNumber: i,
         hrefs,
@@ -77,8 +81,6 @@ module.exports = (items, baseUrl, additional = {}) => {
           first: createHref(baseUrl, 0),
           last: createHref(baseUrl, total - 1),
         },
-        data: 'WARNING_SYNTHETIC_PAGINATION',
-        size: total,
       },
       permalink: createPermalink(baseUrl, i),
     });

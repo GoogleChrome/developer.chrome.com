@@ -25,7 +25,7 @@ const {i18n} = require('../_filters/i18n');
 
 /**
  * @param {string} locale
- * @return {EleventyData}
+ * @return {EleventyData<PaginatedPage>}
  */
 module.exports = locale => ({
   eleventyComputed: {
@@ -40,6 +40,8 @@ module.exports = locale => ({
   },
   pagination: {
     /**
+     * Converts each tag into 0-n paginated pages.
+     *
      * @param {Tag[]} tags
      * @return {PaginatedPage[]}
      */
@@ -53,6 +55,7 @@ module.exports = locale => ({
           continue;
         }
 
+        // This creates 1-n pages for this tag (e.g., "/tags/foo/", "/tags/foo/2/").
         const more = addPagination(posts, locale + '/tags/' + tag.key, {
           title: tag.overrideTitle ?? i18n(tag.title, locale),
           key: tag.key,
