@@ -1,0 +1,167 @@
+---
+layout: layouts/doc-post.njk
+title: Глоссарий Privacy Sandbox
+subhead: Статьи и документация по Privacy Sandbox предполагают знание концепций из областей конфиденциальности, рекламы и веб-разработки. В этом глоссарии дается объяснение ключевых терминов.
+description: Simple explanations of key concepts.
+date: '2021-05-18'
+updated: '2021-05-18'
+authors:
+  - samdutton
+---
+
+{% Aside %} Если здесь чего-то не хватает, [сообщите нам](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)! {% endAside %}
+
+## Рекламная платформа (Adtech) {: #adtech }
+
+A company that provides services to deliver ads.
+
+## Рекламодатель {: #advertiser }
+
+Компания, которая платит за рекламу своих продуктов.
+
+## Атрибуция {: #attribution }
+
+Идентификация действий пользователя, которые поспособствовали достижению результата. Например: корреляция кликов или просмотров объявлений с [конверсиями](#conversion).
+
+## Blink {: #blink }
+
+[Движок рендеринга](https://en.wikipedia.org/wiki/Browser_engine), используемый Chrome и разрабатываемый в рамках проекта [Chromium](#chromium).
+
+## Chromium {: #chromium }
+
+Веб-браузер, разрабатываемый в рамках проекта с открытым исходным кодом. На Chromium основаны Chrome, Microsoft Edge, Opera и другие браузеры.
+
+## Показатель CTR {: #ctr }
+
+Доля пользователей, которые переходят по рекламе, после того как ее увидят. (См. также [Показ](#impression).)
+
+## Конверсия по кликам (CTC) {: #ctc }
+
+A conversion attributed to an ad that was 'clicked'.
+
+## Конверсия
+
+Достижение желаемой цели после выполнения пользователем действия. Например, покупка продукта или подписка на новостную рассылку после перехода по объявлению, ведущему на сайт рекламодателя.
+
+## Файл cookie
+
+A website can ask a web browser to store a small piece of textual data (called a cookie) on a user's computer. Cookies can be used by a website to save data about a user (or a reference to data stored on the website's backend servers) as the user moves across the web. For example: an online store can retain shopping cart details even if a user is not logged in, or the site could record the user's browsing activity on their site. See [First-party cookie](#first-party-cookie) and [Third-party cookie](#third-party-cookie).
+
+## Дифференциальная конфиденциальность {: # Differential-privacy }
+
+Методы, позволяющие обмениваться информацией, содержащейся в наборе данных, и выявлять закономерности в поведении пользователей, не раскрывая их личную информацию или сам факт их присутствия в наборе данных.
+
+## Domain
+
+См. [Домен верхнего уровня](#tld) и [eTLD](#etld).
+
+## eTLD, eTLD+1 {: #etld }
+
+**Эффективные домены верхнего уровня** определены в [общедоступном списке суффиксов](https://publicsuffix.org/list/). Например:
+
+```text
+co.uk
+github.io
+glitch.me
+```
+
+Именно эффективные TLD позволяют браузеру идентифицировать foo.appspot.com и bar.appspot.com как отдельные сайты. В данном случае эффективный домен верхнего уровня (**eTLD**) — это appspot.com, а название всего **сайта** (foo.appspot.com, bar.appspot.com) обозначается как **eTLD+1**.
+
+См. также [Домен верхнего уровня](#tld).
+
+## Entropy
+
+Мера того, насколько тот или иной элемент данных позволяет идентифицировать конкретного пользователя.
+
+Энтропия данных измеряется в битах. Чем сильнее данные раскрывают личность пользователя, тем выше значение энтропии.
+
+Данные можно объединять для идентификации конкретного человека, однако в некоторых случаях сложно определить, увеличивают ли новые данные значение энтропии. Например, знание, что человек живет в Австралии, не снижает энтропию, если уже известно, что он живет на острове Кенгуру.
+
+## Federated identity (also known as federated login)
+
+Сторонняя платформа, позволяющая пользователям входить на сайты, не требуя от них реализации собственной службы идентификации.
+
+## Фингерпринтинг {: #fingerprinting }
+
+Методы, позволяющие выявлять и отслеживать поведение отдельных пользователей. Фингерпринтинг использует механизмы, о которых пользователи не знают и которые не могут контролировать. Сайты, такие как [Panopticlick](https://panopticlick.eff.org) и [amiunique.org](https://amiunique.org/), показывают, как данные, полученные в результате фингерпринтинга, можно объединить, чтобы идентифицировать вашу личность.
+
+## Поверхность фингерпринтинга {: #fingerprinting-surface }
+
+Данные, которые (вероятно, в сочетании с другими поверхностями) могут использоваться для идентификации конкретного пользователя или устройства. Например, JavaScript-метод `navigator.userAgent()` и заголовок HTTP-запроса `User-Agent` предоставляют доступ к поверхности фингерпринтинга — строке user agent.
+
+## Собственные ресурсы {: #first-party }
+
+Ресурсы с сайта, на котором вы находитесь. Например, страница, которую вы читаете, находится на сайте developer.chrome.com и включает ресурсы, запрашиваемые с этого сайта. Запросы на загрузку таких ресурсов называются «запросами собственных ресурсов», а [файлы cookie](#cookie) с сайта developer.chrome.com, записанные во время просмотра этого сайта, называются [собственными файлами cookie](#first-party-cookie). См. также [Сторонние ресурсы](#third-party).
+
+## Собственный файл cookie {: # first-party-cookie }
+
+[Файл cookie](#cookie), сохраненный сайтом, на котором пользователь находится в данный момент. Например, интернет-магазин может попросить браузер сохранить файл cookie, чтобы запомнить содержимое корзины покупок, если пользователь не авторизовался на сайте. См. также [Сторонние файлы cookie](#third-party-cookie).
+
+## Показ {: #impression }
+
+- Просмотр объявления. (См. также [Показатель CTR](#ctr).)
+- Рекламное место: пустой прямоугольник на веб-странице, используемый для отображения рекламы. Совокупность рекламных мест называется [инвентарем](#inventory).
+
+## Inventory {: #inventory}
+
+Рекламные места, доступные на сайте, т. е. пустые прямоугольники, в которых может отображаться реклама.
+
+## k-anonymity
+
+Мера анонимности в наборах данных. Число *k* обозначает количество неотличимых друг от друга людей в наборе. Иными словами, для каждого участника в наборе данных есть *k-1* других участников с идентичной информацией.
+
+## Одноразовый номер
+
+Произвольное число, используемое только один раз в криптографически защищенной связи.
+
+## Origin
+
+Источник запроса, включая URL-схему и имя сервера, но без указания пути. Например: `https://developer.chrome.com`
+
+## Испытание Origin Trial {: #origin-trial}
+
+Origin trials provide access to a new or experimental feature, to make it possible to build functionality that users can try out for a limited time before the feature is made available to everyone. When Chrome offers an origin trial for a feature, an [origin](#origin) can be registered for the trial to enable the feature for all users on that origin, without requiring users to toggle any flags or switch to an alternative build of Chrome (though they may need to upgrade). Origin trials enable developers to build demos and prototypes using new features. The trials also help Chrome engineers understand how new features are used, and how they may interact with other web technologies. Find out more: [Getting started with Chrome's origin trials](https://web.dev/origin-trials/).
+
+## Пассивная поверхность {: #passive-surface }
+
+Некоторые поверхности фингерпринтинга, например строки user agent, IP-адреса и заголовки accept-language, доступны для каждого сайта без необходимости специально их запрашивать. Это означает, что пассивные поверхности легко могут израсходовать бюджет конфиденциальности сайта.
+
+В рамках инициативы Privacy Sandbox предлагается заменить пассивные поверхности активными способами получения конкретной информации, например клиентскими подсказками, позволяющими однократно запросить язык пользователя, вместо того чтобы отправлять заголовок accept-language в каждом запросе к каждому серверу.
+
+## Publisher
+
+В контексте Privacy Sandbox — сайт, на котором отображается реклама.
+
+## Охват
+
+Общее количество людей, которые видят рекламу (или заходят на веб-страницу, где отображается реклама).
+
+## Remarketing
+
+Охват людей на других сайтах, которые заходили на ваш сайт в прошлом. Например, интернет-магазин может показывать рекламу игрушек пользователям, которые раньше просматривали игрушки на его сайте.
+
+## Site
+
+См. [Домен верхнего уровня](#tld) и [eTLD](#etld).
+
+## Surface
+
+См. [Поверхность фингерпринтинга](#fingerprinting-surface) и [Пассивная поверхность](#passive-surface).
+
+## Сторонние ресурсы {: #third-party }
+
+Ресурсы, загружаемые с домена, отличного от домена сайта, где вы находитесь. Например, сайт foo.com может использовать код аналитики с google-analytics.com (при помощи JavaScript), шрифты с use.typekit.net (при помощи элемента link) и видео с vimeo.com (при помощи элемента iframe). См. также [Собственные ресурсы](#first-party).
+
+## Сторонний файл cookie {: #third-party-cookie}
+
+[Файл cookie](#cookie), сохраненный сторонним сервисом. Например, видеохостинг может отображать во встраиваемом плеере кнопку **«Посмотреть позже»**, при помощи которой можно добавить видео в список отложенных, не переходя на сайт хостинга. См. также [Собственный файл cookie](#first-party-cookie).
+
+## Домен верхнего уровня (TLD) {: #tld }
+
+Домены верхнего уровня, такие как .com и .org, перечислены в [базе данных корневой зоны](https://www.iana.org/domains/root/db).
+
+Note that some 'sites' are actually just subdomains. For example, translate.google.com and maps.google.com are just subdomains of google.com (which is the [eTLD + 1](#etld)).
+
+## .well-known
+
+В некоторых случаях полезно устанавливать на сайте переадресацию со стандартизированных URL-адресов. Например, пользователям будет проще изменить пароль при помощи менеджера паролей, если на сайте будет настроено перенаправление с адреса `/.well-known/change-password` на соответствующую страницу. Кроме того, таким образом можно предоставить возможность загрузки политик и другой информации о сайте *до* совершения запроса. Например, при помощи файла robots.txt можно разрешить или запретить поисковым роботам сканировать определенные страницы. Стандарт IETF [RFC8615](https://tools.ietf.org/html/rfc8615) определяет способ публикации метаданных о сайте по стандартным адресам, расположенным в поддиректории /.well-known/. Со списком этих адресов можно ознакомиться по адресу [iana.org/assignments/well-known-uris/well-known-uris.xhtml](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml).
