@@ -139,6 +139,11 @@ worth checking out.
 
 ### URL handlers for PWAs {: #url-handlers }
 
+{% Aside %}
+This actually launched as an origin trial in Chrome 92, but I'm covering
+it now since I haven't covered it previously.
+{% endAside %}
+
 If you have a PWA installed, and you click on a link to that PWA, you probably
 want it to open in the PWA, **not** a browser tab.
 
