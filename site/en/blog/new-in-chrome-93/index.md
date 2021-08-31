@@ -139,10 +139,6 @@ worth checking out.
 
 ### URL handlers for PWAs {: #url-handlers }
 
-{% Aside %}
-This likely slipped to Chrome 94.
-{% endAside %}
-
 If you have a PWA installed, and you click on a link to that PWA, you probably
 want it to open in the PWA, **not** a browser tab.
 
