@@ -5,7 +5,7 @@
 
 ## Зачем нужна инициатива Privacy Sandbox?
 
-The Privacy Sandbox initiative has two core aims:
+Инициатива Privacy Sandbox преследует две основные цели:
 
 - Develop replacement solutions to support web use cases and business models without enabling users to be tracked across sites, and avoiding cross-site tracking users aren't aware of.
 - Постепенное прекращение поддержки сторонних файлов cookie с переходом на новые решения.
@@ -16,12 +16,12 @@ The Privacy Sandbox initiative has two core aims:
 
 Ниже перечислены ключевые предложения, внесенные командой Chrome.
 
-### Relevant content and ads
+### Релевантный контент и реклама
 
 - [**FLoC**](/docs/privacy-sandbox/floc): подбор рекламы и контента по интересам с сохранением конфиденциальности: «релевантная реклама».
 - [**FLEDGE**](/docs/privacy-sandbox/fledge): подбор рекламы для ремаркетинга. Развитие технологии [TURTLEDOVE](https://github.com/WICG/turtledove).
 
-### Measurement and attribution
+### Измерение и атрибуция
 
 - [**Отчеты по атрибуции**](/docs/privacy-sandbox/attribution-reporting): корреляция кликов по объявлениям и просмотров объявлений с конверсиями. Ранее известно как Event Conversion Measurement API. Поддерживает два типа отчетов: на уровне событий и сводные.
 
@@ -30,11 +30,11 @@ The Privacy Sandbox initiative has two core aims:
 - [**Изменения в работе файлов cookie с атрибутом SameSite**](https://web.dev/samesite-cookies-explained/): защита сайтов путем явной пометки межсайтовых файлов cookie.
 - [**Наборы собственных доменов**](/docs/privacy-sandbox/first-party-sets): позволяют связанным доменным именам, имеющим общего владельца, объявлять принадлежность к одному и тому же источнику.
 
-### Fraud detection
+### Обнаружение мошенничества
 
 - [**Токены доверия**](/docs/privacy-sandbox/trust-tokens): позволяют передавать доверие к пользователю из одного контекста в другой, чтобы эффективнее препятствовать мошенничеству и отличать ботов от людей.
 
-### Limiting data collection
+### Ограничение сбора данных
 
 - [**Бюджет конфиденциальности**](https://www.youtube.com/watch?v=0STgfjSA6T8): механизм, дающий сайтам возможность получать информацию об используемом браузере или устройстве, но при этом позволяющий браузеру ограничивать общий объем доступной сайту информации, чтобы не дать ему идентифицировать пользователя.
 - [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/): The [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) (UA) string is a significant passive [fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) surface, as well as being difficult to process. Client Hints enable developers to actively request only the information they need about the user's device or conditions, rather than needing to parse this data from the User-Agent string.
@@ -58,7 +58,7 @@ The Privacy Sandbox initiative has two core aims:
 
 ---
 
-## Engage and share feedback
+## Участвуйте и делитесь отзывами
 
 - **GitHub**: ознакомьтесь с описанием предложения на GitHub и оставьте свои вопросы или комментарии на вкладке Issues в репозитории с описанием. <br>[Ссылки на описания](#explainers) приведены ниже.
 - **W3C**: обсудите сценарии использования и поделитесь своим мнением как представитель отрасли в группах <a href="https://www.w3.org/community/web-adv%20/%20" data-md-type=" link ">Improving Web Advertising Business Group</a>, [Privacy Community Group](https://www.w3.org/community/privacycg/participants%20) и [Web Incubator Community Group](https://github.com/WICG) консорциума W3C.
@@ -79,7 +79,7 @@ The Privacy Sandbox initiative has two core aims:
 - [FLoC](https://github.com/jkarlin/floc)
 - [FLEDGE](https://github.com/michaelkleber/turtledove)
 
-### Articles and videos for web developers
+### Статьи и видео для веб-разработчиков
 
 - [Погружение в Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 - [SameSite cookies explained](https://web.dev/samesite-cookies-explained/)
