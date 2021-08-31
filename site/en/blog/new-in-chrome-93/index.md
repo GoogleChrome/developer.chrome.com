@@ -129,7 +129,8 @@ on web.dev for a deeper dive!
 In March, we announced our plans to [shorten the release cycle][dcc-shorter-cycle]
 and ship a new version of Chrome every 4 weeks.
 
-That time has arrived, and we'll ship Chrome 94 on September 21st.
+That time has arrived, and we'll ship Chrome 94 on September 21st. You can find
+planned release dates for each version on the [Chrome Calendar][chrome-cal].
 
 ## New PWA features {: #new-pwa}
 
@@ -141,10 +142,21 @@ worth checking out.
 If you have a PWA installed, and you click on a link to that PWA, you probably
 want it to open in the PWA, **not** a browser tab.
 
-By specifying `url_handlers` in your [web app manifest][wd-manifest], and
-adding a `web-app-origin-association` file to your `.well-known` directory,
-you can tell the browser that if a user clicks a link to your PWA, it should
-open within the installed PWA.
+By specifying [`url_handlers`][wd-url-handlers] in your
+[web app manifest][wd-manifest], and adding a `web-app-origin-association`
+file to your `.well-known` directory, you can tell the browser that if a
+user clicks a link to your PWA, it should open within the installed PWA.
+
+Example `url_handlers` in the `manifest.json` file:
+
+```json
+{
+  ...
+  "url_handlers": [
+    {"origin": "https://music.example.com"}
+  ]
+}
+```
 
 Example `web-app-origin-association` file:
 
@@ -220,7 +232,7 @@ additional changes in Chrome 93.
 * [Chrome 93 deprecations & removals](/blog/deps-rems-93/)
 * [ChromeStatus.com updates for Chrome 93](https://www.chromestatus.com/features#milestone%3D93)
 * [What's new in JavaScript in Chrome 93](https://v8.dev/blog/v8-release-93)
-* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/92.0.4515.80..93.0.4577.69)
+* [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/92.0.4515.105..93.0.4577.69)
 
 ## Subscribe
 
@@ -231,6 +243,7 @@ and you'll get an email notification whenever we launch a new video.
 I'm Pete LePage, and as soon as Chrome 94 is released, I'll be right here to
 tell you what's new in Chrome!
 
+[chrome-cal]: https://chromiumdash.appspot.com/schedule
 [pwa-summit]: https://pwasummit.org/
 [wd-wco]: https://web.dev/window-controls-overlay/
 [wd-manifest]: https://web.dev/add-manifest/
