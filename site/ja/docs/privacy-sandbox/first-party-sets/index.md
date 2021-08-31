@@ -1,14 +1,10 @@
 ---
 layout: layouts/doc-post.njk
 title: First-Party Sets
-subhead: |2
-
-  Allow related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
-description: |2
-
-  First-Party Sets enables related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
-date: '2021-05-18'
-updated: '2021-08-12'
+subhead: 同じエンティティが所有および運営する関連ドメイン名が、同じファーストパーティに属していると宣言できるようにします。
+description: First-Party Sets を使用すると、同じエンティティが所有および運営する関連ドメイン名が、同じファーストパーティに属していると宣言できるようなります。
+date: 2021 年 5 月 18 日
+updated: 2021 年 8 月 12 日
 authors:
   - samdutton
 ---
@@ -17,26 +13,26 @@ authors:
 
 ## 実装状況
 
-- [In origin trial](https://web.dev/origin-trials/) Chrome 89 to 93.
-- [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
-- [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
-- [Chromium Projects](https://www.chromium.org/updates/first-party-sets).
+- Chrome 89 から 93 の[オリジン トライアル](https://web.dev/origin-trials/)。
+- [オリジン トライアルに登録](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)。
+- [Chrome プラットフォームの状態](https://chromestatus.com/feature/5640066519007232)。
+- [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)。
 
-## Why do we need First-Party Sets?
+## First-Party Sets が必要な理由
 
 {% YouTube id='cNJ8mZ-J3F8' %}
 
-Web pages are composed of content from multiple [origins](/docs/privacy-sandbox/glossary#origin). Some content is first-party and comes from the top-level site the user is visiting. Other content may come from third parties, such as ads, embedded media, or shared resources such as JavaScript libraries from [CDNs](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/). Third parties may also want to correlate user activity across different sites by using mechanisms such as [cookies](/docs/privacy-sandbox/glossary#origin).
+Web ページには、複数の[オリジン](/docs/privacy-sandbox/glossary#origin)に由来するコンテンツが含まれています。一部のコンテンツはファーストパーティ コンテンツであり、ユーザーがアクセスしているトップレベルのサイトが提供するものです。広告、埋め込みメディア、[CDN](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/) の JavaScript ライブラリのような共有リソースなどのその他のコンテンツは、サードパーティから提供されている場合があります。[Cookie](/docs/privacy-sandbox/glossary#origin) などのメカニズムを使用して、さまざまなサイト間でユーザーの行動を相互に関連付けたいというサードパーティも存在します。
 
-Browsers are proposing privacy models that restrict access to user identity within a cross-site context. However, many organizations have related sites with different domain names, such as domains for different countries (`example.com` and `example.co.uk`, for example). It should be possible to allow related domain names with an appropriate relationship, perhaps common ownership, to declare themselves as belonging to the same first party, so browsers treat those domains as first-party in situations where first party and third party are treated differently.
+ブラウザーは、サイト間ではユーザーを特定できないプライバシー モデルを提案しています。ただし、多くの組織には、さまざまな国のドメイン (`example.com` や `example.co.uk` など) など、さまざまなドメイン名の関連サイトがあります。適切な関係 (たとえば共通の所有権) を持つ関連ドメイン名には、同じファーストパーティであると宣言する能力が必要です。この能力が備わっていれば、ブラウザーはファーストパーティとサードパーティの扱いが異なる状況でもこれらのドメインをファーストパーティとして扱うことができます。
 
-Any solution would also need to prevent abuse of the system. For example, it should not be possible to declare organizations that include unrelated sites with different owners, in order to gain first-party privileges.
+どのようなソリューションであっても、システムの悪用を防止する必要があります。たとえば、ファーストパーティの特権を取得するために、所有者が異なる無関係のサイトが同じファーストパーティであると宣言できないようにする必要があります。
 
-## How do First-Party Sets work?
+## First-Party Sets の仕組み
 
-A website can declare that it is a member (or owner) of a set of web domains by serving a manifest file that defines its relationship to the other domains: a JSON file at a `.well-known/first-party-set` address.
+Web サイトは、`.well-known/first-party-set` アドレスから JSON ファイルを提供することにより、一連の Web ドメインのメンバー (または所有者) であると宣言できます。
 
-Suppose `a.example`, `b.example`, and `c.example` wish to form a first-party set owned by `a.example`. The sites would then serve the following resources:
+`a.example`、`b.example`、`c.example` が `a.example` が所有するファーストパーティ セットを形成するとします。この場合、サイトは次のリソースを提供します。
 
 ```json
 // https://a.example/.well-known/first-party-set
@@ -57,28 +53,28 @@ Suppose `a.example`, `b.example`, and `c.example` wish to form a first-party set
 }
 ```
 
-The owner domain hosts a manifest file that lists its member domains. A browser can ask a member website to specify its owner, and then check the owner's manifest to verify the relationship.
+所有者ドメインは、そのメンバー ドメインが記載されているマニフェスト ファイルをホストします。ブラウザーは、メンバーの Web サイトに所有者を指定するように要求し、所有者のマニフェストをチェックしてサイトの関係を確認できます。
 
-Browser policies are expected to prevent abuse or misuse. For example, First-Party Sets must not enable the exchange of user information across unrelated sites, or the grouping of sites that are not owned by the same entity. One possible way for a site to register could be for the site to submit their proposed group of domains to a public tracker (such as a dedicated GitHub repository) along with information needed to satisfy browser policy. Verification of the owner’s control over member domains may also require a challenge to be served at a `.well-known` URL on each of the domains in the set.
+ブラウザーのポリシーが悪用や誤用を防げると期待されています。たとえば First-Party Sets では、無関係のサイト間でのユーザー情報の交換、または同じエンティティによって所有されていないサイトのグループ化を防ぐ必要があります。サイトを登録するために考えられる 1 つの方法は、ブラウザーのポリシーを満たすために必要な情報とともに、提案するドメインのグループをパブリック トラッカー (専用の GitHub リポジトリなど) に投稿することです。メンバー ドメインが所有者の管理下であることを証明するために、セットにある各ドメインに対して `.well-known` の URL でチャレンジを提供することが必要になる可能性もあります。
 
-The complementary proposal to First-Party Sets is the `SameParty` cookie attribute. Specifying the `SameParty` attribute on a cookie instructs the browser to include the cookie when its context is part of the same First-Party Set as the top-level context.
+First-Party Sets を補うために、`SameParty` という Cookie 属性が提案されています。`SameParty` の Cookie 属性を指定すると、Cookie のコンテキストがトップレベル コンテキストと同じ First-Party Set の一部である場合に Cookie を含めるようにブラウザーに指示します。
 
-For example, for the First-Party Set described above, a.example can set the following cookie:
+たとえば、上記の First-Party Set の場合、a.example は次の Cookie を設定できます。
 
 `Set-Cookie: session=123; Secure; SameSite=Lax; SameParty`
 
-This means that when a visitor on b.example or c.example makes a request to a.example, the `session` cookie is included on that request.
+つまり、b.example または c.example の訪問者が a.example にリクエストを送信すると、そのリクエストに`セッション` Cookie が含まれるということです。
 
 ---
 
-## Engage and share feedback
+## 本 API に貢献し、フィードバックを共有しましょう
 
-- **Origin trial**: Register and take part in the [Chrome origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
-- **GitHub**: Read the [proposal](https://github.com/privacycg/first-party-sets), [raise questions and follow discussion](https://github.com/privacycg/first-party-sets/issues).
-- **Developer support**: Ask questions and join discussions on the [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+- **オリジン トライアル**: 登録して [Chrome オリジン トライアル](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)に参加しましょう。
+- **GitHub**: [提案](https://github.com/privacycg/first-party-sets)を読み、[質問をして、議論に参加しましょう](https://github.com/privacycg/first-party-sets/issues)。
+- **開発者サポート**: [プライバシー サンドボックス開発者サポート リポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)で質問をしたり、議論に参加したりしましょう。
 
 ## Find out more
 
-- [First-Party Sets technical explainer](https://github.com/privacycg/first-party-sets)
-- [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
-- [Chromium Projects](https://www.chromium.org/updates/first-party-sets).
+- [FLEDGE API の技術的説明](https://github.com/privacycg/first-party-sets)
+- [Chrome プラットフォームの状態](https://chromestatus.com/feature/5640066519007232)。
+- [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)。
