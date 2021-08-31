@@ -42,8 +42,6 @@ Group publishers provide a number of benefits for organizations and development 
 * It avoids unintended deletion of items that can happen when a developer leaves the org (because
   their account gets deleted and that individual account was the item's publisher).
 
-You can only create a group publisher once. However, you can be a member of other
-developers' group publishers.
 
 ## Before you set up group publishing
 
