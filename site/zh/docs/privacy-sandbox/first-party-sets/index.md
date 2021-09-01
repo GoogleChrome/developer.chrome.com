@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: First-Party Sets
+title: 第一方集
 subhead: |2-
 
   允许由同一实体拥有和运营的相关域名声明属于同一个第一方。
@@ -19,10 +19,10 @@ authors:
 
 - [源站试用](https://web.dev/origin-trials/)：Chrome 89 到 93。
 - [注册源站试用](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)。
-- [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
+- [Chrome 平台状态](https://chromestatus.com/feature/5640066519007232)。
 - [Chromium 项目](https://www.chromium.org/updates/first-party-sets)。
 
-## Why do we need First-Party Sets?
+## 为什么我们需要第一方集？
 
 {% YouTube id='cNJ8mZ-J3F8' %}
 
@@ -71,7 +71,7 @@ authors:
 
 ---
 
-## Engage and share feedback
+## 参与和分享反馈
 
 - **源站试用**：注册并加入 [Chrome 源站试用](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)。
 - **GitHub**：阅读[提案](https://github.com/privacycg/first-party-sets)、[提出问题并关注讨论](https://github.com/privacycg/first-party-sets/issues)。
@@ -80,5 +80,5 @@ authors:
 ## 发现更多
 
 - [第一方集技术说明](https://github.com/privacycg/first-party-sets)
-- [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
+- [Chrome 平台状态](https://chromestatus.com/feature/5640066519007232)。
 - [Chromium 项目](https://www.chromium.org/updates/first-party-sets)。
