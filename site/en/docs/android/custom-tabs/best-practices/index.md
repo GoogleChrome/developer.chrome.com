@@ -7,7 +7,7 @@ authors:
   - andreban
 ---
 
-asdfasfasdfasdfasdf, we've seen various implementations with different levels of
+Since Custom Tabs was launched, we've seen various implementations with different levels of
 quality. This section describes a set of best practices we've found to create a good integration.
 
 ## Connect to the Custom Tabs service and call `warmup()`
