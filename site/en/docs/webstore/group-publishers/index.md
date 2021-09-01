@@ -177,9 +177,10 @@ To verify that the item was transferred:
 ## Group publishing troubleshooting
 
 * If either your individual publishing account or the group publisher account is suspended, you won't be able to transfer items.
-* If the group publisher account has reached its published item limit (20 items), you won't be able to transfer your published items to this group publisher.
+* If the group publisher account has reached its published [item limit][items-limit], you won't be able to transfer your published items to this group publisher.
 
 [cws-register]: /docs/webstore/register/
 [devconsole]: https://chrome.google.com/webstore/devconsole
+[items-limit]: /docs/webstore/faq/#faq-gen-29
 [google-group]: https://groups.google.com
 [use-publisher]: #publishing-using-a-group-publisher
