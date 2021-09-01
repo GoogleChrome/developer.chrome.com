@@ -83,6 +83,18 @@ Available from Chrome 94. You can now get information about a site's origin tria
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VICXjdGL5Rz09TAPg1sW.png", alt="Origin trials in the Frame details view", width="800", height="465" %}
 
+{% Aside %}
+Not all origin trials are for testing new APIs. 
+
+Some trials enable a deprecated feature to be temporarily re-enabled. These are known as 
+**deprecation trials**, and in some contexts have been referred to as "reverse" origin trials.
+
+For example, [from Chrome 85](https://web.dev/appcache-removal/#origin-trial) AppCache is no longer 
+available in Chrome by default. Sites needing extra time to migrate off AppCache could register for 
+the [deprecation trial to continue using AppCache](https://developer.chrome.com/origintrials/#/view_trial/1776670052997660673) until Chrome 93.
+{% endAside %}
+
+
 ## Find out more
 
 -  [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
