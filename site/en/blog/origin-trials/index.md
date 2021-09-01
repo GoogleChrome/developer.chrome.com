@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2020-06-22
-updated: 2021-06-03
+updated: 2021-09-01
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/KeaVCdXHWzrI35QRvsZL.jpg
 alt: Pipette with purple liquid
 tags:
@@ -42,7 +42,7 @@ registered [origin](https://web.dev/same-site-same-origin/#origin). Third-party 
 it possible for providers of embedded content to try a new feature across multiple sites
 without requiring a token for every origin.
 
-Find out more: [What are third-party origin trials?](/blog/third-party-origin-trials/).
+Find out more: [What are third-party origin trials?](/blog/third-party-origin-trials/)
 {% endAside %}
 
 ## How to register for an origin trial
