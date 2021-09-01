@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: Privacy Sandbox glossary
+title: 개인정보 보호 샌드박스 용어집
 subhead: 개인정보 보호 샌드박스 기사와 문서에서는 개인정보 보호, 광고 및 웹 개발의 개념에 대한 지식이 있다고 가정합니다. 이 용어집은 주요 용어를 설명합니다.
 description: 주요 개념에 대한 간략한 설명
 date: '2021-05-18'
@@ -13,7 +13,7 @@ authors:
 
 ## 광고 플랫폼(애드테크) {: #adtech }
 
-A company that provides services to deliver ads.
+광고를 전달하는 서비스를 제공하는 회사입니다.
 
 ## 광고주 {: #advertiser }
 
@@ -29,21 +29,21 @@ A company that provides services to deliver ads.
 
 ## Chromium {: #chromium }
 
-An open-source web browser project. Chrome, Microsoft Edge, Opera and other browsers are based on Chromium.
+오픈 소스 웹 브라우저 프로젝트. Chrome, Microsoft Edge, Opera 및 기타 브라우저는 Chromium을 기반으로 합니다.
 
-## Click-through rate (CTR) {: #ctr }
+## 클릭률(CTR) {: #ctr }
 
 광고를 본 후 클릭한 사용자의 비율입니다. ([노출수](#impression)를 참조하세요.)
 
-## Click-through-conversion (CTC) {: #ctc }
+## 클릭 후 전환(CTC) {: #ctc }
 
-A conversion attributed to an ad that was 'clicked'.
+'클릭'된 광고에 기여한 전환입니다.
 
 ## 전환
 
 사용자의 행동이 있은 후 원하는 목표가 완료되는 것을 말합니다. 예를 들어, 광고주의 사이트로 연결되는 광고를 클릭한 후 제품을 구매하거나 뉴스레터에 가입합니다.
 
-## Cookie
+## 쿠키
 
 웹사이트는 사용자의 컴퓨터에 작은 텍스트 데이터(쿠키라고 함)를 저장할 것을 웹 브라우저에 요청할 수 있습니다. 쿠키는 사용자가 웹을 탐색할 때 사용자에 대한 데이터(또는 웹사이트의 백엔드 서버에 저장된 데이터에 대한 참조)를 저장하는 데 사용할 수 있습니다. 예를 들어, 온라인 상점은 사용자가 로그인하지 않은 경우에도 장바구니 정보를 유지하거나 사이트에서 사용자의 탐색 활동을 기록할 수 있습니다. [자사 쿠키](#first-party-cookie)와 [타사 쿠키](#third-party-cookie)를 참조하세요.
 
@@ -51,7 +51,7 @@ A conversion attributed to an ad that was 'clicked'.
 
 개인에 대한 정보 또는 이 정보가 데이터 세트에 속하는지 여부를 공개하지 않고 데이터 세트에 대한 정보를 공유하여 행동 패턴을 읽어낼 수 있는 기술입니다.
 
-## Domain
+## 도메인
 
 [최상위 도메인](#tld) 및 [eTLD](#etld)를 참조하세요.
 
@@ -69,17 +69,17 @@ glitch.me
 
 [최상위 도메인](#tld)을 참조하세요.
 
-## Entropy
+## 엔트로피
 
 데이터 항목이 개인의 정체성을 얼마나 많이 드러내는 지를 나타내는 척도입니다.
 
-Data entropy is measured in bits. The more that data reveals identity, the higher its entropy value.
+데이터 엔트로피는 비트 단위로 측정됩니다. 데이터가 정체성을 많이 드러낼수록 엔트로피 값이 높아집니다.
 
 데이터를 결합하여 개인을 식별할 수 있지만 새로운 데이터가 엔트로피를 더 높이는지 여부를 파악하기는 어려울 수 있습니다. 예를 들어, 어떤 사람이 캥거루 섬 출신이라는 것을 이미 알고 있다면 이 사람이 호주 출신이라는 것을 아는 것이 엔트로피를 감소시키지는 않습니다.
 
 ## 페더레이션 ID(페더레이션 로그인이라고도 함)
 
-A third-party platform to enable a user to sign in to a website, without requiring the site to implement their own identity service.
+사이트에서 자체 ID 서비스를 구현할 필요 없이 사용자가 웹 사이트에 로그인할 수 있도록 하는 타사 플랫폼입니다.
 
 ## 핑거프린팅 {: #fingerprinting }
 
@@ -93,26 +93,26 @@ A third-party platform to enable a user to sign in to a website, without requiri
 
 방문 중인 사이트의 리소스입니다. 예를 들어 읽고 있는 페이지는 developer.chrome.com 사이트에 있고 해당 사이트에서 요청한 리소스를 포함하고 있습니다. 이러한 자사 리소스에 대한 요청을 '자사 요청'이라고 하며, 이 사이트에 있는 동안에 저장된 developer.chrome.com의 [쿠키](#cookie)를 [자사 쿠키](#first-party-cookie)라고 합니다. [타사](#third-party)를 참조하세요.
 
-## First-party cookie {: #first-party-cookie }
+## 자사 쿠키 {: #first-party-cookie }
 
 사용자가 사이트 자체에 있는 동안 웹사이트에 의해 저장되는 [쿠키](#cookie)입니다. 예를 들어, 온라인 상점은 로그인하지 않은 사용자의 장바구니 정보를 유지하기 위해 쿠키를 저장하도록 브라우저에 요청할 수 있습니다. [타사 쿠키](#third-party-cookie)를 참조하세요.
 
-## Impression {: #impression }
+## 노출 {: #impression }
 
 - 광고를 보는 것입니다([클릭률](#ctr) 참조).
-- An ad slot: an empty rectangle on a web page where an ad can be displayed. Ad slots constitute [inventory](#inventory).
+- 광고 슬롯: 광고가 표시될 수 있는 웹페이지의 빈 사각형입니다. 광고 슬롯은 [인벤토리](#inventory)를 구성합니다.
 
-## Inventory {: #inventory}
+## 인벤토리 {: #inventory}
 
 사이트에서 사용할 수 있는 광고 슬롯: 광고를 게재할 수 있는 빈 직사각형입니다.
 
-## k-anonymity
+## k-익명성
 
 데이터 세트 내의 익명성에 대한 척도입니다. 자신의 익명성이 *k*라면 이 데이터 세트에서 *k-1*인 사람과 구분되지 않습니다 .즉, *k*인 사람은 동일한 정보(자신의 정보를 포함해)를 가지고 있습니다.
 
 ## 논스(Nonce)
 
-Arbitrary number used once only in cryptographic communication.
+암호화 통신에서 한 번만 사용되는 임의의 숫자입니다.
 
 ## 출처
 
@@ -134,9 +134,9 @@ Arbitrary number used once only in cryptographic communication.
 
 ## 도달
 
-The total number of people who see an ad (or who visit a web page that displays the ad).
+광고를 본(또는 광고를 표시하는 웹페이지를 방문한) 사람의 총 수입니다.
 
-## Remarketing
+## 리마케팅
 
 이전에 자신의 사이트를 방문한 적이 있는 다른 사이트의 사람들에게 도달하는 것을 말합니다. 예를 들어 온라인 상점에서는 이전에 사이트에서 장난감을 본 적이 있는 사람들에게 장난감 판매 광고를 표시할 수 있습니다.
 
@@ -144,7 +144,7 @@ The total number of people who see an ad (or who visit a web page that displays 
 
 [최상위 도메인](#tld) 및 [eTLD](#etld)를 참조하세요.
 
-## Surface
+## 표면
 
 [핑거프린팅 표면](#fingerprinting-surface) 및 [패시브 표면](#passive-surface)을 참조하세요.
 
@@ -152,11 +152,11 @@ The total number of people who see an ad (or who visit a web page that displays 
 
 방문 중인 웹사이트와 다른 도메인에서 제공되는 리소스입니다. 예를 들어, 웹사이트 foo.com은 google-analytics.com의 분석 코드(JavaScript를 통해), use.typekit.net의 글꼴(링크 요소를 통해) 및 vimeo.com의 비디오(iframe에서)를 사용할 수 있습니다. [자사](#first-party)를 참조하세요.
 
-## Third-party cookie {: #third-party-cookie}
+## 타사 쿠키 {: #third-party-cookie}
 
 타사 서비스에 의해 저장되는 [쿠키](#cookie)입니다. 예를 들어, 비디오 웹사이트는 사용자가 비디오 사이트로 이동하지 않고도 위시리스트에 비디오를 추가할 수 있도록 내장 플레이어에 **나중에 보기** 버튼을 포함할 수 있습니다. [자사 쿠키](#first-party-cookie)를 참조하세요.
 
-## Top-level domain (TLD) {: #tld }
+## 최상위 도메인(TLD) {: #tld }
 
 .com 및 .org와 같은 최상위 도메인은 [루트 영역 데이터베이스](https://www.iana.org/domains/root/db)에 게시됩니다.
 
