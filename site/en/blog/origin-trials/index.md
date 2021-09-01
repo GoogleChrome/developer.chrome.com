@@ -34,8 +34,8 @@ If you register for a trial, the Chrome team will periodically ask you for speci
 feedback on your use of the trial feature. Some features may undergo multiple origin
 trials, as learnings are incorporated and adjustments are made.
 
-{% Aside %}
-**Third-party origin trials**
+
+## Third-party origin trials
 
 Origin trials are usually only available on a first-party basis: they only work for a single
 registered [origin](https://web.dev/same-site-same-origin/#origin). Third-party origin trials make
@@ -43,7 +43,18 @@ it possible for providers of embedded content to try a new feature across multip
 without requiring a token for every origin.
 
 Find out more: [What are third-party origin trials?](/blog/third-party-origin-trials/)
-{% endAside %}
+
+
+## Deprecation trials
+
+Not all origin trials are for testing new APIs. Some trials enable a deprecated feature to be 
+temporarily re-enabled. These are known as **deprecation trials**, and in some contexts have been 
+referred to as "reverse" origin trials.
+
+For example, [from Chrome 85](https://web.dev/appcache-removal/#origin-trial) AppCache is no longer 
+available in Chrome by default. Sites needing extra time to migrate off AppCache could register for 
+the [deprecation trial to continue using AppCache](https://developer.chrome.com/origintrials/#/view_trial/1776670052997660673) until Chrome 93.
+
 
 ## How to register for an origin trial
 
@@ -82,17 +93,6 @@ this breakage period may be skipped
 Available from Chrome 94. You can now get information about a site's origin trials in [DevTools](/docs/devtools/) under the **Application** panel.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VICXjdGL5Rz09TAPg1sW.png", alt="Origin trials in the Frame details view", width="800", height="465" %}
-
-{% Aside %}
-Not all origin trials are for testing new APIs. 
-
-Some trials enable a deprecated feature to be temporarily re-enabled. These are known as 
-**deprecation trials**, and in some contexts have been referred to as "reverse" origin trials.
-
-For example, [from Chrome 85](https://web.dev/appcache-removal/#origin-trial) AppCache is no longer 
-available in Chrome by default. Sites needing extra time to migrate off AppCache could register for 
-the [deprecation trial to continue using AppCache](https://developer.chrome.com/origintrials/#/view_trial/1776670052997660673) until Chrome 93.
-{% endAside %}
 
 
 ## Find out more
