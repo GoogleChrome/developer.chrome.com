@@ -14,6 +14,8 @@ tags:
   - chrome-64
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 Welcome back! New features coming to DevTools in Chrome 64 include:
 
 - [Performance Monitor][1]. View a page's performance in real-time.
@@ -119,6 +121,10 @@ time. Sorry!
 This feature is shipping in Chrome 65, which will land approximately 6 weeks after Chrome 64. Check
 out [Local Overrides][11] to learn more. If you're on Windows or Mac, you can try Chrome 65 now by
 downloading [Chrome Canary][12].
+
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: #perf-monitor
 [2]: #console-sidebar

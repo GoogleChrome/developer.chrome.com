@@ -4,7 +4,7 @@ title: "Prepare to publish: set up payment and distribution"
 date: 2020-12-07
 updated: 2021-08-13
 description: >
-  How to use the Payment & Distribution tab of the Chrome Web Store dashboard.
+  How to choose which countries will list your item and who will see it in the Chrome Web Store.
 ---
 
 In the Payment and Distribution tab you can declare if your extension is free or contains in-app purchases. You can also choose who will see it on the Chrome Web Store.
@@ -60,7 +60,7 @@ manage:
 Any members of the specified groups, along with your trusted testers, will be able to install the
 item.
 
-### Private visibility: domain publishing{: #private-visibility-domain-publish }
+### Private visibility: domain publishing {: #private-visibility-domain-publish }
 
 {% Aside %}
 

@@ -5,7 +5,8 @@
     {% set styles = docs[project_key].styles %}
     {% set color = styles.project_icon_color %}
     <div class="project-icon__cover"{% if color %} style="color: var(--{{color}})"{% endif %}>
-      {{ svg('../../_static/images/project/' + project_key + '.svg', {hidden: true}) }}
+      {# svg() looks in "_includes", so find the project image in the parent directory #}
+      {{ svg('../_static/images/project/' + project_key + '.svg', {hidden: true}) }}
     </div>
   </div>
 {% endmacro %}

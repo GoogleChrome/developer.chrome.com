@@ -1,9 +1,11 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Updating your Chrome Web Store item"
+title: "Update your Chrome Web Store item"
 description: >
   How to update an extension or theme ("item") that you previously
   published on the Chrome Web Store.
+date: 2020-12-03
+updated: 2021-08-26
 ---
 
 This page describes how to update an extension or theme ("item") that you previously published on
@@ -11,58 +13,75 @@ the Chrome Web Store.
 
 There are two key ways in which you can update your item:
 
-- [Upgrade the item][1], publishing a new version of the item on the Chrome Web Store and pushing it
+- [Upgrade the item][upgrade-item], publishing a new version of the item on the Chrome Web Store and pushing it
   to the user base.
-- [Update the % rollout][2] for items that were previously published with partial rollout.
-  (Available to very popular items.)
+- [Update the % rollout][update-rollout] for items that were previously published with partial rollout.
+  (Available to items with over 10,000 seven-day active users)
 
 These update options are described in the following sections.
 
 ## Upgrade your item {: #upgrade-your-item }
 
+To upgrade your item, use the [Chrome Developer Dashboard][dev-console].
+
 To upgrade an existing Chrome Web Store item, you need to upload a new zip file for your item,
 including all changed and unchanged files; update any changed metadata for your listing; and submit
 the item for a new review.
 
-<div class="aside aside--note">Your upgrade will be published to the same channel (for example public or trusted testers) as previous versions. Publishing to a different channel may require special steps, as described below.</div>
+{% Aside %}
 
-There are several ways to publish to a different channel:
+Your upgrade will be published to the same channel (for example public or trusted testers) as
+previous versions. Publishing to a different channel may require special steps, as described below.
 
-- To move an item from testing to production: change your visibility from Private to Public or to
+{% endAside %}
+
+Use the [Distribution tab][visibility] to publish to a different channel.
+
+- To move an item from testing to production, change your visibility from Private to Public or to
   Unlisted and then republish.
 - To move a published item back to private (e.g. from production back to testing), you must
-  unpublish, change the visibility to Private, and then republish. The unpublishing step is
+  [unpublish][unpublish], change the visibility to Private, and then republish. The unpublishing step is
   necessary to move an item "backwards" from production to testing.
-- You can create a separate Chrome Web Store item for your testing program— this is an option if you
-  want to continue a testing program in parallel with a published version.
+- To continue a testing program in parallel with a published version, you can create a separate Chrome Web Store item for your [testing program][visibility-private].
 
-### Uploading an updated zip file {: #uploading-an-updated-zip-file }
+{% Aside 'gotchas' %}
+
+The Chrome Web Store allows the publication of testing and production versions. Make sure you [follow these guidelines][test-production-extension] 
+to avoid
+being flagged as Repetitive Content.
+
+{% endAside %}
+
+### Upload an updated zip file {: #uploading-an-updated-zip-file }
 
 If you're changing any code, the manifest, or other assets packaged with your extension, you must
-make a new zip file and upload the new package. In the developer dashboard entry for your item, on
+make a new zip file and upload the new package. Make sure you increment the **version number**. Each
+new version must have a larger version number than the previous version.
+
+In the developer dashboard entry for your item, on
 the Package tab, use the Upload New Package button to upload the zip file:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MXJosZfPAB5V2AcGfYSy.png", 
        alt="Screenshot of the Chrome Web Store developer dashboard package tab for an item",
        height="368", width="800" %}
 
-### Uploading new listing metadata {: #uploading-new-listing-metadata }
+### Update the listing metadata {: #uploading-new-listing-metadata }
 
 If you're changing anything about the Chrome Web Store listing for your item, its distribution, or
 details of your privacy policy, you must update the information on the developer dashboard. You
 update this information on the same tabs used for creating a new item:
 
-- The [Listing][3] tab contains details of your listing and how it should display in the Chrome Web
+- The [Listing][cws-listing] tab contains details of your listing and how it should display in the Chrome Web
   Store.
-- The [Privacy][4] tab is where you include declarations about how your item uses privacy and
+- The [Privacy][cws-privacy] tab is where you include declarations about how your item uses privacy and
   security related features.
-- The [Pricing and Distribution][5] tab lets you control which countries will list your item and
+- The [Payment and Distribution][cws-distribution] tab lets you declare in-app purchases and control which countries will list your item and
   which set of users will see it.
 
-### Partial rollout {: #partial-rollout }
+### Set partial rollout percentage {: #partial-rollout }
 
-If your item has a large user base, its distribution tab will include a **Percentage rollout**
-option to restrict the update to just a fraction of the user base:
+If your item has a large user base (over 10,000), the distribution tab will include a **Percentage rollout**
+option to restrict the update only to a fraction of the user base:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oZxWW5oMsh7fUSzwvRNp.png",
        alt="Screenshot of the Chrome Web Store fractional rollout field",
@@ -71,17 +90,29 @@ option to restrict the update to just a fraction of the user base:
 This allows you to gradually roll out your item to ensure that any unexpected problems will have
 minimal impact.
 
-<div class="aside aside--note">This is only available for new versions of an <strong>already-published</strong> item with over <strong>10,000 7-day active users</strong>.</div>
+{% Aside %}
 
-Once an item with partial rollout has been published, you can later [increase the percent
-rollout][6] without needing to resubmit the item for review, until you eventually reach 100% of
+This is only available for new versions of an **already-published** item with over **10,000 seven-day
+active users**
+
+{% endAside %}
+
+Once an item with partial rollout has been published, you can later [increase the percent rollout][update-rollout] 
+without resubmitting the item for review, until you eventually reach 100% of
 users.
 
-### Submitting the update {: #submitting-the-update }
+### Submit the update {: #submitting-the-update }
 
 When you submit an update for review, it doesn't yet affect your published item. Existing users will
 see no change and new users can continue to install the previously published, current version. Only
 when the item is later published will these users be affected.
+
+{% Aside 'gotchas' %}
+
+When an update requires additional permissions, users will be prompted to accept them or disable
+the extension.
+
+{% endAside %}
 
 To submit your update for review:
 
@@ -104,11 +135,11 @@ choosing.
 
 After you submit the item for review, it will undergo a review process. This is essentially the same
 review as new items receive; the time for this review depends on the nature of your item and the
-extent of your changes. See the [FAQ on review times][7] for more details.
+extent of your changes. See the [FAQ on review times][review-times] for more details.
 
 ## Update your percent rollout {: #update-rollout }
 
-For items that you previously published with [partial rollout][8], you can update the percent
+For items that you previously published with [partial rollout][partial-rollout], you can update the percent
 rollout using the Package tab:
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Dy8HD5xF4NiboQxgUtNt.png",
@@ -117,13 +148,22 @@ rollout using the Package tab:
 To increase the rollout fraction for your item, enter the increased percentage target and then click
 **Update**.
 
-<div class="aside aside--note">Changing the %rollout does <em>not</em> trigger a new review.</div>
+{% Aside %}
 
-[1]: #upgrade-your-package
-[2]: #update-rollout
-[3]: /docs/webstore/cws-dashboard-listing
-[4]: /docs/webstore/cws-dashboard-privacy
-[5]: /docs/webstore/cws-dashboard-distribution
-[6]: #update-rollout
-[7]: /docs/webstore/faq#faq-listing-108
-[8]: #partial-rollout
+Changing the %rollout does *not* trigger a new review.
+
+{% endAside %}
+
+[cws-distribution]: /docs/webstore/cws-dashboard-distribution
+[cws-listing]: /docs/webstore/cws-dashboard-listing
+[cws-privacy]: /docs/webstore/cws-dashboard-privacy
+[dev-console]: https://chrome.google.com/webstore/devconsole
+[review-times]: /docs/webstore/faq#faq-listing-108
+[partial-rollout]: #partial-rollout
+[unpublish]: /docs/webstore/faq/#faq-listing-03
+[update-rollout]: #update-rollout
+[upgrade-item]: #upgrade-your-item
+[visibility]: /docs/webstore/cws-dashboard-distribution#setting-the-visibility
+[visibility-private]: /docs/webstore/cws-dashboard-distribution/#private-visibility-trusted-testers
+[test-production-extension]: /docs/webstore/spam-faq/#test-version
+

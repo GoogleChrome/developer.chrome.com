@@ -16,11 +16,7 @@ tags:
   - chrome-88
 ---
 
-{% Aside %}
-
-Interested in helping improve DevTools? Sign up to participate in [Google User Research here][1].
-
-{% endAside %}
+{% include 'partials/devtools/en/banner.md' %}
 
 {% YouTube id="3tUXV\_n3yng" %}
 
@@ -299,6 +295,10 @@ to customize the chords shortcut.
 {% Img src="image/admin/tF18281gSqF69MENLGuk.png", alt="Chords keyboard shortcuts", width="800", height="508" %}
 
 Chromium issue: [174309][31]
+
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]:
   https://google.qualtrics.com/jfe/form/SV_3NMIMtX0F2zkakR?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXbl384838

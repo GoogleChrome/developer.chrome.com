@@ -15,6 +15,8 @@ tags:
   - chrome-78
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 {% YouTube id="VNkctDLYP6o" %}
 
 ## Multi-client support in the Audits panel {: #multiclient }
@@ -129,6 +131,10 @@ your bug or implement your feature request!
 {% Img src="image/admin/GzHzYN4ayQXslwllhVxO.png", alt="Main Menu > Help > Report a DevTools issue.", width="800", height="604" %}
 
 Figure 10. **Main Menu** > **Help** > **Report a DevTools issue**.
+
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: /blog/new-in-devtools-59#block-requests
 [2]: /blog/new-in-devtools-65#overrides
