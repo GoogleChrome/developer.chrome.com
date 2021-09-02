@@ -22,6 +22,7 @@ tags:
 {% YouTube id="1VaPAnUGRz8" %}
 
 ## Consultas de contenedores CSS editables en el panel de Estilos {: #container-queries }
+
 Ahora puedes ver y editar las [consultas de contenedores CSS](https://web.dev/new-responsive/#responsive-to-the-container) en el panel de **Estilos**.
 
 
@@ -41,6 +42,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 
 
 ## Previsualización de paquetes Web en el panel de Red {: #web-bundle }
+
 [Un paquete Web](https://web.dev/web-bundles/) es un formato de encapsulación de uno o más recursos HTTP en un sólo fichero. Ahora puedes previsualizar el contenido de tu paquete web en el panel de **Red**.
 
 Actualmente la característica de paquete web es experimental. Por favor, activa la opción `#enable-experimental-web-platform-features` en `chrome://flags` para probarlo.
@@ -53,6 +55,7 @@ Chromium issue: [1182537](https://crbug.com/1182537)
 
 
 ## Depuración de la API de Informes de Atribución {: #attribution-reporting }
+
 Los errores de la API de Informes de Atribución ahora son notificados en la pestaña **Problemas**.
 
 [Informes de Atribución](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) es una nueva API que te ayuda a medir cuando una acción de usuario (como un clic a un anuncio o una visualización) conduce a una conversión, sin necesidad de usar identificadores de sitios cruzados.
@@ -63,6 +66,7 @@ Chromium issue: [1190735](https://crbug.com/1190735)
 
 
 ## Mejor manejo de cadenas de texto en la Consola {: #string }
+
 Nuevo menú contextual en la **Consola** que te permite copiar cualquier cadena de texto como contenido, un literal de JavaScript o un literal JSON.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/O5uMSgkHrQ2mQDSjmg3A.png", alt="Nuevo menú contextual en la Consola", width="800", height="477" %}
@@ -79,6 +83,7 @@ Chromium issue: [1208389](https://crbug.com/1208389)
 
 
 ## Mejoras en la depuración de CORS {: #cors }
+
 Los errores relacionados CORS de TypeErrors en la **Consola** ahora están enlazados al panel **Red** y la pestaña **Problemas**.
 
 Haz clic en los dos nuevos iconos al lado de los mensajes de error relacionados con CORS para ver la petición en la red o entender el mensaje de error con más detalle y recibir soluciones potenciales en la pestaña **Problemas**.
@@ -89,6 +94,7 @@ Chromium issue: [1213393](https://crbug.com/1213393)
 
 
 ## Lighthouse 8.1 {: #lighthouse }
+
 El panel de **Lighthouse** ahora usa Lighthouse 8.1.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wENi9RXYMxdhm3zI4NVu.png", alt="Lighthouse", width="800", height="628" %}
@@ -108,6 +114,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 
 ## Muestra una nueva nota URL en el panel de Manifiesto {: #new-note-url }
+
 El panel **Manifiesto** ahora muestra una [nueva nota URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking).
 
 Actualmente en Chrome OS (CrOS), Aplicaciones Chrome y Aplicaciones Android que declaran la capacidad "nueva-nota" pueden ser seleccionados como una aplicación para tomar notas en la configuración de *Stylus* (se muestra si el dispositivo CrOS ha sido usado con un *stylus*). Cuando se selecciona la aplicación de tomar notas, la aplicación puede ser lanzada desde el botón "Crear Nota" de la paleta del *stylus*. Añadir un campo `new-note-url` en el manifiesto de la aplicación es parte de los esfuerzos por añadir una funcionalidad equivalente en las aplicaciones web.
@@ -120,6 +127,7 @@ Chromium issue: [1185678](https://crbug.com/1185678)
 
 
 ## Arreglados los selectors CSS coincidentes {: #matching-selectors }
+
 DevTools ha arreglado los selectores CSS coincidentes, que no funcionaban en el último lanzamiento.
 
 Los selectores separados por coma en el panel de **Estilos** tienen colores diferentes dependiendo si coinciden con el nodo de DOM seleccionado:
