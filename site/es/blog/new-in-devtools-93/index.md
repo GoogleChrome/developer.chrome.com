@@ -7,7 +7,7 @@ date: 2021-07-28
 updated: 2021-07-28
 description:
   "Consultas de contenedores CSS editables, previsualización de paquetes web, mejor manejo de cadenas de texto en la Consola y más."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xFq1Fb2KOrQfq1RG6x5e.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mQKfpWjFiRKd6kgzQzJA.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -17,7 +17,7 @@ tags:
 
 *Traducción cedida por [Miguel Ángel](https://midu.dev).*
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/es/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -154,5 +154,5 @@ Abre la respuesta JSON en el panel de **Red**, haz clic en el botón `{}` para f
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/es/reach-out.md' %}
+{% include 'partials/devtools/es/whats-new.md' %}
