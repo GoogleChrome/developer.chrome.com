@@ -4,7 +4,7 @@ description: >
   A round up of the deprecations and removals in Chrome 91 to help you plan.
 layout: 'layouts/blog-post.njk'
 date: 2021-08-03
-update: 2021-09-01
+update: 2021-09-02
 alt: >
   Deprecations and removals hero logo
 tags:
@@ -21,7 +21,7 @@ stable version in late May, 2021.
 ## Remove alert(), confirm(), and prompt() for cross origin iframes
 
 {% Aside 'note' %}
-**Updated September, 1th 2021**: Chrome started gradual rollout in Chrome 92 but backed out due to an unexpected amount of breakage. Chrome has rolled back the change and has postponed the deprecation until at least January 2022. Developers are still encouraged to migrate to non-system dialogs.
+**Updated September, 2nd 2021**: Chrome started gradual rollout in Chrome 92 but backed out due to an unexpected amount of breakage. Chrome has rolled back the change and has postponed the deprecation until at least January 2022. Developers are still encouraged to migrate to non-system dialogs.
 {% endAside %}
 
 Chrome allows iframes to trigger Javascript dialogs. For example it shows "<URL>
