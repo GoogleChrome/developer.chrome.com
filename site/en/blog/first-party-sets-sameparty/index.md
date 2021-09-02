@@ -251,7 +251,7 @@ cookie may be sent, it **does not** create a shared cookie jar. A cookie from
 ``brandx.site``, the cookie is **never directly available** to
 ``fly-brandx.site``. This can be confusing as you may see this referenced as
 shared identity, but this means that the relaxed boundary between the sites
-allows them to to set or send cookies in same-party, cross-site contexts—not
+allows them to set or send cookies in same-party, cross-site contexts—not
 that cookies are directly shared.
 {% endAside %}
 
