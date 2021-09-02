@@ -1,5 +1,6 @@
-## More DevTools features {: #whats-new }
-Please refer to the English version of [What's New In DevTools](/tags/new-in-devtools/) for a complete list of released features. Below are some content that has been translated into Spanish.
+## Más características de DevTools {: #whats-new }
+
+Por favor, revisa la versión en inglés de [Qué hay de nuevo en las DevTools](/tags/new-in-devtools/) para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
 ### Chrome 93 {: #chrome93 }
 
