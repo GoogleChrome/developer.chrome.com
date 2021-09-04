@@ -28,7 +28,7 @@ tags:
 <!--
 You can now view and edit [CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) in the **Styles** pane.
 -->
-**Styles**パネルで[CSSコンテナクエリ](https://web.dev/new-responsive/#responsive-to-the-container)を確認して編集できるようになりました。
+**Styles**ペインで[CSSコンテナクエリ](https://web.dev/new-responsive/#responsive-to-the-container)を確認して編集できるようになりました。
 
 <!--
 Container queries provide a much more dynamic approach to responsive design. The `@container` at-rule works in a similar way to a media query with `@media`. However, instead of querying the viewport and user agent for information, `@container` queries the ancestor container that matches certain criteria.
