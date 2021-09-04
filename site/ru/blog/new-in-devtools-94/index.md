@@ -7,7 +7,7 @@ date: 2021-08-24
 updated: 2021-08-24
 description:
   "Пользуйтесь DevTools на своём языке, новые устройства Nest Hub, новый бэдж для выражений от контейнера и многое другое."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/js1uKEulNBGj0PoJkqZq.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/J1jlUVBQQDw1mTOIODyt.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -177,5 +177,5 @@ DevTools теперь поддерживает нативные HTML-подск�
 
 Задача в трекере Chromium: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/ru/reach-out.md' %}
+{% include 'partials/devtools/ru/whats-new.md' %}
