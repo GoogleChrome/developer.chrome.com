@@ -158,7 +158,7 @@ If your site exposes source maps to Lighthouse, look for the **View Treemap** bu
 <!--
 The report also includes a new metric filter (Refer to the **Show audits relevant to** filter in the screenshot). Pick a metric to focus on the opportunities and diagnostics most relevant to improving just that metric.
 -->
-レポートには新しいメトリクスフィルタも追加されています（スクリーンショットの**Show audits relevant to**フィルタを参照）。そのメトリクスだけを改善するためにもっとも適切なOpportunitiesとDiagnosticsにフォーカスを当てるためにメトリクスを選択してください。
+レポートには新しいメトリクスフィルタも追加されています（スクリーンショットの**Show audits relevant to**フィルタを参照）。そのメトリクスだけを改善するための最も適切なOpportunitiesとDiagnosticsにフォーカスを当てるためにメトリクスを選択してください。
 
 <!--
 The **Performance Category** had a number of scoring changes to align with other performance tools and to better reflect the state of the web.
