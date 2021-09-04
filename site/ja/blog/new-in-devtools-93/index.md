@@ -1,6 +1,6 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "What's New In DevTools (Chrome 93)"
+title: "DevToolsの新機能 (Chrome 93)"
 authors:
   - jecelynyeen
 date: 2021-07-28
