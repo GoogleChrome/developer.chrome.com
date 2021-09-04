@@ -6,7 +6,7 @@ authors:
 date: 2021-07-28
 updated: 2021-07-28
 description:
-  "Editable CSS container queries, web bundle preview, better string handling in the Console and more."
+  "編集可能なCSSコンテナクエリ、Web bundleプレビュー、コンソールでの文字列の扱いの改善など。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xFq1Fb2KOrQfq1RG6x5e.jpg'
 alt: ''
 tags:
