@@ -24,7 +24,7 @@ tags:
 <!--
 ## Editable CSS container queries in the Styles pane {: #container-queries }
 -->
-## StylesパネルでCSSコンテナクエリを編集 {: #container-queries }
+## StylesペインでCSSコンテナクエリを編集 {: #container-queries }
 <!--
 You can now view and edit [CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) in the **Styles** pane.
 -->
