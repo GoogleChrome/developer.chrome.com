@@ -1,5 +1,7 @@
-## More DevTools features {: #whats-new }
-Please refer to the English version of [What's New In DevTools](/tags/new-in-devtools/) for a complete list of released features. Below are some content that has been translated into Russian.
+## Больше новинок DevTools {: #whats-new }
+
+Пожалуйста,  перейдите на английскую версию по ссылке [What's New In DevTools](/tags/new-in-devtools/) чтобы
+увидеть полный список обновлений. Ниже приведены материалы, переведенные на русский язык.
 
 
 ### Chrome 94 {: #chrome94 }
