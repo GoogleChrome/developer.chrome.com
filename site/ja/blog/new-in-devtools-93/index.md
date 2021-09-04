@@ -1,12 +1,12 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "What's New In DevTools (Chrome 93)"
+title: "DevToolsの新機能 (Chrome 93)"
 authors:
   - jecelynyeen
 date: 2021-07-28
 updated: 2021-07-28
 description:
-  "Editable CSS container queries, web bundle preview, better string handling in the Console and more."
+  "編集可能なCSSコンテナクエリ、Web bundleプレビュー、コンソールでの文字列の扱いの改善など。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xFq1Fb2KOrQfq1RG6x5e.jpg'
 alt: ''
 tags:
@@ -15,28 +15,25 @@ tags:
   - chrome-93
 ---
 
-{% Aside %}
-<!--
-Interested in helping improve DevTools? Sign up to participate in [Google User Research here](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458).
--->
-DevToolsの改善に興味がある方はサインアップして [Google User Research](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458) にご協力ください。
+*Thanks [technohippy](https://github.com/technohippy) for the translations, [yoichiro](https://github.com/yoichiro) and [lacolaco](https://github.com/lacolaco) for the reviews!*
 
-{% endAside %}
+{% include 'partials/devtools/ja/banner.md' %}
 
+{% YouTube id="1VaPAnUGRz8" %}
 
 <!--
 ## Editable CSS container queries in the Styles pane {: #container-queries }
 -->
-## StylesパネルでCSSコンテナクエリを編集 {: #container-queries }
+## StylesペインでCSSコンテナクエリを編集 {: #container-queries }
 <!--
 You can now view and edit [CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) in the **Styles** pane.
 -->
-**Styles**パネルで[CSSコンテナクエリ](https://web.dev/new-responsive/#responsive-to-the-container)を確認して編集できるようになりました。
+**Styles**ペインで[CSSコンテナクエリ](https://web.dev/new-responsive/#responsive-to-the-container)を確認して編集できるようになりました。
 
 <!--
 Container queries provide a much more dynamic approach to responsive design. The `@container` at-rule works in a similar way to a media query with `@media`. However, instead of querying the viewport and user agent for information, `@container` queries the ancestor container that matches certain criteria.
 -->
-コンテナクエリを使用するとレスポンシブデザインをよりダイナミックに実現できます。@-規則の`@container`はメディアクエリの`@media`と同じように動作しますが、`@media`のようにビューポートとユーザーエージェントに問い合わせて情報を得るのではなく、`@container`は祖先コンテナ要素にある基準に合致するかどうかを問い合わせます。
+コンテナクエリは、レスポンシブデザインに対して、より多くの動的なアプローチを提供します。@-規則の`@container`はメディアクエリの`@media`と同じように動作しますが、`@media`のようにビューポートとユーザーエージェントに問い合わせて情報を得るのではなく、`@container`は上位のコンテナ要素にある基準に合致するかどうかを問い合わせます。
 
 <!--
 In the **Elements** panel, click on a DOM element with `@container` at-rule, DevTools now displays the `@container` information in the **Styles** pane. Click on it to edit the size. The **Styles** pane displays the corresponding container information too. Hover on it to highlight the container element on the page and check the container size. Click on it to select the container element. 
@@ -90,7 +87,7 @@ Attribution Reporting APIのエラーが**Issues**タブでレポートされる
 <!--
 [Attribution Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) is a new API to help you measure when a user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 -->
-[Attribution Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)は（広告のクリックや視聴のような）ユーザーアクションがコンバージョンを引き起こすタイミングについて、クロスサイトのユーザー識別を伴わずに測定するための新しいAPIです。
+[Attribution Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)は（広告のクリックや視聴のような）ユーザーアクションがコンバージョンを引き起こすタイミングについて、クロスサイトの識別を伴わずに測定するための新しいAPIです。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Attribution Reporting API errors in the Issues tab", width="800", height="501" %}
 
@@ -161,7 +158,7 @@ If your site exposes source maps to Lighthouse, look for the **View Treemap** bu
 <!--
 The report also includes a new metric filter (Refer to the **Show audits relevant to** filter in the screenshot). Pick a metric to focus on the opportunities and diagnostics most relevant to improving just that metric.
 -->
-レポートには新しいメトリクスフィルタも追加されています（スクリーンショットの**Show audits relevant to**フィルタを参照）。そのメトリクスだけを改善するためにもっとも適切なOpportunitiesとDiagnosticsにフォーカスを当てるためにメトリクスを選択してください。
+レポートには新しいメトリクスフィルタも追加されています（スクリーンショットの**Show audits relevant to**フィルタを参照）。そのメトリクスだけを改善するための最も適切なOpportunitiesとDiagnosticsにフォーカスを当てるためにメトリクスを選択してください。
 
 <!--
 The **Performance Category** had a number of scoring changes to align with other performance tools and to better reflect the state of the web.
@@ -182,7 +179,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 <!--
 ## Display new note URL in the Manifest pane {: #new-note-url }
 -->
-Manifestペインでnew note URLを表示 {: #new-note-url }
+## Manifestペインでnew note URLを表示 {: #new-note-url }
 <!--
 The Manifest pane now displays the the [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking). 
 -->
@@ -235,7 +232,7 @@ Chromium issue: [1219153](https://crbug.com/1219153)
 <!--
 You can now pretty print JSON responses in the **Network** panel.
 -->
-NetworkパネルでJSONレスポンスがプリティプリントされようになりました。
+NetworkパネルでJSONレスポンスがプリティプリントされるようになりました。
 
 
 <!--
@@ -248,3 +245,6 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283cd0a96204b1592f59fda2fcb #}
 
 Chromium bug: [998674](https://crbug.com/998674) 
+
+{% include 'partials/devtools/ja/reach-out.md' %}
+{% include 'partials/devtools/ja/whats-new.md' %}
