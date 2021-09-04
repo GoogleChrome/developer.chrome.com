@@ -232,7 +232,7 @@ Chromium issue: [1219153](https://crbug.com/1219153)
 <!--
 You can now pretty print JSON responses in the **Network** panel.
 -->
-NetworkパネルでJSONレスポンスがプリティプリントされようになりました。
+NetworkパネルでJSONレスポンスがプリティプリントされるようになりました。
 
 
 <!--
