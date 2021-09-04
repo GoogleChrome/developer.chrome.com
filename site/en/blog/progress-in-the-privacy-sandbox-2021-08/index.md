@@ -6,6 +6,7 @@ description: >
   as we go.
 layout: 'layouts/blog-post.njk'
 date: 2021-08-30
+updated: 2021-08-31
 authors:
   - rowan_m
 hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/m7SPM6kSG6KHykySb5DV.png'
@@ -176,13 +177,9 @@ API**](https://groups.google.com/a/chromium.org/g/blink-dev/c/_quChIvPzT8). This
 is a relatively low-level storage component that's intended to support aggregate
 reporting and content filtering of cross-site data. The idea is that an origin
 can write to its storage across multiple embedded contexts and then only read
-back through a very limited interface. This is a relatively low-level storage
-component that's intended to support aggregate reporting and content filtering
-of cross-site data. The idea is that an origin can write to its storage across
-multiple embedded contexts and then only read back through a very limited
-interface. For example, providing a single value for a consistent A/B test or
-reach/frequency capping across multiple contexts but **without** allowing direct
-access to that identifier.
+back through a very limited interface. For example, providing a single value for
+a consistent A/B test or reach/frequency capping across multiple contexts but
+**without** allowing direct access to that identifier.
 
 It is an active area of discussion currently, so if you are interested in the
 design phase then [raise issues in the
