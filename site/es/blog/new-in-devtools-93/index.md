@@ -26,7 +26,7 @@ tags:
 Ahora puedes ver y editar las [consultas de contenedores CSS](https://web.dev/new-responsive/#responsive-to-the-container) en el panel de **Estilos**.
 
 
-Las consultadas de contenderos (*container queries*) ofrece una manera mucho más dinámica de realizar diseños adaptables. La regla `@container` funciona de una forma similar a las consultas de medios (*media queries*). Sin embargo, en lugar de consultar el tamaño de la ventana y la información del agente del usuario, `@container` consulta el contenedor ascendiente que cumple cierto criterio.
+Las consultas de contenedor (*container queries*) ofrecen una manera mucho más dinámica de realizar diseños adaptables. La regla `@container` funciona de una forma similar a las consultas de medios (*media queries*). Sin embargo, en lugar de consultar el tamaño de la ventana y la información del agente del usuario, `@container` consulta el contenedor ascendiente que cumple cierto criterio.
 
 En el panel de **Elementos**, haz clic en el elemento del DOM que tenga la regla `@container`, DevTools ahora muestra la información de `@container` en el panel de **Estilos**. Clica en él para editar su tamaño. El panel **Estilos** también muestra la información correspondiente al contenedor. Coloca el puntero del mouse encima para resaltar el elemento contenedor en la página y revisa el tamaño del contenedor. Haz clic en él para seleccionar el elemento contenedor.
 
