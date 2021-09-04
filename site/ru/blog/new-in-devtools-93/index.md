@@ -234,3 +234,6 @@ https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283c
 #}
 
 Баг в трекере Chromium: [998674](https://crbug.com/998674)
+
+{% include 'partials/devtools/ru/reach-out.md' %}
+{% include 'partials/devtools/ru/whats-new.md' %}
