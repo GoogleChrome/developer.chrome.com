@@ -126,7 +126,7 @@ Actualmente en Chrome OS (CrOS), Aplicaciones Chrome y Aplicaciones Android que 
 Chromium issue: [1185678](https://crbug.com/1185678)
 
 
-## Arreglados los selectors CSS coincidentes {: #matching-selectors }
+## Se arreglaron los selectores CSS coincidentes {: #matching-selectors }
 
 DevTools ha arreglado los selectores CSS coincidentes, que no funcionaban en el último lanzamiento.
 
