@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 Web developers have come to expect little to no performance impact when debugging their code. However, this expectation is by no means universal. A C++ developer would never expect a debug build of their application to reach production performance, and in early years of Chrome, simply opening DevTools significantly impacted the performance of the page.
 
 The fact that this performance degradation is no longer felt is the result of years of investment in debugging capabilities of [DevTools](/docs/devtools/) and [V8](https://v8.dev). Nevertheless, we will **never be able to reduce the performance overhead of DevTools to zero**. Setting breakpoints, stepping through the code, collecting stack traces, capturing a performance trace, etc. all impact execution speed to a varying degree. After all, [observing something changes it](https://en.wikipedia.org/wiki/Observer_effect_(physics)).
@@ -115,3 +117,6 @@ With the above improvements, we've significantly reduced the overhead of DevTool
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/r8HDWdZo2ykpJ1xflDH8.mp4", autoplay="true", muted="true", loop="true" %}
 
 We know there are still various possible improvements - for example the overhead when using `MutationObserver`s is still noticeable, as reported in [chromium:1077657](https://crbug.com/1077657) - but for the time being, we've addressed the major pain points, and we might come back in the future to further streamline the debugging performance.
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

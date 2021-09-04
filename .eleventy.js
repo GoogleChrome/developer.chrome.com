@@ -29,6 +29,7 @@ const {YouTube} = require('./site/_shortcodes/YouTube');
 const {Columns, Column} = require('./site/_shortcodes/Columns');
 const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
 const {Aside} = require('./site/_shortcodes/Aside');
+const includeRaw = require('./site/_shortcodes/includeRaw');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -69,7 +70,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('site/en/**/*.{jpg,jpeg,png,webp,gif}');
 
   // Make .yml files work in the _data directory.
-  eleventyConfig.addDataExtension('yml', contents => yaml.safeLoad(contents));
+  eleventyConfig.addDataExtension('yml', contents => yaml.load(contents));
 
   // Configure markdown-it plugins
   eleventyConfig.setLibrary('md', md);
@@ -118,6 +119,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('Img', Img);
   eleventyConfig.addShortcode('Video', Video);
   eleventyConfig.addShortcode('YouTube', YouTube);
+  eleventyConfig.addShortcode('includeRaw', includeRaw);
   eleventyConfig.addPairedShortcode('Details', Details);
   eleventyConfig.addPairedShortcode('DetailsSummary', DetailsSummary);
   eleventyConfig.addPairedShortcode('Columns', Columns);

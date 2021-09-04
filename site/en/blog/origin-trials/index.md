@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2020-06-22
-updated: 2021-06-03
+updated: 2021-09-01
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/KeaVCdXHWzrI35QRvsZL.jpg
 alt: Pipette with purple liquid
 tags:
@@ -34,16 +34,27 @@ If you register for a trial, the Chrome team will periodically ask you for speci
 feedback on your use of the trial feature. Some features may undergo multiple origin
 trials, as learnings are incorporated and adjustments are made.
 
-{% Aside %}
-**Third-party origin trials**
+
+## Third-party origin trials
 
 Origin trials are usually only available on a first-party basis: they only work for a single
 registered [origin](https://web.dev/same-site-same-origin/#origin). Third-party origin trials make
 it possible for providers of embedded content to try a new feature across multiple sites
 without requiring a token for every origin.
 
-Find out more: [What are third-party origin trials?](/blog/third-party-origin-trials/).
-{% endAside %}
+Find out more: [What are third-party origin trials?](/blog/third-party-origin-trials/)
+
+
+## Deprecation trials
+
+Not all origin trials are for testing new APIs. Some trials enable a deprecated feature to be 
+temporarily re-enabled. These are known as **deprecation trials**, and in some contexts have been 
+referred to as "reverse" origin trials.
+
+For example, [from Chrome 85](https://web.dev/appcache-removal/#origin-trial) AppCache is no longer 
+available in Chrome by default. Sites needing extra time to migrate off AppCache could register for 
+the [deprecation trial to continue using AppCache](https://developer.chrome.com/origintrials/#/view_trial/1776670052997660673) until Chrome 93.
+
 
 ## How to register for an origin trial
 
@@ -77,6 +88,13 @@ this breakage period may be skipped
 [upon request](https://sites.google.com/a/chromium.org/dev/blink/launching-features#sites-canvas-main-content:~:text=If%20you%20wish%20to%20skip%20the,Ship%20imply%20approval%20of%20the%20request.).
 {% endAside %}
 
+## View origin trials information in DevTools {: #devtools}
+
+Available from Chrome 94. You can now get information about a site's origin trials in [DevTools](/docs/devtools/) under the **Application** panel.
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VICXjdGL5Rz09TAPg1sW.png", alt="Origin trials in the Frame details view", width="800", height="465" %}
+
+
 ## Find out more
 
 -  [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
@@ -85,6 +103,7 @@ this breakage period may be skipped
 -  [Process for launching new features in Chromium](https://www.chromium.org/blink/launching-features)
 -  [Intent to explain: Demystifying the Blink shipping process](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
 -  [What are third-party origin trials?](/blog/third-party-origin-trials/)
+-  [View origin trials information in DevTools](/blog/new-in-devtools-94/#origin-trials)
 ---
 
 Photo by [Louis Reed

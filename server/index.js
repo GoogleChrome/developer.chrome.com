@@ -21,6 +21,7 @@ const {notFoundHandler} = require('./not-found');
 const {buildRedirectHandler} = require('./redirect');
 const {buildUniqueRedirectHandler} = require('./unique-redirect');
 const unknownDomainRedirectHandler = require('./unknown-domain');
+const healthCheckHandler = require('./health-check');
 
 const app = express();
 
@@ -63,6 +64,7 @@ const handlers = [
   ...staticPaths.map(staticPath => express.static(staticPath)),
   redirectHandler,
   uniqueRedirectHandler,
+  healthCheckHandler,
   notFoundHandler,
 ];
 

@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Spam policy FAQ"
 date: 2020-05-01
-updated: 2021-06-24
+updated: 2021-08-25
 description: Frequently asked questions about Chrome Web Store's spam policy.
 ---
 
@@ -14,7 +14,7 @@ extensions (or any other items) that developers submit to the Chrome Web Store.
 ### What is a repetitive content violation? {: #definition }
 
 Our developer policy prohibits the [submission of repetitive
-content](/docs/webstore/program_policies#spam). In general, this means you cannot submit multiple
+content][spam-policy]. In general, this means you cannot submit multiple
 extensions that provide the same experience.
 
 More specifically, developers cannot submit content that provides the same user experience, even if
@@ -86,14 +86,13 @@ test variant of the extension must be clearly labeled:
   so that users can find it. You may also wish to link from the production variant to any others so
   that users can find those too. (If you have a version that you want to test without allowing
   general access, you should not list it as public, but instead [publish to test
-  accounts](/docs/webstore/publish#publishing-to-test-accounts).)
+  accounts][test-accounts].)
 
 
 ### Can developers appeal a repetitive content violation? {: #appeal }
 
-You can appeal a repetitive content violation if you think it was flagged in error. To appeal, see
-the instructions included in the notification email—this is sent to the email address listed under
-your CWS developer account.
+You can appeal a repetitive content violation if you think it was flagged in error. Appeals can be made by using the [CWS Support form][cws-support-form]. To learn more, see the [Complaint handling
+process FAQ][complaint-faq].
 
 ### How can developers consolidate their user base? {: #consolidation }
 
@@ -179,3 +178,8 @@ with the publisher.
 
 This is allowed only as an auxiliary feature within the overall extension functionality. It cannot
 be the single purpose of the extension.
+
+[complaint-faq]: /docs/webstore/complaint-faq
+[cws-support-form]: https://support.google.com/chrome_webstore/contact/one_stop_support
+[spam-policy]: /docs/webstore/program_policies#spam
+[test-accounts]: /docs/webstore/cws-dashboard-distribution#private-visibility-trusted-testers

@@ -18,7 +18,7 @@ developers to share ownership of a published item. Consider how this differs fro
 individual publisher role.
 
 {% Aside %}
-When you [register as a Chrome Web Store developer][register], your developer account is
+When you [register as a Chrome Web Store developer][cws-register], your developer account is
 automatically enrolled as an individual publisher.
 {% endAside %}
 
@@ -42,8 +42,6 @@ Group publishers provide a number of benefits for organizations and development 
 * It avoids unintended deletion of items that can happen when a developer leaves the org (because
   their account gets deleted and that individual account was the item's publisher).
 
-You can only create a group publisher once. However, you can be a member of other
-developers' group publishers.
 
 ## Before you set up group publishing
 
@@ -72,7 +70,7 @@ Keep these important notes in mind:
 To create a group publisher, follow these steps:
 
 {% Aside %}
-If you haven't already done so, you may wish to create a private Google Group before you begin.
+If you haven't already done so, you may wish to create a private [Google Group][google-group] before you begin.
 {% endAside %}
 
 1. Sign in to the [Chrome Web Store developer
@@ -86,7 +84,7 @@ If you haven't already done so, you may wish to create a private Google Group be
 1. Select the Google Group that you want to associate with the new group
 publisher, then click **Convert to group publisher**.
 
-1. Make sure that the Google Group has mail turned on, as shown below:
+1. Make sure that the [Google Group][google-group] has mail turned on, as shown below:
 
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/TgfQPjITmgIX0aYcDl1L.png", alt="Screenshot of Allow
         posting by email option", width="685", height="179" %}
@@ -179,9 +177,10 @@ To verify that the item was transferred:
 ## Group publishing troubleshooting
 
 * If either your individual publishing account or the group publisher account is suspended, you won't be able to transfer items.
-* If the group publisher account has reached its published item limit, you won't be able to transfer your published items to this group publisher.
+* If the group publisher account has reached its published [item limit][items-limit], you won't be able to transfer your published items to this group publisher.
 
 [cws-register]: /docs/webstore/register/
 [devconsole]: https://chrome.google.com/webstore/devconsole
+[items-limit]: /docs/webstore/faq/#faq-gen-29
 [google-group]: https://groups.google.com
 [use-publisher]: #publishing-using-a-group-publisher

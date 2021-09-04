@@ -6,34 +6,65 @@
 {% endblock %}
 
 {% block content %}
-<div class="tags-grid measure-1280 gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400 center-margin">
-  {% for tag in pagination.items %}
-    {# Get the current first letter of the tag title #}
-    {% set tagLetter = tag.title[0] | capitalize %}
+{% set letterTitle = '' %}
 
-    {# If this is not the first iteration and the letter title and it doesn't match the tag's letter close the div #}
-    {% if not loop.first and letterTitle !== tagLetter %}
-        </ul>
-      </div>
-    {% endif %}
-
-    {# If the letter title doesn't match the tag's letter create a new div and set the letter title to the current letter #}
-    {% if letterTitle !== tagLetter %}
-      {% set letterTitle = tagLetter %}
-      <div class="tag-card">
-        <h2 class="type--label color-secondary-text"><span class="visually-hidden">Tags that start with: </span>{{ letterTitle }}</h2>
-        <ul role="list" class="pad-0 gap-top-300 gap-bottom-0">
-    {% endif %}
-    
+{% macro renderTag(tag) %}
+  {%- if tag -%}
     <li>
-      <a class="type--h6 color-primary surface" href="{{ helpers.join('/', locale, 'tags', tag.key, '/')  }}">{{ tag.title }}</a>
+      <a class="type--h6 color-primary surface" href="{{ helpers.join('/', locale, 'tags', tag.key, '/') }}">{{ tag.title }}</a>
     </li>
-    
-    {# If this is the last element of our loop close the div #}
-    {% if loop.last %}
-      </div>
-    {% endif %}
-  {% endfor %}
+  {%- endif -%}
+{% endmacro %}
+
+<div class="measure-1280 gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400 center-margin">
+
+  <div class="tag-card__header gap-bottom-600">
+    <h2 class="type--label color-secondary-text case-upper">{{ 'i18n.nav.side_nav.releases' | i18n(locale) }}</h2>
+    <ul role="list" class="pad-0 gap-top-300 gap-bottom-0">
+      {% for tag in namedChromeReleaseTags %}
+        {{ renderTag(tag) }}
+      {% endfor %}
+      <select-loader>
+        <select class="type--label gap-top-300 gap-bottom-300 color-primary">
+          <option disabled selected>{{ 'i18n.common.older_releases' | i18n(locale) }}</option>
+          {% for tag in chromeReleaseTags %}
+            <option href="{{ helpers.join('/', locale, 'tags', tag.key, '/') }}">{{ tag.title }}</option>
+          {% endfor %}
+        </select>
+      </select-loader>
+    </ul>
+  </div>
+
+  <div class="tags-grid">
+
+    {% for tag in displayTags %}
+      {# Get the current first letter of the tag title #}
+      {% set tagLetter = tag.title[0] | capitalize %}
+
+      {# If this is not the first iteration and the letter title and it doesn't match the tag's letter close the div #}
+      {% if not loop.first and letterTitle !== tagLetter %}
+          </ul>
+        </div>
+      {% endif %}
+
+      {# If the letter title doesn't match the tag's letter create a new div and set the letter title to the current letter #}
+      {% if letterTitle !== tagLetter %}
+        {% set letterTitle = tagLetter %}
+        <div class="tag-card">
+          <h2 class="type--label color-secondary-text"><span class="visually-hidden">Tags that start with: </span>{{ letterTitle }}</h2>
+          <ul role="list" class="pad-0 gap-top-300 gap-bottom-0">
+      {% endif %}
+
+      {{ renderTag(tag) }}
+
+      {# If this is the last element of our loop close the div #}
+      {% if loop.last %}
+          </ul>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+  </div>
 </div>
 {% include 'partials/pagination.njk' %}
 {% endblock %}

@@ -11,7 +11,7 @@
     <dt>{{ i18n.release_title }}</dt>
     <dd>{{ release.mstone }}</dd>
     <dt>{{ i18n.stabledate_title }}</dt>
-    <dd>{{ release.stable_date }}</dd>
+    <dd>{{ release.stableDate.toLocaleDateString(locale, {day: 'numeric', month: 'long', year: 'numeric'}) }}</dd>
   </dl>
 
   {% endfor %}

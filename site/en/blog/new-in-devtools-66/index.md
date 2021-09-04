@@ -14,6 +14,8 @@ tags:
   - chrome-66
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 New features and major changes coming to DevTools in Chrome 66 include:
 
 - [Ignore script in the **Network** panel][1]
@@ -156,6 +158,10 @@ where I really wanted to pause all along.
 {% Img src="image/admin/0UHBfrZykjGbEfFkrCwE.png", alt="The click breakpoint now pauses on the app's listener code.", width="800", height="486" %}
 
 **Figure 8**. The `click` breakpoint now pauses on the app's listener code
+
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: #ignore-script
 [2]: #auto-adjust

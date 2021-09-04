@@ -1,3 +1,19 @@
+/*
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 const {fetchFromCache} = require('./lib/cache');
 
 const OMAHA_PROXY_JSON = 'https://omahaproxy.appspot.com/all.json';
@@ -23,10 +39,11 @@ function extractMajorVersion(raw) {
  * Fetches Chrome release data for a major version from the Chromium Dashboard. Can return null
  * if the version or data returned is invalid.
  *
+ * @param {string} channel
  * @param {number} version
- * @return {!Promise<?Object>}
+ * @return {Promise<ChromeReleaseData?>}
  */
-async function dataForVersion(version) {
+async function dataForVersion(channel, version) {
   const url = `${SCHEDULE_JSON}?mstone=${version}`;
   const json = await fetchFromCache(url);
 
@@ -40,8 +57,14 @@ async function dataForVersion(version) {
     return null;
   }
 
-  // This contains useful keys "stable_date", "earliest_beta" and "final_beta", among others.
-  return data;
+  // The underlying data contains useful keys "stable_date", "earliest_beta" and "final_beta",
+  // among others, most of which are currently ignored.
+
+  return {
+    mstone: version,
+    key: channel,
+    stableDate: new Date(data['stable_date']),
+  };
 }
 
 /**
@@ -54,7 +77,9 @@ async function dataForVersion(version) {
  */
 module.exports = async function buildVersionInformation() {
   const json = await fetchFromCache(OMAHA_PROXY_JSON);
-  const channels = {};
+
+  /** @type {{[channel: string]: number}} */
+  const channelRelease = {};
 
   // Find the current version for every channel. The published data returns the versions for each
   // operating system. We take the highest major version found across each OS and use that.
@@ -68,26 +93,23 @@ module.exports = async function buildVersionInformation() {
       if (majorVersion === 0) {
         continue;
       }
-      if (channel in channels) {
-        channels[channel].mstone = Math.max(
-          channels[channel].mstone,
-          majorVersion
-        );
-      } else {
-        channels[channel] = {channel, mstone: majorVersion};
-      }
+      channelRelease[channel] = Math.max(
+        channelRelease[channel] ?? 0,
+        majorVersion
+      );
     }
   }
 
+  /** @type {{[channel: string]: ChromeReleaseData}} */
+  const channels = {};
+
   // Now that we have all major versions, look up and/or cache the schedule for each version. This
   // might be the same version for multiple channels, but Eleventy is caching the result for us.
-  for (const channel in channels) {
-    const {mstone} = channels[channel];
-    const update = await dataForVersion(mstone);
-
-    // dataForVersion doesn't know about the channel name, so we use Object.assign to ensure the
-    // channel name is still included in the value. This lets Eleventy paginate over just values.
-    Object.assign(channels[channel], update);
+  for (const [channel, mstone] of Object.entries(channelRelease)) {
+    const data = await dataForVersion(channel, mstone);
+    if (data) {
+      channels[channel] = data;
+    }
   }
 
   return {channels};

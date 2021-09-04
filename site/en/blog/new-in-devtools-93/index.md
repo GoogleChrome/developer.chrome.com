@@ -15,11 +15,9 @@ tags:
   - chrome-93
 ---
 
-{% Aside %}
-Interested in helping improve DevTools? Sign up to participate in [Google User Research here](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458).
+{% include 'partials/devtools/en/banner.md' %}
 
-{% endAside %}
-
+{% YouTube id="1VaPAnUGRz8" %}
 
 ## Editable CSS container queries in the Styles pane {: #container-queries }
 You can now view and edit [CSS container queries](https://web.dev/new-responsive/#responsive-to-the-container) in the **Styles** pane.
@@ -143,3 +141,6 @@ Open a JSON response in the **Network** panel, click on the `{}` icon to pretty-
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/250c88b4d02da283cd0a96204b1592f59fda2fcb #}
 
 Chromium bug: [998674](https://crbug.com/998674) 
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
