@@ -8,12 +8,15 @@ description: Frequently asked questions about Chrome Web Store.
 
 The [Chrome Web Store][webstore] lets you publish free or paid extensions where Google Chrome users can easily
 find them. This FAQ answers many common questions about the Chrome Web Store. If you don't find your
-answer here, check the [general extension FAQs][extension-faq], how to [Troubleshoot Chrome Web Store
+answer here, check the [general extension FAQs][extension-faq], how to [troubleshoot Chrome Web Store
 violations][troubleshoot-violations], or the
 [chromium-extension group][chromium-extensions]. For additional technical questions and discussion, we recommend [Stack Overflow][stackoverflow-google-chrome].
 
+{% Aside %}
 
 Please expand the _Table of Contents_ to quickly navigate this page.
+
+{% endAside %}
 
 ## General Questions
 
