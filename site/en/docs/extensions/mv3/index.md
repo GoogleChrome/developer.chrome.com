@@ -34,7 +34,7 @@ have a look at the following starting pages:
 Beyond that, you might find useful entry points in these pages:
 
 * Learn the scope of things in the [Extension development overview](/docs/extensions/mv3/devguide/)
-* Pick something from the [samples page](/docs/extensions/???), install it, and start hacking on it.
+* Pick something from the [samples page](https://github.com/GoogleChrome/chrome-extensions-samples), install it, and start hacking on it.
 * Look for answers in the [Extensions FAQ page](/docs/extensions/mv3/faq/)
 
 {% if process.env.HAS_MV3 %}
