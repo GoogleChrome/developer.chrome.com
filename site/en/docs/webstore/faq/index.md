@@ -6,10 +6,12 @@ updated: 2021-07-27
 description: Frequently asked questions about Chrome Web Store.
 ---
 
-The [Chrome Web Store][1] lets you publish free or paid extensions where Google Chrome users can easily
+The [Chrome Web Store][webstore] lets you publish free or paid extensions where Google Chrome users can easily
 find them. This FAQ answers many common questions about the Chrome Web Store. If you don't find your
-answer here, check the [extension hosting changes FAQs][2], the [general extension FAQs][3], or the
-[chromium-apps group][4].
+answer here, check the [general extension FAQs][extension-faq], how to [Troubleshoot Chrome Web Store
+violations][troubleshoot-violations], or the
+[chromium-extension group][chromium-extensions]. For additional technical questions and discussion, we recommend [Stack Overflow][stackoverflow-google-chrome].
+
 
 Please expand the _Table of Contents_ to quickly navigate this page.
 
@@ -327,10 +329,6 @@ European developers can raise concerns about clarity of terms, policies, or othe
 Business related issues by contacting [CWS support][cws-support].
 
 
-[1]: https://chrome.google.com/webstore
-[2]: /docs/extensions/mv2/hosting_changes
-[3]: /docs/extensions/mv2/faq
-[4]: https://groups.google.com/a/chromium.org/group/chromium-apps
 [5]: #faq-gen-01
 [6]: #faq-gen-02
 [7]: #faq-gen-05
@@ -436,13 +434,17 @@ Business related issues by contacting [CWS support][cws-support].
 
 [apps]: /docs/apps/
 [branding]: /docs/webstore/branding
+[chromium-extensions]: https://groups.google.com/a/chromium.org/g/chromium-extensions
 [complaint-handling]: /docs/webstore/complaint-faq
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
 [ext]: /docs/extensions/
+[extension-faq]: /docs/extensions/mv3/faq
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
 [how-long-do-reviews-take]: #faq-listing-108
 [internationalize]: /docs/webstore/i18n
+[stackoverflow-google-chrome]: https://stackoverflow.com/questions/tagged/google-chrome-extension
 [terms-of-services]: /docs/webstore/terms
 [themes]: /docs/extensions/mv3/themes/
+[troubleshoot-violations]: /docs/webstore/troubleshooting/
 [program-policies]: /docs/webstore/program_policies
-
+[webstore]: https://chrome.google.com/webstore
