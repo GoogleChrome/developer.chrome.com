@@ -35,13 +35,13 @@ extension.
 
 ### Is there a road map for Chrome? {: #faq-gen-05 }
 
-You can follow the [Google Chrome Releases blog][95] to learn about all the latest changes that are
-being made to Chrome. You can create and track bugs and features in the [Chromium bug tracker][96],
-and we recommend that you download and install the [Dev channel build][97] of Chrome browser.
+You can follow the [Google Chrome Releases blog][chrome-release-blog] to learn about all the latest changes that are
+being made to Chrome. You can create and track bugs and features in the [Chromium bug tracker][bug-tracker],
+and we recommend that you download and install the [Dev channel build][dev-channel-build] of Chrome browser.
 
 ### Why would someone install an extension instead of just using a bookmark or typing in a URL? {: #faq-gen-07 }
 
-Installing an extension ensures it is launchable from the New Tab Page via the Chrome extensions launcher.
+Users can use extensions to add new features to existing web apps, get relevant information on pages and get timely notifications about certain events.
 Installing an extension also allows you to grant it privileges such as unlimited local storage and
 background pages.
 
@@ -418,9 +418,6 @@ Business related issues by contacting [CWS support][cws-support].
 [89]: #faq-extensions-02
 [90]: #faq-themes-01
 [91]: #faq-themes-02
-[95]: https://chromereleases.googleblog.com/
-[96]: https://crbug.com
-[97]: https://www.chromium.org/getting-involved/dev-channel
 [99]: /docs/webstore/register
 [100]: https://www.google.com/accounts/NewAccount
 [104]: https://groups.google.com
@@ -437,11 +434,14 @@ Business related issues by contacting [CWS support][cws-support].
 
 [apps]: /docs/apps/
 [branding]: /docs/webstore/branding
+[bug-tracker]: https://crbug.com
+[chrome-release-blog]: https://chromereleases.googleblog.com/
 [chromium-extensions]: https://groups.google.com/a/chromium.org/g/chromium-extensions
 [complaint-handling]: /docs/webstore/complaint-faq
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
 [ext]: /docs/extensions/
 [extension-faq]: /docs/extensions/mv3/faq
+[dev-channel-build]: https://www.chromium.org/getting-involved/dev-channel
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
 [how-long-do-reviews-take]: #faq-listing-108
 [internationalize]: /docs/webstore/i18n
