@@ -36,7 +36,7 @@ Press <kbd>Escape</kbd> to open or close the Drawer.
 Click **More** {% Img src="image/admin/412azsDzeKPM2HQ6p5Rr.png", alt="More", width="6", height="26" %} to open other Drawer
 tabs.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/js6f1MUOacROa2L3kYnY.svg", alt="The button for opening Drawer tabs.", width="197", height="150" %}
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/js6f1MUOacROa2L3kYnY.svg", alt="The button for opening Drawer tabs.", width="700", height="532" %}
 
 **Figure 3**: The button for opening Drawer tabs, outlined in blue.
 
