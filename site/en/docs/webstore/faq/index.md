@@ -45,13 +45,6 @@ Users can use extensions to add new features to existing web apps, get relevant 
 Installing an extension also allows you to grant it privileges such as unlimited local storage and
 background pages.
 
-### Is there an approval process for extensions in the store? {: #faq-gen-08 }
-
-All extensions go through an automated review process and in some cases, an extension will be published without
-further manual review. There may be some instances in which a manual review will be required before
-the extension is published based on our [program policies][program-policies]. In some cases, where sensitive permissions
-are requested, review times and/or approval times may be longer.
-
 ### How will users find my extension? {: #faq-gen-09 }
 
 The Chrome Web Store will surface extensions in a variety of ways. Of course, each extension gets a page in
@@ -68,8 +61,15 @@ fee before you can access the Chrome Web Store Developer Dashboard.
 {% Aside %}
 If you are already using the developer dashboard but haven't paid this fee yet, you must
 now pay it in order to continue accessing your developer dashboard. This one-time fee is now part of
-the standard [developer registration process][99].
+the standard [developer registration process][cws-register].
 {% endAside %}
+
+### Is there an approval process for extensions in the store? {: #faq-gen-08 }
+
+All extensions go through an automated review process and in some cases, an extension will be published without
+further manual review. There may be some instances in which a manual review will be required before
+the extension is published based on our [program policies][program-policies]. In some cases, where sensitive permissions
+are requested, review times and/or [approval times may be longer][how-long-do-reviews-take].
 
 ### What types of extensions are not allowed in the store? {: #faq-gen-22 }
 
@@ -418,7 +418,6 @@ Business related issues by contacting [CWS support][cws-support].
 [89]: #faq-extensions-02
 [90]: #faq-themes-01
 [91]: #faq-themes-02
-[99]: /docs/webstore/register
 [100]: https://www.google.com/accounts/NewAccount
 [104]: https://groups.google.com
 [110]: https://chrome.google.com/webstore/devconsole
@@ -438,6 +437,7 @@ Business related issues by contacting [CWS support][cws-support].
 [chrome-release-blog]: https://chromereleases.googleblog.com/
 [chromium-extensions]: https://groups.google.com/a/chromium.org/g/chromium-extensions
 [complaint-handling]: /docs/webstore/complaint-faq
+[cws-register]: /docs/webstore/register
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
 [ext]: /docs/extensions/
 [extension-faq]: /docs/extensions/mv3/faq
