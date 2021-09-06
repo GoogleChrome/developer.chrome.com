@@ -135,7 +135,7 @@ CORS-related TypeErrors in the **Console** are now linked to the Network panel a
 <!--
 Click on the two new icons next to the CORS-related error message to view the network request, or understand the error message further and get potential solutions in the Issues tab.
 -->
-CORSに関連するエラーメッセージの横にある2つの新しいアイコンをクリックすると、ネットワークリクエストを確認したり、Issueタブでエラーメッセージの詳細と想定される解決策を確認できます。
+CORSに関連するエラーメッセージの横にある2つの新しいアイコンをクリックすると、ネットワークリクエストを確認したり、Issueタブでエラーメッセージの詳細と、想定される解決策を確認できます。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VzoUggSoM0FnkDlIFPhq.png", alt="Icons next to the CORS-related error message", width="800", height="485" %}
 
