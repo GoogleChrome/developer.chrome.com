@@ -5,16 +5,16 @@
 <!--
 Consider using the Chrome [Canary](https://www.google.com/chrome/canary/), [Dev](https://www.google.com/chrome/dev/) or [Beta](https://www.google.com/chrome/beta/) as your default development browser. These preview channels give you access to the latest DevTools features, test cutting-edge web platform APIs, and find issues on your site before your users do!
 -->
-Chrome [Canary](https://www.google.com/chrome/canary/)、[Dev](https://www.google.com/chrome/dev/)、[Beta](https://www.google.com/chrome/beta/)をデフォルトの開発ブラウザとして利用することを検討してください。これらのプレビューチャンネルではDevToolsの最新機能を利用でき、最先端のウェブプラットフォームAPIをテストして、ユーザーが遭遇するよりも先にあなたのサイトの問題を見つけることができます。
+Chrome [Canary](https://www.google.com/chrome/canary/)、[Dev](https://www.google.com/chrome/dev/)、[Beta](https://www.google.com/chrome/beta/)をデフォルトの開発ブラウザとして利用することを検討してください。これらのプレビューチャンネルでは DevTools の最新機能を利用でき、最先端のウェブプラットフォーム API をテストして、ユーザーが遭遇するよりも先にあなたのサイトの問題を見つけることができます。
 
 <!--
 ## Getting in touch with the Chrome DevTools team {: #contact-us }
 -->
-## Chrome DevToolsチームとの交流 {: #contact-us }
+## Chrome DevTools チームとの交流 {: #contact-us }
 <!--
 Use the following options to discuss the new features and changes in the post, or anything else related to DevTools.
 -->
-新しい機能や、この投稿の変更、その他DevToolsに関することであれば何でも、意見があれば以下のいずれかを使用してご連絡ください。
+新しい機能や、この投稿の変更、その他 DevTools に関することであれば何でも、意見があれば以下のいずれかを使用してご連絡ください。
 
 <!--
 - Submit a suggestion or feedback to us via [crbug.com](https://crbug.com).
@@ -23,6 +23,6 @@ Use the following options to discuss the new features and changes in the post, o
 - Leave comments on our What's new in DevTools [YouTube videos](https://goo.gle/devtools-youtube).
 -->
 - 私たちへの提案やフィードバックは[crbug.com](https://crbug.com)から投稿してください。
-- DevToolsの問題はDevToolsの**More options** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Help** > **Report a DevTools issues**を使用してレポートしてください。
-- <a href="https://twitter.com/intent/tweet?text=@ChromeDevTools" target="_blank">@ChromeDevTools</a>宛にTweetしてください。
+- DevTools の問題は DevTools の **More options** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Help** > **Report a DevTools issues** を使用してレポートしてください。
+- <a href="https://twitter.com/intent/tweet?text=@ChromeDevTools" target="_blank">@ChromeDevTools</a> 宛にTweetしてください。
 - What's new in DevTools [YouTubeビデオ](https://goo.gle/devtools-youtube)にコメントを残してください。
