@@ -15,7 +15,7 @@ tags:
   - chrome-93
 ---
 
-*Thanks [name](url) for the translations, [name](url) and [name](url} for the reviews!*
+*Thanks [technohippy](https://github.com/technohippy) for the translations, [yoichiro](https://github.com/yoichiro) and [lacolaco](https://github.com/lacolaco) for the reviews!*
 
 {% include 'partials/devtools/ja/banner.md' %}
 
