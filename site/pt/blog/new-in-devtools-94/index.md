@@ -7,7 +7,7 @@ date: 2021-08-24
 updated: 2021-08-24
 description:
   "Utilize o DevTools em seu idioma preferido, novos dispositivos Nest Hub, novo badge de consultas de contêiner CSS e muito mais."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/js1uKEulNBGj0PoJkqZq.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/kTSL9x5E2JRNenbqZtMO.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -15,9 +15,9 @@ tags:
   - chrome-94
 ---
 
-*Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/).*
+*Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)*
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/pt/banner.md' %}
 
 ## Utilize o DevTools em seu idioma preferido {: #localized }
 
@@ -82,7 +82,7 @@ Por exemplo, você pode digitar  "status-code: 404" para filtrar as requisiçõe
 Issue relacionada: [1054464](https://crbug.com/1054464)
 
 
-## Obsolescência da barra lateral do Console {: #deprecated }
+## Depreciação da barra lateral do Console {: #deprecated }
 
 A barra lateral do Console será removida em favor de mudar a interface do usuário do filtro para a barra de ferramentas. Você tem alguma preocupação ou feedback? Informe-nos por meio desta [Issue](https://crbug.com/1232937).
 
@@ -97,7 +97,7 @@ Issue relacionada: [1232937](https://crbug.com/1232937)
 
 O DevTools agora exibe cabeçalhos `Set-Cookie` na guia **Issues**.
 
-Anteriormente, o DevTools não mostrava cookies malformados (cabeçalho `Set-Cookie` incorreto) no painel **Network**. Com o novo filtro `response-header-set-cookie` adicionado ao painel **Network**, os usuários podem filtrar a resposta do cabeçalho` Set-Cookie`. O DevTools vinculará os cabeçalhos `Set-Cookie` na guia **Issues** ao painel **Network**.
+Anteriormente, o DevTools não mostrava cookies malformados (cabeçalho `Set-Cookie` incorreto) no painel **Network**. Com o novo filtro `response-header-set-cookie` adicionado ao painel **Network**, os usuários podem filtrar a resposta do cabeçalho `Set-Cookie`. O DevTools vinculará os cabeçalhos `Set-Cookie` na guia **Issues** ao painel **Network**.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PbozcNJRd6rTME5hhqIq.png", alt="Cabeçalhos 'Set-Cookie' na guia Issues no painel Network", width="800", height="563" %}
 
@@ -111,7 +111,7 @@ Issue relacionada: [1179186](https://crbug.com/1179186)
 
 O **Console** agora mostra métodos de acesso nativos como propriedades de forma consistente.
 
-Por exemplo, ao avaliar a expressão `new Int8Array ([1, 2, 3])` no **Console**, acessadores nativos como `length`,` byteOffset` não eram exibidos na visualização. Com esta atualização, os métodos de acesso nativos aparecem na visualização e os valores são avaliados quando expandidos.
+Por exemplo, ao avaliar a expressão `new Int8Array ([1, 2, 3])` no **Console**, propriedades nativas como `length`,` byteOffset` não eram exibidas na visualização. Com esta atualização, os métodos de acesso nativos aparecem na visualização e os valores são avaliados quando expandidos.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VcUiEcUXdWc00Q8595n6.png", alt="Exibição consistente dos métodos de acesso nativos como propriedades no Console", width="800", height="459" %}
 
@@ -173,5 +173,5 @@ Na guia **Issues**, passe o mouse sobre um problema e clique no menu do problema
 
 Issue relacionada: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/pt/reach-out.md' %}
+{% include 'partials/devtools/pt/whats-new.md' %}
