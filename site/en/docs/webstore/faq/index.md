@@ -121,8 +121,12 @@ collection are not accepted.
 
 ### How can I provide support for users of my extension? {: #faq-gen-27 }
 
-You can set up discussion groups to communicate with your users. One way of doing so is through
-[Google Groups][104].
+First you must "Enable User Feedback" in your developer dashboard Account settings. 
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="700", height="85" %}
+
+You can manage user feedback using the User Support tab of your dashboard item or you can add a
+discussion group link like [Google Groups][google-groups] to the [Support URL][support-url] field.
 
 ### Can I remove comments from my listing if I believe they are unfair? {: #faq-gen-28 }
 
@@ -419,7 +423,6 @@ Business related issues by contacting [CWS support][cws-support].
 [90]: #faq-themes-01
 [91]: #faq-themes-02
 [100]: https://www.google.com/accounts/NewAccount
-[104]: https://groups.google.com
 [110]: https://chrome.google.com/webstore/devconsole
 [111]: https://code.google.com/chrome/extensions/packaging.html
 [112]: https://code.google.com/chrome/extensions/autoupdate.html
@@ -443,9 +446,11 @@ Business related issues by contacting [CWS support][cws-support].
 [extension-faq]: /docs/extensions/mv3/faq
 [dev-channel-build]: https://www.chromium.org/getting-involved/dev-channel
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
+[google-groups]: https://groups.google.com
 [how-long-do-reviews-take]: #faq-listing-108
 [internationalize]: /docs/webstore/i18n
 [stackoverflow-google-chrome]: https://stackoverflow.com/questions/tagged/google-chrome-extension
+[support-url]: /docs/webstore/cws-dashboard-listing/#support-url
 [terms-of-services]: /docs/webstore/terms
 [themes]: /docs/extensions/mv3/themes/
 [troubleshoot-violations]: /docs/webstore/troubleshooting/
