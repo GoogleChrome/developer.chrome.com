@@ -935,5 +935,19 @@
       "unit": "Chrome"
     },
     "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/GLfwUjU4lr5ceazmYP1X.jpg"
+  },
+  "dalecurtis": {
+    "name": {
+      "given": "Dale",
+      "family": "Curtis"
+    },
+    "descriptions": {
+      "en": "Engineering lead for media playback in Chromium"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/tXj7wN2dYxURc2jOyF7n.png"
   }
 }
