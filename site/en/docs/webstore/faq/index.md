@@ -297,19 +297,26 @@ It depends. There are several reasons why your item may not be showing up in sea
 
 ### My extension has been removed from the Chrome Web Store. What should I do? {: #faq-listing-10 }
 
-Application removals count as strikes against the good standing of your developer account. Multiple
-or egregious policy violations may result in termination of your developer account.
+Extension removals count as strikes against the good standing of your developer account. Multiple
+or egregious policy violations may result in [termination of your developer account][account-suspended].
 
 - For all policy violation extension removals, you will receive a removal notification email with more
-  details in the developer account listed as the owner of the extension. Please make the appropriate
+  details in the developer account listed as the owner of the extension. You can also find
+  this information in the [Status Tab][comply-policies] of your item.
+- Please make the appropriate
   changes so your extension complies with all [Developer Program Policies][program-policies], [Branding
-  Guidelines][branding] and [Terms of Services][terms-of-services]. Once you have remedied the violation you can
+  Guidelines][branding] and [Terms of Services][terms-of-services]. For additional help, see the 
+  [Troubleshooting violations FAQ][troubleshoot-violations].
+- Once you have remedied the violation you can
   resubmit via your developer dashboard.
 - Please do not re-publish a removed extension until the policy violation has been remedied. If
   you have additional questions, follow the instructions in the [CWS Complaint Handling FAQ][complaint-handling].
-- If you believe your developer account was wrongly terminated, you can appeal [here][cws-support]. We will
+
+### My Chrome Web Store account has been suspended. What should I do? {: #faq-listing-12 }
+
+If you believe your developer account was wrongly terminated, you can appeal [here][cws-support]. We will
   only reinstate accounts if an error was made, and a re-review finds that your account does not
-  violate the developer terms.
+  violate the developer terms. For more information, check the [CWS Complaint Handling FAQ][complaint-handling].
 
 ### How do I link my Play and Chrome Web Store item so that the "Available for Android" link appears on my item detail page? {: #faq-listing-11 }
 
@@ -426,11 +433,13 @@ Business related issues by contacting [CWS support][cws-support].
 [123]: /docs/webstore/program_policies
 
 [apps]: /docs/apps/
+[account-suspended]: #faq-listing-12
 [branding]: /docs/webstore/branding
 [bug-tracker]: https://crbug.com
 [chrome-release-blog]: https://chromereleases.googleblog.com/
 [chromium-extensions]: https://groups.google.com/a/chromium.org/g/chromium-extensions
 [complaint-handling]: /docs/webstore/complaint-faq
+[comply-policies]: /docs/webstore/manage/#comply-with-chrome-web-store-policies
 [cws-distribution]: /docs/webstore/cws-dashboard-distribution/
 [cws-register]: /docs/webstore/register
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
@@ -445,7 +454,7 @@ Business related issues by contacting [CWS support][cws-support].
 [internationalize]: /docs/webstore/i18n
 [malware]: https://www.google.com/about/company/unwanted-software-policy.html
 [manifest-version]: /docs/extensions/mv3/manifestVersion
-[regions-distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution
+[region-distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution
 [stackoverflow-google-chrome]: https://stackoverflow.com/questions/tagged/google-chrome-extension
 [support-url]: /docs/webstore/cws-dashboard-listing/#support-url
 [terms-of-services]: /docs/webstore/terms
