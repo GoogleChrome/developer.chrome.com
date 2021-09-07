@@ -3,8 +3,12 @@ layout: layouts/doc-post.njk
 title: 第一方集
 subhead: |2-
 
+
+
   允许由同一实体拥有和运营的相关域名声明属于同一个第一方。
 description: |2-
+
+
 
   第一方集使同一实体拥有和运营的相关域名能够声明自己属于同一个第一方。
 date: '2021-05-18'
