@@ -138,13 +138,15 @@ You may also report fake reviews via the Developer [Support Form][cws-support].
 ### Is there a limit to the number of items I can have on the Chrome Web Store? {: #faq-gen-29 }
 
 You can upload as many items to the Chrome Web Store as you like, but by default, you are limited to
-having a total of 20 published items at any one time. This limit applies to the sum of your Chrome
-Apps and Chrome Extensions as a total—it is not 20 of each item. If you reach this limit, [you may
+having a total of 20 published items at any one time. This limit applies to the sum of your Themes and Chrome Extensions as a total—it is not 20 of each item. If you reach this limit, [you may
 request a limit increase][cws-support]. The Chrome Web Store staff will review your existing items and your
 developer account history, and if approved, you will be granted an increase. Please note that if
 your developer account has been suspended in the past, or you have had items taken down previously
 for policy violations, or your items consistently receive low quality ratings, your request may be
 denied.
+
+
+## Development
 
 ### Can I obfuscate my code? {: #faq-gen-30 }
 
@@ -152,7 +154,10 @@ As of October 1st 2018, developers must not obfuscate code or conceal functional
 extensions. This also applies to any external code or resource fetched by the extension package. For
 more information, please review our [program policies][program-policies].
 
-## Development
+The following are some examples of code obfuscation:
+
+- Base 64 encoding
+- Character encoding
 
 ### How do I write an extension? {: #faq-dev-01 }
 
