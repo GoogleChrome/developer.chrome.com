@@ -1,13 +1,13 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "What's New In DevTools (Chrome 94)"
+title: "Qué hay de nuevo en DevTools (Chrome 94)"
 authors:
   - jecelynyeen
 date: 2021-08-24
 updated: 2021-08-24
 description:
   "Use DevTools in your preferred language, new Nest Hub devices, new CSS container queries badge and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/js1uKEulNBGj0PoJkqZq.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GzZ1YTEeHlnhUrbPBzmr.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -17,9 +17,7 @@ tags:
 
 *Traducción cedida por [Carlos Caballero](https://carloscaballero.io).*
 
-{% Aside %}
-¿Tienes interés en mejorar DevTools? Regístrate para participar en la Google User Research aquí(https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458).
-{% endAside %}
+{% include 'partials/devtools/es/banner.md' %}
 
 
 ## Utiliza DevTools en tu idioma preferido {: #localized }
@@ -130,7 +128,7 @@ Chromium issues: [1076820](https://crbug.com/1076820), ​​[1199247](https://c
 
 DevTools ahora resuelve correctamente los scripts en línea con #sourceURL y muestra la pila de errores adecuada para la depuración.
 
-Anteriormente, DevTools mostraba una ubicación incorrecta para los scripts en línea con #sourceURL, en relación con el documento próximo en lugar de con respecto a la etiqueta de apertura <script>.
+Anteriormente, DevTools mostraba una ubicación incorrecta para los scripts en línea con #sourceURL, en relación con el documento próximo en lugar de con respecto a la etiqueta de apertura `<script>`.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XVUY8XxbGZW74kPsGkOZ.png", alt="Pila de error más adecuada para scripts en línea con #sourceURL", width="800", height="425" %}
 
@@ -179,5 +177,5 @@ En la pestaña **Issue**, sitúe el ratón en un problema, haga click en el men�
 
 Chromium issue: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/reach-out.md' %}
-{% include 'partials/devtools/whats-new.md' %}
+{% include 'partials/devtools/es/reach-out.md' %}
+{% include 'partials/devtools/es/whats-new.md' %}
