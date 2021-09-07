@@ -23,6 +23,7 @@ tags:
 
 
 ## Utiliza DevTools en tu idioma preferido {: #localized }
+
 Chrome DevTools soporta más de 80 idiomas, lo que permite que lo puedas utilizar en tu idioma preferido.
 
 Ve a [Configuración](/docs/devtools/customize/#settings), a continuación selecciona tu idioma preferido siguiente la ruta  **Configuración avanzada** > **Idioma** y finalmente, reinicia las DevTools.
@@ -35,6 +36,7 @@ Chromium issue: [1163928](https://crbug.com/1163928)
 
 
 ## Nest Hub en la lista de dispositivos {: #nest-hub }
+
 Ahora puedes simular las dimensiones físicas de Nest Hub y Nest Hub Max utilizando el [modo dispositivo](/docs/devtools/device-mode/).
 
 Clic [Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) &nbsp; {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="Toggle Device Toolbar", width="20", height="22" %} &nbsp;, selecciona Nest Hub o Nest Hub Max en la lista de dispositivos. 
@@ -73,6 +75,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 
 
 ## Nuevo checkbox para invertir los filtros del panel de Red {: #invert-network-filter }
+
 Utiliza el nuevo checkbox **Invertir** para invertir los filtros en el panel de Red.
 
 Por ejemplo, puedes escribir "status-code: 404" para filtrar las peticiones de la red con `status` 404. Habilita el checkbox **Invertir** para negar el filtro (se muestran todas las peticiones de la red las cuales no tienen el `status` 404).
@@ -85,6 +88,7 @@ Chromium issue: [1054464](https://crbug.com/1054464)
 
 
 ## Eliminación próxima (`deprecated`) de la barra lateral de la Consola {: #deprecated }
+
 La barra lateral de la consola será eliminada en favor de mover los filtros de UI a la barra de herramientas. ¿Tiene alguna duda o comentario? Háganoslo saber a través de este [issue tracker](https://crbug.com/1232937).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CzC2HCaiCcdPgbLykyc8.png", alt="Mensaje de aviso de próxima eliminación de la barra lateral de la consola.", width="800", height="474" %}
@@ -95,6 +99,7 @@ Chromium issue: [1232937](https://crbug.com/1232937)
 
 
 ## Mostrar cabecera `Set-Cookie` sin procesar en la pestaña Problemas y el panel Red {: #raw-cookies }
+
 DevTools ahora muestra la cabecera `Set-Cookie` sin procesar (`raw`) en la pestaña **Problemas**.
 
 Anteriormente, DevTools no mostraba cookies con formato incorrecto (cabecera "Set-Cookie" incorrecta) en el panel Red. Con el nuevo filtro `response-header-set-cookie` agregado al panel **Red**, los usuarios pueden filtrar la respuesta de la cabecera `Set-Cookie` antes de ser procesada. DevTools vinculará la cabecera sin procesar `Set-Cookie` en la pestaña **Problemas** al panel **Red**.
@@ -108,6 +113,7 @@ Chromium issue: [1179186](https://crbug.com/1179186)
 
 
 ## Visualización coherente de los descriptores de acceso nativos como propiedades propias en la consola {: #native-accessors }
+
 La **Consola** ahora muestra los descriptores de acceso nativos como sus propias propiedades de manera coherente.
 
 Por ejemplo, al evaluar la expresión `new Int8Array([1, 2, 3])` en la **Consola**, los descriptores de acceso nativos como `length`,`byteOffset` no se muestran en la vista previa. Con esta última actualización, los descriptores de acceso nativos se muestran en la vista previa y los valores se evalúan por adelantado cuando se expanden.
@@ -121,6 +127,7 @@ Chromium issues: [1076820](https://crbug.com/1076820), ​​[1199247](https://c
 
 
 ## Pila de error más adecuada para scripts en línea con #sourceURL {: #inline-script }
+
 DevTools ahora resuelve correctamente los scripts en línea con #sourceURL y muestra la pila de errores adecuada para la depuración.
 
 Anteriormente, DevTools mostraba una ubicación incorrecta para los scripts en línea con #sourceURL, en relación con el documento próximo en lugar de con respecto a la etiqueta de apertura <script>.
@@ -157,6 +164,7 @@ Chromium issue: [1223391](https://crbug.com/1223391)
 
 
 ## [Experimental] Ocultar problemas en la pestaña de Problemas {: #hide-issues }
+
 {% Aside %}
 Para habilitar esta característica experimental, marca el checkbox **Habilitar ocultar menú de problemas** que se encuentra en  **Configuración** > **Experimental**.
 {% endAside %}
