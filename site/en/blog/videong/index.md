@@ -10,7 +10,7 @@ tags:
   - rendering
 ---
 {% Aside %}
-This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more about [RenderingNG architecture](/blog/renderingng-architecture/) and [key data structures](/blog/renderingng-data-structures/).
+This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more about [RenderingNG](/renderingng), [the architecture](/blog/renderingng-architecture/), and [key data structures](/blog/renderingng-data-structures/).
 {% endAside %}
 
 I'm Dale Curtis,
