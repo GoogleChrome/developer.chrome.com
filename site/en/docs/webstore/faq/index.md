@@ -161,11 +161,11 @@ The following are some examples of code obfuscation:
 
 ### How do I write an extension? {: #faq-dev-01 }
 
-You can find all the information you need to develop extensions at [/docs/extensions/][ext].
+You can find all the information you need to develop extensions in the [Documentation for Chrome extensions developers][ext].
 
 ### How can I push an update of my code to my users? {: #faq-dev-02 }
 
-Visit [https://chrome.google.com/webstore/devconsole][110] and click on the listing you wish to
+To [Update your Chrome Web Store item][update-item], visit the [developer dashboard][dev-dashboard] and click on the listing you wish to
 update. Once you upload a new version and click **Publish**, your update will automatically be
 pushed out to users over the next few hours.
 
@@ -460,4 +460,5 @@ Business related issues by contacting [CWS support][cws-support].
 [themes]: /docs/extensions/mv3/themes/
 [troubleshoot-violations]: /docs/webstore/troubleshooting/
 [program-policies]: /docs/webstore/program_policies
+[update-item]: /docs/webstore/update
 [webstore]: https://chrome.google.com/webstore
