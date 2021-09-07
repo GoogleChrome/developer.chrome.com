@@ -201,14 +201,7 @@ in the store.
 
 ### What are the screenshot and text requirements for the store? {: #faq-listing-04 }
 
-See [Supplying Images][116] for guidelines on supplying images for the store. Some other best
-practices to consider:
-
-- Write a catchy title, a clear and descriptive short description, and a detailed long description.
-- Create screenshots that demonstrate how your extension works.
-- Upload a screencast, such as a YouTube video or a Google Docs Presentation, to demonstrate how
-  your extension works.
-- Post a support link so that users don't clutter your comments thread with bug reports.
+See [Supplying Images][116] for guidelines on supplying images for the store. Read more on [how to create a great listing][great-listing].
 
 ### How can I import an existing extension into the store? {: #faq-listing-05 }
 
@@ -452,6 +445,7 @@ Business related issues by contacting [CWS support][cws-support].
 [dev-channel-build]: https://www.chromium.org/getting-involved/dev-channel
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
 [enterprise]: /docs/webstore/cws-enterprise
+[great-listing]: /docs/webstore/best_listing/
 [google-groups]: https://groups.google.com
 [how-long-do-reviews-take]: #faq-listing-108
 [internationalize]: /docs/webstore/i18n
@@ -463,3 +457,4 @@ Business related issues by contacting [CWS support][cws-support].
 [program-policies]: /docs/webstore/program_policies
 [update-item]: /docs/webstore/update
 [webstore]: https://chrome.google.com/webstore
+
