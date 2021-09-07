@@ -271,20 +271,18 @@ Review times vary; some reviews complete in a few hours, others take many days, 
 review can take several weeks. Some reasons that an item could require more extensive review
 include:
 
-- The item is suspected to contain or to be distributed by malware or unwanted software.
-- The item is suspected to violate one of the developer program policies.
+- The item is suspected to contain or to be distributed by [malware or unwanted software][malware].
+- The item is suspected to violate one of the [developer program policies][program-policies].
 - The item may have already been previously removed for a legal or policy violation, and has been
   resubmitted.
 - The item requests powerful permissions that require in-depth review.
 
+{% Aside %}
+
 Note that all item submissions—whether for a new item or an update to an existing one—are
 subject to the same review process.
 
-For more information about the unwanted software policy, see:
-[https://www.google.com/about/company/unwanted-software-policy.html][122].
-
-For more information about the developer program policies, see:
-[/webstore/program_policies][123].
+{% endAside %}
 
 If your item's status says "pending review" for more than three weeks, you should [contact
 support][cws-support].
@@ -294,9 +292,8 @@ support][cws-support].
 It depends. There are several reasons why your item may not be showing up in search.
 
 - You just published your extension. It might take a few hours before we index it.
-- Your extension manifest is out of date. Upgrade your item to a current valid manifest version as
-  described [here][125].
-- Your extension is not listed in the region you are searching in. See more details [here][127].
+- Your extension manifest version is out of date. Upgrade your item to a current [valid manifest version][manifest-version].
+- Your extension is not listed in the region you are searching in. Check your [geographical distribution][region-distribution] in the Distribution Tab.
 
 ### My extension has been removed from the Chrome Web Store. What should I do? {: #faq-listing-10 }
 
@@ -428,9 +425,6 @@ Business related issues by contacting [CWS support][cws-support].
 [122]: https://www.google.com/about/company/unwanted-software-policy.html
 [123]: /docs/webstore/program_policies
 
-[125]: /docs/extensions/mv3/manifestVersion
-[127]: https://support.google.com/chrome_webstore/answer/1254182?hl=en&ref_topic=1734051
-
 [apps]: /docs/apps/
 [branding]: /docs/webstore/branding
 [bug-tracker]: https://crbug.com
@@ -449,6 +443,9 @@ Business related issues by contacting [CWS support][cws-support].
 [google-groups]: https://groups.google.com
 [how-long-do-reviews-take]: #faq-listing-108
 [internationalize]: /docs/webstore/i18n
+[malware]: https://www.google.com/about/company/unwanted-software-policy.html
+[manifest-version]: /docs/extensions/mv3/manifestVersion
+[regions-distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution
 [stackoverflow-google-chrome]: https://stackoverflow.com/questions/tagged/google-chrome-extension
 [support-url]: /docs/webstore/cws-dashboard-listing/#support-url
 [terms-of-services]: /docs/webstore/terms
