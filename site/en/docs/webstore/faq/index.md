@@ -230,20 +230,19 @@ extension.
 
 ### Can I control the regions where my extension is listed? {: #faq-gen-18 }
 
-Yes, you can select which regions your extension appears in. This might be because your extension is
-only applicable to the local market, or you might have specific obligations that mean you can only
-make your extension available in certain regions.
+Yes, you can select which regions your extension appears in the [Distribution
+Tab][cws-distribution].
 
 ### How do I localize my listing in the store? {: #faq-gen-19 }
 
 There are two points where you need to localize your extension for listing in a region that isn't your
 home market.
 
-1.  Your extension package. See [Internationalizing Your App][internationalize] for information on localizing your
+1.  Your extension package. See [Internationalizing Your Extension][internationalize] for information on localizing your
     extension's presence inside Chrome.
 2.  Your detailed listing. The developer dashboard now includes the ability for you to select all
     the regions that you want your application to appear in, allows you to localize the detailed
-    description, price points relative to the market you are in, and screenshots.
+    description and screenshots.
 
 ### How do I localize my detailed description? {: #faq-gen-20 }
 
@@ -438,6 +437,7 @@ Business related issues by contacting [CWS support][cws-support].
 [chrome-release-blog]: https://chromereleases.googleblog.com/
 [chromium-extensions]: https://groups.google.com/a/chromium.org/g/chromium-extensions
 [complaint-handling]: /docs/webstore/complaint-faq
+[cws-distribution]: /docs/webstore/cws-dashboard-distribution/
 [cws-register]: /docs/webstore/register
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
 [ext]: /docs/extensions/
@@ -457,4 +457,3 @@ Business related issues by contacting [CWS support][cws-support].
 [program-policies]: /docs/webstore/program_policies
 [update-item]: /docs/webstore/update
 [webstore]: https://chrome.google.com/webstore
-
