@@ -10,7 +10,7 @@ The [Chrome Web Store][webstore] lets you publish free or paid extensions where 
 find them. This FAQ answers many common questions about the Chrome Web Store. If you don't find your
 answer here, check the [general extension FAQs][extension-faq], how to [troubleshoot Chrome Web Store
 violations][troubleshoot-violations], or the
-[chromium-extension group][chromium-extensions]. For additional technical questions and discussion, we recommend [Stack Overflow][stackoverflow-google-chrome].
+[chromium-extension group][chromium-extensions]. For additional technical questions and discussion, we recommend [Stack Overflow][stackoverflow-extensions].
 
 {% Aside %}
 
@@ -271,7 +271,7 @@ Review times vary; some reviews complete in a few hours, others take many days, 
 review can take several weeks. Some reasons that an item could require more extensive review
 include:
 
-- The item is suspected to contain or to be distributed by [malware or unwanted software][malware].
+- The item is suspected to contain or to be distributed by [malware or unwanted software][malware-policy].
 - The item is suspected to violate one of the [developer program policies][program-policies].
 - The item may have already been previously removed for a legal or policy violation, and has been
   resubmitted.
@@ -336,104 +336,8 @@ problem and include your .crx file.
 European developers can raise concerns about clarity of terms, policies, or other Platform To
 Business related issues by contacting [CWS support][cws-support].
 
-
-[5]: #faq-gen-01
-[6]: #faq-gen-02
-[7]: #faq-gen-05
-[8]: #faq-gen-06
-[9]: #faq-gen-07
-[10]: #faq-gen-08
-[11]: #faq-gen-09
-[12]: #faq-gen-11
-[13]: #faq-gen-17
-[14]: #faq-gen-22
-[15]: #faq-gen-23
-[16]: #faq-gen-24
-[17]: #faq-gen-25
-[18]: #faq-gen-26
-[19]: #faq-gen-27
-[20]: #faq-gen-28
-[21]: #faq-gen-29
-[22]: #faq-gen-30
-[23]: #faq-dev-01
-[24]: #faq-gen-10
-[25]: #faq-dev-02
-[26]: #faq-dev-03
-[27]: #faq-listing-01
-[28]: #faq-listing-02
-[29]: #faq-listing-03
-[30]: #faq-listing-04
-[31]: #faq-listing-05
-[32]: #faq-listing-06
-[33]: #faq-listing-07
-[34]: #faq-gen-15
-[35]: #faq-gen-16
-[36]: #faq-gen-18
-[37]: #faq-gen-19
-[38]: #faq-gen-20
-[39]: #faq-gen-21
-[40]: #faq-listing-08
-[42]: #faq-listing-09
-[43]: #faq-listing-10
-[44]: #faq-listing-11
-[45]: #faq-payments-01
-[46]: #faq-payments-02
-[47]: #faq-payments-03
-[48]: #faq-payments-04
-[49]: #faq-payments-05
-[50]: #faq-payments-06
-[51]: #faq-payments-07
-[52]: #faq-payments-09
-[53]: #faq-payments-10
-[54]: #faq-payments-11
-[55]: #faq-payments-12
-[56]: #faq-payments-13
-[57]: #faq-payments-14
-[58]: #faq-payments-15
-[59]: #faq-payments-16
-[60]: #faq-app-01
-[61]: #faq-app-02
-[62]: #faq-app-02.5
-[63]: #faq-app-03
-[64]: #faq-app-04
-[65]: #faq-app-05
-[66]: #faq-app-06
-[67]: #faq-app-07
-[68]: #faq-app-08
-[69]: #faq-app-09
-[70]: #faq-app-10
-[71]: #faq-app-11
-[72]: #faq-app-12
-[73]: #faq-app-13
-[74]: #faq-app-14
-[75]: #faq-app-15
-[76]: #faq-app-16
-[77]: #faq-app-17
-[78]: #faq-app-18
-[79]: #faq-app-19
-[80]: #faq-app-20
-[81]: #faq-app-21
-[82]: #faq-app-22
-[83]: #faq-app-23
-[84]: #faq-app-24
-[85]: #faq-app-25
-[86]: #faq-app-26
-[87]: #faq-app-27
-[88]: #faq-extensions-01
-[89]: #faq-extensions-02
-[90]: #faq-themes-01
-[91]: #faq-themes-02
-[100]: https://www.google.com/accounts/NewAccount
-[110]: https://chrome.google.com/webstore/devconsole
-[111]: https://code.google.com/chrome/extensions/packaging.html
-[112]: https://code.google.com/chrome/extensions/autoupdate.html
-[116]: images
-[117]: https://groups.google.com/group/chromium-extensions/browse_thread/thread/defbf282d11a8cc4/a2d1aedb84bc60b9
-[122]: https://www.google.com/about/company/unwanted-software-policy.html
-[123]: /docs/webstore/program_policies
-
-[apps]: /docs/apps/
 [account-suspended]: #faq-listing-12
+[apps]: /docs/apps/
 [branding]: /docs/webstore/branding
 [bug-tracker]: https://crbug.com
 [chrome-release-blog]: https://chromereleases.googleblog.com/
@@ -443,23 +347,23 @@ Business related issues by contacting [CWS support][cws-support].
 [cws-distribution]: /docs/webstore/cws-dashboard-distribution/
 [cws-register]: /docs/webstore/register
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
-[ext]: /docs/extensions/
-[extension-faq]: /docs/extensions/mv3/faq
 [dev-channel-build]: https://www.chromium.org/getting-involved/dev-channel
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
 [enterprise]: /docs/webstore/cws-enterprise
-[great-listing]: /docs/webstore/best_listing/
+[ext]: /docs/extensions/
+[extension-faq]: /docs/extensions/mv3/faq
 [google-groups]: https://groups.google.com
+[great-listing]: /docs/webstore/best_listing/
 [how-long-do-reviews-take]: #faq-listing-108
 [internationalize]: /docs/webstore/i18n
-[malware]: https://www.google.com/about/company/unwanted-software-policy.html
+[malware-policy]: https://www.google.com/about/company/unwanted-software-policy.html
 [manifest-version]: /docs/extensions/mv3/manifestVersion
+[program-policies]: /docs/webstore/program_policies
 [region-distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution
-[stackoverflow-google-chrome]: https://stackoverflow.com/questions/tagged/google-chrome-extension
+[stackoverflow-extensions]: https://stackoverflow.com/questions/tagged/google-chrome-extension
 [support-url]: /docs/webstore/cws-dashboard-listing/#support-url
 [terms-of-services]: /docs/webstore/terms
 [themes]: /docs/extensions/mv3/themes/
 [troubleshoot-violations]: /docs/webstore/troubleshooting/
-[program-policies]: /docs/webstore/program_policies
 [update-item]: /docs/webstore/update
 [webstore]: https://chrome.google.com/webstore
