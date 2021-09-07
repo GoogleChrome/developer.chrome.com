@@ -327,9 +327,8 @@ is no way to enter the information into your listing.
 
 ## Additional Troubleshooting
 
-If you've fixed all errors produced by the tools and continue experiencing issues, please [contact us][cws-support] 
-with any additional details regarding the problem. Please send us a screenshot of the
-problem and include your .crx file.
+If you continue experiencing issues with your Chrome Web Store item, please [contact
+us][cws-support] with any additional details regarding the problem.
 
 ### How can I raise P2B concerns?
 
