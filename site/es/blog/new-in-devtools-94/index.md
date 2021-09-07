@@ -6,7 +6,7 @@ authors:
 date: 2021-08-24
 updated: 2021-08-24
 description:
-  "Use DevTools in your preferred language, new Nest Hub devices, new CSS container queries badge and more."
+  "Usa DevTools en tu idioma preferido, nuevos dispositivos Nest Hub, nueva insignia de consultas de contenedor CSS y más novedades."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GzZ1YTEeHlnhUrbPBzmr.jpg'
 alt: ''
 tags:
