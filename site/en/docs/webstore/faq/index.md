@@ -188,7 +188,7 @@ The item won't appear in the web store until it has successfully completed the r
 details, see [How long will it take to review my item?][how-long-do-reviews-take].
 
 Extensions which are published to the same domain as the publisher address may be approved more
-quickly.
+quickly. Learn more about [Enterprise publishing][enterprise].
 
 ### How can I remove my listing from the store? {: #faq-listing-03 }
 
@@ -451,6 +451,7 @@ Business related issues by contacting [CWS support][cws-support].
 [extension-faq]: /docs/extensions/mv3/faq
 [dev-channel-build]: https://www.chromium.org/getting-involved/dev-channel
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
+[enterprise]: /docs/webstore/cws-enterprise
 [google-groups]: https://groups.google.com
 [how-long-do-reviews-take]: #faq-listing-108
 [internationalize]: /docs/webstore/i18n
