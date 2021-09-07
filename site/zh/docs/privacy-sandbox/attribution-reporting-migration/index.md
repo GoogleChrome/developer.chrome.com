@@ -1,9 +1,9 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 迁移指南 (Chrome 92)：Conversion Measurement API 到 Attribution Reporting API
 subhead: Conversion Measurement API 在 Chrome 92 中发生变化。
-date: '2021-06-22'
-updated: '2021-06-22'
+date: 2021-06-22
+updated: 2021-06-22
 authors:
   - maudn
 ---
@@ -63,8 +63,8 @@ Chrome 92 中保持不变的是一组支持的功能：仅用于点击的事件�
 <th style="text-align: left;">新代码</th>
 </tr></thead>
 <tbody><tr>
-<td><code>document.featurePolicy.features()&lt;br&gt;.includes('conversion-measurement')</code></td>
-<td><code>document.featurePolicy.features()&lt;br&gt;.includes('attribution-reporting')</code></td>
+<td><code>document.featurePolicy.features()<br>.includes('conversion-measurement')</code></td>
+<td><code>document.featurePolicy.features()<br>.includes('attribution-reporting')</code></td>
 </tr></tbody>
 </table>
 
@@ -132,8 +132,8 @@ window.open(
 </tr></thead>
 <tbody><tr>
 <td>期望来自浏览器的请求</td>
-<td><code>.well-known/register-conversion?impression-data=&amp;conversion-data={DATA}&amp;attribution-credit=100</code></td>
+<td><code>.well-known/register-conversion?impression-data=&conversion-data={DATA}&attribution-credit=100</code></td>
 <td>
-<code>.well-known/attribution-reporting/trigger-attribution&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Incoming reports&lt;/td&gt; &lt;td&gt;Sent as URL parameters.&lt;/td&gt; &lt;td&gt;Sent as JSON in the request body.&lt;br&gt; &lt;br&gt; The report data is included &lt;strong&gt;in the request body as a JSON object&lt;/strong&gt; with the following keys:&lt;br&gt; &lt;code&gt;source_event_id</code>：以前的 <code>impression-data</code>，在归因来源上设置的 64 位事件 ID。<br> <code>trigger_data</code>：以前的 <code>conversion-data</code>，特性触发器重定向中设置的 3 位数据。<br><br> ⚠️ <code>credit</code> 已被移除。</td>
+<code>.well-known/attribution-reporting/trigger-attribution</td> </tr> <tr> <td>Incoming reports</td> <td>Sent as URL parameters.</td> <td>Sent as JSON in the request body.<br> <br> The report data is included <strong>in the request body as a JSON object</strong> with the following keys:<br> <code>source_event_id</code>：以前的 <code>impression-data</code>，在归因来源上设置的 64 位事件 ID。<br> <code>trigger_data</code>：以前的 <code>conversion-data</code>，特性触发器重定向中设置的 3 位数据。<br><br> ⚠️ <code>credit</code> 已被移除。</td>
 </tr></tbody>
 </table>

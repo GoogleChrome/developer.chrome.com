@@ -1,14 +1,14 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 'Guía de migración (Chrome 92): Desde la API Conversion Measurement hasta la API Attribution Reporting'
 subhead: La API Conversion Measurement está cambiando en Chrome 92.
-date: '2021-06-22'
-updated: '2021-06-22'
+date: 2021-06-22
+updated: 2021-06-22
 authors:
   - maudn
 ---
 
-{% Aside%} Si tiene preguntas o necesita ayuda durante su migración, únase a la [lista de correo](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) y haga su pregunta. {% endAside%}
+{% Aside %} Si tiene preguntas o necesita ayuda durante su migración, únase a la [lista de correo](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) y haga su pregunta. {% endAside %}
 
 ## ¿Qué está cambiando?
 
@@ -63,8 +63,8 @@ Puede ver un ejemplo de migración para una pequeña aplicación de demostració
 <th style="text-align: left;">Nuevo código</th>
 </tr></thead>
 <tbody><tr>
-<td><code>document.featurePolicy.features()&lt;br&gt;.includes('conversion-measurement')</code></td>
-<td><code>document.featurePolicy.features()&lt;br&gt;.includes('attribution-reporting')</code></td>
+<td><code>document.featurePolicy.features()<br>.includes('conversion-measurement')</code></td>
+<td><code>document.featurePolicy.features()<br>.includes('attribution-reporting')</code></td>
 </tr></tbody>
 </table>
 
@@ -132,8 +132,8 @@ window.open(
 </tr></thead>
 <tbody><tr>
 <td>Solicitudes que se esperan del navegador</td>
-<td><code>.well-known/register-conversion?impression-data=&amp;conversion-data={DATA}&amp;attribution-credit=100</code></td>
+<td><code>.well-known/register-conversion?impression-data=&conversion-data={DATA}&attribution-credit=100</code></td>
 <td>
-<code>.well-known/attribution-reporting/trigger-attribution&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Incoming reports&lt;/td&gt; &lt;td&gt;Sent as URL parameters.&lt;/td&gt; &lt;td&gt;Sent as JSON in the request body.&lt;br&gt; &lt;br&gt; The report data is included &lt;strong&gt;in the request body as a JSON object&lt;/strong&gt; with the following keys:&lt;br&gt; &lt;code&gt;source_event_id</code>: antes <code>impression-data</code>, el conjunto de datos de 64 bits del evento en la fuente de atribución.<br> <code>trigger_data</code>: antes <code>conversion-data</code>, el conjunto de datos de 3 bits en el redireccionamiento del activador de la atribución.<br><br> ⚠️ <code>credit</code> fue eliminado.</td>
+<code>.well-known/attribution-reporting/trigger-attribution</td> </tr> <tr> <td>Incoming reports</td> <td>Sent as URL parameters.</td> <td>Sent as JSON in the request body.<br> <br> The report data is included <strong>in the request body as a JSON object</strong> with the following keys:<br> <code>source_event_id</code>: antes <code>impression-data</code>, el conjunto de datos de 64 bits del evento en la fuente de atribución.<br> <code>trigger_data</code>: antes <code>conversion-data</code>, el conjunto de datos de 3 bits en el redireccionamiento del activador de la atribución.<br><br> ⚠️ <code>credit</code> fue eliminado.</td>
 </tr></tbody>
 </table>

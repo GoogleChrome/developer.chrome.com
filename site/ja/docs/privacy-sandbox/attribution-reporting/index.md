@@ -1,16 +1,16 @@
 ---
-layout: layouts / doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: アトリビューションレポート
 subhead: Cross-Site Identifier (クロスサイト識別子) を使用せずに、ユーザーの操作 ( 広告のクリックや表示など) がコンバージョンにつながるタイミングを測定します。
 description: Attribution Reporting API を使用すると、クロスサイト識別子を使用しなくてもユーザーの操作 (広告のクリックや表示など) がコンバージョンにつながるタイミングを測定できます。
-date: '2021-05-18'
-updated: '2021-08-24'
+date: 2021-05-18
+updated: 2021-08-24
 authors:
   - maudn
   - samdutton
 ---
 
-{％Aside'caution '％} Attribution Reporting API は以前まで Conversion Measurement API と呼ばれていました。{％ endAside ％}
+{% Aside 'caution' %} Attribution Reporting API は以前まで Conversion Measurement API と呼ばれていました。{% endAside %}
 
 ## 実装状況
 
@@ -22,7 +22,7 @@ authors:
 
 [完全なプライバシーサンドボックスの用語集](/docs/privacy-sandbox/glossary/)を参照することもお勧めします。
 
-{％endAside％}
+{% endAside %}
 
 - **アドテックプラットフォーム**：ブランドや代理店がデジタル広告のターゲティング、配信、分析を行えるようにするソフトウェアとツールを提供する企業。
 - **広告主**：広告にお金を払っている会社。
@@ -36,7 +36,7 @@ authors:
 - 広告またはコンバージョン測定にカスタムコードを使用している広告主およびパブリッシャーは、既存の手法をこの API に置き換えることができます。
 - アドテックプラットフォームを使用してコンバージョン測定を行う広告主とサイト運営者は、API を直接使用する必要はありませんが、API を統合する可能性のあるアドテックプラットフォームを使用している場合は、API を理解しておくと良いでしょう。
 
-{％Aside％}広告に関係のないユースケースがあるかもしれません。ユースケースを共有することに[参加](#engage)しましょう！{% endAside %}
+{% Aside %} 広告に関係のないユースケースがあるかもしれません。ユースケースを共有することに[参加](#engage)しましょう！{% endAside %}
 
 ## この API が必要なのはなぜですか？ {: #why-is-this-api-needed }
 
@@ -44,7 +44,7 @@ authors:
 
 ## Attribution Reporting API はどのような機能を持っていますか？
 
-{％Aside％}この API は、オープンにインキュベートおよび開発されています。変更される場合があります。ぜひフィードバックをお寄せください。[参加する方法](#engage)を参照してください。{％endAside％}
+{% Aside %} この API は、オープンにインキュベートおよび開発されています。変更される場合があります。ぜひフィードバックをお寄せください。[参加する方法](#engage)を参照してください。{% endAside %}
 
 Attribution Reporting API を使用すると、リンクされた 2 つのイベント、すなわちパブリッシャーのサイトで発生するイベント (ユーザーによる広告の表示やクリック) およびその後に広告主のサイトで発生するコンバージョンを測定できます。
 

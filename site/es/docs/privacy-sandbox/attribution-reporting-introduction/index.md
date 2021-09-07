@@ -8,7 +8,7 @@ authors:
   - maudn
 ---
 
-{% Aside %}<br> Esta API es una propuesta y se ampliará con el tiempo. En esta entrada del blog se describe su estado actual, y se actualizará conforme la API evolucione. {% endAside%}
+{% Aside %}<br> Esta API es una propuesta y se ampliará con el tiempo. En esta entrada del blog se describe su estado actual, y se actualizará conforme la API evolucione. {% endAside %}
 
 Actualizaciones:
 
@@ -18,7 +18,7 @@ Actualizaciones:
 {% Aside 'caution' %}
 
 - Esta publicación se centra en los casos de uso de la publicidad, pero la API para informes de atribuciones también puede ofrecer casos de uso que no están relacionados con la publicidad.
-- Los casos de uso publicitario de esta API se centran en vincular los clics o las visualizaciones de los anuncios con las conversiones (Evaluación de las conversiones).<br> {% endAside%}
+- Los casos de uso publicitario de esta API se centran en vincular los clics o las visualizaciones de los anuncios con las conversiones (Evaluación de las conversiones).<br> {% endAside %}
 
 ## Introducción
 
@@ -46,7 +46,7 @@ Hoy en día, la evaluación de conversiones publicitarias depende a menudo de la
 
 ## Participe
 
-{% Aside %}<br> **¡Se necesita su participación!** Es posible que esta API deba admitir una amplia variedad de casos de uso de optimización y evaluación de conversiones. La información del ecosistema es vital para garantizar que las soluciones respalden estos casos de uso se discutan abiertamente. {% endAside%}
+{% Aside %}<br> **¡Se necesita su participación!** Es posible que esta API deba admitir una amplia variedad de casos de uso de optimización y evaluación de conversiones. La información del ecosistema es vital para garantizar que las soluciones respalden estos casos de uso se discutan abiertamente. {% endAside %}
 
 Para participar, únase al debate y pruebe la API. Lo mejor es hacer ambas cosas, pero puede participar en el debate tanto si o como si no ha probado la API.
 
@@ -61,7 +61,7 @@ Para participar, únase al debate y pruebe la API. Lo mejor es hacer ambas cosas
 
 Si está experimentando con la API en Chrome, tendrá acceso a todas las funciones que están implementadas **actualmente.** No todas las funciones discutidas en el [repositorio](https://github.com/WICG/conversion-measurement-api/) y la [reunión](https://github.com/WICG/conversion-measurement-api/issues/80) se implementan en la prueba de origen de Chrome. Consulte el estado actual de las funciones en [Estado](#status). Las funciones disponibles para la experimentación también son un subconjunto de lo que finalmente será compatible con la API, y están sujetas a cambios a conforme la API se incuba en código abierto y se recopilan los comentarios del ecosistema.
 
-{% endAside%}
+{% endAside %}
 
 #### Experimente localmente o con una demostración
 
@@ -77,7 +77,7 @@ Si está experimentando con la API en Chrome, tendrá acceso a todas las funcion
 
 {% Aside %}<br> Si tiene preguntas sobre la implementación, únase a la [lista de distribución de informes de atribuciones para desarrolladores](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) y pregunte.
 
-Si tiene preguntas técnicas generales sobre su caso de uso, considere abrir un problema en el [repositorio de soporte para desarrolladores de Privacy Sandbox](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).<br> {% endAside%}
+Si tiene preguntas técnicas generales sobre su caso de uso, considere abrir un problema en el [repositorio de soporte para desarrolladores de Privacy Sandbox](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).<br> {% endAside %}
 
 ## Demostración
 
@@ -98,7 +98,7 @@ Todas las funciones que admite esta API son propuestas. **Cada una de estas prop
 
 Esta API se está incubando y desarrollando en código abierto. [Considere la posibilidad de participar](#participate) en la discusión.
 
-{% endAside%}
+{% endAside %}
 
 Esta API permite que los sitios web midan las conversiones en los siguientes casos:
 
@@ -122,7 +122,7 @@ Los informes a nivel de evento son adecuados para:
 
 Por otro lado, los **informes agrupados** ofrecen datos de conversión más detallados y más flexibilidad para unir los datos de clics/visualizaciones y los datos de conversiones.
 
-<figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/TxgT3W5pNEZhWgDSYIY3.png", alt="aggregate report", width="400", height="180"%} <figcaption>Ejemplo de estadísticas de informes agrupados: CampaignID 1234567 en <code>news.example</code> generó 518 conversiones en <code>shoes.example</code> y una inversión total de $3,8174. La mitad de las conversiones procedían de usuarios de Nueva York, EE. UU.</figcaption></figure>
+<figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/TxgT3W5pNEZhWgDSYIY3.png", alt="aggregate report", width="400", height="180" %} <figcaption>Ejemplo de estadísticas de informes agrupados: CampaignID 1234567 en <code>news.example</code> generó 518 conversiones en <code>shoes.example</code> y una inversión total de $3,8174. La mitad de las conversiones procedían de usuarios de Nueva York, EE. UU.</figcaption></figure>
 
 Los informes agregados son los más adecuados para los casos de uso de **informes**. Ayudan a responder a preguntas como *"¿Cuál es el rendimiento de mi inversión?"*.<br> El uso de informes agrupados para casos de uso de **optimización**, por ejemplo, para optimizar un valor de compra, lo que no es compatible con los informes a nivel de evento porque los datos de conversión son demasiado aproximados, es un área de investigación activa. Consulte [Preguntas abiertas](#open-questions).
 
@@ -141,7 +141,7 @@ Otras funciones propuestas en esta API son la [atribución de la aplicación en 
 - Remarketing: consulte [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
 - Selección de anuncios basada en intereses: consulte [FLoC](https://developer.chrome.com/docs/privacy-sandbox/floc/)
 
-{% endAside%}
+{% endAside %}
 
 ## Estado
 
@@ -155,7 +155,7 @@ Estados:
 - `🧪 Experiment (BROWSER_NAME)`: hay un experimento disponible en BROWSER_NAME. En Chrome, un experimento se denomina prueba de origen.
 - `🚀 Stable (BROWSER_NAME)`: la función se envía de forma predeterminada en BROWSER_NAME.
 
-{% Aside %}<br> [Prueba de origen actual](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (experimento de Chrome 🧪) {% endAside%}
+{% Aside %}<br> [Prueba de origen actual](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (experimento de Chrome 🧪) {% endAside %}
 
 {% Aside 'caution' %}<br> Se realizarán varias pruebas de origen (experimentos). Cada ronda se utiliza para mejorar y ajustar la API con base en los comentarios del ecosistema. {% endAside %}
 
@@ -311,7 +311,7 @@ Los informes a nivel de evento proporcionan información sobre la conversión si
     - Los datos de conversión son **ruido**: un cierto porcentaje de las veces (5% en Chrome), los datos de conversión reales se sustituyen por un valor aleatorio.
     - El número de informes de conversión atribuidos está limitado por clic o visualización.
 
-{% Aside %}<br> Es posible recuperar el verdadero recuento de conversiones de forma que se preserve la privacidad. Consulte el [script de ejemplo](https://github.com/WICG/conversion-measurement-api/blob/main/noise_corrector.py). {% endAside%}
+{% Aside %}<br> Es posible recuperar el verdadero recuento de conversiones de forma que se preserve la privacidad. Consulte el [script de ejemplo](https://github.com/WICG/conversion-measurement-api/blob/main/noise_corrector.py). {% endAside %}
 
 {% endDetails%}
 
@@ -357,4 +357,4 @@ Hay una serie de cuestiones que permanecen abiertas y que se resolverán a medid
 - Si está pensando en utilizar esta API para casos de uso no publicitarios: lo que falta, ¿cómo podría mejorarse la API? [Abra un problema](https://github.com/WICG/conversion-measurement-api/issues)
 - ¿Cómo pueden los implementadores personalizar la configuración de privacidad? [Únase a la discusión](https://github.com/WICG/conversion-measurement-api/issues/99).
 
-{% Aside %}<br> Esta API combina múltiples técnicas de privacidad para lograr **privacidad y utilidad**. Esto significa que la limitación de datos de 3 bits (o 1 bit para las visualizaciones) y otros mecanismos de privacidad utilizados por esta API son un medio para lograr un fin. Están sujetos a cambios. Si hay formas para que las empresas de tecnología para hacer anuncios obtengan datos más útiles para sus casos de uso al tiempo que logran sólidas garantías de privacidad, esta API evolucionará en consecuencia. {% endAside%}
+{% Aside %}<br> Esta API combina múltiples técnicas de privacidad para lograr **privacidad y utilidad**. Esto significa que la limitación de datos de 3 bits (o 1 bit para las visualizaciones) y otros mecanismos de privacidad utilizados por esta API son un medio para lograr un fin. Están sujetos a cambios. Si hay formas para que las empresas de tecnología para hacer anuncios obtengan datos más útiles para sus casos de uso al tiempo que logran sólidas garantías de privacidad, esta API evolucionará en consecuencia. {% endAside %}

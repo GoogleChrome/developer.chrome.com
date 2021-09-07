@@ -1,9 +1,9 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 'Руководство по миграции (Chrome 92): с Conversion Measurement API на Attribution Reporting API'
 subhead: В Chrome 92 Conversion Measurement API изменится.
-date: '2021-06-22'
-updated: '2021-06-22'
+date: 2021-06-22
+updated: 2021-06-22
 authors:
   - maudn
 ---
@@ -63,8 +63,8 @@ authors:
 <th style="text-align: left;">Новый код</th>
 </tr></thead>
 <tbody><tr>
-<td><code>document.featurePolicy.features()&lt;br&gt;.includes('conversion-measurement')</code></td>
-<td><code>document.featurePolicy.features()&lt;br&gt;.includes('attribution-reporting')</code></td>
+<td><code>document.featurePolicy.features()<br>.includes('conversion-measurement')</code></td>
+<td><code>document.featurePolicy.features()<br>.includes('attribution-reporting')</code></td>
 </tr></tbody>
 </table>
 
@@ -132,8 +132,8 @@ window.open(
 </tr></thead>
 <tbody><tr>
 <td>Запросы, отправляемые браузером</td>
-<td><code>.well-known/register-conversion?impression-data=&amp;conversion-data={DATA}&amp;attribution-credit=100</code></td>
+<td><code>.well-known/register-conversion?impression-data=&conversion-data={DATA}&attribution-credit=100</code></td>
 <td>
-<code>.well-known/attribution-reporting/trigger-attribution&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Входящие отчеты&lt;/td&gt; &lt;td&gt; Передаются в виде параметров URL-адреса.&lt;/td&gt; &lt;td&gt;Se Передаются в формате JSON в теле запроса.&lt;br&gt; &lt;br&gt; Данные отчета передаются &lt;strong&gt;в теле запроса в виде JSON-объекта&lt;/strong&gt; со следующими элементами:&lt;br&gt; &lt;code&gt;source_event_id</code>: ранее <code>impression-data</code>, 64-битный идентификатор события, задаваемый источником атрибуции.<br> <code>trigger_data</code>: ранее <code>conversion-data</code>, 3-битное число, задаваемое в рамках переадресации, активирующей атрибуцию.<br><br> ⚠️ <code>credit</code> больше не используется.</td>
+<code>.well-known/attribution-reporting/trigger-attribution</td> </tr> <tr> <td>Входящие отчеты</td> <td> Передаются в виде параметров URL-адреса.</td> <td>Se Передаются в формате JSON в теле запроса.<br> <br> Данные отчета передаются <strong>в теле запроса в виде JSON-объекта</strong> со следующими элементами:<br> <code>source_event_id</code>: ранее <code>impression-data</code>, 64-битный идентификатор события, задаваемый источником атрибуции.<br> <code>trigger_data</code>: ранее <code>conversion-data</code>, 3-битное число, задаваемое в рамках переадресации, активирующей атрибуцию.<br><br> ⚠️ <code>credit</code> больше не используется.</td>
 </tr></tbody>
 </table>

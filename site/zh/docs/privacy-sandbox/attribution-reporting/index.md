@@ -1,16 +1,16 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 归因报告
 subhead: 在不使用跨站标识符的情况下测量哪些用户操作（例如广告点击或广告浏览）带来了转化。
 description: 归因报告 API 能够在不使用跨站标识符的情况下测量哪些用户操作（例如广告点击或广告浏览）带来了转化。
-date: '2021-05-18'
-updated: '2021-08-24'
+date: 2021-05-18
+updated: 2021-08-24
 authors:
   - maudn
   - samdutton
 ---
 
-{% Aside '注意' %}归因报告 API 之前被称为转化测量 API。{% endAside %}
+{% Aside 'caution' %}归因报告 API 之前被称为转化测量 API。{% endAside %}
 
 ## 实施状态
 

@@ -1,5 +1,5 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: Attribution Reporting (relatório de atribuições)
 subhead: Meça quando a ação do usuário (como um clique no anúncio ou visualização) leva a uma conversão, sem usar identificadores cross-site.
 description: A API Attribution Reporting permite medir quando a ação do usuário (como um clique ou visualização de um anúncio) leva a uma conversão, sem usar identificadores cross-site.
@@ -10,7 +10,7 @@ authors:
   - samdutton
 ---
 
-{% Aside 'Caution'%} A API Attribution Reporting era anteriormente conhecida como API Conversion Measurement. {% endAside%}
+{% Aside 'Caution'%} A API Attribution Reporting era anteriormente conhecida como API Conversion Measurement. {% endAside %}
 
 ## Status de implementação
 
@@ -36,7 +36,7 @@ Você talvez também queira consultar o [Glossário completo do Privacy Sandbox]
 - Anunciantes e editores que dependem de código personalizado para publicidade ou medição de conversão podem usar esta API para substituir as técnicas existentes.
 - Anunciantes e editores que dependem de plataformas adtech para medição de conversão não precisam usar a API diretamente, mas podem estar interessados em entendê-la se estiverem trabalhando com plataformas adtech que possam integrar a API.
 
-{% Aside%} Pode haver casos de uso não relacionados a anúncios. [Envolva-se](#engage) para compartilhar seu caso de uso! {% endAside%}
+{% Aside %} Pode haver casos de uso não relacionados a anúncios. [Envolva-se](#engage) para compartilhar seu caso de uso! {% endAside %}
 
 ## Por que essa API é necessária? {: # why-is-this-api-needed}
 
@@ -44,7 +44,7 @@ Hoje, a medição de conversão de anúncios geralmente depende de [cookies de t
 
 ## Como funciona a API Attribution Reporting e quais são seus recursos?
 
-{% Aside%} Esta API está sendo incubada e desenvolvida de forma aberta. Está sujeito a alterações. Seu feedback é bem-vindo. Veja [como se envolver](#engage). {% endAside%}
+{% Aside %} Esta API está sendo incubada e desenvolvida de forma aberta. Está sujeito a alterações. Seu feedback é bem-vindo. Veja [como se envolver](#engage). {% endAside %}
 
 A API Attribution Reporting permite a medição de dois eventos vinculados: um evento no site de um editor, como um usuário visualizando ou clicando num anúncio, com uma conversão subsequente no site de um anunciante.
 

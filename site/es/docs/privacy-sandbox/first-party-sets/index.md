@@ -1,10 +1,10 @@
 ---
-layout: layouts / doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: Conjuntos propios
 subhead: Permitir que los nombres de dominio propio relacionados y operados por la misma entidad se declaren pertenecientes a la primera.
 description: Los Conjuntos de primera permiten que los nombres de dominio propio relacionados y operados por la misma entidad se declaren pertenecientes a la primera.
-date: '2021-05-18'
-updated: '2021-08-12'
+date: 2021-05-18
+updated: 2021-08-12
 authors:
   - samdutton
 ---

@@ -24,7 +24,7 @@ authors:
 ## Why do we need First-Party Sets?
 
 {% YouTube
-  id='cNJ8mZ-J3F8' 
+  id='cNJ8mZ-J3F8'
 %}
 
 Web pages are composed of content from multiple [origins](/docs/privacy-sandbox/glossary#origin).

@@ -32,7 +32,7 @@ Los Trust tokens están cifrados, de modo que no es posible identificar a un ind
 
 {% Aside 'caution' %} Los Trust Tokens no sustituyen al reCAPTCHA ni a otros mecanismos que permiten determinar si un usuario es quien dice ser.
 
-Los Trust Tokens son una forma de **transmitir** confianza en un usuario, no de **establecer** confianza en un usuario. {% endAside%}
+Los Trust Tokens son una forma de **transmitir** confianza en un usuario, no de **establecer** confianza en un usuario. {% endAside %}
 
 ## ¿Por qué necesitamos a los Trust Tokens?
 

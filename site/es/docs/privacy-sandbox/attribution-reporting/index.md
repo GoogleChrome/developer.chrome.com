@@ -1,16 +1,16 @@
 ---
-layout: layouts / doc-post.njk
-title: Informes de atribuciones
+layout: 'layouts/doc-post.njk'
+title: 'Informes de atribuciones'
 subhead: Mida cuándo la acción del usuario (como un clic en un anuncio o una visualización) genera una conversión, sin utilizar identificadores de sitios cruzados.
 description: La API de informes de atribuciones permite medir cuándo la acción del usuario (como un clic en un anuncio o una visualización) genera una conversión, sin utilizar identificadores de sitios cruzados.
-date: '2021-05-18'
-updated: '2021-08-24'
+date: 2021-05-18
+updated: 2021-08-24
 authors:
   - maudn
   - samdutton
 ---
 
-{% Aside 'caution' %}  La API de informes de atribuciones se conocía anteriormente como API de evaluación de conversiones. {% endAside%}
+{% Aside 'caution' %}  La API de informes de atribuciones se conocía anteriormente como API de evaluación de conversiones. {% endAside %}
 
 ## Estado de la implementación
 
@@ -36,7 +36,7 @@ También puede consultar el [Glosario de Privacy Sandbox](/docs/privacy-sandbox/
 - Los anunciantes y editores que dependen de un código personalizado para evaluar conversiones o publicidad pueden utilizar esta API para reemplazar las técnicas existentes.
 - Los anunciantes y editores que dependen de las plataformas de tecnología para hacer anuncios para evaluar conversiones no necesitan utilizar la API directamente, pero pueden estar interesados en comprenderla si están trabajando con plataformas de tecnología para hacer anuncios que pueden integrar la API.
 
-{% Aside%} Puede haber casos de uso que no estén relacionados con los anuncios. [¡Participe](#engage) para compartir su caso de uso! {% endAside%}
+{% Aside %} Puede haber casos de uso que no estén relacionados con los anuncios. [¡Participe](#engage) para compartir su caso de uso! {% endAside %}
 
 ## ¿Por qué se necesita esta API? {: # why-is-this-api-need}
 
@@ -44,7 +44,7 @@ Hoy en día, la evaluación de conversiones publicitarias depende a menudo de la
 
 ## ¿Cómo funciona la API de informes de atribuciones y cuáles son sus características?
 
-{% Aside%} Esta API se está incubando y desarrollando en código abierto. Está sujeta a cambios. Sus comentarios son bienvenidos. Consulte [cómo participar](#engage).  {% endAside%}
+{% Aside %} Esta API se está incubando y desarrollando en código abierto. Está sujeta a cambios. Sus comentarios son bienvenidos. Consulte [cómo participar](#engage).  {% endAside %}
 
 La API de informes de atribuciones permite medir dos eventos que están vinculados entre sí: un evento en el sitio web de un editor, como un usuario que ve o hace clic en un anuncio, con una conversión posterior en el sitio de un anunciante.
 

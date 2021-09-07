@@ -1,9 +1,9 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: '마이그레이션 가이드(Chrome 92): Conversion Measurement API에서 Attribution Reporting API로'
 subhead: Conversion Measurement API가 Chrome 92에서 변경됩니다.
-date: '2021-06-22'
-updated: '2021-06-22'
+date: 2021-06-22
+updated: 2021-06-22
 authors:
   - maudn
 ---
@@ -63,8 +63,8 @@ Chrome 92에서 변경되지 않은 사항은 이벤트 수준 보고서, 클릭
 <th style="text-align: left;">새 코드</th>
 </tr></thead>
 <tbody><tr>
-<td><code>document.featurePolicy.features()&lt;br&gt;.includes('conversion-measurement')</code></td>
-<td><code>document.featurePolicy.features()&lt;br&gt;.includes('attribution-reporting')</code></td>
+<td><code>document.featurePolicy.features()<br>.includes('conversion-measurement')</code></td>
+<td><code>document.featurePolicy.features()<br>.includes('attribution-reporting')</code></td>
 </tr></tbody>
 </table>
 
@@ -132,8 +132,8 @@ window.open(
 </tr></thead>
 <tbody><tr>
 <td>브라우저에서 예상되는 요청</td>
-<td><code>.well-known/register-conversion?impression-data=&amp;conversion-data={DATA}&amp;attribution-credit=100</code></td>
+<td><code>.well-known/register-conversion?impression-data=&conversion-data={DATA}&attribution-credit=100</code></td>
 <td>
-<code>.well-known/attribution-reporting/trigger-attribution&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Incoming reports&lt;/td&gt; &lt;td&gt;Sent as URL parameters.&lt;/td&gt; &lt;td&gt;Sent as JSON in the request body.&lt;br&gt; &lt;br&gt; The report data is included &lt;strong&gt;in the request body as a JSON object&lt;/strong&gt; with the following keys:&lt;br&gt; &lt;code&gt;source_event_id</code>: 이전에는 <code>impression-data</code>, 기여 소스의 64비트 이벤트 ID 세트.<br> <code>trigger_data</code>: 이전에는 <code>conversion-data</code>, 기여 트리거 리디렉션의 3비트 데이터 세트.<br><br> ⚠️ <code>credit</code>은 제거되었습니다.</td>
+<code>.well-known/attribution-reporting/trigger-attribution</td> </tr> <tr> <td>Incoming reports</td> <td>Sent as URL parameters.</td> <td>Sent as JSON in the request body.<br> <br> The report data is included <strong>in the request body as a JSON object</strong> with the following keys:<br> <code>source_event_id</code>: 이전에는 <code>impression-data</code>, 기여 소스의 64비트 이벤트 ID 세트.<br> <code>trigger_data</code>: 이전에는 <code>conversion-data</code>, 기여 트리거 리디렉션의 3비트 데이터 세트.<br><br> ⚠️ <code>credit</code>은 제거되었습니다.</td>
 </tr></tbody>
 </table>

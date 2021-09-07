@@ -1,14 +1,14 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 'Guia de migração (Chrome 92): Da Conversion Measurement API para a Attribution Reporting API'
 subhead: A API Conversion Measurement (mensuração de conversão) está mudando no Chrome 92.
-date: '2021-06-22'
-updated: '2021-06-22'
+date: 2021-06-22
+updated: 2021-06-22
 authors:
   - maudn
 ---
 
-{% Aside%} Se você tiver dúvidas ou precisar de suporte durante a migração, inscreva-se na [lista de e-mails ](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) e faça sua pergunta. {% endAside%}
+{% Aside %} Se você tiver dúvidas ou precisar de suporte durante a migração, inscreva-se na [lista de e-mails ](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) e faça sua pergunta. {% endAside %}
 
 ## O que está mudando?
 
@@ -21,7 +21,7 @@ Seguindo as mudanças na [proposta da API](https://github.com/WICG/conversion-me
 
 O que permanece inalterado no Chrome 92 é o conjunto de recursos suportados: relatórios em nível de evento, apenas para cliques. **Aguarde atualizações nessa área**. Depois dessa mudança, outras atualizações e recursos serão lançados em futuras versões do Chrome.
 
-{% Aside%} Para receber atualizações sobre o ensaio de origem para esta API e os próximos recursos, inscreva-se na [lista de e-mails](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev). {% endAside%}
+{% Aside %} Para receber atualizações sobre o ensaio de origem para esta API e os próximos recursos, inscreva-se na [lista de e-mails](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev). {% endAside %}
 
 ## Quando essas mudanças entram em vigor?
 
@@ -29,7 +29,7 @@ Essas alterações entram em vigor a partir do [Chrome 92](https://chromestatus.
 
 ## O que você deve fazer?
 
-{% Aside%} Mais mudanças na API virão em versões futuras. Eles usarão a nova nomenclatura adotada no Chrome 92. {% endAside%}
+{% Aside %} Mais mudanças na API virão em versões futuras. Eles usarão a nova nomenclatura adotada no Chrome 92. {% endAside %}
 
 Se você estiver executando um ensaio de origem ou implementou uma demo para esta API, você tem duas opções:
 
@@ -63,8 +63,8 @@ Você pode ver um exemplo de migração para um pequeno aplicativo de demonstra�
 <th style="text-align: left;">Código novo</th>
 </tr></thead>
 <tbody><tr>
-<td><code>document.featurePolicy.features()&lt;br&gt;.includes('conversion-measurement')</code></td>
-<td><code>document.featurePolicy.features()&lt;br&gt;.includes('attribution-reporting')</code></td>
+<td><code>document.featurePolicy.features()>br>.includes('conversion-measurement')</code></td>
+<td><code>document.featurePolicy.features()>br>.includes('attribution-reporting')</code></td>
 </tr></tbody>
 </table>
 
@@ -132,8 +132,8 @@ window.open(
 </tr></thead>
 <tbody><tr>
 <td>Solicitações a serem esperadas do navegador</td>
-<td><code>.well-known/register-conversion?impression-data=&amp;conversion-data={DATA}&amp;attribution-credit=100</code></td>
+<td><code>.well-known/register-conversion?impression-data=&conversion-data={DATA}&attribution-credit=100</code></td>
 <td>
-<code>.well-known/attribution-reporting/trigger-attribution&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Incoming reports&lt;/td&gt; &lt;td&gt;Enviados como parâmetros de URL.&lt;/td&gt; &lt;td&gt;Enviado como JSON no corpo da solicitação.&lt;br&gt; &lt;br&gt; Os dados do relatório estão incluídos &lt;strong&gt;ino corpo da solicitação como um objeto JSON&lt;/strong&gt; com as seguintes chaves:&lt;br&gt; &lt;code&gt;source_event_id</code>: formerly <code>impression-data</code>, ID de evento de 64 bits definido na fonte de atribuição.<br> <code>trigger_data</code> : anteriormente <code>conversion-data</code> , o conjunto de dados de 3 bits no redirecionamento do acionador de atribuição.<br><br> ⚠️ <code>credit</code> foi removido.</td>
+<code>.well-known/attribution-reporting/trigger-attribution>/td> >/tr> >tr> >td>Incoming reports>/td> >td>Enviados como parâmetros de URL.>/td> >td>Enviado como JSON no corpo da solicitação.>br> >br> Os dados do relatório estão incluídos >strong>ino corpo da solicitação como um objeto JSON>/strong> com as seguintes chaves:>br> >code>source_event_id</code>: formerly <code>impression-data</code>, ID de evento de 64 bits definido na fonte de atribuição.<br> <code>trigger_data</code> : anteriormente <code>conversion-data</code> , o conjunto de dados de 3 bits no redirecionamento do acionador de atribuição.<br><br> ⚠️ <code>credit</code> foi removido.</td>
 </tr></tbody>
 </table>

@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 기여 보고
 subhead: '사이트 간 식별자를 사용하지 않고 사용자 동작(예: 광고 클릭 또는 조회)이 전환으로 이어지는 시점을 측정합니다.'
 description: 'Attribution Reporting API를 사용하면 사이트 간 식별자를 사용하지 않고도 사용자 동작(예: 광고 클릭 또는 조회)이 전환으로 이어지는 시점을 측정할 수 있습니다.'
-date: '2021-05-18'
-updated: '2021-08-24'
+date: 2021-05-18
+updated: 2021-08-24
 authors:
   - maudn
   - samdutton
