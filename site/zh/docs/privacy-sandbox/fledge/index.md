@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: FLEDGE
 subhead: 一种适用于再营销用例的解决方案，旨在防止第三方将其用于跟踪用户跨网站的浏览行为。
 description: FLEDGE 能够满足再营销用例的需求，设计上可以防止第三方将其用于跟踪用户跨网站的浏览行为。API 允许浏览器进行设备端“竞价”，以选择用户之前访问过的网站所提供的相关广告。
-date: '2021-05-18'
-updated: '2021-05-18'
+date: 2021-05-18
+updated: 2021-05-18
 authors:
   - samdutton
 ---
@@ -16,7 +16,9 @@ authors:
 - 正在与 [WICG](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) 和兴趣小组探讨 [API 提案](https://www.w3.org/community/wicg/)。
 - 在 [Blink](https://www.chromium.org/blink) 中处于 [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)。
 
-{% Aside %} FLEDGE 是 [TURTLEDOVE](https://github.com/WICG/turtledove) 的衍生技术。{% endAside %}
+{% Aside %}
+FLEDGE 是 [TURTLEDOVE](https://github.com/WICG/turtledove) 的衍生技术。
+{% endAside %}
 
 ## 为什么我们需要 FLEDGE？
 

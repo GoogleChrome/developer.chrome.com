@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: FLEDGE
 subhead: 사용 사례의 리마케팅이 가능하지만 제3자가 사이트 전반의 사용자 브라우징 행동을 추적하는 데 사용할 수 없도록 설계된 솔루션
 description: FLEDGE는 리마케팅 사용 사례를 충족하지만 제3자가 사이트 전반의 사용자 브라우징 행동을 추적하는 데 이를 사용할 수 없도록 설계되었습니다. 이 API는 사용자가 이전에 방문한 웹사이트에서 제공하는 관련 광고를 선택하기 위해 브라우저에 의한 장치 내 "경매"를 지원합니다.
-date: '2021-05-18'
-updated: '2021-05-18'
+date: 2021-05-18
+updated: 2021-05-18
 authors:
   - samdutton
 ---
@@ -16,7 +16,9 @@ authors:
 - [API 제안](https://github.com/WICG/turtledove/blob/master/FLEDGE.md)이 [WICG](https://www.w3.org/community/wicg/) 및 이익 단체에서 논의 중
 - [Blink](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)의 [프로토타입 의도](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI)
 
-{% Aside %} FLEDGE는 [TURTLEDOVE](https://github.com/WICG/turtledove)에서 파생되었습니다. {% endAside %}
+{% Aside %}
+FLEDGE는 [TURTLEDOVE](https://github.com/WICG/turtledove)에서 파생되었습니다.
+{% endAside %}
 
 ## FLEDGE가 필요한 이유는 무엇입니까?
 

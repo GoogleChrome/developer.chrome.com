@@ -93,5 +93,5 @@
 - [Потенциальная модель конфиденциальности для Интернета](https://github.com/michaelkleber/privacy-model): описание главных принципов, лежащих в основе API.
 - [Privacy Sandbox](https://www.chromium.org/Home/chromium-privacy/privacy-sandbox)
 - Обзор Privacy Sandbox: [Создание более конфиденциального Интернета](https://www.blog.google/products/chrome/building-a-more-private-web/)
-- Блог Google AI: [ Федеративное обучение: совместное машинное обучение без централизованных обучающих данных](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html)
+- Блог Google AI: [Федеративное обучение: совместное машинное обучение без централизованных обучающих данных](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html)
 - [Будущее сторонних файлов cookie](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)

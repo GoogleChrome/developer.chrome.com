@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 자사 세트
 subhead: 동일한 엔터티가 소유하고 운영하는 관련 도메인 이름이 동일한 자사에 속하는 것으로 선언할 수 있습니다.
 description: 자사 세트를 사용하면 동일한 엔터티가 소유하고 운영하는 관련 도메인 이름이 동일한 자사에 속하는 것으로 선언할 수 있습니다.
-date: '2021-05-18'
-updated: '2021-08-12'
+date: 2021-05-18
+updated: 2021-08-12
 authors:
   - samdutton
 ---

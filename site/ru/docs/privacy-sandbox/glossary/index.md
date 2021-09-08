@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: Глоссарий Privacy Sandbox
 subhead: Статьи и документация по Privacy Sandbox предполагают знание концепций из областей конфиденциальности, рекламы и веб-разработки. В этом глоссарии дается объяснение ключевых терминов.
 description: Простые объяснения ключевых понятий.
-date: '2021-05-18'
-updated: '2021-05-18'
+date: 2021-05-18
+updated: 2021-05-18
 authors:
   - samdutton
 ---

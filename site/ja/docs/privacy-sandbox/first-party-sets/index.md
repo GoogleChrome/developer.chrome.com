@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: First-Party Sets
 subhead: 同じエンティティが所有および運営する関連ドメイン名が、同じファーストパーティに属していると宣言できるようにします。
 description: First-Party Sets を使用すると、同じエンティティが所有および運営する関連ドメイン名が、同じファーストパーティに属していると宣言できるようなります。
-date: 2021 年 5 月 18 日
-updated: 2021 年 8 月 12 日
+date: 2021-05-18
+updated: 2021-08-12
 authors:
   - samdutton
 ---
@@ -20,7 +20,9 @@ authors:
 
 ## First-Party Sets が必要な理由
 
-{% YouTube id='cNJ8mZ-J3F8' %}
+{% YouTube
+  id='cNJ8mZ-J3F8'
+%}
 
 Web ページには、複数の[オリジン](/docs/privacy-sandbox/glossary#origin)に由来するコンテンツが含まれています。一部のコンテンツはファーストパーティ コンテンツであり、ユーザーがアクセスしているトップレベルのサイトが提供するものです。広告、埋め込みメディア、[CDN](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/) の JavaScript ライブラリのような共有リソースなどのその他のコンテンツは、サードパーティから提供されている場合があります。[Cookie](/docs/privacy-sandbox/glossary#origin) などのメカニズムを使用して、さまざまなサイト間でユーザーの行動を相互に関連付けたいというサードパーティも存在します。
 
@@ -75,6 +77,6 @@ First-Party Sets を補うために、`SameParty` という Cookie 属性が提�
 
 ## 詳細はこちら
 
-- [FLEDGE API の技術的説明](https://github.com/privacycg/first-party-sets)
+- [ファーストパーティセットの技術説明者](https://github.com/privacycg/first-party-sets)
 - [Chrome プラットフォームの状態](https://chromestatus.com/feature/5640066519007232)。
 - [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)。

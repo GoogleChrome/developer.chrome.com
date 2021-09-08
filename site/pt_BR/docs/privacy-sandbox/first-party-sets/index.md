@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: First-Party Sets
 subhead: Permitir que nomes de domínio relacionados pertencentes e operados pela mesma entidade se declarem pertencentes à mesma fonte primária.
 description: Os First-Party Sets permitem que nomes de domínio relacionados e pertencentes e operados pela mesma entidade se declarem pertencentes à mesma fonte primária.
-date: '2021-05-18'
-updated: '2021-08-12'
+date: 2021-05-18
+updated: 2021-08-12
 authors:
   - samdutton
 ---

@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: Glossário do Privacy Sandbox
 subhead: Os artigos e a documentação do Privacy Sandbox pressupõem um conhecimento dos conceitos de privacidade, publicidade e desenvolvimento da web. Este glossário explica os termos-chave.
 description: Explicações simples de conceitos chave.
-date: '2021-05-18'
-updated: '2021-05-18'
+date: 2021-05-18
+updated: 2021-05-18
 authors:
   - samdutton
 ---

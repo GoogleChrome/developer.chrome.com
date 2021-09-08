@@ -70,14 +70,14 @@ La página [Estado de implementación](/docs/privacy-sandbox/status/) de este si
 
 La explicación de la propuesta de la API necesitan comentarios, en particular para sugerir casos de uso que faltan y formas más privadas de lograr sus objetivos. Puede hacer comentarios o hacer preguntas en la pestaña Problemas para cada explicación.
 
-- [ Presupuesto de privacidad ](https://github.com/bslassey/privacy-budget)
-- [ Trust Tokens ](https://github.com/dvorak42/trust-token-api)
-- [ Conjuntos propios ](https://github.com/privacycg/first-party-sets)
-- [ Gnatcatcher ](https://github.com/bslassey/ip-blindness)
+- [Presupuesto de privacidad](https://github.com/bslassey/privacy-budget)
+- [Trust Tokens](https://github.com/dvorak42/trust-token-api)
+- [Conjuntos propios](https://github.com/privacycg/first-party-sets)
+- [Gnatcatcher](https://github.com/bslassey/ip-blindness)
 - [API de informes grupales](https://github.com/csharrison/aggregate-reporting-api)
 - [Informes de atribuciones](https://github.com/csharrison/conversion-measurement-api)
-- [ FLoC ](https://github.com/jkarlin/floc)
-- [ FLEDGE ](https://github.com/michaelkleber/turtledove)
+- [FLoC](https://github.com/jkarlin/floc)
+- [FLEDGE](https://github.com/michaelkleber/turtledove)
 
 ### Artículos y videos para desarrolladores web
 
@@ -85,7 +85,7 @@ La explicación de la propuesta de la API necesitan comentarios, en particular p
 - [Explicación de las cookies de SameSite](https://web.dev/samesite-cookies-explained/)
 - [Introducción a los Trust Tokens](https://web.dev/trust-tokens)
 - [Una forma más privada de evaluar las conversiones de los anuncios](https://web.dev/conversion-measurement/)
-- [ ¿Qué es FLoC? ](https://web.dev/floc/)
+- [¿Qué es FLoC?](https://web.dev/floc/)
 - [Presentación del presupuesto de privacidad](https://www.youtube.com/watch?v=0STgfjSA6T8)
 
 ### Principios y conceptos en los que se basan las propuestas

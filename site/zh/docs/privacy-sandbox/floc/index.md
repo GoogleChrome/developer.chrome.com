@@ -1,12 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: FLoC
-subhead: |2-
-
-  允许网站猜测您的兴趣，而不能对您进行唯一标识。
+subhead: 允许网站猜测您的兴趣，而不能对您进行唯一标识。
 description: FLoC 能够以保护隐私的方式实现基于兴趣的广告投放。当用户在网络上浏览时，他们的浏览器会被分配到包含成千上万个具有类似浏览记录的其他浏览器的“兴趣同类群组”中。这是在不与浏览器供应商或其他任何人共享个人浏览记录的情况下完成的。
-date: '2021-05-18'
-updated: '2021-08-18'
+date: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---

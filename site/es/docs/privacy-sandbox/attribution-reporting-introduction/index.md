@@ -1,14 +1,16 @@
 ---
-layout: layouts / doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: Introducción a los informes de atribuciones (evaluación de conversiones)
 subhead: Introducción y conceptos clave para comprender la API de los informes de atribuciones.
-date: '2021-08-09'
-updated: '2021-08-09'
+date: 2021-08-09
+updated: 2021-08-09
 authors:
   - maudn
 ---
 
-{% Aside %}<br> Esta API es una propuesta y se ampliará con el tiempo. En esta entrada del blog se describe su estado actual, y se actualizará conforme la API evolucione. {% endAside %}
+{% Aside %}
+Esta API es una propuesta y se ampliará con el tiempo. En esta entrada del blog se describe su estado actual, y se actualizará conforme la API evolucione.
+{% endAside %}
 
 Actualizaciones:
 
@@ -18,7 +20,7 @@ Actualizaciones:
 {% Aside 'caution' %}
 
 - Esta publicación se centra en los casos de uso de la publicidad, pero la API para informes de atribuciones también puede ofrecer casos de uso que no están relacionados con la publicidad.
-- Los casos de uso publicitario de esta API se centran en vincular los clics o las visualizaciones de los anuncios con las conversiones (Evaluación de las conversiones).<br> {% endAside %}
+- Los casos de uso publicitario de esta API se centran en vincular los clics o las visualizaciones de los anuncios con las conversiones (Evaluación de las conversiones). {% endAside %}
 
 ## Introducción
 
@@ -26,7 +28,9 @@ La API de informes de atribución permite medir cuándo un **clic o visualizaci�
 
 Esta propuesta se está incubando en código abierto. La propuesta y las discusiones se encuentran en el [repositorio GitHub de WICG](https://github.com/WICG/conversion-measurement-api).
 
-{% Aside %}<br> Esta API forma parte de Privacy Sandbox, que es una serie de propuestas para satisfacer los casos de uso de terceros sin cookies de terceros u otros mecanismos de seguimiento entre sitios. Consulte las [propuestas de Privacy Sandbox](https://developers.chrome.com/docs/privacy-sandbox).<br> {% endAside %}
+{% Aside %}
+Esta API forma parte de Privacy Sandbox, que es una serie de propuestas para satisfacer los casos de uso de terceros sin cookies de terceros u otros mecanismos de seguimiento entre sitios. Consulte las [propuestas de Privacy Sandbox](https://developers.chrome.com/docs/privacy-sandbox).
+{% endAside %}
 
 ## ¿Por qué se necesita esta API?
 
@@ -46,7 +50,9 @@ Hoy en día, la evaluación de conversiones publicitarias depende a menudo de la
 
 ## Participe
 
-{% Aside %}<br> **¡Se necesita su participación!** Es posible que esta API deba admitir una amplia variedad de casos de uso de optimización y evaluación de conversiones. La información del ecosistema es vital para garantizar que las soluciones respalden estos casos de uso se discutan abiertamente. {% endAside %}
+{% Aside %}
+**¡Se necesita su participación!** Es posible que esta API deba admitir una amplia variedad de casos de uso de optimización y evaluación de conversiones. La información del ecosistema es vital para garantizar que las soluciones respalden estos casos de uso se discutan abiertamente.
+{% endAside %}
 
 Para participar, únase al debate y pruebe la API. Lo mejor es hacer ambas cosas, pero puede participar en el debate tanto si o como si no ha probado la API.
 
@@ -75,9 +81,11 @@ Si está experimentando con la API en Chrome, tendrá acceso a todas las funcion
 
 2. Integre la API en sus sitios y sistemas.
 
-{% Aside %}<br> Si tiene preguntas sobre la implementación, únase a la [lista de distribución de informes de atribuciones para desarrolladores](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) y pregunte.
+{% Aside %}
+Si tiene preguntas sobre la implementación, únase a la [lista de distribución de informes de atribuciones para desarrolladores](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) y pregunte.
 
-Si tiene preguntas técnicas generales sobre su caso de uso, considere abrir un problema en el [repositorio de soporte para desarrolladores de Privacy Sandbox](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).<br> {% endAside %}
+Si tiene preguntas técnicas generales sobre su caso de uso, considere abrir un problema en el [repositorio de soporte para desarrolladores de Privacy Sandbox](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+{% endAside %}
 
 ## Demostración
 
@@ -126,17 +134,19 @@ Por otro lado, los **informes agrupados** ofrecen datos de conversión más deta
 
 Los informes agregados son los más adecuados para los casos de uso de **informes**. Ayudan a responder a preguntas como *"¿Cuál es el rendimiento de mi inversión?"*.<br> El uso de informes agrupados para casos de uso de **optimización**, por ejemplo, para optimizar un valor de compra, lo que no es compatible con los informes a nivel de evento porque los datos de conversión son demasiado aproximados, es un área de investigación activa. Consulte [Preguntas abiertas](#open-questions).
 
-{% Details %}<br> {% DetailsSummary 'h3' %}<br> ¿Por qué se necesitan dos tipos de informes?<br> {% endDetailsSummary%}
+{% Details %}
+{% DetailsSummary 'h3' %}¿Por qué se necesitan dos tipos de informes?
+{% endDetailsSummary %}
 
 Los informes a nivel de evento solo ofrecen datos de conversión aproximados para preservar la privacidad del usuario.
 
 Pero estos datos aproximados pueden no ser suficientes para medir la eficacia de la campaña. Los responsables de marketing pueden necesitar conocer detalles sobre las conversiones, como el valor de la compra, los datos demográficos agregados del lado del anunciante para los usuarios que realizaron la conversión, las categorías de los productos que se compraron, si los usuarios convertidos son clientes nuevos o recurrentes, el contenido de los carritos, etc.
 
-Por eso se diseñaron los informes agrupados.<br> {% endDetails %}
+Por eso se diseñaron los informes agrupados. {% endDetails %}
 
 Otras funciones propuestas en esta API son la [atribución de la aplicación en la web](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md) (consulte o haga clic en un anuncio de una aplicación y convertir en la web) y la [atribución entre dispositivos](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md) (consulte o haga clic en un anuncio del dispositivo móvil y convertir en un equipo de escritorio).
 
-{% Aside %}<br> En un futuro sin cookies de terceros, esta API se combinaría con otras API de anuncios que preservan la privacidad para cubrir casos de uso de un extremo a otro:
+{% Aside %} En un futuro sin cookies de terceros, esta API se combinaría con otras API de anuncios que preservan la privacidad para cubrir casos de uso de un extremo a otro:
 
 - Remarketing: consulte [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
 - Selección de anuncios basada en intereses: consulte [FLoC](https://developer.chrome.com/docs/privacy-sandbox/floc/)
@@ -155,9 +165,9 @@ Estados:
 - `🧪 Experiment (BROWSER_NAME)`: hay un experimento disponible en BROWSER_NAME. En Chrome, un experimento se denomina prueba de origen.
 - `🚀 Stable (BROWSER_NAME)`: la función se envía de forma predeterminada en BROWSER_NAME.
 
-{% Aside %}<br> [Prueba de origen actual](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (experimento de Chrome 🧪) {% endAside %}
+{% Aside %} [Prueba de origen actual](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (experimento de Chrome 🧪) {% endAside %}
 
-{% Aside 'caution' %}<br> Se realizarán varias pruebas de origen (experimentos). Cada ronda se utiliza para mejorar y ajustar la API con base en los comentarios del ecosistema. {% endAside %}
+{% Aside 'caution' %} Se realizarán varias pruebas de origen (experimentos). Cada ronda se utiliza para mejorar y ajustar la API con base en los comentarios del ecosistema. {% endAside %}
 
 <table class="simple width-full fixed-table with-heading-tint">
 <thead><tr>
@@ -207,7 +217,7 @@ Estados:
 </tbody>
 </table>
 
-{% Details %}<br> {% DetailsSummary 'h3' %}<br> Sobre de los modelos de atribuciones<br> {% endDetailsSummary%}
+{% Details %} {% DetailsSummary 'h3' %} Sobre de los modelos de atribuciones {% endDetailsSummary %}
 
 Con el modelo basado en prioridades, el navegador puede asociar una prioridad con cada fuente de atribución. Esto se puede utilizar para:
 
@@ -217,7 +227,7 @@ Con el modelo basado en prioridades, el navegador puede asociar una prioridad co
 
 Es posible que en el futuro se admitan otros modelos de atribución. En los informes agrupados, el [esquema basado en worklet](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#attribution-trigger-registration) posiblemente permita opciones de atribución más flexibles, incluyendo la especificación de créditos parciales para múltiples fuentes de atribución anteriores.
 
-{% endDetails%}
+{% endDetails %}
 
 ## Compatibilidad con los navegadores
 
@@ -226,14 +236,14 @@ Es posible que en el futuro se admitan otros modelos de atribución. En los info
 
 Aunque las dos API son diferentes, Chrome y WebKit están trabajando juntos en código abierto para simplificar la experiencia del desarrollador, por ejemplo, alineando los nombres de los atributos y en la [estructura JSON para los informes](https://github.com/privacycg/private-click-measurement/issues/30).
 
-{% Details %}<br> {% DetailsSummary 'h3' %}<br> Diferencias entre la API propuesta por Chrome y la API propuesta por WebKit<br> {% endDetailsSummary%}<br> El conjunto de funciones de la API para Informes de atribuciones propuesto por Chrome es diferente al de la API de evaluación de clics privados propuesta por Safari/WebKit.<br> En particular, con la API de informes de atribución propuesta por Chrome:
+{% Details %} {% DetailsSummary 'h3' %} Diferencias entre la API propuesta por Chrome y la API propuesta por WebKit {% endDetailsSummary %} El conjunto de funciones de la API para Informes de atribuciones propuesto por Chrome es diferente al de la API de evaluación de clics privados propuesta por Safari/WebKit. En particular, con la API de informes de atribución propuesta por Chrome:
 
 - Se admite la evaluación de las visualizaciones.
 - Se pueden proporcionar informes a nivel de evento.
 - Tanto los enlaces de anuncios en un contexto propio (como los anuncios en una red social o la página de resultados de un motor de búsqueda, o un editor que publica sus propios anuncios) **y** enlaces de anuncios en un iframe de terceros (como los anuncios en el sitio de un editor que utiliza un proveedor de tecnología publicitaria de terceros) son compatibles.
 - Los terceros, como las plataformas de tecnología para hacer anuncios, pueden recibir informes en nombre de los editores y anunciantes.
 
-{% endDetails%}
+{% endDetails %}
 
 ## Cómo funciona
 
@@ -241,7 +251,7 @@ Aunque las dos API son diferentes, Chrome y WebKit están trabajando juntos en c
 
 <figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/bdnt0qHKdPJJYzxU03Xm.png", alt= "informe a nivel de evento", width="800", height="521" %} <figcaption>Los informes a nivel de evento se generan de la siguiente manera: el navegador hace coincidir los clics o las visualizaciones ("eventos de origen de atribuciones") con los datos de conversión ("datos de activación de atribuciones") definidos por una tecnología para hacer anuncios. Más tarde, el navegador envía los informes que resulten a un endpoint predefinido, con cierto retraso y ruido.</figcaption></figure>
 
-{% Details %}<br> {% DetailsSummary 'h3' %}<br> Cómo funciona en detalle: informes a nivel de evento<br> {% endDetailsSummary%}<br> Los enlaces de anuncios se pueden configurar con atributos que son específicos de las conversiones de anuncios:
+{% Details %} {% DetailsSummary 'h3' %} Cómo funciona en detalle: informes a nivel de evento {% endDetailsSummary %} Los enlaces de anuncios se pueden configurar con atributos que son específicos de las conversiones de anuncios:
 
 - Datos personalizados para adjuntar a un clic (o visualización) en un anuncio del lado del editor, por ejemplo, un ID de clic o un ID de campaña.
 - El sitio para el que se espera una conversión para este anuncio.
@@ -263,13 +273,13 @@ Si se registran varias conversiones para un clic (o una visualización) de un an
 
 Los informes se envían por el navegador después de un retraso (días o a veces semanas después de una conversión).
 
-{% endDetails%}
+{% endDetails %}
 
 ### Informes agrupados
 
 <figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/HAl0ppkoxoGCtttWDk2A.png", alt="ALT_TEXT_HERE", width="800", height="1140" %} <figcaption>Los informes agrupados se generan de la siguiente manera: el navegador hace coincidir los clics o las visualizaciones detalladas ("eventos de origen de atribuciones") con los datos de conversión detallados ("datos de activación de atribuciones") definidos por una tecnología para hacer anuncios. El código definido por la tecnología para hacer anuncios se ejecuta en un worklet para definir las contribuciones que enviará el navegador con el fin de que se utilicen para calcular los informes agrupados. Los servicios de agrupación se encargan de calcular de forma privada los informes agrupados para la tecnología para hacer anuncios.</figcaption></figure>
 
-{% Details %}<br> {% DetailsSummary 'h3' %}<br> Cómo funciona en detalle: informes agrupados<br> {% endDetailsSummary%}
+{% Details %} {% DetailsSummary 'h3' %} Cómo funciona en detalle: informes agrupados {% endDetailsSummary %}
 
 Los enlaces de los anuncios se pueden configurar con atributos específicos para las conversiones de los anuncios.
 
@@ -281,7 +291,7 @@ Estas contribuciones (informes sin procesar) se envían cifradas a un servidor d
 
 Tenga en cuenta que los informes agrupados no se retrasan en la misma medida que los informes a nivel de evento.
 
-{% endDetails%}
+{% endDetails %}
 
 ## Privacidad
 
@@ -299,7 +309,7 @@ Por otro lado, la API de informes de atribución permite a las empresas de publi
 
 <figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/UMXwDWt4RSo98PTS0Wvd.png", alt="ALT_TEXT_HERE", width="800", height="1237" %} <figcaption>A diferencia de las cookies de terceros, la API de informes de atribución proporciona información sin identificadores entre sitios para preservar la partición de identidad por sitio.<br> Los informes a nivel de evento vinculan un identificador del lado del anuncio con solo una pequeña cantidad de datos del lado de la conversión. Por lo tanto, brindan información entre sitios sobre una conversión, pero la información del lado de la conversión es demasiado aproximada para unir la identidad del usuario entre sitios.<br> Los informes agrupados brindan información detallada, pero solo a un nivel agregado; Debido a las técnicas de privacidad diferencial, el cálculo privado y la criptografía, los informes agrupados no se pueden utilizar para rastrear la actividad de un usuario individual entre sitios.<br> Se imponen protecciones de privacidad adicionales, como limitaciones de tarifas, tanto en los informes a nivel de eventos como en los agrupados.</figcaption></figure>
 
-{% Details %}<br> {% DetailsSummary 'h3' %}<br> En detalle: informes a nivel de eventos y privacidad {% endDetailsSummary%}
+{% Details %} {% DetailsSummary 'h3' %} En detalle: informes a nivel de eventos y privacidad {% endDetailsSummary %}
 
 Los informes a nivel de evento proporcionan información sobre la conversión sin rastrear a los usuarios entre sitios, rastreando los siguientes mecanismos de privacidad:
 
@@ -311,11 +321,11 @@ Los informes a nivel de evento proporcionan información sobre la conversión si
     - Los datos de conversión son **ruido**: un cierto porcentaje de las veces (5% en Chrome), los datos de conversión reales se sustituyen por un valor aleatorio.
     - El número de informes de conversión atribuidos está limitado por clic o visualización.
 
-{% Aside %}<br> Es posible recuperar el verdadero recuento de conversiones de forma que se preserve la privacidad. Consulte el [script de ejemplo](https://github.com/WICG/conversion-measurement-api/blob/main/noise_corrector.py). {% endAside %}
+{% Aside %} Es posible recuperar el verdadero recuento de conversiones de forma que se preserve la privacidad. Consulte el [script de ejemplo](https://github.com/WICG/conversion-measurement-api/blob/main/noise_corrector.py). {% endAside %}
 
-{% endDetails%}
+{% endDetails %}
 
-{% Details %}<br> {% DetailsSummary 'h3' %}<br> En detalle: informes agrupados y privacidad {% endDetailsSummary%}
+{% Details %} {% DetailsSummary 'h3' %} En detalle: informes agrupados y privacidad {% endDetailsSummary %}
 
 Los informes agrupados asocian un evento de clic o visualización detallada con datos de conversión detallados. Sin embargo, proporcionan información sobre la conversión sin rastrear a los usuarios entre sitios siguiendo los siguientes mecanismos de privacidad:
 
@@ -337,7 +347,7 @@ Los informes agrupados asocian un evento de clic o visualización detallada con 
     - Los informes se envían con retrasos aleatorios.
     - Las consultas sobre diferentes segmentos de datos tienen una velocidad limitada.
 
-{% endDetails%}
+{% endDetails %}
 
 ## Sitios y control de usuarios
 
@@ -357,4 +367,4 @@ Hay una serie de cuestiones que permanecen abiertas y que se resolverán a medid
 - Si está pensando en utilizar esta API para casos de uso no publicitarios: lo que falta, ¿cómo podría mejorarse la API? [Abra un problema](https://github.com/WICG/conversion-measurement-api/issues)
 - ¿Cómo pueden los implementadores personalizar la configuración de privacidad? [Únase a la discusión](https://github.com/WICG/conversion-measurement-api/issues/99).
 
-{% Aside %}<br> Esta API combina múltiples técnicas de privacidad para lograr **privacidad y utilidad**. Esto significa que la limitación de datos de 3 bits (o 1 bit para las visualizaciones) y otros mecanismos de privacidad utilizados por esta API son un medio para lograr un fin. Están sujetos a cambios. Si hay formas para que las empresas de tecnología para hacer anuncios obtengan datos más útiles para sus casos de uso al tiempo que logran sólidas garantías de privacidad, esta API evolucionará en consecuencia. {% endAside %}
+{% Aside %} Esta API combina múltiples técnicas de privacidad para lograr **privacidad y utilidad**. Esto significa que la limitación de datos de 3 bits (o 1 bit para las visualizaciones) y otros mecanismos de privacidad utilizados por esta API son un medio para lograr un fin. Están sujetos a cambios. Si hay formas para que las empresas de tecnología para hacer anuncios obtengan datos más útiles para sus casos de uso al tiempo que logran sólidas garantías de privacidad, esta API evolucionará en consecuencia. {% endAside %}

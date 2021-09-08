@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: FLOC
 subhead: 사이트에서 사용자를 고유하게 식별하지 않고도 사용자의 관심사를 추측할 수 있도록 합니다.
 description: FLoC는 개인정보를 보호하는 방식으로 관심 기반 광고를 가능하게 합니다. 사용자가 웹을 이동할 때 해당 브라우저는 유사한 브라우징 기록을 가진 수천 명의 다른 사람들과 함께 "관심 집단"에 할당됩니다. 이 작업은 브라우저 공급업체 또는 다른 사람과 개별 검색 기록이 공유되지 않고 수행됩니다.
-date: '2021-05-18'
-updated: '2021-08-18'
+date: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---

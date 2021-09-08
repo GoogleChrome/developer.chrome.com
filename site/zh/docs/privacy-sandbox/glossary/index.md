@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 隐私沙盒词汇表
 subhead: 隐私沙盒文章和文档假定读者对于隐私、广告和网站开发中的概念已有一定了解。本词汇表解释了关键术语。
 description: 关键概念的简单解释。
-date: '2021-05-18'
-updated: '2021-05-18'
+date: 2021-05-18
+updated: 2021-05-18
 authors:
   - samdutton
 ---
@@ -102,7 +102,7 @@ glitch.me
 - 广告观看次数。（另请参阅[点击率](#ctr)。）
 - 广告位：网页上可以显示广告的空白矩形。众多广告位可构成[广告资源](#inventory)。
 
-## 广告资源 {: #inventory}
+## 广告资源 {: #inventory }
 
 网站上可用的广告位：可以显示广告的空白矩形。
 
@@ -118,7 +118,7 @@ glitch.me
 
 请求的来源，包含协议名称和服务器名称，但无路径信息。例如：`https://developer.chrome.com`
 
-## 源站试用 {: #origin-trial}
+## 源站试用 {: #origin-trial }
 
 源站试用可提供对新功能或实验性功能的访问，从而可以构建可供用户试用的功能，以在该功能面向所有用户发布之前的有限时间内进行试用。当 Chrome 针对某项功能提供源站试用时，可为试用注册一个[源站](#origin)，从而对该来源的所有用户启用该功能，而用户无需切换任何标志或切换到其他版本的 Chrome 浏览器（虽然他们可能需要升级）。源站试用使开发者能够构建使用新功能的演示和原型。试用还可以帮助 Chrome 工程师了解新功能的使用情况，以及它们与其他网站技术的交互情况。了解更多信息：[Chrome 源站试用入门](https://web.dev/origin-trials/)。
 
@@ -152,7 +152,7 @@ glitch.me
 
 来自不同于您所访问网站的域名的资源。例如，网站 foo.com 可能使用来自 google-analytics.com（通过 JavaScript）的分析代码、来自 use.typekit.net（通过链接元素）的字体和来自 vimeo.com 的视频（在 iframe 内）。另请参阅[第一方](#first-party)。
 
-## 第三方 Cookie {: #third-party-cookie}
+## 第三方 Cookie {: #third-party-cookie }
 
 由第三方服务存储的 [Cookie](#cookie)。例如，视频网站可能会在其嵌入式播放器中包含 **Watch Later** 按钮，使用户能够将视频添加到他们的心愿单中，而无需强迫他们导航到视频网站。另请参阅[第一方 Cookie](#first-party-cookie)。
 

@@ -1,14 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: FLoC
-subhead: |2-
-
-  Permita que los sitios adivinen sus intereses sin que puedan identificarlo de manera única.
-description: |2-
-
-  FLoC permite la publicidad basada en intereses de una manera que preserva la privacidad. A medida que un usuario se mueve por la web, su navegador se asigna a una "cohorte de intereses" junto con la de miles de personas que tienen un historial de navegación similar. Esto se hace sin compartir el historial de navegación personal con el proveedor del navegador o con cualquier otra persona.
-date: '2021-05-18'
-updated: '2021-08-18'
+subhead: Permita que los sitios adivinen sus intereses sin que puedan identificarlo de manera única.
+description: FLoC permite la publicidad basada en intereses de una manera que preserva la privacidad. A medida que un usuario se mueve por la web, su navegador se asigna a una "cohorte de intereses" junto con la de miles de personas que tienen un historial de navegación similar. Esto se hace sin compartir el historial de navegación personal con el proveedor del navegador o con cualquier otra persona.
+date: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---
