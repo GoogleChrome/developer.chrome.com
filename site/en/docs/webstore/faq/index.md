@@ -235,14 +235,13 @@ Tab][cws-distribution].
 
 ### How do I localize my listing in the store? {: #faq-gen-19 }
 
-There are two points where you need to localize your extension for listing in a region that isn't your
+There are three points where you need to localize your extension for listing in a region that isn't your
 home market.
 
 1.  Your extension package. See [Internationalizing Your Extension][internationalize] for information on localizing your
     extension's presence inside Chrome.
-2.  Your detailed listing. The developer dashboard now includes the ability for you to select all
-    the regions that you want your application to appear in, allows you to localize the detailed
-    description and screenshots.
+1.  Your [detailed listing][#faq-gen-20]
+1.  Your [screenshots][#faq-gen-21]
 
 ### How do I localize my detailed description? {: #faq-gen-20 }
 
@@ -256,7 +255,7 @@ description.
 Visit your extension page in the [Chrome Web Store Developer Dashboard][dev-dashboard], change the currently
 selected language to your desired choice (for example "en-GB") and upload a screenshot as normal.
 Once the image is uploaded you will be presented with an option to "Show this item in **all**
-locales" or "Show this item **only** in the 'en-GB' locale". Select the later to show the screenshot
+locales" or "Show this item **only** in the 'en-GB' locale". Select the latter to show the screenshot
 to only users of the "en-GB" Chrome Web Store.
 
 ### My item's status says "pending review." What does this mean? {: #faq-listing-08 }
