@@ -75,6 +75,6 @@ First-Party Sets を補うために、`SameParty` という Cookie 属性が提�
 
 ## 詳細はこちら
 
-- [FLEDGE API の技術的説明](https://github.com/privacycg/first-party-sets)
+- [ファーストパーティセットの技術説明者](https://github.com/privacycg/first-party-sets)
 - [Chrome プラットフォームの状態](https://chromestatus.com/feature/5640066519007232)。
 - [Chromium プロジェクト](https://www.chromium.org/updates/first-party-sets)。
