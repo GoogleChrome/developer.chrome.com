@@ -4,4 +4,7 @@ title: 'Workbox'
 description: 'Tooling! Workbox! Stuff!'
 ---
 
-<!-- Intentionally empty for now -->
+### Case Studies
+
+Learn more about how developers are using Workbox in production.
+
