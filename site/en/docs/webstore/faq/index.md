@@ -203,10 +203,6 @@ in the store.
 
 See [Supplying Images][116] for guidelines on supplying images for the store. Read more on [how to create a great listing][great-listing].
 
-### How can I import an existing extension into the store? {: #faq-listing-05 }
-
-You may import an extension with a pre-existing key into the store (see [instructions][117]).
-
 ### How can I export an extension from the store? {: #faq-listing-06 }
 
 Currently we do not support exporting a listing's sources or private key from the store.
