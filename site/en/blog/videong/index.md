@@ -232,7 +232,7 @@ compatible with the aforementioned overlay and GPU buffer systems.
 alt="Relationship between WebCodecs and WebGPU.",
 width="524", height="98" %}
 
-## End of Stream
+## End of stream
 
 Thanks for reading! I hope you've left with a better understanding of modern playback systems and
 how Chromium powers several hundred million hours of watch time every day.
