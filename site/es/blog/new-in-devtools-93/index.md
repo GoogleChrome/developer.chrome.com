@@ -15,7 +15,7 @@ tags:
   - chrome-93
 ---
 
-*Traducción cedida por [Miguel Ángel](https://midu.dev).*
+*Gracias [Miguel Ángel](https://midu.dev) por la traducción y [Carlos Caballero](https://carloscaballero.io) por la revisión.*
 
 {% include 'partials/devtools/es/banner.md' %}
 
