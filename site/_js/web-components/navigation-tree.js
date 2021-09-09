@@ -32,9 +32,9 @@ export class NavigationTree extends BaseElement {
     // @ts-ignore
     this.querySelectorAll('[data-expandable]').forEach(expandable);
 
-    this.backBtn = /** @type {HTMLElement} */ (this.querySelector(
-      '.navigation-tree__back'
-    ));
+    this.backBtn = /** @type {HTMLElement} */ (
+      this.querySelector('.navigation-tree__back')
+    );
     this.backBtn.addEventListener('click', this.onBack);
   }
 

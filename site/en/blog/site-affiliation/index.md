@@ -14,7 +14,7 @@ description: >
 authors:
   - mihajlija
 date: 2021-04-22
-updated: 2021-04-28
+updated: 2021-09-08
 hero: "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/c5KORd65eNdEeszLJWk1.jpeg"
 alt: "A bunch of passwords."
 tags:
@@ -132,6 +132,16 @@ at `/.well-known/assetlinks.json` on the respective domains.
     The MIME type for the Digital Asset Links file needs to be JSON. Make sure
     the server sends a `Content-Type: application/json` header in the response.
 
+    <br>
+
+    {% Aside 'gotchas' %}
+    The request for a DAL file must return an HTTP `200 OK` status code,
+    otherwise it will be treated as an error. This applies to redirects 
+    which return status codes in the `300-399` range.
+    {% endAside %}
+    
+    <br>
+
 1.  To declare the association in both websites, host the
     `assetlinks.json `at `https://www.example.co.uk/.well-known/assetlinks.json`
     as well:
@@ -170,7 +180,7 @@ at `/.well-known/assetlinks.json` on the respective domains.
 
 1.  Submit [a
     form](https://docs.google.com/forms/d/1e4vVbcI7rqQls5HQ4F4bH_4bHcqfC8r0oEY5CxjSrag/viewform)
-    to request starting crawling `assetlinks.json`s on your affiliations.
+    to request starting crawling `assetlinks.json` files on your affiliations.
 
 {% Aside %}
 It may take a while for Googlebot to fetch the resource and recognize the

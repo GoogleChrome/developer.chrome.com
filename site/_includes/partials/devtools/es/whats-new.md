@@ -1,5 +1,18 @@
-## More DevTools features {: #whats-new }
-Please refer to the English version of [What's New In DevTools](/tags/new-in-devtools/) for a complete list of released features. Below are some content that has been translated into Spanish.
+## Más características de DevTools {: #whats-new }
+
+Por favor, revisa la versión en inglés de [Qué hay de nuevo en DevTools](/tags/new-in-devtools/) para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
+
+### Chrome 93 {: #chrome93 }
+
+* [Consultas de contenedores CSS editables en el panel de Estilos](/es/blog/new-in-devtools-93/#container-queries)
+* [Previsualización de paquetes Web en el panel de Red](/es/blog/new-in-devtools-93/#web-bundle)
+* [Depuración de la API de Informes de Atribución](/es/blog/new-in-devtools-93/#attribution-reporting)
+* [Mejor manejo de cadenas de texto en la Consola](/es/blog/new-in-devtools-93/#string)
+* [Mejoras en la depuración de CORS](/es/blog/new-in-devtools-93/#cors)
+* [Lighthouse 8.1](/es/blog/new-in-devtools-93/#lighthouse)
+* [Muestra una nueva nota URL en el panel de Manifiesto](/es/blog/new-in-devtools-93/#new-note-url)
+* [Arreglados los selectors CSS coincidentes](/es/blog/new-in-devtools-93/#matching-selectors)
+* [Mostrando las respuestas JSON con formato legible](/es/blog/new-in-devtools-93/#pretty-print-json)
 
 ### Chrome 92 {: #chrome92 }
 
