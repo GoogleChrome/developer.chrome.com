@@ -47,6 +47,7 @@ In a recent study of data from the [HTTP Archive](https://httparchive.org/), ove
 For more details, see the [proposal issue](https://github.com/GoogleChrome/lighthouse/issues/12884) and [implementation pull request](https://github.com/GoogleChrome/lighthouse/pull/12972).
 
 ## Getting in touch with the Lighthouse team {: #contact-us }
+
 Use the following options to discuss the new features and changes in the post, or anything else related to Lighthouse.
 
 - Report an issue or submit feedback via the [Lighthouse GitHub repo](https://github.com/GoogleChrome/lighthouse).
