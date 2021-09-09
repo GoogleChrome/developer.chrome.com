@@ -7,7 +7,7 @@ description: Frequently asked questions about Chrome Web Store.
 ---
 
 The [Chrome Web Store][webstore] lets you publish free or paid extensions where Google Chrome users can easily
-find them. This FAQ answers many common questions about the Chrome Web Store. If you don't find your
+find them. This FAQ answers some common questions about the Chrome Web Store. If you don't find your
 answer here, check the [general extension FAQs][extension-faq], how to [troubleshoot Chrome Web Store
 violations][troubleshoot-violations], or the
 [chromium-extension group][chromium-extensions]. For additional technical questions and discussion, we recommend [Stack Overflow][stackoverflow-extensions].
@@ -26,18 +26,6 @@ The Chrome Web Store is an open marketplace for [Google Chrome
 Extensions][ext] and [Google Chrome Themes][themes], where consumers may browse, install, and
 purchase items and install them in their browser. These items are built with web technologies and
 run inside of web browsers.
-
-### How many people use Chrome? {: #faq-gen-02 }
-
-In 2015, Google announced one billion active users for Chrome. It's also important to note that
-Chrome Web Store extensions can run in any browser that supports the web technologies used to build the
-extension.
-
-### Is there a road map for Chrome? {: #faq-gen-05 }
-
-You can follow the [Google Chrome Releases blog][chrome-release-blog] to learn about all the latest changes that are
-being made to Chrome. You can create and track bugs and features in the [Chromium bug tracker][bug-tracker],
-and we recommend that you download and install the [Dev channel build][dev-channel-build] of Chrome browser.
 
 ### Why would someone install an extension instead of just using a bookmark or typing in a URL? {: #faq-gen-07 }
 
@@ -171,8 +159,8 @@ pushed out to users over the next few hours.
 
 ### Can I host my own extension? {: #faq-dev-03 }
 
-Yes, you may host your own extension, although you will need to take care of [packaging and
-serving][111] the [auto-update manifest][112] yourself.
+Yes, you can host your own extension. However, Windows and Mac OS 
+Users can only install extensions hosted in the Chrome Web store, except for installs via [enterprise publishing][cws-enterprise] or developer mode.
 
 ## Creating a listing
 
@@ -339,6 +327,7 @@ Business related issues by contacting [CWS support][cws-support].
 [complaint-handling]: /docs/webstore/complaint-faq
 [comply-policies]: /docs/webstore/manage/#comply-with-chrome-web-store-policies
 [cws-distribution]: /docs/webstore/cws-dashboard-distribution/
+[cws-enterprise]: /docs/webstore/cws-dashboard-enterprise/
 [cws-register]: /docs/webstore/register
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
 [dev-channel-build]: https://www.chromium.org/getting-involved/dev-channel
