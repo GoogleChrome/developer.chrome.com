@@ -97,13 +97,13 @@ export class SideNav extends BaseElement {
       this.view = 'site';
     }
 
-    this.projectView = /** @type {!HTMLElement} */ (this.querySelector(
-      'navigation-tree'
-    ));
+    this.projectView = /** @type {!HTMLElement} */ (
+      this.querySelector('navigation-tree')
+    );
 
-    this.siteView = /** @type {!HTMLElement} */ (this.querySelector(
-      'navigation-rail'
-    ));
+    this.siteView = /** @type {!HTMLElement} */ (
+      this.querySelector('navigation-rail')
+    );
 
     // This will catch if the user clicks the ::before element which acts as a
     // site overlay when the side-nav is expanded on mobile.
