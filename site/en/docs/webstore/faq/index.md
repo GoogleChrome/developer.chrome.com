@@ -2,12 +2,11 @@
 layout: "layouts/doc-post.njk"
 title: Frequently Asked Questions
 date: 2020-06-09
-updated: 2021-07-27
-description: Frequently asked questions about Chrome Web Store.
+updated: 2021-09-09
+description: Frequently asked questions about the Chrome Web Store.
 ---
 
-The [Chrome Web Store][webstore] lets you publish free or paid extensions where Google Chrome users can easily
-find them. This FAQ answers some common questions about the Chrome Web Store. If you don't find your
+This FAQ answers some common questions about the [Chrome Web Store][webstore]. If you don't find your
 answer here, check the [general extension FAQs][extension-faq], how to [troubleshoot Chrome Web Store
 violations][troubleshoot-violations], or the
 [chromium-extension group][chromium-extensions]. For additional technical questions and discussion, we recommend [Stack Overflow][stackoverflow-extensions].
@@ -189,7 +188,7 @@ in the store.
 
 ### What are the screenshot and text requirements for the store? {: #faq-listing-04 }
 
-See [Supplying Images][116] for guidelines on supplying images for the store. Read more on [how to create a great listing][great-listing].
+See [Supplying Images][cws-images] for guidelines on supplying images for the store. Read more on [how to create a great listing][great-listing].
 
 ### How can I export an extension from the store? {: #faq-listing-06 }
 
@@ -214,8 +213,8 @@ extension.
 
 ### Can I control the regions where my extension is listed? {: #faq-gen-18 }
 
-Yes, you can select which regions your extension appears in the [Distribution
-Tab][cws-distribution].
+Yes, in the [Distribution
+Tab][cws-distribution] you can specify which countries will see your item listing in the Chrome Web Store.
 
 ### How do I localize my listing in the store? {: #faq-gen-19 }
 
@@ -224,8 +223,8 @@ home market.
 
 1.  Your extension package. See [Internationalizing Your Extension][internationalize] for information on localizing your
     extension's presence inside Chrome.
-1.  Your [detailed listing][#faq-gen-20]
-1.  Your [screenshots][#faq-gen-21]
+2.  Your [detailed description][faq-localize-description]
+3.  Your [screenshots][faq-localize-screenshots]
 
 ### How do I localize my detailed description? {: #faq-gen-20 }
 
@@ -328,10 +327,13 @@ Business related issues by contacting [CWS support][cws-support].
 [comply-policies]: /docs/webstore/manage/#comply-with-chrome-web-store-policies
 [cws-distribution]: /docs/webstore/cws-dashboard-distribution/
 [cws-enterprise]: /docs/webstore/cws-dashboard-enterprise/
+[cws-images]: /docs/webstore/images/
 [cws-register]: /docs/webstore/register
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
 [dev-channel-build]: https://www.chromium.org/getting-involved/dev-channel
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
+[faq-localize-description]: #faq-gen-20
+[faq-localize-screenshots]: #faq-gen-21
 [enterprise]: /docs/webstore/cws-enterprise
 [ext]: /docs/extensions/
 [extension-faq]: /docs/extensions/mv3/faq
