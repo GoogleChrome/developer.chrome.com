@@ -179,7 +179,7 @@ La opción **Restart frame** queda obsoleta. Esta característica requiere más 
 
 Chromium issue: [1203606](https://crbug.com/1203606)
 
-## Monitor de protocolo [Experimental] {: #protocol-monitor }
+## [Experimental] Monitor de protocolo {: #protocol-monitor }
 
 {% Aside %}
 
@@ -201,7 +201,7 @@ Dos nuevas funcionalidades han sido añadidas para facilitar las pruebas de CDP:
 
 Chromium issues: [1204004](https://crbug.com/1204004), [1204466](https://crbug.com/1204466)
 
-## Grabadora de Puppeteer [Experimental] {: #puppeteer-recorder }
+## [Experimental] Grabadora de Puppeteer {: #puppeteer-recorder }
 
 {% Aside %}
 
