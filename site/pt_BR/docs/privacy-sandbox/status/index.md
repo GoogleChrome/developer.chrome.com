@@ -1,10 +1,10 @@
 ---
-layout: layouts / doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: Já está pronto?
 subhead: Status de implementação das APIs do Privacy Sandbox.
 description: Status de implementação das APIs do Privacy Sandbox. Última atualização em 2021-05-18.
-date: '2021-05-18'
-updated: '2021-08-18'
+date: 2021-05-18
+updated: 2021-08-18
 authors:
   - Samdutton
 ---

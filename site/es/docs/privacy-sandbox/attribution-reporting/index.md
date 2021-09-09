@@ -38,7 +38,7 @@ También puede consultar el [Glosario de Privacy Sandbox](/docs/privacy-sandbox/
 
 {% Aside %} Puede haber casos de uso que no estén relacionados con los anuncios. [¡Participe](#engage) para compartir su caso de uso! {% endAside %}
 
-## ¿Por qué se necesita esta API? {: # why-is-this-api-need}
+## ¿Por qué se necesita esta API? {: # why-is-this-api-need }
 
 Hoy en día, la evaluación de conversiones publicitarias depende a menudo de las [cookies de terceros](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies). Los navegadores restringen el acceso a las cookies de terceros porque pueden utilizarse para rastrear a los usuarios en distintos sitios y obstaculizar su privacidad. Esta API permite realizar esas evaluaciones preservando la privacidad, sin cookies de terceros.
 
@@ -55,7 +55,7 @@ La API ofrece dos tipos de informes de atribuciones que se pueden utilizar para 
 - **Los informes a nivel de evento** asocian un clic a un anuncio o una visualización en particular (en el lado del anuncio) con datos en el lado de la conversión. Para preservar la privacidad del usuario evitando la unión de la identidad del usuario a través de distintos sitios, los datos del lado de la conversión son muy limitados y los datos son "ruidosos" (lo que significa que para un pequeño porcentaje de casos, se envían datos aleatorios). Como protección adicional de la privacidad, los informes no se envían de inmediato.
 - **Los informes agrupados** no están vinculados a un evento específico en el lado del anuncio. Estos informes proporcionan datos de conversiones más completos y de mayor fidelidad que los informes a nivel de evento. Una combinación de técnicas de privacidad a través de la criptografía, la distribución de la confianza y la privacidad diferencial ayudan a reducir el riesgo de unión de identidades entre sitios. Ambos tipos de informes se pueden utilizar simultáneamente. Son complementarios. Otras características diseñadas en esta API incluyen [informes de atribuciones entre dispositivos](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md) y [informes de atribuciones entre aplicaciones](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md).
 
-## Participe y comparta sus comentarios {: #engage}
+## Participe y comparta sus comentarios {: #engage }
 
 - **Prueba de origen**: [regístrese en la primera prueba de origen (solo haga clic)](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) o [consulte la primera demostración (solo haga clic)](https://goo.gle/demo-event-level-conversion-measurement-api).
 - Para estar atento a la próxima implementación de esta API que ofrecerá más funciones y estará disponible para experimentar en Chrome (prueba de origen), únase a la [lista de correos para desarrolladores](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).

@@ -30,7 +30,7 @@ Os trust tokens são criptografados, portanto, não é possível identificar um 
 
 {% Aside 'caution' %} Os Tokens de confiança não substituem o reCAPTCHA ou outros mecanismos para determinar se um usuário é ou não quem diz ser.
 
-Trust Tokens são uma forma de **transmitir** confiança em um usuário, não **estabelecer** confiança em um usuário. {% endAside%}
+Trust Tokens são uma forma de **transmitir** confiança em um usuário, não **estabelecer** confiança em um usuário. {% endAside %}
 
 ## Por que precisamos de Trust Tokens?
 
@@ -42,7 +42,7 @@ Com a API Trust Tokens, um site pode emitir tokens criptográficos para um usuá
 
 {% À parte 'termo-chave'%}<br> [Fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) permite que os sites identifiquem e rastreiem usuários individuais, obtendo dados sobre seus dispositivos, sistema operacional e configuração do navegador (como preferências de idioma, [user agent](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) e fontes disponíveis) ou alterações no estado do dispositivo. Isto pode ser feito no servidor verificando os cabeçalhos das solicitações ou no cliente com JavaScript.
 
-O fingerprinting usa mecanismos que os usuários não conhecem e não podem controlar. Sites como [Panopticlick](https://panopticlick.eff.org/) e [amiunique.org](https://amiunique.org/) mostram como os dados de fingerprint podem ser combinados para identificar uma pessoa como indivíduo.<br> {% endAside%}
+O fingerprinting usa mecanismos que os usuários não conhecem e não podem controlar. Sites como [Panopticlick](https://panopticlick.eff.org/) e [amiunique.org](https://amiunique.org/) mostram como os dados de fingerprint podem ser combinados para identificar uma pessoa como indivíduo.<br> {% endAside %}
 
 ## Como funcionam os Trust Tokens?
 
@@ -62,7 +62,7 @@ Neste exemplo, um site de editor deseja verificar se um usuário é um ser human
 12. O site do editor exibe o anúncio.
 13. Uma impressão de visualização do anúncio é contada.
 
-{% Aside%} Para mais detalhes sobre as chamadas de JavaScript neste exemplo, veja o [Exemplo de uso da API](https://web.dev/trust-tokens/#sample-api-usage). {% endAside%}
+{% Aside %} Para mais detalhes sobre as chamadas de JavaScript neste exemplo, veja o [Exemplo de uso da API](https://web.dev/trust-tokens/#sample-api-usage). {% endAside %}
 
 ---
 
@@ -70,10 +70,10 @@ Neste exemplo, um site de editor deseja verificar se um usuário é um ser human
 
 - **Ensaio de origem**: cadastre-se e participe do [ensaio de origem](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049) do Chrome.
 - **Demo**: experimente a [emissão e o resgate](https://trust-token-demo.glitch.me/) de trust tokens.
-- **GitHub**: Leia a [proposta](https://github.com/WICG/trust-token-api), [levante questões e acompanhe a discussão](https://github.com/WICG/trust-token-api/issues) .
-- **W3C**: Discuta os casos de uso da indústria no [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) .
+- **GitHub**: Leia a [proposta](https://github.com/WICG/trust-token-api), [levante questões e acompanhe a discussão](https://github.com/WICG/trust-token-api/issues).
+- **W3C**: Discuta os casos de uso da indústria no [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
 - **IETF**: fornece dados técnicos para o protocolo subjacente no [Privacy Pass working group](https://datatracker.ietf.org/wg/privacypass/about/) do IETF.
-- **Suporte ao desenvolvedor**: faça perguntas e participe de discussões no [repositório Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) .
+- **Suporte ao desenvolvedor**: faça perguntas e participe de discussões no [repositório Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 ## Saiba mais
 

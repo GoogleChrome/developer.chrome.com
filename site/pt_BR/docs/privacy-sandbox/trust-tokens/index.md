@@ -3,8 +3,8 @@ layout: layouts/doc-post.njk
 title: Trust Tokens
 subhead: Trust Tokens é uma nova API para ajudar a combater fraudes e distinguir robôs de humanos de verdade, sem rastreamento passivo.
 description: A API Trust Tokens permite que a confiança de um usuário em um contexto seja transmitida a outro contexto, sem identificar o usuário ou vincular identidades entre os dois contextos. A API permite que uma origem emita tokens criptográficos para um usuário de sua confiança. Os tokens são armazenados pelo navegador do usuário. O navegador pode então usar os tokens em outros contextos para avaliar a autenticidade do usuário.
-date: '2021-05-18'
-updated: '2021-08-18'
+date: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---
@@ -34,15 +34,15 @@ Trust Tokens são uma forma de **transmitir** confiança em um usuário, não **
 
 ## Por que precisamos de Trust Tokens?
 
-A web precisa de meios para estabelecer e transmitir sinais de confiança que mostrem que um usuário é quem diz ser, e não um robô fingindo ser um humano ou um terceiro malicioso fraudando uma pessoa ou serviço real. A proteção contra fraudes é particularmente importante para anunciantes, provedores de anúncios e [CDNs](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/) .
+A web precisa de meios para estabelecer e transmitir sinais de confiança que mostrem que um usuário é quem diz ser, e não um robô fingindo ser um humano ou um terceiro malicioso fraudando uma pessoa ou serviço real. A proteção contra fraudes é particularmente importante para anunciantes, provedores de anúncios e [CDNs](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/).
 
 Infelizmente, muitos mecanismos existentes para medir e propagar confiabilidade - para descobrir se uma interação com um site é de um ser humano real, por exemplo - tiram proveito de técnicas que também podem ser usadas para fingerprinting. Os mecanismos para transmitir confiança devem preservar a privacidade, permitindo que a confiança seja propagada pelos sites sem rastreamento de usuários individuais.
 
 Com a API Trust Tokens, um site pode emitir tokens criptográficos para um usuário de sua confiança, que podem ser usados posteriormente em outro lugar. Os tokens são armazenados com segurança pelo navegador do usuário e podem ser resgatados em outros contextos para confirmar a autenticidade do usuário. Isto permite que a confiança de um usuário em um site (como um site de mídia social ou serviço de e-mail) seja transmitida a outro site (como um editor ou loja online) sem identificar o usuário ou vincular identidades entre sites.
 
-{% À parte 'termo-chave'%}<br> [Fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) permite que os sites identifiquem e rastreiem usuários individuais, obtendo dados sobre seus dispositivos, sistema operacional e configuração do navegador (como preferências de idioma, [user agent](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) e fontes disponíveis) ou alterações no estado do dispositivo. Isto pode ser feito no servidor verificando os cabeçalhos das solicitações ou no cliente com JavaScript.
+{% Aside 'key-term' %}  [Fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) permite que os sites identifiquem e rastreiem usuários individuais, obtendo dados sobre seus dispositivos, sistema operacional e configuração do navegador (como preferências de idioma, [user agent](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) e fontes disponíveis) ou alterações no estado do dispositivo. Isto pode ser feito no servidor verificando os cabeçalhos das solicitações ou no cliente com JavaScript.
 
-O fingerprinting usa mecanismos que os usuários não conhecem e não podem controlar. Sites como [Panopticlick](https://panopticlick.eff.org/) e [amiunique.org](https://amiunique.org/) mostram como os dados de fingerprint podem ser combinados para identificar uma pessoa como indivíduo.<br> {% endAside %}
+O fingerprinting usa mecanismos que os usuários não conhecem e não podem controlar. Sites como [Panopticlick](https://panopticlick.eff.org/) e [amiunique.org](https://amiunique.org/) mostram como os dados de fingerprint podem ser combinados para identificar uma pessoa como indivíduo. {% endAside %}
 
 ## Como funcionam os Trust Tokens?
 
@@ -70,10 +70,10 @@ Neste exemplo, um site de editor deseja verificar se um usuário é um ser human
 
 - **Ensaio de origem**: cadastre-se e participe do [ensaio de origem](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049) do Chrome.
 - **Demo**: experimente a [emissão e o resgate](https://trust-token-demo.glitch.me/) de trust tokens.
-- **GitHub**: Leia a [proposta](https://github.com/WICG/trust-token-api), [levante questões e acompanhe a discussão](https://github.com/WICG/trust-token-api/issues) .
-- **W3C**: Discuta os casos de uso da indústria no [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) .
+- **GitHub**: Leia a [proposta](https://github.com/WICG/trust-token-api), [levante questões e acompanhe a discussão](https://github.com/WICG/trust-token-api/issues).
+- **W3C**: Discuta os casos de uso da indústria no [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
 - **IETF**: fornece dados técnicos para o protocolo subjacente no [Privacy Pass working group](https://datatracker.ietf.org/wg/privacypass/about/) do IETF.
-- **Suporte ao desenvolvedor**: faça perguntas e participe de discussões no [repositório Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) .
+- **Suporte ao desenvolvedor**: faça perguntas e participe de discussões no [repositório Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 ## Saiba mais
 

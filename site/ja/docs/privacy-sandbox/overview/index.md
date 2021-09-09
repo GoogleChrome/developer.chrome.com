@@ -1,5 +1,14 @@
-"--- ''"
 ---
+layout: layouts/doc-post.njk
+title: What is the Privacy Sandbox?
+subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
+description: "What's in it, how to get involved, and what it's for."
+date: 2021-05-18
+updated: 2021-07-29
+authors:
+  - samdutton
+---
+
 
 {% YouTube id='WnCKlNE52tc' %}
 
@@ -12,7 +21,7 @@ Privacy Sandboxのイニシアチブには、2つの主要な目的がありま�
 
 ## Privacy Sandboxの提案とは？
 
-Chromeやその他のエコシステムの利害関係者は、これまでに31件以上の提案を提供してきました。これらの提案は、さまざまな使い方と要件に対応しています。<a href="https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this%E3%81%AB%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82%20-repo%20" data-md-type=" link "> W3Cグループの公開リソース</a>で確認できます。
+Chromeやその他のエコシステムの利害関係者は、これまでに31件以上の提案を提供してきました。これらの提案は、さまざまな使い方と要件に対応しています。<a href="https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo" data-md-type="link"> W3Cグループの公開リソース</a>で確認できます。
 
 Chromeチームによって立案された主な提案を以下の通りです。
 
@@ -38,7 +47,7 @@ Chromeチームによって立案された主な提案を以下の通りです�
 
 - [**Privacy Budget**](https://www.youtube.com/watch?v=0STgfjSA6T8)：Webサイトがユーザーのブラウザーまたはデバイスに関する情報を取得できるようにしますが、ブラウザーがサイトがアクセスできる情報の合計量を制限できるようにし、ユーザーを識別できないようにします。
 - [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/)：[User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)（UA）という文字列は、消極的にユーザーを識別できる重要でかつ処理しにくい[情報源](https://w3c.github.io/fingerprinting-guidance/#passive)です。Client Hintsを使用すると、開発者は、User-Agent文字列からこのデータを解析する必要がなくなり、ユーザーのデバイスまたは条件について必要な情報のみを積極的に要求できます。
-- [**Gnatcatcher**](https://github.com/bslassey/ip-blindness)：IPアドレスを利用して個々のユーザーを識別する機能を制限します。提案には2つの部分があります。[<strong data-md="">Willful IP Blindness</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md)では、WebサイトがIPアドレスをユーザーに関連付けしていないことをブラウザに通知できるようになります。[<strong data-md-type=" double_emphasis ">Near-path NAT</strong>](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md)では、ユーザーのグループが同じプライベートサーバーを介してトラフィックを送信し、実質、サイトホストからIPアドレスを隠せます。Gnatcatcherはまた、不正使用防止などの正当な目的でIPアドレスの情報を必要とするサイトが、認証と監査を条件としてIPアドレス情報を取得できるようにします。
+- [**Gnatcatcher**](https://github.com/bslassey/ip-blindness)：IPアドレスを利用して個々のユーザーを識別する機能を制限します。提案には2つの部分があります。[<strong data-md="">Willful IP Blindness</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md)では、WebサイトがIPアドレスをユーザーに関連付けしていないことをブラウザに通知できるようになります。[<strong data-md-type="double_emphasis">Near-path NAT</strong>](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md)では、ユーザーのグループが同じプライベートサーバーを介してトラフィックを送信し、実質、サイトホストからIPアドレスを隠せます。Gnatcatcherはまた、不正使用防止などの正当な目的でIPアドレスの情報を必要とするサイトが、認証と監査を条件としてIPアドレス情報を取得できるようにします。
 
 ### アイデンティティ
 
@@ -61,7 +70,7 @@ Chromeチームによって立案された主な提案を以下の通りです�
 ## 本APIに関わってフィードバックを共有しましょう
 
 - **GitHub**：GitHubで提案の説明を読み、説明用の [問題] タブで質問やコメントを投稿しましょう。<br> [説明へのリンク](#explainers)は以下に記載されています。
-- **W3C**：W3C <a href="https://www.w3.org/community/web-adv%20/%20" data-md-type=" link ">Improving Web Advertising Business Group</a>、[Privacy Community Group](https://www.w3.org/community/privacycg/participants%20)、および[Web Incubator Community Group](https://github.com/WICG)で使い方について話し合い、業界での使用に関してフィードバックを提供できます。
+- **W3C**：W3C <a href="https://www.w3.org/community/web-adv/" data-md-type="link">Improving Web Advertising Business Group</a>、[Privacy Community Group](https://www.w3.org/community/privacycg/participants)、および[Web Incubator Community Group](https://github.com/WICG)で使い方について話し合い、業界での使用に関してフィードバックを提供できます。
 - **開発者サポート**：[Privacy Sandbox開発者サポートリポジトリ](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)で質問をしたり、ディスカッションに参加したりしましょう。
 
 ## 詳細はこちら

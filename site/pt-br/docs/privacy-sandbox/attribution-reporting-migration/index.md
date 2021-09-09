@@ -8,7 +8,7 @@ authors:
   - maudn
 ---
 
-{% Aside%} Se você tiver dúvidas ou precisar de suporte durante a migração, inscreva-se na [lista de e-mails ](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) e faça sua pergunta. {% endAside%}
+{% Aside %} Se você tiver dúvidas ou precisar de suporte durante a migração, inscreva-se na [lista de e-mails ](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) e faça sua pergunta. {% endAside %}
 
 ## O que está mudando?
 
@@ -21,7 +21,7 @@ Seguindo as mudanças na [proposta da API](https://github.com/WICG/conversion-me
 
 O que permanece inalterado no Chrome 92 é o conjunto de recursos suportados: relatórios em nível de evento, apenas para cliques. **Aguarde atualizações nessa área**. Depois dessa mudança, outras atualizações e recursos serão lançados em futuras versões do Chrome.
 
-{% Aside%} Para receber atualizações sobre o ensaio de origem para esta API e os próximos recursos, inscreva-se na [lista de e-mails](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev). {% endAside%}
+{% Aside %} Para receber atualizações sobre o ensaio de origem para esta API e os próximos recursos, inscreva-se na [lista de e-mails](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev). {% endAside %}
 
 ## Quando essas mudanças entram em vigor?
 
@@ -29,7 +29,7 @@ Essas alterações entram em vigor a partir do [Chrome 92](https://chromestatus.
 
 ## O que você deve fazer?
 
-{% Aside%} Mais mudanças na API virão em versões futuras. Eles usarão a nova nomenclatura adotada no Chrome 92. {% endAside%}
+{% Aside %} Mais mudanças na API virão em versões futuras. Eles usarão a nova nomenclatura adotada no Chrome 92. {% endAside %}
 
 Se você estiver executando um ensaio de origem ou implementou uma demo para esta API, você tem duas opções:
 

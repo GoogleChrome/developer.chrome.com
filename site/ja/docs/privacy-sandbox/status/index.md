@@ -1,10 +1,10 @@
 ---
-layout: layouts / doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 準備はできていますか？
 subhead: Privacy Sandbox APIの実装状況。
 description: Privacy Sandbox APIの実装状況。最終更新2021-05-18。
-date: '2021-05-18'
-updated: '2021-08-18'
+date: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---

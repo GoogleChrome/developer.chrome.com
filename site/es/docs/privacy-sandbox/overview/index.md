@@ -1,4 +1,12 @@
-"--- ''"
+---
+layout: layouts/doc-post.njk
+title: What is the Privacy Sandbox?
+subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
+description: "What's in it, how to get involved, and what it's for."
+date: 2021-05-18
+updated: 2021-07-29
+authors:
+  - samdutton
 ---
 
 {% YouTube id='WnCKlNE52tc' %}
@@ -12,7 +20,7 @@ La iniciativa Privacy Sandbox tiene dos objetivos principales:
 
 ## ¿En qué consisten las propuestas de Privacy Sandbox?
 
-Chrome y otras partes interesadas del ecosistema han ofrecido más de 30 propuestas hasta la fecha, las cuales se pueden encontrar en <a href="https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this%20-repo%20" data-md-type=" link ">recursos públicos de los grupos del W3C</a>. Estas propuestas abarcan una amplia variedad de casos de uso y requisitos.
+Chrome y otras partes interesadas del ecosistema han ofrecido más de 30 propuestas hasta la fecha, las cuales se pueden encontrar en <a href="https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo" data-md-type=" link ">recursos públicos de los grupos del W3C</a>. Estas propuestas abarcan una amplia variedad de casos de uso y requisitos.
 
 A continuación se enumeran las principales propuestas desarrolladas por el equipo de Chrome.
 
@@ -38,7 +46,7 @@ A continuación se enumeran las principales propuestas desarrolladas por el equi
 
 - [**Presupuesto de privacidad**](https://www.youtube.com/watch?v=0STgfjSA6T8): permite que los sitios web obtengan información sobre el navegador o el dispositivo de un usuario, pero permite que el navegador establezca una cuota sobre la cantidad total de información a la que puede acceder un sitio, de modo que no se pueda identificar al usuario.
 - [**Consejos para el cliente Usuario-agente**](https://web.dev/user-agent-client-hints/): La cadena [Usuario-agente](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) (UA) es una importante superficie pasiva de [huellas digitales](https://w3c.github.io/fingerprinting-guidance/#passive), además de ser difícil de procesar. Las sugerencias del cliente permiten que los desarrolladores soliciten activamente solo la información que necesitan sobre el dispositivo o las condiciones del usuario, en vez de que necesiten analizar estos datos a partir de la cadena Usuario-agente.
-- [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): Limita la capacidad de identificar usuarios individuales accediendo a su dirección IP. La propuesta tiene dos partes: [<strong data-md="">Willful IP Blindness</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) proporciona una forma para que los sitios web informen a los navegadores que no están conectando las direcciones IP con los usuarios, y <a href="https://github.com/%20bslassey%20/%20ip-blindness%20/%20blob%20/%20master%20/%20near_path_nat.md%20" data-md-type=" link "><strong data-md-type=" double_emphasis ">Near-path NAT</strong></a> permite que grupos de usuarios envíen su tráfico a través del mismo servidor privatizador, ocultando de forma efectiva sus direcciones IP del host de un sitio. Gnatcatcher también garantiza que los sitios que necesiten acceder a las direcciones IP con fines legítimos, como la prevención de abusos, puedan hacerlo, sujetos a certificación y auditoría.
+- [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): Limita la capacidad de identificar usuarios individuales accediendo a su dirección IP. La propuesta tiene dos partes: [<strong data-md="">Willful IP Blindness</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) proporciona una forma para que los sitios web informen a los navegadores que no están conectando las direcciones IP con los usuarios, y <a href="https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md" data-md-type=" link "><strong data-md-type=" double_emphasis ">Near-path NAT</strong></a> permite que grupos de usuarios envíen su tráfico a través del mismo servidor privatizador, ocultando de forma efectiva sus direcciones IP del host de un sitio. Gnatcatcher también garantiza que los sitios que necesiten acceder a las direcciones IP con fines legítimos, como la prevención de abusos, puedan hacerlo, sujetos a certificación y auditoría.
 
 ### Identidad
 
@@ -60,13 +68,13 @@ La página [Estado de implementación](/docs/privacy-sandbox/status/) de este si
 
 ## Participe y comparta sus comentarios
 
-- **{nbsp}GitHub **: lea la explicación de la propuesta en GitHub y plantee preguntas o comentarios en la pestaña Problemas para la explicación. <br>[Los enlaces para las explicaciones](#explainers) se proporcionan a continuación.
-- **W3C**: los casos de uso se pueden discutir y los comentarios de la industria se pueden compartir en el W3C <a href="https://www.w3.org/community/web-adv%20/%20" data-md-type=" link ">Grupo empresarial de mejora de la publicidad web</a>, el [Grupo de la comunidad privada](https://www.w3.org/community/privacycg/participants%20) y el [Grupo de la comunidad de la incubadora web](https://github.com/WICG).
+- **GitHub**: lea la explicación de la propuesta en GitHub y plantee preguntas o comentarios en la pestaña Problemas para la explicación. <br>[Los enlaces para las explicaciones](#explainers) se proporcionan a continuación.
+- **W3C**: los casos de uso se pueden discutir y los comentarios de la industria se pueden compartir en el W3C <a href="https://www.w3.org/community/web-adv/" data-md-type=" link ">Grupo empresarial de mejora de la publicidad web</a>, el [Grupo de la comunidad privada](https://www.w3.org/community/privacycg/participants) y el [Grupo de la comunidad de la incubadora web](https://github.com/WICG).
 - **Soporte para desarrolladores**: haga preguntas y únase a las discusiones en el <a href="https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support">repositorio de soporte para desarrolladores de Privacy Sandbox</a>.
 
 ## Obtener más información
 
-### Explicación de la propuesta de Privacy Sandbox {: #explainers}
+### Explicación de la propuesta de Privacy Sandbox {: #explainers }
 
 La explicación de la propuesta de la API necesitan comentarios, en particular para sugerir casos de uso que faltan y formas más privadas de lograr sus objetivos. Puede hacer comentarios o hacer preguntas en la pestaña Problemas para cada explicación.
 

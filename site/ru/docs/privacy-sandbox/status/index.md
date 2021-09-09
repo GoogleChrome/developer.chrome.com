@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: Текущее состояние
 subhead: Статус реализации API-интерфейсов Privacy Sandbox.
 description: Статус реализации API-интерфейсов Privacy Sandbox. Последнее обновление — 18.05.2021.
-date: '2021-05-18'
-updated: '2021-08-18'
+date: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---

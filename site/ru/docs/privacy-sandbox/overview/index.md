@@ -1,4 +1,12 @@
-"--- ''"
+---
+layout: layouts/doc-post.njk
+title: What is the Privacy Sandbox?
+subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
+description: "What's in it, how to get involved, and what it's for."
+date: 2021-05-18
+updated: 2021-07-29
+authors:
+  - samdutton
 ---
 
 {% YouTube id='WnCKlNE52tc' %}
@@ -12,7 +20,7 @@
 
 ## Что предлагает инициатива Privacy Sandbox?
 
-На сегодняшний день Chrome и другие участники экосистемы внесли более 30 предложений, с которыми можно ознакомиться на <a href="https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this%20-repo%20">общедоступных ресурсах групп консорциума W3C</a>. Эти предложения охватывают широкий спектр потребностей и сценариев использования.
+На сегодняшний день Chrome и другие участники экосистемы внесли более 30 предложений, с которыми можно ознакомиться на <a href="https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo">общедоступных ресурсах групп консорциума W3C</a>. Эти предложения охватывают широкий спектр потребностей и сценариев использования.
 
 Ниже перечислены ключевые предложения, внесенные командой Chrome.
 
@@ -38,7 +46,7 @@
 
 - [**Бюджет конфиденциальности**](https://www.youtube.com/watch?v=0STgfjSA6T8): механизм, дающий сайтам возможность получать информацию об используемом браузере или устройстве, но при этом позволяющий браузеру ограничивать общий объем доступной сайту информации, чтобы не дать ему идентифицировать пользователя.
 - [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/): строка [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) (UA) — одна из важных пассивных поверхностей [фингерпринтинга](https://w3c.github.io/fingerprinting-guidance/#passive) и вдобавок ее сложно анализировать. С помощью Client Hints (клиентских подсказок) разработчики могут активно запрашивать только ту информацию об устройстве или настройках пользователя, которая им необходима, вместо того чтобы извлекать эти данные из строки User-Agent.
-- [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): позволяет ограничить возможность идентификации конкретных пользователей по IP-адресу. Предложение состоит из двух частей: [<strong data-md="">добровольный отказ от обработки IP-адресов</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) позволяет сайтам сообщать браузеру, что они не идентифицируют пользователей по IP-адресу, в то время как <a href="https://github.com/%20bslassey%20/%20ip-blindness%20/%20blob%20/%20master%20/%20near_path_nat.md%20"><strong>Near-path NAT</strong></a> позволяет группам пользователей направлять свой трафик через один и тот же анонимизирующий сервер, фактически скрывая свои IP-адреса от владельцев сайтов. Gnatcatcher также предоставляет сайтам возможность получать доступ к IP-адресам в легитимных целях, таких как предотвращение злоупотребления, при условии прохождения сертификации и аудита.
+- [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): позволяет ограничить возможность идентификации конкретных пользователей по IP-адресу. Предложение состоит из двух частей: [<strong data-md="">добровольный отказ от обработки IP-адресов</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md) позволяет сайтам сообщать браузеру, что они не идентифицируют пользователей по IP-адресу, в то время как <a href="https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md"><strong>Near-path NAT</strong></a> позволяет группам пользователей направлять свой трафик через один и тот же анонимизирующий сервер, фактически скрывая свои IP-адреса от владельцев сайтов. Gnatcatcher также предоставляет сайтам возможность получать доступ к IP-адресам в легитимных целях, таких как предотвращение злоупотребления, при условии прохождения сертификации и аудита.
 
 ### Идентификация
 
@@ -61,7 +69,7 @@
 ## Участвуйте и делитесь отзывами
 
 - **GitHub**: ознакомьтесь с описанием предложения на GitHub и оставьте свои вопросы или комментарии на вкладке Issues в репозитории с описанием. <br>[Ссылки на описания](#explainers) приведены ниже.
-- **W3C**: обсудите сценарии использования и поделитесь своим мнением как представитель отрасли в группах <a href="https://www.w3.org/community/web-adv%20/%20">Improving Web Advertising Business Group</a>, [Privacy Community Group](https://www.w3.org/community/privacycg/participants%20) и [Web Incubator Community Group](https://github.com/WICG) консорциума W3C.
+- **W3C**: обсудите сценарии использования и поделитесь своим мнением как представитель отрасли в группах <a href="https://www.w3.org/community/web-adv/">Improving Web Advertising Business Group</a>, [Privacy Community Group](https://www.w3.org/community/privacycg/participants) и [Web Incubator Community Group](https://github.com/WICG) консорциума W3C.
 - **Поддержка разработчиков**: задавайте вопросы и участвуйте в обсуждениях в <a href="https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support">репозитории поддержки разработчиков Privacy Sandbox</a>.
 
 ## Дополнительная информация

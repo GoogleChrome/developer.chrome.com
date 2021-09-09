@@ -3,15 +3,15 @@ layout: layouts/doc-post.njk
 title: Glossário do Privacy Sandbox
 subhead: Os artigos e a documentação do Privacy Sandbox pressupõem um conhecimento dos conceitos de privacidade, publicidade e desenvolvimento da web. Este glossário explica os termos-chave.
 description: Explicações simples de conceitos chave.
-date: '2021-05-18'
-updated: '2021-05-18'
+date: 2021-05-18
+updated: 2021-05-18
 authors:
   - samdutton
 ---
 
-{% Aside%} [Informe-nos](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) se algo estiver faltando! {% endAside%}
+{% Aside%} [Informe-nos](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) se algo estiver faltando! {% endAside %}
 
-## Plataforma de anúncios (Adtech) {: #adtech}
+## Plataforma de anúncios (Adtech) {: #adtech }
 
 Uma empresa que presta serviços de veiculação de anúncios.
 
@@ -31,11 +31,11 @@ O [mecanismo de renderização](https://en.wikipedia.org/wiki/Browser_engine) us
 
 Um projeto de navegador web de código aberto. Chrome, Microsoft Edge, Opera e outros navegadores são baseados no Chromium.
 
-## Taxa de cliques (Click-through rate - CTR) {: #ctr}
+## Taxa de cliques (Click-through rate - CTR) {: #ctr }
 
 A proporção de usuários que clicam num anúncio depois de visualizá-lo. (Veja também [impressão](#impression).)
 
-## Conversão de clique (Click-through-conversion - CTC) {: #ctc}
+## Conversão de clique (Click-through-conversion - CTC) {: #ctc }
 
 Uma conversão atribuída a um anúncio que foi 'clicado'.
 
@@ -102,7 +102,7 @@ Um [cookie](#cookie) armazenado por um site enquanto um usuário está no própr
 - Visualização de um anúncio. (Veja também [taxa de cliques (click-through)](#ctr).)
 - Um slot de anúncio: um retângulo vazio numa página web onde um anúncio pode ser exibido. Os slots de anúncio constituem o [inventário](#inventory) .
 
-## Inventário {: #inventory}
+## Inventário {: #inventory }
 
 Os slots de anúncio disponíveis num site: os retângulos vazios onde os anúncios podem ser exibidos.
 
@@ -118,7 +118,7 @@ Número arbitrário usado apenas uma vez na comunicação criptográfica.
 
 A origem de uma solicitação, incluindo o esquema e o nome do servidor, mas nenhuma informação de caminho. Por exemplo: `https://developer.chrome.com`
 
-## Ensaio de origem {: #origin-trial}
+## Ensaio de origem {: #origin-trial }
 
 Os ensaios de origem fornecem acesso a um recurso novo ou experimental, para possibilitar a construção de funcionalidades que os usuários poderão experimentar por um tempo limitado antes que o recurso seja disponibilizado para todos. Quando o Chrome oferece um ensaio de origem para um recurso, uma [origem](#origin) pode ser registrada para o ensaio e irá habilitar o recurso para todos os usuários daquela origem, sem exigir que os usuários precisem ativar/desativar quaisquer flags ou mudar para uma versão alternativa do Chrome (embora possam precisar fazer um upgrade). Os ensaios de origem permitem que os desenvolvedores criem demos e protótipos usando novos recursos. Os ensaios também ajudam os engenheiros do Chrome a entender como os novos recursos são usados e como eles podem interagir com outras tecnologias web. Saiba mais: [Introdução aos ensaios de origem do Chrome](https://web.dev/origin-trials/).
 
@@ -152,11 +152,11 @@ Veja [Superfície de fingerprinting](#fingerprinting-surface) and [Superfície p
 
 Recursos servidos por um domínio diferente do site que você está visitando. Por exemplo, um site foo.com pode usar código de análise de google-analytics.com (via JavaScript), fontes de use.typekit.net (através de um elemento de link) e um vídeo do vimeo.com (em um iframe). Veja também [First-party (primário)](#first-party).
 
-## Cookie de terceiros {: #third-party-cookie}
+## Cookie de terceiros {: #third-party-cookie }
 
 Um [cookie](#cookie) armazenado por um serviço de terceiros. Por exemplo, um site de vídeo pode incluir um botão **Assistir Depois** em seu player incorporado, para permitir que um usuário adicione um vídeo à sua lista de desejos sem forçá-lo a navegar até o site de vídeo. Veja também [Cookie primário (first-party cookie)](#first-party-cookie) .
 
-## Domínio de nível superior (TLD) {: #tld}
+## Domínio de nível superior (TLD) {: #tld }
 
 Domínios de nível superior, como .com e .org, estão listados no [Root Zone Database (banco de dados da zona raiz)](https://www.iana.org/domains/root/db) .
 

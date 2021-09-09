@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 준비가 되었나요?
 subhead: Privacy Sandbox API의 구현 상태
 description: Privacy Sandbox API의 구현 상태입니다. 최종 업데이트 2021-05-18.
-date: '2021-05-18'
-updated: '2021-08-18'
+date: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---

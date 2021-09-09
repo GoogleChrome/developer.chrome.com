@@ -1,4 +1,12 @@
-"--- ''"
+---
+layout: layouts/doc-post.njk
+title: What is the Privacy Sandbox?
+subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
+description: "What's in it, how to get involved, and what it's for."
+date: 2021-05-18
+updated: 2021-07-29
+authors:
+  - samdutton
 ---
 
 {% YouTube id='WnCKlNE52tc' %}
@@ -62,11 +70,11 @@ A página [status de implementação](/docs/privacy-sandbox/status/) neste site 
 
 - **GitHub**: leia a explicação da proposta no GitHub e levante questões ou comentários na aba Issues da explicação. <br> [Links para as explicações](#explainers) estão fornecidas abaixo.
 - **W3C**: os casos de uso podem ser discutidos e o feedback do setor compartilhado nos grupos do W3C [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/), [Privacy Community Group](https://www.w3.org/community/privacycg/participants), e [Web Incubator Community Group](https://github.com/WICG).
-- **Suporte ao desenvolvedor**: faça perguntas e participe de discussões no [repositório Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) .
+- **Suporte ao desenvolvedor**: faça perguntas e participe de discussões no [repositório Privacy Sandbox Developer Support](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 ## Saiba mais
 
-### Explicações de propostas do Privacy Sandbox {: #explainers}
+### Explicações de propostas do Privacy Sandbox {: #explainers }
 
 As explicações da proposta da API precisam de feedback, em particular para sugerir casos de uso ausentes e maneiras mais privadas de atingir seus objetivos. Você pode fazer comentários ou perguntas na aba Issues de cada explicação.
 

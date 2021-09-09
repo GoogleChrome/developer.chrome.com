@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 信任令牌
 subhead: 信任令牌是一种新的 API，可帮助打击欺诈并将机器人与真人区分开来，无需被动跟踪。
 description: Trust Tokens API 能够从一个上下文向另一个上下文传达对用户的信任，而无需识别用户身份或在两个上下文之间关联身份。API 使来源能够向其信任的用户发放加密令牌。令牌由用户的浏览器存储。然后，浏览器可以在其他上下文中使用令牌来评估用户的真实性。
-date: '2021-05-18'
-updated: '2021-08-18'
+date: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---
@@ -40,9 +40,9 @@ authors:
 
 借助 Trust Tokens API，网站可以向其信任的用户颁发加密令牌，随后可在其他位置使用。令牌由用户的浏览器安全地存储，然后可以在其他上下文中赎回以确认用户的真实性。这样即可将一个网站（例如社交媒体网站或电子邮件服务）的用户信任信息传达到另一个网站（例如发布商或在线商店），而无需识别用户身份或跨网站链接身份。
 
-{% Aside 'key-term' %}<br> [“指纹”收集](https://w3c.github.io/fingerprinting-guidance/#passive)使网站能够通过获取有关其设备、操作系统和浏览器设置（例如语言偏好设置、 [用户代理](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent)和可用字体）或设备状态变更的数据来识别和跟踪个别用户。这可以通过检查请求标头在服务器上完成，也可以使用 JavaScript 在客户端上完成。
+{% Aside 'key-term' %} [“指纹”收集](https://w3c.github.io/fingerprinting-guidance/#passive)使网站能够通过获取有关其设备、操作系统和浏览器设置（例如语言偏好设置、 [用户代理](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent)和可用字体）或设备状态变更的数据来识别和跟踪个别用户。这可以通过检查请求标头在服务器上完成，也可以使用 JavaScript 在客户端上完成。
 
-“指纹”收集使用用户不会意识到且无法控制的机制。[Panopticlick](https://panopticlick.eff.org/) 和 [amiunique.org](https://amiunique.org/) 等网站展示了如何结合“指纹”数据来识别您的个人身份。<br> {% endAside %}
+“指纹”收集使用用户不会意识到且无法控制的机制。[Panopticlick](https://panopticlick.eff.org/) 和 [amiunique.org](https://amiunique.org/) 等网站展示了如何结合“指纹”数据来识别您的个人身份。{% endAside %}
 
 ## 信任令牌的运作方式
 

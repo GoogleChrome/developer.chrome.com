@@ -3,14 +3,14 @@ layout: 'layouts/doc-post.njk'
 title: Attribution Reporting (relatório de atribuições)
 subhead: Meça quando a ação do usuário (como um clique no anúncio ou visualização) leva a uma conversão, sem usar identificadores cross-site.
 description: A API Attribution Reporting permite medir quando a ação do usuário (como um clique ou visualização de um anúncio) leva a uma conversão, sem usar identificadores cross-site.
-date: '2021-05-18'
-updated: '2021-08-24'
+date: 2021-05-18
+updated: 2021-08-24
 authors:
   - maudn
   - samdutton
 ---
 
-{% Aside 'Caution'%} A API Attribution Reporting era anteriormente conhecida como API Conversion Measurement. {% endAside %}
+{% Aside 'caution' %} A API Attribution Reporting era anteriormente conhecida como API Conversion Measurement. {% endAside %}
 
 ## Status de implementação
 
@@ -38,7 +38,7 @@ Você talvez também queira consultar o [Glossário completo do Privacy Sandbox]
 
 {% Aside %} Pode haver casos de uso não relacionados a anúncios. [Envolva-se](#engage) para compartilhar seu caso de uso! {% endAside %}
 
-## Por que essa API é necessária? {: # why-is-this-api-needed}
+## Por que essa API é necessária? {: # why-is-this-api-needed }
 
 Hoje, a medição de conversão de anúncios geralmente depende de [cookies de terceiros](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies). Os navegadores estão restringindo o acesso a cookies de terceiros porque eles podem ser usados para rastrear usuários em sites e prejudicar a privacidade do usuário. Esta API permite essas medições de uma forma que preserva a privacidade, sem cookies de terceiros.
 

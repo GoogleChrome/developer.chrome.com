@@ -1,10 +1,10 @@
 ---
-layout: layouts/doc-post.njk
+layout: 'layouts/doc-post.njk'
 title: 准备好了吗？
 subhead: Privacy Sandbox API 的实现状态。
 description: Privacy Sandbox API 的实现状态。最后更新时间为 2021 年 5 月 18 日。
-date: '2021-05-18'
-updated: '2021-08-18'
+date: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---
