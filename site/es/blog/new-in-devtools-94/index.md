@@ -22,9 +22,9 @@ tags:
 
 ## Utiliza DevTools en tu idioma preferido {: #localized }
 
-Chrome DevTools soporta más de 80 idiomas, lo que permite que lo puedas utilizar en tu idioma preferido.
+Chrome DevTools ahora soporta más de 80 idiomas, lo que permite que lo puedas utilizar en tu idioma preferido.
 
-Ve a [Configuración](/docs/devtools/customize/#settings), a continuación selecciona tu idioma preferido siguiente la ruta  **Configuración avanzada** > **Idioma** y finalmente, reinicia las DevTools.
+Ve a [Configuración](/docs/devtools/customize/#settings), a continuación selecciona tu idioma preferido siguiendo la ruta  **Configuración avanzada** > **Idioma** y finalmente, reinicia las DevTools.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/eozpCcjmnn7zwya9zXu6.png", alt="Cambia el idioma en Configuración > Preferencias", width="800", height="494" %}
 
@@ -46,15 +46,15 @@ Clic [Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) &nbsp; {% Img
 Chromium issue: [1223525](https://crbug.com/1223525)
 
 
-## Ensayos de origen en la vista de detalle de Frame {: #origin-trials }
+## Pruebas de origen en la vista de detalle de Frame {: #origin-trials }
 
-Ahora se puede obtener información sobre los [ensayos de origen](/blog/origin-trials/) en la vista de detalles de frame debajo del panel de Aplicación
+Ahora se puede obtener información sobre los [pruebas de origen](/blog/origin-trials/) en la vista de detalles de frame debajo del panel de Aplicación
 
-Ensayos de origen(/blog/origin-trials/) permite el acceso a funcionalidades nuevas o experimentales, para construir una funcionalidad que los usuarios puedan probar durante un tiempo limitado antes de que dicha funcionalidad esté disponible para todo el mundo.
+[Pruebas de origen](/blog/origin-trials/) permite el acceso a funcionalidades nuevas o experimentales, para construir una funcionalidad que los usuarios puedan probar durante un tiempo limitado antes de que dicha funcionalidad esté disponible para todo el mundo.
 
-Abre una página con ensayo de origen (por ejemplo [demo page](https://mediastreamtrack.glitch.me)). En el panel **Applicación**, desplazate hacia la sección **Fotogramas** y selecciona el fotograma top.
+Abre una página con prueba de origen (por ejemplo [demo page](https://mediastreamtrack.glitch.me)). En el panel **Applicación**, desplazate hacia la sección **Fotogramas/Marcos** y selecciona el fotograma/marco top.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VICXjdGL5Rz09TAPg1sW.png", alt="Ensayos de origen en la vista de detalle de Frame", width="800", height="465" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VICXjdGL5Rz09TAPg1sW.png", alt="Pruebas de origen en la vista de detalle de Frame", width="800", height="465" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/2086be5df61ea71f633c3fbab277b01470c534ce #}
 
@@ -114,7 +114,7 @@ Chromium issue: [1179186](https://crbug.com/1179186)
 
 La **Consola** ahora muestra los descriptores de acceso nativos como sus propias propiedades de manera coherente.
 
-Por ejemplo, al evaluar la expresión `new Int8Array([1, 2, 3])` en la **Consola**, los descriptores de acceso nativos como `length`,`byteOffset` no se muestran en la vista previa. Con esta última actualización, los descriptores de acceso nativos se muestran en la vista previa y los valores se evalúan por adelantado cuando se expanden.
+Por ejemplo, al evaluar la expresión `new Int8Array([1, 2, 3])` en la **Consola**, los descriptores de acceso nativos como `length`,`byteOffset` no se mostraban en la vista previa. Con esta última actualización, los descriptores de acceso nativos se muestran en la vista previa y los valores se evalúan por adelantado cuando se expanden.
 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VcUiEcUXdWc00Q8595n6.png", alt="Visualización coherente de los descriptores de acceso nativos como propiedades propias en la consola", width="800", height="459" %}
