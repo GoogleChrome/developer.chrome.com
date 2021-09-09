@@ -24,7 +24,7 @@ Lazy loading images can be an effective way to defer offscreen images so they wo
 
 However, if a page's [LCP](https://web.dev/lcp/) element is an image, lazy loading it can have a significant negative effect on the LCP. The browser may queue loading of the image and fetch other resources first, instead of prioritizing the image for immediate download. A [recent study of lazy loading in WordPress](https://web.dev/lcp-lazy-loading/) found that LCP can improve by as much as 15% for some sites if images in the initial viewport are not lazy loaded.
 
-{% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/u9nepJj3wgpMgoNxSaDZ.png", alt="The lazy-loaded LCP audit in a Lighthouse report", width="800", height="502", style="border: 1px solid var(--color-hairline)" %}
+{% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/u9nepJj3wgpMgoNxSaDZ.png", alt="The lazy-loaded LCP audit in a Lighthouse report", width="800", height="502", class="screenshot" %}
 
 Lighthouse will now detect if the LCP element was a lazy-loaded image and recommend removing the `loading` attribute from it.
 
@@ -36,7 +36,7 @@ The `viewport` audit has been a part of the Best Practices category for years, b
 
 Many mobile browsers support "double tap to zoom" to allow users to easily magnify content not designed for a mobile screen, or, in other words, content without an explicit mobile `<meta name="viewport">`. In practice, this means the browser [needs to wait as much as 300ms after a user tap](https://developers.google.com/web/updates/2013/12/300ms-tap-delay-gone-away) to see if a second tap will follow, and during that time the page can't respond to the initial tap. This translates to a [failing FID](https://web.dev/fid/) of several hundred milliseconds.
 
-{% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/FN6XOPqkFfZ8Ii9fIQOm.png", alt="The mobile-viewport audit in a Lighthouse report", width="800", height="344", style="border: 1px solid var(--color-hairline)" %}
+{% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/FN6XOPqkFfZ8Ii9fIQOm.png", alt="The mobile-viewport audit in a Lighthouse report", width="800", height="344", class="screenshot" %}
 
 In a recent study of data from the [HTTP Archive](https://httparchive.org/), over half the sites that received a 90+ in Lighthouse but failed at least one Core Web Vital did not have a mobile viewport and so were failing FID. As a result, the Lighthouse performance section will now recommend adding a viewport like the following if none is found:
 
