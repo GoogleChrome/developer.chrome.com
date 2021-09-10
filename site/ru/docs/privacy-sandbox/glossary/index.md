@@ -9,7 +9,9 @@ authors:
   - samdutton
 ---
 
-{% Aside %} Если здесь чего-то не хватает, [сообщите нам](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)! {% endAside %}
+{% Aside %}
+Если здесь чего-то не хватает, [сообщите нам](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)!
+{% endAside %}
 
 ## Рекламная платформа (Adtech) {: #adtech }
 
