@@ -15,7 +15,7 @@ tags:
   - chrome-94
 ---
 
-*Traducción cedida por [Carlos Caballero](https://carloscaballero.io).*
+*Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión.*
 
 {% include 'partials/devtools/es/banner.md' %}
 
