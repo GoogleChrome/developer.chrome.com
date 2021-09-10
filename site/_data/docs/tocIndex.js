@@ -34,7 +34,7 @@ const all = glob.sync('*/toc.y{a,}ml', {cwd: __dirname});
 
 for (const result of all) {
   const raw = YAML.load(fs.readFileSync(path.join(__dirname, result), 'utf-8'));
-  const sections = /** @type {Section[]} */ (raw);
+  const sections = /** @type {Section[]} */ (raw ?? []);
 
   const projectKey = path.dirname(result);
   tocIndex[projectKey] = buildProjectIndex(sections);
