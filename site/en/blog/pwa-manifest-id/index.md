@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: 'layouts/blog-post.njk'
 title: Uniquely identifying PWAs with the web app manifest id property
 authors:
   - petelepage
@@ -12,7 +12,6 @@ description: |
   them to be updated in the future.
 tags:
   - progressive-web-apps
-  - web-app-manifest
 ---
 
 When the user installs your PWA, the browser needs a way to uniquely identify
