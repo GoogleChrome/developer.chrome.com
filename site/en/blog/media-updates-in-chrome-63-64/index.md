@@ -21,9 +21,9 @@ tags:
 - Offline playback with [persistent licenses](#persistent-licenses-windows-mac)
   are now supported on Windows and Mac.
 - The [default preload value](#media-preload-defaults-metadata) for `<video>` and
-  `<audio>` elements is now "metadata".
+  `<audio>` elements is now `"metadata"`.
 - An [error](#unsupported-playbackRate-raises-exception) is now thrown when media
-  playbackRate is unsupported.
+  playback rate is unsupported.
 - Chrome now [pauses all background video-only
   media](#background-video-track-optimizations).
 - Audio is [not muted anymore](#remove-muting-extreme-playbackrates) for
@@ -33,15 +33,17 @@ tags:
 
 Today, web developers rely on `isTypeSupported()` or `canPlayType()` to vaguely
 know if some media can be decoded or not. The real question though should be:
-"How well it would perform on this device?"
+"how well it would perform on this device?"
 
 This is exactly one of the things the proposed [Media Capabilities] wants to
-solve: An API to query the browser about the decoding abilities of the device
+solve: an API to query the browser about the decoding abilities of the device
 based on information such as the codecs, profile, resolution, bitrates, etc. It
 would expose information such as whether the playback should be smooth and
 power efficient based on previous playback statistics recorded by the browser.
 
-Note: This API is available in all types of workers in [Chrome 76](https://www.chromestatus.com/feature/5730672977117184).
+{% Aside %}
+This API is available in all types of workers in [Chrome 76](https://www.chromestatus.com/feature/5730672977117184).
+{% endAside %}
 
 In a nutshell, here's how the Decoding Info API works for now. Check out the
 [official
@@ -81,12 +83,14 @@ of dropped frames is less than 10% while `powerEfficient` is true when more
 than 50% of frames are decoded by the hardware. Small frames are always
 considered power efficient.
 
-Note: The result returned from `navigator.mediaCapabilities.decodingInfo` will
+{% Aside %}
+The result returned from `navigator.mediaCapabilities.decodingInfo` will
 always be reported as smooth and power-efficient if the media configuration is
 supported and playback stats have not been recorded yet by the browser.
+{% endAside %}
 
 I recommend using a snippet similar to the one below to detect
-availability and fallback to your current implementation for browsers that
+availability and fall back to your current implementation for browsers that
 don't support this API.
 
 ```js
@@ -127,16 +131,16 @@ The snippet above must use `canPlayType()` instead of `isTypeSupported()`
 if the media configuration type is `"file"`.
 {% endAside %}
 
-### Available for Origin Trials
+### Available for origin trials
 
 In order to get as much feedback as possible from developers using the Decoding
 Info API (part of Media Capabilities) in the field, we've previously added this
 feature in Chrome 64 as an origin trial.
 
-The trial has successfully ended in April 2018.
+The trial successfully ended in April 2018.
 
 {% Aside %}
-The Decoding Info API is now enabled by default in Chrome 66.
+The Decoding Info API was enabled by default in Chrome 66.
 {% endAside %}
 
 [Intent to Experiment](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dsdTLv33r4w) &#124;
@@ -245,14 +249,14 @@ and following these steps:
 ## Media preload defaults to "metadata" {: #media-preload-defaults-metadata }
 
 Matching other browsers' implementations, Chrome desktop now sets the default
-preload value for `<video>` and `<audio>` elements to "metadata" in order to
-reduce bandwidth and resource usage. This new behavior only applies in Chrome
-64 to cases where no preload value is set. Note that the preload attribute's
+preload value for `<video>` and `<audio>` elements to `"metadata"` in order to
+reduce bandwidth and resource usage. Starting in Chrome 64, this new behavior only applies
+to cases where no preload value is set. Note that the preload attribute's
 hint is discarded when a `MediaSource` is attached to the media element as the
 web site handles its own preload.
 
-In other words, `<video>` preload value is now "metadata" while `<video
-preload="auto">` preload value stays "auto". Give a try to the [official
+In other words, `<video>` preload value is now `"metadata"` while `<video
+preload="auto">` preload value stays `"auto"`. Give a try to the [official
 sample](https://googlechrome.github.io/samples/media/preload-metadata).
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5CDvJkdxyQ8) &#124;
@@ -263,7 +267,7 @@ sample](https://googlechrome.github.io/samples/media/preload-metadata).
 
 Following an [HTML specification change], when media elements' `playbackRate`
 is set to a value not supported by Chrome (e.g. a negative value), a
-"NotSupportedError" DOMException is thrown in Chrome 63.
+`"NotSupportedError"` `DOMException` is thrown in Chrome 63.
 
 ```js
 const audio = document.querySelector('audio');

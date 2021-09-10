@@ -63,8 +63,10 @@ and following these steps:
 3. Turn airplane mode on.
 4. Click the "Play" button and enjoy the video!
 
-Note: Widevine support is disabled in [Incognito mode] in Android. That way
+{% Aside %}
+Widevine support is disabled in [Incognito mode] in Android. That way
 users do not inadvertently lose paid licenses when closing Incognito tabs.
+{% endAside %}
 
 ## Widevine L1 for Android {: #widevine_l1 }
 
@@ -108,7 +110,7 @@ and HLS) has a demo for you to try Widevine L1 out:
 
 ## Background video track optimizations (MSE only) {: #background-video-track-optimizations}
 
-The chrome team is always trying to find new ways to improve battery life and
+The Chrome team is always trying to find new ways to improve battery life and
 Chrome 62 is no exception.
 
 Chrome now disables video tracks when the video is played in the background
@@ -117,17 +119,17 @@ Check out our [previous article] to learn more.
 
 ## Customize seekable range on live MSE streams {: #seekable }
 
-As you may already know, the <code>seekable</code> attribute contains the ranges
+As you may already know, the `seekable` attribute contains the ranges
 of the media resource to which the browser can seek. Typically, it contains a
 single time range which starts at 0 and ends at the media resource duration. If
 the duration is not available though, such as a live stream, the time range may
 continuously change.
 
 The good news is that you can now more effectively customize the
-<code>seekable</code> range logic with [Media Source Extensions (MSE)] by
+`seekable` range logic with [Media Source Extensions (MSE)] by
 providing or removing a single seekable range that is union'ed with the current
 buffered ranges. It results in a single seekable range which fits both, when
-the media source duration is <code>+Infinity</code>.
+the media source duration is `+Infinity`.
 
 In the code below, the media source has already been attached to a media
 element and contains only its init segment:

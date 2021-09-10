@@ -163,7 +163,7 @@ sample].
 
 {% Aside %}
 To get feedback from web developers, the Auto Picture-in-Picture
-feature is available as an [Origin Trial] in Chrome 73 for desktop (Chrome OS,
+feature is available as an [origin trial] in Chrome 73 for desktop (Chrome OS,
 Linux, Mac, and Windows). You will need to [request a token], so that the
 feature is automatically enabled for your origin for a limited period of time.
 This will eliminate the need to enable the "Web Platform Features" flag.
@@ -227,7 +227,7 @@ be improved.
 
 {% Aside %}
 To get feedback from web developers, the Skip Ad in Picture-in-Picture
-window feature is available as an [Origin Trial] in Chrome 73 for desktop
+window feature is available as an [origin trial] in Chrome 73 for desktop
 (Chrome OS, Linux, Mac, and Windows). You will need to [request a token], so
 that the feature is automatically enabled for your origin for a limited period
 of time. This will eliminate the need to enable the "Web Platform Features"

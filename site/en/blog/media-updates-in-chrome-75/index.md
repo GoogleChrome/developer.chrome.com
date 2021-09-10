@@ -118,7 +118,7 @@ if (bestConfig) {
 }
 ```
 
-Note that Decoding Info for encrypted media requires HTTPS.
+Note that decoding info for encrypted media requires HTTPS.
 
 Moreover, be aware that it may trigger a user prompt on Android and Chrome OS in
 the same way as `requestMediaKeySystemAccess()`. It won't show more prompts than
@@ -134,7 +134,7 @@ requiring more calls to setup encrypted media playback.
 
 {% Aside %}
 To get feedback from web developers, this feature is available as an
-[Origin Trial] in Chrome 75. You will need to [request a token], so that the
+[origin trial] in Chrome 75. You will need to [request a token], so that the
 feature is automatically enabled for your origin for a limited period
 of time. 
 {% endAside %}

@@ -40,7 +40,7 @@ This API offers a way to show or hide native media controls that do not make
 sense or are not part of the expected user experience, or only allow a
 limited set of features.
 
-The current implementation for now is blocklist mechanism on native controls
+The current implementation for now is a blocklist mechanism on native controls
 with the ability to set them directly from HTML content using the new
 attribute `controlsList`. Check out the [official
 sample](https://googlechrome.github.io/samples/media/controlslist.html).
@@ -86,26 +86,25 @@ restrictions.
 }
 ```
 
+{% Compare 'better' %}
 ```html
 <html>
   <link rel="canonical" href="https://example.com/foo">
   <audio autoplay src="https://cdn.com/file.mp4"></audio>
 </html>
 ```
-{% Aside 'success' %}
 Audio will autoplay as <code>/foo</code> is in the scope.
-{% endAside %}
+{% endCompare %}
 
+{% Compare 'worse' %}
 ```html
 <html>
   <link rel="canonical" href="https://example.com/bar">
   <audio autoplay src="https://cdn.com/file.mp4"></audio>
 </html>
 ```
-
-{% Aside 'warning' %}
 Audio fails to autoplay as <code>/bar</code> is NOT in the scope.
-{% endAside %}
+{% endCompare %}
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/d/topic/blink-dev/DW7_yxL_HjE/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5715456904134656) &#124;
@@ -119,11 +118,13 @@ without user interaction. If a video is marked as `muted` and has the
 to the user.
 
 From Chrome 58, in order to reduce power usage, playback of videos with
-the `autoplay` attribute will be paused when offscreen and resumed when back in
+the `autoplay` attribute will be paused when off screen and resumed when back in
 view, following Safari iOS behavior.'
 
-Note: This only applies to videos that are declared as `autoplay` but not videos
+{% Aside %}
+This only applies to videos that are declared as `autoplay` but not videos
 that start playing with `play()`.
+{% endAside %}
 
 [Intent to Ship](https://groups.google.com/a/chromium.org/d/topic/blink-dev/UtFM-kndhaI/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5651339115757568) &#124;
@@ -136,10 +137,10 @@ approximate range of colors supported by Chrome and output devices using the
 `color-gamut` media query.
 
 If you're not familiar yet with the definitions of color space, color profile,
-gamut, wide-gamut and color depth, I highly recommend you read the
+gamut, wide-gamut, and color depth, I highly recommend you read the
 [Improving Color on the Web] WebKit blog post. It goes into much detail on how
 to use the `color-gamut` media query to serve wide-gamut images when the user
-is on wide-gamut displays and fallback to sRGB images otherwise.
+is on wide-gamut displays and falls back to sRGB images otherwise.
 
 The current implementation in Chrome accepts the `srgb`, `p3` (gamut specified
 by the DCI P3 Color Space), and `rec2020` (gamut specified by the ITU-R

@@ -172,12 +172,12 @@ navigator.requestMediaKeySystemAccess('com.widevine.alpha', config)
 });
 ```
 
-### Available for Origin Trials
+### Available for origin trials
 
 To get feedback from web developers, we've previously added the HDCP Policy
 Check API feature in Chrome 69 for Desktop (Chrome OS, Linux, Mac, and Windows).
 
-The trial has successfully ended in November 2018.
+The trial successfully ended in November 2018.
 
 [Intent to Experiment](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/ITzZ_yx4bF8) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5652917147140096) &#124;

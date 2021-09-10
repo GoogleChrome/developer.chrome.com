@@ -47,12 +47,12 @@ codecs] for a brief explanation of containers).
 
 To try AV1:
 
-- Go to the [YouTube TestTube page].
-- Select "Prefer AV1 for SD" or "Always Prefer AV1" to get the desired
+1. Go to the [YouTube TestTube page].
+1. Select "Prefer AV1 for SD" or "Always Prefer AV1" to get the desired
   AV1 resolution. Note that at higher resolutions, AV1 is more likely to
   experience playback performance issues on some devices.
-- Try playing YouTube clips from the [AV1 Beta Launch Playlist].
-- Confirm the codec av01 in "Stats for nerds".
+1. Try playing YouTube clips from the [AV1 Beta Launch Playlist].
+1. Confirm the codec av01 in "Stats for nerds".
 
 <figure>
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/dkO4doRrngleSzL3VPW5.png", alt="Stats for nerds featuring AV1 in YouTube", width="800", height="257" %}

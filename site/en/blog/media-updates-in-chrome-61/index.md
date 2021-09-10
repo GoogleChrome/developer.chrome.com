@@ -13,7 +13,7 @@ tags:
   - chrome-61
 ---
 
-- Chrome now [disables video tracks when a MSE video is played in the
+- Chrome now [disables video tracks when an MSE video is played in the
   background](#background-video-track-optimizations) to optimize performance.
 - Video will [go fullscreen when device is rotated](#auto-fullscreen-rotate).
 
@@ -36,7 +36,7 @@ again, video track is re-enabled automatically.
 <figure>
   {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/4QmnUQGtBX1N3y64ucE6.png", alt="Log panel in the chrome://media-internals page", width="800", height="292" %}
   <figcaption>
-    Log panel in the <i>chrome://media-internals</i> page
+    Log panel in the <code>chrome://media-internals</code> page
   </figcaption>
 </figure>
 
@@ -81,7 +81,7 @@ If you rotate a device to landscape while a video is playing in the viewport,
 playback will automatically switch to fullscreen mode. Rotating the device to
 portrait puts the video back to windowed mode.
 
-Note that you can implement manually this behavior yourself. (See the [Mobile Web Video
+Note that you can manually implement this behavior yourself. (See the [Mobile Web Video
 Playback] article).
 
 <figure>
