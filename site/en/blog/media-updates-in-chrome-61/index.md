@@ -10,6 +10,7 @@ authors:
   - beaufortfrancois
 tags:
   - media
+  - chrome-61
 ---
 
 - Chrome now [disables video tracks when a MSE video is played in the

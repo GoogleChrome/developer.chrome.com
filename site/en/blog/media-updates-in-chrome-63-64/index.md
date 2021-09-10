@@ -10,6 +10,8 @@ authors:
   - beaufortfrancois
 tags:
   - media
+  - chrome-63
+  - chrome-64
 ---
 
 - Web developers can now [predict whether playback will be smooth and power

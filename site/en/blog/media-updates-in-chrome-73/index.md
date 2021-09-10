@@ -10,6 +10,7 @@ authors:
   - beaufortfrancois
 tags:
   - media
+  - chrome-73
 ---
 
 In this article, I'll discuss Chrome 73 new media features which include:

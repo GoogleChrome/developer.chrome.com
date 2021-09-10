@@ -10,6 +10,7 @@ authors:
   - beaufortfrancois
 tags:
   - media
+  - chrome-75
 ---
 
 Chrome's media capabilities were updated in version 75. In this article, I'll

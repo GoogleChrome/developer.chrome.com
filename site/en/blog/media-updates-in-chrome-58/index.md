@@ -11,6 +11,7 @@ authors:
   - beaufortfrancois
 tags:
   - media
+  - chrome-58
 ---
 
 - Developers can now [customize media controls](#controlslist) such as the

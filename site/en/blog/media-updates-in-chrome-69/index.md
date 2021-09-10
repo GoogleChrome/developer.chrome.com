@@ -9,6 +9,7 @@ authors:
   - beaufortfrancois
 tags:
   - media
+  - chrome-69
 ---
 
 - Chrome supports [AV1 video decoding](#av1).

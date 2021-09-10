@@ -10,6 +10,7 @@ authors:
   - beaufortfrancois
 tags:
   - media
+  - chrome-70
 ---
 
 - Web developers can control [Picture-in-Picture for videos](#pip).

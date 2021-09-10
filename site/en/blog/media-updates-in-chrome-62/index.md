@@ -11,6 +11,7 @@ authors:
   - beaufortfrancois
 tags:
   - media
+  - chrome-62
 ---
 
 - [Offline playback with persistent licenses](#persistent_licenses) and [Widevine
