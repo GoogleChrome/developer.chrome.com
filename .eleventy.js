@@ -30,6 +30,7 @@ const {Columns, Column} = require('./site/_shortcodes/Columns');
 const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
 const {Aside} = require('./site/_shortcodes/Aside');
 const includeRaw = require('./site/_shortcodes/includeRaw');
+const {LanguageList} = require('./site/_shortcodes/LanguageList');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -127,6 +128,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
   eleventyConfig.addPairedShortcode('Aside', Aside);
+  eleventyConfig.addShortcode('LanguageList', LanguageList);
 
   // Add transforms
   eleventyConfig.addTransform('domTransformer', domTransformer);
