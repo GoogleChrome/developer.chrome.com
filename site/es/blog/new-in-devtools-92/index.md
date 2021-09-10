@@ -221,3 +221,6 @@ Ten en cuenta que este experimento está en sus primeras etapas de desarrollo. H
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a2ffe4a8d202e56d640c2f8744c905354e2bca8e #}
 
 Chromium issue: [1199787](https://crbug.com/1199787)
+
+{% include 'partials/devtools/es/reach-out.md' %}
+{% include 'partials/devtools/es/whats-new.md' %}
