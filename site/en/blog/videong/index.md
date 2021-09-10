@@ -3,7 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: 'Deep-dive: VideoNG'
 description: >
   Learn about modern playback systems and how Chromium powers several hundred million hours of watch time every day.
-date: 2021-09-07
+date: 2021-09-10
+thumbnail: image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/f3QXPzlrvld8AowYWoLM.jpg
 authors:
   - dalecurtis
 tags:
