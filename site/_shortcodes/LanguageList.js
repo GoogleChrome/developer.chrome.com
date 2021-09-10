@@ -37,8 +37,8 @@ function LanguageList(url, site, collections, locale = 'en') {
   const links = hreflangs
     // eslint-disable-next-line no-unused-vars
     .filter(([_, code]) => code !== locale)
-    .map(([path, code]) => {
-      return `<a href="${path.join(site.url, path)}">${languageNames[code]}
+    .map(([urlPath, code]) => {
+      return `<a href="${path.join(site.url, urlPath)}">${languageNames[code]}
         (${code})</a>`;
     });
 
