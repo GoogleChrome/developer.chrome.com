@@ -8,7 +8,6 @@ const path = require('path');
  */
 const languageNames = {
   en: 'English',
-  pl: 'Polski',
   es: 'Español',
   ko: '한국어',
   zh: '中文',
