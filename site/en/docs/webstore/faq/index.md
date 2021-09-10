@@ -158,8 +158,7 @@ pushed out to users over the next few hours.
 
 ### Can I host my own extension? {: #faq-dev-03 }
 
-Yes, you can host your own extension. However, Windows and Mac OS 
-Users can only install extensions hosted in the Chrome Web store, except for installs via [enterprise publishing][cws-enterprise] or developer mode.
+You can host your own extensions in limited cases, such as for Linux or Chrome OS users. Consider [enterprise publishing][cws-enterprise] or developer mode.
 
 ## Creating a listing
 
@@ -175,7 +174,7 @@ The item won't appear in the web store until it has successfully completed the r
 details, see [How long will it take to review my item?][how-long-do-reviews-take].
 
 Extensions which are published to the same domain as the publisher address may be approved more
-quickly. Learn more about [Enterprise publishing][enterprise].
+quickly. Learn more about [enterprise publishing][enterprise].
 
 ### How can I remove my listing from the store? {: #faq-listing-03 }
 
