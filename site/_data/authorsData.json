@@ -334,8 +334,11 @@
     "descriptions": {
       "en": "Developer advocate working on Chrome DevTools at Google.",
       "es": "Developer advocate, trabajando en Chrome DevTools en Google.",
-      "zh": "现为谷歌 Chrome DevTools 的开发者推广工程师。",
-      "ru": "Developer advocate, rabotayushchiy nad Chrome DevTools v Google."
+      "zh": "现为谷歌 Chrome DevTools 的开发技术推广工程师。",
+      "ru": "Developer advocate, rabotayushchiy nad Chrome DevTools v Google.",
+      "pt": "Developer Advocate trabalhando no Chrome DevTools no Google.",
+      "ko": "Google 의 Chrome DevTools 팀에서 일하는 Developer Advocate 입니다",
+      "ja": "Google で Chrome DevTools に取り組んでいる Developer Advocate です。"
     },
     "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/4HPVWldl8gHYH8npWFHu.jpg"
   },

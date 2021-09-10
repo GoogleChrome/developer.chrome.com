@@ -5,7 +5,7 @@ authors:
   - titouan
 description: Chrome is deprecating access to private network endpoints from non-secure public websites in Chrome 94 as part of the Private Network Access specification. Read on for recommended actions.
 date: 2021-08-26
-updated: 2021-08-27
+updated: 2021-09-07
 hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
 alt: A private sign in German
 tags:
@@ -101,11 +101,12 @@ Learn more at [Feedback wanted: CORS for private networks
 
 ## What's a deprecation trial {: #whats-deprecation-trial}
 
-Deprecation trials (formerly known as reverse origin trials) are a form of
-origin trials used to ease the deprecation of web features. Deprecation trials
-allow Chrome to deprecate certain web features and prevent websites from forming
-new dependencies on them, while at the same time giving current dependent
-websites extra time to migrate off of them.
+[Deprecation trials (formerly known as reverse origin
+trials)](/blog/origin-trials/#deprecation-trials) are a form of origin trials
+used to ease the deprecation of web features. Deprecation trials allow Chrome to
+deprecate certain web features and prevent websites from forming new
+dependencies on them, while at the same time giving current dependent websites
+extra time to migrate off of them.
 
 During a deprecation trial, the deprecated features are unavailable to all
 websites by default. Developers who still need to use the affected features must

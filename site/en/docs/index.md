@@ -6,7 +6,7 @@ type: landing
 i18n:
   projects:
     tools:
-      heading: 'Tools'
+      heading: 'Tools & Libraries'
     crx:
       heading: 'Extensions & Web Store'
     architecture:
