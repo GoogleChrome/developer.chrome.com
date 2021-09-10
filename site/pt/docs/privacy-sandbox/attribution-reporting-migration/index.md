@@ -8,7 +8,7 @@ authors:
   - maudn
 ---
 
-{% Aside %} Se você tiver dúvidas ou precisar de suporte durante a migração, inscreva-se na [lista de e-mails ](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) e faça sua pergunta. {% endAside %}
+{% Aside %} Se você tiver dúvidas ou precisar de suporte durante a migração, inscreva-se na [lista de e-mails](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) e faça sua pergunta. {% endAside %}
 
 ## O que está mudando?
 

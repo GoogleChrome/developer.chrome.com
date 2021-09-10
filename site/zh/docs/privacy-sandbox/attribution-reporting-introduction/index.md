@@ -13,7 +13,7 @@ authors:
 更新：
 
 - 2021 年初：将聚合报告和浏览型测量添加到提案中。
-- 2021 年初：API 更名为“归因报告 API”。
+- 2021 年初：API 更名为"归因报告 API"。
 
 {% Aside 'caution' %}
 
@@ -116,7 +116,7 @@ authors:
 
 事件级报告适用于：
 
-- **优化**用例。事件级报告有助于为诸如*“我该如何提高投资回报率？”*等问题提供解答。具体来说，该报告可用于优化广告展示位置，因为报告中可以提供广告方的唯一 ID。事件级报告可以为机器学习模型提供训练数据。
+- **优化**用例。事件级报告有助于为诸如*"我该如何提高投资回报率？"*等问题提供解答。具体来说，该报告可用于优化广告展示位置，因为报告中可以提供广告方的唯一 ID。事件级报告可以为机器学习模型提供训练数据。
 - **粗略报告**用例（需要的转化相关信息非常少）。当前的限制是点击转化数据为 3 位（意味着可以将一次转化分配到八个类别之一），而浏览转化数据为 1 位。因此，事件级报告不支持对转化端的粒度数据（例如特定价格或转化时间）进行编码。
 - **欺诈检测**用例。某些报告中的数据能够使您了解可用于识别垃圾信息或无效活动的模式，因此可以用于广告欺诈检测和分析。
 
@@ -124,7 +124,7 @@ authors:
 
 <figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/TxgT3W5pNEZhWgDSYIY3.png", alt="聚合报告", width="400", height="180"%}<figcaption>聚合报告提供的有用信息示例：<code>news.example</code>上的 CampaignID 1234567 在<code>shoes.example</code>上促成了 518 次转化，总消费金额为 38174 美元。其中一半的转化来自美国纽约市的用户。</figcaption></figure>
 
-聚合报告最适用于**报告**用例。这些报告有助于为诸如*“我该如何提高投资回报率？”*等问题提供解答。<br>将聚合报告用于**优化**用例（例如，优化购买价值，由于转化数据过于粗略，事件级报告不支持这项功能）还是一个活跃的研究领域。请参阅[开放性问题](#open-questions)。
+聚合报告最适用于**报告**用例。这些报告有助于为诸如*"我该如何提高投资回报率？"*等问题提供解答。<br>将聚合报告用于**优化**用例（例如，优化购买价值，由于转化数据过于粗略，事件级报告不支持这项功能）还是一个活跃的研究领域。请参阅[开放性问题](#open-questions)。
 
 {% Details %} {% DetailsSummary 'h3' %}为什么需要两种类型的报告？ {% endDetailsSummary %}
 
@@ -239,7 +239,7 @@ authors:
 
 ### 事件级报告
 
-<figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/bdnt0qHKdPJJYzxU03Xm.png", alt="事件级报告", width="800", height="521" %}<figcaption>事件级报告的生成方式如下：浏览器将点击或浏览事件（“归因来源事件”）与广告技术定义的转化数据（“归因触发数据”）进行匹配。稍后，浏览器将生成的报告发送到预定义的端点，报告会包含一些噪声并经历一段延迟。</figcaption></figure>
+<figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/bdnt0qHKdPJJYzxU03Xm.png", alt="事件级报告", width="800", height="521" %}<figcaption>事件级报告的生成方式如下：浏览器将点击或浏览事件（"归因来源事件"）与广告技术定义的转化数据（"归因触发数据"）进行匹配。稍后，浏览器将生成的报告发送到预定义的端点，报告会包含一些噪声并经历一段延迟。</figcaption></figure>
 
 {% Details %} {% DetailsSummary 'h3' %}详细的运作方式：事件级报告{% endDetailsSummary %}可以使用特定于广告转化的属性对广告链接进行配置：
 
@@ -267,7 +267,7 @@ authors:
 
 ### 聚合报告
 
-<figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/HAl0ppkoxoGCtttWDk2A.png", alt="ALT_TEXT_HERE", width="800", height="1140" %}<figcaption>聚合报告的生成方式如下：浏览器将详细的点击或浏览事件（“归因来源事件”）与广告技术定义的详细转化数据（“归因触发数据”）进行匹配。广告技术定义的代码在工作集中运行，从而对将由浏览器发送并用于计算聚合报告的贡献进行定义。聚合服务负责私下为广告技术计算聚合报告。</figcaption></figure>
+<figure>{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/HAl0ppkoxoGCtttWDk2A.png", alt="ALT_TEXT_HERE", width="800", height="1140" %}<figcaption>聚合报告的生成方式如下：浏览器将详细的点击或浏览事件（"归因来源事件"）与广告技术定义的详细转化数据（"归因触发数据"）进行匹配。广告技术定义的代码在工作集中运行，从而对将由浏览器发送并用于计算聚合报告的贡献进行定义。聚合服务负责私下为广告技术计算聚合报告。</figcaption></figure>
 
 {% Details %} {% DetailsSummary 'h3' %}详细的运作方式：聚合报告{% endDetailsSummary %}
 
@@ -293,7 +293,7 @@ authors:
 
 然而，归因报告 API 在使广告公司能够深入了解转化的同时，**无需对个人活动进行跨站跟踪**。该 API 通过跨站连接的信息量非常少，足以用于测量转化，但不足以跟踪鲍勃的跨站活动细节。鲍勃在`news.example`和`shoes.example`上的活动信息得以保持互相独立的状态。
 
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/aurePszyAGz9Osu3G0XN.jpg", alt="图解：如今的网络（合并身份）和将来的网络（分划身份）对照视图”, width="800", height= “314”%}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/aurePszyAGz9Osu3G0XN.jpg", alt="图解：如今的网络（合并身份）和将来的网络（分划身份）对照视图", width="800", height= "314" %}
 
 ### 详细信息
 

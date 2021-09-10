@@ -65,7 +65,7 @@ Attribution Reporting API を使用すると、リンクされた 2 つのイベ
 
 ## 詳しく見る
 
-- [アトリビューションレポートの手引き (コンバージョン測定) ](/docs/privacy-sandbox/attribution-reporting-introduction)
+- [アトリビューションレポートの手引き (コンバージョン測定)](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [API 技術説明者](https://github.com/WICG/conversion-measurement-api/)
 - (⚠️廃止) [広告コンバージョンを測定する一層プライベートな方法](https://web.dev/conversion-measurement/)：この API の最初のイテレーションを Web 開発者向けにまとめた概要
 - (⚠️廃止) [広告コンバージョンを測定する一層プライベートな方法-動画](https://www.youtube.com/watch?v=jcDfOoWwZcM)：この API の最初のイテレーションのデモ (クリックのみ)

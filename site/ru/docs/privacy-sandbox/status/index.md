@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: Текущее состояние
 subhead: Статус реализации API-интерфейсов Privacy Sandbox.
-description: Статус реализации API-интерфейсов Privacy Sandbox. Последнее обновление — 18.05.2021.
+description: Статус реализации API-интерфейсов Privacy Sandbox. Последнее обновление—18.05.2021.
 date: 2021-05-18
 updated: 2021-08-18
 authors:
@@ -13,7 +13,7 @@ authors:
 
 ## Отчеты по атрибуции
 
-*Старое название — «Измерение конверсии».*
+*Старое название—«Измерение конверсии».*
 
 - [Текущее испытание origin trial](https://web.dev/origin-trials/): с Chrome 86 [теперь расширено](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM) до Chrome 93.
 - [Регистрация для участия в испытании Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
@@ -32,7 +32,7 @@ authors:
 - [Введение в отчеты по атрибуции (измерение конверсии)](/docs/privacy-sandbox/attribution-reporting-introduction)
 - [Технические описания API](https://github.com/WICG/conversion-measurement-api/)
 - (⚠️ устарело) [Более конфиденциальный способ измерения конверсии рекламы](https://web.dev/conversion-measurement/): обзор первой версии этого API для веб-разработчиков
-- (⚠️ устарело) [Более конфиденциальный способ измерения конверсии рекламы — видео](https://www.youtube.com/watch?v=jcDfOoWwZcM): демонстрация первой версии этого API для веб-разработчиков (только клики)
+- (⚠️ устарело) [Более конфиденциальный способ измерения конверсии рекламы-видео](https://www.youtube.com/watch?v=jcDfOoWwZcM): демонстрация первой версии этого API для веб-разработчиков (только клики)
 - (⚠️ устарело) [Использование Event Conversion Measurement API](https://web.dev/using-conversion-measurement/): как экспериментировать с первой версией этого API для веб-разработчиков
 - [Погружение в Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
 
@@ -86,7 +86,7 @@ authors:
 - [График выхода версий Chrome](https://www.chromestatus.com/features/schedule)
 - [Процесс выпуска новых функций в Chromium](https://www.chromium.org/blink/launching-features)
 - [Intent to explain: развенчание мифов о процессе выпуска Blink](https://www.youtube.com/watch?time_continue=291&v=y3EZx_b-7tk)
-- [blink-dev](https://groups.google.com/a/chromium.org/g/blink-dev/): статус реализации и обсуждение функций Blink — движка рендеринга, используемого в Chromium.
+- [blink-dev](https://groups.google.com/a/chromium.org/g/blink-dev/): статус реализации и обсуждение функций Blink—движка рендеринга, используемого в Chromium.
 - [Поиск по коду Chromium](https://source.chromium.org/).
 
 ### Испытания Origin Trial

@@ -35,7 +35,7 @@ As principais propostas desenvolvidas pela equipe do Chrome estão listadas abai
 
 ### Proteções de fontes primárias
 
-- [**Alterações nos cookies SameSite **](https://web.dev/samesite-cookies-explained/): protege sites marcando explicitamente seus cookies cross-site.
+- [**Alterações nos cookies SameSite**](https://web.dev/samesite-cookies-explained/): protege sites marcando explicitamente seus cookies cross-site.
 - [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets): permitem que nomes de domínio relacionados pertencentes à mesma entidade se declarem pertencentes à mesma fonte primária.
 
 ### Detecção de fraudes

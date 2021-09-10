@@ -37,7 +37,7 @@ Chrome 使用的[呈现引擎](https://en.wikipedia.org/wiki/Browser_engine)，�
 
 ## 点击转化 (CTC) {: #ctc }
 
-归因于广告“点击”的转化。
+归因于广告"点击"的转化。
 
 ## 转化
 
@@ -81,17 +81,17 @@ glitch.me
 
 一种第三方平台，使用户能够登录网站而该网站无需实现自己的身份验证服务。
 
-## “指纹”收集 {: #fingerprinting }
+## "指纹"收集 {: #fingerprinting }
 
-识别和跟踪个别用户行为的技术。“指纹”收集使用用户不会意识到且无法控制的机制。[Panopticlick](https://panopticlick.eff.org) 和 [amiunique.org](https://amiunique.org/) 等网站展示了如何结合“指纹”数据来识别您的个人身份。
+识别和跟踪个别用户行为的技术。"指纹"收集使用用户不会意识到且无法控制的机制。[Panopticlick](https://panopticlick.eff.org) 和 [amiunique.org](https://amiunique.org/) 等网站展示了如何结合"指纹"数据来识别您的个人身份。
 
-## “指纹”收集图面 {: #fingerprinting }
+## "指纹"收集图面 {: #fingerprinting-surface }
 
-可用于（可能与其他图面结合用于）识别特定用户或设备的元素。例如，`navigator.userAgent()` JavaScript 方法和 `User-Agent` HTTP 请求标头提供了对“指纹”收集图面（用户代理字符串）的访问。
+可用于（可能与其他图面结合用于）识别特定用户或设备的元素。例如，`navigator.userAgent()` JavaScript 方法和 `User-Agent` HTTP 请求标头提供了对"指纹"收集图面（用户代理字符串）的访问。
 
 ## 第一方 {: #first-party }
 
-来自您所访问的网站的资源。例如，您所阅读的网页位于 developer.chrome.com 网站，其中包含从该网站请求的资源。对这些第一方资源的请求称为“第一方请求”，而您在浏览此网站时存储的来自 developer.chrome.com 的 [Cookie](#cookie) [称为第一方 Cookie](#first-party-cookie)。另请参阅[第三方](#third-party)。
+来自您所访问的网站的资源。例如，您所阅读的网页位于 developer.chrome.com 网站，其中包含从该网站请求的资源。对这些第一方资源的请求称为"第一方请求"，而您在浏览此网站时存储的来自 developer.chrome.com 的 [Cookie](#cookie) [称为第一方 Cookie](#first-party-cookie)。另请参阅[第三方](#third-party)。
 
 ## 第一方 Cookie {: #first-party-cookie }
 
@@ -124,7 +124,7 @@ glitch.me
 
 ## 被动图面 {: #passive-surface }
 
-无论网站请求与否，某些“指纹”收集图面（例如用户代理字符串、IP 地址和接受语言标头）都会提供给每个网站。这意味着被动图面很容易消耗网站的隐私预算。
+无论网站请求与否，某些"指纹"收集图面（例如用户代理字符串、IP 地址和接受语言标头）都会提供给每个网站。这意味着被动图面很容易消耗网站的隐私预算。
 
 隐私沙盒计划建议采用主动方式取代被动图面来获取特定信息，例如，使用一次客户端提示来获取用户的语言，而非为每个服务器的每个响应都设置接受语言标头。
 
@@ -146,7 +146,7 @@ glitch.me
 
 ## 图面
 
-请参阅[“指纹”收集图面](#fingerprinting-surface)和[被动图面](#passive-surface)。
+请参阅["指纹"收集图面](#fingerprinting-surface)和[被动图面](#passive-surface)。
 
 ## 第三方 {: #third-party }
 
@@ -160,7 +160,7 @@ glitch.me
 
 顶级域名（例如 .com 和 .org）列于[根区数据库](https://www.iana.org/domains/root/db)中。
 
-请注意，某些“网站”实际上仅为子域名。例如，translate.google.com 和 maps.google.com 仅为 google.com 的子域名（即 [eTLD + 1](#etld)）。
+请注意，某些"网站"实际上仅为子域名。例如，translate.google.com 和 maps.google.com 仅为 google.com 的子域名（即 [eTLD + 1](#etld)）。
 
 ## .well-known
 

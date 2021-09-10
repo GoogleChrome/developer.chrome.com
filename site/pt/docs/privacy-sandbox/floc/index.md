@@ -5,8 +5,8 @@ subhead: Permita que os sites adivinhem seus interesses sem conseguir identific�
 description: O FLoC permite a publicidade com base em interesses de forma a preservar a privacidade. Conforme um usuário se desloca pela
   web, seu navegador é atribuído a uma "grupo de interesse" junto com milhares de outros que tenham um
   histórico de navegação semelhante. Isto é feito sem compartilhar o histórico de navegação individual com o fornecedor do navegador ou com qualquer outra pessoa.
-  date: 2021-05-18
-  updated: 2021-08-18
+date: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---

@@ -47,7 +47,7 @@ Es la culminación de algún objetivo que se deseaba tras la acción de un usuar
 
 El sitio web puede pedirle a un navegador web que almacene una pequeña parte de información textual (llamada cookie) en la computadora del usuario. Los sitios web pueden utilizar cookies para guardar la información de un usuario (o una referencia a los datos que se almacenaron en los servidores backend del sitio web) conforme el usuario se desplaza por la web. Por ejemplo: una tienda en línea puede conservar la información del carrito de compras incluso si el usuario no inició sesión, o el sitio puede registrar la actividad de navegación del usuario en su sitio. También consulte [Cookie de origen](#first-party-cookie) y [Cookie de terceros](#third-party-cookie).
 
-## Privacidad diferencial {: # diferencial-privacy }
+## Privacidad diferencial {: #diferencial-privacy }
 
 Técnicas para permitir el intercambio de información sobre un conjunto de datos, y cuya finalidad es poner en evidencia patrones de comportamiento sin revelar información privada sobre los individuos o si estos pertenecen a dicho conjunto de datos.
 
@@ -85,7 +85,7 @@ Una plataforma de terceros para permitir que un usuario inicie sesión en un sit
 
 Técnicas para identificar y rastrear el comportamiento de usuarios individuales. La toma de huellas dactilares utiliza mecanismos que los usuarios no conocen y que no pueden controlar. Sitios como [Panopticlick](https://panopticlick.eff.org) y [amiunique.org](https://amiunique.org/) muestran cómo se pueden combinar los datos de huellas digitales para identificarlo como individuo.
 
-## Superficie para huellas dactilares {: # fingerprinting-surface }
+## Superficie para huellas dactilares {: #fingerprinting-surface }
 
 Es algo que pueda usarse (probablemente en combinación con otras superficies) para identificar a un usuario o dispositivo en particular. Por ejemplo, el método de JavaScript `navigator.userAgent()` y el encabezado de la solicitud HTTP `User-Agent` brindan acceso a una superficie para huellas dactilares (la cadena user agent).
 
@@ -93,7 +93,7 @@ Es algo que pueda usarse (probablemente en combinación con otras superficies) p
 
 Son los recursos del sitio que está visitando. Por ejemplo, la página que lee está en el sitio developer.chrome.com e incluye los recursos que se solicitaron de ese sitio. Las solicitudes de esos recursos de origen se denominan "solicitudes de origen" y las [cookies](#cookie) que provienen de developer.chrome.com y se almacenan mientras visita este sitio se denominan [cookies de origen](#first-party-cookie). Consulte también [Terceros](#third-party).
 
-## Cookie de origen {: # first-party-cookie }
+## Cookie de origen {: #first-party-cookie }
 
 Es la [cookie](#cookie) que se almacena por un sitio web mientras el usuario está en el mismo sitio. Por ejemplo: una tienda en línea puede pedirle al navegador que almacene una cookie a fin de conservar la información del carrito de compras para un usuario que no inició sesión. Consulte también [Cookies de terceros](#third-party-cookie).
 
@@ -118,11 +118,11 @@ Es un número arbitrario que se utiliza una sola vez en la comunicación criptog
 
 Se refiere al origen de una solicitud, incluido el esquema y el nombre del servidor, pero sin información sobre la ruta. Por ejemplo: `https://developer.chrome.com`
 
-## Prueba de origen {: # origin-trial }
+## Prueba de origen {: #origin-trial }
 
 Las pruebas de origen brindan acceso a una función nueva o experimental, esto con el fin de crear funciones que los usuarios pueden probar durante un tiempo limitado antes de que la función esté disponible para todos. Cuando Chrome ofrece una prueba de origen para una función, [es posible registrar un origen](#origin) para la prueba a fin de habilitar la función para todos los usuarios en ese origen, sin requerir que los usuarios cambien ninguna marca o cambien a una versión alternativa de Chrome (aunque es posible que necesiten hacerlo). potenciar). Las pruebas de origen permiten a los desarrolladores crear demostraciones y prototipos utilizando nuevas funciones. Estas pruebas también ayudan a los ingenieros de Chrome a comprender cómo se utilizan las nuevas funciones y cómo pueden interactuar con otras tecnologías web. Para obtener más información, consulta: [Introducción a las pruebas de origen de Chrome](https://web.dev/origin-trials/).
 
-## Superficie pasiva {: # passive-surface }
+## Superficie pasiva {: #passive-surface }
 
 Algunas de las superficies para huellas digitales, como las cadenas user agent, las direcciones IP y los encabezados accept-language, están disponibles para todos los sitios web, independientemente de que el sitio las solicite o no. Eso significa que las superficies pasivas pueden consumir fácilmente los recursos para la privacidad de un sitio.
 
@@ -152,7 +152,7 @@ Consulte [Superficie para huellas dactilares](#fingerprinting-surface) y [Superf
 
 Son los recursos que se proporcionan desde un dominio diferente al del sitio web que se está visitando. Por ejemplo, el sitio web foo.com podría usar código analítico de google-analytics.com (a través de JavaScript), fuentes de use.typekit.net (mediante un elemento de enlace) y un video de vimeo.com (en un iframe). Consulte también [Origen](#first-party).
 
-## Cookie de terceros {: # third-party-cookie }
+## Cookie de terceros {: #third-party-cookie }
 
 Es la [cookie](#cookie) que se almacena por un servicio de terceros. Por ejemplo, un sitio web de videos puede incluir el botón **Ver más tarde** en el reproductor incorporado, esto con la finalidad de permitir que un usuario agregue un video a su lista de deseos sin forzarlo a navegar en el sitio de videos. Consulte también [Cookie de origen](#first-party-cookie).
 
@@ -160,7 +160,7 @@ Es la [cookie](#cookie) que se almacena por un servicio de terceros. Por ejemplo
 
 Los dominios de nivel superior como .com y .org se incluyen en la [Root Zone Database](https://www.iana.org/domains/root/db).
 
-Tenga en cuenta que algunos "sitios" en realidad únicamente son subdominios. Por ejemplo, translate.google.com y maps.google.com solo son subdominios de google.com (que es el [eTLD + 1](#etld) ).
+Tenga en cuenta que algunos "sitios" en realidad únicamente son subdominios. Por ejemplo, translate.google.com y maps.google.com solo son subdominios de google.com (que es el [eTLD + 1](#etld)).
 
 ## .well-known
 

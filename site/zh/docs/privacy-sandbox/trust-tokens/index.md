@@ -36,13 +36,13 @@ authors:
 
 网站需要建立和传达信任信号的方式，以表明用户身份的真实性，避免机器人伪装成人类或者恶意第三方对真实用户或服务实施欺诈。欺诈保护对于广告客户、广告提供商和 [CDN](https://www.cloudflare.com/en-gb/learning/cdn/what-is-a-cdn/) 尤为重要。
 
-不巧的是，许多现有的可信度衡量和传播机制（例如确定与网站的交互是否来自真人）都利用了也可用于“指纹”收集的技术。用于传达信任的机制必须能够保护隐私，在无需跟踪用户的情况下跨网站传播信任。
+不巧的是，许多现有的可信度衡量和传播机制（例如确定与网站的交互是否来自真人）都利用了也可用于"指纹"收集的技术。用于传达信任的机制必须能够保护隐私，在无需跟踪用户的情况下跨网站传播信任。
 
 借助 Trust Tokens API，网站可以向其信任的用户颁发加密令牌，随后可在其他位置使用。令牌由用户的浏览器安全地存储，然后可以在其他上下文中赎回以确认用户的真实性。这样即可将一个网站（例如社交媒体网站或电子邮件服务）的用户信任信息传达到另一个网站（例如发布商或在线商店），而无需识别用户身份或跨网站链接身份。
 
-{% Aside 'key-term' %} [“指纹”收集](https://w3c.github.io/fingerprinting-guidance/#passive)使网站能够通过获取有关其设备、操作系统和浏览器设置（例如语言偏好设置、 [用户代理](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent)和可用字体）或设备状态变更的数据来识别和跟踪个别用户。这可以通过检查请求标头在服务器上完成，也可以使用 JavaScript 在客户端上完成。
+{% Aside 'key-term' %} ["指纹"收集](https://w3c.github.io/fingerprinting-guidance/#passive)使网站能够通过获取有关其设备、操作系统和浏览器设置（例如语言偏好设置、 [用户代理](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent)和可用字体）或设备状态变更的数据来识别和跟踪个别用户。这可以通过检查请求标头在服务器上完成，也可以使用 JavaScript 在客户端上完成。
 
-“指纹”收集使用用户不会意识到且无法控制的机制。[Panopticlick](https://panopticlick.eff.org/) 和 [amiunique.org](https://amiunique.org/) 等网站展示了如何结合“指纹”数据来识别您的个人身份。{% endAside %}
+"指纹"收集使用用户不会意识到且无法控制的机制。[Panopticlick](https://panopticlick.eff.org/) 和 [amiunique.org](https://amiunique.org/) 等网站展示了如何结合"指纹"数据来识别您的个人身份。{% endAside %}
 
 ## 信任令牌的运作方式
 
