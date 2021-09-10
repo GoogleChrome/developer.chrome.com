@@ -12,9 +12,8 @@
     <span>•</span>
     Updated on <time>{{ helpers.formatDateLong(updated, locale) }}</time>
   {% endif %}
-  </p>
-  <p class="type--caption language-list">
-    Translated to: {% LanguageList page.url, site.locales, collections, locale %}
+  <br>
+  {% LanguageList page.url, site, collections, locale %}
   </p>
 </div>
 {% endif %}
