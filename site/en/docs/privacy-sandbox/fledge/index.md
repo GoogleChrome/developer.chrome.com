@@ -13,14 +13,6 @@ authors:
 
 <!--lint disable no-smart-quotes-->
 
-## Implementation status
-
-* [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is under discussion with
-[WICG](https://www.w3.org/community/wicg/) and interest groups.
-* [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI) in
-[Blink](https://www.chromium.org/blink).
-
-
 {% Aside %}
 FLEDGE is the first experiment to be implemented in Chromium within the 
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
@@ -29,6 +21,14 @@ FLEDGE is the first experiment to be implemented in Chromium within the
 {% YouTube
   id='HkvmYKqnytw' 
 %}
+
+## Implementation status
+
+* [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is under discussion with
+[WICG](https://www.w3.org/community/wicg/) and interest groups.
+* [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI) in
+[Blink](https://www.chromium.org/blink).
+
 
 ## Why do we need FLEDGE?
 

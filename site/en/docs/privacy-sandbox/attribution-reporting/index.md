@@ -15,13 +15,13 @@ authors:
 {% Aside 'caution' %} The Attribution Reporting API was previously known as the Conversion
 Measurement API. {% endAside %}
 
-## Implementation status
-
-See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
-
 {% YouTube
   id='UGA74CIcom8' 
 %}
+
+## Implementation status
+
+See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
 
 ## Glossary
 
