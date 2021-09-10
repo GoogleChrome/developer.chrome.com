@@ -1,12 +1,11 @@
 const {findByUrl} = require('../_data/lib/find');
 const {getLocalizedPaths} = require('../_filters/urls');
-const path = require('path');
 
 /**
  * A map of supported language codes to their full names.
  * @const
  */
- const languageNames = {
+const languageNames = {
   en: 'English',
   pl: 'Polski',
   es: 'Español',
@@ -21,8 +20,9 @@ const path = require('path');
  * Outputs a list of <link hreflang=""> tags with alternate language versions
  * for the given url.
  * @param {string} url Current page url
- * @param {object} site Site object from _data/site.json
+ * @param {object} locales Site supported locales
  * @param {EleventyCollectionObject} collections Eleventy collections object
+ * @param {string} locale current locale
  */
 function LanguageList(url, locales, collections, locale = 'en') {
   if (!url) {
