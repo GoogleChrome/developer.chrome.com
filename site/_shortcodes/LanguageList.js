@@ -17,7 +17,7 @@ const languageNames = {
 };
 
 /**
- * Outputs a list of <link hreflang=""> tags with alternate language versions
+ * Outputs a list of <a href> tags with alternate language versions
  * for the given url.
  * @param {string} url Current page url
  * @param {object} site Site object
@@ -30,22 +30,22 @@ function LanguageList(url, site, collections, locale = 'en') {
   }
 
   const cleanUrl = stripLocale(url);
-  const hreflangs = getLocalizedPaths(cleanUrl, site.locales).filter(hreflang =>
-    findByUrl(collections.all, hreflang[0])
+  const hreflangs = getLocalizedPaths(cleanUrl, site.locales).filter(
+    ([urlPath]) => findByUrl(collections.all, urlPath)
   );
   const links = hreflangs
-    // eslint-disable-next-line no-unused-vars
-    .filter(([_, code]) => code !== locale)
+    .filter(([, code]) => code !== locale)
     .map(([urlPath, code]) => {
-      return `<a href="${path.join(site.url, urlPath)}">${languageNames[code]}
-        (${code})</a>`;
+      return `<a translate="no" lang="${code}"
+        href="${path.join(site.url, urlPath)}">
+        ${languageNames[code]}</a>`;
     });
 
   let html = '';
 
   if (links.length) {
     html = `<span class="language-list">Translated to:
-    ${links.join(',')}</span>`;
+    ${links.join(', ')}</span>`;
   }
   return html;
 }
