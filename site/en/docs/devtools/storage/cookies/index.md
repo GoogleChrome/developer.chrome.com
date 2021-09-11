@@ -4,7 +4,7 @@ title: "View, edit, and delete cookies"
 authors:
   - kaycebasques
 date: 2015-04-13
-updated: 2021-08-19
+updated: 2021-09-11
 description: "Learn how to view, edit, and delete a page's HTTP cookies using Chrome DevTools."
 ---
 
@@ -40,6 +40,8 @@ The **Cookies** table contains the following fields:
   secure, HTTPS connection.
 - **SameSite**. Contains `strict` or `lax` if the cookie is using the experimental `SameSite`
   attribute.
+- **SameParty**. If true, this field indicates that the cookie is allowed to be set or sent in contexts
+  where all ancestor frames belong to the same [First-Party Set][3].
 - **Priority**. Contains `low`, `medium` (default), or `high` if using deprecated [cookie
   Priority][10] attribute.
 
@@ -79,4 +81,5 @@ cookies.
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
 [2]: /docs/devtools/open
+[3]: /docs/privacy-sandbox/first-party-sets/
 [10]: https://bugs.chromium.org/p/chromium/issues/detail?id=232693
