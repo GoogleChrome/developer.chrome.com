@@ -5,13 +5,18 @@
 {% endif %}
 
 {% if date %}
-<div class="dates">
-  <p class="type--caption">
+  <p class="type--caption color-secondary-text">
     Published on <time>{{ helpers.formatDateLong(date, locale) }}</time>
-  {% if updated %}
+    {% if updated %}
     <span>•</span>
     Updated on <time>{{ helpers.formatDateLong(updated, locale) }}</time>
   {% endif %}
   </p>
-</div>
+{% endif %}
+
+{% set languageListHtml %}{% LanguageList page.url, site, collections, locale %}{% endset %}
+{% if languageListHtml %}
+<p class="type--caption color-secondary-text">
+  {{ languageListHtml | safe }}
+</p>
 {% endif %}

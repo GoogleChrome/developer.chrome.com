@@ -15,7 +15,7 @@
  */
 
 const path = require('path');
-const {defaultLocale} = require('../_data/site.json');
+const {defaultLocale, locales} = require('../_data/site.json');
 
 const absolute = url => {
   if (!path.isAbsolute(url)) {
@@ -45,6 +45,21 @@ const stripDefaultLocale = url => {
   return url;
 };
 
+const stripLocale = (url, supportedLocales = locales) => {
+  if (typeof url !== 'string') {
+    return url; // shows up for `permalink: false`
+  }
+
+  const urlLocale = supportedLocales.find(locale =>
+    url.startsWith(`/${locale}/`)
+  );
+
+  if (urlLocale) {
+    url = url.substring(`/${urlLocale}`.length);
+  }
+  return url;
+};
+
 const getLocalizedPaths = (urlPath, locales) => {
   const urlParts = urlPath.split('/');
   return locales.map(locale => {
@@ -59,5 +74,6 @@ module.exports = {
   trailingSlash,
   leadingAndTrailingSlash,
   stripDefaultLocale,
+  stripLocale,
   getLocalizedPaths,
 };
