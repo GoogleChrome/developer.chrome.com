@@ -1,6 +1,5 @@
 const {findByUrl} = require('../_data/lib/find');
 const {getLocalizedPaths, stripLocale} = require('../_filters/urls');
-const path = require('path');
 
 /**
  * A map of supported language codes to their full names.
@@ -36,18 +35,10 @@ function LanguageList(url, site, collections, locale = 'en') {
   const links = hreflangs
     .filter(([, code]) => code !== locale)
     .map(([urlPath, code]) => {
-      return `<a translate="no" lang="${code}"
-        href="${path.join(site.url, urlPath)}">
-        ${languageNames[code]}</a>`;
+      return `<a translate="no" lang="${code}" href="${urlPath}">${languageNames[code]}</a>`;
     });
 
-  let html = '';
-
-  if (links.length) {
-    html = `<span class="language-list">Translated to:
-    ${links.join(', ')}</span>`;
-  }
-  return html;
+  return links.join(', ');
 }
 
 module.exports = {LanguageList};
