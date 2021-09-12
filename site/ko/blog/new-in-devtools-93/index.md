@@ -6,7 +6,7 @@ authors:
 date: 2021-07-28
 updated: 2021-07-28
 description:
-  "수정 가능한 CSS 컨테이너 쿼리, 웹 번들 프리뷰, Console 에서 더 나은 문자열 제어 및 추가 업데이트 사항"
+  "수정 가능한 CSS 컨테이너 쿼리, 웹 번들 프리뷰, Console 에서 더 나은 문자열 제어 및 추가 업데이트 소식"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cNXHu1JnHCfRSnIr1bV7.jpg'
 alt: ''
 tags:
@@ -15,14 +15,13 @@ tags:
   - chrome-93
 ---
 
-<!-- Please help to translate the text below to Korean -->
-*Thanks [your name](https://developers.google.com/community/experts/directory/profile/profile-eun-cho) for the translations, []() and []() for the reviews!*
+*이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였습니다. [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh) 님과  최원영님이 리뷰어로 참여했습니다!*
 
 {% include 'partials/devtools/ko/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
-## Styles 패널에서 CSS 컨테이너 쿼리를 수정할 수 있습니다. {: #container-queries }
+## Styles 패널에서 CSS 컨테이너 쿼리를 수정할 수 있습니다 {: #container-queries }
 이제 **Styles** 패널에서 [CSS 컨테이너 쿼리](https://web.dev/new-responsive/#responsive-to-the-container) 를 보고 수정할 수 있습니다.
 
 컨테이너 쿼리는 반응형 디자인을 구현하기 위해 더 다양한 접근 방식을 제공합니다.
@@ -67,7 +66,7 @@ Attribution Reporting API 에러가 **Issues** 탭에 노출됩니다.
 Chromium issue: [1190735](https://crbug.com/1190735)
 
 
-## Console에서 더 나은 문자열 (string) 제어 {: #string }
+## Console 에서 더 나은 문자열 (string) 제어 {: #string }
 **Console** 의 새로운 컨텍스트 메뉴를 사용하면 **Console** 내 모든 문자열을 콘텐츠, JavaScript 리터럴 또는 JSON 리터럴로 복사할 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/O5uMSgkHrQ2mQDSjmg3A.png", alt="Console의 새로운 컨텍스트 메뉴", width="800", height="477" %}
@@ -112,7 +111,7 @@ Chromium issue: [1213393](https://crbug.com/1213393)
 Chromium issue: [772558](https://crbug.com/772558)
 
 
-## Manifest 패널에서 new note URL을 보여줍니다. {: #new-note-url }
+## Manifest 패널에서 new note URL을 보여줍니다 {: #new-note-url }
 이제 Manifest 패널에서 [new note URL](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking)을 보여줍니다.
 
 현재 Chrome OS (CrOS)에서 "new-note" 를 선언한 Chrome Apps 및 Android Apps 는 스타일러스 설정 (CrOS 기기가 스타일러스와 함께 사용된 경우 표시됨)에서 메모 작성 앱으로 선택할 수 있습니다.  메모 앱으로 선택하면 스타일러스 팔레트의 "메모 만들기 (Create Note)" 버튼에서 앱을 실행할 수 있습니다. 애플리케이션 manifest 에 `new-note-url` 필드를 추가하는 건, 웹 앱이 앱과 동일하게 동작하게 하기 위한 노력의 결과입니다.
@@ -140,7 +139,7 @@ Chromium issue: [1219153](https://crbug.com/1219153)
 
 
 ## Network 패널에서 JSON 응답 Pretty-printing 하기 {: #pretty-print-json }
-이제 **Network** 패널에서 JSON 응답을 Pretty-print하여 보여줄 수 있습니다.
+이제 **Network** 패널에서 JSON 응답을 Pretty-print 하여 보여줄 수 있습니다.
 
 **Network** 패널에서 JSON 응답을 실행하고, `{}` 아이콘을 클릭하면 Pretty-print 하여 보여줍니다.
 
