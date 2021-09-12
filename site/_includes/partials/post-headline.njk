@@ -6,10 +6,12 @@
 
 {% if date %}
   <p class="type--caption color-secondary-text">
-    Published on <time>{{ helpers.formatDateLong(date, locale) }}</time>
+    {{ 'i18n.common.published_on' | i18n(locale) }}
+    <time>{{ helpers.formatDateLong(date, locale) }}</time>
     {% if updated %}
     <span>•</span>
-    Updated on <time>{{ helpers.formatDateLong(updated, locale) }}</time>
+    {{ 'i18n.common.updated_on' | i18n(locale) }}
+    <time>{{ helpers.formatDateLong(updated, locale) }}</time>
   {% endif %}
   </p>
 {% endif %}
@@ -17,6 +19,7 @@
 {% set languageListHtml %}{% LanguageList page.url, site, collections, locale %}{% endset %}
 {% if languageListHtml %}
 <p class="type--caption color-secondary-text">
+  {{ 'i18n.common.translated_to' | i18n(locale) }}
   {{ languageListHtml | safe }}
 </p>
 {% endif %}

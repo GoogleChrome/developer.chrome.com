@@ -45,6 +45,10 @@ const stripDefaultLocale = url => {
   return url;
 };
 
+/**
+ * @param {string} url
+ * @param {string[]} supportedLocales
+ */
 const stripLocale = (url, supportedLocales = locales) => {
   if (typeof url !== 'string') {
     return url; // shows up for `permalink: false`
@@ -60,6 +64,10 @@ const stripLocale = (url, supportedLocales = locales) => {
   return url;
 };
 
+/**
+ * @param {string} urlPath
+ * @param {string[]} locales
+ */
 const getLocalizedPaths = (urlPath, locales) => {
   const urlParts = urlPath.split('/');
   return locales.map(locale => {
