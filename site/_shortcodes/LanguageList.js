@@ -28,6 +28,8 @@ function LanguageList(url, site, collections, locale = 'en') {
     return;
   }
 
+  // getLocalizedPath also implicitly strips any locale prefix, but get the clean URL here first
+  // anyway: we want all options, and this makes it clearer to future readers.
   const cleanUrl = stripLocale(url);
   const hreflangs = getLocalizedPaths(cleanUrl, site.locales).filter(
     ([urlPath]) => findByUrl(collections.all, urlPath)
