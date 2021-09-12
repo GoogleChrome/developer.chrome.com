@@ -7,7 +7,7 @@ date: 2021-07-28
 updated: 2021-07-28
 description:
   "수정 가능한 CSS 컨테이너 쿼리, 웹 번들 프리뷰, Console 에서 더 나은 문자열 제어 및 추가 업데이트 사항"
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xFq1Fb2KOrQfq1RG6x5e.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cNXHu1JnHCfRSnIr1bV7.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -15,7 +15,10 @@ tags:
   - chrome-93
 ---
 
-{% include 'partials/devtools/en/banner.md' %}
+<!-- Please help to translate the text below to Korean -->
+*Thanks [your name](https://developers.google.com/community/experts/directory/profile/profile-eun-cho) for the translations, []() and []() for the reviews!*
+
+{% include 'partials/devtools/ko/banner.md' %}
 
 {% YouTube id="1VaPAnUGRz8" %}
 
@@ -147,5 +150,5 @@ Chromium issue: [1219153](https://crbug.com/1219153)
 
 Chromium bug: [998674](https://crbug.com/998674)
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/ko/reach-out.md' %}
+{% include 'partials/devtools/ko/whats-new.md' %}
