@@ -20,6 +20,17 @@
         {{ 'i18n.common.current_release_label' | i18n(locale) }}
       </p>
     </div>
+    {% if chrome.channels.pending %}
+      <div class="flex-1 gap-300">
+        <div class="release-card__icon release-card__icon-pending">
+          <span class="visually-hidden">{{ 'i18n.common.pending_release_description' | i18n(locale) }}</span>
+          {{ chrome.channels.pending.mstone }}
+        </div>
+        <p class="type--caption text-align-center gap-top-300">
+          {{ 'i18n.common.pending_release_label' | i18n(locale) }}
+        </p>
+      </div>
+    {% endif %}
     <div class="flex-1 gap-300">
       <div class="release-card__icon release-card__icon-beta">
         <span class="visually-hidden">{{ 'i18n.common.future_release_description' | i18n(locale) }}</span>
