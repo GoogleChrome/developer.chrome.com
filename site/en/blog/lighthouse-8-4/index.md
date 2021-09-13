@@ -9,7 +9,7 @@ description: >
 tags:
   - new-in-lighthouse
   - lighthouse
-  # - chrome-95
+  - chrome-95
 ---
 Lighthouse is an automated website auditing tool that helps developers with opportunities and diagnostics to improve the user experience of their sites. It's available in Chrome DevTools, npm (as a Node module and a CLI), or as a browser extension (in [Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/google-lighthouse/)). It powers many Google services, including [web.dev/measure](https://web.dev/measure/) and [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights).
 
