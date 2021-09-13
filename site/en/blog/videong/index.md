@@ -170,6 +170,12 @@ Keeping everything in one place from decoding all the way to rendering can lead 
 For example, when Chromium
 [enabled overlays](https://bugs.chromium.org/p/chromium/issues/detail?id=594449) on macOS,
 power consumption during fullscreen video playback was halved!
+On other platforms like
+[Windows](https://bugs.chromium.org/p/chromium/issues/detail?id=654631),
+[Android](https://bugs.chromium.org/p/chromium/issues/detail?id=889328) and
+[ChromeOS](https://bugs.chromium.org/p/chromium/issues/detail?id=370522),
+we can use overlays even in non-fullscreen cases, saving up to 50% nearly everywhere.
+
 
 ## Rendering
 
