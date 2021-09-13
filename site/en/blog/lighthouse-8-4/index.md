@@ -23,7 +23,7 @@ npm install -g lighthouse
 lighthouse https://www.example.com --view
 ```
 
-### Don't lazy-load Largest Contentful Paint images {: #new-audit-lazy-lcp }
+## Don't lazy-load Largest Contentful Paint images {: #new-audit-lazy-lcp }
 
 Lazy-loading images can be an effective way to defer offscreen images so they don't interfere with loading the content that is [above the fold](https://web-dev.imgix.net/image/admin/t3Kkvh265zi6naTBga41.png?auto=format&w=845).
 
@@ -39,7 +39,7 @@ For more information, see the [initial proposal](https://github.com/GoogleChrome
 
 The `viewport` audit has been a part of the Best Practices category for years, but 8.4 welcomes this advice to the Performance category as well.
 
-Many mobile browsers support "double tap to zoom" to allow users to easily magnify content not designed for a mobile screen, that is, content without an explicit mobile `<meta name="viewport">`. In practice, this means the browser [needs to wait as much as 300&npbs;ms after a user tap](https://developers.google.com/web/updates/2013/12/300ms-tap-delay-gone-away) to see if a second tap will follow, and during that time the page can't respond to the initial tap. This translates to a [failing FID](https://web.dev/fid/) of several hundred milliseconds.
+Many mobile browsers support "double tap to zoom" to allow users to easily magnify content not designed for a mobile screen, that is, content without an explicit mobile `<meta name="viewport">`. In practice, this means the browser [needs to wait as much as 300&nbsp;ms after a user tap](https://developers.google.com/web/updates/2013/12/300ms-tap-delay-gone-away) to see if a second tap will follow, and during that time the page can't respond to the initial tap. This translates to a [failing FID](https://web.dev/fid/) of several hundred milliseconds.
 
 {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/FN6XOPqkFfZ8Ii9fIQOm.png", alt="The mobile-viewport audit in a Lighthouse report", width="800", height="344", class="screenshot" %}
 
