@@ -134,7 +134,7 @@ current_release_label:
   en: 'Current stable version'
 
 pending_release_label:
-  en: 'Upcoming stable version'
+  en: 'Imminent stable version'
 
 future_release_label:
   en: 'Beta will promote to stable on'

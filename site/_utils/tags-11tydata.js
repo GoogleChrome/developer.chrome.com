@@ -27,6 +27,23 @@ const {i18n} = require('../_filters/i18n');
  */
 module.exports = locale => ({
   eleventyComputed: {
+    /**
+     * Generates tags for the stable release and higher. Ordered by earliest release first (i.e.,
+     * 'Stable' > 'Beta' > 'Dev' > 'Canary'). Only names 'Stable' and 'Beta'.
+     */
+    currentChromeReleaseTags: data => {
+      const out = (data.releaseTags || []).filter(({isCurrent}) => isCurrent);
+      out.reverse();
+      return out;
+    },
+
+    /**
+     * Return tag information for any Chrome release prior to the current stable.
+     */
+    historicChromeReleaseTags: data => {
+      return (data.releaseTags || []).filter(({isCurrent}) => !isCurrent);
+    },
+
     releaseTags: data => {
       /** @type {{[name: string]: ChromeReleaseData}} */
       const rawChannels = data.chrome.channels;
@@ -61,23 +78,6 @@ module.exports = locale => ({
       out.sort(({release: a}, {release: b}) => b - a);
 
       return out;
-    },
-
-    /**
-     * Generates tags for the stable release and higher. Ordered by earliest release first (i.e.,
-     * 'Stable' > 'Beta' > 'Dev' > 'Canary'). Only names 'Stable' and 'Beta'.
-     */
-    currentChromeReleaseTags: data => {
-      const out = (data.releaseTags || []).filter(({isCurrent}) => isCurrent);
-      out.reverse();
-      return out;
-    },
-
-    /**
-     * Return tag information for any Chrome release prior to the current stable.
-     */
-    historicChromeReleaseTags: data => {
-      return (data.releaseTags || []).filter(({isCurrent}) => !isCurrent);
     },
 
     displayTags: data => {
