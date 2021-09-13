@@ -9,7 +9,11 @@ authors:
   - samdutton
 ---
 
-{% Aside %} [Informe-nos](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) se algo estiver faltando! {% endAside %}
+{% Aside %}
+
+[Informe-nos](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) se algo estiver faltando!
+
+{% endAside %}
 
 ## Plataforma de anúncios (Adtech) {: #adtech }
 

@@ -9,7 +9,11 @@ authors:
   - Web開発者向け
 ---
 
-{% Aside %}何か足りないと思われる場合は、[お知らせください！](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) {% endAside %}
+{% Aside %}
+
+何か足りないと思われる場合は、[お知らせください！](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)
+
+{% endAside %}
 
 ## 広告プラットフォーム (アドテック) {:#adtech }
 

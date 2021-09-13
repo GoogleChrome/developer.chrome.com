@@ -9,7 +9,11 @@ authors:
   - samdutton
 ---
 
-{% Aside %} 如有任何遗漏之处，请[告诉我们！](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) {% endAside %}
+{% Aside %}
+
+如有任何遗漏之处，请[告诉我们！](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)
+
+{% endAside %}
 
 ## 广告平台 (Adtech) {: #adtech }
 

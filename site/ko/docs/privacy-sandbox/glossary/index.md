@@ -9,7 +9,11 @@ authors:
   - samdutton
 ---
 
-{% Aside %} 빠진 내용이 있다면 [알려주세요!](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=) {% endAside %}
+{% Aside %}
+
+빠진 내용이 있다면 [알려주세요!](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request&template=feature_request.md&title=)
+
+{% endAside %}
 
 ## 광고 플랫폼(애드테크) {: #adtech }
 
