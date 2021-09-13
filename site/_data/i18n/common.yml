@@ -144,3 +144,12 @@ release_dev:
 
 release_canary:
   en: 'Canary'
+
+translated_to:
+  en: 'Translated to:'
+
+published_on:
+  en: 'Published on'
+
+updated_on:
+  en: 'Updated on'

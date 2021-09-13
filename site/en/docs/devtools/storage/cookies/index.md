@@ -82,4 +82,5 @@ cookies.
 [1]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
 [2]: /docs/devtools/open
 [3]: /docs/privacy-sandbox/first-party-sets/
+[6]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#define_the_lifetime_of_a_cookie
 [10]: https://bugs.chromium.org/p/chromium/issues/detail?id=232693
