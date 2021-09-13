@@ -45,7 +45,7 @@ Chromium issue: [1223525](https://crbug.com/1223525)
 ## 프레임 상세 화면에서 Origin trials 가 제공됩니다. {: #origin-trials }
 이제 웹사이트의 [origin trials](/blog/origin-trials/)  에 대한 정보를 애플리케이션 패널 하단의 프레임 디테일 뷰에서 볼 수 있습니다.
 
-사용자들은 [Origin trials](/blog/origin-trials/) 를 통해 새로운 기능 혹은 실험중인 기능에 액세스할 수 있으며, 이는 사용자들로 하여금 해당 기능이 안정화되기 전에 제한적인 시간 동안 시도해 볼 수 있도록 하기 위함입니다.
+사용자들은 [Origin trials](/blog/origin-trials/) 를 통해 새로운 기능 혹은 실험중인 기능에 접근할 수 있으며, 이는 사용자들로 하여금 해당 기능이 안정화되기 전에 제한적인 시간 동안 시도해 볼 수 있도록 하기 위함입니다.
 
 Origin trials 가 포함된 페이지 (예시:  [demo page](https://mediastreamtrack.glitch.me))를 엽니다. **애플리케이션** 패널에서 스크롤을 **프레임** 섹션까지 내린 후 최상단 프레임을 선택합니다.
 
@@ -69,7 +69,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 ## 체크박스 클릭 한 번으로 네트워크 필터 반전 가능 {: #invert-network-filter }
 네트워크 패널에 **Invert** 체크박스가 새로이 추가되었으며, 이를 이용해 필터들을 반전시킬 수 있습니다.
 
-예를 들어, 404 상태 코드가 포함된 네트워크 요청만을 걸러내기 위해 "status-code:404" 를 타이핑해 보세요. 그리고 **Invert** 체크박스를 활성화시켜 필터링 옵션을 반전시켜 보세요. (404 스테이터스 코드가 포함되지 않은 모든 네트워크 요청을 표시합니다.)
+예를 들어, 404 상태 코드가 포함된 네트워크 요청만을 걸러내기 위해 "status-code:404" 를 타이핑해 보세요. 그리고 **Invert** 체크박스를 활성화시켜 필터링 옵션을 반전시켜 보세요. (404 상태 코드가 포함되지 않은 모든 네트워크 요청을 표시합니다.)
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xx1ju91Mu3qflyG6E40W.png", alt="Invert the network filters", width="800", height="474" %}
 
@@ -126,7 +126,7 @@ Chromium issues: [1183990](https://crbug.com/1183990), [578269](https://crbug.co
 
 ## 계산된 창에서의 색상 포맷 변경 {: #color-unit }
 
-색상 미리보기에서 <kbd>Shift</kbd> 와 함께 클릭함으로써 사용자들은 이제 계산된 창에 있는 어떤 엘레먼트들의 색상 포맷을 변경할 수 있습니다.
+색상 미리보기에서 <kbd>Shift</kbd> 와 함께 클릭함으로써 사용자들은 이제 계산된 창에 있는 엘레먼트들의 색상 포맷을 변경할 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IhOkF5do9P8Ovlr7YsdX.png", alt="Shift+Click the color preview to change color format", width="800", height="474" %}
 
@@ -138,7 +138,7 @@ Chromium issue: [1226371](https://crbug.com/1226371)
 
 이제 DevTools 는 모든 컴포넌트들에 대해 내이티브 HTML 도구 설명을 채택합니다. 내이티브 HTML 도구 설명의 스타일링 부족으로 인해 오랜 시간 동안 사용자 정의 도구 설명이 DevTools 내에 구현되어 왔습니다만, 공교롭게도, 사용자 정의 도구 설명을 유지하는 것은 복잡하기 때문에 우리는 이에 기인한 난해한 버그들을 정기적으로 접하게 됐습니다.
 
-그래서 우리는 사용자 정의 구현의 이점에 대해 가중치를 새로 부여한 후에 우리는 DevTools 에 대해서 내이티브 HTML 도구 설명이 충분함을 발견하였습니다. 또한 내이티브 도구 설명을 받아들이는 것이 사용자의 관점에서 다양한 문제점을 방지합니다.
+그래서 우리는 사용자 정의 구현의 이점에 대해 가중치를 새로 부여했고, 이 과정에서 DevTools 에 대해서 내이티브 HTML 도구 설명이 충분함을 발견하였습니다. 또한 내이티브 도구 설명을 받아들이는 것이 사용자의 관점에서 발생할 수 있는 다양한 문제점을 방지합니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bOFfHPAwX3qiVcgANPmh.png", alt="DevTools tooltip", width="800", height="452" %}
 
@@ -149,12 +149,12 @@ Chromium issue: [1223391](https://crbug.com/1223391)
 
 ## [실험중] 이슈 탭에서 이슈들을 숨기기 {: #hide-issues }
 {% Aside %}
-실험중인 기능들을 이용가능하게 하기 위해서는 **설정 > 실험중** 아래에 있는 **이슈 숨기기 활성화** 메뉴를 체크합니다.
+실험중인 기능들을 이용하기 위해서,  **설정 > 실험중** 아래에 있는 **이슈 숨기기 활성화** 메뉴를 체크합니다.
 {% endAside %}
 
-**이슈 숨기기 메뉴**를 활성화하여, **이슈** 탭에서 이슈들을 숨길 수 있습니다. 이 방법으로 우리는 우리에게 중요한 이슈들에 좀더 집중할 수 있습니다.
+**이슈 숨기기 메뉴**를 활성화하여, **이슈** 탭에서 이슈들을 숨길 수 있습니다. 이 방법으로 우리는 중요한 이슈들에 더욱 집중할 수 있습니다.
 
-**이슈** 탭에서 이슈를 가리키고 이슈 메뉴를 클릭하십시오.&nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %}  오른쪽에 있는 **이렇게 이슈 숨기기**를 선택하여 이슈를 감출 수 있습니다.
+**이슈** 탭에서 이슈를 가리키고 이슈 메뉴를 클릭하십시오.&nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %}  오른쪽에 있는 **이 방법으로 이슈 숨기기**를 선택하여 이슈를 감출 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GGJzvwvMYSrkirU44STQ.png", alt="Experimental hide issue context menu", width="800", height="494" %}
 
