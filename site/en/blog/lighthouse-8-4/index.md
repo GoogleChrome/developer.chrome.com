@@ -11,12 +11,16 @@ tags:
   - lighthouse
   # - chrome-95
 ---
+Lighthouse is an automated website auditing tool that helps developers with opportunities and diagnostics to improve the user experience of their sites. It's available in Chrome DevTools, npm (as a Node module and a CLI), or as a browser extension (in [Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/google-lighthouse/)). It powers many Google services, including [web.dev/measure](https://web.dev/measure/) and [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights).
 
-Lighthouse 8.4 is available immediately on the command line (`npm install -g lighthouse`) and in Chrome Canary, expected to ship in Chrome 95, and to be available in [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) within two weeks.
+Lighthouse 8.4 is available immediately on the command line and in [Chrome Canary](https://www.google.com/chrome/canary/).
+It will land in Chrome Stable in Chrome 95 and be available in [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) within a week.
 
-See the full list of changes in the [8.4 changelog](https://github.com/GoogleChrome/lighthouse/releases/tag/v8.4.0).
+To try the Lighthouse Node CLI, use the following commands:
 
-## New Audits
+```text
+npm install -g lighthouse
+lighthouse https://www.example.com --view
 
 ### Don't lazy-load Largest Contentful Paint images {: #new-audit-lazy-lcp }
 
