@@ -57,7 +57,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 module.exports = eleventyConfig => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   // We do this so we can have gulp put compiled css into our _includes/css
-  // directory. We want to .gitignore this compiled css, but we want elventy
+  // directory. We want to .gitignore this compiled css, but we want eleventy
   // to use it for its build.
   eleventyConfig.setUseGitIgnore(false);
 
