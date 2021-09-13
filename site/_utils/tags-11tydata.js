@@ -41,10 +41,11 @@ module.exports = locale => ({
           const release = /** @type {number} */ (tag.release);
           let title = `Chrome ${release}`;
 
+          // Only name 'stable' and 'beta' releases.
           if (rawChannels.stable.mstone === release) {
             title = i18n('i18n.common.release_stable', locale);
           } else if (rawChannels.beta.mstone === release) {
-            title = i18n('i18n.common.release_stable', locale);
+            title = i18n('i18n.common.release_beta', locale);
           }
 
           return {
