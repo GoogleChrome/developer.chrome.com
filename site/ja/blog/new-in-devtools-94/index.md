@@ -1,12 +1,12 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "What's New In DevTools (Chrome 94)"
+title: "DevTools の新機能 (Chrome 94)"
 authors:
   - jecelynyeen
 date: 2021-08-24
 updated: 2021-08-24
 description:
-  "Use DevTools in your preferred language, new Nest Hub devices, new CSS container queries badge and more."
+  "好みの言語での DevTools の利用, 新しい Nest Hub デバイス, 新しい CSS コンテナクエリバッチなど。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/js1uKEulNBGj0PoJkqZq.jpg'
 alt: ''
 tags:
@@ -18,7 +18,7 @@ tags:
 {% include 'partials/devtools/en/banner.md' %}
 
 
-## Use DevTools in your preferred language {: #localized }
+## 好みの言語での DevTools の利用 {: #localized }
 Chrome DevTools now supports more than 80 languages, allowing you to work in your preferred language!
 
 Open [Settings](/docs/devtools/customize/#settings), then select your preferred language under the  **Preferences** > **Language** dropdown and reload DevTools.
@@ -30,10 +30,10 @@ Open [Settings](/docs/devtools/customize/#settings), then select your preferred 
 Chromium issue: [1163928](https://crbug.com/1163928)
 
 
-## New Nest Hub devices in the Device list {: #nest-hub }
+## 新しく Nest Hub デバイスがデバイスリストに {: #nest-hub }
 You can now simulate the dimensions of Nest Hub and Nest Hub Max in the [Device mode](/docs/devtools/device-mode/).
 
-Click [Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) &nbsp; {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="Toggle Device Toolbar", width="20", height="22" %} &nbsp;, select Nest Hub or Nest Hub Max under the device list. 
+Click [Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) &nbsp; {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="Toggle Device Toolbar", width="20", height="22" %} &nbsp;, select Nest Hub or Nest Hub Max under the device list.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KytKWMiC4cbFfVUOBzlm.png", alt="Nest Hub device in the Device mode", width="800", height="549" %}
 
@@ -42,8 +42,8 @@ Click [Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) &nbsp; {% Im
 Chromium issue: [1223525](https://crbug.com/1223525)
 
 
-## Origin trials in the Frame details view {: #origin-trials }
-You can now get information about a site's [origin trials](/blog/origin-trials/) in the frame details view under the Application panel. 
+## Frame 詳細ビューの Origin trials {: #origin-trials }
+You can now get information about a site's [origin trials](/blog/origin-trials/) in the frame details view under the Application panel.
 
 [Origin trials](/blog/origin-trials/) gives you access to a new or experimental feature, to build functionality your users can try out for a limited time before the feature is made available to everyone.
 
@@ -56,7 +56,7 @@ Open a page with origin trials (e.g. [demo page](https://mediastreamtrack.glitch
 Chromium issue: [607555](https://crbug.com/607555)
 
 
-## New CSS container queries badge {: #container-queries }
+## 新しい CSS コンテナクエリバッチ {: #container-queries }
 A new **container** badge is added next to the container elements (the ancestor elements that match the criteria of `@container` at-rules). Click the badge to toggle the display of an overlay of the chosen container and all its querying descendants on the page.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0plPq2cHZV5gV8zm9VlP.png", alt="CSS container queries badge", width="800", height="488" %}
@@ -66,7 +66,7 @@ A new **container** badge is added next to the container elements (the ancestor 
 Chromium issue: [1146422](https://crbug.com/1146422)
 
 
-## New checkbox to invert the network filters {: #invert-network-filter }
+## ネットワークフィルタを反転するための新規チェックボックス {: #invert-network-filter }
 Use the new **Invert** checkbox to invert the filters in the Network panel.
 
 For example, you can type "status-code: 404" to filter the network requests with status 404. Enable the **Invert** checkbox to negate the filter (show all network requests which are not with status 404).
@@ -78,7 +78,7 @@ For example, you can type "status-code: 404" to filter the network requests with
 Chromium issue: [1054464](https://crbug.com/1054464)
 
 
-## Upcoming deprecation of the Console sidebar {: #deprecated }
+## Console サイドバーが今後非推奨に {: #deprecated }
 The Console sidebar will be removed in favor of moving the filter UI to the toolbar. Do you have any concerns or feedback? Let us know via this [issue tracker](https://crbug.com/1232937).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CzC2HCaiCcdPgbLykyc8.png", alt="Console sidebar deprecation message", width="800", height="474" %}
@@ -88,7 +88,7 @@ The Console sidebar will be removed in favor of moving the filter UI to the tool
 Chromium issue: [1232937](https://crbug.com/1232937)
 
 
-## Display raw `Set-Cookie` headers in the Issues tab and Network panel {: #raw-cookies }
+## Issue タブや Network パネルでの未加工の `Set-Cookie` ヘッダーの表示 {: #raw-cookies }
 DevTools now displays raw `Set-Cookie` headers in the **Issues** tab.
 
 Previously, DevTools did not show malformed cookies (incorrect `Set-Cookie` header) in the Network panel. With the new `response-header-set-cookie` filter added in the **Network** panel, users can filter the raw `Set-Cookie` header response. DevTools will link the raw `Set-Cookie` headers in the **Issues** tab to the **Network** panel.
@@ -101,7 +101,7 @@ Previously, DevTools did not show malformed cookies (incorrect `Set-Cookie` head
 Chromium issue: [1179186](https://crbug.com/1179186)
 
 
-## Consistent display native accessors as own properties in the Console {: #native-accessors }
+## Console での自身のプロパティとしてのネイティブアクセサの一貫した表示 {: #native-accessors }
 The **Console** now displays native accessors as their own properties consistently.
 
 For example, when evaluating the `new Int8Array([1, 2, 3])` expression in the **Console**, native accessors like `length`, `byteOffset` did not display in the preview. With this latest update, native accessors are shown in the preview and values are eagerly evaluated when expanded.
@@ -113,7 +113,7 @@ For example, when evaluating the `new Int8Array([1, 2, 3])` expression in the **
 Chromium issues: [1076820](https://crbug.com/1076820), ​​[1199247](https://crbug.com/1199247)
 
 
-## Proper error stack traces for inline scripts with #sourceURL {: #inline-script }
+## #sourceURL を使ったインラインスクリプトの適切なエラースタックトレース {: #inline-script }
 DevTools now resolves inline scripts with `#sourceURL` properly and shows proper error stack traces for debugging.
 
 Previously DevTools displayed incorrect location for inline scripts with `#sourceURL`, relative to the surrounding document rather than relative to the opening `<script>` tag..
@@ -124,7 +124,7 @@ Previously DevTools displayed incorrect location for inline scripts with `#sourc
 
 Chromium issues: [1183990](https://crbug.com/1183990), ​​[578269](https://crbug.com/578269)
 
-## Change color format in the Computed pane {: #color-unit }
+## Computed ペインでのカラーフォーマットの変更 {: #color-unit }
 
 You can now change the color format of any element in the Computed pane by <kbd>Shift</kbd> + click on the color preview.
 
@@ -134,7 +134,7 @@ You can now change the color format of any element in the Computed pane by <kbd>
 
 Chromium issue: [1226371](https://crbug.com/1226371)
 
-## Replace custom tooltips with native HTML tooltips {: #tooltip }
+## カスタムツールチップをネイティブの HTML ツールチップに置き換え {: #tooltip }
 
 DevTools now adopts native HTML tooltips across all components. DevTools has had a custom tooltip implementation for a long time due to the lack of styling of a native HTML tooltip.
 
@@ -149,7 +149,7 @@ After reweighting the benefits of the custom implementations, we find that the n
 Chromium issue: [1223391](https://crbug.com/1223391)
 
 
-## [Experimental] Hide issues in the Issues tab {: #hide-issues }
+## [実験的] Issues タブでの問題の非表示 {: #hide-issues }
 {% Aside %}
 To enable the experiment, check the **Enable hide issues menu** checkbox under **Settings** > **Experiments**.
 {% endAside %}
@@ -164,5 +164,5 @@ In the **Issue** tab, hover an issue, click on the issue menu &nbsp; {% Img src=
 
 Chromium issue: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
+{% include 'partials/devtools/ja/reach-out.md' %}
+{% include 'partials/devtools/ja/whats-new.md' %}
