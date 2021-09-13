@@ -1,4 +1,5 @@
 ## More DevTools features {: #whats-new }
+
 関連する機能の完全なリストは、[What's New In DevTools](/tags/new-in-devtools/) の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
 ### Chrome 94 {: #chrome94 }

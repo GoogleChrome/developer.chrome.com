@@ -19,6 +19,7 @@ tags:
 
 
 ## 好みの言語での DevTools の利用 {: #localized }
+
 Chrome DevTools now supports more than 80 languages, allowing you to work in your preferred language!
 
 Open [Settings](/docs/devtools/customize/#settings), then select your preferred language under the  **Preferences** > **Language** dropdown and reload DevTools.
@@ -31,6 +32,7 @@ Chromium issue: [1163928](https://crbug.com/1163928)
 
 
 ## 新しく Nest Hub デバイスがデバイスリストに {: #nest-hub }
+
 You can now simulate the dimensions of Nest Hub and Nest Hub Max in the [Device mode](/docs/devtools/device-mode/).
 
 Click [Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) &nbsp; {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="Toggle Device Toolbar", width="20", height="22" %} &nbsp;, select Nest Hub or Nest Hub Max under the device list.
@@ -43,6 +45,7 @@ Chromium issue: [1223525](https://crbug.com/1223525)
 
 
 ## Frame 詳細ビューの Origin trials {: #origin-trials }
+
 You can now get information about a site's [origin trials](/blog/origin-trials/) in the frame details view under the Application panel.
 
 [Origin trials](/blog/origin-trials/) gives you access to a new or experimental feature, to build functionality your users can try out for a limited time before the feature is made available to everyone.
@@ -57,6 +60,7 @@ Chromium issue: [607555](https://crbug.com/607555)
 
 
 ## 新しい CSS コンテナクエリバッチ {: #container-queries }
+
 A new **container** badge is added next to the container elements (the ancestor elements that match the criteria of `@container` at-rules). Click the badge to toggle the display of an overlay of the chosen container and all its querying descendants on the page.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0plPq2cHZV5gV8zm9VlP.png", alt="CSS container queries badge", width="800", height="488" %}
@@ -67,6 +71,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 
 
 ## ネットワークフィルタを反転するための新規チェックボックス {: #invert-network-filter }
+
 Use the new **Invert** checkbox to invert the filters in the Network panel.
 
 For example, you can type "status-code: 404" to filter the network requests with status 404. Enable the **Invert** checkbox to negate the filter (show all network requests which are not with status 404).
@@ -79,6 +84,7 @@ Chromium issue: [1054464](https://crbug.com/1054464)
 
 
 ## Console サイドバーが今後非推奨に {: #deprecated }
+
 The Console sidebar will be removed in favor of moving the filter UI to the toolbar. Do you have any concerns or feedback? Let us know via this [issue tracker](https://crbug.com/1232937).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CzC2HCaiCcdPgbLykyc8.png", alt="Console sidebar deprecation message", width="800", height="474" %}
@@ -89,6 +95,7 @@ Chromium issue: [1232937](https://crbug.com/1232937)
 
 
 ## Issue タブや Network パネルでの未加工の `Set-Cookie` ヘッダーの表示 {: #raw-cookies }
+
 DevTools now displays raw `Set-Cookie` headers in the **Issues** tab.
 
 Previously, DevTools did not show malformed cookies (incorrect `Set-Cookie` header) in the Network panel. With the new `response-header-set-cookie` filter added in the **Network** panel, users can filter the raw `Set-Cookie` header response. DevTools will link the raw `Set-Cookie` headers in the **Issues** tab to the **Network** panel.
@@ -102,6 +109,7 @@ Chromium issue: [1179186](https://crbug.com/1179186)
 
 
 ## Console での自身のプロパティとしてのネイティブアクセサの一貫した表示 {: #native-accessors }
+
 The **Console** now displays native accessors as their own properties consistently.
 
 For example, when evaluating the `new Int8Array([1, 2, 3])` expression in the **Console**, native accessors like `length`, `byteOffset` did not display in the preview. With this latest update, native accessors are shown in the preview and values are eagerly evaluated when expanded.
@@ -114,6 +122,7 @@ Chromium issues: [1076820](https://crbug.com/1076820), ​​[1199247](https://c
 
 
 ## #sourceURL を使ったインラインスクリプトの適切なエラースタックトレース {: #inline-script }
+
 DevTools now resolves inline scripts with `#sourceURL` properly and shows proper error stack traces for debugging.
 
 Previously DevTools displayed incorrect location for inline scripts with `#sourceURL`, relative to the surrounding document rather than relative to the opening `<script>` tag..
@@ -150,6 +159,7 @@ Chromium issue: [1223391](https://crbug.com/1223391)
 
 
 ## [実験的] Issues タブでの問題の非表示 {: #hide-issues }
+
 {% Aside %}
 To enable the experiment, check the **Enable hide issues menu** checkbox under **Settings** > **Experiments**.
 {% endAside %}
