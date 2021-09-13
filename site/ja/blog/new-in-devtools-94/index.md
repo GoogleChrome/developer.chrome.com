@@ -7,7 +7,7 @@ date: 2021-08-24
 updated: 2021-08-24
 description:
   "好みの言語での DevTools の利用, 新しい Nest Hub デバイス, 新しい CSS コンテナクエリバッチなど。"
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/js1uKEulNBGj0PoJkqZq.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/7mzgwpbt5F3oEUb8d94u.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -15,9 +15,9 @@ tags:
   - chrome-94
 ---
 
-*Thanks [yoichiro](https://github.com/yoichiro) for the translations, [technohippy](https://github.com/technohippy) and [lacolaco](https://github.com/lacolaco) for the reviews!*
+*翻訳者の[yoichiro](https://github.com/yoichiro)さん、レビュアーの[technohippy](https://github.com/technohippy)さんと[lacolaco](https://github.com/lacolaco)さんに感謝いたします。*
 
-{% include 'partials/devtools/en/banner.md' %}
+{% include 'partials/devtools/ja/banner.md' %}
 
 
 <!--
