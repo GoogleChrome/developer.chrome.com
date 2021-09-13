@@ -938,5 +938,23 @@
       "unit": "Chrome"
     },
     "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/GLfwUjU4lr5ceazmYP1X.jpg"
+  },
+  "kritisapra": {
+    "name": {
+      "given": "Kriti",
+      "family": "Sapra"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "UK",
+    "twitter": "kritisapra_",
+    "github": "kriti-sapra",
+    "homepage": "https://www.kritisapra.co.uk/",
+    "descriptions": {
+      "en": "Software Engineering Intern working on Chrome DevTools"
+    },
+    "image": "image/odjn1VxxoIc8gBVMXV0DIYIt2zn2/UceO32Ju1t1aDGz16GTQ.jpg"
   }
 }
