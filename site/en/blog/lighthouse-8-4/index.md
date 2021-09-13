@@ -21,6 +21,7 @@ To try the Lighthouse Node CLI, use the following commands:
 ```text
 npm install -g lighthouse
 lighthouse https://www.example.com --view
+```
 
 ### Don't lazy-load Largest Contentful Paint images {: #new-audit-lazy-lcp }
 
