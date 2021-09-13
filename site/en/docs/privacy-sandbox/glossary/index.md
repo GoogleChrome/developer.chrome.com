@@ -1,12 +1,12 @@
----
-layout: 'layouts/doc-post.njk'
-title: 'Privacy Sandbox glossary'
-subhead: Privacy Sandbox articles and documentation assume a knowledge of concepts from privacy, advertising, and web development. This glossary explains key terms.
+--- 
+layout: 'layouts/doc-post.njk' 
+title: 'Privacy Sandbox glossary' 
+subhead: Privacy Sandbox articles and documentation assume a knowledge of concepts from privacy, advertising, and web development. This glossary explains key terms. 
 description: Simple explanations of key concepts.
 date: 2021-05-18
-updated: 2021-05-18
+updated: 2021-05-18 
 authors:
-  - samdutton
+  - samdutton 
 ---
 
 
@@ -24,17 +24,17 @@ A company that pays to advertise its products.
 
 ## Attribution {: #attribution }
 
-Identification of user actions that contribute to an outcome. For example: correlation of ad clicks
+Identification of user actions that contribute to an outcome. For example: correlation of ad clicks 
 or views with [conversions](#conversion).
 
 ## Blink {: #blink }
 
-The [rendering engine](https://en.wikipedia.org/wiki/Browser_engine) used by Chrome, developed as
+The [rendering engine](https://en.wikipedia.org/wiki/Browser_engine) used by Chrome, developed as 
 part of the [Chromium](#chromium) project.
 
 ## Chromium {: #chromium }
 
-An open-source web browser project. Chrome, Microsoft Edge, Opera and other browsers are based on
+An open-source web browser project. Chrome, Microsoft Edge, Opera and other browsers are based on 
 Chromium.
 
 ## Click-through rate (CTR) {: #ctr }
@@ -47,21 +47,21 @@ A conversion attributed to an ad that was 'clicked'.
 
 ## Conversion
 
-The completion of some desired goal following action by a user. For example, purchase of a product
+The completion of some desired goal following action by a user. For example, purchase of a product 
 or sign-up for a newsletter after clicking an ad that links to the advertiser's site.
 
 ## Cookie
 
-A website can ask a web browser to store a small piece of textual data (called a cookie) on a user's
-computer. Cookies can be used by a website to save data about a user (or a reference to data stored
-on the website's backend servers) as the user moves across the web. For example: an
-online store can retain shopping cart details even if a user is not logged in, or the site could
-record the user's browsing activity on their site. See [First-party cookie](#first-party-cookie) and
+A website can ask a web browser to store a small piece of textual data (called a cookie) on a user's 
+computer. Cookies can be used by a website to save data about a user (or a reference to data stored 
+on the website's backend servers) as the user moves across the web. For example: an 
+online store can retain shopping cart details even if a user is not logged in, or the site could 
+record the user's browsing activity on their site. See [First-party cookie](#first-party-cookie) and 
 [Third-party cookie](#third-party-cookie).
 
 ## Differential privacy  {: #differential-privacy }
 
-Techniques to enable sharing of information about a dataset to reveal patterns of behaviour without
+Techniques to enable sharing of information about a dataset to reveal patterns of behaviour without 
 revealing private information about individuals or whether they belong to the dataset.
 
 ## Domain
@@ -70,17 +70,17 @@ See [Top-Level Domain](#tld) and [eTLD](#etld).
 
 ## eTLD, eTLD+1 {: #etld }
 
-**Effective Top Level Domains** are defined by the [Public Suffix List](https://publicsuffix.org/list/).
+**Effective Top Level Domains** are defined by the [Public Suffix List](https://publicsuffix.org/list/). 
 For example:
 
 ```text
-co.uk
-github.io
+co.uk 
+github.io 
 glitch.me
-```
+``` 
 
 Effective TLDs are what enable foo.appspot.com to be a different site from bar.appspot.com. The
-effective top-level domain (**eTLD**) in this case is appspot.com, and the whole **site** name
+effective top-level domain (**eTLD**) in this case is appspot.com, and the whole **site** name 
 (foo.appspot.com, bar.appspot.com) is known as the **eTLD+1**.
 
 See also [Top-Level Domain](#tld).
@@ -103,8 +103,8 @@ implement their own identity service.
 ## Fingerprinting {: #fingerprinting }
 
 Techniques to identify and track the behaviour of individual users. Fingerprinting uses mechanisms
-that users aren't aware of and can't control. Sites such as [Panopticlick](https://panopticlick.eff.org)
-and [amiunique.org](https://amiunique.org/) show how fingerprint data can be combined to identify
+that users aren't aware of and can't control. Sites such as [Panopticlick](https://panopticlick.eff.org) 
+and [amiunique.org](https://amiunique.org/) show how fingerprint data can be combined to identify 
 you as an individual.
 
 ## Fingerprinting surface {: #fingerprinting-surface }
@@ -115,22 +115,22 @@ request header provide access to a fingerprinting surface (the user agent string
 
 ## First-party {: #first-party }
 
-Resources from the site you're visiting. For example, the page you're reading is on the site
-developer.chrome.com and includes resources requested from that site. Requests for those first-party
-resources are called 'first-party requests', and [cookies](#cookie) from developer.chrome.com
-stored while you're on this site are called [first-party cookies](#first-party-cookie). See also
+Resources from the site you're visiting. For example, the page you're reading is on the site 
+developer.chrome.com and includes resources requested from that site. Requests for those first-party 
+resources are called 'first-party requests', and [cookies](#cookie) from developer.chrome.com 
+stored while you're on this site are called [first-party cookies](#first-party-cookie). See also 
 [Third-party](#third-party).
 
-## First-party cookie {: #first-party-cookie }
+## First-party cookie {: #first-party-cookie } 
 
-[Cookie](#cookie) stored by a website while a user is on the site itself. For example: an online
-store might ask a browser to store a cookie in order to retain shopping cart details for a user
-who is not logged in. See also [Third-party cookies](#third-party-cookie).
+[Cookie](#cookie) stored by a website while a user is on the site itself. For example: an online 
+store might ask a browser to store a cookie in order to retain shopping cart details for a user 
+who is not logged in. See also [Third-party cookies](#third-party-cookie). 
 
 ## Impression {: #impression }
 
-* View of an ad. (See also [click-through rate](#ctr).)
-* An ad slot: an empty rectangle on a web page where an ad can be displayed. Ad slots
+* View of an ad. (See also [click-through rate](#ctr).) 
+* An ad slot: an empty rectangle on a web page where an ad can be displayed. Ad slots 
 constitute [inventory](#inventory).
 
 ## Inventory {: #inventory}
@@ -143,24 +143,24 @@ A measure of anonymity within a data set. If you have _k_ anonymity, you can't b
 _k-1_ other individuals in the data set. In other words, _k_ individuals have the same information
 (including you).
 
-## Nonce
+## Nonce 
 
 Arbitrary number used once only in cryptographic communication.
 
-## Origin
+## Origin 
 
 The origin of a request, including the scheme and server name, but no path information. For example:
 `https://developer.chrome.com`
 
 ## Origin trial {: #origin-trial}
-Origin trials provide access to a new or experimental feature, to make it possible to build
-functionality that users can try out for a limited time before the feature is made available to
-everyone. When Chrome offers an origin trial for a feature, an [origin](#origin) can be registered
-for the trial to enable the feature for all users on that origin, without requiring users to toggle
-any flags or switch to an alternative build of Chrome (though they may need to upgrade). Origin
-trials enable developers to build demos and prototypes using new features. The trials also help
-Chrome engineers understand how
-new features are used, and how they may interact with other web technologies. Find out more:
+Origin trials provide access to a new or experimental feature, to make it possible to build 
+functionality that users can try out for a limited time before the feature is made available to 
+everyone. When Chrome offers an origin trial for a feature, an [origin](#origin) can be registered 
+for the trial to enable the feature for all users on that origin, without requiring users to toggle 
+any flags or switch to an alternative build of Chrome (though they may need to upgrade). Origin 
+trials enable developers to build demos and prototypes using new features. The trials also help 
+Chrome engineers understand how 
+new features are used, and how they may interact with other web technologies. Find out more: 
 [Getting started with Chrome's origin trials](https://web.dev/origin-trials/).
 
 ## Passive surface {: #passive-surface }
@@ -175,7 +175,7 @@ having an accept-language header for every response to every server.
 
 ## Publisher
 
-In the Privacy Sandbox context, a site that displays ads.
+In the Privacy Sandbox context, a site that displays ads. 
 
 ## Reach
 
@@ -183,8 +183,8 @@ The total number of people who see an ad (or who visit a web page that displays 
 
 ## Remarketing
 
-Reaching people on other sites who have previously visited your site. For example, an online store
-could show ads for a toy sale to people who previously viewed toys on their site.
+Reaching people on other sites who have previously visited your site. For example, an online store 
+could show ads for a toy sale to people who previously viewed toys on their site. 
 
 ## Site
 
@@ -204,8 +204,8 @@ use.typekit.net (via a link element) and a video from vimeo.com (in an iframe). 
 
 ## Third-party cookie {: #third-party-cookie}
 
-[Cookie](#cookie) stored by a third-party service. For example, a video website might include a
-**Watch Later** button in their embedded player, to enable a user to add a video to their wishlist
+[Cookie](#cookie) stored by a third-party service. For example, a video website might include a 
+**Watch Later** button in their embedded player, to enable a user to add a video to their wishlist 
 without forcing them to navigate to the video site. See also [First-party cookie](#first-party-cookie).
 
 ## Top-level domain (TLD) {: #tld }
@@ -218,9 +218,9 @@ maps.google.com are just subdomains of google.com (which is the [eTLD + 1](#etld
 
 ## .well-known
 
-It can be useful to add redirects to a website from standardized URLs. For example, password
-managers can make it easier for users to update passwords if a website sets a redirect from
-`/.well-known/change-password` to the change password page of the site. In addition, it can be
+It can be useful to add redirects to a website from standardized URLs. For example, password 
+managers can make it easier for users to update passwords if a website sets a redirect from 
+`/.well-known/change-password` to the change password page of the site. In addition, it can be 
 useful to access policy or other information about a host _before_ making a request. For
 example, robots.txt tells web crawlers which pages to visit and which pages to ignore. IETF
 [RFC8615](https://tools.ietf.org/html/rfc8615) outlines a standardized way to make site-wide
