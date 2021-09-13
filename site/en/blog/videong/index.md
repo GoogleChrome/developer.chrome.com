@@ -87,7 +87,7 @@ Chromium's cross-process communication mechanism is called
 While we won't get into the details of Mojo in this article,
 as the abstraction layer between processes,
 it's a cornerstone of Chromium's extensible media pipeline.
-It's important to be aware of this layout as we walk through the playback pipeline
+It's important to be aware of this as we walk through the playback pipeline
 since it informs the complex orchestration of cross-process components interacting to receive,
 demux, decode, and finally display media.
 
@@ -102,8 +102,8 @@ Without care, the total bandwidth can easily multiply due to copies or trips bet
 
 The goal of any modern video playback engine with efficiency in mind
 is to minimize bandwidth between the decoder and the final rendering step.
-For this reason, video rendering is largely decoupled from Chromium's main rendering pipelines.
-Specifically, from the perspective of our main rendering pipelines,
+For this reason, video rendering is largely decoupled from Chromium's main rendering pipeline.
+Specifically, from the perspective of our main rendering pipeline,
 video is just a fixed-size hole with opacity.
 Chromium achieves this using a concept called
 [surfaces](/blog/renderingng-data-structures/#compositor-frames-surfaces-render-surfaces-and-gpu-texture-tiles)—whereby each video talks directly to
@@ -169,7 +169,7 @@ the less bandwidth is spent shuffling video bytes around unnecessarily.
 Keeping everything in one place from decoding all the way to rendering can lead to incredible power efficiency.
 For example, when Chromium
 [enabled overlays](https://bugs.chromium.org/p/chromium/issues/detail?id=594449) on macOS,
-power consumption during video playback was halved!
+power consumption during fullscreen video playback was halved!
 
 ## Rendering
 
@@ -244,4 +244,4 @@ If you're looking for further reading on codecs and modern web video I recommend
 and [Packaging award-winning shows with award-winning technology](https://netflixtechblog.com/packaging-award-winning-shows-with-award-winning-technology-c1010594ba39)
 by Cyril Concolato.
 
-Illustrations by Una Kravets.
+One illustration (the pretty one!) by Una Kravets.
