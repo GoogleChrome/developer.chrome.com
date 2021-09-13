@@ -12,7 +12,7 @@ tags:
   - rendering
 ---
 {% Aside %}
-This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more about [RenderingNG](/renderingng), [the architecture](/blog/renderingng-architecture/), and [key data structures](/blog/renderingng-data-structures/).
+This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more about [RenderingNG](/blog/renderingng), [the architecture](/blog/renderingng-architecture/), and [key data structures](/blog/renderingng-data-structures/).
 {% endAside %}
 
 I'm Dale Curtis,
@@ -202,10 +202,10 @@ while if the frame rate is greater than the display rate, some frames are never 
 There's much more to synchronizing audio and video in ways that are pleasing to viewers.
 See [Project Butter](https://docs.google.com/document/d/1oUb_ap0TAa1sDci0wEQ6BEzd_lB7Eghv93NXyZ3952E/preview)
 for a longer discussion on how optimal video smoothness is accomplished in Chromium.
-The tl;dr version is that video rendering can be broken down into ideal sequences representing how many times each frame should be shown.
-For example: "1 frame every display interval ([1], 60fps in 60Hz)",
-"1 frame every two intervals ([2], 30fps in 60Hz)",
-or more complicated patterns like [2:3:2:3:2] (25fps in 60Hz)
+It explains how video rendering can be broken down into ideal sequences representing how many times each frame should be shown.
+For example: "1 frame every display interval ([1], 60&nbsp;fps in 60&nbsp;Hz)",
+"1 frame every 2 intervals ([2], 30&nbsp;fps in 60&nbsp;Hz)",
+or more complicated patterns like [2:3:2:3:2] (25&nbsp;fps in 60&nbsp;Hz)
 covering multiple distinct frames and display intervals.
 The closer a video renderer sticks to this ideal pattern the more likely a user will perceive a playback as being smooth.
 
