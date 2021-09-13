@@ -50,12 +50,12 @@ an `id` property to your web app manifest.
 
 ## How do I determine and set my `id`?
 
-The safest, and most accurate way to determine the `id` for an installed
+The safest, and the most accurate, way to determine the `id` for an installed
 PWA is to check the value calculated by Chrome. In the future, the `id`
-will be shown in the Manifest pane of the Application panel in DevTools,
+will be shown in the **Manifest** pane of the **Application** panel in DevTools,
 in the meantime, you can find it following these steps.
 
-**These steps will be simplified & updated once the `App ID` is shown in DevTools**
+**These steps will be simplified and updated once the `App ID` is shown in DevTools**
 
 1. Using Chrome 96 or higher (currently available as Chrome Canary), enable
    the `#enable-desktop-pwas-manifest-id` flag, and restart the browser.
