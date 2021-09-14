@@ -43,6 +43,7 @@ Chromium issue: [1223525](https://crbug.com/1223525)
 
 
 ## 프레임 상세 화면에서 Origin trials 가 제공됩니다. {: #origin-trials }
+
 이제 웹사이트의 [origin trials](/blog/origin-trials/)  에 대한 정보를 애플리케이션 패널 하단의 프레임 디테일 뷰에서 볼 수 있습니다.
 
 사용자들은 [Origin trials](/blog/origin-trials/) 를 통해 새로운 기능 혹은 실험중인 기능에 액세스할 수 있으며, 이는 사용자들로 하여금 해당 기능이 안정화되기 전에 제한적인 시간 동안 시도해 볼 수 있도록 하기 위함입니다.
@@ -57,6 +58,7 @@ Chromium issue: [607555](https://crbug.com/607555)
 
 
 ## 새로운 CSS 컨테이너 쿼리 배지 {: #container-queries }
+
 **컨테이너** 배지가 컨테이너 요소 옆에 새롭게 추가되었습니다. (```@container``` 규칙의 조건과 부합하는 조상 요소를 의미합니다.), 배지를 클릭하여 페이지에서 선택한 컨테이너 및 모든 쿼리의 하위 항목의 오버레이 표시를 토글합니다. ]
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0plPq2cHZV5gV8zm9VlP.png", alt="CSS container queries badge", width="800", height="488" %}
@@ -67,6 +69,7 @@ Chromium issue: [1146422](https://crbug.com/1146422)
 
 
 ## 체크박스 클릭 한 번으로 네트워크 필터 반전 가능 {: #invert-network-filter }
+
 네트워크 패널에 **Invert** 체크박스가 새로이 추가되었으며, 이를 이용해 필터들을 반전시킬 수 있습니다.
 
 예를 들어, 404 상태 코드가 포함된 네트워크 요청만을 걸러내기 위해 "status-code:404" 를 타이핑해 보세요. 그리고 **Invert** 체크박스를 활성화시켜 필터링 옵션을 반전시켜 보세요. (404 스테이터스 코드가 포함되지 않은 모든 네트워크 요청을 표시합니다.)
@@ -79,6 +82,7 @@ Chromium issue: [1054464](https://crbug.com/1054464)
 
 
 ## 다가오는 콘솔 사이드바의 디프리케이션 {: #deprecated }
+
 필터 사용자 인터페이스를 툴바로 옮기기 위해, 콘솔 사이드바가 더 이상 사용되지 않고 제거될 예정입니다. 혹시 염려되는 게 있으시거나 어떤 피드백이 있으시다면 [이슈 트래커](https://crbug.com/1232937)를 통해 알려 주세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CzC2HCaiCcdPgbLykyc8.png", alt="Console sidebar deprecation message", width="800", height="474" %}
@@ -89,6 +93,7 @@ Chromium issue: [1232937](https://crbug.com/1232937)
 
 
 ## 이슈 탭과 네트워크 패널에서 로우(raw) Set-Cookie 헤더 표시 {: #raw-cookies }
+
 DevTools 의 **이슈** 탭에서 이제 로우(raw) ```Set-Cookie``` 헤더를 볼 수 있습니다.
 
 이전에는 쿠키가 형식에 맞지 않았을 때 (정확하지 않은 ```Set-Cookie``` 헤더),  이는 DevTools의 네트워크 패널에 표시되지 않았습니다. 한편 새롭게 ```response-header-set-cookie``` 필터가 **네트워크** 패널에 추가됨으로써, 이제 사용자들은 로우(raw) ```Set-Cookie``` 헤더 응답을 걸러낼 수 있습니다. DevTools 는 **이슈** 탭의 로우(raw) ```Set-Cookie``` 헤더 응답을 **네트워크** 패널로 연결합니다.
@@ -102,6 +107,7 @@ Chromium issue: [1179186](https://crbug.com/1179186)
 
 
 ## 고유한 프로퍼티로서의 내이티브 접근자를 콘솔에서 일관성 있게 표시 {: #native-accessors }
+
 **콘솔**에서 내이티브 접근자를 그것의 고유한 프로퍼티로서 일관성 있게 표시할 수 있습니다.
 
 예를 들면 **콘솔**에서 `new Int8Array([1, 2, 3])` 코드를 표시할 때,  ```length```, ```byteOffset``` 과 같은 내이티브 접근자들은 미리보기에서 표시되지 않았습니다만, 이번 업데이트를 통해 사용자들은 내이티브 접근자를 미리보기에서 확인할 수 있으며 확장 시에 값들이 빠르게 표시됩니다.
@@ -114,6 +120,7 @@ Chromium issues: [1076820](https://crbug.com/1076820), [1199247](https://crbug.c
 
 
 ## #sourceURL을 포함하는 인라인 스크립트를 위한 적절한 오류 스택 추적 {: #inline-script }
+
 DevTools 는 현재 ```#sourceURL``` 이 있는 인라인 스크립트를 잘 해결하고 있으며, 또한 적절한 오류 스택 추적을 제공하여 사용자의 디버깅을 돕습니다.
 
 이전의 DevTools 는 `#sourceURL`이 있는 인라인 스크립트에 대해 잘못된 위치를 표시했으며, 이는 ```<script>``` 의 시작점이 아닌 주변의 문서가 기준이 되었습니다.
@@ -148,6 +155,7 @@ Chromium issue: [1223391](https://crbug.com/1223391)
 
 
 ## [실험중] 이슈 탭에서 이슈들을 숨기기 {: #hide-issues }
+
 {% Aside %}
 실험중인 기능들을 이용가능하게 하기 위해서는 **설정 > 실험중** 아래에 있는 **이슈 숨기기 활성화** 메뉴를 체크합니다.
 {% endAside %}
@@ -155,6 +163,7 @@ Chromium issue: [1223391](https://crbug.com/1223391)
 **이슈 숨기기 메뉴**를 활성화하여, **이슈** 탭에서 이슈들을 숨길 수 있습니다. 이 방법으로 우리는 우리에게 중요한 이슈들에 좀더 집중할 수 있습니다.
 
 **이슈** 탭에서 이슈를 가리키고 이슈 메뉴를 클릭하십시오.&nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %}  오른쪽에 있는 **이렇게 이슈 숨기기**를 선택하여 이슈를 감출 수 있습니다.
+
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GGJzvwvMYSrkirU44STQ.png", alt="Experimental hide issue context menu", width="800", height="494" %}
 
