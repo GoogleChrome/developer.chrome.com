@@ -60,11 +60,12 @@ This would retrieve the contents of the CSS file and insert it as a `<style>` el
 
 ```js
 const content = Root.Runtime.cachedResources.get(cssFile) || '';
- if (!content) {
-   console.error(cssFile + ' not preloaded. Check module.json');
- }
+
+if (!content) {
+  console.error(cssFile + ' not preloaded. Check module.json');
+}
  
- const styleElement = document.createElement('style');
+const styleElement = document.createElement('style');
 styleElement.textContent = content;
 node.appendChild(styleElement);
 ```
@@ -97,7 +98,8 @@ const output = LitHtml.html`
 <style> @import "css/styles.css"; </style>
 <button> Hello world </button>`
 ```
-```
+
+```js
 const output = LitHtml.html`
 <link rel="stylesheet" href="styles.css">
 <button> Hello World </button>`
@@ -145,10 +147,11 @@ The only caveat to the solution was that the `import` statements required the `.
 ```js
 const styles = new CSSStyleSheet();
 styles.replaceSync(
-// In production, we also minify our CSS styles
-\`${isDebug ? output : cleanCSS.minify(output).styles}
-/*# sourceURL=${fileName} */
-\`);
+  // In production, we also minify our CSS styles
+  /`${isDebug ? output : cleanCSS.minify(output).styles}
+  /*# sourceURL=${fileName} */`/
+);
+
 export default styles;
 ```
 
