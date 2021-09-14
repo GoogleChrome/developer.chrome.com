@@ -116,7 +116,7 @@ Chromium issues: [1076820](https://crbug.com/1076820), ​​[1199247](https://c
 ## Proper error stack traces for inline scripts with #sourceURL {: #inline-script }
 DevTools now resolves inline scripts with `#sourceURL` properly and shows proper error stack traces for debugging.
 
-Previously DevTools displayed incorrect location for inline scripts with `#sourceURL`, relative to the surrounding document rather than relative to the opening `<script>` tag..
+Previously DevTools displayed incorrect location for inline scripts with `#sourceURL`, relative to the surrounding document rather than relative to the opening `<script>` tag.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XVUY8XxbGZW74kPsGkOZ.png", alt="Proper error stack traces for inline scripts with #sourceURL", width="800", height="425" %}
 
