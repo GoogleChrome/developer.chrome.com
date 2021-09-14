@@ -17,6 +17,11 @@
   }
 }
 
+.release-card__icon-pending {
+  background: var(--color-yellow-lighter);
+  color: var(--color-yellow-darkest);
+}
+
 .release-card__icon-beta {
   background: var(--color-blue-lighter);
   color: var(--color-blue-darkest);

@@ -28,67 +28,56 @@ const {i18n} = require('../_filters/i18n');
 module.exports = locale => ({
   eleventyComputed: {
     /**
-     * Generates tags for the current named releases: Stable, Beta, and so on. Ordered by earliest
-     * release first (i.e., 'Stable' > 'Beta' > 'Dev' > 'Canary').
+     * Generates tags for the stable release and higher. Ordered by earliest release first (i.e.,
+     * 'Stable' > 'Beta' > 'Dev' > 'Canary'). Only names 'Stable' and 'Beta'.
      */
-    namedChromeReleaseTags: data => {
+    currentChromeReleaseTags: data => {
+      const out = (data.releaseTags || []).filter(({isCurrent}) => isCurrent);
+      out.reverse();
+      return out;
+    },
+
+    /**
+     * Return tag information for any Chrome release prior to the current stable.
+     */
+    historicChromeReleaseTags: data => {
+      return (data.releaseTags || []).filter(({isCurrent}) => !isCurrent);
+    },
+
+    releaseTags: data => {
+      /** @type {{[name: string]: ChromeReleaseData}} */
       const rawChannels = data.chrome.channels;
 
       /** @type {Tags} */
       const rawTags = data.collections.tags;
 
-      const all = [];
-
-      for (const [name, data] of Object.entries(rawChannels)) {
-        // name = 'stable', 'beta' etc
-        const release = data.mstone;
-        if (typeof release !== 'number') {
-          throw new Error(`exepected release number, was: ${release}`);
-        }
-
-        // If there's no posts for this named release, skip.
-        const key = `chrome-${release}`;
-        const tag = rawTags[key];
-        if (!tag?.posts[locale].length) {
-          continue;
-        }
-
-        all.push({
-          key: `chrome-${release}`,
-          posts: tag.posts[locale],
-          title: i18n('i18n.common.release_' + name, locale),
-          release,
-        });
-      }
-
-      // Sort lowest release first.
-      all.sort(({release: a}, {release: b}) => a - b);
-
-      return all;
-    },
-
-    chromeReleaseTags: data => {
-      /** @type {Tags} */
-      const rawTags = data.collections.tags;
-
       // Create an array of tags releated to releases.
-      const all = Object.values(rawTags)
+      const out = Object.values(rawTags)
         .filter(tag => tag.release)
         .map(tag => {
           const release = /** @type {number} */ (tag.release);
+          let title = `Chrome ${release}`;
+
+          // Only name 'stable' and 'beta' releases.
+          if (rawChannels.stable.mstone === release) {
+            title = i18n('i18n.common.release_stable', locale);
+          } else if (rawChannels.beta.mstone === release) {
+            title = i18n('i18n.common.release_beta', locale);
+          }
+
           return {
             key: tag.key,
             posts: tag.posts[locale] ?? [],
-            title: `Chrome ${release}`,
+            title,
             release,
+            isCurrent: release >= rawChannels.stable.mstone,
           };
         });
 
       // Sort highest release first.
-      all.sort(({release: a}, {release: b}) => b - a);
+      out.sort(({release: a}, {release: b}) => b - a);
 
-      // Only return if there's locale-valid posts.
-      return all.filter(tag => tag.posts.length);
+      return out;
     },
 
     displayTags: data => {
