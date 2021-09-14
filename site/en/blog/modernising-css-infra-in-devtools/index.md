@@ -11,6 +11,7 @@ alt: ''
 tags:
   - devtools-engineering
   - devtools
+  - devtools-architecture
 ---
 
 {% include 'partials/devtools/en/banner.md' %}
@@ -19,7 +20,7 @@ tags:
 
 # DevTools architecture refresh: Modernizing CSS infrastructure in DevTools
 
-This post is part of a series of blog posts describing the changes we are making to DevTools' architecture and how it is built. We will explain how CSS worked in DevTools historically and how we’ve modernized our CSS in DevTools in preparation for (eventually) migrating to a web standard solution for loading CSS in JavaScript files.
+This post is part of [a series of blog posts](/tags/devtools-architecture/) describing the changes we are making to DevTools' architecture and how it is built. We will explain how CSS worked in DevTools historically and how we’ve modernized our CSS in DevTools in preparation for (eventually) migrating to a web standard solution for loading CSS in JavaScript files.
 
 ## Previous State of CSS in DevTools {: #previous }
 DevTools implemented CSS in two different ways: one for CSS files used in the [legacy part](https://source.chromium.org/chromium/chromium/src/+/main:third_party/devtools-frontend/src/front_end/ui/legacy/Treeoutline.ts?q=registerRequiredCSS&ss=chromium) of DevTools, one for the [modern web components](/blog/migrating-to-web-components/) that are being used in DevTools.
