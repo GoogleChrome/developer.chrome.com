@@ -9,19 +9,18 @@
     <span class="gap-left-300 flex-1 user-select-none">
       {{ 'i18n.nav.side_nav.blog' | i18n(locale) }}
     </span>
-    {# <div class="card-title-bar__controls">
-      {{ icon('keyboard-arrow-left') }}
-      {{ icon('keyboard-arrow-right') }}
-    </div> #}
   </div>
 
-  {% if pd.hero %}
+  {% set thumbnail = pd.hero or pd.thumbnail %}
+  {% set alt = pd.alt %}
+
+  {% if thumbnail %}
     <div class="featured-card__thumbnail gap-top-400">
-      <a class="display-block" href="{{ post.url }}" {% if not pd.alt %}aria-hidden="true" tabindex="-1"{% endif %}>
+      <a class="display-block" href="{{ post.url }}" {% if not alt %}aria-hidden="true" tabindex="-1"{% endif %}>
         {% Img
           class="rounded-100 object-fit-cover width-full",
-          src=pd.hero,
-          alt=pd.alt,
+          src=thumbnail,
+          alt=alt,
           width="278",
           height="156",
           sizes="(min-width: 592px) 391px, calc(100vw - 82px)"

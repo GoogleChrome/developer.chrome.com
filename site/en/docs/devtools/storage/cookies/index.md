@@ -4,7 +4,7 @@ title: "View, edit, and delete cookies"
 authors:
   - kaycebasques
 date: 2015-04-13
-#updated: YYYY-MM-DD
+updated: 2021-08-19
 description: "Learn how to view, edit, and delete a page's HTTP cookies using Chrome DevTools."
 ---
 
@@ -16,18 +16,12 @@ page's cookies with Chrome DevTools.
 ## Open the Cookies pane {: #open }
 
 1.  [Open Chrome DevTools][2].
-2.  Click the **Application** tab to open the **Application** panel. The **Manifest** pane will
-    probably open.
-
-    {% Img src="image/admin/VdjVnm7S9Pbg4THMrlc0.png", alt="The Manifest pane", width="800", height="619" %}
-
-    **Figure 1**. The Manifest pane
-
-3.  Under **Storage** expand **Cookies**, then select an origin.
+2.  Click the **Application** tab to open the **Application** panel.
+    Under **Storage** expand **Cookies**, then select an origin.
 
     {% Img src="image/admin/Yl2rWrOQvnBHkZwjUzOi.png", alt="The Cookies pane", width="800", height="445" %}
 
-    **Figure 2**. The Cookies pane
+    **Figure 1**. The Cookies pane
 
 ## Fields {: #fields }
 
@@ -46,7 +40,7 @@ The **Cookies** table contains the following fields:
   secure, HTTPS connection.
 - **SameSite**. Contains `strict` or `lax` if the cookie is using the experimental `SameSite`
   attribute.
-- **Priority**. Contains `low`, `medium` (default), or `high` if using depreciated [cookie
+- **Priority**. Contains `low`, `medium` (default), or `high` if using deprecated [cookie
   Priority][10] attribute.
 
 ## Filter cookies {: #filter }
@@ -56,7 +50,7 @@ not supported.
 
 {% Img src="image/admin/uqHAFnsQgjLFqg5Fcu6S.png", alt="Filtering out any cookies that don't contain the text 'NID'", width="800", height="401" %}
 
-**Figure 3**. Filtering out any cookies that don't contain the text `NID`
+**Figure 2**. Filtering out any cookies that don't contain the text `NID`
 
 ## Edit a cookie {: #edit }
 
@@ -65,7 +59,7 @@ Double-click a field to edit it.
 
 {% Img src="image/admin/uUZg7B7jgE41Vaz4pYxx.png", alt="Setting the name of a cookie to 'DEVTOOL!'", width="800", height="445" %}
 
-**Figure 4**. Setting the name of a cookie to `DEVTOOLS!`
+**Figure 3**. Setting the name of a cookie to `DEVTOOLS!`
 
 ## Delete cookies {: #delete }
 
@@ -74,15 +68,16 @@ Select a cookie and then click **Delete Selected**
 
 {% Img src="image/admin/SRIEc7haLwu49I4A94yg.png", alt="Deleting a selected cookie", width="800", height="401" %}
 
-**Figure 5**. Deleting a selected cookie
+**Figure 4**. Deleting a selected cookie
 
 Click **Clear All** {% Img src="image/admin/tQ74nCvbca93aX5voHXy.png", alt="Clear All", width="26", height="26" %} to delete all
 cookies.
 
 {% Img src="image/admin/YKnko46qX5nMMn3V26Sn.png", alt="Clearing all cookies", width="800", height="401" %}
 
-**Figure 6**. Clearing all cookies
+**Figure 5**. Clearing all cookies
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
 [2]: /docs/devtools/open
+[6]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#define_the_lifetime_of_a_cookie
 [10]: https://bugs.chromium.org/p/chromium/issues/detail?id=232693

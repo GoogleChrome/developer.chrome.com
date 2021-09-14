@@ -2,11 +2,18 @@
 
 <navigation-rail role="navigation" class="lg:pad-left-200 lg:pad-right-200" aria-label="{{ 'i18n.common.primary' | i18n(locale) }}" tabindex="-1">
   <div class="display-flex lg:display-none align-center pad-200 hairline-bottom">
-    <button class="navigation-rail__close button display-flex align-center justify-content-center width-700 height-700" aria-label="close">
-      {{ icon('close') }}
+    <button class="navigation-rail__close button display-flex align-center justify-content-center width-700 height-700" aria-label="{{ 'i18n.common.close' | i18n(locale) }}">
+      {{ icon('close', {hidden: true}) }}
     </button>
-    <div class="display-flex pad-left-200 pad-right-200" class="navigation-rail__head">
-      {{ icon('logo') }}
+    <div class="display-flex pad-left-200 pad-right-200">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="36" height="36">
+        <use href="#chromeLogo" />
+      </svg>
+      <div class="logo__text logo__text-small">
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="190" height="36">
+          <use href="#chromeDevelopersText" />
+        </svg>
+      </div>
     </div>
   </div>
   <div class="display-flex direction-column pad-top-300 pad-right-200 lg:pad-right-0">

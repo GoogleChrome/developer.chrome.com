@@ -9,9 +9,12 @@ date: 2021-06-22
 updated: 2021-06-23
 authors:
   - chrishtr
-alt: >
-  A pile of different devices.
+tags:
+  - rendering
 ---
+{% Aside %}
+This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more about [RenderingNG architecture](/blog/renderingng-architecture/) and [key data structures](/blog/renderingng-data-structures/).
+{% endAside %}
 
 I'm Chris Harrelson,
 the engineering lead for Rendering (transforming HTML and CSS to pixels) in Blink.

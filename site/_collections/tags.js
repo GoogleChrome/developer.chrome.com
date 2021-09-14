@@ -13,15 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 const {locales} = require('../_data/site.json');
-const supportedTags = require('../_data/supportedTags.json');
-const {drafts} = require('../_utils/drafts');
+const {filterOutDrafts} = require('../_utils/drafts');
+const YAML = require('js-yaml');
+const path = require('path');
+const fs = require('fs');
 
 /**
  * Returns an object with the keys being supported tags and the object
  * having the i18n name for the tag, the posts for a tag, and the tag's key.
  *
- * @see ./types/site/_collections/tags.d.ts
+ * See also: ./types/site/_collections/tags.d.ts
  *
  * @param {EleventyCollectionObject} collections Eleventy collection object
  * @return {Tags}
@@ -30,7 +33,17 @@ module.exports = function (collections) {
   /** @type Tags */
   const tags = {};
 
-  const allSorted = collections.getAllSorted().reverse().filter(drafts);
+  const allSorted = collections
+    .getAllSorted()
+    .reverse()
+    .filter(filterOutDrafts);
+
+  // The i18n for this file exposes top-level object keys of valid tags.
+  const supportedTags = /** @type {{[tag: string]: unknown}} */ (
+    YAML.load(
+      fs.readFileSync(path.join(__dirname, '../_data/i18n/tags.yml'), 'utf-8')
+    )
+  );
 
   /**
    * Iterates over every post in order to place them in the proper tag collections.
@@ -48,24 +61,22 @@ module.exports = function (collections) {
    */
   allSortedForLoop: for (const item of allSorted) {
     // If there are no tags or the tags isn't a string or array, skip the post.
-    if (
-      !item.data.tags ||
-      (typeof item.data.tags !== 'string' && !Array.isArray(item.data.tags))
-    ) {
+    /** @type {string[]} */
+    const allTags = [item.data.tags ?? []].flat();
+    if (!allTags.length) {
+      delete item.data.tags;
       continue allSortedForLoop;
     }
-    // If tags is a string, turn it into an array.
-    if (typeof item.data.tags === 'string') {
-      item.data.tags = [item.data.tags];
-    }
-    /** @type {string[]} */
-    const allTags = item.data.tags;
+
+    // Ensure that tags on the front matter is an array.
+    item.data.tags = allTags;
 
     // Handles posts that are also a Chrome release, `chrome-*`, therefore there are no supported tags.
     // Iterates through all possibilities as some posts may apply to many Chrome releases.
-    const chromeTags = allTags.filter(tag => /^chrome-\d+$/.test(tag));
+    const chromeTags = allTags.filter(tag => tag.startsWith('chrome-'));
     while (chromeTags.length) {
       const chromeTag = /** @type {string} */ (chromeTags.shift());
+      const release = +chromeTag.substr('chrome-'.length);
 
       /**
        * Creates the sub-object for a chrome release if it does not exist in the `tags` const above.
@@ -87,14 +98,17 @@ module.exports = function (collections) {
            * ```
            */
           posts: locales.reduce((o, key) => ({...o, [key]: []}), {}),
-          title: chromeTag.replace('chrome-', 'Chrome '),
+          title: 'i18n.tags.chrome',
+
           /**
-           * This is a flag so we know this tag was generated tag, not a supported tag.
-           * Because there aren't any i18n titles for Chrome releases this
-           * tells files like `site/_utils/tag-11tydata.js` to not use the `i18n`
-           * function to get the title, and just use the title as is.
+           * For Chrome releases, use a literal string title (don't translate "Chrome xx").
            */
-          isGeneratedTag: true,
+          overrideTitle: chromeTag.replace('chrome-', 'Chrome '),
+
+          /**
+           * This is the numeric Chrome release for this tag.
+           */
+          release,
         };
       }
       tags[chromeTag].posts[item.data.locale].push(item);
@@ -103,7 +117,7 @@ module.exports = function (collections) {
     // Handle all of the supported tags for a post.
     postsTagsForLoop: for (const postsTag of allTags) {
       // If a tag isn't supported, skip over it in the `postsTagsForLoop`.
-      if (!supportedTags[postsTag]) {
+      if (!(postsTag in supportedTags)) {
         continue postsTagsForLoop;
       }
 
@@ -130,13 +144,7 @@ module.exports = function (collections) {
           /**
            * Sets the title to the i18n value for the tag.
            */
-          title: supportedTags[postsTag].title,
-          /**
-           * This is a flag so we know this tag is a supported tag, not a generated tag.
-           * This is important for files like `site/_utils/tag-11tydata.js` to know
-           * to use the `i18n` function.
-           */
-          isGeneratedTag: false,
+          title: 'i18n.tags.' + postsTag,
         };
       }
       tags[postsTag].posts[item.data.locale].push(item);

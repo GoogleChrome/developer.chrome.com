@@ -17,35 +17,35 @@ later.
 Here is an example how [homepage][1], [search provider][2] and [startup pages][3] can be modified in
 the [extension manifest][4]. Web sites used in the settings API must be [verified][5] (via Webmaster
 Tools) as being associated with that item in the Chrome Web Store. Note that if you verify ownership
-for a domain (for example, http://example.com) you can use any subdomain or page (for example,
-http://app.example.com or http://example.com/page.html) within your extension.
+for a domain (for example, https://example.com) you can use any subdomain or page (for example,
+https://app.example.com or https://example.com/page.html) within your extension.
 
 ```json
 {
   "name": "My extension",
   ...
   "chrome_settings_overrides": {
-    "homepage": "http://www.homepage.com",
+    "homepage": "https://www.homepage.com",
     "search_provider": {
         "name": "name.__MSG_url_domain__",
         "keyword": "keyword.__MSG_url_domain__",
-        "search_url": "http://www.foo.__MSG_url_domain__/s?q={searchTerms}",
-        "favicon_url": "http://www.foo.__MSG_url_domain__/favicon.ico",
-        "suggest_url": "http://www.foo.__MSG_url_domain__/suggest?q={searchTerms}",
-        "instant_url": "http://www.foo.__MSG_url_domain__/instant?q={searchTerms}",
-        "image_url": "http://www.foo.__MSG_url_domain__/image?q={searchTerms}",
+        "search_url": "https://www.foo.__MSG_url_domain__/s?q={searchTerms}",
+        "favicon_url": "https://www.foo.__MSG_url_domain__/favicon.ico",
+        "suggest_url": "https://www.foo.__MSG_url_domain__/suggest?q={searchTerms}",
+        "instant_url": "https://www.foo.__MSG_url_domain__/instant?q={searchTerms}",
+        "image_url": "https://www.foo.__MSG_url_domain__/image?q={searchTerms}",
         "search_url_post_params": "search_lang=__MSG_url_domain__",
         "suggest_url_post_params": "suggest_lang=__MSG_url_domain__",
         "instant_url_post_params": "instant_lang=__MSG_url_domain__",
         "image_url_post_params": "image_lang=__MSG_url_domain__",
         "alternate_urls": [
-          "http://www.moo.__MSG_url_domain__/s?q={searchTerms}",
-          "http://www.noo.__MSG_url_domain__/s?q={searchTerms}"
+          "https://www.moo.__MSG_url_domain__/s?q={searchTerms}",
+          "https://www.noo.__MSG_url_domain__/s?q={searchTerms}"
         ],
         "encoding": "UTF-8",
         "is_default": true
     },
-    "startup_pages": ["http://www.startup.com"]
+    "startup_pages": ["https://www.startup.com"]
    },
    "default_locale": "de",
    ...

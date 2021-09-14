@@ -64,20 +64,8 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
 ### Set up the demo {: #demo }
 
-1.  [Open the demo][8]. In the top-left of the editor, there's a randomly-generated project name.
-
-    {% Img src="image/admin/tuAe9vJKXT0hRaNghrMA.png", alt="A Glitch project with a randomly-generated name.", width="800", height="606" %}
-
-    **Figure 1**. A Glitch project with a randomly-generated name
-
-2.  Click the randomly-generated project name. For example, in **Figure 1** you would click
-    **desert-cycle**.
-3.  Select **Advanced Options** > **Download Project**.
-
-    {% Img src="image/admin/78hxAkUuVvPelHFE0q4P.png", alt="The Download Project button.", width="800", height="665" %}
-
-    **Figure 2**. The **Download Project** button, highlighted in blue
-
+1.  [Open the demo][8]. In the bottom-left of the editor, click the button labelled **Tools**.
+3.  Under **Tools**, select **Import/Export** > **Download Project**.
 4.  Close the tab.
 5.  Unzip the source code and move the unzipped `app` directory to your desktop. For the rest of
     this tutorial this directory will be referred to as `~/Desktop/app`.
@@ -93,7 +81,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
     {% Img src="image/admin/uXnoG3LgkfkOGbHPaQtP.png", alt="The demo.", width="800", height="633" %}
 
-    **Figure 3**. The demo
+    **Figure 1**. The demo
 
 ### Set up DevTools {: #devtools }
 
@@ -102,14 +90,14 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
     {% Img src="image/admin/RjZAIMvHhWe2HnMp4XUU.png", alt="The Console panel.", width="800", height="524" %}
 
-    **Figure 4**. The **Console** panel
+    **Figure 2**. The **Console** panel
 
 2.  Click the **Sources** tab.
 3.  Click the **Filesystem** tab.
 
     {% Img src="image/admin/eEo5tlYXGVAX6gc4ZY3t.png", alt="The Filesystem tab.", width="800", height="524" %}
 
-    **Figure 5**. The **Filesystem** tab
+    **Figure 3**. The **Filesystem** tab
 
 4.  Click **Add Folder To Workspace**.
 5.  Select `~/Desktop/app`.
@@ -120,7 +108,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
     {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/uPHSpNhpCTrOdwtOyP9D.png", alt="The Filesystem tab now shows a mapping between the local files and the network ones.", width="800", height="524" %}
 
-    **Figure 6**. The **Filesystem** tab now shows a mapping between the local files and the network
+    **Figure 4**. The **Filesystem** tab now shows a mapping between the local files and the network
     ones
 
 ## Step 2: Save a CSS change to disk {: #css }
@@ -130,7 +118,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
     {% Img src="image/admin/aYtE6OhxyFc6D6Ur0eXY.png", alt="Viewing styles.css in a text editor.", width="800", height="551" %}
 
-    **Figure 7**. Viewing `styles.css` in a text editor
+    **Figure 5**. Viewing `styles.css` in a text editor
 
 2.  Close the text editor.
 3.  Back in DevTools, click the **Elements** tab.
@@ -141,7 +129,7 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
     {% Img src="image/admin/izj9zoJvOeyE4zHJvCC0.png", alt="Setting the color property of the h1 element to green.", width="800", height="524" %}
 
-    **Figure 8**. Setting the `color` property of the `h1` element to `green`
+    **Figure 6**. Setting the `color` property of the `h1` element to `green`
 
 5.  Open `~/Desktop/app/styles.css` in a text editor again. The `color` property is now set to your
     favorite color.
@@ -166,7 +154,7 @@ don't waste time later trying to figure out why it's not working.
 
     {% Img src="image/admin/aIjt9kcloYh3DT7XlIWV.png", alt="Attempting to change HTML from the DOM Tree of the Elements panel", width="800", height="524" %}
 
-    **Figure 9**. Attempting to change HTML from the **DOM Tree** of the **Elements** panel
+    **Figure 7**. Attempting to change HTML from the **DOM Tree** of the **Elements** panel
 
 3.  Open `~/Desktop/app/index.html` in a text editor. The change that you just made isn't there.
 4.  Reload the page. The page reverts to its original title.
@@ -206,7 +194,7 @@ If you want to save a change to the page's HTML, do it via the **Sources** panel
 
     {% Img src="image/admin/AMhS744qZFBSt0UHqFjv.png", alt="Changing HTML from the Sources panel.", width="800", height="524" %}
 
-    **Figure 11**. Line 12 has been set to `I ❤️ Cake`
+    **Figure 8**. Line 12 has been set to `I ❤️ Cake`
 
 7.  Open `~/Desktop/app/index.html`. The `<h1>` element contains the new text.
 
@@ -226,28 +214,29 @@ to your site. There's a way to have the **Sources** panel open alongside other p
 
     {% Img src="image/admin/dp21fCa89ezyttjmgzVT.png", alt="Opening the Quick Source tab via Command Menu.", width="800", height="524" %}
 
-    **Figure 12**. Opening the **Quick Source** tab via the **Command Menu**
+    **Figure 9**. Opening the **Quick Source** tab via the **Command Menu**
 
 4.  Press Command+P (Mac) or Control+P (Windows, Linux, Chrome OS) to open the **Open File** dialog.
-    See **Figure 13**.
+    See **Figure 10**.
 5.  Type `script`, then select **app/script.js**.
 
     {% Img src="image/admin/eoOAA9Pt6Qz3Xfy2PpbZ.png", alt="Opening script.js via the Open File dialog.", width="800", height="524" %}
 
-    **Figure 13**. Opening `script.js` via the **Open File** dialog
+    **Figure 10**. Opening `script.js` via the **Open File** dialog
 
 6.  Notice the `Save Changes To Disk With Workspaces` link in the demo. It's styled regularly.
 7.  Add the following code to the bottom of **script.js** via the **Quick Source** tab.
 
-    console.log('greetings from script.js'); document.querySelector('a').style \=
-    'font-style:italic';
+    ```js
+    console.log('greetings from script.js'); document.querySelector('a').style = 'font-style:italic';
+    ```
 
 8.  Press Command+S (Mac) or Control+S (Windows, Linux, Chrome OS) to save the change.
 9.  Reload the page. The link on the page is now italic.
 
     {% Img src="image/admin/9USr1MmQSdD8wGABrVtI.png", alt="The link on the page is now italic.", width="800", height="524" %}
 
-    **Figure 14**. The link on the page is now italic
+    **Figure 11**. The link on the page is now italic
 
 ## Next steps {: #next-steps }
 

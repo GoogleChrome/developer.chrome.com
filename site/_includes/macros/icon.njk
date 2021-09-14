@@ -13,7 +13,7 @@
 #}
 {% macro svg(path, options) %}
 {% set rawSvg -%}
-  {% include path %}
+  {% includeRaw path %}
 {%- endset %}
 {{ rawSvg | updateSvgForInclude(options) | safe }}
 {% endmacro %}
@@ -39,7 +39,5 @@
 {% set className = options.className or '' %}
 {% set className = 'icon ' + className %}
 
-{% set hidden = options.hidden or false %}
-
-{{ svg(path, {label: label, hidden: hidden, className: className}) }}
+{{ svg(path, {id: options.id, label: label, hidden: options.hidden, className: className}) }}
 {% endmacro %}

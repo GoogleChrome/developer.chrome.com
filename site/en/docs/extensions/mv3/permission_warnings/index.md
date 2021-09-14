@@ -32,10 +32,12 @@ one or more hosts. They are listed in the manifest and specified as required per
   // optional permissions
   "optional_permissions": [
     "topSites",
-    "http://www.developer.chrome.com/*"
   ],
-      ...
-  "manifest_version": 2
+  "host_permissions": [
+    "https://www.developer.chrome.com/*"
+  ],
+  ...
+  "manifest_version": 3
 }
 ```
 
@@ -258,7 +260,7 @@ the steps in [Viewing Warnings][27].
     </tr>
     <tr id="geolocation">
       <td><code>"geolocation"</code></td>
-      <td>Allows the extension to use the HTML5 <a href="http://dev.w3.org/geo/api/spec-source.html">geolocation API</a>
+      <td>Allows the extension to use the HTML5 <a href="https://dev.w3.org/geo/api/spec-source.html">geolocation API</a>
         without prompting the user for permission.</td>
       <td><strong>Detect your physical location</strong></td>
     </tr>

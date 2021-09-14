@@ -7,8 +7,13 @@ description: >
 date: 2021-07-26
 authors:
   - chrishtr
+tags:
+  - rendering
 ---
 
+{% Aside %}
+Check out the next post in the series: [Key data structures and their roles in RenderingNG](/blog/renderingng-data-structures/).
+{% endAside %}
 
 In a [previous post](/blog/renderingng/),
 I gave an overview of the RenderingNG architecture goals and key properties.
@@ -55,7 +60,7 @@ and [extensibility](/blog/renderingng/#extensibility-the-right-tools-for-the-job
 ### Rendering pipeline structure
 
 {% Img
-src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/jsWIjoou2iaN6ORvMfvM.jpeg",
+src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/zbb7OLj0rB1Hq57khU2g.jpeg",
 alt="Diagram of the rendering pipeline as explained in the following text.",
 width="800", height="1273" %}
 
@@ -82,8 +87,8 @@ which is why some have two colors.
 
 The stages are:
 
-1. _Style:_ apply CSS to the DOM, and create _computed styles_.
 1. _Animate:_ change computed styles and mutate _property trees_ over time based on declarative timelines.
+1. _Style:_ apply CSS to the DOM, and create _computed styles_.
 1. _Layout:_ determine the size and position of DOM elements on the screen,
 and create the _immutable fragment tree_.
 1. _Pre-paint:_ compute property trees and

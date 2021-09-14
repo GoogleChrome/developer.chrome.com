@@ -106,3 +106,50 @@ newer_posts:
 
 older_posts:
   en: 'Older posts'
+
+external_link:
+  en: 'External link'
+  es: 'Enlace externo'
+
+close:
+  en: 'Close'
+  es: 'Cerrar'
+
+back:
+  en: 'Back'
+
+older_releases:
+  en: 'Older releases'
+
+current_release_description:
+  en: 'The current stable version of Chrome is'
+
+pending_release_description:
+  en: 'The imminent stable version of Chrome is'
+
+future_release_description:
+  en: 'The current beta version of Chrome is'
+
+current_release_label:
+  en: 'Current stable version'
+
+pending_release_label:
+  en: 'Imminent stable version'
+
+future_release_label:
+  en: 'Beta will promote to stable on'
+
+release_stable:
+  en: 'Stable'
+
+release_beta:
+  en: 'Beta'
+
+translated_to:
+  en: 'Translated to:'
+
+published_on:
+  en: 'Published on'
+
+updated_on:
+  en: 'Updated on'

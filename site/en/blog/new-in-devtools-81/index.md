@@ -14,6 +14,8 @@ tags:
   - chrome-81
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 {% YouTube id="HJNaNDspffM" %}
 
 ## Moto G4 support in Device Mode {: #motog4 }
@@ -114,6 +116,10 @@ file** to disable the default UI behavior that allows you to scroll well past th
 the **Sources** panel.
 
 Here's a [GIF of the feature][14].
+
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: /docs/devtools/device-mode#viewport
 [2]: /docs/devtools/device-mode#frame

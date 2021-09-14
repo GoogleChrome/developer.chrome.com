@@ -2,18 +2,19 @@
   "title": "Chrome Developers",
   "description": "Build the next generation of web experiences.",
   "url": "https://developer.chrome.com",
-  "imgixDomain": "developer-chrome-com.imgix.net",
-  "bucket": "chrome-gcs-uploader.appspot.com",
+  "imgixDomain": "wd.imgix.net",
+  "bucket": "web-dev-uploads",
   "repo": "https://github.com/GoogleChrome/developer.chrome.com/",
   "locales": [
     "en",
     "es",
     "pt",
     "ko",
-    "zn",
+    "zh",
     "ru",
     "ja"
   ],
   "defaultLocale": "en",
-  "cookiesCtaUrl": "https://policies.google.com/technologies/cookies"
+  "cookiesCtaUrl": "https://policies.google.com/technologies/cookies",
+  "defaultSocialImage": "image/foR0vJZKULb5AGJExlazy1xYDgI2/xvNiBdV0ZwwLUE4SEdbf.png"
 }

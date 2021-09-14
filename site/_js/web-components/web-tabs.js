@@ -92,9 +92,7 @@ export class WebTabs extends BaseElement {
     this._tabPanels = Array.from(this.children);
     const tabs = this._formatTabs();
     return html`
-      <div role="tablist">
-        ${tabs}
-      </div>
+      <div role="tablist">${tabs}</div>
       ${this._tabPanels}
     `;
   }

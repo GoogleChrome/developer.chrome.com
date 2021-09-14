@@ -1,4 +1,7 @@
 - url: /docs/webstore/about_webstore/
+- url: https://chrome.google.com/webstore/developer/dashboard
+  title: i18n.docs.webstore.developer_dashboard
+  description: i18n.docs.webstore.developer_dashboard_description
 - url: /docs/webstore/faq/
 - title: i18n.docs.webstore.develop
   sections:
@@ -10,6 +13,7 @@
   sections:
     - url: /docs/webstore/register/
     - url: /docs/webstore/publish/
+    - url: /docs/webstore/manage/
     - url: /docs/webstore/update/
     - url: /docs/webstore/troubleshooting/
     - url: /docs/webstore/branding/
@@ -20,8 +24,10 @@
   sections:
     - url: /docs/webstore/images/
     - url: /docs/webstore/cws-dashboard-listing/
+    - url: /docs/webstore/best_listing/
     - url: /docs/webstore/cws-dashboard-privacy/
     - url: /docs/webstore/cws-dashboard-distribution/
+    - url: /docs/webstore/cws-enterprise/
 - title: i18n.docs.webstore.policies
   sections:
     - url: /docs/webstore/terms/

@@ -1,27 +1,10 @@
 ---
 layout: 'layouts/doc-post.njk'
-
-# The page title. This appears at the top of the doc and as the page name
-# in Google Search.
 title: Migrating to Manifest V3
-
-# This appears below the title and is an optional teaser
 subhead: 'Getting you headed in the right direction.'
-
-# This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in
-# Google Search.
 description: 'A high-level guide to how you can migrate your MV2 extensions to MV3.'
-
-# The publish date
 date: 2020-11-09
-
-# An optional updated date
-# updated: 2020-10-16
-
-# A list of authors. These usernames correspond to the keys in the
-# _data/authorsData.json file.
-
+updated: 2021-08-13
 ---
 
 This guide provides developers with the information they need to begin
@@ -76,13 +59,13 @@ extension. This determines whether you're using the MV2 or MV3 feature set:
 
 {% Columns %}
 ```json
-// Manifest v2
+// Manifest V2
 
 "manifest_version": 2
 ```
 
 ```json
-// Manifest v3
+// Manifest V3
 
 "manifest_version": 3
 ```
@@ -94,7 +77,7 @@ In MV3, you'll need to specify host permissions separately from other permission
 
 {% Columns %}
 ```js
-// Manifest v2
+// Manifest V2
 "permissions": [
   "tabs",
   "bookmarks",
@@ -106,8 +89,8 @@ In MV3, you'll need to specify host permissions separately from other permission
 ]
 ```
 
-```js/7-10
-// Manifest v3
+```js/8-10
+// Manifest V3
 "permissions": [
   "tabs",
   "bookmarks"
@@ -138,13 +121,13 @@ representing alternative CSP contexts:
 
 {% Columns %}
 ```json
-// Manifest v2
+// Manifest V2
 
 "content_security_policy": "..."
 ```
 
 ```json
-// Manifest v3
+// Manifest V3
 
 "content_security_policy": {
   "extension_pages": "...",
@@ -183,10 +166,9 @@ and `page_action`. These APIs filled distinct roles when they were introduced,
 but over time they've become redundant so in MV3 we are unifying them into as
 single `action` API:
 
-
 {% Columns %}
 ```js
-// Manifest v2
+// Manifest V2
 
 // manifest.json
 {
@@ -200,7 +182,7 @@ chrome.pageAction.onClicked.addListener(tab => { … });
 ```
 
 ```js
-// Manifest v3
+// Manifest V3
 
 // manifest.json
 {
@@ -213,12 +195,6 @@ chrome.action.onClicked.addListener(tab => { … });
 ```
 {% endColumns %}
 
-{% Aside %}
-In order to aid with the migration process, the Action API can be used in MV2
-beginning with Chrome 88.
-{% endAside %}
-
-
 ### Web-accessible resources  {: #web-accessible-resources }
 
 This change limits access to extension resources to specific sites/extensions.
@@ -227,7 +203,7 @@ of which can map to a set of resources to a set of URLs and extension IDs:
 
 {% Columns %}
 ```json
-// Manifest v2
+// Manifest V2
 
 "web_accessible_resources": [
   <files>
@@ -235,7 +211,7 @@ of which can map to a set of resources to a set of URLs and extension IDs:
 ```
 
 ```json
-// Manifest v3
+// Manifest V3
 
 "web_accessible_resources": [{
   "resources": [<resources>],
@@ -254,7 +230,7 @@ be coming in a future release.
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
 resource access. The updated API lets extensions more tightly control what
-other sites or extensions can access extension resources. See the [web 
+other sites or extensions can access extension resources. See the [web
 accessible resources](/docs/extensions/mv3/manifest/web_accessible_resources/)
 documentation for usage information.
 
@@ -310,63 +286,87 @@ resubmitting to the Chrome Web Store.
 
 ### Executing arbitrary strings  {: #executing-arbitrary-strings }
 
-The `code` property from executeScript's
-[details](/docs/extensions/reference/tabs#method-executeScript) object is no longer
-available in MV3.
 
-Instead of executing a string, you should move your code into a static
-JavaScript file included in the bundle, then execute it using the executeScript
-method's `file` property:
+In Manifest V2 it was possible to execute an arbitrary string of code using
+[`tabs.executeScript`](/docs/extensions/reference/tabs/#method-executeScript) and the `code`
+property on the options object. Manifest V3 does not allow arbitrary code execution. In order to
+adapt to this requirement, extension developers can either use the
+[`scripting.executeScript`](/docs/extensions/reference/scripting/#method-executeScript) API to
+inject a static file or a function.
+
+Static file injection with `scripting.executeScript` is almost identical to it used to work in Tabs
+API. While the old method only took a single file, the new method now takes an array of files.
 
 {% Columns %}
 ```js
-// Manifest v2
+// Manifest V2
 
 // background.js
 chrome.tabs.executeScript({
-  code: 'alert("test!")'
-});
-```
-
-```js
-// Manifest v3
-
-// background.js
-chrome.scripting.executeScript({
   file: 'content-script.js'
 });
 
 // content-script.js
-alert("test!");
+alert('File test alert');
+```
+
+```js
+// Manifest V3
+
+// background.js
+async function getCurrentTab() {/* ... */}
+let tab = await getCurrentTab();
+
+chrome.scripting.executeScript({
+  target: {tabId: tab.id},
+  files: ['content-script.js']
+});
+
+// content-script.js
+alert('File test alert');
 ```
 {% endColumns %}
 
-Alternatively, if the logic being executed can be neatly wrapped in a function
-call, you can use the new `function` property:
+If you need more dynamism, the new `func` property allows you to inject a function as a content
+script and pass variables using the `args` property. Note that the function is not run as if it
+was located within the content script; rather, its source is sent to the target tab and it is run
+there.
 
 {% Columns %}
 ```js
-// Manifest v2
+// Manifest V2
 
 // background.js
+let name = 'World!';
 chrome.tabs.executeScript({
-  code: 'alert("test!")'
+  code: `alert('Hello, ${name}!')`
 });
 ```
 
 ```js
-// Manifest v3
+// Manifest V3
 
 // background.js
-function showAlert() {
-  alert("test!");
+async function getCurrentTab() {/* ... */}
+let tab = await getCurrentTab();
+
+function showAlert(givenName) {
+  alert(`Hello, ${givenName}`);
 }
 
+let name = 'World';
 chrome.scripting.executeScript({
-  function: showAlert
+  target: {tabId: tab.id},
+  func: showAlert,
+  args: [name],
 });
 ```
 {% endColumns %}
+
+A functional version of the Manifest V3 snippets in this section can be found in the
+[chrome-extensions-samples](https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/reference/mv3/intro/mv3-migration/content-scripts)
+repository. See the [Tabs API examples](/docs/extensions/reference/tabs/#get-the-current-tab) for an
+implementation of `getCurrentTab`.
 
 ## Background service workers  {: #background-service-workers }
 

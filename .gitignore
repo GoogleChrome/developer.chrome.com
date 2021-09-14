@@ -10,6 +10,8 @@ Thumbs.db
 .cache
 .vscode
 .lighthouseci
+.idea*
+.python-version
 
 # Code coverage generated files
 .nyc_output

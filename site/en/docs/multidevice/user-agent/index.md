@@ -117,4 +117,4 @@ AppleWebKit/537.36 (KHTML, like Gecko)
 Version/4.0 <mark>Chrome/43.0.2357.65</mark> Mobile Safari/537.36</code></pre>
 
 [1]: https://play.google.com/store/apps/details?id=com.android.chrome
-[2]: /docs/multidevice/webview/overview/
+[2]: /docs/multidevice/webview/

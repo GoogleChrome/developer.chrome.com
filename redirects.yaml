@@ -30,6 +30,9 @@ redirects:
 - from: /docs/extensions/mv3/background_migration
   to: /docs/extensions/mv3/migrating_to_service_workers
 
+- from: /docs/extensions/mv3/background_pages
+  to: /docs/extensions/mv3/service_workers
+
 - from: /docs/multidevice/android/customtabs/
   to: /docs/android/custom-tabs/overview
 
@@ -41,6 +44,23 @@ redirects:
 
 - from: /docs/webstore/pricing/
   to: /docs/webstore/money/
+
+- from: /docs/devtools/javascript/blackbox-chrome-extension-scripts/
+  to: /docs/devtools/javascript/ignore-chrome-extension-scripts/
+
+# Removal of /overview pages
+
+- from: /docs/android/custom-tabs/overview/
+  to: /docs/android/custom-tabs/
+
+- from: /docs/android/trusted-web-activity/overview/
+  to: /docs/android/trusted-web-activity/
+
+- from: /multidevice/webview/overview/
+  to: /multidevice/android/
+
+- from: /multidevice/webview/overview/
+  to: /multidevice/webview/
 
 # CWS payments/apps purge
 - from: /docs/webstore/hosted_apps
@@ -160,13 +180,16 @@ redirects:
 - from: /docs/devtools/rendering-tools/
   to: /docs/devtools/evaluate-performance/
 
+- from: /docs/devtools/updates/
+  to: /tags/new-in-devtools/
+
 # TODO(kaycebasques): Update these old DevTools redirects
 
 - from: /devtools/
   to: https://developers.google.com/web/tools/chrome-devtools
 
 - from: /devtools/docs/blackboxing
-  to: https://developers.google.com/web/tools/chrome-devtools/javascript/reference#blackbox
+  to: https://developers.google.com/web/tools/chrome-devtools/javascript/reference#ignore-list
 
 - from: /devtools/docs/commandline-api
   to: https://developers.google.com/web/tools/chrome-devtools/console/utilities

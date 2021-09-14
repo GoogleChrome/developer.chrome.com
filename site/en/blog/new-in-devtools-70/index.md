@@ -15,6 +15,8 @@ tags:
   - chrome-70
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 Welcome back! It's been about 12 weeks since our last update, which was for Chrome 68. We skipped
 Chrome 69 because we didn't have enough new features or UI changes to warrant a post.
 
@@ -101,8 +103,8 @@ took multiple seconds to load. Processing and visualizing is faster in Chrome 70
 
 Chrome 70 fixes some bugs that were causing breakpoints to disappear or not get triggered.
 
-It also fixes bugs related to sourcemaps. Some TypeScript users would instruct DevTools to blackbox
-a certain TypeScript file while stepping through code, and instead DevTools would blackbox the
+It also fixes bugs related to sourcemaps. Some TypeScript users would instruct DevTools to ignore
+a certain TypeScript file while stepping through code, and instead DevTools would ignore the
 entire bundled JavaScript file. These fixes also address an issue that was causing the Sources panel
 to generally run slowly.
 
@@ -150,7 +152,7 @@ through DevTools][18], ndb also offers:
 - Detecting and attaching to child processes.
 - Placing breakpoints before modules are required.
 - Editing files within the DevTools UI.
-- Blackboxing all scripts outside of the current working directory by default.
+- Ignoring all scripts outside of the current working directory by default.
 
 {% Img src="image/admin/P6mBnxfW1xelxoTbdVWK.png", alt="The ndb UI.", width="800", height="432" %}
 
@@ -199,6 +201,10 @@ Performance recordings.
 This also comes in handy when debugging or optimizing code. For example, if you want to optimize a
 certain phase of your lifecycle, call `window.performance.mark()` at the beginning and end of your
 lifecycle function. React does this in development mode.
+
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: #watch
 [2]: #nodes

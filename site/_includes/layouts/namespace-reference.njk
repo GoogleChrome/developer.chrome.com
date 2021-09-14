@@ -40,61 +40,74 @@
     {% include 'partials/navigation-tree.njk' %}
     {% set feature = namespace.feature %}
 
-    <article class="stack measure-long center-margin pad-left-400 pad-right-400">
-      <h1 class="type--h2">{{ title }}</h1>
+    {# The article is wrapped again so that the ToC aligns on its right on desktop #}
+    <div class="display-flex justify-content-center width-full">
+      <article class="stack measure-long width-full pad-left-400 pad-right-400">
+        <h1 class="type--h2">{{ title }}</h1>
 
-      {% if feature.platformAppsOnly %}
-        <div class="aside aside--warning">
-          This API is part of the deprecated Chrome Apps platform.
-          Learn more about <a href="/docs/apps/migration">migrating your app</a>.
-        </div>
-      {% endif %}
+        {% if feature.platformAppsOnly %}
+          <div class="aside aside--warning">
+            This API is part of the deprecated Chrome Apps platform.
+            Learn more about <a href="/docs/apps/migration">migrating your app</a>.
+          </div>
+        {% endif %}
 
-      {% if feature.chromeOsOnly %}
-        {# There are some historic cases of multi-platform support in Platform Apps, but
-            the only restriction these days is CrOS vs everywhere. #}
-        <div class="aside aside--note">
-          <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
-        </div>
-      {% endif %}
+        {% if feature.chromeOsOnly %}
+          {# There are some historic cases of multi-platform support in Platform Apps, but
+              the only restriction these days is CrOS vs everywhere. #}
+          <div class="aside aside--note">
+            <strong>Important:</strong> This API works <strong>only on Chrome OS</strong>
+          </div>
+        {% endif %}
 
-      {% set availabilityHtml %}{{ macros.renderAvailabilityFeature(feature) }}{% endset %}
+        {% set availabilityHtml %}{{ macros.renderAvailabilityFeature(feature) }}{% endset %}
 
-      <div>{# This div prevents flow-space-300 from applying to the parent stack. #}
-        <ul class="code-sections code-sections--summary flow-space-300 stack">
-          <li>
-            <div class="code-sections__label">Description</div>
-            <div class="type">
-              {{ namespace.description | md | safe }}
-            </div>
-          </li>
-          {% if feature.permissions.length %}
+        <div>{# This div prevents flow-space-300 from applying to the parent stack. #}
+          <ul class="code-sections code-sections--summary flow-space-300 stack">
             <li>
-              <div class="code-sections__label">Permissions</div>
-              <div>
-                {% for permission in feature.permissions %}
-                  <code>{{ permission }}</code><br />
-                {% endfor %}
-                {{ extra_permissions_html | safe }}
+              <div class="code-sections__label">Description</div>
+              <div class="type">
+                {{ namespace.description | md | safe }}
               </div>
             </li>
-          {% endif %}
+            {% if feature.permissions.length %}
+              <li>
+                <div class="code-sections__label">Permissions</div>
+                <div>
+                  {% for permission in feature.permissions %}
+                    <code>{{ permission }}</code><br />
+                  {% endfor %}
+                  {{ extra_permissions_html | safe }}
+                </div>
+              </li>
+            {% endif %}
+            {% if feature.manifestRequirements.length %}
+              <li>
+                <div class="code-sections__label">Manifest Keys</div>
+                <div>
+                  <p>The following keys must be declared <a href="/docs/extensions/mv3/manifest/">in the manifest</a> to use this API.</p>
+                  {% for manifestKey in feature.manifestRequirements %}
+                    <code>{{ manifestKey }}</code><br />
+                  {% endfor %}
+                </div>
+              </li>
+            {% endif %}
+            {% if availabilityHtml | trim %}
+              <li class="align-center">
+                <div class="code-sections__label">Availability</div>
+                {{ availabilityHtml | safe }}
+                {# As of Apr 2021, namespaces are never deprecated. #}
+              </li>
+            {% endif %}
+          </ul>
+        </div>
 
-          {% if availabilityHtml | trim %}
-            <li class="align-center">
-              <div class="code-sections__label">Availability</div>
-              {{ availabilityHtml | safe }}
-              {# As of Apr 2021, namespaces are never deprecated. #}
-            </li>
-          {% endif %}
-        </ul>
-      </div>
+        {% include 'partials/toc-inner.njk' %}
 
-      {% include 'partials/toc-inner.njk' %}
+        {{ content | safe }}
+      </article>
 
-      {{ content | safe }}
-    </article>
-
-    {% include 'partials/toc-side.njk' %}
+      {% include 'partials/toc-side.njk' %}
+    </div>
   </div>
 {% endblock %}

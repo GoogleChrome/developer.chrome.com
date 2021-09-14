@@ -27,9 +27,12 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
+    "server/**/*",
     "site/**/*",
     "tools/**/*",
-    "types/**/*.d.ts"
+    "types/**/*.d.ts",
+    "*.js",
+    ".eleventy.js",
   ],
   "exclude": [
     ".github",
@@ -37,7 +40,6 @@
     "dist",
     "node_modules",
     "test",
-    "./*.js",
-    "site/_js/prettify.js"
-  ]
+    "site/_js/prettify.js",
+  ],
 }

@@ -19,12 +19,12 @@ demonstration of their relationships.
 
 To start, create a new directory to hold the extension's files.
 
-The completed extension can be downloaded [here][6].
+The completed extension can be downloaded [here][6]
 
 ## Create the manifest {: #manifest }
 
 Extensions start with their [manifest][7]. Create a file called `manifest.json` and include the
-following code, or download the file [here][8].
+following code.
 
 ```json
 {
@@ -53,7 +53,7 @@ manifest, a generic toolbar icon will be created for the extension.
 ## Add instruction {: #background }
 
 Although the extension has been installed, it has no instruction. Introduce a [background script][9]
-by creating a file titled `background.js`, or downloading it [here][10], and placing it inside the
+by creating a file titled `background.js`, and placing it inside the
 extension directory.
 
 Background scripts, and many other important components, must be registered in the manifest.
@@ -117,7 +117,7 @@ Click the link to view the background script's console log, "`The color is green
 ## Introduce a user interface {: #user_interface }
 
 Extensions can have many forms of a [user interface][14], but this one will use a [popup][15].
-Create and add a file titled `popup.html` to the directory, or download it [here][16]. This
+Create and add a file titled `popup.html` to the directory. This
 extension uses a button to change the background color.
 
 ```html
@@ -260,7 +260,7 @@ to a URL that contains `"developer.chrome.com"`. When the icon is full-color, us
 view popup.html.
 
 The last step for the popup UI is adding color to the button. Create and add a file called
-`popup.js` with the following code to the extension directory, or downloaded [here][22].
+`popup.js` with the following code to the extension directory.
 
 ```js
 let changeColor = document.getElementById('changeColor');
@@ -328,14 +328,18 @@ The extension is now fully functional! Reload the extension, refresh this page, 
 click the button to turn it green! However, some users may want to change the background to a
 different color.
 
+{% Aside 'gotchas' %}
+Extensions can not inject content scripts on internal Chrome pages like "chrome://extensions". Be
+sure to try out the extension on a real webpage like [https://google.com](https://google.com).
+{% endAside %}
+
 ## Give users options {: #options }
 
 The extension currently only allows users to change the background to green. Including an options
 page gives users more control over the extension's functionality, further customizing their browsing
 experience.
 
-Start by creating a file in the directory called `options.html` and include the following code, or
-download it [here][28].
+Start by creating a file in the directory called `options.html` and include the following code.
 
 ```html
 <!DOCTYPE html>
@@ -385,7 +389,7 @@ will currently appear blank.
        alt="Extension Options", height="726", width="645" %}
 
 Last step is to add the options logic. Create a file called `options.js` in the extension directory
-with the following code, or download it [here][29].
+with the following code.
 
 ```js
 let page = document.getElementById('buttonDiv');
@@ -430,30 +434,24 @@ What's next?
 [3]: /options
 [4]: /user_interface
 [5]: /docs/
-[6]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/n7V7IbH6D6gqNCV7Kp5t.zip "get_started_complete.zip"
+[6]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/n7V7IbH6D6gqNCV7Kp5t.zip "get_started_complete.zip"
 [7]: /docs/extensions/mv2/manifest
-[8]: examples/tutorials/get_started/manifest.json
 [9]: /background_pages
-[10]: examples/tutorials/get_started/background.js
 [11]: /runtime#event-onInstalled
 [12]: /storage
 [13]: /storage
 [14]: /user_interface
 [15]: /user_interface#popup
-[16]: examples/tutorials/get_started/popup.html
 [17]: /pageAction
-[18]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qwlTyQ1ah3RmqsgDhRkL.zip "images.zip"
+[18]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qwlTyQ1ah3RmqsgDhRkL.zip "images.zip"
 [19]: /user_interface#icons
 [20]: /declarativeContent
 [21]: /declarativeContent
-[22]: examples/tutorials/get_started/popup.js
 [23]: /
 [24]: /content_scripts#pi
 [25]: /docs/extensions/mv2/manifest/activeTab/
 [26]: /tabs
 [27]: /tabs#method-executeScript
-[28]: examples/tutorials/get_started/options.html
-[29]: examples/tutorials/get_started/options.js
 [30]: /overview
 [31]: /tut_debugging
 [32]: /reference

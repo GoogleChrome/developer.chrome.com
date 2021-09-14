@@ -1,3 +1,6 @@
+# The top-level keys in this file are used to generate tag pages under /tags/<tag>, presuming
+# they have at least one matching post.
+
 news:
   en: News
   es: Noticias
@@ -12,7 +15,15 @@ amp:
   en: AMP
 
 autoplay:
-  en: autoplay
+  en: Autoplay
+
+capabilities:
+  en: Capabilities
+
+# This is used for the title of the shared Chrome RSS feed that 'chrome-xx' posts create.
+# It does not need translation.
+chrome:
+  en: Chrome
 
 chromium-chronicle:
   en: Chromium Chronicle
@@ -59,6 +70,9 @@ new-in-chrome:
 privacy:
   en: Privacy
 
+progress-in-the-privacy-sandbox:
+  en: Progress in the Privacy Sandbox
+
 progressive-web-apps:
   en: Progressive Web Apps
 
@@ -76,3 +90,18 @@ new-in-devtools:
 
 devtools-engineering:
   en: DevTools Engineering
+
+origin-trials:
+  en: Origin Trials
+
+identity:
+  en: Identity
+
+rendering:
+  en: Rendering
+
+lighthouse:
+  en: Lighthouse
+
+new-in-lighthouse:
+  en: What's new in Lighthouse

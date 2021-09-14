@@ -4,7 +4,7 @@ title: "Console Utilities API reference"
 authors:
   - kaycebasques
 date: 2015-04-13
-#updated: YYYY-MM-DD
+updated: 2021-08-16
 description: "A reference of convenience functions available in the Chrome DevTools Console."
 ---
 
@@ -37,7 +37,7 @@ evaluated expression, 4:
 
 {% Img src="image/admin/d2jU3P5gc4G2OuK4PMQ1.png", alt="$_ changes when new commands are evaluated", width="800", height="319" %}
 
-## $0 - $4 {: #dom }
+## $0 - $4 {: #recent-many }
 
 The `$0`, `$1`, `$2`, `$3` and `$4` commands work as a historical reference to the last five DOM
 elements inspected within the Elements panel or the last five JavaScript heap objects selected in
@@ -54,7 +54,7 @@ selected element, while `$1` returns the previously selected one:
 
 {% Img src="image/admin/ET1JJFtUIXvaoPCGQ94C.png", alt="Example of $1", width="800", height="318" %}
 
-## \$(selector, \[startNode\]) {: #queryselector }
+## \$(selector, \[startNode\]) {: #querySelector-function }
 
 `$(selector)` returns the reference to the first DOM element with the specified CSS selector. When
 called with one argument, this function is an alias for the [document.querySelector()][2] function.
@@ -86,7 +86,7 @@ overwritten, and `$` will correspond to that library's implementation.
 
 {% endAside %}
 
-## \$\$(selector, \[startNode\]) {: #queryselectorall }
+## \$\$(selector, \[startNode\]) {: #querySelectorAll-function }
 
 `$$(selector)` returns an array of elements that match the given CSS selector. This command is
 equivalent to calling [document.querySelectorAll()][3].
@@ -95,10 +95,10 @@ The following example uses `$$()` to create an array of all `<img>` elements in 
 and displays the value of each element's `src` property:
 
 ```js
-    var images = $$('img');
-    for (each in images) {
-        console.log(images[each].src);
-    }
+let images = $$('img');
+for (let each of images) {
+  console.log(each.src);
+}
 ```
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/f3W2BdYq3PAl435AMXso.png", alt="Example of using $$() to select all images in the document and display their sources.", width="800", height="536" %}
@@ -110,10 +110,10 @@ This modified version of the previous example uses `$$()` to create an array of 
 that appear in the current document after the selected Node:
 
 ```js
-var images = $$('img', document.querySelector('.devsite-header-background'));
-   for (each in images) {
-       console.log(images[each].src);
-   }
+let images = $$('img', document.querySelector('.devsite-header-background'));
+for (let each of images) {
+  console.log(each.src);
+}
 ```
 
 {% Img src="image/admin/MKKFwNfiqaq8JPUkgchF.png", alt="Example of using $() to select all images appearing after the select div element in the document and displaying their sources.", width="800", height="336" %}
@@ -125,14 +125,14 @@ a new line without executing the script.
 
 {% endAside %}
 
-## \$x(path, \[startNode\]) {: #xpath }
+## \$x(path, \[startNode\]) {: #xpath-function }
 
 `$x(path)` returns an array of DOM elements that match the given XPath expression.
 
 For example, the following returns all the `<p>` elements on the page:
 
 ```js
-    $x("//p")
+$x("//p")
 ```
 
 {% Img src="image/admin/8fIwlT9ZWd9109E9jyRb.png", alt="Example of using an XPath selector", width="800", height="282" %}
@@ -140,7 +140,7 @@ For example, the following returns all the `<p>` elements on the page:
 The following example returns all the `<p>` elements that contain `<a>` elements:
 
 ```js
-    $x("//p[a]")
+$x("//p[a]")
 ```
 
 {% Img src="image/admin/qvqloRRfS4IU1WhDsJkP.png", alt="Example of using a more complicated XPath selector", width="800", height="251" %}
@@ -150,29 +150,29 @@ that specifies an element or Node from which to search for elements.
 
 {% Img src="image/admin/srYQFy4Y7TRlT0kGarUN.png", alt="Example of using an XPath selector with startNode", width="800", height="282" %}
 
-## clear() {: #clear }
+## clear() {: #clear-function }
 
 `clear()` clears the console of its history.
 
 ```js
-    clear();
+clear();
 ```
 
-## copy(object) {: #copy }
+## copy(object) {: #copy-function }
 
 `copy(object)` copies a string representation of the specified object to the clipboard.
 
 ```js
-    copy($0);
+copy($0);
 ```
 
-## debug(function) {: #debug }
+## debug(function) {: #debug-function }
 
 When the specified function is called, the debugger is invoked and breaks inside the function on the
 Sources panel allowing to step through the code and debug it.
 
 ```js
-    debug(getData);
+debug(getData);
 ```
 
 {% Img src="image/admin/dhPBjuzWvsEbHeGR5NpQ.png", alt="Breaking inside a function with debug()", width="800", height="526" %}
@@ -181,7 +181,7 @@ Use `undebug(fn)` to stop breaking on the function, or use the UI to disable all
 
 For more information on breakpoints, see [Pause Your Code With Breakpoints][4].
 
-## dir(object) {: #dir }
+## dir(object) {: #dir-function }
 
 `dir(object)` displays an object-style listing of all the specified object's properties. This method
 is an alias for the Console API's `console.dir()` method.
@@ -190,20 +190,20 @@ The following example shows the difference between evaluating `document.body` di
 command line, and using `dir()` to display the same element:
 
 ```js
-    document.body;
-    dir(document.body);
+document.body;
+dir(document.body);
 ```
 
 {% Img src="image/admin/SBW2kszkhG1rlXfxtQDg.png", alt="Logging document.body with and without dir() function", width="800", height="590" %}
 
-For more information, see the [`console.dir()`][5] entry in the Console API.
+For more information, see the [`console.dir()`][console-dir] entry in the Console API.
 
-## dirxml(object) {: #dirxml }
+## dirxml(object) {: #dirxml-function }
 
 `dirxml(object)` prints an XML representation of the specified object, as seen in the Elements tab.
-This method is equivalent to the [console.dirxml()][6] method.
+This method is equivalent to the [`console.dirxml()`][console-dirxml] method.
 
-## inspect(object/function) {: #inspect }
+## inspect(object/function) {: #inspect-function }
 
 `inspect(object/function)` opens and selects the specified element or object in the appropriate
 panel: either the Elements panel for DOM elements or the Profiles panel for JavaScript heap objects.
@@ -211,7 +211,7 @@ panel: either the Elements panel for DOM elements or the Profiles panel for Java
 The following example opens the `document.body` in the Elements panel:
 
 ```js
-    inspect(document.body);
+inspect(document.body);
 ```
 
 {% Img src="image/admin/BDFR3iEMqRnWIWrrVEu6.png", alt="Inspecting an element with inspect()", width="800", height="337" %}
@@ -219,7 +219,7 @@ The following example opens the `document.body` in the Elements panel:
 When passing a function to inspect, the function opens the document up in the Sources panel for you
 to inspect.
 
-## getEventListeners(object) {: #geteventlisteners }
+## getEventListeners(object) {: #getEventListeners-function }
 
 `getEventListeners(object)` returns the event listeners registered on the specified object. The
 return value is an object that contains an array for each registered event type (`click` or
@@ -228,7 +228,7 @@ for each type. For example, the following lists all the event listeners register
 object:
 
 ```js
-    getEventListeners(document);
+getEventListeners(document);
 ```
 
 {% Img src="image/admin/pVhvAi37yxLejbODHGSZ.png", alt="Output of using getEventListeners()", width="800", height="255" %}
@@ -243,7 +243,7 @@ You can further expand each of these objects to explore their properties:
 
 {% Img src="image/admin/EJnoDfrKGIhwz7cx0WE3.png", alt="Expanded view of listener object", width="800", height="389" %}
 
-## keys(object) {: #keys }
+## keys(object) {: #keys-function }
 
 `keys(object)` returns an array containing the names of the properties belonging to the specified
 object. To get the associated values of the same properties, use `values()`.
@@ -251,7 +251,7 @@ object. To get the associated values of the same properties, use `values()`.
 For example, suppose your application defined the following object:
 
 ```js
-    var player1 = { "name": "Ted", "level": 42 }
+let player1 = { "name": "Ted", "level": 42 };
 ```
 
 Assuming `player1` was defined in the global namespace (for simplicity), typing `keys(player1)` and
@@ -259,23 +259,23 @@ Assuming `player1` was defined in the global namespace (for simplicity), typing 
 
 {% Img src="image/admin/HYEKFYyD93YzGLoF2avv.png", alt="Example of keys() and values() methods", width="800", height="226" %}
 
-## monitor(function) {: #monitor }
+## monitor(function) {: #monitor-function }
 
 When the function specified is called, a message is logged to the console that indicates the
 function name along with the arguments that are passed to the function when it was called.
 
 ```js
-    function sum(x, y) {
-        return x + y;
-    }
-    monitor(sum);
+function sum(x, y) {
+  return x + y;
+}
+monitor(sum);
 ```
 
 {% Img src="image/admin/V28TFRjUqryt2u3b2zls.png", alt="Example of monitor() method", width="800", height="221" %}
 
 Use `unmonitor(function)` to cease monitoring.
 
-## monitorEvents(object\[, events\]) {: #monitorevents }
+## monitorEvents(object\[, events\]) {: #monitorEvents-function }
 
 When one of the specified events occurs on the specified object, the Event object is logged to the
 console. You can specify a single event to monitor, an array of events, or one of the generic events
@@ -284,7 +284,7 @@ console. You can specify a single event to monitor, an array of events, or one o
 The following monitors all resize events on the window object.
 
 ```js
-    monitorEvents(window, "resize");
+monitorEvents(window, "resize");
 ```
 
 {% Img src="image/admin/ZrU8M58cKhN2eZRpiNVI.png", alt="Monitoring window resize events", width="800", height="252" %}
@@ -292,7 +292,7 @@ The following monitors all resize events on the window object.
 The following defines an array to monitor both "resize" and "scroll" events on the window object:
 
 ```js
-    monitorEvents(window, ["resize", "scroll"])
+monitorEvents(window, ["resize", "scroll"])
 ```
 
 You can also specify one of the available event "types", strings that map to predefined sets of
@@ -304,14 +304,14 @@ For example, the following uses the "key" event type all corresponding key event
 field currently selected in the Elements panel.
 
 ```js
-    monitorEvents($0, "key");
+monitorEvents($0, "key");
 ```
 
 Below is sample output after typing a characters in the text field:
 
 {% Img src="image/admin/Shs04IRgNP87cbbjCbtd.png", alt="Monitoring key events", width="800", height="252" %}
 
-## profile(\[name\]) and profileEnd(\[name\]) {: #profilename_and_profileendname }
+## profile(\[name\]) and profileEnd(\[name\]) {: #profile-function }
 
 `profile()` starts a JavaScript CPU profiling session with an optional name. `profileEnd()`
 completes the profile and displays the results in the Profile panel. (See also [Speed Up JavaScript
@@ -320,22 +320,22 @@ Execution][7].)
 To start profiling:
 
 ```js
-    profile("My profile")
+profile("My profile")
 ```
 
 To stop profiling and display the results in the Profiles panel:
 
 ```js
-    profileEnd("My profile")
+profileEnd("My profile")
 ```
 
 Profiles can also be nested. For example, this will work in any order:
 
 ```js
-    profile('A');
-    profile('B');
-    profileEnd('A');
-    profileEnd('B');
+profile('A');
+profile('B');
+profileEnd('A');
+profileEnd('B');
 ```
 
 Result in the profiles panel:
@@ -349,58 +349,58 @@ creation order.
 
 {% endAside %}
 
-## queryObjects(Constructor) {: #queryObjects }
+## queryObjects(Constructor) {: #queryObjects-function }
 
 Call `queryObjects(Constructor)` from the console to return an array of objects that were created
 with the specified constructor. For example:
 
-- `queryObjects(Promise)`. Returns all Promises.
+- `queryObjects(Promise)`. Returns all instances of `Promise`.
 - `queryObjects(HTMLElement)`. Returns all HTML elements.
-- `queryObjects(foo)`, where `foo` is a function name. Returns all objects that were instantiated
+- `queryObjects(foo)`, where `foo` is a class name. Returns all objects that were instantiated
   via `new foo()`.
 
 The scope of `queryObjects()` is the currently-selected execution context in the console.
 
-## table(data\[, columns\]) {: #table }
+## table(data\[, columns\]) {: #table-function }
 
 Log object data with table formatting by passing in a data object in with optional column headings.
 For example, to display a list of names using a table in the console, you would do:
 
 ```js
-    var names = {
-        0: { firstName: "John", lastName: "Smith" },
-        1: { firstName: "Jane", lastName: "Doe" }
-    };
-    table(names);
+let names = [
+  { firstName: "John", lastName: "Smith" },
+  { firstName: "Jane", lastName: "Doe" },
+];
+table(names);
 ```
 
 {% Img src="image/admin/jI1NQZJs08FsKA6nMyIp.png", alt="Example of table() method", width="800", height="488" %}
 
-## undebug(function) {: #undebug }
+## undebug(function) {: #undebug-function }
 
 `undebug(function)` stops the debugging of the specified function so that when the function is
-called, the debugger is no longer invoked.
+called, the debugger is no longer invoked. This is used in concert with `debug(fn)`.
 
 ```js
-    undebug(getData);
+undebug(getData);
 ```
 
-## unmonitor(function) {: #unmonitor }
+## unmonitor(function) {: #unmonitor-function }
 
 `unmonitor(function)` stops the monitoring of the specified function. This is used in concert with
 `monitor(fn)`.
 
 ```js
-    unmonitor(getData);
+unmonitor(getData);
 ```
 
-## unmonitorEvents(object\[, events\]) {: #unmonitorevents }
+## unmonitorEvents(object\[, events\]) {: #unmonitorEvents-function }
 
 `unmonitorEvents(object[, events])` stops monitoring events for the specified object and events. For
 example, the following stops all event monitoring on the window object:
 
 ```js
-    unmonitorEvents(window);
+unmonitorEvents(window);
 ```
 
 You can also selectively stop monitoring specific events on an object. For example, the following
@@ -408,23 +408,23 @@ code starts monitoring all mouse events on the currently selected element, and t
 "mousemove" events (perhaps to reduce noise in the console output):
 
 ```js
-    monitorEvents($0, "mouse");
-    unmonitorEvents($0, "mousemove");
+monitorEvents($0, "mouse");
+unmonitorEvents($0, "mousemove");
 ```
 
-##  values(object) {: #values }
+## values(object) {: #values-function }
 
 `values(object)` returns an array containing the values of all properties belonging to the specified
 object.
 
 ```js
-    values(object);
+values(object);
 ```
 
 [1]: /docs/devtools/console/api
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 [3]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 [4]: /docs/devtools/javascript/breakpoints
-[5]: /docs/devtools/console/api/#dir
-[6]: https://developer.mozilla.org/en-US/docs/Web/API/Console
+[console-dir]: /docs/devtools/console/api/#dir
+[console-dirxml]: /docs/devtools/console/api/#dirxml
 [7]: /docs/devtools/rendering-tools/js-execution

@@ -109,9 +109,9 @@ export class SearchBox extends BaseElement {
   }
 
   firstUpdated() {
-    this.input = /** @type {!HTMLInputElement} */ (this.querySelector(
-      '.search-box__input'
-    ));
+    this.input = /** @type {!HTMLInputElement} */ (
+      this.querySelector('.search-box__input')
+    );
 
     // Purely for style points.
     // Add a meta/ctrl + K keyboard shortcut to quick-focus the search input.
@@ -226,9 +226,9 @@ export class SearchBox extends BaseElement {
   }
 
   navigateToResult() {
-    const link = /** @type {HTMLAnchorElement} */ (this.querySelector(
-      '.search-box__link[aria-selected="true"]'
-    ));
+    const link = /** @type {HTMLAnchorElement} */ (
+      this.querySelector('.search-box__link[aria-selected="true"]')
+    );
 
     if (link) {
       window.location.href = link.href;
@@ -247,13 +247,13 @@ export class SearchBox extends BaseElement {
    */
   scrollHitIntoView() {
     this.requestUpdate().then(() => {
-      const activeLink = /** @type {HTMLAnchorElement} */ (this.querySelector(
-        '.search-box__link[aria-selected="true"]'
-      ));
+      const activeLink = /** @type {HTMLAnchorElement} */ (
+        this.querySelector('.search-box__link[aria-selected="true"]')
+      );
 
-      const modal = /** @type {HTMLElement} */ (this.querySelector(
-        '.search-box__results'
-      ));
+      const modal = /** @type {HTMLElement} */ (
+        this.querySelector('.search-box__results')
+      );
 
       // Unfortunately we can't use scrollIntoView() as it seems to scroll the
       // entire page. So instead we manually scroll the modal to the offsetTop
@@ -311,7 +311,12 @@ export class SearchBox extends BaseElement {
             r[highlightKey] = highlightValue.value;
           }
         }
-        r.snippet = r._snippetResult.content.value;
+        // Some pages don't get indexed with fulltext content, but they do have
+        // a meta description, so fall back to that.
+        r.snippet =
+          r._snippetResult.content?.value ||
+          r._snippetResult.description?.value ||
+          '';
         return r;
       });
 
@@ -320,7 +325,7 @@ export class SearchBox extends BaseElement {
       this.blogResults = this.results.filter(r => r.type === 'blogPost');
     } catch (err) {
       console.error(err);
-      console.error(err.debugData);
+      console.error(/** @type {any} */ (err).debugData);
     }
   }
 

@@ -45,9 +45,16 @@ of type [Ruleset][4], as shown below.
 ## Rule Resources
 
 An extension can specify up to [MAX_NUMBER_OF_STATIC_RULESETS][5] [rulesets][6] as part of the
-`"rule_resources"` manifest key. An extension is allowed to enable at least
-[GUARANTEED_MINIMUM_STATIC_RULES][7] static rules. Additional static rule sets may or may not be
-enabled depending on the available [global static rule limit][8].
+`"rule_resources"` manifest key. Only [MAX_NUMBER_OF_ENABLED_STATIC_RULESETS][18] of these rulesets
+can be enabled at a time, assuming static rule limits are not exceeded.
+
+An extension is allowed to enable at least [GUARANTEED_MINIMUM_STATIC_RULES][7] static rules.
+Additional static rulesets may or may not be enabled depending on the available
+[global static rule limit][8].
+
+**Note:** Errors and warnings about invalid static rules are only displayed for unpacked extensions.
+Invalid static rules in packed extensions are ignored. It's therefore important to verify that your
+static rulesets are valid by testing with an unpacked version of your extension.
 
 ## Global Static Rule Limit
 
@@ -87,9 +94,10 @@ The above rule will block all script requests originating from `"foo.com"` to an
 as a substring.
 
 The `urlFilter` field of a rule condition is used to specify the pattern which is matched against
-the request URL. Some examples of URL filters:
+the request URL. It is documented on the [`RuleCondition`](#type-RuleCondition) type below. Some
+examples of URL filters:
 
-<table><tbody><tr><th><code><b>urlFilter</b></code></th><th>Matches</th><th>Does not match</th></tr><tr><td><code>"abc"</code></td><td>https://abcd.com<br>https://example.com/abcd</td><td>http://ab.com</td></tr><tr><td><code>"abc*d"</code></td><td>https://abcd.com<br>https://example.com/abcxyzd</td><td>http://abc.com</td></tr><tr><td><code>"||a.example.com"</code></td><td>https://a.example.com/<br>https://b.a.example.com/xyz</td><td>http://example.com/</td></tr><tr><td><code>"|https*"</code></td><td>https://example.com</td><td>http://example.com/<br>http://https.com</td></tr><tr><td><code>"example*^123|"</code></td><td>https://example.com/123<br>http://abc.com/example?123</td><td>https://example.com/1234<br>https://abc.com/example0123</td></tr></tbody></table>
+<table><tbody><tr><th><code><b>urlFilter</b></code></th><th>Matches</th><th>Does not match</th></tr><tr><td><code>"abc"</code></td><td>https://abcd.com<br>https://example.com/abcd</td><td>https://ab.com</td></tr><tr><td><code>"abc*d"</code></td><td>https://abcd.com<br>https://example.com/abcxyzd</td><td>https://abc.com</td></tr><tr><td><code>"||a.example.com"</code></td><td>https://a.example.com/<br>https://b.a.example.com/xyz</td><td>https://example.com/</td></tr><tr><td><code>"|https*"</code></td><td>https://example.com</td><td>https://example.com/<br>http://https.com</td></tr><tr><td><code>"example*^123|"</code></td><td>https://example.com/123<br>http://abc.com/example?123</td><td>https://example.com/1234<br>https://abc.com/example0123</td></tr></tbody></table>
 
 ## Dynamic and session-scoped rules
 
@@ -103,6 +111,8 @@ An extension can add or remove rules dynamically using the [updateDynamicRules][
 An extension can update the set of enabled static rulesets using the [updateEnabledRulesets][14] API
 method.
 
+- The number of static rulesets which are enabled at one time must not exceed
+  [MAX_NUMBER_OF_ENABLED_STATIC_RULESETS][18].
 - The number of rules across enabled static rulesets across all extensions must not exceed the
   [global limit][15]. Calling [getAvailableStaticRuleCount][10] is recommended to check the number
   of rules an extension can still enable before the global limit is reached.
@@ -186,7 +196,7 @@ is determined based on the priority of each rule and the operations specified.
     "*://*.google.com/*",
     "*://*.abcd.com/*",
     "*://*.example.com/*",
-    "http://*.xyz.com/*",
+    "https://*.xyz.com/*",
     "*://*.headers.com/*",
     "declarativeNetRequest"
   ],
@@ -249,7 +259,7 @@ is determined based on the priority of each rule and the operations specified.
       }
     },
     "condition": {
-      "regexFilter": "^http://www\\.(abc|def)\\.xyz\\.com/",
+      "regexFilter": "^https://www\\.(abc|def)\\.xyz\\.com/",
       "resourceTypes": [
         "main_frame"
       ]
@@ -306,21 +316,21 @@ is determined based on the priority of each rule and the operations specified.
 ]
 ```
 
-- Consider a navigation to `"http://google.com"`. Rules with id (1) and (4) match. The request will
+- Consider a navigation to `"https://google.com"`. Rules with id (1) and (4) match. The request will
   be blocked because blocking rules have higher priority than redirect rules when the `"priority"`
   is the same.
-- Consider a navigation to `"http://google.com/1234"`. Rules with id (1), (2), and (4) match.
+- Consider a navigation to `"https://google.com/1234"`. Rules with id (1), (2), and (4) match.
   Because the request has a matching `allow` rule and no higher priority rules, the request is not
-  blocked nor redirected and continues to `"http://google.com/1234"`.
-- Consider a navigation to `"http://google.com/12345"` Rules with id (1), (2), (3), and (4) match.
+  blocked nor redirected and continues to `"https://google.com/1234"`.
+- Consider a navigation to `"https://google.com/12345"` Rules with id (1), (2), (3), and (4) match.
   The request will be blocked because rule (3) has the highest priority, overriding all other
   matching rules.
-- Consider a navigation to `"http://abcd.com"`. The rule with id (5) matches. Since rule (5)
+- Consider a navigation to `"https://abcd.com"`. The rule with id (5) matches. Since rule (5)
   specifies an extension path, the request is redirected to
   `"chrome-extension://<extension-id>/a.jpg"`.
 - Consider a navigation to `"http://example.com/path"`. The rule with id (6) matches. Since rule (6)
   specifies a url transform, the request is redirected to `"https://new.example.com/path"`.
-- Consider a navigation to `"http://www.abc.xyz.com/path"`. The rule with id (7) matches. The
+- Consider a navigation to `"https://www.abc.xyz.com/path"`. The rule with id (7) matches. The
   request will be redirected to `"https://abc.xyz.com/path"`.
 - Consider the following request hierarchy:
   - https://a.com/path (main-frame request)
@@ -334,7 +344,7 @@ is determined based on the priority of each rule and the operations specified.
       - https://d.com/script.js (script request, matches rule with ids (9))All requests in green
         will be allow-listed due to rule with id (8) and not be evaluated by the extensions'
         ruleset. Requests in red will be blocked due to rule with id (9).
-- Consider a navigation to `"http://headers.com/12345"` with response headers
+- Consider a navigation to `"https://headers.com/12345"` with response headers
   `{ "h1": "initial_1", "h2": "initial_2" }`. Rules with id (10) and (11) match. The request will
   have its response headers modified to `{ "h2": "v2", "h2": "v5", "h3": "v3", "h3": "v6" }`. Header
   `h1` was removed by (10), `h2` was set by (10) then appended by (11), and `h3` was appended by
@@ -357,3 +367,4 @@ is determined based on the priority of each rule and the operations specified.
 [15]: #global-static-rule-limit
 [16]: /docs/extensions/webRequest
 [17]: #method-updateSessionRules
+[18]: #property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS

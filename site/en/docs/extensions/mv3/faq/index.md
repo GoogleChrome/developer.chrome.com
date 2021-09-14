@@ -184,14 +184,14 @@ Chrome's built-in developer tools can be used to debug extensions as well as web
 
 ### Why do wildcard matches not work for top level domains (TLDs)? {: #faq-dev-16 }
 
-You cannot use wildcard match patterns like `http://google.*/*` to match TLDs (like
-`http://google.es` and `http://google.fr`) due to the complexity of actually restricting such a
+You cannot use wildcard match patterns like `https://google.*/*` to match TLDs (like
+`https://google.es` and `https://google.fr`) due to the complexity of actually restricting such a
 match to only the desired domains.
 
-For the example of `http://google.*/*`, the Google domains would be matched, but so would
-`http://google.someotherdomain.com`. Additionally, many sites do not own all of the TLDs for their
-domain. For an example, assume you want to use `http://example.*/*` to match `http://example.com`
-and `http://example.es`, but `http://example.net` is a hostile site. If your extension has a bug,
+For the example of `https://google.*/*`, the Google domains would be matched, but so would
+`https://google.someotherdomain.com`. Additionally, many sites do not own all of the TLDs for their
+domain. For an example, assume you want to use `https://example.*/*` to match `https://example.com`
+and `https://example.es`, but `https://example.net` is a hostile site. If your extension has a bug,
 the hostile site could potentially attack your extension in order to get access to your extension's
 increased privileges.
 
@@ -221,7 +221,7 @@ The steps you should follow to ensure this are:
     extension should have as little code as possible to demonstrate the bug—generally this should be
     100 lines of code or less. Many times, developers find that they cannot reproduce their issues
     this way, which is a good indicator that the bug is in their own code.
-2.  Search the issue tracker at [http://crbug.com][55] to see whether someone has reported a similar
+2.  Search the issue tracker at [https://crbug.com][55] to see whether someone has reported a similar
     issue. Most issues related to extensions are filed under **component=Platform>Extensions**, so
     to look for an extension bug related to the chrome.scripting.executeScript function (for example),
     search for "`component=Platform>Extensions Type=Bug chrome.scripting.executeScript`", which will give
@@ -230,7 +230,7 @@ The steps you should follow to ensure this are:
     receives an update. _Do not respond to the bug to say "me too" or ask "when will this be
     fixed?"_; such updates can cause hundreds of emails to be sent. Add a comment only if you have
     information (such as a better test case or a suggested fix) that is likely to be helpful.
-4.  If you found no appropriate bug to star, file a new issue report at [http://crbug.com/new][57].
+4.  If you found no appropriate bug to star, file a new issue report at [https://crbug.com/new][57].
     Be as explicit as possible when filling out this form: choose a descriptive title, explain the
     steps to reproduce the bug, and describe the expected and actual behavior. Attach your test
     example to the report and add screenshots if appropriate. The easier your report makes it for
@@ -251,7 +251,7 @@ tracker.
 
 The steps you should follow to ensure this are:
 
-1.  Search the issue tracker at [http://crbug.com][59] to see whether someone has requested a
+1.  Search the issue tracker at [https://crbug.com][59] to see whether someone has requested a
     similar feature. Most requests related to extensions are filed under
     **component=Platform>Extensions**, so to look for an extension feature request related to
     keyboard shortcuts (for example), search for
@@ -260,7 +260,7 @@ The steps you should follow to ensure this are:
 2.  If you find a ticket that matches your request, click the star icon to be notified when the bug
     receives an update. _Do not respond to the bug to say "me too" or ask "when will this be
     implemented?"_; such updates can cause hundreds of emails to be sent.
-3.  If you found no appropriate ticket to star, file a new request at [http://crbug.com/new][61]. Be
+3.  If you found no appropriate ticket to star, file a new request at [https://crbug.com/new][61]. Be
     as detailed as possible when filling out this form: choose a descriptive title and explain
     exactly what feature you would like and how you plan to use it.
 4.  Wait for the ticket to be updated. Most new requests are triaged within a week, although it can
@@ -272,8 +272,8 @@ The steps you should follow to ensure this are:
     make it easier for others with the same request to find the correct ticket.
 
 [1]: /docs/webstore/faq
-[2]: http://stackoverflow.com/questions/tagged/google-chrome-extension
-[3]: http://groups.google.com/a/chromium.org/group/chromium-extensions
+[2]: https://stackoverflow.com/questions/tagged/google-chrome-extension
+[3]: https://groups.google.com/a/chromium.org/group/chromium-extensions
 [4]: https://support.google.com/chrome_webstore/
 [5]: #faq-gen-01
 [6]: #faq-dev-01
@@ -304,18 +304,18 @@ The steps you should follow to ensure this are:
 [31]: #faq-fea-02
 [32]: /docs/extensions/mv3/getstarted
 [33]: /docs/extensions/api_other
-[34]: http://omahaproxy.appspot.com
+[34]: https://omahaproxy.appspot.com
 [35]: /docs/extensions/mv3/xhr
-[36]: http://json.org/js.html
-[37]: http://dev.w3.org/html5/webstorage/
-[38]: http://dev.w3.org/html5/webdatabase/
-[39]: http://unitedheroes.net/OAuthSimple/js/OAuthSimple.js
+[36]: https://json.org/js.html
+[37]: https://dev.w3.org/html5/webstorage/
+[38]: https://dev.w3.org/html5/webdatabase/
+[39]: https://unitedheroes.net/OAuthSimple/js/OAuthSimple.js
 [40]: /docs/extensions/reference/browserAction
 [41]: /docs/extensions/reference/pageAction
 [42]: /docs/extensions/mv3/richNotifications
 [43]: /docs/extensions/reference
 [44]: /docs/extensions/mv3/messaging#external
-[45]: http://www.google.com/analytics/
+[45]: https://www.google.com/analytics/
 [46]: /docs/extensions/mv3/tut_analytics
 [47]: /docs/extensions/mv3/override
 [48]: /docs/extensions/reference/runtime#event-onInstalled
@@ -325,15 +325,15 @@ The steps you should follow to ensure this are:
 [52]: /docs/extensions/reference/management
 [53]: /docs/extensions/reference/runtime#event-onInstalled
 [54]: #faq-lifecycle-events
-[55]: http://crbug.com
+[55]: https://crbug.com
 [56]:
   https://bugs.chromium.org/p/chromium/issues/list?can=2&q=component%3DPlatform>Extensions+Type%3DBug+chrome.scripting.executeScript
-[57]: http://crbug.com/new
-[58]: http://groups.google.com/a/chromium.org/group/chromium-extensions/topics
-[59]: http://crbug.com
+[57]: https://crbug.com/new
+[58]: https://groups.google.com/a/chromium.org/group/chromium-extensions/topics
+[59]: https://crbug.com
 [60]:
   https://bugs.chromium.org/p/chromium/issues/list?can=2&q=component%3DPlatform>Extensions+Type%3DFeature+shortcuts
-[61]: http://crbug.com/new
-[62]: http://groups.google.com/a/chromium.org/group/chromium-extensions/topics
+[61]: https://crbug.com/new
+[62]: https://groups.google.com/a/chromium.org/group/chromium-extensions/topics
 [stringify]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
 [parse]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse

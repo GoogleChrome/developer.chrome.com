@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Getting started"
 date: 2014-02-28
-updated: 2021-05-27
+updated: 2021-07-22
 description: Step-by-step instructions on how to create a Chrome Extension.
 ---
 
@@ -327,6 +327,11 @@ The extension is now fully functional! Reload the extension, refresh this page, 
 click the button to turn it green! However, some users may want to change the background to a
 different color.
 
+{% Aside 'gotchas' %}
+Extensions can not inject content scripts on internal Chrome pages like "chrome://extensions". Be
+sure to try out the extension on a real webpage like [https://google.com](https://google.com).
+{% endAside %}
+
 ## Give users options {: #options }
 
 The extension currently only allows users to change the background to green. Including an options
@@ -442,13 +447,13 @@ What's next?
 [2]: /docs/extensions/mv3/content_scripts
 [3]: /docs/extensions/mv3/options
 [4]: /docs/extensions/mv3/user_interface
-[6]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/SVxMBoc5P3f6YV3O7Xbu.zip
+[6]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/SVxMBoc5P3f6YV3O7Xbu.zip
 [7]: /docs/extensions/mv3/manifest
 [11]: /docs/extensions/reference/runtime#event-onInstalled
 [12]: /docs/extensions/reference/storage
 [15]: /docs/extensions/mv3/user_interface#popup
 [17]: /docs/extensions/reference/action
-[18]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/wy3lvPQdeJn4iqHmI0Rp.zip
+[18]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/wy3lvPQdeJn4iqHmI0Rp.zip
 [19]: /docs/extensions/mv3/user_interface#icons
 [20]: /docs/extensions/reference/declarativeContent
 [24]: /docs/extensions/mv3/content_scripts/#programmatic

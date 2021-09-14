@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-const {buildHandlers: buildRedirectsYamlHandlers} = require('redirects-yaml');
+const {doRedirect} = require('./env');
+const redirectsYaml = require('redirects-yaml');
 const YAML = require('js-yaml');
 const fs = require('fs');
 const path = require('path');
@@ -31,10 +32,10 @@ function buildCheckHandlerInternal(redirects, staticPaths = undefined) {
   let checker = () => true;
   if (staticPaths) {
     // Ensure that staticPath is never blank (this ensures it's always ".").
-    staticPaths = staticPaths.map(staticPath => staticPath || '.');
+    const alwaysStaticPaths = staticPaths.map(staticPath => staticPath || '.');
 
     checker = s => {
-      for (const staticPath of staticPaths) {
+      for (const staticPath of alwaysStaticPaths) {
         // This is passed the folder name, not "/index.html". We just assume that any folder that
         // exists can be redirected to.
         const check = path.join(staticPath, s);
@@ -46,7 +47,7 @@ function buildCheckHandlerInternal(redirects, staticPaths = undefined) {
     };
   }
 
-  return buildRedirectsYamlHandlers(redirects, checker);
+  return redirectsYaml.buildHandlers(redirects, checker);
 }
 
 /**
@@ -59,16 +60,17 @@ function buildCheckHandlerInternal(redirects, staticPaths = undefined) {
  * @return {express.RequestHandler}
  */
 function buildRedirectHandler(filename, staticPaths = undefined, code = 301) {
-  const raw = fs.readFileSync(filename, 'utf-8');
-  const yaml = YAML.load(raw);
+  const raw = YAML.load(fs.readFileSync(filename, 'utf-8'));
+  const {redirects} =
+    /** @type {{ redirects: redirectsYaml.RedirectLine[] }} */ (raw);
 
-  const handler = buildCheckHandlerInternal(yaml.redirects, staticPaths);
+  const handler = buildCheckHandlerInternal(redirects, staticPaths);
 
   /** @type {express.RequestHandler} */
   return (req, res, next) => {
     const target = handler(req.url);
     if (target !== null && target !== req.url) {
-      return res.redirect(code, target);
+      return doRedirect(res, target, code);
     }
 
     // If we didn't match normally but the URL contains a dot, then check it again with those
@@ -81,7 +83,7 @@ function buildRedirectHandler(filename, staticPaths = undefined, code = 301) {
       }
       const target = handler(update);
       if (target !== null && target !== req.url) {
-        return res.redirect(code, target);
+        return doRedirect(res, target, code);
       }
     }
 

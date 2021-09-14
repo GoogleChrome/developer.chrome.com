@@ -210,9 +210,9 @@ inputsAreEmpty (get-started.js:22)
 onClick (get-started.js:15)
 ```
 
-## Ignore a script or pattern of scripts {: #blackbox }
+## Ignore a script or pattern of scripts {: #ignore-list }
 
-Blackbox a script when you want to ignore that script while debugging. When blackboxed, a script is
+Ignore a script to skip it while debugging. When ignored, a script is
 obscured in the Call Stack pane, and you never step into the script's functions when you step
 through your code.
 
@@ -227,44 +227,44 @@ function animate() {
 ```
 
 `A` is a third-party library that you trust. If you're confident that the problem you're debugging
-is not related to the third-party library, then it makes sense to blackbox the script.
+is not related to the third-party library, then it makes sense to ignore the script.
 
-### Blackbox a script from the Editor pane {: #editor-blackbox }
+### Ignore a script from the Editor pane {: #editor-ignore-list }
 
-To blackbox a script from the Editor pane:
+To ignore a script from the Editor pane:
 
 1.  Open the file.
 2.  Right-click anywhere.
-3.  Select **Blackbox script**.
+3.  Select **Add script to ignore list**.
 
-{% Img src="image/admin/GhNf369siGvdo9lt8m6Z.png", alt="Blackboxing a script from the Editor pane.", width="800", height="632" %}
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/q7leDy8D975ZlhtiB3f6.png", alt="Ignoring a script from the Editor pane.", width="800", height="575" %}
 
-**Figure 12**. Blackboxing a script from the Editor pane
+**Figure 12**. Ignoring a script from the Editor pane
 
-### Blackbox a script from the Call Stack pane {: #call-stack-blackbox }
+### Ignore a script from the Call Stack pane {: #call-stack-ignore-list }
 
-To blackbox a script from the Call Stack pane:
+To ignore a script from the Call Stack pane:
 
 1.  Right-click on a function from the script.
-2.  Select **Blackbox script**.
+2.  Select **Add script to ignore list**.
 
-{% Img src="image/admin/e7zpqaYG9tHW7u1s0slX.png", alt="Blackboxing a script from the Call Stack pane.", width="800", height="634" %}
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/y2NiIZH9UURpEtXAuVCZ.png", alt="Ignoring a script from the Call Stack pane.", width="800", height="575" %}
 
-**Figure 13**. Blackboxing a script from the Call Stack pane
+**Figure 13**. Ignoring a script from the Call Stack pane
 
-### Blackbox a script from Settings {: #settings-blackbox }
+### Ignore a script from Settings {: #settings-ignore-list }
 
-To blackbox a single script or pattern of scripts from Settings:
+To ignore a single script or pattern of scripts from Settings:
 
 1.  Open [Settings][3].
-2.  Go to the **Blackboxing** tab.
+2.  Go to the **Ignore List** tab.
 3.  Click **Add pattern**.
-4.  Enter the script name or a regex pattern of script names to blackbox.
+4.  Enter the script name or a regex pattern of script names to ignore.
 5.  Click **Add**.
 
-{% Img src="image/admin/htNiY3e0ygFegu9yeLiJ.png", alt="Blackboxing a script from Settings.", width="800", height="598" %}
+{% Img src="image/QMjXarRXcMarxQddwrEdPvHVM242/DFANGZspw5B4IlgO04I6.png", alt="Ignoring a script from Settings.", width="800", height="552" %}
 
-**Figure 14**. Blackboxing a script from Settings
+**Figure 14**. Ignoring a script from Settings
 
 ## Run snippets of debug code from any page {: #snippets }
 

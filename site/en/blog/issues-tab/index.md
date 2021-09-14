@@ -14,6 +14,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 In the last quarter of 2019, the Chrome DevTools team started improving the developer experience in DevTools around cookies. This was particularly important because Google Chrome and other browsers had begun to change their default cookie behavior. 
 
 While researching the tools that DevTools already provides, we often found ourselves in a situation like the following:
@@ -120,3 +122,6 @@ To keep issues actionable, we want to make it easier to discover which part of a
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/Igbkg2AiyWGqET8GAfOZ.mp4", autoplay="true", muted="true", loop="true" %}
 
 If you have any suggestions to improve the Issues tab, let us know by filing a [bug](https://crbug.com/new)!
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

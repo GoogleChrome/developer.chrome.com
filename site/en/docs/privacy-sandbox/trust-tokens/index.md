@@ -6,7 +6,7 @@ subhead: >
 description: >
   The Trust Tokens API enables trust of a user in one context to be conveyed to another context, without identifying the user or linking identities between the two contexts. The API enables an origin to issue cryptographic tokens to a user it trusts. The tokens are stored by the user's browser. The browser can then use the tokens in other contexts to evaluate the user's authenticity.
 date: 2021-05-18
-updated: 2021-05-18
+updated: 2021-08-18
 authors:
   - samdutton
 ---
@@ -14,7 +14,7 @@ authors:
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 91.
+* [In origin trial](https://web.dev/origin-trials/) Chrome 84 to 94.
 * [Register for the trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
 * [Demo](https://trust-token-demo.glitch.me/).
 * [Chrome DevTools integration](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
@@ -22,6 +22,10 @@ authors:
 
 
 ## What are Trust Tokens?
+
+{% YouTube
+  id='bXB1Iwq6Eq4' 
+%}
 
 Trust Tokens enable trust in a user's authenticity to be conveyed from one context to another, to 
 help sites combat fraud and distinguish bots from real humans—without passive tracking.

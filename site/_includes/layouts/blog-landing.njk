@@ -3,6 +3,7 @@
 {% from 'macros/cards/blog-card.njk' import blogCard with context %}
 
 {% block title_bar %}
+  {% set headingBreadcrumb = true %}
   {% include 'partials/breadcrumbs.njk' %}
 {% endblock %}
 

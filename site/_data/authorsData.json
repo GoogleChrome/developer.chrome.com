@@ -332,7 +332,13 @@
     "github": "chybie",
     "email": "jec@google.com",
     "descriptions": {
-      "en": "Developer advocate working on Chrome DevTools at Google."
+      "en": "Developer advocate working on Chrome DevTools at Google.",
+      "es": "Developer advocate, trabajando en Chrome DevTools en Google.",
+      "zh": "现为谷歌 Chrome DevTools 的开发技术推广工程师。",
+      "ru": "Developer advocate, rabotayushchiy nad Chrome DevTools v Google.",
+      "pt": "Developer Advocate trabalhando no Chrome DevTools no Google.",
+      "ko": "Google 의 Chrome DevTools 팀에서 일하는 Developer Advocate 입니다",
+      "ja": "Google で Chrome DevTools に取り組んでいる Developer Advocate です。"
     },
     "image": "image/BrQidfK9jaQyIHwdw91aVpkPiib2/4HPVWldl8gHYH8npWFHu.jpg"
   },
@@ -665,7 +671,7 @@
     "country": "DE",
     "twitter": "maudnals",
     "github": "maudnals",
-    "image": "image/80mq7dk16vVEg8BBhsVe42n6zn82/fJP5RRP6pcCnfctkaQhu.jpg"
+    "image": "image/O2RNUyVSLubjvENAT3e7JSdqSOx1/bpoFTthopZevDRDPPo3r.jpg"
   },
   "beaufortfrancois": {
     "name": {
@@ -736,6 +742,24 @@
     "country": "DE",
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
   },
+  "ajara": {
+    "name": {
+      "given": "Adriana",
+      "family": "Jara"
+    },
+    "homepage": "https://blog.tomayac.com/",
+    "twitter": "tropicadri",
+    "github": "tropicadri",
+    "descriptions": {
+      "en": "Adriana is a developer relations engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "US",
+    "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/suAORxTqXSSw91SaRaTm.jpg"
+  },
   "chrishtr": {
     "name": {
       "given": "Chris",
@@ -780,6 +804,22 @@
     "country": "US",
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/kUhkXfBItc8GVTkWA2AB.jpg"
   },
+  "joycetoh": {
+    "name": {
+      "given": "Joyce",
+      "family": "Toh"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "descriptions": {
+      "en": "Joyce is a Developer Relations Engineer for Chrome OS."
+    },
+    "country": "US",
+    "github": "joycetoh8",
+    "image": "image/ttTommHYbJXsEL29zNB1wXBvH4z1/25uXyGl2m7FtpUyogSpL.jpeg"
+  },
   "yigu": {
     "name": {
       "given": "Yi",
@@ -796,5 +836,190 @@
     "github": "yi-gu",
     "country": "CA",
     "image": "image/YLflGBAPWecgtKJLqCJHSzHqe2J2/qEqbB89jHxBWSyDjCeQh.jpg"
+  },
+  "hanselfmu": {
+    "name": {
+      "given": "Changhao",
+      "family": "Han"
+    },
+    "descriptions": {
+      "en": "Google engineer working on Chrome DevTools."
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "twitter": "han_changhao",
+    "github": "hanselfmu",
+    "country": "DE",
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oEV9Pd48COn9JnMrUYzZ.jpg"
+  },
+  "rowan_m": {
+    "name": {
+      "given": "Rowan",
+      "family": "Merewood"
+    },
+    "country": "UK",
+    "twitter": "rowan_m",
+    "github": "rowan-m",
+    "glitch": "rowan-m",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/36DbfIY65yZEBUfN0VZ3.jpeg"
+  },
+  "danielcheng": {
+    "name": {
+      "given": "Daniel",
+      "family": "Cheng"
+    },
+    "descriptions": {
+      "en": "Security Architecture engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "github": "zetafunction",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/bkhHWyJ094v913iIMo2C.jpg"
+  },
+  "progers": {
+    "name": {
+      "given": "Philip",
+      "family": "Rogers"
+    },
+    "descriptions": {
+      "en": "Paint and Compositing tech lead"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "github": "progers",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/euJh3BcGWhuuJG7keukf.jpg"
+  },
+  "kojiishi": {
+    "name": {
+      "given": "Koji",
+      "family": "Ishi"
+    },
+    "descriptions": {
+      "en": "Layout engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "github": "kojiishi",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/3we9yRG0YsHoQ3O9CU7M.jpg"
+  },
+  "iankilpatrick": {
+    "name": {
+      "given": "Ian",
+      "family": "Kilpatrick"
+    },
+    "descriptions": {
+      "en": "Layout tech lead"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "github": "bfgeek",
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/sSG6wOWF6LiAytFXAi8L.jpg"
+  },
+  "kylecharbonneau": {
+    "name": {
+      "given": "Kyle",
+      "family": "Charbonneau"
+    },
+    "descriptions": {
+      "en": "Viz engineer"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/GLfwUjU4lr5ceazmYP1X.jpg"
+  },
+  "dalecurtis": {
+    "name": {
+      "given": "Dale",
+      "family": "Curtis"
+    },
+    "descriptions": {
+      "en": "Engineering lead for media playback in Chromium"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "image": "image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/tXj7wN2dYxURc2jOyF7n.png"
+  },
+  "kritisapra": {
+    "name": {
+      "given": "Kriti",
+      "family": "Sapra"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "country": "UK",
+    "twitter": "kritisapra_",
+    "github": "kriti-sapra",
+    "homepage": "https://www.kritisapra.co.uk/",
+    "descriptions": {
+      "en": "Software Engineering Intern working on Chrome DevTools"
+    },
+    "image": "image/odjn1VxxoIc8gBVMXV0DIYIt2zn2/UceO32Ju1t1aDGz16GTQ.jpg"
+  },
+  "brendankenny": {
+    "name": {
+      "given": "Brendan",
+      "family": "Kenny"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Developer Relations"
+    },
+    "descriptions": {
+      "en": "Lighthouse lens polisher"
+    },
+    "country": "US",
+    "twitter": "brendankenny",
+    "github": "brendankenny",
+    "image": "image/MtjnObpuceYe3ijODN3a79WrxLU2/sWOfAs4f2WyQMMF9xt1A.jpg"
+  },
+  "abeyad": {
+    "name": {
+      "given": "Ali",
+      "family": "Beyad"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "descriptions": {
+      "en": "Software Engineer"
+    },
+    "country": "US",
+    "twitter": "alibeyad",
+    "github": "abeyad",
+    "image": "image/BLBNCWcM57UxCqJ0LsNECuVCaxD2/GR8cNgtWyPyXDqI4d61Q.jpeg"
+  },
+  "arichiv": {
+    "name": {
+      "given": "Ari",
+      "family": "Chivukula"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "descriptions": {
+      "en": "Senior Software Engineer"
+    },
+    "country": "US",
+    "twitter": "iblameari",
+    "github": "arichiv",
+    "image": "image/kY6vrM8mwvcBzVokoWQTl9rKquv1/ctQrNhmIeWkvn9zfV6X0.jpg"
   }
 }

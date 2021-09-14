@@ -6,7 +6,12 @@ updated: 2020-03-09
 description: How to implement cross-origin XHR in your Chrome Extension.
 ---
 
-Regular web pages can use the [XMLHttpRequest][1] object to send and receive data from remote
+{% Aside 'warning' %}
+In Manifest V3, `XMLHttpRequest` is not supported in background pages (provided by Service Workers).
+Please consider using its modern replacement, `fetch()`.
+{% endAside %}
+
+Regular web pages can use the [`XMLHttpRequest`][1] object to send and receive data from remote
 servers, but they're limited by the [same origin policy][2]. [Content scripts][3] initiate requests
 on behalf of the web origin that the content script has been injected into and therefore content
 scripts are also subject to the [same origin policy][4]. (Content scripts have been subject to [CORB
@@ -17,7 +22,7 @@ its origin, as long as the extension requests cross-origin permissions.
 ## Extension origin {: #extension-origin }
 
 Each running extension exists within its own separate security origin. Without requesting additional
-privileges, the extension can use XMLHttpRequest to get resources within its installation. For
+privileges, the extension can use `XMLHttpRequest` to get resources within its installation. For
 example, if an extension contains a JSON configuration file called `config.json`, in a
 `config_resources` folder, the extension can retrieve the file's contents like this:
 
@@ -76,7 +81,7 @@ non-secure HTTP access to a given host or set of hosts, it must declare the perm
 
 ### Avoiding cross-site scripting vulnerabilities {: #xss }
 
-When using resources retrieved via XMLHttpRequest, your background page should be careful not to
+When using resources retrieved via `XMLHttpRequest`, your background page should be careful not to
 fall victim to [cross-site scripting][9]. Specifically, avoid using dangerous APIs such as the
 below:
 
@@ -125,8 +130,8 @@ var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://api.example.com/data.json", true);
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4) {
-    // innerText does not let the attacker inject HTML elements.
-    document.getElementById("resp").innerText = xhr.responseText;
+    // textContent does not let the attacker inject HTML elements.
+    document.getElementById("resp").textContent = xhr.responseText;
   }
 }
 xhr.send();
