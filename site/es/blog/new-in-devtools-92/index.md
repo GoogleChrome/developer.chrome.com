@@ -7,7 +7,7 @@ date: 2021-07-26
 updated: 2021-07-26
 description:
   "Editor de CSS Grid, Soporte para la redeclaración de const en la consola, Visor de orden de los elementos y más."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XtJztwxzQqOWhOHrKmhM.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cNkvli3QcoNTlZiuJfHk.jpg'
 alt: ''
 tags:
   - new-in-devtools
