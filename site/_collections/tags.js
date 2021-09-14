@@ -39,9 +39,11 @@ module.exports = function (collections) {
     .filter(filterOutDrafts);
 
   // The i18n for this file exposes top-level object keys of valid tags.
-  const supportedTags = /** @type {{[tag: string]: unknown}} */ (YAML.load(
-    fs.readFileSync(path.join(__dirname, '../_data/i18n/tags.yml'), 'utf-8')
-  ));
+  const supportedTags = /** @type {{[tag: string]: unknown}} */ (
+    YAML.load(
+      fs.readFileSync(path.join(__dirname, '../_data/i18n/tags.yml'), 'utf-8')
+    )
+  );
 
   /**
    * Iterates over every post in order to place them in the proper tag collections.

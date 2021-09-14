@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2021-08-11
-updated: 2021-08-11
+updated: 2021-09-07
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/b52LlVcFfbFtxgfT0BoF.jpg
 alt: Test tubes in a metal rack, one containing clear green liquid.
 tags:
@@ -37,6 +37,10 @@ To troubleshoot an origin trial, work through each of the issues below using the
   <input class="w-checkbox" type="checkbox" id="check-chrome-versions">
   <label for="check-chrome-versions" class="w-ml--l"><a href="#version">The origin trial is enabled 
     for the Chrome versions accessing your site</a></label>
+  <br>
+  <input class="w-checkbox" type="checkbox" id="check-chrome-settings">
+  <label for="check-chrome-settings" class="w-ml--l"><a href="#settings">The origin trial is not 
+  disabled by Chrome settings</a></label>
   <br>
   <input class="w-checkbox" type="checkbox" id="check-syntax">
   <label for="check-syntax" class="w-ml--l"><a href="#syntax">Keywords and syntax are correct</a></label>
@@ -195,6 +199,13 @@ for the trial:
 page for First Party Sets & SameParty with Chrome availability highlighted", width="800", height="653" %}
 
 You can check the Chrome version you're using from chrome://version.
+
+
+### The origin trial is not disabled by Chrome settings {: #settings}
+
+If an individual user reports that a feature is not working for them, check that the feature is not 
+disabled in their Chrome settings. For example, [Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox) 
+features can be disabled from the `chrome://settings/privacySandbox` page.
 
 
 ### Keywords and syntax are correct {: #syntax}

@@ -21,13 +21,13 @@
   <div class="tag-card__header gap-bottom-600">
     <h2 class="type--label color-secondary-text case-upper">{{ 'i18n.nav.side_nav.releases' | i18n(locale) }}</h2>
     <ul role="list" class="pad-0 gap-top-300 gap-bottom-0">
-      {% for tag in namedChromeReleaseTags %}
+      {% for tag in currentChromeReleaseTags %}
         {{ renderTag(tag) }}
       {% endfor %}
       <select-loader>
         <select class="type--label gap-top-300 gap-bottom-300 color-primary">
           <option disabled selected>{{ 'i18n.common.older_releases' | i18n(locale) }}</option>
-          {% for tag in chromeReleaseTags %}
+          {% for tag in historicChromeReleaseTags %}
             <option href="{{ helpers.join('/', locale, 'tags', tag.key, '/') }}">{{ tag.title }}</option>
           {% endfor %}
         </select>
