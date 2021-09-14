@@ -110,7 +110,7 @@ codes](https://web.dev/web-otp/#format).
 ```text
 Your OTP is: 123456.
 
-@web-otp-demo.glitch.me #12345
+@web-otp-demo.glitch.me #123456
 ```
 
 Notice that the last line contains the origin to be bound to preceded with a `@`
