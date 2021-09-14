@@ -12,9 +12,10 @@ Visit [the image uploader page](https://web-dev-uploads.web.app/) and
 sign-in using your Google corporate account. Note that this page only allows
 Googlers access, so signing in with a personal account will fail.
 
-{% Aside 'caution' %}
+{% Aside %}
 Prior to September 2021, there were different uploaders for developer.chrome.com and web.dev.
 Now, all assets are uploaded through the single uploader.
+This means you can migrate content between the sites and use the same sources.
 {% endAside %}
 
 ## Choose a file
