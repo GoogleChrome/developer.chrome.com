@@ -99,3 +99,9 @@ identity:
 
 rendering:
   en: Rendering
+
+lighthouse:
+  en: Lighthouse
+
+new-in-lighthouse:
+  en: What's new in Lighthouse
