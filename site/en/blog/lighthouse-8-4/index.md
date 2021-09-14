@@ -23,7 +23,11 @@ npm install -g lighthouse
 lighthouse https://www.example.com --view
 ```
 
-## Don't lazy-load Largest Contentful Paint images {: #new-audit-lazy-lcp }
+See the full list of changes in the [8.4 changelog](https://github.com/GoogleChrome/lighthouse/releases/tag/v8.4.0).
+
+## New audits
+
+### Don't lazy-load Largest Contentful Paint images {: #new-audit-lazy-lcp }
 
 Lazy-loading images can be an effective way to defer offscreen images so they don't interfere with loading the content that is [above the fold](https://web-dev.imgix.net/image/admin/t3Kkvh265zi6naTBga41.png?auto=format&w=845).
 
