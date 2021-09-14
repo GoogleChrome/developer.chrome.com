@@ -2,6 +2,8 @@ require('dotenv').config();
 const CacheAsset = require('@11ty/eleventy-cache-assets');
 const escapeStringRegexp = require('escape-string-regexp');
 
+// nb. All images and uploaded assets are in the web-dev-uploads bucket, but tweets are still in
+// the default project bucket.
 const url =
   'https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/tweets.json';
 
