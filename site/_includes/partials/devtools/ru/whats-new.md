@@ -1,7 +1,7 @@
 ## Больше новинок DevTools {: #whats-new }
 
 Чтобы увидеть полный список обновлений,  перейдите на английскую версию по ссылке 
-[What's New In DevTools](/tags/new-in-devtools/). Ниже перечислены материалы, переведенные на русский язык.
+<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
 
 ### Chrome 94 {: #chrome94 }
