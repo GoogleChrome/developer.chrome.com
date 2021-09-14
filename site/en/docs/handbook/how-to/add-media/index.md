@@ -8,14 +8,13 @@ updated: 2021-03-11
 
 ## Navigate to the media uploader
 
-Visit [the image uploader page](https://chrome-gcs-uploader.web.app/) and
+Visit [the image uploader page](https://web-dev-uploads.web.app/) and
 sign-in using your Google corporate account. Note that this page only allows
 Googlers access, so signing in with a personal account will fail.
 
 {% Aside 'caution' %}
-There are different uploaders for developer.chrome.com and web.dev:
-* [developer.chrome.com uploader](https://chrome-gcs-uploader.web.app/)
-* [web.dev uploader](https://web-dev-uploads.web.app/uploader)
+Prior to September 2021, there were different uploaders for developer.chrome.com and web.dev.
+Now, all assets are uploaded through the single uploader.
 {% endAside %}
 
 ## Choose a file
