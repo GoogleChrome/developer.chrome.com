@@ -1,5 +1,5 @@
 ## 더 많은 DevTools 기능 {: #whats-new }
-[What's New In DevTools](/tags/new-in-devtools/) 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
+<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
 ### Chrome 93 {: #chrome93 }
 
