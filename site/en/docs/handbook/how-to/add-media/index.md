@@ -14,7 +14,7 @@ Googlers access, so signing in with a personal account will fail.
 
 {% Aside %}
 Prior to September 2021, there were different uploaders for developer.chrome.com and web.dev.
-Now, all assets are uploaded through the single uploader.
+Now, all assets are uploaded through a single uploader.
 This means you can migrate content between the sites and use the same sources.
 {% endAside %}
 
