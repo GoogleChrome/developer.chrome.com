@@ -3,8 +3,8 @@ layout: 'layouts/blog-post.njk'
 title: 'Deep-dive: VideoNG'
 description: >
   Learn about modern playback systems and how Chromium powers several hundred million hours of watch time every day.
-date: 2021-09-10
-thumbnail: 'image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/f3QXPzlrvld8AowYWoLM.jpg'
+date: 2021-09-14
+thumbnail: 'image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/L14to8AnyICHGkgfgEJm.jpg'
 alt: 'Bytes flowing in, and structured packets flowing out.'
 authors:
   - dalecurtis
