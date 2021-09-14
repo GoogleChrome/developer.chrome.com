@@ -14,6 +14,7 @@ date: 2021-09-14
 tags:
   - privacy
   - origin-trials
+  - chrome-95
 ---
 
 User-Agent Reduction is an effort to reduce passive fingerprinting surfaces by
@@ -158,11 +159,11 @@ ensure the following:
 The initial response's headers containing the origin trial token should look
 like:
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/Be9o0RpIopKQWKfTGHH9.png", alt="Initial response's headers containing the origin-trial token.", width="800", height="187" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/INqCEg57xx8MbFBnLIUD.png", alt="Initial response's headers containing the origin-trial token.", width="800", height="138", class="screenshot" %}
 
 Subsequent request headers containing the reduced UA string should look like:
 
-{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/15pWvTVlG9P4G5pbh9Kg.png", alt="Subsequent request headers containing the reduced UA string.", width="800", height="309" %}
+{% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/C9AX8VAk50i23LzNTNuw.png", alt="Subsequent request headers containing the reduced UA string.", width="800", height="150", class="screenshot" %}
 
 ## How do I stop participating in the User-Agent Reduction origin trial?
 
