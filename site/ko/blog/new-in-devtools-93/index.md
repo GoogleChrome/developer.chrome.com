@@ -15,7 +15,7 @@ tags:
   - chrome-93
 ---
 
-*이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였습니다. [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh) 님과  최원영님이 리뷰어로 참여했습니다!*
+*이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였습니다. 이지웅님이 리뷰어로 참여했습니다!*
 
 {% include 'partials/devtools/ko/banner.md' %}
 
