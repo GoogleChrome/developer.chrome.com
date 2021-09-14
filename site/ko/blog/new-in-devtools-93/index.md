@@ -1,13 +1,13 @@
 ---
 layout: "layouts/blog-post.njk"
-title: "DevTools 업데이트 소식 (Chrome 93)"
+title: "DevTools 의 새로운 기능 (Chrome 93)"
 authors:
   - jecelynyeen
 date: 2021-07-28
 updated: 2021-07-28
 description:
   "수정 가능한 CSS 컨테이너 쿼리, 웹 번들 프리뷰, Console 에서 더 나은 문자열 제어 및 추가 업데이트 소식"
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cNXHu1JnHCfRSnIr1bV7.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Cs7C4adVQQjG54wEmBch.jpg'
 alt: ''
 tags:
   - new-in-devtools
