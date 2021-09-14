@@ -990,5 +990,22 @@
     "twitter": "alibeyad",
     "github": "abeyad",
     "image": "image/BLBNCWcM57UxCqJ0LsNECuVCaxD2/GR8cNgtWyPyXDqI4d61Q.jpeg"
+  },
+  "arichiv": {
+    "name": {
+      "given": "Ari",
+      "family": "Chivukula"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "descriptions": {
+      "en": "Senior Software Engineer"
+    },
+    "country": "US",
+    "twitter": "iblameari",
+    "github": "arichiv",
+    "image": "image/kY6vrM8mwvcBzVokoWQTl9rKquv1/ctQrNhmIeWkvn9zfV6X0.jpg"
   }
 }
