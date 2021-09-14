@@ -12,6 +12,7 @@ description: |
   them to be updated in the future.
 tags:
   - progressive-web-apps
+# - chrome-96
 ---
 
 When the user installs your PWA, the browser needs a way to uniquely identify
@@ -27,7 +28,7 @@ your PWA. Adding the `id` property to the manifest removes the dependency on
 the `start_url` or the location of the manifest, and makes it possible for
 them to be updated in the future.
 
-## What does the id property do?
+## What does the `id` property do?
 
 The `id` property represents the identity of the PWA to the browser. When
 the browser sees a manifest that does not have an identity that matches an
