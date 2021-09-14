@@ -12,7 +12,7 @@ description: |
   them to be updated in the future.
 tags:
   - progressive-web-apps
-# - chrome-96
+  - chrome-96
 ---
 
 When the user installs your PWA, the browser needs a way to uniquely identify
