@@ -16,7 +16,6 @@ tags:
   - origin-trials
 ---
 
-
 User-Agent Reduction is an effort to reduce passive fingerprinting surfaces by
 reducing the information in the
 [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
@@ -48,20 +47,23 @@ welcome feedback or any issues throughout this trial in the UA Reduction [Github
 repository](https://github.com/abeyad/user-agent-reduction/issues).
 
 ## What is the User-Agent?
+
 The
 [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
 (UA) string is shared on every HTTP request and exposed in JavaScript to all
 resources loaded by the browser. Currently, it contains significant information
 on the browser and the platform it's running on.
 
-## Why is the User-Agent being reduced?  
+## Why is the User-Agent being reduced?
+
 User-Agent Reduction is an effort to reduce passive fingerprinting surfaces in
 the Chrome browser that was first announced in January 2020. By reducing the
 information in the UA string to just the browser's brand and significant
 version, its desktop or mobile distinction, and the platform it's running on, it
 becomes more difficult to identify individual users.
 
-## What does this mean for web developers?  
+## What does this mean for web developers?
+
 Sites should prepare to receive reduced UA strings and consider participating in
 the origin trial (detailed below). The reduced user agent values will appear
 in:
@@ -77,7 +79,8 @@ Hints](https://web.dev/migrate-to-ua-ch/) API. For more details on migration
 strategies, see [Migrate to User-Agent Client
 Hints](https://web.dev/migrate-to-ua-ch/). 
 
-## How does this origin trial work? 
+## How does this origin trial work?
+
 This origin trial is a bit different from a standard origin trial. Standard
 origin trials can only control behavior in the response (for example, control
 access to an API in the response's Javascript). In this trial, our goal is to
@@ -143,6 +146,7 @@ propagate to the cross-origin requests.
     demonstration of the origin trial (along with the source code).
 
 ## How do I validate that the origin trial is working? {: #validate }
+
 To validate that the origin trial is working, examine the request headers and
 ensure the following:
 
@@ -160,7 +164,8 @@ Subsequent request headers containing the reduced UA string should look like:
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/15pWvTVlG9P4G5pbh9Kg.png", alt="Subsequent request headers containing the reduced UA string.", width="800", height="309" %}
 
-## How do I stop participating in the User-Agent Reduction origin trial? 
+## How do I stop participating in the User-Agent Reduction origin trial?
+
 At any given point in time during the trial, you can stop participating and
 receive the full User-Agent string. To stop participating:
 
@@ -173,7 +178,8 @@ receive the full User-Agent string. To stop participating:
 1.  If set, remove `Sec-CH-UA-Reduced` from the `Critical-CH` header in your
     HTTP response.
 
-## How long will the origin trial last?   
+## How long will the origin trial last?
+
 The UA Reduction origin trial will run for at least six months, which
 corresponds to about six Chrome milestones. The origin trial will appear in M95
 and end by M101, at which point, Chrome will evaluate the feedback from the
@@ -184,6 +190,7 @@ If a site needs longer they can opt into a subsequent deprecation origin trial,
 which would allow them to access the full UA string for at least another six
 months. We will publish more details on the deprecation trial when it's ready.
 
-## How do I share feedback for the User-Agent Reduction origin trial? 
+## How do I share feedback for the User-Agent Reduction origin trial?
+
 Submit any issues or feedback to the UA Reduction [Github
 repository](https://github.com/abeyad/user-agent-reduction/issues).
