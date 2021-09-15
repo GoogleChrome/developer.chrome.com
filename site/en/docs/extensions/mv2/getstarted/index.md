@@ -434,7 +434,7 @@ What's next?
 [3]: /options
 [4]: /user_interface
 [5]: /docs/
-[6]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/n7V7IbH6D6gqNCV7Kp5t.zip "get_started_complete.zip"
+[6]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/n7V7IbH6D6gqNCV7Kp5t.zip "get_started_complete.zip"
 [7]: /docs/extensions/mv2/manifest
 [9]: /background_pages
 [11]: /runtime#event-onInstalled
@@ -443,7 +443,7 @@ What's next?
 [14]: /user_interface
 [15]: /user_interface#popup
 [17]: /pageAction
-[18]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qwlTyQ1ah3RmqsgDhRkL.zip "images.zip"
+[18]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qwlTyQ1ah3RmqsgDhRkL.zip "images.zip"
 [19]: /user_interface#icons
 [20]: /declarativeContent
 [21]: /declarativeContent

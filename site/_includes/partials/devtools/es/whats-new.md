@@ -1,6 +1,6 @@
 ## Más características de DevTools {: #whats-new }
 
-Por favor, revisa la versión en inglés de [Qué hay de nuevo en DevTools](/tags/new-in-devtools/) para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
+Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
 ### Chrome 94 {: #chrome94 }
 

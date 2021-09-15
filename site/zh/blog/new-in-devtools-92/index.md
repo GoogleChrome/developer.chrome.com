@@ -7,7 +7,7 @@ date: 2021-06-02
 updated: 2021-06-02
 description:
   "CSS 网格编辑器、支持控制台中的 const 重声明、来源顺序查看器以及更多。"
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XtJztwxzQqOWhOHrKmhM.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BnPX5Sm6bpsxg4Rv0hV8.jpg'
 alt: ''
 tags:
   - new-in-devtools

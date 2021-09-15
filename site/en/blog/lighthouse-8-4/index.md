@@ -9,7 +9,7 @@ description: >
 tags:
   - new-in-lighthouse
   - lighthouse
-  # - chrome-95
+  - chrome-95
 ---
 Lighthouse is an automated website auditing tool that helps developers with opportunities and diagnostics to improve the user experience of their sites. It's available in Chrome DevTools, npm (as a Node module and a CLI), or as a browser extension (in [Chrome](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/google-lighthouse/)). It powers many Google services, including [web.dev/measure](https://web.dev/measure/) and [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights).
 
@@ -22,6 +22,10 @@ To try the Lighthouse Node CLI, use the following commands:
 npm install -g lighthouse
 lighthouse https://www.example.com --view
 ```
+
+See the full list of changes in the [8.4 changelog](https://github.com/GoogleChrome/lighthouse/releases/tag/v8.4.0).
+
+## New audits
 
 ### Don't lazy-load Largest Contentful Paint images {: #new-audit-lazy-lcp }
 
@@ -39,7 +43,7 @@ For more information, see the [initial proposal](https://github.com/GoogleChrome
 
 The `viewport` audit has been a part of the Best Practices category for years, but 8.4 welcomes this advice to the Performance category as well.
 
-Many mobile browsers support "double tap to zoom" to allow users to easily magnify content not designed for a mobile screen, that is, content without an explicit mobile `<meta name="viewport">`. In practice, this means the browser [needs to wait as much as 300&npbs;ms after a user tap](https://developers.google.com/web/updates/2013/12/300ms-tap-delay-gone-away) to see if a second tap will follow, and during that time the page can't respond to the initial tap. This translates to a [failing FID](https://web.dev/fid/) of several hundred milliseconds.
+Many mobile browsers support "double tap to zoom" to allow users to easily magnify content not designed for a mobile screen, that is, content without an explicit mobile `<meta name="viewport">`. In practice, this means the browser [needs to wait as much as 300&nbsp;ms after a user tap](https://developers.google.com/web/updates/2013/12/300ms-tap-delay-gone-away) to see if a second tap will follow, and during that time the page can't respond to the initial tap. This translates to a [failing FID](https://web.dev/fid/) of several hundred milliseconds.
 
 {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/FN6XOPqkFfZ8Ii9fIQOm.png", alt="The mobile-viewport audit in a Lighthouse report", width="800", height="344", class="screenshot" %}
 

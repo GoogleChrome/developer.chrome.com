@@ -23,6 +23,8 @@ Version Manager (nvm)](https://github.com/nvm-sh/nvm).
 
 ### Clone the repo
 
+⚠️ If you'd like to contribute (and you're not a member of the core team), be sure to fork the repo first, and clone the fork.
+
 ```bash
 git clone https://github.com/GoogleChrome/developer.chrome.com.git
 ```

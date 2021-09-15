@@ -447,13 +447,13 @@ What's next?
 [2]: /docs/extensions/mv3/content_scripts
 [3]: /docs/extensions/mv3/options
 [4]: /docs/extensions/mv3/user_interface
-[6]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/SVxMBoc5P3f6YV3O7Xbu.zip
+[6]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/SVxMBoc5P3f6YV3O7Xbu.zip
 [7]: /docs/extensions/mv3/manifest
 [11]: /docs/extensions/reference/runtime#event-onInstalled
 [12]: /docs/extensions/reference/storage
 [15]: /docs/extensions/mv3/user_interface#popup
 [17]: /docs/extensions/reference/action
-[18]: https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/wy3lvPQdeJn4iqHmI0Rp.zip
+[18]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/wy3lvPQdeJn4iqHmI0Rp.zip
 [19]: /docs/extensions/mv3/user_interface#icons
 [20]: /docs/extensions/reference/declarativeContent
 [24]: /docs/extensions/mv3/content_scripts/#programmatic
