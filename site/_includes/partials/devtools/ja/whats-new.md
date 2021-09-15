@@ -6,8 +6,8 @@
 
 * [好みの言語での DevTools の利用](/ja/blog/new/in/devtools-94/#localized)
 * [新しく Nest Hub デバイスがデバイスリストに](/ja/blog/new/in/devtools-94/#nest-hub)
-* [Frame 詳細ビューの Origin trials](/ja/blog/new/in/devtools-94/#origin-trials)
-* [新しい CSS コンテナクエリバッチ](/ja/blog/new/in/devtools-94/#container-queries)
+* [フレーム詳細ビューの Origin trials](/ja/blog/new/in/devtools-94/#origin-trials)
+* [新しい CSS コンテナクエリバッジ](/ja/blog/new/in/devtools-94/#container-queries)
 * [ネットワークフィルタを反転するための新しいチェックボックス](/ja/blog/new/in/devtools-94/#invert-network-filter)
 * [Console サイドバーが今後非推奨に](/ja/blog/new/in/devtools-94/#deprecated)
 * [Issue タブや Network パネルでの未加工の `Set-Cookie` ヘッダーの表示](/ja/blog/new/in/devtools-94/#raw-cookies)

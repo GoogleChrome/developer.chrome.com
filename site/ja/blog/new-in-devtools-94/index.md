@@ -33,7 +33,7 @@ Chrome DevTools は 80 言語以上をサポートするようになりました
 <!--
 Open [Settings](/docs/devtools/customize/#settings), then select your preferred language under the  **Preferences** > **Language** dropdown and reload DevTools.
 -->
-[Settings](/docs/devtools/customize/#settings) を開き、**Preferences** > **Language** ドロップダウンから好みの言語を選択して、DevTools を再読込みしてください。
+[Settings](/docs/devtools/customize/#settings) を開き、**Preferences** > **Language** ドロップダウンから好みの言語を選択して、DevTools を再読み込みしてください。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/eozpCcjmnn7zwya9zXu6.png", alt="Change language in Settings > Preferences", width="800", height="494" %}
 
@@ -67,7 +67,7 @@ Chromium issue: [1223525](https://crbug.com/1223525)
 <!--
 ## Origin trials in the Frame details view {: #origin-trials }
 -->
-## Frame 詳細ビューの Origin trials {: #origin-trials }
+## フレーム詳細ビューの Origin trials {: #origin-trials }
 
 <!--
 You can now get information about a site's [origin trials](/blog/origin-trials/) in the frame details view under the Application panel.
@@ -77,12 +77,13 @@ Application パネルのフレーム詳細ビューにて、サイトの [origin
 <!--
 [Origin trials](/blog/origin-trials/) gives you access to a new or experimental feature, to build functionality your users can try out for a limited time before the feature is made available to everyone.
 -->
-[Origin trials](/blog/origin-trials/) は、新規または実験的な機構にアクセスすることを可能にします。これにより、その機構を誰でも利用することができるようになる前に、期間限定でその機構を試すための機能を構築することができます。
+[Origin trials](/blog/origin-trials/) は、新規または実験的な機能へのアクセスを提供します。これはその機能が誰でも利用可能になる前に、期間限定でユーザーに試してもらえる仕組みを作るためのものです。
+
 
 <!--
 Open a page with origin trials (e.g. [demo page](https://mediastreamtrack.glitch.me)). In the **Application** panel, scroll down to the **Frames** section and select the top frame.
 -->
-オリジントライアルを使っているページを開きます(例. [デモページ](https://mediastreamtrack.glitch.me))。 **Application** パネルにて、 **Frames** セクションまで下にスクロールして、トップフレームを選択してください。
+Origin trials を使っているページを開きます(例. [デモページ](https://mediastreamtrack.glitch.me))。 **Application** パネルにて、 **Frames** セクションまで下にスクロールして、トップフレームを選択してください。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VICXjdGL5Rz09TAPg1sW.png", alt="Origin trials in the Frame details view", width="800", height="465" %}
 
@@ -94,7 +95,7 @@ Chromium issue: [607555](https://crbug.com/607555)
 <!--
 ## New CSS container queries badge {: #container-queries }
 -->
-## 新しい CSS コンテナクエリバッチ {: #container-queries }
+## 新しい CSS コンテナクエリバッジ {: #container-queries }
 
 <!--
 A new **container** badge is added next to the container elements (the ancestor elements that match the criteria of `@container` at-rules). Click the badge to toggle the display of an overlay of the chosen container and all its querying descendants on the page.
