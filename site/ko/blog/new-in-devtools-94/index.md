@@ -135,9 +135,9 @@ DevTools 는 이제 ```#sourceURL```을 사용하여 인라인 스크립트를 �
 
 Chromium issues: [1183990](https://crbug.com/1183990), [578269](https://crbug.com/578269)
 
-## 계산된 영역에서 컬러 포맷 변경 {: #color-unit }
+## 계산됨 영역에서 컬러 포맷 변경 {: #color-unit }
 
-색상 미리보기를 <kbd>Shift</kbd> 를 누른 채 클릭하여, 계산된 영역에서 요소의 컬러 포맷을 변경할 수 있습니다.
+색상 미리보기를 <kbd>Shift</kbd> 를 누른 채 클릭하여, 계산됨 영역에서 요소의 컬러 포맷을 변경할 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IhOkF5do9P8Ovlr7YsdX.png", alt="컬러 포맷 변경을 위해 Shift와 함께 컬러 미리보기 클릭", width="800", height="474" %}
 
