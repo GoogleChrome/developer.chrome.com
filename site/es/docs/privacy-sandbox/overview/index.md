@@ -2,7 +2,7 @@
 layout: layouts/doc-post.njk
 title: ¿Qué es Privacy Sandbox?
 subhead: Privacy Sandbox es una serie de propuestas para satisfacer los casos de uso de sitios cruzados sin cookies de terceros u otros mecanismos de seguimiento.
-description: "Qué contiene, cómo participar y para qué sirve".
+description: "Qué contiene, cómo participar y para qué sirve."
 date: 2021-05-18
 updated: 2021-07-29
 authors:
