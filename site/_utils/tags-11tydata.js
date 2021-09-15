@@ -23,7 +23,7 @@ const {i18n} = require('../_filters/i18n');
 
 /**
  * @param {string} locale
- * @return {EleventyData}
+ * @return {Partial<EleventyData>}
  */
 module.exports = locale => ({
   eleventyComputed: {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2021 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,12 +15,12 @@
  */
 
 declare global {
-  export interface PaginatedPage extends VirtualCollectionItem {
-    date: Date;
-    href: string;
+  export interface VirtualCollectionItem {
+    description: string;
     elements: FrontMatterData[];
-    pagination: EleventyPagination;
-    permalink: string;
+    key: string;
+    title: string;
+    url: string;
   }
 }
 

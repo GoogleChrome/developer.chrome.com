@@ -104,11 +104,11 @@ module.exports = function (collections) {
            * For Chrome releases, use a literal string title (don't translate "Chrome xx").
            */
           overrideTitle: chromeTag.replace('chrome-', 'Chrome '),
-
           /**
            * This is the numeric Chrome release for this tag.
            */
           release,
+          url: `/tags/${chromeTag}/`,
         };
       }
       tags[chromeTag].posts[item.data.locale].push(item);
@@ -145,6 +145,7 @@ module.exports = function (collections) {
            * Sets the title to the i18n value for the tag.
            */
           title: 'i18n.tags.' + postsTag,
+          url: `/tags/${postsTag}/`,
         };
       }
       tags[postsTag].posts[item.data.locale].push(item);

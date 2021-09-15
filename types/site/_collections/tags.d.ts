@@ -28,6 +28,7 @@ declare global {
       [locale: string]: EleventyCollectionItem[];
     };
     release?: number;
+    url: string;
   }
   export interface Tags {
     [tag: string]: Tag;
