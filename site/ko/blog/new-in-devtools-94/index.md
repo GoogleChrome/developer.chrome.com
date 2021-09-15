@@ -32,7 +32,7 @@ Chrome DevTools는 80개 이상 언어를 제공하여, 여러분들의 기호�
 
 Chromium issue: [1163928](https://crbug.com/1163928)
 
-## 기기 목록에 Nest Hub 가 새로 추가되었습니다. {: #nest-hub }
+## 기기 목록에 Nest Hub 가 새로 추가되었습니다 {: #nest-hub }
 
 이제  [기기 모드](/docs/devtools/device-mode/) 에서 Nest Hub 및 Nest Hub Max Dimension 으로 시뮬레이션할 수 있습니다.
 
@@ -45,7 +45,7 @@ Chromium issue: [1163928](https://crbug.com/1163928)
 Chromium issue: [1223525](https://crbug.com/1223525)
 
 
-## 프레임 상세 화면에서 Origin trials 가 제공됩니다. {: #origin-trials }
+## 프레임 상세 화면에서 Origin trials 가 제공됩니다 {: #origin-trials }
 
 이제 웹사이트의 [origin trials](/blog/origin-trials/)  에 대한 정보를 애플리케이션 패널 하단의 프레임 상세 화면에서 볼 수 있습니다.
 
