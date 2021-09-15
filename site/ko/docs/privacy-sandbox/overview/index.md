@@ -1,8 +1,8 @@
 ---
 layout: layouts/doc-post.njk
-title: What is the Privacy Sandbox?
-subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
-description: "What's in it, how to get involved, and what it's for."
+title: 프라이버시 샌드박스란 무엇입니까?
+subhead: 프라이버시 샌드박스는 타사 쿠키 또는 기타 추적 메커니즘 없이 교차 사이트 사용 사례를 충족시켜주는 일련의 제안입니다.
+description: "내용, 참여 방법 및 용도."
 date: 2021-05-18
 updated: 2021-07-29
 authors:

@@ -1,8 +1,8 @@
 ---
 layout: layouts/doc-post.njk
-title: What is the Privacy Sandbox?
-subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
-description: "What's in it, how to get involved, and what it's for."
+title: 什么是隐私沙盒？
+subhead: 隐私沙盒是一系列在无需第三方 cookie 或其他跟踪机制的情况下满足跨站用例的提案。
+description: "隐私沙盒的内容、使用方式及其用途。"
 date: 2021-05-18
 updated: 2021-07-29
 authors:
