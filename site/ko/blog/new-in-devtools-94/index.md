@@ -15,7 +15,7 @@ tags:
   - chrome-94
 ---
 
-*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 리뷰를 맡아 주셨습니다.*
+*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [이지웅](https://bit.ly/JiwoongLeePortfolio) 님과 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 리뷰를 맡아 주셨습니다.*
 
 
 {% include 'partials/devtools/kr/banner.md' %}
@@ -36,7 +36,7 @@ Chromium issue: [1163928](https://crbug.com/1163928)
 
 이제  [기기 모드](/docs/devtools/device-mode/) 에서 Nest Hub 및 Nest Hub Max Dimension 으로 시뮬레이션할 수 있습니다.
 
-[Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) 를 클릭한 다음,&nbsp; {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="Toggle Device Toolbar", width="20", height="22" %}&nbsp;,  기기 목록에서  Nest Hub 혹은 Nest Hub Max 를 선택하세요.
+[Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) 를 클릭한 다음,&nbsp; {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="토글 디바이스 툴바", width="20", height="22" %}&nbsp;,  기기 목록에서  Nest Hub 혹은 Nest Hub Max 를 선택하세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/KytKWMiC4cbFfVUOBzlm.png", alt="기기 모드의 Nest Hub device", width="800", height="549" %}
 
@@ -166,7 +166,7 @@ Chromium issue: [1223391](https://crbug.com/1223391)
 
 **Enable hide issues menu**를 활성화하여, **문제** 탭에서 이슈들을 숨길 수 있습니다. 이 방법으로 우리는 우리에게 중요한 이슈들에 좀더 집중할 수 있습니다.
 
-**문제** 탭에서 이슈에 hover 하여 우측에 있는 이슈 메뉴 {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} 를 클릭한 뒤,
+**문제** 탭에서 이슈에 hover 하여 우측에 있는 이슈 메뉴 {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="더보기", width="4", height="20" %} 를 클릭한 뒤,
 **Hide issues like this** 를 클릭하면 이슈를 감출 수 있습니다.
 
 
