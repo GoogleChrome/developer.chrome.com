@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manage your Chrome Web Store Item"
 date: 2021-08-17
+updated: 2021-09-15
 description: >
   How to manage an extension or theme ("item") in the Chrome Web Store.
 ---
@@ -61,6 +62,47 @@ contact [Chrome Web Store Developer Support][cws-support]. For more examples and
 you can remedy the problem check the [Troubleshooting guide][troubleshooting]. 
 
 {% endAside %}
+
+## Improve ratings and reply to user reviews
+
+Ratings and reviews help people decide if to try out an extension. Not
+only do they leave a positive impression, but can also increase your
+ranking on the Chrome Web Store. 
+
+A user can leave a review in the **Reviews tab** of your store item. You can post a reply here. Users can only
+rate an extension once, but they can update their rating or review at any time. You can also edit your reply to provide the user with
+updates.
+
+ {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/M09XcAQmPi1dS84EiVQo.png", alt="Store item
+reviews tab",
+width="600", height="201" %}
+
+{% Aside 'gotchas' %}
+
+Users will not be notified when you reply to a review, but other users will see that
+you are committed to solving issues as they arise.
+
+{% endAside %}
+
+ Users are more
+likely to improve their review if you respond and address their concerns promptly. To receive email notifications when users post reviews
+or update existing reviews, you can enable **item reviews** in the Account settings of the Developer Dashboard.
+
+   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8KGlMCKpiVVBRVqPAkXF.png", alt="Enable reviews notifications", width="600", height="212" %}
+
+The **Rating tab** in the developer dashboard provides an overview of your extension’s ratings, including the total number of
+reviews and ratings over time. 
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/HXJU5d5hEtHNNgj7aehv.png", alt="Dashboard Ratings tab", width="600", height="408" %}
+
+{% Aside %}
+
+You can provide users a direct link to the review page of your
+store item by adding `/reviews` at the end of your item’s URL:
+`https://chrome.google.com/webstore/detail/{your-item-id}/reviews`
+
+{% endAside %}
+
 
 [cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
