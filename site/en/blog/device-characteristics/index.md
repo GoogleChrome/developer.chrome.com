@@ -5,7 +5,7 @@ description: >
   Developers constantly wonder what kind of audience they are developing for. How much RAM do they have? What kind of Wi-fi are they on? A new report provides answers for a range of countries and platforms.
 date: 2021-09-17
 authors:
-  - josephmedley
+  - jichen
 tags:
   - device-characteristics
 hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'

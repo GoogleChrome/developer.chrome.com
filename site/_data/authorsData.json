@@ -355,5 +355,20 @@
     "twitter": "iblameari",
     "github": "arichiv",
     "image": "image/kY6vrM8mwvcBzVokoWQTl9rKquv1/ctQrNhmIeWkvn9zfV6X0.jpg"
+  },
+  "jichen": {
+    "name": {
+      "given": "Ji",
+      "family": "chen"
+    },
+    "org": {
+      "name": "Google",
+      "unit": "Chrome"
+    },
+    "descriptions": {
+      "en": "Data science enthusiast"
+    },
+    "country": "US",
+    "image": "image/kY6vrM8mwvcBzVokoWQTl9rKquv1/ctQrNhmIeWkvn9zfV6X0.jpg"
   }
 }
