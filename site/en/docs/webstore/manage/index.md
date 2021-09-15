@@ -130,7 +130,8 @@ These numbers include new and returning
   users. You can configure this data by country, language, operating system, or time period using
   the “filter by” dropdown menus.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GxbFAJ4gO867ezUbSwEQ.png", alt="daily installs statistics chart", width="800", height="580" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bj6IRC7am3XgQwcfxpnr.png", alt="daily installs
+statistics chart", width="800", height="586" %}
 
 ### Weekly users
 
@@ -142,14 +143,14 @@ statistics chart", width="800", height="342" %}
 
 {% Aside %}
 
-The Weekly users stats does not monitor when the user activates an extension.
+The Weekly users stats does not monitor active users.
 
 {% endAside %}
 
 ### Google Analytics
 
-To use Google Analytics to track your additional Store item metrics, you can specify your Google
-Analytics ID under the Additional field of your Store listing.
+To use Google Analytics to track Store item metrics, you can add your Google
+Analytics ID in the **Store listing Tab** under Additional fields.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/nYdeRcgteYZL6pTyPQMA.png", alt="where to add google
 analytics id", width="787", height="121" %}
