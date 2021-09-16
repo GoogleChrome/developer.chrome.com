@@ -43,11 +43,11 @@ Chromium 议题：[1223525](https://crbug.com/1223525)
 
 
 ## 帧（Frame） 详情页获取 origin trials 信息{: #origin-trials }
-您现在可以从**应用**面板的 帧（frame）详情页那里获取网站的 [origin trials](/blog/origin-trials/) 信息。
+您现在可以从**应用**面板的帧（frame）详情页那里获取网站的 [origin trials](/blog/origin-trials/) 信息。
 
 [Origin trials](/blog/origin-trials/) 允许您提前尝试正处于实验阶段的新功能。通过注册参加 Origin trials， 您就可以在该新功能还未放给所有用户之前， 利用该功能进行限时的产品开发。
 
-打开带有注册参加 origin trials 的网页(参考 [demo 页面](https://mediastreamtrack.glitch.me))。在**应用**面板那里，滚动至 **帧** 区域，选中 top frame。
+打开有注册参加 origin trials 的网页(参考 [demo 页面](https://mediastreamtrack.glitch.me))。在**应用**面板那里，滚动至 **帧** 区域，选中 top frame。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VICXjdGL5Rz09TAPg1sW.png", alt="Frame 详情页获取 origin trials 信息", width="800", height="465" %}
 
@@ -79,7 +79,7 @@ Chromium 议题：[1054464](https://crbug.com/1054464)
 
 
 ## 控制台的边栏即将被弃用 {: #deprecated }
-控制台的左边栏将会被移除。该边栏里的过滤界面将会被移动到工具栏里。如果您有任何担心或者反馈，可以通过这个[议题追踪器](https://crbug.com/1232937)来让我们知道。
+控制台的左边栏将会被移除。该边栏里的过滤界面将会被移动到工具栏里。如果您有任何疑虑或者反馈，可以通过这个[议题追踪器](https://crbug.com/1232937)来让我们知道。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CzC2HCaiCcdPgbLykyc8.png", alt="控制台边栏的弃用信息", width="800", height="474" %}
 
