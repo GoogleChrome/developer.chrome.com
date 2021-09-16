@@ -92,7 +92,6 @@ reviews in the **Account settings** of the Developer Dashboard.
 
 The **Rating tab** in the developer dashboard provides an overview of your extension’s ratings,
 including the total number of reviews and ratings over time.
-e. 
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/HXJU5d5hEtHNNgj7aehv.png", alt="Dashboard Ratings tab", width="600", height="408" %}
 
@@ -143,7 +142,7 @@ statistics chart", width="800", height="342" %}
 
 {% Aside %}
 
-The Weekly users stats does not monitor active users.
+The **Weekly Users** stats only captures installations; it doesn't monitor whether users are active or not.
 
 {% endAside %}
 
