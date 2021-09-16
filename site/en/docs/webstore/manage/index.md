@@ -84,8 +84,8 @@ you are committed to solving issues as they arise.
 {% endAside %}
 
 Users are more likely to improve their review if you respond and address their concerns promptly. To
-receive email notifications when users post reviews or update existing reviews, you can enable item
-reviews in the **Account settings** of the Developer Dashboard.
+receive email notifications when users post reviews or update existing reviews, you can enable Item
+Reviews in the **Account settings** of the Developer Dashboard.
 
 
    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8KGlMCKpiVVBRVqPAkXF.png", alt="Enable reviews notifications", width="600", height="212" %}
@@ -105,7 +105,7 @@ store item by adding `/reviews` at the end of your item’s URL:
 
 ## Track your store listing performance
 
-Understanding your Chrome Web Store listings metrics can help you evaluate how changes to your store
+Understanding your Chrome Web Store listing metrics can help you evaluate how changes to your store
 listing have affected conversion rates. For example, you can identify countries with a high number
 of visitors so you can prioritize internationalization of your extension for those countries. You
 can also export all the reports described below as CSV files.
@@ -114,7 +114,7 @@ can also export all the reports described below as CSV files.
 
 The impressions metrics track the number of users that discover your extension while searching or
 browsing the Chrome Web Store. An impression occurs when your extension is featured in any
-collections or direct visits to your store item.
+collection or direct visits to your store item.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Hu4dskyv3lIOuYB0qpv0.png", alt="daily impressions
 statistics chart", width="800", height="299" %}
