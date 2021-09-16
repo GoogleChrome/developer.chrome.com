@@ -71,7 +71,7 @@ the page that the content script has been [injected][content-inject] into.
 //// content.js ////
 
 { // Block used to avoid setting global variables
-  let const = document.createElement('img');
+  const img = document.createElement('img');
   img.src = chrome.runtime.getURL('logo.png');
   document.body.append(img);
 }
