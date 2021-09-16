@@ -116,7 +116,7 @@ Chromium 议题：[1076820](https://crbug.com/1076820), ​​[1199247](https://
 ## 正确输出带有 #sourceURL 行内脚本的错误堆栈信息 {: #inline-script }
 DevTools 现在可以正确解析带有 #sourceURL 的行内脚本（inline scripts），并且还能针对调试这种情况，输出正确的错误堆栈信息。
 
-此前，DevTools 会错误输出带有 #sourceURL 的行内脚本的位置信息。正确的位置输出应该要对应该文档，而非对应该 #sourceURL 所在的 `<script>` 标签。
+此前，DevTools 会错误输出带有 #sourceURL 的行内脚本的位置信息。这是由于之前的位置输出是对应该 #sourceURL 所在的 `<script>` 标签。正确的位置输出应该是要对应该文档。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XVUY8XxbGZW74kPsGkOZ.png", alt="处理带有 #sourceURL 的行内脚本，给出合适的错误堆栈信息", width="800", height="425" %}
 
