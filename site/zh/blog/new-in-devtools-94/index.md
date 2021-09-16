@@ -101,10 +101,10 @@ DevTools 现在可以在**问题**选项卡那里显示原生（raw） `Set-Cook
 Chromium 议题：[1179186](https://crbug.com/1179186)
 
 
-## 控制台会将原生访问器访问所得到的结果展示成它们自己的属性{: #native-accessors }
-**控制台**现在会将原生访问器访问所得到的结果始终展示成它们自己的属性。
+## 在控制台里显示原生访问器为自己的属性 {: #native-accessors }
+**控制台**现在会将原生访问器（native accessors）始终显示为它们自己的属性（own properties）。
 
-例如，在**控制台**计算 `new Int8Array([1, 2, 3])` 表达式时，原生访问器（如 length、byteOffset）没有在预览中展示。 经过这次更新，原生访问器会在预览中展示，并且在展开时会提前计算出结果。
+例如说，此前在**控制台**计算 `new Int8Array([1, 2, 3])` 表达式时，原生访问器（如 length、byteOffset）并没有在预览中展示。经过这次更新，原生访问器会在预览中展示，并且在展开时会提前计算出结果。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VcUiEcUXdWc00Q8595n6.png", alt="控制台会将原生访问器访问所得到的结果展示成它们自己的属性", width="800", height="459" %}
 
@@ -113,10 +113,10 @@ Chromium 议题：[1179186](https://crbug.com/1179186)
 Chromium 议题：[1076820](https://crbug.com/1076820), ​​[1199247](https://crbug.com/1199247)
 
 
-## 处理带有 #sourceURL 的行内脚本，给出合适的错误堆栈信息 {: #inline-script }
-DevTools 现在可以正确处理带有 #sourceURL 的行内脚本，并且还能针对调试这种情况，输出合适的错误堆栈信息。
+## 正确输出带有 #sourceURL 行内脚本的错误堆栈信息 {: #inline-script }
+DevTools 现在可以正确解析带有 #sourceURL 的行内脚本（inline scripts），并且还能针对调试这种情况，输出正确的错误堆栈信息。
 
-以前，DevTools 不能正确处理带有 #sourceURL 的行内脚本，给出错误的位置信息，点击该错误信息，跳转到 #sourceURL 所对应的文档页，而不是 #sourceURL 所在的 `<script>` 标签。
+此前，DevTools 会错误输出带有 #sourceURL 的行内脚本的位置信息。正确的位置输出应该要对应该文档，而非对应该 #sourceURL 所在的 `<script>` 标签。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XVUY8XxbGZW74kPsGkOZ.png", alt="处理带有 #sourceURL 的行内脚本，给出合适的错误堆栈信息", width="800", height="425" %}
 
@@ -124,11 +124,12 @@ DevTools 现在可以正确处理带有 #sourceURL 的行内脚本，并且还�
 
 Chromium 议题: [1183990](https://crbug.com/1183990), ​​[578269](https://crbug.com/578269)
 
+
 ## 改变计算窗格里面元素的颜色格式 {: #color-unit }
 
-针对颜色预览这种情况，您现在可以通过 <kbd>Shift</kbd> + 点击的方式来改变计算窗格里面任一元素的颜色格式。
+您现在可以通过 <kbd>Shift</kbd> + 点击**颜色预览**，来更改**计算**窗格里的元素颜色格式。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IhOkF5do9P8Ovlr7YsdX.png", alt="通过 Shift + 点击的方式来改变计算窗格里面任一元素的颜色格式", width="800", height="474" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IhOkF5do9P8Ovlr7YsdX.png", alt="通过 Shift + 点击的方式更改计算窗格里面的元素颜色格式", width="800", height="474" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/97143f7586d540e53a2e40ced7f106181e5c9ce3 #}
 
@@ -136,11 +137,11 @@ Chromium 议题: [1226371](https://crbug.com/1226371)
 
 ## 使用原生的 HTML 提示框替换自定义提示框 {: #tooltip }
 
-DevTools 现在针对所有的组件都采用原生 HTML 提示框。由于原生自带的 HTML 提示框缺乏样式，所以 DevTools 对实现自定义提示框的支持，也已经有很长一段时间。
+DevTools 现在针对所有的组件都采用原生 HTML 提示框（native HTML tooltips）。此前，DevTools 一直都是使用内部开发的自定义提示框，这是碍于原生自的 HTML 提示框缺乏自定义风格（Styling）的支援，DevTools 使用自定义提示框的支持。
 
-不幸的事是，维护自定义提示框的实现，这本身就很复杂，并且我们经常会遇到很复杂的 bug。
+不幸的是，维护自定义提示框的实现是一件很棘手的事。我们经常会遇到一些很复杂的 bugs。
 
-在重新评估自定义提示框的好处之后，我们发现原生自带的 HTML 提示框对于 DevTools 来说已经足够了，并且采用这些提示框可以避免用户遇到各式各样的问题。
+在重新评估自定义提示框的好处之后，我们认为原生的 HTML 提示框对于 DevTools 来说已经足够了。采用原生提示框可以避免用户遇到各式各样的问题。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bOFfHPAwX3qiVcgANPmh.png", alt="DevTools 提示框", width="800", height="452" %}
 
@@ -149,16 +150,16 @@ DevTools 现在针对所有的组件都采用原生 HTML 提示框。由于原�
 Chromium 议题: [1223391](https://crbug.com/1223391)
 
 
-## [实验] 隐藏问题选项卡里面的问题 {: #hide-issues }
+## [实验阶段] 隐藏问题选项卡里面的问题 {: #hide-issues }
 {% Aside %}
-为了开启该实验特性，请勾选位于 **设置** > **实验** 下 **启用隐藏问题菜单** 多选框。
+请勾选位于 **设置** > **实验** 下的 **启用隐藏问题菜单** 多选框，以启用此实验功能。
 {% endAside %}
 
-启用**隐藏问题菜单**实验特性，可以隐藏问题选项卡里面的问题。 这样的话，您就可以专注于重要问题。
+**隐藏问题菜单**是一个处于实验阶段的新功能。启用这个功能能让您隐藏**问题**选项卡里面的问题。这样的话，您就可以只专注于对你而言最重要的问题。
 
-在**问题**选项卡里面，将鼠标悬停在某个问题上，点击右侧的问题菜单栏&nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp;，选择“隐藏问题”选项将其隐藏。
+在**问题**选项卡里面，将鼠标悬停在某个问题上，点击右侧的问题菜单栏&nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="更多", width="4", height="20" %} &nbsp;，选择“隐藏问题”选项将其隐藏。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GGJzvwvMYSrkirU44STQ.png", alt="实验性隐藏问题的右键菜单", width="800", height="494" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/GGJzvwvMYSrkirU44STQ.png", alt="处于实验阶段的隐藏问题的菜单", width="800", height="494" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0200fc96fecec0e209e84c21359ab53393860978 #}
 
