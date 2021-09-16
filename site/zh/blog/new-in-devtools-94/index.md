@@ -125,7 +125,7 @@ DevTools 现在可以正确解析带有 #sourceURL 的行内脚本（inline scri
 Chromium 议题: [1183990](https://crbug.com/1183990), ​​[578269](https://crbug.com/578269)
 
 
-## 改变计算窗格里面元素的颜色格式 {: #color-unit }
+## 更改计算窗格里面元素的颜色格式 {: #color-unit }
 
 您现在可以通过 <kbd>Shift</kbd> + 点击**颜色预览**，来更改**计算**窗格里的元素颜色格式。
 
@@ -134,6 +134,7 @@ Chromium 议题: [1183990](https://crbug.com/1183990), ​​[578269](https://cr
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/97143f7586d540e53a2e40ced7f106181e5c9ce3 #}
 
 Chromium 议题: [1226371](https://crbug.com/1226371)
+
 
 ## 使用原生的 HTML 提示框替换自定义提示框 {: #tooltip }
 
