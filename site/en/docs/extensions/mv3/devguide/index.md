@@ -36,6 +36,10 @@ functionality.
       <td>Create a version of the New Tab, Bookmark, or History page.</td>
     </tr>
     <tr>
+      <td><a href="/docs/extensions/reference/action">Action</a></td>
+      <td>Control the display of an extension's icon in the toolbar.</td>
+    </tr>
+    <tr>
       <td><a href="/docs/extensions/reference/pageAction">Page&nbsp;Actions</a></td>
       <td>Dynamically display icons in the toolbar.</td>
     </tr>
