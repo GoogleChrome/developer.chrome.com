@@ -16,6 +16,10 @@ functionality.
       <th colspan="2"><strong>Customize extension user interface</strong></th>
     </tr>
     <tr>
+      <td><a href="/docs/extensions/reference/action">Action</a></td>
+      <td>Control the display of an extension's icon in the toolbar.</td>
+    </tr>
+    <tr>
       <td><a href="/docs/extensions/reference/browserAction">Browser&nbsp;Actions</a></td>
       <td>Add an icon, tooltip, badge, and popup to the toolbar.</td>
     </tr>
@@ -34,10 +38,6 @@ functionality.
     <tr>
       <td><a href="/docs/extensions/mv3/override">Override&nbsp;Pages</a></td>
       <td>Create a version of the New Tab, Bookmark, or History page.</td>
-    </tr>
-    <tr>
-      <td><a href="/docs/extensions/reference/action">Action</a></td>
-      <td>Control the display of an extension's icon in the toolbar.</td>
     </tr>
     <tr>
       <td><a href="/docs/extensions/reference/pageAction">Page&nbsp;Actions</a></td>
