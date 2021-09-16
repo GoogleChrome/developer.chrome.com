@@ -34,7 +34,7 @@ Chromium issue: [1163928](https://crbug.com/1163928)
 
 ## 기기 목록에 Nest Hub 가 새로 추가되었습니다 {: #nest-hub }
 
-이제  [기기 모드](/docs/devtools/device-mode/) 에서 Nest Hub 및 Nest Hub Max Dimension 으로 시뮬레이션할 수 있습니다.
+이제 [기기 모드](/docs/devtools/device-mode/)에서 Nest Hub 및 Nest Hub Max의 화면크기로 시뮬레이션할 수 있습니다.
 
 [Toggle Device Toolbar](/docs/devtools/device-mode/#viewport) 를 클릭한 다음,&nbsp; {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="토글 디바이스 툴바", width="20", height="22" %}&nbsp;,  기기 목록에서  Nest Hub 혹은 Nest Hub Max 를 선택하세요.
 
@@ -49,7 +49,7 @@ Chromium issue: [1223525](https://crbug.com/1223525)
 
 이제 웹사이트의 [origin trials](/blog/origin-trials/)  에 대한 정보를 애플리케이션 패널 하단의 프레임 상세 화면에서 볼 수 있습니다.
 
-사용자들은 [Origin trials](/blog/origin-trials/) 를 통해 새로운 기능 혹은 실험중인 기능에 액세스할 수 있으며, 이는 사용자들로 하여금 해당 기능이 안정화되기 전에 제한적인 시간 동안 시도해 볼 수 있도록 하기 위함입니다.
+여러분들은 [Origin trials](/blog/origin-trials/) 를 통해 새로운 기능 혹은 실험적인 기능을 이들이 안정화되기 전에 제한적인 시간 동안 시도 및 적용해 볼 수 있습니다.
 
 Origin trials 가 포함된 페이지 (예시:  [demo page](https://mediastreamtrack.glitch.me))를 엽니다. **애플리케이션** 패널에서 스크롤을 **프레임** 섹션까지 내린 후 top 프레임을 선택합니다.
 
@@ -62,7 +62,7 @@ Chromium issue: [607555](https://crbug.com/607555)
 
 ## 새로운 CSS 컨테이너 쿼리 배지 {: #container-queries }
 
-**컨테이너** 배지가 컨테이너 요소 옆에 새롭게 추가되었습니다. (```@container``` 규칙의 조건과 부합하는 조상 요소를 의미합니다.), 배지를 클릭하여 페이지에서 선택한 컨테이너 및 모든 쿼리의 하위 항목의 오버레이 표시를 토글합니다.
+**컨테이너** 배지가 컨테이너 요소 옆에 새롭게 추가되었습니다. (```@container``` 규칙의 조건과 부합하는 조상 요소를 의미합니다.), 배지를 클릭하여 페이지에서 선택한 컨테이너 및 모든 쿼리의 하위 항목의 오버레이 표시를 보여주거나 숨길 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0plPq2cHZV5gV8zm9VlP.png", alt="CSS 컨테이너 쿼리 배지", width="800", height="488" %}
 
@@ -88,7 +88,7 @@ Chromium issue: [1054464](https://crbug.com/1054464)
 
 필터 UI를 툴바로 옮기기 위해, 콘솔 사이드바가 더 이상 사용되지 않고 제거될 예정입니다. 우려사항이나 피드백이 있다면 [이슈 트래커](https://crbug.com/1232937)를 통해 알려 주세요.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CzC2HCaiCcdPgbLykyc8.png", alt="Console sidebar deprecation message", width="800", height="474" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CzC2HCaiCcdPgbLykyc8.png", alt="콘솔 사이드바 제거 예정 알림", width="800", height="474" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f34c62f543c29ffd4be95c4e93b453aa34644897 #}
 
@@ -101,7 +101,7 @@ DevTools 의 **문제** 탭에서 이제 Raw ```Set-Cookie``` 헤더를 볼 수 
 
 이전에는 쿠키가 형식에 맞지 않았을 때 (올바르지 않은 ```Set-Cookie``` 헤더) DevTools의 네트워크 패널에 표시되지 않았습니다. **네트워크** 패널에서 새로 추가된 ```response-header-set-cookie``` 를 사용하면 Raw ```Set-Cookie``` 헤더 응답을 걸러낼 수 있습니다. DevTools 는 **문제** 탭의 Raw ```Set-Cookie``` 헤더 응답을 **네트워크** 패널로 연결합니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PbozcNJRd6rTME5hhqIq.png", alt="문제 탭과 네트워크 패널의 Raw 'Set-Cookie' headers", width="800", height="563" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PbozcNJRd6rTME5hhqIq.png", alt="문제 탭과 네트워크 패널의 Raw 'Set-Cookie' 헤더", width="800", height="563" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/6dedde59f9d64290756a826f73dfe24cf382a470 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/27aa364d1b194a7a778e7649e1f144abbed5957f #}
