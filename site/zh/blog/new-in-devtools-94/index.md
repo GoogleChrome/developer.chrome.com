@@ -69,7 +69,7 @@ Chromium 议题：[1146422](https://crbug.com/1146422)
 ## 利用新的复选框反转过滤网络请求的条件 {: #invert-network-filter }
 您在**网络**面板那里，使用新的**反转**复选框，反转过滤条件。
 
-比如说，您在**过滤**文本框里输入 “status-code: 404” ，以查看那些状态码为 404 的网络请求。点击**反转**复选框，可反转过滤条件（显示那些状态码为不是 404 的网络请求）。
+比如说，您可以在**过滤**文本框里输入 “status-code: 404” ，查看那些状态码为 404 的网络请求。点击**反转**复选框，可反转过滤条件（显示那些状态码为不是 404 的网络请求）。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xx1ju91Mu3qflyG6E40W.png", alt="反转网络请求过滤条件", width="800", height="474" %}
 
@@ -142,7 +142,7 @@ DevTools 现在针对所有的组件都采用原生 HTML 提示框（native HTML
 
 不幸的是，维护自定义提示框的实现是一件很棘手的事。我们经常会遇到一些很复杂的 bugs。
 
-在重新评估自定义提示框的好处之后，我们认为原生的 HTML 提示框对于 DevTools 来说已经足够了。采用原生提示框可以避免用户遇到各式各样的问题。
+在重新评估自定义提示框带来的好处之后，我们认为原生的 HTML 提示框对于 DevTools 来说已经足够了。采用原生提示框可以避免用户遇到各式各样的问题。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bOFfHPAwX3qiVcgANPmh.png", alt="DevTools 提示框", width="800", height="452" %}
 
