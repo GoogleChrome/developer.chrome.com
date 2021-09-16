@@ -1,0 +1,19 @@
+{#
+  TODO: We could probably refactor the existing breadcrumbs.js and partial to
+  make it so we don't need this partial. Since we're close to launch and this
+  is a low priority task, we'll just go with a simplified partial for now.
+#}
+
+{% from 'macros/icon.njk' import icon with context %}
+
+{% extends 'partials/title-bar.njk' %}
+
+{% block title_bar_content %}
+  <nav class="breadcrumbs cluster" aria-label="{{ 'i18n.common.breadcrumbs' | i18n(locale) }}">
+    <div class="align-center flow-space-200">
+      <a class="type--h6 color-primary surface decoration-none" href="/authors/">{{ 'i18n.common.authors' | i18n(locale) }}</a>
+      {{ icon('keyboard-arrow-right', {hidden: true}) }}
+      <h1 class="type--h5">{{ title }}</h1>
+    </div>
+  </nav>
+{% endblock %}

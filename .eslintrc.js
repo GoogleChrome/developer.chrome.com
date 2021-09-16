@@ -7,9 +7,6 @@ module.exports = {
     browser: true,
     node: true,
   },
-  // This contains "chrome" for testing the autocomplete of Chrome's extension
-  // API.
-  globals: {"chrome": "readonly"},
   rules: {
     // By default AVA will ignore folders or files with underscores in
     // their name. Since we have test paths like /site/_data/… we need to
@@ -26,8 +23,11 @@ module.exports = {
 
     // Even though we target Node v14 (and v12 also supported modules), eslint
     // still complains that modules are not yet suppoted.
-    'node/no-unsupported-features/es-syntax': ['error', {
-      'ignores': ['modules'],
-    }],
+    'node/no-unsupported-features/es-syntax': [
+      'error',
+      {
+        ignores: ['modules'],
+      },
+    ],
   },
 };

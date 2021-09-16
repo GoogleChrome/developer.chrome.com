@@ -1,0 +1,18 @@
+{% extends "layouts/base.njk" %}
+
+{% from 'macros/cards/author-card.njk' import authorCard with context %}
+
+{% block title_bar %}
+  {% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
+
+{% block content %}
+  <div class="measure-1280 width-full center-margin pad-left-400 pad-right-400">
+    <div class="blog-grid">
+      {% for author in pagination.items %}
+        {{ authorCard(author) }}
+      {% endfor %}
+    </div>
+    {% include 'partials/pagination.njk' %}
+  </div>
+{% endblock %}

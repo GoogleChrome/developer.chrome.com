@@ -26,9 +26,9 @@ export class NavigationRail extends BaseElement {
   }
 
   connectedCallback() {
-    this.closeBtn = /** @type {HTMLElement} */ (this.querySelector(
-      '.navigation-rail__close'
-    ));
+    this.closeBtn = /** @type {HTMLElement} */ (
+      this.querySelector('.navigation-rail__close')
+    );
     this.closeBtn.addEventListener('click', this.onClose);
   }
 
