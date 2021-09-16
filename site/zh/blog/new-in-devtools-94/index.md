@@ -88,7 +88,7 @@ Chromium 议题：[1054464](https://crbug.com/1054464)
 Chromium 议题：[1232937](https://crbug.com/1232937)
 
 
-## 在问题选项卡以及网络面板那里显示原生 `Set-Cookie` 响应头{: #raw-cookies }
+## 在问题选项卡以及网络面板那里显示原生 `Set-Cookie` 响应头 {: #raw-cookies }
 DevTools 现在可以在**问题**选项卡那里显示原生（raw） `Set-Cookie` 响应头（response headers）。
 
 此前，DevTools 并不会在**网络**面板那里显示异常 cookie（不正确的 `Set-Cookie` 响应头）。现在，透过**网络**面板新增的 `response-header-set-cookie` 过滤条件，用户现在可以过滤掉含有原生 `Set-Cookie` 的响应。DevTools 也会把**问题**选项卡里面的原生 `Set-Cookie` 响应头给链接到**网络**面板。
