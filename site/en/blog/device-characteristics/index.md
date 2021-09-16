@@ -8,7 +8,7 @@ authors:
   - jichen
 tags:
   - device-characteristics
-hero: 'image/BrQidfK9jaQyIHwdw91aVpkPiib2/EnMzOm0mBytBA3AzlCG6.png'
+hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/zIWz3bDI3mBRLki1VxMJ.jpeg'
 alt: >
   An alternative text description of your hero or social image.
 ---
@@ -43,3 +43,5 @@ with other datasets.  If the metrics collection is re-enabled, the unique
 identifier will also be reset. We used the data collected to calculate the
 various statistics in this
 [report](https://docs.google.com/document/d/e/2PACX-1vTLB93N1X3QRs_0T869wIppeXYDGWeyDeVM5N8XSKVAx3cIl1RyNj3fM4gUn06cEimfUM4wubmC_laB/pub).
+
+Photo by [Halacious](https://unsplash.com/@halacious?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Upsplash](https://unsplash.com/s/photos/multiple-phones?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
