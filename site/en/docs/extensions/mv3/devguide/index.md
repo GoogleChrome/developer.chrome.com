@@ -16,6 +16,10 @@ functionality.
       <th colspan="2"><strong>Customize extension user interface</strong></th>
     </tr>
     <tr>
+      <td><a href="/docs/extensions/reference/action">Action</a></td>
+      <td>Control the display of an extension's icon in the toolbar.</td>
+    </tr>
+    <tr>
       <td><a href="/docs/extensions/reference/commands">Commands</a></td>
       <td>Add keyboard shortcuts that trigger actions.</td>
     </tr>
