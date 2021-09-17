@@ -15,7 +15,7 @@ alt: >
 
 Developers are constantly wondering about what kind of audience they are
 developing for. Are they using high end devices with large RAM? What connection
-are they using (wifi, 2G...)? etc. The answers to such questions could carry
+are they using (for example Wi-Fi, 2G) and so on. The answers to these questions
 much weight in many aspects of product development such as choosing the right
 technologies to render the content. This report provides timeline data to inform
 developers on these questions for a list of countries, like the US, Brazil,
