@@ -19,7 +19,7 @@ are they using (for example Wi-Fi, 2G) and so on. The answers to these questions
 can affect product development decisions such as choosing the
 technologies to render the content. This report provides timeline data to inform
 developers on these questions for a list of countries, such as the US, Brazil,
-Japan, etc. Three platforms are included when data is available: Android,
+Japan, and others. Three platforms are included when data is available: Android,
 Windows, and ChromeOS.
 
 Looking at the data, there might be some interesting things for developers to
