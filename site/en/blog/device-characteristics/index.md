@@ -24,7 +24,7 @@ Windows, and ChromeOS.
 
 Looking at the data, there might be some interesting things for developers to
 think about. For example, in Japan on the Android platform, the majority of
-users have five to eight cores, and the prevalence is quite a bit higher than
+users have five to eight cores, and the prevalence is quite a bit higher than in
 the US, and much higher than in NBU countries. Another example: if you look at
 the smallest display size in device pixels, in some countries like the US or
 Brazil, there's a clear trend that smallest display sizes (like 400-500) are
