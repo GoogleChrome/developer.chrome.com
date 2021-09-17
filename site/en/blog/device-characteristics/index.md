@@ -37,7 +37,7 @@ This data comes from usage statistics sent to Google from Chrome installations.
 In Chrome, users can choose to send usage statistics and crash reports to Google
 to help improve Chrome's feature set and stability. Usage statistics and crash
 reports are enabled by default for Chrome consumer installs and can be disabled
-during installation or in Chrome's settings. Metrics collecting is pseudonymous,
+during installation or in Chrome's settings. Metrics collection is pseudonymous,
 and metrics are tagged by an opaque per-install identifier that is not joinable
 with other datasets.  If the metrics collection is re-enabled, the unique
 identifier will also be reset. We used the data collected to calculate the
