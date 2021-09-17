@@ -7,7 +7,7 @@ description: An overview of Chrome Extension capabilities and components.
 ---
 
 After reading the [Getting Started][1] tutorial and [Overview][2], use this guide as an outline to
-extension components and abilities. Developers are encouraged to explore and expand extension
+extension components and abilities with MV3 availability. Developers are encouraged to explore and expand extension
 functionality.
 
 <table class="width-full">
