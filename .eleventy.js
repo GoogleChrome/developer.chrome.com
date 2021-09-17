@@ -24,6 +24,7 @@ const {IFrame} = require('./site/_shortcodes/IFrame');
 const {Glitch} = require('./site/_shortcodes/Glitch');
 const {Hreflang} = require('./site/_shortcodes/Hreflang');
 const {Img} = require('./site/_shortcodes/Img');
+const {Label} = require('./site/_shortcodes/Label');
 const {Video} = require('./site/_shortcodes/Video');
 const {YouTube} = require('./site/_shortcodes/YouTube');
 const {Columns, Column} = require('./site/_shortcodes/Columns');
@@ -128,6 +129,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
   eleventyConfig.addPairedShortcode('Aside', Aside);
+  eleventyConfig.addPairedShortcode('Label', Label);
   eleventyConfig.addShortcode('LanguageList', LanguageList);
 
   // Add transforms
