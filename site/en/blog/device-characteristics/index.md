@@ -8,7 +8,7 @@ authors:
   - jichen
 tags:
   - device-characteristics
-hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/zIWz3bDI3mBRLki1VxMJ.jpeg'
+hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/SJJ2a5QPJ2jSsNyGDbTh.jpeg'
 alt: >
   An alternative text description of your hero or social image.
 ---
