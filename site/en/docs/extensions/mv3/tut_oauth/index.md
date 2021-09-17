@@ -323,4 +323,4 @@ a block.
 [11]: /identity
 [12]: examples/tutorials/oauth_starter/oauth.js
 [13]: https://developers.google.com/people/
-[14]: https://developers.google.com/people/v1/read-people
+[14]: https://developers.google.com/people/api/rest/v1/contactGroups/get
