@@ -7,7 +7,7 @@ description: An overview of Chrome Extension capabilities and components.
 ---
 
 After reading the [Getting Started][1] tutorial and [Overview][2], use this guide as an outline to
-extension components and abilities. Developers are encouraged to explore and expand extension
+extension components and abilities with MV3 availability. Developers are encouraged to explore and expand extension
 functionality.
 
 <table class="width-full">
@@ -18,10 +18,6 @@ functionality.
     <tr>
       <td><a href="/docs/extensions/reference/action">Action</a></td>
       <td>Control the display of an extension's icon in the toolbar.</td>
-    </tr>
-    <tr>
-      <td><a href="/docs/extensions/reference/browserAction">Browser&nbsp;Actions</a></td>
-      <td>Add an icon, tooltip, badge, and popup to the toolbar.</td>
     </tr>
     <tr>
       <td><a href="/docs/extensions/reference/commands">Commands</a></td>

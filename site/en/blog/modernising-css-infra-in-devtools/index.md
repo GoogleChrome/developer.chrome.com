@@ -111,7 +111,7 @@ Instead we opted to find a way to import the CSS file as a [`CSSStyleSheet`](htt
 
 ### Bundler options {: #bundler-options }
 
-We needed a way to convert CSS files into a `CSSStyleSheet` object so that we could easily manipulate it in the TypeScript file. We considered both [Rollup](https://rollupjs.org/) and [webpack](https://webpack.js.org/) as potential bundlers to do this transformation for us. DevTools already uses Rollup in it’s production build, but adding either bundler to the production build could have potential performance issues when working with our current build system. Our integration with the [GN build system of Chromium](https://gn.googlesource.com/gn/) makes bundling more difficult and therefore bundlers tend not to integrate well with the current Chromium build system.
+We needed a way to convert CSS files into a `CSSStyleSheet` object so that we could easily manipulate it in the TypeScript file. We considered both [Rollup](https://rollupjs.org/) and [webpack](https://webpack.js.org/) as potential bundlers to do this transformation for us. DevTools already uses Rollup in its production build, but adding either bundler to the production build could have potential performance issues when working with our current build system. Our integration with the [GN build system of Chromium](https://gn.googlesource.com/gn/) makes bundling more difficult and therefore bundlers tend not to integrate well with the current Chromium build system.
 
 
 Instead, we explored the option to use the current GN build system to do this transformation for us instead.

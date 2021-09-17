@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: Uniquely identifying PWAs with the web app manifest id property
 authors:
   - petelepage
-date: 2021-09-15
+date: 2021-09-16
 description: |
   There's a new optional `id` property as part of the web app manifest spec,
   that allows you to explicitly define the identifier used for your PWA.
@@ -34,7 +34,7 @@ The `id` property represents the identity of the PWA to the browser. When
 the browser sees a manifest that does not have an identity that matches an
 already installed PWA, it will treat it as a new PWA, even if it is served
 from the same URL as another PWA. But if it sees a manifest with an identity
-that matches an already installed PWA, it will treat that as the installed PWA.
+that matches the already installed PWA, it will treat that as the installed PWA.
 
 ## Browser support
 
@@ -112,3 +112,13 @@ these steps:
    `about://apps`, then close the PWA to force the manifest file to refresh.
 1. Open `about://web-app-internals/` and check the `start_url` property for
    the installed PWA to verify it has been updated as expected.
+
+## Additional resources
+
+* [Explainer][explainer]
+* [Design doc][design-doc]
+* [`id` property in Editor's draft of the Manifest spec][draft-spec]
+
+[draft-spec]: https://w3c.github.io/manifest/#id-member
+[explainer]: https://github.com/philloooo/pwa-unique-id/blob/main/explainer.md
+[design-doc]: https://docs.google.com/document/u/2/d/1f9xQR1msTxiYvzFguKMkqSfrXMo_cT2yvhCEM3SYIt0/preview
