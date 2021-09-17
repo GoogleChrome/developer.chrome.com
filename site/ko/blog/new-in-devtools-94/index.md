@@ -88,7 +88,7 @@ Chromium issue: [1054464](https://crbug.com/1054464)
 
 필터 UI를 툴바로 옮기기 위해, 콘솔 사이드바가 더 이상 사용되지 않고 제거될 예정입니다. 우려사항이나 피드백이 있다면 [이슈 트래커](https://crbug.com/1232937)를 통해 알려 주세요.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CzC2HCaiCcdPgbLykyc8.png", alt="콘솔 사이드바 제거 예정 알림", width="800", height="474" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CzC2HCaiCcdPgbLykyc8.png", alt="콘솔 사이드바 제거 안내", width="800", height="474" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f34c62f543c29ffd4be95c4e93b453aa34644897 #}
 
@@ -123,7 +123,7 @@ Chromium issue: [1179186](https://crbug.com/1179186)
 Chromium issues: [1076820](https://crbug.com/1076820), [1199247](https://crbug.com/1199247)
 
 
-## #sourceURL이 있는 인라인 스크립트에 대한 적절한 오류 스택 추적 {: #inline-script }
+## #sourceURL이 있는 인라인 스크립트에 적합한 오류 스택 추적 {: #inline-script }
 
 DevTools 는 이제 ```#sourceURL```을 사용하여 인라인 스크립트를 올바르게 해결하고 디버깅을 위한 적절한 오류 스택 추적을 표시합니다.
 
@@ -158,10 +158,10 @@ Chromium issue: [1226371](https://crbug.com/1226371)
 Chromium issue: [1223391](https://crbug.com/1223391)
 
 
-## [실험 기능] 문제 탭에서 이슈들을 숨기기 {: #hide-issues }
+## [실험실 기능] 문제 탭에서 이슈들을 숨기기 {: #hide-issues }
 
 {% Aside %}
-실험 기능을 활성화하려면 **설정 > 실험** 에 있는 **Enable hide issues menu** 를 체크하세요.
+실험실 기능을 활성화하려면 **설정 > 실험** 에 있는 **Enable hide issues menu** 를 체크하세요.
 {% endAside %}
 
 **Enable hide issues menu**를 활성화하여, **문제** 탭에서 이슈들을 숨길 수 있습니다. 이 방법으로 우리는 우리에게 중요한 이슈들에 좀더 집중할 수 있습니다.
