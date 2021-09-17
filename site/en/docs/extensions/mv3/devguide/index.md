@@ -16,10 +16,6 @@ functionality.
       <th colspan="2"><strong>Customize extension user interface</strong></th>
     </tr>
     <tr>
-      <td><a href="/docs/extensions/reference/browserAction">Browser&nbsp;Actions</a></td>
-      <td>Add an icon, tooltip, badge, and popup to the toolbar.</td>
-    </tr>
-    <tr>
       <td><a href="/docs/extensions/reference/commands">Commands</a></td>
       <td>Add keyboard shortcuts that trigger actions.</td>
     </tr>
