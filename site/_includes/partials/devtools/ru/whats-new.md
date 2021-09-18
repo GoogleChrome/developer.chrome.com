@@ -7,17 +7,17 @@
 ### Chrome 94 {: #chrome94 }
 
 * [Пользуйтесь DevTools на своём языке](/ru/blog/new-in-devtools-94/#localized)
-* [Новые устройства Nest в списке девайсов](/ru/blog/new-in-devtools-94/#nest-hub)
-* [Испытания источника при детальном просмотре фрейма](/ru/blog/new-in-devtools-94/#origin-trials)
-* [Новый бэдж для выражений от контейнера](/ru/blog/new-in-devtools-94/#container-queries)
-* [Новый чекбокс для инвертирования фильтров в панели Network](/ru/blog/new-in-devtools-94/#nvert-network-filter)
-* [Грядущее упразднение боковой панели в консоли](/ru/blog/new-in-devtools-94/#deprecated)
-* [Отображение необработанных заголовков `Set-Cookie` на вкладке Issues и в панели Network](/ru/blog/new-in-devtools-94/#raw-cookies)
+* [Новые устройства Nest Hub в списке девайсов](/ru/blog/new-in-devtools-94/#nest-hub)
+* [Информация об origin trials в свойствах фрейма](/ru/blog/new-in-devtools-94/#origin-trials)
+* [Новый значок для выражений от контейнера](/ru/blog/new-in-devtools-94/#container-queries)
+* [Новый чекбокс для инвертирования фильтров сети](/ru/blog/new-in-devtools-94/#nvert-network-filter)
+* [Предстоящее упразднение боковой колонки Console](/ru/blog/new-in-devtools-94/#deprecated)
+* [Отображение необработанных заголовков `Set-Cookie` во вкладках Issues и Network](/ru/blog/new-in-devtools-94/#raw-cookies)
 * [Последовательное отображение нативных аксессоров как собственных свойств в консоли](/ru/blog/new-in-devtools-94/#native-accessors)
 * [Правильная трассировка стека ошибок для встроенных скриптов с #sourceURL](/ru/blog/new-in-devtools-94/#inline-script)
-* [Изменение формата цвета во вкладке Computed](/ru/blog/new-in-devtools-94/#color-unit)
-* [Кастомные всплывающие подсказки заменены на нативные HTML-подсказки](/ru/blog/new-in-devtools-94/#tooltip)
-* [[Эксперимент] Скрытие задач на вкладке Issues](/ru/blog/new-in-devtools-94/#hide-issues)
+* [Изменение формата цвета в панели Computed](/ru/blog/new-in-devtools-94/#color-unit)
+* [Замена кастомных всплывающих подсказок на нативные HTML-подсказки](/ru/blog/new-in-devtools-94/#tooltip)
+* [[Эксперимент] Скрытие задач во вкладке Issues](/ru/blog/new-in-devtools-94/#hide-issues)
 
 
 ### Chrome 93 {: #chrome93 }
