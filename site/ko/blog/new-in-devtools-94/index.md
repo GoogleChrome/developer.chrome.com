@@ -18,7 +18,7 @@ tags:
 *이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [이지웅](https://bit.ly/JiwoongLeePortfolio)님과 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님, 그리고 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
 
 
-{% include 'partials/devtools/kr/banner.md' %}
+{% include 'partials/devtools/ko/banner.md' %}
 
 ## DevTools 를 이제 여러분들이 선호하는 언어로 사용하세요 {: #localized }
 
@@ -176,5 +176,5 @@ Chromium issue: [1223391](https://crbug.com/1223391)
 
 Chromium issue: [1175722](https://crbug.com/1175722)
 
-{% include 'partials/devtools/kr/reach-out.md' %}
-{% include 'partials/devtools/kr/whats-new.md' %}
+{% include 'partials/devtools/ko/reach-out.md' %}
+{% include 'partials/devtools/ko/whats-new.md' %}
