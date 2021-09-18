@@ -189,7 +189,7 @@ the correct permissions in its [manifest][12].
       "48": "images/get_started48.png",
       "128": "images/get_started128.png"
     },
-    "manifest_version": 2
+    "manifest_version": 3
   }
 ```
 
