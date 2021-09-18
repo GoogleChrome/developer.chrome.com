@@ -20,6 +20,21 @@
       <p class="type gap-top-300">{{ description }}</p>
     </div>
 
+    {# Render optional top content. #}
+    {% if content %}
+      <div class="gap-top-300 lg:gap-top-400">
+        <article class="post stack measure-long center-margin width-full center-images type">
+          {{ content | safe }}
+        </article>
+      </div>
+    {% endif %}
+
+    {% if cards %}
+      {% for card in cards %}
+        card=>{{ card }}
+      {% endfor %}
+    {% endif %}
+
     {# Render nested sections. #}
     {% import 'macros/project-sections.njk' as macros with context %}
     <div class="project-sections gap-top-800">

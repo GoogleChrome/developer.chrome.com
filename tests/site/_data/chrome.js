@@ -15,15 +15,6 @@ const testOmahaProxyData = [
       },
     ],
   },
-  {
-    os: 'linux',
-    versions: [
-      {
-        channel: 'beta',
-        version: '43.1.1234.8',
-      },
-    ],
-  },
 ];
 
 test.before(() => {
@@ -54,7 +45,14 @@ test('returns version information', async t => {
 
   setCacheForTest(
     'https://chromiumdash.appspot.com/fetch_milestone_schedule?mstone=43',
-    {} // set an empty value for 43, discarded by client
+    {
+      mstones: [
+        {
+          mstone: 43,
+          stable_date: '2020-02-01T00:00:00',
+        },
+      ],
+    }
   );
 
   const actual = await buildVersionInformation();
@@ -64,6 +62,11 @@ test('returns version information', async t => {
         key: 'stable',
         mstone: 42,
         stableDate: new Date('2020-01-01T00:00:00'),
+      },
+      beta: {
+        key: 'beta',
+        mstone: 43,
+        stableDate: new Date('2020-02-01T00:00:00'),
       },
     },
   };

@@ -2,16 +2,20 @@
 layout: "layouts/doc-post.njk"
 title: Frequently Asked Questions
 date: 2020-06-09
-updated: 2021-07-27
-description: Frequently asked questions about Chrome Web Store.
+updated: 2021-09-09
+description: Frequently asked questions about the Chrome Web Store.
 ---
 
-The [Chrome Web Store][1] lets you publish free or paid extensions where Google Chrome users can easily
-find them. This FAQ answers many common questions about the Chrome Web Store. If you don't find your
-answer here, check the [extension hosting changes FAQs][2], the [general extension FAQs][3], or the
-[chromium-apps group][4].
+This FAQ answers some common questions about the [Chrome Web Store][webstore]. If you don't find your
+answer here, check the [general extension FAQs][extension-faq], how to [troubleshoot Chrome Web Store
+violations][troubleshoot-violations], or the
+[chromium-extension group][chromium-extensions]. For additional technical questions and discussion, we recommend [Stack Overflow][stackoverflow-extensions].
+
+{% Aside %}
 
 Please expand the _Table of Contents_ to quickly navigate this page.
+
+{% endAside %}
 
 ## General Questions
 
@@ -22,30 +26,11 @@ Extensions][ext] and [Google Chrome Themes][themes], where consumers may browse,
 purchase items and install them in their browser. These items are built with web technologies and
 run inside of web browsers.
 
-### How many people use Chrome? {: #faq-gen-02 }
-
-In 2015, Google announced one billion active users for Chrome. It's also important to note that
-Chrome Web Store extensions can run in any browser that supports the web technologies used to build the
-extension.
-
-### Is there a road map for Chrome? {: #faq-gen-05 }
-
-You can follow the [Google Chrome Releases blog][95] to learn about all the latest changes that are
-being made to Chrome. You can create and track bugs and features in the [Chromium bug tracker][96],
-and we recommend that you download and install the [Dev channel build][97] of Chrome browser.
-
 ### Why would someone install an extension instead of just using a bookmark or typing in a URL? {: #faq-gen-07 }
 
-Installing an extension ensures it is launchable from the New Tab Page via the Chrome extensions launcher.
+Users can use extensions to add new features to existing web apps, get relevant information on pages and get timely notifications about certain events.
 Installing an extension also allows you to grant it privileges such as unlimited local storage and
 background pages.
-
-### Is there an approval process for extensions in the store? {: #faq-gen-08 }
-
-All extensions go through an automated review process and in some cases, an extension will be published without
-further manual review. There may be some instances in which a manual review will be required before
-the extension is published based on our [program policies][program-policies]. In some cases, where sensitive permissions
-are requested, review times and/or approval times may be longer.
 
 ### How will users find my extension? {: #faq-gen-09 }
 
@@ -63,8 +48,15 @@ fee before you can access the Chrome Web Store Developer Dashboard.
 {% Aside %}
 If you are already using the developer dashboard but haven't paid this fee yet, you must
 now pay it in order to continue accessing your developer dashboard. This one-time fee is now part of
-the standard [developer registration process][99].
+the standard [developer registration process][cws-register].
 {% endAside %}
+
+### Is there an approval process for extensions in the store? {: #faq-gen-08 }
+
+All extensions go through an automated review process and in some cases, an extension will be published without
+further manual review. There may be some instances in which a manual review will be required before
+the extension is published based on our [program policies][program-policies]. In some cases, where sensitive permissions
+are requested, review times and/or [approval times may be longer][how-long-do-reviews-take].
 
 ### What types of extensions are not allowed in the store? {: #faq-gen-22 }
 
@@ -116,8 +108,12 @@ collection are not accepted.
 
 ### How can I provide support for users of my extension? {: #faq-gen-27 }
 
-You can set up discussion groups to communicate with your users. One way of doing so is through
-[Google Groups][104].
+First you must "Enable User Feedback" in your developer dashboard Account settings. 
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="700", height="85" %}
+
+You can manage user feedback using the User Support tab of your dashboard item or you can add a
+discussion group link like [Google Groups][google-groups] to the [Support URL][support-url] field.
 
 ### Can I remove comments from my listing if I believe they are unfair? {: #faq-gen-28 }
 
@@ -129,13 +125,15 @@ You may also report fake reviews via the Developer [Support Form][cws-support].
 ### Is there a limit to the number of items I can have on the Chrome Web Store? {: #faq-gen-29 }
 
 You can upload as many items to the Chrome Web Store as you like, but by default, you are limited to
-having a total of 20 published items at any one time. This limit applies to the sum of your Chrome
-Apps and Chrome Extensions as a total—it is not 20 of each item. If you reach this limit, [you may
+having a total of 20 published items at any one time. This limit applies to the sum of your Themes and Chrome Extensions as a total—it is not 20 of each item. If you reach this limit, [you may
 request a limit increase][cws-support]. The Chrome Web Store staff will review your existing items and your
 developer account history, and if approved, you will be granted an increase. Please note that if
 your developer account has been suspended in the past, or you have had items taken down previously
 for policy violations, or your items consistently receive low quality ratings, your request may be
 denied.
+
+
+## Development
 
 ### Can I obfuscate my code? {: #faq-gen-30 }
 
@@ -143,22 +141,24 @@ As of October 1st 2018, developers must not obfuscate code or conceal functional
 extensions. This also applies to any external code or resource fetched by the extension package. For
 more information, please review our [program policies][program-policies].
 
-## Development
+The following are some examples of code obfuscation:
+
+- Base 64 encoding
+- Character encoding
 
 ### How do I write an extension? {: #faq-dev-01 }
 
-You can find all the information you need to develop extensions at [/docs/extensions/][ext].
+You can find all the information you need to develop extensions in the [Documentation for Chrome extensions developers][ext].
 
 ### How can I push an update of my code to my users? {: #faq-dev-02 }
 
-Visit [https://chrome.google.com/webstore/devconsole][110] and click on the listing you wish to
+To [Update your Chrome Web Store item][update-item], visit the [developer dashboard][dev-dashboard] and click on the listing you wish to
 update. Once you upload a new version and click **Publish**, your update will automatically be
 pushed out to users over the next few hours.
 
 ### Can I host my own extension? {: #faq-dev-03 }
 
-Yes, you may host your own extension, although you will need to take care of [packaging and
-serving][111] the [auto-update manifest][112] yourself.
+You can host your own extensions in limited cases, such as for Linux or Chrome OS users. Consider [enterprise publishing][cws-enterprise] or developer mode.
 
 ## Creating a listing
 
@@ -174,7 +174,7 @@ The item won't appear in the web store until it has successfully completed the r
 details, see [How long will it take to review my item?][how-long-do-reviews-take].
 
 Extensions which are published to the same domain as the publisher address may be approved more
-quickly.
+quickly. Learn more about [enterprise publishing][enterprise].
 
 ### How can I remove my listing from the store? {: #faq-listing-03 }
 
@@ -187,18 +187,7 @@ in the store.
 
 ### What are the screenshot and text requirements for the store? {: #faq-listing-04 }
 
-See [Supplying Images][116] for guidelines on supplying images for the store. Some other best
-practices to consider:
-
-- Write a catchy title, a clear and descriptive short description, and a detailed long description.
-- Create screenshots that demonstrate how your extension works.
-- Upload a screencast, such as a YouTube video or a Google Docs Presentation, to demonstrate how
-  your extension works.
-- Post a support link so that users don't clutter your comments thread with bug reports.
-
-### How can I import an existing extension into the store? {: #faq-listing-05 }
-
-You may import an extension with a pre-existing key into the store (see [instructions][117]).
+See [Supplying Images][cws-images] for guidelines on supplying images for the store. Read more on [how to create a great listing][great-listing].
 
 ### How can I export an extension from the store? {: #faq-listing-06 }
 
@@ -223,20 +212,18 @@ extension.
 
 ### Can I control the regions where my extension is listed? {: #faq-gen-18 }
 
-Yes, you can select which regions your extension appears in. This might be because your extension is
-only applicable to the local market, or you might have specific obligations that mean you can only
-make your extension available in certain regions.
+Yes, in the [Distribution
+Tab][cws-distribution] you can specify which countries will see your item listing in the Chrome Web Store.
 
 ### How do I localize my listing in the store? {: #faq-gen-19 }
 
-There are two points where you need to localize your extension for listing in a region that isn't your
+There are three points where you need to localize your extension for listing in a region that isn't your
 home market.
 
-1.  Your extension package. See [Internationalizing Your App][internationalize] for information on localizing your
+1.  Your extension package. See [Internationalizing Your Extension][internationalize] for information on localizing your
     extension's presence inside Chrome.
-2.  Your detailed listing. The developer dashboard now includes the ability for you to select all
-    the regions that you want your application to appear in, allows you to localize the detailed
-    description, price points relative to the market you are in, and screenshots.
+2.  Your [detailed description][faq-localize-description]
+3.  Your [screenshots][faq-localize-screenshots]
 
 ### How do I localize my detailed description? {: #faq-gen-20 }
 
@@ -250,7 +237,7 @@ description.
 Visit your extension page in the [Chrome Web Store Developer Dashboard][dev-dashboard], change the currently
 selected language to your desired choice (for example "en-GB") and upload a screenshot as normal.
 Once the image is uploaded you will be presented with an option to "Show this item in **all**
-locales" or "Show this item **only** in the 'en-GB' locale". Select the later to show the screenshot
+locales" or "Show this item **only** in the 'en-GB' locale". Select the latter to show the screenshot
 to only users of the "en-GB" Chrome Web Store.
 
 ### My item's status says "pending review." What does this mean? {: #faq-listing-08 }
@@ -265,20 +252,18 @@ Review times vary; some reviews complete in a few hours, others take many days, 
 review can take several weeks. Some reasons that an item could require more extensive review
 include:
 
-- The item is suspected to contain or to be distributed by malware or unwanted software.
-- The item is suspected to violate one of the developer program policies.
+- The item is suspected to contain or to be distributed by [malware or unwanted software][malware-policy].
+- The item is suspected to violate one of the [developer program policies][program-policies].
 - The item may have already been previously removed for a legal or policy violation, and has been
   resubmitted.
 - The item requests powerful permissions that require in-depth review.
 
+{% Aside %}
+
 Note that all item submissions—whether for a new item or an update to an existing one—are
 subject to the same review process.
 
-For more information about the unwanted software policy, see:
-[https://www.google.com/about/company/unwanted-software-policy.html][122].
-
-For more information about the developer program policies, see:
-[/webstore/program_policies][123].
+{% endAside %}
 
 If your item's status says "pending review" for more than three weeks, you should [contact
 support][cws-support].
@@ -288,25 +273,31 @@ support][cws-support].
 It depends. There are several reasons why your item may not be showing up in search.
 
 - You just published your extension. It might take a few hours before we index it.
-- Your extension manifest is out of date. Upgrade your item to a current valid manifest version as
-  described [here][125].
-- Your extension is not listed in the region you are searching in. See more details [here][127].
+- Your extension manifest version is out of date. Upgrade your item to a current [valid manifest version][manifest-version].
+- Your extension is not listed in the region you are searching in. Check your [geographical distribution][region-distribution] in the Distribution Tab.
 
 ### My extension has been removed from the Chrome Web Store. What should I do? {: #faq-listing-10 }
 
-Application removals count as strikes against the good standing of your developer account. Multiple
-or egregious policy violations may result in termination of your developer account.
+Extension removals count as strikes against the good standing of your developer account. Multiple
+or egregious policy violations may result in [termination of your developer account][account-suspended].
 
 - For all policy violation extension removals, you will receive a removal notification email with more
-  details in the developer account listed as the owner of the extension. Please make the appropriate
+  details in the developer account listed as the owner of the extension. You can also find
+  this information in the [Status Tab][comply-policies] of your item.
+- Please make the appropriate
   changes so your extension complies with all [Developer Program Policies][program-policies], [Branding
-  Guidelines][branding] and [Terms of Services][terms-of-services]. Once you have remedied the violation you can
+  Guidelines][branding] and [Terms of Services][terms-of-services]. For additional help, see the 
+  [Troubleshooting violations FAQ][troubleshoot-violations].
+- Once you have remedied the violation you can
   resubmit via your developer dashboard.
 - Please do not re-publish a removed extension until the policy violation has been remedied. If
   you have additional questions, follow the instructions in the [CWS Complaint Handling FAQ][complaint-handling].
-- If you believe your developer account was wrongly terminated, you can appeal [here][cws-support]. We will
+
+### My Chrome Web Store account has been suspended. What should I do? {: #faq-listing-12 }
+
+If you believe your developer account was wrongly terminated, you can appeal [here][cws-support]. We will
   only reinstate accounts if an error was made, and a re-review finds that your account does not
-  violate the developer terms.
+  violate the developer terms. For more information, check the [CWS Complaint Handling FAQ][complaint-handling].
 
 ### How do I link my Play and Chrome Web Store item so that the "Available for Android" link appears on my item detail page? {: #faq-listing-11 }
 
@@ -317,132 +308,46 @@ is no way to enter the information into your listing.
 
 ## Additional Troubleshooting
 
-If you've fixed all errors produced by the tools and continue experiencing issues, please [contact us][cws-support] 
-with any additional details regarding the problem. Please send us a screenshot of the
-problem and include your .crx file.
+If you continue experiencing issues with your Chrome Web Store item, please [contact
+us][cws-support] with any additional details regarding the problem.
 
 ### How can I raise P2B concerns?
 
 European developers can raise concerns about clarity of terms, policies, or other Platform To
 Business related issues by contacting [CWS support][cws-support].
 
-
-[1]: https://chrome.google.com/webstore
-[2]: /docs/extensions/mv2/hosting_changes
-[3]: /docs/extensions/mv2/faq
-[4]: https://groups.google.com/a/chromium.org/group/chromium-apps
-[5]: #faq-gen-01
-[6]: #faq-gen-02
-[7]: #faq-gen-05
-[8]: #faq-gen-06
-[9]: #faq-gen-07
-[10]: #faq-gen-08
-[11]: #faq-gen-09
-[12]: #faq-gen-11
-[13]: #faq-gen-17
-[14]: #faq-gen-22
-[15]: #faq-gen-23
-[16]: #faq-gen-24
-[17]: #faq-gen-25
-[18]: #faq-gen-26
-[19]: #faq-gen-27
-[20]: #faq-gen-28
-[21]: #faq-gen-29
-[22]: #faq-gen-30
-[23]: #faq-dev-01
-[24]: #faq-gen-10
-[25]: #faq-dev-02
-[26]: #faq-dev-03
-[27]: #faq-listing-01
-[28]: #faq-listing-02
-[29]: #faq-listing-03
-[30]: #faq-listing-04
-[31]: #faq-listing-05
-[32]: #faq-listing-06
-[33]: #faq-listing-07
-[34]: #faq-gen-15
-[35]: #faq-gen-16
-[36]: #faq-gen-18
-[37]: #faq-gen-19
-[38]: #faq-gen-20
-[39]: #faq-gen-21
-[40]: #faq-listing-08
-[42]: #faq-listing-09
-[43]: #faq-listing-10
-[44]: #faq-listing-11
-[45]: #faq-payments-01
-[46]: #faq-payments-02
-[47]: #faq-payments-03
-[48]: #faq-payments-04
-[49]: #faq-payments-05
-[50]: #faq-payments-06
-[51]: #faq-payments-07
-[52]: #faq-payments-09
-[53]: #faq-payments-10
-[54]: #faq-payments-11
-[55]: #faq-payments-12
-[56]: #faq-payments-13
-[57]: #faq-payments-14
-[58]: #faq-payments-15
-[59]: #faq-payments-16
-[60]: #faq-app-01
-[61]: #faq-app-02
-[62]: #faq-app-02.5
-[63]: #faq-app-03
-[64]: #faq-app-04
-[65]: #faq-app-05
-[66]: #faq-app-06
-[67]: #faq-app-07
-[68]: #faq-app-08
-[69]: #faq-app-09
-[70]: #faq-app-10
-[71]: #faq-app-11
-[72]: #faq-app-12
-[73]: #faq-app-13
-[74]: #faq-app-14
-[75]: #faq-app-15
-[76]: #faq-app-16
-[77]: #faq-app-17
-[78]: #faq-app-18
-[79]: #faq-app-19
-[80]: #faq-app-20
-[81]: #faq-app-21
-[82]: #faq-app-22
-[83]: #faq-app-23
-[84]: #faq-app-24
-[85]: #faq-app-25
-[86]: #faq-app-26
-[87]: #faq-app-27
-[88]: #faq-extensions-01
-[89]: #faq-extensions-02
-[90]: #faq-themes-01
-[91]: #faq-themes-02
-[95]: https://chromereleases.googleblog.com/
-[96]: https://crbug.com
-[97]: https://www.chromium.org/getting-involved/dev-channel
-[99]: /docs/webstore/register
-[100]: https://www.google.com/accounts/NewAccount
-[104]: https://groups.google.com
-[110]: https://chrome.google.com/webstore/devconsole
-[111]: https://code.google.com/chrome/extensions/packaging.html
-[112]: https://code.google.com/chrome/extensions/autoupdate.html
-[116]: images
-[117]: https://groups.google.com/group/chromium-extensions/browse_thread/thread/defbf282d11a8cc4/a2d1aedb84bc60b9
-[122]: https://www.google.com/about/company/unwanted-software-policy.html
-[123]: /docs/webstore/program_policies
-
-[125]: /docs/extensions/mv3/manifestVersion
-[127]: https://support.google.com/chrome_webstore/answer/1254182?hl=en&ref_topic=1734051
-
+[account-suspended]: #faq-listing-12
 [apps]: /docs/apps/
 [branding]: /docs/webstore/branding
+[bug-tracker]: https://crbug.com
+[chrome-release-blog]: https://chromereleases.googleblog.com/
+[chromium-extensions]: https://groups.google.com/a/chromium.org/g/chromium-extensions
 [complaint-handling]: /docs/webstore/complaint-faq
+[comply-policies]: /docs/webstore/manage/#comply-with-chrome-web-store-policies
+[cws-distribution]: /docs/webstore/cws-dashboard-distribution/
+[cws-enterprise]: /docs/webstore/cws-dashboard-enterprise/
+[cws-images]: /docs/webstore/images/
+[cws-register]: /docs/webstore/register
 [cws-support]: https://support.google.com/chrome_webstore/contact/developer_support/
-[ext]: /docs/extensions/
+[dev-channel-build]: https://www.chromium.org/getting-involved/dev-channel
 [dev-dashboard]: https://chrome.google.com/webstore/developer/dashboard
+[faq-localize-description]: #faq-gen-20
+[faq-localize-screenshots]: #faq-gen-21
+[enterprise]: /docs/webstore/cws-enterprise
+[ext]: /docs/extensions/
+[extension-faq]: /docs/extensions/mv3/faq
+[google-groups]: https://groups.google.com
+[great-listing]: /docs/webstore/best_listing/
 [how-long-do-reviews-take]: #faq-listing-108
 [internationalize]: /docs/webstore/i18n
+[malware-policy]: https://www.google.com/about/company/unwanted-software-policy.html
+[manifest-version]: /docs/extensions/mv3/manifestVersion
+[program-policies]: /docs/webstore/program_policies
+[region-distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution
+[stackoverflow-extensions]: https://stackoverflow.com/questions/tagged/google-chrome-extension
+[support-url]: /docs/webstore/cws-dashboard-listing/#support-url
 [terms-of-services]: /docs/webstore/terms
 [themes]: /docs/extensions/mv3/themes/
-[program-policies]: /docs/webstore/program_policies
-
+[troubleshoot-violations]: /docs/webstore/troubleshooting/
+[update-item]: /docs/webstore/update
+[webstore]: https://chrome.google.com/webstore

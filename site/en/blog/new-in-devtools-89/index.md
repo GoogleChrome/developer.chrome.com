@@ -419,7 +419,7 @@ To enable the experiment, check the **Show CSP Violations view** checkbox under 
 
 {% endAside %}
 
-View all Content Security Policy (CSP) violations at a glance in the new **CSP Violations** tab.
+View all [Content Security Policy (CSP)](https://web.dev/strict-csp/) violations at a glance in the new **CSP Violations** tab.
 This new tab is an experiment that should make it easier to work with web pages with a large amount
 of CSP and Trusted Type violations.
 

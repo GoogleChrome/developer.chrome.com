@@ -23,23 +23,23 @@ element for the pagination (stock) navigation #}
   {% if paginationObject.href.previous %}
     <a class="pagination__button type--small gap-right-200 text-align-center" href="{{ paginationObject.href.previous }}">
       {{ icon('arrow-back', {hidden: true}) }}
-      <span>{{ 'i18n.common.newer_posts' | i18n(locale) }}</span>
+      <span>{{ 'i18n.common.back' | i18n(locale) }}</span>
     </a>
   {% else %}
     <span class="pagination__button type--small gap-right-200 text-align-center" aria-hidden="true">
       {{ icon('arrow-back', {hidden: true}) }}
-      <span>{{ 'i18n.common.newer_posts' | i18n(locale) }}</span>
+      <span>{{ 'i18n.common.back' | i18n(locale) }}</span>
     </span>
   {% endif %}
 
   {% if paginationObject.href.next %}
     <a class="pagination__button type--small gap-left-200 text-align-center" href="{{ paginationObject.href.next }}">
-      <span>{{ 'i18n.common.older_posts' | i18n(locale) }}</span>
+      <span>{{ 'i18n.common.next' | i18n(locale) }}</span>
       {{ icon('arrow-forward', {hidden: true}) }}
     </a>
   {% else %}
     <span class="pagination__button type--small gap-left-200 text-align-center" aria-hidden="true">
-      <span>{{ 'i18n.common.older_posts' | i18n(locale) }}</span>
+      <span>{{ 'i18n.common.next' | i18n(locale) }}</span>
       {{ icon('arrow-forward', {hidden: true}) }}
     </span>
   {% endif %}

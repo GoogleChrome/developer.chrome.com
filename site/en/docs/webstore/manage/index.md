@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manage your Chrome Web Store Item"
 date: 2021-08-17
+updated: 2021-09-15
 description: >
   How to manage an extension or theme ("item") in the Chrome Web Store.
 ---
@@ -61,6 +62,97 @@ contact [Chrome Web Store Developer Support][cws-support]. For more examples and
 you can remedy the problem check the [Troubleshooting guide][troubleshooting]. 
 
 {% endAside %}
+
+## Improve ratings and reply to user reviews
+
+Ratings and reviews help people decide whether or not to try out an extension. Not only do they
+leave a positive impression, but can also increase your ranking on the Chrome Web Store.
+
+Users can leave comments in the **Reviews tab** of your store item; you can also post replies here
+to those reviews. Each user can only rate an extension once, but they can update their rating or
+review at any time. You can edit your reply at any time to provide the user with updates.
+
+ {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/M09XcAQmPi1dS84EiVQo.png", alt="Store item
+reviews tab",
+width="600", height="201" %}
+
+{% Aside %}
+
+Users will not be notified when you reply to a review, but other users will see that
+you are committed to solving issues as they arise.
+
+{% endAside %}
+
+Users are more likely to improve their review if you respond and address their concerns promptly. To
+receive email notifications when users post reviews or update existing reviews, you can enable Item
+Reviews in the **Account settings** of the Developer Dashboard.
+
+
+   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8KGlMCKpiVVBRVqPAkXF.png", alt="Enable reviews notifications", width="600", height="212" %}
+
+The **Rating tab** in the developer dashboard provides an overview of your extension’s ratings,
+including the total number of reviews and ratings over time.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/HXJU5d5hEtHNNgj7aehv.png", alt="Dashboard Ratings tab", width="600", height="408" %}
+
+{% Aside %}
+
+You can give users a direct link to the review page of your
+store item by adding `/reviews` at the end of your item’s URL:
+`https://chrome.google.com/webstore/detail/{your-item-id}/reviews`
+
+{% endAside %}
+
+## Track your store listing performance
+
+Understanding your Chrome Web Store listing metrics can help you evaluate how changes to your store
+listing have affected conversion rates. For example, you can identify countries with a high number
+of visitors so you can prioritize internationalization of your extension for those countries. You
+can also export all the reports described below as CSV files.
+
+### Impressions
+
+The impressions metrics track the number of users that discover your extension while searching or
+browsing the Chrome Web Store. An impression occurs when your extension is featured in any
+collection or direct visits to your store item.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/Hu4dskyv3lIOuYB0qpv0.png", alt="daily impressions
+statistics chart", width="800", height="299" %}
+
+### Daily installs and uninstalls
+
+You can track customer acquisition and churn using these reports:
+- Track acquisition using the daily install report. 
+- Monitor user churn using the daily uninstalls analytics. 
+
+These numbers include new and returning
+  users. You can configure this data by country, language, operating system, or time period using
+  the “filter by” dropdown menus.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/bj6IRC7am3XgQwcfxpnr.png", alt="daily installs
+statistics chart", width="800", height="586" %}
+
+### Weekly users
+
+You can monitor weekly user retention for different groups of users, categorized by country,
+language, operating system, and item version.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/jOUcBDD8sBcTFCXrGq1s.png", alt="weekly users
+statistics chart", width="800", height="342" %}
+
+{% Aside %}
+
+The **Weekly Users** stats only captures installations; it doesn't monitor whether users are active or not.
+
+{% endAside %}
+
+### Google Analytics
+
+To use Google Analytics to track Store item metrics, you can add your Google
+Analytics ID in the **Store listing Tab** under Additional fields.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/nYdeRcgteYZL6pTyPQMA.png", alt="where to add google
+analytics id", width="787", height="121" %}
 
 [cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole

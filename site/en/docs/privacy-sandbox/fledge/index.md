@@ -6,12 +6,21 @@ subhead: >
 description: >
   FLEDGE satisfies remarketing use cases, but is designed so it cannot be used by third parties to track user browsing behaviour across sites. The API enables on-device "auctions" by the browser, to choose relevant ads provided by websites the user has previously visited.
 date: 2021-05-18
-updated: 2021-05-18
+updated: 2021-09-10
 authors:
   - samdutton
 ---
 
 <!--lint disable no-smart-quotes-->
+
+{% Aside %}
+FLEDGE is the first experiment to be implemented in Chromium within the 
+[TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
+{% endAside %}
+
+{% YouTube
+  id='HkvmYKqnytw' 
+%}
 
 ## Implementation status
 
@@ -19,11 +28,6 @@ authors:
 [WICG](https://www.w3.org/community/wicg/) and interest groups.
 * [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI) in
 [Blink](https://www.chromium.org/blink).
-
-
-{% Aside %}
-FLEDGE is a descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
-{% endAside %}
 
 
 ## Why do we need FLEDGE?

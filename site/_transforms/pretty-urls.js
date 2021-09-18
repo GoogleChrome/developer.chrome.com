@@ -69,6 +69,11 @@ const prettyUrls = ($, outputPath, locale) => {
   $links.each((_, elem) => {
     const $link = $(elem);
 
+    // This is a cross-language link, so don't try to "fix" it, which causes invalid URLs.
+    if ($link.attr('translate') === 'no') {
+      return;
+    }
+
     const href = $link.attr('href');
     if (!href && !$link.attr('id')) {
       console.warn(

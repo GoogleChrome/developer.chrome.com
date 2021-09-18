@@ -44,7 +44,7 @@ export const collapseSideNav = store.action(() => {
 });
 
 export const restoreFocus = store.action(() => {
-  /** @type {HTMLElement} */ (document.querySelector(
-    '.top-nav__hamburger'
-  )).focus();
+  /** @type {HTMLElement} */ (
+    document.querySelector('.top-nav__hamburger')
+  ).focus();
 });
