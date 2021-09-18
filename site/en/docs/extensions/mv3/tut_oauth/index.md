@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "OAuth2: Authenticate users with Google"
 date: 2012-09-18
-updated: 2018-05-01
+updated: 2021-09-17
 description: >
   Step-by-step instructions on how to build an extension that accesses
   a user's Google contacts via the Google People API, the Chrome Identity API,
