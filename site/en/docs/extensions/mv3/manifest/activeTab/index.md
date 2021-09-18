@@ -46,7 +46,7 @@ See the [Page Redder][2] sample extension:
   "browser_action": {
     "default_title": "Make this page red"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
 ```
 
