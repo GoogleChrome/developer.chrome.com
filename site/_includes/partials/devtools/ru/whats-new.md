@@ -1,5 +1,24 @@
-## More DevTools features {: #whats-new }
-Please refer to the English version of [What's New In DevTools](/tags/new-in-devtools/) for a complete list of released features. Below are some content that has been translated into Russian.
+## Больше новинок DevTools {: #whats-new }
+
+Чтобы увидеть полный список обновлений,  перейдите на английскую версию по ссылке 
+<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
+
+
+### Chrome 94 {: #chrome94 }
+
+* [Пользуйтесь DevTools на своём языке](/ru/blog/new-in-devtools-94/#localized)
+* [Новые устройства Nest Hub в списке девайсов](/ru/blog/new-in-devtools-94/#nest-hub)
+* [Информация об origin trials в свойствах фрейма](/ru/blog/new-in-devtools-94/#origin-trials)
+* [Новый значок для выражений от контейнера](/ru/blog/new-in-devtools-94/#container-queries)
+* [Новый чекбокс для инвертирования фильтров сети](/ru/blog/new-in-devtools-94/#nvert-network-filter)
+* [Предстоящее упразднение боковой колонки Console](/ru/blog/new-in-devtools-94/#deprecated)
+* [Отображение необработанных заголовков `Set-Cookie` во вкладках Issues и Network](/ru/blog/new-in-devtools-94/#raw-cookies)
+* [Последовательное отображение нативных аксессоров как собственных свойств в консоли](/ru/blog/new-in-devtools-94/#native-accessors)
+* [Правильная трассировка стека ошибок для встроенных скриптов с #sourceURL](/ru/blog/new-in-devtools-94/#inline-script)
+* [Изменение формата цвета в панели Computed](/ru/blog/new-in-devtools-94/#color-unit)
+* [Замена кастомных всплывающих подсказок на нативные HTML-подсказки](/ru/blog/new-in-devtools-94/#tooltip)
+* [[Эксперимент] Скрытие задач во вкладке Issues](/ru/blog/new-in-devtools-94/#hide-issues)
+
 
 ### Chrome 93 {: #chrome93 }
 
