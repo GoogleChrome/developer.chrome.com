@@ -52,6 +52,7 @@ Chromium issues: [1126178](https://crbug.com/1126178), [1172993](https://crbug.c
 
 
 <!-- ## Hide issues in the Issues tab {: #hide-issues } -->
+
 <!-- You can now hide specific issues in the Issues tab to focus only on those issues that matter to you. -->
 
 <!-- In the [Issues tab](/docs/devtools/issues/), hover over on an issue you would like to hide. Click on **More options**  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Hide issues like this**. -->
@@ -68,6 +69,7 @@ Chromium issue: [1175722](https://crbug.com/1175722)
 
 
 <!-- ## Improved the display of properties {: #properties } -->
+
 <!-- DevTools improve the display of properties by: -->
 
 <!-- - Always bold and sort own properties first in the **Console**, **Sources** panel and **Properties** pane. 
@@ -101,6 +103,7 @@ Chromium issues: [1076820](https://crbug.com/1076820), [1119900](https://crbug.c
 
 
 <!-- ## Lighthouse 8.4 in the Lighthouse panel {: #lighthouse } -->
+
 <!-- The **Lighthouse** panel is now running Lighthouse 8.4. Lighthouse will now detect if the [Largest Containful Paint (LCP)](https://web.dev/lcp) element was a lazy-loaded image and recommend removing the `loading` attribute from it. -->
 
 <!-- Check out the [What’s new in Lighthouse 8.4](/blog/lighthouse-8-4/) for more details on the updates. -->
@@ -113,6 +116,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 
 <!-- ## Sort snippets in the Sources panel {: #snippets } -->
+
 <!-- The [snippets](/docs/devtools/javascript/snippets/) in the **Snippets** pane under the **Sources** panel are now sorted alphabetically. Previously, it’s not sorted. -->
 
 <!-- Utilize the snippets feature to run commands quicker. Watch this video for a [tip](https://youtu.be/NOal2gTzftI?t=176)! -->
@@ -125,9 +129,10 @@ Chromium issue: [1243976](https://crbug.com/1243976)
 
 
 <!-- ## New links to translated release notes and report a translation bug {: #localized } -->
+
 <!-- You can now click to read the DevTools release notes in 6 other languages - [Russian](/ru/blog/new-in-devtools-95), [Chinese](/zh/blog/new-in-devtools-95), [Spanish](/es/blog/new-in-devtools-95), [Japanese](/ja/blog/new-in-devtools-95), [Portuguese](/pt/blog/new-in-devtools-95) and [Korean](/ko/blog/new-in-devtools-95)  via the What’s new tab.  -->
 
-<!-- Since Chrome 94, you can [set your preferred language](/blog/new-in-devtools-94/#localized) in DevTools. If you found any issues with the translations, please help us improve it by [reporting a translation issue](https://goo.gle/devtools-translate) via **More options** > **Help** > **Report a translation bug**.  -->
+<!-- Since Chrome 94, you can [set your preferred language](/blog/new-in-devtools-94/#localized) in DevTools. If you found any issues with the translations, help us improve it by [reporting a translation issue](https://goo.gle/devtools-translate) via **More options** > **Help** > **Report a translation bug**.  -->
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qrg4Ahf4sYseL2NQZwIl.png", alt="New links to translated release notes and report a translation bug", width="800", height="487" %}
 
@@ -138,6 +143,7 @@ Chromium issues: [1246245](https://crbug.com/1246245), [1245481](https://crbug.c
 
 
 <!-- ## Improved UI for DevTools command menu {: #command-menu } -->
+
 <!-- Did you find it hard to search for a file in the [Command Menu](/docs/devtools/command-menu/#open)? Good news for you, the **Command Menu** user interface is now enhanced!  -->
 
 <!-- Open the **Command Menu** to search for a file with keyboard shortcut <kbd>Control</kbd>+<kbd>P</kbd> in Windows and Linux, or <kbd>Command</kbd>+<kbd>P</kbd> in MacOS. -->
