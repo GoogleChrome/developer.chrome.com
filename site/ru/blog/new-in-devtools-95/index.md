@@ -7,7 +7,7 @@ date: 2021-09-20
 updated: 2021-09-20
 description:
   "New CSS length authoring tools, hide issues in the Issues tab and improved the display of properties more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2cApOUqd99Nqvzgzs678.jpgg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2cApOUqd99Nqvzgzs678.jpg'
 draft: true
 alt: ''
 tags:
