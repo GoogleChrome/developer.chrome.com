@@ -7,12 +7,12 @@ description: >
   An explanation of the Chrome Web Store and why you might want to use it.
 ---
 
-The [Chrome Web Store][1] lets you publish extensions&mdash;either free or paid&mdash;where Google Chrome
+The [Chrome Web Store][webstore] lets you publish extensions&mdash;either free or paid&mdash;where Google Chrome
 users can easily find them. 
 
 Your published item can be free, or you can charge for it using any payment system you like.
 
-To upload and publish items, use the [Chrome Developer Dashboard][3].
+To upload and publish items, use the [Chrome Developer Dashboard][dashboard].
 
 ## Why should I use the Chrome Web Store?
 
@@ -21,11 +21,13 @@ build Chrome-specific features into it.
 
 ## How do I start?
 
-1.  Learn more about [Chrome Extensions][4]
-2.  Publish your first extension by following the steps in [Publish in the Chrome Web Store][5]
+1.  Learn more about [Chrome Extensions][extensions]
+1.  Publish your first extension by following the steps in [Publish in the Chrome Web Store][cws-publish].
+1.  For addition help, check the [Chrome Web Store FAQs][cws-faq]
 
-[1]: http://chrome.google.com/webstore
-[3]: https://chrome.google.com/webstore/developer/dashboard
-[4]: /docs/extensions/mv3/overview/
-[5]: /docs/webstore/publish
+[cws-faq]: /docs/webstore/faq/
+[cws-publish]: /docs/webstore/publish
+[dashboard]: https://chrome.google.com/webstore/developer/dashboard
+[extensions]: /docs/extensions/mv3/overview/
+[webstore]: http://chrome.google.com/webstore
 

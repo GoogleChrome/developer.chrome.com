@@ -28,11 +28,11 @@ pagination:
     <id>{{ absolutePostUrl }}</id>
     {% if item.data.authors.length %}
       {% for authorId in item.data.authors %}
-      {% set author = authorsData[authorId] %}
+      {% set author = postsData.authors[authorId] %}
       <author>
         <name>
           {%- if author -%}
-            {{ author.name.given }} {{ author.name.family }}
+            <name>{{ author.title | i18n(locale) }}</name>
           {%- else -%}
             {{ authorId }}
           {%- endif -%}

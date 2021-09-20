@@ -41,6 +41,7 @@
   </p>
 {% endif %}
 
+  {% set tags = pd.tags %}
   {% include 'partials/tags.njk' %}
 
   {# Always render "authors" even with zero authors, as this renders the date #}

@@ -88,5 +88,8 @@
   },
   "devtools-engineering": {
     "title": "i18n.tags.devtools-engineering"
+  },
+  "devtools-architecture": {
+    "title": "i18n.tags.devtools-architecture"
   }
 }

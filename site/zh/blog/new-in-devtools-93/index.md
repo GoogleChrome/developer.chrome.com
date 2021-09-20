@@ -110,7 +110,7 @@ Chromium 议题: [772558](https://crbug.com/772558)
 ## 在 Manifest 窗格展示新的 note 链接 {: #new-note-url }
 现在，Manifest 窗格可以显示[新的 note 链接](https://wicg.github.io/manifest-incubations/index.html#dfn-note_taking)。
 
-目前，那些有声明 “new-note” 能力 的 Chrome OS (CrOS)、Chrome 以及安卓（Android）的应用 ，可以会在设备的Stylus设定中被选为 note-taking 应用（前提是 CrOS 设备已经在使用 stylus）。当被选为 note-taking 应用，用户可以通过 stylus palette 上的 “创建 Note” 按钮来启动 APP 。我们在应用的 manifest 文件里面添加 `new-note-url` 字段，是为了将相同功能给移植到 web 应用。
+目前，那些有声明 "new-note" 能力 的 Chrome OS (CrOS)、Chrome 以及安卓（Android）的应用 ，可以会在设备的Stylus设定中被选为 note-taking 应用（前提是 CrOS 设备已经在使用 stylus）。当被选为 note-taking 应用，用户可以通过 stylus palette 上的 "创建 Note" 按钮来启动 APP 。我们在应用的 manifest 文件里面添加 `new-note-url` 字段，是为了将相同功能给移植到 web 应用。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2Cwggroar7pNesfAQi4K.png", alt="Manifest 窗格里的新 note 链接", width="800", height="477" %}
 

@@ -27,13 +27,13 @@ Open the `index.md` file at the root of the project directory.
 ```bash
 .
 ├── cheese
-│   ├── cheese.11tydata.yml
 │   ├── index.md  # <-- this file!
 │   └── my-first-doc
 ```
 
 Update the `title` and the `description`. These will be displayed on the
-`/docs/` and `/docs/[project-key]` pages.
+`/docs/` and `/docs/[project-key]` pages. You'll need to create a matching page
+in other languages if it is ever translated.
 
 ## Add your first doc
 
@@ -43,7 +43,7 @@ See the guide on [adding a doc](/docs/handbook/how-to/add-a-doc/) for a detailed
 ## Configure the table of contents for your project
 
 Create a new folder in the `site/_data/docs/` directory, and name it after your
-project.
+project. This is language-agnostic.
 
 ```bash
 ├── _data
@@ -82,8 +82,8 @@ The `toc.yml` supports these fields:
 Add an icon at `site/_static/images/project/[project-key].svg`. This should be
 a small SVG rendered in white. See the existing icons for examples.
 
-If you'd like this icon to render on a different color than the default blue,
-you can optionally add a peer `styles.yml` to your `toc.yml` file. For example:
+If you'd like this icon to render on top of a different color than the default blue, you can optionally add a peer `styles.yml` to your `toc.yml` file.
+For example:
 
 ```yml
 # Color (CSS theme variable) to use for this project page

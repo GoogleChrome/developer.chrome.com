@@ -6,7 +6,7 @@ subhead: >
 description: >
   The Attribution Reporting API makes it possible to measure when user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 date: 2021-05-18
-updated: 2021-08-24
+updated: 2021-09-10
 authors:
   - maudn
   - samdutton
@@ -14,6 +14,10 @@ authors:
 
 {% Aside 'caution' %} The Attribution Reporting API was previously known as the Conversion
 Measurement API. {% endAside %}
+
+{% YouTube
+  id='UGA74CIcom8' 
+%}
 
 ## Implementation status
 

@@ -25,11 +25,11 @@ const {i18n} = require('../_filters/i18n');
 
 /**
  * @param {string} locale
- * @return {EleventyData}
+ * @return {Partial<EleventyData>}
  */
 module.exports = locale => ({
   eleventyComputed: {
-    title: data => data.paged.title,
+    title: data => data.paged.overrideTitle ?? i18n(data.paged.title, locale),
     feedName: data => {
       const key = data.paged.key ?? 'blog';
       if (key.startsWith('chrome-')) {
@@ -46,20 +46,14 @@ module.exports = locale => ({
     before: tags => {
       /** @type PaginatedPage[] */
       let paginated = [];
-
       for (const tag of tags) {
         const posts = tag.posts[locale];
-        if (!posts.length) {
-          continue;
+        if (posts.length) {
+          /** @type {VirtualCollectionItem} */
+          const additionalData = {...tag, description: '', elements: []};
+          paginated = paginated.concat(addPagination(posts, additionalData));
         }
-
-        const more = addPagination(posts, locale + '/tags/' + tag.key, {
-          title: tag.overrideTitle ?? i18n(tag.title, locale),
-          key: tag.key,
-        });
-        paginated = paginated.concat(more);
       }
-
       return paginated;
     },
   },

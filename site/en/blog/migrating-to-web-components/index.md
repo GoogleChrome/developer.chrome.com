@@ -11,9 +11,12 @@ alt: ''
 tags:
   - devtools-engineering
   - devtools
+  - devtools-architecture
 ---
 
 {% include 'partials/devtools/en/banner.md' %}
+
+This post is part of [a series of blog posts](/tags/devtools-architecture/) describing the changes we are making to DevTools' architecture and how it is built. 
 
 When DevTools was first created many, many years ago the team chose to build a bespoke UI framework. This was a reasonable choice at the time and has served DevTools well.
 

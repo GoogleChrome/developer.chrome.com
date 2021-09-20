@@ -5,7 +5,6 @@
   "Chrome [version]".
 #}
 {% if item.startsWith('chrome-') %}
-  {% set item = 'chrome' %}
   {% set title = item | replace('-', ' ') | capitalize %}
 {% else %}
   {% set title = ('i18n.tags.' + item) | i18n(locale) %}

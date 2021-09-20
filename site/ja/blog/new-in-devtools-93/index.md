@@ -7,7 +7,7 @@ date: 2021-07-28
 updated: 2021-07-28
 description:
   "編集可能な CSS コンテナクエリ、Web bundle プレビュー、コンソールでの文字列の扱いの改善など。"
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xFq1Fb2KOrQfq1RG6x5e.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/spFZS9blWH3P6Ab7Kwbe.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -15,7 +15,8 @@ tags:
   - chrome-93
 ---
 
-*Thanks [technohippy](https://github.com/technohippy) for the translations, [yoichiro](https://github.com/yoichiro) and [lacolaco](https://github.com/lacolaco) for the reviews!*
+*翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [yoichiro](https://github.com/yoichiro) さんと [lacolaco](https://github.com/lacolaco) さんに感謝いたします。*
+
 
 {% include 'partials/devtools/ja/banner.md' %}
 

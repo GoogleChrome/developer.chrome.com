@@ -11,7 +11,7 @@ test('Video shortcode generates video html', t => {
     html`
       <video controls>
         <source
-          src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4"
+          src="https://storage.googleapis.com/web-dev-uploads/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4"
           type="video/mp4"
         />
       </video>
@@ -32,15 +32,15 @@ test('video shortcode generates multiple sources when provided', t => {
     html`
       <video controls>
         <source
-          src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4"
+          src="https://storage.googleapis.com/web-dev-uploads/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4"
           type="video/mp4"
         />
         <source
-          src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mov"
+          src="https://storage.googleapis.com/web-dev-uploads/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mov"
           type="video/mp4"
         />
         <source
-          src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.webm"
+          src="https://storage.googleapis.com/web-dev-uploads/video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.webm"
           type="video/webm"
         />
       </video>

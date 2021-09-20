@@ -7,7 +7,7 @@ date: 2021-08-24
 updated: 2021-08-24
 description:
   "Use DevTools in your preferred language, new Nest Hub devices, new CSS container queries badge and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/js1uKEulNBGj0PoJkqZq.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ar2bYZVZCt9GPDfVtrTV.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -17,6 +17,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
+{% YouTube id="N9Jiou61WH4" %}
 
 ## Use DevTools in your preferred language {: #localized }
 Chrome DevTools now supports more than 80 languages, allowing you to work in your preferred language!
@@ -116,7 +117,7 @@ Chromium issues: [1076820](https://crbug.com/1076820), ​​[1199247](https://c
 ## Proper error stack traces for inline scripts with #sourceURL {: #inline-script }
 DevTools now resolves inline scripts with `#sourceURL` properly and shows proper error stack traces for debugging.
 
-Previously DevTools displayed incorrect location for inline scripts with `#sourceURL`, relative to the surrounding document rather than relative to the opening `<script>` tag..
+Previously DevTools displayed incorrect location for inline scripts with `#sourceURL`, relative to the surrounding document rather than relative to the opening `<script>` tag.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XVUY8XxbGZW74kPsGkOZ.png", alt="Proper error stack traces for inline scripts with #sourceURL", width="800", height="425" %}
 
