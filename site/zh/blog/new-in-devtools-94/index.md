@@ -15,8 +15,11 @@ tags:
   - chrome-94
 ---
 
+*感谢[流浪大法师](https://webfrontend.dev/)提供的翻译。*
+
 {% include 'partials/devtools/zh/banner.md' %}
 
+{% YouTube id="N9Jiou61WH4" %}
 
 ## 设定您的 DevTools 用户界面语言 {: #localized }
 Chrome DevTools 现在支持超过 80 种语言，允许您设定自己喜欢的语言！
