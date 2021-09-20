@@ -19,6 +19,7 @@ tags:
 
 {% include 'partials/devtools/ja/banner.md' %}
 
+{% YouTube id="N9Jiou61WH4" %}
 
 <!--
 ## Use DevTools in your preferred language {: #localized }

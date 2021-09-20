@@ -19,6 +19,8 @@ tags:
 
 {% include 'partials/devtools/es/banner.md' %}
 
+{% YouTube id="N9Jiou61WH4" %}
+
 
 ## Utiliza DevTools en tu idioma preferido {: #localized }
 

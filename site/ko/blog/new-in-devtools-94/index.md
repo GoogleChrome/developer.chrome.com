@@ -20,6 +20,8 @@ tags:
 
 {% include 'partials/devtools/ko/banner.md' %}
 
+{% YouTube id="N9Jiou61WH4" %}
+
 ## DevTools 를 이제 여러분들이 선호하는 언어로 사용하세요 {: #localized }
 
 Chrome DevTools는 80개 이상 언어를 제공하여, 여러분들의 기호에 맞는 언어를 골라서 사용할 수 있습니다.

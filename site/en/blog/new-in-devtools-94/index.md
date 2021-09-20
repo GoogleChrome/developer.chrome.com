@@ -17,6 +17,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
+{% YouTube id="N9Jiou61WH4" %}
 
 ## Use DevTools in your preferred language {: #localized }
 Chrome DevTools now supports more than 80 languages, allowing you to work in your preferred language!
