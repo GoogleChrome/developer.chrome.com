@@ -19,6 +19,8 @@ tags:
 
 {% include 'partials/devtools/pt/banner.md' %}
 
+{% YouTube id="N9Jiou61WH4" %}
+
 ## Utilize o DevTools em seu idioma preferido {: #localized }
 
 O Chrome DevTools agora suporta mais de 80 idiomas, permitindo que você trabalhe no seu idioma preferido!

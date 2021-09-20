@@ -7,7 +7,7 @@ date: 2021-08-24
 updated: 2021-08-24
 description:
   "DevTools 를 원하는 언어로 사용할 수 있습니다. 그 외 새 Nest Hub 기기들, 새 CSS 컨테이너 쿼리 배지 등 많은 새 기능들을 확인해보세요."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/js1uKEulNBGj0PoJkqZq.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jQ7c8hUZLtFYoN2Xvuyx.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -19,6 +19,8 @@ tags:
 
 
 {% include 'partials/devtools/ko/banner.md' %}
+
+{% YouTube id="N9Jiou61WH4" %}
 
 ## DevTools 를 이제 여러분들이 선호하는 언어로 사용하세요 {: #localized }
 
