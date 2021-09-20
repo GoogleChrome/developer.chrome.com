@@ -94,7 +94,7 @@ Chromium 议题：[1232937](https://crbug.com/1232937)
 ## 在问题选项卡以及网络面板那里显示原生 `Set-Cookie` 响应头 {: #raw-cookies }
 DevTools 现在可以在**问题**选项卡那里显示原生（raw） `Set-Cookie` 响应头（response headers）。
 
-此前，DevTools 并不会在**网络**面板那里显示异常 cookie（不正确的 `Set-Cookie` 响应头）。现在，透过**网络**面板新增的 `response-header-set-cookie` 过滤条件，用户现在可以过滤掉含有原生 `Set-Cookie` 的响应。DevTools 也会把**问题**选项卡里面的原生 `Set-Cookie` 响应头给链接到**网络**面板。
+此前，DevTools 并不会在**网络**面板那里显示异常 cookie（不正确的 `Set-Cookie` 响应头）。现在，通过**网络**面板新增的 `response-header-set-cookie` 过滤条件，用户可以过滤掉含有原生 `Set-Cookie` 的响应。DevTools 也会把**问题**选项卡里面的原生 `Set-Cookie` 响应头给链接到**网络**面板。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PbozcNJRd6rTME5hhqIq.png", alt="在问题选项卡以及网络面板那里显示原生 Set-Cookie 响应头", width="800", height="563" %}
 
@@ -128,11 +128,11 @@ DevTools 现在可以正确解析带有 #sourceURL 的行内脚本（inline scri
 Chromium 议题: [1183990](https://crbug.com/1183990), ​​[578269](https://crbug.com/578269)
 
 
-## 更改计算窗格里面元素的颜色格式 {: #color-unit }
+## 更改计算样式边栏里面元素的颜色格式 {: #color-unit }
 
-您现在可以通过 <kbd>Shift</kbd> + 点击**颜色预览**，来更改**计算**窗格里的元素颜色格式。
+您现在可以通过 <kbd>Shift</kbd> + 点击**颜色预览**，来更改**计算样式**边栏里的元素颜色格式。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IhOkF5do9P8Ovlr7YsdX.png", alt="通过 Shift + 点击的方式更改计算窗格里面的元素颜色格式", width="800", height="474" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/IhOkF5do9P8Ovlr7YsdX.png", alt="通过 Shift + 点击的方式更改**计算样式**里面的元素颜色格式", width="800", height="474" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/97143f7586d540e53a2e40ced7f106181e5c9ce3 #}
 
@@ -141,7 +141,7 @@ Chromium 议题: [1226371](https://crbug.com/1226371)
 
 ## 使用原生的 HTML 提示框替换自定义提示框 {: #tooltip }
 
-DevTools 现在针对所有的组件都采用原生 HTML 提示框（native HTML tooltips）。此前，DevTools 一直都是使用内部开发的自定义提示框，这是碍于原生自的 HTML 提示框缺乏自定义风格（Styling）的支援，DevTools 使用自定义提示框的支持。
+DevTools 现在针对所有的组件都采用原生 HTML 提示框（native HTML tooltips）。此前，DevTools 一直都是使用内部开发的自定义提示框，这是碍于原生的 HTML 提示框缺乏自定义风格（Styling）支持，因此 DevTools 使用自定义提示框的支持。
 
 不幸的是，维护自定义提示框的实现是一件很棘手的事。我们经常会遇到一些很复杂的 bugs。
 
@@ -159,7 +159,7 @@ Chromium 议题: [1223391](https://crbug.com/1223391)
 请勾选位于 **设置** > **实验** 下的 **启用隐藏问题菜单** 多选框，以启用此实验功能。
 {% endAside %}
 
-**隐藏问题菜单**是一个处于实验阶段的新功能。启用这个功能能让您隐藏**问题**选项卡里面的问题。这样的话，您就可以只专注于当前对你而言最重要的问题。
+**隐藏问题菜单**是一个处于实验阶段的新功能。启用这个功能能让您隐藏**问题**选项卡里面的问题。这样的话，您就可以只专注于当前对您而言最重要的问题。
 
 在**问题**选项卡里面，将鼠标悬停在某个问题上，点击右侧的问题菜单栏&nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="更多", width="4", height="20" %} &nbsp;，选择“隐藏问题”选项将其隐藏。
 
