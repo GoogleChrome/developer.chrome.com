@@ -25,7 +25,7 @@ tags:
   notifications using the new [Media Session API](#mediasession).
 * And there are plenty [more](#andmore)!
 
-I'm Pete LePage, let's dive in and see what's new for developers in Chrome 57!
+I'm [Pete LePage](https://petelepage.com/), let's dive in and see what's new for developers in Chrome 57!
 
 ## CSS grid layout {: #gridlayout }
 

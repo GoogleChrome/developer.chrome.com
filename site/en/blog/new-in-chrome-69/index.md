@@ -35,7 +35,7 @@ In Chrome 69, we've added support for:
 
 And there's [plenty more](#more)!
 
-I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 69!
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see what's new for developers in Chrome 69!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/68.0.3440.70..69.0.3497.81).

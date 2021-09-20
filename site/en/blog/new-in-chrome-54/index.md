@@ -34,7 +34,7 @@ with the [BroadcastChannel API](#broadcast-channel).
 * [Media experience get better](#request-full-screen) on Android and
 [foreign fetch](#foreign-fetch) is now available as an origin trial.
 
-I'm Pete LePage, let's dive in and see what's new for developers in Chrome 54!
+I'm [Pete LePage](https://petelepage.com/), let's dive in and see what's new for developers in Chrome 54!
 
 ## Custom elements v1 {: #custom-elements }
 

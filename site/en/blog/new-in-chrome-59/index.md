@@ -28,7 +28,7 @@ tags:
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/58.0.3029.81..59.0.3071.80?pretty=fuller&n=10000)
 
-I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 59!
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see what's new for developers in Chrome 59!
 
 ## Headless Chrome {: #headless }
 
