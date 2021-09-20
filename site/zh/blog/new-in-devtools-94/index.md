@@ -50,7 +50,7 @@ Chromium 议题：[1223525](https://crbug.com/1223525)
 
 [Origin trials](/blog/origin-trials/) 允许您提前尝试正处于实验阶段的新功能。通过注册参加 Origin trials， 您就可以在该新功能还未放给所有用户之前， 利用该功能进行限时的产品开发。
 
-打开有注册参加 origin trials 的网页(参考 [demo 页面](https://mediastreamtrack.glitch.me))。在**应用**面板那里，滚动至 **帧** 区域，选中 top frame。
+打开有注册参加 origin trials 的网页(参考 [demo 页面](https://mediastreamtrack.glitch.me))。在**应用**面板那里，滚动至**帧**区域，选中 top frame。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VICXjdGL5Rz09TAPg1sW.png", alt="Frame 详情页获取 origin trials 信息", width="800", height="465" %}
 
@@ -60,7 +60,7 @@ Chromium 议题：[607555](https://crbug.com/607555)
 
 
 ## 新的 CSS 容器查询（Container queries）徽章 {: #container-queries }
-DevTools 在容器元素（Container elements，指的是那些匹配 `@container` @规则的祖先元素）的旁边，新增了的**容器**徽章。点击该徽章，网页将突出显示选中容器元素，以及该容器所有的后代元素。
+DevTools 在容器元素（Container elements，指的是那些匹配 `@container` @规则的祖先元素）的旁边，新增了**容器**徽章。点击该徽章，网页将突出显示选中容器元素，以及该容器所有的后代元素。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/0plPq2cHZV5gV8zm9VlP.png", alt="CSS 容器查询徽章", width="800", height="488" %}
 
