@@ -2,7 +2,7 @@
 title: New in Chrome 94
 description: >
   Chrome 94 is rolling out now! The default color space for `<canvas>`
-  elements is now formally defined as sRBG, and you can change it to Display
+  elements is now formally defined as SRGB, and you can change it to Display
   P3. There's a new, low level way to access built in audio and video codecs,
   important for streaming games, video editors, and such. WebGPU starts its
   origin trial. And, there's plenty more!
@@ -23,7 +23,7 @@ tags:
 Here's what you need to know:
 
 * The [default color space](#canvas-colorspace) for `<canvas>` elements is
-  now formally defined  in the spec as *sRBG*, and you can change it to
+  now formally defined  in the spec as *SRGB*, and you can change it to
   *Display P3*.
 * [WebCodecs](#webcodecs) is a new, low level way to access built in audio and
   video codecs, important for streaming games, video editors, and such.
@@ -38,9 +38,9 @@ from home, let's dive in and see what's new for developers in Chrome 94.
 
 How color is rendered on screen is critical to some users. For photographers,
 print illustrators, and many others, the colors on screen need to match what's
-printed. Starting in [Chrome 94][cs-canvas], `<canvas>` elements are fully
-color managed using *sRGB*. Previously, *sRGB* was convention, but not
-explicitly defined in the spec.
+printed. Starting in Chrome 94, [`<canvas>` elements are fully color managed][cs-canvas]
+using *sRGB*. Previously, *sRGB* was convention, but not explicitly defined
+in the spec.
 
 ```js
 opts = {colorSpace:'display-p3'};
@@ -77,7 +77,7 @@ reads a file and exports the correct files needed for the web.
 
 Web apps that require full control over the way media content is processed,
 like video editors, video conferencing, streaming apps, and so on, access to
-the browsers built in media controls, this is huge.
+the browsers built in media controls is huge.
 
 Showing anything useful in thirty seconds is hard, so check out
 [Video processing with WebCodecs][wd-codecs] on web.dev for a deep dive with
