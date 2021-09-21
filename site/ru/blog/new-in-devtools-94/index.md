@@ -30,7 +30,7 @@ Chrome DevTools теперь поддерживает более 80 языков
 
 Откройте [Settings](/docs/devtools/customize/#settings), выберите предпочитаемый язык в выпадающем меню **Preferences** > **Language** и перезапустите DevTools.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/eozpCcjmnn7zwya9zXu6.png", alt="Изменение языка в Settings > Preferences", width="800", height="494" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/G3UUsRPIa890102AE5eG.png", alt="Изменение языка в Settings > Preferences", width="800", height="519" %}
 
 {# https://chromium.googlesource.com/chromium/src/+/58abfbcdddae27fb43c17f43dbcc197f2570b5a5 #}
 
