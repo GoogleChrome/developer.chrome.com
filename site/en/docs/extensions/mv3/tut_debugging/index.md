@@ -173,7 +173,7 @@ the correct permissions in its [manifest][12].
     "background": {
       "service_worker": "background.js"
     },
-    "page_action": {
+    "action": {
       "default_popup": "popup.html",
       "default_icon": {
         "16": "images/get_started16.png",
