@@ -211,6 +211,6 @@ more details.
 [FLAC]: https://xiph.org/flac/
 [Media Source Extensions (MSE)]: https://developers.google.com/web/fundamentals/media/mse/basics
 [FLAC in MP4 encapsulation spec]: https://github.com/xiph/flac/blob/master/doc/isoflac.txt
-["Delivering Radio 3 Concert Sound"]: http://www.bbc.co.uk/rd/blog/2017-04-radio-3-high-quality-flac-dash
+["Delivering Radio 3 Concert Sound"]: https://www.bbc.co.uk/rd/blog/2017-04-radio-3-high-quality-flac-dash
 [our official sample]: https://googlechrome.github.io/samples/media/flac-in-mp4-for-mse.html
 [past article]: /blog/media-updates-in-chrome-61#auto-fullscreen-rotate

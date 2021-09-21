@@ -274,8 +274,8 @@ continue to raise "stalled" events as they do today.
 [other error values]: https://w3c.github.io/encrypted-media/#dom-mediakeystatus
 [official sample]: https://googlechrome.github.io/samples/hdcp-detection/
 [Origin Trial]: https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md
-[request a token]: http://bit.ly/HdcpPolicyCheckOriginTrials
-[Alliance for Open Media]: http://aomedia.org/
+[request a token]: https://bit.ly/HdcpPolicyCheckOriginTrials
+[Alliance for Open Media]: https://aomedia.org/
 [improves compression efficiency by 30%]: https://code.fb.com/video-engineering/av1-beats-x264-and-libvpx-vp9-in-practical-use-case/
 [official bitstream specification]: https://aomedia.org/av1-bitstream-and-decoding-process-specification/
 [profile 0]: https://aomediacodec.github.io/av1-spec/#profiles
