@@ -20,7 +20,6 @@ const path = require('path');
 
 const namespacesCachePath = path.join(__dirname, 'namespaces-source.json');
 
-
 /**
  * @typedef {{
  *   title: string,
@@ -29,8 +28,8 @@ const namespacesCachePath = path.join(__dirname, 'namespaces-source.json');
  * }}
  * @type {never}
  */
+// eslint-disable-next-line no-unused-vars
 let GenericNamespaceRenderGroupType;
-
 
 /**
  * @typedef {{
@@ -41,8 +40,8 @@ let GenericNamespaceRenderGroupType;
  * }}
  * @type {never}
  */
+// eslint-disable-next-line no-unused-vars
 let GenericNamespaceRenderType;
-
 
 /**
  * @return {Promise<GenericNamespaceRenderType[]>}
@@ -83,7 +82,9 @@ async function buildNamespaces() {
  */
 function splitToStandardGroups(node) {
   if (node.kind !== typedoc.ReflectionKind.Module) {
-    throw new Error(`got invalid source data, expected module at top-level, got: ${node.kindString}`);
+    throw new Error(
+      `invalid source, expected module at top-level, got: ${node.kindString}`
+    );
   }
 
   /** @type {GenericNamespaceRenderGroupType[]} */
@@ -94,7 +95,7 @@ function splitToStandardGroups(node) {
     /** @type {GenericNamespaceRenderGroupType} */
     const group = {title, key, contents: []};
     groups.push(group);
-    return (node) => group.contents.push(node);
+    return node => group.contents.push(node);
   };
 
   const classAdd = defineGroupAdder('Classes', 'class');
