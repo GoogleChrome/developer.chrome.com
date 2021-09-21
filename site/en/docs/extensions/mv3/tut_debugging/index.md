@@ -199,7 +199,7 @@ For further information on debugging extensions, watch [Developing and Debugging
 about [Chrome Devtools][14] by reading the documentation.
 
 [1]: https://developers.google.com/web/tools/chrome-devtools/
-[2]: https://github.com/GoogleChrome/chrome-extensions-samples/blob/master/tutorials/broken_background_color.zip
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/e716678b67fd30a5876a552b9665e9f847d6d84b/mv2-archive/tutorials/broken_background_color
 [3]: /docs/extensions/reference/runtime#event-onInstalled
 [4]: /docs/extensions/reference/tabs#method-query
 [5]: /docs/extensions/mv3/override
