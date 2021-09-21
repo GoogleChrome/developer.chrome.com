@@ -11,7 +11,10 @@ const modules = [
   'node_modules/workbox-core/index.d.ts',
 ];
 
-const outputPath = path.join(__dirname, '../../site/_data/namespaces-source.json');
+const outputPath = path.join(
+  __dirname,
+  '../../site/_data/namespaces-source.json'
+);
 
 // Work from cache dir, so node resolve stuff.
 process.chdir(path.join(__dirname, 'cache'));
