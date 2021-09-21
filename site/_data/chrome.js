@@ -103,15 +103,18 @@ module.exports = async function buildVersionInformation() {
 
   // Sanity-check that we have 'stable', and if we have 'beta', that it's one or two higher.
   // Create the virtual 'pending' if it's two higher.
-  if (!('stable' in raw) || raw['beta'] <= raw['stable']) {
+  if (!('stable' in raw) || raw['beta'] < raw['stable']) {
     console.warn(raw);
-    throw new Error('bad Chrome release data');
+    throw new Error('bad Chrome release data, no stable or beta < stable');
   }
   if (!('beta' in raw)) {
     raw['beta'] = raw['stable'] + 1;
   }
   const {beta, stable} = raw;
-  if (beta === stable + 1) {
+  if (beta === stable) {
+    // beta is being released, just show stable
+    delete raw['beta'];
+  } else if (beta === stable + 1) {
     // great
   } else if (beta === stable + 2) {
     // This can occur if Chrome does something weird with releases, basically the previous beta
