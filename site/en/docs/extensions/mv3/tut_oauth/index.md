@@ -205,7 +205,7 @@ Add the [Google People API][13] client library to `"scopes"` in the extension ma
 
 ```json
 {
-  "name": "OAuth Tutorial FaceBlcok",
+  "name": "OAuth Tutorial FriendBlock",
   ...
   "oauth2": {
     "client_id": "yourExtensionOAuthClientIDWillGoHere.apps.googleusercontent.com",
