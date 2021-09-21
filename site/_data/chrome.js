@@ -70,11 +70,11 @@ async function dataForVersion(channel, version) {
 /**
  * Generates Chrome version information.
  *
- * While there are many channels, we just care about 'stable' and 'beta', and this function is only
- * guaranteed to return 'stable' with optional 'beta'.
+ * While there are many channels, we just care about 'stable' and 'beta'. This method returns a
+ * value for both.
  *
- * Beta is not always stable+1, it can either be stable+0 or stable+2 depending on the point in the
- * release cycle.
+ * Beta is not always stable+1 in the underlying data, it can either be stable+0 or stable+2
+ * depending on the point in the release cycle.
  *
  * @return {!Promise<{channels: !Object<string, !Object>}>}
  */
@@ -109,14 +109,12 @@ module.exports = async function buildVersionInformation() {
     console.warn(raw);
     throw new Error('bad Chrome release data, no stable or beta < stable');
   }
-  if (!('beta' in raw)) {
+  if (!('beta' in raw) || raw['beta'] === raw['stable']) {
+    // pretend beta is stable+1 if it's not here or beta===stable
     raw['beta'] = raw['stable'] + 1;
   }
   const {beta, stable} = raw;
-  if (beta === stable) {
-    // beta is being released, just show stable
-    delete raw['beta'];
-  } else if (beta === stable + 1) {
+  if (beta === stable + 1) {
     // great
   } else if (beta === stable + 2) {
     // This can occur if Chrome does something weird with releases, basically the previous beta
