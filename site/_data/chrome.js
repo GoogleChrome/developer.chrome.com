@@ -70,9 +70,11 @@ async function dataForVersion(channel, version) {
 /**
  * Generates Chrome version information.
  *
- * While there are many channels, we just care about 'stable' and 'beta'. If we can't find beta, then
- * assume beta is stable+1. Beta is not always stable+1: it can be stable+2 if Chrome is
- * mid-release. We add a fake release 'pending' in this case.
+ * While there are many channels, we just care about 'stable' and 'beta', and this function is only
+ * guaranteed to return 'stable' with optional 'beta'.
+ *
+ * Beta is not always stable+1, it can either be stable+0 or stable+2 depending on the point in the
+ * release cycle.
  *
  * @return {!Promise<{channels: !Object<string, !Object>}>}
  */
@@ -140,5 +142,6 @@ module.exports = async function buildVersionInformation() {
   const channels = Object.fromEntries(
     await Promise.all(Object.entries(raw).map(fetchChannelData))
   );
+
   return {channels};
 };
