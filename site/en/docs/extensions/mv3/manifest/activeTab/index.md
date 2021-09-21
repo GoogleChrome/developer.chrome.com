@@ -7,7 +7,7 @@ description: How to use the activeTab permission in your Chrome Extension.
 ---
 
 The `activeTab` permission gives an extension temporary access to the currently active tab when the
-user _invokes_ the extension - for example by clicking its [browser action][1]. Access to the tab
+user _invokes_ the extension - for example by clicking its [action][1]. Access to the tab
 lasts while the user is on that page, and is revoked when the user navigates away or closes the tab.
 
 This serves as an alternative for many uses of `<all_urls>`, but displays _no warning message_
@@ -50,8 +50,8 @@ See the [Page Redder][2] sample extension:
 ```
 
 ```js
-// Called when the user clicks on the browser action.
-chrome.browserAction.onClicked.addListener(function(tab) {
+// Called when the user clicks on the action.
+chrome.action.onClicked.addListener(function(tab) {
   // No tabs or host permissions needed!
   console.log('Turning ' + tab.url + ' red!');
   chrome.scripting.executeScript({
@@ -62,7 +62,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
 ## Motivation {: #motivation }
 
-Consider a web clipping extension that has a [browser action][3] and [context menu item][4]. This
+Consider a web clipping extension that has a [action][3] and [context menu item][4]. This
 extension may only really need to access tabs when its browser action is clicked, or when its
 context menu item is executed.
 
@@ -90,22 +90,20 @@ While the `activeTab` permission is enabled for a tab, an extension can:
 
 The following user gestures enable `activeTab`:
 
-- Executing a [browser action][10]
-- Executing a [page action][11]
-- Executing a [context menu item][12]
-- Executing a keyboard shortcut from the [commands API][13]
-- Accepting a suggestion from the [omnibox API][14]
+- Executing a [action][10]
+- Executing a [context menu item][11]
+- Executing a keyboard shortcut from the [commands API][12]
+- Accepting a suggestion from the [omnibox API][13]
 
 [insert-css-method]: /docs/extensions/reference/scripting#method-insertCSS
-[1]: /docs/extensions/reference/browserAction
+[1]: /docs/extensions/reference/action
 [2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/examples/page-redder
-[3]: /docs/extensions/reference/browserAction
+[3]: /docs/extensions/reference/action
 [4]: /docs/extensions/reference/contextMenus
 [7]: /docs/extensions/reference/tabs#type-Tab
 [8]: /docs/extensions/reference/tabs#manifest
 [9]: /docs/extensions/reference/webRequest
-[10]: /docs/extensions/reference/browserAction
-[11]: /docs/extensions/reference/pageAction
-[12]: /docs/extensions/reference/contextMenus
-[13]: /docs/extensions/reference/commands
-[14]: /docs/extensions/reference/omnibox
+[10]: /docs/extensions/reference/action
+[11]: /docs/extensions/reference/contextMenus
+[12]: /docs/extensions/reference/commands
+[13]: /docs/extensions/reference/omnibox
