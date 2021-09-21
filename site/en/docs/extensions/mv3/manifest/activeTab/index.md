@@ -40,10 +40,9 @@ See the [Page Redder][2] sample extension:
     "activeTab"
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "browser_action": {
+  "action": {
     "default_title": "Make this page red"
   },
   "manifest_version": 3
