@@ -76,7 +76,7 @@ reads a file and exports the correct files needed for the web.
 </figure>
 
 Web apps that require full control over the way media content is processed,
-like video editors, video conferencing, streaming apps, and so on, access to
+like video editors, video conferencing, streaming apps, and so on. Access to
 the browsers built in media controls is huge.
 
 Showing anything useful in thirty seconds is hard, so check out
