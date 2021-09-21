@@ -171,7 +171,7 @@ the correct permissions in its [manifest][12].
     ],
     "options_page": "options.html",
     "background": {
-      "scripts": ["background.js"]
+      "service_worker": "background.js"
     },
     "page_action": {
       "default_popup": "popup.html",
