@@ -28,7 +28,7 @@ Chrome DevTools ahora soporta más de 80 idiomas, lo que permite que lo puedas u
 
 Ve a [Configuración](/docs/devtools/customize/#settings), a continuación selecciona tu idioma preferido siguiendo la ruta  **Configuración avanzada** > **Idioma** y finalmente, reinicia las DevTools.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/eozpCcjmnn7zwya9zXu6.png", alt="Cambia el idioma en Configuración > Preferencias", width="800", height="494" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/vqO0Xvjei3KxTds87PJc.png", alt="Cambia el idioma en Configuración > Preferencias", width="800", height="519" %}
 
 {# https://chromium.googlesource.com/chromium/src/+/58abfbcdddae27fb43c17f43dbcc197f2570b5a5 #}
 
