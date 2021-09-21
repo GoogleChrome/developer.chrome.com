@@ -47,7 +47,7 @@ opts = {colorSpace:'display-p3'};
 const ctx = canvas.getContext('2d', opts);
 ```
 
-More importantly - you can now specify which color space to use when creating
+More importantly, you can now specify which color space to use when creating
 a `<canvas>` rendering context 2d object, or an `ImageData` object, including
 the P3 color space.
 
@@ -55,10 +55,10 @@ the P3 color space.
 
 Putting video on a page is easy enough. But, if you need to do something a
 little more complex, and interact with the components of a video stream,
-it's hard! And, typically requires you to use Web Assembly to ship
+it's hard, and typically requires you to use Web Assembly to ship
 [your own codecs][wasm-av1]!
 
-But shipping your own codec, means writing code the browser already has, and
+But shipping your own codec means writing code the browser already has, and
 it can't take advantage of hardware acceleration! The Web Codecs API makes it
 possible to use the media components and codecs that are already in the browser.
 
@@ -79,7 +79,7 @@ Web apps that require full control over the way media content is processed,
 like video editors, video conferencing, streaming apps, and so on, access to
 the browsers built in media controls, this is huge.
 
-Showing anything useful in 30 seconds is hard, so checkout
+Showing anything useful in thirty seconds is hard, so check out
 [Video processing with WebCodecs][wd-codecs] on web.dev for a deep dive with
 lots of code and a few cool demos!
 
@@ -108,9 +108,9 @@ Firefox are currently working on their implementations.
   </figcaption>
 </figure>
 
-Francois has a great article [Access modern GPU features with WebGPU][wd-gpu]
+François has a great article, [Access modern GPU features with WebGPU][wd-gpu]
 on web.dev with the details, and compares the performance of matrix
-multiplication running on the CPU vs the GPU. Here's a hint, the
+multiplication running on the CPU versus the GPU. Here's a hint. The
 [GPU wins][wd-compute-perf].
 
 ## PWA Summit {: #pwa-summit }
