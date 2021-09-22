@@ -25,11 +25,12 @@ Windows, and ChromeOS.
 Looking at the data, there might be some interesting things for developers to
 think about. For example, in Japan on the Android platform, the majority of
 users have five to eight cores, and the prevalence is quite a bit higher than in
-the US, and much higher than in NBU countries. Another example: if you look at
-RAM on Android, a very low percentage of Brazil devices have RAM larger than
-5GB, which is much lower than in the US, and also lower than India. We hope
-publishing information like this periodically will help developers have a better
-understanding of the Chrome user device characteristics.
+the US, and much higher than in next billion user (NBU) countries. Another
+example: if you look at RAM on Android, a very low percentage of Brazil devices
+have RAM larger than 5GB, which is much lower than in the US, and also lower
+than India. We hope publishing information like this periodically will help
+developers have a better understanding of the Chrome user device
+characteristics.
 
 This data comes from usage statistics sent to Google from Chrome installations.
 In Chrome, users can choose to send usage statistics and crash reports to Google
