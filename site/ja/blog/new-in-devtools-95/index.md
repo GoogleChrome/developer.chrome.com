@@ -57,18 +57,18 @@ Chromium issues: [1126178](https://crbug.com/1126178), [1172993](https://crbug.c
 
 
 <!-- ## Hide issues in the Issues tab {: #hide-issues } -->
-## Issues タブで課題を隠す {: #hide-issues }
+## Issues タブで問題を隠す {: #hide-issues }
 
 <!-- You can now hide specific issues in the Issues tab to focus only on those issues that matter to you. -->
-Issues タブで特定の課題を非表示にして、自分にとって重要な課題だけに集中できるようになりました。
+Issues タブで特定の問題を非表示にして、自分にとって重要な問題だけに集中できるようになりました。
 
 <!-- In the [Issues tab](/docs/devtools/issues/), hover over on an issue you would like to hide. Click on **More options**  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Hide issues like this**. -->
-[Issuesタブ]（/docs/devtools/issues/）で、非表示にしたい課題にマウスオーバーします。 **More options**  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Hide issues like this** をクリックしましょう。
+[Issues タブ]（/docs/devtools/issues/）で、非表示にしたい問題にマウスオーバーします。 **More options**  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Hide issues like this** をクリックしましょう。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Uw3mxGGK5CNoUflHgS7p.png", alt="Hide issues menu", width="800", height="488" %}
 
 <!-- All hidden issues will be added under the **Hidden issues** pane. Expand the pane. You can unhide all hidden issues or a selected one.  -->
-すべての隠された課題は **Hidden issues** ペインに追加されます。ペインを展開して、すべての隠された課題、または選択した課題の非表示を解除できます。
+すべての隠された問題は **Hidden issues** ペインに追加されます。ペインを展開して、すべての隠された問題、または選択した問題の非表示を解除できます。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dnPfPGkxpkcSZRIHqGDA.png", alt="Hidden issues pane", width="800", height="488" %}
 
