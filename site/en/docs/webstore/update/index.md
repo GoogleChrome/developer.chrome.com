@@ -5,7 +5,7 @@ description: >
   How to update an extension or theme ("item") that you previously
   published on the Chrome Web Store.
 date: 2020-12-03
-updated: 2021-08-26
+updated: 2021-09-23
 ---
 
 This page describes how to update an extension or theme ("item") that you previously published on
