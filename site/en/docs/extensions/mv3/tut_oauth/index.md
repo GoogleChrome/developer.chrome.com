@@ -35,26 +35,23 @@ download the file [here][5].
   "name": "OAuth Tutorial FriendBlock",
   "version": "1.0",
   "description": "Uses OAuth to connect to Google's People API and display contacts photos.",
-  "manifest_version": 2,
-  "browser_action": {
+  "manifest_version": 3,
+  "action": {
     "default_title": "FriendBlock, friends face's in a block."
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+    "service_worker": "background.js"
   }
 }
 ```
 
 ### background.js {: #background }
 
-Add the background script by creating a file called `background.js` and include the following code.
+Add the background service worker by creating a file called `background.js` and include the following code.
 Or download the file [here][6].
 
 ```js
-chrome.browserAction.onClicked.addListener(function() {
+chrome.action.onClicked.addListener(function() {
   chrome.tabs.create({url: 'index.html'});
 });
 ```
