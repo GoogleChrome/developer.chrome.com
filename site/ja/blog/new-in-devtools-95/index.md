@@ -154,7 +154,7 @@ Chromium issue: [1243976](https://crbug.com/1243976)
 ## 翻訳されたリリースノートへの新しいリンクと翻訳バグの報告 {: #localized }
 
 <!-- You can now click to read the DevTools release notes in 6 other languages - [Russian](/ru/blog/new-in-devtools-95), [Chinese](/zh/blog/new-in-devtools-95), [Spanish](/es/blog/new-in-devtools-95), [Japanese](/ja/blog/new-in-devtools-95), [Portuguese](/pt/blog/new-in-devtools-95) and [Korean](/ko/blog/new-in-devtools-95)  via the What’s new tab.  -->
-6つの言語 - [ロシア語](/ru/blog/new-in-devtools-95)、[中国語](/zh/blog/new-in-devtools-95)、[スペイン語](/es/blog/new-in-devtools-95)、[日本語](/ja/blog/new-in-devtools-95)です。[スペイン語](/es/blog/new-in-devtools-95)、[日本語](/ja/blog/new-in-devtools-95)、[ポルトガル語](/pt/blog/new-in-devtools-95)、[韓国語](/ko/blog/new-in-devtools-95) のリリースノートは、 What’s new タブからご覧いただけます。
+6つの言語で DevTools のリリースノートを What’s new タブからクリックしてご覧いただけるようになりました - [ロシア語](/ru/blog/new-in-devtools-95)、[中国語](/zh/blog/new-in-devtools-95)、[スペイン語](/es/blog/new-in-devtools-95)、[日本語](/ja/blog/new-in-devtools-95)、[ポルトガル語](/pt/blog/new-in-devtools-95)、[韓国語](/ko/blog/new-in-devtools-95)
 
 <!-- Since Chrome 94, you can [set your preferred language](/blog/new-in-devtools-94/#localized) in DevTools. If you found any issues with the translations, help us improve it by [reporting a translation issue](https://goo.gle/devtools-translate) via **More options** > **Help** > **Report a translation bug**.  -->
 Chrome 94以降、 DevTools で[優先言語の設定](/blog/new-in-devtools-94/#localized)ができるようになりました。翻訳に関する問題を発見された場合は、 **More options** > **Help** > **Report a translation bug** で[翻訳の問題を報告](https://goo.gle/devtools-translate)して、改善にご協力ください。
