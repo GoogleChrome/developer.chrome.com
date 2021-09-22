@@ -144,8 +144,9 @@ rollout using the Package tab:
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/UA8vDp8aG89exqqjzY55.png", alt="Screenshot of the Chrome Web Store update percent rollout field", width="800", height="395" %}
 
-To increase the rollout fraction for your item, enter the increased percentage target and then click
-**Update**.
+The **Published** item information appears on the right column. To increase the rollout fraction,
+enter the increased percentage target in the **Published to a percentage of users** field, and then
+click **Update**.
 
 {% Aside %}
 
