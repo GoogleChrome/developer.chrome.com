@@ -173,7 +173,7 @@ Chromium issues: [1246245](https://crbug.com/1246245), [1245481](https://crbug.c
 
 
 <!-- ## Improved UI for DevTools command menu {: #command-menu } -->
-## DevTools コマンドメニューのUI改善 {: #command-menu }
+## DevTools Command MenuのUI改善 {: #command-menu }
 
 <!-- Did you find it hard to search for a file in the [Command Menu](/docs/devtools/command-menu/#open)? Good news for you, the **Command Menu** user interface is now enhanced!  -->
 [Command Menu](/docs/devtools/command-menu/#open) でファイルを検索するのに苦労したことはありませんか？そんなあなたに朗報です！ **Command Menu** のユーザーインターフェースが強化されました。
