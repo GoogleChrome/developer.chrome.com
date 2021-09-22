@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Prepare to publish: set up payment and distribution"
 date: 2020-12-07
-updated: 2021-08-13
+updated: 2021-09-23
 description: >
   How to choose which countries will list your item and who will see it in the Chrome Web Store.
 ---
