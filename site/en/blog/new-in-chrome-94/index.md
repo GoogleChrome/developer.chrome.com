@@ -181,3 +181,4 @@ tell you what's new in Chrome!
 [cs-gutters]: https://www.chromestatus.com/feature/5746559209701376
 [cs-scheduler]: https://www.chromestatus.com/feature/6031161734201344
 [pwa-summit]: https://pwasummit.org/
+[wasm-av1]: https://github.com/GoogleChromeLabs/wasm-av1
