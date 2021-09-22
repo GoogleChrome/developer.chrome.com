@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: Chrome user device characteristics report
 description: >
   Developers constantly wonder what kind of audience they are developing for. How much RAM do they have? What kind of Wi-fi are they on? A new report provides answers for a range of countries and platforms.
-date: 2021-09-17
+date: 2021-09-22
 authors:
   - jichen
 tags:
@@ -26,10 +26,8 @@ Looking at the data, there might be some interesting things for developers to
 think about. For example, in Japan on the Android platform, the majority of
 users have five to eight cores, and the prevalence is quite a bit higher than in
 the US, and much higher than in NBU countries. Another example: if you look at
-the smallest display size in device pixels, in some countries like the US or
-Brazil, there's a clear trend that smallest display sizes (like 400-500) are
-becoming more and more popular, while in some other countries like India, the
-mix looks pretty stable and there does not seem to be a trend. We hope
+RAM on Android, a very low percentage of Brazil devices have RAM larger than
+5GB, which is much lower than in the US, and also lower than India. We hope
 publishing information like this periodically will help developers have a better
 understanding of the Chrome user device characteristics.
 
