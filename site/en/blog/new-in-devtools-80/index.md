@@ -16,6 +16,8 @@ tags:
   - chrome-80
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 {% YouTube id="2EiPb1opH3g" %}
 
 ## Support for `let` and `class` redeclarations in the Console {: #redeclarations }
@@ -161,6 +163,10 @@ unreliable. For example, a function can be reported as unused if its execution w
 and V8's garbage collector has cleaned it up.
 
 Chromium issue [#1004203][14]
+
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: https://crbug.com/1004193
 [2]: http://dwarfstd.org/

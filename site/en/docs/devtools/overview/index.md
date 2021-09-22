@@ -200,10 +200,10 @@ DevTools also has a Slack channel, but the team doesn't monitor it consistently.
 [11]: /docs/devtools/device-mode/device-input-and-sensors
 [12]: /docs/devtools/dom
 [13]: /docs/devtools/css
-[14]: /docs/devtools/inspect-styles
-[15]: /docs/devtools/inspect-styles/edit-styles
-[16]: /docs/devtools/inspect-styles/edit-dom
-[17]: /docs/devtools/inspect-styles/animations
+[14]: /docs/devtools/css/#view
+[15]: /docs/devtools/css/reference/#change
+[16]: /docs/devtools/dom/#edit
+[17]: /docs/devtools/css/animations
 [18]: /docs/devtools/coverage
 [19]: /docs/devtools/console/get-started
 [20]: /docs/devtools/console

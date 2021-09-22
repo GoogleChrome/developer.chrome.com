@@ -7,18 +7,20 @@
     If there's no data for the author, just renders their ID.
   #}
   {% if authors.length < 3 %}
-    {% for item in authors %}
-      {% set author = authorsData[item] %}
+    {% for authorId in authors %}
+      {% set author = postsData.authors[authorId] %}
       {% if author.image %}
+      <a href="{{ author.url }}" class="card-authors__image">
         {% Img
-          class="card-authors__image rounded-full flex-shrink-none width-600 height-600 object-fit-cover",
+          class="flex-shrink-none width-600 height-600",
           src=author.image,
-          alt=author.name.given + author.name.family,
+          alt=author.title | i18n(locale),
           width="40",
           height="40",
           sizes="40px",
           options={minWidth: 40, maxWidth: 120}
         %}
+      </a>
       {% endif %}
     {% endfor %}
   {% endif %}
@@ -27,10 +29,10 @@
     <p class="type--small">
       {% set sep = joiner(', ') %}
       {%- for authorId in authors -%}
-        {%- set author = authorsData[authorId] -%}
+        {%- set author = postsData.authors[authorId] -%}
         {{- sep() -}}
         {%- if author -%}
-          {{ author.name.given }}&nbsp;{{ author.name.family }}
+          <a href="{{ author.url }}" class="surface display-inline-flex color-text">{{ author.title | i18n(locale) }}</a>
         {%- else -%}
           {{ authorId }}
         {%- endif -%}

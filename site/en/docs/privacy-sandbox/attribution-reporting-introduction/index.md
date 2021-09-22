@@ -62,6 +62,12 @@ privacy-preserving way, without third-party cookies.
   need to use the API directly, but may be interested in understanding it if they're
   working with adtech platforms that may integrate the API.
 
+## Debug the API errors with Chrome DevTools
+
+[Available from Chrome 93](/blog/new-in-devtools-93/#attribution-reporting). Attribution Reporting API errors are now reported in [DevTools](/docs/devtools) under the [Issues tab](/docs/devtools/issues/).
+
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Attribution Reporting API errors in the Issues tab", width="800", height="501" %}
+
 ## Participate
 
 {% Aside %}  

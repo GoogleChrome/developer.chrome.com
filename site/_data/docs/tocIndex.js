@@ -22,7 +22,7 @@
 const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
-const yaml = require('js-yaml');
+const YAML = require('js-yaml');
 
 const {buildProjectIndex} = require('../lib/project-index');
 
@@ -33,9 +33,11 @@ const tocIndex = {};
 const all = glob.sync('*/toc.y{a,}ml', {cwd: __dirname});
 
 for (const result of all) {
-  const data = yaml.safeLoad(fs.readFileSync(path.join(__dirname, result)));
+  const raw = YAML.load(fs.readFileSync(path.join(__dirname, result), 'utf-8'));
+  const sections = /** @type {Section[]} */ (raw ?? []);
+
   const projectKey = path.dirname(result);
-  tocIndex[projectKey] = buildProjectIndex(data);
+  tocIndex[projectKey] = buildProjectIndex(sections);
 }
 
 module.exports = tocIndex;

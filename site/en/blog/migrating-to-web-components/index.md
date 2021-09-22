@@ -11,7 +11,12 @@ alt: ''
 tags:
   - devtools-engineering
   - devtools
+  - devtools-architecture
 ---
+
+{% include 'partials/devtools/en/banner.md' %}
+
+This post is part of [a series of blog posts](/tags/devtools-architecture/) describing the changes we are making to DevTools' architecture and how it is built. 
 
 When DevTools was first created many, many years ago the team chose to build a bespoke UI framework. This was a reasonable choice at the time and has served DevTools well.
 
@@ -21,3 +26,6 @@ To help with the transition, we created a guide to building UI elements in DevTo
 
 Today, we're making this document publicly available at [goo.gle/building-ui-devtools](https://goo.gle/building-ui-devtools
 ). If you've ever wondered more about how Web Components are used in large, real world applications, or some of the challenges that come with integrating components into a large, pre-existing codebase, this document could help and provide some answers. If you have any questions about our guidelines, feel free to [tweet me](https://www.twitter.com/Jack_Franklin).
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

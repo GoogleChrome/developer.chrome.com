@@ -8,14 +8,14 @@ updated: 2021-03-11
 
 ## Navigate to the media uploader
 
-Visit [the image uploader page](https://chrome-gcs-uploader.web.app/) and
+Visit [the image uploader page](https://web-dev-uploads.web.app/) and
 sign-in using your Google corporate account. Note that this page only allows
 Googlers access, so signing in with a personal account will fail.
 
-{% Aside 'caution' %}
-There are different uploaders for developer.chrome.com and web.dev:
-* [developer.chrome.com uploader](https://chrome-gcs-uploader.web.app/)
-* [web.dev uploader](https://web-dev-uploads.web.app/uploader)
+{% Aside %}
+Prior to September 2021, there were different uploaders for developer.chrome.com and web.dev.
+Now, all assets are uploaded through a single uploader.
+This means you can migrate content between the sites and use the same sources.
 {% endAside %}
 
 ## Choose a file
@@ -61,7 +61,7 @@ in the shortode.
 #### Img Properties (`ImgArgs`)
 
 ```typescript
-{% include '../../../../../../node_modules/webdev-infra/types/shortcodes/Img.d.ts' %}
+{% includeRaw '../../node_modules/webdev-infra/types/shortcodes/Img.d.ts' %}
 ```
 
 The `{% raw %}`{% Img %}`{% endraw%}` `params` object exposes the entire [Imgix
@@ -91,13 +91,13 @@ Flipped
 {% endColumns %}
 
 {% Aside %}
-Please call out in a review if you're calling a specific Imgix API, so we can be
-aware of custom use-cases and potentially support them through our own shortcode
-directly.
+Be sure to call out in a review if you're calling a specific Imgix API, so the
+team can be aware of custom use-cases and potentially support them through our
+own shortcode directly.
 {% endAside %}
 
 #### Video Properties (`VideoArgs`)
 
 ```typescript
-{% include '../../../../../../node_modules/webdev-infra/types/shortcodes/Video.d.ts' %}
+{% includeRaw '../../node_modules/webdev-infra/types/shortcodes/Video.d.ts' %}
 ```

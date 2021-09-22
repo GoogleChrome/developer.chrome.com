@@ -7,7 +7,7 @@ date: 2021-06-02
 updated: 2021-06-02
 description:
   "CSS 网格编辑器、支持控制台中的 const 重声明、来源顺序查看器以及更多。"
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XtJztwxzQqOWhOHrKmhM.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/BnPX5Sm6bpsxg4Rv0hV8.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -19,11 +19,7 @@ tags:
 
 
 <!-- lint disable no-smart-quotes -->
-
-{% Aside %}
-有兴趣帮忙改进 DevTools 吗？请注册并参与 [Google 用户体验调研](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=zh&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458)。
-
-{% endAside %}
+{% include 'partials/devtools/zh/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
@@ -161,7 +157,7 @@ DevTools 现在会报告[怪异模式 （quirks mode）](https://quirks.spec.wha
 Chromium 议题: [622660](https://crbug.com/622660)
 
 
-## 在**性能**面板中添加“计算相交部分” {: #computed-intersections }
+## 在**性能**面板中添加"计算相交部分" {: #computed-intersections }
 
 DevTools 现在会在火焰图中显示**计算相交部分**了。这项更新可以帮助您发现 [intersection observers](https://web.dev/intersectionobserver-v2/) 事件，并调试这些事件潜在的性能开销。
 
@@ -174,7 +170,7 @@ Chromium 议题: [1199137](https://crbug.com/1199137)
 
 ## Lighthouse 面板中的 Lighthouse 7.5 {: #lighthouse }
 
-**Lighthouse** 面板现已运行 Lighthouse 7.5。现在针对已通过 CSS 定义了 `aspect-ratio` 的图片将不再展示“缺少明确的宽高”的警告。在此之前，Lighthouse 会对未定义宽高的图片展示此警告。
+**Lighthouse** 面板现已运行 Lighthouse 7.5。现在针对已通过 CSS 定义了 `aspect-ratio` 的图片将不再展示"缺少明确的宽高"的警告。在此之前，Lighthouse 会对未定义宽高的图片展示此警告。
 
 完整的更新列表请参见[发布版本通知](https://github.com/GoogleChrome/lighthouse/releases/tag/v7.5.0)。
 
@@ -184,7 +180,7 @@ Chromium 议题: [1199137](https://crbug.com/1199137)
 Chromium 议题: [772558](https://crbug.com/772558)
 
 
-## 在“调用堆栈”边栏中弃用上下文菜单的 "Restart frame" 项 {: #restart-frame }
+## 在"调用堆栈"边栏中弃用上下文菜单的 "Restart frame" 项 {: #restart-frame }
 
 此 **Restart frame** 菜单项现已被弃用。该功能需要进一步的开发，现在它经常无法正常运作。
 
@@ -195,7 +191,7 @@ Chromium 议题: [772558](https://crbug.com/772558)
 Chromium 议题: [1203606](https://crbug.com/1203606)
 
 
-## [实验性] 协议监视器 {: #protocol-monitor }
+## [实验阶段] 协议监视器 {: #protocol-monitor }
 
 {% Aside %}
 
@@ -218,7 +214,7 @@ Chrome DevTools 使用 [Chrome DevTools 协议 (CDP)](https://chromedevtools.git
 Chromium 议题: [1204004](https://crbug.com/1204004), [1204466](https://crbug.com/1204466)
 
 
-## [实验性] Puppeteer Recorder {: #puppeteer-recorder }
+## [实验阶段] Puppeteer Recorder {: #puppeteer-recorder }
 
 {% Aside %}
 
@@ -238,3 +234,6 @@ Chromium 议题: [1204004](https://crbug.com/1204004), [1204466](https://crbug.c
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a2ffe4a8d202e56d640c2f8744c905354e2bca8e #}
 
 Chromium 议题: [1199787](https://crbug.com/1199787)
+
+{% include 'partials/devtools/zh/reach-out.md' %}
+{% include 'partials/devtools/zh/whats-new.md' %}

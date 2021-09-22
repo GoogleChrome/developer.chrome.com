@@ -1,6 +1,8 @@
 select {
+  // stylelint-disable property-no-vendor-prefix
+  -webkit-appearance: none;
   appearance: none;
-  // sass-lint:disable quotes
+  background-color: #fff;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10L12 15L17 10H7Z' fill='%235F6368'/%3E%3C/svg%3E%0A");
   background-position: right 0.5em top 50%;
   background-repeat: no-repeat;

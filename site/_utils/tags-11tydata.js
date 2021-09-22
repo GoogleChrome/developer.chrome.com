@@ -15,42 +15,93 @@
  */
 
 /**
- * @file Generates 11ty data file for paginated tags pages,
- * the page(s) that displays all the tags. Filters out tags with no posts
- * as well as sorts the elements by their titles.
+ * @file Generates 11ty data file for the top-level tags page. Filters out tags
+ * with no posts as well as sorts the elements as needed.
  */
 
 const {i18n} = require('../_filters/i18n');
 
 /**
  * @param {string} locale
- * @return {EleventyData}
+ * @return {Partial<EleventyData>}
  */
 module.exports = locale => ({
-  pagination: {
+  eleventyComputed: {
     /**
-     * @param {Tag[]} tags
-     * @return {LocalizedTag[]}
+     * Generates tags for the stable release and higher. Ordered by earliest release first (i.e.,
+     * 'Stable' > 'Beta' > 'Dev' > 'Canary'). Only names 'Stable' and 'Beta'.
      */
-    before: tags => {
-      /** @type LocalizedTag[] */
-      const filtered = [];
-      for (const tag of tags) {
-        const posts = tag.posts[locale];
-        if (!posts.length) {
-          continue;
-        }
+    currentChromeReleaseTags: data => {
+      const out = (data.releaseTags || []).filter(({isCurrent}) => isCurrent);
+      out.reverse();
+      return out;
+    },
 
-        filtered.push({
-          key: tag.key,
-          posts,
-          title: tag.overrideTitle ?? i18n(tag.title, locale),
+    /**
+     * Return tag information for any Chrome release prior to the current stable.
+     */
+    historicChromeReleaseTags: data => {
+      return (data.releaseTags || []).filter(({isCurrent}) => !isCurrent);
+    },
+
+    releaseTags: data => {
+      /** @type {{[name: string]: ChromeReleaseData}} */
+      const rawChannels = data.chrome.channels;
+
+      /** @type {Tags} */
+      const rawTags = data.collections.tags;
+
+      // Create an array of tags releated to releases.
+      const out = Object.values(rawTags)
+        .filter(tag => tag.release)
+        .map(tag => {
+          const release = /** @type {number} */ (tag.release);
+          let title = `Chrome ${release}`;
+
+          // Only name 'stable' and 'beta' releases.
+          if (rawChannels.stable.mstone === release) {
+            title = i18n('i18n.common.release_stable', locale);
+          } else if (rawChannels.beta?.mstone === release) {
+            title = i18n('i18n.common.release_beta', locale);
+          }
+
+          return {
+            key: tag.key,
+            posts: tag.posts[locale] ?? [],
+            title,
+            release,
+            isCurrent: release >= rawChannels.stable.mstone,
+          };
         });
-      }
 
-      return filtered.sort((a, b) =>
-        a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+      // Sort highest release first.
+      out.sort(({release: a}, {release: b}) => b - a);
+
+      return out;
+    },
+
+    displayTags: data => {
+      /** @type {Tags} */
+      const rawTags = data.collections.tags;
+
+      // Create an array of tags unrelated to releases.
+      const all = Object.values(rawTags)
+        .filter(tag => !tag.release)
+        .map(tag => {
+          return {
+            key: tag.key,
+            posts: tag.posts[locale] ?? [],
+            title: i18n(tag.title, locale),
+          };
+        });
+
+      // Sort lexiographically by name.
+      all.sort((a, b) =>
+        a.title.toLowerCase().localeCompare(b.title.toLowerCase())
       );
+
+      // Only return if there's locale-valid posts.
+      return all.filter(tag => tag.posts.length);
     },
   },
 });

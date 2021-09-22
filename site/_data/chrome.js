@@ -1,3 +1,19 @@
+/*
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 const {fetchFromCache} = require('./lib/cache');
 
 const OMAHA_PROXY_JSON = 'https://omahaproxy.appspot.com/all.json';
@@ -23,10 +39,11 @@ function extractMajorVersion(raw) {
  * Fetches Chrome release data for a major version from the Chromium Dashboard. Can return null
  * if the version or data returned is invalid.
  *
+ * @param {string} channel
  * @param {number} version
- * @return {!Promise<?Object>}
+ * @return {Promise<ChromeReleaseData?>}
  */
-async function dataForVersion(version) {
+async function dataForVersion(channel, version) {
   const url = `${SCHEDULE_JSON}?mstone=${version}`;
   const json = await fetchFromCache(url);
 
@@ -40,21 +57,32 @@ async function dataForVersion(version) {
     return null;
   }
 
-  // This contains useful keys "stable_date", "earliest_beta" and "final_beta", among others.
-  return data;
+  // The underlying data contains useful keys "stable_date", "earliest_beta" and "final_beta",
+  // among others, most of which are currently ignored.
+
+  return {
+    mstone: version,
+    key: channel,
+    stableDate: new Date(data['stable_date']),
+  };
 }
 
 /**
  * Generates Chrome version information.
  *
- * Returns the current version for each channel (i.e., "stable" => 85) as well as its release
- * information, if available.
+ * While there are many channels, we just care about 'stable' and 'beta'. This method returns a
+ * value for both.
+ *
+ * Beta is not always stable+1 in the underlying data, it can either be stable+0 or stable+2
+ * depending on the point in the release cycle.
  *
  * @return {!Promise<{channels: !Object<string, !Object>}>}
  */
 module.exports = async function buildVersionInformation() {
   const json = await fetchFromCache(OMAHA_PROXY_JSON);
-  const channels = {};
+
+  /** @type {{[channel: string]: number}} */
+  const raw = {};
 
   // Find the current version for every channel. The published data returns the versions for each
   // operating system. We take the highest major version found across each OS and use that.
@@ -64,31 +92,54 @@ module.exports = async function buildVersionInformation() {
     }
 
     for (const {channel, version} of versions) {
+      if (!['stable', 'beta'].includes(channel)) {
+        continue;
+      }
       const majorVersion = extractMajorVersion(version);
       if (majorVersion === 0) {
         continue;
       }
-      if (channel in channels) {
-        channels[channel].mstone = Math.max(
-          channels[channel].mstone,
-          majorVersion
-        );
-      } else {
-        channels[channel] = {channel, mstone: majorVersion};
-      }
+      raw[channel] = Math.max(raw[channel] ?? 0, majorVersion);
     }
+  }
+
+  // Sanity-check that we have 'stable', and if we have 'beta', that it's one or two higher.
+  // Create the virtual 'pending' if it's two higher.
+  if (!('stable' in raw) || raw['beta'] < raw['stable']) {
+    console.warn(raw);
+    throw new Error('bad Chrome release data, no stable or beta < stable');
+  }
+  if (!('beta' in raw) || raw['beta'] === raw['stable']) {
+    // pretend beta is stable+1 if it's not here or beta===stable
+    raw['beta'] = raw['stable'] + 1;
+  }
+  const {beta, stable} = raw;
+  if (beta === stable + 1) {
+    // great
+  } else if (beta === stable + 2) {
+    // This can occur if Chrome does something weird with releases, basically the previous beta
+    // is about to be released but it's not done yet.
+    raw['pending'] = stable + 1;
+  } else {
+    console.warn(raw);
+    throw new Error('bad Chrome release data, beta is >+2 from stable');
   }
 
   // Now that we have all major versions, look up and/or cache the schedule for each version. This
   // might be the same version for multiple channels, but Eleventy is caching the result for us.
-  for (const channel in channels) {
-    const {mstone} = channels[channel];
-    const update = await dataForVersion(mstone);
 
-    // dataForVersion doesn't know about the channel name, so we use Object.assign to ensure the
-    // channel name is still included in the value. This lets Eleventy paginate over just values.
-    Object.assign(channels[channel], update);
-  }
+  /** @type {(arg: [string, number]) => Promise<[string, ChromeReleaseData]>} */
+  const fetchChannelData = async ([channel, mstone]) => {
+    const data = await dataForVersion(channel, mstone);
+    if (!data) {
+      throw new Error(`couldn't fetch data for Chrome ${mstone}`);
+    }
+    return [channel, data];
+  };
+
+  const channels = Object.fromEntries(
+    await Promise.all(Object.entries(raw).map(fetchChannelData))
+  );
 
   return {channels};
 };

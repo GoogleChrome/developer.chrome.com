@@ -1,0 +1,52 @@
+{% from 'macros/icon.njk' import icon with context %}
+
+{% macro releasesCard() %}
+<div class="featured-card hairline rounded-lg width-full">
+  <div class="card-title-bar color-green-medium">
+    {{ icon('releases', {hidden: true}) }}
+    <span class="gap-left-300 flex-1 user-select-none">
+      {{ 'i18n.nav.side_nav.releases' | i18n(locale) }}
+    </span>
+  </div>
+
+  <div class="display-flex direction-column md:direction-row justify-content-around gap-top-200">
+
+    {% if chrome.channels.stable %}
+      <div class="flex-1 gap-300">
+        <div class="release-card__icon release-card__icon-stable">
+          <span class="visually-hidden">{{ 'i18n.common.current_release_description' | i18n(locale) }}</span>
+          {{ chrome.channels.stable.mstone }}
+        </div>
+        <p class="type--caption text-align-center gap-top-300">
+          {{ 'i18n.common.current_release_label' | i18n(locale) }}
+        </p>
+      </div>
+    {% endif %}
+    {% if chrome.channels.pending %}
+      <div class="flex-1 gap-300">
+        <div class="release-card__icon release-card__icon-pending">
+          <span class="visually-hidden">{{ 'i18n.common.pending_release_description' | i18n(locale) }}</span>
+          {{ chrome.channels.pending.mstone }}
+        </div>
+        <p class="type--caption text-align-center gap-top-300">
+          {{ 'i18n.common.pending_release_label' | i18n(locale) }}
+        </p>
+      </div>
+    {% endif %}
+    {% if chrome.channels.beta %}
+      <div class="flex-1 gap-300">
+        <div class="release-card__icon release-card__icon-beta">
+          <span class="visually-hidden">{{ 'i18n.common.future_release_description' | i18n(locale) }}</span>
+          {{ chrome.channels.beta.mstone }}
+        </div>
+        <p class="type--caption text-align-center gap-top-300">
+          {{ 'i18n.common.future_release_label' | i18n(locale) }}
+          {{ chrome.channels.beta.stableDate.toLocaleDateString(locale, {day: 'numeric', month: 'long'}) }}
+        </p>
+      </div>
+    {% endif %}
+
+  </div>
+
+</div>
+{% endmacro %}

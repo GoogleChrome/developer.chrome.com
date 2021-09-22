@@ -45,9 +45,16 @@ of type [Ruleset][4], as shown below.
 ## Rule Resources
 
 An extension can specify up to [MAX_NUMBER_OF_STATIC_RULESETS][5] [rulesets][6] as part of the
-`"rule_resources"` manifest key. An extension is allowed to enable at least
-[GUARANTEED_MINIMUM_STATIC_RULES][7] static rules. Additional static rule sets may or may not be
-enabled depending on the available [global static rule limit][8].
+`"rule_resources"` manifest key. Only [MAX_NUMBER_OF_ENABLED_STATIC_RULESETS][18] of these rulesets
+can be enabled at a time, assuming static rule limits are not exceeded.
+
+An extension is allowed to enable at least [GUARANTEED_MINIMUM_STATIC_RULES][7] static rules.
+Additional static rulesets may or may not be enabled depending on the available
+[global static rule limit][8].
+
+**Note:** Errors and warnings about invalid static rules are only displayed for unpacked extensions.
+Invalid static rules in packed extensions are ignored. It's therefore important to verify that your
+static rulesets are valid by testing with an unpacked version of your extension.
 
 ## Global Static Rule Limit
 
@@ -104,6 +111,8 @@ An extension can add or remove rules dynamically using the [updateDynamicRules][
 An extension can update the set of enabled static rulesets using the [updateEnabledRulesets][14] API
 method.
 
+- The number of static rulesets which are enabled at one time must not exceed
+  [MAX_NUMBER_OF_ENABLED_STATIC_RULESETS][18].
 - The number of rules across enabled static rulesets across all extensions must not exceed the
   [global limit][15]. Calling [getAvailableStaticRuleCount][10] is recommended to check the number
   of rules an extension can still enable before the global limit is reached.
@@ -358,3 +367,4 @@ is determined based on the priority of each rule and the operations specified.
 [15]: #global-static-rule-limit
 [16]: /docs/extensions/webRequest
 [17]: #method-updateSessionRules
+[18]: #property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS

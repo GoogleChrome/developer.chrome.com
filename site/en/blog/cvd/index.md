@@ -13,6 +13,8 @@ tags:
   - devtools
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 <!-- lint disable no-smart-quotes -->
 
 This article describes why and how we implemented color vision deficiency simulation in DevTools and the Blink Renderer.
@@ -283,7 +285,7 @@ AtomicString CreateVisionDeficiencyFilterUrl(VisionDeficiency vision_deficiency)
 
 Note that this technique gives us access to the full power of SVG filters without having to re-implement anything or re-invent any wheels. We’re implementing a Blink Renderer feature, but we’re doing so by leveraging the Web Platform.
 
-Okay, so we’ve figured out how to construct SVG filters and turn them into data URLs that we can use within our CSS `filter` property value. Can you think of a problem with this technique? It turns out, we can’t actually _rely_ on the data URL being loaded in all cases, since the target page might have [a `Content-Security-Policy`](https://developers.google.com/web/fundamentals/security/csp) that blocks data URLs. Our final Blink-level implementation takes special care to bypass CSP for these “internal” data URLs during loading.
+Okay, so we’ve figured out how to construct SVG filters and turn them into data URLs that we can use within our CSS `filter` property value. Can you think of a problem with this technique? It turns out, we can’t actually _rely_ on the data URL being loaded in all cases, since the target page might have [a `Content-Security-Policy`](https://web.dev/strict-csp/) that blocks data URLs. Our final Blink-level implementation takes special care to bypass CSP for these “internal” data URLs during loading.
 
 Edge cases aside, we’ve made some good progress. Because we no longer depend on inline `<svg>` being present in the same document, we’ve effectively reduced our solution to just a single self-contained CSS `filter` property definition. Great! Now let’s get rid of that too.
 
@@ -337,3 +339,6 @@ To recap our little journey here, we started out by building a prototype using w
 What’s unique about this implementation is that our HTML/CSS/SVG prototype ended up influencing the final technical design. We found a way to use the Web Platform, even within the Blink Renderer!
 
 For more background, check out [our design proposal](https://goo.gle/devtools-cvd) or [the Chromium tracking bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1003700) which references all related patches.
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

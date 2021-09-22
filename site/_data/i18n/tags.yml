@@ -70,6 +70,9 @@ new-in-chrome:
 privacy:
   en: Privacy
 
+progress-in-the-privacy-sandbox:
+  en: Progress in the Privacy Sandbox
+
 progressive-web-apps:
   en: Progressive Web Apps
 
@@ -88,8 +91,20 @@ new-in-devtools:
 devtools-engineering:
   en: DevTools Engineering
 
+devtools-architecture:
+  en: DevTools Architecture
+
 origin-trials:
   en: Origin Trials
 
 identity:
   en: Identity
+
+rendering:
+  en: Rendering
+
+lighthouse:
+  en: Lighthouse
+
+new-in-lighthouse:
+  en: What's new in Lighthouse

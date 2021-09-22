@@ -29,6 +29,8 @@ const {YouTube} = require('./site/_shortcodes/YouTube');
 const {Columns, Column} = require('./site/_shortcodes/Columns');
 const {Compare, CompareCaption} = require('./site/_shortcodes/Compare');
 const {Aside} = require('./site/_shortcodes/Aside');
+const includeRaw = require('./site/_shortcodes/includeRaw');
+const {LanguageList} = require('./site/_shortcodes/LanguageList');
 
 // Transforms
 const {domTransformer} = require('./site/_transforms/dom-transformer-pool');
@@ -55,7 +57,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 module.exports = eleventyConfig => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   // We do this so we can have gulp put compiled css into our _includes/css
-  // directory. We want to .gitignore this compiled css, but we want elventy
+  // directory. We want to .gitignore this compiled css, but we want eleventy
   // to use it for its build.
   eleventyConfig.setUseGitIgnore(false);
 
@@ -69,7 +71,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy('site/en/**/*.{jpg,jpeg,png,webp,gif}');
 
   // Make .yml files work in the _data directory.
-  eleventyConfig.addDataExtension('yml', contents => yaml.safeLoad(contents));
+  eleventyConfig.addDataExtension('yml', contents => yaml.load(contents));
 
   // Configure markdown-it plugins
   eleventyConfig.setLibrary('md', md);
@@ -118,6 +120,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('Img', Img);
   eleventyConfig.addShortcode('Video', Video);
   eleventyConfig.addShortcode('YouTube', YouTube);
+  eleventyConfig.addShortcode('includeRaw', includeRaw);
   eleventyConfig.addPairedShortcode('Details', Details);
   eleventyConfig.addPairedShortcode('DetailsSummary', DetailsSummary);
   eleventyConfig.addPairedShortcode('Columns', Columns);
@@ -125,6 +128,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPairedShortcode('Compare', Compare);
   eleventyConfig.addPairedShortcode('CompareCaption', CompareCaption);
   eleventyConfig.addPairedShortcode('Aside', Aside);
+  eleventyConfig.addShortcode('LanguageList', LanguageList);
 
   // Add transforms
   eleventyConfig.addTransform('domTransformer', domTransformer);

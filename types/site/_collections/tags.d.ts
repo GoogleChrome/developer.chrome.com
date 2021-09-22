@@ -27,6 +27,8 @@ declare global {
     posts: {
       [locale: string]: EleventyCollectionItem[];
     };
+    release?: number;
+    url: string;
   }
   export interface Tags {
     [tag: string]: Tag;

@@ -7,7 +7,7 @@ date: 2021-07-26
 updated: 2021-07-26
 description:
   "Editor de CSS Grid, Soporte para la redeclaración de const en la consola, Visor de orden de los elementos y más."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XtJztwxzQqOWhOHrKmhM.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/cNkvli3QcoNTlZiuJfHk.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -17,10 +17,7 @@ tags:
 
 *Traducción cedida por [Miguel Ángel](https://twitter.com/midudev).*
 
-{% Aside %}
-¿Tienes interés en mejorar DevTools? Regístrate para participar en la [Google User Research aquí](https://google.qualtrics.com/jfe/form/SV_9YbKj35IGoGsDBj?reserved=1&utm_source=Website%20feature&Q_Language=en&utm_medium=own_web&utm_campaign=Q4&productTag=chrm&campaignDate=November2020&referral_code=UXFm430458).
-
-{% endAside %}
+{% include 'partials/devtools/es/banner.md' %}
 
 {% YouTube id="2baY3JpCxpo" %}
 
@@ -182,7 +179,7 @@ La opción **Restart frame** queda obsoleta. Esta característica requiere más 
 
 Chromium issue: [1203606](https://crbug.com/1203606)
 
-## Monitor de protocolo [Experimental] {: #protocol-monitor }
+## [Experimental] Monitor de protocolo {: #protocol-monitor }
 
 {% Aside %}
 
@@ -204,7 +201,7 @@ Dos nuevas funcionalidades han sido añadidas para facilitar las pruebas de CDP:
 
 Chromium issues: [1204004](https://crbug.com/1204004), [1204466](https://crbug.com/1204466)
 
-## Grabadora de Puppeteer [Experimental] {: #puppeteer-recorder }
+## [Experimental] Grabadora de Puppeteer {: #puppeteer-recorder }
 
 {% Aside %}
 
@@ -224,3 +221,6 @@ Ten en cuenta que este experimento está en sus primeras etapas de desarrollo. H
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a2ffe4a8d202e56d640c2f8744c905354e2bca8e #}
 
 Chromium issue: [1199787](https://crbug.com/1199787)
+
+{% include 'partials/devtools/es/reach-out.md' %}
+{% include 'partials/devtools/es/whats-new.md' %}

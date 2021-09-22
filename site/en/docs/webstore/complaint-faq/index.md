@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Chrome Web Store complaint handling FAQ"
 date: 2020-06-12
-#updated: TODO
+updated: 2021-08-25
 description: Frequently asked questions about the complaint handling process for the Chrome Web Store.
 ---
 
@@ -11,34 +11,32 @@ Web Store.
 
 ## How can I raise concerns about the Chrome Web Store or Chrome extensions? {: #how-can-i-raise-concerns-about-the-chrome-web-store-or-chrome-extensions }
 
-You can raise concerns with Google about Chrome Web Store and Chrome extensions in three ways:
+You can use the [CWS Support form][cws-support-form] to raise concerns with Google regarding:
 
-- Extension take downs: You may have received an email notification about your extension being taken
-  down. You can reply to this email to receive further clarification or to appeal the decision..
-- Account removals: You may have received an email notification about your account being removed.
-  The email includes a link to a support form; you can use the form to receive further
-  clarifications or to appeal the removal decision.
-- General concerns: For all other concerns, including technical, payment, and questions about terms
-  and policies, contact Google through the form linked in the [Chrome Web Store FAQs][cwsfaq-support].
+- **Extension take downs:** You may have received an email notification about your extension being
+  taken down. You can request further clarification or to appeal the decision.
+- **Account removals:** You may have received an email notification about your account being
+  removed. If you believe your developer account was wrongly terminated, you can request further clarifications or to appeal the removal
+  decision.
+- **General concerns:** You can also contact Google for all other concerns, account transfers,
+  technical support, developer dashboard issues, or any questions about terms and policies. 
 
 ## How can I as a developer in the EU raise concerns related to the Platform To Business (P2B) regulations in Europe? {: #how-can-i-as-a-developer-in-the-eu-raise-concerns-related-to-the-platform-to-business-p2b-regulations-in-europe }
 
-You can file concerns through the general form linked to in the [Chrome Web Store FAQs][cwsfaq-p2b].
+You can file concerns through the general [CWS Support form][cws-support-form].
 
 ## Can I raise concerns to the team through the various online forums? {: #can-i-raise-concerns-to-the-team-through-the-various-online-forums }
 
-The team monitors and responds to various online forums where Chrome extensions are discussed. While
-the team occasionally fields questions about specific extensions or developer concerns, the forums
-are primarily geared towards discussions about Chrome extensions generally and not intended to be
-support channels.
+The team monitors and responds to various online forums where Chrome extensions are discussed. These
+forums are primarily geared towards discussions about Chrome extension development and not intended
+to be support channels. Use the [CWS Support form][cws-support-form] to raise any concerns.
 
 ## What is the process for appealing extension take downs or rejections? {: #what-is-the-process-for-appealing-extension-take-downs-or-rejections }
 
 If your extension has been determined to violate one or more terms or policies, you will receive an
 email notification. The email contains a description of the specific violation and provides
 instructions on next steps. You may request further clarification on the reasons for the take down
-or appeal the decision if the developer disagrees. You may reply to the email notifications, and a
-team of reviewers will respond with further information.
+or appeal the decision using the [CWS Support form][cws-support-form].
 
 If after receiving further information or disagreeing with the decision on appeal, and if you are a
 business user based in the EU or the UK, you may also apply to resolve a dispute with mediation.
@@ -49,9 +47,11 @@ through mediation.
 
 ## What is the process for appealing account removals? {: #what-is-the-process-for-appealing-account-removals }
 
-You can fill out the form linked in the body of the account removal email in order to receive
-further clarifications or to appeal the removal decision. Within seven days, the review team will
-respond with further clarification or provide a decision to any appeal requests.
+You can fill out the [CWS Support form][cws-support-form] to receive further clarifications
+or to appeal the removal decision. Within **seven days**, the review team will respond with further
+clarification or provide a decision to any appeal requests. The CWS will only reinstate accounts if
+an error was made, and a re-review finds that your account does not violate the [developer
+terms][program-policies].
 
 If after receiving further information or disagreeing with the decision on appeal, and if you are a
 business user based in the EU or the UK, you may also apply to resolve a dispute with mediation. See
@@ -64,5 +64,5 @@ level of investigation needed to determine the root cause/explanation. For examp
 stats on the dashboard, extensions between developers, and developer account recovery have been
 known to require longer investigation times.
 
-[cwsfaq-support]: /docs/webstore/faq/#additional-troubleshooting
-[cwsfaq-p2b]: /docs/webstore/faq/#how-can-i-raise-p2b-concerns
+[cws-support-form]: https://support.google.com/chrome_webstore/contact/one_stop_support
+[program-policies]: /docs/webstore/program_policies

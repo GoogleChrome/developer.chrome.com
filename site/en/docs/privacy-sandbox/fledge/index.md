@@ -6,24 +6,33 @@ subhead: >
 description: >
   FLEDGE satisfies remarketing use cases, but is designed so it cannot be used by third parties to track user browsing behaviour across sites. The API enables on-device "auctions" by the browser, to choose relevant ads provided by websites the user has previously visited.
 date: 2021-05-18
-updated: 2021-05-18
+updated: 2021-09-20
 authors:
   - samdutton
 ---
 
-<!--lint disable no-smart-quotes-->
+{% Aside %}
+FLEDGE can be tested in Chrome from versions 91.0.4472.49 or 92.0.4493.0 with the following flags enabled:
+
+`--enable-features=FledgeInterestGroups,FledgeInterestGroupAPI`
+
+* This is the in-progress version of FLEDGE for early testing, so it should not be considered feature complete or indicative of the final implementation. Progress and status are discussed in the regular WICG meetings. The [minutes](https://github.com/WICG/turtledove/blob/main/meetings/2021-05-12-FLEDGE-call-minutes.md#agenda) for the 2021/05/12 WICG call provide detail on what is and is not supported in the current implementation.
+* [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) explains how to set flags when running Chrome and other Chromium-based browsers from the command line.
+{% endAside %}
+
+{% YouTube
+  id='HkvmYKqnytw' 
+%}
 
 ## Implementation status
+
+FLEDGE is the first experiment to be implemented in Chromium within the 
+[TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
 
 * [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is under discussion with
 [WICG](https://www.w3.org/community/wicg/) and interest groups.
 * [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI) in
 [Blink](https://www.chromium.org/blink).
-
-
-{% Aside %}
-FLEDGE is a descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
-{% endAside %}
 
 
 ## Why do we need FLEDGE?
@@ -43,8 +52,8 @@ With FLEDGE:
 * The user's browser, not the advertiser or ad tech platform, stores advertiser-defined interest
 groups that the user's browser is associated with.
 * The user’s browser combines interest group data with ad buyer/seller data and business logic to
-conduct an "auction" locally on the user's device to select an ad, rather than sharing data with a
-third party. This ad auction happens locally on the user's device.
+conduct an "auction" to select an ad. This ad auction happens locally on the user's device, rather 
+than sharing data with a third party.
 * Ads can be selected for an interest group, but an advertiser cannot combine interest group data
 with other information about a user—in particular, the identity of a person or the pages they visit.
 An advertiser cannot learn about what pages a user views on a publisher site.

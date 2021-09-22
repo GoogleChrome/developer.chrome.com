@@ -11,13 +11,16 @@ alt: ''
 tags:
   - devtools-engineering
   - devtools
+  - devtools-architecture
 ---
+
+{% include 'partials/devtools/en/banner.md' %}
 
 As you might know, [Chrome DevTools](/docs/devtools/) is a web application written using HTML, CSS and JavaScript.
 Over the years, DevTools has gotten more feature-rich, smarter and knowledgeable about the broader web platform. 
 While DevTools has expanded over the years, its architecture largely resembles the original architecture when it was still part of [WebKit](https://webkit.org/web-inspector/).
 
-This post is part of a **series of blog posts** describing **the changes we are making to DevTools' architecture and how it is built**.
+This post is part of [a series of blog posts](/tags/devtools-architecture/) describing **the changes we are making to DevTools' architecture and how it is built**.
 We will explain how DevTools has historically worked, what the benefits and limitations were and what we have done to alleviate these limitations.
 Therefore, let's dive deep into module systems, how to load code and how we ended up using JavaScript modules.
 
@@ -250,3 +253,6 @@ Migrations of this scale are difficult to follow and require a lot of domain kno
 Transferring that domain knowledge to others working in the same codebase is not desirable per se for the job they are doing.
 Knowing what to share and what details not to share is an art, but a necessary one.
 It is therefore crucial to reduce the amount of large migrations, or at the very least not perform them at the same time.
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/engineering-blog.md' %}

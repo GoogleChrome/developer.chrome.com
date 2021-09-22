@@ -147,7 +147,7 @@ An extension can link directly to the options page by calling
 ```
 
 ```js
-document.querySelector('#go-to-options').addEventListener(function() {
+document.querySelector('#go-to-options').addEventListener('click', function() {
   if (chrome.runtime.openOptionsPage) {
     chrome.runtime.openOptionsPage();
   } else {

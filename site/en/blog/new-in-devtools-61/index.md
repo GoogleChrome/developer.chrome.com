@@ -14,6 +14,8 @@ tags:
   - chrome-61
 ---
 
+{% include 'partials/devtools/en/banner.md' %}
+
 New features and major changes coming to DevTools in Chrome 61 include:
 
 - [Mobile device throttling simulation][1]. Set CPU and network throttling simultaneously, to
@@ -95,6 +97,10 @@ setting to **Scroll**, this gesture now scrolls up or down.
 ES6 Modules are shipping natively in Chrome 61. There's not much going on here with regards to
 DevTools, other than that debugging works as you'd expect it to. Try setting some breakpoints in and
 stepping through [Paul Irish's ES6-Module-implementation][11] of [TodoMVC][12] to see for yourself.
+
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
 
 [1]: #throttling
 [2]: #storage
