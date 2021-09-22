@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Inspect CSS Grid"
 authors:
   - jecelynyeen
-date: 2017-06-08
+date: 2021-06-08
 #updated: YYYY-MM-DD
 description: "Learn how to use Chrome DevTools to view and change a page's CSS."
 ---
