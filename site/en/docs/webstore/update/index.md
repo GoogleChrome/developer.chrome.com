@@ -142,8 +142,7 @@ extent of your changes. See the [FAQ on review times][review-times] for more det
 For items that you previously published with [partial rollout][partial-rollout], you can update the percent
 rollout using the Package tab:
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Dy8HD5xF4NiboQxgUtNt.png",
-       alt="Screenshot of the Chrome Web Store update percent rollout field", height="395", width="800" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/UA8vDp8aG89exqqjzY55.png", alt="Screenshot of the Chrome Web Store update percent rollout field", width="800", height="395" %}
 
 To increase the rollout fraction for your item, enter the increased percentage target and then click
 **Update**.
