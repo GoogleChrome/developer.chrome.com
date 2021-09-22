@@ -6,7 +6,7 @@ authors:
 date: 2021-09-20
 updated: 2021-09-20
 description:
-  "新しいCSSの長さ編集ツール、 Issues タブでの課題の非表示、プロパティの表示の改善など"
+  "新しいCSSの長さ編集ツール、 Issues タブでの問題の非表示、プロパティの表示の改善など"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CpUXxig53msMdL1pMrDd.jpg'
 alt: ''
 tags:
@@ -157,7 +157,7 @@ Chromium issue: [1243976](https://crbug.com/1243976)
 6つの言語 - [ロシア語](/ru/blog/new-in-devtools-95)、[中国語](/zh/blog/new-in-devtools-95)、[スペイン語](/es/blog/new-in-devtools-95)、[日本語](/ja/blog/new-in-devtools-95)です。[スペイン語](/es/blog/new-in-devtools-95)、[日本語](/ja/blog/new-in-devtools-95)、[ポルトガル語](/pt/blog/new-in-devtools-95)、[韓国語](/ko/blog/new-in-devtools-95) のリリースノートは、 What’s new タブからご覧いただけます。
 
 <!-- Since Chrome 94, you can [set your preferred language](/blog/new-in-devtools-94/#localized) in DevTools. If you found any issues with the translations, help us improve it by [reporting a translation issue](https://goo.gle/devtools-translate) via **More options** > **Help** > **Report a translation bug**.  -->
-Chrome 94以降、 DevTools で[優先言語の設定](/blog/new-in-devtools-94/#localized)ができるようになりました。翻訳に関する問題を発見された場合は、 **More options** > **Help** > **Report a translation bug** で[翻訳の課題を報告](https://goo.gle/devtools-translate)して、改善にご協力ください。
+Chrome 94以降、 DevTools で[優先言語の設定](/blog/new-in-devtools-94/#localized)ができるようになりました。翻訳に関する問題を発見された場合は、 **More options** > **Help** > **Report a translation bug** で[翻訳の問題を報告](https://goo.gle/devtools-translate)して、改善にご協力ください。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qrg4Ahf4sYseL2NQZwIl.png", alt="New links to translated release notes and report a translation bug", width="800", height="487" %}
 
