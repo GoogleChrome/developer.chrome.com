@@ -70,7 +70,8 @@ Issues タブで特定の問題を非表示にして、自分にとって重要�
 <!-- All hidden issues will be added under the **Hidden issues** pane. Expand the pane. You can unhide all hidden issues or a selected one.  -->
 すべての隠された問題は **Hidden issues** ペインに追加されます。ペインを展開して、すべての隠された問題、または選択した問題の非表示を解除できます。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dnPfPGkxpkcSZRIHqGDA.png", alt="Hidden issues pane", width="800", height="488" %}
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dnPfPGkxpkcSZRIHqGDA.png", alt="Hidden issues pane", width="800", height="488" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dnPfPGkxpkcSZRIHqGDA.png", alt="Hidden issues ペイン", width="800", height="488" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f7a70504f3ad5a63b5f5b83411ff5f6cc31a765 #}
 
@@ -104,7 +105,8 @@ link.search = `?access=${link.access}`;
 <!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
 **Console** で `link` をログに出力してみてください。独自のプロパティが太字になり、最初にソートされるようになりました。この変更により、特に多くの継承されたプロパティを持つ [Web API](https://developer.mozilla.org/en-US/docs/Web/API) (例: `URL`) のカスタムプロパティを見つけやすくなりました。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="Own properties are bold and sorted first", width="800", height="561" %}
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="Own properties are bold and sorted first", width="800", height="561" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="独自のプロパティは太字で先頭に並びます", width="800", height="561" %}
 
 <!-- Apart from these changes, the properties in the  **Properties** pane are also flattened now for better DOM properties debugging experience, especially for [Web components](https://www.webcomponents.org/introduction).  -->
 これらの変更以外にも、特に[Webコンポーネント](https://www.webcomponents.org/introduction)のために、DOMプロパティのデバッグがしやすくなるよう **Properties** ペインのプロパティがフラット化されました。
@@ -127,7 +129,8 @@ Chromium issues: [1076820](https://crbug.com/1076820), [1119900](https://crbug.c
 <!-- Check out the [What’s new in Lighthouse 8.4](/blog/lighthouse-8-4/) for more details on the updates. -->
 アップデートの詳細は、 [What's new in Lighthouse 8.4](/blog/lighthouse-8-4/) をご確認ください。
 
-{% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/u9nepJj3wgpMgoNxSaDZ.png", alt="The lazy-loaded LCP audit in a Lighthouse report", width="800", height="502", class="screenshot" %}
+<!-- {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/u9nepJj3wgpMgoNxSaDZ.png", alt="The lazy-loaded LCP audit in a Lighthouse report", width="800", height="502", class="screenshot" %} -->
+{% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/u9nepJj3wgpMgoNxSaDZ.png", alt="Lighthouse レポートにおける遅延読み込みされた LCP の監査　", width="800", height="502", class="screenshot" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/649a979e4de2cf38430e46e7198b11ba8a830388 #}
 
@@ -145,7 +148,8 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/54ea0986cb59f71242ed62d3dd6405cc65f623a4 #}
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/knb78RG6NCETitMbNoyV.png", alt="Sort snippets in the Sources panel", width="800", height="475" %}
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/knb78RG6NCETitMbNoyV.png", alt="Sort snippets in the Sources panel", width="800", height="475" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/knb78RG6NCETitMbNoyV.png", alt="Sources パネルでのスニペットの並び", width="800", height="475" %}
 
 Chromium issue: [1243976](https://crbug.com/1243976)
 
@@ -159,7 +163,8 @@ Chromium issue: [1243976](https://crbug.com/1243976)
 <!-- Since Chrome 94, you can [set your preferred language](/blog/new-in-devtools-94/#localized) in DevTools. If you found any issues with the translations, help us improve it by [reporting a translation issue](https://goo.gle/devtools-translate) via **More options** > **Help** > **Report a translation bug**.  -->
 Chrome 94以降、 DevTools で[優先言語の設定](/blog/new-in-devtools-94/#localized)ができるようになりました。翻訳に関する問題を発見された場合は、 **More options** > **Help** > **Report a translation bug** で[翻訳の問題を報告](https://goo.gle/devtools-translate)して、改善にご協力ください。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qrg4Ahf4sYseL2NQZwIl.png", alt="New links to translated release notes and report a translation bug", width="800", height="487" %}
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qrg4Ahf4sYseL2NQZwIl.png", alt="New links to translated release notes and report a translation bug", width="800", height="487" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qrg4Ahf4sYseL2NQZwIl.png", alt="翻訳されたリリースノートへの新しいリンクと翻訳バグの報告", width="800", height="487" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/312e43a6c50bc29f279f9eac2f91b723b36c7ee9 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dcd3ae13ebc5d340b2abb07e9dc99cfa74caea35 #}
@@ -177,8 +182,9 @@ Chromium issues: [1246245](https://crbug.com/1246245), [1245481](https://crbug.c
 Windows と Linux では <kbd>Control</kbd>+<kbd>P</kbd>で、 MacOS では <kbd>Command</kbd>+<kbd>P</kbd> のキーボードショートカットでファイルを検索するための **Command Menu** を開きます。
 
 <!-- The UI improvements of the **Command Menu** is still ongoing, stay tuned for more updates! -->
-**コマンドメニュー** のUI改善は現在も継続中です。さらなるアップデートをお楽しみに!
+**Command Menu** のUI改善は現在も継続中です。さらなるアップデートをお楽しみに!
 
+<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/TJT2ry3vmUW1KoFgSKQP.png", alt="Command Menu", width="800", height="389" %} -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/TJT2ry3vmUW1KoFgSKQP.png", alt="Command Menu", width="800", height="389" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/06f6263ffb5b0a262c9954db532801fef4dbb1e5 #}
