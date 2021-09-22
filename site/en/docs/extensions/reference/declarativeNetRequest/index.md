@@ -1,21 +1,25 @@
 ---
 api: declarativeNetRequest
-extra_permissions:
-- declarativeNetRequestFeedback
 extra_permissions_html:
+  <code>declarativeNetRequestFeedback</code><br/>
   <a href="declare_permissions#host-permissions">host permissions</a><br />
-  Note that <code>declarativeNetRequestFeedback</code> and host permissions should only be specified when necessary.
 ---
 
 ## Manifest
 
-Extensions must declare the `"declarativeNetRequest"` permission in the extension [manifest][1] to
-use this API. The `"declarativeNetRequestFeedback"` permission is required to access functions and
-events which return information on declarative rules matched. [Host permissions][2] are required if
-the extension wants to redirect requests or modify headers. To specify static [Rulesets][3],
-extensions must also declare the `"declarative_net_request"` manifest key, which should be a
-dictionary with a single key called `"rule_resources"`. It should be a list containing dictionaries
-of type [Ruleset][4], as shown below.
+Extensions must declare either the `declarativeNetRequest` or the 
+`declarativeNetRequestWithHostAccess` (Available since **M96**) permission in the extension 
+[manifest][1] to use this API. The former allows extensions to block and upgrade requests without 
+any [host permissions][2]. Host permissions are still required if the extension wants to redirect a 
+request or modify headers on it. The `declarativeNetRequestWithHostAccess` permission always 
+requires host permissions to the request url and initator to act on a request.
+
+The `declarativeNetRequestFeedback` permission is required to access functions and events which 
+return information on declarative rules matched. 
+
+To specify static [Rulesets][3], extensions must also declare the `"declarative_net_request"` 
+manifest key, which should be a dictionary with a single key called `"rule_resources"`. It should be
+a list containing dictionaries of type [Ruleset][4], as shown below.
 
 ```json
 {
@@ -164,8 +168,8 @@ is determined based on the priority of each rule and the operations specified.
   JavaScript in the extension process.
 - Because the requests are not intercepted by the extension process, declarativeNetRequest removes
   the need for extensions to have a background page; resulting in less memory consumption.
-- Unlike the webRequest API, blocking requests using the declarativeNetRequest API requires no host
-  permissions.
+- Unlike the webRequest API, blocking or upgrading requests using the declarativeNetRequest API 
+  requires no host permissions when used with the `declarativeNetRequest` permission.
 - The declarativeNetRequest API provides better privacy to users because extensions can't actually
   read the network requests made on the user's behalf.
 - Unlike the webRequest API, any images or iframes blocked using the declarativeNetRequest API are
