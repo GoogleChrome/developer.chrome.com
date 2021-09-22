@@ -6,9 +6,8 @@ authors:
 date: 2021-09-20
 updated: 2021-09-20
 description:
-  "New CSS length authoring tools, hide issues in the Issues tab and improved the display of properties more."
+  "新しいCSSの長さ編集ツール、 Issues タブでの課題の非表示、プロパティの表示の改善など"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/CpUXxig53msMdL1pMrDd.jpg'
-draft: true
 alt: ''
 tags:
   - new-in-devtools
