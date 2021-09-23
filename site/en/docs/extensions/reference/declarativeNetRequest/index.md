@@ -8,7 +8,7 @@ extra_permissions_html:
 ## Manifest
 
 Extensions must declare either the `declarativeNetRequest` or the 
-`declarativeNetRequestWithHostAccess` (Available since **M96**) permission in the extension 
+`declarativeNetRequestWithHostAccess` (available since **Chrome 96**) permission in the extension 
 [manifest][1] to use this API. The former allows extensions to block and upgrade requests without 
 any [host permissions][2]. Host permissions are still required if the extension wants to redirect a 
 request or modify headers on it. The `declarativeNetRequestWithHostAccess` permission always 
