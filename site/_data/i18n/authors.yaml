@@ -244,6 +244,11 @@ ackermanb:
     en: 'Benjamin Ackerman'
   description:
     en: 'Lead Security Analyst, Chrome Trust & Safety Team'
+dsli:
+  title:
+    en: 'David Li'
+  description:
+    en: 'Product Manager, Chrome Extensions & Chrome Web Store'
 joycetoh:
   title:
     en: 'Joyce Toh'

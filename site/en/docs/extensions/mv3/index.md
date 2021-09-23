@@ -37,19 +37,16 @@ Beyond that, you might find useful entry points in these pages:
 * Pick something from the [samples page](https://github.com/GoogleChrome/chrome-extensions-samples), install it, and start hacking on it.
 * Look for answers in the [Extensions FAQ page](/docs/extensions/mv3/faq/)
 
-{% if process.env.HAS_MV3 %}
 {% Aside %}
 Now that Manifest V3 has launched, we've changed the default documentation to
 be for MV3. If you are maintaining a legacy Manifest V2 extension, see the [MV2
-documentation](/docs/extensions/mv2).	
+documentation](/docs/extensions/mv2).
 {% endAside %}
-{% else %}
-{% Aside %}
-With Manifest V3 launching soon, we've changed the default documentation
-experience to be for MV3. The [Manifest V2 documentation](/docs/extensions/mv2)
-is still available.
+
+{% Aside 'warning' %}
+As Manifest V3 approaches full feature parity with V2, we will be phasing out
+MV2. See [Manfest V2 sunset timeline](/docs/extensions/mv3/mv2-sunset) for details.
 {% endAside %}
-{% endif %}
 
 In addition to the documentation here, many developers find helpful community content at:
 
