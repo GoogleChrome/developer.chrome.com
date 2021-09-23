@@ -7,7 +7,7 @@ subhead: 'Understand when Manifest V2 will stop working for extensions'
 
 description: 'Details of the Manifest V2 phase-out and end of life.'
 
-date: 2021-09-20
+date: 2021-09-23
 
 ---
 
