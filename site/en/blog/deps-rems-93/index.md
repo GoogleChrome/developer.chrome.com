@@ -3,7 +3,7 @@ title: Deprecations and removals in Chrome 93
 description: >
   A round up of the deprecations and removals in Chrome 93 to help you plan.
 layout: 'layouts/blog-post.njk'
-date: 2021-07-29
+date: 2021-08-29
 updated: 2021-09-23
 hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/wzKRtZO1LCra0FDRk1jY.png'
 alt: >
