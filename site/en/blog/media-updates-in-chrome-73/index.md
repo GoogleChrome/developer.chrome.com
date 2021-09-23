@@ -138,7 +138,13 @@ automatic Picture-in-Picture behavior when user switches back and forth between
 the web app and other applications or tabs. This is sadly not possible with the
 [user gesture requirement]. So here comes Auto Picture-in-Picture!
 
-<video autoplay loop muted playsinline src="https://storage.googleapis.com/webfundamentals-assets/videos/pwa-auto-pip.mp4"></video>
+{% Video
+  src="video/vvhSqZboQoZZN9wBvoXq72wzGAf1/QqD84WpfAAfk8UeSryF0.mp4",
+  autoplay=true,
+  loop=true,
+  muted=true,
+  playsinline=true
+%}
 
 To support these tab and app switching, a new `autopictureinpicture` attribute
 is added to the `<video>` element.
