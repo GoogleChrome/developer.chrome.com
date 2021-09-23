@@ -7,7 +7,7 @@ authors:
   - dsli
 date: 2021-09-23
 hero: image/WlD8wC6g8khYWPJUsQceQkhXSlv1/GoUHyuctM1Zs9wdy5a2s.png
-alt: Image of a butterfly
+alt: Image with extensions logo and text saying Manifest V3 transition timeline
 tags:
   - extensions
 
