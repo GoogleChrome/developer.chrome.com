@@ -12,7 +12,7 @@ Extensions must declare either the `declarativeNetRequest` or the
 [manifest][1] to use this API. The former allows extensions to block and upgrade requests without 
 any [host permissions][2]. Host permissions are still required if the extension wants to redirect a 
 request or modify headers on it. The `declarativeNetRequestWithHostAccess` permission always 
-requires host permissions to the request url and initator to act on a request.
+requires host permissions to the request URL and initiator to act on a request.
 
 The `declarativeNetRequestFeedback` permission is required to access functions and events which 
 return information on declarative rules matched. 
