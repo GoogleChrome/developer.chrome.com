@@ -4,8 +4,10 @@ description: >
   A round up of the deprecations and removals in Chrome 90 to help you plan.
 layout: 'layouts/blog-post.njk'
 date: 2021-03-11
+updated: 2021-09-23
+hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/PD4oQ1sqexEA5jAo2KGT.png'
 alt: >
-  Deprecations and removals hero logo
+  Deprecations and Removals hero logo
 tags:
   - deprecations
   - removals
@@ -36,7 +38,7 @@ in WebRTC. Users should use the standard SCTP-based data channels instead.
 Chrome
 [now returns empty for `navigator.plugins` and `navigator.mimeTypes`](https://www.chromestatus.com/feature/5741884322349056).
 With the removal of Flash, there is no longer the need to return anything for
-these properties.   
-  
+these properties.
+
 
 {% include 'partials/deprecations-policy.md' %}
