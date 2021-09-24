@@ -63,7 +63,7 @@ Chromium issues: [1126178](https://crbug.com/1126178), [1172993](https://crbug.c
 Issues タブで特定の問題を非表示にして、自分にとって重要な問題だけに集中できるようになりました。
 
 <!-- In the [Issues tab](/docs/devtools/issues/), hover over on an issue you would like to hide. Click on **More options**  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Hide issues like this**. -->
-[Issues タブ]（/docs/devtools/issues/）で、非表示にしたい問題にマウスオーバーします。 **More options**  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Hide issues like this** をクリックしましょう。
+[Issues タブ](/docs/devtools/issues/)で、非表示にしたい問題にマウスオーバーします。 **More options**  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Hide issues like this** をクリックしましょう。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Uw3mxGGK5CNoUflHgS7p.png", alt="Hide issues menu", width="800", height="488" %}
 
