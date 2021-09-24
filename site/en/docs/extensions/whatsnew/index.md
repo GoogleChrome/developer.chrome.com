@@ -16,6 +16,13 @@ updated: 2021-08-04
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
+### Manifest V2 support timeline
+
+#### Published 2021.09.23
+
+The Manifest V2->V3 transition timeline was [announced in this blog post](/blog/mv2-transition/) and a
+more detailed [timeline page](/docs/extensions/mv3/mv2-sunset) was published.
+
 ### Two step verification enforcement
 
 #### Published 2021.08.04
