@@ -6,8 +6,7 @@ authors:
 date: 2021-09-20
 updated: 2021-09-20
 description:
-  "
-  새 CSS 길이 작성 도구, 문제 탭에서 문제를 숨기고 속성 표시 개선 등"
+  "새 CSS 길이 작성 도구, 문제 탭에서 문제 숨기기 기능, 속성 표시 방법 개선 및 다른 새로운 기능들."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/j60zqojAh4GHLDEeiqJU.jpg'
 draft: true
 alt: ''
@@ -24,20 +23,20 @@ tags:
 
 ## 새 CSS 길이 작성 도구 {: #length }
 
-DevTools 에서 CSS 길이를 업데이트하는 더 쉽고 유연한 방법을 추가하였습니다.
+DevTools 에 CSS 길이를 더 쉽고 유연하게 변경할 수 있는 방법이 추가되었습니다.
 
-**스타일** 영역에서, `height` 나 `padding` 같은 길이를 포함한 CSS 속성을 살펴보세요.
+**스타일** 영역에서, `height` 나 `padding` 과 같은 길이를 포함한 CSS 속성을 살펴보세요.
 
 단위 유형 위로 마우스를 가져가면 단위 유형에 밑줄이 표시됩니다. 단위 유형을 클릭하여 드롭다운에서 단위 유형을 선택합니다.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/vWiU9o1DxsOpWXM0SrBa.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 단위 값에 마우스를 가져가면 마우스 포인터가 좌우 화살표 커서로 바뀝니다. 커서를 좌우로 드래그해서 값을 늘리거나 줄일 수 있습니다.
-값을 10씩 늘리고 싶다면 <kbd>Shift</kbd> 키를 누른채로 드래그하세요.
+값을 10 단위로 조정하고 싶다면 <kbd>Shift</kbd> 키를 누른채로 드래그하세요.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/nbvRDPyARJmdTeB9ajOq.mp4", autoplay="true", muted="true", loop="true",class="screenshot" %}
 
-단위 값을 텍스트로도 변경할 수 있습니다. 값을 클릭하고 편집하세요.
+단위 값을 텍스트로도 변경할 수 있습니다. 값을 클릭하고 변경하세요.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/hBk2t2DCX7aI5yBX4J8h.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
@@ -48,13 +47,13 @@ Chromium issues: [1126178](https://crbug.com/1126178), [1172993](https://crbug.c
 
 ## 문제 탭에서 문제 숨기기 {: #hide-issues }
 
-문제 탭에서 특정 문제를 숨겨 중요한 문제에만 집중할 수 있습니다.
+문제 탭에서 특정 문제를 숨김으로써 중요한 문제에만 집중할 수 있습니다.
 
 [문제 탭](/docs/devtools/issues/) 에서 숨기려는 문제 위로 마우스를 가져갑니다. **더보기** 에 있는 &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="더보기", width="4", height="20" %} &nbsp; > **비슷한 문제 숨기기** 를 클릭하세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Uw3mxGGK5CNoUflHgS7p.png", alt="비슷한 문제 숨기기 메뉴", width="800", height="488" %}
 
-모든 숨겨진 문제들은 **숨겨진 문제** 영역 아래에 추가됩니다. 영역을 펼쳐보세요. 모든 숨겨진 문제를 한 번에 숨김 해제하거나, 개별로 숨김 해제할 수 있습니다.
+모든 숨겨진 문제들은 **숨겨진 문제** 영역 아래에 추가됩니다. 영역을 펼쳐 보세요. 모든 숨겨진 문제를 한 번에 숨김 해제하거나, 개별로 숨김 해제할 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dnPfPGkxpkcSZRIHqGDA.png", alt="숨겨진 문제 영역", width="800", height="488" %}
 
@@ -68,7 +67,7 @@ Chromium issue: [1175722](https://crbug.com/1175722)
 DevTools 에서 속성을 표시하는 방식을 개선했습니다.
 
 - **콘솔**, **소스** 패널 및 **속성** 영역에서 해당 객체가 보유한 속성은 굵게 표시하고 최상단에서 보여줍니다.
-- **속성** 영역에서 속성을 1차원으로 보여줍니다.
+- **속성** 영역에서 속성을 1차원으로 보여 줍니다.
 
 예를 들어, 아래 코드 조각을 살펴보면 `user` 와 `sccess` 라는 속성을 가지고, 상속받은 속성인 `search` 의 값을 변경한 `link` 라는 [`URL`](https://developer.mozilla.org/docs/Web/API/URL) 객체를 만들었습니다.
 
@@ -86,7 +85,7 @@ link.search = `?access=${link.access}`;
 이러한 변경을 통해 커스텀 속성을 더 쉽게 찾을 수 있습니다.
 특히 상속되는 속성이 많은 [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) (예: `URL`)에서 유용합니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="자체 속성은 굵게 표시되고, 첫째로 노출됩니다.", width="800", height="561" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="자체 속성은 굵게 표시되고, 첫번째로 노출됩니다.", width="800", height="561" %}
 
 위의 변경사항 외에도, **속성** 영역의 속성도 1차원화 되었습니다.
 이를 통해 DOM 속성 디버깅 경험을 개선하였으며, 특히 [Web components](https://www.webcomponents.org/introduction) 에서 유용합니다.
@@ -103,7 +102,7 @@ Chromium issues: [1076820](https://crbug.com/1076820), [1119900](https://crbug.c
 ## Lighthouse 8.4 {: #lighthouse }
 
 Lighthouse 패널이 이제 Lighthouse 8.4로 업데이트 되었습니다. 
-이제 Lighthouse에서 [Largest Containful Paint (LCP)](https://web.dev/lcp) 요소가 레이지 로딩된 이미지인 지 감지하고
+이제 Lighthouse에서 [Largest Containful Paint (LCP)](https://web.dev/lcp) 요소가 레이지 로딩된 이미지인지 감지하고
 해당 요소에서 `loading` 속성을 제거할 것을 권장합니다.
 
 전체 변경사항은 [What’s new in Lighthouse 8.4](/blog/lighthouse-8-4/) (영문) 를 참고하세요.
@@ -117,10 +116,9 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 ## 소스 패널에서 스니펫 정렬 {: #snippets }
 
-**소스** 패널에 존재하는 **스니펫** 영역에서 [스니펫](/docs/devtools/javascript/snippets/) 을 알파벳순으로 정렬됩니다.
-예전에는 정렬되지 않았습니다.
+**소스** 패널 안에 있는 **스니펫** 영역의 [스니펫](/docs/devtools/javascript/snippets/) 들은 이제 알파벳 순으로 정렬됩니다. 
 
-커맨드를 통해 더 빠르게 스니펫 기능을 실행할 수 있습니다. [tip](https://youtu.be/NOal2gTzftI?t=176) (영문) 비디오를 참고하세요!
+커맨드를 통해 더 빠르게 스니펫 기능을 실행할 수 있습니다. [tip](https://youtu.be/NOal2gTzftI?t=176) (영문) 영상을 참고하세요!
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/54ea0986cb59f71242ed62d3dd6405cc65f623a4 #}
 
@@ -146,7 +144,7 @@ Chromium issues: [1246245](https://crbug.com/1246245), [1245481](https://crbug.c
 
 ## DevTools 커맨드 메뉴 UI 개선 {: #command-menu }
 
-[커맨드 메뉴](/docs/devtools/command-menu/#open) 에서 파일을 찾기 어려웠던 경험을 해보신 적 있으신가요?
+[커맨드 메뉴](/docs/devtools/command-menu/#open) 에서 파일을 찾기 어려웠던 경험을 해보신 적이 있으셨나요?
 좋은 소식이 있습니다. 이제 **커맨드 메뉴** UI가 개선되었습니다!
 
 **커맨드 메뉴** 를 열고, Windows, Linux 에서는 <kbd>Control</kbd>+<kbd>P</kbd>, MacOS 에서는 <kbd>Command</kbd>+<kbd>P</kbd> 단축키를 사용하여 파일을 찾을 수 있습니다.

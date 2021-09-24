@@ -61,7 +61,7 @@ module.exports = locale => ({
           // Only name 'stable' and 'beta' releases.
           if (rawChannels.stable.mstone === release) {
             title = i18n('i18n.common.release_stable', locale);
-          } else if (rawChannels.beta.mstone === release) {
+          } else if (rawChannels.beta?.mstone === release) {
             title = i18n('i18n.common.release_beta', locale);
           }
 
