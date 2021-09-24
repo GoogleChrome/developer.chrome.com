@@ -8,6 +8,7 @@
     - url: /docs/extensions/mv3/intro/mv3-overview
     - url: /docs/extensions/mv3/intro/mv3-migration
     - url: /docs/extensions/mv3/mv3-migration-checklist
+    - url: /docs/extensions/mv3/mv2-sunset
 - title: i18n.docs.extensions.overview
   sections:
     - url: /docs/extensions/mv3/overview

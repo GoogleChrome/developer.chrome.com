@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Debugging extensions"
 date: 2012-09-18
-updated: 2020-07-21
+updated: 2021-09-17
 description: Step-by-step instructions on how to debug Chrome Extensions.
 ---
 
@@ -171,10 +171,9 @@ the correct permissions in its [manifest][12].
     ],
     "options_page": "options.html",
     "background": {
-      "scripts": ["background.js"],
-      "persistent": false
+      "service_worker": "background.js"
     },
-    "page_action": {
+    "action": {
       "default_popup": "popup.html",
       "default_icon": {
         "16": "images/get_started16.png",
@@ -189,7 +188,7 @@ the correct permissions in its [manifest][12].
       "48": "images/get_started48.png",
       "128": "images/get_started128.png"
     },
-    "manifest_version": 2
+    "manifest_version": 3
   }
 ```
 
@@ -199,7 +198,7 @@ For further information on debugging extensions, watch [Developing and Debugging
 about [Chrome Devtools][14] by reading the documentation.
 
 [1]: https://developers.google.com/web/tools/chrome-devtools/
-[2]: https://github.com/GoogleChrome/chrome-extensions-samples/blob/master/tutorials/broken_background_color.zip
+[2]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/e716678b67fd30a5876a552b9665e9f847d6d84b/mv2-archive/tutorials/broken_background_color
 [3]: /docs/extensions/reference/runtime#event-onInstalled
 [4]: /docs/extensions/reference/tabs#method-query
 [5]: /docs/extensions/mv3/override
