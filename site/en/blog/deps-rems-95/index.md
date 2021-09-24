@@ -38,7 +38,7 @@ was turned off for fifty percent of users but could also be enabled through the
 command line. Since Chrome 88, it was only available through a deprecation trial
 and is now disabled.
 
-## Support for URLs with non-IPv4 Hostnames Ending in Numbers
+## Support for URLs with non-IPv4 hostnames ending in numbers
 
 Most hostnames that aren't valid IPv4 addresses, but end in numbers are treated
 as valid, and looked up via DNS (e.g., `http://foo.127.1/`). Per the Public
