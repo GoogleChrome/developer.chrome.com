@@ -52,7 +52,7 @@ that is ever fed back into a URL, `http://127.1/` is mapped to
 
 [Chrome now deprecates sharing WebAssembly modules](https://www.chromestatus.com/feature/5650158039597056)
 between cross-origin, but same-site environments to
-[allow agent clusters to be scoped to origins long term](https://developer.chrome.com/blog/wasm-module-sharing-restricted-to-same-origin/).
+[allow agent clusters to be scoped to origins long term](/blog/wasm-module-sharing-restricted-to-same-origin/).
 
 ## Deprecate U2F API (Cryptotoken)
 
