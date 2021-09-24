@@ -18,7 +18,7 @@ tags:
 Chrome 95 beta was released on September 23, 2021 and is expected to become the
 stable version in late October, 2021.
 
-## FTP Support Removed
+## FTP support removed
 
 Chrome is [removing support for FTP
 URLs](https://www.chromestatus.com/feature/6246151319715840). Use of FTP in the
