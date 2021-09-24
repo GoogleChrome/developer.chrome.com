@@ -97,9 +97,13 @@ Beta expected in early January 2022, stable in February. The deprecation trial
 will continue, but its behavior will reverse: the API will be disabled by
 default, but may be kept alive by trial participants.
 
-### Chrome 100
+### Chrome 103
 
-Beta expected in early March 2022, stable late the same month. The  U2F API will
+Beta expected in late May 2022, stable in late June. The deprecation trial will end.
+
+### Chrome 104
+
+Beta expected in late June 2022, stable in early August. The  U2F API will
 be fully removed.
 
 {% include 'partials/deprecations-policy.md' %}
