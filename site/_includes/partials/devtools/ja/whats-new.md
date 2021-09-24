@@ -2,6 +2,15 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
+### Chrome 95 {: #chrome95 }
+* [新しいCSSの長さ編集ツール](/ja//blog/new-in-devtools-95/#length)
+* [Issues タブで問題を隠す](/ja/blog/new-in-devtools-95/#hide-issues)
+* [プロパティの表示の改善](/ja/blog/new-in-devtools-95/#properties)
+* [Lighthouse 8.4 が Lighthouse パネルに](/ja/blog/new-in-devtools-95/#lighthouse)
+* [Sources パネルでのスニペットの並べ替え](/ja/blog/new-in-devtools-95/#snippets)
+* [翻訳されたリリースノートへの新しいリンクと翻訳バグの報告](/ja/blog/new-in-devtools-95/#localized)
+* [DevTools Command MenuのUI改善](/ja/blog/new-in-devtools-95/#command-menu)
+
 ### Chrome 94 {: #chrome94 }
 
 * [好みの言語での DevTools の利用](/ja/blog/new/in/devtools-94/#localized)
