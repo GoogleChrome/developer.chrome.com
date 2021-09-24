@@ -4,6 +4,7 @@ description: >
   A round up of the deprecations and removals in Chrome 95 to help you plan.
 layout: 'layouts/blog-post.njk'
 date: 2021-09-23
+updated: 2021-09-24
 hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/0GrO9wVaQsRjPJQP9fc0.png'
 alt: >
   Deprecations and Removals hero logo
