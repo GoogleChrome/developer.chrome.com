@@ -48,7 +48,7 @@ that is ever fed back into a URL, `http://127.1/` is mapped to
 `127.0.0.0.1` could also potentially be used to confuse users.
 [URLs with these hostnames are now rejected](https://www.chromestatus.com/feature/5679790780579840).
 
-## WebAssembly Cross-Origin Module Sharing
+## WebAssembly cross-origin module sharing
 
 [Chrome now deprecates sharing WebAssembly modules](https://www.chromestatus.com/feature/5650158039597056)
 between cross-origin, but same-site environments to
