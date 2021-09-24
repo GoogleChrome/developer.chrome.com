@@ -41,7 +41,7 @@ and is now disabled.
 ## Support for URLs with non-IPv4 hostnames ending in numbers
 
 Most hostnames that aren't valid IPv4 addresses, but end in numbers are treated
-as valid, and looked up via DNS (e.g., `http://foo.127.1/`). Per the Public
+as valid, and looked up via DNS (for example, `http://foo.127.1/`). Per the Public
 Suffix List spec, the eTLD+1 of the hostname in that URL should be `127.1`. If
 that is ever fed back into a URL, `http://127.1/` is mapped to
 `http://127.0.0.1/` by the URL spec, which seems potentially dangerous.
