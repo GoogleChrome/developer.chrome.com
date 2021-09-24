@@ -68,7 +68,7 @@ Check this page for any updates and for more specific dates as these milestones 
     <td><i>no change</i>
     </td>
     <td><ul>
-      <li>Manifest V2 extensions longer functions in Chrome even with the use of enterprise policy </li></ul>
+      <li>Manifest V2 extensions no longer functions in Chrome even with the use of enterprise policy </li></ul>
     </td>
   </tr>
 </table>
