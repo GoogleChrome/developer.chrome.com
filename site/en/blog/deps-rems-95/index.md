@@ -29,7 +29,7 @@ all affected platforms.
 Google Chrome 72 and later removed support for fetching document subresources
 over FTP and rendering of top level FTP resources. Currently navigating to FTP
 URLs results in showing a directory listing or a download depending on the type
-of resource. A bug in Google Chrome 74 later resulted in dropping support for
+of resource. A bug in Google Chrome 74 and later resulted in dropping support for
 accessing FTP URLs over HTTP proxies. Proxy support for FTP was removed entirely
 in Google Chrome 76. In Chrome 86 FTP support was turned off for pre-release
 channels (Canary and Beta) and experimentally turned off for one percent of
