@@ -41,6 +41,6 @@ and metrics are tagged by an opaque per-install identifier that is not joinable
 with other datasets.  If the metrics collection is re-enabled, the unique
 identifier will also be reset. We used the data collected to calculate the
 various statistics in this
-[report](https://docs.google.com/document/d/e/2PACX-1vTLB93N1X3QRs_0T869wIppeXYDGWeyDeVM5N8XSKVAx3cIl1RyNj3fM4gUn06cEimfUM4wubmC_laB/pub).
+[report](https://docs.google.com/document/d/1BPz0UnQGotX0dACmJbHbbXFJa38jxmKhhNQ2RLj5Gms/edit?usp=sharing).
 
 Photo by [Halacious](https://unsplash.com/@halacious?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/multiple-phones?utm_source=unsplash)
