@@ -59,14 +59,14 @@ Each object in the array contains these properties:
   <dt><code>matches</code></dt>
   <dd>A list of URL match patterns specifying which pages can access the resources. Only the origin
   is used to match URLs; subdomains patterns (<code>*.google.com<code>) and paths are ignored.</dd>
-  <dt><code>extensions</code></dt>
+  <dt><code>extension_ids</code></dt>
   <dd>A list of extension IDs, specifying which extensions can access the resources.</dd>
   <dt>use_dynamic_url</dt>
   <dd>If true, only allow resources to be accessible through dynamic ID. The dynamic ID is
   generated per session. It’s regenerated on browser restart or extension reload.</dd>
 </dl>
 
-Each element must include a `"resources"` element and either a `"matches"` or `"extensions"`
+Each element must include a `"resources"` element and either a `"matches"` or `"extension_ids"`
 element. This establishes a mapping that exposes the specified resources to web pages matching the
 pattern or to specified extensions.
 
