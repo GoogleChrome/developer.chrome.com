@@ -2,7 +2,7 @@
 // These placeholders are safer to use with @extend as they don't get included
 // in the final CSS output and help us avoid duplication.
 
-@use "sass:math";
+@use 'sass:math';
 
 @mixin list-styles($margin) {
   $list-margin: px-to-rem($margin);

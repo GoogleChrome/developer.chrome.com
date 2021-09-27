@@ -1,7 +1,7 @@
 // Global mixins.
 
 // Sets font styles.
-@use "sass:math";
+@use 'sass:math';
 
 @mixin font-setup($size, $height, $weight: false, $rem: true) {
   @if $rem {

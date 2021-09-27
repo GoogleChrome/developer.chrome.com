@@ -1,7 +1,7 @@
 // Global functions.
 
 // Pixels to ems.
-@use "sass:math";
+@use 'sass:math';
 
 @function px-to-em($px) {
   @return math.div($px, $base-font-size) * 1em;
