@@ -2,6 +2,8 @@
 // These placeholders are safer to use with @extend as they don't get included
 // in the final CSS output and help us avoid duplication.
 
+@use "sass:math";
+
 @mixin list-styles($margin) {
   $list-margin: px-to-rem($margin);
   list-style: none;
@@ -226,8 +228,8 @@
       flex-shrink: 0;
       height: $bullet-size;
       justify-content: center;
-      margin-left: -#{$bullet-size * 5/3};
-      margin-right: $bullet-size * 2/3;
+      margin-left: -#{math.div($bullet-size * 5, 3)};
+      margin-right: math.div($bullet-size * 2, 3);
       position: absolute;
       transform: translateY(px-to-rem(3px));
       width: $bullet-size;

@@ -7,6 +7,8 @@
  * you keep it at 1rem because that is the root font size. You
  * can set it to whatever you like and whatever unit you like.
  */
+@use "sass:math";
+
 $gorko-base-size: 1rem;
 
 /**
@@ -172,9 +174,9 @@ $gorko-config: (
   'height': (
     'items': map-merge($gorko-size-scale, (
       'full': '100%',
-      'half': percentage(1/2),
-      'quarter': percentage(1/4),
-      'third': percentage(1/3)
+      'half': percentage(1*0.5),
+      'quarter': percentage(1*0.25),
+      'third': percentage(math.div(1, 3))
     )),
     'output': 'responsive',
     'property': 'height'
@@ -332,9 +334,9 @@ $gorko-config: (
   'width': (
     'items': map-merge($gorko-size-scale, (
       'full': '100%',
-      'half': percentage(1/2),
-      'quarter': percentage(1/4),
-      'third': percentage(1/3)
+      'half': percentage(1*0.5),
+      'quarter': percentage(1*0.25),
+      'third': percentage(math.div(1, 3))
     )),
     'output': 'responsive',
     'property': 'width'

@@ -46,7 +46,7 @@ navigation-rail {
         content: '';
         height: $hover-size;
         position: absolute;
-        top: -(($hover-size - 28px) / 2); // 28px is line-height
+        top: -(($hover-size - 28px) * 0.5); // 28px is line-height
         width: $hover-size;
         z-index: -1;
       }
