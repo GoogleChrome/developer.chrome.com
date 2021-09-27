@@ -29,6 +29,9 @@
   "deprecations": {
     "title": "i18n.tags.deprecations"
   },
+  "device-characteristics": {
+    "title": "i18n.tags.device-characteristics"
+  },
   "devices": {
     "title": "i18n.tags.devices"
   },
