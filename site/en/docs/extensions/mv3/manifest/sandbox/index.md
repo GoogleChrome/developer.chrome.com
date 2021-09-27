@@ -28,11 +28,11 @@ and optionally a Content Security Policy to use with them. Being in a sandbox ha
         "pages": [
           "page1.html",
           "directory/page2.html"
-        ]
+        ],
         // content_security_policy is optional.
         "content_security_policy":
             "sandbox allow-scripts; script-src 'self'"
-      ],
+      },
       ...
     }
     ```
