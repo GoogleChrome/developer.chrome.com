@@ -281,7 +281,6 @@ Some examples of Keyword Spam include:
 * Unnatural repetition of the same keyword more than 5 times
 * Unattributed or anonymous user testimonials in the product's description.
 
-
 **User Ratings, Reviews, and Installs:** Developers must not attempt to manipulate the placement of
 any extensions in the Chrome Web Store. This includes, but is not limited to, inflating product
 ratings, reviews, or install counts by illegitimate means, such as fraudulent or incentivized
