@@ -266,11 +266,20 @@ affiliates to submit multiple extensions that provide duplicate experiences or f
 Chrome Web Store. Extensions should provide value to users through the creation of unique content or
 services.
 
-**Keyword Spam:** We don't allow extensions with misleading, improperly formatted, non-descriptive,
+**Keyword Spam:** Keyword Spam is the practice of including irrelevant or excessive keywords in an
+extensions description in an attempt to manipulate its ranking, resulting in a spammy, negative user
+experience. We don't allow extensions with misleading, improperly formatted, non-descriptive,
 irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
-description, developer name, title, icon, screenshots, and promotional images. Developers must
-provide a clear and well-written description. We also don't allow unattributed or anonymous user
-testimonials in the product's description.
+description, developer name, title, icon, screenshots, and promotional images. Developers should
+focus on providing a clear and well-written description that uses keywords appropriately and in
+context.
+
+Some examples of Keyword Spam include:
+
+* Lists of sites/brands/keywords without substantial added value
+* Lists of regional locations
+* Unnatural repetition of the same keyword more than 5 times
+* Unattributed or anonymous user testimonials in the product's description.
 
 **User Ratings, Reviews, and Installs:** Developers must not attempt to manipulate the placement of
 any extensions in the Chrome Web Store. This includes, but is not limited to, inflating product
@@ -508,18 +517,24 @@ requirements:
 
 ## Policy Enforcement {: #policy_enforcement }
 
-Serious or repeated violations of the Chrome Web Store Distribution Agreement or these Program
-Policies will result in the suspension of your developer account, and possibly related developer
-accounts. Additionally, you may be banned from using the Chrome Web Store. In extreme cases, this
-may also result in the suspension of related Google services associated with your Google account.
-Repeated infringement of intellectual property rights, including copyright, will also result in
-account termination. For more information on Google's copyright policies, please use [this
-tool][24].
+Repeat abuse
+: Serious or repeated violations of the Chrome Web Store Distribution Agreement or these Program
+  Policies will result in the suspension of your developer account, and possibly related developer
+  accounts. Additionally, you may be banned from using the Chrome Web Store. In extreme cases, this
+  may also result in the suspension of related Google services associated with your Google account.
+  Repeated infringement of intellectual property rights, including copyright, will also result in
+  account termination. For more information on Google's copyright policies, please use [this
+  tool][24].
 
-In the event that your Product is removed from Chrome Web Store, you will receive an email
-notification to that effect, with further instructions if applicable. Please verify that the
-associated publisher account with your Product can receive emails from external parties and not get
-flagged as Spam to ensure that you receive all communications in a timely manner.
+Enforcement Circumvention
+: Any attempt to circumvent intended limitations or enforcement actions will result in the immediate
+  termination of your developer account, and possibly related developer accounts.
+
+Notifications and Appeals
+: In the event that your Product is removed from Chrome Web Store, you will receive an email
+  notification to that effect, with further instructions if applicable. Please verify that the
+  associated publisher account with your Product can receive emails from external parties and not get
+  flagged as Spam to ensure that you receive all communications in a timely manner.
 
 [1]: https://blog.chromium.org/2018/06/improving-extension-transparency-for.html
 [2]: /docs/extensions/mv2/inline_faq
