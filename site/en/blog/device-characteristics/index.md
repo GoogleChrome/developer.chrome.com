@@ -3,7 +3,7 @@ layout: 'layouts/blog-post.njk'
 title: Chrome user device characteristics report
 description: >
   Developers constantly wonder what kind of audience they are developing for. How much RAM do they have? What kind of Wi-fi are they on? A new report provides answers for a range of countries and platforms.
-date: 2021-09-22
+date: 2021-09-27
 authors:
   - jichen
 tags:
