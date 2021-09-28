@@ -36,7 +36,7 @@ Open [Settings](/docs/devtools/customize/#settings), then select your preferred 
 -->
 [Settings](/docs/devtools/customize/#settings) を開き、**Preferences** > **Language** ドロップダウンから好みの言語を選択して、DevTools を再読み込みしてください。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/eozpCcjmnn7zwya9zXu6.png", alt="Change language in Settings > Preferences", width="800", height="494" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EhOGAFAVztjMHffVkHQ4.png", alt="Change language in Settings > Preferences", width="800", height="519" %}
 
 {# https://chromium.googlesource.com/chromium/src/+/58abfbcdddae27fb43c17f43dbcc197f2570b5a5 #}
 

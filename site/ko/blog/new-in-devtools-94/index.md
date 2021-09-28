@@ -28,7 +28,7 @@ Chrome DevTools는 80개 이상 언어를 제공하여, 여러분들의 기호�
 
 [Settings](/docs/devtools/customize/#settings) 메뉴를 열고, **Preferences** > **Language** 드롭다운 메뉴에서 여러분들이 원하는 언어를 선택한 다음  DevTools 를 새로고침해 줍니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/eozpCcjmnn7zwya9zXu6.png", alt="Settings > Preferences 에서 언어를 선택하세요", width="800", height="494" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gfNZHj7vJTQELSiz78d2.png", alt="Settings > Preferences 에서 언어를 선택하세요", width="800", height="519" %}
 
 {# https://chromium.googlesource.com/chromium/src/+/58abfbcdddae27fb43c17f43dbcc197f2570b5a5 #}
 

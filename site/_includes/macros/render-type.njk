@@ -376,7 +376,11 @@
 
     {% elif type.key === 'sequence' %}
       {# An array of something else. #}
-      {{ renderSingleType(type.itemType) | trim }}[]
+      {% if type.itemType.key === 'choices' %}
+        ({{ renderSingleType(type.itemType) | trim }})[]
+      {% else %}
+        {{ renderSingleType(type.itemType) | trim }}[]
+      {% endif %}
 
     {% elif type.key === 'choices' %}
       {# An number of choices. #}

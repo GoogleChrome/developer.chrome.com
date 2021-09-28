@@ -2,6 +2,15 @@
 
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
+### Chrome 95 {: #chrome95 }
+
+* [Nova ferramenta de edição de comprimentos CSS](/pt/blog/new-in-devtools-95/#length)
+* [Ocultar problemas na guia Issues](/pt/blog/new-in-devtools-95/#hide-issues)
+* [Melhorias na exibição de propriedades](/pt/blog/new-in-devtools-95/#properties)
+* [Lighthouse 8.4 no painel Lighthouse](/pt/blog/new-in-devtools-95/#lighthouse)
+* [Ordenação dos snippets no painel Sources](/pt/blog/new-in-devtools-95/#snippets)
+* [Novos links para notas de versão traduzidas e relatar um bug de tradução](/pt/blog/new-in-devtools-95/#localized)
+* [Melhoria de UI para o menu de comandos do DevTools](/pt/blog/new-in-devtools-95/#command-menu)
 
 ### Chrome 94 {: #chrome94 }
 

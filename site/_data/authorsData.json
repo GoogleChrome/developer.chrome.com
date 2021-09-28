@@ -285,6 +285,10 @@
     "country": "US",
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/kUhkXfBItc8GVTkWA2AB.jpg"
   },
+  "dsli": {
+    "country": "US",
+    "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/taqTgQ89EI2kdOtM7Zle.jpeg"
+  },
   "joycetoh": {
     "country": "US",
     "github": "joycetoh8",
@@ -355,5 +359,9 @@
     "twitter": "iblameari",
     "github": "arichiv",
     "image": "image/kY6vrM8mwvcBzVokoWQTl9rKquv1/ctQrNhmIeWkvn9zfV6X0.jpg"
+  },
+  "jichen": {
+    "country": "US",
+    "image": "image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/PiqZNqbaZXr3qfZC8lNG.jpeg"
   }
 }
