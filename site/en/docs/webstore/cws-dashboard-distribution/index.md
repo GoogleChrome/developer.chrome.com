@@ -90,7 +90,7 @@ the Chrome Web Store. You can either:
 When you publish to the world, your item will be immediately visible to the region(s) you select,
 and it'll be visible in the store's search results.
 
-## Managing a test version and a production version
+## Publishing a test version
 
 You can publish a "BETA" or "TESTING" version to the Chrome Web Store in parallel with a
 production version. It can be listed private, unlisted or public. After addressing issues and bugs based on user
@@ -105,7 +105,7 @@ Before you submit a testing
 
 {% Aside 'warning' %}
 
-Missing these steps can cause both your extensions to be taken down. For more information,
+Make sure to add these labels. If you don't, then both extensions may be taken down. For more information,
 see [Repetitive Content Spam Policy][repetitive-content].
 
 {% endAside %}
