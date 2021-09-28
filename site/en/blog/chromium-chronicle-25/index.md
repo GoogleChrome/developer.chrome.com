@@ -45,7 +45,7 @@ Clang continues enforcing the `GUARDED_BY_CONTEXT()` annotation.
 
 ```cpp
 void Cache::Set(base::StringPiece key, base::StringPiece value) {
-  DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);  // Clang errors out without this.
+  DCHECK_CALLED_ON_VALID_SEQUENCE(sequence_checker_);  // Clang warns without this.
   data_.emplace(key, value);
 }
 ```
@@ -70,14 +70,14 @@ class ThreadSafeCache {
 ## Clang enforces lock acquisitions
 
 Hang back and let the compiler ensure that each `base::AutoLock` is correctly scoped,
-and that lock `Acquire(`) and `Release()` calls are paired correctly.
+and that lock `Acquire()` and `Release()` calls are paired correctly.
 
 ```cpp
 void ThreadSafeCache::Set(base::StringPiece key, base::StringPiece value) {
-  base::AutoLock auto_lock(lock_);  // Clang errors out without this.
+  base::AutoLock auto_lock(lock_);  // Clang warns without this.
   data_.emplace(key, value);
 }
 ```
 
-- [Threading in Chrome](https://chromium.googlesource.com/chromium/src.git/+/refs/heads/main/docs/threading_and_tasks.md)
-- [Clang Thread Safety Analysis](https://clang.llvm.org/docs/ThreadSafetyAnalysis.html.): Learn about other Clang annotations for more complex scenarios.
+- [Threading and Tasks in Chrome](https://chromium.googlesource.com/chromium/src.git/+/refs/heads/main/docs/threading_and_tasks.md)
+- [Clang Thread Safety Analysis](https://clang.llvm.org/docs/ThreadSafetyAnalysis.html): Learn about other Clang annotations for more complex scenarios.
