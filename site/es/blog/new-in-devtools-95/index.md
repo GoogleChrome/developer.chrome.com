@@ -131,7 +131,7 @@ Chromium issues: [1076820](https://crbug.com/1076820), [1119900](https://crbug.c
 El panel **Lighthouse** está usando Lighthouse 8.4. Lighthouse detectará ahora si el elemento [Largest Containful Paint (LCP)](https://web.dev/lcp) era una imagen con carga diferida y recomendará eliminar el atributo `loading` de ella.
 
 <!-- Check out the [What’s new in Lighthouse 8.4](/blog/lighthouse-8-4/) for more details on the updates. -->
-Revisa el [Novedades de Lighthouse 8.4](/blog/lighthouse-8-4/) para más detalles sobre los cambios.
+Revisa las [Novedades de Lighthouse 8.4](/blog/lighthouse-8-4/) para más detalles sobre los cambios.
 
 {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/u9nepJj3wgpMgoNxSaDZ.png", alt="La auditoría del LCP con carga diferida en el reporte de Lighthouse", width="800", height="502", class="screenshot" %}
 
@@ -144,7 +144,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 
 Los [fragmentos de código](/docs/devtools/javascript/snippets/) en la pestaña **Fragmentos** bajo el panel **Fuentes** están ordenados ahora alfabéticamente. Antes no lo estaba.
 
-Utiliza la característica de fragmentos para ejecutar comandos más rápido. ¡Mira este vídeo para una [sugerencia](https://youtu.be/NOal2gTzftI?t=176)!
+Utiliza la característica de fragmentos para ejecutar comandos más rápido. ¡Mira este vídeo para ver un [ejemplo](https://youtu.be/NOal2gTzftI?t=176)!
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/54ea0986cb59f71242ed62d3dd6405cc65f623a4 #}
 
