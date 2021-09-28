@@ -21,7 +21,6 @@ and identifiednamed undesirable behaviors that create spammy experiences for use
 furthering this work by clarifying and updating two policies, to keep the quality of extensions
 high, and the experience for developers consistent:
 
-
 ## Keyword Spam Update
 
 1.  Keyword Spam is the practice of including irrelevant or excessive keywords in an extensions
