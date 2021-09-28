@@ -179,6 +179,9 @@ Or the equivalent JavaScript interface:
 
 For hardware-specific use-cases, the device model name may be requested via the high entropy `Sec-CH-UA-Model` hint.
 
+### New Question?
+
+Look! I've added a new question!
 
 ## Shared Storage
 
