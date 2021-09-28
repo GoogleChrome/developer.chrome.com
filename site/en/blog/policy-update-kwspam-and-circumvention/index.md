@@ -42,7 +42,6 @@ high, and the experience for developers consistent:
 
 More guidance on the Keyword Spam policy can be found in our [FAQs](https://developer.chrome.com/docs/webstore/spam-faq/).
 
-
 ## Enforcement Circumvention
 
 1.  Any attempt to circumvent intended limitations or enforcement actions will result in the
