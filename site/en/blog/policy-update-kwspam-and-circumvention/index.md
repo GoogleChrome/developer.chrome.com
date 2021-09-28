@@ -1,5 +1,5 @@
 ---
-title: "Chrome Extensions: Clarifying Our Extension Policies for a More Consistent Web Store"
+title: "Chrome Web Store policy updates for Fall 2021"
 description: >
   Updating our security requirements and further clarifying a few policies to keep the quality of
   extensions high, and the experience for developers consistent.
