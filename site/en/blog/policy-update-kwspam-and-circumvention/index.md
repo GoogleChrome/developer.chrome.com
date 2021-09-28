@@ -25,14 +25,11 @@ high, and the experience for developers consistent:
 
 1.  Keyword Spam is the practice of including irrelevant or excessive keywords in an extensions
     description in an attempt to manipulate its ranking, resulting in a spammy, negative user
-    experience.
-    
-    We don't allow extensions with misleading, improperly formatted, non-descriptive, irrelevant,
-    excessive, or inappropriate metadata, including but not limited to the extension's description,
-    developer name, title, icon, screenshots, and promotional images.
-    
-    Developers should focus on providing a clear and well-written description that uses keywords
-    appropriately and in context.
+    experience. We don't allow extensions with misleading, improperly formatted, non-descriptive,
+    irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
+    description, developer name, title, icon, screenshots, and promotional images. Developers
+    should focus on providing a clear and well-written description that uses keywords appropriately
+    and in context.
 
 2.  Some examples of Keyword Spam include:
     *   Lists of sites/brands/keywords without substantial added value
