@@ -58,7 +58,6 @@ secure way to extend the browser. As always, we welcome your
 
 Posted by Rebecca Soares and Benjamin Ackerman, Chrome Trust and Safety Team Leads
 
-
 ---
 
 Photo by <a href="https://unsplash.com/@polarmermaid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anne Nygård</a> on <a href="https://unsplash.com/s/photos/clarify?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
