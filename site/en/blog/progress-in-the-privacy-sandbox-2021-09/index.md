@@ -16,7 +16,7 @@ tags:
 ---
 
 Welcome to the September edition of "[Progress in the Privacy
-Sandbox](https://deploy-preview-550--dcc-private.netlify.app/tags/progress-in-the-privacy-sandbox/)"
+Sandbox](/tags/progress-in-the-privacy-sandbox/)"
 tracking the milestones on the path to phasing out third-party cookies in Chrome
 and working towards a more private web. Each month we'll share an overview of
 the updates to the [Privacy Sandbox
