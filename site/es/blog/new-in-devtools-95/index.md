@@ -180,7 +180,7 @@ Has encontrado que es difícil buscar un archivo en el [Menú de comandos](/docs
 Abre el **Menú de comandos** para buscar un archivo con atajo de teclado <kbd>Control</kbd>+<kbd>P</kbd> en Windows y Linux, o <kbd>Comando</kbd>+<kbd>P</kbd> en macOS.
 
 <!-- The UI improvements of the **Command Menu** is still ongoing, stay tuned for more updates! -->
-Las mejoras de la interfaz de usuario del **Menú de comandos** aún están en progreso. ¡Manténte al tanto de más actualizaciones!
+Las mejoras de la interfaz de usuario del **Menú de comandos** aún están en progreso. ¡Mantente al tanto de más actualizaciones!
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/TJT2ry3vmUW1KoFgSKQP.png", alt="Menú de comandos", width="800", height="389" %}
 
