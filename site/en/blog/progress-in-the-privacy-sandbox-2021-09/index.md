@@ -15,28 +15,30 @@ tags:
   - privacy
 ---
 
-Welcome to the September edition of "Progress in the Privacy Sandbox" tracking
-the milestones on the path to phasing out third-party cookies in Chrome and
-working towards a more private web. Each month we'll share an overview of the
-updates to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline/)
-along with news from across the project.
+Welcome to the September edition of "[Progress in the Privacy
+Sandbox](https://deploy-preview-550--dcc-private.netlify.app/tags/progress-in-the-privacy-sandbox/)"
+tracking the milestones on the path to phasing out third-party cookies in Chrome
+and working towards a more private web. Each month we'll share an overview of
+the updates to the [Privacy Sandbox
+timeline](https://privacysandbox.com/timeline/) along with news from across the
+project.
 
  * [**Prevent covert tracking**](#preventing-covert-tracking)
    * User-agent reduction timeline published, changes start from Chrome 101
      (stable in Q2 2022) and end with Chrome 113 (stable in Q2 2023)
    * User-agent reduction early opt-in origin trial registration opened
  * [**Strengthen cross-site privacy
-   boundaries**](strengthen-cross-site-privacy-boundaries)
+   boundaries**](#strengthen-cross-site-privacy-boundaries)
    * Initial origin trial for First-Party Sets origin trial concluded
    * DevTools cookie functionality improved
  * [**Show relevant content and ads**](#show-relevant-content-and-ads)
    * Extending the overall Discussion period to Q4 2021 and starting the Testing
      period in Q1 2022
    * Highlighting the existing feature flag for FLEDGE developer testing
- * [**Measure digital ads**](measure-digital-ads)
+ * [**Measure digital ads**](#measure-digital-ads)
    * Attribution Reporting origin trial extended to Chrome 94
    * DevTools Attribution Reporting functionality improved
- * [**Fight spam and fraud on the web**](fight-spam-and-fraud-on-the-web)
+ * [**Fight spam and fraud on the web**](#fight-spam-and-fraud-on-the-web)
    * Trust Token API origin trial extended to Chrome 101
 
 ## Preventing covert tracking
