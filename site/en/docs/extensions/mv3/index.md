@@ -45,7 +45,7 @@ documentation](/docs/extensions/mv2).
 
 {% Aside 'warning' %}
 As Manifest V3 approaches full feature parity with V2, we will be phasing out
-MV2. See [Manfest V2 support timeline](/docs/extensions/mv3/mv2-sunset) for details.
+MV2. See [Manifest V2 support timeline](/docs/extensions/mv3/mv2-sunset) for details.
 {% endAside %}
 
 In addition to the documentation here, many developers find helpful community content at:
