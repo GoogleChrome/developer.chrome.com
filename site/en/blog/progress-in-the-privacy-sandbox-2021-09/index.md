@@ -7,7 +7,7 @@ layout: 'layouts/blog-post.njk'
 date: 2021-09-30
 authors:
   - rowan_m
-hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/m7SPM6kSG6KHykySb5DV.png'
+hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/PIf4d4mkMtBCRtM13A42.png'
 alt: >
   Privacy Sandbox logo
 tags:
@@ -21,21 +21,22 @@ working towards a more private web. Each month we'll share an overview of the
 updates to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline/)
 along with news from across the project.
 
- * **Prevent covert tracking**
+ * [**Prevent covert tracking**](#preventing-covert-tracking)
    * User-agent reduction timeline published, changes start from Chrome 101
      (stable in Q2 2022) and end with Chrome 113 (stable in Q2 2023)
    * User-agent reduction early opt-in origin trial registration opened
- * **Strengthen cross-site privacy boundaries**
+ * [**Strengthen cross-site privacy
+   boundaries**](strengthen-cross-site-privacy-boundaries)
    * Initial origin trial for First-Party Sets origin trial concluded
    * DevTools cookie functionality improved
- * **Show relevant content and ads**
+ * [**Show relevant content and ads**](#show-relevant-content-and-ads)
    * Extending the overall Discussion period to Q4 2021 and starting the Testing
      period in Q1 2022
    * Highlighting the existing feature flag for FLEDGE developer testing
- * **Measure digital ads**
+ * [**Measure digital ads**](measure-digital-ads)
    * Attribution Reporting origin trial extended to Chrome 94
    * DevTools Attribution Reporting functionality improved
- * **Fight spam and fraud on the web**
+ * [**Fight spam and fraud on the web**](fight-spam-and-fraud-on-the-web)
    * Trust Token API origin trial extended to Chrome 101
 
 ## Preventing covert tracking
