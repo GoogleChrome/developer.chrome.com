@@ -16,12 +16,11 @@ tags:
 ---
 
 Welcome to the September edition of "[Progress in the Privacy
-Sandbox](/tags/progress-in-the-privacy-sandbox/)"
-tracking the milestones on the path to phasing out third-party cookies in Chrome
-and working towards a more private web. Each month we'll share an overview of
-the updates to the [Privacy Sandbox
-timeline](https://privacysandbox.com/timeline/) along with news from across the
-project.
+Sandbox](/tags/progress-in-the-privacy-sandbox/)" tracking the milestones on the
+path to phasing out third-party cookies in Chrome and working towards a more
+private web. Each month we'll share an overview of the updates to the [Privacy
+Sandbox timeline](https://privacysandbox.com/timeline/) along with news from
+across the project.
 
  * [**Prevent covert tracking**](#preventing-covert-tracking)
    * User-agent reduction timeline published, changes start from Chrome 101
@@ -29,7 +28,7 @@ project.
    * User-agent reduction early opt-in origin trial registration opened
  * [**Strengthen cross-site privacy
    boundaries**](#strengthen-cross-site-privacy-boundaries)
-   * Initial origin trial for First-Party Sets origin trial concluded
+   * Initial origin trial for First-Party Sets concluded
    * DevTools cookie functionality improved
  * [**Show relevant content and ads**](#show-relevant-content-and-ads)
    * Extending the overall Discussion period to Q4 2021 and starting the Testing
@@ -76,14 +75,17 @@ Safari/537.36</span>
 You can see [further examples and the rollout phases
 here](https://www.chromium.org/updates/ua-reduction).
 
+{% Aside %}
 If you rely on any of these values, you will need to [migrate to user-agent
 client hints](https://web.dev/migrate-to-ua-ch/) to request that additional
 information.
+{% endAside %}
 
 The changes are planned to start from Chrome 101 (stable in Q2 2022) and
 complete in Chrome 113 (stable in Q2 2023). While the changes are a little way
-in the future, user-agent client hints are fully available in Chrome stable now,
-so you should be actively assessing any impact and implementing any changes now.
+in the future, User-Agent Client Hints are already fully available in Chrome
+stable, so you should be actively assessing any impact and implementing any
+changes now.
 
 ## Strengthen cross-site privacy boundaries
 
@@ -117,11 +119,12 @@ If you set cookies for cross-site contexts, but only across sites you own—like
 you host a service on your .com that's used by your .co.uk—then you should
 follow [**First-Party
 Sets**](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/).
-This proposal defines a way of declaring the sites that you want to form a set
-and then marking cookies as "SameParty" so that they are only sent for contexts
+This proposal defines a way of declaring which sites you want to form a set and
+then marking cookies as "SameParty" so that they are only sent for contexts
 inside of that set.
 
-The initial **origin trial** for First-Party Sets closed this month and work
+
+The initial **origin trial** for First-Party Sets concluded this month and work
 continues based on that feedback. You can still continue to test via the feature
 flags and we'll update the docs as work progresses.
 
@@ -132,15 +135,13 @@ early testing. You can now see origin trial status, upcoming deprecations, and
 raw cookie header values. There's more detail from Jecelyn on [What's New In
 DevTools (Chrome 94)](https://developer.chrome.com/blog/new-in-devtools-94/).
 
-[DevTools screenshot]
-
 ## Show relevant content and ads
 
 As we move towards phasing out third-party cookies, we need to introduce APIs
 that enable the use cases that depended on them but **without** continuing to
 enable cross-site tracking.
 
-Given the active ecosystem feedback, the "**Discussion**" phase for the [**Show
+Given the active ecosystem feedback, the **Discussion** phase for the [**Show
 relevant content and
 ads**](https://privacysandbox.com/timeline#:~:text=SHOW%20RELEVANT%20CONTENT%20AND%20ADS)
 use case is going to extend through Q4 2021 as we work on changes to the
@@ -160,8 +161,9 @@ clean up.
 ### FLEDGE
 
 [**FLEDGE**](https://developer.chrome.com/docs/privacy-sandbox/fledge/) is an
-initial experiment in enabling remarketing use cases, in other words ads based
-on user actions on your own site, but without third-party tracking.
+initial experiment in enabling remarketing use cases, showing ads based on the
+user's previous interactions with the advertiser's site, but without third-party
+tracking.
 
 Some key concepts here involve running the ad auction in a restricted on-device
 worklet and loading the ad in a restricted fenced frame. This ensures only a
@@ -190,7 +192,7 @@ ads.
 The [**Attribution Reporting
 API**](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)
 enables functionality to measure events on one site, like clicking or viewing an
-ad that leads to a conversion on another site—again, all without being able to
+ad, that lead to a conversion on another site—again, all without being able to
 track the individual on that cross-site journey.
 
 Developer feedback has been very active here, with [Yahoo! Japan providing a
@@ -203,6 +205,10 @@ on pending reports. To enable further developer testing, an [extension to the
 trial**](https://groups.google.com/a/chromium.org/g/blink-dev/c/DmsUL3KHqMk/m/J2v3I_aEBAAJ)
 has been approved to run through to Chrome 94.
 
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png",
+alt="DevTools screenshot showing Attribution Reporting API Issues", width="800",
+height="450" %}
+
 DevTools has added Issue support for the Attribution Reporting API. Common
 issues that may block source or report registration and prevent you from
 receiving reports will now appear along with tips on how to fix them. See
@@ -213,7 +219,7 @@ for more details.
 ## Fight spam and fraud on the web
 
 The other challenge as we reduce the surfaces available for cross-site tracking
-is that these same fingerprint techniques are often used for spam and fraud
+is that these same fingerprinting techniques are often used for spam and fraud
 protection. We need privacy-preserving alternatives here as well.
 
 ### Trust Tokens
@@ -245,4 +251,4 @@ section](https://developer.chrome.com/docs/privacy-sandbox/faq/) which we will
 continue to expand based on the issues you submit to the [developer support
 repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support). If you
 have any questions around testing or implementation on any of the proposals,
-then come talk to us there.
+come talk to us there.
