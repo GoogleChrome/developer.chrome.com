@@ -847,7 +847,28 @@ Prohibited Products:
 
 ## Keyword stuffing {: #keyword-stuffing }
 
-Corresponds to notification ID: Yellow Argon
+Corresponds to notification ID: `Yellow Argon`
+
+The intent of this policy is to ensure quality of items published to the Chrome Web Store and
+prevent developers from manipulating their placement in the Store.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_16 }
+
+- The extension is having excessive, irrelevant or inappropriate keywords in the metadata, more
+  commonly, the description.
+
+### How can you rectify this? {: #how-can-you-rectify-this_16 }
+
+- Remove the content (keywords) that are in violation of the policy.
+
+### Examples {: #keyword-stuffing-examples }
+
+The following are examples of this type of violation:
+
+- Including in an extension's metadata a long list of the different sites on which the extension
+  works.
+
+### Relevant policy {: #keyword-stuffing-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][docs-cws-policies]:
@@ -856,32 +877,22 @@ Store [developer program policies][docs-cws-policies]:
 
 **Spam & Placement in the Store**
 
-Keyword Spam: We don't allow extensions with misleading, improperly formatted, non-descriptive,
+**Keyword Spam:** Keyword Spam is the practice of including irrelevant or excessive keywords in an
+extensions description in an attempt to manipulate its ranking, resulting in a spammy, negative user
+experience. We don't allow extensions with misleading, improperly formatted, non-descriptive,
 irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
-description, developer name, title, icon, screenshots, and promotional images. Developers must
-provide a clear and well-written description. We also don't allow unattributed or anonymous user
-testimonials in the extension's description.
+description, developer name, title, icon, screenshots, and promotional images. Developers should
+focus on providing a clear and well-written description that uses keywords appropriately and in
+context.
+
+Some examples of Keyword Spam include:
+
+* Lists of sites/brands/keywords without substantial added value
+* Lists of regional locations
+* Unnatural repetition of the same keyword more than 5 times
+* Unattributed or anonymous user testimonials in the product's description.
 
 {% endAside %}
-
-This policy is to ensure quality of the products on the Chrome Web Store and prevent products from
-manipulating their placement in the Store
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_16 }
-
-The extension is having excessive, irrelevant or inappropriate keywords in the metadata, more
-commonly, the description.
-
-### How can you rectify this? {: #how-can-you-rectify-this_16 }
-
-Remove the content (keywords) that are in violation of the policy.
-
-### Examples {: #examples }
-
-The following are examples of this type of violation:
-
-- Including in an extension's metadata a long list of the different sites on which the extension
-  works.
 
 ## Redirection {: #redirection }
 
