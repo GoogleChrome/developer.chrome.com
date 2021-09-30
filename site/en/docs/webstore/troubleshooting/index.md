@@ -703,25 +703,7 @@ Posting a Privacy Policy & Secure Transmission
 
 ## User data policy - other requirements {: #udp-other-requirements }
 
-Corresponds to notification ID: Purple Magnesium
-
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**Other Requirements**
-
-The following types of personal or sensitive user data are also subject to additional
-requirements:
-
-- Financial or Payment Information—Don't publicly disclose financial or payment information
-- Authentication Information—Don't publicly disclose authentication information
-- Web Browsing Activity—Collection and use of web browsing activity is prohibited except to the
-  extent required for a user-facing feature described prominently in the Product's Chrome Web
-  Store page and in the Product's user interface.
-
-{% endAside %}
+Corresponds to notification ID: `Purple Magnesium`
 
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
@@ -739,6 +721,45 @@ and is not disclosed publicly.
 
 - Don't collect Web Browsing Activity unless it is required for a user-facing feature.
 - Ensure user information is not being disclosed publicly
+
+### Relevant policy {: #udp-other-requirements-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-cws-policies]:
+
+{% Aside %}
+
+**Personal or Sensitive User Data**
+
+Other Requirements
+
+: The following types of personal or sensitive user data are also subject to additional
+  requirements:
+
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Type of User Data</strong></td>
+        <td><strong>Requirement</strong></td>
+      </tr>
+      <tr>
+        <td>Financial or Payment Information</td>
+        <td>Don't publicly disclose financial or payment information</td>
+      </tr>
+      <tr>
+        <td>Authentication Information</td>
+        <td>Don't publicly disclose authentication information</td>
+      </tr>
+      <tr>
+        <td>Web Browsing Activity</td>
+        <td>Collection and use of web browsing activity is prohibited except to the extent required
+          for a user-facing feature described prominently in the Product's Chrome Web Store page and
+          in the Product's user interface.</td>
+      </tr>
+    </tbody>
+  </table>
+
+{% endAside %}
 
 ## Cryptocurrency mining {: #cryptocurrency-mining }
 
