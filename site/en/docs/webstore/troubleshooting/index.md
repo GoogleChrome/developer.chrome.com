@@ -656,28 +656,13 @@ Prominent Disclosure Requirement
 
 ## User data policy - secure transmission {: #udp-secure }
 
-Corresponds to notification ID: Purple Copper
-
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**Posting a Privacy Policy & Secure Transmission**
-
-If your Product handles personal or sensitive user data (including personally identifiable
-information, financial and payment information, health information, authentication information,
-website content and resources, form data, web browsing activity, user-provided content and
-personal communications), then your Product must:
-
-- Post a privacy policy, and
-- Handle the user data securely, including transmitting it via modern cryptography.
-
-{% endAside %}
+Corresponds to notification ID: `Purple Copper`
 
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
-the user.This particular section is to ensure that user data is being handled securely.
+the user.
+
+This particular section is to ensure that user data is being handled securely.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_12 }
 
@@ -686,9 +671,35 @@ the user.This particular section is to ensure that user data is being handled se
 
 ### How can you rectify this? {: #how-can-you-rectify-this_12 }
 
-Simple. Ensure secure transmission of data: _Don't transmit data over HTTP_ Don't encode data in
-headers, query parameters, or message bodies even over HTTPS.Tip: Use the Chrome DevTools or any
-other Dev Tool to watch the network requests the extension makes.
+- Ensure data is securely transmitted.
+    - Don't transmit user data over HTTP. If possible, use secure protocols for all requests.
+    - Don't encode data in request headers or query parameters, even over HTTPS. Headers and request
+      URLs often appear in server logs, which can unintentionally leak this information.
+    - See [Safe HTTP methods][mdn-safe-http] for additional information.
+
+Tip: Use the Chrome DevTools or other network monitoring tools to watch the network requests the
+extension makes.
+
+### Relevant policy {: #udp-secure-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-cws-policies]:
+
+{% Aside %}
+
+**Personal or Sensitive User Data**
+
+Posting a Privacy Policy & Secure Transmission
+
+: If your Product handles personal or sensitive user data (including personally identifiable
+  information, financial and payment information, health information, authentication information,
+  website content and resources, form data, web browsing activity, user-provided content and
+  personal communications), then your Product must:
+
+  - Post a privacy policy, and
+  - Handle the user data securely, including transmitting it via modern cryptography.
+
+{% endAside %}
 
 ## User data policy - other requirements {: #udp-other-requirements }
 
