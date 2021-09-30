@@ -428,39 +428,46 @@ Sexually Explicit Material:
 
 ## Hate content {: #hate }
 
-Corresponds to notification ID: Grey Magnesium
+Corresponds to notification ID: `Grey Magnesium`
+
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store as a platform
+to spread hateful content.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_7 }
+
+- Providing content or directing users to content that is considered hate speech. See the policy
+  text for additional details.
+
+### How can you rectify this? {: #how-can-you-rectify-this_7 }
+
+- If promotion or distribution of hate speech is a primary feature  of your extension, then you
+  should unpublish the extension as such content is not permitted in the Chrome Web Store.
+- If your extension provides access to user generated content, you must ensure that you have content
+  moderation in place to prevent users from sharing hate speech.
+- If your extension contains functionality intended to draw negative attention to an individual's
+  membership in one of the groups outlined in the policy text, you should remove this functionality
+  from your extension.
+
+### Relevant policy {: #hate-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
-**Hate Speech:**
+**Content Policies**
 
-We don't allow content advocating against or inciting hatred towards groups of people based on
-their race or ethnic origin, religion, disability, gender, age, veteran status, nationality,
-sexual orientation, gender, gender identity, or any other characteristic that is associated with
-systematic discrimination or marginalization.
+Hate Speech:
 
-Additionally, the visibility of your Product may be impacted if it contains generally hateful
-content not covered by the above definition.
+: We don't allow content advocating against or inciting hatred towards groups of people based on
+  their race or ethnic origin, religion, disability, gender, age, veteran status, nationality,
+  sexual orientation, gender, gender identity, or any other characteristic that is associated with
+  systematic discrimination or marginalization.
+
+  Additionally, the visibility of your Product may be impacted if it contains generally hateful
+  content not covered by the above definition.
 
 {% endAside %}
-
-This policy is to prevent the use of extensions and the Chrome Web Store as a platform to spread
-hateful content.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_7 }
-
-Providing content or directing users to content that is hateful. You can find the definition of
-hateful content in the policy text above
-
-### How can you rectify this? {: #how-can-you-rectify-this_7 }
-
-- If this is the primary functionality of your extension, then it is recommended to unpublish your
-  extension.
-- If this was an unintended functionality, then remove the content or services that are in violation
-  and resubmit your extension.
 
 ## Not family safe {: #not-family-safe }
 
