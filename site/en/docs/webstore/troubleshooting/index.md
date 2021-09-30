@@ -604,30 +604,16 @@ Common violations include:
 
 ## User data policy - prominent disclosure {: #udp-prominent-disclosure }
 
-Corresponds to notification ID: Purple Nickel
-
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**Prominent Disclosure Requirement**
-
-If your Product handles personal or sensitive user data that is not closely related to
-functionality described prominently in the Product's Chrome Web Store page and user interface,
-then prior to the collection, it must:
-
-- Prominently disclose how the user data will be used, and
-- Obtain the user's affirmative consent for such use
-
-{% endAside %}
+Corresponds to notification ID: `Purple Nickel`
 
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
-the user.This policy applies to extensions that collect data that is not closely related to
-functionality described prominently in the Product's Chrome Web Store page. This particular section
-is to ensure that users are aware of the data that is being collected and that user consent is
-obtained before data collection.
+the user.
+
+This policy applies to extensions that collect data that is not closely related to functionality
+described prominently in the extension's Chrome Web Store page. This particular section is to ensure
+that users are aware of the data that is being collected and that user consent is obtained before
+data collection.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_11 }
 
@@ -636,8 +622,37 @@ obtained before data collection.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_11 }
 
-- Prominently disclose to the user what data is being collected and how it will be handled.
+- Prominently disclose to the user what data is being collected and how it will be handled. This
+  information must be provided in the extension's Privacy Policy and may be provided elsewhere.
 - Ensure data is collected only if the user consents to it.
+    - Prominent disclosure of data collection in the extension's Chrome Web Store listing is
+      sufficient.
+    - Collecting data that is not prominently disclosed in the Chrome Web Store listing is allowed
+      so long as this data collection is consistent with the extension's single purpose, the user is
+      informed of the data collection before it begins, and the user consents to
+- Consider providing the user with ways to opt out of data collection from within the extension's
+  [options page][docs-options].
+- Consider providing users with an "offline mode" that only stores user data locally.
+
+### Relevant policy {: #udp-prominent-disclosure-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-cws-policies]:
+
+{% Aside %}
+
+**Personal or Sensitive User Data**
+
+Prominent Disclosure Requirement
+
+: If your Product handles personal or sensitive user data that is not closely related to
+  functionality described prominently in the Product's Chrome Web Store page and user interface,
+  then prior to the collection, it must:
+
+  - Prominently disclose how the user data will be used, and
+  - Obtain the user's affirmative consent for such use.
+
+{% endAside %}
 
 ## User data policy - secure transmission {: #udp-secure }
 
