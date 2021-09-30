@@ -763,27 +763,10 @@ Other Requirements
 
 ## Cryptocurrency mining {: #cryptocurrency-mining }
 
-Corresponds to notification ID: Grey Silicon
+Corresponds to notification ID: `Grey Silicon`
 
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**Prohibited Products:**
-
-We don't allow Products or services that:
-
-- Facilitate unauthorized access to content on websites, such as circumventing paywalls or login
-  restrictions
-- Encourage, facilitate, or enable the unauthorized access, download, or streaming of copyrighted
-  content or media
-- Mine cryptocurrency
-
-{% endAside %}
-
-This policy is to prevent the use of extensions and the Chrome Web Store as a platform to mine
-cryptocurrencies.
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store as a platform
+to mine cryptocurrencies.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_14 }
 
@@ -796,6 +779,27 @@ cryptocurrencies.
   extension.
 - If this was an unintended functionality, then remove the content or services that are in violation
   and resubmit your extension.
+
+### Relevant policy {: #cryptocurrency-mining-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-cws-policies]:
+
+{% Aside %}
+
+**Content Policies**
+
+Prohibited Products:
+
+: We don't allow products or services that:
+
+  - Facilitate unauthorized access to content on websites, such as circumventing paywalls or login
+    restrictions
+  - Encourage, facilitate, or enable the unauthorized access, download, or streaming of copyrighted
+    content or media
+  - Mine cryptocurrency
+
+{% endAside %}
 
 ## Prohibited products {: #prohibited-products }
 
