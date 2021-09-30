@@ -181,64 +181,74 @@ or features that have not yet been implemented.
 
 ## Deceptive behavior {: #deceptive-behavior }
 
-Corresponds to notification ID: Red Nickel/Red Potassium/Red Silicon
+Corresponds to notification IDs: `Red Nickel`, `Red Potassium`, and `Red Silicon`
+
+The intent of this policy is to prevent extensions from deceiving or misleading the users.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_2 }
+
+- The extension does not provide the functionality described in the metadata<sup>1</sup>.
+- The extension provides different functionality than what is described in the metadata<sup>1</sup>.
+- The extension performs actions not mentioned in the metadata<sup>1</sup>.
+- The extension impersonates another entity<sup>2</sup>.
+- The extension copies or is copied from another entity<sup>2</sup>.
+- The extension pretends to be authorized by another entity<sup>2</sup>.
+
+<sup>1</sup> Metadata means the title, icon, description, screenshot(s), and other
+developer-provided information specified in the developer dashboard.
+
+<sup>2</sup> An entity here means any company, organization, or extension.
+
+### How can you rectify this? {: #how-can-you-rectify-this_2 }
+
+- Ensure the functionality promised by your extension is working as intended.
+- Clearly state the functionality of your extension in the metadata.
+- Do not perform actions not mentioned in the metadata.
+- Do not pretend to be another entity.
+- Do not copy another extension. You may offer the same functionality as another extension but do
+  not copy from other extensions.
+- Do not pretend that your extension was endorsed, authorized or produced by another entity.
+
+### Relevant policy {: #deceptive-behavior-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
-**Impersonation or Deceptive Behavior:**
+**Content Policies**
 
-Don't pretend to be someone else, and don't represent that your product is authorized by, endorsed
-by, or produced by another company or organization, if that is not the case. Developers should not
-divert users or provide links to any other site that mimics Chrome Web Store or passes itself off
-as Chrome Web Store. Your Product and its user experience also must not mimic functionality or
-warnings from a user's operating system or browser. Any changes to device settings must be made
-with the user's knowledge and consent and be easily reversible by the user.
+Impersonation or Deceptive Behavior:
 
-We do not allow Products which deceive or mislead users, including in the content, title,
-description, or screenshots. Don't misrepresent the functionality of your Product or include
-non-obvious functionality that doesn't serve the primary purpose of the product. Descriptions of
-your Product must directly state the functionality so that users have a clear understanding of the
-Product they are adding. For example, Products should not contain:
+: Don't pretend to be someone else, and don't represent that your product is authorized by, endorsed
+  by, or produced by another company or organization, if that is not the case.
 
-- Claimed functionalities which are not possible to implement (E.g. "Who has viewed your IG
-  account")
-- Developer or Product names which misrepresent their current status or performance on the Chrome
-  Web Store (E.g. "Editor's Choice" or "Number One")
+: Developers should not divert users or provide links to any other site that mimics the Chrome Web
+  Store or passes itself off as the Chrome Web Store. Your Product and its user experience also must
+  not mimic functionality or warnings from a user's operating system or browser.
 
-If your Product has a blank description field or is missing an icon or screenshots, it will be
-rejected. If any of your Product's content, title, icon, description or screenshots contains false
-or misleading information, we may remove it.
+: Any changes to device settings must be made with the user's knowledge and consent and be easily
+  reversible by the user.
+
+: We do not allow products that deceive or mislead users, including in the content, title,
+  description, or screenshots.
+
+: Don't misrepresent the functionality of your product or include non-obvious functionality that
+  doesn't serve the primary purpose of the product. Descriptions of your product must directly state
+  the functionality so that users have a clear understanding of the product they are adding. For
+  example, products should not contain:
+
+  - Claimed functionalities that are not possible to implement (e.g. "Who has viewed your social
+    media account") or which are not directly provided by the extension (e.g. file converters which
+    only link to other file conversion services)
+  - Any metadata that misrepresents the extension's or developer's current status or performance
+    on the Chrome Web Store (e.g. "Editor's Choice" or "Number One")
+
+: If your product has a blank description field or is missing an icon or screenshots, it will be
+  rejected. If any of your product's content, title, icon, description, or screenshots contains false
+  or misleading information, we may remove it.
 
 {% endAside %}
-
-This policy is to prevent extensions that are deceiving or misleading the users.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_2 }
-
-- The extension is not providing the functionality mentioned in the metadata (1)
-- The extension a different functionality than what is mentioned in the metadata
-- The extension is performing actions not mentioned in the metadata
-- The extension is impersonating another entity (2)
-- The extension is copying or copied from another entity
-- The extension is pretending to be authorized by another entity
-
-(1) Metadata means the title, icon description, or screenshot that is presented in the item's
-information.
-
-(2) An entity here means any company, organization, or extension.
-
-### How can you rectify this? {: #how-can-you-rectify-this_2 }
-
-- Ensure the functionality promised by your extension is working as intended.
-- Clearly state the functionality of your extension in the metadata.
-- Don't perform actions not mentioned in the metadata
-- Don't pretend to be another entity
-- Don't copy another extension. You may offer the same functionality as another extension but do not
-  copy from other extensions.
-- Don't pretend that your extension was endorsed, authorized or produced by another entity.
 
 ## User data policy - disclosure policy {: #udp-disclosure-policy }
 
