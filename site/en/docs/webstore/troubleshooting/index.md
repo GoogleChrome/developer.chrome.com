@@ -985,22 +985,9 @@ Guidelines][webmaster-quality].
 
 ## Circumvents the overrides API {: #circumvents-api-ntp }
 
-Corresponds to notification ID: Blue Nickel/Blue Potassium
+Corresponds to notification IDs: `Blue Nickel` and `Blue Potassium`
 
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**API Use**
-
-Extensions must use existing Chrome APIs for their designated use case. Use of any other method,
-for which an API currently exists, would be considered a violation. For example, overriding the
-Chrome New Tab Page through any means other than the URL Overrides API is not permitted.
-
-{% endAside %}
-
-This policy is to ensure quality of the products on the Chrome Web Store.
+The intent of this policy is to ensure quality of the products on the Chrome Web Store.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_20 }
 
@@ -1011,6 +998,23 @@ This policy is to ensure quality of the products on the Chrome Web Store.
 
 - Do not modify the Chrome New Tab Page or do so using the Overrides API.
 - Do not modify the Omnibox Search or do so using the Overrides API.
+
+### Relevant policy {: #circumvents-api-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-cws-policies]:
+
+{% Aside %}
+
+**Extensions Quality Guidelines**
+
+API Use:
+
+Extensions must use existing Chrome APIs for their designated use case. Use of any other method, for
+which an API exists, would be considered a violation. For example, overriding the Chrome New Tab
+Page through any means other than the URL Overrides API is not permitted.
+
+{% endAside %}
 
 ## Deceptive installation {: #uws-distribution }
 
