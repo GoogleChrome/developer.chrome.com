@@ -931,38 +931,11 @@ non-functioning features—are not allowed.
 
 ## Spam {: #spam }
 
-Corresponds to notification ID: Yellow Nickel
+Corresponds to notification ID: `Yellow Nickel`
 
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**Spam & Placement in the Store**
-
-Repetitive Content: We don't allow any developer or their affiliates to submit multiple extensions
-that provide duplicate experiences or functionality on the Chrome Web Store.
-
-User Ratings, Reviews, and Installs: Developers must not attempt to manipulate the placement of
-any extensions in the Chrome Web Store. This includes, but is not limited to, inflating product
-ratings, reviews, or install counts by illegitimate means, such as fraudulent or incentivized
-downloads, reviews and ratings.
-
-Notification Abuse: We do not allow extensions that abuse, or are associated with abuse, of
-notifications by sending spam, ads, promotions, phishing attempts, or unwanted messages that harm
-the user's browsing experience.
-
-Message Spam: We don't allow extensions that send messages on behalf of the user without giving
-the user the ability to confirm the content and intended recipients.
-
-In addition to these requirements, all extensions must comply with Google's Webmaster Quality
-Guidelines.
-
-{% endAside %}
-
-This policy is to ensure quality of the products on the Chrome Web Store. The Spam policy is to
-prevent extensions that are harmful for the user's browsing experience and extensions that
-manipulate their placement on the Chrome Web Store.
+The intent of this policy is to ensure quality of the products on the Chrome Web Store. The Spam
+policy is to prevent extensions that are harmful for the user's browsing experience and extensions
+that manipulate their placement on the Chrome Web Store.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_19 }
 
@@ -978,6 +951,37 @@ manipulate their placement on the Chrome Web Store.
 - Don't submit multiple extensions with duplicate experiences or functionality.
 - Don't try to manipulate the user generated content on your extension's Web Store listing
 - Don't harm the user's browsing experience in any way.
+
+### Relevant policy {: #spam-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-cws-policies]:
+
+{% Aside %}
+
+**Spam & Placement in the Store**
+
+**Repetitive Content:** We don't allow any developer, related developer accounts, or their
+affiliates to submit multiple extensions that provide duplicate experiences or functionality on the
+Chrome Web Store. Extensions should provide value to users through the creation of unique content or
+services.
+
+**User Ratings, Reviews, and Installs:** Developers must not attempt to manipulate the placement of
+any extensions in the Chrome Web Store. This includes, but is not limited to, inflating product
+ratings, reviews, or install counts by illegitimate means, such as fraudulent or incentivized
+downloads, reviews and ratings.
+
+**Notification Abuse:** We do not allow extensions that abuse, or are associated with abuse, of
+notifications by sending spam, ads, promotions, phishing attempts, or unwanted messages that harm
+the user's browsing experience.
+
+**Message Spam:** We don't allow extensions that send messages on behalf of the user without giving
+the user the ability to confirm the content and intended recipients.
+
+In addition to these requirements, all extensions must comply with [Google's Webmaster Quality
+Guidelines][webmaster-quality].
+
+{% endAside %}
 
 ## Circumvents the overrides API {: #circumvents-api-ntp }
 
@@ -1107,5 +1111,6 @@ The following are some examples of violations of this type of policy:
 [mdn-safe-http]: https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP
 [mdn-samesite-cookie]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
 [mdn-web-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+[webmaster-quality]: https://support.google.com/webmasters/answer/35769#3
 [wiki-case-sensitivity]: https://en.wikipedia.org/wiki/Case_sensitivity
 [wiki-li-fi]: https://en.wikipedia.org/wiki/Li-Fi
