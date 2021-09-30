@@ -22,7 +22,7 @@ behave as expected.
 Corresponds to notification ID: Yellow Magnesium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][19]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -50,7 +50,7 @@ listing.
 Corresponds to notification ID: Purple Potassium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][1]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -82,7 +82,7 @@ This policy is to prevent excessive and unnecessary access to user data by exten
 Corresponds to notification ID: Yellow Zinc
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][2]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -116,7 +116,7 @@ the product that they are downloading before they download.
 Corresponds to notification ID: Red Nickel/Red Potassium/Red Silicon
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][3]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -177,7 +177,7 @@ information.
 Corresponds to notification ID: Purple Lithium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][4]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -220,7 +220,7 @@ that users are aware of what data is collected, and how it is collected, used an
 Corresponds to notification ID: Grey Zinc
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][5]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -252,7 +252,7 @@ The extension is doing anything illegal. See the policy extract above for exampl
 Corresponds to notification ID: Grey Copper
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][6]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -285,7 +285,7 @@ Do not post content or provide services that facilitate online gambling.
 Corresponds to notification ID: Grey Lithium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][7]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -323,7 +323,7 @@ pornography.
 Corresponds to notification ID: Grey Magnesium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][8]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -359,7 +359,7 @@ hateful content in the policy text above
 Corresponds to notification ID: Grey Nickel
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][9]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -390,7 +390,7 @@ dashboard and resubmit the extension.
 Corresponds to notification ID: Grey Potassium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][10]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -429,7 +429,7 @@ The extension contains content or is directing users to content mentioned in the
 Corresponds to notification ID: Red Magnesium/Red Copper/Red Lithium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][11]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -472,7 +472,7 @@ separate extensions.
 Corresponds to notification ID: Purple Nickel
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][12]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -509,7 +509,7 @@ obtained before data collection.
 Corresponds to notification ID: Purple Copper
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][13]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -545,7 +545,7 @@ other Dev Tool to watch the network requests the extension makes.
 Corresponds to notification ID: Purple Magnesium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][14]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -584,7 +584,7 @@ and is not disclosed publicly.
 Corresponds to notification ID: Grey Silicon
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][15]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -620,7 +620,7 @@ cryptocurrencies.
 Corresponds to notification ID: Blue Zinc/Blue Copper/Blue Lithium/Blue Magnesium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][16]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -659,7 +659,7 @@ access to content protected by paywalls, login restrictions or intellectual prop
 Corresponds to notification ID: Yellow Argon
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][17]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -697,7 +697,7 @@ The following are examples of this type of violation:
 Corresponds to notification ID: Yellow Lithium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][18]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -725,7 +725,7 @@ unpublish them.
 Corresponds to notification ID: Yellow Nickel
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][20]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -775,7 +775,7 @@ manipulate their placement on the Chrome Web Store.
 Corresponds to notification ID: Blue Nickel/Blue Potassium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][21]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -804,7 +804,7 @@ This policy is to ensure quality of the products on the Chrome Web Store.
 Corresponds to notification ID: Red Zinc
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][22]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -846,7 +846,7 @@ user base.
 Corresponds to notification ID: Red Titanium
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][23]:
+Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
@@ -875,26 +875,28 @@ The following are some examples of violations of this type of policy:
 - Base 64 encoding
 - Character encoding
 
-[1]: /docs/webstore/program_policies
-[2]: /docs/webstore/program_policies
-[3]: /docs/webstore/program_policies
-[4]: /docs/webstore/program_policies
-[5]: /docs/webstore/program_policies
-[6]: /docs/webstore/program_policies
-[7]: /docs/webstore/program_policies
-[8]: /docs/webstore/program_policies
-[9]: /docs/webstore/program_policies
-[10]: /docs/webstore/program_policies
-[11]: /docs/webstore/program_policies
-[12]: /docs/webstore/program_policies
-[13]: /docs/webstore/program_policies
-[14]: /docs/webstore/program_policies
-[15]: /docs/webstore/program_policies
-[16]: /docs/webstore/program_policies
-[17]: /docs/webstore/program_policies
-[18]: /docs/webstore/program_policies
-[19]: /docs/webstore/program_policies
-[20]: /docs/webstore/program_policies
-[21]: /docs/webstore/program_policies
-[22]: /docs/webstore/program_policies
-[23]: /docs/webstore/program_policies
+[api-action]: /docs/extensions/reference/action
+[api-browser-action]: /docs/extensions/reference/browserAction/
+[api-cookies]: /docs/extensions/reference/cookies/
+[api-page-action]: /docs/extensions/reference/pageAction/
+[api-storage]: /docs/extensions/reference/storage/
+[api-tabs-get-current-tab]: /docs/extensions/reference/tabs/#get-the-current-tab
+[api-tabs-query]: /docs/extensions/reference/tabs/#method-query
+[api-tabs-sendmessage]: /docs/extensions/reference/tabs/#method-sendMessage
+[api-tabs]: /docs/extensions/reference/tabs
+[dev-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
+[docs-cws-policies]: /docs/webstore/program_policies/
+[docs-options]: /docs/extensions/mv3/options/
+[docs-override-page]: /docs/extensions/mv3/override/
+[docs-override-settings]: /docs/extensions/mv3/settings_override/
+[docs-pack-extension]: /docs/extensions/mv3/linux_hosting/#create
+[docs-publish-setup]: /docs/webstore/publish/#setup-a-developer-account
+[docs-single-purpose-faq]: /docs/extensions/mv3/single_purpose/
+[mdn-cookie-store]: https://developer.mozilla.org/en-US/docs/Web/API/Cookie_Store_API
+[mdn-document-cookie]: https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
+[mdn-indexeddb]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB
+[mdn-safe-http]: https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP
+[mdn-samesite-cookie]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
+[mdn-web-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+[wiki-case-sensitivity]: https://en.wikipedia.org/wiki/Case_sensitivity
+[wiki-li-fi]: https://en.wikipedia.org/wiki/Li-Fi
