@@ -1,7 +1,21 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。有兴趣参与中文翻译的朋友，请联系我们的开发者推广工程师 [Jecelyn Yeen](https://twitter.com/JecelynYeen)。
 
-<!-- lint disable no-smart-quotes -->
+### Chrome 94 {: #chrome94 }
+
+* [设定您的 DevTools 用户界面语言](/zh/blog/new-in-devtools-94/#localized)
+* [设备列表新增 Nest Hub 设备](/zh/blog/new-in-devtools-94/#nest-hub)
+* [帧（Frame）详情页获取 origin trials 信息](/zh/blog/new-in-devtools-94/#origin-trials)
+* [新的 CSS 容器查询（Container queries）徽章](/zh/blog/new-in-devtools-94/#container-queries)
+* [利用新的复选框反转过滤网络请求的条件](/zh/blog/new-in-devtools-94/#nvert-network-filter)
+* [控制台的边栏即将被弃用](/zh/blog/new-in-devtools-94/#deprecated)
+* [在问题选项卡以及网络面板那里显示原生 `Set-Cookie` 响应头](/zh/blog/new-in-devtools-94/#raw-cookies)
+* [在控制台里显示原生访问器为自己的属性](/zh/blog/new-in-devtools-94/#native-accessors)
+* [正确输出带有 #sourceURL 行内脚本的错误堆栈信息](/zh/blog/new-in-devtools-94/#inline-script)
+* [更改计算样式边栏里面元素的颜色格式](/zh/blog/new-in-devtools-94/#color-unit)
+* [使用原生的 HTML 提示框替换自定义提示框](/zh/blog/new-in-devtools-94/#tooltip)
+* [[实验阶段] 隐藏问题选项卡里面的问题](/zh/blog/new-in-devtools-94/#hide-issues)
+
 
 ### Chrome 93 {: #chrome93 }
 
