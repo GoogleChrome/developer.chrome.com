@@ -547,7 +547,36 @@ Violent or Bullying Behavior:
 
 ## Single purpose {: #single-use }
 
-Corresponds to notification ID: Red Magnesium/Red Copper/Red Lithium
+Corresponds to notification IDs: `Red Magnesium`, `Red Copper`, and `Red Lithium`
+
+This policy is aimed at maintaining the quality of extensions on the Chrome Web Store. As mentioned
+in the policy text, if there are multiple unrelated functionalities, they should be provided in
+separate extensions.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_10 }
+
+- The extension is providing 2 or more purposes in the same extension (e.g. an extension providing
+  image format conversion and bibliography generation).
+- Providing one or more unrelated additional functionalities using the extension's action icon.
+- The following are considered distinct purposes. Extensions that provide any of the features listed
+  below may not provide any other functionality.
+    - Replacing any single [override page][docs-override-page].
+    - Using [override settings][docs-override-settings] to replace the default search provider.
+    - Injecting ads into web pages.
+
+See the [Single Purpose FAQ][docs-single-purpose-faq] for additional information.
+
+### How can you rectify this? {: #how-can-you-rectify-this_10 }
+
+- Narrow the functionality of your extension to clearly fit within one well defined purpose and
+  ensure that purpose is clearly described in your extension's metadata.
+- If your extension is offering some functionality and also injecting ads, then either stop
+  injecting ads or remove all other functionality besides ad injection.
+- Chrome does not support optional new tab pages. If you wish to provide some functionality and an
+  optional new tab page, you should separate the new tab page into a standalone extension.
+- Don't offer another unrelated functionality in the extension's action icon.
+
+### Relevant policy {: #single-purpose-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][docs-cws-policies]:
@@ -556,37 +585,22 @@ Store [developer program policies][docs-cws-policies]:
 
 **Extensions Quality Guidelines**
 
+Single Purpose:
+
 An extension must have a single purpose that is narrow and easy-to-understand. Do not create an
 extension that requires users to accept bundles of unrelated functionality. If two pieces of
 functionality are clearly separate, they should be put into two different extensions, and users
-should have the ability to install and uninstall them separately. Common violations include:
+should have the ability to install and uninstall them separately.
+
+Common violations include:
 
 - Functionality that displays product ratings and reviews, but also injects ads into web pages.
 - Toolbars that provide a broad array of functionality or entry points into services are better
   delivered as separate extensions, so that users can select the services they want.
 - Email notifiers combined with a news aggregator.
-- PDF converters which also aim to change a users default search engine.
+- PDF converters which also aim to change a user's default search engine.
 
 {% endAside %}
-
-This policy is aimed at maintaining the quality of extensions on the Chrome Web Store. As mentioned
-in the policy text, if there are multiple unrelated functionalities, they should be provided in
-separate extensions.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_10 }
-
-- The extension is providing 2 or more functionalities in the same extension
-- Injecting ads is also considered as a separate functionality.
-- The extension is providing one or more unrelated additional functionalities using the browser
-  action icon.
-
-### How can you rectify this? {: #how-can-you-rectify-this_10 }
-
-- Narrow the functionality of your extension to just one and ensure it is clearly described in your
-  extension's metadata.
-- If your extension is offering a primary functionality and also injecting ads, then remove the
-  primary functionality or stop injecting ads.
-- Don't offer another unrelated functionality in the browser action icon.
 
 ## User data policy - prominent disclosure {: #udp-prominent-disclosure }
 
