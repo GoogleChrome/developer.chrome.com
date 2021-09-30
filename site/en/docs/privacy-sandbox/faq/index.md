@@ -4,7 +4,7 @@ title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
 date: 2021-09-21
-updated: 2021-09-22
+updated: 2021-09-30
 authors:
 	- samdutton
 ---
@@ -16,13 +16,15 @@ grow substantially over time.
 
 Contributions are welcome.  If you have a Privacy Sandbox question that's not answered here:
 
--  Ask the question on the
+-  File an issue on the explainer repo for the proposal you're asking about. Links to these are 
+provided below, and are  
+available from the [Privacy Sandbox status page](https://developer.chrome.com/docs/privacy-sandbox/status) 
+on this site.
+-  You can ask general Privacy Sandbox questions, and questions that cover multiple APIs, on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
--  Ask the question in a
+-  If you'd prefer, ask the question in a
    [feature request](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request%2CP2&template=feature_request.md&title=)
    on the repo for this site.
-
-If you have an answer to your question, feel free to add it.
 {% endAside %}
 
 
@@ -83,9 +85,10 @@ for testing.
    Early features may often provide a specific command line flag to allow a developer to launch the
    browser with the new feature enabled.
 -  **For a single user via chrome://flags**  
-   As a feature progresses, it's often made available as an experimental flag within the more
-   accessible chrome://flags interface. These can also be enabled via the command line. The
-   #enable-experimental-web-platform-features bundles together current experimental features.
+   As a feature progresses, it's often made available via an experimental flag within the more
+   accessible chrome://flags interface. These flags can also be enabled via the command line. 
+   chrome://flags#enable-experimental-web-platform-features bundles together current experimental 
+   features.
 -  **For your users, in an origin trial**  
    Once an iteration of a new feature is code-complete and relatively stable, an [origin
    trial](https://web.dev/origin-trials) may be provided to allow individual sites to enable the
@@ -118,6 +121,15 @@ In particular, Chrome on iOS and iPadOS does not support Chrome origin trials.
 
 ## Trust Tokens
 
+### How can I ask a question about this feature?
+
+-  For questions about the proposal: [create an issue](https://github.com/WICG/trust-token-api/issues) 
+on the proposal repo.
+-  For origin trial questions: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=trust%20tokens)  
+or respond to the feedback form that is sent to you as an origin trial participant. 
+-  For implementation, integration, and general best practice questions: [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
+on the Privacy Sandbox developer support repo.
+
 ### Is tooling available for Trust Tokens?
 
 Chrome DevTools enables trust token inspection from the Network and Application tabs: see [Getting
@@ -125,6 +137,14 @@ started with Trust Tokens](https://web.dev/trust-tokens/#summary).
 
 
 ## FLEDGE
+
+### How can I ask a question about this feature?
+
+-  For questions about the proposal: [create an issue](https://github.com/WICG/turtledove/issues) 
+on the proposal repo.
+-  For questions about the implementation currently available for testing in Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=fledge).
+-  For implementation, integration, and general best practice questions: [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
+on the Privacy Sandbox developer support repo.
 
 ### What's the difference between FLEDGE and TURTLEDOVE?
 
@@ -144,6 +164,16 @@ The differences are mostly about separating the on-device role of the buyer and 
 
 ## Attribution Reporting
 
+### How can I ask a question about this feature?
+
+-  For questions about the proposal: [create an issue](https://github.com/WICG/conversion-measurement-api/issues) 
+on the proposal repo.
+-  If you're participating in the origin trial in Chrome and have technical questions, join the 
+[Attribution Reporting mailing list](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) 
+for developers and ask questions there, or [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=attribution%20reporting).
+-  For implementation, integration, and general best practice questions: [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
+on the Privacy Sandbox developer support repo.
+
 ### Is Attribution Reporting the same as the Event Conversion Measurement API?
 
 Yes: [the name was changed](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-introduction/),
@@ -152,6 +182,14 @@ as the original event-level scope expanded to cover additional measurement use c
 
 ## First-Party Sets
 
+### How can I ask a question about this feature?
+
+-  For questions about the proposal: [create an issue](https://github.com/privacycg/first-party-sets/issues) 
+on the proposal repo.
+-  For implementation, integration, and general best practice questions: 
+[create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy 
+Sandbox developer support repo.
+
 ### What does 'sharded' mean in the context of First-Party Sets?
 
 Not joined across first parties.
@@ -159,11 +197,18 @@ Not joined across first parties.
 
 ## User-Agent Client Hints
 
+### How can I ask a question about this feature?
+
+-  For questions about the API: [create an issue](https://github.com/WICG/ua-client-hints/issues) 
+on the specification repo.
+-  For implementation, integration, and general best practice questions: [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
+on the Privacy Sandbox developer support repo.
+
 ### How can I detect tablet devices using the UA-CH API?
 
 As the line between mobile, tablet, and desktop devices continues to become less distinct and dynamic form-factors are more common (folding screens, switching between laptop and tablet mode) it's advisable to prefer responsive design and feature detection to present an appropriate user interface.
 
-However user-agent information provided by the browser for both the user-agent string and User-Agent Client Hints comes from the same source, so the same forms of logic should work.
+However, user-agent information provided by the browser for both the user-agent string and User-Agent Client Hints comes from the same source, so the same forms of logic should work.
 
 For example, if this pattern was being checked on the UA string:
 - Phone pattern: `'Android' + 'Chrome/[.0-9]* Mobile'`
@@ -182,20 +227,46 @@ For hardware-specific use-cases, the device model name may be requested via the 
 
 ## Shared Storage
 
-No FAQs yet! [Add yours in the repo](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/en/docs/privacy-sandbox/faq/index.md).
+### How can I ask a question about this feature?
+
+-  For questions about the proposal: [create an issue](https://github.com/WICG/CHIPS/issues) on the 
+proposal repo.
+-  For implementation, integration, and general best practice questions: 
+[create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy 
+Sandbox developer support repo.
 
 
 ## CHIPS
 
-No FAQs yet! [Add yours in the repo](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/en/docs/privacy-sandbox/faq/index.md).
+### How can I ask a question about this feature?
+
+-  For questions about the proposal: [create an issue](https://github.com/WICG/CHIPS/issues) on the 
+proposal repo.
+-  For implementation, integration, and general best practice questions: 
+[create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy 
+Sandbox developer support repo.
 
 
 ## Storage Partitioning
 
-No FAQs yet! [Add yours in the repo](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/en/docs/privacy-sandbox/faq/index.md).
+### How can I ask a question about this feature?
+
+-  For questions about the proposal: [create an issue](https://github.com/MattMenke2/Explainer---Partition-Network-State/issues) 
+on the repo for the proposal explainer.
+-  For implementation, integration, and general best practice questions: 
+[create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy 
+Sandbox developer support repo.
 
 
 ## Fenced Frames
+
+### How can I ask a question about this feature?
+
+-  For questions about the proposal: [create an issue](https://github.com/shivanigithub/fenced-frame/issues) 
+on the proposal repo.
+-  For implementation, integration, and general best practice questions: 
+[create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy 
+Sandbox developer support repo.
 
 ### What are the use cases for Fenced Frames?
 
@@ -208,14 +279,28 @@ For ads use cases, see
 
 ## Network State Partitioning
 
-No FAQs yet! [Add yours in the repo](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/en/docs/privacy-sandbox/faq/index.md).
+### How can I ask a question about this feature?
+
+-  For questions about the specification: [create an issue](https://github.com/shivanigithub/fenced-frame/issues) 
+on repo for the explainer.
+-  For implementation, integration, and general best practice questions: 
+[create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy 
+Sandbox developer support repo.
 
 
 ## WebID
 
+### How can I ask a question about this feature?
+
+-  For questions about the proposal: [create an issue](https://github.com/WICG/WebID/issues) 
+on the proposal repo.
+-  For implementation, integration, and general best practice questions: 
+[create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy 
+Sandbox developer support repo.
+
 ### What is WebID?
 
 The name "WebID" can be confusing! WebID is not a type of user identifier. Rather, WebID is a
-proposal for a privacy-preserving approach to federated identity services (such as "Sign in with
-...") where users can log into sites without sharing their personal information with the identity
+proposal for a privacy-preserving approach to federated identity services (such as "Sign in with&nbsp;...") 
+where users can log into sites without sharing their personal information with the identity
 service or the site. WebID is still [in incubation in the W3C](https://github.com/WICG/WebID).
