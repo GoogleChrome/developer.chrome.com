@@ -471,7 +471,22 @@ Hate Speech:
 
 ## Not family safe {: #not-family-safe }
 
-Corresponds to notification ID: Grey Nickel
+Corresponds to notification ID: `Grey Nickel`
+
+The intent of this policy is to prevent non-family-safe content from reaching an inappropriate
+audience.
+
+### Common reasons for removal/rejection
+
+- The extension has content that is not suitable for audiences of all ages and the extension has not
+  been marked 'Mature'.
+
+### How can you rectify this?
+
+- Either remove the violating content or mark the extension as containing "Mature content" in your
+  developer dashboard and resubmit the extension.
+
+### Relevant policy
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][docs-cws-policies]:
@@ -481,24 +496,12 @@ Store [developer program policies][docs-cws-policies]:
 **Content Policies:**
 
 Our content policies apply to your Product's content, including any ads it shows to users and any
-user-generated content it hosts or links to. Further, they apply to any content from your
-developer account that is publicly displayed in Chrome Web Store, including your developer name
-and the landing page of your listed developer website. Products that include content that may not
-be suitable for all ages should be marked "Mature" on the Developer Dashboard.
+user-generated content it hosts or links to. Further, they apply to any content from your developer
+account that is publicly displayed in Chrome Web Store, including your developer name and the
+landing page of your listed developer website. Products that include content that may not be
+suitable for all ages should be marked "Mature" on the Developer Dashboard.
 
 {% endAside %}
-
-This policy is to prevent non-family-safe content from reaching an inappropriate audience.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_8 }
-
-The extension has content that is not suitable for audience of all ages and the extension has not
-been marked 'Mature'.
-
-### How can you rectify this? {: #how-can-you-rectify-this_8 }
-
-Remove the content that is in violation or mark the extension as 'Mature' in your developer
-dashboard and resubmit the extension.
 
 ## Violent content {: #violence }
 
