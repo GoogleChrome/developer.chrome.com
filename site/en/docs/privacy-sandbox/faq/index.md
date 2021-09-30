@@ -208,7 +208,7 @@ on the Privacy Sandbox developer support repo.
 
 As the line between mobile, tablet, and desktop devices continues to become less distinct and dynamic form-factors are more common (folding screens, switching between laptop and tablet mode) it's advisable to prefer responsive design and feature detection to present an appropriate user interface.
 
-However user-agent information provided by the browser for both the user-agent string and User-Agent Client Hints comes from the same source, so the same forms of logic should work.
+However, user-agent information provided by the browser for both the user-agent string and User-Agent Client Hints comes from the same source, so the same forms of logic should work.
 
 For example, if this pattern was being checked on the UA string:
 - Phone pattern: `'Android' + 'Chrome/[.0-9]* Mobile'`
