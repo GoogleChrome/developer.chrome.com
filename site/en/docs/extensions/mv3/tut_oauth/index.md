@@ -23,12 +23,11 @@ redirects or set cookies, they rely on the Chrome Identity API to use OAuth2.
 
 Begin by creating a directory and the following starter files.
 
-The full, completed extension can be downloaded [here][4].
+<!--The full, completed extension can be downloaded [here][4].-->
 
 ### manifest.json {: #manifest }
 
-Add the manifest by creating a file called `manifest.json` and include the following code. Or
-download the file [here][5].
+Add the manifest by creating a file called `manifest.json` and include the following code. <!-- Or download the file [here][5].-->
 
 ```json
 {
@@ -48,7 +47,7 @@ download the file [here][5].
 ### background.js {: #background }
 
 Add the background service worker by creating a file called `background.js` and include the following code.
-Or download the file [here][6].
+<!--Or download the file [here][6].-->
 
 ```js
 chrome.action.onClicked.addListener(function() {
@@ -58,7 +57,7 @@ chrome.action.onClicked.addListener(function() {
 
 ### index.html {: #index }
 
-Add an HTML file called `index.html` and include the following code. Or download the file [here][7].
+Add an HTML file called `index.html` and include the following code. <!-- Or download the file [here][7].-->
 
 ```html
 <html>
@@ -159,8 +158,7 @@ Register the [`identity`][11] permission in the manifest.
 }
 ```
 
-Create a file to manage the OAuth flow called `oauth.js` and include the following code. Or download
-it [here][12].
+Create a file to manage the OAuth flow called `oauth.js` and include the following code. <!--Or download it [here][12].-->
 
 ```js
 window.onload = function() {
