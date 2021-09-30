@@ -19,7 +19,52 @@ behave as expected.
 
 ## Functionality not working {: #does-not-work }
 
-Corresponds to notification ID: Yellow Magnesium
+Corresponds to notification ID: `Yellow Magnesium`
+
+The intent of this policy is to ensure a minimum quality level for all items published in the Chrome
+Web Store. Extensions should provide the functionality described in their listings and, if they
+cannot, communicate that to the user.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_18 }
+
+- Your item has packaging errors. Examples:
+    - There are files mentioned in your manifest that are not present in your package. This is most
+      commonly seen with image files.
+    - The path or name of the files mentioned in your package are incorrect
+- A functionality in your item is not working due to a server side issue at the time of reviewing.
+- Your item is just not functioning as it expected based on the item's listing.
+
+### How can you rectify this? {: #how-can-you-rectify-this_18 }
+
+- Test the code that you submit to the web store locally.
+    - Test the exact files that you submit to the web store, not just a local development version of
+      your extension. This may mean extracting resources from the package that you submitted.
+    - Unpacked and packed extensions can have different behaviors. Make sure that Chrome loads a
+      packed version of your extension as expected by manually [packing your
+      extension][docs-pack-extension] and dragging the generated .crx file onto the
+      chrome://extensions page.
+- Verify that your submission contains the files you expect at the paths you expect.
+    - Ensure that all the files mentioned in your `manifest.json` are present in the package and
+      their names and paths are correct.
+    - Check for [case sensitivity][wiki-case-sensitivity] bugs. For example, say your background
+      script was named  `Background.js`, but your manifest.json references  `background.js`. Some
+      file systems will treat these as the same file while others will treat them as two distinct
+      files, causing Chrome to error when loading the extension.
+- Make sure that your extensions clearly communicate error conditions to the user.
+    - It should be as obvious as possible for new users to get started with your extension works.
+    - If your extension requires an account or special network environment, make sure that
+      requirement is communicated to the user. If these conditions are not met, consider ways that
+      you can make the user aware of the error.
+    - Test your experience on an unreliable internet connection (e.g. [Li-Fi][wiki-li-fi]). The
+      extension's UI should gracefully handle request timeouts, HTTP 400 and 500 errors, certificate
+      timeouts, and other such error conditions.
+- If you cannot find the issue, [contact developer support][dev-support] to request more information
+  about the rejection.
+    - In some cases, reviewers may encounter issues you cannot reproduce. Use the [developer support
+      contact form][dev-support] to request clarification about what features or user flows did not
+      behave as expected.
+
+### Relevant policy {: #does-not-work-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][docs-cws-policies]:
@@ -28,22 +73,11 @@ Store [developer program policies][docs-cws-policies]:
 
 **Spam & Placement in the Store**
 
-Functionality: Do not post an extension with a single purpose of installing or launching another
-app, theme, webpage, or extension. Extensions with broken functionality - such as dead sites or
-non-functioning features - are not allowed.
+**Functionality:** Do not post an extension with a single purpose of installing or launching another
+app, theme, webpage, or extension. Extensions with broken functionality—such as dead sites or
+non-functioning features—are not allowed.
 
 {% endAside %}
-
-This policy is to ensure quality of the products on the Chrome Web Store.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_18 }
-
-The extension is not providing the promised functionality.
-
-### How can you rectify this? {: #how-can-you-rectify-this_18 }
-
-Ensure all components of the extension are working as intended and as mentioned in the extension
-listing.
 
 ## Excessive permissions {: #excessive-permissions }
 
