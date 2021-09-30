@@ -135,6 +135,10 @@ early testing. You can now see origin trial status, upcoming deprecations, and
 raw cookie header values. There's more detail from Jecelyn on [What's New In
 DevTools (Chrome 94)](https://developer.chrome.com/blog/new-in-devtools-94/).
 
+{% Img src="dPDCek3EhZgLQPGtEG3y0fTn4v82/PbozcNJRd6rTME5hhqIq.png",
+alt="DevTools screenshot showing the raw Set-Cookie header for a cookie with an
+issue", width="800", height="450" %}
+
 ## Show relevant content and ads
 
 As we move towards phasing out third-party cookies, we need to introduce APIs
