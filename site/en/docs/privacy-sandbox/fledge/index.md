@@ -6,17 +6,17 @@ subhead: >
 description: >
   FLEDGE satisfies remarketing use cases, but is designed so it cannot be used by third parties to track user browsing behaviour across sites. The API enables on-device "auctions" by the browser, to choose relevant ads provided by websites the user has previously visited.
 date: 2021-05-18
-updated: 2021-09-20
+updated: 2021-09-29
 authors:
   - samdutton
 ---
 
 {% Aside %}
-FLEDGE can be tested in Chrome from versions 91.0.4472.49 or 92.0.4493.0 with the following flags enabled:
+FLEDGE can be tested in current versions of Chrome and Chrome Canary with the following flags enabled:
 
-`--enable-features=FledgeInterestGroups,FledgeInterestGroupAPI`
+`--enable-features=InterestGroupStorage,AdInterestGroupAPI,Fledge`
 
-* This is the in-progress version of FLEDGE for early testing, so it should not be considered feature complete or indicative of the final implementation. Progress and status are discussed in the regular WICG meetings. The [minutes](https://github.com/WICG/turtledove/blob/main/meetings/2021-05-12-FLEDGE-call-minutes.md#agenda) for the 2021/05/12 WICG call provide detail on what is and is not supported in the current implementation.
+* This is the in-progress version of FLEDGE for early testing, so it should not be considered feature complete or indicative of the final implementation. Progress and status are discussed in the regular WICG meetings. The [minutes](https://github.com/WICG/turtledove/blob/main/meetings/2021-05-12-FLEDGE-call-minutes.md#agenda) for the 2021-05-12 WICG call provide detail on what is and is not supported in the current implementation.
 * [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) explains how to set flags when running Chrome and other Chromium-based browsers from the command line.
 {% endAside %}
 
