@@ -8,7 +8,6 @@ updated: 2021-09-20
 description:
   "Nuevas herramientas para cambiar medidas en CSS, oculta problemas en la pestaña Problemas, mejora la visualización de propiedades y mucho más."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/B7R4ll1Ts0HdQ4lTS1Fy.jpg'
-
 alt: ''
 tags:
   - new-in-devtools
