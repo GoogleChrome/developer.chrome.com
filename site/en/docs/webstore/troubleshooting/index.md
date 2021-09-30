@@ -1069,21 +1069,10 @@ Deceptive installation tactics include:
 
 ## Obfuscation {: #obfuscation }
 
-Corresponds to notification ID: Red Titanium
+Corresponds to notification ID: `Red Titanium`
 
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**Code Readability Requirements:**
-
-Developers must not obfuscate code or conceal functionality of their extension. This also applies
-to any external code or resource fetched by the extension package.
-
-{% endAside %}
-
-This policy is to ensure the quality of the extensions and code submitted to the Chrome Web Store.
+The intent of this policy is to ensure the quality of the extensions and code submitted to the
+Chrome Web Store.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_22 }
 
@@ -1094,12 +1083,33 @@ Using obfuscated code in the extension package.
 Publish a new extension that does not employ deceptive methods to market to users or to gather a
 user base.
 
-### Examples {: #examples_1 }
+### Examples {: #obfuscation-examples }
 
 The following are some examples of violations of this type of policy:
 
-- Base 64 encoding
-- Character encoding
+- Base 64 encoding (e.g. `'SSdtIGluIHVyIGJhc2U='`)
+- Character encoding (e.g. `'\u{68}a\u0063\u006b\x69ng\u{20}u\u{72}\x20\u0067i\u0062\x73\x6fn'`)
+
+### Relevant policy {: #obfuscation-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-cws-policies]:
+
+{% Aside %}
+
+**Content Policies**
+
+Code Readability Requirements:
+
+: Developers must not obfuscate code or conceal functionality of their extension. This also applies
+  to any external code or resource fetched by the extension package. Minification is allowed,
+  including the following forms:
+
+  - Removal of whitespace, newlines, code comments, and block delimiters
+  - Shortening of variable and function names
+  - Collapsing files together
+
+{% endAside %}
 
 [api-action]: /docs/extensions/reference/action
 [api-browser-action]: /docs/extensions/reference/browserAction/
