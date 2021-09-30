@@ -17,6 +17,33 @@ each violation a human-readable ID. These IDs are composed of two words: a color
 example, Yellow Magnesium corresponds to the general class of errors where the extension does not
 behave as expected.
 
+## Functionality not working {: #does-not-work }
+
+Corresponds to notification ID: Yellow Magnesium
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][19]:
+
+{% Aside %}
+
+**Spam & Placement in the Store**
+
+Functionality: Do not post an extension with a single purpose of installing or launching another
+app, theme, webpage, or extension. Extensions with broken functionality - such as dead sites or
+non-functioning features - are not allowed.
+
+{% endAside %}
+
+This policy is to ensure quality of the products on the Chrome Web Store.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_18 }
+
+The extension is not providing the promised functionality.
+
+### How can you rectify this? {: #how-can-you-rectify-this_18 }
+
+Ensure all components of the extension are working as intended and as mentioned in the extension
+listing.
 
 ## Excessive permissions {: #excessive-permissions }
 
@@ -692,34 +719,6 @@ The only functionality of the extension is to launch another app, theme, webpage
 
 As mentioned in the policy, such extensions are not allowed on the Store and it is recommended to
 unpublish them.
-
-## Functionality not working {: #does-not-work }
-
-Corresponds to notification ID: Yellow Magnesium
-
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][19]:
-
-{% Aside %}
-
-**Spam & Placement in the Store**
-
-Functionality: Do not post an extension with a single purpose of installing or launching another
-app, theme, webpage, or extension. Extensions with broken functionality - such as dead sites or
-non-functioning features - are not allowed.
-
-{% endAside %}
-
-This policy is to ensure quality of the products on the Chrome Web Store.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_18 }
-
-The extension is not providing the promised functionality.
-
-### How can you rectify this? {: #how-can-you-rectify-this_18 }
-
-Ensure all components of the extension are working as intended and as mentioned in the extension
-listing.
 
 ## Spam {: #spam }
 
