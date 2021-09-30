@@ -342,28 +342,17 @@ Illegal Activities:
 
 ## Online gambling {: #gambling }
 
-Corresponds to notification ID: Grey Copper
-
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**Gambling:**
-
-We don't allow content or services that facilitate online gambling, including but not limited to
-online casinos, sports betting, lotteries, or games of skill that offer prizes of cash or other
-value.
-
-{% endAside %}
+Corresponds to notification ID: `Grey Copper`
 
 Do not post content or provide services that facilitate online gambling.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_5 }
 
-- Providing online gambling on the extension
-- Facilitating online gambling on other sites through the extension
-- Directing users to an online gambling site
+- Providing online gambling within an extension.
+- Facilitating online gambling on other sites through the extension.
+    - For example, providing functionality to calculate the odds of a bet on a gambling site. While
+      this extension does not directly allow the user to gamble, it does facilitate online gambling.
+- Directing users to an online gambling site.
 - Providing games of skill that offer prizes of cash or other value.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_5 }
@@ -372,6 +361,23 @@ Do not post content or provide services that facilitate online gambling.
   extension.
 - If this was an unintended functionality, then remove the content or services that are in violation
   and resubmit your extension.
+
+### Relevant policy {: #gambling-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-cws-policies]:
+
+{% Aside %}
+
+**Content Policies**
+
+Gambling:
+
+: We don't allow content or services that facilitate online gambling, including but not limited to
+  online casinos, sports betting, lotteries, or games of skill that offer prizes of cash or other
+  value.
+
+{% endAside %}
 
 ## Pornographic content {: #pornography }
 
