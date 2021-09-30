@@ -252,37 +252,20 @@ Impersonation or Deceptive Behavior:
 
 ## User data policy - disclosure policy {: #udp-disclosure-policy }
 
-Corresponds to notification ID: Purple Lithium
-
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**Posting a Privacy Policy & Secure Transmission**
-
-If your Product handles personal or sensitive user data (including personally identifiable
-information, financial and payment information, health information, authentication information,
-website content and resources, form data, web browsing activity, user-provided content and
-personal communications), then your Product must:
-
-- Post a privacy policy, and
-- Handle the user data securely, including transmitting it via modern cryptography.
-
-{% endAside %}
+Corresponds to notification ID: `Purple Lithium`
 
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
 the user.
 
 This policy applies to all extensions that collect user data. This particular section is to ensure
-that users are aware of what data is collected, and how it is collected, used and shared.
+that users are aware of what data is collected, and how it is collected, used, and shared.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_3 }
 
 - The extension is collecting user data but has not provided a privacy policy.
-- The privacy policy is not provided in the designated field—a common mistake here is providing
-  the privacy policy in the description.
+- The privacy policy is not provided in the designated field—a common mistake here is providing the
+  privacy policy in the description.
 - The privacy policy URL is not working.
 - The privacy policy is not accessible.
 - The privacy policy URL is not leading to privacy policy.
@@ -290,8 +273,34 @@ that users are aware of what data is collected, and how it is collected, used an
 
 ### How can you rectify this? {: #how-can-you-rectify-this_3 }
 
-- Add a valid, working and accessible link to your privacy policy in the designated field.
-- Ensure the privacy policy talks about data collection, usage, handling and sharing.
+- Add a valid, working and accessible link to your privacy policy [in the designated
+  field][docs-publish-setup].
+    - Visit the Chrome Web Store item listing for your extension to verify that a privacy policy
+      link appears in the "Additional Information" box and that the link works as expected.
+- Ensure the privacy policy talks about data collection, usage, handling, and sharing.
+- If you have done the above but are still encountering review issues, [contact developer
+  support][dev-support] to request clarification or appeal the verdict.
+
+### Relevant policy {: #udp-disclosure-policy-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-cws-policies]:
+
+{% Aside %}
+
+**Personal or Sensitive User Data**
+
+Posting a Privacy Policy & Secure Transmission
+
+: If your Product handles personal or sensitive user data (including personally identifiable
+  information, financial and payment information, health information, authentication information,
+  website content and resources, form data, web browsing activity, user-provided content and personal
+  communications), then your Product must:
+
+  - Post a privacy policy, and
+  - Handle the user data securely, including transmitting it via modern cryptography.
+
+{% endAside %}
 
 ## Illegal activities {: #illegal-activities }
 
