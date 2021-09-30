@@ -1018,31 +1018,9 @@ Page through any means other than the URL Overrides API is not permitted.
 
 ## Deceptive installation {: #uws-distribution }
 
-Corresponds to notification ID: Red Zinc
+Corresponds to notification ID: `Red Zinc`
 
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**Deceptive Installation Tactics**
-
-Extensions must be marketed responsibly. Extensions that use or benefit from deceptive
-installation tactics will be removed from the Chrome Web Store.
-
-Deceptive installation tactics include:
-
-- Unclear or inconspicuous disclosures on marketing collateral preceding the Chrome Web Store
-  Product listing.
-- Misleading interactive elements as part of your distribution flow. This includes misleading
-  call-to-action buttons or forms that imply an outcome other than the installation of an
-  extension.
-- Adjusting the Chrome Web Store Product listing window with the effect of withholding or hiding
-  extension metadata from the user.
-
-{% endAside %}
-
-This policy is to ensure users are not deceived into installing extensions.
+The intent of this policy is to ensure users are not deceived into installing extensions.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_21 }
 
@@ -1057,6 +1035,37 @@ This policy is to ensure users are not deceived into installing extensions.
 
 Publish a new extension that does not employ deceptive methods to market to users or to gather a
 user base.
+
+### Relevant policy {: #uws-distribution-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-cws-policies]:
+
+{% Aside %}
+
+**Deceptive Installation Tactics**
+
+Extensions must be marketed responsibly. The set of functionalities promised by the extension must
+be stated clearly and in a transparent manner. The outcome of any user interaction should match the
+reasonable expectations that were set with the user. Extensions that use or benefit from deceptive
+installation tactics will be removed from the Chrome Web Store.
+
+Deceptive installation tactics include:
+
+- Unclear or inconspicuous disclosures on marketing collateral preceding the Chrome Web Store
+  product listing.
+
+- Misleading interactive elements as part of your distribution flow. This includes misleading
+  call-to-action buttons or forms that imply an outcome other than the installation of an extension.
+
+- Adjusting the Chrome Web Store product listing window with the effect of withholding or hiding
+  extension metadata from the user.
+
+- Bundling other extensions or offers within the same installation flow.
+
+- Requiring unrelated user action to access advertised functionality.
+
+{% endAside %}
 
 ## Obfuscation {: #obfuscation }
 
