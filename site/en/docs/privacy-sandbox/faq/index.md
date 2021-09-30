@@ -121,7 +121,7 @@ In particular, Chrome on iOS and iPadOS does not support Chrome origin trials.
 
 ## Trust Tokens
 
-### How can I ask a question about this proposal?
+### How can I ask a question about this feature?
 
 -  For questions about the proposal: [create an issue](https://github.com/WICG/trust-token-api/issues) 
 on the proposal repo.
@@ -138,7 +138,7 @@ started with Trust Tokens](https://web.dev/trust-tokens/#summary).
 
 ## FLEDGE
 
-### How can I ask a question about this proposal?
+### How can I ask a question about this feature?
 
 -  For questions about the proposal: [create an issue](https://github.com/WICG/turtledove/issues) 
 on the proposal repo.
@@ -164,7 +164,7 @@ The differences are mostly about separating the on-device role of the buyer and 
 
 ## Attribution Reporting
 
-### How can I ask a question about this proposal?
+### How can I ask a question about this feature?
 
 -  For questions about the proposal: [create an issue](https://github.com/WICG/conversion-measurement-api/issues) 
 on the proposal repo.
@@ -182,7 +182,7 @@ as the original event-level scope expanded to cover additional measurement use c
 
 ## First-Party Sets
 
-### How can I ask a question about this proposal?
+### How can I ask a question about this feature?
 
 -  For questions about the proposal: [create an issue](https://github.com/privacycg/first-party-sets/issues) 
 on the proposal repo.
@@ -197,7 +197,7 @@ Not joined across first parties.
 
 ## User-Agent Client Hints
 
-### How can I ask a question about this specification?
+### How can I ask a question about this feature?
 
 -  For questions about the API: [create an issue](https://github.com/WICG/ua-client-hints/issues) 
 on the specification repo.
@@ -227,7 +227,7 @@ For hardware-specific use-cases, the device model name may be requested via the 
 
 ## Shared Storage
 
-### How can I ask a question about this proposal?
+### How can I ask a question about this feature?
 
 -  For questions about the proposal: [create an issue](https://github.com/WICG/CHIPS/issues) on the 
 proposal repo.
@@ -238,7 +238,7 @@ Sandbox developer support repo.
 
 ## CHIPS
 
-### How can I ask a question about this proposal?
+### How can I ask a question about this feature?
 
 -  For questions about the proposal: [create an issue](https://github.com/WICG/CHIPS/issues) on the 
 proposal repo.
@@ -249,7 +249,7 @@ Sandbox developer support repo.
 
 ## Storage Partitioning
 
-### How can I ask a question about this proposal?
+### How can I ask a question about this feature?
 
 -  For questions about the proposal: [create an issue](https://github.com/MattMenke2/Explainer---Partition-Network-State/issues) 
 on the repo for the proposal explainer.
@@ -260,7 +260,7 @@ Sandbox developer support repo.
 
 ## Fenced Frames
 
-### How can I ask a question about this proposal?
+### How can I ask a question about this feature?
 
 -  For questions about the proposal: [create an issue](https://github.com/shivanigithub/fenced-frame/issues) 
 on the proposal repo.
@@ -279,7 +279,7 @@ For ads use cases, see
 
 ## Network State Partitioning
 
-### How can I ask a question about this specification?
+### How can I ask a question about this feature?
 
 -  For questions about the specification: [create an issue](https://github.com/shivanigithub/fenced-frame/issues) 
 on repo for the explainer.
@@ -290,7 +290,7 @@ Sandbox developer support repo.
 
 ## WebID
 
-### How can I ask a question about this proposal?
+### How can I ask a question about this feature?
 
 -  For questions about the proposal: [create an issue](https://github.com/WICG/WebID/issues) 
 on the proposal repo.
