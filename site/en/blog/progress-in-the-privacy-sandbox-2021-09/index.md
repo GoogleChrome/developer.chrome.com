@@ -59,6 +59,23 @@ The end result retains the same string format to minimise compatibility issues,
 but will be using fixed values for device model, platform version, and the full
 Chrome build.
 
+{% Compare 'worse', 'old' %}
+<span style="font-family: monospace">Mozilla/5.0 (Linux; Android <span
+style="background: #ef9a9a">12; Pixel 5</span>) AppleWebKit/537.36 (KHTML, like
+Gecko) Chrome/95.<span  style="background: #ef9a9a">0.4638.16</span> Mobile
+Safari/537.36</span>
+{% endCompare %}
+
+{% Compare 'better', 'new' %}
+<span style="font-family: monospace">Mozilla/5.0 (Linux; Android <span
+style="background: #a5d6a7">10; K</span>) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/95.<span style="background: #a5d6a7">0.0.0</span> Mobile
+Safari/537.36</span>
+{% endCompare %}
+
+You can see [further examples and the rollout phases
+here](https://www.chromium.org/updates/ua-reduction).
+
 If you rely on any of these values, you will need to [migrate to user-agent
 client hints](https://web.dev/migrate-to-ua-ch/) to request that additional
 information.
@@ -156,7 +173,11 @@ explaining the concepts in more detail.
 FLEDGE is [available via CLI
 flags](https://developer.chrome.com/docs/privacy-sandbox/fledge/#:~:text=---,enable-features,-%3DFledgeInterestGroups%2CFledgeInterestGroupAPI)
 for early developer testing (as opposed to scaled user testing) and we're
-updating the timeline to make these flags more visible.
+updating the timeline to make these flags more visible. The feature is under
+active development, so you should run against a Canary or Dev build of Chrome to
+test the latest changes. Developer feedback at this early stage is helpful to
+ensure we're heading in the right direction in preparation for origin trials,
+but be aware this is very fresh code and will not be stable.
 
 ## Measure digital ads
 
