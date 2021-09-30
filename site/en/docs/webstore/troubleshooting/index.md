@@ -304,28 +304,14 @@ Posting a Privacy Policy & Secure Transmission
 
 ## Illegal activities {: #illegal-activities }
 
-Corresponds to notification ID: Grey Zinc
+Corresponds to notification ID: `Grey Zinc`
 
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**Illegal Activities:**
-
-Keep it legal. Don't engage or promote unlawful activities in your Product, such as rape, illegal
-sex work, or the sale of prescription drugs without a prescription. We will remove content which
-promotes, glorifies, or encourages dangerous or illegal activity that may result in physical harm
-to those involved.
-
-{% endAside %}
-
-This policy is to prevent the use of extensions and the Chrome Web Store as a platform for illegally
-selling drugs
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store to aid or
+abet illegal activities.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_4 }
 
-The extension is doing anything illegal. See the policy extract above for examples.
+The extension is doing anything illegal. See the policy extract for specific examples.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_4 }
 
@@ -333,6 +319,26 @@ The extension is doing anything illegal. See the policy extract above for exampl
   should unpublish your extension.
 - If this was an unintended functionality, then remove the content or services that are in violation
   and resubmit your extension.
+- If you would like more information on why this classification was applied to your extension,
+  [developer support][dev-support] may be able to provide you with additional information.
+
+### Relevant policy {: #illegal-activities-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-cws-policies]:
+
+{% Aside %}
+
+**Content Policies**
+
+Illegal Activities:
+
+: Keep it legal. Don't engage in or promote unlawful activities in your product, such as rape,
+  illegal sex work, or the sale of prescription drugs without a prescription.. We will remove
+  content which promotes, glorifies, or encourages dangerous or illegal activity that may result in
+  physical harm to those involved.
+
+{% endAside %}
 
 ## Online gambling {: #gambling }
 
