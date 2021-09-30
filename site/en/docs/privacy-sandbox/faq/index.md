@@ -157,6 +157,29 @@ as the original event-level scope expanded to cover additional measurement use c
 Not joined across first parties.
 
 
+## User-Agent Client Hints
+
+### How can I detect tablet devices using the UA-CH API?
+
+As the line between mobile, tablet, and desktop devices continues to become less distinct and dynamic form-factors are more common (folding screens, switching between laptop and tablet mode) it's advisable to prefer responsive design and feature detection to present an appropriate user interface.
+
+However user-agent information provided by the browser for both the user-agent string and User-Agent Client Hints comes from the same source, so the same forms of logic should work.
+
+For example, if this pattern was being checked on the UA string:
+- Phone pattern: `'Android' + 'Chrome/[.0-9]* Mobile'`
+- Tablet pattern: `'Android' + 'Chrome/[.0-9]* (?!Mobile)'`
+
+The matching default UA-CH headers interface may be checked:
+- Phone pattern: `Sec-CH-UA-Platform: "Android"`, `Sec-CH-UA-Mobile: ?1`
+- Tablet pattern: `Sec-CH-UA-Platform: "Android"`, `Sec-CH-UA-Mobile: ?0`
+
+Or the equivalent JavaScript interface:
+- Phone pattern: `navigator.userAgentData.platform === 'Android' && navigator.userAgentData.mobile === true`
+- Tablet pattern: `navigator.userAgentData.platform === 'Android' && navigator.userAgentData.mobile === false`
+
+For hardware-specific use-cases, the device model name may be requested via the high entropy `Sec-CH-UA-Model` hint.
+
+
 ## Shared Storage
 
 No FAQs yet! [Add yours in the repo](https://github.com/GoogleChrome/developer.chrome.com/blob/main/site/en/docs/privacy-sandbox/faq/index.md).
