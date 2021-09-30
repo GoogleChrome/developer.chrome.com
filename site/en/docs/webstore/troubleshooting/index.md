@@ -476,17 +476,17 @@ Corresponds to notification ID: `Grey Nickel`
 The intent of this policy is to prevent non-family-safe content from reaching an inappropriate
 audience.
 
-### Common reasons for removal/rejection
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_8 }
 
 - The extension has content that is not suitable for audiences of all ages and the extension has not
   been marked 'Mature'.
 
-### How can you rectify this?
+### How can you rectify this? {: #how-can-you-rectify-this_8 }
 
 - Either remove the violating content or mark the extension as containing "Mature content" in your
   developer dashboard and resubmit the extension.
 
-### Relevant policy
+### Relevant policy {: #not-family-safe-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][docs-cws-policies]:
@@ -505,42 +505,45 @@ suitable for all ages should be marked "Mature" on the Developer Dashboard.
 
 ## Violent content {: #violence }
 
-Corresponds to notification ID: Grey Potassium
+Corresponds to notification ID: `Grey Potassium`
+
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store as a platform
+to spread the content mentioned in the relevant policy text.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_9 }
+
+- The extension contains content or is directing users to content mentioned in the policy text,
+
+### How can you rectify this? {: #how-can-you-rectify-this_9 }
+
+- If providing access to violent or bullying content is one of the primary features of your
+  extension, unpublish the extension; such extensions are not permitted in the Chrome Web Store.
+- If this was an unintended functionality, then remove the content or services that are in violation
+  and resubmit your extension.
+
+### Relevant policy {: #violence-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
-**Violent or Bullying Behavior:**
+**Content Policies**
 
-Depictions of gratuitous violence are not allowed. Products should not contain materials that
-threaten, harass, or bully other users. For example, Products should not contain:
+Violent or Bullying Behavior:
 
-- Content which makes a specific threat of serious harm against an individual person or a defined
-  group of people.
-- Content whose predominant purpose is to single out another person for abuse, malicious attack,
-  or ridicule.
-- Content that results in the unwanted sexualization of a person, including malicious claims about
-  a person's sexual activities, sexual orientation, or gender identity.
-- A series of posts/comments/photos that, taken together, clearly have the primary intention of
-  harassment, even if each individual piece of content is not severe.
+: Depictions of gratuitous violence are not allowed. Products should not contain materials that
+  threaten, harass, or bully other users. For example, Products should not contain:
+
+  - Content which makes a specific threat of serious harm against an individual person or a defined
+    group of people.
+  - Content whose predominant purpose is to single out another person for abuse, malicious attack,
+    or ridicule. Content that results in the unwanted sexualization of a person, including malicious
+    claims about a person's sexual activities, sexual orientation, or gender identity.
+  - A series of posts/comments/photos that, taken together, clearly have the primary intention of
+    harassment, even if each individual piece of content is not severe.
 
 {% endAside %}
-
-This policy is to prevent the use of extensions and the Chrome Web Store as a platform to spread the
-content mentioned in the policy text above
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_9 }
-
-The extension contains content or is directing users to content mentioned in the policy text above
-
-### How can you rectify this? {: #how-can-you-rectify-this_9 }
-
-- If this is the primary functionality of your extension, then it is recommended to unpublish your
-  extension.
-- If this was an unintended functionality, then remove the content or services that are in violation
-  and resubmit your extension.
 
 ## Single purpose {: #single-use }
 
