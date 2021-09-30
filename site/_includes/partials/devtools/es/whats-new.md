@@ -2,6 +2,21 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
+### Chrome 95 {: #chrome95 }
+
+* [Utiliza DevTools en tu idioma preferido](/es/blog/new-in-devtools-94/#localized)
+* [Nest Hub en la lista de dispositivos](/es/blog/new-in-devtools-94/#nest-hub)
+* [Ensayos de origen en la vista de detalle de Frame](/es/blog/new-in-devtools-94/#origin-trials)
+* [Nueva insignia de consultas de contenedor CSS](/es/blog/new-in-devtools-94/#container-queries)
+* [Nuevo checkbox para invertir los filtros del panel de Red](/es/blog/new-in-devtools-94/#nvert-network-filter)
+* [Eliminación próxima (`deprecated`) de la barra lateral de la Consola](/es/blog/new-in-devtools-94/#deprecated)
+* [Mostrar cabecera `Set-Cookie` sin procesar en la pestaña Problemas y el panel Red](/es/blog/new-in-devtools-94/#raw-cookies)
+* [Visualización coherente de los descriptores de acceso nativos como propiedades propias en la consola](/es/blog/new-in-devtools-94/#native-accessors)
+* [Pila de error más adecuada para scripts en línea con #sourceURL](/es/blog/new-in-devtools-94/#inline-script)
+* [Cambiar el formato de color en el panel Computado](/es/blog/new-in-devtools-94/#color-unit)
+* [Sustitución de tooltips personalizados por tooltips nativos en HTML](/es/blog/new-in-devtools-94/#tooltip)
+* [[Experimental] Ocultar problemas en la pestaña de Problemas](/es/blog/new-in-devtools-94/#hide-issues)
+
 ### Chrome 94 {: #chrome94 }
 
 * [Utiliza DevTools en tu idioma preferido](/es/blog/new-in-devtools-94/#localized)
