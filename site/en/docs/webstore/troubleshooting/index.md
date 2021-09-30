@@ -381,41 +381,50 @@ Gambling:
 
 ## Pornographic content {: #pornography }
 
-Corresponds to notification ID: Grey Lithium
+Corresponds to notification ID: `Grey Lithium`
+
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store as a platform
+for pornography.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_6 }
+
+- The extension itself contains sexually explicit material.
+- The extension is displaying or providing sexually explicit material.
+- The extension is directing users to pornographic sites.
+- The extension is primarily meant to enhance sites that provide sexually explicit material.
+
+### How can you rectify this? {: #how-can-you-rectify-this_6 }
+
+- If the primary purpose of your extension is to provide access to sexually explicit material or
+  enhance pornographic sites, you should unpublish your extension; such extensions are not allowed
+  on the Chrome Web Store.
+- If this was an unintended functionality, then remove the content or services that are in violation
+  and resubmit your extension.
+- Make sure that your extension does not contain sexually explicit images, video, text, etc.
+- If your extension provides integrations with adult-oriented sites, make sure that the "Mature
+  content" flag is enabled for your extension in the developer dashboard.
+
+### Relevant policy {: #pornography-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][docs-cws-policies]:
 
 {% Aside %}
 
-**Sexually Explicit Material:**
+**Content Policies**
 
-We don't allow content that contains nudity, graphic sex acts, sexually explicit material, or
-content that drives traffic to commercial pornography sites. We also don't allow content that
-promotes incest, bestiality, necrophilia, or non-concensual sexual acts. Google has a
-zero-tolerance policy against child pornography. If we become aware of content with child
-pornography, we will report it to the appropriate authorities and delete the Google Accounts of
-those involved with the distribution.
+Sexually Explicit Material:
 
-Content which contains non-sexual nudity - such as artistic, educational, scientific, or cultural
-nudity - is generally allowed, but may impact the visibility of your Product.
+: We don't allow content that contains nudity, graphic sex acts, sexually explicit material, or
+  content that drives traffic to commercial pornography sites. We also don't allow content that
+  promotes incest, bestiality, necrophilia, or non-consensual sexual acts. Google has a
+  zero-tolerance policy against child pornography. If we become aware of content with child
+  pornography, we will report it to the appropriate authorities and delete the Google Accounts of
+  those involved with the distribution. Content which contains non-sexual nudity - such as artistic,
+  educational, scientific, or cultural nudity - is generally allowed, but may impact the visibility
+  of your Product.
 
 {% endAside %}
-
-This policy is to prevent the use of extensions and the Chrome Web Store as a platform for
-pornography.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_6 }
-
-- The extension is displaying/providing the content mentioned in the policy.
-- The extension is directing users to pornographic sites.
-
-### How can you rectify this? {: #how-can-you-rectify-this_6 }
-
-- If this is the primary functionality of your extension, then it is recommended to unpublish your
-  extension.
-- If this was an unintended functionality, then remove the content or services that are in violation
-  and resubmit your extension.
 
 ## Hate content {: #hate }
 
