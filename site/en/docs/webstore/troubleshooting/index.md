@@ -2,16 +2,21 @@
 layout: "layouts/doc-post.njk"
 title: "Troubleshooting Chrome Web Store violations"
 date: 2020-11-16
-updated: 2021-08-16
+updated: 2021-09-30
 description: >
   Guidelines for understanding why an item was rejected or removed from the Chrome Web Store
   and how to fix the problem.
 ---
 
-This page is provided to help you understand why an item was rejected or removed from the Chrome Web
-Store, and to understand how you can rectify the problem.
+This page is provided to help you understand why your extension was rejected or removed from the
+Chrome Web Store and how you can fix the violation.
 
-Each section describes the issues that correspond to a particular category of violation.
+Each section in this document describes the issues that correspond to a particular category of
+violation. In order to make it easier to reference specific violations, the Chrome Web Store assigns
+each violation a human-readable ID. These IDs are composed of two words: a color and an element. For
+example, Yellow Magnesium corresponds to the general class of errors where the extension does not
+behave as expected.
+
 
 ## Excessive permissions {: #excessive-permissions }
 
