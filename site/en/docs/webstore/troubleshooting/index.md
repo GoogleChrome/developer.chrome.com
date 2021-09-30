@@ -81,7 +81,87 @@ non-functioning features—are not allowed.
 
 ## Excessive permissions {: #excessive-permissions }
 
-Corresponds to notification ID: Purple Potassium
+Corresponds to notification ID: `Purple Potassium`
+
+The intent of this policy is to prevent excessive and unnecessary access to user data by extensions.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection }
+
+- The extension is requesting a permission but not using it.
+- The extension is requesting a permission that is not required to implement the functionality the
+  extension provides.
+
+### Commonly misunderstood permissions {: #misunderstood-perms }
+
+#### activeTab {: #misunderstood-perms-activetab }
+
+This permission grants temporary access to a tab in response to a user invoking your extension. It
+DOES NOT grant passive access to the user's currently focused tab.
+
+- **When is it required?**
+    - When you need temporary access to a tab after the user invokes your extension.
+- **When is it NOT required?**
+    - When the extension has access to broad host permissions or host permissions for the specific
+      domains that are relevant to the extension's operations.
+    - When using methods on the [action][api-action], [browserAction][api-browser-action],
+      [pageAction][api-page-action] APIs. These APIs can use activeTab to grant temporary host
+      permissions for the currently focused tab, but they do not need activeTab to function.
+    - When using [tabs.sendMessage][api-tabs-sendmessage] to send a message to a specific tab.
+    - For basic use of [tabs.query][api-tabs-query], such as querying [the user's current
+      tab][api-tabs-get-current-tab].
+
+#### tabs {: #misunderstood-perms-tabs }
+
+This permission ONLY grants access to the `url`, `pendingUrl`, `title`, or `favIconUrl` properties
+of Tab objects.
+
+- **When is it required?**
+    - When an extension does not have broad host access, but needs to be able to read sensitive data
+      like the URL of an arbitrary tab.
+- **When is it NOT required?**
+    - When using methods on the [tabs][api-tabs] API.
+    - When the extension has access to broad host permissions. Host permissions grant the extension
+      access to the same data as well as other capabilities.
+
+#### cookies {: #misunderstood-perms-cookies }
+
+This exposes the [chrome.cookies][api-cookies] API and allows the extension to modify cookies on
+origins that it has host permissions to access.
+
+- **When is it required?**
+    - When accessing [chrome.cookies][api-cookies] from the extension's [background
+      context][docs-service-workers] or in another context using the extension's origin such as an
+      extension's popup.
+    - When using [chrome.cookies][api-cookies] to interact with detailed cookie data, such as
+      [SameSite][mdn-samesite-cookie] values.
+- **When is it NOT required?**
+    - When using [`document.cookie`][mdn-document-cookie] or the [Cookie Store
+      API][mdn-cookie-store].
+
+#### storage {: #misunderstood-perms-storage }
+
+The storage permission exposes the [chrome.storage][api-storage] API to the extension.
+
+- **When is it required?**
+    - When using the [chrome.storage][api-storage] API.
+- **When is it NOT required?**
+    - When using the [Web Storage API][mdn-web-storage] (`document.localStorage`,
+      `document.sessionStorage`) or [IndexedDB][mdn-indexeddb].
+
+### How can you rectify this? {: #how-can-you-rectify-this }
+
+- Review the list of commonly misunderstood permissions for potential mistakes.
+- Request only the narrowest permission required to implement your extension's functionality.
+- Remove all unused permissions from your manifests.json's `permissions`, `optional_permissions`,
+  and `host_permissions` arrays.
+- If the message from review does not contain enough information to determine which permissions were
+  considered excessive, [contact developer support][dev-support] to request more information about
+  the rejection.
+- If the reviewer indicated that your extension did not use a given permission but you believe it
+  does, [contact developer support][dev-support] to appeal the decision and to provide a detailed
+  explanation of why the permission is necessary and how it is used.
+
+### Relevant policy {: #excessive-permissions-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store [developer program policies][docs-cws-policies]:
@@ -94,56 +174,10 @@ Request access to the narrowest permissions necessary to implement your Product'
 services. If more than one permission could be used to implement a feature, you must request those
 with the least access to data or functionality.
 
-Don't attempt to "future proof" your Product by requesting a permission that might benefit
-services or features that have not yet been implemented.
+Don't attempt to "future proof" your Product by requesting a permission that might benefit services
+or features that have not yet been implemented.
 
 {% endAside %}
-
-This policy is to prevent excessive and unnecessary access to user data by extensions.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection }
-
-- The extension is requesting a permission but not using it.
-- The extension is requesting a permission that is not required to implement the functionality.
-
-### How can you rectify this? {: #how-can-you-rectify-this }
-
-- Remove any permission that is not being used.
-- Request only the narrowest permission required to implement your extension's functionality.
-
-## Missing or insufficient metadata {: #no-metadata }
-
-Corresponds to notification ID: Yellow Zinc
-
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
-
-{% Aside %}
-
-**Content Policies**
-
-⋮
-
-If your Product has a blank description field or is missing an icon or screenshots, it will be
-rejected. If any of your Product's content, title, icon, description or screenshots contains false
-or misleading information, we may remove it.
-
-{% endAside %}
-
-This policy is to ensure quality of the products on the Chrome Web Store and for users to know about
-the product that they are downloading before they download.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_1 }
-
-- The extension is missing an icon, title, screenshot or description.
-- The extension's title is not meaningful.
-- The extension's screenshots or description is not meaningful or doesn't explain the functionality
-  adequately.
-
-### How can you rectify this? {: #how-can-you-rectify-this_1 }
-
-- Ensure the extension has a meaningful icon, title, screenshot and description.
-- Clearly explain the extension's functionality through the screenshots and description.
 
 ## Deceptive behavior {: #deceptive-behavior }
 
