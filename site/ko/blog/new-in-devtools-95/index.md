@@ -90,7 +90,7 @@ link.search = `?access=${link.access}`;
 위의 변경사항 외에도, **속성** 영역의 속성도 1차원화 되었습니다.
 이를 통해 DOM 속성 디버깅 경험을 개선하였으며, 특히 [Web components](https://www.webcomponents.org/introduction) 에서 유용합니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hIQGKlYkWKJzljHZaaM9.png", alt="속성 1차원화", width="800", height="449" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hIQGKlYkWKJzljHZaaM9.png", alt="속성 플래튼", width="800", height="449" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7d0366422cffa5f2837de834f0faa88a925fe701 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a4d7dd0d62baba5718a713b5cd364669a21236b3 #}
@@ -127,9 +127,9 @@ Chromium issue: [772558](https://crbug.com/772558)
 Chromium issue: [1243976](https://crbug.com/1243976)
 
 
-## 번역된 릴리스 정보로 이동하는 링크 및 번역 관련 버그 제보 {: #localized }
+## 번역된 릴리즈 정보와 번역 오류 제보를 위한 링크들 {: #localized }
 
-새로운 기능 탭에서 총 6개 언어 ([러시아어](/ru/blog/new-in-devtools-95), [중국어](/zh/blog/new-in-devtools-95), [스페인어](/es/blog/new-in-devtools-95), [일본어](/ja/blog/new-in-devtools-95), [포르투갈어](/pt/blog/new-in-devtools-95), [한국어](/ko/blog/new-in-devtools-95)) 로 번역된 DevTools 릴리스 노트를 클릭하여 읽을 수 있습니다.
+새로운 기능 탭에서 총 6개 언어 ([러시아어](/ru/blog/new-in-devtools-95), [중국어](/zh/blog/new-in-devtools-95), [스페인어](/es/blog/new-in-devtools-95), [일본어](/ja/blog/new-in-devtools-95), [포르투갈어](/pt/blog/new-in-devtools-95), [한국어](/ko/blog/new-in-devtools-95)) 로 번역된 DevTools 릴리즈 노트를 클릭하여 읽을 수 있습니다.
 
 Chrome 94 부터 DevTools 에서 [선호하는 언어를 설정](/ko/blog/new-in-devtools-94/#localized) 할 수 있습니다.
 번역 관련 문제를 발견하였다면, **더 보기** > **도움말** > **번역 문제 신고** 를 통해 [번역 문제를 제보](https://goo.gle/devtools-translate) 하여 더 나은 번역을 만들기 위해 도와주세요.
