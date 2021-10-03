@@ -8,7 +8,6 @@ updated: 2021-09-20
 description:
   "새 CSS 길이 작성 도구, 문제 탭에서 문제 숨기기 기능, 속성 표시 방법 개선 및 다른 새로운 기능들."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/j60zqojAh4GHLDEeiqJU.jpg'
-draft: true
 alt: ''
 tags:
   - new-in-devtools
