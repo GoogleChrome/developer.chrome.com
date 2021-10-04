@@ -106,18 +106,21 @@ store item by adding `/reviews` at the end of your item’s URL:
 ## Provide user support
 
 To ensure the best user experience and build a great extension it's important to
-collect, evaluate, and follow-up on user feedback. You can do so by enabling user feedback in the
-CWS dashboard Account setting page.
+collect, evaluate, and follow-up on user feedback. You can manage your extension's user feedback in
+two ways:
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="800", height="185" %}
+- By using the built in CWS User Support tab, or
+- By using a dedicated support site.
 
-Users will be able to ask questions, request features and report bugs in the **Support** Tab of your store item.
+Users will be able to communicate with you using the **Support** Tab of your store item.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/OBDYk7n5dBcaqs3z1HtL.png", alt="Store item Support tab", width="800", height="121" %}
 
-There are two ways in which you can manage your extension's user feedback.
+### Using the User Support tab {: #user-support-tab }
 
-### Using the User Support tab
+First, you must enable user feedback in the developer console Account setting page.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="800", height="185" %}
 
 In the **User Support** Tab of the developer console you can view, respond and manage user feedback. Use the **Type**
 dropdown to filter user input by
@@ -136,18 +139,25 @@ Currently, this feature does not provide notifications:
 
 {% endAside %}
 
-### Using a dedicated support site
+### Using a dedicated support site {: #dedicated-support-site }
 
 You can set up a dedicated support site for your users, so that the support link goes there instead of the default forum experience. This site can be anything you like, such as:
 
-* A discussion group using Google Groups or some similar service.
-* A form-handling site that lets users submit feedback or support tickets.
-* A public information site with your product road map or other details.
+- A discussion group using Google Groups or some similar service.
+- A form-handling site that lets users submit feedback or support tickets.
+- A public information site with your product road map or other details.
 
-Once you set up the site, go to the **Store Listing** tab and add the link to the **Support URL** field. Your support link will then take users to your dedicated site.
+Once you set up the site, go to the **Store Listing** tab of the developer console and add the link to the **Support URL**
+field. Your support link will then take users to your dedicated site.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/7R8GYtBJjjRy1ih20dGd.png", alt="Store Listing Support
 URL field", width="514", height="283" %}
+
+{% Aside %}
+
+Make sure you **turn off** the [User Feedback][support-tab] in the dashboard Account settings to disable the default support experience.
+
+{% endAside %}
 
 ## Track your store listing performance
 
@@ -203,5 +213,6 @@ analytics id", width="787", height="121" %}
 [cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
 [dev-policies]: /docs/webstore/program_policies
+[support-tab]: #user-support-tab
 [troubleshooting]: /docs/webstore/troubleshooting/
 [whats-new]: /docs/extensions/whatsnew/
