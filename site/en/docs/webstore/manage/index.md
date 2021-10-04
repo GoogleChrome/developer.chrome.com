@@ -111,7 +111,7 @@ CWS dashboard Account setting page.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="800", height="185" %}
 
-Users will be able to ask questions, request features and report bugs in the **Support Tab** of your store item.
+Users will be able to ask questions, request features and report bugs in the **Support** Tab of your store item.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/OBDYk7n5dBcaqs3z1HtL.png", alt="Store item Support tab", width="800", height="121" %}
 
@@ -119,9 +119,9 @@ There are two ways in which you can manage your extension's user feedback.
 
 ### Using the User Support tab
 
-In the **User Support Tab** of your item you can view, respond and manage user feedback. Use the *Type*
+In the **User Support** Tab of the developer console you can view, respond and manage user feedback. Use the **Type**
 dropdown to filter user input by
-feature request, bug report or question. You can assign a status to each request and respond to each inquiry. Each ticket includes the extension
+feature request, bug report or question. You can assign a status to each request, and can respond to each inquiry. Each ticket includes the extension
 version, browser type and operating system to help you reproduce bugs
 more efficiently.
 
@@ -129,7 +129,7 @@ more efficiently.
 Support Tab", width="800", height="269" %}
 
 {% Aside %}
-Currently, there are no notifications for this feature:
+Currently, this feature does not provide notifications:
 
 - You will not be notified when a user posts a new request.
 - The user will not be notified when you post a response.
@@ -140,8 +140,8 @@ Currently, there are no notifications for this feature:
 
 You can set up a dedicated support site for your users, so that the support link goes there instead of the default forum experience. This site can be anything you like, such as:
 
-* A discussion group using Google Groups or some similar service
-* A form-handling site that lets users submit feedback or support tickets
+* A discussion group using Google Groups or some similar service.
+* A form-handling site that lets users submit feedback or support tickets.
 * A public information site with your product road map or other details.
 
 Once you set up the site, go to the **Store Listing** tab and add the link to the **Support URL** field. Your support link will then take users to your dedicated site.
