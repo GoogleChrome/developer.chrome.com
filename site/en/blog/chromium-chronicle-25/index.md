@@ -3,7 +3,7 @@ title: "The Chromium Chronicle #25: Thread Safety Annotations"
 description: >
   Learn how Clang's static analysis framework takes over the toil of thread-safety proofs.
 layout: 'layouts/blog-post.njk'
-date: 2021-10-01
+date: 2021-10-04
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   Chromium Chronicle image
@@ -11,7 +11,7 @@ tags:
   - chromium-chronicle
 ---
 
-**Episode 25:** by Victor Costan in SFO (September, 2021)<br>
+**Episode 25:** by Victor Costan in SFO (October, 2021)<br>
 [Previous episodes](/tags/chromium-chronicle/)
 
 In C++, ruling out the possibility of data races comes down to a small thread-safety correctness proof for every data member access.
