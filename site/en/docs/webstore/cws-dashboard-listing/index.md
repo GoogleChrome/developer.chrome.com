@@ -91,9 +91,8 @@ To explain how your extension works in more detail, you can provide a direct lin
 
 ### Providing a support URL {: #support-url }
 
-The CWS provides a built in user support system under your items' "Support tab", but you can use your own support page by including a link in the **Support URL**. Note that first you must activate "Enable User Feedback" in the Account settings page. 
-
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="800", height="185" %}
+The CWS provides a [built in user support][support-tab] experience under your items' **Support tab**, but you can use
+a [dedicated support site][support-site] by including a link in the **Support URL**. 
 
 ## You are almost ready to publish this item! 
 If you haven't done so yet, complete your listing by 
@@ -107,4 +106,6 @@ If you haven't done so yet, complete your listing by
 [distribution]: /docs/webstore/cws-dashboard-distribution
 [keyword-spam]: /docs/webstore/spam-faq/#keyword-spam
 [privacy]: /docs/webstore/cws-dashboard-privacy
+[support-tab]: /docs/webstore/manage/#user-support-tab
+[support-site]: /docs/webstore/manage/#dedicated-support-site
 [verify-owner]: https://support.google.com/webmasters/answer/9008080
