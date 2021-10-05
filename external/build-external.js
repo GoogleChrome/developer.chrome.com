@@ -27,7 +27,7 @@ async function run() {
   fs.mkdirSync(dataTarget, {recursive: true});
 
   /** @type {childProcess.CommonExecOptions} */
-  const options = {cwd: dataTarget};
+  const options = {cwd: dataTarget, stdio: 'inherit'};
 
   for (const script of scripts) {
     const r = path.join(__dirname, script);
@@ -65,6 +65,12 @@ async function run() {
     // eslint-disable-next-line no-process-exit
     process.exit(1);
   }
+
+  // Mark this local environment as being build-only, so it won't automatically sync.
+  const payload =
+    '// This file blocks synchronizing local data, because you ran `npm run build-external`.\n' +
+    '// Delete it to bring back automatic sync when you run `npm run dev`.';
+  fs.writeFileSync(path.join(__dirname, 'local-build-flag'), payload);
 }
 
 run();

@@ -1,5 +1,7 @@
 /**
  * @fileoverview Synchronizes the last known good state from shared storage.
+ *
+ * TODO(samthor): Can we replace this with a `gcloud` or even a basic `wget` command?
  */
 
 const storageApi = require('@google-cloud/storage');
@@ -62,8 +64,16 @@ async function syncBucket(bucketName, target) {
 async function run() {
   const target = path.join(__dirname, 'data');
 
+  // Since this is a call to synchronize this data, clobber local build.
+  try {
+    fs.rmSync(path.join(__dirname, 'local-build-flag'));
+    console.info('! Removing local build flag, will sync external data.');
+  } catch (e) {
+    // ignore
+  }
+
   const filenames = await syncBucket('external-dcc-data', target);
-  console.info('Synchronized external state:', filenames);
+  console.info('! Synchronized external state from Cloud Storage:', filenames);
 
   // If this is a CI build, we clobber synchronized data with anything found in "fallback/".
   if (process.env.CI) {
@@ -73,7 +83,7 @@ async function run() {
     for (const f of all) {
       fs.copyFileSync(path.join(fallbackTarget, f), path.join(target, f));
     }
-    console.info('Preparing CI run, copied:', all);
+    console.info('! Preparing CI run, copied:', all);
   }
 }
 
