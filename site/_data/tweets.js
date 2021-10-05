@@ -128,8 +128,9 @@ const formatEntities = tweet => {
  */
 module.exports = async () => {
   // We have to cast this to unknown first as Typescript gets very literal about the underlying type
-  // of the JSON.
+  // of the JSON (e.g., it thinks the author is literally of type "@ChromiumDev", not `string`).
   let tweets = /** @type {TwitterTweet[]} */ (
+    // eslint-disable-next-line node/no-missing-require
     /** @type {unknown} */ (require('../../external/data/tweets.json'))
   );
 
