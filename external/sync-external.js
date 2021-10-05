@@ -9,6 +9,10 @@ const fs = require('fs');
 const path = require('path');
 const stream = require('stream');
 
+// The bucket to synchronize. It's not filtered, and the bucket is public, owned by the internal
+// Google project "chrome-gcs-uploader".
+const bucketName = 'external-dcc-data';
+
 // This uses Application Default Credentials, but we just use it for synchronizing a public
 // bucket so it shouldn't need any special permissions.
 const storage = new storageApi.Storage();
@@ -64,7 +68,8 @@ async function syncBucket(bucketName, target) {
 async function run() {
   const target = path.join(__dirname, 'data');
 
-  // Since this is a call to synchronize this data, clobber local build.
+  // Since this is an explicit call to synchronize this data, clobber the local build flag: if the
+  // user had previously run a local build, they'll now automatically sync when using `npm run dev`.
   try {
     fs.rmSync(path.join(__dirname, 'local-build-flag'));
     console.info('! Removing local build flag, will sync external data.');
@@ -72,12 +77,12 @@ async function run() {
     // ignore
   }
 
-  const filenames = await syncBucket('external-dcc-data', target);
+  const filenames = await syncBucket(bucketName, target);
   console.info('! Synchronized external state from Cloud Storage:', filenames);
 
   // If this is a CI build, we clobber synchronized data with anything found in "fallback/".
   if (process.env.CI) {
-    // TODO(samthor): Just top-level files for now.
+    // TODO(samthor): This just copies top-level files for now.
     const fallbackTarget = path.join(__dirname, 'fallback');
     const all = fs.readdirSync(fallbackTarget);
     for (const f of all) {

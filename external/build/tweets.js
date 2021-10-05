@@ -1,5 +1,12 @@
+/**
+ * @fileoverview Fetches the most recent tweet from ChromiumDev and writes to storage.
+ */
+
+require('dotenv').config();
+
 const fetch = require('node-fetch');
 const fs = require('fs');
+const path = require('path');
 
 const tweetCount = 1;
 const url = `https://api.twitter.com/1.1/statuses/user_timeline.json?user_id=113713261&count=${tweetCount}&include_rts=false&exclude_replies=true&tweet_mode=extended&include_ext_alt_text=true`;
@@ -26,7 +33,8 @@ async function run() {
     throw new Error(`${error.code}: ${error.message}`);
   }
 
-  fs.writeFileSync('tweets.json', JSON.stringify(json));
+  const targetFile = path.join(__dirname, '../data/tweets.json');
+  fs.writeFileSync(targetFile, JSON.stringify(json));
 }
 
 run();

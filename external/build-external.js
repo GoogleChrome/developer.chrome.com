@@ -1,14 +1,9 @@
 /**
  * @fileoverview Builds all external sources. This clears the data/ folder here
- * and allows all scripts in build/ to write new files there.
+ * and runs all scripts in build/, which can write new files there.
  *
  * This is intended for use by Cloud Build, or by site devs doing local work.
  */
-
-// nb. This is important; we load dotenv here and pass environment down.
-// It's safe to call this inside the build scripts too, but we run them with
-// cwd=data/, so it can't find the env.
-require('dotenv').config();
 
 const fs = require('fs');
 const path = require('path');
@@ -22,12 +17,14 @@ async function run() {
   const scripts = glob.sync('build/*.js', {cwd: __dirname});
   scripts.sort(); // run in alphabetical order
 
+  const projectRoot = path.join(__dirname, '..');
+
   const dataTarget = path.join(__dirname, 'data');
   fs.rmSync(dataTarget, {recursive: true});
   fs.mkdirSync(dataTarget, {recursive: true});
 
   /** @type {childProcess.CommonExecOptions} */
-  const options = {cwd: dataTarget, stdio: 'inherit'};
+  const options = {cwd: projectRoot, stdio: 'inherit'};
 
   for (const script of scripts) {
     const r = path.join(__dirname, script);
@@ -42,7 +39,7 @@ async function run() {
   }
 
   // Determine the hash for everything in data/.
-  const h = crypto.createHash('sha256');
+  const hash = crypto.createHash('sha256');
   const allFiles = glob.sync('data/**/*', {cwd: __dirname});
   if (!allFiles.length) {
     throw new Error('no files generated, cowardly refusing to hash');
@@ -54,9 +51,9 @@ async function run() {
   for (const f of allFiles) {
     const p = path.join(__dirname, f);
     const bytes = fs.readFileSync(p);
-    h.update(bytes);
+    hash.update(bytes);
   }
-  const digest = h.digest('hex');
+  const digest = hash.digest('hex');
   console.info(`@ Generated digest=${digest} for ${allFiles.length} files`);
   fs.writeFileSync(path.join(__dirname, 'data/.hash'), digest);
 

@@ -1,12 +1,17 @@
 /**
- * @fileoverview
+ * @fileoverview This is run as part of `npm run dev`, and will synchronize the latest external
+ * data at most once every ~12 hours. (This takes a few seconds and it shouldn't block devs who
+ * don't care from getting their work done.)
+ *
+ * This will NOT synchronize if a previous local build was completed, and will warn as such. This
+ * prevents local changes from being automatically clobbered.
  */
 
 const fs = require('fs');
 const path = require('path');
 const childProcess = require('child_process');
 
-// Synchronize remote data at most once every 12 hours.
+// See if the synchronized data is more than this old. If so, we run "sync-external".
 const syncThresholdMs = 12 * 60 * 60 * 1000;
 
 async function run() {
@@ -18,15 +23,17 @@ async function run() {
     return;
   }
 
+  let mtimeMs = 0;
   try {
     const stat = fs.statSync(path.join(__dirname, 'data'));
-    const since = +new Date() - stat.mtimeMs;
-    if (since < syncThresholdMs) {
-      // Don't log at all, just don't synchronize.
-      return;
-    }
+    mtimeMs = stat.mtimeMs;
   } catch (e) {
-    // The folder probably doesn't exist. Sync.
+    // The folder probably doesn't exist.
+  }
+  const since = +new Date() - mtimeMs;
+  if (since < syncThresholdMs) {
+    // Don't log at all, and don't synchronize.
+    return;
   }
 
   const out = childProcess.spawnSync('npm run sync-external', {
@@ -34,6 +41,8 @@ async function run() {
     stdio: 'inherit',
   });
   if (out.status) {
+    // TODO(samthor): If we're offline and have valid data, this could perhaps allow builds to
+    // complete anyway: think the "building on a plane" case?
     throw new Error(`could not sync, non-zero status: ${out.status}`);
   }
 }
