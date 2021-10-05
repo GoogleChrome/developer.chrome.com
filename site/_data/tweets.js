@@ -1,11 +1,4 @@
-require('dotenv').config();
-const CacheAsset = require('@11ty/eleventy-cache-assets');
 const escapeStringRegexp = require('escape-string-regexp');
-
-// nb. All images and uploaded assets are in the web-dev-uploads bucket, but tweets are still in
-// the default project bucket.
-const url =
-  'https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/tweets.json';
 
 /**
  * Insert media (images/videos) into a tweet.
@@ -134,19 +127,11 @@ const formatEntities = tweet => {
  * @return {Promise<TwitterTweet[]>}
  */
 module.exports = async () => {
-  let tweets = process.env.CI
-    ? require('./tweets-sample.json')
-    : await CacheAsset(url, {
-        duration: '1h',
-        type: 'json',
-      }).catch(e => {
-        console.warn(e);
-        if (process.env.NODE_ENV === 'production') {
-          return undefined;
-        } else {
-          return require('./tweets-sample.json');
-        }
-      });
+  // We have to cast this to unknown first as Typescript gets very literal about the underlying type
+  // of the JSON.
+  let tweets = /** @type {TwitterTweet[]} */ (
+    /** @type {unknown} */ (require('../../external/data/tweets.json'))
+  );
 
   // Remove polls
   tweets = tweets.filter(tweet => !tweet.entities.polls);
