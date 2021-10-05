@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manage your Chrome Web Store Item"
 date: 2021-08-17
-updated: 2021-10-01
+updated: 2021-10-05
 description: >
   How to manage an extension or theme ("item") in the Chrome Web Store.
 ---
