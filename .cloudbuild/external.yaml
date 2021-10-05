@@ -1,0 +1,31 @@
+# This builds external data, and if the site passes a basic build, writes the data to
+# Cloud Storage.
+
+steps:
+  - name: node:14
+    id: 'Install dependencies'
+    entrypoint: npm
+    args: ['ci']
+
+  - name: node:14
+    id: 'Build external data'
+    entrypoint: npm
+    args: ['run', 'build-external']
+    env:
+    - 'PROJECT_ID=$PROJECT_ID'
+    - 'NODE_ENV=production'
+
+  - name: node:14
+    id: 'Build eleventy to confirm'
+    entrypoint: npm
+    args: ['run', 'eleventy']
+    env:
+    - 'NODE_ENV=production'
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: 'Synchronize content to external-dcc-data bucket'
+    entrypoint: bash
+    args:
+    - '-c'
+    - |
+      gsutil rsync external/data/ gs://external-dcc-data
