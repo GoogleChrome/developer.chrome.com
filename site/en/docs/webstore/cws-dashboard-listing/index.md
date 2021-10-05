@@ -91,10 +91,11 @@ To explain how your extension works in more detail, you can provide a direct lin
 
 ### Providing a support URL {: #support-url }
 
-The CWS provides a [built in user support][support-tab] experience under your items' **Support tab**, but you can use
+The Chrome Web Store provides a [built in user support][support-tab] experience under your items' **Support tab**, but you can use
 a [dedicated support site][support-site] by including a link in the **Support URL**. 
 
 ## You are almost ready to publish this item! 
+
 If you haven't done so yet, complete your listing by 
 -  Filling out your [privacy practices][privacy] 
 -  Providing your [distribution preferences][distribution].

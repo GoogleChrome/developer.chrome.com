@@ -106,13 +106,13 @@ store item by adding `/reviews` at the end of your item’s URL:
 ## Provide user support
 
 To ensure the best user experience and build a great extension it's important to
-collect, evaluate, and follow-up on user feedback. You can manage your extension's user feedback in
+collect, evaluate, and follow up on user feedback. You can manage your extension's user feedback in
 two ways:
 
 - By using the built in CWS User Support tab, or
 - By using a dedicated support site.
 
-Users will be able to communicate with you using the **Support** Tab of your store item.
+Users will be able to communicate with you using the **Support** tab of your store item.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/OBDYk7n5dBcaqs3z1HtL.png", alt="Store item Support tab", width="800", height="121" %}
 
@@ -122,7 +122,7 @@ First, you must enable user feedback in the developer console Account setting pa
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ArMfJztL1OlP6UektUwb.png", alt="Enable User Feedback Support tab", width="800", height="185" %}
 
-In the **User Support** Tab of the developer console you can view, respond and manage user feedback. Use the **Type**
+In the **User Support** tab of the developer console you can view, respond and manage user feedback. Use the **Type**
 dropdown to filter user input by
 feature request, bug report or question. You can assign a status to each request, and can respond to each inquiry. Each ticket includes the extension
 version, browser type and operating system to help you reproduce bugs
