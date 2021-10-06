@@ -276,8 +276,8 @@ this can potentially result in complexity of O(2<sup>n</sup>) visits for this ex
 {% Aside %}
 A recurrence relation for this specific example is:
 
-- layout(div) = 2 * layout(child)
-- layout(div) = 2 * 2 * layout(grandchild)
+- layout(div) = 2 &#42; layout(child)
+- layout(div) = 2 &#42; 2 &#42; layout(grandchild)
 - layout(div) = 2<sup>n</sup>
 
 Where `n` is the depth of the tree. 
