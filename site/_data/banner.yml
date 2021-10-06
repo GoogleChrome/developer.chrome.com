@@ -1,6 +1,6 @@
 type: info
-text: 'PWA Summit: a virtual conference to help everyone succeed with PWAs is on Oct 6 & 7.'
+text: 'PWA Summit: a virtual conference to help everyone succeed with PWAs is streaming today!'
 actions:
-  - text: Get your free ticket
-    href: https://pwasummit.org/register
+  - text: Join the live stream
+    href: https://www.youtube.com/watch?v=qbh_u2hvIjg
   - text: Dismiss
