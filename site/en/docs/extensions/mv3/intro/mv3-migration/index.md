@@ -199,7 +199,7 @@ chrome.action.onClicked.addListener(tab => { … });
 
 This change limits access to extension resources to specific sites/extensions.
 Instead of providing a list of files, you now provide a list of objects, each
-of which can map to a set of resources to a set of URLs and extension IDs:
+of which can map to a set of resources to a set of URLs or extension IDs:
 
 {% Columns %}
 ```json
@@ -221,11 +221,6 @@ of which can map to a set of resources to a set of URLs and extension IDs:
 }]
 ```
 {% endColumns %}
-
-{% Aside %}
-The `use_dynamic_url` key is not yet available. Support for this property will
-be coming in a future release.
-{% endAside %}
 
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
