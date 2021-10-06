@@ -196,7 +196,7 @@ In the example below we are simply switching a CSS property back and forth betwe
 However this results in an "infinitely growing" rectangle.
 
 <figure>
-{% Video src="video/kheDArv5csY6rvQUJDbWRscckLr1/DZxkoIlg22Ogrx5WepAc.mp4" %}
+{% Video src="video/kheDArv5csY6rvQUJDbWRscckLr1/DZxkoIlg22Ogrx5WepAc.mp4", autoplay="true", controls="true" %}
   <figcaption>
     The video and <a href="https://hysteresis-layout.glitch.me/">demo</a> show a hysteresis bug in Chrome 92 and below. It is fixed in Chrome 93.</figcaption>
 </figure>
