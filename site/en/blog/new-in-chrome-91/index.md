@@ -33,7 +33,7 @@ Here's what you need to know:
 * All the videos from I/O are available on [Chrome Developers YouTube channel](io-playlist)!
 * And there's plenty [more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), working, and shooting
+I'm [Pete LePage](https://petelepage.com/), working, and shooting
 from home, let's dive in and see what's new for developers in Chrome 91!
 
 ## Suggested names for File System Access API {: #filenames }
