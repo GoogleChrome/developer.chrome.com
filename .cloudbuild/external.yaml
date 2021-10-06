@@ -18,16 +18,20 @@ steps:
     - 'NODE_ENV=production'
 
   - name: node:14
-    id: 'Build eleventy to confirm'
+    id: 'Create .eleventyignore file'
     entrypoint: npm
-    args: ['run', 'eleventy']
+    args: ['run', 'ignore']
     env:
-    # This does NOT set `NODE_ENV=production`, as we don't need the full build
-    # (and this disables ignores we need below).
     # TODO: We should try to remove more stuff here, because it's supposed to
     # be a fast build to sanity-check output.
     # It needs to include extensions and API generation.
     - 'ELEVENTY_IGNORE_NACL=true'
+
+  - name: node:14
+    id: 'Build eleventy in dev mode to confirm'
+    entrypoint: npm
+    args: ['run', 'eleventy']
+    # This does NOT set `NODE_ENV=production`, as we don't need the full build.
 
   - name: 'gcr.io/cloud-builders/gcloud'
     id: 'Synchronize content to external-dcc-data bucket'
@@ -37,6 +41,3 @@ steps:
     - |
       gsutil rsync external/data/ gs://external-dcc-data
 
-# TODO: Just for testing yolo.
-options:
-  machineType: 'E2_HIGHCPU_8'
