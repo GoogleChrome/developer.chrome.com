@@ -69,6 +69,8 @@ module.exports = {
         return 'layouts/namespace-reference.njk';
       }
 
+      // Every item in this folder should either be displaying an API (and have `data.api` set) or
+      // have a specific layout override, so throw otherwise.
       throw new Error(`API reference page has no data.layout: ${data.layout}`);
     },
 
