@@ -23,27 +23,32 @@
     </div>
   {% endif %}
 
-  <article class="post stack measure-long center-margin width-full gap-top-300 lg:gap-top-400 pad-left-400 pad-right-400">
-    <div class="stack flow-space-200">
-      {% include 'partials/post-headline.njk' %}
+  {# The article is wrapped again so that the ToC aligns on its right on desktop #}
+  <div class="display-flex gap-top-300 lg:gap-top-400">
+    <div class="display-flex justify-content-center width-full">
+      <article class="post stack measure-long width-full pad-left-400 pad-right-400">
+        <div class="stack flow-space-200">
+          {% include 'partials/post-headline.njk' %}
+        </div>
+
+        {% if authors %}
+          <div class="stack-exception-600 lg:stack-exception-700">
+            {% include 'partials/post-authors.njk' %}
+          </div>
+        {% endif %}
+
+        {% include 'partials/toc-inner.njk' %}
+        {% include 'partials/draft.njk' %}
+
+        <div class="stack stack--block type center-images">
+          {{ content | safe }}
+        </div>
+
+        {% include 'partials/tags.njk' %}
+        {% include 'partials/updated.njk' %}
+      </article>
+
+      {% include 'partials/toc-side.njk' %}
     </div>
-
-    {% if authors %}
-      <div class="stack-exception-600 lg:stack-exception-700">
-        {% include 'partials/post-authors.njk' %}
-      </div>
-    {% endif %}
-
-    {% include 'partials/toc-inner.njk' %}
-    {% include 'partials/draft.njk' %}
-
-    <div class="stack stack--block type center-images">
-      {{ content | safe }}
-    </div>
-
-    {% include 'partials/tags.njk' %}
-    {% include 'partials/updated.njk' %}
-  </article>
-  
-  {% include 'partials/toc-side.njk' %} 
+  </div>
 {% endblock %}
