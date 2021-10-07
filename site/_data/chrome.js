@@ -25,7 +25,15 @@ module.exports = async function buildVersionInformation() {
     __dirname,
     '../../external/data/chrome-release.json'
   );
-  return /** @type {{channels: Object<string, ChromeReleaseData>}} */ (
+  const data = /** @type {{channels: Object<string, ChromeReleaseData>}} */ (
     JSON.parse(fs.readFileSync(chromeReleaseDataFile, 'utf-8'))
   );
+
+  for (const channel in data.channels) {
+    const o = data.channels[channel];
+    // JSON-encoding flattens this to a string, so reconstruct the Date.
+    o.stableDate = new Date(o.stableDate);
+  }
+
+  return data;
 };
