@@ -7,3 +7,17 @@ This folder contains the system that deals with external data for developer.chro
 - otherwise, run `npm run sync-external` to retrieve the last known good files stored in Cloud Storage
 
 - running `npm run dev` will automatically pull external data
+
+## Changes
+
+If you make changes to the build script(s), you can manually kick off a Cloud Build task to confirm that the output builds and to write it to storage for other users.
+
+```bash
+$ gcloud builds submit --config .cloudbuild/external.yaml .
+```
+
+You can confirm the contents of the bucket by:
+
+```bash
+$ gsutil ls -l gs://external-dcc-data
+```

@@ -1,32 +1,36 @@
 timeout: 2700s # set build timeout to 45 mins
 steps:
-- name: node
-  entrypoint: npm
-  args: ['ci']
-- name: node
-  entrypoint: npm
-  args: ['run', 'cloud-secrets']
-  env:
-  - 'PROJECT_ID=$PROJECT_ID'
-- name: node
-  entrypoint: npm
-  args: ['run', 'production']
-- name: node
-  entrypoint: npm
-  args: ['run', 'algolia']
-- name: 'gcr.io/cloud-builders/gcloud'
-  entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-    # This snippet lets us pass additional args via the Cloud Build console
-    # in the _EXTRA_GCLOUD_ARGS var.
-    # nb. We don't have to specify --project; it's part of the environment.
-    gcloud app deploy ${_EXTRA_GCLOUD_ARGS}
+  - name: node
+    entrypoint: npm
+    args: ['ci']
+
+  - name: node
+    entrypoint: npm
+    args: ['run', 'cloud-secrets']
+
+  - name: node
+    entrypoint: npm
+    args: ['run', 'production']
+
+  - name: node
+    entrypoint: npm
+    args: ['run', 'algolia']
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+    - '-c'
+    - |
+      # This snippet lets us pass additional args via the Cloud Build console
+      # in the _EXTRA_GCLOUD_ARGS var.
+      # nb. We don't have to specify --project; it's part of the environment.
+      gcloud app deploy ${_EXTRA_GCLOUD_ARGS}
+
 substitutions:
   _EXTRA_GCLOUD_ARGS:  # default empty
 
 options:
   machineType: 'E2_HIGHCPU_8'  # yolo
   env:
-  - 'NODE_OPTIONS=--max_old_space_size=4096 --unhandled-rejections=strict'
+  - 'NODE_OPTIONS=--unhandled-rejections=strict'
+  - 'PROJECT_ID=$PROJECT_ID'

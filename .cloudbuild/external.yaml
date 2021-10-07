@@ -10,11 +10,15 @@ steps:
     args: ['ci']
 
   - name: node:14
+    id: 'Configure secrets'
+    entrypoint: npm
+    args: ['run', 'cloud-secrets']
+
+  - name: node:14
     id: 'Build external data'
     entrypoint: npm
     args: ['run', 'build-external']
     env:
-    - 'PROJECT_ID=$PROJECT_ID'
     - 'NODE_ENV=production'
 
   - name: node:14
@@ -43,4 +47,5 @@ steps:
 
 options:
   env:
-  - 'NODE_OPTIONS=--max_old_space_size=4096 --unhandled-rejections=strict'
+  - 'PROJECT_ID=$PROJECT_ID'
+  - 'NODE_OPTIONS=--unhandled-rejections=strict'
