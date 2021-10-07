@@ -13,6 +13,9 @@ const url = `https://api.twitter.com/1.1/statuses/user_timeline.json?user_id=113
 
 async function run() {
   if (!process.env.TWITTER_BEARER) {
+    if (process.env.CI) {
+      return; // do nothing, the fallback data will win
+    }
     throw new Error('No `TWITTER_BEARER` environment var for production');
   }
 

@@ -10,6 +10,7 @@ const path = require('path');
 const glob = require('glob');
 const childProcess = require('child_process');
 const crypto = require('crypto');
+const syncFallback = require('./lib/sync-fallback');
 
 async function run() {
   let errors = 0;
@@ -26,6 +27,13 @@ async function run() {
     // The "external/data/" folder probably doesn't exist.
   }
   fs.mkdirSync(dataTarget, {recursive: true});
+
+  // If this is a CI build, we start with everything found in "fallback/". It won't win, but it
+  // will be used in cases where credentials and such aren't available.
+  if (process.env.CI) {
+    const all = await syncFallback();
+    console.info('! Using fallback before build in CI, copied:', all);
+  }
 
   /** @type {childProcess.CommonExecOptions} */
   const options = {cwd: projectRoot, stdio: 'inherit'};
