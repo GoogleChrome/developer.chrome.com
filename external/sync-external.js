@@ -8,7 +8,7 @@ const storageApi = require('@google-cloud/storage');
 const fs = require('fs');
 const path = require('path');
 const stream = require('stream');
-const syncFallback = require('./lib/sync-fallback');
+const syncTestdata = require('./lib/sync-testdata');
 
 // The bucket to synchronize. It's not filtered, and the bucket is public, owned by the internal
 // Google project "chrome-gcs-uploader".
@@ -83,7 +83,7 @@ async function run() {
 
   // If this is a CI build, we clobber synchronized data with anything found in "fallback/".
   if (process.env.CI) {
-    const all = await syncFallback();
+    const all = await syncTestdata();
     console.info('! Preparing CI run, copied:', all);
   }
 }

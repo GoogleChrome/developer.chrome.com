@@ -32,7 +32,7 @@ async function run() {
   }
   const since = +new Date() - mtimeMs;
   if (since < syncThresholdMs) {
-    // Don't log at all, and don't synchronize.
+    // Don't log at all, and don't synchronize, the data is recent enough.
     return;
   }
 
@@ -41,9 +41,21 @@ async function run() {
     stdio: 'inherit',
   });
   if (out.status) {
-    // TODO(samthor): If we're offline and have valid data, this could perhaps allow builds to
-    // complete anyway: think the "building on a plane" case?
-    throw new Error(`could not sync, non-zero status: ${out.status}`);
+    if (mtimeMs) {
+      // There is a folder here so it probably has valid data. Don't throw, but error, perhaps
+      // we're offline.
+      console.warn(
+        '! Cannot synchronize, but old historic data exists in "/external/data/". ' +
+          'Run `npm run sync-external` to try again.'
+      );
+      return;
+    }
+
+    // We have no data, so throw.
+    throw new Error(
+      'Could not sync external data into "/external/data/", ' +
+        `non-zero status: ${out.status}`
+    );
   }
 }
 

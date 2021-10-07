@@ -10,7 +10,7 @@ const path = require('path');
 const glob = require('glob');
 const childProcess = require('child_process');
 const crypto = require('crypto');
-const syncFallback = require('./lib/sync-fallback');
+const syncTestdata = require('./lib/sync-testdata');
 
 async function run() {
   let errors = 0;
@@ -21,17 +21,13 @@ async function run() {
   const projectRoot = path.join(__dirname, '..');
 
   const dataTarget = path.join(__dirname, 'data');
-  try {
-    fs.rmSync(dataTarget, {recursive: true});
-  } catch (e) {
-    // The "external/data/" folder probably doesn't exist.
-  }
+  fs.rmSync(dataTarget, {recursive: true, force: true});
   fs.mkdirSync(dataTarget, {recursive: true});
 
   // If this is a CI build, we start with everything found in "fallback/". It won't win, but it
   // will be used in cases where credentials and such aren't available.
   if (process.env.CI) {
-    const all = await syncFallback();
+    const all = await syncTestdata();
     console.info('! Using fallback before build in CI, copied:', all);
   }
 
