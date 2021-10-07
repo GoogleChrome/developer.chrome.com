@@ -73,7 +73,7 @@ Using this process, we learned that the source location was the most important p
 We turned this insight into the first draft of the information that we wanted to make available to DevTools via the [Chrome DevTools Protocol (CDP)](https://chromedevtools.github.io/devtools-protocol/):
 
 Excerpt from [third_party/blink/public/devtools_protocol/browser_protocol.pdl](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/public/devtools_protocol/browser_protocol.pdl;l=652;drc=be78fe5cf948ee4863e72c9240a1b6f9f7430fde)
- ``` pdl
+ ```txt
  type ContentSecurityPolicyIssueDetails extends object
    properties
      # The url not included in allowed sources.
@@ -89,7 +89,7 @@ Excerpt from [third_party/blink/public/devtools_protocol/browser_protocol.pdl](h
 
 
 The definition above essentially encodes a JSON data-structure. It is written in a simple language called PDL (protocol data language). PDL is used for two purposes. First, we use PDL to generate the TypeScript definitions the DevTools front-end relies on. For example, the above PDL definition generates the following TypeScript interface:
-``` typescript
+```typescript
 export interface ContentSecurityPolicyIssueDetails {
      /**
       * The url not included in allowed sources.
@@ -109,7 +109,7 @@ export interface ContentSecurityPolicyIssueDetails {
 
  
 Secondly, and probably more importantly, we generate a C++ library from the definition that handles generating and sending these data structures from the C++ Chromium back-end to the DevTools front-end. Using that library, a `ContentSecurityPolicyIssueDetails` object can be created using the following piece of C++ code:
-``` c++
+```c++
 protocol::Audits::ContentSecurityPolicyIssueDetails::create()
                      .setViolatedDirective(d->violated_directive)
                      .setIsReportOnly(d->is_report_only)
