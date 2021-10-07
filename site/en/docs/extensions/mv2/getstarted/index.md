@@ -19,7 +19,7 @@ demonstration of their relationships.
 
 To start, create a new directory to hold the extension's files.
 
-The completed extension can be downloaded [here][6]
+The completed extension can be downloaded [here][get-started-zip].
 
 ## Create the manifest {: #manifest }
 
