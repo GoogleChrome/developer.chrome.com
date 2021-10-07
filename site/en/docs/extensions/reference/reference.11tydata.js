@@ -28,15 +28,10 @@ function namespaceForData(data) {
     return undefined;
   }
 
-  if (api in chromeApiNamespaces) {
-    console.warn('found API :party:', api);
-    return chromeApiNamespaces[api];
-  }
-
-  // This can be called several times by Eleventy. The first time it's called it's unlikely that
-  // the namespace data is available yet, so we can't warn here if it's missing.
-  console.warn('failed to find API', api);
-  return undefined;
+  // This can be called several times by Eleventy because the data gets resolved in an odd order.
+  // It's fine to return undefined here, and we don't want to log (since it'll be spammy), and
+  // we'll be called again if we previously returned undefined.
+  return chromeApiNamespaces[api];
 }
 
 module.exports = {
