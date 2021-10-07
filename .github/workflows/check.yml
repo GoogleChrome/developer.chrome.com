@@ -46,6 +46,8 @@ jobs:
               - '**/*.scss'
             njk:
               - '**/*.njk'
+            _external:
+              - 'external/**/*'
       
       # Use the filter to check if files with a specific file type were changed
       # in the PR. If they were, run the relevant linters. Otherwise, skip.
@@ -66,9 +68,13 @@ jobs:
         if: ${{ steps.filter.outputs.scss == 'true' }}
         run: npm run lint:scss
 
+      - name: Build External
+        if: ${{ steps.filter.outputs._external == 'true' }}
+        run: npm run build-external
+
       - name: Build Eleventy
-        if: ${{ steps.filter.outputs.md == 'true' || steps.filter.outputs.js == 'true' || steps.filter.outputs.yml == 'true' || steps.filter.outputs.njk == 'true'}}
-        run: npm run ignore && npm run eleventy
+        if: ${{ steps.filter.outputs.md == 'true' || steps.filter.outputs.js == 'true' || steps.filter.outputs.yml == 'true' || steps.filter.outputs.njk == 'true' }}
+        run: npm run ignore && npm run maybe-sync-external && npm run eleventy
 
       # Only run tests if the PR touches behavior related files.
       - name: Test
