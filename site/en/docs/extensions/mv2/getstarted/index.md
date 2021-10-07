@@ -9,12 +9,12 @@ description: Step-by-step instructions on how to create a Chrome Extension.
 {% include 'partials/extensions/mv2-legacy-page.md' %}
 
 Extensions are made of different, but cohesive, components. Components can include [background
-scripts][1], [content scripts][2], an [options page][3], [UI elements][4] and various logic files.
+scripts][background], [content scripts][content-scripts], an [options page][options], [UI elements][user-interface] and various logic files.
 Extension components are created with web development technologies: HTML, CSS, and JavaScript. An
 extension's components will depend on its functionality and may not require every option.
 
 This tutorial will build an extension that allows the user to change the background color of any
-page on [developer.chrome.com][5]. It will use many core components to give an introductory
+page on [developer.chrome.com][developer-chrome-docs]. It will use many core components to give an introductory
 demonstration of their relationships.
 
 To start, create a new directory to hold the extension's files.
@@ -23,7 +23,7 @@ The completed extension can be downloaded [here][get-started-zip].
 
 ## Create the manifest {: #manifest }
 
-Extensions start with their [manifest][7]. Create a file called `manifest.json` and include the
+Extensions start with their [manifest][manifest]. Create a file called `manifest.json` and include the
 following code.
 
 ```json
@@ -52,7 +52,7 @@ manifest, a generic toolbar icon will be created for the extension.
 
 ## Add instruction {: #background }
 
-Although the extension has been installed, it has no instruction. Introduce a [background script][9]
+Although the extension has been installed, it has no instruction. Introduce a [background script][background]
 by creating a file titled `background.js`, and placing it inside the
 extension directory.
 
@@ -77,8 +77,8 @@ The extension is now aware that it includes a non-persistent background script a
 registered file for important events it needs to listen for.
 
 This extension will need information from a persistent variable as soon as it's installed. Start by
-including a listening event for [`runtime.onInstalled`][11] in the background script. Inside the
-`onInstalled` listener, the extension will set a value using the [storage][12] API. This will allow
+including a listening event for [`runtime.onInstalled`][oninstalled] in the background script. Inside the
+`onInstalled` listener, the extension will set a value using the [storage][storage] API. This will allow
 multiple extension components to access that value and update it.
 
 ```js
@@ -89,7 +89,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 ```
 
-Most APIs, including the [storage][13] API, must be registered under the `"permissions"` field in
+Most APIs, including the [storage][storage] API, must be registered under the `"permissions"` field in
 the manifest for the extension to use them.
 
 ```json
@@ -116,7 +116,7 @@ Click the link to view the background script's console log, "`The color is green
 
 ## Introduce a user interface {: #user_interface }
 
-Extensions can have many forms of a [user interface][14], but this one will use a [popup][15].
+Extensions can have many forms of a [user interface][user-interface], but this one will use a [popup][popup].
 Create and add a file titled `popup.html` to the directory. This
 extension uses a button to change the background color.
 
@@ -139,7 +139,7 @@ extension uses a button to change the background color.
 ```
 
 Like the background script, this file needs to be designated as a popup in the manifest under
-[`page_action`][17].
+[`page_action`][page-action].
 
 ```json
 {
@@ -159,7 +159,7 @@ Like the background script, this file needs to be designated as a popup in the m
 ```
 
 Designation for toolbar icons is also included under `page_action` in the `default_icons` field.
-Download the images folder [here][18], unzip it, and place it in the extension's directory. Update
+Download the images folder [here][images-zip], unzip it, and place it in the extension's directory. Update
 the manifest so the extension knows how to use the images.
 
 ```json
@@ -186,7 +186,7 @@ the manifest so the extension knows how to use the images.
 ```
 
 Extensions also display images on the extension management page, the permissions warning, and
-favicon. These images are designated in the manifest under [`icons`][19].
+favicon. These images are designated in the manifest under [`icons`][icons].
 
 ```json
 {
@@ -221,7 +221,7 @@ If the extension is reloaded at this stage, it will include a grey-scale icon, b
 any functionality differences. Because `page_action` is declared in the manifest, it is up to the
 extension to tell the browser when the user can interact with `popup.html`.
 
-Add declared rules to the background script with the [`declarativeContent`][20] API within the
+Add declared rules to the background script with the [`declarativeContent`][declarative-content] API within the
 `runtime.onInstalled` listener event.
 
 ```js
@@ -241,7 +241,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 ```
 
-The extension will need permission to access the [`declarativeContent`][21] API in its manifest.
+The extension will need permission to access the [`declarativeContent`][declarative-content] API in its manifest.
 
 ```json
 {
@@ -290,7 +290,7 @@ Reload the extension to view the green button.
 
 ## Layer logic {: #logic }
 
-The extension now knows the popup should be available to users on [developer.chrome.com][23] and
+The extension now knows the popup should be available to users on [developer.chrome.com][developer-chrome-docs] and
 displays a colored button, but needs logic for further user interaction. Update `popup.js` to
 include the following code.
 
@@ -308,12 +308,12 @@ changeColor.onclick = function(element) {
 ```
 
 The updated code adds an `onclick` event on the button, which triggers a [programatically injected
-content script][24]. This turns the background color of the page the same color as the button. Using
+content script][content-programmatic]. This turns the background color of the page the same color as the button. Using
 programmatic injection allows for user-invoked content scripts, instead of auto inserting unwanted
 code into web pages.
 
-The manifest will need the [`activeTab`][25] permission to allow the extension temporary access to
-the [`tabs`][26] API. This enables the extension to call [`tabs.executeScript`][27].
+The manifest will need the [`activeTab`][activetab] permission to allow the extension temporary access to
+the [`tabs`][tabs-api] API. This enables the extension to call [`tabs.executeScript`][tabs-executescript].
 
 ```json
 {
@@ -420,39 +420,34 @@ Congratulations! The directory now holds a fully-functional, albeit simplistic, 
 
 What's next?
 
-- The [Chrome Extension Overview][30] backs up a bit, and fills in a lot of detail about the
+- The [Chrome Extension Overview][overview] backs up a bit, and fills in a lot of detail about the
   Extensions architecture in general, and some specific concepts developers will want to be familiar
   with.
-- Learn about the options available for debugging Extensions in the [debugging tutorial][31].
+- Learn about the options available for debugging Extensions in the [debugging tutorial][debugging].
 - Chrome Extensions have access to powerful APIs above and beyond what's available on the open web.
-  The [chrome.\* APIs documentation][32] will walk through each API.
-- The [developer's guide][33] has dozens of additional links to pieces of documentation relevant to
+  The [chrome.\* APIs documentation][reference] will walk through each API.
+- The [developer's guide][devguide-mv2] has dozens of additional links to pieces of documentation relevant to
   advanced extension creation.
 
-[1]: /background_pages
-[2]: /content_scripts
-[3]: /options
-[4]: /user_interface
-[5]: /docs/
-[6]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/n7V7IbH6D6gqNCV7Kp5t.zip "get_started_complete.zip"
-[7]: /docs/extensions/mv2/manifest
-[9]: /background_pages
-[11]: /runtime#event-onInstalled
-[12]: /storage
-[13]: /storage
-[14]: /user_interface
-[15]: /user_interface#popup
-[17]: /pageAction
-[18]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qwlTyQ1ah3RmqsgDhRkL.zip "images.zip"
-[19]: /user_interface#icons
-[20]: /declarativeContent
-[21]: /declarativeContent
-[23]: /
-[24]: /content_scripts#pi
-[25]: /docs/extensions/mv2/manifest/activeTab/
-[26]: /tabs
-[27]: /tabs#method-executeScript
-[30]: /overview
-[31]: /tut_debugging
-[32]: /reference
-[33]: /devguide
+[background]: /docs/extensions/mv2/background_pages/
+[content-scripts]: /content_scripts
+[options]: /options
+[user-interface]: /user_interface
+[developer-chrome-docs]: /docs/
+[get-started-zip]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/n7V7IbH6D6gqNCV7Kp5t.zip "get_started_complete.zip"
+[manifest]: /docs/extensions/mv2/manifest
+[oninstalled]: /runtime#event-onInstalled
+[storage]: /storage
+[popup]: /user_interface#popup
+[page-action]: /pageAction
+[images-zip]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qwlTyQ1ah3RmqsgDhRkL.zip "images.zip"
+[icons]: /user_interface#icons
+[declarative-content]: /declarativeContent
+[content-programmatic]: /content_scripts#programmatic
+[activetab]: /docs/extensions/mv2/manifest/activeTab/
+[tabs-api]: /tabs
+[tabs-executescript]: /tabs#method-executeScript
+[overview]: /overview
+[debugging]: /tut_debugging
+[reference]: /reference
+[devguide-mv2]: /docs/extensions/mv2/devguide/
