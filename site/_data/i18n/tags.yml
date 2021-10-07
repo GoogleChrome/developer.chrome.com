@@ -91,6 +91,11 @@ devtools:
 new-in-devtools:
   en: What's New in DevTools
   es: Qué hay de nuevo en DevTools
+  ja: DevTools の新機能
+  ko: DevTools 의 새로운 기능
+  ru: Новинки DevTools
+  zh: DevTools 新功能
+  pt: O que há de novo no DevTools
 
 devtools-engineering:
   en: DevTools Engineering
