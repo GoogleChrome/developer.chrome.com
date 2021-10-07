@@ -29,11 +29,13 @@ function namespaceForData(data) {
   }
 
   if (api in chromeApiNamespaces) {
+    console.warn('found API :party:', api);
     return chromeApiNamespaces[api];
   }
 
   // This can be called several times by Eleventy. The first time it's called it's unlikely that
   // the namespace data is available yet, so we can't warn here if it's missing.
+  console.warn('failed to find API', api);
   return undefined;
 }
 
@@ -68,11 +70,11 @@ module.exports = {
       }
 
       // Otherwise, if we're a namespace, use a predefined layout.
-      const namespace = namespaceForData(data);
-      if (namespace) {
+      if (data.api) {
         return 'layouts/namespace-reference.njk';
       }
-      return data.layout;
+
+      throw new Error(`API reference page has no data.layout: ${data.layout}`);
     },
 
     /**
