@@ -429,25 +429,25 @@ What's next?
 - The [developer's guide][devguide-mv2] has dozens of additional links to pieces of documentation relevant to
   advanced extension creation.
 
+[activetab]: /docs/extensions/mv2/manifest/activeTab/
 [background]: /docs/extensions/mv2/background_pages/
+[content-programmatic]: /content_scripts#programmatic
 [content-scripts]: /content_scripts
-[options]: /options
-[user-interface]: /user_interface
+[debugging]: /tut_debugging
+[declarative-content]: /declarativeContent
 [developer-chrome-docs]: /docs/
+[devguide-mv2]: /docs/extensions/mv2/devguide/
 [get-started-zip]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/n7V7IbH6D6gqNCV7Kp5t.zip "get_started_complete.zip"
+[icons]: /user_interface#icons
+[images-zip]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qwlTyQ1ah3RmqsgDhRkL.zip "images.zip"
 [manifest]: /docs/extensions/mv2/manifest
 [oninstalled]: /runtime#event-onInstalled
-[storage]: /storage
-[popup]: /user_interface#popup
+[options]: /options
+[overview]: /overview
 [page-action]: /pageAction
-[images-zip]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qwlTyQ1ah3RmqsgDhRkL.zip "images.zip"
-[icons]: /user_interface#icons
-[declarative-content]: /declarativeContent
-[content-programmatic]: /content_scripts#programmatic
-[activetab]: /docs/extensions/mv2/manifest/activeTab/
+[popup]: /user_interface#popup
+[reference]: /reference
+[storage]: /storage
 [tabs-api]: /tabs
 [tabs-executescript]: /tabs#method-executeScript
-[overview]: /overview
-[debugging]: /tut_debugging
-[reference]: /reference
-[devguide-mv2]: /docs/extensions/mv2/devguide/
+[user-interface]: /user_interface
