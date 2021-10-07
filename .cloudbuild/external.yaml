@@ -41,3 +41,6 @@ steps:
     - |
       gsutil rsync external/data/ gs://external-dcc-data
 
+options:
+  env:
+  - 'NODE_OPTIONS=--max_old_space_size=4096 --unhandled-rejections=strict'
