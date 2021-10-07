@@ -28,3 +28,5 @@ substitutions:
 
 options:
   machineType: 'E2_HIGHCPU_8'  # yolo
+  env:
+  - 'NODE_OPTIONS=--max_old_space_size=4096 --unhandled-rejections=strict'

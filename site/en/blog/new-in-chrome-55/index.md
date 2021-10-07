@@ -29,7 +29,7 @@ tags:
 
 And there's plenty more.
 
-I'm Pete LePage, here's what's new for developers in Chrome 55!
+I'm [Pete LePage](https://petelepage.com/), here's what's new for developers in Chrome 55!
 
 ## Pointer Events {: #pointer-events }
 

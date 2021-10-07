@@ -273,8 +273,8 @@ experience by anticipating this possibility and checking for collisions at insta
 
 {% Aside %}
 
-`_execute_action`, `_execute_browser_action`, and `_execute_page_action` will not appear in the list
-of commands returned by `command.getAll()`.
+`_execute_action` will not appear in the list
+of commands returned by `commands.getAll()`.
 
 {% endAside %}
 

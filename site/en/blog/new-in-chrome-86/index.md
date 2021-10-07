@@ -27,7 +27,7 @@ Here's what you need to know:
   [Multi-screen Window Placement API](#win-place).
 * There's some new stuff in CSS, and [plenty more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), working and shooting from home,
+I'm [Pete LePage](https://petelepage.com/), working and shooting from home,
 let's dive in and see what's new for developers in Chrome 86!
 
 ## File System Access {: #fs-access }

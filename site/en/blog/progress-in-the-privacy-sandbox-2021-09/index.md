@@ -5,6 +5,7 @@ description: >
   reduction and timeline updates.
 layout: 'layouts/blog-post.njk'
 date: 2021-09-30
+updated: 2021-10-01
 authors:
   - rowan_m
 hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/PIf4d4mkMtBCRtM13A42.png'
@@ -246,7 +247,7 @@ is available on the origin trials site.
 
 As we continue to publish these monthly updates and progress through the Privacy
 Sandbox as a whole we want to make sure that you as a developer are getting the
-information and support that you need. Let us know on [@chromiumDev
+information and support that you need. Let us know on [@ChromiumDev
 Twitter](https://twitter.com/ChromiumDev) if there's anything that we could
 improve in this series, we'll use your input to continue improving the format.
 

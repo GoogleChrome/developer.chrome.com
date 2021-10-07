@@ -1,6 +1,15 @@
 ## 더 많은 DevTools 기능 {: #whats-new }
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
+### Chrome 95 {: #chrome95 }
+* [새 CSS 길이 작성 도구](/ko/blog/new-in-devtools-95/#)
+* [문제 탭에서 문제 숨기기](/ko/blog/new-in-devtools-95/#hide-issues)
+* [속성 표시 개선](/ko/blog/new-in-devtools-95/#properties)
+* [Lighthouse 8.4](/ko/blog/new-in-devtools-95/#lighthouse)
+* [소스 패널에서 스니펫 정렬](/ko/blog/new-in-devtools-95/#snippets)
+* [번역된 릴리스 정보로 이동하는 링크 및 번역 관련 버그 제보](/ko/blog/new-in-devtools-95/#localized)
+* [DevTools 커맨드 메뉴 UI 개선](/ko/blog/new-in-devtools-95/#command-menu)
+
 ### Chrome 94 {: #chrome94 }
 
 * [DevTools 를 이제 여러분들이 선호하는 언어로 사용하세요](/ko/blog/new-in-devtools-94/#localized)
