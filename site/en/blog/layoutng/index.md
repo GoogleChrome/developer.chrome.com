@@ -34,7 +34,7 @@ performance issues, rendering bugs, and missing features.
 LayoutNG was an opportunity for me to help systematically fix these issues within Blink's layout system, 
 and represents the sum of many engineers' efforts over the years.
 
-I'll explain how a large architecture change like this can reduce and mitigate various types of bugs and performance issues.
+In this post, I'll explain how a large architecture change like this can reduce and mitigate various types of bugs and performance issues.
 
 ## A 30,000 foot view of layout engine architectures
 
@@ -43,9 +43,9 @@ Previously, Blink's layout tree was what I'll refer to as a "mutable tree".
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/3XiF82V7kn7G881m7Q5v.png", 
 alt="Shows the tree as described in the following text.", width="800", height="371" %}
 
-Each object in the layout tree contained "input" information, 
+Each object in the layout tree contained *input* information, 
 such as the available size imposed by a parent, 
-the position of any floats, and "output" information, 
+the position of any floats, and *output* information, 
 for example, the final width and height of the object or its x and y position.
 
 These objects were kept around between renders. 
@@ -84,7 +84,7 @@ It not only produces the
 [immutable flat list representation](/blog/renderingng-data-structures/#inline-fragment-items) 
 for inline layout, but also features paragraph-level caching for faster relayout, 
 shape-per-paragraph to apply font features across elements and words, 
-new Unicode bidirectional algorithm using ICU, a lot of correctness fixes, and more.
+a new Unicode bidirectional algorithm using ICU, a lot of correctness fixes, and more.
 
 ## Types of layout bugs
 
@@ -93,7 +93,7 @@ each with different root causes.
 
 ### Correctness
 
-When we think about bugs in the rendering system, we are typically thinking about correctness, 
+When we think about bugs in the rendering system, we typically think about correctness, 
 for example: "Browser A has X behaviour, while Browser B has Y behaviour", 
 or "Browsers A and B are both broken". 
 Previously this is what we spent a lot of our time on, 
@@ -153,7 +153,7 @@ A fix for this type of problem would typically cause a severe performance regres
 Today (as described above) we have an immutable parent constraints object which describes all the inputs from the parent layout to the child. 
 We store this with the resulting immutable fragment. 
 Due to this, 
-we have a centralized place where we compare or "diff" these two inputs to determine if the child needs to have another layout pass performed. 
+we have a centralized place where we *diff* these two inputs to determine if the child needs to have another layout pass performed. 
 This diffing logic is complicated, but well-contained. 
 Debugging this class of under-invalidation issues typically results in manually inspecting the two inputs 
 and deciding what in the input changed such that another layout pass is required.
@@ -206,7 +206,7 @@ it was incredibly easy to introduce bugs like this.
 If the code made the mistake of reading the size or position of an object at the incorrect time or stage 
 (as we didn't "clear" the previous size or position for example), 
 we would immediately add a subtle hysteresis bug. 
-These bugs typically don't appear in testing as the majority of tests focus on a single layout and render pass. 
+These bugs typically don't appear in testing as the majority of tests focus on a single layout and render. 
 Even more concerningly, we knew that some of this hysteresis was needed to get some layout modes working correctly. 
 We had bugs where we'd perform an optimization to remove a layout pass, 
 but introduce a "bug" as the layout mode required two passes in order to get the correct output.
@@ -234,7 +234,7 @@ Often when fixing an under-invalidation bug we'd trigger a performance cliff.
 We often had to make difficult choices favouring correctness over performance. 
 In the next section we'll dive deeper into how we mitigated these types of performance issues.
 
-Rise of the two-pass layouts and performance cliffs
+#### Rise of the two-pass layouts and performance cliffs
 
 Flex and grid layout represented a shift in the expressiveness of layouts on the web. 
 However, these algorithms were fundamentally different from the block layout algorithm that came before them.
