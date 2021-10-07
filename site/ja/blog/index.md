@@ -5,6 +5,6 @@ permalink: '{{locale}}/blog/{% if pagination.pageNumber > 0 %}{{ pagination.page
 layout: 'layouts/blog-landing.njk'
 type: landing
 pagination:
-  data: collections.blog-en
+  data: collections.blog-ja
   size: 24
 ---
