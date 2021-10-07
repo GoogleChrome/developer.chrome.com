@@ -7,6 +7,9 @@ jobs:
   lint_and_test:
     name: Lint, test and build
     runs-on: ubuntu-latest
+    env:
+      # Increase RAM limit, and make uncaught exceptions crash (default in 16+).
+      NODE_OPTIONS: --max_old_space_size=4096 --unhandled-rejections=strict
     steps:
       - name: Checkout
         uses: actions/checkout@v1.0.0

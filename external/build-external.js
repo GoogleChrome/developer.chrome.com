@@ -20,7 +20,11 @@ async function run() {
   const projectRoot = path.join(__dirname, '..');
 
   const dataTarget = path.join(__dirname, 'data');
-  fs.rmSync(dataTarget, {recursive: true});
+  try {
+    fs.rmSync(dataTarget, {recursive: true});
+  } catch (e) {
+    // The "external/data/" folder probably doesn't exist.
+  }
   fs.mkdirSync(dataTarget, {recursive: true});
 
   /** @type {childProcess.CommonExecOptions} */
@@ -54,7 +58,10 @@ async function run() {
     hash.update(bytes);
   }
   const digest = hash.digest('hex');
-  console.info(`@ Generated digest=${digest} for ${allFiles.length} files`);
+  console.info(
+    `@ Generated digest=${digest} for ${allFiles.length} files:`,
+    allFiles
+  );
   fs.writeFileSync(path.join(__dirname, 'data/.hash'), digest);
 
   // If there were any errors, return with a non-zero status code anyway.
