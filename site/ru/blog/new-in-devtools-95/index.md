@@ -39,20 +39,20 @@ tags:
 `padding`).
 
 <!-- Hover over the unit type, and notice the unit type is underlined. Click on it to select a unit type from the dropdown. -->
-При наведении курсора на значение вы увидите, что единица измерения подчёркнута. При клике по ней
-откроется выпадающее меню, позволяющее удобно выбрать другую единицу.
+Наведите курсор на значение и заметьте, что единица измерения подчёркнута. Кликните по ней
+, чтобы выбрать единицу измерения из выпадающего меню.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/vWiU9o1DxsOpWXM0SrBa.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 <!-- Hover over the unit value, and your mouse pointer is changed to horizontal cursor. Drag horizontally to increase or decrease the value. To adjust the value by 10, hold the <kbd>Shift</kbd> key when dragging. -->
-Если навести мышку на числовое значение, то курсор изменится на горизонтальные стрелки.
-Перетаскивайте курсор горизонтально чтобы увеличить или уменьшить числовое значение. Чтобы изменять
-единицы десятками зажмите клавишу  <kbd>Shift</kbd> при перетасивании.
+Наведите мышку на числовое значение, и ваш курсор изменится на горизонтальные стрелки.
+Перетащите курсор горизонтально чтобы увеличить или уменьшить числовое значение. Чтобы изменить
+значение десятками зажмите клавишу  <kbd>Shift</kbd> при перетаскивании.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/nbvRDPyARJmdTeB9ajOq.mp4", autoplay="true", muted="true", loop="true",class="screenshot" %}
 
 <!-- You can still edit the unit value as text — just click on the value and start editing. -->
-Вы по прежнему можете менять значение при помощи ввода с клавиатура — нажмите на значение и начните ввод.
+Вы по прежнему можете менять значение как текст — просто нажмите на значение и начните редактирование.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/hBk2t2DCX7aI5yBX4J8h.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
@@ -65,19 +65,19 @@ tags:
 ## Скрытие задач во вкладке Issues {: #hide-issues }
 
 <!-- You can now hide specific issues in the Issues tab to focus only on those issues that matter to you. -->
-Вы можете скрыть проблемы во вкладке Issues чтобы сосредоточиться только на важных для вас проблемах.
+Теперь вы можете скрыть определенные проблемы во вкладке Issues, чтобы сосредоточиться только на важных для вас проблемах.
 
 <!-- In the [Issues tab](/docs/devtools/issues/), hover over on an issue you would like to hide. Click on **More options**  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Hide issues like this**. -->
-Во [вкладке Issues](/docs/devtools/issues/) наведите курсор на проблему, кликните на иконку
+Во [вкладке Issues](/docs/devtools/issues/) наведите курсор на проблему, которую вы хотите скрыть.  Кликните на 
 **More options** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="Троеточие, меню More
 options", width="4",
-height="20" %} &nbsp;  справа и выберите **Hide issues like this**, чтобы скрыть её.
+height="20" %} &nbsp;  > **Hide issues like this**.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Uw3mxGGK5CNoUflHgS7p.png", alt="Меню hide issues", width="800", height="488" %}
 
 <!-- All hidden issues will be added under the **Hidden issues** pane. Expand the pane. You can unhide all hidden issues or a selected one.  -->
-Все скрытые проблемы будут добавлены в панель **Hidden issues**.  Её можно развернуть. Вы можете
-сделать вновь видимыми все скрытые проблемы или только одну из них.
+Все скрытые проблемы будут добавлены в панель **Hidden issues**.  Разверните панель. Вы можете
+сделать вновь видимыми все скрытые проблемы или только выбранную.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dnPfPGkxpkcSZRIHqGDA.png", alt="Панель скрытых проблем", width="800", height="488" %}
 
@@ -87,7 +87,7 @@ height="20" %} &nbsp;  справа и выберите **Hide issues like this*
 
 
 <!-- ## Improved the display of properties {: #properties } -->
-## Улучшение отображения свойств {: #properties }
+## Улучшенное отображение свойств {: #properties }
 
 <!-- DevTools improve the display of properties by: -->
 В DevTools улучшено отображение свойств:
@@ -100,7 +100,7 @@ height="20" %} &nbsp;  справа и выберите **Hide issues like this*
 
 <!-- For example, the snippet below creates an [`URL`](https://developer.mozilla.org/docs/Web/API/URL) object `link` with 2 own properties: `user` and `access`, and updates the value of an inherited property `search`. -->
 Например, сниппет ниже создаёт новый объект [`URL`](https://developer.mozilla.org/docs/Web/API/URL) с
-именем `link` с двумя свойствами: `user` и `access`, и обновляет значение наследуемого свойства `search`.
+именем `link` с двумя собственными свойствами: `user` и `access`, и обновляет значение наследуемого свойства `search`.
 
 ```js
 /* example.js */
@@ -113,8 +113,8 @@ link.search = `?access=${link.access}`;
 ```
 
 <!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
-Выведем `link` в **Console**. Собственные свойства отображаются вверху списка и выделены жирным. Эти
-изменения облегчают поиск пользовательских свойств, особенно для [Web
+Попробуйте вывести `link` в **Console**. Собственные свойства отображаются вверху списка и выделены жирным. Эти
+изменения облегчают поиск кастомных свойств, особенно для [Web
 APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`) с множеством
 унаследованных свойств.
 
@@ -122,7 +122,7 @@ APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`
 выделены жирным и выводятся первыми в списке", width="800", height="561" %}
 
 <!-- Apart from these changes, the properties in the  **Properties** pane are also flattened now for better DOM properties debugging experience, especially for [Web components](https://www.webcomponents.org/introduction).  -->
-Кроме того свойства в панели **Properties** теперь тоже выводятся в более плоской структуре для
+Кроме этих изменений, свойства в панели **Properties** теперь тоже выводятся в плоской структуре для
 улучшения отладки свойств DOM, особенно для [веб-компонентов](https://www.webcomponents.org/introduction).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hIQGKlYkWKJzljHZaaM9.png", alt="Плоская структура свойств", width="800", height="449" %}
@@ -135,16 +135,15 @@ APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`
 
 
 <!-- ## Lighthouse 8.4 in the Lighthouse panel {: #lighthouse } -->
-## Lighthouse 8.4 в панели Lighthouse {: #lighthouse }
+## Lighthouse 8.4 во вкладке Lighthouse {: #lighthouse }
 
 <!-- The **Lighthouse** panel is now running Lighthouse 8.4. Lighthouse will now detect if the [Largest Containful Paint (LCP)](https://web.dev/lcp) element was a lazy-loaded image and recommend removing the `loading` attribute from it. -->
-В панели **Lighthouse** теперь запускается Lighthouse 8.4. Lighthouse теперь определяет является ли 
-[Largest Containful Paint (LCP)](https://web.dev/lcp) лениво загружаемым изображением и показывает
+Во вкладке **Lighthouse** теперь запускается Lighthouse 8.4. Lighthouse теперь определяет является ли 
+[Largest Containful Paint (LCP)](https://web.dev/lcp)  изображением с отложенной загрузкой и показывает
 рекомендацию удалить атрибут `loading`.
 
 <!-- Check out the [What’s new in Lighthouse 8.4](/blog/lighthouse-8-4/) for more details on the updates. -->
-Почитайте [What’s new in Lighthouse 8.4](/blog/lighthouse-8-4/) для получения подробной информации
-об обновлении.
+Ознакомьтесь с [What’s new in Lighthouse 8.4](/blog/lighthouse-8-4/), чтобы больше узнать об обновлении.
 
 {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/u9nepJj3wgpMgoNxSaDZ.png", alt="Уведомление о ленивой
 загрузке LCP в отчёте Lighthouse", width="800", height="502", class="screenshot" %}
@@ -162,7 +161,7 @@ APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`
 отсортированы в алфавитном порядке. Раньше они не сортировались.
 
 <!-- Utilize the snippets feature to run commands quicker. Watch this video for a [tip](https://youtu.be/NOal2gTzftI?t=176)! -->
-Используйте функцию сниппетов для более быстрого выполнения команд. Посмотрите видео с [советами](https://youtu.be/NOal2gTzftI?t=176)!
+Используйте функцию сниппетов для более быстрого выполнения команд. Посмотрите это [видео](https://youtu.be/NOal2gTzftI?t=176), чтобы получить подсказку!
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/54ea0986cb59f71242ed62d3dd6405cc65f623a4 #}
 
@@ -172,19 +171,19 @@ APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`
 
 
 <!-- ## New links to translated release notes and report a translation bug {: #localized } -->
-## Новые ссылки на переводы обновлений и сообщения об ошибках в переводах {: #localized }
+## Новые ссылки на переводы обновлений и сообщение об ошибке в переводе {: #localized }
 
 <!-- You can now click to read the DevTools release notes in 6 other languages - [Russian](/ru/blog/new-in-devtools-95), [Chinese](/zh/blog/new-in-devtools-95), [Spanish](/es/blog/new-in-devtools-95), [Japanese](/ja/blog/new-in-devtools-95), [Portuguese](/pt/blog/new-in-devtools-95) and [Korean](/ko/blog/new-in-devtools-95)  via the What’s new tab.  -->
-Теперь вы можете почитать о новинках в DevTools на 6 разных языках -
+Теперь вы можете почитать о новинках в DevTools на 6 других языках -
 Russian](/ru/blog/new-in-devtools-95), [Chinese](/zh/blog/new-in-devtools-95),
 [Spanish](/es/blog/new-in-devtools-95), [Japanese](/ja/blog/new-in-devtools-95),
 [Portuguese](/pt/blog/new-in-devtools-95) and [Korean](/ko/blog/new-in-devtools-95) во вкладке What’s new.
 
 <!-- Since Chrome 94, you can [set your preferred language](/blog/new-in-devtools-94/#localized) in DevTools. If you found any issues with the translations, help us improve it by [reporting a translation issue](https://goo.gle/devtools-translate) via **More options** > **Help** > **Report a translation bug**.  -->
 Начиная с версии 94 в Chrome вы можете [выбрать предпочитаемый
-язык](/blog/new-in-devtools-94/#localized) в DevTools. Если у вас будут какие-либо замечания к
-переводу, то вы можете помочь нам улучшить его, [создав задачу](https://goo.gle/devtools-translate)
-через меню **More options** > **Help** > **Report a translation bug**.
+язык](/blog/new-in-devtools-94/#localized) в DevTools. Если вы обнаружили какие-либо ошибки в
+переводе, помогите нам улучшить его, [сообщив о проблеме с переводом](https://goo.gle/devtools-translate)
+через **More options** > **Help** > **Report a translation bug**.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qrg4Ahf4sYseL2NQZwIl.png", alt="Новые ссылки на переводы обновлений и сообщения об ошибках в переводах", width="800", height="487" %}
 
@@ -195,18 +194,18 @@ Russian](/ru/blog/new-in-devtools-95), [Chinese](/zh/blog/new-in-devtools-95),
 
 
 <!-- ## Improved UI for DevTools command menu {: #command-menu } -->
-## Улучшение UI для командного меню в DevTools {: #command-menu }
+## Улучшенный UI для командного меню в DevTools {: #command-menu }
 
 <!-- Did you find it hard to search for a file in the [Command Menu](/docs/devtools/command-menu/#open)? Good news for you, the **Command Menu** user interface is now enhanced!  -->
-Было ли вам сложно искать файлы в [меню Command](/docs/devtools/command-menu/#open)? Хорошие
-новости! Интерфейс **Command Menu** стал удобнее.
+Вам было сложно искать файлы в [меню Command](/docs/devtools/command-menu/#open)? Хорошие
+новости: пользовательский интерфейс **Command Menu** теперь улучшен!
 
 <!-- Open the **Command Menu** to search for a file with keyboard shortcut <kbd>Control</kbd>+<kbd>P</kbd> in Windows and Linux, or <kbd>Command</kbd>+<kbd>P</kbd> in MacOS. -->
-Откройте **Command Menu** для поиска файлов при помощи шортката <kbd>Control</kbd>+<kbd>P</kbd> в
-Windows и Linux или <kbd>Command</kbd>+<kbd>P</kbd> в MacOS.
+Откройте **Command Menu**, чтобы найти файл, при помощи шортката <kbd>Control</kbd>+<kbd>P</kbd> на
+Windows и Linux или <kbd>Command</kbd>+<kbd>P</kbd> на MacOS.
 
 <!-- The UI improvements of the **Command Menu** is still ongoing, stay tuned for more updates! -->
-Улучшения UI **Command Menu** ещё не окончены, следите за новостями!
+Улучшения пользовательского интерфейса **Command Menu** все еще продолжаются, следите за обновлениями!
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/TJT2ry3vmUW1KoFgSKQP.png", alt="Command Menu", width="800", height="389" %}
 
