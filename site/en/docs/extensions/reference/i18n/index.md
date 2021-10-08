@@ -339,23 +339,23 @@ function detectLanguage(inputText) {
 
 For more details on calling `detectLanguage(inputText)`, see the [API reference][20].
 
-[1]: /docs/extensions/mv2/i18n-messages
-[2]: /docs/extensions/mv2/tabs
+[1]: /docs/extensions/mv3/i18n-messages
+[2]: /docs/extensions/mv3/manifest
 [3]: #supported-locales
-[4]: #examples-getMessage
+[4]: #examples-getmessage
 [5]: #overview-predefined
-[6]: /docs/extensions/mv2/i18n-messages
+[6]: /docs/extensions/mv3/i18n-messages
 [7]: https://code.google.com/apis/gadgets/docs/i18n.html#BIDI
-[8]: https://code.google.com/chrome/webstore/docs/i18n.html#localeTable
-[9]: #testing-win
-[10]: #testing-mac
-[11]: #testing-linux
-[12]: #testing-chromeos
+[8]: /docs/webstore/i18n/#choosing-locales-to-support
+[9]: #windows
+[10]: #mac-os-x
+[11]: #linux
+[12]: #chrome-os
 [13]: https://www.chromium.org/developers/creating-and-using-profiles
-[14]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/api/i18n/
-[15]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/master/mv2-archive/extensions/news/
-[16]: /docs/extensions/mv2/samples
-[17]: /docs/extensions/mv2/i18n-messages
+[14]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/api/i18n/
+[15]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/extensions/news/
+[16]: /docs/extensions/mv3/samples
+[17]: /docs/extensions/mv3/i18n-messages/#placeholders
 [18]: #method-getMessage
 [19]: #method-getAcceptLanguages
 [20]: #method-detectLanguage
