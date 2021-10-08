@@ -47,13 +47,13 @@ tags:
 
 <!-- Hover over the unit value, and your mouse pointer is changed to horizontal cursor. Drag horizontally to increase or decrease the value. To adjust the value by 10, hold the <kbd>Shift</kbd> key when dragging. -->
 Наведите мышку на числовое значение, и ваш курсор изменится на горизонтальные стрелки.
-Перетащите курсор горизонтально чтобы увеличить или уменьшить числовое значение. Чтобы изменить
-значение десятками зажмите клавишу  <kbd>Shift</kbd> при перетаскивании.
+Перетащите курсор горизонтально, чтобы увеличить или уменьшить числовое значение. Чтобы изменить
+значение десятками, зажмите клавишу  <kbd>Shift</kbd> при перетаскивании.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/nbvRDPyARJmdTeB9ajOq.mp4", autoplay="true", muted="true", loop="true",class="screenshot" %}
 
 <!-- You can still edit the unit value as text — just click on the value and start editing. -->
-Вы по прежнему можете менять значение как текст — просто нажмите на значение и начните редактирование.
+Вы по-прежнему можете менять значение как текст — просто нажмите на значение и начните редактирование.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/hBk2t2DCX7aI5yBX4J8h.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
@@ -139,8 +139,8 @@ APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`
 ## Lighthouse 8.4 во вкладке Lighthouse {: #lighthouse }
 
 <!-- The **Lighthouse** panel is now running Lighthouse 8.4. Lighthouse will now detect if the [Largest Containful Paint (LCP)](https://web.dev/lcp) element was a lazy-loaded image and recommend removing the `loading` attribute from it. -->
-Во вкладке **Lighthouse** теперь запускается Lighthouse 8.4. Lighthouse теперь определяет является ли 
-[Largest Containful Paint (LCP)](https://web.dev/lcp)  изображением с отложенной загрузкой и показывает
+Во вкладке **Lighthouse** теперь запускается Lighthouse 8.4. Lighthouse теперь определяет, является ли 
+[Largest Containful Paint (LCP)](https://web.dev/lcp)  изображением с отложенной загрузкой, и показывает
 рекомендацию удалить атрибут `loading`.
 
 <!-- Check out the [What’s new in Lighthouse 8.4](/blog/lighthouse-8-4/) for more details on the updates. -->
@@ -181,7 +181,7 @@ Russian](/ru/blog/new-in-devtools-95), [Chinese](/zh/blog/new-in-devtools-95),
 [Portuguese](/pt/blog/new-in-devtools-95) and [Korean](/ko/blog/new-in-devtools-95) во вкладке Что нового (What’s new).
 
 <!-- Since Chrome 94, you can [set your preferred language](/blog/new-in-devtools-94/#localized) in DevTools. If you found any issues with the translations, help us improve it by [reporting a translation issue](https://goo.gle/devtools-translate) via **More options** > **Help** > **Report a translation bug**.  -->
-Начиная с версии 94 в Chrome вы можете [выбрать предпочитаемый
+Начиная с версии 94, в Chrome вы можете [выбрать предпочитаемый
 язык](/blog/new-in-devtools-94/#localized) в DevTools. Если вы обнаружили какие-либо ошибки в
 переводе, помогите нам улучшить его, [сообщив о проблеме с переводом](https://goo.gle/devtools-translate)
 через **Больше опций** (More options) > **Справка** (Help) > **Сообщить об ошибке перевода** (Report a translation bug).
@@ -202,7 +202,7 @@ Russian](/ru/blog/new-in-devtools-95), [Chinese](/zh/blog/new-in-devtools-95),
 новости: пользовательский интерфейс **Command Menu** теперь улучшен!
 
 <!-- Open the **Command Menu** to search for a file with keyboard shortcut <kbd>Control</kbd>+<kbd>P</kbd> in Windows and Linux, or <kbd>Command</kbd>+<kbd>P</kbd> in MacOS. -->
-Откройте **Command Menu**, чтобы найти файл, при помощи шортката <kbd>Control</kbd>+<kbd>P</kbd> на
+Чтобы найти файл, откройте **Command Menu** при помощи шортката <kbd>Control</kbd>+<kbd>P</kbd> на
 Windows и Linux или <kbd>Command</kbd>+<kbd>P</kbd> на MacOS.
 
 <!-- The UI improvements of the **Command Menu** is still ongoing, stay tuned for more updates! -->
