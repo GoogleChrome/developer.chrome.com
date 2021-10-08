@@ -242,7 +242,7 @@ However, these algorithms were fundamentally different from the block layout alg
 Block layout (in almost all cases) only requires the engine to perform layout on all its children exactly once. 
 This is great for performance, but ends up not being as expressive as web developers want.
 
-As an incredibly simple example, 
+For example, 
 often you want the size of all children to expand to the size of the largest. 
 To support this, the parent layout (flex or grid) 
 will perform a measure pass to determine how large each of the children is, 
