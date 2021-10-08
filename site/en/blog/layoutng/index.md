@@ -138,9 +138,11 @@ Previously our code would look like:
 if (/* some very complicated statement */) {
   child->ForceLayout();
 }
+```
 
 A fix for this type of bug would typically be:
 
+```cpp
 if (/* some very complicated statement */ ||
     /* another very complicated statement */) {
   child->ForceLayout();
@@ -177,11 +179,13 @@ The diffing code for the above example is:
 
 ```cpp
 if (width.IsPercent()) {
-  if (old_constraints.WidthPercentageSize() != new_constraints.WidthPercetageSize())
+  if (old_constraints.WidthPercentageSize() 
+    != new_constraints.WidthPercentageSize())
    return kNeedsLayout;
 }
 if (height.IsPercent()) {
-  if (old_constraints.HeightPercentageSize() != new_constraints.HeightPercetageSize())
+  if (old_constraints.HeightPercentageSize() 
+    != new_constraints.HeightPercentageSize())
    return kNeedsLayout;
 }
 ```
