@@ -6,7 +6,7 @@ authors:
 date: 2021-09-20
 updated: 2021-09-20
 description:
-    "Новый инструмент выбора единиц измерения длины в CSS, скрытие задач во вкладке Issues,
+    "Новый инструмент выбора единиц измерения длины в CSS, скрытие задач во вкладке Проблемы (Issues),
     улучшение отображения свойств и многое другое."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/2cApOUqd99Nqvzgzs678.jpg'
 alt: ''
@@ -35,7 +35,7 @@ tags:
 В DevTools добавлен простой и удобный способ изменения единиц измерения длины в CSS!
 
 <!-- In the **Styles** pane, look for any CSS property with length (e.g. `height`, `padding`). -->
-В панели **Styles** найдите любое свойство с единицей измерения длины (например, `height`,
+В панели **Стили** (Styles) найдите любое свойство с единицей измерения длины (например, `height`,
 `padding`).
 
 <!-- Hover over the unit type, and notice the unit type is underlined. Click on it to select a unit type from the dropdown. -->
@@ -62,21 +62,21 @@ tags:
 
 
 <!-- ## Hide issues in the Issues tab {: #hide-issues } -->
-## Скрытие задач во вкладке Issues {: #hide-issues }
+## Скрытие задач во вкладке Проблемы (Issues) {: #hide-issues }
 
 <!-- You can now hide specific issues in the Issues tab to focus only on those issues that matter to you. -->
-Теперь вы можете скрыть определенные проблемы во вкладке Issues, чтобы сосредоточиться только на важных для вас проблемах.
+Теперь вы можете скрыть определенные проблемы во вкладке Проблемы (Issues), чтобы сосредоточиться только на важных для вас проблемах.
 
 <!-- In the [Issues tab](/docs/devtools/issues/), hover over on an issue you would like to hide. Click on **More options**  &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Hide issues like this**. -->
-Во [вкладке Issues](/docs/devtools/issues/) наведите курсор на проблему, которую вы хотите скрыть.  Кликните на 
-**More options** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="Троеточие, меню More
-options", width="4",
-height="20" %} &nbsp;  > **Hide issues like this**.
+Во [вкладке Проблемы (Issues)](/docs/devtools/issues/) наведите курсор на проблему, которую вы хотите скрыть.  Кликните на 
+**Больше опций** (More options) &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="Троеточие, меню Больше опций (More
+options)", width="4",
+height="20" %} &nbsp;  > **Скрыть такие проблемы** (Hide issues like this).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Uw3mxGGK5CNoUflHgS7p.png", alt="Меню hide issues", width="800", height="488" %}
 
 <!-- All hidden issues will be added under the **Hidden issues** pane. Expand the pane. You can unhide all hidden issues or a selected one.  -->
-Все скрытые проблемы будут добавлены в панель **Hidden issues**.  Разверните панель. Вы можете
+Все скрытые проблемы будут добавлены в панель **Скрытые проблемы** (Hidden issues).  Разверните панель. Вы можете
 сделать вновь видимыми все скрытые проблемы или только выбранную.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/dnPfPGkxpkcSZRIHqGDA.png", alt="Панель скрытых проблем", width="800", height="488" %}
@@ -95,8 +95,8 @@ height="20" %} &nbsp;  > **Hide issues like this**.
 <!-- - Always bold and sort own properties first in the **Console**, **Sources** panel and **Properties** pane. 
 - Flatten the properties display in the **Properties** pane. -->
 - Собственные свойства всегда выделены жирным шрифтом и находятся вверху списка во вкладках
-  **Console**, **Sources** и в панели **Properties**. 
-- Свойства отображаются в плоском виде в панели **Properties**. 
+  **Консоль** (Console), **Источники** (Sources) и в панели **Свойства** (Properties). 
+- Свойства отображаются в плоском виде в панели **Свойства** (Properties). 
 
 <!-- For example, the snippet below creates an [`URL`](https://developer.mozilla.org/docs/Web/API/URL) object `link` with 2 own properties: `user` and `access`, and updates the value of an inherited property `search`. -->
 Например, сниппет ниже создаёт новый объект [`URL`](https://developer.mozilla.org/docs/Web/API/URL) с
@@ -113,7 +113,7 @@ link.search = `?access=${link.access}`;
 ```
 
 <!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
-Попробуйте вывести `link` в **Console**. Собственные свойства отображаются вверху списка и выделены жирным. Эти
+Попробуйте вывести `link` в **Консоль** (Console). Собственные свойства отображаются вверху списка и выделены жирным. Эти
 изменения облегчают поиск кастомных свойств, особенно для [Web
 APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`) с множеством
 унаследованных свойств.
@@ -122,7 +122,7 @@ APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`
 выделены жирным и выводятся первыми в списке", width="800", height="561" %}
 
 <!-- Apart from these changes, the properties in the  **Properties** pane are also flattened now for better DOM properties debugging experience, especially for [Web components](https://www.webcomponents.org/introduction).  -->
-Кроме этих изменений, свойства в панели **Properties** теперь тоже выводятся в плоской структуре для
+Кроме этих изменений, свойства в панели **Свойства** (Properties) теперь тоже выводятся в плоской структуре для
 улучшения отладки свойств DOM, особенно для [веб-компонентов](https://www.webcomponents.org/introduction).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hIQGKlYkWKJzljHZaaM9.png", alt="Плоская структура свойств", width="800", height="449" %}
@@ -154,10 +154,10 @@ APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`
 
 
 <!-- ## Sort snippets in the Sources panel {: #snippets } -->
-## Сортировка снипетов во вкладке Sources {: #snippets }
+## Сортировка снипетов во вкладке Источники (Sources) {: #snippets }
 
 <!-- The [snippets](/docs/devtools/javascript/snippets/) in the **Snippets** pane under the **Sources** panel are now sorted alphabetically. Previously, it’s not sorted. -->
-[Сниппеты](/docs/devtools/javascript/snippets/) в панели **Snippets** на вкладке **Sources** теперь
+[Сниппеты](/docs/devtools/javascript/snippets/) в панели **Фрагменты** (Snippets) на вкладке **Источники** (Sources) теперь
 отсортированы в алфавитном порядке. Раньше они не сортировались.
 
 <!-- Utilize the snippets feature to run commands quicker. Watch this video for a [tip](https://youtu.be/NOal2gTzftI?t=176)! -->
@@ -165,7 +165,7 @@ APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/54ea0986cb59f71242ed62d3dd6405cc65f623a4 #}
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/knb78RG6NCETitMbNoyV.png", alt="Сортировка сниппетов на панели Sources", width="800", height="475" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/knb78RG6NCETitMbNoyV.png", alt="Сортировка сниппетов на панели Источники", width="800", height="475" %}
 
 Задача в трекере Chromium: [1243976](https://crbug.com/1243976)
 
@@ -177,13 +177,13 @@ APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`
 Теперь вы можете почитать о новинках в DevTools на 6 других языках -
 Russian](/ru/blog/new-in-devtools-95), [Chinese](/zh/blog/new-in-devtools-95),
 [Spanish](/es/blog/new-in-devtools-95), [Japanese](/ja/blog/new-in-devtools-95),
-[Portuguese](/pt/blog/new-in-devtools-95) and [Korean](/ko/blog/new-in-devtools-95) во вкладке What’s new.
+[Portuguese](/pt/blog/new-in-devtools-95) and [Korean](/ko/blog/new-in-devtools-95) во вкладке Что нового (What’s new).
 
 <!-- Since Chrome 94, you can [set your preferred language](/blog/new-in-devtools-94/#localized) in DevTools. If you found any issues with the translations, help us improve it by [reporting a translation issue](https://goo.gle/devtools-translate) via **More options** > **Help** > **Report a translation bug**.  -->
 Начиная с версии 94 в Chrome вы можете [выбрать предпочитаемый
 язык](/blog/new-in-devtools-94/#localized) в DevTools. Если вы обнаружили какие-либо ошибки в
 переводе, помогите нам улучшить его, [сообщив о проблеме с переводом](https://goo.gle/devtools-translate)
-через **More options** > **Help** > **Report a translation bug**.
+через **Больше опций** (More options) > **Справка** (Help) > **Сообщить об ошибке перевода** (Report a translation bug).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qrg4Ahf4sYseL2NQZwIl.png", alt="Новые ссылки на переводы обновлений и сообщения об ошибках в переводах", width="800", height="487" %}
 
