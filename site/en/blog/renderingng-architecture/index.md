@@ -12,7 +12,7 @@ tags:
 ---
 
 {% Aside %}
-Check out the next post in the series: [Key data structures and their roles in RenderingNG](/blog/renderingng-data-structures/).
+This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more about [RenderingNG](/blog/renderingng),  [key data structures](/blog/renderingng-data-structures/), [VideoNG](/blog/videong/), and [LayoutNG](/blog/layoutng/).
 {% endAside %}
 
 In a [previous post](/blog/renderingng/),

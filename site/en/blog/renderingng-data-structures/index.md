@@ -16,6 +16,10 @@ tags:
   - rendering
 ---
 
+{% Aside %}
+This post is a part of a series on the Chromium rendering engine. Check out the rest of the series to learn more about [RenderingNG](/blog/renderingng), [the architecture](/blog/renderingng-architecture/), [VideoNG](/blog/videong/), and [LayoutNG](/blog/layoutng/).
+{% endAside %}
+
 Previous posts in this series gave an overview of the
 [goals, key properties](/blog/renderingng/)
 and [high-level component pieces](/blog/renderingng-architecture/)
