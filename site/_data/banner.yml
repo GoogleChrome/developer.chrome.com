@@ -1,0 +1,6 @@
+type: info
+text: 'The countdown to Chrome Dev Summit 2021 is on! Request an invite to participate in workshops, learning lounges and office hours.'
+actions:
+  - text: Request an invite
+    href: https://goo.gle/cds2021
+  - text: Dismiss

@@ -61,6 +61,9 @@ module.exports = eleventyConfig => {
   // to use it for its build.
   eleventyConfig.setUseGitIgnore(false);
 
+  // Watch our external data in case it is synchronized or rebuilt.
+  eleventyConfig.addWatchTarget('./external/data/');
+
   // Merge eleventy's data cascade. This means directory data files will
   // cascade down to any child directories.
   eleventyConfig.setDataDeepMerge(true);

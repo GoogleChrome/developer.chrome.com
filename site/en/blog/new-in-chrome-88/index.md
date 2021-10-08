@@ -34,7 +34,7 @@ Here's what you need to know:
 * All the videos from [Chrome Dev Summit](#cds) are up.
 * And, there's [plenty more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), working, and shooting
+I'm [Pete LePage](https://petelepage.com/), working, and shooting
 from home, let's dive in and see what's new for developers in Chrome 88!
 
 ## Manifest v3 {: #mv3 }

@@ -29,7 +29,7 @@ Chrome 77 is rolling out now!
 * [Chrome DevSummit 2019](#cds2019) is happening November 11-12 2019.
 * And plenty [more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), let's dive in and see what's
+I'm [Pete LePage](https://petelepage.com/), let's dive in and see what's
 new for developers in Chrome 77!
 
 ## Largest Contentful Paint {: #lcp }

@@ -128,10 +128,15 @@ policy. Developers should implement any language-specific code within a single e
 
 ### How many sites/keywords/brands can be listed in the metadata? {: #keyword-repetition }
 
-At most five instances of a keyword. Keywords must be relevant to the extension's purpose. Do not
-repeat brand names in the description. When listing supported websites or brands in the description,
-do not list more than five. To provide a longer list of brands or websites, provide a link that
-users can refer to or embed the list in one of the extension's promotional screenshots.
+This depends on how relevant the keywords are in context, however, it's best to keep  instances of a
+specific keyword to under 5. Keywords must be relevant to the extension's purpose and not
+unnecessarily repeat in an unnatural way. Including more than 5 instances of a single keyword may
+result in increased scrutiny of your extensions, but will be allowed if its use is considered
+appropriate and relevant. 
+
+When listing supported websites or brands in the description, do not list more than five. To provide
+a longer list of brands or websites, provide a link that users can refer to or embed the list in one
+of the extension's promotional screenshots.
 
 ### Can the extension description contain information about additional topics related to the extension? {: #unrelated-information }
 
@@ -143,8 +148,8 @@ information about that industry in its description.
 ### What is the maximum number of times the extension's primary purpose can be mentioned in the description? {: #purpose-repetition }
 
 Do not mention one word or phrase repeatedly in the description even if it is the primary purpose of
-the extension. For example, an extension that provides puzzles should not call out the word _puzzle_
-more than five times in the description.
+the extension, unless its use is critical. For example, an extension that provides puzzles should
+not call out the word _puzzle_ more than five times in the description.
 
 ### Can the extension's short description be repeated in the extension's description? {: #short-description-repetition }
 

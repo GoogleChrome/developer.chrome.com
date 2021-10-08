@@ -31,7 +31,7 @@ Here's what you need to know:
 * [Web Share, and Web Share Target](#webshare) arrive on the desktop.
 * And, there's [plenty more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), working, and shooting
+I'm [Pete LePage](https://petelepage.com/), working, and shooting
 from home, let's dive in and see what's new for developers in Chrome 89!
 
 ## WebHID, WebNFC, and Web Serial {: #hardware }

@@ -27,7 +27,7 @@ In Chrome 70, we've added support for:
 
 And there's [plenty more](#more)!
 
-I'm [Pete LePage](https://twitter.com/petele). Let's dive in and see
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see
 what's new for developers in Chrome 70!
 
 Want the full list of changes? Check out the
