@@ -51,15 +51,16 @@ cannot, communicate that to the user.
       file systems will treat these as the same file while others will treat them as two distinct
       files, causing Chrome to error when loading the extension.
 - Make sure that your extensions clearly communicate error conditions to the user.
-    - It should be as obvious as possible for new users to get started with your extension works.
+    - It should be as obvious as possible for new users to understand how your extension works and
+      verify it's behaving correctly.
     - If your extension requires an account or special network environment, make sure that
       requirement is communicated to the user. If these conditions are not met, consider ways that
-      you can make the user aware of the error.
-    - Test your experience on an unreliable internet connection (e.g. [Li-Fi][wiki-li-fi]). The
+      you can make the user aware that the extension will not work as expected.
+    - Test your experience on an unreliable internet connection (e.g. [lie-fi][wiki-li-fi]). The
       extension's UI should gracefully handle request timeouts, HTTP 400 and 500 errors, certificate
       timeouts, and other such error conditions.
-- If you cannot find the issue, [contact developer support][dev-support] to request more information
-  about the rejection.
+- If you cannot determine why the reviewer thought that your extension was not working as expected,
+  [contact developer support][dev-support] to request more information about the rejection.
     - In some cases, reviewers may encounter issues you cannot reproduce. Use the [developer support
       contact form][dev-support] to request clarification about what features or user flows did not
       behave as expected.
@@ -67,7 +68,7 @@ cannot, communicate that to the user.
 ### Relevant policy {: #does-not-work-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -150,7 +151,8 @@ The storage permission exposes the [chrome.storage][api-storage] API to the exte
 
 ### How can you rectify this? {: #how-can-you-rectify-this }
 
-- Review the list of commonly misunderstood permissions for potential mistakes.
+- Review the list of [commonly misunderstood permissions][section-misunderstood-perms] to see if you
+  have committed one of the mistakes listed there.
 - Request only the narrowest permission required to implement your extension's functionality.
 - Remove all unused permissions from your manifests.json's `permissions`, `optional_permissions`,
   and `host_permissions` arrays.
@@ -164,7 +166,7 @@ The storage permission exposes the [chrome.storage][api-storage] API to the exte
 ### Relevant policy {: #excessive-permissions-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -176,6 +178,47 @@ with the least access to data or functionality.
 
 Don't attempt to "future proof" your Product by requesting a permission that might benefit services
 or features that have not yet been implemented.
+
+{% endAside %}
+
+## Missing or insufficient metadata {: #no-metadata }
+
+Corresponds to notification ID: `Yellow Zinc`
+
+The intent of this policy is to ensure a basic quality level of all items in the Chrome Web Store.
+Users should be able to understand what features and functionality an item provides based on its
+listing before they choose to install it. Items that misrepresent their capabilities or fail to
+disclose important information may be subject to enforcement action.
+
+### Common reasons for removal/rejection
+
+- The extension is missing an icon, title, screenshot, or description.
+- The extension's title is not meaningful or is misleading.
+- The extension's screenshots or description is not meaningful or doesn't adequately explain the
+  functionality it provides.
+
+### How can you rectify this?
+
+- Ensure the extension has a meaningful icon, title, screenshots, and description.
+- Clearly explain the extension's functionality in the description and screenshots.
+    - List all major features the extension provides.
+- Review the rectification guidance in the [Functionality not working][section-does-not-work]
+  section.
+
+### Relevant policy
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store developer program policies:
+
+{% Aside #}
+
+**Content Policies**
+
+Impersonation or Deceptive Behavior:
+
+: If your product has a blank description field or is missing an icon or screenshots, it will be
+  rejected. If any of your product's content, title, icon, description, or screenshots contains
+  false or misleading information, we may remove it.
 
 {% endAside %}
 
@@ -194,8 +237,8 @@ The intent of this policy is to prevent extensions from deceiving or misleading 
 - The extension copies or is copied from another entity<sup>2</sup>.
 - The extension pretends to be authorized by another entity<sup>2</sup>.
 
-<sup>1</sup> Metadata means the title, icon, description, screenshot(s), and other
-developer-provided information specified in the developer dashboard.
+<sup>1</sup> Metadata means the title, icon, description, screenshots, and other developer-provided
+information specified in the developer dashboard.
 
 <sup>2</sup> An entity here means any company, organization, or extension.
 
@@ -212,7 +255,7 @@ developer-provided information specified in the developer dashboard.
 ### Relevant policy {: #deceptive-behavior-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -241,12 +284,12 @@ Impersonation or Deceptive Behavior:
   - Claimed functionalities that are not possible to implement (e.g. "Who has viewed your social
     media account") or which are not directly provided by the extension (e.g. file converters which
     only link to other file conversion services)
-  - Any metadata that misrepresents the extension's or developer's current status or performance
-    on the Chrome Web Store (e.g. "Editor's Choice" or "Number One")
+  - Any metadata that misrepresents the extension's or developer's current status or performance on
+    the Chrome Web Store (e.g. "Editor's Choice" or "Number One")
 
 : If your product has a blank description field or is missing an icon or screenshots, it will be
-  rejected. If any of your product's content, title, icon, description, or screenshots contains false
-  or misleading information, we may remove it.
+  rejected. If any of your product's content, title, icon, description, or screenshots contains
+  false or misleading information, we may remove it.
 
 {% endAside %}
 
@@ -284,7 +327,7 @@ that users are aware of what data is collected, and how it is collected, used, a
 ### Relevant policy {: #udp-disclosure-policy-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -294,8 +337,8 @@ Posting a Privacy Policy & Secure Transmission
 
 : If your Product handles personal or sensitive user data (including personally identifiable
   information, financial and payment information, health information, authentication information,
-  website content and resources, form data, web browsing activity, user-provided content and personal
-  communications), then your Product must:
+  website content and resources, form data, web browsing activity, user-provided content and
+  personal communications), then your Product must:
 
   - Post a privacy policy, and
   - Handle the user data securely, including transmitting it via modern cryptography.
@@ -306,8 +349,8 @@ Posting a Privacy Policy & Secure Transmission
 
 Corresponds to notification ID: `Grey Zinc`
 
-The intent of this policy is to prevent the use of extensions and the Chrome Web Store to aid or
-abet illegal activities.
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store to promote or
+participate in illegal activities.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_4 }
 
@@ -319,13 +362,13 @@ The extension is doing anything illegal. See the policy extract for specific exa
   should unpublish your extension.
 - If this was an unintended functionality, then remove the content or services that are in violation
   and resubmit your extension.
-- If you would like more information on why this classification was applied to your extension,
-  [developer support][dev-support] may be able to provide you with additional information.
+- If you would like more information about why this verdict was applied to your extension,
+  [developer support][dev-support] may be able to provide you with further details.
 
 ### Relevant policy {: #illegal-activities-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -365,7 +408,7 @@ Do not post content or provide services that facilitate online gambling.
 ### Relevant policy {: #gambling-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -407,7 +450,7 @@ for pornography.
 ### Relevant policy {: #pornography-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -442,7 +485,7 @@ to spread hateful content.
 
 - If promotion or distribution of hate speech is a primary feature  of your extension, then you
   should unpublish the extension as such content is not permitted in the Chrome Web Store.
-- If your extension provides access to user generated content, you must ensure that you have content
+- If your extension provides access to user-generated content, you must ensure that you have content
   moderation in place to prevent users from sharing hate speech.
 - If your extension contains functionality intended to draw negative attention to an individual's
   membership in one of the groups outlined in the policy text, you should remove this functionality
@@ -451,7 +494,7 @@ to spread hateful content.
 ### Relevant policy {: #hate-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -489,7 +532,7 @@ audience.
 ### Relevant policy {: #not-family-safe-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -524,7 +567,7 @@ to spread the content mentioned in the relevant policy text.
 ### Relevant policy {: #violence-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -555,9 +598,10 @@ separate extensions.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_10 }
 
-- The extension is providing 2 or more purposes in the same extension (e.g. an extension providing
-  image format conversion and bibliography generation).
-- Providing one or more unrelated additional functionalities using the extension's action icon.
+- The extension provides two or more purposes in the same extension (for example an extension
+  providing image format conversion and bibliography generation).
+- The extension provides one or more unrelated additional functionalities using the extension's
+  action icon.
 - The following are considered distinct purposes. Extensions that provide any of the features listed
   below may not provide any other functionality.
     - Replacing any single [override page][docs-override-page].
@@ -568,7 +612,7 @@ See the [Single Purpose FAQ][docs-single-purpose-faq] for additional information
 
 ### How can you rectify this? {: #how-can-you-rectify-this_10 }
 
-- Narrow the functionality of your extension to clearly fit within one well defined purpose and
+- Narrow the functionality of your extension to clearly fit within one well-defined purpose and
   ensure that purpose is clearly described in your extension's metadata.
 - If your extension is offering some functionality and also injecting ads, then either stop
   injecting ads or remove all other functionality besides ad injection.
@@ -579,7 +623,7 @@ See the [Single Purpose FAQ][docs-single-purpose-faq] for additional information
 ### Relevant policy {: #single-purpose-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -610,10 +654,10 @@ The User Data Privacy policy is a broad category under which several other polic
 All of these policies have to do with the handling and transmission of sensitive information about
 the user.
 
-This policy applies to extensions that collect data that is not closely related to functionality
-described prominently in the extension's Chrome Web Store page. This particular section is to ensure
-that users are aware of the data that is being collected and that user consent is obtained before
-data collection.
+This section of the policy aims to ensure that users are aware of the data that is being collected
+and that user consent is obtained before data collection. Be aware that extensions may only collect
+data in direct support of their single purpose. See the [Limited Use of User
+Data][docs-dpp-limited-use] policy for additional information.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_11 }
 
@@ -622,14 +666,15 @@ data collection.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_11 }
 
-- Prominently disclose to the user what data is being collected and how it will be handled. This
+- Prominently disclose to `the user what data is being collected and how it will be handled. This
   information must be provided in the extension's Privacy Policy and may be provided elsewhere.
 - Ensure data is collected only if the user consents to it.
     - Prominent disclosure of data collection in the extension's Chrome Web Store listing is
       sufficient.
     - Collecting data that is not prominently disclosed in the Chrome Web Store listing is allowed
       so long as this data collection is consistent with the extension's single purpose, the user is
-      informed of the data collection before it begins, and the user consents to
+      informed of the data collection before it begins, and the user consents to the data
+      collection.
 - Consider providing the user with ways to opt out of data collection from within the extension's
   [options page][docs-options].
 - Consider providing users with an "offline mode" that only stores user data locally.
@@ -637,7 +682,7 @@ data collection.
 ### Relevant policy {: #udp-prominent-disclosure-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -683,7 +728,7 @@ extension makes.
 ### Relevant policy {: #udp-secure-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -725,7 +770,7 @@ and is not disclosed publicly.
 ### Relevant policy {: #udp-other-requirements-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -783,7 +828,7 @@ to mine cryptocurrencies.
 ### Relevant policy {: #cryptocurrency-mining-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -827,7 +872,7 @@ rights.
 ### Relevant policy {: #prohibited-products-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -871,7 +916,7 @@ The following are examples of this type of violation:
 ### Relevant policy {: #keyword-stuffing-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -917,7 +962,7 @@ products from manipulating their placement in the Store
 ### Relevant policy {: #redirection-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -955,7 +1000,7 @@ that manipulate their placement on the Chrome Web Store.
 ### Relevant policy {: #spam-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -1002,7 +1047,7 @@ The intent of this policy is to ensure quality of the products on the Chrome Web
 ### Relevant policy {: #circumvents-api-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -1039,7 +1084,7 @@ user base.
 ### Relevant policy {: #uws-distribution-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -1093,7 +1138,7 @@ The following are some examples of violations of this type of policy:
 ### Relevant policy {: #obfuscation-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][docs-cws-policies]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -1120,8 +1165,10 @@ Code Readability Requirements:
 [api-tabs-query]: /docs/extensions/reference/tabs/#method-query
 [api-tabs-sendmessage]: /docs/extensions/reference/tabs/#method-sendMessage
 [api-tabs]: /docs/extensions/reference/tabs
+[blog-lie-fi]: https://developers.google.com/web/fundamentals/performance/poor-connectivity#lie-fi
 [dev-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[docs-cws-policies]: /docs/webstore/program_policies/
+[docs-dpp]: /docs/webstore/program_policies/
+[docs-dpp-limited-use]: /docs/webstore/program_policies/#limited_use
 [docs-options]: /docs/extensions/mv3/options/
 [docs-override-page]: /docs/extensions/mv3/override/
 [docs-override-settings]: /docs/extensions/mv3/settings_override/
@@ -1136,4 +1183,5 @@ Code Readability Requirements:
 [mdn-web-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
 [webmaster-quality]: https://support.google.com/webmasters/answer/35769#3
 [wiki-case-sensitivity]: https://en.wikipedia.org/wiki/Case_sensitivity
-[wiki-li-fi]: https://en.wikipedia.org/wiki/Li-Fi
+[section-misunderstood-perms]: #misunderstood-perms
+[section-does-not-work]: #does-not-work
