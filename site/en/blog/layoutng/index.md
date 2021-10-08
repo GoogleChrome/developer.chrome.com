@@ -5,7 +5,7 @@ description: >
   How the large architecture change of LayoutNG reduces and mitigates various types of bugs and performance issues.
 thumbnail: image/kheDArv5csY6rvQUJDbWRscckLr1/PSZ58CfBFUUNasONGnHg.jpg
 alt: The conceptual model of the new layout architecture.
-date: 2021-10-06
+date: 2021-10-08
 authors:
   - iankilpatrick
   - kojiishi
