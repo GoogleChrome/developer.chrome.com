@@ -131,8 +131,8 @@ propagate to the cross-origin requests.
         `Critical-CH: Sec-CH-UA-Reduced` to your HTTP response header, in
         addition to the `Accept-CH` and `Origin-Trial` headers.
     1.  Note: If the response headers contain a valid `Origin-Trial` token and
-        `Accept-CH: Sec-CH-UA-Reduced`, then all subresource requests (e.g.
-        images, stylesheets) and subnavigations (e.g. iframes) will send the
+        `Accept-CH: Sec-CH-UA-Reduced`, then all subresource requests (for example, for
+        images or stylesheets) and subnavigations (for example, iframes) will send the
         reduced UA string, even if the origins of those requests are not
         enrolled in the origin trial.
 
@@ -143,9 +143,9 @@ propagate to the cross-origin requests.
 1.  See [https://uar-ot.glitch.me/](https://uar-ot.glitch.me/) for a simple
     demonstration of the origin trial (along with the source code).
 
-## How do I participate in the origin trial as a third-party embed?
+## How to participate in the origin trial as a third-party embed?
 
-Starting in Chrome 96, third-party embeds (e.g. an iframe inside another site)
+Starting in Chrome 96, third-party embeds (for example, an iframe inside another site)
 can participate in the origin trial without requiring the top-level site to be
 enrolled.
 
