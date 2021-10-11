@@ -93,14 +93,14 @@ were implemented:
 +   Gated U2F API requests behind a user permission prompt.
 
 The permission prompt can be suppressed by enrolling in the [U2FSecurityKeyAPI
-origin trial](https://developer.chrome.com/origintrials/#/view_trial/-6366963973195038719)
+deprecation trial](https://developer.chrome.com/origintrials/#/view_trial/-6366963973195038719)
 or enabling the [U2fSecurityKeyApiEnabled](https://chromeenterprise.google/policies/#U2fSecurityKeyApiEnabled)
 enterprise policy.
 
 ### Chrome 98
 
 Beta expected in early January 2022, stable in February. The U2F API will be
-disabled by default. Only sites enrolled in the [origin
+disabled by default. Only sites enrolled in the [deprecation
 trial](https://developer.chrome.com/origintrials/#/view_trial/-6366963973195038719)
 or enterprises that turned on the
 [U2fSecurityKeyApiEnabled](https://chromeenterprise.google/policies/#U2fSecurityKeyApiEnabled)
