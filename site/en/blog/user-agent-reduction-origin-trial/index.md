@@ -113,7 +113,7 @@ header, enroll the top-level sites in the origin trial and set the permissions
 policy to allow the client hints and the reduced User-Agent request header to
 propagate to the cross-origin requests. 
 
-## How do I participate in the User-Agent Reduction origin trial?
+## How do I participate in the User-Agent Reduction origin trial? {: #enroll-top-level }
 
 1.  To register for the origin trial and get a token for your domains,
     visit the
@@ -130,14 +130,11 @@ propagate to the cross-origin requests.
         first navigation request with the reduced User-Agent string, add
         `Critical-CH: Sec-CH-UA-Reduced` to your HTTP response header, in
         addition to the `Accept-CH` and `Origin-Trial` headers.
-    1.  If you want third-party subresource requests to also receive the
-        reduced UA string, add a `Permissions-Policy` header with the
-        third-party domains that should receive the reduced UA. For example:
-
-        1.  To allow a named list of third-party domains, add
-            `Permissions-Policy: ch-ua-reduced=(self "https://google.com")`.
-        1.  To allow all third-party domains, add
-            `Permissions-Policy: ch-ua-reduced=*`.
+    1.  Note: If the response headers contain a valid `Origin-Trial` token and
+        `Accept-CH: Sec-CH-UA-Reduced`, then all subresource requests (for example, for
+        images or stylesheets) and subnavigations (for example, iframes) will send the
+        reduced UA string, even if the origins of those requests are not
+        enrolled in the origin trial.
 
 1.  Load your website in Chrome M95 (or later) and start receiving the
     reduced UA string. 
@@ -145,6 +142,30 @@ propagate to the cross-origin requests.
     repository](https://github.com/abeyad/user-agent-reduction/issues).
 1.  See [https://uar-ot.glitch.me/](https://uar-ot.glitch.me/) for a simple
     demonstration of the origin trial (along with the source code).
+
+## How to participate in the origin trial as a third-party embed?
+
+Starting in Chrome 96, third-party embeds (for example, an iframe inside another site)
+can participate in the origin trial without requiring the top-level site to be
+enrolled.
+
+To enroll as a third-party embed, follow the same steps as for a [top-level site](#enroll-top-level),
+except when [registering for an origin trial token](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047),
+select the third-party token checkbox.  
+
+Some important points about running the origin trial on third-party embeds:
++   `Critical-CH` cannot be specified for third-party embeds, so the first
+     navigation won't send the reduced UA string, although the subresource
+     requests of the third-party embed will send the reduced UA string.
++   If the origin trial is validated for the origin of a third-party embed,
+    subsequent requests to the same origin in a top-level navigation will
+    send the reduced UA string. For this reason, it's recommended to ramp
+    up participation in the origin trial for both top-level and embed
+    requests.
++   If the user agent has disabled third-party cookies, then the origin
+    trial won't work for `User-Agent` header in third-party embed
+    requests, although the Javascript APIs will still get the reduced UA
+    string.
 
 ## How do I validate that the origin trial is working? {: #validate }
 
