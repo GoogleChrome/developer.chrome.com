@@ -109,7 +109,7 @@ export interface ContentSecurityPolicyIssueDetails {
 
  
 Secondly, and probably more importantly, we generate a C++ library from the definition that handles generating and sending these data structures from the C++ Chromium back-end to the DevTools front-end. Using that library, a `ContentSecurityPolicyIssueDetails` object can be created using the following piece of C++ code:
-```c++
+```cpp
 protocol::Audits::ContentSecurityPolicyIssueDetails::create()
                      .setViolatedDirective(d->violated_directive)
                      .setIsReportOnly(d->is_report_only)
