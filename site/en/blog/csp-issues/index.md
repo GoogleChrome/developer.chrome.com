@@ -73,7 +73,7 @@ Using this process, we learned that the source location was the most important p
 We turned this insight into the first draft of the information that we wanted to make available to DevTools via the [Chrome DevTools Protocol (CDP)](https://chromedevtools.github.io/devtools-protocol/):
 
 Excerpt from [third_party/blink/public/devtools_protocol/browser_protocol.pdl](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/public/devtools_protocol/browser_protocol.pdl;l=652;drc=be78fe5cf948ee4863e72c9240a1b6f9f7430fde)
- ```txt
+ ```
  type ContentSecurityPolicyIssueDetails extends object
    properties
      # The url not included in allowed sources.
