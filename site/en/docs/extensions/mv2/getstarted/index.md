@@ -19,7 +19,7 @@ demonstration of their relationships.
 
 To start, create a new directory to hold the extension's files.
 
-The completed extension can be downloaded [here][get-started-zip].
+The completed extension can be found [here][get-started-sample].
 
 ## Create the manifest {: #manifest }
 
@@ -437,7 +437,7 @@ What's next?
 [declarative-content]: /declarativeContent
 [developer-chrome-docs]: /docs/
 [devguide-mv2]: /docs/extensions/mv2/devguide/
-[get-started-zip]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/n7V7IbH6D6gqNCV7Kp5t.zip "get_started_complete.zip"
+[get-started-sample]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/mv2-archive/tutorials/get_started_complete
 [icons]: /user_interface#icons
 [images-zip]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/qwlTyQ1ah3RmqsgDhRkL.zip "images.zip"
 [manifest]: /docs/extensions/mv2/manifest
