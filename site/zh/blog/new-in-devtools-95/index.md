@@ -38,17 +38,17 @@ DevTools 添加了一种更简单且灵活的方式来更新 CSS 长度！
 在“样式”边栏中，找到任意一个含有长度的 CSS 属性（例如 `height`、`padding`）。
 
 <!-- Hover over the unit type, and notice the unit type is underlined. Click on it to select a unit type from the dropdown. -->
-将鼠标悬停在长度单位上，就会发现它被下划线标明。点击它即可在弹出的下拉列表中选择新的长度单位。
+将鼠标悬停在长度单位上，会出现一条下划线来标明它。点击它即可在弹出的下拉列表中选择新的长度单位。
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/vWiU9o1DxsOpWXM0SrBa.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 <!-- Hover over the unit value, and your mouse pointer is changed to horizontal cursor. Drag horizontally to increase or decrease the value. To adjust the value by 10, hold the <kbd>Shift</kbd> key when dragging. -->
-将鼠标悬停在长度数值上，就会发现您的鼠标指针变成了横向移动的光标。横向拖拽光标即可加减长度数值。如果想以 10 来调整长度数值，可以在拖拽的同时按下 <kbd>Shift</kbd> 键。
+将鼠标悬停在长度数值上，就会发现您的鼠标指针变成了可横向移动的光标。横向拖拽光标即可加减长度数值。如果想以 10 来调整长度数值，可以在拖拽的同时按下 <kbd>Shift</kbd> 键。
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/nbvRDPyARJmdTeB9ajOq.mp4", autoplay="true", muted="true", loop="true",class="screenshot" %}
 
 <!-- You can still edit the unit value as text — just click on the value and start editing. -->
-您仍然可以以文本方式编辑长度数值 -- 只需要在长度数值上点击一下即可直接编辑。
+您仍然可以通过使用文本的方式来编辑长度数值 -- 只需要在长度数值上点击一下即可直接编辑。
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/hBk2t2DCX7aI5yBX4J8h.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
@@ -87,7 +87,7 @@ DevTools 通过以下方式改善了属性的展示：
 <!-- - Always bold and sort own properties first in the **Console**, **Sources** panel and **Properties** pane. 
 - Flatten the properties display in the **Properties** pane. -->
 - 在控制台、“来源”面板和“属性”边栏中，永远加粗并优先排序自有属性。
-- 在“属性”边栏中扁平化属性展示。
+- 在“属性”边栏中扁平化展示属性。
 
 <!-- For example, the snippet below creates an [`URL`](https://developer.mozilla.org/docs/Web/API/URL) object `link` with 2 own properties: `user` and `access`, and updates the value of an inherited property `search`. -->
 例如，以下的代码片段创建了一个 [`URL`](https://developer.mozilla.org/docs/Web/API/URL) 对象链接（`link`），它包含了两个自有属性：`user` 和 `access`，并更新了一个继承属性 `search` 的值。
@@ -103,7 +103,7 @@ link.search = `?access=${link.access}`;
 ```
 
 <!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
-试着在“控制台”中打出 `link`。自有属性现在是加粗并优先排序的。这些改动会让自定义属性更容易发现，尤其对于有着很多继承属性的 [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API)（例如 `URL`）。
+试着在“控制台”中打出 `link`。自有属性现在是加粗并优先排序的。这些改动会让自定义属性更容易被发现，尤其对于有着很多继承属性的 [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API)（例如 `URL`）。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="自有属性加粗并优先排序", width="800", height="561" %}
 
@@ -123,7 +123,7 @@ Chromium 议题: [1076820](https://crbug.com/1076820), [1119900](https://crbug.c
 ## Lighthouse 面板中的 Lighthouse 8.4 {: #lighthouse }
 
 <!-- The **Lighthouse** panel is now running Lighthouse 8.4. Lighthouse will now detect if the [Largest Containful Paint (LCP)](https://web.dev/lcp) element was a lazy-loaded image and recommend removing the `loading` attribute from it. -->
-**Lighthouse** 面板现已运行 Lighthouse 8.4。Lighthouse 现在可以检测到某 [Largest Containful Paint (LCP)](https://web.dev/lcp) 元素是一个延迟加载的图片，并建议移除该图片的 `loading` 属性。
+**Lighthouse** 面板现已运行 Lighthouse 8.4。Lighthouse 现在可以检测到某 [Largest Containful Paint (LCP)](https://web.dev/lcp) 元素是否是一个延迟加载的图片，并建议移除该图片的 `loading` 属性。
 
 <!-- Check out the [What’s new in Lighthouse 8.4](/blog/lighthouse-8-4/) for more details on the updates. -->
 更多的更新细节请参见 [What’s new in Lighthouse 8.4](/blog/lighthouse-8-4/)。
@@ -169,7 +169,7 @@ Chromium issues: [1246245](https://crbug.com/1246245), [1245481](https://crbug.c
 ## DevTools 命令菜单的用户交互优化 {: #command-menu }
 
 <!-- Did you find it hard to search for a file in the [Command Menu](/docs/devtools/command-menu/#open)? Good news for you, the **Command Menu** user interface is now enhanced!  -->
-您是否发现在[命令菜单](/docs/devtools/command-menu/#open)中搜索一个文件很困难呢？好消息来了，**命令菜单**的用户交互现在得到了改善！
+您是否发现要想在[命令菜单](/docs/devtools/command-menu/#open)中搜索一个文件，这本身就是一件很困难的事情呢？好消息来了，**命令菜单**的用户交互现在得到了改善！
 
 <!-- Open the **Command Menu** to search for a file with keyboard shortcut <kbd>Control</kbd>+<kbd>P</kbd> in Windows and Linux, or <kbd>Command</kbd>+<kbd>P</kbd> in MacOS. -->
 打开**命令菜单**，在 Windows 和 Linux 上使用快捷键 <kbd>Control</kbd>+<kbd>P</kbd>，或在 MacOS 上使用 <kbd>Command</kbd>+<kbd>P</kbd> 来搜索文件。
