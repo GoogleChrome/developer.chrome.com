@@ -123,7 +123,7 @@ If an extension needs to access `file://` URLs or operate in incognito mode, use
 enable access for those features inside the extension's detail page at chrome://extensions.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/CXSHPxG4giUkzfGR67mY.png",
-       alt="Allow file urls and incognito mode on the extension detial page", height="137", width="674" %}
+       alt="Allow file urls and incognito mode on the extension detail page", height="137", width="674" %}
 
 An extension can detect if it is enabled in incognito mode by calling
 [`extension.isAllowedIncognitoAccess()`][20] or able run on `file://` URLs with

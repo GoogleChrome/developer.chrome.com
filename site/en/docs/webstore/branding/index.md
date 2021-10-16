@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Branding Guidelines
 date: 2018-06-11
-description: Guidlines for use of Google trademarks.
+description: Guidelines for use of Google trademarks.
 ---
 
 {% Aside 'warning' %}

@@ -187,7 +187,7 @@ As an indicator of flexibility of an extension's UI, apply the [200% test][11]; 
 page zoom is increased 200%, is it still usable?
 
 Avoid baking text into images. Users are unable to modify the size and screen readers are unable to
-interpret images. Insead, opt for styled web font, such as one of the fonts found in the [Google
+interpret images. Instead, opt for styled web font, such as one of the fonts found in the [Google
 Font API][12]. Web fonts can scale to different sizes and can be accessed by people using screen
 readers.
 
