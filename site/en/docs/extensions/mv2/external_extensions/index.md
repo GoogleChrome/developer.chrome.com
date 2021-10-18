@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Alternative extension distribution options"
 date: 2012-09-17
 updated: 2018-06-12
-description: How to distibute Chrome Extensions outside of the Chrome Web Store.
+description: How to distribute Chrome Extensions outside of the Chrome Web Store.
 ---
 
 {% include 'partials/extensions/mv2-legacy-page.md' %}

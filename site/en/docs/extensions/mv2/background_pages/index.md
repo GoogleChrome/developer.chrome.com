@@ -208,7 +208,7 @@ chrome.runtime.onSuspend.addListener(function() {
 });
 ```
 
-However, persisting data should be prefered over relying on [`runtime.onSuspend`][15]. It doesn't
+However, persisting data should be preferred over relying on [`runtime.onSuspend`][15]. It doesn't
 allow for as much cleanup as may be needed and will not help in case of a crash.
 
 [1]: /docs/extensions/mv2/messaging

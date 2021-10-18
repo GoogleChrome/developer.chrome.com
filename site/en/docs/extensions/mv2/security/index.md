@@ -28,7 +28,7 @@ membership requests from unknown persons.
 ## Never use HTTP, Ever {: #https }
 
 When requesting or sending data, avoid an HTTP connection. Assume that any HTTP connections will
-have eavesdroppers or contain modifications. HTTPS should always be prefered, as it has built-in
+have eavesdroppers or contain modifications. HTTPS should always be preferred, as it has built-in
 security circumventing most [man-in-the-middle attacks][4].
 
 ## Request minimal permissions {: #permissions }

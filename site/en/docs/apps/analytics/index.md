@@ -44,7 +44,7 @@ The library is [google-analytics-bundle.js][10].
 
 ## Documentation {: #documentation }
 
-Documentation for the CPA library is aslo on GitHub. See specifically:
+Documentation for the CPA library is also on GitHub. See specifically:
 
 - [Prerequisites][11]
 - [API Reference][12]

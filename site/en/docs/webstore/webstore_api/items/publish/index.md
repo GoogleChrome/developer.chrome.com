@@ -33,7 +33,7 @@ In the request body, you can optionally supply data with the following structure
 }
 ```
 
-<table><thead><tr><th>Property name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr id="target"><td><code>target</code></td><td><code>string</code></td><td>The publish target of this publish operation. This is the same as using publishTarget as a URL query parameter. The string value can either be target="trustedTesters" or target="default". The default value, if none is supplied, is target="default". Recommended usage is to use the URL query parameter to specificy the value.</td></tr></tbody></table>
+<table><thead><tr><th>Property name</th><th>Value</th><th>Description</th></tr></thead><tbody><tr id="target"><td><code>target</code></td><td><code>string</code></td><td>The publish target of this publish operation. This is the same as using publishTarget as a URL query parameter. The string value can either be target="trustedTesters" or target="default". The default value, if none is supplied, is target="default". Recommended usage is to use the URL query parameter to specify the value.</td></tr></tbody></table>
 
 ### Authorization {: #auth }
 
