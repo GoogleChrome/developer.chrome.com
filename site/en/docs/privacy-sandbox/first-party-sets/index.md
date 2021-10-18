@@ -16,7 +16,7 @@ authors:
 ## Implementation status
 
 * The initial [origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873) 
-for First-Party Sets and SameParty was available in Chrome from version 89 to 93 and is now closed.
+for First-Party Sets and SameParty was available in Chrome from versions 89 to 93 and is now closed.
 * [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
 * [Chromium Projects](https://www.chromium.org/updates/first-party-sets).
 
