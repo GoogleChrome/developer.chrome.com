@@ -101,7 +101,7 @@ cookie is included on that request.
 ## Engage and share feedback
 
 * **Origin trial**: The initial [origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873) 
-for First-Party Sets and SameParty was available in Chrome from version 89 to 93 and is now closed.
+for First-Party Sets and SameParty was available in Chrome from versions 89 to 93 and is now closed.
 * **GitHub**: Read the [proposal](https://github.com/privacycg/first-party-sets), [raise questions and
 follow discussion](https://github.com/privacycg/first-party-sets/issues).
 * **Developer support**: Ask questions and join discussions on the
