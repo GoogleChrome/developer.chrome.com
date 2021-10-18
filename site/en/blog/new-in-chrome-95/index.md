@@ -174,7 +174,7 @@ and you'll get an email notification whenever we launch a new video.
 I'm Pete LePage, and as soon as Chrome 96 is released, I'll be right here to
 tell you what's new in Chrome!
 
-[dcc]: https://developer.chrome.com/blog/
+[dcc]: /blog/
 [webdev]: https://web.dev
 [p2r-npm]: https://www.npmjs.com/package/path-to-regexp
 [expr-routing]: https://expressjs.com/en/guide/routing.html
