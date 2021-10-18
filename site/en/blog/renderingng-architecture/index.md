@@ -30,7 +30,7 @@ the tasks of rendering are:
 
 The _contents_ to render are a tree of _frames_ for each browser tab, plus the browser UI.
 And, a stream of raw input events from touch screens,
-mice, keyboards, and other hardware devices.
+mouse, keyboards, and other hardware devices.
 
 Each frame includes:
 
