@@ -24,7 +24,7 @@ alt: A collection of padlocks.
 To secure more time to introduce ways to relax the requirement to enable
 cross-origin isolation, we've decided to postpone the restriction on
 `SharedArrayBuffer` on desktop described in this article to Chrome 103
-(originally Chrome 96).
+(originally Chrome 96). You might need to update the token.
 
 {% endAside %}
 
