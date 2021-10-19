@@ -74,6 +74,11 @@ Complete this tutorial to get hands-on experience with Workspaces.
 
     ```bash
     cd ~/Desktop/app
+    # If your Python version is 3.X
+    # On Windows, try "python -m http.server" or "py -3 -m http.server"
+    python3 -m http.server
+    # If your Python version is 2.X
+    python -m SimpleHTTPServer
     ```
 
 7.  Open a tab in Google Chrome and go to locally-hosted version of the site. You should be able to
@@ -240,7 +245,7 @@ to your site. There's a way to have the **Sources** panel open alongside other p
 
 ## Next steps {: #next-steps }
 
-Congratulations, you have completed the tutorial. Click the button below to receive your prize.
+Congratulations, you have completed the tutorial.
 
 [1]: https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web
 [2]: /docs/devtools/css
