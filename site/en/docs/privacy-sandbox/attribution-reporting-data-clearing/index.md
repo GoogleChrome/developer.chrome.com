@@ -27,8 +27,8 @@ Sites have experimented with the Attribution Reporting API in Chrome, via an [or
 trial](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
 
 One of the insights
-provided by these early experiments is the impact of **user-initiated data clearing—such as browser history clearing—**on the data advertisers and adtech companies get from the API. [Aggregate Chrome statistics](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)
-were recently published. In this post, we're answering common questions on the impact of
+provided by these early experiments is the impact of **user-initiated data clearing, such as browser history clearing,** on the data advertisers and adtech companies get from the API. [Aggregate Chrome statistics](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/5Ppe0cL-l1Y)
+were recently published. This post adresses answering common questions on the impact of
 user-initiated data clearing on attribution reports.
 
 {% Aside %} Numbers and statements in this blogpost are correct at the time of its
@@ -42,9 +42,11 @@ And how does that compare with cookie-based measurement?
 
 {% Aside 'caution' %}
 The numbers presented below help understand some observed discrepancies between cookie-based
-measurement and Attribution Reporting based measurement. However, they
-shouldn't be considered absolute numbers that will be consistently observable for all organizations
+measurement and Attribution Reporting based measurement.
+
+However, they likely won't be consistently observable for all organizations
 that use the API.
+
 These numbers are aggregated and measured for the set of sites that were running an origin
 trial. They differ across sites and are likely to change as more organizations use the API in an
 origin trial and use different parameters.
@@ -54,7 +56,7 @@ origin trial and use different parameters.
 
 - Whether users clear history on sites they navigate to by clicking on an ad;
 - Whether users convert on categories of sites where they tend to clear history—possibly shortly
-  after converting. Ads on these type of content might experience higher rates of clearing and hence
+  after converting. Ads on this type of content might experience higher rates of clearing and hence
   higher discrepancies with cookie-based measurement;
 - Similarly, whether users clear history on sites they click ads to;
 - Whether the attribution is configured to expire a long or short time after click
@@ -67,14 +69,14 @@ list for developers](https://groups.google.com/u/0/a/chromium.org/g/attribution-
 ### Data clearing occurring after a click and before a conversion
 
 **With cookies**, some percentage of conversions aren't reported due to post-click pre-conversion
-data clearing. Because cookies have been cleared, there is no cookie to attach to a request at
+data clearing. Because cookies have been cleared, there's no cookie to attach to a request at
 conversion time, thus that conversion can't be measured. The exact percentage of conversions that
-aren't reported due to user-initiated data clearing isn't known; it varies across adtech companies
+aren't reported due to user-initiated data clearing isn't known. It varies across adtech companies
 (or advertisers).
 
 <figure>
-  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/O7UEJCUZ2vfOYpLvm5wL.png", alt="How user-initiated data clearing before a conversion impacts cookie-based measurement", width="800", height="180" %}
-  <figcaption>How user-initiated data clearing before a conversion impacts cookie-based measurement</figcaption>
+  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/O7UEJCUZ2vfOYpLvm5wL.png", alt="User-initiated data clearing before a conversion impacts cookie-based measurement.", width="800", height="180" %}
+  <figcaption>User-initiated data clearing before a conversion impacts cookie-based measurement.</figcaption>
 </figure>
 
 {% Aside %}
@@ -109,8 +111,8 @@ into consideration:
 immediately to the adtech company.
 
 <figure>
-  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/7H4tlmi9nsa1LRNRkGlV.png", alt="User-initiated data clearing after a conversion doesn't impact cookie-based measurement", width="800", height="195" %}
-  <figcaption>User-initiated data clearing after a conversion doesn't impact cookie-based measurement</figcaption>
+  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/7H4tlmi9nsa1LRNRkGlV.png", alt="User-initiated data clearing after a conversion doesn't impact cookie-based measurement.", width="800", height="195" %}
+  <figcaption>User-initiated data clearing after a conversion doesn't impact cookie-based measurement.</figcaption>
 </figure>
 
 **With the Attribution Reporting API**, post-conversion data clearing causes reports to be cleared
@@ -120,8 +122,8 @@ privacy, this means that the browser storage is already empty when the scheduled
 browser to send the report to the predefined endpoint—typically an adtech company.
 
 <figure>
-  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/IeZewxklxPft41cQFtFh.png", alt="How user-initiated data clearing impacts measurement based on the Attribution Reporting API", width="800", height="280" %}
-  <figcaption>How user-initiated data clearing impacts measurement based on the Attribution Reporting API. This diagram illustrates post-conversion data clearing. Pre-conversion data clearing also impact measurement based on the Attribution Reporting API.</figcaption>
+  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/IeZewxklxPft41cQFtFh.png", alt="User-initiated data clearing after a conversion impacts measurement based on the Attribution Reporting API.", width="800", height="280" %}
+  <figcaption>User-initiated data clearing after a conversion impacts measurement based on the Attribution Reporting API.</figcaption>
 </figure>
 
 Observations of early experiments (origin trial) using the Attribution Reporting API have shown that
@@ -166,7 +168,8 @@ Organizations that have experimented with the API via an origin trial may have o
 **discrepancy between cookie-based measurement and Attribution Reporting based measurement**: less
 conversions may have been reported for Attribution Reporting. User-initiated data clearing
 may account for observed loss, but the discrepancy must be monitored in future origin trials in
-order to answer this question with certainty.  
+order to answer this question with certainty.
+
 Two elements are known to have played a role in the discrepancy between cookie-based measurement and
 Attribution Reporting based measurement in the past origin trial:
 
@@ -184,10 +187,9 @@ meetings](https://github.com/WICG/conversion-measurement-api/blob/main/meetings/
 to explore these parameters.
 
 {% Aside %}
-On a more general note: Attribution Reporting offers a privacy-preserving approach to measurement.
+On a more general note: Attribution Reporting offers a **privacy-preserving** approach to measurement.
 In order to achieve this, it explicitly limits the amount of data exposed that might otherwise allow
-cross-site tracking. As such, in absolute terms, there will always be less data available than in
-comparison to cookie-based solutions.
+cross-site tracking. **As such, in absolute terms, less data is made available in this API than in cookie-based solutions.**
 {% endAside %}
 
 ## Will aggregate reports be impacted in the same way?
@@ -196,13 +198,11 @@ comparison to cookie-based solutions.
 Learn more about the difference between **aggregate** reports and **event-level** reports [here](/docs/privacy-sandbox/attribution-reporting-introduction/#use-cases-and-features).
 {% endAside %}
 
-We don't know for sure how of user-initiated data will impact aggregate reports?
+We don't know for sure how of user-initiated data clearing will impact aggregate reports.
 
 The statistics shared in this post are for event-level reports. Even though the reporting delays may be shorter for aggregate reports—[a few
 hours](https://github.com/WICG/conversion-measurement-api/blob/main/AGGREGATE.md#:~:text=Reports%20will%20not%20be%20delayed%20to%20the%20same%20extent%20as%20they%20are%20for%20event%20level%20reports.%20It%20may%20be%20possible%20to%20send%20these%20with%20as%20little%20delay%20as%20~0-1%20hour),
 whereas event-level reports may be sent days or weeks after click—the impact of user-initiated data
-clearing may not be lower.
-
-For example, for certain categories of sites, people tend to clear the browsing data shortly after
+clearing may not be lower. For example, for certain categories of sites, people tend to clear the browsing data shortly after
 converting. Such user-initiated actions would still result in reports being cleared, even though
 they were scheduled to be sent soon.
