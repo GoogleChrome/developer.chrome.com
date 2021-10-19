@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manifest file format"
 date: 2012-09-18
-updated: 2018-04-26
+updated: 2021-10-08
 description: An overview of the manifest.json properties that you can use in your Chrome Extension.
 ---
 
@@ -29,7 +29,6 @@ discusses each field.
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/icons">icons</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
 
   <span class="token comment">// Optional</span>
-  <span class="token property">"action"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"author"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"automation"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/service_workers">background</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
