@@ -198,7 +198,7 @@ into HTTP-oriented webRequest model. Note that:
 
 - Once the session is established, extensions cannot observe or intervene in the session via the
   webRequest API.
-- Modifying HTTP request headers in 'onBeforeSendHeaders' is ignored.
+- Modifying HTTP request headers in `onBeforeSendHeaders` is ignored.
 - Redirects and authentications are **not supported** in WebTransport over HTTP/3.
 
 ## Concepts
