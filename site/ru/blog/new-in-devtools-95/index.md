@@ -27,6 +27,7 @@ tags:
 
 {% include 'partials/devtools/ru/banner.md' %}
 
+{% YouTube id="T_Ppg7ghrWM" %}
 
 <!-- ## New CSS length authoring tools {: #length } -->
 ## Новый инструмент выбора единиц измерения длины в CSS {: #length }
