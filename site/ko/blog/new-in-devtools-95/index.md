@@ -19,6 +19,7 @@ tags:
 
 {% include 'partials/devtools/ko/banner.md' %}
 
+{% YouTube id="T_Ppg7ghrWM" %}
 
 ## 새 CSS 길이 작성 도구 {: #length }
 
