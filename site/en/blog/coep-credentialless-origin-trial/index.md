@@ -8,7 +8,7 @@ subhead: >
   headers. If they can be requested without credentials, now you can enable cross-origin
   isolation by marking them as such. 
 date: 2021-07-29
-updated: 2021-08-03
+updated: 2021-10-14
 authors:
   - agektmr
 tags:
@@ -179,12 +179,12 @@ cross-origin isolation:
 * [Anonymous
   iframes](https://github.com/camillelamy/explainers/blob/master/anonymous_iframes.md)
 
-Both of these changes are planned to land sometime in Q4 2021. Those who
-registered for [the Chrome origin trial to extend the SharedArrayBuffer
+Those who registered for [the Chrome origin trial to extend the
+SharedArrayBuffer
 change](https://developer.chrome.com/blog/enabling-shared-array-buffer/) due to
 the above obstacles might be wondering when it will be terminated. Originally we
-announced that it will be terminated in Chrome 96, but we will not do so until
-these updates are in place.
+announced that it will be terminated in Chrome 96, but we have decided to
+postpone this to Chrome 103.
 
 ## Resources
 
