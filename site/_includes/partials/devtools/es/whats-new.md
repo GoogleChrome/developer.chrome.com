@@ -3,7 +3,7 @@
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
 ### Chrome 95 {: #chrome95 }
-* [Nuevas herramientas para cambiar medidas en CSS](/es/blog/new-in-devtools-95/#)
+* [Nuevas herramientas para cambiar medidas en CSS](/es/blog/new-in-devtools-95/#length)
 * [Oculta problemas en la pestaña Problemas](/es/blog/new-in-devtools-95/#hide-issues)
 * [Mejora la visualización de propiedades](/es/blog/new-in-devtools-95/#properties)
 * [LLighthouse 8.4 en el panel Lighthouse](/es/blog/new-in-devtools-95/#lighthouse)

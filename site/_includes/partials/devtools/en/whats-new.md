@@ -3,14 +3,13 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 
 ### Chrome 95 {: #chrome95 }
-* [New CSS length authoring tools](/blog/new-in-devtools-95/#)
+* [New CSS length authoring tools](/blog/new-in-devtools-95/#length)
 * [Hide issues in the Issues tab](/blog/new-in-devtools-95/#hide-issues)
 * [Improved the display of properties](/blog/new-in-devtools-95/#properties)
 * [Lighthouse 8.4 in the Lighthouse panel](/blog/new-in-devtools-95/#lighthouse)
 * [Sort snippets in the Sources panel](/blog/new-in-devtools-95/#snippets)
 * [New links to translated release notes and report a translation bug](/blog/new-in-devtools-95/#localized)
 * [Improved UI for DevTools command menu](/blog/new-in-devtools-95/#command-menu)
-
 
 
 ### Chrome 94 {: #chrome94 }

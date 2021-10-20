@@ -152,12 +152,14 @@ Chromium 议题: [1243976](https://crbug.com/1243976)
 
 
 <!-- ## New links to translated release notes and report a translation bug {: #localized } -->
-
+## 阅读 DevTools 新功能的翻译文章和举报翻译错误 {: #localized }
 <!-- You can now click to read the DevTools release notes in 6 other languages - [Russian](/ru/blog/new-in-devtools-95), [Chinese](/zh/blog/new-in-devtools-95), [Spanish](/es/blog/new-in-devtools-95), [Japanese](/ja/blog/new-in-devtools-95), [Portuguese](/pt/blog/new-in-devtools-95) and [Korean](/ko/blog/new-in-devtools-95)  via the What’s new tab.  -->
+您现在可以在**新变化**标签页里点击阅读其他 6 种语言的 DevTools 新功能 - [俄文](/ru/blog/new-in-devtools-95), [中文](/zh/blog/new-in-devtools-95), [西班牙文](/es/blog/new-in-devtools-95), [日文](/ja/blog/new-in-devtools-95), [葡萄牙文](/pt/blog/new-in-devtools-95) and [韩文](/ko/blog/new-in-devtools-95).
 
 <!-- Since Chrome 94, you can [set your preferred language](/blog/new-in-devtools-94/#localized) in DevTools. If you found any issues with the translations, help us improve it by [reporting a translation issue](https://goo.gle/devtools-translate) via **More options** > **Help** > **Report a translation bug**.  -->
+从 Chrome 94 开始，您可以在 DevTools 中[设置您的界面语言](/blog/new-in-devtools-94/#localized)。 如果您发现任何翻译问题，请通过 **更多选项** > **帮助** > **[举报翻译问题](https://goo.gle/devtools-translate) 帮助我们改进翻译错误**。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qrg4Ahf4sYseL2NQZwIl.png", alt="New links to translated release notes and report a translation bug", width="800", height="487" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Qrg4Ahf4sYseL2NQZwIl.png", alt="两个新的链接让您阅读 DevTools 新功能的翻译文章和举报翻译错误", width="800", height="487" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/312e43a6c50bc29f279f9eac2f91b723b36c7ee9 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/dcd3ae13ebc5d340b2abb07e9dc99cfa74caea35 #}

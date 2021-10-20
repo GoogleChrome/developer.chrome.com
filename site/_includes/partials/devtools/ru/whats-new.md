@@ -3,6 +3,15 @@
 Чтобы увидеть полный список обновлений,  перейдите на английскую версию по ссылке 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
+### Chrome 95 {: #chrome95 }
+* [Новый инструмент выбора единиц измерения длины в CSS](/blog/new-in-devtools-95/#length)
+* [Скрытие задач во вкладке Проблемы (Issues)](/blog/new-in-devtools-95/#hide-issues)
+* [Улучшенное отображение свойств](/blog/new-in-devtools-95/#properties)
+* [Lighthouse 8.4 во вкладке Lighthouse](/blog/new-in-devtools-95/#lighthouse)
+* [Сортировка снипетов во вкладке Источники (Sources)](/blog/new-in-devtools-95/#snippets)
+* [Новые ссылки на переводы обновлений и сообщение об ошибке в переводе](/blog/new-in-devtools-95/#localized)
+* [Улучшенный UI для командного меню в DevTools](/blog/new-in-devtools-95/#command-menu)
+
 
 ### Chrome 94 {: #chrome94 }
 
