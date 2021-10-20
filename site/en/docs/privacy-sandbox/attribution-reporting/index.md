@@ -84,7 +84,7 @@ This API is a work in progress and is evolving over time, depending on ecosystem
 and input.
 {% endAside %}
 
-- To get mongthly updates, subscribe to the RSS feed [Progress in
+- To get monthly updates, subscribe to the RSS feed [Progress in
   the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/). This includes Attribution Reporting announcements alongside other Privacy Sandbox news.
 - To closely follow all ongoing discussions, click the **Watch** button on the [proposal page on GitHub](https://github.com/WICG/conversion-measurement-api).
 
