@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Attribution Reporting in short'
+title: 'Attribution Reporting in five minutes'
 subhead: >
   Measure when user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 description: >
