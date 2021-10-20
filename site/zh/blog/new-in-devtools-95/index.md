@@ -4,11 +4,10 @@ title: "DevTools 新功能（Chrome 95）"
 authors:
   - jecelynyeen
 date: 2021-09-20
-updated: 2021-09-20
+updated: 2021-10-20
 description:
   "新的 CSS 长度编辑工具、在“问题”标签页隐藏问题、改善属性展示以及更多。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/F7eHsbOisrDMocY3MjSx.jpg'
-draft: true
 alt: ''
 tags:
   - new-in-devtools
