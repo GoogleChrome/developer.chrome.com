@@ -12,7 +12,6 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Improved UI for DevTools command menu](/blog/new-in-devtools-95/#command-menu)
 
 
-
 ### Chrome 94 {: #chrome94 }
 
 * [Use DevTools in your preferred language](/blog/new-in-devtools-94/#localized)
