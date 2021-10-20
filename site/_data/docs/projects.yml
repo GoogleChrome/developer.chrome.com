@@ -1,5 +1,6 @@
 tools:
   - url: devtools
+  - url: workbox
 crx:
   - url: extensions
   - url: webstore
