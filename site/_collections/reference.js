@@ -43,5 +43,6 @@ module.exports = collections => {
   out.sort(({data: {api: a = ''}}, {data: {api: b = ''}}) =>
     a.localeCompare(b)
   );
+
   return out;
 };

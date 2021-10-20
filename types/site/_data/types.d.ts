@@ -27,4 +27,19 @@ declare global {
     name: string;
     groups: RenderGroup[];
   }
+
+  export interface AggregateTags {
+    platformAppsOnly?: true;
+    disallowServiceWorkers?: true;
+    deprecated?: {
+      value: string;
+      since?: string;
+    };
+    minManifest?: string;
+    maxManifest?: string;
+    since?: string;
+    channel: string;
+    permissions?: string[];
+    manifestKeys?: string[];
+  }
 }

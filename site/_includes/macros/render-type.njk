@@ -481,8 +481,9 @@
 {% endmacro %}
 
 {#
-  Renders API availability information based on a sparse Feature. This is used for both top-level
-  namespaces as well as specific APIs. This does not render permissions.
+  Renders API availability information based on feature information (this is type `AggregateTags`).
+  This is used for both top-level namespaces as well as specific APIs. This does not render
+  permissions.
 
   This returns valid HTML, so it should be rendered with `| safe`.
 #}
@@ -495,27 +496,27 @@
       </span>
     {% endif %}
 
-    {% if feature.supportedInChannel === 'dev' %}
+    {% if feature.channel === 'dev' %}
       <span class="aside--warning tag-pill type--label rounded-lg">
         Dev channel
       </span>
-    {% elif feature.supportedInChannel === 'beta' %}
+    {% elif feature.channel === 'beta' %}
       <span class="aside--warning tag-pill type--label rounded-lg">
         Beta channel
       </span>
-    {% elif feature.supportedInChannel === 'canary' or feature.supportedInChannel === 'trunk' %}
+    {% elif feature.channel === 'canary' or feature.channel === 'trunk' %}
       <span class="aside--warning tag-pill type--label rounded-lg">
         In development
       </span>
-    {% elif feature.unknownVersion %}
+    {% elif feature.since and feature.since.startsWith('Chrome') %}
+      <span class="aside--default tag-pill type--label rounded-lg">
+        {{ feature.since }}+
+      </span>
+    {% elif feature.since %}
       {# This is stable but not yet visible in the version history data. It's probably coming next
         Chrome release. #}
-      <span class="aside--warning tag-pill type--label rounded-lg" title="No version data available">
-        Unknown version
-      </span>
-    {% elif feature.availableFromVersion %}
-      <span class="aside--default tag-pill type--label rounded-lg">
-        Chrome {{ feature.availableFromVersion }}+
+      <span class="aside--warning tag-pill type--label rounded-lg">
+        {{ feature.since }}
       </span>
     {% endif %}
 
@@ -525,35 +526,37 @@
       </span>
     {% endif %}
 
-    {% if feature.maxManifestVersion %}
+    {% if feature.maxManifest %}
       <span class="aside--caution tag-pill type--label rounded-lg" title="Maximum manifest vesion">
-        Manifest V{{ feature.maxManifestVersion }}
+        &leq;{{ feature.maxManifest }}
       </span>
     {% endif %}
-    {% if feature.minManifestVersion %}
+    {% if feature.minManifest %}
       <span class="aside--gotchas tag-pill type--label rounded-lg">
-        Manifest V{{ feature.minManifestVersion }}+
+        {{ feature.minManifest }}+
       </span>
     {% endif %}
 
-    {% if feature.disallowForServiceWorkers %}
+    {% if feature.disallowServiceWorkers %}
       <span class="aside--gotchas tag-pill type--label rounded-lg" title="Not available in Service Workers">
         Foreground only
       </span>
     {% endif %}
 
-    {% if prop.deprecated !== undefined or feature.deprecatedSinceVersion %}
+    {% if feature.deprecated %}
       <span class="aside--warning tag-pill type--label rounded-lg">
         Deprecated
-        {%- if feature.deprecatedSinceVersion > 0 %}
-          {{ feature.deprecatedSinceVersion }}+
+        {%- if feature.deprecated.since %}
+          since {{ feature.deprecated.since }}
         {%- endif -%}
       </span>
     {% endif %}
   {% endset %}
 
   {% if inner | trim %}
-    <div class="display-flex flex-flow-row-wrap">{{ inner | trim | safe }}</div>
+    <div class="cluster flow-space-100">
+      <div>{{ inner | trim | safe }}</div>
+    </div>
   {% endif %}
 
 {% endmacro %}

@@ -40,47 +40,47 @@ function modelToHref(ref) {
     return undefined;
   }
 
-  const parts = ref.split('.');
-  let property = namespace.all[parts[0]];
-  let otherNamespace;
+  // const parts = ref.split('.');
+  // let property = namespace.all[parts[0]];
+  // let otherNamespace;
 
-  if (!property) {
-    // If we can't resolve this locally, then try to match it against another namespace.
-    const {chromeApiNamespaces} = this.ctx;
-    if (!chromeApiNamespaces) {
-      return;
-    }
-    otherNamespace = chromeApiNamespaces[parts[0]];
-    if (!otherNamespace) {
-      return;
-    }
-    property = otherNamespace.all[parts[1]];
-    if (!property) {
-      return;
-    }
-  }
+  // if (!property) {
+  //   // If we can't resolve this locally, then try to match it against another namespace.
+  //   const {chromeApiNamespaces} = this.ctx;
+  //   if (!chromeApiNamespaces) {
+  //     return;
+  //   }
+  //   otherNamespace = chromeApiNamespaces[parts[0]];
+  //   if (!otherNamespace) {
+  //     return;
+  //   }
+  //   property = otherNamespace.all[parts[1]];
+  //   if (!property) {
+  //     return;
+  //   }
+  // }
 
-  /** @type {string} */
-  let prefix;
-  if (property.type.key === 'function') {
-    prefix = 'method';
-  } else if (
-    property.type.key === 'ref' &&
-    property.type.name === 'events.Event'
-  ) {
-    prefix = 'event';
-  } else if (property.isType) {
-    prefix = 'type';
-  } else {
-    prefix = 'property';
-  }
+  // /** @type {string} */
+  // let prefix;
+  // if (property.type.key === 'function') {
+  //   prefix = 'method';
+  // } else if (
+  //   property.type.key === 'ref' &&
+  //   property.type.name === 'events.Event'
+  // ) {
+  //   prefix = 'event';
+  // } else if (property.isType) {
+  //   prefix = 'type';
+  // } else {
+  //   prefix = 'property';
+  // }
 
-  let href = otherNamespace
-    ? `../${otherNamespace.name.replace(/\./g, '_')}/`
-    : '';
-  href += `#${prefix}-${property.name}`;
+  // let href = otherNamespace
+  //   ? `../${otherNamespace.name.replace(/\./g, '_')}/`
+  //   : '';
+  // href += `#${prefix}-${property.name}`;
 
-  return href;
+  // return href;
 }
 
 function updateAtLink(content, resolver) {

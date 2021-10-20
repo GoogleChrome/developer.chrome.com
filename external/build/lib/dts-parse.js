@@ -40,14 +40,14 @@ class Transform {
    * @param {typedoc.JSONOutput.DeclarationReflection[]} parents
    */
   walk(node, parents = []) {
-    if (!this.filter(node)) {
-      return;
-    }
-
     this.visit(node, parents);
 
-    for (const c of node.children ?? []) {
-      this.walk(c, [...parents, node]);
+    if (node.children) {
+      const children = node.children.filter(this.filter);
+      for (const c of children) {
+        this.walk(c, [...parents, node]);
+      }
+      node.children = children;
     }
   }
 
@@ -56,6 +56,12 @@ class Transform {
    * @param {typedoc.JSONOutput.DeclarationReflection[]} parents
    */
   visit(node, parents) {
+    const parts = parents
+      .filter(parent => parent.kindString !== 'Project')
+      .map(parent => parent.name);
+    parts.push(node.name);
+    const fqdn = parts.filter(x => x).join('.');
+
     if (node.kindString === 'Namespace') {
       const hasNonNamespaceChild = (node.children ?? []).some(
         x => x.kindString !== 'Namespace'
@@ -63,13 +69,68 @@ class Transform {
       if (!hasNonNamespaceChild) {
         return;
       }
-      const parts = parents
-        .filter(parent => parent.kindString !== 'Project')
-        .map(parent => parent.name);
-      parts.push(node.name);
-      const joined = parts.filter(x => x).join('.');
-      this.namespaces[joined] = node;
+      this.namespaces[fqdn] = node;
     }
+
+    node._name = fqdn;
+    node._feature = this._processTagsToFeature(node?.comment?.tags ?? []);
+  }
+
+  /**
+   * @param {typedoc.JSONOutput.CommentTag[]} tags
+   * @return {AggregateTags}
+   */
+  _processTagsToFeature(tags) {
+    /** @type {{value: string, since?: string}} */
+    const deprecated = {value: ''};
+
+    /** @type {AggregateTags} */
+    const out = {
+      channel: 'stable',
+    };
+
+    tags.forEach(({tag, text}) => {
+      text = text.trim(); // some show up with extra \n
+
+      switch (tag) {
+        case 'chrome-platform-apps':
+          out.platformAppsOnly = true;
+          break;
+        case 'since':
+          out.since = text;
+          break;
+        case 'chrome-channel':
+          out.channel = text;
+          break;
+        case 'chrome-permission':
+          out.permissions = out.permissions ?? [];
+          out.permissions.push(text);
+          break;
+        case 'chrome-manifest':
+          out.manifestKeys = out.manifestKeys ?? [];
+          out.manifestKeys.push(text);
+          break;
+        case 'deprecated':
+          out.deprecated = deprecated;
+          deprecated.value = text;
+          break;
+        case 'chrome-deprecated-since':
+          out.deprecated = deprecated;
+          deprecated.since = text;
+          break;
+        case 'chrome-min-manifest':
+          out.minManifest = text;
+          break;
+        case 'chrome-max-manifest':
+          out.maxManifest = text;
+          break;
+        case 'chrome-disallow-service-workers':
+          out.disallowServiceWorkers = true;
+          break;
+      }
+    });
+
+    return out;
   }
 
   /**

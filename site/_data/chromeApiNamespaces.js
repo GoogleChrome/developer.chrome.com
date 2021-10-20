@@ -22,31 +22,24 @@
  *   https://www.11ty.dev/docs/plugins/cache/#manually-store-your-own-data-in-the-cache
  */
 
-require('dotenv').config();
+const path = require('path');
+const fs = require('fs');
 
-// TODO(samthor): This is in package.json and installed yet ESLint complains it does not exist.
-// eslint-disable-next-line node/no-missing-require
-const chromeTypesHelpers = require('chrome-types-helpers');
-const {fetchFromCache} = require('./lib/cache');
+// eslint-disable-next-line no-unused-vars
+const typedoc = require('typedoc');
 
-const LATEST_VERSION_JSON =
-  'https://unpkg.com/chrome-types@latest/history.json';
-
-/**
- * @return {Promise<{[name: string]: chromeTypesHelpers.Namespace}>}
- */
-module.exports = async () => {
+module.exports = () => {
   if (process.env.ELEVENTY_IGNORE_EXTENSIONS) {
     return {};
   }
 
-  // This fetches the latest pubilshed historic version data, which is automaticaly published from
-  // https://github.com/GoogleChrome/chrome-types in a GitHub action.
-  /** @type {chromeTypesHelpers.VersionDataFile} */
-  const data = await fetchFromCache(LATEST_VERSION_JSON);
+  const chromeTypesFile = path.join(
+    __dirname,
+    '../../external/data/chrome-types.json'
+  );
 
-  const {symbols} = data;
+  /** @type {{[namespace: string]: typedoc.JSONOutput.DeclarationReflection}} */
+  const parsed = JSON.parse(fs.readFileSync(chromeTypesFile, 'utf-8'));
 
-  const out = await chromeTypesHelpers.prepareNamespaces({symbols});
-  return out.namespaces;
+  return parsed;
 };

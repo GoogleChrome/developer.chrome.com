@@ -1,4 +1,6 @@
 
+{% import 'macros/render-type.njk' as macros with context %}
+
 {#
   Renders a table of types based on a given channel filter.
 #}
@@ -14,40 +16,25 @@
   <tbody>
 
   {% for page in all %}
-    {% if page.data.namespace %}
-      {% set namespace = page.data.namespace %}
-      {% set feature = namespace.feature %}
+    {% set namespace = page.data.namespace %}
+    {% set f = namespace._feature %}
 
-      {% if (not channel or channel === feature.supportedInChannel) and (platformAppsOnly === feature.platformAppsOnly) %}
-        <tr>
-          <td>
-            <a class="link weight-medium" href="{{ namespace.name | namespaceToPath }}">{{ namespace.name }}</a>
-            <div class="reference-requirements">
-              {% if not channel and feature.supportedInChannel === 'dev' %}
-                <span>Dev channel</span>
-              {% elif not channel and feature.supportedInChannel === 'beta' %}
-                <span>Beta and Dev channels</span>
-              {% elif feature.availableFromVersion %}
-                <span>Chrome {{ feature.availableFromVersion }}</span>
-              {% endif %}
-              {% if feature.maxManifestVersion %}
-                <span>
-                  MV{{ feature.maxManifestVersion }}
-                  {% if feature.maxManifestVersion === 2 %}
-                    {# Nothing is actually before MV2. #}
-                  {% else %}
-                    and below
-                  {% endif %}
-                </span>
-              {% endif %}
-              {% if feature.minManifestVersion %}
-                <span>MV{{ feature.minManifestVersion }}+</span>
-              {% endif %}
-            </div>
-          </td>
-          <td class="reference-collapse type">{{ namespace.description | md | safe }}</td>
-        </tr>
-      {% endif %}
+    {% if (not channel or channel === f.channel) and (platformAppsOnly === f.platformAppsOnly) %}
+      <tr>
+        <td>
+          {% set namespacePath = namespace._name | namespaceToPath %}
+          <a class="link weight-medium" href="{{ namespacePath }}">
+            {{ namespacePath.replace('_', '.') }}
+          </a>
+        </td>
+        <td class="reference-collapse type">
+          {% set availabilityHtml %}{{ macros.renderAvailabilityFeature(f) }}{% endset %}
+          {% if availabilityHtml | trim %}
+            <div class="pad-bottom-300">{{ availabilityHtml | safe }}</div>
+          {% endif %}
+          {{ namespace.comment.shortText | md | safe }}
+        </td>
+      </tr>
     {% endif %}
   {% endfor %}
 
