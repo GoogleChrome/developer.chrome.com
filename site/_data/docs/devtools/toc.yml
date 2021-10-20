@@ -12,6 +12,7 @@
   sections:
     - url: /docs/devtools/css/
     - url: /docs/devtools/css/reference/
+    - url: /docs/devtools/css-overview/
     - url: /docs/devtools/css/animations/
     - url: /docs/devtools/css/grid/
     - url: /docs/devtools/css/print-preview/
