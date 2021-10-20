@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Attribution Reporting'
+title: 'Attribution Reporting: all resources'
 subhead: >
   Measure when user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 description: >
