@@ -3,7 +3,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 
 ### Chrome 95 {: #chrome95 }
-* [New CSS length authoring tools](/blog/new-in-devtools-95/#)
+* [New CSS length authoring tools](/blog/new-in-devtools-95/#length)
 * [Hide issues in the Issues tab](/blog/new-in-devtools-95/#hide-issues)
 * [Improved the display of properties](/blog/new-in-devtools-95/#properties)
 * [Lighthouse 8.4 in the Lighthouse panel](/blog/new-in-devtools-95/#lighthouse)

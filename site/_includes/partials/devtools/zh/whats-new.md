@@ -2,7 +2,7 @@
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
 ### Chrome 95 {: #chrome95 }
-* [新的 CSS 长度编辑工具](/blog/new-in-devtools-95/#)
+* [新的 CSS 长度编辑工具](/blog/new-in-devtools-95/#length)
 * [在“问题”标签页隐藏问题](/blog/new-in-devtools-95/#hide-issues)
 * [改善属性展示](/blog/new-in-devtools-95/#properties)
 * [Lighthouse 面板中的 Lighthouse 8.4](/blog/new-in-devtools-95/#lighthouse)
