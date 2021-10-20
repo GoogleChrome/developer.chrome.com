@@ -71,6 +71,8 @@
     "redirects-yaml": "^2.0.3",
     "rollup": "^2.22.2",
     "striptags": "^3.1.1",
+    "typedoc": "^0.22.6",
+    "typescript": "^4.4.4",
     "unistore": "^3.5.2",
     "webdev-infra": "^1.0.28"
   },
@@ -122,7 +124,6 @@
     "stylelint-config-sass-guidelines": "^7.1.0",
     "terser": "^5.4.0",
     "tmp": "^0.2.1",
-    "typescript": "^4.4.4",
     "unified-lint-rule": "^1.0.6",
     "unist-util-visit": "^2.0.3",
     "uslug": "^1.0.4",
