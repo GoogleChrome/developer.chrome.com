@@ -25,6 +25,11 @@ Head over to [Attribution Reporting in five minutes](/docs/privacy-sandbox/attri
 - [FAQ: Impact of user-initiated data clearing on attribution reports](/docs/privacy-sandbox/attribution-reporting-data-clearing/)
 - [Migration guide (Chrome 92): Conversion Measurement API to Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-migration/)
 
+## See the timeline
+
+- Head over to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline) for an overview of the various stages of development for this API.
+- The [Attribution Reporting status overview](/docs/privacy-sandbox/attribution-reporting-introduction/#status) is a detailed view of the status of different features within the API.
+
 ## Try out the API
 
 Try out the [demo](https://goo.gle/demo-event-level-conversion-measurement-api) to see the API in
