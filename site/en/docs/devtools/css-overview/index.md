@@ -11,7 +11,7 @@ description: "Identify potential CSS improvements with the CSS Overview panel."
 Use the **CSS Overview** panel to better understand your page’s CSS and identify potential improvements.
 
 {% Aside %}
-This is a preview feature in Chrome 96. Preview feature is a feature which are still under active development. We would like to get 
+This is a preview feature in Chrome 96. Our team is actively working on this feature and we are looking for your [https://goo.gle/css-overview-feedback](feedback) for further enhancements. 
 {% endAside %}
 
 ## Open the CSS Overview panel {: #open }
