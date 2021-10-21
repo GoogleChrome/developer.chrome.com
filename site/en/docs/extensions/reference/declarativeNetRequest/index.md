@@ -7,17 +7,17 @@ extra_permissions_html:
 
 ## Manifest
 
-Extensions must declare either the `declarativeNetRequest` or the 
-`declarativeNetRequestWithHostAccess` (available since **Chrome 96**) permission in the extension 
-[manifest][1] to use this API. The former allows extensions to block and upgrade requests without 
-any [host permissions][2]. Host permissions are still required if the extension wants to redirect a 
-request or modify headers on it. The `declarativeNetRequestWithHostAccess` permission always 
+Extensions must declare either the `declarativeNetRequest` or the
+`declarativeNetRequestWithHostAccess` (available since **Chrome 96**) permission in the extension
+[manifest][1] to use this API. The former allows extensions to block and upgrade requests without
+any [host permissions][2]. Host permissions are still required if the extension wants to redirect a
+request or modify headers on it. The `declarativeNetRequestWithHostAccess` permission always
 requires host permissions to the request URL and initiator to act on a request.
 
-The `declarativeNetRequestFeedback` permission is required to access functions and events which 
-return information on declarative rules matched. 
+The `declarativeNetRequestFeedback` permission is required to access functions and events which
+return information on declarative rules matched.
 
-To specify static [Rulesets][3], extensions must also declare the `"declarative_net_request"` 
+To specify static [Rulesets][3], extensions must also declare the `"declarative_net_request"`
 manifest key, which should be a dictionary with a single key called `"rule_resources"`. It should be
 a list containing dictionaries of type [Ruleset][4], as shown below.
 
@@ -101,7 +101,40 @@ The `urlFilter` field of a rule condition is used to specify the pattern which i
 the request URL. It is documented on the [`RuleCondition`](#type-RuleCondition) type below. Some
 examples of URL filters:
 
-<table><tbody><tr><th><code><b>urlFilter</b></code></th><th>Matches</th><th>Does not match</th></tr><tr><td><code>"abc"</code></td><td>https://abcd.com<br>https://example.com/abcd</td><td>https://ab.com</td></tr><tr><td><code>"abc*d"</code></td><td>https://abcd.com<br>https://example.com/abcxyzd</td><td>https://abc.com</td></tr><tr><td><code>"||a.example.com"</code></td><td>https://a.example.com/<br>https://b.a.example.com/xyz</td><td>https://example.com/</td></tr><tr><td><code>"|https*"</code></td><td>https://example.com</td><td>https://example.com/<br>http://https.com</td></tr><tr><td><code>"example*^123|"</code></td><td>https://example.com/123<br>http://abc.com/example?123</td><td>https://example.com/1234<br>https://abc.com/example0123</td></tr></tbody></table>
+<table>
+    <tbody>
+        <tr>
+            <th><code><b>urlFilter</b></code></th>
+            <th>Matches</th>
+            <th>Does not match</th>
+        </tr>
+        <tr>
+            <td><code>"abc"</code></td>
+            <td>https://abcd.com<br>https://example.com/abcd</td>
+            <td>https://ab.com</td>
+        </tr>
+        <tr>
+            <td><code>"abc*d"</code></td>
+            <td>https://abcd.com<br>https://example.com/abcxyzd</td>
+            <td>https://abc.com</td>
+        </tr>
+        <tr>
+            <td><code>"||a.example.com"</code></td>
+            <td>https://a.example.com/<br>https://b.a.example.com/xyz</td>
+            <td>https://example.com/</td>
+        </tr>
+        <tr>
+            <td><code>"|https*"</code></td>
+            <td>https://example.com</td>
+            <td>https://example.com/<br>http://https.com</td>
+        </tr>
+        <tr>
+            <td><code>"example*^123|"</code></td>
+            <td>https://example.com/123<br>http://abc.com/example?123</td>
+            <td>https://example.com/1234<br>https://abc.com/example0123</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Dynamic and session-scoped rules
 
@@ -168,7 +201,7 @@ is determined based on the priority of each rule and the operations specified.
   JavaScript in the extension process.
 - Because the requests are not intercepted by the extension process, declarativeNetRequest removes
   the need for extensions to have a background page; resulting in less memory consumption.
-- Unlike the webRequest API, blocking or upgrading requests using the declarativeNetRequest API 
+- Unlike the webRequest API, blocking or upgrading requests using the declarativeNetRequest API
   requires no host permissions when used with the `declarativeNetRequest` permission.
 - The declarativeNetRequest API provides better privacy to users because extensions can't actually
   read the network requests made on the user's behalf.
