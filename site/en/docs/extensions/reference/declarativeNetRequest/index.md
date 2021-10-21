@@ -126,7 +126,7 @@ examples of URL filters:
         <tr>
             <td><code>"|https*"</code></td>
             <td>https://example.com</td>
-            <td>https://example.com/<br>http://https.com</td>
+            <td>http://example.com/<br>http://https.com</td>
         </tr>
         <tr>
             <td><code>"example*^123|"</code></td>
