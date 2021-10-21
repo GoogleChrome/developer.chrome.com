@@ -14,7 +14,7 @@ authors:
 
 ## Get started
 
-Head over to [Attribution Reporting in five minutes](/docs/privacy-sandbox/attribution-reporting-in-short) for a quick overview of the Attribution Reporting APi.
+Head over to [Attribution Reporting in five minutes](/docs/privacy-sandbox/attribution-reporting-in-short) for a quick overview of the Attribution Reporting API.
 
 ## Learn more
 
