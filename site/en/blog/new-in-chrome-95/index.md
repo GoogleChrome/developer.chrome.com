@@ -65,7 +65,7 @@ We'll specify the `kind` of file, the file `ID`, and what `mode` to open it in.
 Then to use the pattern, we can call either `test()`, or `exec()`.
 
 ```js
-const url = '/document/d/1s...5c/edit#heading=h.8...c';
+const url = 'https://docs.google.com/document/d/1s...5c/edit#heading=h.8...c';
 
 const pattern = new URLPattern({
   pathname: '/:kind/d/:fileID/:mode',
