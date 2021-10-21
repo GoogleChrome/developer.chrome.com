@@ -4,3 +4,9 @@
     - url: /docs/workbox/service-worker-lifecycle
     - url: /docs/workbox/caching-strategies-overview
     - url: /docs/workbox/what-is-workbox
+- title: i18n.docs.workbox.know
+  sections:
+    - url: /docs/workbox/service-worker-deployment
+    - url: /docs/workbox/remove-buggy-service-workers
+    - url: /docs/workbox/improving-development-experience
+    - url: /docs/workbox/different-architectures
