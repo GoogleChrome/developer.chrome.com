@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'Attribution Reporting: all resources'
+title: 'Attribution Reporting'
 subhead: >
   Measure when user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 description: >
@@ -12,13 +12,11 @@ authors:
   - samdutton
 ---
 
-## Understand Attribution Reporting
-
-### Get started
+## Get started
 
 Head over to [Attribution Reporting in five minutes](/docs/privacy-sandbox/attribution-reporting-in-short) for a quick overview of the Attribution Reporting APi.
 
-### Learn more
+## Learn more
 
 - [Introduction to Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction) gives you an in-depth
   introduction to the API's use cases, features, and privacy model.
@@ -62,8 +60,7 @@ platform called _GitHub_. On GitHub, discussions are called _issues_.
 - Join the conversation in [existing
   issues](https://github.com/WICG/conversion-measurement-api/issues).
 - [Open a new issue](https://github.com/WICG/conversion-measurement-api/issues/new) to ask questions,
-  propose features, or discuss use cases. If you're unsure how to formulate your issue, see like
-  [this issue](https://github.com/WICG/conversion-measurement-api/issues/147) as an example.
+  propose features, or discuss use cases. If you're unsure how to formulate your issue, see [this issue](https://github.com/WICG/conversion-measurement-api/issues/147) as an example.
 - Discussions also take place in a [biweekly
   meeting](https://github.com/WICG/conversion-measurement-api/issues/80) (every second week).
   Everyone is welcome to join these discussions⏤only make sure to [join the
@@ -77,7 +74,7 @@ platform called _GitHub_. On GitHub, discussions are called _issues_.
   API](https://github.com/privacycg/private-click-measurement) in the [Privacy Community
   Group](https://www.w3.org/community/privacycg/).
 
-## Stay tuned
+## Get updates
 
 {% Aside %}  
 This API is a work in progress and is evolving over time, depending on ecosystem feedback
@@ -87,9 +84,6 @@ and input.
 - To get monthly updates, subscribe to the RSS feed [Progress in
   the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/). This includes Attribution Reporting announcements alongside other Privacy Sandbox news.
 - To closely follow all ongoing discussions, click the **Watch** button on the [proposal page on GitHub](https://github.com/WICG/conversion-measurement-api).
-
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/gg9KIbShClSkFudnRBCU.png", alt="Watch button on GitHub", width="242", height="73" %}
-
 - Join the [mailing list for
   developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) to be
   notified when a new origin trial is starting.
