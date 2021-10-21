@@ -19,16 +19,15 @@
 
   <h2 class="type--h3">Summary</h2>
   <ul class="code-sections code-sections--summary flow-space-300 stack">
-    {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
-    {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
-    {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
-    {{ macros.renderSummarySection(namespace.name, 'Events', 'event', namespace.events) }}
+    {% for group in namespace.groups %}
+      {{ macros.renderGroupSummary(group) }}
+    {% endfor %}
   </ul>
 
-  {{ macros.renderPrimarySection(namespace.name, 'types', 'Types', 'type', namespace.types) }}
-  {{ macros.renderPrimarySection(namespace.name, 'properties', 'Properties', 'property', namespace.properties) }}
-  {{ macros.renderPrimarySection(namespace.name, 'methods', 'Methods', 'method', namespace.methods) }}
-  {{ macros.renderPrimarySection(namespace.name, 'events', 'Events', 'event', namespace.events) }}
+  {% for group in namespace.groups %}
+   {{ macros.renderGroupAll(group) }}
+  {% endfor %}
+
 {% endset %}
 
 {% set tocContents %}
@@ -38,7 +37,7 @@
 {% block content %}
   <div class="display-flex gap-top-300 lg:gap-top-400">
     {% include 'partials/navigation-tree.njk' %}
-    {% set f = namespace._feature %}
+    {% set f = namespace.root._feature %}
 
     {# The article is wrapped again so that the ToC aligns on its right on desktop #}
     <div class="display-flex justify-content-center width-full">
@@ -61,18 +60,17 @@
           </div>
         {% endif %}
 
-        {% set availabilityHtml %}{{ macros.renderAvailabilityFeature(f) }}{% endset %}
-
         <div>{# This div prevents flow-space-300 from applying to the parent stack. #}
           <ul class="code-sections code-sections--summary flow-space-300 stack">
             <li>
               <div class="code-sections__label">Description</div>
               <div class="type">
                 {# TODO: helper that does both #}
-                {{ namespace.comment.shortText | md | safe }}
-                {{ namespace.comment.text | md | safe }}
+                {{ namespace.root.comment.shortText | md | safe }}
+                {{ namespace.root.comment.text | md | safe }}
               </div>
             </li>
+
             {% if f.permissions.length %}
               <li>
                 <div class="code-sections__label">Permissions</div>
@@ -84,6 +82,7 @@
                 </div>
               </li>
             {% endif %}
+
             {% if f.manifestKeys.length %}
               <li>
                 <div class="code-sections__label">Manifest Keys</div>
@@ -95,12 +94,15 @@
                 </div>
               </li>
             {% endif %}
+
+            {% set availabilityHtml %}{{ macros.renderAvailability(namespace.root) }}{% endset %}
             {% if availabilityHtml | trim %}
               <li class="align-center">
                 <div class="code-sections__label">Availability</div>
                 {{ availabilityHtml | safe }}
               </li>
             {% endif %}
+
           </ul>
         </div>
 

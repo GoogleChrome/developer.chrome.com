@@ -28,6 +28,64 @@ const fs = require('fs');
 // eslint-disable-next-line no-unused-vars
 const typedoc = require('typedoc');
 
+/**
+ * @param {typedoc.JSONOutput.DeclarationReflection} root
+ * @return {RenderGroup[]}
+ */
+function buildGroupsForRoot(root) {
+  /** @type {RenderGroup[]} */
+  const groups = [];
+
+  /** @type {(title: string, prefix: string) => ((node: typedoc.JSONOutput.DeclarationReflection) => void)} */
+  const defineGroupAdder = (title, prefix) => {
+    /** @type {RenderGroup} */
+    const group = {title, prefix, contents: []};
+    groups.push(group);
+    return node => group.contents.push(node);
+  };
+
+  const typesAdd = defineGroupAdder('Types', 'type');
+  const propertyAdd = defineGroupAdder('Properties', 'property');
+  const methodAdd = defineGroupAdder('Methods', 'method');
+  const eventAdd = defineGroupAdder('Events', 'event');
+  const otherAdd = defineGroupAdder('Other', 'other');
+
+  for (const child of root.children ?? []) {
+    const extended = /** @type {ExtendedDeclarationReflection} */ (child);
+
+    if (extended._event) {
+      eventAdd(child);
+      continue;
+    }
+
+    switch (extended.kind) {
+      case typedoc.ReflectionKind.Class:
+      case typedoc.ReflectionKind.Interface:
+      case typedoc.ReflectionKind.TypeAlias:
+      case typedoc.ReflectionKind.TypeLiteral:
+        typesAdd(extended);
+        break;
+      case typedoc.ReflectionKind.Function:
+        // To TypeDoc, a Method is always something on an interface/class, but we use it to mean
+        // part of the namespace/module.
+        methodAdd(extended);
+        break;
+      case typedoc.ReflectionKind.Variable:
+        propertyAdd(child);
+        break;
+      default:
+        otherAdd(child);
+    }
+  }
+
+  for (const {contents} of groups) {
+    contents.sort(({name: a}, {name: b}) => a.localeCompare(b));
+  }
+
+  // Only return groups that actually have contents.
+  return groups.filter(({contents}) => contents.length);
+}
+
 module.exports = () => {
   if (process.env.ELEVENTY_IGNORE_EXTENSIONS) {
     return {};
@@ -41,5 +99,19 @@ module.exports = () => {
   /** @type {{[namespace: string]: typedoc.JSONOutput.DeclarationReflection}} */
   const parsed = JSON.parse(fs.readFileSync(chromeTypesFile, 'utf-8'));
 
-  return parsed;
+  /** @type {{[namespace: string]: RenderNamespace}} */
+  const withGroups = {};
+
+  for (const [namespace, declaration] of Object.entries(parsed)) {
+    const shortName = namespace.replace(/^chrome\./, '');
+
+    withGroups[namespace] = {
+      shortName,
+      name: namespace,
+      root: declaration,
+      groups: buildGroupsForRoot(declaration),
+    };
+  }
+
+  return withGroups;
 };

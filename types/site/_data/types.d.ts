@@ -19,16 +19,18 @@ import * as typedoc from 'typedoc';
 declare global {
   export interface RenderGroup {
     title: string;
-    key: string;
+    prefix: string;
     contents: typedoc.JSONOutput.DeclarationReflection[];
   }
 
   export interface RenderNamespace {
+    shortName: string;
     name: string;
+    root: typedoc.JSONOutput.DeclarationReflection;
     groups: RenderGroup[];
   }
 
-  export interface AggregateTags {
+  export interface FeatureInfo {
     platformAppsOnly?: true;
     disallowServiceWorkers?: true;
     deprecated?: {
@@ -41,5 +43,14 @@ declare global {
     channel: string;
     permissions?: string[];
     manifestKeys?: string[];
+  }
+
+  export interface ExtendedDeclarationReflection extends typedoc.JSONOutput.DeclarationReflection {
+    _name: string;
+    _feature: AggregateTags;
+
+    _event?: {
+      addListenerParameters?: typedoc.JSONOutput.ParameterReflection[];
+    };
   }
 }

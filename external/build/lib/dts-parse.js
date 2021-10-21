@@ -16,6 +16,9 @@
 
 const typedoc = require('typedoc');
 
+// nb. we include "Event" as typedoc flattens "event.Events" sometimes (?)
+const chromeEventRefTypes = ['CustomChromeEvent', 'events.Event', 'Event'];
+
 class Transform {
   /**
    * @param {typedoc.JSONOutput.ProjectReflection} project
@@ -72,19 +75,75 @@ class Transform {
       this.namespaces[fqdn] = node;
     }
 
-    node._name = fqdn;
-    node._feature = this._processTagsToFeature(node?.comment?.tags ?? []);
+    const extendedNode = /** @type {ExtendedDeclarationReflection} */ (node);
+
+    extendedNode._name = fqdn;
+    extendedNode._feature = this._processTags(node?.comment?.tags ?? []);
+
+    // This is an event reference (used in Chrome extensions), so parse it for easy reference.
+    if (
+      node.type?.type === 'reference' &&
+      chromeEventRefTypes.includes(node.type.name)
+    ) {
+      const firstArgument = node.type.typeArguments?.[0];
+      if (!firstArgument) {
+        throw new Error(`got reference to ${node.type.name} without argument`);
+      }
+
+      /** @type {typedoc.JSONOutput.ParameterReflection[]|undefined} */
+      let parameters;
+
+      if (node.type.name === 'CustomChromeEvent') {
+        // CustomChromeEvent specifies all parameters to addListener directly.
+        const arg = /** @type {typedoc.JSONOutput.ReflectionType} */ (
+          firstArgument
+        );
+        parameters = arg.declaration?.signatures?.[0]?.parameters;
+      } else if (firstArgument.type === 'intrinsic') {
+        // This is a declarative event, because its first argument is "never".
+        const intrinsicType = /** @type {typedoc.JSONOutput.IntrinsicType} */ (
+          firstArgument
+        );
+        if (intrinsicType.name !== 'never') {
+          throw new Error(
+            `unexpected first argument for declarative event: ${JSON.stringify(
+              firstArgument
+            )}`
+          );
+        }
+
+        // TODO: something
+      } else {
+        // Otherwise, steal the declaration and include it as a single paramater.
+        parameters = [
+          {
+            id: -1,
+            name: 'callback',
+            kind: 32768,
+            flags: {},
+            type: node.type.typeArguments?.[0],
+          },
+        ];
+      }
+
+      /** @type {ExtendedDeclarationReflection["_event"]} */
+      const extendedEvent = {};
+      if (parameters) {
+        extendedEvent.addListenerParameters = parameters;
+      }
+      extendedNode._event = extendedEvent;
+    }
   }
 
   /**
    * @param {typedoc.JSONOutput.CommentTag[]} tags
-   * @return {AggregateTags}
+   * @return {FeatureInfo}
    */
-  _processTagsToFeature(tags) {
+  _processTags(tags) {
     /** @type {{value: string, since?: string}} */
     const deprecated = {value: ''};
 
-    /** @type {AggregateTags} */
+    /** @type {FeatureInfo} */
     const out = {
       channel: 'stable',
     };
@@ -146,7 +205,7 @@ class Transform {
 /**
  * Fetches and builds typedoc JSON for the given .d.ts source files.
  *
- * @param {...string[]} sources
+ * @param {...string} sources
  * @return {Promise<{[id: string]: typedoc.JSONOutput.DeclarationReflection}>}
  */
 module.exports = async function parse(...sources) {
