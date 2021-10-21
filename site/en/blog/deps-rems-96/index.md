@@ -21,7 +21,7 @@ stable version in late November, 2021.
 ## The "basic-card" method of PaymentRequest API
 
 The PaymentRequest API has [deprecated the basic card payment
-method](https://www.chromestatus.com/feature/5730051011117056). Its usage is low
+method](https://blog.chromium.org/2021/10/sunsetting-basic-card-payment-method-in.html). Its usage is low
 and declining. It underperforms when compared to other payment methods in
 time-to-checkout and completion rate. Developers can switch to other payment
 methods as an alternative. Examples include Google Pay, Apple Pay, and Samsung
