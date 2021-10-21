@@ -178,7 +178,6 @@ from the results of the darkening algorithm to the developer APIs for element cu
 You can send us feedback by filing a bug on the Chromium bugs, 
 using [this link](https://bugs.chromium.org/p/chromium/issues/list?q=component:Mobile%3EAutoDarkTheme) 
 or via the Origin Trial form. 
-Additionally you can reach out to us in our discussion group or drop in our public weekly office hours.
 
 Photo by [Félix Besombes](https://unsplash.com/@druks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
   
