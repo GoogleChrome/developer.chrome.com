@@ -8,6 +8,8 @@ date: 2021-10-21
 description: "Identify potential CSS improvements with the CSS Overview panel."
 ---
 
+{% YouTube id="OAP_Sr0zb5I" %}
+
 Use the **CSS Overview** panel to better understand your page’s CSS and identify potential improvements.
 
 {% Aside %}
