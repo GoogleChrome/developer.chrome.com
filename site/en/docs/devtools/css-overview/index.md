@@ -13,7 +13,7 @@ description: "Identify potential CSS improvements with the CSS Overview panel."
 Use the **CSS Overview** panel to better understand your page’s CSS and identify potential improvements.
 
 {% Aside %}
-This is a preview feature in Chrome 96. Our team is actively working on this feature and we are looking for your [https://goo.gle/css-overview-feedback](feedback) for further enhancements. 
+This is a preview feature in Chrome 96. Our team is actively working on this feature and we are looking for your [feedback](https://goo.gle/css-overview-feedback) for further enhancements. 
 {% endAside %}
 
 ## Open the CSS Overview panel {: #open }
@@ -68,9 +68,9 @@ The report consists of 5 sections:-
 
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LJ2oxJ9C037v66BSWhQ1.png", alt="Unused declarations", width="800", height="509" %}
 
-    For example, these 2 declarations are unused because the height and width of an inline element are determined by its content. Clicking the occurrences to view the affected elements. 
+    For example, the 2 declarations above are unused because the height and width of an inline element are determined by its content. Clicking the occurrences to view the affected elements. 
 
-5. **Media queries**. All the media queries defined in your page, sorted by the highest occurrences. Click on the occurrences to to view the list of affected elements.
+5. **Media queries**. All the media queries defined in your page, sorted by the highest occurrences. Click on the occurrences to view the list of affected elements.
 
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aXZMYB5ceeklWzs53fcg.png", alt="Media queries", width="800", height="509" %}
 
