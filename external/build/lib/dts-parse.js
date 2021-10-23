@@ -54,6 +54,13 @@ class Transform {
         this.walk(c, parentsForChild);
       }
       reflection.children = children;
+
+      if (children.length) {
+        const extendedNode = /** @type {ExtendedReflection} */ (node);
+        extendedNode._type = {
+          properties: children,
+        };
+      }
     }
 
     // Flatten signatures. Chrome has weird optional signatures.

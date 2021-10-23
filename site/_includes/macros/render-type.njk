@@ -102,13 +102,8 @@
 #}
 {% macro renderInnerParts(node, isTopLevel) %}
 
-  {% if node.kindString === 'Interface' %}
-    {{ renderChildrenTable(node.children, isTopLevel and 'Properties' or '') }}
-  {% endif %}
-
-  {# FIXME: flatten this stuff #}
-  {% if node.type.type === 'reflection' and node.type.declaration.children %}
-    {{ renderChildrenTable(node.type.declaration.children, isTopLevel and 'Properties' or '') }}
+  {% if node._type %}
+    {{ renderChildrenTable(node._type.properties, isTopLevel and 'Properties' or '') }}
   {% endif %}
 
   {% if node._method %}

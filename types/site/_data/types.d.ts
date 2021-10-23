@@ -49,6 +49,10 @@ declare global {
     _name: string;
     _feature: AggregateTags;
 
+    _type?: {
+      all: typedoc.JSONOutput.DeclarationReflection[];
+    };
+
     _method?: {
       parameters: typedoc.JSONOutput.ParameterReflection[];
     };
