@@ -27,6 +27,7 @@
         </td>
         <td class="reference-collapse type">
           {{ macros.renderAvailability(namespace.root, 'pad-bottom-300') }}
+          {{ macros.renderCommentText(namespace.root) }}
           {{ namespace.root.comment.shortText | md | safe }}
         </td>
       </tr>

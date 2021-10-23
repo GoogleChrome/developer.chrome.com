@@ -39,35 +39,135 @@ class Transform {
   }
 
   /**
-   * @param {typedoc.JSONOutput.DeclarationReflection} node
-   * @param {typedoc.JSONOutput.DeclarationReflection[]} parents
+   * @param {typedoc.JSONOutput.Reflection} node
+   * @param {typedoc.JSONOutput.Reflection[]} parents
    */
   walk(node, parents = []) {
-    this.visit(node, parents);
+    const parentsForChild = [...parents, node];
 
-    if (node.children) {
-      const children = node.children.filter(this.filter);
+    if ('children' in node) {
+      const reflection =
+        /** @type {typedoc.JSONOutput.DeclarationReflection} */ (node);
+
+      const children = (reflection?.children ?? []).filter(this.filter);
       for (const c of children) {
-        this.walk(c, [...parents, node]);
+        this.walk(c, parentsForChild);
       }
-      node.children = children;
+      reflection.children = children;
     }
+
+    // Flatten signatures. Chrome has weird optional signatures.
+    if (signaturesForReflection(node)) {
+      this._mergeSignatures(node, parents);
+    }
+
+    if ('type' in node) {
+      // 'type' can appear on different types of reflection, just assert the common 'type' param.
+      const typedNode = /** @type {{type?: typedoc.JSONOutput.SomeType}} */ (
+        node
+      );
+
+      if (typedNode.type?.type === 'reflection' && typedNode.type.declaration) {
+        this.walk(typedNode.type.declaration, parentsForChild);
+      }
+
+      if (
+        typedNode.type?.type === 'reference' &&
+        typedNode.type.typeArguments
+      ) {
+        for (const t of typedNode.type.typeArguments) {
+          if (t.type === 'reflection' && t.declaration) {
+            this.walk(t.declaration, parentsForChild);
+          }
+        }
+      }
+    }
+
+    if (node.kind === typedoc.ReflectionKind.CallSignature) {
+      const callSignature =
+        /** @type {typedoc.JSONOutput.SignatureReflection} */ (node);
+      if (callSignature.parameters) {
+        for (const c of callSignature.parameters) {
+          this.walk(c, parentsForChild);
+        }
+      }
+    }
+
+    // We visit the self node last, as the visit call below can delete parts of its children too.
+    this.visit(node, parents);
   }
 
   /**
    * @param {typedoc.JSONOutput.DeclarationReflection} node
-   * @param {typedoc.JSONOutput.DeclarationReflection[]} parents
+   * @param {typedoc.JSONOutput.Reflection[]} parents
+   */
+  _mergeSignatures(node, parents) {
+    // Grab the signatures either from the reflection (inline type) or from top-level (if
+    // function). This is kinda gross below but just matches the conditional.
+    // nb. It's possible for signatures to be empty if an inline function takes no parameters.
+    const signatures = signaturesForReflection(node);
+    if (!signatures) {
+      throw new Error(
+        `can't merge for node without signatures: ${JSON.stringify(node)}`
+      );
+    }
+
+    // Hoist the comment onto the top node if it doesn't already have one.
+    // This solves the problem that TypeDoc thinks methods are actually "methodName.methodName".
+    node.comment = node.comment ?? signatures[0]?.comment;
+
+    /** @type {Map<string, typedoc.JSONOutput.ParameterReflection>} */
+    const allParams = new Map();
+
+    for (const s of signatures) {
+      for (const param of s.parameters ?? []) {
+        if (allParams.has(param.name) && !param.flags.isOptional) {
+          // optional params win
+          continue;
+        }
+        allParams.set(param.name, param);
+      }
+
+      if (s.type) {
+        // this is the Promise verison, or a version with a return value
+        // TODO: group separately?
+      }
+    }
+
+    // FIXME: We can't delete this or the event code doesn't work.
+    // Clear the old data so our JSON isn't enormous.
+    // delete node.signatures;
+    // if (node.type?.type === 'reflection') {
+    //   delete node.type.declaration?.signatures;
+    // }
+
+    const extendedNode = /** @type {ExtendedDeclarationReflection} */ (node);
+    extendedNode._method = {
+      parameters: [...allParams.values()],
+    };
+
+    // We just created virtual params, so just walk over them.
+    for (const param of extendedNode._method.parameters) {
+      this.walk(param, parents);
+    }
+  }
+
+  /**
+   * @param {typedoc.JSONOutput.Reflection} node
+   * @param {typedoc.JSONOutput.Reflection[]} parents
    */
   visit(node, parents) {
     const parts = parents
-      .filter(parent => parent.kindString !== 'Project')
+      .filter(parent => parent.kind !== typedoc.ReflectionKind.Project)
       .map(parent => parent.name);
     parts.push(node.name);
     const fqdn = parts.filter(x => x).join('.');
 
-    if (node.kindString === 'Namespace') {
-      const hasNonNamespaceChild = (node.children ?? []).some(
-        x => x.kindString !== 'Namespace'
+    if (node.kind === typedoc.ReflectionKind.Namespace) {
+      const declaration =
+        /** @type {typedoc.JSONOutput.DeclarationReflection} */ (node);
+      const hasNonNamespaceChild = (declaration.children ?? []).some(
+        x => x.kind !== typedoc.ReflectionKind.Namespace
       );
       if (!hasNonNamespaceChild) {
         return;
@@ -78,7 +178,10 @@ class Transform {
     const extendedNode = /** @type {ExtendedDeclarationReflection} */ (node);
 
     extendedNode._name = fqdn;
-    extendedNode._feature = this._processTags(node?.comment?.tags ?? []);
+
+    // Grab the comment off the _type_ first, which includes @since and etc.
+    const preferComment = node?.type?.declaration?.comment ?? node.comment;
+    extendedNode._feature = this._processTags(preferComment?.tags ?? []);
 
     // This is an event reference (used in Chrome extensions), so parse it for easy reference.
     if (
@@ -126,12 +229,18 @@ class Transform {
         ];
       }
 
-      /** @type {ExtendedDeclarationReflection["_event"]} */
-      const extendedEvent = {};
+      // If this is a normal event, pretend it's a method.
       if (parameters) {
-        extendedEvent.addListenerParameters = parameters;
+        extendedNode._method = {parameters};
+        extendedNode._event = {};
+
+        // Walk these node as we've just created them virtually for addListener's callback type.
+        // It won't be walked otherwise.
+        for (const param of parameters) {
+          this.walk(param, parents);
+        }
       }
-      extendedNode._event = extendedEvent;
+      // TODO: what if it's a declarative event
     }
   }
 
@@ -197,9 +306,35 @@ class Transform {
    * @return {boolean}
    */
   filter(node) {
+    return true;
+
     // nb. All of our parsed namespaces are external.
     return !(node.flags?.isPrivate || node.name.startsWith('_'));
   }
+}
+
+/**
+ * @param {typedoc.JSONOutput.Reflection} node
+ * @return {typedoc.JSONOutput.SignatureReflection[]|undefined}
+ */
+function signaturesForReflection(node) {
+  if (node['signatures']) {
+    const reflection = /** @type {typedoc.JSONOutput.DeclarationReflection} */ (
+      node
+    );
+    return reflection.signatures ?? [];
+  }
+
+  if (node['type']) {
+    const typedNode = /** @type {{type?: typedoc.JSONOutput.SomeType}} */ (
+      node
+    );
+    if (typedNode.type?.type === 'reflection' && typedNode.type.declaration) {
+      return signaturesForReflection(typedNode.type.declaration);
+    }
+  }
+
+  return undefined;
 }
 
 /**

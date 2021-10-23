@@ -12,14 +12,18 @@ const childProcess = require('child_process');
  * @param {string} targetDir
  */
 async function fetchAndParse(targetDir) {
-  /** @type {childProcess.CommonExecOptions} */
+  /** @type {childProcess.ExecFileSyncOptions} */
   const options = {cwd: targetDir, stdio: 'inherit'};
 
   childProcess.execFileSync('npm', ['install', 'chrome-types@beta'], options);
-  console.warn('fetched chrome-types@beta', targetDir);
+  const packageDir = path.join(targetDir, 'node_modules/chrome-types');
 
-  const p = path.join(targetDir, 'node_modules/chrome-types/_all.d.ts');
-  const defs = await dtsParse(p);
+  /** @type {{version: string}} */
+  const packageJson = JSON.parse(
+    fs.readFileSync(path.join(packageDir, 'package.json'), 'utf-8')
+  );
+  console.warn('fetched chrome-types@beta', targetDir, packageJson.version);
+  const defs = await dtsParse(path.join(packageDir, '_all.d.ts'));
 
   const targetFile = path.join(__dirname, '../data/chrome-types.json');
   fs.writeFileSync(targetFile, JSON.stringify(defs, undefined, 2));

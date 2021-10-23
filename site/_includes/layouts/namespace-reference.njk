@@ -65,9 +65,7 @@
             <li>
               <div class="code-sections__label">Description</div>
               <div class="type">
-                {# TODO: helper that does both #}
-                {{ namespace.root.comment.shortText | md | safe }}
-                {{ namespace.root.comment.text | md | safe }}
+                {{ macros.renderCommentText(namespace.root) }}
               </div>
             </li>
 

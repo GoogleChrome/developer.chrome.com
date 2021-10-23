@@ -84,13 +84,19 @@
 .code-sections__callback {
   background: get-color('grey-50');
   border: 1px solid var(--color-hairline);
-  padding: 1em;
+  padding: 0.5em;
+  display: block;
 
   > code {
     background: transparent;
     border: 0;
     border-radius: 0;
   }
+}
+
+// If this is used within a paragraph, space it from the text above.
+p > .code-sections__callback {
+  margin-top: 0.5em;
 }
 
 .code-sections__overline {
