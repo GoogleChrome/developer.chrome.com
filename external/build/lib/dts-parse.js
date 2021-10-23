@@ -141,7 +141,7 @@ class Transform {
     //   delete node.type.declaration?.signatures;
     // }
 
-    const extendedNode = /** @type {ExtendedDeclarationReflection} */ (node);
+    const extendedNode = /** @type {ExtendedReflection} */ (node);
     extendedNode._method = {
       parameters: [...allParams.values()],
     };
@@ -175,7 +175,7 @@ class Transform {
       this.namespaces[fqdn] = node;
     }
 
-    const extendedNode = /** @type {ExtendedDeclarationReflection} */ (node);
+    const extendedNode = /** @type {ExtendedReflection} */ (node);
 
     extendedNode._name = fqdn;
 

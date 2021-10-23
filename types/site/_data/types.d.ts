@@ -45,7 +45,7 @@ declare global {
     manifestKeys?: string[];
   }
 
-  export interface ExtendedDeclarationReflection extends typedoc.JSONOutput.DeclarationReflection {
+  export interface ExtendedReflection extends typedoc.JSONOutput.Reflection {
     _name: string;
     _feature: AggregateTags;
 
