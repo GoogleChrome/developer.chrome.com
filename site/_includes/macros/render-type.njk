@@ -85,7 +85,7 @@
       {% else %}
         {# This is probably a callback given back to the user, so be vague about its usage. #}
         <p>
-          The <code>{{ node.name }} parameter looks like:
+          The <code>{{ node.name }}</code> parameter looks like:
           <span class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(node._method.parameters) }} => {...}</code></span>
         </p>
       {% endif %}
