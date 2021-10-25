@@ -6,6 +6,7 @@ layout: 'layouts/blog-post.njk'
 authors: 
   - andreban
 date: 2021-10-21
+updated: 2021-10-25
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/t98X06XyMtNI4rTmXyfZ.jpg'
 alt: >
   Lamp on a dark background.
@@ -64,7 +65,7 @@ leading to a page that has a light theme, but with only parts of it darkened.
 ### Detecting Auto Dark Theme
 
 To detect if the user is in Auto Dark Theme, 
-create an element with the `background-color` set to `canvas` and the color-scheme set to light. 
+create an element with the `background-color` set to `canvas` and the color-scheme set to `light`. 
 If the computed color for the background is other than white (`rgb(255, 255, 255)`), 
 then we know that Auto Dark Theme is applied to the page.
 
@@ -74,7 +75,7 @@ then we know that Auto Dark Theme is applied to the page.
 </div>
 ```
 ```js
-const detection = document.querySelector('#detection');
+const detectionDiv = document.querySelector('#detection');
 // If the computed style is not white then the page is in Auto Dark Theme.
 const isAutoDark = getComputedStyle(detectionDiv).backgroundColor != 'rgb(255, 255, 255)';
 // Update element styles when Auto Dark Theme is applied.
@@ -143,7 +144,7 @@ which could cause a "flash of darkened content".
 
 ```html
 <head>
-<meta name="color-scheme" content="only light">
+  <meta name="color-scheme" content="only light">
   ...
 </head>
 ```
@@ -180,4 +181,3 @@ using [this link](https://bugs.chromium.org/p/chromium/issues/list?q=component:M
 or via the Origin Trial form. 
 
 Photo by [Félix Besombes](https://unsplash.com/@druks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
-  
