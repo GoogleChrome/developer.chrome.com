@@ -2,6 +2,19 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
+<!-- ### Chrome 96 {: #chrome96 }
+* [Preview feature: New CSS Overview panel](/blog/new-in-devtools-96/#css-overview)
+* [Emulate the CSS prefers-contrast media feature](/blog/new-in-devtools-96/#prefers-contrast)
+* [Emulate the Chrome’s Auto Dark Theme feature](/blog/new-in-devtools-96/#auto-dark-mode)
+* [Copy declarations as JavaScript in the Styles pane](/blog/new-in-devtools-96/#copy-as-js)
+* [New Payload tab in the Network panel](/blog/new-in-devtools-96/#payload)
+* [Improved the display of properties in the Properties pane](/blog/new-in-devtools-96/#properties)
+* [Option to hide CORS errors in the Console](/blog/new-in-devtools-96/#hide-cors-errors)
+* [Proper `Intl` objects preview and evaluation in the Console](/blog/new-in-devtools-96/#intl)
+* [Consistent async stack traces](/blog/new-in-devtools-96/#async)
+* [Retain the Console sidebar](/blog/new-in-devtools-96/#console-sidebar)
+* [[Experimental] New Reporting API pane in the Application panel](/blog/new-in-devtools-96/#reporting-api) -->
+
 ### Chrome 95 {: #chrome95 }
 * [新しいCSSの長さ編集ツール](/ja//blog/new-in-devtools-95/#length)
 * [Issues タブで問題を隠す](/ja/blog/new-in-devtools-95/#hide-issues)

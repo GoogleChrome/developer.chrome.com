@@ -161,8 +161,6 @@ The [Application cache](https://developer.chrome.com/docs/devtools/storage/appli
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
 Chromium issue: [1084190](https://crbug.com/1084190) 
-{% include 'partials/devtools/en/reach-out.md' %}
-{% include 'partials/devtools/en/whats-new.md' %}
 
 
 ## [Experimental] New Reporting API pane in the Application panel {: #reporting-api }
@@ -184,3 +182,6 @@ Learn more about the **Reporting API** with [this article](https://web.dev/repor
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c0516bfc7d4cee077452d31b1550ea1d3c594705 #}
 
 Chromium issue: [1205856](https://crbug.com/1205856)
+
+{% include 'partials/devtools/en/reach-out.md' %}
+{% include 'partials/devtools/en/whats-new.md' %}
