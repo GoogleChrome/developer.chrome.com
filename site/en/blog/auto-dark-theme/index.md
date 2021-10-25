@@ -6,6 +6,7 @@ layout: 'layouts/blog-post.njk'
 authors: 
   - andreban
 date: 2021-10-21
+updated: 2021-10-25
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/t98X06XyMtNI4rTmXyfZ.jpg'
 alt: >
   Lamp on a dark background.
