@@ -99,7 +99,7 @@ to display an element on that screen.
 ```js
 try {
   const screens = await window.getScreens();
-  const primary = screens.filter((screen) => screen.primary)[0];
+  const primary = screens.find((screen) => screen.primary);
   await elem.requestFullscreen({ screen: primary });
 } catch (err) {
   console.error(err);
