@@ -3,6 +3,19 @@
 Чтобы увидеть полный список обновлений,  перейдите на английскую версию по ссылке 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
+<!-- ### Chrome 96 {: #chrome96 }
+* [Preview feature: New CSS Overview panel](/blog/new-in-devtools-96/#css-overview)
+* [Emulate the CSS prefers-contrast media feature](/blog/new-in-devtools-96/#prefers-contrast)
+* [Emulate the Chrome’s Auto Dark Theme feature](/blog/new-in-devtools-96/#auto-dark-mode)
+* [Copy declarations as JavaScript in the Styles pane](/blog/new-in-devtools-96/#copy-as-js)
+* [New Payload tab in the Network panel](/blog/new-in-devtools-96/#payload)
+* [Improved the display of properties in the Properties pane](/blog/new-in-devtools-96/#properties)
+* [Option to hide CORS errors in the Console](/blog/new-in-devtools-96/#hide-cors-errors)
+* [Proper `Intl` objects preview and evaluation in the Console](/blog/new-in-devtools-96/#intl)
+* [Consistent async stack traces](/blog/new-in-devtools-96/#async)
+* [Retain the Console sidebar](/blog/new-in-devtools-96/#console-sidebar)
+* [[Experimental] New Reporting API pane in the Application panel](/blog/new-in-devtools-96/#reporting-api) -->
+
 ### Chrome 95 {: #chrome95 }
 * [Новый инструмент выбора единиц измерения длины в CSS](/blog/new-in-devtools-95/#length)
 * [Скрытие задач во вкладке Проблемы (Issues)](/blog/new-in-devtools-95/#hide-issues)
