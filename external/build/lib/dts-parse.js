@@ -259,6 +259,9 @@ class Transform {
     /** @type {{value: string, since?: string}} */
     const deprecated = {value: ''};
 
+    /** @type {{value: string|number, description: string}[]} */
+    const enumPairs = [];
+
     /** @type {FeatureInfo} */
     const out = {
       channel: 'stable',
@@ -302,8 +305,16 @@ class Transform {
         case 'chrome-disallow-service-workers':
           out.disallowServiceWorkers = true;
           break;
+        case 'chrome-enum': {
+          // TODO: This relies on enums looking like `"foo_bar"`, without spaces.
+          const raw = text.split(' ')[0];
+          const rest = raw.substr(text.length + 1);
+          enumPairs.push({value: JSON.parse(raw), description: rest});
+        }
       }
     });
+
+    // TODO: augment feature/result with enum
 
     return out;
   }
