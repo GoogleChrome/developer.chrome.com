@@ -61,13 +61,13 @@ First you will need to [register as a Chrome Web Store developer][register]. We 
 
 If you already host your item in Google Play and you want your Chrome Web Store listing to show an "Available for Android" link, your item must have the same name as your Google Play listing, and both items must be owned by the same developer account. To transfer your Chrome Web Store item to a different developer, submit this [form][cws-support].
 
-### Setup your account {: #setup-a-developer-account }
+### Set up your account {: #setup-a-developer-account }
 
 Once you've registered, you can finish setting up your developer account in the Account page located on the left menu.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/lBcTQm6QF1FBzOmLEfG1.png", alt="Chrome Web Store Account page", width="800", height="404" %}
 
-Here you can provide your developer profile information, configure management settings and enable email notifications. However, only the name, email and privacy policy link are mandatory.
+Here you can provide your developer profile information, configure management settings and enable email notifications. Only the name, email and privacy policy link are mandatory.
 
 | Field                | Description                                                                                                                                                        |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -75,6 +75,21 @@ Here you can provide your developer profile information, configure management se
 | **Email Address**    | This email will only be displayed under your items' contact information. Any notifications will be sent to your CWS developer account email.                       |
 | **Privacy Policy**   | This privacy policy link is for all your items. It should include how data is collected, used, and disclosed. See the [User Data FAQ][user-data] for more details. |
 | **Physical address** | Only items that offer a functionality to purchase items, additional features or subscriptions must include a physical address.                                     |
+
+### Verify your email address {: #verify-contact-email }
+
+Verifying your contact email address is now mandatory when you set up a new developer account. When
+you click **Add email** on your account page, you can enter an email address and then request
+verification. The Chrome Web Store then sends a verification link to that address; use that link to
+verify your address.
+
+**If you have an existing account** and you haven't verified your contact email address yet, your
+address appears as "unverified" in the developer dashboard, as shown in this screenshot:
+
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/KZbN4VNG8mEFEDsiWglX.png", alt="Contact email field
+showing as unverified", width="250", height="98", class="screenshot screenshot--filled" %}
+
+Click the **Verify email** link to send the verification link to your email.
 
 ## Upload your item {: #upload-your-item }
 
