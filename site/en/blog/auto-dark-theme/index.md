@@ -181,4 +181,3 @@ using [this link](https://bugs.chromium.org/p/chromium/issues/list?q=component:M
 or via the Origin Trial form. 
 
 Photo by [Félix Besombes](https://unsplash.com/@druks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
-  
