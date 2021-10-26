@@ -98,18 +98,16 @@ module.exports = () => {
     '../../external/data/chrome-types.json'
   );
 
-  /** @type {{[namespace: string]: typedoc.JSONOutput.DeclarationReflection}} */
+  /** @type {{[namespace: string]: ExtendedReflection}} */
   const parsed = JSON.parse(fs.readFileSync(chromeTypesFile, 'utf-8'));
 
   /** @type {{[namespace: string]: RenderNamespace}} */
   const withGroups = {};
 
   for (const [namespace, declaration] of Object.entries(parsed)) {
-    const shortName = namespace.replace(/^chrome\./, '');
-
     withGroups[namespace] = {
-      shortName,
-      name: namespace,
+      shortName: namespace,
+      name: declaration._name,
       root: declaration,
       groups: buildGroupsForRoot(declaration),
     };
