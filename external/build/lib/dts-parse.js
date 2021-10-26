@@ -124,6 +124,9 @@ class Transform {
     const extendedNode = /** @type {ExtendedReflection} */ (node);
 
     let nodePrefix = 'type';
+    if (node.kind & typedoc.ReflectionKind.VariableOrProperty) {
+      nodePrefix = 'property';
+    }
 
     // Set the page that this node is on, which might be needed bt children.
     if (parent) {
@@ -148,7 +151,6 @@ class Transform {
       } else {
         // We'll resolve this later.
         this.pendingReferences.push(extendedNode);
-        nodePrefix = 'property';
       }
     }
 
@@ -269,7 +271,11 @@ class Transform {
   }
 
   /**
+   * Converts the passed node, which points to `chrome.Event` or `CustomChromeEvent`, to have a
+   * magic `_event` property describing its behavior to the rendering code.
+   *
    * @param {typedoc.JSONOutput.DeclarationReflection} node
+   * @return {typedoc.JSONOutput.DeclarationReflection[]} to nest into to fix too
    */
   upgradeEventNode(node) {
     const extendedNode = /** @type {ExtendedReflection} */ (node);
@@ -313,20 +319,38 @@ class Transform {
         );
       }
 
-      extendedNode._event = {
-        conditions: typeArguments[1],
-        actions: typeArguments[2],
+      // Declarative events all support a number of types in an array for both their conditions and
+      // their actions. However TypeDoc doesn't gives us an array for singulars.
+
+      /** @type {(type: typedoc.JSONOutput.SomeType) => typedoc.JSONOutput.SomeType[]} */
+      const ensureArrayOfType = type => {
+        if (type.type === 'union') {
+          return type.types;
+        }
+        return [type];
       };
 
-      // TODO: need to traverse these too?
-      return [];
+      const conditions = ensureArrayOfType(typeArguments[1]);
+      const actions = ensureArrayOfType(typeArguments[2]);
+      extendedNode._event = {conditions, actions};
+
+      // Return virtual types that get updated (for references).
+      return [...conditions, ...actions].map(type => {
+        return {
+          id: -1,
+          name: '_declarative-fake',
+          kind: typedoc.ReflectionKind.TypeAlias,
+          flags: {},
+          type,
+        };
+      });
     } else {
       // Otherwise, steal the declaration and include it as a single paramater.
       parameters = [
         {
           id: -1,
           name: 'callback',
-          kind: 32768,
+          kind: typedoc.ReflectionKind.Parameter,
           flags: {},
           type: referenceType.typeArguments?.[0],
         },

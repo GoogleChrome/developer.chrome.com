@@ -78,9 +78,9 @@
     #}
     {% if node._method %}
       {% if not node.type.declaration.signatures %}
-        {# This is a function on an interface or class. #}
+        {# This is a function or event on an interface or class. #}
         <p>
-          The <code>{{ node.name }}</code> function looks like:
+          The <code>{{ node.name }}{% if node._event %}.addListener{% endif %}</code> function looks like:
           <span class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(node._method.parameters) }} => {...}</code></span>
         </p>
       {% elif isTopLevel %}
@@ -122,20 +122,13 @@
   {% if node._method %}
     {# Something that looks like a method, including events. #}
     {{ renderChildrenTable(node._method.parameters, isTopLevel and 'Parameters') }}
+
+  {% elif node._event %}
+    {# This is a declarative event without a method. #}
+    {{ renderIconTypesArray(node._event.conditions, 'Conditions', prop) }}
+    {{ renderIconTypesArray(node._event.actions, 'Actions', prop) }}
+
   {% endif %}
-
-  {# {% elif type.key === 'ref' and type.name === 'events.Event' %}
-
-    {% if type.templates[0].primitiveType === 'void' %}
-      {{ renderIconTypesArray(type.templates[1].choices, 'Conditions', prop) }}
-      {{ renderIconTypesArray(type.templates[2].choices, 'Actions', prop) }}
-    {% else %}
-      <div class="code-sections">
-        <h4 class="type--label code-sections__mode">Event</h4>
-        <ul class="stack">
-          {{ internalRenderListenerAsItem(type.templates[0]) }}
-        </ul>
-      </div> #}
 
 {% endmacro %}
 

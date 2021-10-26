@@ -66,8 +66,8 @@ declare global {
 
     // TODO: declarative stuff
     _event?: {
-      conditions?: typedoc.JSONOutput.SomeType;
-      actions?: typedoc.JSONOutput.SomeType;
+      conditions?: typedoc.JSONOutput.SomeType[];
+      actions?: typedoc.JSONOutput.SomeType[];
     };
   }
 }
