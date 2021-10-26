@@ -9,7 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 const syncTestdata = require('./lib/sync-testdata');
-const fetch = require('node-fetch');
+const {default: fetch} = require('node-fetch');
 
 // The bucket to synchronize. It's not filtered, and the bucket is public, owned by the internal
 // Google project "chrome-gcs-uploader".
@@ -27,7 +27,7 @@ async function syncBucket(bucketName, target) {
   const u = new URL(
     `https://storage.googleapis.com/storage/v1/b/${bucketName}/o`
   );
-  u.searchParams.set('maxResults', 1000);
+  u.searchParams.set('maxResults', '1000');
 
   const allObjectsRequest = await fetch(u);
   if (!allObjectsRequest.ok) {

@@ -21,7 +21,7 @@ const SCHEDULE_JSON =
 // these OS' have weird releases, don't include
 const SKIP_OS = ['webview', 'ios'];
 
-const fetch = require('node-fetch');
+const {default: fetch} = require('node-fetch');
 
 /**
  * Finds the major Chrome release version from the passed string that looks like "84.0.1231.11".

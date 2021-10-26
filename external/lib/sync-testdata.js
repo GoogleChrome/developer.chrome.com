@@ -4,7 +4,7 @@ const path = require('path');
 /**
  * @return {Promise<string[]>}
  */
-module.exports = function () {
+module.exports = async function () {
   // TODO(samthor): This just copies top-level files for now.
   const testdataTarget = path.join(__dirname, '../testdata');
   const dataTarget = path.join(__dirname, '../data');
