@@ -31,7 +31,7 @@ async function run() {
     console.info('! Using fallback before build in CI, copied:', all);
   }
 
-  /** @type {childProcess.CommonExecOptions} */
+  /** @type {childProcess.ExecFileSyncOptions} */
   const options = {cwd: projectRoot, stdio: 'inherit'};
 
   for (const script of scripts) {
@@ -40,8 +40,10 @@ async function run() {
     try {
       childProcess.execFileSync('node', [r], options);
     } catch (e) {
+      const withStatus = /** @type {{status: any}} */ (e);
+
       // We don't log the error here, as we're already getting STDERR piped above.
-      console.warn(`! Failed to execute "${script}" (${e.status})`);
+      console.warn(`! Failed to execute "${script}" (${withStatus.status})`);
       ++errors;
     }
   }
