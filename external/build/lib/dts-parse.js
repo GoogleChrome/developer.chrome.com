@@ -175,7 +175,7 @@ class Transform {
       }
 
       const id = extendedNode._name.replace(/^chrome\./, '');
-      extendedNode._pageHref = id.replaceAll('.', '_');
+      extendedNode._pageHref = id.replace(/\./g, '_');
 
       let hasOnlyNamespaces = true;
 
@@ -391,7 +391,7 @@ class Transform {
     if (parent) {
       // Remove e.g., "chrome.networking.onc." from "chrome.networking.onc.someApiName".
       const pageIdPart = extendedNode._name.substr(namespace._name.length + 1);
-      extendedNode._pageId = nodePrefix + '-' + pageIdPart.replaceAll('.', '-');
+      extendedNode._pageId = nodePrefix + '-' + pageIdPart.replace(/\./g, '-');
     }
   }
 
@@ -544,14 +544,15 @@ class Transform {
           break;
         case 'chrome-enum': {
           // TODO: This relies on enums looking like `"foo_bar"`, without spaces.
-          const raw = text.split(' ')[0].replaceAll('\\_', '_');
+          const raw = text.split(' ')[0].replace(/\\_/g, '_');
           const rest = raw.substr(text.length + 1);
           enumPairs.push({value: JSON.parse(raw), description: rest});
         }
       }
     });
 
-    // TODO: augment feature/result with enum
+    // TODO(samthor): Right now, the rendering code blits out the enum values by stepping through
+    // all the tags, and `enumPairs` isn't used at all.
 
     return out;
   }
