@@ -114,6 +114,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
+  eleventyConfig.addFilter('typeof', x => typeof x);
 
   // Add shortcodes
   eleventyConfig.addShortcode('IFrame', IFrame);
