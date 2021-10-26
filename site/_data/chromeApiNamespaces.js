@@ -50,8 +50,10 @@ function buildGroupsForRoot(root) {
   const eventAdd = defineGroupAdder('Events', 'event');
   const otherAdd = defineGroupAdder('Other', 'other');
 
-  for (const child of root.children ?? []) {
-    const extended = /** @type {ExtendedDeclarationReflection} */ (child);
+  const extendedRoot = /** @type {ExtendedReflection} */ (root);
+
+  for (const child of Object.values(extendedRoot._type?.properties ?? {})) {
+    const extended = /** @type {ExtendedReflection} */ (child);
 
     if (extended._event) {
       eventAdd(child);

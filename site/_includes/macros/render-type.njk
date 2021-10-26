@@ -6,58 +6,67 @@
 
   {% set type = node.type %}
 
-<div class="type stack">
-  <h3 id="{{ prefix }}-{{ node.name }}">{{ node.name }}</h3>
-
-{% if node._method %}
-  {# Render the method signature. #}
-  <span class="code-sections__callback type--xsmall">
-    <code>
-      {% if node._event %}
-        {{ node.name }}.addListener{{ renderFunctionParameters(node._method.parameters) }}
-      {% else %}
-        {# TODO: show Promise vs not #}
-        {{ node.name }}{{ renderFunctionParameters(node._method.parameters) }}
-      {% endif %}
-    </code>
-  </span>
-{% elif node._event %}
-  {# This is a declarative event listener as it has no listener function type. #}
-  <p>
-    Provides the <a href="/docs/extensions/reference/events/#declarative-event-handlers">Declarative Event API</a> consisting of <code>addRules</code>, <code>removeRules</code>, and <code>getRules</code>.
-  </p>
-{% endif %}
-
-  {{ renderComment(node) }}
-</div>
-
-{% if type.type === 'literal' %}
-  {# Top-level literal number or string. #}
-  <div class="code-sections">
-    <h4 class="type--label code-sections__mode">Value</h4>
-
-    <div class="code-sections__overline code-sections__label">
-      {{ renderSingleIconType(type) }}
-    </div>
+  <div class="type stack">
+    <h3 id="{{ node._pageId }}">{{ node.name }}</h3>
+    {% if node._method %}
+      {# Render the method signature. #}
+      <span class="code-sections__callback type--xsmall">
+        <code>
+          {% if node._event %}
+            {{ node.name }}.addListener{{ renderFunctionParameters(node._method.parameters) }}
+          {% else %}
+            {# TODO: show Promise vs not #}
+            {{ node.name }}{{ renderFunctionParameters(node._method.parameters) }}
+          {% endif %}
+        </code>
+      </span>
+    {% elif node._event %}
+      {# This is a declarative event listener as it has no listener function type. #}
+      <p>
+        Provides the <a href="/docs/extensions/reference/events/#declarative-event-handlers">Declarative Event API</a> consisting of <code>addRules</code>, <code>removeRules</code>, and <code>getRules</code>.
+      </p>
+    {% endif %}
+    {{ renderComment(node) }}
   </div>
-{% elif type.type === 'intrinsic' %}
-  {# Intrinsic type, like 'number' #}
-  {{ renderIconTypesArray([type], 'Type') }}
 
-{% elif type.type === 'union' %}
-  {# Type that contains many string (probably) options, basically an enum. #}
-  {{ renderIconTypesArray(type.types, 'Type') }}
+  {% if type.type === 'literal' %}
+    {# Literal number or string. #}
+    <div class="code-sections">
+      <h4 class="type--label code-sections__mode">Value</h4>
+      <div class="code-sections__overline code-sections__label">
+        {{ renderSingleIconType(type) }}
+      </div>
+    </div>
 
-{% endif %}
+  {% elif type.type === 'reference' and not node._event %}
+    {# Reference to another type (and not an Event). #}
+    <div class="code-sections">
+      <h4 class="type--label code-sections__mode">Type</h4>
+      <div class="code-sections__overline code-sections__label">
+        {{ renderSingleIconType(type) }}
+      </div>
+    </div>
 
-{{ renderInnerParts(node, true) }}
+  {% elif type.type === 'intrinsic' %}
+    {# Intrinsic type, like 'number' #}
+    {{ renderIconTypesArray([type], 'Type') }}
+
+  {% elif type.type === 'union' %}
+    {# Type that contains many string (probably) options, basically an enum. #}
+    {{ renderIconTypesArray(type.types, 'Type') }}
+
+  {% endif %}
+
+  {# This might actually be a function or class, so render its contents. #}
+  {{ renderInnerParts(node, true) }}
 
 {% endmacro %}
 
 
 {#
+  Renders a declaration, for use inside parameter or property lists.
 #}
-{% macro renderDeclaration(node, isTopLevel) %}
+{% macro renderDeclaration(node) %}
 
   <li class="stack">
     <div>
@@ -91,7 +100,7 @@
       {% endif %}
     {% endif %}
 
-    {{ renderInnerParts(node, isTopLevel) }}
+    {{ renderInnerParts(node) }}
   </li>
 
 {% endmacro %}
@@ -103,11 +112,13 @@
 {% macro renderInnerParts(node, isTopLevel) %}
 
   {% if node._type %}
-    {{ renderChildrenTable(node._type.properties, isTopLevel and 'Properties' or '') }}
+    {# Something with properties. #}
+    {{ renderChildrenTable(node._type.properties, isTopLevel and 'Properties') }}
   {% endif %}
 
   {% if node._method %}
-    {{ renderChildrenTable(node._method.parameters, isTopLevel and 'Parameters' or '') }}
+    {# Something that looks like a method, including events. #}
+    {{ renderChildrenTable(node._method.parameters, isTopLevel and 'Parameters') }}
   {% endif %}
 
   {# {% elif type.key === 'ref' and type.name === 'events.Event' %}
@@ -158,7 +169,7 @@
     {% set iconType = type.value | typeof %}
   {% elif type.type === 'reflection' and type.declaration.signatures %}
     {% set iconType = 'function' %}
-  {% elif type.type === 'reflection' and type.declaration.children %}
+  {% elif type.type === 'reflection' %}
     {% set iconType = 'object' %}
   {% elif type.type === 'reference' %}
     {% set iconType = 'object' %}
@@ -189,9 +200,7 @@
       <p>
         {% for t in types %}
           {% if loop.last and not loop.first %}or{% endif %}
-          <span style="white-space: nowrap">
-            {{ renderSingleIconType(t) | trim }}{% if not loop.last %},{% endif %}
-          </span>
+          <span style="white-space: nowrap">{{ renderSingleIconType(t) | trim }}{% if not loop.last %},{% endif %}</span>
         {% endfor %}
       </p>
     </div>
@@ -243,7 +252,6 @@
   Renders a single model.Type as a single word. Used for signatures and type hints.
 #}
 {% macro renderSingleType(type) %}
-  {% set iconType = type.type %}
 
   {% if not type %}
     {# Should never happen #}
@@ -261,17 +269,15 @@
     {# A reflection which has signatures, i.e., a function. #}
     function
 
-  {% elif type.type === 'reflection' and type.declaration.children %}
+  {% elif type.type === 'reflection' %}
     {# A reflection which has children, i.e., an inline type. #}
     object
 
   {% elif type.type === 'reference' %}
     {# Reference to another type (internal or external) #}
 
-    {# TODO: doesn't work #}
-    {% set link = type.name | modelToHref %}
-    {% if link %}
-      <a href="{{ link }}">{{ type.name }}</a>
+    {% if type._href %}
+      <a href="{{ type._href }}">{{ type.name }}</a>
     {%- else %}
       {{ type.name }}
     {%- endif %}
@@ -296,15 +302,15 @@
     {% endif %}
 
   {% elif type.type === 'intersection' %}
-    {# A number of choices with `|` #}
-    {%- for t in type.types -%}
-      {{ renderSingleType(t) | trim }}{%- if not loop.last %} | {% endif -%}
-    {%- endfor -%}
-
-  {% elif type.type === 'union' %}
     {# A number of choices with `&` #}
     {%- for t in type.types -%}
       {{ renderSingleType(t) | trim }}{%- if not loop.last %} & {% endif -%}
+    {%- endfor -%}
+
+  {% elif type.type === 'union' %}
+    {# A number of choices with `|` #}
+    {%- for t in type.types -%}
+      {{ renderSingleType(t) | trim }}{%- if not loop.last %} | {% endif -%}
     {%- endfor -%}
 
   {% else %}
@@ -336,21 +342,21 @@
     <div class="code-sections__label">{{ group.title }}</div>
     <div>
       {% for node in group.contents %}
-        <div><a href="#{{ group.prefix }}-{{ node.name }}" class="link weight-medium">{{ node.name }}</a></div>
+        <div><a href="#{{ node._pageId }}" class="link weight-medium">{{ node.name }}</a></div>
       {% endfor %}
     </div>
   </li>
 {% endmacro %}
 
 {#
-  Renders the contents of the passed group, including heading.
+  Renders the contents of the passed group, including its heading.
 #}
 {% macro renderGroupAll(group) %}
 
   <h2 class="type--h3" id="{{ group.prefix }}">{{ group.title }}</h2>
   <div class="stack flow-space-300">
   {% for node in group.contents %}
-    {{ renderTopLevel(node, group.prefix) }}
+    {{ renderTopLevel(node) }}
   {% endfor %}
   </div>
 

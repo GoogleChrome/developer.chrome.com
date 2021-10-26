@@ -45,12 +45,19 @@ declare global {
     manifestKeys?: string[];
   }
 
-  export interface ExtendedReflection extends typedoc.JSONOutput.Reflection {
+  export interface ExtendedReferenceType extends typedoc.JSONOutput.ReferenceType {
+    _href?: string;
+  }
+
+  export interface ExtendedReflection extends typedoc.JSONOutput.DeclarationReflection {
     _name: string;
     _feature: AggregateTags;
 
+    _pageHref: string;
+    _pageId?: string;
+
     _type?: {
-      all: typedoc.JSONOutput.DeclarationReflection[];
+      properties: typedoc.JSONOutput.DeclarationReflection[];
     };
 
     _method?: {
@@ -58,6 +65,9 @@ declare global {
     };
 
     // TODO: declarative stuff
-    _event?: {};
+    _event?: {
+      conditions?: typedoc.JSONOutput.SomeType;
+      actions?: typedoc.JSONOutput.SomeType;
+    };
   }
 }

@@ -31,8 +31,7 @@ function namespaceForData(data) {
   // This can be called several times by Eleventy because the data gets resolved in an odd order.
   // It's fine to return undefined here, and we don't want to log (since it'll be spammy), and
   // we'll be called again if we previously returned undefined.
-  const apiWithChrome = `chrome.${api}`;
-  return chromeApiNamespaces[apiWithChrome];
+  return chromeApiNamespaces[api];
 }
 
 module.exports = {
