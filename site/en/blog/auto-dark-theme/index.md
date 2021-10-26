@@ -75,7 +75,7 @@ then Auto Dark Theme is applied to the page.
 </div>
 ```
 ```js
-const detection = document.querySelector('#detection');
+const detectionDiv = document.querySelector('#detection');
 // If the computed style is not white then the page is in Auto Dark Theme.
 const isAutoDark = getComputedStyle(detectionDiv).backgroundColor != 'rgb(255, 255, 255)';
 // Update element styles when Auto Dark Theme is applied.
@@ -144,7 +144,7 @@ which could cause a "flash of darkened content".
 
 ```html
 <head>
-<meta name="color-scheme" content="only light">
+  <meta name="color-scheme" content="only light">
   ...
 </head>
 ```
