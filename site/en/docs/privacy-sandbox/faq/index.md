@@ -59,13 +59,13 @@ Explainer](https://developer.chrome.com/docs/privacy-sandbox/status/).
 
 ### I don't understand the terminology in the API explainers. Is there a glossary?
 
-Yes: the [Privacy Sandbox glossary](https://deploy-preview-543--dcc-private.netlify.app/docs/privacy-sandbox/glossary/).
+Yes: the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
 ### When will the Privacy Sandbox APIs be implemented?
 
 The [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) shows the roadmap to phasing
 out third-party cookies. Additional current information for individual APIs is available on the
-[implementation status page](https://deploy-preview-543--dcc-private.netlify.app/docs/privacy-sandbox/status/).
+[implementation status page](/docs/privacy-sandbox/status/).
 
 ### Are the Privacy Sandbox APIs in Chromium or Chrome?
 
@@ -148,7 +148,7 @@ on the Privacy Sandbox developer support repo.
 
 ### What's the difference between FLEDGE and TURTLEDOVE?
 
-[FLEDGE](https://deploy-preview-543--dcc-private.netlify.app/docs/privacy-sandbox/fledge) is the
+[FLEDGE](/docs/privacy-sandbox/fledge) is the
 first experiment to be implemented in Chromium within the
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.  
 The differences are mostly about separating the on-device role of the buyer and seller:
