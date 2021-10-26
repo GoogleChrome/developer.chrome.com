@@ -131,7 +131,10 @@ class Transform {
       extendedNode._pageHref = namespace._pageHref;
     }
 
-    this.indexForReferences.set(node.id, extendedNode);
+    // We create virtual nodes at -1, so don't store them.
+    if (node.id > 0) {
+      this.indexForReferences.set(node.id, extendedNode);
+    }
 
     if (node.type?.type === 'reference') {
       if (chromeEventRefTypes.includes(node.type.name)) {
@@ -205,6 +208,54 @@ class Transform {
       // We just created virtual params, so just walk over them.
       for (const param of extendedNode._method.parameters) {
         this.walk(param, extendedNode, namespace);
+      }
+    }
+
+    // This has embedded types (intersection, union, array or tuple).
+    // We descend into them as a virtual reflection just so things like _method and references are
+    // correctly addressed.
+    if (
+      effectiveDeclarationNode?.type?.['types'] ||
+      effectiveDeclarationNode?.type?.['elements'] ||
+      effectiveDeclarationNode?.type?.['elementType']
+    ) {
+      const t = effectiveDeclarationNode.type;
+
+      // Grab any inner properties of a union or intersection, entirely for "chrome.storage" which
+      // does a weird intersection between a ref and properties.
+      /** @type {typedoc.JSONOutput.DeclarationReflection[]} */
+      const innerProperties = [];
+      const unionOrIntersectionType = 'types' in t;
+
+      /** @type {typedoc.JSONOutput.SomeType[]} */
+      const allTypes = [t['types'], t['elements'], t['elementType']]
+        .flat()
+        .filter(x => x);
+
+      for (const t of allTypes) {
+        /** @type {typedoc.JSONOutput.DeclarationReflection} */
+        const virtualNode = {
+          id: -1,
+          name: effectiveDeclarationNode.name,
+          kind: typedoc.ReflectionKind.TypeAlias,
+          flags: {},
+          type: t,
+        };
+        this.walk(virtualNode, extendedNode, namespace);
+
+        if (unionOrIntersectionType) {
+          const extendedVirtualNode = /** @type {ExtendedReflection} */ (
+            virtualNode
+          );
+          if (extendedVirtualNode._type) {
+            innerProperties.push(...extendedVirtualNode._type.properties);
+          }
+        }
+      }
+
+      // Apply the properties if we found any.
+      if (innerProperties.length) {
+        extendedNode._type = {properties: innerProperties};
       }
     }
 

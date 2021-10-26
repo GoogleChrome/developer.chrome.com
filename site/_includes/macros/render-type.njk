@@ -38,7 +38,11 @@
       </div>
     </div>
 
-  {% elif type.type === 'reference' and not node._event %}
+  {% elif type.type === 'union' %}
+    {# Type that contains many string (probably) options, basically an enum. #}
+    {{ renderIconTypesArray(type.types, 'Type') }}
+
+  {% elif type.type and not node._event %}
     {# Reference to another type (and not an Event). #}
     <div class="code-sections">
       <h4 class="type--label code-sections__mode">Type</h4>
@@ -46,14 +50,6 @@
         {{ renderSingleIconType(type) }}
       </div>
     </div>
-
-  {% elif type.type === 'intrinsic' %}
-    {# Intrinsic type, like 'number' #}
-    {{ renderIconTypesArray([type], 'Type') }}
-
-  {% elif type.type === 'union' %}
-    {# Type that contains many string (probably) options, basically an enum. #}
-    {{ renderIconTypesArray(type.types, 'Type') }}
 
   {% endif %}
 
@@ -70,18 +66,25 @@
 
   <li class="stack">
     <div>
-      <div class="code-sections__label">{{ node.name }}</div>
+      <div class="code-sections__label" id="#{{ node._pageId }}">{{ node.name }}</div>
       <div class="type--xsmall">{{ renderSingleIconType(node.type, node) }}</div>
     </div>
 
     {{ renderComment(node) }}
 
     {#
-      Give a hint of how to use this method. We don't do this in renderComment() as we don't
-      want it for methods on the namespace.
+      Give a hint of how to use this method. It might be a method of an interface or class, or
+      a different type of callback.
     #}
     {% if node._method %}
-      {% if isTopLevel %}
+      {% if not node.type.declaration.signatures %}
+        {# This is a function on an interface or class. #}
+        <p>
+          The <code>{{ node.name }}</code> function looks like:
+          <span class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(node._method.parameters) }} => {...}</code></span>
+        </p>
+      {% elif isTopLevel %}
+        {# This is a parameter to a top-level function, i.e., a callback from the developer. #}
         <p>
           {% if node.flags.isOptional %}
             If you specify the <code>{{ node.name }}</code> parameter, it
@@ -92,7 +95,7 @@
           <span class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(node._method.parameters) }} => {...}</code></span>
         </p>
       {% else %}
-        {# This is probably a callback given back to the user, so be vague about its usage. #}
+        {# This is probably a callback given back to the developer, so be vague about its usage. #}
         <p>
           The <code>{{ node.name }}</code> parameter looks like:
           <span class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(node._method.parameters) }} => {...}</code></span>
@@ -176,7 +179,7 @@
   {% endif %}
 
   {# Note that we avoid whitespace below, and instead set margins in CSS. #}
-  <span class="code-sections__icon code-sections__icon--{{ iconType }}">{{ renderSingleType(type) }}
+  <span class="code-sections__icon code-sections__icon--{{ iconType }}">{{ renderSingleType(type, node) | trim | safe }}
     {%- if node.flags.isOptional -%}
       &nbsp;<span class="code-sections__optional">optional</span>
     {%- endif -%}
@@ -250,10 +253,20 @@
 
 {#
   Renders a single model.Type as a single word. Used for signatures and type hints.
-#}
-{% macro renderSingleType(type) %}
 
-  {% if not type %}
+  The node (a ReflectionDeclaration) is optional.
+#}
+{% macro renderSingleType(type, node) %}
+
+  {% if node._event %}
+    {# This is an event function on a class or interface. #}
+    event
+
+  {% elif node._method %}
+    {# Methods on interfaces/classes don't have a type. #}
+    function
+
+  {% elif not type %}
     {# Should never happen #}
     ?
 
@@ -290,15 +303,27 @@
       &gt;
     {% endif %}
 
+  {% elif type.type === 'rest' %}
+    {# Rest arguments. #}
+    ...{{ renderSingleType(type.elementType) | trim }}
+
+  {% elif type.type === 'tuple' %}
+    {# A tuple of elements. #}
+    [
+      {%- for t in type.elements -%}
+        {{ renderSingleType(t) | trim }}{%- if not loop.last %}, {% endif -%}
+      {%- endfor -%}
+    ]
+
   {% elif type.type === 'array' %}
     {% set inner %}{{ renderSingleType(type.elementType) | trim }}{% endset %}
 
-    {% if type.elementType.type === 'intersection' or type.elementType.type === 'union' %}
+    {% if type.elementType.type === 'intersection' or type.elementType.type === 'union' or type.elementType.type === 'rest' %}
       {# This is an array of something which itself needs wrapping. #}
-      ({{ inner }})[]
+      ({{ inner | safe }})[]
     {% else %}
       {# This is an array of a boring type. #}
-      {{ inner }}[]
+      {{ inner | safe }}[]
     {% endif %}
 
   {% elif type.type === 'intersection' %}
@@ -328,7 +353,7 @@
   (
     {%- for p in parameters -%}
       {{ p.name }}{% if p.flags.isOptional %}?{% endif %}:
-      <span class="color-cyan-medium">{{ renderSingleType(p.type) | trim }}</span>
+      <span class="color-cyan-medium">{{ renderSingleType(p.type) | trim | safe }}</span>
       {%- if not loop.last %}, {% endif -%}
     {%- endfor -%}
   )
