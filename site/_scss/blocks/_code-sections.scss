@@ -84,8 +84,8 @@
 .code-sections__callback {
   background: get-color('grey-50');
   border: 1px solid var(--color-hairline);
-  padding: 0.5em;
   display: block;
+  padding: 0.5em;
 
   > code {
     background: transparent;
