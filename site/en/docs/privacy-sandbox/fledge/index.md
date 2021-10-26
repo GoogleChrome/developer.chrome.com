@@ -29,7 +29,7 @@ FLEDGE can be tested in current versions of Chrome and Chrome Canary with the fo
 FLEDGE is the first experiment to be implemented in Chromium within the 
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
 
-* [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is under discussion with
+* [API proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) is under discussion with
 [WICG](https://www.w3.org/community/wicg/) and interest groups.
 * [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI) in
 [Blink](https://www.chromium.org/blink).
@@ -109,7 +109,7 @@ except to render the ad in a fenced frame.
 
 ## Engage and share feedback
 
-* **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md), [raise
+* **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md), [raise
 questions and follow discussion](https://github.com/WICG/turtledove/issues).
 * **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants).
 * **Developer support**: Ask questions and join discussions on the
