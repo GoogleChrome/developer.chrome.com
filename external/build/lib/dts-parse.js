@@ -55,7 +55,7 @@ class Transform {
       const {type} = node;
       const extendedType = /** @type {ExtendedReferenceType} */ (type);
 
-      const target = this.indexForReferences.get(type.id ?? -1);
+      const target = type.id ? this.indexForReferences.get(type.id) : undefined;
       if (!target) {
         continue;
       }
