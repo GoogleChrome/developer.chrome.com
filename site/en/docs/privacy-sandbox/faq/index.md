@@ -258,7 +258,7 @@ on the repo for the proposal explainer.
 Sandbox developer support repo.
 
 
-## Fenced Frames
+## Fenced frames
 
 ### How can I ask a question about this feature?
 
@@ -268,7 +268,7 @@ on the proposal repo.
 [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy 
 Sandbox developer support repo.
 
-### What are the use cases for Fenced Frames?
+### What are the use cases for fenced frames?
 
 The API proposes [a new form of embedded document](https://github.com/shivanigithub/fenced-frame)
 that will enable new APIs to isolate themselves from their embedders, preventing cross-site
