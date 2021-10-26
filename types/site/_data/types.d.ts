@@ -51,7 +51,9 @@ declare global {
 
   export interface ExtendedReflection extends typedoc.JSONOutput.DeclarationReflection {
     _name: string;
-    _feature: AggregateTags;
+    _feature: FeatureInfo;
+
+    _comment?: string;
 
     _pageHref: string;
     _pageId?: string;

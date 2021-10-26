@@ -16,6 +16,9 @@
 
 const typedoc = require('typedoc');
 
+// matches "{@link ...}"
+const linkMatch = /{@link (\S+?)(|\s+.+?)}/g;
+
 // nb. we include "Event" as typedoc flattens "event.Events" sometimes (?)
 const chromeEventRefTypes = ['CustomChromeEvent', 'events.Event', 'Event'];
 
@@ -34,6 +37,9 @@ class Transform {
 
     /** @type {Map<number, ExtendedReflection>} */
     this.indexForReferences = new Map();
+
+    /** @type {{[id: string]: ExtendedReflection}} */
+    this.allByName = {};
   }
 
   /**
@@ -42,12 +48,12 @@ class Transform {
     // Find all namespaces with non-namespace children.
     this.findNamespaceRoots();
 
-    // Use these as roots.
-
+    // Walk all namespaces as roots.
     for (const namespace of Object.values(this.namespaces)) {
       this.walk(namespace, null, namespace);
     }
 
+    // Fix all references.
     for (const node of this.pendingReferences) {
       if (node.type?.type !== 'reference') {
         throw new Error(`bad pendingReference: ${JSON.stringify(node)}`);
@@ -56,23 +62,102 @@ class Transform {
       const extendedType = /** @type {ExtendedReferenceType} */ (type);
 
       const target = type.id ? this.indexForReferences.get(type.id) : undefined;
-      if (!target) {
-        continue;
-      }
-
-      if (node._pageHref === target._pageHref) {
-        // This is the same page, so just use the target's ID.
-        extendedType._href = '#' + target._pageId;
-      } else {
-        // Otherwise, create a whole link.
-        extendedType._href = '../' + target._pageHref + '/#' + target._pageId;
+      if (target) {
+        extendedType._href = this.createHref(node, target);
       }
     }
 
-    return this.namespaces;
+    // Update all comments (fix their "{@link ...}" code).
+    for (const [id, node] of Object.entries(this.allByName)) {
+      if (node.comment?.shortText) {
+        // Fix the node's basic comment.
+        let commentText =
+          node.comment.shortText + '\n\n' + (node.comment.text ?? '');
+        commentText = this.insertCommentHrefForLink(id, node, commentText);
+        if (commentText) {
+          node._comment = commentText;
+        }
+      }
 
-    // this.walk(this.project);
-    // return this.namespaces;
+      const deprecated = node._feature.deprecated;
+      if (deprecated?.value) {
+        // Fix the node's deprecated notice.
+        deprecated.value = this.insertCommentHrefForLink(
+          id,
+          node,
+          deprecated.value
+        );
+      }
+    }
+
+    // Success!
+    return this.namespaces;
+  }
+
+  /**
+   * @param {string} id
+   * @param {ExtendedReflection} node
+   * @param {string|undefined} raw
+   */
+  insertCommentHrefForLink(id, node, raw) {
+    raw = (raw ?? '').trim();
+    return raw.replace(linkMatch, (_, link, text) => {
+      if (!text) {
+        text = `\`${link}\``;
+      }
+      const other = this.resolveLink(id, link);
+      if (other) {
+        const href = this.createHref(node, other);
+        if (href) {
+          return `[${text}](${href})`;
+        }
+      }
+      // There's a small number of {@link} in the codebase that don't resolve. Whatever.
+      return text;
+    });
+  }
+
+  /**
+   * @param {ExtendedReflection} from
+   * @param {ExtendedReflection} to
+   * @return {string|undefined}
+   */
+  createHref(from, to) {
+    const idPart = to._pageId ? '#' + to._pageId : '';
+
+    if (from._pageHref === to._pageHref) {
+      // This is the same page, so just use the target's ID.
+      // Return blank if this is a node linking to its own namespace (no ID).
+      return idPart || undefined;
+    } else {
+      // Otherwise, create a whole link.
+      return '../' + to._pageHref + '/' + idPart;
+    }
+  }
+
+  /**
+   * Resolve a link from the given ID to the given link, after {@link allByName} has been created.
+   *
+   * @param {string} id
+   * @param {string} link
+   */
+  resolveLink(id, link) {
+    /** @type {(s: string) => string} */
+    const popLast = s => {
+      const last = s.lastIndexOf('.');
+      return last > 0 ? s.substr(0, last) : '';
+    };
+
+    while (id) {
+      const check = `${id}.${link}`;
+      const cand = this.allByName[check];
+      if (cand) {
+        return cand;
+      }
+      id = popLast(id);
+    }
+
+    return undefined;
   }
 
   findNamespaceRoots() {
@@ -104,6 +189,7 @@ class Transform {
 
       if (!hasOnlyNamespaces) {
         this.namespaces[id] = extendedNode;
+        this.allByName[extendedNode._name] = extendedNode;
       }
     };
 
@@ -132,6 +218,7 @@ class Transform {
     if (parent) {
       extendedNode._name = `${parent._name}.${node.name}`;
       extendedNode._pageHref = namespace._pageHref;
+      this.allByName[extendedNode._name] = extendedNode;
     }
 
     // We create virtual nodes at -1, so don't store them.

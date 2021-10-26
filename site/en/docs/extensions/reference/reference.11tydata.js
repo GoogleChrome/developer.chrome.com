@@ -82,7 +82,7 @@ module.exports = {
       if (data.title) {
         return data.title;
       }
-      return namespace?.name ?? '?';
+      return namespace?._name ?? namespace?.name ?? '?';
     },
 
     /**

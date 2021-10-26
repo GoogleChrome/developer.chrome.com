@@ -224,8 +224,7 @@
   {% endif %}
 
   {# This |md filter will add <p> as appropriate. #}
-  {{ node.comment.shortText | md | safe }}
-  {{ node.comment.text | md | safe }}
+  {{ node._comment | md | safe }}
 
   {# Display enum information from Chrome's source. #}
   {% set enumInfoHtml %}
