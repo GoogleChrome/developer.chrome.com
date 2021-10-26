@@ -6,7 +6,7 @@ layout: 'layouts/blog-post.njk'
 authors:
   - andreban
 date: 2021-10-21
-updated: 2021-10-21
+updated: 2021-10-26
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/t98X06XyMtNI4rTmXyfZ.jpg'
 alt: >
   Lamp on a dark background.
@@ -67,7 +67,7 @@ leading to a page that has a light theme, but with only parts of it darkened.
 To detect if the user is in Auto Dark Theme,
 create an element with the `background-color` set to `canvas` and the color-scheme set to light.
 If the computed color for the background is other than white (`rgb(255, 255, 255)`),
-then we know that Auto Dark Theme is applied to the page.
+then Auto Dark Theme is applied to the page.
 
 ```html
 <div id="detection"
