@@ -102,7 +102,7 @@ auction has three jobs:<br>
 1. The seller initiates the ad auction by calling runAdAuction(), with data including the host name
 of the seller, signals from buyers and the seller, and a URL for auction decision logic.
 1. The auction returns data about the winning ad. The data cannot be accessed by the publisher site,
-except to render the ad in a Fenced Frame.
+except to render the ad in a fenced frame.
 1. The ad is displayed.
 
 ---
