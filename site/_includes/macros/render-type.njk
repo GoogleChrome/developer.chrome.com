@@ -12,11 +12,11 @@
       {# Render the method signature. #}
       <span class="code-sections__callback type--xsmall">
         <code>
+          {# This uses the whole path to the function (_name), so it's easy to copy/paste. #}
           {% if node._event %}
-            {{ node.name }}.addListener{{ renderFunctionParameters(node._method.parameters) }}
+            {{ node._name }}.addListener{{ renderFunctionParameters(node._method.parameters, true) | trim }}
           {% else %}
-            {# TODO: show Promise vs not #}
-            {{ node.name }}{{ renderFunctionParameters(node._method.parameters) }}
+            {{ node._name }}{{ renderFunctionParameters(node._method.parameters, true) | trim }}
           {% endif %}
         </code>
       </span>
@@ -370,16 +370,35 @@
 
 {#
   Renders the arguments of a method including ()'s. Expects typedoc.JSONOutput.ParameterReflection[].
+
+  If newlines is set, then puts this on multiple lines.
 #}
-{% macro renderFunctionParameters(parameters) -%}
-  (
-    {%- for p in parameters -%}
-      {{ p.name }}{% if p.flags.isOptional %}?{% endif %}:
-      <span class="color-cyan-medium">{{ renderSingleType(p.type) | trim | safe }}</span>
-      {%- if not loop.last %}, {% endif -%}
-    {%- endfor -%}
-  )
+{% macro renderFunctionParameters(parameters, newlines) -%}
+  {% if not parameters.length %}
+    ()
+  {% elif newlines %}
+    (<br />
+      {% for p in parameters -%}
+      &nbsp;&nbsp;{{ renderSingleFunctionParam(p) | trim }},<br />
+      {% endfor %}
+    )
+  {% else %}
+    (
+      {%- for p in parameters -%}
+        {{- renderSingleFunctionParam(p) | trim -}}
+        {%- if not loop.last %}, {% endif -%}
+      {%- endfor -%}
+    )
+  {% endif %}
 {%- endmacro %}
+
+{#
+  Render a single parameter in a () call, including its name and optional hint.
+#}
+{% macro renderSingleFunctionParam(param) %}
+  {{ param.name }}{% if param.flags.isOptional %}?{% endif %}:
+  <span class="color-cyan-medium">{{ renderSingleType(param.type) | trim }}</span>
+{% endmacro %}
 
 {#
   Renders a short summary of the passed RenderGroup. Used in the summary section of a namespace.
