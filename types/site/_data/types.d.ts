@@ -64,6 +64,8 @@ declare global {
 
     _method?: {
       parameters: typedoc.JSONOutput.ParameterReflection[];
+      return?: typedoc.JSONOutput.ParameterReflection;
+      isReturnsAsync?: true;
     };
 
     // TODO: declarative stuff

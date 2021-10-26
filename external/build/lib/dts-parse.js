@@ -242,12 +242,10 @@ class Transform {
     }
 
     const effectiveDeclarationNode = declarationWith(node);
-    const effectiveComment = effectiveDeclarationNode?.comment ?? node.comment;
-    extendedNode._feature = this._processTags(effectiveComment?.tags ?? []);
 
     // This is a type or namespace or something with children.
     // Only process non-namespace children, we caught those above.
-    if (effectiveDeclarationNode?.children?.length) {
+    if (effectiveDeclarationNode.children?.length) {
       const children = (effectiveDeclarationNode.children ?? []).filter(
         ({kind}) => kind !== typedoc.ReflectionKind.Namespace
       );
@@ -264,15 +262,14 @@ class Transform {
     }
 
     // This is a function or a method.
-    if (effectiveDeclarationNode?.signatures?.length) {
+    if (effectiveDeclarationNode.signatures?.length) {
       nodePrefix = 'method';
+
+      /** @type {typedoc.JSONOutput.SomeType | undefined} */
+      let returnType = undefined;
 
       const {signatures} = effectiveDeclarationNode;
       effectiveDeclarationNode.signatures = [];
-
-      // Hoist the comment onto the top node if it doesn't already have one.
-      // This solves the problem that TypeDoc thinks methods are actually "methodName.methodName".
-      node.comment = node.comment ?? signatures[0]?.comment;
 
       /** @type {Map<string, typedoc.JSONOutput.ParameterReflection>} */
       const allParams = new Map();
@@ -284,40 +281,77 @@ class Transform {
           }
         }
 
-        if (s.type) {
-          // this is the Promise verison, or a version with a return value
-          // TODO: group separately?
+        // If there's a return type and it's not void, record it for display later.
+        if (
+          s.type &&
+          !(s.type.type === 'intrinsic' && s.type.name === 'void')
+        ) {
+          // The signature with a return value wins the comment, as unlike the parameters, this
+          // comment is on the signature.
+          node.comment = node.comment ?? s.comment;
+
+          // TODO: This can appear multiple times (bad Promise method) but should always be equal.
+          returnType = s.type;
         }
       }
 
-      extendedNode._method = {
-        parameters: [...allParams.values()],
-      };
+      const parameters = [...allParams.values()];
+
+      // Hoist the comment onto the top node if it doesn't already have one (and we didn't pick it
+      // up from choosing the signature with a return type).
+      // This solves the problem that TypeDoc thinks methods are actually "methodName.methodName".
+      node.comment = node.comment ?? signatures[0]?.comment;
+
+      extendedNode._method = {parameters: parameters.slice()};
+      if (returnType) {
+        /** @type {typedoc.JSONOutput.ParameterReflection} */
+        const virtualNode = {
+          id: -1,
+          name: 'return',
+          kind: typedoc.ReflectionKind.Parameter,
+          flags: {},
+          type: returnType,
+        };
+        if (node.comment?.returns) {
+          virtualNode.comment = {shortText: node.comment.returns};
+        }
+
+        extendedNode._method.return = virtualNode;
+        if (returnType?.type === 'reference' && returnType.name === 'Promise') {
+          extendedNode._method.isReturnsAsync = true;
+        }
+
+        // Push a virtual node that we traverse over.
+        parameters.push(virtualNode);
+      }
 
       // We just created virtual params, so just walk over them.
-      for (const param of extendedNode._method.parameters) {
+      for (const param of parameters) {
         this.walk(param, extendedNode, namespace);
       }
     }
 
-    // This has embedded types (intersection, union, array or tuple).
+    // This could have embedded types (intersection, union, array or tuple).
     // We descend into them as a virtual reflection just so things like _method and references are
     // correctly addressed.
-    if (
-      effectiveDeclarationNode?.type?.['types'] ||
-      effectiveDeclarationNode?.type?.['elements'] ||
-      effectiveDeclarationNode?.type?.['elementType']
-    ) {
+    if (!extendedNode._event) {
       const t = effectiveDeclarationNode.type;
 
       // Grab any inner properties of a union or intersection, entirely for "chrome.storage" which
       // does a weird intersection between a ref and properties.
       /** @type {typedoc.JSONOutput.DeclarationReflection[]} */
       const innerProperties = [];
-      const unionOrIntersectionType = 'types' in t;
+      const hoistProperties = Boolean(
+        t && ('types' in t || 'elementType' in t)
+      );
 
       /** @type {typedoc.JSONOutput.SomeType[]} */
-      const allTypes = [t['types'], t['elements'], t['elementType']]
+      const allTypes = [
+        t?.['types'],
+        t?.['elements'],
+        t?.['elementType'],
+        t?.['typeArguments'],
+      ]
         .flat()
         .filter(x => x);
 
@@ -332,7 +366,7 @@ class Transform {
         };
         this.walk(virtualNode, extendedNode, namespace);
 
-        if (unionOrIntersectionType) {
+        if (hoistProperties) {
           const extendedVirtualNode = /** @type {ExtendedReflection} */ (
             virtualNode
           );
@@ -347,6 +381,10 @@ class Transform {
         extendedNode._type = {properties: innerProperties};
       }
     }
+
+    // Set feature information last, as the comment may have changed (due to signatures).
+    const effectiveComment = effectiveDeclarationNode?.comment ?? node.comment;
+    extendedNode._feature = this._processTags(effectiveComment?.tags ?? []);
 
     // Set the ID on the page last, because we get its nodePrefix (e.g., "method" or "property")
     // via the checks above.
@@ -521,16 +559,14 @@ class Transform {
 
 /**
  * @param {typedoc.JSONOutput.DeclarationReflection} node
- * @param {(dr: typedoc.JSONOutput.DeclarationReflection) => boolean} filter
- * @return {typedoc.JSONOutput.DeclarationReflection|undefined}
+ * @return {typedoc.JSONOutput.DeclarationReflection}
  */
-function declarationWith(node, filter = () => true) {
+function declarationWith(node) {
   if (node.type?.type === 'reflection' && node.type.declaration) {
-    return declarationWith(node.type.declaration, filter);
-  } else if (filter(node)) {
+    return declarationWith(node.type.declaration);
+  } else {
     return node;
   }
-  return undefined;
 }
 
 /**

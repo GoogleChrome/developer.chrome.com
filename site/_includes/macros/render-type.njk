@@ -98,7 +98,7 @@
         {# This is probably a callback given back to the developer, so be vague about its usage. #}
         <p>
           The <code>{{ node.name }}</code> parameter looks like:
-          <span class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(node._method.parameters) }} => {...}</code></span>
+          <span class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(node._method.parameters) }} => {{ renderSingleType(node._method.return.type) }}</code></span>
         </p>
       {% endif %}
     {% endif %}
@@ -122,6 +122,36 @@
   {% if node._method %}
     {# Something that looks like a method, including events. #}
     {{ renderChildrenTable(node._method.parameters, isTopLevel and 'Parameters') }}
+
+    {% if node._method.return %}
+      <div class="code-sections">
+        {% if isTopLevel %}
+          <h4 class="type--label code-sections__mode">Returns</h4>
+        {% endif %}
+
+        <ul class="stack">
+          <li class="stack">
+            <div>
+              {# We need to disambiguate this from parameters, so include the name. #}
+              {% if not isTopLevel %}
+                <div class="code-sections__label" id="#{{ node._pageId }}">returns</div>
+              {% endif %}
+              <div class="type--xsmall">{{ renderSingleIconType(node._method.return.type, node._method.return) }}</div>
+            </div>
+
+            {% if node._method.isReturnsAsync %}
+              <p>
+                This only returns a <code>Promise</code> when the <code>callback</code> parameter
+                is not specified, and with MV3+.
+                The type inside the <code>Promise</code> is the same as the 1st argument to <code>callback</code>.
+              </p>
+            {% endif %}
+
+            {{ renderComment(node._method.return) }}
+          </li>
+        </ul>
+      </div>
+    {% endif %}
 
   {% elif node._event %}
     {# This is a declarative event without a method. #}
@@ -259,8 +289,8 @@
     function
 
   {% elif not type %}
-    {# Should never happen #}
-    ?
+    {# Should never happen, but is probably "void" from a return type #}
+    void
 
   {% elif type.type === 'intrinsic' %}
     {# Primitive type, e.g. "number" or "void" #}
@@ -380,19 +410,18 @@
 {% endmacro %}
 
 {#
-  Renders API availability information based on feature information (this is type `ExtendedDeclarationReflection`).
+  Renders API availability information based on feature information (this is type `FeatureInfo`).
   This is used for both top-level namespaces as well as specific APIs. This does not render
   permissions.
 
   This returns valid HTML, so it should be rendered with `| safe`.
 #}
-{% macro renderAvailability(ext, extraClass) %}
-  {% set feature = ext._feature %}
+{% macro renderAvailability(node, extraClass) %}
+  {% set feature = node._feature %}
 
   {% set inner %}
-    {# TODO: expand #}
-    {% if ext.type.isReturnsAsync %}
-      <span class="aside--success tag-pill type--label rounded-lg" title="Can return its result via Promise">
+    {% if node._method.isReturnsAsync %}
+      <span class="aside--success tag-pill type--label rounded-lg" title="Can return its result via Promise in MV3+">
         Promise
       </span>
     {% endif %}
