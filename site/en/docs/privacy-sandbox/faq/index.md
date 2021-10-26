@@ -224,17 +224,16 @@ Or the equivalent JavaScript interface:
 
 For hardware-specific use-cases, the device model name may be requested via the high entropy `Sec-CH-UA-Model` hint.
 
-
-## Shared Storage
+## Shared storage
 
 ### How can I ask a question about this feature?
 
--  For questions about the proposal: [create an issue](https://github.com/WICG/CHIPS/issues) on the 
-proposal repo.
--  For implementation, integration, and general best practice questions: 
-[create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy 
-Sandbox developer support repo.
-
+-  For questions about the proposal:
+   [create an issue](https://github.com/WICG/storage-buckets/issues) on the
+   proposal repo.
+-  For implementation, integration, and general best practice questions:
+   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
+   on the Privacy Sandbox developer support repo.
 
 ## CHIPS
 
