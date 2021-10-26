@@ -110,6 +110,7 @@ Add the Trusted Web Activity by inserting an `activity` tag into the `applicatio
 
     <application
         android:allowBackup="true"
+        android:exported="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
