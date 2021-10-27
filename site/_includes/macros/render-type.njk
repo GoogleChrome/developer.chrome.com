@@ -458,10 +458,15 @@
       <span class="aside--default tag-pill type--label rounded-lg" title="Available from this Chrome version and higher">
         {{ feature.since }}+
       </span>
-    {% elif feature.since %}
+    {% elif feature.since === 'Pending' %}
       {# This is stable but not yet visible in the version history data. It's probably coming next
         Chrome release. #}
-      <span class="aside--warning tag-pill type--label rounded-lg" title="Availability data">
+      <span class="aside--warning tag-pill type--label rounded-lg" title="This is coming soon and not yet in a stable release of Chrome">
+        {{ feature.since }}
+      </span>
+    {% elif feature.since %}
+      {# This is something else in the Since box. #}
+      <span class="aside--caution tag-pill type--label rounded-lg" title="Availability data">
         {{ feature.since }}
       </span>
     {% endif %}
