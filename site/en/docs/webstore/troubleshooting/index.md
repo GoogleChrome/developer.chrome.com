@@ -2,23 +2,171 @@
 layout: "layouts/doc-post.njk"
 title: "Troubleshooting Chrome Web Store violations"
 date: 2020-11-16
-updated: 2021-08-16
+updated: 2021-09-30
 description: >
   Guidelines for understanding why an item was rejected or removed from the Chrome Web Store
   and how to fix the problem.
 ---
 
-This page is provided to help you understand why an item was rejected or removed from the Chrome Web
-Store, and to understand how you can rectify the problem.
+This page is provided to help you understand why your extension was rejected or removed from the
+Chrome Web Store and how you can fix the violation.
 
-Each section describes the issues that correspond to a particular category of violation.
+Each section in this document describes the issues that correspond to a particular category of
+violation. In order to make it easier to reference specific violations, the Chrome Web Store assigns
+each violation a human-readable ID. These IDs are composed of two words: a color and an element. For
+example, Yellow Magnesium corresponds to the general class of errors where the extension does not
+behave as expected.
+
+## Functionality not working {: #does-not-work }
+
+Corresponds to notification ID: `Yellow Magnesium`
+
+The intent of this policy is to ensure a minimum quality level for all items published in the Chrome
+Web Store. Extensions should provide the functionality described in their listings and, if they
+cannot, communicate that to the user.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_18 }
+
+- Your item has packaging errors. Examples:
+    - There are files mentioned in your manifest that are not present in your package. This is most
+      commonly seen with image files.
+    - The path or name of the files mentioned in your package are incorrect
+- A functionality in your item is not working due to a server side issue at the time of reviewing.
+- Your item is just not functioning as it expected based on the item's listing.
+
+### How can you rectify this? {: #how-can-you-rectify-this_18 }
+
+- Test the code that you submit to the web store locally.
+    - Test the exact files that you submit to the web store, not just a local development version of
+      your extension. This may mean extracting resources from the package that you submitted.
+    - Unpacked and packed extensions can have different behaviors. Make sure that Chrome loads a
+      packed version of your extension as expected by manually [packing your
+      extension][docs-pack-extension] and dragging the generated .crx file onto the
+      chrome://extensions page.
+- Verify that your submission contains the files you expect at the paths you expect.
+    - Ensure that all the files mentioned in your `manifest.json` are present in the package and
+      their names and paths are correct.
+    - Check for [case sensitivity][wiki-case-sensitivity] bugs. For example, say your background
+      script was named  `Background.js`, but your manifest.json references  `background.js`. Some
+      file systems will treat these as the same file while others will treat them as two distinct
+      files, causing Chrome to error when loading the extension.
+- Make sure that your extensions clearly communicate error conditions to the user.
+    - It should be as obvious as possible for new users to understand how your extension works and
+      verify it's behaving correctly.
+    - If your extension requires an account or special network environment, make sure that
+      requirement is communicated to the user. If these conditions are not met, consider ways that
+      you can make the user aware that the extension will not work as expected.
+    - Test your experience on an unreliable internet connection (e.g. [lie-fi][wiki-li-fi]). The
+      extension's UI should gracefully handle request timeouts, HTTP 400 and 500 errors, certificate
+      timeouts, and other such error conditions.
+- If you cannot determine why the reviewer thought that your extension was not working as expected,
+  [contact developer support][dev-support] to request more information about the rejection.
+    - In some cases, reviewers may encounter issues you cannot reproduce. Use the [developer support
+      contact form][dev-support] to request clarification about what features or user flows did not
+      behave as expected.
+
+### Relevant policy {: #does-not-work-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-dpp]:
+
+{% Aside %}
+
+**Spam & Placement in the Store**
+
+**Functionality:** Do not post an extension with a single purpose of installing or launching another
+app, theme, webpage, or extension. Extensions with broken functionality—such as dead sites or
+non-functioning features—are not allowed.
+
+{% endAside %}
 
 ## Excessive permissions {: #excessive-permissions }
 
-Corresponds to notification ID: Purple Potassium
+Corresponds to notification ID: `Purple Potassium`
+
+The intent of this policy is to prevent excessive and unnecessary access to user data by extensions.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection }
+
+- The extension is requesting a permission but not using it.
+- The extension is requesting a permission that is not required to implement the functionality the
+  extension provides.
+
+### Commonly misunderstood permissions {: #misunderstood-perms }
+
+#### activeTab {: #misunderstood-perms-activetab }
+
+This permission grants temporary access to a tab in response to a user invoking your extension. It
+DOES NOT grant passive access to the user's currently focused tab.
+
+- **When is it required?**
+    - When you need temporary access to a tab after the user invokes your extension.
+- **When is it NOT required?**
+    - When the extension has access to broad host permissions or host permissions for the specific
+      domains that are relevant to the extension's operations.
+    - When using methods on the [action][api-action], [browserAction][api-browser-action],
+      [pageAction][api-page-action] APIs. These APIs can use activeTab to grant temporary host
+      permissions for the currently focused tab, but they do not need activeTab to function.
+    - When using [tabs.sendMessage][api-tabs-sendmessage] to send a message to a specific tab.
+    - For basic use of [tabs.query][api-tabs-query], such as querying [the user's current
+      tab][api-tabs-get-current-tab].
+
+#### tabs {: #misunderstood-perms-tabs }
+
+This permission ONLY grants access to the `url`, `pendingUrl`, `title`, or `favIconUrl` properties
+of Tab objects.
+
+- **When is it required?**
+    - When an extension does not have broad host access, but needs to be able to read sensitive data
+      like the URL of an arbitrary tab.
+- **When is it NOT required?**
+    - When using methods on the [tabs][api-tabs] API.
+    - When the extension has access to broad host permissions. Host permissions grant the extension
+      access to the same data as well as other capabilities.
+
+#### cookies {: #misunderstood-perms-cookies }
+
+This exposes the [chrome.cookies][api-cookies] API and allows the extension to modify cookies on
+origins that it has host permissions to access.
+
+- **When is it required?**
+    - When accessing [chrome.cookies][api-cookies] from the extension's [background
+      context][docs-service-workers] or in another context using the extension's origin such as an
+      extension's popup.
+    - When using [chrome.cookies][api-cookies] to interact with detailed cookie data, such as
+      [SameSite][mdn-samesite-cookie] values.
+- **When is it NOT required?**
+    - When using [`document.cookie`][mdn-document-cookie] or the [Cookie Store
+      API][mdn-cookie-store].
+
+#### storage {: #misunderstood-perms-storage }
+
+The storage permission exposes the [chrome.storage][api-storage] API to the extension.
+
+- **When is it required?**
+    - When using the [chrome.storage][api-storage] API.
+- **When is it NOT required?**
+    - When using the [Web Storage API][mdn-web-storage] (`document.localStorage`,
+      `document.sessionStorage`) or [IndexedDB][mdn-indexeddb].
+
+### How can you rectify this? {: #how-can-you-rectify-this }
+
+- Review the list of [commonly misunderstood permissions][section-misunderstood-perms] to see if you
+  have committed one of the mistakes listed there.
+- Request only the narrowest permission required to implement your extension's functionality.
+- Remove all unused permissions from your manifests.json's `permissions`, `optional_permissions`,
+  and `host_permissions` arrays.
+- If the message from review does not contain enough information to determine which permissions were
+  considered excessive, [contact developer support][dev-support] to request more information about
+  the rejection.
+- If the reviewer indicated that your extension did not use a given permission but you believe it
+  does, [contact developer support][dev-support] to appeal the decision and to provide a detailed
+  explanation of why the permission is necessary and how it is used.
+
+### Relevant policy {: #excessive-permissions-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][1]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
@@ -28,151 +176,139 @@ Request access to the narrowest permissions necessary to implement your Product'
 services. If more than one permission could be used to implement a feature, you must request those
 with the least access to data or functionality.
 
-Don't attempt to "future proof" your Product by requesting a permission that might benefit
-services or features that have not yet been implemented.
+Don't attempt to "future proof" your Product by requesting a permission that might benefit services
+or features that have not yet been implemented.
 
 {% endAside %}
 
-This policy is to prevent excessive and unnecessary access to user data by extensions.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection }
-
-- The extension is requesting a permission but not using it.
-- The extension is requesting a permission that is not required to implement the functionality.
-
-### How can you rectify this? {: #how-can-you-rectify-this }
-
-- Remove any permission that is not being used.
-- Request only the narrowest permission required to implement your extension's functionality.
-
 ## Missing or insufficient metadata {: #no-metadata }
 
-Corresponds to notification ID: Yellow Zinc
+Corresponds to notification ID: `Yellow Zinc`
+
+The intent of this policy is to ensure a basic quality level of all items in the Chrome Web Store.
+Users should be able to understand what features and functionality an item provides based on its
+listing before they choose to install it. Items that misrepresent their capabilities or fail to
+disclose important information may be subject to enforcement action.
+
+### Common reasons for removal/rejection
+
+- The extension is missing an icon, title, screenshot, or description.
+- The extension's title is not meaningful or is misleading.
+- The extension's screenshots or description is not meaningful or doesn't adequately explain the
+  functionality it provides.
+
+### How can you rectify this?
+
+- Ensure the extension has a meaningful icon, title, screenshots, and description.
+- Clearly explain the extension's functionality in the description and screenshots.
+    - List all major features the extension provides.
+- Review the rectification guidance in the [Functionality not working][section-does-not-work]
+  section.
+
+### Relevant policy
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][2]:
+Store developer program policies:
 
 {% Aside %}
 
 **Content Policies**
 
-⋮
+Impersonation or Deceptive Behavior:
 
-If your Product has a blank description field or is missing an icon or screenshots, it will be
-rejected. If any of your Product's content, title, icon, description or screenshots contains false
-or misleading information, we may remove it.
+: If your product has a blank description field or is missing an icon or screenshots, it will be
+  rejected. If any of your product's content, title, icon, description, or screenshots contains
+  false or misleading information, we may remove it.
 
 {% endAside %}
-
-This policy is to ensure quality of the products on the Chrome Web Store and for users to know about
-the product that they are downloading before they download.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_1 }
-
-- The extension is missing an icon, title, screenshot or description.
-- The extension's title is not meaningful.
-- The extension's screenshots or description is not meaningful or doesn't explain the functionality
-  adequately.
-
-### How can you rectify this? {: #how-can-you-rectify-this_1 }
-
-- Ensure the extension has a meaningful icon, title, screenshot and description.
-- Clearly explain the extension's functionality through the screenshots and description.
 
 ## Deceptive behavior {: #deceptive-behavior }
 
-Corresponds to notification ID: Red Nickel/Red Potassium/Red Silicon
+Corresponds to notification IDs: `Red Nickel`, `Red Potassium`, and `Red Silicon`
 
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][3]:
-
-{% Aside %}
-
-**Impersonation or Deceptive Behavior:**
-
-Don't pretend to be someone else, and don't represent that your product is authorized by, endorsed
-by, or produced by another company or organization, if that is not the case. Developers should not
-divert users or provide links to any other site that mimics Chrome Web Store or passes itself off
-as Chrome Web Store. Your Product and its user experience also must not mimic functionality or
-warnings from a user's operating system or browser. Any changes to device settings must be made
-with the user's knowledge and consent and be easily reversible by the user.
-
-We do not allow Products which deceive or mislead users, including in the content, title,
-description, or screenshots. Don't misrepresent the functionality of your Product or include
-non-obvious functionality that doesn't serve the primary purpose of the product. Descriptions of
-your Product must directly state the functionality so that users have a clear understanding of the
-Product they are adding. For example, Products should not contain:
-
-- Claimed functionalities which are not possible to implement (E.g. "Who has viewed your IG
-  account")
-- Developer or Product names which misrepresent their current status or performance on the Chrome
-  Web Store (E.g. "Editor's Choice" or "Number One")
-
-If your Product has a blank description field or is missing an icon or screenshots, it will be
-rejected. If any of your Product's content, title, icon, description or screenshots contains false
-or misleading information, we may remove it.
-
-{% endAside %}
-
-This policy is to prevent extensions that are deceiving or misleading the users.
+The intent of this policy is to prevent extensions from deceiving or misleading the users.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_2 }
 
-- The extension is not providing the functionality mentioned in the metadata (1)
-- The extension a different functionality than what is mentioned in the metadata
-- The extension is performing actions not mentioned in the metadata
-- The extension is impersonating another entity (2)
-- The extension is copying or copied from another entity
-- The extension is pretending to be authorized by another entity
+- The extension does not provide the functionality described in the metadata<sup>1</sup>.
+- The extension provides different functionality than what is described in the metadata<sup>1</sup>.
+- The extension performs actions not mentioned in the metadata<sup>1</sup>.
+- The extension impersonates another entity<sup>2</sup>.
+- The extension copies or is copied from another entity<sup>2</sup>.
+- The extension pretends to be authorized by another entity<sup>2</sup>.
 
-(1) Metadata means the title, icon description, or screenshot that is presented in the item's
-information.
+<sup>1</sup> Metadata means the title, icon, description, screenshots, and other developer-provided
+information specified in the developer dashboard.
 
-(2) An entity here means any company, organization, or extension.
+<sup>2</sup> An entity here means any company, organization, or extension.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_2 }
 
 - Ensure the functionality promised by your extension is working as intended.
 - Clearly state the functionality of your extension in the metadata.
-- Don't perform actions not mentioned in the metadata
-- Don't pretend to be another entity
-- Don't copy another extension. You may offer the same functionality as another extension but do not
-  copy from other extensions.
-- Don't pretend that your extension was endorsed, authorized or produced by another entity.
+- Do not perform actions not mentioned in the metadata.
+- Do not pretend to be another entity.
+- Do not copy another extension. You may offer the same functionality as another extension but do
+  not copy from other extensions.
+- Do not pretend that your extension was endorsed, authorized or produced by another entity.
 
-## User data policy - disclosure policy {: #udp-disclosure-policy }
-
-Corresponds to notification ID: Purple Lithium
+### Relevant policy {: #deceptive-behavior-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][4]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Posting a Privacy Policy & Secure Transmission**
+**Content Policies**
 
-If your Product handles personal or sensitive user data (including personally identifiable
-information, financial and payment information, health information, authentication information,
-website content and resources, form data, web browsing activity, user-provided content and
-personal communications), then your Product must:
+Impersonation or Deceptive Behavior:
 
-- Post a privacy policy, and
-- Handle the user data securely, including transmitting it via modern cryptography.
+: Don't pretend to be someone else, and don't represent that your product is authorized by, endorsed
+  by, or produced by another company or organization, if that is not the case.
+
+: Developers should not divert users or provide links to any other site that mimics the Chrome Web
+  Store or passes itself off as the Chrome Web Store. Your Product and its user experience also must
+  not mimic functionality or warnings from a user's operating system or browser.
+
+: Any changes to device settings must be made with the user's knowledge and consent and be easily
+  reversible by the user.
+
+: We do not allow products that deceive or mislead users, including in the content, title,
+  description, or screenshots.
+
+: Don't misrepresent the functionality of your product or include non-obvious functionality that
+  doesn't serve the primary purpose of the product. Descriptions of your product must directly state
+  the functionality so that users have a clear understanding of the product they are adding. For
+  example, products should not contain:
+
+  - Claimed functionalities that are not possible to implement (e.g. "Who has viewed your social
+    media account") or which are not directly provided by the extension (e.g. file converters which
+    only link to other file conversion services)
+  - Any metadata that misrepresents the extension's or developer's current status or performance on
+    the Chrome Web Store (e.g. "Editor's Choice" or "Number One")
+
+: If your product has a blank description field or is missing an icon or screenshots, it will be
+  rejected. If any of your product's content, title, icon, description, or screenshots contains
+  false or misleading information, we may remove it.
 
 {% endAside %}
+
+## User data policy - disclosure policy {: #udp-disclosure-policy }
+
+Corresponds to notification ID: `Purple Lithium`
 
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
 the user.
 
 This policy applies to all extensions that collect user data. This particular section is to ensure
-that users are aware of what data is collected, and how it is collected, used and shared.
+that users are aware of what data is collected, and how it is collected, used, and shared.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_3 }
 
 - The extension is collecting user data but has not provided a privacy policy.
-- The privacy policy is not provided in the designated field—a common mistake here is providing
-  the privacy policy in the description.
+- The privacy policy is not provided in the designated field—a common mistake here is providing the
+  privacy policy in the description.
 - The privacy policy URL is not working.
 - The privacy policy is not accessible.
 - The privacy policy URL is not leading to privacy policy.
@@ -180,33 +316,45 @@ that users are aware of what data is collected, and how it is collected, used an
 
 ### How can you rectify this? {: #how-can-you-rectify-this_3 }
 
-- Add a valid, working and accessible link to your privacy policy in the designated field.
-- Ensure the privacy policy talks about data collection, usage, handling and sharing.
+- Add a valid, working and accessible link to your privacy policy [in the designated
+  field][docs-publish-setup].
+    - Visit the Chrome Web Store item listing for your extension to verify that a privacy policy
+      link appears in the "Additional Information" box and that the link works as expected.
+- Ensure the privacy policy talks about data collection, usage, handling, and sharing.
+- If you have done the above but are still encountering review issues, [contact developer
+  support][dev-support] to request clarification or appeal the verdict.
 
-## Illegal activities {: #illegal-activities }
-
-Corresponds to notification ID: Grey Zinc
+### Relevant policy {: #udp-disclosure-policy-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][5]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Illegal Activities:**
+**Personal or Sensitive User Data**
 
-Keep it legal. Don't engage or promote unlawful activities in your Product, such as rape, illegal
-sex work, or the sale of prescription drugs without a prescription. We will remove content which
-promotes, glorifies, or encourages dangerous or illegal activity that may result in physical harm
-to those involved.
+Posting a Privacy Policy & Secure Transmission
+
+: If your Product handles personal or sensitive user data (including personally identifiable
+  information, financial and payment information, health information, authentication information,
+  website content and resources, form data, web browsing activity, user-provided content and
+  personal communications), then your Product must:
+
+  - Post a privacy policy, and
+  - Handle the user data securely, including transmitting it via modern cryptography.
 
 {% endAside %}
 
-This policy is to prevent the use of extensions and the Chrome Web Store as a platform for illegally
-selling drugs
+## Illegal activities {: #illegal-activities }
+
+Corresponds to notification ID: `Grey Zinc`
+
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store to promote or
+participate in illegal activities.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_4 }
 
-The extension is doing anything illegal. See the policy extract above for examples.
+The extension is doing anything illegal. See the policy extract for specific examples.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_4 }
 
@@ -214,31 +362,40 @@ The extension is doing anything illegal. See the policy extract above for exampl
   should unpublish your extension.
 - If this was an unintended functionality, then remove the content or services that are in violation
   and resubmit your extension.
+- If you would like more information about why this verdict was applied to your extension,
+  [developer support][dev-support] may be able to provide you with further details.
 
-## Online gambling {: #gambling }
-
-Corresponds to notification ID: Grey Copper
+### Relevant policy {: #illegal-activities-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][6]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Gambling:**
+**Content Policies**
 
-We don't allow content or services that facilitate online gambling, including but not limited to
-online casinos, sports betting, lotteries, or games of skill that offer prizes of cash or other
-value.
+Illegal Activities:
+
+: Keep it legal. Don't engage in or promote unlawful activities in your product, such as rape,
+  illegal sex work, or the sale of prescription drugs without a prescription.. We will remove
+  content which promotes, glorifies, or encourages dangerous or illegal activity that may result in
+  physical harm to those involved.
 
 {% endAside %}
+
+## Online gambling {: #gambling }
+
+Corresponds to notification ID: `Grey Copper`
 
 Do not post content or provide services that facilitate online gambling.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_5 }
 
-- Providing online gambling on the extension
-- Facilitating online gambling on other sites through the extension
-- Directing users to an online gambling site
+- Providing online gambling within an extension.
+- Facilitating online gambling on other sites through the extension.
+    - For example, providing functionality to calculate the odds of a bet on a gambling site. While
+      this extension does not directly allow the user to gamble, it does facilitate online gambling.
+- Directing users to an online gambling site.
 - Providing games of skill that offer prizes of cash or other value.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_5 }
@@ -248,173 +405,192 @@ Do not post content or provide services that facilitate online gambling.
 - If this was an unintended functionality, then remove the content or services that are in violation
   and resubmit your extension.
 
-## Pornographic content {: #pornography }
-
-Corresponds to notification ID: Grey Lithium
+### Relevant policy {: #gambling-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][7]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Sexually Explicit Material:**
+**Content Policies**
 
-We don't allow content that contains nudity, graphic sex acts, sexually explicit material, or
-content that drives traffic to commercial pornography sites. We also don't allow content that
-promotes incest, bestiality, necrophilia, or non-concensual sexual acts. Google has a
-zero-tolerance policy against child pornography. If we become aware of content with child
-pornography, we will report it to the appropriate authorities and delete the Google Accounts of
-those involved with the distribution.
+Gambling:
 
-Content which contains non-sexual nudity - such as artistic, educational, scientific, or cultural
-nudity - is generally allowed, but may impact the visibility of your Product.
+: We don't allow content or services that facilitate online gambling, including but not limited to
+  online casinos, sports betting, lotteries, or games of skill that offer prizes of cash or other
+  value.
 
 {% endAside %}
 
-This policy is to prevent the use of extensions and the Chrome Web Store as a platform for
-pornography.
+## Pornographic content {: #pornography }
+
+Corresponds to notification ID: `Grey Lithium`
+
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store as a platform
+for pornography.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_6 }
 
-- The extension is displaying/providing the content mentioned in the policy.
+- The extension itself contains sexually explicit material.
+- The extension is displaying or providing sexually explicit material.
 - The extension is directing users to pornographic sites.
+- The extension is primarily meant to enhance sites that provide sexually explicit material.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_6 }
 
-- If this is the primary functionality of your extension, then it is recommended to unpublish your
-  extension.
+- If the primary purpose of your extension is to provide access to sexually explicit material or
+  enhance pornographic sites, you should unpublish your extension; such extensions are not allowed
+  on the Chrome Web Store.
 - If this was an unintended functionality, then remove the content or services that are in violation
   and resubmit your extension.
+- Make sure that your extension does not contain sexually explicit images, video, text, etc.
+- If your extension provides integrations with adult-oriented sites, make sure that the "Mature
+  content" flag is enabled for your extension in the developer dashboard.
 
-## Hate content {: #hate }
-
-Corresponds to notification ID: Grey Magnesium
+### Relevant policy {: #pornography-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][8]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Hate Speech:**
+**Content Policies**
 
-We don't allow content advocating against or inciting hatred towards groups of people based on
-their race or ethnic origin, religion, disability, gender, age, veteran status, nationality,
-sexual orientation, gender, gender identity, or any other characteristic that is associated with
-systematic discrimination or marginalization.
+Sexually Explicit Material:
 
-Additionally, the visibility of your Product may be impacted if it contains generally hateful
-content not covered by the above definition.
+: We don't allow content that contains nudity, graphic sex acts, sexually explicit material, or
+  content that drives traffic to commercial pornography sites. We also don't allow content that
+  promotes incest, bestiality, necrophilia, or non-consensual sexual acts. Google has a
+  zero-tolerance policy against child pornography. If we become aware of content with child
+  pornography, we will report it to the appropriate authorities and delete the Google Accounts of
+  those involved with the distribution. Content which contains non-sexual nudity - such as artistic,
+  educational, scientific, or cultural nudity - is generally allowed, but may impact the visibility
+  of your Product.
 
 {% endAside %}
 
-This policy is to prevent the use of extensions and the Chrome Web Store as a platform to spread
-hateful content.
+## Hate content {: #hate }
+
+Corresponds to notification ID: `Grey Magnesium`
+
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store as a platform
+to spread hateful content.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_7 }
 
-Providing content or directing users to content that is hateful. You can find the definition of
-hateful content in the policy text above
+- Providing content or directing users to content that is considered hate speech. See the policy
+  text for additional details.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_7 }
 
-- If this is the primary functionality of your extension, then it is recommended to unpublish your
-  extension.
-- If this was an unintended functionality, then remove the content or services that are in violation
-  and resubmit your extension.
+- If promotion or distribution of hate speech is a primary feature  of your extension, then you
+  should unpublish the extension as such content is not permitted in the Chrome Web Store.
+- If your extension provides access to user-generated content, you must ensure that you have content
+  moderation in place to prevent users from sharing hate speech.
+- If your extension contains functionality intended to draw negative attention to an individual's
+  membership in one of the groups outlined in the policy text, you should remove this functionality
+  from your extension.
+
+### Relevant policy {: #hate-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-dpp]:
+
+{% Aside %}
+
+**Content Policies**
+
+Hate Speech:
+
+: We don't allow content advocating against or inciting hatred towards groups of people based on
+  their race or ethnic origin, religion, disability, gender, age, veteran status, nationality,
+  sexual orientation, gender, gender identity, or any other characteristic that is associated with
+  systematic discrimination or marginalization.
+
+  Additionally, the visibility of your Product may be impacted if it contains generally hateful
+  content not covered by the above definition.
+
+{% endAside %}
 
 ## Not family safe {: #not-family-safe }
 
-Corresponds to notification ID: Grey Nickel
+Corresponds to notification ID: `Grey Nickel`
+
+The intent of this policy is to prevent non-family-safe content from reaching an inappropriate
+audience.
+
+### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_8 }
+
+- The extension has content that is not suitable for audiences of all ages and the extension has not
+  been marked 'Mature'.
+
+### How can you rectify this? {: #how-can-you-rectify-this_8 }
+
+- Either remove the violating content or mark the extension as containing "Mature content" in your
+  developer dashboard and resubmit the extension.
+
+### Relevant policy {: #not-family-safe-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][9]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
 **Content Policies:**
 
 Our content policies apply to your Product's content, including any ads it shows to users and any
-user-generated content it hosts or links to. Further, they apply to any content from your
-developer account that is publicly displayed in Chrome Web Store, including your developer name
-and the landing page of your listed developer website. Products that include content that may not
-be suitable for all ages should be marked "Mature" on the Developer Dashboard.
+user-generated content it hosts or links to. Further, they apply to any content from your developer
+account that is publicly displayed in Chrome Web Store, including your developer name and the
+landing page of your listed developer website. Products that include content that may not be
+suitable for all ages should be marked "Mature" on the Developer Dashboard.
 
 {% endAside %}
-
-This policy is to prevent non-family-safe content from reaching an inappropriate audience.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_8 }
-
-The extension has content that is not suitable for audience of all ages and the extension has not
-been marked 'Mature'.
-
-### How can you rectify this? {: #how-can-you-rectify-this_8 }
-
-Remove the content that is in violation or mark the extension as 'Mature' in your developer
-dashboard and resubmit the extension.
 
 ## Violent content {: #violence }
 
-Corresponds to notification ID: Grey Potassium
+Corresponds to notification ID: `Grey Potassium`
 
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][10]:
-
-{% Aside %}
-
-**Violent or Bullying Behavior:**
-
-Depictions of gratuitous violence are not allowed. Products should not contain materials that
-threaten, harass, or bully other users. For example, Products should not contain:
-
-- Content which makes a specific threat of serious harm against an individual person or a defined
-  group of people.
-- Content whose predominant purpose is to single out another person for abuse, malicious attack,
-  or ridicule.
-- Content that results in the unwanted sexualization of a person, including malicious claims about
-  a person's sexual activities, sexual orientation, or gender identity.
-- A series of posts/comments/photos that, taken together, clearly have the primary intention of
-  harassment, even if each individual piece of content is not severe.
-
-{% endAside %}
-
-This policy is to prevent the use of extensions and the Chrome Web Store as a platform to spread the
-content mentioned in the policy text above
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store as a platform
+to spread the content mentioned in the relevant policy text.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_9 }
 
-The extension contains content or is directing users to content mentioned in the policy text above
+- The extension contains content or is directing users to content mentioned in the policy text,
 
 ### How can you rectify this? {: #how-can-you-rectify-this_9 }
 
-- If this is the primary functionality of your extension, then it is recommended to unpublish your
-  extension.
+- If providing access to violent or bullying content is one of the primary features of your
+  extension, unpublish the extension; such extensions are not permitted in the Chrome Web Store.
 - If this was an unintended functionality, then remove the content or services that are in violation
   and resubmit your extension.
 
-## Single purpose {: #single-use }
-
-Corresponds to notification ID: Red Magnesium/Red Copper/Red Lithium
+### Relevant policy {: #violence-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][11]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Extensions Quality Guidelines**
+**Content Policies**
 
-An extension must have a single purpose that is narrow and easy-to-understand. Do not create an
-extension that requires users to accept bundles of unrelated functionality. If two pieces of
-functionality are clearly separate, they should be put into two different extensions, and users
-should have the ability to install and uninstall them separately. Common violations include:
+Violent or Bullying Behavior:
 
-- Functionality that displays product ratings and reviews, but also injects ads into web pages.
-- Toolbars that provide a broad array of functionality or entry points into services are better
-  delivered as separate extensions, so that users can select the services they want.
-- Email notifiers combined with a news aggregator.
-- PDF converters which also aim to change a users default search engine.
+: Depictions of gratuitous violence are not allowed. Products should not contain materials that
+  threaten, harass, or bully other users. For example, Products should not contain:
+
+  - Content which makes a specific threat of serious harm against an individual person or a defined
+    group of people.
+  - Content whose predominant purpose is to single out another person for abuse, malicious attack,
+    or ridicule. Content that results in the unwanted sexualization of a person, including malicious
+    claims about a person's sexual activities, sexual orientation, or gender identity.
+  - A series of posts/comments/photos that, taken together, clearly have the primary intention of
+    harassment, even if each individual piece of content is not severe.
 
 {% endAside %}
+
+## Single purpose {: #single-use }
+
+Corresponds to notification IDs: `Red Magnesium`, `Red Copper`, and `Red Lithium`
 
 This policy is aimed at maintaining the quality of extensions on the Chrome Web Store. As mentioned
 in the policy text, if there are multiple unrelated functionalities, they should be provided in
@@ -422,45 +598,66 @@ separate extensions.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_10 }
 
-- The extension is providing 2 or more functionalities in the same extension
-- Injecting ads is also considered as a separate functionality.
-- The extension is providing one or more unrelated additional functionalities using the browser
+- The extension provides two or more purposes in the same extension (for example an extension
+  providing image format conversion and bibliography generation).
+- The extension provides one or more unrelated additional functionalities using the extension's
   action icon.
+- The following are considered distinct purposes. Extensions that provide any of the features listed
+  below may not provide any other functionality.
+    - Replacing any single [override page][docs-override-page].
+    - Using [override settings][docs-override-settings] to replace the default search provider.
+    - Injecting ads into web pages.
+
+See the [Single Purpose FAQ][docs-single-purpose-faq] for additional information.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_10 }
 
-- Narrow the functionality of your extension to just one and ensure it is clearly described in your
-  extension's metadata.
-- If your extension is offering a primary functionality and also injecting ads, then remove the
-  primary functionality or stop injecting ads.
-- Don't offer another unrelated functionality in the browser action icon.
+- Narrow the functionality of your extension to clearly fit within one well-defined purpose and
+  ensure that purpose is clearly described in your extension's metadata.
+- If your extension is offering some functionality and also injecting ads, then either stop
+  injecting ads or remove all other functionality besides ad injection.
+- Chrome does not support optional new tab pages. If you wish to provide some functionality and an
+  optional new tab page, you should separate the new tab page into a standalone extension.
+- Don't offer another unrelated functionality in the extension's action icon.
 
-## User data policy - prominent disclosure {: #udp-prominent-disclosure }
-
-Corresponds to notification ID: Purple Nickel
+### Relevant policy {: #single-purpose-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][12]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Prominent Disclosure Requirement**
+**Extensions Quality Guidelines**
 
-If your Product handles personal or sensitive user data that is not closely related to
-functionality described prominently in the Product's Chrome Web Store page and user interface,
-then prior to the collection, it must:
+Single Purpose:
 
-- Prominently disclose how the user data will be used, and
-- Obtain the user's affirmative consent for such use
+An extension must have a single purpose that is narrow and easy-to-understand. Do not create an
+extension that requires users to accept bundles of unrelated functionality. If two pieces of
+functionality are clearly separate, they should be put into two different extensions, and users
+should have the ability to install and uninstall them separately.
+
+Common violations include:
+
+- Functionality that displays product ratings and reviews, but also injects ads into web pages.
+- Toolbars that provide a broad array of functionality or entry points into services are better
+  delivered as separate extensions, so that users can select the services they want.
+- Email notifiers combined with a news aggregator.
+- PDF converters which also aim to change a user's default search engine.
 
 {% endAside %}
 
+## User data policy - prominent disclosure {: #udp-prominent-disclosure }
+
+Corresponds to notification ID: `Purple Nickel`
+
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
-the user.This policy applies to extensions that collect data that is not closely related to
-functionality described prominently in the Product's Chrome Web Store page. This particular section
-is to ensure that users are aware of the data that is being collected and that user consent is
-obtained before data collection.
+the user.
+
+This section of the policy aims to ensure that users are aware of the data that is being collected
+and that user consent is obtained before data collection. Be aware that extensions may only collect
+data in direct support of their single purpose. See the [Limited Use of User
+Data][docs-dpp-limited-use] policy for additional information.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_11 }
 
@@ -469,33 +666,48 @@ obtained before data collection.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_11 }
 
-- Prominently disclose to the user what data is being collected and how it will be handled.
+- Prominently disclose to `the user what data is being collected and how it will be handled. This
+  information must be provided in the extension's Privacy Policy and may be provided elsewhere.
 - Ensure data is collected only if the user consents to it.
+    - Prominent disclosure of data collection in the extension's Chrome Web Store listing is
+      sufficient.
+    - Collecting data that is not prominently disclosed in the Chrome Web Store listing is allowed
+      so long as this data collection is consistent with the extension's single purpose, the user is
+      informed of the data collection before it begins, and the user consents to the data
+      collection.
+- Consider providing the user with ways to opt out of data collection from within the extension's
+  [options page][docs-options].
+- Consider providing users with an "offline mode" that only stores user data locally.
 
-## User data policy - secure transmission {: #udp-secure }
-
-Corresponds to notification ID: Purple Copper
+### Relevant policy {: #udp-prominent-disclosure-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][13]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Posting a Privacy Policy & Secure Transmission**
+**Personal or Sensitive User Data**
 
-If your Product handles personal or sensitive user data (including personally identifiable
-information, financial and payment information, health information, authentication information,
-website content and resources, form data, web browsing activity, user-provided content and
-personal communications), then your Product must:
+Prominent Disclosure Requirement
 
-- Post a privacy policy, and
-- Handle the user data securely, including transmitting it via modern cryptography.
+: If your Product handles personal or sensitive user data that is not closely related to
+  functionality described prominently in the Product's Chrome Web Store page and user interface,
+  then prior to the collection, it must:
+
+  - Prominently disclose how the user data will be used, and
+  - Obtain the user's affirmative consent for such use.
 
 {% endAside %}
 
+## User data policy - secure transmission {: #udp-secure }
+
+Corresponds to notification ID: `Purple Copper`
+
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
-the user.This particular section is to ensure that user data is being handled securely.
+the user.
+
+This particular section is to ensure that user data is being handled securely.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_12 }
 
@@ -504,31 +716,39 @@ the user.This particular section is to ensure that user data is being handled se
 
 ### How can you rectify this? {: #how-can-you-rectify-this_12 }
 
-Simple. Ensure secure transmission of data: _Don't transmit data over HTTP_ Don't encode data in
-headers, query parameters, or message bodies even over HTTPS.Tip: Use the Chrome DevTools or any
-other Dev Tool to watch the network requests the extension makes.
+- Ensure data is securely transmitted.
+    - Don't transmit user data over HTTP. If possible, use secure protocols for all requests.
+    - Don't encode data in request headers or query parameters, even over HTTPS. Headers and request
+      URLs often appear in server logs, which can unintentionally leak this information.
+    - See [Safe HTTP methods][mdn-safe-http] for additional information.
 
-## User data policy - other requirements {: #udp-other-requirements }
+Tip: Use the Chrome DevTools or other network monitoring tools to watch the network requests the
+extension makes.
 
-Corresponds to notification ID: Purple Magnesium
+### Relevant policy {: #udp-secure-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][14]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Other Requirements**
+**Personal or Sensitive User Data**
 
-The following types of personal or sensitive user data are also subject to additional
-requirements:
+Posting a Privacy Policy & Secure Transmission
 
-- Financial or Payment Information—Don't publicly disclose financial or payment information
-- Authentication Information—Don't publicly disclose authentication information
-- Web Browsing Activity—Collection and use of web browsing activity is prohibited except to the
-  extent required for a user-facing feature described prominently in the Product's Chrome Web
-  Store page and in the Product's user interface.
+: If your Product handles personal or sensitive user data (including personally identifiable
+  information, financial and payment information, health information, authentication information,
+  website content and resources, form data, web browsing activity, user-provided content and
+  personal communications), then your Product must:
+
+  - Post a privacy policy, and
+  - Handle the user data securely, including transmitting it via modern cryptography.
 
 {% endAside %}
+
+## User data policy - other requirements {: #udp-other-requirements }
+
+Corresponds to notification ID: `Purple Magnesium`
 
 The User Data Privacy policy is a broad category under which several other policies are gathered.
 All of these policies have to do with the handling and transmission of sensitive information about
@@ -547,29 +767,51 @@ and is not disclosed publicly.
 - Don't collect Web Browsing Activity unless it is required for a user-facing feature.
 - Ensure user information is not being disclosed publicly
 
-## Cryptocurrency mining {: #cryptocurrency-mining }
-
-Corresponds to notification ID: Grey Silicon
+### Relevant policy {: #udp-other-requirements-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][15]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Prohibited Products:**
+**Personal or Sensitive User Data**
 
-We don't allow Products or services that:
+Other Requirements
 
-- Facilitate unauthorized access to content on websites, such as circumventing paywalls or login
-  restrictions
-- Encourage, facilitate, or enable the unauthorized access, download, or streaming of copyrighted
-  content or media
-- Mine cryptocurrency
+: The following types of personal or sensitive user data are also subject to additional
+  requirements:
+
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Type of User Data</strong></td>
+        <td><strong>Requirement</strong></td>
+      </tr>
+      <tr>
+        <td>Financial or Payment Information</td>
+        <td>Don't publicly disclose financial or payment information</td>
+      </tr>
+      <tr>
+        <td>Authentication Information</td>
+        <td>Don't publicly disclose authentication information</td>
+      </tr>
+      <tr>
+        <td>Web Browsing Activity</td>
+        <td>Collection and use of web browsing activity is prohibited except to the extent required
+          for a user-facing feature described prominently in the Product's Chrome Web Store page and
+          in the Product's user interface.</td>
+      </tr>
+    </tbody>
+  </table>
 
 {% endAside %}
 
-This policy is to prevent the use of extensions and the Chrome Web Store as a platform to mine
-cryptocurrencies.
+## Cryptocurrency mining {: #cryptocurrency-mining }
+
+Corresponds to notification ID: `Grey Silicon`
+
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store as a platform
+to mine cryptocurrencies.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_14 }
 
@@ -583,29 +825,34 @@ cryptocurrencies.
 - If this was an unintended functionality, then remove the content or services that are in violation
   and resubmit your extension.
 
-## Prohibited products {: #prohibited-products }
-
-Corresponds to notification ID: Blue Zinc/Blue Copper/Blue Lithium/Blue Magnesium
+### Relevant policy {: #cryptocurrency-mining-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][16]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Prohibited Products:**
+**Content Policies**
 
-We don't allow Products or services that:
+Prohibited Products:
 
-- Facilitate unauthorized access to content on websites, such as circumventing paywalls or login
-  restrictions
-- Encourage, facilitate, or enable the unauthorized access, download, or streaming of copyrighted
-  content or media
-- Mine cryptocurrency
+: We don't allow products or services that:
+
+  - Facilitate unauthorized access to content on websites, such as circumventing paywalls or login
+    restrictions
+  - Encourage, facilitate, or enable the unauthorized access, download, or streaming of copyrighted
+    content or media
+  - Mine cryptocurrency
 
 {% endAside %}
 
-This policy is to prevent the use of extensions and the Chrome Web Store as a platform to provide
-access to content protected by paywalls, login restrictions or intellectual property rights.
+## Prohibited products {: #prohibited-products }
+
+Corresponds to notification IDs: `Blue Zinc`, `Blue Copper`, `Blue Lithium`, and `Blue Magnesium`
+
+The intent of this policy is to prevent the use of extensions and the Chrome Web Store as a platform
+to provide access to content protected by paywalls, login restrictions or intellectual property
+rights.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_15 }
 
@@ -622,134 +869,118 @@ access to content protected by paywalls, login restrictions or intellectual prop
 - If this was an unintended functionality, then remove the content or services that are in violation
   and resubmit your extension.
 
-## Keyword stuffing {: #keyword-stuffing }
-
-Corresponds to notification ID: Yellow Argon
+### Relevant policy {: #prohibited-products-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][17]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Spam & Placement in the Store**
+**Content Policies**
 
-Keyword Spam: We don't allow extensions with misleading, improperly formatted, non-descriptive,
-irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
-description, developer name, title, icon, screenshots, and promotional images. Developers must
-provide a clear and well-written description. We also don't allow unattributed or anonymous user
-testimonials in the extension's description.
+Prohibited Products:
+
+: We don't allow products or services that:
+
+  - Facilitate unauthorized access to content on websites, such as circumventing paywalls or login
+    restrictions
+  - Encourage, facilitate, or enable the unauthorized access, download, or streaming of copyrighted
+    content or media
+  - Mine cryptocurrency
 
 {% endAside %}
 
-This policy is to ensure quality of the products on the Chrome Web Store and prevent products from
-manipulating their placement in the Store
+## Keyword stuffing {: #keyword-stuffing }
+
+Corresponds to notification ID: `Yellow Argon`
+
+The intent of this policy is to ensure quality of items published to the Chrome Web Store and
+prevent developers from manipulating their placement in the Store.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_16 }
 
-The extension is having excessive, irrelevant or inappropriate keywords in the metadata, more
-commonly, the description.
+- The extension is having excessive, irrelevant or inappropriate keywords in the metadata, more
+  commonly, the description.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_16 }
 
-Remove the content (keywords) that are in violation of the policy.
+- Remove the content (keywords) that are in violation of the policy.
 
-### Examples {: #examples }
+### Examples {: #keyword-stuffing-examples }
 
 The following are examples of this type of violation:
 
 - Including in an extension's metadata a long list of the different sites on which the extension
   works.
 
-## Redirection {: #redirection }
-
-Corresponds to notification ID: Yellow Lithium
+### Relevant policy {: #keyword-stuffing-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][18]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
 **Spam & Placement in the Store**
 
-Functionality: Do not post an extension with a single purpose of installing or launching another
-app, theme, webpage, or extension.
+**Keyword Spam:** Keyword Spam is the practice of including irrelevant or excessive keywords in an
+extensions description in an attempt to manipulate its ranking, resulting in a spammy, negative user
+experience. We don't allow extensions with misleading, improperly formatted, non-descriptive,
+irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
+description, developer name, title, icon, screenshots, and promotional images. Developers should
+focus on providing a clear and well-written description that uses keywords appropriately and in
+context.
+
+Some examples of Keyword Spam include:
+
+* Lists of sites/brands/keywords without substantial added value
+* Lists of regional locations
+* Unnatural repetition of the same keyword more than 5 times
+* Unattributed or anonymous user testimonials in the product's description.
 
 {% endAside %}
 
-This policy is to ensure quality of the products on the Chrome Web Store and prevent products from
-manipulating their placement in the Store
+## Redirection {: #redirection }
+
+Corresponds to notification ID: `Yellow Lithium`
+
+The intent of this policy is to ensure quality of the products on the Chrome Web Store and prevent
+products from manipulating their placement in the Store
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_17 }
 
-The only functionality of the extension is to launch another app, theme, webpage, or extension.
+- The only functionality of the extension is to launch another app, theme, webpage, or extension.
+- Examples of violations include
+    - Extensions that display a website in a new tab or in a popup when the extension's action is
+      clicked.
+    - Extensions that display a promotional page for another product immediately upon installation.
 
 ### How can you rectify this? {: #how-can-you-rectify-this_17 }
 
-As mentioned in the policy, such extensions are not allowed on the Store and it is recommended to
-unpublish them.
+- As mentioned in the policy, such extensions are not allowed on the Store and it is recommended to
+  unpublish them.
 
-## Functionality not working {: #does-not-work }
-
-Corresponds to notification ID: Yellow Magnesium
+### Relevant policy {: #redirection-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][19]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
 **Spam & Placement in the Store**
 
-Functionality: Do not post an extension with a single purpose of installing or launching another
-app, theme, webpage, or extension. Extensions with broken functionality - such as dead sites or
-non-functioning features - are not allowed.
+**Functionality:** Do not post an extension with a single purpose of installing or launching another
+app, theme, webpage, or extension. Extensions with broken functionality—such as dead sites or
+non-functioning features—are not allowed.
 
 {% endAside %}
-
-This policy is to ensure quality of the products on the Chrome Web Store.
-
-### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_18 }
-
-The extension is not providing the promised functionality.
-
-### How can you rectify this? {: #how-can-you-rectify-this_18 }
-
-Ensure all components of the extension are working as intended and as mentioned in the extension
-listing.
 
 ## Spam {: #spam }
 
-Corresponds to notification ID: Yellow Nickel
+Corresponds to notification ID: `Yellow Nickel`
 
-This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][20]:
-
-{% Aside %}
-
-**Spam & Placement in the Store**
-
-Repetitive Content: We don't allow any developer or their affiliates to submit multiple extensions
-that provide duplicate experiences or functionality on the Chrome Web Store.
-
-User Ratings, Reviews, and Installs: Developers must not attempt to manipulate the placement of
-any extensions in the Chrome Web Store. This includes, but is not limited to, inflating product
-ratings, reviews, or install counts by illegitimate means, such as fraudulent or incentivized
-downloads, reviews and ratings.
-
-Notification Abuse: We do not allow extensions that abuse, or are associated with abuse, of
-notifications by sending spam, ads, promotions, phishing attempts, or unwanted messages that harm
-the user's browsing experience.
-
-Message Spam: We don't allow extensions that send messages on behalf of the user without giving
-the user the ability to confirm the content and intended recipients.
-
-In addition to these requirements, all extensions must comply with Google's Webmaster Quality
-Guidelines.
-
-{% endAside %}
-
-This policy is to ensure quality of the products on the Chrome Web Store. The Spam policy is to
-prevent extensions that are harmful for the user's browsing experience and extensions that
-manipulate their placement on the Chrome Web Store.
+The intent of this policy is to ensure quality of the products on the Chrome Web Store. The Spam
+policy is to prevent extensions that are harmful for the user's browsing experience and extensions
+that manipulate their placement on the Chrome Web Store.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_19 }
 
@@ -766,24 +997,42 @@ manipulate their placement on the Chrome Web Store.
 - Don't try to manipulate the user generated content on your extension's Web Store listing
 - Don't harm the user's browsing experience in any way.
 
-## Circumvents the overrides API {: #circumvents-api-ntp }
-
-Corresponds to notification ID: Blue Nickel/Blue Potassium
+### Relevant policy {: #spam-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][21]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**API Use**
+**Spam & Placement in the Store**
 
-Extensions must use existing Chrome APIs for their designated use case. Use of any other method,
-for which an API currently exists, would be considered a violation. For example, overriding the
-Chrome New Tab Page through any means other than the URL Overrides API is not permitted.
+**Repetitive Content:** We don't allow any developer, related developer accounts, or their
+affiliates to submit multiple extensions that provide duplicate experiences or functionality on the
+Chrome Web Store. Extensions should provide value to users through the creation of unique content or
+services.
+
+**User Ratings, Reviews, and Installs:** Developers must not attempt to manipulate the placement of
+any extensions in the Chrome Web Store. This includes, but is not limited to, inflating product
+ratings, reviews, or install counts by illegitimate means, such as fraudulent or incentivized
+downloads, reviews and ratings.
+
+**Notification Abuse:** We do not allow extensions that abuse, or are associated with abuse, of
+notifications by sending spam, ads, promotions, phishing attempts, or unwanted messages that harm
+the user's browsing experience.
+
+**Message Spam:** We don't allow extensions that send messages on behalf of the user without giving
+the user the ability to confirm the content and intended recipients.
+
+In addition to these requirements, all extensions must comply with [Google's Webmaster Quality
+Guidelines][webmaster-quality].
 
 {% endAside %}
 
-This policy is to ensure quality of the products on the Chrome Web Store.
+## Circumvents the overrides API {: #circumvents-api-ntp }
+
+Corresponds to notification IDs: `Blue Nickel` and `Blue Potassium`
+
+The intent of this policy is to ensure quality of the products on the Chrome Web Store.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_20 }
 
@@ -795,33 +1044,28 @@ This policy is to ensure quality of the products on the Chrome Web Store.
 - Do not modify the Chrome New Tab Page or do so using the Overrides API.
 - Do not modify the Omnibox Search or do so using the Overrides API.
 
-## Deceptive installation {: #uws-distribution }
-
-Corresponds to notification ID: Red Zinc
+### Relevant policy {: #circumvents-api-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][22]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Deceptive Installation Tactics**
+**Extensions Quality Guidelines**
 
-Extensions must be marketed responsibly. Extensions that use or benefit from deceptive
-installation tactics will be removed from the Chrome Web Store.
+API Use:
 
-Deceptive installation tactics include:
-
-- Unclear or inconspicuous disclosures on marketing collateral preceding the Chrome Web Store
-  Product listing.
-- Misleading interactive elements as part of your distribution flow. This includes misleading
-  call-to-action buttons or forms that imply an outcome other than the installation of an
-  extension.
-- Adjusting the Chrome Web Store Product listing window with the effect of withholding or hiding
-  extension metadata from the user.
+Extensions must use existing Chrome APIs for their designated use case. Use of any other method, for
+which an API exists, would be considered a violation. For example, overriding the Chrome New Tab
+Page through any means other than the URL Overrides API is not permitted.
 
 {% endAside %}
 
-This policy is to ensure users are not deceived into installing extensions.
+## Deceptive installation {: #uws-distribution }
+
+Corresponds to notification ID: `Red Zinc`
+
+The intent of this policy is to ensure users are not deceived into installing extensions.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_21 }
 
@@ -837,23 +1081,43 @@ This policy is to ensure users are not deceived into installing extensions.
 Publish a new extension that does not employ deceptive methods to market to users or to gather a
 user base.
 
-## Obfuscation {: #obfuscation }
-
-Corresponds to notification ID: Red Titanium
+### Relevant policy {: #uws-distribution-policy }
 
 This section addresses extensions that are in violation of the following section of the Chrome Web
-Store [developer program policies][23]:
+Store [developer program policies][docs-dpp]:
 
 {% Aside %}
 
-**Code Readability Requirements:**
+**Deceptive Installation Tactics**
 
-Developers must not obfuscate code or conceal functionality of their extension. This also applies
-to any external code or resource fetched by the extension package.
+Extensions must be marketed responsibly. The set of functionalities promised by the extension must
+be stated clearly and in a transparent manner. The outcome of any user interaction should match the
+reasonable expectations that were set with the user. Extensions that use or benefit from deceptive
+installation tactics will be removed from the Chrome Web Store.
+
+Deceptive installation tactics include:
+
+- Unclear or inconspicuous disclosures on marketing collateral preceding the Chrome Web Store
+  product listing.
+
+- Misleading interactive elements as part of your distribution flow. This includes misleading
+  call-to-action buttons or forms that imply an outcome other than the installation of an extension.
+
+- Adjusting the Chrome Web Store product listing window with the effect of withholding or hiding
+  extension metadata from the user.
+
+- Bundling other extensions or offers within the same installation flow.
+
+- Requiring unrelated user action to access advertised functionality.
 
 {% endAside %}
 
-This policy is to ensure the quality of the extensions and code submitted to the Chrome Web Store.
+## Obfuscation {: #obfuscation }
+
+Corresponds to notification ID: `Red Titanium`
+
+The intent of this policy is to ensure the quality of the extensions and code submitted to the
+Chrome Web Store.
 
 ### Common reasons for removal/rejection {: #common-reasons-for-removalrejection_22 }
 
@@ -864,33 +1128,60 @@ Using obfuscated code in the extension package.
 Publish a new extension that does not employ deceptive methods to market to users or to gather a
 user base.
 
-### Examples {: #examples_1 }
+### Examples {: #obfuscation-examples }
 
 The following are some examples of violations of this type of policy:
 
-- Base 64 encoding
-- Character encoding
+- Base 64 encoding (e.g. `'SSdtIGluIHVyIGJhc2U='`)
+- Character encoding (e.g. `'\u{68}a\u0063\u006b\x69ng\u{20}u\u{72}\x20\u0067i\u0062\x73\x6fn'`)
 
-[1]: /docs/webstore/program_policies
-[2]: /docs/webstore/program_policies
-[3]: /docs/webstore/program_policies
-[4]: /docs/webstore/program_policies
-[5]: /docs/webstore/program_policies
-[6]: /docs/webstore/program_policies
-[7]: /docs/webstore/program_policies
-[8]: /docs/webstore/program_policies
-[9]: /docs/webstore/program_policies
-[10]: /docs/webstore/program_policies
-[11]: /docs/webstore/program_policies
-[12]: /docs/webstore/program_policies
-[13]: /docs/webstore/program_policies
-[14]: /docs/webstore/program_policies
-[15]: /docs/webstore/program_policies
-[16]: /docs/webstore/program_policies
-[17]: /docs/webstore/program_policies
-[18]: /docs/webstore/program_policies
-[19]: /docs/webstore/program_policies
-[20]: /docs/webstore/program_policies
-[21]: /docs/webstore/program_policies
-[22]: /docs/webstore/program_policies
-[23]: /docs/webstore/program_policies
+### Relevant policy {: #obfuscation-policy }
+
+This section addresses extensions that are in violation of the following section of the Chrome Web
+Store [developer program policies][docs-dpp]:
+
+{% Aside %}
+
+**Content Policies**
+
+Code Readability Requirements:
+
+: Developers must not obfuscate code or conceal functionality of their extension. This also applies
+  to any external code or resource fetched by the extension package. Minification is allowed,
+  including the following forms:
+
+  - Removal of whitespace, newlines, code comments, and block delimiters
+  - Shortening of variable and function names
+  - Collapsing files together
+
+{% endAside %}
+
+[api-action]: /docs/extensions/reference/action
+[api-browser-action]: /docs/extensions/reference/browserAction/
+[api-cookies]: /docs/extensions/reference/cookies/
+[api-page-action]: /docs/extensions/reference/pageAction/
+[api-storage]: /docs/extensions/reference/storage/
+[api-tabs-get-current-tab]: /docs/extensions/reference/tabs/#get-the-current-tab
+[api-tabs-query]: /docs/extensions/reference/tabs/#method-query
+[api-tabs-sendmessage]: /docs/extensions/reference/tabs/#method-sendMessage
+[api-tabs]: /docs/extensions/reference/tabs
+[blog-lie-fi]: https://developers.google.com/web/fundamentals/performance/poor-connectivity#lie-fi
+[dev-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
+[docs-dpp]: /docs/webstore/program_policies/
+[docs-dpp-limited-use]: /docs/webstore/program_policies/#limited_use
+[docs-options]: /docs/extensions/mv3/options/
+[docs-override-page]: /docs/extensions/mv3/override/
+[docs-override-settings]: /docs/extensions/mv3/settings_override/
+[docs-pack-extension]: /docs/extensions/mv3/linux_hosting/#create
+[docs-publish-setup]: /docs/webstore/publish/#setup-a-developer-account
+[docs-single-purpose-faq]: /docs/extensions/mv3/single_purpose/
+[mdn-cookie-store]: https://developer.mozilla.org/en-US/docs/Web/API/Cookie_Store_API
+[mdn-document-cookie]: https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
+[mdn-indexeddb]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB
+[mdn-safe-http]: https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP
+[mdn-samesite-cookie]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
+[mdn-web-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+[webmaster-quality]: https://support.google.com/webmasters/answer/35769#3
+[wiki-case-sensitivity]: https://en.wikipedia.org/wiki/Case_sensitivity
+[section-misunderstood-perms]: #misunderstood-perms
+[section-does-not-work]: #does-not-work
