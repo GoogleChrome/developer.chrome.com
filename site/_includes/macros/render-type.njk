@@ -139,6 +139,8 @@
               <div class="type--xsmall">{{ renderSingleIconType(node._method.return.type, node._method.return) }}</div>
             </div>
 
+            {{ renderComment(node._method.return) }}
+
             {% if node._method.isReturnsAsync %}
               <p>
                 This only returns a <code>Promise</code> when the <code>callback</code> parameter
@@ -146,8 +148,6 @@
                 The type inside the <code>Promise</code> is the same as the 1st argument to <code>callback</code>.
               </p>
             {% endif %}
-
-            {{ renderComment(node._method.return) }}
           </li>
         </ul>
       </div>

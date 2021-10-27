@@ -270,6 +270,9 @@ class Transform {
     if (effectiveDeclarationNode.signatures?.length) {
       nodePrefix = 'method';
 
+      let nodeComment = effectiveDeclarationNode.comment;
+      let returnSignatureComment = undefined;
+
       /** @type {typedoc.JSONOutput.SomeType | undefined} */
       let returnType = undefined;
 
@@ -283,6 +286,7 @@ class Transform {
         for (const param of s.parameters ?? []) {
           if (!allParams.has(param.name) || param.flags.isOptional) {
             allParams.set(param.name, param);
+            this.upgradeParamWithParamSinceTags(param, s.comment?.tags ?? []);
           }
         }
 
@@ -293,7 +297,8 @@ class Transform {
         ) {
           // The signature with a return value wins the comment, as unlike the parameters, this
           // comment is on the signature.
-          node.comment = node.comment ?? s.comment;
+          nodeComment = nodeComment ?? s.comment;
+          returnSignatureComment = s.comment;
 
           // TODO: This can appear multiple times (bad Promise method) but should always be equal.
           returnType = s.type;
@@ -305,9 +310,13 @@ class Transform {
       // Hoist the comment onto the top node if it doesn't already have one (and we didn't pick it
       // up from choosing the signature with a return type).
       // This solves the problem that TypeDoc thinks methods are actually "methodName.methodName".
-      node.comment = node.comment ?? signatures[0]?.comment;
+      nodeComment = nodeComment ?? signatures[0]?.comment;
+      node.comment = nodeComment;
 
       extendedNode._method = {parameters: parameters.slice()};
+
+      // If we have a return type, create a virtual ParameterReflection that we walk over and
+      // record in "_method.return" for display.
       if (returnType) {
         /** @type {typedoc.JSONOutput.ParameterReflection} */
         const virtualNode = {
@@ -317,9 +326,14 @@ class Transform {
           flags: {},
           type: returnType,
         };
-        if (node.comment?.returns) {
-          virtualNode.comment = {shortText: node.comment.returns};
+        if (nodeComment?.returns) {
+          virtualNode.comment = {shortText: nodeComment.returns};
         }
+
+        this.upgradeReturnWithReturnSinceTags(
+          virtualNode,
+          returnSignatureComment?.tags ?? []
+        );
 
         extendedNode._method.return = virtualNode;
         if (returnType?.type === 'reference' && returnType.name === 'Promise') {
@@ -398,6 +412,69 @@ class Transform {
       const pageIdPart = extendedNode._name.substr(namespace._name.length + 1);
       extendedNode._pageId = nodePrefix + '-' + pageIdPart.replace(/\./g, '-');
     }
+  }
+
+  /**
+   * Given tags from a method signature, upgrade this param with standardized-looking tags.
+   *
+   * @param {typedoc.JSONOutput.ParameterReflection} param
+   * @param {typedoc.JSONOutput.CommentTag[]} tags
+   */
+  upgradeParamWithParamSinceTags(param, tags) {
+    /** @type {typedoc.JSONOutput.CommentTag[]} */
+    const virtualNodeTags = [];
+    const paramPrefix = param.name + ' ';
+
+    for (const tag of tags) {
+      // These all look like "@chrome-param-deprecated-since paramName some text...", so only allow
+      // text that starts with "paramName ".
+      if (!tag.text.startsWith(paramPrefix)) {
+        continue;
+      }
+      const text = tag.text.substr(paramPrefix.length);
+
+      if (tag.tag === 'chrome-param-since') {
+        virtualNodeTags.push({tag: 'since', text});
+      } else if (tag.tag === 'chrome-param-deprecated-since') {
+        virtualNodeTags.push({tag: 'chrome-deprecated-since', text});
+      } else if (tag.tag === 'chrome-param-deprecated') {
+        virtualNodeTags.push({tag: 'deprecated', text});
+      }
+    }
+
+    if (!param.comment) {
+      param.comment = {};
+    }
+    param.comment.tags = (param.comment.tags ?? []).concat(virtualNodeTags);
+  }
+
+  /**
+   * Given tags from a method signature, upgrade this virtual return declaration with
+   * standardized-looking tags.
+   *
+   * @param {typedoc.JSONOutput.ParameterReflection} param
+   * @param {typedoc.JSONOutput.CommentTag[]} tags
+   */
+  upgradeReturnWithReturnSinceTags(param, tags) {
+    /** @type {typedoc.JSONOutput.CommentTag[]} */
+    const virtualNodeTags = [];
+
+    for (const tag of tags) {
+      const text = tag.text;
+
+      if (tag.tag === 'chrome-returns-since') {
+        virtualNodeTags.push({tag: 'since', text});
+      } else if (tag.tag === 'chrome-returns-deprecated-since') {
+        virtualNodeTags.push({tag: 'chrome-deprecated-since', text});
+      } else if (tag.tag === 'chrome-returns-deprecated') {
+        virtualNodeTags.push({tag: 'deprecated', text});
+      }
+    }
+
+    if (!param.comment) {
+      param.comment = {};
+    }
+    param.comment.tags = (param.comment.tags ?? []).concat(virtualNodeTags);
   }
 
   /**
