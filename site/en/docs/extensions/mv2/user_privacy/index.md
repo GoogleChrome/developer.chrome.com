@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Protect user privacy"
 date: 2018-03-18
 updated: 2018-04-26
-description: Guidlines for ensuring that your Chrome Extension protects user privacy.
+description: Guidelines for ensuring that your Chrome Extension protects user privacy.
 ---
 
 {% include 'partials/extensions/mv2-legacy-page.md' %}

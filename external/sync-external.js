@@ -1,22 +1,19 @@
 /**
  * @fileoverview Synchronizes the last known good state from shared storage.
  *
- * TODO(samthor): Can we replace this with a `gcloud` or even a basic `wget` command?
+ * This doesn't use the @google-cloud library, as it always uses your local credentials. We can
+ * actually fetch these files anonymously via a single JSON API. See its reference:
+ *   https://cloud.google.com/storage/docs/json_api/v1/objects/list
  */
 
-const storageApi = require('@google-cloud/storage');
 const fs = require('fs');
 const path = require('path');
-const stream = require('stream');
 const syncTestdata = require('./lib/sync-testdata');
+const {default: fetch} = require('node-fetch');
 
 // The bucket to synchronize. It's not filtered, and the bucket is public, owned by the internal
 // Google project "chrome-gcs-uploader".
 const bucketName = 'external-dcc-data';
-
-// This uses Application Default Credentials, but we just use it for synchronizing a public
-// bucket so it shouldn't need any special permissions.
-const storage = new storageApi.Storage();
 
 /**
  * Write the contents of the specified bucket to the target folder. Clobbers existing files but
@@ -27,43 +24,56 @@ const storage = new storageApi.Storage();
  * @return {Promise<string[]>}
  */
 async function syncBucket(bucketName, target) {
-  const bucket = storage.bucket(bucketName);
-  fs.mkdirSync(target, {recursive: true});
+  const u = new URL(
+    `https://storage.googleapis.com/storage/v1/b/${bucketName}/o`
+  );
+  u.searchParams.set('maxResults', '1000');
 
-  /** @type {Promise<string>[]} */
-  const work = [];
-
-  /** @type {(file: storageApi.File) => void} */
-  const handleFile = file => {
-    const {name} = file;
-    const targetFile = path.join(target, name);
-
-    // Create the target folder, in case the data is nested.
-    fs.mkdirSync(path.dirname(targetFile), {recursive: true});
-
-    work.push(
-      // TODO: can we not sync a file if its timestamp is the same?
-      new Promise((resolve, reject) => {
-        const readable = file.createReadStream();
-        stream.pipeline(readable, fs.createWriteStream(targetFile), e => {
-          e ? reject(e) : resolve(name);
-        });
-      })
+  const allObjectsRequest = await fetch(u);
+  if (!allObjectsRequest.ok) {
+    throw new Error(
+      `couldn't get ${bucketName}: ${allObjectsRequest.statusText}`
     );
-  };
+  }
 
-  /** @type {Promise<void>} */
-  const streamPromise = new Promise((resolve, reject) => {
-    bucket
-      .getFilesStream()
-      .on('error', reject)
-      .on('data', handleFile)
-      .on('end', resolve);
+  /**
+   * @type {{
+   *   kind: string,
+   *   nextPageToken?: string,
+   *   items: {name: string, mediaLink: string}[],
+   * }}
+   */
+  const allFiles = await allObjectsRequest.json();
+
+  if (allFiles.kind !== 'storage#objects') {
+    throw new Error(`got unexpected response kind: ${allFiles.kind}`);
+  }
+  if (allFiles.nextPageToken) {
+    // The page limit is 1000, and we currently have maybe O(10) files.
+    throw new Error(
+      'TODO: we have too many files in sync-external storage, implement pagination'
+    );
+  }
+
+  const work = allFiles.items.map(async file => {
+    const response = await fetch(file.mediaLink);
+    if (!response.ok) {
+      throw new Error(
+        `couldn't fetch file ${file.name}: ${response.statusText}`
+      );
+    }
+    const buffer = await response.buffer();
+
+    const targetFile = path.join(target, file.name);
+
+    const targetDir = path.dirname(targetFile);
+    await fs.promises.mkdir(targetDir, {recursive: true});
+    await fs.promises.writeFile(targetFile, buffer);
+
+    return file.name;
   });
 
-  await streamPromise;
-  const filenames = await Promise.all(work);
-  return filenames;
+  return Promise.all(work);
 }
 
 async function run() {

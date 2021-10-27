@@ -1,5 +1,28 @@
 ## 更多 DevTools 的功能 {: #whats-new }
-欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。有兴趣参与中文翻译的朋友，请联系我们的开发者推广工程师 [Jecelyn Yeen](https://twitter.com/JecelynYeen)。
+欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
+
+<!-- ### Chrome 96 {: #chrome96 }
+* [Preview feature: New CSS Overview panel](/blog/new-in-devtools-96/#css-overview)
+* [Emulate the CSS prefers-contrast media feature](/blog/new-in-devtools-96/#prefers-contrast)
+* [Emulate the Chrome’s Auto Dark Theme feature](/blog/new-in-devtools-96/#auto-dark-mode)
+* [Copy declarations as JavaScript in the Styles pane](/blog/new-in-devtools-96/#copy-as-js)
+* [New Payload tab in the Network panel](/blog/new-in-devtools-96/#payload)
+* [Improved the display of properties in the Properties pane](/blog/new-in-devtools-96/#properties)
+* [Option to hide CORS errors in the Console](/blog/new-in-devtools-96/#hide-cors-errors)
+* [Proper `Intl` objects preview and evaluation in the Console](/blog/new-in-devtools-96/#intl)
+* [Consistent async stack traces](/blog/new-in-devtools-96/#async)
+* [Retain the Console sidebar](/blog/new-in-devtools-96/#console-sidebar)
+* [[Experimental] New Reporting API pane in the Application panel](/blog/new-in-devtools-96/#reporting-api) -->
+
+
+### Chrome 95 {: #chrome95 }
+* [新的 CSS 长度编辑工具](/blog/new-in-devtools-95/#length)
+* [在“问题”标签页隐藏问题](/blog/new-in-devtools-95/#hide-issues)
+* [改善属性展示](/blog/new-in-devtools-95/#properties)
+* [Lighthouse 面板中的 Lighthouse 8.4](/blog/new-in-devtools-95/#lighthouse)
+* [在“来源”面板中排序代码段](/blog/new-in-devtools-95/#snippets)
+* [阅读 DevTools 新功能的翻译文章和举报翻译错误](/blog/new-in-devtools-95/#localized)
+* [DevTools 命令菜单的用户交互优化](/blog/new-in-devtools-95/#command-menu)
 
 ### Chrome 94 {: #chrome94 }
 

@@ -7,7 +7,7 @@ date: 2021-09-20
 updated: 2021-09-20
 description:
   "New CSS length authoring tools, hide issues in the Issues tab, improved the display of properties, and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XQ6Pw7bbJOOGgtADW2Wu.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Z98rfRfuNDjERrDwXnrD.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -17,7 +17,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Z98rfRfuNDjERrDwXnrD.jpg -->
+{% YouTube id="T_Ppg7ghrWM" %}
 
 ## New CSS length authoring tools {: #length }
 

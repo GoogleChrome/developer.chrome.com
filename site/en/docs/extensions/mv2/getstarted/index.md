@@ -307,7 +307,7 @@ changeColor.onclick = function(element) {
 };
 ```
 
-The updated code adds an `onclick` event on the button, which triggers a [programatically injected
+The updated code adds an `onclick` event on the button, which triggers a [programmatically injected
 content script][content-programmatic]. This turns the background color of the page the same color as the button. Using
 programmatic injection allows for user-invoked content scripts, instead of auto inserting unwanted
 code into web pages.

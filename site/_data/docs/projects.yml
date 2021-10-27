@@ -1,5 +1,7 @@
 tools:
   - url: devtools
+# TODO: Uncomment when launched.
+#  - url: workbox
 crx:
   - url: extensions
   - url: webstore

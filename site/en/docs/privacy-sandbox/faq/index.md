@@ -4,7 +4,7 @@ title: FAQs
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "Frequently asked questions about the Privacy Sandbox proposals"
 date: 2021-09-21
-updated: 2021-09-30
+updated: 2021-10-26
 authors:
 	- samdutton
 ---
@@ -59,13 +59,13 @@ Explainer](https://developer.chrome.com/docs/privacy-sandbox/status/).
 
 ### I don't understand the terminology in the API explainers. Is there a glossary?
 
-Yes: the [Privacy Sandbox glossary](https://deploy-preview-543--dcc-private.netlify.app/docs/privacy-sandbox/glossary/).
+Yes: the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 
 ### When will the Privacy Sandbox APIs be implemented?
 
 The [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) shows the roadmap to phasing
 out third-party cookies. Additional current information for individual APIs is available on the
-[implementation status page](https://deploy-preview-543--dcc-private.netlify.app/docs/privacy-sandbox/status/).
+[implementation status page](/docs/privacy-sandbox/status/).
 
 ### Are the Privacy Sandbox APIs in Chromium or Chrome?
 
@@ -148,7 +148,7 @@ on the Privacy Sandbox developer support repo.
 
 ### What's the difference between FLEDGE and TURTLEDOVE?
 
-[FLEDGE](https://deploy-preview-543--dcc-private.netlify.app/docs/privacy-sandbox/fledge) is the
+[FLEDGE](/docs/privacy-sandbox/fledge) is the
 first experiment to be implemented in Chromium within the
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.  
 The differences are mostly about separating the on-device role of the buyer and seller:
@@ -237,12 +237,12 @@ UA-CH works with both HTTP/2 and HTTP/3 connections. Note that Client Hints are 
 
 ### How can I ask a question about this feature?
 
--  For questions about the proposal: [create an issue](https://github.com/WICG/CHIPS/issues) on the 
-proposal repo.
--  For implementation, integration, and general best practice questions: 
-[create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy 
-Sandbox developer support repo.
-
+-  For questions about the proposal:
+   [create an issue](https://github.com/WICG/storage-buckets/issues) on the
+   proposal repo.
+-  For implementation, integration, and general best practice questions:
+   [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
+   on the Privacy Sandbox developer support repo.
 
 ## CHIPS
 
@@ -266,7 +266,7 @@ on the repo for the proposal explainer.
 Sandbox developer support repo.
 
 
-## Fenced Frames
+## Fenced frames
 
 ### How can I ask a question about this feature?
 
@@ -276,7 +276,7 @@ on the proposal repo.
 [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) on the Privacy 
 Sandbox developer support repo.
 
-### What are the use cases for Fenced Frames?
+### What are the use cases for fenced frames?
 
 The API proposes [a new form of embedded document](https://github.com/shivanigithub/fenced-frame)
 that will enable new APIs to isolate themselves from their embedders, preventing cross-site

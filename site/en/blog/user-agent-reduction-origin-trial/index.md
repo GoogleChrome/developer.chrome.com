@@ -103,16 +103,6 @@ third-party origins will also send the same User-Agent string as the top-level
 request, including the reduced UA string if the origin trial token is valid,
 provided that the permissions policy allows it.
 
-If you operate a service that is implemented as a subresource across origins
-(like ad serving or analytics), this origin trial would not enable sending the
-reduced UA string in the User-Agent header from your cross-origin embedded
-resource. If you select a "third-party origin trial" during registration, the
-subresource requests will get the reduced UA string in the JavaScript APIs, but
-not in the User-Agent request header. To get the reduced User-Agent request
-header, enroll the top-level sites in the origin trial and set the permissions
-policy to allow the client hints and the reduced User-Agent request header to
-propagate to the cross-origin requests. 
-
 ## How do I participate in the User-Agent Reduction origin trial? {: #enroll-top-level }
 
 1.  To register for the origin trial and get a token for your domains,

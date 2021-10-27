@@ -98,7 +98,7 @@ In addition to the Content Policies contained in the Google Play Developer Prog
 Developers must ensure that the content of each app, and any ads they contain, meet the following
 requirements:
 
-- You must identify any app: containing advertising; oroffering in-app purchases of any type using
+- You must identify any app: containing advertising; offering in-app purchases of any type using
   the means specified in the developer console
 - If apps contain ads, the ads must be clearly distinguishable from other app content. Other app
   content must not be used as means of promoting commercial products in a manner unrelated to the
@@ -124,7 +124,7 @@ an educator to assess the app's suitability for educational use.
 
 ### COPPA compliance {: #coppa }
 
-The laws of some countries, includi ng the United States, impose restrictions on the online
+The laws of some countries, including the United States, impose restrictions on the online
 collection and use of information from children. You acknowledge that You are responsible for
 ensuring that each app that You include in Play for Education complies with the Children's Online
 Privacy Protection Act and all other applicable laws and regulations.

@@ -484,7 +484,7 @@ chrome.scripting.registerContentScript({
     <tr id="document_idle">
       <td><code>document_idle</code></td>
       <td>string</td>
-      <td><em>Prefered.</em> Use <code>"document_idle"</code> whenever possible.<br><br>The browser
+      <td><em>Preferred.</em> Use <code>"document_idle"</code> whenever possible.<br><br>The browser
         chooses a time to inject scripts between <code>"document_end"</code> and immediately after
         the <a
           href="https://www.whatwg.org/specs/web-apps/current-work/#handler-onload"><code>window.onload</code></a>
