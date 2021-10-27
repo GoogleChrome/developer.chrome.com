@@ -22,31 +22,96 @@
  *   https://www.11ty.dev/docs/plugins/cache/#manually-store-your-own-data-in-the-cache
  */
 
-require('dotenv').config();
+const path = require('path');
+const fs = require('fs');
 
-// TODO(samthor): This is in package.json and installed yet ESLint complains it does not exist.
-// eslint-disable-next-line node/no-missing-require
-const chromeTypesHelpers = require('chrome-types-helpers');
-const {fetchFromCache} = require('./lib/cache');
-
-const LATEST_VERSION_JSON =
-  'https://unpkg.com/chrome-types@latest/history.json';
+// eslint-disable-next-line no-unused-vars
+const typedoc = require('typedoc');
 
 /**
- * @return {Promise<{[name: string]: chromeTypesHelpers.Namespace}>}
+ * @param {typedoc.JSONOutput.DeclarationReflection} root
+ * @return {RenderGroup[]}
  */
-module.exports = async () => {
+function buildGroupsForRoot(root) {
+  /** @type {RenderGroup[]} */
+  const groups = [];
+
+  /** @type {(title: string, prefix: string) => ((node: typedoc.JSONOutput.DeclarationReflection) => void)} */
+  const defineGroupAdder = (title, prefix) => {
+    /** @type {RenderGroup} */
+    const group = {title, prefix, contents: []};
+    groups.push(group);
+    return node => group.contents.push(node);
+  };
+
+  const typesAdd = defineGroupAdder('Types', 'type');
+  const propertyAdd = defineGroupAdder('Properties', 'property');
+  const methodAdd = defineGroupAdder('Methods', 'method');
+  const eventAdd = defineGroupAdder('Events', 'event');
+  const otherAdd = defineGroupAdder('Other', 'other');
+
+  const extendedRoot = /** @type {ExtendedReflection} */ (root);
+
+  for (const child of Object.values(extendedRoot._type?.properties ?? {})) {
+    const extended = /** @type {ExtendedReflection} */ (child);
+
+    if (extended._event) {
+      eventAdd(child);
+      continue;
+    }
+
+    switch (extended.kind) {
+      case typedoc.ReflectionKind.Class:
+      case typedoc.ReflectionKind.Interface:
+      case typedoc.ReflectionKind.TypeAlias:
+      case typedoc.ReflectionKind.TypeLiteral:
+        typesAdd(extended);
+        break;
+      case typedoc.ReflectionKind.Function:
+        // To TypeDoc, a Method is always something on an interface/class, but we use it to mean
+        // part of the namespace/module.
+        methodAdd(extended);
+        break;
+      case typedoc.ReflectionKind.Variable:
+        propertyAdd(child);
+        break;
+      default:
+        otherAdd(child);
+    }
+  }
+
+  for (const {contents} of groups) {
+    contents.sort(({name: a}, {name: b}) => a.localeCompare(b));
+  }
+
+  // Only return groups that actually have contents.
+  return groups.filter(({contents}) => contents.length);
+}
+
+module.exports = () => {
   if (process.env.ELEVENTY_IGNORE_EXTENSIONS) {
     return {};
   }
 
-  // This fetches the latest pubilshed historic version data, which is automaticaly published from
-  // https://github.com/GoogleChrome/chrome-types in a GitHub action.
-  /** @type {chromeTypesHelpers.VersionDataFile} */
-  const data = await fetchFromCache(LATEST_VERSION_JSON);
+  const chromeTypesFile = path.join(
+    __dirname,
+    '../../external/data/chrome-types.json'
+  );
 
-  const {symbols} = data;
+  /** @type {{[namespace: string]: ExtendedReflection}} */
+  const parsed = JSON.parse(fs.readFileSync(chromeTypesFile, 'utf-8'));
 
-  const out = await chromeTypesHelpers.prepareNamespaces({symbols});
-  return out.namespaces;
+  /** @type {{[namespace: string]: RenderNamespace}} */
+  const withGroups = {};
+
+  for (const [namespace, declaration] of Object.entries(parsed)) {
+    withGroups[namespace] = {
+      shortName: namespace,
+      name: declaration._name,
+      root: declaration,
+      groups: buildGroupsForRoot(declaration),
+    };
+  }
+
+  return withGroups;
 };

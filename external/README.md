@@ -10,7 +10,7 @@ This folder contains the system that deals with external data for developer.chro
 
 ## Changes
 
-If you make changes to the build script(s), you can manually kick off a Cloud Build task to confirm that the output builds and to write it to storage for other users.
+If you make changes to the build script(s), you should kick off a Cloud Build task to confirm that the output builds and to write it to storage for other users.
 
 ```bash
 $ gcloud builds submit --config .cloudbuild/external.yaml .
@@ -21,3 +21,5 @@ You can confirm the contents of the bucket by:
 ```bash
 $ gsutil ls -l gs://external-dcc-data
 ```
+
+You'll write the data before your PR is committed; that's fine, because the data needs to available immediately when the code is in.

@@ -1,521 +1,473 @@
 
 {#
-  Top-level rendering of a model.Property.
+  Top-level rendering of a DeclarationReflection from TypeDoc.
 #}
-{% macro renderTopProperty(prop, prefix) %}
+{% macro renderTopLevel(node, prefix) %}
 
-  {% set type = prop.type %}
+  {% set type = node.type %}
 
-<div class="type stack">
-  <h3 id="{{ prefix }}-{{ prop.name }}">{{ prop.name }}</h3>
+  <div class="type stack">
+    <h3 id="{{ node._pageId }}">{{ node.name }}</h3>
+    {% if node._method %}
+      {# Render the method signature. #}
+      <span class="code-sections__callback type--xsmall">
+        <code>
+          {# This uses the whole path to the function (_name), so it's easy to copy/paste. #}
+          {% if node._event %}
+            {{ node._name }}.addListener{{ renderFunctionParameters(node._method.parameters, true) | trim }}
+          {% else %}
+            {{ node._name }}{{ renderFunctionParameters(node._method.parameters, true) | trim }}
+          {% endif %}
+        </code>
+      </span>
+    {% elif node._event %}
+      {# This is a declarative event listener as it has no listener function type. #}
+      <p>
+        Provides the <a href="/docs/extensions/reference/events/#declarative-event-handlers">Declarative Event API</a> consisting of <code>addRules</code>, <code>removeRules</code>, and <code>getRules</code>.
+      </p>
+    {% endif %}
+    {{ renderComment(node) }}
+  </div>
 
-{# Render the function signature. #}
-{% if type.key === 'function' %}
-  {{ renderTypeSignature(prop) }}
-{% elif type.key === 'ref' and type.name === 'events.Event' %}
-  {% if type.templates[0].primitiveType === 'void' %}
-    {# This is a declarative event listener as it has no listener function type. #}
-    <p>
-      Provides the <a href="/docs/extensions/reference/events/#declarative-event-handlers">Declarative Event API</a> consisting of <code>addRules</code>, <code>removeRules</code>, and <code>getRules</code>.
-    </p>
-  {% else %}
-    {# This isn't really part of the type but we show users how to add a listener. #}
-    <div class="type--label">
-      <code>
-        {{ prop.name }}.addListener(listener: <span class="color-cyan-medium">function</span>)
-      </code>
+  {% if type.type === 'literal' %}
+    {# Literal number or string. #}
+    <div class="code-sections">
+      <h4 class="type--label code-sections__mode">Value</h4>
+      <div class="code-sections__overline code-sections__label">
+        {{ renderSingleIconType(type) }}
+      </div>
     </div>
+
+  {% elif type.type === 'union' %}
+    {# Type that contains many string (probably) options, basically an enum. #}
+    {{ renderIconTypesArray(type.types, 'Type') }}
+
+  {% elif type.type and not node._event %}
+    {# Reference to another type (and not an Event). #}
+    <div class="code-sections">
+      <h4 class="type--label code-sections__mode">Type</h4>
+      <div class="code-sections__overline code-sections__label">
+        {{ renderSingleIconType(type) }}
+      </div>
+    </div>
+
   {% endif %}
-{% endif %}
 
-  {{ renderComment(prop) }}
-</div>
-
-{{ renderTopType(type, prop) }}
+  {# This might actually be a function or class, so render its contents. #}
+  {{ renderInnerParts(node, true) }}
 
 {% endmacro %}
 
 
 {#
-  Top-level rendering of a model.Type. This is needed as we recurse for union types.
+  Renders a declaration, for use inside parameter or property lists.
 #}
-{% macro renderTopType(type, prop) %}
+{% macro renderDeclaration(node) %}
 
-  {% if not type %}
-    {# This should probably never happen. #}
+  <li class="stack">
+    <div>
+      <div class="code-sections__label" id="#{{ node._pageId }}">{{ node.name }}</div>
+      <div class="type--xsmall">{{ renderSingleIconType(node.type, node) }}</div>
+    </div>
 
-  {% elif prop.isType and type.key === 'choices' %}
-    {# Type that contains many string (probably) options, basically an enum. #}
-    {{ renderOptionalTypesArray(type.choices, 'Enum', prop) }}
+    {{ renderComment(node) }}
 
-  {% elif type.key === 'function' %}
-    {# Top-level namespace function. #}
+    {#
+      Give a hint of how to use this method. It might be a method of an interface or class, or
+      a different type of callback.
+    #}
+    {% if node._method %}
+      {% if not node.type.declaration.signatures %}
+        {# This is a function or event on an interface or class. #}
+        <p>
+          The <code>{{ node.name }}{% if node._event %}.addListener{% endif %}</code> function looks like:
+          <span class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(node._method.parameters) }} => {...}</code></span>
+        </p>
+      {% elif isTopLevel %}
+        {# This is a parameter to a top-level function, i.e., a callback from the developer. #}
+        <p>
+          {% if node.flags.isOptional %}
+            If you specify the <code>{{ node.name }}</code> parameter, it
+          {% else %}
+            The <code>{{ node.name }}</code> parameter
+          {% endif %}
+          should be a function that looks like this:
+          <span class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(node._method.parameters) }} => {...}</code></span>
+        </p>
+      {% else %}
+        {# This is probably a callback given back to the developer, so be vague about its usage. #}
+        <p>
+          The <code>{{ node.name }}</code> parameter looks like:
+          <span class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(node._method.parameters) }} => {{ renderSingleType(node._method.return.type) }}</code></span>
+        </p>
+      {% endif %}
+    {% endif %}
 
-    {% if type.isReturnsAsync %}
-      {{ renderOptionalParametersSection(type.parametersForAsync, 'Parameters') }}
+    {{ renderInnerParts(node) }}
+  </li>
 
+{% endmacro %}
+
+
+{#
+  Renders the inner contents of reflections that have them. This is just interfaces and functions.
+#}
+{% macro renderInnerParts(node, isTopLevel) %}
+
+  {% if node._type %}
+    {# Something with properties. #}
+    {{ renderChildrenTable(node._type.properties, isTopLevel and 'Properties') }}
+  {% endif %}
+
+  {% if node._method %}
+    {# Something that looks like a method, including events. #}
+    {{ renderChildrenTable(node._method.parameters, isTopLevel and 'Parameters') }}
+
+    {% if node._method.return %}
       <div class="code-sections">
-        <h4 class="type--label code-sections__mode">Result</h4>
+        {% if isTopLevel %}
+          <h4 class="type--label code-sections__mode">Returns</h4>
+        {% endif %}
 
         <ul class="stack">
           <li class="stack">
             <div>
-              <div class="code-sections__label">return/callback</div>
-              <div class="type--xsmall code-sections__icon code-sections__icon--function">async</span></div>
+              {# We need to disambiguate this from parameters, so include the name. #}
+              {% if not isTopLevel %}
+                <div class="code-sections__label" id="#{{ node._pageId }}">returns</div>
+              {% endif %}
+              <div class="type--xsmall">{{ renderSingleIconType(node._method.return.type, node._method.return) }}</div>
             </div>
 
-            {% set returnParameters = type.callbackForAsync.type.parameters %}
+            {{ renderComment(node._method.return) }}
 
-            <div class="type stack">
-              {{ renderComment(type.callbackForAsync) }}
+            {% if node._method.isReturnsAsync %}
               <p>
-                The <code>{{ prop.name }}</code> method provides its result via callback or returned as a <code>Promise</code> (MV3 only).
-                {% if not returnParameters.length %}
-                  It has no parameters.
-                {% endif %}
+                This only returns a <code>Promise</code> when the <code>callback</code> parameter
+                is not specified, and with MV3+.
+                The type inside the <code>Promise</code> is the same as the 1st argument to <code>callback</code>.
               </p>
-            </div>
-
-            {{ renderOptionalParametersSection(returnParameters) }}
+            {% endif %}
           </li>
         </ul>
       </div>
-
-    {% else %}
-      {{ renderOptionalParametersSection(type.parameters, 'Parameters') }}
-      {% if type.returnProperty and type.returnType.primitiveType !== 'void' %}
-        <div class="code-sections">
-          <h4 class="type--label code-sections__mode">Returns</h4>
-
-          <ul class="stack">
-            {{ internalRenderParameter(type.returnProperty) }}
-          </ul>
-        </div>
-      {% endif %}
     {% endif %}
 
-  {% elif type.key === 'ref' and type.name === 'events.Event' %}
-    {# Top-level event variable. #}
-
-    {% if type.templates[0].primitiveType === 'void' %}
-      {{ renderOptionalTypesArray(type.templates[1].choices, 'Conditions', prop) }}
-      {{ renderOptionalTypesArray(type.templates[2].choices, 'Actions', prop) }}
-    {% else %}
-      <div class="code-sections">
-        <h4 class="type--label code-sections__mode">Event</h4>
-        <ul class="stack">
-          {{ internalRenderListenerAsItem(type.templates[0]) }}
-        </ul>
-      </div>
-    {% endif %}
-
-  {% elif type.key === 'literal' %}
-    {# Top-level literal number or string. #}
-    <div class="code-sections">
-      <h4 class="type--label code-sections__mode">Value</h4>
-
-      <div class="code-sections__overline code-sections__label">
-        {{ renderSingleType(type, prop) }}
-      </div>
-    </div>
-
-  {% elif type.key === 'union' and not prop.isType %}
-    {# Union of many things as a non-type. #}
-
-    {% for type in type.types %}
-      {{ renderTopType(type, prop) }}
-    {% endfor %}
-
-  {% elif type.key === 'object' %}
-    {# Object with properties. #}
-
-    {% if type.properties | length %}
-      <div class="code-sections">
-        <h4 class="type--label code-sections__mode">Properties</h4>
-
-        <ul class="stack">
-          {% for name, prop in type.properties | dictsort %}
-            {{ internalRenderParameter(prop) }}
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
-
-  {% else %}
-    {# Some other kind of type. #}
-
-    <div class="code-sections">
-      <h4 class="type--label code-sections__mode">Type</h4>
-
-      <div class="code-sections__overline code-sections__label">
-        {{ renderSingleType(type, prop) }}
-      </div>
-    </div>
+  {% elif node._event %}
+    {# This is a declarative event without a method. #}
+    {{ renderIconTypesArray(node._event.conditions, 'Conditions', prop) }}
+    {{ renderIconTypesArray(node._event.actions, 'Actions', prop) }}
 
   {% endif %}
 
 {% endmacro %}
 
-{#
-  Renders an optional list of parameters.
-#}
-{% macro renderOptionalParametersSection(parameters, label) %}
 
-  {% if parameters.length %}
+{#
+#}
+{% macro renderChildrenTable(children, label) %}
+
+  {% if children.length %}
     <div class="code-sections">
       {% if label %}
         <h4 class="type--label code-sections__mode">{{ label }}</h4>
       {% endif %}
 
       <ul class="stack">
-        {% for parameter in parameters %}
-          {{ internalRenderParameter(parameter) }}
+        {% for c in children %}
+          {{ renderDeclaration(c) }}
         {% endfor %}
       </ul>
     </div>
   {% endif %}
 
 {% endmacro %}
+
+
+{#
+  Renders a single type with its icon and possibly an "optional" hint.
+#}
+{% macro renderSingleIconType(type, node) %}
+  {% set iconType = type.type %}
+  {% if type.type === 'intrinsic' %}
+    {% set iconType = type.name %}
+  {% elif type.type === 'literal' %}
+    {% set iconType = type.value | typeof %}
+  {% elif type.type === 'reflection' and type.declaration.signatures %}
+    {% set iconType = 'function' %}
+  {% elif type.type === 'reflection' %}
+    {% set iconType = 'object' %}
+  {% elif type.type === 'reference' %}
+    {% set iconType = 'object' %}
+  {% endif %}
+
+  {# Note that we avoid whitespace below, and instead set margins in CSS. #}
+  <span class="code-sections__icon code-sections__icon--{{ iconType }}">{{ renderSingleType(type, node) | trim | safe }}
+    {%- if node.flags.isOptional -%}
+      &nbsp;<span class="code-sections__optional">optional</span>
+    {%- endif -%}
+  </span>
+
+{% endmacro %}
+
+
 
 {#
   Renders an optional list of types, e.g., for an enum.
 #}
-{% macro renderOptionalTypesArray(types, label, prop) %}
+{% macro renderIconTypesArray(types, label) %}
 
-  {% if types.length %}
-    <div class="code-sections">
-      {% if label %}
-        <h4 class="type--label code-sections__mode">{{ label }}</h4>
-      {% endif %}
+  <div class="code-sections">
+    {% if label %}
+      <h4 class="type--label code-sections__mode">{{ label }}</h4>
+    {% endif %}
 
-      <div class="code-sections__overline code-sections__label">
-        <p>
-          {% for t in types %}
-            {% if loop.last and not loop.first %}or{% endif %}
-            {{ renderSingleType(t, prop) | trim }}{% if not loop.last %},{% endif %}
-          {% endfor %}
-        </p>
-      </div>
-    </div>
-  {% endif %}
-
-{% endmacro %}
-
-{#
-  Renders a comment, its optional version information and deprecation notice.
-#}
-{% macro renderComment(prop) %}
-  {{ renderAvailabilityFeature(prop.feature, prop) }}
-  {% if prop.deprecated %}
-    <p class="code-sections__deprecated">{{ prop.deprecated | mdInline | safe }}<p>
-  {% endif %}
-  {# This |md filter will add <p> as appropriate. #}
-  {{ prop.description | md | safe }}
-{% endmacro %}
-
-{#
-  Renders a <li> based on a callback/listener model.FunctionType. Used by events on top-level and
-  as part of interfaces.
-#}
-{% macro internalRenderListenerAsItem(listenerType, name = 'listener') %}
-  <li class="stack">
-    <div>
-      <div class="code-sections__label">{{ name }}</div>
-      <div class="type--xsmall code-sections__icon code-sections__icon--function">function</span></div>
-    </div>
-
-    <div class="type stack">
+    <div class="code-sections__overline code-sections__label">
       <p>
-        The {{ name }} parameter should be a function that looks like this:
+        {% for t in types %}
+          {% if loop.last and not loop.first %}or{% endif %}
+          <span style="white-space: nowrap">{{ renderSingleIconType(t) | trim }}{% if not loop.last %},{% endif %}</span>
+        {% endfor %}
       </p>
     </div>
+  </div>
 
-    <div class="code-sections__callback type--xsmall"><code>{{ renderFunctionParameters(listenerType.parameters) }} => {...}</code></div>
-
-    {{ renderOptionalParametersSection(listenerType.parameters) }}
-  </li>
 {% endmacro %}
+
 
 {#
-  Renders a <li> with the type's name and description. This is used for parts of a top-level type.
+  Renders a comment, its optional availability information and deprecation notice.
 #}
-{% macro internalRenderParameter(prop) %}
-  {% set type = prop.type %}
-
-<li class="stack">
-  <div>
-    <div class="code-sections__label">{{ prop.name }}</div>
-    <div class="type--xsmall">{{ renderSingleType(prop.type, prop) }}</div>
-  </div>
-
-{% set description %}
-  {{ renderComment(prop) }}
-
-  {% if type.key === 'function' and (prop.name === 'callback' or prop.name === 'listener') %}
-    {# This is a callback or a listener. Tell the user how to specify it. #}
-    <p>
-      {% if prop.optional %}
-        If you specify the {{ spec.name }} parameter, it
-      {% else %}
-        The {{ spec.name }} parameter
-      {% endif %}
-      should be a function that looks like this:
-    </p>
-    {% set functionPart %}
-      {{ renderFunctionParameters(type.parameters) }} => {...}
-    {% endset %}
-  {% elif type.key === 'function' %}
-    {# This is a function, often given to the user. It's ambiguous how it will
-       be called, so just show its signature. #}
-    <p>
-      The {{ prop.name }} function looks like this:
-    </p>
-    {% set functionPart %}
-      {{ prop.name }}{{ renderFunctionParameters(type.parameters) }} => {...}
-    {% endset %}
-  {% endif %}
-{% endset %}
-
-{% set description = description | trim %}
-{% if description %}
-  <div class="type stack code-sections__description">{{ description | safe }}</div>
-{% endif %}
-
-{% if functionPart %}
-  <div class="code-sections__callback type--xsmall"><code>{{ functionPart | safe }}</code></div>
-{% endif %}
-
-{# OPTION: array #}
-{% if type.key === 'sequence' %}
-  {# Render further information about the contained type. #}
-  {% set type = type.itemType %}
-{% endif %}
-
-{# OPTION: type (class) or object (property) #}
-{% if type.key === 'object' %}
-  {% if type.properties | length %}
-    <div class="code-sections">
-      <ul class="stack">
-        {% for name, prop in type.properties | dictsort %}
-          {{ internalRenderParameter(prop) }}
-        {% endfor %}
-      </ul>
-    </div>
-  {% endif %}
-
-{# OPTION: function #}
-{% elif type.key === 'function' %}
-  {% if type.parameters.length or type.returnType.primitiveType !== 'void' %}
-    <div class="code-sections">
-      <ul class="stack">
-        {% for parameter in type.parameters %}
-          {{ internalRenderParameter(parameter) }}
-        {% endfor %}
-        {% if type.returnType.primitiveType !== 'void' %}
-          {{ internalRenderParameter(type.returnProperty) }}
-        {% endif %}
-      </ul>
-    </div>
-  {% endif %}
-
-{# OPTION: event #}
-{% elif type.key === 'ref' and type.name === 'events.Event' %}
-  <div class="code-sections">
-    <ul class="stack">
-      {{ internalRenderListenerAsItem(type.templates[0]) }}
-    </ul>
-  </div>
-
-{% endif %}
-
-</li>
+{% macro renderComment(node) %}
+  {{ renderAvailability(node, 'pad-top-200') }}
+  {{ renderCommentText(node) }}
 {% endmacro %}
+
+
+{#
+  Renders the text parts of a comment, its optional availability information and deprecation notice.
+#}
+{% macro renderCommentText(node, skipMethod) %}
+  {% set f = node._feature %}
+  {% if f.deprecated.value %}
+    <p class="code-sections__deprecated">{{ f.deprecated.value | mdInline | safe }}<p>
+  {% endif %}
+
+  {# This |md filter will add <p> as appropriate. #}
+  {{ node._comment | md | safe }}
+
+  {# Display enum information from Chrome's source. #}
+  {% if f.enums %}
+    <dl class="code-sections__enum">
+      {% for enum in f.enums %}
+        <dt>{{ enum.value }}</dt>
+        <dd>{{ enum.description | mdInline | safe }}</dd>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+
+
 
 {#
   Renders a single model.Type as a single word. Used for signatures and type hints.
 
-  If outerProp is non-null, shows a hint icon, because it's the left-most type inside a table view.
+  The node (a ReflectionDeclaration) is optional.
 #}
-{% macro renderSingleType(type, outerProp) %}
-  {% set iconType = type.key %}
+{% macro renderSingleType(type, node) %}
 
-  {% set stringType %}
-    {% if not type %}
-      {# Should never happen #}
-      ?
+  {% if node._event %}
+    {# This is an event function on a class or interface. #}
+    event
 
-    {% elif type.key === 'primitive' %}
-      {# Primitive type, e.g. "number" or "void" #}
-      {% set iconType = type.primitiveType %}
-      {{ type.primitiveType }}
+  {% elif node._method %}
+    {# Methods on interfaces/classes don't have a type. #}
+    function
 
-    {% elif type.key === 'literal' %}
-      {# Literal value, e.g., 123 or '"foo"' #}
-      {% set iconType = type.primitiveType %}
-      <span class="code-sections__value">{{ type.value | dump }}</span>
+  {% elif not type %}
+    {# Should never happen, but is probably "void" from a return type #}
+    void
 
-    {% elif type.key === 'ref' %}
-      {# Reference to another type (internal or external) #}
+  {% elif type.type === 'intrinsic' %}
+    {# Primitive type, e.g. "number" or "void" #}
+    {{ type.name }}
 
-      {% set iconType = 'object' %}
+  {% elif type.type === 'literal' %}
+    {# Literal value, e.g., 123 or '"foo"' #}
+    <span class="code-sections__value">{{ type.value | dump }}</span>
 
-      {% set link = type.name | modelToHref %}
-      {% if link %}
-        <a href="{{ link }}">{{ type.name }}</a>
-      {%- else %}
-        {{ type.name }}
-      {%- endif %}
+  {% elif type.type === 'reflection' and type.declaration.signatures %}
+    {# A reflection which has signatures, i.e., a function. #}
+    function
 
-      {%- if type.templates.length -%}
-        &lt;
-          {%- for t in type.templates -%}
-            {{ renderSingleType(t) | trim }}
-          {%- endfor -%}
-        &gt;
-      {% endif %}
+  {% elif type.type === 'reflection' %}
+    {# A reflection which has children, i.e., an inline type. #}
+    object
 
-    {% elif type.key === 'sequence' %}
-      {# An array of something else. #}
-      {% if type.itemType.key === 'choices' %}
-        ({{ renderSingleType(type.itemType) | trim }})[]
-      {% else %}
-        {{ renderSingleType(type.itemType) | trim }}[]
-      {% endif %}
+  {% elif type.type === 'reference' %}
+    {# Reference to another type (internal or external) #}
 
-    {% elif type.key === 'choices' %}
-      {# An number of choices. #}
-      {%- for t in type.choices -%}
-        {{ renderSingleType(t) | trim }}{%- if not loop.last %} | {% endif -%}
-      {%- endfor -%}
+    {% if type._href %}
+      <a href="{{ type._href }}">{{ type.name }}</a>
+    {%- else %}
+      {{ type.name }}
+    {%- endif %}
 
-    {% else %}
-     {# This is a fallback display but won't render a sensible type that looks like TS. #}
-     {{ type.key }}
+    {%- if type.typeArguments.length -%}
+      &lt;
+        {%- for t in type.typeArguments -%}
+          {{ renderSingleType(t) | trim }}
+        {%- endfor -%}
+      &gt;
     {% endif %}
 
-  {% endset %}
+  {% elif type.type === 'rest' %}
+    {# Rest arguments. #}
+    ...{{ renderSingleType(type.elementType) | trim }}
 
-  {# Note that we avoid whitespace below, and instead set margins in CSS. #}
-  {% if outerProp %}
-    <span class="code-sections__icon code-sections__icon--{{ iconType }}">{{ stringType | safe | trim }}
-      {%- if outerProp.optional -%}
-        &nbsp;<span class="code-sections__optional">optional</span>
-      {%- endif -%}
-    </span>
-  {% else %}
-    <span>{{ stringType | safe | trim }}</span>
-  {% endif %}
+  {% elif type.type === 'tuple' %}
+    {# A tuple of elements. #}
+    [
+      {%- for t in type.elements -%}
+        {{ renderSingleType(t) | trim }}{%- if not loop.last %}, {% endif -%}
+      {%- endfor -%}
+    ]
 
-{% endmacro %}
+  {% elif type.type === 'array' %}
+    {% set inner %}{{ renderSingleType(type.elementType) | trim }}{% endset %}
 
-{#
-  If the passed model.Property is a function, then render its full signature. Does nothing otherwise.
-#}
-{% macro renderTypeSignature(prop) %}
+    {% if type.elementType.type === 'intersection' or type.elementType.type === 'union' or type.elementType.type === 'rest' %}
+      {# This is an array of something which itself needs wrapping. #}
+      ({{ inner | safe }})[]
+    {% else %}
+      {# This is an array of a boring type. #}
+      {{ inner | safe }}[]
+    {% endif %}
 
-  {% if prop.type.key === 'function' %}
-    {% set type = prop.type %}
-    <div class="type--label">
-      {% if type.isReturnsAsync %}
-        <code>
-          {{ prop.name }}{{ renderFunctionParameters(type.parametersForAsync) }}:
-          {{ renderSingleType(type.returnTypeForAsync) }}
-        </code><br />
-      {% endif %}
-      <code>
-        {{ prop.name }}{{ renderFunctionParameters(type.parameters) }}:
-        {{ renderSingleType(type.returnType) }}
-      </code>
-    </div>
-  {% endif %}
-
-{% endmacro %}
-
-{#
-  Renders the arguments of a method including ()'s. This is passed as model.Property[].
-#}
-{% macro renderFunctionParameters(parameters) -%}
-  (
-    {%- for parameter in parameters -%}
-      {{ parameter.name }}{% if parameter.optional %}?{% endif %}:
-      <span class="color-cyan-medium">{{ renderSingleType(parameter.type) | trim }}</span>
-      {%- if not loop.last %}, {% endif -%}
+  {% elif type.type === 'intersection' %}
+    {# A number of choices with `&` #}
+    {%- for t in type.types -%}
+      {{ renderSingleType(t) | trim }}{%- if not loop.last %} & {% endif -%}
     {%- endfor -%}
-  )
+
+  {% elif type.type === 'union' %}
+    {# A number of choices with `|` #}
+    {%- for t in type.types -%}
+      {{ renderSingleType(t) | trim }}{%- if not loop.last %} | {% endif -%}
+    {%- endfor -%}
+
+  {% else %}
+    {# This is a fallback display but won't render a sensible type that looks like TS. #}
+    {{ type.type }}
+  {% endif %}
+
+{% endmacro %}
+
+
+{#
+  Renders the arguments of a method including ()'s. Expects typedoc.JSONOutput.ParameterReflection[].
+
+  If newlines is set, then puts this on multiple lines.
+#}
+{% macro renderFunctionParameters(parameters, newlines) -%}
+  {% if not parameters.length %}
+    ()
+  {% elif newlines %}
+    (<br />
+      {% for p in parameters -%}
+      &nbsp;&nbsp;{{ renderSingleFunctionParam(p) | trim }},<br />
+      {% endfor %}
+    )
+  {% else %}
+    (
+      {%- for p in parameters -%}
+        {{- renderSingleFunctionParam(p) | trim -}}
+        {%- if not loop.last %}, {% endif -%}
+      {%- endfor -%}
+    )
+  {% endif %}
 {%- endmacro %}
 
 {#
-  Renders a short summary of the passed model.Property[]. Used at the top of a namespace page for
-  different sections (types, events, etc).
+  Render a single parameter in a () call, including its name and optional hint.
 #}
-{% macro renderSummarySection(namespaceName, label, prefix, array) %}
-
-  {% if array.length %}
-    <li>
-      <div class="code-sections__label">{{ label }}</div>
-      <div>
-        {% for prop in array %}
-          <div><a href="#{{ prefix }}-{{ prop.name }}" class="link weight-medium">{{ prop.name }}</a></div>
-          {{ renderTypeSignature(prop) }}
-        {% endfor %}
-      </div>
-    </li>
-  {% endif %}
-
+{% macro renderSingleFunctionParam(param) %}
+  {{ param.name }}{% if param.flags.isOptional %}?{% endif %}:
+  <span class="color-cyan-medium">{{ renderSingleType(param.type) | trim }}</span>
 {% endmacro %}
 
 {#
-  Renders the whole list of the passed model.Property[].
+  Renders a short summary of the passed RenderGroup. Used in the summary section of a namespace.
 #}
-{% macro renderPrimarySection(namespaceName, id, label, prefix, array) %}
-
-  {% if array.length %}
-    <h2 class="type--h3" id="{{ id }}">{{ label }}</h2>
-    <div class="stack flow-space-300">
-    {% for prop in array %}
-      {{ renderTopProperty(prop, prefix) }}
-    {% endfor %}
+{% macro renderGroupSummary(group) %}
+  <li>
+    <div class="code-sections__label">{{ group.title }}</div>
+    <div>
+      {% for node in group.contents %}
+        <div><a href="#{{ node._pageId }}" class="link weight-medium">{{ node.name }}</a></div>
+      {% endfor %}
     </div>
-  {% endif %}
+  </li>
+{% endmacro %}
+
+{#
+  Renders the contents of the passed group, including its heading.
+#}
+{% macro renderGroupAll(group) %}
+
+  <h2 class="type--h3" id="{{ group.prefix }}">{{ group.title }}</h2>
+  <div class="stack flow-space-300">
+  {% for node in group.contents %}
+    {{ renderTopLevel(node) }}
+  {% endfor %}
+  </div>
 
 {% endmacro %}
 
 {#
-  Renders API availability information based on a sparse Feature. This is used for both top-level
-  namespaces as well as specific APIs. This does not render permissions.
+  Renders API availability information based on feature information (this is type `FeatureInfo`).
+  This is used for both top-level namespaces as well as specific APIs. This does not render
+  permissions.
 
   This returns valid HTML, so it should be rendered with `| safe`.
 #}
-{% macro renderAvailabilityFeature(feature, prop) %}
+{% macro renderAvailability(node, extraClass) %}
+  {% set feature = node._feature %}
 
   {% set inner %}
-    {% if prop.type.isReturnsAsync %}
-      <span class="aside--success tag-pill type--label rounded-lg" title="Can return its result via Promise">
+    {% if node._method.isReturnsAsync %}
+      <span class="aside--success tag-pill type--label rounded-lg" title="Can return its result via Promise in MV3+">
         Promise
       </span>
     {% endif %}
 
-    {% if feature.supportedInChannel === 'dev' %}
+    {% if feature.channel === 'dev' %}
       <span class="aside--warning tag-pill type--label rounded-lg">
         Dev channel
       </span>
-    {% elif feature.supportedInChannel === 'beta' %}
+    {% elif feature.channel === 'beta' %}
       <span class="aside--warning tag-pill type--label rounded-lg">
         Beta channel
       </span>
-    {% elif feature.supportedInChannel === 'canary' or feature.supportedInChannel === 'trunk' %}
+    {% elif feature.channel === 'canary' or feature.channel === 'trunk' %}
       <span class="aside--warning tag-pill type--label rounded-lg">
         In development
       </span>
-    {% elif feature.unknownVersion %}
+    {% elif feature.since and feature.since.startsWith('Chrome') %}
+      <span class="aside--default tag-pill type--label rounded-lg" title="Available from this Chrome version and higher">
+        {{ feature.since }}+
+      </span>
+    {% elif feature.since === 'Pending' %}
       {# This is stable but not yet visible in the version history data. It's probably coming next
         Chrome release. #}
-      <span class="aside--warning tag-pill type--label rounded-lg" title="No version data available">
-        Unknown version
+      <span class="aside--warning tag-pill type--label rounded-lg" title="This is coming soon and not yet in a stable release of Chrome">
+        {{ feature.since }}
       </span>
-    {% elif feature.availableFromVersion %}
-      <span class="aside--default tag-pill type--label rounded-lg">
-        Chrome {{ feature.availableFromVersion }}+
+    {% elif feature.since %}
+      {# This is something else in the Since box. #}
+      <span class="aside--caution tag-pill type--label rounded-lg" title="Availability data">
+        {{ feature.since }}
       </span>
     {% endif %}
 
@@ -525,35 +477,37 @@
       </span>
     {% endif %}
 
-    {% if feature.maxManifestVersion %}
+    {% if feature.maxManifest %}
       <span class="aside--caution tag-pill type--label rounded-lg" title="Maximum manifest vesion">
-        Manifest V{{ feature.maxManifestVersion }}
+        &leq;{{ feature.maxManifest }}
       </span>
     {% endif %}
-    {% if feature.minManifestVersion %}
-      <span class="aside--gotchas tag-pill type--label rounded-lg">
-        Manifest V{{ feature.minManifestVersion }}+
+    {% if feature.minManifest %}
+      <span class="aside--gotchas tag-pill type--label rounded-lg" title="Minimum manifest version">
+        {{ feature.minManifest }}+
       </span>
     {% endif %}
 
-    {% if feature.disallowForServiceWorkers %}
+    {% if feature.disallowServiceWorkers %}
       <span class="aside--gotchas tag-pill type--label rounded-lg" title="Not available in Service Workers">
         Foreground only
       </span>
     {% endif %}
 
-    {% if prop.deprecated !== undefined or feature.deprecatedSinceVersion %}
+    {% if feature.deprecated %}
       <span class="aside--warning tag-pill type--label rounded-lg">
         Deprecated
-        {%- if feature.deprecatedSinceVersion > 0 %}
-          {{ feature.deprecatedSinceVersion }}+
+        {%- if feature.deprecated.since %}
+          since {{ feature.deprecated.since }}
         {%- endif -%}
       </span>
     {% endif %}
   {% endset %}
 
   {% if inner | trim %}
-    <div class="display-flex flex-flow-row-wrap">{{ inner | trim | safe }}</div>
+    <div class="cluster flow-space-100 {{ extraClass }}">
+      <div>{{ inner | trim | safe }}</div>
+    </div>
   {% endif %}
 
 {% endmacro %}
