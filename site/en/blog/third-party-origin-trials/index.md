@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2020-10-01
-updated: 2021-06-03
+updated: 2021-20-27
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/gPlFs9TIUayaQ1MvxRlP.jpg
 alt: Person wearing medical gloves pouring purple liquid from glass beaker into flask. Bristol Robotics Laboratory, UK.
 tags:
@@ -83,8 +83,8 @@ repo.
 ## Find out more
 
 -  [Getting started with Chrome's origin trials](/blog/origin-trials/)
+-  [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting)
 -  [Origin Trials Guide for Web Developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 -  [Chrome Platform Status](https://www.chromestatus.com/features/5691464711405568)
 
-Photo by [Louis Reed
-](https://unsplash.com/@_louisreed) on [Unsplash](https://unsplash.com/photos/JeInkKlI2Po).
+Photo by [Louis Reed](https://unsplash.com/@_louisreed) on [Unsplash](https://unsplash.com/photos/JeInkKlI2Po).
