@@ -11,7 +11,7 @@ const childProcess = require('child_process');
 /**
  * @param {string} targetDir
  */
-async function fetchAndParse(targetDir) {
+async function fetchAndPrepare(targetDir) {
   /** @type {childProcess.ExecFileSyncOptions} */
   const options = {cwd: targetDir, stdio: 'inherit'};
 
@@ -23,16 +23,36 @@ async function fetchAndParse(targetDir) {
     fs.readFileSync(path.join(packageDir, 'package.json'), 'utf-8')
   );
   console.warn('fetched chrome-types@beta', targetDir, packageJson.version);
-  const defs = await dtsParse(path.join(packageDir, '_all.d.ts'));
+  return path.join(packageDir, '_all.d.ts');
+}
 
-  const targetFile = path.join(__dirname, '../data/chrome-types.json');
-  fs.writeFileSync(targetFile, JSON.stringify(defs, undefined, 2));
+/**
+ * @param {string} targetFile
+ */
+async function parse(targetFile) {
+  const defs = await dtsParse(targetFile);
+
+  const outputFile = path.join(__dirname, '../data/chrome-types.json');
+  fs.writeFileSync(outputFile, JSON.stringify(defs, undefined, 2));
 }
 
 async function run() {
   const t = tmp.dirSync();
   try {
-    await fetchAndParse(t.name);
+    if (process.argv.length === 2) {
+      // Normal fetch, get from npm.
+      const targetFile = await fetchAndPrepare(t.name);
+      await parse(targetFile);
+    } else if (process.argv.length === 3) {
+      // Supports reading an arbitrary types file. Copy to our working folder first.
+      const file = process.argv[2];
+      const targetFile = path.join(t.name, '_all.d.ts');
+      fs.copyFileSync(file, targetFile);
+      console.warn('working on', path.join(t.name, '_all.d.ts'));
+      await parse(path.join(t.name, '_all.d.ts'));
+    } else {
+      throw new Error('invalid usage: ./types.js <path_to_dts>');
+    }
   } finally {
     fs.rmSync(t.name, {recursive: true});
   }

@@ -43,13 +43,19 @@ declare global {
     channel: string;
     permissions?: string[];
     manifestKeys?: string[];
-    enums?: {value: string|number, description: string}[];
   }
 
+  /**
+   * This is something referencing another type, so include a {@link _href} where possible.
+   */
   export interface ExtendedReferenceType extends typedoc.JSONOutput.ReferenceType {
     _href?: string;
   }
 
+  /**
+   * Contains extended information about a DeclarationReflection that makes it easy to render by
+   * our Nunjucks templates.
+   */
   export interface ExtendedReflection extends typedoc.JSONOutput.DeclarationReflection {
     _name: string;
     _feature: FeatureInfo;
@@ -59,20 +65,39 @@ declare global {
     _pageHref: string;
     _pageId?: string;
 
+    /**
+     * Set if this is something like a dictionary, interface or class that has named elements.
+     */
     _type?: {
       properties: typedoc.JSONOutput.DeclarationReflection[];
     };
 
+    /**
+     * Set if this is a method or function.
+     */
     _method?: {
       parameters: typedoc.JSONOutput.ParameterReflection[];
       return?: typedoc.JSONOutput.ParameterReflection;
       isReturnsAsync?: true;
     };
 
-    // TODO: declarative stuff
+    /**
+     * Set if this is actually a property that inherits from `chrome.Event` or friends. The
+     * conditions/actions properties are only set if this is a delcarative event.
+     */
     _event?: {
       conditions?: typedoc.JSONOutput.SomeType[];
       actions?: typedoc.JSONOutput.SomeType[];
     };
+
+    /**
+     * Set if this had `@chrome-enum` annotations (used to describe different enum options).
+     */
+    _enums?: TypesEnumPair[];
+  }
+
+  export interface TypesEnumPair {
+    value: string|number;
+    description: string;
   }
 }

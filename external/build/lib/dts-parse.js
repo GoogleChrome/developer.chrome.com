@@ -14,6 +14,15 @@
  * limitations under the License.
  */
 
+/**
+ * @fileoverview This largely parses an input .d.ts file with TypeDoc and transforms/flattens it
+ * for rendering on the Chrome Developers site. It find interesting namespaces and converts their
+ * {@link typedoc.JSONOutput.ProjectReflection} definitions to {@link ExtendedReflection} that
+ * contain extra information making them easy to render.
+ *
+ * More documentation here: https://github.com/GoogleChrome/developer.chrome.com/wiki/Types
+ */
+
 const typedoc = require('typedoc');
 
 // matches "{@link ...}"
@@ -43,6 +52,9 @@ class Transform {
   }
 
   /**
+   * Runs the conversion process for a generic .d.ts file loaded into {@link project}.
+   *
+   * @return {Promise<{[id: string]: ExtendedReflection}>}
    */
   async run() {
     // Find all namespaces with non-namespace children.
@@ -90,7 +102,7 @@ class Transform {
       }
 
       // Fix the node's enums, if any.
-      for (const e of node._feature.enums ?? []) {
+      for (const e of node._enums ?? []) {
         e.description = this.insertCommentHrefForLink(id, node, e.description);
       }
     }
@@ -401,9 +413,18 @@ class Transform {
       }
     }
 
-    // Set feature information last, as the comment may have changed (due to signatures).
+    // Extract comment/tags for processing below.
     const effectiveComment = effectiveDeclarationNode?.comment ?? node.comment;
-    extendedNode._feature = this._processTags(effectiveComment?.tags ?? []);
+    const effectiveTags = effectiveComment?.tags ?? [];
+
+    // Set feature information last, as the comment may have changed (due to signatures).
+    extendedNode._feature = this._processTagsToFeature(effectiveTags);
+
+    // Is this actually a type containing enums? Add any relevant information.
+    const maybeEumPairs = this._processTagsForChromeEnum(effectiveTags);
+    if (maybeEumPairs) {
+      extendedNode._enums = maybeEumPairs;
+    }
 
     // Set the ID on the page last, because we get its nodePrefix (e.g., "method" or "property")
     // via the checks above.
@@ -532,7 +553,8 @@ class Transform {
       /** @type {(type: typedoc.JSONOutput.SomeType) => typedoc.JSONOutput.SomeType[]} */
       const ensureArrayOfType = type => {
         if (type.type === 'union') {
-          return type.types;
+          // TODO(samthor): this cast is redundant but tsc is confused.
+          return /** @type {typedoc.JSONOutput.SomeType[]} */ (type.types);
         }
         return [type];
       };
@@ -574,12 +596,9 @@ class Transform {
    * @param {typedoc.JSONOutput.CommentTag[]} tags
    * @return {FeatureInfo}
    */
-  _processTags(tags) {
+  _processTagsToFeature(tags) {
     /** @type {{value: string, since?: string}} */
     const deprecated = {value: ''};
-
-    /** @type {{value: string|number, description: string}[]} */
-    const enumPairs = [];
 
     /** @type {FeatureInfo} */
     const out = {
@@ -624,25 +643,36 @@ class Transform {
         case 'chrome-disallow-service-workers':
           out.disallowServiceWorkers = true;
           break;
-        case 'chrome-enum': {
-          // TODO: This relies on enums looking like `"foo\_bar"`, without spaces.
-          // If this JSON.parse breaks it's likely because an enum has a space in it.
-          const raw = text.split(' ')[0].replace(/\\_/g, '_');
-          const value = JSON.parse(raw);
-
-          const rest = text.substr(raw.length + 1).trim();
-          enumPairs.push({value, description: rest});
-        }
       }
     });
 
-    // If there's documented enums here (since we can't annotate the text values themselves) then
-    // store on the feature directly.
-    if (enumPairs.length) {
-      out.enums = enumPairs;
-    }
-
     return out;
+  }
+
+  /**
+   * @param {typedoc.JSONOutput.CommentTag[]} tags
+   * @return {TypesEnumPair[]|undefined}
+   */
+  _processTagsForChromeEnum(tags) {
+    /** @type {TypesEnumPair[]} */
+    const enums = [];
+
+    tags.forEach(({tag, text}) => {
+      text = text.trim(); // some show up with extra \n
+      if (tag !== 'chrome-enum') {
+        return;
+      }
+
+      // TODO: This relies on enums looking like `"foo\_bar"`, without spaces.
+      // If this JSON.parse breaks it's likely because an enum has a space in it.
+      const raw = text.split(' ')[0].replace(/\\_/g, '_');
+      const value = JSON.parse(raw);
+
+      const rest = text.substr(raw.length + 1).trim();
+      enums.push({value, description: rest});
+    });
+
+    return enums.length ? enums : undefined;
   }
 }
 
