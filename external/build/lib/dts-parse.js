@@ -79,14 +79,19 @@ class Transform {
         }
       }
 
+      // Fix the node's deprecated notice.
       const deprecated = node._feature.deprecated;
       if (deprecated?.value) {
-        // Fix the node's deprecated notice.
         deprecated.value = this.insertCommentHrefForLink(
           id,
           node,
           deprecated.value
         );
+      }
+
+      // Fix the node's enums, if any.
+      for (const e of node._feature.enums ?? []) {
+        e.description = this.insertCommentHrefForLink(id, node, e.description);
       }
     }
 
@@ -543,16 +548,22 @@ class Transform {
           out.disallowServiceWorkers = true;
           break;
         case 'chrome-enum': {
-          // TODO: This relies on enums looking like `"foo_bar"`, without spaces.
+          // TODO: This relies on enums looking like `"foo\_bar"`, without spaces.
+          // If this JSON.parse breaks it's likely because an enum has a space in it.
           const raw = text.split(' ')[0].replace(/\\_/g, '_');
-          const rest = raw.substr(text.length + 1);
-          enumPairs.push({value: JSON.parse(raw), description: rest});
+          const value = JSON.parse(raw);
+
+          const rest = text.substr(raw.length + 1).trim();
+          enumPairs.push({value, description: rest});
         }
       }
     });
 
-    // TODO(samthor): Right now, the rendering code blits out the enum values by stepping through
-    // all the tags, and `enumPairs` isn't used at all.
+    // If there's documented enums here (since we can't annotate the text values themselves) then
+    // store on the feature directly.
+    if (enumPairs.length) {
+      out.enums = enumPairs;
+    }
 
     return out;
   }

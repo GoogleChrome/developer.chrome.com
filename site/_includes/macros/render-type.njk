@@ -257,16 +257,13 @@
   {{ node._comment | md | safe }}
 
   {# Display enum information from Chrome's source. #}
-  {% set enumInfoHtml %}
-    {% for tag in node.comment.tags %}
-      {% if tag.tag === 'chrome-enum' %}
-        {# TODO: appears as `"foo" description #}
-        <li>{{ tag.text | md | safe }}</li>
-      {% endif %}
-    {% endfor %}
-  {% endset %}
-  {% if enumInfoHtml | trim %}
-    <ul>{{ enumInfoHtml | safe }}</ul>
+  {% if f.enums %}
+    <dl class="code-sections__enum">
+      {% for enum in f.enums %}
+        <dt>{{ enum.value }}</dt>
+        <dd>{{ enum.description | mdInline | safe }}</dd>
+      {% endfor %}
+    </ul>
   {% endif %}
 {% endmacro %}
 

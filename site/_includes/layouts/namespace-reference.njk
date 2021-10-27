@@ -95,7 +95,7 @@
 
             {% set availabilityHtml %}{{ macros.renderAvailability(namespace.root) }}{% endset %}
             {% if availabilityHtml | trim %}
-              <li class="align-center">
+              <li class="lg:align-center">
                 <div class="code-sections__label">Availability</div>
                 {{ availabilityHtml | safe }}
               </li>

@@ -43,6 +43,7 @@ declare global {
     channel: string;
     permissions?: string[];
     manifestKeys?: string[];
+    enums?: {value: string|number, description: string}[];
   }
 
   export interface ExtendedReferenceType extends typedoc.JSONOutput.ReferenceType {
