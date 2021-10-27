@@ -80,12 +80,12 @@ class Transform {
     }
 
     // Update all comments (fix their "{@link ...}" code).
-    for (const [id, node] of Object.entries(this.allByName)) {
+    for (const node of Object.values(this.allByName)) {
       if (node.comment?.shortText) {
         // Fix the node's basic comment.
         let commentText =
           node.comment.shortText + '\n\n' + (node.comment.text ?? '');
-        commentText = this.insertCommentHrefForLink(id, node, commentText);
+        commentText = this.insertCommentHrefForLink(node, commentText);
         if (commentText) {
           node._comment = commentText;
         }
@@ -95,7 +95,6 @@ class Transform {
       const deprecated = node._feature.deprecated;
       if (deprecated?.value) {
         deprecated.value = this.insertCommentHrefForLink(
-          id,
           node,
           deprecated.value
         );
@@ -103,7 +102,7 @@ class Transform {
 
       // Fix the node's enums, if any.
       for (const e of node._enums ?? []) {
-        e.description = this.insertCommentHrefForLink(id, node, e.description);
+        e.description = this.insertCommentHrefForLink(node, e.description);
       }
     }
 
@@ -112,17 +111,19 @@ class Transform {
   }
 
   /**
-   * @param {string} id
+   * Replaces `{@link ...}` annotations found in the text, rooted at the specified node.
+   *
    * @param {ExtendedReflection} node
    * @param {string|undefined} raw
+   * @return {string}
    */
-  insertCommentHrefForLink(id, node, raw) {
+  insertCommentHrefForLink(node, raw) {
     raw = (raw ?? '').trim();
     return raw.replace(linkMatch, (_, link, text) => {
       if (!text) {
         text = `\`${link}\``;
       }
-      const other = this.resolveLink(id, link);
+      const other = this.resolveLink(node._name, link);
       if (other) {
         const href = this.createHref(node, other);
         if (href) {
@@ -135,41 +136,62 @@ class Transform {
   }
 
   /**
+   * Create a link between the two nodes. (This assumes the `_pageId` and optional `_pageHref`)
+   * values are already configured.
+   *
    * @param {ExtendedReflection} from
    * @param {ExtendedReflection} to
    * @return {string|undefined}
    */
   createHref(from, to) {
-    const idPart = to._pageId ? '#' + to._pageId : '';
+    // This is "#foo" if there's an ID, or blank otherwise.
+    const hashPlusId = to._pageId ? '#' + to._pageId : '';
 
     if (from._pageHref === to._pageHref) {
       // This is the same page, so just use the target's ID.
-      // Return blank if this is a node linking to its own namespace (no ID).
-      return idPart || undefined;
+      // Return undefined if this is a node linking to its own namespace (the ID will be blank).
+      return hashPlusId || undefined;
     } else {
       // Otherwise, create a whole link.
-      return '../' + to._pageHref + '/' + idPart;
+      return '../' + to._pageHref + '/' + hashPlusId;
     }
   }
 
   /**
    * Resolve a link from the given ID to the given link, after {@link allByName} has been created.
    *
+   * This literally just appends the target link to all combinations of the given ID and tests
+   * for presence, e.g.: for id="foo.bar.zing.Hello" link="Bar"
+   *   1. "foo.bar.zing.Hello.Bar"
+   *   2. "foo.bar.zing.Bar"
+   *   3. "foo.bar.Bar"
+   *   4. "foo.Bar"
+   *   5. "Bar"
+   *
    * @param {string} id
    * @param {string} link
    */
   resolveLink(id, link) {
+    id = id.trim();
+    link = link.trim();
+    if (!link) {
+      return;
+    }
+
     /** @type {(s: string) => string} */
     const popLast = s => {
       const last = s.lastIndexOf('.');
       return last > 0 ? s.substr(0, last) : '';
     };
 
-    while (id) {
-      const check = `${id}.${link}`;
+    for (;;) {
+      const check = id ? `${id}.${link}` : link;
       const cand = this.allByName[check];
       if (cand) {
         return cand;
+      }
+      if (!id) {
+        break;
       }
       id = popLast(id);
     }
@@ -177,6 +199,13 @@ class Transform {
     return undefined;
   }
 
+  /**
+   * Walks the project and find namespaces which have non-namespace children. Sets up
+   * {@link namespaces} and {@link allByName} for these.
+   *
+   * In Chrome's source, we have nested namespaces like "networking.onc":
+   * "networking" isn't included since it only has namespaces for children.
+   */
   findNamespaceRoots() {
     /**
      * @param {typedoc.JSONOutput.DeclarationReflection} node
@@ -219,6 +248,9 @@ class Transform {
   }
 
   /**
+   * Walks and visits a single node, converting the `node` param to actually provide the extended
+   * type {@link ExtendedReflection}. This is called recursively from within this method.
+   *
    * @param {typedoc.JSONOutput.DeclarationReflection} node
    * @param {ExtendedReflection?} parent
    * @param {ExtendedReflection} namespace
@@ -677,6 +709,9 @@ class Transform {
 }
 
 /**
+ * Returns this node, unless it is a type that points to a declaration. (Appears in cases like
+ * some embedded interface types.)
+ *
  * @param {typedoc.JSONOutput.DeclarationReflection} node
  * @return {typedoc.JSONOutput.DeclarationReflection}
  */

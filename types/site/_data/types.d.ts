@@ -62,7 +62,14 @@ declare global {
 
     _comment?: string;
 
+    /**
+     * The name of the folder that contains this item.
+     */
     _pageHref: string;
+
+    /**
+     * The ID on the page. This will be empty for the namespace itself.
+     */
     _pageId?: string;
 
     /**
