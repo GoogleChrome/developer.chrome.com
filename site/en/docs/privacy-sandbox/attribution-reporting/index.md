@@ -6,131 +6,91 @@ subhead: >
 description: >
   The Attribution Reporting API makes it possible to measure when user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 date: 2021-05-18
-updated: 2021-09-10
+updated: 2021-10-20
 authors:
   - maudn
   - samdutton
 ---
 
-{% Aside 'caution' %} The Attribution Reporting API was previously known as the Conversion
-Measurement API. {% endAside %}
+## Get started
 
-{% YouTube
-  id='UGA74CIcom8' 
-%}
+Head over to [Attribution Reporting in five minutes](/docs/privacy-sandbox/attribution-reporting-in-short) for a quick overview of the Attribution Reporting API.
 
-## Implementation status
+## Learn more
 
-See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
+- [Introduction to Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction) gives you an in-depth
+  introduction to the API's use cases, features, and privacy model.
+- [FAQ: Impact of user-initiated data clearing on attribution reports](/docs/privacy-sandbox/attribution-reporting-data-clearing/)
+- [Migration guide (Chrome 92): Conversion Measurement API to Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-migration/)
 
-## Glossary
+## See the timeline
 
-{% Aside %} 
+- Head over to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline) for an overview of the various stages of development for this API.
+- The [Attribution Reporting status overview](/docs/privacy-sandbox/attribution-reporting-introduction/#status) is a detailed view of the status of different features within the API.
 
-You may also want to consult the complete [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/). 
+## Try out the API
 
+Try out the [demo](https://goo.gle/demo-event-level-conversion-measurement-api) to see the API in
+action in your browser. This demo features event-level reports for clicks, which is a subset of the
+features the API aims to support.
+
+_For developers:_
+
+- See [how to build a prototype and/or experiment
+  locally](/docs/privacy-sandbox/attribution-reporting-introduction/#experiment-locally-or-with-a-demo).
+- Ask technical questions about your implementation on the [Privacy Sandbox Developer Support
+  repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) or on the [Attribution
+  Reporting mailing list for
+  developers](https://groups.google.com/u/0/a/chromium.org/g/attribution-reporting-api-dev).
+- [Not available at the moment for this API] Register for an origin trial to experiment with end
+  users on a deployed site.
+
+## Join the discussion
+
+{% Aside %}  
+**Your participation is needed!** Ecosystem input is vital to ensure that your conversion
+measurement, optimization, and other use cases are discussed in the open. {% endAside %}
+
+### Discuss the Attribution Reporting API
+
+This API is a proposal; it lives [here](https://github.com/WICG/conversion-measurement-api/).
+Proposals like this one are documented and discussed publicly, and often live on a
+platform called _GitHub_. On GitHub, discussions are called _issues_.
+
+- Join the conversation in [existing
+  issues](https://github.com/WICG/conversion-measurement-api/issues).
+- [Open a new issue](https://github.com/WICG/conversion-measurement-api/issues/new) to ask questions,
+  propose features, or discuss use cases. If you're unsure how to formulate your issue, see [this issue](https://github.com/WICG/conversion-measurement-api/issues/147) as an example.
+- Discussions also take place in a [biweekly
+  meeting](https://github.com/WICG/conversion-measurement-api/issues/80) (every second week).
+  Everyone is welcome to join these discussions⏤only make sure to [join the
+  WICG](https://www.w3.org/community/wicg/). You can discuss use cases or API design questions others have submitted, submit an agenda item yourself, or just listen in!
+
+### Discuss related topics
+
+- Discuss industry use cases in the [Improving Web Advertising Business
+  Group](https://www.w3.org/community/web-adv/participants).
+- Discuss the [WebKit/Safari Measurement
+  API](https://github.com/privacycg/private-click-measurement) in the [Privacy Community
+  Group](https://www.w3.org/community/privacycg/).
+
+## Get updates
+
+{% Aside %}  
+This API is a work in progress and is evolving over time, depending on ecosystem feedback
+and input.
 {% endAside %}
 
-- **Adtech platforms**: companies that provide software and tools to enable brands or
-  agencies to target, deliver, and analyze their digital advertising.
-- **Advertisers**: companies paying for advertising.
-- **Publishers**: companies that display ads on their websites.
-- **Click-through conversion**: conversion that is attributed to an ad click.
-- **View-through conversion**: conversion that is attributed to an ad impression (if the
-  user doesn't interact with the ad, then later converts).
+- To get monthly updates, subscribe to the RSS feed [Progress in
+  the Privacy Sandbox](/tags/progress-in-the-privacy-sandbox/). This includes Attribution Reporting announcements alongside other Privacy Sandbox news.
+- To closely follow all ongoing discussions, click the **Watch** button on the [proposal page on GitHub](https://github.com/WICG/conversion-measurement-api).
+- Join the [mailing list for
+  developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) to be
+  notified when a new origin trial is starting.
 
-## Who needs to know about this API: adtech platforms, advertisers, and publishers
-
-- Adtech platforms such as [demand-side
-  platforms](https://en.wikipedia.org/wiki/Demand-side_platform) (DSP) or [data management
-  platforms](https://en.wikipedia.org/wiki/Data_management_platform) (DMP) may use this
-  API to support functionality that currently relies on third-party cookies.
-- Advertisers and publishers relying on custom code for advertising or conversion
-  measurement may use this API to replace existing techniques.
-- Advertisers and publishers relying on adtech platforms for conversion measurement don't
-  need to use the API directly, but may be interested in understanding it if they're
-  working with adtech platforms that may integrate the API.
-
-{% Aside %} 
-There may be use cases that are non-ads-related. [Engage](#engage) to share your use case! 
+{% Aside %}  
+Note: if you're already subscribed to the [blink-dev mailing
+list](https://groups.google.com/a/chromium.org/g/blink-dev), you'll receive updates for all web
+platform features, including Attribution Reporting. If you're only interested in Attribution
+Reporting for now, no need to subscribe to blink-dev.
 {% endAside %}
-
-## Why is this API needed? {: #why-is-this-api-needed }
-
-Today, ad conversion measurement often relies on [third-party
-cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies).
-Browsers are restricting access to third-party cookies because these can be used to track
-users across sites and hinder user privacy. This API enables those measurements in a
-privacy-preserving way, without third-party cookies.
-
-## How does the Attribution Reporting API work and what are its features?
-
-{% Aside %} 
-This API is being incubated and developed in the open. It is subject to
-change. Your feedback is welcome. See [how to engage](#engage). 
-{% endAside %}
-
-The Attribution Reporting API enables the measurement of two events that are linked
-together: an event on a publisher's website, such as a user viewing or clicking an ad,
-with a subsequent conversion on an advertiser site.
-
-This API supports click-through conversion attribution measurement (available in the first
-implementation of this API, currently in [origin
-trial](https://web.dev/conversion-measurement/#browser-support)) and view-through
-attribution measurement ([see public
-explainer](https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_views.md)).
-
-The API offers two types of attribution reports than can be used for different use cases:
-
-- **Event-level reports** associate a particular ad click or view (on the ad side) with
-  data on the conversion side. To preserve user privacy by preventing the joining of user
-  identity across sites, conversion-side data is very limited, and the data is 'noised'
-  (meaning that for a small percentage of cases, random data is sent). As an extra privacy
-  protection, reports are not sent immediately.
-- **Aggregate reports** are not tied with a specific event on the ad side. These reports
-  provide richer, higher-fidelity conversion data than event-level reports. A combination
-  of privacy techniques across cryptography, distribution of trust, and differential
-  privacy help reduce the risk of identity joining across sites. Both report types can be
-  used simultaneously. They're complementary. Other features that are designed in this API
-  include [cross-device attribution
-  reporting](https://github.com/WICG/conversion-measurement-api/blob/main/cross_device.md)
-  and [app-to-web attribution
-  reporting](https://github.com/WICG/conversion-measurement-api/blob/main/app_to_web.md).
-
-## Engage and share feedback {: #engage }
-
-- **Origin trial**: [register for the first origin trial (click
-  only)](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) or
-  [see the first demo (click
-  only)](https://goo.gle/demo-event-level-conversion-measurement-api).
-- To stay tuned about the next implementation of this API that will offer more features
-  and be available for experimentation in Chrome (origin trial), join the [mailing list
-  for
-  developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
-- **GitHub**: Read the [proposal](https://github.com/WICG/conversion-measurement-api/),
-  [raise questions and follow the
-  discussion](https://github.com/WICG/conversion-measurement-api/issues).
-- **W3C**: Discuss industry use cases in the [Improving Web Advertising
-  Business&nbsp;Group](https://www.w3.org/community/web-adv/participants) and join the
-  [Privacy Community Group](https://www.w3.org/community/privacycg/) for discussions
-  around the WebKit/Safari API.
-- **Developer support**: Ask questions and join discussions on the [Privacy Sandbox
-  Developer Support
-  repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
-
-## Find out more
-
-- [Introduction to Attribution Reporting (Conversion
-  Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction)
-- [API technical explainers](https://github.com/WICG/conversion-measurement-api/)
-- (⚠️ obsolete) [A more private way to measure ad
-  conversions](https://web.dev/conversion-measurement/): overview of the first iteration
-  of this API for web developers
-- (⚠️ obsolete) [A more private way to measure ad conversions -
-  Video](https://www.youtube.com/watch?v=jcDfOoWwZcM): demo of the first iteration of this
-  API (clicks only)
-- (⚠️ obsolete) [Using the Event Conversion Measurement
-  API](https://web.dev/using-conversion-measurement/): how to experiment with the first
-  iteration of this API for web developers
-- [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)
-- [Debug the API with Chrome DevTools](/blog/new-in-devtools-93/#attribution-reporting)
