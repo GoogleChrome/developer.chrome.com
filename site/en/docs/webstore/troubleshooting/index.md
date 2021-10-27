@@ -210,7 +210,7 @@ disclose important information may be subject to enforcement action.
 This section addresses extensions that are in violation of the following section of the Chrome Web
 Store developer program policies:
 
-{% Aside #}
+{% Aside %}
 
 **Content Policies**
 

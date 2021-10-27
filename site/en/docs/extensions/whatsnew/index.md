@@ -16,12 +16,19 @@ updated: 2021-08-04
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
 
+### Review violation troubleshooting updates
+
+#### Published 2021.10.27
+
+The [Troubleshooting Chrome Web Store violations](/docs/webstore/troubleshooting/) page has been
+updated to provide developers with more detailed guidance for common reasons for rejection.
+
 ### Manifest V2 support timeline
 
 #### Published 2021.09.23
 
-The Manifest V2->V3 transition timeline was [announced in this blog post](/blog/mv2-transition/) and a
-more detailed [timeline page](/docs/extensions/mv3/mv2-sunset) was published.
+The Manifest V2->V3 transition timeline was [announced in this blog post](/blog/mv2-transition/) and
+a more detailed [timeline page](/docs/extensions/mv3/mv2-sunset) was published.
 
 ### Two step verification enforcement
 
