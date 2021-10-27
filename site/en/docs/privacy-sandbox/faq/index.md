@@ -224,11 +224,11 @@ Or the equivalent JavaScript interface:
 
 For hardware-specific use-cases, the device model name may be requested via the high entropy `Sec-CH-UA-Model` hint.
 
-### For what duration will hints specified via the Accept-CH header be sent?
+### For how long will hints specified via the Accept-CH header be sent?
 
 Hints specified via the `Accept-CH` header will be sent for the duration of the browser session or until a different set of hints are specified.
 
-### Does UACH work with HTTP/2 and HTTP/3?
+### Does UA-CH work with HTTP/2 and HTTP/3?
 
 UA-CH works with both HTTP/2 and HTTP/3 connections. Note that Client Hints are only sent over secure connections, so make sure you have migrated your site to HTTPS.
 
