@@ -181,23 +181,16 @@ description for each supported locale.
 
 ### Screenshots {: #cws-screenshots}
 
-As the [screenshot guidelines][screenshot-guidelines] say, you should provide screenshots for your extension. You can tailor
+As the [screenshot guidelines][screenshot-guidelines] say, you should provide screenshots or or
+YouTube video for your extension. You can tailor
 these screenshots for each locale.
 
-To add a screenshot, click the **Choose File** button in the **Screenshots** section of the Edit
-page.
+To add a screenshot, drop your screenshots in the **Localized screenshots** section of the **Store Listing** tab.
 
-If your extension supports multiple locales, then after you upload each screenshot, you can specify
-whether it's for all locales or just for the one you're currently editing.
-
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TTqmjZAmXBuov9HRBISe.png", 
-       alt="screenshot of screenshots with localization options", height="375", width="430" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/y792ypc5Zy3AGyh0HwhE.png", alt="localize screenshots and video", width="414", height="256" %}
 
 To change the locale information for a screenshot, first use the pull-down list at the top of the
-page to choose the locale where you want the screenshot to appear. (If you don't see the screenshot,
-go to the locale that it's restricted to and click "Show this item in **all** locales".) Click the
-thumbnail for the screenshot, so that it's displayed at full size above the thumbnails. Now you can
-change the locale for the screenshot.
+page to choose the locale where you want the screenshot to appear.
 
 ## Specify where to publish your extension {: #regions}
 
