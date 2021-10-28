@@ -33,7 +33,7 @@ activates the TT policy for a page.
 
 Each policy can operate in one of these modes: 
 
-- **enforced mode**.- where every policy violation is an error, 
+- **enforced mode** - where every policy violation is an error, 
 - **report-only mode** - which reports the error message as a warning, but doesn't cause a failure in the web page.
 
 
@@ -41,11 +41,11 @@ Each policy can operate in one of these modes:
 
 The goal of this work was to improve the debugging experience for CSP issues. When considering new issues, the DevTools team roughly follows this process:
 
-1. **Defining user stories**.Identify a set of user stories in the DevTools front-end that covers how a web developer would need to investigate the problem.
+1. **Defining user stories**. Identify a set of user stories in the DevTools front-end that covers how a web developer would need to investigate the problem.
 2. **Front-end implementation**. Based on the user stories, identify which pieces of information are required for investigation of the issue in the front-end (e.g. a related request, the name of a cookie, a line in a script or html file, etc).
 3. **Issue detection**. Identify the places in the browser where the issue can be detected in Chrome and instrument the place to report an issue including the relevant information from step (2).
 4. **Save and display the issues**. Store the issues in an appropriate place and make them available to DevTools once is opened
-5. **Designing the issues text**.Come up with an explanatory text that helps the web developer understand, and more importantly fix the problem
+5. **Designing the issues text**. Come up with an explanatory text that helps the web developer understand, and more importantly fix the problem
 
 
 ### Step 1: defining user stories for CSP Issues
