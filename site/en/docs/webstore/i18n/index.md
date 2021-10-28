@@ -162,24 +162,19 @@ Once you've completed this step, upload your extension using the Developer Dashb
 
 ### Detailed description {: #cws-description }
 
-For each locale your extension supports, edit your extension's listing to provide a detailed description of your
-extension.
+You can provide a [detailed description][item-description] for each locale your extension supports.
 
-First, get to your extension's Edit page, which you can do by going to the dashboard and clicking the
-"Edit" link for the extension. As the following figure shows, if you support multiple locales a pull-down
-list appears at the top of your extension's Edit page. Each item in the list corresponds to one of the
+In the developer dashboard go to the **Store Listing** tab of your item. As the following figure shows, if you support multiple locales a pull-down
+list appears at the top store listing details. Each item in the list corresponds to one of the
 `_locales/LOCALE_CODE` directories that you uploaded.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MbFyk7NrqNRhTLkOeIMT.png",
-       alt="screenshot of the locale pull-down", height="57", width="525" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GNIhOrJH6k6x4rM6iZyg.png", alt="Choose language in store listing", width="800", height="162" %}
 
-Next, choose the locale that you want to edit. Skip this if your extension supports only one locale.)
+Next, choose the locale that you want to edit. Skip this if your extension supports only one locale.
 
-Now edit the detailed description, providing text for the currently selected locale (or for the
-default locale, if you support just one).
+Now edit the detailed description, providing text for the currently selected locale.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vJ5OLO5OdFBcmV963q8e.jpg", 
-       alt="screenshot of the Detailed Description section for an extension", height="258", width="527" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/70mdctbPy8hIIHPFxvZF.png", alt="detailed description", width="483", height="140" %}
 
 If you support multiple locales, repeat the previous two steps until you've provided a detailed
 description for each supported locale.
@@ -275,6 +270,7 @@ Unselecting a region prevents your extension from being listed in that region.
 [cws-description]: #cws-description
 [cws-screenshots]: #cws-screenshots
 [i18n]: /docs/extensions/reference/i18n/
+[item-description]: /docs/webstore/cws-dashboard-listing/#product-details
 [manifest]: #localize-manifest
 [publish]: /docs/webstore/publish#upload-your-item 
 [regions]: #regions
