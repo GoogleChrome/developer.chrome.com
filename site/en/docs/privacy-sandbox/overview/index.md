@@ -4,7 +4,7 @@ title: What is the Privacy Sandbox?
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "What's in it, how to get involved, and what it's for."
 date: 2021-05-18
-updated: 2021-07-29
+updated: 2021-10-28
 authors:
   - samdutton
 ---
@@ -56,8 +56,8 @@ the same entity to declare themselves as belonging to the same first party.
 
 ### Fraud detection
 
-* [**Trust Tokens**](/docs/privacy-sandbox/trust-tokens): Convey trust in a user from one context to
-another, in order to help combat fraud and distinguish bots from humans.
+* [**Trust Tokens**](/docs/privacy-sandbox/trust-tokens): Enable a website to convey a limited amount of 
+information from one browsing context to another to help combat fraud, without passive tracking.
 
 
 ### Limiting data collection
