@@ -1,6 +1,6 @@
 ---
 layout: "layouts/doc-post.njk"
-title: Internationalizing Your extension
+title: Internationalize your extension
 date: 2017-08-30
 updated: 2021-10-29
 description: How to internationalize your Chrome Web Store extension.
@@ -35,7 +35,7 @@ localizing the name, description, and detailed description.
 {% endAside %}
 
 
-## Choosing locales to support {: #supported-locales }
+## Choose locales to support {: #supported-locales }
 
 You can localize your extension to any of the following locales.
 
@@ -96,7 +96,7 @@ You can localize your extension to any of the following locales.
 | zh_CN       | Chinese (China)                       |
 | zh_TW       | Chinese (Taiwan)                      |
 
-## Localizing your extension listing
+## Localize your extension listing
 
 To localize your extension's listing, you first localize the name and description. Then, after uploading
 your localized extension, you can edit your extension's listing to specify localized versions of your extension's
@@ -208,7 +208,7 @@ go to the locale that it's restricted to and click "Show this item in **all** lo
 thumbnail for the screenshot, so that it's displayed at full size above the thumbnails. Now you can
 change the locale for the screenshot.
 
-## Specifying where to publish your extension {: #regions}
+## Specify where to publish your extension {: #regions}
 
 By default, your extension is listed in all regions that can use the Chrome Web Store. If you don't want
 your extension to be listed in a particular region, unselect that region from the following list in the
