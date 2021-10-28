@@ -189,14 +189,14 @@ To add a screenshot, drop your screenshots in the **Localized screenshots** sect
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/y792ypc5Zy3AGyh0HwhE.png", alt="localize screenshots and video", width="414", height="256" %}
 
-To change the locale information for a screenshot, first use the pull-down list at the top of the
+To change the locale information for a screenshot, use the pull-down list at the top of the
 page to choose the locale where you want the screenshot to appear.
 
 ## Specify where to publish your extension {: #regions}
 
 By default, your extension is listed in all regions that can use the Chrome Web Store. If you don't want
 your extension to be listed in a particular region, unselect that region from the following list in the
-**Regions** section of the Edit page.
+**Regions** section of the [Payments and Distribution][distribution] tab.
 
 - Australia  
 - Austria  
@@ -262,6 +262,7 @@ Unselecting a region prevents your extension from being listed in that region.
 
 [cws-description]: #cws-description
 [cws-screenshots]: #cws-screenshots
+[distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution
 [i18n]: /docs/extensions/reference/i18n/
 [item-description]: /docs/webstore/cws-dashboard-listing/#product-details
 [manifest]: #localize-manifest
