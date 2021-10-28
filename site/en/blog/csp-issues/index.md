@@ -1,7 +1,7 @@
 ---
 title: "Implementing CSP and Trusted Types debugging in Chrome DevTools"
 description: >
-  How we worked on introducing CSP ans TT issues.
+  How we implement Content Security Policy and Trusted Types issues debugging in Chrome DevTools.
 layout: "layouts/blog-post.njk"
 authors:
   - kateryna
