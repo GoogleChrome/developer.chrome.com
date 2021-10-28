@@ -2,7 +2,7 @@
 layout: 'layouts/doc-post.njk'
 title: 'Trust Tokens'
 subhead: >
-  Trust Tokens is a new API to enable a website to convey a limited amount of information from one browsing context to another to help combat fraud, without passive tracking.
+  Trust Tokens is a new API to enable a website to convey a limited amount of information from one browsing context to another (for example, across sites) to help combat fraud, without passive tracking.
 description: >
   The Trust Tokens API enables trust of a user in one context to be conveyed to another context, without identifying the user or linking identities between the two contexts. The API enables an origin to issue cryptographic tokens to a user it trusts. The tokens are stored by the user's browser. The browser can then use the tokens in other contexts to evaluate the user's authenticity.
 date: 2021-05-18
