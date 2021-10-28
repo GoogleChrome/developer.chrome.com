@@ -22,13 +22,13 @@ letters between the letters _i_ and _n_. _Localization_ is sometimes abbreviated
 Here are the steps you need to follow when you internationalize and localize an extension to be published
 in the Chrome Web Store:
 
-1.  Decide which [locales][1] you want to support.
+1.  Decide which [locales][supported-locales] you want to support.
 2.  Internationalize and localize the extension's UI.
-3.  Localize your extension's [name and description][2].
+3.  Localize your extension's [name and description][manifest].
 4.  Upload your extension using the Chrome Developer Dashboard.
-5.  Edit your listing, providing localized versions of the [detailed description][3] and
-    [screenshots][4].
-6.  [Specify which regions][5] you want to support.
+5.  Edit your listing, providing localized versions of the [detailed description][cws-description] and
+    [screenshots][cws-screenshots].
+6.  [Specify which regions][regions] you want to support.
 
 How you accomplish step 2 depends on whether you're writing an extension, packaged extension, or hosted
 extension. [Extensions][6] and [packaged apps][7] can use the [extension system i18n support][8] to
@@ -46,7 +46,7 @@ locale-specific information in step 5. Otherwise, your listing will be the same 
 **Note**: You can significantly **increase your extension's ranking** in the locales that you support by
 localizing the name, description, and detailed description.
 
-## Choosing locales to support
+## Choosing locales to support {: #supported-locales }
 
 You can localize your extension to any of the following locales.
 
@@ -113,7 +113,7 @@ To localize your extension's listing, you first localize the name and descriptio
 your localized extension, you can edit your extension's listing to specify localized versions of your extension's
 detailed description and screenshots.
 
-### Name and description
+### Name and description {: #localize-manifest }
 
 You localize the name and description by modifying `manifest.json` and providing a `_locales`
 directory in your extension's ZIP file. Specifically, you need to:
@@ -121,7 +121,7 @@ directory in your extension's ZIP file. Specifically, you need to:
 - Modify the "name" and "description" manifest fields
 - Add a "default_locale" field
 - Provide at least one `_locales/_locale_/messages.json` file, where _`locale`_ is a [locale
-  code][12]; each `messages.json` file contains the strings for one locale
+  code][supported-locales]; each `messages.json` file contains the strings for one locale
 
 Here's an example of how you might specify the name and description of an internationalized hosted
 extension that has English as its default language and British English as its secondary language:
@@ -167,15 +167,15 @@ For more details, see the following examples and documentation.
   - [\_locales/en/messages.json][15]
   - [\_locales/de/messages.json][16]
 - Examples: [Extensions that use i18n APIs][17]
-- Extensions documentation: [Internationalization][18]
-  - The [How extensions find strings][19] section shows how you can sometimes omit message strings.
+- Extensions documentation: [Internationalization][i18n]
+  - The [How extensions find strings][searching-messages] section shows how you can sometimes omit message strings.
     For example, if the extension's name isn't translated, you can leave it out for non-default locales.
-  - The [How to set your browser's locale][20] section is helpful when you test your translations.
+  - The [How to set your browser's locale][set-browser-locale] section is helpful when you test your translations.
 
 Once you've completed this step, upload your extension using the Developer Dashboard, as described in
-[Publishing Your extension][21].
+[Publishing Your extension][publish].
 
-### Detailed description
+### Detailed description {: #cws-description }
 
 For each locale your extension supports, edit your extension's listing to provide a detailed description of your
 extension.
@@ -199,9 +199,9 @@ default locale, if you support just one).
 If you support multiple locales, repeat the previous two steps until you've provided a detailed
 description for each supported locale.
 
-### Screenshots
+### Screenshots {: #cws-screenshots}
 
-As the [screenshot guidelines][24] say, you should provide screenshots for your extension. You can tailor
+As the [screenshot guidelines][screenshot-guidelines] say, you should provide screenshots for your extension. You can tailor
 these screenshots for each locale.
 
 To add a screenshot, click the **Choose File** button in the **Screenshots** section of the Edit
@@ -219,7 +219,7 @@ go to the locale that it's restricted to and click "Show this item in **all** lo
 thumbnail for the screenshot, so that it's displayed at full size above the thumbnails. Now you can
 change the locale for the screenshot.
 
-## Specifying where to publish your extension
+## Specifying where to publish your extension {: #regions}
 
 By default, your extension is listed in all regions that can use the Chrome Web Store. If you don't want
 your extension to be listed in a particular region, unselect that region from the following list in the
@@ -262,27 +262,13 @@ your extension to be listed in a particular region, unselect that region from th
 Unselecting a region prevents your extension from being listed in that region.
 {% endAside %}
 
-[1]: #localeTable
-[2]: #manifest
-[3]: #longDescription
-[4]: #screenshots
-[5]: #where
-[6]: http://code.google.com/chrome/extensions/overview.html
-[7]: http://code.google.com/chrome/extensions/apps.html
-[8]: http://code.google.com/chrome/extensions/i18n.html
-[9]: https://developers.google.com/chrome/apps/docs/developers_guide
-[12]: #localeTable
-[13]:
-  http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/api/i18n/localizedHostedApp/
-[14]:
-  http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/api/i18n/localizedHostedApp/manifest.json
-[15]:
-  http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/api/i18n/localizedHostedApp/_locales/en/messages.json
-[16]:
-  http://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/api/i18n/localizedHostedApp/_locales/de/messages.json
-[17]: http://code.google.com/chrome/extensions/samples.html#i18n
-[18]: http://code.google.com/chrome/extensions/i18n.html
-[19]: http://code.google.com/chrome/extensions/i18n.html#locales-usage
-[20]: http://code.google.com/chrome/extensions/i18n.html#locales-testing
-[21]: /docs/webstore/publish#step3
-[24]: /docs/webstore/images#screenshots
+[cws-description]: #cws-description
+[cws-screenshots]: #cws-screenshots
+[i18n]: /docs/extensions/reference/i18n/
+[manifest]: #localize-manifest
+[publish]: /docs/webstore/publish#upload-your-item 
+[regions]: #regions
+[screenshot-guidelines]: /docs/webstore/images#screenshots
+[searching-messages]: /docs/extensions/reference/i18n/#searching-for-messages
+[set-browser-locale]: /docs/extensions/reference/i18n/#set-browser-locale
+[supported-locales]: #supported-locales

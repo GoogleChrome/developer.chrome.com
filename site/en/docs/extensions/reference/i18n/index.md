@@ -169,7 +169,7 @@ name "Hola mundo".
 
 ![Four files: manifest.json and three messages.json files (for es, en, and en_GB).  The es and en files show entries for messages named "extName" and "colores"; the en_GB file has just one entry (for "colores").](i18n-strings.gif)
 
-### How to set your browser's locale
+### How to set your browser's locale {: #set-browser-locale}
 
 To test translations, you might want to set your browser's locale. This section tells you how to set
 the locale in [Windows][9], [Mac OS X][10], [Linux][11], and [Chrome OS][12].
@@ -346,7 +346,7 @@ For more details on calling `detectLanguage(inputText)`, see the [API reference]
 [5]: #overview-predefined
 [6]: /docs/extensions/mv3/i18n-messages
 [7]: https://code.google.com/apis/gadgets/docs/i18n.html#BIDI
-[8]: /docs/webstore/i18n/#choosing-locales-to-support
+[8]: /docs/webstore/i18n/#supported-locales
 [9]: #windows
 [10]: #mac-os-x
 [11]: #linux
