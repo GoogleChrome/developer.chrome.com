@@ -57,7 +57,8 @@ the same entity to declare themselves as belonging to the same first party.
 ### Fraud detection
 
 * [**Trust Tokens**](/docs/privacy-sandbox/trust-tokens): Enable a website to convey a limited amount of 
-information from one browsing context to another to help combat fraud, without passive tracking.
+information from one browsing context to another (for example, across sites) to help combat fraud, 
+without passive tracking.
 
 
 ### Limiting data collection
