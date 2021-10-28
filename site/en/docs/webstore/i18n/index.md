@@ -107,10 +107,11 @@ detailed description and screenshots.
 You localize the name and description by modifying `manifest.json` and providing a `_locales`
 directory in your extension's ZIP file. Specifically, you need to:
 
-- Modify the "name" and "description" manifest fields
-- Add a "default_locale" field
-- Provide at least one `_locales/_locale_/messages.json` file, where _`locale`_ is a [locale
-  code][supported-locales]; each `messages.json` file contains the strings for one locale
+- Modify the `name` and `description` manifest fields.
+- Add a `default_locale` field.
+- Provide at least one `_locales/LOCALE_CODE/messages.json` file. Replace
+  [*LOCALE_CODE*][supported-locales] with a supported locale; each `messages.json` file contains the strings for one
+  locale.
 
 Here's an example of how you might specify the name and description of an internationalized hosted
 extension that has English as its default language and British English as its secondary language:
@@ -144,10 +145,10 @@ extension that has English as its default language and British English as its se
 }
 ```
 
-If you add a locale later, you just need to add a `_locales/_locale_/messages.json` file for that
+If you add a locale later, you just need to add a `_locales/LOCALE_CODE/messages.json` file for that
 new locale. For example, if you add support for French and Arabic, you'll need to add two files:
 `_locales/fr/messages.json` and `_locales/ar/messages.json`. Each of those files can be a copy of
-`_locales/en_GB/messages.json`, but with translated versions of the "message" values.
+`_locales/en_GB/messages.json`, but with translated versions of the `message` values.
 
 For more details, see the following examples and documentation.
 
@@ -172,12 +173,12 @@ extension.
 First, get to your extension's Edit page, which you can do by going to the dashboard and clicking the
 "Edit" link for the extension. As the following figure shows, if you support multiple locales a pull-down
 list appears at the top of your extension's Edit page. Each item in the list corresponds to one of the
-`_locales/_locale_` directories that you uploaded.
+`_locales/LOCALE_CODE` directories that you uploaded.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MbFyk7NrqNRhTLkOeIMT.png",
        alt="screenshot of the locale pull-down", height="57", width="525" %}
 
-Next, choose the locale that you want to edit. (Skip this if your extension supports only one locale.)
+Next, choose the locale that you want to edit. Skip this if your extension supports only one locale.)
 
 Now edit the detailed description, providing text for the currently selected locale (or for the
 default locale, if you support just one).
