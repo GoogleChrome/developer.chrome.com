@@ -19,32 +19,21 @@ letters between the letters _i_ and _n_. _Localization_ is sometimes abbreviated
 
 ## Overview
 
-Here are the steps you need to follow when you internationalize and localize an extension to be published
+You can follow these steps to internationalize and localize an extension to be published
 in the Chrome Web Store:
 
-1.  Decide which [locales][supported-locales] you want to support.
-2.  Internationalize and localize the extension's UI.
-3.  Localize your extension's [name and description][manifest].
-4.  Upload your extension using the Chrome Developer Dashboard.
-5.  Edit your listing, providing localized versions of the [detailed description][cws-description] and
-    [screenshots][cws-screenshots].
-6.  [Specify which regions][regions] you want to support.
+1. Decide which [locales][supported-locales] you want to support.
+1. Internationalize and localize the extension's UI using the [extension system i18n support][i18n].
+1. Localize your extension's [name and description][manifest].
+1. [Upload your extension][publish] using the Chrome Developer Dashboard.
+1. Edit your listing, providing localized versions of the [detailed description][cws-description], a YouTube video URL and [screenshots][cws-screenshots].
+1. Specify which [regions][regions] you want to support.
 
-How you accomplish step 2 depends on whether you're writing an extension, packaged extension, or hosted
-extension. [Extensions][6] and [packaged apps][7] can use the [extension system i18n support][8] to
-provide the appropriate UI strings for each locale. [Hosted apps][9] don't have access to the
-extension i18n support for their main UIs, but they can use whatever other i18n techniques and
-libraries suit the extension.
-
-In step 3 you localize the name and description by editing the manifest file and providing strings
-for your chosen locales. Once you've uploaded your extension (step 4), you can finish your extension's listing
-(step 5).
-
-If you provide strings for at least two locales in step 3, then you'll be able to provide
-locale-specific information in step 5. Otherwise, your listing will be the same in all locales.
-
-**Note**: You can significantly **increase your extension's ranking** in the locales that you support by
+{% Aside %}
+You can significantly **increase your extension's ranking** in the locales that you support by
 localizing the name, description, and detailed description.
+{% endAside %}
+
 
 ## Choosing locales to support {: #supported-locales }
 
