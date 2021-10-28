@@ -1,17 +1,17 @@
 ---
 layout: "layouts/doc-post.njk"
-title: Internationalizing Your App
+title: Internationalizing Your extension
 date: 2017-08-30
-
-description: How to internationalize your Chrome Web Store app.
+updated: 2021-10-29
+description: How to internationalize your Chrome Web Store extension.
 ---
 
-Unless your app is strictly local in scope, you should _internationalize_ it, making it easy to
+Unless your extension is strictly local in scope, you should _internationalize_ it, making it easy to
 adapt to various languages and regions. You can then _localize_ it—translate and otherwise adapt it
 so that it works well in a particular locale.
 
-You can internationalize your app even if it initially supports just one locale. For example, you
-might initially publish your app in English (locale code: "en"). Then, after a few weeks or months,
+You can internationalize your extension even if it initially supports just one locale. For example, you
+might initially publish your extension in English (locale code: "en"). Then, after a few weeks or months,
 you might add support for additional locales such as French (locale code: "fr") and Arabic (locale
 code: "ar").
 
@@ -22,36 +22,36 @@ letters between the letters _i_ and _n_. _Localization_ is sometimes abbreviated
 
 ## Overview
 
-Here are the steps you need to follow when you internationalize and localize an app to be published
+Here are the steps you need to follow when you internationalize and localize an extension to be published
 in the Chrome Web Store:
 
 1.  Decide which [locales][1] you want to support.
-2.  Internationalize and localize the app's UI.
-3.  Localize your app's [name and description][2].
-4.  Upload your app using the Chrome Developer Dashboard.
+2.  Internationalize and localize the extension's UI.
+3.  Localize your extension's [name and description][2].
+4.  Upload your extension using the Chrome Developer Dashboard.
 5.  Edit your listing, providing localized versions of the [detailed description][3] and
     [screenshots][4].
 6.  [Specify which regions][5] you want to support.
 
-How you accomplish step 2 depends on whether you're writing an extension, packaged app, or hosted
-app. [Extensions][6] and [packaged apps][7] can use the [extension system i18n support][8] to
+How you accomplish step 2 depends on whether you're writing an extension, packaged extension, or hosted
+extension. [Extensions][6] and [packaged apps][7] can use the [extension system i18n support][8] to
 provide the appropriate UI strings for each locale. [Hosted apps][9] don't have access to the
 extension i18n support for their main UIs, but they can use whatever other i18n techniques and
-libraries suit the app.
+libraries suit the extension.
 
 In step 3 you localize the name and description by editing the manifest file and providing strings
-for your chosen locales. Once you've uploaded your app (step 4), you can finish your app's listing
+for your chosen locales. Once you've uploaded your extension (step 4), you can finish your extension's listing
 (step 5).
 
 If you provide strings for at least two locales in step 3, then you'll be able to provide
 locale-specific information in step 5. Otherwise, your listing will be the same in all locales.
 
-**Note**: You can significantly **increase your app's ranking** in the locales that you support by
+**Note**: You can significantly **increase your extension's ranking** in the locales that you support by
 localizing the name, description, and detailed description.
 
 ## Choosing locales to support
 
-You can localize your app to any of the following locales.
+You can localize your extension to any of the following locales.
 
 | Locale code | Language (region)                     |
 | ----------- | ------------------------------------- |
@@ -110,16 +110,16 @@ You can localize your app to any of the following locales.
 | zh_CN       | Chinese (China)                       |
 | zh_TW       | Chinese (Taiwan)                      |
 
-## Localizing your app listing
+## Localizing your extension listing
 
-To localize your app's listing, you first localize the name and description. Then, after uploading
-your localized app, you can edit your app's listing to specify localized versions of your app's
+To localize your extension's listing, you first localize the name and description. Then, after uploading
+your localized extension, you can edit your extension's listing to specify localized versions of your extension's
 detailed description and screenshots.
 
 ### Name and description
 
 You localize the name and description by modifying `manifest.json` and providing a `_locales`
-directory in your app's ZIP file. Specifically, you need to:
+directory in your extension's ZIP file. Specifically, you need to:
 
 - Modify the "name" and "description" manifest fields
 - Add a "default_locale" field
@@ -127,7 +127,7 @@ directory in your app's ZIP file. Specifically, you need to:
   code][12]; each `messages.json` file contains the strings for one locale
 
 Here's an example of how you might specify the name and description of an internationalized hosted
-app that has English as its default language and British English as its secondary language:
+extension that has English as its default language and British English as its secondary language:
 
 ```json
 //in manifest.json:
@@ -138,11 +138,11 @@ app that has English as its default language and British English as its secondar
 //in _locales/en/messages.json:
 {
   "appName": {
-    "message": "My App",
+    "message": "My extension",
     "description": "The title of the application, displayed in the web store."
   },
   "appDesc": {
-    "message": "This app does something awesome.",
+    "message": "This extension does something awesome.",
     "description":"The description of the application, displayed in the web store."
   }
 }
@@ -165,52 +165,52 @@ new locale. For example, if you add support for French and Arabic, you'll need t
 
 For more details, see the following examples and documentation.
 
-- Example: [Minimal Localized Hosted App][13]
+- Example: [Minimal Localized Hosted extension][13]
   - [manifest.json][14]
   - [\_locales/en/messages.json][15]
   - [\_locales/de/messages.json][16]
 - Examples: [Extensions that use i18n APIs][17]
 - Extensions documentation: [Internationalization][18]
   - The [How extensions find strings][19] section shows how you can sometimes omit message strings.
-    For example, if the app's name isn't translated, you can leave it out for non-default locales.
+    For example, if the extension's name isn't translated, you can leave it out for non-default locales.
   - The [How to set your browser's locale][20] section is helpful when you test your translations.
 
-Once you've completed this step, upload your app using the Developer Dashboard, as described in
-[Publishing Your App][21].
+Once you've completed this step, upload your extension using the Developer Dashboard, as described in
+[Publishing Your extension][21].
 
 ### Detailed description
 
-For each locale your app supports, edit your app's listing to provide a detailed description of your
-app.
+For each locale your extension supports, edit your extension's listing to provide a detailed description of your
+extension.
 
-First, get to your app's Edit page, which you can do by going to the dashboard and clicking the
-"Edit" link for the app. As the following figure shows, if you support multiple locales a pull-down
-list appears at the top of your app's Edit page. Each item in the list corresponds to one of the
+First, get to your extension's Edit page, which you can do by going to the dashboard and clicking the
+"Edit" link for the extension. As the following figure shows, if you support multiple locales a pull-down
+list appears at the top of your extension's Edit page. Each item in the list corresponds to one of the
 `_locales/_locale_` directories that you uploaded.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/MbFyk7NrqNRhTLkOeIMT.png",
        alt="screenshot of the locale pull-down", height="57", width="525" %}
 
-Next, choose the locale that you want to edit. (Skip this if your app supports only one locale.)
+Next, choose the locale that you want to edit. (Skip this if your extension supports only one locale.)
 
 Now edit the detailed description, providing text for the currently selected locale (or for the
 default locale, if you support just one).
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vJ5OLO5OdFBcmV963q8e.jpg", 
-       alt="screenshot of the Detailed Description section for an app", height="258", width="527" %}
+       alt="screenshot of the Detailed Description section for an extension", height="258", width="527" %}
 
 If you support multiple locales, repeat the previous two steps until you've provided a detailed
 description for each supported locale.
 
 ### Screenshots
 
-As the [screenshot guidelines][24] say, you should provide screenshots for your app. You can tailor
+As the [screenshot guidelines][24] say, you should provide screenshots for your extension. You can tailor
 these screenshots for each locale.
 
 To add a screenshot, click the **Choose File** button in the **Screenshots** section of the Edit
 page.
 
-If your app supports multiple locales, then after you upload each screenshot, you can specify
+If your extension supports multiple locales, then after you upload each screenshot, you can specify
 whether it's for all locales or just for the one you're currently editing.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TTqmjZAmXBuov9HRBISe.png", 
@@ -222,10 +222,10 @@ go to the locale that it's restricted to and click "Show this item in **all** lo
 thumbnail for the screenshot, so that it's displayed at full size above the thumbnails. Now you can
 change the locale for the screenshot.
 
-## Specifying where to publish your app
+## Specifying where to publish your extension
 
-By default, your app is listed in all regions that can use the Chrome Web Store. If you don't want
-your app to be listed in a particular region, unselect that region from the following list in the
+By default, your extension is listed in all regions that can use the Chrome Web Store. If you don't want
+your extension to be listed in a particular region, unselect that region from the following list in the
 **Regions** section of the Edit page.
 
 - Argentina
@@ -262,7 +262,7 @@ your app to be listed in a particular region, unselect that region from the foll
 - United States
 
 {% Aside %}
-Unselecting a region prevents your app from being listed in that region.
+Unselecting a region prevents your extension from being listed in that region.
 {% endAside %}
 
 [1]: #localeTable
