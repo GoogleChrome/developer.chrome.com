@@ -6,14 +6,11 @@ updated: 2021-10-29
 description: How to internationalize your Chrome Web Store extension.
 ---
 
+This page describes how to support multiple languages of an extension or theme ("item") in the Chrome Web Store.
+
 Unless your extension is strictly local in scope, you should _internationalize_ it, making it easy to
 adapt to various languages and regions. You can then _localize_ it—translate and otherwise adapt it
 so that it works well in a particular locale.
-
-You can internationalize your extension even if it initially supports just one locale. For example, you
-might initially publish your extension in English (locale code: "en"). Then, after a few weeks or months,
-you might add support for additional locales such as French (locale code: "fr") and Arabic (locale
-code: "ar").
 
 {% Aside %}
 The word _internationalization_ is often abbreviated to _i18n_, referring to the 18
