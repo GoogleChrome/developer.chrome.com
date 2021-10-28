@@ -150,13 +150,8 @@ new locale. For example, if you add support for French and Arabic, you'll need t
 `_locales/fr/messages.json` and `_locales/ar/messages.json`. Each of those files can be a copy of
 `_locales/en_GB/messages.json`, but with translated versions of the `message` values.
 
-For more details, see the following examples and documentation.
+For more details, see the following documentation.
 
-- Example: [Minimal Localized Hosted extension][13]
-  - [manifest.json][14]
-  - [\_locales/en/messages.json][15]
-  - [\_locales/de/messages.json][16]
-- Examples: [Extensions that use i18n APIs][17]
 - Extensions documentation: [Internationalization][i18n]
   - The [How extensions find strings][searching-messages] section shows how you can sometimes omit message strings.
     For example, if the extension's name isn't translated, you can leave it out for non-default locales.
@@ -215,38 +210,63 @@ By default, your extension is listed in all regions that can use the Chrome Web 
 your extension to be listed in a particular region, unselect that region from the following list in the
 **Regions** section of the Edit page.
 
-- Argentina
-- Australia
-- Austria
-- Belgium
-- Brazil
-- Canada
-- China
-- Czech Republic
-- Denmark
-- Finland
-- France
-- Germany
-- Hong Kong
-- India
-- Indonesia
-- Israel
-- Italy
-- Japan
-- Mexico
-- Netherlands
-- New Zealand
-- Norway
-- Philippines
-- Poland
-- Portugal
-- Russia
-- Singapore
-- Spain
-- Sweden
-- Switzerland
-- United Kingdom
-- United States
+- Australia  
+- Austria  
+- Belgium  
+- Brazil  
+- Bulgaria  
+- Canada  
+- Chile  
+- China  
+- Colombia  
+- Cuba  
+- Czechia  
+- Denmark  
+- Ecuador  
+- Egypt  
+- Estonia  
+- Finland  
+- France  
+- Germany  
+- Greece  
+- Hong Kong  
+- Hungary  
+- India  
+- Indonesia  
+- Ireland  
+- Israel  
+- Italy  
+- Japan  
+- Lithuania  
+- Malaysia  
+- Mexico  
+- Morocco  
+- Netherlands  
+- New Zealand  
+- Norway  
+- Panama  
+- Peru  
+- Philippines  
+- Poland  
+- Portugal  
+- Romania  
+- Russia  
+- Saudi Arabia  
+- Singapore  
+- Slovakia  
+- South Africa  
+- Spain  
+- Sweden  
+- Switzerland  
+- Taiwan  
+- Thailand  
+- Turkey  
+- Ukraine  
+- United Arab Emirates  
+- United Kingdom  
+- United States  
+- Venezuela  
+- Vietnam
 
 {% Aside %}
 Unselecting a region prevents your extension from being listed in that region.
