@@ -113,7 +113,7 @@ directory in your extension's ZIP file. Specifically, you need to:
   [*LOCALE_CODE*][supported-locales] with a supported locale; each `messages.json` file contains the strings for one
   locale.
 
-Here's an example of how you might specify the name and description of an internationalized hosted
+Here's an example of how you might specify the name and description of an internationalized
 extension that has English as its default language and British English as its secondary language:
 
 ```json
