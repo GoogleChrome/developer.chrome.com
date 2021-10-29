@@ -184,7 +184,7 @@ naming](https://groups.google.com/a/chromium.org/g/blink-dev/c/Y42bZ66L6Zo)** by
 adding the `Sec-CH-` header prefix where missing and an **[Intent to Prototype
 on expanding the range of character
 types](https://groups.google.com/a/chromium.org/g/blink-dev/c/ueudFsZzT1M)**
-sent in the GREASE part of the values.
+sent as part of the GREASE mechanism.
 
 ## Show relevant content and ads
 
