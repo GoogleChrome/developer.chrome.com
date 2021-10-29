@@ -52,13 +52,14 @@ Force)](https://www.ietf.org/)** is hosting their regular **[112 online
 technical plenary](https://www.ietf.org/how/meetings/112/)**. Similarly to TPAC
 there are a number of individual sessions where Privacy Sandbox topics are
 discussed such as the **[PRIV (Privacy Respecting Incorporation of
-Values)](https://datatracker.ietf.org/doc/agenda-112-priv/)** and the **[MASQUE
+Values)](https://datatracker.ietf.org/doc/agenda-112-priv/)**, **[PEARG (Privacy
+Enhancements and Assessments Research
+Group)](https://datatracker.ietf.org/doc/agenda-112-pearg/)** and the **[MASQUE
 (Multiplexed Application Substrate over QUIC
 Encryption)](https://datatracker.ietf.org/doc/agenda-112-masque/)** working
 groups. These are deep technical discussions on protocol designs—if you have the
 appropriate expertise and an interest in contributing to these discussions,
 please consider joining.
-
 
 ## Strengthen cross-site privacy boundaries
 
