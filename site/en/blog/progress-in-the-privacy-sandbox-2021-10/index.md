@@ -16,11 +16,12 @@ tags:
 ---
 
 Welcome to the October edition of "**[Progress in the Privacy
-Sandbox](/tags/progress-in-the-privacy-sandbox/)**" tracking the milestones on
-the path to phasing out third-party cookies in Chrome and working towards a more
-private web. Each month we'll share an overview of the updates to [the Privacy
-Sandbox timeline](https://privacysandbox.com/timeline/) along with news from
-across the project.
+Sandbox](https://developer.chrome.com/tags/progress-in-the-privacy-sandbox/)**,"
+tracking the milestones on the path to phasing out third-party cookies in Chrome
+and working towards a more private web. Each month we'll share an overview of
+the updates to [the Privacy Sandbox
+timeline](https://privacysandbox.com/timeline/) along with news from across the
+project.
 
 ## Events
 
@@ -39,7 +40,7 @@ Hours](https://developer.chrome.com/devsummit/schedule/office-hours/). [Sign up
 today](https://events.withgoogle.com/chrome-dev-summit-2021/registrations/new/details/)
 and we hope to see you there!
 
-This month has also included the **[W3C's Annual
+This month also included the **[W3C's Annual
 Conference](https://www.w3.org/2021/10/TPAC/)** (commonly known as
 **[TPAC](https://www.w3.org/2021/10/TPAC/#:~:text=What%20does%20TPAC%20stand%20for)**)
 where all the various groups across the W3C meet to discuss a variety of topics
@@ -130,7 +131,7 @@ example, you host a service on your .com that's used by your .co.uk—then you
 should follow **[First-Party
 Sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/)**.
 This proposal defines a way of declaring which sites you want to form a set and
-then marking cookies as `SameParty` so that they are only sent for contexts
+then marking cookies as "SameParty" so that they are only sent for contexts
 inside of that set.
 
 First-Party Sets are [available for local developer
@@ -249,13 +250,13 @@ challenges and approaches.
 ## Feedback
 
 As we continue to publish these monthly updates and progress through the Privacy
-Sandbox as a whole we want to make sure that you as a developer are getting the
+Sandbox as a whole, we want to make sure that you as a developer are getting the
 information and support that you need. Let us know on [@ChromiumDev
 Twitter](https://twitter.com/ChromiumDev) if there's anything that we could
 improve in this series. We'll use your input to continue improving the format.
 
-We have also added a **[Privacy Sandbox FAQ
-section](https://developer.chrome.com/docs/privacy-sandbox/faq/)** which we will
+We have also added a **[Privacy Sandbox
+FAQ](https://developer.chrome.com/docs/privacy-sandbox/faq/)** which we will
 continue to expand based on the issues you submit to the [developer support
 repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support). If you
 have any questions around testing or implementation on any of the proposals,
