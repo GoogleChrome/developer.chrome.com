@@ -218,8 +218,8 @@ ads.
 The **[Attribution Reporting
 API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)**
 enables functionality to measure events on one site, like clicking or viewing an
-ad, that lead to a conversion on another site—again, all without being able to
-track the individual on that cross-site journey.
+ad, that lead to a conversion on another site—without enabling cross-site
+tracking.
 
 We would like to continue testing on the Attribution Reporting API and we are
 planning on **[extending the origin
