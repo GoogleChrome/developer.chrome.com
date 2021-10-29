@@ -33,7 +33,7 @@ Summit](/devsummit/)**. You will be able to get an
 update on Privacy Sandbox in [the
 keynote](/devsummit/schedule/keynote/) along with an
 opportunity to ask questions to the leadership team in the
-[AMA](https://developer.chrome.com/devsummit/schedule/ama/), and time for more
+[AMA](/devsummit/schedule/ama/), and time for more
 detailed questions with the engineering teams in the [Office
 Hours](https://developer.chrome.com/devsummit/schedule/office-hours/). [Sign up
 today](https://events.withgoogle.com/chrome-dev-summit-2021/registrations/new/details/)
