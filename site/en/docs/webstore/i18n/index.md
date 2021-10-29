@@ -6,7 +6,7 @@ updated: 2021-10-29
 description: How to internationalize your Chrome Web Store extension.
 ---
 
-This page describes how to support multiple languages of an extension or theme ("item") in the Chrome Web Store.
+This page describes how to support multiple languages of an extension in the Chrome Web Store.
 
 Unless your extension is strictly local in scope, you should _internationalize_ it, making it easy to
 adapt to various languages and regions. You can then _localize_ it—translate and otherwise adapt it
@@ -150,12 +150,10 @@ new locale. For example, if you add support for French and Arabic, you'll need t
 `_locales/fr/messages.json` and `_locales/ar/messages.json`. Each of those files can be a copy of
 `_locales/en_GB/messages.json`, but with translated versions of the `message` values.
 
-For more details, see the following documentation.
-
-- Extensions documentation: [Internationalization][i18n]
-  - The [How extensions find strings][searching-messages] section shows how you can sometimes omit message strings.
+For more details, see the extension [Internationalization][i18n] documentation: 
+    - The [How extensions find strings][searching-messages] section shows how you can sometimes omit message strings.
     For example, if the extension's name isn't translated, you can leave it out for non-default locales.
-  - The [How to set your browser's locale][set-browser-locale] section is helpful when you test your translations.
+    - The [How to set your browser's locale][set-browser-locale] section is helpful when you test your translations.
 
 Once you've completed this step, upload your extension using the Developer Dashboard, as described in
 [Publishing Your extension][publish].
@@ -164,33 +162,39 @@ Once you've completed this step, upload your extension using the Developer Dashb
 
 You can provide a [detailed description][item-description] for each locale your extension supports.
 
-In the developer dashboard go to the **Store Listing** tab of your item. As the following figure shows, if you support multiple locales a pull-down
-list appears at the top store listing details. Each item in the list corresponds to one of the
-`_locales/LOCALE_CODE` directories that you uploaded.
+In the [developer dashboard][dev-console], go to the **Store Listing** tab of your item. As the
+following figure shows, if you support multiple locales a pull-down list appears at the top store
+listing details. Each item in the list corresponds to one of the `_locales/LOCALE_CODE` directories
+that you uploaded.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GNIhOrJH6k6x4rM6iZyg.png", alt="Choose language in store listing", width="800", height="162" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/GNIhOrJH6k6x4rM6iZyg.png", alt="Choose language in
+store listing", width="800", height="162" %}
 
 Next, choose the locale that you want to edit. Skip this if your extension supports only one locale.
 
 Now edit the detailed description, providing text for the currently selected locale.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/70mdctbPy8hIIHPFxvZF.png", alt="detailed description", width="483", height="140" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/70mdctbPy8hIIHPFxvZF.png", alt="detailed
+description", width="483", height="140" %}
 
 If you support multiple locales, repeat the previous two steps until you've provided a detailed
 description for each supported locale.
 
 ### Screenshots {: #cws-screenshots}
 
-As the [screenshot guidelines][screenshot-guidelines] say, you should provide screenshots or or
-YouTube video for your extension. You can tailor
+As the [screenshot guidelines][screenshot-guidelines] say, you should provide screenshots for your extension. You can tailor
 these screenshots for each locale.
 
-To add a screenshot, drop your screenshots in the **Localized screenshots** section of the **Store Listing** tab.
+Go to the top of the of the **Store
+Listing** tab to choose the locale.
+
+To add a screenshot, drop your screenshots in the **Localized screenshots** section. If you have a YouTube video in the targeted language, you can add the URL in the
+**Localized promo video** field.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/y792ypc5Zy3AGyh0HwhE.png", alt="localize screenshots and video", width="414", height="256" %}
 
-To change the locale information for a screenshot, use the pull-down list at the top of the
-page to choose the locale where you want the screenshot to appear.
+To provide screenshots for another locale, use the pull-down list at the top of the page and select
+the next language.
 
 ## Specify where to publish your extension {: #regions}
 
@@ -262,6 +266,7 @@ Unselecting a region prevents your extension from being listed in that region.
 
 [cws-description]: #cws-description
 [cws-screenshots]: #cws-screenshots
+[dev-console]: https://chrome.google.com/webstore/devconsole
 [distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution
 [i18n]: /docs/extensions/reference/i18n/
 [item-description]: /docs/webstore/cws-dashboard-listing/#product-details
