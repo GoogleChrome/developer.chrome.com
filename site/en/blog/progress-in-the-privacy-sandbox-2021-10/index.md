@@ -33,15 +33,15 @@ Summit](https://developer.chrome.com/devsummit/)**. You will be able to get an
 update on Privacy Sandbox in [the
 keynote](https://developer.chrome.com/devsummit/schedule/keynote/) along with an
 opportunity to ask questions to the leadership team in the
-[AMA](https://developer.chrome.com/devsummit/schedule/ama/) and time for more
+[AMA](https://developer.chrome.com/devsummit/schedule/ama/), and time for more
 detailed questions with the engineering teams in the [Office
 Hours](https://developer.chrome.com/devsummit/schedule/office-hours/). [Sign up
 today](https://events.withgoogle.com/chrome-dev-summit-2021/registrations/new/details/)
 and we hope to see you there!
 
 This month has also included the **[W3C's Annual
-Conference](https://www.w3.org/2021/10/TPAC/)** or
-**[TPAC](https://www.w3.org/2021/10/TPAC/#:~:text=What%20does%20TPAC%20stand%20for)**,
+Conference](https://www.w3.org/2021/10/TPAC/)** (commonly known as
+**[TPAC](https://www.w3.org/2021/10/TPAC/#:~:text=What%20does%20TPAC%20stand%20for)**)
 where all the various groups across the W3C meet to discuss a variety of topics
 across the entirety of the web. You can view the **[minutes and videos for the
 breakout sessions](https://www.w3.org/2021/10/TPAC/breakouts.html)** and
@@ -61,11 +61,12 @@ groups. These are deep technical discussions on protocol designs—if you have t
 appropriate expertise and an interest in contributing to these discussions,
 please consider joining.
 
+
 ## Strengthen cross-site privacy boundaries
 
-Third-party cookies are the key mechanism that enables cross-site tracking.
-Being able to phase them out is a major milestone, but we also need to tackle
-other forms of cross-site storage or communication.
+Third-party cookies are a key mechanism that enables cross-site tracking. Being
+able to phase them out is a major milestone, but we also need to tackle other
+forms of cross-site storage or communication.
 
 
 ### Federated Credentials Management API
@@ -77,7 +78,7 @@ explicitly about sharing aspects of identity with other sites there are
 technical details that overlap with cross-site tracking.
 
 The Federated Credentials Management proposal explores a range of options from
-simple migration paths for existing solutions through to more private methods of
+simple migration paths for existing solutions to more private methods of
 connecting to services with the bare minimum of information shared.
 
 This proposal is still at an early stage and discussion can be followed in the
