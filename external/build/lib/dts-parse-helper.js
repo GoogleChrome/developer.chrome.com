@@ -99,8 +99,12 @@ class InsertMissingTagsHelper {
     this.pendingUpdates.set(param, extraComment);
   }
 
-  onEnd() {
-    console.warn('Applying', this.pendingUpdates.size, 'extra comments');
+  /**
+   * @param {typedoc.Context} context
+   */
+  onEnd(context) {
+    context.logger.info(`Applying ${this.pendingUpdates.size} extra comments`);
+
     for (const [param, extraComment] of this.pendingUpdates) {
       // Skip call signatures, which TypeDoc correctly already annotates with comments.
       // Notably it annotates the _signatures_, not the top-level declaration, which is correct

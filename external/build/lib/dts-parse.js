@@ -686,10 +686,10 @@ function declarationWith(node) {
 /**
  * Fetches and builds typedoc JSON for the given .d.ts source files.
  *
- * @param {...string} sources
+ * @param {{silent?: boolean, sources: string[] }} options
  * @return {Promise<{[id: string]: typedoc.JSONOutput.DeclarationReflection}>}
  */
-module.exports = async function parse(...sources) {
+module.exports = async function parse({silent, sources}) {
   const app = new typedoc.Application();
   app.options.addReader(new typedoc.TSConfigReader());
   app.bootstrap({
@@ -702,7 +702,9 @@ module.exports = async function parse(...sources) {
         case typedoc.LogLevel.Error:
           throw new Error(`failed to parse typedoc: ${message}`);
       }
-      console.warn(message);
+      if (!silent) {
+        console.warn(message);
+      }
     },
   });
 

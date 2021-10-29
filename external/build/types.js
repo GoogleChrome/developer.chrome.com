@@ -34,7 +34,7 @@ async function fetchAndPrepare(targetDir) {
  * @param {string} targetFile
  */
 async function parse(targetFile) {
-  const defs = await dtsParse(targetFile);
+  const defs = await dtsParse({sources: [targetFile]});
 
   const outputFile = path.join(__dirname, '../data/chrome-types.json');
   fs.writeFileSync(outputFile, JSON.stringify(defs, undefined, 2));
