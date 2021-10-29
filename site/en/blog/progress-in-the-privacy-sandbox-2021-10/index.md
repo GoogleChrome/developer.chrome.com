@@ -25,10 +25,10 @@ across the project.
 ## Events
 
 {% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/53vjMK6z3bt6ZFb8fwFa.jpeg",
-alt="Chrome Dev Summit, agenda now live, attend virtually from November 3rd",
+alt="Chrome Dev Summit, agenda now live, attend virtually from November 3",
 width="800", height="267" %}
 
-From the 3rd of November we will be hosting the **[Chrome Developer
+From November 3 we will be hosting the **[Chrome Developer
 Summit](/devsummit/)**. You will be able to get an update on Privacy Sandbox in
 [the keynote](/devsummit/schedule/keynote/) along with an opportunity to ask
 questions to the leadership team in the [AMA](/devsummit/schedule/ama/), and
@@ -55,7 +55,7 @@ Enhancements and Assessments Research
 Group)](https://datatracker.ietf.org/doc/agenda-112-pearg/)** and the **[MASQUE
 (Multiplexed Application Substrate over QUIC
 Encryption)](https://datatracker.ietf.org/doc/agenda-112-masque/)** working
-groups. These are deep technical discussions on protocol designs—if you have the
+groups. These are deep technical discussions on protocol designs. If you have the
 appropriate expertise and an interest in contributing to these discussions,
 please consider joining.
 
@@ -69,7 +69,7 @@ forms of cross-site storage or communication.
 
 The **[Federated Credentials Management (FedCM)
 proposal](https://github.com/WICG/FedCM)** is the new, more meaningful name for
-WebID.  Federated identity is a critical service for the web, but given that
+WebID. Federated identity is a critical service for the web, but given that
 it's explicitly about sharing aspects of identity with other sites, there are
 implementation details which overlap with cross-site tracking.
 
@@ -85,7 +85,7 @@ Group](https://www.w3.org/community/fed-id/). The group also hosted a
 TPAC which explored an overview of the proposal. There is also a [very early
 prototype version of the
 API](https://github.com/WICG/FedCM/blob/main/explainer/HOWTO.md) available
-behind a flag from Chrome 89, but this is purely for experimentation and will
+behind the `about://flags#webid` flag from Chrome 89, but this is purely for experimentation and will
 change as discussion progresses.
 
 {% Aside %}
@@ -105,26 +105,26 @@ to take on your site.
 #### CHIPS
 
 If you set cookies that are sent in cross-site contexts, but in 1:1
-relationships—like iframe embeds, or API calls—you should follow the **[CHIPS
+relationships&mdash;like iframe embeds, or API calls&mdash;you should follow the **[CHIPS
 proposal](https://github.com/WICG/CHIPS)**, or Cookies Having Independent
 Partitioned State. This allows you to mark cookies as "Partitioned" putting them
 in a separate cookie jar per top-level site.
 
 Work is progressing on CHIPS and while the feature is available behind
-`chrome://flags/#partitioned-cookies` and the `--partitioned-cookies` CLI flag,
-it is not yet in a fully testable state. We will provide updated testing and
+`about://flags/#partitioned-cookies` and the `--partitioned-cookies` CLI flag,
+it is not yet in a fully testable state. Chrome will provide updated testing and
 debugging details once the implementation is more complete.
 
 {% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/D271bfhBSxVcW29p424S.png",
 alt="The top-level site, green.com has an iframe to red.com. red.com sets a
-cookie with the 'Partitioned' attribute. When the browser is on blue.com with an
+cookie with the 'partitioned' attribute. When the browser is on blue.com with an
 iframe to red.com, no cookie is sent! CHIPS creates a partition per top-level
 site.", width="800", height="240" %}
 
 #### First-Party Sets
 
-If you set cookies for cross-site contexts, but only across sites you own—for
-example, you host a service on your .com that's used by your .co.uk—then you
+If you set cookies for cross&mdash;site contexts, but only across sites you own&mdash;for
+example, you host a service on your .com that's used by your .co.uk, then you
 should follow **[First-Party Sets](/docs/privacy-sandbox/first-party-sets/)**.
 This proposal defines a way of declaring which sites you want to form a set and
 then marking cookies as "SameParty" so that they are only sent for contexts
@@ -132,12 +132,12 @@ inside of that set.
 
 First-Party Sets are [available for local developer
 testing](https://www.chromium.org/updates/first-party-sets) behind the
-`chrome://flags/#use-first-party-set` and
-`chrome://flags/#sameparty-cookies-considered-first-party` flags, allowing you
+`about://flags/#use-first-party-set` and
+`about://flags/#sameparty-cookies-considered-first-party` flags, allowing you
 to specify your own set of related sites, and experiment with cookie behavior
 across them.
 
-### Storage Partitioning
+### Storage partitioning
 
 The web platform includes other forms of storage that may enable cross-site
 tracking. The TPAC breakout session on **[the state of browser storage
@@ -145,7 +145,7 @@ partitioning](https://docs.google.com/document/d/13oqM9AUnItnDw02zsvpT3DdYYOpIpl
 provides an overview of Chrome's progress along with discussion from other
 browser vendors.
 
-There's no immediate need for developer action, but if you make use of
+There's no immediate need for developer action, but if you use
 SharedWorker, Web Storage, IndexedDB, CacheStorage, FileSystem API(s),
 BroadcastChannel, Web Locks API, Storage Buckets, or other form of storage or
 communication API where you rely on accessing that data across multiple sites
@@ -159,7 +159,7 @@ enables fingerprinting or covert tracking of users.
 
 ### User-Agent string reduction and User-Agent Client Hints
 
-We've expanded the early **opt-in origin trial** for testing **Chrome's reduced
+We've expanded the **origin trial** for testing **Chrome's reduced
 user-agent** format [to include third-party
 embeds](/blog/user-agent-reduction-origin-trial/#how-to-participate-in-the-origin-trial-as-a-third-party-embed).
 If you primarily provide cross-site content for other services, you can enable
@@ -168,13 +168,13 @@ reduced format on requests to your resources.
 
 You can track the full [timeline for reducing Chrome's
 user-agent](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html),
-with [further examples and details of rollout
+and view [further examples and details of rollout
 phases](https://www.chromium.org/updates/ua-reduction). You will also need to
 [migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) if you
 depend on the platform version, device, or full build version information in the
 current user-agent format.
 
-We're also continuing to make Client Hints overall more consistent with the
+Chrome is also continuing to make Client Hints overall more consistent with the
 **[Intent to Ship on standardizing existing
 naming](https://groups.google.com/a/chromium.org/g/blink-dev/c/Y42bZ66L6Zo)** by
 adding the `Sec-CH-` header prefix where missing and an **[Intent to Prototype
@@ -184,7 +184,7 @@ sent as part of the GREASE mechanism.
 
 ## Show relevant content and ads
 
-As we move towards phasing out third-party cookies, we need to introduce APIs
+As browsers move towards phasing out third-party cookies, they need to introduce APIs
 that enable the use cases that depended on them but **without** continuing to
 enable cross-site tracking.
 
@@ -193,7 +193,7 @@ enable cross-site tracking.
 **[FLoC](/docs/privacy-sandbox/floc/)** is a proposal to enable interest-based
 advertising without the need for individual cross-site tracking. We've been
 evaluating the feedback from the earlier origin trial of FLoC before we advance
-to further ecosystem testing. While we continue to work on next steps and
+to further ecosystem testing. While Chrome continues to work on next steps and
 decisions for FLoC, you should see some exploratory code around the concept of
 topics ([previously
 referenced](https://datatracker.ietf.org/meeting/111/agenda/?show=pearg)) to
@@ -214,12 +214,12 @@ ads.
 The **[Attribution Reporting
 API](/docs/privacy-sandbox/attribution-reporting/)** enables functionality to
 measure events on one site, like clicking or viewing an ad, that lead to a
-conversion on another site—without enabling cross-site tracking.
+conversion on another site, without enabling cross-site tracking.
 
 We would like to continue testing on the Attribution Reporting API and we are
 planning on **[extending the origin
 trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA)**
-through to Chrome 97. Current origin trial tokens expired on October 12th, so
+through Chrome 97. Current origin trial tokens expired on October 12th, so
 you will need to apply for updated tokens to continue testing.
 
 ## Fight spam and fraud on the web
@@ -231,8 +231,8 @@ protection. We need privacy-preserving alternatives here as well.
 ### Trust Tokens
 
 The **[Trust Token](/docs/privacy-sandbox/trust-tokens/)** API is a proposal
-that allows one site to share a claim about a visitor—such as "I think they're
-human"—and enable other sites to verify that claim, again without identifying
+that allows one site to share a claim about a visitor&mdash;such as "I think they're
+human"&mdash;and enable other sites to verify that claim, again without identifying
 the individual.
 
 Trust Tokens are one part of the overall strategy to tackle spam and fraud on
