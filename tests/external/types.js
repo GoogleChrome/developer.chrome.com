@@ -40,4 +40,23 @@ declare namespace chrome {
 
   const types = await parseVirtualTypes(source);
   t.deepEqual(Object.keys(types), ['purelyForTest']);
+
+  // FIXME: types not inferring here
+
+  const fooNamespace = types['purelyForTest']?._type?.properties[0];
+  const helloProperty = fooNamespace?._type?.properties[0];
+
+  t.deepEqual(helloProperty._feature, {
+    channel: 'stable',
+    since: 'Chrome 42',
+  });
+
+  t.is(helloProperty._name, 'chrome.purelyForTest.Foo.hello');
+  t.is(helloProperty._pageHref, 'purelyForTest');
+  t.is(helloProperty._pageId, 'property-Foo-hello');
+
+  t.deepEqual(helloProperty.type, {
+    name: 'number',
+    type: 'intrinsic',
+  });
 });

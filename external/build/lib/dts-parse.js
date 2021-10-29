@@ -687,7 +687,7 @@ function declarationWith(node) {
  * Fetches and builds typedoc JSON for the given .d.ts source files.
  *
  * @param {{silent?: boolean, sources: string[] }} options
- * @return {Promise<{[id: string]: typedoc.JSONOutput.DeclarationReflection}>}
+ * @return {Promise<{[id: string]: ExtendedReflection}>}
  */
 module.exports = async function parse({silent, sources}) {
   const app = new typedoc.Application();
