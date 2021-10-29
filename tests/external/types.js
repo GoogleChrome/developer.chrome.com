@@ -23,7 +23,7 @@ async function parseVirtualTypes(source) {
   }
 }
 
-test('basic', async t => {
+test('chrome-like data', async t => {
   const source = `
 declare namespace chrome {
   export namespace purelyForTest {
@@ -59,4 +59,32 @@ declare namespace chrome {
     name: 'number',
     type: 'intrinsic',
   });
+});
+
+test('workbox-like data', async t => {
+  const source = `
+type HTTPMethod = 'GET';
+type Route = string;
+
+declare class Router {
+  private readonly _routes;
+  private _defaultHandler?;
+  private _catchHandler?;
+  /**
+   * Initializes a new Router.
+   */
+  constructor();
+  /**
+   * @return {Map<string, Array<module:workbox-routing.Route>>} routes A \`Map\` of HTTP
+   * method name ('GET', etc.) to an array of all the corresponding \`Route\`
+   * instances that are registered.
+   */
+  get routes(): Map<HTTPMethod, Route[]>;
+}
+export { Router };
+  `;
+
+  // TODO: We need to parse Workbox types differently and support top-level types.
+  const types = await parseVirtualTypes(source);
+  t.deepEqual(types, {});
 });
