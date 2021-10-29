@@ -11,6 +11,7 @@ description: >
   major version number in the UA string to 100.
 authors:
   - abeyad
+  - miketaylr
 date: 2021-10-29
 tags:
   - chrome-96
