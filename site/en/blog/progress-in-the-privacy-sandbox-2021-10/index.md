@@ -16,12 +16,11 @@ tags:
 ---
 
 Welcome to the October edition of "**[Progress in the Privacy
-Sandbox](https://developer.chrome.com/tags/progress-in-the-privacy-sandbox/)**,"
-tracking the milestones on the path to phasing out third-party cookies in Chrome
-and working towards a more private web. Each month we'll share an overview of
-the updates to [the Privacy Sandbox
-timeline](https://privacysandbox.com/timeline/) along with news from across the
-project.
+Sandbox](/tags/progress-in-the-privacy-sandbox/)**," tracking the milestones on
+the path to phasing out third-party cookies in Chrome and working towards a more
+private web. Each month we'll share an overview of the updates to [the Privacy
+Sandbox timeline](https://privacysandbox.com/timeline/) along with news from
+across the project.
 
 ## Events
 
