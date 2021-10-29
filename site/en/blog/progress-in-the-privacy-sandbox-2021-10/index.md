@@ -144,7 +144,7 @@ across them.
 
 The web platform includes other forms of storage that may enable cross-site
 tracking. The TPAC breakout session on **[the state of browser storage
-partitioning](https://docs.google.com/document/d/13oqM9AUnItnDw02zsvpT3DdYYOpIpl0_eTcnbS8rjUY/edit#)**
+partitioning](https://docs.google.com/document/d/13oqM9AUnItnDw02zsvpT3DdYYOpIpl0_eTcnbS8rjUY/preview)**
 provides an overview of Chrome's progress along with discussion from other
 browser vendors.
 
