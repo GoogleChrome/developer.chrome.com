@@ -31,7 +31,7 @@ width="800", height="267" %}
 From the 3rd of November we will be hosting the **[Chrome Developer
 Summit](/devsummit/)**. You will be able to get an
 update on Privacy Sandbox in [the
-keynote](https://developer.chrome.com/devsummit/schedule/keynote/) along with an
+keynote](/devsummit/schedule/keynote/) along with an
 opportunity to ask questions to the leadership team in the
 [AMA](https://developer.chrome.com/devsummit/schedule/ama/), and time for more
 detailed questions with the engineering teams in the [Office
