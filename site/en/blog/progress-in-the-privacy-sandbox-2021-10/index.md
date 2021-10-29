@@ -203,8 +203,8 @@ code around the concept of topics ([previously
 referenced](https://datatracker.ietf.org/meeting/111/agenda/?show=pearg)) to
 show up in the Chromium code base soon. As all of Chrome's development happens
 in the open, this work will be visible, but there isn't anything immediately
-actionable for developer testing (nor is this applicable to users). We look
-forward to sharing updates on the FLoC proposal in the new **[PATCG (Private
+actionable for developer testing (nor is this applicable to users). We hope to
+continue sharing these discussions and updates in the new **[PATCG (Private
 Advertising Technology Community Group)](https://www.w3.org/community/patcg/)**.
 
 ## Measure digital ads
@@ -222,8 +222,8 @@ ad, that lead to a conversion on another site—again, all without being able to
 track the individual on that cross-site journey.
 
 We would like to continue testing on the Attribution Reporting API and we are
-planning on [extending the origin
-trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA)
+planning on **[extending the origin
+trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA)**
 through to Chrome 97. Current origin trial tokens expired on October 12th, so
 you will need to apply for updated tokens to continue testing.
 
