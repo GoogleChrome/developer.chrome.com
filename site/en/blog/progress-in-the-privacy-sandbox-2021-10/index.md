@@ -29,12 +29,10 @@ alt="Chrome Dev Summit, agenda now live, attend virtually from November 3rd",
 width="800", height="267" %}
 
 From the 3rd of November we will be hosting the **[Chrome Developer
-Summit](/devsummit/)**. You will be able to get an
-update on Privacy Sandbox in [the
-keynote](/devsummit/schedule/keynote/) along with an
-opportunity to ask questions to the leadership team in the
-[AMA](/devsummit/schedule/ama/), and time for more
-detailed questions with the engineering teams in the [Office
+Summit](/devsummit/)**. You will be able to get an update on Privacy Sandbox in
+[the keynote](/devsummit/schedule/keynote/) along with an opportunity to ask
+questions to the leadership team in the [AMA](/devsummit/schedule/ama/), and
+time for more detailed questions with the engineering teams in the [Office
 Hours](/devsummit/schedule/office-hours/). [Sign up
 today](https://events.withgoogle.com/chrome-dev-summit-2021/registrations/new/details/)
 and we hope to see you there!
@@ -127,8 +125,7 @@ site.", width="800", height="240" %}
 
 If you set cookies for cross-site contexts, but only across sites you own—for
 example, you host a service on your .com that's used by your .co.uk—then you
-should follow **[First-Party
-Sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/)**.
+should follow **[First-Party Sets](/docs/privacy-sandbox/first-party-sets/)**.
 This proposal defines a way of declaring which sites you want to form a set and
 then marking cookies as "SameParty" so that they are only sent for contexts
 inside of that set.
@@ -164,7 +161,7 @@ enables fingerprinting or covert tracking of users.
 
 We've expanded the early **opt-in origin trial** for testing **Chrome's reduced
 user-agent** format [to include third-party
-embeds](https://developer.chrome.com/blog/user-agent-reduction-origin-trial/#how-to-participate-in-the-origin-trial-as-a-third-party-embed).
+embeds](/blog/user-agent-reduction-origin-trial/#how-to-participate-in-the-origin-trial-as-a-third-party-embed).
 If you primarily provide cross-site content for other services, you can enable
 the third-party option when registering for the origin trial to receive the
 reduced format on requests to your resources.
@@ -193,12 +190,12 @@ enable cross-site tracking.
 
 ### FLoC
 
-**[FLoC](https://developer.chrome.com/docs/privacy-sandbox/floc/)** is a
-proposal to enable interest-based advertising without the need for individual
-cross-site tracking. We've been evaluating the feedback from the earlier origin
-trial of FLoC before we advance to further ecosystem testing. While we continue
-to work on next steps and decisions for FLoC, you should see some exploratory
-code around the concept of topics ([previously
+**[FLoC](/docs/privacy-sandbox/floc/)** is a proposal to enable interest-based
+advertising without the need for individual cross-site tracking. We've been
+evaluating the feedback from the earlier origin trial of FLoC before we advance
+to further ecosystem testing. While we continue to work on next steps and
+decisions for FLoC, you should see some exploratory code around the concept of
+topics ([previously
 referenced](https://datatracker.ietf.org/meeting/111/agenda/?show=pearg)) to
 show up in the Chromium code base soon. As all of Chrome's development happens
 in the open, this work will be visible, but there isn't anything immediately
@@ -215,10 +212,9 @@ ads.
 ### Attribution Reporting API
 
 The **[Attribution Reporting
-API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)**
-enables functionality to measure events on one site, like clicking or viewing an
-ad, that lead to a conversion on another site—without enabling cross-site
-tracking.
+API](/docs/privacy-sandbox/attribution-reporting/)** enables functionality to
+measure events on one site, like clicking or viewing an ad, that lead to a
+conversion on another site—without enabling cross-site tracking.
 
 We would like to continue testing on the Attribution Reporting API and we are
 planning on **[extending the origin
@@ -234,11 +230,10 @@ protection. We need privacy-preserving alternatives here as well.
 
 ### Trust Tokens
 
-The **[Trust
-Token](https://developer.chrome.com/docs/privacy-sandbox/trust-tokens/)** API is
-a proposal that allows one site to share a claim about a visitor—such as "I
-think they're human"—and enable other sites to verify that claim, again without
-identifying the individual.
+The **[Trust Token](/docs/privacy-sandbox/trust-tokens/)** API is a proposal
+that allows one site to share a claim about a visitor—such as "I think they're
+human"—and enable other sites to verify that claim, again without identifying
+the individual.
 
 Trust Tokens are one part of the overall strategy to tackle spam and fraud on
 the web. In the **["Anti-fraud for the web" breakout at
@@ -254,9 +249,8 @@ information and support that you need. Let us know on [@ChromiumDev
 Twitter](https://twitter.com/ChromiumDev) if there's anything that we could
 improve in this series. We'll use your input to continue improving the format.
 
-We have also added a **[Privacy Sandbox
-FAQ](https://developer.chrome.com/docs/privacy-sandbox/faq/)** which we will
-continue to expand based on the issues you submit to the [developer support
-repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support). If you
-have any questions around testing or implementation on any of the proposals,
-come talk to us there.
+We have also added a **[Privacy Sandbox FAQ](/docs/privacy-sandbox/faq/)** which
+we will continue to expand based on the issues you submit to the [developer
+support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+If you have any questions around testing or implementation on any of the
+proposals, come talk to us there.
