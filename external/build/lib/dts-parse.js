@@ -24,6 +24,7 @@
  */
 
 const typedoc = require('typedoc');
+const {InsertMissingTagsHelper} = require('./dts-parse-helper');
 
 // matches "{@link ...}"
 const linkMatch = /{@link (\S+?)(|\s+.+?)}/g;
@@ -330,7 +331,6 @@ class Transform {
         for (const param of s.parameters ?? []) {
           if (!allParams.has(param.name) || param.flags.isOptional) {
             allParams.set(param.name, param);
-            this.upgradeParamWithParamSinceTags(param, s.comment?.tags ?? []);
           }
         }
 
@@ -369,15 +369,12 @@ class Transform {
           kind: typedoc.ReflectionKind.Parameter,
           flags: {},
           type: returnType,
+          comment: {
+            // Pull out tags that start with "@chrome-returns-extra" and put them here.
+            tags: this.extractReturnTags(returnSignatureComment?.tags ?? []),
+            shortText: nodeComment?.returns,
+          },
         };
-        if (nodeComment?.returns) {
-          virtualNode.comment = {shortText: nodeComment.returns};
-        }
-
-        this.upgradeReturnWithReturnSinceTags(
-          virtualNode,
-          returnSignatureComment?.tags ?? []
-        );
 
         extendedNode._method.return = virtualNode;
         if (returnType?.type === 'reference' && returnType.name === 'Promise') {
@@ -468,66 +465,29 @@ class Transform {
   }
 
   /**
-   * Given tags from a method signature, upgrade this param with standardized-looking tags.
+   * Given tags from a method signature, extract virtual comment tags. This just takes anything
+   * identified with "chrome-returns-extra" and extracts it, as there's otherwise no good way
+   * to annotate the return type (it's not a reflection that can have tags).
    *
-   * @param {typedoc.JSONOutput.ParameterReflection} param
    * @param {typedoc.JSONOutput.CommentTag[]} tags
+   * @return {typedoc.JSONOutput.CommentTag[]|undefined}
    */
-  upgradeParamWithParamSinceTags(param, tags) {
+  extractReturnTags(tags) {
     /** @type {typedoc.JSONOutput.CommentTag[]} */
     const virtualNodeTags = [];
-    const paramPrefix = param.name + ' ';
 
     for (const tag of tags) {
-      // These all look like "@chrome-param-deprecated-since paramName some text...", so only allow
-      // text that starts with "paramName ".
-      if (!tag.text.startsWith(paramPrefix)) {
+      if (tag.tag !== 'chrome-returns-extra') {
         continue;
       }
-      const text = tag.text.substr(paramPrefix.length);
 
-      if (tag.tag === 'chrome-param-since') {
-        virtualNodeTags.push({tag: 'since', text});
-      } else if (tag.tag === 'chrome-param-deprecated-since') {
-        virtualNodeTags.push({tag: 'chrome-deprecated-since', text});
-      } else if (tag.tag === 'chrome-param-deprecated') {
-        virtualNodeTags.push({tag: 'deprecated', text});
-      }
+      const tagName = tag.text.split(' ')[0];
+      const rest = tag.text.substr(tagName.length).trim();
+
+      virtualNodeTags.push({tag: tagName, text: rest});
     }
 
-    if (!param.comment) {
-      param.comment = {};
-    }
-    param.comment.tags = (param.comment.tags ?? []).concat(virtualNodeTags);
-  }
-
-  /**
-   * Given tags from a method signature, upgrade this virtual return declaration with
-   * standardized-looking tags.
-   *
-   * @param {typedoc.JSONOutput.ParameterReflection} param
-   * @param {typedoc.JSONOutput.CommentTag[]} tags
-   */
-  upgradeReturnWithReturnSinceTags(param, tags) {
-    /** @type {typedoc.JSONOutput.CommentTag[]} */
-    const virtualNodeTags = [];
-
-    for (const tag of tags) {
-      const text = tag.text;
-
-      if (tag.tag === 'chrome-returns-since') {
-        virtualNodeTags.push({tag: 'since', text});
-      } else if (tag.tag === 'chrome-returns-deprecated-since') {
-        virtualNodeTags.push({tag: 'chrome-deprecated-since', text});
-      } else if (tag.tag === 'chrome-returns-deprecated') {
-        virtualNodeTags.push({tag: 'deprecated', text});
-      }
-    }
-
-    if (!param.comment) {
-      param.comment = {};
-    }
-    param.comment.tags = (param.comment.tags ?? []).concat(virtualNodeTags);
+    return virtualNodeTags.length ? virtualNodeTags : undefined;
   }
 
   /**
@@ -726,17 +686,15 @@ function declarationWith(node) {
 /**
  * Fetches and builds typedoc JSON for the given .d.ts source files.
  *
- * @param {...string} sources
- * @return {Promise<{[id: string]: typedoc.JSONOutput.DeclarationReflection}>}
+ * @param {{silent?: boolean, sources: string[] }} options
+ * @return {Promise<{[id: string]: ExtendedReflection}>}
  */
-module.exports = async function parse(...sources) {
+module.exports = async function parse({silent, sources}) {
   const app = new typedoc.Application();
   app.options.addReader(new typedoc.TSConfigReader());
   app.bootstrap({
-    // excludeExternals: true,
-    excludeInternal: true,
-    excludePrivate: true,
-    excludeProtected: true,
+    emit: 'none',
+    listInvalidSymbolLinks: true,
     entryPoints: sources,
     logger(message, level) {
       switch (level) {
@@ -744,14 +702,24 @@ module.exports = async function parse(...sources) {
         case typedoc.LogLevel.Error:
           throw new Error(`failed to parse typedoc: ${message}`);
       }
+      if (!silent) {
+        console.warn(message);
+      }
     },
   });
+
+  // nb. This doesn't need to be ref'ed, it just attaches to converter.
+  new InsertMissingTagsHelper(app.converter);
+
   app.options.setCompilerOptions(
     sources,
     {
       // TODO: for Workbox assume we're a webworker
       // lib: ['lib.webworker.d.ts'],
       declaration: true,
+      // lib: ['lib.esnext.full.d.ts'],
+      // target: typedoc.TypeScript.ScriptTarget.Latest,
+      // moduleResolution: typedoc.TypeScript.ModuleResolutionKind.NodeJs,
     },
     undefined
   );
@@ -759,6 +727,7 @@ module.exports = async function parse(...sources) {
   if (!reflection) {
     throw new Error(`failed to convert modules: ${sources}`);
   }
+
   const json = app.serializer.projectToObject(reflection);
   const t = new Transform(json);
 
