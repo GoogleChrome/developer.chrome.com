@@ -16,11 +16,12 @@ tags:
 ---
 
 Welcome to the October edition of "**[Progress in the Privacy
-Sandbox](/tags/progress-in-the-privacy-sandbox/)**" tracking the milestones on
-the path to phasing out third-party cookies in Chrome and working towards a more
-private web. Each month we'll share an overview of the updates to [the Privacy
-Sandbox timeline](https://privacysandbox.com/timeline/) along with news from
-across the project.
+Sandbox](https://developer.chrome.com/tags/progress-in-the-privacy-sandbox/)**"
+tracking the milestones on the path to phasing out third-party cookies in Chrome
+and working towards a more private web. Each month we'll share an overview of
+the updates to [the Privacy Sandbox
+timeline](https://privacysandbox.com/timeline/) along with news from across the
+project.
 
 ## Events
 
@@ -61,21 +62,19 @@ groups. These are deep technical discussions on protocol designs—if you have t
 appropriate expertise and an interest in contributing to these discussions,
 please consider joining.
 
-
 ## Strengthen cross-site privacy boundaries
 
 Third-party cookies are a key mechanism that enables cross-site tracking. Being
 able to phase them out is a major milestone, but we also need to tackle other
 forms of cross-site storage or communication.
 
-
 ### Federated Credentials Management API
 
 The **[Federated Credentials Management (FedCM)
 proposal](https://github.com/WICG/FedCM)** is the new, more meaningful name for
-WebID.  Federated identity is a critical service for the web, but given it's
-explicitly about sharing aspects of identity with other sites there are
-technical details that overlap with cross-site tracking.
+WebID.  Federated identity is a critical service for the web, but given that
+it's explicitly about sharing aspects of identity with other sites, there are
+implementation details which overlap with cross-site tracking.
 
 The Federated Credentials Management proposal explores a range of options from
 simple migration paths for existing solutions to more private methods of
@@ -106,7 +105,6 @@ As the cookie-related proposals progress, you should be auditing your own
 `SameSite=None` or **cross-site cookies** and planning the action you will need
 to take on your site.
 
-
 #### CHIPS
 
 If you set cookies that are sent in cross-site contexts, but in 1:1
@@ -116,9 +114,9 @@ Partitioned State. This allows you to mark cookies as "Partitioned" putting them
 in a separate cookie jar per top-level site.
 
 Work is progressing on CHIPS and while the feature is available behind
-`chrome://flags/#partitioned-cookies` and `--partitioned-cookies` CLI flag it is
-not yet in a fully testable state. We will provide updated testing and debugging
-details once the implementation is more complete.
+`chrome://flags/#partitioned-cookies` and the `--partitioned-cookies` CLI flag,
+it is not yet in a fully testable state. We will provide updated testing and
+debugging details once the implementation is more complete.
 
 {% Img src="image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/D271bfhBSxVcW29p424S.png",
 alt="The top-level site, green.com has an iframe to red.com. red.com sets a
@@ -128,9 +126,9 @@ site.", width="800", height="240" %}
 
 #### First-Party Sets
 
-If you set cookies for cross-site contexts, but only across sites you own—like
-you host a service on your .com that's used by your .co.uk—then you should
-follow **[First-Party
+If you set cookies for cross-site contexts, but only across sites you own—for
+example, you host a service on your .com that's used by your .co.uk—then you
+should follow **[First-Party
 Sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/)**.
 This proposal defines a way of declaring which sites you want to form a set and
 then marking cookies as "SameParty" so that they are only sent for contexts
@@ -139,10 +137,9 @@ inside of that set.
 First-Party Sets are [available for local developer
 testing](https://www.chromium.org/updates/first-party-sets) behind the
 `chrome://flags/#use-first-party-set` and
-`chrome://flags/#sameparty-cookies-considered-first-party` flags allowing you to
-specify your own set of related sites and experiment with cookie behavior across
-them.
-
+`chrome://flags/#sameparty-cookies-considered-first-party` flags, allowing you
+to specify your own set of related sites, and experiment with cookie behavior
+across them.
 
 ### Storage Partitioning
 
@@ -158,13 +155,11 @@ BroadcastChannel, Web Locks API, Storage Buckets, or other form of storage or
 communication API where you rely on accessing that data across multiple sites
 then you should track this topic for future updates.
 
-
 ## Preventing covert tracking
 
 As we reduce the options for explicit cross-site tracking, we also need to
 address the areas of the web platform that expose identifying information that
 enables fingerprinting or covert tracking of users.
-
 
 ### User-Agent string reduction and User-Agent Client Hints
 
@@ -177,8 +172,8 @@ reduced format on requests to your resources.
 
 You can track the full [timeline for reducing Chrome's
 user-agent](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html),
-with [further examples and the rollout phases
-here](https://www.chromium.org/updates/ua-reduction). You will also need to
+with [further examples and details of rollout
+phases](https://www.chromium.org/updates/ua-reduction). You will also need to
 [migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) if you
 depend on the platform version, device, or full build version information in the
 current user-agent format.
@@ -191,13 +186,11 @@ on expanding the range of character
 types](https://groups.google.com/a/chromium.org/g/blink-dev/c/ueudFsZzT1M)**
 sent in the GREASE part of the values.
 
-
 ## Show relevant content and ads
 
 As we move towards phasing out third-party cookies, we need to introduce APIs
 that enable the use cases that depended on them but **without** continuing to
 enable cross-site tracking.
-
 
 ### FLoC
 
@@ -209,18 +202,16 @@ to work on next steps and decisions for FLoC, you should see some exploratory
 code around the concept of topics ([previously
 referenced](https://datatracker.ietf.org/meeting/111/agenda/?show=pearg)) to
 show up in the Chromium code base soon. As all of Chrome's development happens
-in the open, this work will be visible but there isn't anything immediately
+in the open, this work will be visible, but there isn't anything immediately
 actionable for developer testing (nor is this applicable to users). We look
 forward to sharing updates on the FLoC proposal in the new **[PATCG (Private
 Advertising Technology Community Group)](https://www.w3.org/community/patcg/)**.
-
 
 ## Measure digital ads
 
 As the companion to displaying ads without cross-site tracking, we need
 privacy-preserving mechanisms to enable measuring the effectiveness of those
 ads.
-
 
 ### Attribution Reporting API
 
@@ -231,18 +222,16 @@ ad, that lead to a conversion on another site—again, all without being able to
 track the individual on that cross-site journey.
 
 We would like to continue testing on the Attribution Reporting API and we are
-[planning on extending the origin
+planning on [extending the origin
 trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA)
 through to Chrome 97. Current origin trial tokens expired on October 12th, so
 you will need to apply for updated tokens to continue testing.
-
 
 ## Fight spam and fraud on the web
 
 The other challenge as we reduce the surfaces available for cross-site tracking
 is that these same fingerprinting techniques are often used for spam and fraud
 protection. We need privacy-preserving alternatives here as well.
-
 
 ### Trust Tokens
 
@@ -258,16 +247,15 @@ TPAC](https://github.com/WICG/trust-token-api/blob/main/meetings/tpac2021-antifr
 representatives from across the ecosystem discussed some of the current
 challenges and approaches.
 
-
 ## Feedback
 
 As we continue to publish these monthly updates and progress through the Privacy
 Sandbox as a whole we want to make sure that you as a developer are getting the
 information and support that you need. Let us know on [@ChromiumDev
 Twitter](https://twitter.com/ChromiumDev) if there's anything that we could
-improve in this series, we'll use your input to continue improving the format.
+improve in this series. We'll use your input to continue improving the format.
 
-We have also added an **[Privacy Sandbox FAQ
+We have also added a **[Privacy Sandbox FAQ
 section](https://developer.chrome.com/docs/privacy-sandbox/faq/)** which we will
 continue to expand based on the issues you submit to the [developer support
 repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support). If you
