@@ -29,7 +29,7 @@ alt="Chrome Dev Summit, agenda now live, attend virtually from November 3rd",
 width="800", height="267" %}
 
 From the 3rd of November we will be hosting the **[Chrome Developer
-Summit](https://developer.chrome.com/devsummit/)**. You will be able to get an
+Summit](/devsummit/)**. You will be able to get an
 update on Privacy Sandbox in [the
 keynote](https://developer.chrome.com/devsummit/schedule/keynote/) along with an
 opportunity to ask questions to the leadership team in the
