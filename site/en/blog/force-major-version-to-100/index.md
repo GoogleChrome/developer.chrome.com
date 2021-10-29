@@ -23,7 +23,7 @@ In the first half of 2022, Chrome will reach a three-digit major version number:
 with User-Agent parsing libraries as the major version number went from one
 digit to two.  Now that we are approaching version 100 in both Chrome and
 Firefox, with Edge not far behind, we want to detect possible issues related
-to three-digit version number early, so we are ready when the it becomes a reality.
+to three-digit version number early, so we are ready when it becomes a reality.
 
 Starting in Chrome 96, until Chrome 99, a feature flag will be available to force the User-Agent
 string to use the major version number 100, regardless of the actual major version
@@ -50,7 +50,7 @@ Visiting
 after enabling the flag reports that the User-Agent has major version number 100.
 
 {% Img src="image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/MGCXqOiqbhEF22Dvkgav.png", alt="A site that checks if the browser is sending User-
-Agent string 100. It displays: Yes, because you're reporting as Chrome version 100 and that's under 99.", width="800", height="567" %}
+Agent string 100. It displays: Yes, because you're reporting as Chrome version 100 and that's over 99.", width="800", height="567" %}
 
 The goal is to uncover as many issues as possible ahead of time, so send your
 bug reports to
