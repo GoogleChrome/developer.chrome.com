@@ -131,7 +131,7 @@ example, you host a service on your .com that's used by your .co.uk—then you
 should follow **[First-Party
 Sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/)**.
 This proposal defines a way of declaring which sites you want to form a set and
-then marking cookies as "SameParty" so that they are only sent for contexts
+then marking cookies as `SameParty` so that they are only sent for contexts
 inside of that set.
 
 First-Party Sets are [available for local developer
