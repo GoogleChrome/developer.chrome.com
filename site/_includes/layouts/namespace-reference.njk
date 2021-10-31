@@ -62,12 +62,12 @@
 
         <div>{# This div prevents flow-space-300 from applying to the parent stack. #}
           <ul class="code-sections code-sections--summary flow-space-300 stack">
-            {% set commentText %}{{ macros.renderCommentText(namespace.root) | trim }}{% endset %}
-            {% if commentText %}
+            {% set commentHtml %}{{ macros.renderCommentText(namespace.root) | trim }}{% endset %}
+            {% if commentHtml %}
               <li>
                 <div class="code-sections__label">Description</div>
                 <div class="type">
-                  {{ commentText }}
+                  {{ commentHtml | safe }}
                 </div>
               </li>
             {% endif %}
