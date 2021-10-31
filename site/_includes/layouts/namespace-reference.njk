@@ -62,12 +62,15 @@
 
         <div>{# This div prevents flow-space-300 from applying to the parent stack. #}
           <ul class="code-sections code-sections--summary flow-space-300 stack">
-            <li>
-              <div class="code-sections__label">Description</div>
-              <div class="type">
-                {{ macros.renderCommentText(namespace.root) }}
-              </div>
-            </li>
+            {% set commentText %}{{ macros.renderCommentText(namespace.root) | trim }}{% endset %}
+            {% if commentText %}
+              <li>
+                <div class="code-sections__label">Description</div>
+                <div class="type">
+                  {{ commentText }}
+                </div>
+              </li>
+            {% endif %}
 
             {% if f.permissions.length %}
               <li>
@@ -93,8 +96,8 @@
               </li>
             {% endif %}
 
-            {% set availabilityHtml %}{{ macros.renderAvailability(namespace.root) }}{% endset %}
-            {% if availabilityHtml | trim %}
+            {% set availabilityHtml %}{{ macros.renderAvailability(namespace.root) | trim }}{% endset %}
+            {% if availabilityHtml %}
               <li class="lg:align-center">
                 <div class="code-sections__label">Availability</div>
                 {{ availabilityHtml | safe }}
