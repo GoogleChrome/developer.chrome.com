@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const childProcess = require('child_process');
 
+// Just contains SW packages for now.
 const workboxPackages = [
   'workbox-background-sync',
   'workbox-broadcast-update',
