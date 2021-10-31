@@ -107,14 +107,18 @@ for the presence of the **Version/\_X.X\_** string in the WebView user-agent str
 the specific Chrome version number (for example, 30.0.0.0) as the version numbers changes with each
 release.
 
-**WebView UA in Lollipop and Above**
-
-In the newer versions of WebView, you can differentiate the WebView by looking for the wv field as
-highlighted below.
+**WebView UA in Lollipop to Android 10**
 
 <pre><code>Mozilla/5.0 (Linux; Android 5.1.1; Nexus 5 Build/LMY48B; <mark>wv</mark>)
 AppleWebKit/537.36 (KHTML, like Gecko) 
 Version/4.0 <mark>Chrome/43.0.2357.65</mark> Mobile Safari/537.36</code></pre>
+
+**WebView UA in Android 10 and Above**
+
+In the newer versions of WebView, you can differentiate the WebView by looking for the wv field as
+highlighted below.
+
+<pre><code>Mozilla/5.0 (Linux; U; Android 10; SM-G960F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 <mark>Chrome/95.0.4638.50</mark> Mobile Safari/537.36 OPR/60.0.2254.59405</code></pre>
 
 [1]: https://play.google.com/store/apps/details?id=com.android.chrome
 [2]: /docs/multidevice/webview/
