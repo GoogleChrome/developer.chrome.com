@@ -24,7 +24,7 @@
  */
 
 const typedoc = require('typedoc');
-const {InsertMissingTagsHelper} = require('./dts-parse-helper');
+const {InsertMissingTagsHelper} = require('./dts-parse/missing-param-tags');
 
 // matches "{@link ...}"
 const linkMatch = /{@link (\S+?)(|\s+.+?)}/g;
@@ -284,15 +284,50 @@ class Transform {
   }
 
   /**
+   * Filters a given node.
+   *
+   * @param {typedoc.JSONOutput.DeclarationReflection} node
+   * @param {ExtendedReflection?} _parent
+   * @param {ExtendedReflection} _namespace
+   * @return {boolean}
+   */
+  // eslint-disable-next-line no-unused-vars
+  filter(node, _parent, _namespace) {
+    if (node.flags.isPrivate) {
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * Walks and visits all nodes, filtering as nessecary.
+   *
+   * @param {Iterable<typedoc.JSONOutput.DeclarationReflection>} nodes
+   * @param {ExtendedReflection?} parent
+   * @param {ExtendedReflection} namespace
+   * @return {ExtendedReflection[]}
+   */
+  walkAll(nodes, parent, namespace) {
+    const walked = Array.from(nodes).map(node =>
+      this.walk(node, parent, namespace)
+    );
+    return /** @type {ExtendedReflection[]} */ (walked.filter(x => x));
+  }
+
+  /**
    * Walks and visits a single node, converting the `node` param to actually provide the extended
    * type {@link ExtendedReflection}. This is called recursively from within this method.
    *
    * @param {typedoc.JSONOutput.DeclarationReflection} node
    * @param {ExtendedReflection?} parent
    * @param {ExtendedReflection} namespace
-   * @return {ExtendedReflection} the same node but casted to {@link ExtendedReflection}
+   * @return {ExtendedReflection?} the same node but casted to {@link ExtendedReflection}
    */
   walk(node, parent, namespace) {
+    if (!this.filter(node, parent, namespace)) {
+      return null;
+    }
+
     const extendedNode = /** @type {ExtendedReflection} */ (node);
 
     let nodePrefix = 'type';
@@ -320,9 +355,7 @@ class Transform {
 
         // Walk these nodes and apply as a method.
         if (children) {
-          const parameters = children.map(c =>
-            this.walk(c, extendedNode, namespace)
-          );
+          const parameters = this.walkAll(children, extendedNode, namespace);
           if (!isDeclarative) {
             extendedNode._method = {parameters};
           }
@@ -347,9 +380,7 @@ class Transform {
 
       if (children.length) {
         // Upgrade and cast all the children to `properties`.
-        const properties = children.map(c =>
-          this.walk(c, extendedNode, namespace)
-        );
+        const properties = this.walkAll(children, extendedNode, namespace);
         extendedNode._type = {properties};
       }
     }
@@ -372,6 +403,11 @@ class Transform {
 
       for (const s of signatures) {
         for (const param of s.parameters ?? []) {
+          // This is incorrect syntax that annotates optional params, e.g. "[foo]"
+          // It shows up inside the Workbox source.
+          if (/^\[.*\]$/.test(param.name)) {
+            param.name = param.name.substring(1, param.name.length - 1);
+          }
           if (!allParams.has(param.name) || param.flags.isOptional) {
             allParams.set(param.name, param);
           }
@@ -418,19 +454,25 @@ class Transform {
         };
 
         // Upgrade the virtual node we just built and store.
-        extendedNode._method.return = this.walk(
-          virtualNode,
-          extendedNode,
-          namespace
-        );
-        if (returnType?.type === 'reference' && returnType.name === 'Promise') {
+        extendedNode._method.return =
+          this.walk(virtualNode, extendedNode, namespace) ?? undefined;
+
+        // "returnsAsync" is a concept only for Chrome types where we have multiple signatures.
+        // If there's a single signature, don't bother announcing this.
+        if (
+          signatures.length >= 2 &&
+          returnType?.type === 'reference' &&
+          returnType.name === 'Promise'
+        ) {
           extendedNode._method.isReturnsAsync = true;
         }
       }
 
       // Upgrade all the parameters and store on the extended type.
-      extendedNode._method.parameters = [...allParams.values()].map(p =>
-        this.walk(p, extendedNode, namespace)
+      extendedNode._method.parameters = this.walkAll(
+        allParams.values(),
+        extendedNode,
+        namespace
       );
     }
 

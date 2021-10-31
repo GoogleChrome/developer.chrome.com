@@ -8,7 +8,21 @@ const fs = require('fs');
 const path = require('path');
 const childProcess = require('child_process');
 
-const workboxPackages = ['workbox-broadcast-update'];
+const workboxPackages = [
+  'workbox-background-sync',
+  'workbox-broadcast-update',
+  'workbox-cacheable-response',
+  'workbox-core',
+  'workbox-expiration',
+  'workbox-google-analytics',
+  'workbox-navigation-preload',
+  'workbox-precaching',
+  'workbox-range-requests',
+  'workbox-recipes',
+  'workbox-routing',
+  'workbox-strategies',
+  'workbox-streams',
+];
 
 /**
  * @param {string[]} packages
