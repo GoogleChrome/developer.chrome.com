@@ -5,7 +5,8 @@ description: >
 layout: "layouts/blog-post.njk"
 authors:
   - kateryna
-date: 2021-10-28
+  - alcastano
+date: 2021-11-01
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/9Ou6xcKgElq9nEW3KrGM.jpg'
 alt: ''
 tags:
