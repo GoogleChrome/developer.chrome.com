@@ -5,7 +5,7 @@ title: Using promises
 # subhead: 'How to use promises when calling extensions APIs'
 
 # This appears in the ToC of the project landing page at
-# /docs/[project-name]/. It also appears in the <meta description> used in 
+# /docs/[project-name]/. It also appears in the <meta description> used in
 # Google Search.
 description: 'How to use promises when calling extensions APIs'
 
@@ -17,13 +17,15 @@ date: 2021-03-26
 
 ---
 
-Many extension API methods support promises.  This document explains how to use promises when
-calling these methods.
+With the introduction of Manifest V3, many extension API methods now support promises. This document
+explains how to use promises when calling these methods.
 
 {% Aside "key-term" %}
+
 A *promise* is a JavaScript object that represents the eventual outcome of an asynchronous
-operation. For more about promises and their use, see the MDN documentation on
-[using promises][mdn-promises].
+operation. For more about promises and their use, see the MDN documentation on [using
+promises][mdn-promises].
+
 {% endAside %}
 
 ## Introduction
@@ -35,11 +37,15 @@ They are an important feature of modern JavaScript, providing benefits such as:
 * Coding in a synchronous style for invoking asynchronous functions
 * A simple "fork and join" syntax for invoking concurrent functions
 
-Extensions can use promises beginning with Manifest V3. Many API methods support promises, and we
-are progressively adding promise support to additional API methods.
+In Manifest V2 extension developers could use libraries to "promisify" Chrome's extensions APIs.
+With the introduction of Manifest V3 many of Chrome's extensions APIs can now return promises. The
+Chrome team is also progressively adding promise support to additional APIs.
 
 {% Aside 'gotchas' %}
-Promises are not available for extensions using Manifest V2, and are not available on all API methods.
+
+Promises are not available for extensions using Manifest V2, and are not available on all API
+methods.
+
 {% endAside  %}
 
 Promises can and should be used in many circumstances. However, there are times (for example, event
@@ -55,10 +61,10 @@ Not all methods in extensions APIs support promises. Sometimes that's because we
 promise support on the method yet; in many cases it's because using a promise isn't feasible for the
 method.
 
-You see if an API method support promises by checking its API reference page:
- 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/AYQVtnh19vNMHoXzxZB1.png", alt="Screenshot showing a
-method that supports promises", width="800", height="280" %}
+You can check whether or not an API method supports promises by checking its API reference page:
+
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/AYQVtnh19vNMHoXzxZB1.png",
+  alt="Screenshot showing a method that supports promises", width="800", height="280" %}
 
 The screenshot above shows a method from the [`chrome.tabs`][api-tabs-methods] API. You can see that
 this method supports promises because one of the method's signatures returns a promise. To make this
@@ -71,7 +77,8 @@ should consider using promises in situations such as the following:
 
 * Any time that you want to clean up your code by using a more "synchronous" invocation style.
 * Where error handling would be too difficult using callbacks.
-* When you want a simpler way to invoke a number of concurrent methods and gather the results into a single thread of code.
+* When you want a simpler way to invoke a number of concurrent methods and gather the results into a
+  single thread of code.
 
 ### Converting a callback to a promise {: #compare-to-callback}
 
@@ -79,15 +86,9 @@ One way to understand how you can use promises in extensions APIs is to compare 
 fragments, one using a callback and one using a promise. The following example shows this
 comparison:
 
-<!--
-// --- Standard callback implementation ---
-// --- Promise implementation ---
--->
-
 #### Standard callback implementation
 
 ```js
-
 function openTabOnRight(onComplete) {
   chrome.tabs.query(queryOptions, function(tabs) {
     if (chrome.runtime.lastError) {
@@ -118,8 +119,10 @@ function openTabOnRight(onComplete) {
 #### Promise implementation
 
 ```js
+// This sample does not have explicit error handlers because errors
+// are automatically propagated down the promise chain.
+
 function openTabOnRight() {
-  // Errors are automatically propagated down the promise chain
   return chrome.tabs.query(queryOptions)
     .then((tabs) => {
       if (!tabs.length) return;
@@ -138,7 +141,6 @@ function openTabOnRight() {
 }
 ```
 
-
 ### Error handling
 
 Returning errors works differently depending on whether the extension is using a callback or a
@@ -149,7 +151,7 @@ promise.
 If using a callback, then `chrome.runtime.lastError` is set for the duration of the execution of the
 callback. It is not thrown as a JS Error (which would interrupt JS execution), and is not set
 outside the duration of the callback run (which would result in it being "randomly" set during other
-execution).  The extension would look at the last error like this:
+execution). The extension would look at the last error like this:
 
 ```js
 chrome.tabs.create({...}, (result) => {
@@ -161,8 +163,8 @@ chrome.tabs.create({...}, (result) => {
 
 #### Error handling with promises
 
-Promises are designed to deliver asynchronous results, both success and failure.  A failure in a
-promise (a promise rejection) is handled differently.  It might look like this:
+Promises are designed to deliver asynchronous results, both success and failure. A failure in a
+promise (a promise rejection) is handled differently. It might look like this:
 
 ```js
 chrome.tabs.create({...})
@@ -178,18 +180,20 @@ Extensions APIs don't set `chrome.runtime.lastError` when you use a promise; ins
 the error as an argument to the function in the `.catch()`.
 
 {% Aside %}
+
 In simpler cases with a single promise, you can instead supply your error handler as the second
 parameter to `.then()` instead of chaining to a `.catch()`. For more about this topic, see this [MDN
 article on chained promises][mdn-promise-chain].
+
 {% endAside %}
 
-Whether you receive the error using `.catch()` or the optional second parameter of `.then()`,
-this form of error handling helps you write async logic in a more synchronous style.
+Whether you receive the error using `.catch()` or the optional second parameter of `.then()`, this
+form of error handling helps you write async logic in a more synchronous style.
 
 ### Using async/await
 
-JavaScript also provides async/await as syntactic sugar on top of promises, letting you code in a more
-imperative style. The following example shows how to implement the [example shown
+JavaScript also provides async/await as syntactic sugar on top of promises, letting you code in a
+more imperative style. The following example shows how to implement the [example shown
 earlier](#compare-to-callback) using async/await:
 
 ```js
@@ -199,24 +203,25 @@ async function openTabOnRight() {
   // When not wrapped in try/catch, errors thrown in an async
   // function will propagate down the promise chain
   let tabs = await chrome.tabs.query(queryOptions);
-
   if (!tabs.length) return;
+
   let tab = await chrome.tabs.create({
     url: 'https://example.com',
     index: tab[0].index + 1,
   });
-
   if (!tab) return;
+
   console.log('tab created', tab);
   return tab;
 }
 ```
 
 {% Aside %}
+
 Note that `await` is only valid in async functions and the top-level bodies of modules.
+
 {% endAside %}
 
+[api-tabs-methods]: /docs/extensions/reference/tabs/#methods
 [mdn-promise-chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises
 [mdn-promises]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
-[api-tabs-methods]: /docs/extensions/reference/tabs/#methods
-
