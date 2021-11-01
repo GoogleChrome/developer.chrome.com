@@ -47,6 +47,7 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 
 
 ## Actualizaciones de la pestaña de renderizado
+
 ### ??? Emule la función multimedia CSS de contraste {: # prefers-contrast }
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/47fsHvVLiVC9J0eWY9wD.png", alt="Emule la función multimedia CSS de constraste", width="800", height="483" %}
