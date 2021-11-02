@@ -218,10 +218,13 @@ async function openTabOnRight() {
 
 {% Aside %}
 
-Note that `await` is only valid in async functions and the top-level bodies of modules.
+Note that `await` is only valid in async functions and the top-level bodies of modules. You can load
+your background service worker as a module by setting `"type": "module"` in the "background" key of
+your extension's [manifest][doc-manifest].
 
 {% endAside %}
 
 [api-tabs-methods]: /docs/extensions/reference/tabs/#methods
 [mdn-promise-chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises
 [mdn-promises]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
+[doc-manifest]: /docs/extensions/mv3/manifest/
