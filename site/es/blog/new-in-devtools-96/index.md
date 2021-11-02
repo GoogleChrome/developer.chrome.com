@@ -176,7 +176,7 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 ## [Experimental] Nuevo panel de la API de informes en el panel de la aplicación {: #reporting-api }
 
 {% Aside %}
-Para habilitar esta característica experimental, marque la casilla de verificación **Habilitar el panel de API de informes en el panel de la aplicación** que encontrará en la siguiente ruta **Configuración** > **Experimentos**.
+Para habilitar esta característica experimental, marque la casilla de verificación **Enable Reporting API panel in the Application panel** que encontrará en la siguiente ruta **Configuración** > **Experimentos**.
 {% endAside %}
 
 La [API de informes](https://web.dev/reporting-api/) está diseñada para ayudarlo a monitorear las violaciones de seguridad de su página, las llamadas a API obsoletas y más.
