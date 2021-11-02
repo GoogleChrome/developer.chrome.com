@@ -3,6 +3,7 @@ const {parallel, watch} = require('gulp');
 // Pull in each task
 const sassTask = require('./gulp-tasks/sass.js');
 const staticTask = require('./gulp-tasks/static.js');
+const writeVersionTask = require('./gulp-tasks/write-version.js');
 
 // Set each directory and contents that we want to watch and
 // assign the relevant task. `ignoreInitial` set to true will
@@ -14,7 +15,7 @@ const watcher = () => {
 };
 
 // The default (if someone just runs `gulp`) is to run each task in parrallel
-exports.default = parallel(sassTask, staticTask);
+exports.default = parallel(sassTask, staticTask, writeVersionTask);
 
 // This is our watcher task that instructs gulp to watch directories and
 // act accordingly

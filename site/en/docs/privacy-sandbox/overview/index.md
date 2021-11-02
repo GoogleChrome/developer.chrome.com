@@ -36,6 +36,7 @@ Some items below link to API explainers or other resources.
 Over the coming months, we'll add more posts within this site to summarize external content.
 {% endAside %}
 
+
 ### Strengthen cross-site privacy boundaries
 
 * [**First-Party Sets**](/docs/privacy-sandbox/first-party-sets): Allow related domain names owned by
@@ -49,7 +50,6 @@ might be enabled, where it makes sense, and how this can be kept safe. The core 
 to be set by a third-party service, but only read within the context of the top-level site where they 
 were initially set. A partitioned third-party cookie is tied to the top-level site where it was initially 
 set and cannot be accessed from elsewhere.
-
 * [**Origin-Bound Cookies**](https://www.chromestatus.com/feature/4945698250293248): Bind cookies to 
 their setting origin by default, so they are only accessible by that origin. 
 * [**SameSite cookies**](https://web.dev/samesite-cookies-explained/): Secure sites by explicitly
