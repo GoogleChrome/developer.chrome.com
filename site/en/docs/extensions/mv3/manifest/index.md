@@ -78,7 +78,6 @@ discusses each field.
   <span class="token property">"<a href="/docs/extensions/reference/permissions">optional_permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"tabs"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/options">options_page</a>"</span><span class="token operator">:</span> <span class="token string">"options.html"</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/options">options_ui</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"chrome_style"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"options.html"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/reference/permissions">permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"tabs"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
