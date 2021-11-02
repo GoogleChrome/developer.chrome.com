@@ -163,7 +163,7 @@ Once you've completed this step, upload your extension using the Developer Dashb
 [Publishing Your extension][publish].
 
 {% Aside %}
-Before publishing your extension, remove comments from all JSON files.
+Before publishing your extension, you must remove comments from all JSON files.
 {% endAside %}
 
 ### Detailed description {: #cws-description }
@@ -271,6 +271,14 @@ your extension to be listed in a particular region, unselect that region from th
 {% Aside %}
 Unselecting a region prevents your extension from being listed in that region.
 {% endAside %}
+
+## Switch languages in the Chrome Web Store
+
+To see what your store listing will look like in each language, you can choose the Chrome
+Web Store language in the Settings icon at the top right corner of the page.
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xVFiHOU8OUfAdgvVvlCP.PNG", alt="ALT_TEXT_HERE", width="488", height="227" %}
+
 
 [cws-description]: #cws-description
 [cws-screenshots]: #cws-screenshots
