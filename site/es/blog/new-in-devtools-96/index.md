@@ -67,7 +67,7 @@ Use DevTools para emular el tema oscuro automático para ver fácilmente cómo s
 
 Chrome 96 presenta una [Prueba de origen](/blog/origin-trial/) para [Tema oscuro automático](/blog/auto-dark-theme/) en Android. Con esta función, el navegador aplica un tema oscuro generado automáticamente a sitios con temas claros, cuando el usuario ha optado por temas oscuros en el sistema operativo.
 
-Abra el [Menú de comandos](/docs/devtools/command-menu/), ejecute el comando **Mostrar renderizado** y luego configure el menú desplegable **Emular modo oscuro automático**.
+Abra el [Menú de comandos](/docs/devtools/command-menu/), ejecute el comando **Mostrar renderizado / Mostrar la renderización** y luego configure el menú desplegable **Emular modo oscuro automático**.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QHS8kupNsTXnKD7HomYy.png", alt="Emula la función de tema oscuro automático de Chrome", width="800", height="483" %}
 
