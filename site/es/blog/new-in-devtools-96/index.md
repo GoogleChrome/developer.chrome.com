@@ -46,7 +46,7 @@ Lea [este artículo](/docs/devtools/css-overview) para obtener más información
 Chromium issue: [1254557](https://crbug.com/1254557)
 
 
-## Actualizaciones de la pestaña de renderizado
+## Actualizaciones de la pestaña de Renderizado
 
 ### Emule la función multimedia CSS de contraste {: # prefers-contrast }
 
