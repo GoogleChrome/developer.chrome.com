@@ -37,7 +37,7 @@ Puede profundizar más en la información. Por ejemplo, haga clic en un color en
 
 El panel **Descripción General de CSS** es una función de vista previa. Nuestro equipo todavía está trabajando activamente en él y estamos buscando sus [comentarios](https://goo.gle/css-overview-feedback) para obtener más mejoras.
 
-Lea [este artículo](/docs/devtools/css-overview) para obtener más información sobre el panel de **Descripción General de CSS**.
+Lea [este artículo](/docs/devtools/css-overview) para obtener más información sobre el panel de **Descripción General de CSS / Resumen de CSS**.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fXXPihV3bTl82WDJGX51.png", alt="panel de Descripción General de CSS", width="800", height="509" %}
 
