@@ -31,7 +31,7 @@ draft: true
 ## Función de vista previa: Nuevo panel de Descripción General de CSS {: #css-overview }
 
 Utilice el nuevo panel **Descripción General de CSS / Resumen de CSS** para identificar posibles mejoras de CSS en su página.
-[Abra el panel **Descripción general de CSS**](/docs/devtools/css-overview#open), luego haga clic en **Capture overview** para generar un informe del CSS de su página.
+[Abra el panel **Descripción general de CSS / Resumen de CSS**](/docs/devtools/css-overview#open), luego haga clic en **Capture overview** para generar un informe del CSS de su página.
 
 Puede profundizar más en la información. Por ejemplo, haga clic en un color en la sección **Colores** para ver la lista de elementos que aplican el mismo color. Haga clic en un elemento para abrir el elemento en el panel **Elementos**.
 
