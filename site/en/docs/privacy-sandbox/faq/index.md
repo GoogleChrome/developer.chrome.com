@@ -224,6 +224,10 @@ Or the equivalent JavaScript interface:
 
 For hardware-specific use-cases, the device model name may be requested via the high entropy `Sec-CH-UA-Model` hint.
 
+### Do subdomains (including CNAMEs) require a top-level page `Permissions-Policy` to access high entropy UA-CH?
+
+High-entropy UA-CH on request headers are restricted on cross-origin requests regardless of how that origin is defined on the DNS side. Delegation must be handled via `Permissions-Policy` for any cross-origin subresource, or obtained via JavaScript executing in the cross-origin context.
+
 ## Shared storage
 
 ### How can I ask a question about this feature?
