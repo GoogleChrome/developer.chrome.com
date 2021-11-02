@@ -27,7 +27,6 @@
         </td>
         <td class="reference-collapse type">
           {{ macros.renderAvailability(namespace.root, 'pad-bottom-300') }}
-          {{ macros.renderCommentText(namespace.root) }}
           {# We have a "_comment" extended field but we use shortText here in case it references peer files #}
           {{ namespace.root.comment.shortText | md | safe }}
         </td>
