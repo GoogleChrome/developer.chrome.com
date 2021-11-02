@@ -104,14 +104,18 @@ detailed description and screenshots.
 
 ### Name and description {: #localize-manifest }
 
-You localize the name and description by modifying `manifest.json` and providing a `_locales`
+You localize the [name][name] and [description][description] by modifying `manifest.json` and providing a `_locales`
 directory in your extension's ZIP file. Specifically, you need to:
 
-- Modify the `name` and `description` manifest fields.
-- Add a `default_locale` field.
+- Modify the `"name"` and `"description"` manifest fields.
+- Add a `"default_locale"` field.
 - Provide at least one `_locales/LOCALE_CODE/messages.json` file. Replace
   [*LOCALE_CODE*][supported-locales] with a supported locale; each `messages.json` file contains the strings for one
   locale.
+
+{% Aside %}
+The name (45) and description (132) should not exceed the maximum supported characters.
+{% endAside %}
 
 Here's an example of how you might specify the name and description of an internationalized
 extension that has English as its default language and British English as its secondary language:
@@ -157,6 +161,10 @@ For more details, see the extension [Internationalization][i18n] documentation:
 
 Once you've completed this step, upload your extension using the Developer Dashboard, as described in
 [Publishing Your extension][publish].
+
+{% Aside %}
+Before publishing your extension, remove comments from all JSON files.
+{% endAside %}
 
 ### Detailed description {: #cws-description }
 
@@ -266,11 +274,13 @@ Unselecting a region prevents your extension from being listed in that region.
 
 [cws-description]: #cws-description
 [cws-screenshots]: #cws-screenshots
+[description]: /docs/apps/manifest/description/
 [dev-console]: https://chrome.google.com/webstore/devconsole
 [distribution]: /docs/webstore/cws-dashboard-distribution/#setting-the-geographic-distribution
 [i18n]: /docs/extensions/reference/i18n/
 [item-description]: /docs/webstore/cws-dashboard-listing/#product-details
 [manifest]: #localize-manifest
+[name]: /docs/extensions/mv3/manifest/name/
 [publish]: /docs/webstore/publish#upload-your-item 
 [regions]: #regions
 [screenshot-guidelines]: /docs/webstore/images#screenshots
