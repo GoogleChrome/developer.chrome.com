@@ -166,7 +166,7 @@ Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 
 ## Panel de caché de la aplicación en desuso (deprecated) en el panel de la aplicación  {: #app-cache } -->
 
-El panel [Caché de la aplicación](https://developer.chrome.com/docs/devtools/storage/applicationcache/) en el panel de la aplicación se eliminó como el soporte para [AppCache](https://web.dev/appcache-removal/) se elimina de Chrome y otros navegadores basados ​​en Chromium.
+El panel [Caché de la aplicación](https://developer.chrome.com/docs/devtools/storage/applicationcache/) en el panel de Aplicación se eliminó pues el soporte para [AppCache](https://web.dev/appcache-removal/) se ha eliminado de Chrome y otros navegadores basados ​​en Chromium.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
