@@ -33,7 +33,7 @@
     "start": "node ./server",
     "test:watch": "ava --watch",
     "test": "nyc ava",
-    "version-check": "node version-check.js",
+    "version-check": "npm run sync-external && node version-check.js",
     "build-external": "node ./external/build-external.js",
     "maybe-sync-external": "node ./external/maybe-sync-external.js",
     "sync-external": "node ./external/sync-external.js"

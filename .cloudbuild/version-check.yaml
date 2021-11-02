@@ -13,3 +13,8 @@ steps:
     env:
     - 'PROJECT_ID=$PROJECT_ID'
     - 'NODE_ENV=production'
+
+options:
+  env:
+  - 'PROJECT_ID=$PROJECT_ID'
+  - 'NODE_OPTIONS=--unhandled-rejections=strict'
