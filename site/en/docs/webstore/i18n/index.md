@@ -114,7 +114,7 @@ directory in your extension's ZIP file. Specifically, you need to:
   locale.
 
 {% Aside %}
-The name (45) and description (132) should not exceed the maximum supported characters.
+The name should not exceed 45 characters and the description 132 characters.
 {% endAside %}
 
 Here's an example of how you might specify the name and description of an internationalized
@@ -274,8 +274,8 @@ Unselecting a region prevents your extension from being listed in that region.
 
 ## Switch languages in the Chrome Web Store
 
-To see what your store listing will look like in each language, you can choose the Chrome
-Web Store language in the Settings icon at the top right corner of the page.
+To see what your store listing in each locale, you can choose the Chrome
+Web Store language in the Settings icon located at the top right corner of your store listing.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/xVFiHOU8OUfAdgvVvlCP.PNG", alt="ALT_TEXT_HERE", width="488", height="227" %}
 
