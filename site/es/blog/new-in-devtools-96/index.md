@@ -54,7 +54,7 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 
 La función multimedia [prefers-contrast](https://www.chromestatus.com/feature/5646323212615680) se utiliza para detectar si el usuario ha solicitado más o menos contraste en la página.
 
-Abra el [Menú de comandos](/docs/devtools/command-menu/), ejecute el comando **Mostrar renderizado** y luego configure el menú desplegable **Emular la función multimedia CSS prefers-contrast**
+Abra el [Menú de comandos](/docs/devtools/command-menu/), ejecute el comando **Mostrar renderizado / Mostrar la renderización** y luego configure el menú desplegable **Emular la función multimedia CSS prefers-contrast**
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22cec8dbfa7b46c8b633e3555212556ec6f78df9 #}
 
