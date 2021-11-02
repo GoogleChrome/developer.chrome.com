@@ -15,7 +15,7 @@ const fs = require('fs');
 const getVersion = require('../tools/version');
 
 const writeVersionInProd = async () => {
-  if (process.env.ELEVENTY_ENV === 'prod') {
+  if (process.env.NODE_ENV === 'production') {
     const version = getVersion();
     fs.mkdirSync('./dist', {recursive: true});
     fs.writeFileSync('./dist/site-version', version);
