@@ -4,7 +4,7 @@ title: "Record, replay and measure user flows"
 authors:
   - jecelynyeen
 date: 2021-11-02
-#updated: YYYY-MM-DD
+updated: 2021-11-03
 description: "Record, replay and measure user flows with the Recorder panel."
 ---
 
@@ -35,7 +35,7 @@ This is a preview feature in Chrome 97. Our team is actively working on this fea
 
 We will be using this [coffee ordering](https://coffee-cart.netlify.app/) demo page. Checkout is a common user flow among shopping websites.
 
-In the next sections, we will walk you through how to record, replay and audit the following checkout flow with the **Recorder** panel:-
+In the next sections, we will walk you through how to record, replay and audit the following checkout flow with the **Recorder** panel:
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/UcCr4JgWqpJm2n8Y5Q8W.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
@@ -51,12 +51,12 @@ In the next sections, we will walk you through how to record, replay and audit t
 ## Record a user flow {: #record }
 
 1. Open this [demo](https://coffee-cart.netlify.app/) page. Click on the **Start new recording** button to begin.
-2. Enter "coffee checkout" in the **recording name** textbox, then click on the **Start a new recording** button.
+2. Enter "coffee checkout" in the **Recording name** textbox, then click on the **Start a new recording** button.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLa973eE3tGGhHomHkOc.png", alt="Start a new recording", width="800", height="528" %}
 3. The recording is started. The panel is showing **Recording...** indicating the recording is in progress.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fpPKdjSY4lK7cZ5HhZ72.png", alt="recording in progress", width="800", height="528" %} 
 4. Click on *Cappucino* to add it to the cart.
-5. Click on *Americano* to add item to the cart. Notice that the **Recorder** shows the steps that you have performed so far.
+5. Click on *Americano* to add it to the cart. Notice that the **Recorder** shows the steps that you have performed so far.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/UGb19uKQ7X9bkVIhTcwt.png", alt="steps in the Recorder panel", width="800", height="519" %}
 6. Go to the cart page.
 7. Remove *Americano* from the cart.
