@@ -177,8 +177,9 @@ Auto Dark Theme is still being specified,
 and we are looking for feedback across all areas of the implementation:
 from the results of the darkening algorithm to the developer APIs for element customization and opt-out.
 
-Send us feedback by filing a bug on the Chromium bugs using [this link](https://bugs.chromium.org/p/chromium/issues/list?q=component:Mobile%3EAutoDarkTheme),
-via the [origin trial form](/origintrials/#/view_trial/1626925365387591681)
-or join the conversation in the [discussion group](https://groups.google.com/g/auto-dark-theme-external/).
+There are many channels you can send us your feedback:
+ - Via the [developer survey](https://docs.google.com/forms/d/e/1FAIpQLSeb1V8AB1wgvL5mGtRqEmgqSEaUB4ETWEfZyVprYLK9ZP06sA/viewform).
+ - Filing a [bug on the Chromium project](https://bugs.chromium.org/p/chromium/issues/list?q=component:Mobile%3EAutoDarkTheme).
+ - Via the [Origin Trial feedback form]((/origintrials/#/view_trial/1626925365387591681)).
 
 Photo by [Félix Besombes](https://unsplash.com/@druks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
