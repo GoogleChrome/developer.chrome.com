@@ -241,7 +241,7 @@ High-entropy UA-CH on request headers are restricted on cross-origin requests re
 ### How can I ask a question about this feature?
 
 -  For questions about the proposal:
-   [create an issue](https://github.com/WICG/storage-buckets/issues) on the
+   [create an issue](https://github.com/pythagoraskitty/shared-storage/issues) on the
    proposal repo.
 -  For implementation, integration, and general best practice questions:
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
