@@ -8,7 +8,9 @@ date: 2021-11-02
 description: "Record, replay and measure user flows with the Recorder panel."
 ---
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", class="screenshot" %}
+Take a glance of the new **Recoder** panel with the video below. 
+
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %}
 
 Use the **Recorder** panel to record, replay and measure user flows.
 
