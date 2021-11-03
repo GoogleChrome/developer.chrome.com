@@ -2,9 +2,10 @@
 {% import 'macros/render-type.njk' as macros with context %}
 
 {#
-  Renders a table of types based on a given channel filter.
+  Renders a table of types based on a given channel filter. This expects a collection of 11ty pages
+  passed in `all`, which point to the different names rendered on the site.
 #}
-{% macro renderReferenceTable(all, channel, platformAppsOnly = undefined) %}
+{% macro renderReferenceTableForCollection(all, channel, platformAppsOnly = undefined) %}
 
 <table class="reference fixed-table width-full">
   <thead>

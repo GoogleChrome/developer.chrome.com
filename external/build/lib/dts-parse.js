@@ -24,7 +24,7 @@
  */
 
 const typedoc = require('typedoc');
-const {InsertMissingTagsHelper} = require('./dts-parse-helper');
+const {InsertMissingTagsHelper} = require('./dts-parse/missing-param-tags');
 
 // matches "{@link ...}"
 const linkMatch = /{@link (\S+?)(|\s+.+?)}/g;
@@ -35,12 +35,14 @@ const chromeEventRefTypes = ['CustomChromeEvent', 'events.Event', 'Event'];
 class Transform {
   /**
    * @param {typedoc.JSONOutput.ProjectReflection} project
+   * @param {string=} mode
    */
-  constructor(project) {
+  constructor(project, mode) {
     this.project = project;
+    this.mode = mode;
 
     /** @type {{[id: string]: ExtendedReflection}} */
-    this.namespaces = {};
+    this.pageRoots = {};
 
     /** @type {ExtendedReflection[]} */
     this.pendingReferences = [];
@@ -58,11 +60,19 @@ class Transform {
    * @return {Promise<{[id: string]: ExtendedReflection}>}
    */
   async run() {
-    // Find all namespaces with non-namespace children.
-    this.findNamespaceRoots();
+    if (this.mode === 'workbox') {
+      this.findModuleRoots();
+    } else {
+      // Find all namespaces with non-namespace children.
+      this.findNamespaceRoots();
+    }
+
+    if (!Object.keys(this.pageRoots).length) {
+      console.warn(this.project);
+    }
 
     // Walk all namespaces as roots.
-    for (const namespace of Object.values(this.namespaces)) {
+    for (const namespace of Object.values(this.pageRoots)) {
       this.walk(namespace, null, namespace);
     }
 
@@ -108,7 +118,7 @@ class Transform {
     }
 
     // Success!
-    return this.namespaces;
+    return this.pageRoots;
   }
 
   /**
@@ -201,10 +211,35 @@ class Transform {
   }
 
   /**
+   * Walks the project and finds modules which have children. Sets up {@link pageRoots} and
+   * {@link allByName}.
+   */
+  findModuleRoots() {
+    const hasNonModule = (this.project.children ?? []).some(reflection => {
+      return reflection.kind !== typedoc.ReflectionKind.Module;
+    });
+
+    // If the project itself has non-module childen, we probably just parsed a single file.
+    const modules = hasNonModule ? [this.project] : this.project.children ?? [];
+
+    for (const module of modules) {
+      const extendedModule = /** @type {ExtendedReflection} */ (module);
+
+      extendedModule._name = module.name;
+      extendedModule._pageHref = module.name;
+
+      this.pageRoots[extendedModule._name] = extendedModule;
+      this.allByName[extendedModule._name] = extendedModule;
+    }
+  }
+
+  /**
    * Walks the project and find namespaces which have non-namespace children. Sets up
-   * {@link namespaces} and {@link allByName} for these.
+   * {@link pageRoots} and {@link allByName} for these.
    *
-   * In Chrome's source, we have nested namespaces like "networking.onc":
+   * This is used for Chrome's source, which parses a giant file with numerous namespaces.
+   *
+   * Note that in Chrome's source, we have nested namespaces like "networking.onc":
    * "networking" isn't included since it only has namespaces for children.
    */
   findNamespaceRoots() {
@@ -235,7 +270,7 @@ class Transform {
       }
 
       if (!hasOnlyNamespaces) {
-        this.namespaces[id] = extendedNode;
+        this.pageRoots[id] = extendedNode;
         this.allByName[extendedNode._name] = extendedNode;
       }
     };
@@ -249,14 +284,50 @@ class Transform {
   }
 
   /**
+   * Filters a given node.
+   *
+   * @param {typedoc.JSONOutput.DeclarationReflection} node
+   * @param {ExtendedReflection?} _parent
+   * @param {ExtendedReflection} _namespace
+   * @return {boolean}
+   */
+  // eslint-disable-next-line no-unused-vars
+  filter(node, _parent, _namespace) {
+    if (node.flags.isPrivate) {
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * Walks and visits all nodes, filtering as nessecary.
+   *
+   * @param {Iterable<typedoc.JSONOutput.DeclarationReflection>} nodes
+   * @param {ExtendedReflection?} parent
+   * @param {ExtendedReflection} namespace
+   * @return {ExtendedReflection[]}
+   */
+  walkAll(nodes, parent, namespace) {
+    const walked = Array.from(nodes).map(node =>
+      this.walk(node, parent, namespace)
+    );
+    return /** @type {ExtendedReflection[]} */ (walked.filter(x => x));
+  }
+
+  /**
    * Walks and visits a single node, converting the `node` param to actually provide the extended
    * type {@link ExtendedReflection}. This is called recursively from within this method.
    *
    * @param {typedoc.JSONOutput.DeclarationReflection} node
    * @param {ExtendedReflection?} parent
    * @param {ExtendedReflection} namespace
+   * @return {ExtendedReflection?} the same node but casted to {@link ExtendedReflection}
    */
   walk(node, parent, namespace) {
+    if (!this.filter(node, parent, namespace)) {
+      return null;
+    }
+
     const extendedNode = /** @type {ExtendedReflection} */ (node);
 
     let nodePrefix = 'type';
@@ -280,10 +351,16 @@ class Transform {
       if (chromeEventRefTypes.includes(node.type.name)) {
         // This is actually a reference to a Chrome event type. This returns the parameters of the
         // `addListener` method, so they can be upgraded too.
-        const children = this.upgradeEventNode(node);
-        for (const c of children) {
-          this.walk(c, extendedNode, namespace);
+        const {children, isDeclarative} = this.upgradeEventNode(node);
+
+        // Walk these nodes and apply as a method.
+        if (children) {
+          const parameters = this.walkAll(children, extendedNode, namespace);
+          if (!isDeclarative) {
+            extendedNode._method = {parameters};
+          }
         }
+
         nodePrefix = 'event';
       } else {
         // We'll resolve this later.
@@ -302,12 +379,9 @@ class Transform {
       effectiveDeclarationNode.children = [];
 
       if (children.length) {
-        extendedNode._type = {
-          properties: children,
-        };
-        for (const c of children) {
-          this.walk(c, extendedNode, namespace);
-        }
+        // Upgrade and cast all the children to `properties`.
+        const properties = this.walkAll(children, extendedNode, namespace);
+        extendedNode._type = {properties};
       }
     }
 
@@ -329,6 +403,11 @@ class Transform {
 
       for (const s of signatures) {
         for (const param of s.parameters ?? []) {
+          // This is incorrect syntax that annotates optional params, e.g. "[foo]"
+          // It shows up inside the Workbox source.
+          if (/^\[.*\]$/.test(param.name)) {
+            param.name = param.name.substring(1, param.name.length - 1);
+          }
           if (!allParams.has(param.name) || param.flags.isOptional) {
             allParams.set(param.name, param);
           }
@@ -349,15 +428,13 @@ class Transform {
         }
       }
 
-      const parameters = [...allParams.values()];
-
       // Hoist the comment onto the top node if it doesn't already have one (and we didn't pick it
       // up from choosing the signature with a return type).
       // This solves the problem that TypeDoc thinks methods are actually "methodName.methodName".
       nodeComment = nodeComment ?? signatures[0]?.comment;
       node.comment = nodeComment;
 
-      extendedNode._method = {parameters: parameters.slice()};
+      extendedNode._method = {parameters: []};
 
       // If we have a return type, create a virtual ParameterReflection that we walk over and
       // record in "_method.return" for display.
@@ -376,19 +453,27 @@ class Transform {
           },
         };
 
-        extendedNode._method.return = virtualNode;
-        if (returnType?.type === 'reference' && returnType.name === 'Promise') {
+        // Upgrade the virtual node we just built and store.
+        extendedNode._method.return =
+          this.walk(virtualNode, extendedNode, namespace) ?? undefined;
+
+        // "returnsAsync" is a concept only for Chrome types where we have multiple signatures.
+        // If there's a single signature, don't bother announcing this.
+        if (
+          signatures.length >= 2 &&
+          returnType?.type === 'reference' &&
+          returnType.name === 'Promise'
+        ) {
           extendedNode._method.isReturnsAsync = true;
         }
-
-        // Push a virtual node that we traverse over.
-        parameters.push(virtualNode);
       }
 
-      // We just created virtual params, so just walk over them.
-      for (const param of parameters) {
-        this.walk(param, extendedNode, namespace);
-      }
+      // Upgrade all the parameters and store on the extended type.
+      extendedNode._method.parameters = this.walkAll(
+        allParams.values(),
+        extendedNode,
+        namespace
+      );
     }
 
     // This could have embedded types (intersection, union, array or tuple).
@@ -399,7 +484,7 @@ class Transform {
 
       // Grab any inner properties of a union or intersection, entirely for "chrome.storage" which
       // does a weird intersection between a ref and properties.
-      /** @type {typedoc.JSONOutput.DeclarationReflection[]} */
+      /** @type {ExtendedReflection[]} */
       const innerProperties = [];
       const hoistProperties = Boolean(
         t && ('types' in t || 'elementType' in t)
@@ -462,6 +547,8 @@ class Transform {
       const pageIdPart = extendedNode._name.substr(namespace._name.length + 1);
       extendedNode._pageId = nodePrefix + '-' + pageIdPart.replace(/\./g, '-');
     }
+
+    return extendedNode;
   }
 
   /**
@@ -495,7 +582,7 @@ class Transform {
    * magic `_event` property describing its behavior to the rendering code.
    *
    * @param {typedoc.JSONOutput.DeclarationReflection} node
-   * @return {typedoc.JSONOutput.DeclarationReflection[]} to nest into to fix too
+   * @return {{children: typedoc.JSONOutput.DeclarationReflection[], isDeclarative: boolean}}
    */
   upgradeEventNode(node) {
     const extendedNode = /** @type {ExtendedReflection} */ (node);
@@ -556,7 +643,7 @@ class Transform {
       extendedNode._event = {conditions, actions};
 
       // Return virtual types that get updated (for references).
-      return [...conditions, ...actions].map(type => {
+      const children = [...conditions, ...actions].map(type => {
         return {
           id: -1,
           name: '_declarative-fake',
@@ -565,6 +652,7 @@ class Transform {
           type,
         };
       });
+      return {children, isDeclarative: true};
     } else {
       // Otherwise, steal the declaration and include it as a single paramater.
       parameters = [
@@ -579,9 +667,9 @@ class Transform {
     }
 
     // If this is a normal event, pretend it's a method.
-    extendedNode._method = {parameters};
+    // Our parent applies the `_method` update.
     extendedNode._event = {};
-    return parameters;
+    return {children: parameters, isDeclarative: false};
   }
 
   /**
@@ -686,13 +774,17 @@ function declarationWith(node) {
 /**
  * Fetches and builds typedoc JSON for the given .d.ts source files.
  *
- * @param {{silent?: boolean, sources: string[] }} options
+ * @param {{silent?: boolean, sources: string[], mode?: string}} options
  * @return {Promise<{[id: string]: ExtendedReflection}>}
  */
-module.exports = async function parse({silent, sources}) {
-  const app = new typedoc.Application();
-  app.options.addReader(new typedoc.TSConfigReader());
-  app.bootstrap({
+module.exports = async function parse({silent, sources, mode}) {
+  /** @type {typedoc.TypeScript.CompilerOptions} */
+  const typescriptOptions = {
+    declaration: true,
+  };
+
+  /** @type {Partial<typedoc.TypeDocOptions>} */
+  const typedocOptions = {
     emit: 'none',
     listInvalidSymbolLinks: true,
     entryPoints: sources,
@@ -706,30 +798,30 @@ module.exports = async function parse({silent, sources}) {
         console.warn(message);
       }
     },
-  });
+  };
+
+  switch (mode) {
+    case 'workbox':
+      // We don't want to parse DOM.
+      typescriptOptions.lib = ['lib.webworker.d.ts'];
+      break;
+  }
+
+  const app = new typedoc.Application();
+  app.options.addReader(new typedoc.TSConfigReader());
+  app.bootstrap(typedocOptions);
 
   // nb. This doesn't need to be ref'ed, it just attaches to converter.
   new InsertMissingTagsHelper(app.converter);
 
-  app.options.setCompilerOptions(
-    sources,
-    {
-      // TODO: for Workbox assume we're a webworker
-      // lib: ['lib.webworker.d.ts'],
-      declaration: true,
-      // lib: ['lib.esnext.full.d.ts'],
-      // target: typedoc.TypeScript.ScriptTarget.Latest,
-      // moduleResolution: typedoc.TypeScript.ModuleResolutionKind.NodeJs,
-    },
-    undefined
-  );
+  app.options.setCompilerOptions(sources, typescriptOptions, undefined);
   const reflection = app.convert();
   if (!reflection) {
     throw new Error(`failed to convert modules: ${sources}`);
   }
 
   const json = app.serializer.projectToObject(reflection);
-  const t = new Transform(json);
+  const t = new Transform(json, mode);
 
   const out = await t.run();
   return out;

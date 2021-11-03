@@ -76,15 +76,15 @@ declare global {
      * Set if this is something like a dictionary, interface or class that has named elements.
      */
     _type?: {
-      properties: typedoc.JSONOutput.DeclarationReflection[];
+      properties: ExtendedReflection[];
     };
 
     /**
      * Set if this is a method or function.
      */
     _method?: {
-      parameters: typedoc.JSONOutput.ParameterReflection[];
-      return?: typedoc.JSONOutput.ParameterReflection;
+      parameters: ExtendedReflection[];
+      return?: ExtendedReflection;
       isReturnsAsync?: true;
     };
 
