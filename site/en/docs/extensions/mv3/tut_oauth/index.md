@@ -84,11 +84,14 @@ Package the extension directory into a `.zip` file and upload it to the [Chrome 
 Dashboard][8] without publishing it:
 
 1.  At the Developer Dashboard, click **Add new item**.
-2.  Click **Choose file** and select the `.zip` extension directory and upload it.
-3.  Without filling in additional fields, select **Save Draft and return to dashboard**.
+2.  Click **Browse files** and select the `.zip` extension and upload it.
+3.  Go to the **Package** tab and click on **View public key**.
 
-Find the extension under **Your Listings** and click on **more info**. From the popup, copy the
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8j12N4AyvHyjCZaFghv8.png", alt="Developer Dashboard Package tab", width="496", height="321" %}
+
+From the popup, copy the
 public key and add it to the manifest inside the unzipped directory under the [`"key"`][9] field.
+
 
 ```json
 {
@@ -104,8 +107,7 @@ Open the Extensions Management page at `chrome://extensions`, ensure developer m
 upload the unpackaged extension directory. Compare the extension ID on the extensions management
 page to the Item ID in the Developer Dashboard. They should match.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/n6jGhPAAxEjOweiTePjP.png",
-       alt="The ID of the extension matches in all places", height="438", width="567" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/h9FZpdNF45OTl6dKfh65.png", alt="The ID of the extension matches in all places", width="287", height="256" %}
 
 The extension will maintain the same ID by including the `"key"` field in the manifest. Preserving a
 single ID is essential for API registration.
