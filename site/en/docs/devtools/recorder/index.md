@@ -29,7 +29,7 @@ This is a preview feature in Chrome 97. Our team is actively working on this fea
 
 ## Introduction {: #intro }
 
-We will be using this [coffee ordering](https://coffee-cart.netlify.app/) demo page. Checkout is a common user flow among shopping website.
+We will be using this [coffee ordering](https://coffee-cart.netlify.app/) demo page. Checkout is a common user flow among shopping websites.
 
 In the next sections, we will walk you through how to record, replay and audit the following checkout flow with the **Recorder** panel:-
 
