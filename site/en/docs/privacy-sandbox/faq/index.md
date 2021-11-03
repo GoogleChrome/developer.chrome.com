@@ -232,8 +232,11 @@ Hints specified via the `Accept-CH` header will be sent for the duration of the 
 
 UA-CH works with both HTTP/2 and HTTP/3 connections. Note that Client Hints are only sent over secure connections, so make sure you have migrated your site to HTTPS.
 
+### Do subdomains (including CNAMEs) require a top-level page `Permissions-Policy` to access high entropy UA-CH?
 
-## Shared Storage
+High-entropy UA-CH on request headers are restricted on cross-origin requests regardless of how that origin is defined on the DNS side. Delegation must be handled via `Permissions-Policy` for any cross-origin subresource, or obtained via JavaScript executing in the cross-origin context.
+
+## Shared storage
 
 ### How can I ask a question about this feature?
 

@@ -82,10 +82,7 @@ module.exports = {
       if (data.title) {
         return data.title;
       }
-      if (namespace?.name) {
-        return `chrome.${namespace.name}`;
-      }
-      return '?';
+      return namespace?.name ?? '?';
     },
 
     /**

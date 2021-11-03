@@ -368,5 +368,19 @@
     "country": "DE",
     "github": "kateryna-prokopenko",
     "image": "image/OEs9sSlbxePTYhSctRsJ9kgrqPy1/rdQlefvcJBrvTiqSxULm.jpg"
+  },
+  "miketaylr": {
+    "github": "miketaylr",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/v4ogqQjm5vTjRQBaTyRK.png"
+  },
+  "alcastano": {
+    "country": "CH",
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ie3JSl9zE6f51LclZGFS.jpg"
+  },
+  "alexandrawhite": {
+    "country": "US",
+    "github": "heyawhite",
+    "twitter": "heyawhite",
+    "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/tKKMrgVB852NNd1UMRzN.png"
   }
 }
