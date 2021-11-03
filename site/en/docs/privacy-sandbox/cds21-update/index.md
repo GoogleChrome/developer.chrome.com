@@ -107,7 +107,7 @@ depending on the use cases you’re interested in:
 * [Private Advertising Technology Community Group](https://www.w3.org/community/patcg/)
 * [Privacy Community Group](https://www.w3.org/community/privacycg/)
 * [Web Platform Incubator Community Group](https://www.w3.org/community/wicg/)
-* [Federated IDentity Community Group](https://www.w3.org/community/fed-id/)
+* [Federated Identity Community Group](https://www.w3.org/community/fed-id/)
 
 The discussion stage can be highly involved.
 
