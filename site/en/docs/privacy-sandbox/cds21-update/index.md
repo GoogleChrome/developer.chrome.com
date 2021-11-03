@@ -1,6 +1,6 @@
 ---
 layout: layouts/doc-post.njk
-title: CDS 2021 Update
+title: Chrome Developer Summit 2021 update
 subhead: >
   How you can help develop and test new privacy-preserving technologies
 description: >
