@@ -81,6 +81,7 @@
     - url: /docs/devtools/memory-problems/memory-101/
     - url: /docs/devtools/memory-problems/heap-snapshots/
     - url: /docs/devtools/memory-problems/allocation-profiler/
+- url: /docs/devtools/recorder/
 - url: /docs/devtools/media-panel/
 - url: /docs/devtools/webauthn/
 - url: /docs/devtools/workspaces/
