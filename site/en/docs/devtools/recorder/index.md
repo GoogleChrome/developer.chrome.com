@@ -35,13 +35,13 @@ In the next sections, we will walk you through how to record, replay and audit t
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/UcCr4JgWqpJm2n8Y5Q8W.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
-1. Add a coffee to cart.
-2. Add another coffee to cart.
+1. Add a coffee to the cart.
+2. Add another coffee to the cart.
 3. Go to the cart page.
 4. Remove one coffee from the cart.
 5. Start the checkout process.
 6. Fill in payment details.
-7. Checkout.
+7. Check out.
 
 
 ## Record a user flow {: #record }
@@ -51,13 +51,13 @@ In the next sections, we will walk you through how to record, replay and audit t
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLa973eE3tGGhHomHkOc.png", alt="Start a new recording", width="800", height="528" %}
 3. The recording is started. The panel is showing **Recording...** indicating the recording is in progress.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fpPKdjSY4lK7cZ5HhZ72.png", alt="Reocrding in progress", width="800", height="528" %} 
-4. Click on *Cappucino* to add it to cart.
-5. Click on *Americano* to add item to cart. Notice that the **Recorder** shows the steps that you have performed so far.
+4. Click on *Cappucino* to add it to the cart.
+5. Click on *Americano* to add item to the cart. Notice that the **Recorder** shows the steps that you have performed so far.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/5oc3sX16mHPjet76klkS.png", alt="Steps in the Recorder panel", width="800", height="528" %} 
 6. Go to the cart page.
 7. Remove *Americano* from the cart.
 8. Click on the *Total: $19.00* button to start the checkout process.
-9. In the payment details form, fill in the *Name* and *Email* textboxes, and checked the *I would like to receive order updates and promotional messages.* checkbox.
+9. In the payment details form, fill in the *Name* and *Email* textboxes, and check the *I would like to receive order updates and promotional messages.* checkbox.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/rtI0EW36eCZmpPsv0nhz.png", alt="the payment details form", width="800", height="519" %}
 10. Click on the *Submit* button to complete the checkout process.
 11. In the **Recorder** panel. Click **End recording** button to end the recording.
