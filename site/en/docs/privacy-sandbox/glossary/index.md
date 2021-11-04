@@ -262,6 +262,15 @@ Top-level domains such as .com and .org are listed in the
 Note that some 'sites' are actually just subdomains. For example,
 `translate.google.com` and `maps.google.com` are subdomains of `google.com`. These subdomains are [eTLD + 1](#etld).
 
+## WebID
+
+WebID is a proposal for a privacy-preserving approach to federated identity
+services (such as "Sign in with&nbsp;..."). This will allow users to log into
+sites without sharing their personal information with the identity service or
+the site.
+
+WebID is still [in incubation in the W3C](https://github.com/WICG/WebID).
+
 ## .well-known {: #well-known }
 
 A file used to add redirects to a website from standardized URLs.
