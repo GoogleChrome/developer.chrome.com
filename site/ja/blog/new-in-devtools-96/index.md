@@ -44,7 +44,7 @@ draft: true
 
 <!-- The **CSS Overview** panel is a preview feature. Our team is still actively working on it and we are looking for your [feedback](https://goo.gle/css-overview-feedback) for further enhancements. -->
 
-**CSS Overview** パネルは機能プレビューです。私達のチームはまだ積極的にこの機能に取り組んでおり、さらなる改善のための[フィードバック](https://goo.gle/css-overview-feedback)を求めています。
+**CSS Overview** パネルはプレビュー機能です。私達のチームはまだ積極的にこの機能に取り組んでおり、さらなる改善のための[フィードバック](https://goo.gle/css-overview-feedback)を求めています。
 
 <!-- Read [this article](/docs/devtools/css-overview) to learn more on the **CSS Overview** panel. -->
 
