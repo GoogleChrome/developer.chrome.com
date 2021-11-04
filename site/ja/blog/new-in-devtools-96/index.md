@@ -188,7 +188,7 @@ Chromium issue: [1226262](https://crbug.com/1226262)
 
 <!-- ### Option to hide CORS errors in the Console {: #hide-cors-errors } -->
 
-### コンソールで CORS エラーを隠すオプションe {: #hide-cors-errors }
+### コンソールで CORS エラーを隠すオプション {: #hide-cors-errors }
 
 <!-- You can hide CORS errors in the **Console**. As the CORS errors are now reported in the Issues tab, hiding CORS errors in the **Console** can help reduce the clutters. -->
 
