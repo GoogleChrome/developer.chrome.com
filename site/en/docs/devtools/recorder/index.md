@@ -78,7 +78,7 @@ You can see the user flow replay on the page. The replay progress is shown in th
 You can simulate slow network connection by configuring the **Replay settings**. For example, expand the **Replay settings**, select **Slow 3G** in the **Network** dropdown.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SSoCLGi4xdaVHKO9D0ec.png", alt="replay settings", width="800", height="528" %}
 
-More settings might be supported in the future. [Share with us](https://goo.gle/recorder-feedback) the replay settings you would like have.
+More settings might be supported in the future. [Share with us](https://goo.gle/recorder-feedback) the replay settings you would like to have!
 
 
 ## Measure a user flow {: #measure }
@@ -89,8 +89,9 @@ You can measure the performance of a user flow by clicking on the **Measure perf
 
 Clicking on the **Measure performance** button will first trigger a replay of the user flow, then open the performance trace in the **Performance** panel.
 
-Learn how to [analyze your page's runtime performance](/devtools/evaluate-performance/) with the **Performance** panel. You can enable the [Web Vitals checkbox](/blog/new-in-devtools-88/#web-vitals) in the **Performance** panel, to view the [Web Vitals](https://web.dev/vitals) metrics, identify identify opportunities to improve your user browsing experience.
+Learn how to [analyze your page's runtime performance](/devtools/evaluate-performance/) with the **Performance** panel. You can enable the [Web Vitals checkbox](/blog/new-in-devtools-88/#web-vitals) in the **Performance** panel, to view the [Web Vitals](https://web.dev/vitals) metrics, identify opportunities to improve your user browsing experience.
 
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/L8tS8YwGRgmqCrSwx5ro.png", alt="Performance panel", width="800", height="531" %}
 
 ## Edit user flows {: #edit-flows }
 
@@ -101,7 +102,7 @@ Let's walk through the options to edit the user flows.
 On the top of the **Recorder** panel, there options for you to:
 
 1. **Add a new recording**. Click on the **+** icon to [add a new recording](#record).
-2. **View all recordings**. The dropdown shows us the list of saved recordings. Select the **[number] recording(s)** option to expand and manage the list of saved recordings.
+2. **View all recordings**. The dropdown shows the list of saved recordings. Select the **[number] recording(s)** option to expand and manage the list of saved recordings.
      {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/g3x137aFK4xJrsdqONKY.png", alt="View all recordings", width="800", height="560" %}
 3. **Export a recording**. You can export the user flow as [Puppeteer](https://pptr.dev) script to customize the script further.
 4. **Delete a recording**. Delete the selected recording. 
@@ -113,11 +114,11 @@ Let's walk through the options to edit the steps within a workflowu.
 1. Expand each step to see the details of the action. For example, expand the *Click Element "Cappucino"* step.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ADbB4FFeiBBZqbxKRw0s.png", alt="Expand Cappucino", width="800", height="663" %}
 2. The step above shows 2 **selectors**. The **Recorder** will automatically detect 2 selectors for most of the steps by default.
-    - When replaying the user flow, the **Recorder** will try query the element with the selectors by sequence.
-    - For example, if the **Recorder** successfully query the element with first selector, it will skip the second selector and proceed to the next step.
-3. You can add or remove any selectors. For example, you can remove the *selector #2* because just `aria/Cappucino` is sufficient in our case. Hover over the *selector #2* and click on **-** to remove it.
+    - When replaying the user flow, the **Recorder** will try query the element with one of the selectors by sequence.
+    - For example, if the **Recorder** successfully query the element with the first selector, it will skip the second selector and proceed to the next step.
+3. You can add or remove any selectors. For example, you can remove the *selector #2* because just `aria/Cappucino` is sufficient in this case. Hover over the *selector #2* and click on **-** to remove it.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qEat3jT1Og68urhmSkef.png", alt="remove a selector", width="800", height="663" %}
-4. The **selector** is editable too. For example, if you want to select *Mocha* instead of *Cappucino*, we can edit the selector value to *aria/Mocha* instead.
+4. The **selector** is editable too. For example, if you want to select *Mocha* instead of *Cappucino*, you can edit the selector value to *aria/Mocha* instead.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OdihJ4BROOXZ93eidr4b.png", alt="edit a selector", width="800", height="663" %} 
 5. [Replay](#replay) the flow now, it should select *Mocha* instead of *Cappucino*.
 6. Try to edit other step properties such as **type**, **target**, **value** and more.
