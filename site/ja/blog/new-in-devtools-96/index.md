@@ -215,7 +215,7 @@ Chromium issue: [1251176](https://crbug.com/1251176)
 
 <!-- The [Intl](https://tc39.es/ecma402/#intl-object) objects have proper preview now and are evaluated eagerly in the Console. Previously, the `Intl` objects were not evaluated eagerly. -->
 
-[Intl](https://tc39.es/ecma402/#intl-object) オブジェクトが Console で適切にプレビューされ、貪欲に評価されるようになりました。以前は、`Intl`オブジェクトは貪欲には評価されませんでした。
+[Intl](https://tc39.es/ecma402/#intl-object) オブジェクトが Console で適切にプレビューされ、先行評価されるようになりました。以前は、`Intl`オブジェクトは先行評価されませんでした。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZxGQoDdnilseKTFsxdbC.png", alt="Intl objects in the Console", width="800", height="559" %} -->
 
