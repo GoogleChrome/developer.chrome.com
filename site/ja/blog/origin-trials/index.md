@@ -88,7 +88,7 @@ the [deprecation trial to continue using AppCache](https://developer.chrome.com/
 1. When your token expires, you will get an email with a renewal link.
    To do so, you are again asked to submit feedback.
 -->
-1. [list of active trials](https://developers.chrome.com/origintrials/#/trials/active) から、オリジントライアルを選択します。
+1. [アクティブなトライアルのリスト](https://developers.chrome.com/origintrials/#/trials/active) から、オリジントライアルを選択します。
 1. **Register** ボタンをクリックしてフォームに記入を行い、トークンを要求します。
 1. 以下の方法の一つを使って、あなたのウェブページにトークンを追加します:
    -  サーブされている各ページの &lt;head&gt; 内の meta タグ を使う:
