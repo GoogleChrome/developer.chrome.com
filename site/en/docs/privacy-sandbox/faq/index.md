@@ -33,12 +33,12 @@ answered here:
 The Privacy Sandbox initiative has two core aims:
 
 -  Develop replacement solutions to support web use cases and business models
-   without enabling users to be tracked across sites, and avoiding cross-site
+   without allowing users to be tracked across sites, and avoiding cross-site
    tracking users aren't aware of.
 -  Phase out support for third-party cookies and other forms of tracking when
    new solutions are in place.
 
-### Who is working on the Privacy Sandbox?
+### Who works on the Privacy Sandbox?
 
 The Privacy Sandbox is a set of proposed web standards.
 
@@ -64,7 +64,7 @@ Yes, refer to the [Privacy Sandbox glossary](/docs/privacy-sandbox/glossary/).
 ### When will the Privacy Sandbox APIs be implemented?
 
 The [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) shows the
-roadmap to phasing out third-party cookies. Additional current information for
+roadmap to phase out third-party cookies. Additional current information for
 individual APIs is available on the
 [implementation status page](/docs/privacy-sandbox/status/).
 
@@ -105,13 +105,13 @@ may be made available for testing.
    a valid trial token with every page load.
 -  **For users of early Chrome releases**  
    When a feature is approved to ship in a given release, it will progress
-   through Canary and Beta channels before reaching Stable. The feature will be
-   turned on by default for all users of those channels.
+   through Canary and Beta channels before it reaches Stable. The feature will
+   be turned on by default for all users of those channels.
 
 {% Aside 'caution' %}  
-Chrome offers the ability for users to opt-out of Privacy Sandbox trials in
-browser settings, so Privacy Sandbox features may not be turned on for all your
-users, even if the page they're viewing provides a valid origin trial token.  
+Chrome offers users the ability to opt-out of Privacy Sandbox trials in
+browser settings. Users who opt-out will not have Privacy Sandbox features
+turned on, even on pages which provide a valid origin trial token.  
 {% endAside%}  
 
 ### I registered for an origin trial, but the API isn't working on my site
@@ -157,7 +157,7 @@ Application tabs: read
 -  For questions about the proposal:
    [create an issue](https://github.com/WICG/turtledove/issues) on the proposal
    repo.
--  For questions about the implementation currently available for testing in
+-  For questions about the implementation currently available to test in
    Chrome: [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=fledge).
 -  For implementation, integration, and general best practice questions:
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) 
@@ -171,7 +171,7 @@ of proposals. The differences mostly pertain to separation of the on-device role
 of the ad buyer and seller:
 
 FLEDGE allows a 'trusted server' to provide access to real-time data used by a
-worklet during bidding, without compromising privacy. Each interest group can
+worklet in bidding, without compromising privacy. Each interest group can
 have a `trusted_bidding_signals_url` and `trusted_bidding_signals_keys`
 attribute.
 
@@ -186,8 +186,7 @@ metadata, along with the interest group, to improve on-device bidding.
 -  For questions about the proposal:
    [create an issue](https://github.com/WICG/conversion-measurement-api/issues) 
    on the proposal repo.
--  If you're participating in the origin trial in Chrome and have technical
-   questions, join the 
+-  If you're an origin trial participant and have technical questions, join the
    [Attribution Reporting mailing list](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev) 
    for developers and ask questions there, or
    [file a Chromium bug](https://bugs.chromium.org/p/chromium/issues/list?q=attribution%20reporting).
@@ -238,11 +237,11 @@ less distinct and dynamic form-factors are more common (folding screens,
 switching between laptop and tablet mode), it's advisable to use responsive
 design and feature detection to present an appropriate user interface.
 
-However, user-agent information provided by the browser for both the user-agent
-string and User-Agent Client Hints comes from the same source, so the same forms
+However, information provided by the browser for both the User-Agent string
+and User-Agent Client Hints comes from the same source, so the same forms
 of logic should work.
 
-For example, if this pattern was being checked on the UA string:
+For example, if this pattern is checked on the UA string:
 - Phone pattern: `'Android' + 'Chrome/[.0-9]* Mobile'`
 - Tablet pattern: `'Android' + 'Chrome/[.0-9]* (?!Mobile)'`
 
@@ -274,8 +273,8 @@ Client Hints are only sent over secure connections, so make sure your uses HTTPS
 
 High-entropy UA-CH on request headers are restricted on cross-origin requests
 regardless of how that origin is defined on the DNS side. Delegation must be
-handled via `Permissions-Policy` for any cross-origin subresource, or obtained
-via JavaScript executing in the cross-origin context.
+handled via `Permissions-Policy` for any cross-origin subresource or obtained
+via JavaScript which executes in the cross-origin context.
 
 ## Shared storage
 
