@@ -30,7 +30,7 @@ draft: true
 
 <!-- ## Preview feature: New CSS Overview panel {: #css-overview } -->
 
-## プレビュー機能: 新しい CSS オーバービューパネル {: #css-overview }
+## プレビュー機能: 新しい CSS Overview パネル {: #css-overview }
 
 <!-- Use the new **CSS Overview** panel to identify potential CSS improvements on your page.
 [Open the **CSS Overview** panel](/docs/devtools/css-overview#open), then click on **Capture overview** to generate a report of your page’s CSS. -->
