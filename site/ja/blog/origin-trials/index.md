@@ -17,7 +17,7 @@ tags:
 <!-- Origin trials give you access to a new or experimental feature, to build
 functionality your users can try out for a limited time before the feature
 is made available to everyone. -->
-オリジントライアルにより、新規の、または実験的な機能へのアクセスと、機能が誰でも利用可能になる前に、限定された期間ユーザが試すことのできる機能の構築ができるようになります。
+オリジントライアルを利用すると、一般公開されるより先に、新しい機能や実験的な機能を期間を限定してユーザに試してもらうことができるようになります。
 
 <!-- When Chrome offers an origin trial for a feature, you can register for the trial to enable
 the feature for all users on your [origin](https://web.dev/same-site-same-origin/#origin),
