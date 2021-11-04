@@ -54,7 +54,7 @@ without requiring a token for every origin. -->
 
 
 <!-- ## Deprecation trials -->
-## 非推奨トライアル
+## デプリケーショントライアル
 
 <!-- Not all origin trials are for testing new APIs. Some trials enable a deprecated feature to be
 temporarily re-enabled. These are known as **deprecation trials**, and in some contexts have been
