@@ -6,9 +6,9 @@ description: >
   Understanding the way that service workers behave to make offline applications possible.
 ---
 
-It’s hard to know what service workers are doing without understanding their lifecycle.
+It's hard to know what service workers are doing without understanding their lifecycle.
 Their inner workings will seem opaque, even arbitrary.
-It helps to remember that—like any other browser API—service worker behaviors are well-defined,
+It helps to remember that&mdash;like any other browser API&mdash;service worker behaviors are well-defined,
 specified, and make offline applications possible,
 while also facilitating updates without disrupting the user experience.
 
@@ -89,13 +89,13 @@ Registration is the initial step of the service worker lifecycle:
 <script>
   // Don't register the service worker
   // until the page has fully loaded
-  window.addEventListener("load", () => {
+  window.addEventListener('load', () => {
     // Is service worker available?
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").then(() => {
-        console.log("Service worker registered!");
-      }).catch(error => {
-        console.warn("Error registering service worker:");
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(() => {
+        console.log('Service worker registered!');
+      }).catch((error) => {
+        console.warn('Error registering service worker:');
         console.warn(error);
       });
     }
@@ -120,7 +120,7 @@ Some key things to understand are:
 registration fails and the service worker is discarded.
 - Reminder: service workers operate within a scope.
 Here, the scope is the entire origin, as it was loaded from the root directory.
-- When registration begins, the service worker state is set to `"installing"`.
+- When registration begins, the service worker state is set to `"installing'`.
 
 Once registration finishes, installation begins.
 
@@ -133,17 +133,17 @@ A callback for the `install` event can be registered in the worker's scope with 
 
 ```js
 // /sw.js
-self.addEventListener("install", event => {
-  const cacheKey = "MyFancyCacheName_v1";
+self.addEventListener('install', (event) => {
+  const cacheKey = 'MyFancyCacheName_v1';
 
-  event.waitUntil(caches.open(cacheKey).then(cache => {
+  event.waitUntil(caches.open(cacheKey).then((cache) => {
     // Add all the assets in the array to the 'MyFancyCacheName_v1'
     // `Cache` instance for later use.
     return cache.addAll([
-      "/css/global.bc7b80b7.css",
-      "/css/home.fe5d0b23.css",
-      "/js/home.d3cc4ba4.js",
-      "/js/jquery.43ca4933.js"
+      '/css/global.bc7b80b7.css',
+      '/css/home.fe5d0b23.css',
+      '/js/home.d3cc4ba4.js',
+      '/js/jquery.43ca4933.js'
     ]);
   }));
 });
@@ -156,7 +156,7 @@ so let's focus on the role of
 and waits until that promise has been resolved.
 In this example, that promise does two asynchronous things:
 
-1. Creates a new `Cache` instance named `"MyFancyCache_v1"`.
+1. Creates a new `Cache` instance named `"MyFancyCache_v1'`.
 2. After the cache is created,
 an array of asset URLs are precached using its asynchronous
 [`addAll` method](https://developer.mozilla.org/docs/Web/API/Cache/addAll).
@@ -166,12 +166,12 @@ Installation fails if the promise(s) passed to `event.waitUntil` are
 If this happens, the service worker is discarded.
 
 If the promises [resolve](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve),
-installation succeeds and the service worker's state will change to `"installed"` and will then activate.
+installation succeeds and the service worker's state will change to `"installed'` and will then activate.
 
 ### Activation
 
 If registration and installation succeed,
-the service worker activates, and its state becomes `"activating"`
+the service worker activates, and its state becomes `"activating'`
 Work can be done during activation in the service worker's
 [`activate` event](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event).
 A typical task in this event is to prune old caches,
@@ -181,7 +181,7 @@ and will be expanded on when we talk about service worker updates.
 
 For new service workers, `activate` fires immediately after `install` is successful.
 Once activation finishes,
-the service worker's state becomes `"activated"`.
+the service worker's state becomes `"activated'`.
 Notice that, by default,
 the new service worker won't begin controlling the page until the next navigation or page refresh.
 
@@ -197,13 +197,13 @@ Browsers will check for updates to a service worker when:
 
 - The user navigates to a page within the service worker's scope.
 - [`navigator.serviceWorker.register()`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register)
-is called with a URL different from the currently installed service worker—[but don't change a service worker's URL](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#avoid-url-change)!
+is called with a URL different from the currently installed service worker&mdash;[but don't change a service worker's URL](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#avoid-url-change)!
 - [`navigator.serviceWorker.register()`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register)
 is called with the same URL as the installed service worker,
 but with a different scope.
 Again, avoid this by keeping the scope at the root of an origin if possible.
-- When events such as `"push"` or `"sync"`
-have been triggered within the last 24 hours—but don't worry about these events yet.
+- When events such as `"push'` or `"sync'`
+have been triggered within the last 24 hours&mdash;but don't worry about these events yet.
 
 ### How updates happen
 
@@ -238,7 +238,7 @@ since the application typically encounters one navigation request at the start o
 In such situations, a manual update can be triggered on the main thread:
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
+navigator.serviceWorker.ready.then((registration) => {
   registration.update();
 });
 ```
@@ -256,17 +256,17 @@ Suppose some of those assets are precached for offline access later.
 This would require a service worker update to precache updated assets:
 
 ```js
-self.addEventListener("install", event => {
-  const cacheKey = "MyFancyCacheName_v2";
+self.addEventListener('install', (event) => {
+  const cacheKey = 'MyFancyCacheName_v2';
 
-  event.waitUntil(caches.open(cacheKey).then(cache => {
+  event.waitUntil(caches.open(cacheKey).then((cache) => {
     // Add all the assets in the array to the 'MyFancyCacheName_v2'
     // `Cache` instance for later use.
     return cache.addAll([
-      "/css/global.ced4aef2.css",
-      "/css/home.cbe409ad.css",
-      "/js/home.109defa4.js",
-      "/js/jquery.38caf32d.js"
+      '/css/global.ced4aef2.css',
+      '/css/home.cbe409ad.css',
+      '/js/home.109defa4.js',
+      '/js/jquery.38caf32d.js'
     ]);
   }));
 });
@@ -274,7 +274,7 @@ self.addEventListener("install", event => {
 
 Two things are different from the first `install` event example from earlier:
 
-1. A new `Cache` instance with a key of `"MyFancyCacheName_v2"` is created.
+1. A new `Cache` instance with a key of `"MyFancyCacheName_v2'` is created.
 2. The precached asset names have changed.
 
 {% Aside %}
@@ -312,14 +312,14 @@ and deleting caches that aren't in a defined allow list with
 [`caches.delete`](https://developer.mozilla.org/docs/Web/API/CacheStorage/delete):
 
 ```js
-self.addEventListener("activate", event => {
+self.addEventListener('activate', (event) => {
   // Specify allowed cache keys
-  const cacheAllowList = ["MyFancyCacheName_v2"];
+  const cacheAllowList = ['MyFancyCacheName_v2'];
 
   // Get all the currently active `Cache` instances.
-  event.waitUntil(caches.keys().then(keys => {
+  event.waitUntil(caches.keys().then((keys) => {
     // Delete all caches that aren't in the allow list:
-    return Promise.all(keys.map(key => {
+    return Promise.all(keys.map((key) => {
       if (!cacheAllowList.includes(key)) {
         return caches.delete(key);
       }
@@ -331,8 +331,8 @@ self.addEventListener("activate", event => {
 Old caches don't tidy themselves.
 We need to do that ourselves or risk exceeding
 [storage quotas](https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
-Since `"MyFancyCacheName_v1"` from the first service worker is out of date,
-the cache allow list is updated to specify `"MyFancyCacheName_v2"`,
+Since `"MyFancyCacheName_v1'` from the first service worker is out of date,
+the cache allow list is updated to specify `"MyFancyCacheName_v2'`,
 which deletes caches with a different name.
 
 The `activate` event will finish after the old cache is removed.
@@ -351,4 +351,3 @@ it's worth checking out
 [this article by Jake Archibald](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle).
  There's tons of nuance in how the whole dance around the service lifecycle goes,
  but it _is_ knowable, and that knowledge will go far when using Workbox.
-

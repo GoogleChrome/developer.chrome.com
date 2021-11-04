@@ -58,7 +58,7 @@ There are no active service workers, and no open `Cache` instances. The routine 
 With this process, you're faithfully mimicking the service worker lifecycle.
 
 Other testing tools available in the [Chrome DevTools Application panel](/docs/devtools/progressive-web-apps/) 
-can help—though they can modify the service worker lifecycle in some ways.
+can help&mdash;though they can modify the service worker lifecycle in some ways.
 
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/nSbFQMn5zGJmaoVBKwF4.png", alt="The Chrome DevTools Application Panel.", width="800", height="234" %}
 

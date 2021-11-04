@@ -60,20 +60,20 @@ and the `fetch` event inside of a service worker is where this happens:
 
 ```js
 // Establish a cache name
-const cacheName = "MyFancyCacheName_v1";
+const cacheName = 'MyFancyCacheName_v1';
 
-self.addEventListener("install", event => {
+self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(cacheName));
 });
 
-self.addEventListener("fetch", async event => {
+self.addEventListener('fetch', async (event) => {
   // Is this a request for an image?
-  if (event.request.destination === "image") {
+  if (event.request.destination === 'image') {
     // Open the cache
-    event.respondWith(caches.open(cacheName).then(cache => {
+    event.respondWith(caches.open(cacheName).then((cache) => {
       // Respond with the image from the cache or from the network
-      return cache.match(event.request).then(cachedResponse => {
-        return cachedResponse || fetch(event.request.url).then(fetchedResponse => {
+      return cache.match(event.request).then((cachedResponse) => {
+        return cachedResponse || fetch(event.request.url).then((fetchedResponse) => {
           // Add the network response to the cache for future visits.
           // Note: we need to make a copy of the response to save it in
           // the cache and use the original as the request response.
@@ -90,8 +90,8 @@ self.addEventListener("fetch", async event => {
 });
 ```
 
-This is a toy example—and
-[one you can see in action for yourself](https://service-worker-fetch-event-example.glitch.me/)—but
+This is a toy example&mdash;and
+[one you can see in action for yourself](https://service-worker-fetch-event-example.glitch.me/)&mdash;but
 it's one that offers a glimpse into what service workers can do.
 The above code does the following:
 
@@ -149,31 +149,31 @@ and that those assets will never be updated in the cache until the service worke
 
 ```js
 // Establish a cache name
-const cacheName = "MyFancyCacheName_v1";
+const cacheName = 'MyFancyCacheName_v1';
 
 // Assets to precache
 const precachedAssets = [
-  "/possum1.jpg",
-  "/possum2.jpg",
-  "/possum3.jpg",
-  "/possum4.jpg"
+  '/possum1.jpg',
+  '/possum2.jpg',
+  '/possum3.jpg',
+  '/possum4.jpg'
 ];
 
-self.addEventListener("install", event => {
+self.addEventListener('install', (event) => {
   // Precache assets on install
-  event.waitUntil(caches.open(cacheName).then(cache => {
+  event.waitUntil(caches.open(cacheName).then((cache) => {
     return cache.addAll(precachedAssets);
   }));
 });
 
-self.addEventListener("fetch", event => {
+self.addEventListener('fetch', (event) => {
   // Is this one of our precached assets?
   const url = new URL(event.request.url);
   const isPrecachedRequest = precachedAssets.includes(url.pathname);
 
   if (isPrecachedRequest) {
     // Grab the precached asset from the cache
-    event.respondWith(caches.open(cacheName).then(cache => {
+    event.respondWith(caches.open(cacheName).then((cache) => {
       return cache.match(event.request.url);
     }));
   } else {
@@ -227,21 +227,21 @@ Here's an example of this strategy, which you can test out in
 
 ```js
 // Establish a cache name
-const cacheName = "MyFancyCacheName_v1";
+const cacheName = 'MyFancyCacheName_v1';
 
-self.addEventListener("fetch", event => {
+self.addEventListener('fetch', (event) => {
   // Check if this is a request for an image
-  if (event.request.destination === "image") {
-    event.respondWith(caches.open(cacheName).then(cache => {
+  if (event.request.destination === 'image') {
+    event.respondWith(caches.open(cacheName).then((cache) => {
       // Go to the cache first
-      return cache.match(event.request.url).then(cachedResponse => {
+      return cache.match(event.request.url).then((cachedResponse) => {
         // Return a cached response if we have one
         if (cachedResponse) {
           return cachedResponse;
         }
 
         // Otherwise, hit the network
-        return fetch(event.request).then(fetchedResponse => {
+        return fetch(event.request).then((fetchedResponse) => {
           // Add the network response to the cache for later visits
           cache.put(event.request, fetchedResponse.clone());
 
@@ -282,15 +282,15 @@ Here's what that might look like when applied to requests for HTML:
 
 ```js
 // Establish a cache name
-const cacheName = "MyFancyCacheName_v1";
+const cacheName = 'MyFancyCacheName_v1';
 
-self.addEventListener("fetch", event => {
+self.addEventListener('fetch', (event) => {
   // Check if this is a navigation request
-  if (event.request.mode === "navigate") {
+  if (event.request.mode === 'navigate') {
     // Open the cache
-    event.respondWith(caches.open(cacheName).then(cache => {
+    event.respondWith(caches.open(cacheName).then((cache) => {
       // Go to the network first
-      return fetch(event.request.url).then(fetchedResponse => {
+      return fetch(event.request.url).then((fetchedResponse) => {
         cache.put(event.request, fetchedResponse.clone());
 
         return fetchedResponse;
@@ -343,13 +343,13 @@ but the latest version isn't strictly necessary on every request.
 
 ```js
 // Establish a cache name
-const cacheName = "MyFancyCacheName_v1";
+const cacheName = 'MyFancyCacheName_v1';
 
-self.addEventListener("fetch", event => {
-  if (event.request.destination === "image") {
-    event.respondWith(caches.open(cacheName).then(cache => {
-      return cache.match(event.request).then(cachedResponse => {
-        const fetchedResponse = fetch(event.request).then(networkResponse => {
+self.addEventListener('fetch', (event) => {
+  if (event.request.destination === 'image') {
+    event.respondWith(caches.open(cacheName).then((cache) => {
+      return cache.match(event.request).then((cachedResponse) => {
+        const fetchedResponse = fetch(event.request).then((networkResponse) => {
           cache.put(event.request, networkResponse.clone());
 
           return networkResponse;

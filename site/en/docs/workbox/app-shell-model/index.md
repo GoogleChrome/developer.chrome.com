@@ -12,7 +12,7 @@ A common architectural feature of [single page web applications (SPA)](https://e
 
 The application shell plays a significant role in the perceived performance of a web application. It's the first thing that loads, and therefore, it's also the first thing users see while they wait for the content to populate the user interface.
 
-While the application shell is quick to load—provided the network is available and at least somewhat quick—a service worker that precaches the application shell and its associated assets gives the application shell model these added benefits:
+While the application shell is quick to load&mdash;provided the network is available and at least somewhat quick&mdash;a service worker that precaches the application shell and its associated assets gives the application shell model these added benefits:
 
 - **Reliable, consistent performance on repeat visits.** On the first visit to an app without a service worker installed, the application's markup and its associated assets have to be loaded from the network before the service worker can put them in its cache. However, repeat visits will pull the application shell from the cache, meaning that loading and rendering will be instantaneous.
 - **Reliable access to functionality in offline scenarios.** Sometimes internet access is spotty, or absent altogether, and the dreaded "we can't find that website" screen rears its head. The application shell model addresses this by responding to any navigation request with the application shell markup from the cache. Even if someone visits a URL in your web app that they've never been to before, the application shell will be served from the cache, and can be populated with useful content.
@@ -99,7 +99,7 @@ Once the application shell is built, you can build a service worker to cache bot
 
 The application shell and its required assets are what the service worker should precache immediately at install time. Assuming an application shell like the example above, let's see how one might accomplish this in a basic Workbox example using `workbox-build`:
 
-```javascript
+```js
 // build-sw.js
 import {generateSW} from 'workbox-build';
 

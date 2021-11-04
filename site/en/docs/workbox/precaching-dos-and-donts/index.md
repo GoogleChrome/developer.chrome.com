@@ -26,7 +26,7 @@ For typical multipage websites, you might be relying on a [network-first](/docs/
 
 In such cases, you'll want to ensure your service worker precaches and responds with an offline fallback page when the user makes a navigation request while offline. One way to do this in Workbox might be to use a network-only strategy with an offline fallback, taking advantage of [navigation preload](/docs/workbox/navigation-preload/) as well:
 
-```javascript
+```js
 import {PrecacheFallbackPlugin, precacheAndRoute} from 'workbox-precaching';
 import {registerRoute, Route} from 'workbox-routing';
 import {NetworkOnly} from 'workbox-strategies';
@@ -90,4 +90,4 @@ Don't precache polyfills. Rely on runtime caching to ensure they get cached only
 Precaching requires some forethought on what assets your users actually need ahead of time, but you can definitely get it right in a way that prioritizes future performance and reliability.
 
 [comment]: <> (TODO: LINK UP TO NEXT DOC)
-If you're unsure about whether certain assets should be precached, your best bet might be to tell Workbox to exclude those assets and create a runtime caching route to handle them. Either way, [precaching is covered in detail later in this documentation](LINK IT UP), so you'll be able to apply these principles to your precaching logic in the future.
+If you're unsure about whether certain assets should be precached, your best bet might be to tell Workbox to exclude those assets and create a runtime caching route to handle them. Either way, [precaching is covered in detail later in this documentation](/docs/workbox/precaching-with-workbox/), so you'll be able to apply these principles to your precaching logic in the future.

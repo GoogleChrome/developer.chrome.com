@@ -33,7 +33,7 @@ Workbox simplifies using navigation preload, because the `workbox-navigation-pre
 
 From here, the benefits of navigation preload are realized in supporting browsers by using Workbox to handle navigation requests using a network-first strategy handler:
 
-```javascript
+```js
 import * as navigationPreload from 'workbox-navigation-preload';
 import {NetworkFirst, StaleWhileRevalidate} from 'workbox-strategies';
 import {registerRoute, NavigationRoute, Route} from 'workbox-routing';
