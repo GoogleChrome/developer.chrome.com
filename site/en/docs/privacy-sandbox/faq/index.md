@@ -197,8 +197,9 @@ metadata, along with the interest group, to improve on-device bidding.
 
 ### Is Attribution Reporting the same as the Event Conversion Measurement API?
 
-Yes: [the name was changed](/docs/privacy-sandbox/attribution-reporting-introduction/),
-as the original event-level scope expanded to cover additional measurement use cases.
+Yes. [The name was changed](/docs/privacy-sandbox/attribution-reporting-introduction/),
+as the original event-level scope expanded to cover additional measurement use
+cases.
 
 ## First-Party Sets
 
