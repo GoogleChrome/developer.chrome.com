@@ -38,7 +38,7 @@ possible. -->
 <!-- If you register for a trial, the Chrome team will periodically ask you for specific
 feedback on your use of the trial feature. Some features may undergo multiple origin
 trials, as learnings are incorporated and adjustments are made. -->
-トライアルに登録すると、Chrome チームは定期的にトライアルの機能の利用に関する具体的なフィードバックを求めます。 一部の機能は、学習が組み込まれ、調整が行われるため、複数のオリジントライアルを受ける可能性があります。
+トライアルに登録すると、Chrome チームは定期的にトライアル機能の利用に関する具体的なフィードバックを求めます。 機能によっては、フィードバックを取り込み、調整を行うため、オリジントライアルが複数回行われる可能性があります。
 
 
 <!-- ## Third-party origin trials -->
