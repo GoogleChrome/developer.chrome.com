@@ -114,11 +114,11 @@ browser settings, so Privacy Sandbox features may not be turned on for all your
 users, even if the page they're viewing provides a valid origin trial token.  
 {% endAside%}  
 
-### I registered for the origin trial of an API, but it isn't working on my site.
+### I registered for an origin trial, but the API isn't working on my site
 
 See [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/#chrome).
 
-### Will Privacy Sandbox origin trials work in Chromium, or in other browsers?
+### Will Privacy Sandbox origin trials work in Chromium or other browsers?
 
 Chrome origin trials are designed to work for Chrome users. Don't rely on Chrome
 origin trial tokens to allow trial features in other browsers, including Chromium,
