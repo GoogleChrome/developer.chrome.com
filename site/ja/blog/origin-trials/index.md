@@ -33,7 +33,7 @@ Participants should be willing and able to work relatively independently using t
 documentation available, which, at this stage, will likely be limited to API
 specifications and explainers, though web.dev tries to provide guidance whenever
 possible. -->
-オリジントライアルは、全ての開発者に対して、パブリックであり、オープンです。それらは、期間と使用方法に制限があります。参加は、限られたドキュメントとサポートが準備された自己管理プロセスです。参加者は、利用可能なドキュメントを使用して、比較的独立して作業する意思と能力を備えている必要があります。この段階では、API 仕様とその説明者に限定される可能性がありますが、web.dev は可能な限りガイダンスを提供しようとします。
+オリジントライアルは、全ての開発者に対して、パブリックであり、オープンです。それらは、期間と使用方法に制限があります。参加は、限られたドキュメントとサポートが準備された自己管理プロセスです。参加者は、利用可能なドキュメントを使用して、比較的独立して作業する意思と能力を備えている必要があります。この段階では、API 仕様とその Explainer に限定される可能性がありますが、web.dev が可能な限りのガイダンスを提供します。
 
 <!-- If you register for a trial, the Chrome team will periodically ask you for specific
 feedback on your use of the trial feature. Some features may undergo multiple origin
