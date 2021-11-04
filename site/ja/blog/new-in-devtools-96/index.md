@@ -117,7 +117,7 @@ Chromium issue: [1243309](https://crbug.com/1243309)
 
 <!-- ## Copy declarations as JavaScript in the Styles pane {: #copy-as-js } -->
 
-## Styles ペイン JavaScript として宣言をコピー {: #copy-as-js }
+## Styles ペインで JavaScript として宣言をコピー {: #copy-as-js }
 
 <!-- Two new options are added in the context menu  for you to easily copy CSS rules as JavaScript properties. These shortcuts options are handy especially for developers who are working with [CSS-in-JS](/blog/css-in-js/#what-is-css-in-js)  libraries. -->
 
