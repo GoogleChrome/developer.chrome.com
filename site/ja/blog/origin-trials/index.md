@@ -25,7 +25,7 @@ without requiring them to toggle any flags or switch to an alternative build
 of Chrome (though they may need to upgrade). Origin trials enable developers
 to build demos and prototypes using new features. The trials also help Chrome engineers
 understand how new features are used, and how they may interact with other web technologies. -->
-Chrome がある機能のオリジントライアルを提供している時は、あなたの [オリジン](https://web.dev/same-site-same-origin/#origin) 上で全てのユーザにその機能を有効にすするためにトライアルに登録することができます。そのために、Chrome のフラグを切り替えたり代替ビルドに切り替える必要はありません（ただし、アップグレードが必要な場合があります）。オリジントライアルにより、開発者は新しい機能を使用してデモやプロトタイプを作成できます。このトライアルは、Chrome エンジニアが新機能がどのように利用され、そして他のウェブテクノロジとどのように相互に利用されるかを理解するのにも役立ちます。
+Chrome がある機能のオリジントライアルを提供している時、トライアルに登録して、あなたの [オリジン](https://web.dev/same-site-same-origin/#origin) 上で全てのユーザにその機能を有効にすることができます。そのために、Chrome のフラグを切り替えたり、別のビルドに切り替える必要はありません（ただし、アップグレードが必要な場合があります）。オリジントライアルにより、開発者は新しい機能を使用して、デモやプロトタイプを作成できます。このトライアルは、Chrome のエンジニアが新機能がどのように利用され、そして他のウェブテクノロジとどのように相互に利用されるかを理解するのにも役立ちます。
 
 <!-- Origin trials are public and open to all developers. They are limited in duration and
 usage. Participation is a self-managed process with limited documentation and support.
