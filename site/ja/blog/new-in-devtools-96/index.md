@@ -63,7 +63,7 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 
 <!-- ## Rendering tab updates  -->
 
-## Rendering タブの更新
+## Rendering タブのアップデート
 
 <!-- ### Emulate the CSS prefers-contrast media feature {: #prefers-contrast } -->
 
@@ -90,7 +90,7 @@ Chromium issue: [1139777](https://crbug.com/1139777)
 
 <!-- ### Emulate the Chrome’s Auto Dark Theme feature {: #auto-dark-mode } -->
 
-### Chrome の Auto Dark Theme 機能をエミュレート {: #auto-dark-mode }
+### Chrome の Auto Dark Theme 機能のエミュレート {: #auto-dark-mode }
 
 <!-- Use DevTools to emulate auto dark theme to easily see how your page looks when Chrome’s [Auto Dark Theme](/blog/auto-dark-theme/) is enabled. -->
 

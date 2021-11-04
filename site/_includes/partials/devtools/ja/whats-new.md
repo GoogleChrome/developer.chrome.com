@@ -5,7 +5,7 @@
 ### Chrome 96 {: #chrome96 }
 * [プレビュー機能: 新しい CSS Overview パネル](/blog/new-in-devtools-96/#css-overview)
 * [CSS の prefers-contrast メディア機能のエミュレート](/blog/new-in-devtools-96/#prefers-contrast)
-* [Chrome の Auto Dark Theme 機能をエミュレート](/blog/new-in-devtools-96/#auto-dark-mode)
+* [Chrome の Auto Dark Theme 機能のエミュレート](/blog/new-in-devtools-96/#auto-dark-mode)
 * [Styles ペインで JavaScript として宣言をコピー](/blog/new-in-devtools-96/#copy-as-js)
 * [Network パネルの新しい Payload タブ](/blog/new-in-devtools-96/#payload)
 * [Properties ペインのプロパティ表示の改善](/blog/new-in-devtools-96/#properties)
