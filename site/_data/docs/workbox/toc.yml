@@ -10,3 +10,12 @@
     - url: /docs/workbox/remove-buggy-service-workers
     - url: /docs/workbox/improving-development-experience
     - url: /docs/workbox/different-architectures
+    - url: /docs/workbox/app-shell-model
+    - url: /docs/workbox/navigation-preload
+    - url: /docs/workbox/precaching-dos-and-donts
+- title: i18n.docs.workbox.ways
+  sections:
+    - url: /docs/workbox/the-ways-of-workbox
+    - url: /docs/workbox/precaching-with-workbox
+    - url: /docs/workbox/using-workbox-without-precaching
+    - url: /docs/workbox/framework-integrations
