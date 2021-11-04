@@ -42,57 +42,70 @@ Click on each of the tabs below to compare the usage of the `generateSW` and `in
 
 <web-tabs>
   <web-tab title="generateSW">
-    Since `generateSW` generates a service worker, you only need to specify a configuration. Below is an example using `workbox-build`:
-    ```js
-    // build-sw.js
-    import {generateSW} from 'workbox-build';
 
-    generateSW({
-      swDest: './dist/sw.js',
-      globDirectory: './dist',
-      globPatterns: [
-        '**/*.js',
-        '**/*.css',
-        '**/*.svg'
-      ]
-    });
-    ```
 
-    The service worker can then be built on the command line with Node:
 
-    ```shell
-    node build-sw.js
-    ```
+Since `generateSW` generates a service worker, you only need to specify a configuration. Below is an example using `workbox-build`:
+
+```js
+// build-sw.js
+import {generateSW} from 'workbox-build';
+
+generateSW({
+  swDest: './dist/sw.js',
+  globDirectory: './dist',
+  globPatterns: [
+    '**/*.js',
+    '**/*.css',
+    '**/*.svg'
+  ]
+});
+```
+
+The service worker can then be built on the command line with Node:
+
+```shell
+node build-sw.js
+```
+
+
+
   </web-tab>
   <web-tab title="injectManifest">
-    Since `injectManifest` requires a source service worker, a minimally viable example requires a source service worker file. If all that's needed is precaching, that input service worker might look something like this:
 
-    ```js
-    import {precacheAndRoute} from 'workbox-precaching';
 
-    precacheAndRoute(self.__WB_MANIFEST);
-    ```
 
-    Note the `self.__WB_MANIFEST` string. This is a placeholder that Workbox replaces with the precache manifest. Below is a valid configuration for this use case:
+Since `injectManifest` requires a source service worker, a minimally viable example requires a source service worker file. If all that's needed is precaching, that input service worker might look something like this:
 
-    ```js
-    // build-sw.js
-    import {injectManifest} from 'workbox-build';
+```js
+import {precacheAndRoute} from 'workbox-precaching';
 
-    injectManifest({
-      swSrc: './src/sw.js',
-      swDest: './dist/sw.js',
-      globDirectory: './dist',
-      globPatterns: [
-        '**/*.js',
-        '**/*.css',
-        '**/*.svg'
-      ]
-    });
-    ```
+precacheAndRoute(self.__WB_MANIFEST);
+```
 
-    `injectManifest` is preferable if you have complex requirements, such as advanced routing, custom caching strategies, or other things that aren't covered by the options `generateSW` provides.
-  </div>
+Note the `self.__WB_MANIFEST` string. This is a placeholder that Workbox replaces with the precache manifest. Below is a valid configuration for this use case:
+
+```js
+// build-sw.js
+import {injectManifest} from 'workbox-build';
+
+injectManifest({
+  swSrc: './src/sw.js',
+  swDest: './dist/sw.js',
+  globDirectory: './dist',
+  globPatterns: [
+    '**/*.js',
+    '**/*.css',
+    '**/*.svg'
+  ]
+});
+```
+
+`injectManifest` is preferable if you have complex requirements, such as advanced routing, custom caching strategies, or other things that aren't covered by the options `generateSW` provides.
+
+
+
+  </web-tab>
 </web-tabs>
 
 {% Aside 'caution' %}
