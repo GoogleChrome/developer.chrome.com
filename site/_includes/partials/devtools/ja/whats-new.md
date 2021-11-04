@@ -3,7 +3,7 @@
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
 ### Chrome 96 {: #chrome96 }
-* [プレビュー機能: 新しい CSS オーバービューパネル](/blog/new-in-devtools-96/#css-overview)
+* [プレビュー機能: 新しい CSS Overview パネル](/blog/new-in-devtools-96/#css-overview)
 * [CSS の prefers-contrast メディア機能のエミュレート](/blog/new-in-devtools-96/#prefers-contrast)
 * [Chrome の Auto Dark Theme 機能をエミュレート](/blog/new-in-devtools-96/#auto-dark-mode)
 * [Styles ペインで JavaScript として宣言をコピー](/blog/new-in-devtools-96/#copy-as-js)
