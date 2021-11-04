@@ -22,8 +22,8 @@ answered here:
 -  Ask general Privacy Sandbox questions, and questions that cover multiple
    APIs, on the
    [Privacy Sandbox Developer Support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
--  If you'd prefer, ask the question in a
-   [feature request](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request%2CP2&template=feature_request.md&title=)
+-  If you'd prefer, you can
+   [file a feature request](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=feature+request%2CP2&template=feature_request.md&title=)
    on the repo for this site.
 
 ## General questions
@@ -43,10 +43,9 @@ The Privacy Sandbox initiative has two core aims:
 The Privacy Sandbox is a set of proposed web standards.
 
 Chrome and other browser vendors, as well as ad companies and other
-stakeholders, have offered more than 30 proposals to date, which can be found
-in the
-[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo).
-These proposals cover a wide variety of use cases and requirements.
+stakeholders, have offered more than 30 proposals to date. These proposals can
+be found in the
+[public resources of W3C groups](https://github.com/w3c/web-advertising#ideas-and-proposals-links-outside-this-repo) and cover a wide variety of use cases and requirements.
 
 ### How can I get involved?
 
@@ -75,7 +74,9 @@ The APIs are implemented in
 [Chromium](https://en.wikipedia.org/wiki/Chromium_(web_browser)), which
 is the open-source browser used to make Chrome. Code for the Privacy Sandbox
 APIs can be accessed via
-[Chromium Code Search](https://source.chromium.org/search?q=floc). You can
+[Chromium Code Search](https://source.chromium.org/search?q=floc).
+
+You can
 [download Chromium](http://chromium.org/getting-involved/download-chromium),
 then [run it with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
 to allow access to APIs that are in the process of implementation.
@@ -169,14 +170,14 @@ in Chromium within the [TURTLEDOVE](https://github.com/WICG/turtledove) family
 of proposals. The differences mostly pertain to separation of the on-device role
 of the ad buyer and seller:
 
--  FLEDGE allows a 'trusted server' to provide access to real time data used
-   by a worklet during bidding (without compromising privacy). Each interest
-   group can have a `trusted_bidding_signals_url` and
-   `trusted_bidding_signals_keys` attribute. At auction time, the browser
-   communicates with the trusted server to fetch the values for those keys, and
-   then makes those values available to the `generate_bid()` function.
--  The advertiser (ad buyer) can store additional metadata, along with the
-   interest group, to improve on-device bidding.  
+FLEDGE allows a 'trusted server' to provide access to real-time data used by a
+worklet during bidding, without compromising privacy. Each interest group can
+have a `trusted_bidding_signals_url` and `trusted_bidding_signals_keys`
+attribute.
+
+At auction time, the browser communicates with the trusted server to
+fetch the values for those keys, and then makes those values available to the `generate_bid()` function. The advertiser (ad buyer) can store additional
+metadata, along with the interest group, to improve on-device bidding.
 
 ## Attribution Reporting
 
@@ -327,7 +328,6 @@ prevents cross-site recognition.
 
 For ads use cases, see
 [Fenced frames for Ads Design Doc](https://docs.google.com/document/d/17rtX55WkxMcfh6ipuhP4mNULIVxUApvYt4ZYXfX2x-s/edit#heading=h.jy0hectpkl95).
-
 
 ## Network State Partitioning
 
