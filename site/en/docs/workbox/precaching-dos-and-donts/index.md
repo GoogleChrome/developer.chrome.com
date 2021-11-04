@@ -89,5 +89,4 @@ Don't precache polyfills. Rely on runtime caching to ensure they get cached only
 
 Precaching requires some forethought on what assets your users actually need ahead of time, but you can definitely get it right in a way that prioritizes future performance and reliability.
 
-[comment]: <> (TODO: LINK UP TO NEXT DOC)
 If you're unsure about whether certain assets should be precached, your best bet might be to tell Workbox to exclude those assets and create a runtime caching route to handle them. Either way, [precaching is covered in detail later in this documentation](/docs/workbox/precaching-with-workbox/), so you'll be able to apply these principles to your precaching logic in the future.
