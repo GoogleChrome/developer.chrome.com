@@ -105,7 +105,7 @@ end of the origin trial and the date the implementation ships in the browser whe
 be available. This is by design. If Chrome were to avoid the mandatory total-breakage period, that would
 bias toward also avoiding breakages in the API surface, which are often needed to improve the API.
 The final shipping API might be worse for it. -->
-通常、オリジントライアルが成功した後、API が変更されずに着地した場合、オリジントライアルが終了してから、ブラウザにおいて実装がリリースされる日付まで、API は利用できなくなります。これは意図的です。Chrome が完全な破損期間を必ず回避した場合、API を改善するためにしばしば必要となる API サーフェスの破損も回避する方向にバイアスがかかります。最終的にリリースされる API は、それにより悪くなるかもしれません。
+通常、オリジントライアルが成功し、API が変更されることなく提供される場合、オリジントライアルが終了してから、ブラウザで実装がリリースされる日付まで、API は利用できなくなります。これは意図的です。Chrome がその機能を利用できない期間を設けなかった場合、API を改善するためにしばしば必要となる API が利用できない可能性も回避する方向にバイアスがかかります。最終的にリリースされる API が、それにより悪くなる可能性もあります。
 
 <!-- In rare circumstances, if there was clear evidence that developers engaged with the origin trial and that their
 concerns were taken into account in the final API design and implementation,
