@@ -21,8 +21,7 @@ A company that provides services to deliver ads.
 
 ## Advertiser {: #advertiser }
 
-A company that pays to advertise its products. Advertisers are also known
-as buyers.
+A company that pays to advertise its products.
 
 ## Attribution {: #attribution }
 
@@ -261,6 +260,14 @@ Top-level domains such as .com and .org are listed in the
 
 Note that some 'sites' are actually just subdomains. For example,
 `translate.google.com` and `maps.google.com` are subdomains of `google.com`. These subdomains are [eTLD + 1](#etld).
+
+## User-Agent Client Hints (UA-CH) {: #ua-ch }
+
+Provide specific pieces of user-agent data on explicit request. This helps
+reduce passively exposed information which may lead to user identification or
+covert tracking.
+
+UA-CH are sometimes referred to as "Client Hints."
 
 ## WebID
 
