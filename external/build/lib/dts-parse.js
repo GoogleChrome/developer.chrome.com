@@ -409,7 +409,7 @@ class Transform {
             param.name = param.name.substring(1, param.name.length - 1);
           }
           if (!allParams.has(param.name) || param.flags.isOptional) {
-            allParams.set(param.name, param);
+            allParams.set(param.name, {...param});
           }
         }
 
@@ -425,6 +425,24 @@ class Transform {
 
           // TODO: This can appear multiple times (bad Promise method) but should always be equal.
           returnType = s.type;
+        }
+      }
+
+      // We need to check every param to see if it's missing in some OTHER signature.
+      for (const param of allParams.values()) {
+        if (param.flags.isOptional) {
+          continue; // this is already optional
+        }
+
+        for (const s of signatures) {
+          const paramNames = (s.parameters ?? []).map(({name}) => name);
+
+          // If this signature doesn't have this param, it's optional.
+          // This marks "early optional" params.
+          if (!paramNames.includes(param.name)) {
+            param.flags.isOptional = true;
+            break; // skip rest, won't become _more_ optional
+          }
         }
       }
 
@@ -815,12 +833,26 @@ module.exports = async function parse({silent, sources, mode}) {
   new InsertMissingTagsHelper(app.converter);
 
   app.options.setCompilerOptions(sources, typescriptOptions, undefined);
-  const reflection = app.convert();
-  if (!reflection) {
+  const project = app.convert();
+  if (!project) {
     throw new Error(`failed to convert modules: ${sources}`);
   }
 
-  const json = app.serializer.projectToObject(reflection);
+  // HACK: Quickly remove the filename from all reflections. This comes from a temp directory, so
+  // it will cause the data to change _every build_.
+  //   * This could be kept somehow to point back to the source files for e.g., Workbox.
+  //   * This could be used to extend every reflection before converting to JSON, rather than us
+  //     traversing the whole JSON tree, because it guarantees to visit every reflection (even
+  //     those hidden in types or template arguments etc).
+  for (const reflection of project.getReflectionsByKind(
+    typedoc.ReflectionKind.All
+  )) {
+    for (const source of reflection.sources ?? []) {
+      source.fileName = '';
+    }
+  }
+
+  const json = app.serializer.projectToObject(project);
   const t = new Transform(json, mode);
 
   const out = await t.run();

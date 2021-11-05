@@ -81,6 +81,33 @@ declare namespace chrome {
   });
 });
 
+test('early optional method', async t => {
+  const source = `
+declare namespace chrome {
+  export namespace purelyForTest {
+    export function foo(a: number, b: string, c?: string): void;
+    export function foo(b: string, c?: string): void;
+  }
+}
+  `;
+
+  const types = await parseVirtualTypes([{source}]);
+
+  const fooMethod = types['purelyForTest']?._type.properties[0];
+  t.truthy(fooMethod._method);
+  t.falsy(fooMethod._method.return, 'method has void return type, left blank');
+  t.falsy(fooMethod._method.isReturnsAsync, 'not async');
+
+  const params = fooMethod._method.parameters;
+  t.is(params.length, 3);
+  t.true(
+    params[0].flags.isOptional,
+    'param a is optional, merged from signatures'
+  );
+  t.falsy(params[1].flags.isOptional, 'param b is not optional');
+  t.true(params[2].flags.isOptional, 'param c is optional');
+});
+
 test('workbox-like data', async t => {
   const source1 = `
 type HTTPMethod = 'GET';
