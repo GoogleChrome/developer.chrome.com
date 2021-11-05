@@ -51,14 +51,18 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 
 
 <!-- ## Rendering tab updates  -->
+## 업데이트된 렌더링 탭
 
 <!-- ### Emulate the CSS prefers-contrast media feature {: #prefers-contrast } -->
+### CSS의 prefers-constrast 미디어 기능의 에뮬레이션 {: #prefers-contrast }
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/47fsHvVLiVC9J0eWY9wD.png", alt="Emulate the CSS prefers-contrast media feature", width="800", height="483" %}
 
 <!-- The [prefers-contrast](https://www.chromestatus.com/feature/5646323212615680) media feature is used to detect if the user has requested more or less contrast in the page. -->
+[prefers-contrast](https://www.chromestatus.com/feature/5646323212615680) 미디어 기능은 유저가 더 적거나 더 많은 대비를 요청했는지를 알아보기 위한 기능입니다.
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate CSS media feature prefers-contrast** dropdown. -->
+[명령어 표시](/docs/devtools/command-menu/) 를 열고 **렌더링 표시** 명령어를 실행하세요. 그리고 드롭다운 메뉴에서 **CSS 미디어 기능 prefers-contrast 에뮬레이션** 을 선택하세요.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22cec8dbfa7b46c8b633e3555212556ec6f78df9 #}
 
@@ -66,12 +70,15 @@ Chromium issue: [1139777](https://crbug.com/1139777)
 
 
 <!-- ### Emulate the Chrome’s Auto Dark Theme feature {: #auto-dark-mode } -->
-
+### 크롬의 자동 다크 테마 기능 에뮬레이션
 <!-- Use DevTools to emulate auto dark theme to easily see how your page looks when Chrome’s [Auto Dark Theme](/blog/auto-dark-theme/) is enabled. -->
+DevTools 를 사용하여 자동 어두운 테마를 에뮬레이션할 수 있으며, 이를 이용해 사용자들은 크롬의 [자동 어두운 테마](/blog/auto-dark-theme/)가 설정되었을 때 어떻게 보일지를 쉽게 확인할 수 있습니다.
 
 <!-- Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System.  -->
+크롬 96은 안드로이드의 [자동 어두운 테마](/blog/auto-dark-theme/) 에 대한 [Origin Trial](/blog/origin-llllllll/) 을 제시합니다. 이 기능을 이용하여, 사용자가 운영체제 단에서 다크 테마를 적용했을 때, 크롬 브라우저는 자동 생성된 라이트 테마를 라이트 테마로 제작된 웹사이트에 적용합니다.
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate auto dark mode** dropdown. -->
+[명령어 표시](/docs/devtools/command-menu/)를 열고 **렌더링 표시** 명령어를 실행합니다. 그리고 **자동 어두운 모드 에뮬레이션** 을 설정합니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QHS8kupNsTXnKD7HomYy.png", alt="Emulate the Chrome’s Auto Dark Theme feature", width="800", height="483" %}
 
