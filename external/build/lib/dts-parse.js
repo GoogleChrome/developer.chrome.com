@@ -815,12 +815,26 @@ module.exports = async function parse({silent, sources, mode}) {
   new InsertMissingTagsHelper(app.converter);
 
   app.options.setCompilerOptions(sources, typescriptOptions, undefined);
-  const reflection = app.convert();
-  if (!reflection) {
+  const project = app.convert();
+  if (!project) {
     throw new Error(`failed to convert modules: ${sources}`);
   }
 
-  const json = app.serializer.projectToObject(reflection);
+  // HACK: Quickly remove the filename from all reflections. This comes from a temp directory, so
+  // it will cause the data to change _every build_.
+  //   * This could be kept somehow to point back to the source files for e.g., Workbox.
+  //   * This could be used to extend every reflection before converting to JSON, rather than us
+  //     traversing the whole JSON tree, because it guarantees to visit every reflection (even
+  //     those hidden in types or template arguments etc).
+  for (const reflection of project.getReflectionsByKind(
+    typedoc.ReflectionKind.All
+  )) {
+    for (const source of reflection.sources ?? []) {
+      source.fileName = '';
+    }
+  }
+
+  const json = app.serializer.projectToObject(project);
   const t = new Transform(json, mode);
 
   const out = await t.run();
