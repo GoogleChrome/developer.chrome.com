@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 84)"
 authors:
   - kaycebasques
 date: 2020-05-12
-#updated: YYYY-MM-DD
+updated: 2021-11-05
 description: "The new Issues tab, accessibility information in the Inspect Mode tooltip, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/OW8UpZGnXiuvi6WbhRku.jpg'
 alt: ''
@@ -52,7 +52,7 @@ After recording your load performance, the Performance panel now shows [Total Bl
 takes a page to become usable. It essentially measures how long a page _appears_ to be usable
 (because its content has been rendered to the screen) but _isn't actually usable_ because JavaScript
 is blocking the main thread and therefore the page can't respond to user input. TBT is the main [lab
-metric][8] for approximating First Input Delay, which is one of Google's new [Core Web Vitals][9].
+metric][8] for approximating First Input Delay, which is a [Web Vitals][9].
 
 To get Total Blocking Time information, **do not** use the **Reload Page**
 <img alt="Reload page" src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/zlk9ZgF58Mm6U7AYWxxE.png" style="max-height: 1em; vertical-align: middle; display: inline;">
@@ -70,7 +70,7 @@ Chromium Bug: [#1054381][10]
 
 The new **Experience** section of the Performance panel can help you detect [layout shifts][11].
 Cumulative Layout Shift (CLS) is a metric that can help you quantify unwanted visual instability and
-is one of Google's new [Core Web Vitals][12].
+is a [Web Vitals][12].
 
 Click a **Layout Shift** event to see the details of the layout shift in the **Summary** tab. Hover
 over the **Moved from** and **Moved to** fields to visualize where the layout shift occurred.
@@ -165,10 +165,10 @@ Check out [Get things done quickly with app shortcuts][25] to learn more.
 [6]: https://crbug.com/1040025
 [7]: https://web.dev/tbt/
 [8]: https://web.dev/how-to-measure-speed/#lab-data-vs-field-data
-[9]: https://web.dev/vitals/#core-web-vitals
+[9]: https://web.dev/vitals/
 [10]: https://crbug.com/1054381
 [11]: https://web.dev/cls/
-[12]: https://web.dev/vitals/#core-web-vitals
+[12]: https://web.dev/vitals/
 [13]: https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md
 [14]: https://bugs.chromium.org/p/v8/issues/detail?id=6751
 [15]: https://developer.mozilla.org/en-US/docs/Web/CSS/revert

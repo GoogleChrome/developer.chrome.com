@@ -4,7 +4,7 @@ title: "What's New In DevTools (Chrome 85)"
 authors:
   - jecelynyeen
 date: 2020-07-01
-#updated: YYYY-MM-DD
+updated: 2021-11-05
 description:
   "Style editing for CSS-in-JS frameworks, Lighthouse 6.0, new JavaScript features, and more."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/VLstNJeC67163SBU8484.jpg'
@@ -41,8 +41,7 @@ The Lighthouse panel is now running Lighthouse 6. Check out [What's New in Light
 summary of all the major changes, or the [v6.0.0 release notes][6] for a full list of all changes.
 
 Lighthouse 6.0 introduces three new metrics to the report: Largest Contentful Paint (LCP),
-Cumulative Layout Shift (CLS), and Total Blocking Time (TBT). LCP and CLS are 2 of Google's new
-[Core Web Vitals][7], and TBT is a lab measurement proxy for another Core Web Vital, First Input
+Cumulative Layout Shift (CLS), and Total Blocking Time (TBT). LCP and CLS are [web vitals][7], and TBT is a lab measurement proxy for another Web Vital, First Input
 Delay.
 
 The performance score formula has also been reweighted to better reflect the users' loading
@@ -195,7 +194,7 @@ Chromium issue [#1041830][30]
 [4]: https://crbug.com/946975
 [5]: https://web.dev/lighthouse-whats-new-6.0/
 [6]: https://github.com/GoogleChrome/lighthouse/releases/tag/v6.0.0
-[7]: https://web.dev/vitals/#core-web-vitals
+[7]: https://web.dev/vitals/
 [8]: https://crbug.com/772558
 [9]: https://web.dev/lcp/
 [10]: https://web.dev/first-meaningful-paint/

@@ -8,6 +8,7 @@ description: >
   in and see what's new for developers in Chrome 83!
 layout: 'layouts/blog-post.njk'
 date: 2020-05-19
+updated: 2021-11-05
 authors:
   - petelepage
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/3YQ8C5wq9B2yRJv9BWer.jpg'
@@ -211,10 +212,10 @@ complete details.
 
 Measuring the quality of user experience has many facets. While some aspects
 of user experience are site and context specific, there is a common set of
-signals—"**Core Web Vitals**"—that is critical to all web experiences.
+signals that is critical to all web experiences.
 Such [core user experience needs][wd-ucpm] include loading experience,
 interactivity, and visual stability of page content, and combined are the
-foundation of the 2020 Core Web Vitals.
+foundation of a good user experience.
 
 {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/PJP3ZSo0RxY3cjvZlXhx.jpg", alt="", height="232", width="800" %}
 
