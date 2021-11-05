@@ -34,7 +34,7 @@ For more advanced use cases, other modules can help. A few such modules are:
 - [`workbox-strategies`](https://developers.google.com/web/tools/workbox/modules/workbox-strategies) for caching strategies.
 - [`workbox-precaching`](https://developers.google.com/web/tools/workbox/modules/workbox-precaching) for precaching.
 - [`workbox-expiration`](https://developers.google.com/web/tools/workbox/modules/workbox-expiration) for managing caches.
-- [`workbox-window`](https://developers.google.com/web/tools/workbox/modules/workbox-window) for registering a service worker and handling updates in the [`window context`](https://developer.mozilla.org/en-US/docs/Web/API/Window).
+- [`workbox-window`](https://developers.google.com/web/tools/workbox/modules/workbox-window) for registering a service worker and handling updates in the [`window context`](https://developer.mozilla.org/docs/Web/API/Window).
 
 These and [other modules](https://developers.google.com/web/tools/workbox/modules)
 help compose service worker code in a declarative fashion that's easier to read and maintain than using service worker APIs directly.

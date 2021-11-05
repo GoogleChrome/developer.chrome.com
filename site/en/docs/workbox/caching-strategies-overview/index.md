@@ -7,7 +7,7 @@ description: >
 ---
 
 Until now, there have only been mentions and tiny code snippets of the
-[`Cache` interface](https://developer.mozilla.org/en-US/docs/Web/API/Cache).
+[`Cache` interface](https://developer.mozilla.org/docs/Web/API/Cache).
 To use service workers effectively, it's necessary to adopt one or more caching strategies,
 which requires a bit of familiarity with the `Cache` interface.
 
@@ -27,7 +27,7 @@ it might be tempting to think of it as the same as,
 or at least related to the HTTP cache. This is not the case.
 
 - The `Cache` interface is a caching mechanism entirely separate from the HTTP cache.
-- Whatever [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
+- Whatever [`Cache-Control`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cache-Control)
 configuration you use to influence the HTTP cache has no influence on what assets get stored in the `Cache` interface.
 
 It helps to think of browser caches as layered.
@@ -38,14 +38,14 @@ This offers more flexibility than when using relatively simplistic HTTP key-valu
 and is one half of what makes caching strategies possible.
 Some important API methods around service worker caches are:
 
-- [`CacheStorage.open`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open)
+- [`CacheStorage.open`](https://developer.mozilla.org/docs/Web/API/CacheStorage/open)
 to create a new `Cache` instance.
-- [`Cache.add`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/add)
-and [`Cache.put`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/put)
+- [`Cache.add`](https://developer.mozilla.org/docs/Web/API/Cache/add)
+and [`Cache.put`](https://developer.mozilla.org/docs/Web/API/Cache/put)
 to store network responses in a service worker cache.
-- [`Cache.match`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match)
+- [`Cache.match`](https://developer.mozilla.org/docs/Web/API/Cache/match)
 to locate a cached response in a `Cache` instance.
-- [`Cache.delete`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete)
+- [`Cache.delete`](https://developer.mozilla.org/docs/Web/API/Cache/delete)
 to remove a cached response from a `Cache` instance.
 
 These are just a few. There are other useful methods,
@@ -54,26 +54,26 @@ but these are the basic ones you'll see used later on in this guide.
 ## The humble `fetch` event
 
 The other half of a caching strategy is the service worker's
-[`fetch` event](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent).
+[`fetch` event](https://developer.mozilla.org/docs/Web/API/FetchEvent).
 So far in this documentation, you've heard a bit about "intercepting network requests",
 and the `fetch` event inside of a service worker is where this happens:
 
 ```js
 // Establish a cache name
-const cacheName = "MyFancyCacheName_v1";
+const cacheName = 'MyFancyCacheName_v1';
 
-self.addEventListener("install", event => {
+self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(cacheName));
 });
 
-self.addEventListener("fetch", async event => {
+self.addEventListener('fetch', async (event) => {
   // Is this a request for an image?
-  if (event.request.destination === "image") {
+  if (event.request.destination === 'image') {
     // Open the cache
-    event.respondWith(caches.open(cacheName).then(cache => {
+    event.respondWith(caches.open(cacheName).then((cache) => {
       // Respond with the image from the cache or from the network
-      return cache.match(event.request).then(cachedResponse => {
-        return cachedResponse || fetch(event.request.url).then(fetchedResponse => {
+      return cache.match(event.request).then((cachedResponse) => {
+        return cachedResponse || fetch(event.request.url).then((fetchedResponse) => {
           // Add the network response to the cache for future visits.
           // Note: we need to make a copy of the response to save it in
           // the cache and use the original as the request response.
@@ -90,8 +90,8 @@ self.addEventListener("fetch", async event => {
 });
 ```
 
-This is a toy example—and
-[one you can see in action for yourself](https://service-worker-fetch-event-example.glitch.me/)—but
+This is a toy example&mdash;and
+[one you can see in action for yourself](https://service-worker-fetch-event-example.glitch.me/)&mdash;but
 it's one that offers a glimpse into what service workers can do.
 The above code does the following:
 
@@ -102,29 +102,29 @@ store the response in the cache, and return the network response.
 3. All other requests are passed through the service worker with no interaction with the cache.
 
 A fetch's `event` object contains a
-[`request` property](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/request)
+[`request` property](https://developer.mozilla.org/docs/Web/API/FetchEvent/request)
 which some useful bits of information to help you identify the type of each request:
 
-- [`url`](https://developer.mozilla.org/en-US/docs/Web/API/Request/url),
+- [`url`](https://developer.mozilla.org/docs/Web/API/Request/url),
 which is the URL for the network request currently being handled by the `fetch` event.
-- [`method`](https://developer.mozilla.org/en-US/docs/Web/API/Request/method),
+- [`method`](https://developer.mozilla.org/docs/Web/API/Request/method),
 which is the request method (e.g., `GET` or `POST`).
-- [`mode`](https://developer.mozilla.org/en-US/docs/Web/API/Request/mode),
+- [`mode`](https://developer.mozilla.org/docs/Web/API/Request/mode),
 which describes the request's mode.
-A value of `"navigate"` is often used to distinguish requests for HTML documents from other requests.
-- [`destination`](https://developer.mozilla.org/en-US/docs/Web/API/Request/destination),
+A value of `'navigate'` is often used to distinguish requests for HTML documents from other requests.
+- [`destination`](https://developer.mozilla.org/docs/Web/API/Request/destination),
 which describes the type of content being requested in a way that avoids using the requested asset's file extension.
 
 Once again, asynchrony is the name of the game.
 You'll recall that the `install` event offers an
-[`event.waitUntil`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil)
+[`event.waitUntil`](https://developer.mozilla.org/docs/Web/API/ExtendableEvent/waitUntil)
 method that takes a promise, and waits for it to resolve before continuing on to activation.
 The `fetch` event offers a similar
-[`event.respondWith` method](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith)
+[`event.respondWith` method](https://developer.mozilla.org/docs/Web/API/FetchEvent/respondWith)
 that you can use to return the result of an asynchronous
-[`fetch` request](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+[`fetch` request](https://developer.mozilla.org/docs/Web/API/Fetch_API)
 or a response returned by the `Cache` interface's
-[`match` method](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match).
+[`match` method](https://developer.mozilla.org/docs/Web/API/Cache/match).
 
 
 ## Caching strategies
@@ -149,31 +149,31 @@ and that those assets will never be updated in the cache until the service worke
 
 ```js
 // Establish a cache name
-const cacheName = "MyFancyCacheName_v1";
+const cacheName = 'MyFancyCacheName_v1';
 
 // Assets to precache
 const precachedAssets = [
-  "/possum1.jpg",
-  "/possum2.jpg",
-  "/possum3.jpg",
-  "/possum4.jpg"
+  '/possum1.jpg',
+  '/possum2.jpg',
+  '/possum3.jpg',
+  '/possum4.jpg'
 ];
 
-self.addEventListener("install", event => {
+self.addEventListener('install', (event) => {
   // Precache assets on install
-  event.waitUntil(caches.open(cacheName).then(cache => {
+  event.waitUntil(caches.open(cacheName).then((cache) => {
     return cache.addAll(precachedAssets);
   }));
 });
 
-self.addEventListener("fetch", event => {
+self.addEventListener('fetch', (event) => {
   // Is this one of our precached assets?
   const url = new URL(event.request.url);
   const isPrecachedRequest = precachedAssets.includes(url.pathname);
 
   if (isPrecachedRequest) {
     // Grab the precached asset from the cache
-    event.respondWith(caches.open(cacheName).then(cache => {
+    event.respondWith(caches.open(cacheName).then((cache) => {
       return cache.match(event.request.url);
     }));
   } else {
@@ -227,21 +227,21 @@ Here's an example of this strategy, which you can test out in
 
 ```js
 // Establish a cache name
-const cacheName = "MyFancyCacheName_v1";
+const cacheName = 'MyFancyCacheName_v1';
 
-self.addEventListener("fetch", event => {
+self.addEventListener('fetch', (event) => {
   // Check if this is a request for an image
-  if (event.request.destination === "image") {
-    event.respondWith(caches.open(cacheName).then(cache => {
+  if (event.request.destination === 'image') {
+    event.respondWith(caches.open(cacheName).then((cache) => {
       // Go to the cache first
-      return cache.match(event.request.url).then(cachedResponse => {
+      return cache.match(event.request.url).then((cachedResponse) => {
         // Return a cached response if we have one
         if (cachedResponse) {
           return cachedResponse;
         }
 
         // Otherwise, hit the network
-        return fetch(event.request).then(fetchedResponse => {
+        return fetch(event.request).then((fetchedResponse) => {
           // Add the network response to the cache for later visits
           cache.put(event.request, fetchedResponse.clone());
 
@@ -282,15 +282,15 @@ Here's what that might look like when applied to requests for HTML:
 
 ```js
 // Establish a cache name
-const cacheName = "MyFancyCacheName_v1";
+const cacheName = 'MyFancyCacheName_v1';
 
-self.addEventListener("fetch", event => {
+self.addEventListener('fetch', (event) => {
   // Check if this is a navigation request
-  if (event.request.mode === "navigate") {
+  if (event.request.mode === 'navigate') {
     // Open the cache
-    event.respondWith(caches.open(cacheName).then(cache => {
+    event.respondWith(caches.open(cacheName).then((cache) => {
       // Go to the network first
-      return fetch(event.request.url).then(fetchedResponse => {
+      return fetch(event.request.url).then((fetchedResponse) => {
         cache.put(event.request, fetchedResponse.clone());
 
         return fetchedResponse;
@@ -343,13 +343,13 @@ but the latest version isn't strictly necessary on every request.
 
 ```js
 // Establish a cache name
-const cacheName = "MyFancyCacheName_v1";
+const cacheName = 'MyFancyCacheName_v1';
 
-self.addEventListener("fetch", event => {
-  if (event.request.destination === "image") {
-    event.respondWith(caches.open(cacheName).then(cache => {
-      return cache.match(event.request).then(cachedResponse => {
-        const fetchedResponse = fetch(event.request).then(networkResponse => {
+self.addEventListener('fetch', (event) => {
+  if (event.request.destination === 'image') {
+    event.respondWith(caches.open(cacheName).then((cache) => {
+      return cache.match(event.request).then((cachedResponse) => {
+        const fetchedResponse = fetch(event.request).then((networkResponse) => {
           cache.put(event.request, networkResponse.clone());
 
           return networkResponse;
