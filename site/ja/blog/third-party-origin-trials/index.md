@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/blog-post.njk'
 title: サードパーティーオリジントライアルとは何か？
-subhead: オリジントライアルは、新規の、または実験的なウェブプラットフォーム機能をテストするための方法です。サードパーティオリジントライアルにより、埋め込みコンテンツのプロバイダは複数のサイトで新しい機能を試すことができるようになります。
+subhead: オリジントライアルは、ウェブプラットフォームの新しい機能や実験的な機能をテストするための方法です。サードパーティオリジントライアルにより、埋め込みコンテンツのプロバイダは複数のサイトで新しい機能を試すことができるようになります。
 authors:
   - samdutton
 date: 2020-10-01
@@ -17,7 +17,7 @@ tags:
 <!-- [Origin trials](/blog/origin-trials/) are a way to test a new or experimental web platform
 feature. -->
 
-[オリジントライアル](/blog/origin-trials/) は、新規の、または実験的なウェブプラットフォーム機能をテストするための方法です。
+[オリジントライアル](/blog/origin-trials/) は、ウェブプラットフォームの新しい機能や実験的な機能をテストするための方法です。
 
 <!-- Origin trials are usually only available on a first-party basis: they only work for a single
 registered [origin](https://web.dev/same-site-same-origin/#origin). If a developer wants to test an
@@ -25,12 +25,12 @@ experimental feature on other origins where their content is embedded, those ori
 registered for the origin trial, each with a unique trial token. This is not a scalable approach for
 testing scripts that are embedded across a number of sites. -->
 
-オリジントライアルは、通常ファーストパーティベースでのみ利用でき、登録された単一の [オリジン](https://web.dev/same-site-same-origin/#origin) でのみ機能します。もし開発者がコンテンツが埋め込まれている他のオリジンで実験的な機能をテストする場合は、それらのオリジンをすべてオリジントライアルに登録しなければならず、それぞれに一意のトライアルトークンが必要になります。これは、多数のサイトに埋め込まれているスクリプトをテストするためには、スケーラブルなアプローチではありません。
+オリジントライアルは通常、ファーストパーティベースでのみ利用でき、登録された単一の [オリジン](https://web.dev/same-site-same-origin/#origin) でのみ機能します。もし開発者がコンテンツが埋め込まれている他のオリジンで実験的な機能をテストしたい場合は、それらのオリジンをすべてオリジントライアルに登録しなければならず、それぞれに一意のトライアルトークンが必要になります。これは、多数のサイトに埋め込まれているスクリプトをテストすることを考えると、スケーラブルなアプローチとは言えません。
 
 <!-- Third-party origin trials make it possible for providers of embedded content to try out a new
 feature across multiple sites. -->
 
-サードパーティオリジントライアルにより、埋め込みコンテンツのプロバイダは複数のサイトを横断して新機能を試せるようになります。
+サードパーティオリジントライアルにより、埋め込みコンテンツのプロバイダは、複数のサイトを横断して新機能を試せるようになります。
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/fCachIuiBjh3XPo10CrN.png", alt="Diagram showing how third-party origin trials enable a single registration token to be used across multiple origins", width="800", height="400" %}
 
@@ -39,14 +39,14 @@ origin trial option available for features where embedding code on third-party s
 case.  [Getting started with Chrome's origin trials](https://developers.chrome.com/origintrials/)
 provides more general information about how to participate in Chrome origin trials. -->
 
-サードパーティオリジントライアルは、すべての機能に意味があるわけではありません。Chromeは、サードパーティのサイトにコードを埋め込むことが一般的なユースケースである機能に対してのみ、サードパーティオリジントライアルオプションを利用できるようにします。 [Chromeのオリジントライアル入門](https://developers.chrome.com/origintrials/) には、Chrome オリジントライアルへの参加方法に関するより一般的な情報が記載されています。
+サードパーティオリジントライアルは、すべての機能で利用できるわけではありません。Chromeは、サードパーティのサイトにコードを埋め込むことが一般的なユースケースとなる機能に対してのみ、サードパーティオリジントライアルオプションを利用できるようにします。 [Chrome のオリジントライアル入門](https://developers.chrome.com/origintrials/) には、Chrome オリジントライアルへの参加方法に関するより一般的な情報が記載されています。
 
 <!-- If you participate in an origin trial as a third-party provider, it will be your responsibility to
 notify and set expectations with any partners or customers whose sites you intend to include in the
 origin trial. Experimental features may cause unexpected issues and browser vendors may not be able
 to provide troubleshooting support. -->
 
-サードパーティプロバイダとしてオリジントライアルに参加する場合、オリジントライアルに含める予定のサイトのパートナーまたは顧客に通知し、期待を設定するのは、あなたの責任となります。実験的な機能により予期しない問題が発生する可能性があり、ブラウザベンダはトラブルシューティングサポートを提供できない場合があります。
+サードパーティプロバイダとしてオリジントライアルに参加する場合、オリジントライアルに含める予定のサイトのパートナーまたは顧客に通知し、見込みを設定するのは、あなたの責任となります。実験的な機能により予期しない問題が発生する可能性があります。そして、ブラウザベンダは、トラブルシューティングサポートを提供できないかもしれません。
 
 {% Aside %}
 <!-- Supporting third-party origin trials allows for broader participation, but also increases the
@@ -57,7 +57,7 @@ enable a third-party origin trial may be reviewed in order to avoid problematic 
 affecting multiple sites. The Origin Trials Developer Guide explains the
 [approval process](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#18-how-can-i-enable-an-experimental-feature-as-embedded-content-on-different-domains). -->
 
-サードパーティオリジントライアルをサポートすることで、より幅広い参加が可能になりますが、実験的な機能の過度の使用または誤用の可能性も高まるため、"trusted tester" アプローチの方が適切です。 サードパーティオリジントライアルの範囲を拡大するには、サードパーティプロバイダとして参加するウェブ開発者に対して、追加の精査と責任が求められます。複数のサイトに影響を与える問題のあるサードパーティのスクリプトを回避するために、サードパーティのオリジントライアルを有効にするリクエストは確認される場合があります。オリジントライアル開発者ガイドにて、 [承認プロセス](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#18-how-can-i-enable-an-experimental-feature-as-embedded-content-on-different-domains) が説明されています。
+サードパーティオリジントライアルをサポートすることで、より幅広く参加してもらうことが可能となりますが、実験的な機能の過度の使用または誤用の可能性も高まるため、"trusted tester" アプローチの方が適切です。 サードパーティオリジントライアルの範囲を拡大するには、サードパーティプロバイダとして参加するウェブ開発者に対して、追加の精査と責任が求められます。複数のサイトに影響を与える問題のあるサードパーティのスクリプトを回避するために、サードパーティのオリジントライアルを有効にするリクエストはレビューが必要となる場合があります。オリジントライアル開発者ガイドにて、 [承認プロセス](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#18-how-can-i-enable-an-experimental-feature-as-embedded-content-on-different-domains) が説明されています。
 {% endAside %}
 
 <!-- Check [Chrome Platform Status](https://www.chromestatus.com/features/5691464711405568) for updates
@@ -89,13 +89,13 @@ affecting multiple sites. The Origin Trials Developer Guide explains the
 -->
 
 1. [進行中のトライアルの一覧](https://developers.chrome.com/origintrials/#/trials/active) からトライアルを選択します。
-1. トライアルの登録ページにて、もし利用可能であれば、サードパーティトークンを要求するためのオプションを有効にします。
-1. サードパーティトークンの使用を制限するための選択肢の1つを選択します:
-   1. Standard Limit: これは、 [Chrome ページ読み込みの 0.5%](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#3-what-happens-if-a-large-site-such-as-a-google-service-starts-depending-on-an-experimental-feature) の通常の制限です。
-   2. User Subset: 有効なサードパーティトークンが提供されている場合でも、Chrome ユーザーの数パーセントが常にトライアルから除外されます。除外率はトライアルごとに異なります（または適用されない場合があります）が、通常は 5% 未満です。
+1. トライアルの登録ページにて、サードパーティトークンを要求するためのオプションが利用可能になっていれば、それを有効にします。
+1. サードパーティトークンの使用を制限するための選択肢を 1 つを選択します:
+   1. Standard Limit: これは、 [Chrome ページ読み込みの 0.5%](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#3-what-happens-if-a-large-site-such-as-a-google-service-starts-depending-on-an-experimental-feature) に適用される通常の制限です。
+   1. User Subset: 有効なサードパーティトークンが提供されている場合でも、Chrome ユーザーの数パーセントが常にトライアルから除外されます。除外率はトライアルごとに異なります（または適用されないかもしれない）が、通常は 5% 未満です。
 1. Register ボタンをクリックして、リクエストを送信します。
 1. リクエストに対してさらにレビューが求められない限り、サードパーティトークンはすぐに発行されます。（トライアルによっては、トークンリクエストのレビューが必要になる場合があります。）
-1. レビューが必要であった場合は、レビューが完了し、サードパーティトークンの準備ができたときに、メールで通知されます。
+1. レビューが必要だった場合は、レビューが完了し、サードパーティトークンの準備ができたときに、メールで通知されます。
 
    <figure class="w-figure">
      {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/r07Zb0QoHnlgiItETR6q.png", alt="Chrome origin trials registration page for the Conversion Measurement API, with third-party matching checkbox selected.", width="800", height="618" %}
@@ -111,7 +111,7 @@ ideas on how we can improve it, [create an
 issue](https://github.com/GoogleChrome/OriginTrials/issues/new) on the Origin Trials GitHub code
 repo. -->
 
-サードパーティオリジントライアルに登録していて、プロセスやそれを改善する方法についてのアイデアを共有するためのフィードバックがある場合は、オリジントライアル GitHub コードリポジトリに [Issue を作ってください](https://github.com/GoogleChrome/OriginTrials/issues/new) 。
+サードパーティオリジントライアルに登録していて、それを改善する方法についてのアイデアや手順といったフィードバックを報告したいときは、オリジントライアル GitHub コードリポジトリに [Issue を作ってください](https://github.com/GoogleChrome/OriginTrials/issues/new) 。
 
 ## 参考情報
 
