@@ -156,7 +156,7 @@ Chromium issue: [1251176](https://crbug.com/1251176)
 <!-- ### Proper `Intl` objects preview and evaluation in the Console {: #intl } -->
 ### 콘솔에서 적절한 `Intl` 객체 미리보기 및 값 판별
 <!-- The [Intl](https://tc39.es/ecma402/#intl-object) objects have proper preview now and are evaluated eagerly in the Console. Previously, the `Intl` objects were not evaluated eagerly. -->
-[Intl](https://tc39.es/ecma402/#intl-object) 객체는 적절한 미리보기 기능을 가지고 있고, 또한 콘솔은 이 객체의 값을 이전과 달리 정확하게 표시합니다.
+[Intl](https://tc39.es/ecma402/#intl-object) 객체는 적절한 미리보기 기능을 가지고 있고, 또한 콘솔은 이 객체의 모든 값을 괄호닫음 없이 모두 표시합니다. 
 
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZxGQoDdnilseKTFsxdbC.png", alt="Intl objects in the Console", width="800", height="559" %} -->
@@ -208,18 +208,25 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 
 
 <!-- ## [Experimental] New Reporting API pane in the Application panel {: #reporting-api } -->
+## [실험실 기능] 애플리케이션 패널에 새롭게 추가된 Reporting API 영역
 
 {% Aside %}
 <!-- To enable the experiment, check the **Enable Reporting API panel in the Application panel** checkbox under **Settings** > **Experiments**. -->
+이 기능을 활성화하기 위해서, **설정** > **실험** 내부의 **Enable Reporting API panel in the Application panel** 체크박스에 체크해 주세요.
 {% endAside %}
 
 <!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
 
+[Reporting API](https://web.dev/reporting-api/) 는 개발자들이 웹페이지, 제거된 API 호츨 등에서의 보안수칙 위반을 잘 모니터링할 수 있도록 설계되었습니다.
+
 <!-- With this experiment enabled, you can now view the reports status in the new **Reporting API** pane in the **Application** panel.  -->
+이 실험을 활성화함으로써, 여러분들은 이제 보고된 상태를 **애플리케이션** 패널의 새로운 **Reporting API** 영역에서 볼 수 있습니다.
 
 <!-- Please note that the **Endpoints** section is currently still under active development (showing no reporting endpoints for now).  -->
+**Endpoints** 섹션은 현재 개발중임을 염두에 두세요. (따라서 엔드포인트는 현재 보고되지 않습니다.)
 
 <!-- Learn more about the **Reporting API** with [this article](https://web.dev/reporting-api/). -->
+[관련문서](https://web.dev/reporting-api/)링크를 통해 **Reporting API**에 대해 좀더 알아볼 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="Reporting API pane in the Application panel", width="800", height="476" %}
 
