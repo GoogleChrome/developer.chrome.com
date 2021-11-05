@@ -120,7 +120,7 @@ Some key things to understand are:
 registration fails and the service worker is discarded.
 - Reminder: service workers operate within a scope.
 Here, the scope is the entire origin, as it was loaded from the root directory.
-- When registration begins, the service worker state is set to `"installing'`.
+- When registration begins, the service worker state is set to `'installing'`.
 
 Once registration finishes, installation begins.
 
@@ -156,7 +156,7 @@ so let's focus on the role of
 and waits until that promise has been resolved.
 In this example, that promise does two asynchronous things:
 
-1. Creates a new `Cache` instance named `"MyFancyCache_v1'`.
+1. Creates a new `Cache` instance named `'MyFancyCache_v1'`.
 2. After the cache is created,
 an array of asset URLs are precached using its asynchronous
 [`addAll` method](https://developer.mozilla.org/docs/Web/API/Cache/addAll).
@@ -166,12 +166,12 @@ Installation fails if the promise(s) passed to `event.waitUntil` are
 If this happens, the service worker is discarded.
 
 If the promises [resolve](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve),
-installation succeeds and the service worker's state will change to `"installed'` and will then activate.
+installation succeeds and the service worker's state will change to `'installed'` and will then activate.
 
 ### Activation
 
 If registration and installation succeed,
-the service worker activates, and its state becomes `"activating'`
+the service worker activates, and its state becomes `'activating'`
 Work can be done during activation in the service worker's
 [`activate` event](https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/activate_event).
 A typical task in this event is to prune old caches,
@@ -181,7 +181,7 @@ and will be expanded on when we talk about service worker updates.
 
 For new service workers, `activate` fires immediately after `install` is successful.
 Once activation finishes,
-the service worker's state becomes `"activated'`.
+the service worker's state becomes `'activated'`.
 Notice that, by default,
 the new service worker won't begin controlling the page until the next navigation or page refresh.
 
@@ -202,7 +202,7 @@ is called with a URL different from the currently installed service worker&mdash
 is called with the same URL as the installed service worker,
 but with a different scope.
 Again, avoid this by keeping the scope at the root of an origin if possible.
-- When events such as `"push'` or `"sync'`
+- When events such as `'push'` or `'sync'`
 have been triggered within the last 24 hours&mdash;but don't worry about these events yet.
 
 ### How updates happen
@@ -274,7 +274,7 @@ self.addEventListener('install', (event) => {
 
 Two things are different from the first `install` event example from earlier:
 
-1. A new `Cache` instance with a key of `"MyFancyCacheName_v2'` is created.
+1. A new `Cache` instance with a key of `'MyFancyCacheName_v2'` is created.
 2. The precached asset names have changed.
 
 {% Aside %}
@@ -331,8 +331,8 @@ self.addEventListener('activate', (event) => {
 Old caches don't tidy themselves.
 We need to do that ourselves or risk exceeding
 [storage quotas](https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
-Since `"MyFancyCacheName_v1'` from the first service worker is out of date,
-the cache allow list is updated to specify `"MyFancyCacheName_v2'`,
+Since `'MyFancyCacheName_v1'` from the first service worker is out of date,
+the cache allow list is updated to specify `'MyFancyCacheName_v2'`,
 which deletes caches with a different name.
 
 The `activate` event will finish after the old cache is removed.

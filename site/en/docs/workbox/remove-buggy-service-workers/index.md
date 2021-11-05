@@ -96,7 +96,7 @@ This will make things a lot less complicated later on.
 ### Set a `Clear-Site-Data` header
 
 Some browsers will unregister all service workers for an origin if a
-[`Clear-Site-Data` response header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Clear-Site-Data) with a value of `"storage"` is set.
+[`Clear-Site-Data` response header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Clear-Site-Data) with a value of `'storage'` is set.
 However, there are a couple things to be aware of with this approach:
 
 - Be warned that this will clear _all_ storage for the associated origin. That includes `localStorage`, IndexedDB, `sessionStorage`, and other storage (but not the HTTP cache for the origin).

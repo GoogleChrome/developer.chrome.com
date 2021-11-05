@@ -3,7 +3,7 @@ layout: "layouts/doc-post.njk"
 title: Precaching dos and don'ts
 date: 2021-11-04
 description: >
-  Learn the do's and don'ts around precaching.
+  Learn the do's and don'ts of precaching.
 ---
 
 This documentation has [covered precaching previously](/docs/workbox/service-worker-deployment/#precaching-pitfalls), but not enough about how to get it right. This is important, because regardless of whether you use Workbox, it's easy to precache too much and potentially waste data and bandwidth. You should be careful about how your precaching payload affects the user experience.

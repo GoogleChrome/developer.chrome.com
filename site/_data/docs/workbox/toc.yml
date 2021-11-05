@@ -9,6 +9,7 @@
     - url: /docs/workbox/service-worker-deployment
     - url: /docs/workbox/remove-buggy-service-workers
     - url: /docs/workbox/improving-development-experience
+    - url: /docs/workbox/troubleshooting-and-logging
     - url: /docs/workbox/different-architectures
     - url: /docs/workbox/app-shell-model
     - url: /docs/workbox/navigation-preload

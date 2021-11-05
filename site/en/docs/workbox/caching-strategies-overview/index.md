@@ -111,7 +111,7 @@ which is the URL for the network request currently being handled by the `fetch` 
 which is the request method (e.g., `GET` or `POST`).
 - [`mode`](https://developer.mozilla.org/en-US/docs/Web/API/Request/mode),
 which describes the request's mode.
-A value of `"navigate"` is often used to distinguish requests for HTML documents from other requests.
+A value of `'navigate'` is often used to distinguish requests for HTML documents from other requests.
 - [`destination`](https://developer.mozilla.org/en-US/docs/Web/API/Request/destination),
 which describes the type of content being requested in a way that avoids using the requested asset's file extension.
 
