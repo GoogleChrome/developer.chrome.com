@@ -134,14 +134,17 @@ Chromium issue: [1214030](https://crbug.com/1214030)
 
 Chromium issue: [1226262](https://crbug.com/1226262) 
 
-
 <!-- ## Console updates -->
+## 콘솔 업데이트
 
 <!-- ### Option to hide CORS errors in the Console {: #hide-cors-errors } -->
+### 콘솔의 CORS 에러 숨김 옵션
 
 <!-- You can hide CORS errors in the **Console**. As the CORS errors are now reported in the Issues tab, hiding CORS errors in the **Console** can help reduce the clutters. -->
+여러분은 **콘솔** 에서 CORS 오류를 숨길 수 있습니다. CORS 오류들은 현재 이슈 탭에 리포트되고 있으므로, **콘솔** 에서 이들을 숨기는 것은 콘솔 내부에 어지럽게 흩어진 오류들을 줄이는 데 도움을 줄 수 있습니다. 
 
 <!-- In the **Console**, click on the **Settings** icon and uncheck the **Show CORS errors in console** checkbox. -->
+**콘솔**에서 **설정** 아이콘을 클릭한 다음 **콘솔에 CORS 오류 표시** 체크박스를 해제합니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/m3ZzZI5VkYSYCfCLDHUi.png", alt="Option to hide CORS errors in the Console", width="800", height="502" %}
 
