@@ -29,8 +29,7 @@ draft: true
 {% include 'partials/devtools/ko/banner.md' %}
 
 
-<!-- ## Preview feature: New CSS Overview panel {: #css-overview } -->
-## 미리보기 기능: 새로운 CSS 개요 영역 
+## 미리보기 기능: 새로운 CSS 개요 영역 {: #css-overview }
 
 당신의 페이지에 존재할 수 있는 잠재적 CSS 개선점을 보여 주는 새로운 CSS 개요 패널을 사용해 보세요.
 [**CSS 개요** 패널 열기](/docs/devtools/css-overview#open) 그리고 **Capture overview** 를 클릭하여 페이지 내의 CSS에 관한 보고서를 생성할 수 있습니다.
@@ -47,7 +46,7 @@ draft: true
 
 Chromium issue: [1254557](https://crbug.com/1254557)
 
-## 업데이트된 렌더링 탭
+## 렌더링 탭의 업데이트
 
 ### CSS의 prefers-constrast 미디어 기능의 에뮬레이션 {: #prefers-contrast }
 
@@ -62,7 +61,7 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 Chromium issue: [1139777](https://crbug.com/1139777)
 
 
-### 크롬의 자동 어두운 테마 기능 에뮬레이션
+### 크롬의 자동 어두운 테마 기능 에뮬레이션 {: #auto-dark-mode }
 
 DevTools 를 사용하여 자동 어두운 테마를 에뮬레이션할 수 있으며, 이를 이용해 사용자들은 크롬의 [자동 어두운 테마](/blog/auto-dark-theme/)가 설정되었을 때 어떻게 보일지를 쉽게 확인할 수 있습니다.
 
