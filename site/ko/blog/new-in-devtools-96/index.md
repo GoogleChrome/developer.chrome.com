@@ -88,12 +88,16 @@ Chromium issue: [1243309](https://crbug.com/1243309)
 
 
 <!-- ## Copy declarations as JavaScript in the Styles pane {: #copy-as-js } -->
+## 스타일 영역에서 선언을 자바스크립트로 복사하기
 
 <!-- Two new options are added in the context menu  for you to easily copy CSS rules as JavaScript properties. These shortcuts options are handy especially for developers who are working with [CSS-in-JS](/blog/css-in-js/#what-is-css-in-js)  libraries. -->
+쉽게 CSS 규칙을 자바스크립트 프로퍼티로 복사하기 위한 새로운 두 개의 옵션이 컨텍스트 메뉴에 추가되었습니다. 이 바로가기 옵션들은 개발자들, 특히 CSS in JS 를 사용하는 개발자들에게 편리합니다.
 
 <!-- In the **Styles** pane, right click on a CSS rule. You can select **Copy declaration as JS** to copy a single rule or **Copy all declarations as JS** to copy all rules. -->
+**스타일** 영역의 CSS 규칙에서 마우스 오른쪽을 클릭합니다. 우리는 **선언을 JS로 복사**를 선택하여 하나의 규칙을 복사하거나, 혹은 **모든 선언을 JS로 복사**를 선택하여 모든 규칙을 복사할 수 있습니다.
 
 <!-- For instance, the example below will copy `padding-left: '1.5rem'` to the clipboard. -->
+예를 들어, 아래의 예제는 `padding-left: '1.5rem'` 를 클립보드로 복사할 것입니다.
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M4mKimxhUs6f4hc0wMuO.png", alt="Copy declaration as JavaScript", width="800", height="469" %} -->
 
