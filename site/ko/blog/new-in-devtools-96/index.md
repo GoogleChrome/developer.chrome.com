@@ -34,9 +34,9 @@ draft: true
 
 <!-- Use the new **CSS Overview** panel to identify potential CSS improvements on your page.
 [Open the **CSS Overview** panel](/docs/devtools/css-overview#open), then click on **Capture overview** to generate a report of your page’s CSS. -->
-사용자의 페이지에 있을 수 있는 잠재적인 CSS 개선점을 보여 주는 새로운 CSS 개요 패널을 사용해 보세요.
+사용자의 페이지에 존재할 수 있는 잠재적인 CSS 개선점을 보여 주는 새로운 CSS 개요 패널을 사용해 보세요.
 <!-- You can further drill down on the information. For example, click on a color in the **Colors** section to view the list of elements that apply the same color. Click on an element to open the element in the **Elements** panel. -->
-사용자들은 정보들을 더더욱 파고들 수 있게 됩니다. 예를 들어, **색상** 섹션의 색상을 클릭해서 동일한 색상이 적용되는 요소들의 리스트를 볼 수 있으며, 하나의 구성요소를 클릭해서 **구성요소** 패널에서 그것을 열 수 있습니다.
+사용자들은 정보들을 더더욱 깊이 파고들 수 있게 됩니다. 예를 들어, **색상** 섹션의 색상을 클릭해서 동일한 색상이 적용되는 요소들의 리스트를 볼 수 있으며, 하나의 구성요소를 클릭해서 **구성요소** 패널에서 그것을 열 수 있습니다.
 <!-- The **CSS Overview** panel is a preview feature. Our team is still actively working on it and we are looking for your [feedback](https://goo.gle/css-overview-feedback) for further enhancements. -->
 **CSS 개요** 패널은 미리보기 기능입니다. 우리는 이 기능에 계속적인 노력을 기울이고 있으며, 또한 더 많은 개선점을 찾기 위해서 여러분의 [피드백](https://goo.gle/css-overview-feedback) 이 필요합니다. 
 
