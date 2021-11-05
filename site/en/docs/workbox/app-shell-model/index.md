@@ -8,7 +8,7 @@ description: >
 
 A common architectural feature of [single page web applications (SPA)](https://en.wikipedia.org/wiki/Single-page_application) is a minimal set of HTML, CSS, and JavaScript needed to power the global functionality of an application. In practice, this tends to be the header, navigation, and other common user interface elements that persist across all pages. When a service worker precaches this minimal UI's HTML and dependent assets, we call this the _application shell_.
 
-{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/9nNaCUUYNSyBioL9eSiv.png", alt="A diagram of an application shell. It is a screenshot of a web page with a header at top, and a content area at the bottom. The header is labeled 'Application Shell', whereas the bottom is labeled as 'Content'", width="800", height="678" %}
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/9nNaCUUYNSyBioL9eSiv.png", alt="A diagram of an application shell. It is a screenshot of a web page with a header at top, and a content area at the bottom. The header is labeled 'Application Shell', whereas the bottom is labeled as 'Content'.", width="800", height="678" %}
 
 The application shell plays a significant role in the perceived performance of a web application. It's the first thing that loads, and therefore, it's also the first thing users see while they wait for the content to populate the user interface.
 
