@@ -154,8 +154,10 @@ Chromium issue: [1251176](https://crbug.com/1251176)
 
 
 <!-- ### Proper `Intl` objects preview and evaluation in the Console {: #intl } -->
-
+### 콘솔에서 적절한 `Intl` 객체 미리보기 및 값 판별
 <!-- The [Intl](https://tc39.es/ecma402/#intl-object) objects have proper preview now and are evaluated eagerly in the Console. Previously, the `Intl` objects were not evaluated eagerly. -->
+[Intl](https://tc39.es/ecma402/#intl-object) 객체는 적절한 미리보기 기능을 가지고 있고, 또한 콘솔은 이 객체의 값을 이전과 달리 정확하게 표시합니다.
+
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZxGQoDdnilseKTFsxdbC.png", alt="Intl objects in the Console", width="800", height="559" %} -->
 
@@ -165,8 +167,10 @@ Chromium issue: [1073804](https://crbug.com/1073804)
 
 
 <!-- ### Consistent async stack traces {: #async } -->
+### 일관적인 async 스택 추적
 
 <!-- DevTools now reports `async` stack traces for `async` functions to be consistent with other async tasks.  -->
+다른 비동기 태스크와 일관성을 유지하기 위해, 이제 DevTools 는 `async` 함수에 대한 `async` 스택 트레이스를 보고합니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wuKo84nrDzbhwCnIVU2n.png", alt="async stack traces", width="800", height="427" %}
 
@@ -176,10 +180,14 @@ Chromium issue: [1254259](https://crbug.com/1254259)
 
 
 <!-- ### Retain the Console sidebar {: #console-sidebar } -->
+### 콘솔 사이드바 유지
 
 <!-- The Console sidebar is here to stay. In Chrome 94, we announced the [upcoming deprecation of the Console sidebar](/blog/new-in-devtools-94/#deprecated) and ask developers for feedback and concerns. -->
 
+콘솔 사이드바가 유지됩니다. 크롬 94애서 [콘솔 사이드바 제거 예정](/blog/new-in-devtools-94/#deprecated)이 발표되었고, 이에 따라 우리는 개발자들에게 피드백 혹은 우려사항을 요청했습니다.
+
 <!-- We have now got enough feedback from the deprecation notice and we will work on improving the sidebar rather than removing it. -->
+현재 우리는 제거가 예정된 콘솔 사이드바에 대해 충분한 피드백을 받았으며, 따라서 이를 제거하기보다는 개선을 위해 힘쓸 것입니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XIsLjvBFSeaTN5BtEgmU.png", alt="Console sidebar", width="800", height="502" %}
 
@@ -189,8 +197,10 @@ Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 
 
 <!-- ## Deprecated Application cache pane in the Application panel {: #app-cache } -->
+## 애플리케이션 패널 내 애플리케이션 캐시 영역 제거 예정
 
 <!-- The [Application cache](https://developer.chrome.com/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
+[AppCache](https://web.dev/appcache-removal/) 에 대한 지원이 크롬 및 다른 크로미움 기반 브라우저에서 중단됨에 따라, 애플리케이션 패널 내부 [애플리케이션 캐시](https://developer.chrome.com/docs/devtools/storage/applicationcache/) 영역이 제거되었습니다.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
