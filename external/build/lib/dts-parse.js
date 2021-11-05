@@ -327,9 +327,6 @@ class Transform {
     if (!this.filter(node, parent, namespace)) {
       return null;
     }
-    for (const source of node.sources ?? []) {
-      source.fileName = ''; // HACK
-    }
 
     const extendedNode = /** @type {ExtendedReflection} */ (node);
 
@@ -823,11 +820,12 @@ module.exports = async function parse({silent, sources, mode}) {
     throw new Error(`failed to convert modules: ${sources}`);
   }
 
-  // Quickly remove the filename from all reflections. This comes from a temp directory, so it will
-  // cause the data to change _every build_.
-  // TODO: This could be kept somehow to point back to the source files for e.g., Workbox.
-  // TODO: This could be used to extend every reflection before converting to JSON, rather than us
-  // traversing the whole JSON tree.
+  // HACK: Quickly remove the filename from all reflections. This comes from a temp directory, so
+  // it will cause the data to change _every build_.
+  //   * This could be kept somehow to point back to the source files for e.g., Workbox.
+  //   * This could be used to extend every reflection before converting to JSON, rather than us
+  //     traversing the whole JSON tree, because it guarantees to visit every reflection (even
+  //     those hidden in types or template arguments etc).
   for (const reflection of project.getReflectionsByKind(
     typedoc.ReflectionKind.All
   )) {
