@@ -128,7 +128,7 @@ There are options to add and remove steps too. This is useful if you want to add
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/rs8gfXvOFh0Jrnw3F15j.png", alt="step menu", width="800", height="663" %}
 
 1. For example, the *Scroll* event after the *Mocha* step is not necessary. You can select **Remove step** to remove it.
-2. Says you want to **wait until there are 9 coffees** display on the page before performing any steps.
+2. Says, you want to **wait until there are 9 coffees** display on the page before performing any steps.
 3. In the *Mocha* step menu, select **Add step before**.
 4. A new step is created.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jEOHv9iiVfqMQvKRbueR.png", alt="new step added", width="800", height="663" %} 
