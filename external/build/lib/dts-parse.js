@@ -409,7 +409,7 @@ class Transform {
             param.name = param.name.substring(1, param.name.length - 1);
           }
           if (!allParams.has(param.name) || param.flags.isOptional) {
-            allParams.set(param.name, param);
+            allParams.set(param.name, {...param});
           }
         }
 
@@ -425,6 +425,24 @@ class Transform {
 
           // TODO: This can appear multiple times (bad Promise method) but should always be equal.
           returnType = s.type;
+        }
+      }
+
+      // We need to check every param to see if it's missing in some OTHER signature.
+      for (const param of allParams.values()) {
+        if (param.flags.isOptional) {
+          continue; // this is already optional
+        }
+
+        for (const s of signatures) {
+          const paramNames = (s.parameters ?? []).map(({name}) => name);
+
+          // If this signature doesn't have this param, it's optional.
+          // This marks "early optional" params.
+          if (!paramNames.includes(param.name)) {
+            param.flags.isOptional = true;
+            break; // skip rest, won't become _more_ optional
+          }
         }
       }
 
