@@ -34,14 +34,14 @@ draft: true
 
 <!-- Use the new **CSS Overview** panel to identify potential CSS improvements on your page.
 [Open the **CSS Overview** panel](/docs/devtools/css-overview#open), then click on **Capture overview** to generate a report of your page’s CSS. -->
-사용자의 페이지에 있을 수 있는 잠재적인 CSS 개선점을 보여 주는 새로운 CSS 개요 영역을 사용해 보세요.
+사용자의 페이지에 있을 수 있는 잠재적인 CSS 개선점을 보여 주는 새로운 CSS 개요 패널을 사용해 보세요.
 <!-- You can further drill down on the information. For example, click on a color in the **Colors** section to view the list of elements that apply the same color. Click on an element to open the element in the **Elements** panel. -->
-사용자들은 정보들을 더더욱 파고들 수 있게 됩니다. 예를 들어, **색상** 섹션의 색상을 클릭해서 동일한 색상이 적용되는 요소들의 리스트를 볼 수 있으며, 하나의 구성요소를 클릭해서 **구성요소** 영역에서 그것을 열 수 있습니다.
+사용자들은 정보들을 더더욱 파고들 수 있게 됩니다. 예를 들어, **색상** 섹션의 색상을 클릭해서 동일한 색상이 적용되는 요소들의 리스트를 볼 수 있으며, 하나의 구성요소를 클릭해서 **구성요소** 패널에서 그것을 열 수 있습니다.
 <!-- The **CSS Overview** panel is a preview feature. Our team is still actively working on it and we are looking for your [feedback](https://goo.gle/css-overview-feedback) for further enhancements. -->
-**CSS 개요** 영역은 미리보기 기능입니다. 우리는 이 기능에 계속적인 노력을 기울이고 있으며, 또한 더 많은 개선점을 찾기 위해서 여러분의 [피드백](https://goo.gle/css-overview-feedback) 이 필요합니다. 
+**CSS 개요** 패널은 미리보기 기능입니다. 우리는 이 기능에 계속적인 노력을 기울이고 있으며, 또한 더 많은 개선점을 찾기 위해서 여러분의 [피드백](https://goo.gle/css-overview-feedback) 이 필요합니다. 
 
 <!-- Read [this article](/docs/devtools/css-overview) to learn more on the **CSS Overview** panel. -->
-**CSS 개요** 영역에 대해 좀더 알고 싶으시다면 [더보기](/docs/devtools/css-overview) 를 클릭하여 첨부된 문서를 읽어 보세요.
+**CSS 개요** 에 대해 좀더 알고 싶으시다면 [더보기](/docs/devtools/css-overview) 를 클릭하여 첨부된 문서를 읽어 보세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fXXPihV3bTl82WDJGX51.png", alt="CSS Overview panel", width="800", height="509" %}
 
@@ -107,8 +107,10 @@ Chromium issue: [1253635](https://crbug.com/1253635)
 
 
 <!-- ## New Payload tab in the Network panel {: #payload } -->
+## 네트워크 패널의 새로운 페이로드 탭
 
 <!-- Use the new **Payload** tab in the **Network** panel when you inspect a network request with payload. Previously, the payload information is available under the **Headers** tab. -->
+여러분이 페이로드가 있는 네트워크 요청을 조사할 때, **네트워크** 패널에 새로이 추가된 **페이로드** 탭을 사용하세요. 이전 버전에서, 페이로드 정보는 **헤더** 탭에서 사용 가능했습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/1DTIW7zoIqf3VE2WMJmX.png", alt="Payload tab in the Network panel", width="800", height="488" %}
 
@@ -118,10 +120,13 @@ Chromium issue: [1214030](https://crbug.com/1214030)
 
 
 <!-- ## Improved the display of properties in the Properties pane {: #properties } -->
+## 속성 영역 내의 속성 표시 방법의 개선 
 
 <!-- The **Properties** pane now shows only relevant properties instead of showing all properties of the instance. DOM prototypes and methods are now removed. -->
+**속성** 영역은 인스턴스의 모든 속성을 표시하는 대신, 오직 관련된 속성값들만을 표시합니다. DOM 프로토타입과 메소드들은 현재 제거되었습니다.
 
 <!-- Together with the **Properties** pane [enhancements](/blog/new-in-devtools-95/#properties) in Chrome 95, you can now locate the relevant properties easier. -->
+**속성** 영역의 [크롬 95에서의 개선](/blog/new-in-devtools-95/#properties)과 함께, 여러분은 이제 관련 속성들을 쉽게 위치시킬 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hs4KfBZOBeyWHF42Xsuq.png", alt="The display of properties in the Properties pane", width="800", height="387" %}
 
