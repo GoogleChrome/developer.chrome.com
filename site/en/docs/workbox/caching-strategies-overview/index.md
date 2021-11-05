@@ -7,7 +7,7 @@ description: >
 ---
 
 Until now, there have only been mentions and tiny code snippets of the
-[`Cache` interface](https://developer.mozilla.org/en-US/docs/Web/API/Cache).
+[`Cache` interface](https://developer.mozilla.org/docs/Web/API/Cache).
 To use service workers effectively, it's necessary to adopt one or more caching strategies,
 which requires a bit of familiarity with the `Cache` interface.
 
@@ -27,7 +27,7 @@ it might be tempting to think of it as the same as,
 or at least related to the HTTP cache. This is not the case.
 
 - The `Cache` interface is a caching mechanism entirely separate from the HTTP cache.
-- Whatever [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
+- Whatever [`Cache-Control`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Cache-Control)
 configuration you use to influence the HTTP cache has no influence on what assets get stored in the `Cache` interface.
 
 It helps to think of browser caches as layered.
@@ -38,14 +38,14 @@ This offers more flexibility than when using relatively simplistic HTTP key-valu
 and is one half of what makes caching strategies possible.
 Some important API methods around service worker caches are:
 
-- [`CacheStorage.open`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open)
+- [`CacheStorage.open`](https://developer.mozilla.org/docs/Web/API/CacheStorage/open)
 to create a new `Cache` instance.
-- [`Cache.add`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/add)
-and [`Cache.put`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/put)
+- [`Cache.add`](https://developer.mozilla.org/docs/Web/API/Cache/add)
+and [`Cache.put`](https://developer.mozilla.org/docs/Web/API/Cache/put)
 to store network responses in a service worker cache.
-- [`Cache.match`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match)
+- [`Cache.match`](https://developer.mozilla.org/docs/Web/API/Cache/match)
 to locate a cached response in a `Cache` instance.
-- [`Cache.delete`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete)
+- [`Cache.delete`](https://developer.mozilla.org/docs/Web/API/Cache/delete)
 to remove a cached response from a `Cache` instance.
 
 These are just a few. There are other useful methods,
@@ -54,7 +54,7 @@ but these are the basic ones you'll see used later on in this guide.
 ## The humble `fetch` event
 
 The other half of a caching strategy is the service worker's
-[`fetch` event](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent).
+[`fetch` event](https://developer.mozilla.org/docs/Web/API/FetchEvent).
 So far in this documentation, you've heard a bit about "intercepting network requests",
 and the `fetch` event inside of a service worker is where this happens:
 
@@ -102,29 +102,29 @@ store the response in the cache, and return the network response.
 3. All other requests are passed through the service worker with no interaction with the cache.
 
 A fetch's `event` object contains a
-[`request` property](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/request)
+[`request` property](https://developer.mozilla.org/docs/Web/API/FetchEvent/request)
 which some useful bits of information to help you identify the type of each request:
 
-- [`url`](https://developer.mozilla.org/en-US/docs/Web/API/Request/url),
+- [`url`](https://developer.mozilla.org/docs/Web/API/Request/url),
 which is the URL for the network request currently being handled by the `fetch` event.
-- [`method`](https://developer.mozilla.org/en-US/docs/Web/API/Request/method),
+- [`method`](https://developer.mozilla.org/docs/Web/API/Request/method),
 which is the request method (e.g., `GET` or `POST`).
-- [`mode`](https://developer.mozilla.org/en-US/docs/Web/API/Request/mode),
+- [`mode`](https://developer.mozilla.org/docs/Web/API/Request/mode),
 which describes the request's mode.
 A value of `'navigate'` is often used to distinguish requests for HTML documents from other requests.
-- [`destination`](https://developer.mozilla.org/en-US/docs/Web/API/Request/destination),
+- [`destination`](https://developer.mozilla.org/docs/Web/API/Request/destination),
 which describes the type of content being requested in a way that avoids using the requested asset's file extension.
 
 Once again, asynchrony is the name of the game.
 You'll recall that the `install` event offers an
-[`event.waitUntil`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil)
+[`event.waitUntil`](https://developer.mozilla.org/docs/Web/API/ExtendableEvent/waitUntil)
 method that takes a promise, and waits for it to resolve before continuing on to activation.
 The `fetch` event offers a similar
-[`event.respondWith` method](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith)
+[`event.respondWith` method](https://developer.mozilla.org/docs/Web/API/FetchEvent/respondWith)
 that you can use to return the result of an asynchronous
-[`fetch` request](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+[`fetch` request](https://developer.mozilla.org/docs/Web/API/Fetch_API)
 or a response returned by the `Cache` interface's
-[`match` method](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match).
+[`match` method](https://developer.mozilla.org/docs/Web/API/Cache/match).
 
 
 ## Caching strategies
