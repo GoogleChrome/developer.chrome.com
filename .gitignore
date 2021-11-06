@@ -25,3 +25,7 @@ dist
 # Eleventy
 # We generate our own .eleventyignore file dynamically during builds
 .eleventyignore
+
+# External source files
+external/data/
+external/local-build-flag

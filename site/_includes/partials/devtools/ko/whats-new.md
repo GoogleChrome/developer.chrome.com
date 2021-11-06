@@ -1,6 +1,28 @@
 ## 더 많은 DevTools 기능 {: #whats-new }
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
+<!-- ### Chrome 96 {: #chrome96 }
+* [Preview feature: New CSS Overview panel](/blog/new-in-devtools-96/#css-overview)
+* [Emulate the CSS prefers-contrast media feature](/blog/new-in-devtools-96/#prefers-contrast)
+* [Emulate the Chrome’s Auto Dark Theme feature](/blog/new-in-devtools-96/#auto-dark-mode)
+* [Copy declarations as JavaScript in the Styles pane](/blog/new-in-devtools-96/#copy-as-js)
+* [New Payload tab in the Network panel](/blog/new-in-devtools-96/#payload)
+* [Improved the display of properties in the Properties pane](/blog/new-in-devtools-96/#properties)
+* [Option to hide CORS errors in the Console](/blog/new-in-devtools-96/#hide-cors-errors)
+* [Proper `Intl` objects preview and evaluation in the Console](/blog/new-in-devtools-96/#intl)
+* [Consistent async stack traces](/blog/new-in-devtools-96/#async)
+* [Retain the Console sidebar](/blog/new-in-devtools-96/#console-sidebar)
+* [[Experimental] New Reporting API pane in the Application panel](/blog/new-in-devtools-96/#reporting-api) -->
+
+### Chrome 95 {: #chrome95 }
+* [새 CSS 길이 작성 도구](/ko/blog/new-in-devtools-95/#length)
+* [문제 탭에서 문제 숨기기](/ko/blog/new-in-devtools-95/#hide-issues)
+* [속성 표시 개선](/ko/blog/new-in-devtools-95/#properties)
+* [Lighthouse 8.4](/ko/blog/new-in-devtools-95/#lighthouse)
+* [소스 패널에서 스니펫 정렬](/ko/blog/new-in-devtools-95/#snippets)
+* [번역된 릴리스 정보로 이동하는 링크 및 번역 관련 버그 제보](/ko/blog/new-in-devtools-95/#localized)
+* [DevTools 커맨드 메뉴 UI 개선](/ko/blog/new-in-devtools-95/#command-menu)
+
 ### Chrome 94 {: #chrome94 }
 
 * [DevTools 를 이제 여러분들이 선호하는 언어로 사용하세요](/ko/blog/new-in-devtools-94/#localized)

@@ -1,0 +1,44 @@
+{% extends "layouts/base.njk" %}
+
+{# Update "content" with additional headings and so forth, so we can pass it
+   through the toc filter. #}
+{% set content %}
+  {{ content | safe }}
+
+  <ul>
+    {% for key, namespace in workboxApiModules %}
+      <li><a href="{{ namespace.root._pageHref }}">{{ namespace.name }}</a></li>
+    {% endfor %}
+  </ul>
+
+{% endset %}
+
+{% block title_bar %}
+  {% include 'partials/breadcrumbs.njk' %}
+{% endblock %}
+
+{% set tocContents %}
+  {{- content | toc | safe -}}
+{% endset %}
+
+{% block content %}
+  <div class="display-flex gap-top-300 lg:gap-top-400 ">
+    {% include 'partials/navigation-tree.njk' %}
+
+    {# The article is wrapped again so that the ToC aligns on its right on desktop #}
+    <div class="display-flex justify-content-center width-full">
+      <article class="stack measure-long pad-left-400 pad-right-400">
+        <h1 class="type--h2">{{ title }}</h1>
+
+        {% include 'partials/toc-inner.njk' %}
+
+        <div class="stack type">
+          {{ content | safe }}
+        </div>
+
+      </article>
+
+      {% include 'partials/toc-side.njk' %}
+    </div>
+  </div>
+{% endblock %}

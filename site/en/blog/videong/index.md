@@ -4,6 +4,7 @@ title: 'Deep-dive: VideoNG'
 description: >
   Learn about modern playback systems and how Chromium powers several hundred million hours of watch time every day.
 date: 2021-09-14
+updated: 2021-10-19
 thumbnail: 'image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/L14to8AnyICHGkgfgEJm.jpg'
 alt: 'Bytes flowing in, and structured packets flowing out.'
 authors:
@@ -236,7 +237,7 @@ WebGPU brings support for
 and WebCodecs brings platform decoding and encoding primitives
 compatible with the aforementioned overlay and GPU buffer systems.
 
-{% Img src="image/ZDZVuXt6QqfXtxkpXcPGfnygYjd2/lwOWWE4KOUKDFq5ixtzQ.png",
+{% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/dpL5XG0wzSQ7lFnbYsbU.png",
 alt="Relationship between WebCodecs and WebGPU.",
 width="524", height="98" %}
 

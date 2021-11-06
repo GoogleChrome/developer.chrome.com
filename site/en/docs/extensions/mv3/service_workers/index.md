@@ -204,7 +204,7 @@ chrome.runtime.onSuspend.addListener(() => {
 });
 ```
 
-However, persisting data in the storage API should be prefered over relying on
+However, persisting data in the storage API should be preferred over relying on
 [`runtime.onSuspend`][16]. It doesn't allow for as much cleanup as may be needed and will not help
 in case of a crash.
 

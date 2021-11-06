@@ -219,6 +219,10 @@ including Facebook, Instagram, Twitter, and YouTube.
 </script>
 ```
 
+Events that trigger user activation are still to be defined consistently across
+browsers. I'd recommend you stick to `"click"` for the time being then. See
+[GitHub issue whatwg/html#3849](https://github.com/whatwg/html/issues/3849).
+
 ### Web Audio
 
 The [Web Audio API][web audio api] has been covered by autoplay since Chrome 71.

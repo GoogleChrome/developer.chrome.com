@@ -30,7 +30,7 @@ interface IFrameArgs {
 }
 ```
 
-Effectiveley you can add any attribute to an IFrame, the only required argument
+Effectively you can add any attribute to an IFrame, the only required argument
 is a `src`.
 
 Keep in mind, for an attribute that has a boolean value, just set the value to

@@ -57,16 +57,15 @@ between cross-origin, but same-site environments to
 
 ## Deprecate U2F API (Cryptotoken)
 
-Chrome's legacy U2F API for interacting with security keys is deprecated and
-beginning a deprecation trial in Chrome 95 wherein the API remains enabled by
-default, but the trial token will disable the key for participating sites. U2F
-security keys themselves are not deprecated and will continue to work.
+Chrome's legacy U2F API for interacting with security keys is deprecated. It
+will be disabled by default in Chrome 98.
 
 Affected sites should migrate to the [Web Authentication
 API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API).
 Credentials that were originally registered via the U2F API can be challenged
 via web authentication. USB security keys that are supported by the U2F API are
-also supported by the Web Authentication API.
+also supported by the Web Authentication API. U2F security keys themselves are
+not deprecated and will continue to work.
 
 U2F is Chrome's original security key API. It allows sites to register public
 key credentials on USB security keys and challenge them for building
@@ -75,32 +74,42 @@ web standard and was subsumed by the Web Authentication API (launched in Chrome
 67). Chrome never directly supported the FIDO U2F JavaScript API, but rather
 shipped a component extension called cryptotoken, which exposes an equivalent
 `chrome.runtime.sendMessage()` method. U2F and Cryptotoken are firmly in
-maintenance mode and have encouraged sites to migrate to the Web Authentication
-API for the last two years.
+maintenance mode and we have encouraged sites to migrate to the Web
+Authentication API for the last two years.
 
 The following timeline is currently planned for deprecation and removal:
-
-### Chrome 93
-
-Stable as of August 31, 2021. Support added for the googleLegacyAppIdSupport
-extension.
 
 ### Chrome 95
 
 Beta as of September 23, 2021. The following changes were implemented:
 
-+   Gated U2F API requests behind a user permission prompt.
 +   Logged a deprecation notice in the DevTools console for every request.
+
+### Chrome 96
+
+Beta expected in late October 2021, stable in November. The following changes
+were implemented:
+
++   Gated U2F API requests behind a user permission prompt.
+
+The permission prompt can be suppressed by enrolling in the [U2FSecurityKeyAPI
+deprecation trial](https://developer.chrome.com/origintrials/#/view_trial/-6366963973195038719)
+or enabling the [U2fSecurityKeyApiEnabled](https://chromeenterprise.google/policies/#U2fSecurityKeyApiEnabled)
+enterprise policy.
 
 ### Chrome 98
 
-Beta expected in early January 2022, stable in February. The deprecation trial
-will continue, but its behavior will reverse: the API will be disabled by
-default, but may be kept alive by trial participants.
+Beta expected in early January 2022, stable in February. The U2F API will be
+disabled by default. Only sites enrolled in the [deprecation
+trial](https://developer.chrome.com/origintrials/#/view_trial/-6366963973195038719)
+or enterprises that turned on the
+[U2fSecurityKeyApiEnabled](https://chromeenterprise.google/policies/#U2fSecurityKeyApiEnabled)
+policy will be able to use U2F at this point.
 
 ### Chrome 103
 
-Beta expected in late May 2022, stable in late June. The deprecation trial will end.
+Beta expected in late May 2022, stable in late June. The deprecation trial will
+end on July 26, 2022.
 
 ### Chrome 104
 

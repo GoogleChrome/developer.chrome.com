@@ -27,7 +27,7 @@ tags:
 
 And there's [plenty more](#more)!
 
-I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 62!
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see what's new for developers in Chrome 62!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/61.0.3163.79..62.0.3202.62).

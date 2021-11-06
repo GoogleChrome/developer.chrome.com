@@ -28,7 +28,7 @@ tags:
 
 And there's [plenty more](#more)!
 
-I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 64!
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see what's new for developers in Chrome 64!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/63.0.3239.84..64.0.3282.140).

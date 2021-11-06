@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "OAuth2: Authenticate users with Google"
 date: 2012-09-18
-updated: 2021-09-17
+updated: 2021-09-21
 description: >
   Step-by-step instructions on how to build an extension that accesses
   a user's Google contacts via the Google People API, the Chrome Identity API,
@@ -23,45 +23,41 @@ redirects or set cookies, they rely on the Chrome Identity API to use OAuth2.
 
 Begin by creating a directory and the following starter files.
 
-The full, completed extension can be downloaded [here][4].
+<!--The full, completed extension can be downloaded [here][4].-->
 
 ### manifest.json {: #manifest }
 
-Add the manifest by creating a file called `manifest.json` and include the following code. Or
-download the file [here][5].
+Add the manifest by creating a file called `manifest.json` and include the following code. <!-- Or download the file [here][5].-->
 
 ```json
 {
   "name": "OAuth Tutorial FriendBlock",
   "version": "1.0",
   "description": "Uses OAuth to connect to Google's People API and display contacts photos.",
-  "manifest_version": 2,
-  "browser_action": {
+  "manifest_version": 3,
+  "action": {
     "default_title": "FriendBlock, friends face's in a block."
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+    "service_worker": "background.js"
   }
 }
 ```
 
 ### background.js {: #background }
 
-Add the background script by creating a file called `background.js` and include the following code.
-Or download the file [here][6].
+Add the background service worker by creating a file called `background.js` and include the following code.
+<!--Or download the file [here][6].-->
 
 ```js
-chrome.browserAction.onClicked.addListener(function() {
+chrome.action.onClicked.addListener(function() {
   chrome.tabs.create({url: 'index.html'});
 });
 ```
 
 ### index.html {: #index }
 
-Add an HTML file called `index.html` and include the following code. Or download the file [here][7].
+Add an HTML file called `index.html` and include the following code. <!-- Or download the file [here][7].-->
 
 ```html
 <html>
@@ -162,8 +158,7 @@ Register the [`identity`][11] permission in the manifest.
 }
 ```
 
-Create a file to manage the OAuth flow called `oauth.js` and include the following code. Or download
-it [here][12].
+Create a file to manage the OAuth flow called `oauth.js` and include the following code. <!--Or download it [here][12].-->
 
 ```js
 window.onload = function() {

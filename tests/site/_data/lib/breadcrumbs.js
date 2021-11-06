@@ -17,6 +17,11 @@ function virtualItem(title, project_key) {
   };
 }
 
+/**
+ * @param {(path: string) => EleventyCollectionItem|undefined} callback
+ * @param {string} url
+ * @param {AllProjectIndex} index
+ */
 function run(callback, url, index) {
   const builder = new BreadcrumbBuilder(url => {
     url = path.join(url, '/');
@@ -25,6 +30,21 @@ function run(callback, url, index) {
   buildAllBreadcrumbs(url, builder, index);
   return builder.build(url);
 }
+
+test('i18n URLs', t => {
+  const lookup = url => {
+    switch (url) {
+      case '/en/':
+        return virtualItem('Top');
+      case '/pt/blog/':
+        return virtualItem('Blog');
+      case '/pt/blog/article/':
+        return virtualItem('Article');
+    }
+  };
+
+  t.deepEqual(run(lookup, '/pt/blog/article'), [{title: 'Blog', url: '..'}]);
+});
 
 test('real URLs only', t => {
   const lookup = url => {

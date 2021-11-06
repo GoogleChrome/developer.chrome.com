@@ -1,0 +1,51 @@
+# This builds external data, and if the site passes a basic build, writes the data to
+# Cloud Storage.
+
+timeout: 900s # set build timeout to 15 mins
+
+steps:
+  - name: node:14
+    id: 'Install dependencies'
+    entrypoint: npm
+    args: ['ci']
+
+  - name: node:14
+    id: 'Configure secrets'
+    entrypoint: npm
+    args: ['run', 'cloud-secrets']
+
+  - name: node:14
+    id: 'Build external data'
+    entrypoint: npm
+    args: ['run', 'build-external']
+    env:
+    - 'NODE_ENV=production'
+
+  - name: node:14
+    id: 'Create .eleventyignore file'
+    entrypoint: npm
+    args: ['run', 'ignore']
+    env:
+    # TODO: We should try to remove more stuff here, because it's supposed to
+    # be a fast build to sanity-check output.
+    # It needs to include extensions and API generation.
+    - 'ELEVENTY_IGNORE_NACL=true'
+
+  - name: node:14
+    id: 'Build eleventy in dev mode to confirm'
+    entrypoint: npm
+    args: ['run', 'eleventy']
+    # This does NOT set `NODE_ENV=production`, as we don't need the full build.
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: 'Synchronize content to external-dcc-data bucket'
+    entrypoint: bash
+    args:
+    - '-c'
+    - |
+      gsutil rsync external/data/ gs://external-dcc-data
+
+options:
+  env:
+  - 'PROJECT_ID=$PROJECT_ID'
+  - 'NODE_OPTIONS=--unhandled-rejections=strict'

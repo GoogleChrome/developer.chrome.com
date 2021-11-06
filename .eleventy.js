@@ -61,6 +61,9 @@ module.exports = eleventyConfig => {
   // to use it for its build.
   eleventyConfig.setUseGitIgnore(false);
 
+  // Watch our external data in case it is synchronized or rebuilt.
+  eleventyConfig.addWatchTarget('./external/data/');
+
   // Merge eleventy's data cascade. This means directory data files will
   // cascade down to any child directories.
   eleventyConfig.setDataDeepMerge(true);
@@ -106,12 +109,12 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('githubLink', githubLink);
   eleventyConfig.addFilter('md', mdFilters.render);
   eleventyConfig.addFilter('mdInline', mdFilters.renderInline);
-  eleventyConfig.addFilter('modelToHref', mdFilters.modelToHref);
   eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
   eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
+  eleventyConfig.addFilter('typeof', x => typeof x);
 
   // Add shortcodes
   eleventyConfig.addShortcode('IFrame', IFrame);

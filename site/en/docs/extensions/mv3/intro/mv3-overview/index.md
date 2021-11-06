@@ -17,7 +17,7 @@ description: 'A description of the features and changes introduced by Manifest V
 date: 2020-11-09
 
 # An optional updated date
-# updated: 2020-10-16
+updated: 2021-10-03
 
 # A list of authors. These usernames correspond to the keys in the
 # _data/authorsData.json file.
@@ -145,8 +145,10 @@ There are a number of other changes introduced in MV3:
 
 The following features will be added to MV3 soon:
 
-* **Dynamic content scripts:** the new Scripting API lets extensions register and unregister content scripts at runtime.
+* **Dynamic content scripts:** the new [Scripting API][1] lets extensions register and unregister content scripts at runtime.
 * **New favicon API:** this new JavaScript API replaces "chrome://favicons" and gives  developers a way to retrieve websites' favicons.
 * **In-memory storage:** a new StorageArea on the Storage API that can be used to store values in memory across service worker restarts.
 
 Look for announcements of these and other MV3 features as they become available.
+
+[1]: /docs/extensions/reference/scripting/

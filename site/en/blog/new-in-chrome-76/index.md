@@ -31,7 +31,7 @@ In Chrome 76, we've added support for:
 * More frequent [updates of WebAPKs](#update-webapk).
 * And plenty [more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), let's dive in and see
+I'm [Pete LePage](https://petelepage.com/), let's dive in and see
 what's new for developers in Chrome 76!
 
 ## PWA Omnibox Install Button {: #pwa-install }

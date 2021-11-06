@@ -30,7 +30,7 @@ Here's what you need to know:
 * The [font access API](#font-access) starts it's origin trial.
 * And, there's [plenty more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), working, and shooting
+I'm [Pete LePage](https://petelepage.com/), working, and shooting
 from home, let's dive in and see what's new for developers in Chrome 87!
 
 ## Chrome Dev Summit {: #cds }

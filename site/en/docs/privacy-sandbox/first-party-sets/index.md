@@ -6,7 +6,7 @@ subhead: >
 description: >
   First-Party Sets enables related domain names owned and operated by the same entity to declare themselves as belonging to the same first party.
 date: 2021-05-18
-updated: 2021-08-12
+updated: 2021-10-18
 authors:
   - samdutton
 ---
@@ -15,8 +15,8 @@ authors:
 
 ## Implementation status
 
-* [In origin trial](https://web.dev/origin-trials/) Chrome 89 to 93.
-* [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+* The initial [origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873) 
+for First-Party Sets and SameParty was available in Chrome from versions 89 to 93 and is now closed.
 * [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
 * [Chromium Projects](https://www.chromium.org/updates/first-party-sets).
 
@@ -100,7 +100,8 @@ cookie is included on that request.
 
 ## Engage and share feedback
 
-* **Origin trial**: Register and take part in the [Chrome origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+* **Origin trial**: The initial [origin trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873) 
+for First-Party Sets and SameParty was available in Chrome from versions 89 to 93 and is now closed.
 * **GitHub**: Read the [proposal](https://github.com/privacycg/first-party-sets), [raise questions and
 follow discussion](https://github.com/privacycg/first-party-sets/issues).
 * **Developer support**: Ask questions and join discussions on the
@@ -109,6 +110,7 @@ follow discussion](https://github.com/privacycg/first-party-sets/issues).
 
 ## Find out more
 
+* [First-Party Sets and the SameParty attribute](https://developer.chrome.com/blog/first-party-sets-sameparty/)
 * [First-Party Sets technical explainer](https://github.com/privacycg/first-party-sets)
 * [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
 * [Chromium Projects](https://www.chromium.org/updates/first-party-sets).

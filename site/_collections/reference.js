@@ -39,10 +39,10 @@ module.exports = collections => {
         );
       }
       return Boolean(namespace);
-    })
-    .slice();
-  out.sort(({data: {api: a}}, {data: {api: b}}) =>
-    (a ?? '').localeCompare(b ?? '')
+    });
+  out.sort(({data: {api: a = ''}}, {data: {api: b = ''}}) =>
+    a.localeCompare(b)
   );
+
   return out;
 };
