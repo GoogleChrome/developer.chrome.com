@@ -346,7 +346,7 @@ For more details on calling `detectLanguage(inputText)`, see the [API reference]
 [5]: #overview-predefined
 [6]: /docs/extensions/mv3/i18n-messages
 [7]: https://code.google.com/apis/gadgets/docs/i18n.html#BIDI
-[8]: /docs/webstore/i18n/#supported-locales
+[8]: /docs/webstore/i18n/#choosing-locales-to-support
 [9]: #windows
 [10]: #mac-os-x
 [11]: #linux
