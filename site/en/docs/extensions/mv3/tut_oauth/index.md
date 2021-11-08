@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "OAuth2: Authenticate users with Google"
 date: 2012-09-18
-updated: 2021-09-21
+updated: 2021-11-08
 description: >
   Step-by-step instructions on how to build an extension that accesses
   a user's Google contacts via the Google People API, the Chrome Identity API,
@@ -15,7 +15,9 @@ description: >
 to grant web and desktop applications access to private information without sharing their username,
 password and other private credentials.
 
-This tutorial builds an extension that accesses a user's Google contacts using the [Google People API][people-api] and the [Chrome Identity API][identity-api]. Because extensions don't load over HTTPS, can't perform
+This tutorial builds an extension that accesses a user's Google contacts using the [Google People
+API][people-api] and the [Chrome Identity API][identity-api]. Because extensions don't load over
+HTTPS, can't perform
 redirects or set cookies, they rely on the Chrome Identity API to use OAuth2.
 
 ## Get started {: #set_up }
@@ -79,7 +81,8 @@ Add an HTML file called `index.html` and include the following code. <!-- Or dow
 
 ## Upload to the developer dashboard {: #upload_to_dashboard }
 
-Package the extension directory into a `.zip` file and upload it to the [Chrome Developer Dashboard][dev-console] without publishing it:
+Package the extension directory into a `.zip` file and upload it to the [Chrome Developer
+Dashboard][dev-console] without publishing it:
 
 1.  At the Developer Dashboard, click **Add new item**.
 2.  Click **Browse files**, select the `.zip` extension and upload it.
@@ -105,7 +108,8 @@ Open the Extensions Management page at `chrome://extensions`, ensure developer m
 upload the unpackaged extension directory. Compare the extension ID on the extensions management
 page to the Item ID in the Developer Dashboard. They should match.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/7T1Ko139zBRENzSyKpgB.png", alt="Extension Ids matching", width="350", height="250" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/7T1Ko139zBRENzSyKpgB.png", 
+alt="Extension Ids matching", width="350", height="250" %}
 
 The extension will maintain the same ID by including the `"key"` field in the manifest. Preserving a
 single ID is essential for API registration.
@@ -149,7 +153,7 @@ Register the [`identity`][identity-api] permission in the manifest.
 
 ```json
 {
-  "name": "OAuth Tutorial FaceBlcok",
+  "name": "OAuth Tutorial FaceBlock",
   ...
   "permissions": [
     "identity"
@@ -200,7 +204,7 @@ Add the [Google People API][people-api] client library to `"scopes"` in the exte
 
 ```json
 {
-  "name": "OAuth Tutorial FaceBlcok",
+  "name": "OAuth Tutorial FaceBlock",
   ...
   "oauth2": {
     "client_id": "yourExtensionOAuthClientIDWillGoHere.apps.googleusercontent.com",
