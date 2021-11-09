@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Developer Program Policies"
 date: 2014-02-28
-updated: 2021-06-29
+updated: 2021-09-28
 description: Chrome Web Store developer program policies.
 ---
 
