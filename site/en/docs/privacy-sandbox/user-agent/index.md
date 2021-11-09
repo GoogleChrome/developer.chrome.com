@@ -87,7 +87,7 @@ experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints
       like Gecko) Chrome/93.0.0.0 Mobile Safari/537.36`
    1. The browser includes that same information in the default User-Agent Client
       Hint headers. For example:
-      ```sh
+      ```powershell
       Sec-CH-UA: "Chrome"; v="93"
       Sec-CH-UA-Mobile: ?1
       Sec-CH-UA-Platform: "Android"
@@ -98,7 +98,7 @@ experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints
 1. The browser applies policies and user configuration to determine what data
    is allowed to return to the server in subsequent request headers. For
    example:
-   ```sh
+   ```powershell
    Sec-CH-UA: "Chrome"; v="93"
    Sec-CH-UA-Mobile: ?1
    Sec-CH-UA-Platform: "Android"
