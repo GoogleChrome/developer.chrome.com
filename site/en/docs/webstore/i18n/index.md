@@ -25,12 +25,13 @@ You can follow these steps to internationalize and localize an extension to be p
 in the Chrome Web Store:
 
 1. Decide which [locales][supported-locales] you want to support.
-1. Internationalize and localize the extension's UI using the [extension platform i18n support][i18n].
-2. Localize your extension's [name and description][name-description].
-3. [Upload your extension][publish] using the Chrome Developer Dashboard.
-4. Edit your listing, providing localized versions of the [detailed description][cws-description], a
+1. Internationalize and localize the extension's UI using the [extension platform i18n
+   support][i18n].
+1. Localize your extension's [name and description][name-description].
+1. [Upload your extension][publish] using the Chrome Developer Dashboard.
+1. Edit your listing, providing localized versions of the [detailed description][cws-description], a
    YouTube video URL and [screenshots][cws-screenshots].
-5. Specify which [regions][regions] you want to support.
+1. Specify which [regions][regions] you want to support.
 
 {% Aside %}
 
@@ -163,11 +164,10 @@ For example, if you add support for French and Arabic, you'll need to add two fi
 `_locales/en_GB/messages.json`, but with translated versions of the `message` values.
 
 
-For more details, see the extension [Internationalization][i18n] documentation: 
+For details, see the extension [Internationalization][i18n] documentation: 
 - The [How extensions find strings][searching-messages] section shows how you can sometimes omit
   message strings. For example, if the extension's name isn't translated, you can leave it out for
   non-default locales.
-
 - The [How to set your browser's locale][set-browser-locale] section is helpful when you test your
   translations.    
 
@@ -210,7 +210,7 @@ these screenshots for each locale.
 Go to the top of the of the **Store Listing** tab to choose the locale.
 
 To add a screenshot, drop your screenshots in the **Localized screenshots** section. If you have a
-YouTube video in the targeted language, you can add the URL in the **Localized promo video** field.
+YouTube video in the target language, you can add the URL in the **Localized promo video** field.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/y792ypc5Zy3AGyh0HwhE.png", 
 alt="localize screenshots and video", width="414", height="256" %}
@@ -288,7 +288,7 @@ Unselecting a region prevents your extension from being listed in that region.
 
 {% endAside %}
 
-## Switch languages in the Chrome Web Store
+## Switch languages in the Chrome Web Store {: #cws-switch-languages }
 
 To see your store listing in each locale, you can choose the Chrome Web Store language in the
 **Settings** icon located at the top right corner of your store listing.
