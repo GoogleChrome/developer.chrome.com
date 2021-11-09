@@ -17,8 +17,8 @@ date: 2021-03-26
 
 ---
 
-With the introduction of Manifest V3, many extension API methods now support promises. This document
-explains how to use promises when calling these methods.
+With the introduction of Manifest V3, many extension API methods now return promises. This document
+explains how to use promises.
 
 {% Aside "key-term" %}
 
@@ -61,7 +61,7 @@ Not all methods in extensions APIs support promises. Sometimes that's because we
 promise support on the method yet; in many cases it's because using a promise isn't feasible for the
 method.
 
-You can check whether or not an API method supports promises by checking its API reference page:
+You can check whether a method supports promises by checking its API reference page:
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/AYQVtnh19vNMHoXzxZB1.png",
   alt="Screenshot showing a method that supports promises", width="800", height="280" %}
