@@ -43,8 +43,8 @@ Chrome team is also progressively adding promise support to additional APIs.
 
 {% Aside 'gotchas' %}
 
-Promises are not available for extensions using Manifest V2, and are not available on all API
-methods.
+Promises are not returned by extension APIs under Manifest V2, and are not yet available on all
+methods in Manifest V3.
 
 {% endAside  %}
 
@@ -225,6 +225,6 @@ your extension's [manifest][doc-manifest].
 {% endAside %}
 
 [api-tabs-methods]: /docs/extensions/reference/tabs/#methods
+[doc-manifest]: /docs/extensions/mv3/manifest/
 [mdn-promise-chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises
 [mdn-promises]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
-[doc-manifest]: /docs/extensions/mv3/manifest/
