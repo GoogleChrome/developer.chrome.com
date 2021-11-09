@@ -39,7 +39,7 @@ El panel **Descripción General de CSS** es una función de vista previa. Nuestr
 
 Lea [este artículo](/docs/devtools/css-overview) para obtener más información sobre el panel de **Descripción General de CSS / Resumen de CSS**.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fXXPihV3bTl82WDJGX51.png", alt="panel de Descripción General de CSS", width="800", height="509" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fXXPihV3bTl82WDJGX51.png", alt="Panel de Descripción General de CSS", width="800", height="509" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ef26abc89035075bbdb08f1b26c1b8fd942ffc04 #}
 
