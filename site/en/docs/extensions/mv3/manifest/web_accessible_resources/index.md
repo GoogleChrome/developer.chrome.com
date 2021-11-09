@@ -58,7 +58,7 @@ Each object in the array contains these properties:
   files.</dd>
   <dt><code>matches</code></dt>
   <dd>A list of URL match patterns specifying which pages can access the resources. Only the origin
-  is used to match URLs; subdomains patterns (<code>*.google.com<code>) and paths are ignored.</dd>
+  is used to match URLs; subdomains patterns (<code>*.google.com</code>) and paths are ignored.</dd>
   <dt><code>extension_ids</code></dt>
   <dd>A list of extension IDs, specifying which extensions can access the resources.</dd>
   <dt><code>use_dynamic_url</code></dt>
