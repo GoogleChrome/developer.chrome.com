@@ -6,14 +6,13 @@ authors:
 date: 2021-10-25
 updated: 2021-10-25
 description:
-  ""
+  "新的 CSS 预览面板，模拟 CSS prefers-contrast，Chrome 的自动暗黑模式以及更多。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aUnjMsVWCJvIiUCq5Rxp.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-96
-draft: true
 ---
 
 <!-- start: translation instructions -->
@@ -28,17 +27,22 @@ draft: true
 {% include 'partials/devtools/zh/banner.md' %}
 
 <!-- ## Preview feature: New CSS Overview panel {: #css-overview } -->
+## 预览特性: 新的 CSS 概览面板 {: #css-overview }
 
 <!-- Use the new **CSS Overview** panel to identify potential CSS improvements on your page.
 [Open the **CSS Overview** panel](/docs/devtools/css-overview#open), then click on **Capture overview** to generate a report of your page’s CSS. -->
+使用新的 **CSS 概览**面板，可以帮助您确定自己的页面是否存在可以潜在改善 CSS 的地方。[打开 **CSS 概览**面板](/docs/devtools/css-overview#open)，然后点击**捕获概览**以便于生成有关页面 CSS 的报告。
 
 <!-- You can further drill down on the information. For example, click on a color in the **Colors** section to view the list of elements that apply the same color. Click on an element to open the element in the **Elements** panel. -->
+您可以进一步了解该信息。例如，点击**颜色**区域中的颜色来查看应用相同颜色的元素列表。点击一个元素可以在**元素**面板中打开该元素。
 
 <!-- The **CSS Overview** panel is a preview feature. Our team is still actively working on it and we are looking for your [feedback](https://goo.gle/css-overview-feedback) for further enhancements. -->
+**CSS 概览**面板特性目前还处于预览阶段。我们团队也在积极努力开发该功能，然后我们这边也期待您的[反馈](https://goo.gle/css-overview-feedback)以便于我们做进一步改进。
 
 <!-- Read [this article](/docs/devtools/css-overview) to learn more on the **CSS Overview** panel. -->
+阅读[本篇文章](/docs/devtools/css-overview)以便于了解更多有关于 CSS 概览面板的信息。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fXXPihV3bTl82WDJGX51.png", alt="CSS Overview panel", width="800", height="509" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fXXPihV3bTl82WDJGX51.png", alt="CSS 概览面板", width="800", height="509" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ef26abc89035075bbdb08f1b26c1b8fd942ffc04 #}
 
@@ -46,14 +50,18 @@ Chromium 议题： [1254557](https://crbug.com/1254557)
 
 
 <!-- ## Rendering tab updates  -->
+## 关于渲染选项卡的更新内容
 
 <!-- ### Emulate the CSS prefers-contrast media feature {: #prefers-contrast } -->
+### 模拟 CSS prefers-contrast 媒体特性 {: #prefers-contrast }
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/47fsHvVLiVC9J0eWY9wD.png", alt="Emulate the CSS prefers-contrast media feature", width="800", height="483" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/47fsHvVLiVC9J0eWY9wD.png", alt="模拟 CSS prefers-contrast 媒体特性", width="800", height="483" %}
 
 <!-- The [prefers-contrast](https://www.chromestatus.com/feature/5646323212615680) media feature is used to detect if the user has requested more or less contrast in the page. -->
+[prefers-contrast](https://www.chromestatus.com/feature/5646323212615680) 媒体特性可以用来检测用户是否在页面里面或多或少使用对比度。
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate CSS media feature prefers-contrast** dropdown. -->
+打开 [命令菜单](/docs/devtools/command-menu/)，运行 Show Rendering 命令，然后设置带有模拟 CSS preferred-contrast 媒体特性字样的下拉菜单。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22cec8dbfa7b46c8b633e3555212556ec6f78df9 #}
 
@@ -61,14 +69,18 @@ Chromium 议题： [1139777](https://crbug.com/1139777)
 
 
 <!-- ### Emulate the Chrome’s Auto Dark Theme feature {: #auto-dark-mode } -->
+### 模拟 Chrome 的自动暗黑主题特性 {: #auto-dark-mode }
 
 <!-- Use DevTools to emulate auto dark theme to easily see how your page looks when Chrome’s [Auto Dark Theme](/blog/auto-dark-theme/) is enabled. -->
+在[Chrome 的自动暗黑主题](/blog/auto-dark-theme/) 特性开启之前，使用 DevTools 模拟自动暗黑主题以便于我们查看页面的外观。
 
 <!-- Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System.  -->
+Chrome 96 为 Android 上的 [自动暗黑主题](/blog/auto-dark-theme/) 引入 [Origin Trial](/blog/origin-trials/) 功能。有了该功能，当用户在操作系统那里选择暗黑主题时，浏览器将自动为浅色主题网站生成暗黑主题。
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate auto dark mode** dropdown. -->
+打开 [命令菜单](/docs/devtools/command-menu/)，运行 Show Rendering 命令，然后设置带有模拟自动暗黑模式字样的下拉菜单。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QHS8kupNsTXnKD7HomYy.png", alt="Emulate the Chrome’s Auto Dark Theme feature", width="800", height="483" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QHS8kupNsTXnKD7HomYy.png", alt="模拟 Chrome 的自动暗黑主题特性", width="800", height="483" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0d7e03ffa64ba8432ec9db3e067abeb60cd53d7e #}
 
@@ -76,14 +88,18 @@ Chromium 议题： [1243309](https://crbug.com/1243309)
 
 
 <!-- ## Copy declarations as JavaScript in the Styles pane {: #copy-as-js } -->
+## 将样式窗格里面的 CSS 规则复制为 JavaScript 属性 {: #copy-as-js }
 
 <!-- Two new options are added in the context menu  for you to easily copy CSS rules as JavaScript properties. These shortcuts options are handy especially for developers who are working with [CSS-in-JS](/blog/css-in-js/#what-is-css-in-js)  libraries. -->
+右鍵菜单里面新增了两个选项，方便您将 CSS 规则复制为 JavaScript 属性。这些快捷选项特别适合那些使用 [CSS-in-JS](/blog/css-in-js/#what-is-css-in-js) 库的开发者。
 
 <!-- In the **Styles** pane, right click on a CSS rule. You can select **Copy declaration as JS** to copy a single rule or **Copy all declarations as JS** to copy all rules. -->
+在**样式**窗格中，右键点击 CSS 规则。您可以选择带有**将声明复制为 JS** 字样的选项来复制单个规则或选择带有**将所有声明复制为 JS** 字样的选项来复制所有规则。
 
 <!-- For instance, the example below will copy `padding-left: '1.5rem'` to the clipboard. -->
+例如，下面的示例将会把 `paddingLeft: '1.5rem'` 给复制到剪贴板。
 
-<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M4mKimxhUs6f4hc0wMuO.png", alt="Copy declaration as JavaScript", width="800", height="469" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M4mKimxhUs6f4hc0wMuO.png", alt="将 CSS 规则复制为 JavaScript 属性", width="800", height="469" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ca17a55104e6baf8d4ab360b484111bfa93c9b7f #}
 
@@ -91,10 +107,13 @@ Chromium 议题： [1253635](https://crbug.com/1253635)
 
 
 <!-- ## New Payload tab in the Network panel {: #payload } -->
+## 网络面板新增 payload 选项卡 {: #payload }
+
 
 <!-- Use the new **Payload** tab in the **Network** panel when you inspect a network request with payload. Previously, the payload information is available under the **Headers** tab. -->
+当您想查看网络请求中的 payload 信息时，可以使用网络面板里面的 payload 选项卡。在以前，**报头**选项卡不能查看 payload 信息。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/1DTIW7zoIqf3VE2WMJmX.png", alt="Payload tab in the Network panel", width="800", height="488" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/1DTIW7zoIqf3VE2WMJmX.png", alt="网络面板里面的 payload 选项卡", width="800", height="488" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/eae72f667aa10a1a8316fbf8b2ac03ff514bb4da #}
 
@@ -102,27 +121,34 @@ Chromium 议题： [1214030](https://crbug.com/1214030)
 
 
 <!-- ## Improved the display of properties in the Properties pane {: #properties } -->
+## 优化属性窗格里面的属性展示 {: #properties }
 
 <!-- The **Properties** pane now shows only relevant properties instead of showing all properties of the instance. DOM prototypes and methods are now removed. -->
+**属性**窗格现在只展示相关属性，而不是像之前那样展示实例的所有属性。现在移除对 DOM 原型以及方法的展示。
 
 <!-- Together with the **Properties** pane [enhancements](/blog/new-in-devtools-95/#properties) in Chrome 95, you can now locate the relevant properties easier. -->
+配合 Chrome 95 **属性**窗格所提供的 [增强功能](/blog/new-in-devtools-95/#properties)) 一起使用，您现在可以更轻松地找到相关属性。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hs4KfBZOBeyWHF42Xsuq.png", alt="The display of properties in the Properties pane", width="800", height="387" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hs4KfBZOBeyWHF42Xsuq.png", alt="属性窗格里面的属性显示", width="800", height="387" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f1574e9b550317c481a943fec059d84bfb863564 #}
 
-Chromium 议题： [1226262](https://crbug.com/1226262) 
+Chromium 议题： [1226262](https://crbug.com/1226262)
 
 
 <!-- ## Console updates -->
+## 关于控制台的更新内容
 
 <!-- ### Option to hide CORS errors in the Console {: #hide-cors-errors } -->
+### 新增选项，用于隐藏控制台里面的 CORS 错误 {: #hide-cors-errors }
 
 <!-- You can hide CORS errors in the **Console**. As the CORS errors are now reported in the Issues tab, hiding CORS errors in the **Console** can help reduce the clutters. -->
+您可以隐藏**控制台**里面的 CORS 错误。由于 CORS 错误的显示被移动到**问题**选项卡那里，所以隐藏**控制台**里面的 CORS 错误有助于减少混乱。
 
 <!-- In the **Console**, click on the **Settings** icon and uncheck the **Show CORS errors in console** checkbox. -->
+在**控制台**里面，点击**设置**图标，然后取消选中 Show CORS errors in console 复选框。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/m3ZzZI5VkYSYCfCLDHUi.png", alt="Option to hide CORS errors in the Console", width="800", height="502" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/m3ZzZI5VkYSYCfCLDHUi.png", alt="新增选项，用于隐藏控制台里面的 CORS 错误", width="800", height="502" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/82873eeb1c1430790ad3a2cd2a698135bd6eb3de #}
 
@@ -130,10 +156,12 @@ Chromium 议题： [1251176](https://crbug.com/1251176)
 
 
 <!-- ### Proper `Intl` objects preview and evaluation in the Console {: #intl } -->
+### 控制台正确预览以及执行 `Intl` 对象 {: #intl }
 
 <!-- The [Intl](https://tc39.es/ecma402/#intl-object) objects have proper preview now and are evaluated eagerly in the Console. Previously, the `Intl` objects were not evaluated eagerly. -->
+现在，[Intl](https://tc39.es/ecma402/#intl-object)对象不仅能够被正确预览，而且还能够被控制台立即执行。在以前，Intl 对象不会被立即执行。
 
-<!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZxGQoDdnilseKTFsxdbC.png", alt="Intl objects in the Console", width="800", height="559" %} -->
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZxGQoDdnilseKTFsxdbC.png", alt="控制台里面的 Intl 对象", width="800", height="559" %}
 
 {# https://chromium-review.googlesource.com/c/v8/v8/+/3196175 #}
 
@@ -141,10 +169,12 @@ Chromium 议题： [1073804](https://crbug.com/1073804)
 
 
 <!-- ### Consistent async stack traces {: #async } -->
+### 统一的异步堆栈信息 {: #async }
 
 <!-- DevTools now reports `async` stack traces for `async` functions to be consistent with other async tasks.  -->
+DevTools 现在能够实现`异步`函数的`异步`堆栈信息与其它异步任务的堆栈信息保持一致。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wuKo84nrDzbhwCnIVU2n.png", alt="async stack traces", width="800", height="427" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wuKo84nrDzbhwCnIVU2n.png", alt="异步跟踪堆栈", width="800", height="427" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b2a04e234f25602d1b7e7ff7bd0d39bde3f2c1ec  #}
 
@@ -152,12 +182,15 @@ Chromium 议题： [1254259](https://crbug.com/1254259)
 
 
 <!-- ### Retain the Console sidebar {: #console-sidebar } -->
+### 保留控制台侧边栏 {: #console-sidebar }
 
 <!-- The Console sidebar is here to stay. In Chrome 94, we announced the [upcoming deprecation of the Console sidebar](/blog/new-in-devtools-94/#deprecated) and ask developers for feedback and concerns. -->
+控制台侧边栏将会被保留。在 Chrome 94 中，我们宣布[即将弃用控制台侧边栏](/blog/new-in-devtools-94/#deprecated)，并且向开发者寻求反馈以及意见。
 
 <!-- We have now got enough feedback from the deprecation notice and we will work on improving the sidebar rather than removing it. -->
+现在，我们从弃用通知那里获得了足够的反馈，后面我们将致力于改进侧边栏而不是删除它。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XIsLjvBFSeaTN5BtEgmU.png", alt="Console sidebar", width="800", height="502" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XIsLjvBFSeaTN5BtEgmU.png", alt="控制台侧边栏", width="800", height="502" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b0650096c934bf60c21d51ae8a51c94e8f907d38 #}
 
@@ -165,29 +198,37 @@ Chromium 议题: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 
 
 <!-- ## Deprecated Application cache pane in the Application panel {: #app-cache } -->
+## 弃用应用程序面板里面的应用程序缓存窗格 {: #app-cache }
 
 <!-- The [Application cache](https://developer.chrome.com/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
+由于 Chrome 以及基于 Chromium 的浏览器都已移除对 [AppCache]((https://web.dev/appcache-removal/) 的支持，因此应用程序面板里面的[应用程序缓存](https://developer.chrome.com/docs/devtools/storage/applicationcache/)窗格现已被移除。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
-Chromium 议题： [1084190](https://crbug.com/1084190) 
+Chromium 议题： [1084190](https://crbug.com/1084190)
 
 
 <!-- ## [Experimental] New Reporting API pane in the Application panel {: #reporting-api } -->
+## [实验] 应用程序面板里面新增 Reporting API 窗格 {: #reporting-api }
 
 {% Aside %}
 <!-- To enable the experiment, check the **Enable Reporting API panel in the Application panel** checkbox under **Settings** > **Experiments**. -->
+要启用实验，请在**设置** > **实验**下勾选带有**在应用面板里面启用 Reporting API 窗格**字样的复选框选项。
 {% endAside %}
 
 <!-- The [Reporting API](https://web.dev/reporting-api/) is designed to help you monitor security violations of your page, deprecated API calls, and more.  -->
+该 [Reporting API](https://web.dev/reporting-api/) 旨在帮助您监控违规网页，过时的API调用以及更多。
 
 <!-- With this experiment enabled, you can now view the reports status in the new **Reporting API** pane in the **Application** panel.  -->
+启用此实验后，您现在可以在**应用程序**面板的新 **Reporting API** 窗格里面查看报告状态。
 
 <!-- Please note that the **Endpoints** section is currently still under active development (showing no reporting endpoints for now).  -->
+请注意，**Endpoints** 部分目前仍在积极开发中（目前没有 reporting endpoints）。
 
 <!-- Learn more about the **Reporting API** with [this article](https://web.dev/reporting-api/). -->
+阅读[这篇文章](https://web.dev/reporting-api/)以便于了解更多有关于 **Reporting API** 的信息。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="Reporting API pane in the Application panel", width="800", height="476" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="应用程序面板里面新增 Reporting API 窗格", width="800", height="476" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c0516bfc7d4cee077452d31b1550ea1d3c594705 #}
 
