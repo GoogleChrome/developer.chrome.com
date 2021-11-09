@@ -107,5 +107,5 @@ Available from Chrome 94. You can now get information about a site's origin tria
 -  [View origin trials information in DevTools](/blog/new-in-devtools-94/#origin-trials)
 ---
 
-Photo by [Louis Reed
-](https://unsplash.com/@_louisreed) on [Unsplash](https://unsplash.com/photos/pwcKF7L4-no).
+Photo by [Louis Reed](https://unsplash.com/@_louisreed) on
+[Unsplash](https://unsplash.com/photos/pwcKF7L4-no).
