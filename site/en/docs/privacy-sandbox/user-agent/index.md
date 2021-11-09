@@ -76,8 +76,8 @@ needs other specific information for any
 ## How do the reduced UA and UA-CH work?
 
 Here is a brief example of how the reduced User-Agent string and UA-CH work.
-For a more in-depth example, review "[Improving user privacy and developer
-experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/#example-exchange)".
+For a more in-depth example, review [Improving user privacy and developer
+experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/#example-exchange).
 
 1. A user opens the browser and enters `example.com` into the address bar.
 1. The browser sends a request to load the webpage.
