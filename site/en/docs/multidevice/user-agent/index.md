@@ -1,13 +1,20 @@
 ---
 layout: "layouts/doc-post.njk"
-title: User Agent Strings
-date: 2014-02-28 
+title: User-Agent Strings
+date: 2014-02-28
+updated: 2021-11-09
 description: >
-  Reference information about the user agent string that Chrome sends in Android, iOS,
-  and WebView contexts.
+  Reference information about the User-Agent string that Chrome sends in
+  Android, iOS, and WebView contexts.
 ---
 
-A browser's user agent string (UA) helps identify which browser is being used, what version, and on
+{% Aside 'caution' %}
+With Privacy Sandbox, an origin trial is in progress for
+[reduced User-Agent strings](/docs/privacy-sandbox/user-agent/), designed to
+remove sensitive information which may be used for fingerprinting.
+{% endAside %}
+
+A browser's User-Agent string (UA) helps identify which browser is being used, what version, and on
 which operating system. When feature detection APIs are not available, use the UA to customize
 behavior or content to specific browser versions.
 
@@ -118,3 +125,8 @@ Version/4.0 <mark>Chrome/43.0.2357.65</mark> Mobile Safari/537.36</code></pre>
 
 [1]: https://play.google.com/store/apps/details?id=com.android.chrome
 [2]: /docs/multidevice/webview/
+
+{% Aside 'caution' %} With Privacy Sandbox, an origin trial is in progress for
+[reduced User-Agent strings](/docs/privacy-sandbox/user-agent/), designed to
+remove sensitive information which may be used for fingerprinting.
+{% endAside %}
