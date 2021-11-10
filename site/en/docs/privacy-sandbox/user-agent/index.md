@@ -12,7 +12,7 @@ authors:
 
 ## Implementation status
 
-*  [In origin trial](https://web.dev/origin-trials/) Chrome 95 to 100
+*  [In origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 100
 *  [Register for the trial](/origintrials/#/view_trial/-7123568710593282047)
 *  [Chrome DevTools integration](blog/new-in-devtools-89/#ua-ch)
 *  [Chrome Platform Status](https://chromestatus.com/feature/5995832180473856)
@@ -20,11 +20,13 @@ authors:
 ## What is User-Agent Reduction?
 
 User-Agent (UA) reduction is the effort to minimize the identifying information
-shared in the User-Agent string which
-[may be used for fingerprinting](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/#unsanctioned-tracking-tracking-without-user-control).
+shared in the User-Agent string which may be
+[used for passive fingerprinting](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/#unsanctioned-tracking-tracking-without-user-control).
 As these changes are
 [rolled out](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html), 
-all resource requests will have a reduced `User-Agent` header.
+all resource requests will have a reduced `User-Agent` header. As a result,
+the returns from certain `Navigator` interfaces will be reduced, including:
+`navigator.userAgent`, `navigator.appVersion`, and `navigator.platform``.
 
 Web developers should
 [review site code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
@@ -54,7 +56,9 @@ By removing passively exposed user-data, we can better measure and limit
 
 ## Why do we need reduced UA and UA-CH?
 
-Currently, the User-Agent string broadcasts a large string of data about a user's browser with every HTTP request. This is problematic because:
+Currently, the User-Agent string broadcasts a large string of data about a
+user's browser, operating system, and version every HTTP request. This is
+problematic because:
 
 *  the granularity and abundance of detail can lead to user identification;
 *  and the default availability of this information can lead to covert tracking.
@@ -68,9 +72,9 @@ conditions in a way that can be audited.
 
 Further, the `User-Agent` string has grown longer and more complex, which led
 to error-prone string parsing. UA-CH provides structured and reliable data that
-is easier for servers to understand. Existing code which parses the UA string
-should continue to work, but you will need to migrate to UA-CH if your site
-needs other specific information for any
+is easier to understand. Existing code which parses the UA string shouldn’t
+break (though it will return less data), and you’ll need to migrate to UA-CH
+if your site needs specific information for any
 [valid use cases](https://wicg.github.io/ua-client-hints/#use-cases).
 
 ## How do the reduced UA and UA-CH work?
@@ -102,14 +106,19 @@ experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints
    Sec-CH-UA: "Chrome"; v="93"
    Sec-CH-UA-Mobile: ?1
    Sec-CH-UA-Platform: "Android"
-   Sec-CH-UA-Arch: arm
+   Sec-CH-UA-Arch: "arm"
    ```
+
+If you need a specific set of Client Hints on your initial request, refer to
+[Client Hints Reliability](https://github.com/WICG/client-hints-infrastructure/blob/main/reliability.md)
+to ensure Client Hints are available on site load and optimised.
 
 ## Engage and share feedback
 
 *  **Origin trial**:
    [Register for the Chrome origin trial](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047)
-   to opt-in for the reduced user-agent.
+   to opt-in for the reduced user-agent, and
+   [share your feedback](https://github.com/abeyad/user-agent-reduction/issues).
 *  **Demo**: Try our [demo of User-Agent reduction](https://uar-ot.glitch.me/).
 *  **GitHub**: Read the [UA-CH proposal](https://github.com/WICG/ua-client-hints),
    [raise questions and follow discussion](https://github.com/WICG/ua-client-hints/issues).
