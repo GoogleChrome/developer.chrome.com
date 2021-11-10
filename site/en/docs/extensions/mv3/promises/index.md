@@ -64,11 +64,13 @@ method.
 You can check whether a method supports promises by checking its API reference page:
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/AYQVtnh19vNMHoXzxZB1.png",
-  alt="Screenshot showing a method that supports promises", width="800", height="280" %}
+  alt="captureVisibleTab is a method that supports promises as demonstrated in the API reference",
+  width="800", height="280" %}
 
-The screenshot above shows a method from the [`chrome.tabs`][api-tabs-methods] API. You can see that
-this method supports promises because one of the method's signatures returns a promise. To make this
-easier to see at a glance, the reference docs also display a `Promise` pill below the signatures.
+The example method, `captureVisibleTab()`, can be found in the [`chrome.tabs`][api-tabs-methods]
+API. This method supports promises because one of the method's signatures returns a promise. To make
+this easier to see at a glance, the reference docs also display a `Promise` pill below the
+signatures.
 
 ## How to use promises
 
@@ -77,8 +79,8 @@ should consider using promises in situations such as the following:
 
 * Any time that you want to clean up your code by using a more "synchronous" invocation style.
 * Where error handling would be too difficult using callbacks.
-* When you want a simpler way to invoke a number of concurrent methods and gather the results into a
-  single thread of code.
+* When you want a more condensed way to invoke several concurrent methods and gather the results
+  into a single thread of code.
 
 ### Converting a callback to a promise {: #compare-to-callback}
 
