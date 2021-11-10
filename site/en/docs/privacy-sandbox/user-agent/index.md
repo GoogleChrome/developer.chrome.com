@@ -47,8 +47,7 @@ JavaScript.
 
 [User-Agent Client Hints](https://wicg.github.io/ua-client-hints/) allow access
 to the full set of user-agent data, but only when servers actively declare an
-explicit need for specific pieces of data. The browser will then apply its own
-policies and configuration to determine what data is revealed.
+explicit need for specific pieces of data.
 
 By removing passively exposed user-data, we can better measure and limit
 [how much information is intentionally exposed](https://github.com/bslassey/privacy-budget)
