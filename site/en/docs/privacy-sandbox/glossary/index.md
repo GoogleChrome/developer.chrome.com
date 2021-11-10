@@ -121,7 +121,7 @@ sites without sharing their personal information with the identity service or
 the site.
 
 FedCM was previously known as WebID, and is still
-[in incubation in the W3C](https://github.com/wicg/fedcm).
+[in development in the W3C](https://github.com/wicg/fedcm).
 
 ## Fingerprinting {: #fingerprinting }
 
