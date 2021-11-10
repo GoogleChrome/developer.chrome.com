@@ -6,7 +6,7 @@ authors:
 date: 2021-10-25
 updated: 2021-10-25
 description:
-  "新的 CSS 预览面板，模拟 CSS prefers-contrast，Chrome 的自动暗黑模式以及更多。"
+  "新的 CSS 预览面板，模拟 CSS prefers-contrast，Chrome 的自动深色模式以及更多。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aUnjMsVWCJvIiUCq5Rxp.jpg'
 alt: ''
 tags:
@@ -69,18 +69,18 @@ Chromium 议题： [1139777](https://crbug.com/1139777)
 
 
 <!-- ### Emulate the Chrome’s Auto Dark Theme feature {: #auto-dark-mode } -->
-### 模拟 Chrome 的自动暗黑主题特性 {: #auto-dark-mode }
+### 模拟 Chrome 的自动深色主题特性 {: #auto-dark-mode }
 
 <!-- Use DevTools to emulate auto dark theme to easily see how your page looks when Chrome’s [Auto Dark Theme](/blog/auto-dark-theme/) is enabled. -->
-在[Chrome 的自动暗黑主题](/blog/auto-dark-theme/) 特性开启之前，使用 DevTools 模拟自动暗黑主题以便于我们查看页面的外观。
+在[Chrome 的自动深色主题](/blog/auto-dark-theme/) 特性开启之前，使用 DevTools 模拟自动深色主题以便于我们查看页面的外观。
 
 <!-- Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System.  -->
-Chrome 96 为 Android 上的 [自动暗黑主题](/blog/auto-dark-theme/) 引入 [Origin Trial](/blog/origin-trials/) 功能。有了该功能，当用户在操作系统那里选择暗黑主题时，浏览器将自动为浅色主题网站生成暗黑主题。
+Chrome 96 为 Android 上的 [自动深色主题](/blog/auto-dark-theme/) 引入 [Origin Trial](/blog/origin-trials/) 功能。有了该功能，当用户在操作系统那里选择暗黑主题时，浏览器将自动为浅色主题网站生成暗黑主题。
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate auto dark mode** dropdown. -->
-打开 [命令菜单](/docs/devtools/command-menu/)，运行 Show Rendering 命令，然后设置带有模拟自动暗黑模式字样的下拉菜单。
+打开 [命令菜单](/docs/devtools/command-menu/)，运行 Show Rendering 命令，然后设置带有模拟自动深色模式字样的下拉菜单。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QHS8kupNsTXnKD7HomYy.png", alt="模拟 Chrome 的自动暗黑主题特性", width="800", height="483" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/QHS8kupNsTXnKD7HomYy.png", alt="模拟 Chrome 的自动深色主题特性", width="800", height="483" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0d7e03ffa64ba8432ec9db3e067abeb60cd53d7e #}
 
@@ -108,7 +108,6 @@ Chromium 议题： [1253635](https://crbug.com/1253635)
 
 <!-- ## New Payload tab in the Network panel {: #payload } -->
 ## 网络面板新增 payload 选项卡 {: #payload }
-
 
 <!-- Use the new **Payload** tab in the **Network** panel when you inspect a network request with payload. Previously, the payload information is available under the **Headers** tab. -->
 当您想查看网络请求中的 payload 信息时，可以使用网络面板里面的 payload 选项卡。在以前，**报头**选项卡不能查看 payload 信息。
