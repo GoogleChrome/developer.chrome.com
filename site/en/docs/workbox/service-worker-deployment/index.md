@@ -67,8 +67,8 @@ the browser first needs to spend time starting up the service worker.
 This extra overhead before a request can be handled is small compared to the benefit of serving a response from the cache instead of the network.
 
 When using strategies that can't serve from the cache, 
-and has to go to the network—in particular when handling 
-[navigation requests](https://web.dev/handling-navigation-requests/)—[bootup time always adds some delay](https://developers.google.com/web/updates/2017/02/navigation-preload#the-problem). 
+and has to go to the network&mdash;in particular when handling 
+[navigation requests](https://web.dev/handling-navigation-requests/)&mdash;[bootup time always adds some delay](https://developers.google.com/web/updates/2017/02/navigation-preload#the-problem). 
 Depending on device capabilities and/or CPU pressure, 
 a navigation request can experience a noticeable delay due to slow service worker boot-ups. 
 Deploying a service worker without awareness of this delay means that users could experience an unintentional performance hit.
@@ -80,7 +80,7 @@ and it's covered [later in this documentation](/docs/workbox/navigation-preload)
 
 ## Cache-first strategies can backfire
 
-Caching strategies that consult the cache first—or _only_ consult the cache—are great for both offline access and performance. 
+Caching strategies that consult the cache first&mdash;or _only_ consult the cache&mdash;are great for both offline access and performance. 
 However, they tend to cause issues in some select cases.
 
 ### Runtime caching of unversioned static assets

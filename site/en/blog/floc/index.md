@@ -6,7 +6,7 @@ authors:
 description: >
   Federated Learning of Cohorts (FLoC) provides a privacy preserving mechanism for interest-based ad selection. This article explains how to take part in the FLoC origin trial.
 date: 2021-03-30
-updated: 2021-09-07
+updated: 2021-10-29
 hero: image/80mq7dk16vVEg8BBhsVe42n6zn82/cfY1L58Z3w2xzCOo3Ayx.jpg
 alt: Murmuration of starlings over Brighton pier
 tags:
@@ -17,6 +17,11 @@ tags:
 {% Aside 'warning' %}
 The origin trial for the initial version of FLoC ran from Chrome 89 to 91 and 
 [is now closed](https://developer.chrome.com/origintrials/#/view_trial/213920982300098561).
+
+This post refers to the API implemented in Chrome for the first origin trial of FLoC. 
+
+Future iterations of an API to enable interest-based advertising without third-party cookies 
+or other cross-site tracking mechanisms are currently in development.
 {% endAside %}
 
 

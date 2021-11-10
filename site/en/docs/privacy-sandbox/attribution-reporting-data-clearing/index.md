@@ -206,3 +206,7 @@ whereas event-level reports may be sent days or weeks after click—the impact o
 clearing may not be lower. For example, for certain categories of sites, people tend to clear the browsing data shortly after
 converting. Such user-initiated actions would still result in reports being cleared, even though
 they were scheduled to be sent soon.
+
+## Attribution Reporting: all resources
+
+See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction/#use-cases-and-features).

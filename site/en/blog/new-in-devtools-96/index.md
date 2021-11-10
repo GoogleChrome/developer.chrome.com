@@ -72,7 +72,7 @@ Two new options are added in the context menu  for you to easily copy CSS rules 
 
 In the **Styles** pane, right click on a CSS rule. You can select **Copy declaration as JS** to copy a single rule or **Copy all declarations as JS** to copy all rules.
 
-For instance, the example below will copy `padding-left: '1.5rem'` to the clipboard.
+For instance, the example below will copy `paddingLeft: '1.5rem'` to the clipboard.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M4mKimxhUs6f4hc0wMuO.png", alt="Copy declaration as JavaScript", width="800", height="469" %}
 

@@ -6,7 +6,7 @@ layout: 'layouts/blog-post.njk'
 authors:
   - andreban
 date: 2021-10-21
-updated: 2021-10-26
+updated: 2021-11-01
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/t98X06XyMtNI4rTmXyfZ.jpg'
 alt: >
   Lamp on a dark background.
@@ -26,7 +26,8 @@ This allows you to test how the Auto Dark Theme performs with regards to your KP
 
 Head over to the documentation to learn
 [how to set up an origin trial](/blog/origin-trials/#how-to-register-for-an-origin-trial),
-then [sign-up for the AutoDarkMode origin trial](/origintrials/#/trials/active) to get a token.
+then [sign-up for the AutoDarkMode origin trial](/origintrials/#/view_trial/1626925365387591681)
+to get a token.
 
 ## Test Auto Dark Theme on your device
 
@@ -176,8 +177,9 @@ Auto Dark Theme is still being specified,
 and we are looking for feedback across all areas of the implementation:
 from the results of the darkening algorithm to the developer APIs for element customization and opt-out.
 
-You can send us feedback by filing a bug on the Chromium bugs,
-using [this link](https://bugs.chromium.org/p/chromium/issues/list?q=component:Mobile%3EAutoDarkTheme)
-or via the origin trial form.
+There are many channels you can send us your feedback:
+ - Via the [developer survey](https://docs.google.com/forms/d/e/1FAIpQLSeb1V8AB1wgvL5mGtRqEmgqSEaUB4ETWEfZyVprYLK9ZP06sA/viewform).
+ - Filing a [bug on the Chromium project](https://bugs.chromium.org/p/chromium/issues/list?q=component:Mobile%3EAutoDarkTheme).
+ - Via the [Origin Trial feedback form]((/origintrials/#/view_trial/1626925365387591681)).
 
 Photo by [Félix Besombes](https://unsplash.com/@druks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).

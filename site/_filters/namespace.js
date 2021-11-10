@@ -15,12 +15,15 @@
  */
 
 /**
- * Converts a namespace name like "foo.bar" into a path segment like "foo_bar".
+ * Converts a namespace name like "chrome.foo.bar" into a path segment like "foo_bar".
  *
  * @param {string} namespace
  * @return {string}
  */
 function namespaceToPath(namespace) {
+  if (namespace.startsWith('chrome.')) {
+    namespace = namespace.substr('chrome.'.length);
+  }
   return namespace.replace(/\./g, '_');
 }
 

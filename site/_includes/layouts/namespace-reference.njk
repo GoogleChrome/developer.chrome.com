@@ -19,16 +19,15 @@
 
   <h2 class="type--h3">Summary</h2>
   <ul class="code-sections code-sections--summary flow-space-300 stack">
-    {{ macros.renderSummarySection(namespace.name, 'Types', 'type', namespace.types) }}
-    {{ macros.renderSummarySection(namespace.name, 'Properties', 'property', namespace.properties) }}
-    {{ macros.renderSummarySection(namespace.name, 'Methods', 'method', namespace.methods) }}
-    {{ macros.renderSummarySection(namespace.name, 'Events', 'event', namespace.events) }}
+    {% for group in namespace.groups %}
+      {{ macros.renderGroupSummary(group) }}
+    {% endfor %}
   </ul>
 
-  {{ macros.renderPrimarySection(namespace.name, 'types', 'Types', 'type', namespace.types) }}
-  {{ macros.renderPrimarySection(namespace.name, 'properties', 'Properties', 'property', namespace.properties) }}
-  {{ macros.renderPrimarySection(namespace.name, 'methods', 'Methods', 'method', namespace.methods) }}
-  {{ macros.renderPrimarySection(namespace.name, 'events', 'Events', 'event', namespace.events) }}
+  {% for group in namespace.groups %}
+   {{ macros.renderGroupAll(group) }}
+  {% endfor %}
+
 {% endset %}
 
 {% set tocContents %}
@@ -38,21 +37,22 @@
 {% block content %}
   <div class="display-flex gap-top-300 lg:gap-top-400">
     {% include 'partials/navigation-tree.njk' %}
-    {% set feature = namespace.feature %}
+    {% set f = namespace.root._feature %}
 
     {# The article is wrapped again so that the ToC aligns on its right on desktop #}
     <div class="display-flex justify-content-center width-full">
       <article class="stack measure-long width-full pad-left-400 pad-right-400">
         <h1 class="type--h2">{{ title }}</h1>
 
-        {% if feature.platformAppsOnly %}
+        {% if f.platformAppsOnly %}
           <div class="aside aside--warning">
             This API is part of the deprecated Chrome Apps platform.
             Learn more about <a href="/docs/apps/migration">migrating your app</a>.
           </div>
         {% endif %}
 
-        {% if feature.chromeOsOnly %}
+        {# TODO: unsupported #}
+        {% if f.chromeOsOnly %}
           {# There are some historic cases of multi-platform support in Platform Apps, but
               the only restriction these days is CrOS vs everywhere. #}
           <div class="aside aside--note">
@@ -60,45 +60,50 @@
           </div>
         {% endif %}
 
-        {% set availabilityHtml %}{{ macros.renderAvailabilityFeature(feature) }}{% endset %}
-
         <div>{# This div prevents flow-space-300 from applying to the parent stack. #}
           <ul class="code-sections code-sections--summary flow-space-300 stack">
-            <li>
-              <div class="code-sections__label">Description</div>
-              <div class="type">
-                {{ namespace.description | md | safe }}
-              </div>
-            </li>
-            {% if feature.permissions.length %}
+            {% set commentHtml %}{{ macros.renderCommentText(namespace.root) | trim }}{% endset %}
+            {% if commentHtml %}
+              <li>
+                <div class="code-sections__label">Description</div>
+                <div class="type">
+                  {{ commentHtml | safe }}
+                </div>
+              </li>
+            {% endif %}
+
+            {% if f.permissions.length %}
               <li>
                 <div class="code-sections__label">Permissions</div>
                 <div>
-                  {% for permission in feature.permissions %}
+                  {% for permission in f.permissions %}
                     <code>{{ permission }}</code><br />
                   {% endfor %}
                   {{ extra_permissions_html | safe }}
                 </div>
               </li>
             {% endif %}
-            {% if feature.manifestRequirements.length %}
+
+            {% if f.manifestKeys.length %}
               <li>
                 <div class="code-sections__label">Manifest Keys</div>
                 <div>
                   <p>The following keys must be declared <a href="/docs/extensions/mv3/manifest/">in the manifest</a> to use this API.</p>
-                  {% for manifestKey in feature.manifestRequirements %}
+                  {% for manifestKey in f.manifestKeys %}
                     <code>{{ manifestKey }}</code><br />
                   {% endfor %}
                 </div>
               </li>
             {% endif %}
-            {% if availabilityHtml | trim %}
-              <li class="align-center">
+
+            {% set availabilityHtml %}{{ macros.renderAvailability(namespace.root) | trim }}{% endset %}
+            {% if availabilityHtml %}
+              <li class="lg:align-center">
                 <div class="code-sections__label">Availability</div>
                 {{ availabilityHtml | safe }}
-                {# As of Apr 2021, namespaces are never deprecated. #}
               </li>
             {% endif %}
+
           </ul>
         </div>
 

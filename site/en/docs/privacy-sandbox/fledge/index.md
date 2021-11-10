@@ -29,7 +29,7 @@ FLEDGE can be tested in current versions of Chrome and Chrome Canary with the fo
 FLEDGE is the first experiment to be implemented in Chromium within the 
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
 
-* [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is under discussion with
+* [API proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) is under discussion with
 [WICG](https://www.w3.org/community/wicg/) and interest groups.
 * [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI) in
 [Blink](https://www.chromium.org/blink).
@@ -102,14 +102,14 @@ auction has three jobs:<br>
 1. The seller initiates the ad auction by calling runAdAuction(), with data including the host name
 of the seller, signals from buyers and the seller, and a URL for auction decision logic.
 1. The auction returns data about the winning ad. The data cannot be accessed by the publisher site,
-except to render the ad in a Fenced Frame.
+except to render the ad in a fenced frame.
 1. The ad is displayed.
 
 ---
 
 ## Engage and share feedback
 
-* **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md), [raise
+* **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md), [raise
 questions and follow discussion](https://github.com/WICG/turtledove/issues).
 * **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants).
 * **Developer support**: Ask questions and join discussions on the

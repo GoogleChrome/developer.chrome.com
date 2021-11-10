@@ -315,7 +315,7 @@ the API based on ecosystem feedback. {% endAside %}
     </tr>
     <tr>
     <td>Attribution model: priority-based<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_views.md#controlling-which-attribution-source-to-triggerd">Explainer</a></td>
-    <td><code>🏗️ Under development (Chrome)</code></td>
+    <td><code>🧪 Experiment (Chrome)</code></td>
     </tr>
     <tr>
     <td>Attribution model: flexible</td>
@@ -610,3 +610,7 @@ usefulness**. This means that the 3-bit (or 1-bit for views) data limitation and
 privacy mechanisms used by this API are a means to an end. They're subject to change. If
 there are ways for adtech companies to get more useful data for their use cases while
 achieving strong privacy guarantees, this API will evolve accordingly. {% endAside %}
+
+## Attribution Reporting: all resources
+
+See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction/#use-cases-and-features).

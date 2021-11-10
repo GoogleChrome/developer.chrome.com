@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "OAuth2: Authenticate users with Google"
 date: 2012-09-18
-updated: 2021-09-21
+updated: 2021-11-08
 description: >
   Step-by-step instructions on how to build an extension that accesses
   a user's Google contacts via the Google People API, the Chrome Identity API,
@@ -11,12 +11,13 @@ description: >
 
 {% include 'partials/extensions/mv2page-in-mv3.md' %}
 
-[OAuth2][1] is the industry-standard protocol for authorization. It provides a mechanism for users
+[OAuth2][oauth2] is the industry-standard protocol for authorization. It provides a mechanism for users
 to grant web and desktop applications access to private information without sharing their username,
 password and other private credentials.
 
 This tutorial builds an extension that accesses a user's Google contacts using the [Google People
-API][2] and the [Chrome Identity API][3]. Because extensions don't load over HTTPS, can't perform
+API][people-api] and the [Chrome Identity API][identity-api]. Because extensions don't load over
+HTTPS, can't perform
 redirects or set cookies, they rely on the Chrome Identity API to use OAuth2.
 
 ## Get started {: #set_up }
@@ -81,18 +82,21 @@ Add an HTML file called `index.html` and include the following code. <!-- Or dow
 ## Upload to the developer dashboard {: #upload_to_dashboard }
 
 Package the extension directory into a `.zip` file and upload it to the [Chrome Developer
-Dashboard][8] without publishing it:
+Dashboard][dev-console] without publishing it:
 
 1.  At the Developer Dashboard, click **Add new item**.
-2.  Click **Choose file** and select the `.zip` extension directory and upload it.
-3.  Without filling in additional fields, select **Save Draft and return to dashboard**.
+2.  Click **Browse files**, select the `.zip` extension and upload it.
+3.  Go to the **Package** tab and click on **View public key**.
 
-Find the extension under **Your Listings** and click on **more info**. From the popup, copy the
-public key and add it to the manifest inside the unzipped directory under the [`"key"`][9] field.
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8j12N4AyvHyjCZaFghv8.png", alt="Developer Dashboard Package tab", width="296", height="121" %}
+
+From the popup, copy the
+public key and add it to the manifest inside the unzipped directory under the [`"key"`][manifest-key] field.
+
 
 ```json
 {
-  "name": "OAuth Tutorial FaceBlcok",
+  "name": "OAuth Tutorial FaceBlock",
 ...
   "key": "ThisKeyIsGoingToBeVeryLong/go8GGC2u3UD9WI3MkmBgyiDPP2OreImEQhPvwpliioUMJmERZK3zPAx72z8MDvGp7Fx7ZlzuZpL4yyp4zXBI+MUhFGoqEh32oYnm4qkS4JpjWva5Ktn4YpAWxd4pSCVs8I4MZms20+yx5OlnlmWQEwQiiIwPPwG1e1jRw0Ak5duPpE3uysVGZXkGhC5FyOFM+oVXwc1kMqrrKnQiMJ3lgh59LjkX4z1cDNX3MomyUMJ+I+DaWC2VdHggB74BNANSd+zkPQeNKg3o7FetlDJya1bk8ofdNBARxHFMBtMXu/ONfCT3Q2kCY9gZDRktmNRiHG/1cXhkIcN1RWrbsCkwIDAQAB"
 }
@@ -104,15 +108,15 @@ Open the Extensions Management page at `chrome://extensions`, ensure developer m
 upload the unpackaged extension directory. Compare the extension ID on the extensions management
 page to the Item ID in the Developer Dashboard. They should match.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/n6jGhPAAxEjOweiTePjP.png",
-       alt="The ID of the extension matches in all places", height="438", width="567" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/7T1Ko139zBRENzSyKpgB.png", 
+alt="Extension Ids matching", width="350", height="250" %}
 
 The extension will maintain the same ID by including the `"key"` field in the manifest. Preserving a
 single ID is essential for API registration.
 
 ## Create OAuth client ID {: #oauth_client }
 
-Navigate to the [Google API console][10] and create a new project. Once ready, select
+Navigate to the [Google API console][google-console] and create a new project. Once ready, select
 **Credentials** in the sidebar, click **Create credentials** and choose **OAuth client ID**.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/iC6LC1PYreTxndYmLEWN.png",
@@ -145,11 +149,11 @@ Include the `"oauth2"` field in the extension manifest. Place the generated OAut
 
 ## Initiate first OAuth flow {: #identity_permission }
 
-Register the [`identity`][11] permission in the manifest.
+Register the [`identity`][identity-api] permission in the manifest.
 
 ```json
 {
-  "name": "OAuth Tutorial FaceBlcok",
+  "name": "OAuth Tutorial FaceBlock",
   ...
   "permissions": [
     "identity"
@@ -196,11 +200,11 @@ API", click on the correct result and enable it.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/AQbJX735qIGEJUephhXf.png",
        alt="Enable the People API", height="319", width="693" %}
 
-Add the [Google People API][13] client library to `"scopes"` in the extension manifest.
+Add the [Google People API][people-api] client library to `"scopes"` in the extension manifest.
 
 ```json
 {
-  "name": "OAuth Tutorial FaceBlcok",
+  "name": "OAuth Tutorial FaceBlock",
   ...
   "oauth2": {
     "client_id": "yourExtensionOAuthClientIDWillGoHere.apps.googleusercontent.com",
@@ -257,7 +261,7 @@ should log a JSON object that includes an array of `people/account_id`s under th
 ## Block faces {: #block_faces }
 
 Now that the extension is returning a list of the user's contacts, it can make additional requests
-to [retrieve those contact's profiles and information][14] . The extension will use the
+to [retrieve those contact's profiles and information][contact-groups-get] . The extension will use the
 `memberResourceNames` to retrieve the photo information of user contacts. Update `oauth.js` to
 include the following code.
 
@@ -305,17 +309,10 @@ a block.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/EQkrpv2o5kKIWPYHVhXn.png", 
        alt="Contact faces in a block", height="359", width="397" %}
 
-[1]: https://oauth.net/2/
-[2]: https://developers.google.com/people/
-[3]: /identity
-[4]: examples/tutorials/oauth_tutorial_complete.zip
-[5]: examples/tutorials/oauth_starter/manifest.json
-[6]: examples/tutorials/oauth_starter/background.js
-[7]: examples/tutorials/oauth_starter/index.html
-[8]: https://chrome.google.com/webstore/developer/dashboard
-[9]: /key
-[10]: https://console.developers.google.com/apis
-[11]: /identity
-[12]: examples/tutorials/oauth_starter/oauth.js
-[13]: https://developers.google.com/people/
-[14]: https://developers.google.com/people/api/rest/v1/contactGroups/get
+[contact-groups-get]: https://developers.google.com/people/api/rest/v1/contactGroups/get
+[dev-console]: https://chrome.google.com/webstore/developer/dashboard
+[google-console]: https://console.developers.google.com/apis
+[identity-api]: /docs/extensions/reference/identity/
+[manifest-key]: /docs/extensions/mv3/manifest/key/
+[oauth2]: https://oauth.net/2/
+[people-api]: https://developers.google.com/people/

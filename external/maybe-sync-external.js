@@ -12,7 +12,8 @@ const path = require('path');
 const childProcess = require('child_process');
 
 // See if the synchronized data is more than this old. If so, we run "sync-external".
-const syncThresholdMs = 12 * 60 * 60 * 1000;
+const syncThresholdHours = 6;
+const syncThresholdMs = syncThresholdHours * 60 * 60 * 1000;
 
 async function run() {
   if (fs.existsSync(path.join(__dirname, 'local-build-flag'))) {
