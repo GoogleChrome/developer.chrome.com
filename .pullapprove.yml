@@ -19,7 +19,7 @@ groups:
   extensions:
     reviewers:
       users:
-      - awfuchs
+      - jpmedley
       - dotproto
       teams:
       # Prefix a username or team with ~ to include them in the reviewer pool
