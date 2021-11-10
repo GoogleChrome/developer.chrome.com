@@ -108,10 +108,20 @@ out whether new data adds to entropy. For example, knowing a person is from
 Australia doesn't reduce entropy if you already know the person is from
 Kangaroo Island.
 
-## Federated identity (also known as federated login) {: #federated-identity }
+## Federated identity, federated login {: #federated-identity }
 
 A third-party platform to allow a user to sign in to a website, without
 requiring the site to implement their own identity service.
+
+## Federated Credentials Management (FedCM) {: #fedcm }
+
+Federated Credentials Management is a proposal for a privacy-preserving
+approach to federated identity services. This will allow users to log into
+sites without sharing their personal information with the identity service or
+the site.
+
+FedCM was previously known as WebID, and is still
+[in incubation in the W3C](https://github.com/wicg/fedcm).
 
 ## Fingerprinting {: #fingerprinting }
 
@@ -268,15 +278,6 @@ reduce passively exposed information which may lead to user identification or
 covert tracking.
 
 UA-CH are sometimes referred to as "Client Hints."
-
-## WebID
-
-WebID is a proposal for a privacy-preserving approach to federated identity
-services (such as "Sign in with&nbsp;..."). This will allow users to log into
-sites without sharing their personal information with the identity service or
-the site.
-
-WebID is still [in incubation in the W3C](https://github.com/WICG/WebID).
 
 ## .well-known {: #well-known }
 
