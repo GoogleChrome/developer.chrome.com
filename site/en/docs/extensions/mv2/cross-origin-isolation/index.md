@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Cross-origin isolation"
 date: 2021-08-03
-#updated:
+updated: 2021-11-10
 description: Overview of cross-origin isolation for extensions
 ---
 
@@ -14,16 +14,16 @@ will opt the extension's origin into cross-origin isolation.
 
 ```json
 {
-    "name": "CrossOriginIsolation example",
-    "manifest_version": 2,
-    "version": "1.1",
-    "cross_origin_embedder_policy": {
-      "value": "require-corp"
-    },
-    "cross_origin_opener_policy": {
-      "value": "same-origin"
-    },
-    ....
+  "name": "CrossOriginIsolation example",
+  "manifest_version": 2,
+  "version": "1.1",
+  "cross_origin_embedder_policy": {
+    "value": "require-corp"
+  },
+  "cross_origin_opener_policy": {
+    "value": "same-origin"
+  },
+  ...
 }
 ```
 
