@@ -22,22 +22,22 @@ The [`chrome.scripting`](/docs/extensions/reference/scripting/) API now supports
 [registering](/docs/extensions/reference/scripting/#method-registerContentScripts),
 [updating](/docs/extensions/reference/scripting/#method-updateContentScripts),
 [unregistering](/docs/extensions/reference/scripting/#method-unregisterContentScripts), and [getting
-a list of content scripts](/docs/extensions/reference/scripting/#method-getRegisteredContentScripts)
+a list](/docs/extensions/reference/scripting/#method-getRegisteredContentScripts) of content scripts
 at runtime. Previously, content scripts could only be statically declared in an extension's
 manifest.json or programmatically injected at runtime with
-[`chrome.scripting.executeScript`](/docs/extensions/reference/scripting/#method-executeScript).
+[`chrome.scripting.executeScript()`](/docs/extensions/reference/scripting/#method-executeScript).
 
-### Chrome 96: Expanded promise support {: #m96-promise-support }
+### Chrome 96: Massively expanded promise support {: #m96-promise-support }
 
-A number of general and Chrome OS-specific extensions APIs have gained promise support in this
-release. Expand the following sections for more details.
+This release contains significantly more promise updates than any previous release. Updates include
+both general and Chrome OS-specific extensions APIs. Expand the following sections for details.
 
 {% Details %}
 {% DetailsSummary %}
 Extensions APIs
 {% endDetailsSummary %}
 
-A number of APIs now have promise support in Manifest V3.
+A number of APIs now support promises in Manifest V3.
 
 - [`chrome.browsingData`](/docs/extensions/reference/browsingData)
 - [`chrome.commands`](/docs/extensions/reference/commands)
@@ -83,12 +83,14 @@ Chrome OS APIs
 
 ### Chrome 96: `declarativeNetRequestWithHostAccess` permission
 
-The new `declarativeNetRequestWithHostAccess` permission allows existing Manifest V2 extensions that
-leverage `webRequest`, `webRequestBlocking`, and site-specific host permission to migrate to the
+The new `declarativeNetRequestWithHostAccess` permission allows extensions to use the
+[`chrome.declarativeNetRequest`](/docs/extensions/reference/declarativeNetRequest/) API on sites the
+extension has host permissions for. This also enables existing Manifest V2 extensions that use
+`webRequest`, `webRequestBlocking`, and site-specific host permission to migrate to the
 [`chrome.declarativeNetRequest`](/docs/extensions/reference/declarativeNetRequest/) API without
-requiring the end user to approve a new permissions grant.
+requiring the user to approve new permissions.
 
-### 2021-10-27: Review violation troubleshooting updates {: #2021-10-27-reivew-troubleshooting }
+### 2021.10.27: Review violation troubleshooting updates {: #2021-10-27-reivew-troubleshooting }
 
 The [Troubleshooting Chrome Web Store violations](/docs/webstore/troubleshooting/) page has been
 updated to provide developers with more detailed guidance for common reasons for rejection.
@@ -106,27 +108,17 @@ on [content scripts](/docs/extensions/mv3/content_scripts/#isolated_world).
 Methods on the Manifest V3 version of the [`chrome.storage`](/docs/extensions/reference/storage/)
 API now return promises.
 
-### Chrome 95: Cross origin isolation opt-in now required {: #m95-coi-required }
-
-Extensions and apps must now opt into [cross origin
-isolation](https://web.dev/cross-origin-isolation-guide/) in order to use features like
-SharedArrayBuffer. Documentation on this feature is available for both [Manifest
-V2](/docs/extensions/mv2/cross-origin-isolation/) and [Manifest
-V3](/docs/extensions/mv3/cross-origin-isolation/) is available.
-
-### 2021-09-23: Manifest V2 support timeline {: #manifest-v2-support-timeline }
+### 2021.09.23: Manifest V2 support timeline {: #manifest-v2-support-timeline }
 
 The Manifest V2->V3 transition timeline was [announced in this blog post](/blog/mv2-transition/) and
 a more detailed [timeline page](/docs/extensions/mv3/mv2-sunset) was published.
 
 ### Chrome 94: Declarative net request static ruleset changes
 
-The [`chrome.declarativeNetRequest`](/docs/extensions/reference/declarativeNetRequest/) API static
-ruleset implementation has been adjusted in order to give developers more flexibility. Previously
-developers could only specify and enable up to 10 rulesets. Developers can now specify up to 50
-rulsets
+The [`chrome.declarativeNetRequest`](/docs/extensions/reference/declarativeNetRequest/) now supports
+specifying up to 50 static rulesets
 ([MAX_NUMBER_OF_STATIC_RULESETS](/docs/extensions/reference/declarativeNetRequest/#property-MAX_NUMBER_OF_STATIC_RULESETS))
-and enable up to 10 rulsets
+and enabling up to 10 rulesets
 ([MAX_NUMBER_OF_ENABLED_STATIC_RULESETS](/docs/extensions/reference/declarativeNetRequest/#property-MAX_NUMBER_OF_ENABLED_STATIC_RULESETS))
 at a time.
 
@@ -136,14 +128,14 @@ Both [Manifest V2](/docs/extensions/mv2/cross-origin-isolation/) and [Manifest
 V3](/docs/extensions/mv3/cross-origin-isolation/) extensions can now opt into [cross origin
 isolation](https://web.dev/cross-origin-isolation-guide/). This feature limits which cross-origin
 resources can load an extension's pages and enables the use of low level web platform features like
-[SharedArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer). Opt in will be required starting in Chrome 95.
+[`SharedArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer). Opt in will be required starting in Chrome 95.
 
-### 2021-08-04: Two step verification enforcement {: #two-step-verification-enforcement }
+### 2021.08.04: Two step verification enforcement {: #two-step-verification-enforcement }
 
 The [policy update blog post](/blog/policy-update-2sv/) published on 2021-06.29 has been updated to
 correct the two step verification deployment timeline.
 
-### 2021-06-29: Developer program policies updated {: #developer-program-policies-updated }
+### 2021.06.29: Developer program policies updated {: #developer-program-policies-updated }
 
 The Chrome Web Store [Developer Program Policies](/docs/webstore/program_policies) have been updated
 with clarifications to the deceptive installation tactics, spam, and repetitive content policies.
@@ -161,12 +153,12 @@ post](/blog/mv3-actions).
 
 The [`chrome.scripting`](/docs/extensions/reference/scripting/) API is a new Manifest V3 API focused
 on, well, scripting. In this post we dig into the motivations for this change and take a closer look
-at some of the new capabilities it introduces. [Read the post](/blog/crx-scripting-api).
+at it's new capabilities. [Read the post](/blog/crx-scripting-api).
 
 ### Chrome 91: Module service worker support {: #es-modules-for-service-workers }
 
-Chrome now supports JavaScript modules in service workers. In your manifest, specify a module in
-your manifest:
+Chrome now supports JavaScript modules in service workers. To specify a module a module in your
+manifest:
 
 ```js
 "background": {
@@ -205,13 +197,13 @@ The new [`chrome.tabGroups`](/docs/extensions/reference/tabGroups/) API and new 
 [`chrome.tabs`](/docs/extensions/reference/tabs/) let extensions read and manipulate tab groups.
 Requires Manifest V3.
 
-### Chrome 89: Customizable permissions for Web Accessible Resources {: #customizable-permissions-for-mv3-web-accessible-resources }
+### Chrome 89: Customizable permissions for web accessible resources {: #customizable-permissions-for-mv3-web-accessible-resources }
 
 [Web accessible resources](/docs/extensions/mv3/manifest/web_accessible_resources/) definitions in
 Manifest V3 have changed to let extensions restrict resource access based on the requester's origin
 or extension ID.
 
-### 2021-04-08: Extension Manifest Converter {: #extension-manifest-converter}
+### 2021.04.08: Extension Manifest Converter {: #extension-manifest-converter}
 
 The Chrome Extensions team has open sourced "Extension Manifest Converter", a Python tool that
 automates some of the mechanical aspects of converting extensions to Manifest V3. See the
