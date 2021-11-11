@@ -53,23 +53,31 @@ tags:
 
 
 <!-- ## Restored and improved CSS length edit and copy experince {: #length } -->
+## Восстановлен и улучшен опыт редактирования и копирования длины в CSS {: #length }
 
 <!-- The **copy CSS** and **edit as text** experience are restored for CSS properties with length. These experiences are broken in the last release. -->
+Восстановлена возможность **копировать CSS** и **исправлять как текст** для CSS-свойств с единицами измерения длины. В последнем релизе эти возможности были повреждены.
 
 <!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 <!-- In addition, you can drag to adjust the unit value and update the unit type via the dropdown. This add-on length authoring feature should not impact the primary edit as text experience. -->
+Кроме того, можно перетаскивать для настройки значения единицы измерения и обновлять тип единицы измерения с помощью выпадающего списка. Эта дополнительная функция редактирования длины не должна влиять на основное редактирование в виде текста.
 
 <!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 <!-- Please report via [goo.gle/length-feedback](https://goo.gle/length-feedback) if you found any issues. -->
+Пожалуйста, пишите через [goo.gle/length-feedback](https://goo.gle/length-feedback) если встретите любые сложности.
 
 <!-- You can disable it via the **Settings** > **Experiments** > **Enable CSS length authoring tools in the Styles pane** checkbox. -->
+Вы можете отключить эти функции сняв галочку с чекбокса **Настройки** (Settings) > **Экспериментальные функции** (Experiments) > **Enable CSS length authoring tools in the Styles pane**.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0042092ccbcdfb5b113c28b9a58c2cf1219b10c4 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c8f39d4c60841439ebf75d1a2d8fdfe50e1355a9 #}
 
 <!-- Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993) -->
+Задачи в трекере Chromium: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993)
 
 
 <!-- ## Rendering tab updates  -->
@@ -212,7 +220,7 @@ DevTools теперь отображает стек трассировки `asyn
 Боковая колонка в Консоли (Console) остается. В Chrome 94 мы анонсировали предстоящее [упразднение боковой колонки в Консоли](/blog/new-in-devtools-94/#deprecated) и попросили разработчиков высказать свои размышления и сомнения по этому поводу.
 
 <!-- We have now got enough feedback from the deprecation notice and we will work on improving the sidebar rather than removing it. -->
-Мы получили достаточное количество отзывов, и теперь мы будем работать над улучшением боковой панели, а не над её удалением.
+Мы получили достаточное количество отзывов, и теперь будем работать над улучшением боковой панели, а не над её удалением.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/XIsLjvBFSeaTN5BtEgmU.png", alt="Боковая колонка в Консоли", width="800", height="502" %}
 
