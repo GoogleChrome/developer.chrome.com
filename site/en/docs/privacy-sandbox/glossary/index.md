@@ -113,7 +113,7 @@ Kangaroo Island.
 A third-party platform to allow a user to sign in to a website, without
 requiring the site to implement their own identity service.
 
-## Federated Credentials Management (FedCM) {: #fedcm }
+## Federated Credential Management API (FedCM) {: #fedcm }
 
 Federated Credentials Management is a proposal for a privacy-preserving
 approach to federated identity services. This will allow users to log into
