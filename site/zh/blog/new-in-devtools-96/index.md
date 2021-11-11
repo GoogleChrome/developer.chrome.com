@@ -6,7 +6,7 @@ authors:
 date: 2021-10-25
 updated: 2021-10-25
 description:
-  "新的 CSS 预览面板，模拟 CSS prefers-contrast，Chrome 的自动深色模式以及更多。"
+  "新的 CSS 概览面板，模拟 CSS prefers-contrast，Chrome 的自动深色模式以及更多。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aUnjMsVWCJvIiUCq5Rxp.jpg'
 alt: ''
 tags:
