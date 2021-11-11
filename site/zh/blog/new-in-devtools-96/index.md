@@ -70,7 +70,7 @@ CSS 长度的**复制**以及**文本编辑**的用户体验已经修复。这�
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0042092ccbcdfb5b113c28b9a58c2cf1219b10c4 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c8f39d4c60841439ebf75d1a2d8fdfe50e1355a9 #}
 
-Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993)
+Chromium 议题: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993)
 
 <!-- ## Rendering tab updates  -->
 ## 渲染选项卡的更新
@@ -84,7 +84,7 @@ Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.c
 [prefers-contrast](https://www.chromestatus.com/feature/5646323212615680) 媒体特性可以用来检测用户是否在页面里面或多或少使用对比度。
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate CSS media feature prefers-contrast** dropdown. -->
-打开 [命令菜单](/docs/devtools/command-menu/)，运行 Show Rendering 命令，然后设置带有模拟 CSS preferred-contrast 媒体特性字样的下拉菜单。
+打开 [命令菜单](/docs/devtools/command-menu/)，运行 **Show Rendering** 命令，然后设置带有模拟 CSS preferred-contrast 媒体特性字样的下拉菜单。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22cec8dbfa7b46c8b633e3555212556ec6f78df9 #}
 
@@ -149,7 +149,7 @@ Chromium 议题：[1214030](https://crbug.com/1214030)
 **属性**边栏现在只展示相关属性，而不是像之前那样展示实例的所有属性。现在移除对 DOM 原型以及方法的展示。
 
 <!-- Together with the **Properties** pane [enhancements](/blog/new-in-devtools-95/#properties) in Chrome 95, you can now locate the relevant properties easier. -->
-配合 Chrome 95 **属性**边栏所提供的 [增强功能](/blog/new-in-devtools-95/#properties)) 一起使用，您现在可以更轻松地找到相关属性。
+配合 Chrome 95 **属性**边栏的[属性展示改善](/blog/new-in-devtools-95/#properties)，您现在可以更轻松地找到相关属性。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hs4KfBZOBeyWHF42Xsuq.png", alt="属性边栏里面的属性显示", width="800", height="387" %}
 
@@ -165,7 +165,7 @@ Chromium 议题：[1226262](https://crbug.com/1226262)
 ### 新增选项，用于隐藏控制台里面的 CORS 错误 {: #hide-cors-errors }
 
 <!-- You can hide CORS errors in the **Console**. As the CORS errors are now reported in the Issues tab, hiding CORS errors in the **Console** can help reduce the clutters. -->
-您可以隐藏**控制台**里面的 CORS 错误。由于 CORS 错误的已经显示在**问题**选项卡那里，所以隐藏**控制台**里面的 CORS 错误有助于减少混乱。
+您可以隐藏**控制台**里面的 CORS 错误。由于 CORS 的错误已经显示在**问题**选项卡那里，隐藏**控制台**里面的 CORS 错误有助于减少混乱。
 
 <!-- In the **Console**, click on the **Settings** icon and uncheck the **Show CORS errors in console** checkbox. -->
 在**控制台**里面，点击**设置**图标，然后取消选中 Show CORS errors in console 复选框。

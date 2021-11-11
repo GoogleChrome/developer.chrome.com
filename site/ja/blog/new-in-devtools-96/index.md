@@ -13,7 +13,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-96
-draft: true
 ---
 
 <!-- start: translation instructions -->
