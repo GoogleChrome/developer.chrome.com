@@ -115,7 +115,7 @@ requiring the site to implement their own identity service.
 
 ## Federated Credential Management API (FedCM) {: #fedcm }
 
-Federated Credentials Management is a proposal for a privacy-preserving
+Federated Credential Management API is a proposal for a privacy-preserving
 approach to federated identity services. This will allow users to log into
 sites without sharing their personal information with the identity service or
 the site.
