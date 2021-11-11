@@ -7,7 +7,7 @@ date: 2021-10-25
 updated: 2021-10-25
 description:
   "New CSS Overview panel, emulate CSS prefers-contrast media and Chrome’s auto dark mode, and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3QOexxDxDTX5sPBfua0A.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Llji6na1xdKP2eU4iKE4.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -17,7 +17,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Llji6na1xdKP2eU4iKE4.jpg -->
+<!-- {% YouTube id='3CXbhnaFNEw' %} -->
 
 ## Preview feature: New CSS Overview panel {: #css-overview }
 
@@ -28,7 +28,7 @@ You can further drill down on the information. For example, click on a color in 
 
 The **CSS Overview** panel is a preview feature. Our team is still actively working on it and we are looking for your [feedback](https://goo.gle/css-overview-feedback) for further enhancements.
 
-Read [this article](/docs/devtools/css-overview) to learn more on the **CSS Overview** panel.
+Read [this article](/docs/devtools/css-overview) to learn more about the **CSS Overview** panel.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fXXPihV3bTl82WDJGX51.png", alt="CSS Overview panel", width="800", height="509" %}
 
@@ -36,6 +36,24 @@ Read [this article](/docs/devtools/css-overview) to learn more on the **CSS Over
 
 Chromium issue: [1254557](https://crbug.com/1254557)
 
+## Restored and improved CSS length edit and copy experince {: #length }
+
+The **copy CSS** and **edit as text** experience are restored for CSS properties with length. These experiences are broken in the last release.
+
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+
+In addition, you can drag to adjust the unit value and update the unit type via the dropdown. This add-on length authoring feature should not impact the primary edit as text experience.
+
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+
+Please report via [goo.gle/length-feedback](https://goo.gle/length-feedback) if you found any issues.
+
+You can disable it via the **Settings** > **Experiments** > **Enable CSS length authoring tools in the Styles pane** checkbox.
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0042092ccbcdfb5b113c28b9a58c2cf1219b10c4 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/c8f39d4c60841439ebf75d1a2d8fdfe50e1355a9 #}
+
+Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993)
 
 ## Rendering tab updates 
 ### Emulate the CSS prefers-contrast media feature {: #prefers-contrast }
@@ -132,7 +150,7 @@ Chromium issue: [1073804](https://crbug.com/1073804)
 
 ### Consistent async stack traces {: #async }
 
-DevTools now reports `async` stack traces for `async` functions to be consistent with other async tasks. 
+The Console now reports `async` stack traces for `async` functions to be consistent with other async tasks, and consistent with what's shown in the Call Stack.. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wuKo84nrDzbhwCnIVU2n.png", alt="async stack traces", width="800", height="427" %}
 

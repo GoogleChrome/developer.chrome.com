@@ -45,6 +45,24 @@ Lea [este artículo](/docs/devtools/css-overview) para obtener más información
 
 Chromium issue: [1254557](https://crbug.com/1254557)
 
+<!-- ## Restored and improved CSS length edit and copy experince {: #length } -->
+
+<!-- The **copy CSS** and **edit as text** experience are restored for CSS properties with length. These experiences are broken in the last release. -->
+
+<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
+
+<!-- In addition, you can drag to adjust the unit value and update the unit type via the dropdown. This add-on length authoring feature should not impact the primary edit as text experience. -->
+
+<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
+
+<!-- Please report via [goo.gle/length-feedback](https://goo.gle/length-feedback) if you found any issues. -->
+
+<!-- You can disable it via the **Settings** > **Experiments** > **Enable CSS length authoring tools in the Styles pane** checkbox. -->
+
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/0042092ccbcdfb5b113c28b9a58c2cf1219b10c4 #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/c8f39d4c60841439ebf75d1a2d8fdfe50e1355a9 #}
+
+<!-- Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993) -->
 
 ## Actualizaciones de la pestaña de Renderizado
 
