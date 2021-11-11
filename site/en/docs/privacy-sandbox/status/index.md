@@ -4,9 +4,10 @@ title: Is it ready yet?
 subhead: Implementation status for Privacy Sandbox APIs.
 description: Implementation status for Privacy Sandbox APIs.
 date: 2021-05-18
-updated: 2021-10-21
+updated: 2021-11-09
 authors:
   - samdutton
+  - alexandrawhite
 ---
 
 {% Aside 'caution' %}
@@ -80,6 +81,15 @@ See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
   discussion.
 - Find out more: [The Chromium Projects: First-Party
   Sets](https://www.chromium.org/updates/first-party-sets).
+
+## User-Agent Client Hints (UA-CH)
+
+- [Origin trial and schedule](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)
+- [Register for origin trial](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047)
+- [Demo](https://uar-ot.glitch.me/)
+- [UA-CH proposal](https://github.com/WICG/ua-client-hints)
+- Tutorial to [migrate from UA string to UA-CH](https://web.dev/migrate-to-ua-ch/)
+- Find out more: [User-Agent reduction](/docs/privacy-sandbox/user-agent/)
 
 ## FLoC
 
