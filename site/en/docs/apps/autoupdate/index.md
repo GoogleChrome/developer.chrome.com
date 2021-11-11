@@ -18,11 +18,11 @@ We want extensions and apps to be autoupdated for some of the same reasons as Go
 to incorporate bug and security fixes, add new features or performance enhancements, and improve
 user interfaces.
 
-If you publish using the [Chrome Developer Dashboard][3], you can _ignore this page_. You can use
-the dashboard to release updated versions to users, as well as to the Chrome Web Store.
+If you publish using the [Chrome Developer Dashboard][3], you should _ignore this page_. Chrome Web
+Store submissions that pass preview are automatically made available on the extension's CHrome Web Store item listing and deployed to end users.
 
-If you want to host somewhere other than the store, keep reading. You should also read [Hosting][4]
-and [Packaging][5].
+If you are hosting a CRX file on a web server and using enterprise policies to push it to managed
+devices, keep reading. You should also read [Hosting][4] and [Packaging][5].
 
 {% Aside 'warning' %}
 
@@ -88,27 +88,29 @@ This XML format is borrowed from that used by Omaha, Google's update infrastruct
 [http://code.google.com/p/omaha/][9] for more details. The extensions system uses the following
 attributes for the **<app>** and **<updatecheck>** elements of the update manifest:
 
-**appid**  
-The extension or app ID, generated based on a hash of the public key, as described in
+appid
+
+: The extension or app ID, generated based on a hash of the public key, as described in
 [Packaging][10]. You can find the ID of an extension or Chrome App by going to the Extensions page
 (**chrome://extensions**).
 
-Hosted apps, however, are not listed on the Extensions page. You can find the ID of any app using
+  Hosted apps, however, are not listed on the Extensions page. You can find the ID of any app using
 the following steps:
 
-- Open the app. You can do this by clicking its icon on the New Tab page.
-- Open the JavaScript console. You can do this by clicking the wrench icon and choosing **Tools >
+  - Open the app. You can do this by clicking its icon on the New Tab page.
+  - Open the JavaScript console. You can do this by clicking the wrench icon and choosing **Tools >
   JavaScript Console**.
-- Enter the following expression into the JavaScript console: `chrome.app.getDetails().id`
+  - Enter the following expression into the JavaScript console: `chrome.app.getDetails().id`. The
+    console shows the app's ID as a quoted string.
 
-  The console shows the app's ID as a quoted string.
+codebase
 
-**codebase**  
-A URL to the `.crx` file.
+: A URL to the `.crx` file.
 
-**version**  
-Used by the client to determine whether it should download the `.crx` file specified by `codebase`.
-It should match the value of "version" in the `.crx` file's `manifest.json` file.
+version
+
+: Used by the client to determine whether it should download the `.crx` file specified by
+`codebase`. It should match the value of "version" in the `.crx` file's `manifest.json` file.
 
 The update manifest XML file may contain information about multiple extensions by including multiple
 <app> elements.

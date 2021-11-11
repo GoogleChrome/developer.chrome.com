@@ -8,7 +8,7 @@ updated: 2021-11-03
 description: "Record, replay and measure user flows with the Recorder panel."
 ---
 
-Take a glance of the new **Recorder** panel (preview feature) with the video below. 
+Take a glance at the new **Recorder** panel (preview feature) with the video below. 
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %}
 
@@ -75,7 +75,7 @@ After recording a user flow, you can replay it by clicking on the **Replay** but
 
 You can see the user flow replay on the page. The replay progress is shown in the **Recorder** panel as well.
 
-You can simulate slow network connection by configuring the **Replay settings**. For example, expand the **Replay settings**, select **Slow 3G** in the **Network** dropdown.
+You can simulate a slow network connection by configuring the **Replay settings**. For example, expand the **Replay settings**, select **Slow 3G** in the **Network** dropdown.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/SSoCLGi4xdaVHKO9D0ec.png", alt="replay settings", width="800", height="528" %}
 
 More settings might be supported in the future. [Share with us](https://goo.gle/recorder-feedback) the replay settings you would like to have!
@@ -99,7 +99,7 @@ Let's walk through the options to edit the user flows.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/a3NDihdiqCd6YsirLEcw.png", alt="header section of the Recorder panel", width="800", height="560" %}
 
-On the top of the **Recorder** panel, there options for you to:
+On the top of the **Recorder** panel, there are options for you to:
 
 1. **Add a new recording**. Click on the **+** icon to [add a new recording](#record).
 2. **View all recordings**. The dropdown shows the list of saved recordings. Select the **[number] recording(s)** option to expand and manage the list of saved recordings.
@@ -109,13 +109,13 @@ On the top of the **Recorder** panel, there options for you to:
 
 ## Edit steps {: #edit-steps }
 
-Let's walk through the options to edit the steps within a workflowu.
+Let's walk through the options to edit the steps within a workflow.
 
 1. Expand each step to see the details of the action. For example, expand the *Click Element "Cappucino"* step.
   {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ADbB4FFeiBBZqbxKRw0s.png", alt="Expand Cappucino", width="800", height="663" %}
 2. The step above shows 2 **selectors**. The **Recorder** will automatically detect 2 selectors for most of the steps by default.
-    - When replaying the user flow, the **Recorder** will try query the element with one of the selectors by sequence.
-    - For example, if the **Recorder** successfully query the element with the first selector, it will skip the second selector and proceed to the next step.
+    - When replaying the user flow, the **Recorder** will try to query the element with one of the selectors by sequence.
+    - For example, if the **Recorder** successfully queries the element with the first selector, it will skip the second selector and proceed to the next step.
 3. You can add or remove any selectors. For example, you can remove the *selector #2* because just `aria/Cappucino` is sufficient in this case. Hover over the *selector #2* and click on **-** to remove it.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/qEat3jT1Og68urhmSkef.png", alt="remove a selector", width="800", height="663" %}
 4. The **selector** is editable too. For example, if you want to select *Mocha* instead of *Cappucino*, you can edit the selector value to *aria/Mocha* instead.
@@ -123,7 +123,7 @@ Let's walk through the options to edit the steps within a workflowu.
 5. [Replay](#replay) the flow now, it should select *Mocha* instead of *Cappucino*.
 6. Try to edit other step properties such as **type**, **target**, **value** and more.
 
-There are options to add and remove steps too. This is useful if you want to add an extra step or remove an accidentally added step. Instead of re-record the user flow, you can just edit it. Click on the **3-dot** kebab menu next to the step to open the menu. 
+There are options to add and remove steps too. This is useful if you want to add an extra step or remove an accidentally added step. Instead of re-recording the user flow, you can just edit it. Click on the **3-dot** kebab menu next to the step to open the menu. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/rs8gfXvOFh0Jrnw3F15j.png", alt="step menu", width="800", height="663" %}
 

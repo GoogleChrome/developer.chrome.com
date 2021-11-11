@@ -2,18 +2,20 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
-<!-- ### Chrome 96 {: #chrome96 }
-* [Preview feature: New CSS Overview panel](/blog/new-in-devtools-96/#css-overview)
-* [Emulate the CSS prefers-contrast media feature](/blog/new-in-devtools-96/#prefers-contrast)
-* [Emulate the Chrome’s Auto Dark Theme feature](/blog/new-in-devtools-96/#auto-dark-mode)
-* [Copy declarations as JavaScript in the Styles pane](/blog/new-in-devtools-96/#copy-as-js)
-* [New Payload tab in the Network panel](/blog/new-in-devtools-96/#payload)
-* [Improved the display of properties in the Properties pane](/blog/new-in-devtools-96/#properties)
-* [Option to hide CORS errors in the Console](/blog/new-in-devtools-96/#hide-cors-errors)
-* [Proper `Intl` objects preview and evaluation in the Console](/blog/new-in-devtools-96/#intl)
-* [Consistent async stack traces](/blog/new-in-devtools-96/#async)
-* [Retain the Console sidebar](/blog/new-in-devtools-96/#console-sidebar)
-* [[Experimental] New Reporting API pane in the Application panel](/blog/new-in-devtools-96/#reporting-api) -->
+### Chrome 96 {: #chrome96 }
+* [Función de vista previa: Nuevo panel de Descripción General de CSS](/es/blog/new-in-devtools-96/#css-overview)
+<!-- * [Restored and improved CSS length edit and copy experince](/es/blog/new-in-devtools-966/#length) -->
+* [Emule la función multimedia CSS de contraste](/es/blog/new-in-devtools-96/#prefers-contrast)
+* [Emula la función de tema oscuro automático de Chrome](/es/blog/new-in-devtools-96/#auto-dark-mode)
+* [Copiar declaraciones como JavaScript en el panel Estilos](/es/blog/new-in-devtools-96/#copy-as-js)
+* [Nueva pestaña de Payload en el panel Red](/es/blog/new-in-devtools-96/#payload)
+* [Mejoras en la visualización de propiedades en el panel Propiedades](/es/blog/new-in-devtools-96/#properties)
+* [Opción para ocultar errores CORS en la consola](/es/blog/new-in-devtools-96/#hide-cors-errors)
+* [Vista previa y evaluación adecuadas de los objetos `Intl` en la consola](/es/blog/new-in-devtools-96/#intl)
+* [Trazas de la pila asíncrona consistentes](/es/blog/new-in-devtools-96/#async)
+* [Mantener la barra lateral de la consola](/es/blog/new-in-devtools-96/#console-sidebar)
+* [Panel de caché de la aplicación en desuso (deprecated) en el panel de la aplicación](/es/blog/new-in-devtools-96/#app-cache)
+* [[Experimental] Nuevo panel de la API de informes en el panel de la aplicación](/es/blog/new-in-devtools-96/#reporting-api)
 
 ### Chrome 95 {: #chrome95 }
 * [Nuevas herramientas para cambiar medidas en CSS](/es/blog/new-in-devtools-95/#length)
