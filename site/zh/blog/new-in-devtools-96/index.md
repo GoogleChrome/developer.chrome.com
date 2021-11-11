@@ -40,7 +40,7 @@ tags:
 **CSS 概览**面板特性目前还处于预览阶段。我们团队也在积极努力开发该功能。我们期待您的[反馈](https://goo.gle/css-overview-feedback)以便于我们做进一步改进。
 
 <!-- Read [this article](/docs/devtools/css-overview) to learn more on the **CSS Overview** panel. -->
-以便于欲了解更多有关于 CSS 概览面板的信息，请求阅读[此文章](/docs/devtools/css-overview)。
+欲了解更多有关于 CSS 概览面板的信息，请求阅读[此文章](/docs/devtools/css-overview)。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fXXPihV3bTl82WDJGX51.png", alt="CSS 概览面板", width="800", height="509" %}
 
@@ -52,17 +52,17 @@ Chromium 议题：[1254557](https://crbug.com/1254557)
 ## 修复以及改善 CSS 长度编辑与复制的体验  {: #length }
 
 <!-- The **copy CSS** and **edit as text** experience are restored for CSS properties with length. These experiences are broken in the last release. -->
-CSS 长度的**复制**以及**文本编辑**的用户体验已经修复。这两个功能在上轮发布中出现了一些问题。
+CSS 长度的**复制**以及**文本编辑**的用户体验问题均已被修复。这两个功能在上轮发布中出现了一些问题。
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 <!-- In addition, you can drag to adjust the unit value and update the unit type via the dropdown. This add-on length authoring feature should not impact the primary edit as text experience. -->
-此外，您还是可以横向拖拽光标即可加减长度数值以及在下拉列表中选择新的长度单位。这些附加的长度编辑功能不会影响主要的文本编辑体验。
+此外，您还是可以横向拖拽光标加减长度数值以及在下拉列表中选择新的长度单位。这些附加的长度编辑功能不会影响主要的文本编辑体验。
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 <!-- Please report via [goo.gle/length-feedback](https://goo.gle/length-feedback) if you found any issues. -->
-如果您发现任何问题，请通过 goo.gle/length-feedback 报告。
+如果您发现任何问题，请通过 [goo.gle/length-feedback](https://goo.gle/length-feedback) 报告。
 
 <!-- You can disable it via the **Settings** > **Experiments** > **Enable CSS length authoring tools in the Styles pane** checkbox. -->
 您可以通过 **设置** > **实验** > **Enable CSS length authoring tools in the Styles pane** 复选框禁用附加的长度编辑功能。
@@ -84,7 +84,7 @@ Chromium 议题: [1259088](https://crbug.com/1259088), [1172993](https://crbug.c
 [prefers-contrast](https://www.chromestatus.com/feature/5646323212615680) 媒体特性可以用来检测用户是否在页面里面或多或少使用对比度。
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate CSS media feature prefers-contrast** dropdown. -->
-打开 [命令菜单](/docs/devtools/command-menu/)，运行 **Show Rendering** 命令，然后设置带有模拟 CSS preferred-contrast 媒体特性字样的下拉菜单。
+打开[命令菜单](/docs/devtools/command-menu/)，运行 **Show Rendering** 命令，然后设置带有模拟 CSS preferred-contrast 媒体特性字样的下拉菜单。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22cec8dbfa7b46c8b633e3555212556ec6f78df9 #}
 
@@ -95,10 +95,10 @@ Chromium 议题：[1139777](https://crbug.com/1139777)
 ### 模拟 Chrome 的自动深色主题特性 {: #auto-dark-mode }
 
 <!-- Use DevTools to emulate auto dark theme to easily see how your page looks when Chrome’s [Auto Dark Theme](/blog/auto-dark-theme/) is enabled. -->
-使用 DevTools 模拟自动深色主题以查看页面在[Chrome 的自动深色主题](/blog/auto-dark-theme/) 开启后的外观。
+使用 DevTools 模拟自动深色主题以查看页面在 [Chrome 的自动深色主题](/blog/auto-dark-theme/)开启后的外观。
 
 <!-- Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System.  -->
-Chrome 96 发布了 [自动深色主题](/blog/auto-dark-theme/)的 [Origin Trial](/blog/origin-trials/) （目前只限于 Android 版）。有了该功能，当用户在操作系统那里选择暗黑主题时，浏览器将自动为浅色主题网站生成暗黑主题。
+Chrome 96 发布了[自动深色主题](/blog/auto-dark-theme/)的 [Origin Trial](/blog/origin-trials/) （目前只限于 Android 版）。有了该功能，当用户在操作系统那里选择暗黑主题时，浏览器将自动为浅色主题网站生成暗黑主题。
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate auto dark mode** dropdown. -->
 打开[命令菜单](/docs/devtools/command-menu/)，运行 **Show Rendering** 命令，然后设置带有模拟自动深色模式字样的下拉菜单。
@@ -130,12 +130,12 @@ Chromium 议题：[1253635](https://crbug.com/1253635)
 
 
 <!-- ## New Payload tab in the Network panel {: #payload } -->
-## 网络面板新增 payload 选项卡 {: #payload }
+## 网络面板新增载荷（Payload）边栏 {: #payload }
 
 <!-- Use the new **Payload** tab in the **Network** panel when you inspect a network request with payload. Previously, the payload information is available under the **Headers** tab. -->
-当您想查看网络请求中的 **Payload** 信息时，可以使用**网络**面板里面的 payload 选项卡。在以前，**报头**选项卡不能查看 payload 信息。
+当您想查看网络请求中的 payload 信息时，可以使用**网络**面板里面的 **Payload** 边栏。此前，payload 信息出现在**报头**边栏里。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/1DTIW7zoIqf3VE2WMJmX.png", alt="网络面板里面的 payload 选项卡", width="800", height="488" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/1DTIW7zoIqf3VE2WMJmX.png", alt="网络面板里面的 payload 边栏", width="800", height="488" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/eae72f667aa10a1a8316fbf8b2ac03ff514bb4da #}
 
@@ -168,7 +168,7 @@ Chromium 议题：[1226262](https://crbug.com/1226262)
 您可以隐藏**控制台**里面的 CORS 错误。由于 CORS 的错误已经显示在**问题**选项卡那里，隐藏**控制台**里面的 CORS 错误有助于减少混乱。
 
 <!-- In the **Console**, click on the **Settings** icon and uncheck the **Show CORS errors in console** checkbox. -->
-在**控制台**里面，点击**设置**图标，然后取消选中 Show CORS errors in console 复选框。
+在**控制台**里面，点击**设置**图标，然后取消选中 **在控制台中显示 CORS 错误** 复选框。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/m3ZzZI5VkYSYCfCLDHUi.png", alt="新增选项，用于隐藏控制台里面的 CORS 错误", width="800", height="502" %}
 
@@ -223,7 +223,7 @@ Chromium 议题: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 ## 弃用应用程序面板里面的应用程序缓存边栏 {: #app-cache }
 
 <!-- The [Application cache](https://developer.chrome.com/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
-由于 Chrome 以及基于 Chromium 的浏览器都已移除对 [AppCache]((https://web.dev/appcache-removal/) 的支持，因此**应用**面板里面的[应用缓存](https://developer.chrome.com/docs/devtools/storage/applicationcache/)边栏现已被移除。
+由于 Chrome 以及基于 Chromium 的浏览器都已移除对 [AppCache](https://web.dev/appcache-removal/) 的支持，因此**应用**面板里面的[应用缓存](https://developer.chrome.com/docs/devtools/storage/applicationcache/)边栏现已被移除。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
