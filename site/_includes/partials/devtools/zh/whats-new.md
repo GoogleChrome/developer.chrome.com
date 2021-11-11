@@ -1,18 +1,20 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
-<!-- ### Chrome 96 {: #chrome96 }
-* [Preview feature: New CSS Overview panel](/blog/new-in-devtools-96/#css-overview)
-* [Emulate the CSS prefers-contrast media feature](/blog/new-in-devtools-96/#prefers-contrast)
-* [Emulate the Chrome’s Auto Dark Theme feature](/blog/new-in-devtools-96/#auto-dark-mode)
-* [Copy declarations as JavaScript in the Styles pane](/blog/new-in-devtools-96/#copy-as-js)
-* [New Payload tab in the Network panel](/blog/new-in-devtools-96/#payload)
-* [Improved the display of properties in the Properties pane](/blog/new-in-devtools-96/#properties)
-* [Option to hide CORS errors in the Console](/blog/new-in-devtools-96/#hide-cors-errors)
-* [Proper `Intl` objects preview and evaluation in the Console](/blog/new-in-devtools-96/#intl)
-* [Consistent async stack traces](/blog/new-in-devtools-96/#async)
-* [Retain the Console sidebar](/blog/new-in-devtools-96/#console-sidebar)
-* [[Experimental] New Reporting API pane in the Application panel](/blog/new-in-devtools-96/#reporting-api) -->
+### Chrome 96 {: #chrome96 }
+* [预览特性: 新的 CSS 概览面板](/blog/new-in-devtools-96/#css-overview)
+* [修复以及改善 CSS 长度编辑与复制的体验](/blog/new-in-devtools-96/#length) 
+* [模拟 CSS prefers-contrast 媒体特性](/blog/new-in-devtools-96/#prefers-contrast)
+* [Emulate the Chrome’s Auto Dark Theme feature模拟 Chrome 的自动深色主题特性](/blog/new-in-devtools-96/#auto-dark-mode)
+* [将样式窗格里面的 CSS 规则复制为 JavaScript 属性](/blog/new-in-devtools-96/#copy-as-js)
+* [网络面板新增 payload 选项卡](/blog/new-in-devtools-96/#payload)
+* [优化属性窗格里面的属性展示](/blog/new-in-devtools-96/#properties)
+* [新增选项，用于隐藏控制台里面的 CORS 错误](/blog/new-in-devtools-96/#hide-cors-errors)
+* [控制台正确预览以及执行 `Intl` 对象](/blog/new-in-devtools-96/#intl)
+* [统一的异步堆栈信息](/blog/new-in-devtools-96/#async)
+* [保留控制台侧边栏](/blog/new-in-devtools-96/#console-sidebar)
+* [弃用应用程序面板里面的应用程序缓存窗格](/blog/new-in-devtools-96/#capp-cache)
+* [[实验] 应用程序面板里面新增 Reporting API 窗格](/blog/new-in-devtools-96/#reporting-api)
 
 
 ### Chrome 95 {: #chrome95 }
