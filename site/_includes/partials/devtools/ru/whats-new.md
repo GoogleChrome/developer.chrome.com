@@ -3,18 +3,20 @@
 Чтобы увидеть полный список обновлений,  перейдите на английскую версию по ссылке 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
-<!-- ### Chrome 96 {: #chrome96 }
-* [Preview feature: New CSS Overview panel](/blog/new-in-devtools-96/#css-overview)
-* [Emulate the CSS prefers-contrast media feature](/blog/new-in-devtools-96/#prefers-contrast)
-* [Emulate the Chrome’s Auto Dark Theme feature](/blog/new-in-devtools-96/#auto-dark-mode)
-* [Copy declarations as JavaScript in the Styles pane](/blog/new-in-devtools-96/#copy-as-js)
-* [New Payload tab in the Network panel](/blog/new-in-devtools-96/#payload)
-* [Improved the display of properties in the Properties pane](/blog/new-in-devtools-96/#properties)
-* [Option to hide CORS errors in the Console](/blog/new-in-devtools-96/#hide-cors-errors)
-* [Proper `Intl` objects preview and evaluation in the Console](/blog/new-in-devtools-96/#intl)
-* [Consistent async stack traces](/blog/new-in-devtools-96/#async)
-* [Retain the Console sidebar](/blog/new-in-devtools-96/#console-sidebar)
-* [[Experimental] New Reporting API pane in the Application panel](/blog/new-in-devtools-96/#reporting-api) -->
+### Chrome 96 {: #chrome96 }
+* [Ранний доступ: Новая вкладка Обзор CSS](/ru/blog/new-in-devtools-96/#css-overview)
+<!-- * [Restored and improved CSS length edit and copy experince](/ru/blog/new-in-devtools-966/#length) -->
+* [Эмуляция CSS-медиафичи prefers-contrast](/ru/blog/new-in-devtools-96/#prefers-contrast)
+* [Эмулируйте функцию создания автоматической тёмной темы в Chrome](/ru/blog/new-in-devtools-96/#auto-dark-mode)
+* [Копируйте объявления как JavaScript в панели Стилей (Styles)](/ru/blog/new-in-devtools-96/#copy-as-js)
+* [Новая вкладка Полезная нагрузка (Payload) на вкладке Сеть](/ru/blog/new-in-devtools-96/#payload)
+* [Улучшенное отображение свойств в панели Свойства (Properties)](/ru/blog/new-in-devtools-96/#properties)
+* [Опция для скрытия ошибок CORS в Консоли](/ru/blog/new-in-devtools-96/#hide-cors-errors)
+* [Правильный предварительный просмотр и оценка объектов `Intl` в Консоли](/ru/blog/new-in-devtools-96/#intl)
+* [Консистентные асинхронные трассировки стека](/ru/blog/new-in-devtools-96/#async)
+* [Сохранение боковой колонки в Консоли](/ru/blog/new-in-devtools-96/#console-sidebar)
+* [Устаревшая панель Кэш приложения на вкладке Приложение](/ru/blog/new-in-devtools-96/#app-cache)
+* [[Эксперимент] Новая панель Reporting API на вкладке Приложение](/ru/blog/new-in-devtools-96/#reporting-api)
 
 ### Chrome 95 {: #chrome95 }
 * [Новый инструмент выбора единиц измерения длины в CSS](/blog/new-in-devtools-95/#length)
