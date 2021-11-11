@@ -16,14 +16,7 @@ tags:
 
 ---
 
-<!-- start: translation instructions -->
-<!-- Remove the "draft: true" tag above when submitting PR -->
-<!-- Provide translations under each of the English commented original content -->
-<!-- Remember to translate the "description" tag above -->
-<!-- Remember to translate all the <img> alt text -->
-<!-- Remember to update the whats-new.md file as well -->
-<!-- end: translation instructions -->
-
+<
 *Gracias [Carlos Caballero](https://carloscaballero.io) por la traducción y [Miguel Ángel](https://midu.dev) por la revisión.*
 
 {% include 'partials/devtools/es/banner.md' %}
@@ -45,24 +38,24 @@ Lea [este artículo](/docs/devtools/css-overview) para obtener más información
 
 Chromium issue: [1254557](https://crbug.com/1254557)
 
-<!-- ## Restored and improved CSS length edit and copy experince {: #length } -->
+## Recuperada y mejorada las acciones de copiar y editar propiedades CSS con logintud {: #length } 
 
-<!-- The **copy CSS** and **edit as text** experience are restored for CSS properties with length. These experiences are broken in the last release. -->
+Las acciones de **copiar CSS** y **editar como texto** se restauran para las propiedades CSS con longitud. Estas características dejaron de funcionar en la última versión.
 
-<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} 
 
-<!-- In addition, you can drag to adjust the unit value and update the unit type via the dropdown. This add-on length authoring feature should not impact the primary edit as text experience. -->
+Además, puede arrastrar para ajustar el valor de la unidad y actualizar el tipo de unidad a través del menú desplegable. Esta funcionalidad no debería afectar a la experiencia de usuario en la acción principal editar como texto.
 
-<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} 
 
-<!-- Please report via [goo.gle/length-feedback](https://goo.gle/length-feedback) if you found any issues. -->
+Informe a través de [goo.gle/length-feedback](https://goo.gle/length-feedback) si encuentra algún problema.
 
-<!-- You can disable it via the **Settings** > **Experiments** > **Enable CSS length authoring tools in the Styles pane** checkbox. -->
+Puede deshabilitar esta característica vía **Configuración** > **Experimentos** > **Habilitar las herramientas de creación de longitud CSS en el panel Estilos**
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0042092ccbcdfb5b113c28b9a58c2cf1219b10c4 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c8f39d4c60841439ebf75d1a2d8fdfe50e1355a9 #}
 
-<!-- Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993) -->
+Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993)
 
 ## Actualizaciones de la pestaña de Renderizado
 
