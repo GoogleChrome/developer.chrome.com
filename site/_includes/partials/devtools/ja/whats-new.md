@@ -3,17 +3,19 @@
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
 ### Chrome 96 {: #chrome96 }
-* [プレビュー機能: 新しい CSS Overview パネル](/blog/new-in-devtools-96/#css-overview)
-* [CSS の prefers-contrast メディア機能のエミュレート](/blog/new-in-devtools-96/#prefers-contrast)
-* [Chrome の Auto Dark Theme 機能のエミュレート](/blog/new-in-devtools-96/#auto-dark-mode)
-* [Styles ペインで JavaScript として宣言をコピー](/blog/new-in-devtools-96/#copy-as-js)
-* [Network パネルの新しい Payload タブ](/blog/new-in-devtools-96/#payload)
-* [Properties ペインのプロパティ表示の改善](/blog/new-in-devtools-96/#properties)
-* [コンソールで CORS エラーを隠すオプション](/blog/new-in-devtools-96/#hide-cors-errors)
-* [Console での適切な `Intl` オブジェクトのプレビューと評価](/blog/new-in-devtools-96/#intl)
-* [一貫性のある async スタックトレース](/blog/new-in-devtools-96/#async)
-* [Console のサイドバーの維持](/blog/new-in-devtools-96/#console-sidebar)
-* [[実験的] Application パネルの新しい Reporting API ペイン](/blog/new-in-devtools-96/#reporting-api)
+* [プレビュー機能: 新しい CSS Overview パネル](/ja/blog/new-in-devtools-96/#css-overview)
+<!-- * [Restored and improved CSS length edit and copy experince](/ja/blog/new-in-devtools-966/#length) -->
+* [CSS の prefers-contrast メディア機能のエミュレート](/ja/blog/new-in-devtools-96/#prefers-contrast)
+* [Chrome の Auto Dark Theme 機能のエミュレート](/ja/blog/new-in-devtools-96/#auto-dark-mode)
+* [Styles ペインで JavaScript として宣言をコピー](/ja/blog/new-in-devtools-96/#copy-as-js)
+* [Network パネルの新しい Payload タブ](/ja/blog/new-in-devtools-96/#payload)
+* [Properties ペインのプロパティ表示の改善](/ja/blog/new-in-devtools-96/#properties)
+* [コンソールで CORS エラーを隠すオプション](/ja/blog/new-in-devtools-96/#hide-cors-errors)
+* [Console での適切な `Intl` オブジェクトのプレビューと評価](/ja/blog/new-in-devtools-96/#intl)
+* [一貫性のある async スタックトレース](/ja/blog/new-in-devtools-96/#async)
+* [Console のサイドバーの維持](/ja/blog/new-in-devtools-96/#console-sidebar)
+* [Deprecated Application cache pane in the Application panel](/ja/blog/new-in-devtools-96/#app-cache)
+* [[実験的] Application パネルの新しい Reporting API ペイン](/ja/blog/new-in-devtools-96/#reporting-api)
 
 ### Chrome 95 {: #chrome95 }
 * [新しいCSSの長さ編集ツール](/ja//blog/new-in-devtools-95/#length)

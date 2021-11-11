@@ -3,6 +3,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 ### Chrome 96 {: #chrome96 }
 * [Preview feature: New CSS Overview panel](/blog/new-in-devtools-966/#css-overview)
+* [Restored and improved CSS length edit and copy experince](/blog/new-in-devtools-966/#length)
 * [Emulate the CSS prefers-contrast media feature](/blog/new-in-devtools-96/#prefers-contrast)
 * [Emulate the Chrome’s Auto Dark Theme feature](/blog/new-in-devtools-96/#auto-dark-mode)
 * [Copy declarations as JavaScript in the Styles pane](/blog/new-in-devtools-96/#copy-as-js)
@@ -12,6 +13,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Proper `Intl` objects preview and evaluation in the Console](/blog/new-in-devtools-96/#intl)
 * [Consistent async stack traces](/blog/new-in-devtools-96/#async)
 * [Retain the Console sidebar](/blog/new-in-devtools-96/#console-sidebar)
+* [Deprecated Application cache pane in the Application panel](/blog/new-in-devtools-96/#app-cache)
 * [[Experimental] New Reporting API pane in the Application panel](/blog/new-in-devtools-96/#reporting-api)
 
 
