@@ -57,7 +57,7 @@ enable a third-party origin trial may be reviewed in order to avoid problematic 
 affecting multiple sites. The Origin Trials Developer Guide explains the
 [approval process](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#18-how-can-i-enable-an-experimental-feature-as-embedded-content-on-different-domains). -->
 
-サードパーティオリジントライアルをサポートすることで、より幅広く参加してもらうことが可能となりますが、実験的な機能の過度の使用または誤用の可能性も高まるため、"trusted tester" アプローチの方が適切です。 サードパーティオリジントライアルの範囲を拡大するには、サードパーティプロバイダとして参加するウェブ開発者に対して、追加の精査と責任が求められます。複数のサイトに影響を与える問題のあるサードパーティのスクリプトを回避するために、サードパーティのオリジントライアルを有効にするリクエストはレビューが必要となる場合があります。オリジントライアル開発者ガイドにて、 [承認プロセス](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#18-how-can-i-enable-an-experimental-feature-as-embedded-content-on-different-domains) が説明されています。
+サードパーティオリジントライアルをサポートすることで、より幅広い参加が期待できますが、実験的な機能の過度の使用または誤用の可能性も高まるため、"トラステッドテスター" アプローチの方が適切です。 サードパーティオリジントライアルによるより広い影響範囲では、サードパーティプロバイダとして参加するウェブ開発者の、さらなる監視と責任が求められます。問題のあるサードパーティのスクリプトが複数のサイトに影響を与えるのを回避するため、サードパーティオリジントライアルを有効にするリクエストは、レビューが必要となる場合があります。オリジントライアル開発者ガイドにて、 [承認プロセス](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#18-how-can-i-enable-an-experimental-feature-as-embedded-content-on-different-domains) が説明されています。
 {% endAside %}
 
 <!-- Check [Chrome Platform Status](https://www.chromestatus.com/features/5691464711405568) for updates
