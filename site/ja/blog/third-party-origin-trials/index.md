@@ -90,7 +90,7 @@ affecting multiple sites. The Origin Trials Developer Guide explains the
 
 1. [進行中のトライアルの一覧](https://developers.chrome.com/origintrials/#/trials/active) からトライアルを選択します。
 1. トライアルの登録ページにて、サードパーティトークンを要求するためのオプションが利用可能になっていれば、それを有効にします。
-1. サードパーティトークンの使用を制限するための選択肢を 1 つを選択します:
+1. サードパーティトークンの使用を制限するための選択肢の 1 つを選択します:
    1. Standard Limit: これは、 [Chrome ページ読み込みの 0.5%](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#3-what-happens-if-a-large-site-such-as-a-google-service-starts-depending-on-an-experimental-feature) に適用される通常の制限です。
    1. User Subset: 有効なサードパーティトークンが提供されている場合でも、Chrome ユーザーの数パーセントが常にトライアルから除外されます。除外率はトライアルごとに異なります（または適用されないかもしれない）が、通常は 5% 未満です。
 1. Register ボタンをクリックして、リクエストを送信します。
