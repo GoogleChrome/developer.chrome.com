@@ -15,7 +15,7 @@ This page sets forth the guidelines for use of [Google trademarks][7] you should
 naming and describing your extension. Your use of any Google trademarks is always subject to the
 [Google Permissions][8].
 
-## Using the Chrome Web Store badge
+## Using the Chrome Web Store badge {: #using-the-chrome-web-store-badge}
 
 You can let others know that your extension or theme is available in the Chrome Web Store by
 using the "Available in the Chrome Web Store" badge on your site. You do not need pre-approval to
@@ -57,7 +57,7 @@ follow these rules and restrictions:
 - Make sure that clicking the badge always links to your page in the Chrome Web Store, and that your
   extension or theme is available in the store at all times that you use the badge.
 
-## Choosing an extension or developer name
+## Choosing an extension or developer name {: #choosing-an-extension-or-developer-name}
 
 Don't use any Google trademarks or any confusingly similar marks as the name of your extension or
 company without [written permission from Google.][19]
@@ -71,7 +71,7 @@ company without [written permission from Google.][19]
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/TXSCGhobjl0bfUdt8DJK.png",
        alt="Trademark violation", height="146", width="146" %}
 
-## Using Google logos
+## Using Google logos {: #using-google-logos}
 
 Don't use Google trademarks or a modified version of a Google trademark as the logo for your
 extension without written permission from Google. Feel free to continue using our badges in your
@@ -87,7 +87,7 @@ extension subject to the branding guidelines for each of those badges (for examp
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/rPqMdiBSYbH6lj1Na2E1.png",
        alt="Acceptable logo", height="146", width="224" %}
 
-## Describing your extension
+## Describing your extension {: #describing-your-extension}
 
 If your product is compatible with a Google product, make reference to that Google product by using
 the text "for", "for use with", or "compatible with", and be sure to include the ™ symbol with the
@@ -108,12 +108,12 @@ text should be smaller in size than your logo.
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/xt1E8oSP6BCexzpaEknR.png",
        alt="Unacceptable Google trademark in logo", height="164", width="250" %}
 
-## Using screenshots
+## Using screenshots {: #using-screenshots}
 
 For illustrative or informative purposes, you may use standard, unaltered screenshots of Google
 services. For further details, check out the [Google Permissions][8] page.
 
-## Giving proper attribution
+## Giving proper attribution {: #giving-proper-attribution}
 
 Do give proper attribution to Google for any use of their marks in your extension title or in your
 description. Example:
