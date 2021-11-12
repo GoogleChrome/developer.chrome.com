@@ -117,16 +117,16 @@ Google Maps™ is a trademark of Google Inc.
 Use of this trademark is subject to Google Permissions.
 ```
 
-[border-ai]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/YK7JoBOelVIK05uwEAEE.ai "ChromeWebStore_BadgeWBorder.ai"
-[border-lg-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png "ChromeWebStore_BadgeWBorder_v2_496x150.png"
-[border-md-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png "ChromeWebStore_BadgeWBorder_v2_340x96.png"
-[border-sm-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png "ChromeWebStore_BadgeWBorder_v2_206x58.png"
+[border-ai]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/YK7JoBOelVIK05uwEAEE.ai
+[border-lg-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png 
+[border-md-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png 
+[border-sm-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png
 [brand-request-form]: https://support.google.com/contact/brand_request_form
-[google-permissions]: https://www.google.com/permissions/
+[google-permissions]: https://about.google/brand-resource-center/guidance/
 [google-trademark-list]: https://about.google/brand-resource-center/trademark-list/
 [google-trademarks]: https://www.google.com/permissions/trademark/
-[no-border-ai]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/xewneAQuXHkZbVSAEgiV.ai "ChromeWebStore_Badge.ai"
-[no-border-lg-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/YT2Grfi9vEBa2wAPzhWa.png "ChromeWebStore_Badge_v2_496x150.png"
-[no-border-md-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/mPGKYBIR2uCP0ApchDXE.png "ChromeWebStore_Badge_v2_340x96.png"
-[no-border-sm-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/tbyBjqi7Zu733AAKA5n4.png "ChromeWebStore_Badge_v2_206x58.png"
+[no-border-ai]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/xewneAQuXHkZbVSAEgiV.ai
+[no-border-lg-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/YT2Grfi9vEBa2wAPzhWa.png
+[no-border-md-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/mPGKYBIR2uCP0ApchDXE.png
+[no-border-sm-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/tbyBjqi7Zu733AAKA5n4.png
 [terms-of-service]: /docs/webstore/terms/
