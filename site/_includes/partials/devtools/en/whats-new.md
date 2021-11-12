@@ -2,8 +2,8 @@
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
 ### Chrome 96 {: #chrome96 }
-* [Preview feature: New CSS Overview panel](/blog/new-in-devtools-966/#css-overview)
-* [Restored and improved CSS length edit and copy experince](/blog/new-in-devtools-966/#length)
+* [Preview feature: New CSS Overview panel](/blog/new-in-devtools-96/#css-overview)
+* [Restored and improved CSS length edit and copy experince](/blog/new-in-devtools-96/#length)
 * [Emulate the CSS prefers-contrast media feature](/blog/new-in-devtools-96/#prefers-contrast)
 * [Emulate the Chrome’s Auto Dark Theme feature](/blog/new-in-devtools-96/#auto-dark-mode)
 * [Copy declarations as JavaScript in the Styles pane](/blog/new-in-devtools-96/#copy-as-js)

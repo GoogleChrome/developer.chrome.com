@@ -7,7 +7,7 @@
 * [模拟 CSS prefers-contrast 媒体特性](/blog/new-in-devtools-96/#prefers-contrast)
 * [Emulate the Chrome’s Auto Dark Theme feature模拟 Chrome 的自动深色主题特性](/blog/new-in-devtools-96/#auto-dark-mode)
 * [将样式窗格里面的 CSS 规则复制为 JavaScript 属性](/blog/new-in-devtools-96/#copy-as-js)
-* [网络面板新增 payload 选项卡](/blog/new-in-devtools-96/#payload)
+* [网络面板新增载荷（Payload）边栏](/blog/new-in-devtools-96/#payload)
 * [优化属性窗格里面的属性展示](/blog/new-in-devtools-96/#properties)
 * [新增选项，用于隐藏控制台里面的 CORS 错误](/blog/new-in-devtools-96/#hide-cors-errors)
 * [控制台正确预览以及执行 `Intl` 对象](/blog/new-in-devtools-96/#intl)
