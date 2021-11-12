@@ -6,7 +6,7 @@
 ### Chrome 96 {: #chrome96 }
 * [Ранний доступ: Новая вкладка Обзор CSS](/ru/blog/new-in-devtools-96/#css-overview)
 * [Восстановлен и улучшен опыт редактирования и копирования длины в CSS](/ru/blog/new-in-devtools-966/#length)
-* [Эмуляция CSS-медиафичи prefers-contrast](/ru/blog/new-in-devtools-96/#prefers-contrast)
+* [Эмуляция CSS-медиафункции prefers-contrast](/ru/blog/new-in-devtools-96/#prefers-contrast)
 * [Эмулируйте функцию создания автоматической тёмной темы в Chrome](/ru/blog/new-in-devtools-96/#auto-dark-mode)
 * [Копируйте объявления как JavaScript в панели Стилей (Styles)](/ru/blog/new-in-devtools-96/#copy-as-js)
 * [Новая вкладка Полезная нагрузка (Payload) на вкладке Сеть](/ru/blog/new-in-devtools-96/#payload)
