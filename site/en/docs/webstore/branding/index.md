@@ -11,16 +11,16 @@ description: Guidelines for use of Google trademarks.
 **Branding Guidelines** | [Rating Guidelines][3] | [Program Policies][4] | [User Data FAQ][5] |
 [Developer Agreement][6]
 
-This page sets forth the guidelines for use of [Google trademarks][7] you should consider when
+This page sets forth the guidelines for use of [Google trademarks][google-trademarks] you should consider when
 naming and describing your extension. Your use of any Google trademarks is always subject to the
-[Google Permissions][8].
+[Google Permissions][google-permissions].
 
 ## Using the Chrome Web Store badge {: #using-the-chrome-web-store-badge}
 
 You can let others know that your extension or theme is available in the Chrome Web Store by
 using the "Available in the Chrome Web Store" badge on your site. You do not need pre-approval to
 use this badge. However, be sure that your use of the badge is consistent with the Chrome Web Store
-[terms of service][6] and these branding guidelines, or we may request that you modify or cease your
+[terms of service][terms-of-service] and these branding guidelines, or we may request that you modify or cease your
 use of the badge.
 
 As the following images show, the badge has an optional border.
@@ -34,12 +34,12 @@ As the following images show, the badge has an optional border.
 
 Right-click any of the following links to download an image file for the badge.
 
-| Badge for white backgrounds | Badge (with border) for colored backgrounds |
-| --------------------------- | ------------------------------------------- |
-| [small PNG][10]             | [small PNG (with border)][14]               |
-| [medium PNG][11]            | [medium PNG (with border)][15]              |
-| [large PNG][12]             | [large PNG (with border)][16]               |
-| [Adobe Illustrator][13]     | [Adobe Illustrator (with border)][17]       |
+| Badge for white backgrounds       | Badge (with border) for colored backgrounds  |
+| --------------------------------- | -------------------------------------------- |
+| [small PNG][no-border-sm-png]     | [small PNG (with border)][border-sm-png]     |
+| [medium PNG][no-border-md-png]    | [medium PNG (with border)][border-md-png]    |
+| [large PNG][no-border-lg-png]     | [large PNG (with border)][border-lg-png]     |
+| [Adobe Illustrator][no-border-ai] | [Adobe Illustrator (with border)][border-ai] |
 
 If you resize the badge, preserve the ratio of dimensions, and make sure the badge is legible and
 fully visible.
@@ -60,7 +60,7 @@ follow these rules and restrictions:
 ## Choosing an extension or developer name {: #choosing-an-extension-or-developer-name}
 
 Don't use any Google trademarks or any confusingly similar marks as the name of your extension or
-company without [written permission from Google.][19]
+company without [written permission from Google.][brand-request-form]
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/qn7cPDkh9kYbUmlRiJWO.png",
        alt="Trademark violation", height="146", width="146" %}
@@ -74,7 +74,7 @@ company without [written permission from Google.][19]
 ## Using Google logos {: #using-google-logos}
 
 Don't use Google trademarks or a modified version of a Google trademark as the logo for your
-extension without written permission from Google. Feel free to continue using our badges in your
+extension without [written permission from Google][brand-request-form]. Feel free to continue using our badges in your
 extension subject to the branding guidelines for each of those badges (for example, [YouTube][20],
 [Google Checkout][21]).
 
@@ -111,7 +111,7 @@ text should be smaller in size than your logo.
 ## Using screenshots {: #using-screenshots}
 
 For illustrative or informative purposes, you may use standard, unaltered screenshots of Google
-services. For further details, check out the [Google Permissions][8] page.
+services. For further details, check out the [Google Permissions][google-permissions] page.
 
 ## Giving proper attribution {: #giving-proper-attribution}
 
@@ -128,17 +128,17 @@ Use of this trademark is subject to Google Permissions.
 [3]: /docs/webstore/rating/
 [4]: /docs/webstore/program_policies/
 [5]: /docs/webstore/user_data/
-[6]: /docs/webstore/terms/
-[7]: https://www.google.com/permissions/trademark/
-[8]: https://www.google.com/permissions/
-[10]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/tbyBjqi7Zu733AAKA5n4.png "ChromeWebStore_Badge_v2_206x58.png"
-[11]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/mPGKYBIR2uCP0ApchDXE.png "ChromeWebStore_Badge_v2_340x96.png"
-[12]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/YT2Grfi9vEBa2wAPzhWa.png "ChromeWebStore_Badge_v2_496x150.png"
-[13]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/xewneAQuXHkZbVSAEgiV.ai "ChromeWebStore_Badge.ai"
-[14]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png "ChromeWebStore_BadgeWBorder_v2_206x58.png"
-[15]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png "ChromeWebStore_BadgeWBorder_v2_340x96.png"
-[16]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png "ChromeWebStore_BadgeWBorder_v2_496x150.png"
-[17]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/YK7JoBOelVIK05uwEAEE.ai "ChromeWebStore_BadgeWBorder.ai"
-[19]: https://services.google.com/fb/forms/permissionsbrand/
+[terms-of-service]: /docs/webstore/terms/
+[google-trademarks]: https://www.google.com/permissions/trademark/
+[google-permissions]: https://www.google.com/permissions/
+[no-border-sm-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/tbyBjqi7Zu733AAKA5n4.png "ChromeWebStore_Badge_v2_206x58.png"
+[no-border-md-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/mPGKYBIR2uCP0ApchDXE.png "ChromeWebStore_Badge_v2_340x96.png"
+[no-border-lg-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/YT2Grfi9vEBa2wAPzhWa.png "ChromeWebStore_Badge_v2_496x150.png"
+[no-border-ai]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/xewneAQuXHkZbVSAEgiV.ai "ChromeWebStore_Badge.ai"
+[border-sm-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png "ChromeWebStore_BadgeWBorder_v2_206x58.png"
+[border-md-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/iNEddTyWiMfLSwFD6qGq.png "ChromeWebStore_BadgeWBorder_v2_340x96.png"
+[border-lg-png]: https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/HRs9MPufa1J1h5glNhut.png "ChromeWebStore_BadgeWBorder_v2_496x150.png"
+[border-ai]: https://storage.googleapis.com/web-dev-uploads/file/WlD8wC6g8khYWPJUsQceQkhXSlv1/YK7JoBOelVIK05uwEAEE.ai "ChromeWebStore_BadgeWBorder.ai"
+[brand-request-form]: https://support.google.com/contact/brand_request_form
 [20]: https://developers.google.com/youtube/branding
 [21]: https://checkout.google.com/seller/checkout_buttons.html
