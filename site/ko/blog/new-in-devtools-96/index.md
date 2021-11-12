@@ -24,7 +24,7 @@ draft: true
 <!-- Remember to update the whats-new.md file as well -->
 <!-- end: translation instructions -->
 
-*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [이지웅](https://bit.ly/JiwoongLeePortfolio)님과 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님, 그리고 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
+*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님과 [이지웅](https://bit.ly/JiwoongLeePortfolio)님, 그리고 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 리뷰를 맡아 주셨습니다.*
 
 {% include 'partials/devtools/ko/banner.md' %}
 
@@ -36,9 +36,9 @@ draft: true
 
 여러분은 CSS의 정보들을 더욱 깊이 파고들 수 있게 됩니다. 예를 들어, **색상** 섹션의 색상을 클릭해서 동일한 색상이 적용되는 요소들의 리스트를 볼 수 있으며, 하나의 구성요소를 클릭해서 **구성요소** 패널에서 열어 볼 수 있습니다.
 
-**CSS 개요** 패널은 프리뷰 기능입니다. 우리는 이 기능에 계속적인 노력을 기울이고 있으며, 또한 더 많은 개선점을 찾기 위해서 여러분의 [피드백](https://goo.gle/css-overview-feedback) 이 필요합니다. 
+**CSS 개요** 패널은 프리뷰 기능입니다. 우리는 이 기능에 계속적인 노력을 기울이고 있으며, 또한 더 많은 개선점을 찾기 위해서 여러분의 [피드백](https://goo.gle/css-overview-feedback)이 필요합니다. 
 
-**CSS 개요** 에 대해 좀 더 알고 싶으시다면 [더보기](/docs/devtools/css-overview) 를 클릭하여 첨부된 문서를 읽어 보세요.
+**CSS 개요** 에 대해 좀 더 알고 싶으시다면 [더보기](/docs/devtools/css-overview)를 클릭하여 첨부된 문서를 읽어 보세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fXXPihV3bTl82WDJGX51.png", alt="CSS Overview panel", width="800", height="509" %}
 
@@ -47,35 +47,33 @@ draft: true
 Chromium issue: [1254557](https://crbug.com/1254557)
 
 
-<!-- ## Restored and improved CSS length edit and copy experince {: #length } -->
+## 복원 및 개선된 CSS 길이 편집 및 복사 기능 {: #length }
+이전 배포판에서 중단되었던 길이를 갖는 CSS 요소에 대한 **CSS 복사하기**와 **텍스트로 편집하기** 기능이 복구되었습니다.
 
-<!-- The **copy CSS** and **edit as text** experience are restored for CSS properties with length. These experiences are broken in the last release. -->
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
-<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
+그리고 여러분들은 드래그하여 단위 값을 조정할 수 있고, 드롭 다운을 통해 단위 타입을 업데이트할 수 있습니다. 이 길이 작성 기능은 텍스트 경험으로서 기본 편집에 영향을 주지 않아야 합니다.
 
-<!-- In addition, you can drag to adjust the unit value and update the unit type via the dropdown. This add-on length authoring feature should not impact the primary edit as text experience. -->
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
 
-<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
+사용 중에 혹시 이슈를 발견했을 경우에는 [피드백 링크](https://goo.gle/length-feedback)를 통해 알려 주세요.
 
-<!-- Please report via [goo.gle/length-feedback](https://goo.gle/length-feedback) if you found any issues. -->
-
-<!-- You can disable it via the **Settings** > **Experiments** > **Enable CSS length authoring tools in the Styles pane** checkbox. -->
+한편, 이 기능을 비활성화하고 싶으시다면 **설정** > **실험** > **Enable CSS length authoring tools in the Styles pane** 체크박스를 해제하면 됩니다.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0042092ccbcdfb5b113c28b9a58c2cf1219b10c4 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c8f39d4c60841439ebf75d1a2d8fdfe50e1355a9 #}
 
-<!-- Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993) -->
+Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993)
 
 
-## 렌더링 탭의 업데이트
-
+## 렌더링 탭의 업데이트 
 ### CSS 의 prefers-constrast 미디어 기능 에뮬레이션 {: #prefers-contrast }
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/47fsHvVLiVC9J0eWY9wD.png", alt="Emulate the CSS prefers-contrast media feature", width="800", height="483" %}
 
 [prefers-contrast](https://www.chromestatus.com/feature/5646323212615680)는 사용자가 어느 수준의 명암 대비를 요청했는지를 확인할 수 있는 미디어 기능입니다.
 
-[명령어 표시](/docs/devtools/command-menu/) 를 열고 **렌더링 표시** 명령어를 실행하세요. 그리고 드롭다운 메뉴에서 **CSS 미디어 기능 prefers-contrast 에뮬레이션** 을 선택하세요.
+[명령어 표시](/docs/devtools/command-menu/)를 열고 **렌더링 표시** 명령어를 실행하세요. 그리고 드롭다운 메뉴에서 **CSS 미디어 기능 prefers-contrast 에뮬레이션** 을 선택하세요.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/22cec8dbfa7b46c8b633e3555212556ec6f78df9 #}
 
@@ -86,7 +84,7 @@ Chromium issue: [1139777](https://crbug.com/1139777)
 
 DevTools 를 사용하여 자동 어두운 테마를 에뮬레이션할 수 있으며, 이를 이용해 사용자들은 크롬의 [자동 어두운 테마](/blog/auto-dark-theme/)가 설정되었을 때 어떻게 보일지를 쉽게 확인할 수 있습니다.
 
-크롬 96은 안드로이드의 [자동 어두운 테마](/blog/auto-dark-theme/) 에 대한 [Origin Trial](/blog/origin-trials/)을 제시합니다. 이 기능을 이용하여, 사용자가 운영체제 단에서 다크 테마를 적용했을 때, 크롬 브라우저는 자동 생성된 라이트 테마를 라이트 테마로 제작된 웹사이트에 적용합니다.
+크롬 96은 안드로이드의 [자동 어두운 테마](/blog/auto-dark-theme/)에 대한 [Origin Trial](/blog/origin-trials/)을 제시합니다. 이 기능을 이용하여, 사용자가 운영체제 단에서 다크 테마를 적용했을 때, 크롬 브라우저는 자동 생성된 라이트 테마를 라이트 테마로 제작된 웹사이트에 적용합니다.
 
 [명령어 표시](/docs/devtools/command-menu/)를 열고 **렌더링 표시** 명령어를 실행합니다. 그리고 **자동 어두운 모드 에뮬레이션** 을 설정합니다.
 
@@ -100,7 +98,7 @@ Chromium issue: [1243309](https://crbug.com/1243309)
 <!-- ## Copy declarations as JavaScript in the Styles pane {: #copy-as-js } -->
 ## 스타일 영역에서 선언을 자바스크립트로 복사하기 {: #copy-as-js }
 
-쉽게 CSS 규칙을 자바스크립트 프로퍼티로 복사하기 위한 새로운 두 개의 옵션이 컨텍스트 메뉴에 추가되었습니다. 이 바로가기 옵션들은 개발자들, 특히 [CSS-in-JS](/blog/css-in-js/#what-is-css-in-js) 라이브러리를 사용하는 개발자들에게 편리합니다.
+쉽게 CSS 규칙을 자바스크립트 프로퍼티로 복사하기 위한 새로운 두 개의 옵션이 컨텍스트 메뉴에 추가되었습니다. 이 바로가기 옵션들은 개발자들, 특히 [CSS-in-JS](/blog/css-in-js/#what-is-css-in-js)라이브러리를 사용하는 개발자들에게 편리합니다.
 
 **스타일** 영역의 CSS 규칙에서 마우스 오른쪽을 클릭합니다. **선언을 JS로 복사**를 선택하여 하나의 규칙을 복사하거나, 혹은 **모든 선언을 JS로 복사**를 선택하여 모든 규칙을 복사할 수 있습니다.
 
@@ -155,7 +153,7 @@ Chromium issue: [1251176](https://crbug.com/1251176)
 
 ### 콘솔에서 적절한 `Intl` 객체 미리보기 및 값 판별 {: #intl }
 
-[Intl](https://tc39.es/ecma402/#intl-object) 객체는 적절한 미리보기 기능을 가지고 있고, 또한 콘솔은 이 객체의 모든 값을 괄호닫음 없이 모두 표시합니다. 
+[Intl](https://tc39.es/ecma402/#intl-object)객체는 적절한 미리보기 기능을 가지고 있고, 또한 콘솔은 이 객체의 모든 값을 괄호닫음 없이 모두 표시합니다. 
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZxGQoDdnilseKTFsxdbC.png", alt="Intl objects in the Console", width="800", height="559" %} -->
 
@@ -189,7 +187,7 @@ Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 
 ## 애플리케이션 패널 내 애플리케이션 캐시 영역 제거 예정 {: #app-cache }
 
-[AppCache](https://web.dev/appcache-removal/) 에 대한 지원이 크롬 및 다른 크로미움 기반 브라우저에서 중단됨에 따라, 애플리케이션 패널 내부 [애플리케이션 캐시](https://developer.chrome.com/docs/devtools/storage/applicationcache/) 영역이 제거되었습니다.
+[AppCache](https://web.dev/appcache-removal/)에 대한 지원이 크롬 및 다른 크로미움 기반 브라우저에서 중단됨에 따라, 애플리케이션 패널 내부 [애플리케이션 캐시](https://developer.chrome.com/docs/devtools/storage/applicationcache/) 영역이 제거되었습니다.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 
@@ -199,15 +197,15 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 ## [실험실 기능] 애플리케이션 패널에 새롭게 추가된 Reporting API 영역 {: #reporting-api }
 
 {% Aside %}
-이 기능을 활성화하기 위해서, **설정** > **실험** 내부의 **Enable Reporting API panel in the Application panel** 체크박스에 체크해 주세요.
+이 기능을 활성화하기 위해서, **설정** > **실험** > **Enable Reporting API panel in the Application panel** 체크박스에 체크해 주세요.
 {% endAside %}
 
-[Reporting API](https://web.dev/reporting-api/) 는 개발자들이 웹페이지, 제거된 API 호츨 등에서의 보안수칙 위반을 잘 모니터링할 수 있도록 설계되었습니다.
+[Reporting API](https://web.dev/reporting-api/)는 개발자들이 웹페이지, 제거된 API 호츨 등에서의 보안수칙 위반을 잘 모니터링할 수 있도록 설계되었습니다.
 
 이 실험을 활성화함으로써, 여러분들은 이제 보고된 상태를 **애플리케이션** 패널의 새로운 **Reporting API** 영역에서 볼 수 있습니다.
 **Endpoints** 섹션은 현재 개발중임을 염두에 두세요. (따라서 엔드포인트는 현재 보고되지 않습니다.)
 
-[관련문서](https://web.dev/reporting-api/) 링크를 통해 **Reporting API**에 대해 좀더 알아볼 수 있습니다.
+[관련문서](https://web.dev/reporting-api/)링크를 통해 **Reporting API**에 대해 좀더 알아볼 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="Reporting API pane in the Application panel", width="800", height="476" %}
 
