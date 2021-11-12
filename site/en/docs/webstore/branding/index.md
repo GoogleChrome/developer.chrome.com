@@ -6,11 +6,6 @@ updated: 2021-11-17
 description: Guidelines for use of Google trademarks.
 ---
 
-<!-- TODO(kaycebasques): Remove this duplicate site nav. -->
-
-**Branding Guidelines** | [Rating Guidelines][3] | [Program Policies][4] | [User Data FAQ][5] |
-[Developer Agreement][6]
-
 This page sets forth the guidelines for use of [Google trademarks][google-trademarks] you should consider when
 naming and describing your extension. Your use of any Google trademarks is always subject to the
 [Google Permissions][google-permissions].
@@ -121,11 +116,6 @@ Android is a trademark of Google Inc.
 Use of this trademark is subject to Google Permissions.
 ```
 
-[1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: /docs/apps/migration/
-[3]: /docs/webstore/rating/
-[4]: /docs/webstore/program_policies/
-[5]: /docs/webstore/user_data/
 [terms-of-service]: /docs/webstore/terms/
 [google-trademarks]: https://www.google.com/permissions/trademark/
 [google-permissions]: https://www.google.com/permissions/
