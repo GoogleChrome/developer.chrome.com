@@ -74,9 +74,7 @@ company without [written permission from Google.][brand-request-form]
 ## Using Google logos {: #using-google-logos}
 
 Don't use Google trademarks or a modified version of a Google trademark as the logo for your
-extension without [written permission from Google][brand-request-form]. Feel free to continue using our badges in your
-extension subject to the branding guidelines for each of those badges (for example, [YouTube][20],
-[Google Checkout][21]).
+extension without [written permission from Google][brand-request-form].
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/l1QxerNZuBZBa6dUFOIT.png",
        alt="Google logo violation", height="146", width="146" %}
