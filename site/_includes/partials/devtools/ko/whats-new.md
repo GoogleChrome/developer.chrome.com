@@ -3,7 +3,6 @@
 
 ### Chrome 96 {: #chrome96 }
 * [미리보기 기능: 새로운 CSS 개요 영역](/ko/blog/new-in-devtools-96/#css-overview)
-<!-- * [Restored and improved CSS length edit and copy experience](/ko/blog/new-in-devtools-96/#length) -->
 * [복원 및 개선된 CSS 길이 편집 및 복사 경험](/ko/blog/new-in-devtools-96/#length)
 * [CSS 의 prefers-constrast 미디어 기능 에뮬레이션](/ko/blog/new-in-devtools-96/#prefers-contrast)
 * [크롬의 자동 어두운 테마 기능 에뮬레이션](/ko/blog/new-in-devtools-96/#auto-dark-mode)
