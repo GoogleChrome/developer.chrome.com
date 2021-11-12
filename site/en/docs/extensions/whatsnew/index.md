@@ -132,7 +132,7 @@ resources can load an extension's pages and enables the use of low level web pla
 
 ### 2021.08.04: Two step verification enforcement {: #two-step-verification-enforcement }
 
-The [policy update blog post](/blog/policy-update-2sv/) published on 2021-06.29 has been updated to
+The [policy update blog post](/blog/policy-update-2sv/) published on 2021.06.29 has been updated to
 correct the two step verification deployment timeline.
 
 ### 2021.06.29: Developer program policies updated {: #developer-program-policies-updated }
