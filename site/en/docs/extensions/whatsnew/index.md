@@ -27,7 +27,7 @@ at runtime. Previously, content scripts could only be statically declared in an 
 manifest.json or programmatically injected at runtime with
 [`chrome.scripting.executeScript()`](/docs/extensions/reference/scripting/#method-executeScript).
 
-### Chrome 96: Massively expanded promise support {: #m96-promise-support }
+### Chrome 96: Expanded promise support to 27 more APIs {: #m96-promise-support }
 
 This release contains significantly more promise updates than any previous release. Updates include
 both general and Chrome OS-specific extensions APIs. Expand the following sections for details.
