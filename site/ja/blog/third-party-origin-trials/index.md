@@ -46,7 +46,7 @@ notify and set expectations with any partners or customers whose sites you inten
 origin trial. Experimental features may cause unexpected issues and browser vendors may not be able
 to provide troubleshooting support. -->
 
-サードパーティプロバイダとしてオリジントライアルに参加する場合、オリジントライアルに含める予定のサイトのパートナーまたは顧客に通知し、見込みを設定するのは、あなたの責任となります。実験的な機能により予期しない問題が発生する可能性があります。そして、ブラウザベンダは、トラブルシューティングサポートを提供できないかもしれません。
+サードパーティプロバイダとしてオリジントライアルに参加する場合、オリジントライアルに含める予定のサイトのパートナーまたは顧客に通知し、期待値を設定するのは、あなたの責任となります。実験的な機能により予期しない問題が発生する可能性があります。そして、ブラウザベンダは、トラブルシューティングサポートを提供できないかもしれません。
 
 {% Aside %}
 <!-- Supporting third-party origin trials allows for broader participation, but also increases the
