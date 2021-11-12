@@ -205,7 +205,7 @@ Chromium issue: [1084190](https://crbug.com/1084190)
 이 실험을 활성화함으로써, 여러분들은 이제 보고된 상태를 **애플리케이션** 패널의 새로운 **Reporting API** 영역에서 볼 수 있습니다.
 **Endpoints** 섹션은 현재 개발중임을 염두에 두세요. (따라서 엔드포인트는 현재 보고되지 않습니다.)
 
-[관련문서](https://web.dev/reporting-api/)링크를 통해 **Reporting API**에 대해 좀더 알아볼 수 있습니다.
+[관련문서](https://web.dev/reporting-api/)를 통해 **Reporting API**에 대해 좀더 알아볼 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/hbwFqi9aNDOj70FhLXsn.png", alt="Reporting API pane in the Application panel", width="800", height="476" %}
 
