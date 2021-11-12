@@ -12,7 +12,7 @@ tags:
   - origin-trials
 ---
 
-*翻訳者の [yoichiro](https://github.com/yoichiro) さんに感謝いたします。*
+*翻訳者の [yoichiro](https://github.com/yoichiro) さん、レビュアーの [lacolaco](https://github.com/lacolaco) さんに感謝いたします。*
 
 <!-- [Origin trials](/blog/origin-trials/) are a way to test a new or experimental web platform
 feature. -->
