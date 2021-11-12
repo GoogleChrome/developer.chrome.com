@@ -84,7 +84,7 @@ tags:
 ## Обновления вкладки Отрисовка (Rendering)
 
 <!-- ### Emulate the CSS prefers-contrast media feature {: #prefers-contrast } -->
-### Эмуляция CSS-медиафичи prefers-contrast {: #prefers-contrast }
+### Эмуляция CSS-медиафункции prefers-contrast {: #prefers-contrast }
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/47fsHvVLiVC9J0eWY9wD.png", alt="Эмуляция CSS-медиафункции prefers-contrast", width="800", height="483" %}
 
