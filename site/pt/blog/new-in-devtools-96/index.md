@@ -13,7 +13,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-96
-draft: true
 ---
 
 <!-- start: translation instructions -->
@@ -59,7 +58,7 @@ As funcionalidades de **copiar CSS** e **editar como texto** foram restauradas p
 
 Além disso, você pode arrastar para ajustar o valor da unidade e atualizar o tipo de unidade por meio do menu suspenso. Este recurso  complementar não deve impactar a edição primária como texto.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/YkvFZGBllRecee2EAzYf.mp4", autoplay="true", muted="true", loop="true", class="screenshot"  %}
 
 Por favor, reporte via [goo.gle/length-feedback](https://goo.gle/length-feedback) se você encontrar algum problema.
 
