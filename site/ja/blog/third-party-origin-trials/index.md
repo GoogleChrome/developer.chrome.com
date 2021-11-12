@@ -32,7 +32,7 @@ feature across multiple sites. -->
 
 サードパーティオリジントライアルにより、埋め込みコンテンツのプロバイダは、複数のサイトを横断して新機能を試せるようになります。
 
-{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/fCachIuiBjh3XPo10CrN.png", alt="Diagram showing how third-party origin trials enable a single registration token to be used across multiple origins", width="800", height="400" %}
+{% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/fCachIuiBjh3XPo10CrN.png", alt="サードパーティオリジントライアルによって、単一の登録トークンを複数のオリジンを横断して使えるようにする方法を示す図", width="800", height="400" %}
 
 <!-- Third-party origin trials don't make sense for all features. Chrome will only make the third-party
 origin trial option available for features where embedding code on third-party sites is a common use
@@ -98,8 +98,8 @@ affecting multiple sites. The Origin Trials Developer Guide explains the
 1. レビューが必要だった場合は、レビューが完了し、サードパーティトークンの準備ができたときに、メールで通知されます。
 
    <figure class="w-figure">
-     {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/r07Zb0QoHnlgiItETR6q.png", alt="Chrome origin trials registration page for the Conversion Measurement API, with third-party matching checkbox selected.", width="800", height="618" %}
-     <figcaption class="w-figcaption">Registration page for the Conversion Measurement trial.</figcaption>
+     {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/r07Zb0QoHnlgiItETR6q.png", alt="サードパーティ一致チェックボックスが選択された Conversion Measurement API の Chrome オリジントライアル登録ページ。", width="800", height="618" %}
+     <figcaption class="w-figcaption">Conversion Measurement トライアルの登録ページ。</figcaption>
    </figure>
 
 <!-- ## How to provide feedback -->
