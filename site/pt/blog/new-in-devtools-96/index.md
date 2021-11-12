@@ -23,7 +23,7 @@ tags:
 <!-- Remember to update the whats-new.md file as well -->
 <!-- end: translation instructions -->
 
-*Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/). Revisão por [Lucas Santos](https://lsantos.dev)*
+*Tradução realizada por [Alvaro Camillo Neto](https://www.linkedin.com/in/alvarocamillont/).*
 
 {% include 'partials/devtools/pt/banner.md' %}
 
