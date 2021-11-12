@@ -115,7 +115,7 @@ repo. -->
 
 ## 参考情報
 
--  [Getting started with Chrome's origin trials](/blog/origin-trials/)
+-  [Chrome のオリジントライアル入門](/ja/blog/origin-trials/)
 -  [Origin Trials Guide for Web Developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 -  [Chrome Platform Status](https://www.chromestatus.com/features/5691464711405568)
 
