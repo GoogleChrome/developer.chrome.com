@@ -59,7 +59,7 @@ CSS 长度的**复制**以及**文本编辑**的用户体验问题均已被修�
 <!-- In addition, you can drag to adjust the unit value and update the unit type via the dropdown. This add-on length authoring feature should not impact the primary edit as text experience. -->
 此外，您还是可以横向拖拽光标加减长度数值以及在下拉列表中选择新的长度单位。这些附加的长度编辑功能不会影响主要的文本编辑体验。
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/YkvFZGBllRecee2EAzYf.mp4", autoplay="true", muted="true", loop="true", class="screenshot"  %}
 
 <!-- Please report via [goo.gle/length-feedback](https://goo.gle/length-feedback) if you found any issues. -->
 如果您发现任何问题，请通过 [goo.gle/length-feedback](https://goo.gle/length-feedback) 报告。
