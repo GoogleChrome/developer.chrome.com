@@ -6,14 +6,13 @@ authors:
 date: 2021-10-25
 updated: 2021-10-25
 description:
-  ""
+  "새로운 CSS 개요 영역, CSS 의 prefers-constrast 미디어 기능 에뮬레이션, 크롬의 자동 어두운 테마 기능 에뮬레이션 및 다른 새로운 기능들."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/61LuaWeAzEc2dbdFjnWm.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-96
-draft: true
 ---
 
 <!-- start: translation instructions -->
@@ -24,10 +23,11 @@ draft: true
 <!-- Remember to update the whats-new.md file as well -->
 <!-- end: translation instructions -->
 
-*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님과 [이지웅](https://bit.ly/JiwoongLeePortfolio)님, 그리고 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 리뷰를 맡아 주셨습니다.*
+*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님과 리뷰를 맡아 주셨습니다.*
 
 {% include 'partials/devtools/ko/banner.md' %}
 
+{% YouTube id='3CXbhnaFNEw' %}
 
 ## 미리보기 기능: 새로운 CSS 개요 영역 {: #css-overview }
 
@@ -54,7 +54,7 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 
 그리고 여러분들은 드래그하여 단위 값을 조정할 수 있고, 드롭 다운을 통해 단위 타입을 업데이트할 수 있습니다. 이 길이 작성 기능은 텍스트 경험으로서 기본 편집에 영향을 주지 않아야 합니다.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/YkvFZGBllRecee2EAzYf.mp4", autoplay="true", muted="true", loop="true", class="screenshot"  %}
 
 사용 중에 혹시 이슈를 발견했을 경우에는 [피드백 링크](https://goo.gle/length-feedback)를 통해 알려 주세요.
 

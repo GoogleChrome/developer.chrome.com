@@ -26,6 +26,8 @@ tags:
 
 {% include 'partials/devtools/zh/banner.md' %}
 
+{% YouTube id='3CXbhnaFNEw' %}
+
 <!-- ## Preview feature: New CSS Overview panel {: #css-overview } -->
 ## 预览特性: 新的 CSS 概览面板 {: #css-overview }
 
