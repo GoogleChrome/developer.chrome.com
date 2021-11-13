@@ -27,6 +27,8 @@ tags:
 
 {% include 'partials/devtools/ru/banner.md' %}
 
+{% YouTube id='3CXbhnaFNEw' %}
+
 <!-- ## Preview feature: New CSS Overview panel {: #css-overview } -->
 ## Ранний доступ: Новая вкладка Обзор CSS {: #css-overview }
 
@@ -64,8 +66,8 @@ tags:
 <!-- In addition, you can drag to adjust the unit value and update the unit type via the dropdown. This add-on length authoring feature should not impact the primary edit as text experience. -->
 Кроме того, значение можно изменять перетаскиванием, а единицы измерения задавать с помощью выпадающего списка. Эта дополнительная возможность редактирования не влияет на основное редактирование в виде текста.
 
-<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/YkvFZGBllRecee2EAzYf.mp4", autoplay="true", muted="true", loop="true", class="screenshot"  %} -->
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/YkvFZGBllRecee2EAzYf.mp4", autoplay="true", muted="true", loop="true", class="screenshot"  %}
 
 <!-- Please report via [goo.gle/length-feedback](https://goo.gle/length-feedback) if you found any issues. -->
 Пожалуйста, пишите через [goo.gle/length-feedback](https://goo.gle/length-feedback) если встретите любые сложности.

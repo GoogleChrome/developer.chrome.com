@@ -17,7 +17,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
-<!-- {% YouTube id='3CXbhnaFNEw' %} -->
+{% YouTube id='3CXbhnaFNEw' %}
 
 ## Preview feature: New CSS Overview panel {: #css-overview }
 

@@ -27,6 +27,8 @@ tags:
 
 {% include 'partials/devtools/ja/banner.md' %}
 
+{% YouTube id='3CXbhnaFNEw' %}
+
 <!-- ## Preview feature: New CSS Overview panel {: #css-overview } -->
 
 ## プレビュー機能: 新しい CSS Overview パネル {: #css-overview }

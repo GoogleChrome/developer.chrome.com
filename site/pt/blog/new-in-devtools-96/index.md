@@ -27,6 +27,8 @@ tags:
 
 {% include 'partials/devtools/pt/banner.md' %}
 
+{% YouTube id='3CXbhnaFNEw' %}
+
 <!-- ## Preview feature: New CSS Overview panel {: #css-overview } -->
 ## Prévia de funcionalidade: novo painel de visão geral CSS  {: #css-overview }
 <!-- Use the new **CSS Overview** panel to identify potential CSS improvements on your page.
@@ -62,7 +64,7 @@ Além disso, você pode arrastar para ajustar o valor da unidade e atualizar o t
 
 Por favor, reporte via [goo.gle/length-feedback](https://goo.gle/length-feedback) se você encontrar algum problema.
 
-Você pode desativá-lo por meio das **Configurações** > **Experimentos** > **Ativar ferramentas de autoria de comprimento CSS no painel Estilos** caixa de seleção.
+Você pode desativá-lo por meio das **Configurações** > **Experimentos** > **Enable CSS length authoring tools in the Styles pane** caixa de seleção.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0042092ccbcdfb5b113c28b9a58c2cf1219b10c4 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c8f39d4c60841439ebf75d1a2d8fdfe50e1355a9 #}

@@ -13,7 +13,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-96
-draft: true
 ---
 
 <!-- start: translation instructions -->
@@ -28,6 +27,7 @@ draft: true
 
 {% include 'partials/devtools/ko/banner.md' %}
 
+{% YouTube id='3CXbhnaFNEw' %}
 
 ## 미리보기 기능: 새로운 CSS 개요 영역 {: #css-overview }
 
@@ -54,7 +54,7 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 
 그리고 여러분들은 드래그하여 단위 값을 조정할 수 있고, 드롭 다운을 통해 단위 타입을 업데이트할 수 있습니다. 이 길이 작성 기능은 텍스트 경험으로서 기본 편집에 영향을 주지 않아야 합니다.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/YkvFZGBllRecee2EAzYf.mp4", autoplay="true", muted="true", loop="true", class="screenshot"  %}
 
 사용 중에 혹시 이슈를 발견했을 경우에는 [피드백 링크](https://goo.gle/length-feedback)를 통해 알려 주세요.
 

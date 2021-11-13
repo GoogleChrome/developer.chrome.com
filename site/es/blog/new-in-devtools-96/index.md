@@ -45,11 +45,11 @@ Las acciones de **copiar CSS** y **editar como texto** se restauran para las pro
 
 Además, puede arrastrar para ajustar el valor de la unidad y actualizar el tipo de unidad a través del menú desplegable. Esta funcionalidad no debería afectar a la experiencia de usuario en la acción principal editar como texto.
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} 
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/YkvFZGBllRecee2EAzYf.mp4", autoplay="true", muted="true", loop="true", class="screenshot"  %}
 
 Informe a través de [goo.gle/length-feedback](https://goo.gle/length-feedback) si encuentra algún problema.
 
-Puede deshabilitar esta característica vía **Configuración** > **Experimentos** > **Habilitar las herramientas de creación de longitud CSS en el panel Estilos**
+Puede deshabilitar esta característica vía **Configuración** > **Experimentos** > **Enable CSS length authoring tools in the Styles pane**.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0042092ccbcdfb5b113c28b9a58c2cf1219b10c4 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c8f39d4c60841439ebf75d1a2d8fdfe50e1355a9 #}
