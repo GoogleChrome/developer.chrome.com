@@ -6,7 +6,7 @@ authors:
 date: 2021-10-25
 updated: 2021-10-25
 description:
-  ""
+  "새로운 CSS 개요 영역, CSS 의 prefers-constrast 미디어 기능 에뮬레이션, 크롬의 자동 어두운 테마 기능 에뮬레이션 및 다른 새로운 기능들."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/61LuaWeAzEc2dbdFjnWm.jpg'
 alt: ''
 tags:
@@ -23,7 +23,7 @@ tags:
 <!-- Remember to update the whats-new.md file as well -->
 <!-- end: translation instructions -->
 
-*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님과 [이지웅](https://bit.ly/JiwoongLeePortfolio)님, 그리고 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 리뷰를 맡아 주셨습니다.*
+*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님과 리뷰를 맡아 주셨습니다.*
 
 {% include 'partials/devtools/ko/banner.md' %}
 

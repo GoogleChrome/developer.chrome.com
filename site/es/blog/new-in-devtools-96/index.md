@@ -6,7 +6,7 @@ authors:
 date: 2021-10-25
 updated: 2021-10-25
 description:
-  ""
+  "Nuevo panel de Descripción General de CSS, emule la función multimedia CSS de contraste, emula la función de tema oscuro automático de Chrome y mucho más."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/nGhNBHKztHdRnnNLikve.jpg'
 alt: ''
 tags:

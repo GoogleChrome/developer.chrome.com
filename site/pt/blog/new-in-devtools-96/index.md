@@ -6,7 +6,7 @@ authors:
 date: 2021-10-25
 updated: 2021-10-25
 description:
-  ""
+  "Novo painel de visão geral CSS, emule o recurso de prefers-contrast para CSS media, emule o recurso Auto Dark Theme do Chrome e mais."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/pBsoiFhGUXyAybmAbROh.jpg'
 alt: ''
 tags:

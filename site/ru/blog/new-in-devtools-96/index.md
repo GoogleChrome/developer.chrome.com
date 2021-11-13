@@ -6,7 +6,7 @@ authors:
 date: 2021-09-20
 updated: 2021-09-20
 description:
-    ""
+    "Новая вкладка Обзор CSS, Эмуляция CSS-медиафункции prefers-contrast, Эмулируйте функцию создания автоматической тёмной темы в Chrome и многое другое."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JztTYTKPDMXDTEs1cYfI.jpg'
 alt: ''
 tags:
