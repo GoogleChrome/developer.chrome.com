@@ -1,18 +1,20 @@
 ## 더 많은 DevTools 기능 {: #whats-new }
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
-<!-- ### Chrome 96 {: #chrome96 }
-* [Preview feature: New CSS Overview panel](/blog/new-in-devtools-96/#css-overview)
-* [Emulate the CSS prefers-contrast media feature](/blog/new-in-devtools-96/#prefers-contrast)
-* [Emulate the Chrome’s Auto Dark Theme feature](/blog/new-in-devtools-96/#auto-dark-mode)
-* [Copy declarations as JavaScript in the Styles pane](/blog/new-in-devtools-96/#copy-as-js)
-* [New Payload tab in the Network panel](/blog/new-in-devtools-96/#payload)
-* [Improved the display of properties in the Properties pane](/blog/new-in-devtools-96/#properties)
-* [Option to hide CORS errors in the Console](/blog/new-in-devtools-96/#hide-cors-errors)
-* [Proper `Intl` objects preview and evaluation in the Console](/blog/new-in-devtools-96/#intl)
-* [Consistent async stack traces](/blog/new-in-devtools-96/#async)
-* [Retain the Console sidebar](/blog/new-in-devtools-96/#console-sidebar)
-* [[Experimental] New Reporting API pane in the Application panel](/blog/new-in-devtools-96/#reporting-api) -->
+### Chrome 96 {: #chrome96 }
+* [미리보기 기능: 새로운 CSS 개요 영역](/ko/blog/new-in-devtools-96/#css-overview)
+* [복원 및 개선된 CSS 길이 편집 및 복사 경험](/ko/blog/new-in-devtools-96/#length)
+* [CSS 의 prefers-constrast 미디어 기능 에뮬레이션](/ko/blog/new-in-devtools-96/#prefers-contrast)
+* [크롬의 자동 어두운 테마 기능 에뮬레이션](/ko/blog/new-in-devtools-96/#auto-dark-mode)
+* [스타일 영역에서 선언을 자바스크립트로 복사하기](/ko/blog/new-in-devtools-96/#copy-as-js)
+* [네트워크 패널의 새로운 페이로드 탭](/ko/blog/new-in-devtools-96/#payload)
+* [속성 영역 내의 속성 표시 방법의 개선](/ko/blog/new-in-devtools-96/#properties)
+* [콘솔의 CORS 에러 숨김 옵션](/ko/blog/new-in-devtools-96/#hide-cors-errors)
+* [콘솔에서 적절한 `Intl` 객체 미리보기 및 값 판별](/ko/blog/new-in-devtools-96/#intl)
+* [일관적인 async 스택 추적](/ko/blog/new-in-devtools-96/#async)
+* [콘솔 사이드바 유지](/ko/blog/new-in-devtools-96/#console-sidebar)
+* [애플리케이션 패널 내 애플리케이션 캐시 영역 제거 예정](/ko/blog/new-in-devtools-96/#app-cache)
+* [[실험실 기능] 애플리케이션 패널에 새롭게 추가된 Reporting API 영역](/ko/blog/new-in-devtools-96/#reporting-api)
 
 ### Chrome 95 {: #chrome95 }
 * [새 CSS 길이 작성 도구](/ko/blog/new-in-devtools-95/#length)
