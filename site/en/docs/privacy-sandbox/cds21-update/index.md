@@ -6,6 +6,7 @@ subhead: >
 description: >
   An update on our progress at Chrome Developer Summit, with an overview of how we collaborate with stakeholders to discuss, test, and adopt APIs.
 date: 2021-11-03
+updated: 2021-11-15
 authors:
   - alexandrawhite
 ---
@@ -23,6 +24,8 @@ Here's what you need to know:
 
 This update on the Privacy Sandbox was announced at the
 [Chrome Developers Summit 2021 keynote](https://developer.chrome.com/devsummit/schedule/keynote/).
+
+{% YouTube id='_Ah_ODU3CvA' %}
 
 ## Why does the Privacy Sandbox matter?
 
