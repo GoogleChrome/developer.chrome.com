@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Creating a great listing page
 date: 2021-08-10
+updated: 2021-11-17
 description: >
   Best practices on how to make a high-quality, engaging listing page for your item in the Chrome
   Web Store.
@@ -62,9 +63,8 @@ Focus on the keywords that represent the most important features of your extensi
 {% Compare 'worse' %}
 Add unnecessary keywords to your description in an attempt to improve search results.
 Repetitive or irrelevant use of keywords can create an unpleasant user experience and result in an
-item being suspended from the Chrome Web Store.
+item being suspended from the Chrome Web Store. See [Keyword Spam policy][keyword-spam]
 {% endCompare %}
-
 
 ## Images
 
@@ -130,9 +130,8 @@ screenshot that is blurry", width="800", height="467" %}
 
 {% Aside %}
 Tip: If your extension supports multiple locales, you can provide locale-specific screenshots as
-described in [Internationalizing your app][i18n-your-app].
+described in [Internationalize your extension][i18n-your-screenshots].
 {% endAside %}
-
 
 ### Promotional images: promo tiles and marquee image
 
@@ -192,6 +191,7 @@ information about your item.
 
 
 [devconsole]: https://chrome.google.com/webstore/devconsole
-[extension icon best practices]: /docs/webstore/images/#extension-icon
+[extension icon best practices]: /docs/webstore/images/#icon
 [i18n]: /docs/extensions/reference/i18n/
-[i18n-your-app]: /docs/webstore/i18n/
+[i18n-your-screenshots]: /docs/webstore/i18n/#screenshots
+[keyword-spam]: /docs/webstore/spam-faq/#keyword-spam
