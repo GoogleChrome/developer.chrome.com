@@ -58,6 +58,8 @@ In Lighthouse 9.0, all the elements sharing that ID are now listed:
 
 {% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/gZI1flmYHuUpF637Idzy.png", alt="A Lighthouse audit for 'All focusable elements must have a unique `id`', showing two elements, both with the same `id`", width="800", height="380", class="screenshot" %}
 
+This "related nodes" functionality is provided by [`axe-core`](https://www.npmjs.com/package/axe-core), so it may appear in other accessibility audits as well.
+
 For more information, see the [issue collecting user reports](https://github.com/GoogleChrome/lighthouse/issues/10396) and the [implementation pull request](https://github.com/GoogleChrome/lighthouse/pull/13193).
 
 ## Running Lighthouse {: #running-lighthouse }
