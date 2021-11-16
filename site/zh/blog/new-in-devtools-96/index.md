@@ -42,7 +42,7 @@ tags:
 **CSS 概览**面板特性目前还处于预览阶段。我们团队也在积极努力开发该功能。我们期待您的[反馈](https://goo.gle/css-overview-feedback)以便于我们做进一步改进。
 
 <!-- Read [this article](/docs/devtools/css-overview) to learn more on the **CSS Overview** panel. -->
-欲了解更多有关于 CSS 概览面板的信息，请求阅读[此文章](/docs/devtools/css-overview)。
+欲了解更多有关于 CSS 概览面板的信息，请阅读[此文章](/docs/devtools/css-overview)。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/fXXPihV3bTl82WDJGX51.png", alt="CSS 概览面板", width="800", height="509" %}
 
@@ -100,7 +100,7 @@ Chromium 议题：[1139777](https://crbug.com/1139777)
 使用 DevTools 模拟自动深色主题以查看页面在 [Chrome 的自动深色主题](/blog/auto-dark-theme/)开启后的外观。
 
 <!-- Chrome 96 introduces an [Origin Trial](/blog/origin-trials/) for [Auto Dark Theme](/blog/auto-dark-theme/) on Android. With this feature, the browser applies an automatically generated dark theme to light themed sites, when the user has opted into dark themes in the Operating System.  -->
-Chrome 96 发布了[自动深色主题](/blog/auto-dark-theme/)的 [Origin Trial](/blog/origin-trials/) （目前只限于 Android 版）。有了该功能，当用户在操作系统那里选择暗黑主题时，浏览器将自动为浅色主题网站生成暗黑主题。
+Chrome 96 发布了[自动深色主题](/blog/auto-dark-theme/)的 [Origin Trial](/blog/origin-trials/) （目前只限于 Android 版）。有了该功能，当用户在操作系统那里选择深色主题时，浏览器将自动为浅色主题网站生成深色主题。
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate auto dark mode** dropdown. -->
 打开[命令菜单](/docs/devtools/command-menu/)，运行 **Show Rendering** 命令，然后设置带有模拟自动深色模式字样的下拉菜单。
@@ -161,7 +161,7 @@ Chromium 议题：[1226262](https://crbug.com/1226262)
 
 
 <!-- ## Console updates -->
-## 关于控制台的更新内容
+## 控制台的更新
 
 <!-- ### Option to hide CORS errors in the Console {: #hide-cors-errors } -->
 ### 新增选项，用于隐藏控制台里面的 CORS 错误 {: #hide-cors-errors }
@@ -198,7 +198,7 @@ Chromium 议题：[1073804](https://crbug.com/1073804)
 <!-- DevTools now reports `async` stack traces for `async` functions to be consistent with other async tasks.  -->
 DevTools 现在能够实现`异步`函数的`异步`堆栈信息与其它异步任务的堆栈信息保持一致。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wuKo84nrDzbhwCnIVU2n.png", alt="异步跟踪堆栈", width="800", height="427" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/wuKo84nrDzbhwCnIVU2n.png", alt="异步堆栈信息", width="800", height="427" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/b2a04e234f25602d1b7e7ff7bd0d39bde3f2c1ec  #}
 
