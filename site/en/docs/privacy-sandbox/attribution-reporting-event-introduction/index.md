@@ -3,8 +3,8 @@ layout: 'layouts/doc-post.njk'
 title: 'Event-level reports in the Attribution Reporting API '
 subhead: >
   Learn the basics of ad conversion measurement with the Attribution Reporting API with event-level reports.
-date: 2021-11-04
-updated: 2021-11-04
+date: 2021-11-16
+updated: 2021-11-16
 authors:
   - maudn
 ---
