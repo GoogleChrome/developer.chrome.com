@@ -109,8 +109,9 @@ callback specified when [runtime.sendNativeMessage][10] is called. All other mes
 the native messaging host in that case are ignored.
 
 On Windows, the native messaging host is also passed a command line argument with a handle to the
-calling chrome native window: `--parent-window=<decimal handle value>`. This lets the native
-messaging host create native UI windows that are correctly focused.
+calling Chrome native window: `--parent-window=<decimal handle value>`. This lets the native
+messaging host create native UI windows that are correctly parented. Note that this value will be
+0 if the calling context is a background script page.
 
 ## Connecting to a native application {: #native-messaging-client }
 
