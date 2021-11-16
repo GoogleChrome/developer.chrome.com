@@ -19,7 +19,7 @@ tags:
   - chrome-96
 ---
 
-{% YouTube id='TODO' %}
+{% YouTube id='u1n38aeVnVY' %}
 
 Here's what you need to know:
 
@@ -46,12 +46,12 @@ In some browsers, the `start_url` is used, while in others, the path to the
 manifest file is used.
 
 That makes it impossible to change either of those fields without breaking the
-install experience! Now, there's a new optional `id` property, that allows
+install experience. Now, there's a new optional `id` property, that allows
 you to explicitly define the identifier used for your PWA.
 
 Adding the `id` property to the manifest removes the dependency on the
 `start_url` or the location of the manifest, and makes it possible for those
-fields to be updated!
+fields to be updated.
 
 ```json/2
 {
@@ -64,12 +64,12 @@ fields to be updated!
 
 Support for the `id` property lands in desktop Chromium-based browsers
 starting in Chrome 96. Support for mobile, which currently uses the manifest
-url as the unique id, should land in the first half of 2022.
+url as the unique ID, should land in the first half of 2022.
 
-{% Img class="float-right", linkTo="true", src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XY3FVUeeCjhB9K71niJE.png", alt="DevTools showing computed app id", width="800", height="533" %}
+{% Img class="float-right", linkTo="true", src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/XY3FVUeeCjhB9K71niJE.png", alt="DevTools showing computed app ID", width="800", height="533" %}
 
 If you already have a PWA in production and want to add an `id` to your
-manifest, you'll need to use the id that was assigned by the browser. You can
+manifest, you'll need to use the ID that was assigned by the browser. You can
 find the `id` in the _Manifest_ pane of the _Application_ panel in Dev Tools.
 
 <p style="clear:both;"></p>
@@ -93,10 +93,10 @@ for more info.
 
 Web apps can use [`navigator.registerProtocolHandler()`][mdn-regph] to
 register as a protocol handler. For example, Gmail can register the `mailto`
-protocol, then when a user clicks on a link with the `mailto:` prefix, Gmail
-will open making it easy for the user to send an email.
+protocol. Then when a user clicks on a link with the `mailto:` prefix, Gmail
+will open, making it easy for the user to send an email.
 
-Starting in Chrome 96, a PWA can register as protocol handler as part of its
+Starting in Chrome 96, a PWA can register as a protocol handler as part of its
 installation. To do that for your PWA, add a `protocol_handlers` property to
 your web app manifest, specify the `protocol` you want to handle, and the
 `url` that should be opened when clicked.
@@ -140,9 +140,10 @@ for resource types such as CSS, fonts, scripts, images, and iframes.
 <link rel="preload" href="/script.js" as="script" importance="low">
 
 <script>
-  fetch('https://example.com/', {importance: 'high'}).then(data => {
-    // Trigger a high priority fetch
-  });
+  fetch('https://example.com/', {importance: 'high'})
+      .then(data => {
+        // Trigger a high priority fetch
+      });
 </script>
 ```
 
@@ -161,7 +162,7 @@ Check out [Optimizing resource loading with Priority Hints][wd-phints] for
 all the details, how to register for the origin trial, and some great examples
 of how it can help to improve your rendering performance.
 
-## Emulate Chrome 100 in UA string {: #chrome-100 }
+## Emulate Chrome 100 in the UA string {: #chrome-100 }
 
 Early next year, we'll hit Chrome 100, a **three** digit version number. Any
 code that checks version numbers, or parses the UA string, should be checked
@@ -171,11 +172,11 @@ Starting in Chrome 96, there's a new flag `#force-major-version-to-100` that
 will change the current version number to 100, so you can make sure
 everything works as expected.
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4drS8JxKXgtzSAxyM6WF.png", alt="Screenshot of Chrome Flags page highlighting new #force-major-version-to-100 option", width="800", height="533" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4drS8JxKXgtzSAxyM6WF.png", alt="Chrome Flags page highlighting new #force-major-version-to-100 option", width="800", height="533" %}
 
-For more details see [Force Chrome major version to 100 in the User-Agent string][dcc-cr100].
+For details see [Force Chrome major version to 100 in the User-Agent string][dcc-cr100].
 
-## Chrome Dev Summit {: cds2021 }
+## Chrome Dev Summit {: #cds-videos }
 
 Chrome Dev Summit is a wrap. All of the videos and content are available
 online. Check out the [Chrome Dev Summit site][cds-site], or if you missed
@@ -195,7 +196,7 @@ This covers only some of the key highlights. Check the links below for
 additional changes in Chrome 96.
 
 * [What's new in Chrome DevTools (96)](/blog/new-in-devtools-96/)
-* [Chrome 96 deprecations & removals](/blog/deps-rems-96/)
+* [Chrome 96 deprecations and removals](/blog/deps-rems-96/)
 * [ChromeStatus.com updates for Chrome 96](https://www.chromestatus.com/features#milestone%3D96)
 * [What's new in JavaScript in Chrome 96](https://v8.dev/blog/v8-release-96)
 * [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/95.0.4638.56..96.0.4664.50)
