@@ -160,7 +160,7 @@ enables fingerprinting or covert tracking of users.
 
 ### User-Agent string reduction and User-Agent Client Hints
 
-We've expanded the origin trial for testing **Chrome's reduced `User-Agent`**
+We've expanded the origin trial for testing **Chrome's reduced User-Agent**
 format [to include third-party
 embeds](/blog/user-agent-reduction-origin-trial/#how-to-participate-in-the-origin-trial-as-a-third-party-embed).
 If you primarily provide cross-site content for other services, you can enable
@@ -175,9 +175,9 @@ phases](https://www.chromium.org/updates/ua-reduction). You will also need to
 if you rely on the platform version, device, or full build version information
 in the current `User-Agent` format.
 
-Also, we continue to [standardize existing names for Client
-Hints](https://groups.google.com/a/chromium.org/g/blink-dev/c/Y42bZ66L6Zo)** by
-adding the `Sec-CH-` header prefix where missing. Pending approval, we plan to
+We're continuing to [standardize existing names for Client
+Hints](https://groups.google.com/a/chromium.org/g/blink-dev/c/Y42bZ66L6Zo) by
+adding the `Sec-CH-` header prefix where missing. Pending approval, we hope to
 [expand the range of GREASE
 characters](https://groups.google.com/a/chromium.org/g/blink-dev/c/ueudFsZzT1M)
 for UA-CH.
@@ -185,8 +185,8 @@ for UA-CH.
 ## Show relevant content and ads
 
 As we move towards phasing out third-party cookies, we need to introduce APIs
-that enable the use cases that depended on them but **without** continuing to
-enable cross-site tracking.
+that allow the use cases that depended on them but **without** continuing to
+allow cross-site tracking.
 
 ### FLoC
 
@@ -206,8 +206,7 @@ Advertising Technology Community Group)](https://www.w3.org/community/patcg/)**.
 ## Measure digital ads
 
 As the companion to displaying ads without cross-site tracking, we need
-privacy-preserving mechanisms to enable measuring the effectiveness of those
-ads.
+privacy-preserving mechanisms to measure the effectiveness of those ads.
 
 ### Attribution Reporting API
 
@@ -232,8 +231,8 @@ protection. We need privacy-preserving alternatives here as well.
 
 The **[Trust Token](/docs/privacy-sandbox/trust-tokens/)** API is a proposal
 that allows one site to share a claim about a visitor—such as "I think they're
-human"—and enable other sites to verify that claim, again without identifying
-the individual.
+human"&mdash;and allow other sites to verify that claim, again without
+identifying the individual.
 
 Trust Tokens are one part of the overall strategy to tackle spam and fraud on
 the web. In the **["Anti-fraud for the web" breakout at
