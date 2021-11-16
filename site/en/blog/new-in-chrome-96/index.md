@@ -19,7 +19,7 @@ tags:
   - chrome-96
 ---
 
-{% YouTube id='u1n38aeVnVY' %}
+{% YouTube id='PPukHsOH_BI' %}
 
 Here's what you need to know:
 
