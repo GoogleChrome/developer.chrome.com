@@ -63,22 +63,38 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 
 <!-- ## Restored and improved CSS length edit and copy experince {: #length } -->
 
+## CSS の length の編集とコピーの挙動の復旧と改善 {: #length }
+
 <!-- The **copy CSS** and **edit as text** experience are restored for CSS properties with length. These experiences are broken in the last release. -->
+
+**copy CSS** と **edit as text** の対象がCSS プロパティと長さを合わせたものに戻されました。これらの挙動は直近のリリースでは壊れていました。
 
 <!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
 
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
+
 <!-- In addition, you can drag to adjust the unit value and update the unit type via the dropdown. This add-on length authoring feature should not impact the primary edit as text experience. -->
+
+加えて、単位の値をドラッグして調節でき、単位もドロップダウンで更新できるようになりました。この追加の編集機能はテキスト編集としての主な機能には影響を与えないはずです。
 
 <!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/YkvFZGBllRecee2EAzYf.mp4", autoplay="true", muted="true", loop="true", class="screenshot"  %} -->
 
+{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/YkvFZGBllRecee2EAzYf.mp4", autoplay="true", muted="true", loop="true", class="screenshot"  %}
+
 <!-- Please report via [goo.gle/length-feedback](https://goo.gle/length-feedback) if you found any issues. -->
 
+もし何か問題があれば [goo.gle/length-feedback](https://goo.gle/length-feedback) で報告してください。
+
 <!-- You can disable it via the **Settings** > **Experiments** > **Enable CSS length authoring tools in the Styles pane** checkbox. -->
+
+この機能は **Settings** > **Experiments** > **Enable CSS length authoring tools in the Styles pane** チェックボックスを使用して無効化できます。
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0042092ccbcdfb5b113c28b9a58c2cf1219b10c4 #}
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c8f39d4c60841439ebf75d1a2d8fdfe50e1355a9 #}
 
 <!-- Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993) -->
+
+Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.com/1172993)
 
 <!-- ## Rendering tab updates  -->
 
