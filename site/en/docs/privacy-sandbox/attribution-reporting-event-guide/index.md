@@ -922,7 +922,7 @@ If reports appear as generated and sent but don't seem to be received by your en
 
 ### Still not working?
 
-In case these troubleshooting tips didn't help 🤷🏻, please join the
+In case these troubleshooting tips didn't help 🤷🏻, join the
 [mailing list for developers](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)
 and ask your question!
 
