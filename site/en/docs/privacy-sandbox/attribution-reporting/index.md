@@ -6,7 +6,7 @@ subhead: >
 description: >
   The Attribution Reporting API makes it possible to measure when user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 date: 2021-05-18
-updated: 2021-10-20
+updated: 2021-16-11
 authors:
   - maudn
   - samdutton
@@ -20,6 +20,11 @@ Head over to [Attribution Reporting in five minutes](/docs/privacy-sandbox/attri
 
 - [Introduction to Attribution Reporting (Conversion Measurement)](/docs/privacy-sandbox/attribution-reporting-introduction) gives you an in-depth
   introduction to the API's use cases, features, and privacy model.
+- Event-level reports:
+
+  - [Event-level reports in the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-event-introduction/)
+  - [Using event-level reports in the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-event-guide/)
+
 - [FAQ: Impact of user-initiated data clearing on attribution reports](/docs/privacy-sandbox/attribution-reporting-data-clearing/)
 - [Migration guide (Chrome 92): Conversion Measurement API to Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-migration/)
 
@@ -42,7 +47,7 @@ _For developers:_
   repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) or on the [Attribution
   Reporting mailing list for
   developers](https://groups.google.com/u/0/a/chromium.org/g/attribution-reporting-api-dev).
-- [Not available at the moment for this API] Register for an origin trial to experiment with end
+- Register for an [origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) to experiment with end
   users on a deployed site.
 
 ## Join the discussion

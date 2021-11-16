@@ -224,7 +224,7 @@ Aggregate reports are best suited for **reporting** use cases. They help answer 
 such as _"What is my return on investment?"_.  
 Usage of aggregate reports for **optimization** use cases—for example, to optimize for a
 purchase value, which is not supported by event-level reports because the conversion data
-is too coarse—is an area of active research. See [Open questions](#open-questions).
+is too coarse—is an area of active research.
 
 {% Details %}  
 {% DetailsSummary 'h3' %}  
@@ -579,37 +579,6 @@ the following privacy mechanisms:
   use the API without a publisher's knowledge, because the Attribution Reporting API needs
   to be enabled in child iframes via a [Permission
   policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy).
-
-## Open questions
-
-A number of questions remain open and will be resolved as the API is incubated in the
-open. You're encouraged to [participate](#participate) in these discussions. In
-particular:
-
-- What is the right amount of noise to preserve privacy and usefulness?
-- How to support custom attribution models?
-- How to optimize for any conversion-side data that has a certain level of detail, such as
-  a purchase value?
-- What will qualify as a trusted server? One solution that is being assessed is to run
-  regular open-source audits. [Join the
-  discussion](https://github.com/WICG/conversion-measurement-api/issues/116).
-- How to offer more reporting flexibility, for example support delegation to more
-  reporting endpoints? [Join the
-  discussion](https://github.com/WICG/conversion-measurement-api/issues/96).
-- How to prevent fraud, e.g. via authentication using anonymous credentials? [Join the
-  discussion](https://github.com/WICG/conversion-measurement-api/labels/anti-fraud%20%2F%20auth).
-- If you're thinking of using this API for non-advertising use cases: what's missing, how
-  could the API be improved? [Open an
-  issue](https://github.com/WICG/conversion-measurement-api/issues)
-- How can implementers customize the privacy settings? [Join the
-  discussion](https://github.com/WICG/conversion-measurement-api/issues/99).
-
-{% Aside %}  
-This API combines multiple privacy techniques in order to achieve **privacy and
-usefulness**. This means that the 3-bit (or 1-bit for views) data limitation and other
-privacy mechanisms used by this API are a means to an end. They're subject to change. If
-there are ways for adtech companies to get more useful data for their use cases while
-achieving strong privacy guarantees, this API will evolve accordingly. {% endAside %}
 
 ## Attribution Reporting: all resources
 
