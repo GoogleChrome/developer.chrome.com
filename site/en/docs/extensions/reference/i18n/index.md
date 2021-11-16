@@ -169,7 +169,7 @@ name "Hola mundo".
 
 ![Four files: manifest.json and three messages.json files (for es, en, and en_GB).  The es and en files show entries for messages named "extName" and "colores"; the en_GB file has just one entry (for "colores").](i18n-strings.gif)
 
-### How to set your browser's locale
+### How to set your browser's locale {: #how-to-set-browsers-locale}
 
 To test translations, you might want to set your browser's locale. This section tells you how to set
 the locale in [Windows][9], [Mac OS X][10], [Linux][11], and [Chrome OS][12].

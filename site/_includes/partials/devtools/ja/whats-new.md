@@ -14,7 +14,7 @@
 * [Console での適切な `Intl` オブジェクトのプレビューと評価](/ja/blog/new-in-devtools-96/#intl)
 * [一貫性のある async スタックトレース](/ja/blog/new-in-devtools-96/#async)
 * [Console のサイドバーの維持](/ja/blog/new-in-devtools-96/#console-sidebar)
-* [Deprecated Application cache pane in the Application panel](/ja/blog/new-in-devtools-96/#app-cache)
+* [Application パネルの Application cache ペインの廃止](/ja/blog/new-in-devtools-96/#app-cache)
 * [[実験的] Application パネルの新しい Reporting API ペイン](/ja/blog/new-in-devtools-96/#reporting-api)
 
 ### Chrome 95 {: #chrome95 }

@@ -6,14 +6,13 @@ authors:
 date: 2021-10-25
 updated: 2021-10-25
 description:
-  ""
+  "新しい CSS Overview パネル, SS の prefers-contrast メディア機能のエミュレート, Chrome の Auto Dark Theme 機能のエミュレートなど"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/oyz4gDei2COAJ84nRJC8.jpg'
 alt: ''
 tags:
   - new-in-devtools
   - devtools
   - chrome-96
-draft: true
 ---
 
 <!-- start: translation instructions -->
@@ -27,6 +26,8 @@ draft: true
 *翻訳者の [technohippy](https://github.com/technohippy) さん、レビュアーの [lacolaco](https://github.com/lacolaco) さんと [yoichiro](https://github.com/yoichiro) さんに感謝いたします。*
 
 {% include 'partials/devtools/ja/banner.md' %}
+
+{% YouTube id='3CXbhnaFNEw' %}
 
 <!-- ## Preview feature: New CSS Overview panel {: #css-overview } -->
 
@@ -68,7 +69,7 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 
 <!-- In addition, you can drag to adjust the unit value and update the unit type via the dropdown. This add-on length authoring feature should not impact the primary edit as text experience. -->
 
-<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %} -->
+<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/YkvFZGBllRecee2EAzYf.mp4", autoplay="true", muted="true", loop="true", class="screenshot"  %} -->
 
 <!-- Please report via [goo.gle/length-feedback](https://goo.gle/length-feedback) if you found any issues. -->
 
