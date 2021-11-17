@@ -108,7 +108,7 @@ out whether new data adds to entropy. For example, knowing a person is from
 Australia doesn't reduce entropy if you already know the person is from
 Kangaroo Island.
 
-## Federated identity, federated login {: #federated-identity }
+## Federated identity (federated login) {: #federated-identity }
 
 A third-party platform to allow a user to sign in to a website, without
 requiring the site to implement their own identity service.
