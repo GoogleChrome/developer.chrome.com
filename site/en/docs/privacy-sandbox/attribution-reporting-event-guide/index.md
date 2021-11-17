@@ -3,8 +3,8 @@ layout: 'layouts/doc-post.njk'
 title: 'Using event-level reports in the Atribution Reporting API'
 subhead: >
   Learn how to use the Attribution Reporting API for click-through measurement with event-level reports.
-date: 2021-11-16
-updated: 2021-11-16
+date: 2021-11-17
+updated: 2021-11-17
 authors:
   - maudn
 ---
