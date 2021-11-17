@@ -20,6 +20,8 @@ tags:
 
 {% include 'partials/devtools/es/banner.md' %}
 
+{% YouTube id='3CXbhnaFNEw' %}
+
 ## Función de vista previa: Nuevo panel de Descripción General de CSS {: #css-overview }
 
 Utilice el nuevo panel **Descripción General de CSS / Resumen de CSS** para identificar posibles mejoras de CSS en su página.

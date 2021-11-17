@@ -36,7 +36,7 @@ Read [this article](/docs/devtools/css-overview) to learn more about the **CSS O
 
 Chromium issue: [1254557](https://crbug.com/1254557)
 
-## Restored and improved CSS length edit and copy experince {: #length }
+## Restored and improved CSS length edit and copy experience {: #length }
 
 The **copy CSS** and **edit as text** experience are restored for CSS properties with length. These experiences are broken in the last release.
 
