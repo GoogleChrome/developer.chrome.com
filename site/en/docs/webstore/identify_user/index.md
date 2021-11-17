@@ -19,11 +19,11 @@ To identify the user with Google OAuth2/OpenId, follow these steps:
 
 We'll go into detail about each step below.
 
-## Create your extension files
+## Create your extension files {: #create-extension-files}
 
 Begin by creating a directory and the following starter files.
 
-### manifest.json
+### manifest.json {: #manifest}
 
 Add the manifest by creating a file called `manifest.json` and include the following code.
 
@@ -38,11 +38,11 @@ Add the manifest by creating a file called `manifest.json` and include the follo
   },
   "background": {
     "service_worker": "background.js"
-  },
+  }
 }
 ```
 
-### background.js
+### background.js {: #background}
 
 Add the background service worker by creating a file called `background.js`. Include the following code.
 
@@ -54,13 +54,9 @@ chrome.action.onClicked.addListener(function () {
 })
 ```
 
-## Keep a consistent extension ID
-
 {% include 'partials/extensions/reusing-prod-extension-id.md' %}
 
-Add a generic partial with these steps and add to OAuth tutorial
-
-## Get the OAuth client ID
+## Get the OAuth client ID {: #get-client-id}
 
 Navigate to the [Google API Console][link] and create a new project. To get a OAuth client ID, follow these steps:
 
@@ -80,9 +76,9 @@ Navigate to the [Google API Console][link] and create a new project. To get a OA
 
 The console will provide an OAuth client ID. Keep this ID for later use.
 
-## Launch the Auth flow
+## Launch the Authorization flow {: #auth-flow}
 
-### Request the "identity" permission
+### Request the "identity" permission {: #identity-permission}
 
 To use the [Chrome Identity API][link], declare the `"identity"` permission in the `manifest.json`.
 
@@ -97,9 +93,12 @@ To use the [Chrome Identity API][link], declare the `"identity"` permission in t
 }
 ```
 
-### Construct the authorization URL
+### Construct the authorization URL {: #auth-url}
 
-Before the extension can make a request to [Google’s OAuth2 endpoint][link] using the Identity API, we need to construct an [authorization URL][link]. It must contain several request parameters including the client ID and redirect URI. In addition to the `openid` scope, you can request `profile` and/or `email` information. Update `background.js` to match the code below.
+Before the extension can make a request to [Google’s OAuth2 endpoint][link] using the Identity API,
+we need to construct an [authorization URL][link]. It must contain several request parameters
+including the client ID and redirect URI. In addition to the `openid` scope, you can request
+`profile` information and/or `email`. Update `background.js` to match the code below.
 
 ```javascript
 // background.js
@@ -125,7 +124,7 @@ chrome.action.onClicked.addListener(function () {
 
 Replace <CLIENT_ID> with the API key generated from the Google console. 
 
-### Add the Authentication flow
+### Retrieve a redirect URL {: #redirect-url}
 
 Now that the extension has the client ID, redirect URI, and OAuth URL, it can initiate Google's authentication flow. Use [`identity.launchWebAuthFlow`][link] to launch the web auth flow and retrieve a redirect URL. 
 
@@ -139,6 +138,7 @@ chrome.action.onClicked.addListener(function () {
   const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth')
 
 ...
+
   chrome.identity.launchWebAuthFlow(
     {
       url: oauthUrl.href,
@@ -151,7 +151,7 @@ chrome.action.onClicked.addListener(function () {
         const params = new URLSearchParams(urlHash)
         const jwt = params.get('id_token')
 
-        // Parse the JWT
+        // Parse the JSON Web Token
         const base64Url = jwt.split('.')[1]
         const base64 = base64Url.replace('-', '+').replace('_', '/')
         const token = JSON.parse(atob(base64))
@@ -165,20 +165,21 @@ chrome.action.onClicked.addListener(function () {
 
 {% Aside %}
 
-The above code is not production ready. We strongly encourage validating and decoding the JWT before
+The above code is **not** production ready. We strongly encourage validating and decoding the JWT before
 the information it contains is trusted. See [how to handle credential
 responses][credential-responses]
 
 {% endAside %}
 
-## View the user information
+## View the user information {: #user-info}
 
 Click the extension action button to start the web authentication flow. Sign in with your Google
 Account. 
 
 <!-- SCREENSHOT GOES HERE -->
 
-Inspect the background service worker console to view the user identity information.
+Inspect the background service worker console to view the user identity information. **TODO: Add
+instructions how to inspect bg.**
 
 <!-- SCREENSHOT GOES HERE -->
 
