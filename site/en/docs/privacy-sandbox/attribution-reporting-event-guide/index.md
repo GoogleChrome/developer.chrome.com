@@ -35,7 +35,7 @@ Features added to the API that are available in the origin trial that was [exten
 
 - [Better retry logics](https://bugs.chromium.org/p/chromium/issues/detail?id=1054127#c7) increases the chance for reports to be successfully sent.
 - [Custom attribution rules](/docs/privacy-sandbox/attribution-reporting-event-guide/#define-custom-attribution-rules) help you customize how the browser associates attribution trigger events (conversions) with source events (clicks). For example, this lets you define a first-click or probabilistic linear attribution model.
-- [Custom priorities for conversions](/docs/privacy-sandbox/attribution-reporting-event-guide/#prioritize-specific-conversions) make it possible to define rules to ensure that you will get reports for the conversions that matter most to you.
+- [Custom priorities for triggering attributions](/docs/privacy-sandbox/attribution-reporting-event-guide/#prioritize-specific-conversions) make it possible to define rules to ensure that you will get reports for the conversions that matter most to you.
 - [Deduplication](/docs/privacy-sandbox/attribution-reporting-event-guide/#deduplicate-reports) gives you a way to prevent unwanted duplicate reports.
 
 Additionally, a [number of enhancements to the debugging UI in Chrome](https://bugs.chromium.org/p/chromium/issues/list?q=conversion%20component%3AInternals%3EConversionMeasurement%20%22Dev%20Experience%3A%22%20status%3DFixed&can=1) make it easier to understand and debug the API's behavior, in particular when it comes to priorities and report sending.
