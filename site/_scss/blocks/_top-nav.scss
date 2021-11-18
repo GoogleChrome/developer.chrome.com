@@ -16,10 +16,11 @@ top-nav {
     }
   }
 
+  // Per-element opt-out for Auto Dark Theme. See https://crbug.com/1271390.
   .top-nav__logo {
-      svg {
-        color-scheme: only light;
-      }      
+    svg {
+      color-scheme: only light;
+    }      
   }
 }
 
