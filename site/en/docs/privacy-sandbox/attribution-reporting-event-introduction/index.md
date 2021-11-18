@@ -78,14 +78,9 @@ Event-level reports are suited to the following use cases:
 To generate event-level reports, the browser matches _attribution source events_ (clicks) with _attribution trigger data_ (conversion data) defined by an adtech. Later, the browser sends the reports to a predefined endpoint, with some delay and noise.
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/LmX5xkFFMmgG8cJEm78I.png", alt="Diagram that shows how Attribution Reporting with event-level reports work", width="800", height="517" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/LmX5xkFFMmgG8cJEm78I.png", alt="Diagram that shows how Attribution Reporting with event-level reports work", width="400", height="258" %}
  <figcaption>How Attribution Reporting with event-level reports works</figcaption>
 </figure>
- 
-{% Details %} 
-{% DetailsSummary 'h3' %} 
-How it works in detail: event-level reports 
-{% endDetailsSummary %}
 
 Ad elements (<code>a</code>) can be configured with attributes that are specific to attribution reporting:
 
@@ -154,8 +149,6 @@ If several triggers are registered for a given ad click, up to three correspondi
 reports will be sent.
 
 Reports are sent by the browser after a delay⏤days or sometimes weeks after an attribution trigger (conversion). The trigger data may be noised.
-
-{% endDetails %}
 
 ## API behavior and parameters
 

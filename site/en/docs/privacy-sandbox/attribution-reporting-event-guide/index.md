@@ -43,7 +43,7 @@ Features added to the API that are available in the origin trial that was [exten
 
 Additionally, a [number of enhancements to the debugging UI in Chrome](https://bugs.chromium.org/p/chromium/issues/list?q=conversion%20component%3AInternals%3EConversionMeasurement%20%22Dev%20Experience%3A%22%20status%3DFixed&can=1) make it easier to understand and debug the API's behavior, in particular when it comes to priorities and report sending.
 
-## Demo!
+## Demo
 
 To generate real event-level reports and see them in your browser, try the [live demo](https://goo.gle/sppi-devrel-eventlevel).
 
