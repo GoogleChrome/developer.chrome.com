@@ -46,7 +46,7 @@ This post focuses on event-level reports.
 **Event-level reports** associate an ad click with coarse conversion data.
 
 <figure>
-  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/WQi0OKAUfD6Agqx9j3s5.png", alt="Event-level: example report", width="800", height="570" %}
+  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/WQi0OKAUfD6Agqx9j3s5.png", alt="Event-level: example report", width="400", height="235" %}
   <figcaption>Example event-level report: Click ID 200400600 on <code>news.example</code> (attached to user ID Bob_Doe on <code>news.example</code>) has led to a purchase on <code>shop.example</code>.</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Event-level reports are suited to the following use cases:
 To generate event-level reports, the browser matches _attribution source events_ (clicks) with _attribution trigger data_ (conversion data) defined by an adtech. Later, the browser sends the reports to a predefined endpoint, with some delay and noise.
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/LmX5xkFFMmgG8cJEm78I.png", alt="Diagram that shows how Attribution Reporting with event-level reports work", width="400", height="258" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/LmX5xkFFMmgG8cJEm78I.png", alt="Diagram that shows how Attribution Reporting with event-level reports work", width="800", height="517" %}
  <figcaption>How Attribution Reporting with event-level reports works</figcaption>
 </figure>
 
@@ -318,16 +318,18 @@ In Chrome, report scheduling for clicks works as follows:
         </tbody>
     </table>
 </div>
- 
+
+{% endDetails %}
+
 ### Attribution model
- 
+
 By default, the attribution model is **last-touch**: for a given conversion, only the last
 engagement with an ad will generate a report.
- 
+
 You can change this behavior by configuring [source-side priorities](/docs/privacy-sandbox/attribution-reporting-event-guide/#define-custom-attribution-rules).
- 
+
 #### Example
- 
+
 A user visits `news.example` and clicks an ad for `shoes.example`. On the next day, they visit `other-news.example` and again click an ad for `shoes.example`. A few days later, they visit `shoes.example` and convert by making a purchase.
 
 By default, unless you configure custom [source-side priorities](/docs/privacy-sandbox/attribution-reporting-event-guide/#define-custom-attribution-rules), you'll receive a report that attributes this conversion to the ad clicked on `other-news.example`.
