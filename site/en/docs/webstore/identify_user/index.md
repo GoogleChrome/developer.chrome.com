@@ -173,15 +173,16 @@ responses][credential-responses]
 
 ## View the user information {: #user-info}
 
-Click the extension action button to start the web authentication flow. Sign in with your Google
-Account. 
+Reload and return to the extension. Click the extension action button to start the web authentication flow. Sign in with your Google
+Account. The extension should log the token containing the user information.
 
-<!-- SCREENSHOT GOES HERE -->
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/CETlvMvFpe23QyIAq8Lx.png", alt="ALT_TEXT_HERE",
+width="558", height="628" %}
 
-Inspect the background service worker console to view the user identity information. **TODO: Add
-instructions how to inspect bg.**
+To view the user identity information, click inspect the background service worker console.
 
-<!-- SCREENSHOT GOES HERE -->
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/450NKaekvVNpnAUXz7QJ.png", alt="ALT_TEXT_HERE",
+width="800", height="162" %}
 
 ## See also
 
