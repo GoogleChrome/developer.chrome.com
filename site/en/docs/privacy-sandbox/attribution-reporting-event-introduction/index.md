@@ -286,7 +286,7 @@ When this click is registered, the browser⏤on the user's device⏤stores the c
 Later on, a trigger (conversion) takes place on a page.
 The browser will match this trigger with the source event ID `1298765678762` in the following conditions:
 
-- The page on which the trigger (conversion) took place matches **the eTLD+1 that was provided in the source's `attributiondestination`**. Example: `shoes.example/checkout`.
+- The page on which the trigger (conversion) took place matches **the [eTLD+1](https://web.dev/same-site-same-origin/#site) that was provided in the source's `attributiondestination`**. Example: `shoes.example/checkout`.
 - The attribution is triggered (that is, the conversion is registered) via a request to the **same `attributionreportto` origin** (that then redirects to a `.well-known` location). Example: `adtech.example`.
 
 <figure>
