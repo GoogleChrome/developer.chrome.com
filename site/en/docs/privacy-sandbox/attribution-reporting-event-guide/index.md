@@ -77,7 +77,7 @@ How to enable the API in your browser
 
 Enable the API via a _flag_. A flag is a special setting in your browser.
 
-1. Type or paste `chrome://flags/#enable-experimental-web-platform-features` in Chrome's URL bar. This works on mobile, too.
+1. Enter `chrome://flags/#enable-experimental-web-platform-features` in Chrome's URL bar. This works on mobile, too.
 2. Click **Enabled.**
 3. Restart Chrome.
 4. Ensure that Privacy Sandbox features are turned **on** at `chrome://settings/privacySandbox`. If
@@ -140,21 +140,21 @@ How to set up an origin trial
 2. Search for **Conversion Measurement** or **Attribution Reporting** and click **Register**.
 3. Fill in the form:
 
-   - Third-party matching: if you're planning on using the API as a third-party—for
+   - **Third-party matching**. Select this if you're planning on using the API as a third-party—for
      example, if you need to use the API in a script you wrote that is executed on origins you
-     don't own—check this. This is convenient if you need to test at scale across different
+     don't own. This is convenient if you need to test at scale across different
      sites. Learn more in
-     [What are third-party origin trials?](/blog/third-party-origin-trials/)
+     [What are third-party origin trials](/blog/third-party-origin-trials/).
 
-   - Subdomain matching: if you need your token to match all subdomains of the origin—for
+   - **Subdomain matching**. Select this if you need your token to match all subdomains of the origin—for
      example, if you need your `https://shop.example` token to be valid in
-     `https://shoes.shop.example` as well—check this.
+     `https://shoes.shop.example` as well.
 
-   - Usage restriction: keep **Standard Limit** (this should already be set as default).
+   - **Usage restriction**. Keep **Standard Limit** (this should already be set as default).
 
 4. Click **Register**.
-5. You get back an origin
-   trial token, which is essentially a long string. Add this token where needed via an HTTP header, meta tag or JavaScript.
+5. You'll get back an origin
+   trial token, which is a long string. Add this token where needed via an HTTP header, meta tag or JavaScript.
 
 {% Aside 'gotchas' %}
 
@@ -247,7 +247,7 @@ both `https://advertiser.example` and `https://shop.advertiser.example` will be 
 
 {% Details %}
 {% DetailsSummary %}
-Do's and Don'ts for `attributiondestination`
+Do's and don'ts for `attributiondestination`
 {% endDetailsSummary %}
 
 {% Compare 'better' %}
@@ -308,7 +308,7 @@ Requirements
 
 {% Details %}
 {% DetailsSummary %}
-Do's and Don'ts for `attributionreportto`
+Do's and don'ts for `attributionreportto`
 {% endDetailsSummary %}
 
 {% Compare 'better' %}
@@ -375,7 +375,7 @@ Example value
 : `"https://advertiser.example/blue-shoes"`
 
 {% Aside %}
-**Why is a distinct attribute `attributiondestination` needed, on top of `href`? 🤔**
+Why is a distinct attribute `attributiondestination` needed, on top of `href`? 🤔
 
 Having two separate attributes makes it possible to support **redirects** after click: in redirects, the final destination doesn't match `href`.
 
