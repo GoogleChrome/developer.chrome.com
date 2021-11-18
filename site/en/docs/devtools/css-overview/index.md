@@ -28,6 +28,11 @@ This is a preview feature in Chrome 96. Our team is actively working on this fea
 
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YmnjqTZFqJOrk9TCwLbo.png", alt="Show CSS Overview command in the Command menu", width="800", height="509" %}
 
+     If the **CSS Overview** panel is not listed under **>More tools**:
+    
+    1. [Open DevTools](/docs/devtools/open).
+    2. Click on **Settings** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Experiments** > enable **CSS Overview**.
+
 
 ## Run and re-run a CSS Overview report {: #run }
 
