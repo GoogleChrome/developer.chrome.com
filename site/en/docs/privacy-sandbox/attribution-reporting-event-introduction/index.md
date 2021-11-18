@@ -18,7 +18,7 @@ Event-level reports give access to **detailed display-side data at the level of 
 This post is for you if:
 
 - You're a developer getting ready to experiment with the Attribution Reporting API with event-level reports.
-- You want to gain a better understanding of the API's use cases and behavior for event-level reports⏤What are these reports good for? What data do they give you access to? When are they sent?
+- You want to gain a better understanding of the API's use cases and behavior for event-level reports. What are these reports good for? What data do they give you access to? When are they sent?
 
 ## Before you read this
 
@@ -33,7 +33,11 @@ The Attribution Reporting API enables sites to measure conversions in the follow
 - Ads in a third-party iframe, such as ads on a publisher site that uses a third-party adtech provider.
 - Ads in a first-party context, such as ads on a social network or a search engine results page, or a publisher serving their own ads.
 
-This API can generate two types of insights: [aggregate reports](/docs/privacy-sandbox/attribution-reporting-introduction/#:~:text=or%20invalid%20activity.-,Aggregate%20reports,-%2C%20on%20the%20other), and event-level reports. This post focuses on the latter.
+This API can generate two types of insights: 
+- [aggregate reports](/docs/privacy-sandbox/attribution-reporting-introduction/#:~:text=or%20invalid%20activity.-,Aggregate%20reports,-%2C%20on%20the%20other)
+- event-level reports
+
+This post focuses on event-level reports.
 
 **Event-level reports** associate an ad click with coarse conversion data.
 
@@ -44,8 +48,8 @@ This API can generate two types of insights: [aggregate reports](/docs/privacy-s
 
 Event-level reports are suited to the following use cases:
 
-- **Optimization**. Event-level reports help answer questions such as _"How can
-  I improve my return on investment?"_. They can be used to optimize for ad
+- **Optimization**. Event-level reports help answer questions such as "How can
+  I improve my return on investment?". They can be useful for optimizing ad
   placement, since reports can include a unique ad or click ID. This way, event-level reports can provide training data for machine learning models.
 - **Coarse reporting**. Event-level reports currently support 3 bits of conversion data: a conversion can be associated to one of eight categories. This doesn't give you access to more granular data such as a specific purchase value or conversion time.
 - **Fraud detection**. The data in some reports can be useful for ad fraud
@@ -165,7 +169,7 @@ When trigger data has its values randomized in some way, this creates _noised da
 
 This means that **a small percentage of the time, a report will contain inaccurate trigger data instead of the real data**.
 
-In Chrome, noising works as follows: 5% of the time, inaccurate trigger data will be sent instead of the real trigger data.
+In Chrome, 5% of the time the browser will send inaccurate trigger data instead of real.
 
 #### Example
 
@@ -200,9 +204,9 @@ Even though they have converted four times, by default, you'll receive a report 
 
 ### Report scheduling
 
-Reports are **not sent immediately after a user converts**. They're sent with a delay. This is a privacy protection.
+Reports are **not sent immediately after a user converts**. To protect privacy, reports are sent with a delay during a **reporting window**.
 
-After the initial ad click, a schedule of **reporting windows** begins. Each reporting window has a
+After the initial ad click, a schedule of reporting windows begins. Each reporting window has a
 deadline. Conversions registered before that deadline will be sent at the end of that window.
 
 {% Aside 'caution' %}
