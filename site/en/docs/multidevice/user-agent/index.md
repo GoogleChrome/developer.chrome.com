@@ -113,7 +113,7 @@ release.
 AppleWebKit/537.36 (KHTML, like Gecko) 
 Version/4.0 <mark>Chrome/43.0.2357.65</mark> Mobile Safari/537.36</code></pre>
 
-**WebView UA in Android 10 and Above**
+**WebView UA in Android 10 and above**
 
 In the newer versions of WebView, you can differentiate the WebView by looking for the wv field as
 highlighted below.
