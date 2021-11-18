@@ -305,7 +305,7 @@ Data clearing on the user's end⏤for example, when a user deletes their browsin
 
 Head over to [FAQ: Impact of user-initiated data clearing on attribution reports](/docs/privacy-sandbox/attribution-reporting-data-clearing/) for details.
 
-## Summary: Browser API parameters
+## Summary: API behavior and parameters
 
 <table>
 <tbody>
@@ -321,12 +321,17 @@ Head over to [FAQ: Impact of user-initiated data clearing on attribution reports
 <td>Maximum 3 bits, that is an integer between 0 and 7.</td>
 </tr>
 <tr>
-<td>Number of reports that can be generated per source event</td>
-<td>Maximum 3</td>
-</tr>
-<tr>
 <td>Noise on the trigger data value (conversion side)</td>
 <td>5% of the time in Chrome.</td>
+</tr>
+<tr>
+<td>Number of configurable reporting endpoints<br>
+</td>
+<td>Maximum 1.</td>
+</tr>
+<tr>
+<td>Number of reports that can be generated per source event</td>
+<td>Maximum 3.</td>
 </tr>
 <tr>
 <td>Report scheduling and delays</td>
