@@ -38,8 +38,8 @@ The Attribution Reporting API enables sites to measure conversions in the follow
 
 This API can generate two types of insights:
 
-- [aggregate reports](/docs/privacy-sandbox/attribution-reporting-introduction/#:~:text=or%20invalid%20activity.-,Aggregate%20reports,-%2C%20on%20the%20other)
-- event-level reports
+- [Aggregate reports](/docs/privacy-sandbox/attribution-reporting-introduction/#:~:text=or%20invalid%20activity.-,Aggregate%20reports,-%2C%20on%20the%20other)
+- Event-level reports
 
 This post focuses on event-level reports.
 
@@ -224,7 +224,7 @@ Once the expiry time is reached⏤the duration of time specified in `attribution
 
 #### Example
 
-If a user clicks an ad and converts three days later, you may receive the report about seven days
+If a user clicks an ad and converts three days later, you may receive the report approximately seven days
 later.
 
 {% Details %}
@@ -234,7 +234,7 @@ Report scheduling: detail
 
 In Chrome, report scheduling for clicks works as follows:
 
-<div class="w-table-wrapper"><table class="w-table--top-align"><thead><tr><th>Value of <code >attributionexpiry</code><br></th><th>Depending on the conversion time, a report is sent (if the browser is open)...</th><th>Number of reporting windows</th></tr></thead><tbody><tr><td>30 days (the default and maximum value)</td><td><ul><li>2 days after the ad was clicked</li><li>or 7 days after click</li><li>or ((<code>attributionexpiry</code>= 30 days) + 1 hour) after click.</li></ul></td><td>3</td></tr><tr><td>Between 7 and 30 days</td><td><ul><li>2 days after click</li><li>or 7 days after click</li><li>or (<code>attributionexpiry</code> + 1 hour) after click.</li></ul></td><td>3</td></tr><tr><td>Between 2 and 7 days</td><td><ul><li>2 days after click</li><li>or (<code>attributionexpiry</code> + 1 hour) after click.</li></ul></td><td>2</td></tr><tr><td>Under 2 days</td><td><ul><li>(2 days + 1 hour) after click</li></ul></td><td>1</td></tr></tbody></table></div>
+<div class="w-table-wrapper"><table class="w-table--top-align"><thead><tr><th>Value of <code>attributionexpiry</code><br></th><th>Depending on the conversion time, a report is sent (if the browser is open)...</th><th>Number of reporting windows</th></tr></thead><tbody><tr><td>30 days (the default and maximum value)</td><td><ul><li>2 days after the ad was clicked</li><li>or 7 days after click</li><li>or ((<code>attributionexpiry</code>= 30 days) + 1 hour) after click.</li></ul></td><td>3</td></tr><tr><td>Between 7 and 30 days</td><td><ul><li>2 days after click</li><li>or 7 days after click</li><li>or (<code>attributionexpiry</code> + 1 hour) after click.</li></ul></td><td>3</td></tr><tr><td>Between 2 and 7 days</td><td><ul><li>2 days after click</li><li>or (<code>attributionexpiry</code> + 1 hour) after click.</li></ul></td><td>2</td></tr><tr><td>Under 2 days</td><td><ul><li>(2 days + 1 hour) after click</li></ul></td><td>1</td></tr></tbody></table></div>
 {% endDetails %}
  
 ### Attribution model
@@ -253,10 +253,35 @@ By default, unless you configure custom [source-side priorities](/docs/privacy-s
 ### Matching source and trigger data
 
 Let's take a given ad click (source event) with an click ID (source event ID) of `1298765678762`.
-When this click is registered, the browser⏤on the user's device⏤stores the click ID `1298765678762`, and alongside it:
+When this click is registered, the browser⏤on the user's device⏤stores the click ID `1298765678762`, and alongside the following data:
 
-- `attributiondestination`. Typically, this is an advertiser site. Example: `shoes.example`.
-- `attributionreportto`. Typically, this is an adtech endpoint. Example: `adtech.example`.
+<table>
+<thead>
+
+<tr>
+<th>Name
+</th>
+<th>Value</th>
+<th>Example
+</th>
+
+</thead>
+
+<tbody>
+<tr>
+<td><code>attributiondestination</code>
+</td>
+<td>Typically, an advertiser site.</td>
+<td><code>shoes.example</code>
+</tr>
+<tr>
+<td><code>attributionreportto</code>
+</td>
+<td>Typically, an adtech endpoint.</td>
+<td><code>adtech.example</code>
+</tr>
+</tbody>
+</table>
 
 Later on, a trigger (conversion) takes place on a page.
 The browser will match this trigger with the source event ID `1298765678762` in the following conditions:
