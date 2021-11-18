@@ -115,10 +115,12 @@ Version/4.0 <mark>Chrome/43.0.2357.65</mark> Mobile Safari/537.36</code></pre>
 
 **WebView UA in Android 10 and above**
 
-In the newer versions of WebView, you can differentiate the WebView by looking for the wv field as
-highlighted below.
+In the newer versions of WebView, you can differentiate the WebView by looking for the `wv` field as
+highlighted in the following string.
 
-<pre><code>Mozilla/5.0 (Linux; U; Android 10; SM-G960F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 <mark>Chrome/95.0.4638.50</mark> Mobile Safari/537.36 OPR/60.0.2254.59405</code></pre>
+<pre><code>Mozilla/5.0 (Linux; U; Android 10; SM-G960F Build/QP1A.190711.020; <mark>wv</mark>)
+AppleWebKit/537.36 (KHTML, like Gecko) 
+Version/4.0 Chrome/95.0.4638.50 Mobile Safari/537.36 OPR/60.0.2254.59405</code></pre>
 
 [1]: https://play.google.com/store/apps/details?id=com.android.chrome
 [2]: /docs/multidevice/webview/
