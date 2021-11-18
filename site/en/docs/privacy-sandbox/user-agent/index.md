@@ -22,11 +22,11 @@ authors:
 User-Agent (UA) reduction is the effort to minimize the identifying information
 shared in the User-Agent string which may be
 [used for passive fingerprinting](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/#unsanctioned-tracking-tracking-without-user-control).
-As these changes are
-[rolled out](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html), 
+As these
+[changes are rolled out](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html), 
 all resource requests will have a reduced `User-Agent` header. As a result,
 the returns from certain `Navigator` interfaces will be reduced, including:
-`navigator.userAgent`, `navigator.appVersion`, and `navigator.platform``.
+`navigator.userAgent`, `navigator.appVersion`, and `navigator.platform`.
 
 Web developers should
 [review site code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
