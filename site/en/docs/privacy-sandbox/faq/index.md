@@ -49,13 +49,13 @@ be found in the
 
 ### How can I keep track of changes and progress in the Privacy Sandbox?
 
-You can follow the monthly updates to the ["Progress in the Privacy Sandbox" series](https://developer.chrome.com/tags/progress-in-the-privacy-sandbox/) of articles which also includes an [RSS / Atom feed where you can subscribe](https://developer.chrome.com/feeds/progress-in-the-privacy-sandbox.xml) with your preferred reader.
+You can follow the monthly updates to the [Progress in the Privacy Sandbox](https://developer.chrome.com/tags/progress-in-the-privacy-sandbox/) series of articles which also includes an [RSS / Atom feed where you can subscribe](https://developer.chrome.com/feeds/progress-in-the-privacy-sandbox.xml) with your preferred reader.
 
 The article series links to the matching monthly updates to the [Privacy Sandbox timeline](https://privacysandbox.com/timeline/) which shows the current status and schedule for proposals.
 
 These high-level resources will provide signposts to changes across the project, but for individual proposals where you want to follow in detail you should:
 
- - Watch or Star the associated repo in [GitHub](https://github.com/) to get notification of new issues and updates
+ - Watch or Star proposal repos on GitHub to get notification of new issues and updates: the Privacy Sandbox [status page](/docs/privacy-sandbox/status/) provides a link to the repo for each proposal
  - Join the associated [W3C group](https://www.w3.org/groups/) for regular meetings discussing the proposal detail
  - Star the associated entry on [Chrome Platform Status](chromestatus.com) for email updates on Chrome implementation changes
 
