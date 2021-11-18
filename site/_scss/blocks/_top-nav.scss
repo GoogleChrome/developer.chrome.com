@@ -15,6 +15,12 @@ top-nav {
       grid-template-columns: 1fr 2fr 1fr;
     }
   }
+
+  .top-nav__logo {
+      svg {
+        color-scheme: only light;
+      }      
+  }
 }
 
 top-nav[data-search-active] {
