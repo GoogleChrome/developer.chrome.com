@@ -596,7 +596,7 @@ app.get('/conversion', (req, res) => {
 _The example code in this section would live on the attribution trigger (conversion) side, for example in an adtech
 company's script embedded in an advertiser's site._
 
-To deduplicate reports, use a deduplication key, settable as query parameter (`dedup-key`) in the attribution redirect request.
+To deduplicate reports, use a deduplication key, that can be set as a query parameter (`dedup-key`) in the attribution redirect request.
 `dedup-key` will be used to deduplicate triggers which contain the same `dedup-key` for a single source.
 `dedup-key` is a 64-bit integer. It must be unique.
 

@@ -89,12 +89,49 @@ How it works in detail: event-level reports
 
 Ad elements (<code>a</code>) can be configured with attributes that are specific to attribution reporting:
 
-- Custom data to attach to an ad click on the publisher's side, for example a
-  click ID or campaign ID // `attributionsourceeventid`
-- The site for which an attribution trigger (conversion) is expected for this ad. // `attributiondestination`
-- The reporting endpoint that will be notified of conversions, namely the endpoint that will receive reports sent by the user's browser. // `attributionreportto`
-- Optionally, the duration for which conversions can be attributed to a click on this ad—from the moment the ad is clicked. // `attributionexpiry`
-- Optionally, a priority to assign to this source. // `attributionsourcepriority`
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>attributionsourceeventid</code>
+      </td>
+      <td>Custom data to attach to an ad click on the publisher's side, for example a
+  click ID or campaign ID.</td>
+    </tr>
+    <tr>
+      <td>
+        <code>attributiondestination</code>
+      </td>
+      <td>The site for which an attribution trigger (conversion) is expected for this ad.</td>
+    </tr>
+    <tr>
+      <td>
+        <code>attributionreportto</code>
+      </td>
+      <td>The reporting endpoint that will be notified of conversions, namely the endpoint that will receive reports sent by the user's browser.</td>
+    </tr>
+    <tr>
+      <td>
+        (Optional)
+        <code>attributionexpiry</code>
+      </td>
+      <td>The duration for which conversions can be attributed to a click on this ad—from the moment the ad is clicked.</td>
+    </tr>
+    <tr>
+      <td>
+        (Optional)
+        <code>attributionsourcepriority</code>
+      </td>
+      <td>A priority to assign to this source.</td>
+    </tr>
+  </tbody>
+</table>
 
 It's also possible to register a source for navigations [initiated by
 `window.open()`](/docs/privacy-sandbox/attribution-reporting-event-guide/#register-clicks-with-windowopen).
@@ -234,8 +271,60 @@ Report scheduling: detail
 
 In Chrome, report scheduling for clicks works as follows:
 
-<div class="w-table-wrapper"><table class="w-table--top-align"><thead><tr><th>Value of <code>attributionexpiry</code><br></th><th>Depending on the conversion time, a report is sent (if the browser is open)...</th><th>Number of reporting windows</th></tr></thead><tbody><tr><td>30 days (the default and maximum value)</td><td><ul><li>2 days after the ad was clicked</li><li>or 7 days after click</li><li>or ((<code>attributionexpiry</code>= 30 days) + 1 hour) after click.</li></ul></td><td>3</td></tr><tr><td>Between 7 and 30 days</td><td><ul><li>2 days after click</li><li>or 7 days after click</li><li>or (<code>attributionexpiry</code> + 1 hour) after click.</li></ul></td><td>3</td></tr><tr><td>Between 2 and 7 days</td><td><ul><li>2 days after click</li><li>or (<code>attributionexpiry</code> + 1 hour) after click.</li></ul></td><td>2</td></tr><tr><td>Under 2 days</td><td><ul><li>(2 days + 1 hour) after click</li></ul></td><td>1</td></tr></tbody></table></div>
-{% endDetails %}
+<div class="w-table-wrapper">
+    <table class="w-table--top-align with-heading-tint">
+        <thead>
+            <tr>
+                <th>Value of <code>attributionexpiry</code><br></th>
+                <th>Time a report is sent, depending on the conversion time and whether the browser is open</th>
+                <th>Number of reporting windows</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>30 days (the default and maximum value)</td>
+                <td>
+                    <ul>
+                        <li>2 days after the click</li>
+                        <li>or 7 days after the click</li>
+                        <li>or at maximum, 30 days + 1 hour after the click</li>
+                    </ul>
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Between 7 and 30 days</td>
+                <td>
+                    <ul>
+                        <li>2 days after the click</li>
+                        <li>or 7 days after the click</li>
+                        <li>or the value of <code>attributionexpiry</code> + 1 hour after the click</li>
+                    </ul>
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Between 2 and 7 days</td>
+                <td>
+                    <ul>
+                        <li>2 days after click</li>
+                        <li>or at maximum, the value of <code>attributionexpiry</code> + 1 hour after the click</li>
+                    </ul>
+                </td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Under 2 days</td>
+                <td>
+                    <ul>
+                        <li>2 days + 1 hour after the click</li>
+                    </ul>
+                </td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
  
 ### Attribution model
  
@@ -256,31 +345,29 @@ Let's take a given ad click (source event) with an click ID (source event ID) of
 When this click is registered, the browser⏤on the user's device⏤stores the click ID `1298765678762`, and alongside the following data:
 
 <table>
-<thead>
-
-<tr>
-<th>Name
-</th>
-<th>Value</th>
-<th>Example
-</th>
-
-</thead>
-
-<tbody>
-<tr>
-<td><code>attributiondestination</code>
-</td>
-<td>Typically, an advertiser site.</td>
-<td><code>shoes.example</code>
-</tr>
-<tr>
-<td><code>attributionreportto</code>
-</td>
-<td>Typically, an adtech endpoint.</td>
-<td><code>adtech.example</code>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>attributiondestination</code>
+      </td>
+      <td>Typically, an advertiser site.</td>
+      <td><code>shoes.example</code></td>
+    </tr>
+    <tr>
+      <td>
+        <code>attributionreportto</code>
+      </td>
+      <td>Typically, an adtech endpoint.</td>
+      <td><code>adtech.example</code></td>
+    </tr>
+  </tbody>
 </table>
 
 Later on, a trigger (conversion) takes place on a page.
@@ -310,9 +397,9 @@ Head over to [FAQ: Impact of user-initiated data clearing on attribution reports
 <table>
 <tbody>
 <tr>
-<td>Source data (display side)<br>
+<td>Source data (display side)<td>
 <code>attributionsourceeventid</code><br>
-</td>
+</th>
 <td>Maximum 64 bits, that is a large integer (between 0 and 2^64 - 1 = 18,446,744,073,709,551,615)</td>
 </tr>
 <tr>
