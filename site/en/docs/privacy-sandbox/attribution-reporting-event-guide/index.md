@@ -1,10 +1,13 @@
 ---
-layout: 'layouts/doc-post.njk'
+layout: 'layouts/blog-post.njk'
 title: 'Using event-level reports in the Atribution Reporting API'
 subhead: >
   Learn how to use the Attribution Reporting API for click-through measurement with event-level reports.
-date: 2021-11-17
-updated: 2021-11-17
+date: 2021-11-19
+updated: 2021-11-19
+hero: 'image/O2RNUyVSLubjvENAT3e7JSdqSOx1/KG5TmtHkzxFuMDodX6mO.jpeg'
+alt: >
+  Ruler on blue background
 authors:
   - maudn
 ---
@@ -941,7 +944,3 @@ If you're looking for ways to troubleshoot and debug at scale, your input is nee
 [Join ongoing discussions](https://github.com/WICG/conversion-measurement-api/labels/debugging-monitoring)
 and share what could be done to make debugging at scale easier for you.
 {% endAside %}
-
-## Attribution Reporting: all resources
-
-See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/).

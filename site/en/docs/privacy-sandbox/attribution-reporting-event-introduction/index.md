@@ -1,10 +1,13 @@
 ---
-layout: 'layouts/doc-post.njk'
+layout: 'layouts/blog-post.njk'
 title: 'Event-level reports in the Attribution Reporting API '
 subhead: >
   Learn the basics of ad conversion measurement with the Attribution Reporting API with event-level reports.
-date: 2021-11-17
-updated: 2021-11-17
+date: 2021-11-19
+updated: 2021-11-19
+hero: 'image/O2RNUyVSLubjvENAT3e7JSdqSOx1/DNYjVyAo6FG6Y8z80VkD.jpeg'
+alt: >
+  Ruler on yellow background
 authors:
   - maudn
 ---
@@ -321,7 +324,3 @@ this demo code as needed.
 Now that you've ramped up on the key properties of event-level reports, you're ready to experiment!
 
 Head over to [Using event-level reports in the Attribution Reporting API](/docs/privacy-sandbox/attribution-reporting-event-guide/) to get started.
-
-## Attribution Reporting: all resources
-
-See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/).
