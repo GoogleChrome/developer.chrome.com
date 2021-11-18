@@ -33,7 +33,8 @@ The Attribution Reporting API enables sites to measure conversions in the follow
 - Ads in a third-party iframe, such as ads on a publisher site that uses a third-party adtech provider.
 - Ads in a first-party context, such as ads on a social network or a search engine results page, or a publisher serving their own ads.
 
-This API can generate two types of insights: 
+This API can generate two types of insights:
+
 - [aggregate reports](/docs/privacy-sandbox/attribution-reporting-introduction/#:~:text=or%20invalid%20activity.-,Aggregate%20reports,-%2C%20on%20the%20other)
 - event-level reports
 
@@ -42,7 +43,7 @@ This post focuses on event-level reports.
 **Event-level reports** associate an ad click with coarse conversion data.
 
 <figure>
-  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/WQi0OKAUfD6Agqx9j3s5.png", alt="ALT_TEXT_HERE", width="800", height="570" %}
+  {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/WQi0OKAUfD6Agqx9j3s5.png", alt="Event-level: example report", width="800", height="570" %}
   <figcaption>Example event-level report: Click ID 200400600 on <code>news.example</code> (attached to user ID Bob_Doe on <code>news.example</code>) has led to a purchase on <code>shop.example</code>.</figcaption>
 </figure>
 
@@ -74,37 +75,38 @@ Event-level reports are suited to the following use cases:
 To generate event-level reports, the browser matches _attribution source events_ (clicks) with _attribution trigger data_ (conversion data) defined by an adtech. Later, the browser sends the reports to a predefined endpoint, with some delay and noise.
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/LmX5xkFFMmgG8cJEm78I.png", alt="ALT_TEXT_HERE", width="800", height="517" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/LmX5xkFFMmgG8cJEm78I.png", alt="Diagram that shows how Attribution Reporting with event-level reports work", width="800", height="517" %}
  <figcaption>How Attribution Reporting with event-level reports works</figcaption>
 </figure>
  
 {% Details %} 
 {% DetailsSummary 'h3' %} 
 How it works in detail: event-level reports 
-{% endDetailsSummary %} 
-Ad elements (`a`) can be configured with attributes that are specific to attribution reporting:
- 
+{% endDetailsSummary %}
+
+Ad elements (<code>a</code>) can be configured with attributes that are specific to attribution reporting:
+
 - Custom data to attach to an ad click on the publisher's side, for example a
- click ID or campaign ID // `attributionsourceeventid`
+  click ID or campaign ID // `attributionsourceeventid`
 - The site for which an attribution trigger (conversion) is expected for this ad. // `attributiondestination`
 - The reporting endpoint that will be notified of conversions, namely the endpoint that will receive reports sent by the user's browser. // `attributionreportto`
 - Optionally, the duration for which conversions can be attributed to a click on this ad—from the moment the ad is clicked. // `attributionexpiry`
 - Optionally, a priority to assign to this source. // `attributionsourcepriority`
- 
+
 It's also possible to register a source for navigations [initiated by
 `window.open()`](/docs/privacy-sandbox/attribution-reporting-event-guide/#register-clicks-with-windowopen).
- 
+
 When the user clicks this ad, the browser—on the user's local
 device—records this event, alongside the attribution configuration data that was
 specified.
- 
+
 Later on, the user visits the advertiser's website and performs an action that the
 advertiser or their adtech provider categorizes as a conversion, such as a purchase. When
 this happens, the advertiser or adtech provider triggers an attribution: it asks the browser to record an attribution and attaches some data to it, the trigger data. The browser then matches the ad click and attribution trigger data.
- 
+
 Finally, the browser schedules a report to be sent to the endpoint specified on the ad
 side. This report includes:
- 
+
 - Custom source-side data that the adtech or advertiser attached to the ad click.
 - Custom data from the attribution side (trigger data), with some noise.
 
@@ -215,7 +217,7 @@ when a report is scheduled to be sent, the report is sent at browser startup—w
 weeks after the initially scheduled time.
 {% endAside %}
 
-After expiry (click time + `attributionexpiry`), no additional attribution can be triggered (no additional conversion can be counted).
+Once the expiry time is reached⏤the duration of time specified in `attributionexpiry`, starting from the click event⏤conversions can no longer be attributed to this click event.
 
 #### Example
 
@@ -260,7 +262,7 @@ The browser will match this trigger with the source event ID `1298765678762` in 
 - The attribution is triggered (that is, the conversion is registered) via a request to the **same `attributionreportto` origin** (that then redirects to a `.well-known` location). Example: `adtech.example`.
 
 <figure>
-{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/gdpjvYVB50vCbBUP2UKj.png", alt="ALT_TEXT_HERE", width="800", height="474" %}
+{% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/gdpjvYVB50vCbBUP2UKj.png", alt="Diagram that shows how the browser matches click IDs (source event IDs) with attribution trigger data (conversion data)", width="800", height="474" %}
  <figcaption>How the browser matches click IDs (source event IDs) with attribution trigger data (conversion data).</figcaption>
 </figure>
  
