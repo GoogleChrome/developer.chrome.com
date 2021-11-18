@@ -7,15 +7,15 @@ description: How to get the Google Account identity of a Chrome Web Store user.
 
 Supporting Google account sign-in can help provide a better user experience. Users of the Chrome Web Store are likely to be logged in to their Google account already, so they won't have to set up and remember yet another username and password.
 
-This tutorial builds an extension using the [Google OAuth2/OpenID][link] endpoint and the [Chrome
-Identity API][link].  When the user clicks the [action][link], the extension will launch a consent
+This tutorial builds an extension using the [Google OAuth2/OpenID][google-openid] endpoint and the [Chrome
+Identity API][identity-api].  When the user clicks the [action][action], the extension will launch a consent
 screen. After the user signs in to their Google account; the background console will log their
 information.
 
 To identify the user with Google OAuth2/OpenId, follow these steps:
 
 1. TBD
-1. TBD
+2. TBD
 
 We'll go into detail about each step below.
 
@@ -27,7 +27,7 @@ Begin by creating a directory and the following starter files.
 
 Add the manifest by creating a file called `manifest.json` and include the following code.
 
-```javascript
+```json
 {
   "name": "Google OpenID Connect Example",
   "version": "1.0",
@@ -58,20 +58,21 @@ chrome.action.onClicked.addListener(function () {
 
 ## Get the OAuth client ID {: #get-client-id}
 
-Navigate to the [Google API Console][link] and create a new project. To get a OAuth client ID, follow these steps:
+Navigate to the [Google API Console][google-console] and create a new project. To get a OAuth client ID, follow these steps:
 
-**1. Customize the consent screen and choose openid scope.**
-   - Choose **OAuth consent screen** in the navigation menu item.
-   - Fill out the consent screen information. Be sure to fill in the required fields.
+**1. Customize the consent screen and select scope.**
+   - Click the **OAuth consent screen** menu item.
+   - Fill out the required consent screen information.
    - Add the **openid** scope.
    - Add **Test users**.
    - Click **Save > Continue**.
   
-**2. Obtain credentials.**   
-   - Choose **Credentials** in the navigation menu item.
+**2. Create credentials.**   
+   - Click the **Credentials** menu item.
    - Click **Create new credentials > Auth Client ID**.
-   - Choose Application type Web application.
-   - Add "https://<YOUR_EXTENSION_ID>.chromiumapp.org" as the Authorized redirect URI.
+   - Select Application type **Web application**.
+   - Enter the **Name** of the OAuth2 client
+   - Add `https://<YOUR_EXTENSION_ID>.chromiumapp.org/` as the **Authorized redirect URI**.
    - Finish by clicking **Create**. 
 
 The console will provide an OAuth client ID. Keep this ID for later use.
@@ -80,7 +81,7 @@ The console will provide an OAuth client ID. Keep this ID for later use.
 
 ### Request the "identity" permission {: #identity-permission}
 
-To use the [Chrome Identity API][link], declare the `"identity"` permission in the `manifest.json`.
+To use the [Chrome Identity API][identity-api], declare the `"identity"` permission in the `manifest.json`.
 
 ```json
 {
@@ -95,10 +96,10 @@ To use the [Chrome Identity API][link], declare the `"identity"` permission in t
 
 ### Construct the authorization URL {: #auth-url}
 
-Before the extension can make a request to [Google’s OAuth2 endpoint][link] using the Identity API,
-we need to construct an [authorization URL][link]. It must contain several request parameters
-including the client ID and redirect URI. In addition to the `openid` scope, you can request
-`profile` information and/or `email`. Update `background.js` to match the code below.
+Before the extension can make a request to Google’s OAuth2 endpoint using the Identity API,
+we need to construct an [authorization URL][auth-url]. It must contain several request parameters
+including the client ID and redirect URI. In addition to the `openid` [scope][openid-scopes], you can request
+`profile` information and/or `email`. Update `background.js` to match the following code.
 
 ```javascript
 // background.js
@@ -114,10 +115,11 @@ chrome.action.onClicked.addListener(function () {
   authUrl.searchParams.set('response_type', 'id_token')
   authUrl.searchParams.set('redirect_uri', redirectUri)
   // Add the OpenID scope. Scopes allow you to access the user’s information.
-  authUrl.searchParams.set('scope', 'openid profile')
+  authUrl.searchParams.set('scope', 'openid profile email')
   authUrl.searchParams.set('nonce', nonce)
   // Show the consent screen after login
   authUrl.searchParams.set('prompt', 'consent')
+
 })
 
 ```
@@ -126,40 +128,43 @@ Replace <CLIENT_ID> with the API key generated from the Google console.
 
 ### Retrieve a redirect URL {: #redirect-url}
 
-Now that the extension has the client ID, redirect URI, and OAuth URL, it can initiate Google's authentication flow. Use [`identity.launchWebAuthFlow`][link] to launch the web auth flow and retrieve a redirect URL. 
+Now that the extension has the client ID, redirect URI, and OAuth URL, it can initiate Google's
+authentication flow. Use the [`identity.launchWebAuthFlow`][identity-webauthflow] method to launch the web auth flow and
+retrieve a redirect URL. 
 
-The redirect URL contains a JSON Web Token (JWT) that identifies the user. To view the requested user identity information we can parse the JWT into a plain JavaScript object. Update `background.js` to match the code below.
+The redirect URL contains a JSON Web Token (JWT) that identifies the user. To view the requested
+user identity information we can parse the JWT into a plain JavaScript object. Update
+`background.js` to match the following code.
 
 ```javascript
 // background.js
 ...
 
 chrome.action.onClicked.addListener(function () {
-  const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth')
 
 ...
-
+// add from here on
   chrome.identity.launchWebAuthFlow(
-    {
-      url: oauthUrl.href,
-      interactive: true,
-    },
-    (redirectUrl) => {
-      if (redirectUrl) {
-        // The ID token is in the URL hash
-        const urlHash = redirectUrl.split('#')[1]
-        const params = new URLSearchParams(urlHash)
-        const jwt = params.get('id_token')
+      {
+        url: authUrl.href,
+        interactive: true,
+      },
+      (redirectUrl) => {
+        if (redirectUrl) {
+          // The ID token is in the URL hash
+          const urlHash = redirectUrl.split('#')[1]
+          const params = new URLSearchParams(urlHash)
+          const jwt = params.get('id_token')
 
-        // Parse the JSON Web Token
-        const base64Url = jwt.split('.')[1]
-        const base64 = base64Url.replace('-', '+').replace('_', '/')
-        const token = JSON.parse(atob(base64))
+          // Parse the JSON Web Token
+          const base64Url = jwt.split('.')[1]
+          const base64 = base64Url.replace('-', '+').replace('_', '/')
+          const token = JSON.parse(atob(base64))
 
-        console.log('token', token)
-      }
-    },
-  )
+          console.log('token', token)
+        }
+      },
+    )
 })
 ```
 
@@ -174,19 +179,28 @@ responses][credential-responses]
 ## View the user information {: #user-info}
 
 Reload and return to the extension. Click the extension action button to start the web authentication flow. Sign in with your Google
-Account. The extension should log the token containing the user information.
+Account. 
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/CETlvMvFpe23QyIAq8Lx.png", alt="ALT_TEXT_HERE",
-width="558", height="628" %}
+width="358", height="428" %}
 
-To view the user identity information, click inspect the background service worker console.
+Go to the extension management page. Select the **service worker**  blue link next to
+Inspect views. The extension should log the token containing the user information.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/450NKaekvVNpnAUXz7QJ.png", alt="ALT_TEXT_HERE",
 width="800", height="162" %}
 
 ## See also
 
-- Extension tutorial that accesses a user's Google contacts.
-- OpenID official documentation.
+- [Extension tutorial that accesses a user's Google contacts][oauth-google-contacts].
+- [OpenID official documentation][google-openid].
 
-
+[action]: /docs/extensions/reference/action/
+[auth-url]: https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
+[credential-responses]: https://developers.google.com/identity/gsi/web/guides/handle-credential-responses-js-functions
+[google-console]: https://console.developers.google.com
+[google-openid]: https://developers.google.com/identity/protocols/oauth2/openid-connect
+[identity-api]: /docs/extensions/reference/identity/
+[identity-webauthflow]: /docs/extensions/reference/identity/#method-launchWebAuthFlow
+[oauth-google-contacts]: /docs/extensions/mv3/tut_oauth/
+[openid-scopes]: https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims
