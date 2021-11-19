@@ -217,7 +217,7 @@ conversion on another site&mdash;without enabling cross-site tracking.
 
 We would like to continue testing the Attribution Reporting API and we plan
 on **[extending the origin
-trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA)**
+trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721)**
 through to Chrome 97. Current origin trial tokens expired on October 12th, so
 you will need to apply for updated tokens to continue testing.
 
