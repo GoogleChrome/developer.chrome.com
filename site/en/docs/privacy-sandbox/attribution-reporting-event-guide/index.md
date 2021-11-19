@@ -168,7 +168,7 @@ How to set up an origin trial
 
 {% endDetails %}
 
-## Example code: basic usage
+## Example code: Basic usage
 
 {% Aside %}
 **Make sure to take a look at the [demo and demo code](#demo)**; it includes all of the functionalities that are documented in this section.
@@ -450,7 +450,7 @@ or trigger an attribution, you need to enable the feature via the `attribution-r
 
 This is not needed in a top-level document or in same-origin iframes.
 
-## Example code: more advanced features
+## Example code: Advanced features
 
 ### Define custom attribution rules
 
@@ -644,7 +644,7 @@ You can combine deduplication keys and conversion priorities. In this case, the 
 
 {% endAside %}
 
-## Example code: reports
+## Example code: Reports
 
 Reports will be sent by the browser to the `attributionreportto` endpoint.
 
@@ -890,7 +890,7 @@ and ask your question.
 If you're not able to see any clicks or attribution trigger event on `chrome://conversion-internals` with your implementation, try the following:
 
 - Check if the API is enabled for your browser: open `chrome://internals`. The **status** field should display **enabled**.
-- If the status **disabled**, follow the setup steps in [Browser setup](#browser-setup). Once you do that, the displayed status on `chrome://internals` should be **enabled**.
+- If the status is **disabled**, follow the setup steps in [Browser setup](#browser-setup). Once you do that, the displayed status on `chrome://internals` should be **enabled**.
 - Try out the [demo](#demo).
 - If you can't see clicks, attribution triggers and reports populating `chrome://conversion-internals` as you go through the demo, follow the steps listed in
   [Browser setup](#browser-setup).
