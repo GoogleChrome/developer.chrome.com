@@ -215,7 +215,7 @@ API](/docs/privacy-sandbox/attribution-reporting/)** gives you the ability to
 measure events on one site, like clicking or viewing an ad, that lead to a
 conversion on another site&mdash;without enabling cross-site tracking.
 
-We would like to continue testing on the Attribution Reporting API and we plan
+We would like to continue testing the Attribution Reporting API and we plan
 on **[extending the origin
 trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA)**
 through to Chrome 97. Current origin trial tokens expired on October 12th, so
