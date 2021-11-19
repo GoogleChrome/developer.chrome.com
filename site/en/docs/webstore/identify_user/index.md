@@ -9,8 +9,8 @@ Supporting Google account sign-in can help provide a better user experience. Use
 
 This tutorial builds an extension using the [Google OAuth2/OpenID][google-openid] endpoint and the [Chrome
 Identity API][identity-api].  When the user clicks the [action][action], the extension will launch a consent
-screen. After the user signs in to their Google account; the background console will log their
-information.
+screen. After the user signs in to their Google account; the background will log their
+information in the console.
 
 To identify the user with Google OAuth2/OpenId, follow these steps:
 
@@ -133,7 +133,7 @@ authentication flow. Use the [`identity.launchWebAuthFlow`][identity-webauthflow
 retrieve a redirect URL. 
 
 The redirect URL contains a JSON Web Token (JWT) that identifies the user. To view the requested
-user identity information we can parse the JWT into a plain JavaScript object. Update
+user identity information, you'll need to parse the JWT into a plain JavaScript object. Update
 `background.js` to match the following code.
 
 ```javascript
@@ -143,7 +143,7 @@ user identity information we can parse the JWT into a plain JavaScript object. U
 chrome.action.onClicked.addListener(function () {
 
 ...
-// add from here on
+
   chrome.identity.launchWebAuthFlow(
       {
         url: authUrl.href,
@@ -179,7 +179,7 @@ responses][credential-responses]
 ## View the user information {: #user-info}
 
 Reload and return to the extension. Click the extension action button to start the web authentication flow. Sign in with your Google
-Account. 
+Account, then press Enter. 
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/CETlvMvFpe23QyIAq8Lx.png", alt="ALT_TEXT_HERE",
 width="358", height="428" %}
@@ -190,10 +190,12 @@ Inspect views. The extension should log the token containing the user informatio
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/450NKaekvVNpnAUXz7QJ.png", alt="ALT_TEXT_HERE",
 width="800", height="162" %}
 
-## See also
+## Additional resources {: #additional-resources }
 
-- [Extension tutorial that accesses a user's Google contacts][oauth-google-contacts].
-- [OpenID official documentation][google-openid].
+- See [OAuth2: Authenticate users with Google][oauth-google-contacts] for a guided tutorial on how
+  to access a user's Google contacts.
+- See [Google OpenID Connect][google-openid] to learn more about OAuth 2.0 implementation for
+  authentication.
 
 [action]: /docs/extensions/reference/action/
 [auth-url]: https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
