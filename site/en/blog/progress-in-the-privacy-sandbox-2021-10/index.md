@@ -171,7 +171,7 @@ You can track the full [timeline for reducing Chrome's
 user-agent](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html),
 with [further examples and details of rollout
 phases](https://www.chromium.org/updates/ua-reduction). You will also need to
-[migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) (UA-CH)
+[Migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) (UA-CH)
 if you rely on the platform version, device, or full build version information
 in the current `User-Agent` format.
 
