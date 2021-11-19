@@ -185,8 +185,8 @@ for UA-CH.
 ## Show relevant content and ads
 
 As we move towards phasing out third-party cookies, we need to introduce APIs
-that allow the use cases that depended on them but **without** continuing to
-allow cross-site tracking.
+that allow the use cases that depended on them but **without** allowing
+cross-site tracking.
 
 ### FLoC
 
