@@ -3,7 +3,7 @@ title: Deprecations and removals in Chrome 97
 description: >
   A round up of the deprecations and removals in Chrome 97 to help you plan.
 layout: 'layouts/blog-post.njk'
-date: 2021-11-18
+date: 2021-11-22
 hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/8hNVkXWdaC9NGJ5Pg0HT.png'
 alt: >
   Deprecations and Removals hero logo
