@@ -5,6 +5,7 @@ description: >
   Credentials Management API and W3C TPAC sessions.
 layout: 'layouts/blog-post.njk'
 date: 2021-10-29
+updated: 2021-11-17
 authors:
   - rowan_m
 hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/TG00mBIgiEzZo09xjvBg.png'
@@ -159,8 +160,8 @@ enables fingerprinting or covert tracking of users.
 
 ### User-Agent string reduction and User-Agent Client Hints
 
-We've expanded the early **opt-in origin trial** for testing **Chrome's reduced
-user-agent** format [to include third-party
+We've expanded the origin trial for testing **Chrome's reduced User-Agent**
+format [to include third-party
 embeds](/blog/user-agent-reduction-origin-trial/#how-to-participate-in-the-origin-trial-as-a-third-party-embed).
 If you primarily provide cross-site content for other services, you can enable
 the third-party option when registering for the origin trial to receive the
@@ -170,23 +171,22 @@ You can track the full [timeline for reducing Chrome's
 user-agent](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html),
 with [further examples and details of rollout
 phases](https://www.chromium.org/updates/ua-reduction). You will also need to
-[migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) if you
-depend on the platform version, device, or full build version information in the
-current user-agent format.
+[Migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/) (UA-CH)
+if you rely on the platform version, device, or full build version information
+in the current `User-Agent` format.
 
-We're also continuing to make Client Hints overall more consistent with the
-**[Intent to Ship on standardizing existing
-naming](https://groups.google.com/a/chromium.org/g/blink-dev/c/Y42bZ66L6Zo)** by
-adding the `Sec-CH-` header prefix where missing and an **[Intent to Prototype
-on expanding the range of character
-types](https://groups.google.com/a/chromium.org/g/blink-dev/c/ueudFsZzT1M)**
-sent as part of the GREASE mechanism.
+We're continuing to [standardize existing names for Client
+Hints](https://groups.google.com/a/chromium.org/g/blink-dev/c/Y42bZ66L6Zo) by
+adding the `Sec-CH-` header prefix where missing. Pending approval, we hope to
+[expand the range of GREASE
+characters](https://groups.google.com/a/chromium.org/g/blink-dev/c/ueudFsZzT1M)
+for UA-CH.
 
 ## Show relevant content and ads
 
 As we move towards phasing out third-party cookies, we need to introduce APIs
-that enable the use cases that depended on them but **without** continuing to
-enable cross-site tracking.
+that allow the use cases that depended on them but **without** allowing
+cross-site tracking.
 
 ### FLoC
 
@@ -206,19 +206,18 @@ Advertising Technology Community Group)](https://www.w3.org/community/patcg/)**.
 ## Measure digital ads
 
 As the companion to displaying ads without cross-site tracking, we need
-privacy-preserving mechanisms to enable measuring the effectiveness of those
-ads.
+privacy-preserving mechanisms to measure the effectiveness of those ads.
 
 ### Attribution Reporting API
 
 The **[Attribution Reporting
-API](/docs/privacy-sandbox/attribution-reporting/)** enables functionality to
+API](/docs/privacy-sandbox/attribution-reporting/)** gives you the ability to
 measure events on one site, like clicking or viewing an ad, that lead to a
-conversion on another site—without enabling cross-site tracking.
+conversion on another site&mdash;without enabling cross-site tracking.
 
-We would like to continue testing on the Attribution Reporting API and we are
-planning on **[extending the origin
-trial](https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA)**
+We would like to continue testing the Attribution Reporting API and we plan
+on **[extending the origin
+trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721)**
 through to Chrome 97. Current origin trial tokens expired on October 12th, so
 you will need to apply for updated tokens to continue testing.
 
@@ -232,8 +231,8 @@ protection. We need privacy-preserving alternatives here as well.
 
 The **[Trust Token](/docs/privacy-sandbox/trust-tokens/)** API is a proposal
 that allows one site to share a claim about a visitor—such as "I think they're
-human"—and enable other sites to verify that claim, again without identifying
-the individual.
+human"&mdash;and allow other sites to verify that claim, again without
+identifying the individual.
 
 Trust Tokens are one part of the overall strategy to tackle spam and fraud on
 the web. In the **["Anti-fraud for the web" breakout at
