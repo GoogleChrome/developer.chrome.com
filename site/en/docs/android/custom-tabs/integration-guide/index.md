@@ -18,7 +18,7 @@ project. Open the `app/build.gradle` file and add the browser library to the dep
 ```groovy
 dependencies {
     ...
-    implementation "androidx.browser:browser:1.3.0"
+    implementation "androidx.browser:browser:1.4.0"
 }
 ```
 
