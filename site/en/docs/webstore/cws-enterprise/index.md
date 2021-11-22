@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Enterprise publishing options"
 date: 2021-07-29
-updated: 2021-11-17
+updated: 2021-11-22
 description: How to distribute  extensions to enterprise users
 ---
 
