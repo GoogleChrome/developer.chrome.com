@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Creating a great listing page
 date: 2021-08-10
-updated: 2021-11-17
+updated: 2021-11-22
 description: >
   Best practices on how to make a high-quality, engaging listing page for your item in the Chrome
   Web Store.
@@ -188,7 +188,6 @@ image that includes a misleading badge", width="800", height="467" %}
 Including a website for your item and URLs for support pages can help build trust with users. Ensure
 these fields are filled out in the developer dashboard so users know where they can find more
 information about your item.
-
 
 [devconsole]: https://chrome.google.com/webstore/devconsole
 [extension icon best practices]: /docs/webstore/images/#icon
