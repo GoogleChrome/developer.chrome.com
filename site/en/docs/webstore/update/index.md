@@ -131,6 +131,14 @@ passes the review your item will become ready for you to publish. This lets you 
 ready (for example, with marketing announcements) and then manually publish it at a time of your
 choosing.
 
+Once the review is complete, you will have up to **30 days** to publish. After that
+period expires, the staged submission will revert to a draft which will have to be submitted again for
+review. You can check when your staged submission will expire under the status of your item. 
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/sYCH3lvreW0bUWznlOsE.png", alt="Chrome Web Store
+staged item
+status", width="700", height="84" %}
+
 ### Review process {: #review-process }
 
 After you submit the item for review, it will undergo a review process. This is essentially the same
