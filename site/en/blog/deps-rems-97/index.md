@@ -18,7 +18,7 @@ tags:
 Chrome 97 beta was released on November 18, 2021 and is expected to become the
 stable version in late December, 2021.
 
-## Remove SDES Key Exchange for WebRTC
+## Remove SDES key exchange for WebRTC
 
 The SDES key exchange mechanism for WebRTC has been declared a MUST NOT in the
 relevant IETF standards since 2013. The SDES specification has been declared
@@ -27,7 +27,7 @@ recent year. Consequently [it is
 removed](https://www.chromestatus.com/feature/5695324321480704) as of Chrome
 97.
 
-## Remove WebSQL in Third-Party Contexts
+## Remove WebSQL in third-party contexts
 
 [WebSQL in third-party contexts is now removed](https://www.chromestatus.com/feature/5684870116278272).
 The Web SQL Database standard was first proposed in April 2009 and abandoned in
