@@ -72,15 +72,13 @@ used the zoom function to enlarge text, the icon for zoom looked very
 similar, confusing the user even more. 
 
 
-{% Columns %}
-{% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/zliw3izVFXwgQcpxBS8n.png", alt="Omnibox bug with zoom and install icons present.", width="660", height="205" %}
-{% Aside %}
-Omnibox bug with zoom and install icons present.
-{% endAside %}
-{% endColumn %}
-{% endColumns %}
 
+<figure>
+{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/zliw3izVFXwgQcpxBS8n.png", alt="Omnibox bug with zoom and install icons present.", width="660", height="205" %}
+<figcaption>
+Omnibox bug with zoom and install icons present.
+</figcaption>
+</figure>
 
 I decided to investigate our user's perception, as most feedback was
 anecdotal. Working with our UX researchers, we ran a study with
@@ -98,15 +96,15 @@ alternatives. We landed on the arrow pointing down into a monitor,
 which performed significantly better than the other two. We also saw
 a decrease in dismissals of the install UI with this new icon. 
 
-{% Columns %}
-{% Column %}
+
+
+<figure>
 {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/Wb3UqwvqaNGxVJ1ztp9X.png", alt="Install icon variants from the Material Design icon set.", width="588", height="240" %}
-{% Aside %}
+<figcaption>
 Variants of our install iconography that you can download from our 
 Material Design icon set.
-{% endAside %}
-{% endColumn %}
-{% endColumns %}
+</figcaption>
+</figure>
 
 The outcome is the design you see today, which has seen the install
 rate for PWAs more than double for websites. We have also added this
@@ -125,14 +123,13 @@ decided to launch this design pattern to inform users about the
 install features and further support the new icon redesign.  
 
 
-{% Columns %}
-{% Column %}
+
+<figure>
 {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/jsUweHcawGwgwcZKH5by.jpg", alt="The in-product help bubble.", width="547", height="250" %}
-{% Aside %}
+<figcaption>
 In-product help tooltip bubble that educates users about features.
-{% endAside %}
-{% endColumn %}
-{% endColumns %}
+</figcaption>
+</figure>
 
 When a user visits a website regularly, Chrome uses a service known
 as [Site Engagement](https://www.chromium.org/developers/design-documents/site-engagement).
@@ -162,15 +159,14 @@ install experience that would give context to our users about the web
 app and enable developers to celebrate the PWA's that were on par
 with native experiences. 
 
-{% Columns %}
-{% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/8kGMXy7tkoZMKr4y0qEY.jpg", alt="Richer install UI.", width="800", height="776" %}
-{% Aside %}
-Richer Install UI, collapsed and expanded states.
-{% endAside %}
-{% endColumn %}
-{% endColumns %}
 
+
+<figure>
+{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/8kGMXy7tkoZMKr4y0qEY.jpg", alt="Richer install UI.", width="800", height="776" %}
+<figcaption>
+Richer Install UI, collapsed and expanded states.
+</figcaption>
+</figure>
 
 Earlier this year, we launched [Richer Install](https://developer.chrome.com/blog/richer-pwa-installation/), 
 an extended install UI on Chrome on Android that allows developers to
