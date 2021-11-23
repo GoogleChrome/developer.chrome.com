@@ -141,7 +141,7 @@ In-product help tooltip bubble that educates users about features.
 When a user visits a website regularly, Chrome uses a service known
 as [Site Engagement](https://www.chromium.org/developers/design-documents/site-engagement).
 This provides information about how engaged a user is with a site. By
-visiting chrome://site-engagement/, you can see the sites that you
+visiting `chrome://site-engagement/`, you can see the sites that you
 are engaging with regularly. Using these scores, we could determine
 if a user is interested in a website. If the site was a PWA and the
 user was engaged we would show them the install In-Product Help UI.
