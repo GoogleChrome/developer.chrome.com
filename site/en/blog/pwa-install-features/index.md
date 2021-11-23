@@ -57,14 +57,12 @@ PWA.
 
 
 
-{% Columns %}
-{% Column %}
+<figure>
 {% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/RCE9R8Shyh2bMPBZLSJO.png", alt="Original install plus icon.", width="660", height="228" %}
-{% Aside %}
+<figcaption>
 Original install plus icon.
-{% endAside %}
-{% endColumn %}
-{% endColumns %}
+</figcaption>
+</figure>
 
 The icon was initially a plus symbol, partly due to the **Add to home
 screen** metaphor used on mobile. However, as mentioned, the language
