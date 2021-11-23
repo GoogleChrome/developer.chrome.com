@@ -83,7 +83,7 @@ enter any valid number to simulate the storage quota.
 
 Chromium issues: [945786][7], [1146985][8]
 
-## New Web Vitals lane in the Performance panel recordings {: #web-vitals }
+## New Web Vitals lane in the Performance panel recordings {: #web-vitals } [CURRENTLY BROKEN]
 
 Performance recordings now have an option to display Web Vitals information.
 
@@ -98,7 +98,7 @@ Vitals metrics.
 
 {% Img src="image/admin/AFxlLLBhqMQdxTbc1s92.png", alt="Web Vitals lane", width="800", height="480" %}
 
-Chromium issue: N/A
+Chromium issue: [1254236][32]
 
 ## Report CORS errors in the Network panel {: #cors }
 
@@ -332,3 +332,4 @@ Chromium issue: [174309][31]
 [29]: https://crbug.com/1139945
 [30]: /blog/new-in-devtools-87#customize
 [31]: https://crbug.com/174309
+[32]: https://bugs.chromium.org/p/chromium/issues/detail?id=1254236&q=component%3APlatform%3EDevTools%3EPerformance
