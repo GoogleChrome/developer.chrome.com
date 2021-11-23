@@ -131,7 +131,7 @@ extension that has English as its default language and British English as its se
 ```json
 //in manifest.json:
   "name": "__MSG_appName__",
-  "description":"The description of the extension, displayed in the web store.",
+  "description": "The description of the extension, displayed in the web store.",
   "default_locale": "en",
 
 //in _locales/en/messages.json:
@@ -142,7 +142,7 @@ extension that has English as its default language and British English as its se
   },
   "appDesc": {
     "message": "This extension does something awesome.",
-    "description":"The description of the extension, displayed in the web store."
+    "description": "The description of the extension, displayed in the web store."
   }
 }
 
