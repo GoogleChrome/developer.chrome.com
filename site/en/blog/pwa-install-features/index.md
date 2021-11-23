@@ -1,14 +1,14 @@
 ---
 layout: 'layouts/blog-post.njk'
 title: Helping developers build powerful, installable web apps
-description: A look at the impact of PWA features added to Chrome
+description: A look at the impact of PWA features added to Chrome.
 date: 2021-11-23
 authors:
   - mustafa
 tags:
   - progressive-web-apps
 hero: "image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/q06rpg5CArTnyaFAkXTH.jpg"
-alt: "New install surface for progressive web apps"
+alt: "New install surface for progressive web apps."
 ---
 
 
@@ -21,7 +21,6 @@ PWA installation and engagement. We achieved this by researching
 existing features, running A/B test experiments and user interviews
 to gain insight into users perceptions and expectations. This article
 covers how we got there. 
-
  
 ## Unified install language {: #unified }
 
@@ -35,23 +34,23 @@ marginally, on mobile.
 
 A further study on taxonomy in 2019 found no difference, and so the
 team wanting to unify the PWA install experience, decided to update
-the labels to**Install** on Android. A further study in 2021 compared
+the label to **Install** on Android. A further study in 2021 compared
 the language, **Install**, **Get**, and **Download**, and we found
 that users understood **Install** as the process that was happening.
-Users felt tapping a button with the label **Get**would send the user
+Users felt tapping a button with the label **Get** would send the user
 to a website, and with **Download** they assumed a file would end up
 in their downloads folder or equivalent. 
 
-With all this in mind, we concluded that the label ''Install'' best
+With all this in mind, we concluded that the label **Install** best
 fits PWAs. We recommend developers across the web platform adopt
 Install as the preferred string going forward. 
 
 
 ## Install icon on desktop {: #installicon } 
 
-On our desktop platforms,we have a design pattern that whenever a website 
-loads a PWA,Chrome will show a pill that appears on the right-hand side of the
-omnibox that contains an icon and the label. **Install**. After
+On our desktop platforms, we have a design pattern that whenever a website 
+loads a PWA, Chrome will show a pill that appears on the right-hand side of the
+omnibox that contains an icon and the label **Install**. After
 that, when a user visits a site, only the icon will be present.
 Clicking on this pill triggers the installation of a desktop
 PWA. 
@@ -60,7 +59,7 @@ PWA.
 
 {% Columns %}
 {% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/RCE9R8Shyh2bMPBZLSJO.png", alt="Original install plus icon", width="660", height="228" %}
+{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/RCE9R8Shyh2bMPBZLSJO.png", alt="Original install plus icon.", width="660", height="228" %}
 {% Aside %}
 Original install plus icon.
 {% endAside %}
@@ -77,7 +76,7 @@ similar, confusing the user even more.
 
 {% Columns %}
 {% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/zliw3izVFXwgQcpxBS8n.png", alt="Omnibox bug with zoom and install icons present", width="660", height="205" %}
+{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/zliw3izVFXwgQcpxBS8n.png", alt="Omnibox bug with zoom and install icons present.", width="660", height="205" %}
 {% Aside %}
 Omnibox bug with zoom and install icons present.
 {% endAside %}
@@ -92,7 +91,7 @@ understanding of install iconography. We tested five different
 designs, including the existing one, and asked users what "Install"
 meant. We discovered that the current icon, the plus symbol, was the
 most confusing to our users. Many confused the symbol
-with 'medicine', 'first aid' and 'batteries'. 
+with "medicine", "first aid" and "batteries". 
 
 We also found that users primarily associated imagery such as arrows
 and devices with the install. Based on these conclusions, we ran an
@@ -103,7 +102,7 @@ a decrease in dismissals of the install UI with this new icon.
 
 {% Columns %}
 {% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/Wb3UqwvqaNGxVJ1ztp9X.png", alt="Install icon variants from the Material Design icon set", width="588", height="240" %}
+{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/Wb3UqwvqaNGxVJ1ztp9X.png", alt="Install icon variants from the Material Design icon set.", width="588", height="240" %}
 {% Aside %}
 Variants of our install iconography that you can download from our 
 Material Design icon set.
@@ -120,7 +119,6 @@ engaging.
 Of course, a single icon will not change the world, which leads us to
 our next feature.
 
-
 ## In-product help  {: #iph } 
 
 In-Product Help is a blue bubble tooltip that onboards users on new
@@ -131,7 +129,7 @@ install features and further support the new icon redesign.
 
 {% Columns %}
 {% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/jsUweHcawGwgwcZKH5by.jpg", alt="ALT_TEXT_HERE", width="547", height="250" %}
+{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/jsUweHcawGwgwcZKH5by.jpg", alt="The in-product help bubble.", width="547", height="250" %}
 {% Aside %}
 In-product help tooltip bubble that educates users about features.
 {% endAside %}
@@ -152,7 +150,6 @@ By using in-product help on desktop, we saw a greater than 100%
 increase in PWA installation, showing that focusing on engaged users
 improved the installability of web apps. 
 
-
 ## Richer Install UI {: #richer }
 
 The install paradigm for most users is a store.
@@ -167,10 +164,9 @@ install experience that would give context to our users about the web
 app and enable developers to celebrate the PWA's that were on par
 with native experiences. 
 
-
 {% Columns %}
 {% Column %}
-{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/8kGMXy7tkoZMKr4y0qEY.jpg", alt="Richer install UI", width="800", height="776" %}
+{% Img src="image/xizoeLGxYNf3VLUHc5BsIoiE1Af1/8kGMXy7tkoZMKr4y0qEY.jpg", alt="Richer install UI.", width="800", height="776" %}
 {% Aside %}
 Richer Install UI, collapsed and expanded states.
 {% endAside %}
