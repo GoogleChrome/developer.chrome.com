@@ -13,14 +13,22 @@ pullapprove_conditions:
 
 groups:
   # Extensions
-  # Handles any changes related to extensions, web store, and chrome apps.
-  # By default Simeon and Andy will be tagged in as reviewers, but anyone
-  # on the dcc-extensions, dcc-content, or dcc-approvers team can approve PRs.
+  #
+  # Handles any changes related to Chrome extensions, Chrome Web Store, and
+  # Chrome Apps. At least one team member must approve PR in order for it to be
+  # merged.
+  #
+  # By default Simeon (@dotproto) is the only pereson that will be automatically
+  # added; Joe (@jpmedley) will only be automatically added if Simeon authored
+  # the PR. Any memeber of dcc-extensions, dcc-content, or dcc-approvers team
+  # can also approve PRs.
   extensions:
     reviewers:
       users:
-      - jpmedley
+      # Technical reviewers
       - dotproto
+      # Content reviewers
+      - jpmedley
       teams:
       # Prefix a username or team with ~ to include them in the reviewer pool
       # but skip them when sending review requests.
@@ -29,8 +37,12 @@ groups:
       - ~dcc-eng
       - ~dcc-approvers
     reviews:
-      # Assign all possible reviewers
-      request: 99
+      # Add reviewers to PRs in the order specified in the configuration.
+      request_order: given
+      # Minimum number of reviewers that must approve a PR.
+      required: 1
+      # Review requests will be sent to as many people as are still `required` to approve.
+      request: -1
     conditions:
       - >
         files.include('site/en/docs/apps/*') or
