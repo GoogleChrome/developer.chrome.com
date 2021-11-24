@@ -4,7 +4,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2021-11-10
+updated: 2021-11-24
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -15,6 +15,12 @@ updated: 2021-11-10
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
+
+### Chrome 98: Returning promises from scripting.executeScript()
+
+[`chrome.scripting.executeScript()`](/docs/extensions/reference/scripting/#method-executeScript)
+now supports returning promises. When a script evaluates to a promise, Chrome will wait for the
+promise to settle and return its resulting value.
 
 ### Chrome 96: Dynamic content scripts {: #m96-dynamic-content-scripts }
 
