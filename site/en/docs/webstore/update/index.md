@@ -5,7 +5,7 @@ description: >
   How to update an extension or theme ("item") that you previously
   published on the Chrome Web Store.
 date: 2020-12-03
-updated: 2021-09-23
+updated: 2021-11-23
 ---
 
 This page describes how to update an extension or theme ("item") that you previously published on
@@ -130,6 +130,14 @@ your item will **not** be published immediately after its review is complete. In
 passes the review your item will become ready for you to publish. This lets you wait until you are
 ready (for example, with marketing announcements) and then manually publish it at a time of your
 choosing.
+
+Once the review is complete, you will have up to **30 days** to publish. After that
+period expires, the staged submission will revert to a draft which will have to be submitted again for
+review. You can check when your staged submission will expire under the status of your item. 
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/sYCH3lvreW0bUWznlOsE.png", alt="Chrome Web Store
+staged item
+status", width="700", height="84" %}
 
 ### Review process {: #review-process }
 
