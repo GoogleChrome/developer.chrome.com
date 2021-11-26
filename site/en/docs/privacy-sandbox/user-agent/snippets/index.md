@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'User-Agent Snippets'
+title: 'User-Agent reduction snippets'
 subhead: >
   Code snippets to transform the current Chrome user-agent to the reduced format.
 description: >
@@ -11,17 +11,16 @@ authors:
 ---
 
 A collection of code snippets to let you transform the current Chrome user-agent
-string to the new reduced format. Please [submit versions for your preferred
-platforms and
+string to the new reduced format. [Submit versions for your preferred platforms
+and
 languages](https://github.com/GoogleChrome/developer.chrome.com//blob/main/site/en/docs/privacy-sandbox/user-agent/snippets/index.md)
 or let us know what would be useful to add!
 
 ## Background
 Chrome is [reducing the information exposed in its user-agent
-string](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). This
-will be happening incrementally over a period of time with the final state
-removing the OS version, device, and full browser version portions of the
-string.
+string](/docs/privacy-sandbox/user-agent/). This will be happening incrementally
+over a period of time with the final state removing the OS version, device, and
+full browser version portions of the string.
 
 Here's an example of how that would look on a mobile device:
 
@@ -39,16 +38,16 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.<span style="background:
 
 ### Local testing methods
 
-- **Enable the `chrome://flags/#reduce-user-agent` flag**
+- Enable the `chrome://flags/#reduce-user-agent` flag.
   - This will enable the new behavior and use the reduced format for the
     user-agent string for all sites.
-- **Configure an emulated device in DevTools with the right user-agent string
-  and client hints**
-  - In DevTools under ⚙️ Settings → Devices → "Add custom device…" you can
+- Configure an emulated device in DevTools with the right user-agent string and
+  client hints.
+  - In DevTools under ⚙️ **Settings → Devices → Add custom device…** you can
     configure an emulated device with any combination of user-agent string and
-    user-agent client hints values you need. Use the 📱 "Toggle device toolbar"
-    button to select an emulated device.
-- **Launch Chrome with the `--user-agent="Custom string here"`** 
+    user-agent client hints values you need. Use the 📱 **Toggle device
+    toolbar** button to select an emulated device.
+- Launch Chrome with the `--user-agent="Custom string here"`.
   - Use the command line flag to start Chrome with a custom user-agent string.
 
 {% Aside %}
@@ -94,11 +93,11 @@ Mozilla/5.0 (${unifiedPlatform[matched.platform]}) AppleWebKit/537.36 (KHTML, li
 The `unifiedPlatform` value comes from taking the short `platform` match and
 replacing it with the appropriate reduced value.
 
-*   `Lin`: `Linux; Android 10; K`
-*   `Win`: `Windows NT 10.0; Win64; x64`
-*   `Mac`: `Macintosh; Intel Mac OS X 10_15_7`
-*   `X11; C`: `X11; CrOS x86_64`
-*   `X11; L`: `X11; Linux x86_64`
+* `Lin`    → `Linux; Android 10; K`
+* `Win`    → `Windows NT 10.0; Win64; x64`
+* `Mac`    → `Macintosh; Intel Mac OS X 10_15_7`
+* `X11; C` → `X11; CrOS x86_64`
+* `X11; L` → `X11; Linux x86_64`
 
 ### JavaScript
 
