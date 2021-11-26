@@ -3,6 +3,12 @@
 Чтобы увидеть полный список обновлений,  перейдите на английскую версию по ссылке 
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a>. Ниже перечислены материалы, переведенные на русский язык.
 
+<!-- ### Chrome 97 {: #chrome97 }
+* [Preview feature: New Recorder panel](/ru/blog/new-in-devtools-97/#recorder)
+* [Refresh device list in Device Mode](/ru/blog/new-in-devtools-97/#device)
+* [Autocomplete with Edit as HTML](/ru/blog/new-in-devtools-97/#code-completion)
+* [Improved code debugging experience](/ru/blog/new-in-devtools-97/#debugging) -->
+
 ### Chrome 96 {: #chrome96 }
 * [Ранний доступ: Новая вкладка Обзор CSS](/ru/blog/new-in-devtools-96/#css-overview)
 * [Восстановлен и улучшен опыт редактирования и копирования длины в CSS](/ru/blog/new-in-devtools-966/#length)
