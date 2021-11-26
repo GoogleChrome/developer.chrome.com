@@ -131,7 +131,7 @@ to ensure Client Hints are available on site load and optimised.
    an overview for web developers
 *  [Migrate from UA string to UA-CH](https://web.dev/migrate-to-ua-ch/): a
    tutorial for web developers
-* [User-Agent snippets](/docs/privacy-sandbox/user-agent-snippets/): code
+* [User-Agent snippets](/docs/privacy-sandbox/user-agent/snippets/): code
   snippets to transform the current user-agent string to the reduced format for
   testing
 *  [Digging into the Privacy Sandbox](https://web.dev/digging-into-the-privacy-sandbox)

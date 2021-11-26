@@ -13,7 +13,7 @@ authors:
 A collection of code snippets to let you transform the current Chrome user-agent
 string to the new reduced format. Please [submit versions for your preferred
 platforms and
-languages]https://github.com/GoogleChrome/developer.chrome.com//blob/main/site/en/docs/privacy-sandbox/user-agent/snippets/index.md)
+languages](https://github.com/GoogleChrome/developer.chrome.com//blob/main/site/en/docs/privacy-sandbox/user-agent/snippets/index.md)
 or let us know what would be useful to add!
 
 ## Background
