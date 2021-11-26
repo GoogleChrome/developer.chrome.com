@@ -103,7 +103,9 @@ replacing it with the appropriate reduced value.
 ### JavaScript
 
 In client-side JavaScript, the following snippet can be used to override the
-current value of `navigator.userAgent` with the reduced format.
+current value of
+[`navigator.userAgent`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgent)
+with the reduced format.
 
 Demo:
 [reduced-ua.glitch.me/javascript.html](https://reduced-ua.glitch.me/javascript.html)
@@ -136,8 +138,8 @@ if (matched) {
 
 ### Node.js
 
-In Node.js you can use the following snippet to override the incoming
-`user-agent` header with the reduced format.
+In [Node.js](https://nodejs.org/) you can use the following snippet to override
+the incoming `user-agent` header with the reduced format.
 
 Demo:
 [reduced-ua.glitch.me/server-side](https://reduced-ua.glitch.me/server-side)
@@ -160,9 +162,9 @@ if (matched) {
 
 ### CloudFlare Workers
 
-You can use a CloudFlare Worker to proxy and transform requests to your own
-site. This snippet replaces the incoming `user-agent` header with the reduced
-format.
+You can use a [CloudFlare Worker](https://developers.cloudflare.com/workers/) to
+proxy and transform requests to your own site. This snippet replaces the
+incoming `user-agent` header with the reduced format.
 
 ```javascript
 addEventListener('fetch', event => {
