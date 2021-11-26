@@ -2,6 +2,12 @@
 
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
+<!-- ### Chrome 97 {: #chrome97 }
+* [Preview feature: New Recorder panel](/pt/blog/new-in-devtools-97/#recorder)
+* [Refresh device list in Device Mode](/pt/blog/new-in-devtools-97/#device)
+* [Autocomplete with Edit as HTML](/pt/blog/new-in-devtools-97/#code-completion)
+* [Improved code debugging experience](/pt/blog/new-in-devtools-97/#debugging) -->
+
 ### Chrome 96 {: #chrome96 }
 
 * [Prévia de funcionalidade: novo painel de visão geral CSS](/blog/new-in-devtools-966/#css-overview)

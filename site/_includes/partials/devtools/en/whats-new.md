@@ -1,6 +1,13 @@
 ## What's New in DevTools {: #whats-new }
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
+### Chrome 97 {: #chrome97 }
+* [Preview feature: New Recorder panel](/blog/new-in-devtools-97/#recorder)
+* [Refresh device list in Device Mode](/blog/new-in-devtools-97/#device)
+* [Autocomplete with Edit as HTML](/blog/new-in-devtools-97/#code-completion)
+* [Improved code debugging experience](/blog/new-in-devtools-97/#debugging)
+
+
 ### Chrome 96 {: #chrome96 }
 * [Preview feature: New CSS Overview panel](/blog/new-in-devtools-96/#css-overview)
 * [Restored and improved CSS length edit and copy experince](/blog/new-in-devtools-96/#length)
