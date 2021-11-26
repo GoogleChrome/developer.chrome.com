@@ -139,7 +139,9 @@ if (matched) {
 ### Node.js
 
 In [Node.js](https://nodejs.org/) you can use the following snippet to override
-the incoming `user-agent` header with the reduced format.
+the incoming [`User-Agent`
+header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+with the reduced format.
 
 Demo:
 [reduced-ua.glitch.me/server-side](https://reduced-ua.glitch.me/server-side)
@@ -164,7 +166,9 @@ if (matched) {
 
 You can use a [CloudFlare Worker](https://developers.cloudflare.com/workers/) to
 proxy and transform requests to your own site. This snippet replaces the
-incoming `user-agent` header with the reduced format.
+incoming [`User-Agent`
+header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+with the reduced format.
 
 ```javascript
 addEventListener('fetch', event => {
