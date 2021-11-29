@@ -15,8 +15,8 @@ matures and we learn from developers' experiences, these recommendations will be
 We encourage you to develop extensions that are of high quality. High-quality extensions conform to
 standards of performance, security, and user experience, as summarized by the following guidelines:
 
-* **Compliance:** Does the extension comply with our [program policies][program policies]? Extensions must not violate
-  any of these policies.
+* **Compliance:** Does the extension comply with our [program policies][program policies]?
+  Extensions must not violate any of these policies.
 
 * **Manifest V3:** Is the extension built on Manifest V3? Manifest V3 is the current version of the
   Chrome extension platform and all High Quality extensions should use it. (See the [Manifest V3
@@ -45,11 +45,10 @@ standards of performance, security, and user experience, as summarized by the fo
 
 ## Support Google Accounts
 
-If your extension requires user login, we recommend that you provide at least some support for Google
-Accounts. Google Accounts can help you provide a better user experience, since users of the Chrome
-Web Store are likely to be logged in already, and they won't have to set up and remember yet another
-username and password. Reducing the number of
-logins improves the user's experience.
+If your extension requires user login, we recommend that you provide at least some support for
+Google Accounts. Google Accounts can help you provide a better user experience; since users of the
+Chrome Web Store are likely to be logged in already, they won't have to set up and remember yet
+another username and password. Reducing the number of logins improves the user's experience.
 
 See [Identifying the User][identify-user] for more information about supporting Google Accounts.
 
@@ -67,9 +66,9 @@ number of queries to the license server, reducing quota usage and traffic.
 
 ## Create a compelling store listing
 
-The better your extension's listing in the store, the more users will find and try your extension. When choosing
-your extension's name, writing its description, and designing its logo, keep in mind Google's [Branding
-Guidelines][cws-branding].
+The better your extension's listing in the store, the more users will find and try your extension.
+When choosing your extension's name, writing its description, and designing its logo, keep in mind
+Google's [Branding Guidelines][cws-branding].
 
 To learn more, see [Creating a great listing page][great-listing-page].
 

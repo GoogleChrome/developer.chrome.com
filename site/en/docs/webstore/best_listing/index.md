@@ -63,7 +63,8 @@ Focus on the keywords that represent the most important features of your extensi
 {% Compare 'worse' %}
 Add unnecessary keywords to your description in an attempt to improve search results.
 Repetitive or irrelevant use of keywords can create an unpleasant user experience and result in an
-item being suspended from the Chrome Web Store. See [Keyword Spam policy][keyword-spam]
+item being suspended from the Chrome Web Store. See [Keyword Spam policy][keyword-spam] for more
+information.
 {% endCompare %}
 
 ## Images
