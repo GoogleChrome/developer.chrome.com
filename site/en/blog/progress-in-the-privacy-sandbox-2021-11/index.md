@@ -7,7 +7,7 @@ layout: 'layouts/blog-post.njk'
 date: 2021-11-30
 authors:
   - rowan_m
-hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/TG00mBIgiEzZo09xjvBg.png'
+hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/uYu9a45DsDSqdPX5VrIS.png'
 alt: >
   Privacy Sandbox logo
 tags:
