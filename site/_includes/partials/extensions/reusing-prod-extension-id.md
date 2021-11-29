@@ -1,15 +1,15 @@
 ## Keep a consistent extension ID {: #keep-consistent-id }
 
-Preserving a single ID is essential during development. To keep a consistent id, follow these steps:
+Preserving a single ID is essential during development. To keep a consistent ID, follow these steps:
 
 ### Upload extension to the developer dashboard {: #upload_to_dashboard }
 
 Package the extension directory into a `.zip` file and upload it to the [Chrome Developer
 Dashboard](https://chrome.google.com/webstore/developer/dashboard) without publishing it:
 
-1.  At the Developer Dashboard, click **Add new item**.
-2.  Click **Browse files**, select the `.zip` extension and upload it.
-3.  Go to the **Package** tab and click on **View public key**.
+1.  On the Developer Dashboard, click **Add new item**.
+2.  Click **Browse files**, select the `.zip` extension, and upload it.
+3.  Go to the **Package** tab and click **View public key**.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/8j12N4AyvHyjCZaFghv8.png", alt="Developer Dashboard
 Package tab", width="296", height="121" %}
@@ -33,6 +33,6 @@ upload the unpackaged extension directory. Compare the extension ID on the exten
 page to the Item ID in the Developer Dashboard. They should match.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/AGorME3hdXd2YeKot5Nc.png", 
-alt="The id of the
+alt="The ID of the
 extension match", width="356", height="352" %}
 
