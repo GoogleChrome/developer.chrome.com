@@ -8,8 +8,8 @@ description: How to get the Google Account identity of a Chrome Web Store user.
 Supporting Google account sign-in can help provide a better user experience. Users of the Chrome Web Store are likely to be logged in to their Google account already, so they won't have to set up and remember yet another username and password.
 
 This tutorial builds an extension using the [Google OAuth2/OpenID][google-openid] endpoint and the [Chrome
-Identity API][identity-api].  When the user clicks the [action][action], the extension will launch a consent
-screen. After the user signs in to their Google account; the background will log their
+Identity API][identity-api]. When the user clicks the [action][action], the extension will launch a consent
+screen. After the user signs in to their Google account, the background will log their
 information in the console.
 
 To identify the user with Google OAuth2/OpenId, follow these steps:
@@ -17,7 +17,7 @@ To identify the user with Google OAuth2/OpenId, follow these steps:
 1. TBD
 2. TBD
 
-We'll go into detail about each step below.
+We'll explain each step below.
 
 ## Create your extension files {: #create-extension-files}
 
@@ -25,7 +25,7 @@ Begin by creating a directory and the following starter files.
 
 ### manifest.json {: #manifest}
 
-Add the manifest by creating a file called `manifest.json` and include the following code.
+Add the manifest by creating a file called `manifest.json` and include the following code:
 
 ```json
 {
@@ -44,7 +44,7 @@ Add the manifest by creating a file called `manifest.json` and include the follo
 
 ### background.js {: #background}
 
-Add the background service worker by creating a file called `background.js`. Include the following code.
+Add the background service worker by creating a file called `background.js`. Include the following code:
 
 ```javascript
 // background.js
@@ -97,9 +97,9 @@ To use the [Chrome Identity API][identity-api], declare the `"identity"` permiss
 ### Construct the authorization URL {: #auth-url}
 
 Before the extension can make a request to Google’s OAuth2 endpoint using the Identity API,
-we need to construct an [authorization URL][auth-url]. It must contain several request parameters
+you need to construct an [authorization URL][auth-url]. It must contain several request parameters
 including the client ID and redirect URI. In addition to the `openid` [scope][openid-scopes], you can request
-`profile` information and/or `email`. Update `background.js` to match the following code.
+`profile` information and/or `email`. Update `background.js` to match the following code:
 
 ```javascript
 // background.js
@@ -124,17 +124,17 @@ chrome.action.onClicked.addListener(function () {
 
 ```
 
-Replace <CLIENT_ID> with the API key generated from the Google console. 
+Replace `<CLIENT_ID>` with the API key generated from the Google console. 
 
 ### Retrieve a redirect URL {: #redirect-url}
 
 Now that the extension has the client ID, redirect URI, and OAuth URL, it can initiate Google's
-authentication flow. Use the [`identity.launchWebAuthFlow`][identity-webauthflow] method to launch the web auth flow and
+authentication flow. Call [`identity.launchWebAuthFlow()`][identity-webauthflow] to launch the web auth flow and
 retrieve a redirect URL. 
 
 The redirect URL contains a JSON Web Token (JWT) that identifies the user. To view the requested
 user identity information, you'll need to parse the JWT into a plain JavaScript object. Update
-`background.js` to match the following code.
+`background.js` to match the following code:
 
 ```javascript
 // background.js
@@ -171,8 +171,8 @@ chrome.action.onClicked.addListener(function () {
 {% Aside %}
 
 The above code is **not** production ready. We strongly encourage validating and decoding the JWT before
-the information it contains is trusted. See [how to handle credential
-responses][credential-responses]
+the information it contains is trusted. For more information, see [how to handle credential
+responses][credential-responses].
 
 {% endAside %}
 
@@ -184,7 +184,7 @@ Account, then press Enter.
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/CETlvMvFpe23QyIAq8Lx.png", alt="ALT_TEXT_HERE",
 width="358", height="428" %}
 
-Go to the extension management page. Select the **service worker**  blue link next to
+Go to the extension management page. Select the **service worker** blue link next to
 Inspect views. The extension should log the token containing the user information.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/450NKaekvVNpnAUXz7QJ.png", alt="ALT_TEXT_HERE",
