@@ -70,8 +70,7 @@ Column numbers are now included in the output error in the Console. Having easy 
 
 Chromium issue: [1073064](https://crbug.com/1073064)
 
-<!-- Unconfirmed: Disable at the moment -->
-<!-- ## [Experimental] Syncing DevTools settings across devices {: #sync }
+## [Experimental] Syncing DevTools settings across devices {: #sync }
 
 Your DevTools settings are now sync across devices by default when you turn on Chrome profile sync. You can change the DevTools sync settings via **Settings** > **Sync** > **Enable settings sync**.
 
@@ -89,7 +88,7 @@ However, not all the settings are sync. For example, the **dock** settings isnâ€
 
 This feature is experimental at the moment, the team is still actively working on it. If you have any feedback, please share with us [here](https://crbug.com/1245541)
 
-Chromium issue: [1245541](https://crbug.com/1245541) -->
+Chromium issue: [1245541](https://crbug.com/1245541)
 
 {% include 'partials/devtools/en/reach-out.md' %}
 {% include 'partials/devtools/en/whats-new.md' %}
