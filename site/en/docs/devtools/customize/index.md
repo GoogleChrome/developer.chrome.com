@@ -75,12 +75,12 @@ To update DevTools settings sync:
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yhIipqtEvDuy6ygB677t.png", alt="Chrome profile sync", width="400", height="579" %}
 2. The DevTools sync settings can be updated via **Settings** > **Sync** > **Enable settings sync** checkbox.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LUwFNTDyP22L1euSGg73.png", alt="DevTools sync settings", width="800", height="654" %}
-3. Not all settings are synced. For example, the following **appearance** settings are synced so you have a consistent experience across devices and don’t need to re-define the same settings again.
+3. Most of the settings you see in the **Settings** UI are synced, except for the **Workspace**, **Experiments**, **Devices** tab and a select few other general settings. The state of the **Enable settings sync** checkbox is synced across devices as well.
+  For example, the following **appearance** settings are synced so you have a consistent experience across devices and don’t need to re-define the same settings again.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="appearance settings", width="800", height="584" %}
   However, the **dock** settings isn’t sync because developers have different dock preferences when debugging on different sites.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jWv8rwkF4q6SwTQbSNpp.png", alt="dock", width="426", height="134" %}
 
-Most of the settings you see in the Settings UI are synced, except for the "Workspace", "Experiments", "Devices" tab and a select few other general settings. The state of the "Enable settings sync" checkbox is synced across devices as well.
 
 ## Experiments {: #experiments }
 
