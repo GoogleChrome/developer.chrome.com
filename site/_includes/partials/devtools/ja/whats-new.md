@@ -2,11 +2,11 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
-<!-- ### Chrome 97 {: #chrome97 }
-* [Preview feature: New Recorder panel](/ja/blog/new-in-devtools-97/#recorder)
-* [Refresh device list in Device Mode](/ja/blog/new-in-devtools-97/#device)
-* [Autocomplete with Edit as HTML](/ja/blog/new-in-devtools-97/#code-completion)
-* [Improved code debugging experience](/ja/blog/new-in-devtools-97/#debugging) -->
+### Chrome 97 {: #chrome97 }
+* [プレビュー機能: 新しい Recorder パネル](/ja/blog/new-in-devtools-97/#recorder)
+* [デバイスモードでのデバイス一覧の更新](/ja/blog/new-in-devtools-97/#device)
+* [Edit as HTML での自動補完](/ja/blog/new-in-devtools-97/#code-completion)
+* [改善されたコードデバッグ体験](/ja/blog/new-in-devtools-97/#debugging)
 
 ### Chrome 96 {: #chrome96 }
 * [プレビュー機能: 新しい CSS Overview パネル](/ja/blog/new-in-devtools-96/#css-overview)
