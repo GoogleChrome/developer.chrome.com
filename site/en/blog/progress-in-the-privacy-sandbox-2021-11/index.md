@@ -18,8 +18,8 @@ tags:
 Welcome to the November edition of "**[Progress in the Privacy
 Sandbox](/tags/progress-in-the-privacy-sandbox/)**," tracking the milestones on
 the path to phasing out third-party cookies in Chrome and working towards a more
-private web. Each month we'll share an overview of the updates to [the Privacy
-Sandbox timeline](https://privacysandbox.com/timeline/) along with news from
+private web. Each month we'll share an overview of the updates to the **[Privacy
+Sandbox timeline](https://privacysandbox.com/timeline/)** along with news from
 across the project. We've also provided an [update on our Privacy Sandbox
 commitments](https://blog.google/around-the-globe/google-europe/update-our-privacy-sandbox-commitments/)
 as we ensure proposals are designed, developed and implemented with regulatory
@@ -29,22 +29,24 @@ Information Commissioner's Office (ICO).
 {% Aside %}
 
 As we approach the end of the year there are fewer changes across the different
-proposals, so the update here is also lighter. You can expect December to be
-quieter with holidays and code freezes in place. However, this does mean it's a
-good time for testing and questions, which we are always happy to hear either on
-the [@ChromiumDev Twitter](https://twitter.com/ChromiumDev) or the [developer
-support repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
+proposals, so the update here is also lighter. However, this does mean it's a
+good time for testing and addressing questions, which we are always happy to
+hear about either on the [@ChromiumDev Twitter](https://twitter.com/ChromiumDev)
+or the [developer support
+repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
 {% endAside %}
 
+
 ## Events
 
-At the beginning of the month we ran the Chrome Developer Summit, which included
-both a Privacy Sandbox segment in the keynote and a few related questions in the
-Ask Me Anything (AMA) session. We've [added a summary for
+At the beginning of November we hosted the Chrome Developer Summit, which
+included both a Privacy Sandbox segment in the keynote and a few related
+questions in the Ask Me Anything (AMA) session. We've [added a summary for
 you](/docs/privacy-sandbox/cds21-update/) to read or watch that covers
-activities and examples on what to expect as proposals progress through the
+activities and examples of what to expect as proposals progress through the
 discussion, testing, and scaled adoption phases.
+
 
 {% YouTube id='_Ah_ODU3CvA' %}
 
@@ -62,7 +64,7 @@ cross-site storage or communication.
 the new, more meaningful name for the WebID proposal.  We've reflected this
 change in the [Privacy Sandbox Timeline](https://privacysandbox.com/timeline/).
 Federated identity is a critical service for the web, but given that it's
-explicitly created to share aspects of identity with other sites, there are
+explicitly used to share aspects of identity across other sites, there are
 implementation details which overlap with cross-site tracking.
 
 The Federated Credentials Management proposal explores a range of options: from
@@ -72,9 +74,9 @@ connecting to services with the bare minimum of information shared.
 November also included the bi-annual
 **[BlinkOn](https://www.chromium.org/events/blinkon-15)** conference. Blink is
 the rendering engine used by Chromium, and BlinkOn is where contributors gather
-for engineering presentations and discussions on current projects. This included
-an **overview and Q&A session on FedCM**, you can [watch the recording on
-YouTube](https://www.youtube.com/watch?v=9la0cBhVXac).
+for engineering presentations and discussions on current projects. The November
+BlinkOn included an **overview and Q&A session on FedCM**: you can [watch the
+recording on YouTube](https://www.youtube.com/watch?v=9la0cBhVXac).
 
 
 ## Preventing covert tracking
@@ -100,12 +102,12 @@ format. There is also the new `chrome://flags/#force-major-version-to-100` entry
 which will let you check if the switch to a 3 digit major version causes your
 site to malfunction or break.
 
-We have sent the **[Intent to Ship for
+We have published the **[Intent to Ship for
 Sec-CH-UA-Full-Version-List](https://groups.google.com/a/chromium.org/g/blink-dev/c/yZh8Lwr34Ro)**.
 This addresses [ecosystem
 feedback](https://github.com/WICG/ua-client-hints/issues/196) that the existing
 Sec-CH-UA-Full-Version was too tightly bound to the primary browser brand as it
-just provided a single value. For example, the current implementation shows:
+only provided a single value. For example, the current implementation shows:
 
 ⬇️ _Server response header_
 
@@ -142,6 +144,7 @@ Sec-CH-UA: "Chromium";v="94", "Google Chrome";v="94", "Other browser";v="99"
 Sec-CH-UA-Full-Version-List: "Chromium";v="94.0.4606.124", "Google Chrome";v="94.0.4606.124", "Other browser";v="99.88.77.66"
 ```
 
+
 {% Aside %}
 
 If you are using `Sec-CH-UA-Full-Version` then you should plan to migrate to
@@ -150,17 +153,18 @@ If you are using `Sec-CH-UA-Full-Version` then you should plan to migrate to
 
 {% endAside %}
 
+
 ### IP blindness
 
-IP addresses by their nature provide a unique identifier for a client enabling
-the necessary communication between browser and server. However, this also means
-that a stable IP address over time passively provides a significant amount of
-information that can be used for cross-site tracking.
+IP addresses by their nature often provide a unique identifier for a client
+enabling the necessary communication between browser and server. However, this
+also means that a stable IP address over time passively provides a significant
+amount of information that can be used for cross-site tracking.
 
 The **[IP blindness proposal](https://github.com/bslassey/ip-blindness)** (also
 known as Global Network Address Translation Combined with Audited and Trusted
-CDN or HTTP-Proxy Eliminating Reidentification or **Gnatcatcher**) details two
-methods addressing this issue. The first is [Near-Path
+CDN or HTTP-Proxy Eliminating Reidentification or **Gnatcatcher**) details a two
+pronged approach to addressing this issue. The first is [Near-Path
 NAT](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md)
 which effectively forwards the browser's connection through an IP privatizing
 service which hides the browser's IP address from the site being visited. The
@@ -172,11 +176,12 @@ proposal explores methods of defining auditable policies for creating and
 maintaining that separation.
 
 Both of these ideas are early in the discussion phase with active progress in
-the repo. You can expect to see discussion continue there and if you're
-interested in the network-level details, you can follow the [Multiplexed
-Application Substrate over QUIC Encryption
-(MASQUE)](https://datatracker.ietf.org/wg/masque/about/) Working Group in the
-IETF.
+the repo, such as the recently posted [Willfully IP Blindness
+Principles](https://github.com/bslassey/ip-blindness/blob/master/proposed_willful_ip_blindness_principles.md).
+You can expect to see discussion continue there and if you're interested in the
+network-level details, you can follow the [Multiplexed Application Substrate
+over QUIC Encryption (MASQUE)](https://datatracker.ietf.org/wg/masque/about/)
+Working Group in the IETF.
 
 
 ## Measure digital ads
@@ -192,7 +197,7 @@ API](/docs/privacy-sandbox/attribution-reporting/)** creates functionality to
 measure events on one site, like clicking or viewing an ad, that lead to a
 conversion on another site—without enabling cross-site tracking.
 
-We continue to test on the API and **[the origin trial has been
+We continue to test the API and **[the origin trial has been
 extended](https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA)**
 through to Chrome 97. Current origin trial tokens expired on October 12th, so
 existing testers need to apply for updated tokens to continue testing.
@@ -208,9 +213,9 @@ implementation detail with accompanying demo and demo code.
 
 ## Feedback
 
-As we continue to publish these monthly updates and progress through the Privacy
-Sandbox as a whole, we want to make sure that developers receive the information
-and support that you need. Let us know on [@ChromiumDev
+As we continue to publish these monthly updates, and progress through the
+Privacy Sandbox as a whole, we want to make sure that developers receive the
+information and support that they need. Let us know on [@ChromiumDev
 Twitter](https://twitter.com/ChromiumDev) if there's anything that we could
 improve in this series. We'll use your input to continue improving the format.
 
