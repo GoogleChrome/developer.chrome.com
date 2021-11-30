@@ -4,7 +4,7 @@ title: workbox-strategies
 date: 2017-11-27
 updated: 2021-04-27
 description: >
-  The module guide for workbox-strategies.
+  A set of runtime caching strategies that will handle responding to a request, normally used with `workbox-routing`.
 ---
 
 When service workers were first introduced, a set of common caching strategies
@@ -42,7 +42,7 @@ regardless of the age of the cached response.
 This is a fairly common strategy where having the most up-to-date resource
 is not vital to the application.
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 import {StaleWhileRevalidate} from 'workbox-strategies';
 
@@ -66,7 +66,7 @@ cached response and the network will not be used at all. If there isn't a cached
 response, the Request will be fulfilled by a network request and the response
 will be cached so that the next request is served directly from the cache.
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 import {CacheFirst} from 'workbox-strategies';
 
@@ -84,7 +84,7 @@ response from the network. If the request is successful, it'll put the response
 in the cache. If the network fails to return a response, the cached response
 will be used.
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 import {NetworkFirst} from 'workbox-strategies';
 
@@ -102,7 +102,7 @@ If you require specific requests to be fulfilled from the network, the
 [network only](/web/fundamentals/instant-and-offline/offline-cookbook/#network-only)
 is the strategy to use.
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 import {NetworkOnly} from 'workbox-strategies';
 
@@ -117,7 +117,7 @@ The [cache only](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-o
 strategy ensures that responses are obtained from a cache. This is less common
 in workbox, but can be useful if you have your own precaching step.
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 import {CacheOnly} from 'workbox-strategies';
 
@@ -138,7 +138,7 @@ All of the strategies allow you to configure:
 You can change the cache a strategy used by supplying a cache name. This is
 useful if you want to separate out your assets to help with debugging.
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 import {CacheFirst} from 'workbox-strategies';
 
@@ -163,7 +163,7 @@ Workbox comes with a set of plugins that can be used with these strategies.
 To use any of these plugins (or a custom plugin), you just need to pass in
 instances to the `plugins` option.
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 import {CacheFirst} from 'workbox-strategies';
 import {ExpirationPlugin} from 'workbox-expiration';
@@ -189,7 +189,7 @@ registerRoute(
 In addition to configuring strategies, Workbox allows you to create your own custom strategies.
 This can be done by importing and extending the `Strategy` base class from `workbox-strategies`:
 
-```javascript
+```js
 import {Strategy} from 'workbox-strategies';
 
 class NewStrategy extends Strategy {
@@ -218,7 +218,7 @@ Both request strategies are invoked with two parameters:
 
 The following is an example of a new strategy that re-implements the behavior of `NetworkOnly`:
 
-```javascript
+```js
 class NewNetworkOnlyStrategy extends Strategy {
   _handle(request, handler) {
     return handler.fetch(request);
@@ -263,7 +263,7 @@ Offline Cookbook (which Workbox does not provide), but goes a step further and a
 cache after a successful network request. This in an example of a more complex strategy that uses
 multiple actions.
 
-```javascript
+```js
 import {Strategy} from 'workbox-strategies';
 
 class CacheNetworkRace extends Strategy {
@@ -300,7 +300,7 @@ use the strategy classes to run a request through a specific strategy.
 For example, to use the stale-while-revalidate strategy, you can do the
 following:
 
-```javascript
+```js
 self.addEventListener('fetch', event => {
   const {request} = event;
   const url = new URL(request.url);

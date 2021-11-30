@@ -4,7 +4,7 @@ title: workbox-sw
 date: 2017-11-27
 updated: 2021-08-23
 description: >
-  The module guide for workbox-sw.
+  Manages dynamic loading of Workbox service worker packages as needed and provides additional helper methods.
 ---
 
 The `workbox-sw` module provides an extremely easy way to get up and running
@@ -19,18 +19,18 @@ on your own server.
 The easiest way to start using this module is via the CDN. You just need to
 add the following to your service worker:
 
-<pre class="prettyprint js">
-importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
-</pre>
+```js
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
+```
 
 With this you'll have the `workbox` namespace in your service worker that will
 provide access to all of the Workbox modules.
 
-<pre class="prettyprint js">
+```js
 workbox.precaching.*
 workbox.routing.*
 etc
-</pre>
+```
 
 There is some magic that happens as you start to use the additional modules.
 
@@ -54,13 +54,13 @@ command](/web/tools/workbox/modules/workbox-cli#copylibraries), and then tell
 
 If you put the files under `/third_party/workbox-vX.Y.Z/`, you would use them like so:
 
-<pre class="prettyprint js">
+```js
 importScripts('/third_party/workbox-vX.Y.Z/workbox-sw.js');
 
 workbox.setConfig({
   modulePathPrefix: '/third_party/workbox-vX.Y.Z/'
 });
-</pre>
+```
 
 ## Avoid Async Imports
 
@@ -76,21 +76,21 @@ In order to avoid violating this restriction, a best practice is to reference th
 
 For example, the following top-level service worker code is fine:
 
-<pre class="prettyprint js">
-importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
+```js
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
 
 // This will work!
 workbox.routing.registerRoute(
   ({request}) => request.destination === 'image',
   new workbox.strategies.CacheFirst()
 );
-</pre>
+```
 
 But the code below could be a problem if you have not referenced `workbox.strategies` elsewhere in your
 service worker:
 
-<pre class="prettyprint js">
-importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
+```js
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
 
 self.addEventListener('fetch', (event) => {
   if (event.request.url.endsWith('.png')) {
@@ -100,14 +100,14 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(cacheFirst.handle({request: event.request}));
   }
 });
-</pre>
+```
 
 If you need to write code that would otherwise run afoul of this restriction, you can explicitly
 trigger the `importScripts()` call outside of the event handler by using the
 [`workbox.loadModule()`](/web/tools/workbox/reference-docs/latest/workbox#.loadModule) method:
 
-<pre class="prettyprint js">
-importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
+```js
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
 
 // This will trigger the importScripts() for workbox.strategies and its dependencies:
 workbox.loadModule('workbox-strategies');
@@ -119,13 +119,13 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(cacheFirst.handle({request: event.request}));
   }
 });
-</pre>
+```
 
 Alternatively, you can create a reference to the relevant namespaces outside of your event handlers,
 and then use that reference later on:
 
-<pre class="prettyprint js">
-importScripts('{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}');
+```js
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
 
 // This will trigger the importScripts() for workbox.strategies and its dependencies:
 const {strategies} = workbox;
@@ -137,7 +137,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(cacheFirst.handle({request: event.request}));
   }
 });
-</pre>
+```
 
 Note: Some versions of Chrome do not honor this restriction, and asynchronous calls to
 `importScripts()` don't trigger the expected failure. Developers are advised _not_ to rely on this
@@ -156,11 +156,11 @@ but for any other origin it'll use the production build.
 If you want to force debug or production builds, you can set the `debug` config
 option:
 
-<pre class="prettyprint js">
+```js
 workbox.setConfig({
   debug: &lt;true or false&gt;
 });
-</pre>
+```
 
 ## Convert code using import statements to use `workbox-sw`
 
@@ -183,7 +183,7 @@ all modules exported from the `workbox-precaching` npm package can be found on
 As an example, here's some code that uses `import` statements referencing
 Workbox modules:
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 import {CacheFirst} from 'workbox-strategies';
 import {CacheableResponse} from 'workbox-cacheable-response';
@@ -199,10 +199,8 @@ registerRoute(
 And here's the same code rewritten to use `workbox-sw` (notice that only the
 import statements have changed—the logic has not been touched):
 
-```javascript
-importScripts(
-  '{% include "web/tools/workbox/_shared/workbox-sw-cdn-url.html" %}'
-);
+```js
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
 
 const {registerRoute} = workbox.routing;
 const {CacheFirst} = workbox.strategies;

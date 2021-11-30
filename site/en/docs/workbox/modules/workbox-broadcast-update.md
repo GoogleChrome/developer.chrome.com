@@ -4,7 +4,7 @@ title: workbox-broadcast-update
 date: 2017-11-29
 updated: 2020-05-01
 description: >
-  The module guide for workbox-broadcast-update.
+  Send messages to pages (via Broadcast Channels) when a cache is updated with a new response.
 ---
 
 When responding to requests with cached entries, while being fast, it

@@ -4,7 +4,7 @@ title: workbox-core
 date: 2017-11-27
 updated: 2021-03-19
 description: >
-  The module guide for workbox-core.
+  Alter log levels and change cache names. Contains shared code used by all Workbox libraries.
 ---
 
 Workbox has been built to be modular, allowing developers to select the
@@ -24,7 +24,7 @@ rather than the end developer.
 
 Workbox defines it's caches via `cacheNames`:
 
-```javascript
+```js
 import {cacheNames} from 'workbox-core';
 
 console.log(cacheNames.precache);
@@ -35,12 +35,14 @@ console.log(cacheNames.googleAnalytics);
 These cache names are constructed in the format of a prefix, a name and
 suffix, where the name changes based on the use of the cache.
 
-`<prefix>-<cache-id>-<suffix>`
+```
+<prefix>-<cache-id>-<suffix>
+```
 
 You can change these default names by altering all or some of the values
 passed to `setCacheNameDetails()`.
 
-```javascript
+```js
 import {cacheNames, setCacheNameDetails} from 'workbox-core';
 
 setCacheNameDetails({
@@ -74,14 +76,14 @@ happen [by default](/web/fundamentals/primers/service-workers/lifecycle#clientsc
 
 If you find yourself wanting this behavior, `workbox-core` provides a helper method:
 
-<pre class="prettyprint js">
+```js
 import {clientsClaim} from 'workbox-core';
 
 // This clientsClaim() should be at the top level
 // of your service worker, not inside of, e.g.,
 // an event handler.
 clientsClaim();
-</pre>
+```
 
 The `clientsClaim()` method in `workbox-core` automatically adds an `activate`
 event listener to your service worker, and inside of it, calls

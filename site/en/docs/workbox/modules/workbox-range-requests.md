@@ -4,7 +4,7 @@ title: workbox-range-requests
 date: 2017-11-27
 updated: 2020-05-01
 description: >
-  The module guide for workbox-range-requests.
+  This modules provides support for responding to a `Range:` request using a slice of previously cached data.
 ---
 
 When making a request, a `range` header can be set that tells
@@ -26,7 +26,7 @@ specified range of data.
 You can use Workbox Range Requests by adding the plugin to the
 strategy you want to check for range requests against.
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 import {CacheFirst} from 'workbox-strategies';
 import {RangeRequestsPlugin} from 'workbox-range-requests';
@@ -50,7 +50,7 @@ cached media content. Read more in the
 If you want to make use of this logic outside of the Plugin you
 can use the `createPartialResponse()` function.
 
-```javascript
+```js
 import {createPartialResponse} from 'workbox-range-requests';
 
 createPartialResponse(request, cachedResponse);

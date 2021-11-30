@@ -4,7 +4,7 @@ title: workbox-window
 date: 2019-02-24
 updated: 2021-03-19
 description: >
-  The module guide for workbox-window.
+  A module that helps with registering a service worker, managing updates, and responding to lifecycle events.
 ---
 
 The `workbox-window` package is a set of modules that are intended to run in the
@@ -35,7 +35,7 @@ The easiest way to import the `Workbox` class on your site is from our CDN:
 
 ```html
 <script type="module">
-  import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/{% include "web/tools/workbox/_shared/workbox-latest-version.html" %}/workbox-window.prod.mjs';
+  import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-window.prod.mjs';
 
   if ('serviceWorker' in navigator) {
     const wb = new Workbox('/sw.js');
@@ -74,7 +74,7 @@ npm install workbox-window
 Then, in one of your application's JavaScript files, `import` workbox by
 referencing the `workbox-window` package name:
 
-```javascript
+```js
 import {Workbox} from 'workbox-window';
 
 if ('serviceWorker' in navigator) {
@@ -93,7 +93,7 @@ Even though `workbox-window` is quite small, there's no reason it
 needs to be loaded with your site's core application logic, as service workers,
 by their very nature, are a progressive enhancement.
 
-```javascript
+```js
 if ('serviceWorker' in navigator) {
   const {Workbox} = await import('workbox-window');
 
@@ -119,7 +119,7 @@ source file rather than the package itself.
 Here are the various ways you can import `Workbox`, along with an explanation of
 what each will return:
 
-```javascript
+```js
 // Imports a UMD version with ES5 syntax
 // (pkg.main: "build/workbox-window.prod.umd.js")
 const {Workbox} = require('workbox-window');
@@ -154,7 +154,7 @@ Many web applications user service worker to precache assets so their app works
 offline on subsequent page loads. In some cases it could make sense to inform
 the user that the app is now available offline.
 
-```javascript
+```js
 const wb = new Workbox('/sw.js');
 
 wb.addEventListener('activated', event => {
@@ -186,7 +186,7 @@ activate](/web/fundamentals/primers/service-workers/lifecycle#waiting).
 To help minimize confusion and make it clear when this situation is happening,
 the `Workbox` class provides a `waiting` event that you can listen for:
 
-```javascript
+```js
 const wb = new Workbox('/sw.js');
 
 wb.addEventListener('waiting', event => {
@@ -214,7 +214,7 @@ strategy](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate))
 To receive those updates from the window, you can listen to `message` events of
 type `CACHE_UPDATED`:
 
-```javascript
+```js
 const wb = new Workbox('/sw.js');
 
 wb.addEventListener('message', event => {
@@ -246,7 +246,7 @@ This example sends a list of URLs loaded by the page to the router any time a
 new service worker is activated. Note, it's fine to send _all_ URLs because only
 the URLs that match a defined route in the service worker will be cached:
 
-```javascript
+```js
 const wb = new Workbox('/sw.js');
 
 wb.addEventListener('activated', event => {
@@ -330,7 +330,7 @@ installation and future updates by checking the `isUpdate` property on any of
 the following events. For the very first installation, `isUpdate` will be
 `false`.
 
-```javascript
+```js
 const wb = new Workbox('/sw.js');
 
 wb.addEventListener('installed', event => {
@@ -611,7 +611,7 @@ message and await the response:
 
 **Code in sw.js:**
 
-```javascript
+```js
 const SW_VERSION = '1.0.0';
 
 addEventListener('message', event => {
@@ -623,7 +623,7 @@ addEventListener('message', event => {
 
 **Code in main.js (running in the window):**
 
-```javascript
+```js
 const wb = new Workbox('/sw.js');
 wb.register();
 

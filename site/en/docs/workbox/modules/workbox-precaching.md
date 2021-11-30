@@ -4,7 +4,7 @@ title: workbox-precaching
 date: 2017-11-27
 updated: 2021-04-23
 description: >
-  The module guide for workbox-precaching.
+  Easily precache a set of files and efficiently manage updates to files.
 ---
 
 One feature of service workers is the ability to save a set of files to the
@@ -77,7 +77,7 @@ respond, instead of the cache-first strategy used by `workbox-precaching`.
 `workbox-precaching` expects an array of objects with a `url` and `revision`
 property. This array is sometimes referred to as a precache manifest:
 
-```javascript
+```js
 import {precacheAndRoute} from 'workbox-precaching';
 
 precacheAndRoute([
@@ -145,7 +145,7 @@ meaning that a request for
 
 You can ignore a different set of search parameters using `ignoreURLParametersMatching`:
 
-```javascript
+```js
 import {precacheAndRoute} from 'workbox-precaching';
 
 precacheAndRoute(
@@ -169,7 +169,7 @@ entry `/index.html`.
 
 You can alter this to something else, or disable it completely, by setting `directoryIndex`:
 
-```javascript
+```js
 import {precacheAndRoute} from 'workbox-precaching';
 
 precacheAndRoute(
@@ -192,7 +192,7 @@ be handled by the precached entry for `/about.html`.
 
 You can disable this behavior by setting `cleanUrls`:
 
-```javascript
+```js
 import {precacheAndRoute} from 'workbox-precaching';
 
 precacheAndRoute([{url: '/about.html', revision: 'b79cd4'}], {
@@ -206,7 +206,7 @@ If you want to define custom matches from incoming requests to precached assets,
 you can do so with the `urlManipulation` option. This should be a callback
 that returns an array of possible matches.
 
-```javascript
+```js
 import {precacheAndRoute} from 'workbox-precaching';
 
 precacheAndRoute(
@@ -236,7 +236,7 @@ Instead of using the default export, you can use the
 directly to add items to the precache, determine when these assets are installed, and
 when cleanup should occur.
 
-```javascript
+```js
 import {PrecacheController} from 'workbox-precaching';
 
 const precacheController = new PrecacheController();
@@ -290,7 +290,7 @@ To get the correct cache key you can call
 passing in the original URL, and then use the result to perform a
 `cache.match()` on the appropriate cache.
 
-```javascript
+```js
 import {cacheNames} from 'workbox-core';
 import {getCacheKeyForURL} from 'workbox-precaching';
 
@@ -303,7 +303,7 @@ Alternatively, if all you need is the precached `Response` object, you can call
 which will automatically use the correct cache key and search in the correct
 cache:
 
-```javascript
+```js
 import {matchPrecache} from 'workbox-precaching';
 
 const response = await matchPrecache('/precached-file.html');
@@ -352,7 +352,7 @@ functionality should modify the precache manifest that Workbox generates to add
 in the appropriate info themselves. The `manifestTransform` option in Workbox's
 build tools configuration can help:
 
-```javascript
+```js
 const ssri = require('ssri');
 
 const integrityManifestTransform = (originalManifest, compilation) => {

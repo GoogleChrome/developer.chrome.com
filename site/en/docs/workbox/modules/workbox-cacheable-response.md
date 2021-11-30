@@ -4,7 +4,7 @@ title: workbox-cacheable-response
 date: 2017-11-27
 updated: 2020-06-24
 description: >
-  The module guide for workbox-cacheable-response.
+  Restrict which requests are cached based on a response's status code or headers.
 ---
 
 When caching assets at runtime, there's no one-size-fits-all rule for whether a

@@ -4,7 +4,7 @@ title: workbox-google-analytics
 date: 2017-11-27
 updated: 2021-04-23
 description: >
-  The module guide for workbox-google-analytics.
+  See how users are interacting with your site when they are offline.
 ---
 
 If you're building an application that works offline, then understanding
@@ -101,7 +101,7 @@ dimension with Workbox Google Analytics, follow these steps:
         and the parameter name would be `cd1` (if the index were 8 it would be
         `cd8`):
 
-        <pre class="prettyprint js">
+        ```js
         import * as googleAnalytics from 'workbox-google-analytics';
 
         googleAnalytics.initialize({
@@ -109,7 +109,7 @@ dimension with Workbox Google Analytics, follow these steps:
             cd1: 'offline',
           },
         });
-        </pre>
+        ```
 
 1.  _(Optional)_ Since values in `parameterOverrides` are only applied
     to retried ("offline") requests, you may also want to set a default value
@@ -122,21 +122,21 @@ dimension with Workbox Google Analytics, follow these steps:
         "Network Status" custom dimension for all requests not replayed by the
         service worker.
 
-<pre class="prettyprint html">
-&lt;script&gt;
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+```html
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('create', 'UA-XXXXX-Y', 'auto');
 
-// Set default value of custom dimension 1 to 'online'
-ga('set', 'dimension1', 'online');
+  // Set default value of custom dimension 1 to 'online'
+  ga('set', 'dimension1', 'online');
 
-ga('send', 'pageview');
-&lt;/script&gt;
-</pre>
+  ga('send', 'pageview');
+</script>
+```
 
 <aside>
   <strong>Note:</strong>
@@ -171,7 +171,7 @@ the `hitFilter` configuration option:
     as a param with the index of the newly created metric. If this is your
     first custom metric, the parameter name would be "cm1":
 
-        <pre class="prettyprint js">
+        ```js
         import * as googleAnalytics from 'workbox-google-analytics';
 
         googleAnalytics.initialize({
@@ -180,7 +180,7 @@ the `hitFilter` configuration option:
             params.set('cm1', queueTimeInSeconds);
           },
         });
-        </pre>
+        ```
 
 ## Testing Workbox Google Analytics
 

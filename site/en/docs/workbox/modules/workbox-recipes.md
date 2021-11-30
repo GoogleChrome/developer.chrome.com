@@ -4,7 +4,7 @@ title: workbox-recipes
 date: 2020-11-13
 updated: 2021-04-29
 description: >
-  The module guide for workbox-recipes.
+  Easily use common workbox patterns without needing to set them up yourself from individual packages.
 ---
 
 A number of common patters, especially around [routing](/web/tools/workbox/modules/workbox-routing) and [caching](/web/tools/workbox/modules/workbox-strategies), are common enough that they can be standardized into reusable recipes. `workbox-recipes` makes these available in an easy-to-consume package, allowing you to get up-and-running with a highly functional service worker quickly.
@@ -331,7 +331,3 @@ imageCache();
 
 offlineFallback();
 ```
-
-## Feedback {: #feedback .hide-from-toc }
-
-{% include "web/_shared/helpful.html" %}

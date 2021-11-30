@@ -4,7 +4,7 @@ title: workbox-navigation-preload
 date: 2018-07-12
 updated: 2020-01-16
 description: >
-  The module guide for workbox-navigation-preload.
+  Enable navigation preload, to get a network response for navigation requests faster.
 ---
 
 "[Speed up Service Worker with Navigation Preloads](/web/updates/2017/02/navigation-preload)" does a
@@ -38,7 +38,7 @@ HTML will be used unconditionally.
 
 ## Basic Usage
 
-```javascript
+```js
 import * as navigationPreload from 'workbox-navigation-preload';
 import {NetworkFirst} from 'workbox-strategies';
 import {registerRoute, NavigationRoute} from 'workbox-routing';

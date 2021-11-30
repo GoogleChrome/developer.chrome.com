@@ -4,7 +4,7 @@ title: workbox-background-sync
 date: 2017-11-27
 updated: 2021-08-17
 description: >
-  The module guide for workbox-background-sync.
+  Use background sync to reliably make a network request even if the user is offline.
 ---
 
 When you send data to a web server, sometimes the requests will fail. It
@@ -38,7 +38,7 @@ The easiest way to use Background Sync is to use the `Plugin` that will
 automatically Queue up failed requests and retry them when future `sync`
 events are fired.
 
-```javascript
+```js
 import {BackgroundSyncPlugin} from 'workbox-background-sync';
 import {registerRoute} from 'workbox-routing';
 import {NetworkOnly} from 'workbox-strategies';
@@ -67,7 +67,7 @@ you can do so by
 [adding a `fetchDidSucceed` plugin](https://github.com/GoogleChrome/workbox/issues/2599#issuecomment-900304969)
 to your strategy:
 
-```javascript
+```js
 const statusPlugin = {
   fetchDidSucceed: ({response}) => {
     if (response.status >= 500) {

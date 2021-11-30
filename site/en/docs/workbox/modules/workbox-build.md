@@ -4,7 +4,7 @@ title: workbox-build
 date: 2018-01-31
 updated: 2020-01-17
 description: >
-  The module guide for workbox-build.
+  An npm module that can generate a complete service worker, inject a precache manifest and copy the Workbox files.
 ---
 
 The `workbox-build` module integrates into a node-based build process and can generate an entire service worker, or just generate a list of assets to precache that could be used within an existing service worker.
@@ -17,19 +17,36 @@ The two modes that most developers will use are `generateSW` and `injectManifest
 
 The `generateSW` mode creates a service worker file for you, and writes it out to disk.
 
-{% include "web/tools/workbox/_shared/when-to-use-generate-sw.html" %}
+#### When to use generateSW
+
+- You want to precache files.
+- You have simple runtime configuration needs (e.g. the configuration allows you to define routes and strategies).
+
+#### When NOT to use generateSW
+
+- You want to use other Service Worker features (i.e. Web Push).
+- You want to import additional scripts or add additional logic.
 
 ### injectManifest
 
 The injectManifest mode will generate a list of URLs to precache, and add that precache manifest to an existing service worker file. It will otherwise leave the file as-is.
 
-{% include "web/tools/workbox/_shared/when-to-use-inject-manifest.html" %}
+#### When to use injectManifest
+
+- You want more control over your service worker.
+- You want to precache files.
+- You have more complex needs in terms of routing.
+- You would like to use your service worker with other API's (e.g. Web Push).
+
+#### When NOT to use injectManifest
+
+- You want the easiest path to adding a service worker to your site.
 
 ## generateSW Mode
 
 You can use the `generateSW` mode within a node-based build script like so:
 
-```javascript
+```js
 // Inside of build.js:
 const {generateSW} = require('workbox-build');
 
@@ -38,9 +55,7 @@ generateSW({
   swDest,
   // Other configuration options...
 }).then(({count, size}) => {
-  console.log(
-    `Generated ${swDest}, which will precache ${count} files, totaling ${size} bytes.`
-  );
+  console.log(`Generated ${swDest}, which will precache ${count} files, totaling ${size} bytes.`);
 });
 ```
 
@@ -54,7 +69,7 @@ A full set of configuration options can be found on [this reference page](/web/t
 
 You can use the `injectManifest` mode within a node-based build script like so:
 
-```javascript
+```js
 // Inside of build.js:
 const {injectManifest} = require('workbox-build');
 
@@ -65,9 +80,7 @@ injectManifest({
   swDest,
   // Other configuration options...
 }).then(({count, size}) => {
-  console.log(
-    `Generated ${swDest}, which will precache ${count} files, totaling ${size} bytes.`
-  );
+  console.log(`Generated ${swDest}, which will precache ${count} files, totaling ${size} bytes.`);
 });
 ```
 
@@ -87,7 +100,7 @@ This is conceptually similar to the `injectManifest` mode, but instead of adding
 
 You can use the `getManifest` mode within a node-based build script like so:
 
-```javascript
+```js
 // Inside of build.js:
 const {getManifest} = require('workbox-build');
 

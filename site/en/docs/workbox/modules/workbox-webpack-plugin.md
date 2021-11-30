@@ -4,7 +4,7 @@ title: workbox-webpack-plugin
 date: 2017-12-15
 updated: 2020-02-03
 description: >
-  The module guide for workbox-webpack-plugin.
+  As part of your Webpack build process add Workbox and precache assets.
 ---
 
 Workbox provides two [webpack](https://webpack.js.org/) plugins: one that
@@ -17,26 +17,43 @@ right plugin and configuration to use.
 
 ## Which Plugin to Use
 
-### GenerateSW
+### `GenerateSW`
 
 The `GenerateSW` plugin will create a service worker file for you and
 add it to the webpack asset pipeline.
 
-{% include "web/tools/workbox/_shared/when-to-use-generate-sw.html" %}
+#### When to use `GenerateSW`
 
-### InjectManifest
+- You want to precache files.
+- You have simple runtime configuration needs (e.g. the configuration allows you to define routes and strategies).
+
+#### When NOT to use `GenerateSW`
+
+- You want to use other Service Worker features (i.e. Web Push).
+- You want to import additional scripts or add additional logic.
+
+### `InjectManifest`
 
 The `InjectManifest` plugin will generate a list of URLs to precache and
 add that precache manifest to an existing service worker
 file. It will otherwise leave the file as-is.
 
-{% include "web/tools/workbox/_shared/when-to-use-inject-manifest.html" %}
+#### When to use `InjectManifest`
+
+- You want more control over your service worker.
+- You want to precache files.
+- You have more complex needs in terms of routing.
+- You would like to use your service worker with other API's (e.g. Web Push).
+
+#### When NOT to use `InjectManifest`
+
+- You want the easiest path to adding a service worker to your site.
 
 ## GenerateSW Plugin
 
 You can add the `GenerateSW` plugin to your webpack config like so:
 
-```javascript
+```js
 // Inside of webpack.config.js:
 const {GenerateSW} = require('workbox-webpack-plugin');
 
@@ -59,7 +76,7 @@ you'd just need to add an `Object` to the plugin's constructor.
 
 For example:
 
-```javascript
+```js
 // Inside of webpack.config.js:
 const {GenerateSW} = require('workbox-webpack-plugin');
 
@@ -81,7 +98,7 @@ A full set of configuration options can be found on
 
 You can add the `InjectManifest` plugin to your webpack config like so:
 
-```javascript
+```js
 // Inside of webpack.config.js:
 const {InjectManifest} = require('workbox-webpack-plugin');
 
@@ -105,7 +122,7 @@ You can pass the appropriate configuration as properties of an `Object` to the p
 
 For example:
 
-```javascript
+```js
 // Inside of webpack.config.js:
 const {InjectManifest} = require('workbox-webpack-plugin');
 

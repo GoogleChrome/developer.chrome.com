@@ -4,7 +4,7 @@ title: workbox-routing
 date: 2017-11-27
 updated: 2021-03-22
 description: >
-  The module guide for workbox-routing.
+  Routes requests in your service worker to specific caching strategies or callback functions.
 ---
 
 A service worker can intercept network requests for a page. It may respond to
@@ -160,7 +160,7 @@ If your site is a single page app, you can use a
 return a specific response for all
 [navigation requests](/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests).
 
-```javascript
+```js
 import {createHandlerBoundToURL} from 'workbox-precaching';
 import {NavigationRoute, registerRoute} from 'workbox-routing';
 
@@ -179,7 +179,7 @@ By default, this will respond to _all_ navigation requests. If you want to
 restrict it to respond to a subset of URLs, you can use the `allowlist`
 and `denylist` options to restrict which pages will match this route.
 
-```javascript
+```js
 import {createHandlerBoundToURL} from 'workbox-precaching';
 import {NavigationRoute, registerRoute} from 'workbox-routing';
 
@@ -200,7 +200,7 @@ the `allowlist` and `denylist`.
 If you want to supply a "handler" for requests that don't match a route, you
 can set a default handler.
 
-```javascript
+```js
 import {setDefaultHandler} from 'workbox-routing';
 
 setDefaultHandler(({url, event, params}) => {
@@ -213,7 +213,7 @@ setDefaultHandler(({url, event, params}) => {
 In the case of any of your routes throwing an error, you can capture and
 degrade gracefully by setting a catch handler.
 
-```javascript
+```js
 import {setCatchHandler} from 'workbox-routing';
 
 setCatchHandler(({url, event, params}) => {
@@ -228,7 +228,7 @@ All routes by default are assumed to be for `GET` requests.
 If you would like to route other requests, like a `POST` request, you need
 to define the method when registering the route, like so:
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 
 registerRoute(matchCb, handlerCb, 'POST');
@@ -258,7 +258,7 @@ requests, you can create your own
 it's [`handleRequest()`](/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router#handleRequest)
 method whenever you want to use the router to respond to a request.
 
-```javascript
+```js
 import {Router} from 'workbox-routing';
 
 const router = new Router();
@@ -281,7 +281,7 @@ self.addEventListener('fetch', event => {
 When using the `Router` directly, you will also need to use the `Route` class,
 or any of the extending classes to register routes.
 
-```javascript
+```js
 import {Route, RegExpRoute, NavigationRoute, Router} from 'workbox-routing';
 
 const router = new Router();

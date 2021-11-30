@@ -4,7 +4,7 @@ title: workbox-expiration
 date: 2017-11-27
 updated: 2020-05-01
 description: >
-  The module guide for workbox-expiration.
+  Removed cached requests based on the number of items in a cache or the age of the cached request.
 ---
 
 It's fairly common to want to put restrictions on a cache in terms of how long
@@ -19,7 +19,7 @@ period of time.
 To restrict the number of entries stored in a cache, you can use the
 `maxEntries` option like so:
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 import {CacheFirst} from 'workbox-strategies';
 import {ExpirationPlugin} from 'workbox-expiration';
@@ -49,7 +49,7 @@ that the number of cached entries doesn't exceed the limit. If it does,
 To restrict how long a request is cached for, you can define a max age in
 seconds using the `maxAgeSeconds` option like so:
 
-```javascript
+```js
 import {registerRoute} from 'workbox-routing';
 import {CacheFirst} from 'workbox-strategies';
 import {ExpirationPlugin} from 'workbox-expiration';
@@ -88,7 +88,7 @@ class.
 To apply restrictions to a cache, you'd create an instance of `CacheExpiration`
 for the cache you want to control like so:
 
-```javascript
+```js
 import {CacheExpiration} from 'workbox-expiration';
 
 const cacheName = 'my-cache';
@@ -101,7 +101,7 @@ const expirationManager = new CacheExpiration(cacheName, {
 Whenever you update a cached entry, you need to call the `updateTimestamp()`
 method so that its age is updated.
 
-```javascript
+```js
 await openCache.put(request, response);
 
 await expirationManager.updateTimestamp(request.url);
@@ -111,6 +111,6 @@ Then, whenever you want to expire a set of entries, you can call the
 `expireEntries()` method which will enforce the `maxAgeSeconds` and
 `maxEntries` configuration.
 
-```javascript
+```js
 await expirationManager.expireEntries();
 ```
