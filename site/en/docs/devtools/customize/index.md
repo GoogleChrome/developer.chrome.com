@@ -79,7 +79,8 @@ To update DevTools settings sync:
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="appearance settings", width="800", height="584" %}
   However, the **dock** settings isn’t sync because developers have different dock preferences when debugging on different sites.
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jWv8rwkF4q6SwTQbSNpp.png", alt="dock", width="426", height="134" %}
-4. For a full list of synced settings, please refer to this [sheet](https://docs.google.com/spreadsheets/d/11mBAwGUVIFf1hYDyn0hVsoWgL5IYkiCipeKxedzBkNg/edit#gid=0).
+
+Most of the settings you see in the Settings UI are synced, except for the "Workspace", "Experiments", "Devices" tab and a select few other general settings. The state of the "Enable settings sync" checkbox is synced across devices as well.
 
 ## Experiments {: #experiments }
 
