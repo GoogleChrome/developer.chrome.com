@@ -176,7 +176,7 @@ proposal explores methods of defining auditable policies for creating and
 maintaining that separation.
 
 Both of these ideas are early in the discussion phase with active progress in
-the repo, such as the recently posted [Willfully IP Blindness
+the repo, such as the recently posted [Willful IP Blindness
 Principles](https://github.com/bslassey/ip-blindness/blob/master/proposed_willful_ip_blindness_principles.md).
 You can expect to see discussion continue there and if you're interested in the
 network-level details, you can follow the [Multiplexed Application Substrate
