@@ -3,6 +3,7 @@ layout: "layouts/doc-post.njk"
 title: "Customization"
 authors:
   - kaycebasques
+  - jecelynyeen
 date: 2019-05-02
 #updated: YYYY-MM-DD
 description: "A list of ways you can customize Chrome DevTools."
@@ -66,16 +67,30 @@ See [Enable Dark Theme][2].
 
 **Figure 6**. The dark theme.
 
+## Sync settings {: #sync }
+
+To update DevTools settings sync:
+
+1. Turn on Chrome profile sync.
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yhIipqtEvDuy6ygB677t.png", alt="Chrome profile sync", width="400", height="579" %}
+2. The DevTools sync settings can be updated via **Settings** > **Sync** > **Enable settings sync** checkbox.
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LUwFNTDyP22L1euSGg73.png", alt="DevTools sync settings", width="800", height="654" %}
+3. Not all settings are synced. For example, the following **appearance** settings are synced so you have a consistent experience across devices and don’t need to re-define the same settings again.
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="appearance settings", width="800", height="584" %}
+  However, the **dock** settings isn’t sync because developers have different dock preferences when debugging on different sites.
+    {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jWv8rwkF4q6SwTQbSNpp.png", alt="dock", width="426", height="134" %}
+4. For a full list of synced settings, please refer to this [sheet](https://docs.google.com/spreadsheets/d/11mBAwGUVIFf1hYDyn0hVsoWgL5IYkiCipeKxedzBkNg/edit#gid=0).
+
 ## Experiments {: #experiments }
 
 To enable DevTools experiments:
 
-1.  Go to `chrome://flags/#enable-devtools-experiments`.
-2.  Click **Enable**.
-3.  Click **Relaunch Now**, at the bottom of the page.
+1.  Go to **Settings** > **Experiments**.
+2.  Search for the experiment you would like to try, enable on checkbox.
+3.  Close the page.
+4.  Click **Reload DevTools**.
 
-The next time you open DevTools, there's a new page called **Experiments** in [Settings][3].
+The next time you open DevTools, the experiment should be enabled. You can disable the experiment with similar steps above.
 
 [1]: /docs/devtools/customize/placement
 [2]: /docs/devtools/customize/dark-theme
-[3]: #settings
