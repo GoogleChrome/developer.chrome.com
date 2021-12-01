@@ -26,10 +26,10 @@ npm install workbox-cli --global
 
 The CLI has four different modes:
 
-- **wizard**: A step-by-step guide to set up Workbox for your project.
-- **generateSW**: Generates a complete service worker for you.
-- **injectManifest**: Injects the assets to precache into your project.
-- **copyLibraries**: Copy the Workbox libraries into a directory.
+- [`wizard`](#wizard): A step-by-step guide to set up Workbox for your project.
+- [`generateSW`](#generatesw): Generates a complete service worker for you.
+- [`injectManifest`](#injectmanifest): Injects the assets to precache into your project.
+- [`copyLibraries`](#copylibraries): Copy the Workbox libraries into a directory.
 
 ### `wizard`
 
@@ -151,7 +151,7 @@ to run it can lead to stale content being served to returning visitors.
 
 ### Setup and Configuration
 
-After [installing](#install_the_cli) `workbox-cli` as a development
+After [installing](#install-the-cli) `workbox-cli` as a development
 dependency for your local project, you can add the call to `workbox` at
 the end of your existing build process's npm script:
 

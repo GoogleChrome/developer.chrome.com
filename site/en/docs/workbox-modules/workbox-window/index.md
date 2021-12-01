@@ -16,11 +16,11 @@ The key features/goals of `workbox-window` are:
 
 - To simplify the process of service worker registration and updates by helping
   developers identify the [most critical moments in the service worker
-  lifecycle](#important_service_worker_lifecycle_moments), and making it easier
+  lifecycle](#important-service-worker-lifecycle-moments), and making it easier
   to respond to those moments.
 - To help prevent developers from making the [most common
-  mistakes](#avoiding_common_mistakes).
-- To enable [easier communication](#window_to_service_worker_communication)
+  mistakes](#avoiding-common-mistakes).
+- To enable [easier communication](#window-to-service-worker-communication)
   between code running in the service worker and code running in the window.
 
 ## Importing and using workbox-window
@@ -200,9 +200,7 @@ wb.register();
 #### Notify the user of cache updates from the `workbox-broadcast-update` package
 
 The [`workbox-broadcast-update`
-package](/docs/workbox-modules/workbox-broadcast-update) is a great
-
-way to be able to serve content from the cache (for fast delivery) while also
+package](/docs/workbox-modules/workbox-broadcast-update) is a great way to be able to serve content from the cache (for fast delivery) while also
 being able to inform the user of updates to that content (using the
 [stale-while-revalidate
 strategy](/docs/workbox-modules/workbox-strategies#stale-while-revalidate)).
@@ -290,13 +288,13 @@ by breaking all service worker registrations into two categories: the instance's
 own, registered service worker and an external service worker:
 
 - **Registered service worker**: a service worker that started installing as a
-result of the `Workbox` instance calling `register()` or the already-active
-service worker if calling `register()` did not trigger an [`updatefound`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/onupdatefound) event on the registration.
+  result of the `Workbox` instance calling `register()` or the already-active
+  service worker if calling `register()` did not trigger an [`updatefound`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/onupdatefound) event on the registration.
 - **External service worker:** a service worker that started installing
-independently of the `Workbox` instance calling `register()`. This typically
-happens when a user has a new version of your site open in another tab. When an
-event originates from an external service worker, the event's `isExternal`
-property will be set to `true`.
+  independently of the `Workbox` instance calling `register()`. This typically
+  happens when a user has a new version of your site open in another tab. When an
+  event originates from an external service worker, the event's `isExternal`
+  property will be set to `true`.
 
 With these two types of service workers in mind, here is a breakdown of all the
 important service worker lifecycle moments, along with developer recommendations
@@ -324,60 +322,66 @@ wb.addEventListener('installed', event => {
 wb.register();
 ```
 
-<table class="green">
-  <tr>
-    <th style="width: 25%">Moment</th>
-    <th>Event</th>
-    <th>Recommended action</th>
-  </tr>
-  <tr>
-    <td>A new service worker has installed (for the first time)</td>
-    <td>`installed</code></td>
-    <td>
-      <p>The very first time a service worker installs, it's common to precache
-      all the assets needed for the site to work offline. You might consider
-      informing the user that their site can now function offline.</p>
-      <p>Also, since the very first time a service worker installs it won't have
-      intercepted fetch events for that page load, you may also consider caching
-      assets that have already been loaded (though this is not needed if those
-      assets are already being precached). The <a href="#cache-urls">send the
-      service worker a list of URLs to cache</a> example above shows how to do
-      this.</p>
-    </td>
-  </tr>
-  <tr>
-    <td>The service worker has started controlling the page</td>
-    <td>`controlling</code></td>
-    <td>
-      <p>Once a new service worker is installed and starts controlling the page,
-      all subsequent fetch events will go through that service worker. If your
-      service worker adds any special logic to handle particular fetch event,
-      this is the point when you know that logic will run.</p>
-      <p>Note that the very first time you install a service worker, it <em>will
-      not</em> start controlling the current page unless that service worker
-      calls <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#clientsclaim">
-      `clients.claim()</code></a> in its activate event. The default
-      behavior is to wait until the next page load to start controlling.</p>
-      <p>From the `workbox-window</code> perspective, this means the
-      `controlling</code> event is only dispatched in cases where the
-      service worker calls `clients.claim()</code>. This event is not
-      dispatched if the page was already controlled prior to registration.</p>
-   </td>
-  </tr>
-  <tr>
-    <td>The service worker has finished activating</td>
-    <td>`activated</code></td>
-    <td>
-      <p>As mentioned above, the very first time a service worker finishes
-      activating it may (or may not) have started controlling the page.
-      <p>For this reason, you should not listen for the activate event as a way
-      of knowing when the service worker is in control of the page. However, if
-      you're running logic in the active event (in the service worker) and you
-      need to know when that logic is complete, the activated event will let you
-      know that.</p>
-   </td>
-  </tr>
-</table>
+<div class="table-wrapper scrollbar">
+  <table>
+    <thead>
+      <tr>
+        <th>Moment</th>
+        <th>Event</th>
+        <th>Recommended action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>A new service worker has installed (for the first time)</td>
+        <td><code>installed</code></td>
+        <td>
+          <p>The very first time a service worker installs, it's common to precache
+          all the assets needed for the site to work offline. You might consider
+          informing the user that their site can now function offline.</p>
+          <p>Also, since the very first time a service worker installs it won't have
+          intercepted fetch events for that page load, you may also consider caching
+          assets that have already been loaded (though this is not needed if those
+          assets are already being precached). The <a href="#cache-urls">send the
+          service worker a list of URLs to cache</a> example above shows how to do
+          this.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>The service worker has started controlling the page</td>
+        <td><code>controlling</code></td>
+        <td>
+          <p>Once a new service worker is installed and starts controlling the page,
+          all subsequent fetch events will go through that service worker. If your
+          service worker adds any special logic to handle particular fetch event,
+          this is the point when you know that logic will run.</p>
+          <p>Note that the very first time you install a service worker, it <em>will
+          not</em> start controlling the current page unless that service worker
+          calls <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#clientsclaim">
+          <code>clients.claim()</code></a> in its activate event. The default
+          behavior is to wait until the next page load to start controlling.</p>
+          <p>From the <code>workbox-window</code> perspective, this means the
+          <code>controlling</code> event is only dispatched in cases where the
+          service worker calls <code>clients.claim()</code>. This event is not
+          dispatched if the page was already controlled prior to registration.</p>
+       </td>
+      </tr>
+      <tr>
+        <td>The service worker has finished activating</td>
+        <td><code>activated</code></td>
+        <td>
+          <p>As mentioned above, the very first time a service worker finishes
+          activating it may (or may not) have started controlling the page.
+          <p>For this reason, you should not listen for the activate event as a way
+          of knowing when the service worker is in control of the page. However, if
+          you're running logic in the active event (in the service worker) and you
+          need to know when that logic is complete, the activated event will let you
+          know that.</p>
+       </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### When an updated version of the service worker is found
 
@@ -389,87 +393,92 @@ How you react in this situation is typically different from the very first
 installation because you have to manage when and how the user gets this update.
 
 <div class="table-wrapper scrollbar">
-  <tr>
-    <th>Moment</th>
-    <th>Event</th>
-    <th>Recommended action</th>
-  </tr>
-  <tr>
-    <td>A new service worker has installed (updating a previous one)</td>
-    <td><code>installed</code></td>
-    <td>
-      <p>If this is not the very first service worker install
-      (<code>event.isUpdate === true</code>), it means a newer version of the
-      service worker has been found and installed (that is, a different version
-      from the one currently controlling the page).</p>
-      <p>This typically means a newer version of the site has been deployed to
-      your server, and new assets may have just finished precaching.</p>
-      <p>Note: some developers use the <code>installed</code> event to inform
-      users that a new version of their site is available. However, depending on
-      whether you call
-      <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
-      <code>skipWaiting()</code></a> in the installing service worker, that
-      installed service worker may or may not become active right away. If you
-      <em>do</em> call <code>skipWaiting()</code> then it's best to inform users
-      of the update once the new service worker has activated, and if you
-      <em>don't</em> call <code>skipWaiting</code> it's better to inform them of
-      the pending update in the waiting event (see below for more details).</p>
-   </td>
-  </tr>
-  <tr>
-    <td>A service worker has installed but it's stuck in the waiting phase</td>
-    <td><code>waiting</code></td>
-    <td>
-      <p>If the updated version of your service worker does not call <a
-      href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
-      <code>skipWaiting()</code></a> while it's being installed, it will not
-      activate until all pages controlled by the currently active service worker
-      have unloaded. You may want to inform the user that an update is available
-      and will be applied the next time they visit.</p>
-      <p><strong>Warning!</strong> it's common for developers to prompt users
-      reload to get the update, but in many cases <a
-      href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
-      refreshing the page will not activate the installed worker</a>. If the
-      user refreshes the page and the service worker is <em>still</em> waiting,
-      the <code>waiting</code> event will fire again and the
-      <code>event.wasWaitingBeforeRegister</code> property will be true. Note,
-      we plan to improve this experience in a future release. Follow <a
-      href="https://github.com/GoogleChrome/workbox/issues/1848">issue #1848</a>
-      for updates.</p>
-      <p>Another option is to prompt the user and ask whether they want to get
-      the update or continue waiting. If the choose to get the update, you can
-      use <code>postMessage()</code> to tell the service worker to run
-      <code>skipWaiting()</code>. See the advanced recipe
-      <a href="/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users">
-      offer a page reload for users</a> for an example of that.</p>
-   </td>
-  </tr>
-  <tr>
-    <td>The service worker has started controlling the page</td>
-    <td><code>controlling</code></td>
-    <td>
-      <p>When an updated service worker starts controlling the page, it means
-      the version of your service worker currently controlling is different from
-      the version that was in control when the page was loaded. In some cases
-      that may be fine, but it could also mean some assets referenced by the
-      current page are no longer in the cache (and possibly also not on server).
-      You may want to consider informing the user that some parts of the page
-      may not work correctly.</p>
-      <p><strong>Note:</strong> the <code>controlling</code> event will not fire
-      if you don't call <code>skipWaiting()</code> in your service worker.</p>
-   </td>
-  </tr>
-  <tr>
-    <td>The service worker has finished activating
-   </td>
-    <td><code>activated</code></td>
-    <td>When an updated service worker has finished activating, it means any
-    logic you were running in the service worker's <code>activate</code> has
-    completed. If there's anything you need to defer until that logic has
-    finished, this is the time to run it.
-   </td>
-  </tr>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Moment</th>
+        <th>Event</th>
+        <th>Recommended action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>A new service worker has installed (updating a previous one)</td>
+        <td><code>installed</code></td>
+        <td>
+          <p>If this is not the very first service worker install
+          (<code>event.isUpdate === true</code>), it means a newer version of the
+          service worker has been found and installed (that is, a different version
+          from the one currently controlling the page).</p>
+          <p>This typically means a newer version of the site has been deployed to
+          your server, and new assets may have just finished precaching.</p>
+          <p>Note: some developers use the <code>installed</code> event to inform
+          users that a new version of their site is available. However, depending on
+          whether you call
+          <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
+          <code>skipWaiting()</code></a> in the installing service worker, that
+          installed service worker may or may not become active right away. If you
+          <em>do</em> call <code>skipWaiting()</code> then it's best to inform users
+          of the update once the new service worker has activated, and if you
+          <em>don't</em> call <code>skipWaiting</code> it's better to inform them of
+          the pending update in the waiting event (see below for more details).</p>
+       </td>
+      </tr>
+      <tr>
+        <td>A service worker has installed but it's stuck in the waiting phase</td>
+        <td><code>waiting</code></td>
+        <td>
+          <p>If the updated version of your service worker does not call <a
+          href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
+          <code>skipWaiting()</code></a> while it's being installed, it will not
+          activate until all pages controlled by the currently active service worker
+          have unloaded. You may want to inform the user that an update is available
+          and will be applied the next time they visit.</p>
+          <p><strong>Warning!</strong> it's common for developers to prompt users
+          reload to get the update, but in many cases <a
+          href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
+          refreshing the page will not activate the installed worker</a>. If the
+          user refreshes the page and the service worker is <em>still</em> waiting,
+          the <code>waiting</code> event will fire again and the
+          <code>event.wasWaitingBeforeRegister</code> property will be true. Note,
+          we plan to improve this experience in a future release. Follow <a
+          href="https://github.com/GoogleChrome/workbox/issues/1848">issue #1848</a>
+          for updates.</p>
+          <p>Another option is to prompt the user and ask whether they want to get
+          the update or continue waiting. If the choose to get the update, you can
+          use <code>postMessage()</code> to tell the service worker to run
+          <code>skipWaiting()</code>. See the advanced recipe
+          <a href="https://developers.google.com/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users">
+          offer a page reload for users</a> for an example of that.</p>
+       </td>
+      </tr>
+      <tr>
+        <td>The service worker has started controlling the page</td>
+        <td><code>controlling</code></td>
+        <td>
+          <p>When an updated service worker starts controlling the page, it means
+          the version of your service worker currently controlling is different from
+          the version that was in control when the page was loaded. In some cases
+          that may be fine, but it could also mean some assets referenced by the
+          current page are no longer in the cache (and possibly also not on server).
+          You may want to consider informing the user that some parts of the page
+          may not work correctly.</p>
+          <p><strong>Note:</strong> the <code>controlling</code> event will not fire
+          if you don't call <code>skipWaiting()</code> in your service worker.</p>
+       </td>
+      </tr>
+      <tr>
+        <td>The service worker has finished activating</td>
+        <td><code>activated</code></td>
+        <td>When an updated service worker has finished activating, it means any
+        logic you were running in the service worker's <code>activate</code> has
+        completed. If there's anything you need to defer until that logic has
+        finished, this is the time to run it.
+       </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### When an unexpected version of the service worker is found
 
@@ -483,7 +492,7 @@ Consider a scenario where you have tab A running v1 of your site and tab B
 running v2. When tab B loads, it'll be controlled by the version of your service
 worker that shipped with v1, but the page returned by the server (if using a
 [network-first caching
-strategy](/docs/workbox-modules/workbox-strategies#network_first_network_falling_back_to_cache)
+strategy](/docs/workbox-modules/workbox-strategies#network-first-network-falling-back-to-cache)
 for your navigation requests) will contain all your v2 assets.
 
 This is generally not a problem for tab B though, since when you wrote your v2
@@ -541,42 +550,47 @@ While you can send data to the service worker in any format, the format shared
 by all Workbox packages is an object with three properties (the latter two being
 optional):
 
-<table>
-  <tr>
-    <th>Property</th>
-    <th>Required?</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><strong>`type</code></strong></td>
-    <td><strong>Yes</strong></td>
-    <td>`string</code></td>
-    <td>
-      <p>A unique string, identifying this message.</p>
-      <p>By convention, types are all uppercase with underscores separating
-      words. If a type represents an action to be taken, it should be a command
-      in present tense (e.g. `CACHE_URLS</code>), if type represent
-      information being reported, it should be in past tense (e.g.
-      `URLS_CACHED</code>).</p>
-   </td>
-  </tr>
-  <tr>
-    <td><strong>`meta </code></strong></td>
-    <td>no</td>
-    <td>`string</code></td>
-    <td>In Workbox this is always the name of the Workbox package sending the
-    message. When sending message yourself, you can either omit this property or
-    set it to whatever you like.</td>
-  </tr>
-  <tr>
-    <td><strong>`payload</code></strong></td>
-    <td>no</td>
-    <td>`*</code></td>
-    <td>The data being sent. Usually this is an object, but it does not have to
-    be.</td>
-  </tr>
-</table>
+<div class="table-wrapper scrollbar">
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Required?</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong><code>type</code></strong></td>
+        <td><strong>Yes</strong></td>
+        <td><code>string</code></td>
+        <td>
+          <p>A unique string, identifying this message.</p>
+          <p>By convention, types are all uppercase with underscores separating
+          words. If a type represents an action to be taken, it should be a command
+          in present tense (e.g. <code>CACHE_URLS</code>), if type represent
+          information being reported, it should be in past tense (e.g.
+          <code>URLS_CACHED</code>).</p>
+       </td>
+      </tr>
+      <tr>
+        <td><strong><code>meta</code></strong></td>
+        <td>no</td>
+        <td><code>string</code></td>
+        <td>In Workbox this is always the name of the Workbox package sending the
+        message. When sending message yourself, you can either omit this property or
+        set it to whatever you like.</td>
+      </tr>
+      <tr>
+        <td><strong><code>payload</code></strong></td>
+        <td>no</td>
+        <td><code>*</code></td>
+        <td>The data being sent. Usually this is an object, but it does not have to be.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Messages sent via the `messageSW()` method use `MessageChannel` so the receiver
 can respond to them. To respond to a message you can call

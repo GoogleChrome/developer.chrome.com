@@ -20,7 +20,9 @@ The easiest way to start using this module is via the CDN. You just need to
 add the following to your service worker:
 
 ```js
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
+importScripts(
+  'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
+);
 ```
 
 With this you'll have the `workbox` namespace in your service worker that will
@@ -58,7 +60,7 @@ If you put the files under `/third_party/workbox-vX.Y.Z/`, you would use them li
 importScripts('/third_party/workbox-vX.Y.Z/workbox-sw.js');
 
 workbox.setConfig({
-  modulePathPrefix: '/third_party/workbox-vX.Y.Z/'
+  modulePathPrefix: '/third_party/workbox-vX.Y.Z/',
 });
 ```
 
@@ -77,7 +79,9 @@ In order to avoid violating this restriction, a best practice is to reference th
 For example, the following top-level service worker code is fine:
 
 ```js
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
+importScripts(
+  'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
+);
 
 // This will work!
 workbox.routing.registerRoute(
@@ -90,9 +94,11 @@ But the code below could be a problem if you have not referenced `workbox.strate
 service worker:
 
 ```js
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
+importScripts(
+  'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
+);
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', event => {
   if (event.request.url.endsWith('.png')) {
     // Oops! This causes workbox-strategies.js to be imported inside a fetch handler,
     // outside of the initial, synchronous service worker execution.
@@ -107,12 +113,14 @@ trigger the `importScripts()` call outside of the event handler by using the
 [`workbox.loadModule()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox#.loadModule) method:
 
 ```js
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
+importScripts(
+  'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
+);
 
 // This will trigger the importScripts() for workbox.strategies and its dependencies:
 workbox.loadModule('workbox-strategies');
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', event => {
   if (event.request.url.endsWith('.png')) {
     // Referencing workbox.strategies will now work as expected.
     const cacheFirst = new workbox.strategies.CacheFirst();
@@ -125,12 +133,14 @@ Alternatively, you can create a reference to the relevant namespaces outside of 
 and then use that reference later on:
 
 ```js
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
+importScripts(
+  'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
+);
 
 // This will trigger the importScripts() for workbox.strategies and its dependencies:
 const {strategies} = workbox;
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', event => {
   if (event.request.url.endsWith('.png')) {
     // Using the previously-initialized strategies will work as expected.
     const cacheFirst = new strategies.CacheFirst();
@@ -176,7 +186,7 @@ to use `workbox-sw`, all you have to do is load `workbox-sw` and replace all `im
 those modules on the global namespace.
 
 This works because every Workbox [service worker
-package](/docs/workbox-modules/) published to npm is also
+package](/docs/workbox-modules/#service-worker-packages) published to npm is also
 available on the global `workbox` namespace via a
 [camelCase](https://en.wikipedia.org/wiki/Camel_case) version of the name (e.g.
 all modules exported from the `workbox-precaching` npm package can be found on
@@ -204,7 +214,9 @@ And here's the same code rewritten to use `workbox-sw` (notice that only the
 import statements have changed—the logic has not been touched):
 
 ```js
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
+importScripts(
+  'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
+);
 
 const {registerRoute} = workbox.routing;
 const {CacheFirst} = workbox.strategies;

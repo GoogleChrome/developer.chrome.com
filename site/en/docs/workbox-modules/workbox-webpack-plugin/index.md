@@ -69,7 +69,7 @@ module.exports = {
 This will generate a service worker with precaching setup for all of your
 webpack assets.
 
-### Full GenerateSW Config
+### Full `GenerateSW` Config
 
 If you want to use any of the configuration options for the `GenerateSW` plugin,
 you'd just need to add an `Object` to the plugin's constructor.
@@ -94,7 +94,7 @@ module.exports = {
 A full set of configuration options can be found on
 [this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW.html#GenerateSW).
 
-## InjectManifest Plugin
+## `InjectManifest` Plugin
 
 You can add the `InjectManifest` plugin to your webpack config like so:
 
@@ -116,7 +116,7 @@ module.exports = {
 This will create a precache manifest (a list of webpack assets) and inject it into
 your service worker file via `importScripts()`.
 
-### Full InjectManifest Config
+### Full `InjectManifest` Config
 
 You can pass the appropriate configuration as properties of an `Object` to the plugin's constructor.
 
@@ -130,7 +130,9 @@ module.exports = {
   // Other webpack config...
   plugins: [
     // Other plugins...
-    new InjectManifest({option: 'value'}),
+    new InjectManifest({
+      option: 'value',
+    }),
   ],
 };
 ```

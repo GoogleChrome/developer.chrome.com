@@ -13,36 +13,36 @@ The two modes that most developers will use are `generateSW` and `injectManifest
 
 ## Which Mode to Use
 
-### generateSW
+### `generateSW`
 
 The `generateSW` mode creates a service worker file for you, and writes it out to disk.
 
-#### When to use generateSW
+#### When to use `generateSW`
 
 - You want to precache files.
 - You have simple runtime configuration needs (e.g. the configuration allows you to define routes and strategies).
 
-#### When NOT to use generateSW
+#### When NOT to use `generateSW`
 
 - You want to use other Service Worker features (i.e. Web Push).
 - You want to import additional scripts or add additional logic.
 
-### injectManifest
+### `injectManifest`
 
-The injectManifest mode will generate a list of URLs to precache, and add that precache manifest to an existing service worker file. It will otherwise leave the file as-is.
+The `injectManifest` mode will generate a list of URLs to precache, and add that precache manifest to an existing service worker file. It will otherwise leave the file as-is.
 
-#### When to use injectManifest
+#### When to use `injectManifest`
 
 - You want more control over your service worker.
 - You want to precache files.
 - You have more complex needs in terms of routing.
 - You would like to use your service worker with other API's (e.g. Web Push).
 
-#### When NOT to use injectManifest
+#### When NOT to use `injectManifest`
 
 - You want the easiest path to adding a service worker to your site.
 
-## generateSW Mode
+## `generateSW` Mode
 
 You can use the `generateSW` mode within a node-based build script like so:
 
@@ -55,17 +55,19 @@ generateSW({
   swDest,
   // Other configuration options...
 }).then(({count, size}) => {
-  console.log(`Generated ${swDest}, which will precache ${count} files, totaling ${size} bytes.`);
+  console.log(
+    `Generated ${swDest}, which will precache ${count} files, totaling ${size} bytes.`
+  );
 });
 ```
 
 This will generate a service worker with precaching setup for all of the files picked up by your configuration.
 
-### Full generateSW Config
+### Full `generateSW` Config
 
 A full set of configuration options can be found on [this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.generateSW).
 
-## injectManifest Mode
+## `injectManifest` Mode
 
 You can use the `injectManifest` mode within a node-based build script like so:
 
@@ -80,13 +82,15 @@ injectManifest({
   swDest,
   // Other configuration options...
 }).then(({count, size}) => {
-  console.log(`Generated ${swDest}, which will precache ${count} files, totaling ${size} bytes.`);
+  console.log(
+    `Generated ${swDest}, which will precache ${count} files, totaling ${size} bytes.`
+  );
 });
 ```
 
 This will create a precache manifest based on the files picked up by your configuration and inject it into your existing service worker file.
 
-### Full injectManifest Config
+### Full `injectManifest` Config
 
 A full set of configuration options can be found on [this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.injectManifest).
 
@@ -94,7 +98,7 @@ A full set of configuration options can be found on [this reference page](https:
 
 We expect that `generateSW` or `injectManifest` will suit most developers' needs. However, there is one other mode supported by `workbox-build` that might be appropriate for certain use cases.
 
-### getManifest Mode
+### `getManifest` Mode
 
 This is conceptually similar to the `injectManifest` mode, but instead of adding the manifest into the source service worker file, it returns the array of manifest entries, along with information about the number of entries and total size.
 
