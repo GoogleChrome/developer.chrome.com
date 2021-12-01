@@ -175,7 +175,7 @@ workbox.routing.registerRoute(staticAssetRoute);
 Using `workbox-sw` this way is convenient, but it involves a request to a third-party web server, and will load code that might go unused. Whenever possible, rely on a bundler, as bundlers will drop unused parts of the runtime for better loading performance and avoid potentially costly cross-origin requests.
 {% endAside %}
 
-If the prospect of loading the Workbox runtime from a CDN doesn't seem great, it is possible to [use `workbox-sw` with local  URLs](https://developers.google.com/web/tools/workbox/modules/workbox-sw#using_local_workbox_files_instead_of_cdn).
+If the prospect of loading the Workbox runtime from a CDN doesn't seem great, it is possible to [use `workbox-sw` with local  URLs](/docs/workbox-modules/workbox-sw#using_local_workbox_files_instead_of_cdn).
 
 ## Conclusion
 
