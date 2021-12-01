@@ -161,7 +161,7 @@ The best approach to test your implementation is to do the following:
 
 1. Load up a page and register your service worker.
 1. Turn off your computer's network or turn off your web server.
-   - ⚠️ **DO NOT USE CHROME DEVTOOLS OFFLINE** ⚠️ The offline checkbox in
+   - **DO NOT USE CHROME DEVTOOLS OFFLINE.** The offline checkbox in
      DevTools only affects requests from the page. Service Worker requests
      will continue to go through.
 1. Make network requests that should be queued with Workbox Background Sync.
@@ -173,7 +173,7 @@ The best approach to test your implementation is to do the following:
    `workbox-background-sync:<your queue name>` where `<your queue name>` should be
    the name of the queue you set, and then clicking the 'Sync' button.
 
-   ![Example of Sync button in Chrome DevTools](../images/modules/workbox-background-sync/devtools-sync.png)
+   {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/bZhmB7R33NwLH05Un6vC.png", alt="Example of Sync button in Chrome DevTools", width="800", height="351" %}
 
 1. You should see network requests go through for the failed requests and
    the IndexedDB data should now be empty since the requests have been
