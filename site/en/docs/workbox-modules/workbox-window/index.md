@@ -8,7 +8,7 @@ description: >
 ---
 
 The `workbox-window` package is a set of modules that are intended to run in the
-[window context](https://developer.mozilla.org/en-US/docs/Web/API/Window), which
+[window context](https://developer.mozilla.org/docs/Web/API/Window), which
 is to say, inside of your web pages. They're a complement to the other workbox
 packages that run in the service worker.
 
@@ -132,14 +132,13 @@ import {Workbox} from 'workbox-window';
 import {Workbox} from 'workbox-window/Workbox.mjs';
 ```
 
-<aside class="caution">
-  <strong>Important!</strong>
-  If you're importing the source file directly, you'll also need to configure
-  your build process to minify the file, and remove development-only code when
-  you deploy it to production. See the guide
-  <a href="/web/tools/workbox/guides/using-bundlers">Using Bundlers
-  (webpack/Rollup) with Workbox</a> for more details.
-</aside>
+{% Aside 'caution' %}
+If you're importing the source file directly, you'll also need to configure
+your build process to minify the file, and remove development-only code when
+you deploy it to production. See the guide
+[Using Bundlers (webpack/Rollup) with Workbox](https://developers.google.com/web/tools/workbox/guides/using-bundlers)
+for more details.
+{% endAside %}
 
 ### Examples
 
@@ -266,14 +265,12 @@ wb.addEventListener('activated', event => {
 wb.register();
 ```
 
-<aside>
-  <strong>Note:</strong> The above technique works for any route defined via the
-  <a href="/web/tools/workbox/reference-docs/latest/module-workbox-routing#.registerRoute">
-  <code>registerRoute()</code></a> method on the default router. If you're
-  creating your own <code>Router</code> instance, you'll need to call
-  <a href="/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router#addCacheListener">
-  <code>addCacheListener()</code></a> manually.
-</aside>
+{% Aside %}
+The above technique works for any route defined via the
+[`registerRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-routing#.registerRoute)
+method on the default router. If you're creating your own `Router` instance,
+you'll need to call [`addCacheListener()`](/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router#addCacheListener) manually.
+{% endAside %}
 
 ## Important service worker lifecycle moments
 
@@ -303,7 +300,7 @@ own, registered service worker and an external service worker:
     <code>Workbox</code> instance calling <code>register()</code> or the
     already-active service worker if calling <code>register()</code> did not
     trigger an <a
-    href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/onupdatefound">
+    href="https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/onupdatefound">
     <code>updatefound</code></a> event on the registration.</p>
   </li>
   <li>
@@ -535,8 +532,7 @@ But when registering a service worker with the `Workbox` class, you'll be
 informed of all lifecycle state changes in the developer console, which should
 help with debugging why things aren't as you'd expect.
 
-![workbox-window console warning for waiting worker]
-(../images/modules/workbox-window/logs-stuck-waiting.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/WwEuBm5rIc0snWQRAz5d.png", alt="workbox-window console warning for waiting worker", width="800", height="168" %}
 
 In addition, a common mistake developers make when first using service worker is
 to register a service worker in the
@@ -547,8 +543,7 @@ page registering the service worker is not in that service worker's scope. It'll
 also warning you in cases where your service worker is active but not yet
 controlling the page:
 
-![workbox-window console warning for non-controlling worker]
-(../images/modules/workbox-window/logs-not-controlling.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/LHaO36EnHxm429ZPo2Ak.png", alt="workbox-window console warning for non-controlling worker", width="800", height="153" %}
 
 ## Window to service worker communication
 

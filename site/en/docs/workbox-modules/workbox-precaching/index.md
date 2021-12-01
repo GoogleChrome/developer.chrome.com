@@ -32,7 +32,7 @@ URL query parameter appended to their cache key representing a hash of their con
 that Workbox generates at build time.
 
 `workbox-precaching` does all of this during the service worker's
-[`install` event](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#Install_and_activate_populating_your_cache).
+[`install` event](https://developer.mozilla.org/docs/Web/API/Service_Worker_API/Using_Service_Workers#Install_and_activate_populating_your_cache).
 
 When a user later revisits your web app and you have a new service worker with
 different precached assets, `workbox-precaching` will look at the new list
@@ -279,9 +279,9 @@ For instance, you might want to precache partial HTML templates that then need
 to be retrieved and used when constructing a full response.
 
 In general, you can use the
-[Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage)
+[Cache Storage API](https://developer.mozilla.org/docs/Web/API/CacheStorage)
 to obtain the precached `Response` objects, but there is one wrinkle: the URL
-cache key that needs to be used when calling [`cache.match()`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match)
+cache key that needs to be used when calling [`cache.match()`](https://developer.mozilla.org/docs/Web/API/Cache/match)
 might contain a versioning parameter that `workbox-precaching` automatically
 creates and maintains.
 
@@ -336,12 +336,12 @@ one of Workbox's build tools to generate your service worker.
 ### Using Subresource Integrity
 
 Some developers might want the added guarantees offered by
-[subresource integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)
+[subresource integrity](https://developer.mozilla.org/docs/Web/Security/Subresource_Integrity)
 enforcement when retrieving precached URLs from the network.
 
 An additional, optional property called `integrity` can be added to any entry in
 the precache manifest. If provided, it will be used as the
-[`integrity` value](https://developer.mozilla.org/en-US/docs/Web/API/Request/integrity)
+[`integrity` value](https://developer.mozilla.org/docs/Web/API/Request/integrity)
 when constructing the `Request` used to populate the cache. If there's a
 mismatch, the precaching process will fail.
 

@@ -19,7 +19,7 @@ different functions that provide responses.
 When a network request causes a service worker fetch event, `workbox-routing`
 will attempt to respond to the request using the supplied routes and handlers.
 
-![Workbox Routing Diagram](../images/modules/workbox-routing/workbox-routing-diagram.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/ZEakAmYC60sNemFI7KTP.png", alt="Workbox Routing Diagram", width="800", height="845" %}
 
 The main things to note from the above are:
 
@@ -47,9 +47,9 @@ custom match and handler function is the best option.
 A
 [match callback function](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback)
 is passed a
-[`ExtendableEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent),
-[`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request), and a
-[`URL` object](https://developer.mozilla.org/en-US/docs/Web/API/URL) you can
+[`ExtendableEvent`](https://developer.mozilla.org/docs/Web/API/ExtendableEvent),
+[`Request`](https://developer.mozilla.org/docs/Web/API/Request), and a
+[`URL` object](https://developer.mozilla.org/docs/Web/API/URL) you can
 match by returning a truthy value. For a simple example, you could match against
 a specific URL like so:
 
@@ -65,9 +65,9 @@ Most use cases can be covered by examining / testing either the `url` or the
 A
 [handler callback function](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~handlerCallback)
 will be given the same
-[`ExtendableEvent`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent),
-[`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request), and
-[`URL` object](https://developer.mozilla.org/en-US/docs/Web/API/URL) along with
+[`ExtendableEvent`](https://developer.mozilla.org/docs/Web/API/ExtendableEvent),
+[`Request`](https://developer.mozilla.org/docs/Web/API/Request), and
+[`URL` object](https://developer.mozilla.org/docs/Web/API/URL) along with
 a `params` value, which is the value returned by the "match" function.
 
 ```js
@@ -123,31 +123,31 @@ registerRoute(new RegExp('/styles/.*\\.css'), handlerCb);
 ```
 
 For requests from the
-[same origin](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy),
+[same origin](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy),
 this regular expression will match as long as the request's URL matches the
 regular expression.
 
-- https://example.com<span style="color: #2ecc71">/styles/main.css</span>
-- https://example.com<span style="color: #2ecc71">/styles/nested/file.css</span>
-- https://example.com/nested<span style="color:#2ecc71">/styles/directory.css</span>
+- https://example.com**1">/styles/main.css**
+- https://example.com**1">/styles/nested/file.css**
+- https://example.com/nested**/styles/directory.css**
 
 However, for cross-origin requests, regular expressions
 **must match the beginning of the URL**. The reason for this is that it's
 unlikely that with a regular expression `new RegExp('/styles/.*\\.css')`
 you intended to match third-party CSS files.
 
-- <span style="color: #e74c3c">https://cdn.third-party-site.com</span><span style="color: #2ecc71">/styles/main.css</span>
-- <span style="color: #e74c3c">https://cdn.third-party-site.com</span><span style="color: #2ecc71">/styles/nested/file.css</span>
-- <span style="color: #e74c3c">https://cdn.third-party-site.com/nested</span><span style="color: #2ecc71">/styles/directory.css</span>
+- https://cdn.third-party-site.com**/styles/main.css**
+- https://cdn.third-party-site.com**/styles/nested/file.css**
+- https://cdn.third-party-site.com/nested**/styles/directory.css**
 
 If you _did_ want this behaviour, you just need to ensure that the regular
 expression matches the beginning of the URL. If we wanted to match the
 requests for `https://cdn.third-party-site.com` we could use the regular
 expression `new RegExp('https://cdn\\.third-party-site\\.com.*/styles/.*\\.css')`.
 
-- <span style="color: #2ecc71">https://cdn.third-party-site.com/styles/main.css</span>
-- <span style="color: #2ecc71">https://cdn.third-party-site.com/styles/nested/file.css</span>
-- <span style="color: #2ecc71">https://cdn.third-party-site.com/nested/styles/directory.css</span>
+- **https://cdn.third-party-site.com/styles/main.css**
+- **https://cdn.third-party-site.com/styles/nested/file.css**
+- **https://cdn.third-party-site.com/nested/styles/directory.css**
 
 If you wanted to match both local and third parties you can use a wildcard
 at the start of your regular expression, but this should be done with caution
@@ -241,14 +241,14 @@ You should be able to determine the flow of a request using the logs from
 `workbox-routing` which will highlight which URLs are being processed
 through Workbox.
 
-![Routing Logs](../images/modules/workbox-routing/workbox-routing-standard-logs.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/IufA3Cp68hdk1HTPM6uC.png", alt="Routing Logs", width="800", height="192" %}
 
 If you need more verbose information, you can set the log level to `debug` to
 view logs on requests not handled by the Router. See our
 [debugging guide](../guides/troubleshoot-and-debug) for more info on
 setting the log level.
 
-![Debug and Log Routing Messages](../images/modules/workbox-routing/workbox-routing-logs.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/lAJuL5UQuLYiTWTp5qH4.png", alt="Debug and Log Routing Messages", width="800", height="223" %}
 
 ## Advanced Usage
 

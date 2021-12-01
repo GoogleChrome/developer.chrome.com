@@ -29,7 +29,7 @@ the caching strategies directly without `workbox-routing`.
 
 ### Stale-While-Revalidate
 
-![Stale While Revalidate Diagram](../images/modules/workbox-strategies/stale-while-revalidate.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/CjsxJKEDAzC6l9qezYaO.png", alt="Stale While Revalidate Diagram", width="800", height="388" %}
 
 The [stale-while-revalidate](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)
 pattern allows you to respond to the request as quickly as possible with a
@@ -54,7 +54,7 @@ registerRoute(
 
 ### Cache First (Cache Falling Back to Network)
 
-![Cache First Diagram](../images/modules/workbox-strategies/cache-first.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/AF6WGFm2JUDv8fdkKZTe.png", alt="Cache First Diagram", width="800", height="395" %}
 
 Offline web apps will rely heavily on the cache, but for assets that are
 non-critical and can be gradually cached, a
@@ -75,7 +75,7 @@ registerRoute(({request}) => request.destination === 'style', new CacheFirst());
 
 ### Network First (Network Falling Back to Cache)
 
-![Network First Diagram](../images/modules/workbox-strategies/network-first.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/jP2SpragluJprmpiiZYt.png", alt="Network First Diagram", width="800", height="388" %}
 
 For requests that are updating frequently, the
 [network first](/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache)
@@ -96,7 +96,7 @@ registerRoute(
 
 ### Network Only
 
-![Network Only Diagram](../images/modules/workbox-strategies/network-only.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/lSmhYmQTXgGJKU773wAR.png", alt="Network Only Diagram", width="800", height="272" %}
 
 If you require specific requests to be fulfilled from the network, the
 [network only](/web/fundamentals/instant-and-offline/offline-cookbook/#network-only)
@@ -111,7 +111,7 @@ registerRoute(({url}) => url.pathname.startsWith('/admin/'), new NetworkOnly());
 
 ### Cache Only
 
-![Cache Only Diagram](../images/modules/workbox-strategies/cache-only.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/wQ6arISYebhPxC1qJ7Fp.png", alt="Cache Only Diagram", width="800", height="272" %}
 
 The [cache only](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only)
 strategy ensures that responses are obtained from a cache. This is less common

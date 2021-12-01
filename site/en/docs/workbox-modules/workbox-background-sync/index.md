@@ -61,7 +61,7 @@ registerRoute(
 `fetchDidFail` is only invoked if there's an exception thrown, most likely due
 to a network failure. This means that requests won't be retried if there's a
 response received with a
-[`4xx` or `5xx` error status](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+[`4xx` or `5xx` error status](https://developer.mozilla.org/docs/Web/HTTP/Status).
 If you would like to retry all requests that result in, e.g., a `5xx` status,
 you can do so by
 [adding a `fetchDidSucceed` plugin](https://github.com/GoogleChrome/workbox/issues/2599#issuecomment-900304969)
@@ -86,7 +86,7 @@ const statusPlugin = {
 
 Workbox Background Sync also provides a `Queue` class, which you can
 instantiate and add failed requests to. The failed requests are stored
-in [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+in [IndexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API)
 and are retried when the browser thinks connectivity is restored (i.e.
 when it receives the sync event).
 
@@ -94,7 +94,7 @@ when it receives the sync event).
 
 To create a Workbox Background Sync Queue you need to construct it with
 a queue name (which must be unique to your
-[origin](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy#Definition_of_an_origin)):
+[origin](https://developer.mozilla.org/docs/Web/Security/Same-origin_policy#Definition_of_an_origin)):
 
 ```js
 import {Queue} from 'workbox-background-sync';
@@ -107,7 +107,7 @@ The queue name is used as part of the tag name that gets
 by the global
 [`SyncManager`](https://wicg.github.io/BackgroundSync/spec/#sync-manager-interface). It's
 also used as the
-[Object Store](https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore) name for
+[Object Store](https://developer.mozilla.org/docs/Web/API/IDBObjectStore) name for
 the IndexedDB database.
 
 Note: it's not important that you know these details, but they're the reason

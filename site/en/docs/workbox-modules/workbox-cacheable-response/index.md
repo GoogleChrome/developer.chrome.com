@@ -8,14 +8,14 @@ description: >
 ---
 
 When caching assets at runtime, there's no one-size-fits-all rule for whether a
-given [response](https://developer.mozilla.org/en-US/docs/Web/API/Response) is
+given [response](https://developer.mozilla.org/docs/Web/API/Response) is
 "valid" and eligible for being saved and reused.
 
 The `workbox-cacheable-response` module provides a standard way of determining
 whether a response should be cached based on its
-[numeric status code](https://developer.mozilla.org/en-US/docs/Web/API/Response/status),
+[numeric status code](https://developer.mozilla.org/docs/Web/API/Response/status),
 the presence of a
-[header](https://developer.mozilla.org/en-US/docs/Web/API/Response/headers)
+[header](https://developer.mozilla.org/docs/Web/API/Response/headers)
 with a specific value, or a combination of the two.
 
 ## Caching Based on Status Codes

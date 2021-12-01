@@ -11,14 +11,14 @@ When responding to requests with cached entries, while being fast, it
 comes with a tradeoff that users may end up seeing stale data.
 
 The `workbox-broadcast-update` package provides a standard way of notifying
-[Window Clients](<(https://developer.mozilla.org/en-US/docs/Web/API/Clients)>)
+[Window Clients](https://developer.mozilla.org/docs/Web/API/Clients)
 that a cached response has been updated. This is most commonly used along with
 the [StaleWhileRevalidate strategy](./workbox-strategies#stale-while-revalidate).
 
 Whenever the "revalidate" step of that strategy retrieves a response from the
 network that differs from what was previously cached, this module will send a
 message (via
-[`postMessage()`](https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage))
+[`postMessage()`](https://developer.mozilla.org/docs/Web/API/Worker/postMessage))
 to all Window Clients within scope of the current service worker.
 
 Window Clients can listen for updates and take appropriate action, like
@@ -28,7 +28,7 @@ are available.
 ## How are updates determined?
 
 Certain headers of the cached and new
-[Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)
+[Response](https://developer.mozilla.org/docs/Web/API/Response)
 objects are compared, and if any of the headers have different values,
 it's considered an update.
 
@@ -86,7 +86,7 @@ navigator.serviceWorker.addEventListener('message', async event => {
 
 Note: make sure to add the `message` event listener before the
 `DOMContentLoaded` event, as browsers will [queue
-messages](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/startMessages#Explanation)
+messages](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/startMessages#Explanation)
 received early in the page load (before your JavaScript code has had a chance to
 run) up until (but not after) the `DOMContentLoaded` event.
 

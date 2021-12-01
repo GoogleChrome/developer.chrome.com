@@ -38,7 +38,7 @@ When you reference a module for the first time, `workbox-sw` will detect this
 and load the module before making it available. You can see this happening in
 the network tab in DevTools.
 
-![Workbox Libraries Loading in DevTools](../images/modules/workbox-sw/workbox-sw-loading.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/65LoPki0R0WuLS6ZjOjE.png", alt="Workbox Libraries Loading in DevTools", width="800", height="344" %}
 
 These files will be cached by your browser making them available for future
 offline use.
@@ -65,7 +65,7 @@ workbox.setConfig({
 ## Avoid Async Imports
 
 Under the hood, loading new modules for the first time involves calling
-[`importScripts()`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts)
+[`importScripts()`](https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope/importScripts)
 with the path to the corresponding JavaScript file (either hosted on the CDN, or via a local URL).
 In either case, an important restriction applies: the implicit calls to `importScripts()` can only
 happen inside of a service worker's `install` handler _or_ during the synchronous,

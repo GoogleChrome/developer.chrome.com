@@ -48,7 +48,7 @@ To start the wizard run:
 npx workbox wizard
 ```
 
-![Screenshot of Workbox CLI's wizard](../images/modules/workbox-cli/cli-wizard.png)
+{% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/WCi92GCC5iwZPyE1fruQ.png", alt="Screenshot of Workbox CLI's wizard", width="800", height="480" %}
 
 ### `generateSW`
 
@@ -157,7 +157,7 @@ the end of your existing build process's npm script:
 
 From package.json:
 
-```
+```json
 {
   "scripts": {
     "build": "my-build-script && workbox <mode> <path/to/config.js>"
