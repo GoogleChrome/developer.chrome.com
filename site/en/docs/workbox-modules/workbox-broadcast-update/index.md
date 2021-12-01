@@ -13,7 +13,7 @@ comes with a tradeoff that users may end up seeing stale data.
 The `workbox-broadcast-update` package provides a standard way of notifying
 [Window Clients](https://developer.mozilla.org/docs/Web/API/Clients)
 that a cached response has been updated. This is most commonly used along with
-the [StaleWhileRevalidate strategy](./workbox-strategies#stale-while-revalidate).
+the [`StaleWhileRevalidate` strategy](/docs/workbox-modules/workbox-strategies#stale-while-revalidate).
 
 Whenever the "revalidate" step of that strategy retrieves a response from the
 network that differs from what was previously cached, this module will send a
@@ -28,20 +28,22 @@ are available.
 ## How are updates determined?
 
 Certain headers of the cached and new
-[Response](https://developer.mozilla.org/docs/Web/API/Response)
+[`Response`](https://developer.mozilla.org/docs/Web/API/Response)
 objects are compared, and if any of the headers have different values,
 it's considered an update.
 
-By default, the `Content-Length`, `ETag`, and
-`Last-Modified` headers are compared.
+By default, the `Content-Length`, `ETag`, and `Last-Modified` headers are
+compared.
 
 Workbox uses header values instead of a byte-for-byte comparison of
 response bodies to be more efficient, in particular for potentially
 large responses
 
-Warning: Because Workbox needs to be able to read the header values,
+{% Aside 'warning' %}
+Because Workbox needs to be able to read the header values,
 [opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses),
 whose headers are not accessible, will never trigger update messages.
+{% endAside %}
 
 ## Using Broadcast Update
 
@@ -84,11 +86,13 @@ navigator.serviceWorker.addEventListener('message', async event => {
 });
 ```
 
-Note: make sure to add the `message` event listener before the
-`DOMContentLoaded` event, as browsers will [queue
+{% Aside %}
+Make sure to add the `message` event listener before the `DOMContentLoaded`
+event, as browsers will [queue
 messages](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/startMessages#Explanation)
 received early in the page load (before your JavaScript code has had a chance to
 run) up until (but not after) the `DOMContentLoaded` event.
+{% endAside %}
 
 ### Message format
 
@@ -107,9 +111,11 @@ When a `message` event listener is invoked in your web app, the
 }
 ```
 
-Note: This message format adheres to the
-[Flux standard action format](https://github.com/acdlite/flux-standard-action#introduction),
-though it is not tied in any way to the Flux framework.
+{% Aside %}
+This message format adheres to the [Flux standard action
+format](https://github.com/acdlite/flux-standard-action#introduction), though it
+is not tied in any way to the Flux framework.
+{% endAside %}
 
 ### Customize Headers to Check
 

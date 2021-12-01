@@ -21,7 +21,7 @@ Workbox Google Analytics solves this problem for Google Analytics users by
 leveraging Service Worker's ability to detect failed requests.
 
 Google Analytics receives all data via HTTP requests to the
-[Measurement Protocol](/analytics/devguides/collection/protocol/v1/),
+[Measurement Protocol](https://developers.google.com/analytics/devguides/collection/protocol/v1/),
 which means a Service Worker script can add a fetch handler to detect
 failed requests sent to the Measurement Protocol. It can store these
 requests in IndexedDB and then retry them later once connectivity is
@@ -29,11 +29,11 @@ restored.
 
 Workbox Google Analytics does exactly this. It also adds fetch
 handlers to cache the
-[analytics.js](/analytics/devguides/collection/analyticsjs/) and
-[gtag.js](/analytics/devguides/collection/gtagjs/)
+[analytics.js](https://developers.google.com/analytics/devguides/collection/analyticsjs/) and
+[gtag.js](https://developers.google.com/analytics/devguides/collection/gtagjs/)
 scripts, so they can also be run offline. Lastly, when failed requests are
 retried, Workbox Google Analytics also automatically sets (or updates) the
-[`qt`](/analytics/devguides/collection/protocol/v1/parameters#qt)
+[`qt`](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt)
 in the request payload to ensure timestamps in Google Analytics reflect the
 time of the original user interaction.
 
@@ -64,10 +64,10 @@ retried request.
 
 If you want to be able to differentiate retried requests from non-retried
 requests, you can specify either the `parameterOverrides` or `hitFilter`
-[configuration options](/web/tools/workbox/reference-docs/latest/module-workbox-google-analytics#.initialize).
+[configuration options](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-google-analytics#.initialize).
 
 These options let you modify the
-[Measurement Protocol parameters](/analytics/devguides/collection/protocol/v1/parameters)
+[Measurement Protocol parameters](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters)
 that get sent in the retried request. The `parameterOverrides` option
 should be used when you want to set the same value for a particular
 parameter for every retried request. The `hitFilter` option should be used
@@ -88,69 +88,64 @@ purpose using a feature called
 To track requests that were replayed by the service worker using a custom
 dimension with Workbox Google Analytics, follow these steps:
 
-1.  [Create a new custom dimension](https://support.google.com/analytics/answer/2709829)
-    in Google Analytics. Give it a name like "Network Status" and set its
-    [scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit)
-    (since any interaction can be offline).
+1. [Create a new custom dimension](https://support.google.com/analytics/answer/2709829)
+   in Google Analytics. Give it a name like "Network Status" and set its
+   [scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit)
+   (since any interaction can be offline).
+2. Take note of the index assigned for the newly created dimension and pass
+   that as the parameter name to the `parameterOverrides` configuration option
+   in your Workbox Google Analytics code.  
 
-1.  Take note of the index assigned for the newly created dimension and pass
-    that as the parameter name to the `parameterOverrides` configuration option
-    in your Workbox Google Analytics code.
+   For example, if this is your first custom dimension, its index would be `1`,
+   and the parameter name would be `cd1` (if the index were `8` it would be
+   `cd8`):
 
-        For example, if this is your first custom dimension, its index would be `1`,
-        and the parameter name would be `cd1` (if the index were 8 it would be
-        `cd8`):
+    ```js
+    import * as googleAnalytics from 'workbox-google-analytics';
 
-        ```js
-        import * as googleAnalytics from 'workbox-google-analytics';
+    googleAnalytics.initialize({
+      parameterOverrides: {
+        cd1: 'offline',
+      },
+    });
+    ```
 
-        googleAnalytics.initialize({
-          parameterOverrides: {
-            cd1: 'offline',
-          },
-        });
-        ```
+3. _(Optional)_ Since values in `parameterOverrides` are only applied
+   to retried ("offline") requests, you may also want to set a default value
+   of "online" for all other requests. While this isn't strictly necessary,
+   it'll make your reports easier to read.<br><br>
+   For example, if you used the default analytics.js tracking snippet to install
+   Google Analytics, you could add the line `ga('set', 'dimension1', 'online')`
+   to use a default value of `'online'` for your "Network Status" custom dimension
+   for all requests not replayed by the service worker.
 
-1.  _(Optional)_ Since values in `parameterOverrides` are only applied
-    to retried ("offline") requests, you may also want to set a default value
-    of "online" for all other requests. While this isn't strictly necessary,
-    it'll make your reports easier to read.
+    ```html
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        For example, if you used the default analytics.js tracking snippet to
-        install Google Analytics, you could add the line
-        `ga('set', 'dimension1', 'online')` to use a default value of "online" for your
-        "Network Status" custom dimension for all requests not replayed by the
-        service worker.
+      ga('create', 'UA-XXXXX-Y', 'auto');
 
-```html
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      // Set default value of custom dimension 1 to 'online'
+      ga('set', 'dimension1', 'online');
 
-  ga('create', 'UA-XXXXX-Y', 'auto');
+      ga('send', 'pageview');
+    </script>
+    ```
 
-  // Set default value of custom dimension 1 to 'online'
-  ga('set', 'dimension1', 'online');
-
-  ga('send', 'pageview');
-</script>
-```
-
-<aside>
-  <strong>Note:</strong>
-  <code>workbox-google-analytics</code> uses Measurement Protocol <a
-  href="/analytics/devguides/collection/protocol/v1/parameters">parameter
-  names</a>, which are different from the <a
-  href="/analytics/devguides/collection/analyticsjs/field-reference#dimension">
-  field names</a> used by analytics.js. For example, with custom dimensions the
-  Measurement Protocol uses
-  <a href="/analytics/devguides/collection/protocol/v1/parameters#cd_">cdXX</a>
-  (e.g. <code>cd1</code>) whereas analytics.js uses <a
-  href="/analytics/devguides/collection/analyticsjs/field-reference#dimension">
-  dimensionXX</a> (e.g. <code>dimension1</code>).
-</aside>
+{% Aside %}
+`workbox-google-analytics` uses Measurement Protocol
+[parameter names](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters),
+which are different from the
+[field names](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#dimension)
+used by analytics.js. For example, with custom dimensions the Measurement
+Protocol uses
+[`cdXX`](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#cd_)
+(e.g. `cd1`) whereas analytics.js uses
+[`dimensionXX`](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#dimension) (e.g. `dimension1`).
+{% endAside %}
 
 ### Using a custom metric to track time requests spent in the queue
 
@@ -160,30 +155,29 @@ successfully retried, you could track this using a
 [custom metric](https://support.google.com/analytics/answer/2709828) and
 the `hitFilter` configuration option:
 
-1.  [Create a new custom metric](https://support.google.com/analytics/answer/2709829)
-    in Google Analytics. Give it a name like "Offline Queue Time", set its
-    [scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit),
-    and set its formatting type to "Time" (in seconds).
+1. [Create a new custom metric](https://support.google.com/analytics/answer/2709829)
+   in Google Analytics. Give it a name like "Offline Queue Time", set its
+   [scope to "hit"](https://support.google.com/analytics/answer/2709828#example-hit),
+   and set its formatting type to "Time" (in seconds).
+1. Use the `hitFilter` option to get the value of the
+   [`qt`](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt)
+   param and divide it by 1000 (to convert it to seconds). Then set that value
+   as a param with the index of the newly created metric. If this is your
+   first custom metric, the parameter name would be `'cm1'`:  
 
-1.  Use the `hitFilter` option to get the value of the
-    [`qt`](/analytics/devguides/collection/protocol/v1/parameters#qt)
-    param and divide it by 1000 (to convert it to seconds). Then set that value
-    as a param with the index of the newly created metric. If this is your
-    first custom metric, the parameter name would be "cm1":
+    ```js
+    import * as googleAnalytics from 'workbox-google-analytics';
 
-        ```js
-        import * as googleAnalytics from 'workbox-google-analytics';
-
-        googleAnalytics.initialize({
-          hitFilter: (params) => {
-            const queueTimeInSeconds = Math.round(params.get('qt') / 1000);
-            params.set('cm1', queueTimeInSeconds);
-          },
-        });
-        ```
+    googleAnalytics.initialize({
+      hitFilter: (params) => {
+        const queueTimeInSeconds = Math.round(params.get('qt') / 1000);
+        params.set('cm1', queueTimeInSeconds);
+      },
+    });
+    ```
 
 ## Testing Workbox Google Analytics
 
 As Workbox Google Analytics uses Background Sync to replay events, it can
 be unintuitive to test. Read more at
-[Testing Workbox Background Sync](/web/tools/workbox/modules/workbox-background-sync#testing_workbox_background_sync).
+[Testing Workbox Background Sync](/docs/workbox-modules/workbox-background-sync#testing_workbox_background_sync).

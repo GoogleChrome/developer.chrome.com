@@ -15,23 +15,23 @@ generates a response after receiving a fetch event.
 apply them in your service worker.
 
 We won't go into much detail outside of the strategies supported by Workbox,
-but you can [learn more in the Offline Cookbook](/web/fundamentals/instant-and-offline/offline-cookbook/).
+but you can [learn more in the Offline Cookbook](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/).
 
 ## Using Strategies
 
 In the following examples, we'll show you how to use the Workbox caching
 strategies with `workbox-routing`. There are some options you can define with
 each strategy that are covered in the
-[Configuring Strategies section of this doc](#configuring_strategies).
+[Configuring Strategies section of this doc](#configuring-strategies).
 
-In the [Advanced Usage section](#advanced_usage), we'll cover how you can use
+In the [Advanced Usage section](#advanced-usage), we'll cover how you can use
 the caching strategies directly without `workbox-routing`.
 
 ### Stale-While-Revalidate
 
 {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/CjsxJKEDAzC6l9qezYaO.png", alt="Stale While Revalidate Diagram", width="800", height="388" %}
 
-The [stale-while-revalidate](/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)
+The [stale-while-revalidate](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#stale-while-revalidate)
 pattern allows you to respond to the request as quickly as possible with a
 cached response if available, falling back to the network request if it's
 not cached. The network request is then used to update the cache. As opposed to
@@ -58,7 +58,7 @@ registerRoute(
 
 Offline web apps will rely heavily on the cache, but for assets that are
 non-critical and can be gradually cached, a
-[cache first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network)
+[cache first](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network)
 is the best option.
 
 If there is a Response in the cache, the Request will be fulfilled using the
@@ -78,7 +78,7 @@ registerRoute(({request}) => request.destination === 'style', new CacheFirst());
 {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/jP2SpragluJprmpiiZYt.png", alt="Network First Diagram", width="800", height="388" %}
 
 For requests that are updating frequently, the
-[network first](/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache)
+[network first](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#network-falling-back-to-cache)
 strategy is the ideal solution. By default, it will try to fetch the latest
 response from the network. If the request is successful, it'll put the response
 in the cache. If the network fails to return a response, the cached response
@@ -99,7 +99,7 @@ registerRoute(
 {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/lSmhYmQTXgGJKU773wAR.png", alt="Network Only Diagram", width="800", height="272" %}
 
 If you require specific requests to be fulfilled from the network, the
-[network only](/web/fundamentals/instant-and-offline/offline-cookbook/#network-only)
+[network only](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#network-only)
 is the strategy to use.
 
 ```js
@@ -113,7 +113,7 @@ registerRoute(({url}) => url.pathname.startsWith('/admin/'), new NetworkOnly());
 
 {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/wQ6arISYebhPxC1qJ7Fp.png", alt="Cache Only Diagram", width="800", height="272" %}
 
-The [cache only](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only)
+The [cache only](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-only)
 strategy ensures that responses are obtained from a cache. This is less common
 in workbox, but can be useful if you have your own precaching step.
 
@@ -154,11 +154,11 @@ registerRoute(
 
 Workbox comes with a set of plugins that can be used with these strategies.
 
-- [workbox-background-sync](/web/tools/workbox/reference-docs/latest/module-workbox-background-sync)
-- [workbox-broadcast-update](/web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update)
-- [workbox-cacheable-response](/web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response)
-- [workbox-expiration](/web/tools/workbox/reference-docs/latest/module-workbox-expiration)
-- [workbox-range-requests](/web/tools/workbox/reference-docs/latest/module-workbox-range-requests)
+- [workbox-background-sync](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-background-sync)
+- [workbox-broadcast-update](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update)
+- [workbox-cacheable-response](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response)
+- [workbox-expiration](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-expiration)
+- [workbox-range-requests](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-range-requests)
 
 To use any of these plugins (or a custom plugin), you just need to pass in
 instances to the `plugins` option.
@@ -204,7 +204,7 @@ are two request strategies that can be used:
 
 - `handle()`: Perform a request strategy and return a `Promise` that will resolve with a `Response`,
   invoking all [relevant plugin
-  callbacks](/web/tools/workbox/guides/using-plugins#lifecycle_callbacks).
+  callbacks](https://developers.google.com/web/tools/workbox/guides/using-plugins#lifecycle_callbacks).
 - `handleAll()`: Similar to `handle()`, but returns two `Promise` objects. The first is
   equivalent to what `handle()` returns and the second will resolve when promises that were
   added to `event.waitUntil()` within the strategy have completed.
@@ -251,9 +251,11 @@ class provides a number of fetch and cache actions that can be used whenever `ha
   settled.
 - `destroy`: Stops running the strategy and immediately resolves any pending `waitUntil()` promises.
 
-Note: Refer to the [source
-implementation](https://github.com/GoogleChrome/workbox/blob/6d38919ebbc9664327e19ff00302d805c8166170/packages/workbox-strategies/src/StrategyHandler.ts)
-of `StrategyHandler` to see all the parameters accepted by each action
+{% Aside %}
+Refer to the [source
+implementation](https://github.com/GoogleChrome/workbox/blob/6d38919ebbc9664327e19ff00302d805c8166170/packages/workbox-strategies/src/StrategyHandler.ts) of `StrategyHandler` to see all the parameters accepted by
+each action
+{% endAside %}
 
 ### Custom Cache Network Race Strategy
 
@@ -312,4 +314,4 @@ self.addEventListener('fetch', event => {
 ```
 
 You can find the list of available classes in the
-[workbox-strategies reference docs](/web/tools/workbox/reference-docs/latest/module-workbox-strategies).
+[workbox-strategies reference docs](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-strategies).

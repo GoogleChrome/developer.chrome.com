@@ -92,7 +92,7 @@ module.exports = {
 ```
 
 A full set of configuration options can be found on
-[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW.html#GenerateSW).
+[this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW.html#GenerateSW).
 
 ## InjectManifest Plugin
 
@@ -136,7 +136,7 @@ module.exports = {
 ```
 
 A full set of configuration options can be found on
-[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest#InjectManifest).
+[this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.InjectManifest#InjectManifest).
 
 ## Extra Info
 

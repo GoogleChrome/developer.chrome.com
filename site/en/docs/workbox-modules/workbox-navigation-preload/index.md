@@ -7,10 +7,10 @@ description: >
   Enable navigation preload, to get a network response for navigation requests faster.
 ---
 
-"[Speed up Service Worker with Navigation Preloads](/web/updates/2017/02/navigation-preload)" does a
+"[Speed up Service Worker with Navigation Preloads](https://developers.google.com/web/updates/2017/02/navigation-preload)" does a
 great job of explaining what navigation preload is, and the benefits it offers to web apps whose
 service worker does not explicitly handle
-[navigation requests](/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests).
+[navigation requests](https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests).
 
 ## What does this module do?
 
@@ -30,8 +30,8 @@ configured with an App Shell fallback) do not need to enable navigation preload!
 intended to reduce navigation latency for developers who can't precache their HTML, but still want
 to use Workbox to handle caching of other assets on their sites.
 
-For instance, if you're following the [App Shell pattern](/web/fundamentals/architecture/app-shell),
-and you've got a [navigation route](/web/tools/workbox/modules/workbox-routing#how_to_register_a_navigation_route)
+For instance, if you're following the [App Shell pattern](/docs/workbox/app-shell-model/),
+and you've got a [navigation route](/docs/workbox-modules/workbox-routing#how_to_register_a_navigation_route)
 already set up to use the precached HTML, enabling navigation preload will be a waste. The network
 response that is associated with the preload request will never end up being used, since the precached
 HTML will be used unconditionally.

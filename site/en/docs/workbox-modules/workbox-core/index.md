@@ -72,7 +72,7 @@ with each other.
 
 Some developers want to be able to publish a new service worker and have it
 control already-open web pages as soon as soon as it activates, which will not
-happen [by default](/web/fundamentals/primers/service-workers/lifecycle#clientsclaim).
+happen [by default](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#clientsclaim).
 
 If you find yourself wanting this behavior, `workbox-core` provides a helper method:
 
@@ -108,8 +108,11 @@ should switch to calling `self.skipWaiting()` directly. Unlike with
 `self.clients.claim()`, `self.skipWaiting()` will not throw an exception if called
 at the "wrong" time, so there is no need to wrap it in an event handler.
 
-Note: If your web app lazy-loads resources that are uniquely versioned with, e.g., hashes in their
-URLs, it's recommended that you avoid using skip waiting. Enabling it could
-[lead to failures](https://stackoverflow.com/questions/51715127)
-when lazily-loading URLs that were previously precached and were purged during an updated service
+{% Aside %}
+If your web app lazy-loads resources that are uniquely versioned with, e.g.,
+hashes in their URLs, it's recommended that you avoid using skip waiting.
+Enabling it could [lead to
+failures](https://stackoverflow.com/questions/51715127) when lazily-loading URLs
+that were previously precached and were purged during an updated service
 worker's activation.
+{% endAside %}

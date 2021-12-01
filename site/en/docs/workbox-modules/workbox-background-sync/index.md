@@ -27,7 +27,7 @@ BackgroundSync.
 
 Browsers that support the BackgroundSync API will automatically replay failed
 requests on your behalf at an
-[interval managed by the browser](/web/updates/2015/12/background-sync#how_to_request_a_background_sync),
+[interval managed by the browser](https://developers.google.com/web/updates/2015/12/background-sync#how_to_request_a_background_sync),
 likely using exponential backoff between replay attempts. In browsers that
 don't natively support the BackgroundSync API, Workbox Background Sync will
 automatically attempt a replay whenever your service worker starts up.
@@ -57,7 +57,7 @@ registerRoute(
 ```
 
 `BackgroundSyncPlugin` hooks into the
-[`fetchDidFail` plugin callback](/web/tools/workbox/guides/using-plugins), and
+[`fetchDidFail` plugin callback](https://developers.google.com/web/tools/workbox/guides/using-plugins), and
 `fetchDidFail` is only invoked if there's an exception thrown, most likely due
 to a network failure. This means that requests won't be retried if there's a
 response received with a
@@ -110,8 +110,10 @@ also used as the
 [Object Store](https://developer.mozilla.org/docs/Web/API/IDBObjectStore) name for
 the IndexedDB database.
 
-Note: it's not important that you know these details, but they're the reason
+{% Aside %}
+It's not important that you know the details above, but they're the reason
 the queue name has to be unique to your origin.
+{% endAside %}
 
 ### Adding a request to the Queue
 

@@ -45,7 +45,7 @@ you, but if you ever find yourself wanting different behavior, writing a
 custom match and handler function is the best option.
 
 A
-[match callback function](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback)
+[match callback function](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback)
 is passed a
 [`ExtendableEvent`](https://developer.mozilla.org/docs/Web/API/ExtendableEvent),
 [`Request`](https://developer.mozilla.org/docs/Web/API/Request), and a
@@ -63,7 +63,7 @@ Most use cases can be covered by examining / testing either the `url` or the
 `request`.
 
 A
-[handler callback function](/web/tools/workbox/reference-docs/latest/module-workbox-routing#~handlerCallback)
+[handler callback function](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#~handlerCallback)
 will be given the same
 [`ExtendableEvent`](https://developer.mozilla.org/docs/Web/API/ExtendableEvent),
 [`Request`](https://developer.mozilla.org/docs/Web/API/Request), and
@@ -82,7 +82,7 @@ const handlerCb = async ({url, request, event, params}) => {
 
 Your handler must return a promise that resolves to a `Response`. In this
 example, we're using
-[`async` and `await`](/web/fundamentals/primers/async-functions).
+[`async` and `await`](https://developers.google.com/web/fundamentals/primers/async-functions).
 Under the hood, the return `Response` value will be wrapped in a promise.
 
 You can register these callbacks like so:
@@ -99,7 +99,7 @@ the `Router` must synchronously respond to the fetch event or allow falling
 through to other fetch events.
 
 Normally the "handler" callback would use one of the strategies provided
-by [workbox-strategies](./workbox-strategies) like so:
+by [workbox-strategies](/docs/workbox-modules/workbox-strategies) like so:
 
 ```js
 import {registerRoute} from 'workbox-routing';
@@ -109,7 +109,7 @@ registerRoute(matchCb, new StaleWhileRevalidate());
 ```
 
 In this page, we'll focus on `workbox-routing` but you can
-[learn more about these strategies on workbox-strategies](./workbox-strategies).
+[learn more about these strategies on workbox-strategies](/docs/workbox-modules/workbox-strategies).
 
 ## How to Register a Regular Expression Route
 
@@ -156,9 +156,9 @@ to ensure it doesn't cause unexpected behaviors in you web app.
 ## How to Register a Navigation Route
 
 If your site is a single page app, you can use a
-[NavigationRoute](/web/tools/workbox/reference-docs/latest/module-workbox-routing.NavigationRoute) to
+[`NavigationRoute`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing.NavigationRoute) to
 return a specific response for all
-[navigation requests](/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests).
+[navigation requests](https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests).
 
 ```js
 import {createHandlerBoundToURL} from 'workbox-precaching';
@@ -170,10 +170,10 @@ const navigationRoute = new NavigationRoute(handler);
 registerRoute(navigationRoute);
 ```
 
-Whenever a user goes to your site in the browser, the request for the page
-will be a navigation request and it will be served the cached page
-`/app-shell.html`. (Note: You should have the page cached via
-`workbox-precaching` or through your own installation step.)
+Whenever a user goes to your site in the browser, the request for the page will
+be a navigation request and it will be served the cached page `/app-shell.html`.
+(Note: You should have the page cached via `workbox-precaching` or through your
+own installation step.)
 
 By default, this will respond to _all_ navigation requests. If you want to
 restrict it to respond to a subset of URLs, you can use the `allowlist`
@@ -245,7 +245,7 @@ through Workbox.
 
 If you need more verbose information, you can set the log level to `debug` to
 view logs on requests not handled by the Router. See our
-[debugging guide](../guides/troubleshoot-and-debug) for more info on
+[debugging guide](https://developers.google.com/web/tools/workbox/guides/troubleshoot-and-debug) for more info on
 setting the log level.
 
 {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/lAJuL5UQuLYiTWTp5qH4.png", alt="Debug and Log Routing Messages", width="800", height="223" %}
@@ -254,8 +254,8 @@ setting the log level.
 
 If you want to have more control over when the Workbox Router is given
 requests, you can create your own
-[Router](/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router) instance and call
-it's [`handleRequest()`](/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router#handleRequest)
+[`Router`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router) instance and call
+it's [`handleRequest()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router#handleRequest)
 method whenever you want to use the router to respond to a request.
 
 ```js

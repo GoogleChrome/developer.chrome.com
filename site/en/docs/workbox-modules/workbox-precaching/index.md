@@ -25,7 +25,7 @@ the API and ensuring assets are downloaded efficiently.
 When a web app is loaded for the first time, `workbox-precaching` will look at all
 the assets you want to download, remove any duplicates and hook up the relevant
 service worker events to download and store the assets. URLs that
-[already include](/web/tools/workbox/reference-docs/latest/module-workbox-build#parameter_2:~:text=index.-,dontCacheBustURLsMatching)
+[already include](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#parameter_2:~:text=index.-,dontCacheBustURLsMatching)
 versioning information (like a content hash) are used as cache keys without any
 further modification. URLs that don't include versioning information have an extra
 URL query parameter appended to their cache key representing a hash of their content
@@ -53,21 +53,21 @@ files that have changed.
 ### Serving Precached Responses
 
 Calling
-[`precacheAndRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.precacheAndRoute)
+[`precacheAndRoute()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.precacheAndRoute)
 or
-[`addRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.addRoute)
-will create a [route](/web/tools/workbox/modules/workbox-routing) that matches
+[`addRoute()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.addRoute)
+will create a [route](/docs/workbox-modules/workbox-routing) that matches
 requests for precached URLs.
 
 The response strategy used in this route is
-[cache-first](/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network):
+[cache-first](/docs/workbox-modules/workbox-strategies#cache_first_cache_falling_back_to_network):
 the precached response will be used, unless that cached response is not present (due to some
 unexpected error), in which case a network response will be used instead.
 
 The order in which you call `precacheAndRoute()` or `addRoute()` is important.
 You would normally want to call it early on in your service worker file, before
 registering any additional routes with
-[`registerRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-routing#.registerRoute).
+[`registerRoute()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#.registerRoute).
 If you did call `registerRoute()` first, and that route matched an incoming
 request, whatever strategy you defined in that additional route will be used to
 respond, instead of the cache-first strategy used by `workbox-precaching`.
@@ -103,12 +103,14 @@ the web would break any time the content of the page changed.
 By passing a revision property to `precacheAndRoute()`, Workbox can know
 when the file has changed and update it accordingly.
 
-Note: previous versions of `workbox-precaching` allowed the precache manifest to
+{% Aside %}
+Previous versions of `workbox-precaching` allowed the precache manifest to
 contain string URLs in addition objects with a `url` and `revision` property. In
 version 5 this is deprecated. Now you must always pass an object and in order to
 prevent Workbox from revisioning the URL in the cache, you must explicitly set
 the `revision` property to `null`. Passing a string will continue to work (with
 a warning) in version 5, but in version 6 this will no longer be supported.
+{% endAside %}
 
 Workbox comes with tools to help with generating this list:
 
@@ -117,10 +119,14 @@ Workbox comes with tools to help with generating this list:
 - `workbox-webpack-plugin`: webpack users can use this plugin.
 - `workbox-cli`: Our CLI can also be used to generate the list of assets and add
   them to your service worker.
-  Warning: It's strongly recommended that you use one of Workbox's
-  [build tools](/web/tools/workbox/modules#node-modules) to generate this precache
-  manifest. **Never hardcode revision info into a "hand written" manifest, as precached URLs will not
-  be kept up to date unless the revision info reflects the URL's contents!**
+
+{% Aside 'warning' %}
+It's strongly recommended that you use one of Workbox's [build
+tools](/docs/workbox-modules/#node-modules) to
+generate this precache manifest. **Never hardcode revision info into a "hand
+written" manifest, as precached URLs will not be kept up to date unless the
+revision info reflects the URL's contents!**
+{% endAside %}
 
 ## Incoming Requests for Precached Files
 
@@ -232,7 +238,7 @@ By default, `workbox-precaching` will set up the `install` and `activate` listen
 For developers familiar with service workers, this may not be desirable if you need more control.
 
 Instead of using the default export, you can use the
-[`PrecacheController`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController)
+[`PrecacheController`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController)
 directly to add items to the precache, determine when these assets are installed, and
 when cleanup should occur.
 
@@ -286,7 +292,7 @@ might contain a versioning parameter that `workbox-precaching` automatically
 creates and maintains.
 
 To get the correct cache key you can call
-[`getCacheKeyForURL()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.getCacheKeyForURL),
+[`getCacheKeyForURL()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.getCacheKeyForURL),
 passing in the original URL, and then use the result to perform a
 `cache.match()` on the appropriate cache.
 
@@ -299,7 +305,7 @@ const response = await cache.match(getCacheKeyForURL('/precached-file.html'));
 ```
 
 Alternatively, if all you need is the precached `Response` object, you can call
-[`matchPrecache()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.matchPrecache),
+[`matchPrecache()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.matchPrecache),
 which will automatically use the correct cache key and search in the correct
 cache:
 
@@ -309,13 +315,14 @@ import {matchPrecache} from 'workbox-precaching';
 const response = await matchPrecache('/precached-file.html');
 ```
 
-Note: If you are [using your own `PrecacheController`
+{% Aside %}
+If you are [using your own `PrecacheController`
 instance](#using_precachecontroller_directly), instead of using the default
 instance via `precacheAndRoute`, you should call the
-[`matchPrecache()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#matchPrecache)
-or
-[`getCacheKeyForURL()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#getCacheKeyForURL)
-methods directly on that instance.
+[`matchPrecache()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#matchPrecache) or
+[`getCacheKeyForURL()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#getCacheKeyForURL) methods directly on that
+instance.
+{% endAside %}
 
 ### Clean Up Old Precaches
 
@@ -329,7 +336,7 @@ Workbox v3 and v4 releases.)
 This obsolete data shouldn't interfere with normal operations, but it does
 contribute towards your overall storage quota usage, and it can be friendlier to
 your users to explicitly delete it. You can do this by adding
-[`cleanupOutdatedCaches()`](/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.cleanupOutdatedCaches)
+[`cleanupOutdatedCaches()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.cleanupOutdatedCaches)
 to your service worker, or setting `cleanupOutdatedCaches: true` if you're using
 one of Workbox's build tools to generate your service worker.
 

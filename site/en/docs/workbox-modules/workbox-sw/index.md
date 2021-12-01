@@ -49,7 +49,7 @@ If you don't want to use the CDN, it's easy enough to switch to Workbox files
 hosted on your own domain.
 
 The simplest approach is to get the files via [`workbox-cli`'s `copyLibraries`
-command](/web/tools/workbox/modules/workbox-cli#copylibraries), and then tell
+command](/docs/workbox-modules/workbox-cli#copylibraries), and then tell
 `workbox-sw` where to find these files via the `modulePathPrefix` config option.
 
 If you put the files under `/third_party/workbox-vX.Y.Z/`, you would use them like so:
@@ -104,7 +104,7 @@ self.addEventListener('fetch', (event) => {
 
 If you need to write code that would otherwise run afoul of this restriction, you can explicitly
 trigger the `importScripts()` call outside of the event handler by using the
-[`workbox.loadModule()`](/web/tools/workbox/reference-docs/latest/workbox#.loadModule) method:
+[`workbox.loadModule()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox#.loadModule) method:
 
 ```js
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js');
@@ -139,10 +139,14 @@ self.addEventListener('fetch', (event) => {
 });
 ```
 
-Note: Some versions of Chrome do not honor this restriction, and asynchronous calls to
-`importScripts()` don't trigger the expected failure. Developers are advised _not_ to rely on this
-broken behavior. Chrome [plans](https://www.chromestatus.com/feature/5748516353736704) on making
-a change to start disallowing this usage, bringing it in line with what other browsers already do.
+{% Aside %}
+Some versions of Chrome do not honor this restriction, and asynchronous calls to
+`importScripts()` don't trigger the expected failure. Developers are advised
+_not_ to rely on this broken behavior. Chrome
+[plans](https://www.chromestatus.com/feature/5748516353736704) on making a
+change to start disallowing this usage, bringing it in line with what other
+browsers already do.
+{% endAside %}
 
 ## Force Use of Debug or Production Builds
 
@@ -172,7 +176,7 @@ to use `workbox-sw`, all you have to do is load `workbox-sw` and replace all `im
 those modules on the global namespace.
 
 This works because every Workbox [service worker
-package](/web/tools/workbox/modules/) published to npm is also
+package](/docs/workbox-modules/) published to npm is also
 available on the global `workbox` namespace via a
 [camelCase](https://en.wikipedia.org/wiki/Camel_case) version of the name (e.g.
 all modules exported from the `workbox-precaching` npm package can be found on

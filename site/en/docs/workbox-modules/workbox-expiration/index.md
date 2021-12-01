@@ -38,7 +38,7 @@ registerRoute(
 ```
 
 With this, the
-[Plugin](/web/tools/workbox/reference-docs/latest/module-workbox-expiration.ExpirationPlugin)
+[Plugin](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-expiration.ExpirationPlugin)
 will be added to this route. After a cached response is used or a new request
 is added to the cache, the plugin will look at the configured cache and ensure
 that the number of cached entries doesn't exceed the limit. If it does,
@@ -69,20 +69,19 @@ registerRoute(
 
 The plugin will check and remove entries after each request or cache update.
 
-One thing to note:
-
-- Because it's slow to open IndexedDB, expiration won't occur until
-  _after_ the request is used. This means that an expired request may be
-  used once, but will be expired after that.
-- To alleviate this, the plugin will check the "Date" header of the cached
-  response, if one exists and the date can be parsed, it'll expire based on this
-  as it doesn't require an IndexedDB lookup.
+{% Aside %}
+Because it's slow to open IndexedDB, expiration won't occur until _after_ the
+request is used. This means that an expired request may be used once, but will
+be expired after that. To alleviate this, the plugin will check the `Date`
+header of the cached response, if one exists and the date can be parsed, it'll
+expire based on this as it doesn't require an IndexedDB lookup.
+{% endAside %}
 
 ## Advanced Usage
 
 If you'd like to use the expiration logic separate from any other Workbox
 module, you can do so with the
-[CacheExpiration](/web/tools/workbox/reference-docs/latest/module-workbox-expiration.CacheExpiration)
+[`CacheExpiration`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-expiration.CacheExpiration)
 class.
 
 To apply restrictions to a cache, you'd create an instance of `CacheExpiration`

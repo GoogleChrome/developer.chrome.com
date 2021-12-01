@@ -20,7 +20,7 @@ with a specific value, or a combination of the two.
 
 ## Caching Based on Status Codes
 
-You can configure a [Workbox strategy](./workbox-strategies) to consider
+You can configure a [Workbox strategy](/docs/workbox-modules/workbox-strategies) to consider
 a set of status codes as being eligible for caching by adding a
 `CacheableResponsePlugin` instance to a strategy's `plugins` parameter:
 
@@ -48,12 +48,14 @@ This configuration tells Workbox that when processing responses for
 requests against `https://third-party.example.com/images/`, cache any requests
 with a status code of `0` or `200`.
 
-Note: Status code `0` is used for
+{% Aside %}
+Status code `0` is used for
 [opaque responses](https://stackoverflow.com/questions/39109789/what-limitations-apply-to-opaque-responses).
+{% endAside %}
 
 ## Caching Based on Headers
 
-You can configure a [Workbox strategy](./workbox-strategies) to check
+You can configure a [Workbox strategy](/docs/workbox-modules/workbox-strategies) to check
 for the presence of specific header values as criteria for being added
 to the cache by setting the `headers` object when constructing the plugin:
 

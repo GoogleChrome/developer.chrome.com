@@ -123,7 +123,7 @@ npx workbox copyLibraries third_party/workbox/
 
 The Workbox project contains a number of libraries that work together to
 power your web app's
-[service worker](/web/fundamentals/primers/service-workers/). In order to
+[service worker](https://developers.google.com/web/fundamentals/primers/service-workers/). In order to
 use those libraries effectively, Workbox needs to be integrated into your
 web app's build process. This ensures that your service worker is able to
 efficiently precache all of your web app's critical content, and keep that
@@ -136,12 +136,12 @@ If you have an existing build process that is based entirely on
 then the `workbox-cli` is a good choice.
 
 If you're currently using [webpack](https://webpack.js.org/) as your build
-tool, then using the [workbox-webback-plugin](./workbox-webpack-plugin)
+tool, then using the [workbox-webback-plugin](/docs/workbox-modules/workbox-webpack-plugin)
 is a better choice.
 
 If you're currently using [Gulp](https://gulpjs.com/),
 [Grunt](https://gruntjs.com/), or some other Node.js-based build tool,
-then integrating [workbox-build](./workbox-build) into your build script
+then integrating [workbox-build](/docs/workbox-modules/workbox-build) into your build script
 is a better choice.
 
 If you don't have a build process at all, then you should come up with one
@@ -175,9 +175,9 @@ automatically by `workbox wizard` or tweaked manually.
 ### Options used by `generateSW`
 
 A full set of configuration options can be found on
-[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-build#.generateSW).
+[this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.generateSW).
 
 ### Options used by `injectManifest`
 
 A full set of configuration options can be found on
-[this reference page](/web/tools/workbox/reference-docs/latest/module-workbox-build#.injectManifest).
+[this reference page](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.injectManifest).

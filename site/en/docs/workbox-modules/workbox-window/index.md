@@ -8,7 +8,7 @@ description: >
 ---
 
 The `workbox-window` package is a set of modules that are intended to run in the
-[window context](https://developer.mozilla.org/docs/Web/API/Window), which
+[`window` context](https://developer.mozilla.org/docs/Web/API/Window), which
 is to say, inside of your web pages. They're a complement to the other workbox
 packages that run in the service worker.
 
@@ -46,7 +46,7 @@ The easiest way to import the `Workbox` class on your site is from our CDN:
 ```
 
 Note that this example uses [`<script type="module">` and the `import`
-statement](/web/fundamentals/primers/modules) to
+statement](https://developers.google.com/web/fundamentals/primers/modules) to
 load the `Workbox` class. While you might think that you need to transpile this
 code to get it working in older browsers, that's actually not necessary.
 
@@ -67,7 +67,7 @@ The first step is to
 [install](https://docs.npmjs.com/downloading-and-installing-packages-locally)
 `workbox-window` as a dependency of your application:
 
-```
+```shell
 npm install workbox-window
 ```
 
@@ -85,7 +85,7 @@ if ('serviceWorker' in navigator) {
 ```
 
 If your bundler supports [code splitting via dynamic import
-statements](/web/fundamentals/performance/optimizing-javascript/code-splitting/#splitting_code_dynamically),
+statements](https://developers.google.com/web/fundamentals/performance/optimizing-javascript/code-splitting/#splitting_code_dynamically),
 you can also conditionally load `workbox-window`, which should help reduce the
 size of your page's main bundle.
 
@@ -146,8 +146,7 @@ Once you've imported the `Workbox` class, you can use it to register and
 interact with your service worker. Here are some examples of ways you might use
 `Workbox` in your application:
 
-<h4 id="example-first-active" class="hide-from-toc">Register a service worker
-and notify the user the very first time that service worker is active:</h4>
+#### Register a service worker and notify the user the very first time that service worker is active:
 
 Many web applications user service worker to precache assets so their app works
 offline on subsequent page loads. In some cases it could make sense to inform
@@ -171,8 +170,7 @@ wb.addEventListener('activated', event => {
 wb.register();
 ```
 
-<h4 id="example-waiting" class="hide-from-toc">Notify the user if a service
-worker has installed but is stuck waiting to activate</h4>
+#### Notify the user if a service worker has installed but is stuck waiting to activate
 
 When a page controlled by an existing service worker registers a new service
 worker, by default that service worker will not activate until all clients
@@ -180,7 +178,7 @@ controlled by the initial service worker have fully unloaded.
 
 This is a common source of confusion for developers, especially in cases where
 [reloading the current page doesn't cause the new service worker to
-activate](/web/fundamentals/primers/service-workers/lifecycle#waiting).
+activate](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#waiting).
 
 To help minimize confusion and make it clear when this situation is happening,
 the `Workbox` class provides a `waiting` event that you can listen for:
@@ -199,16 +197,15 @@ wb.addEventListener('waiting', event => {
 wb.register();
 ```
 
-<h4 id="example-broadcast-updates" class="hide-from-toc">Notify the user of
-cache updates from the <code>workbox-broadcast-update</code> package</h4>
+#### Notify the user of cache updates from the `workbox-broadcast-update` package
 
 The [`workbox-broadcast-update`
-package](/web/tools/workbox/modules/workbox-broadcast-update) is a great
+package](/docs/workbox-modules/workbox-broadcast-update) is a great
 
 way to be able to serve content from the cache (for fast delivery) while also
 being able to inform the user of updates to that content (using the
 [stale-while-revalidate
-strategy](/web/tools/workbox/modules/workbox-strategies#stale-while-revalidate)).
+strategy](/docs/workbox-modules/workbox-strategies#stale-while-revalidate)).
 
 To receive those updates from the window, you can listen to `message` events of
 type `CACHE_UPDATED`:
@@ -228,8 +225,7 @@ wb.addEventListener('message', event => {
 wb.register();
 ```
 
-<h4 id="example-cache-urls" class="hide-from-toc">Send the service worker
-a list of URLs to cache</h4>
+#### Send the service worker a list of URLs to cache
 
 For some applications, it's possible to know all the assets that need to be
 precached at build time, but some applications serve completely different pages,
@@ -237,7 +233,7 @@ based on what URL the user lands on first.
 
 For apps in the latter category, it might make sense to only cache the assets
 the user needed for the particular page they visited. When using the
-[`workbox-routing` package](/web/tools/workbox/modules/workbox-routing), you can
+[`workbox-routing` package](/docs/workbox-modules/workbox-routing), you can
 send your router a list of URLs to cache, and it will cache those URLs according
 to the rules defined on the router itself.
 
@@ -267,15 +263,15 @@ wb.register();
 
 {% Aside %}
 The above technique works for any route defined via the
-[`registerRoute()`](/web/tools/workbox/reference-docs/latest/module-workbox-routing#.registerRoute)
+[`registerRoute()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#.registerRoute)
 method on the default router. If you're creating your own `Router` instance,
-you'll need to call [`addCacheListener()`](/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router#addCacheListener) manually.
+you'll need to call [`addCacheListener()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router#addCacheListener) manually.
 {% endAside %}
 
 ## Important service worker lifecycle moments
 
 The [service worker
-lifecycle](/web/fundamentals/primers/service-workers/lifecycle)
+lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
 is complex and can be a challenge to fully understand. Part of the reason it's
 so complex is it must handle all the edge cases for all possible usages of
 service worker (e.g. registering more than one service worker, registering
@@ -286,32 +282,21 @@ But most developers implementing service worker should not need to worry about
 all these edge cases because their usage is quite simple. Most developer
 register just one service worker per page load, and they [don't change the name
 of the service
-worker](/web/fundamentals/primers /service-workers/lifecycle#avoid-url-change)
+worker](https://developers.google.com/web/fundamentals/primers /service-workers/lifecycle#avoid-url-change)
 file they deploy to their server.
 
 The `Workbox` class embraces this simpler view for the service worker lifecycle
 by breaking all service worker registrations into two categories: the instance's
 own, registered service worker and an external service worker:
 
-<ul>
-  <li>
-    <strong id="def-registered-service-worker">Registered service worker</strong>:
-    a service worker that started installing as a result of the
-    <code>Workbox</code> instance calling <code>register()</code> or the
-    already-active service worker if calling <code>register()</code> did not
-    trigger an <a
-    href="https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/onupdatefound">
-    <code>updatefound</code></a> event on the registration.</p>
-  </li>
-  <li>
-    <strong id="def-external-service-worker">External service worker:</strong>
-    a service worker that started installing independently of the
-    <code>Workbox</code> instance calling <code>register()</code>. This
-    typically happens when a user has a new version of your site open in another
-    tab. When an event originates from an external service worker, the event's
-    `isExternal` property will be set to `true`.
-  </li>
-</ul>
+- **Registered service worker**: a service worker that started installing as a
+result of the `Workbox` instance calling `register()` or the already-active
+service worker if calling `register()` did not trigger an [`updatefound`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerRegistration/onupdatefound) event on the registration.
+- **External service worker:** a service worker that started installing
+independently of the `Workbox` instance calling `register()`. This typically
+happens when a user has a new version of your site open in another tab. When an
+event originates from an external service worker, the event's `isExternal`
+property will be set to `true`.
 
 With these two types of service workers in mind, here is a breakdown of all the
 important service worker lifecycle moments, along with developer recommendations
@@ -347,7 +332,7 @@ wb.register();
   </tr>
   <tr>
     <td>A new service worker has installed (for the first time)</td>
-    <td><code>installed</code></td>
+    <td>`installed</code></td>
     <td>
       <p>The very first time a service worker installs, it's common to precache
       all the assets needed for the site to work offline. You might consider
@@ -362,7 +347,7 @@ wb.register();
   </tr>
   <tr>
     <td>The service worker has started controlling the page</td>
-    <td><code>controlling</code></td>
+    <td>`controlling</code></td>
     <td>
       <p>Once a new service worker is installed and starts controlling the page,
       all subsequent fetch events will go through that service worker. If your
@@ -370,18 +355,18 @@ wb.register();
       this is the point when you know that logic will run.</p>
       <p>Note that the very first time you install a service worker, it <em>will
       not</em> start controlling the current page unless that service worker
-      calls <a href="/web/fundamentals/primers/service-workers/lifecycle#clientsclaim">
-      <code>clients.claim()</code></a> in its activate event. The default
+      calls <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#clientsclaim">
+      `clients.claim()</code></a> in its activate event. The default
       behavior is to wait until the next page load to start controlling.</p>
-      <p>From the <code>workbox-window</code> perspective, this means the
-      <code>controlling</code> event is only dispatched in cases where the
-      service worker calls <code>clients.claim()</code>. This event is not
+      <p>From the `workbox-window</code> perspective, this means the
+      `controlling</code> event is only dispatched in cases where the
+      service worker calls `clients.claim()</code>. This event is not
       dispatched if the page was already controlled prior to registration.</p>
    </td>
   </tr>
   <tr>
     <td>The service worker has finished activating</td>
-    <td><code>activated</code></td>
+    <td>`activated</code></td>
     <td>
       <p>As mentioned above, the very first time a service worker finishes
       activating it may (or may not) have started controlling the page.
@@ -403,9 +388,9 @@ be `true`.
 How you react in this situation is typically different from the very first
 installation because you have to manage when and how the user gets this update.
 
-<table class="cyan">
+<div class="table-wrapper scrollbar">
   <tr>
-    <th style="width: 25%">Moment</th>
+    <th>Moment</th>
     <th>Event</th>
     <th>Recommended action</th>
   </tr>
@@ -422,7 +407,7 @@ installation because you have to manage when and how the user gets this update.
       <p>Note: some developers use the <code>installed</code> event to inform
       users that a new version of their site is available. However, depending on
       whether you call
-      <a href="/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
+      <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
       <code>skipWaiting()</code></a> in the installing service worker, that
       installed service worker may or may not become active right away. If you
       <em>do</em> call <code>skipWaiting()</code> then it's best to inform users
@@ -436,14 +421,14 @@ installation because you have to manage when and how the user gets this update.
     <td><code>waiting</code></td>
     <td>
       <p>If the updated version of your service worker does not call <a
-      href="/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
+      href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
       <code>skipWaiting()</code></a> while it's being installed, it will not
       activate until all pages controlled by the currently active service worker
       have unloaded. You may want to inform the user that an update is available
       and will be applied the next time they visit.</p>
       <p><strong>Warning!</strong> it's common for developers to prompt users
       reload to get the update, but in many cases <a
-      href="/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
+      href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase">
       refreshing the page will not activate the installed worker</a>. If the
       user refreshes the page and the service worker is <em>still</em> waiting,
       the <code>waiting</code> event will fire again and the
@@ -498,7 +483,7 @@ Consider a scenario where you have tab A running v1 of your site and tab B
 running v2. When tab B loads, it'll be controlled by the version of your service
 worker that shipped with v1, but the page returned by the server (if using a
 [network-first caching
-strategy](/web/tools/workbox/modules/workbox-strategies#network_first_network_falling_back_to_cache)
+strategy](/docs/workbox-modules/workbox-strategies#network_first_network_falling_back_to_cache)
 for your navigation requests) will contain all your v2 assets.
 
 This is generally not a problem for tab B though, since when you wrote your v2
@@ -536,7 +521,7 @@ help with debugging why things aren't as you'd expect.
 
 In addition, a common mistake developers make when first using service worker is
 to register a service worker in the
-[wrong scope](/web/ilt/pwa/introduction-to-service-worker#registration_and_scope).
+[wrong scope](https://developers.google.com/web/ilt/pwa/introduction-to-service-worker#registration_and_scope).
 
 To help prevent this from happening, the `Workbox` class will warn you if the
 page registering the service worker is not in that service worker's scope. It'll
@@ -564,30 +549,30 @@ optional):
     <th>Description</th>
   </tr>
   <tr>
-    <td><strong><code>type</code></strong></td>
+    <td><strong>`type</code></strong></td>
     <td><strong>Yes</strong></td>
-    <td><code>string</code></td>
+    <td>`string</code></td>
     <td>
       <p>A unique string, identifying this message.</p>
       <p>By convention, types are all uppercase with underscores separating
       words. If a type represents an action to be taken, it should be a command
-      in present tense (e.g. <code>CACHE_URLS</code>), if type represent
+      in present tense (e.g. `CACHE_URLS</code>), if type represent
       information being reported, it should be in past tense (e.g.
-      <code>URLS_CACHED</code>).</p>
+      `URLS_CACHED</code>).</p>
    </td>
   </tr>
   <tr>
-    <td><strong><code>meta </code></strong></td>
+    <td><strong>`meta </code></strong></td>
     <td>no</td>
-    <td><code>string</code></td>
+    <td>`string</code></td>
     <td>In Workbox this is always the name of the Workbox package sending the
     message. When sending message yourself, you can either omit this property or
     set it to whatever you like.</td>
   </tr>
   <tr>
-    <td><strong><code>payload</code></strong></td>
+    <td><strong>`payload</code></strong></td>
     <td>no</td>
-    <td><code>*</code></td>
+    <td>`*</code></td>
     <td>The data being sent. Usually this is an object, but it does not have to
     be.</td>
   </tr>
@@ -636,7 +621,7 @@ your site that your page code is running, and the solution for dealing with this
 problem is different depending on whether your serving your pages network-first
 or cache-first.
 
-<h4 class="hide-from-toc">Network first</h4>
+#### Network first
 
 When serving your pages network first, your users will always be getting the
 latest version of your HTML from your server. However, the first time a user
@@ -657,10 +642,10 @@ For example, in the code above, if the service worker version returned by that
 until an update is found (which should happen when you call `register()`). At
 that point you can either notify the user or an update, or you can manually
 [skip the waiting
-phase](/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)
+phase](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)
 to activate the new service worker right away.
 
-<h4 class="hide-from-toc">Cache first</h4>
+#### Cache first
 
 As opposed to when you serve pages network-first, when serving your pages cache-
 first, you know your page is initially always going to be the same version as
@@ -669,7 +654,7 @@ to use `messageSW()` right away.
 
 However, if an updated version of your service worker is found and activates
 when your page calls `register()` (i.e. you intentionally [skip the waiting
-phase](/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)),
+phase](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)),
 it may no longer be safe to send messages to it.
 
 One strategy for managing this possibility is to use a versioning scheme that
@@ -682,7 +667,7 @@ version of the page, and suggest they reload to get the update.
 
 A common use convention for window to service worker messaging is send a
 `{type: 'SKIP_WAITING'}` message to instruct a service worker that's installed to
-[skip the waiting phase](/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)
+[skip the waiting phase](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle#skip_the_waiting_phase)
 and activate.
 
 Starting with Workbox v6, the `messageSkipWaiting()` method can be used to send a
@@ -691,4 +676,4 @@ current service worker registration. It will silently do nothing if there isn't 
 waiting service worker.
 
 For guidance on using `messageSkipWaiting()`, see the
-"[Offer a page reload for users](/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users)" recipe.
+"[Offer a page reload for users](https://developers.google.com/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users)" recipe.
