@@ -146,7 +146,7 @@ Once you've imported the `Workbox` class, you can use it to register and
 interact with your service worker. Here are some examples of ways you might use
 `Workbox` in your application:
 
-#### Register a service worker and notify the user the very first time that service worker is active:
+#### Register a service worker and notify the user the very first time that service worker is active
 
 Many web applications user service worker to precache assets so their app works
 offline on subsequent page loads. In some cases it could make sense to inform

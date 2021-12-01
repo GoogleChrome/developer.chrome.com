@@ -35,9 +35,7 @@ console.log(cacheNames.googleAnalytics);
 These cache names are constructed in the format of a prefix, a name and
 suffix, where the name changes based on the use of the cache.
 
-```
-<prefix>-<cache-id>-<suffix>
-```
+`<prefix>-<cache-id>-<suffix>`
 
 You can change these default names by altering all or some of the values
 passed to `setCacheNameDetails()`.
