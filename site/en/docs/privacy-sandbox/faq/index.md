@@ -141,6 +141,13 @@ For more detailed information, see
 
 Chrome on iOS and iPadOS does not support Chrome origin trials.
 
+### Does `SameSite` become irrelevant after the third-party cookie deprecation?
+
+ - `SameSite=Lax` is the current default, so while it does not strictly *need* to be included it's good practice to specify it for cross-browser consistency.
+ - `SameSite=Strict` continues to be a more restrictive option for cookies that must only be sent when the user is already on the site. This is and remains a good security practice for cookies that are part of managing particularly sensitive access.
+ - `SameSite=None` should continue to be sent for cross-browser consistency. However, Chrome's proposed change to phase out third-party cookies would result in those cookies no longer being sent in cross-site contexts.
+ - The exception to this is cookies that are modified by either the `Partitioned` or `SameParty` attributes, which allows for a subset of cross-site use cases. *Note:* both these attributes are only proposals at this stage and the final format may be different.
+
 ## Trust Tokens
 
 ### How can I ask a question about this feature?
