@@ -1,4 +1,5 @@
 ## What's New in DevTools {: #whats-new }
+
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
 ### Chrome 97 {: #chrome97 }
@@ -6,9 +7,11 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Refresh device list in Device Mode](/blog/new-in-devtools-97/#device)
 * [Autocomplete with Edit as HTML](/blog/new-in-devtools-97/#code-completion)
 * [Improved code debugging experience](/blog/new-in-devtools-97/#debugging)
+* [Syncing DevTools settings across devices](/blog/new-in-devtools-97/#sync)
 
 
 ### Chrome 96 {: #chrome96 }
+
 * [Preview feature: New CSS Overview panel](/blog/new-in-devtools-96/#css-overview)
 * [Restored and improved CSS length edit and copy experince](/blog/new-in-devtools-96/#length)
 * [Emulate the CSS prefers-contrast media feature](/blog/new-in-devtools-96/#prefers-contrast)
@@ -25,6 +28,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 
 
 ### Chrome 95 {: #chrome95 }
+
 * [New CSS length authoring tools](/blog/new-in-devtools-95/#length)
 * [Hide issues in the Issues tab](/blog/new-in-devtools-95/#hide-issues)
 * [Improved the display of properties](/blog/new-in-devtools-95/#properties)

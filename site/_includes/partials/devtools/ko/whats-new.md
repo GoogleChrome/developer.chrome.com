@@ -5,12 +5,13 @@
 * [Preview feature: New Recorder panel](/ko/blog/new-in-devtools-97/#recorder)
 * [Refresh device list in Device Mode](/ko/blog/new-in-devtools-97/#device)
 * [Autocomplete with Edit as HTML](/ko/blog/new-in-devtools-97/#code-completion)
-* [Improved code debugging experience](/ko/blog/new-in-devtools-97/#debugging) -->
+* [Improved code debugging experience](/ko/blog/new-in-devtools-97/#debugging)
+* [Syncing DevTools settings across devices](/ko/blog/new-in-devtools-97/#sync) -->
 
 ### Chrome 96 {: #chrome96 }
 * [미리보기 기능: 새로운 CSS 개요 영역](/ko/blog/new-in-devtools-96/#css-overview)
 * [복원 및 개선된 CSS 길이 편집 및 복사 경험](/ko/blog/new-in-devtools-96/#length)
-* [CSS 의 prefers-constrast 미디어 기능 에뮬레이션](/ko/blog/new-in-devtools-96/#prefers-contrast)
+* [CSS 의 prefers-contrast 미디어 기능 에뮬레이션](/ko/blog/new-in-devtools-96/#prefers-contrast)
 * [크롬의 자동 어두운 테마 기능 에뮬레이션](/ko/blog/new-in-devtools-96/#auto-dark-mode)
 * [스타일 영역에서 선언을 자바스크립트로 복사하기](/ko/blog/new-in-devtools-96/#copy-as-js)
 * [네트워크 패널의 새로운 페이로드 탭](/ko/blog/new-in-devtools-96/#payload)

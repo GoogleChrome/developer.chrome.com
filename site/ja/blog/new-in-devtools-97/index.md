@@ -90,19 +90,12 @@ Chromium issue: [1073064](https://crbug.com/1073064)
 <!-- Your DevTools settings are now synced across devices by default when you turn on Chrome profile sync. You can change the DevTools sync settings via **Settings** > **Sync** > **Enable settings sync**. -->
 Chrome プロファイル同期を有効にしている際は、DevTools 設定はデバイスを横断してデフォルトで同期されるようになります。**Settings** > **Sync** > **Enable settings sync** から DevTools の同期設定を変更することが可能です。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yhIipqtEvDuy6ygB677t.png", alt="Chrome プロファイル同期", width="300", height="434" %}
-
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LUwFNTDyP22L1euSGg73.png", alt="DevTools 同期設定", width="800", height="654" %}
 
-<!-- This new setting makes it easier for you to work across devices. For example, the following appearance settings are synced so you have a consistent experience across devices and don’t need to re-define the same settings again.  -->
-この新しい設定は、デバイスを横断して作業を行うことを簡単にしてくれます。例えば、以下の表示設定が同期されることで、一貫した体験をデバイスを横断して得ることができ、同じ設定を何度も再定義する必要がなくなります。
+<!-- This new setting makes it easier for you to work across devices. For example, the following appearance settings are synced so you have a consistent experience across devices and don’t need to re-define the same settings again. Learn more about the sync feature in [DevTools customization](/docs/devtools/customize/).  -->
+この新しい設定は、デバイスを横断して作業を行うことを簡単にしてくれます。例えば、以下の表示設定が同期されることで、一貫した体験をデバイスを横断して得ることができ、同じ設定を何度も再定義する必要がなくなります。この[ドキュメント](/docs/devtools/customize/)で同期設定の詳細をご覧ください。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="表示設定", width="800", height="584" %}
-
-<!-- However, not all the settings are sync. For example, the dock settings isn’t synced because developers have different dock preferences when debugging on different devices.  -->
-しかしながら、全ての設定が同期されるわけではありません。例えば、異なるデバイスでデバッグする際に開発者は異なるドック設定を行っていることもあるため、ドック設定は同期されません。
-
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/jWv8rwkF4q6SwTQbSNpp.png", alt="ドック", width="426", height="134" %}
 
 <!-- This feature is experimental at the moment, the team is still actively working on it. If you have any feedback, please share with us [here](https://crbug.com/1245541) -->
 この機能は現在実験的であり、チームは活発に作業を続けています。もし何かフィードバックがあれば、ぜひ [ここ](https://crbug.com/1245541) から私達に共有してください。
