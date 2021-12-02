@@ -4,7 +4,7 @@ title: workbox-cli
 date: 2017-11-27
 updated: 2020-01-17
 description: >
-  Generate a complete service worker, inject a precache manifest or copy the Workbox files from the command line.
+  Generate a service worker, inject a precache manifest, or create a local copy the Workbox libraries from the command line.
 ---
 
 The Workbox command line interface (contained in the

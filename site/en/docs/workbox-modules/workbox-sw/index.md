@@ -4,7 +4,7 @@ title: workbox-sw
 date: 2017-11-27
 updated: 2021-08-23
 description: >
-  Manages dynamic loading of Workbox service worker packages as needed and provides additional helper methods.
+  Provides a way to load the Workbox runtime without a build step.
 ---
 
 The `workbox-sw` module provides an extremely easy way to get up and running

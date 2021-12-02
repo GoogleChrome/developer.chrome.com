@@ -4,7 +4,7 @@ title: workbox-webpack-plugin
 date: 2017-12-15
 updated: 2020-02-03
 description: >
-  As part of your Webpack build process add Workbox and precache assets.
+  Generate a service worker or inject a precache manifest, using the webpack build tool.
 ---
 
 Workbox provides two [webpack](https://webpack.js.org/) plugins: one that

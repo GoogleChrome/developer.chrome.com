@@ -4,7 +4,7 @@ title: workbox-build
 date: 2018-01-31
 updated: 2020-01-17
 description: >
-  An npm module that can generate a complete service worker, inject a precache manifest and copy the Workbox files.
+  A module that can generate a service worker, inject a precache manifest, or create a local copy the Workbox libraries.
 ---
 
 The `workbox-build` module integrates into a node-based build process and can generate an entire service worker, or just generate a list of assets to precache that could be used within an existing service worker.
