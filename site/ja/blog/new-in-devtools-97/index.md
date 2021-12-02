@@ -59,12 +59,12 @@ Chromium issue: [1223525](https://crbug.com/1223525)
 
 
 <!-- ## Autocomplete with Edit as HTML {: #code-completion } -->
-## Edit as HTML での自動補完 {: #code-completion }
+## Edit as HTML でのオートコンプリート {: #code-completion }
 
 <!-- The **Edit as HTML** UI now supports autocomplete and syntax highlights. In the **Elements** panel, right click on an element, and select  **Edit as HTML**. Try typing a DOM property (e.g. `id`, `aria`), the autocomplete should help you find the property name you're looking for. -->
-**Edit as HTML** は自動補完とシンタックスハイライトをサポートするようになります。**Elements** パネルにて、要素を右クリックして、**Edit as HTML** を選択してください。DOM プロパティ（例: `id`, `aria`）をタイプすることで、期待しているプロパティ名を探すことを自動補完が手伝ってくれるはずです。
+**Edit as HTML** はオートコンプリートとシンタックスハイライトをサポートするようになります。**Elements** パネルにて、要素を右クリックして、**Edit as HTML** を選択してください。DOM プロパティ（例: `id`, `aria`）をタイプすることで、期待しているプロパティ名を探すことをオートコンプリート機能が手伝ってくれるはずです。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yWnmpCQXpsRjWbbRQ9Pi.png", alt="Edit as HTML での自動補完", width="800", height="472" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yWnmpCQXpsRjWbbRQ9Pi.png", alt="Edit as HTML でのオートコンプリート", width="800", height="472" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f467de3e756f998b0e9dd222ce286cb2b7cbaca0 #}
 

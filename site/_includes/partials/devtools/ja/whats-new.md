@@ -6,7 +6,7 @@
 
 * [プレビュー機能: 新しい Recorder パネル](/ja/blog/new-in-devtools-97/#recorder)
 * [デバイスモードでのデバイス一覧の更新](/ja/blog/new-in-devtools-97/#device)
-* [Edit as HTML での自動補完](/ja/blog/new-in-devtools-97/#code-completion)
+* [Edit as HTML でのオートコンプリート](/ja/blog/new-in-devtools-97/#code-completion)
 * [改善されたコードデバッグ体験](/ja/blog/new-in-devtools-97/#debugging)
 * [[実験的] デバイスを横断した DevTools 設定の同期](/ja/blog/new-in-devtools-97/#sync)
 
