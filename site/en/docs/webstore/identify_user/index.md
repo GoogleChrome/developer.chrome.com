@@ -44,21 +44,23 @@ Add the manifest by creating a file called `manifest.json` and include the follo
 
 ### background.js {: #background}
 
-Add the background service worker by creating a file called `background.js`. Include the following code:
+Add the background service worker by creating a file called `background.js`. Include the following
+code:
 
 ```javascript
 // background.js
 
-chrome.action.onClicked.addListener(function () {
-  console.log('action clicked')
-})
+chrome.action.onClicked.addListener(function() {
+  console.log('action clicked');
+});
 ```
 
 {% include 'partials/extensions/reusing-prod-extension-id.md' %}
 
 ## Get the OAuth client ID {: #get-client-id}
 
-Navigate to the [Google API Console][google-console] and create a new project. To get a OAuth client ID, follow these steps:
+Navigate to the [Google API Console][google-console] and create a new project. To get a OAuth client
+ID, follow these steps:
 
 **1. Customize the consent screen and select scope.**
    - Click the **OAuth consent screen** menu item.
@@ -81,7 +83,8 @@ The console will provide an OAuth client ID. Keep this ID for later use.
 
 ### Request the "identity" permission {: #identity-permission}
 
-To use the [Chrome Identity API][identity-api], declare the `"identity"` permission in the `manifest.json`.
+To use the [Chrome Identity API][identity-api], declare the `"identity"` permission in the
+`manifest.json`.
 
 ```json
 {
@@ -96,9 +99,9 @@ To use the [Chrome Identity API][identity-api], declare the `"identity"` permiss
 
 ### Construct the authorization URL {: #auth-url}
 
-Before the extension can make a request to Google’s OAuth2 endpoint using the Identity API,
-you need to construct an [authorization URL][auth-url]. It must contain several request parameters
-including the client ID and redirect URI. In addition to the `openid` [scope][openid-scopes], you can request
+Before the extension can make a request to Google’s OAuth2 endpoint using the Identity API, you need
+to construct an [authorization URL][auth-url]. It must contain several request parameters including
+the client ID and redirect URI. In addition to the `openid` [scope][openid-scopes], you can request
 `profile` information and/or `email`. Update `background.js` to match the following code:
 
 ```javascript
@@ -108,20 +111,18 @@ let clientId = '<CLIENT_ID>'
 let redirectUri = `https://${chrome.runtime.id}.chromiumapp.org/`
 let nonce = Math.random().toString(36).substring(2, 15)
 
-chrome.action.onClicked.addListener(function () {
-  const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth')
+chrome.action.onClicked.addListener(function() {
+  const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
 
-  authUrl.searchParams.set('client_id', clientId)
-  authUrl.searchParams.set('response_type', 'id_token')
-  authUrl.searchParams.set('redirect_uri', redirectUri)
+  authUrl.searchParams.set('client_id', clientId);
+  authUrl.searchParams.set('response_type', 'id_token');
+  authUrl.searchParams.set('redirect_uri', redirectUri);
   // Add the OpenID scope. Scopes allow you to access the user’s information.
-  authUrl.searchParams.set('scope', 'openid profile email')
-  authUrl.searchParams.set('nonce', nonce)
-  // Show the consent screen after login
-  authUrl.searchParams.set('prompt', 'consent')
-
-})
-
+  authUrl.searchParams.set('scope', 'openid profile email');
+  authUrl.searchParams.set('nonce', nonce);
+  // Show the consent screen after login.
+  authUrl.searchParams.set('prompt', 'consent');
+});
 ```
 
 Replace `<CLIENT_ID>` with the API key generated from the Google console. 
@@ -129,8 +130,8 @@ Replace `<CLIENT_ID>` with the API key generated from the Google console.
 ### Retrieve a redirect URL {: #redirect-url}
 
 Now that the extension has the client ID, redirect URI, and OAuth URL, it can initiate Google's
-authentication flow. Call [`identity.launchWebAuthFlow()`][identity-webauthflow] to launch the web auth flow and
-retrieve a redirect URL. 
+authentication flow. Call [`identity.launchWebAuthFlow()`][identity-webauthflow] to launch the web
+auth flow and retrieve a redirect URL. 
 
 The redirect URL contains a JSON Web Token (JWT) that identifies the user. To view the requested
 user identity information, you'll need to parse the JWT into a plain JavaScript object. Update
@@ -138,11 +139,12 @@ user identity information, you'll need to parse the JWT into a plain JavaScript 
 
 ```javascript
 // background.js
-...
-
-chrome.action.onClicked.addListener(function () {
 
 ...
+
+chrome.action.onClicked.addListener(function() {
+
+  ...
 
   chrome.identity.launchWebAuthFlow(
       {
@@ -152,34 +154,34 @@ chrome.action.onClicked.addListener(function () {
       (redirectUrl) => {
         if (redirectUrl) {
           // The ID token is in the URL hash
-          const urlHash = redirectUrl.split('#')[1]
-          const params = new URLSearchParams(urlHash)
-          const jwt = params.get('id_token')
+          const urlHash = redirectUrl.split('#')[1];
+          const params = new URLSearchParams(urlHash);
+          const jwt = params.get('id_token');
 
           // Parse the JSON Web Token
-          const base64Url = jwt.split('.')[1]
-          const base64 = base64Url.replace('-', '+').replace('_', '/')
-          const token = JSON.parse(atob(base64))
+          const base64Url = jwt.split('.')[1];
+          const base64 = base64Url.replace('-', '+').replace('_', '/');
+          const token = JSON.parse(atob(base64));
 
-          console.log('token', token)
+          console.log('token', token);
         }
       },
-    )
-})
+    );
+});
 ```
 
 {% Aside %}
 
-The above code is **not** production ready. We strongly encourage validating and decoding the JWT before
-the information it contains is trusted. For more information, see [how to handle credential
+The above code is **not** production ready. We strongly encourage validating and decoding the JWT
+before the information it contains is trusted. For more information, see [how to handle credential
 responses][credential-responses].
 
 {% endAside %}
 
 ## View the user information {: #user-info}
 
-Reload and return to the extension. Click the extension action button to start the web authentication flow. Sign in with your Google
-Account, then press Enter. 
+Reload and return to the extension. Click the extension action button to start the web
+authentication flow. Sign in with your Google Account, then press Enter. 
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/CETlvMvFpe23QyIAq8Lx.png", alt="ALT_TEXT_HERE",
 width="358", height="428" %}
