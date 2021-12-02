@@ -36,7 +36,7 @@ tags:
 **Recorder** パネルの [ドキュメント](/docs/devtools/recorder/) に行って、ステップバイステップなチュートリアルにて詳細を学びましょう！
 
 <!-- The **Recorder** panel is a preview feature. Our team is still actively working on it and we are looking for your [feedback](https://goo.gle/recorder-feedback) for further enhancements. -->
-**Recorder** パネルは、プレビュー機能です。私たちのチームは活発に開発を進めています。更なる改善のために、あなたからの [フィードバック](https://goo.gle/recorder-feedback) をお待ちしております。
+**Recorder** パネルは、プレビュー機能です。私たちのチームは活発に開発を進めています。更なる改善のために、皆さんからの [フィードバック](https://goo.gle/recorder-feedback) をお待ちしております。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3EpVa15PtbhFwwszqyWF.png", alt="Recorder パネル", width="800", height="540" %}
 
