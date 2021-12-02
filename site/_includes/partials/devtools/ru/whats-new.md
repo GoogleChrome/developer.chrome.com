@@ -7,7 +7,8 @@
 * [Preview feature: New Recorder panel](/ru/blog/new-in-devtools-97/#recorder)
 * [Refresh device list in Device Mode](/ru/blog/new-in-devtools-97/#device)
 * [Autocomplete with Edit as HTML](/ru/blog/new-in-devtools-97/#code-completion)
-* [Improved code debugging experience](/ru/blog/new-in-devtools-97/#debugging) -->
+* [Improved code debugging experience](/ru/blog/new-in-devtools-97/#debugging)
+* [Syncing DevTools settings across devices](/ru/blog/new-in-devtools-97/#sync) -->
 
 ### Chrome 96 {: #chrome96 }
 * [Ранний доступ: Новая вкладка Обзор CSS](/ru/blog/new-in-devtools-96/#css-overview)

@@ -7,6 +7,7 @@ A list of everything that has been covered in the [What's New In DevTools](/tags
 * [Refresh device list in Device Mode](/blog/new-in-devtools-97/#device)
 * [Autocomplete with Edit as HTML](/blog/new-in-devtools-97/#code-completion)
 * [Improved code debugging experience](/blog/new-in-devtools-97/#debugging)
+* [Syncing DevTools settings across devices](/blog/new-in-devtools-97/#sync)
 
 
 ### Chrome 96 {: #chrome96 }
