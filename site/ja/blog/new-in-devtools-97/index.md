@@ -93,7 +93,7 @@ Chrome プロファイル同期を有効にしている際は、DevTools 設定�
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LUwFNTDyP22L1euSGg73.png", alt="DevTools 同期設定", width="800", height="654" %}
 
 <!-- This new setting makes it easier for you to work across devices. For example, the following appearance settings are synced so you have a consistent experience across devices and don’t need to re-define the same settings again. Learn more about the sync feature in [DevTools customization](/docs/devtools/customize/).  -->
-この新しい設定は、デバイスを横断して作業を行うことを簡単にしてくれます。例えば、以下の表示設定が同期されることで、一貫した体験をデバイスを横断して得ることができ、同じ設定を何度も再定義する必要がなくなります。この[ドキュメント](/docs/devtools/customize/)で同期設定の詳細をご覧ください。
+この新しい設定は、デバイスを横断して作業を行うことを簡単にしてくれます。例えば、以下の表示設定が同期されることで、一貫した体験をデバイスを横断して得ることができ、同じ設定を何度も再定義する必要がなくなります。[DevTools カスタマイズ](/docs/devtools/customize/) にて、同期機能の詳細をご覧ください。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="表示設定", width="800", height="584" %}
 
