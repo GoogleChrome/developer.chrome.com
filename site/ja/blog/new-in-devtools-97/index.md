@@ -98,7 +98,7 @@ Chrome プロファイル同期を有効にしている際は、DevTools 設定�
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="表示設定", width="800", height="584" %}
 
 <!-- This feature is experimental at the moment, the team is still actively working on it. If you have any feedback, please share with us [here](https://crbug.com/1245541) -->
-この機能は現在実験的であり、チームは活発に作業を続けています。もし何かフィードバックがあれば、ぜひ [ここ](https://crbug.com/1245541) から私達に共有してください。
+この機能は現在実験的であり、チームは活発に作業を続けています。もし何かフィードバックがあれば、ぜひ [こちら](https://crbug.com/1245541) から私たちに共有してください。
 
 Chromium issue: [1245541](https://crbug.com/1245541)
 
