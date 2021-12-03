@@ -4,7 +4,7 @@ title: workbox-google-analytics
 date: 2017-11-27
 updated: 2021-04-23
 description: >
-  See how users are interacting with your site when they are offline.
+  Support for replaying offline Google Analytics interactions.
 ---
 
 If you're building an application that works offline, then understanding

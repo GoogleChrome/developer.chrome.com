@@ -127,8 +127,8 @@ For requests from the
 this regular expression will match as long as the request's URL matches the
 regular expression.
 
-- https://example.com**1">/styles/main.css**
-- https://example.com**1">/styles/nested/file.css**
+- https://example.com**/styles/main.css**
+- https://example.com**/styles/nested/file.css**
 - https://example.com/nested**/styles/directory.css**
 
 However, for cross-origin requests, regular expressions
