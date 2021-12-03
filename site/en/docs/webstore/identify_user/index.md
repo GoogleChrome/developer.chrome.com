@@ -15,11 +15,11 @@ information in the console.
 
 To identify the user with Google OAuth2/OpenId, follow these steps:
 
-1. [Create your extension files][create-files]
-2. [Keep a consistent extension ID][consistent-id] 
-3. [Get the OAuth client ID][client-id]
-4. [Launch the Authorization flow][auth-flow]
-5. [View the user information][view-user-info]
+1. [Create your extension files][create-files].
+2. [Keep a consistent extension ID][consistent-id].
+3. [Get the OAuth client ID][client-id].
+4. [Launch the Authorization flow][auth-flow].
+5. [View the user information][view-user-info].
 
 We'll explain each step below.
 
