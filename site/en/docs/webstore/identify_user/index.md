@@ -2,6 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Identifying the User
 date: 2017-08-30
+updates: 2021-12-03
 description: How to get the Google Account identity of a Chrome Web Store user.
 ---
 
@@ -14,8 +15,11 @@ information in the console.
 
 To identify the user with Google OAuth2/OpenId, follow these steps:
 
-1. TBD
-2. TBD
+1. [Create your extension files][create-files]
+2. [Keep a consistent extension ID][consistent-id] 
+3. [Get the OAuth client ID][client-id]
+4. [Launch the Authorization flow][auth-flow]
+5. [View the user information][view-user-info]
 
 We'll explain each step below.
 
@@ -200,7 +204,11 @@ width="800", height="162" %}
   authentication.
 
 [action]: /docs/extensions/reference/action/
+[auth-flow]: #auth-flow
 [auth-url]: https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
+[client-id]: #get-client-id
+[consistent-id]: #keep-consistent-id
+[create-files]: #create-extension-files
 [credential-responses]: https://developers.google.com/identity/gsi/web/guides/handle-credential-responses-js-functions
 [google-console]: https://console.developers.google.com
 [google-openid]: https://developers.google.com/identity/protocols/oauth2/openid-connect
@@ -208,3 +216,4 @@ width="800", height="162" %}
 [identity-webauthflow]: /docs/extensions/reference/identity/#method-launchWebAuthFlow
 [oauth-google-contacts]: /docs/extensions/mv3/tut_oauth/
 [openid-scopes]: https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims
+[view-user-info]: #user-info
