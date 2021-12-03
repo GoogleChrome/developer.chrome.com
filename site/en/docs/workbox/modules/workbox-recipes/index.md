@@ -7,7 +7,7 @@ description: >
   Easily use common workbox patterns without needing to set them up yourself from individual packages.
 ---
 
-A number of common patters, especially around [routing](/docs/workbox-modules/workbox-routing) and [caching](/docs/workbox-modules/workbox-strategies), are common enough that they can be standardized into reusable recipes. `workbox-recipes` makes these available in an easy-to-consume package, allowing you to get up-and-running with a highly functional service worker quickly.
+A number of common patters, especially around [routing](/docs/workbox/modules/workbox-routing) and [caching](/docs/workbox/modules/workbox-strategies), are common enough that they can be standardized into reusable recipes. `workbox-recipes` makes these available in an easy-to-consume package, allowing you to get up-and-running with a highly functional service worker quickly.
 
 ## Recipes
 
@@ -15,11 +15,11 @@ Each recipe combines a number of [Workbox modules](https://developers.google.com
 
 ### Offline fallback
 
-The offline fallback recipe allows your service worker to serve a web page, image, or font if there's a routing error for any of the three, for instance if a user is offline and there isn't a cache hit. In version 6.1.0 of Workbox Recipes, the requirement to cache these items using [precaching](/docs/workbox-modules/workbox-precaching) was removed; for backwards compatibility, it will look for items in the precache first before trying its own cache.
+The offline fallback recipe allows your service worker to serve a web page, image, or font if there's a routing error for any of the three, for instance if a user is offline and there isn't a cache hit. In version 6.1.0 of Workbox Recipes, the requirement to cache these items using [precaching](/docs/workbox/modules/workbox-precaching) was removed; for backwards compatibility, it will look for items in the precache first before trying its own cache.
 
 This recipe, by default, assumes the fallback page is `offline.html` and that there isn't an image or font fallback. See the [offline fallback options](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~offlineFallback) for a list of all configuration options.
 
-The offline fallback will only be applied if there's a matching [route](/docs/workbox-modules/workbox-routing) for a given request. If you're using the offline fallback recipe on its own, you'll need to create routes yourself. The simplest way to do is to use the [`setDefaultHandler()`](/docs/workbox-modules/workbox-routing/#set-a-default-handler) method to create a route that applies the [`NetworkOnly`](/docs/workbox-modules/workbox-strategies/#network-only) strategy to all requests, as shown below. Other recipes, like the [page cache](#page-cache), [static resource cache](#static-resources-cache), or [image cache](#image-cache), set up routes for their respective caches. `setDefaultHandler()` is not required when using both offline fallback and one of those recipes.
+The offline fallback will only be applied if there's a matching [route](/docs/workbox/modules/workbox-routing) for a given request. If you're using the offline fallback recipe on its own, you'll need to create routes yourself. The simplest way to do is to use the [`setDefaultHandler()`](/docs/workbox/modules/workbox-routing/#set-a-default-handler) method to create a route that applies the [`NetworkOnly`](/docs/workbox/modules/workbox-strategies/#network-only) strategy to all requests, as shown below. Other recipes, like the [page cache](#page-cache), [static resource cache](#static-resources-cache), or [image cache](#image-cache), set up routes for their respective caches. `setDefaultHandler()` is not required when using both offline fallback and one of those recipes.
 
 #### Recipe
 
@@ -85,7 +85,7 @@ setCatchHandler(handler);
 
 ### Warm strategy cache
 
-The warm strategy cache recipe allows you to load provided URLs into your cache during the service worker's `install` phase, caching them with the options of the provided [strategy](/docs/workbox-modules/workbox-strategies). This can be used as an alternative to [precaching](/docs/workbox-modules/workbox-precaching) if you know the specific URLs you'd like to cache, want to warm the cache of a route, or similar places where you'd like cache URLs during installation.
+The warm strategy cache recipe allows you to load provided URLs into your cache during the service worker's `install` phase, caching them with the options of the provided [strategy](/docs/workbox/modules/workbox-strategies). This can be used as an alternative to [precaching](/docs/workbox/modules/workbox-precaching) if you know the specific URLs you'd like to cache, want to warm the cache of a route, or similar places where you'd like cache URLs during installation.
 
 See the [warm strategy cache options](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~warmStrategyCache) for a list of all configuration options.
 
@@ -126,7 +126,7 @@ self.addEventListener('install', event => {
 
 ### Page cache
 
-The page cache recipe allows your service worker to respond to a request for an HTML page (through URL navigation) with a [network first](/docs/workbox-modules/workbox-strategies/#network-first-network-falling-back-to-cache) caching strategy, optimized to, ideally, allow for the cache fallback to arrive quick enough for for a [largest contentful paint](https://web.dev/vitals/) score of less than 4.0 seconds.
+The page cache recipe allows your service worker to respond to a request for an HTML page (through URL navigation) with a [network first](/docs/workbox/modules/workbox-strategies/#network-first-network-falling-back-to-cache) caching strategy, optimized to, ideally, allow for the cache fallback to arrive quick enough for for a [largest contentful paint](https://web.dev/vitals/) score of less than 4.0 seconds.
 
 This recipe, by default, assumes the network timeout should be 3 seconds and supports [cache warming](#warm-strategy-cache) through the `warmCache` option. See the [page cache options](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~pageCache) for a list of all configuration options.
 
@@ -165,7 +165,7 @@ registerRoute(
 
 ### Static resources cache
 
-The static resources cache recipe allows your service worker to respond to a request for static resources, specifically CSS, JavaScript, and Web Worker requests, with a [stale-while-revalidate](/docs/workbox-modules/workbox-strategies/#stale-while-revalidate) caching strategy so those assets can be quickly served from the cache and be updated in the background
+The static resources cache recipe allows your service worker to respond to a request for static resources, specifically CSS, JavaScript, and Web Worker requests, with a [stale-while-revalidate](/docs/workbox/modules/workbox-strategies/#stale-while-revalidate) caching strategy so those assets can be quickly served from the cache and be updated in the background
 
 This recipe supports [cache warming](#warm-strategy-cache) through the `warmCache` option. See the [static resources cache options](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~staticResourceCache) for a list of all configuration options.
 
@@ -208,7 +208,7 @@ registerRoute(
 
 ### Image cache
 
-The image cache recipe allows your service worker to respond to a request for images with a [cache-first](/docs/workbox-modules/workbox-strategies/#cache-first-cache-falling-back-to-network) caching strategy so that once they're available in cache a user doesn't need to make another request for them.
+The image cache recipe allows your service worker to respond to a request for images with a [cache-first](/docs/workbox/modules/workbox-strategies/#cache-first-cache-falling-back-to-network) caching strategy so that once they're available in cache a user doesn't need to make another request for them.
 
 This recipe, by default, caches a maximum of 60 images, each for 30 days and supports [cache warming](#warm-strategy-cache) through the `warmCache` option. See the [image cache options](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~imageCache) for a list of all configuration options.
 
@@ -257,7 +257,7 @@ The Google Fonts recipe caches the two parts of a Google Fonts request:
 - The stylesheet with the `@font-face` definitions, which link to the font files.
 - The static, revisioned font files.
 
-Because the stylesheet can change frequently, a [stale-while-revalidate](/docs/workbox-modules/workbox-strategies/#stale-while-revalidate) caching strategy is used. The font files themselves, on the other hand, do not change and can leverage a [cache first](/docs/workbox-modules/workbox-strategies/#cache-first-cache-falling-back-to-network) strategy.
+Because the stylesheet can change frequently, a [stale-while-revalidate](/docs/workbox/modules/workbox-strategies/#stale-while-revalidate) caching strategy is used. The font files themselves, on the other hand, do not change and can leverage a [cache first](/docs/workbox/modules/workbox-strategies/#cache-first-cache-falling-back-to-network) strategy.
 
 This recipe, by default, caches a maximum of 30 font files, each for one year. See the [Google Fonts cache options](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-recipes#~googleFontsCache) for a list of all configuration options.
 
@@ -310,7 +310,7 @@ registerRoute(
 
 ## Quick usage
 
-Combining all of the recipes together will yield a service worker that responds to page requests with a [network first](/docs/workbox-modules/workbox-strategies/#network-first-network-falling-back-to-cache) caching strategy, respond to CSS, JavaScript, and Web Worker requests with a [stale-while-revalidate](/docs/workbox-modules/workbox-strategies/#stale-while-revalidate) strategy, respond to image requests with a [cache first](/docs/workbox-modules/workbox-strategies/#cache-first-cache-falling-back-to-network) strategy, properly cache Google Fonts, and provide an offline fallback for page requests. This can all be done with the following:
+Combining all of the recipes together will yield a service worker that responds to page requests with a [network first](/docs/workbox/modules/workbox-strategies/#network-first-network-falling-back-to-cache) caching strategy, respond to CSS, JavaScript, and Web Worker requests with a [stale-while-revalidate](/docs/workbox/modules/workbox-strategies/#stale-while-revalidate) strategy, respond to image requests with a [cache first](/docs/workbox/modules/workbox-strategies/#cache-first-cache-falling-back-to-network) strategy, properly cache Google Fonts, and provide an offline fallback for page requests. This can all be done with the following:
 
 ```js
 import {

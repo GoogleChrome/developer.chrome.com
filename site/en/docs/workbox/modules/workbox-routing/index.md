@@ -99,7 +99,7 @@ the `Router` must synchronously respond to the fetch event or allow falling
 through to other fetch events.
 
 Normally the "handler" callback would use one of the strategies provided
-by [workbox-strategies](/docs/workbox-modules/workbox-strategies) like so:
+by [workbox-strategies](/docs/workbox/modules/workbox-strategies) like so:
 
 ```js
 import {registerRoute} from 'workbox-routing';
@@ -109,7 +109,7 @@ registerRoute(matchCb, new StaleWhileRevalidate());
 ```
 
 In this page, we'll focus on `workbox-routing` but you can
-[learn more about these strategies on workbox-strategies](/docs/workbox-modules/workbox-strategies).
+[learn more about these strategies on workbox-strategies](/docs/workbox/modules/workbox-strategies).
 
 ## How to Register a Regular Expression Route
 

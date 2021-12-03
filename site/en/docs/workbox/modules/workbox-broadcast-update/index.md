@@ -13,7 +13,7 @@ comes with a tradeoff that users may end up seeing stale data.
 The `workbox-broadcast-update` package provides a standard way of notifying
 [Window Clients](https://developer.mozilla.org/docs/Web/API/Clients)
 that a cached response has been updated. This is most commonly used along with
-the [`StaleWhileRevalidate` strategy](/docs/workbox-modules/workbox-strategies#stale-while-revalidate).
+the [`StaleWhileRevalidate` strategy](/docs/workbox/modules/workbox-strategies#stale-while-revalidate).
 
 Whenever the "revalidate" step of that strategy retrieves a response from the
 network that differs from what was previously cached, this module will send a

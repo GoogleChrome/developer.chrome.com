@@ -116,7 +116,7 @@ Browsers set storage quotas, and limits can vary. That's a good reason to be min
 Workbox does a good job of mitigating these issues,
 but storage quotas can still be exceeded.
 You can achieve finer control of caches with the
-[workbox-expiration module](​​/docs/workbox-modules/workbox-expiration).
+[workbox-expiration module](​​/docs/workbox/modules/workbox-expiration).
 
 ## Have no fear
 

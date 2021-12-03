@@ -51,7 +51,7 @@ If you don't want to use the CDN, it's easy enough to switch to Workbox files
 hosted on your own domain.
 
 The simplest approach is to get the files via [`workbox-cli`'s `copyLibraries`
-command](/docs/workbox-modules/workbox-cli#copylibraries), and then tell
+command](/docs/workbox/modules/workbox-cli#copylibraries), and then tell
 `workbox-sw` where to find these files via the `modulePathPrefix` config option.
 
 If you put the files under `/third_party/workbox-vX.Y.Z/`, you would use them like so:
@@ -186,7 +186,7 @@ to use `workbox-sw`, all you have to do is load `workbox-sw` and replace all `im
 those modules on the global namespace.
 
 This works because every Workbox [service worker
-package](/docs/workbox-modules/#service-worker-packages) published to npm is also
+package](/docs/workbox/modules/#service-worker-packages) published to npm is also
 available on the global `workbox` namespace via a
 [camelCase](https://en.wikipedia.org/wiki/Camel_case) version of the name (e.g.
 all modules exported from the `workbox-precaching` npm package can be found on

@@ -200,10 +200,10 @@ wb.register();
 #### Notify the user of cache updates from the `workbox-broadcast-update` package
 
 The [`workbox-broadcast-update`
-package](/docs/workbox-modules/workbox-broadcast-update) is a great way to be able to serve content from the cache (for fast delivery) while also
+package](/docs/workbox/modules/workbox-broadcast-update) is a great way to be able to serve content from the cache (for fast delivery) while also
 being able to inform the user of updates to that content (using the
 [stale-while-revalidate
-strategy](/docs/workbox-modules/workbox-strategies#stale-while-revalidate)).
+strategy](/docs/workbox/modules/workbox-strategies#stale-while-revalidate)).
 
 To receive those updates from the window, you can listen to `message` events of
 type `CACHE_UPDATED`:
@@ -231,7 +231,7 @@ based on what URL the user lands on first.
 
 For apps in the latter category, it might make sense to only cache the assets
 the user needed for the particular page they visited. When using the
-[`workbox-routing` package](/docs/workbox-modules/workbox-routing), you can
+[`workbox-routing` package](/docs/workbox/modules/workbox-routing), you can
 send your router a list of URLs to cache, and it will cache those URLs according
 to the rules defined on the router itself.
 
@@ -492,7 +492,7 @@ Consider a scenario where you have tab A running v1 of your site and tab B
 running v2. When tab B loads, it'll be controlled by the version of your service
 worker that shipped with v1, but the page returned by the server (if using a
 [network-first caching
-strategy](/docs/workbox-modules/workbox-strategies#network-first-network-falling-back-to-cache)
+strategy](/docs/workbox/modules/workbox-strategies#network-first-network-falling-back-to-cache)
 for your navigation requests) will contain all your v2 assets.
 
 This is generally not a problem for tab B though, since when you wrote your v2

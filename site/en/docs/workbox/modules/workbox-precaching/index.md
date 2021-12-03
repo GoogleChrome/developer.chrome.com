@@ -56,11 +56,11 @@ Calling
 [`precacheAndRoute()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.precacheAndRoute)
 or
 [`addRoute()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.addRoute)
-will create a [route](/docs/workbox-modules/workbox-routing) that matches
+will create a [route](/docs/workbox/modules/workbox-routing) that matches
 requests for precached URLs.
 
 The response strategy used in this route is
-[cache-first](/docs/workbox-modules/workbox-strategies#cache_first_cache_falling_back_to_network):
+[cache-first](/docs/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network):
 the precached response will be used, unless that cached response is not present (due to some
 unexpected error), in which case a network response will be used instead.
 
@@ -122,7 +122,7 @@ Workbox comes with tools to help with generating this list:
 
 {% Aside 'warning' %}
 It's strongly recommended that you use one of Workbox's [build
-tools](/docs/workbox-modules/#node-modules) to
+tools](/docs/workbox/modules/#node-modules) to
 generate this precache manifest. **Never hardcode revision info into a "hand
 written" manifest, as precached URLs will not be kept up to date unless the
 revision info reflects the URL's contents!**

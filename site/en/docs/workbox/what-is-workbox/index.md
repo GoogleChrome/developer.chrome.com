@@ -30,11 +30,11 @@ method offers more control when necessary.
 
 For more advanced use cases, other modules can help. A few such modules are:
 
-- [`workbox-routing`](/docs/workbox-modules/workbox-routing) for request matching.
-- [`workbox-strategies`](/docs/workbox-modules/workbox-strategies) for caching strategies.
-- [`workbox-precaching`](/docs/workbox-modules/workbox-precaching) for precaching.
-- [`workbox-expiration`](/docs/workbox-modules/workbox-expiration) for managing caches.
-- [`workbox-window`](/docs/workbox-modules/workbox-window) for registering a service worker and handling updates in the [`window context`](https://developer.mozilla.org/docs/Web/API/Window).
+- [`workbox-routing`](/docs/workbox/modules/workbox-routing) for request matching.
+- [`workbox-strategies`](/docs/workbox/modules/workbox-strategies) for caching strategies.
+- [`workbox-precaching`](/docs/workbox/modules/workbox-precaching) for precaching.
+- [`workbox-expiration`](/docs/workbox/modules/workbox-expiration) for managing caches.
+- [`workbox-window`](/docs/workbox/modules/workbox-window) for registering a service worker and handling updates in the [`window context`](https://developer.mozilla.org/docs/Web/API/Window).
 
 These and [other modules](https://developers.google.com/web/tools/workbox/modules)
 help compose service worker code in a declarative fashion that's easier to read and maintain than using service worker APIs directly.

@@ -31,7 +31,7 @@ intended to reduce navigation latency for developers who can't precache their HT
 to use Workbox to handle caching of other assets on their sites.
 
 For instance, if you're following the [App Shell pattern](/docs/workbox/app-shell-model/),
-and you've got a [navigation route](/docs/workbox-modules/workbox-routing#how_to_register_a_navigation_route)
+and you've got a [navigation route](/docs/workbox/modules/workbox-routing#how_to_register_a_navigation_route)
 already set up to use the precached HTML, enabling navigation preload will be a waste. The network
 response that is associated with the preload request will never end up being used, since the precached
 HTML will be used unconditionally.

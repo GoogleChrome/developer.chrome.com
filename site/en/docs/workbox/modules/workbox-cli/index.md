@@ -136,12 +136,12 @@ If you have an existing build process that is based entirely on
 then the `workbox-cli` is a good choice.
 
 If you're currently using [webpack](https://webpack.js.org/) as your build
-tool, then using the [workbox-webback-plugin](/docs/workbox-modules/workbox-webpack-plugin)
+tool, then using the [workbox-webback-plugin](/docs/workbox/modules/workbox-webpack-plugin)
 is a better choice.
 
 If you're currently using [Gulp](https://gulpjs.com/),
 [Grunt](https://gruntjs.com/), or some other Node.js-based build tool,
-then integrating [workbox-build](/docs/workbox-modules/workbox-build) into your build script
+then integrating [workbox-build](/docs/workbox/modules/workbox-build) into your build script
 is a better choice.
 
 If you don't have a build process at all, then you should come up with one
