@@ -24,7 +24,7 @@ tags:
 ## プレビュー機能: 新しい Recorder パネル {: #decorder }
 
 <!-- Use the new **Recorder** panel to record, replay and measure user flows.  -->
-ユーザフローを記録、再生、そして計測するために、新しい **Recorder** パネルを使ってください。
+新しい **Recorder** パネルを使用すると、ユーザフローを記録、再生、そして計測できます。
 
 <!-- [Open the **Recorder** panel](/docs/devtools/recorder/#open). Follow the instructions on screen to start a new recording.  -->
 [**Recorder** パネルを開きます](/docs/devtools/recorder/#open)。新規に記録を開始するために、画面の指示に従ってください。
@@ -49,7 +49,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 ## デバイスモードでのデバイス一覧の更新 {: #device }
 
 <!-- [Enabling the Device Toolbar](/docs/devtools/device-mode#viewport), more modern devices are now added in the device list. Select a device to simulate its dimensions. -->
-[デバイスツールバーを有効にする](/docs/devtools/device-mode#viewport) と、より新しいデバイスがデバイス一覧に追加されているのがわかります。寸法をシミュレートするデバイスを選択しましょう。
+[デバイスツールバーを有効にする](/docs/devtools/device-mode#viewport) と、より新しいデバイスがデバイス一覧に追加されているのがわかります。画面サイズをシミュレートするデバイスを選択しましょう。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Trx5NqE9RrqpWiN24iZ0.png", alt="デバイスモードでのデバイス一覧の更新", width="800", height="547" %}
 
@@ -62,7 +62,7 @@ Chromium issue: [1223525](https://crbug.com/1223525)
 ## Edit as HTML でのオートコンプリート {: #code-completion }
 
 <!-- The **Edit as HTML** UI now supports autocomplete and syntax highlights. In the **Elements** panel, right click on an element, and select  **Edit as HTML**. Try typing a DOM property (e.g. `id`, `aria`), the autocomplete should help you find the property name you're looking for. -->
-**Edit as HTML** はオートコンプリートとシンタックスハイライトをサポートするようになります。**Elements** パネルにて、要素を右クリックして、**Edit as HTML** を選択してください。DOM プロパティ（例: `id`, `aria`）をタイプすることで、期待しているプロパティ名を探すことをオートコンプリート機能が手伝ってくれるはずです。
+**Edit as HTML** はオートコンプリートとシンタックスハイライトをサポートするようになります。**Elements** パネルにて、要素を右クリックして、**Edit as HTML** を選択してください。DOM プロパティ（例: `id`, `aria`）をタイプしてみましょう。期待しているプロパティ名を探すことをオートコンプリート機能が手伝ってくれるはずです。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yWnmpCQXpsRjWbbRQ9Pi.png", alt="Edit as HTML でのオートコンプリート", width="800", height="472" %}
 
