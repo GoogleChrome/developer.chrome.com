@@ -38,7 +38,7 @@ You can [create a completely new stylesheet](https://developers.google.com/web/u
 
 ```js
 // Create a completely new stylesheet
-const sheet = new CSSStyleSheet();
+const stylesheet = new CSSStyleSheet();
 stylesheet.replaceSync('.some { color: blue; }');
 stylesheet.insertRule('.some { color: green; }'); 
 
