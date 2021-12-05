@@ -7,6 +7,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 * [Atualização da lista de dispositivos no modo de Dispositivo](/pt/blog/new-in-devtools-97/#device)
 * [Preenchimento automático do Editar como HTML](/pt/blog/new-in-devtools-97/#code-completion)
 * [Melhoria na experiência de Debug](/pt/blog/new-in-devtools-97/#debugging)
+* [Sincronizando as configurações do DevTools entre dispositivos](/pt/blog/new-in-devtools-97/#sync)
 
 ### Chrome 96 {: #chrome96 }
 

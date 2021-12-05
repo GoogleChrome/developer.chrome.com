@@ -82,9 +82,6 @@ Os números das colunas agora estão incluídos na saída de erro no console. Te
 
 Issue Relacionada: [1073064](https://crbug.com/1073064)
 
-<!-- Unconfirmed: Disable at the moment -->
-Não confirmado: Desativado no momento
-<!-- ## [Experimental] Syncing DevTools settings across devices {: #sync } -->
 ## [Experimental] Sincronizando as configurações do DevTools entre dispositivos {: #sync }
 <!-- Your DevTools settings are now sync across devices by default when you turn on Chrome profile sync. You can change the DevTools sync settings via **Settings** > **Sync** > **Enable settings sync**. -->
 Suas configurações do DevTools agora são sincronizadas entre os dispositivos por padrão quando você ativa a sincronização do perfil do Chrome. Você pode alterar as configurações de sincronização do DevTools em **Configurações**> **Sincronizar**> **Ativar sincronização de configurações**.

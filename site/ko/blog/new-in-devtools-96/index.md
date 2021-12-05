@@ -6,7 +6,7 @@ authors:
 date: 2021-10-25
 updated: 2021-10-25
 description:
-  "새로운 CSS 개요 영역, CSS 의 prefers-constrast 미디어 기능 에뮬레이션, 크롬의 자동 어두운 테마 기능 에뮬레이션 및 다른 새로운 기능들."
+  "새로운 CSS 개요 영역, CSS 의 prefers-contrast 미디어 기능 에뮬레이션, 크롬의 자동 어두운 테마 기능 에뮬레이션 및 다른 새로운 기능들."
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/61LuaWeAzEc2dbdFjnWm.jpg'
 alt: ''
 tags:
@@ -48,6 +48,7 @@ Chromium issue: [1254557](https://crbug.com/1254557)
 
 
 ## 복원 및 개선된 CSS 길이 편집 및 복사 기능 {: #length }
+
 이전 배포판에서 중단되었던 길이를 갖는 CSS 요소에 대한 **CSS 복사하기**와 **텍스트로 편집하기** 기능이 복구되었습니다.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/3zxmVrRNd767L9zPDvU8.mp4", autoplay="true", muted="true", loop="true", class="screenshot" %}
@@ -67,7 +68,8 @@ Chromium issues: [1259088](https://crbug.com/1259088), [1172993](https://crbug.c
 
 
 ## 렌더링 탭의 업데이트 
-### CSS 의 prefers-constrast 미디어 기능 에뮬레이션 {: #prefers-contrast }
+
+### CSS 의 prefers-contrast 미디어 기능 에뮬레이션 {: #prefers-contrast }
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/47fsHvVLiVC9J0eWY9wD.png", alt="Emulate the CSS prefers-contrast media feature", width="800", height="483" %}
 
