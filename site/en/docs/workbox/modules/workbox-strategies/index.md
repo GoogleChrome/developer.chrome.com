@@ -154,11 +154,11 @@ registerRoute(
 
 Workbox comes with a set of plugins that can be used with these strategies.
 
-- [workbox-background-sync](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-background-sync)
-- [workbox-broadcast-update](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-broadcast-update)
-- [workbox-cacheable-response](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-cacheable-response)
-- [workbox-expiration](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-expiration)
-- [workbox-range-requests](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-range-requests)
+- [workbox-background-sync](/docs/workbox/reference/workbox-background-sync)
+- [workbox-broadcast-update](/docs/workbox/reference/workbox-broadcast-update)
+- [workbox-cacheable-response](/docs/workbox/reference/workbox-cacheable-response)
+- [workbox-expiration](/docs/workbox/reference/workbox-expiration)
+- [workbox-range-requests](/docs/workbox/reference/workbox-range-requests)
 
 To use any of these plugins (or a custom plugin), you just need to pass in
 instances to the `plugins` option.

@@ -58,4 +58,4 @@ import {createPartialResponse} from 'workbox-range-requests';
 createPartialResponse(request, cachedResponse);
 ```
 
-For more info [see the reference docs](../reference-docs/latest/module-workbox-range-requests).
+For more info [see the reference docs](/docs/workbox/reference/workbox-range-requests).

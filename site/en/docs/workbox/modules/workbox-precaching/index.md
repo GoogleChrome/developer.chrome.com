@@ -53,9 +53,9 @@ files that have changed.
 ### Serving Precached Responses
 
 Calling
-[`precacheAndRoute()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.precacheAndRoute)
+[`precacheAndRoute()`](/docs/workbox/reference/workbox-precaching/#method-precacheAndRoute)
 or
-[`addRoute()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.addRoute)
+[`addRoute()`](/docs/workbox/reference/workbox-precaching/#method-addRoute)
 will create a [route](/docs/workbox/modules/workbox-routing) that matches
 requests for precached URLs.
 
@@ -67,7 +67,7 @@ unexpected error), in which case a network response will be used instead.
 The order in which you call `precacheAndRoute()` or `addRoute()` is important.
 You would normally want to call it early on in your service worker file, before
 registering any additional routes with
-[`registerRoute()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#.registerRoute).
+[`registerRoute()`](/docs/workbox/reference/workbox-routing/#method-registerRoute).
 If you did call `registerRoute()` first, and that route matched an incoming
 request, whatever strategy you defined in that additional route will be used to
 respond, instead of the cache-first strategy used by `workbox-precaching`.
@@ -238,7 +238,7 @@ By default, `workbox-precaching` will set up the `install` and `activate` listen
 For developers familiar with service workers, this may not be desirable if you need more control.
 
 Instead of using the default export, you can use the
-[`PrecacheController`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController)
+[`PrecacheController`](/docs/workbox/reference/workbox-precaching/#type-PrecacheController)
 directly to add items to the precache, determine when these assets are installed, and
 when cleanup should occur.
 
@@ -292,7 +292,7 @@ might contain a versioning parameter that `workbox-precaching` automatically
 creates and maintains.
 
 To get the correct cache key you can call
-[`getCacheKeyForURL()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.getCacheKeyForURL),
+[`getCacheKeyForURL()`](/docs/workbox/reference/workbox-precaching/#method-getCacheKeyForURL),
 passing in the original URL, and then use the result to perform a
 `cache.match()` on the appropriate cache.
 
@@ -305,7 +305,7 @@ const response = await cache.match(getCacheKeyForURL('/precached-file.html'));
 ```
 
 Alternatively, if all you need is the precached `Response` object, you can call
-[`matchPrecache()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.matchPrecache),
+[`matchPrecache()`](/docs/workbox/reference/workbox-precaching/#method-matchPrecache),
 which will automatically use the correct cache key and search in the correct
 cache:
 
@@ -319,8 +319,8 @@ const response = await matchPrecache('/precached-file.html');
 If you are [using your own `PrecacheController`
 instance](#using_precachecontroller_directly), instead of using the default
 instance via `precacheAndRoute`, you should call the
-[`matchPrecache()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#matchPrecache) or
-[`getCacheKeyForURL()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching.PrecacheController#getCacheKeyForURL) methods directly on that
+[`matchPrecache()`](/docs/workbox/reference/workbox-precaching/#method-matchPrecache) or
+[`getCacheKeyForURL()`](/docs/workbox/reference/workbox-precaching/#method-getCacheKeyForURL) methods directly on that
 instance.
 {% endAside %}
 
@@ -336,7 +336,7 @@ Workbox v3 and v4 releases.)
 This obsolete data shouldn't interfere with normal operations, but it does
 contribute towards your overall storage quota usage, and it can be friendlier to
 your users to explicitly delete it. You can do this by adding
-[`cleanupOutdatedCaches()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-precaching#.cleanupOutdatedCaches)
+[`cleanupOutdatedCaches()`](/docs/workbox/reference/workbox-precaching/#method-cleanupOutdatedCaches)
 to your service worker, or setting `cleanupOutdatedCaches: true` if you're using
 one of Workbox's build tools to generate your service worker.
 

@@ -45,7 +45,7 @@ you, but if you ever find yourself wanting different behavior, writing a
 custom match and handler function is the best option.
 
 A
-[match callback function](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#~matchCallback)
+[match callback function](/docs/workbox/reference/workbox-core/#method-RouteMatchCallback)
 is passed a
 [`ExtendableEvent`](https://developer.mozilla.org/docs/Web/API/ExtendableEvent),
 [`Request`](https://developer.mozilla.org/docs/Web/API/Request), and a
@@ -63,7 +63,7 @@ Most use cases can be covered by examining / testing either the `url` or the
 `request`.
 
 A
-[handler callback function](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#~handlerCallback)
+[handler callback function](/docs/workbox/reference/workbox-core/#type-RouteHandler)
 will be given the same
 [`ExtendableEvent`](https://developer.mozilla.org/docs/Web/API/ExtendableEvent),
 [`Request`](https://developer.mozilla.org/docs/Web/API/Request), and
@@ -156,7 +156,7 @@ to ensure it doesn't cause unexpected behaviors in you web app.
 ## How to Register a Navigation Route
 
 If your site is a single page app, you can use a
-[`NavigationRoute`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing.NavigationRoute) to
+[`NavigationRoute`](/docs/workbox/reference/workbox-routing/#type-NavigationRoute) to
 return a specific response for all
 [navigation requests](https://developers.google.com/web/fundamentals/primers/service-workers/high-performance-loading#first_what_are_navigation_requests).
 
@@ -254,7 +254,7 @@ setting the log level.
 
 If you want to have more control over when the Workbox Router is given
 requests, you can create your own
-[`Router`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router) instance and call
+[`Router`](/docs/workbox/reference/workbox-routing/#type-Router) instance and call
 it's [`handleRequest()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router#handleRequest)
 method whenever you want to use the router to respond to a request.
 

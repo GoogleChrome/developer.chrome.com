@@ -261,9 +261,9 @@ wb.register();
 
 {% Aside %}
 The above technique works for any route defined via the
-[`registerRoute()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing#.registerRoute)
-method on the default router. If you're creating your own `Router` instance,
-you'll need to call [`addCacheListener()`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-routing.Router#addCacheListener) manually.
+[`registerRoute()`](/docs/workbox/reference/workbox-routing/#method-registerRoute)
+method on the default router. If you're creating your own [`Router`](/docs/workbox/reference/workbox-routing/#type-Router) instance,
+you'll need to call its `addCacheListener()` method manually.
 {% endAside %}
 
 ## Important service worker lifecycle moments
