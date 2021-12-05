@@ -2,7 +2,7 @@
 
 {% macro projectIcon(project_key) %}
   <div class="project-icon">
-    {% set styles = docs[project_key].styles %}
+    {% set styles = (project_key | embededDoc(docs)).styles %}
     {% set color = styles.project_icon_color %}
     <div class="project-icon__cover"{% if color %} style="color: var(--{{color}})"{% endif %}>
       {# svg() looks in "_includes", so find the project image in the parent directory #}
