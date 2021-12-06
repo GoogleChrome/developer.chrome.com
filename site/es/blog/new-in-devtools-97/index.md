@@ -46,7 +46,6 @@ Por ejemplo, puede grabar el proceso de compra de café con esta [demo de compra
 <!-- The **Recorder** panel is a preview feature. Our team is still actively working on it and we are looking for your [feedback](https://goo.gle/recorder-feedback) for further enhancements. -->
 La **Grabadora** es una función de vista previa. Nuestro equipo está trabajando activamente en ella y estamos buscando su [opinión](https://goo.gle/recorder-feedback) para mejoras.
 
-{% include 'partials/devtools/es/footer.md' %}
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3EpVa15PtbhFwwszqyWF.png", alt="Panel de Grabadora", width="800", height="540" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ef26abc89035075bbdb08f1b26c1b8fd942ffc04 #}
