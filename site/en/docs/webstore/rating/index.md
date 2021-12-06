@@ -11,14 +11,14 @@ Ratings are not intended to reflect the quality or complexity of your extension.
 
 As the developer, you are ultimately responsible for rating your extension appropriately. Use the
 following rules as guidance in determining whether your extension should be rated "Mature." When
-determining your extension's rating, consider all the content in your extension, including user generated
-content and ads, and content that your extension links to. 
+determining your extension's rating, consider all the content in your extension, including user
+generated content and ads, and content that your extension links to. 
 
 {% Aside 'caution' %}
 
-Regardless of the rating you give
-your extension, all extensions must still adhere to the terms of the Chrome Web Store [Program Policy][content-policies] and
-the Chrome Web Store [Developer Agreement][developer-agreement].
+Regardless of the rating you give your extension, all extensions must still adhere to the terms of
+the Chrome Web Store [Program Policy][content-policies] and the Chrome Web Store [Developer
+Agreement][developer-agreement].
 
 {% endAside %}
 
@@ -29,8 +29,8 @@ example, an extension that is a collection of images of men or women in lingerie
 should be rated "Mature." Note that pornography and sexually explicit content are not allowed in the
 Chrome Web Store.
 
-As you consider how to rate your extension, here is more guidance on extensions that we would consider to be
-sexually explicit, mature, and not mature.
+As you consider how to rate your extension, here is more guidance on extensions that we would
+consider to be sexually explicit, mature, and not mature.
 
 <table><tbody><tr><th>Not mature</th><th>Mature</th><th>Sexually explicit (not
 allowed)</th></tr><tr><td><ul><li>Images of people kissing and hugging</li><li>Dating extension that
@@ -50,10 +50,10 @@ violence is not allowed in the Chrome Web Store.
 
 ## Alcohol, tobacco and drugs
 
-Extensions that focus on the consumption or sale of drugs, alcohol or tobacco should be rated "Mature."
-For example, a game where the main character is a drug dealer should be rated "Mature." Illegal
-activity or alcohol, tobacco or drug content that is targeted at minors is not allowed in the Chrome
-Web Store.
+Extensions that focus on the consumption or sale of drugs, alcohol or tobacco should be rated
+"Mature." For example, a game where the main character is a drug dealer should be rated "Mature."
+Illegal activity or alcohol, tobacco or drug content that is targeted at minors is not allowed in
+the Chrome Web Store.
 
-[content-policies]: /docs/webstore/program_policies/#content_policies
-[developer-agreement]: /docs/webstore/terms/
+[content-policies]: /docs/webstore/program_policies/#content_policies 
+[developer-agreement]:/docs/webstore/terms/
