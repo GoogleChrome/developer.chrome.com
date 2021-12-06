@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Complete your listing information"
 date: 2020-12-07
-updated: 2021-08-13
+updated: 2021-12-06
 description: How to add listing information for your Chrome Web Store item.
 ---
 
