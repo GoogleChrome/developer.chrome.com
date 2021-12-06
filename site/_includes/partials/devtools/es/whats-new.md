@@ -2,12 +2,12 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
-<!-- ### Chrome 97 {: #chrome97 }
-* [Preview feature: New Recorder panel](/es/blog/new-in-devtools-97/#recorder)
-* [Refresh device list in Device Mode](/es/blog/new-in-devtools-97/#device)
-* [Autocomplete with Edit as HTML](/es/blog/new-in-devtools-97/#code-completion)
-* [Improved code debugging experience](/es/blog/new-in-devtools-97/#debugging)
-* [Syncing DevTools settings across devices](/es/blog/new-in-devtools-97/#sync) -->
+### Chrome 97 {: #chrome97 }
+* [Función en vista previa: Nuevo panel de Grabadora](/es/blog/new-in-devtools-97/#recorder)
+* [Actualización de la lista de dispositivos en el Modo Dispositivo](/es/blog/new-in-devtools-97/#device)
+* [Autocompletado con Editar como HTML](/es/blog/new-in-devtools-97/#code-completion)
+* [Mejorada la experiencia de depuración de código](/es/blog/new-in-devtools-97/#debugging)
+* [Sincronización de configuraciones de DevTools entre dispositivos](/es/blog/new-in-devtools-97/#sync) -->
 
 ### Chrome 96 {: #chrome96 }
 * [Función de vista previa: Nuevo panel de Descripción General de CSS](/es/blog/new-in-devtools-96/#css-overview)
