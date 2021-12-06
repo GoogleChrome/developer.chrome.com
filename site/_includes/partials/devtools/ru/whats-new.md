@@ -10,6 +10,13 @@
 * [Improved code debugging experience](/ru/blog/new-in-devtools-97/#debugging)
 * [Syncing DevTools settings across devices](/ru/blog/new-in-devtools-97/#sync) -->
 
+### Chrome 97 {: #chrome97 }
+* [Ранний доступ: новая панель Recorder](/ru/blog/new-in-devtools-97/#recorder)
+* [Обновлён список устройств в панели инструментов устройства (Device Mode)](/ru/blog/new-in-devtools-97/#device)
+* [Автодополнение в режиме Редактировать как HTML (Edit as HTML)](/ru/blog/new-in-devtools-97/#code-completion)
+* [Улучшен процесс отладки кода](/ru/blog/new-in-devtools-97/#debugging)
+* [Синхронизация настроек DevTools между устройствами](/ru/blog/new-in-devtools-97/#sync)
+
 ### Chrome 96 {: #chrome96 }
 * [Ранний доступ: Новая вкладка Обзор CSS](/ru/blog/new-in-devtools-96/#css-overview)
 * [Восстановлен и улучшен опыт редактирования и копирования длины в CSS](/ru/blog/new-in-devtools-966/#length)
