@@ -94,6 +94,21 @@ To explain how your extension works in more detail, you can provide a direct lin
 The Chrome Web Store provides a [built in user support][support-tab] experience under your items' **Support tab**, but you can use
 a [dedicated support site][support-site] by including a link in the **Support URL**. 
 
+### Enabling Mature Content {: #mature-content}
+
+Content ratings help users know whether your extension and its content are mature in nature.
+See [Mature Content Guidelines][mature-guidelines] to determine whether your extension should be rated
+"Mature." You can enable **Mature content** under **Additional fields** as shown below: 
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/I7Kp1l2HImElVaHRxy2k.png", alt="Enable Mature Content
+in Store Listing", width="126", height="81" %}
+
+{% Aside %}
+
+Extensions with Mature content will not appear in Chrome Web Store search for users that are *not* logged in. When logged into an of-age account, search results will contain mature items.
+
+{% endAside %}
+
 ## You are almost ready to publish this item! 
 
 If you haven't done so yet, complete your listing by 
@@ -106,6 +121,7 @@ If you haven't done so yet, complete your listing by
 [cws-images]: /docs/webstore/images
 [distribution]: /docs/webstore/cws-dashboard-distribution
 [keyword-spam]: /docs/webstore/spam-faq/#keyword-spam
+[mature-guidelines]: /docs/webstore/rating/
 [privacy]: /docs/webstore/cws-dashboard-privacy
 [support-tab]: /docs/webstore/manage/#user-support-tab
 [support-site]: /docs/webstore/manage/#dedicated-support-site
