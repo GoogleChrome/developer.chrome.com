@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Best Practices
 date: 2017-08-30
-updated: 2021-11-22
+updated: 2021-12-06
 description: >
   Best practices on how to implement your extension and list it in the Chrome Web Store.
 ---
@@ -50,7 +50,12 @@ Google Accounts. Google Accounts can help you provide a better user experience; 
 Chrome Web Store are likely to be logged in already, they won't have to set up and remember yet
 another username and password. Reducing the number of logins improves the user's experience.
 
-See [Identifying the User][identify-user] for more information about supporting Google Accounts.
+If you already have a login system, consider correlating the Google Account ID to the user account
+in your system. You can use the [Chrome Identity API][identity-api] to support Google accounts in the following
+ways:
+
+- Google OAuth2/OpenID: See [Identifying the User][identify-user]. 
+- OAuth2: See [Authenticate users with Google][oauth2-tutorial].
 
 ## Keep ex-users' data for 30 days or more
 
@@ -93,11 +98,13 @@ that is most appropriate:
 * Social & Communication
 * Sports
 
+[oauth2-tutorial]: /docs/extensions/mv3/tut_oauth/
 [completing-listing]: /docs/webstore/cws-dashboard-listing/
 [cws-branding]: /docs/webstore/branding
 [cws-images]: /docs/webstore/images
 [dashboard-privacy]: /docs/webstore/cws-dashboard-privacy/
 [great-listing-page]: /docs/webstore/best_listing/
+[identity-api]: /docs/extensions/reference/identity/
 [identify-user]: /docs/webstore/identify_user
 [mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
 [program policies]: /docs/webstore/program_policies/
