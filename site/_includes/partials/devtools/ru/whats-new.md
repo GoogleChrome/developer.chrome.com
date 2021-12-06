@@ -11,6 +11,7 @@
 * [Syncing DevTools settings across devices](/ru/blog/new-in-devtools-97/#sync) -->
 
 ### Chrome 97 {: #chrome97 }
+
 * [Ранний доступ: новая панель Recorder](/ru/blog/new-in-devtools-97/#recorder)
 * [Обновлён список устройств в панели инструментов устройства (Device Mode)](/ru/blog/new-in-devtools-97/#device)
 * [Автодополнение в режиме Редактировать как HTML (Edit as HTML)](/ru/blog/new-in-devtools-97/#code-completion)
@@ -18,6 +19,7 @@
 * [Синхронизация настроек DevTools между устройствами](/ru/blog/new-in-devtools-97/#sync)
 
 ### Chrome 96 {: #chrome96 }
+
 * [Ранний доступ: Новая вкладка Обзор CSS](/ru/blog/new-in-devtools-96/#css-overview)
 * [Восстановлен и улучшен опыт редактирования и копирования длины в CSS](/ru/blog/new-in-devtools-966/#length)
 * [Эмуляция CSS-медиафункции prefers-contrast](/ru/blog/new-in-devtools-96/#prefers-contrast)
@@ -33,6 +35,7 @@
 * [[Эксперимент] Новая панель Reporting API на вкладке Приложение](/ru/blog/new-in-devtools-96/#reporting-api)
 
 ### Chrome 95 {: #chrome95 }
+
 * [Новый инструмент выбора единиц измерения длины в CSS](/blog/new-in-devtools-95/#length)
 * [Скрытие задач во вкладке Проблемы (Issues)](/blog/new-in-devtools-95/#hide-issues)
 * [Улучшенное отображение свойств](/blog/new-in-devtools-95/#properties)
