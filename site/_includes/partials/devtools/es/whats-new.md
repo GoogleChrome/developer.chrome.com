@@ -3,11 +3,13 @@
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
 ### Chrome 97 {: #chrome97 }
+
 * [Función en vista previa: Nuevo panel de Grabadora](/es/blog/new-in-devtools-97/#recorder)
 * [Actualización de la lista de dispositivos en el Modo Dispositivo](/es/blog/new-in-devtools-97/#device)
 * [Autocompletado con Editar como HTML](/es/blog/new-in-devtools-97/#code-completion)
 * [Mejorada la experiencia de depuración de código](/es/blog/new-in-devtools-97/#debugging)
-* [Sincronización de configuraciones de DevTools entre dispositivos](/es/blog/new-in-devtools-97/#sync) -->
+* [Sincronización de configuraciones de DevTools entre dispositivos](/es/blog/new-in-devtools-97/#sync)
+
 
 ### Chrome 96 {: #chrome96 }
 * [Función de vista previa: Nuevo panel de Descripción General de CSS](/es/blog/new-in-devtools-96/#css-overview)
@@ -23,6 +25,7 @@ Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" tra
 * [Mantener la barra lateral de la consola](/es/blog/new-in-devtools-96/#console-sidebar)
 * [Panel de caché de la aplicación en desuso (deprecated) en el panel de la aplicación](/es/blog/new-in-devtools-96/#app-cache)
 * [[Experimental] Nuevo panel de la API de informes en el panel de la aplicación](/es/blog/new-in-devtools-96/#reporting-api)
+
 
 ### Chrome 95 {: #chrome95 }
 * [Nuevas herramientas para cambiar medidas en CSS](/es/blog/new-in-devtools-95/#length)

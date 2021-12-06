@@ -106,7 +106,7 @@ Esta nueva opción hace más fácil trabajar entre dispositivos. Por ejemplo, lo
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="Ajustes de apariencia", width="800", height="584" %}
 
-<!-- This feature is experimental at the moment, the team is still actively working on it. If you have any feedback, please share with us [here](https://crbug.com/1245541). -->
+<!-- This feature is experimental at the moment, the team is still actively working on it. If you have any feedback, ple-ase share with us [here](https://crbug.com/1245541). -->
 Esta nueva función es experimental en este momento, el equipo está activamente trabajando en ella. Si tiene alguna sugerencia, por favor compártala con nosotros [aquí](https://crbug.com/1245541).
 
 Chromium issue: [1245541](https://crbug.com/1245541)
