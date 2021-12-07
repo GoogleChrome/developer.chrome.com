@@ -28,3 +28,4 @@
     - url: /docs/workbox/serving-cached-audio-and-video
     - url: /docs/workbox/managing-fallback-responses
     - url: /docs/workbox/handling-service-worker-updates
+    - url: /docs/workbox/retrying-requests-when-back-online
