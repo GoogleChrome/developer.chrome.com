@@ -20,3 +20,6 @@
     - url: /docs/workbox/precaching-with-workbox
     - url: /docs/workbox/using-workbox-without-precaching
     - url: /docs/workbox/framework-integrations
+- title: i18n.docs.workbox.uses
+  sections:
+    - url: /docs/workbox/caching-resources-during-runtime
