@@ -26,3 +26,4 @@
     - url: /docs/workbox/forcing-a-network-timeout
     - url: /docs/workbox/access-caches-from-the-window
     - url: /docs/workbox/serving-cached-audio-and-video
+    - url: /docs/workbox/managing-fallback-responses

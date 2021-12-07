@@ -8,14 +8,14 @@ description: >
 
 With all of this work we've been doing outside of the `window`, you might think that [`Cache` instances](https://developer.mozilla.org/docs/Web/API/Cache) can only be accessed in the service worker scope. The fact is that you can access `Cache` instances in _both_ the service worker scope _and_ in your web app's traditional code, running  in the `window`. This makes it easier for the user to directly interact with a service worker cache, or update the user interface based on cache state.
 
-One potential use case is to offer a “save for offline” feature for pages the user may want to read later, but know they may be offline at that time. The Glitch embed below shows how to do this with Workbox.
+One potential use case is to offer a "save for offline" feature for pages the user may want to read later, but know they may be offline at that time. The Glitch embed below shows how to do this with Workbox.
 
 {% Glitch {
   id: 'save-for-offline-test',
   path: 'index.html'
 } %}
 
-In the above embed, you can see that the `app.js` script writes to the offline cache from the `window` context when the “save for offline” button is clicked. In the service worker, the page's static assets are precached for offline access. A [`NetworkOnly` strategy](/docs/workbox/reference/workbox-strategies/#type-NetworkOnly) is used with a special handler that manages offline access for cached pages, and is passed to a [`NavigationRoute`](/docs/workbox/reference/workbox-routing/#type-NavigationRoute).
+In the above embed, you can see that the `app.js` script writes to the offline cache from the `window` context when the "save for offline" button is clicked. In the service worker, the page's static assets are precached for offline access. A [`NetworkOnly` strategy](/docs/workbox/reference/workbox-strategies/#type-NetworkOnly) is used with a special handler that manages offline access for cached pages, and is passed to a [`NavigationRoute`](/docs/workbox/reference/workbox-routing/#type-NavigationRoute).
 
 To test the functionality in the Glitch embed, do the following:
 
