@@ -105,7 +105,7 @@ in Store Listing", width="126", height="81" %}
 
 {% Aside %}
 
-Extensions with Mature content will not appear in Chrome Web Store search for users that are *not* logged in. When logged into an of-age account, search results will contain mature items.
+Extensions with mature content will not appear in Chrome Web Store search for users that are *not* logged in. When logged into an of-age account, search results will contain mature items.
 
 {% endAside %}
 

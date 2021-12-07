@@ -52,7 +52,7 @@ violence is not allowed in the Chrome Web Store.
 
 Extensions that focus on the consumption or sale of drugs, alcohol or tobacco should be rated
 "Mature." For example, a game where the main character is a drug dealer should be rated "Mature."
-Illegal activity or alcohol, tobacco or drug content that is targeted at minors is not allowed in
+Illegal activity or alcohol, tobacco, or drug content that is targeted at minors is not allowed in
 the Chrome Web Store.
 
 [content-policies]: /docs/webstore/program_policies/#content_policies 
