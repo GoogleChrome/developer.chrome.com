@@ -27,3 +27,4 @@
     - url: /docs/workbox/access-caches-from-the-window
     - url: /docs/workbox/serving-cached-audio-and-video
     - url: /docs/workbox/managing-fallback-responses
+    - url: /docs/workbox/handling-service-worker-updates

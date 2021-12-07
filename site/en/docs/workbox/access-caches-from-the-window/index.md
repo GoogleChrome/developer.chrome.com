@@ -34,4 +34,4 @@ It's been said before in this documentation, but it bears repeating in this cont
 
 This isn't the only use case for working with `Cache` instances in the `window`. For example, you could predictively prefetch and cache assets you know the user will need to perform a specific action. This would reduce or avoid the latency of downloading those assets on demand.
 
-There are other potentially beneficial use cases—and, since you can interact with `Cache` instances in the absence of a service worker, not all of them may require one to be installed.
+There are other potentially beneficial use cases&mdash;and, since you can interact with `Cache` instances in the absence of a service worker, not all of them may require one to be installed.

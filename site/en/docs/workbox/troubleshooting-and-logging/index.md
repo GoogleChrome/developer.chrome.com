@@ -14,7 +14,7 @@ There are loads of tools available in the browser for debugging and troubleshoot
 
 ### Chrome and Edge
 
-Chrome (and [recent versions of Edge based on the Blink engine](https://en.wikipedia.org/wiki/Microsoft_Edge#Anaheim_(2019%E2%80%93present))) have a robust set of developer tools. Some of those tools—specifically in Chrome's DevTools—were [touched upon earlier in this documentation](/docs/workbox/improving-development-experience/), but there's more to discover:
+Chrome (and [recent versions of Edge based on the Blink engine](https://en.wikipedia.org/wiki/Microsoft_Edge#Anaheim_(2019%E2%80%93present))) have a robust set of developer tools. Some of those tools&mdash;specifically in Chrome's DevTools&mdash;were [touched upon earlier in this documentation](/docs/workbox/improving-development-experience/), but there's more to discover:
 
 - [Debug Progressive Web Apps](https://developers.google.com/web/tools/chrome-devtools/progressive-web-apps)
 - [Inspect Network Activity in Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/network)
