@@ -51,10 +51,10 @@ You shouldn't use `injectManifest` if:
 
 If you're looking for a framework-agnostic way to use Workbox in your build process, you have three options:
 
-1. [`workbox-cli`](https://developers.google.com/web/tools/workbox/modules/workbox-cli)
-2. [`workbox-build`](https://developers.google.com/web/tools/workbox/modules/workbox-build).
+1. [`workbox-cli`](/docs/workbox/modules/workbox-cli)
+2. [`workbox-build`](/docs/workbox/modules/workbox-build).
 command line tool.
-3. Using a bundler (e.g., [`workbox-webpack-plugin`](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin)).
+3. Using a bundler (e.g., [`workbox-webpack-plugin`](/docs/workbox/modules/workbox-webpack-plugin)).
 
 Each of these build tools offers both the `generateSW` and `injectManifest` modes, with a similar set of options. These are all fine choices when you don't want to tie your Workbox-powered service worker to a particular framework. In order to know which of these options is the best fit, let's take a quick look at each one.
 
@@ -128,7 +128,7 @@ It's worth noting that these framework-specific integrations of Workbox may rest
 
 ## What if I don't have a build process?
 
-This article assumes your project has a build process, but your project, in fact, may not. If that describes your situation, it's still possible to use Workbox with the [`workbox-sw` module](https://developers.google.com/web/tools/workbox/modules/workbox-sw). With `workbox-sw`, you can load the Workbox runtime from a CDN or locally, and compose your own service worker.
+This article assumes your project has a build process, but your project, in fact, may not. If that describes your situation, it's still possible to use Workbox with the [`workbox-sw` module](/docs/workbox/modules/workbox-sw). With `workbox-sw`, you can load the Workbox runtime from a CDN or locally, and compose your own service worker.
 
 ## Conclusion
 

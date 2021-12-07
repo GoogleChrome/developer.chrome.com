@@ -45,7 +45,7 @@ Development builds of Workbox turn logging on by default, whereas production bui
 
 ### With or without a bundler
 
-Bundlers are tools that take code from individual modules and create JavaScript output that's ready to run in the browser. When using a bundler, you might also use a bundler-specific Workbox plugin that helps with precaching, like [`workbox-webpack-plugin`](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin), or you might just be bundling up Workbox runtime caching logic. Either way, Workbox's logging is influenced by setting a production mode in the bundler’s configuration:
+Bundlers are tools that take code from individual modules and create JavaScript output that's ready to run in the browser. When using a bundler, you might also use a bundler-specific Workbox plugin that helps with precaching, like [`workbox-webpack-plugin`](/docs/workbox/modules/workbox-webpack-plugin), or you might just be bundling up Workbox runtime caching logic. Either way, Workbox's logging is influenced by setting a production mode in the bundler’s configuration:
 
 - In webpack, the [`mode` configuration option](https://webpack.js.org/configuration/mode/) can be set to `'production'` or `'development'`. `workbox-webpack-plugin` will use the production or development logging in Workbox based on this value.
 - For Rollup, [`rollup-plugin-workbox`](https://www.npmjs.com/package/rollup-plugin-workbox) accepts a `mode` configuration option that also affects whether Workbox logs anything to the console. If you're using Rollup without the Workbox-specific plugin, you'll need to configure [`@rollup/plugin-replace`](https://www.npmjs.com/package/@rollup/plugin-replace) to substitute `process.env.NODE_ENV` with `'development'` or `'production'`.
@@ -54,7 +54,7 @@ Suppose the default logging behavior must be overridden in development. In that 
 
 ### Without a bundler
 
-While bundlers are great, not every project needs them. If you find yourself in a situation where you want to add Workbox to a project that doesn’t use a bundler, [`workbox-sw`](https://developers.google.com/web/tools/workbox/modules/workbox-sw) is the way to go.
+While bundlers are great, not every project needs them. If you find yourself in a situation where you want to add Workbox to a project that doesn’t use a bundler, [`workbox-sw`](/docs/workbox/modules/workbox-sw) is the way to go.
 
 The `workbox-sw` module simplifies loading other Workbox modules (e.g., `workbox-routing`, `workbox-precaching`, etc) from a CDN. Whether it loads the development or production bundles depends on the URL used to access your web app. By default, `workbox-sw` loads the development version of Workbox if your web app is running on `http://localhost`, and the production version at all other times.
 

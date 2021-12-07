@@ -1,4 +1,4 @@
-{# 
+{#
   This page grabs data from _data/docs/${project_key}/toc.yml. (The `page.fileSlug` value will also
   work, as the URL for this page looks like "/en/docs/{project_key}".)
   For each page in the set of links, it fetches the page's frontmatter and uses that to render the
@@ -34,12 +34,11 @@
         card=>{{ card }}
       {% endfor %}
     {% endif %}
-
     {# Render nested sections. #}
     {% import 'macros/project-sections.njk' as macros with context %}
     <div class="project-sections gap-top-800">
       {# toc defines the table of contents that appears to the left of the documentation. #}
-      {% set toc = docs[project_key].toc %}
+      {% set toc = (project_key | embededDoc(docs)).toc %}
       {{ macros.projectSections(toc) }}
     </div>
   </div>
