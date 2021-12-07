@@ -32,7 +32,7 @@ Our content policies apply to your Product's content, including any ads it shows
 user-generated content it hosts or links to. Further, they apply to any content from your developer
 account that is publicly displayed in Chrome Web Store, including your developer name and the
 landing page of your listed developer website. Products that include content that may not be
-suitable for all ages should be marked "Mature" on the Developer Dashboard.
+suitable for all ages should be marked "Mature" on the [Developer Dashboard][mature-content].
 
 Sexually Explicit Material:
 
@@ -536,6 +536,7 @@ Notifications and Appeals
   associated publisher account with your Product can receive emails from external parties and not get
   flagged as Spam to ensure that you receive all communications in a timely manner.
 
+[mature-content]: /docs/webstore/cws-dashboard-listing/#mature-content
 [1]: https://blog.chromium.org/2018/06/improving-extension-transparency-for.html
 [2]: /docs/extensions/mv2/inline_faq
 [3]: /docs/webstore/branding
