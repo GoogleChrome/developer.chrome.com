@@ -2,13 +2,10 @@
 layout: "layouts/doc-post.njk"
 title: "Chrome Web Store"
 date: 2012-09-18
-updated: 2018-06-12
+updated: 2021-12-10
 description: >
-  How to host your extension in the Chrome Web Store and update an extension
-  that's hosted in the Chrome Web Store.
+  How to publish and update your extension in the Chrome Web Store.
 ---
-
-{% include 'partials/extensions/mv2page-in-mv3.md' %}
 
 Most extensions are hosted in the [Chrome Web Store][1] to best [protect users from malicious
 extensions][2].
