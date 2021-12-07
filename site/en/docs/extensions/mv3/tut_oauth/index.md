@@ -188,6 +188,7 @@ Place a script tag for `oauth.js` in the head of `index.html`.
 
 Reload the extension and click on the browser icon to open `index.html`. Open the console and click
 on the "FriendBlock Contacts" button. An OAuth token will appear in the console.
+If you don't see a token in the console though, continue with the following steps.
 
 {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/aXVIN7YRfBnDc3ItHVJ2.png",
        alt="View the token in the console", height="227", width="800" %}
