@@ -24,3 +24,4 @@
   sections:
     - url: /docs/workbox/caching-resources-during-runtime
     - url: /docs/workbox/forcing-a-network-timeout
+    - url: /docs/workbox/access-caches-from-the-window
