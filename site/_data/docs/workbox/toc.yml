@@ -22,6 +22,7 @@
     - url: /docs/workbox/framework-integrations
 - title: i18n.docs.workbox.uses
   sections:
+    - url: /docs/workbox/using-workbox-window
     - url: /docs/workbox/caching-resources-during-runtime
     - url: /docs/workbox/forcing-a-network-timeout
     - url: /docs/workbox/access-caches-from-the-window

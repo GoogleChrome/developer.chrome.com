@@ -1,9 +1,9 @@
 ---
 layout: "layouts/doc-post.njk"
-title: Access caches from the `window`
+title: Access caches from the window
 date: 2021-12-07
 description: >
-  Accessing `Cache` instances isn't just restricted to the service worker scope. You can also access them from the `window` context, and in this article, you'll learn how.
+  Accessing Cache instances isn't just restricted to the service worker scope. You can also access them from the window context, and in this article, you'll learn how.
 ---
 
 With all of this work we've been doing outside of the `window`, you might think that [`Cache` instances](https://developer.mozilla.org/docs/Web/API/Cache) can only be accessed in the service worker scope. The fact is that you can access `Cache` instances in _both_ the service worker scope _and_ in your web app's traditional code, running  in the `window`. This makes it easier for the user to directly interact with a service worker cache, or update the user interface based on cache state.
