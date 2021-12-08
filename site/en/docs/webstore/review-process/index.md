@@ -8,7 +8,7 @@ description: >
 ---
 
 This document provides an overview of the Chrome Web Store review process and the enforcement
-actions that are taken in the event an extension violates the Chrome Web Store's policies.
+actions that are taken when an extension violates the Chrome Web Store's policies.
 
 See [Lifecycle of a Chrome Web Store item][doc-lifecycle] for an overview of how reviews fit in the
 lifecycle.
@@ -20,13 +20,13 @@ violate policy.
 ## The basics {: #basics }
 
 When you submit an extension for review, the review team will review the extension for compliance
-with the [Developer Program Policies][doc-dpp] and, if any violations are found, take appropriate
+with the [developer program policies][doc-dpp] and, if any violations are found, take appropriate
 [enforcement actions][header-enforcement].
 
 Existing items are also reviewed periodically for compliance. We do this because the extension
-ecosystem is constantly evolving: as malicious actors evolve their attacks or exploits are
-discovered, the review process must also evolve in order to respond. Also, as the Developer Program
-Policies change, we need to ensure that existing published items comply with current policy in order
+ecosystem is constantly evolving; as malicious actors evolve their attacks or exploits are
+discovered, the review process must also evolve in response. Also, as the developer program
+policies change, we need to ensure that existing published items comply with current policy in order
 to protect end users.
 
 ## Review times {: #review-time }
@@ -77,7 +77,7 @@ Sensitive execution permissions
 Amount and formatting of code
 
 : The more code an extension contains, the more work it takes to verify that code is safe.
-  Obfuscation is disallowed as it increases the complexity of this validation process. Minification
+  Obfuscation is disallowed as it increases the complexity of the validation process. Minification
   is allowed, but it can also make reviewing extension code more difficult. Where possible, consider
   submitting your code as authored. You may also want to consider structuring your code in a way
   that is easy for others to understand.
@@ -94,7 +94,7 @@ submitted for publishing.
 
 {% Aside %}
 
-Existing published items may also be checked for these same violation; that process is described in
+Existing published items may also be checked for these same violations; that process is described in
 the [Periodic review outcomes][header-periodic-outcomes] section.
 
 {% endAside %}
@@ -110,7 +110,7 @@ See [Developer communication][header-comms] for details on how these outcomes ar
 to the developer and how developers can contact review regarding the outcome.
 
 Finally, a third potential outcome is that the submission is found to contain malware or another
-extreme policy violation. See [malware][header-malware] details on how these verdicts are enforced.
+extreme policy violation. See the [malware][header-malware] section on how these verdicts are enforced.
 
 ### Periodic review outcomes {: #periodic-outcomes }
 
@@ -128,7 +128,7 @@ or malicious behavior.
 
 There are four outcomes for review of a published item:
 
-- **No violations are found** – No action is taken. The extension continues to remain on the Chrome
+- **No violations are found** – No action is taken. The extension remains on the Chrome
   Web Store.
 - **A minor violation is found** – A warning is sent to the developer about the violation. The
   developer has a set amount of time to address the violation before the item will be taken down.
@@ -168,12 +168,12 @@ directly to [malware enforcement][header-malware].
 Developer communication
 
 : The publisher email address associated with the extension will receive an email stating that the
-  submission was rejected. The rejection emails will state what policy the extension violated and
+  submission was rejected. The rejection emails will state which policy the extension violated and
   provide the developer with guidance on how to appeal the verdict.
 
 Chrome Web Store listing
 
-: The extensions' listing in the Chrome Web Store is not affected; the description text, image
+: The extension's listing in the Chrome Web Store is not affected; the description text, image
   assets, privacy disclosures, and published CRX all remain unchanged.
 
 Chrome UI
@@ -235,13 +235,13 @@ Developer communication
 
 : The publisher email address associated with the extension will receive an email stating that the
   extension has been taken down due to one or more policy violations. In the case of an expired
-  warning, the email will include a reference to the warning email the developer should have
+  warning, the email will include a reference to the warning email the developer previously
   received.
 
 Chrome Web Store listing
 
 : When an extension is taken down, it will no longer be available in the Chrome Web Store. If normal
-  users attempt to access the extension's item listing, Chrome Web Store will return a 404 error. If
+  users attempt to access the extension's listing, Chrome Web Store will return a 404 error. If
   the developer that owns the extension or a member of the extension's group publisher list (if
   there is one) is logged into the Chrome Web Store, they will see the last published version of the
   extension and a warning at the top of the window indicating that the extension has been taken
@@ -255,14 +255,14 @@ Chrome UI
   the end user that the extension violates Chrome Web Store policy. Users may choose to re-enable
   the extension if they wish.
 
-### Malware & extreme violations {: #malware }
+### Malware and extreme violations {: #malware }
 
 The Chrome Web Store Review team has special procedures for egregious policy violations. In cases
 such as malware distribution, deceptive behavior designed to evade review, repeated severe
 violations indicative of malicious intent, and other egregious policy violations, more drastic
 measures are necessary.
 
-In order to limit the potential for these developers to further harm users, the Chrome Web Store
+To limit the potential for these developers to further harm users, the Chrome Web Store
 team intentionally does not provide details regarding these violations. Additionally, in more severe
 cases the developer's Chrome Web Store account will be permanently suspended.
 
@@ -279,7 +279,7 @@ Chrome Web Store listing
 
 Chrome UI
 
-: The violating extension is disabled on all end-user devices. Unlike standard takedowns, these
+: The violating extension is disabled on all end user devices. Unlike standard takedowns, these
   extensions cannot be re-enabled. Chrome notifies the user that the extension has been disabled
   because it was found to contain malware. Users may choose to remove the extension or dismiss the
   dialog.
@@ -312,8 +312,8 @@ Appealing a review verdict
 {% endDetailsSummary %}
 
 1. Open the [One Stop Support contact form][page-oss-form].
-2. Select "My item (extensions, app, or theme)"
-3. Select "My item was warned / removed / rejected"
+2. Select "My item (extensions, app, or theme)".
+3. Select "My item was warned / removed / rejected".
 4. Select why you are appealing, and the reference color and element.
 5. Review the violation troubleshooting guidance.
 6. Provide additional details as requested by the form.
