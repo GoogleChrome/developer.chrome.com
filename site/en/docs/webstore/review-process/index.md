@@ -101,9 +101,9 @@ the [Periodic review outcomes][header-periodic-outcomes] section.
 
 Publish review requests have two basic outcomes.
 
-- **No violations are found** – The submission is approved and can be published to the Chrome Web
+- **No violations are found:** The submission is approved and can be published to the Chrome Web
   Store.
-- **A violation is found** – The submission is [rejected][header-rejection] and the developer is
+- **A violation is found:** The submission is [rejected][header-rejection] and the developer is
   informed why.
 
 See [Developer communication][header-comms] for details on how these outcomes are communicated back
