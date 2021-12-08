@@ -17,11 +17,11 @@ The review process helps protect end users from scams, data harvesting, malware,
 actors seeking to take advantage of Chrome users, as well as from extensions that inadvertently
 violate policy.
 
-## The basics
+## The basics {: #basics }
 
 When you submit an extension for review, the review team will review the extension for compliance
 with the [Developer Program Policies][doc-dpp] and, if any violations are found, take appropriate
-[enforcement actions][header-enforcement-action].
+[enforcement actions][header-enforcement].
 
 Existing items are also reviewed periodically for compliance. We do this because the extension
 ecosystem is constantly evolving: as malicious actors evolve their attacks or exploits are
@@ -29,19 +29,21 @@ discovered, the review process must also evolve in order to respond. Also, as th
 Policies change, we need to ensure that existing published items comply with current policy in order
 to protect end users.
 
-## Review times
+## Review times {: #review-time }
 
 Chrome Web Store review times can vary. In early 2021, most submissions completed review in less
 than 24 hours, with over 90% completed within three days.
 
 {% Aside %}
+
 If your extension is pending review for more than three weeks, please [contact developer
-support][oss-contact-form] to request assistance.
+support][header-support] to request assistance.
+
 {% endAside %}
 
 The review process uses a combination of manual and automated systems. All submissions go through
 the same review system, regardless of the tenure of the developer or number of active users.
-However, some signals may cause the review to examine an extension more closely, including:
+However, some signals may cause the reviewer to examine an extension more closely, including:
 
 * new developers
 * new extensions
@@ -51,7 +53,7 @@ However, some signals may cause the review to examine an extension more closely,
 These signals may therefore cause the review to take longer. Review times may also be longer than
 normal after an extension has been rejected or warned.
 
-### Notable factors that increase review time
+### Notable factors that increase review time  {: #review-time-factors }
 
 Reviews may take longer for extensions that request broad host permissions or sensitive execution
 permissions, or which include a lot of code or hard-to-review code.
@@ -67,10 +69,10 @@ Broad host permissions
 Sensitive execution permissions
 
 : Permissions grant extensions special data access and manipulation rights. Some permissions do this
-  directly (e.g. `tabs`, `background`) while others must be combined with host permissions grants
-  (e.g. `cookies`, `webRequest`). Review must verify that each requested permission is actually
-  necessary and is used appropriately. Requesting powerful and potentially dangerous capabilities
-  takes more time to review.
+  directly (for example, `tabs` and `downloads`) while others must be combined with host permissions
+  grants (for example, `cookies` and `webRequest`). Review must verify that each requested
+  permission is actually necessary and is used appropriately. Requesting powerful and potentially
+  dangerous capabilities takes more time to review.
 
 Amount and formatting of code
 
@@ -80,12 +82,12 @@ Amount and formatting of code
   submitting your code as authored. You may also want to consider structuring your code in a way
   that is easy for others to understand.
 
-## Review outcomes
+## Review outcomes {: #outcomes }
 
 There are a number of possible pass/no-pass outcomes, depending on whether it's a publishing review
 or a periodic re-review. These outcomes are described in the following sections.
 
-### Publishing review outcomes
+### Publishing review outcomes {: #publish-outcomes }
 
 This section describes how we handle policy violations that we find while reviewing an extension
 submitted for publishing.
@@ -93,7 +95,7 @@ submitted for publishing.
 {% Aside %}
 
 Existing published items may also be checked for these same violation; that process is described in
-the [During period review][TODO] section.
+the [Periodic review outcomes][header-periodic-outcomes] section.
 
 {% endAside %}
 
@@ -101,19 +103,20 @@ Publish review requests have two basic outcomes.
 
 - **No violations are found** – The submission is approved and can be published to the Chrome Web
   Store.
-- **A violation is found** – The submission is [rejected][TODO] and the developer is informed why.
+- **A violation is found** – The submission is [rejected][header-rejection] and the developer is
+  informed why.
 
-See [Review communication][TODO] for details on how these outcomes are communicated back to the
-developer and how developers can contact review regarding the outcome.
+See [Developer communication][header-comms] for details on how these outcomes are communicated back
+to the developer and how developers can contact review regarding the outcome.
 
 Finally, a third potential outcome is that the submission is found to contain malware or another
-extreme policy violation. See [malware][TODO] details on how these verdicts are enforced.
+extreme policy violation. See [malware][header-malware] details on how these verdicts are enforced.
 
-### Periodic review outcomes
+### Periodic review outcomes {: #periodic-outcomes }
 
 This section describes how policy violations are handled during the periodic review process. Note
-that a violation identified during the [publishing review][TODO] process may trigger a re-review of
-the currently published version of the extension.
+that a violation identified during the [publishing review][header-publish-outcomes] process may
+trigger a re-review of the currently published version of the extension.
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/J0afA0FTf3TbbcOawOD3.png", alt="ALT_TEXT_HERE",
 width="731", height="885" %}
@@ -129,22 +132,22 @@ There are four outcomes for review of a published item:
   Web Store.
 - **A minor violation is found** – A warning is sent to the developer about the violation. The
   developer has a set amount of time to address the violation before the item will be taken down.
-  See [warning][TODO] for more information.
+  See [warning][header-warning] for more information.
 - **A more serious violation is found** – The extension is immediately taken down and the developer
-  is notified of the violation. See [takedown][TODO] for more information.
+  is notified of the violation. See [takedown][header-takedown] for more information.
 - **An extreme issue is found** – The extension is immediately taken down and the developer **is
-  not** notified. See [malware][TODO] for more information.
+  not** notified. See [malware][header-malware] for more information.
 
-See [Review communication][TODO] for details on how this is communicated and how to appeal the
-verdict.
+See [Developer communication][header-comms] for details on how this is communicated and how to
+appeal the verdict.
 
-## Violation enforcement
+## Violation enforcement {: #enforcement }
 
 In the event that a policy violation is identified during the review process, the Chrome Web Store
 will take appropriate action depending on the type of review being performed, the severity of
 violation, the discretion of the reviewer, and potentially other factors.
 
-### Rejection
+### Rejection {: #rejection }
 
 Rejection can occur in response to a "Submit for review" request. If the submission is found to
 violate Chrome Web Store policy but is not an egregious policy violation, the submission will be
@@ -158,7 +161,7 @@ actions may be taken.
 
 Rejection applies only when the submission is not found to contain malware or other extreme policy
 violation. If an extension is found to contain malware during the submission review process, proceed
-directly to [malware enforcement][TODO].
+directly to [malware enforcement][header-malware].
 
 {% endAside %}
 
@@ -177,7 +180,7 @@ Chrome UI
 
 : End users are not notified when a submission is rejected.
 
-### Warning
+### Warning {: #warning }
 
 If a currently published item is found to contain minor policy violations, Chrome Web Store Review
 will notify the extension publisher of the violation via email. Depending on the violation, the
@@ -192,8 +195,8 @@ completes the review process. If upon completion of review the submission suffic
 violation(s), the takedown will be canceled and the item will remain in the store. If the
 violation(s) remain unresolved, the extension will be taken down upon completion of review.
 
-The following information only covers the warning period. See [Takedown][TODO] for additional
-information on takedown handling.
+The following information only covers the warning period. See [Takedown][header-takedown] for
+additional information on takedown handling.
 
 Developer communication
 
@@ -201,7 +204,10 @@ Developer communication
   that the extension will be taken down due to one or more policy violations. The exact length of
   the warning period depends on the observed violation.
 
-  If the developer does not resolve the violation(s) within the warning period, the publisher will receive another email explaining that the warning period expired and that the extension has been taken down. See [Developer communication][TODO] for additional information about email communication.
+  If the developer does not resolve the violation(s) within the warning period, the publisher will
+  receive another email explaining that the warning period expired and that the extension has been
+  taken down. See [Developer communication][header-comms] for additional information about email
+  communication.
 
 Chrome Web Store listing
 
@@ -214,7 +220,7 @@ Chrome UI
 
 : End users are not notified during the warning period.
 
-### Takedown
+### Takedown {: #takedown }
 
 Takedown refers to the act of removing an extension from the Chrome Web Store. In most situations
 takedowns are not permanent: the extension's developer can return the extension to the web store by
@@ -249,7 +255,7 @@ Chrome UI
   the end user that the extension violates Chrome Web Store policy. Users may choose to re-enable
   the extension if they wish.
 
-### Malware & extreme violations
+### Malware & extreme violations {: #malware }
 
 The Chrome Web Store Review team has special procedures for egregious policy violations. In cases
 such as malware distribution, deceptive behavior designed to evade review, repeated severe
@@ -268,7 +274,8 @@ Developer communication
 
 Chrome Web Store listing
 
-: Just as with a [takedown][TODO], the offending item is removed from the Chrome Web Store.
+: Just as with a [takedown][header-takedown], the offending item is removed from the Chrome Web
+  Store.
 
 Chrome UI
 
@@ -277,42 +284,79 @@ Chrome UI
   because it was found to contain malware. Users may choose to remove the extension or dismiss the
   dialog.
 
-## Developer communication
+## Developer communication {: #comms }
 
 The Chrome Web Store review process has two primary ways of communicating with developers: automated
 emails sent to the extension publisher's email address and support tickets.
 
-Support tickets must be opened using the [One Stop Support][oss-contact-form] form, but once a
+Support tickets must be opened using the [One Stop Support][header-support] form, but once a
 ticket is opened all communication takes place over email.
 
-### Automated emails
+### Automated emails {: #emails }
 
 In all but the most extreme policy violations, the Chrome Web Store will send developers automated
 emails informing them about the violation observed and the enforcement action taken. These emails
 state what policy or policies were violated, link to troubleshooting documentation related to the
 violation, and provide the developer with guidance on how to appeal the verdict.
 
-[[IMAGE: Example spam policy violation email]]
+### One Stop Support {: #support }
 
-### One Stop Support
+The [One Stop Support contact form][page-oss-form] provides Chrome Web Store publishers with a
+single contact point to request assistance with a variety of issues.
 
-The One Stop Support contact form provides Chrome Web Store publishers with a single contact point
-to request assistance with a variety of issues.
+{% Details %}
+{% DetailsSummary %}
 
-To appeal a review verdict, use the "My item (extensions, app, or theme)" > "My item was warned /
-removed / rejected" > then select an appropriate option for your case. To appeal an account
-suspension, select "My developer account" > "My account was suspended"
+Appealing a review verdict
 
-Immediately after submitting a support request, you should receive an email with a unique ID for
+{% endDetailsSummary %}
+
+1. Open the [One Stop Support contact form][page-oss-form].
+2. Select "My item (extensions, app, or theme)"
+3. Select "My item was warned / removed / rejected"
+4. Select why you are appealing, and the reference color and element.
+5. Review the violation troubleshooting guidance.
+6. Provide additional details as requested by the form.
+
+{% endDetails %}
+
+{% Details %}
+{% DetailsSummary %}
+
+Appealing an account suspension
+
+{% endDetailsSummary %}
+
+1. "My developer account"
+2. "My account was suspended".
+3. Provide additional details as requested by the form.
+
+{% endDetails %}
+
+A few minutes after submitting a support request, you should receive an email with a unique ID for
 your support request. Depending on the size of the support queue and the specific violation, it may
-take up to N days to receive a reply. If you do not receive a response within that period, you can
-reply to the initial case email to request an update.
+take up to three days to receive a reply. If you do not receive a response within that period, you
+can reply to the initial case email to request an update.
 
 Please only open one support request per enforcement action. Multiple support requests makes it more
-difficult for the agents assisting you to find all of the relevant information about your issue.
+difficult for the agents assisting you to find and keep track of all of the relevant information
+about your issue.
 
 [doc-dpp]: /docs/webstore/program_policies
-[doc-host-perms]: #TODO
+[doc-host-perms]: /docs/extensions/mv3/declare_permissions/
 [doc-lifecycle]: /docs/webstore/manage/#about-the-lifecycle-of-an-item-in-the-chrome-web-store
-[header-enforcement-action]: /docs/webstore #TODO
-[oss-contact-form]: https://support.google.com/chrome_webstore/contact/one_stop_support
+[header-basics]: #basics
+[header-comms]: #comms
+[header-emails]: #emails
+[header-enforcement]: #enforcement
+[header-malware]: #malware
+[header-outcomes]: #outcomes
+[header-periodic-outcomes]: #periodic-outcomes
+[header-publish-outcomes]: #publish-outcomes
+[header-rejection]: #rejection
+[header-review-time-factors]: #review-time-factors
+[header-review-time]: #review-time
+[header-support]: #support
+[header-takedown]: #takedown
+[header-warning]: #warning
+[page-oss-form]: https://support.google.com/chrome_webstore/contact/one_stop_support
