@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: Identifying the User
 date: 2017-08-30
-updates: 2021-12-03
+updated: 2021-12-03
 description: How to get the Google Account identity of a Chrome Web Store user.
 ---
 
