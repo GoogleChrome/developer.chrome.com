@@ -107,7 +107,7 @@ Publish review requests have two basic outcomes.
   informed why.
 
 See [Developer communication][header-comms] for details on how these outcomes are communicated back
-to the developer and how developers can contact review team regarding the outcome.
+to the developer and how developers can contact the review team regarding the outcome.
 
 Finally, a third potential outcome is that the submission is found to contain malware or another
 extreme policy violation. See the [malware][header-malware] section for details on how these
