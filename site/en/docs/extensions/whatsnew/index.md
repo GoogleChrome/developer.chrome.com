@@ -25,7 +25,8 @@ promise to settle and return its resulting value.
 ### 2021.12.10: Chrome Web Store review documentation {: #cws-review-doc }
 
 Added [a new reference page](/docs/webstore/review-process) that provides an overview of the Chrome
-Web Store review process and explains how enforcement is handled.
+Web Store review process and explains how [developer program
+policy](/docs/webstore/program_policies/) enforcement is handled.
 
 ### Chrome 96: Dynamic content scripts {: #m96-dynamic-content-scripts }
 

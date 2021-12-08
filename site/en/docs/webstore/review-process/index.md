@@ -107,10 +107,11 @@ Publish review requests have two basic outcomes.
   informed why.
 
 See [Developer communication][header-comms] for details on how these outcomes are communicated back
-to the developer and how developers can contact review regarding the outcome.
+to the developer and how developers can contact review team regarding the outcome.
 
 Finally, a third potential outcome is that the submission is found to contain malware or another
-extreme policy violation. See the [malware][header-malware] section on how these verdicts are enforced.
+extreme policy violation. See the [malware][header-malware] section for details on how these
+verdicts are enforced.
 
 ### Periodic review outcomes {: #periodic-outcomes }
 
@@ -118,8 +119,9 @@ This section describes how policy violations are handled during the periodic rev
 that a violation identified during the [publishing review][header-publish-outcomes] process may
 trigger a re-review of the currently published version of the extension.
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/J0afA0FTf3TbbcOawOD3.png", alt="ALT_TEXT_HERE",
-width="731", height="885" %}
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/J0afA0FTf3TbbcOawOD3.png", alt="Illustration of
+   potential review outcomes and policy enforcement practices. Text details found in the 'Periodic
+   review outcomes' and 'Violation enforcement' sections.", width="731", height="885" %}
 
 Existing published extensions are occasionally subject to review outside of the standard submission
 time review process. Possible reasons for this include, but are not limited to regular periodic
@@ -128,14 +130,13 @@ or malicious behavior.
 
 There are four outcomes for review of a published item:
 
-- **No violations are found** – No action is taken. The extension remains on the Chrome
-  Web Store.
-- **A minor violation is found** – A warning is sent to the developer about the violation. The
+- **No violations are found:** No action is taken. The extension remains on the Chrome Web Store.
+- **A minor violation is found:** A warning is sent to the developer about the violation. The
   developer has a set amount of time to address the violation before the item will be taken down.
   See [warning][header-warning] for more information.
-- **A more serious violation is found** – The extension is immediately taken down and the developer
+- **A more serious violation is found:** The extension is immediately taken down and the developer
   is notified of the violation. See [takedown][header-takedown] for more information.
-- **An extreme issue is found** – The extension is immediately taken down and the developer **is
+- **An extreme issue is found:** The extension is immediately taken down and the developer **is
   not** notified. See [malware][header-malware] for more information.
 
 See [Developer communication][header-comms] for details on how this is communicated and how to
@@ -213,8 +214,7 @@ Chrome Web Store listing
 
 : The extension's Chrome Web Store listing is not affected during the warning period. The item will
   remain available for download and existing users will be able to update to the most recent
-  successfully published version of the extension. If the violation(s) are not addressed within the
-  warning period, the extension will be taken down.
+  successfully published version of the extension.
 
 Chrome UI
 
@@ -223,13 +223,13 @@ Chrome UI
 ### Takedown {: #takedown }
 
 Takedown refers to the act of removing an extension from the Chrome Web Store. In most situations
-takedowns are not permanent: the extension's developer can return the extension to the web store by
+takedowns are not permanent: the extension's publisher can return the extension to the web store by
 submitting a new version that resolves the policy violation and passing the review process.
 
 Takedowns occur in two primary scenarios. First, immediate takedowns occur when reviewers detect one
 or more policy violations of moderate or greater severity in the published version of an extension.
-Second, delayed takedowns occur after the [warning period][warning] for a minor policy violation
-expires. In both cases, the impact of the takedown is the same.
+Second, delayed takedowns occur after the [warning period][header-warning] for a minor policy
+violation expires. In both cases, the impact of the takedown is the same.
 
 Developer communication
 
@@ -311,6 +311,8 @@ Appealing a review verdict
 
 {% endDetailsSummary %}
 
+Use the following steps to appeal a [takedown][header-takedown] or [warning][header-warning].
+
 1. Open the [One Stop Support contact form][page-oss-form].
 2. Select "My item (extensions, app, or theme)".
 3. Select "My item was warned / removed / rejected".
@@ -327,9 +329,12 @@ Appealing an account suspension
 
 {% endDetailsSummary %}
 
-1. "My developer account"
-2. "My account was suspended".
-3. Provide additional details as requested by the form.
+Use the following steps to appeal a developer account suspension.
+
+1. Open the [One Stop Support contact form][page-oss-form].
+2. Select "My developer account".
+3. Select "My account was suspended".
+4. Provide additional details as requested by the form.
 
 {% endDetails %}
 
