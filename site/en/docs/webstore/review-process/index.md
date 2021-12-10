@@ -8,7 +8,9 @@ description: >
 ---
 
 This document provides an overview of the Chrome Web Store review process and the enforcement
-actions that are taken when an extension violates the Chrome Web Store's policies.
+actions that are taken when an extension violates the Chrome Web Store's policies. The enforcement
+practices described in this document are accurate as of the document's last updated date and are
+subject to change without notification.
 
 See [Lifecycle of a Chrome Web Store item][doc-lifecycle] for an overview of how reviews fit in the
 lifecycle.
@@ -168,7 +170,7 @@ directly to [malware enforcement][header-malware].
 
 Developer communication
 
-: The publisher email address associated with the extension will receive an email stating that the
+: The publisher email address associated with the extension will be sent an email stating that the
   submission was rejected. The rejection emails will state which policy the extension violated and
   provide the developer with guidance on how to appeal the verdict.
 
@@ -195,7 +197,7 @@ additional information on takedown handling.
 
 Developer communication
 
-: The publisher email address associated with the extension will receive a warning email stating
+: The publisher email address associated with the extension will be sent a warning email stating
   that the extension will be taken down due to one or more policy violations. The exact length of
   the warning period depends on the observed violation.
 
@@ -227,7 +229,7 @@ violation expires. In both cases, the impact of the takedown is the same.
 
 Developer communication
 
-: The publisher email address associated with the extension will receive an email stating that the
+: The publisher email address associated with the extension will be sent an email stating that the
   extension has been taken down due to one or more policy violations. In the case of an expired
   warning, the email will include a reference to the warning email the developer previously
   received.
@@ -264,7 +266,7 @@ Developer communication
 
 : Unlike other enforcement actions, notification **is not** sent to the publisher's email address
   when the extension(s) are taken down. In the event that the developer's Chrome Web Store account
-  is suspended, the developer will receive notification of that enforcement action.
+  is suspended, the developer will be sent an email to notify them of that enforcement action.
 
 Chrome Web Store listing
 
