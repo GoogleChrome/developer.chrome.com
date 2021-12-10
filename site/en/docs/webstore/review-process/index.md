@@ -185,16 +185,10 @@ Chrome UI
 
 If a currently published item is found to contain minor policy violations, Chrome Web Store Review
 will notify the extension publisher of the violation via email. Depending on the violation, the
-publisher will be given 7 to 28 days to address the issue(s). The extension developer can resolve
-the warning by submitting a new version of the extension that fixes the violation(s) using the
-standard submission process. If the violation is not addressed within the warning period, the
+publisher are typically given 7 to 30 days to address the issue(s). The extension developer can
+resolve the warning by submitting a new version of the extension that fixes the violation(s) using
+the standard submission process. If the violation is not addressed within the warning period, the
 extension will be taken down.
-
-If the timeout period expires while a submission is pending review, the extension will not be taken
-down immediately. Instead, the takedown will be deferred until after the current submission
-completes the review process. If upon completion of review the submission sufficiently addresses the
-violation(s), the takedown will be canceled and the item will remain in the store. If the
-violation(s) remain unresolved, the extension will be taken down upon completion of review.
 
 The following information only covers the warning period. See [Takedown][header-takedown] for
 additional information on takedown handling.
