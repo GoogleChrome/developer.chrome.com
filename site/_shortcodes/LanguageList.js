@@ -13,6 +13,8 @@ const languageNames = {
   ru: 'Pусский',
   pt: 'Português',
   ja: '日本語',
+  fr: 'Français',
+  de: 'Deutsch',
 };
 
 /**
