@@ -352,22 +352,21 @@ For ads use cases, see
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
    on the Privacy Sandbox developer support repo.
 
-## WebID
+## FedCM
 
 ### How can I ask a question about this feature?
 
 -  For questions about the proposal:
-   [create an issue](https://github.com/WICG/WebID/issues) on the proposal repo.
+   [create an issue](https://github.com/WICG/FedCM/issues) on the proposal repo.
 -  For implementation, integration, and general best practice questions:
    [create an issue](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)
    on the Privacy Sandbox developer support repo.
 
-### What is WebID?
+### What is FedCM?
 
-The name "WebID" can be confusing! WebID is not a type of user identifier.
-Rather, WebID is a proposal for a privacy-preserving approach to federated
+FedCM (Federated Credential Management) is a proposal for a privacy-preserving approach to federated
 identity services (such as "Sign in with&nbsp;...")  where users can log into
 sites without sharing their personal information with the identity service or
 the site.
 
-WebID is still [in incubation in the W3C](https://github.com/WICG/WebID).
+FedCM is still [in incubation in the W3C](https://github.com/WICG/FedCM).
