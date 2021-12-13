@@ -12,7 +12,7 @@
 
 ### Chrome 97 {: #chrome97 }
 
-* [Ранний доступ: новая панель Recorder](/ru/blog/new-in-devtools-97/#recorder)
+* [Ранний доступ: новая вкладка Recorder](/ru/blog/new-in-devtools-97/#recorder)
 * [Обновлён список устройств в панели инструментов устройства (Device Mode)](/ru/blog/new-in-devtools-97/#device)
 * [Автодополнение в режиме Редактировать как HTML (Edit as HTML)](/ru/blog/new-in-devtools-97/#code-completion)
 * [Улучшен процесс отладки кода](/ru/blog/new-in-devtools-97/#debugging)

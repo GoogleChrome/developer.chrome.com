@@ -29,10 +29,10 @@ tags:
 
 
 <!-- ## Preview feature: New Recorder panel {: #recorder } -->
-## Ранний доступ: новая панель Recorder  {: #recorder }
+## Ранний доступ: новая вкладка Recorder  {: #recorder }
 
 <!-- Use the new **Recorder** panel to record, replay and measure user flows.  -->
-Используйте новую панель **Recorder**, чтобы записать, воспроизвести или измерить
+Используйте новую вкладку **Recorder**, чтобы записать, воспроизвести или измерить
 пользовательские сценарии.
 
 <!-- [Open the **Recorder** panel](/docs/devtools/recorder/#open). Follow the instructions on screen to start a new recording.  -->
@@ -42,10 +42,10 @@ tags:
 <!-- For example, you can record the coffee checkout process with this [coffee ordering demo](https://coffee-cart.netlify.app/) application. After adding a coffee and filling out payment details, you can end the recording, replay the process or click on the **Measure performance** button to measure the user flow in the **Performance** panel. -->
 Например, вы можете записать процесс заказа кофе с помощью этого [демо приложения
 ](https://coffee-cart.netlify.app/). После выбора кофе и ввода платёжных данных вы можете
-закончить запись, воспроизвести её сначала или кликнуть на кнопку **Measure performance** для просмотра пользовательских данных в панели **Производительность** (Performance).
+закончить запись, воспроизвести её сначала или кликнуть на кнопку **Measure performance** для просмотра пользовательских данных во вкладке **Производительность** (Performance).
 
 <!-- Go to the **Recorder** panel [documentation](/docs/devtools/recorder/) to learn more with the step-by-step tutorial! -->
-Обратитесь к [документации](/docs/devtools/recorder/) по панели **Recorder**, чтобы узнать больше из пошагового руководства.
+Обратитесь к [документации](/docs/devtools/recorder/) по вкладке **Recorder**, чтобы узнать больше из пошагового руководства.
 
 <!-- The **Recorder** panel is a preview feature. Our team is still actively working on it and we are looking for your [feedback](https://goo.gle/recorder-feedback) for further enhancements. -->
 Вкладка **Recorder** находится в раннем доступе. Наша команда все ещё активно работает над ней, и мы ждем [ваши отзывы](https://goo.gle/recorder-feedback) для дальнейших улучшений.
