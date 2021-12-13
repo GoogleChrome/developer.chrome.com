@@ -32,25 +32,25 @@ tags:
 ## Ранний доступ: новая панель Recorder  {: #recorder }
 
 <!-- Use the new **Recorder** panel to record, replay and measure user flows.  -->
-Используйте новую панель **Recorder** чтобы записать, проиграть или измерить
+Используйте новую панель **Recorder**, чтобы записать, воспроизвести или измерить
 пользовательские сценарии.
 
 <!-- [Open the **Recorder** panel](/docs/devtools/recorder/#open). Follow the instructions on screen to start a new recording.  -->
 [Откройте панель **Recorder**](/docs/devtools/recorder/#open). Следуйте инструкциям на
-экране чтобы начать новую запись.
+экране, чтобы начать новую запись.
 
 <!-- For example, you can record the coffee checkout process with this [coffee ordering demo](https://coffee-cart.netlify.app/) application. After adding a coffee and filling out payment details, you can end the recording, replay the process or click on the **Measure performance** button to measure the user flow in the **Performance** panel. -->
-Например, вы можете записать процесс заказа кофе с помощью этого [демо приложения по заказу
-кофе](https://coffee-cart.netlify.app/). После выбора кофе и ввода платёжных данных вы можете
-закончить запись, проиграть её с начала или кликнуть на кнопку **Measure performance** для просмотра пользовательских данных в панели **Производительность** (Performance).
+Например, вы можете записать процесс заказа кофе с помощью этого [демо приложения
+](https://coffee-cart.netlify.app/). После выбора кофе и ввода платёжных данных вы можете
+закончить запись, воспроизвести её сначала или кликнуть на кнопку **Measure performance** для просмотра пользовательских данных в панели **Производительность** (Performance).
 
 <!-- Go to the **Recorder** panel [documentation](/docs/devtools/recorder/) to learn more with the step-by-step tutorial! -->
-Обратитесь к [документации](/docs/devtools/recorder/) по панели **Recorder** чтобы узнать больше с пошаговыми туториалами.
+Обратитесь к [документации](/docs/devtools/recorder/) по панели **Recorder**, чтобы узнать больше из пошагового руководства.
 
 <!-- The **Recorder** panel is a preview feature. Our team is still actively working on it and we are looking for your [feedback](https://goo.gle/recorder-feedback) for further enhancements. -->
-Функция **Recorder** находится в раннем доступе. Наша команда все ещё активно работает над ней, и мы ждем [ваши отзывы](https://goo.gle/recorder-feedback) для дальнейших улучшений.
+Вкладка **Recorder** находится в раннем доступе. Наша команда все ещё активно работает над ней, и мы ждем [ваши отзывы](https://goo.gle/recorder-feedback) для дальнейших улучшений.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3EpVa15PtbhFwwszqyWF.png", alt="Панель Recorder", width="800", height="540" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3EpVa15PtbhFwwszqyWF.png", alt="Вкладка Recorder", width="800", height="540" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ef26abc89035075bbdb08f1b26c1b8fd942ffc04 #}
 
@@ -61,8 +61,8 @@ tags:
 ## Обновлён список устройств в панели инструментов устройства (Device Mode) {: #device }
 
 <!-- [Enabling the Device Toolbar](/docs/devtools/device-mode#viewport), more modern devices are now added in the device list. Select a device to simulate its dimensions. -->
-[Включая функцию выбора устройства](/docs/devtools/device-mode#viewport) вы увидите больше современных
-устройств, добавленных в список. Выберите устройство для симуляции размеров его экрана.
+[При выборе устройства](/docs/devtools/device-mode#viewport) теперь вы увидите больше современных
+моделей в списке. Выберите устройство для симуляции размеров его экрана.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Trx5NqE9RrqpWiN24iZ0.png", alt="Обновлён список устройств в панели инструментов устройства", width="800", height="547" %}
 
@@ -78,7 +78,7 @@ tags:
 Интерфейс функции **Редактировать как HTML** (Edit as HTML) теперь поддерживает автодополнение и
 подсветку синтаксиса. Во вкладке **Элементы** (Elements) кликните правой кнопкой мыши на элементе и
 выберите **Редактировать как HTML** (Edit as HTML). Начните печатать свойство DOM (`id`, `aria` и
-т.д.) и автодополнение поможет вам найти нужное имя свойства.
+т.д.) и автодополнение поможет вам найти нужное название свойства.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yWnmpCQXpsRjWbbRQ9Pi.png", alt="Автодополнение в режиме Редактировать как HTML", width="800", height="472" %}
 
@@ -91,7 +91,7 @@ tags:
 ## Улучшен процесс отладки кода {: #debugging }
 
 <!-- Column numbers are now included in the output error in the Console. Having easy access to the column number is essential for debugging especially with minified JavaScript. -->
-Номера колонок добавлены в вывод ошибки в Консоли (Console). Простой доступ к номеру колонки
+В вывод ошибки в Консоли (Console) добавлены номера колонок. Простой доступ к номеру колонки
 критичен для отладки кода, особенно в случае с минифицированным кодом JavaScript.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mKAUxO94rwvBI9oyeiIB.png", alt="Номера колонок добавлены в вывод ошибки", width="800", height="553" %}
@@ -113,15 +113,15 @@ tags:
 синхронизации DevTools", width="800", height="654" %}
 
 <!-- This new setting makes it easier for you to work across devices. For example, the following appearance settings are synced so you have a consistent experience across devices and don’t need to re-define the same settings again. Learn more about the sync feature in [DevTools customization](/docs/devtools/customize/). -->
-Эта настройка облегчает работу на разных устройствах. Например, следующие настройки внешнего вида
-синхронизированы и ваш пользовательский опыт на разных устройствах будет консистентным, вам не нужно
-заново настраивать те же настройки.
+Эта функция облегчает работу на разных устройствах. Например, следующие настройки внешнего вида
+могут быть синхронизированы, так что ваш пользовательский опыт на разных устройствах будет консистентным без необходимости
+настраивать эти параметры заново.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="Настройки внешнего вида", width="800", height="584" %}
 
 <!-- This feature is experimental at the moment, the team is still actively working on it. If you have any feedback, please share with us [here](https://crbug.com/1245541). -->
 В данный момент это экспериментальная функция, наша команда все ещё активно работает над ней.
-Пожалуйста, поделитесь с нами любым фидбэком [здесь](https://crbug.com/1245541).
+Ждем ваши отзывы [здесь](https://crbug.com/1245541).
 
 Задача в трекере Chromium: [1245541](https://crbug.com/1245541)
 
