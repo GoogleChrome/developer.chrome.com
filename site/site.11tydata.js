@@ -1,5 +1,5 @@
-// Matches e.g. "/es/docs/blah/", "/en/docs/foo-bar_zing/", or "/en/docs/foo-bar/zing/".
-const projectKeyRe = /\/\w{2,}\/docs\/(.*)\/$/;
+// Matches e.g. "/es/docs/blah/" or "/en/docs/foo-bar_zing/".
+const projectKeyRe = /\/\w{2,}\/docs\/([_-\w]+)\//;
 
 module.exports = {
   eleventyComputed: {
