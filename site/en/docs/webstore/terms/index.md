@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Google Chrome Web Store Developer Agreement"
 date: 2014-02-28
-updated: 2021-05-04
+updated: 2021-06-29
 description: >
   The legal agreement governing the relationship between Chrome Web Store
   developers and the Chrome Web Store.
@@ -60,7 +60,7 @@ Agreement or use the Web Store on behalf of your employer or other entity.
 
 ## 3\. Pricing and Payments {: #pricing }
 
-3.1 You are responsible for any Taxes and must pay the Registration Fee without any reduction for Taxes. 
+3.1 You are responsible for any Taxes and must pay the Registration Fee without any reduction for Taxes.
 
 3.2 This Agreement covers both Products you choose to distribute for free and Products for which you charge a fee.
 If you charge a fee for your Product, you assume sole responsibility and liability for all related transactions and authentications, records, and taxes. Google will have no obligations with respect to such Products, including without limitation obligations to track and process payments, authenticate paid or previously paid downloads, maintain payment records, or pay, report, or charge taxes.
@@ -156,7 +156,7 @@ rated Products generally given better placement, subject to Google's right to ch
 Google's sole discretion. For new Developers without Product history, Google may use or publish
 performance measurements such as uninstall rates to identify or remove Products that are not meeting
 acceptable standards, as determined by Google. Google reserves the right to display Products to
-users in a manner that will be determined at Google's sole discretion.  
+users in a manner that will be determined at Google's sole discretion.
 Your Products may be subject to user ratings to which you may not agree. You may contact Google if
 you have any questions or concerns regarding such ratings at
 [http://groups.google.com/a/chromium.org/group/chromium-apps/][11].
@@ -325,9 +325,9 @@ below.
 10.2 If you want to terminate this Agreement, you must provide Google with thirty (30) days prior
 notice and cease your use of any relevant developer credentials.
 
-10.3 Google may at any time, terminate this Agreement with you if:  
-(A) you have breached any provision of this Agreement; or  
-(B) Google is required to do so by law; or  
+10.3 Google may at any time, terminate this Agreement with you if:
+(A) you have breached any provision of this Agreement; or
+(B) Google is required to do so by law; or
 (C) Google decides to no longer provide the Web Store.
 
 ## 11\. DISCLAIMER OF WARRANTIES {: #disclaimer }

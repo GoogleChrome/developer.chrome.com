@@ -445,7 +445,7 @@ for pornography.
   and resubmit your extension.
 - Make sure that your extension does not contain sexually explicit images, video, text, etc.
 - If your extension provides integrations with adult-oriented sites, make sure that the "Mature
-  content" flag is enabled for your extension in the developer dashboard.
+  content" flag is enabled for your extension in the [developer dashboard][mature-content].
 
 ### Relevant policy {: #pornography-policy }
 
@@ -527,7 +527,7 @@ audience.
 ### How can you rectify this? {: #how-can-you-rectify-this_8 }
 
 - Either remove the violating content or mark the extension as containing "Mature content" in your
-  developer dashboard and resubmit the extension.
+  [developer dashboard][mature-content] and resubmit the extension.
 
 ### Relevant policy {: #not-family-safe-policy }
 
@@ -542,7 +542,7 @@ Our content policies apply to your Product's content, including any ads it shows
 user-generated content it hosts or links to. Further, they apply to any content from your developer
 account that is publicly displayed in Chrome Web Store, including your developer name and the
 landing page of your listed developer website. Products that include content that may not be
-suitable for all ages should be marked "Mature" on the Developer Dashboard.
+suitable for all ages should be marked "Mature" on the [Developer Dashboard][mature-content].
 
 {% endAside %}
 
@@ -1175,6 +1175,7 @@ Code Readability Requirements:
 [docs-pack-extension]: /docs/extensions/mv3/linux_hosting/#create
 [docs-publish-setup]: /docs/webstore/publish/#setup-a-developer-account
 [docs-single-purpose-faq]: /docs/extensions/mv3/single_purpose/
+[mature-content]: /docs/webstore/cws-dashboard-listing/#mature-content
 [mdn-cookie-store]: https://developer.mozilla.org/en-US/docs/Web/API/Cookie_Store_API
 [mdn-document-cookie]: https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
 [mdn-indexeddb]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB
