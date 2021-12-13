@@ -66,7 +66,7 @@
 
   <li class="stack">
     <div>
-      <div class="code-sections__label" id="#{{ node._pageId }}">{{ node.name }}</div>
+      <div class="code-sections__label" id="{{ node._pageId }}">{{ node.name }}</div>
       <div class="type--xsmall">{{ renderSingleIconType(node.type, node) }}</div>
     </div>
 
@@ -134,7 +134,7 @@
             <div>
               {# We need to disambiguate this from parameters, so include the name. #}
               {% if not isTopLevel %}
-                <div class="code-sections__label" id="#{{ node._pageId }}">returns</div>
+                <div class="code-sections__label" id="{{ node._pageId }}">returns</div>
               {% endif %}
               <div class="type--xsmall">{{ renderSingleIconType(node._method.return.type, node._method.return) }}</div>
             </div>
