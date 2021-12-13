@@ -143,8 +143,8 @@ The caveat here is that this essentially means that we need to construct yet ano
 
 On the frontend, we construct the full tree including ignored nodes and only prune them just before rendering the nodes. We do this for two reasons:
 
-1. **It makes it much simpler to handle node updates from the backend**, since we have the same tree structure on both endpoints. For example, if the node B is removed in the example, we would receive an update for node X (since its children have changed), but if we had pruned that node we would struggle to figure out what to update.
-2. **It ensures that all DOM nodes have a corresponding accessibility node.** When the tree is toggled, we select the node corresponding to the node currently selected in the DOM tree. So for the previous example, if the user toggles the tree while the DOM node corresponding to X is selected, we inject X between the nodes A and B and select X in the tree. This allows the user to inspect the accessibility node for all DOM nodes and help determine why the node is ignored.
+- **It makes it much simpler to handle node updates from the backend**, since we have the same tree structure on both endpoints. For example, if the node B is removed in the example, we would receive an update for node X (since its children have changed), but if we had pruned that node we would struggle to figure out what to update.
+- **It ensures that all DOM nodes have a corresponding accessibility node.** When the tree is toggled, we select the node corresponding to the node currently selected in the DOM tree. So for the previous example, if the user toggles the tree while the DOM node corresponding to X is selected, we inject X between the nodes A and B and select X in the tree. This allows the user to inspect the accessibility node for all DOM nodes and help determine why the node is ignored.
 
 
 ## Future ideas
