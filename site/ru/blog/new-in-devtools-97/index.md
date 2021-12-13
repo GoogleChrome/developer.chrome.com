@@ -36,7 +36,7 @@ tags:
 пользовательские сценарии.
 
 <!-- [Open the **Recorder** panel](/docs/devtools/recorder/#open). Follow the instructions on screen to start a new recording.  -->
-[Откройте панель **Recorder**](/docs/devtools/recorder/#open). Следуйте инструкциям на
+[Откройте вкладку **Recorder**](/docs/devtools/recorder/#open). Следуйте инструкциям на
 экране, чтобы начать новую запись.
 
 <!-- For example, you can record the coffee checkout process with this [coffee ordering demo](https://coffee-cart.netlify.app/) application. After adding a coffee and filling out payment details, you can end the recording, replay the process or click on the **Measure performance** button to measure the user flow in the **Performance** panel. -->
@@ -92,7 +92,7 @@ tags:
 
 <!-- Column numbers are now included in the output error in the Console. Having easy access to the column number is essential for debugging especially with minified JavaScript. -->
 В вывод ошибки в Консоли (Console) добавлены номера колонок. Простой доступ к номеру колонки
-критичен для отладки кода, особенно в случае с минифицированным кодом JavaScript.
+критичен для отладки кода, особенно в случае с минифицированным JavaScript.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mKAUxO94rwvBI9oyeiIB.png", alt="Номера колонок добавлены в вывод ошибки", width="800", height="553" %}
 
@@ -105,7 +105,7 @@ tags:
 ## [Эксперимент] Синхронизация настроек DevTools между устройствами {: #sync }
 
 <!-- Your DevTools settings are now synced across devices by default when you turn on Chrome profile sync. You can change the DevTools sync settings via **Settings** > **Sync** > **Enable settings sync**.  -->
-Ваши настройки DevTools теперь синхронизируются между устройствами когда вы включаете синхронизацию
+Ваши настройки DevTools теперь синхронизируются между устройствами, когда вы включаете синхронизацию
 профиля Chrome. Вы можете изменить настройки синхронизации зайдя в **Настройки** (Settings) >
 **Синхронизация** (Sync)  > **Включить синхронизацию настроек** (Enable settings sync).
 
