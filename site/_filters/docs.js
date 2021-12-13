@@ -23,8 +23,8 @@
  */
 const embededDoc = (projectKey, docs = {}) => {
   return projectKey
-    .split('-')
-    .reduce((prev, curr) => (prev ? prev[curr] : null), docs);
+    .split('/')
+    .reduce((prev, curr) => (prev && prev[curr] ? prev[curr] : prev), docs);
 };
 
 module.exports = embededDoc;
