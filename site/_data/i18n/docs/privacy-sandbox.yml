@@ -10,7 +10,35 @@ guiding-principles:
   en: 'Guiding principles'
 overview:
   en: 'What is the Privacy Sandbox?'
+overview-article:
+  en: 'Introduction'
 status:
   en: 'Is it ready yet?'
 trust-tokens:
   en: 'Trust Tokens'
+start:
+  en: 'Get started'
+apis:
+  en: 'APIs'
+discuss:
+  en: 'Discussion and updates'
+issues:
+  en: 'File an issue'
+issues_description:
+  en: 'Read the proposal, raise questions, and follow discussion.'
+timeline:
+  en: 'Timeline'
+timeline-descrition:
+  en: 'Discover when we expect new APIs and technologies to be ready for adoption.'
+blog:
+  en: 'Blog'
+subscribe:
+  en: 'Subscribe to RSS'
+attribution-reporting-overview:
+  en: 'Overview'
+attribution-reporting-events:
+  en: 'Event-level reports'
+attribution-reporting-faqs:
+  en: 'User-initiated data clearing'
+attribution-reporting_description:
+  en: 'Measure when user action leads to a conversion, without cross-site identifiers.'

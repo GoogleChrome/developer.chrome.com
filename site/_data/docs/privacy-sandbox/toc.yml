@@ -1,11 +1,39 @@
-- url: /docs/privacy-sandbox/overview
-- url: /docs/privacy-sandbox/cds21-update
-- url: /docs/privacy-sandbox/status
-- url: /docs/privacy-sandbox/faq
-- url: /docs/privacy-sandbox/glossary
-- url: /docs/privacy-sandbox/trust-tokens
-- url: /docs/privacy-sandbox/first-party-sets
-- url: /docs/privacy-sandbox/attribution-reporting
-- url: /docs/privacy-sandbox/user-agent
-- url: /docs/privacy-sandbox/floc
-- url: /docs/privacy-sandbox/fledge
+# External URLs need an explicit title and description, otherwise
+# the toc won't know what to display.
+- title: i18n.docs.privacy-sandbox.overview
+  sections:
+    - url: /docs/privacy-sandbox/overview
+      title: i18n.docs.privacy-sandbox.overview-article
+    - url: /docs/privacy-sandbox/cds21-update
+    - url: /tags/privacy/
+      title: i18n.docs.privacy-sandbox.blog
+    - url: https://privacysandbox.com/timeline/
+      title: i18n.docs.privacy-sandbox.timeline
+- title: i18n.docs.privacy-sandbox.start
+  sections:
+    - url: /docs/privacy-sandbox/glossary
+    - url: /docs/privacy-sandbox/status
+    - url: /docs/privacy-sandbox/faq
+- title: i18n.docs.privacy-sandbox.apis
+  sections:
+    - url: /docs/privacy-sandbox/user-agent
+    - url: /docs/privacy-sandbox/first-party-sets
+    - url: /docs/privacy-sandbox/trust-tokens
+    - title: i18n.docs.privacy-sandbox.attribution-reporting
+      sections:
+        - url: /docs/privacy-sandbox/attribution-reporting
+          title: i18n.docs.privacy-sandbox.attribution-reporting-overview
+          description: i18n.docs.privacy-sandbox.attribution-reporting_description
+        - url: /docs/privacy-sandbox/attribution-reporting-event-guide
+          title: i18n.docs.privacy-sandbox.attribution-reporting-events
+        - url: /docs/privacy-sandbox/attribution-reporting-data-clearing
+          title: i18n.docs.privacy-sandbox.attribution-reporting-faqs
+    - url: /docs/privacy-sandbox/floc
+    - url: /docs/privacy-sandbox/fledge
+- title: i18n.docs.privacy-sandbox.discuss
+  sections:
+    - url: https://developer.chrome.com/feeds/privacy.xml
+      title: i18n.docs.privacy-sandbox.subscribe
+    - url: https://github.com/WICG/turtledove/issues
+      title: i18n.docs.privacy-sandbox.issues
+      description: i18n.docs.privacy-sandbox.issues_description
