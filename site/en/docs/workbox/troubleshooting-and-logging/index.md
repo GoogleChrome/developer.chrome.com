@@ -6,15 +6,15 @@ description: >
   A look at Workbox's logging features, and in-browser service worker debugging tools.
 ---
 
-Debugging a service worker is tough. You’re dealing with the lifecycle, updates, caches, and the interaction between all of these things. Fortunately, just as Workbox makes service worker development easier, it also makes debugging easier through its informative logging. This page will touch on some of the available debugging tools, and how Workbox’s logging works and how it can be configured.
+Debugging a service worker is tough. You're dealing with the lifecycle, updates, caches, and the interaction between all of these things. Fortunately, just as Workbox makes service worker development easier, it also makes debugging easier through its informative logging. This page will touch on some of the available debugging tools, and how Workbox's logging works and how it can be configured.
 
 ## Available troubleshooting tools
 
-There are loads of tools available in the browser for debugging and troubleshooting while developing a service worker. Here’s a few resources to get you started with your browser of choice.
+There are loads of tools available in the browser for debugging and troubleshooting while developing a service worker. Here's a few resources to get you started with your browser of choice.
 
 ### Chrome and Edge
 
-Chrome (and [recent versions of Edge based on the Blink engine](https://en.wikipedia.org/wiki/Microsoft_Edge#Anaheim_(2019%E2%80%93present))) have a robust set of developer tools. Some of those tools—specifically in Chrome’s DevTools—were [touched upon earlier in this documentation](/docs/workbox/improving-development-experience/), but there’s more to discover:
+Chrome (and [recent versions of Edge based on the Blink engine](https://en.wikipedia.org/wiki/Microsoft_Edge#Anaheim_(2019%E2%80%93present))) have a robust set of developer tools. Some of those tools&mdash;specifically in Chrome's DevTools&mdash;were [touched upon earlier in this documentation](/docs/workbox/improving-development-experience/), but there's more to discover:
 
 - [Debug Progressive Web Apps](https://developers.google.com/web/tools/chrome-devtools/progressive-web-apps)
 - [Inspect Network Activity in Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/network)
@@ -45,20 +45,20 @@ Development builds of Workbox turn logging on by default, whereas production bui
 
 ### With or without a bundler
 
-Bundlers are tools that take code from individual modules and create JavaScript output that's ready to run in the browser. When using a bundler, you might also use a bundler-specific Workbox plugin that helps with precaching, like [`workbox-webpack-plugin`](/docs/workbox/modules/workbox-webpack-plugin), or you might just be bundling up Workbox runtime caching logic. Either way, Workbox's logging is influenced by setting a production mode in the bundler’s configuration:
+Bundlers are tools that take code from individual modules and create JavaScript output that's ready to run in the browser. When using a bundler, you might also use a bundler-specific Workbox plugin that helps with precaching, like [`workbox-webpack-plugin`](/docs/workbox/modules/workbox-webpack-plugin), or you might just be bundling up Workbox runtime caching logic. Either way, Workbox's logging is influenced by setting a production mode in the bundler's configuration:
 
 - In webpack, the [`mode` configuration option](https://webpack.js.org/configuration/mode/) can be set to `'production'` or `'development'`. `workbox-webpack-plugin` will use the production or development logging in Workbox based on this value.
 - For Rollup, [`rollup-plugin-workbox`](https://www.npmjs.com/package/rollup-plugin-workbox) accepts a `mode` configuration option that also affects whether Workbox logs anything to the console. If you're using Rollup without the Workbox-specific plugin, you'll need to configure [`@rollup/plugin-replace`](https://www.npmjs.com/package/@rollup/plugin-replace) to substitute `process.env.NODE_ENV` with `'development'` or `'production'`.
 
-Suppose the default logging behavior must be overridden in development. In that case, the appropriate Workbox plugin for your bundler should allow you to hardcode a preference for debugging logs in its configuration. For example, you could disable logging in Workbox via `workbox-webpack-plugin`’s `mode` option for the [`GenerateSW` method](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW#GenerateSW).
+Suppose the default logging behavior must be overridden in development. In that case, the appropriate Workbox plugin for your bundler should allow you to hardcode a preference for debugging logs in its configuration. For example, you could disable logging in Workbox via `workbox-webpack-plugin`'s `mode` option for the [`GenerateSW` method](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-webpack-plugin.GenerateSW#GenerateSW).
 
 ### Without a bundler
 
-While bundlers are great, not every project needs them. If you find yourself in a situation where you want to add Workbox to a project that doesn’t use a bundler, [`workbox-sw`](/docs/workbox/modules/workbox-sw) is the way to go.
+While bundlers are great, not every project needs them. If you find yourself in a situation where you want to add Workbox to a project that doesn't use a bundler, [`workbox-sw`](/docs/workbox/modules/workbox-sw) is the way to go.
 
 The `workbox-sw` module simplifies loading other Workbox modules (e.g., `workbox-routing`, `workbox-precaching`, etc) from a CDN. Whether it loads the development or production bundles depends on the URL used to access your web app. By default, `workbox-sw` loads the development version of Workbox if your web app is running on `http://localhost`, and the production version at all other times.
 
-You can override the default behavior by calling Workbox’s [`setConfig` method](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox#.setConfig) to set the `debug` option to `true`:
+You can override the default behavior by calling Workbox's [`setConfig` method](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox#.setConfig) to set the `debug` option to `true`:
 
 ```js
 // Load workbox-sw from a CDN
@@ -83,8 +83,8 @@ self.__WB_DISABLE_DEV_LOGS = true;
 // The rest of your Workbox service worker code goes here
 ```
 
-One advantage of this approach is that it’s completely independent of your bundler configuration, and will work whether you use `workbox-sw` directly, or depend on a bundler to package up your Workbox-powered service worker for you.
+One advantage of this approach is that it's completely independent of your bundler configuration, and will work whether you use `workbox-sw` directly, or depend on a bundler to package up your Workbox-powered service worker for you.
 
 ## Further information
 
-If you’re still struggling to figure out what’s going on in a buggy service worker and the logging just isn’t enough, try posting a question to [Stack Overflow with the `workbox` tag](https://stackoverflow.com/questions/ask?tags=workbox). If you can’t find an answer there, [file a Github issue](https://github.com/GoogleChrome/workbox/issues) (after reading [the contributing guidelines](https://github.com/GoogleChrome/workbox/blob/v6/CONTRIBUTING.md)). This not only allows a wide audience of developers to read and answer your questions, but the answer to your question may help someone in the same situation later on.
+If you're still struggling to figure out what's going on in a buggy service worker and the logging just isn't enough, try posting a question to [Stack Overflow with the `workbox` tag](https://stackoverflow.com/questions/ask?tags=workbox). If you can't find an answer there, [file a Github issue](https://github.com/GoogleChrome/workbox/issues) (after reading [the contributing guidelines](https://github.com/GoogleChrome/workbox/blob/v6/CONTRIBUTING.md)). This not only allows a wide audience of developers to read and answer your questions, but the answer to your question may help someone in the same situation later on.

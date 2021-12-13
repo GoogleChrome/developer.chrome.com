@@ -20,3 +20,13 @@
     - url: /docs/workbox/precaching-with-workbox
     - url: /docs/workbox/using-workbox-without-precaching
     - url: /docs/workbox/framework-integrations
+- title: i18n.docs.workbox.uses
+  sections:
+    - url: /docs/workbox/using-workbox-window
+    - url: /docs/workbox/caching-resources-during-runtime
+    - url: /docs/workbox/forcing-a-network-timeout
+    - url: /docs/workbox/access-caches-from-the-window
+    - url: /docs/workbox/serving-cached-audio-and-video
+    - url: /docs/workbox/managing-fallback-responses
+    - url: /docs/workbox/handling-service-worker-updates
+    - url: /docs/workbox/retrying-requests-when-back-online

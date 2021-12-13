@@ -211,7 +211,7 @@ registerRoute(
 ```
 
 And here's the same code rewritten to use `workbox-sw` (notice that only the
-import statements have changed—the logic has not been touched):
+import statements have changed&mdash;the logic has not been touched):
 
 ```js
 importScripts(
