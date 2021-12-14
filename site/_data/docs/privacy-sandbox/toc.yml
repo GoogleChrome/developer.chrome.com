@@ -4,11 +4,11 @@
   sections:
     - url: /docs/privacy-sandbox/overview
       title: i18n.docs.privacy-sandbox.overview-article
-    - url: /docs/privacy-sandbox/cds21-update
     - url: /tags/privacy/
       title: i18n.docs.privacy-sandbox.blog
     - url: https://privacysandbox.com/timeline/
       title: i18n.docs.privacy-sandbox.timeline
+    - url: /docs/privacy-sandbox/cds21-update
 - title: i18n.docs.privacy-sandbox.start
   sections:
     - url: /docs/privacy-sandbox/glossary
