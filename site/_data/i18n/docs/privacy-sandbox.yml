@@ -18,20 +18,10 @@ trust-tokens:
   en: 'Trust Tokens'
 start:
   en: 'Get started'
-discuss:
-  en: 'Discussion and updates'
-issues:
-  en: 'File an issue'
-issues_description:
-  en: 'Read the proposal, raise questions, and follow discussion.'
 timeline:
   en: 'Timeline'
-timeline-descrition:
-  en: 'Discover when we expect new APIs and technologies to be ready for adoption.'
 blog:
   en: 'Blog'
-subscribe:
-  en: 'Subscribe to RSS'
 attribution-reporting-overview:
   en: 'Overview'
 attribution-reporting-events:
