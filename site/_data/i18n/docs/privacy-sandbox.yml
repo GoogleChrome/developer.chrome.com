@@ -18,8 +18,6 @@ trust-tokens:
   en: 'Trust Tokens'
 start:
   en: 'Get started'
-apis:
-  en: 'APIs'
 discuss:
   en: 'Discussion and updates'
 issues:
@@ -38,7 +36,25 @@ attribution-reporting-overview:
   en: 'Overview'
 attribution-reporting-events:
   en: 'Event-level reports'
+attribution-reporting-events-api:
+  en: 'Event-level reports API guide'
 attribution-reporting-faqs:
   en: 'User-initiated data clearing'
 attribution-reporting_description:
   en: 'Measure when user action leads to a conversion, without cross-site identifiers.'
+tracking-prevention:
+  en: 'Prevent covert tracking'
+strengthen-boundaries:
+  en: 'Strengthen cross-site privacy boundaries'
+relevant:
+  en: 'Show relevant content'
+fight-spam:
+  en: 'Fight spam and fraud'
+measure:
+  en: 'Measure digital ads'
+chips:
+  en: 'Cookies Having Independent Partitioned State (CHIPS)'
+fedcm:
+  en: 'Federated Credentials Management (FedCM)'
+  
+  

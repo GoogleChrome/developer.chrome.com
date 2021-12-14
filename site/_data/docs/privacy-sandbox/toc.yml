@@ -14,11 +14,22 @@
     - url: /docs/privacy-sandbox/glossary
     - url: /docs/privacy-sandbox/status
     - url: /docs/privacy-sandbox/faq
-- title: i18n.docs.privacy-sandbox.apis
+- title: i18n.docs.privacy-sandbox.strengthen-boundaries
+  sections:
+    - url: /docs/privacy-sandbox/first-party-sets
+    - url: https://github.com/WICG/CHIPS
+      title: i18n.docs.privacy-sandbox.chips
+    - url: https://github.com/WICG/FedCM
+      title: i18n.docs.privacy-sandbox.fedcm
+- title: i18n.docs.privacy-sandbox.tracking-prevention
   sections:
     - url: /docs/privacy-sandbox/user-agent
-    - url: /docs/privacy-sandbox/first-party-sets
-    - url: /docs/privacy-sandbox/trust-tokens
+- title: i18n.docs.privacy-sandbox.relevant
+  sections:
+    - url: /docs/privacy-sandbox/floc
+    - url: /docs/privacy-sandbox/fledge
+- title: i18n.docs.privacy-sandbox.measure
+  sections:
     - title: i18n.docs.privacy-sandbox.attribution-reporting
       sections:
         - url: /docs/privacy-sandbox/attribution-reporting
@@ -26,10 +37,9 @@
           description: i18n.docs.privacy-sandbox.attribution-reporting_description
         - url: /docs/privacy-sandbox/attribution-reporting-event-guide
           title: i18n.docs.privacy-sandbox.attribution-reporting-events
-        - url: /docs/privacy-sandbox/attribution-reporting-data-clearing
-          title: i18n.docs.privacy-sandbox.attribution-reporting-faqs
-    - url: /docs/privacy-sandbox/floc
-    - url: /docs/privacy-sandbox/fledge
+- title: i18n.docs.privacy-sandbox.fight-spam
+  sections:
+    - url: /docs/privacy-sandbox/trust-tokens
 - title: i18n.docs.privacy-sandbox.discuss
   sections:
     - url: https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support
