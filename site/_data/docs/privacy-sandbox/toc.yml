@@ -32,8 +32,6 @@
     - url: /docs/privacy-sandbox/fledge
 - title: i18n.docs.privacy-sandbox.discuss
   sections:
-    - url: https://developer.chrome.com/feeds/privacy.xml
-      title: i18n.docs.privacy-sandbox.subscribe
-    - url: https://github.com/WICG/turtledove/issues
+    - url: https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support
       title: i18n.docs.privacy-sandbox.issues
       description: i18n.docs.privacy-sandbox.issues_description
