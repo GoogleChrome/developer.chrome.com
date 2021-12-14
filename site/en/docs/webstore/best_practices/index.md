@@ -2,12 +2,12 @@
 layout: "layouts/doc-post.njk"
 title: Best Practices
 date: 2017-08-30
-updated: 2021-06-21
+updated: 2021-12-06
 description: >
-  Best practices on how to implement your app and list it in the Chrome Web Store.
+  Best practices on how to implement your extension and list it in the Chrome Web Store.
 ---
 
-This page has advice on how you should implement your app and list it in the store. As the store
+This page has advice on how you should implement your extension and list it in the store. As the store
 matures and we learn from developers' experiences, these recommendations will be updated.
 
 ## Design a high-quality extension
@@ -15,8 +15,8 @@ matures and we learn from developers' experiences, these recommendations will be
 We encourage you to develop extensions that are of high quality. High-quality extensions conform to
 standards of performance, security, and user experience, as summarized by the following guidelines:
 
-* **Compliance:** Does the extension comply with our [program policies]? Extensions must not violate
-  any of these policies.
+* **Compliance:** Does the extension comply with our [program policies][program policies]?
+  Extensions must not violate any of these policies.
 
 * **Manifest V3:** Is the extension built on Manifest V3? Manifest V3 is the current version of the
   Chrome extension platform and all High Quality extensions should use it. (See the [Manifest V3
@@ -45,24 +45,23 @@ standards of performance, security, and user experience, as summarized by the fo
 
 ## Support Google Accounts
 
-If your app requires user login, we recommend that you provide at least some support for Google
-Accounts. The reason is that if a user purchases your app from the Chrome Web Store, odds are the
-user is already logged into a Google Account whenever they use your app. Reducing the number of
-logins improves the user's experience.
+If your extension requires user login, we recommend that you provide at least some support for
+Google Accounts. Google Accounts can help you provide a better user experience; since users of the
+Chrome Web Store are likely to be logged in already, they won't have to set up and remember yet
+another username and password. Reducing the number of logins improves the user's experience.
 
 If you already have a login system, consider correlating the Google Account ID to the user account
-in your system. You can do this by storing the user's OpenID URL from Google's OpenID service, in
-the same way that you store other data that's associated with a user's account. When someone is
-logged into a Google Account but not your login system, you can automatically log them into their
-user account in your system.
+in your system. You can use the [Chrome Identity API][identity-api] to support Google accounts in the following
+ways:
 
-See [Identifying the User][identify-user] for more information about supporting Google Accounts.
+- Google OAuth2/OpenID: See [Identifying the User][identify-user]. 
+- OAuth2: See [Authenticate users with Google][oauth2-tutorial].
 
 ## Keep ex-users' data for 30 days or more
 
 You should keep users' data for at least 30 days after they cancel their subscription or uninstall
-your app. Users might be unsubscribed for reasons beyond their control, and even if they do
-intentionally unsubscribe or uninstall the app, they might come back.
+your extension. Users might be unsubscribed for reasons beyond their control, and even if they do
+intentionally unsubscribe or uninstall the extension, they might come back.
 
 ## Cache license data
 
@@ -72,9 +71,9 @@ number of queries to the license server, reducing quota usage and traffic.
 
 ## Create a compelling store listing
 
-The better your app's listing in the store, the more users will find and try your app. When choosing
-your app's name, writing its description, and designing its logo, keep in mind Google's [Branding
-Guidelines][cws-branding].
+The better your extension's listing in the store, the more users will find and try your extension.
+When choosing your extension's name, writing its description, and designing its logo, keep in mind
+Google's [Branding Guidelines][cws-branding].
 
 To learn more, see [Creating a great listing page][great-listing-page].
 
@@ -82,7 +81,7 @@ To learn more, see [Creating a great listing page][great-listing-page].
 
 See [Supplying Images][cws-images] for guidelines on the images you should supply to the store.
 
-### Choose your app's category well
+### Choose your extension's category well
 
 The developer console lets you specify a category for each extension. Choose the category
 that is most appropriate:
@@ -99,11 +98,13 @@ that is most appropriate:
 * Social & Communication
 * Sports
 
+[oauth2-tutorial]: /docs/extensions/mv3/tut_oauth/
 [completing-listing]: /docs/webstore/cws-dashboard-listing/
 [cws-branding]: /docs/webstore/branding
 [cws-images]: /docs/webstore/images
 [dashboard-privacy]: /docs/webstore/cws-dashboard-privacy/
 [great-listing-page]: /docs/webstore/best_listing/
+[identity-api]: /docs/extensions/reference/identity/
 [identify-user]: /docs/webstore/identify_user
 [mv3-overview]: /docs/extensions/mv3/intro/mv3-overview/
 [program policies]: /docs/webstore/program_policies/

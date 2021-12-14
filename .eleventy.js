@@ -8,6 +8,7 @@ const {
   leadingAndTrailingSlash,
   stripDefaultLocale,
 } = require('./site/_filters/urls');
+const embededDoc = require('./site/_filters/docs');
 const {i18n} = require('./site/_filters/i18n');
 const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
@@ -102,6 +103,7 @@ module.exports = eleventyConfig => {
 
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
+  eleventyConfig.addFilter('embededDoc', embededDoc);
   eleventyConfig.addFilter('trailingSlash', trailingSlash);
   eleventyConfig.addFilter('leadingAndTrailingSlash', leadingAndTrailingSlash);
   eleventyConfig.addFilter('stripDefaultLocale', stripDefaultLocale);

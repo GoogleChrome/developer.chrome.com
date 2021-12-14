@@ -20,6 +20,10 @@ module.exports = {
     },
     // Give some pages a project_key.
     project_key: data => {
+      if (data.project_key) {
+        return data.project_key;
+      }
+
       const {url} = data.page;
       if (!url) {
         return;

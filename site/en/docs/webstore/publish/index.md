@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Publish in the Chrome Web Store"
 date: 2014-02-28
-updated: 2021-08-13
+updated: 2021-11-23
 description: >
   How to publish a new extension or theme to the Chrome Web Store.
 ---
@@ -160,10 +160,19 @@ automatic publishing using the **Defer publish** option described below.
 {% endAside %}
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/yoMNFt1ht6qSLXzFyrWj.png",
-       alt="Screenshot showing the 'more' menu's defer publish option", width="386", height="284" %}
+       alt="Screenshot showing the 'more' menu's defer publish option", width="286", height="184" %}
 
 This lets you pause the rollout of a submitted item if you discover an error after submitting it or
 if you simply want to change your rollout time.
+
+Once the review is complete, you will have up to **30 days** to publish. After that
+period expires, the staged submission will revert to a draft which will have to be submitted again for
+review. You can check when your staged submission will expire under the status of your item. 
+
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/sYCH3lvreW0bUWznlOsE.png", alt="Chrome Web Store
+staged item
+status", width="700", height="84" %}
+
 
 ### Review of submitted items {: #review-of-submitted-items }
 

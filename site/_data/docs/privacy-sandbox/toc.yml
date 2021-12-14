@@ -1,11 +1,44 @@
-- url: /docs/privacy-sandbox/overview
-- url: /docs/privacy-sandbox/cds21-update
-- url: /docs/privacy-sandbox/status
-- url: /docs/privacy-sandbox/faq
-- url: /docs/privacy-sandbox/glossary
-- url: /docs/privacy-sandbox/trust-tokens
-- url: /docs/privacy-sandbox/first-party-sets
-- url: /docs/privacy-sandbox/attribution-reporting
-- url: /docs/privacy-sandbox/user-agent
-- url: /docs/privacy-sandbox/floc
-- url: /docs/privacy-sandbox/fledge
+# External URLs need an explicit title and description, otherwise
+# the toc won't know what to display.
+- title: i18n.docs.privacy-sandbox.overview
+  sections:
+    - url: /docs/privacy-sandbox/overview
+      title: i18n.docs.privacy-sandbox.overview-article
+    - url: /tags/privacy/
+      title: i18n.docs.privacy-sandbox.blog
+    - url: https://privacysandbox.com/timeline/
+      title: i18n.docs.privacy-sandbox.timeline
+    - url: /docs/privacy-sandbox/cds21-update
+- title: i18n.docs.privacy-sandbox.start
+  sections:
+    - url: /docs/privacy-sandbox/glossary
+    - url: /docs/privacy-sandbox/status
+    - url: /docs/privacy-sandbox/faq
+- title: i18n.docs.privacy-sandbox.strengthen-boundaries
+  sections:
+    - url: /docs/privacy-sandbox/first-party-sets
+    - url: https://github.com/WICG/CHIPS
+      title: i18n.docs.privacy-sandbox.chips
+    - url: https://github.com/WICG/FedCM
+      title: i18n.docs.privacy-sandbox.fedcm
+- title: i18n.docs.privacy-sandbox.tracking-prevention
+  sections:
+    - url: /docs/privacy-sandbox/user-agent
+- title: i18n.docs.privacy-sandbox.relevant
+  sections:
+    - url: /docs/privacy-sandbox/floc
+    - url: /docs/privacy-sandbox/fledge
+- title: i18n.docs.privacy-sandbox.measure
+  sections:
+    - title: i18n.docs.privacy-sandbox.attribution-reporting
+      sections:
+        - url: /docs/privacy-sandbox/attribution-reporting
+          title: i18n.docs.privacy-sandbox.attribution-reporting-overview
+          description: i18n.docs.privacy-sandbox.attribution-reporting_description
+        - url: /docs/privacy-sandbox/attribution-reporting-event-introduction/
+          title: i18n.docs.privacy-sandbox.attribution-reporting-events
+        - url: /docs/privacy-sandbox/attribution-reporting-event-guide
+          title: i18n.docs.privacy-sandbox.attribution-reporting-events-api
+- title: i18n.docs.privacy-sandbox.fight-spam
+  sections:
+    - url: /docs/privacy-sandbox/trust-tokens

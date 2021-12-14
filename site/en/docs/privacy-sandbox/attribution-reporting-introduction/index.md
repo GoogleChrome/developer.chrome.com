@@ -314,7 +314,7 @@ the API based on ecosystem feedback. {% endAside %}
     <td><code>🧪 Experiment (Chrome)</code></td>
     </tr>
     <tr>
-    <td>Attribution model: priority-based<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_views.md#controlling-which-attribution-source-to-triggerd">Explainer</a></td>
+    <td>Attribution model: priority-based<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_clicks.md#multiple-sources-for-the-same-trigger-multi-touch">Explainer</a></td>
     <td><code>🧪 Experiment (Chrome)</code></td>
     </tr>
     <tr>

@@ -1,0 +1,25 @@
+- title: i18n.docs.modules.sw
+  sections:
+    - url: /docs/workbox/modules/workbox-background-sync
+    - url: /docs/workbox/modules/workbox-broadcast-update
+    - url: /docs/workbox/modules/workbox-cacheable-response
+    - url: /docs/workbox/modules/workbox-core
+    - url: /docs/workbox/modules/workbox-expiration
+    - url: /docs/workbox/modules/workbox-google-analytics
+    - url: /docs/workbox/modules/workbox-navigation-preload
+    - url: /docs/workbox/modules/workbox-precaching
+    - url: /docs/workbox/modules/workbox-range-request
+    - url: /docs/workbox/modules/workbox-recipes
+    - url: /docs/workbox/modules/workbox-routing
+    - url: /docs/workbox/modules/workbox-strategies
+- title: i18n.docs.modules.window
+  sections:
+    - url: /docs/workbox/modules/workbox-window
+- title: i18n.docs.modules.node
+  sections:
+    - url: /docs/workbox/modules/workbox-cli
+    - url: /docs/workbox/modules/workbox-build
+    - url: /docs/workbox/modules/workbox-webpack-plugin
+- title: i18n.docs.modules.loader
+  sections:
+    - url: /docs/workbox/modules/workbox-sw
