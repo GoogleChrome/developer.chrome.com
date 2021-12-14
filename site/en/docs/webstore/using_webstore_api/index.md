@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Using the Chrome Web Store Publish API"
 #date: TODO
-#updated: TODO
+updated: 2021-12-21
 description: How to programmatically create, update, and publish items in the Chrome Web Store.
 ---
 
@@ -41,7 +41,7 @@ You will see a page asking you to accept permission for the requested scope.
 
 {% Aside %}
 
-**Note**: Make sure you are requesting the token using the Google Account which owns the Chrome Web
+Make sure you are requesting the token using the Google Account which owns the Chrome Web
 Store apps you want to manage. This account can be different from the account you create the Google
 Developers Console project with. For example, you can create an application for other developers to
 manage their apps, in which case you only need to register a Google Developers Console project.
@@ -75,13 +75,13 @@ This will return a result such as:
 }
 ```
 
-You can now use the access_token to call the API. You can also use the refresh token to get future
+You can now use the `access_token` to call the API. You can also use the refresh token to get future
 access tokens. Note that tokens expire after 40 minutes.
 
 {% Aside %}
 
-**Note**: For more information about getting OAuth 2.0 access tokens, see [Using OAuth 2.0 to Access
-Google APIs][3].
+For more information about getting OAuth 2.0 access tokens, see [Using OAuth 2.0 to Access
+Google APIs][oauth2].
 
 {% endAside %}
 
@@ -92,9 +92,9 @@ endpoints for creating items, updating items, and publishing items.
 
 {% Aside %}
 
-**Note**: Currently, there is no API for setting an item's metadata, such as description. This has
-to be done manually in the [Chrome Web Store Developer Dashboard.][4] More detail about the Web
-Store API can be found [here][5].
+Currently, there is no API for setting an item's metadata, such as description. This has
+to be done manually in the [Chrome Web Store Developer Dashboard.][cws-dashboard] More detail about the Web
+Store API can be found [here][cws-api].
 
 {% endAside %}
 
@@ -121,7 +121,7 @@ https://www.googleapis.com/upload/chromewebstore/v1.1/items
 
 {% Aside %}
 
-**Note**: For a full description of the insert method, see [Items:Insert][6].
+For a full description of the insert method, see [Items:Insert][cws-api-insert].
 
 {% endAside %}
 
@@ -148,7 +148,7 @@ https://www.googleapis.com/upload/chromewebstore/v1.1/items/$APP_ID
 
 {% Aside %}
 
-**Note**: For a full description of the update method, see [Items:Update][7].
+For a full description of the update method, see [Items:Update][cws-api-update].
 
 {% endAside %}
 
@@ -172,7 +172,7 @@ https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
 
 {% Aside %}
 
-**Note**: For a full description of publish method, see [Items:Publish][8].
+For a full description of publish method, see [Items:Publish][cws-api-publish].
 
 {% endAside %}
 
@@ -196,7 +196,7 @@ https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish?publishTarg
 
 {% Aside %}
 
-**Note**: For a full description of the publish method, see [Items:Publish][9].
+For a full description of the publish method, see [Items:Publish][cws-api-publish].
 
 {% endAside %}
 
@@ -222,16 +222,15 @@ https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID?projection=draft
 
 {% Aside %}
 
-**Note**: For a full description of the get method, see [Items:Get][10].
+For a full description of the get method, see [Items:Get][cws-api-get].
 
 {% endAside %}
 
-[1]: https://console.developers.google.com
-[3]: https://developers.google.com/accounts/docs/OAuth2
-[4]: https://chrome.google.com/webstore/developer/dashboard
-[5]: /docs/webstore/api_index
-[6]: /docs/webstore/webstore_api/items/insert
-[7]: /docs/webstore/webstore_api/items/update
-[8]: /docs/webstore/webstore_api/items/publish
-[9]: /docs/webstore/webstore_api/items/publish
-[10]: /docs/webstore/webstore_api/items/get
+[google-dev-console]: https://console.developers.google.com
+[oauth2]: https://developers.google.com/accounts/docs/OAuth2
+[cws-dashboard]: https://chrome.google.com/webstore/developer/dashboard
+[cws-api]: /docs/webstore/api_index
+[cws-api-insert]: /docs/webstore/webstore_api/items/insert
+[cws-api-update]: /docs/webstore/webstore_api/items/update
+[cws-api-publish]: /docs/webstore/webstore_api/items/publish
+[cws-api-get]: /docs/webstore/webstore_api/items/get
