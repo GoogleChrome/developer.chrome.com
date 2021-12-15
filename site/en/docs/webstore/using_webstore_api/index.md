@@ -9,43 +9,38 @@ description: How to programmatically create, update, and publish items in the Ch
 ## Overview {: #overview }
 
 The Chrome Web Store Publish API provides a set of REST endpoints for programmatically creating,
-updating, and publishing items in the Chrome Web Store. Using this API, you can automate the process
+updating, and publishing items in the Chrome Web Store. Use this API to automate the process
 of uploading and publishing items into the store.
 
 ## Before you begin {: #beforeyoubegin }
 
 Take the following steps to use the Chrome Web Store Publish API:
 
-1. Enable the Chrome Web Store API
+**Enable the Chrome Web Store API**.
 
-  1. Go to the [Google Developers Console][google-dev-console].
-  1. Create new project or select an existing one.
-  1. Look for “Chrome Web Store API” in the **search bar**.
-  1. Enable the **Chrome Web Store API**.
+1. Go to the [Google Cloud Console][google-dev-console].
+2. Create a new project or select an existing one.
+3. In the **search bar** type in “Chrome Web Store API”.
+4. Enable the **Chrome Web Store API**.
 
-3. Customize a consent screen
+**Customize a consent screen**.
 
-  1. Choose the **Credentials** menu item.
-  1. Click on **Configure consent screen**
-  1. Select **External** > **Create**
-  1. Fill out the **App information** required fields > **Save and Continue**
-      - App name.
-      - User Support email.
-      - Developer contact email.
-  1. Skip Scopes, click **Save** > **Continue**.
-  1. Add your email to **Test users**.
-  1. Click **Save** > **Continue**
+1. Go to **Credentials**.
+2. Click on **Configure consent screen**
+3. Select **External** > **Create**
+4. Fill out the **App information** required fields > **Save and Continue**
+    - App name.
+    - User Support email.
+    - Developer contact email.
+5. Skip Scopes, click **Save** > **Continue**.
+6. Add your email to **Test users**, then **Save** > **Continue**
 
-<!-- NOTE: This email doesn’t have to be the same as your publisher email. -->
+**Get access keys**.
 
-1. Get access keys
-
-  1. Choose the **Credentials** menu item.
-  1. Click **Create Credentials**.
-  1. Choose **OAuth client ID**.
-  1. Select **Application type** > **Desktop App**.
-  1. Fill out the name: e.g. “Chrome Web Store Upload”.
-  1. Choose **Create**
+1. Go to **Credentials**.
+2. Click **Create Credentials** > **OAuth client ID**.
+4. For **Application type**, choose **Desktop App**.
+5. Fill out the name, then click **Create**
 
 The console will provide the client ID and client secret. You can retrieve an access token to work with the API. For example, enter this URL in your browser, replacing the $CLIENT_ID with the one for your app:
 
@@ -58,21 +53,20 @@ You will see a page asking you to accept permission for the requested scope.
 
 {% Aside %}
 
-Make sure you are requesting the token using the Google Account which owns the Chrome Web
-Store apps you want to manage. This account can be different from the account you create the Google
+Make sure you are requesting the token using the Google developer Account which owns the Chrome Web
+Store items you want to manage. This account can be different from the account you create the Google
 Developers Console project with. For example, you can create an application for other developers to
 manage their apps, in which case you only need to register a Google Developers Console project.
 
 {% endAside %}
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/vkcDhH8uyPOODVrKTpKH.png",
-       alt="A screenshot of the permission request UI.", height="310", width="481" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ZwxRj8SD3Ld40BsjZnsX.png", alt="Permission request UI", width="308", height="249" %}
 
-Click the Accept button and you will see a code that looks something like this:
+Click **Accept** and you will see a code that looks something like this:
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/oCXSDgT7JuB3yvD8V1CJ.png", alt="A screenshot of the UI for copying code.", height="173", width="414" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KHtQ9uzphdR4oOsJQLVj.png", alt="UI for copying code", width="348", height="155" %}
 
-Use this value to request an access token. For example, using `curl`, you can get an access token by
+Use this value to request an **access token**. For example, using `curl`, you can get an access token by
 executing the following command (replacing the values of $CLIENT\_ID, $CLIENT_SECRET, and \$CODE
 with the values from above):
 
@@ -94,7 +88,7 @@ This will return a result such as:
 ```
 
 You can now use the `access_token` to call the API. You can also use the refresh token to get future
-access tokens. Note that tokens expire after 40 minutes.
+access tokens. Note that tokens expire after an hour.
 
 {% Aside %}
 
