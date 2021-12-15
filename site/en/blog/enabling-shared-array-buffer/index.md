@@ -12,7 +12,7 @@ description: >
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
 date: 2021-01-18
-updated: 2021-10-14
+updated: 2021-12-15
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
 alt: A collection of padlocks.
 ---
@@ -73,16 +73,19 @@ If you don't think you can make these changes in time for Chrome 92, you can
 behavior until at least Chrome 103.
 
 {% Aside %}
-**Update, April 2021**
+**Update, December 2021**
 
 We've been exploring ways to deploy `Cross-Origin-Resource-Policy` at scale, as
 cross-origin isolation requires all subresources to explicitly opt-in. And we
-have come up with the idea of going in the opposite direction: a new [COEP
+have come up with the idea of going in the opposite direction: [a new COEP
 "credentialless" mode](/blog/coep-credentialless-origin-trial/) that allows
 loading resources without the CORP header by stripping all their credentials. We
-are figuring out the details of how it should work, but we hope this will
-lighten your burden of making sure the subresources are sending the
-`Cross-Origin-Resource-Policy` header.
+hope this will lighten your burden of making sure the subresources are sending
+the `Cross-Origin-Resource-Policy` header.
+
+Though `credentialless` mode is available on Chrome from version 96, it's not
+supported by any other browsers yet, this may cause some developers find it
+challenging to deploy COOP/COEP at this stage.
 
 Also, it's known that the `Cross-Origin-Opener-Policy: same-origin` header will
 break integrations that require cross-origin window interactions such as OAuth
