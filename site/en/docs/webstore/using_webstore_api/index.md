@@ -14,24 +14,41 @@ of uploading and publishing items into the store.
 
 ## Before you begin {: #beforeyoubegin }
 
-To use the Chrome Web Store Publish API, you need to enable the API for your project in the [Google
-Developers Console][1].
+Take the following steps to use the Chrome Web Store Publish API:
 
-1.  Visit the [Google Developers Console][1].
-2.  Create a new project or select an existing one.
-3.  In the sidebar on the left, select **APIs & auth**.
-4.  In the displayed list of available APIs, set the status of the Chrome Web Store API to **ON**.
-5.  Accept the Terms of Service.
-6.  In the sidebar on the left, select **Credentials**.
-7.  Find the lines labeled **Client ID** and **Client secret**. Note that there may be a client ID
-    without a client secret for use with Compute Engine and App Engine. In that case, create a new
-    client ID and client secret.
-8.  To create the client ID and client secret, click on **CREATE CREDENTIALS**, select **OAuth client ID** and select **Desktop app** under **Application type**.
-9.  Get an access token:
+1. Enable the Chrome Web Store API
 
-Once you have the client ID and client secret, you can retrieve an access token to work with the
-API. For example, enter this URL in your browser, replacing the \$CLIENT_ID with the one for your
-app:
+  1. Go to the [Google Developers Console][google-dev-console].
+  1. Create new project or select an existing one.
+  1. Look for “Chrome Web Store API” in the **search bar**.
+  1. Enable the **Chrome Web Store API**.
+
+3. Customize a consent screen
+
+  1. Choose the **Credentials** menu item.
+  1. Click on **Configure consent screen**
+  1. Select **External** > **Create**
+  1. Fill out the **App information** required fields > **Save and Continue**
+      - App name.
+      - User Support email.
+      - Developer contact email.
+  1. Skip Scopes, click **Save** > **Continue**.
+  1. Add your email to **Test users**.
+  1. Click **Save** > **Continue**
+
+<!-- NOTE: This email doesn’t have to be the same as your publisher email. -->
+
+1. Get access keys
+
+  1. Choose the **Credentials** menu item.
+  1. Click **Create Credentials**.
+  1. Choose **OAuth client ID**.
+  1. Select **Application type** > **Desktop App**.
+  1. Fill out the name: e.g. “Chrome Web Store Upload”.
+  1. Choose **Create**
+
+The console will provide the client ID and client secret. You can retrieve an access token to work with the API. For example, enter this URL in your browser, replacing the $CLIENT_ID with the one for your app:
+
 
 ```text
 https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.googleapis.com/auth/chromewebstore&client_id=$CLIENT_ID&redirect_uri=urn:ietf:wg:oauth:2.0:oob
@@ -69,9 +86,10 @@ This will return a result such as:
 ```json
 {
   "access_token" : "ya29...",
-  "token_type" : "Bearer",
   "expires_in" : 3600,
-  "refresh_token" : "1/rwn..."
+  "refresh_token" : "1/rwn...",
+  "scope": "https://www.googleapis.com/auth/chromewebstore",
+  "token_type" : "Bearer",
 }
 ```
 
