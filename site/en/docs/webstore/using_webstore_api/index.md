@@ -35,7 +35,7 @@ Take the following steps to use the Chrome Web Store Publish API:
 5. Skip Scopes, click **Save** > **Continue**.
 6. Add your email to **Test users**, then **Save** > **Continue**
 
-**Get access keys**.
+**Get the access keys**.
 
 1. Go to **Credentials**.
 2. Click **Create Credentials** > **OAuth client ID**.
@@ -54,15 +54,15 @@ You will see a page asking you to accept permission for the requested scope.
 {% Aside %}
 
 Make sure you are requesting the token using the Google developer Account which owns the Chrome Web
-Store items you want to manage. This account can be different from the account you create the Google
-Developers Console project with. For example, you can create an application for other developers to
+Store items you want to manage. This account can be different from the account you created the Google
+Developers Console project. For example, you can create an application for other developers to
 manage their apps, in which case you only need to register a Google Developers Console project.
 
 {% endAside %}
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ZwxRj8SD3Ld40BsjZnsX.png", alt="Permission request UI", width="308", height="249" %}
 
-Click **Accept** and you will see a code that looks something like this:
+Click **Accept** and copy the code. It should look something like this:
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KHtQ9uzphdR4oOsJQLVj.png", alt="UI for copying code", width="348", height="155" %}
 
