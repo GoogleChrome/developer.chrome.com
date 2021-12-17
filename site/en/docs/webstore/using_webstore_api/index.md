@@ -102,10 +102,12 @@ Google APIs][oauth2].
 Once you have an access token, your app can then use the Chrome Web Store Publish API. There are
 endpoints for creating items, updating items, and publishing items.
 
-{% Aside %}
+{% Aside 'gotchas' %}
 
-Currently, there is no API for setting an item's metadata, such as description. This has
-to be done manually in the [Chrome Web Store Developer Dashboard.][cws-dashboard] More detail about the Web
+After creating your item for the first time, you must fill out the [Store Listing][store-listing] and [Privacy practices][privacy] in the [Chrome Web Store Developer
+Dashboard.][cws-dashboard].
+
+More detail about the Web
 Store API can be found [here][cws-api].
 
 {% endAside %}
@@ -234,7 +236,7 @@ https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID?projection=draft
 
 {% Aside %}
 
-For a full description of the get method, see [Items:Get][cws-api-get].
+Only "DRAFT" is supported at this time. For a full description of the get method, see [Items:Get][cws-api-get].
 
 {% endAside %}
 
@@ -246,3 +248,5 @@ For a full description of the get method, see [Items:Get][cws-api-get].
 [cws-api-update]: /docs/webstore/webstore_api/items/update
 [cws-api-publish]: /docs/webstore/webstore_api/items/publish
 [cws-api-get]: /docs/webstore/webstore_api/items/get
+[store-listing]: /docs/webstore/cws-dashboard-listing/
+[privacy]: /docs/webstore/cws-dashboard-privacy/
