@@ -38,7 +38,11 @@ For Items Resource details, see the [resource representation][api-items-resource
 
 <table><thead><tr><th>Method</th><th>HTTP request</th><th>Description</th></tr></thead><tbody><tr class="alt"><td colspan="3">URIs relative to https://www.googleapis.com, unless otherwise noted</td></tr><tr><td><a href="/webstore/webstore_api/items/get/">get</a></td><td><code>GET<br>/chromewebstore/v1.1/items/<var>itemId</var></code></td><td>Gets a Chrome Web Store item. Provide <code>projection="DRAFT"</code> in URL (case sensitive).</td></tr><tr><td><a href="/webstore/webstore_api/items/insert/">insert</a></td><td><code>POST<br>/upload/chromewebstore/v1.1/items</code></td><td>Inserts a new item.</td></tr><tr><td><a href="/webstore/webstore_api/items/publish/">publish</a></td><td><code>POST&nbsp; /chromewebstore/v1.1/<br>items/<var>itemId</var>/publish</code></td><td>Publishes an item. Provide defined <code>publishTarget</code> in URL (case sensitive): <code>publishTarget = "trustedTesters"</code> or <code>publishTarget = "default"</code>.</td></tr><tr><td><a href="/webstore/webstore_api/items/update/">update</a></td><td><code>PUT<br>/upload/chromewebstore/v1.1/<br>items/<var>itemId</var></code><br>&nbsp;<br>and<br>&nbsp;<br><code>PUT&nbsp; /items/<var>itemId</var></code></td><td>Updates an existing item.</td></tr></tbody></table>
 
+{% Aside %}
+
 See [Using the Chrome Web Store Publish API][publish-api].
+
+{% endAside %}
 
 ## Licensing API {: licensing-api }
 
