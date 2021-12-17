@@ -9,7 +9,7 @@ description: >
 
 <!-- This docs has been changed to primarily explain 
      how to publish and update to the Chrome Web Store.
-     TODO: A rewrite should explore the reasoning behind
+     TODO: A rewrite should explore examples and use cases of
      each distribution options (locally unpacked, enterprise, 
      JSON preference file, personal server for Linux users). -->
 
