@@ -142,13 +142,13 @@ For a full description of the insert method, see [Items:Insert][cws-api-insert].
 ### Uploading a package to update an existing store item {: #uploadexisitng }
 
 ```text
-Endpoint: https://www.googleapis.com/upload/chromewebstore/v1.1/items/$APP_ID
+Endpoint: https://www.googleapis.com/upload/chromewebstore/v1.1/items/$ITEM_ID
 Type: PUT
 Header Parameters: $TOKEN: the access token
 Body content: the package file to upload
 ```
 
-\$APP_ID is the ID of the existing Web Store item.
+\$ITEM_ID is the ID of the existing Web Store item.
 
 ```bash
 > curl \
@@ -157,7 +157,7 @@ Body content: the package file to upload
 -X PUT \
 -T $FILE_NAME \
 -v \
-https://www.googleapis.com/upload/chromewebstore/v1.1/items/$APP_ID
+https://www.googleapis.com/upload/chromewebstore/v1.1/items/$ITEM_ID
 ```
 
 {% Aside %}
@@ -169,7 +169,7 @@ For a full description of the update method, see [Items:Update][cws-api-update].
 ### Publishing an item to the public {: #publishpublic }
 
 ```text
-Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
+Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID/publish
 Type: POST
 Header Parameters: $TOKEN: the access token
 ```
@@ -181,7 +181,7 @@ Header Parameters: $TOKEN: the access token
 -H "Content-Length: 0" \
 -X POST \
 -v \
-https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish
+https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID/publish
 ```
 
 {% Aside %}
@@ -193,7 +193,7 @@ For a full description of publish method, see [Items:Publish][cws-api-publish].
 ### Publishing an item to trusted testers {: #trustedtesters }
 
 ```text
-Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish?publishTarget=trustedTesters
+Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID/publish?publishTarget=trustedTesters
 Type: POST
 Header Parameters: $TOKEN: the access token
 ```
@@ -205,7 +205,7 @@ Header Parameters: $TOKEN: the access token
 -H "Content-Length: 0" \
 -X POST \
 -v \
-https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID/publish?publishTarget=trustedTesters
+https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID/publish?publishTarget=trustedTesters
 ```
 
 {% Aside %}
@@ -218,7 +218,7 @@ For a full description of the publish method, see [Items:Publish][cws-api-publis
 ### Checking the upload status of an item {: #checkstatus }
 
 ```text
-Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID?projection=draft
+Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID?projection=draft
 Type: GET
 Header Parameters: $TOKEN: the access token
 ```
@@ -231,7 +231,7 @@ curl \
 -H "Expect:" \
 -X GET \
 -v \
-https://www.googleapis.com/chromewebstore/v1.1/items/$APP_ID?projection=draft
+https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID?projection=draft
 ```
 
 {% Aside %}
