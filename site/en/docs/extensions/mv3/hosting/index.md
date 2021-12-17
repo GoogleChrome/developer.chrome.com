@@ -7,26 +7,45 @@ description: >
   How to publish and update your extension in the Chrome Web Store.
 ---
 
-Most extensions are hosted in the [Chrome Web Store][what-is-cws], an online marketplace where users can browse for Chrome
-extensions and themes.
+<!-- This docs has been changed to primarily explain 
+     how to publish and update to the Chrome Web Store.
+     TODO: A rewrite should explore the reasoning behind
+     each distribution options (locally unpacked, enterprise, 
+     JSON preference file, personal server for Linux users). -->
 
-## Hosting {: #hosting }
-
-All extensions are distributed to users as a special ZIP file with a `.crx` suffix. Extensions
-hosted in the [Chrome Web Store][cws-docs] are uploaded through the [Developer
-Dashboard][developer-console] as `.zip` files. The publishing process automatically converts the
-`.zip` into a `.crx` file. See [Publish in the Chrome Web Store][publish] to learn more. 
+Most extensions are hosted in the [Chrome Web Store][what-is-cws], an online marketplace where users
+can browse for Chrome extensions and themes.
 
 There are three exceptions to the Chrome Web Store hosting rule:
 
 1.  Extensions that are distributed through the [enterprise policy][enterprise-policy].
-2.  Unpacked extension directories from a local machine while in [developer mode][load-unpacked].
-3.  [Linux installation][linux-install].
+1.  Unpacked extension directories from a local machine while in [developer mode][load-unpacked].
+1.  Extensions hosted on a personal server for **Linux users only**. See [Linux
+    installation][linux-install].
+
+## Publishing {: #hosting }
+
+All extensions are distributed to users as a special ZIP file with a `.crx` suffix. Extensions
+hosted in the [Chrome Web Store][cws-docs] are uploaded through the [Developer
+Dashboard][developer-console] as `.zip` files. The publishing process automatically converts the
+`.zip` into a `.crx` file. 
+
+{% Aside %}
+
+See [Publish in the Chrome Web Store][publish] to learn more. 
+
+{% endAside%}
 
 ## Updating {: #updating }
 
 The Chrome Browser periodically checks for new versions of installed extensions and updates them
-without user intervention. See [Update your Chrome Web Store item][update] to learn more.
+without user intervention.
+
+{% Aside %}
+
+See [Update your Chrome Web Store item][update] to learn more.
+
+{% endAside%}
 
 [cws]: https://chrome.google.com/webstore/
 [cws-docs]: /docs/webstore
