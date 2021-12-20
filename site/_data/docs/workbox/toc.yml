@@ -30,3 +30,9 @@
     - url: /docs/workbox/managing-fallback-responses
     - url: /docs/workbox/handling-service-worker-updates
     - url: /docs/workbox/retrying-requests-when-back-online
+- url: /docs/workbox/modules
+  title: i18n.docs.workbox.modules
+  description: i18n.docs.workbox.modules_description
+- url: /docs/workbox/reference
+  title: i18n.docs.workbox.reference
+  description: i18n.docs.workbox.reference_description
