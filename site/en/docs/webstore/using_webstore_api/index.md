@@ -19,27 +19,27 @@ Take the following steps to get the access keys needed:
 
 1. Go to the [Google Cloud Console][google-dev-console].
 2. Create a new project or select an existing one.
-3. In the **search bar** type in “Chrome Web Store API”.
+3. In the **search bar** type “Chrome Web Store API”.
 4. Enable the **Chrome Web Store API**.
 
 **Customize a consent screen**.
 
 1. Go to **Credentials**.
-2. Click on **Configure consent screen**
-3. Select **External** > **Create**
-4. Fill out the **App information** required fields > **Save and Continue**
+2. Click **Configure consent screen**.
+3. Select **External** then **Create**.
+4. Fill out the required **App information** fields (listed below) then click **Save and Continue**.
     - App name.
     - User Support email.
     - Developer contact email.
-5. Skip Scopes, click **Save** > **Continue**.
-6. Add your email to **Test users**, then **Save** > **Continue**
+5. Skip Scopes. click **Save** then **Continue**.
+6. Add your email to **Test users**, then click **Save** then **Continue**.
 
 **Get the access keys**.
 
 1. Go to **Credentials**.
-2. Click **Create Credentials** > **OAuth client ID**.
+2. Click **Create Credentials** then **OAuth client ID**.
 4. For **Application type**, choose **Desktop App**.
-5. Fill out the name, then click **Create**
+5. Fill out the name, then click **Create**.
 
 The console will provide the client ID and client secret. You can retrieve an access token to work
 with the API. For example, enter this URL in your browser, replacing the $CLIENT_ID with the one for
@@ -56,7 +56,7 @@ You will see a page asking you to accept permission for the requested scope.
 
 Make sure you are requesting the token using the Google developer Account which owns the Chrome Web
 Store items you want to manage. This account can be different from the account you created the
-Google Developers Console project. For example, you can create an application for other developers
+Google Developers Console project with. For example, you can create an application for other developers
 to manage their apps, in which case you only need to register a Google Developers Console project.
 
 {% endAside %}
