@@ -218,7 +218,7 @@ For a full description of the publish method, see [Items:Publish][cws-api-publis
 ### Checking the upload status of an item {: #checkstatus }
 
 ```text
-Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID?projection=draft
+Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID?projection=DRAFT
 Type: GET
 Header Parameters: $TOKEN: the access token
 ```
@@ -231,12 +231,14 @@ curl \
 -H "Expect:" \
 -X GET \
 -v \
-https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID?projection=draft
+https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID?projection=DRAFT
 ```
 
 {% Aside %}
 
-Only "DRAFT" is supported at this time. For a full description of the get method, see [Items:Get][cws-api-get].
+Only **projection=DRAFT** is supported at this time. 
+
+For a full description of the get method, see [Items:Get][cws-api-get].
 
 {% endAside %}
 
