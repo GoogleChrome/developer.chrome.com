@@ -104,6 +104,7 @@ endpoints for creating a new item, updating an existing item, and publishing an 
 
 Below is a list of considerations for using the Publish API:
 
+- Developers are required to enable Two Step Verification for their Google Account in order to publish new extensions, or to update existing extensions.
 - Before you can publish a new item, you have to fill out the [Store
   Listing][store-listing] and [Privacy practices][privacy] tabs in the [Developer
 Dashboard][cws-dashboard].
