@@ -99,18 +99,19 @@ Google APIs][oauth2].
 
 ## Using the API {: #usingtheapi }
 
-Once you have an access token, your app can then use the Chrome Web Store Publish API. There are
-endpoints for creating items, updating items, and publishing items.
+Once you have an access token, your extension can then use the Chrome Web Store Publish API. There are
+endpoints for creating a new item, updating an existing item, and publishing an item. 
 
-{% Aside 'gotchas' %}
+Below is a list of considerations for using the Publish API:
 
-After creating your item for the first time, you must fill out the [Store Listing][store-listing] and [Privacy practices][privacy] in the [Chrome Web Store Developer
-Dashboard.][cws-dashboard].
+- Before you can publish a new item, you have to fill out the [Store
+  Listing][store-listing] and [Privacy practices][privacy] tabs in the [Developer
+Dashboard][cws-dashboard].
+- After publishing an new or existing item, it will undergo a review process. See [x][x] to learn more.
+- Before uploading an existing store item, remember to increase the [version number][x].
 
-More detail about the Web
-Store API can be found [here][cws-api].
-
-{% endAside %}
+Learn more about the Chrome Web
+Store Publish API [here][cws-api].
 
 ### Uploading a package to create a new store item {: #uploadnew }
 
