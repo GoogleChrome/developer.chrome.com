@@ -30,22 +30,14 @@ hosted in the [Chrome Web Store][cws-docs] are uploaded through the [Developer
 Dashboard][developer-console] as `.zip` files. The publishing process automatically converts the
 `.zip` into a `.crx` file. 
 
-{% Aside %}
-
 See [Publish in the Chrome Web Store][publish] to learn more. 
-
-{% endAside%}
 
 ## Updating {: #updating }
 
 The Chrome Browser periodically checks for new versions of installed extensions and updates them
 without user intervention.
 
-{% Aside %}
-
 See [Update your Chrome Web Store item][update] to learn more.
-
-{% endAside%}
 
 [cws]: https://chrome.google.com/webstore/
 [cws-docs]: /docs/webstore
