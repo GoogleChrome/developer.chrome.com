@@ -107,8 +107,8 @@ Below is a list of considerations for using the Publish API:
 - Before you can publish a new item, you have to fill out the [Store
   Listing][store-listing] and [Privacy practices][privacy] tabs in the [Developer
 Dashboard][cws-dashboard].
-- After publishing an new or existing item, it will undergo a review process. See [x][x] to learn more.
-- Before uploading an existing store item, remember to increase the [version number][x].
+- After publishing an new or existing item, it will undergo a review process. See [Review Process][review-process] to learn more.
+- Before updating an existing store item, remember to increase the [version][version].
 
 Learn more about the Chrome Web
 Store Publish API [here][cws-api].
@@ -253,3 +253,5 @@ For a full description of the get method, see [Items:Get][cws-api-get].
 [cws-api-get]: /docs/webstore/webstore_api/items/get
 [store-listing]: /docs/webstore/cws-dashboard-listing/
 [privacy]: /docs/webstore/cws-dashboard-privacy/
+[review-process]: /docs/webstore/review-process/
+[version]: /docs/extensions/mv3/manifest/version/
