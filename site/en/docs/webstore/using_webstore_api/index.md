@@ -9,12 +9,11 @@ description: How to programmatically create, update, and publish items in the Ch
 ## Overview {: #overview }
 
 The Chrome Web Store Publish API provides a set of REST endpoints for programmatically creating,
-updating, and publishing items in the Chrome Web Store. Use this API to automate the process
-of uploading and publishing items into the store.
+updating, and publishing items in the Chrome Web Store.
 
 ## Before you begin {: #beforeyoubegin }
 
-Take the following steps to use the Chrome Web Store Publish API:
+Take the following steps to get the access keys needed:
 
 **Enable the Chrome Web Store API**.
 
@@ -104,12 +103,13 @@ endpoints for creating a new item, updating an existing item, and publishing an 
 
 Below is a list of considerations for using the Publish API:
 
-- Developers are required to enable Two Step Verification for their Google Account in order to publish new extensions, or to update existing extensions.
+- Developers are required to enable Two-Step Verification for their Google Account to
+  publish or update an existing extension.
 - Before you can publish a new item, you have to fill out the [Store
   Listing][store-listing] and [Privacy practices][privacy] tabs in the [Developer
 Dashboard][cws-dashboard].
-- After publishing an new or existing item, it will undergo a review process. See [Review Process][review-process] to learn more.
-- Before updating an existing store item, remember to increase the [version][version].
+- After publishing a new or existing item, it will undergo a review process. See [Review Process][review-process] to learn more.
+- To release an update, increase the number in the [version][version] field of the manifest.
 
 Learn more about the Chrome Web
 Store Publish API [here][cws-api].
@@ -244,15 +244,15 @@ For a full description of the get method, see [Items:Get][cws-api-get].
 
 {% endAside %}
 
+[cws-api-get]: /docs/webstore/webstore_api/items/get
+[cws-api-insert]: /docs/webstore/webstore_api/items/insert
+[cws-api-publish]: /docs/webstore/webstore_api/items/publish
+[cws-api-update]: /docs/webstore/webstore_api/items/update
+[cws-api]: /docs/webstore/api_index
+[cws-dashboard]: https://chrome.google.com/webstore/developer/dashboard
 [google-dev-console]: https://console.developers.google.com
 [oauth2]: https://developers.google.com/accounts/docs/OAuth2
-[cws-dashboard]: https://chrome.google.com/webstore/developer/dashboard
-[cws-api]: /docs/webstore/api_index
-[cws-api-insert]: /docs/webstore/webstore_api/items/insert
-[cws-api-update]: /docs/webstore/webstore_api/items/update
-[cws-api-publish]: /docs/webstore/webstore_api/items/publish
-[cws-api-get]: /docs/webstore/webstore_api/items/get
-[store-listing]: /docs/webstore/cws-dashboard-listing/
 [privacy]: /docs/webstore/cws-dashboard-privacy/
 [review-process]: /docs/webstore/review-process/
+[store-listing]: /docs/webstore/cws-dashboard-listing/
 [version]: /docs/extensions/mv3/manifest/version/
