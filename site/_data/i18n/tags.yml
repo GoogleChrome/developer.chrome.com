@@ -46,6 +46,9 @@ encryption:
 extensions:
   en: Extensions
 
+fonts:
+  en: Fonts
+
 feature-policy:
   en: Feature-policy
 
