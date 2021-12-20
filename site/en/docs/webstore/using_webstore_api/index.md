@@ -41,7 +41,9 @@ Take the following steps to get the access keys needed:
 4. For **Application type**, choose **Desktop App**.
 5. Fill out the name, then click **Create**
 
-The console will provide the client ID and client secret. You can retrieve an access token to work with the API. For example, enter this URL in your browser, replacing the $CLIENT_ID with the one for your app:
+The console will provide the client ID and client secret. You can retrieve an access token to work
+with the API. For example, enter this URL in your browser, replacing the $CLIENT_ID with the one for
+your app:
 
 
 ```text
@@ -53,21 +55,23 @@ You will see a page asking you to accept permission for the requested scope.
 {% Aside %}
 
 Make sure you are requesting the token using the Google developer Account which owns the Chrome Web
-Store items you want to manage. This account can be different from the account you created the Google
-Developers Console project. For example, you can create an application for other developers to
-manage their apps, in which case you only need to register a Google Developers Console project.
+Store items you want to manage. This account can be different from the account you created the
+Google Developers Console project. For example, you can create an application for other developers
+to manage their apps, in which case you only need to register a Google Developers Console project.
 
 {% endAside %}
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ZwxRj8SD3Ld40BsjZnsX.png", alt="Permission request UI", width="308", height="249" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/ZwxRj8SD3Ld40BsjZnsX.png", alt="Permission request
+UI", width="308", height="249" %}
 
 Click **Accept** and copy the code. It should look something like this:
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KHtQ9uzphdR4oOsJQLVj.png", alt="UI for copying code", width="348", height="155" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/KHtQ9uzphdR4oOsJQLVj.png", alt="UI for copying code",
+width="348", height="155" %}
 
-Use this value to request an **access token**. For example, using `curl`, you can get an access token by
-executing the following command (replacing the values of $CLIENT\_ID, $CLIENT_SECRET, and \$CODE
-with the values from above):
+Use this value to request an **access token**. For example, using `curl`, you can get an access
+token by executing the following command (replacing the values of $CLIENT\_ID, $CLIENT_SECRET, and
+\$CODE with the values from above):
 
 ```bash
 > curl "https://accounts.google.com/o/oauth2/token" -d \
@@ -91,28 +95,27 @@ access tokens. Note that tokens expire after an hour.
 
 {% Aside %}
 
-For more information about getting OAuth 2.0 access tokens, see [Using OAuth 2.0 to Access
-Google APIs][oauth2].
+For more information about getting OAuth 2.0 access tokens, see [Using OAuth 2.0 to Access Google
+APIs][oauth2].
 
 {% endAside %}
 
 ## Using the API {: #usingtheapi }
 
-Once you have an access token, your extension can then use the Chrome Web Store Publish API. There are
-endpoints for creating a new item, updating an existing item, and publishing an item. 
+Once you have an access token, your extension can then use the Chrome Web Store Publish API. There
+are endpoints for creating a new item, updating an existing item, and publishing an item. 
 
 Below is a list of considerations for using the Publish API:
 
-- Developers are required to enable Two-Step Verification for their Google Account to
-  publish or update an existing extension.
-- Before you can publish a new item, you have to fill out the [Store
-  Listing][store-listing] and [Privacy practices][privacy] tabs in the [Developer
-Dashboard][cws-dashboard].
-- After publishing a new or existing item, it will undergo a review process. See [Review Process][review-process] to learn more.
+- Developers are required to enable Two-Step Verification for their Google Account to publish or
+  update an existing extension.
+- Before you can publish a new item, you have to fill out the [Store Listing][store-listing] and
+  [Privacy practices][privacy] tabs in the [Developer Dashboard][cws-dashboard].
+- After publishing a new or existing item, it will undergo a review process. See [Review
+  Process][review-process] to learn more.
 - To release an update, increase the number in the [version][version] field of the manifest.
 
-Learn more about the Chrome Web
-Store Publish API [here][cws-api].
+Learn more about the Chrome Web Store Publish API [here][cws-api].
 
 ### Uploading a package to create a new store item {: #uploadnew }
 
