@@ -18,28 +18,32 @@ Take the following steps to get the access keys needed:
 **Enable the Chrome Web Store API**.
 
 1. Go to the [Google Cloud Console][google-dev-console].
-2. Create a new project or select an existing one.
-3. In the **search bar** type “Chrome Web Store API”.
-4. Enable the **Chrome Web Store API**.
+1. Create a new project or select an existing one.
+   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/g5o7qpsDv5kKiQmlCwkv.png", alt="Create a new
+   project in the Google Console", width="600", height="149" %}  
+1. In the **search bar** type “Chrome Web Store API”.
+1. Enable the **Chrome Web Store API**.
 
 **Customize a consent screen**.
 
-1. Go to **Credentials**.
-2. Click **Configure consent screen**.
-3. Select **External** then **Create**.
-4. Fill out the required **App information** fields (listed below) then click **Save and Continue**.
+1. Go to **OAuth consent screen**.
+1. Select **External** then **Create**.
+   {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/epcr782dUmXvZwaL5jid.png", alt="Create an Oauth
+   consent screen", width="547", height="573" %}
+1. Fill out the required **App information** fields (listed below) then click **Save and Continue**.
     - App name.
     - User Support email.
     - Developer contact email.
-5. Skip Scopes. click **Save** then **Continue**.
-6. Add your email to **Test users**, then click **Save** then **Continue**.
+1. Skip Scopes. click **Save** then **Continue**.
+1. Add your email to **Test users**, then click **Save** then **Continue**.
 
 **Get the access keys**.
 
 1. Go to **Credentials**.
-2. Click **Create Credentials** then **OAuth client ID**.
-4. For **Application type**, choose **Desktop App**.
-5. Fill out the name, then click **Create**.
+1. Click **Create Credentials** then **OAuth client ID**.
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vZdPhBUnJytNg5W9TG0I.png", alt="Create credentials", width="657", height="106" %}  
+1. For **Application type**, choose **Desktop App**.
+1. Fill out the name, then click **Create**.
 
 The console will provide the client ID and client secret. You can retrieve an access token to work
 with the API. For example, enter this URL in your browser, replacing the $CLIENT_ID with the one for
@@ -107,7 +111,7 @@ are endpoints for creating a new item, updating an existing item, and publishing
 
 Below is a list of considerations for using the Publish API:
 
-- Developers are required to enable Two-Step Verification for their Google Account to publish or
+- Developers are required to enable [Two-Step Verification][two-factor] for their Google Account to publish or
   update an existing extension.
 - Before you can publish a new item, you have to fill out the [Store Listing][store-listing] and
   [Privacy practices][privacy] tabs in the [Developer Dashboard][cws-dashboard].
@@ -258,4 +262,5 @@ For a full description of the get method, see [Items:Get][cws-api-get].
 [privacy]: /docs/webstore/cws-dashboard-privacy/
 [review-process]: /docs/webstore/review-process/
 [store-listing]: /docs/webstore/cws-dashboard-listing/
+[two-factor]: https://support.google.com/accounts/answer/185839?hl=en&ref_topic=2954345
 [version]: /docs/extensions/mv3/manifest/version/
