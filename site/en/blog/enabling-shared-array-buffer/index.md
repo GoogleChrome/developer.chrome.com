@@ -12,7 +12,7 @@ description: >
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
 date: 2021-01-18
-updated: 2021-12-15
+updated: 2021-12-21
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
 alt: A collection of padlocks.
 ---
@@ -85,7 +85,7 @@ the `Cross-Origin-Resource-Policy` header.
 
 Though `credentialless` mode is available on Chrome from version 96, it's not
 supported by any other browsers yet, this may cause some developers find it
-challenging to deploy COOP/COEP at this stage.
+challenging to deploy COOP or COEP at this stage.
 
 Also, it's known that the `Cross-Origin-Opener-Policy: same-origin` header will
 break integrations that require cross-origin window interactions such as OAuth
