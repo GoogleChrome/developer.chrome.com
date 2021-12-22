@@ -93,7 +93,7 @@ gradients.", width="564", height="169" %}
 
 Tweet your results to [@googlefonts](https://twitter.com/googlefonts) 🙂 Why not try a radial or sweep gradient?
 
-## New with COLRv1 #
+## New with COLRv1
 
 The font format supports multiple ways to support color, all with different
 tradeoffs – but none have been successful on the web so far. (To learn more
@@ -147,18 +147,13 @@ vs. 1.85MB", width="800", height="495" %}
 A fresh color font makes visual highlights, headlines, and banners really pop
 out.
 
-_TODO: Replace image with Plakato Glitch_
-
-<figure> {% Img
-src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/y9DYZuiXxdGshTyTJnSI.png", alt="Example
-text styled with the Plakato font, which uses basic geometric shapes to build
-letters, here featuring pink to red and purple sweep gradient.", width="800",
-height="559" %} <figcaption><a
-href="https://www.underware.nl/blog/2022/01/plakato-color/">Plakato COLRv1</a>
+<figure> {% Glitch { id: 'colrv1-underware-plakato', path: 'index.html' } %}
+<figcaption><a
+href="https://www.underware.nl/blog/2022/01/plakato-color/">Plakato Color Happy 2022</a>
 featuring energetic sweep gradients, made by the innovative type foundry <a
 href="https://underware.nl">Underware</a>, (<a
-href="https://twitter.com/underware">@underware</a> on Twitter). Read more about Underware’s
-first COLRv1 release in their <a
+href="https://twitter.com/underware">@underware</a> on Twitter). Read more about
+Underware’s first COLRv1 release in their <a
 href="https://www.underware.nl/blog/2022/01/plakato-color/">blog post</a>.
 </figcaption> </figure>
 
@@ -185,7 +180,6 @@ If you have an emoji font you just render the text in the font, like this:
 
 .emoji {
   font-family: "Noto Color Emoji", sans-serif;
-  font-size: 6em;
 }
 </style>
 <span class="emoji">🙂</span>
@@ -196,7 +190,7 @@ a compact font file instead of a catalog of image assets.
 
 <figure> {% Img
 src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/dgPBLfMKknICwHOyNgrI.png", alt="Emoji
-picker UI as used on GitHub", width="408", height="390" %} <figcaption>Emoji
+picker UI as used on GitHub", width="320", height="306" %} <figcaption>Emoji
 Reaction Picker on GitHub</figcaption> </figure>
 
 Imagine how many images you'd have to fetch for a complete emoji picker!
@@ -275,7 +269,7 @@ on the COLRv1 font format itself, file an issue at the
 [COLRv1 specification GitHub repository](https://github.com/googlefonts/colr-gradients-spec/issues).
 
 With Chrome 98, we’re excited about how COLRv1 brings a whole new level of
-typographic creativity to the web!
+typographic creativity to the web.
 
 ## Further Reading
 
@@ -303,4 +297,4 @@ To learn how COLRv1 works and how it's implemented in Chrome, check out Dominik'
 Big thanks to Behdad Esfahbod for critically important contributions to the
 design of the COLRv1 specification from the very beginning and to Peter
 Constable for contributions to the specification, continuous COLRv1 advocacy and
-actively fostering its inclusion to OpenType 1.9.
+actively fostering its inclusion in OpenType 1.9.
