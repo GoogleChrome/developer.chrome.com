@@ -20,7 +20,8 @@ tags:
   - fonts
 ---
 
-*Compact, compression-friendly, color vector fonts with all your favorite gradient flavors.*
+*Compact, compression-friendly, color vector fonts with all your favorite
+gradient flavors.*
 
 In Chrome 98, the Chrome and Fonts teams have added support for COLRv1, an
 evolution of the COLRv0 font format intended to make color fonts widespread by
@@ -82,7 +83,7 @@ out the [nanoemoji font compiler](https://github.com/googlefonts/nanoemoji)
 which allows you to build COLRv1 fonts from SVG source images, then try them in
 Chrome 98 or later. Try making your own spin on Bungee Spice by changing the
 gradient colors using
-[these instructions](https://github.com/rsheeter/Bungee/blob/master/README.md#build-your-own-copy).
+[these instructions](https://github.com/rsheeter/Bungee/blob/main/README.md#build-your-own-copy).
 
 For example, you might modify the Bungee Spice font to have a blue and red gradient, like this:
 
@@ -265,7 +266,7 @@ Chrome team is working on adding
 If COLRv1 fonts piques your interest, ask your font vendor about a COLRv1 color
 font to use in your project, try the [examples and demos](#show-me-your-colors)
 above, or why not dive right in and experiment with
-[making your own](https://github.com/rsheeter/Bungee/blob/master/README.md#build-your-own-copy)?
+[making your own](https://github.com/rsheeter/Bungee/blob/main/README.md#build-your-own-copy)?
 
 If you have feedback on COLRv1 in Chrome, post to the
 [blink-dev mailing list](https://groups.google.com/a/chromium.org/g/blink-dev),
