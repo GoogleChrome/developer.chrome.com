@@ -27,33 +27,33 @@ evolution of the COLRv0 font format intended to make color fonts widespread by
 adding gradients, compositing and blending, and improved internal shape reuse
 for crisp and compact font files that compress well.
 
-{% Aside 'caution' %}
+{% Aside %}
 Examples in this blog post require a browser that supports
 COLRv1 fonts. Try viewing this post in Chrome 98 or above.
 {% endAside %}
 
-## Color Now
+## Color now
 
 On the web, text is generally drawn in a color specified in CSS. The font does
 not define any particular color, it just indicates where pixels should be
-placed. That's usually a good thing, CSS lets the author flexibly choose a
-color. However, sometimes a glyph has multiple colors and those colors have
+placed. That's usually a good thing. CSS lets the author flexibly choose a
+color. However, sometimes a glyph contains multiple colors that together have
 meaning. For example, this flag {% Img
 src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/8hQhmhh6F8Ff7kquy4mB.png",
 alt="Transgender flag consisting of pale blue and pale pink stripes.",
-height="16", width="16" %} with light blue, pink, and white stripes would not convey the
-same meaning if it was simply drawn in the current text color.
+height="16", width="16" %} with light blue, pink, and white stripes would not
+convey the same meaning if it was simply drawn in the current text color.
 
-Today, for most users, emoji are the only color fonts they see. Emoji typically
-appear on the web via the system emoji font, or by inserting images (which has
-its own complications, {% Img
+Today, for most users, emojis are the only color fonts they see. Emojis
+typically appear on the web via the system emoji font, or by inserting images
+(which has its own complications, {% Img
 src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/uFlyeIll20cgXsyl7npT.png", alt="Panda
-emoji with sad facial expression.", height="16", width="16" %}). Large file sizes
-especially for bitmap-based color fonts have made it difficult to use web fonts
-for emoji. By supporting COLRv1, we hope to see a proliferation of creative
-color font use on the web and beyond.
+emoji with sad facial expression.", height="16", width="16" %}). Large file
+sizes especially for bitmap-based color fonts have made it difficult to use web
+fonts for emoji. By supporting COLRv1, we hope to see a proliferation of
+creative color font use on the web and beyond.
 
-## Show me your Colors
+## Show me your colors
 
 We've created a couple of examples for you to play with:
 
@@ -75,12 +75,12 @@ We've created a couple of examples for you to play with:
 The example assets from Google Fonts used in the example are live in the
 [Google Fonts web API](https://developers.google.com/fonts/docs/css2). They are
 not listed in the directory at [fonts.google.com](https://fonts.google.com) as
-they will only work on Chrome 98+ at the moment and showcase experimental work.
+they will only work on Chrome 98 or later and showcase experimental work.
 
 You can now make your own COLRv1 fonts using free and open-source tools. Check
 out the [nanoemoji font compiler](https://github.com/googlefonts/nanoemoji)
-which allows you to build COLRv1 fonts from SVG source images, then try them out
-in Chrome 98 or later. Try making your own spin on Bungee Spice by changing the
+which allows you to build COLRv1 fonts from SVG source images, then try them in
+Chrome 98 or later. Try making your own spin on Bungee Spice by changing the
 gradient colors using
 [these instructions](https://github.com/rsheeter/Bungee/blob/master/README.md#build-your-own-copy).
 
@@ -113,20 +113,19 @@ glyph elements using a full set of translate, rotate, sheer, and scale
 transformations. Plus, it features a few extra features, such as support for
 font variations.
 
-<figure>
-    {% Img src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/GRJkXpRBl8vdCAWcIjA1.png",
-    alt="Blue and purple crystal ball emoji with stars on brown base.", width="360",
-    height="360" %}
-    <figcaption>Shape reuse in the crystal ball emoji</figcaption>
-</figure>
+<figure> {% Img
+    src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/GRJkXpRBl8vdCAWcIjA1.png", alt="Blue
+    and purple crystal ball emoji with reused stars on a brown base.",
+    width="360", height="360" %} <figcaption>Shape reuse in the crystal ball
+    emoji</figcaption> </figure>
 
 Think about the crystal ball emoji as an example: The star-shaped highlights are
 the same shape but different sizes, which means just one shape can be
-repositioned and reused without duplication inside the file.  The format allows
+repositioned and reused without duplication inside the file. The format allows
 you to reuse a full glyph within a new glyph, without having to redundantly
 encode the same shapes for each glyph. Imagine a decorative color font with
 floral decorations, where the same flower shapes are placed on different letters
-by just referencing existing color glyphs.  For the web font use case, COLRv1
+by just referencing existing color glyphs. For the web font use case, COLRv1
 compresses well under woff2. For example, a test build of Twemoji using COLRv1
 takes about 1.2 MB inflated, but is about 0.6MB in woff2 form. A build of the
 full Noto Emoji Glyph set is reduced from 9MB for the bitmap version to 1.85MB
@@ -134,17 +133,18 @@ in COLRv1+woff2 form.
 
 <figure>
 {% Img src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/OULzoVLf1nYWZCaZWhBa.png",
-alt="Bar chart comparing Noto Emoji as Bitmap font and COLRv1 font, ~9MB
+alt="Bar chart comparing Noto Emoji as Bitmap font and COLRv1 font, about 9MB
 vs. 1.85MB", width="800", height="495" %}
 <figcaption>Noto Emoji font size CBDT/CBLC vs. COLRv1 after WOFF2 compression.
 </figcaption>
 </figure>
 
-## Color Font Use Cases
+## Color font use cases
 
-### Catchy Headlines
+### Catchy headlines
 
-A fresh color font makes visual highlights, headlines, banners really pop out.
+A fresh color font makes visual highlights, headlines, and banners really pop
+out.
 
 _TODO: Replace image with Plakato Glitch_
 
@@ -162,13 +162,13 @@ href="https://www.underware.nl/blog/2022/01/plakato-color/">blog post</a>.
 </figcaption> </figure>
 
 
-### No more image replacement: Emoji Fonts
+### No more image replacement: emoji fonts
 
-If you support user generated content, your users probably use emoji. Today it's
-very common to scan text and replace any emoji encountered with images to ensure
-consistent cross-platform rendering and the ability to support newer emojis than
-the OS supports. Those images then have to be switched back to text during
-clipboard operations. Here's a real example:
+If you support user generated content, your users probably use emojis. Today
+it's very common to scan text and replace any emoji encountered with images to
+ensure consistent cross-platform rendering and the ability to support newer
+emojis than the OS supports. Those images then have to be switched back to text
+during clipboard operations. Here's a real example:
 
 <figure>
 {% Img src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/dgpLYdWxn0G94lH0rVWI.png", alt="A
@@ -200,18 +200,18 @@ Reaction Picker on GitHub</figcaption> </figure>
 
 Imagine how many images you'd have to fetch for a complete emoji picker!
 
-### Color in Icon Fonts
+### Color in icon fonts
 
-Using color in icon fonts adds clarity through layers and makes glyphs easier to understand.
+Using color in icon fonts adds clarity and makes glyphs easier to understand.
 
-<figure>
-{% Img src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/MHHhcD15T0j4q0J3jhPW.png", alt="3 green icons in black outline", width="400", height="354" %}
-<figcaption>
-Material two-tone icons from <a href="https://fonts.google.com/icons">https://fonts.google.com/icons</a>
-</figcaption>
-</figure>
+<figure> {% Img
+src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/MHHhcD15T0j4q0J3jhPW.png", alt="Three
+green icons in black outline", width="400", height="354" %} <figcaption>
+Material two-tone icons from <a
+href="https://fonts.google.com/icons">https://fonts.google.com/icons</a>
+</figcaption> </figure>
 
-### Artistic Expression
+### Artistic expression
 
 Space-efficient color fonts enable new forms of artistic expression in text on
 the web. This example of a Kufi-style Arabic font uses color gradients as an
@@ -225,9 +225,7 @@ letters with gradients from black to red.", width="600", height="218" %}
 <figcaption><a href="https://github.com/aliftype/reem-kufi">Reem Kufi Ink</a>,
 an Arabic font by Khaled Hosny</figcaption> </figure>
 
-## What’s next?
-
-### Feature Detection
+## Feature detection
 
 At the moment, figuring out whether a browser engine supports a specific color
 font format is possible by means of user-agent sniffing or by searching in a
@@ -241,7 +239,7 @@ determining support.
 The Chrome team wants to improve that and has started a series of discussions
 [[1](https://github.com/w3c/csswg-drafts/issues/6520),
 [2](https://github.com/w3c/csswg-drafts/issues/6791)] in the CSS working group
-to provide information on browser font technology support in JS and
+to provide information on browser font technology support in JavaScript and
 declaratively in CSS. The team plans to release efficient feature detection for
 color font and other font technologies in a future version of Chrome.
 
@@ -254,20 +252,19 @@ sniffing to determine whether COLRv1 support is available. Then you deliver CSS
 that loads COLRv1 fonts in supporting user agents and use an alternative font
 format such as COLRv0, a bitmap font format or OpenType SVG in other browsers.
 
-### CSS Font-Palette Support
+## CSS font-palette support
 
 It would be tremendously useful if using a different set of colors would not
-require a new font. Thankfully, a mechanism exists, the
+require a new font. Thankfully, a mechanism exists: the
 [font-palette CSS property](https://www.w3.org/TR/css-fonts-4/#font-palette-prop). The
 Chrome team is working on adding
 [support for font-palette in Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1170794).
 
-## COLRv1 Fonts & You!
+## COLRv1 fonts & you
 
 If COLRv1 fonts piques your interest, ask your font vendor about a COLRv1 color
-font to use in your project, try out the
-[examples and demos](#show-me-your-colors) above, or why not dive right in and
-experiment with
+font to use in your project, try the [examples and demos](#show-me-your-colors)
+above, or why not dive right in and experiment with
 [making your own](https://github.com/rsheeter/Bungee/blob/master/README.md#build-your-own-copy)?
 
 If you have feedback on COLRv1 in Chrome, post to the
@@ -288,14 +285,14 @@ To learn how COLRv1 works and how it's implemented in Chrome, check out Dominik'
 {% YouTube id="BmqYm5Wwz8M" %}
 
 * International Unicode Conference #45: Vector Color Fonts, talk by Roderick
-  Sheeter, Peter Constable and Dominik Röttsches
+  Sheeter, Peter Constable, and Dominik Röttsches
   ([video](https://vimeo.com/645566639),
   [talk details](https://www.unicodeconference.org/program.htm#:~:text=Vector%20Color%20Fonts))
 * [nanoemoji font compiler](https://github.com/googlefonts/nanoemoji), producing
   COLRv1 fonts from SVG images
 * Google Fonts’
   [color-fonts GitHub repository](https://github.com/googlefonts/color-fonts)
-  containing current builds of Noto Emoji, Twemoji and other sample fonts
+  containing current builds of Noto Emoji, Twemoji, and other sample fonts
 * DJR's showcase of the [Bradley Initials](https://tools.djr.com/misc/bradley-initials/) font, exploring COLRv1
 * [ChromaCheck tool and library](https://pixelambacht.nl/chromacheck/) to
   feature-detect available color font technologies
