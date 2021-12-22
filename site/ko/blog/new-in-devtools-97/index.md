@@ -79,14 +79,13 @@ Chrome 프로필 동기화를 활성화하였을 때 DevTools 설정이 기본�
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LUwFNTDyP22L1euSGg73.png", alt="DevTools 동기화 설정", width="800", height="654" %}
 
-이 새로운 설정은 여러 기기를 통해 작업하는 것을 더 수월하게 해줄 것입니다.예를 들어, 다음과 같은 디자인 설정이 여러 기기에서 동기화되어 일관된 경험을 제공할 수 있으며 같은 세팅을 여러번 재정의할 필요가 없어집니다. 동기화 기능에 대한 더 자세한 내용은 [DevTools 맞춤 설정](/docs/devtools/customize/) 에서 살펴보세요.
+이 새로운 설정은 여러 기기를 통해 작업하는 것을 더 수월하게 해줄 것입니다. 예를 들어, 다음과 같은 디자인 설정이 여러 기기에서 동기화되어 일관된 경험을 제공할 수 있으며 같은 세팅을 여러번 재정의할 필요가 없어집니다. 동기화 기능에 대한 더 자세한 내용은 [DevTools 맞춤 설정](/docs/devtools/customize/) 에서 살펴보세요.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="디자인 설정", width="800", height="584" %}
 
-이 기능은 현재 실험실 기능이며, Chrome 팀에서 해당 기능을 작업하고 있습니다. 어떤 피드백이 있다면 [여기](https://crbug.com/1245541) 에서 Chorme 팀에 공유해주세요.
+이 기능은 현재 실험실 기능이며, Chrome 팀에서 해당 기능을 작업하고 있습니다. 피드백은 [여기](https://crbug.com/1245541) 를 통해 Chorme 팀에 공유해주세요.
 
 Chromium issue: [1245541](https://crbug.com/1245541)
-
 
 {% include 'partials/devtools/ko/reach-out.md' %}
 {% include 'partials/devtools/ko/whats-new.md' %}
