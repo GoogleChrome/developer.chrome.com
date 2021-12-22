@@ -20,7 +20,7 @@ tags:
   - fonts
 ---
 
-*Compact, compression-friendly, color vector fonts with all your favorite gradient flavors*
+*Compact, compression-friendly, color vector fonts with all your favorite gradient flavors.*
 
 In Chrome 98, the Chrome and Fonts teams have added support for COLRv1, an
 evolution of the COLRv0 font format intended to make color fonts widespread by
@@ -110,8 +110,8 @@ COLRv1 has expressive capability roughly equivalent to
 top. There are four types of color fills: solid colors, linear gradients, radial
 gradients, and sweep/conic gradients. COLRv1 lets you reposition and transform
 glyph elements using a full set of translate, rotate, sheer, and scale
-transformations. Plus, it features a few extra features, such as support for
-font variations.
+transformations. Plus, it features support for font variations and reuses
+existing shape definition formats in the font.
 
 <figure> {% Img
     src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/GRJkXpRBl8vdCAWcIjA1.png", alt="Blue
@@ -296,3 +296,10 @@ To learn how COLRv1 works and how it's implemented in Chrome, check out Dominik'
 * DJR's showcase of the [Bradley Initials](https://tools.djr.com/misc/bradley-initials/) font, exploring COLRv1
 * [ChromaCheck tool and library](https://pixelambacht.nl/chromacheck/) to
   feature-detect available color font technologies
+
+## Acknowledgements
+
+Big thanks to Behdad Esfahbod for critically important contributions to the
+design of the COLRv1 specification from the very beginning and to Peter
+Constable for contributions to the specification, continuous COLRv1 advocacy and
+actively fostering its inclusion to OpenType 1.9.
