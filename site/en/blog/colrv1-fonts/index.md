@@ -294,7 +294,7 @@ To learn how COLRv1 works and how it's implemented in Chrome, check out Dominik'
 
 ## Acknowledgements
 
-Big thanks to Behdad Esfahbod for critically important contributions to the
-design of the COLRv1 specification from the very beginning and to Peter
-Constable for contributions to the specification, continuous COLRv1 advocacy and
-actively fostering its inclusion in OpenType 1.9.
+A big thank you to Behdad Esfahbod, Cosimo Lupo, Peter Constable, Ben Wagner,
+Dave Crossland, Vladimir Levantovsky, Jonathan Kew, Laurence Penney, Chris
+Lilley, David Jonathan Ross, Underware, Roel Niskens and others for their
+contributions to COLRv1.
