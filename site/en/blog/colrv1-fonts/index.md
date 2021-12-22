@@ -271,7 +271,7 @@ on the COLRv1 font format itself, file an issue at the
 With Chrome 98, we’re excited about how COLRv1 brings a whole new level of
 typographic creativity to the web.
 
-## Further Reading
+## Learn more
 
 If you're interested in more details, we have a couple more resources for you:
 
@@ -296,5 +296,5 @@ To learn how COLRv1 works and how it's implemented in Chrome, check out Dominik'
 
 A big thank you to Behdad Esfahbod, Cosimo Lupo, Peter Constable, Ben Wagner,
 Dave Crossland, Vladimir Levantovsky, Jonathan Kew, Laurence Penney, Chris
-Lilley, David Jonathan Ross, Underware, Roel Niskens and others for their
+Lilley, David Jonathan Ross, Underware, Roel Niskens, and others for their
 contributions to COLRv1.
