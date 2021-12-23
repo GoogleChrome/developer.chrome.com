@@ -111,7 +111,7 @@ are endpoints for creating a new item, updating an existing item, and publishing
 
 Below is a list of considerations for using the Publish API:
 
-- Developers are required to enable [Two-Step Verification][two-factor] for their Google Account to publish or
+- Developers are required to enable [2-Step Verification][two-factor] for their Google Account to publish or
   update an existing extension.
 - Before you can publish a new item, you have to fill out the [Store Listing][store-listing] and
   [Privacy practices][privacy] tabs in the [Developer Dashboard][cws-dashboard].
