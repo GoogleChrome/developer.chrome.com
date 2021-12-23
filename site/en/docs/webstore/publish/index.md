@@ -23,11 +23,11 @@ intend.
 
 To publish your item to the Chrome Web Store, follow these steps:
 
-1.  Create your item's zip file
-2.  Create and setup a developer account
-3.  Upload your item
-4.  Add assets for your listing
-5.  Submit your item for publishing
+1.  Create your item's zip file.
+2.  Create and setup a developer account.
+3.  Upload your item.
+4.  Add assets for your listing.
+5.  Submit your item for publishing.
 
 We'll go into detail about each step below.
 
@@ -177,13 +177,22 @@ status", width="700", height="84" %}
 ### Review of submitted items {: #review-of-submitted-items }
 
 After you submit the item for review, it will undergo a review process. The time for this review
-depends on the nature of your item. See the [FAQ on review times][review-times] for more details.
+depends on the nature of your item. See [review times][review-times] for more details.
 
 There are important emails like take down or rejection notifications that are enabled by default. To receive an email notification when your item is published or staged, you can enable notifications in the Account page.
 
-{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/l27aRFGCN4MJURmpoCQN.png", alt="Screenshot of enable staged and reviewed items", width="709", height="238" %}
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/l27aRFGCN4MJURmpoCQN.png", alt="Screenshot of enable
+staged and reviewed items", width="709", height="238" %}
 
-[cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
+## Additional resources
+
+- [Update your Chrome Web Store Item][update].
+- Learn how to [Manage your Chrome Web Store Item][cws-manage].
+- Understand the [Chrome Web Store Review Process][cws-review].
+
+[cws-manage]: /docs/webstore/manage/
+[cws-review]: /docs/webstore/review-process/
+[cws-support]: https://support.google.com/chrome_webstore/contact/one_stop_support
 [description]: /docs/apps/manifest/description/
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
 [distribution]: /docs/webstore/cws-dashboard-distribution
@@ -194,9 +203,9 @@ There are important emails like take down or rejection notifications that are en
 [name]: /docs/extensions/mv3/manifest/name
 [privacy]: /docs/webstore/cws-dashboard-privacy
 [register]: /docs/webstore/register
-[review-times]: /docs/webstore/faq#faq-listing-108
-[user-data]: /docs/webstore/user_data/
+[review-times]: /docs/webstore/review-process/#review-time
 [update]: /docs/webstore/update
+[user-data]: /docs/webstore/user_data/
 [verified-publisher]: /docs/webstore/cws-dashboard-listing/#displaying-your-verified-publisher-status
 [version]: /docs/extensions/mv3/manifest/version
 

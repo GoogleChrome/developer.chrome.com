@@ -12,7 +12,7 @@ the Chrome Web Store.
 
 ## About the lifecycle of an item in the Chrome Web Store 
 
-All Chrome Web Store items go through an automated review process. In some instances a manual review
+All Chrome Web Store items go through an automated [review process][cws-review]. In some instances a manual review
 is required, especially when sensitive permissions are requested. For this reason review times
 and/or approval times can take longer. Since a Chrome Web Store item goes through several stages,
 it's important to keep track of your item's status. See the lifecycle diagram below:
@@ -53,7 +53,8 @@ can also find this information in the Status tab of your item.
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/C4wpnEeMriI9YeDAMDIr.png", alt="The Chrome Web Store
 Status Tab", width="700", height="276" %}
 
-If you have been informed about a violation and you do not rectify your item will be taken down. 
+If you have been informed about a violation and you do not rectify your item will be taken down. See
+[Violation enforcement][enforcement] for more details.
 
 {% Aside %} 
 
@@ -210,9 +211,11 @@ Analytics ID in the **Store listing Tab** under Additional fields.
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/nYdeRcgteYZL6pTyPQMA.png", alt="where to add google
 analytics id", width="787", height="121" %}
 
+[cws-review]: /docs/webstore/review-process/
 [cws-support]: https://support.google.com/chrome_webstore/contact/dev_account_transfer
 [dev-dashboard]: https://chrome.google.com/webstore/devconsole
 [dev-policies]: /docs/webstore/program_policies
+[enforcement]: /docs/webstore/review-process/#enforcement
 [support-tab]: #user-support-tab
 [troubleshooting]: /docs/webstore/troubleshooting/
 [whats-new]: /docs/extensions/whatsnew/
