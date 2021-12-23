@@ -1,14 +1,17 @@
 ## 더 많은 DevTools 기능 {: #whats-new }
+
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
 
-<!-- ### Chrome 97 {: #chrome97 }
-* [Preview feature: New Recorder panel](/ko/blog/new-in-devtools-97/#recorder)
-* [Refresh device list in Device Mode](/ko/blog/new-in-devtools-97/#device)
-* [Autocomplete with Edit as HTML](/ko/blog/new-in-devtools-97/#code-completion)
-* [Improved code debugging experience](/ko/blog/new-in-devtools-97/#debugging)
-* [Syncing DevTools settings across devices](/ko/blog/new-in-devtools-97/#sync) -->
+### Chrome 97 {: #chrome97 }
+
+* [기능 미리보기: 신규 Recorder 패널](/ko/blog/new-in-devtools-97/#recorder)
+* [Device Mode 의 기기 목록 갱신](/ko/blog/new-in-devtools-97/#device)
+* [HTML로 수정에서 자동완성](/ko/blog/new-in-devtools-97/#code-completion)
+* [코드 디버깅 경험 개선](/ko/blog/new-in-devtools-97/#debugging)
+* [[실험적 기능] 여러 기기 사이의 DevTools 설정 동기화](/ko/blog/new-in-devtools-97/#sync)
 
 ### Chrome 96 {: #chrome96 }
+
 * [미리보기 기능: 새로운 CSS 개요 영역](/ko/blog/new-in-devtools-96/#css-overview)
 * [복원 및 개선된 CSS 길이 편집 및 복사 경험](/ko/blog/new-in-devtools-96/#length)
 * [CSS 의 prefers-contrast 미디어 기능 에뮬레이션](/ko/blog/new-in-devtools-96/#prefers-contrast)
@@ -24,6 +27,7 @@
 * [[실험실 기능] 애플리케이션 패널에 새롭게 추가된 Reporting API 영역](/ko/blog/new-in-devtools-96/#reporting-api)
 
 ### Chrome 95 {: #chrome95 }
+
 * [새 CSS 길이 작성 도구](/ko/blog/new-in-devtools-95/#length)
 * [문제 탭에서 문제 숨기기](/ko/blog/new-in-devtools-95/#hide-issues)
 * [속성 표시 개선](/ko/blog/new-in-devtools-95/#properties)
