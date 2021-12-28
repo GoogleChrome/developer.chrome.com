@@ -6,7 +6,7 @@ authors:
 date: 2021-11-29
 updated: 2021-11-29
 description:
-  "新的“录制器”面板, 多设备模式中更新的设备列表以及更多。"
+  "新的录制器面板, 多设备模式中更新的设备列表以及更多。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YO7JQwXI16NSgxijKq4v.jpg'
 alt: ''
 tags:
@@ -29,24 +29,24 @@ tags:
 
 
 <!-- ## Preview feature: New Recorder panel {: #recorder } -->
-## 预览特性：新的“录制器”面板 {: #recorder }
+## 预览特性：新的**录制器**面板 {: #recorder }
 
 <!-- Use the new **Recorder** panel to record, replay and measure user flows.  -->
-利用新的“录制器”面板来录制、重放、以及测量用户操作的性能。
+利用新的**录制器**面板来录制、重放、以及测量用户操作的性能。
 
 <!-- [Open the **Recorder** panel](/docs/devtools/recorder/#open). Follow the instructions on screen to start a new recording.  -->
-打开“录制器”面板(/docs/devtools/recorder/#open)。请跟随屏幕上的指示来开始一次新的录制。
+打开**录制器**面板(/docs/devtools/recorder/#open)。请跟随屏幕上的指示来开始一次新的录制。
 
 <!-- For example, you can record the coffee checkout process with this [coffee ordering demo](https://coffee-cart.netlify.app/) application. After adding a coffee and filling out payment details, you can end the recording, replay the process or click on the **Measure performance** button to measure the user flow in the **Performance** panel. -->
-例如，您可以在这个[点咖啡展示](https://coffee-cart.netlify.app/)应用上录制一次咖啡购买的过程。在添加一杯咖啡并填写支付信息之后，您可以结束录制，重放这个过程，或点击“测量性能”按钮来在“性能”面板中测量用户操作的性能。
+例如，您可以在这个[点咖啡](https://coffee-cart.netlify.app/)应用上录制一次咖啡购买的过程。在添加一杯咖啡并填写支付信息之后，您可以结束录制，重放这个过程，或点击**测量性能**按钮来在**性能**面板中测量用户操作的性能。
 
 <!-- Go to the **Recorder** panel [documentation](/docs/devtools/recorder/) to learn more with the step-by-step tutorial! -->
-如果想通过逐步教程来了解更多，请访问“录制器”面板的[文档](/docs/devtools/recorder/)！
+如果想通过教程来逐步了解更多内容，请访问**录制器**面板的[文档](/docs/devtools/recorder/)！
 
 <!-- The **Recorder** panel is a preview feature. Our team is still actively working on it and we are looking for your [feedback](https://goo.gle/recorder-feedback) for further enhancements. -->
-“录制”面板特性目前还处于预览阶段。我们团队正在积极努力开发该功能。我们期待您的[反馈](https://goo.gle/recorder-feedback)以便于我们做进一步改进。
+**录制器**面板特性目前还处于预览阶段。我们团队正在积极努力开发该功能。我们期待您的[反馈](https://goo.gle/recorder-feedback)以便于我们做进一步改进。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3EpVa15PtbhFwwszqyWF.png", alt="“录制器”面板", width="800", height="540" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/3EpVa15PtbhFwwszqyWF.png", alt="录制器面板", width="800", height="540" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ef26abc89035075bbdb08f1b26c1b8fd942ffc04 #}
 
@@ -57,7 +57,7 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 ## 多设备模式中更新的设备列表 {: #device }
 
 <!-- [Enabling the Device Toolbar](/docs/devtools/device-mode#viewport), more modern devices are now added in the device list. Select a device to simulate its dimensions. -->
-[启用设备工具栏](/docs/devtools/device-mode#viewport)之后可以发现，设备列表中添加了更多的现代设备。请选择其中之一来模拟该设备的尺寸。
+[启用设备工具栏](/docs/devtools/device-mode#viewport)之后可以发现，设备列表中添加了更多的现代设备。请选择其中一个设备来模拟该设备的尺寸。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Trx5NqE9RrqpWiN24iZ0.png", alt="多设备模式中更新的设备列表", width="800", height="547" %}
 
@@ -70,7 +70,7 @@ Chromium 议题: [1223525](https://crbug.com/1223525)
 ## 以 HTML 格式修改时自动补全 {: #code-completion }
 
 <!-- The **Edit as HTML** UI now supports autocomplete and syntax highlights. In the **Elements** panel, right click on an element, and select  **Edit as HTML**. Try typing a DOM property (e.g. `id`, `aria`), the autocomplete should help you find the property name you're looking for. -->
-**以 HTML 格式修改**现在支持自动补全和语法高亮了。在“元素”面板中，右键点击一个元素并选择**以 HTML 格式修改**。试着输入一个 DOM 属性（例如 `id`、`aria`），自动补全会帮助您找到您想要的属性。
+**以 HTML 格式修改**现已支持自动补全和语法高亮。在**元素**面板中，右键点击一个元素并选择**以 HTML 格式修改**。试着输入一个 DOM 属性（例如 `id`、`aria`），自动补全会帮助您找到您想要的属性。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yWnmpCQXpsRjWbbRQ9Pi.png", alt="在 HTML 格式修改中自动补全", width="800", height="472" %}
 
@@ -83,7 +83,7 @@ Chromium 议题: [1215072](https://crbug.com/1215072)
 ## 改善的代码调试体验 {: #debugging }
 
 <!-- Column numbers are now included in the output error in the Console. Having easy access to the column number is essential for debugging especially with minified JavaScript. -->
-现在在控制台中显示的错误输出也会包含列数了。方便看到列数对代码调试至关重要，尤其是在调试压缩后的 JavaScript 代码时。
+现在在控制台中显示的错误输出也会包含列数。列数的显示使代码调试更加便利，尤其是在调试压缩后的 JavaScript 代码时。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/mKAUxO94rwvBI9oyeiIB.png", alt="错误输出中的列数", width="800", height="553" %}
 
@@ -101,7 +101,7 @@ Chromium 议题: [1073064](https://crbug.com/1073064)
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/LUwFNTDyP22L1euSGg73.png", alt="DevTools 同步设置", width="800", height="654" %}
 
 <!-- This new setting makes it easier for you to work across devices. For example, the following appearance settings are synced so you have a consistent experience across devices and don’t need to re-define the same settings again. Learn more about the sync feature in [DevTools customization](/docs/devtools/customize/). -->
-这项新设置可以让您在跨设备工作时更轻松。例如，同步以下这些外观设置可以给您一个跨设备一致的体验而无需重新进行配置。请在[DevTools 个性化](/docs/devtools/customize/)中了解更多。
+这项新设置可以让您在跨设备工作时更轻松。例如，同步以下这些外观设置可以让您在跨设备的过程中享受一致的体验而无需重新进行配置。请在[DevTools 个性化](/docs/devtools/customize/)中了解更多。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/t8SQuZ4mE2xiLVxaZz11.png", alt="外观设置", width="800", height="584" %}
 
