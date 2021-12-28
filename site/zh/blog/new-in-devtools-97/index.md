@@ -6,7 +6,7 @@ authors:
 date: 2021-11-29
 updated: 2021-11-29
 description:
-  "新的录制器面板, 多设备模式中更新的设备列表以及更多。"
+  "新的录制器面板, 设备模式中更新的设备列表以及更多。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/YO7JQwXI16NSgxijKq4v.jpg'
 alt: ''
 tags:
@@ -54,12 +54,12 @@ Chromium 议题: [1257499](https://crbug.com/1257499)
 
 
 <!-- ## Refresh device list in Device Mode {: #device } -->
-## 多设备模式中更新的设备列表 {: #device }
+## 设备模式中更新的设备列表 {: #device }
 
 <!-- [Enabling the Device Toolbar](/docs/devtools/device-mode#viewport), more modern devices are now added in the device list. Select a device to simulate its dimensions. -->
 [启用设备工具栏](/docs/devtools/device-mode#viewport)之后可以发现，设备列表中添加了更多的现代设备。请选择其中一个设备来模拟该设备的尺寸。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Trx5NqE9RrqpWiN24iZ0.png", alt="多设备模式中更新的设备列表", width="800", height="547" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Trx5NqE9RrqpWiN24iZ0.png", alt="设备模式中更新的设备列表", width="800", height="547" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ede4c59ac39f8281b3e372fa2e8f162c1a2a7ea2 #}
 
