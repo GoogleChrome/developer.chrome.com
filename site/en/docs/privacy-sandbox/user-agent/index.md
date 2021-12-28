@@ -2,10 +2,11 @@
 layout: 'layouts/doc-post.njk'
 title: 'User-Agent Reduction'
 subhead: >
-  Limit brower data shared to remove sensitive information and reduce fingerprinting.
+  Limit browser data shared to remove sensitive information and reduce fingerprinting.
 description: >
   The reduced User-Agent shares a limited set of data to improve user privacy and reduce opportunities for tracking. With User-Agent Client Hints, developers can request more details in a managed and audited process.
 date: 2021-11-09
+updated: 2021-12-28
 authors:
   - alexandrawhite
 ---
