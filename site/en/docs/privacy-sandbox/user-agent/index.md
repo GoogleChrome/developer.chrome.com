@@ -18,7 +18,7 @@ authors:
 *  [Chrome DevTools integration](blog/new-in-devtools-89/#ua-ch)
 *  [Chrome Platform Status](https://chromestatus.com/feature/5995832180473856)
 
-## What is User-Agent Reduction?
+## What is User-Agent reduction?
 
 User-Agent (UA) reduction is the effort to minimize the identifying information
 shared in the User-Agent string which may be
