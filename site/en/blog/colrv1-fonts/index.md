@@ -149,11 +149,12 @@ out.
 
 <figure> {% Glitch { id: 'colrv1-underware-plakato', path: 'index.html' } %}
 <figcaption><a
-href="https://www.underware.nl/blog/2022/01/plakato-color/">Plakato Color Happy 2022</a>
-featuring energetic sweep gradients, made by the innovative type foundry <a
-href="https://underware.nl">Underware</a>, (<a
-href="https://twitter.com/underware">@underware</a> on Twitter). Read more about
-Underware’s first COLRv1 release in their <a
+href="https://www.underware.nl/blog/2022/01/plakato-color/">Plakato Color Happy
+2022</a> featuring energetic sweep gradients, made by the innovative type
+foundry <a href="https://underware.nl">Underware</a> (Twitter: <a
+href="https://twitter.com/underware">@underware</a>, Instagram: <a
+href="https://www.instagram.com/underwarefoundry/">@underwarefoundry</a>). Read
+more about Underware’s first COLRv1 release in their <a
 href="https://www.underware.nl/blog/2022/01/plakato-color/">blog post</a>.
 </figcaption> </figure>
 
