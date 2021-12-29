@@ -72,7 +72,7 @@ conditions in a way that can be audited.
 
 Further, the `User-Agent` string has grown longer and more complex, which led
 to error-prone string parsing. UA-CH provides structured and reliable data that
-is easier to understand. Existing code which parses the UA string shouldn’t
+is easier to interpret. Existing code which parses the UA string shouldn’t
 break (though it will return less data), and you’ll need to migrate to UA-CH
 if your site needs specific information for any
 [valid use cases](https://wicg.github.io/ua-client-hints/#use-cases).
@@ -111,7 +111,7 @@ experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints
 
 If you need a specific set of Client Hints on your initial request, refer to
 [Client Hints Reliability](https://github.com/WICG/client-hints-infrastructure/blob/main/reliability.md)
-to ensure Client Hints are available on site load and optimised.
+to ensure Client Hints are available on site load and optimized.
 
 ## Engage and share feedback
 
