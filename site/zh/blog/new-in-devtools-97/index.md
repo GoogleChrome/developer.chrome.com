@@ -67,10 +67,10 @@ Chromium 议题: [1223525](https://crbug.com/1223525)
 
 
 <!-- ## Autocomplete with Edit as HTML {: #code-completion } -->
-## 以 HTML 格式修改时自动补全 {: #code-completion }
+## 修改时用 HTML 格式自动补全 {: #code-completion }
 
 <!-- The **Edit as HTML** UI now supports autocomplete and syntax highlights. In the **Elements** panel, right click on an element, and select  **Edit as HTML**. Try typing a DOM property (e.g. `id`, `aria`), the autocomplete should help you find the property name you're looking for. -->
-**以 HTML 格式修改**现已支持自动补全和语法高亮。在**元素**面板中，右键点击一个元素并选择**以 HTML 格式修改**。试着输入一个 DOM 属性（例如 `id`、`aria`），自动补全会帮助您找到您想要的属性。
+**修改 HTML 格式（Edit as HTML）**现已支持自动补全和语法高亮。在**元素**面板中，右键点击一个元素并选择**以 HTML 格式修改**。试着输入一个 DOM 属性（例如 `id`、`aria`），自动补全会帮助您找到您想要的属性。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/yWnmpCQXpsRjWbbRQ9Pi.png", alt="在 HTML 格式修改中自动补全", width="800", height="472" %}
 

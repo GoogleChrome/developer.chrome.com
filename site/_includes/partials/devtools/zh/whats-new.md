@@ -4,7 +4,7 @@
 ### Chrome 97 {: #chrome97 }
 * [预览特性：新的录制器面板](/zh/blog/new-in-devtools-97/#recorder)
 * [设备模式中更新的设备列表](/zh/blog/new-in-devtools-97/#device)
-* [以 HTML 格式修改时自动补全](/zh/blog/new-in-devtools-97/#code-completion)
+* [修改时用 HTML 格式自动补全](/zh/blog/new-in-devtools-97/#code-completion)
 * [改善代码调试体验](/zh/blog/new-in-devtools-97/#debugging)
 * [[实验] 跨设备同步 DevTools 设置](/zh/blog/new-in-devtools-97/#sync)
 
