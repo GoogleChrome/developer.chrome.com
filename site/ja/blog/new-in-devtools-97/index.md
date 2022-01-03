@@ -19,6 +19,7 @@ tags:
 
 {% include 'partials/devtools/ja/banner.md' %}
 
+{% YouTube id='cGotLGL1-Ko' %}
 
 <!-- ## Preview feature: New Recorder panel {: #recorder } -->
 ## プレビュー機能: 新しい Recorder パネル {: #decorder }

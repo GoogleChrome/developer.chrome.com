@@ -19,6 +19,7 @@ tags:
 
 {% include 'partials/devtools/ko/banner.md' %}
 
+{% YouTube id='cGotLGL1-Ko' %}
 
 ## 프리뷰 기능: 새로운 Recorder 패널 {: #recorder }
 

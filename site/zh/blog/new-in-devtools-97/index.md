@@ -27,6 +27,7 @@ tags:
 
 {% include 'partials/devtools/zh/banner.md' %}
 
+{% YouTube id='cGotLGL1-Ko' %}
 
 <!-- ## Preview feature: New Recorder panel {: #recorder } -->
 ## 预览特性：新的**录制器**面板 {: #recorder }

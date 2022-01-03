@@ -27,6 +27,7 @@ tags:
 
 {% include 'partials/devtools/es/banner.md' %}
 
+{% YouTube id='cGotLGL1-Ko' %}
 
 <!-- ## Preview feature: New Recorder panel {: #recorder } -->
 ## Función en vista previa: Nuevo panel de Grabadora {: #recorder }
