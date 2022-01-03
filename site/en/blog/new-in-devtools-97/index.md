@@ -7,7 +7,7 @@ date: 2021-11-25
 updated: 2021-11-25
 description:
   "New Recorder panel, refresh device list in Device Mode, and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/gbSY0X00uLzsHnpWVJi6.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xy6CXdvjfEHDvsFehr9B.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -17,7 +17,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/xy6CXdvjfEHDvsFehr9B.jpg -->
+{% YouTube id='cGotLGL1-Ko' %}
 
 ## Preview feature: New Recorder panel {: #recorder }
 

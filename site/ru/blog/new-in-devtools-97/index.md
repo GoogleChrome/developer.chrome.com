@@ -27,6 +27,7 @@ tags:
 
 {% include 'partials/devtools/ru/banner.md' %}
 
+{% YouTube id='cGotLGL1-Ko' %}
 
 <!-- ## Preview feature: New Recorder panel {: #recorder } -->
 ## Ранний доступ: новая вкладка Recorder  {: #recorder }
