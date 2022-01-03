@@ -1,12 +1,12 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
-<!-- ### Chrome 97 {: #chrome97 }
-* [Preview feature: New Recorder panel](/zh/blog/new-in-devtools-97/#recorder)
-* [Refresh device list in Device Mode](/zh/blog/new-in-devtools-97/#device)
-* [Autocomplete with Edit as HTML](/zh/blog/new-in-devtools-97/#code-completion)
-* [Improved code debugging experience](/zh/blog/new-in-devtools-97/#debugging)
-* [Syncing DevTools settings across devices](/zh/blog/new-in-devtools-97/#sync) -->
+### Chrome 97 {: #chrome97 }
+* [预览特性：新的录制器面板](/zh/blog/new-in-devtools-97/#recorder)
+* [设备模式中更新的设备列表](/zh/blog/new-in-devtools-97/#device)
+* [修改时用 HTML 格式自动补全](/zh/blog/new-in-devtools-97/#code-completion)
+* [改善代码调试体验](/zh/blog/new-in-devtools-97/#debugging)
+* [[实验] 跨设备同步 DevTools 设置](/zh/blog/new-in-devtools-97/#sync)
 
 ### Chrome 96 {: #chrome96 }
 * [预览特性: 新的 CSS 概览面板](/blog/new-in-devtools-96/#css-overview)
