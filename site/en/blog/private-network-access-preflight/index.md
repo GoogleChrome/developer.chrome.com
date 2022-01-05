@@ -6,7 +6,7 @@ authors:
   - agektmr
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
-hero: image/VbsHyyQopiec0718rMq2kTE1hke2/qmKHhgsBZCbEb4CnpBbT.jpg
+hero: image/VbsHyyQopiec0718rMq2kTE1hke2/iqanYAE91Ab6BsgwhBjq.jpg
 alt: An airplane in the sky
 tags:
   - chrome-98
