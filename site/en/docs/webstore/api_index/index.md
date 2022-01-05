@@ -143,7 +143,29 @@ For InAppProducts Resource details, see the [resource representation][api-inappp
 
 For Licenses Resource details, see the [resource representation][api-licenses-resource] page.
 
-<table><thead><tr><th>Method</th><th>HTTP request</th><th>Description</th></tr></thead><tbody><tr class="alt"><td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless otherwise noted</td></tr><tr><td><a href="/webstore/webstore_api/licenses/get/">get</a></td><td><code>GET&nbsp; /licenses/<var>appId</var>/<var>userId</var></code></td><td>Gets the licenses for Chrome hosted apps.</td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th>HTTP request</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="alt">
+      <td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless
+        otherwise noted</td>
+    </tr>
+    <tr>
+      <td><a href="/docs/webstore/webstore_api/licenses/get/">get</a></td>
+      <td>
+        <strong>GET</strong><br>
+        <code>/licenses/<var>appId</var>/<var>userId</var></code><br>
+      </td>
+      <td>Gets the licenses for Chrome hosted apps.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## UserLicenses {: #userLicenses }
 
