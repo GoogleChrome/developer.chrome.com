@@ -14,9 +14,9 @@ timelines.
 
 {% endAside %}
 
-This reference describes the methods and resource representation available for the Chrome Web Store Publish API and the Licensing API.
-Each resource type has one or more data
-representations and one or more methods.
+This reference describes the methods and resource representation available for the Chrome Web Store
+Publish API and the Licensing API. Each resource type has one or more data representations and one
+or more methods.
 
 ## Resource types
 
