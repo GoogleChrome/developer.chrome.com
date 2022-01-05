@@ -12,7 +12,7 @@ authors:
 ## 実装状況
 
 - [オリジントライアル中](https://web.dev/origin-trials/) Chrome 84～94。
-- [トライアルに登録する](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)。
+- [トライアルに登録する](/origintrials/#/view_trial/2479231594867458049)。
 - [デモ](https://trust-token-demo.glitch.me/)。
 - [ChromeDevTools の統合](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token)。
 - [Chrome プラットフォームステータス](https://www.chromestatus.com/feature/5078049450098688)。
@@ -68,7 +68,7 @@ Trust Tokens API を使用すると、ウェブサイトは信頼できるユー
 
 ## 参加してフィードバックを共有する
 
-- **オリジントライアル**[：Chrome オリジントライアル](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)に登録して参加してください。
+- **オリジントライアル**[：Chrome オリジントライアル](/origintrials/#/view_trial/2479231594867458049)に登録して参加してください。
 - **デモ**[：トラストトークンの発行と引き換え](https://trust-token-demo.glitch.me/)をお試しください。
 - **GitHub**: [提案](https://github.com/WICG/trust-token-api)を読み、[質問をしてディスカッションをフォロー](https://github.com/WICG/trust-token-api/issues)しましょう。
 - **W3C** [：Improving Web Advertising BusinessGroup](https://www.w3.org/community/web-adv/participants) で業界のユースケースについて話し合いましょう。

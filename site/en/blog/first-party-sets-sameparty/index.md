@@ -196,7 +196,7 @@ There are a few constraints for first-party sets:
 
 {% Aside %}
 You may already be hosting a similar file if you are using [Digital
-Asset Links to link sites](https://developer.chrome.com/blog/site-affiliation/)
+Asset Links to link sites](/blog/site-affiliation/)
 that share the same account management backend. This is specifically to allow
 the same credentials to be suggested by the Chrome password manager across the
 affiliated sites.
@@ -307,7 +307,7 @@ first-party set would affect the cookies.
 
 If you have the bandwidth for experimentation and feedback, you can also sign up
 for the [Origin Trial for First Party Sets and
-SameParty](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)
+SameParty](/origintrials/#/view_trial/988540118207823873)
 which is available in Chrome from version 89 to 93.  
 
 {% Aside 'key-term' %}

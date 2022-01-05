@@ -71,7 +71,7 @@ Chrome で API を試している方は、**現在**実装されているすべ�
 
 #### デプロイされたサイトでエンド ユーザーに対して試す
 
-1. 使用できる場合は、[オリジン  トライアル](https://developer.chrome.com/blog/origin-trials/)に登録して、エンド ユーザーの API を有効にします。オリジン トライアルでは、実験的な機能にアクセスして、限られた時間で試すことができる機能を構築できます。[サードパーティのオリジン トライアル](https://developer.chrome.com/blog/third-party-origin-trials/)では、広告配信や測定プロバイダーなどのサードパーティのアクターが複数のサイトで API をテストできてしまうことに注意してください。**この API で現在利用可能なオリジン トライアルを確認するには、[ステータス](#status)にアクセスしてください**。今後のオリジン トライアルについては、 [開発者向け Attribution Reporting メーリング リスト](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)にご登録ください。
+1. 使用できる場合は、[オリジン  トライアル](/blog/origin-trials/)に登録して、エンド ユーザーの API を有効にします。オリジン トライアルでは、実験的な機能にアクセスして、限られた時間で試すことができる機能を構築できます。[サードパーティのオリジン トライアル](/blog/third-party-origin-trials/)では、広告配信や測定プロバイダーなどのサードパーティのアクターが複数のサイトで API をテストできてしまうことに注意してください。**この API で現在利用可能なオリジン トライアルを確認するには、[ステータス](#status)にアクセスしてください**。今後のオリジン トライアルについては、 [開発者向け Attribution Reporting メーリング リスト](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)にご登録ください。
 
 2. API をサイトやシステムに統合します。
 
@@ -146,8 +146,8 @@ Chrome で API を試している方は、**現在**実装されているすべ�
 
 {% Aside %}将来的に、サードパーティ Cookie がない場合、この API はエンドツーエンドのユース ケースをカバーするために、他のプライバシーが保護される広告の API と組み合わされます。
 
-- リマーケティング: [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/) を参照
-- インタレストベースの広告選択: [FLoC を参照](https://developer.chrome.com/docs/privacy-sandbox/floc/)
+- リマーケティング: [FLEDGE](/docs/privacy-sandbox/fledge/) を参照
+- インタレストベースの広告選択: [FLoC を参照](/docs/privacy-sandbox/floc/)
 
 {% endAside %}
 
@@ -163,7 +163,7 @@ Chrome で API を試している方は、**現在**実装されているすべ�
 - `🧪 実験 (BROWSER_NAME)`: 実験は BROWSER_NAME で利用できます。 Chromeでは、実験はオリジン トライアルと呼ばれます。
 - `🚀 Stable (BROWSER_NAME)`: この機能はデフォルトで BROWSER_NAME に搭載されています。
 
-{% Aside %} [現在のオリジン トライアル](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (Chrome 実験🧪){% endAside %}
+{% Aside %} [現在のオリジン トライアル](/origintrials/#/view_trial/3411476717733150721) (Chrome 実験🧪){% endAside %}
 
 {% Aside 'caution' %}複数のオリジン トライアル (実験) が実行されます。各ラウンドは、エコシステムのフィードバックに基づいて API を改善および調整するために使用されます。 {% endAside %}
 

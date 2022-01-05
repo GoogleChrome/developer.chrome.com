@@ -54,7 +54,7 @@ Origin trials allow you to try new features and give feedback on their usability
 
 ### Register for the origin trial
 
-1. [Request a token](https://developer.chrome.com/origintrials/#/view_trial/451485862643892225) for your origin.
+1. [Request a token](/origintrials/#/view_trial/451485862643892225) for your origin.
 2. Add the token to your pages. There are two ways to do that:
     - Add an origin-trial `<meta>` tag to the head of each page. For example, this may look something like:
 

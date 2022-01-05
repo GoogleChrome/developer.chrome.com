@@ -55,7 +55,7 @@ Issue relacionada: [1182537](https://crbug.com/1182537)
 
 Os erros da Attribution Reporting API agora são relatados na guia **Issues**.
 
-[Attribution Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) é uma nova API para ajudá-lo a medir quando uma ação do usuário (como um clique no anúncio ou visualização) leva a uma conversão, sem usar identificadores entre sites.
+[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) é uma nova API para ajudá-lo a medir quando uma ação do usuário (como um clique no anúncio ou visualização) leva a uma conversão, sem usar identificadores entre sites.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Attribution Reporting API errors in the Issues tab", width="800", height="501" %}
 

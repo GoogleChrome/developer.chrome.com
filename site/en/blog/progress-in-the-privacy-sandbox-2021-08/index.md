@@ -163,7 +163,7 @@ enable cross-site tracking.
 
 ### FLoC
 
-[FLoC](https://developer.chrome.com/docs/privacy-sandbox/floc/) is a proposal to
+[FLoC](/docs/privacy-sandbox/floc/) is a proposal to
 enable interest-based advertising **without** the need for individual cross-site
 tracking. The **origin trial for the first version of FLoC ended in mid-July**
 and we are evaluating improvements for the next version of FLoC before advancing
@@ -197,13 +197,13 @@ ads.
 ### Attribution Reporting
 
 The core [**Attribution Reporting
-API**](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)
+API**](/docs/privacy-sandbox/attribution-reporting/)
 has been in origin trial since the end of 2020, under the name Event-Level
 Conversion Measurement API.
 
 There were a number of API changes from Chrome 92—we've published a [guide for
 migrating from Conversion Measurement API to Attribution Reporting
-API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-migration/)—and
+API](/docs/privacy-sandbox/attribution-reporting-migration/)—and
 we're also [**extending the trial** period through to Chrome 93
 stable](https://groups.google.com/a/chromium.org/g/blink-dev/c/xCWP1ltlAgw). We
 have also extended the "Discussion" phase [on the
@@ -217,7 +217,7 @@ data) defined by an adtech. Later, the browser sends the resulting reports to a
 predefined endpoint, with some delay and noise.", width="800", height="521" %}
 
 We've published an [**introduction to Attribution
-Reporting**](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-introduction/)
+Reporting**](/docs/privacy-sandbox/attribution-reporting-introduction/)
 and [**video overview**](https://youtu.be/UGA74CIcom8) to cover how the API
 works, the main use cases, API implementation status, and how it compares with
 third-party cookies.
@@ -242,7 +242,7 @@ overview** of the Trust Tokens API](https://youtu.be/bXB1Iwq6Eq4).
 {% YouTube id='bXB1Iwq6Eq4' %}
 
 The [**origin trial** for **Trust
-Tokens**](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)
+Tokens**](/origintrials/#/view_trial/2479231594867458049)
 has been open since Chrome 84 and is planned to run through to Chrome 94, so
 there is still time to experiment on your sites.
 

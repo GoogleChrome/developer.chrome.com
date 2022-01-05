@@ -59,7 +59,7 @@ Chromium issue: [1182537](https://crbug.com/1182537)
 ## Attribution Reporting API 디버깅 {: #attribution-reporting }
 Attribution Reporting API 에러가 **Issues** 탭에 노출됩니다.
 
-[Attribution Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) 은 크로스 사이트 식별자를 사용하지 않고 광고 클릭이나 노출같은 사용자 액션을 측정하는 데 도움을 주는 새로운 API 입니다.
+[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) 은 크로스 사이트 식별자를 사용하지 않고 광고 클릭이나 노출같은 사용자 액션을 측정하는 데 도움을 주는 새로운 API 입니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Issues 탭에서 Attribution Reporting API 에러를 볼 수 있습니다.", width="800", height="501" %}
 
@@ -71,7 +71,7 @@ Chromium issue: [1190735](https://crbug.com/1190735)
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/O5uMSgkHrQ2mQDSjmg3A.png", alt="Console의 새로운 컨텍스트 메뉴", width="800", height="477" %}
 
-Chrome 90에서 DevTools는 **Console** 이 [문자열 출력을 언제나 유효한 JSON 리터럴로 변경](https://developer.chrome.com/en/blog/new-in-devtools-90/#double-quotes) 하도록 업데이트 하였습니다. 이러한 변경사항이 오히려 혼란을 줄 수 있다는 피드백을 개발자로부터 받았고, 일부는 이스케이프 양이 과도하거나, 출력된 값을 읽기 어렵다고 느끼기도 하였습니다.
+Chrome 90에서 DevTools는 **Console** 이 [문자열 출력을 언제나 유효한 JSON 리터럴로 변경](/en/blog/new-in-devtools-90/#double-quotes) 하도록 업데이트 하였습니다. 이러한 변경사항이 오히려 혼란을 줄 수 있다는 피드백을 개발자로부터 받았고, 일부는 이스케이프 양이 과도하거나, 출력된 값을 읽기 어렵다고 느끼기도 하였습니다.
 
 이제 **Console** 에서는 문자열 출력을 유효한 JavaScript 리터럴로 변경하고, 문자열 복사 옵션을 3개 추가로 제공합니다. **Copy as JavaScript literal** 옵션은 적절한 특수 문자를 이스케이프하고 문자열 내용에 따라 작은따옴표, 큰따옴표 또는 억음 부호 (backtick)를 사용하여 문자열을 래핑합니다. **Copy string contents** 는 새 줄 및 기타 특수 문자를 포함한 원시 문자열 콘텐츠를 그대로 클립보드에 복사합니다. 마지막으로 **Copy as JSON literal** 은 문자열을 유효한 JSON 리터럴로 변환하고 클립보드에 복사합니다.
 

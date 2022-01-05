@@ -53,9 +53,9 @@ function checkURL(tree, file) {
       file.message(reason, node);
     }
 
-    // If the URL starts with web.dev, yell about it, because those links should
-    // be relative, not absolute. We also must use nodeUrl here instead of the
-    // parsed URL object since using the latter will throw for relative links.
+    // If a URL starts with developer.chrome.com, yell about it, since those
+    // links must be relative, not absolute. We also must use nodeUrl instead
+    // of the parsed URL object since the latter throws for relative links.
     if (
       nodeUrl.startsWith('https://developer.chrome.com') &&
       !excludedFromLinkChecks.includes(markdownFile)

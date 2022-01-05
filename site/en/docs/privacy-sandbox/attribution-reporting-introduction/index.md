@@ -123,10 +123,10 @@ ecosystem feedback is collected.
 #### Experiment with end users on a deployed site
 
 1.  Enable the API for end users by registering for an [origin
-    trial](https://developer.chrome.com/blog/origin-trials/) if available. An origin trial
+    trial](/blog/origin-trials/) if available. An origin trial
     gives you access to an experimental feature, to build functionality you can try out
     for a limited time. Note that [third-party origin
-    trials](https://developer.chrome.com/blog/third-party-origin-trials/) make it possible
+    trials](/blog/third-party-origin-trials/) make it possible
     for third-party actors such as ad serving and measurement providers to test an API
     across multiple sites. **To see the currently available origin trials for this API,
     head over to [Status](#status)**. To be informed of future origin trials, join the
@@ -252,9 +252,9 @@ attribution](https://github.com/WICG/conversion-measurement-api/blob/main/cross_
 In a future without third-party cookies, this API would be combined with other
 privacy-preserving ads APIs in order to cover end-to-end use cases:
 
-- Remarketing: see [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
+- Remarketing: see [FLEDGE](/docs/privacy-sandbox/fledge/)
 - Interest-based ad selection: see
-  [FLoC](https://developer.chrome.com/docs/privacy-sandbox/floc/)
+  [FLoC](/docs/privacy-sandbox/floc/)
 
 {% endAside %}
 
@@ -274,7 +274,7 @@ Statuses:
 
 {% Aside %}  
 [Current origin
-trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (Chrome
+trial](/origintrials/#/view_trial/3411476717733150721) (Chrome
 experiment 🧪) {% endAside %}
 
 {% Aside 'caution' %}  

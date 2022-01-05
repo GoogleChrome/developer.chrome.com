@@ -57,7 +57,7 @@ API предлагает два типа отчетов об атрибуции 
 
 ## Присоединяйтесь и делитесь отзывами {: #engage }
 
-- **Пробная версия источника**: [зарегистрируйтесь, чтобы поработать с первой пробной версией источника (только клики)](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) или [посмотреть первую демоверсию (только клики)](https://goo.gle/demo-event-level-conversion-measurement-api).
+- **Пробная версия источника**: [зарегистрируйтесь, чтобы поработать с первой пробной версией источника (только клики)](/origintrials/#/view_trial/3411476717733150721) или [посмотреть первую демоверсию (только клики)](https://goo.gle/demo-event-level-conversion-measurement-api).
 - Чтобы следить за последующими реализациями этого API, в которых появится больше возможностей и которые будут доступны для экспериментов в Chrome (в виде пробной версии источника), присоединяйтесь к [списку рассылки для разработчиков](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
 - **GitHub**: ознакомьтесь с [текстом предложения](https://github.com/WICG/conversion-measurement-api/) и [обсуждением, где можно задать свои вопросы](https://github.com/WICG/conversion-measurement-api/issues).
 - **W3C**: обсуждайте отраслевые варианты использования в [группе Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) и присоединяйтесь к [группе Privacy Community Group](https://www.w3.org/community/privacycg/) для обсуждения WebKit/Safari API.

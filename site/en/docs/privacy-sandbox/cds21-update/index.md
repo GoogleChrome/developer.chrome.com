@@ -23,7 +23,7 @@ Here's what you need to know:
 *  Share your feedback with [@ChromiumDev on Twitter](https://twitter.com/ChromiumDev)
 
 This update on the Privacy Sandbox was announced at the
-[Chrome Developers Summit 2021 keynote](https://developer.chrome.com/devsummit/schedule/keynote/).
+[Chrome Developers Summit 2021 keynote](/devsummit/schedule/keynote/).
 
 {% YouTube id='_Ah_ODU3CvA' %}
 
@@ -235,7 +235,7 @@ alt="", width="800", height="338" %}
 In April 2022, gradual UA string reduction will begin in Chrome. UA-CH launched
 and was ready for scaled adoption starting in March of 2021—you can begin
 testing and migrating to it now.
-[Participate in an origin trial](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047)
+[Participate in an origin trial](/origintrials/#/view_trial/-7123568710593282047)
 to opt-in to the reduced UA string so you can see what the future state looks
 like.
 

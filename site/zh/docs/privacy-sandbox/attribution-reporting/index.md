@@ -57,7 +57,7 @@ authors:
 
 ## 参与并分享反馈 {: #engage }
 
-- **原始试验**：[注册第一代原始试验（仅支持点击型转化）](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721)或[查看第一个演示（仅支持点击型转化）](https://goo.gle/demo-event-level-conversion-measurement-api)。
+- **原始试验**：[注册第一代原始试验（仅支持点击型转化）](/origintrials/#/view_trial/3411476717733150721)或[查看第一个演示（仅支持点击型转化）](https://goo.gle/demo-event-level-conversion-measurement-api)。
 - 请加入[开发者邮件列表](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)，进而继续关注该 API 的下一次实现，该实现将提供更多功能并将在 Chrome 中投入实验（原始试验）。
 - **GitHub**：阅读[提案](https://github.com/WICG/conversion-measurement-api/)、[提出问题并关注讨论](https://github.com/WICG/conversion-measurement-api/issues)。
 - **W3C**：在[改善网络广告业务组](https://www.w3.org/community/web-adv/participants)中讨论行业用例，也可以加入[隐私社区组](https://www.w3.org/community/privacycg/)，参与围绕 WebKit/Safari API 的讨论。

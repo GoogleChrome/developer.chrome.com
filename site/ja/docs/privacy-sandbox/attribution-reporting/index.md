@@ -57,7 +57,7 @@ Attribution Reporting API を使用すると、リンクされた 2 つのイベ
 
 ## 参加してフィードバックを共有する {: #engage }
 
-- **オリジントライアル**： [最初のオリジントライアルに登録する (クリックのみ)](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) か、[最初のデモ (クリックのみ) をご覧ください](https://goo.gle/demo-event-level-conversion-measurement-api) 。
+- **オリジントライアル**： [最初のオリジントライアルに登録する (クリックのみ)](/origintrials/#/view_trial/3411476717733150721) か、[最初のデモ (クリックのみ) をご覧ください](https://goo.gle/demo-event-level-conversion-measurement-api) 。
 - さらなる機能を提供し、Chrome での実験 (オリジントライアル) に利用できるこの API の次の実装に関する最新情報を把握しておきたい方は、[開発者向けメーリングリスト](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)にご登録ください。
 - **GitHub**: [提案](https://github.com/WICG/conversion-measurement-api/)を読み、[質問をしてディスカッションをフォロー](https://github.com/WICG/conversion-measurement-api/issues)しましょう。
 - **W3C**: [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) で業界のユースケースについて話し合い、[Privacy CommunityGroup](https://www.w3.org/community/privacycg/) の WebKit / Safari API に関するディスカッションに参加しましょう。

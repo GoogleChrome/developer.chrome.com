@@ -12,7 +12,7 @@ authors:
 ## Estado de la implementación
 
 - [En la prueba de origen](https://web.dev/origin-trials/) Chrome 84 a 94.
-- [Regístrese para la prueba](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- [Regístrese para la prueba](/origintrials/#/view_trial/2479231594867458049).
 - [Demostración](https://trust-token-demo.glitch.me/).
 - [Integración con las Chrome DevTools](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 - [Estado de la plataforma Chrome](https://www.chromestatus.com/feature/5078049450098688).
@@ -68,7 +68,7 @@ En este ejemplo, el sitio web de un editor quiere verificar si un usuario es un 
 
 ## Participe y comparta sus comentarios
 
-- **Prueba de origen**: regístrese y participe en la [prueba de origen de Chrome](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- **Prueba de origen**: regístrese y participe en la [prueba de origen de Chrome](/origintrials/#/view_trial/2479231594867458049).
 - **Demostración**: pruebe la [distribución y el desempeño](https://trust-token-demo.glitch.me/) de Trust token.
 - **GitHub**: lea la [propuesta](https://github.com/WICG/trust-token-api), [realice preguntas y siga la discusión](https://github.com/WICG/trust-token-api/issues).
 - **W3C**: discuta los casos de uso en la industria con el [grupo Improving Web Advertising Business](https://www.w3.org/community/web-adv/participants).

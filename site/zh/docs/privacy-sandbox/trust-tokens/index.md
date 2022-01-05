@@ -12,7 +12,7 @@ authors:
 ## 实现状态
 
 - [源站试用](https://web.dev/origin-trials/)：Chrome 84 到 94。
-- [注册试用](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)。
+- [注册试用](/origintrials/#/view_trial/2479231594867458049)。
 - [演示](https://trust-token-demo.glitch.me/)。
 - [Chrome DevTools 集成](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token)。
 - [Chrome 平台状态](https://www.chromestatus.com/feature/5078049450098688)。
@@ -68,7 +68,7 @@ authors:
 
 ## 参与并分享反馈
 
-- **源站试用**：注册并参加 [Chrome 源站试用](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)。
+- **源站试用**：注册并参加 [Chrome 源站试用](/origintrials/#/view_trial/2479231594867458049)。
 - **演示**：尝试信任令牌的[颁发和赎回](https://trust-token-demo.glitch.me/)。
 - **GitHub**：阅读[提案](https://github.com/WICG/trust-token-api)、[提出问题并关注讨论](https://github.com/WICG/trust-token-api/issues)。
 - **W3C**：在 [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) 中讨论行业用例。

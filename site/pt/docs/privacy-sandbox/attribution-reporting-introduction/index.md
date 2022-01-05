@@ -71,7 +71,7 @@ Se estiver experimentando a API no Chrome, você terá acesso a todos os recurso
 
 #### Experimente com usuários finais num site implantado
 
-1. Ative a API para usuários finais registrando-se para um [ensaio de origem](https://developer.chrome.com/blog/origin-trials/), se disponível. Um ensaio de origem dá acesso a um recurso experimental, para construir uma funcionalidade que você pode experimentar por um tempo limitado. Observe que [os ensaios de origem](https://developer.chrome.com/blog/third-party-origin-trials/) de terceiros possibilitam que atores terceirizados, tais como como servidores de anúncios e provedores de medição, testem uma API entre múltiplos sites. **Para saber quais são os ensaios de origem que estão atualmente disponíveis para esta API, vá para [Status](#status)**. Para ser informado sobre ensaios de origem futuros, participe da  [lista de e-mails sobre Attribution Reporting para desenvolvedores](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
+1. Ative a API para usuários finais registrando-se para um [ensaio de origem](/blog/origin-trials/), se disponível. Um ensaio de origem dá acesso a um recurso experimental, para construir uma funcionalidade que você pode experimentar por um tempo limitado. Observe que [os ensaios de origem](/blog/third-party-origin-trials/) de terceiros possibilitam que atores terceirizados, tais como como servidores de anúncios e provedores de medição, testem uma API entre múltiplos sites. **Para saber quais são os ensaios de origem que estão atualmente disponíveis para esta API, vá para [Status](#status)**. Para ser informado sobre ensaios de origem futuros, participe da  [lista de e-mails sobre Attribution Reporting para desenvolvedores](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
 
 2. Integre a API aos seus sites e sistemas.
 
@@ -138,8 +138,8 @@ Outros recursos propostos nesta API são [a atribuição app-to-web](https://git
 
 {% Aside %} No futuro, sem cookies de terceiros, esta API seria combinada com outras APIs de anúncios que preservam a privacidade para cobrir casos de uso de ponta a ponta:
 
-- Remarketing: veja [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
-- Seleção de anúncios com base em interesses: veja [FLoC](https://developer.chrome.com/docs/privacy-sandbox/floc/)
+- Remarketing: veja [FLEDGE](/docs/privacy-sandbox/fledge/)
+- Seleção de anúncios com base em interesses: veja [FLoC](/docs/privacy-sandbox/floc/)
 
 {% endAside %}
 
@@ -155,7 +155,7 @@ Status:
 - `🧪 Experiment (BROWSER_NAME)` : um experimento está disponível em BROWSER_NAME. No Chrome, um experimento é chamado de ensaio de origem.
 - `🚀 Stable (BROWSER_NAME)` : o recurso é fornecido por default no BROWSER_NAME.
 
-{% Aside %} [Ensaio de origem atual](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (Chrome experiment 🧪) {% endAside %}
+{% Aside %} [Ensaio de origem atual](/origintrials/#/view_trial/3411476717733150721) (Chrome experiment 🧪) {% endAside %}
 
 {% Aside 'caution' %} Vários testes de origem (experimentos) serão executados. Cada rodada é usada para melhorar e ajustar a API com base no feedback do ecossistema. {% endAside %}
 

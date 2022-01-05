@@ -53,7 +53,7 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.<span style="background:
 {% Aside %}
 
 You can also [enroll your own sites in the origin
-trial](https://developer.chrome.com/blog/user-agent-reduction-origin-trial/) to
+trial](/blog/user-agent-reduction-origin-trial/) to
 enable Chrome browsers visiting your site to send the reduced version of the
 user-agent.
 

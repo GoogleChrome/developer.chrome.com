@@ -12,7 +12,7 @@ authors:
 ## Статус реализации
 
 - [Доступно в рамках испытания Origin Trial](https://web.dev/origin-trials/) в Chrome с 84 по 94.
-- [Регистрация для участия в испытании](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- [Регистрация для участия в испытании](/origintrials/#/view_trial/2479231594867458049).
 - [Демонстрация](https://trust-token-demo.glitch.me/).
 - [Интеграция с Chrome DevTools](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 - [Статус платформы Chrome](https://www.chromestatus.com/feature/5078049450098688).
@@ -68,7 +68,7 @@ authors:
 
 ## Участвуйте и делитесь отзывами
 
-- **Испытание Origin Trial**: зарегистрируйтесь и примите участие в [испытании Chrome Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- **Испытание Origin Trial**: зарегистрируйтесь и примите участие в [испытании Chrome Origin Trial](/origintrials/#/view_trial/2479231594867458049).
 - **Демонстрация**: попробуйте [генерировать и использовать](https://trust-token-demo.glitch.me/) токены доверия.
 - **GitHub**: ознакомьтесь с [текстом предложения](https://github.com/WICG/trust-token-api) и [обсуждением, где можно задать свои вопросы](https://github.com/WICG/trust-token-api/issues).
 - **W3C**: обсудите сценарии использования из отрасли в группе [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).

@@ -31,7 +31,7 @@ information that they need.
 
 Beginning with the [Chrome 95](https://chromiumdash.appspot.com/schedule) Beta,
 we'll open up the
-[origin trial](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047)
+[origin trial](/origintrials/#/view_trial/-7123568710593282047)
 for
 [User-Agent Reduction](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)
 to allow sites to opt into receiving the reduced UA string now. This will enable
@@ -107,7 +107,7 @@ provided that the permissions policy allows it.
 
 1.  To register for the origin trial and get a token for your domains,
     visit the
-    [Trial for User Agent Reduction page](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047).
+    [Trial for User Agent Reduction page](/origintrials/#/view_trial/-7123568710593282047).
 
 1.  Update your HTTP response headers:
 
@@ -140,7 +140,7 @@ can participate in the origin trial without requiring the top-level site to be
 enrolled.
 
 To enroll as a third-party embed, follow the same steps as for a [top-level site](#enroll-top-level),
-except when [registering for an origin trial token](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047),
+except when [registering for an origin trial token](/origintrials/#/view_trial/-7123568710593282047),
 select the third-party token checkbox.  
 
 Some important points about running the origin trial on third-party embeds:

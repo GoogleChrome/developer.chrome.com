@@ -52,7 +52,7 @@ enables fingerprinting or covert tracking of users.
 We shared the full [timeline for reducing Chrome's
 **user-agent**](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)
 information and opened registration for the [**early opt-in origin
-trial**](https://developer.chrome.com/blog/user-agent-reduction-origin-trial/)
+trial**](/blog/user-agent-reduction-origin-trial/)
 for the new format.
 
 The end result retains the same string format to minimise compatibility issues,
@@ -119,7 +119,7 @@ timeline and we'll have more docs and demos ready for you soon.
 If you set cookies for cross-site contexts, but only across sites you own—like
 you host a service on your .com that's used by your .co.uk—then you should
 follow [**First-Party
-Sets**](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/).
+Sets**](/docs/privacy-sandbox/first-party-sets/).
 This proposal defines a way of declaring which sites you want to form a set and
 then marking cookies as "SameParty" so that they are only sent for contexts
 inside of that set.
@@ -134,7 +134,7 @@ flags and we'll update the docs as work progresses.
 We're also continuing to improve **DevTools** functionality for much of this
 early testing. You can now see origin trial status, upcoming deprecations, and
 raw cookie header values. There's more detail from Jecelyn on [What's New In
-DevTools (Chrome 94)](https://developer.chrome.com/blog/new-in-devtools-94/).
+DevTools (Chrome 94)](/blog/new-in-devtools-94/).
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/PbozcNJRd6rTME5hhqIq.png",
 alt="DevTools screenshot showing the raw Set-Cookie header for a cookie with an
@@ -155,7 +155,7 @@ available for wider testing by sometime in Q1 2022.
 
 ### FLoC
 
-[**FLoC**](https://developer.chrome.com/docs/privacy-sandbox/floc/) is a
+[**FLoC**](/docs/privacy-sandbox/floc/) is a
 proposal to enable interest-based advertising without the need for individual
 cross-site tracking. The origin trial for the first version of FLoC ended in
 mid-July and we are evaluating improvements for the next version of FLoC before
@@ -165,7 +165,7 @@ clean up.
 
 ### FLEDGE
 
-[**FLEDGE**](https://developer.chrome.com/docs/privacy-sandbox/fledge/) is an
+[**FLEDGE**](/docs/privacy-sandbox/fledge/) is an
 initial experiment in enabling remarketing use cases, showing ads based on the
 user's previous interactions with the advertiser's site, but without third-party
 tracking.
@@ -178,7 +178,7 @@ explaining the concepts in more detail.
 {% YouTube id='HkvmYKqnytw' %}
 
 FLEDGE is [available via CLI
-flags](https://developer.chrome.com/docs/privacy-sandbox/fledge/#:~:text=---,enable-features,-%3DFledgeInterestGroups%2CFledgeInterestGroupAPI)
+flags](/docs/privacy-sandbox/fledge/#:~:text=---,enable-features,-%3DFledgeInterestGroups%2CFledgeInterestGroupAPI)
 for early developer testing (as opposed to scaled user testing) and we're
 updating the timeline to make these flags more visible. The feature is under
 active development, so you should run against a Canary or Dev build of Chrome to
@@ -195,7 +195,7 @@ ads.
 ### Attribution Reporting API
 
 The [**Attribution Reporting
-API**](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)
+API**](/docs/privacy-sandbox/attribution-reporting/)
 enables functionality to measure events on one site, like clicking or viewing an
 ad, that lead to a conversion on another site—again, all without being able to
 track the individual on that cross-site journey.
@@ -218,7 +218,7 @@ DevTools has added Issue support for the Attribution Reporting API. Common
 issues that may block source or report registration and prevent you from
 receiving reports will now appear along with tips on how to fix them. See
 [What's New In DevTools (Chrome
-93)](https://developer.chrome.com/blog/new-in-devtools-93/#attribution-reporting)
+93)](/blog/new-in-devtools-93/#attribution-reporting)
 for more details.
 
 ## Fight spam and fraud on the web
@@ -230,7 +230,7 @@ protection. We need privacy-preserving alternatives here as well.
 ### Trust Tokens
 
 The [**Trust Token**
-API](https://developer.chrome.com/docs/privacy-sandbox/trust-tokens/) is a
+API](/docs/privacy-sandbox/trust-tokens/) is a
 proposal that allows one site to share a claim about a visitor—such as "I think
 they're human"—and enable other sites to verify that claim, again without
 identifying the individual.
@@ -240,7 +240,7 @@ from the ecosystem feedback that more testing time is required here. As such,
 we've applied to extend the [**Trust Token origin
 trial**](https://groups.google.com/a/chromium.org/g/blink-dev/c/fpfbKgJF8Vc/m/lHcBFfxkBAAJ)
 through to Chrome 101. [Registration for the origin
-trial](https://developer.chrome.com/origintrials/#/register_trial/2479231594867458049)
+trial](/origintrials/#/register_trial/2479231594867458049)
 is available on the origin trials site.
 
 ## Feedback
@@ -252,7 +252,7 @@ Twitter](https://twitter.com/ChromiumDev) if there's anything that we could
 improve in this series, we'll use your input to continue improving the format.
 
 We have also added an [**Privacy Sandbox FAQ**
-section](https://developer.chrome.com/docs/privacy-sandbox/faq/) which we will
+section](/docs/privacy-sandbox/faq/) which we will
 continue to expand based on the issues you submit to the [developer support
 repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support). If you
 have any questions around testing or implementation on any of the proposals,

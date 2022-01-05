@@ -12,7 +12,7 @@ authors:
 ## 구현 현황
 
 - [최초 평가판](https://web.dev/origin-trials/) Chrome 84 ~ 94
-- [평가판에 등록](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)
+- [평가판에 등록](/origintrials/#/view_trial/2479231594867458049)
 - [데모](https://trust-token-demo.glitch.me/)
 - [Chrome DevTools 통합](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token)
 - [Chrome 플랫폼 현황](https://www.chromestatus.com/feature/5078049450098688)
@@ -68,7 +68,7 @@ Trust Tokens API를 사용하면 웹사이트에서 신뢰하는 사용자에게
 
 ## 참여 및 피드백 공유
 
-- **최초 평가판**: 등록 후, [Chrome 최초 평가판](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)에 참여하세요.
+- **최초 평가판**: 등록 후, [Chrome 최초 평가판](/origintrials/#/view_trial/2479231594867458049)에 참여하세요.
 - **데모**: 신뢰 토큰 [발행 및 회수](https://trust-token-demo.glitch.me/)를 사용해 보세요.
 - **GitHub**: [제안](https://github.com/WICG/trust-token-api)을 읽고 [질문을 제기하고 토론에 참여하세요](https://github.com/WICG/trust-token-api/issues).
 - **W3C**: [웹 광고 개선 비즈니스 그룹](https://www.w3.org/community/web-adv/participants)에서 업계 사용 사례에 대해 논의하세요.

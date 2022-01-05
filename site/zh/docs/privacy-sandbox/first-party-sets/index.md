@@ -14,7 +14,7 @@ authors:
 ## 实现状态
 
 - [源站试用](https://web.dev/origin-trials/)：Chrome 89 到 93。
-- [注册源站试用](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)。
+- [注册源站试用](/origintrials/#/view_trial/988540118207823873)。
 - [Chrome 平台状态](https://chromestatus.com/feature/5640066519007232)。
 - [Chromium 项目](https://www.chromium.org/updates/first-party-sets)。
 
@@ -69,7 +69,7 @@ authors:
 
 ## 参与和分享反馈
 
-- **源站试用**：注册并加入 [Chrome 源站试用](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)。
+- **源站试用**：注册并加入 [Chrome 源站试用](/origintrials/#/view_trial/988540118207823873)。
 - **GitHub**：阅读[提案](https://github.com/privacycg/first-party-sets)、[提出问题并关注讨论](https://github.com/privacycg/first-party-sets/issues)。
 - **开发者支持**：在 [Privacy Sandbox Developer Support 仓库](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support)中提出问题并加入讨论。
 

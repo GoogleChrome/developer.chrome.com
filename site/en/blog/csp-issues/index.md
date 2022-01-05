@@ -171,7 +171,7 @@ After iteration, we then arrived at:
 
 As you can see, involving the feature team and DevRel makes the description a lot more clear and precise!
 
-CSP issues on your page can also be discovered in the [tab specifically dedicated to CSP violations](https://developer.chrome.com/blog/new-in-devtools-89/#csp).
+CSP issues on your page can also be discovered in the [tab specifically dedicated to CSP violations](/blog/new-in-devtools-89/#csp).
 
 
 ## Debugging Trusted Types problems
@@ -196,7 +196,7 @@ Hence, moving that part of the code to Blink or any embedder sounds like a logic
 
 ### Break-on-violation (in report-only mode)
 
-Currently, the [only way of debugging TT violations](https://developer.chrome.com/blog/new-in-devtools-89/#trusted-types) is by setting breakpoints on JS exceptions. Since enforced TT violations will trigger an exception, this feature can be somehow useful. However, in real world scenarios you need a more fine-grained control over TT violations. In particular, we would like to break only on TT violations (not other exceptions), break also in report-only mode and distinguish between the different types of TT violations.
+Currently, the [only way of debugging TT violations](/blog/new-in-devtools-89/#trusted-types) is by setting breakpoints on JS exceptions. Since enforced TT violations will trigger an exception, this feature can be somehow useful. However, in real world scenarios you need a more fine-grained control over TT violations. In particular, we would like to break only on TT violations (not other exceptions), break also in report-only mode and distinguish between the different types of TT violations.
 
 DevTools already has support for a wide variety of breakpoints so the architecture is quite extensible. Adding a new breakpoint type requires changes in the backend (Blink), CDP and the frontend.
 We should introduce a new CDP command, let's call it `setBreakOnTTViolation`. This command will be used by the frontend to tell the backend on what sort of TT violations it should break. The backend, in particular `InspectorDOMDebuggerAgent`, will provide a "probe", `onTTViolation()` that will be called every time a TT violation occurs. Then, `InspectorDOMDebuggerAgent` will check if that violation should trigger a breakpoint, and if that is the case it will send a message to the frontend to pause the execution.
@@ -206,10 +206,10 @@ We should introduce a new CDP command, let's call it `setBreakOnTTViolation`. Th
 
 Since the issues described here were introduced, the **Issues** tab has undergone quite some changes:
 
-- Its [interconnectedness](https://developer.chrome.com/blog/new-in-devtools-89/#trusted-type-link) with other panels in DevTools has been improved.
-- Reporting of a number of further problems has moved to the **Issues** tab: [low-contrast](https://developer.chrome.com/blog/new-in-devtools-90/#low-contrast), [trusted web-activity](https://developer.chrome.com/blog/new-in-devtools-90/#twa), [quirks mode](https://developer.chrome.com/blog/new-in-devtools-92/#quirks-mode), [attribution reporting API](https://developer.chrome.com/blog/new-in-devtools-93/#attribution-reporting) and
-[CORS-related issues](https://developer.chrome.com/blog/new-in-devtools-93/#cors) among others.
-- An opportunity to [hide issues](https://developer.chrome.com/blog/new-in-devtools-94/#hide-issues) was introduced
+- Its [interconnectedness](/blog/new-in-devtools-89/#trusted-type-link) with other panels in DevTools has been improved.
+- Reporting of a number of further problems has moved to the **Issues** tab: [low-contrast](/blog/new-in-devtools-90/#low-contrast), [trusted web-activity](/blog/new-in-devtools-90/#twa), [quirks mode](/blog/new-in-devtools-92/#quirks-mode), [attribution reporting API](/blog/new-in-devtools-93/#attribution-reporting) and
+[CORS-related issues](/blog/new-in-devtools-93/#cors) among others.
+- An opportunity to [hide issues](/blog/new-in-devtools-94/#hide-issues) was introduced
 
 Moving forward, we plan to use the **Issues** tab to surface more problems, which will make it possible to unload the Console of the unreadable error-message flow in the long run.
 

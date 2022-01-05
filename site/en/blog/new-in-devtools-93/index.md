@@ -52,7 +52,7 @@ Chromium issue: [1182537](https://crbug.com/1182537)
 ## Attribution Reporting API debugging {: #attribution-reporting }
 Attribution Reporting API errors are now reported in the **Issues** tab.
 
-[Attribution Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) is a new API to help you measure when a user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
+[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) is a new API to help you measure when a user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Attribution Reporting API errors in the Issues tab", width="800", height="501" %}
 

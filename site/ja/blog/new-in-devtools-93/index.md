@@ -86,9 +86,9 @@ Attribution Reporting API errors are now reported in the **Issues** tab.
 Attribution Reporting API のエラーが **Issues** タブでレポートされるようになりました。
 
 <!--
-[Attribution Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) is a new API to help you measure when a user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
+[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) is a new API to help you measure when a user action (such as an ad click or view) leads to a conversion, without using cross-site identifiers.
 -->
-[Attribution Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/) は（広告のクリックや視聴のような）ユーザーアクションがコンバージョンを引き起こすタイミングについて、クロスサイトの識別を伴わずに測定するための新しい API です。
+[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/) は（広告のクリックや視聴のような）ユーザーアクションがコンバージョンを引き起こすタイミングについて、クロスサイトの識別を伴わずに測定するための新しい API です。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="Attribution Reporting API errors in the Issues tab", width="800", height="501" %}
 

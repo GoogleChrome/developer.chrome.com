@@ -554,7 +554,7 @@ Shortcode object fields allow for modifying how the embed is presented:
 
 Images should always use the {% raw %}`{% Img %}`{% endraw %} shortcode. This
 shortcode will be generated for you when you upload your image to our CDN.
-See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/) for upload instructions.
+See the [Add an image or video guide](/docs/handbook/how-to/add-media/) for upload instructions.
 
 ```md
 {% raw %}{% Img src="image/foR0vJZKULb5AGJExlazy1xYDgI2/w9i7lEqGw5J5b3jx5fAu.jpg", alt="ALT_TEXT_HERE", width="800", height="450" %}{% endraw %}
@@ -1059,7 +1059,7 @@ responsive. To prevent this from happening add the `fixed-table` class.
 
 Videos should always use the {% raw %}`{% Video %}`{% endraw %} shortcode. This
 shortcode will be generated for you when you upload your video to our CDN.
-See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/) for upload instructions.
+See the [Add an image or video guide](/docs/handbook/how-to/add-media/) for upload instructions.
 
 ```md
 {% raw %}{% Video src='video/tcFciHGuF3MxnTr1y5ue01OGLBn2/1601081394086.mp4' %}{% endraw %}
@@ -1072,7 +1072,7 @@ Note that the video `src` property can either be a string or an array of strings
 for multiple sources.
 {% endAside %}
 
-See the [Add an image or video guide](https://developer.chrome.com/docs/handbook/how-to/add-media/).
+See the [Add an image or video guide](/docs/handbook/how-to/add-media/).
 
 ## YouTube
 
