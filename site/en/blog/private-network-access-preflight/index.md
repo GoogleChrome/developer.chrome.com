@@ -1,13 +1,13 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: "Private Network Access: preflight"
+title: "Private Network Access: introducing preflights"
 authors:
   - titouan
   - agektmr
 description: Chrome is deprecating access to private network endpoints from non-secure public websites as part of the Private Network Access specification. Read on for recommended actions.
 date: 2022-01-06
-hero: image/YLflGBAPWecgtKJLqCJHSzHqe2J2/dwtN0NkxkBmIz1EyhzAm.jpg
-alt: A private sign in German
+hero: image/VbsHyyQopiec0718rMq2kTE1hke2/qmKHhgsBZCbEb4CnpBbT.jpg
+alt: An airplane in the sky
 tags:
   - chrome-98
 ---
@@ -326,3 +326,8 @@ showing warnings.
 In both cases, we will be proceeding cautiously with a similar two-step rollout
 process, in order to give web developers time to adjust and gather data to
 estimate compatibility risk.
+
+## Acknowledgements
+
+_Cover photo by [Mark Olsen](https://unsplash.com/@markolsen) on
+[Unsplash](https://unsplash.com/photos/K5j1KgecVC8)._
