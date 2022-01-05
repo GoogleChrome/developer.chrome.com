@@ -15,7 +15,7 @@ updating, and publishing items in the Chrome Web Store.
 
 Take the following steps to get the access keys needed:
 
-**Enable the Chrome Web Store API**.
+### Enable the Chrome Web Store API {: #enable-cws-api }
 
 1. Go to the [Google Cloud Console][google-dev-console].
 1. Create a new project or select an existing one.
