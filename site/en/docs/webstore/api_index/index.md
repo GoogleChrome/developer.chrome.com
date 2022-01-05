@@ -199,7 +199,29 @@ For UserLicenses Resource details, see the [resource representation][api-userlic
 
 For Payments Resource details, see the [resource representation][18] page.
 
-<table><thead><tr><th>Method</th><th>HTTP request</th><th>Description</th></tr></thead><tbody><tr class="alt"><td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless otherwise noted</td></tr><tr><td><a href="/webstore/webstore_api/payments/list/">list</a></td><td><code>GET&nbsp; /items/<var>itemId</var>/payments</code></td><td>Lists the in-app products that the user has purchased.</td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th>HTTP request</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="alt">
+      <td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless
+        otherwise noted</td>
+    </tr>
+    <tr>
+      <td><a href="/docs/webstore/webstore_api/payments/list/">list</a></td>
+      <td>
+        <strong>GET</strong><br>
+        <code>/items/<var>itemId</var>/payments</code>
+      </td>
+      <td>Lists the in-app products that the user has purchased.</td>
+    </tr>
+  </tbody>
+</table>
 
 [api-inappproducts-get]: /docs/webstore/webstore_api/inAppProducts/get/
 [api-inappproducts-list]: /docs/webstore/webstore_api/inAppProducts/list/
