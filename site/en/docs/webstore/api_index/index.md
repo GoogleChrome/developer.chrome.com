@@ -167,7 +167,7 @@ For Licenses Resource details, see the [resource representation][api-licenses-re
   </tbody>
 </table>
 
-## UserLicenses {: #userLicenses }
+### UserLicenses {: #userLicenses }
 
 For UserLicenses Resource details, see the [resource representation][api-userlicenses-resource] page.
 
