@@ -18,7 +18,7 @@ This reference describes the methods and resource representation available for t
 Publish API and the Licensing API. Each resource type has one or more data representations and one
 or more methods.
 
-## Resource types
+## Resource types {: #resource-types }
 
 **Chrome Web Store Publish API**
 
