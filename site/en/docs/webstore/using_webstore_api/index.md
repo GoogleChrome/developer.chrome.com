@@ -35,7 +35,7 @@ Take the following steps to get the access keys needed:
     - User Support email.
     - Developer contact email.
 1. Skip Scopes. click **Save** then **Continue**.
-1. Add your email to **Test users**, then click **Save** then **Continue**.
+1. Add your email address to **Test users**, then click **Save** then **Continue**.
 
 **Get the access keys**.
 
