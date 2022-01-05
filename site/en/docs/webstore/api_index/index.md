@@ -31,7 +31,7 @@ or more methods.
 -  [UserLicenses][header-user-licenses]
 -  [Payments][header-payments]
 
-## Chrome Web Store Publish API {: publish-api}
+## Chrome Web Store Publish API {: #publish-api}
 
 ## Items {: #Items }
 
@@ -100,7 +100,7 @@ See [Using the Chrome Web Store Publish API][publish-api].
 
 {% endAside %}
 
-## Licensing API {: licensing-api }
+## Licensing API {: #licensing-api }
 
 ### InAppProducts {: #InAppProducts }
 
