@@ -256,10 +256,10 @@ Operations with a Web Worker][18].
 [3]: #events
 [4]: #workers
 [5]: https://developers.google.com/web/ilt/pwa/introduction-to-service-worker
-[6]: https://developer.mozilla.org/en-US/docs/Web/API/Worker
-[7]: https://developer.mozilla.org/en-US/docs/Web/API/Window
-[8]: https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope
-[9]: https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
+[6]: https://developer.mozilla.org/docs/Web/API/Worker
+[7]: https://developer.mozilla.org/docs/Web/API/Window
+[8]: https://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope
+[9]: https://developer.mozilla.org/docs/Web/API/DOMParser
 [10]: https://github.com/jsdom/jsdom
 [11]: https://github.com/developit/undom
 [12]: /docs/extensions/reference/windows#method-create
@@ -271,5 +271,5 @@ Operations with a Web Worker][18].
 [alarms]: /docs/extensions/reference/alarms/
 [eventbgscripts]: /docs/extensions/mv2/background_migration/
 [storage]: /docs/extensions/reference/storage/
-[fetch-link]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+[fetch-link]: https://developer.mozilla.org/docs/Web/API/Fetch_API
 [manage-sw]: /docs/extensions/mv3/background_pages/#manifest

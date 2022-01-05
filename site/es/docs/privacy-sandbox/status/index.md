@@ -16,7 +16,7 @@ authors:
 *Anteriormente conocido como Evaluación de las conversiones.*
 
 - [Prueba de origen actual](https://web.dev/origin-trials/): desde Chrome 86, [ahora ampliado](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM) a Chrome 93.
-- [Regístrese para la prueba de origen](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
+- [Regístrese para la prueba de origen](/origintrials/#/view_trial/3411476717733150721).
 - [Demostración](https://goo.gle/demo-event-level-conversion-measurement-api).
 - [Estado de la plataforma Chrome](https://www.chromestatus.com/features/6412002824028160).
 - [El estado de Blink](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement).
@@ -39,7 +39,7 @@ Ver [Estado](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
 ## Los Trust Tokens
 
 - [Prueba de origen actual](https://web.dev/origin-trials/): desde Chrome 84, [ahora ampliada](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ) a Chrome 94.
-- [Regístrese para la prueba de origen](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- [Regístrese para la prueba de origen](/origintrials/#/view_trial/2479231594867458049).
 - [Demostración](https://trust-token-demo.glitch.me/).
 - [Estado de la plataforma Chrome](https://www.chromestatus.com/feature/5078049450098688).
 - [El estado de Blink](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens).
@@ -50,7 +50,7 @@ Ver [Estado](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
 ## Conjuntos propios
 
 - [Prueba de origen actual](https://web.dev/origin-trials/): Chrome 84 a 91.
-- [Regístrese para la prueba de origen](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+- [Regístrese para la prueba de origen](/origintrials/#/view_trial/988540118207823873).
 - [Estado de la plataforma Chrome](https://chromestatus.com/feature/5640066519007232).
 - [El estado de Blink](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets).
 - [Propuesta de la API](https://github.com/privacycg/first-party-sets): consulte los [problemas](hhttps://github.com/privacycg/first-party-sets/issues) para conocer las preguntas y la discusión sobre la API.
@@ -93,7 +93,7 @@ Es un descendiente de [TURTLEDOVE](https://github.com/WICG/turtledove).
 
 - [Introducción a las pruebas de origen de Chrome](https://web.dev/origin-trials/)
 - [¿Qué son las pruebas de origen de terceros?](https://web.dev/third-party-origin-trials)
-- [Diagnóstico de los problemas en las pruebas de origen de Chrome](https://developer.chrome.com/blog/origin-trial-troubleshooting/)
+- [Diagnóstico de los problemas en las pruebas de origen de Chrome](/blog/origin-trial-troubleshooting/)
 - [Guía de las pruebas de origen para desarrolladores web](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 - [Explicación de la pruebas de origen](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
 - [Ejecución de una prueba de origen](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)

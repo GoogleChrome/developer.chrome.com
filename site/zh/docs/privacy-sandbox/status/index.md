@@ -16,7 +16,7 @@ authors:
 *以前称为转化衡量。*
 
 - [当前源站试用](https://web.dev/origin-trials/)：现已从 Chrome 86 [扩展](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM)到 Chrome 93。
-- [注册源站试用](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721)。
+- [注册源站试用](/origintrials/#/view_trial/3411476717733150721)。
 - [演示](https://goo.gle/demo-event-level-conversion-measurement-api)。
 - [Chrome 平台状态](https://www.chromestatus.com/features/6412002824028160)。
 - [Blink 状态](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement)。
@@ -39,7 +39,7 @@ authors:
 ## 信任令牌
 
 - [当前源站试用](https://web.dev/origin-trials/)：现已从 Chrome 84 [扩展](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ)到 Chrome 94。
-- [注册源站试用](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)。
+- [注册源站试用](/origintrials/#/view_trial/2479231594867458049)。
 - [演示](https://trust-token-demo.glitch.me/)。
 - [Chrome 平台状态](https://www.chromestatus.com/feature/5078049450098688)。
 - [Blink 状态](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens)。
@@ -50,7 +50,7 @@ authors:
 ## 第一方集
 
 - [当前源站试用](https://web.dev/origin-trials/)：Chrome 89 到 93。
-- [注册源站试用](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)。
+- [注册源站试用](/origintrials/#/view_trial/988540118207823873)。
 - [Chrome 平台状态](https://chromestatus.com/feature/5640066519007232)。
 - [Blink 状态](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets)。
 - [API 提案](https://github.com/privacycg/first-party-sets)：有关 API 问题和讨论，请参阅[议题](hhttps://github.com/privacycg/first-party-sets/issues)。

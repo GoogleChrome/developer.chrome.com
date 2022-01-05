@@ -146,7 +146,7 @@ We believe existing or upcoming Web Platform APIs enable most use cases needed b
 you are looking for new or upcoming Web APIs, check out the [New Capabilities status page][7].
 
 [1]: https://developers.google.com/web/tools/lighthouse/audits/noopener
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Location
+[2]: https://developer.mozilla.org/docs/Web/API/Location
 [3]: https://github.com/GoogleChromeLabs/bubblewrap/issues
 [4]: https://github.com/GoogleChromeLabs/bubblewrap
 [5]: https://www.npmjs.com/package/@bubblewrap/cli

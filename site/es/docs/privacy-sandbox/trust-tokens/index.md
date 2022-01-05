@@ -12,7 +12,7 @@ authors:
 ## Estado de la implementación
 
 - [En la prueba de origen](https://web.dev/origin-trials/) Chrome 84 a 94.
-- [Regístrese para la prueba](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- [Regístrese para la prueba](/origintrials/#/view_trial/2479231594867458049).
 - [Demostración](https://trust-token-demo.glitch.me/).
 - [Integración con las Chrome DevTools](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 - [Estado de la plataforma Chrome](https://www.chromestatus.com/feature/5078049450098688).
@@ -40,7 +40,7 @@ Desafortunadamente, muchos de los mecanismos que existen actualmente para evalua
 
 Con la API de Trust Tokens, un sitio web puede emitir tokens criptográficos a un usuario en el que confía, los cuales posteriormente pueden utilizarse en otro lugar. Los tokens se almacenan de forma segura en el navegador del usuario y luego se pueden canjear en otros contextos para confirmar la autenticidad del usuario. Esto permite que la confianza de un usuario en un sitio web (como un sitio de redes sociales o un servicio de correo electrónico) se transmita a otro sitio web (como un editor o una tienda en línea) sin que sea necesario identificar al usuario o relacionar ambas identidades entre los sitios.
 
-{% Aside 'key-term' %} La [toma de huellas dactilares](https://w3c.github.io/fingerprinting-guidance/#passive) permite a los sitios identificar y hacer un seguimiento de los usuarios de forma individual al obtener información sobre su dispositivo, sistema operativo y configuración del navegador (como las preferencias del idioma, el [agente de usuario](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) y las fuentes que están disponibles) o los cambios efectuados en el estado del dispositivo. Esto se puede hacer en el servidor comprobando los encabezados de las solicitudes o en el cliente a través de JavaScript.
+{% Aside 'key-term' %} La [toma de huellas dactilares](https://w3c.github.io/fingerprinting-guidance/#passive) permite a los sitios identificar y hacer un seguimiento de los usuarios de forma individual al obtener información sobre su dispositivo, sistema operativo y configuración del navegador (como las preferencias del idioma, el [agente de usuario](https://developer.mozilla.org/docs/Web/API/NavigatorID/userAgent) y las fuentes que están disponibles) o los cambios efectuados en el estado del dispositivo. Esto se puede hacer en el servidor comprobando los encabezados de las solicitudes o en el cliente a través de JavaScript.
 
 La toma de huellas dactilares utiliza mecanismos que los usuarios no conocen y que tampoco pueden controlar. Sitios como [Panopticlick](https://panopticlick.eff.org/) y [amiunique.org](https://amiunique.org/) muestran cómo se puede combinar la información proveniente de las huellas digitales para identificarlo como individuo. {% endAside %}
 
@@ -68,7 +68,7 @@ En este ejemplo, el sitio web de un editor quiere verificar si un usuario es un 
 
 ## Participe y comparta sus comentarios
 
-- **Prueba de origen**: regístrese y participe en la [prueba de origen de Chrome](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- **Prueba de origen**: regístrese y participe en la [prueba de origen de Chrome](/origintrials/#/view_trial/2479231594867458049).
 - **Demostración**: pruebe la [distribución y el desempeño](https://trust-token-demo.glitch.me/) de Trust token.
 - **GitHub**: lea la [propuesta](https://github.com/WICG/trust-token-api), [realice preguntas y siga la discusión](https://github.com/WICG/trust-token-api/issues).
 - **W3C**: discuta los casos de uso en la industria con el [grupo Improving Web Advertising Business](https://www.w3.org/community/web-adv/participants).

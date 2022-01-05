@@ -53,7 +53,7 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.<span style="background:
 {% Aside %}
 
 You can also [enroll your own sites in the origin
-trial](https://developer.chrome.com/blog/user-agent-reduction-origin-trial/) to
+trial](/blog/user-agent-reduction-origin-trial/) to
 enable Chrome browsers visiting your site to send the reduced version of the
 user-agent.
 
@@ -103,7 +103,7 @@ replacing it with the appropriate reduced value.
 
 In client-side JavaScript, the following snippet can be used to override the
 current value of
-[`navigator.userAgent`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgent)
+[`navigator.userAgent`](https://developer.mozilla.org/docs/Web/API/Navigator/userAgent)
 with the reduced format.
 
 Demo:
@@ -139,7 +139,7 @@ if (matched) {
 
 In [Node.js](https://nodejs.org/) you can use the following snippet to override
 the incoming [`User-Agent`
-header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+header](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
 with the reduced format.
 
 Demo:
@@ -166,7 +166,7 @@ if (matched) {
 You can use a [CloudFlare Worker](https://developers.cloudflare.com/workers/) to
 proxy and transform requests to your own site. This snippet replaces the
 incoming [`User-Agent`
-header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+header](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
 with the reduced format.
 
 ```javascript

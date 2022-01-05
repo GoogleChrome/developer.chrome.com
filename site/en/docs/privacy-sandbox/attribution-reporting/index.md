@@ -47,7 +47,7 @@ _For developers:_
   repo](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) or on the [Attribution
   Reporting mailing list for
   developers](https://groups.google.com/u/0/a/chromium.org/g/attribution-reporting-api-dev).
-- Register for an [origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) to experiment with end
+- Register for an [origin trial](/origintrials/#/view_trial/3411476717733150721) to experiment with end
   users on a deployed site.
 
 ## Join the discussion

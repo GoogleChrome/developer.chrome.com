@@ -95,8 +95,8 @@ link.access = 'admin';
 link.search = `?access=${link.access}`;
 ```
 
-<!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
-Tente registrar `link` no **Console**. Propriedades customizadas agora estão em destaque e ordenadas primeiro. Essas alterações facilitam a localização de propriedades customizadas, especialmente para  [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API)(por exemplo, `URL`) com muitas propriedades herdadas.
+<!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
+Tente registrar `link` no **Console**. Propriedades customizadas agora estão em destaque e ordenadas primeiro. Essas alterações facilitam a localização de propriedades customizadas, especialmente para  [Web APIs](https://developer.mozilla.org/docs/Web/API)(por exemplo, `URL`) com muitas propriedades herdadas.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="As propriedades customizadas estão em negrito e classificadas primeiro", width="800", height="561" %}
 

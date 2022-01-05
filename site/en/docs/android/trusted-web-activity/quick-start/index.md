@@ -69,7 +69,7 @@ Initializing an Android project that wraps a PWA is done by running the init com
 bubblewrap init --manifest=https://my-twa.com/manifest.json
 ```
 
-Bubblewrap will read the [Web Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest),
+Bubblewrap will read the [Web Manifest](https://developer.mozilla.org/docs/Web/Manifest),
 ask developers to confirm values to be used in the Android project, and generate the project using
 those values. Once the project has been generated, generate an APK by running:
 

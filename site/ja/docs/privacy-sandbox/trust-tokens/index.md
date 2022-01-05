@@ -12,7 +12,7 @@ authors:
 ## 実装状況
 
 - [オリジントライアル中](https://web.dev/origin-trials/) Chrome 84～94。
-- [トライアルに登録する](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)。
+- [トライアルに登録する](/origintrials/#/view_trial/2479231594867458049)。
 - [デモ](https://trust-token-demo.glitch.me/)。
 - [ChromeDevTools の統合](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token)。
 - [Chrome プラットフォームステータス](https://www.chromestatus.com/feature/5078049450098688)。
@@ -40,7 +40,7 @@ authors:
 
 Trust Tokens API を使用すると、ウェブサイトは信頼できるユーザーに暗号化トークンを発行できます。このトークンは、その後に他の場所で使用することもできます。トークンはユーザーのブラウザによって安全に保存されるため、他のコンテキストでも利用することによりユーザーの信頼性を確認することができます。そうすることで、ユーザーを識別したりサイト間でアイデンティティを紐づけたりせずに、1 つのウェブサイト (ソーシャルメディアサイトや電子メールサービスなど) におけるユーザーの信頼性を別のウェブサイト (パブリッシャーやオンラインストアなど) に伝えることができます。
 
-{% Aside 'key-term' %} [フィンガープリンティング](https://w3c.github.io/fingerprinting-guidance/#passive)を使用すると、サイトはデバイス、オペレーティングシステム、ブラウザーの設定 (言語設定、[ユーザーエージェント](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent)、使用可能なフォントなど) またはデバイスの状態の変化に関するデータを取得することにより、個々のユーザーを識別および追跡できます。これは、リクエストヘッダーを確認してサーバー側で行うことも、JavaScript を使用してクライアント側で行うことも可能です。
+{% Aside 'key-term' %} [フィンガープリンティング](https://w3c.github.io/fingerprinting-guidance/#passive)を使用すると、サイトはデバイス、オペレーティングシステム、ブラウザーの設定 (言語設定、[ユーザーエージェント](https://developer.mozilla.org/docs/Web/API/NavigatorID/userAgent)、使用可能なフォントなど) またはデバイスの状態の変化に関するデータを取得することにより、個々のユーザーを識別および追跡できます。これは、リクエストヘッダーを確認してサーバー側で行うことも、JavaScript を使用してクライアント側で行うことも可能です。
 
 フィンガープリンティングは、ユーザーが認識していない、または制御できないメカニズムを使用しています。[Panopticlick](https://panopticlick.eff.org/) や [amiunique.org](https://amiunique.org/) などのサイトでは、フィンガープリントのデータを組み合わせて個人を識別する方法が説明されています。 {% endAside %}
 
@@ -68,7 +68,7 @@ Trust Tokens API を使用すると、ウェブサイトは信頼できるユー
 
 ## 参加してフィードバックを共有する
 
-- **オリジントライアル**[：Chrome オリジントライアル](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)に登録して参加してください。
+- **オリジントライアル**[：Chrome オリジントライアル](/origintrials/#/view_trial/2479231594867458049)に登録して参加してください。
 - **デモ**[：トラストトークンの発行と引き換え](https://trust-token-demo.glitch.me/)をお試しください。
 - **GitHub**: [提案](https://github.com/WICG/trust-token-api)を読み、[質問をしてディスカッションをフォロー](https://github.com/WICG/trust-token-api/issues)しましょう。
 - **W3C** [：Improving Web Advertising BusinessGroup](https://www.w3.org/community/web-adv/participants) で業界のユースケースについて話し合いましょう。

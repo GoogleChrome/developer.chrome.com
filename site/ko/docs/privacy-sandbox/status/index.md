@@ -16,7 +16,7 @@ authors:
 *이전에는 전환 측정이라고 했습니다.*
 
 - [현재 최초 평가판](https://web.dev/origin-trials/): Chrome 86에서 [이제 Chrome 93으로 확장](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM)되었습니다.
-- [최초 평가판에 등록](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721)
+- [최초 평가판에 등록](/origintrials/#/view_trial/3411476717733150721)
 - [데모](https://goo.gle/demo-event-level-conversion-measurement-api)
 - [Chrome 플랫폼 현황](https://www.chromestatus.com/features/6412002824028160)
 - [Blink 상태](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement)
@@ -39,7 +39,7 @@ authors:
 ## 신뢰 토큰
 
 - [현재 최초 평가판](https://web.dev/origin-trials/): Chrome 84에서 [이제 Chrome 94로 확장](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ)되었습니다.
-- [최초 평가판에 등록](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049)
+- [최초 평가판에 등록](/origintrials/#/view_trial/2479231594867458049)
 - [데모](https://trust-token-demo.glitch.me/)
 - [Chrome 플랫폼 현황](https://www.chromestatus.com/feature/5078049450098688)
 - [Blink 상태](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens)
@@ -50,7 +50,7 @@ authors:
 ## 자사 세트
 
 - [현재 최초 평가판](https://web.dev/origin-trials/) Chrome 89 ~ 93
-- [최초 평가판에 등록](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873)
+- [최초 평가판에 등록](/origintrials/#/view_trial/988540118207823873)
 - [Chrome 플랫폼 현황](https://chromestatus.com/feature/5640066519007232)
 - [Blink 상태](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets)
 - [API 제안](https://github.com/privacycg/first-party-sets): API 질문 및 토론에 대한 [이슈](hhttps://github.com/privacycg/first-party-sets/issues)를 참조하세요.

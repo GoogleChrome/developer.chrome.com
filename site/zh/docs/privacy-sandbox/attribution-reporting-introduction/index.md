@@ -30,7 +30,7 @@ authors:
 
 ## 为什么需要这个 API？
 
-如今，广告转化测量通常依赖于[第三方 cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies)。但是浏览器正在限制获取这些第三方 cookie，因为这些 cookie 可用于跨站跟踪用户并妨碍用户隐私。该 API 以保护隐私的方式实现这些测量，且无需第三方 cookie。
+如今，广告转化测量通常依赖于[第三方 cookie](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies)。但是浏览器正在限制获取这些第三方 cookie，因为这些 cookie 可用于跨站跟踪用户并妨碍用户隐私。该 API 以保护隐私的方式实现这些测量，且无需第三方 cookie。
 
 ## 谁需要了解此 API？
 
@@ -71,7 +71,7 @@ authors:
 
 #### 在已部署的网站上对最终用户进行实验
 
-1. 通过注册[原始试验](https://developer.chrome.com/blog/origin-trials/)（如果可用）为最终用户启用 API。原始试验让您能够使用实验性功能并构建可以在有限时间内试用的功能。请注意，[第三方原始试验](https://developer.chrome.com/blog/third-party-origin-trials/)使广告服务和测量提供商等第三方行为者可以跨多个站点对 API 进行测试。**如需查看此 API 当前可用的原始试验，请前往[状态](#status)部分**。如需了解未来原始试验的相关信息，请加入[归因报告开发者邮件列表](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)。
+1. 通过注册[原始试验](/blog/origin-trials/)（如果可用）为最终用户启用 API。原始试验让您能够使用实验性功能并构建可以在有限时间内试用的功能。请注意，[第三方原始试验](/blog/third-party-origin-trials/)使广告服务和测量提供商等第三方行为者可以跨多个站点对 API 进行测试。**如需查看此 API 当前可用的原始试验，请前往[状态](#status)部分**。如需了解未来原始试验的相关信息，请加入[归因报告开发者邮件列表](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)。
 
 2. 将 API 集成到您的网站和系统中。
 
@@ -138,8 +138,8 @@ authors:
 
 {% Aside %}将来不再使用第三方 cookie 时，该 API 将与其他隐私保护广告 API 相结合，从而覆盖端到端用例：
 
-- 再营销：参见 [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
-- 基于兴趣的广告选择：参见 [FLoC](https://developer.chrome.com/docs/privacy-sandbox/floc/)
+- 再营销：参见 [FLEDGE](/docs/privacy-sandbox/fledge/)
+- 基于兴趣的广告选择：参见 [FLoC](/docs/privacy-sandbox/floc/)
 
 {% endAside %}
 
@@ -155,7 +155,7 @@ authors:
 - `🧪 Experiment (BROWSER_NAME)`：BROWSER_NAME 有可用的实验。Chrome 中将实验称为原始试验。
 - `🚀 Stable (BROWSER_NAME)` ：BROWSER_NAME 中已默认提供该功能。
 
-{% Aside %} [当前原始试验](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721)（Chrome 实验 🧪）{% endAside %}
+{% Aside %} [当前原始试验](/origintrials/#/view_trial/3411476717733150721)（Chrome 实验 🧪）{% endAside %}
 
 {% Aside 'caution' %}我们将运行多个原始试验（实验）。每轮运行情况将用来根据生态系统反馈对 API 进行改进和调整。{% endAside %}
 
@@ -342,7 +342,7 @@ authors:
 ## 网站和用户控制
 
 - 用户可以在用户设置`chrome://settings/privacySandbox`中选择退出。
-- 默认情况下，顶级上下文中会启用该功能。任意第三方无法在发布商不知情的情况下使用该 API，因为需要通过[许可策略](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)在子 iframe 中启用归因报告 API。
+- 默认情况下，顶级上下文中会启用该功能。任意第三方无法在发布商不知情的情况下使用该 API，因为需要通过[许可策略](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)在子 iframe 中启用归因报告 API。
 
 ## 开放性问题
 

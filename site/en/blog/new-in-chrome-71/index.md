@@ -120,7 +120,7 @@ We've all been surprised when we hit a site and it suddenly starts talking
 to us. [Autoplay policies](https://developers.google.com/web/updates/2018/11/web-audio-autoplay)
 prevent sites from automatically playing playing audio, or video files with
 audio. Some sites have tried to get around this by using the
-[speech synthesis API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
+[speech synthesis API](https://developer.mozilla.org/docs/Web/API/SpeechSynthesis)
 instead.
 
 Starting in Chrome 71, the speech synthesis API now requires some kind of user
@@ -204,7 +204,7 @@ and you'll get an email notification whenever we launch a new video.
 I'm Pete LePage, and as soon as Chrome 72 is released, I'll be right
 here to tell you -- what's new in Chrome!
 
-[mdn-reltimefmt]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat
+[mdn-reltimefmt]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl.RelativeTimeFormat
 [css3-td-spec]: https://www.w3.org/TR/css-text-decor-3/
 [css3-td-line]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-style-property
 [css3-td-style]: https://www.w3.org/TR/css-text-decor-3/#text-decoration-style-property

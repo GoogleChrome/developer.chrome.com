@@ -14,7 +14,7 @@ authors:
 
 ## Who is this blogpost for?
 
-This post is for you if you're a developer planning on experimenting with the Attribution Reporting API with event-level reports, either locally or via an origin trial⏤for example, if you're planning on taking part in the [origin trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) that was [extended in November 2021](https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA/m/RTK45f9gBQAJ).
+This post is for you if you're a developer planning on experimenting with the Attribution Reporting API with event-level reports, either locally or via an origin trial⏤for example, if you're planning on taking part in the [origin trial](/origintrials/#/view_trial/3411476717733150721) that was [extended in November 2021](https://groups.google.com/a/chromium.org/g/blink-dev/c/DdjaFmsb4fA/m/RTK45f9gBQAJ).
 
 In this post, you'll find:
 
@@ -442,7 +442,7 @@ app.get('/conversion', (req, res) => {
 
 In order to use Attribution Reporting in **cross-origin iframes** to declare a click
 or trigger an attribution, you need to enable the feature via the `attribution-reporting`
-[Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy).
+[Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
 
 ```html
 <iframe src="..." allow="attribution-reporting"></iframe>
@@ -898,7 +898,7 @@ If you're not able to see any clicks or attribution trigger event on `chrome://c
   that your browser is properly configured. The issue may be a result of your implementation or
   origin trial setup. Check for common issues in your origin trial setup and implementation:
 - If you're running an origin trial, follow the troubleshooting checklist in
-  [Troubleshooting origin trials](https://developer.chrome.com/origin-trial-troubleshooting/).
+  [Troubleshooting origin trials](/origin-trial-troubleshooting/).
 - Ensure that the feature is [allowed](#allow-the-feature-for-cross-origin-iframes) in your application.
 - Open Chrome DevTools and see if issues have been flagged with your implementation in the
   **Issues** tab. A misconfiguration in your code may have prevented clicks or attribution triggers from being registered.

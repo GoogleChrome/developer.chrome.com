@@ -40,4 +40,4 @@ See [Cross-origin isolation overview][doc-coi] for more information about this f
 
 [doc-coep]: /docs/extensions/mv2/manifest/cross_origin_embedder_policy/
 [doc-coi]: /docs/extensions/mv2/cross-origin-isolation/
-[mdn-coop]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy
+[mdn-coop]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy

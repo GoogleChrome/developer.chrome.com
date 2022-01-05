@@ -174,7 +174,7 @@ Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 
 ## Deprecated Application cache pane in the Application panel {: #app-cache }
 
-The [Application cache](https://developer.chrome.com/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers.
+The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 

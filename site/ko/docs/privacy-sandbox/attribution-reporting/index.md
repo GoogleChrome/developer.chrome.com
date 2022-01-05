@@ -40,7 +40,7 @@ authors:
 
 ## 이 API가 필요한 이유는 무엇입니까? {: #why-is-this-api-needed }
 
-오늘날 광고 전환 측정은 종종 [타사 쿠키](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies)에 의존합니다. 브라우저는 타사 쿠키에 대한 액세스를 제한하고 있는데, 타사 쿠키는 사이트 전체에서 사용자를 추적하고 사용자 개인정보를 유출하는 데 사용될 수 있기 때문입니다. 이 API는 타사 쿠키 없이 개인정보를 보호하는 방식으로 이러한 측정을 가능하게 합니다.
+오늘날 광고 전환 측정은 종종 [타사 쿠키](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies)에 의존합니다. 브라우저는 타사 쿠키에 대한 액세스를 제한하고 있는데, 타사 쿠키는 사이트 전체에서 사용자를 추적하고 사용자 개인정보를 유출하는 데 사용될 수 있기 때문입니다. 이 API는 타사 쿠키 없이 개인정보를 보호하는 방식으로 이러한 측정을 가능하게 합니다.
 
 ## Attribution Reporting API는 어떤 방식으로 작동하며 어떤 기능을 합니까?
 
@@ -57,7 +57,7 @@ API는 다양한 사용 사례에 사용할 수 있는 두 가지 유형의 기�
 
 ## 참여 및 피드백 공유 {: #engage }
 
-- **최초 평가판**: [첫 최초 평가판(클릭만)에 등록하거나](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721), 또는 [첫 데모(클릭만)를 참조하세요](https://goo.gle/demo-event-level-conversion-measurement-api).
+- **최초 평가판**: [첫 최초 평가판(클릭만)에 등록하거나](/origintrials/#/view_trial/3411476717733150721), 또는 [첫 데모(클릭만)를 참조하세요](https://goo.gle/demo-event-level-conversion-measurement-api).
 - 더 많은 기능을 제공하고 Chrome에서 실험해 볼 수 있는(최초 평가판) 이 API의 다음 구현 내용을 계속해서 확인하려면 [개발자 메일링 리스트](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)에 등록하세요.
 - **GitHub**: [제안](https://github.com/WICG/conversion-measurement-api/)을 읽고 [질문을 제기하고 토론에 참여하세요](https://github.com/WICG/conversion-measurement-api/issues).
 - **W3C**: [웹 광고 개선 비즈니스 그룹](https://www.w3.org/community/web-adv/participants)에서 업계 사용 사례에 대해 논의하고 [개인정보 보호 커뮤니티 그룹](https://www.w3.org/community/privacycg/)에 참여하여 WebKit/Safari API에 대한 토론을 벌이세요.

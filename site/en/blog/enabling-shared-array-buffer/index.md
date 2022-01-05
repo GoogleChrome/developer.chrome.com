@@ -60,7 +60,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 Once you do this, your page will not be able to load cross-origin content unless
 the resource explicitly allows it via a [`Cross-Origin-Resource-Policy`][corp]
-header or [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) headers
+header or [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS) headers
 (`Access-Control-Allow-*` and so forth).
 
 There's also a [reporting
@@ -147,7 +147,7 @@ These APIs have a 'legacy' behavior that allows content from other origins to be
 used without opt-in from the other origin. These requests are made with the
 cookies of the other origin, so it's a full 'logged in' request. Nowadays, new
 APIs require the other origin to opt-in using
-[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+[CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS).
 
 We worked around these legacy APIs by preventing content from entering the
 webpage's process if it looked 'incorrect', and called it [cross-origin read
@@ -170,8 +170,8 @@ This declaration is done via [COOP and COEP headers](https://web.dev/coop-coep/)
 served with the page. The browser enforces that, and in exchange the page gains
 access to `SharedArrayBuffer` and other APIs with similar powers. Other origins
 can opt-in to content embedding via
-[`Cross-Origin-Resource-Policy`](<https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)
-or [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+[`Cross-Origin-Resource-Policy`](<https://developer.mozilla.org/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)
+or [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS).
 
 Firefox was the first to ship `SharedArrayBuffer` with this restriction, in
 version 79 (July 2020).
@@ -214,6 +214,6 @@ href="https://unsplash.com/@yeeeeeeha?utm_source=unsplash&amp;utm_medium=referra
 Gregoire</a> on <a
 href="https://unsplash.com/s/photos/padlocks?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
 
-[mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-[compat]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#browser_compatibility
-[corp]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)
+[mdn]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+[compat]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#browser_compatibility
+[corp]: https://developer.mozilla.org/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)

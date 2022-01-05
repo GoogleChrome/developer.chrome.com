@@ -55,7 +55,7 @@ Chromium 议题: [1182537](https://crbug.com/1182537)
 ## Attribution Reporting API 调试 {: #attribution-reporting }
 现在，Attribution Reporting API 错误会显示在**问题**标签页那里。
 
-[Attribution Reporting](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/)是一个新的 API，旨在帮助您在没有使用跨站标识符的情况下，评估用户行为（比如点击或者查看广告）所导致的转化率。
+[Attribution Reporting](/docs/privacy-sandbox/attribution-reporting/)是一个新的 API，旨在帮助您在没有使用跨站标识符的情况下，评估用户行为（比如点击或者查看广告）所导致的转化率。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/bkEGVEv5kKc9M6qBUmLz.png", alt="显示在问题标签页里的 Attribution Reporting API 错误信息", width="800", height="501" %}
 

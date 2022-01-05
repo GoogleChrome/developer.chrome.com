@@ -211,8 +211,8 @@ Issues relacionadas: [1232937](https://crbug.com/1232937), [1255586](https://crb
 
 <!-- ## Deprecated Application cache pane in the Application panel {: #app-cache } -->
 ## Obsolescência do Painel de cache no painel do Aplicativo {: #app-cache }
-<!-- The [Application cache](https://developer.chrome.com/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
-O painel [Cache do aplicativo](https://developer.chrome.com/docs/devtools/storage/applicationcache/) no painel do aplicativo foi removido pois o suporte para [AppCache](https://web.dev/appcache-removal/) foi removido do Chrome e de outros navegadores baseados em Chromium.
+<!-- The [Application cache](/docs/devtools/storage/applicationcache/) pane in the Application panel is now removed as the support for [AppCache](https://web.dev/appcache-removal/) is removed from Chrome and other Chromium-based browsers. -->
+O painel [Cache do aplicativo](/docs/devtools/storage/applicationcache/) no painel do aplicativo foi removido pois o suporte para [AppCache](https://web.dev/appcache-removal/) foi removido do Chrome e de outros navegadores baseados em Chromium.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 

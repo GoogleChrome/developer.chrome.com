@@ -166,7 +166,7 @@ there's plenty more.
 * The syntax for specifying `HSL` and `HSLA`, and `RGB` and `RGBA` coordinates
   for the color property now
   [match](https://drafts.csswg.org/css-color/#the-hsl-notation) the
-  [CSS Color 4 spec](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
+  [CSS Color 4 spec](https://developer.mozilla.org/docs/Web/CSS/color_value).
 * There's a new [feature policy](http://xhr.featurepolicy.rocks/) that allows
   you to control synchronous XHRs through an HTTP header or the
   iframe `allow` attribute.

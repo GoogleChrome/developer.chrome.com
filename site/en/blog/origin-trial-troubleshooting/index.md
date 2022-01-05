@@ -134,7 +134,7 @@ available, despite the presence of a valid token.
 token.
 * **Expiry Time**: the maximum (latest) possible expiry date/time for the token, which will normally 
 match the end of the trial. This is not the same as the Valid Until date for the token displayed 
-on your origin trial's My Registrations](https://developer.chrome.com/origintrials/#/trials/my) 
+on your origin trial's My Registrations](/origintrials/#/trials/my) 
 page, which shows how long the token is currently valid for, and [can be extended](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#21-what-does-the-valid-until-date-mean-for-my-tokens).
 * **Usage Restriction**: Usage limits, which [can be set](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#20-what-are-the-options-for-usage-restrictions-on-tokens) for some trials.
 * **Third Party**: Whether [third-party matching](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#18-how-can-i-enable-an-experimental-feature-as-embedded-content-on-different-domains) 
@@ -192,7 +192,7 @@ Enrollment in an Edge origin trial won't enable a feature in Chrome.
 Access to trials is limited to specific versions of Chrome. In some cases, this may mean a trial 
 feature is only available to pre-Stable Chrome channels: Canary, Dev and Beta. 
 
-You can check version availability from the [registration page](https://developer.chrome.com/origintrials/#/trials/active) 
+You can check version availability from the [registration page](/origintrials/#/trials/active) 
 for the trial:
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/I6CRBeKSEhsqzAdQQvzm.png", alt="Chrome Origin Trials
@@ -380,7 +380,7 @@ default to all users.
 more detail about trial timelines.
 {% endAside %}
 
-You can check for active tokens on your Chrome Origin Trials [My Registrations page](https://developer.chrome.com/origintrials/#/trials/my): 
+You can check for active tokens on your Chrome Origin Trials [My Registrations page](/origintrials/#/trials/my): 
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/XRSqveK1hiuOxAfJrKDx.png", alt="Chrome origin trials 
 My Registrations page showing Valid Until date", width="800", height="612" %}
@@ -390,7 +390,7 @@ Chrome DevTools displays Status `Success` if the token is still valid:
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/fO8LVqZb8Hv0kIg6HdK7.png", alt="Chrome DevTools 
 origin trials information in the Application panel, highlighting Status: Success", width="800", height="424" %}
 
-If your token has expired, DevTools will display Status `Expired` and your [My&nbsp;Registrations&nbsp;page](https://developer.chrome.com/origintrials/#/trials/my) for the trial will display an **Expired Tokens** section:
+If your token has expired, DevTools will display Status `Expired` and your [My&nbsp;Registrations&nbsp;page](/origintrials/#/trials/my) for the trial will display an **Expired Tokens** section:
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/l61ghrJpV0SvwGlRbXlz.png", alt="Chrome origin trials 
 My Registrations page showing expired tokens", width="800", height="591" %}
@@ -398,7 +398,7 @@ My Registrations page showing expired tokens", width="800", height="591" %}
 
 ### The origin trial hasn't ended {: #trial-ended}
 
-You can check the end date for an origin trial from its [registration page](https://developer.chrome.com/origintrials/#/trials/active):
+You can check the end date for an origin trial from its [registration page](/origintrials/#/trials/active):
 
 {% Img src="image/80mq7dk16vVEg8BBhsVe42n6zn82/0f2Wdcfj3D3UwZmWx33S.png", alt="Chrome Origin Trials
 page for First Party Sets & SameParty with Trial Available details highlighted", width="800", height="737" %}
@@ -473,7 +473,7 @@ A demo showing access to an origin trial feature in an iframe is available at
 
 ### Permissions policies are correctly configured {: #permissions-policies}
 
-Some origin trial features may be affected by a [`Permissions-Policy`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy) 
+Some origin trial features may be affected by a [`Permissions-Policy`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) 
 header (previously known as a `Feature-Policy` header). You can check for this in the 
 [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=subject%3Aintent%20subject%3Ato%20subject%3Aexperiment) 
 for the trial feature, or in developer documentation for the feature on [web.dev](https://web.dev) 

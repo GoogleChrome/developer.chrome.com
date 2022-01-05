@@ -16,7 +16,7 @@ authors:
 *Старое название—«Измерение конверсии».*
 
 - [Текущее испытание origin trial](https://web.dev/origin-trials/): с Chrome 86 [теперь расширено](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM) до Chrome 93.
-- [Регистрация для участия в испытании Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
+- [Регистрация для участия в испытании Origin Trial](/origintrials/#/view_trial/3411476717733150721).
 - [Демонстрация](https://goo.gle/demo-event-level-conversion-measurement-api).
 - [Статус платформы Chrome](https://www.chromestatus.com/features/6412002824028160).
 - [Статус Blink](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement).
@@ -39,7 +39,7 @@ authors:
 ## Токены доверия
 
 - [Текущее испытание origin trial](https://web.dev/origin-trials/): с Chrome 84 [теперь расширено](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ) до Chrome 94.
-- [Регистрация для участия в испытании Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- [Регистрация для участия в испытании Origin Trial](/origintrials/#/view_trial/2479231594867458049).
 - [Демонстрация](https://trust-token-demo.glitch.me/).
 - [Статус платформы Chrome](https://www.chromestatus.com/feature/5078049450098688).
 - [Статус Blink](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens).
@@ -50,7 +50,7 @@ authors:
 ## Наборы собственных доменов
 
 - [Текущее испытание Origin Trial](https://web.dev/origin-trials/): Chrome с 89 по 93.
-- [Регистрация для участия в испытании Origin Trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+- [Регистрация для участия в испытании Origin Trial](/origintrials/#/view_trial/988540118207823873).
 - [Статус платформы Chrome](https://chromestatus.com/feature/5640066519007232).
 - [Статус Blink](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets).
 - [Предложение API](https://github.com/privacycg/first-party-sets): задавайте вопросы и участвуйте в обсуждении API в разделе [Issues](hhttps://github.com/privacycg/first-party-sets/issues).
@@ -93,7 +93,7 @@ authors:
 
 - [Знакомство с испытаниями Chrome Origin Trial](https://web.dev/origin-trials/)
 - [Что такое сторонние испытания Origin Trial?](https://web.dev/third-party-origin-trials)
-- [Знакомство с испытаниями Chrome Origin Trial](https://developer.chrome.com/blog/origin-trial-troubleshooting/)
+- [Знакомство с испытаниями Chrome Origin Trial](/blog/origin-trial-troubleshooting/)
 - [Руководство по испытаниям Origin Trial для веб-разработчиков](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 - [Зачем нужны испытания Origin Trial](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
 - [Проведение испытаний Origin Trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)

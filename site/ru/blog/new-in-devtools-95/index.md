@@ -113,10 +113,10 @@ link.access = 'admin';
 link.search = `?access=${link.access}`;
 ```
 
-<!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
+<!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
 Попробуйте вывести `link` в **Консоль** (Console). Собственные свойства отображаются вверху списка и выделены жирным. Эти
 изменения облегчают поиск кастомных свойств, особенно для [Web
-APIs](https://developer.mozilla.org/en-US/docs/Web/API) (например, `URL`) с множеством
+APIs](https://developer.mozilla.org/docs/Web/API) (например, `URL`) с множеством
 унаследованных свойств.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="Собственные свойства

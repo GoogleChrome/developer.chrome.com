@@ -101,7 +101,7 @@ where each `GridNodeHighlightConfig` contains information about which node to dr
 
 ## Real-time Grid badges
 
-To help developers easily toggle on and off the Grid overlays, we decided to add small badges next to Grid containers in the [DOM Tree](https://developer.chrome.com/docs/devtools/dom/). These badges can also help developers identify Grid containers in their DOM structures.
+To help developers easily toggle on and off the Grid overlays, we decided to add small badges next to Grid containers in the [DOM Tree](/docs/devtools/dom/). These badges can also help developers identify Grid containers in their DOM structures.
 
 {% Img src="image/1D9D0Ls1ATa2ZPA9x2ZWrGFyZzT2/JuOPl5pjlitbTTptxRw4.png", alt="ALT_TEXT_HERE", width="608", height="322" %}
 

@@ -37,7 +37,7 @@ full browser version, you'll need to
 [implement the User-Agent Client Hints API](https://web.dev/migrate-to-ua-ch/). 
 
 {% Aside 'key-term' %}
-The [`User-Agent` string](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+The [`User-Agent` string](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
 is an HTTP request header which allows servers and networks to identify the
 application, operating system (OS), vendor, and / or version of a user agent.
 Currently, the `User-Agent` is shared on every HTTP request and exposed in
@@ -116,7 +116,7 @@ to ensure Client Hints are available on site load and optimized.
 ## Engage and share feedback
 
 *  **Origin trial**:
-   [Register for the Chrome origin trial](https://developer.chrome.com/origintrials/#/view_trial/-7123568710593282047)
+   [Register for the Chrome origin trial](/origintrials/#/view_trial/-7123568710593282047)
    to opt-in for the reduced user-agent, and
    [share your feedback](https://github.com/abeyad/user-agent-reduction/issues).
 *  **Demo**: Try our [demo of User-Agent reduction](https://uar-ot.glitch.me/).

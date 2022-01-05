@@ -58,7 +58,7 @@ is no longer on the standards track.
   </figcaption>
 </figure>
 
-[CSS Scroll Snap](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+[CSS Scroll Snap](https://developer.mozilla.org/docs/Web/CSS/CSS_Scroll_Snap)
 allows you to create smooth, slick, scroll experiences, by declaring scroll
 snap positions that tell the browser where to stop after each scrolling
 operation. This is super helpful for image carousels, or paginated sections
@@ -142,7 +142,7 @@ for more details.
 
 ## Web Locks API {: #web-locks }
 
-The [Web Locks API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Locks_API)
+The [Web Locks API](https://developer.mozilla.org/docs/Web/API/Web_Locks_API)
 allows you to asynchronously acquire a lock, hold it while work is performed,
 then release it. While the lock is held, no other script in the origin can
 acquire the same lock, helping to coordinate the usage of shared resources.
@@ -164,7 +164,7 @@ The first tab to acquire the lock will sync the data to the network. If
 another tab tries to acquire the same lock, it'll be queued. Once the lock has
 been released, the next queued request will be granted the lock, and execute.
 
-MDN has a great [Web Locks primer](https://developer.mozilla.org/en-US/docs/Web/API/Web_Locks_API)
+MDN has a great [Web Locks primer](https://developer.mozilla.org/docs/Web/API/Web_Locks_API)
 and includes a more in-depth explanation and lots of examples. Or dive in deeper
 and check out the [spec](https://github.com/WICG/web-locks).
 
@@ -183,9 +183,9 @@ there's plenty more.
   that you can use, and the page includes a whole bunch of really cool
   community submitted samples.
 * There's a new
-  [`toggleAttribute()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute)
+  [`toggleAttribute()`](https://developer.mozilla.org/docs/Web/API/Element/toggleAttribute)
   method on elements that toggles the existence of an attribute, similar to
-  [`classList.toggle()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList).
+  [`classList.toggle()`](https://developer.mozilla.org/docs/Web/API/Element/classList).
 * JavaScript arrays are getting two new methods:
   [`flat()` and `flatMap()`](https://developers.google.com/web/updates/2018/03/smooshgate). They return a
   new array with all sub-array elements smooshed into it.

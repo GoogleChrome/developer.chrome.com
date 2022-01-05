@@ -419,7 +419,7 @@ window.setTimeout(function() {
 [24]: /docs/extensions/mv2/match_patterns
 [25]: http://www.whatwg.org/specs/web-apps/current-work/#handler-onload
 [26]: http://www.whatwg.org/specs/web-apps/current-work/#dom-document-readystate
-[27]: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+[27]: https://developer.mozilla.org/docs/Web/API/Window/postMessage
 [28]: /docs/extensions/mv2/xhr
 [29]: http://en.wikipedia.org/wiki/Cross-site_scripting
 [30]: http://en.wikipedia.org/wiki/Man-in-the-middle_attack

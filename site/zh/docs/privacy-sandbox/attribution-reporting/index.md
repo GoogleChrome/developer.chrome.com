@@ -40,7 +40,7 @@ authors:
 
 ## 为什么需要这个 API？ {: #why-is-this-api-needed }
 
-如今，广告转化测量通常依赖于[第三方 cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies)。但是浏览器正在限制获取这些第三方 cookie，因为这些 cookie 可用于跨站跟踪用户并妨碍用户隐私。该 API 以保护隐私的方式实现这些测量，且无需第三方 cookie。
+如今，广告转化测量通常依赖于[第三方 cookie](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies)。但是浏览器正在限制获取这些第三方 cookie，因为这些 cookie 可用于跨站跟踪用户并妨碍用户隐私。该 API 以保护隐私的方式实现这些测量，且无需第三方 cookie。
 
 ## 归因报告 API 的运作方式是怎样的？都有哪些功能？
 
@@ -57,7 +57,7 @@ authors:
 
 ## 参与并分享反馈 {: #engage }
 
-- **原始试验**：[注册第一代原始试验（仅支持点击型转化）](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721)或[查看第一个演示（仅支持点击型转化）](https://goo.gle/demo-event-level-conversion-measurement-api)。
+- **原始试验**：[注册第一代原始试验（仅支持点击型转化）](/origintrials/#/view_trial/3411476717733150721)或[查看第一个演示（仅支持点击型转化）](https://goo.gle/demo-event-level-conversion-measurement-api)。
 - 请加入[开发者邮件列表](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)，进而继续关注该 API 的下一次实现，该实现将提供更多功能并将在 Chrome 中投入实验（原始试验）。
 - **GitHub**：阅读[提案](https://github.com/WICG/conversion-measurement-api/)、[提出问题并关注讨论](https://github.com/WICG/conversion-measurement-api/issues)。
 - **W3C**：在[改善网络广告业务组](https://www.w3.org/community/web-adv/participants)中讨论行业用例，也可以加入[隐私社区组](https://www.w3.org/community/privacycg/)，参与围绕 WebKit/Safari API 的讨论。

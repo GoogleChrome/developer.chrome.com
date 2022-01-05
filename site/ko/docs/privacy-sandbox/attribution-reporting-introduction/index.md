@@ -30,7 +30,7 @@ Attribution Reporting API를 사용하면 **광고 클릭 또는 조회**가 판
 
 ## 이 API가 필요한 이유는 무엇입니까?
 
-오늘날 광고 전환 측정은 종종 [타사 쿠키](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies)에 의존합니다. 브라우저는 타사 쿠키에 대한 액세스를 제한하고 있는데, 타사 쿠키는 사이트 전체에서 사용자를 추적하고 사용자 개인정보를 유출하는 데 사용될 수 있기 때문입니다. 이 API는 타사 쿠키 없이 개인정보를 보호하는 방식으로 이러한 측정을 가능하게 합니다.
+오늘날 광고 전환 측정은 종종 [타사 쿠키](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies)에 의존합니다. 브라우저는 타사 쿠키에 대한 액세스를 제한하고 있는데, 타사 쿠키는 사이트 전체에서 사용자를 추적하고 사용자 개인정보를 유출하는 데 사용될 수 있기 때문입니다. 이 API는 타사 쿠키 없이 개인정보를 보호하는 방식으로 이러한 측정을 가능하게 합니다.
 
 ## 누가 이 API에 대해 알아야 합니까?
 
@@ -71,7 +71,7 @@ Chrome에서 API를 실험하는 경우 **현재** 구현된 모든 기능에 �
 
 #### 배포된 사이트에서 최종 사용자를 대상으로 실험
 
-1. 사용 가능한 경우 [최초 평가판](https://developer.chrome.com/blog/origin-trials/)에 등록하여 최종 사용자용 API를 사용합니다. 최초 평가판을 사용하면 제한된 시간 동안 사용해 볼 수 있는 기능을 구축하기 위해 실험적 기능에 액세스할 수 있습니다. [제3자 최초 평가판](https://developer.chrome.com/blog/third-party-origin-trials/)을 통해 광고 제공 및 측정 제공자와 같은 제3의 행위자가 여러 사이트에서 API를 테스트할 수 있습니다. **이 API에 대해 현재 사용 가능한 최초 평가판을 보려면 [현황](#status)으로 이동하세요**. 향후 최초 평가판에 대한 정보를 얻으려면 [개발자를 위한 Attribution Reporting 메일링 리스트에](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)에 가입하세요.
+1. 사용 가능한 경우 [최초 평가판](/blog/origin-trials/)에 등록하여 최종 사용자용 API를 사용합니다. 최초 평가판을 사용하면 제한된 시간 동안 사용해 볼 수 있는 기능을 구축하기 위해 실험적 기능에 액세스할 수 있습니다. [제3자 최초 평가판](/blog/third-party-origin-trials/)을 통해 광고 제공 및 측정 제공자와 같은 제3의 행위자가 여러 사이트에서 API를 테스트할 수 있습니다. **이 API에 대해 현재 사용 가능한 최초 평가판을 보려면 [현황](#status)으로 이동하세요**. 향후 최초 평가판에 대한 정보를 얻으려면 [개발자를 위한 Attribution Reporting 메일링 리스트에](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev)에 가입하세요.
 
 2. API를 사이트 및 시스템에 통합합니다.
 
@@ -138,8 +138,8 @@ Chrome에서 API를 실험하는 경우 **현재** 구현된 모든 기능에 �
 
 {% Aside %} 타사 쿠키가 없는 향후 환경에서 이 API는 엔드 투 엔드 사용 사례를 포괄하기 위해 다른 개인정보 보호 광고 API와 결합될 것입니다.
 
-- 리마케팅: [FLEDGE 참조](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
-- 관심 기반 광고 선택: [FLoC 참조](https://developer.chrome.com/docs/privacy-sandbox/floc/)
+- 리마케팅: [FLEDGE 참조](/docs/privacy-sandbox/fledge/)
+- 관심 기반 광고 선택: [FLoC 참조](/docs/privacy-sandbox/floc/)
 
 {% endAside %}
 
@@ -155,7 +155,7 @@ Chrome에서 API를 실험하는 경우 **현재** 구현된 모든 기능에 �
 - `🧪 Experiment (BROWSER_NAME)`: BROWSER_NAME에서 실험이 가능합니다. Chrome에서는 실험을 최초 평가판이라고 합니다.
 - `🚀 Stable (BROWSER_NAME)`: 이 기능은 BROWSER_NAME에서 기본적으로 제공됩니다.
 
-{% Aside %} [현재 최초 평가판](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (Chrome 실험 🧪) {% endAside %}
+{% Aside %} [현재 최초 평가판](/origintrials/#/view_trial/3411476717733150721) (Chrome 실험 🧪) {% endAside %}
 
 {% Aside 'caution' %} 다수의 최초 평가판(실험)이 실행됩니다. 각 라운드는 생태계 피드백을 기반으로 API를 개선하고 조정하는 데 이용됩니다. {% endAside %}
 
@@ -342,7 +342,7 @@ Bob이라는 사람을 예로 들어 보겠습니다. Bob은 `news.com`에서 �
 ## 사이트 및 사용자 제어
 
 - 사용자는 `chrome://settings/privacySandbox`의 사용자 설정을 통해 선택 해제할 수 있습니다.
-- 기본적으로 이 기능은 최상위 컨텍스트에서 활성화됩니다. [권한 정책](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)을 통해 하위 iframe에서 Attribution Reporting API를 활성화해야 하기 때문에 임의의 제3자가 게시자 모르게 API를 사용할 수 없습니다.
+- 기본적으로 이 기능은 최상위 컨텍스트에서 활성화됩니다. [권한 정책](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)을 통해 하위 iframe에서 Attribution Reporting API를 활성화해야 하기 때문에 임의의 제3자가 게시자 모르게 API를 사용할 수 없습니다.
 
 ## 열린 질문
 

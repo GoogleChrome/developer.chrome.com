@@ -143,7 +143,7 @@ These are just a few of the changes in Chrome 67 for developers, of course,
 there's plenty more.
 
 The
-[Credential Management API](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API)
+[Credential Management API](https://developer.mozilla.org/docs/Web/API/Credential_Management_API)
 has been supported since Chrome 51, and provides a framework for creating,
 retrieving and storing credentials. It did this through two credential
 types: `PasswordCredential` and `FederatedCredential`. The

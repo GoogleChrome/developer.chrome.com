@@ -761,7 +761,7 @@ apps to write to this descriptor. Apps should instead use the
 [33]: /docs/extensions/reference/bluetoothSocket#method-create
 [34]: /docs/extensions/reference/bluetooth/#method-getDevice
 [35]: /docs/extensions/reference/bluetoothSocket#method-send
-[36]: https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays
+[36]: https://developer.mozilla.org/docs/JavaScript_typed_arrays
 [37]: https://updates.html5rocks.com/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
 [38]: /docs/extensions/reference/bluetoothSocket#method-send
 [39]: /docs/extensions/reference/bluetoothSocket#event-onReceive

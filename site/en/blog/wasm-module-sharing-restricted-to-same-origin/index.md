@@ -64,7 +64,7 @@ origin clusters:
   or
   [`WebAssembly.Memory`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)
   objects to other same-site cross-origin pages. This is [already in place since
-  Chrome 92](https://developer.chrome.com/blog/enabling-shared-array-buffer/).
+  Chrome 92](/blog/enabling-shared-array-buffer/).
 * You can no longer send
   [`WebAssembly.Module`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module)
   objects to other same-site cross-origin pages via `postMessage()`. This change

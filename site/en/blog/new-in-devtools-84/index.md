@@ -171,7 +171,7 @@ Check out [Get things done quickly with app shortcuts][25] to learn more.
 [12]: https://web.dev/vitals/#core-web-vitals
 [13]: https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md
 [14]: https://bugs.chromium.org/p/v8/issues/detail?id=6751
-[15]: https://developer.mozilla.org/en-US/docs/Web/CSS/revert
+[15]: https://developer.mozilla.org/docs/Web/CSS/revert
 [16]: https://crbug.com/1075437
 [17]: https://crbug.com/1040019
 [18]: https://drafts.csswg.org/css-color/#changes-from-3

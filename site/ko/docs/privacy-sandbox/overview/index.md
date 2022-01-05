@@ -45,7 +45,7 @@ Chrome 팀에서 개발한 주요 제안은 다음과 같습니다.
 ### 데이터 수집 제한
 
 - [**개인정보 보호 예산**](https://www.youtube.com/watch?v=0STgfjSA6T8): 웹사이트가 사용자의 브라우저 또는 장치에 대한 정보를 얻을 수 있도록 허용하지만 사이트가 액세스할 수 있는 총 정보량에 대한 할당량을 브라우저에서 설정할 수 있도록 하여 사용자를 식별하지 못하게 합니다.
-- [**사용자-에이전트 클라이언트 힌트**](https://web.dev/user-agent-client-hints/): [사용자-에이전트](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)(UA) 문자열은 중요한 패시브 [핑거프린팅](https://w3c.github.io/fingerprinting-guidance/#passive) 표면이며 처리가 까다롭습니다. 클라이언트 힌트를 사용하면 개발자가 사용자-에이전트 문자열에서 데이터 구문을 분석할 필요 없이 사용자의 장치 또는 조건에 대해 필요한 정보만 능동적으로 요청할 수 있습니다.
+- [**사용자-에이전트 클라이언트 힌트**](https://web.dev/user-agent-client-hints/): [사용자-에이전트](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)(UA) 문자열은 중요한 패시브 [핑거프린팅](https://w3c.github.io/fingerprinting-guidance/#passive) 표면이며 처리가 까다롭습니다. 클라이언트 힌트를 사용하면 개발자가 사용자-에이전트 문자열에서 데이터 구문을 분석할 필요 없이 사용자의 장치 또는 조건에 대해 필요한 정보만 능동적으로 요청할 수 있습니다.
 - [**Gnatcatcher**](https://github.com/bslassey/ip-blindness): 사용자의 IP 주소에 액세스하여 개별 사용자를 식별할 가능성을 제한합니다. 제안에는 두 부분이 있습니다: [<strong data-md="">의도적 IP 가림</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md)은 웹사이트가 브라우저에 사용자와 IP 주소를 연결하지 않음을 알릴 수 있는 방법을 제공하고, [**근접 경로 NAT**](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md)는 사용자 그룹이 동일한 비공개 처리 서버를 통해 트래픽을 보낼 수 있게 하여 사이트 호스트로부터 해당 IP 주소를 효과적으로 숨길 수 있는 방법입니다. Gnatcatcher는 또한 남용 방지와 같은 합법적인 목적으로 IP 주소에 액세스해야 하는 사이트가 인증 및 감사를 통해 그렇게 할 수 있도록 합니다.
 
 ### 신원

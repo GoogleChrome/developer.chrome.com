@@ -61,7 +61,7 @@ Chrome's legacy U2F API for interacting with security keys is deprecated. It
 will be disabled by default in Chrome 98.
 
 Affected sites should migrate to the [Web Authentication
-API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API).
+API](https://developer.mozilla.org/docs/Web/API/Web_Authentication_API).
 Credentials that were originally registered via the U2F API can be challenged
 via web authentication. USB security keys that are supported by the U2F API are
 also supported by the Web Authentication API. U2F security keys themselves are
@@ -93,7 +93,7 @@ were implemented:
 +   Gated U2F API requests behind a user permission prompt.
 
 The permission prompt can be suppressed by enrolling in the [U2FSecurityKeyAPI
-deprecation trial](https://developer.chrome.com/origintrials/#/view_trial/-6366963973195038719)
+deprecation trial](/origintrials/#/view_trial/-6366963973195038719)
 or enabling the [U2fSecurityKeyApiEnabled](https://chromeenterprise.google/policies/#U2fSecurityKeyApiEnabled)
 enterprise policy.
 
@@ -101,7 +101,7 @@ enterprise policy.
 
 Beta expected in early January 2022, stable in February. The U2F API will be
 disabled by default. Only sites enrolled in the [deprecation
-trial](https://developer.chrome.com/origintrials/#/view_trial/-6366963973195038719)
+trial](/origintrials/#/view_trial/-6366963973195038719)
 or enterprises that turned on the
 [U2fSecurityKeyApiEnabled](https://chromeenterprise.google/policies/#U2fSecurityKeyApiEnabled)
 policy will be able to use U2F at this point.

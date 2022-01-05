@@ -40,7 +40,7 @@ Você talvez também queira consultar o [Glossário completo do Privacy Sandbox]
 
 ## Por que essa API é necessária? {: #why-is-this-api-needed }
 
-Hoje, a medição de conversão de anúncios geralmente depende de [cookies de terceiros](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies). Os navegadores estão restringindo o acesso a cookies de terceiros porque eles podem ser usados para rastrear usuários em sites e prejudicar a privacidade do usuário. Esta API permite essas medições de uma forma que preserva a privacidade, sem cookies de terceiros.
+Hoje, a medição de conversão de anúncios geralmente depende de [cookies de terceiros](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies). Os navegadores estão restringindo o acesso a cookies de terceiros porque eles podem ser usados para rastrear usuários em sites e prejudicar a privacidade do usuário. Esta API permite essas medições de uma forma que preserva a privacidade, sem cookies de terceiros.
 
 ## Como funciona a API Attribution Reporting e quais são seus recursos?
 
@@ -57,7 +57,7 @@ A API oferece dois tipos de relatórios de atribuição que podem ser usados par
 
 ## Envolva-se e compartilhe feedback {: #engage }
 
-- **Ensaio de origem**: [registre-se para o primeiro ensaio de origem (apenas cliques)](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) ou [veja a primeira demo (apenas cliques)](https://goo.gle/demo-event-level-conversion-measurement-api) .
+- **Ensaio de origem**: [registre-se para o primeiro ensaio de origem (apenas cliques)](/origintrials/#/view_trial/3411476717733150721) ou [veja a primeira demo (apenas cliques)](https://goo.gle/demo-event-level-conversion-measurement-api) .
 - Para ficar por dentro da próxima implementação dessa API que vai oferecer mais recursos e ficar disponível para experimentação no Chrome (ensaio de origem), participe da [lista de discussão para desenvolvedores](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
 - **GitHub**: Leia a [proposta](https://github.com/WICG/conversion-measurement-api/), [levante questões e acompanhe a discussão](https://github.com/WICG/conversion-measurement-api/issues).
 - **W3C** : discuta os casos de uso da indústria no [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants) e participe do [Privacy Community Group](https://www.w3.org/community/privacycg/) para discussões sobre a API WebKit/Safari.

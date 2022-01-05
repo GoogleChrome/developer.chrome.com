@@ -489,7 +489,7 @@ You can find examples that use DevTools APIs in [Samples][46].
 [30]: #injecting
 [31]: /docs/extensions/mv3/devtools.inspectedWindow#method-eval
 [32]: /docs/extensions/runtime#method-sendMessage
-[33]: https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage
+[33]: https://developer.mozilla.org/docs/Web/API/Window.postMessage
 [34]: https://github.com/GoogleChrome/devtools-docs/issues/143
 [35]: /docs/extensions/runtime#event-onConnect
 [36]: /docs/extensions/runtime#method-connect

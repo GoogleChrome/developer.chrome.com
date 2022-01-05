@@ -189,7 +189,7 @@ Chromium issues: [1232937](https://crbug.com/1232937), [1255586](https://crbug.c
 
 ## 애플리케이션 패널 내 애플리케이션 캐시 영역 제거 예정 {: #app-cache }
 
-[AppCache](https://web.dev/appcache-removal/)에 대한 지원이 크롬 및 다른 크로미움 기반 브라우저에서 중단됨에 따라, 애플리케이션 패널 내부 [애플리케이션 캐시](https://developer.chrome.com/docs/devtools/storage/applicationcache/) 영역이 제거되었습니다.
+[AppCache](https://web.dev/appcache-removal/)에 대한 지원이 크롬 및 다른 크로미움 기반 브라우저에서 중단됨에 따라, 애플리케이션 패널 내부 [애플리케이션 캐시](/docs/devtools/storage/applicationcache/) 영역이 제거되었습니다.
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/de4d15e955d6145674e3885cde8a5a70f1269b79 #}
 

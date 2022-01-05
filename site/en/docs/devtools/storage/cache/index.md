@@ -91,8 +91,8 @@ column of the **Network Log** has the information you're looking for. See [Log n
     **Figure 9**. The **Clear Site Data** button.
 
 [1]: /docs/devtools
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Cache
-[3]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
+[2]: https://developer.mozilla.org/docs/Web/API/Cache
+[3]: https://developer.mozilla.org/docs/Web/HTTP/Caching
 [4]: /docs/devtools/network#load
 [5]: #view
 [6]: #view

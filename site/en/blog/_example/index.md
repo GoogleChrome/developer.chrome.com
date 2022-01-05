@@ -60,8 +60,8 @@ A few rules:
 - Make sure all of your images have `alt` text unless they are purely
   decorative.
 - Make sure authors appear in the `authorsData.json` file and that they have
-  uploaded a headshot to our image CDN. See [How to add an author](https://developer.chrome.com/docs/handbook/how-to/add-an-author/).
-- Make sure tags have been added to `tags.yml`. See [How to add a tag](https://developer.chrome.com/docs/handbook/how-to/add-a-tag/).
+  uploaded a headshot to our image CDN. See [How to add an author](/docs/handbook/how-to/add-an-author/).
+- Make sure tags have been added to `tags.yml`. See [How to add a tag](/docs/handbook/how-to/add-a-tag/).
 - Code blocks should use triple backticks and include a language name. Example:
 
 ```html

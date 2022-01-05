@@ -176,8 +176,8 @@ The **Show timestamps** checkbox previously in **Console Settings**
 [7]: #watch
 [8]: #timestamps
 [9]: https://stackoverflow.com/a/8129277/1669860
-[10]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
-[11]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+[10]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Default_parameters
+[11]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 [12]: #eagerevaluation
 [13]: https://developers.google.com/web/updates/2018/05/lighthouse3
 [14]: https://developers.google.com/web/updates/2018/05/bigint

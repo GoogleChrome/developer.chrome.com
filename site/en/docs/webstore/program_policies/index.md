@@ -193,7 +193,7 @@ Additional Requirements for Manifest V3:
     extension's package
 
   * Using JavaScript's
-    [eval()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+    [eval()](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval)
     method or other mechanisms to execute a string fetched from a remote source
 
   * Building an interpreter to run complex commands fetched from a remote source,

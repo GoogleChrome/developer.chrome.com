@@ -117,7 +117,7 @@ Chrome will allow the use of the deprecated feature for a limited amount of
 time.
 
 For more information, check out [Getting started with Chrome's origin
-trials](https://developer.chrome.com/blog/origin-trials/) and the [web developer
+trials](/blog/origin-trials/) and the [web developer
 guide to origin
 trials](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 for instructions.
@@ -159,7 +159,7 @@ the circumstances of each affected website.
 
 First, register for the "Private Network Access from non-secure contexts" trial
 using [the web developers
-console](https://developer.chrome.com/origintrials/#/view_trial/4081387162304512001),
+console](/origintrials/#/view_trial/4081387162304512001),
 and obtain a trial token for each affected origin. Then configure your web
 servers to attach the origin-specific `Origin-Trial: $token` header on
 responses. Note that this header need only be set on main resource and
