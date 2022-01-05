@@ -139,7 +139,7 @@ For InAppProducts Resource details, see the [resource representation][api-inappp
 </table>
 
 
-## Licenses {: #Licenses }
+### Licenses {: #Licenses }
 
 For Licenses Resource details, see the [resource representation][api-licenses-resource] page.
 
