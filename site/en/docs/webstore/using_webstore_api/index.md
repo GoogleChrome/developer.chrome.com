@@ -11,7 +11,7 @@ description: How to programmatically create, update, and publish items in the Ch
 The Chrome Web Store Publish API provides a set of REST endpoints for programmatically creating,
 updating, and publishing items in the Chrome Web Store.
 
-## Before you begin {: #beforeyoubegin }
+## Initial setup {: #setup }
 
 Take the following steps to get the access keys needed:
 
