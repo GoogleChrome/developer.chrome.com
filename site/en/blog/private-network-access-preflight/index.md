@@ -10,6 +10,7 @@ hero: image/VbsHyyQopiec0718rMq2kTE1hke2/iqanYAE91Ab6BsgwhBjq.jpg
 alt: An airplane in the sky
 tags:
   - chrome-98
+  - privacy
 ---
 
 ## Introduction
