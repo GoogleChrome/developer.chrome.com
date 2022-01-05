@@ -12,6 +12,7 @@ const childProcess = require('child_process');
 const workboxPackages = [
   'workbox-background-sync',
   'workbox-broadcast-update',
+  'workbox-build',
   'workbox-cacheable-response',
   'workbox-core',
   'workbox-expiration',
@@ -23,6 +24,8 @@ const workboxPackages = [
   'workbox-routing',
   'workbox-strategies',
   'workbox-streams',
+  // 'workbox-webpack-plugin',
+  'workbox-window',
 ];
 
 /**
@@ -53,7 +56,20 @@ async function run() {
     await fetchAndPrepare(workboxPackages, t.name);
 
     const sources = workboxPackages.map(packageName => {
-      return path.join(t.name, 'node_modules', packageName, 'index.d.ts');
+      const packageJsonPath = path.join(
+        t.name,
+        'node_modules',
+        packageName,
+        'package.json'
+      );
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+
+      return path.join(
+        t.name,
+        'node_modules',
+        packageName,
+        packageJson.types || 'index.d.ts'
+      );
     });
 
     const defs = await dtsParse({sources, mode: 'workbox'});

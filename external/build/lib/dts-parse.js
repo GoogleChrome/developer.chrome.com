@@ -348,7 +348,11 @@ class Transform {
     }
 
     if (node.type?.type === 'reference') {
-      if (chromeEventRefTypes.includes(node.type.name)) {
+      // Only upgrade node is not a workbox type
+      if (
+        this.mode !== 'workbox' &&
+        chromeEventRefTypes.includes(node.type.name)
+      ) {
         // This is actually a reference to a Chrome event type. This returns the parameters of the
         // `addListener` method, so they can be upgraded too.
         const {children, isDeclarative} = this.upgradeEventNode(node);
