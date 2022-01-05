@@ -17,7 +17,7 @@
 const rule = require('unified-lint-rule');
 const {URL} = require('url');
 const visit = require('unist-util-visit');
-const siteData = require('../../site/_data/site');
+const siteData = require('../../site/_data/site.json');
 const excludedFromLinkChecks = [
   'CODE_OF_CONDUCT.md',
   'CONTRIBUTING.md',
@@ -72,7 +72,9 @@ function checkURL(tree, file) {
       parsed.hostname === 'developer.mozilla.org' &&
       locale.test(parsed.pathname) === true
     ) {
-      const [matchedLocale] = parsed.pathname.match(locale);
+      // Not happy about this, but the types linter kept barfing on error TS2488
+      // (which is not what the web.dev site does) - jlwagner
+      const [matchedLocale] = parsed.pathname.match(locale) || ["en-US"];
       const reason = `An MDN link contains a locale (${matchedLocale}). Please remove the locale from the link.`;
 
       file.message(reason, node);
