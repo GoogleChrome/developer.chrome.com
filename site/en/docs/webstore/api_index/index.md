@@ -33,7 +33,7 @@ or more methods.
 
 ## Chrome Web Store Publish API {: #publish-api}
 
-## Items {: #Items }
+### Items {: #items }
 
 For Items Resource details, see the [resource representation][api-items-resource] page.
 
@@ -102,7 +102,7 @@ See [Using the Chrome Web Store Publish API][publish-api].
 
 ## Licensing API {: #licensing-api }
 
-### InAppProducts {: #InAppProducts }
+### InAppProducts {: #in-app-products }
 
 For InAppProducts Resource details, see the [resource representation][api-inappproducts-resource] page.
 
@@ -139,7 +139,7 @@ For InAppProducts Resource details, see the [resource representation][api-inappp
 </table>
 
 
-### Licenses {: #Licenses }
+### Licenses {: #licenses }
 
 For Licenses Resource details, see the [resource representation][api-licenses-resource] page.
 
@@ -167,7 +167,7 @@ For Licenses Resource details, see the [resource representation][api-licenses-re
   </tbody>
 </table>
 
-### UserLicenses {: #userLicenses }
+### UserLicenses {: #user-licenses }
 
 For UserLicenses Resource details, see the [resource representation][api-userlicenses-resource] page.
 
@@ -195,7 +195,7 @@ For UserLicenses Resource details, see the [resource representation][api-userlic
   </tbody>
 </table>
 
-## Payments {: #Payments }
+### Payments {: #payments }
 
 For Payments Resource details, see the [resource representation][18] page.
 
