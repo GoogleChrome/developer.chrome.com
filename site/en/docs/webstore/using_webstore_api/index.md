@@ -20,7 +20,7 @@ Take the following steps to get the access keys needed:
 1. Go to the [Google Cloud Console][google-dev-console].
 1. Create a new project or select an existing one.
    {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/g5o7qpsDv5kKiQmlCwkv.png", alt="Create a new
-   project in the Google Console", width="600", height="149" %}  
+   project in the Google Console", width="600", height="149" %}
 1. In the **search bar** type “Chrome Web Store API”.
 1. Enable the **Chrome Web Store API**.
 
@@ -41,14 +41,13 @@ Take the following steps to get the access keys needed:
 
 1. Go to **Credentials**.
 1. Click **Create Credentials** then **OAuth client ID**.
-  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vZdPhBUnJytNg5W9TG0I.png", alt="Create credentials", width="657", height="106" %}  
+  {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/vZdPhBUnJytNg5W9TG0I.png", alt="Create credentials", width="657", height="106" %}
 1. For **Application type**, choose **Desktop App**.
 1. Fill out the name, then click **Create**.
 
 The console will provide the client ID and client secret. You can retrieve an access token to work
 with the API. For example, enter this URL in your browser, replacing the $CLIENT_ID with the one for
 your app:
-
 
 ```text
 https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.googleapis.com/auth/chromewebstore&client_id=$CLIENT_ID&redirect_uri=urn:ietf:wg:oauth:2.0:oob
@@ -107,7 +106,7 @@ APIs][oauth2].
 ## Using the API {: #usingtheapi }
 
 Once you have an access token, your extension can then use the Chrome Web Store Publish API. There
-are endpoints for creating a new item, updating an existing item, and publishing an item. 
+are endpoints for creating a new item, updating an existing item, and publishing an item.
 
 Below is a list of considerations for using the Publish API:
 
@@ -245,7 +244,7 @@ https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID?projection=DRAFT
 
 {% Aside %}
 
-Only **projection=DRAFT** is supported at this time. 
+Only **projection=DRAFT** is supported at this time.
 
 For a full description of the get method, see [Items:Get][cws-api-get].
 
