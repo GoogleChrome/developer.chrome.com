@@ -30,7 +30,7 @@ authors:
 
 ## 为什么需要这个 API？
 
-如今，广告转化测量通常依赖于[第三方 cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies)。但是浏览器正在限制获取这些第三方 cookie，因为这些 cookie 可用于跨站跟踪用户并妨碍用户隐私。该 API 以保护隐私的方式实现这些测量，且无需第三方 cookie。
+如今，广告转化测量通常依赖于[第三方 cookie](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies)。但是浏览器正在限制获取这些第三方 cookie，因为这些 cookie 可用于跨站跟踪用户并妨碍用户隐私。该 API 以保护隐私的方式实现这些测量，且无需第三方 cookie。
 
 ## 谁需要了解此 API？
 
@@ -342,7 +342,7 @@ authors:
 ## 网站和用户控制
 
 - 用户可以在用户设置`chrome://settings/privacySandbox`中选择退出。
-- 默认情况下，顶级上下文中会启用该功能。任意第三方无法在发布商不知情的情况下使用该 API，因为需要通过[许可策略](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)在子 iframe 中启用归因报告 API。
+- 默认情况下，顶级上下文中会启用该功能。任意第三方无法在发布商不知情的情况下使用该 API，因为需要通过[许可策略](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)在子 iframe 中启用归因报告 API。
 
 ## 开放性问题
 

@@ -635,16 +635,16 @@ Tony's fans love how fast the site feels now, and Tony is very thankful for your
 [2]: https://glitch.com/edit/#!/tony
 [3]: /web/tools/lighthouse
 [4]: https://support.google.com/chrome/answer/95464
-[5]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding#Directives
+[5]: https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Encoding#Directives
 [6]: https://developers.google.com/web/fundamentals/design-and-ux/responsive/images#relative_sized_images
 [7]: https://images.guide/
 [8]: https://developers.google.com/web/fundamentals/performance/critical-rendering-path
 [9]:
   https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript#use_async_or_defer
 [10]: https://webpack.js.org/guides/tree-shaking/
-[11]: https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API
+[11]: https://developer.mozilla.org/docs/Web/API/User_Timing_API
 [12]: /docs/devtools/evaluate-performance/reference
-[13]: https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API
+[13]: https://developer.mozilla.org/docs/Web/API/User_Timing_API
 [14]: #feedback
 [15]: #feedback
 [16]: https://github.com/google/webfundamentals/issues/new

@@ -143,11 +143,11 @@ See [Filter by resource type][8].
 
 **Figure 12**. Filtering for CSS in the Network Log
 
-[1]: https://developer.mozilla.org/en-US/docs/Learn
+[1]: https://developer.mozilla.org/docs/Learn
 [2]: /docs/devtools/overview/#start
 [3]: /docs/devtools/network#details
 [4]: #browse
 [5]: /docs/devtools/network#load
-[6]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
+[6]: https://developer.mozilla.org/docs/Web/HTML/Element/iframe
 [7]: #directory
 [8]: /docs/devtools/network#type

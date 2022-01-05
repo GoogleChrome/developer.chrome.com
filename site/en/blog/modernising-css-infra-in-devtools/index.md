@@ -92,7 +92,7 @@ We looked into different potential solutions for each part and these are outline
 
 The goal with importing and utilising CSS in the TypeScript files was to stick as close to web standards as possible, **enforce consistency throughout DevTools and avoid duplicated CSS** in our HTML. We also wanted to be able to pick a solution that would make it possible to migrate our changes to new web platform standards, such as CSS Module Scripts. 
 
-For these reasons the [@import](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) statements and [<link>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link) tags did not seem like the right fit for DevTools. They would not be uniform with imports throughout the rest of DevTools and result in a [Flash Of Unstyled Content (FOUC)](https://en.wikipedia.org/wiki/Flash_of_unstyled_content). The migration to CSS Module Scripts would be harder because the imports would have to be explicitly added and dealt with differently than they would with `<link>` tags.
+For these reasons the [@import](https://developer.mozilla.org/docs/Web/CSS/@import) statements and [<link>](https://developer.mozilla.org/docs/Web/HTML/Element/link) tags did not seem like the right fit for DevTools. They would not be uniform with imports throughout the rest of DevTools and result in a [Flash Of Unstyled Content (FOUC)](https://en.wikipedia.org/wiki/Flash_of_unstyled_content). The migration to CSS Module Scripts would be harder because the imports would have to be explicitly added and dealt with differently than they would with `<link>` tags.
 
 ```js
 const output = LitHtml.html`
@@ -107,7 +107,7 @@ const output = LitHtml.html`
 ```
 Potential solutions using `@import` or `<link>`.
 
-Instead we opted to find a way to import the CSS file as a [`CSSStyleSheet`](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet) object so that we can add it to the [Shadow Dom](https://developers.google.com/web/fundamentals/web-components/shadowdom) (DevTools uses Shadow DOM for a couple of years now) using its [`adoptedStyleSheets`](https://developers.google.com/web/updates/2019/02/constructable-stylesheets#using_constructed_stylesheets) property. 
+Instead we opted to find a way to import the CSS file as a [`CSSStyleSheet`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet) object so that we can add it to the [Shadow Dom](https://developers.google.com/web/fundamentals/web-components/shadowdom) (DevTools uses Shadow DOM for a couple of years now) using its [`adoptedStyleSheets`](https://developers.google.com/web/updates/2019/02/constructable-stylesheets#using_constructed_stylesheets) property. 
 
 ### Bundler options {: #bundler-options }
 

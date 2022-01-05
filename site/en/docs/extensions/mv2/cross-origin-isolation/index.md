@@ -44,5 +44,5 @@ web-accessible subframe on a regular web page is not considered cross-origin iso
 [crbug-issue]: https://bugs.chromium.org/p/chromium/issues/detail?id=1131404
 [doc-coep]: /docs/extensions/mv2/manifest/cross_origin_embedder_policy
 [doc-coop]: /docs/extensions/mv2/manifest/cross_origin_opener_policy
-[mdn-sharedarraybuffer]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+[mdn-sharedarraybuffer]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 [web-coi-guide]: https://web.dev/cross-origin-isolation-guide/

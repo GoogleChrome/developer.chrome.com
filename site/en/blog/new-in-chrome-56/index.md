@@ -59,7 +59,7 @@ switching an element's position from relative to fixed at a specified threshold.
 It was difficult to synchronize, and often results in small visual jumps.
 
 Chrome now supports CSS
-[`position: sticky;`](//developer.mozilla.org/en-US/docs/Web/CSS/position#Sticky_positioning),
+[`position: sticky;`](//developer.mozilla.org/docs/Web/CSS/position#Sticky_positioning),
 a new way to position elements.
 
 An element that is position sticky, starts relative; but becomes fixed,

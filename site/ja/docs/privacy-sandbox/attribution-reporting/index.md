@@ -40,7 +40,7 @@ authors:
 
 ## この API が必要なのはなぜですか？ {: #why-is-this-api-needed }
 
-今日、広告のコンバージョン測定は、[サードパーティの Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies) を使って行われることが多くなっています。サードパーティの Cookie はサイト間でユーザーを追跡することに使用でき、それが原因でユーザーのプライバシーに影響が出る可能性があるため、ブラウザではサードパーティの Cookie へのアクセスが制限されています。この API を使用すると、サードパーティの Cookie を使用しいなくてもプライバシーを保護しながら測定することができます。
+今日、広告のコンバージョン測定は、[サードパーティの Cookie](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies) を使って行われることが多くなっています。サードパーティの Cookie はサイト間でユーザーを追跡することに使用でき、それが原因でユーザーのプライバシーに影響が出る可能性があるため、ブラウザではサードパーティの Cookie へのアクセスが制限されています。この API を使用すると、サードパーティの Cookie を使用しいなくてもプライバシーを保護しながら測定することができます。
 
 ## Attribution Reporting API はどのような機能を持っていますか？
 

@@ -235,7 +235,7 @@ Learn more about accessibility in Chrome by checking out the [A11ycasts][17] cha
 through the [Chromium Accessibility Technical Documentation][18].
 
 [1]: https://webaim.org/techniques/screenreader/
-[2]: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML
+[2]: https://developer.mozilla.org/docs/Learn/Accessibility/HTML
 [3]: https://www.w3.org/WAI/standards-guidelines/aria/
 [4]: https://www.w3.org/TR/wai-aria/#roles
 [5]: https://www.w3.org/TR/wai-aria/#states_and_properties

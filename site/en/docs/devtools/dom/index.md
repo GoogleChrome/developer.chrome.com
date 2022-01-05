@@ -392,7 +392,7 @@ The page's HTML is now different than its DOM. In other words, HTML represents
 initial page content, and the DOM represents current page content. When JavaScript
 adds, removes, or edits nodes, the DOM becomes different than the HTML.
 
-[mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+[mdn]: https://developer.mozilla.org/docs/Web/API/Document_Object_Model/Introduction
 
 See [Introduction to the DOM][mdn]{: .external } to learn more.
 

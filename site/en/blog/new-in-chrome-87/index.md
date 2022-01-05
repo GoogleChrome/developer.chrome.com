@@ -244,7 +244,7 @@ tell you -- what's new in Chrome!
 
 [wd-ptz]: https://web.dev/camera-pan-tilt-zoom/
 [wd-fonts]: https://web.dev/local-fonts/
-[mdn-rr]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests
+[mdn-rr]: https://developer.mozilla.org/docs/Web/HTTP/Range_requests
 [wd-rr]: https://web.dev/sw-range-requests/
 [cds2020]: /devsummit/?utm_source=nic87&utm_medium=website
 [cds-schedule]: /devsummit/schedule/?utm_source=nic87&utm_medium=website

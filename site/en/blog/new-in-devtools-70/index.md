@@ -222,8 +222,8 @@ lifecycle function. React does this in development mode.
 [14]: /docs/devtools/javascript/breakpoints#conditional-loc
 [15]: https://codemirror.net/
 [16]: /docs/devtools/javascript/breakpoints#event-listeners
-[17]: https://developer.mozilla.org/en-US/docs/Web/API/AudioContext
+[17]: https://developer.mozilla.org/docs/Web/API/AudioContext
 [18]: https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27
 [19]: https://github.com/GoogleChromeLabs/ndb/blob/master/README.md
-[20]: https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API
+[20]: https://developer.mozilla.org/docs/Web/API/User_Timing_API
 [21]: https://en.wikipedia.org/wiki/Call_to_action_(marketing)

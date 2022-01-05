@@ -40,7 +40,7 @@ Você talvez também queira consultar o [Glossário completo do Privacy Sandbox]
 
 ## Por que essa API é necessária? {: #why-is-this-api-needed }
 
-Hoje, a medição de conversão de anúncios geralmente depende de [cookies de terceiros](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies). Os navegadores estão restringindo o acesso a cookies de terceiros porque eles podem ser usados para rastrear usuários em sites e prejudicar a privacidade do usuário. Esta API permite essas medições de uma forma que preserva a privacidade, sem cookies de terceiros.
+Hoje, a medição de conversão de anúncios geralmente depende de [cookies de terceiros](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies). Os navegadores estão restringindo o acesso a cookies de terceiros porque eles podem ser usados para rastrear usuários em sites e prejudicar a privacidade do usuário. Esta API permite essas medições de uma forma que preserva a privacidade, sem cookies de terceiros.
 
 ## Como funciona a API Attribution Reporting e quais são seus recursos?
 

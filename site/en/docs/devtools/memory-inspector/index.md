@@ -41,7 +41,7 @@ There are a few ways to open the **Memory inspector**.
 
 ### Inspect multiple objects {: #open-multiple }
 
-1. You can inspect [DataView](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) or [TypedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) as well. For example, `b2` is a `TypedArray`. To inspect that, right click on the `b2` property and select **Reveal in Memory Inspector panel** (No icon for `TypedArray` or `DataView` yet).
+1. You can inspect [DataView](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/DataView) or [TypedArray](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) as well. For example, `b2` is a `TypedArray`. To inspect that, right click on the `b2` property and select **Reveal in Memory Inspector panel** (No icon for `TypedArray` or `DataView` yet).
 2. A new tab is opened in the **Memory inspector**. Please note that you can inspect multiple objects at once. 
     {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ZaLWbrktT6N3sHMhyLHA.png", alt="New tab in the Memory inspector", width="800", height="602" %}
 

@@ -146,14 +146,14 @@ edits an IndexedDB database.
     **Figure 12**. The **Clear storage** pane
 
 [1]: /docs/devtools
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+[2]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API
 [3]: /docs/devtools/overview/#start
-[4]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB
-[5]: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Using_an_index
+[4]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB
+[5]: https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Using_IndexedDB#Using_an_index
 [6]: https://crbug.com/943770
 [7]: #refresh
 [8]:
-  https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator
+  https://developer.mozilla.org/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator
 [9]: /docs/devtools/snippets
 [10]: #view
 [11]: #view

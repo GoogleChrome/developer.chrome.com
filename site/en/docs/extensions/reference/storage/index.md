@@ -205,7 +205,7 @@ function getAllStorageSyncData() {
 [api-storage]: /docs/extensions/mv2/manifest/storage
 [api-tabs]: /docs/extensions/mv2/tabs
 [incognito]: /docs/extensions/mv2/manifest/incognito
-[local-storage]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[local-storage]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
 [options-page]: https://developer.chrome.com/docs/extensions/mv3/options/
 [prop-local]: #property-local
 [prop-sync]: #property-sync

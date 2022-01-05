@@ -320,8 +320,8 @@ To run a new audit, use <kbd>Shift</kbd>+<kbd>Tab</kbd> to exit the report and l
 [10]: /docs/devtools/dom
 [11]: https://www.w3.org/TR/wai-aria-1.1/#tree
 [12]: /docs/devtools/dom#keynav
-[13]: https://developer.mozilla.org/en-US/docs/Web/CSS/:active
-[14]: https://developer.mozilla.org/en-US/docs/Web/CSS/:focus
+[13]: https://developer.mozilla.org/docs/Web/CSS/:active
+[14]: https://developer.mozilla.org/docs/Web/CSS/:focus
 [15]: #inspect
 [16]: /docs/devtools/shortcuts#styles
 [17]: /docs/devtools/css/reference#computed

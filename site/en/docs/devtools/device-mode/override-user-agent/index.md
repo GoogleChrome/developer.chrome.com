@@ -30,4 +30,4 @@ To override the [user agent][1] string from Chrome DevTools:
 
 4.  Select a user agent string from the list, or enter your own custom string.
 
-[1]: https://developer.mozilla.org/en-US/docs/Glossary/User_agent
+[1]: https://developer.mozilla.org/docs/Glossary/User_agent

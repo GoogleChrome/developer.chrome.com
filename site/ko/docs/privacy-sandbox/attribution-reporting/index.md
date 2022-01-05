@@ -40,7 +40,7 @@ authors:
 
 ## 이 API가 필요한 이유는 무엇입니까? {: #why-is-this-api-needed }
 
-오늘날 광고 전환 측정은 종종 [타사 쿠키](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies)에 의존합니다. 브라우저는 타사 쿠키에 대한 액세스를 제한하고 있는데, 타사 쿠키는 사이트 전체에서 사용자를 추적하고 사용자 개인정보를 유출하는 데 사용될 수 있기 때문입니다. 이 API는 타사 쿠키 없이 개인정보를 보호하는 방식으로 이러한 측정을 가능하게 합니다.
+오늘날 광고 전환 측정은 종종 [타사 쿠키](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies)에 의존합니다. 브라우저는 타사 쿠키에 대한 액세스를 제한하고 있는데, 타사 쿠키는 사이트 전체에서 사용자를 추적하고 사용자 개인정보를 유출하는 데 사용될 수 있기 때문입니다. 이 API는 타사 쿠키 없이 개인정보를 보호하는 방식으로 이러한 측정을 가능하게 합니다.
 
 ## Attribution Reporting API는 어떤 방식으로 작동하며 어떤 기능을 합니까?
 

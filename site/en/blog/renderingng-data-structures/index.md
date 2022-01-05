@@ -206,7 +206,7 @@ this is very similar to how
 as it was built initially in a similar way as a text editor.
 
 The flat list is created for each
-[inline formatting context](https://developer.mozilla.org/en-US/docs/Web/CSS/Inline_formatting_context)
+[inline formatting context](https://developer.mozilla.org/docs/Web/CSS/Inline_formatting_context)
 in the order of a depth-first search of its inline layout subtree.
 Each entry in the list is a tuple of (object, number of descendants).
 For example, consider this DOM:
@@ -251,8 +251,8 @@ The flat list looks like this:
 
 There are many consumers of this data structure: accessibility APIs,
 and geometry APIs such as
-[getClientRects](https://developer.mozilla.org/en-US/docs/Web/API/Range/getClientRects),
-and [contenteditable](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable).
+[getClientRects](https://developer.mozilla.org/docs/Web/API/Range/getClientRects),
+and [contenteditable](https://developer.mozilla.org/docs/Web/API/HTMLElement/contentEditable).
 Each has different requirements.
 These components access the flat data structure through a convenience cursor.
 
@@ -314,7 +314,7 @@ RenderingNG uses property trees for many purposes, including:
 - Separating compositing from paint, and compositing from the main thread.
 - Determining an optimal compositing / draw strategy.
 - Measuring
-[IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+[IntersectionObserver](https://developer.mozilla.org/docs/Web/API/Intersection_Observer_API)
 geometry.
 - Avoiding work for offscreen elements and GPU texture tiles.
 - Efficiently and accurately invalidating paint and raster.
@@ -326,12 +326,12 @@ Every web document has four separate property trees: transform, clip, effect, an
 The transform tree represents CSS transforms and scrolling.
 (A scroll transform is represented as a 2D transform matrix.)
 The clip tree represents
-[overflow clips](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow).
+[overflow clips](https://developer.mozilla.org/docs/Web/CSS/overflow).
 The effect tree represents all other visual effects: opacity, filters, masks,
 blend modes, and other kinds of clips such as clip-path.
 The scroll tree represents information about scrolling,
 such as how scrolls
-[chain](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior) together;
+[chain](https://developer.mozilla.org/docs/Web/CSS/overscroll-behavior) together;
 it is needed to perform scrolling on the compositor thread.
 Each node in a property tree represents a scroll or visual effect applied by a DOM element.
 If it happens to have multiple effects,
@@ -406,7 +406,7 @@ width="800", height="1162" %}
 {% Aside %}
 There are several more complexities that I have omitted from this diagram,
 such as nodes representing the
-[visual viewport](https://developer.mozilla.org/en-US/docs/Web/API/Visual_Viewport_API)
+[visual viewport](https://developer.mozilla.org/docs/Web/API/Visual_Viewport_API)
 and nodes used for engine-internal performance optimizations,
 such as
 [paint offset and isolation](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/paint/object_paint_properties.h;l=96).

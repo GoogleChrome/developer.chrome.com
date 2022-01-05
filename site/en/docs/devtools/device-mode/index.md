@@ -278,7 +278,7 @@ own alpha, beta, and gamma values.
 [6]: https://en.wikipedia.org/wiki/Order_of_approximation#First-order
 [7]: /docs/devtools/remote-debugging
 [8]: #orientation
-[9]: https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio
-[10]: https://developer.mozilla.org/en-US/docs/Glossary/User_agent
+[9]: https://developer.mozilla.org/docs/Web/API/Window/devicePixelRatio
+[10]: https://developer.mozilla.org/docs/Glossary/User_agent
 [11]: #type
 [12]: /docs/devtools#community

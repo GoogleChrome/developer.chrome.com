@@ -228,5 +228,5 @@ your extension's [manifest][doc-manifest].
 
 [api-tabs-methods]: /docs/extensions/reference/tabs/#methods
 [doc-manifest]: /docs/extensions/mv3/manifest/
-[mdn-promise-chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises
-[mdn-promises]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
+[mdn-promise-chain]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises
+[mdn-promises]: https://developer.mozilla.org/docs/Web/JavaScript/Guide/Using_promises

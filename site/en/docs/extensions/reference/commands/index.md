@@ -310,7 +310,7 @@ function checkCommandShortcuts() {
 [api-browsesr-action]: /docs/extensions/reference/browserAction/
 [api-page-action]: /docs/extensions/reference/pageAction/
 [doc-manifest]: /docs/extension/mv3/manifest/
-[html-dcl]: https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
+[html-dcl]: https://developer.mozilla.org/docs/Web/API/Window/DOMContentLoaded_event
 [event-oncommand]: #event-onCommand
 [header-usage]: #usage
 [header-key-combos]: #key-combinations

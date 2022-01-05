@@ -679,12 +679,12 @@ overview** checkbox to hide it.
 [4]: #network-conditions
 [5]: #network-conditions
 [6]: #hide-filters
-[7]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
-[8]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
-[9]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
-[10]: https://developer.mozilla.org/en-US/docs/web/http/headers/set-cookie#attributes
+[7]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
+[8]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
+[9]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
+[10]: https://developer.mozilla.org/docs/web/http/headers/set-cookie#attributes
 [11]: #hide-filters
-[12]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+[12]: https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 [13]: #waterfall
 [14]: #sort-by-activity
 [15]: #headers

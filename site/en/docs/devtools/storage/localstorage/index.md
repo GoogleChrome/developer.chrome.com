@@ -85,7 +85,7 @@ JavaScript contexts, it's possible to interact with `localStorage` from the **Co
     **Figure 8**. Interacting with `localStorage` from the **Console**
 
 [1]: /docs/devtools
-[2]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[2]: https://developer.mozilla.org/docs/Web/API/Window/localStorage
 [3]: #view
 [4]: #view
 [5]: #view

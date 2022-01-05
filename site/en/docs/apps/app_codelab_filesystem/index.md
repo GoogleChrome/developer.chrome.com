@@ -265,9 +265,9 @@ Ready to continue onto the next step? Go to [Step 7 - Publish your app »][26]
 [4]: #launch
 [5]: /apps/fileSystem#method-chooseEntry
 [6]: /apps/fileSystem#method-getDisplayPath
-[7]: https://developer.mozilla.org/en-US/docs/Web/API/Blob
+[7]: https://developer.mozilla.org/docs/Web/API/Blob
 [8]: http://www.html5rocks.com/en/tutorials/file/filesystem/
-[9]: https://developer.mozilla.org/en-US/docs/Web/API/FileEntry
+[9]: https://developer.mozilla.org/docs/Web/API/FileEntry
 [10]: /apps/fileSystem#method-restoreEntry
 [11]: /apps/fileSystem#method-retainEntry
 [12]:

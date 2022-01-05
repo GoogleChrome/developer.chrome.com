@@ -94,7 +94,7 @@ of reports: event-level and aggregate.
 ### Prevent covert tracking
 
 * [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/):
-The [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) (UA) string
+The [User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent) (UA) string
 is a significant passive [fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive)
 surface, as well as being difficult to process. Client Hints enable developers to actively
 request only the information they need about the user's device or conditions, rather than needing to

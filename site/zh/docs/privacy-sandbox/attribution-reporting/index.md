@@ -40,7 +40,7 @@ authors:
 
 ## 为什么需要这个 API？ {: #why-is-this-api-needed }
 
-如今，广告转化测量通常依赖于[第三方 cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies)。但是浏览器正在限制获取这些第三方 cookie，因为这些 cookie 可用于跨站跟踪用户并妨碍用户隐私。该 API 以保护隐私的方式实现这些测量，且无需第三方 cookie。
+如今，广告转化测量通常依赖于[第三方 cookie](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies)。但是浏览器正在限制获取这些第三方 cookie，因为这些 cookie 可用于跨站跟踪用户并妨碍用户隐私。该 API 以保护隐私的方式实现这些测量，且无需第三方 cookie。
 
 ## 归因报告 API 的运作方式是怎样的？都有哪些功能？
 

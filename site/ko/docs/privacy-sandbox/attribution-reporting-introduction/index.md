@@ -30,7 +30,7 @@ Attribution Reporting API를 사용하면 **광고 클릭 또는 조회**가 판
 
 ## 이 API가 필요한 이유는 무엇입니까?
 
-오늘날 광고 전환 측정은 종종 [타사 쿠키](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies)에 의존합니다. 브라우저는 타사 쿠키에 대한 액세스를 제한하고 있는데, 타사 쿠키는 사이트 전체에서 사용자를 추적하고 사용자 개인정보를 유출하는 데 사용될 수 있기 때문입니다. 이 API는 타사 쿠키 없이 개인정보를 보호하는 방식으로 이러한 측정을 가능하게 합니다.
+오늘날 광고 전환 측정은 종종 [타사 쿠키](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies)에 의존합니다. 브라우저는 타사 쿠키에 대한 액세스를 제한하고 있는데, 타사 쿠키는 사이트 전체에서 사용자를 추적하고 사용자 개인정보를 유출하는 데 사용될 수 있기 때문입니다. 이 API는 타사 쿠키 없이 개인정보를 보호하는 방식으로 이러한 측정을 가능하게 합니다.
 
 ## 누가 이 API에 대해 알아야 합니까?
 
@@ -342,7 +342,7 @@ Bob이라는 사람을 예로 들어 보겠습니다. Bob은 `news.com`에서 �
 ## 사이트 및 사용자 제어
 
 - 사용자는 `chrome://settings/privacySandbox`의 사용자 설정을 통해 선택 해제할 수 있습니다.
-- 기본적으로 이 기능은 최상위 컨텍스트에서 활성화됩니다. [권한 정책](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)을 통해 하위 iframe에서 Attribution Reporting API를 활성화해야 하기 때문에 임의의 제3자가 게시자 모르게 API를 사용할 수 없습니다.
+- 기본적으로 이 기능은 최상위 컨텍스트에서 활성화됩니다. [권한 정책](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)을 통해 하위 iframe에서 Attribution Reporting API를 활성화해야 하기 때문에 임의의 제3자가 게시자 모르게 API를 사용할 수 없습니다.
 
 ## 열린 질문
 

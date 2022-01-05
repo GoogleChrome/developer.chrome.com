@@ -19,7 +19,7 @@ tags:
 
 User-Agent Reduction is an effort to reduce passive fingerprinting surfaces by
 reducing the information in the
-[User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+[User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
 (UA) string to only the browser's brand and significant version, its desktop or
 mobile distinction, and the platform it's running on. Currently, the UA string
 is shared on every HTTP request and exposed in JavaScript to all resources
@@ -50,7 +50,7 @@ repository](https://github.com/abeyad/user-agent-reduction/issues).
 ## What is the User-Agent?
 
 The
-[User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)
+[User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
 (UA) string is shared on every HTTP request and exposed in JavaScript to all
 resources loaded by the browser. Currently, it contains significant information
 on the browser and the platform it's running on.

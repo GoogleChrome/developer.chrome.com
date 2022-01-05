@@ -68,7 +68,7 @@ publisher or online store) without identifying the user or linking identities ac
 {% Aside 'key-term' %}  
 [Fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) enables sites to identify 
 and track individual users by getting data about their device, operating system, and browser setup 
-(such as language preferences, [user agent](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent), and available fonts) or changes in device state. This may be done on the server by 
+(such as language preferences, [user agent](https://developer.mozilla.org/docs/Web/API/NavigatorID/userAgent), and available fonts) or changes in device state. This may be done on the server by 
 checking request headers or on the client with JavaScript.
 
 Fingerprinting uses mechanisms that users aren't aware of and can't control. Sites such as 

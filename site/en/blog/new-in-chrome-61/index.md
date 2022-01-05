@@ -110,7 +110,7 @@ on updates.
 * You can now specify scrolling smoothness with the
   [`scroll-behavior`](https://drafts.csswg.org/cssom-view/#smooth-scrolling)
   CSS property.
-* [CSS hex color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#rgba)
+* [CSS hex color values](https://developer.mozilla.org/docs/Web/CSS/color_value#rgba)
   can now specify alpha transparency by adding digits to the end of the string.
 * You can access the relative positions of the screen content with the
   [Visual Viewport API](https://github.com/WICG/ViewportAPI), exposing complex

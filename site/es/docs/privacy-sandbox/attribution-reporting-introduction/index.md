@@ -34,7 +34,7 @@ Esta API forma parte de Privacy Sandbox, que es una serie de propuestas para sat
 
 ## ¿Por qué se necesita esta API?
 
-Hoy en día, la evaluación de conversiones publicitarias depende a menudo de las [cookies de terceros](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies). Los navegadores restringen el acceso a las cookies de terceros porque pueden utilizarse para rastrear a los usuarios en distintos sitios y obstaculizar su privacidad. Esta API permite realizar esas evaluaciones preservando la privacidad, sin cookies de terceros.
+Hoy en día, la evaluación de conversiones publicitarias depende a menudo de las [cookies de terceros](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies). Los navegadores restringen el acceso a las cookies de terceros porque pueden utilizarse para rastrear a los usuarios en distintos sitios y obstaculizar su privacidad. Esta API permite realizar esas evaluaciones preservando la privacidad, sin cookies de terceros.
 
 ## ¿Quién debe conocer esta API?
 
@@ -352,7 +352,7 @@ Los informes agrupados asocian un evento de clic o visualización detallada con 
 ## Sitios y control de usuarios
 
 - Los usuarios pueden optar por no participar a través de la configuración del usuario en `chrome://settings/privacySandbox`.
-- De forma predeterminada, la función está habilitada en contextos de nivel superior. Los terceros arbitrarios no pueden utilizar la API sin el conocimiento de un editor, porque la API para informes de atribuciones debe estar habilitada en los iframes secundarios a través de una [Política de permisos](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy).
+- De forma predeterminada, la función está habilitada en contextos de nivel superior. Los terceros arbitrarios no pueden utilizar la API sin el conocimiento de un editor, porque la API para informes de atribuciones debe estar habilitada en los iframes secundarios a través de una [Política de permisos](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
 
 ## Preguntas abiertas
 

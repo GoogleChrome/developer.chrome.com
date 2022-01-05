@@ -394,14 +394,14 @@ To open the **Angle Clock**:
 [4]: #select
 [5]: #computed
 [6]: #computed
-[7]: https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model
+[7]: https://developer.mozilla.org/docs/Learn/CSS/Introduction_to_CSS/Box_model
 [8]: #select
 [9]: /docs/devtools/css#pseudostates
 [10]: /docs/devtools/command-menu
 [11]: /docs/devtools/css/print-preview
 [12]: #add-declaration-inline
 [13]: #add-declaration-to-rule
-[14]: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity#Selector_Types
+[14]: https://developer.mozilla.org/docs/Web/CSS/Specificity#Selector_Types
 [15]: #select
 [16]: #select
 [17]: #values-shortcuts

@@ -103,8 +103,8 @@ link.access = 'admin';
 link.search = `?access=${link.access}`;
 ```
 
-<!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
-**Console** で `link` をログに出力してみてください。独自のプロパティが太字になり、最初にソートされるようになりました。この変更により、特に多くの継承されたプロパティを持つ [Web API](https://developer.mozilla.org/en-US/docs/Web/API) (例: `URL`) のカスタムプロパティを見つけやすくなりました。
+<!-- Try logging `link` in the **Console**. Own properties are now bold and sorted first. These changes make it easier to spot custom properties, especially for [Web APIs](https://developer.mozilla.org/docs/Web/API) (e.g. `URL`) with many inherited properties. -->
+**Console** で `link` をログに出力してみてください。独自のプロパティが太字になり、最初にソートされるようになりました。この変更により、特に多くの継承されたプロパティを持つ [Web API](https://developer.mozilla.org/docs/Web/API) (例: `URL`) のカスタムプロパティを見つけやすくなりました。
 
 <!-- {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="Own properties are bold and sorted first", width="800", height="561" %} -->
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ngjx6YRQsH3Fhl6DUZYl.png", alt="独自のプロパティは太字で先頭に並びます", width="800", height="561" %}

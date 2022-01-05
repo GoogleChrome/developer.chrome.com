@@ -151,7 +151,7 @@ I'll write "always" below,
 but this caveat applies throughout.)
 
 Multiple browser tabs or windows of the same site usually go in different render processes,
-unless the tabs are related (one [opening](https://developer.mozilla.org/en-US/docs/Web/API/Window/opener)
+unless the tabs are related (one [opening](https://developer.mozilla.org/docs/Web/API/Window/opener)
 the other).
 Under strong memory pressure on desktop Chromium may put multiple tabs
 from the same site into the same render process even if not related.
@@ -205,7 +205,7 @@ width="800", height="556" %}
 - The _main thread_ runs scripts, the rendering event loop, the document lifecycle,
 hit testing, script event dispatching, and parsing of HTML, CSS and other data formats.
   - _Main thread helpers_ perform tasks such as creating image bitmaps and blobs that require encoding or decoding.
-  - _[Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)_
+  - _[Web Workers](https://developer.mozilla.org/docs/Web/API/Web_Workers_API)_
   run script, and a rendering event loop for OffscreenCanvas.
 - The _Compositor thread_ processes input events,
 performs scrolling and animations of web content,

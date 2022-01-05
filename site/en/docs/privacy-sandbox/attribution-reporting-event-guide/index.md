@@ -442,7 +442,7 @@ app.get('/conversion', (req, res) => {
 
 In order to use Attribution Reporting in **cross-origin iframes** to declare a click
 or trigger an attribution, you need to enable the feature via the `attribution-reporting`
-[Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy).
+[Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
 
 ```html
 <iframe src="..." allow="attribution-reporting"></iframe>

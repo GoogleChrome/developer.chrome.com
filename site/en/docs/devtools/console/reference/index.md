@@ -307,4 +307,4 @@ You can use any of the following workflows to clear the Console:
 [29]: /docs/devtools/console/live-expressions
 [30]: #settings
 [31]: #settings
-[32]: https://developer.mozilla.org/en-US/docs/Glossary/Browsing_context
+[32]: https://developer.mozilla.org/docs/Glossary/Browsing_context

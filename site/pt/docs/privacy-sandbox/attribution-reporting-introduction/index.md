@@ -30,7 +30,7 @@ Esta proposta está sendo incubada de forma aberta. A proposta e as discussões 
 
 ## Por que esta API é necessária?
 
-Hoje, a mensuração da conversão de anúncios geralmente depende [de cookies de terceiros](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies). Os navegadores estão restringindo o acesso a cookies de terceiros porque eles podem ser usados para rastrear usuários em sites e prejudicar a privacidade do usuário. Esta API viabiliza essas medições de uma forma que preserva a privacidade, sem usar cookies de terceiros.
+Hoje, a mensuração da conversão de anúncios geralmente depende [de cookies de terceiros](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies). Os navegadores estão restringindo o acesso a cookies de terceiros porque eles podem ser usados para rastrear usuários em sites e prejudicar a privacidade do usuário. Esta API viabiliza essas medições de uma forma que preserva a privacidade, sem usar cookies de terceiros.
 
 ## Quem precisa saber sobre esta API?
 
@@ -342,7 +342,7 @@ Os relatórios agregados associam um clique detalhado ou evento de visualizaçã
 ## Sites e controle do usuário
 
 - Os usuários podem desativar o recurso através das configurações do usuário em `chrome://settings/privacySandbox` .
-- Por default, o recurso é habilitado em contextos de nível superior. Terceiros arbitrários não podem usar a API sem o conhecimento do editor, porque a API de relatórios de atribuição precisa ser ativada em iframes filhos por meio de uma [política de permissões](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy).
+- Por default, o recurso é habilitado em contextos de nível superior. Terceiros arbitrários não podem usar a API sem o conhecimento do editor, porque a API de relatórios de atribuição precisa ser ativada em iframes filhos por meio de uma [política de permissões](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
 
 ## Questões abertas
 

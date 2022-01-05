@@ -93,7 +93,7 @@ change as discussion progresses.
 
 The Federated Credentials Management API overlaps with and builds on some of the
 functionality already present in the [Credential Management
-API](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API).
+API](https://developer.mozilla.org/docs/Web/API/Credential_Management_API).
 
 {% endAside %}
 

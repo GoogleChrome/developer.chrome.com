@@ -30,7 +30,7 @@ Attribution Reporting API を使用すると、**広告のクリックまたは�
 
 ## この API が必要なのはなぜか？
 
-今日、広告コンバージョンの測定は、[サードパーティ Cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies) に依存することがよくあります。ブラウザはサードパーティ Cookie へのアクセスを制限しています。これらは、サイト間でユーザーを追跡するために使用され、ユーザーのプライバシーに支障を与える可能性があるためです。この API は、サードパーティ Cookie を使用せずに、プライバシーを保護する形でこうした測定を可能にします。
+今日、広告コンバージョンの測定は、[サードパーティ Cookie](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies) に依存することがよくあります。ブラウザはサードパーティ Cookie へのアクセスを制限しています。これらは、サイト間でユーザーを追跡するために使用され、ユーザーのプライバシーに支障を与える可能性があるためです。この API は、サードパーティ Cookie を使用せずに、プライバシーを保護する形でこうした測定を可能にします。
 
 ## この API について知っておく必要があるのは誰ですか？
 
@@ -363,7 +363,7 @@ alt="ALT_TEXT_HERE", width="800", height="1140" %}
 ## サイトとユーザーの管理
 
 - `chrome://settings/privacySandbox`のユーザー設定よりオプトアウトできます。
-- デフォルトとして、この機能はトップレベルのコンテキストで有効になっています。 Attribution Reporting API は、[アクセス許可ポリシー](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)によって子 iframe で有効にされている必要があるため、どのサードパーティでもパブリッシャーに内緒で API を使用できるということはありません。
+- デフォルトとして、この機能はトップレベルのコンテキストで有効になっています。 Attribution Reporting API は、[アクセス許可ポリシー](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)によって子 iframe で有効にされている必要があるため、どのサードパーティでもパブリッシャーに内緒で API を使用できるということはありません。
 
 ## 未解決の質問
 

@@ -663,7 +663,7 @@ window.setTimeout(() => animate(elmt_id), 200);
 [24]: /docs/extensions/mv3/match_patterns
 [25]: https://www.whatwg.org/specs/web-apps/current-work/#handler-onload
 [26]: https://www.whatwg.org/specs/web-apps/current-work/#dom-document-readystate
-[27]: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+[27]: https://developer.mozilla.org/docs/Web/API/Window/postMessage
 [28]: /docs/extensions/mv3/xhr
 [29]: https://en.wikipedia.org/wiki/Cross-site_scripting
 [30]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack
@@ -671,4 +671,4 @@ window.setTimeout(() => animate(elmt_id), 200);
 [32]: #dynamic-declarative
 [33]: /docs/extensions/reference/permissions
 
-[ref-error]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
+[ref-error]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError

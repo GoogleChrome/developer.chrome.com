@@ -319,7 +319,7 @@ tips for improving various aspects of runtime performance, such as:
 [2]: https://developers.google.com/web/fundamentals/performance/rail
 [3]: https://support.google.com/chrome/answer/95464
 [4]: /docs/devtools/customize/#placement
-[5]: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+[5]: https://developer.mozilla.org/docs/Web/API/window/requestAnimationFrame
 [6]:
   https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing#avoid_forced_synchronous_layouts
 [7]:

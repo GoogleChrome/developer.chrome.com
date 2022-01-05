@@ -8,7 +8,7 @@ date: 2019-03-25
 description: "How to view Application Cache data from the Application panel of Chrome DevTools."
 ---
 
-[mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/applicationCache
+[mdn]: https://developer.mozilla.org/docs/Web/API/Window/applicationCache
 
 {% Aside 'warning' %}
 Support for [AppCache][mdn] will be removed from Chrome and other Chromium-based browsers. We encourage developers to migrate off of AppCache now, rather than waiting any longer. Read [more](https://web.dev/appcache-removal/).

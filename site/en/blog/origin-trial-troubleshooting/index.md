@@ -473,7 +473,7 @@ A demo showing access to an origin trial feature in an iframe is available at
 
 ### Permissions policies are correctly configured {: #permissions-policies}
 
-Some origin trial features may be affected by a [`Permissions-Policy`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy) 
+Some origin trial features may be affected by a [`Permissions-Policy`](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) 
 header (previously known as a `Feature-Policy` header). You can check for this in the 
 [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=subject%3Aintent%20subject%3Ato%20subject%3Aexperiment) 
 for the trial feature, or in developer documentation for the feature on [web.dev](https://web.dev) 

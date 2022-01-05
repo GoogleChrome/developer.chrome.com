@@ -45,7 +45,7 @@ Sandbox proposals](https://developers.chrome.com/docs/privacy-sandbox).
 ## Why is this API needed?
 
 Today, ad conversion measurement often relies on [third-party
-cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies).
+cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies).
 Browsers are restricting access to third-party cookies because these can be used to track
 users across sites and hinder user privacy. This API enables those measurements in a
 privacy-preserving way, without third-party cookies.
@@ -578,7 +578,7 @@ the following privacy mechanisms:
 - By default, the feature is enabled in top-level contexts. Arbitrary third-parties can't
   use the API without a publisher's knowledge, because the Attribution Reporting API needs
   to be enabled in child iframes via a [Permission
-  policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy).
+  policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
 
 ## Attribution Reporting: all resources
 

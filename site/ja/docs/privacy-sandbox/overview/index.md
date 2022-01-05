@@ -46,7 +46,7 @@ Chromeチームによって立案された主な提案を以下の通りです�
 ### データ収集の制限
 
 - [**Privacy Budget**](https://www.youtube.com/watch?v=0STgfjSA6T8)：Webサイトがユーザーのブラウザーまたはデバイスに関する情報を取得できるようにしますが、ブラウザーがサイトがアクセスできる情報の合計量を制限できるようにし、ユーザーを識別できないようにします。
-- [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/)：[User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent)（UA）という文字列は、消極的にユーザーを識別できる重要でかつ処理しにくい[情報源](https://w3c.github.io/fingerprinting-guidance/#passive)です。Client Hintsを使用すると、開発者は、User-Agent文字列からこのデータを解析する必要がなくなり、ユーザーのデバイスまたは条件について必要な情報のみを積極的に要求できます。
+- [**User-Agent Client Hints**](https://web.dev/user-agent-client-hints/)：[User-Agent](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)（UA）という文字列は、消極的にユーザーを識別できる重要でかつ処理しにくい[情報源](https://w3c.github.io/fingerprinting-guidance/#passive)です。Client Hintsを使用すると、開発者は、User-Agent文字列からこのデータを解析する必要がなくなり、ユーザーのデバイスまたは条件について必要な情報のみを積極的に要求できます。
 - [**Gnatcatcher**](https://github.com/bslassey/ip-blindness)：IPアドレスを利用して個々のユーザーを識別する機能を制限します。提案には2つの部分があります。[<strong data-md="">Willful IP Blindness</strong>](https://github.com/bslassey/ip-blindness/blob/master/willful_ip_blindness.md)では、WebサイトがIPアドレスをユーザーに関連付けしていないことをブラウザに通知できるようになります。[<strong data-md-type="double_emphasis">Near-path NAT</strong>](https://github.com/bslassey/ip-blindness/blob/master/near_path_nat.md)では、ユーザーのグループが同じプライベートサーバーを介してトラフィックを送信し、実質、サイトホストからIPアドレスを隠せます。Gnatcatcherはまた、不正使用防止などの正当な目的でIPアドレスの情報を必要とするサイトが、認証と監査を条件としてIPアドレス情報を取得できるようにします。
 
 ### アイデンティティ

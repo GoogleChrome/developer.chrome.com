@@ -288,10 +288,10 @@ chrome.runtime.onInstalled.addListener(() => {
 [api-browser-action]: /docs/extensions/reference/browserAction/
 [api-page-action]: /docs/extensions/reference/pageAction/
 [api-declarative-content]: /docs/extensions/reference/declarativeContent/
-[css-color]: https://developer.mozilla.org/en-US/docs/Web/CSS/color
+[css-color]: https://developer.mozilla.org/docs/Web/CSS/color
 [doc-manifest]: /docs/extensions/mv3/manifest
 [event-onclicked]: /docs/extensions/reference/action/#event-onClicked
-[html-canvas]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement
-[html-offscreencanvas]: https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas
+[html-canvas]: https://developer.mozilla.org/docs/Web/API/HTMLCanvasElement
+[html-offscreencanvas]: https://developer.mozilla.org/docs/Web/API/OffscreenCanvas
 [repo-samples]: https://github.com/GoogleChrome/chrome-extensions-samples
 [sample-example]: https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/api/action
