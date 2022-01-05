@@ -37,7 +37,7 @@ Take the following steps to get the access keys needed:
 1. Skip Scopes. click **Save** then **Continue**.
 1. Add your email address to **Test users**, then click **Save** then **Continue**.
 
-**Get the access keys**.
+### Get the access keys {: #get-keys }
 
 1. Go to **Credentials**.
 1. Click **Create Credentials** then **OAuth client ID**.
