@@ -74,7 +74,7 @@ function checkURL(tree, file) {
     ) {
       // Not happy about this, but the types linter kept barfing on error TS2488
       // (which is not what the web.dev site does) - jlwagner
-      const [matchedLocale] = parsed.pathname.match(locale) || ["en-US"];
+      const [matchedLocale] = parsed.pathname.match(locale) || ['en-US'];
       const reason = `An MDN link contains a locale (${matchedLocale}). Please remove the locale from the link.`;
 
       file.message(reason, node);
