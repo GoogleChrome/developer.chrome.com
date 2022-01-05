@@ -106,7 +106,37 @@ See [Using the Chrome Web Store Publish API][publish-api].
 
 For InAppProducts Resource details, see the [resource representation][api-inappproducts-resource] page.
 
-<table><thead><tr><th>Method</th><th>HTTP request</th><th>Description</th></tr></thead><tbody><tr class="alt"><td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless otherwise noted</td></tr><tr><td><a href="/webstore/webstore_api/inAppProducts/get/">get</a></td><td><code>GET&nbsp; /items/<var>itemId</var>/skus/<var>sku</var></code></td><td>Gets the in-app product information of an item.</td></tr><tr><td><a href="/webstore/webstore_api/inAppProducts/list/">list</a></td><td><code>GET&nbsp; /items/<var>itemId</var>/skus</code></td><td>Lists the in-app product information of an item.</td></tr></tbody></table>
+<table>
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th>HTTP request</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="alt">
+      <td colspan="3">URIs relative to https://www.googleapis.com/chromewebstore/v1.1, unless
+        otherwise noted</td>
+    </tr>
+    <tr>
+      <td><a href="/docs/webstore/webstore_api/inAppProducts/get/">get</a></td>
+      <td>
+        <strong>GET</strong><br>
+        <code>/items/<var>itemId</var>/skus/<var>sku</var></code>
+      </td>
+      <td>Gets the in-app product information of an item.</td>
+    </tr>
+    <tr>
+      <td><a href="/docs/webstore/webstore_api/inAppProducts/list/">list</a></td>
+      <td>
+        <strong>GET</strong><br>
+        <code>/items/<var>itemId</var>/skus</code>
+      </td>
+      <td>Lists the in-app product information of an item.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 ## Licenses {: #Licenses }
