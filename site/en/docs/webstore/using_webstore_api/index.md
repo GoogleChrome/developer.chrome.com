@@ -59,8 +59,9 @@ You will see a page asking you to accept permission for the requested scope.
 
 Make sure you are requesting the token using the Google developer Account which owns the Chrome Web
 Store items you want to manage. This account can be different from the account you created the
-Google Developers Console project with. For example, you can create an application for other developers
-to manage their apps, in which case you only need to register a Google Developers Console project.
+Google Developers Console project with. For example, you can create an application for other
+developers to manage their apps, in which case you only need to register a Google Developers Console
+project.
 
 {% endAside %}
 
