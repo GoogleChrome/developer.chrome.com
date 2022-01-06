@@ -42,31 +42,32 @@ the change and adjust accordingly.
       requests.
     * Preflight failures only display warnings in DevTools, without otherwise
       affecting the private network requests.
-    * Chrome gathers compatibility data, and reaches out to the largest
+    * Chrome gathers compatibility data and reaches out to the largest
       affected websites.
     * We expect this to be broadly compatible with existing websites.
 1. In Chrome 101 at the earliest:
     * This will begin _only_ if and when compatibility data indicates that the
-      change is safe enough and direct outreach has been conducted.
+      change is safe enough and we've outreached directly when necessary.
     * Chrome enforces that preflight requests must succeed, otherwise failing
       the requests.
     * [A deprecation trial](/blog/origin-trials/#deprecation-trials) starts at
-      the same time to allow for websites still affected by this second step to
-      request a time extension. The trial lasts for at least 6 months.
+      the same time to allow for websites affected by this phase to request a
+      time extension. The trial will last for at least 6 months.
 
 
-## What is Private Network Access
+## What is Private Network Access (PNA)
 
 [Private Network Access](https://wicg.github.io/private-network-access/)
-(formerly known as [CORS-RFC1918](https://web.dev/cors-rfc1918-feedback/)) restricts the ability of websites to send
-requests to servers on private networks.
+(formerly known as [CORS-RFC1918](https://web.dev/cors-rfc1918-feedback/))
+restricts the ability of websites to send requests to servers on private
+networks.
 
 Chrome has already implemented part of the specification: as of Chrome 96, only
 secure contexts are allowed to make private network requests. Refer to our
 [previous blog post](/blog/private-network-access-update/) for details.
 
 The specification also extends the Cross-Origin Resource Sharing (CORS)
-protocol so that websites now have to explicitly request a grant from servers
+protocol so that websites must now explicitly request a grant from servers
 on private networks before being allowed to send arbitrary requests.
 
 {% Aside 'key-term' %}
@@ -111,7 +112,9 @@ explicitly agreeing to the upcoming request.
 
 {% Img
    src="image/VbsHyyQopiec0718rMq2kTE1hke2/FDj760C71e4YW8eJ0pid.jpg",
-   alt="CORS preflight sequence diagram",
+   alt="Sequence diagram which represents CORS preflight. An OPTIONS HTTP
+   request is sent to the target, which returns a 200 OK. Then the CORS
+   request header is sent, returning a CORS response header",
    width="390", height="450"
 %}
 
