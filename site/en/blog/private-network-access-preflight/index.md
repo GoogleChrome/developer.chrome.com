@@ -271,9 +271,9 @@ the same way as warnings using the DevTools panels mentioned above.
 
 ## What to do if your website is affected
 
-While this change is not expected to break any website, we strongly encourage
-you to get ahead of the [second phase of our rollout](#rollout-plan) and start
-fixing affected request paths as soon as possible.
+When this change rolls out in Chrome 98, it is not expected to break any
+website. However, we strongly encourage you to update affected request paths to
+ensure your website keeps running as expected.
 
 There are two solutions available to you:
 
@@ -296,10 +296,11 @@ Typically, you will want to allow access to a single origin under your control.
 Beware of insecure (non-https) origins, as they are unauthenticated: an on-path
 attacker could masquerade as any such origin!
 
-Once your server has decided to allow the request, it should respond 204 No Content (or 200 OK)
-with the necessary CORS headers and the new PNA header. That is, at least
-`Access-Control-Allow-Origin` and `Access-Control-Allow-Private-Network: true`,
-as well as others as needed depending on the exact request headers.
+Once your server has decided to allow the request, it should respond 204 No
+Content (or 200 OK) with the necessary CORS headers and the new PNA header.
+That includes `Access-Control-Allow-Origin` and
+`Access-Control-Allow-Private-Network: true`, as well as others as needed
+depending on the exact request headers.
 
 Refer to the [examples](#examples) for concrete scenarios.
 
