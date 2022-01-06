@@ -10,7 +10,7 @@ hero: image/VbsHyyQopiec0718rMq2kTE1hke2/iqanYAE91Ab6BsgwhBjq.jpg
 alt: An airplane in the sky
 tags:
   - chrome-98
-  - privacy
+  - security
 ---
 
 ## Introduction
@@ -27,7 +27,7 @@ carry a new header, `Access-Control-Request-Private-Network: true`, and the
 response to it must carry a corresponding header,
 `Access-Control-Allow-Private-Network: true`.
 
-The aim is to protect users from cross-site request forgery (CSRF) attacks
+The aim is to protect users from [cross-site request forgery (CSRF) attacks](https://portswigger.net/web-security/csrf)
 targeting routers and other devices on private networks. These [attacks have
 affected hundreds of thousands of users](https://securityaffairs.co/wordpress/22743/cyber-crime/soho-pharming-attack.html),
 allowing attackers to redirect them to malicious servers.
@@ -58,7 +58,7 @@ the change and adjust accordingly.
 ## What is Private Network Access
 
 [Private Network Access](https://wicg.github.io/private-network-access/)
-(formerly known as CORS-RFC1918) restricts the ability of websites to send
+(formerly known as [CORS-RFC1918](https://web.dev/cors-rfc1918-feedback/)) restricts the ability of websites to send
 requests to servers on private networks.
 
 Chrome has already implemented part of the specification: as of Chrome 96, only
