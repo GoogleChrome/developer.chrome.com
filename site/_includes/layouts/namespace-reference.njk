@@ -108,7 +108,9 @@
         </div>
 
         {% include 'partials/toc-inner.njk' %}
-
+        {% if namespace.reference %}
+            <a href={{namespace.reference}}>Review the guide for <code>{{ title }}</code>.</a>
+          {% endif %}
         {{ content | safe }}
       </article>
 

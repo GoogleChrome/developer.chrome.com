@@ -25,4 +25,7 @@ module.exports = {
   noindex: true,
   // This is the default hero image for all Workbox pages.
   hero: 'image/QMjXarRXcMarxQddwrEdPvHVM242/ZUBXF0hK0jo9q4RvELUs.png',
+  eleventyComputed: {
+    reference: data => `/docs/workbox/reference/${data.title}/`,
+  },
 };

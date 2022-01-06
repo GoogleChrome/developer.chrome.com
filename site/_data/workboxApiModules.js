@@ -31,5 +31,11 @@ module.exports = () => {
     '../../external/data/workbox-types.json'
   );
 
-  return groupTypes(workboxTypesFile);
+  const workboxTypes = groupTypes(workboxTypesFile);
+
+  for (const key in workboxTypes) {
+    workboxTypes[key]['reference'] = `/docs/workbox/modules/${key}/`;
+  }
+
+  return workboxTypes;
 };
