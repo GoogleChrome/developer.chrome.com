@@ -24,7 +24,7 @@ communication](#alternative-cross-origin-communication)
 
 {% endAside %}
 
-[`document.domain`](https://developer.mozilla.org/en-US/docs/Web/API/Document/domain)
+[`document.domain`](https://developer.mozilla.org/docs/Web/API/Document/domain)
 was designed to get or set the origin's hostname.
 
 Beginning with Chrome version 101, websites will be unable to set
