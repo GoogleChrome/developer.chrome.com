@@ -15,14 +15,20 @@ alt: >
   A dog in disguise.
 ---
 
-**If your website relies on relaxing the same-origin policy via `document.domain`,
-your action is required.**
+{% Banner 'warning' %}
+If your website relies on relaxing the same-origin policy via `document.domain`,
+your action is required. Continue to read more about why this is changing or skip to
+[alternative code for cross-domain communication](#alternative-cross-domain-communication)
+{% endBanner %}
+
+[`document.domain`](https://developer.mozilla.org/en-US/docs/Web/API/Document/domain)
+was designed to get or set the origin's hostname.
 
 Beginning with Chrome version 101, websites will be unable to set
 `document.domain`. Websites will need to use alternative approaches such as
 `postMessage()` or Channel Messaging API to communicate cross-origin. If a
 website relies on same-origin policy relaxation via `document.domain` to
-function correctly, it will need to send an `Origin-Agent-Cluster: ?0` header
+function correctly, the site will need to send an `Origin-Agent-Cluster: ?0` header
 along with all documents that require that behavior (note that `document.domain`
 has no effect if only one document sets it).
 
@@ -35,7 +41,7 @@ but cross-origin](https://web.dev/same-site-same-origin/) pages.
 
 Sites which have the same
 [eTLD+1](https://web.dev/same-site-same-origin/#:~:text=the%20whole%20site%20name%20is%20known%20as%20the%20etld%2B1)
-but are different subdomains are considered "same-site but cross-origin".
+but different subdomains are considered "same-site but cross-origin".
 
 {% endAside %}
 
@@ -43,9 +49,8 @@ Here's how it's used:
 
 Let's say a page on `https://parent.example.com` embeds an iframe page from
 `https://video.example.com`. These pages have the same eTLD+1 (`example.com`)
-with different subdomains. By setting both pages' `document.domain` to
-`'example.com'`, the two origins can be treated as if they are the same-origin
-by the browser.
+with different subdomains. When both pages' `document.domain` is set to
+`'example.com'`, the browser treats the two origins as if they are same-origin.
 
 On `https://parent.example.com`:
 
@@ -72,23 +77,23 @@ policy](https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-ori
 the parent page will be able to access the iframe's document and traverse the
 DOM tree, and vice versa.
 
-At a glance, this is a convenient technique, but this actually introduces a
+This is a convenient technique, however it introduces a
 security risk.
 
 ### Security concerns with `document.domain`
 
-Security concerns have led to the spec for `document.domain` to [warn users to
+Security concerns around `document.domain` have led to a change in the [specification that warns users to
 avoid
-usage](https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction).
+using it](https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction).
 The [current discussion with other browser
-vendors](https://github.com/w3ctag/design-reviews/issues/564) is moving toward
+vendors](https://github.com/w3ctag/design-reviews/issues/564) is moving in
 the same direction.
 
 For example, if a hosting service provides different subdomains per user, an
-attacker can set `document.domain` to pretend as if they are the same-origin
-with another user's page. Further, an attacker can host a website under a shared
-hosting service, which serves through the same IP address with different port
-numbers, the attacker can pretend to be on the same-site-but-same-origin as
+attacker can set `document.domain` to pretend they are the same-origin
+as another user's page. Further, an attacker can host a website under a shared
+hosting service, which serves sites through the same IP address with different port
+numbers. In that case, the attacker can pretend to be on the same-site-but-same-origin as
 yours. This is possible because `document.domain` ignores the port number part
 of the domain.
 
@@ -97,18 +102,20 @@ To learn more about the security implications of setting `document.domain`, read
 MDN](https://developer.mozilla.org/docs/Web/API/Document/domain#setter).
 
 Chrome will start displaying a warning in DevTools Console as soon as
-`document.domain` is set starting Chrome 98. Chrome is planning to  make
-`document.domain` immutable starting Chrome 101.
+`document.domain` is set starting from Chrome 98. Chrome is planning to  make
+`document.domain` immutable starting from Chrome 101.
 
 ## Alternative cross-domain communication
 
+At this time, you have two options to replace `document.domain` for your website.
+
 ### Use `postMessage()` or Channel Messaging API
 
-In most use cases, `document.domain` can be replaced by a cross-origin
+In most use cases, cross-origin
 [`postMessage()`
 ](https://developer.mozilla.org/docs/Web/API/Window/postMessage) or [Channel
 Messaging
-API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API).
+API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API) can replace `document.domain`.
 
 On `https://parent.example.com`:
 
@@ -149,8 +156,7 @@ via @ChromiumDev](https://twitter.com/ChromiumDev) or ask on Stack Overflow.
 
 ### Send `Origin-Agent-Cluster: ?0` header to continue using `document.domain`
 
-If you have strong reasons to continue setting `document.domain`, you can do so
-by sending `Origin-Agent-Cluster: ?0` response header along with the target
+If you have strong reasons to continue setting `document.domain`, you can send `Origin-Agent-Cluster: ?0` response header along with the target
 document.
 
 ```http
@@ -170,16 +176,15 @@ after it becomes immutable by default.
 Chrome will eventually make `document.domain` immutable. Here's the current
 timeline:
 
-* **Chrome 98:** Usage of `document.domain` displays a warning message in
-  DevTools Console. Also, `Origin-Agent-Cluster` header is available.
+* **Chrome 98:** When using `document.domain`, DevTools Console displays a warning message. `Origin-Agent-Cluster` header is available.
 * **Chrome 99:** Enterprise policy is in place to extend behavior.
 * **Chrome 101:** `document.domain` is immutable.
 
 ## Browser compatibility
 
-* [In the Origin
-  spec](https://html.spec.whatwg.org/multipage/origin.html#:~:text=Because%20of%20these%20security%20pitfalls%2C%20this%20feature%20is%20in%20the%20process%20of%20being%20removed%20from%20the%20web%20platform),
-  it's clearly stated that the feature should be removed.
+* [The Origin
+  specification](https://html.spec.whatwg.org/multipage/origin.html#:~:text=Because%20of%20these%20security%20pitfalls%2C%20this%20feature%20is%20in%20the%20process%20of%20being%20removed%20from%20the%20web%20platform),
+  states that the feature should be removed.
 * [WebKit indicated that they are moderately positive about deprecating
   `document.domain`
   setter](https://github.com/w3ctag/design-reviews/issues/564#issuecomment-768450217).
@@ -194,4 +199,4 @@ timeline:
 * [Deprecating `document.domain`. · Issue #564 ·
   w3ctag/design-reviews](https://github.com/w3ctag/design-reviews/issues/564)
 
-Photo by <a href="https://unsplash.com/@braydona?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Braydon Anderson</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Photo by <a href="https://unsplash.com/@braydona">Braydon Anderson</a> on <a href="https://unsplash.com/">Unsplash</a>
