@@ -29,12 +29,10 @@ all resource requests will have a reduced `User-Agent` header. As a result,
 the returns from certain `Navigator` interfaces will be reduced, including:
 `navigator.userAgent`, `navigator.appVersion`, and `navigator.platform`.
 
-Web developers should
-[review site code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
-for instances and uses of the `User-Agent` string. If your site relies on
-parsing the `User-Agent` string to read the device model, platform version, or
-full browser version, you'll need to
-[implement the User-Agent Client Hints API](https://web.dev/migrate-to-ua-ch/). 
+Web developers should [prepare for the reduced User-Agent string](#) by reviewing their site code for instances and uses of the User-Agent string. If your site relies on parsing the User-Agent string to read the device model, platform version, or full browser version, you’ll need to [implement the User-Agent Client Hints API](https://web.dev/migrate-to-ua-ch/).
+
+[Review the latest timeline](https://www.chromium.org/updates/ua-reduction) for
+User-Agent reduction.
 
 {% Aside 'key-term' %}
 The [`User-Agent` string](https://developer.mozilla.org/docs/Web/HTTP/Headers/User-Agent)
@@ -112,6 +110,57 @@ experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints
 If you need a specific set of Client Hints on your initial request, refer to
 [Client Hints Reliability](https://github.com/WICG/client-hints-infrastructure/blob/main/reliability.md)
 to ensure Client Hints are available on site load and optimized.
+
+## How do I prepare for reduced UA?
+
+As we get closer to the reduced User-Agent string launch, [review your site
+code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
+for instances and uses of the User-Agent string. If your site relies on parsing
+the User-Agent string to read the device model, platform version, or full
+browser version, you’ll need to
+[implement the UA-CH API](https://web.dev/migrate-to-ua-ch/).
+
+Once you’ve updated to the UA-CH API, you should test to ensure you get the
+data you expect from the User-Agent. There are three ways to test, each
+increasing in complexity.
+
+### Test the string locally
+
+There are a couple of methods to test the reduced User-Agent locally:
+
+* Enable the `chrome://flags/#reduce-user-agent` flag.
+    * This will set your local browser to receive just the reduced `user-agent`
+      string for all sites, before it becomes the default setting.
+* Configure an emulated device in DevTools with the right user-agent string
+  and client hints.
+    * In DevTools under ⚙️ Settings → Devices → Add custom device...
+      you can configure an emulated device with any combination of
+      `user-agent` string and user-agent client hints values you need. 
+    * Use the 📱 Toggle device toolbar button to select an emulated device.
+* Launch Chrome with the `--user-agent="Custom string here"`.
+    * Use the command line flag to start Chrome with a custom user-agent string.
+
+### Transform the string in your site’s code
+
+If you process the existing Chrome `user-agent` string in your client-side or
+server-side code, you can transform that string to the new format to test
+compatibility. You can test by either by overriding and replacing the string,
+or generate the new version and test side-by-side.
+
+Review these
+[User-Agent reduction snippets](/docs/privacy-sandbox/user-agent/snippets/) for
+example regular expressions.
+
+### Test on real user traffic with an  origin trial
+
+[Register for the Chrome origin trial](/origintrials/#/view_trial/-7123568710593282047)
+to test the reduced User-Agent with your platform on real user traffic.
+
+If you work with embedded content, you can participate in a [third-party origin
+trial](/blog/third-party-origin-trials/) and test this change across multiple
+sites. When you register for the Chrome origin trial, select the "third-party
+matching" option to allow the script to be injected when your site is embedded
+on third-parties.
 
 ## Engage and share feedback
 
