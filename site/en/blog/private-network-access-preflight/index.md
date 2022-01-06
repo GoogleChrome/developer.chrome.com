@@ -150,7 +150,7 @@ Observable behavior depends on the
 #### No-CORS mode
 
 Say `https://foo.example/index.html` embeds
-`&lt;img src="https://bar.example/cat.gif" alt="dancing cat"/&gt;`, and
+`<img src="https://bar.example/cat.gif" alt="dancing cat"/>`, and
 `bar.example` resolves to `192.168.1.1`, a private IP address according to
 [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918).
 
@@ -201,7 +201,7 @@ Again, say `bar.example`  resolves to `192.168.1.1`.
 Chrome first sends a preflight request:
 
 ```text
-HTTP/1.1 OPTIONS /give-me-root
+HTTP/1.1 OPTIONS /delete-everything
 Origin: https://foo.example
 Access-Control-Request-Method: PUT
 Access-Control-Request-Credentials: true
@@ -260,7 +260,7 @@ To see what happens if preflight success was enforced, you can
 starting in Chrome 98:
 
 ```text
-–enable-features=PrivateNetworkAccessRespectPreflightResutls
+--enable-features=PrivateNetworkAccessRespectPreflightResutls
 ```
 
 Any failed preflight request will result in a failed fetch. This can allow you
@@ -295,7 +295,7 @@ Typically, you will want to allow access to a single origin under your control.
 Beware of insecure (non-https) origins, as they are unauthenticated: an on-path
 attacker could masquerade as any such origin!
 
-Once your server has decided to allow the request, it should respond 200 OK
+Once your server has decided to allow the request, it should respond 204 No Content (or 200 OK)
 with the necessary CORS headers and the new PNA header. That is, at least
 `Access-Control-Allow-Origin` and `Access-Control-Allow-Private-Network: true`,
 as well as others as needed depending on the exact request headers.
