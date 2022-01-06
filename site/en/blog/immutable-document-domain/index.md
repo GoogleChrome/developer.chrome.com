@@ -15,11 +15,14 @@ alt: >
   A dog in disguise.
 ---
 
-{% Banner 'warning' %}
+{% Aside 'warning' %}
+
 If your website relies on relaxing the same-origin policy via `document.domain`,
-your action is required. Continue to read more about why this is changing or skip to
-[alternative code for cross-domain communication](#alternative-cross-domain-communication)
-{% endBanner %}
+your action is required. Continue to read more about why this is changing or
+skip to [alternative code for cross-origin
+communication](#alternative-cross-origin-communication)
+
+{% endAside %}
 
 [`document.domain`](https://developer.mozilla.org/en-US/docs/Web/API/Document/domain)
 was designed to get or set the origin's hostname.
@@ -31,6 +34,14 @@ website relies on same-origin policy relaxation via `document.domain` to
 function correctly, the site will need to send an `Origin-Agent-Cluster: ?0` header
 along with all documents that require that behavior (note that `document.domain`
 has no effect if only one document sets it).
+
+## Timeline
+
+Here's the current timeline:
+
+* **Chrome 98:** When using `document.domain`, DevTools Console displays a warning message. `Origin-Agent-Cluster` header is available.
+* **Chrome 99:** Enterprise policy is in place to extend behavior.
+* **Chrome 101:** `document.domain` is immutable.
 
 ## Why make `document.domain` immutable?
 
@@ -105,7 +116,7 @@ Chrome will start displaying a warning in DevTools Console as soon as
 `document.domain` is set starting from Chrome 98. Chrome is planning to  make
 `document.domain` immutable starting from Chrome 101.
 
-## Alternative cross-domain communication
+## Alternative cross-origin communication
 
 At this time, you have two options to replace `document.domain` for your website.
 
@@ -150,9 +161,10 @@ window.addEventListener('message', (event) => {
 });
 ```
 
-Try it and see if it works. If you have specific requirements that won't work
-with `postMessage()` or Channel Messaging API, please let us know on [Twitter
-via @ChromiumDev](https://twitter.com/ChromiumDev) or ask on Stack Overflow.
+Try it and see how it works. If you have specific requirements that won't work
+with `postMessage()` or Channel Messaging API, let us know on [Twitter via
+@ChromiumDev](https://twitter.com/ChromiumDev) or ask on Stack Overflow with a
+`document.domain` tag.
 
 ### Send `Origin-Agent-Cluster: ?0` header to continue using `document.domain`
 
@@ -171,15 +183,6 @@ Origin-Agent-Cluster header](https://web.dev/origin-agent-cluster/).
 By sending this header, the document can continue setting `document.domain` even
 after it becomes immutable by default.
 
-## Timeline
-
-Chrome will eventually make `document.domain` immutable. Here's the current
-timeline:
-
-* **Chrome 98:** When using `document.domain`, DevTools Console displays a warning message. `Origin-Agent-Cluster` header is available.
-* **Chrome 99:** Enterprise policy is in place to extend behavior.
-* **Chrome 101:** `document.domain` is immutable.
-
 ## Browser compatibility
 
 * [The Origin
@@ -193,9 +196,8 @@ timeline:
 
 * [Document.domain - Web APIs |
   MDN](https://developer.mozilla.org/docs/Web/API/Document/domain)
-* [mikewest/deprecating-document-domain: `document.domain` intentionally weakens
-  the only security boundary we have. Perhaps we can dump
-  it?](https://github.com/mikewest/deprecating-document-domain/)
+* [Origin Isolation and Deprecating
+  `document.domain`](https://github.com/mikewest/deprecating-document-domain/)
 * [Deprecating `document.domain`. · Issue #564 ·
   w3ctag/design-reviews](https://github.com/w3ctag/design-reviews/issues/564)
 
