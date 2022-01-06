@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: "`document.domain` is becoming immutable"
+title: "Chrome 101 disables modifying `document.domain` to relax the same-origin policy"
 description: >
   Websites will be unable to set `document.domain` on Chrome starting in version 101. If your website relies on setting `document.domain`, your action is required.
 subhead: >
@@ -39,8 +39,10 @@ has no effect if only one document sets it).
 
 Here's the current timeline:
 
-* **Chrome 98:** When using `document.domain`, DevTools Console displays a warning message. `Origin-Agent-Cluster` header is available.
-* **Chrome 99:** Enterprise policy is in place to extend behavior.
+* **Chrome 98:** When using `document.domain`, DevTools Console displays a
+  warning message. `Origin-Agent-Cluster` header is available.
+* **Chrome 99:** Enterprise policy is offered to extend availability of
+  `document.domain`.
 * **Chrome 101:** `document.domain` is immutable.
 
 ## Why make `document.domain` immutable?
@@ -63,24 +65,30 @@ Let's say a page on `https://parent.example.com` embeds an iframe page from
 with different subdomains. When both pages' `document.domain` is set to
 `'example.com'`, the browser treats the two origins as if they are same-origin.
 
-On `https://parent.example.com`:
+Set the `document.domain` for `https://parent.example.com`:
 
 ```js
-console.log(document.domain); // "parent.example.com"
+// confirm the current origin of "parent.example.com"
+console.log(document.domain);
+
+// set the document.domain
 document.domain = 'example.com';
-console.log(document.domain); // "example.com"
+console.log(document.domain);
 ```
 
-On `https://video.example.com`:
+Set the `document.domain` for `https://video.example.com`:
 
 ```js
-console.log(document.domain); // "video.example.com"
+// confirm the current origin of "video.example.com"
+console.log(document.domain);
+
+// set the document.domain
 document.domain = 'example.com';
-console.log(document.domain); // "example.com"
+console.log(document.domain);
 ```
 
-On `https://parent.example.com`, do a cross origin DOM manipulation against
-`https://video.example.com`.
+You can now set a cross-origin DOM manipulation on `https://parent.example.com`
+against `https://video.example.com`.
 
 Websites set `document.domain` to make it possible for same-site documents to
 communicate more easily. Because this change [relaxes the same-origin
@@ -173,19 +181,19 @@ tag](https://stackoverflow.com/questions/tagged/document.domain).
 
 ### Send `Origin-Agent-Cluster: ?0` header to continue using `document.domain`
 
-If you have strong reasons to continue setting `document.domain`, you can send `Origin-Agent-Cluster: ?0` response header along with the target
-document.
+If you have strong reasons to continue setting `document.domain`, you can send
+`Origin-Agent-Cluster: ?0` response header along with the target document.
 
 ```http
 Origin-Agent-Cluster: ?0
 ```
 
-`Origin-Agent-Cluster` header instructs the browser whether the document should
-be handled by the origin-keyed agent cluster or not. To learn more about Origin
-Agent Cluster, read [Requesting performance isolation with the
-Origin-Agent-Cluster header](https://web.dev/origin-agent-cluster/).
+The `Origin-Agent-Cluster` header instructs the browser whether the document
+should be handled by the origin-keyed agent cluster or not. To learn more about
+`Origin-Agent-Cluster`, read [Requesting performance isolation with the
+`Origin-Agent-Cluster` header](https://web.dev/origin-agent-cluster/).
 
-By sending this header, the document can continue setting `document.domain` even
+When you send this header, the document can continue to set `document.domain` even
 after it becomes immutable by default.
 
 ## Browser compatibility
