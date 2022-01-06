@@ -63,8 +63,7 @@ requests to servers on private networks.
 
 Chrome has already implemented part of the specification: as of Chrome 96, only
 secure contexts are allowed to make private network requests. Refer to our
-[previous blog post](https://developer.chrome.com/blog/private-network-access-update/)
-for details.
+[previous blog post](/blog/private-network-access-update/) for details.
 
 The specification also extends the Cross-Origin Resource Sharing (CORS)
 protocol so that websites now have to explicitly request a grant from servers
