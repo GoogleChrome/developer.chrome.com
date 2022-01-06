@@ -10,7 +10,8 @@ description: "Record, replay and measure user flows with the Recorder panel."
 
 Take a glance at the new **Recorder** panel (preview feature) with the video below. 
 
-{% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %}
+{% YouTube id='rMUayh1QPYs' %}
+<!-- {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/jDJpU85zWj1dipsUPrMr.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %} -->
 
 Use the **Recorder** panel to record, replay and measure user flows.
 
