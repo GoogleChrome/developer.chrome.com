@@ -24,7 +24,7 @@ Take the following steps to get the access keys needed:
 1. In the **search bar** type “Chrome Web Store API”.
 1. Enable the **Chrome Web Store API**.
 
-**Customize a consent screen**.
+### Configure the OAuth consent screen  {: #oauth-setup }
 
 1. Go to **OAuth consent screen**.
 1. Select **External** then **Create**.
