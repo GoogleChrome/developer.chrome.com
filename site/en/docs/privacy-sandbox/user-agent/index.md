@@ -29,7 +29,12 @@ all resource requests will have a reduced `User-Agent` header. As a result,
 the returns from certain `Navigator` interfaces will be reduced, including:
 `navigator.userAgent`, `navigator.appVersion`, and `navigator.platform`.
 
-Web developers should [prepare for the reduced User-Agent string](#) by reviewing their site code for instances and uses of the User-Agent string. If your site relies on parsing the User-Agent string to read the device model, platform version, or full browser version, you’ll need to [implement the User-Agent Client Hints API](https://web.dev/migrate-to-ua-ch/).
+Web developers should [prepare for the reduced User-Agent
+string](#prepare-and-test) by reviewing their site code for instances and uses
+of the User-Agent string. If your site relies on parsing the User-Agent string
+to read the device model, platform version, or full browser version, you'll
+need to [implement the User-Agent Client Hints
+API](https://web.dev/migrate-to-ua-ch/).
 
 [Review the latest timeline](https://www.chromium.org/updates/ua-reduction) for
 User-Agent reduction.
@@ -111,7 +116,7 @@ If you need a specific set of Client Hints on your initial request, refer to
 [Client Hints Reliability](https://github.com/WICG/client-hints-infrastructure/blob/main/reliability.md)
 to ensure Client Hints are available on site load and optimized.
 
-## How do I prepare for reduced UA?
+## How do I prepare for reduced UA? {: #prepare-and-test}
 
 As we get closer to the reduced User-Agent string launch, [review your site
 code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
@@ -124,7 +129,7 @@ Once you’ve updated to the UA-CH API, you should test to ensure you get the
 data you expect from the User-Agent. There are three ways to test, each
 increasing in complexity.
 
-### Test the string locally
+### Test the string locally {: #test-locally}
 
 There are a couple of methods to test the reduced User-Agent locally:
 
