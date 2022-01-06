@@ -28,4 +28,17 @@ security problem. It exposes session keys to Javascript, which means that
 entities with access to the negotiation exchange, or with the ability to subvert
 the Javascript, can decrypt the media sent over the connection.
 
+## Deprecate PaymentRequest.show() without user activation
+
+[Starting in Chrome 98](https://chromestatus.com/feature/5948593429020672), if a
+website calls PaymentRequest.show() without a user activation, a console warning
+will be issued. Starting in Chrome 99, such calls will not work. Allowing
+PaymentRequest.show() to be triggered without a user activation could be abused
+by malicious websites. To protect users, the spec was changed to require user
+activation. To avoid a broken purchase experience, calls to this method should
+now be inside a user event such as click.
+
+Firefox has not shipped PaymentRequest at all, while Safari's implementation
+already requires user activation for calling show().
+
 {% include 'partials/deprecations-policy.md' %}
