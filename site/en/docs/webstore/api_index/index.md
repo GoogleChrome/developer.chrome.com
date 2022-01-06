@@ -197,7 +197,7 @@ For UserLicenses Resource details, see the [resource representation][api-userlic
 
 ### Payments {: #payments }
 
-For Payments Resource details, see the [resource representation][18] page.
+For Payments Resource details, see the [resource representation][api-payments-resource] page.
 
 <table>
   <thead>
@@ -237,9 +237,9 @@ For Payments Resource details, see the [resource representation][18] page.
 [api-payments-resource]: /docs/webstore/webstore_api/payments/#resource
 [api-userlicenses-get]: /docs/webstore/webstore_api/userLicenses/getUserLicense/
 [api-userlicenses-resource]: /docs/webstore/webstore_api/userLicenses/#resource
-[header-in-app-products]: #InAppProducts
-[header-items]: #Items
-[header-licenses]: #Licenses
-[header-payments]: #Payments
-[header-user-licenses]: #userLicenses
+[header-in-app-products]: #in-app-products
+[header-items]: #items
+[header-licenses]: #licenses
+[header-payments]: #payments
+[header-user-licenses]: #user-licenses
 [publish-api]: /docs/webstore/using_webstore_api
