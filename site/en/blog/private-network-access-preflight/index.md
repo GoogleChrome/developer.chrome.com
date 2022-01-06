@@ -134,9 +134,10 @@ is because all private network requests can be used for CSRF attacks,
 regardless of request mode and whether or not the response contents are made
 available to the initiator.
 
-Note that if the private network request is made in `cors` mode, then CORS
-headers need to be set on the final response, in addition to the preflight
-response.
+{% Aside %}
+If the private network request is made in `cors` mode, then CORS headers must
+be set on the final response, in addition to the preflight response.
+{% endAside %}
 
 Preflight requests for PNA are also sent for same-origin requests, if the
 target IP address is more private than the initiator. This is unlike regular
@@ -244,7 +245,9 @@ issues panel.
 
 {% Img
    src="image/VbsHyyQopiec0718rMq2kTE1hke2/AgZzPf3NkMWQ0Cm6Puu0.png",
-   alt="A failed preflight request warning in the Devtools Issues panel",
+   alt="A failed preflight request warning in the Devtools Issues panel. This states:
+   ensure private network requests are only made to resources that allow them,
+   along with details about the specific request and listed affected resources.",
    class="screenshot",
    width="800", height="556"
 %}
@@ -253,13 +256,14 @@ Affected preflight requests can also be viewed and diagnosed in the network pane
 
 {% Img
    src="image/VbsHyyQopiec0718rMq2kTE1hke2/aysOX5wKA1kme8HyV3t0.png",
-   alt="A failed preflight request in the DevTools Network panel",
+   alt="A failed preflight request in the DevTools Network panel for localhost
+   gives a 501 status.",
    class="screenshot",
    width="800", height="265"
 %}
 
-To see what happens if preflight success was enforced, you can
-[pass the following command-line argument](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
+To review what happens if preflight success was enforced, you can
+[pass the following command-line argument](https://www.chromium.org/developers/how-tos/run-chromium-with-flags),
 starting in Chrome 98:
 
 ```text
@@ -289,20 +293,22 @@ requests. First, implement support for standard CORS preflight requests on
 affected routes. Then add support for the [two new response headers](#new-in-pna).
 
 When your server receives a preflight request (an `OPTIONS` request with CORS
-headers), it should check for the presence of an
+headers), the server should check for the presence of an
 `Access-Control-Request-Private-Network: true` header. If this header is
 present on the request, the server should examine the `Origin` header and the
-request path, and any other relevant information (such as
-`Access-Control-Request-Headers`) to make sure the request is safe to allow.
-Typically, you will want to allow access to a single origin under your control.
-Beware of insecure (non-https) origins, as they are unauthenticated: an on-path
-attacker could masquerade as any such origin!
+request path along with any other relevant information (such as
+`Access-Control-Request-Headers`) to ensure the request is safe to allow.
+Typically, you should allow access to a single origin under your control.
 
-Once your server has decided to allow the request, it should respond 204 No
-Content (or 200 OK) with the necessary CORS headers and the new PNA header.
-That includes `Access-Control-Allow-Origin` and
-`Access-Control-Allow-Private-Network: true`, as well as others as needed
-depending on the exact request headers.
+{% Aside 'warning' %}
+Beware of insecure (non-https) origins, as they are unauthenticated. An on-path
+attacker could masquerade as any such origin!
+{% endAside %}
+
+Once your server has decided to allow the request, it should respond
+`204 No Content` (or `200 OK`) with the necessary CORS headers and the new PNA
+header. These headers include `Access-Control-Allow-Origin` and
+`Access-Control-Allow-Private-Network: true`, as well as others as needed.
 
 Refer to the [examples](#examples) for concrete scenarios.
 
@@ -311,8 +317,8 @@ Refer to the [examples](#examples) for concrete scenarios.
 If you have administrative control over your users, you can disable Private
 Network Access checks using either of the following policies:
 
-* [InsecurePrivateNetworkRequestsAllowed](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowed)
-* [InsecurePrivateNetworkRequestsAllowedForUrls](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowedForUrls)
+* [`InsecurePrivateNetworkRequestsAllowed`](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowed)
+* [`InsecurePrivateNetworkRequestsAllowedForUrls`](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowedForUrls)
 
 For more information, refer to [Understand Chrome policy
 management](https://support.google.com/chrome/a/answer/9037717).
@@ -322,17 +328,16 @@ management](https://support.google.com/chrome/a/answer/9037717).
 Next up, Chrome will extend Private Network Access checks to cover
 [web workers](https://developer.mozilla.org/docs/Web/API/Web_Workers_API):
 dedicated workers, shared workers and service workers. We're tentatively aiming
-for Chrome 100 to start showing warnings.
+for Chrome 100 to begin showing warnings.
 
 Then, Chrome will extend Private Network Access checks to cover navigations,
 including iframes and popups. We're tentatively aiming for Chrome 102 to start
 showing warnings.
 
-In both cases, we will be proceeding cautiously with a similar two-step rollout
-process, in order to give web developers time to adjust and gather data to
-estimate compatibility risk.
+In both cases, we will be proceeding cautiously with a similar phased rollout,
+in order to give web developers time to adjust and estimate compatibility risk.
 
 ## Acknowledgements
 
-_Cover photo by [Mark Olsen](https://unsplash.com/@markolsen) on
-[Unsplash](https://unsplash.com/photos/K5j1KgecVC8)._
+Cover photo by [Mark Olsen](https://unsplash.com/@markolsen) on
+[Unsplash](https://unsplash.com/photos/K5j1KgecVC8).
