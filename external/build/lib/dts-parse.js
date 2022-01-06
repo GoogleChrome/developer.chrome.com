@@ -348,7 +348,8 @@ class Transform {
     }
 
     if (node.type?.type === 'reference') {
-      // Only upgrade node is not a workbox type
+      // Only upgrade node if not a workbox type
+      // The upgrade Event node should only be applied to Chrome specific events
       if (
         this.mode !== 'workbox' &&
         chromeEventRefTypes.includes(node.type.name)
