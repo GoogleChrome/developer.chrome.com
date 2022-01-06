@@ -122,11 +122,15 @@ At this time, you have two options to replace `document.domain` for your website
 
 ### Use `postMessage()` or Channel Messaging API
 
-In most use cases, cross-origin
-[`postMessage()`
+In most use cases, cross-origin [`postMessage()`
 ](https://developer.mozilla.org/docs/Web/API/Window/postMessage) or [Channel
-Messaging
-API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API) can replace `document.domain`.
+Messaging API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API)
+can replace `document.domain`. In the following example:
+1. `https://parent.example.com` requests `https://video.example.com` within an
+   iframe to manipulate DOM by sending a message via `postMessage()`.
+2. `https://video.example.com` manipulates DOM as soon as it receives the
+   message and notify the success back to the parent.
+3. `https://parent.example.com` acknowledges the success.
 
 On `https://parent.example.com`:
 
@@ -163,8 +167,9 @@ window.addEventListener('message', (event) => {
 
 Try it and see how it works. If you have specific requirements that won't work
 with `postMessage()` or Channel Messaging API, let us know on [Twitter via
-@ChromiumDev](https://twitter.com/ChromiumDev) or ask on Stack Overflow with a
-`document.domain` tag.
+@ChromiumDev](https://twitter.com/ChromiumDev) or ask on Stack Overflow with [a
+`document.domain`
+tag](https://stackoverflow.com/questions/tagged/document.domain).
 
 ### Send `Origin-Agent-Cluster: ?0` header to continue using `document.domain`
 
