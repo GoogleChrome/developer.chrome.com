@@ -25,4 +25,13 @@ module.exports = {
   noindex: true,
   // This is the default hero image for all Workbox pages.
   hero: 'image/QMjXarRXcMarxQddwrEdPvHVM242/ZUBXF0hK0jo9q4RvELUs.png',
+  banner: {
+    text: 'Welcome to the future of Workbox docs!',
+    actions: [
+      {
+        text: 'Need to see older docs?',
+        href: 'https://developers.google.com/web/tools/workbox',
+      },
+    ],
+  },
 };
