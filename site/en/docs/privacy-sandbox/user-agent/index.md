@@ -118,7 +118,8 @@ to ensure Client Hints are available on site load and optimized.
 
 ## How do I prepare for reduced UA? {: #prepare-and-test}
 
-As we get closer to the reduced User-Agent string launch, [review your site
+As we get closer to the rollout of the reduced User-Agent string in Chrome
+Stable, [review your site
 code](https://web.dev/migrate-to-ua-ch/#audit-collection-and-use-of-user-agent-data)
 for instances and uses of the User-Agent string. If your site relies on parsing
 the User-Agent string to read the device model, platform version, or full
@@ -136,14 +137,16 @@ There are a couple of methods to test the reduced User-Agent locally:
 * Enable the `chrome://flags/#reduce-user-agent` flag.
     * This will set your local browser to receive just the reduced `user-agent`
       string for all sites, before it becomes the default setting.
-* Configure an emulated device in DevTools with the right user-agent string
+* Configure an emulated device in DevTools with the right `user-agent` string
   and client hints.
     * In DevTools under ⚙️ Settings → Devices → Add custom device...
       you can configure an emulated device with any combination of
-      `user-agent` string and user-agent client hints values you need. 
+      `user-agent` string and User-Agent Client Hints values you need. 
     * Use the 📱 Toggle device toolbar button to select an emulated device.
 * Launch Chrome with the `--user-agent="Custom string here"`.
-    * Use the command line flag to start Chrome with a custom user-agent string.
+    * Use this [command line
+      flag](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
+      to run Chrome with a custom user-agent string.
 
 ### Transform the string in your site’s code
 
