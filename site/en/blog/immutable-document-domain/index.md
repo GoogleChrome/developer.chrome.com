@@ -2,9 +2,9 @@
 layout: 'layouts/blog-post.njk'
 title: "Chrome 101 disables modifying `document.domain` to relax the same-origin policy"
 description: >
-  Websites will be unable to set `document.domain` on Chrome starting in version 101. If your website relies on setting `document.domain`, your action is required.
+  If your website relies on setting `document.domain`, your action is required.
 subhead: >
-  Beginning with Chrome version 101, websites will be unable to set `document.domain`.
+  If your website relies on setting `document.domain`, your action is required.
 date: 2022-01-06
 authors:
   - agektmr
@@ -29,11 +29,12 @@ was designed to get or set the origin's hostname.
 
 Beginning with Chrome version 101, websites will be unable to set
 `document.domain`. Websites will need to use alternative approaches such as
-`postMessage()` or Channel Messaging API to communicate cross-origin. If a
-website relies on same-origin policy relaxation via `document.domain` to
-function correctly, the site will need to send an `Origin-Agent-Cluster: ?0` header
-along with all documents that require that behavior (note that `document.domain`
-has no effect if only one document sets it).
+`postMessage()` or Channel Messaging API to communicate cross-origin.
+
+If your website relies on same-origin policy relaxation via `document.domain`
+to function correctly, the site will need to send an `Origin-Agent-Cluster: ?0`
+header, as will all other documents that require that behavior (note that
+`document.domain` has no effect if only one document sets it).
 
 ## Timeline
 
@@ -52,9 +53,9 @@ but cross-origin](https://web.dev/same-site-same-origin/) pages.
 
 {% Aside 'key-term' %}
 
-Sites which have the same
+Same-site but cross-origin sites have the same
 [eTLD+1](https://web.dev/same-site-same-origin/#:~:text=the%20whole%20site%20name%20is%20known%20as%20the%20etld%2B1)
-but different subdomains are considered "same-site but cross-origin".
+but different subdomains.
 
 {% endAside %}
 
@@ -68,10 +69,10 @@ with different subdomains. When both pages' `document.domain` is set to
 Set the `document.domain` for `https://parent.example.com`:
 
 ```js
-// confirm the current origin of "parent.example.com"
+// Confirm the current origin of "parent.example.com"
 console.log(document.domain);
 
-// set the document.domain
+// Set the document.domain
 document.domain = 'example.com';
 console.log(document.domain);
 ```
@@ -79,25 +80,24 @@ console.log(document.domain);
 Set the `document.domain` for `https://video.example.com`:
 
 ```js
-// confirm the current origin of "video.example.com"
+// Confirm the current origin of "video.example.com"
 console.log(document.domain);
 
-// set the document.domain
+// Set the document.domain
 document.domain = 'example.com';
 console.log(document.domain);
 ```
 
-You can now set a cross-origin DOM manipulation on `https://parent.example.com`
-against `https://video.example.com`.
+You could now create a cross-origin DOM manipulation on
+`https://parent.example.com` against `https://video.example.com`.
 
 Websites set `document.domain` to make it possible for same-site documents to
 communicate more easily. Because this change [relaxes the same-origin
 policy](https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction),
-the parent page will be able to access the iframe's document and traverse the
+the parent page is able to access the iframe's document and traverse the
 DOM tree, and vice versa.
 
-This is a convenient technique, however it introduces a
-security risk.
+This is a convenient technique, however it introduces a security risk.
 
 ### Security concerns with `document.domain`
 
@@ -111,18 +111,18 @@ the same direction.
 For example, if a hosting service provides different subdomains per user, an
 attacker can set `document.domain` to pretend they are the same-origin
 as another user's page. Further, an attacker can host a website under a shared
-hosting service, which serves sites through the same IP address with different port
-numbers. In that case, the attacker can pretend to be on the same-site-but-same-origin as
-yours. This is possible because `document.domain` ignores the port number part
-of the domain.
+hosting service, which serves sites through the same IP address with different
+port numbers. In that case, the attacker can pretend to be on the same-site-but-same-origin
+as yours. This is possible because `document.domain` ignores the port number
+part of the domain.
 
 To learn more about the security implications of setting `document.domain`, read
 ["Document.domain" page on
 MDN](https://developer.mozilla.org/docs/Web/API/Document/domain#setter).
 
-Chrome will start displaying a warning in DevTools Console as soon as
-`document.domain` is set starting from Chrome 98. Chrome is planning to  make
-`document.domain` immutable starting from Chrome 101.
+Chrome will display a warning in DevTools Console as soon as `document.domain`
+is set, beginning in Chrome 98. Chrome plans to make `document.domain`
+immutable from Chrome 101.
 
 ## Alternative cross-origin communication
 
@@ -196,8 +196,8 @@ should be handled by the origin-keyed agent cluster or not. To learn more about
 `Origin-Agent-Cluster`, read [Requesting performance isolation with the
 `Origin-Agent-Cluster` header](https://web.dev/origin-agent-cluster/).
 
-When you send this header, the document can continue to set `document.domain` even
-after it becomes immutable by default.
+When you send this header, your document can continue to set `document.domain`
+even after it becomes immutable by default.
 
 ## Browser compatibility
 
@@ -210,7 +210,7 @@ after it becomes immutable by default.
 
 ## Resources
 
-* [Document.domain - Web APIs |
+* [`Document.domain` - Web APIs |
   MDN](https://developer.mozilla.org/docs/Web/API/Document/domain)
 * [Origin Isolation and Deprecating
   `document.domain`](https://github.com/mikewest/deprecating-document-domain/)
