@@ -170,10 +170,11 @@ Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Private-Network: true
 ```
 
-Alternatively, the server may set `Access-Control-Allow-Origin: *`, though this
-is dangerous and discouraged. Private network resources should rarely be
-accessible to all origins, so think carefully about the risks involved in
-setting such a header.
+{% Aside 'warning' %}
+The server can set `Access-Control-Allow-Origin: *`, though this is dangerous
+and discouraged. Private network resources should rarely be accessible to all
+origins, so think carefully about the risks involved in setting such a header.
+{% endAside %}
 
 Then Chrome will send the actual request:
 
