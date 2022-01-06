@@ -101,9 +101,9 @@ security risk.
 
 ### Security concerns with `document.domain`
 
-Security concerns around `document.domain` have led to a change in the [specification that warns users to
-avoid
-using it](https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction).
+Security concerns around `document.domain` have led to a change in the
+[specification that warns users to avoid using
+it](https://html.spec.whatwg.org/multipage/origin.html#relaxing-the-same-origin-restriction).
 The [current discussion with other browser
 vendors](https://github.com/w3ctag/design-reviews/issues/564) is moving in
 the same direction.
@@ -130,10 +130,13 @@ At this time, you have two options to replace `document.domain` for your website
 
 ### Use `postMessage()` or Channel Messaging API
 
-In most use cases, cross-origin [`postMessage()`
-](https://developer.mozilla.org/docs/Web/API/Window/postMessage) or [Channel
-Messaging API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API)
-can replace `document.domain`. In the following example:
+In most use cases, cross-origin 
+[`postMessage()`](https://developer.mozilla.org/docs/Web/API/Window/postMessage)
+or [Channel Messaging API](https://developer.mozilla.org/docs/Web/API/Channel_Messaging_API)
+can replace `document.domain`.
+
+In the following example:
+
 1. `https://parent.example.com` requests `https://video.example.com` within an
    iframe to manipulate DOM by sending a message via `postMessage()`.
 2. `https://video.example.com` manipulates DOM as soon as it receives the
@@ -213,5 +216,7 @@ after it becomes immutable by default.
   `document.domain`](https://github.com/mikewest/deprecating-document-domain/)
 * [Deprecating `document.domain`. · Issue #564 ·
   w3ctag/design-reviews](https://github.com/w3ctag/design-reviews/issues/564)
+
+## Acknowledgements
 
 Photo by <a href="https://unsplash.com/@braydona">Braydon Anderson</a> on <a href="https://unsplash.com/">Unsplash</a>
