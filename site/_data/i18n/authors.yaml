@@ -344,3 +344,13 @@ alexandrawhite:
     en: 'Alexandra White'
   description:
     en: 'Technical Writer, Google Chrome'
+drott:
+  title:
+    en: 'Dominik Röttsches'
+  description:
+    en: 'Software Engineer, Google Chrome'
+rsheeter:
+  title:
+    en: 'Rod Sheeter'
+  description:
+    en: 'Tech Lead, Google Fonts'

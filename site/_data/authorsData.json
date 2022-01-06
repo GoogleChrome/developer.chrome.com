@@ -54,6 +54,12 @@
     "glitch": "dotproto",
     "image": "image/WlD8wC6g8khYWPJUsQceQkhXSlv1/ET2qKakhhrDt1sqjazmy.jpg"
   },
+  "drott": {
+    "country": "FI",
+    "github": "drott",
+    "twitter": "abrax5",
+    "image": "image/admin/xb7jK8lMyvbHQrBJzlxv.jpg"
+  },
   "marshallvale": {
     "country": "US",
     "twitter": "marshallvale",
@@ -279,6 +285,11 @@
   "rebeccasoares": {
     "country": "US",
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/WWbi21K4D5om3zTba8hR.jpg"
+  },
+  "rsheeter": {
+    "country": "CA",
+    "github": "rsheeter",
+    "image": "image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/PRHDWY5YSOQehUCcvnWB.png"
   },
   "ackermanb": {
     "country": "US",
