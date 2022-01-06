@@ -317,7 +317,7 @@ management](https://support.google.com/chrome/a/answer/9037717).
 ## What's next
 
 Next up, Chrome will extend Private Network Access checks to cover
-[web workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API):
+[web workers](https://developer.mozilla.org/docs/Web/API/Web_Workers_API):
 dedicated workers, shared workers and service workers. We're tentatively aiming
 for Chrome 100 to start showing warnings.
 
