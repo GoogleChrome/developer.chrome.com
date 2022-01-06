@@ -3,7 +3,7 @@ title: Progress in the Privacy Sandbox (December 2021)
 description: >
   Looking back at stats from 2021 and some resolutions for tackling user-agent and cookies in 2022.
 layout: 'layouts/blog-post.njk'
-date: 2021-12-30
+date: 2022-01-07
 authors:
   - rowan_m
 hero: 'image/VWw0b3pM7jdugTkwI6Y81n6f5Yc2/Ut0IykTaEFBuOA5EHqbg.png'
@@ -14,14 +14,14 @@ tags:
   - privacy
 ---
 
-Welcome to the end-of-year edition of **[Progress in the Privacy
+Welcome to the 2021 wrap-up edition of **[Progress in the Privacy
 Sandbox](/tags/progress-in-the-privacy-sandbox/)** tracking the milestones on
 the path to phasing out third-party cookies in Chrome and working towards a more
 private web. Normally, we share an overview of updates to the **[Privacy Sandbox
 timeline](https://privacysandbox.com/timeline/)** along with news from across
-the project, but December has been a quiet month. Instead, we'll look back at
-some of the activities over 2021 and provide a few potential resolutions you can
-make for the new year.
+the project, but December was a quiet month. Instead, we'll look back at some of
+the activities over 2021 and provide a few potential resolutions you can make
+now we are in the new year.
 
 ## Chromium development process
 
