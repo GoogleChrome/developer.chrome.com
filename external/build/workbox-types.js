@@ -5,6 +5,7 @@
 const dtsParse = require('./lib/dts-parse.js');
 const tmp = require('tmp');
 const fs = require('fs');
+const mvdir = require('mvdir');
 const path = require('path');
 const childProcess = require('child_process');
 
@@ -55,22 +56,21 @@ async function run() {
   try {
     await fetchAndPrepare(workboxPackages, t.name);
 
-    const sources = workboxPackages.map(packageName => {
-      const packageJsonPath = path.join(
-        t.name,
-        'node_modules',
-        packageName,
-        'package.json'
-      );
+    const sources = [];
+    for (const packageName of workboxPackages) {
+      const packagePath = path.join(t.name, 'node_modules', packageName);
+      const packageJsonPath = path.join(packagePath, 'package.json');
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+      const typesPathParsed = path.parse(packageJson.types || 'index.d.ts');
 
-      return path.join(
-        t.name,
-        'node_modules',
-        packageName,
-        packageJson.types || 'index.d.ts'
-      );
-    });
+      const isNotTopLevel = !!typesPathParsed.dir;
+      if (isNotTopLevel) {
+        const typesOutputPath = path.join(packagePath, typesPathParsed.dir);
+        await mvdir(typesOutputPath, packagePath, {overwrite: true});
+      }
+
+      sources.push(path.join(packagePath, 'index.d.ts'));
+    }
 
     const defs = await dtsParse({sources, mode: 'workbox'});
     const outputFile = path.join(__dirname, '../data/workbox-types.json');
