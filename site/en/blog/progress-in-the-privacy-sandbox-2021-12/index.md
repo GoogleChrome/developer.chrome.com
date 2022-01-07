@@ -101,11 +101,11 @@ raise an Issue** so we can update and clarify the explainer.
 
 ### User-agent spring cleaning
 
-As we count _down_ to the New Year, we're also counting _up_ to both [Chrome
-100](/blog/force-major-version-to-100/) and the incremental [reduction of the
-user-agent string](/docs/privacy-sandbox/user-agent/). This is a good motivator
-to revisit any usage of the user-agent string in your code to check if it's
-affected by either of these changes.
+As we were counting _down_ to the New Year, we're also counting _up_ to both
+[Chrome 100](/blog/force-major-version-to-100/) and the incremental [reduction
+of the user-agent string](/docs/privacy-sandbox/user-agent/). This is a good
+motivator to revisit any usage of the user-agent string in your code to check if
+it's affected by either of these changes.
 
 To find those areas:
 
