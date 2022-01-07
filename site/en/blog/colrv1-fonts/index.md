@@ -297,5 +297,5 @@ To learn how COLRv1 works and how it's implemented in Chrome, check out Dominik'
 
 Many thanks to Behdad Esfahbod, Cosimo Lupo, Peter Constable, Ben Wagner, Werner
 Lemberg, Dave Crossland, Vladimir Levantovsky, Jonathan Kew, Laurence Penney,
-Chris Lilley, David Jonathan Ross, Underware, Just van Rossum, Roel Niskens, and
+Chris Lilley, David Jonathan Ross, Underware, Just van Rossum, Roel Nieskens, and
 others for their contributions to COLRv1.
