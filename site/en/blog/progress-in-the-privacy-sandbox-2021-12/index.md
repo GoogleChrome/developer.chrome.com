@@ -33,7 +33,7 @@ Privacy Sandbox team produced:
 <figure>
   <table style="font-size: 140%; font-weight: bold; font-variant-numeric: tabular-nums;">
   <tr><td>🥚</td><td>Intent to Prototype </td>     <td>19</td></tr>
-  <tr><td>🧪</td><td>Intent to Experiment</td><td>&nbsp;8</td></tr>
+  <tr><td>🧪</td><td>Intent to Experiment</td><td>&nbsp;7</td></tr>
   <tr><td>🚀</td><td>Intent to Ship      </td>     <td>11</td></tr>
   </table>
   <figcaption>
