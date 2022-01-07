@@ -225,7 +225,7 @@ Access-Control-Allow-Private-Network: true
 Then Chrome will send the actual request:
 
 ```text
-HTTP/1.1 PUT /give-me-root
+HTTP/1.1 PUT /delete-everything
 Origin: https://foo.example
 ```
 
@@ -267,7 +267,7 @@ To review what happens if preflight success was enforced, you can
 starting in Chrome 98:
 
 ```text
---enable-features=PrivateNetworkAccessRespectPreflightResutls
+--enable-features=PrivateNetworkAccessRespectPreflightResults
 ```
 
 Any failed preflight request will result in a failed fetch. This can allow you
