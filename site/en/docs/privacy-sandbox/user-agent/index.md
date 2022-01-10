@@ -26,8 +26,9 @@ fingerprinting](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/#unsanctio
 As these [changes are rolled
 out](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html), 
 all resource requests will have a reduced `User-Agent` header. As a result,
-the returns from certain `Navigator` interfaces will be reduced, including:
-`navigator.userAgent`, `navigator.appVersion`, and `navigator.platform`.
+the return values from certain `Navigator` interfaces will be reduced,
+including: `navigator.userAgent`, `navigator.appVersion`, and
+`navigator.platform`.
 
 Web developers should [prepare for the reduced User-Agent
 string](#prepare-and-test) by reviewing their site code for instances and uses
@@ -69,9 +70,9 @@ problematic because:
 We improve user privacy by only sharing basic information.
 
 The reduced User-Agent includes the browser's brand and a significant version,
-desktop or mobile, and the platform. To access more data, User-Agent Client
-Hints allow you to request specific information about the user's device or
-conditions in a way that can be audited. 
+where the request came from (desktop or mobile), and the platform. To access
+more data, User-Agent Client Hints allow you to request specific information
+about the user's device or conditions in a way that can be audited. 
 
 Further, the `User-Agent` string has grown longer and more complex, which led
 to error-prone string parsing. UA-CH provides structured and reliable data that
