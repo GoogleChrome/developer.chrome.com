@@ -1,25 +1,19 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Chrome Web Store"
+title: "Extension Hosting"
 date: 2012-09-18
 updated: 2021-12-10
 description: >
-  How to publish and update your extension in the Chrome Web Store.
+  How to host your Chrome extension.
 ---
-
-<!-- This docs has been changed to primarily explain 
-     how to publish and update to the Chrome Web Store.
-     TODO: A rewrite should explore examples and use cases of
-     each distribution options (locally unpacked, enterprise, 
-     JSON preference file, personal server for Linux users). -->
 
 Most extensions are hosted in the [Chrome Web Store][what-is-cws], an online marketplace where users
 can browse for Chrome extensions and themes.
 
 There are three exceptions to the Chrome Web Store hosting rule:
 
-1.  Extensions that are distributed through the [enterprise policy][enterprise-policy].
 1.  Unpacked extension directories from a local machine while in [developer mode][load-unpacked].
+1.  Extensions that are distributed through the [enterprise policy][enterprise-policy].
 1.  Extensions hosted on a personal server for **Linux users only**. See [Linux
     installation][linux-install].
 
