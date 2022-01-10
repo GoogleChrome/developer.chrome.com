@@ -346,7 +346,6 @@ from the Play Store.
 The Digital Goods API will be available on Chrome OS stable starting with version 89. In the
 meantime, it is possible to test the Digital Goods API:
 
- - Enable the [Chrome OS dev channel][24], 
  - Enable the following flags in Chrome by navigating to `chrome://flags` and searching for the
    flag by name: 
      - `#enable-experimental-web-platform-features`
@@ -402,7 +401,6 @@ by the Digital Goods API, and server-side components.
 [21]: https://developer.android.com/google/play/billing/security#verify
 [22]: https://developer.android.com/google/play/billing/integrate#process
 [23]: https://developer.android.com/studio/debug/dev-options
-[24]: https://support.google.com/chromebook/answer/1086915
 [25]: https://developer.android.com/google/play/billing/test
 [26]: https://github.com/PEConn/beer
 [27]: https://developers.google.com/android-publisher/libraries
