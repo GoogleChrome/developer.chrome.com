@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 'User-Agent Reduction'
+title: 'User-Agent reduction'
 subhead: >
   Limit browser data shared to remove sensitive information and reduce fingerprinting.
 description: >
