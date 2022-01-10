@@ -1,7 +1,7 @@
 ---
 title: New in Chrome 97
 description: >
-  Chrome 97 is rolling out now!  There's a new option for sending real time
+  Chrome 97 is rolling out now! There's a new option for sending real time
   messages between the client and server using Web Transport. You can use
   feature detection to see what types of scripts a browser supports.
   JavaScript gets better, and there's plenty more.
@@ -21,7 +21,7 @@ tags:
 
 Here's what you need to know:
 
-* [`WebTransport`](#webtransport) is new option for sending real time messages
+* [`WebTransport`](#webtransport) is a new option for sending real time messages
   between the client and server.
 * You can use [feature detection](#script-type-feature-detection) to see what
   types of scripts a browser supports.
@@ -29,7 +29,7 @@ Here's what you need to know:
   easier.
 * And there's plenty [more](#more).
 
-Happy New Year! I'm [Pete LePage](https://petelepage.com), let's dive in and
+Happy New Year! I'm [Pete LePage](https://petelepage.com). Let's dive in and
 see what's new for developers in Chrome 97.
 
 ## Web Transport {: #webtransport }
@@ -43,7 +43,7 @@ which is designed for peer-to-peer messaging, the Web Transport API is
 specifically designed for client-server messaging.
 
 It supports sending data, reliably with its streams APIs, and unreliably with
-its datagram APIs. It's supported in Web Workers. And because it exposes a
+its datagram APIs. It's supported in web workers. And because it exposes a
 Streams compliant interface, it supports optimizations around backpressure.
 
 To use it, you'll need a server that supports HTTP/3, which is generally
@@ -64,7 +64,7 @@ writer.write(data1);
 Check out the article [Experimenting with WebTransport][wd-webtransport] on
 web.dev for complete details.
 
-## Script `type` feature detection {: #script-type-feature-detection }
+## Script type feature detection {: #script-type-feature-detection }
 
 Today, we can use the [`nomodule` attribute][mdn-nomodule] to detect support
 for JavaScript modules in the browser. But there are several new feature
@@ -87,16 +87,16 @@ if (HTMLScriptElement.supports('importmap')) {
 
 ## New array prototypes {: #new-array-prototypes }
 
-I love it when JavaScript gets easier! `Array` and `TypedArray` now support
+I love it when JavaScript gets easier. `Array` and `TypedArray` now support
 the `findLast()` and `findLastIndex()` static methods.
 
 These functions are effectively the same as [`find()`][mdn-array-find] and
 [`findIndex()`][mdn-array-find-index], but search from the end of an array
 instead of the beginning.
 
-For example, to find the last number in an array larger than ten in an array,
+For example, to find the last number in an array that is larger than ten,
 call `findLast()` with a test function that checks if the value is greater
-than ten, and you're good to go!
+than ten, and you're good to go.
 
 ```js
 const array1 = [5, 12, 8, 130, 44, 3, 6];
@@ -118,11 +118,11 @@ In just a few months, we'll hit Chrome 100, a **three** digit version number.
 Any code that checks version numbers, or parses the UA string, should be
 checked to make sure it handles three digits.
 
-There's a flag [`#force-major-version-to-100`][cr-100-flag] that
+There's a flag called [`#force-major-version-to-100`][cr-100-flag] that
 will change the current version number to 100, so you can make sure
 everything works as expected.
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4drS8JxKXgtzSAxyM6WF.png", alt="Chrome Flags page highlighting new #force-major-version-to-100 option", width="800", height="533" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4drS8JxKXgtzSAxyM6WF.png", alt="Chrome flags page highlighting new #force-major-version-to-100 option", width="800", height="533" %}
 
 ## And more! {: #more }
 
