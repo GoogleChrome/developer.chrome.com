@@ -17,6 +17,7 @@ languages](https://github.com/GoogleChrome/developer.chrome.com//blob/main/site/
 or let us know what would be useful to add!
 
 ## Background
+
 Chrome is [reducing the information exposed in its user-agent
 string](/docs/privacy-sandbox/user-agent/). This will be happening incrementally
 over a period of time with the final state removing the OS version, device, and
