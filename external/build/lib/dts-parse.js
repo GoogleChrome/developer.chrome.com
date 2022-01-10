@@ -712,6 +712,9 @@ class Transform {
       text = text.trim(); // some show up with extra \n
 
       switch (tag) {
+        case 'default':
+          out.default = text;
+          break;
         case 'chrome-platform-apps':
           out.platformAppsOnly = true;
           break;
