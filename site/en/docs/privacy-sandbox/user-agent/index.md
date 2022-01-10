@@ -155,9 +155,9 @@ server-side code, you can transform that string to the new format to test
 compatibility. You can test by either by overriding and replacing the string,
 or generate the new version and test side-by-side.
 
-Review these
-[User-Agent reduction snippets](/docs/privacy-sandbox/user-agent/snippets/) for
-example regular expressions.
+Review these [User-Agent reduction
+snippets](/docs/privacy-sandbox/user-agent/snippets/) for example regular
+expressions.
 
 ### Test on real user traffic with an  origin trial
 
