@@ -45,7 +45,11 @@ Take the following steps to get the access keys needed:
 1. For **Application type**, choose **Desktop App**.
 1. Fill out the name, then click **Create**.
 
-The console will provide the client ID and client secret. You can retrieve an access token to work
+The console will provide the client ID and client secret. 
+
+## Testing your OAuth application {: #test-oauth }
+
+You can retrieve an access token to work
 with the API. For example, enter this URL in your browser, replacing the $CLIENT_ID with the one for
 your app:
 
