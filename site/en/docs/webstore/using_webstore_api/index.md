@@ -13,7 +13,9 @@ updating, and publishing items in the Chrome Web Store.
 
 ## Initial setup {: #setup }
 
-Take the following steps to get the access keys needed:
+Before you can begin making REST calls against the Chrome Web Store, you will need to enable the
+Chrome Web Store API, configure your OAuth consent screen, and retrieve your API access keys. The
+following sections walk through this process.
 
 ### Enable the Chrome Web Store API {: #enable-cws-api }
 
