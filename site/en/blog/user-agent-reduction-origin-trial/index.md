@@ -11,6 +11,7 @@ authors:
   - arichiv
   - abeyad
 date: 2021-09-14
+updated: 2022-01-07
 tags:
   - privacy
   - origin-trials
@@ -78,7 +79,12 @@ To receive more client information than what's shared by the reduced User-Agent,
 sites will need to migrate to the new User-Agent [Client
 Hints](https://web.dev/migrate-to-ua-ch/) API. For more details on migration
 strategies, see [Migrate to User-Agent Client
-Hints](https://web.dev/migrate-to-ua-ch/). 
+Hints](https://web.dev/migrate-to-ua-ch/).
+
+The User-Agent reduction plans do not currently include iOS and WebView, therefore
+those platforms will continue to get the full user agent string.  The primary
+reason is that these platforms have not yet implemented User-Agent
+[Client Hints](https://web.dev/migrate-to-ua-ch/).
 
 ## How does this origin trial work?
 
