@@ -216,8 +216,8 @@ look like when applied to the Kufi style of Arabic writing, which originates
 from not being written with nib and ink but carved in stone.
 
 <figure>{% Img
-src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/ZfUBAXQMogmAOsLwjcxO.png", alt="Arabic
-letters with gradients from black to red.", width="600", height="218" %}
+src="image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/6jBXnyaHip2elGTHNl0x.png", alt="Arabic
+letters with gradients from black to red.", width="600", height="220" %}
 <figcaption><a href="https://github.com/aliftype/reem-kufi">Reem Kufi Ink</a>,
 an Arabic font by Khaled Hosny</figcaption> </figure>
 
