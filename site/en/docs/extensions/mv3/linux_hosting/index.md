@@ -8,15 +8,18 @@ description: How to package, host, and update crx files from a personal server f
 
 {% include 'partials/extensions/mv2page-in-mv3.md' %}
 
-Extensions hosted outside of the [Chrome Web Store][chrome-web-store] can only be installed by Linux users. This
-article describes how to package, host, and update `.crx` files from a personal server. If
-distributing an extension or theme solely through the [Chrome Web Store][chrome-web-store], consult
-[Webstore Hosting and Updating][hosting-options].
+Linux is the only platform where Chrome users can install extensions that are hosted outside of the
+[Chrome Web Store][chrome-web-store]. This article describes how to package, host, and update `.crx`
+files from a general purpose web server. If you are distributing an extension or theme solely
+through the [Chrome Web Store][chrome-web-store], consult [Webstore Hosting and
+Updating][hosting-options].
 
 ## Packaging {: #packaging }
 
-Extensions and themes are served as `.crx` files. When uploading through the [Chrome Developer Dashboard][developer-dashboard], the dashboard creates the `.crx` file automatically. If published on a personal
-server, the `.crx` file will need to be created locally or downloaded from the Chrome Web Store.
+Extensions and themes are served as `.crx` files. When uploading through the [Chrome Developer
+Dashboard][developer-dashboard], the dashboard creates the `.crx` file automatically. If published
+on a personal server, the `.crx` file will need to be created locally or downloaded from the Chrome
+Web Store.
 
 <!-- TODO this section's ID was previouly #create which is a duplicate of another section -->
 
