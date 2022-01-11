@@ -13,12 +13,13 @@ tags:
 ---
 
 For a long time, you had to resort to custom widget libraries or hacks to show a
-date picker. The web platform now ships with `showPicker()`, a canonical way to
-show a browser picker not only for date, but also time, color, and files.
+date picker. The web platform now ships with `HTMLInputElement.showPicker()`, a
+canonical way to show a browser picker not only for dates, but also time, color,
+and files.
 
 ## Background {: #background }
 
-A [very common request] we hear from web developers is:
+A [frequent request] we hear from web developers is:
 
 <blockquote>
   <p>
@@ -30,24 +31,24 @@ A [very common request] we hear from web developers is:
   </cite>
 </blockquote>
 
-Current answers are not great: they rely on external libraries, CSS hacks, or
+Current answers are not great; they rely on external libraries, CSS hacks, or
 specific browser behaviors like simulating a user interaction with `click()`.
 
 I'm happy to share that those days will be over soon as the web platform is
 introducing a canonical way to show a browser picker for `<input>` elements with
 these types: `"date"`, `"month"`, `"week"`, `"time"`, `"datetime-local"`,
-`"color"`, and `"file"`. It is also working for `<input>` elements with
+`"color"`, and `"file"`. It will also work for `<input>` elements with
 suggestions powered by `<datalist>` or `"autocomplete"` which we'll cover as
 well in this article.
 
 <figure class="w-figure">
 {% Img src="image/vvhSqZboQoZZN9wBvoXq72wzGAf1/uh0U2YQnUMato21MzzbR.png", alt="Screenshots of browser pickers", width="800", height="217" %}
-  <figcaption class="w-figcaption">Browser date pickers in Chrome Desktop, Chrome Mobile, Safari Desktop, Safari Mobile, and Firefox Desktop (July 2021).</figcaption>
+  <figcaption class="w-figcaption">Browser date pickers in Chrome desktop, Chrome mobile, Safari desktop, Safari mobile, and Firefox desktop (July 2021).</figcaption>
 </figure>
 
 {% Aside %}
 Unlike a third-party picker widget, a browser picker is familiar to the user,
-has great specific platform support, and is always maintained as part of the
+has great platform-specific support, and is always maintained as part of the
 browser.
 {% endAside %}
 
@@ -60,7 +61,7 @@ For security reasons,it will also reject when it's called in a cross-origin
 iframe.
 
 A browser picker is shown when the `<input>` element is one of these types:
-`"date"`, `"month"`, `"week"`, `"time"`, `"datetime-local"`, `"color"`, and
+`"date"`, `"month"`, `"week"`, `"time"`, `"datetime-local"`, `"color"`, or
 `"file"`.
 
 The example below shows you how to open a browser date picker.
@@ -84,8 +85,8 @@ The example below shows you how to open a browser date picker.
 </script>
 ```
 
-A browser picker may also be shown if the `<input>` element has some suggestions
-powered by `<datalist>` or `"autocomplete"`.
+A browser picker can also be prepopulated with items from `<datalist>` or
+`"autocomplete"`.
 
 The example below shows you how to open a browser picker with `<datalist>`.
 
@@ -115,18 +116,27 @@ The example below shows you how to open a browser picker with `<datalist>`.
 </script>
 ```
 
+## Feature detection {: #feature-detection }
+
+To check if `showPicker()` is supported, use:
+
+```js
+if ('showPicker' in HTMLInputElement.prototype) {
+  // showPicker() is supported.
+}
+```
+
 ## Demo
 
-A playground demo is available at
-[https://show-picker.glitch.me/demo.html][demo] for you to play with all
-supported pickers by the browser.
+A demo is available at [https://show-picker.glitch.me/demo.html][demo] for you
+to play with all pickers supported by the browser. 
 
 {% Video src="video/vvhSqZboQoZZN9wBvoXq72wzGAf1/MMPmrnJnMvFX3eMCUWK9.mov",
 autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 ## Browser support
 
-At the time of writing, `showPicker()` is available in Chrome&nbsp;99.
+`showPicker()` is available in Chrome&nbsp;99 or later.
 
 ## What's next {: #future }
 
@@ -136,9 +146,9 @@ additional work may be needed in the future:
 - We may want to add a similar `showPicker()` to the `<select>` element in the
   future, if web developers ask for it.
 - It's possible `closePicker()` might be useful, and we could consider adding
-  that if web developers ask for it again.
+  that if web developers ask for it.
 - We could add a [permissions policy] which allows cross-origin iframes to show
-  browser pickers, when their parent chain allows them to do so.
+  browser pickers when their parent chain allows them to do so.
 
 ## Feedback {: #feedback }
 
@@ -160,7 +170,7 @@ Did you find a bug with Chrome's implementation? Or is the implementation
 different from the spec?
 
 - File a bug at <https://new.crbug.com>. Be sure to include as much detail as
-  you can, simple instructions for reproducing. [Glitch](https://glitch.com)
+  you can, and simple instructions for reproducing. [Glitch](https://glitch.com)
   works great for sharing quick and easy repros.
 
 ### Show support
@@ -186,7 +196,7 @@ Send a tweet to [@ChromiumDev] and let us know where and how you are using it.
 Thanks to [Joe Medley] for reviewing this article.
 Calendar image photo by [Eric Rothermel] on [Unsplash].
 
-[very common request]: https://www.google.com/search?q=programmatically+open+date+picker+site%3Astackoverflow.com
+[frequent request]: https://www.google.com/search?q=programmatically+open+date+picker+site%3Astackoverflow.com
 [demo]: https://show-picker.glitch.me/demo.html
 [issues]: https://github.com/whatwg/html/issues
 [permissions policy]: https://w3c.github.io/webappsec-permissions-policy/
