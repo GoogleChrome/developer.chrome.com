@@ -381,7 +381,7 @@ by the Digital Goods API, and server-side components.
 [1]: https://developer.android.com/google/play/billing
 [2]: /docs/android/trusted-web-activity/
 [3]: https://developers.google.com/web/fundamentals/payments
-[4]: https://github.com/WICG/digital-goods/blob/master/explainer.md
+[4]: https://github.com/WICG/digital-goods/blob/main/explainer.md
 [5]: https://web.dev/origin-trials/
 [6]: https://github.com/WICG/digital-goods/issues
 [7]: https://developer.android.com/distribute/best-practices/earn/in-app-purchases
