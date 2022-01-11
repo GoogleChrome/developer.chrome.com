@@ -49,13 +49,13 @@ Register an override page in the [extension manifest][3] like this:
   ...
 
   "chrome_url_overrides" : {
-    "pageToOverride": "myPage.html"
+    "PAGE_TO_OVERRIDE": "myPage.html"
   },
   ...
 }
 ```
 
-For `_pageToOverride_`, substitute one of the following:
+For `PAGE_TO_OVERRIDE`, substitute one of the following:
 
 - `bookmarks`
 - `history`

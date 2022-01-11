@@ -364,7 +364,7 @@ is determined based on the priority of each rule and the operations specified.
   matching rules.
 - Consider a navigation to `"https://abcd.com"`. The rule with id (5) matches. Since rule (5)
   specifies an extension path, the request is redirected to
-  `"chrome-extension://<extension-id>/a.jpg"`.
+  `"chrome-extension://EXTENSION_ID/a.jpg"`.
 - Consider a navigation to `"http://example.com/path"`. The rule with id (6) matches. Since rule (6)
   specifies a url transform, the request is redirected to `"https://new.example.com/path"`.
 - Consider a navigation to `"https://www.abc.xyz.com/path"`. The rule with id (7) matches. The

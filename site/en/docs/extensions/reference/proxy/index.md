@@ -86,23 +86,28 @@ The default ports are:
 Individual servers may be excluded from being proxied with the `bypassList`. This list may contain
 the following entries:
 
-`[_<scheme>_://]_<host-pattern>_[:_<port>_]`
+`[SCHEME://]HOST_PATTERN[:PORT]`
 
-: Match all hostnames that match the pattern `_<host-pattern>_`. A leading `"."` is interpreted as a
+: Match all hostnames that match the pattern `HOST_PATTERN`. A leading `"."` is interpreted as a
   `"*."`.
+
   Examples: `"foobar.com", "*foobar.com", "*.foobar.com", "*foobar.com:99", "https://x.*.y.com:99"`.
 
   <table><tbody><tr><th>Pattern</th><th>Matches</th><th>Does not match</th></tr><tr><td><code>".foobar.com"</code></td><td><code>"www.foobar.com"</code></td><td><code>"foobar.com"</code></td></tr><tr><td><code>"*.foobar.com"</code></td><td><code>"www.foobar.com"</code></td><td><code>"foobar.com"</code></td></tr><tr><td><code>"foobar.com"</code></td><td><code>"foobar.com"</code></td><td><code>"www.foobar.com"</code></td></tr><tr><td><code>"*foobar.com"</code></td><td><code>"foobar.com"</code>, <code>"www.foobar.com"</code>, <code>"foofoobar.com"</code></td><td></td></tr></tbody></table>
 
-`[_<scheme>_://]_<ip-literal>_[:_<port>_]`
+`[SCHEME://]IP_LITERAL[:PORT]`
 
-: Match URLs that are IP address literals.
-  Conceptually this is the similar to the first case, but with special cases to handle IP literal
-  canonicalization. For example, matching on "\[0:0:0::1\]" is the same as matching on "\[::1\]"
-  because the IPv6 canonicalization is done internally.
-  Examples: `"127.0.1", "[0:0::1]", "[::1]", "http://[::1]:99"`
+: Match URLs that are IP address literals. Conceptually this is the similar to the first case, but
+  with special cases to handle IP literal canonicalization. For example, matching on "\[0:0:0::1\]"
+  is the same as matching on "\[::1\]" because the IPv6 canonicalization is done internally.
 
-`_<ip-literal>_/_<prefix-length-in-bits>_`
+  Examples: `127.0.1`, `[0:0::1]`, `[::1]:80`, `https://[::1]:443`
+
+`IP_LITERAL/PREFIX_LENGTH_IN_BITS`
+
+: Match any URL containing an IP literal (<code><var>IP_LITERAL</var></code>) within the given
+  range. The IP range (<code><var>PREFIX_LENGTH_IN_BITS</var></code>) is specified using [CIDR
+  notation][external-cidr-notation].
 
 : Match any URL containing an IP literal within the given range. The IP range is specified using CIDR
   notation.
@@ -110,9 +115,10 @@ the following entries:
 
 `<local>`
 
-: Matches simple hostnames. A simple hostname is one that contains no dots and is not an IP literal.
-  For instance `example` and `localhost` are simple hostnames, whereas `example.com`, `example.`, and
-  `[::1]` are not.
+: The literal string `<local>` matches simple hostnames. A simple hostname is one that contains no
+  dots and is not an IP literal. For instance `example` and `localhost` are simple hostnames,
+  whereas `example.com`, `example.`, and `[::1]` are not.
+
   Example: `"<local>"`
 
 ## Examples
@@ -187,3 +193,4 @@ callback function of `get()`. The latter will contain a `rules.proxyForHttp.port
 [12]: #type-ProxyServer
 [13]: /docs/extensions/types#ChromeSetting
 [14]: /docs/extensions/types#ChromeSetting
+[external-cidr-notation]: https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation

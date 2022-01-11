@@ -203,11 +203,11 @@ same URL running dynamic server-side code instead of a static XML file.
 
 The format of the request parameters is:
 
-`?x=_<extension_data>_`
+`?x=EXTENSION_DATA`
 
-Where `_<extension_data>_` is a URL-encoded string of the format:
+Where `EXTENSION_DATA` is a URL-encoded string of the format:
 
-`_id=<id>_&v=_<version>_`
+`id=EXTENSION_ID&v=EXTENSION_VERSION`
 
 For example, two extensions point to the same update URL (`https://test.com/extension_updates.php`):
 
