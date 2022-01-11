@@ -4,8 +4,10 @@ description: >
   A round up of the deprecations and removals in Chrome 89 to help you plan.
 layout: 'layouts/blog-post.njk'
 date: 2021-01-28
+updated: 2021-09-23
+hero: 'image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/3IeEvhKvS7yzONnZT58y.png'
 alt: >
-  Deprecations and removals hero logo
+  Deprecations and Removals hero logo
 tags:
   - deprecations
   - removals
