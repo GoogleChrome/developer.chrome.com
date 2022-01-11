@@ -394,7 +394,7 @@ by the Digital Goods API, and server-side components.
 [14]: https://developer.android.com/google/play/billing/getting-ready#products
 [15]: /docs/android/trusted-web-activity/quick-start
 [16]: /docs/android/trusted-web-activity/quick-start#creating-your-asset-link-file
-[17]: https://developers.chrome.com/origintrials/#/view_trial/-5451607348931985407
+[17]: https://developer.chrome.com/origintrials/#/view_trial/888335026498830337
 [18]: /docs/android/trusted-web-activity/quick-start
 [19]: /docs/android/trusted-web-activity/play-billing
 [20]: https://developers.google.com/android-publisher/api-ref/rest/v3/inappproducts/list
