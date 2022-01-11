@@ -1,11 +1,11 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: "Chrome 101 disables modifying `document.domain` to relax the same-origin policy"
+title: "Chrome will disable modifying `document.domain` to relax the same-origin policy"
 description: >
   If your website relies on setting `document.domain`, your action is required.
 subhead: >
   If your website relies on setting `document.domain`, your action is required.
-date: 2022-01-06
+date: 2022-01-11
 authors:
   - agektmr
 tags:
@@ -27,9 +27,11 @@ communication](#alternative-cross-origin-communication)
 [`document.domain`](https://developer.mozilla.org/docs/Web/API/Document/domain)
 was designed to get or set the origin's hostname.
 
-Beginning with Chrome version 101, websites will be unable to set
-`document.domain`. Websites will need to use alternative approaches such as
-`postMessage()` or Channel Messaging API to communicate cross-origin.
+On Chrome, websites will be unable to set `document.domain`. They will need to
+use alternative approaches such as `postMessage()` or Channel Messaging API to
+communicate cross-origin. We are targeting Chrome 101 to ship this change the
+earliest depending on the response to the [Intent to
+Ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/_oRc19PjpFo/).
 
 If your website relies on same-origin policy relaxation via `document.domain`
 to function correctly, the site will need to send an `Origin-Agent-Cluster: ?0`
@@ -44,7 +46,10 @@ Here's the current timeline:
   warning message. `Origin-Agent-Cluster` header is available.
 * **Chrome 99:** Enterprise policy is offered to extend availability of
   `document.domain`.
-* **Chrome 101:** `document.domain` is immutable.
+* **Chrome 101:** `document.domain` is immutable. Depending on the feedback to
+  [Intent to
+  Ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/_oRc19PjpFo/),
+  this may be delayed.
 
 ## Why make `document.domain` immutable?
 
