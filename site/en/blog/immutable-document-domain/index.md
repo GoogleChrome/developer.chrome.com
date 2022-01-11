@@ -29,8 +29,8 @@ was designed to get or set the origin's hostname.
 
 On Chrome, websites will be unable to set `document.domain`. They will need to
 use alternative approaches such as `postMessage()` or Channel Messaging API to
-communicate cross-origin. We are targeting Chrome 101 to ship this change the
-earliest depending on the response to the [Intent to
+communicate cross-origin. We're targeting Chrome 101 to ship this change at the
+earliest, but this is dependent on the response to the [Intent to
 Ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/_oRc19PjpFo/).
 
 If your website relies on same-origin policy relaxation via `document.domain`
