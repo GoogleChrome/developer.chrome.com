@@ -140,7 +140,7 @@ There are a couple of methods to test the reduced User-Agent locally:
       string for all sites, before it becomes the default setting.
 * Configure an emulated device in DevTools with the right `user-agent` string
   and client hints.
-    * In DevTools under ⚙️ Settings → Devices → Add custom device...
+    * In DevTools under ⚙️ **Settings** > **Devices** > **Add custom device...**
       you can configure an emulated device with any combination of
       `user-agent` string and User-Agent Client Hints values you need. 
     * Use the 📱 Toggle device toolbar button to select an emulated device.
