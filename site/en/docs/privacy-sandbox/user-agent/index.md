@@ -143,7 +143,9 @@ There are a couple of methods to test the reduced User-Agent locally:
     * In DevTools under ⚙️ **Settings** > **Devices** > **Add custom device...**
       you can configure an emulated device with any combination of
       `user-agent` string and User-Agent Client Hints values you need. 
-    * Use the 📱 Toggle device toolbar button to select an emulated device.
+    * Click 
+      {% Img src="image/admin/9FiBHFCzfPgP8sy6LMx7.png", alt="Toggle Device Toolbar", width="30", height="32" %}
+      to open the DevTools UI to emulate a device.
 * Launch Chrome with the `--user-agent="Custom string here"`.
     * Use this [command line
       flag](https://www.chromium.org/developers/how-tos/run-chromium-with-flags)
