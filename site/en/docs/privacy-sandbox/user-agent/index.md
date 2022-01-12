@@ -141,8 +141,8 @@ There are a couple of methods to test the reduced User-Agent locally:
 * Configure an emulated device in DevTools with the right `user-agent` string
   and client hints.
     * In the top right of DevTools, click
-      {% Img src="image/admin/CBHNS0GIpZlOcDkO1D7F.png", alt="Settings", width="28", height="28" %}
-      > **Devices** > **Add custom device...** to configure an
+      {% Img src="image/admin/CBHNS0GIpZlOcDkO1D7F.png", alt="Settings", width="28", height="28" %} >
+      **Devices** > **Add custom device...** to configure an
       emulated device with any combination of `user-agent` string and
       User-Agent Client Hints values you need. 
     * In the top left of DevTools, click 
