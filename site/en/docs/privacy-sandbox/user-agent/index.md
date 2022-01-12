@@ -15,7 +15,7 @@ authors:
 
 *  [In origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 100
 *  [Register for the trial](/origintrials/#/view_trial/-7123568710593282047)
-*  [Chrome DevTools integration](blog/new-in-devtools-89/#ua-ch)
+*  [Chrome DevTools integration](/blog/new-in-devtools-89/#ua-ch)
 *  [UA-CH Chrome platform status](https://chromestatus.com/feature/5995832180473856)
 
 ## What is User-Agent reduction?
@@ -54,9 +54,9 @@ JavaScript.
 to the full set of user-agent data, but only when servers actively declare an
 explicit need for specific pieces of data.
 
-By removing passively exposed user-data, we can better measure and limit
-[how much information is intentionally exposed](https://github.com/bslassey/privacy-budget)
-(by request headers, JavaScript APIs, and other mechanisms).
+By removing passively exposed user-data, we can better measure and reduce the
+amount of information that is intentionally exposed by request headers,
+JavaScript APIs, and other mechanisms.
 
 ## Why do we need reduced UA and UA-CH?
 
