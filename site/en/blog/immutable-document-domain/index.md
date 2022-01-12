@@ -38,19 +38,6 @@ to function correctly, the site will need to send an `Origin-Agent-Cluster: ?0`
 header, as will all other documents that require that behavior (note that
 `document.domain` has no effect if only one document sets it).
 
-## Timeline
-
-Here's the current timeline:
-
-* **Chrome 98:** When using `document.domain`, DevTools Console displays a
-  warning message. `Origin-Agent-Cluster` header is available.
-* **Chrome 99:** Enterprise policy is offered to extend availability of
-  `document.domain`.
-* **Chrome 101:** `document.domain` is immutable. Depending on the feedback to
-  [Intent to
-  Ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/_oRc19PjpFo/),
-  this may be delayed.
-
 ## Why make `document.domain` immutable?
 
 Many websites set `document.domain` to allow communication between [same-site
@@ -125,9 +112,7 @@ To learn more about the security implications of setting `document.domain`, read
 ["Document.domain" page on
 MDN](https://developer.mozilla.org/docs/Web/API/Document/domain#setter).
 
-Chrome will display a warning in DevTools Console as soon as `document.domain`
-is set, beginning in Chrome 98. Chrome plans to make `document.domain`
-immutable from Chrome 101.
+Chrome plans to make `document.domain` immutable from Chrome 101.
 
 ## Alternative cross-origin communication
 
