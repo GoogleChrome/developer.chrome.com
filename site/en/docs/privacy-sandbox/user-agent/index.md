@@ -16,7 +16,7 @@ authors:
 *  [In origin trial](/blog/user-agent-reduction-origin-trial/) Chrome 95 to 100
 *  [Register for the trial](/origintrials/#/view_trial/-7123568710593282047)
 *  [Chrome DevTools integration](blog/new-in-devtools-89/#ua-ch)
-*  [Chrome Platform Status](https://chromestatus.com/feature/5995832180473856)
+*  [UA-CH Chrome platform status](https://chromestatus.com/feature/5995832180473856)
 
 ## What is User-Agent reduction?
 
@@ -67,19 +67,19 @@ problematic because:
 *  the granularity and abundance of detail can lead to user identification;
 *  and the default availability of this information can lead to covert tracking.
 
-We improve user privacy by only sharing basic information.
+We improve user privacy by only sharing basic information by default.
 
 The reduced User-Agent includes the browser's brand and a significant version,
 where the request came from (desktop or mobile), and the platform. To access
 more data, User-Agent Client Hints allow you to request specific information
-about the user's device or conditions in a way that can be audited. 
+about the user's device or conditions. 
 
 Further, the `User-Agent` string has grown longer and more complex, which led
 to error-prone string parsing. UA-CH provides structured and reliable data that
 is easier to interpret. Existing code which parses the UA string shouldn’t
 break (though it will return less data), and you’ll need to migrate to UA-CH
-if your site needs specific information for any
-[valid use cases](https://wicg.github.io/ua-client-hints/#use-cases).
+if your site [needs specific information
+information](https://wicg.github.io/ua-client-hints/#use-cases).
 
 ## How do the reduced UA and UA-CH work?
 
@@ -157,8 +157,8 @@ There are a couple of methods to test the reduced User-Agent locally:
 
 If you process the existing Chrome `user-agent` string in your client-side or
 server-side code, you can transform that string to the new format to test
-compatibility. You can test by either by overriding and replacing the string,
-or generate the new version and test side-by-side.
+compatibility. You can test by either overriding and replacing the string, or
+generating the new version and test side-by-side.
 
 Review these [User-Agent reduction
 snippets](/docs/privacy-sandbox/user-agent/snippets/) for example regular
