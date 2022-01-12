@@ -188,7 +188,10 @@
   Renders a single type with its icon and possibly an "optional" hint.
 #}
 {% macro renderSingleIconType(type, node) %}
-  {% set iconType = type.type %}
+  {% if node.getSignature[0].type %}
+      {% set type = node.getSignature[0].type %}
+  {% endif %}
+
   {% if type.type === 'intrinsic' %}
     {% set iconType = type.name %}
   {% elif type.type === 'literal' %}
@@ -199,6 +202,8 @@
     {% set iconType = 'object' %}
   {% elif type.type === 'reference' %}
     {% set iconType = 'object' %}
+  {% else %}
+    {% set iconType = type.type %}
   {% endif %}
 
   {# Note that we avoid whitespace below, and instead set margins in CSS. #}
