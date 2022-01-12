@@ -25,7 +25,7 @@ const workboxPackages = [
   'workbox-routing',
   'workbox-strategies',
   'workbox-streams',
-  // 'workbox-webpack-plugin',
+  'workbox-webpack-plugin',
   'workbox-window',
 ];
 
