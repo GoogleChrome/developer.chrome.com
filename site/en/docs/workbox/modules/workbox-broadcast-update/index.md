@@ -68,7 +68,8 @@ registerRoute(
 );
 ```
 
-In your web app, you can listen for these events like so:
+In your web app, before the [`DOMContentLoaded`](https://developer.mozilla.org/docs/Web/API/Window/DOMContentLoaded_event)
+event fires, you can listen for these events like so:
 
 ```js
 navigator.serviceWorker.addEventListener('message', async event => {
