@@ -24,6 +24,7 @@
 - title: i18n.docs.privacy-sandbox.tracking-prevention
   sections:
     - url: /docs/privacy-sandbox/user-agent
+    - url: /docs/privacy-sandbox/user-agent/snippets
 - title: i18n.docs.privacy-sandbox.relevant
   sections:
     - url: /docs/privacy-sandbox/floc

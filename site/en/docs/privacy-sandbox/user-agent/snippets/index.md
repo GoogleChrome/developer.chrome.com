@@ -17,6 +17,7 @@ languages](https://github.com/GoogleChrome/developer.chrome.com//blob/main/site/
 or let us know what would be useful to add!
 
 ## Background
+
 Chrome is [reducing the information exposed in its user-agent
 string](/docs/privacy-sandbox/user-agent/). This will be happening incrementally
 over a period of time with the final state removing the OS version, device, and
@@ -36,30 +37,17 @@ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.<span style="background:
 
 ## How to override the user-agent in your code
 
-### Local testing methods
-
-- Enable the `chrome://flags/#reduce-user-agent` flag.
-  - This will enable the new behavior and use the reduced format for the
-    user-agent string for all sites.
-- Configure an emulated device in DevTools with the right user-agent string and
-  client hints.
-  - In DevTools under ⚙️ **Settings → Devices → Add custom device…** you can
-    configure an emulated device with any combination of user-agent string and
-    user-agent client hints values you need. Use the 📱 **Toggle device
-    toolbar** button to select an emulated device.
-- Launch Chrome with the `--user-agent="Custom string here"`.
-  - Use the command line flag to start Chrome with a custom user-agent string.
+You can [test the string locally](/docs/privacy-sandbox/user-agent/#test-locally)
+with the help of regular expressions.
 
 {% Aside %}
-
-You can also [enroll your own sites in the origin
+[Enroll your sites in the origin
 trial](/blog/user-agent-reduction-origin-trial/) to
 enable Chrome browsers visiting your site to send the reduced version of the
-user-agent.
-
+`user-agent`.
 {% endAside %}
 
-As the format for the reduced user-agent string is available, this means you can
+As the format for the reduced `user-agent` string is available, this means you can
 transform and test the new string against your own code—either by overriding and
 replacing it, or by generating the new version and testing side-by-side.
 
@@ -74,7 +62,6 @@ matching against Chrome and doing with relatively cheap checks.
 
 ```text
 /^Mozilla\/5\.0 \(((?<platform>Lin|Win|Mac|X11; C|X11; L)+[^\)]+)\) AppleWebKit\/537.36 \(KHTML, like Gecko\) Chrome\/(?<major>\d+)[\d\.]+(?<mobile>[ Mobile]*) Safari\/537\.36$/
-
 ```
 
 The expression captures the following values:
