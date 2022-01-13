@@ -114,6 +114,9 @@ provided that the permissions policy allows it.
 1.  To register for the origin trial and get a token for your domains,
     visit the
     [Trial for User Agent Reduction page](/origintrials/#/view_trial/-7123568710593282047).
+    
+    1.  If you want to register your domains for the trial as a third-party embed, you
+        will need a separate token as described [below](#enroll-third-party).
 
 1.  Update your HTTP response headers:
 
@@ -131,7 +134,7 @@ provided that the permissions policy allows it.
         images or stylesheets) and subnavigations (for example, iframes) will send the
         reduced UA string, even if the origins of those requests are not
         enrolled in the origin trial.
-
+        
 1.  Load your website in Chrome M95 (or later) and start receiving the
     reduced UA string. 
 1.  Submit any issues or feedback to the UA Reduction [Github
@@ -139,7 +142,7 @@ provided that the permissions policy allows it.
 1.  See [https://uar-ot.glitch.me/](https://uar-ot.glitch.me/) for a simple
     demonstration of the origin trial (along with the source code).
 
-## How to participate in the origin trial as a third-party embed?
+## How to participate in the origin trial as a third-party embed? {: #enroll-third-party }
 
 Starting in Chrome 96, third-party embeds (for example, an iframe inside another site)
 can participate in the origin trial without requiring the top-level site to be
@@ -147,9 +150,14 @@ enrolled.
 
 To enroll as a third-party embed, follow the same steps as for a [top-level site](#enroll-top-level),
 except when [registering for an origin trial token](/origintrials/#/view_trial/-7123568710593282047),
-select the third-party token checkbox.  
+select the third-party token checkbox.  This means that if you want your site
+to be enrolled as both a top-level site and a third-party embed, you will need
+two separate tokens.
 
 Some important points about running the origin trial on third-party embeds:
++   The trial tokens must be
+    [injected via Javascript](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md#16-can-i-provide-tokens-by-running-script)
+    and cannot be supplied through the HTTP response headers.
 +   `Critical-CH` cannot be specified for third-party embeds, so the first
      navigation won't send the reduced UA string, although the subresource
      requests of the third-party embed will send the reduced UA string.
