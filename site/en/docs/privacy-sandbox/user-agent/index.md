@@ -62,10 +62,10 @@ JavaScript APIs, and other mechanisms.
 
 Currently, the User-Agent string broadcasts a large string of data about a
 user's browser, operating system, and version every HTTP request. This is
-problematic because:
+problematic for two reasons:
 
-*  the granularity and abundance of detail can lead to user identification;
-*  and the default availability of this information can lead to covert tracking.
+*  The granularity and abundance of detail can lead to user identification.
+*  The default availability of this information can lead to covert tracking.
 
 We improve user privacy by only sharing basic information by default.
 
