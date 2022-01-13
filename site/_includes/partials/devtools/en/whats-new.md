@@ -2,6 +2,22 @@
 
 A list of everything that has been covered in the [What's New In DevTools](/tags/new-in-devtools/) series.
 
+### Chrome 98 {: #chrome98 }
+* [Preview feature: Full-page accessibility tree](/blog/new-in-devtools-98/#a11y-tree)
+* [More precise changes in the Changes tab](/blog/new-in-devtools-98/#changes)
+* [Set longer timeout for user flow recording](/blog/new-in-devtools-98/#recorder-timeout)
+* [Ensure your pages are cacheable with the Back/forward cache tab](/blog/new-in-devtools-98/#bfcache)
+* [New Properties pane filter](/blog/new-in-devtools-98/#properties)
+* [Emulate the CSS forced-colors media feature](/blog/new-in-devtools-98/#forced-colors)
+* [Show rulers on hover command](/blog/new-in-devtools-98/#show-rulers)
+* [Support `row-reverse` and `column-reverse` in the Flexbox editor](/blog/new-in-devtools-98/#flexbox-editor)
+* [New keyboard shortcuts to replay XHR and expand all search results](/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 9 in the Lighthouse panel](/blog/new-in-devtools-98/#lighthouse)
+* [Improved Sources panel](/blog/new-in-devtools-98/#sources)
+* [Miscellaneous highlights](/blog/new-in-devtools-98/#misc)
+* [[Experimental] Endpoints in the Reporting API pane](/blog/new-in-devtools-98/#reporting-api)
+
+
 ### Chrome 97 {: #chrome97 }
 * [Preview feature: New Recorder panel](/blog/new-in-devtools-97/#recorder)
 * [Refresh device list in Device Mode](/blog/new-in-devtools-97/#device)
