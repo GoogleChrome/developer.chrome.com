@@ -1,7 +1,7 @@
 ---
 title: "The Chromium Chronicle #28: Getting started with Bling"
 description: >
-  Learn how Clang's static analysis framework takes over the toil of thread-safety proofs.
+  Learn how to get started with Bling, Chrome on iOS.
 layout: 'layouts/blog-post.njk'
 date: 2022-01-25
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
