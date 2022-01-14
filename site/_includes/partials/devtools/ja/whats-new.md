@@ -2,6 +2,22 @@
 
 関連する機能の完全なリストは、<a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> の英語版を参照してください。以下は、日本語に翻訳された内容の一部です。
 
+<!-- ### Chrome 98 {: #chrome98 }
+* [Preview feature: Full-page accessibility tree](/ja/blog/new-in-devtools-98/#a11y-tree)
+* [More precise changes in the Changes tab](/ja/blog/new-in-devtools-98/#changes)
+* [Set longer timeout for user flow recording](/ja/blog/new-in-devtools-98/#recorder-timeout)
+* [Ensure your pages are cacheable with the Back/forward cache tab](/ja/blog/new-in-devtools-98/#bfcache)
+* [New Properties pane filter](/ja/blog/new-in-devtools-98/#properties)
+* [Emulate the CSS forced-colors media feature](/ja/blog/new-in-devtools-98/#forced-colors)
+* [Show rulers on hover command](/ja/blog/new-in-devtools-98/#show-rulers)
+* [Support `row-reverse` and `column-reverse` in the Flexbox editor](/ja/blog/new-in-devtools-98/#flexbox-editor)
+* [New keyboard shortcuts to replay XHR and expand all search results](/ja/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 9 in the Lighthouse panel](/ja/blog/new-in-devtools-98/#lighthouse)
+* [Improved Sources panel](/ja/blog/new-in-devtools-98/#sources)
+* [Miscellaneous highlights](/ja/blog/new-in-devtools-98/#misc)
+* [[Experimental] Endpoints in the Reporting API pane](/ja/blog/new-in-devtools-98/#reporting-api) -->
+
+
 ### Chrome 97 {: #chrome97 }
 
 * [プレビュー機能: 新しい Recorder パネル](/ja/blog/new-in-devtools-97/#recorder)
