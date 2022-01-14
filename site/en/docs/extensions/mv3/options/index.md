@@ -79,6 +79,19 @@ document.getElementById('save').addEventListener('click',
     save_options);
 ```
 
+For this to work, you must add in the `manifest.json`:
+
+```json/3
+{
+  "name": "My extension",
+  ...
+  "permissions": [
+    "storage"
+  ]
+  ...
+}
+```
+
 ## Declare options page behavior {: #declare_options }
 
 There are two available types of extension options pages, [full page][2] and [embedded][3]. The type
