@@ -5,7 +5,7 @@ description: >
   The web platform now ships with a canonical way to show a browser picker.
 authors:
   - beaufortfrancois
-date: 2022-01-11
+date: 2022-01-14
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/zWT5kk3Q5RlDNqGkdgis.jpeg
 alt: A photo of a monthly schedule printed on white paper
 tags:
@@ -54,11 +54,11 @@ browser.
 
 ## How to show a picker {: #how-to }
 
-Calling `showPicker()` on an `<input>` element returns a promise that resolves
-when a browser picker is shown to the user. It must be called in response to a
-user gesture such as a touch gesture or mouse click; otherwise it will reject.
-For security reasons,it will also reject when it's called in a cross-origin
-iframe.
+Calling `showPicker()` on an `<input>` element shows a browser picker to the
+user. It must be called in response to a user gesture such as a touch gesture or
+mouse click; otherwise it will fail with a [`NotAllowedError`][error] exception.
+For security reasons, it will throw a [`SecurityError`][error] exception when
+it's called in a cross-origin iframe.
 
 A browser picker is shown when the `<input>` element is one of these types:
 `"date"`, `"month"`, `"week"`, `"time"`, `"datetime-local"`, `"color"`, or
@@ -74,9 +74,9 @@ The example below shows you how to open a browser date picker.
   const button = document.querySelector("button");
   const dateInput = document.querySelector("input");
 
-  button.addEventListener("click", async () => {
+  button.addEventListener("click", () => {
     try {
-      await dateInput.showPicker();
+      dateInput.showPicker();
       // A date picker is shown.
     } catch (error) {
       // Use external library when this fails.
@@ -105,9 +105,9 @@ The example below shows you how to open a browser picker with `<datalist>`.
   const button = document.querySelector("button");
   const iceCreamFlavorsInput = document.querySelector("input");
 
-  button.addEventListener("click", async () => {
+  button.addEventListener("click", () => {
     try {
-      await iceCreamFlavorsInput.showPicker();
+      iceCreamFlavorsInput.showPicker();
       // A picker containing some ice cream flavors is shown.
     } catch (error) {
       // Use external library when this fails.
@@ -197,6 +197,7 @@ Thanks to [Joe Medley] for reviewing this article.
 Calendar image photo by [Eric Rothermel] on [Unsplash].
 
 [frequent request]: https://www.google.com/search?q=programmatically+open+date+picker+site%3Astackoverflow.com
+[error]: https://developer.mozilla.org/en-US/docs/Web/API/DOMException
 [demo]: https://show-picker.glitch.me/demo.html
 [issues]: https://github.com/whatwg/html/issues
 [permissions policy]: https://w3c.github.io/webappsec-permissions-policy/
