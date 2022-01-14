@@ -32,7 +32,7 @@
   sections:
     - url: /docs/extensions/mv3/messaging
     - url: /docs/extensions/mv3/content_scripts
-    - url: /docs/extensions/mv3/background_pages
+    - url: /docs/extensions/mv3/service_workers
     - url: /docs/extensions/mv3/match_patterns
     - url: /docs/extensions/mv3/promises
     - url: /docs/extensions/mv3/cross-origin-isolation
