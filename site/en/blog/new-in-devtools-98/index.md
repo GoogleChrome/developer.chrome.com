@@ -17,6 +17,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
+<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/G9SHKEY2944USYg0uks6.jpg -->
 
 ## Preview feature: Full-page accessibility tree {: #a11y-tree }
 

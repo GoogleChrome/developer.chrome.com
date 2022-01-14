@@ -2,6 +2,22 @@
 
 Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para uma lista completa dos recursos lançados. Abaixo estão alguns conteúdos que foram traduzidos para o português.
 
+<!-- ### Chrome 98 {: #chrome98 }
+* [Preview feature: Full-page accessibility tree](/pt/blog/new-in-devtools-98/#a11y-tree)
+* [More precise changes in the Changes tab](/pt/blog/new-in-devtools-98/#changes)
+* [Set longer timeout for user flow recording](/pt/blog/new-in-devtools-98/#recorder-timeout)
+* [Ensure your pages are cacheable with the Back/forward cache tab](/pt/blog/new-in-devtools-98/#bfcache)
+* [New Properties pane filter](/pt/blog/new-in-devtools-98/#properties)
+* [Emulate the CSS forced-colors media feature](/pt/blog/new-in-devtools-98/#forced-colors)
+* [Show rulers on hover command](/pt/blog/new-in-devtools-98/#show-rulers)
+* [Support `row-reverse` and `column-reverse` in the Flexbox editor](/pt/blog/new-in-devtools-98/#flexbox-editor)
+* [New keyboard shortcuts to replay XHR and expand all search results](/pt/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 9 in the Lighthouse panel](/pt/blog/new-in-devtools-98/#lighthouse)
+* [Improved Sources panel](/pt/blog/new-in-devtools-98/#sources)
+* [Miscellaneous highlights](/pt/blog/new-in-devtools-98/#misc)
+* [[Experimental] Endpoints in the Reporting API pane](/pt/blog/new-in-devtools-98/#reporting-api) -->
+
+
 ### Chrome 97 {: #chrome97 }
 
 * [Prévia de funcionalidade: Novo painel de Gravação](/pt/blog/new-in-devtools-97/#recorder)
