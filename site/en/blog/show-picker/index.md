@@ -13,9 +13,9 @@ tags:
 ---
 
 For a long time, you had to resort to custom widget libraries or hacks to show a
-date picker. The web platform now ships with `HTMLInputElement.showPicker()`, a
-canonical way to show a browser picker not only for dates, but also time, color,
-and files.
+date picker. The web platform now ships with `HTMLInputElement` `showPicker()`,
+a canonical way to show a browser picker not only for dates, but also time,
+color, and files.
 
 ## Background {: #background }
 
