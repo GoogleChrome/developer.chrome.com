@@ -16,7 +16,7 @@ tags:
 draft: true
 ---
 
-*이 게시글의 번역에는 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 참여하였으며, [최원영](https://www.linkedin.com/in/toruchoi)님과 [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님이 리뷰를 맡아 주셨습니다.*
+*이 게시글의 번역에는 [최원영](https://www.linkedin.com/in/toruchoi)님이 참여하였으며, [도창욱](https://developers.google.com/community/experts/directory/profile/profile-changwook-doh)님과 [조은](https://developers.google.com/community/experts/directory/profile/profile-eun-cho)님이 리뷰를 맡아 주셨습니다.*
 
 {% include 'partials/devtools/ko/banner.md' %}
 
@@ -29,16 +29,21 @@ draft: true
 <!-- end: translation instructions -->
 
 <!-- ## Preview feature: Full-page accessibility tree {: #a11y-tree } -->
-
+## 미리보기 기능: 전체 페이지 접근성 트리 {: #a11y-tree }
 <!-- The new **Full-page accessibility tree** makes it easier for you to get an overview of the full-page [accessibility tree](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) and help you better understand how your web content is exposed to assistive technology.  -->
+사용자들은 새로운 **전체 페이지 접근성 트리**를 통해 전체 페이지 [접근성 트리](/blog/full-accessibility-tree/#what-is-the-accessibility-tree)의 개요를 좀더 쉽게 알 수 있으며, 이 기능은 웹 컨텐츠가 어떻게 보조 기술에 노출되는지를 사용자들이 좀더 잘 이해할 수 있도록 합니다.
 
 <!-- In the **Elements** panel, open the **Accessibility** pane and select **Enable full-page accessibility tree** checkbox. Then, reload DevTools and you will see a new accessibility button in the **Elements** panel. -->
+**요소** 패널에서 **접근성** 패널을 열고 **전체 페이지 접근성 트리** 체크박스를 선택합니다. 이후 DevTools를 새로고침하면 **요소** 패널에 접근성 버튼이 생긴 것을 확인할 수 있습니다.
 
 <!-- Click on it to toggle to the **Full-page accessibility tree** view. You can expand nodes or click to see details in the  **Accessibility** pane. -->
+**전체 페이지 접근성 트리**뷰로 전환하기 위해서, 아래 그림의 왼쪽 아이콘 위에서 클릭합니다. 우리는 각 노드들을 확장할 수 있으며, 각자의 노드를 클릭하여 **접근성** 패널에서 세부 사항들을 볼 수 있습니다.
 
 <!-- Previously, the accessibility tree was available in the **Accessibility** pane. The view is limited, it only enables you to explore a single node and its ancestors. -->
+접근성 트리는 **접근성** 패널에서 이용가능했습니다만, 그 뷰 자체는 오직 싱글 노드 및 그 노드의 조상들만을 볼 수 있을 만큼 제한적이었습니다.
 
 <!-- Our team is still actively working on this preview feature. We are looking for your [feedback](https://goo.gle/devtools-a11y-tree-feedback) for further enhancements! -->
+우리는 아직 이 미리보기 기능 구현에 대해 적극적으로 작업하고 있으며, 앞으로의 개선점에 대한 여러분들의 [의견](https://goo.gle/devtools-a11y-tree-feedback)을 기다리고 있습니다! 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/o4BY07JabERFd6OieU8b.png", alt="Full-page accessibility tree", width="800", height="505" %}
 
