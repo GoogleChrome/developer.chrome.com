@@ -1,45 +1,54 @@
 ---
 layout: "layouts/doc-post.njk"
-title: "Extension Hosting"
+title: "Extension hosting"
 date: 2012-09-18
 updated: 2021-12-10
 description: >
   How to host your Chrome extension.
 ---
 
-Most extensions are hosted in the [Chrome Web Store][what-is-cws], an online marketplace where users
-can browse for Chrome extensions and themes.
+<!--
+Reframe this to focus explicitly on hosting.
 
-There are three exceptions to the Chrome Web Store hosting rule:
+2 options:
+- CWS
+- Self-hosting
 
-1.  Unpacked extension directories from a local machine while in [developer mode][load-unpacked].
-1.  Extensions that are distributed through the [enterprise policy][enterprise-policy].
-1.  Extensions hosted on a personal server for **Linux users only**. See [Linux
-    installation][linux-install].
+CWS is by far the most common
 
-## Publishing {: #hosting }
+note that during development you can also load unpacked.
+-->
 
-All extensions are distributed to users as a special ZIP file with a `.crx` suffix. Extensions
-hosted in the [Chrome Web Store][cws-docs] are uploaded through the [Developer
-Dashboard][developer-console] as `.zip` files. The publishing process automatically converts the
-`.zip` into a `.crx` file. 
+There are several different ways to initiate the installation of a Chrome extension, but there are
+only two officially supported distribution mechanisms.
 
-See [Publish in the Chrome Web Store][publish] to learn more. 
+[Chrome Web Store][cws-about]
 
-## Updating {: #updating }
+: Chrome Web Store is an online marketplace for Chrome extensions and themes. Developers who
+  register with the Chrome Web Store can publish their extensions and make them available to users
+  across the world. Only extensions hosted on and signed by the Chrome Web Store can be directly
+  installed by end users\*. See [Publish in the Chrome Web Store][cws-publish] and [Enterprise
+  publishing options][cws-enterprise] for more information about how to publish on Chrome Web Store.
 
-The Chrome Browser periodically checks for new versions of installed extensions and updates them
-without user intervention.
+Self-hosting
 
-See [Update your Chrome Web Store item][update] to learn more.
+: is the practice of hosting an extension outside of the Chrome Web Store. This option is used in
+  managed environments where system administrators control Chrome with [enterprise
+  policies][external-enterprise-policy]. See [Linux installation][doc-linux-hosting] for information
+  on how to host an extension on your own server.
 
-[cws]: https://chrome.google.com/webstore/
-[cws-docs]: /docs/webstore
-[developer-console]: https://chrome.google.com/webstore/developer/dashboard
-[publish]: /docs/webstore/publish
-[enterprise-policy]: /docs/webstore/cws-enterprise
-[load-unpacked]: /docs/extensions/mv3/getstarted#unpacked
-[linux-install]: /docs/extensions/mv3/linux_hosting
-[update]: /docs/webstore/update
-[version]: /docs/extensions/mv2/manifest/version/
-[what-is-cws]: /docs/webstore/about_webstore
+In both cases, Chrome periodically checks extension hosts for new versions of installed extensions
+and automatically updates them without user intervention.
+
+[Unpacked extensions][doc-load-unpacked] should only be used to load trusted code during the
+development process.
+
+*\*Linux users can manually install packed extensions that are not distributed or signed by Chrome
+Web Store.*
+
+[cws-about]: /docs/webstore/about_webstore
+[cws-enterprise]: /docs/webstore/cws-enterprise
+[cws-publish]: /docs/webstore/publish
+[doc-linux-hosting]: /docs/extensions/mv3/linux_hosting
+[doc-load-unpacked]: /docs/extensions/mv3/getstarted#unpacked
+[external-enterprise-policy]: https://chromeenterprise.google/policies/
