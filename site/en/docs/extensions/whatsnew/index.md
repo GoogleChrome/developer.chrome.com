@@ -4,7 +4,7 @@ layout: 'layouts/doc-post.njk'
 title: What's new in Chrome extensions
 description: 'Recent changes to the Chrome extensions platform, documentation, and policy'
 date: 2021-02-25
-updated: 2021-11-24
+updated: 2022-01-17
 
 # Note: disabling the linter for duplicate headings because this isn't hierarchical and it needs
 # smaller font headings.
@@ -15,6 +15,27 @@ updated: 2021-11-24
 
 Check this page often to learn about changes to the Chrome extensions platform, its documentation,
 and related policy or other changes.
+
+### 2022.01.05: `match_origin_as_fallback` in Canary {: #canary-match-origin-as-fallback }
+
+Content scripts can now specify the `match_origin_as_fallback` key to inject into frames that are
+related to a matching frame, including frames with `about:`, `data:`, `blob:`, and `filesystem:`
+URLs.  See the [content scripts](/docs/extensions/mv3/content_scripts/#injecting-in-related-frames)
+documentation for details.
+
+### 2021.12.30:  in Canary {: #canary-file-access }
+
+Service worker based Manifest V2 and Manifest V3 extensions can now use the Fetch API to request
+`file://` URLs. Access to `file://` URLs still requires that the user enable 'Allow access to File
+URLs' for the extension.
+
+### 2021.12.28: Promise support for messaging APIs in Canary {: #canary-message-promise-support }
+
+Promise support has been added to
+[`tabs.sendMessage`](/docs/extensions/reference/tabs/#method-sendMessage),
+[`runtime.sendMessage`](/docs/extensions/reference/runtime/#method-sendMessage), and
+[`runtime.sendNativeMessage`](/docs/extensions/reference/runtime/#method-sendNativeMessage) for
+extensions built for Manifest V3.
 
 ### Chrome 98: Returning promises from scripting.executeScript()
 
