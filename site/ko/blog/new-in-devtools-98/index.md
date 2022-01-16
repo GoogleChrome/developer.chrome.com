@@ -54,7 +54,7 @@ Chromium issue: [887173](https://crbug.com/887173)
 
 <!-- ## More precise changes in the Changes tab {: #changes }  -->
 ## 변경 탭에서의 더욱 정교한 변화들
-<!-- The code changes in the **Changes** tab is pretty-printed automatically.  -->ㅡ
+<!-- The code changes in the **Changes** tab is pretty-printed automatically.  -->
 **변경** 탭에서의 코드 체인지들은 자동적으로 화사하게 프린트됩니다. <!-- 문맥에 맞는 단어 선택 필요 -->
 <!-- Previously, it was hard to trace the actual changes of minified source code because all the code is shown in a single line.  -->
 이전 버전에서는 모든 코드가 한 줄에 표시되었기 때문에 축소된 소스코드에서의 실제 변화를 추적하는 것은 쉽지 않았습니다.
@@ -72,10 +72,14 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 이제 여러분들은 [레코더](/docs/devtools/recorder/)에서 모든 단계 혹은 특정한 단계에서의 **타임아웃** 설정을 조정할 수 있게 됐습니다. 이 기능은 느린 네트워크 요청과 긴 애니메이션이 포함된 페이지에서 유용하게 사용될 것입니다.
 
 <!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
+예를 들어, [데모 페이지](https://jec.fyi/demo/pup-slow-result)에서 [유저 플로우 녹화](/docs/devtools/recorder/#record) 를 시작하고 메뉴 항목을 클릭하여 로드합니다. 그러나 메뉴를 불러들이는 것이 6초가 걸렸습니다. 로딩 시간이 5초를 초과-기본 타임아웃-했기 때문에 이 유저 플로우의 [다시보기](/docs/devtools/recorder/#replay)는 정상적으로 동작하지 않았습니다.
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 
+이러한 문제를 해결하기 위해, 여러분은 새롭게 추가된 **타임아웃** 설정을 사용할 수 있습니다. 메뉴 항목에서 우리가 클릭한 스텝을 확장합니다. **타임아웃 추가** 를 이용해 [스텝을 편집](/docs/devtools/recorder/#edit-steps)하고 타임아웃을 **6000** 밀리초 (6초)로 설정합니다.
+
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
+추가적으로, 여러분은 모든 단계에 대한 **타임아웃**을 **다시보기 설정**에서도 조정할 수 있습니다. **다시보기 설정**을 확장한 다음 **타임아웃** 값을 수정합니다.
  
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="timeout settings for user flow recording", width="800", height="530" %}
 
