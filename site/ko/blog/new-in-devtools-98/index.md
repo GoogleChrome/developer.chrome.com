@@ -53,10 +53,11 @@ Chromium issue: [887173](https://crbug.com/887173)
 
 
 <!-- ## More precise changes in the Changes tab {: #changes }  -->
-
-<!-- The code changes in the **Changes** tab is pretty-printed automatically.  -->
-
+## 변경 탭에서의 더욱 정교한 변화들
+<!-- The code changes in the **Changes** tab is pretty-printed automatically.  -->ㅡ
+**변경** 탭에서의 코드 체인지들은 자동적으로 화사하게 프린트됩니다. <!-- 문맥에 맞는 단어 선택 필요 -->
 <!-- Previously, it was hard to trace the actual changes of minified source code because all the code is shown in a single line.  -->
+이전 버전에서는 모든 코드가 한 줄에 표시되었기 때문에 축소된 소스코드에서의 실제 변화를 추적하는 것은 쉽지 않았습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aup2bT490dkvuBu3o4DS.png", alt="Changes tab", width="800", height="450" %}
 
@@ -66,8 +67,9 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 
 
 <!-- ## Set longer timeout for user flow recording {: #recorder-timeout } -->
-
+## 유저 플로우 레코딩을 위한 길어진 타임아웃 설정
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
+이제 여러분들은 [레코더](/docs/devtools/recorder/)에서 모든 단계 혹은 특정한 단계에서의 **타임아웃** 설정을 조정할 수 있게 됐습니다. 이 기능은 느린 네트워크 요청과 긴 애니메이션이 포함된 페이지에서 유용하게 사용될 것입니다.
 
 <!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
 
