@@ -206,11 +206,11 @@ You can force nodes to remain in states like `:active`, `:hover`, `:focus`,
 
 1. Right-click **The Lord of the Flies** above and select **Inspect**.
 
-[more]: /web/tools/chrome-devtools/dom/imgs/more-actions.png
-
 1. Right-click `<li class="demo--hover">The Lord of the Flies</li>` and select **Force
    State** > **:hover**. See [Appendix: Missing options](#options) if you don't see this option.
    The background color remains orange even though you're not actually hovering over the node.
+
+[more]: /web/tools/chrome-devtools/dom/imgs/more-actions.png
 
 ### Hide a node {: #hide }
 
