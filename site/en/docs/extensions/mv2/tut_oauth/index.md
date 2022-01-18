@@ -98,7 +98,7 @@ public key and add it to the manifest inside the unzipped directory under the [`
 {
   "name": "OAuth Tutorial FaceBlcok",
 ...
-  "key": "ThisKeyIsGoingToBeVeryLong/go8GGC2u3UD9WI3MkmBgyiDPP2OreImEQhPvwpliioUMJmERZK3zPAx72z8MDvGp7Fx7ZlzuZpL4yyp4zXBI+MUhFGoqEh32oYnm4qkS4JpjWva5Ktn4YpAWxd4pSCVs8I4MZms20+yx5OlnlmWQEwQiiIwPPwG1e1jRw0Ak5duPpE3uysVGZXkGhC5FyOFM+oVXwc1kMqrrKnQiMJ3lgh59LjkX4z1cDNX3MomyUMJ+I+DaWC2VdHggB74BNANSd+zkPQeNKg3o7FetlDJya1bk8ofdNBARxHFMBtMXu/ONfCT3Q2kCY9gZDRktmNRiHG/1cXhkIcN1RWrbsCkwIDAQAB"
+  "key": "ThisKeyIsGoingToBeVeryLong/go8G...AQAB"
 }
 ```
 
@@ -244,7 +244,7 @@ window.onload = function() {
         'contentType': 'json'
       };
       fetch(
-          'https://people.googleapis.com/v1/contactGroups/all?maxMembers=20&key=<API_Key_Here>',
+          'https://people.googleapis.com/v1/contactGroups/all?maxMembers=20&key=API_KEY',
           init)
           .then((response) => response.json())
           .then(function(data) {
@@ -255,7 +255,7 @@ window.onload = function() {
 };
 ```
 
-Replace `<API_Key_Here>` with the API key generated from the Google API console. The extension
+Replace `API_KEY` with the API key generated from the Google API console. The extension
 should log a JSON object that includes an array of `people/account_id`s under the
 `memberResourceNames` field.
 
@@ -289,7 +289,7 @@ window.onload = function() {
             for (let i = 0; i < returnedContacts.length; i++) {
               fetch(
                   'https://people.googleapis.com/v1/' + returnedContacts[i] +
-                      '?personFields=photos&key=<API_Key_Here>',
+                      '?personFields=photos&key=API_KEY',
                   init)
                   .then((response) => response.json())
                   .then(function(data) {
@@ -307,7 +307,7 @@ window.onload = function() {
 Reload and return to the extension. Click the FriendBlock button and ta-da! Enjoy contact's faces in
 a block.
 
-{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/EQkrpv2o5kKIWPYHVhXn.png", 
+{% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/EQkrpv2o5kKIWPYHVhXn.png",
        alt="Contact faces in a block", height="359", width="397" %}
 
 [1]: https://oauth.net/2/

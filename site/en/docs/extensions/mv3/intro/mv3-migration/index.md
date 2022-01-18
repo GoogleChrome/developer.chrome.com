@@ -138,11 +138,11 @@ representing alternative CSP contexts:
 
 **`extension_pages`**:  This policy covers pages in your extension, including html files and service workers.
 
-
 {% Aside %}
-These page types are served from the `chrome-extension://` protocol. For
-instance, a page in your extension is
-`chrome-extension://<extension-id>/foo.html`.
+
+These page types are served from the `chrome-extension://` protocol. For instance, a page in your
+extension is `chrome-extension://EXTENSION_ID/foo.html`.
+
 {% endAside %}
 
 **`sandbox`**: This policy covers any [sandboxed extension
@@ -206,20 +206,35 @@ of which can map to a set of resources to a set of URLs or extension IDs:
 // Manifest V2
 
 "web_accessible_resources": [
-  <files>
+  RESOURCE_PATHS
 ]
 ```
+
+Where the following placeholders are used:
+
+- <code><var>RESOURCE_PATHS</var></code>: A list of strings, each containing a relative path to a
+  given resource from the extension's root directory.
 
 ```json
 // Manifest V3
 
 "web_accessible_resources": [{
-  "resources": [<resources>],
-  "matches": [<urls>],
-  "extension_ids": [<keys>],
+  "resources": [RESOURCE_PATHS],
+  "matches": [MATCH_PATTERNS],
+  "extension_ids": [EXTENSION_IDS],
   optional "use_dynamic_url": boolean
 }]
 ```
+
+Where the following placeholders are used:
+
+- <code><var>RESOURCE_PATHS</var></code>: A list of strings, each containing a relative path to a
+  given resource from the extension's root directory.
+- <code><var>MATCH_PATTERNS</var></code>: A list of strings, each containing a [match
+  pattern][doc-match-pattern] that specifies which sites can access this set of resources.
+- <code><var>EXTENSION_IDS</var></code>: A list of strings, each containing the ID of a given
+  extension.
+
 {% endColumns %}
 
 Previously, the list of web accessible resources applied to all websites and

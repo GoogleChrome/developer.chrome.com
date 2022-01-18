@@ -72,14 +72,15 @@ ID, follow these steps:
    - Add the **openid** scope.
    - Add **Test users**.
    - Click **Save > Continue**.
-  
-**2. Create credentials.**   
+
+**2. Create credentials.**
    - Click the **Credentials** menu item.
    - Click **Create new credentials > Auth Client ID**.
    - Select Application type **Web application**.
    - Enter the **Name** of the OAuth2 client
-   - Add `https://<YOUR_EXTENSION_ID>.chromiumapp.org/` as the **Authorized redirect URI**.
-   - Finish by clicking **Create**. 
+   - Add `https://YOUR_EXTENSION_ID.chromiumapp.org/` as the **Authorized redirect URI**.
+     - Replace <code><var>YOUR_EXTENSION_ID</var></code> with your extension's ID.
+   - Finish by clicking **Create**.
 
 The console will provide an OAuth client ID. Keep this ID for later use.
 
@@ -111,7 +112,7 @@ the client ID and redirect URI. In addition to the `openid` [scope][openid-scope
 ```javascript
 // background.js
 
-let clientId = '<CLIENT_ID>'
+let clientId = 'CLIENT_ID'
 let redirectUri = `https://${chrome.runtime.id}.chromiumapp.org/`
 let nonce = Math.random().toString(36).substring(2, 15)
 
@@ -129,13 +130,13 @@ chrome.action.onClicked.addListener(function() {
 });
 ```
 
-Replace `<CLIENT_ID>` with the API key generated from the Google console. 
+Replace <code><var>CLIENT_ID</var></code> with the API key generated from the Google console.
 
 ### Retrieve a redirect URL {: #redirect-url}
 
 Now that the extension has the client ID, redirect URI, and OAuth URL, it can initiate Google's
 authentication flow. Call [`identity.launchWebAuthFlow()`][identity-webauthflow] to launch the web
-auth flow and retrieve a redirect URL. 
+auth flow and retrieve a redirect URL.
 
 The redirect URL contains a JSON Web Token (JWT) that identifies the user. To view the requested
 user identity information, you'll need to parse the JWT into a plain JavaScript object. Update
@@ -185,7 +186,7 @@ responses][credential-responses].
 ## View the user information {: #user-info}
 
 Reload and return to the extension. Click the extension action button to start the web
-authentication flow. Sign in with your Google Account, then press Enter. 
+authentication flow. Sign in with your Google Account, then press Enter.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/CETlvMvFpe23QyIAq8Lx.png", alt="ALT_TEXT_HERE",
 width="358", height="428" %}

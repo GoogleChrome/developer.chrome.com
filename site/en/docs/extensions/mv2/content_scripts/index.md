@@ -19,7 +19,7 @@ with the extension. They can also access the URL of an extension's file with
 `chrome.runtime.getURL()` and use the result the same as other URLs.
 
 ```js/1
-//Code for displaying <extensionDir>/images/myimage.png:
+// Code for displaying EXTENSION_DIR/images/myimage.png:
 var imgURL = chrome.runtime.getURL("images/myimage.png");
 document.getElementById("someImage").src = imgURL;
 ```
