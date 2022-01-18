@@ -132,7 +132,8 @@ Learn more about the Chrome Web Store Publish API [here][cws-api].
 ```text
 Endpoint: https://www.googleapis.com/upload/chromewebstore/v1.1/items
 Type: POST
-Header Parameters: $TOKEN: the access token
+Header Parameters: 
+  $TOKEN: the access token
 Body content: the package file to upload
 ```
 
@@ -159,7 +160,8 @@ For a full description of the insert method, see [Items:Insert][cws-api-insert].
 ```text
 Endpoint: https://www.googleapis.com/upload/chromewebstore/v1.1/items/$ITEM_ID
 Type: PUT
-Header Parameters: $TOKEN: the access token
+Header Parameters: 
+  $TOKEN: the access token
 Body content: the package file to upload
 ```
 
@@ -186,7 +188,8 @@ For a full description of the update method, see [Items:Update][cws-api-update].
 ```text
 Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID/publish
 Type: POST
-Header Parameters: $TOKEN: the access token
+Header Parameters: 
+  $TOKEN: the access token
 ```
 
 ```bash
@@ -210,7 +213,8 @@ For a full description of publish method, see [Items:Publish][cws-api-publish].
 ```text
 Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID/publish?publishTarget=trustedTesters
 Type: POST
-Header Parameters: $TOKEN: the access token
+Header Parameters: 
+  $TOKEN: the access token
 ```
 
 ```bash
@@ -235,7 +239,8 @@ For a full description of the publish method, see [Items:Publish][cws-api-publis
 ```text
 Endpoint: https://www.googleapis.com/chromewebstore/v1.1/items/$ITEM_ID?projection=DRAFT
 Type: GET
-Header Parameters: $TOKEN: the access token
+Header Parameters: 
+  $TOKEN: the access token
 ```
 
 ```bash
