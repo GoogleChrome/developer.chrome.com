@@ -19,7 +19,7 @@ CWS is by far the most common
 note that during development you can also load unpacked.
 -->
 
-There are several different ways to initiate the installation of a Chrome extension, but there are
+There are multiple ways to install a Chrome extension, but there are
 only two officially supported distribution mechanisms.
 
 [Chrome Web Store][cws-about]
@@ -32,7 +32,7 @@ only two officially supported distribution mechanisms.
 
 Self-hosting
 
-: is the practice of hosting an extension outside of the Chrome Web Store. This option is used in
+: Self hosting is the practice of hosting an extension outside of the Chrome Web Store. This option is used in
   managed environments where system administrators control Chrome with [enterprise
   policies][external-enterprise-policy]. See [Linux installation][doc-linux-hosting] for information
   on how to host an extension on your own server.
