@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/project-landing.njk'
 title: 'Workbox Modules'
-description: 'Tooling! Workbox! Stuff!'
+description: 'Dig deeper into specific Workbox modules.'
 project_key: workbox/modules
 ---
