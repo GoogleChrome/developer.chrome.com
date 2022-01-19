@@ -87,14 +87,18 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 
 
 <!-- ## Ensure your pages are cacheable with the Back/forward cache tab {: #bfcache } -->
-
+## 뒤로/앞으로 캐쉬 탭을 이용해 페이지가 캐쉬 가능한지 확인하기 {: #bfcache }
 <!-- [Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation.  -->
+[뒤로/앞으로 캐쉬(혹은 bfcache)](https://web.dev/bfcache/)는 브라우저 최적화의 하나로, 즉각적인 앞뒤 내비게이션을 가능하게 해 주는 기능입니다.
 
 <!-- The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible. -->
+새롭게 선보이는 **뒤로/앞으로 캐쉬** 탭을 사용하여, 웹 페이지들이 bfcache에 대해 최적화되었는지를 테스트할 수 있으며, 또한 페이지가 bfcache를 사용하지 못하도록 하는 이슈들을 파악할 수 있습니다.
 
 <!-- To test a particular page, navigate to it in Chrome and then in DevTools go to **Application** > **Back-forward Cache**. Next, click the **Test back/forward cache** button and DevTools will attempt to navigate away and back to determine whether the page could be restored from bfcache. -->
+특정 페이지를 테스트하기 위해, 크롬에서 해당 페이지로 이동한 다음 DevTools에서 **애플리케이션** > **뒤로-앞으로 캐쉬** 를 선택합니다. 그리고 ** 뒤로/앞으로 캐쉬 테스트** 버튼을 클릭하여 DevTools가 앞으로 혹은 뒤로 페이지 탐색을 시작하도록 하여, 해당 페이지가 bfcache 로부터 복구 가능한지를 확인할 수 있습니다.
 
 <!-- As web developers, it's critical to know how to optimize your pages for bfcache across all browsers because it will significantly improve the browsing experience for users—especially those with slower networks or devices.  -->
+웹 개발자는 페이지가 모든 브라우저에서 bfcache에 맞게 최적화하는 방법을 이해하는 것이 매우 중요합니다. 이는 특히 느린 네트워크 혹은 기기에서의 사용자 탐색 경험을 크게 향상시킬 수 있기 때문입니다. 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4OrWjuRgG1bB0AupcMmS.png", alt="Back/forward cache tab", width="800", height="516" %}
 
