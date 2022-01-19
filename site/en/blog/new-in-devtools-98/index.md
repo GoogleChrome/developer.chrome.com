@@ -27,7 +27,7 @@ In the **Elements** panel, open the **Accessibility** pane and select **Enable f
 
 You can click on it to toggle to the **Full-page accessibility tree** view. You can expand nodes or click to see details in the  **Accessibility** pane.
 
-Select a node and toggle back to the DOM tree view. The corresponding DOM node is selected now. This is a great way to understand the mapping between the DOM node and its accessibility tree node. This works for DOM tree <-> Accessibility tree view too!
+Select a node and toggle back to the DOM tree view. The corresponding DOM node is selected now. This is a great way to understand the mapping between the DOM node and its accessibility tree node. This works for DOM tree ⬌ Accessibility tree view too!
 
 Previously, the accessibility tree was available in the **Accessibility** pane. The view is limited, it only enables you to explore a single node and its ancestors.
 
