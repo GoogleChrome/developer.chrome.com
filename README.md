@@ -67,6 +67,14 @@ npm run dev
 Open `http://localhost:8080/` to see the site locally. Changes to assets will
 rebuild the site. Refresh to see your changes.
 
+### Run linters to address bugs
+
+Before you push your branch, find and address any errors.
+
+```bash
+npm run lint
+```
+
 ## Environments 🌳
 
 To do a production build of the site and start the local server 
