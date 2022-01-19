@@ -12,7 +12,7 @@ description: >
 This developer agreement was updated on May 4, 2021.
 </div>
 
-[Branding Guidelines][3] | [Rating Guidelines][4] | [Program Policies][5] | [User Data FAQ][6] |
+[Branding Guidelines][branding] | [Rating Guidelines][rating] | [Program Policies][program-policies] | [User Data FAQ][user-data] |
 **Developer Agreement**
 
 ## Definitions {: #definitions }
@@ -27,7 +27,6 @@ Products: Software, content and digital materials created for use in connection 
 
 Taxes: All government-imposed taxes, except for taxes based on Google's net income, net worth, asset value, property value, or employment.
 
-
 ## 1\. Introduction {: #introduction }
 
 The Web Store is a publicly available site on which Developers can publish Products for distribution
@@ -37,9 +36,9 @@ acquire and maintain a valid Google account.
 ## 2\. Accepting this Agreement {: #accepting }
 
 2.1 Your use of the Web Store to distribute Products is governed by a legal agreement between you
-and Google consisting of the Google Terms of Service (found at https://policies.google.com/terms),
+and Google consisting of the Google Terms of Service (found at [https://policies.google.com/terms][google-terms]),
 Google Chrome and Chrome OS Additional Terms of Service (found at
-http://www.google.com/chrome/intl/en/eula\_text.html) and this Google Chrome Web Store Developer
+[https://www.google.com/intl/en/chrome/terms/][google-additional-terms]) and this Google Chrome Web Store Developer
 Agreement (together, the "Agreement"). You are contracting with the applicable Google entity based
 on where You reside. In order to use the Web Store to distribute Products, you must agree to this
 Agreement by clicking to accept where this option is made available to you or continuing to use the
@@ -81,7 +80,7 @@ Products, including any intellectual property rights which subsist in those appl
 
 4.2 You agree to use the Web Store only for purposes that are permitted by (a) this Agreement and
 the Google Chrome Web Store Program Policies
-[http://developers.google.com/chrome/web-store/program_policies][10] and (b) any applicable law,
+[https://developer.chrome.com/docs/webstore/program_policies][program-policies] and (b) any applicable law,
 regulation or generally accepted practices or guidelines in the relevant jurisdictions (including
 any laws regarding the export of data or software to and from the United States or other relevant
 countries).
@@ -227,7 +226,7 @@ marketing the Google Chrome Web Store, Google products and services, or publiciz
 Google grants to Developer a limited, non-exclusive, worldwide, royalty-free license to use the
 Google Chrome Brand Features for the Term of this Agreement solely for marketing purposes and only
 in accordance with the Google Chrome Brand Guidelines located at
-[https://chrome.google.com/extensions/intl/en/branding.html][12].
+[https://developer.chrome.com/docs/webstore/branding][branding].
 
 ## 7\. Product Takedowns, Review, and Updates {: #review }
 
@@ -284,7 +283,7 @@ Products, including without limitation Section 7.2 of this Agreement (Google Rev
 
 7.4 If you are a business user based in the EU or the UK, you may also apply to resolve a dispute
 under this Agreement with mediation, find more details about the mediators we're willing to engage
-with and instructions about how to request mediation [here][14]. Except as required by applicable
+with and instructions about how to request mediation [here][mediation]. Except as required by applicable
 law, mediation is voluntary and neither you nor Google are obliged to settle disputes through
 mediation.
 
@@ -305,7 +304,7 @@ any outstanding policy violations.
 8.3 Google may suspend or terminate your right to publish Products on the Web Store for any reason,
 including but not limited to: (a) violation of the Agreement or the Google Chrome Web Store Program
 Policies, or (b) infringement upon any intellectual property rights, including copyright. For more
-information on Google's copyright policies, use [this tool][15].
+information on Google's copyright policies, use [this tool][google-copyright].
 
 ## 9\. Privacy and Information {: #privacy }
 
@@ -375,7 +374,7 @@ taxes related to Your distribution of Product distributed via the Web Store.
 
 Google may make changes to this Agreement from time to time. When these changes are made, Google
 will make a new copy of the Agreement available on the Web Store site
-http://developers.google.com/chrome/web-store/terms. Google will also post a notification on the Web
+[https://developer.chrome.com/docs/webstore/terms/][developer-agreement]. Google will also post a notification on the Web
 Store site for any material modifications . The changes will become effective, and will be deemed
 accepted by You, immediately or, in the case of material modifications, 15 days after the posting of
 the notification (except changes required by law which will be effective immediately).
@@ -430,20 +429,13 @@ termination of this Agreement.
 
 Please print and retain a copy of this document and any linked documents for your records.
 
+[branding]: /docs/webstore/branding
+[developer-agreement]: /docs/webstore/terms
+[google-additional-terms]: https://www.google.com/intl/en/chrome/terms/
+[google-copyright]: http://www.google.com/support/bin/static.py?page=ts.cs&ts=1114905
+[google-terms]: https://policies.google.com/terms
+[mediation]: http://g.co/help/mediation
 [one-stop]: https://support.google.com/chrome_webstore/contact/one_stop_support
-[1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
-[2]: /apps/migration
-[3]: /docs/webstore/branding
-[4]: /docs/webstore/rating
-[5]: /docs/webstore/program_policies
-[6]: /docs/webstore/user_data
-[7]: https://policies.google.com/terms
-[8]: http://www.google.com/chrome/intl/en/eula_text.html
-[9]: /docs/webstore/overview#builtin
-[10]: /docs/webstore/program_policies
-[11]: http://groups.google.com/a/chromium.org/group/chromium-apps/
-[12]: https://chrome.google.com/extensions/intl/en/branding.html
-[13]: http://groups.google.com/a/chromium.org/group/chromium-apps/
-[14]: http://g.co/help/mediation
-[15]: http://www.google.com/support/bin/static.py?page=ts.cs&ts=1114905
-[16]: /docs/webstore/terms
+[program-policies]: /docs/webstore/program_policies
+[rating]: /docs/webstore/rating
+[user-data]: /docs/webstore/user_data
