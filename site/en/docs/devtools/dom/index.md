@@ -24,26 +24,16 @@ When you're interested in a particular DOM node, **Inspect** is a fast way to op
 and investigate that node.
 
 1. Right-click **Michelangelo** below and select **Inspect**.
-
      * Michelangelo
      * Raphael
-
      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/psbHIPohm8wsZkGA7WXl.png", alt="Inspecting a node", width="800", height="780" %}
-
      The **Elements** panel of DevTools opens.
      `<li>Michelangelo</li>` is highlighted in the **DOM Tree**.
-
      {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/Cz2LKMmJ3sVjkDdfW4i8.png", alt="Highlighting the Michelangelo< node", width="800", height="483" %}
-
-[inspect]: /web/tools/chrome-devtools/images/shared/inspect.png
-
-1. Click the **Inspect** ![Inspect][inspect]{: .inline-icon } icon in the top-left corner of
+1. Click the **Inspect** icon in the top-left corner of
    DevTools.
-
    {% Img src="image/BrQidfK9jaQyIHwdw91aVpkPiib2/2canqdvrgnHBayY1VsLM.png", alt="The Inspect icon", width="800", height="545" %}
-
 1. Click the **Tokyo** text below.
-
      * Tokyo
      * Beirut
 
