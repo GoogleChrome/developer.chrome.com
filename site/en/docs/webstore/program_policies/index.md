@@ -341,7 +341,7 @@ The privacy policy must, together with any in-Product disclosures, comprehensive
 Product collects, uses and shares user data, including the types of parties with whom it's shared.
 You must make the the policy accessible by providing a link:
 
-- In the designated field in the Chrome Web Store Developer Dashboard.
+- In the [designated field][account-settings] in the Chrome Web Store Developer Dashboard.
 
 #### Prominent Disclosure Requirement {: #prominent-disclosure }
 
@@ -547,6 +547,7 @@ notification to that effect, with further instructions if applicable. Please ver
 associated publisher account with your Product can receive emails from external parties and not get
 flagged as Spam to ensure that you receive all communications in a timely manner.
 
+[account-settings]: /docs/webstore/publish/#setup-a-developer-account
 [adsense]: https://support.google.com/adsense/bin/answer.py?hl=en&answer=48182
 [branding]: /docs/webstore/branding
 [checkout-content-policy]: http://checkout.google.com/seller/content_policies.html
