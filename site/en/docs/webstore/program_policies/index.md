@@ -12,8 +12,8 @@ description: Chrome Web Store developer program policies.
 
 {% endAside %}
 
-[Branding Guidelines][3] | [Rating Guidelines][4] | **Program Policies** | [User Data FAQ][5] |
-[Developer Agreement][6]
+[Branding Guidelines][branding] | [Rating Guidelines][rating] | **Program Policies** | [User Data FAQ][user-data] |
+[Developer Agreement][developer-agreement]
 
 The developer program policies listed below play an important role in maintaining a positive
 experience for everyone using Chrome Web Store. These policies apply to the entire user experience
@@ -23,8 +23,8 @@ Please be aware that these policies pertain to your software, content, and digit
 for use in connection with Google Chrome and distributed via the Chrome Web Store, including
 applications, extensions, and themes, as well as any ads bundled or made available through the
 product. These policies have the same meaning as in the [Google Chrome Web Store Developer
-Agreement][7]. There are additional quality guidelines that apply to [Chrome Apps][8] and [Chrome
-Extensions][9]. Be sure to check back from time to time, as these policies may change.
+Agreement][developer-agreement]. There are additional quality guidelines that apply to [Chrome Apps][section-chrome-apps] and [Chrome
+Extensions][section-extensions]. Be sure to check back from time to time, as these policies may change.
 
 ## Content Policies {: #content_policies }
 
@@ -133,7 +133,7 @@ following products are currently not featured in the CWS Store:
 
 Don't infringe on the intellectual property rights of others, including patent, trademark, trade
 secret, copyright, and other proprietary rights. We will respond to clear notices of alleged
-copyright infringement. For more information or to file a DMCA request, use [this tool][10].
+copyright infringement. For more information or to file a DMCA request, use [this tool][report-content].
 Additionally, the visibility of your Product may be impacted if we believe it potentially infringes
 on intellectual property rights.
 
@@ -172,14 +172,14 @@ the following forms:
 - Shortening of variable and function names
 - Collapsing files together
 
-### Two Step Verification {: #two-verification }
+### Two Step Verification {: #two-step }
 
 To ensure the security of CWS accounts, Two Step Verification is required for all developer
 accounts prior to publishing an extension or updating an existing extension. Developers can activate
 Two Step Verification for their Google Accounts
-[here](https://myaccount.google.com/security/signinoptions/two-step-verification/enroll-welcome).
+[here](two-step-enroll).
 More information on Google's Two Step Verification features can be found
-[here](https://www.google.com/landing/2step/).
+[here](two-step-features).
 
 ### Additional Requirements for Manifest V3 {: #mv3-req }
 
@@ -195,7 +195,7 @@ Some common violations include:
 - Including a &lt;script> tag that points to a resource that is not within the
   extension's package
 - Using JavaScript's
-  [eval()](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval)
+  [eval()](mdn-eval)
   method or other mechanisms to execute a string fetched from a remote source
 - Building an interpreter to run complex commands fetched from a remote source,
   even if those commands are fetched as data
@@ -252,7 +252,7 @@ Deceptive installation tactics include:
 
 - Requiring unrelated user action to access advertised functionality.
 
-For more information about this policy, please see the [Developer FAQ][11].
+For more information about this policy, please see the [Developer FAQ][deceptive-installation].
 
 ## Spam & Placement in the Store {: #spam }
 
@@ -307,11 +307,11 @@ We don't allow extensions that send messages on behalf of the user without givin
 the user the ability to confirm the content and intended recipients.
 
 In addition to these requirements, all extensions must comply with [Google's Webmaster Quality
-Guidelines][12].
+Guidelines][websmaster-guide].
 
-For additional information about the spam policy, see the [Spam FAQ][13].
+For additional information about the spam policy, see the [Spam FAQ][faq-spam].
 
-For information about Product ranking, please see [these FAQs][14].
+For information about Product ranking, please see [these FAQs][faq-product-ranking].
 
 ## User Data Privacy {: #userdata }
 
@@ -321,7 +321,7 @@ the collection, use, and sharing of the data. You must limit your use of the dat
 you disclosed. This policy establishes the Chrome Web Store's minimum user data privacy
 requirements; you or your Product must comply with applicable laws.
 
-Please see this [FAQ][15].
+Please see this [FAQ][faq-user-data].
 
 ### Personal or Sensitive User Data {: #userdata_psud }
 
@@ -416,7 +416,7 @@ apply to scraped content or otherwise automatically gathered user data.
 An affirmative statement that your use of the data complies with the Limited Use restrictions must
 be disclosed on a website belonging to your extension; e.g., A link on a homepage to a dedicated
 page or privacy policy noting: "The use of information received from Google APIs will adhere to the
-[Chrome Web Store User Data Policy][16], including the [Limited Use][17] requirements."
+[Chrome Web Store User Data Policy][section-user-data], including the [Limited Use][section-limited-use] requirements."
 
 ### Use of Permissions {: #permissions }
 
@@ -431,7 +431,7 @@ or features that have not yet been implemented.
 
 Ads are considered part of your Product for purposes of content review and compliance with developer
 terms, and therefore must comply with the above content policies. Ads which are inconsistent with
-the [content rating][18] of your products or extension are also in violation of our developer terms.
+the [content rating][content-rating] of your products or extension are also in violation of our developer terms.
 
 ### Ads Context and Attribution {: #ads-context }
 
@@ -454,7 +454,12 @@ criteria are met:
 - The ads do not mimic or impersonate the native ads or content on the third-party website, and
   the ads adhere to the content policy on [impersonation and deceptive behavior][19].
 
-<div class="aside aside--note">Currently, AdSense may not be used to serve ads in Products, per <a href="https://support.google.com/adsense/bin/answer.py?hl=en&amp;answer=48182">AdSense policies</a>.</div>
+{% Aside %}
+
+Currently, AdSense may not be used to serve ads in Products, per [AdSense policies][adsense].
+
+{% endAside %}
+
 
 ## Extensions Quality Guidelines {: #extensions }
 
@@ -473,7 +478,7 @@ Common violations include:
 - Email notifiers combined with a news aggregator.
 - PDF converters which also aim to change a users default search engine.
 
-Please see this [FAQ][21] for more information.
+Please see this [FAQ][faq-extension-quality] for more information.
 
 ### API Use {: #api-use }
 
@@ -518,56 +523,56 @@ requirements:
   in the description that the user sees when choosing whether to install it.
 - You must clearly identify that you, not Google, are the seller of the products or services.
 - Regardless of the method of payment, you may not process payment transactions that are prohibited
-  for Google Checkout under the [Google Checkout Seller Terms of Service][22]. This includes any
+  for Google Checkout under the [Google Checkout Seller Terms of Service][checkout-seller-terms]. This includes any
   illegal transaction or the sale or exchange of any illegal or prohibited goods or services,
-  including the prohibited products set forth in the [Content Policies for Google Checkout][23].
+  including the prohibited products set forth in the [Content Policies for Google Checkout][checkout-content-policy].
 
 ## Policy Enforcement {: #policy_enforcement }
 
 ### Repeat abuse {: #repeat-abuse }
 
 Serious or repeated violations of the Chrome Web Store Distribution Agreement or these Program
-  Policies will result in the suspension of your developer account, and possibly related developer
-  accounts. Additionally, you may be banned from using the Chrome Web Store. In extreme cases, this
-  may also result in the suspension of related Google services associated with your Google account.
-  Repeated infringement of intellectual property rights, including copyright, will also result in
-  account termination. For more information on Google's copyright policies, please use [this
-  tool][24].
+Policies will result in the suspension of your developer account, and possibly related developer
+accounts. Additionally, you may be banned from using the Chrome Web Store. In extreme cases, this
+may also result in the suspension of related Google services associated with your Google account.
+Repeated infringement of intellectual property rights, including copyright, will also result in
+account termination. For more information on Google's copyright policies, please use [this
+tool][report-content].
 
 ### Enforcement Circumvention {: #enforcement-circumvention }
 
 Any attempt to circumvent intended limitations or enforcement actions will result in the immediate
-  termination of your developer account, and possibly related developer accounts.
+termination of your developer account, and possibly related developer accounts.
 
 ### Notifications and Appeals {: #appeals }
 
 In the event that your Product is removed from Chrome Web Store, you will receive an email
-  notification to that effect, with further instructions if applicable. Please verify that the
-  associated publisher account with your Product can receive emails from external parties and not get
-  flagged as Spam to ensure that you receive all communications in a timely manner.
+notification to that effect, with further instructions if applicable. Please verify that the
+associated publisher account with your Product can receive emails from external parties and not get
+flagged as Spam to ensure that you receive all communications in a timely manner.
 
+[adsense]: https://support.google.com/adsense/bin/answer.py?hl=en&answer=48182
+[branding]: /docs/webstore/branding
+[checkout-content-policy]: http://checkout.google.com/seller/content_policies.html
+[checkout-seller-terms]: http://checkout.google.com/termsOfService?type=Seller
+[content-rating]: /docs/webstore/rating
+[deceptive-installation]: /docs/webstore/deceptive_installation_tactics
+[developer-agreement]: /docs/webstore/terms
+[faq-extension-quality]: /docs/extensions/mv3/single_purpose
+[faq-product-ranking]: /docs/webstore/faq#faq-gen-24
+[faq-spam]: /docs/webstore/spam-faq
+[faq-user-data]: /docs/webstore/user_data
 [mature-content]: /docs/webstore/cws-dashboard-listing/#mature-content
-[1]: https://blog.chromium.org/2018/06/improving-extension-transparency-for.html
-[2]: /docs/extensions/mv2/inline_faq
-[3]: /docs/webstore/branding
-[4]: /docs/webstore/rating
-[5]: /docs/webstore/user_data
-[6]: /docs/webstore/terms
-[7]: /docs/webstore/terms
-[8]: #chrome_apps
-[9]: #extensions
-[10]: http://www.google.com/support/bin/static.py?page=ts.cs&ts=1114905
-[11]: /docs/webstore/deceptive_installation_tactics
-[12]: https://support.google.com/webmasters/answer/35769#3
-[13]: /docs/webstore/spam-faq
-[14]: /docs/webstore/faq#faq-gen-24
-[15]: /docs/webstore/user_data
-[16]: /docs/webstore/program_policies
-[17]: /docs/webstore/program_policies#limited_use
-[18]: /docs/webstore/rating
-[19]: #impersonation
-[20]: https://support.google.com/adsense/bin/answer.py?hl=en&answer=48182
-[21]: /docs/extensions/mv2/single_purpose
-[22]: http://checkout.google.com/termsOfService?type=Seller
-[23]: http://checkout.google.com/seller/content_policies.html
-[24]: http://www.google.com/support/bin/static.py?page=ts.cs&ts=1114905
+[mdn-eval]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval
+[rating]: /docs/webstore/rating
+[report-content]: http://www.google.com/support/bin/static.py?page=ts.cs&ts=1114905
+[section-chrome-apps]: #chrome_apps
+[section-extensions]: #extensions
+[section-impersonation]: #impersonation
+[section-limited-use]: #limited_use
+[section-user-data]: #userdata
+[two-step-enroll]: https://myaccount.google.com/security/signinoptions/two-step-verification/enroll-welcome
+[two-step-features]: https://www.google.com/landing/2step/
+[user-data]: /docs/webstore/user_data
+[websmaster-guide]: https://support.google.com/webmasters/answer/35769#3
+
