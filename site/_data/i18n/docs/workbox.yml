@@ -18,3 +18,13 @@ uses:
 uses_description:
   en: |
     To do.
+modules:
+  en: "Workbox Modules"
+modules_description:
+  en: |
+    Dig deeper into specific Workbox modules.
+reference:
+  en: "API Reference"
+reference_description:
+  en: |
+    Browse the API reference to get information on available methods in the Workbox API, broken down by module.
