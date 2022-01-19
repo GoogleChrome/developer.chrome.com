@@ -341,8 +341,7 @@ The privacy policy must, together with any in-Product disclosures, comprehensive
 Product collects, uses and shares user data, including the types of parties with whom it's shared.
 You must make the the policy accessible by providing a link:
 
-- In the designated field in the Chrome Web Store Developer Dashboard, and
-- In the Product's inline installation page (if applicable).
+- In the designated field in the Chrome Web Store Developer Dashboard.
 
 #### Prominent Disclosure Requirement {: #prominent-disclosure }
 
@@ -379,9 +378,6 @@ The following types of personal or sensitive user data are also subject to addit
       </tr>
     </tbody>
   </table>
-
-  If your Product uses inline installation pages, then any reference to the Product's Chrome Web
-  Store page also includes its inline installation pages.
 
 ### Limited Uses of User Data {: #limited_use }
 
