@@ -159,7 +159,7 @@ acceptable standards, as determined by Google. Google reserves the right to disp
 users in a manner that will be determined at Google's sole discretion.
 Your Products may be subject to user ratings to which you may not agree. You may contact Google if
 you have any questions or concerns regarding such ratings at
-[http://groups.google.com/a/chromium.org/group/chromium-apps/][11].
+[One Stop Support contact form][one-stop].
 
 4.8 Marketing Your Product. You will be responsible for uploading your Products to the Web Store,
 providing required Product information to users, and accurately disclosing the security permissions
@@ -272,7 +272,7 @@ difficulty), Google may prevent the Product from being made available in the Web
 Product from the Web Store, remotely disable or remove the Product from user systems or devices, or
 flag, filter, modify related materials (including but not limited to descriptions, screenshots, or
 metadata), or reclassify the Product. If you have any questions or concerns regarding a removal, you
-may contact us at http://groups.google.com/a/chromium.org/group/chromium-apps/. Google reserves the
+may contact us at [One Stop Support contact form][one-stop]. Google reserves the
 right to suspend or bar any Product from the Web Store.
 
 7.3 From time to time, Google Chrome may check for available updates to Products, including but not
@@ -430,6 +430,7 @@ termination of this Agreement.
 
 Please print and retain a copy of this document and any linked documents for your records.
 
+[one-stop]: https://support.google.com/chrome_webstore/contact/one_stop_support
 [1]: http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
 [2]: /apps/migration
 [3]: /docs/webstore/branding
