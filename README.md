@@ -7,6 +7,9 @@ to learn about what's new in Chrome!
 
 Thanks for letting us know! Please [file an issue](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=bug&template=bug_report.md&title=) and a team member should reply shortly.
 
+If you're submitting a pull request to fix a bug, please read the
+[Contributing guidelines](https://github.com/GoogleChrome/developer.chrome.com/blob/main/CONTRIBUTING.md).
+
 ## Authoring content ✍️
 
 Before you start writing take a moment to look over the
