@@ -12,7 +12,9 @@
     "ko",
     "zh",
     "ru",
-    "ja"
+    "ja",
+    "fr",
+    "de"
   ],
   "defaultLocale": "en",
   "cookiesCtaUrl": "https://policies.google.com/technologies/cookies",
