@@ -36,7 +36,7 @@ following code.
 }
 ```
 
-### Load unpacked extension {: #unpacked }
+### Load an unpacked extension {: #unpacked }
 
 The directory holding the manifest file can be added as an extension in developer mode in its
 current state. To load an unpacked extension in developer mode, follow these steps:
