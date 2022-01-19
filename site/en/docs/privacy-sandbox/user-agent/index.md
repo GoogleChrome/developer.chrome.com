@@ -169,7 +169,8 @@ expressions.
 [Register for the Chrome origin trial](/origintrials/#/view_trial/-7123568710593282047)
 to test the reduced User-Agent with your platform on real user traffic.
 
-If you work with embedded content, you can participate in a [third-party origin
+If you create content that is embedded onto other websites (in other words,
+3rd-party content), then you can participate in a [third-party origin
 trial](/blog/third-party-origin-trials/) and test this change across multiple
 sites. When you register for the Chrome origin trial, select the "third-party
 matching" option to allow the script to be injected when your site is embedded
