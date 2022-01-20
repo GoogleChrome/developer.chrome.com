@@ -27,7 +27,7 @@ only two officially supported distribution mechanisms.
 : Chrome Web Store is an online marketplace for Chrome extensions and themes. Developers who
   register with the Chrome Web Store can publish their extensions and make them available to users
   across the world. Only extensions hosted on and signed by the Chrome Web Store can be directly
-  installed by end users\*. See [Publish in the Chrome Web Store][cws-publish] and [Enterprise
+  installed by users. See [Publish in the Chrome Web Store][cws-publish] and [Enterprise
   publishing options][cws-enterprise] for more information about how to publish on Chrome Web Store.
 
 Self-hosting
@@ -43,8 +43,10 @@ and automatically updates them without user intervention.
 [Unpacked extensions][doc-load-unpacked] should only be used to load trusted code during the
 development process.
 
-*\*Linux users can manually install packed extensions that are not distributed or signed by Chrome
-Web Store.*
+{% Aside %}
+Linux users can manually install packed extensions that are not distributed or signed by Chrome
+Web Store.
+{% endAside %}
 
 [cws-about]: /docs/webstore/about_webstore
 [cws-enterprise]: /docs/webstore/cws-enterprise
