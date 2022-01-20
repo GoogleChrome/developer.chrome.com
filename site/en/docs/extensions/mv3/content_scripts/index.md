@@ -502,10 +502,11 @@ values.
   ...
 }
 ```
+
 ```js/2
 chrome.scripting.registerContentScript({
   matches: ['https://*.nytimes.com/*'],
-  run_at: 'document_idle',
+  runAt: 'document_idle',
   js: ['contentScript.js']
 });
 ```
