@@ -150,6 +150,12 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
         are injected in the order they appear in this array. Each string in this list must contain
         the either an absolute or relative path from the extension's root directory.</td>
     </tr>
+    <tr id="run_at">
+      <td><code>run_at</code></td>
+      <td><a href="/docs/extensions/reference/extensionTypes/#type-RunAt">RunAt</a></td>
+      <td><em>Optional.</em> When the script should be injected into the page. Defaults to
+        <code>document_idle</code>.</td>
+    </tr>
     <tr id="match_about_blank">
       <td><code>match_about_blank</code></td>
       <td>boolean</td>
