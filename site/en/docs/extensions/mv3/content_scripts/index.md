@@ -146,8 +146,9 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
       <td>
         <nobr>array of strings</nobr>
       </td>
-      <td><em>Optional.</em> The list of JavaScript files to be injected into matching pages. These
-        are injected in the order they appear in this array.</td>
+      <td><em>Optional.</em> The list of JavaScript files to be injected into matching pages. Files
+        are injected in the order they appear in this array. Each string in this list must contain
+        the either an absolute or relative path from the extension's root directory.</td>
     </tr>
     <tr id="match_about_blank">
       <td><code>match_about_blank</code></td>
