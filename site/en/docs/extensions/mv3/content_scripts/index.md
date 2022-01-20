@@ -46,8 +46,8 @@ JavaScript environment without conflicting with the page or other extensions' co
 
 An *isolated world* is a private execution environment that isn't accessible to the page or other
 extensions. A practical consequence of this isolation is that JavaScript variables in an extension's
-content scripts are not visible to the host page or other extensions' content scripts. The concept was
-originally introduced with the initial launch of Chrome, providing isolation for browser tabs.
+content scripts are not visible to the host page or other extensions' content scripts. The concept
+was originally introduced with the initial launch of Chrome, providing isolation for browser tabs.
 
 {% endAside %}
 
@@ -82,10 +82,11 @@ button.addEventListener("click", () =>
 With this change, both alerts appear in sequence when the button is clicked.
 
 {% Aside %}
-Not only does each extension run in its own isolated world, but content scripts
-and the web page do too. This means that none of these (web page, content
-scripts, and any running extensions) can access the context and variables of
-the others.
+
+Not only does each extension run in its own isolated world, but content scripts and the web page do
+too. This means that none of these (web page, content scripts, and any running extensions) can
+access the context and variables of the others.
+
 {% endAside %}
 
 {# youtube id="laLudeUmXHM" #}
