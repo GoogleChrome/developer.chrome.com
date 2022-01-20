@@ -762,4 +762,12 @@ window.setTimeout(() => animate(elmt_id), 200);
 [32]: #dynamic-declarative
 [33]: /docs/extensions/reference/permissions
 
+[api-get-registered-cs]: /docs/extensions/reference/scripting/#method-getRegisteredContentScripts
+[api-register-cs]: /docs/extensions/reference/scripting/#method-registerContentScripts
+[api-runat]: /docs/extensions/reference/extensionTypes/#type-RunAt
+[api-scripting]: /docs/extensions/reference/scripting/
+[api-unregister-cs]: /docs/extensions/reference/scripting/#method-unregisterContentScripts
+[api-update-cs]: /docs/extensions/reference/scripting/#method-updateContentScripts
+[doc-manifest]: /docs/extensions/mv3/manifest
+[header-related-frames]: #injecting-in-related-frames
 [ref-error]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
