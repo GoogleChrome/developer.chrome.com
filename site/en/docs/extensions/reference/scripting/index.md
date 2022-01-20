@@ -235,6 +235,36 @@ chrome.scripting
   });
 ```
 
+## Examples
+
+### Unregister all dynamic content scripts
+
+The following snippet contains a function that unregisters all dynamic content
+scripts the extension has previously registered.
+
+```js
+async function unregisterAllDynamicContentScripts() {
+  try {
+    const scripts = await chrome.scripting.getRegisteredContentScripts();
+    const scriptIds = scripts.map(script => script.id);
+    return chrome.scripting.unregisterContentScripts(scriptIds);
+  } catch (error) {
+    let message = [
+      'An unexpected error occurred while',
+      'unregistering dynamic content scripts',
+    ].join(' ');
+    throw new Error(message, {cause: error};
+  }
+}
+```
+
+{% Aside %}
+
+Unregistering content scripts will not remove scripts or styles that have
+already been injected.
+
+{% endAside %}
+
 [manifest]: /docs/extensions/mv3/manifest
 [contentscripts]: /docs/extensions/mv3/content_scripts
 [webnavigation]: /docs/extensions/reference/webNavigation
