@@ -25,9 +25,9 @@ documentation for details.
 
 ### 2021.12.30:  in Canary {: #canary-file-access }
 
-Service worker based Manifest V2 and Manifest V3 extensions can now use the Fetch API to request
-`file://` URLs. Access to `file://` URLs still requires that the user enable 'Allow access to File
-URLs' for the extension.
+Service worker-based Manifest V2 and Manifest V3 extensions can now use the Fetch API to request
+`file:`-scheme URLs. Access to `file:`-scheme URLs still requires that the user enable 'Allow access to File
+URLs' for the extension in the `chrome://extensions` page.
 
 ### 2021.12.28: Promise support for messaging APIs in Canary {: #canary-message-promise-support }
 
