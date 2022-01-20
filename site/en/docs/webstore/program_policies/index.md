@@ -102,7 +102,7 @@ example, products should not contain:
 
 - Any metadata that misrepresents the extension's or developer's current status
   or performance on the Chrome Web Store (e.g. "Editor's Choice" or "Number
-  One")
+  One").
 
 If your product has a blank description field or is missing an icon or screenshots, it will be
 rejected. If any of your product's content, title, icon, description, or screenshots contains false
@@ -113,7 +113,7 @@ or misleading information, we may remove it.
 The Chrome Web Store features products that align with our standards, values, and that we believe
 will produce valuable user experiences. Certain products that don't meet these standards, but which
 do not explicitly violate CWS policies - such as VPN extensions and Video Downloaders - may be
-restricted from feature in the Store, but will still be available to users. For example, the
+restricted from being featured in the Store, but will still be available to users. For example, the
 following products are currently not featured in the CWS Store:
 
 - Religious or political content
@@ -140,7 +140,7 @@ on intellectual property rights.
 ### Illegal activities {: #illegal-activities }
 
 Keep it legal. Don't engage in or promote unlawful activities in your product, such as rape, illegal
-sex work, or the sale of prescription drugs without a prescription.. We will remove content which
+sex work, or the sale of prescription drugs without a prescription. We will remove content which
 promotes, glorifies, or encourages dangerous or illegal activity that may result in physical harm to
 those involved.
 
@@ -268,7 +268,7 @@ services.
 ### Keyword spam {: #keyword-spam }
 
 Keyword Spam is the practice of including irrelevant or excessive keywords in an
-extensions description in an attempt to manipulate its ranking, resulting in a spammy, negative user
+extension's description in an attempt to manipulate its ranking, resulting in a spammy, negative user
 experience. We don't allow extensions with misleading, improperly formatted, non-descriptive,
 irrelevant, excessive, or inappropriate metadata, including but not limited to the extension's
 description, developer name, title, icon, screenshots, and promotional images. Developers should
@@ -437,7 +437,7 @@ Ads may not simulate or impersonate system notifications or warnings.
 
 ### Ad walls {: #ad-walls }
 
-Forcing the user to click on ads or submit personal information for advertising purposes in orderto fully use an app or extension provides a poor user experience and is prohibited.
+Forcing users to click ads or submit personal information for advertising purposes in order to fully use an app or extension provides a poor user experience and is prohibited.
 
 ### Interfering with third-party ads and websites {: #interfering-ads }
 
@@ -445,14 +445,14 @@ Ads associated with your product may not interfere with any ads on a third-party
 application. You may show ads alongside a third-party website only if all of the following
 criteria are met:
 - This behavior is clearly disclosed to the user.
-- There is clear attribution of the ads' source wherever those ads appear.
+- There is clear attribution of the ads' sources wherever those ads appear.
 - The ads do not interfere with any native ads or functionality of the website.
 - The ads do not mimic or impersonate the native ads or content on the third-party website, and
   the ads adhere to the content policy on [impersonation and deceptive behavior][19].
 
 {% Aside %}
 
-Currently, AdSense may not be used to serve ads in Products, per [AdSense policies][adsense].
+Currently, AdSense may not be used to serve ads in products, per [AdSense policies][adsense].
 
 {% endAside %}
 
@@ -542,9 +542,9 @@ termination of your developer account, and possibly related developer accounts.
 
 ### Notifications and appeals {: #appeals }
 
-In the event that your Product is removed from Chrome Web Store, you will receive an email
+In the event that your product is removed from Chrome Web Store, you will receive an email
 notification to that effect, with further instructions if applicable. Please verify that the
-associated publisher account with your Product can receive emails from external parties and not get
+associated publisher account with your product can receive emails from external parties and not get
 flagged as spam to ensure that you receive all communications in a timely manner.
 
 [account-settings]: /docs/webstore/publish/#setup-a-developer-account
