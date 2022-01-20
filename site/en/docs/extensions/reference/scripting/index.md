@@ -119,12 +119,12 @@ chrome.scripting
 );
 ```
 
-This function will be executed in the context of injection target. However,
-this will not carry over any of the current execution context of the function.
-As such, bound parameters (including the `this` object) and
-externally-referenced variables will result in errors.  For instance, the
-following code will not work, and will throw a ReferenceError because `color`
-is undefined when the function executes:
+This function will be executed in the context of injection target. However, this
+will not carry over any of the current execution context of the function. As
+such, bound parameters (including the `this` object) and externally-referenced
+variables will result in errors.  For instance, the following code will not
+work, and will throw a ReferenceError because `getUserColor` is undefined when
+the function executes:
 
 ```js
 function getTabId() { ... }
