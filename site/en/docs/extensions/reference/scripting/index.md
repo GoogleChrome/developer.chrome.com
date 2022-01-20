@@ -33,26 +33,28 @@ The only required field is `tabId`. By default, an injection will run in the
 main frame of the specified tab.
 
 ```js
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId},
-      files: ['script.js'],
-    },
-    () => { ... });
+function getTabId() { ... }
+
+chrome.scripting
+  .executeScript({
+    target: {tabId: getTabId()},
+    files: ['script.js'],
+  })
+  .then(() => console.log('script injected'));
 ```
 
 To run in all frames of the specified tab, you can set the `allFrames` boolean
 to `true`.
 
 ```js
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId, allFrames: true},
-      files: ['script.js'],
-    },
-    () => { ... });
+function getTabId() { ... }
+
+chrome.scripting
+  .executeScript({
+    target: {tabId: getTabId()}, allFrames: true},
+    files: ['script.js'],
+  })
+  .then(() => console.log('script injected in all frames'));
 ```
 
 You can also inject into specific frames of a tab by specifying individual frame
@@ -60,14 +62,14 @@ IDs. For more information on frame IDs, see the
 [webNavigation API][webnavigation].
 
 ```js
-const tabId = getTabId();
-const frameIds = [frameId1, frameId2];
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId, frameIds: frameIds},
-      files: ['script.js'],
-    },
-    () => { ... });
+function getTabId() { ... }
+
+chrome.scripting
+  .executeScript({
+    target: {tabId: getTabId()}, frameIds: [frameId1, frameId2]},
+    files: ['script.js'],
+  })
+  .then(() => console.log('script injected on target frames'));
 ```
 
 {% Aside %}
@@ -86,13 +88,14 @@ directory. The following code will inject the file `script.js` into the main
 frame of the tab.
 
 ```js
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId},
-      files: ['script.js'],
-    },
-    () => { ... });
+function getTabId() { ... }
+
+chrome.scripting
+  .executeScript({
+    target: {tabId: getTabId()},
+    files: ['script.js'],
+  })
+  .then(() => console.log('injected script file'));
 ```
 
 #### Runtime functions
@@ -102,16 +105,18 @@ function to be executed instead of a file. This function should be a function
 variable available to the current extension context.
 
 ```js
+function getTabId() { ... }
 function getTitle() {
   return document.title;
 }
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId},
-      func: getTitle,
-    },
-    () => { ... });
+
+chrome.scripting
+  .executeScript({
+    target: {tabId: getTabId()},
+    func: getTitle,
+  })
+  .then(() => console.log('injected a function'));
+);
 ```
 
 This function will be executed in the context of injection target. However,
@@ -122,34 +127,37 @@ following code will not work, and will throw a ReferenceError because `color`
 is undefined when the function executes:
 
 ```js
-const color = getUserColor();
+function getTabId() { ... }
+function getUserColor() { ... }
+
 function changeBackgroundColor() {
-  document.body.style.backgroundColor = color;
+  document.body.style.backgroundColor = getUserColor();
 }
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId},
-      func: changeBackgroundColor,
-    },
-    () => { ... });
+
+chrome.scripting
+  .executeScript({
+    target: {tabId: getTabId()},
+    func: changeBackgroundColor,
+  })
+  .then(() => console.log('injected a function'));
 ```
 
 You can work around this by using the `args` property:
 
 ```js
-const color = getUserColor();
+function getTabId() { ... }
+function getUserColor() { ... }
 function changeBackgroundColor(backgroundColor) {
   document.body.style.backgroundColor = backgroundColor;
 }
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId},
-      func: changeBackgroundColor,
-      args: [color],
-    },
-    () => { ... });
+
+chrome.scripting
+  .executeScript({
+    target: {tabId: getTabId()},
+    func: changeBackgroundColor,
+    args: [getUserColor()],
+  })
+  .then(() => console.log('injected a function'));
 ```
 
 #### Runtime strings
@@ -159,14 +167,15 @@ If injecting CSS within a page, you can also specify a string to be used in the
 can't execute a string using `scripting.executeScript()`.
 
 ```js
+function getTabId() { ... }
 const css = 'body { background-color: red; }';
-const tabId = getTabId();
-chrome.scripting.insertCSS(
-    {
-      target: {tabId: tabId},
-      css: css,
-    },
-    () => { ... });
+
+chrome.scripting
+  .insertCSS({
+    target: {tabId: getTabId()},
+    css: css,
+  })
+  .then(() => console.log('CSS injected'));
 ```
 
 ### Handling results
@@ -177,19 +186,21 @@ index in the resulting array; all other frames are in a non-deterministic
 order.
 
 ```js
+function getTabId() { ... }
 function getTitle() {
   return document.title;
 }
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId, allFrames: true},
-      func: getTitle,
-    },
-    (injectionResults) => {
-      for (const frameResult of injectionResults)
-        console.log('Frame Title: ' + frameResult.result);
-    });
+
+chrome.scripting
+  .executeScript({
+    target: {tabId: getTabId(), allFrames: true},
+    func: getTitle,
+  })
+  .then(injectionResults => {
+    for (const frameResult of injectionResults) {
+      console.log('Frame Title: ' + frameResult.result);
+    }
+  });
 ```
 
 `scripting.insertCSS()` does not return any results.
@@ -200,9 +211,10 @@ If the resulting value of the script execution is a promise, Chrome will wait
 for the promise to settle and return the resulting value.
 
 ```js
+function getTabId() { ... }
 async function addIframe() {
   const iframe = document.createElement('iframe');
-  const loadComplete = new Promise((resolve) => {
+  const loadComplete = new Promise(resolve => {
     iframe.addEventListener('load', resolve);
   });
   iframe.src = 'https://example.com';
@@ -211,16 +223,16 @@ async function addIframe() {
   return iframe.contentWindow.document.title;
 }
 
-const tabId = getTabId();
-chrome.scripting.executeScript(
-    {
-      target: {tabId: tabId, allFrames: true},
-      func: addIframe,
-    },
-    (injectionResults) => {
-      for (const frameResult of injectionResults)
-        console.log('Iframe Title: ' + frameResult.result);
-    });
+chrome.scripting
+  .executeScript({
+    target: {tabId: getTabId(), allFrames: true},
+    func: addIframe,
+  })
+  .then(injectionResults => {
+    for (const frameResult of injectionResults) {
+      console.log('Iframe Title: ' + frameResult.result);
+    }
+  });
 ```
 
 [manifest]: /docs/extensions/mv3/manifest
