@@ -20,9 +20,9 @@ in your [manifest file][manifest].
 ## Usage
 
 You can use the `chrome.scripting` API to inject JavaScript and CSS into
-websites. This is similar to what you can do with
-[content scripts][contentscripts], but by using the `chrome.scripting` API,
-extensions can make decisions at runtime.
+websites. This is similar to what you can do with [content
+scripts][contentscripts], but by using the `chrome.scripting` API, extensions
+can make decisions at runtime.
 
 ### Injection targets
 
@@ -58,8 +58,8 @@ chrome.scripting
 ```
 
 You can also inject into specific frames of a tab by specifying individual frame
-IDs. For more information on frame IDs, see the
-[webNavigation API][webnavigation].
+IDs. For more information on frame IDs, see the [webNavigation
+API][webnavigation].
 
 ```js
 function getTabId() { ... }
@@ -73,7 +73,9 @@ chrome.scripting
 ```
 
 {% Aside %}
+
 You cannot specify both the `frameIds` and `allFrames` properties.
+
 {% endAside %}
 
 ### Injected code
@@ -180,10 +182,9 @@ chrome.scripting
 
 ### Handling results
 
-The results of executing JavaScript are passed to the extension. A single
-result is included per-frame. The main frame is guaranteed to be the first
-index in the resulting array; all other frames are in a non-deterministic
-order.
+The results of executing JavaScript are passed to the extension. A single result
+is included per-frame. The main frame is guaranteed to be the first index in the
+resulting array; all other frames are in a non-deterministic order.
 
 ```js
 function getTabId() { ... }
