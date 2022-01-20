@@ -92,8 +92,8 @@ the others.
 
 ## Inject scripts {: #functionality }
 
-Content scripts can be [declared statically][14]{% if false %}, [declared dynamically][32],
-{% endif %} or [programmatically injected][13].
+Content scripts can be [declared statically][14], [declared dynamically][32], or [programmatically
+injected][13].
 
 ### Inject with static declarations {: #static-declarative }
 
@@ -171,42 +171,54 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
   </tbody>
 </table>
 
-{% if false %}
-
 ### Inject with dynamic declarations {: #dynamic-declarative }
 
-{% Aside 'caution' %}
+Dynamic content scripts are useful for situations when the match patterns for a content scripts are
+not well known or when content scripts should not always be injected on known hosts.
 
-This feature is not yet fully supported. It is currently in dev and is also available in Chrome
-Canary.
+Introduced in Chrome 96, dynamic declarations are similar to [static declarations][14], but the
+content script object is registered with Chrome using methods on the Scripting API rather than in
+[manifest.json][doc-manifest]. In addition to [registering][api-register-cs] content scripts, the
+Scripting API also allows extension developers to [get a list of][api-get-registered-cs],
+[update][api-update-cs], and [remove][api-remove-cs] content script registrations.
 
-{% endAside %}
-
-You should use dynamic declarations in the following cases:
-
-- When the host is not well known
-- The script may need to be added/removed from a known host
-
-**TODO**
-
-- Uses the JS scripting API
-    - example of adding a script
-    - example of removing a script
-- Q: Is this going to be the cannonical reference material for content scripts? If so, we may want
-  to include examples for the relevant Scripting API methods.
-
-See the [api
-proposal](https://docs.google.com/document/d/1p2jnIL3znAhD2VVuEbzOetgj1Qeya9yATa3B9gBGGUg/edit) for
-additional details.
+Like static declarations, dynamic declarations can include JavaScript files, CSS files, or both.
+Unlike static declarations, dynamic content scripts cannot be [injected into related
+frames][header-related-frames].
 
 ```js
-chrome.scripting.registerContentScript(optionsObject, callback);
+chrome.scripting
+  .registerContentScripts([{
+    id: 'session-script',
+    js: ['content.js'],
+    persistAcrossSessions: false,
+    matches: ['*://example.com/*'],
+    runAt: 'document_start',
+  }])
+  .then(() => console.log('registration complete'))
+  .catch((err) => console.warn('unexpected error', err))
 ```
 
 ```js
-chrome.scripting.unregisterContentScript(idArray, callback);
+chrome.scripting
+  .updateContentScripts([{
+    id: 'session-script',
+    excludeMatches: ['*://admin.example.com/*'],
+  }])
+  .then(() => console.log('registration updated'));
 ```
-{% endif %}
+
+```js
+chrome.scripting
+  .getRegisteredContentScripts()
+  .then(scripts => console.log('registered content scripts', scripts));
+```
+
+```js
+chrome.scripting
+  .unregisterContentScript(['session-script'])
+  .then(() => console.log('un-registration complete'));
+```
 
 ### Inject programmatically {: #programmatic }
 
