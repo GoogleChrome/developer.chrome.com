@@ -484,9 +484,9 @@ chrome.scripting.registerContentScript({
 
 ### Run time {: #run_time }
 
-The `run_at` field controls when JavaScript files are injected into the web page. The
-preferred and default value is `"document_idle"`, but you can also specify `"document_start"` or
-`"document_end"` if needed.
+The `run_at` field controls when JavaScript files are injected into the web page. The preferred and
+default value is `"document_idle"`. See the [RunAt][api-runat] type documentation for other possible
+values.
 
 ```json/6
 {
