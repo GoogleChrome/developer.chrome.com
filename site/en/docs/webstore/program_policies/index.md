@@ -26,7 +26,7 @@ product. These policies have the same meaning as in the [Google Chrome Web Store
 Agreement][developer-agreement]. There are additional quality guidelines that apply to [Chrome Apps][section-chrome-apps] and [Chrome
 Extensions][section-extensions]. Be sure to check back from time to time, as these policies may change.
 
-## Content Policies {: #content_policies }
+## Content policies {: #content_policies }
 
 Our content policies apply to your Product's content, including any ads it shows to users and any
 user-generated content it hosts or links to. Further, they apply to any content from your developer
@@ -230,7 +230,7 @@ another application, service, browser, or system, we may remove your product fro
 Store and take other measures to protect users. In such an event, you may be contacted about
 remediation steps required to restore the product.
 
-## Deceptive Installation Tactics {: #deceptive_installation_tactics }
+## Deceptive installation tactics {: #deceptive_installation_tactics }
 
 Extensions must be marketed responsibly. The set of functionalities promised by the extension must
 be stated clearly and in a transparent manner. The outcome of any user interaction should match the
@@ -423,7 +423,7 @@ with the least access to data or functionality.
 Don't attempt to "future proof" your Product by requesting a permission that might benefit services
 or features that have not yet been implemented.
 
-## Ads in Products {: #ads }
+## Ads in products {: #ads }
 
 Ads are considered part of your Product for purposes of content review and compliance with developer
 terms, and therefore must comply with the above content policies. Ads which are inconsistent with
@@ -435,7 +435,7 @@ Ads must be presented in context or clearly state which product they are bundled
 also be easily removable by either adjusting the settings or uninstalling the product altogether.
 Ads may not simulate or impersonate system notifications or warnings.
 
-### Ad Walls {: #ad-walls }
+### Ad walls {: #ad-walls }
 
 Forcing the user to click on ads or submit personal information for advertising purposes in orderto fully use an app or extension provides a poor user experience and is prohibited.
 
@@ -482,7 +482,7 @@ Extensions must use existing Chrome APIs for their designated use case. Use of a
 which an API exists, would be considered a violation. For example, overriding the Chrome New Tab
 Page through any means other than the URL Overrides API is not permitted.
 
-## Chrome Apps Quality Guidelines {: #chrome_apps }
+## Chrome Apps quality guidelines {: #chrome_apps }
 
 To ensure a great user experience, Chrome Apps distributed through the Chrome Web Store must follow
 the additional quality guidelines listed below. The guidelines in this section apply only to Chrome
@@ -505,7 +505,7 @@ Packaged and Hosted apps should not:
 - Misuse notifications by sending spam, ads, promotions of any kind, phishing attempts, or unwanted
   messages in general.
 
-## Accepting Payment from Users {: #accepting_payment }
+## Accepting payment from users {: #accepting_payment }
 
 If you collect sensitive personal information through your Product for sales, you must follow these
 requirements:
