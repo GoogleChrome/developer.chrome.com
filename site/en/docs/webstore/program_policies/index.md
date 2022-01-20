@@ -34,7 +34,7 @@ account that is publicly displayed in Chrome Web Store, including your developer
 landing page of your listed developer website. Products that include content that may not be
 suitable for all ages should be marked "Mature" on the [Developer Dashboard][mature-content].
 
-### Sexually Explicit Material {: #sexually-explicit }
+### Sexually explicit material {: #sexually-explicit }
 
 We don't allow content that contains nudity, graphic sex acts, sexually explicit material, or
 content that drives traffic to commercial pornography sites. We also don't allow content that
@@ -45,7 +45,7 @@ those involved with the distribution. Content which contains non-sexual nudity -
 educational, scientific, or cultural nudity - is generally allowed, but may impact the visibility
 of your Product.
 
-### Violent or Bullying Behavior {: #bullying }
+### Violent or bullying behavior {: #bullying }
 
 Depictions of gratuitous violence are not allowed. Products should not contain materials that
 threaten, harass, or bully other users. For example, Products should not contain:
@@ -58,7 +58,7 @@ threaten, harass, or bully other users. For example, Products should not contain
 - A series of posts/comments/photos that, taken together, clearly have the primary intention of
   harassment, even if each individual piece of content is not severe.
 
-### Hate Speech {: #hate-speech }
+### Hate speech {: #hate-speech }
 
 We don't allow content advocating against or inciting hatred towards groups of people based on
 their race or ethnic origin, religion, disability, gender, age, veteran status, nationality,
@@ -68,14 +68,14 @@ systematic discrimination or marginalization.
 Additionally, the visibility of your Product may be impacted if it contains generally hateful
 content not covered by the above definition.
 
-### Violent Extremism {: #violent }
+### Violent extremism {: #violent }
 
 We remove content that recruits, fundraises, or promotes violence on behalf of extremist groups
 defined by the US State Department and other international organizations. Violent extremism is
 defined as the use of violence and intimidation in the pursuit of political aims or goals outside
 of societal norms.
 
-### Impersonation or Deceptive Behavior {: #impersonation }
+### Impersonation or deceptive behavior {: #impersonation }
 
 Don't pretend to be someone else, and don't represent that your product is authorized by, endorsed
 by, or produced by another company or organization, if that is not the case.
@@ -108,7 +108,7 @@ If your product has a blank description field or is missing an icon or screensho
 rejected. If any of your product's content, title, icon, description, or screenshots contains false
 or misleading information, we may remove it.
 
-### Featured Products {: #featured-products }
+### Featured products {: #featured-products }
 
 The Chrome Web Store features products that align with our standards, values, and that we believe
 will produce valuable user experiences. Certain products that don't meet these standards, but which
@@ -129,7 +129,7 @@ following products are currently not featured in the CWS Store:
 - Extensions whose developers have questionable reputations, such as historically misleading or
   malicious extensions.
 
-### Intellectual Property {: #intellectual-property }
+### Intellectual property {: #intellectual-property }
 
 Don't infringe on the intellectual property rights of others, including patent, trademark, trade
 secret, copyright, and other proprietary rights. We will respond to clear notices of alleged
@@ -137,7 +137,7 @@ copyright infringement. For more information or to file a DMCA request, use [thi
 Additionally, the visibility of your Product may be impacted if we believe it potentially infringes
 on intellectual property rights.
 
-### Illegal Activities {: #illegal-activities }
+### Illegal activities {: #illegal-activities }
 
 Keep it legal. Don't engage in or promote unlawful activities in your product, such as rape, illegal
 sex work, or the sale of prescription drugs without a prescription.. We will remove content which
@@ -150,19 +150,19 @@ We don't allow content or services that facilitate online gambling, including bu
 online casinos, sports betting, lotteries, or games of skill that offer prizes of cash or other
 value.
 
-### Regulated Goods and Services {: #regulated-goods }
+### Regulated goods and services {: #regulated-goods }
 
 We do not allow the facilitation of the sale of regulated Products or services. Regulated goods
-include pharmaceuticals, alcohol, tobacco, fireworks, weapons, gambling or health/medical devices.
+include pharmaceuticals, alcohol, tobacco, fireworks, weapons, gambling, or health/medical devices.
 
-### Malicious Products {: #malicious-products }
+### Malicious products {: #malicious-products }
 
 Don't transmit viruses, worms, defects, Trojan horses, malware, or any other products of a
 destructive nature. We don't allow content that harms or interferes with the operation of the
 networks, servers, or other infrastructure of Google or any third-parties. Spyware, malicious
 scripts, and phishing scams are also prohibited in the Chrome Web Store.
 
-### Code Readability Requirements {: #code-readability }
+### Code readability requirements {: #code-readability }
 
 Developers must not obfuscate code or conceal functionality of their extension. This also applies to
 any external code or resource fetched by the extension package. Minification is allowed, including
@@ -172,16 +172,16 @@ the following forms:
 - Shortening of variable and function names
 - Collapsing files together
 
-### Two Step Verification {: #two-step }
+### Two step verification {: #two-step }
 
-To ensure the security of CWS accounts, Two Step Verification is required for all developer
+To ensure the security of CWS accounts, two step verification is required for all developer
 accounts prior to publishing an extension or updating an existing extension. Developers can activate
-Two Step Verification for their Google Accounts
+two step verification for their Google Accounts
 [here](two-step-enroll).
-More information on Google's Two Step Verification features can be found
+More information on Google's two step verification features can be found
 [here](two-step-features).
 
-### Additional Requirements for Manifest V3 {: #mv3-req }
+### Additional requirements for Manifest V3 {: #mv3-req }
 
 Extensions using Manifest V3 must meet additional requirements related to the
 extension's code. Specifically, the full functionality of an extension must be
@@ -213,7 +213,7 @@ If our reviewers are unable to determine the full functionality of your
 extension during the review process, we may reject your submission or remove it
 from the store.
 
-### Prohibited Products {: #prohibited-products }
+### Prohibited products {: #prohibited-products }
 
 We don't allow products or services that:
 
@@ -223,7 +223,7 @@ We don't allow products or services that:
   content or media
 - Mine cryptocurrency
 
-## Security Vulnerabilities {: #security }
+## Security vulnerabilities {: #security }
 
 If your product is associated with a security vulnerability that could be exploited to compromise
 another application, service, browser, or system, we may remove your product from the Chrome Web
@@ -254,18 +254,18 @@ Deceptive installation tactics include:
 
 For more information about this policy, please see the [Developer FAQ][deceptive-installation].
 
-## Spam & Placement in the Store {: #spam }
+## Spam and placement in the store {: #spam }
 
 Developers are important partners in maintaining a great user experience in the Chrome Web Store.
 
-### Repetitive Content {: #repetitive-content }
+### Repetitive content {: #repetitive-content }
 
 We don't allow any developer, related developer accounts, or their
 affiliates to submit multiple extensions that provide duplicate experiences or functionality on the
 Chrome Web Store. Extensions should provide value to users through the creation of unique content or
 services.
 
-### Keyword Spam {: #keyword-spam }
+### Keyword spam {: #keyword-spam }
 
 Keyword Spam is the practice of including irrelevant or excessive keywords in an
 extensions description in an attempt to manipulate its ranking, resulting in a spammy, negative user
@@ -282,7 +282,7 @@ Some examples of Keyword Spam include:
 - Unnatural repetition of the same keyword more than 5 times
 - Unattributed or anonymous user testimonials in the product's description.
 
-### User Ratings, Reviews, and Installs {: #ratings-reviews }
+### User ratings, reviews, and installs {: #ratings-reviews }
 
 Developers must not attempt to manipulate the placement of
 any extensions in the Chrome Web Store. This includes, but is not limited to, inflating product
@@ -295,13 +295,13 @@ Do not post an extension with a single purpose of installing or launching anothe
 app, theme, webpage, or extension. Extensions with broken functionality—such as dead sites or
 non-functioning features—are not allowed.
 
-### Notification Abuse {: #notifications }
+### Notification abuse {: #notifications }
 
 We do not allow extensions that abuse, or are associated with abuse, of
 notifications by sending spam, ads, promotions, phishing attempts, or unwanted messages that harm
 the user's browsing experience.
 
-### Message Spam {: #messages }
+### Message spam {: #messages }
 
 We don't allow extensions that send messages on behalf of the user without giving
 the user the ability to confirm the content and intended recipients.
@@ -313,7 +313,7 @@ For additional information about the spam policy, see the [Spam FAQ][faq-spam].
 
 For information about Product ranking, please see [these FAQs][faq-product-ranking].
 
-## User Data Privacy {: #userdata }
+## User data privacy {: #userdata }
 
 You must be transparent in how you handle user data (e.g., information provided by a user or
 collected about a user or a user's use of the Product or Chrome Browser), including by disclosing
@@ -323,9 +323,9 @@ requirements; you or your Product must comply with applicable laws.
 
 Please see this [FAQ][faq-user-data].
 
-### Personal or Sensitive User Data {: #userdata_psud }
+### Personal or sensitive user data {: #userdata_psud }
 
-#### Posting a Privacy Policy & Secure Transmission {: #post-privacy-policy }
+#### Posting a privacy policy and secure transmission {: #post-privacy-policy }
 
 If your Product handles personal or sensitive user data (including personally identifiable
 information, financial and payment information, health information, authentication information,
@@ -335,7 +335,7 @@ communications), then your Product must:
 - Post a privacy policy, and
 - Handle the user data securely, including transmitting it via modern cryptography.
 
-#### Privacy Policy Requirements {: #privacy-policy-req }
+#### privacy policy requirements {: #privacy-policy-req }
 
 The privacy policy must, together with any in-Product disclosures, comprehensively disclose how your
 Product collects, uses and shares user data, including the types of parties with whom it's shared.
@@ -343,7 +343,7 @@ You must make the the policy accessible by providing a link:
 
 - In the [designated field][account-settings] in the Chrome Web Store Developer Dashboard.
 
-#### Prominent Disclosure Requirement {: #prominent-disclosure }
+#### Prominent disclosure requirement {: #prominent-disclosure }
 
 If your Product handles personal or sensitive user data that is not closely related to functionality
 described prominently in the Product's Chrome Web Store page and user interface, then prior to the
@@ -352,7 +352,7 @@ collection, it must:
 - Prominently disclose how the user data will be used, and
 - Obtain the user's affirmative consent for such use.
 
-#### Other Requirements {: #other-userdata }
+#### Other requirements {: #other-userdata }
 
 The following types of personal or sensitive user data are also subject to additional requirements:
 
@@ -379,7 +379,7 @@ The following types of personal or sensitive user data are also subject to addit
     </tbody>
   </table>
 
-### Limited Uses of User Data {: #limited_use }
+### Limited uses of user data {: #limited_use }
 
 Upon accessing personal and sensitive user data for a single purpose, your use of the user data
 obtained must comply with the below requirements. The requirements apply to both the raw data
@@ -414,7 +414,7 @@ be disclosed on a website belonging to your extension; e.g., A link on a homepag
 page or privacy policy noting: "The use of information received from Google APIs will adhere to the
 [Chrome Web Store User Data Policy][section-user-data], including the [Limited Use][section-limited-use] requirements."
 
-### Use of Permissions {: #permissions }
+### Use of permissions {: #permissions }
 
 Request access to the narrowest permissions necessary to implement your Product's features or
 services. If more than one permission could be used to implement a feature, you must request those
@@ -429,7 +429,7 @@ Ads are considered part of your Product for purposes of content review and compl
 terms, and therefore must comply with the above content policies. Ads which are inconsistent with
 the [content rating][content-rating] of your products or extension are also in violation of our developer terms.
 
-### Ads Context and Attribution {: #ads-context }
+### Ads context and attribution {: #ads-context }
 
 Ads must be presented in context or clearly state which product they are bundled with. Ads must
 also be easily removable by either adjusting the settings or uninstalling the product altogether.
@@ -439,7 +439,7 @@ Ads may not simulate or impersonate system notifications or warnings.
 
 Forcing the user to click on ads or submit personal information for advertising purposes in orderto fully use an app or extension provides a poor user experience and is prohibited.
 
-### Interfering with Third-party Ads and Websites {: #interfering-ads }
+### Interfering with third-party ads and websites {: #interfering-ads }
 
 Ads associated with your product may not interfere with any ads on a third-party website or
 application. You may show ads alongside a third-party website only if all of the following
@@ -457,9 +457,9 @@ Currently, AdSense may not be used to serve ads in Products, per [AdSense polici
 {% endAside %}
 
 
-## Extensions Quality Guidelines {: #extensions }
+## Extensions quality guidelines {: #extensions }
 
-### Single Purpose {: #single-purpose }
+### Single purpose {: #single-purpose }
 
 An extension must have a single purpose that is narrow and easy-to-understand. Do not create an
 extension that requires users to accept bundles of unrelated functionality. If two pieces of
@@ -476,7 +476,7 @@ Common violations include:
 
 Please see this [FAQ][faq-extension-quality] for more information.
 
-### API Use {: #api-use }
+### API use {: #api-use }
 
 Extensions must use existing Chrome APIs for their designated use case. Use of any other method, for
 which an API exists, would be considered a violation. For example, overriding the Chrome New Tab
@@ -523,29 +523,29 @@ requirements:
   illegal transaction or the sale or exchange of any illegal or prohibited goods or services,
   including the prohibited products set forth in the [Content Policies for Google Checkout][checkout-content-policy].
 
-## Policy Enforcement {: #policy_enforcement }
+## Policy enforcement {: #policy_enforcement }
 
 ### Repeat abuse {: #repeat-abuse }
 
-Serious or repeated violations of the Chrome Web Store Distribution Agreement or these Program
-Policies will result in the suspension of your developer account, and possibly related developer
+Serious or repeated violations of the Chrome Web Store distribution agreement or these program
+policies will result in the suspension of your developer account, and possibly related developer
 accounts. Additionally, you may be banned from using the Chrome Web Store. In extreme cases, this
 may also result in the suspension of related Google services associated with your Google account.
 Repeated infringement of intellectual property rights, including copyright, will also result in
 account termination. For more information on Google's copyright policies, please use [this
 tool][report-content].
 
-### Enforcement Circumvention {: #enforcement-circumvention }
+### Enforcement circumvention {: #enforcement-circumvention }
 
 Any attempt to circumvent intended limitations or enforcement actions will result in the immediate
 termination of your developer account, and possibly related developer accounts.
 
-### Notifications and Appeals {: #appeals }
+### Notifications and appeals {: #appeals }
 
 In the event that your Product is removed from Chrome Web Store, you will receive an email
 notification to that effect, with further instructions if applicable. Please verify that the
 associated publisher account with your Product can receive emails from external parties and not get
-flagged as Spam to ensure that you receive all communications in a timely manner.
+flagged as spam to ensure that you receive all communications in a timely manner.
 
 [account-settings]: /docs/webstore/publish/#setup-a-developer-account
 [adsense]: https://support.google.com/adsense/bin/answer.py?hl=en&answer=48182

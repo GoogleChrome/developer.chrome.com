@@ -33,7 +33,7 @@ The Web Store is a publicly available site on which Developers can publish Produ
 and use in connection with Google Chrome. In order to publish Products on the Web Store, you must
 acquire and maintain a valid Google account.
 
-## 2\. Accepting this Agreement {: #accepting }
+## 2\. Accepting this agreement {: #accepting }
 
 2.1 Your use of the Web Store to distribute Products is governed by a legal agreement between you
 and Google consisting of the Google Terms of Service (found at [https://policies.google.com/terms][google-terms]),
@@ -228,7 +228,7 @@ Google Chrome Brand Features for the Term of this Agreement solely for marketing
 in accordance with the Google Chrome Brand Guidelines located at
 [https://developer.chrome.com/docs/webstore/branding][branding].
 
-## 7\. Product Takedowns, Review, and Updates {: #review }
+## 7\. Product takedowns, review, and updates {: #review }
 
 7.1 Your Takedowns. You may remove your Products from future distribution via the Web Store at any
 time, but you must comply with this Agreement for any Products distributed through the Web Store.
@@ -306,7 +306,7 @@ including but not limited to: (a) violation of the Agreement or the Google Chrom
 Policies, or (b) infringement upon any intellectual property rights, including copyright. For more
 information on Google's copyright policies, use [this tool][google-copyright].
 
-## 9\. Privacy and Information {: #privacy }
+## 9\. Privacy and information {: #privacy }
 
 9.1 In order to continually innovate and improve the Web Store, Google may collect certain usage
 statistics from the Web Store and user machines, devices, or other hardware, including information
