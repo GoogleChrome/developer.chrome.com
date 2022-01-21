@@ -201,7 +201,6 @@ This change limits access to extension resources to specific sites/extensions.
 Instead of providing a list of files, you now provide a list of objects, each
 of which can map to a set of resources to a set of URLs or extension IDs:
 
-{% Columns %}
 ```json
 // Manifest V2
 
@@ -234,8 +233,6 @@ Where the following placeholders are used:
   pattern][doc-match-pattern] that specifies which sites can access this set of resources.
 - <code><var>EXTENSION_IDS</var></code>: A list of strings, each containing the ID of a given
   extension.
-
-{% endColumns %}
 
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
