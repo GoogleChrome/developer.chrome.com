@@ -201,6 +201,8 @@ This change limits access to extension resources to specific sites/extensions.
 Instead of providing a list of files, you now provide a list of objects, each
 of which can map to a set of resources to a set of URLs or extension IDs:
 
+{% Columns %}
+
 ```json
 // Manifest V2
 
@@ -208,11 +210,6 @@ of which can map to a set of resources to a set of URLs or extension IDs:
   RESOURCE_PATHS
 ]
 ```
-
-Where the following placeholders are used:
-
-- <code><var>RESOURCE_PATHS</var></code>: A list of strings, each containing a relative path to a
-  given resource from the extension's root directory.
 
 ```json
 // Manifest V3
@@ -225,7 +222,9 @@ Where the following placeholders are used:
 }]
 ```
 
-Where the following placeholders are used:
+{% endColumns %}
+
+Replace the following:
 
 - <code><var>RESOURCE_PATHS</var></code>: A list of strings, each containing a relative path to a
   given resource from the extension's root directory.
