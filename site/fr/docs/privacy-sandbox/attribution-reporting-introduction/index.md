@@ -31,7 +31,7 @@ Cette proposition est développée de manière ouverte. La proposition et les di
 
 ## Pourquoi cette API est-elle nécessaire ?
 
-Aujourd'hui, la mesure des conversions publicitaires repose souvent sur des [cookies tiers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies). Les navigateurs restreignent l'accès aux cookies tiers, car ils peuvent être utilisés pour effectuer le suivi des utilisateurs sur tous les sites et entraver la confidentialité des utilisateurs. Cette API permet ces mesures de manière à préserver la confidentialité, sans cookies tiers.
+Aujourd'hui, la mesure des conversions publicitaires repose souvent sur des [cookies tiers](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies). Les navigateurs restreignent l'accès aux cookies tiers, car ils peuvent être utilisés pour effectuer le suivi des utilisateurs sur tous les sites et entraver la confidentialité des utilisateurs. Cette API permet ces mesures de manière à préserver la confidentialité, sans cookies tiers.
 
 ## Qui doit avoir connaissance de cette API ?
 
@@ -72,7 +72,7 @@ Si vous testez l'API dans Chrome, vous aurez accès à toutes les fonctionnalit�
 
 #### Expérimentez avec des utilisateurs finaux sur un site déployé
 
-1. Activez l'API pour les utilisateurs finaux en vous inscrivant à une [phase d'évaluation](https://developer.chrome.com/blog/origin-trials/) si disponible. Cela vous permet d'accéder aux fonctionnalités expérimentales et de créer des fonctionnalités que vous pouvez essayer pendant une durée limitée. Notez que les [phases d'évaluation tiers](https://developer.chrome.com/blog/third-party-origin-trials/) permettent à des acteurs tiers tels que des fournisseurs de services de publicité et de mesure de tester une API sur plusieurs sites. **Pour voir les phases d'évaluation actuellement disponibles pour cette API, rendez-vous sur [État](#status)**. Pour être informé des futures phases d'évaluation, rejoignez la [liste de diffusion Attribution Reporting pour les développeurs](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
+1. Activez l'API pour les utilisateurs finaux en vous inscrivant à une [phase d'évaluation](/blog/origin-trials/) si disponible. Cela vous permet d'accéder aux fonctionnalités expérimentales et de créer des fonctionnalités que vous pouvez essayer pendant une durée limitée. Notez que les [phases d'évaluation tiers](/blog/third-party-origin-trials/) permettent à des acteurs tiers tels que des fournisseurs de services de publicité et de mesure de tester une API sur plusieurs sites. **Pour voir les phases d'évaluation actuellement disponibles pour cette API, rendez-vous sur [État](#status)**. Pour être informé des futures phases d'évaluation, rejoignez la [liste de diffusion Attribution Reporting pour les développeurs](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
 
 2. Intégrez l'API dans vos sites et systèmes.
 
@@ -139,8 +139,8 @@ Les autres fonctionnalités proposées dans cette API sont l'[attribution app-to
 
 {% Aside %}<br> Dans un futur sans cookies tiers, cette API serait combinée à d'autres API publicitaires préservant la confidentialité afin de couvrir les cas d'utilisation de bout en bout :
 
-- Remarketing : voir [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
-- Sélection d'annonces basées sur les centres d'intérêt : voir [FLoC](https://developer.chrome.com/docs/privacy-sandbox/floc/)
+- Remarketing : voir [FLEDGE](/docs/privacy-sandbox/fledge/)
+- Sélection d'annonces basées sur les centres d'intérêt : voir [FLoC](/docs/privacy-sandbox/floc/)
 
 {% endAside %}
 
@@ -156,7 +156,7 @@ Les autres fonctionnalités proposées dans cette API sont l'[attribution app-to
 - `🧪 Experiment (BROWSER_NAME)` (tests) : une version de test est disponible dans BROWSER_NAME. Dans Chrome, une version de test s'appelle une phase d'évaluation.
 - `🚀 Stable (BROWSER_NAME)` : la fonctionnalité est livrée par défaut dans BROWSER_NAME.
 
-{% Aside %}<br> [Phase d'évaluation actuelle](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (test Chrome) {% endAside %}
+{% Aside %}<br> [Phase d'évaluation actuelle](/origintrials/#/view_trial/3411476717733150721) (test Chrome) {% endAside %}
 
 {% Aside 'caution' %}<br> Des phases d'évaluation multiples (expériences) seront effectuées. Chaque version est utilisée pour améliorer et ajuster l'API en fonction des commentaires de l'écosystème. {% endAside %}
 
@@ -346,7 +346,7 @@ Les rapports agrégés associent un événement de clic ou de vue détaillé à 
 ## Sites et contrôle des utilisateurs
 
 - Les utilisateurs peuvent se désinscrire via les paramètres utilisateur sur `chrome://settings/privacySandbox`.
-- Par défaut, la fonctionnalité est activée dans les contextes de niveau supérieur. Les tiers arbitraires ne peuvent pas utiliser l'API à l'insu de l'éditeur, car l'API Attribution Reporting doit être activée dans les iFrames enfants via une [politique d'autorisation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy).
+- Par défaut, la fonctionnalité est activée dans les contextes de niveau supérieur. Les tiers arbitraires ne peuvent pas utiliser l'API à l'insu de l'éditeur, car l'API Attribution Reporting doit être activée dans les iFrames enfants via une [politique d'autorisation](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
 
 ## Questions ouvertes
 
