@@ -12,7 +12,7 @@ authors:
 ## État d'implémentation
 
 - [En phase d'évaluation](https://web.dev/origin-trials/) Chrome 84 à 94.
-- [Inscrivez-vous à la phase d'évaluation](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- [Inscrivez-vous à la phase d'évaluation](/origintrials/#/view_trial/2479231594867458049).
 - [Démo](https://trust-token-demo.glitch.me/).
 - [Intégration des outils pour les développeurs Chrome](https://developers.google.com/web/updates/2021/01/devtools?utm_source=devtools#trust-token).
 - [État de la plate-forme Chrome](https://www.chromestatus.com/feature/5078049450098688).
@@ -40,7 +40,7 @@ Malheureusement, de nombreux mécanismes existants pour évaluer et propager la 
 
 Avec l'API Trust Tokens, un site web peut émettre des jetons cryptographiques à un utilisateur en qui il a confiance, qui peuvent ensuite être utilisés ailleurs. Les jetons sont stockés en toute sécurité par le navigateur de l'utilisateur et peuvent ensuite être utilisés dans d'autres contextes pour confirmer l'authenticité de l'utilisateur. Cela permet de transmettre la confiance d'un utilisateur sur un site web (tel qu'un réseau social ou un service de messagerie) à un autre site web (tel qu'un éditeur ou une boutique en ligne), le tout sans identifier l'utilisateur ni lier les identités entre les sites.
 
-{% Aside 'key-term' %}<br> Le [fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) permet aux sites d'identifier et de suivre les utilisateurs individuels en obtenant des données sur leur appareil, leur système d'exploitation et la configuration du navigateur (telles que les préférences de langue, l'[user-agent](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) et les polices disponibles) ou les changements d'état de l'appareil. Cela peut être fait sur le serveur en vérifiant les en-têtes de requête ou sur le client avec JavaScript. {% endAside %}
+{% Aside 'key-term' %}<br> Le [fingerprinting](https://w3c.github.io/fingerprinting-guidance/#passive) permet aux sites d'identifier et de suivre les utilisateurs individuels en obtenant des données sur leur appareil, leur système d'exploitation et la configuration du navigateur (telles que les préférences de langue, l'[user-agent](https://developer.mozilla.org/docs/Web/API/NavigatorID/userAgent) et les polices disponibles) ou les changements d'état de l'appareil. Cela peut être fait sur le serveur en vérifiant les en-têtes de requête ou sur le client avec JavaScript. {% endAside %}
 
 Le fingerprinting utilise des mécanismes que les utilisateurs ne connaissent pas et ne peuvent pas contrôler. Des sites tels que [Panopticlick](https://panopticlick.eff.org/) et [amiunique.org](https://amiunique.org/) montrent comment les données de fingerprinting peuvent être combinées pour vous identifier en tant qu'individu.
 
@@ -67,7 +67,7 @@ Dans cet exemple, un site web d'éditeur souhaite vérifier si un utilisateur es
 
 ## Interagir et donner son avis
 
-- **Phase d'évaluation** : inscrivez-vous et participez à la [phase d'évaluation de Chrome](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- **Phase d'évaluation** : inscrivez-vous et participez à la [phase d'évaluation de Chrome](/origintrials/#/view_trial/2479231594867458049).
 - **Démo** : essayez d'[émettre et de recevoir](https://trust-token-demo.glitch.me/) des jetons de confiance.
 - **GitHub** : lisez la [proposition](https://github.com/WICG/trust-token-api), [posez des questions et suivez la discussion](https://github.com/WICG/trust-token-api/issues).
 - **W3C** : discutez des cas d'utilisation du secteur au sein du groupe [Improving Web Advertising Business Group](https://www.w3.org/community/web-adv/participants).
