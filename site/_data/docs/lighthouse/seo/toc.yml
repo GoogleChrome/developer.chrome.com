@@ -1,0 +1,13 @@
+- title: i18n.docs.seo
+  sections:
+    - url: /docs/lighthouse/seo/canonical
+    - url: /docs/lighthouse/seo/font-size
+    - url: /docs/lighthouse/seo/hreflang
+    - url: /docs/lighthouse/seo/http-status-code
+    - url: /docs/lighthouse/seo/is-crawlable
+    - url: /docs/lighthouse/seo/link-text
+    - url: /docs/lighthouse/seo/meta-description
+    - url: /docs/lighthouse/seo/plugins
+    - url: /docs/lighthouse/seo/robots-txt
+    - url: /docs/lighthouse/seo/structured-data
+    - url: /docs/lighthouse/seo/tap-targets
