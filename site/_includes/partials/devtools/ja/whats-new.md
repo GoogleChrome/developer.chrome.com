@@ -4,18 +4,18 @@
 
 ### Chrome 98 {: #chrome98 }
 * [プレビュー機能: フルページアクセシビリティツリー](/ja/blog/new-in-devtools-98/#a11y-tree)
-* [Changesタブで変更点のよりわかりやすい表示](/ja/blog/new-in-devtools-98/#changes)
+* [Changes タブで変更点のよりわかりやすい表示](/ja/blog/new-in-devtools-98/#changes)
 * [ユーザーフローレコーディングのタイムアウト時間を長く設定する](/ja/blog/new-in-devtools-98/#recorder-timeout)
-* [Back/forward cacheタブでページがキャッシュ可能であることを確認する](/ja/blog/new-in-devtools-98/#bfcache)
-* [新しいPropertiesペインのフィルター](/ja/blog/new-in-devtools-98/#properties)
-* [CSSのforce-colorsメディア機能のエミュレート](/ja/blog/new-in-devtools-98/#forced-colors)
+* [Back/forward cache タブでページがキャッシュ可能であることを確認する](/ja/blog/new-in-devtools-98/#bfcache)
+* [新しい Properties ペインのフィルター](/ja/blog/new-in-devtools-98/#properties)
+* [CSS の force-colors メディア機能のエミュレート](/ja/blog/new-in-devtools-98/#forced-colors)
 * [ホバー時にルーラーを表示するコマンド](/ja/blog/new-in-devtools-98/#show-rulers)
 * [Flexbox エディターで `row-reverse` と `column-reverse` をサポート](/ja/blog/new-in-devtools-98/#flexbox-editor)
-* [XHRのリプレイと全検索結果の展開に新しいキーボードショートカットを追加](/ja/blog/new-in-devtools-98/#shortcuts)
-* [LighthouseパネルのLighthouse 9](/ja/blog/new-in-devtools-98/#lighthouse)
+* [XHR のリプレイと全検索結果の展開に新しいキーボードショートカットを追加](/ja/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse パネルの Lighthouse 9](/ja/blog/new-in-devtools-98/#lighthouse)
 * [Sources パネルの改善](/ja/blog/new-in-devtools-98/#sources)
 * [その他のハイライト](/ja/blog/new-in-devtools-98/#misc)
-* [[実験的] Reporting APIペインにEndpointsを追加](/ja/blog/new-in-devtools-98/#reporting-api)
+* [[実験的] Reporting API ペインに Endpoints を追加](/ja/blog/new-in-devtools-98/#reporting-api)
 
 
 ### Chrome 97 {: #chrome97 }
