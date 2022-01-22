@@ -53,7 +53,7 @@ Chromium issue: [887173](https://crbug.com/887173)
 
 
 <!-- ## More precise changes in the Changes tab {: #changes }  -->
-## 변경 탭에서의 더욱 정교한 변화들
+## 변경 탭에서의 더욱 정교한 변화들 {: #changes }
 <!-- The code changes in the **Changes** tab is pretty-printed automatically.  -->
 **변경** 탭에서의 코드 체인지들은 자동적으로 화사하게 프린트됩니다. <!-- 문맥에 맞는 단어 선택 필요 -->
 <!-- Previously, it was hard to trace the actual changes of minified source code because all the code is shown in a single line.  -->
@@ -67,7 +67,7 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 
 
 <!-- ## Set longer timeout for user flow recording {: #recorder-timeout } -->
-## 유저 플로우 레코딩을 위한 길어진 타임아웃 설정
+## 유저 플로우 레코딩을 위한 길어진 타임아웃 설정 {: #recorder-timeout }
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
 이제 여러분들은 [레코더](/docs/devtools/recorder/)에서 모든 단계 혹은 특정한 단계에서의 **타임아웃** 설정을 조정할 수 있게 됐습니다. 이 기능은 느린 네트워크 요청과 긴 애니메이션이 포함된 페이지에서 유용하게 사용될 것입니다.
 
@@ -127,7 +127,7 @@ Chromium issue: [1269674](https://crbug.com/1269674)
 
 
 <!-- ## Emulate the CSS forced-colors media feature {: #forced-colors } -->
- ## CSS의 forced-colors 미디어 기능 에뮬레이팅
+ ## CSS의 forced-colors 미디어 기능 에뮬레이팅 {: #forced-colors }
 
 <!-- The [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) CSS media feature is used to detect if the user agent has enabled a forced colors mode (e.g. Windows High Contrast mode) where it enforces a user-chosen limited color palette on the page.  -->
 User agent 가 웹페이지에서 사용자가 선택한 제한된 색 팔레트를 사용하도록 강제하는 forced-colors 모드 (예: 윈도우즈 하이 콘트라스트 모드)를 활성화했는지의 여부를 CSS의 [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) 미디어 기능을 통해 알아볼 수 있습니다.
