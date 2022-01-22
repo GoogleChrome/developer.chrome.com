@@ -205,13 +205,16 @@ Chromium issue: [1050021](https://crbug.com/1050021)
 
 Chromium issue: [1255073](https://crbug.com/1255073)
 
-## Lighthouse 9 in the Lighthouse panel {: #lighthouse }
-
+<!-- ## Lighthouse 9 in the Lighthouse panel {: #lighthouse } -->
+## Lighthouse panel의 Lighthouse 9 {: #lighthouse }
 <!-- The **Lighthouse** panel is now running Lighthouse 9. Lighthouse will now list all the elements sharing the same id. -->
+**Lighthouse** 패널은 현재 Lighthouse 9를 구동하고 있습니다. Lighthouse는 곧 같은 아이디를 공유하는 모든 요소들을 나열할 것입니다.
 
 <!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/duplicate-id-aria/).  -->
+요소들의 비고유한 아이디는 흔히 발생하는 접근성 문제입니다. 예를 들면, `aria-labelledby` 속성이 참조하는 아이디는 [Multiple elements](https://web.dev/duplicate-id-aria/) 에서 사용됩니다.
 
 <!-- Check out the [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
+[What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) 에서 구체적인 사항들과 업데이트를 확인해 보세요!
 
 ​{% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/gZI1flmYHuUpF637Idzy.png", alt="A Lighthouse audit for 'All focusable elements must have a unique `id`', showing two elements, both with the same `id`", width="800", height="380", class="screenshot" %}
 
@@ -220,20 +223,27 @@ Chromium issue: [1255073](https://crbug.com/1255073)
 Chromium issue: [772558](https://crbug.com/772558)
 
 <!-- ## Improved Sources panel {: #sources } -->
+## Improved Sources panel {: #sources }
 
 <!-- Loads of stability improvements in the **Sources** panel as we upgraded it to use [CodeMirror 6](https://codemirror.net/6/). Here are few notable improvements: -->
+[CodeMirror 6](https://codemirror.net/6/)에서 사용할 수 있도록 업그레이드하면서 **Sources** 패널의 안정성이 많이 개선되었습니다. 몇 가지의 괄목할 만한 개선사항이 아래에 있습니다!
 
 <!-- - Significantly faster when opening large files (e.g. WASM, JavaScript)
 - No more random scrolling when stepping through code
 - Improved auto-complete suggestions for editable sources (e.g. snippets, local override)  -->
+
+- 대용량 파일들을 열 때의 속도가 향상되었습니다. (예: WASM, JavaScript)
+- 코드를 단계별로 실행할 때 무작위 스크롤이 더 이상 발생하지 않습니다.
+- 편집가능한 소스(예: snippets, local override)에 대한 자동완성 제안이 개선되었습니다. 
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/c1ab112d9002d5c3b3bb70cf2839bac182f0cdb5 #}
 
 Chromium issue: [1241848](https://crbug.com/1241848) 
 
 <!-- ## Miscellaneous highlights {: #misc } -->
-
+## 기타 하이라이트 {: #misc }
 <!-- These are some noteworthy fixes in this release: -->
+이번 배포에 여러 가지 주목할 만한 개선점들이 추가되었습니다:
 
 <!-- - Properly displaying the waterfall diagram of network requests. Previously, the style was broken. ([1275501](https://crbug.com/1275501))
 - The code highlight was broken when searching in documents with very long lines in the **Sources** panel. It’s now fixed. ([1275496](https://crbug.com/1275496))
@@ -241,6 +251,10 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 - Fixed the missing layout shifts details in the **Summary** section of the **Performance** panel. ([1259606](https://crbug.com/1259606))
 - Support arbitrary characters (e.g. `,`, `.`),  in **Network Search** queries. ([1267196](https://crbug.com/1267196)) -->
 
+- **Sources** 패널에서 너무 긴 문서를 검색할 때 코드 하이라이트가 동작하지 않았던 문제가 수정되었습니다. ([1275496](https://crbug.com/1275496))
+- 네트워크 요청에서 중복된 **페이로드** 탭이 더 이상 없습니다. ([1273972](https://crbug.com/1273972)) 
+- **성능** 패널의 **요약** 섹션에서 누락된 레이아웃 변경 세부정보가 수정되었습니다. ([1259606](https://crbug.com/1259606))
+-**Network Search** 질의에서 임의의 문자(예: `,`, `.`)를 지원합니다.
 
 <!-- ### [Experimental] Endpoints in the Reporting API pane {: #reporting-api } -->
 
