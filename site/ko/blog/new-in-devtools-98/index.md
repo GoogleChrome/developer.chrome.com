@@ -171,11 +171,11 @@ Chromium issue: [1263866](https://crbug.com/1263866)
 
 
 <!-- ## New keyboard shortcuts to replay XHR and expand all search results {: #shortcuts } -->
-
+## XHR 다시 재생 및 모든 검색 결과 표시를 위한 키보드 단축키 추가 {: #shortcuts }
 <!-- ### Keyboard shortcuts to replay XHR in the Network panel {: #replay-xhr } -->
-
+### 네트워크 패널의 XHR 다시 재생 단축키 {: #replay-xhr }
 <!-- Select a XHR request in the **Network** panel and press **R** on the keyboard to replay the XHR. Previously, you can only replay the XHR via the context menu (right click > **Replay XHR**) -->
-
+이전 버전에서는 컨텍스트 메뉴를 통해서만 XHR을 리플레이할 수 있었으나, 새 버전에서는 **네트워크** 패널에서 XHR 요청을 선택하고 *R*키를 눌러서 XHR을 다시 재생할 수 있습니다.
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/M3s35wS3A0OoKMeubzMx.png", alt="replay XHR", width="800", height="530" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/ee4a6138511d69a549677c31b563484e25855d1f #}
@@ -184,10 +184,10 @@ Chromium issue: [1050021](https://crbug.com/1050021)
 
  
 <!-- ### Keyboard shortcut to expand all search results {: #toggle-search-result } -->
+### 모든 검색 결과 키보드 단축키 {: #toggle-search-result }
 
 <!-- A new shortcut is added in the **Search** tab allowing you to expand and collapse all the search results. Previously, you could only expand and collapse the search results by clicking on one file at a time. -->
-
-<!-- Open the search tab via **Esc** > **3-dot** menu > **Search**. Enter a search string (e.g. function) and press **Enter** to see the list of search results. Focus on the search results and use the following shortcut to expand/collapse the search files: -->
+**검색** 탭에 모든 검색 결과를 열고 닫을 수 있는 단축키가 추가되었습니다. 이전에는 한 번에 하나의 파일을 클릭해야만 검색 결과를 확장 및 축소할 수 있었습니다.
 
 - **Windows / Linux** - `Ctrl` + `Shift` + `{` or `}`
 - **MacOS** - `Cmd` + `Options` + `{` or `}`
