@@ -108,12 +108,16 @@ Chromium issue: [1110752](https://crbug.com/1110752)
 
 
 <!-- ## New Properties pane filter {: #properties } -->
-
+## 새로 추가된 프로퍼티 창 필터
 <!-- If you want to focus on a specific property in the **Properties** pane, you can now type that property name or value in the new **Filter** textbox.  -->
+**프로퍼티** 창의 특정 프로퍼티에 초점을 맞추고 싶으시다면, 배포판에 새로 추가된 **필터** 입력창에 프로퍼티의 이름이나 값을 기입하면 됩니다.
 
-<!-- By default, properties whose value is `null` or `undefined` are not shown. Enable the **Show all** checkbox to view all properties.  -->
+<!-- By default, properties whose value is `null` or `undefined` are not shown. Enable the **Show all** 
+checkbox to view all properties.  -->
+기본적으로 `null` 이나 `undefined` 값을 가지는 프로퍼티들은 표시되지 않습니다. **모두 보기** 체크박스를 클릭하여 모든 프로퍼티들을 볼 수 있도록 합니다.
 
 <!-- These enhancements allow you to get to the properties you care for quicker and thus improve your productivity! -->
+위의 개선된 점을 이용하여 우리는 프로퍼티들에 좀더 빠르게 접근할 수 있으며, 이는 생산성을 높여 줄 수 있는 하나의 팁입니다!
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="Properties pane filter", width="800", height="505" %}
 
@@ -123,10 +127,13 @@ Chromium issue: [1269674](https://crbug.com/1269674)
 
 
 <!-- ## Emulate the CSS forced-colors media feature {: #forced-colors } -->
+ ## CSS의 forced-colors 미디어 기능 에뮬레이팅
 
 <!-- The [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) CSS media feature is used to detect if the user agent has enabled a forced colors mode (e.g. Windows High Contrast mode) where it enforces a user-chosen limited color palette on the page.  -->
+User agent 가 웹페이지에서 사용자가 선택한 제한된 색 팔레트를 사용하도록 강제하는 forced-colors 모드 (예: 윈도우즈 하이 콘트라스트 모드)를 활성화했는지의 여부를 CSS의 [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) 미디어 기능을 통해 알아볼 수 있습니다.
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate CSS media feature forced-colors** dropdown. -->
+[명령 메뉴](/docs/devtools/command-menu/) 를 열고 **Show Rendering** 명령어를 실행한 다음, **Emulate CSS media feature forced-colors** 드롭다운 메뉴를 설정할 수 있습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/75qGjkzfbXfOEJUhML5i.png", alt="CSS forced-colors media feature", width="800", height="623" %}
 
@@ -135,10 +142,13 @@ Chromium issue: [1269674](https://crbug.com/1269674)
 Chromium issue: [1130859](https://crbug.com/1130859)
 
 <!-- ## Show rulers on hover command {: #show-rulers } -->
+## Hover 커맨드에서 눈금 표시하기 {: #show-rulers }
 
 <!-- You can now open the [Command Menu](/docs/devtools/command-menu/) and run the **Show rulers on hover** command. The page rulers make it easier to measure the width and height of an element. -->
+여러분은 이제 [Command Menu](/docs/devtools/command-menu/) 를 열고 **Hover** 명령어 위에서 **눈금 보이기**를 실행할 수 있습니다. 페이지의 눈금 기능을 이용하여 우리는 각 요소의 길이와 넓이를 좀더 쉽게 측정할 수 있습니다. 
 
 <!-- Previously, you can only enable the page rulers via **Settings** > **Show rulers** checkbox. -->
+이전에는 **설정** > **눈금 보이기** 체크박스를 통해 페이지의 눈금 모드를 활성화할 수 있었습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLF6RWO2bm5SMksdayLv.png", alt="Show rulers on hover command", width="800", height="591" %}
 
@@ -148,8 +158,10 @@ Chromium issue: [1270562](https://crbug.com/1270562)
 
 
 <!-- ## Support `row-reverse` and `column-reverse` in the Flexbox editor {: #flexbox-editor } -->
+Flexbox 편집기에서의 `row-reverse` and `column-reverse` 지원 {: #flexbox-editor }
 
 <!-- The [Flexbox editor](/blog/new-in-devtools-90/#flexbox) added two new buttons to support `row-reverse` and `column-reverse` in `flex-direction`.  -->
+[Flexbox editor](/blog/new-in-devtools-90/#flexbox) 에 `flex-direction` 의 `row-reverse` 와 `column-reverse` 를 지원하기 위한 두 개의 버튼이 새롭게 추가되었습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JHI4frP4MqaydXk19sq2.png", alt="Flexbox editor", width="800", height="546" %}
 
