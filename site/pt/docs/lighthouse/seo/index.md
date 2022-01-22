@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/project-landing.njk'
-title: 'Lighthouse SEO Audits'
-description: 'View Lighthouse guides for SEO audits.'
+title: 'Auditorias de SEO '
+description: 'Essas verificações garantem que sua página seja otimizada para a classificação de resultados do mecanismo de busca.'
 project_key: lighthouse/seo
 ---
