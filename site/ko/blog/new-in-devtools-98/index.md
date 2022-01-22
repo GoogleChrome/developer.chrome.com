@@ -189,17 +189,21 @@ Chromium issue: [1050021](https://crbug.com/1050021)
 <!-- A new shortcut is added in the **Search** tab allowing you to expand and collapse all the search results. Previously, you could only expand and collapse the search results by clicking on one file at a time. -->
 **검색** 탭에 모든 검색 결과를 열고 닫을 수 있는 단축키가 추가되었습니다. 이전에는 한 번에 하나의 파일을 클릭해야만 검색 결과를 확장 및 축소할 수 있었습니다.
 
+<!-- Open the search tab via **Esc** > **3-dot** menu > **Search**. Enter a search string (e.g. function) and press **Enter** to see the list of search results. Focus on the search results and use the following shortcut to expand/collapse the search files: -->
+
+*Esc** > **점 3개 메뉴** > **검색** 을 통해 검색 탭을 엽니다. 검색하고자 하는 스트링(예: function)을 입력하고 **Enter**를 눌러서 검색 결과 리스트를 볼 수 있습니다. 검색 결과에 포커싱을 주고 다음 단축키를 사용하여 검색된 파일들을 확장 및 축소할 수 있습니다.
+
 - **Windows / Linux** - `Ctrl` + `Shift` + `{` or `}`
 - **MacOS** - `Cmd` + `Options` + `{` or `}`
 
 <!-- Go to the [keyboard shortcuts](/docs/devtools/shortcuts/) for reference of keyboard shortcuts in Chrome DevTools. -->
+[키보드 단축키](/docs/devtools/shortcuts/) 에서 크롬 DevTools 의 단축키를 참고할 수 있습니다.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/v11XfQLwp7w9qIk440QP.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/9cbd6c9453ca55edb0f155068830b1ad69c5136e #}
 
 Chromium issue: [1255073](https://crbug.com/1255073)
-
 
 ## Lighthouse 9 in the Lighthouse panel {: #lighthouse }
 
