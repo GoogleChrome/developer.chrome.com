@@ -1,6 +1,6 @@
 ---
-layout: "layouts/doc-post.njk"
-title: "`robots.txt` is not valid"
+layout: 'layouts/doc-post.njk'
+title: '`robots.txt` is not valid'
 description: |
   Learn about the "robots.txt is not valid" Lighthouse audit.
 date: 2019-05-02
@@ -53,7 +53,7 @@ your domain or subdomain.
 
 ### Make sure `robots.txt` doesn't return an HTTP 5XX status code
 
-If your server returns a server error (an [HTTP status code](/http-status-code)
+If your server returns a server error (an [HTTP status code](/docs/lighthouse/seo/http-status-code/)
 in the 500s) for `robots.txt`, search engines won't know which pages should be
 crawled. They may stop crawling your entire site, which would prevent new
 content from being indexed.
@@ -75,7 +75,7 @@ don't disallow each individual file. Instead, disallow all URLs containing
 ### Fix any format errors
 
 - Only empty lines, comments, and directives matching the "name: value" format are
-allowed in `robots.txt`.
+  allowed in `robots.txt`.
 - Make sure `allow` and `disallow` values are either empty or start with `/` or `*`.
 - Don't use `$` in the middle of a value (for example, `allow: /file$html`).
 
@@ -92,14 +92,17 @@ published list. (For example, here's
 Use `*` to match all otherwise unmatched crawlers.
 
 {% Compare 'worse' %}
+
 ```text
 user-agent:
 disallow: /downloads/
 ```
+
 No user agent is defined.
 {% endCompare %}
 
 {% Compare 'better' %}
+
 ```text
 user-agent: *
 disallow: /downloads/
@@ -107,6 +110,7 @@ disallow: /downloads/
 user-agent: magicsearchbot
 disallow: /uploads/
 ```
+
 A general user agent and a `magicsearchbot` user agent are defined.
 {% endCompare %}
 
@@ -118,6 +122,7 @@ directive _before_ the first user-agent name means that no crawlers will follow
 it.
 
 {% Compare 'worse' %}
+
 ```text
 # start of file
 disallow: /downloads/
@@ -125,21 +130,24 @@ disallow: /downloads/
 user-agent: magicsearchbot
 allow: /
 ```
+
 No search engine crawler will read the `disallow: /downloads` directive.
 {% endCompare %}
 
 {% Compare 'better' %}
+
 ```text
 # start of file
 user-agent: *
 disallow: /downloads/
 ```
+
 All search engines are disallowed from crawling the `/downloads` folder.
 {% endCompare %}
 
 Search engine crawlers only follow directives in the section with the most
 specific user-agent name. For example, if you have directives for
-`user-agent: *` and  `user-agent: Googlebot-Image`, Googlebot Images will only
+`user-agent: *` and `user-agent: Googlebot-Image`, Googlebot Images will only
 follow the directives in the `user-agent: Googlebot-Image` section.
 
 #### Provide an absolute URL for `sitemap`
@@ -153,15 +161,19 @@ If you choose to submit a sitemap file in `robots.txt`, make sure to
 use an [absolute URL](https://tools.ietf.org/html/rfc3986#page-27).
 
 {% Compare 'worse' %}
+
 ```text
 sitemap: /sitemap-file.xml
 ```
+
 {% endCompare %}
 
 {% Compare 'better' %}
+
 ```text
 sitemap: https://example.com/sitemap-file.xml
 ```
+
 {% endCompare %}
 
 ## Resources

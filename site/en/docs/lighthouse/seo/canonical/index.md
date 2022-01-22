@@ -1,5 +1,5 @@
 ---
-layout: "layouts/doc-post.njk"
+layout: 'layouts/doc-post.njk'
 title: Document does not have a valid `rel=canonical`
 description: |
   Learn about the "Document does not have a valid rel=canonical" Lighthouse
@@ -23,6 +23,7 @@ _Crawling_ is how a search engine updates its index of content on the web.
 {% endAside %}
 
 Using canonical links has many advantages:
+
 - It helps search engines consolidate multiple URLs into a single, preferred URL. For example,
   if other sites put query parameters on the ends of links to your page, search engines
   consolidate those URLs to your preferred version.
@@ -85,9 +86,9 @@ page.
 
 - Make sure that the canonical URL is valid.
 - Use secure [HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https) canonical URLs rather than HTTP whenever possible.
-- If you use [`hreflang` links](/hreflang) to serve different versions of a page
+- If you use [`hreflang` links](/docs/lighthouse/seo/hreflang/) to serve different versions of a page
   depending on a user's language or country, make sure that the canonical URL
-  points to the   proper page for that respective language or country.
+  points to the proper page for that respective language or country.
 - Don't point the canonical URL to a different domain. Yahoo and Bing don't
   allow this.
 - Don't point lower-level pages to the site's root page unless their content is
@@ -98,7 +99,7 @@ page.
 - Use the [Google Search Console](https://search.google.com/search-console/index)
   to see which URLs Google considers canonical or duplicative across your entire
   site.
-- Don't use Google's URL removal tool for canonization. It removes *all* versions
+- Don't use Google's URL removal tool for canonization. It removes _all_ versions
   of a URL from search.
 
 {% Aside 'note' %}

@@ -1,5 +1,5 @@
 ---
-layout: "layouts/doc-post.njk"
+layout: 'layouts/doc-post.njk'
 title: Tap targets are not sized appropriately
 description: |
   Learn about the "Tap targets are not sized appropriately" Lighthouse audit.
@@ -70,5 +70,5 @@ tap targets.
 
 ## Resources
 
-- [Accessible tap targets](/accessible-tap-targets): more information on how to ensure your tap targets are accessible by all users.
+- [Accessible tap targets](https://web.dev/accessible-tap-targets/): more information on how to ensure your tap targets are accessible by all users.
 - [Source code for **Tap targets are not sized appropriately** audit](https://github.com/GoogleChrome/lighthouse/blob/master/lighthouse-core/audits/seo/tap-targets.js)
