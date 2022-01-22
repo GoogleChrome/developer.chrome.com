@@ -53,7 +53,7 @@ Chromium issue: [887173](https://crbug.com/887173)
 
 
 <!-- ## More precise changes in the Changes tab {: #changes }  -->
-## Changesタブでより正確な変更点 {: #changes } 
+## Changesタブで変更点のよりわかりやすい表示 {: #changes } 
 
 <!-- The code changes in the **Changes** tab is pretty-printed automatically.  -->
 **Changes**タブのコード変更点は、自動的にプリティプリントされます。

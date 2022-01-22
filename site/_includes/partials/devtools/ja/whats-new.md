@@ -4,7 +4,7 @@
 
 ### Chrome 98 {: #chrome98 }
 * [プレビュー機能: フルページアクセシビリティツリー](/ja/blog/new-in-devtools-98/#a11y-tree)
-* [Changesタブでより正確な変更点](/ja/blog/new-in-devtools-98/#changes)
+* [Changesタブで変更点のよりわかりやすい表示](/ja/blog/new-in-devtools-98/#changes)
 * [ユーザーフローレコーディングのタイムアウト時間を長く設定する](/ja/blog/new-in-devtools-98/#recorder-timeout)
 * [Back/forward cacheタブでページがキャッシュ可能であることを確認する](/ja/blog/new-in-devtools-98/#bfcache)
 * [新しいPropertiesペインのフィルター](/ja/blog/new-in-devtools-98/#properties)
