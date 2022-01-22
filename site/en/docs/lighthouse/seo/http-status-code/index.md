@@ -1,5 +1,5 @@
 ---
-layout: "layouts/doc-post.njk"
+layout: 'layouts/doc-post.njk'
 title: Page has unsuccessful HTTP status code
 description: |
   Learn about the "Page has unsuccessful HTTP status code" Lighthouse audit.
@@ -49,7 +49,7 @@ you'll likely need to serve valid content with a 404 status code.
 
 {% Aside 'codelab' %}
 Single-page applications can make fixing HTTP status code errors a bit more
-complicated. Learn how to [fix sneaky 404s in an Express application](/codelab-fix-sneaky-404).
+complicated. Learn how to [fix sneaky 404s in an Express application](https://web.dev/codelab-fix-sneaky-404).
 {% endAside %}
 
 ## Resources
