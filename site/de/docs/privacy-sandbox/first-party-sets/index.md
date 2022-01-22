@@ -14,7 +14,7 @@ authors:
 ## Implementierungsstatus
 
 - [In der Origin-Trial](https://web.dev/origin-trials/) für Chrome 89 bis 93.
-- [Registrieren Sie sich für die Origin-Trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+- [Registrieren Sie sich für die Origin-Trial](/origintrials/#/view_trial/988540118207823873).
 - [Chrome-Plattformstatus](https://chromestatus.com/feature/5640066519007232).
 - [Chromium-Projekte](https://www.chromium.org/updates/first-party-sets).
 
@@ -69,7 +69,7 @@ Das heißt, wenn ein Besucher von b.example oder c.example eine Anfrage an a.exa
 
 ## Beteiligen Sie sich und geben Sie Feedback ab
 
-- **Origin-Trial**: Registrieren Sie sich und nehmen Sie an der [Chrome-Origin-Trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873) teil.
+- **Origin-Trial**: Registrieren Sie sich und nehmen Sie an der [Chrome-Origin-Trial](/origintrials/#/view_trial/988540118207823873) teil.
 - **GitHub**: Lesen Sie den [Vorschlag](https://github.com/privacycg/first-party-sets), stellen Sie [Fragen und verfolgen Sie die Diskussion](https://github.com/privacycg/first-party-sets/issues).
 - **Entwickler-Support**: Stellen Sie im [Privacy-Sandbox-Entwickler-Support-Repository](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support) Fragen und beteiligen Sie sich an Diskussionen.
 
