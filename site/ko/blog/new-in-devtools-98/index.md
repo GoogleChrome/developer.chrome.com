@@ -34,7 +34,7 @@ draft: true
 사용자들은 새로운 **전체 페이지 접근성 트리**를 통해 전체 페이지 [접근성 트리](/blog/full-accessibility-tree/#what-is-the-accessibility-tree)의 개요를 좀더 쉽게 알 수 있으며, 이 기능은 웹 컨텐츠가 어떻게 보조 기술에 노출되는지를 사용자들이 좀더 잘 이해할 수 있도록 합니다.
 
 <!-- In the **Elements** panel, open the **Accessibility** pane and select **Enable full-page accessibility tree** checkbox. Then, reload DevTools and you will see a new accessibility button in the **Elements** panel. -->
-**요소** 패널에서 **접근성** 패널을 열고 **전체 페이지 접근성 트리** 체크박스를 선택합니다. 이후 DevTools를 새로고침하면 **요소** 패널에 접근성 버튼이 생긴 것을 확인할 수 있습니다.
+**요소** 패널에서 **접근성** 패널을 열고 **전체 페이지 접근성 트리 사용 설정** 체크박스를 선택합니다. 이후 DevTools를 새로고침하면 **요소** 패널에 접근성 버튼이 생긴 것을 확인할 수 있습니다.
 
 <!-- Click on it to toggle to the **Full-page accessibility tree** view. You can expand nodes or click to see details in the  **Accessibility** pane. -->
 **전체 페이지 접근성 트리**뷰로 전환하기 위해서, 아래 그림의 왼쪽 아이콘 위에서 클릭합니다. 우리는 각 노드들을 확장할 수 있으며, 각자의 노드를 클릭하여 **접근성** 패널에서 세부 사항들을 볼 수 있습니다.
@@ -69,17 +69,17 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 <!-- ## Set longer timeout for user flow recording {: #recorder-timeout } -->
 ## 유저 플로우 레코딩을 위한 길어진 타임아웃 설정 {: #recorder-timeout }
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
-이제 여러분들은 [레코더](/docs/devtools/recorder/)에서 모든 단계 혹은 특정한 단계에서의 **타임아웃** 설정을 조정할 수 있게 됐습니다. 이 기능은 느린 네트워크 요청과 긴 애니메이션이 포함된 페이지에서 유용하게 사용될 것입니다.
+이제 여러분들은 [Recorder](/docs/devtools/recorder/)에서 모든 단계 혹은 특정한 단계에서의 **타임아웃** 설정을 조정할 수 있게 됐습니다. 이 기능은 느린 네트워크 요청과 긴 애니메이션이 포함된 페이지에서 유용하게 사용될 것입니다.
 
 <!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
 예를 들어, [데모 페이지](https://jec.fyi/demo/pup-slow-result)에서 [유저 플로우 녹화](/docs/devtools/recorder/#record) 를 시작하고 메뉴 항목을 클릭하여 로드합니다. 그러나 메뉴를 불러들이는 것이 6초가 걸렸습니다. 로딩 시간이 5초를 초과-기본 타임아웃-했기 때문에 이 유저 플로우의 [다시보기](/docs/devtools/recorder/#replay)는 정상적으로 동작하지 않았습니다.
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 
-이러한 문제를 해결하기 위해, 여러분은 새롭게 추가된 **타임아웃** 설정을 사용할 수 있습니다. 메뉴 항목에서 우리가 클릭한 스텝을 확장합니다. **타임아웃 추가** 를 이용해 [스텝을 편집](/docs/devtools/recorder/#edit-steps)하고 타임아웃을 **6000** 밀리초 (6초)로 설정합니다.
+이러한 문제를 해결하기 위해, 여러분은 새롭게 추가된 **Timeout** 설정을 사용할 수 있습니다. 메뉴 항목에서 우리가 클릭한 스텝을 확장합니다. **타임아웃 추가** 를 이용해 [스텝을 편집](/docs/devtools/recorder/#edit-steps)하고 타임아웃을 **6000** 밀리초 (6초)로 설정합니다.
 
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
-추가적으로, 여러분은 모든 단계에 대한 **타임아웃**을 **다시보기 설정**에서도 조정할 수 있습니다. **다시보기 설정**을 확장한 다음 **타임아웃** 값을 수정합니다.
+추가적으로, 여러분은 모든 단계에 대한 **Timeout**을 **Replay settings**에서도 조정할 수 있습니다. **Replay settings**을 확장한 다음 **Timeout** 값을 수정합니다.
  
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="timeout settings for user flow recording", width="800", height="530" %}
 
