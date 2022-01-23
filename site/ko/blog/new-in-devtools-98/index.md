@@ -223,10 +223,10 @@ Chromium issue: [1255073](https://crbug.com/1255073)
 Chromium issue: [772558](https://crbug.com/772558)
 
 <!-- ## Improved Sources panel {: #sources } -->
-## Improved Sources panel {: #sources }
+## 소스 패널에서의 개선점들 {: #sources }
 
 <!-- Loads of stability improvements in the **Sources** panel as we upgraded it to use [CodeMirror 6](https://codemirror.net/6/). Here are few notable improvements: -->
-[CodeMirror 6](https://codemirror.net/6/)에서 사용할 수 있도록 업그레이드하면서 **Sources** 패널의 안정성이 많이 개선되었습니다. 몇 가지의 괄목할 만한 개선사항이 아래에 있습니다!
+소스 패널을 [CodeMirror 6](https://codemirror.net/6/)에서 사용할 수 있도록 업그레이드하면서 **Sources** 패널의 안정성이 많이 개선되었습니다. 몇 가지의 괄목할 만한 개선사항이 아래에 있습니다!
 
 <!-- - Significantly faster when opening large files (e.g. WASM, JavaScript)
 - No more random scrolling when stepping through code
@@ -257,16 +257,21 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 -**Network Search** 질의에서 임의의 문자(예: `,`, `.`)를 지원합니다.
 
 <!-- ### [Experimental] Endpoints in the Reporting API pane {: #reporting-api } -->
-
+[실험실 기능] Reporting API 창에서의 엔드포인트 {: #reporting-api }
 {% Aside %}
 <!-- To enable the experiment, check the **Enable Reporting API panel in the Application panel** checkbox under **Settings** > **Experiments**. -->
+실험실 기능을 사용하려면 **설정** > **실험** > **Enable Reporting API panel in the Application panel** 항목 옆의 체크박스를 체크합니다.
+
 {% endAside %}
 
 <!-- The experimental **Reporting API** pane was introduced in [Chrome 96](/blog/new-in-devtools-96/#reporting-api) to help you monitor the reports generated on your page and their status. -->
+**Reporting API**은 실험실 기능으로서 [크롬 96](/blog/new-in-devtools-96/#reporting-api) 에서 소개되었으며, 이는 여러분들이 페이지에서 생성된 보고들과 이들의 상태를 모니터링할 수 있도록 해 줍니다.
 
 <!-- The **Endpoints** section is now available. It gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header. -->
+현재 **Endpoints** 섹션이 사용가능해졌으며, 이는 `Reporting-Endpoints` 헤더에 구성된 모든 엔드포인트에 대한 개요를 제공합니다.
 
 <!-- Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more. -->
+[Reporting API](https://web.dev/reporting-api/)를 이용하여, 보안수칙 위반, 더 이상 사용되지 않는 API의 호출 등을 모니터링할 수 있게 되었습니다. 이 기능의 사용법을 배워 보세요! 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Reporting API pane", width="800", height="560" %}
 
