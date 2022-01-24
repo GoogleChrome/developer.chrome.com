@@ -19,12 +19,7 @@ For the previous cases, Google Chrome supports the following extension installat
 
 Both ways support installing an extension hosted at an `update_URL`. 
 
-On Windows and Mac, the `update_URL` must always point to the Chrome Web Store. However, on Linux, the preferences file can also point to a `.crx` extension file on the user's Linux computer.
-
-## Before you begin {: #prereqs }
-
-First, [publish][4] the extension in the Chrome Web Store, or package a [`.crx` file][5] and make
-sure that it installs successfully.
+On Windows and Mac, the `update_URL` must always point to the Chrome Web Store. However, on Linux, the preferences file can also point to a CRX extension file on the user's computer.
 
 {% Aside 'warning' %}
 
@@ -35,6 +30,11 @@ allowed from a path to a local .crx on Mac (see [Continuing to protect Chrome us
 extensions][7]).
 
 {% endAside %}
+
+## Before you begin {: #prereqs }
+
+First, [publish][4] the extension in the Chrome Web Store, or package a [`.crx` file][5] and make
+sure that it installs successfully.
 
 If installing from an [update URL][8], ensure that the extension is properly [hosted][9].
 
