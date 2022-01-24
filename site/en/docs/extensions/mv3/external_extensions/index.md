@@ -37,7 +37,7 @@ extensions][7]).
 
 If you are distributing an extension hosted in the Chrome Web Store, you must first publish the extension. Then, make a note of the following:
 
-- The **update URL**— `https://clients2.google.com/service/update2/crx`.
+- The **update URL**— `https://clients2.google.com/service/update2/crx`, that points to the Chrome Web Store.
 - The **extension's ID**— This can be found in the Chrome Web Store URL of the extension.
 
 <!-- Add screenshot -->
@@ -122,8 +122,7 @@ files. To see if this is the problem, follow these steps:
 
 ### Linux
 
-1. Create a JSON file with the name of the extension ID. For example:
-    `aaabbbcccddd.json`
+1. Create a JSON file with the name of the extension ID. For example: `aaabbbcccddd.json`
 2. Place it in one of the folders listed below:
     - `/opt/google/chrome/extensions/`
     - `/usr/share/google-chrome/extensions/`
@@ -158,6 +157,7 @@ case the extension will be installed for all English locales like "en-US", "en-G
 another browser locale is selected that is not supported by the extension, the external
 extensions will be uninstalled. If "supported_locales" list is missing, the extension will be
 installed for any locale. For example:
+
 ```json
   {
     "external_update_url": "https://clients2.google.com/service/update2/crx",
@@ -171,26 +171,26 @@ installed for any locale. For example:
     - 32-bit Windows: `HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions`
     - 64-bit Windows: `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions`
 2.  Create a new key (folder) under the **Extensions** key with the same name as the ID of your
-    extension (for example, `aaabbbcccddd`).
-3.  In your extension key, create a property, "update_url", and set it to the value:
-    "https://clients2.google.com/service/update2/crx" (this points to your extension's crx in the
-    Chrome Web Store):
+    extension. For example: `aaabbbcccddd`.
+3.  In your extension key, create a property, "update_url", and set it to the following value:
 
 ```json
 {
-    "update_url": "https://clients2.google.com/service/update2/crx"
+  "update_url": "https://clients2.google.com/service/update2/crx"
 }
 ```
 
-4.  Launch the browser and go to **chrome://extensions**; you should see the extension listed.
+4. Close all instances of Chrome and launch Chrome again. 
+5. Go to **chrome://extensions**; you should see the extension listed.
+
 
 ## Updating and uninstalling {: #updating }
 
 Google Chrome scans the metadata entries in the preferences and registry each time the browser
-starts, and makes any necessary changes to the installed external extensions.
+starts, and makes any necessary changes to the installed external extensions hosted in the Chrome Web Store.
 
-To update your extension to a new version, update the file, and then update the version in the
-preferences or registry.
+To update a local file extension to a new version, update the file, and then update the version in the
+preferences json file.
 
 To uninstall your extension (for example, if your software is uninstalled), remove your preference
 file (aaaaaaaaaabbbbbbbbbbcccccccccc.json) or the metadata from the registry.
