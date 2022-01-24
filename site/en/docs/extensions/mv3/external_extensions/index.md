@@ -63,92 +63,40 @@ instead.
 
 {% endAside %}
 
-1.  If you are installing from a file on Linux, make the `.crx` extension file available to the
-    machine you want to install the extension on. (Copy it to a local directory or to a network
-    share for example, `\\server\share\extension.crx` or `/home/share/extension.crx`.)
-2.  Create a file with the following name in one of the folders listed below:
-    `aaaaaaaaaabbbbbbbbbbcccccccccc.json` where the file name (without the extension) corresponds to
-    your extension's ID. The location depends on the operating system.
+### macOS
 
-    Mac OS X:
+1. Create a JSON file with the name of the extension ID. For example:
+    `aaabbbcccddd.json`
+2. Place it in one of the folders listed below:    
+    - **For a specific user**
+    `~USERNAME/Library/Application Support/Google/Chrome/External Extensions/`
+    **For all users**
+    `/Library/Application Support/Google/Chrome/External Extensions/`
 
-    : For a specific user:
-      `~USERNAME/Library/Application Support/Google/Chrome/External Extensions/`
-      For all users: `/Library/Application Support/Google/Chrome/External Extensions/`
-
-      The external extension file for all users is read only if every directory in the path is owned
-      by the user `root`, has the group `admin` or `wheel`, and is not world writable. The path must
-      also be free of symbolic links. These restrictions prevent an unprivileged user from causing
-      extensions to be installed for all users. See [troubleshooting][11] for details.
-
-      {% Aside %}
-
-      **Note:** The above path for all users was added in Chrome 16. Prior versions used a different
-      path:
-      `/Applications/Google Chrome.app/Contents/Extensions/` This path was deprecated in version 17.
-      Support was removed in version 20. Use one of the paths above instead.
-
-      {% endAside %}
-
-    Linux:
-
-    : `/opt/google/chrome/extensions/`
-
-      `/usr/share/google-chrome/extensions/`
-
-      **Note:** Use `chmod` if necessary to make sure that the `aaaaaaaaaabbbbbbbbbbcccccccccc.json`
-      files are world-readable.
-
-3.  Linux only: If you are installing from a file, specify the extension's location and version with
-    fields named "external_crx" and "external_version" in the file created above.
-    - Example:
-    - ```json
-        {
-          "external_crx": "/home/share/extension.crx",
-          "external_version": "1.0"
-        }
-      ```
-    - **Note:** You need to escape each `\` character in the location. For example,
-      `\\server\share\extension.crx` would be `"\\\\server\\share\\extension.crx"`.
-4.  If you are installing from an update URL, specify the extension's update URL with field name
-    "external_update_url".
-5.  Example of installation from local .crx file (Linux only):
-    1.  ```json
-          {
-            "external_update_url": "http://myhost.com/mytestextension/updates.xml"
-          }
-        ```
-6.  Example of installation from the Chrome Webstore (Mac and Linux):
-    1.  ```json
-          {
-            "external_update_url": "https://clients2.google.com/service/update2/crx"
-          }
-        ```
-7.  If you would like to install extension only for some browser locales, you can list supported
-    locales in field name "supported_locale". Locale may specify parent locale like "en", in this
-    case the extension will be installed for all English locales like "en-US", "en-GB", etc. If
-    another browser locale is selected that is not supported by the extension, the external
-    extensions will be uninstalled. If "supported_locales" list is missing, the extension will be
-    installed for any locale.
-    - Example:
-    - ```json
-        {
-          "external_update_url": "https://clients2.google.com/service/update2/crx",
-          "supported_locales": [ "en", "fr", "de" ]
-        }
-      ```
-8.  Save the JSON file.
-9.  Launch Google Chrome and go to **chrome://extensions**; you should see the extension listed.
+3. Specify the extension's update URL by adding the following code:
+    ```json
+      {
+        "external_update_url": "https://clients2.google.com/service/update2/crx"
+      }
+    ```
+4.  Save the JSON file.
+5.  Launch Google Chrome and go to **chrome://extensions**; you should see the extension listed.
 
 {% Aside %}
 
-**Note:** Previous versions of Google Chrome used an `external_extensions.json` file to specify
-which extensions to install. This file has been deprecated in favor of individual `.json` files, one
-per extension.
+The external extension file for all users is read only if every directory in the path is owned
+by the user `root`, has the group `admin` or `wheel`, and is not world writable. The path must
+also be free of symbolic links. These restrictions prevent an unprivileged user from causing
+extensions to be installed for all users. See Troubleshooting permission problems below.
 
 {% endAside %}
 
-### Troubleshooting Mac OS permissions problems {: #troubleshooting }
+{% Details %}
+{% DetailsSummary %}
+
+#### Troubleshooting Mac OS permissions problems {: #troubleshooting }
+
+{% endDetailsSummary %}
 
 On Mac OS, the external extensions files for all users are only read if file system permissions
 prevent unprivileged users from changing it. If you do not see external extensions installed when
@@ -170,22 +118,69 @@ files. To see if this is the problem, follow these steps:
     external extension was not installed, repeat these steps until you do not see an error in the
     Console application.
 
+{% endDetails %}
+
+### Linux
+
+1. Create a JSON file with the name of the extension ID. For example:
+    `aaabbbcccddd.json`
+2. Place it in one of the folders listed below:
+    - `/opt/google/chrome/extensions/`
+    - `/usr/share/google-chrome/extensions/`
+
+3. If you are installing from the **Chrome Web Store**, specify the update URL by adding the following code:
+    ```json
+      {
+        "external_update_url": "https://clients2.google.com/service/update2/crx"
+      }
+    ``` 
+4.  If you are installing from a file, specify the extension's location and version by adding the following code:
+    ```json
+      {
+        "external_crx": "/home/share/extension.crx",
+        "external_version": "1.0"
+      }
+    ```
+5.  Save the JSON file.
+6.  Launch Google Chrome and go to **chrome://extensions**; you should see the extension listed.
+
+{% Aside %}
+
+Use `chmod` if necessary to make sure that the `aaabbbcccddd.json` files are world-readable. See FAQ for any additional troubleshooting.
+
+{% endAside %}
+
+### Supported Locales
+
+If you would like to install extension only for some browser locales, you can list supported
+locales in field name "supported_locale". Locale may specify parent locale like "en", in this
+case the extension will be installed for all English locales like "en-US", "en-GB", etc. If
+another browser locale is selected that is not supported by the extension, the external
+extensions will be uninstalled. If "supported_locales" list is missing, the extension will be
+installed for any locale. For example:
+```json
+  {
+    "external_update_url": "https://clients2.google.com/service/update2/crx",
+    "supported_locales": [ "en", "fr", "de" ]
+  }
+```
+
 ## Using the Windows registry {: #registry }
 
 1.  Find or create the following key in the registry:
     - 32-bit Windows: `HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions`
     - 64-bit Windows: `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions`
 2.  Create a new key (folder) under the **Extensions** key with the same name as the ID of your
-    extension (for example, `aaaaaaaaaabbbbbbbbbbcccccccccc`).
+    extension (for example, `aaabbbcccddd`).
 3.  In your extension key, create a property, "update_url", and set it to the value:
     "https://clients2.google.com/service/update2/crx" (this points to your extension's crx in the
     Chrome Web Store):
 
-    ```json
-    {
-      "update_url": "https://clients2.google.com/service/update2/crx"
-    }
-    ```
+```json
+{
+    "update_url": "https://clients2.google.com/service/update2/crx"
+}
+```
 
 4.  Launch the browser and go to **chrome://extensions**; you should see the extension listed.
 
