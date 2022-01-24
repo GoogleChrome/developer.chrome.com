@@ -217,18 +217,7 @@ Yes, but only as an install from a Chrome Web Store `update_URL`, not from a loc
 
 ### What are some common mistakes when installing with the registry?
 
-- Not specifying the same id/version as the one listed in the Chrome Web Store
-- Key created in the wrong location in the registry
-- Registry entry points to the wrong path to the CRX file in the Chrome Web Store
-- Permissions problems on a network share
-
-### How do I update my native binaries and extension in-step?
-
-Previously when off-store extensions were supported, it was possible to have the native binaries and
-the extension be updated in lock step. However, extensions hosted on the Chrome Web Store are
-updated via the Chrome update mechanism which developers do not control. Extension developers should
-be careful about updating extensions that have a dependency on the native binary (for example,
-legacy extensions using NPAPI).
+- Permissions problems on a network share.
 
 ### What if the user uninstalls the extension?
 
