@@ -33,20 +33,26 @@ extensions][7]).
 
 ## Before you begin {: #prereqs }
 
-First, [publish][4] the extension in the Chrome Web Store, or package a [`.crx` file][5] and make
-sure that it installs successfully.
+### Chrome Web Store
 
-If installing from an [update URL][8], ensure that the extension is properly [hosted][9].
+If you are distributing an extension hosted in the Chrome Web Store, you must first publish the extension. Then, make a note of the following:
 
-Before you edit the preferences file or the registry, make a note of the following:
+- The **update URL**— `https://clients2.google.com/service/update2/crx`.
+- The **extension's ID**— This can be found in the Chrome Web Store URL of the extension.
 
-- The intended **location** of the extension's `.crx` file, or the update URL from which it is
-  served
-- The extension's **version** (from the manifest file or the **chrome://extensions** page)
-- The extension's **ID** (from the **chrome://extensions** page when you've loaded the packed
-  extension)
+<!-- Add screenshot -->
 
-The following examples assume the version is `1.0` and the ID is `aaaaaaaaaabbbbbbbbbbcccccccccc`.
+### Local CRX file
+
+If you are distributing to Linux users from a local file, you will need to package a CRX file and note the following information:
+
+- The extension **ID**— This can be found in the extension management page `chrome://extensions`. <!-- Add screenshot -->
+
+- The extension **version**— This appears in the extension management page `chrome://extensions` or in the manifest JSON file.
+
+- The **location** of the CRX file— This can either be a local directory or a network share. Make sure the file is available to the machine you want to install the extension on. 
+
+The following examples assume the version is 1.0 and the extension ID is aaabbbcccddd.
 
 ## Using a preferences file {: #preferences }
 
