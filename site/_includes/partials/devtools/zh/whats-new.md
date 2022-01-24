@@ -2,7 +2,7 @@
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
 <!-- ### Chrome 98 {: #chrome98 }
-* [Preview feature: Full-page accessibility tree](/zh/blog/new-in-devtools-98/#a11y-tree)
+* [预览功能：整页无障碍功能树](/zh/blog/new-in-devtools-98/#a11y-tree)
 * [More precise changes in the Changes tab](/zh/blog/new-in-devtools-98/#changes)
 * [Set longer timeout for user flow recording](/zh/blog/new-in-devtools-98/#recorder-timeout)
 * [Ensure your pages are cacheable with the Back/forward cache tab](/zh/blog/new-in-devtools-98/#bfcache)
@@ -10,11 +10,11 @@
 * [Emulate the CSS forced-colors media feature](/zh/blog/new-in-devtools-98/#forced-colors)
 * [Show rulers on hover command](/zh/blog/new-in-devtools-98/#show-rulers)
 * [Support `row-reverse` and `column-reverse` in the Flexbox editor](/zh/blog/new-in-devtools-98/#flexbox-editor)
-* [New keyboard shortcuts to replay XHR and expand all search results](/zh/blog/new-in-devtools-98/#shortcuts)
-* [Lighthouse 9 in the Lighthouse panel](/zh/blog/new-in-devtools-98/#lighthouse)
-* [Improved Sources panel](/zh/blog/new-in-devtools-98/#sources)
-* [Miscellaneous highlights](/zh/blog/new-in-devtools-98/#misc)
-* [[Experimental] Endpoints in the Reporting API pane](/zh/blog/new-in-devtools-98/#reporting-api) -->
+* [新增“重放 XHR “和“扩展所有搜索结果”的键盘快捷键](/zh/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 面板中的 Lighthouse 9](/zh/blog/new-in-devtools-98/#lighthouse)
+* [源代码面板的改善](/zh/blog/new-in-devtools-98/#sources)
+* [其他的更新](/zh/blog/new-in-devtools-98/#misc)
+* [[Experimental] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api) -->
 
 
 ### Chrome 97 {: #chrome97 }
