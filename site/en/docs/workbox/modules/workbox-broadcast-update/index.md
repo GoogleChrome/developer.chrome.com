@@ -52,6 +52,10 @@ caching strategy, since that strategy involves returning a cached
 response immediately, but also provides a mechanism for updating the
 cache asynchronously.
 
+{% Aside %}
+The `BroadcastUpdatePlugin` can't be used to broadcast information about `workbox-precaching`'s updates. `BroadcastUpdatePlugin` detects when a previously cached URL has been overwritten with new contents. `workbox-precaching` creates cache entries with URLs that uniquely correspond to the contents, so it will never overwrite existing cache entries.
+{% endAside %}
+
 To broadcast updates, you just need to add a `broadcastUpdate.BroadcastUpdatePlugin` to your
 strategy options.
 
