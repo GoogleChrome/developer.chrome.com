@@ -7,9 +7,7 @@ description: How to install Chrome Extensions via preference file or Windows reg
 ---
 
 All Chrome extensions must be distributed either directly from the Chrome Web Store or by using the
-mechanisms described below. Failure to comply with one of these distribution methods constitutes a
-violation of the [Chrome extension policy][1] and may result in the extension and/or the software
-distributing it to be flagged as [unwanted software][2].
+mechanisms described below. 
 
 Usually, users install extensions from the Chrome Web Store, but sometimes you might want an
 extension to be installed via other means. Here are two typical cases:
@@ -273,5 +271,5 @@ by installing the extension normally through the UI, and then uninstalling it.
 [11]: #troubleshooting
 [12]: #preferences
 [13]: #registry
-[14]: /docs/extensions/mv3/hosting
+[hosting]: /docs/extensions/mv3/hosting
 [15]: /docs/extensions/autoupdate#update_manifest
