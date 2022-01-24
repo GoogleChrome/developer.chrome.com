@@ -45,7 +45,7 @@ draft: true
 <!-- Our team is still actively working on this preview feature. We are looking for your [feedback](https://goo.gle/devtools-a11y-tree-feedback) for further enhancements! -->
 우리는 아직 이 미리보기 기능 구현에 대해 적극적으로 작업하고 있으며, 앞으로의 개선점에 대한 여러분들의 [의견](https://goo.gle/devtools-a11y-tree-feedback)을 기다리고 있습니다! 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/o4BY07JabERFd6OieU8b.png", alt="Full-page accessibility tree", width="800", height="505" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/o4BY07JabERFd6OieU8b.png", alt="전체 페이지 접근성 트리", width="800", height="505" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/847a06a6535111826f898175b210dbe0948277a0 #}
 
@@ -67,7 +67,7 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 
 
 <!-- ## Set longer timeout for user flow recording {: #recorder-timeout } -->
-## 유저 플로우 레코딩을 위한 길어진 타임아웃 설정 {: #recorder-timeout }
+## 유저 플로우 레코딩을 위한 더 긴 타임아웃 설정 {: #recorder-timeout }
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
 이제 여러분들은 [Recorder](/docs/devtools/recorder/)에서 모든 단계 혹은 특정한 단계에서의 **타임아웃** 설정을 조정할 수 있게 됐습니다. 이 기능은 느린 네트워크 요청과 긴 애니메이션이 포함된 페이지에서 유용하게 사용될 것입니다.
 
@@ -81,7 +81,7 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
 추가적으로, 여러분은 모든 단계에 대한 **Timeout**을 **Replay settings**에서도 조정할 수 있습니다. **Replay settings**을 확장한 다음 **Timeout** 값을 수정합니다.
  
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="timeout settings for user flow recording", width="800", height="530" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="유저 플로우 녹화를 위한 타임아웃 설정", width="800", height="530" %}
 
 Chromium issue: [1257499](https://crbug.com/1257499)
 
@@ -100,7 +100,7 @@ Chromium issue: [1257499](https://crbug.com/1257499)
 <!-- As web developers, it's critical to know how to optimize your pages for bfcache across all browsers because it will significantly improve the browsing experience for users—especially those with slower networks or devices.  -->
 웹 개발자는 페이지가 모든 브라우저에서 bfcache에 맞게 최적화하는 방법을 이해하는 것이 매우 중요합니다. 이는 특히 느린 네트워크 혹은 기기에서의 사용자 탐색 경험을 크게 향상시킬 수 있기 때문입니다. 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4OrWjuRgG1bB0AupcMmS.png", alt="Back/forward cache tab", width="800", height="516" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4OrWjuRgG1bB0AupcMmS.png", alt="뒤로/앞으로 캐쉬 탭", width="800", height="516" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f4b1333582da2410e5bc8715998b96a83b924625 #}
 
@@ -108,18 +108,18 @@ Chromium issue: [1110752](https://crbug.com/1110752)
 
 
 <!-- ## New Properties pane filter {: #properties } -->
-## 새로 추가된 프로퍼티 창 필터
+## 새로 추가된 속성 창 필터
 <!-- If you want to focus on a specific property in the **Properties** pane, you can now type that property name or value in the new **Filter** textbox.  -->
-**프로퍼티** 창의 특정 프로퍼티에 초점을 맞추고 싶으시다면, 배포판에 새로 추가된 **필터** 입력창에 프로퍼티의 이름이나 값을 기입하면 됩니다.
+**속성** 창의 특정 속성에 초점을 맞추고 싶으시다면, 배포판에 새로 추가된 **필터** 입력창에 프로퍼티의 이름이나 값을 기입하면 됩니다.
 
 <!-- By default, properties whose value is `null` or `undefined` are not shown. Enable the **Show all** 
 checkbox to view all properties.  -->
-기본적으로 `null` 이나 `undefined` 값을 가지는 프로퍼티들은 표시되지 않습니다. **모두 보기** 체크박스를 클릭하여 모든 프로퍼티들을 볼 수 있도록 합니다.
+기본적으로 `null` 이나 `undefined` 값을 가지는 속성들은 표시되지 않습니다. **모두 보기** 체크박스를 클릭하여 모든 속성을 볼 수 있도록 합니다.
 
 <!-- These enhancements allow you to get to the properties you care for quicker and thus improve your productivity! -->
 위의 개선된 점을 이용하여 우리는 프로퍼티들에 좀더 빠르게 접근할 수 있으며, 이는 생산성을 높여 줄 수 있는 하나의 팁입니다!
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="Properties pane filter", width="800", height="505" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="속성 창 필터", width="800", height="505" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}  
   
@@ -135,24 +135,24 @@ User agent 가 웹페이지에서 사용자가 선택한 제한된 색 팔레트
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate CSS media feature forced-colors** dropdown. -->
 [명령 메뉴](/docs/devtools/command-menu/) 를 열고 **Show Rendering** 명령어를 실행한 다음, **Emulate CSS media feature forced-colors** 드롭다운 메뉴를 설정할 수 있습니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/75qGjkzfbXfOEJUhML5i.png", alt="CSS forced-colors media feature", width="800", height="623" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/75qGjkzfbXfOEJUhML5i.png", alt="CSS forced-colors 미디어 기능", width="800", height="623" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/db79deee160cda92eda91775a27773611dce8188 #}
 
 Chromium issue: [1130859](https://crbug.com/1130859)
 
 <!-- ## Show rulers on hover command {: #show-rulers } -->
-## Hover 커맨드에서 눈금 표시하기 {: #show-rulers }
+## 마우스를 가져가면 눈금자 표시 {: #show-rulers }
 
 <!-- You can now open the [Command Menu](/docs/devtools/command-menu/) and run the **Show rulers on hover** command. The page rulers make it easier to measure the width and height of an element. -->
-여러분은 이제 [Command Menu](/docs/devtools/command-menu/) 를 열고 **Hover** 명령어 위에서 **눈금 보이기**를 실행할 수 있습니다. 페이지의 눈금 기능을 이용하여 우리는 각 요소의 길이와 넓이를 좀더 쉽게 측정할 수 있습니다. 
+여러분은 이제 [Command Menu](/docs/devtools/command-menu/) 를 열고 **마우스를 가져가면 눈금자 표시**를 실행할 수 있습니다. 페이지의 눈금 기능을 이용하여 우리는 각 요소의 길이와 넓이를 좀더 쉽게 측정할 수 있습니다. 
 
 <!-- Previously, you can only enable the page rulers via **Settings** > **Show rulers** checkbox. -->
 이전에는 **설정** > **눈금 보이기** 체크박스를 통해 페이지의 눈금 모드를 활성화할 수 있었습니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLF6RWO2bm5SMksdayLv.png", alt="Show rulers on hover command", width="800", height="591" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLF6RWO2bm5SMksdayLv.png", alt="마우스를 가져가면 눈금자 표시", width="800", height="591" %}
 
-{# https://chromium.googlesource.com/devtools/devtools-frontend/+/5bb8330e0f0a1c90f4a932e35aa5521826c8beea #}
+{# https://chromium.googlesource.com/devtools/devtools-frontend/+/5bb8330e0f0a1c90f4a9335aa5521826c8beea #}
 
 Chromium issue: [1270562](https://crbug.com/1270562)
 
@@ -163,7 +163,7 @@ Flexbox 편집기에서의 `row-reverse` and `column-reverse` 지원 {: #flexbox
 <!-- The [Flexbox editor](/blog/new-in-devtools-90/#flexbox) added two new buttons to support `row-reverse` and `column-reverse` in `flex-direction`.  -->
 [Flexbox editor](/blog/new-in-devtools-90/#flexbox) 에 `flex-direction` 의 `row-reverse` 와 `column-reverse` 를 지원하기 위한 두 개의 버튼이 새롭게 추가되었습니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JHI4frP4MqaydXk19sq2.png", alt="Flexbox editor", width="800", height="546" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JHI4frP4MqaydXk19sq2.png", alt="Flexbox 편집기", width="800", height="546" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7c98a6cdc296887350418746b42b2b0a474e7f27 #}
 
@@ -216,7 +216,7 @@ Chromium issue: [1255073](https://crbug.com/1255073)
 <!-- Check out the [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
 [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) 에서 구체적인 사항들과 업데이트를 확인해 보세요!
 
-​{% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/gZI1flmYHuUpF637Idzy.png", alt="A Lighthouse audit for 'All focusable elements must have a unique `id`', showing two elements, both with the same `id`", width="800", height="380", class="screenshot" %}
+{% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/gZI1flmYHuUpF637Idzy.png", alt="A Lighthouse audit for 'All focusable elements must have a unique `id`', showing two elements, both with the same `id`", width="800", height="380", class="screenshot" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/93a4454b7c558d6ca748c718167bc4aa592eaf63 #}
 
@@ -226,7 +226,7 @@ Chromium issue: [772558](https://crbug.com/772558)
 ## 소스 패널에서의 개선점들 {: #sources }
 
 <!-- Loads of stability improvements in the **Sources** panel as we upgraded it to use [CodeMirror 6](https://codemirror.net/6/). Here are few notable improvements: -->
-소스 패널을 [CodeMirror 6](https://codemirror.net/6/)에서 사용할 수 있도록 업그레이드하면서 **Sources** 패널의 안정성이 많이 개선되었습니다. 몇 가지의 괄목할 만한 개선사항이 아래에 있습니다!
+소스 패널을 [CodeMirror 6](https://codemirror.net/6/)에서 사용할 수 있도록 업그레이드하면서 **소스** 패널의 안정성이 많이 개선되었습니다. 몇 가지의 주목할 만한 개선사항을 소개해 보겠습니다.
 
 <!-- - Significantly faster when opening large files (e.g. WASM, JavaScript)
 - No more random scrolling when stepping through code
@@ -254,7 +254,7 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 - **Sources** 패널에서 너무 긴 문서를 검색할 때 코드 하이라이트가 동작하지 않았던 문제가 수정되었습니다. ([1275496](https://crbug.com/1275496))
 - 네트워크 요청에서 중복된 **페이로드** 탭이 더 이상 없습니다. ([1273972](https://crbug.com/1273972)) 
 - **성능** 패널의 **요약** 섹션에서 누락된 레이아웃 변경 세부정보가 수정되었습니다. ([1259606](https://crbug.com/1259606))
--**Network Search** 질의에서 임의의 문자(예: `,`, `.`)를 지원합니다.
+- **네트워크 검색** 쿼리에서 임의의 문자(예: `,`, `.`)를 지원합니다.
 
 <!-- ### [Experimental] Endpoints in the Reporting API pane {: #reporting-api } -->
 [실험실 기능] Reporting API 창에서의 엔드포인트 {: #reporting-api }
@@ -265,7 +265,7 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 {% endAside %}
 
 <!-- The experimental **Reporting API** pane was introduced in [Chrome 96](/blog/new-in-devtools-96/#reporting-api) to help you monitor the reports generated on your page and their status. -->
-**Reporting API**은 실험실 기능으로서 [크롬 96](/blog/new-in-devtools-96/#reporting-api) 에서 소개되었으며, 이는 여러분들이 페이지에서 생성된 보고들과 이들의 상태를 모니터링할 수 있도록 해 줍니다.
+**Reporting API**은 실험실 기능으로서 [크롬 96](/blog/new-in-devtools-96/#reporting-api) 에서 소개되었으며, 이는 여러분들이 페이지에서 생성된 레포트들과 이들의 상태를 모니터링할 수 있도록 해 줍니다.
 
 <!-- The **Endpoints** section is now available. It gives you an overview of all the endpoints configured in the `Reporting-Endpoints` header. -->
 현재 **Endpoints** 섹션이 사용가능해졌으며, 이는 `Reporting-Endpoints` 헤더에 구성된 모든 엔드포인트에 대한 개요를 제공합니다.
@@ -273,7 +273,7 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 <!-- Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more. -->
 [Reporting API](https://web.dev/reporting-api/)를 이용하여, 보안수칙 위반, 더 이상 사용되지 않는 API의 호출 등을 모니터링할 수 있게 되었습니다. 이 기능의 사용법을 배워 보세요! 
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Reporting API pane", width="800", height="560" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Reporting API 창", width="800", height="560" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/a831b26b7ecde579144a42a4faaa7b639789bf3c #} 
 
