@@ -5,7 +5,10 @@ to learn about what's new in Chrome!
 
 ## Found a bug? 👷‍♀️
 
-Thanks for letting us know! Please [file an issue](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=bug&template=bug_report.md&title=) and a team member should reply shortly.
+Thanks for letting us know! [File an issue](https://github.com/GoogleChrome/developer.chrome.com/issues/new?assignees=&labels=bug&template=bug_report.md&title=) and a team member should reply shortly.
+
+If you're submitting a pull request to fix a bug, read the
+[Contributing guidelines](https://github.com/GoogleChrome/developer.chrome.com/blob/main/CONTRIBUTING.md).
 
 ## Authoring content ✍️
 
@@ -63,6 +66,14 @@ npm run dev
 
 Open `http://localhost:8080/` to see the site locally. Changes to assets will
 rebuild the site. Refresh to see your changes.
+
+### Run linters to address bugs
+
+Before you push your branch, find and address any errors.
+
+```bash
+npm run lint
+```
 
 ## Environments 🌳
 
