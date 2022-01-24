@@ -46,7 +46,7 @@ If you are distributing an extension hosted in the Chrome Web Store, you must fi
 
 If you are distributing to Linux users from a local file, you will need to [package a CRX file][packing] and note the following information:
 
-- The **extension ID**— This can be found in the extension management page `chrome://extensions`. <!-- Add screenshot -->
+- The **extension ID**— This can be found in the extension management page `chrome://extensions`.
 
 - The **extension version**— This appears in the extension management page `chrome://extensions` or in the manifest JSON file.
 
@@ -122,26 +122,37 @@ files. To see if this is the problem, follow these steps:
 
 ### Linux
 
-1. Create a JSON file with the name of the extension ID. For example: `aaabbbcccddd.json`
-2. Place it in one of the folders listed below:
+1. Create a JSON file with the name of the extension ID. For example: `aaabbbcccddd.json`.
+1. Place it in one of the folders listed below:
     - `/opt/google/chrome/extensions/`
     - `/usr/share/google-chrome/extensions/`
 
-3. If you are installing from the **Chrome Web Store**, specify the update URL by adding the following code:
+1. The following list describes extension installation from the Chrome Web Store, a CRX file or a personal server:
+
+    - To install a **Chrome Web Store** extension, specify the update URL with the field name "external_update_url". For example:
     ```json
       {
         "external_update_url": "https://clients2.google.com/service/update2/crx"
       }
     ``` 
-4.  To install the extension from a **CRX file**, specify your extension's location in "external_crx" and the version under "external_version", like in the following example:
+    
+    - To install the extension from a **CRX file**, specify the location in "external_crx" and the version in "external_version". For example:
     ```json
       {
         "external_crx": "/home/share/extension.crx",
         "external_version": "1.0"
       }
     ```
-5.  Save the JSON file.
-6.  Launch Google Chrome and go to **chrome://extensions**; you should see the extension listed.
+    
+    - To install the extension **[hosted on a personal server][xml-update-url]**, the "external_update_url" field has to point to the xml file, like in the following example:
+    ```json
+       {
+         "external_update_url": "http://myhost.com/mytestextension/updates.xml"
+       }
+    ```
+
+1.  Save the JSON file.
+1.  Launch Google Chrome and go to **chrome://extensions**; you should see the extension listed.
 
 {% Aside %}
 
@@ -173,14 +184,13 @@ installed for any locale. For example:
 2.  Create a new key (folder) under the **Extensions** key with the same name as the ID of your
     extension. For example: `aaabbbcccddd`.
 3.  In your extension key, create a property, "update_url", and set it to the following value:
+    - ```json
+        {
+          "update_url": "https://clients2.google.com/service/update2/crx"
+        }
+      ```
 
-```json
-{
-  "update_url": "https://clients2.google.com/service/update2/crx"
-}
-```
-
-4. Close all instances of Chrome and launch Chrome again. 
+4. Launch Chrome. 
 5. Go to **chrome://extensions**; you should see the extension listed.
 
 
@@ -221,6 +231,7 @@ Yes, but only as an install from a Chrome Web Store `update_URL`, not from a loc
 - Key created in the wrong location in the registry.
 - Registry entry points to the wrong path to the CRX file in the Chrome Web Store.
 - Permissions problems on a network share.
+- Not all instances of Chrome are closed. Try rebooting your computer after setting the registry.
 
 ### What if the user uninstalls the extension?
 
@@ -238,7 +249,9 @@ by installing the extension normally through the UI, and then uninstalling it.
 [packing]: /docs/extensions/mv3/linux_hosting/#packaging
 [malicious-windows]: http://blog.chromium.org/2013/11/protecting-windows-users-from-malicious.html
 [malicious-mac]: http://blog.chromium.org/2015/05/continuing-to-protect-chrome-users-from.html
+[section-faq]: #faq
 [section-mac-troubleshooting]: #troubleshooting
 [section-preferences]: #preferences
 [section-registry]: #registry
 [hosting]: /docs/extensions/mv3/hosting
+[xml-update-url]: /docs/extensions/mv3/linux_hosting/#update_url
