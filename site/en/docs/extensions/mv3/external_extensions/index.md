@@ -3,10 +3,10 @@ layout: "layouts/doc-post.njk"
 title: "Alternative extension installation methods"
 date: 2012-09-17
 updated: 2022-01-25
-description: How to install Chrome Extensions via preference file or Windows registry.
+description: How to install Chrome Extensions via preferences JSON or Windows registry.
 ---
 
-All Chrome extensions distributed to Windows and Mac users must be hosted in the [Chrome Web Store][cws-hosting]. Usually, users install extensions directly from the Chrome Web Store, but sometimes you might want an extension to be installed via other means. Here are two typical cases:
+All Chrome extensions distributed to Windows and Mac users must be hosted in the [Chrome Web Store][extension-hosting]. Usually, users install extensions directly from the Chrome Web Store, but sometimes you might want an extension to be installed via other means. Here are two typical cases:
 
 - An extension is associated with some other software, and the extension should be installed
   whenever the user installs that other software.
@@ -14,20 +14,20 @@ All Chrome extensions distributed to Windows and Mac users must be hosted in the
 
 For the previous cases, Google Chrome supports the following extension installation methods:
 
-- Using a preferences JSON file (for Mac OS X and Linux only)
-- Using the Windows registry (for Windows only)
+- Using a [preferences JSON][section-preferences] file (for Mac OS X and Linux only)
+- Using the [Windows registry][section-registry] (for Windows only)
 
 Both ways support installing an extension hosted at an `update_URL`. 
 
-On Windows and Macintosh, the `update_URL` must always point to the Chrome Web Store. However, on Linux, the preferences file can also point to a CRX extension file on the user's computer.
+On Windows and Macintosh, the `update_URL` must always point to the Chrome Web Store. However, on Linux, the `update_URL` can also point to a CRX extension file on the user's computer.
 
 {% Aside 'warning' %}
 
 **Windows and Mac installs must come from Chrome Web Store:**
 As of Chrome 33, no external installs are allowed from a path to a local CRX file on Windows (see
-[Protecting Windows users from malicious extensions][6]). As of Chrome 44, no external installs are
+[Protecting Windows users from malicious extensions][malicious-windows]). As of Chrome 44, no external installs are
 allowed from a path to a local CRX file on Mac OS (see [Continuing to protect Chrome users from malicious
-extensions][7]).
+extensions][malicious-mac]).
 
 {% endAside %}
 
@@ -35,7 +35,7 @@ extensions][7]).
 
 ### Chrome Web Store
 
-If you are distributing an extension hosted in the Chrome Web Store, you must first publish the extension. Then, make a note of the following:
+If you are distributing an extension hosted in the Chrome Web Store, you must first [publish the extension][publish]. Then, make a note of the following:
 
 - The **update URL**— `https://clients2.google.com/service/update2/crx`, that points to the Chrome Web Store.
 - The **extension's ID**— This can be found in the Chrome Web Store URL of the extension.
@@ -44,13 +44,13 @@ If you are distributing an extension hosted in the Chrome Web Store, you must fi
 
 ### Local CRX file
 
-If you are distributing to Linux users from a local file, you will need to package a CRX file and note the following information:
+If you are distributing to Linux users from a local file, you will need to [package a CRX file][packing] and note the following information:
 
-- The extension **ID**— This can be found in the extension management page `chrome://extensions`. <!-- Add screenshot -->
+- The **extension ID**— This can be found in the extension management page `chrome://extensions`. <!-- Add screenshot -->
 
-- The extension **version**— This appears in the extension management page `chrome://extensions` or in the manifest JSON file.
+- The **extension version**— This appears in the extension management page `chrome://extensions` or in the manifest JSON file.
 
-- The **location** of the CRX file— This can either be a local directory or a network share. Make sure the file is available to the machine you want to install the extension on. 
+- The **location of the CRX file**— This can either be a local directory or a network share. Make sure the file is available to the machine you want to install the extension on. 
 
 The following examples assume the version is 1.0 and the extension ID is aaabbbcccddd.
 
@@ -58,19 +58,19 @@ The following examples assume the version is 1.0 and the extension ID is aaabbbc
 
 {% Aside %}
 
-**Mac OS X and Linux only:** Do not use the preferences file for Windows. Use [Windows registry][10]
+**Mac OS X and Linux only:** Do not use the preferences file for Windows. Use [Windows registry][section-registry]
 instead.
 
 {% endAside %}
 
-### macOS
+### Mac OS 
 
 1. Create a JSON file with the name of the extension ID. For example:
     `aaabbbcccddd.json`
 2. Place it in one of the folders listed below:    
     - **For a specific user**
     `~USERNAME/Library/Application Support/Google/Chrome/External Extensions/`
-    **For all users**
+    - **For all users**
     `/Library/Application Support/Google/Chrome/External Extensions/`
 
 3. Specify the extension's update URL by adding the following code:
@@ -87,7 +87,7 @@ instead.
 The external extension file for all users is read only if every directory in the path is owned
 by the user `root`, has the group `admin` or `wheel`, and is not world writable. The path must
 also be free of symbolic links. These restrictions prevent an unprivileged user from causing
-extensions to be installed for all users. See Troubleshooting permission problems below.
+extensions to be installed for all users. See [Troubleshooting permission problems][section-mac-troubleshooting] below.
 
 {% endAside %}
 
@@ -133,7 +133,7 @@ files. To see if this is the problem, follow these steps:
         "external_update_url": "https://clients2.google.com/service/update2/crx"
       }
     ``` 
-4.  If you are installing from a file, specify the extension's location and version by adding the following code:
+4.  To install the extension from a **CRX file**, specify your extension's location in "external_crx" and the version under "external_version", like in the following example:
     ```json
       {
         "external_crx": "/home/share/extension.crx",
@@ -145,14 +145,14 @@ files. To see if this is the problem, follow these steps:
 
 {% Aside %}
 
-Use `chmod` if necessary to make sure that the `aaabbbcccddd.json` files are world-readable. See FAQ for any additional troubleshooting.
+Use `chmod` if necessary to make sure that the `aaabbbcccddd.json` files are world-readable. See [FAQ][section-faq] for any additional troubleshooting.
 
 {% endAside %}
 
 ### Supported Locales
 
 If you would like to install extension only for some browser locales, you can list supported
-locales in field name "supported_locale". Locale may specify parent locale like "en", in this
+locales in field name "supported_locales". Locale may specify parent locale like "en", in this
 case the extension will be installed for all English locales like "en-US", "en-GB", etc. If
 another browser locale is selected that is not supported by the extension, the external
 extensions will be uninstalled. If "supported_locales" list is missing, the extension will be
@@ -189,11 +189,11 @@ installed for any locale. For example:
 Google Chrome scans the metadata entries in the preferences and registry each time the browser
 starts, and makes any necessary changes to the installed external extensions hosted in the Chrome Web Store.
 
-To update a local file extension to a new version, update the file, and then update the version in the
+To update a local CRX file extension to a new version, update the file, and then update the version in the
 preferences json file.
 
 To uninstall your extension (for example, if your software is uninstalled), remove your preference
-file (aaaaaaaaaabbbbbbbbbbcccccccccc.json) or the metadata from the registry.
+file (aaabbbcccddd.json) or the metadata from the registry.
 
 ## FAQ {: #faq }
 
@@ -201,12 +201,12 @@ This section answers common questions about external extensions.
 
 ### Will the methodology for allowing a "pre-install" still be supported by Google Chrome from M33 onwards?
 
-Yes, but only as an install from a Chrome Web Store `update_URL`, not from a local file path.
+Yes, but only as an install from a Chrome Web Store `update_URL`, not from a local CRX file path.
 
 ### What are some common mistakes when installing with the preferences file?
 
 - Not specifying the same id/version as the one listed in the CRX file.
-- The JSON file (`aaaaaaaaaabbbbbbbbbbcccccccccc.json`) is in the wrong location or the ID
+- The JSON file (`aaabbbcccddd.json`) is in the wrong location or the ID
   specified does not match the extension ID.
 - Syntax error in JSON file (forgetting to separate entries with comma or leaving a trailing comma
   somewhere).
@@ -217,6 +217,9 @@ Yes, but only as an install from a Chrome Web Store `update_URL`, not from a loc
 
 ### What are some common mistakes when installing with the registry?
 
+- Not specifying the same id/version as the one listed in the Chrome Web Store.
+- Key created in the wrong location in the registry.
+- Registry entry points to the wrong path to the CRX file in the Chrome Web Store.
 - Permissions problems on a network share.
 
 ### What if the user uninstalls the extension?
@@ -230,18 +233,12 @@ If the user uninstalls your extension, you should respect that decision. However
 developer) accidentally uninstalled your extension through the UI, you can remove the blocklist tag
 by installing the extension normally through the UI, and then uninstalling it.
 
-[1]: /docs/extensions/mv3/single_purpose
-[2]: https://www.google.com/about/company/unwanted-software-policy.html
-[3]: /docs/extensions/mv3/linux_hosting
-[4]: /webstore/publish
-[5]: /docs/extensions/packaging
-[6]: http://blog.chromium.org/2013/11/protecting-windows-users-from-malicious.html
-[7]: http://blog.chromium.org/2015/05/continuing-to-protect-chrome-users-from.html
-[8]: /docs/extensions/autoupdate#update_url
-[9]: /docs/extensions/mv3/hosting
-[10]: #registry
-[11]: #troubleshooting
-[12]: #preferences
-[13]: #registry
+[extension-hosting]: /docs/extensions/mv3/hosting/
+[publish]: /docs/webstore/publish
+[packing]: /docs/extensions/mv3/linux_hosting/#packaging
+[malicious-windows]: http://blog.chromium.org/2013/11/protecting-windows-users-from-malicious.html
+[malicious-mac]: http://blog.chromium.org/2015/05/continuing-to-protect-chrome-users-from.html
+[section-mac-troubleshooting]: #troubleshooting
+[section-preferences]: #preferences
+[section-registry]: #registry
 [hosting]: /docs/extensions/mv3/hosting
-[15]: /docs/extensions/autoupdate#update_manifest
