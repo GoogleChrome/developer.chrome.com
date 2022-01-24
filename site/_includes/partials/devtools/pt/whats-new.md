@@ -4,7 +4,7 @@ Consulte a versão em inglês do <a href="/tags/new-in-devtools/" translate="no"
 
 ### Chrome 98 {: #chrome98 }
 
-* [Prévia de funcionalidade: Árvore de acessibilidade da página ](/pt/blog/new-in-devtools-98/#a11y-tree)
+* [Prévia de funcionalidade: Árvore de acessibilidade da página](/pt/blog/new-in-devtools-98/#a11y-tree)
 * [Alterações mais precisas na guia Alterações](/pt/blog/new-in-devtools-98/#changes)
 * [Defina um tempo limite mais longo para a gravação do fluxo do usuário](/pt/blog/new-in-devtools-98/#recorder-timeout)
 * [Verifique se suas páginas podem ser armazenadas em cache com a guia Cache Voltar/Avançar](/pt/blog/new-in-devtools-98/#bfcache)
