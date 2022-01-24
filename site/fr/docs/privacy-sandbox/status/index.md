@@ -16,7 +16,7 @@ authors:
 *Anciennement API Conversion Measurement.*
 
 - [Phase d'évaluation actuelle](https://web.dev/origin-trials/) : à partir de Chrome 86, [maintenant étendu](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM) à Chrome 93.
-- [Inscrivez-vous à la phase d'évaluation](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
+- [Inscrivez-vous à la phase d'évaluation](/origintrials/#/view_trial/3411476717733150721).
 - [Démo](https://goo.gle/demo-event-level-conversion-measurement-api).
 - [État de la plate-forme Chrome](https://www.chromestatus.com/features/6412002824028160).
 - [État Blink](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=conversion%20measurement).
@@ -39,7 +39,7 @@ Consultez [État](/docs/privacy-sandbox/attribution-reporting-introduction/#stat
 ## Jetons de confiance (Trust Tokens)
 
 - [Phase d'évaluation actuelle](https://web.dev/origin-trials/) : à partir de Chrome 84, [maintenant étendu](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ) à Chrome 94.
-- [Inscrivez-vous à la phase d'évaluation](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+- [Inscrivez-vous à la phase d'évaluation](/origintrials/#/view_trial/2479231594867458049).
 - [Démo](https://trust-token-demo.glitch.me/).
 - [État de la plate-forme Chrome](https://www.chromestatus.com/feature/5078049450098688).
 - [État Blink](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=trust%tokens).
@@ -50,7 +50,7 @@ Consultez [État](/docs/privacy-sandbox/attribution-reporting-introduction/#stat
 ## Ensembles propriétaires
 
 - [Phase d'évaluation actuelle](https://web.dev/origin-trials/) : Chrome 89 à 93.
-- [Inscrivez-vous à la phase d'évaluation](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+- [Inscrivez-vous à la phase d'évaluation](/origintrials/#/view_trial/988540118207823873).
 - [État de la plate-forme Chrome](https://chromestatus.com/feature/5640066519007232).
 - [État Blink](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets).
 - [Proposition d'API](https://github.com/privacycg/first-party-sets) : consultez les [problèmes](hhttps://github.com/privacycg/first-party-sets/issues) pour les questions et discussions sur l'API.
@@ -93,7 +93,7 @@ Descendant de [TURTLEDOVE](https://github.com/WICG/turtledove).
 
 - [Premiers pas avec les phases d'évaluation de Chrome](https://web.dev/origin-trials/)
 - [Que sont les phases d'évaluation tierce ?](https://web.dev/third-party-origin-trials)
-- [Dépannage des phases d'évaluation de Chrome](https://developer.chrome.com/blog/origin-trial-troubleshooting/)
+- [Dépannage des phases d'évaluation de Chrome](/blog/origin-trial-troubleshooting/)
 - [Guide sur les phases d'évaluation pour les développeurs web](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 - [Explication des phases d'évaluation](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
 - [Exécution d'une phase d'évaluation](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)

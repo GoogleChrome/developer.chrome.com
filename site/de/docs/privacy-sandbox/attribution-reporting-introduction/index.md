@@ -26,11 +26,11 @@ Mit dem Attribution Reporting API lässt sich messen, wann ein **Klick oder die 
 
 Dieser Vorschlag wird in einem offenen Verfahren entwickelt. Der Vorschlag und die zugehörigen Diskussionen sind im [WICG GitHub-Repository](https://github.com/WICG/conversion-measurement-api) zu finden.
 
-{% Aside %}<br> Dieses API ist Teil der Privacy Sandbox, einer Reihe von Vorschlägen mit dem Ziel Anwendungsmöglichkeiten für Drittanbieter zu schaffen, ohne Drittanbieter-Cookies oder andere websiteübergreifende Tracking-Mechanismen zu nutzen. Siehe [Privacy-Sandbox-Vorschläge](https://developers.chrome.com/docs/privacy-sandbox).<br> {% endAside %}
+{% Aside %}<br> Dieses API ist Teil der Privacy Sandbox, einer Reihe von Vorschlägen mit dem Ziel Anwendungsmöglichkeiten für Drittanbieter zu schaffen, ohne Drittanbieter-Cookies oder andere websiteübergreifende Tracking-Mechanismen zu nutzen. Siehe [Privacy-Sandbox-Vorschläge](/docs/privacy-sandbox).<br> {% endAside %}
 
 ## Warum wird dieses API benötigt?
 
-Heutzutage basiert die Messung von auf Anzeigen zurückzuführender Conversions häufig auf [Drittanbieter-Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies). Browser schränken den Zugriff auf Drittanbieter-Cookies ein, da diese verwendet werden können, um Benutzer über Websites hinweg zu verfolgen und die Privatsphäre der Benutzer beeinträchtigen. Dieses API ermöglicht diese Messungen auf datenschutzwahrende Weise ohne Drittanbieter-Cookies.
+Heutzutage basiert die Messung von auf Anzeigen zurückzuführender Conversions häufig auf [Drittanbieter-Cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies). Browser schränken den Zugriff auf Drittanbieter-Cookies ein, da diese verwendet werden können, um Benutzer über Websites hinweg zu verfolgen und die Privatsphäre der Benutzer beeinträchtigen. Dieses API ermöglicht diese Messungen auf datenschutzwahrende Weise ohne Drittanbieter-Cookies.
 
 ## Wer sollte über dieses API Bescheid wissen?
 
@@ -71,7 +71,7 @@ Wenn Sie mit dem API in Chrome experimentieren, haben Sie Zugriff auf alle **der
 
 #### Experimentieren Sie auf einer aufgesetzten Website mit Endbenutzern
 
-1. Aktivieren Sie das API für Endbenutzer, indem Sie sich für eine [Origin-Trial](https://developer.chrome.com/blog/origin-trials/) registrieren, falls verfügbar. Eine Origin-Trial gibt Ihnen Zugriff auf eine experimentelle Funktion, um diese für eine begrenzte Zeit ausprobieren zu können. Beachten Sie, dass [Drittanbieter-Origin-Trials](https://developer.chrome.com/blog/third-party-origin-trials/) es Dritten wie Werbeanbietern und Werbeanalysediensten ermöglichen, ein API über mehrere Websites zu testen. **Um die derzeit verfügbaren Origin-Trials für dieses API anzuzeigen, navigieren Sie zu [Status](#status)**. Um über zukünftige Origin-Trials informiert zu werden, tragen Sie sich in die [Attributionsberichterstellung-Mailingliste für Entwickler ein](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
+1. Aktivieren Sie das API für Endbenutzer, indem Sie sich für eine [Origin-Trial](/blog/origin-trials/) registrieren, falls verfügbar. Eine Origin-Trial gibt Ihnen Zugriff auf eine experimentelle Funktion, um diese für eine begrenzte Zeit ausprobieren zu können. Beachten Sie, dass [Drittanbieter-Origin-Trials](/blog/third-party-origin-trials/) es Dritten wie Werbeanbietern und Werbeanalysediensten ermöglichen, ein API über mehrere Websites zu testen. **Um die derzeit verfügbaren Origin-Trials für dieses API anzuzeigen, navigieren Sie zu [Status](#status)**. Um über zukünftige Origin-Trials informiert zu werden, tragen Sie sich in die [Attributionsberichterstellung-Mailingliste für Entwickler ein](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev).
 
 2. Integrieren Sie das API in Ihre Websites und Systeme.
 
@@ -139,8 +139,8 @@ Andere in diesem API vorgeschlagene Funktionen sind [App-to-Web-Attribution](htt
 
 {% Aside %}<br> In einer Zukunft ohne Drittanbieter-Cookies würde dieses API mit anderen datenschutzwahrenden Werbe-APIs kombiniert werden, um Ende-zu-Ende-Anwendungsfälle abdecken zu können:
 
-- Remarketing: siehe [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
-- Interessenbasierte Anzeigenauswahl: siehe [FLoC](https://developer.chrome.com/docs/privacy-sandbox/floc/)
+- Remarketing: siehe [FLEDGE](/docs/privacy-sandbox/fledge/)
+- Interessenbasierte Anzeigenauswahl: siehe [FLoC](/docs/privacy-sandbox/floc/)
 
 {% endAside %}
 
@@ -156,7 +156,7 @@ Status:
 - `🧪 Experiment (BROWSER_NAME)`: Ein Experiment ist in BROWSER_NAME verfügbar. In Chrome wird ein Experiment als Origin-Trial bezeichnet.
 - `🚀 Stable (BROWSER_NAME)` : Die Funktion wird standardmäßig in BROWSER_NAME ausgeliefert.
 
-{% Aside %}<br> [Aktuelle Origin-Trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (Chrome-Experiment 🧪) {% endAside %}
+{% Aside %}<br> [Aktuelle Origin-Trial](/origintrials/#/view_trial/3411476717733150721) (Chrome-Experiment 🧪) {% endAside %}
 
 {% Aside 'caution' %}<br> Es werden mehrere Origin-Trials (Experimente) durchgeführt. Jede Entwicklungsrunde wird verwendet, um das API basierend auf dem Feedback aus dem Software-Ökosystem zu verbessern und anzupassen. {% endAside %}
 
@@ -353,7 +353,7 @@ Aggregierte Berichte verknüpfen ein detailliertes Klick- oder Ansichtereignis m
 ## Sites und Benutzerkontrolle
 
 - Nutzer können die Funktion über die Nutzereinstellungen unter `chrome://settings/privacySandbox`.
-- Standardmäßig ist die Funktion im Kontext der obersten Websiteebene aktiviert. Beliebige Drittanbieter können das API jedoch nicht einfach ohne Wissen des Betreibers verwenden, da das Attribution Reporting API in untergeordneten iframes über eine [Berechtigungsrichtlinie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy) aktiviert werden muss.
+- Standardmäßig ist die Funktion im Kontext der obersten Websiteebene aktiviert. Beliebige Drittanbieter können das API jedoch nicht einfach ohne Wissen des Betreibers verwenden, da das Attribution Reporting API in untergeordneten iframes über eine [Berechtigungsrichtlinie](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy) aktiviert werden muss.
 
 ## Offene Fragen
 

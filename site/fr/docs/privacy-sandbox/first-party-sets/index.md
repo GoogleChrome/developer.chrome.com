@@ -14,7 +14,7 @@ authors:
 ## État de mise en œuvre
 
 - [En essai d'origine](https://web.dev/origin-trials/) Chrome 89 à 93.
-- [S'inscrire à un essai d'origine](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+- [S'inscrire à un essai d'origine](/origintrials/#/view_trial/988540118207823873).
 - [État de la plate-forme Chrome](https://chromestatus.com/feature/5640066519007232).
 - [Projets Chromium](https://www.chromium.org/updates/first-party-sets).
 
@@ -69,7 +69,7 @@ Cela signifie que lorsqu'un visiteur sur b.example ou c.example fait une demande
 
 ## Interagir et donner son avis
 
-- **Essai d'origine** : inscrivez-vous et participez à l'[essai d'origine de Chrome](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+- **Essai d'origine** : inscrivez-vous et participez à l'[essai d'origine de Chrome](/origintrials/#/view_trial/988540118207823873).
 - **GitHub** : lisez la [proposition](https://github.com/privacycg/first-party-sets), [posez des questions et suivez la discussion](https://github.com/privacycg/first-party-sets/issues).
 - **Assistance aux développeurs** : posez des questions et participez aux discussions dans le [référentiel d'assistance aux développeurs Privacy Sandbox](https://github.com/GoogleChromeLabs/privacy-sandbox-dev-support).
 
