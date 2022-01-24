@@ -6,15 +6,15 @@
 ### Chrome 98 {: #chrome98 }
 * [Ранний доступ: дерево специальных возможностей на всю страницу](/ru/blog/new-in-devtools-98/#a11y-tree)
 * [Явное отображение изменений на вкладке Изменения (Changes)](/ru/blog/new-in-devtools-98/#changes)
-* [Установливайте более длительный тайм-аут для записи поведения пользователя](/ru/blog/new-in-devtools-98/#recorder-timeout)
+* [Устанавливайте более длительный тайм-аут для записи поведения пользователя](/ru/blog/new-in-devtools-98/#recorder-timeout)
 * [Убедитесь, что ваши страницы кэшируются с помощью вкладки Возвратный кэш (Back/forward cache)](/ru/blog/new-in-devtools-98/#bfcache)
-* [Новый фильтр во вкладке Свойства (Properties)](/ru/blog/new-in-devtools-98/#properties)
+* [Новый фильтр в панели Свойства (Properties)](/ru/blog/new-in-devtools-98/#properties)
 * [Эмулируйте CSS-медиафункцию forced-colors](/ru/blog/new-in-devtools-98/#forced-colors)
 * [Показ линейки при наведении курсора мыши](/ru/blog/new-in-devtools-98/#show-rulers)
 * [Поддержка значений `row-reverse` и `column-reverse` в редакторе флексбоксов](/ru/blog/new-in-devtools-98/#flexbox-editor)
 * [Новые сочетания клавиш для повторения запроса XHR и расширения всех результатов поиска](/ru/blog/new-in-devtools-98/#shortcuts)
 * [Lighthouse 9 во вкладке Lighthouse](/ru/blog/new-in-devtools-98/#lighthouse)
-* [Улучшена вкладка Источники (Sources)](/ru/blog/new-in-devtools-98/#sources)
+* [Улучшенная вкладка Источники (Sources)](/ru/blog/new-in-devtools-98/#sources)
 * [Другие важные моменты](/ru/blog/new-in-devtools-98/#misc)
 * [[Эксперимент] Конечные точки во вкладке Reporting API](/ru/blog/new-in-devtools-98/#reporting-api)
 

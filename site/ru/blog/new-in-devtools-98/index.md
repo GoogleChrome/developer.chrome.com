@@ -40,6 +40,9 @@ tags:
 <!-- Click on it to toggle to the **Full-page accessibility tree** view. You can expand nodes or click to see details in the  **Accessibility** pane. -->
 Вы можете нажать на нее, чтобы включить режим **Дерево специальных возможностей на всю страницу**. Вы можете развернуть отдельные узлы или посмотреть подробности в панели **Специальные возможности** (Accessibility).
 
+<!-- Select a node and toggle back to the DOM tree view. The corresponding DOM node is selected now. This is a great way to understand the mapping between the DOM node and its accessibility tree node. This works for DOM tree ⬌ Accessibility tree view too! -->
+Выберите узел и переключитесь обратно в представление дерева DOM. Теперь выбран соответствующий узел DOM. Это отличный способ понять как отображается узел DOM в дереве доступности. Это работает и для дерева DOM ⬌ Представление дерева специальных возможностей!
+
 <!-- Previously, the accessibility tree was available in the **Accessibility** pane. The view is limited, it only enables you to explore a single node and its ancestors. -->
 Раньше дерево доступности было доступно в панели **Специальные возможности** (Accessibility). Область обзора была ограниченной, можно было исследовать только один элемент и его потомков.
 
