@@ -6,30 +6,20 @@ updated: 2022-01-25
 description: How to install Chrome Extensions via preference file or Windows registry.
 ---
 
-All Chrome extensions must be distributed either directly from the Chrome Web Store or by using the
-mechanisms described below. 
-
-Usually, users install extensions from the Chrome Web Store, but sometimes you might want an
-extension to be installed via other means. Here are two typical cases:
+All Chrome extensions distributed to Windows and Mac users must be hosted in the [Chrome Web Store][cws-hosting]. Usually, users install extensions directly from the Chrome Web Store, but sometimes you might want an extension to be installed via other means. Here are two typical cases:
 
 - An extension is associated with some other software, and the extension should be installed
   whenever the user installs that other software.
 - A network admin wants to install the same extensions throughout their organization.
 
-An extension that is not installed from the Chrome Web Store is known as an _external extension_.
-For developers who want to distribute an extension as part of the installation process for other
-software, or for network admins that want to distribute an extension throughout their organization,
-Google Chrome supports the following extension installation methods:
+For the previous cases, Google Chrome supports the following extension installation methods:
 
 - Using a preferences JSON file (for Mac OS X and Linux only)
 - Using the Windows registry (for Windows only)
 
-Both ways support installing an extension hosted at an `update_URL`. On Windows and Mac, the
-`update_URL` must point to the Chrome Web Store where the extension must be hosted.
+Both ways support installing an extension hosted at an `update_URL`. 
 
-The preferences file on [Linux can point to your own server where you are hosting the extension][3].
-The preferences JSON file also supports installing an extension from a `.crx` extension file on the
-user's Linux computer.
+On Windows and Mac, the `update_URL` must always point to the Chrome Web Store. However, on Linux, the preferences file can also point to a `.crx` extension file on the user's Linux computer.
 
 ## Before you begin {: #prereqs }
 
