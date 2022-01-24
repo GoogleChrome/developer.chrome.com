@@ -199,38 +199,30 @@ file (aaaaaaaaaabbbbbbbbbbcccccccccc.json) or the metadata from the registry.
 
 This section answers common questions about external extensions.
 
-**Will the methodology for allowing a "pre-install" still be supported by Google Chrome from M33
-onwards?**
+### Will the methodology for allowing a "pre-install" still be supported by Google Chrome from M33 onwards?
 
 Yes, but only as an install from a Chrome Web Store `update_URL`, not from a local file path.
 
-**Can I specify a URL as a path to the external extension?**
+### What are some common mistakes when installing with the preferences file?
 
-Yes, use the [preferences JSON][12] file for Mac OS X and Linux; the [registry][13] for Windows. The
-extension must be hosted as explained in [hosting][14]. In the preferences file, use the
-"external_update_url" property to point to an [update manifest][15] that has the URL for your
-extension. In the Windows registry, use the "update_url" property.
-
-**What are some common mistakes when installing with the preferences file?**
-
-- Not specifying the same id/version as the one listed in the `.crx`
-- The .json file (`aaaaaaaaaabbbbbbbbbbcccccccccc.json`) is in the wrong location or the ID
+- Not specifying the same id/version as the one listed in the CRX file.
+- The JSON file (`aaaaaaaaaabbbbbbbbbbcccccccccc.json`) is in the wrong location or the ID
   specified does not match the extension ID.
 - Syntax error in JSON file (forgetting to separate entries with comma or leaving a trailing comma
-  somewhere)
-- JSON file entry points to the wrong path to the `.crx` (or path specified but no filename)
+  somewhere).
+- JSON file entry points to the wrong path to the CRX file (or path specified but no filename)
 - Backslashes in UNC path not escaped (for example, `"\\server\share\file"` is wrong; it should be
   `"\\\\server\\share\\extension"`)
-- Permissions problems on a network share
+- Permissions problems on a network share.
 
-**What are some common mistakes when installing with the registry?**
+### What are some common mistakes when installing with the registry?
 
 - Not specifying the same id/version as the one listed in the Chrome Web Store
 - Key created in the wrong location in the registry
-- Registry entry points to the wrong path to the `.crx` file in the Chrome Web Store
+- Registry entry points to the wrong path to the CRX file in the Chrome Web Store
 - Permissions problems on a network share
 
-**How do I update my native binaries and extension in-step?**
+### How do I update my native binaries and extension in-step?
 
 Previously when off-store extensions were supported, it was possible to have the native binaries and
 the extension be updated in lock step. However, extensions hosted on the Chrome Web Store are
@@ -238,12 +230,12 @@ updated via the Chrome update mechanism which developers do not control. Extensi
 be careful about updating extensions that have a dependency on the native binary (for example,
 legacy extensions using NPAPI).
 
-**What if the user uninstalls the extension?**
+### What if the user uninstalls the extension?
 
 If the user uninstalls the extension through the UI, it will no longer be installed or updated on
 each startup. In other words, the external extension is blocklisted.
 
-**How do I get off the blocklist?**
+### How do I get off the blocklist?
 
 If the user uninstalls your extension, you should respect that decision. However, if you (the
 developer) accidentally uninstalled your extension through the UI, you can remove the blocklist tag
