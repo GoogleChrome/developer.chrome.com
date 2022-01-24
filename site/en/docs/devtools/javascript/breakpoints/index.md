@@ -230,6 +230,6 @@ Console. Here's one strategy:
 [7]: #exceptions
 [8]: #function
 [9]: #loc
-[10]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+[10]: https://developer.mozilla.org/docs/Web/API/Fetch_API
 [11]: #loc
 [12]: #loc

@@ -88,7 +88,7 @@ Here are some things to keep in mind as you begin:
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/XniXB3snAeMvLwI1am3O.png", alt="Screenshot of AMP validator extension pinned", width="169", height="62" %}
 
 * User interfaces should be minimal and have intent. They can range from a simple icon, such as the
-  AMP validator][amp-validator] extension shown above, to opening a new window with a form, like the
+  [AMP validator][amp-validator] extension shown above, to opening a new window with a form, like the
   [Google Similar Pages][similar-pages-extension] extension shown below.
 
 {% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/oR9iCEgY2889Z3mHHLll.png", alt="Screenshot of Google

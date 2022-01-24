@@ -5,7 +5,7 @@ subhead: Origin trials are a way to test a new or experimental web platform feat
 authors:
   - samdutton
 date: 2020-06-22
-updated: 2021-09-01
+updated: 2021-10-27
 hero: image/8WbTDNrhLsU0El80frMBGE4eMCD3/KeaVCdXHWzrI35QRvsZL.jpg
 alt: Pipette with purple liquid
 tags:
@@ -53,7 +53,7 @@ referred to as "reverse" origin trials.
 
 For example, [from Chrome 85](https://web.dev/appcache-removal/#origin-trial) AppCache is no longer 
 available in Chrome by default. Sites needing extra time to migrate off AppCache could register for 
-the [deprecation trial to continue using AppCache](https://developer.chrome.com/origintrials/#/view_trial/1776670052997660673) until Chrome 93.
+the [deprecation trial to continue using AppCache](/origintrials/#/view_trial/1776670052997660673) until Chrome 93.
 
 
 ## How to register for an origin trial
@@ -97,6 +97,7 @@ Available from Chrome 94. You can now get information about a site's origin tria
 
 ## Find out more
 
+-  [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting)
 -  [Origin trials guide for web developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 -  [Origin trial explainer](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/explainer.md)
 -  [Running an origin trial](https://www.chromium.org/blink/origin-trials/running-an-origin-trial)
@@ -106,5 +107,5 @@ Available from Chrome 94. You can now get information about a site's origin tria
 -  [View origin trials information in DevTools](/blog/new-in-devtools-94/#origin-trials)
 ---
 
-Photo by [Louis Reed
-](https://unsplash.com/@_louisreed) on [Unsplash](https://unsplash.com/photos/pwcKF7L4-no).
+Photo by [Louis Reed](https://unsplash.com/@_louisreed) on
+[Unsplash](https://unsplash.com/photos/pwcKF7L4-no).

@@ -180,8 +180,8 @@ warnings.
 ### Permissions with warnings {: #permissions_with_warnings }
 
 **Note:** Permission tables are updated on a best-effort basis and may contain slight discrepancies
-with the current warnings. Additionally, some permissions may not display warnings when paired with
-other permissions. For example, the [`"tabs"`][26] warning will not show if the extension also
+with the [current warnings][55]. Additionally, some permissions may not display warnings when paired
+with other permissions. For example, the [`"tabs"`][26] warning will not show if the extension also
 requests `"<all_urls>"`. To verify the most recent warnings shown for extension permissions, follow
 the steps in [Viewing Warnings][27].
 
@@ -384,7 +384,7 @@ This can be avoided by making the new feature optional and adding new permission
 [24]: #optional_events
 [25]: #update_permissions
 [26]: /docs/extensions/reference/tabs
-[27]: #view_warnings_instructions
+[27]: #view_warnings
 [28]: #activeTab_permission
 [29]: #activeTab_permission
 [30]: /docs/extensions/reference/bookmarks
@@ -412,3 +412,4 @@ This can be avoided by making the new feature optional and adding new permission
 [52]: /docs/extensions/reference/tabs
 [53]: /docs/extensions/reference/permissions#step-2-declare-optional-permissions-in-the-manifest
 [54]: /docs/extensions/mv3/manifest
+[55]: https://chromium.googlesource.com/chromium/src/+/main/chrome/common/extensions/permissions/chrome_permission_message_rules.cc#:~:text=chromepermissionmessagerule%3A%3Agetallrules()

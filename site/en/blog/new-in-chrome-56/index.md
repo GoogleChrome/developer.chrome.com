@@ -25,7 +25,7 @@ tags:
   elements that scroll normally until sticking to the top of the viewport.
 * And [HTML5 by Default](#html5-by-default) is enabled for all users.
 
-I'm Pete LePage, let's dive in and see what's new for developers in Chrome 56.
+I'm [Pete LePage](https://petelepage.com/), let's dive in and see what's new for developers in Chrome 56.
 
 ## Web Bluetooth API {: #webbluetooth }
 
@@ -59,7 +59,7 @@ switching an element's position from relative to fixed at a specified threshold.
 It was difficult to synchronize, and often results in small visual jumps.
 
 Chrome now supports CSS
-[`position: sticky;`](//developer.mozilla.org/en-US/docs/Web/CSS/position#Sticky_positioning),
+[`position: sticky;`](//developer.mozilla.org/docs/Web/CSS/position#Sticky_positioning),
 a new way to position elements.
 
 An element that is position sticky, starts relative; but becomes fixed,

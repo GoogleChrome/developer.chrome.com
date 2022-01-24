@@ -13,8 +13,8 @@ during development.
 
 To get a suitable key value, first install your extension from a `.crx` file (you may need to
 [upload your extension][3] or [package it manually][4]). Then, in your [user data directory][5],
-look in the file `Default/Extensions/_<extensionId>_/_<versionString>_/manifest.json`. You will see
-the key value filled in there.
+look in the file `Default/Extensions/EXTENSION_ID/EXTENSION_VERSION/manifest.json`. You will see the
+key value filled in there.
 
 [1]: /docs/extensions/mv3/overview#relative-urls
 [2]: /docs/extensions/extension#method-getURL

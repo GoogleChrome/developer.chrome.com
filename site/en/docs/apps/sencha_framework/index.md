@@ -500,7 +500,7 @@ player tree panel.
 [11]: contentSecurityPolicy
 [12]: https://github.com/GoogleChrome/sencha-video-player-app/blob/master/sandbox.html
 [13]: http://senchaprosvcs.github.com/GooglePlayer/docs/output/source/app.html#VP-Application
-[14]: https://developer.mozilla.org/en-US/docs/DOM/window.postMessage
+[14]: https://developer.mozilla.org/docs/DOM/window.postMessage
 [15]: https://github.com/GoogleChrome/sencha-video-player-app/blob/master/index.js
 [16]:
   https://github.com/GoogleChrome/sencha-video-player-app/blob/master/app/controller/MediaServers.js

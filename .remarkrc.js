@@ -46,4 +46,5 @@ exports.plugins = [
 
   // Custom plugins.
   require('./tools/linting/no-unescaped-template-tags.js'),
+  require('./tools/linting/bad-urls.js'),
 ];

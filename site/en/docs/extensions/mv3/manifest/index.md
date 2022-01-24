@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Manifest file format"
 date: 2012-09-18
-updated: 2018-04-26
+updated: 2021-10-08
 description: An overview of the manifest.json properties that you can use in your Chrome Extension.
 ---
 
@@ -29,15 +29,13 @@ discusses each field.
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/icons">icons</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
 
   <span class="token comment">// Optional</span>
-  <span class="token property">"action"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"author"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"automation"</span><span class="token operator">:</span> ...<span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/service_workers">background</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token comment">// Required</span>
-    <span class="token property">"<a href="/docs/extensions/mv3/service_workers">service_worker</a>"</span><span class="token operator">:</span>
-    <span class="token string">"service-worker.js"</span>,
+    <span class="token property">"<a href="/docs/extensions/mv3/service_workers">service_worker</a>"</span><span class="token operator">:</span> <span class="token string">"background.js"</span>,
     <span class="token comment">// Optional</span>
-    <span class="token string">"<a href="/docs/extensions/mv3/migrating_to_service_workers">module</a>"</span>
+    <span class="token string">"<a href="/docs/extensions/mv3/migrating_to_service_workers">type</a>":</span> ...
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/settings_override">chrome_settings_overrides</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/manifest/override">chrome_url_overrides</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -79,7 +77,6 @@ discusses each field.
   <span class="token property">"<a href="/docs/extensions/reference/permissions">optional_permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"tabs"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/options">options_page</a>"</span><span class="token operator">:</span> <span class="token string">"options.html"</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/mv3/options">options_ui</a>"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"chrome_style"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token property">"page"</span><span class="token operator">:</span> <span class="token string">"options.html"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"<a href="/docs/extensions/reference/permissions">permissions</a>"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"tabs"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>

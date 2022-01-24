@@ -207,7 +207,7 @@ allowed only for clients and servers of the same origin, verified by a digital a
 [3]: /docs/android/custom-tabs/
 [4]: https://fetch.spec.whatwg.org/#cors-safelisted-request-header
 [5]: https://developers.google.com/digital-asset-links/v1/getting-started
-[6]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+[6]: https://developer.mozilla.org/docs/Web/HTTP/CORS
 [7]: https://fetch.spec.whatwg.org/#cors-safelisted-request-header
 [8]: /docs/android/custom-tabs/
 [9]: https://developer.android.com/reference/android/provider/Browser#EXTRA_HEADERS

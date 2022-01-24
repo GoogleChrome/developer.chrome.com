@@ -47,7 +47,7 @@ You must declare the "fileBrowserHandler" permission in the [extension manifest]
 
 ## Implementing a file browser handler
 
-To use this API, you must implement a function that handles the `onExecute` event of `chrome.fileBrowserHandler`. Your function will be called whenever the user clicks the button that represents your file browser handler. In your function, use the [File System API](https://developer.mozilla.org/en-US/docs/Web/API/FileSystemFileEntry) to get access to the file contents. Here is an example:
+To use this API, you must implement a function that handles the `onExecute` event of `chrome.fileBrowserHandler`. Your function will be called whenever the user clicks the button that represents your file browser handler. In your function, use the [File System API](https://developer.mozilla.org/docs/Web/API/FileSystemFileEntry) to get access to the file contents. Here is an example:
 
 ```js
 chrome.fileBrowserHandler.onExecute.addListener(async (id, details) => {

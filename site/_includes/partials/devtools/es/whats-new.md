@@ -2,6 +2,57 @@
 
 Por favor, revisa la versión en inglés de <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> para una lista completa de las características lanzadas. Debajo tienes más contenido que ha sido traducido al castellano.
 
+<!-- ### Chrome 98 {: #chrome98 }
+* [Preview feature: Full-page accessibility tree](/es/blog/new-in-devtools-98/#a11y-tree)
+* [More precise changes in the Changes tab](/es/blog/new-in-devtools-98/#changes)
+* [Set longer timeout for user flow recording](/es/blog/new-in-devtools-98/#recorder-timeout)
+* [Ensure your pages are cacheable with the Back/forward cache tab](/es/blog/new-in-devtools-98/#bfcache)
+* [New Properties pane filter](/es/blog/new-in-devtools-98/#properties)
+* [Emulate the CSS forced-colors media feature](/es/blog/new-in-devtools-98/#forced-colors)
+* [Show rulers on hover command](/es/blog/new-in-devtools-98/#show-rulers)
+* [Support `row-reverse` and `column-reverse` in the Flexbox editor](/es/blog/new-in-devtools-98/#flexbox-editor)
+* [New keyboard shortcuts to replay XHR and expand all search results](/es/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 9 in the Lighthouse panel](/es/blog/new-in-devtools-98/#lighthouse)
+* [Improved Sources panel](/es/blog/new-in-devtools-98/#sources)
+* [Miscellaneous highlights](/es/blog/new-in-devtools-98/#misc)
+* [[Experimental] Endpoints in the Reporting API pane](/es/blog/new-in-devtools-98/#reporting-api) -->
+
+
+### Chrome 97 {: #chrome97 }
+
+* [Función en vista previa: Nuevo panel de Grabadora](/es/blog/new-in-devtools-97/#recorder)
+* [Actualización de la lista de dispositivos en el Modo Dispositivo](/es/blog/new-in-devtools-97/#device)
+* [Autocompletado con Editar como HTML](/es/blog/new-in-devtools-97/#code-completion)
+* [Mejorada la experiencia de depuración de código](/es/blog/new-in-devtools-97/#debugging)
+* [Sincronización de configuraciones de DevTools entre dispositivos](/es/blog/new-in-devtools-97/#sync)
+
+
+### Chrome 96 {: #chrome96 }
+* [Función de vista previa: Nuevo panel de Descripción General de CSS](/es/blog/new-in-devtools-96/#css-overview)
+<!-- * [Restored and improved CSS length edit and copy experince](/es/blog/new-in-devtools-966/#length) -->
+* [Emule la función multimedia CSS de contraste](/es/blog/new-in-devtools-96/#prefers-contrast)
+* [Emula la función de tema oscuro automático de Chrome](/es/blog/new-in-devtools-96/#auto-dark-mode)
+* [Copiar declaraciones como JavaScript en el panel Estilos](/es/blog/new-in-devtools-96/#copy-as-js)
+* [Nueva pestaña de Payload en el panel Red](/es/blog/new-in-devtools-96/#payload)
+* [Mejoras en la visualización de propiedades en el panel Propiedades](/es/blog/new-in-devtools-96/#properties)
+* [Opción para ocultar errores CORS en la consola](/es/blog/new-in-devtools-96/#hide-cors-errors)
+* [Vista previa y evaluación adecuadas de los objetos `Intl` en la consola](/es/blog/new-in-devtools-96/#intl)
+* [Trazas de la pila asíncrona consistentes](/es/blog/new-in-devtools-96/#async)
+* [Mantener la barra lateral de la consola](/es/blog/new-in-devtools-96/#console-sidebar)
+* [Panel de caché de la aplicación en desuso (deprecated) en el panel de la aplicación](/es/blog/new-in-devtools-96/#app-cache)
+* [[Experimental] Nuevo panel de la API de informes en el panel de la aplicación](/es/blog/new-in-devtools-96/#reporting-api)
+
+
+### Chrome 95 {: #chrome95 }
+* [Nuevas herramientas para cambiar medidas en CSS](/es/blog/new-in-devtools-95/#length)
+* [Oculta problemas en la pestaña Problemas](/es/blog/new-in-devtools-95/#hide-issues)
+* [Mejora la visualización de propiedades](/es/blog/new-in-devtools-95/#properties)
+* [LLighthouse 8.4 en el panel Lighthouse](/es/blog/new-in-devtools-95/#lighthouse)
+* [Ordena los fragmentos en el panel Fuentes](/es/blog/new-in-devtools-95/#snippets)
+* [Nuevos enlaces a las notas de la versión traducida y reporta un error de traducción](/es/blog/new-in-devtools-95/#localized)
+* [Mejorado el menú de comandos de DevTools](/es/blog/new-in-devtools-95/#command-menu)
+
+
 ### Chrome 94 {: #chrome94 }
 
 * [Utiliza DevTools en tu idioma preferido](/es/blog/new-in-devtools-94/#localized)

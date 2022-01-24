@@ -8,6 +8,7 @@ const {
   leadingAndTrailingSlash,
   stripDefaultLocale,
 } = require('./site/_filters/urls');
+const embededDoc = require('./site/_filters/docs');
 const {i18n} = require('./site/_filters/i18n');
 const {githubLink} = require('./site/_filters/github-link');
 const {namespaceToPath} = require('./site/_filters/namespace');
@@ -61,6 +62,9 @@ module.exports = eleventyConfig => {
   // to use it for its build.
   eleventyConfig.setUseGitIgnore(false);
 
+  // Watch our external data in case it is synchronized or rebuilt.
+  eleventyConfig.addWatchTarget('./external/data/');
+
   // Merge eleventy's data cascade. This means directory data files will
   // cascade down to any child directories.
   eleventyConfig.setDataDeepMerge(true);
@@ -99,6 +103,7 @@ module.exports = eleventyConfig => {
 
   // Add filters
   eleventyConfig.addFilter('absolute', absolute);
+  eleventyConfig.addFilter('embededDoc', embededDoc);
   eleventyConfig.addFilter('trailingSlash', trailingSlash);
   eleventyConfig.addFilter('leadingAndTrailingSlash', leadingAndTrailingSlash);
   eleventyConfig.addFilter('stripDefaultLocale', stripDefaultLocale);
@@ -106,12 +111,12 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('githubLink', githubLink);
   eleventyConfig.addFilter('md', mdFilters.render);
   eleventyConfig.addFilter('mdInline', mdFilters.renderInline);
-  eleventyConfig.addFilter('modelToHref', mdFilters.modelToHref);
   eleventyConfig.addFilter('namespaceToPath', namespaceToPath);
   eleventyConfig.addNunjucksAsyncFilter('minifyJs', minifyJs);
   eleventyConfig.addFilter('updateSvgForInclude', updateSvgForInclude);
   eleventyConfig.addFilter('slugify', slugify);
   eleventyConfig.addFilter('toc', toc);
+  eleventyConfig.addFilter('typeof', x => typeof x);
 
   // Add shortcodes
   eleventyConfig.addShortcode('IFrame', IFrame);

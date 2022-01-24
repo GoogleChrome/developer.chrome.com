@@ -25,7 +25,7 @@ tags:
 
 And there's [plenty more](#more)!
 
-I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 66!
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see what's new for developers in Chrome 66!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/65.0.3325.146..66.0.3359.116).

@@ -54,6 +54,12 @@
     "glitch": "dotproto",
     "image": "image/WlD8wC6g8khYWPJUsQceQkhXSlv1/ET2qKakhhrDt1sqjazmy.jpg"
   },
+  "drott": {
+    "country": "FI",
+    "github": "drott",
+    "twitter": "abrax5",
+    "image": "image/admin/xb7jK8lMyvbHQrBJzlxv.jpg"
+  },
   "marshallvale": {
     "country": "US",
     "twitter": "marshallvale",
@@ -265,11 +271,10 @@
     "image": "image/8WbTDNrhLsU0El80frMBGE4eMCD3/TbY7HP8KuTtQ6Y1186nt.jpg"
   },
   "ajara": {
-    "homepage": "https://blog.tomayac.com/",
     "twitter": "tropicadri",
     "github": "tropicadri",
     "country": "US",
-    "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/suAORxTqXSSw91SaRaTm.jpg"
+    "image": "image/SeARmcA1EicLXagFnVOe0ou9cqK2/24pW1yRsYdAJXV7nfgbR.jpg"
   },
   "chrishtr": {
     "twitter": "chrishtr",
@@ -281,9 +286,18 @@
     "country": "US",
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/WWbi21K4D5om3zTba8hR.jpg"
   },
+  "rsheeter": {
+    "country": "CA",
+    "github": "rsheeter",
+    "image": "image/roKb5a4ddjOSoIbxRFI9kDeuVvE2/PRHDWY5YSOQehUCcvnWB.png"
+  },
   "ackermanb": {
     "country": "US",
     "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/kUhkXfBItc8GVTkWA2AB.jpg"
+  },
+  "dsli": {
+    "country": "US",
+    "image": "image/SHhb2PDKzXTggPGAYpv8JgR81pX2/taqTgQ89EI2kdOtM7Zle.jpeg"
   },
   "joycetoh": {
     "country": "US",
@@ -355,5 +369,28 @@
     "twitter": "iblameari",
     "github": "arichiv",
     "image": "image/kY6vrM8mwvcBzVokoWQTl9rKquv1/ctQrNhmIeWkvn9zfV6X0.jpg"
+  },
+  "jichen": {
+    "country": "US",
+    "image": "image/sQ51XsLqKMgSQMCZjIN0B7hlBO02/PiqZNqbaZXr3qfZC8lNG.jpeg"
+  },
+  "kateryna": {
+    "country": "DE",
+    "github": "kateryna-prokopenko",
+    "image": "image/OEs9sSlbxePTYhSctRsJ9kgrqPy1/rdQlefvcJBrvTiqSxULm.jpg"
+  },
+  "miketaylr": {
+    "github": "miketaylr",
+    "image": "image/vgdbNJBYHma2o62ZqYmcnkq3j0o1/v4ogqQjm5vTjRQBaTyRK.png"
+  },
+  "alcastano": {
+    "country": "CH",
+    "image": "image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Ie3JSl9zE6f51LclZGFS.jpg"
+  },
+  "alexandrawhite": {
+    "country": "US",
+    "github": "heyawhite",
+    "twitter": "heyawhite",
+    "image": "image/VbsHyyQopiec0718rMq2kTE1hke2/tKKMrgVB852NNd1UMRzN.png"
   }
 }

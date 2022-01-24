@@ -47,7 +47,7 @@ Here's what you need to know:
 * I owned several jackets almost exactly like this in the 1990s.
 * And, there's [plenty more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), and I've got the *411* for
+I'm [Pete LePage](https://petelepage.com/), and I've got the *411* for
 developers in Chrome 90, *doin' it 1990's style!*
 
 ## Prevent overflow with `overflow: clip` {: #overflow-clip }

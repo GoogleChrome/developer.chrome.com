@@ -30,7 +30,7 @@ Here's what you need to know:
 * The [font access API](#font-access) starts it's origin trial.
 * And, there's [plenty more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), working, and shooting
+I'm [Pete LePage](https://petelepage.com/), working, and shooting
 from home, let's dive in and see what's new for developers in Chrome 87!
 
 ## Chrome Dev Summit {: #cds }
@@ -244,7 +244,7 @@ tell you -- what's new in Chrome!
 
 [wd-ptz]: https://web.dev/camera-pan-tilt-zoom/
 [wd-fonts]: https://web.dev/local-fonts/
-[mdn-rr]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests
+[mdn-rr]: https://developer.mozilla.org/docs/Web/HTTP/Range_requests
 [wd-rr]: https://web.dev/sw-range-requests/
 [cds2020]: /devsummit/?utm_source=nic87&utm_medium=website
 [cds-schedule]: /devsummit/schedule/?utm_source=nic87&utm_medium=website

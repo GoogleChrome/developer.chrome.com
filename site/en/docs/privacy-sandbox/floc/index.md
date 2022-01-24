@@ -9,7 +9,7 @@ description: >
  similar browsing history. This is done without sharing individual browsing history with the browser 
  vendor or anyone else.
 date: 2021-05-18
-updated: 2021-08-18
+updated: 2021-10-29
 authors:
   - samdutton
 ---
@@ -21,6 +21,13 @@ authors:
 * [Demo](https://floc.glitch.me/) of initial version (origin trial now closed).
 * [Intent to Experiment](https://groups.google.com/a/chromium.org/g/blink-dev/c/MmijXrmwrJs) in 
 [Blink](https://www.chromium.org/blink).
+
+{% Aside %}
+This post outlines the API design implemented in Chrome for the first origin trial of FLoC. 
+
+Future iterations of an API to enable interest-based advertising without third-party cookies 
+or other cross-site tracking mechanisms are currently in development.
+{% endAside %}
 
 ## Why do we need FLoC?
 

@@ -1,7 +1,69 @@
 ## 更多 DevTools 的功能 {: #whats-new }
-欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。有兴趣参与中文翻译的朋友，请联系我们的开发者推广工程师 [Jecelyn Yeen](https://twitter.com/JecelynYeen)。
+欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
-<!-- lint disable no-smart-quotes -->
+<!-- ### Chrome 98 {: #chrome98 }
+* [Preview feature: Full-page accessibility tree](/zh/blog/new-in-devtools-98/#a11y-tree)
+* [More precise changes in the Changes tab](/zh/blog/new-in-devtools-98/#changes)
+* [Set longer timeout for user flow recording](/zh/blog/new-in-devtools-98/#recorder-timeout)
+* [Ensure your pages are cacheable with the Back/forward cache tab](/zh/blog/new-in-devtools-98/#bfcache)
+* [New Properties pane filter](/zh/blog/new-in-devtools-98/#properties)
+* [Emulate the CSS forced-colors media feature](/zh/blog/new-in-devtools-98/#forced-colors)
+* [Show rulers on hover command](/zh/blog/new-in-devtools-98/#show-rulers)
+* [Support `row-reverse` and `column-reverse` in the Flexbox editor](/zh/blog/new-in-devtools-98/#flexbox-editor)
+* [New keyboard shortcuts to replay XHR and expand all search results](/zh/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 9 in the Lighthouse panel](/zh/blog/new-in-devtools-98/#lighthouse)
+* [Improved Sources panel](/zh/blog/new-in-devtools-98/#sources)
+* [Miscellaneous highlights](/zh/blog/new-in-devtools-98/#misc)
+* [[Experimental] Endpoints in the Reporting API pane](/zh/blog/new-in-devtools-98/#reporting-api) -->
+
+
+### Chrome 97 {: #chrome97 }
+* [预览特性：新的录制器面板](/zh/blog/new-in-devtools-97/#recorder)
+* [设备模式中更新的设备列表](/zh/blog/new-in-devtools-97/#device)
+* [修改 HTML 时自动补全](/zh/blog/new-in-devtools-97/#code-completion)
+* [改善代码调试体验](/zh/blog/new-in-devtools-97/#debugging)
+* [[实验] 跨设备同步 DevTools 设置](/zh/blog/new-in-devtools-97/#sync)
+
+### Chrome 96 {: #chrome96 }
+* [预览特性: 新的 CSS 概览面板](/blog/new-in-devtools-96/#css-overview)
+* [修复以及改善 CSS 长度编辑与复制的体验](/blog/new-in-devtools-96/#length) 
+* [模拟 CSS prefers-contrast 媒体特性](/blog/new-in-devtools-96/#prefers-contrast)
+* [Emulate the Chrome’s Auto Dark Theme feature模拟 Chrome 的自动深色主题特性](/blog/new-in-devtools-96/#auto-dark-mode)
+* [将样式窗格里面的 CSS 规则复制为 JavaScript 属性](/blog/new-in-devtools-96/#copy-as-js)
+* [网络面板新增载荷（Payload）边栏](/blog/new-in-devtools-96/#payload)
+* [优化属性窗格里面的属性展示](/blog/new-in-devtools-96/#properties)
+* [新增选项，用于隐藏控制台里面的 CORS 错误](/blog/new-in-devtools-96/#hide-cors-errors)
+* [控制台正确预览以及执行 `Intl` 对象](/blog/new-in-devtools-96/#intl)
+* [统一的异步堆栈信息](/blog/new-in-devtools-96/#async)
+* [保留控制台侧边栏](/blog/new-in-devtools-96/#console-sidebar)
+* [弃用应用程序面板里面的应用程序缓存窗格](/blog/new-in-devtools-96/#capp-cache)
+* [[实验] 应用程序面板里面新增 Reporting API 窗格](/blog/new-in-devtools-96/#reporting-api)
+
+
+### Chrome 95 {: #chrome95 }
+* [新的 CSS 长度编辑工具](/blog/new-in-devtools-95/#length)
+* [在“问题”标签页隐藏问题](/blog/new-in-devtools-95/#hide-issues)
+* [改善属性展示](/blog/new-in-devtools-95/#properties)
+* [Lighthouse 面板中的 Lighthouse 8.4](/blog/new-in-devtools-95/#lighthouse)
+* [在“来源”面板中排序代码段](/blog/new-in-devtools-95/#snippets)
+* [阅读 DevTools 新功能的翻译文章和举报翻译错误](/blog/new-in-devtools-95/#localized)
+* [DevTools 命令菜单的用户交互优化](/blog/new-in-devtools-95/#command-menu)
+
+### Chrome 94 {: #chrome94 }
+
+* [设定您的 DevTools 用户界面语言](/zh/blog/new-in-devtools-94/#localized)
+* [设备列表新增 Nest Hub 设备](/zh/blog/new-in-devtools-94/#nest-hub)
+* [帧（Frame）详情页获取 origin trials 信息](/zh/blog/new-in-devtools-94/#origin-trials)
+* [新的 CSS 容器查询（Container queries）徽章](/zh/blog/new-in-devtools-94/#container-queries)
+* [利用新的复选框反转过滤网络请求的条件](/zh/blog/new-in-devtools-94/#nvert-network-filter)
+* [控制台的边栏即将被弃用](/zh/blog/new-in-devtools-94/#deprecated)
+* [在问题选项卡以及网络面板那里显示原生 `Set-Cookie` 响应头](/zh/blog/new-in-devtools-94/#raw-cookies)
+* [在控制台里显示原生访问器为自己的属性](/zh/blog/new-in-devtools-94/#native-accessors)
+* [正确输出带有 #sourceURL 行内脚本的错误堆栈信息](/zh/blog/new-in-devtools-94/#inline-script)
+* [更改计算样式边栏里面元素的颜色格式](/zh/blog/new-in-devtools-94/#color-unit)
+* [使用原生的 HTML 提示框替换自定义提示框](/zh/blog/new-in-devtools-94/#tooltip)
+* [[实验阶段] 隐藏问题选项卡里面的问题](/zh/blog/new-in-devtools-94/#hide-issues)
+
 
 ### Chrome 93 {: #chrome93 }
 

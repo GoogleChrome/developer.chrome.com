@@ -282,7 +282,7 @@ Congratulations, you have completed the tutorial. Click **Dispense Trophy** to r
 [3]: /docs/devtools/customize/#placement
 [4]: /docs/devtools/command-menu
 [5]: https://en.wikipedia.org/wiki/Stack_trace
-[6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+[6]: https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions
 [7]: https://regexr.com
 [8]: /docs/devtools/console/reference
 [9]: /docs/devtools/console/api

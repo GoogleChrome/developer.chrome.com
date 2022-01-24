@@ -28,7 +28,7 @@ In Chrome 72, we've added support for:
 
 And there's [plenty more](#more)!
 
-I'm [Pete LePage](https://twitter.com/petele). Let's dive in and see
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see
 what's new for developers in Chrome 72!
 
 ## Change log
@@ -80,7 +80,7 @@ More details are in Mathias's article on
 [class fields](https://developers.google.com/web/updates/2018/12/class-fields)
 for more details.
 
-[mdn-classes]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+[mdn-classes]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Classes
 
 ## User Activation API {: #user-activation }
 

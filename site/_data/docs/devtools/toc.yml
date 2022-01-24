@@ -12,6 +12,7 @@
   sections:
     - url: /docs/devtools/css/
     - url: /docs/devtools/css/reference/
+    - url: /docs/devtools/css-overview/
     - url: /docs/devtools/css/animations/
     - url: /docs/devtools/css/grid/
     - url: /docs/devtools/css/print-preview/
@@ -80,6 +81,7 @@
     - url: /docs/devtools/memory-problems/memory-101/
     - url: /docs/devtools/memory-problems/heap-snapshots/
     - url: /docs/devtools/memory-problems/allocation-profiler/
+- url: /docs/devtools/recorder/
 - url: /docs/devtools/media-panel/
 - url: /docs/devtools/webauthn/
 - url: /docs/devtools/workspaces/

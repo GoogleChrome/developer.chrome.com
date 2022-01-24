@@ -2,7 +2,7 @@
 layout: "layouts/doc-post.njk"
 title: "Tutorial: Google analytics"
 date: 2012-09-18
-updated: 2016-10-11
+updated: 2021-10-06
 description: >
     Step-by-step instructions on how to track usage of your Extension with Google Analytics.
 ---
@@ -50,7 +50,9 @@ default content security policy. The policy definition in your [`manifest.json`]
 ```json
 {
   ...,
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  },
   ...
 }
 ```

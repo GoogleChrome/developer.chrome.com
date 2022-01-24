@@ -61,6 +61,6 @@ stylesheets][5], enable the **Show All** checkbox (next to the [**Filter**](#fil
 
 [1]: /docs/devtools/css
 [2]: /docs/devtools/css/reference#select
-[3]: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+[3]: https://developer.mozilla.org/docs/Web/CSS/Specificity
 [4]: /docs/devtools/javascript/reference#format
-[5]: https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade#User-agent_stylesheets
+[5]: https://developer.mozilla.org/docs/Web/CSS/Cascade#User-agent_stylesheets

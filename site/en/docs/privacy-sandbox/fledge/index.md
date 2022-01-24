@@ -6,17 +6,17 @@ subhead: >
 description: >
   FLEDGE satisfies remarketing use cases, but is designed so it cannot be used by third parties to track user browsing behaviour across sites. The API enables on-device "auctions" by the browser, to choose relevant ads provided by websites the user has previously visited.
 date: 2021-05-18
-updated: 2021-09-20
+updated: 2021-09-29
 authors:
   - samdutton
 ---
 
 {% Aside %}
-FLEDGE can be tested in Chrome from versions 91.0.4472.49 or 92.0.4493.0 with the following flags enabled:
+FLEDGE can be tested in current versions of Chrome and Chrome Canary with the following flags enabled:
 
-`--enable-features=FledgeInterestGroups,FledgeInterestGroupAPI`
+`--enable-features=InterestGroupStorage,AdInterestGroupAPI,Fledge`
 
-* This is the in-progress version of FLEDGE for early testing, so it should not be considered feature complete or indicative of the final implementation. Progress and status are discussed in the regular WICG meetings. The [minutes](https://github.com/WICG/turtledove/blob/main/meetings/2021-05-12-FLEDGE-call-minutes.md#agenda) for the 2021/05/12 WICG call provide detail on what is and is not supported in the current implementation.
+* This is the in-progress version of FLEDGE for early testing, so it should not be considered feature complete or indicative of the final implementation. Progress and status are discussed in the regular WICG meetings. The [minutes](https://github.com/WICG/turtledove/blob/main/meetings/2021-05-12-FLEDGE-call-minutes.md#agenda) for the 2021-05-12 WICG call provide detail on what is and is not supported in the current implementation.
 * [Run Chromium with flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) explains how to set flags when running Chrome and other Chromium-based browsers from the command line.
 {% endAside %}
 
@@ -29,7 +29,7 @@ FLEDGE can be tested in Chrome from versions 91.0.4472.49 or 92.0.4493.0 with th
 FLEDGE is the first experiment to be implemented in Chromium within the 
 [TURTLEDOVE](https://github.com/WICG/turtledove) family of proposals.
 
-* [API proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md) is under discussion with
+* [API proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md) is under discussion with
 [WICG](https://www.w3.org/community/wicg/) and interest groups.
 * [Intent to Prototype](https://groups.google.com/a/chromium.org/g/blink-dev/c/w9hm8eQCmNI) in
 [Blink](https://www.chromium.org/blink).
@@ -102,14 +102,14 @@ auction has three jobs:<br>
 1. The seller initiates the ad auction by calling runAdAuction(), with data including the host name
 of the seller, signals from buyers and the seller, and a URL for auction decision logic.
 1. The auction returns data about the winning ad. The data cannot be accessed by the publisher site,
-except to render the ad in a Fenced Frame.
+except to render the ad in a fenced frame.
 1. The ad is displayed.
 
 ---
 
 ## Engage and share feedback
 
-* **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/master/FLEDGE.md), [raise
+* **GitHub**: Read the [proposal](https://github.com/WICG/turtledove/blob/main/FLEDGE.md), [raise
 questions and follow discussion](https://github.com/WICG/turtledove/issues).
 * **W3C**: Discuss industry use cases in the [Improving Web Advertising Business&nbsp;Group](https://www.w3.org/community/web-adv/participants).
 * **Developer support**: Ask questions and join discussions on the

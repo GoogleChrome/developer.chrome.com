@@ -45,7 +45,7 @@ Chromium 议题：[1163928](https://crbug.com/1163928)
 Chromium 议题：[1223525](https://crbug.com/1223525)
 
 
-## 帧（Frame）详情页获取 origin trials 信息{: #origin-trials }
+## 帧（Frame）详情页获取 origin trials 信息 {: #origin-trials }
 您现在可以从**应用**面板的帧（frame）详情页那里获取网站的 [origin trials](/blog/origin-trials/) 信息。
 
 [Origin trials](/blog/origin-trials/) 允许您提前尝试正处于实验阶段的新功能。通过注册参加 Origin trials， 您就可以在该新功能还未放给所有用户之前， 利用该功能进行限时的产品开发。

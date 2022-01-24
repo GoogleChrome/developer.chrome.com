@@ -45,7 +45,7 @@ Sandbox proposals](https://developers.chrome.com/docs/privacy-sandbox).
 ## Why is this API needed?
 
 Today, ad conversion measurement often relies on [third-party
-cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#Third-party_cookies).
+cookies](https://developer.mozilla.org/docs/Web/HTTP/Cookies#Third-party_cookies).
 Browsers are restricting access to third-party cookies because these can be used to track
 users across sites and hinder user privacy. This API enables those measurements in a
 privacy-preserving way, without third-party cookies.
@@ -123,10 +123,10 @@ ecosystem feedback is collected.
 #### Experiment with end users on a deployed site
 
 1.  Enable the API for end users by registering for an [origin
-    trial](https://developer.chrome.com/blog/origin-trials/) if available. An origin trial
+    trial](/blog/origin-trials/) if available. An origin trial
     gives you access to an experimental feature, to build functionality you can try out
     for a limited time. Note that [third-party origin
-    trials](https://developer.chrome.com/blog/third-party-origin-trials/) make it possible
+    trials](/blog/third-party-origin-trials/) make it possible
     for third-party actors such as ad serving and measurement providers to test an API
     across multiple sites. **To see the currently available origin trials for this API,
     head over to [Status](#status)**. To be informed of future origin trials, join the
@@ -224,7 +224,7 @@ Aggregate reports are best suited for **reporting** use cases. They help answer 
 such as _"What is my return on investment?"_.  
 Usage of aggregate reports for **optimization** use cases—for example, to optimize for a
 purchase value, which is not supported by event-level reports because the conversion data
-is too coarse—is an area of active research. See [Open questions](#open-questions).
+is too coarse—is an area of active research.
 
 {% Details %}  
 {% DetailsSummary 'h3' %}  
@@ -252,9 +252,9 @@ attribution](https://github.com/WICG/conversion-measurement-api/blob/main/cross_
 In a future without third-party cookies, this API would be combined with other
 privacy-preserving ads APIs in order to cover end-to-end use cases:
 
-- Remarketing: see [FLEDGE](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
+- Remarketing: see [FLEDGE](/docs/privacy-sandbox/fledge/)
 - Interest-based ad selection: see
-  [FLoC](https://developer.chrome.com/docs/privacy-sandbox/floc/)
+  [FLoC](/docs/privacy-sandbox/floc/)
 
 {% endAside %}
 
@@ -274,7 +274,7 @@ Statuses:
 
 {% Aside %}  
 [Current origin
-trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721) (Chrome
+trial](/origintrials/#/view_trial/3411476717733150721) (Chrome
 experiment 🧪) {% endAside %}
 
 {% Aside 'caution' %}  
@@ -314,8 +314,8 @@ the API based on ecosystem feedback. {% endAside %}
     <td><code>🧪 Experiment (Chrome)</code></td>
     </tr>
     <tr>
-    <td>Attribution model: priority-based<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_views.md#controlling-which-attribution-source-to-triggerd">Explainer</a></td>
-    <td><code>🏗️ Under development (Chrome)</code></td>
+    <td>Attribution model: priority-based<br><a href="https://github.com/WICG/conversion-measurement-api/blob/main/event_attribution_reporting_clicks.md#multiple-sources-for-the-same-trigger-multi-touch">Explainer</a></td>
+    <td><code>🧪 Experiment (Chrome)</code></td>
     </tr>
     <tr>
     <td>Attribution model: flexible</td>
@@ -578,35 +578,8 @@ the following privacy mechanisms:
 - By default, the feature is enabled in top-level contexts. Arbitrary third-parties can't
   use the API without a publisher's knowledge, because the Attribution Reporting API needs
   to be enabled in child iframes via a [Permission
-  policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy).
+  policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy).
 
-## Open questions
+## Attribution Reporting: all resources
 
-A number of questions remain open and will be resolved as the API is incubated in the
-open. You're encouraged to [participate](#participate) in these discussions. In
-particular:
-
-- What is the right amount of noise to preserve privacy and usefulness?
-- How to support custom attribution models?
-- How to optimize for any conversion-side data that has a certain level of detail, such as
-  a purchase value?
-- What will qualify as a trusted server? One solution that is being assessed is to run
-  regular open-source audits. [Join the
-  discussion](https://github.com/WICG/conversion-measurement-api/issues/116).
-- How to offer more reporting flexibility, for example support delegation to more
-  reporting endpoints? [Join the
-  discussion](https://github.com/WICG/conversion-measurement-api/issues/96).
-- How to prevent fraud, e.g. via authentication using anonymous credentials? [Join the
-  discussion](https://github.com/WICG/conversion-measurement-api/labels/anti-fraud%20%2F%20auth).
-- If you're thinking of using this API for non-advertising use cases: what's missing, how
-  could the API be improved? [Open an
-  issue](https://github.com/WICG/conversion-measurement-api/issues)
-- How can implementers customize the privacy settings? [Join the
-  discussion](https://github.com/WICG/conversion-measurement-api/issues/99).
-
-{% Aside %}  
-This API combines multiple privacy techniques in order to achieve **privacy and
-usefulness**. This means that the 3-bit (or 1-bit for views) data limitation and other
-privacy mechanisms used by this API are a means to an end. They're subject to change. If
-there are ways for adtech companies to get more useful data for their use cases while
-achieving strong privacy guarantees, this API will evolve accordingly. {% endAside %}
+See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction/#use-cases-and-features).

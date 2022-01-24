@@ -29,7 +29,7 @@ tags:
 
 And there's [plenty more](#more)!
 
-I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 68!
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see what's new for developers in Chrome 68!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/67.0.3396.62..68.0.3440.70).

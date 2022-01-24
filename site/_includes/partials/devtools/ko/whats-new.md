@@ -1,5 +1,56 @@
 ## 더 많은 DevTools 기능 {: #whats-new }
+
 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 영어 버전을 참고하여 관련 기능의 전체 목록을 볼 수 있습니다. 아래 콘텐츠들은 한국어로 번역된 콘텐츠들입니다.
+
+<!-- ### Chrome 98 {: #chrome98 }
+* [Preview feature: Full-page accessibility tree](/ko/blog/new-in-devtools-98/#a11y-tree)
+* [More precise changes in the Changes tab](/ko/blog/new-in-devtools-98/#changes)
+* [Set longer timeout for user flow recording](/ko/blog/new-in-devtools-98/#recorder-timeout)
+* [Ensure your pages are cacheable with the Back/forward cache tab](/ko/blog/new-in-devtools-98/#bfcache)
+* [New Properties pane filter](/ko/blog/new-in-devtools-98/#properties)
+* [Emulate the CSS forced-colors media feature](/ko/blog/new-in-devtools-98/#forced-colors)
+* [Show rulers on hover command](/ko/blog/new-in-devtools-98/#show-rulers)
+* [Support `row-reverse` and `column-reverse` in the Flexbox editor](/ko/blog/new-in-devtools-98/#flexbox-editor)
+* [New keyboard shortcuts to replay XHR and expand all search results](/ko/blog/new-in-devtools-98/#shortcuts)
+* [Lighthouse 9 in the Lighthouse panel](/ko/blog/new-in-devtools-98/#lighthouse)
+* [Improved Sources panel](/ko/blog/new-in-devtools-98/#sources)
+* [Miscellaneous highlights](/ko/blog/new-in-devtools-98/#misc)
+* [[Experimental] Endpoints in the Reporting API pane](/ko/blog/new-in-devtools-98/#reporting-api) -->
+
+
+### Chrome 97 {: #chrome97 }
+
+* [기능 미리보기: 신규 Recorder 패널](/ko/blog/new-in-devtools-97/#recorder)
+* [Device Mode 의 기기 목록 갱신](/ko/blog/new-in-devtools-97/#device)
+* [HTML로 수정에서 자동완성](/ko/blog/new-in-devtools-97/#code-completion)
+* [코드 디버깅 경험 개선](/ko/blog/new-in-devtools-97/#debugging)
+* [[실험적 기능] 여러 기기 사이의 DevTools 설정 동기화](/ko/blog/new-in-devtools-97/#sync)
+
+### Chrome 96 {: #chrome96 }
+
+* [미리보기 기능: 새로운 CSS 개요 영역](/ko/blog/new-in-devtools-96/#css-overview)
+* [복원 및 개선된 CSS 길이 편집 및 복사 경험](/ko/blog/new-in-devtools-96/#length)
+* [CSS 의 prefers-contrast 미디어 기능 에뮬레이션](/ko/blog/new-in-devtools-96/#prefers-contrast)
+* [크롬의 자동 어두운 테마 기능 에뮬레이션](/ko/blog/new-in-devtools-96/#auto-dark-mode)
+* [스타일 영역에서 선언을 자바스크립트로 복사하기](/ko/blog/new-in-devtools-96/#copy-as-js)
+* [네트워크 패널의 새로운 페이로드 탭](/ko/blog/new-in-devtools-96/#payload)
+* [속성 영역 내의 속성 표시 방법의 개선](/ko/blog/new-in-devtools-96/#properties)
+* [콘솔의 CORS 에러 숨김 옵션](/ko/blog/new-in-devtools-96/#hide-cors-errors)
+* [콘솔에서 적절한 `Intl` 객체 미리보기 및 값 판별](/ko/blog/new-in-devtools-96/#intl)
+* [일관적인 async 스택 추적](/ko/blog/new-in-devtools-96/#async)
+* [콘솔 사이드바 유지](/ko/blog/new-in-devtools-96/#console-sidebar)
+* [애플리케이션 패널 내 애플리케이션 캐시 영역 제거 예정](/ko/blog/new-in-devtools-96/#app-cache)
+* [[실험실 기능] 애플리케이션 패널에 새롭게 추가된 Reporting API 영역](/ko/blog/new-in-devtools-96/#reporting-api)
+
+### Chrome 95 {: #chrome95 }
+
+* [새 CSS 길이 작성 도구](/ko/blog/new-in-devtools-95/#length)
+* [문제 탭에서 문제 숨기기](/ko/blog/new-in-devtools-95/#hide-issues)
+* [속성 표시 개선](/ko/blog/new-in-devtools-95/#properties)
+* [Lighthouse 8.4](/ko/blog/new-in-devtools-95/#lighthouse)
+* [소스 패널에서 스니펫 정렬](/ko/blog/new-in-devtools-95/#snippets)
+* [번역된 릴리스 정보로 이동하는 링크 및 번역 관련 버그 제보](/ko/blog/new-in-devtools-95/#localized)
+* [DevTools 커맨드 메뉴 UI 개선](/ko/blog/new-in-devtools-95/#command-menu)
 
 ### Chrome 94 {: #chrome94 }
 

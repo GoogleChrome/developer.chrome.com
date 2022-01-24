@@ -20,6 +20,12 @@ compare_helpful:
 compare_unhelpful:
   en: 'Unhelpful'
 
+compare_old:
+  en: 'Old'
+
+compare_new:
+  en: 'New'
+
 menu:
   en: 'menu'
   es: 'menu'

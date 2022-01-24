@@ -12,6 +12,6 @@ DevTools, возможность протестировать новейшие A
 Воспользуйтесь одной из следующих опций, чтобы обсудить новые функции и изменения в посте или что-либо еще, связанное с DevTools.
 
 - Отправьте нам предложение или отзыв через [crbug.com](https://crbug.com).
-- Сообщите о проблеме, связанной с DevTools, используя **More options** &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Help** > **Report a DevTools issues** в DevTools.
+- Сообщите о проблеме, связанной с DevTools, используя **Больше опций** (More options) &nbsp; {% Img src="image/admin/4sdCQbpBaG4MpoHB1J08.png", alt="More", width="4", height="20" %} &nbsp; > **Справка** (Help) > **Сообщить о проблемах в инструментах разработчика** (Report a DevTools issues) в DevTools.
 - Твитните на <a href="https://twitter.com/intent/tweet?text=@ChromeDevTools" target="_blank">@ChromeDevTools</a>.
 - Оставьте комментарии под What's new in DevTools [видео на YouTube](https://goo.gle/devtools-youtube).

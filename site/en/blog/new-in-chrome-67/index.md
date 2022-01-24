@@ -27,7 +27,7 @@ tags:
 
 And there's [plenty more](#more)!
 
-I'm Pete LePage. Let's dive in and see what's new for developers in Chrome 67!
+I'm [Pete LePage](https://petelepage.com/). Let's dive in and see what's new for developers in Chrome 67!
 
 Want the full list of changes? Check out the
 [Chromium source repository change list](https://chromium.googlesource.com/chromium/src/+log/66.0.3359.116..67.0.3396.62).
@@ -143,7 +143,7 @@ These are just a few of the changes in Chrome 67 for developers, of course,
 there's plenty more.
 
 The
-[Credential Management API](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API)
+[Credential Management API](https://developer.mozilla.org/docs/Web/API/Credential_Management_API)
 has been supported since Chrome 51, and provides a framework for creating,
 retrieving and storing credentials. It did this through two credential
 types: `PasswordCredential` and `FederatedCredential`. The

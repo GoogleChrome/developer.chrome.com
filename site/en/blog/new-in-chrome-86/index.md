@@ -27,7 +27,7 @@ Here's what you need to know:
   [Multi-screen Window Placement API](#win-place).
 * There's some new stuff in CSS, and [plenty more](#more).
 
-I'm [Pete LePage](https://twitter.com/petele), working and shooting from home,
+I'm [Pete LePage](https://petelepage.com/), working and shooting from home,
 let's dive in and see what's new for developers in Chrome 86!
 
 ## File System Access {: #fs-access }
@@ -255,7 +255,7 @@ and you'll get an email notification whenever we launch a new video, or add our
 I'm Pete LePage, and as soon as Chrome 87 is released, I'll be right here to
 tell you -- what's new in Chrome!
 
-[a-download]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/download
+[a-download]: https://developer.mozilla.org/docs/Web/API/HTMLAnchorElement/download
 [fs-article]: https://web.dev/file-system-access/
 [wd-window]: https://web.dev/multi-screen-window-placement/
 [ot-hid]: /origintrials/#/view_trial/1074108511127863297

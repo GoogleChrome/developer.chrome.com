@@ -2,11 +2,12 @@
 layout: 'layouts/doc-post.njk'
 title: Is it ready yet?
 subhead: Implementation status for Privacy Sandbox APIs.
-description: Implementation status for Privacy Sandbox APIs. Last updated 2021-05-18.
+description: Implementation status for Privacy Sandbox APIs.
 date: 2021-05-18
-updated: 2021-08-18
+updated: 2021-11-09
 authors:
   - samdutton
+  - alexandrawhite
 ---
 
 {% Aside 'caution' %}
@@ -19,7 +20,7 @@ _Previously known as Conversion Measurement._
 
 - [Current origin trial](https://web.dev/origin-trials/): from Chrome 86, [now extended](https://groups.google.com/u/1/a/chromium.org/g/attribution-reporting-api-dev/c/ZKf9T8sRqAM) to Chrome&nbsp;93. 
 - [Register for origin
-  trial](https://developer.chrome.com/origintrials/#/view_trial/3411476717733150721).
+  trial](/origintrials/#/view_trial/3411476717733150721).
 - [Demo](https://goo.gle/demo-event-level-conversion-measurement-api).
 - [Chrome Platform Status](https://www.chromestatus.com/features/6412002824028160).
 - [Blink
@@ -55,7 +56,7 @@ See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
 - [Current origin trial](https://web.dev/origin-trials/): from Chrome 84, 
 [now extended](https://groups.google.com/a/chromium.org/g/blink-dev/c/-W90wVkS0Ks/m/Jfh5-ZWpAQAJ) to Chrome 94.
 - [Register for origin
-  trial](https://developer.chrome.com/origintrials/#/view_trial/2479231594867458049).
+  trial](/origintrials/#/view_trial/2479231594867458049).
 - [Demo](https://trust-token-demo.glitch.me/).
 - [Chrome Platform Status](https://www.chromestatus.com/feature/5078049450098688).
 - [Blink
@@ -71,7 +72,7 @@ See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
 
 - [Current origin trial](https://web.dev/origin-trials/): Chrome 89 to 93.
 - [Register for origin
-  trial](https://developer.chrome.com/origintrials/#/view_trial/988540118207823873).
+  trial](/origintrials/#/view_trial/988540118207823873).
 - [Chrome Platform Status](https://chromestatus.com/feature/5640066519007232).
 - [Blink
   status](https://groups.google.com/a/chromium.org/g/blink-dev/search?q=first-party%20sets).
@@ -80,6 +81,15 @@ See [Status](/docs/privacy-sandbox/attribution-reporting-introduction/#status).
   discussion.
 - Find out more: [The Chromium Projects: First-Party
   Sets](https://www.chromium.org/updates/first-party-sets).
+
+## User-Agent Client Hints (UA-CH)
+
+- [Origin trial and schedule](https://blog.chromium.org/2021/09/user-agent-reduction-origin-trial-and-dates.html)
+- [Register for origin trial](/origintrials/#/view_trial/-7123568710593282047)
+- [Demo](https://uar-ot.glitch.me/)
+- [UA-CH proposal](https://github.com/WICG/ua-client-hints)
+- Tutorial to [migrate from UA string to UA-CH](https://web.dev/migrate-to-ua-ch/)
+- Find out more: [User-Agent reduction](/docs/privacy-sandbox/user-agent/)
 
 ## FLoC
 
@@ -128,7 +138,7 @@ Descendant of [TURTLEDOVE](https://github.com/WICG/turtledove).
 
 - [Getting started with Chrome's origin trials](https://web.dev/origin-trials/)
 - [What are third-party origin trials?](https://web.dev/third-party-origin-trials)
-- [Troubleshooting Chrome's origin trials](https://developer.chrome.com/blog/origin-trial-troubleshooting/)
+- [Troubleshooting Chrome's origin trials](/blog/origin-trial-troubleshooting/)
 - [Origin trials guide for web
   developers](https://github.com/GoogleChrome/OriginTrials/blob/gh-pages/developer-guide.md)
 - [Origin trial

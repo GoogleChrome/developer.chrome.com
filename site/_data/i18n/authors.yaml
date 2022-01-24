@@ -138,7 +138,7 @@ jobay:
   title:
     en: 'Johan Bay'
   description:
-    en: 'Software Development Intern working on Puppeteer'
+    en: 'Googler working on Chrome DevTools.'
 mathiasbynens:
   title:
     en: 'Mathias Bynens'
@@ -178,7 +178,7 @@ mihajlija:
   title:
     en: 'Milica Mihajlija'
   description:
-    en: 'Our latest news, updates, and stories by Milica Mihajlija.'
+    en: 'Milica is a technical writer at Chrome.'
 mustafa:
   title:
     en: 'Mustafa Kurtuldu'
@@ -244,6 +244,11 @@ ackermanb:
     en: 'Benjamin Ackerman'
   description:
     en: 'Lead Security Analyst, Chrome Trust & Safety Team'
+dsli:
+  title:
+    en: 'David Li'
+  description:
+    en: 'Product Manager, Chrome Extensions & Chrome Web Store'
 joycetoh:
   title:
     en: 'Joyce Toh'
@@ -263,7 +268,7 @@ rowan_m:
   title:
     en: 'Rowan Merewood'
   description:
-    en: 'Our latest news, updates, and stories by Rowan Merewood.'
+    en: 'Rowan is a Staff Developer Relations Engineer at Chrome.'
 danielcheng:
   title:
     en: 'Daniel Cheng'
@@ -314,3 +319,38 @@ arichiv:
     en: 'Ari Chivukula'
   description:
     en: 'Senior Software Engineer'
+jichen:
+  title:
+    en: 'Ji Chen'
+  description:
+    en: 'Data science enthusiast'
+kateryna:
+  title:
+    en: 'Kateryna Prokopenko'
+  description:
+    en: 'Google engineer working on Chrome DevTools.'
+miketaylr:
+  title:
+    en: 'Mike Taylor'
+  description:
+    en: 'Engineering manager at Chrome.'
+alcastano:
+  title:
+    en: 'Alfonso Castaño'
+  description:
+    en: 'Software engineer at Google.'
+alexandrawhite:
+  title:
+    en: 'Alexandra White'
+  description:
+    en: 'Technical Writer, Google Chrome'
+drott:
+  title:
+    en: 'Dominik Röttsches'
+  description:
+    en: 'Software Engineer, Google Chrome'
+rsheeter:
+  title:
+    en: 'Rod Sheeter'
+  description:
+    en: 'Tech Lead, Google Fonts'

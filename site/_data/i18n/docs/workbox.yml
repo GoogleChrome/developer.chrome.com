@@ -1,0 +1,30 @@
+intro:
+  en: "Introduction to Workbox and service workers"
+intro_description:
+  en: |
+    To do.
+know:
+  en: "What you need to know"
+know_description:
+  en: |
+    To do.
+ways:
+  en: "Ways to use Workbox"
+ways_description:
+  en: |
+    To do.
+uses:
+  en: "Use cases and recipes"
+uses_description:
+  en: |
+    To do.
+modules:
+  en: "Workbox Modules"
+modules_description:
+  en: |
+    Dig deeper into specific Workbox modules.
+reference:
+  en: "API Reference"
+reference_description:
+  en: |
+    Browse the API reference to get information on available methods in the Workbox API, broken down by module.

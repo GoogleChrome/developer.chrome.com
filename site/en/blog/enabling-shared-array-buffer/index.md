@@ -8,22 +8,23 @@ description: >
   SharedArrayBuffer will arrive in Android Chrome 88. It will only be available
   to pages that are cross-origin isolated. Starting in Desktop Chrome 92 it will
   also only be available to cross-origin isolated pages. You can register for an
-  origin trial to retain the current behavior until Desktop Chrome 96.
+  origin trial to retain the current behavior until Desktop Chrome 103.
 origin_trial:
   url: /origintrials/#/view_trial/303992974847508481
 date: 2021-01-18
-updated: 2021-05-13
+updated: 2021-12-21
 hero: image/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/tWnZEOnNmBeFcZxuR9Dx.jpg
 alt: A collection of padlocks.
 ---
 
 {% Aside %}
 
-**Update, May 2021**
+**Update, October 2021**
 
-Due to unexpected circumstances, the restriction on `SharedArrayBuffer` on
-desktop described in this article is postponed to Chrome 92 (originally Chrome
-91).
+To secure more time to introduce ways to relax the requirement to enable
+cross-origin isolation, we've decided to postpone the restriction on
+`SharedArrayBuffer` on desktop described in this article to Chrome 103
+(originally Chrome 96). You might need to update the token.
 
 {% endAside %}
 
@@ -37,8 +38,9 @@ web, but things are settling down. Here's what you need to know:
   isolated](#cross-origin-isolation).
 - `SharedArrayBuffer` is currently available in Desktop Chrome, but from Chrome
   92 it will be limited to cross-origin isolated pages. If you don't think you
-  can make this change in time, you can [register for an origin trial](#origin-trial) to retain
-  the current behavior until at least Chrome 96.
+  can make this change in time, you can [register for an origin
+  trial](#origin-trial) to retain the current behavior until at least Chrome
+  103.
 - If you intend to enable cross-origin isolation to continue using
   `SharedArrayBuffer` evaluate the impact this will have on other cross-origin
   elements on your website, such as ad placements. Check if `SharedArrayBuffer`
@@ -58,7 +60,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 Once you do this, your page will not be able to load cross-origin content unless
 the resource explicitly allows it via a [`Cross-Origin-Resource-Policy`][corp]
-header or [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) headers
+header or [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS) headers
 (`Access-Control-Allow-*` and so forth).
 
 There's also a [reporting
@@ -68,19 +70,22 @@ can gather data on requests that failed as a result of
 
 If you don't think you can make these changes in time for Chrome 92, you can
 [register for an origin trial](#origin-trial) to retain current Desktop Chrome
-behavior until at least Chrome 96.
+behavior until at least Chrome 103.
 
 {% Aside %}
-**Update, April 2021**
+**Update, December 2021**
 
 We've been exploring ways to deploy `Cross-Origin-Resource-Policy` at scale, as
 cross-origin isolation requires all subresources to explicitly opt-in. And we
-have come up with the idea of going in the opposite direction: a new [COEP
-"credentialless" mode](https://github.com/mikewest/credentiallessness/) that
-allows loading resources without the CORP header by stripping all their
-credentials. We are figuring out the details of how it should work, but we hope
-this will lighten your burden of making sure the subresources are sending the
-`Cross-Origin-Resource-Policy` header.
+have come up with the idea of going in the opposite direction: [a new COEP
+"credentialless" mode](/blog/coep-credentialless-origin-trial/) that allows
+loading resources without the CORP header by stripping all their credentials. We
+hope this will lighten your burden of making sure the subresources are sending
+the `Cross-Origin-Resource-Policy` header.
+
+Though `credentialless` mode is available on Chrome from version 96, it's not
+supported by any other browsers yet, this may cause some developers find it
+challenging to deploy COOP or COEP at this stage.
 
 Also, it's known that the `Cross-Origin-Opener-Policy: same-origin` header will
 break integrations that require cross-origin window interactions such as OAuth
@@ -142,7 +147,7 @@ These APIs have a 'legacy' behavior that allows content from other origins to be
 used without opt-in from the other origin. These requests are made with the
 cookies of the other origin, so it's a full 'logged in' request. Nowadays, new
 APIs require the other origin to opt-in using
-[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+[CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS).
 
 We worked around these legacy APIs by preventing content from entering the
 webpage's process if it looked 'incorrect', and called it [cross-origin read
@@ -165,8 +170,8 @@ This declaration is done via [COOP and COEP headers](https://web.dev/coop-coep/)
 served with the page. The browser enforces that, and in exchange the page gains
 access to `SharedArrayBuffer` and other APIs with similar powers. Other origins
 can opt-in to content embedding via
-[`Cross-Origin-Resource-Policy`](<https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)
-or [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+[`Cross-Origin-Resource-Policy`](<https://developer.mozilla.org/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)
+or [CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS).
 
 Firefox was the first to ship `SharedArrayBuffer` with this restriction, in
 version 79 (July 2020).
@@ -183,7 +188,7 @@ isolation.
 This is a temporary exception in the form of an 'origin trial' that gives folks
 more time to implement cross-origin isolated pages. It enables
 `SharedArrayBuffer` without requiring the page to be cross-origin isolated. The
-exception expires in Chrome 96, and the exception only applies to Desktop
+exception expires in Chrome 103, and the exception only applies to Desktop
 Chrome.
 
 1. [Request a token]({{origin_trial.url}}) for your origin.
@@ -209,6 +214,6 @@ href="https://unsplash.com/@yeeeeeeha?utm_source=unsplash&amp;utm_medium=referra
 Gregoire</a> on <a
 href="https://unsplash.com/s/photos/padlocks?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
 
-[mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-[compat]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#browser_compatibility
-[corp]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)
+[mdn]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+[compat]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#browser_compatibility
+[corp]: https://developer.mozilla.org/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)

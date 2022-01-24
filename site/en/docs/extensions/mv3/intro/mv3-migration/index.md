@@ -138,11 +138,11 @@ representing alternative CSP contexts:
 
 **`extension_pages`**:  This policy covers pages in your extension, including html files and service workers.
 
-
 {% Aside %}
-These page types are served from the `chrome-extension://` protocol. For
-instance, a page in your extension is
-`chrome-extension://<extension-id>/foo.html`.
+
+These page types are served from the `chrome-extension://` protocol. For instance, a page in your
+extension is `chrome-extension://EXTENSION_ID/foo.html`.
+
 {% endAside %}
 
 **`sandbox`**: This policy covers any [sandboxed extension
@@ -199,14 +199,15 @@ chrome.action.onClicked.addListener(tab => { … });
 
 This change limits access to extension resources to specific sites/extensions.
 Instead of providing a list of files, you now provide a list of objects, each
-of which can map to a set of resources to a set of URLs and extension IDs:
+of which can map to a set of resources to a set of URLs or extension IDs:
 
 {% Columns %}
+
 ```json
 // Manifest V2
 
 "web_accessible_resources": [
-  <files>
+  RESOURCE_PATHS
 ]
 ```
 
@@ -214,18 +215,23 @@ of which can map to a set of resources to a set of URLs and extension IDs:
 // Manifest V3
 
 "web_accessible_resources": [{
-  "resources": [<resources>],
-  "matches": [<urls>],
-  "extension_ids": [<keys>],
+  "resources": [RESOURCE_PATHS],
+  "matches": [MATCH_PATTERNS],
+  "extension_ids": [EXTENSION_IDS],
   optional "use_dynamic_url": boolean
 }]
 ```
+
 {% endColumns %}
 
-{% Aside %}
-The `use_dynamic_url` key is not yet available. Support for this property will
-be coming in a future release.
-{% endAside %}
+Replace the following:
+
+- <code><var>RESOURCE_PATHS</var></code>: A list of strings, each containing a relative path to a
+  given resource from the extension's root directory.
+- <code><var>MATCH_PATTERNS</var></code>: A list of strings, each containing a [match
+  pattern][doc-match-pattern] that specifies which sites can access this set of resources.
+- <code><var>EXTENSION_IDS</var></code>: A list of strings, each containing the ID of a given
+  extension.
 
 Previously, the list of web accessible resources applied to all websites and
 extensions, which created opportunities for fingerprinting or unintentional
