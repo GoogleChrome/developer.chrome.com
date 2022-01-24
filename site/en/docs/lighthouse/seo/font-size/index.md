@@ -1,5 +1,5 @@
 ---
-layout: "layouts/doc-post.njk"
+layout: 'layouts/doc-post.njk'
 title: Document doesn't use legible font sizes
 description: |
   Learn about the "Document doesn't use legible font sizes" Lighthouse audit.
@@ -62,7 +62,7 @@ If Lighthouse reports `Text is illegible because of a missing viewport config`,
 add a `<meta name="viewport" content="width=device-width, initial-scale=1">`
 tag to the `<head>` of your document.
 
-See the [Does not have a `<meta name="viewport">` tag with `width` or `initial-scale`](/viewport)
+See the [Does not have a `<meta name="viewport">` tag with `width` or `initial-scale`](/docs/lighthouse/pwa/viewport/)
 post for more information.
 
 ## Resources

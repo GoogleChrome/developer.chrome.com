@@ -18,6 +18,7 @@
 
   @include media-query('lg') {
     flex-direction: row;
+    gap: 0 px-to-rem(56px);
   }
 }
 
