@@ -224,7 +224,7 @@ tags:
 <!-- Check out the [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
 Перейдите на страницу [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) для получения более подробной информации об обновлении.
 
-{% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/gZI1flmYHuUpF637Idzy.png", alt="Аудит пункта "Все фокусируемые элементы должны иметь уникальный `id`" в Lighthouse показывает два элемента с одинаковым `id`.", width="800", height="380", class="screenshot" %}
+{% Img src="image/MtjnObpuceYe3ijODN3a79WrxLU2/gZI1flmYHuUpF637Idzy.png", alt="Аудит пункта 'Все фокусируемые элементы должны иметь уникальный `id`' в Lighthouse показывает два элемента с одинаковым `id`.", width="800", height="380", class="screenshot" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/93a4454b7c558d6ca748c718167bc4aa592eaf63 #}
 
