@@ -191,7 +191,7 @@ Chromium issue: [1050021](https://crbug.com/1050021)
 
 <!-- Open the search tab via **Esc** > **3-dot** menu > **Search**. Enter a search string (e.g. function) and press **Enter** to see the list of search results. Focus on the search results and use the following shortcut to expand/collapse the search files: -->
 
-*Esc** > **점 3개 메뉴** > **검색** 을 통해 검색 탭을 엽니다. 검색하고자 하는 스트링(예: function)을 입력하고 **Enter**를 눌러서 검색 결과 리스트를 볼 수 있습니다. 검색 결과에 포커싱을 주고 다음 단축키를 사용하여 검색된 파일들을 확장 및 축소할 수 있습니다.
+**Esc** > **점 3개 메뉴** > **검색** 을 통해 검색 탭을 엽니다. 검색하고자 하는 스트링(예: function)을 입력하고 **Enter**를 눌러서 검색 결과 리스트를 볼 수 있습니다. 검색 결과에 포커싱을 주고 다음 단축키를 사용하여 검색된 파일들을 확장 및 축소할 수 있습니다.
 
 - **Windows / Linux** - `Ctrl` + `Shift` + `{` or `}`
 - **MacOS** - `Cmd` + `Options` + `{` or `}`
