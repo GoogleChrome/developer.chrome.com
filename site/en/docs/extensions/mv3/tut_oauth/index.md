@@ -96,7 +96,7 @@ public key and add it to the manifest inside the unzipped directory under the [`
 
 ```json
 {
-  "name": "OAuth Tutorial FaceBlock",
+  "name": "OAuth Tutorial FriendBlock",
 ...
   "key": "ThisKeyIsGoingToBeVeryLong/go8G...AQAB"
 }
@@ -153,7 +153,7 @@ Register the [`identity`][identity-api] permission in the manifest.
 
 ```json
 {
-  "name": "OAuth Tutorial FaceBlock",
+  "name": "OAuth Tutorial FriendBlock",
   ...
   "permissions": [
     "identity"
@@ -204,7 +204,7 @@ Add the [Google People API][people-api] client library to `"scopes"` in the exte
 
 ```json
 {
-  "name": "OAuth Tutorial FaceBlock",
+  "name": "OAuth Tutorial FriendBlock",
   ...
   "oauth2": {
     "client_id": "yourExtensionOAuthClientIDWillGoHere.apps.googleusercontent.com",
