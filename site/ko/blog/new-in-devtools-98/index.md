@@ -271,7 +271,7 @@ Chromium issue: [1241848](https://crbug.com/1241848)
 현재 **Endpoints** 섹션이 사용가능해졌으며, 이는 `Reporting-Endpoints` 헤더에 구성된 모든 엔드포인트에 대한 개요를 제공합니다.
 
 <!-- Learn to use the [Reporting API](https://web.dev/reporting-api/) to monitor security violations, deprecated API calls, and more. -->
-[Reporting API](https://web.dev/reporting-api/)를 이용하여, 보안수칙 위반, 더 이상 사용되지 않는 API의 호출 등을 모니터링할 수 있게 되었습니다. 이 기능의 사용법을 배워 보세요! 
+[Reporting API](https://web.dev/reporting-api/)를 이용하여, 보안수칙 위반, 더 이상 사용되지 않는 API의 호출 등을 모니터링할 수 있게 되었습니다. 이 기능을 어떻게 사용하는지 알아보세요! 
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/D1fUz4zuS1xwDbszgft1.png", alt="Reporting API 창", width="800", height="560" %}
 
