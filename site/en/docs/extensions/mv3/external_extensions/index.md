@@ -14,7 +14,7 @@ All Chrome extensions distributed to Windows and Mac users must be hosted in the
 
 For the previous cases, Google Chrome supports the following extension installation methods:
 
-- Using a [preferences JSON][section-preferences] file (for Mac OS X and Linux only)
+- Using a [preferences JSON][section-preferences] file (for macOS X and Linux only)
 - Using the [Windows registry][section-registry] (for Windows only)
 
 Both ways support installing an extension hosted at an `update_URL`. 
@@ -40,6 +40,8 @@ If you are distributing an extension hosted in the Chrome Web Store, you must fi
 - The **update URL**— `https://clients2.google.com/service/update2/crx`, that points to the Chrome Web Store.
 - The **extension's ID**— This can be found in the Chrome Web Store URL of the extension.
 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/85JMcIqgG9TLiJCZnAXE.png", alt="Chrome Web Store item id", width="800", height="165" %}
+
 <!-- Add screenshot -->
 
 ### Local CRX file
@@ -50,6 +52,8 @@ If you are distributing to Linux users from a local file, you will need to [pack
 
 - The **extension version**— This appears in the extension management page `chrome://extensions` or in the manifest JSON file.
 
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/HC0GSBfirjLtbB7nFhPH.png", alt="How to find extension id and version", width="500", height="258" %}
+
 - The **location of the CRX file**— This can either be a local directory or a network share. Make sure the file is available to the machine you want to install the extension on. 
 
 The following examples assume the version is 1.0 and the extension ID is aaabbbcccddd.
@@ -58,12 +62,12 @@ The following examples assume the version is 1.0 and the extension ID is aaabbbc
 
 {% Aside %}
 
-**Mac OS X and Linux only:** Do not use the preferences file for Windows. Use [Windows registry][section-registry]
+**MacOS X and Linux only:** Do not use the preferences file for Windows. Use [Windows registry][section-registry]
 instead.
 
 {% endAside %}
 
-### Mac OS 
+### macOS 
 
 1. Create a JSON file with the name of the extension ID. For example:
     `aaabbbcccddd.json`
@@ -98,7 +102,7 @@ extensions to be installed for all users. See [Troubleshooting permission proble
 
 {% endDetailsSummary %}
 
-On Mac OS, the external extensions files for all users are only read if file system permissions
+On macOS, the external extensions files for all users are only read if file system permissions
 prevent unprivileged users from changing it. If you do not see external extensions installed when
 Chrome is launched, there may be a permissions problem with the external extensions preferences
 files. To see if this is the problem, follow these steps:
