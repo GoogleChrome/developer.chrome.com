@@ -99,7 +99,7 @@ The Topics API lifecycle: [view a larger version](https://wd.imgix.net/image/80m
 {% Aside %}
 
 The Topics API proposal is at the
-[initial discussion phase](https://developer.chrome.com/docs/privacy-sandbox/cds21-update/#discussion)
+[initial discussion phase](/docs/privacy-sandbox/cds21-update/#discussion)
 to gather and act on feedback from the ecosystem.
 
 The API design is not final and the details below will change as discussions progress.
@@ -341,7 +341,7 @@ includes topics for the current epoch and the previous two.
    - The page was visited by the user during the epoch.
    - The page includes code that calls `document.browsingTopics()`
    - The API was enabled (for example, not blocked by the user or via a [response
-      header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)).
+      header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)).
 
 1. The browser, on the user's device, uses the classifier model provided by the Topics API to map
    the hostname for each page to a list of topics.
@@ -431,7 +431,7 @@ without the site or an embedded service taking action to call the API.
 
 The Topics explainer also proposes sites be allowed to block topic calculation for their visitors
 via the following
-[Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)
+[Permissions-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)
 header:
 
 ```text
