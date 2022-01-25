@@ -419,7 +419,7 @@ suggested for them by their browser. They can remove topics they specifically do
 for, and there can be UX for informing the user about the API and how to enable or disable it.
 Chrome would provide information and settings for the Topics API at
 chrome://settings/privacySandbox. In addition, topics are not available to API callers in Incognito
-mode, and topics are cleared when history is cleared.
+mode, and topics are cleared when browsing history is cleared.
 
 {: #opt-out}
 
