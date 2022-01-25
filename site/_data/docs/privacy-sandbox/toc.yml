@@ -27,7 +27,7 @@
     - url: /docs/privacy-sandbox/user-agent/snippets
 - title: i18n.docs.privacy-sandbox.relevant
   sections:
-    - url: /docs/privacy-sandbox/floc
+    - url: /docs/privacy-sandbox/topics
     - url: /docs/privacy-sandbox/fledge
 - title: i18n.docs.privacy-sandbox.measure
   sections:

@@ -76,8 +76,11 @@ third-party cookies which can be used to identify and track users across sites.
 
 ### Show relevant content and ads
 
-* [**FLoC**](/docs/privacy-sandbox/floc): Privacy-preserving, interest-based ad and content 
-selection: "relevant ads".
+* [**Topics API**](/docs/privacy-sandbox/topics): Enable interest-based advertising. Designed so
+  that it doesn't require third-party cookies and cannot be used by third parties to track user
+  browsing behavior across sites. The Topics API proposes a mechanism to map website hostnames to
+  topics of interest, and provides a JavaScript API that returns coarse-grained topics a user
+  might currently be interested in, based on their recent browsing activity.
 * [**FLEDGE**](/docs/privacy-sandbox/fledge): Ad selection to serve remarketing and custom audience 
 use cases, designed so that it cannot be used by third parties to track user browsing behavior across 
 sites.  FLEDGE is the first experiment to be implemented in Chromium within the 

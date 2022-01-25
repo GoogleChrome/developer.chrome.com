@@ -2,8 +2,8 @@ attribution-reporting:
   en: 'Attribution Reporting'
 fledge:
   en: 'FLEDGE'
-floc:
-  en: 'Federated Learning of Cohorts (FLoC)'
+topics:
+  en: 'The Topics API'
 glossary:
   en: 'Privacy Sandbox glossary'
 guiding-principles:

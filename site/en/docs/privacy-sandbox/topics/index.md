@@ -413,6 +413,7 @@ seems like a clear improvement over cookies."
 
 Users should be able to understand the purpose of the Topics API, recognize what is being said about
 them, know when the API is in use, and be provided with controls to enable or disable it.
+
 The API's human-readable taxonomy enables people to learn about and control the topics that may be
 suggested for them by their browser. They can remove topics they specifically don't wish to see ads
 for, and there can be UX for informing the user about the API and how to enable or disable it.
