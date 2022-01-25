@@ -6,7 +6,7 @@ authors:
 date: 2022-01-13
 updated: 2022-01-13
 description:
-  "整页无障碍功能树, 在变更选项卡中显示更精确的更改, 以及更多。"
+  "整页无障碍功能树、在变更标签页中显示更精确的更改以及更多。"
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/EO410dU8yyNvSzzoanMP.jpg'
 alt: ''
 tags:
@@ -32,147 +32,147 @@ draft: true
 ## 预览功能：整页无障碍功能树 {: #a11y-tree }
 
 <!-- The new **Full-page accessibility tree** makes it easier for you to get an overview of the full-page [accessibility tree](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) and help you better understand how your web content is exposed to assistive technology.  -->
-新的 **整页无障碍功能树** 让您更轻松地概览您整个网页的[无障碍功能树](/blog/full-accessibility-tree/#what-is-the-accessibility-tree)结构，并帮助您了解您网页内容在辅助技术（例如，屏幕阅读器）下的展示。
+新的**整页无障碍功能树**让您更轻松地概览您整个网页的[无障碍功能树](/blog/full-accessibility-tree/#what-is-the-accessibility-tree)结构，并帮助您了解您网页内容在辅助技术（例如：屏幕阅读器）下的展示。
 
 <!-- In the **Elements** panel, open the **Accessibility** pane and select **Enable full-page accessibility tree** checkbox. Then, reload DevTools and you will see a new accessibility button in the **Elements** panel. -->
-在 **元素** 面板中，打开 **无障碍功能** 边栏并选中 **启用整页模式的无障碍功能树** 复选框。然后，重新加载 DevTools，您将在 **元素** 面板中看到一个新的无障碍功能树按钮。
+在**元素**面板中，打开**无障碍功能**边栏并选中**启用整页模式的无障碍功能树**复选框。然后，重新加载 DevTools，您将在**元素**面板中看到一个新的无障碍功能树按钮。
 
 <!-- Click on it to toggle to the **Full-page accessibility tree** view. You can expand nodes or click to see details in the  **Accessibility** pane. -->
-单击该按钮以切换到 **无障碍功能树** 视图。您可以展开元素节点或单击元素以在 **无障碍功能** 边栏中查看详细信息。
+单击该按钮以切换到**无障碍功能树**视图。您可以展开元素节点或单击元素，从而在**无障碍功能**边栏中查看详细信息。
 
 <!-- Previously, the accessibility tree was available in the **Accessibility** pane. The view is limited, it only enables you to explore a single node and its ancestors. -->
-此前，**无障碍功能** 边栏中的无障碍功能树只能提供局部的视图，它只能让您探索单个元素节点及其祖先元素。
+此前，**无障碍功能**边栏中的无障碍功能树只能提供局部的视图，它只能让您探索单个元素节点及其祖先元素。
 
 <!-- Our team is still actively working on this preview feature. We are looking for your [feedback](https://goo.gle/devtools-a11y-tree-feedback) for further enhancements! -->
-我们的团队仍在积极开发这个预览功能。期待您的[反馈](https://goo.gle/devtools-a11y-tree-feedback) 以帮助我们进一步改进！
+我们的团队仍在积极开发这项预览功能。期待您的[反馈](https://goo.gle/devtools-a11y-tree-feedback)以帮助我们进一步改进！
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/o4BY07JabERFd6OieU8b.png", alt="F整页无障碍功能树", width="800", height="505" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/o4BY07JabERFd6OieU8b.png", alt="整页无障碍功能树", width="800", height="505" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/847a06a6535111826f898175b210dbe0948277a0 #}
 
-Chromium 议题： [887173](https://crbug.com/887173)
+Chromium 议题：[887173](https://crbug.com/887173)
 
 
 <!-- ## More precise changes in the Changes tab {: #changes }  -->
-## 在变更选项卡中显示更精确的更改 {: #changes }
+## 在变更标签页中显示更精确的更改 {: #changes }
 
 
 <!-- The code changes in the **Changes** tab is pretty-printed automatically.  -->
-现在，**变更**选项卡中的代码变更会被自动美化（pretty-printed）。
+现在，**变更**标签页中的代码变更会被自动美观输出（pretty-print）。
 
 <!-- Previously, it was hard to trace the actual changes of minified source code because all the code is shown in a single line.  -->
-此前，开发者们很难在**变更**选项卡中跟踪压缩（minified）代码的实际变化，因为所有代码都挤在一行。
+此前，开发者们很难在**变更**标签页中跟踪压缩（minified）代码的实际变化，因为所有代码都挤在一行。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aup2bT490dkvuBu3o4DS.png", alt="变更选项卡", width="800", height="450" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aup2bT490dkvuBu3o4DS.png", alt="变更标签页", width="800", height="450" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/4382b533525c65fbdb1785eda2babf035ad8bcb8 #}
 
-Chromium 议题： [1238818](https://crbug.com/1238818), [1268754](https://crbug.com/1268754) , [1086491](https://crbug.com/1086491)
+Chromium 议题：[1238818](https://crbug.com/1238818)，[1268754](https://crbug.com/1268754)，[1086491](https://crbug.com/1086491)
 
 
 <!-- ## Set longer timeout for user flow recording {: #recorder-timeout } -->
-## 为用户流记录设置更长的超时时间 {: #recorder-timeout }
+## 为用户操作流的录制设置更长的超时时间 {: #recorder-timeout }
 
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
-您现在可以在 [Recorder](/docs/devtools/recorder/) 中为所有步骤或特定步骤调整 **Timeout** 设置。这对于网络请求缓慢且动画冗长的页面尤其有用。
+您现在可以在[录制器](/docs/devtools/recorder/)中为所有步骤或特定步骤调整**超时**设置。这对于网络请求缓慢且动画冗长的页面尤其有用。
 
 <!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
-例如，我在这个 [demo page](https://jec.fyi/demo/pup-slow-result) 上 [recorded a user flow](/docs/devtools/recorder/#record) 加载并点击菜单项。但是，菜单项的加载速度很慢（需要 6 秒）。此用户流的 [replay](/docs/devtools/recorder/#replay) 失败，因为它超过了 5 秒（默认超时）。
+例如，我在这个[演示页](https://jec.fyi/demo/pup-slow-result)上[录制](/docs/devtools/recorder/#record) 用户加载并点击菜单项的操作。但是，菜单项的加载速度很慢（需要6秒）。这次用户操作的[重放](/docs/devtools/recorder/#replay)会因此失败，因为它超过了默认的5秒超时。
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
-我们可以使用新的 **Timeout** 设置来解决这个问题。展开我们单击菜单项的步骤。 [编辑步骤](/docs/devtools/recorder/#edit-steps) by **Add timeout** 并将其设置为 **6000** 毫秒（等于 6s）。
+我们可以使用新的**超时**设置来解决这个问题。展开我们点击菜单项的步骤。[编辑步骤](/docs/devtools/recorder/#edit-steps)以**添加超时**，并将其设置为**6000**毫秒（等于6秒）。
 
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
-或者，您可以在 **Replay settings** 中为所有步骤调整 **Timeout**。展开 **Replay settings** 并编辑 **Timeout** 值。
+另外，您可以在**重放设置**中为所有步骤调整**超时**。展开**重放设置**并编辑**超时**数值。
  
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="timeout settings for user flow recording", width="800", height="530" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="用户操作录制的超时设置", width="800", height="530" %}
 
-Chromium 议题： [1257499](https://crbug.com/1257499)
+Chromium 议题：[1257499](https://crbug.com/1257499)
 
 
 <!-- ## Ensure your pages are cacheable with the Back/forward cache tab {: #bfcache } -->
 ## 使用“后退/前进缓存”选项卡确保您的页面可缓存 {: #bfcache }
 
 <!-- [Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation.  -->
-[后退/前进缓存（或 bfcache）](https://web.dev/bfcache/) 是一种浏览器优化，可实现即时后退和前进导航。
+[往返缓存（或 bfcache）](https://web.dev/bfcache/) 是一种浏览器优化，可提供即时的后退和前进导航。
 
 <!-- The new **Back/forward cache** tab can help you test your pages to ensure they're optimized for bfcache, and identify any issues that may be preventing them from being eligible. -->
-新的 **Back/forward cache** 选项卡可以帮助您测试您的页面，以确保它们针对 bfcache 进行了优化，并确定可能阻止它们符合条件的任何问题。
+新的**往返缓存**标签页可以帮助您测试您的页面，以确保它们针对 bfcache 进行了优化，并指出任何可能阻止它们符合 bfcache 条件的问题。
 
 <!-- To test a particular page, navigate to it in Chrome and then in DevTools go to **Application** > **Back-forward Cache**. Next, click the **Test back/forward cache** button and DevTools will attempt to navigate away and back to determine whether the page could be restored from bfcache. -->
-要测试特定页面，请在 Chrome 中导航到该页面，然后在 DevTools 中转到 **Application** > **Back-forward Cache**。接下来，单击 **Test back/forward cache** 按钮，DevTools 将尝试导航并返回以确定页面是否可以从 bfcache 恢复。
+要测试某一页面，请在 Chrome 中导航到该页面，然后在 DevTools 中进入**应用** > **往返缓存**。接下来，单击**测试往返缓存**按钮，DevTools 将尝试导航离开当前页面并返回，以确定该页面是否可以从 bfcache 中恢复。
 
 <!-- As web developers, it's critical to know how to optimize your pages for bfcache across all browsers because it will significantly improve the browsing experience for users—especially those with slower networks or devices.  -->
-作为 Web 开发人员，了解如何在所有浏览器中针对 bfcache 优化页面至关重要，因为它将显着改善用户的浏览体验——尤其是那些网络或设备较慢的用户。
+作为 Web 开发人员，了解如何在所有浏览器中针对 bfcache 进行页面优化至关重要，因为它将显著改善用户的浏览体验——尤其是那些网络或设备较慢的用户。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4OrWjuRgG1bB0AupcMmS.png", alt="Back/forward cache tab", width="800", height="516" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/4OrWjuRgG1bB0AupcMmS.png", alt="往返缓存标签页", width="800", height="516" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/f4b1333582da2410e5bc8715998b96a83b924625 #}
 
-Chromium 议题： [1110752](https://crbug.com/1110752)
+Chromium 议题：[1110752](https://crbug.com/1110752)
 
 
 <!-- ## New Properties pane filter {: #properties } -->
-## 新的属性窗格过滤器 {: #properties }
+## 新的属性边栏过滤器 {: #properties }
 
 <!-- If you want to focus on a specific property in the **Properties** pane, you can now type that property name or value in the new **Filter** textbox.  -->
-如果您想专注于 **Properties** 窗格中的特定属性，您现在可以在新的 **Filter** 文本框中键入该属性名称或值。
+如果您想持续关注**属性**边栏中的某一个特定属性，您现在可以在新的**过滤**文本框中输入该属性的名字或值。
 
 <!-- By default, properties whose value is `null` or `undefined` are not shown. Enable the **Show all** checkbox to view all properties.  -->
-默认情况下，不显示值为 `null` 或 `undefined` 的属性。启用 **Show all** 复选框以查看所有属性。
+默认情况下，属性值为 `null` 或 `undefined` 的属性是被隐藏的。启用**全部显示**复选框可以查看所有的属性。
 
 <!-- These enhancements allow you to get to the properties you care for quicker and thus improve your productivity! -->
-这些增强功能使您可以更快地获得您关心的属性，从而提高您的工作效率！
+这些改进使您可以更快地看到您关注的属性，从而提高您的效率！
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="Properties pane filter", width="800", height="505" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/ewmNloO4ohRxlWRNuEW1.png", alt="属性边栏过滤", width="800", height="505" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/0980f52facf75b6c03e14472d13fe27968d4732b #}  
   
-Chromium 议题： [1269674](https://crbug.com/1269674)
+Chromium 议题：[1269674](https://crbug.com/1269674)
 
 
 <!-- ## Emulate the CSS forced-colors media feature {: #forced-colors } -->
-## 模拟 CSS 强制颜色媒体功能 {: #forced-colors }
+## 模拟 CSS forced-colors 媒体功能 {: #forced-colors }
 
 <!-- The [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) CSS media feature is used to detect if the user agent has enabled a forced colors mode (e.g. Windows High Contrast mode) where it enforces a user-chosen limited color palette on the page.  -->
-[forced-colors](https://drafts.c​​sswg.org/mediaqueries-5/#forced-colors) CSS 媒体功能用于检测用户代理是否启用了强制颜色模式（例如 Windows 高对比度模式）它在页面上强制执行用户选择的有限调色板。
+[forced-colors](https://drafts.c​​sswg.org/mediaqueries-5/#forced-colors) CSS 媒体功能用于检测用户代理是否启用了强制颜色（forced-colors）模式（例如 Windows 高对比度模式），这种模式会基于用户选择的颜色来展示页面。
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate CSS media feature forced-colors** dropdown. -->
-打开 [Command Menu](/docs/devtools/command-menu/)，运行 **Show Rendering** 命令，然后设置 **Emulate CSS media feature force-colors** 下拉菜单。
+打开[命令菜单](/docs/devtools/command-menu/)，运行**显示“渲染”工具**命令，然后设置**模拟 CSS 媒体功能 force-colors**下拉菜单。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/75qGjkzfbXfOEJUhML5i.png", alt="CSS forced-colors media feature", width="800", height="623" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/75qGjkzfbXfOEJUhML5i.png", alt="CSS forced-colors 媒体功能", width="800", height="623" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/db79deee160cda92eda91775a27773611dce8188 #}
 
-Chromium 议题： [1130859](https://crbug.com/1130859)
+Chromium 议题：[1130859](https://crbug.com/1130859)
 
 <!-- ## Show rulers on hover command {: #show-rulers } -->
-## 在悬停命令上显示标尺 {: #show-rulers }
+## 在鼠标指针悬停时显示标尺 {: #show-rulers }
 
 <!-- You can now open the [Command Menu](/docs/devtools/command-menu/) and run the **Show rulers on hover** command. The page rulers make it easier to measure the width and height of an element. -->
-您现在可以打开 [命令菜单](/docs/devtools/command-menu/) 并运行 **在悬停时显示标尺** 命令。页面标尺可以更轻松地测量元素的宽度和高度。
+您现在可以打开[命令菜单](/docs/devtools/command-menu/)并运行**在鼠标指针悬停时显示标尺**的命令。页面标尺可以让您更轻松地测量一个元素的宽度和高度。
 
 <!-- Previously, you can only enable the page rulers via **Settings** > **Show rulers** checkbox. -->
 以前，您只能通过**设置** > **显示标尺**复选框启用页面标尺。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLF6RWO2bm5SMksdayLv.png", alt="Show rulers on hover command", width="800", height="591" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLF6RWO2bm5SMksdayLv.png", alt="在鼠标指针悬停时显示标尺", width="800", height="591" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5bb8330e0f0a1c90f4a932e35aa5521826c8beea #}
 
-Chromium 议题： [1270562](https://crbug.com/1270562)
+Chromium 议题：[1270562](https://crbug.com/1270562)
 
 
 <!-- ## Support `row-reverse` and `column-reverse` in the Flexbox editor {: #flexbox-editor } -->
 ## 在 Flexbox 编辑器中支持 `row-reverse` 和 `column-reverse` {: #flexbox-editor }
 
 <!-- The [Flexbox editor](/blog/new-in-devtools-90/#flexbox) added two new buttons to support `row-reverse` and `column-reverse` in `flex-direction`.  -->
-[Flexbox 编辑器](/blog/new-in-devtools-90/#flexbox) 添加了两个新按钮以支持 `flex-direction` 中的 `row-reverse` 和 `column-reverse`。
+[Flexbox 编辑器](/blog/new-in-devtools-90/#flexbox)添加了两个新按钮以支持 `flex-direction` 中的 `row-reverse` 和 `column-reverse`。
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JHI4frP4MqaydXk19sq2.png", alt="Flexbox editor", width="800", height="546" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/JHI4frP4MqaydXk19sq2.png", alt="Flexbox 编辑器", width="800", height="546" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/7c98a6cdc296887350418746b42b2b0a474e7f27 #}
 
-Chromium 议题： [1263866](https://crbug.com/1263866)
+Chromium 议题：[1263866](https://crbug.com/1263866)
 
 
 <!-- ## New keyboard shortcuts to replay XHR and expand all search results {: #shortcuts } -->
