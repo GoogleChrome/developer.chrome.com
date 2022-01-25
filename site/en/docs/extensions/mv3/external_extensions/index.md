@@ -99,11 +99,11 @@ registry][section-registry] instead.
     - **For all users** `/Library/Application Support/Google/Chrome/External Extensions/`
 
 3. Specify the update URL with the field name "external_update_url". For example:
-  ```json
-  {
-    "external_update_url": "https://clients2.google.com/service/update2/crx"
-  }
-  ```
+    ```json
+    {
+      "external_update_url": "https://clients2.google.com/service/update2/crx"
+    }
+    ```
 4.  Save the JSON file.
 5.  Launch Google Chrome and go to **chrome://extensions**; you should see the extension listed.
 
@@ -217,11 +217,11 @@ For example:
 2. Create a new key (folder) under the **Extensions** key with the same name as the ID of your
    extension. For example: `aaabbbcccdddeeefff`.
 3. In your extension key, create an "update_url" property and set it to the following value:
-  ```json
-  {
-    "update_url": "https://clients2.google.com/service/update2/crx"
-  }
-  ```
+    ```json
+    {
+      "update_url": "https://clients2.google.com/service/update2/crx"
+    }
+    ```
 4. Launch Chrome.
 5. Go to **chrome://extensions**; you should see the extension listed.
 
