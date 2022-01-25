@@ -99,11 +99,11 @@ registry][section-registry] instead.
     - **For all users** `/Library/Application Support/Google/Chrome/External Extensions/`
 
 3. Specify the update URL with the field name "external_update_url". For example::
-    ```json
-      {
-        "external_update_url": "https://clients2.google.com/service/update2/crx"
-      }
-    ````
+  ```json
+  {
+    "external_update_url": "https://clients2.google.com/service/update2/crx"
+  }
+  ```
 4.  Save the JSON file.
 5.  Launch Google Chrome and go to **chrome://extensions**; you should see the extension listed.
 
@@ -156,29 +156,26 @@ files. To see if this is the problem, follow these steps:
 
     - To install a **Chrome Web Store** extension, specify the update URL with the field name
       "external_update_url". For example:
-    ```json
+      ```json
       {
         "external_update_url": "https://clients2.google.com/service/update2/crx"
       }
-    ``` 
-    
+      ```
     - To install the extension from a **CRX file**, specify the location in "external_crx" and the
       version in "external_version". For example:
-    ```json
+      ```json
       {
         "external_crx": "/home/share/extension.crx",
         "external_version": "1.0"
       }
-    ```
-    
+      ```
     - To install the extension **[hosted on a personal server][xml-update-url]**, the
       "external_update_url" field has to point to the xml file, like in the following example:
-    ```json
-       {
-         "external_update_url": "http://myhost.com/mytestextension/updates.xml"
-       }
-    ```
-
+      ```json
+      {
+        "external_update_url": "http://myhost.com/mytestextension/updates.xml"
+      }
+      ```
 1.  Save the JSON file.
 1.  Launch Google Chrome and go to **chrome://extensions**; you should see the extension listed.
 
@@ -199,25 +196,25 @@ uninstalled. If "supported_locales" list is missing, the extension will be insta
 For example:
 
 ```json
-  {
-    "external_update_url": "https://clients2.google.com/service/update2/crx",
-    "supported_locales": [ "en", "fr", "de" ]
-  }
+{
+  "external_update_url": "https://clients2.google.com/service/update2/crx",
+  "supported_locales": [ "en", "fr", "de" ]
+}
 ```
 
 ## Using the Windows registry {: #registry }
 
-1.  Find or create the following key in the registry:
+1. Find or create the following key in the registry:
     - 32-bit Windows: `HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions`
     - 64-bit Windows: `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions`
-2.  Create a new key (folder) under the **Extensions** key with the same name as the ID of your
-    extension. For example: `aaabbbcccdddeeefff`.
-3.  In your extension key, create a property, "update_url", and set it to the following value:
-    - ```json
-        {
-          "update_url": "https://clients2.google.com/service/update2/crx"
-        }
-      ```
+2. Create a new key (folder) under the **Extensions** key with the same name as the ID of your
+   extension. For example: `aaabbbcccdddeeefff`.
+3. In your extension key, create a property, "update_url", and set it to the following value:
+  ```json
+  {
+    "update_url": "https://clients2.google.com/service/update2/crx"
+  }
+  ```
 
 4. Launch Chrome.
 5. Go to **chrome://extensions**; you should see the extension listed.
