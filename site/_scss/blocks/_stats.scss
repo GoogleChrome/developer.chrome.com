@@ -1,0 +1,24 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+
+  padding: 2em 2em 3em 2em;
+  background: var(--color-blue-lightest);
+  color: var(--color-blue-darkest);
+}
+
+.stats__item {
+  --flow-space: 0.3rem;
+  padding: 2em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.stats__figure {
+  @extend %type--var-large;
+
+  sub {
+    font-size: .6em;
+    vertical-align: baseline;
+  }
+}
