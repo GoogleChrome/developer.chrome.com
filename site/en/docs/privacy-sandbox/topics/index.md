@@ -239,22 +239,22 @@ and the API [callers](#caller) present on each site (the entities that call
   <tbody>
     <tr>
     <td>yoga.example</td>
-    <td>fitness</td>
+    <td>Fitness</td>
     <td>adtech1.example adtech2.example</td>
     </tr>
     <tr>
     <td>knitting.example</td>
-    <td>craft</td>
+    <td>Crafts</td>
     <td>adtech1.example</td>
     </tr>
     <tr>
     <td>hiking-holiday.example</td>
-    <td>fitness, travel</td>
+    <td>Fitness, Travel & Transportation</td>
     <td>adtech2.example</td>
     </tr>
     <tr>
     <td>diy-clothing.example</td>
-    <td>craft, fashion</td>
+    <td>Crafts, Fashion & Style</td>
     <td>[none]</td>
     </tr>
   </tbody>
@@ -263,14 +263,14 @@ and the API [callers](#caller) present on each site (the entities that call
 At the end of the epoch (currently proposed to be one week) the Topics API generates the browser's
 top topics for the week.
 
--  adtech1.example is now eligible to receive the "fitness" and "craft" topics, since it
+-  adtech1.example is now eligible to receive the "Fitness" and "Crafts" topics, since it
    observed them on yoga.example and also on knitting.example.
--  adtech1.example is not eligible to receive the "travel" topic for this user as it is not
+-  adtech1.example is not eligible to receive the "Travel & Transportation" topic for this user as it is not
    present on any sites the user visited recently that are associated with that topic.
--  adtech2.example has seen the "fitness" and "travel" topics, but has not seen the "craft" topic.
+-  adtech2.example has seen the "Fitness" and "Travel & Transportation" topics, but has not seen the "Crafts" topic.
 
-The user visited diy-clothing.example, which has the "fashion" topic, but there were no calls to the
-Topics API on that site. At this point, this means the "fashion" topic would not be returned by the
+The user visited diy-clothing.example, which has the "Fashion & Style" topic, but there were no calls to the
+Topics API on that site. At this point, this means the "Fashion & Style" topic would not be returned by the
 API for any caller.
 
 In week two, the user visits another site:
@@ -286,7 +286,7 @@ In week two, the user visits another site:
   <tbody>
     <tr>
     <td>sewing.example</td>
-    <td>craft</td>
+    <td>Crafts</td>
     <td>adtech2.example</td>
     </tr>
   </tbody>
@@ -305,18 +305,18 @@ In addition, code from adtech2.example is added to diy-clothing.example:
   <tbody>
     <tr>
     <td>diy-clothing.example</td>
-    <td>craft, fashion</td>
+    <td>Crafts, Fashion & Style</td>
     <td>adtech2.example</td>
     </tr>
   </tbody>
 </table>
 
-As well as "fitness" and "travel" from week 1, this means that adtech2.example will now be able to
-receive the "craft" and "fashion" topic — but not until the following epoch, week 3. This ensures
+As well as "Fitness" and "Travel & Transportation" from week 1, this means that adtech2.example will now be able to
+receive the "Crafts" and "Fashion & Style" topic — but not until the following epoch, week 3. This ensures
 that third parties can't learn more about a user's past (in this case, an interest in fashion) than
 they could with cookies.
 
-After another two weeks, "fitness" and "travel" may drop out of adtech2.example's list of eligible
+After another two weeks, "Fitness" and "Travel & Transportation" may drop out of adtech2.example's list of eligible
 topics, if the user doesn't visit any sites with those topics that include code from
 adtech2.example.
 
@@ -400,12 +400,12 @@ In addition, both sites and users can [opt out](#opt-out) of the Topics API.
 
 {% Aside %}
 
-As the Topics proposal explainer describes:  "Third party cookies can be used to track anything
-about a user, from the exact URLs they visited, to the precise page content on those pages. This
-could include limitless sensitive material. The Topics API, on the other hand, is restricted to a
-human-curated taxonomy of topics. That's not to say that other things couldn't be statistically
-correlated with the topics in that taxonomy. That is possible. But when comparing the two, Topics
-seems like a clear improvement over cookies."
+As [the Topics proposal explainer describes](https://github.com/jkarlin/topics#meeting-the-privacy-goals):
+"Third party cookies can be used to track anything about a user, from the exact URLs they visited,
+ to the precise page content on those pages. This could include limitless sensitive material. The
+ Topics API, on the other hand, is restricted to a human-curated taxonomy of topics. That's not to
+ say that other things couldn't be statistically correlated with the topics in that taxonomy. That
+ is possible. But when comparing the two, Topics seems like a clear improvement over cookies."
 
 {% endAside %}
 
@@ -457,7 +457,7 @@ of topics returned will be empty if:
 -  The browser is in Incognito mode.
 
 The explainer provides [more detail about privacy
-goals](https://github.com/jkarlin/topics#:~:text=privacy%20goals) and how the API seeks to address
+goals](https://github.com/jkarlin/topics#meeting-the-privacy-goals) and how the API seeks to address
 them.
 
 ---
