@@ -134,7 +134,7 @@ Chromium 议题：[1269674](https://crbug.com/1269674)
 ## 模拟 CSS forced-colors 媒体功能 {: #forced-colors }
 
 <!-- The [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) CSS media feature is used to detect if the user agent has enabled a forced colors mode (e.g. Windows High Contrast mode) where it enforces a user-chosen limited color palette on the page.  -->
-[forced-colors](https://drafts.c​​sswg.org/mediaqueries-5/#forced-colors) CSS 媒体功能用于检测用户代理是否启用了强制颜色（forced-colors）模式（例如 Windows 高对比度模式），这种模式会基于用户选择的颜色来展示页面。
+[forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) CSS 媒体功能用于检测用户代理是否启用了强制颜色（forced-colors）模式（例如 Windows 高对比度模式），这种模式会基于用户选择的颜色来展示页面。
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate CSS media feature forced-colors** dropdown. -->
 打开[命令菜单](/docs/devtools/command-menu/)，运行**显示“渲染”工具**命令，然后设置**模拟 CSS 媒体功能 force-colors** 下拉菜单。
