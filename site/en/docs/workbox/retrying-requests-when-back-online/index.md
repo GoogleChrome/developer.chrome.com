@@ -39,6 +39,7 @@ registerRoute(
 
 Here, `BackgroundSyncPlugin` is applied to a route matching POST requests to an API route that retrieves JSON data. If the user is offline, `BackgroundSyncPlugin` will retry the request when the user is back online, but only for up to a day.
 
+[comment]: <> (TODO: update the using-plugins link when that doc is migrated)
 {% Aside 'warning' %}
 Because `BackgroundSyncPlugin` hooks into the [`FetchDidFail` plugin's callback](https://developers.google.com/web/tools/workbox/guides/using-plugins), failed requests must be the result of a network failure. Requests that result in a [400](https://developer.mozilla.org/docs/Web/HTTP/Status#client_error_responses) or [500-level error status](https://developer.mozilla.org/docs/Web/HTTP/Status#server_error_responses) will not be retried. To retry requests resulting in these types of failures, try [adding a `FetchDidSucceed` plugin to your strategy](https://github.com/GoogleChrome/workbox/issues/2599#issuecomment-900304969).
 {% endAside %}

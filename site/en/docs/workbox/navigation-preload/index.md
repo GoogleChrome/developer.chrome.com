@@ -28,7 +28,6 @@ The best time to use navigation preload is when a website can't precache HTML. T
 
 Using navigation preload directly in a service worker not powered by Workbox is tricky. First, [it's not supported in all browsers](https://caniuse.com/mdn-api_navigationpreloadmanager). Secondly, it can be difficult to get right. You can learn how to use it directly in [this great explainer by Jake Archibald](https://developers.google.com/web/updates/2017/02/navigation-preload).
 
-[comment]: <> (TODO: POINT REFERENCE LINK TO NEW REFERENCE DOCS)
 Workbox simplifies using navigation preload, because the `workbox-navigation-preload` module's [`enable` method](/docs/workbox/reference/workbox-navigation-preload/#method-enable) does the necessary feature support checks, as well as creating the `activate` event listener to enable it for you.
 
 From here, the benefits of navigation preload are realized in supporting browsers by using Workbox to handle navigation requests using a network-first strategy handler:
@@ -76,8 +75,7 @@ If you don't register a route to handle the preloaded response using a network-f
 
 ## How can I tell if navigation preload is working?
 
-[comment]: <> (TODO: WIRE UP LINK)
-In [development builds](LINK IT UP!), Workbox logs a _lot_ about what it does. If you want to check if navigation preload is working in Workbox, open the console in a supporting browser during a navigation request and you'll see a log message saying as much:
+In [development builds](/docs/workbox/troubleshooting-and-logging/), Workbox logs a _lot_ about what it does. If you want to check if navigation preload is working in Workbox, open the console in a supporting browser during a navigation request and you'll see a log message saying as much:
 
 {% Img src="image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/1TbMFuUG7c1OZp4zAOJH.png", alt="A screenshot of Workbox logs in the console of Chrome's DevTools. The messages read, from top to bottom: 'Router is responding to /', 'Using a preloaded navigation request for /', and 'Using NetworkFirst to respond to /'", width="800", height="89" %}
 
@@ -97,5 +95,4 @@ Then, in your application backend of choice, you can check for this header and m
 
 ## Conclusion
 
-[comment]: <> (TODO: POINT REFERENCE LINK TO NEW REFERENCE DOCS)
 Navigation preload is hard to get right when used directly, but that hard work is worth it to ensure that a service worker doesn't hold the browser up from making navigation requests. Thanks to Workbox, you can benefit from navigation preload with a lot less work. To get more details on the `workbox-navigation-preload` module, [check out its reference documentation](/docs/workbox/reference/workbox-navigation-preload/).

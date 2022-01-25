@@ -689,5 +689,7 @@ Starting with Workbox v6, the `messageSkipWaiting()` method can be used to send 
 current service worker registration. It will silently do nothing if there isn't a
 waiting service worker.
 
-For guidance on using `messageSkipWaiting()`, see the
-"[Offer a page reload for users](https://developers.google.com/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users)" recipe.
+{% Aside %}
+For further guidance on using `messageSkipWaiting()`, see the
+"[Handling service worker updates with immediacy](/docs/workbox/handling-service-worker-updates/)" recipe.
+{% endAside %}

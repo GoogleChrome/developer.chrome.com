@@ -6,7 +6,7 @@ description: >
   Sometimes users go offline. Learn how to adapt, and help them resume requests when they eventually go back online.
 ---
 
-One Workbox module that hasn't gotten much coverage yet in this documentation is [`workbox-window`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox), which is a set of modules intended to run in the [`window`](https://developer.mozilla.org/docs/Web/API/Window). The goals of this module are:
+One Workbox module that hasn't gotten much coverage yet in this documentation is [`workbox-window`](/docs/workbox/reference/workbox-window/), which is a set of modules intended to run in the [`window`](https://developer.mozilla.org/docs/Web/API/Window). The goals of this module are:
 
 - To simplify service worker registration and updates by helping developers identify critical moments of the [service worker lifecycle](/docs/workbox/service-worker-lifecycle/), making it easier to respond in those moments.
 - To prevent developers from making common mistakes, such as registering a service worker in the wrong scope.
@@ -81,7 +81,7 @@ wb.register();
 It may seem that this is the same as registering a service worker yourself using [`navigator.serviceWorker.register`](https://developer.mozilla.org/docs/Web/API/ServiceWorkerContainer/register). However,  `Workbox.register` takes care of waiting until the [`window` `load`](https://developer.mozilla.org/docs/Web/API/Window/load_event) event before registering the service worker. This is desirable in situations where precaching is involved so bandwidth contention that may delay page startup can be avoided.
 
 {% Aside %}
-The `Workbox` class offers numerous other convenience methods that make working with the service worker API easier. For more information, check out [the reference documentation](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-window.Workbox).
+The `Workbox` class offers numerous other convenience methods that make working with the service worker API easier. For more information, check out [the reference documentation](/docs/workbox/reference/workbox-window/).
 {% endAside %}
 
 ## Communicating between the `window` and the service worker scope
