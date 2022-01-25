@@ -98,7 +98,7 @@ registry][section-registry] instead.
     Extensions/`
     - **For all users** `/Library/Application Support/Google/Chrome/External Extensions/`
 
-3. Specify the update URL with the field name "external_update_url". For example::
+3. Specify the update URL with the field name "external_update_url". For example:
   ```json
   {
     "external_update_url": "https://clients2.google.com/service/update2/crx"
@@ -205,17 +205,23 @@ For example:
 ## Using the Windows registry {: #registry }
 
 1. Find or create the following key in the registry:
-    - 32-bit Windows: `HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions`
-    - 64-bit Windows: `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions`
+
+    32-bit Windows
+
+    : `HKEY_LOCAL_MACHINE\Software\Google\Chrome\Extensions`
+
+    64-bit Windows
+
+    : `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Google\Chrome\Extensions`
+
 2. Create a new key (folder) under the **Extensions** key with the same name as the ID of your
    extension. For example: `aaabbbcccdddeeefff`.
-3. In your extension key, create a property, "update_url", and set it to the following value:
+3. In your extension key, create an "update_url" property and set it to the following value:
   ```json
   {
     "update_url": "https://clients2.google.com/service/update2/crx"
   }
   ```
-
 4. Launch Chrome.
 5. Go to **chrome://extensions**; you should see the extension listed.
 
@@ -235,7 +241,7 @@ To update a local CRX file extension to a new version, update the file, and then
 in the preferences json file.
 
 To uninstall your extension (for example, if your software is uninstalled), remove your preference
-file (aaabbbcccdddeeefff.json) or the metadata from the registry.
+file (for example, `aaabbbcccdddeeefff.json`) or the metadata from the registry.
 
 ## FAQ {: #faq }
 
@@ -248,13 +254,13 @@ Yes, but only as an install from a Chrome Web Store `update_URL`, not from a loc
 ### What are some common mistakes when installing with the preferences file? {: #faq-preference }
 
 - Not specifying the same id/version as the one listed in the CRX file.
-- The JSON file (`aaabbbcccdddeeefff.json`) is in the wrong location or the ID specified does not match
-  the extension ID.
+- The JSON file (for example, `aaabbbcccdddeeefff.json`) is in the wrong location or the ID
+  specified does not match the extension ID.
 - Syntax error in JSON file (forgetting to separate entries with comma or leaving a trailing comma
   somewhere).
 - JSON file entry points to the wrong path to the CRX file (or path specified but no filename)
-- Backslashes in UNC path not escaped (for example, `"\\server\share\file"` is wrong; it should be
-  `"\\\\server\\share\\extension"`)
+- Backslashes in UNC path are not escaped. For example, `"\\server\share\file"` is wrong; it should
+  be `"\\\\server\\share\\extension"`.
 - Permissions problems on a network share.
 
 ### What are some common mistakes when installing with the registry? {: #faq-registry }
