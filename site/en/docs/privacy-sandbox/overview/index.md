@@ -4,7 +4,7 @@ title: What is the Privacy Sandbox?
 subhead: The Privacy Sandbox is a series of proposals to satisfy cross-site use cases without third-party cookies or other tracking mechanisms.
 description: "What's in it, how to get involved, and what it's for."
 date: 2021-05-18
-updated: 2021-10-29
+updated: 2021-01-25
 authors:
   - samdutton
 ---
@@ -76,8 +76,11 @@ third-party cookies which can be used to identify and track users across sites.
 
 ### Show relevant content and ads
 
-* [**FLoC**](/docs/privacy-sandbox/floc): Privacy-preserving, interest-based ad and content 
-selection: "relevant ads".
+* [**Topics API**](/docs/privacy-sandbox/topics): Enable interest-based advertising. Designed so
+  that it doesn't require third-party cookies and cannot be used by third parties to track user
+  browsing behavior across sites. The Topics API proposes a mechanism to map website hostnames to
+  topics of interest, and provides a JavaScript API that returns coarse-grained topics a user
+  might currently be interested in, based on their recent browsing activity.
 * [**FLEDGE**](/docs/privacy-sandbox/fledge): Ad selection to serve remarketing and custom audience 
 use cases, designed so that it cannot be used by third parties to track user browsing behavior across 
 sites.  FLEDGE is the first experiment to be implemented in Chromium within the 
@@ -165,7 +168,7 @@ tab for each explainer.
 * [Gnatcatcher](https://github.com/bslassey/ip-blindness)
 * [Aggregated Reporting API](https://github.com/csharrison/aggregate-reporting-api)
 * [Attribution Reporting](https://github.com/csharrison/conversion-measurement-api)
-* [FLoC](https://github.com/jkarlin/floc)
+* [Topics API](https://github.com/jkarlin/topics)
 * [FLEDGE](https://github.com/michaelkleber/turtledove)
 
 ### Articles and videos for web developers
@@ -174,7 +177,6 @@ tab for each explainer.
 * [SameSite cookies explained](https://web.dev/samesite-cookies-explained/)
 * [Getting started with Trust Tokens](https://web.dev/trust-tokens)
 * [A more private way to measure ad conversions](https://web.dev/conversion-measurement/)
-* [What is FLoC?](https://web.dev/floc/)
 * [Introducing the Privacy Budget](https://www.youtube.com/watch?v=0STgfjSA6T8)
 
 ### Principles and concepts behind the proposals

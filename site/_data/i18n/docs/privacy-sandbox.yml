@@ -4,6 +4,8 @@ fledge:
   en: 'FLEDGE'
 floc:
   en: 'Federated Learning of Cohorts (FLoC)'
+topics-api:
+  en: 'The Topics API'
 glossary:
   en: 'Privacy Sandbox glossary'
 guiding-principles:
