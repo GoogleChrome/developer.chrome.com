@@ -66,7 +66,7 @@ file][packing] and note the following information:
 id and version", width="500", height="258" %}
 
 - The **location of the CRX file**— This can either be a local directory or a network share. Make
-  sure the file is available to the machine you want to install the extension on. 
+  sure the file is available to the machine you want to install the extension on.
 
 ### Installing from a personal server {: #prereq-server }
 
@@ -93,7 +93,7 @@ registry][section-registry] instead.
 ### macOS {: #preference-mac }
 
 1. Create a JSON file with the name of the extension ID. For example: `aaabbbcccdddeeefff.json`
-2. Place it in one of the folders listed below:    
+2. Place it in one of the folders listed below:
     - **For a specific user** `~USERNAME/Library/Application Support/Google/Chrome/External
     Extensions/`
     - **For all users** `/Library/Application Support/Google/Chrome/External Extensions/`
@@ -219,7 +219,7 @@ For example:
         }
       ```
 
-4. Launch Chrome. 
+4. Launch Chrome.
 5. Go to **chrome://extensions**; you should see the extension listed.
 
 {% Aside %}
