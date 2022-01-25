@@ -43,8 +43,8 @@ extensions][malicious-mac]).
 If you are distributing an extension hosted in the Chrome Web Store, you must first [publish the
 extension][publish]. Then, make a note of the following:
 
-- The **update URL**— `https://clients2.google.com/service/update2/crx`. This url points to the Chrome
-  Web Store.
+- The **update URL**— `https://clients2.google.com/service/update2/crx`. This url points to the
+  Chrome Web Store.
 - The **extension's ID**— This can be found in the Chrome Web Store URL of the extension.
 
 {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/85JMcIqgG9TLiJCZnAXE.png", alt="Chrome Web Store item
@@ -94,9 +94,15 @@ registry][section-registry] instead.
 
 1. Create a JSON file with the name of the extension ID. For example: `aaabbbcccdddeeefff.json`
 2. Place it in one of the folders listed below:
-    - **For a specific user** `~USERNAME/Library/Application Support/Google/Chrome/External
+
+    For a specific user
+
+    : `~USERNAME/Library/Application Support/Google/Chrome/External
     Extensions/`
-    - **For all users** `/Library/Application Support/Google/Chrome/External Extensions/`
+
+    For all users
+
+    : `/Library/Application Support/Google/Chrome/External Extensions/`
 
 3. Specify the update URL with the field name "external_update_url". For example:
     ```json
