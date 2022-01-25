@@ -13,7 +13,6 @@ tags:
   - new-in-devtools
   - devtools
   - chrome-98
-draft: true
 ---
 
 *感谢 [阮贝琪 @jecelynyeen](https://github.com/jecelynyeen) 和 [韩昌浩 @hanselfmu](https://github.com/hanselfmu) 提供的翻译*。
@@ -77,7 +76,7 @@ Chromium 议题：[1238818](https://crbug.com/1238818)，[1268754](https://crbug
 您现在可以在[录制器](/docs/devtools/recorder/)中为所有步骤或特定步骤调整**超时**设置。这对于网络请求缓慢且动画冗长的页面尤其有用。
 
 <!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
-例如，我在这个[演示页](https://jec.fyi/demo/pup-slow-result)上[录制](/docs/devtools/recorder/#record) 用户加载并点击菜单项的操作。但是，菜单项的加载速度很慢（需要6秒）。这次用户操作的[重放](/docs/devtools/recorder/#replay)会因此失败，因为它超过了默认的5秒超时。
+例如，我在这个[演示页](https://jec.fyi/demo/pup-slow-result)上[录制](/docs/devtools/recorder/#record)用户加载并点击菜单项的操作。但是，菜单项的加载速度很慢（需要6秒）。这次用户操作的[重放](/docs/devtools/recorder/#replay)会因此失败，因为它超过了默认的5秒超时。
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 我们可以使用新的**超时**设置来解决这个问题。展开我们点击菜单项的步骤。[编辑步骤](/docs/devtools/recorder/#edit-steps)以**添加超时**，并将其设置为**6000**毫秒（等于6秒）。
@@ -91,7 +90,7 @@ Chromium 议题：[1257499](https://crbug.com/1257499)
 
 
 <!-- ## Ensure your pages are cacheable with the Back/forward cache tab {: #bfcache } -->
-## 使用“后退/前进缓存”选项卡确保您的页面可缓存 {: #bfcache }
+## 使用“往返缓存”选项卡确保您的页面可缓存 {: #bfcache }
 
 <!-- [Back/forward cache (or bfcache)](https://web.dev/bfcache/) is a browser optimization that enables instant back and forward navigation.  -->
 [往返缓存（或 bfcache）](https://web.dev/bfcache/) 是一种浏览器优化，可提供即时的后退和前进导航。
@@ -138,7 +137,7 @@ Chromium 议题：[1269674](https://crbug.com/1269674)
 [forced-colors](https://drafts.c​​sswg.org/mediaqueries-5/#forced-colors) CSS 媒体功能用于检测用户代理是否启用了强制颜色（forced-colors）模式（例如 Windows 高对比度模式），这种模式会基于用户选择的颜色来展示页面。
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate CSS media feature forced-colors** dropdown. -->
-打开[命令菜单](/docs/devtools/command-menu/)，运行**显示“渲染”工具**命令，然后设置**模拟 CSS 媒体功能 force-colors**下拉菜单。
+打开[命令菜单](/docs/devtools/command-menu/)，运行**显示“渲染”工具**命令，然后设置**模拟 CSS 媒体功能 force-colors** 下拉菜单。
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/75qGjkzfbXfOEJUhML5i.png", alt="CSS forced-colors 媒体功能", width="800", height="623" %}
 
@@ -198,7 +197,7 @@ Chromium 议题： [1050021](https://crbug.com/1050021)
 **搜索**选项卡中添加了一个新的键盘快捷键，允许您展开和折叠所有搜索结果。之前，您只能通过一次单击一个文件来展开和折叠搜索结果。
 
 <!-- Open the search tab via **Esc** > **3-dot** menu > **Search**. Enter a search string (e.g. function) and press **Enter** to see the list of search results. Focus on the search results and use the following shortcut to expand/collapse the search files: -->
-通过 **Esc** > **3点妆** 菜单 > **搜索** 打开搜索选项卡。输入搜索字符串（例如函数）并按 **Enter** 以查看搜索结果列表。关注搜索结果并使用以下快捷方式展开/折叠搜索文件：
+通过 **Esc** > **3点妆** 菜单 > **搜索**打开搜索选项卡。输入搜索字符串（例如函数）并按 **Enter** 以查看搜索结果列表。关注搜索结果并使用以下快捷方式展开/折叠搜索文件：
 
 - **Windows / Linux** - `Ctrl` + `Shift` + `{` or `}`
 - **MacOS** - `Cmd` + `Options` + `{` or `}`
@@ -219,7 +218,7 @@ Chromium 议题： [1255073](https://crbug.com/1255073)
 **Lighthouse** 面板现在已运行 Lighthouse 9。Lighthouse 现在将列出所有共享相同 id 的元素。
 
 <!-- Non-unique element id is a common accessibility problem. For instance, the id referenced in an `aria-labelledby` attribute is used on [multiple elements](https://web.dev/duplicate-id-aria/).  -->
-重叠元素 id 是一个常见的无障碍（accessibility）问题。例如，`aria-labelledby` 属性中的 id 用于 [多个元素](https://web.dev/duplicate-id-aria/)。
+重叠元素 id 是一个常见的无障碍（accessibility）问题。例如，`aria-labelledby` 属性中的 id 用于[多个元素](https://web.dev/duplicate-id-aria/)。
 
 <!-- Check out the [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/) for more details on the updates. -->
 更多的 Lighthouse 更新细节，请参考 [What’s new in Lighthouse 9.0](/blog/lighthouse-9-0/)。
@@ -234,7 +233,7 @@ Chromium 议题： [772558](https://crbug.com/772558)
 ## 源代码面板的改善 {: #sources }
 
 <!-- Loads of stability improvements in the **Sources** panel as we upgraded it to use [CodeMirror 6](https://codemirror.net/6/). Here are few notable improvements: -->
-DevTools 升级使用 [CodeMirror 6](https://codemirror.net/6/)。此升级为 **源代码** 面板带来了大量的稳定性改进。以下是其中一些显着的改进：
+DevTools 升级使用 [CodeMirror 6](https://codemirror.net/6/)。此升级为**源代码**面板带来了大量的稳定性改进。以下是其中一些显着的改进：
 
 <!-- - Significantly faster when opening large files (e.g. WASM, JavaScript)
 - No more random scrolling when stepping through code
@@ -262,7 +261,7 @@ Chromium 议题： [1241848](https://crbug.com/1241848)
 - 修复在**源代码**面板中搜索具有很长行的文档时，无法高亮代码的问题。([1275496](https://crbug.com/1275496))
 - 网络请求中不再显示重复的 **Payload** 选项卡。 ([1273972](https://crbug.com/1273972))
 - 修复了**性能**面板的**摘要**部分中缺少的布局转换详细信息。 ([1259606](https://crbug.com/1259606))
-- 在 **网络搜寻** 查询中支持任意字符（例如 `,`, `.`）。 ([1267196](https://crbug.com/1267196))
+- 在**网络搜寻**查询中支持任意字符（例如 `,`, `.`）。 ([1267196](https://crbug.com/1267196))
 
 
 <!-- ### [Experimental] Endpoints in the Reporting API pane {: #reporting-api } -->

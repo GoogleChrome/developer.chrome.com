@@ -1,20 +1,20 @@
 ## 更多 DevTools 的功能 {: #whats-new }
 欲查询完整的 DevTools 已发布的功能，请参考 <a href="/tags/new-in-devtools/" translate="no">What's New In DevTools</a> 英文系列。以下是部分已翻译成中文的内容。
 
-<!-- ### Chrome 98 {: #chrome98 }
+### Chrome 98 {: #chrome98 }
 * [预览功能：整页无障碍功能树](/zh/blog/new-in-devtools-98/#a11y-tree)
-* [More precise changes in the Changes tab](/zh/blog/new-in-devtools-98/#changes)
-* [Set longer timeout for user flow recording](/zh/blog/new-in-devtools-98/#recorder-timeout)
-* [Ensure your pages are cacheable with the Back/forward cache tab](/zh/blog/new-in-devtools-98/#bfcache)
-* [New Properties pane filter](/zh/blog/new-in-devtools-98/#properties)
-* [Emulate the CSS forced-colors media feature](/zh/blog/new-in-devtools-98/#forced-colors)
-* [Show rulers on hover command](/zh/blog/new-in-devtools-98/#show-rulers)
-* [Support `row-reverse` and `column-reverse` in the Flexbox editor](/zh/blog/new-in-devtools-98/#flexbox-editor)
+* [在变更标签页中显示更精确的更改](/zh/blog/new-in-devtools-98/#changes)
+* [为用户操作流的录制设置更长的超时时间](/zh/blog/new-in-devtools-98/#recorder-timeout)
+* [使用“往返缓存”选项卡确保您的页面可缓存](/zh/blog/new-in-devtools-98/#bfcache)
+* [新的属性边栏过滤器](/zh/blog/new-in-devtools-98/#properties)
+* [模拟 CSS forced-colors 媒体功能](/zh/blog/new-in-devtools-98/#forced-colors)
+* [在鼠标指针悬停时显示标尺](/zh/blog/new-in-devtools-98/#show-rulers)
+* [在 Flexbox 编辑器中支持 `row-reverse` 和 `column-reverse`](/zh/blog/new-in-devtools-98/#flexbox-editor)
 * [新增“重放 XHR “和“扩展所有搜索结果”的键盘快捷键](/zh/blog/new-in-devtools-98/#shortcuts)
 * [Lighthouse 面板中的 Lighthouse 9](/zh/blog/new-in-devtools-98/#lighthouse)
 * [源代码面板的改善](/zh/blog/new-in-devtools-98/#sources)
 * [其他的更新](/zh/blog/new-in-devtools-98/#misc)
-* [[Experimental] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api) -->
+* [[Experimental] 在 Reporting API 窗格中显示端点](/zh/blog/new-in-devtools-98/#reporting-api)
 
 
 ### Chrome 97 {: #chrome97 }
