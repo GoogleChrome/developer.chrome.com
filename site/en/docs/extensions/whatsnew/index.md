@@ -248,5 +248,5 @@ GitHub](https://github.com/GoogleChromeLabs/extension-manifest-converter).
 Manifest V3 is a major update to the extensions platform; see [Overview of Manifest
 V3](/docs/extensions/mv3/intro/mv3-overview/) for a summary of new and changed features. Extensions
 may continue to use Manifest V2 for now, but this will be phased out in the near future. We strongly
-recommend that you use MV3 for any new extensions, and begin to migrate existing extensions to MV3
+recommend that you use Manifest V3 for any new extensions, and begin to migrate existing extensions to Manifest V3
 as soon as possible.

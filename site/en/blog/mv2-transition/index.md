@@ -55,5 +55,5 @@ If you have feedback on Manifest V3 or are encountering unique challenges with t
 process, please post to the
 [chromium-extensions](https://groups.google.com/a/chromium.org/g/chromium-extensions) Google Group.
 The earlier issues are raised and the earlier feedback is given, the more options the team has to
-address them prior to MV2 phase-out.
+address them prior to Manifest V2 phase-out.
 

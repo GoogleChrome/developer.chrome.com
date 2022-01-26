@@ -11,11 +11,11 @@ date: 2021-09-23
 
 ---
 
-As MV3 approaches full feature parity with MV2, we'll be progressively phasing out MV2. This page
+As Manifest V3 approaches full feature parity with Manifest V2, we'll be progressively phasing out Manifest V2. This page
 specifies the timetable for this deprecation and describes the meaning of each milestone.
 
-{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/zXdU3hdkj1K0Ks6tAfB4.png", alt="Diagram of MV2
-support timeline", width="800", height="270" %}
+{% Img src="image/SHhb2PDKzXTggPGAYpv8JgR81pX2/zXdU3hdkj1K0Ks6tAfB4.png",
+  alt="Diagram of Manifest V2 support timeline", width="800", height="270" %}
 
 {% Aside %}
 Check this page for any updates and for more specific dates as these milestones get closer.
