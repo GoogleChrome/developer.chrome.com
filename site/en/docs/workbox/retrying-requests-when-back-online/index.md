@@ -63,6 +63,7 @@ The queue name is used as part of the tag name that's created by the [`register(
 {% Aside %}
 While it's not crucial to know these details, it's handy to know that they're the reason the queue name must be unique to your origin.
 {% endAside %}
+
 ### Adding requests to the queue
 After creating the the `Queue` instance, you can add failed requests to it using its `pushRequest()` method:
 
