@@ -33,7 +33,7 @@ deployment.
 
 
 {% Aside %}
-🧐 There is a [glossary](/blog/fledge#glossary) of FLEDGE terms at the end of [What is the FLEDGE API?](/blog/fledge#glossary)
+🔎 There is a [glossary](/docs/privacy-sandbox/fledge#glossary) of FLEDGE terms at the end of [The FLEDGE API](/docs/privacy-sandbox/fledge#glossary)
 {% endAside %}
 
 
@@ -42,7 +42,7 @@ deployment.
 ## What is FLEDGE?
 
 FLEDGE is a [Privacy Sandbox](/docs/privacy-sandbox/overview) proposal to serve 
-[remarketing](/blog/fledge#remarketing) and custom audience use cases, designed so that it cannot be used by
+[remarketing](/docs/privacy-sandbox/fledge#remarketing) and custom audience use cases, designed so that it cannot be used by
 third parties to track user browsing behavior across sites. The API enables on-device auctions by 
 the browser, to choose relevant ads for websites the user has previously visited. 
 
@@ -80,6 +80,8 @@ under discussion.
 provides more details about the goals of the trial and what features are proposed for support.
 
 {% endAside %}
+
+{: #test}
 
 ### Test with feature flags
 
@@ -193,7 +195,7 @@ and is shown an ad for a new bike from the bike maker.
 {% Aside 'warning' %} 
 
 Not all features described in this post have been implemented (or fully implemented) in the version 
-of the FLEDGE API currently being tested in Chrome. The [FLEDGE API developer guide](/blog/fledge-api#try-fledge) 
+of the FLEDGE API currently being tested in Chrome. [Test with feature flags](#test)
 explains what FLEDGE features are currently available for testing in Chrome run from the command line 
 using [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
 
@@ -209,14 +211,14 @@ already implemented and what's still in progress.
   a person visiting a custom bike manufacturer site in a browser on their laptop.", 
   width="400", height="190" %}
 
-Imagine that a user visits the website of a custom bike maker (the [advertiser](/blog/fledge#advertiser) in
+Imagine that a user visits the website of a custom bike maker (the [advertiser](/docs/privacy-sandbox/fledge#advertiser) in
 this example) and spends some time on the product page for a handmade steel bike. This provides the
-bike maker with a [remarketing](/blog/fledge#remarketing) opportunity.
+bike maker with a [remarketing](/docs/privacy-sandbox/fledge#remarketing) opportunity.
 
 {% Aside %}
 A **demand-side platform** (DSP) is an adtech service used to automate ad purchasing. DSPs are 
 used by advertisers to buy [ad impressions](https://en.wikipedia.org/wiki/Impression_(online_media)) 
-across a range of publisher sites. Publishers put their [ad inventory](/blog/fledge#ad-inventory) up for sale
+across a range of publisher sites. Publishers put their [ad inventory](/docs/privacy-sandbox/fledge#ad-inventory) up for sale
 through marketplaces called ad exchanges, and DSPs decide programmatically which available ad 
 impression makes most sense for an advertiser to buy.
 
@@ -235,10 +237,10 @@ exchanges, DSPs, and networks. This enables a wide range of potential buyers to 
 
 **Explainer section:** [Browsers Record Interest Groups](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups)
 
-The advertiser's [demand-side platform](/blog/fledge/#dsp) (DSP) (or the advertiser itself) calls
+The advertiser's [demand-side platform](/docs/privacy-sandbox/fledge/#dsp) (DSP) (or the advertiser itself) calls
 `navigator.joinAdInterestGroup()` to ask the browser to add an interest group to the list of groups
 the browser is a member of. In this example, the group is named `custom-bikes`, and the owner is
-`dsp.example`. The interest group owner (in this case, the DSP) will be a [buyer](/blog/fledge/#buyer) 
+`dsp.example`. The interest group owner (in this case, the DSP) will be a [buyer](/docs/privacy-sandbox/fledge/#buyer)
 in the ad auction described in [step 4](#ad-auction). Interest group membership is stored by the 
 browser, on the user's device, and is not shared with the browser vendor or anyone else. 
 
@@ -492,7 +494,7 @@ metadata.
 * `perBuyerSignals`<br>
 As with `auctionSignals`, a property of the [auction config](#ad-auction) 
 argument passed to `navigator.runAdAuction()` by the seller. This can provide contextual
-signals from the buyer's server about the page, if the seller is an [SSP](/blog/fledge#ssp) which 
+signals from the buyer's server about the page, if the seller is an [SSP](/docs/privacy-sandbox/fledge#ssp) which
 performs a real-time bidding call to buyer servers and pipes the response back, or if the publisher 
 page contacts the buyer's server directly. If so, the buyer may wish to check a cryptographic 
 signature of those signals inside generateBid() as protection against tampering.
@@ -523,7 +525,7 @@ The `browserSignals` object has the following properties:
 
 * `ad`<br>
 Arbitrary metadata about the ad, such as information the seller expects to learn about this bid or 
-ad creative. The [seller](/blog/fledge/#seller) uses this information in its auction and decision 
+ad creative. The [seller](/docs/privacy-sandbox/fledge/#seller) uses this information in its auction and decision
 logic.
 
 * `bid`<br>
@@ -571,8 +573,8 @@ Code for an ad can also call this function for its interest group.
   has an empty ad slot.", width="400", height="182" %}
 
 Later, the user visits a site that sells ads space, in this example a news website. The site has
-[ad inventory](/blog/fledge/#ad-inventory), which it sells programmatically using
-[real-time bidding](/blog/fledge/#rtb).
+[ad inventory](/docs/privacy-sandbox/fledge/#ad-inventory), which it sells programmatically using
+[real-time bidding](/docs/privacy-sandbox/fledge/#rtb).
 
 {% Aside %}
 
@@ -583,7 +585,7 @@ There are three main roles described in the FLEDGE proposal explainer:
 * **Publisher**: sites that sell ad space, such as the online news website referred to in the
     examples here. Many (but not all) sites selling ad space are content publishers. 
 * **Seller**: the party running the ad auction (in the next step). Most publishers use an adtech
-    service such as an [SSP](/blog/fledge#ssp) to optimize selling ad inventory.
+    service such as an [SSP](/docs/privacy-sandbox/fledge#ssp) to optimize selling ad inventory.
 
 {% endAside %}
 
@@ -599,7 +601,7 @@ There are three main roles described in the FLEDGE proposal explainer:
 
 **Explainer section:** [Sellers Run On-Device Auctions](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#2-sellers-run-on-device-auctions)
 
-The ad auction is likely to be run by the publisher's [SSP](/blog/fledge#ssp), or the publisher
+The ad auction is likely to be run by the publisher's [SSP](/docs/privacy-sandbox/fledge#ssp), or the publisher
 itself. The purpose of the auction is to select the most appropriate ad for a single available ad
 slot on the current page. The auction takes into account the interest groups the browser is a
 member of, along with data from ad-space buyers and the seller—from trusted servers in the next
@@ -630,7 +632,7 @@ const auctionResultPromise = navigator.runAdAuction(auctionConfig);
 ```
 
 `runAdAuction()` returns a promise that resolves to a [URN](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns) (`urn:uuid:<something>`) that represents the
-ad auction outcome. This can only be decoded by the browser when passed to a [fenced frame](/blog/fledge#fenced-frame) 
+ad auction outcome. This can only be decoded by the browser when passed to a [fenced frame](/docs/privacy-sandbox/fledge#fenced-frame)
 for rendering: the publisher page cannot inspect the winning ad. 
 
 The `decisionLogicUrl` script considers each individual ad, along with its associated bid and 
@@ -795,7 +797,7 @@ The response to this request is a JSON object providing values for each of the k
 **Explainer section:** [Browsers Render the Winning Ad](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#4-browsers-render-the-winning-ad)
 
 As described earlier: the promise returned by [`runAdAuction()`](#ad-auction) resolves to an [URN](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns)
-which is passed to a [fenced frame](/blog/fledge#fenced-frame) for rendering, and the site displays 
+which is passed to a [fenced frame](/docs/privacy-sandbox/fledge#fenced-frame) for rendering, and the site displays
 the winning ad.
 
 <p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>

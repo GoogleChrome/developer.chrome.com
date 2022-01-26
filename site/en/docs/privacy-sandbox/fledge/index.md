@@ -124,7 +124,7 @@ buyer's code can include a `reportWin()` function.
 * [fledge-demo.glitch.me](https://fledge-demo.glitch.me/) provides a walkthrough of a basic FLEDGE
 deployment across a shopping, travel and publisher site.
 
-* [FLEDGE API developer guide](/docs/privacy-sandbox/fledge-api#try-fledge) describes how to try out
+* [FLEDGE API developer guide](/blog/fledge-api#try-fledge) describes how to try out
 FLEDGE by running Chrome from the command line using
 [feature flags](https://www.chromium.org/developers/how-tos/run-chromium-with-flags) to manually
 enable the API.
