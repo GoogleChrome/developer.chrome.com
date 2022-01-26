@@ -7,7 +7,7 @@ date: 2022-01-13
 updated: 2022-01-13
 description:
   "Full-page Accessibility tree, more precise changes in the Changes tab, and more."
-hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/MGmy9L4xLm1vuQnVPQq0.jpg'
+hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/G9SHKEY2944USYg0uks6.jpg'
 alt: ''
 tags:
   - new-in-devtools
@@ -17,7 +17,7 @@ tags:
 
 {% include 'partials/devtools/en/banner.md' %}
 
-<!-- image/dPDCek3EhZgLQPGtEG3y0fTn4v82/G9SHKEY2944USYg0uks6.jpg -->
+{% YouTube id='YqkIS88VulM' %}
 
 ## Preview feature: Full-page accessibility tree {: #a11y-tree }
 
