@@ -140,8 +140,8 @@ autoplay="true", muted="true", loop="true", class="screenshot" %}
 
 ## What's next {: #future }
 
-At the time of writing, `showPicker()` is new to the web platform. Some
-additional work may be needed in the future:
+At the time of writing, `showPicker()` is new to the web platform. The feature
+may need additional work in the future:
 
 - We may want to add a similar `showPicker()` to the `<select>` element in the
   future, if web developers ask for it.
