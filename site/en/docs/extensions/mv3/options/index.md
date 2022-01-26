@@ -79,9 +79,9 @@ document.getElementById('save').addEventListener('click',
     save_options);
 ```
 
-For this to work, you must add in the `manifest.json`:
+Finally, add the `"storage"` permission to the extension's `manifest.json`:
 
-```json/3
+```json/4
 {
   "name": "My extension",
   ...
