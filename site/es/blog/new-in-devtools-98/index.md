@@ -234,6 +234,7 @@ Abra la pestaña de búsqueda a través de **Esc** > Menú de **3 puntos** > **B
 Vaya a los [atajos de teclado](/docs/devtools/shortcuts/) para consultar los atajos de teclado en Chrome DevTools.
 
 {% Video src="video/dPDCek3EhZgLQPGtEG3y0fTn4v82/v11XfQLwp7w9qIk440QP.mp4", autoplay="true", muted="false", loop="true",  class="screenshot" %}
+
 ## Lighthouse 9 {: #lighthouse }
 
 <!-- The **Lighthouse** panel is now running Lighthouse 9. Lighthouse will now list all the elements sharing the same id. -->
