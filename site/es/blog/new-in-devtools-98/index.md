@@ -5,7 +5,7 @@ authors:
   - jecelynyeen
 date: 2022-01-13
 updated: 2022-01-13
-description: 'Full-page Accessibility tree, more precise changes in the Changes tab, and more.'
+description: 'Árbol de accesibilidad de página completa, cambios más precisos en la pestaña cambios, y más novedades.'
 hero: 'image/dPDCek3EhZgLQPGtEG3y0fTn4v82/Mw5b9AiYmZVqguYAoBQB.jpg'
 alt: ''
 tags:
