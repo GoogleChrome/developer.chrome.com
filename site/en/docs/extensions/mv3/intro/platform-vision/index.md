@@ -179,13 +179,13 @@ V3](/docs/extensions/mv3/intro/mv3-overview).
 
 ### Manifest V3 related changes
 
-There are a number of features that aren't actually part of MV3, but are
-scheduled for release in the same time frame. These features are related to MV3
-in that they impose new requirements that MV3 is designed to address.
+There are a number of features that aren't actually part of Manifest V3, but are
+scheduled for release in the same time frame. These features are related to Manifest V3
+in that they impose new requirements that Manifest V3 is designed to address.
 
 The key feature launching in this category is the changing way that host
-permissions are granted. Again, this isn't an MV3 feature, but it does motivate
-MV3 changes. Expect these changes in early 2021.
+permissions are granted. Again, this isn't an Manifest V3 feature, but it does motivate
+Manifest V3 changes. Expect these changes in early 2021.
 
 The initial steps in this area have already launched:
 

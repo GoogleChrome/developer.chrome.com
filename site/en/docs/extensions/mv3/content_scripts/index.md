@@ -667,7 +667,7 @@ separate website, such as making an [`XMLHttpRequest`][28], be careful to filter
 avoid ["man-in-the-middle"][30] attacks.
 
 Be sure to filter for malicious web pages. For example, the following patterns are dangerous, and
-disallowed in MV3:
+disallowed in Manifest V3:
 
 {% Compare 'worse' %}
 ```js

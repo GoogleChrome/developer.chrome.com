@@ -71,7 +71,7 @@ chrome.storage.local.get(["badgeText"], ({ badgeText }) => {
   chrome.action.setBadgeText({ text: badgeText });
 
   // Listener is registered asynchronously
-  // This is NOT guaranteed to work in MV3/service workers! Don't do this!
+  // This is NOT guaranteed to work in Manifest V3/service workers! Don't do this!
   chrome.action.onClicked.addListener(handleActionClick);
 });
 ```
@@ -129,7 +129,7 @@ chrome.browserAction.onClicked.addListener((tab) => {
 });
 ```
 
-If we port this code directly to MV3, requiring service workers, it's possible that the code will be
+If we port this code directly to Manifest V3, requiring service workers, it's possible that the code will be
 terminated between when the name is set and the user clicks the browser action. If this happens, the
 set name will have been lost&mdash;and `savedName` will again be `undefined`.
 
@@ -159,7 +159,7 @@ cancel the timers when the service worker is terminated.
 ```js
 // background.js
 
-// This worked in MV2.
+// This worked in Manifest V2.
 const TIMEOUT = 3 * 60 * 1000; // 3 minutes in milliseconds
 setTimeout(() => {
   chrome.action.setIcon({
@@ -228,7 +228,7 @@ create and cache assets. While service workers don't have access to DOM and ther
 
 ```js
 // background.js
-// for MV2 background pages
+// for Manifest V2 background pages
 function buildCanvas(width, height) {
   const canvas = document.createElement("canvas");
   canvas.width = width;
@@ -242,7 +242,7 @@ In the above block we're constructing a canvas element. To migrate to offscreen 
 
 ```js
 // background.js
-// for MV3 service workers
+// for Manifest V3 service workers
 function buildCanvas(width, height) {
   const canvas = new OffscreenCanvas(width, height);
   return canvas;
