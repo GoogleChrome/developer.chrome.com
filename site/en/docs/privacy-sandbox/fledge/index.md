@@ -210,7 +210,7 @@ Imagine that a user visits the website of a custom bike maker (the [advertiser](
 this example) and spends some time on the product page for a handmade steel bike. This provides the
 bike maker with a [remarketing](#remarketing) opportunity.
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 {: #joinAdInterestGroup}
 
@@ -227,7 +227,7 @@ an ad-space buyer in the ad auction described in [step 4](#ad-auction). The owne
 configuration information to enable the browser to access bidding code, ad code, and
 realtime data for the group when an ad auction is run.
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 3. The user visits a site that sells ad space
 
@@ -237,7 +237,7 @@ realtime data for the group when an ad auction is run.
 
 The user visits a news website (a [**publisher**](#publisher)) that uses FLEDGE to select ads.
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 4. An ad auction is run in the browser
 
@@ -270,7 +270,7 @@ data about the ad space available in order to choose whether to bid and to calcu
 The seller's auction code must include a `scoreAd()` function, which is run once for each bid to
 give it a score and choose the most desirable bid.
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 5. The seller and participating buyers receive realtime data from trusted servers
 
@@ -285,7 +285,7 @@ comply with publisher policies, or bidders may need to calculate the remaining b
 campaign. To meet the privacy requirements of FLEDGE, this data is supplied using
 [trusted servers](#trusted-server).
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 6. The winning ad is displayed
 
@@ -298,7 +298,7 @@ The value returned by `navigator.runAdAuction()` in step 5 is passed to a [fence
 for rendering, and the site displays the winning ad. A fenced frame prevents ad code from
 interacting with the surrounding page.
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 7. The auction result is reported
 
@@ -310,7 +310,7 @@ The `reportResult()` and `reportWin()` functions are called in auction code prov
 [seller](#seller) and the winning buyer respectively, so each has an opportunity to perform logging
 and reporting about the auction result.
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 8. An ad click is reported
 

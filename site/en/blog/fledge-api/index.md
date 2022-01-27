@@ -151,7 +151,7 @@ As part of a FLEDGE ad auction, the browser can access a
 that returns simple key-value pairs to provide information to an ad buyer, such as remaining
 campaign budget. The FLEDGE proposal [mandates](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#design-elements) 
 that this server "performs no event-level logging and has no other side effects based on these 
-requests".  However, during the current initial experimental phase for testing FLEDGE, the seller 
+requests".  However, in the current initial experimental phase for testing FLEDGE, the seller
 and buyers can run trusted servers themselves (a 
 "[Bring Your Own Server](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#:~:text=bring%20your%20own%20server)" 
 model). Discussion is underway about how trusted servers are managed and owned. 
@@ -215,19 +215,19 @@ Imagine that a user visits the website of a custom bike maker (the [advertiser](
 this example) and spends some time on the product page for a handmade steel bike. This provides the
 bike maker with a [remarketing](/docs/privacy-sandbox/fledge#remarketing) opportunity.
 
-{% Aside %}
-A **demand-side platform** (DSP) is an adtech service used to automate ad purchasing. DSPs are 
+{% Aside 'key-term' %}
+A _demand-side platform_ (DSP) is an adtech service used to automate ad purchasing. DSPs are
 used by advertisers to buy [ad impressions](https://en.wikipedia.org/wiki/Impression_(online_media)) 
 across a range of publisher sites. Publishers put their [ad inventory](/docs/privacy-sandbox/fledge#ad-inventory) up for sale
 through marketplaces called ad exchanges, and DSPs decide programmatically which available ad 
 impression makes most sense for an advertiser to buy.
 
-A **Supply-side platform** (SSP) is an adtech service used to automate selling ad inventory. SSPs 
+A _Supply-side platform_ (SSP) is an adtech service used to automate selling ad inventory. SSPs
 allow publishers to offer their inventory (empty rectangles where ads will go) to multiple ad 
 exchanges, DSPs, and networks. This enables a wide range of potential buyers to bid for ad space. 
 {% endAside %}
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 2. The user's browser is asked to add an interest group
 
@@ -564,7 +564,7 @@ If a user returns to the site which asked the browser to add an interest group, 
 can call the `navigator.leaveAdInterestGroup()` function to request the browser remove the interest group. 
 Code for an ad can also call this function for its interest group.
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 3. The user visits a site that sells ad space
 
@@ -591,7 +591,7 @@ There are three main roles described in the FLEDGE proposal explainer:
 
 {: #ad-auction}
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 4. An ad auction is run in the browser
 
@@ -752,7 +752,7 @@ knows and which the seller's auction script might want to verify:
 Before an auction starts, the seller finds the best contextual ad for the available ad slot. Part of 
 its `scoreAd()` logic is to reject any ad that can't beat the contextual winner.
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 5. The seller and participating buyers receive realtime data from trusted servers
 
@@ -785,7 +785,7 @@ A request to this URL is made when `runAdAuction()` is called:
 
 The response to this request is a JSON object providing values for each of the keys. 
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 6. The winning ad is displayed
 
@@ -800,7 +800,7 @@ As described earlier: the promise returned by [`runAdAuction()`](#ad-auction) re
 which is passed to a [fenced frame](/docs/privacy-sandbox/fledge#fenced-frame) for rendering, and the site displays
 the winning ad.
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 7. The auction result is reported
 
@@ -894,7 +894,7 @@ For&nbsp;example:<br><br>
 A reporting mechanism for losing bidders is [under discussion](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#53-losing-bidder-reporting).
 {% endAside %}
 
-<p style="color: #547fc0; font-size: 4rem; text-align: center;">⬇︎</p>
+<p style="color: #547fc0; font-size: 4rem; text-align: center;" aria-hidden="true">⬇︎</p>
 
 ### 8. An ad click is reported
 
