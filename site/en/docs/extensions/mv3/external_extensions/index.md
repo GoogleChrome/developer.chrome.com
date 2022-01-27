@@ -6,9 +6,9 @@ updated: 2022-01-28
 description: How to install Chrome Extensions via preferences JSON or Windows registry.
 ---
 
-All Chrome extensions distributed to Windows and Mac users must be hosted in the [Chrome Web
-Store][hosting]. Usually, users install extensions directly from the Chrome Web Store, but
-sometimes you might want an extension to be installed via other means. Here are two typical cases:
+Typically Chrome users install extensions by visiting an extension's listing in the Chrome Web Store
+and installing the extension directly from that page. In some cases, though, other installation
+flows may be more appropriate.
 
 - An extension is associated with some other software, and the extension should be installed
   whenever the user installs that other software.
