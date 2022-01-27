@@ -336,7 +336,7 @@ Most notably, with the Attribution Reporting API proposed by Chrome:
 <figure>
   {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/bdnt0qHKdPJJYzxU03Xm.png",
   alt="event-level report", width="800", height="521" %}
-  <figcaption>Event-level reports are generated as follows:<br>the browser matches clicks or views ("attribution source events") with conversion data ("attribution trigger data") defined by an adtech. Later, the browser sends the resulting reports to a predefined endpoint, with some delay and noise.</figcaption>
+  <figcaption style="text-align:left;">Event-level reports are generated as follows:<br>the browser matches clicks or views ("attribution source events") with conversion data ("attribution trigger data") defined by an adtech. Later, the browser sends the resulting reports to a predefined endpoint, with some delay and noise.</figcaption>
 </figure>
 
 For details on how this works, read [Event-level reports in the Attribution Reporting
@@ -346,7 +346,7 @@ API](/docs/privacy-sandbox/attribution-reporting-event-introduction/).
 
 <figure>
 {% Img src="image/O2RNUyVSLubjvENAT3e7JSdqSOx1/un70ZcJVrWepdWWsnMIY.png", alt="ALT_TEXT_HERE", width="800", height="1024" %}
-  <figcaption>Summary reports are generated as follows:<br> 
+  <figcaption style="text-align:left;">Summary reports are generated as follows:<br> 
 When the user clicks or sees a specially configured ad, the browser—on the user's local device—records this event, alongside the attribution configuration data that was specified.<br> 
 Later on, when the user converts, the browser matches this detailed clicks or views event ("attribution source event") with detailed conversion data ("attribution trigger data") defined by an adtech company, following a specific logic that is defined by the adtech.<br> 
 The output of this process is an aggregatable report. Aggregatable reports are then encrypted by the browser and sent to the adtech server. From the adtech server, the aggregatable reports are sent to a service that aggregates them to produce a summary report.<br> Summary reports are then made available to the adtech.
