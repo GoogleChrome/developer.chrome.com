@@ -10,8 +10,25 @@ description: >
 
 ## Overview
 
-- MV3 only supports firebase password based auth.
-- This tutorial demonstrates how to create an account and setup payments in your Webapp and allow users to log in to their account in the extension's popup page.
+There are many ways to manage users and monetize your Chrome extension. This tutorial will use
+Firebase to manage users and Stripe to process payments.  
+
+In Manifest version 3, the background page is a service worker, therefor it's cannot perform
+Firebase's [popup operations][firebase-auth-chrome-extension] to support federated identity providers. However, you can allow users to
+authenticate with Firebase using their [email address and password][firebase-email-password].
+
+By the end of this tutorial, your users will be able to do the following:
+
+- Create an account and process payments in
+your web app. 
+- Sign in using their email and password in the Chrome Extension popup.
+- Sign out of their account.
+
+This guide does not describe how to do the following:
+
+- Process payments directly in the extension popup.
+- Authenticate in the background service worker.
+- Advanced Stripe usage.
 
 ## Prerequisites
 
@@ -32,7 +49,8 @@ To receive payments and manage user accounts, you need to set up a Stripe accoun
 
 {% Aside %}
 
-For additional guidance in customizing and activating your Stripe account, see [Getting started with Stripe][stripe-get-started].
+For additional guidance in customizing and activating your Stripe account, see [Getting started with
+Stripe][stripe-get-started].
 
 {% endAside %}
 
@@ -49,13 +67,13 @@ In the [Firebase console][firebase-console], click **Add project**, and name you
 
 **Choose your authentication provider.**
 
-1. Click **Authentication** in the left panel.
+1. Go to **Authentication** in the left panel.
 1. Click the **Sign-in method** tab.
 1. Enable **Email/Password** sign-in providers.
 <!-- Screenshot? -->
 **Create a Firestore Database.**
 
-1. Click **Firestore Database** in the left panel.
+1. Go to **Firestore Database** in the left panel.
 1. Click **Create database**.
 1. Select **Start in production mode**.
 1. Set the **Cloud Firestore location** > **Done**.
@@ -73,8 +91,10 @@ In the [Firebase console][firebase-console], click **Add project**, and name you
 
 ## Create your web app
 
-To customize and deploy your own version of the [open-source
-cloud-functions-stripe-sample.web.app][firebase-stripe-web-app], follow these steps.
+You can use a few different Firebase features and Stripe to process payments without
+building your own server infrastructure. This example also uses [FirebaseUI][firebase-ui].
+To customize and deploy your own version of the
+[open-source cloud-functions-stripe-sample.web.app][firebase-stripe-web-app], follow these steps.
 
 {% Aside %}
 
@@ -85,10 +105,7 @@ documentation for assistance.
 
 {% endAside %}
 
-{% Details %}
-{% DetailsSummary %}
 ### Set up your project
-{% endDetailsSummary %}
 
 First, you need to download the [source code][firebase-stripe-github-webapp] from Github. To
 use Firebase CLI and configure your project, run the following commands in the terminal:
@@ -101,51 +118,34 @@ use Firebase CLI and configure your project, run the following commands in the t
     - Choose your project
 5. To install local dependencies run: `cd functions; npm install; cd -`
 
-{% endDetails %}
-
-{% Details %}
-{% DetailsSummary %}
-
 ### Add your Stripe test API keys
-
-{% endDetailsSummary %}
 
 Get your [Stripe test API keys][stripe-api-keys]. Open `/public/javascript/app.js` and paste the Publishable key
 in the following line:
 
-`const
-STRIPE_PUBLISHABLE_KEY=<YOUR STRIPE PUBLISHABLE KEY>;`.
+`const STRIPE_PUBLISHABLE_KEY=<YOUR STRIPE PUBLISHABLE KEY>;`
 
 To add your secret key to the cloud function, run the following command: 
 
-`firebase functions:config:set stripe.secret=<*YOUR_STRIPE_SECRET_KEY*>`.
-
-{% endDetails %}
+`$ firebase functions:config:set stripe.secret=<*YOUR_STRIPE_SECRET_KEY*>`
 
 ### Remove Google sign-in
 
-Federated auth providers are not compatible with MV3 extensions. To remove Google auth from this example, delete the following line in `public/javascript/app.js`:
+Federated identity providers are not compatible with MV3 extensions. Remove Google sign-in by
+deleting the following line in `public/javascript/app.js`:
 
 - `firebase.auth.GoogleAuthProvider.PROVIDER_ID,`
 
-{% Details %}
-{% DetailsSummary %}
 ### Deploy your project 
-{% endDetailsSummary %}
 
-To deploy your project, run the following command `firebase deploy`. This command performs the following tasks:
+To deploy your project, run the following command `$ firebase deploy`. This command performs the following tasks:
 
 - Sends all the files in the public directory to Hosting so that your website is available.
 - Sends the code in the functions directory to Cloud Functions for Firebase.
 - Sets security rules (`firestore.rules`) on your Firestore database. These
 rules only allow users to read and write their own payments and payment methods.
 
-{% endDetails %}
-
-{% Details %}
-{% DetailsSummary %}
 ### Test the sample app
-{% endDetailsSummary %}
 
 Go to your payments app's URL at _your-firebase-project-id.web.app_ and verify that the following features work: 
 
@@ -162,8 +162,6 @@ To view processed payments, follow these steps:
 * Go to Firestore **Database** > **Data**.
 * Click on `stripe_customers`.
 * Check the list of users and their transactions.
-
-{% endDetails %}
 
 Now that you have created and configured your web app, you are ready to build your extension.
 
@@ -186,7 +184,7 @@ Create a file called `manifest.json` and include the following code:
   "name": "Stripe Firebase Extension",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "Example of how to support Stripe payment and Firebase accounts",
+  "description": "Stripe Firebase Chrome Extension example",
   "action": {
     "default_popup": "popup.html"
   },
@@ -284,9 +282,10 @@ Replace the placeholders with the value of each key from your Firebase applicati
 
 <!-- Screenshot -->
 
-## Display auth status
+## Display the sign-in state
 
-Add the following code to `popup.js` to update the popup when the user signs in. The observer [`onAuthStateChanged`][firebase-onauthstatechanged] triggers whenever the user’s sign-in state changes.
+Add the following code to `popup.js` to update the user's sign-in state. The observer
+[`onAuthStateChanged`][firebase-onauthstatechanged] will trigger whenever this state changes.
 
 ``` js
 // popup.js
@@ -306,7 +305,8 @@ Add the following code to `popup.js` to update the popup when the user signs in.
 
 ## Sign in with email and password
 
-Now that the user has created an account in your web app, you can sign them in by passing the user's email address and password to [`signInWithEmailAndPassword`][firebase-auth-email-password]].
+To sign the user in, pass the user's email address and password to
+[`signInWithEmailAndPassword`][firebase-auth-email-password] in the `popup.js` file.
 
 ```js
 //popup.js
@@ -324,7 +324,7 @@ signIn.addEventListener("click", () => {
 
 ## Sign user out
 
-Use [`signOut`][firebase-auth-signout] to sign the user out. Add the following code:
+Use [`signOut`][firebase-auth-signout] to sign the user out in the `popup.js` file:
 
 ```js
 //popup.js
@@ -338,16 +338,19 @@ signout.addEventListener("click", async () => {
 
 ## Try signing in
 
-Load your extension locally and click on the browser icon to open `popup.html`. Click on the
-**Create an account** link to take you to the web app. Try signing in with your email and password.
+Now you can test your extension. Load your extension locally and click on the browser icon to open
+`popup.html`. Click on the **Create an account** link to take you to the web app. Then, try signing
+in with your email and password. After you sign-in, you should see your email displayed. Click the
+**Sign out** button to log out.
 
 ## Accept live payments
 
-Once you’re ready to go live, you'll need to exchange your test keys for your live keys. See the [Stripe docs][stripe-api-keys] to learn more about these keys.
+Once you’re ready to go live, you'll need to exchange your test keys for your live keys. See the
+[Stripe docs][stripe-api-keys] to learn more about these keys.
 
 1. Update your Stripe secret config:
 `firebase functions:config:set stripe.secret=<YOUR STRIPE LIVE SECRET KEY>`
-1. Set your [live publishable key][link] in `/public/javascript/app.js`.
+1. Set your [live publishable key][stripe-api-keys] in `/public/javascript/app.js`.
 1. Redeploy both Cloud Functions and Hosting for the changes to take effect: `firebase deploy`.
 
 ## Additional resources
@@ -357,10 +360,13 @@ Once you’re ready to go live, you'll need to exchange your test keys for your 
 [esm-firebase-firestore]: https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js
 [externally-connectable]: /docs/extensions/mv3/manifest/externally_connectable/
 [firebase-cli]: https://github.com/firebase/firebase-tools#node-package
+[firebase-auth-chrome-extension]: https://firebase.google.com/docs/auth/web/google-signin#authenticate_with_firebase_in_a_chrome_extension
 [firebase-auth-signout]: https://firebase.google.com/docs/reference/js/auth#signout
 [firebase-onauthstatechanged]: https://firebase.google.com/docs/reference/js/v8/firebase.auth.Auth#onauthstatechanged
 [firebase-auth-email-password]: https://firebase.google.com/docs/reference/js/v8/firebase.auth.Auth#signinwithemailandpassword
+[firebase-email-password]: https://firebase.google.com/docs/auth/web/password-auth
 [firebase-console]: https://console.firebase.google.com/
+[firebase-ui]: https://firebase.google.com/docs/auth/web/firebaseui
 [firebase-stripe-github-webapp]: https://github.com/firebase/functions-samples/tree/main/stripe
 [identity-api]: /docs/extensions/reference/identity/
 [storage-api]: /docs/extensions/reference/storage/
