@@ -187,3 +187,7 @@ redirect.<br><br>
 </tr>
 </tbody>
 </table>
+
+## Attribution Reporting: all resources
+
+See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).
