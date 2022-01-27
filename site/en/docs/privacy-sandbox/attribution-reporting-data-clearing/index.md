@@ -209,4 +209,4 @@ they were scheduled to be sent soon.
 
 ## Attribution Reporting: all resources
 
-See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction/#use-cases-and-features).
+See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).

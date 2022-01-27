@@ -5,12 +5,18 @@ subhead: >
   Learn how to use the Attribution Reporting API for click-through measurement with event-level reports.
 date: 2021-11-19
 updated: 2021-11-19
-hero: 'image/O2RNUyVSLubjvENAT3e7JSdqSOx1/KG5TmtHkzxFuMDodX6mO.jpeg'
+hero: 'image/O2RNUyVSLubjvENAT3e7JSdqSOx1/D0A8xGWbNKdk1qV0CWcL.jpg'
 alt: >
   Ruler on blue background
 authors:
   - maudn
 ---
+
+{% Aside 'warning' %}
+The Attribution Reporting proposal is changing. The information contained in this post is obsolete, and will be updated.
+
+**Read all the details in [What's changing in January 2022?](/docs/privacy-sandbox/attribution-reporting-changes-january-2022/)**
+{% endAside %}
 
 ## Who is this blogpost for?
 
@@ -31,6 +37,10 @@ Head over to [Event-level reports in the Attribution Reporting API](/docs/privac
 If you only want the essentials, do check out the [API behavior and parameters](/docs/privacy-sandbox/attribution-reporting-event-introduction/#api-behavior-and-parameters) and [Glossary](/docs/privacy-sandbox/attribution-reporting-event-introduction/#glossary) sections from that article.
 
 ## Changelog
+
+### January 2022
+
+A caution note has been added on top of this post.
 
 ### November 2021
 
@@ -944,3 +954,7 @@ If you're looking for ways to troubleshoot and debug at scale, your input is nee
 [Join ongoing discussions](https://github.com/WICG/conversion-measurement-api/labels/debugging-monitoring)
 and share what could be done to make debugging at scale easier for you.
 {% endAside %}
+
+## Attribution Reporting: all resources
+
+See [Attribution Reporting](/docs/privacy-sandbox/attribution-reporting-introduction).

@@ -36,10 +36,6 @@
         - url: /docs/privacy-sandbox/attribution-reporting
           title: i18n.docs.privacy-sandbox.attribution-reporting-overview
           description: i18n.docs.privacy-sandbox.attribution-reporting_description
-        - url: /docs/privacy-sandbox/attribution-reporting-event-introduction/
-          title: i18n.docs.privacy-sandbox.attribution-reporting-events
-        - url: /docs/privacy-sandbox/attribution-reporting-event-guide
-          title: i18n.docs.privacy-sandbox.attribution-reporting-events-api
 - title: i18n.docs.privacy-sandbox.fight-spam
   sections:
     - url: /docs/privacy-sandbox/trust-tokens
