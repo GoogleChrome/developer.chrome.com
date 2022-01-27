@@ -134,7 +134,7 @@ enable the API.
 Plans for the first FLEDGE [origin trial](/blog/origin-trials/) are
 under discussion.
 
-[Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/First_FLEDGE_OT_Details.md)
+[Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
 provides more details about the goals of the trial and what features are proposed for support.
 
 {% endAside %}

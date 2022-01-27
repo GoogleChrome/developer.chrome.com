@@ -76,7 +76,7 @@ available at [fledge-demo.glitch.me](https://fledge-demo.glitch.me/).
 Plans for the first FLEDGE [origin trial](/blog/origin-trials/) are
 under discussion.
 
-[Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/First_FLEDGE_OT_Details.md)
+[Proposed First FLEDGE Origin Trial Details](https://github.com/WICG/turtledove/blob/main/Proposed_First_FLEDGE_OT_Details.md)
 provides more details about the goals of the trial and what features are proposed for support.
 
 {% endAside %}
@@ -222,7 +222,7 @@ across a range of publisher sites. Publishers put their [ad inventory](/docs/pri
 through marketplaces called ad exchanges, and DSPs decide programmatically which available ad 
 impression makes most sense for an advertiser to buy.
 
-A _Supply-side platform_ (SSP) is an adtech service used to automate selling ad inventory. SSPs
+A _supply-side platform_ (SSP) is an adtech service used to automate selling ad inventory. SSPs
 allow publishers to offer their inventory (empty rectangles where ads will go) to multiple ad 
 exchanges, DSPs, and networks. This enables a wide range of potential buyers to bid for ad space. 
 {% endAside %}
