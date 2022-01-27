@@ -93,8 +93,8 @@ access the context and variables of the others.
 
 ## Inject scripts {: #functionality }
 
-Content scripts can be [declared statically][14], [declared dynamically][32], or [programmatically
-injected][13].
+Content scripts can be [declared statically][header-cs-static], [declared
+dynamically][header-cs-dynamic], or [programmatically injected][header-cs-injection].
 
 ### Inject with static declarations {: #static-declarative }
 
@@ -149,7 +149,8 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
       </td>
       <td><em>Optional.</em> The list of JavaScript files to be injected into matching pages. Files
         are injected in the order they appear in this array. Each string in this list must contain
-        the either an absolute or relative path from the extension's root directory.</td>
+        a relative path to a resource in the extension's root directory. Leading slashes (`/`) are
+        automatically trimmed.</td>
     </tr>
     <tr id="run_at">
       <td><code>run_at</code></td>
@@ -184,15 +185,14 @@ They can include JavaScript files, CSS files, or both. All auto-run content scri
 Dynamic content scripts are useful for situations when the match patterns for a content scripts are
 not well known or when content scripts should not always be injected on known hosts.
 
-Introduced in Chrome 96, dynamic declarations are similar to [static declarations][14], but the
-content script object is registered with Chrome using methods on the Scripting API rather than in
-[manifest.json][doc-manifest]. In addition to [registering][api-register-cs] content scripts, the
-Scripting API also allows extension developers to [get a list of][api-get-registered-cs],
-[update][api-update-cs], and [remove][api-remove-cs] content script registrations.
+Introduced in Chrome 96, dynamic declarations are similar to [static
+declarations][header-cs-static], but the content script object is registered with Chrome using
+methods on the Scripting API rather than in [manifest.json][doc-manifest]. In addition to
+[registering][api-register-cs] content scripts, the Scripting API also allows extension developers
+to [get a list of][api-get-registered-cs], [update][api-update-cs], and [remove][api-remove-cs]
+content script registrations.
 
 Like static declarations, dynamic declarations can include JavaScript files, CSS files, or both.
-Unlike static declarations, dynamic content scripts cannot be [injected into related
-frames][header-related-frames].
 
 ```js
 chrome.scripting
@@ -741,8 +741,6 @@ window.setTimeout(() => animate(elmt_id), 200);
 [10]: /docs/extensions/reference/runtime#event-onConnect
 [11]: /docs/extensions/reference/runtime#event-onMessage
 [12]: /docs/extensions/reference/runtime#method-sendMessage
-[13]: #programmatic
-[14]: #static-declarative
 [15]: /activeTab
 [16]: /tabs#manifest
 [18]: /docs/extensions/mv3/match_patterns
@@ -759,7 +757,6 @@ window.setTimeout(() => animate(elmt_id), 200);
 [29]: https://en.wikipedia.org/wiki/Cross-site_scripting
 [30]: https://en.wikipedia.org/wiki/Man-in-the-middle_attack
 [31]: #functionality
-[32]: #dynamic-declarative
 [33]: /docs/extensions/reference/permissions
 
 [api-get-registered-cs]: /docs/extensions/reference/scripting/#method-getRegisteredContentScripts
@@ -769,5 +766,8 @@ window.setTimeout(() => animate(elmt_id), 200);
 [api-unregister-cs]: /docs/extensions/reference/scripting/#method-unregisterContentScripts
 [api-update-cs]: /docs/extensions/reference/scripting/#method-updateContentScripts
 [doc-manifest]: /docs/extensions/mv3/manifest
+[header-cs-dynamic]: #dynamic-declarative
+[header-cs-injection]: #programmatic
+[header-cs-static]: #static-declarative
 [header-related-frames]: #injecting-in-related-frames
 [ref-error]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError
