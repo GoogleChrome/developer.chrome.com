@@ -977,15 +977,18 @@ FLEDGE does not yet prevent a website's ad network from learning which ads a per
 {% endDetailsSummary %}
 
 Users can adjust their participation for Privacy Sandbox trials in Chrome by enabling or disabling
-the top-level setting in chrome://settings/privacySandbox. During initial testing, people will be
-able to use this high-level Privacy Sandbox setting to opt out of FLEDGE.
+the top-level setting in chrome://settings/privacySandbox.  During initial testing, people will be
+able to use this high-level Privacy Sandbox setting to opt out of FLEDGE. Chrome plans to allow
+users to see and manage the list of interest groups that they have been added to across the web
+sites they have visited.  As with the Privacy Sandbox technologies themselves, user settings may
+evolve with feedback from users, regulators and others.
 
 We'll continue to update the available settings in Chrome as the FLEDGE proposal progresses, [based
 on tests and feedback](/docs/privacy-sandbox/cds21-update/#collaborate).
 In the future, we plan to offer more granular settings to manage FLEDGE and associated data.
 
-API callers can' Adt access group membership when users browse in Incognito mode, and membership is
-removed when users clear their browsing history.
+API callers can't access group membership when users browse in Incognito mode, and membership is
+removed when users clear their site data.
 
 {% endDetails %}
 
