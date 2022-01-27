@@ -257,7 +257,7 @@ For example: it must not be possible for `malicious.example` to call
 **Same origin**: By default, permission is implicitly granted for `joinAdInterestGroup()` calls from 
 the same origin as the site being visited, i.e. from the same origin as the top-level frame of the 
 current page. Sites can use a FLEDGE [permissions policy header](https://developer.mozilla.org/docs/Web/HTTP/Headers/Feature-Policy)
-to disable `joinAdInterestGroup()` calls.
+ `join-ad-interest-group` directive to disable `joinAdInterestGroup()` calls.
 
 **Cross origin**: Calling `joinAdInterestGroup()` from origins that are different from the current 
 page can only succeed if the site being visited has set a permissions policy that allows calls to 
