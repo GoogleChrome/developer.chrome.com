@@ -148,7 +148,7 @@ the top-level setting in chrome://settings/privacySandbox. During initial testin
 able to use this high-level Privacy Sandbox setting to opt out of FLEDGE.
 
 We'll continue to update the available settings in Chrome as the FLEDGE proposal progresses, [based
-on tests and feedback](https://developer.chrome.com/docs/privacy-sandbox/cds21-update/#collaborate).
+on tests and feedback](/docs/privacy-sandbox/cds21-update/#collaborate).
 In the future, we plan to offer more granular settings to manage FLEDGE and associated data.
 
 API callers can't access group membership when users browse in Incognito mode, and membership is
