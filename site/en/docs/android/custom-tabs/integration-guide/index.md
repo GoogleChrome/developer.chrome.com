@@ -38,7 +38,7 @@ A [`CustomTabsIntent.Builder`][4] can be used to configure a Custom Tab. Once re
 Url with [`CustomTabsIntent.launchUrl`][7].
 
 ```java
-String url = ¨https://paul.kinlan.me/¨;
+String url = "https://google.com/";
 CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
 CustomTabsIntent customTabsIntent = builder.build();
 customTabsIntent.launchUrl(this, Uri.parse(url));
