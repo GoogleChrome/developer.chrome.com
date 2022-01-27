@@ -8,11 +8,18 @@ description: How to install Chrome Extensions via preferences JSON or Windows re
 
 Typically Chrome users install extensions by visiting an extension's listing in the Chrome Web Store
 and installing the extension directly from that page. In some cases, though, other installation
-flows may be more appropriate.
+flows may be more appropriate. For example:
 
 - An extension is associated with some other software, and the extension should be installed
   whenever the user installs that other software.
 - A network admin wants to install the same extensions throughout their organization.
+
+{% Aside %}
+
+Administrators can also use enterprise policies to manage extension installation. To learn more, see
+[Extension Enterprise policies](https://support.google.com/chrome/a/answer/7666985).
+
+{% endAside %}
 
 For the previous cases, Google Chrome supports the following extension installation methods:
 
@@ -20,11 +27,15 @@ For the previous cases, Google Chrome supports the following extension installat
 - Using the [Windows registry][section-registry] (for Windows only)
 
 Both ways support installing an extension hosted at an `update_URL`. On Windows and macOS, the
-`update_URL` must point to the Chrome Web Store. However, on Linux, the `update_URL` can also
-point to an XML file [hosted on a personal server][linux-hosting].
+`update_URL` must point to the Chrome Web Store. When an extension is installed via these methods,
+Windows and macOS users will have to enable the extension using the following confirmation dialog:
 
-The preferences JSON file also supports installing an extension from a CRX extension file on the
-user's Linux computer.
+{% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/JccWJKfl22SMXSE712oz.png", 
+alt="External extension warning", width="441", height="146" %}
+
+On Linux, the preferences file can point to a Chrome Web Store extension, an [externally hosted
+extension][linux-hosting] or a CRX extension file on the user's computer. Linux users will not be
+prompted to enable the extension; it is installed automatically. 
 
 {% Aside 'warning' %}
 
@@ -76,8 +87,8 @@ information:
 
 - The **extension ID**— This can be found in the extension management page `chrome://extensions`.
 
-- The **update_url XML file path**— This has to match the file path declared in the
-  [`update_url`][xml-update-url] field manifest JSON file.
+- The **update_url XML file path**— This has to match the file path of the
+  [`update_url`][xml-update-url] field declared in the manifest JSON file.
 
 The following examples assume the version is 1.0 and the extension ID is aaabbbcccdddeeefff.
 
