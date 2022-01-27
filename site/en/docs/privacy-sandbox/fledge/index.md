@@ -139,17 +139,20 @@ provides more details about the goals of the trial and what features are propose
 
 {% endAside %}
 
-
 {: #user-controls}
 
-## How will browsers enable user transparency and controls?
+## What browser configuration is available?
 
-Users should be able to understand the purpose of the FLEDGE API, know when the API is in use, and
-be provided with controls to enable or disable it.
+Users can adjust their participation for Privacy Sandbox trials in Chrome by enabling or disabling
+the top-level setting in chrome://settings/privacySandbox. During initial testing, people will be
+able to use this high-level Privacy Sandbox setting to opt out of FLEDGE.
 
-Group membership is not accessible to API callers in Incognito mode, and is removed when browsing
-data is cleared. Chrome also plans to provide information and settings for the FLEDGE API at
-chrome://settings/privacySandbox.
+We'll continue to update the available settings in Chrome as the FLEDGE proposal progresses, [based
+on tests and feedback](https://developer.chrome.com/docs/privacy-sandbox/cds21-update/#collaborate).
+In the future, we plan to offer more granular settings to manage FLEDGE and associated data.
+
+API callers can't access group membership when users browse in Incognito mode, and membership is
+removed when users clear their browsing history.
 
 
 {: #why}

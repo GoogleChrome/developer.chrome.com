@@ -967,30 +967,33 @@ FLEDGE does not yet prevent a website's ad network from learning which ads a per
 
 {% endDetails %}
 
-{: #engage}
-
-
-
 
 {% Details %}
 
 {: #user-controls}
 
 {% DetailsSummary %}
-### How will browsers enable user transparency and controls?
+### What browser configuration is available?
 {% endDetailsSummary %}
 
-Users should be able to understand the purpose of the FLEDGE API, know when the API is in use, and
-be provided with controls to enable or disable it.
+Users can adjust their participation for Privacy Sandbox trials in Chrome by enabling or disabling
+the top-level setting in chrome://settings/privacySandbox. During initial testing, people will be
+able to use this high-level Privacy Sandbox setting to opt out of FLEDGE.
 
-Group membership is not accessible to API callers in Incognito mode, and is removed when browsing
-data is cleared. Chrome also plans to provide information and settings for the FLEDGE API at
-chrome://settings/privacySandbox.
+We'll continue to update the available settings in Chrome as the FLEDGE proposal progresses, [based
+on tests and feedback](https://developer.chrome.com/docs/privacy-sandbox/cds21-update/#collaborate).
+In the future, we plan to offer more granular settings to manage FLEDGE and associated data.
+
+API callers can' Adt access group membership when users browse in Incognito mode, and membership is
+removed when users clear their browsing history.
 
 {% endDetails %}
 
 
 <br><br>
+
+{: #engage}
+
 
 ## Engage and share feedback 
 
