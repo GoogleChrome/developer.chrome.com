@@ -1,11 +1,11 @@
 ---
-title: "It's Always Been You, Canvas2D"
+title: "It's always been you, Canvas2D"
 description: >
   The API-next-door gets a makeover.
 layout: 'layouts/blog-post.njk'
 authors:
   - aaronhk
-date: 2022-01-26
+date: 2022-01-28
 hero: 'image/kheDArv5csY6rvQUJDbWRscckLr1/Qr1BTg23IMo4QNsGJWg6.jpg'
 alt: >
   A collection of canvases in various shades of blue.
@@ -20,13 +20,13 @@ There are Canvas2Ds in cars, on fridges, [and in space](https://lithiosapps.com/
 Admittedly, the API is a bit behind the times when it comes to state-of-the-art 2D drawing. 
 Fortunately we've been hard at work implementing new features in Canvas2D to catch up to CSS, streamline ergonomics and improve performance. 
 
-## Part 1: Catching Up With CSS
+## Part 1: catching up with CSS
 
 CSS has a few drawing commands that are sorely missing from Canvas2D. With the new API we've added a handful of the most requested features:
 
-### Round Rect
+### Round rect
 
-Rounded rectangles: the cornerstone of the internet, of computing, nigh, of civilization! 
+Rounded rectangles: the cornerstone of the internet, of computing, nigh, of civilization.
 
 In all seriousness, rounded rectangles are extremely useful: as buttons, chat bubbles, thumbnails, speech bubbles, you name it. It's always been possible to make a rounded rectangle in Canvas2D, it's just been a bit messy:
 
@@ -56,7 +56,7 @@ top + height, radius);
   ctx.stroke();
 ```
 
-All this was necessary for a modest simple rounded rectangle:
+All this was necessary for a modest, simple rounded rectangle:
 
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/J9JnDFq28BhDGsMyw2zY.png", alt="A rounded rectangle.", width="300", height="150" %}
 
@@ -70,7 +70,7 @@ With the new API there's a `roundRect()` method.
 	ctx.roundRect(10, 10, 200, 100, 20);
 ```
 
-	`ctx.roundRect()` also can take in an array for the `borderRadius` argument of up to four numbers. These radii control the four corners of the rounded rectangle the same way [as for CSS](https://developer.mozilla.org/docs/Web/CSS/border-radius). For example:
+	`ctx.roundRect()` also takes in an array for the `borderRadius` argument of up to four numbers. These radii control the four corners of the rounded rectangle the same way [as for CSS](https://developer.mozilla.org/docs/Web/CSS/border-radius). For example:
 
 ```js
 	ctx.roundRect(10, 10, 200, 100, [15, 50, 30])
@@ -80,7 +80,7 @@ With the new API there's a `roundRect()` method.
 
 ### Conic Gradient
 
-You've seen linear gradients.
+You've seen linear gradients:
 
 ```js
   const gradient = ctx.createLinearGradient(0, 0, 200, 100);
@@ -93,7 +93,7 @@ You've seen linear gradients.
 
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/rkG4JDoOC42xn7szSZbL.png", alt="A linear gradient.", width="300", height="150" %}
 
-Radial gradients.
+Radial gradients:
 
 ```js
   const radialGradient = ctx.createRadialGradient(150, 75, 10, 150, 75, 70);
@@ -107,7 +107,7 @@ Radial gradients.
 
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/NF89ac1lvs6jb2kxTAja.png", alt="A radial gradient.", width="300", height="150" %}
 
-but how about a nice conic gradient?
+But how about a nice conic gradient?
 
 ```js
 const grad = ctx.createConicGradient(0, 100, 100);
@@ -124,7 +124,7 @@ ctx.fillRect(0, 0, 200, 200);
 
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/s05ut90JNhvLywJ9Sb9b.png", alt="A conic gradient.", width="451", height="329" %}
 
-### Text Modifiers
+### Text modifiers
 
 Canvas2Ds text rendering capabilities have been woefully behind. 
 Chrome is pleased to announce the addition of a whole whack of new attributes to Canvas2D text rendering:
@@ -140,9 +140,9 @@ Chrome is pleased to announce the addition of a whole whack of new attributes to
 
 These attributes all match their CSS counterparts with the same names.
 
-## Part 2: Ergonomic Tweaks
+## Part 2: ergonomic tweaks
 
-Some things with Canvas2D are possible, but needlessly complicated to implement. 
+Previously, some things with Canvas2D were possible, but needlessly complicated to implement. 
 Here are some quality-of-life improvements for javascript developers who want to use Canvas2D:
 
 ### context.reset()
@@ -155,7 +155,7 @@ draw90sPattern();
 
 {% Img src="image/kheDArv5csY6rvQUJDbWRscckLr1/KRHLGxmk98zv8mSEWdPI.png", alt="A retro pattern of triangles and squares.", width="500", height="500" %}
 
-Great! Now that I'm  done with that pattern, I want to clear the canvas and draw something else. 
+Great! Now that I'm done with that pattern, I want to clear the canvas and draw something else. 
 Wait, how do we clear a canvas again? Oh yeah! `ctx.clearRect()`, of course.
 
 ```js
@@ -245,22 +245,22 @@ But, what if you wanted to do the above but stay within JavaScript and not mess 
   ]);
 ```
 
-Easy as pie! Try it out with and play with the parameters [in the demo here](https://glitch.com/edit/#!/pretty-dent-titanoceratops).
+Easy as pie! Try it and play with the parameters [in the demo here](https://glitch.com/edit/#!/pretty-dent-titanoceratops).
 
-## Part 3: Performance Improvements
+## Part 3: performance improvements
 
 With the New Canvas2D API, we also wanted to improve performance where possible. We added a couple features to give developers finer-grained control of their websites and allow for the slickest possible framerates:
 
 ### Will Read Frequently
 
-getImageData() is how you read pixel data back from a canvas. It can be very slow. The new API gives you a way of explicitly marking a canvas for readback (for generative effects, for example). This allows you to optimize things under the hood and keep canvas fast for a larger variety of use cases. This feature has been around in Firefox for a while and we're finally making it part of the canvas spec.
+Use `getImageData()` to read pixel data back from a canvas. It can be very slow. The new API gives you a way of explicitly marking a canvas for reading back (for generative effects, for example). This allows you to optimize things under the hood and keep canvas fast for a larger variety of use cases. This feature has been in Firefox for a while and we're finally making it part of the canvas spec.
 
 ```js
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d', {‘willReadFrequently': true});
 ```
 
-### Context Loss
+### Context loss
 
 Let's make sad tabs happy again! In the event that a client runs out of GPU memory or some other disaster befalls your canvas, you can now receive a callback and redraw as needed:
 
