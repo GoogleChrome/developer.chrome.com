@@ -115,7 +115,7 @@ The following Manifest V2 example recieves a name from a content script and pers
 // background.js
 
 // Don't do this! The service worker will be created and destroyed over the lifetime of your
-// exension, and this variable will be reset.
+// extension, and this variable will be reset.
 let savedName = undefined;
 
 chrome.runtime.onMessage.addListener(({ type, name }) => {
