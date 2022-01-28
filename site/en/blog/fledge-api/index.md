@@ -6,7 +6,7 @@ authors:
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
 date: 2022-01-27
-updated: 2022-01-27
+updated: 2022-01-28
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: Photograph of a piping plover bird with a chick on a sandy beach in Middletown, New Jersey, United States.
 tags:
@@ -379,7 +379,7 @@ days. Successive calls overwrite previously stored values.
 
 \* All properties are optional except for `owner` and `name`. The `biddingLogicUrl` and `ads`
    properties are optional, but required to participate in an auction. There may be use cases for
-   creating a interest group without these properties: for example, an interest group owner might
+   creating an interest group without these properties: for example, an interest group owner might
    want to add a browser to an interest group for a campaign that isn't running yet, or for some
    other future use, or they may temporarily have run out of advertising budget.
 
