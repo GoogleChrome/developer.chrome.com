@@ -393,7 +393,7 @@ constraint, and the `ads` and `adComponents` URLs have no such constraint.
 
 `dailyUpdateUrl` specifies a web server that returns JSON defining interest group properties,
 corresponding to the interest group object passed to `navigator.joinAdInterestGroup()`. This
-provides provides a mechanism for the group's owner to periodically update the attributes of the
+provides a mechanism for the group's owner to periodically update the attributes of the
 interest group. In the [current implementation](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/interest_group/interest_group_storage.cc;l=650;drc=13a62b6d89315e5a90deb712b0c1e47c72100f6c),
 the following attributes can be changed:
 
