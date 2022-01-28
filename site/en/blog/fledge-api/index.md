@@ -122,7 +122,7 @@ Using `<iframe>` to render ads:
 
 ### What features are supported behind these feature flags in the latest version of Chrome?
 
-FLEDGE is being made available behind [behind feature flags](#try-fledge) in Chromium as a first 
+FLEDGE is being made available [behind feature flags](#try-fledge) in Chromium as a first 
 experiment to test the following features of the FLEDGE proposal:
 
 -  **Interest groups**: stored by the browser, with associated metadata to configure ad bidding
