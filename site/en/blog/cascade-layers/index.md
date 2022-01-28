@@ -175,7 +175,7 @@ Layers can also be nested within other layers. The following example comes from 
 
 In the above code snippet, you can access `framework.default`, using a `.` as a signifier of the `default` layer being nested within `framework`. You can also write this in a more shorthand format:
 
-```
+```css
 @layer.default {
   p { margin-block: 0.75em }
 }
