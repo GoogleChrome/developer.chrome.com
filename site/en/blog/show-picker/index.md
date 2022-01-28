@@ -5,7 +5,7 @@ description: >
   The web platform now ships with a canonical way to show a browser picker.
 authors:
   - beaufortfrancois
-date: 2022-01-14
+date: 2022-01-28
 hero: image/vvhSqZboQoZZN9wBvoXq72wzGAf1/zWT5kk3Q5RlDNqGkdgis.jpeg
 alt: A photo of a monthly schedule printed on white paper
 tags:
