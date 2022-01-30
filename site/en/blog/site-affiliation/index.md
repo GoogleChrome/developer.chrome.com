@@ -46,7 +46,7 @@ associated with Digital Asset Links.
 
 {% Aside %}
 There's a similar potential web platform feature called [First-Party
-Sets](https://github.com/privacycg/first-party-sets). However, while it allows
+Sets](/blog/first-party-sets-sameparty). However, while it allows
 for  embeds from cross-site to be treated as the same party when the top-level
 domain is owned by the same organization, there's no plan to have any effect on
 handling passwords. The Digital Asset Links is Google's technology that can be
@@ -178,12 +178,8 @@ at `/.well-known/assetlinks.json` on the respective domains.
     Allow: /.well-known/
     ```
 
-1.  Submit [a
-    form](https://docs.google.com/forms/d/1e4vVbcI7rqQls5HQ4F4bH_4bHcqfC8r0oEY5CxjSrag/viewform)
-    to request starting crawling `assetlinks.json` files on your affiliations.
-
 {% Aside %}
-It may take a while for Googlebot to fetch the resource and recognize the
+It may take a while for [Googlebot](https://developers.google.com/search/docs/advanced/crawling/googlebot) to fetch the resource and recognize the
 association.
 {% endAside %}
 
