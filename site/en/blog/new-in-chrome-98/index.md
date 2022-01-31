@@ -64,8 +64,8 @@ per-element basis by applying a specific style to that element.
 }
 ```
 
-Check out the section on [How to opt-out of Auto Dark Theme][dcc-autodark-optout]
-for complete details.
+Check out the [How to opt-out of Auto Dark Theme][dcc-autodark-optout] section
+in [Auto Dark Themes on Android][dcc-autodark] for complete details.
 
 ## COLRv1 font support {: #colrv1 }
 
