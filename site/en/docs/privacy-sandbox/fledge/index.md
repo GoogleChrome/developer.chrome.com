@@ -6,7 +6,7 @@ subhead: >
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. The API enables on-device auctions by the browser, to choose relevant ads from websites the user has previously visited.
 date: 2022-01-27
-updated: 2022-01-27
+updated: 2022-01-31
 authors:
   - samdutton
 ---
@@ -25,7 +25,7 @@ much technical detail.
 such as [advertiser](#advertiser) and [publisher](#publisher). [How does FLEDGE work?](#how) should
 still be useful.
 
-* If you're a **developer or software engineer**, [The FLEDGE API](/blog/fledge-api) provides more
+* If you're a **developer or software engineer**, the [FLEDGE API Developer Guide](/blog/fledge-api) provides more
 in-depth technical detail about the proposal.
 
 * [The FLEDGE demo](https://fledge-demo.glitch.me) provides a walkthrough of a basic FLEDGE
