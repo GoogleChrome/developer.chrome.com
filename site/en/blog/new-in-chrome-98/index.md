@@ -2,7 +2,7 @@
 title: New in Chrome 98
 description: >
   Chrome 98 is rolling out now! If you’ve signed up
-  for the Auto Dark Theme Origin Trial, there’s a new way to opt out at a per
+  for the Auto Dark Theme origin trial, there’s a new way to opt out at a per
   element level. There’s now support for COLRv1, an evolution of the COLRv0
   font format. And there’s plenty more.
 layout: 'layouts/blog-post.njk'
@@ -21,7 +21,7 @@ tags:
 
 Here's what you need to know:
 
-* If you’ve tried the Auto Dark Theme Origin Trial, there’s a new way to
+* If you’ve tried the Auto Dark Theme origin trial, there’s a new way to
   [opt out at a per element level](#autodark-opt-out).
 * There’s now support for [COLRv1](#colrv1), an evolution of the COLRv0 font
   format.
@@ -55,7 +55,7 @@ element.
 ```
 
 But the main advantage of this method, is that you can opt out on a
-per-element basis, by applying a specific style to that element.
+per-element basis by applying a specific style to that element.
 
 ```css
 .only-light,
@@ -77,7 +77,7 @@ A color font makes visual highlights, headlines, and banners really pop out.
 
 {% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/qTY5GIw3dMKnQARZZeGx.png", alt="Headline using COLRv1 fonts", width="800", height="661" %}
 
-One of my favorite use cases for COLRv1, means consistent emojis across all
+One of my favorite use cases for COLRv1 means consistent emojis across all
 platforms. You don't need to replace emojis with image files, because font
 files become smaller, and easier to include on your page.
 
@@ -99,7 +99,7 @@ There's a flag called [`#force-major-version-to-100`][cr-100-flag] that
 will change the current version number to 100, so you can make sure
 everything works as expected.
 
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4drS8JxKXgtzSAxyM6WF.png", alt="Chrome flags page highlighting new #force-major-version-to-100 option", width="800", height="533" %}
+{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/4drS8JxKXgtzSAxyM6WF.png", alt="Chrome flags page highlighting the new #force-major-version-to-100 option", width="800", height="533" %}
 
 ## And more! {: #more }
 
@@ -111,10 +111,10 @@ target server.
 
 There’s a new origin trial for [Region Capture][ot-region-capture], an API for
 cropping a self-capture video track. Ideal for screen sharing in video
-conferencing  apps so you don’t create a hall of mirror effect!
+conferencing apps so you don’t create a hall of mirror effect!
 
 Window overlay controls had been planned for Chrome 98, but due to issues found
-at the last minute and did not make it in. We are still working on it, and
+at the last minute, did not make it in. We are still working on it, and
 expect to see it land in the next few releases.
 
 ## Further reading
