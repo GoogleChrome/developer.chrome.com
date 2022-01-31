@@ -127,7 +127,7 @@ ctx.fillRect(0, 0, 200, 200);
 ### Text modifiers
 
 Canvas2Ds text rendering capabilities have been woefully behind. 
-Chrome is pleased to announce the addition of a whole whack of new attributes to Canvas2D text rendering:
+Chrome has added several new attributes to Canvas2D text rendering:
 
 - ctx.[letterSpacing](https://developer.mozilla.org/docs/Web/CSS/letter-spacing)
 - ctx.[wordSpacing](https://developer.mozilla.org/docs/Web/CSS/word-spacing)
