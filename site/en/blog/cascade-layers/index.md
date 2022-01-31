@@ -140,7 +140,7 @@ Now, the order in which you `@import` your styles won’t matter to the layer or
 </figure>
 
 {% Aside %}
-Importing styles in a CSS file like this chain as they load, so it's more performant to include everything in a `style` tag within your HTML. Stylesheets included via `link` are the most performant, but don't currently have the ability to load as layers. This is currently in discussion with the WHATWG.
+Importing styles in a CSS file like this chain as they load, so it's more performant to include everything in a `style` tag within your HTML. Stylesheets included via `link` are the most performant, but don't currently have the ability to load as layers. This is currently [in discussion](https://github.com/whatwg/html/issues/7540) with the WHATWG.
 {% endAside %}
 
 
