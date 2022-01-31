@@ -1,8 +1,7 @@
 ---
 title: New in Chrome 98
 description: >
-  Chrome 98 is rolling out now! Installed PWAs on Desktop can now customize
-  their title bar with the Windows Controls Overlay API. If you’ve signed up
+  Chrome 98 is rolling out now! If you’ve signed up
   for the Auto Dark Theme Origin Trial, there’s a new way to opt out at a per
   element level. There’s now support for COLRv1, an evolution of the COLRv0
   font format. And there’s plenty more.
@@ -22,8 +21,6 @@ tags:
 
 Here's what you need to know:
 
-* Installed PWAs on Desktop can now customize their title bar with the
-  [windows controls overlay API](#wco).
 * If you’ve tried the Auto Dark Theme Origin Trial, there’s a new way to
   [opt out at a per element level](#autodark-opt-out).
 * There’s now support for [COLRv1](#colrv1), an evolution of the COLRv0 font
@@ -34,6 +31,11 @@ I'm [Pete LePage](https://petelepage.com). Let's dive in and
 see what's new for developers in Chrome 98.
 
 ## Window control overlay {: #wco }
+
+{% Aside 'warning' %}
+This feature was delayed at the last minute and did **not** make it into
+the Chrome 98 release. We hope to land it within the next few months.
+{% endAside %}
 
 With the Windows Controls Overlays API, you can modify the title bar of an
 installed desktop Progressive Web App, and provide a more app-like feel by
