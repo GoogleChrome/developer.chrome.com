@@ -93,7 +93,7 @@ Podemos usar la nueva configuración de **Tiempo de espera** para arreglar esto.
 
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
 
-Opcionalmente, puede ajustar el **Tiempo de espera** en la **Configuración de reproducción** para todos los pasos. Expanda la **Configuración de reproducción** y edite el valor de **Tiempo de espera**.
+Opcionalmente, puede ajustar el **Tiempo de espera** en **Replay settings** para todos los pasos. Expanda la configuración de reproducción (**Replay settings**) y edite el valor de **Timeout**.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="Configuración de tiempo de espera para la grabación de flujo de usuario", width="800", height="530" %}
 
