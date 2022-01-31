@@ -15,6 +15,17 @@ authors:
 if something is missing!
 {% endAside %}
 
+## Ad campaign {: #ad-campaign }
+
+A specifically designed strategy that is carried out across different mediums
+to achieve desired results such as increased brand awareness, increased sales,
+and improved communication within a specific market. Campaign success is
+measured by _conversions_, or how many people completed the desired result of
+the ad campaign.
+
+For example, an advertiser may create a campaign to achieve views on a
+specific web page or purchases of a single product.
+
 ## Ad platform (Adtech) {: #adtech }
 
 A company that provides services to deliver ads.
@@ -22,6 +33,12 @@ A company that provides services to deliver ads.
 ## Advertiser {: #advertiser }
 
 A company that pays to advertise its products.
+
+## Aggregatable report {: #aggregatable-report}
+
+A combination of ad-side and conversion-side data which is encrypted by the
+browser on a user's device. Aggregatable reports are used by aggregation
+services to create a [summary report](#summary-report).
 
 ## Attribution {: #attribution }
 
@@ -107,6 +124,16 @@ Data can be combined to identify an individual, but it can be difficult to work
 out whether new data adds to entropy. For example, knowing a person is from
 Australia doesn't reduce entropy if you already know the person is from
 Kangaroo Island.
+
+## Event-level report {: #event-level-report }
+
+An Attribution Reporting API report type. Event-level reports give access to
+detailed display-side data at the level of an individual click event: creative
+type (the type of graphics or media for an ad), serving time, publisher site,
+and any other granular information needed by an adtech company at ad-serving
+time. Noise is added locally in the browser on the user's device.
+
+[Learn more about event-level reports](/docs/privacy-sandbox/attribution-reporting-event-introduction/)
 
 ## Federated identity (federated login) {: #federated-identity }
 
@@ -237,6 +264,15 @@ previously viewed toys on their site.
 ## Site
 
 See [Top-Level Domain](#tld) and [eTLD](#etld).
+
+## Summary report {: #summary-report }
+
+An Attribution Reporting API report type. A summary report includes aggregated
+user data and detailed conversion data, collected from aggregatable reports
+sent from individual browsers on user devices. Summary reports are sanitized
+to protect individual user data, before they're released to the requester.
+
+Summary reports were formerly known as aggregate reports.
 
 ## Surface
 
