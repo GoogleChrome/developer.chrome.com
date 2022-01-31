@@ -1,7 +1,7 @@
 ---
 title: "Cascade layers are coming to your browser"
 description: >
-  "TBD"
+  "Cascade layers are a new CSS API to help you manage the cascade precedence of you code, landing in all modern browsers soon."
 layout: 'layouts/blog-post.njk'
 date: 2022-02-02
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/r7l0nvP8T1HgWK2XMtks.jpg'
@@ -11,27 +11,27 @@ tags:
   - chrome-99
 ---
 
-Cascade layers (the [`@layer` CSS rule](https://www.w3.org/TR/css-cascade-5/)) are coming to Chromium 99, Firefox 97, and Safari 15.4 Beta. They enable more explicit control of your CSS files to prevent specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications.
+Cascade layers (the [`@layer` CSS rule](https://www.w3.org/TR/css-cascade-5/)) are coming to Chromium 99, Firefox 97, and Safari 15.4 Beta. They enable more explicit control of your CSS files to prevent style-specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications.
 
-> Layering your CSS in a clear way prevents unexpected style overrides and promotes better CSS architecture.
+Layering your CSS in a clear way prevents unexpected style overrides and promotes better CSS architecture.
 
-## CSS specificity
+## CSS specificity and the cascade
 
 [CSS specificity](https://web.dev/learn/css/specificity/) is how CSS decides which styles to apply to which elements. The different selectors you can use  determine the specificity of any style rule. For example, elements are less specific than classes or attributes, which are in turn less specific than IDs. This is an elemental part of learning CSS.
 
-Folks turn to CSS naming conventions like BEM to prevent overriding specificity unintentionally.By giving everything a single classname, everything is placed on the same specificity plane. However, it’s not always possible to maintain such organized styles, especially when working with third-party code and design systems.
+Folks turn to CSS naming conventions like BEM to prevent overriding specificity unintentionally. By giving everything a single classname, everything is placed on the same specificity plane. However, it’s not always possible to maintain such organized styles, especially when working with third-party code and design systems.
 
 <figure>
-    {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/8wr1G0l1SO3azgN9nJDb.svg", alt="ALT_TEXT_HERE", width="773", height="477" %}
+    {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/8wr1G0l1SO3azgN9nJDb.svg", alt="BEM visual of a card with classes", width="773", height="477" %}
     <figcaption>An illustrated example of BEM naming from <a href="https://keepinguptodate.com/pages/2020/05/bem-visually-explained/">keepinguptodate.com.</a>
     </figcaption>
 </figure>
 
-
-Cascade layers aim to solve this problem. They introduce a new *layer* to CSS [specificity](https://www.w3.org/TR/selectors-3/#specificity). With layered styles, the specificity of a *layer* always beats the specificity of a *selector*.
+Cascade layers aim to solve this problem. They introduce a new *layer* to the CSS [cascade](https://developer.mozilla.org/docs/Web/CSS/Cascade). With layered styles, the precedence of a *layer* always beats the specificity of a *selector*.
 
 For example, the selector `.post a.link` has higher specificity than `.card a`. If trying to style a link, inside a card, within a post you will find that the more specific selector will be applied.
- By using `@layer`, you can be more explicit about the specificity of each, and make sure that your card link’s styles override the post link’s styles, even though the specificity might numerically be lower if all your CSS was on the same plane.
+
+By using `@layer`, you can be more explicit about the style-specificity of each, and make sure that your card link’s styles override the post link’s styles, even though the specificity might numerically be lower if all your CSS was on the same plane. This is because of cascade precedence. Layered styles create new cascade "planes"
 
 <figure>
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/93JCD1oEt33cJdBAdC5g.jpeg", alt="Illustration from project demo of breaking out UI", width="800", height="1145" %}
@@ -39,13 +39,11 @@ For example, the selector `.post a.link` has higher specificity than `.card a`. 
 
 ## `@layer` in action
 
-
 <figure>
     {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/2SVzwClRCm4rvD82gOGo.png", alt="Demo showing link colors with imports", width="800", height="683" %}
     <figcaption>See <a href="https://codepen.io/web-dot-dev/pen/LYzqPEp">demo on Codepen.</a>
     </figcaption>
 </figure>
-
 
 This example showcases the power of cascade layers, using `@layer`. There are several links shown: some without any additional class names applied, one with a `.link` class, and one with a `.pink` class. The CSS then adds three layers: `base`, `typography`, and `utilities` as follows:
 
@@ -74,15 +72,15 @@ This example showcases the power of cascade layers, using `@layer`. There are se
 }
 ```
 
-Ultimately, all the links are either green or pink. This is because: while `.link` has a higher selector-level specificity than `a`, there is a color style on `a` in a higher-specificity `@layer`. `a { color: green }` overrides `.link { color: blue }` when the green rule is in a layer after the blue rule.
+Ultimately, all the links are either green or pink. This is because: while `.link` has a higher selector-level specificity than `a`, there is a color style on `a` in a higher-precedence `@layer`. `a { color: green }` overrides `.link { color: blue }` when the green rule is in a layer after the blue rule.
 
-> The layer specificity beats the element specificity.
+**Layer precedence beats the element specificity.**
 
 ## Organizing layers
 
 You can organize layers directly on the page, as shown above, or you can organize them at the top of a file. 
 
-> Layer order is established by the first time each layer name appears in your code.
+Layer order is established by the first time each layer name appears in your code.
 
 That means, if you add the following to the top of the file, the links would all appear red, and the link with class `.link` would appear blue:
 
@@ -93,7 +91,7 @@ That means, if you add the following to the top of the file, the links would all
 This is because the layer order is now reversed, putting utilities first and base last. Hence, the style rules in the `base` layer will always have a higher specificity than the style rules in the typography layer. They are no longer going to be green links, but instead red or blue.
 
 <figure>
-    {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/4alvS41URLx7kkqI8Etl.png", alt="ALT_TEXT_HERE", width="800", height="681" %}
+    {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/4alvS41URLx7kkqI8Etl.png", alt="Screenshot of Codepen Project", width="800", height="681" %}
     <figcaption>See <a href="https://codepen.io/web-dot-dev/pen/LYzqPEp">demo on Codepen.</a>
     </figcaption>
 </figure>
@@ -152,11 +150,22 @@ Let’s take a step back and see where layers are used as it relates to the wide
 
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/jH8ydtcwmHg4rHTfqvRU.png", alt="Cascade Illustration", width="800", height="393" %}
 
-**UA normal < Local User @layer < Local User normal < Author @layers < Author normal < Author !important < Author @layer !important < Local User !important < UA !important**
+The order of precedence is such:
 
-You may notice here that `@layer !important` styles are inverted. Instead of being less specific than non-layered (normal) styles, they become more specific. This is because of how `!important` works in the cascade: it breaks the normal cascading in your stylesheets and reverses the normal specificity values.
+- User Agent normal (lowest precedence)
+- Local User @layer
+- Local User normal
+- Author @layers
+- Author normal
+- Author !important
+- Author @layer !important
+- Local User !important
+- User Agent !important** (highest precedence)
+
+You may notice here that `@layer !important` styles are inverted. Instead of being less specific than non-layered (normal) styles, they have higher precedence. This is because of how `!important` works in the cascade: it breaks the normal cascading in your stylesheets and reverses the normal layer-level specificity (precedence).
 
 ### Nested layers
+
 Layers can also be nested within other layers. The following example comes from the [Cascade Layers explainer](https://css.oddbird.net/layers/explainer/) from Miriam Suzanne:
 
 ```css
@@ -224,7 +233,7 @@ While layered styles are less specific than unlayered styles in general, using `
 
 > Layers are less specific than unlayered styles *unless* they are `!important` styles within a layer.
 
-In that case, the `!important` styles invert their specificity. The diagram above shows this for reference: `Author @layers < Author normal < Author !important < Author @layer !important`.
+In that case, the `!important` styles invert their specificity. The diagram above shows this for reference: `Author @layers have less precedence than Author normal which have less precedence than Author !important which have less precedence than Author @layer !important`.
 
 If you have multiple layers, the first layer with `!important` would take the `!important` precedence for specificity.
 
