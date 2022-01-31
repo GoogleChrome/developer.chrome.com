@@ -17,7 +17,7 @@ tags:
   - chrome-98
 ---
 
-{% YouTube id='-QlPpT0Rk4A' %}
+{% YouTube id='TODO' %}
 
 Here's what you need to know:
 
@@ -29,65 +29,6 @@ Here's what you need to know:
 
 I'm [Pete LePage](https://petelepage.com). Let's dive in and
 see what's new for developers in Chrome 98.
-
-## Window control overlay {: #wco }
-
-{% Aside 'warning' %}
-This feature was delayed at the last minute and did **not** make it into
-the Chrome 98 release. We hope to land it within the next few months.
-{% endAside %}
-
-With the Windows Controls Overlays API, you can modify the title bar of an
-installed desktop Progressive Web App, and provide a more app-like feel by
-customizing the existing full-width title bar. This helps create a better
-user experience by giving users critical information or controls in an
-easy to access area.
-
-For example, music streaming services could show the track and provide some
-simple controls in the title bar. Or, to make it easy to find a topic or
-article, a site like Wikipedia could add a search box in the title bar.
-
-{% Img src="image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/bfV8VDQqFUqzC8l5wQcR.png", alt="Window control overlay to search site.", width="800", height="303" %}
-
-To use it, update the `display-override` property in your web app manifest
-and add `window-controls-overlay`.
-
-```json
-{
-  "display_override": ["window-controls-overlay"]
-}
-```
-
-Then provide the content of the title bar using HTML.
-
-```html
-<div class="search">
-  <img src="logo.svg" width="32" height="32" />
-  <label>
-    <input type="search" />
-    Search words in articles
-  </label>
-</div>
-```
-
-And use CSS to put it into the correct location. To ensure the title bar is
-still draggable, add the CSS `app-region` drag property to the element.
-
-```css
-.search {
-  position: fixed;
-  left: env(titlebar-area-x, 0);
-  top: env(titlebar-area-y, 0);
-  width: env(titlebar-area-width, 100%);
-  height: env(titlebar-area-height, 33px);
-  -webkit-app-region: drag;
-  app-region: drag;
-}
-```
-
-There’s a bit more to it than that, so check out
-[Customize the window controls overlay of your PWA's title bar][wd-wco] to get
-started.
 
 ## Opting out of auto-dark themes on Android {: #autodark-opt-out }
 
@@ -171,6 +112,10 @@ target server.
 There’s a new origin trial for [Region Capture][ot-region-capture], an API for
 cropping a self-capture video track. Ideal for screen sharing in video
 conferencing  apps so you don’t create a hall of mirror effect!
+
+Window overlay controls had been planned for Chrome 98, but due to issues found
+at the last minute and did not make it in. We are still working on it, and
+expect to see it land in the next few releases.
 
 ## Further reading
 
