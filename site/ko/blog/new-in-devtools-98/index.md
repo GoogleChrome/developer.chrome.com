@@ -159,7 +159,7 @@ Chromium issue: [1270562](https://crbug.com/1270562)
 
 
 <!-- ## Support `row-reverse` and `column-reverse` in the Flexbox editor {: #flexbox-editor } -->
-Flexbox 편집기에서의 `row-reverse` and `column-reverse` 지원 {: #flexbox-editor }
+## Flexbox 편집기에서의 `row-reverse` and `column-reverse` 지원 {: #flexbox-editor }
 
 <!-- The [Flexbox editor](/blog/new-in-devtools-90/#flexbox) added two new buttons to support `row-reverse` and `column-reverse` in `flex-direction`.  -->
 [Flexbox editor](/blog/new-in-devtools-90/#flexbox) 에 `flex-direction` 의 `row-reverse` 와 `column-reverse` 를 지원하기 위한 두 개의 버튼이 새롭게 추가되었습니다.
