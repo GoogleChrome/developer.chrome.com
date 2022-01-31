@@ -80,7 +80,7 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 
 <!-- You can now adjust the **Timeout** settings in the [Recorder](/docs/devtools/recorder/) for all steps or a specific step. This is useful especially for pages with slow network requests and lengthy animation. -->
 
-Ahora puede ajustar la configuración de **Tiempo de espera** (_timeout_) en la [Grabadora](/docs/devtools/recorder/) para todos los pasos o para un paso específico. Esto es útil especialmente para páginas con solicitudes de red lentas y animación prolongada.
+Ahora puede ajustar la configuración de **Tiempo de espera** (_timeout_) en el panel [Recorder](/docs/devtools/recorder/) para todos los pasos o para un paso específico. Esto es útil especialmente para páginas con solicitudes de red lentas y animación prolongada.
 
 <!-- For example, I [recorded a user flow](/docs/devtools/recorder/#record) on this [demo page](https://jec.fyi/demo/pup-slow-result) to load and click on the menu item. However, the loading of the menu items is slow (it takes 6 seconds). The [replay](/docs/devtools/recorder/#replay) of this user flow failed because it exceeds 5 seconds  (the default timeout). -->
 
