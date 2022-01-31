@@ -6,7 +6,7 @@ authors:
 description: >
   FLEDGE is a Privacy Sandbox proposal to serve remarketing and custom audience use cases, designed so it cannot be used by third parties to track user browsing behavior across sites. 
 date: 2022-01-27
-updated: 2022-01-27
+updated: 2022-01-28
 thumbnail: image/80mq7dk16vVEg8BBhsVe42n6zn82/UiyBX61nCLHExFoy0eEn.jpg
 alt: Photograph of a piping plover bird with a chick on a sandy beach in Middletown, New Jersey, United States.
 tags:
@@ -122,7 +122,7 @@ Using `<iframe>` to render ads:
 
 ### What features are supported behind these feature flags in the latest version of Chrome?
 
-FLEDGE is being made available behind [behind feature flags](#try-fledge) in Chromium as a first 
+FLEDGE is being made available [behind feature flags](#try-fledge) in Chromium as a first 
 experiment to test the following features of the FLEDGE proposal:
 
 -  **Interest groups**: stored by the browser, with associated metadata to configure ad bidding
@@ -379,7 +379,7 @@ days. Successive calls overwrite previously stored values.
 
 \* All properties are optional except for `owner` and `name`. The `biddingLogicUrl` and `ads`
    properties are optional, but required to participate in an auction. There may be use cases for
-   creating a interest group without these properties: for example, an interest group owner might
+   creating an interest group without these properties: for example, an interest group owner might
    want to add a browser to an interest group for a campaign that isn't running yet, or for some
    other future use, or they may temporarily have run out of advertising budget.
 
@@ -393,7 +393,7 @@ constraint, and the `ads` and `adComponents` URLs have no such constraint.
 
 `dailyUpdateUrl` specifies a web server that returns JSON defining interest group properties,
 corresponding to the interest group object passed to `navigator.joinAdInterestGroup()`. This
-provides provides a mechanism for the group's owner to periodically update the attributes of the
+provides a mechanism for the group's owner to periodically update the attributes of the
 interest group. In the [current implementation](https://source.chromium.org/chromium/chromium/src/+/main:content/browser/interest_group/interest_group_storage.cc;l=650;drc=13a62b6d89315e5a90deb712b0c1e47c72100f6c),
 the following attributes can be changed:
 
