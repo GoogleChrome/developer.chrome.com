@@ -9,7 +9,7 @@ layout: 'layouts/blog-post.njk'
 date: 2022-02-01
 authors:
   - petelepage
-hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/wyAp9LdqGcmrwhShT0Yv.png'
+hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/Eme4o8bSchfthB5p9g2R.png'
 alt: >
   New in Chrome hero logo
 tags:
