@@ -143,10 +143,10 @@ User agent가 웹페이지에서 사용자가 선택한 제한된 색 팔레트�
 Chromium issue: [1130859](https://crbug.com/1130859)
 
 <!-- ## Show rulers on hover command {: #show-rulers } -->
-## 커서를 올렸을 때 눈금자 표시하기 {: #show-rulers }
+## 마우스를 가져가면 눈금자 표시 {: #show-rulers }
 
 <!-- You can now open the [Command Menu](/docs/devtools/command-menu/) and run the **Show rulers on hover** command. The page rulers make it easier to measure the width and height of an element. -->
-여러분은 이제 [Command Menu](/docs/devtools/command-menu/) 를 열고 **Show rulers on hover**를 실행할 수 있습니다. 페이지의 눈금 기능을 이용하여 우리는 각 요소의 길이와 넓이를 좀더 쉽게 측정할 수 있습니다. 
+여러분은 이제 [Command Menu](/docs/devtools/command-menu/) 를 열고 **마우스를 가져가면 눈금자 표시**를 실행할 수 있습니다. 페이지의 눈금 기능을 이용하여 우리는 각 요소의 길이와 넓이를 좀더 쉽게 측정할 수 있습니다. 
 
 <!-- Previously, you can only enable the page rulers via **Settings** > **Show rulers** checkbox. -->
 이전에는 **설정** > **눈금자 표시** 체크박스를 통해 페이지의 눈금 모드를 활성화할 수 있었습니다.
