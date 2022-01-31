@@ -32,13 +32,13 @@ draft: true
 <!-- ## Preview feature: Full-page accessibility tree {: #a11y-tree } -->
 ## 미리보기 기능: 전체 페이지 접근성 트리 {: #a11y-tree }
 <!-- The new **Full-page accessibility tree** makes it easier for you to get an overview of the full-page [accessibility tree](/blog/full-accessibility-tree/#what-is-the-accessibility-tree) and help you better understand how your web content is exposed to assistive technology.  -->
-사용자들은 새로운 **전체 페이지 접근성 트리**를 통해 전체 페이지 [접근성 트리](/blog/full-accessibility-tree/#what-is-the-accessibility-tree)의 개요를 좀더 쉽게 알 수 있으며, 이 기능은 웹 컨텐츠가 어떻게 보조 기술에 노출되는지를 사용자들이 좀더 잘 이해할 수 있도록 합니다.
+사용자들은 새로운 **전체 페이지 접근성 트리** 를 통해 전체 페이지 [접근성 트리](/blog/full-accessibility-tree/#what-is-the-accessibility-tree)의 개요를 좀더 쉽게 알 수 있으며, 이 기능은 웹 컨텐츠가 어떻게 보조 기술에 노출되는지를 사용자들이 좀더 잘 이해할 수 있도록 합니다.
 
 <!-- In the **Elements** panel, open the **Accessibility** pane and select **Enable full-page accessibility tree** checkbox. Then, reload DevTools and you will see a new accessibility button in the **Elements** panel. -->
 **요소** 패널에서 **접근성** 패널을 열고 **전체 페이지 접근성 트리 사용 설정** 체크박스를 선택합니다. 이후 DevTools를 새로고침하면 **요소** 패널에 접근성 버튼이 생긴 것을 확인할 수 있습니다.
 
 <!-- Click on it to toggle to the **Full-page accessibility tree** view. You can expand nodes or click to see details in the  **Accessibility** pane. -->
-**전체 페이지 접근성 트리**뷰로 전환하기 위해서, 아래 그림의 왼쪽 아이콘 위에서 클릭합니다. 우리는 각 노드들을 확장할 수 있으며, 각자의 노드를 클릭하여 **접근성** 패널에서 세부 사항들을 볼 수 있습니다.
+**전체 페이지 접근성 트리** 뷰로 전환하기 위해서, 아래 그림의 왼쪽 아이콘 위에서 클릭합니다. 우리는 각 노드들을 확장할 수 있으며, 각자의 노드를 클릭하여 **접근성** 패널에서 세부 사항들을 볼 수 있습니다.
 
 <!-- Previously, the accessibility tree was available in the **Accessibility** pane. The view is limited, it only enables you to explore a single node and its ancestors. -->
 접근성 트리는 **접근성** 패널에서 이용가능했습니다만, 그 뷰 자체는 오직 싱글 노드 및 그 노드의 조상들만을 볼 수 있을 만큼 제한적이었습니다.
@@ -56,9 +56,9 @@ Chromium issue: [887173](https://crbug.com/887173)
 <!-- ## More precise changes in the Changes tab {: #changes }  -->
 ## 변경 탭에서의 더욱 정교한 변화들 {: #changes }
 <!-- The code changes in the **Changes** tab is pretty-printed automatically.  -->
-**변경** 탭에서의 코드 체인지들은 자동적으로 화사하게 프린트됩니다. <!-- 문맥에 맞는 단어 선택 필요 -->
+**변경** 탭에서의 코드 체인지들은 자동적으로 깔끔하게 프린트됩니다.
 <!-- Previously, it was hard to trace the actual changes of minified source code because all the code is shown in a single line.  -->
-이전 버전에서는 모든 코드가 한 줄에 표시되었기 때문에 축소된 소스코드에서의 실제 변화를 추적하는 것은 쉽지 않았습니다.
+이전 버전에서는 모든 코드가 한 줄에 표시되었기 때문에 압축된 소스 코드에서의 실제 변화를 추적하는 것은 쉽지 않았습니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/aup2bT490dkvuBu3o4DS.png", alt="Changes tab", width="800", height="450" %}
 
@@ -77,10 +77,10 @@ Chromium issues: [1238818](https://crbug.com/1238818), [1268754](https://crbug.c
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 
-이러한 문제를 해결하기 위해, 여러분은 새롭게 추가된 **Timeout** 설정을 사용할 수 있습니다. 메뉴 항목에서 우리가 클릭한 스텝을 확장합니다. **타임아웃 추가** 를 이용해 [스텝을 편집](/docs/devtools/recorder/#edit-steps)하고 타임아웃을 **6000** 밀리초 (6초)로 설정합니다.
+이러한 문제를 해결하기 위해, 여러분은 새롭게 추가된 **타임아웃** 설정을 사용할 수 있습니다. 메뉴 항목에서 우리가 클릭한 스텝을 확장합니다. **타임아웃 추가** 를 이용해 [스텝을 편집](/docs/devtools/recorder/#edit-steps)하고 타임아웃을 **6000** 밀리초 (6초)로 설정합니다.
 
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
-추가적으로, 여러분은 모든 단계에 대한 **Timeout**을 **Replay settings**에서도 조정할 수 있습니다. **Replay settings**을 확장한 다음 **Timeout** 값을 수정합니다.
+추가적으로, 여러분은 모든 단계에 대한 **타임아웃**을 **Replay settings**에서도 조정할 수 있습니다. **Replay settings**을 확장한 다음 **타임아웃** 값을 수정합니다.
  
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/y7RDpIp3pd2n6Vnxc5Du.png", alt="유저 플로우 녹화를 위한 타임아웃 설정", width="800", height="530" %}
 
@@ -131,10 +131,10 @@ Chromium issue: [1269674](https://crbug.com/1269674)
  ## CSS의 forced-colors 미디어 기능 에뮬레이팅 {: #forced-colors }
 
 <!-- The [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) CSS media feature is used to detect if the user agent has enabled a forced colors mode (e.g. Windows High Contrast mode) where it enforces a user-chosen limited color palette on the page.  -->
-User agent 가 웹페이지에서 사용자가 선택한 제한된 색 팔레트를 사용하도록 강제하는 forced-colors 모드 (예: 윈도우즈 하이 콘트라스트 모드)를 활성화했는지의 여부를 CSS의 [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) 미디어 기능을 통해 알아볼 수 있습니다.
+User agent가 웹페이지에서 사용자가 선택한 제한된 색 팔레트를 사용하도록 강제하는 forced-colors 모드 (예: 윈도우즈 하이 콘트라스트 모드)를 활성화했는지의 여부를 CSS의 [forced-colors](https://drafts.csswg.org/mediaqueries-5/#forced-colors) 미디어 기능을 통해 알아볼 수 있습니다.
 
 <!-- Open the [Command Menu](/docs/devtools/command-menu/), run the **Show Rendering** command, and then set the **Emulate CSS media feature forced-colors** dropdown. -->
-[명령 메뉴](/docs/devtools/command-menu/) 를 열고 **Show Rendering** 명령어를 실행한 다음, **Emulate CSS media feature forced-colors** 드롭다운 메뉴를 설정할 수 있습니다.
+[명령 메뉴](/docs/devtools/command-menu/) 를 열고 **렌더링 표시** 명령어를 실행한 다음, **Emulate CSS media feature forced-colors** 드롭다운 메뉴를 설정합니다.
 
 {% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/75qGjkzfbXfOEJUhML5i.png", alt="CSS forced-colors 미디어 기능", width="800", height="623" %}
 
@@ -143,15 +143,15 @@ User agent 가 웹페이지에서 사용자가 선택한 제한된 색 팔레트
 Chromium issue: [1130859](https://crbug.com/1130859)
 
 <!-- ## Show rulers on hover command {: #show-rulers } -->
-## 마우스를 가져가면 눈금자 표시 {: #show-rulers }
+## 커서를 올렸을 때 눈금자 표시하기 {: #show-rulers }
 
 <!-- You can now open the [Command Menu](/docs/devtools/command-menu/) and run the **Show rulers on hover** command. The page rulers make it easier to measure the width and height of an element. -->
-여러분은 이제 [Command Menu](/docs/devtools/command-menu/) 를 열고 **마우스를 가져가면 눈금자 표시**를 실행할 수 있습니다. 페이지의 눈금 기능을 이용하여 우리는 각 요소의 길이와 넓이를 좀더 쉽게 측정할 수 있습니다. 
+여러분은 이제 [Command Menu](/docs/devtools/command-menu/) 를 열고 **Show rulers on hover**를 실행할 수 있습니다. 페이지의 눈금 기능을 이용하여 우리는 각 요소의 길이와 넓이를 좀더 쉽게 측정할 수 있습니다. 
 
 <!-- Previously, you can only enable the page rulers via **Settings** > **Show rulers** checkbox. -->
-이전에는 **설정** > **눈금 보이기** 체크박스를 통해 페이지의 눈금 모드를 활성화할 수 있었습니다.
+이전에는 **설정** > **눈금자 표시** 체크박스를 통해 페이지의 눈금 모드를 활성화할 수 있었습니다.
 
-{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLF6RWO2bm5SMksdayLv.png", alt="마우스를 가져가면 눈금자 표시", width="800", height="591" %}
+{% Img src="image/dPDCek3EhZgLQPGtEG3y0fTn4v82/FLF6RWO2bm5SMksdayLv.png", alt="Show rulers on hover", width="800", height="591" %}
 
 {# https://chromium.googlesource.com/devtools/devtools-frontend/+/5bb8330e0f0a1c90f4a9335aa5521826c8beea #}
 
