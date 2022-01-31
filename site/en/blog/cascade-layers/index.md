@@ -47,7 +47,7 @@ For example, the selector `.post a.link` has higher specificity than `.card a`. 
 </figure>
 
 
-This example showcases the power of cascade layers, using `@layer`. There are several links shown: some without any additional class names applied, one with a `.link` class, and one with a `.pink` class. The CSS then adds  three layers: `base`, `typography`, and `utilities` as follows:
+This example showcases the power of cascade layers, using `@layer`. There are several links shown: some without any additional class names applied, one with a `.link` class, and one with a `.pink` class. The CSS then adds three layers: `base`, `typography`, and `utilities` as follows:
 
 ```css
 @layer base {
@@ -154,7 +154,7 @@ Let’s take a step back and see where layers are used as it relates to the wide
 
 **UA normal < Local User @layer < Local User normal < Author @layers < Author normal < Author !important < Author @layer !important < Local User !important < UA !important**
 
-You may notice here that `@layer !important` styles are inverted. Instead of being *less* specific than non-layered (normal) styles, they become *more* specific. This is because of how `!important` works in the cascade: it breaks the normal cascading in your stylesheets and reverses the normal specificity values.
+You may notice here that `@layer !important` styles are inverted. Instead of being less specific than non-layered (normal) styles, they become more specific. This is because of how `!important` works in the cascade: it breaks the normal cascading in your stylesheets and reverses the normal specificity values.
 
 ### Nested layers
 Layers can also be nested within other layers. The following example comes from the [Cascade Layers explainer](https://css.oddbird.net/layers/explainer/) from Miriam Suzanne:
@@ -198,7 +198,7 @@ Cascade layers can be great if you use them correctly, but they can also create 
 
 ### Rule 1: Don’t use `@layer` for scoping
 
-Cascade layers do not solve scoping. If you have  a CSS file with an @layer, say `card.css` and want to style all of the links within card, do *NOT* write styles like:
+Cascade layers do not solve scoping. If you have  a CSS file with an `@layer`, say `card.css` and want to style all of the links within card, do not write styles like:
 
 ```css
 a {
@@ -206,7 +206,7 @@ a {
 }
 ```
 
-This will lead to all of the `a` tags in your file getting this override. It’s still important to **scope** your styles properly:
+This will lead to all of the `a` tags in your file getting this override. It’s still important to *scope* your styles properly:
 
 ```css
 .card a {
@@ -230,7 +230,7 @@ If you have multiple layers, the first layer with `!important` would take the `!
 
 ### Rule 4: Understand injection points
 
-Since layer order is established by the first time each layer name appears in your code, if you put an `@layer` declaration *after* importing and setting `layer()`’s, *or* after a different `@layer` statement, it can be ignored. Unlike in CSS, where the style rule furthest down on the page is applied for cascade layers, order is established at first instance.
+Since layer order is established by the first time each layer name appears in your code, if you put an `@layer` declaration after importing and setting `layer()`’s, or after a different `@layer` statement, it can be ignored. Unlike in CSS, where the style rule furthest down on the page is applied for cascade layers, order is established at first instance.
 
 This can be in a list, in a layer block, or in an import. If you put `@layer` after an import list with `layer()`, it won’t do anything. Putting it at the top of the file will make it set the layer order, and help you clearly see the layers within the architecture.
 
