@@ -88,7 +88,8 @@ Por ejemplo, [registré un flujo de usuario](/docs/devtools/recorder/#record) en
 
 <!-- We can use the new **Timeout** settings to fix this. Expand the step which we click on the menu item. [Edit the step](/docs/devtools/recorder/#edit-steps) by  **Add timeout** and set it to **6000** milliseconds (equal to 6s). -->
 
-Podemos usar la nueva configuración de **Tiempo de espera** para arreglar esto. Expanda el paso en el que hacemos clic en el elemento del menú. [Edite el paso](/docs/devtools/recorder/#edit-steps) mediante **Añadir tiempo de espera** y configúrelo en **6000** milisegundos (igual a 6s).
+Podemos usar la nueva configuración de **Tiempo de espera** para arreglar esto. Expanda el paso en el que hacemos clic en el elemento del menú. [Edite el paso](/docs/devtools/recorder/#edit-steps) mediante **Add timeout** y configúrelo en **6000** milisegundos (igual a 6s).
+
 
 <!-- Optionally, you can adjust the **Timeout** in the **Replay settings** for all the steps. Expand the **Replay settings** and edit the **Timeout** value.  -->
 
