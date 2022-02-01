@@ -36,7 +36,7 @@ core/           # cross-platform code with no //content dependencies.
 ios/            # iOS implementation using JavaScript injection.
 ```
 
-Other important differences between Bling and other platforms include:
+Other important differences between Chrome on iOS and other platforms include:
 
 - iOS apps are required to be single-process, so Chrome on iOS can't [`fork()`](https://en.wikipedia.org/wiki/Fork_(system_call)).
 - Chrome on iOS is written in Objective-C++ (a mix of C++ and Objective-C), along with some Swift.
