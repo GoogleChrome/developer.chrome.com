@@ -58,7 +58,7 @@ A Workbox plugin needs to implement one or more callback functions. When you add
 - [`handlerDidComplete`](/docs/workbox/reference/workbox-core/#method-HandlerDidCompleteCallback): Called after all [extend lifetime promises](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises) added to the event from the invocation of the strategy have settled. This is helpful if you need to report on any data that needs to wait until the handler is done in order to calculate stuff like cache hit status, cache latency, network latency, and other useful information.
 - [`handleDidError`](/docs/workbox/reference/workbox-core/#method-HandlerDidErrorCallback): Called if the handler can't provide a valid response from from _any_ source, which is the optimal time to provide some sort of fallback response as an alternative to failing outright.
 
-All of these callback are `async`, and therefore will be `await`ed whenever a cache or fetch event reaches the relevant point for the callback concerned.
+All of these callback are [`async`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/async_function), and therefore will require `await` to be used whenever a cache or fetch event reaches the relevant point for the callback concerned.
 
 If a plugin used all of the above callbacks, this would be the resulting code:
 
