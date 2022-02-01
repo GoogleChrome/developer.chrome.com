@@ -63,7 +63,7 @@ fetch ios
 After that, you can build from the command line (or from Xcode):
 
 ```bash
-ninja -C out/Debug-iphonesimulator chrome
+autoninja -C out/Debug-iphonesimulator chrome
 ```
 ## Learn more about Chrome on iOS feature development
 
