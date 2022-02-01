@@ -155,7 +155,7 @@ limited timeframe.
 
 A Topics API **caller** is the entity that _calls_ the `document.browsingTopics()` JavaScript
 method, and will use the topics returned by the method to help select relevant ads.
-Typically, a call to `document.browsingTopics()` would be from code included in a site from a
+Typically, a call to `document.browsingTopics()` would be from code included in a site, from a
 third party such as an adtech platform. The browser determines the caller from the site of the
 current document. So, if you're a third party on a page, make sure you call the API from an
 iframe that your site owns.
