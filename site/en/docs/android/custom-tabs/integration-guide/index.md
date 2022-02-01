@@ -294,7 +294,7 @@ public static ArrayList<ResolveInfo> getCustomTabsPackages(Context context) {
 }
 ```
 
-Android 11 has introduced [package visiblity changes][31]. If your Android app is targeting API
+Android 11 has introduced [package visibility changes][31]. If your Android app is targeting API
 level 30 or above, adding a `queries` section to `AndroidManifest.xml` is needed, otherwise the
 code snippet above won't return results:
 
