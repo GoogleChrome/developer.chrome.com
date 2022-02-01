@@ -15,7 +15,7 @@
  */
 
 /**
- * @fileoverview Exists while Workbox is being ported across. Don't index pages on Algolia.
+ * @fileoverview Exists while Lighthouse is being ported across. Don't index pages on Algolia.
  */
 
 /**
