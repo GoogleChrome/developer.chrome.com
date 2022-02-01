@@ -9,6 +9,8 @@ alt: >
   Image of waterfalls from Mike Lewis via Unsplash
 tags:
   - chrome-99
+authors:
+  - unakravets
 ---
 
 Cascade layers (the [`@layer` CSS rule](https://www.w3.org/TR/css-cascade-5/)) are coming to Chromium 99, Firefox 97, and Safari 15.4 Beta. They enable more explicit control of your CSS files to prevent style-specificity conflicts. This is particularly useful for large codebases, design systems, and when managing third party styles in applications.
@@ -31,7 +33,7 @@ Cascade layers aim to solve this problem. They introduce a new *layer* to the CS
 
 For example, the selector `.post a.link` has higher specificity than `.card a`. If trying to style a link, inside a card, within a post you will find that the more specific selector will be applied.
 
-By using `@layer`, you can be more explicit about the style-specificity of each, and make sure that your card link’s styles override the post link’s styles, even though the specificity might numerically be lower if all your CSS was on the same plane. This is because of cascade precedence. Layered styles create new cascade "planes"
+By using `@layer`, you can be more explicit about the style-specificity of each, and make sure that your card link’s styles override the post link’s styles, even though the specificity might numerically be lower if all your CSS was on the same plane. This is because of cascade precedence. Layered styles create new cascade "planes."
 
 <figure>
 {% Img src="image/HodOHWjMnbNw56hvNASHWSgZyAf2/93JCD1oEt33cJdBAdC5g.jpeg", alt="Illustration from project demo of breaking out UI", width="800", height="1145" %}
@@ -229,13 +231,11 @@ It’s important to note that a layered CSS file will *not* override non-layered
 
 ### Rule 3: `!important` inverts cascade specificity
 
-While layered styles are less specific than unlayered styles in general, using `!important` reverses this.
+While layered styles are less specific than unlayered styles in general, using `!important` reverses this. In a layer, declarations with the `!important` rule are *more* specific than unlayered styles.
 
-> Layers are less specific than unlayered styles *unless* they are `!important` styles within a layer.
+In that case, the `!important` styles invert their specificity. The diagram above shows this for reference: author @layers have less precedence than author normal which have less precedence than author !important which have less precedence than author @layer !important.
 
-In that case, the `!important` styles invert their specificity. The diagram above shows this for reference: `Author @layers have less precedence than Author normal which have less precedence than Author !important which have less precedence than Author @layer !important`.
-
-If you have multiple layers, the first layer with `!important` would take the `!important` precedence for specificity.
+If you have multiple layers, the first layer with `!important` would take the `!important` precedence and be the most specific style.
 
 ### Rule 4: Understand injection points
 
