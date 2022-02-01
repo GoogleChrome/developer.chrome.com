@@ -21,6 +21,12 @@ tags:
   - security
 ---
 
+{% Aside %}
+Starting in Chrome 97, you no longer need to submit a request
+through a form for Googlebot to starting crawling `assetlinks.json`
+files on your affiliations.
+{% endAside %}
+
 Chrome's password manager already autofills credentials for sites with saved
 credentials, as well as in the following two cases:
 
@@ -60,7 +66,7 @@ at `/.well-known/assetlinks.json` on the respective domains.
 
 ## Prerequisites
 
-1.  Use Chrome 91 or later.
+1.  Use Chrome 97 or later.
 1.  Enable the flag at `chrome://flags#filling-across-affiliated-websites`.
 1.  Make sure "Offer to save passwords" is turned on in
     `chrome://settings/passwords`.
