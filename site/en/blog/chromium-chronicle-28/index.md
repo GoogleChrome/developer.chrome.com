@@ -3,7 +3,7 @@ title: "The Chromium Chronicle #28: Getting started with Chrome on iOS"
 description: >
   Learn how to work with the code behind Chrome's iOS app.
 layout: 'layouts/blog-post.njk'
-date: 2022-01-25
+date: 2022-02-01
 hero: 'image/0g2WvpbGRGdVs0aAPc6ObG7gkud2/hgu6uTktp2ipmuODZZhP.jpg'
 alt: >
   The Chromium Chronicle
