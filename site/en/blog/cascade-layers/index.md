@@ -3,7 +3,7 @@ title: "Cascade layers are coming to your browser"
 description: >
   "Cascade layers are a new CSS API to help you manage the cascade precedence of you code, landing in all modern browsers soon."
 layout: 'layouts/blog-post.njk'
-date: 2022-02-02
+date: 2022-02-01
 hero: 'image/HodOHWjMnbNw56hvNASHWSgZyAf2/r7l0nvP8T1HgWK2XMtks.jpg'
 alt: >
   Image of waterfalls from Mike Lewis via Unsplash
