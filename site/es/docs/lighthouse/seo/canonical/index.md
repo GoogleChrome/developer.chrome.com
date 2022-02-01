@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: El documento no tiene un `rel=canonical` válido
+title: El documento no tiene un rel=canonical válido
 description: Conozca la auditoría de Lighthouse "El documento no tiene un rel=canonical válido".
 date: 2019-05-02
 updated: 2019-08-20

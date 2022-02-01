@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: '`robots.txt` 无效'
+title: 'robots.txt 无效'
 description: |2-
 
   了解“robots.txt 无效”Lighthouse 审计。

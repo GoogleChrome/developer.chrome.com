@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: '`robots.txt` não é válido'
+title: 'robots.txt não é válido'
 description: |2
 
   Saiba mais sobre a auditoria do Lighthouse "robots.txt não é válido".

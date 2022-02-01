@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: Document does not have a valid `rel=canonical`
+title: Document does not have a valid rel=canonical
 description: |
   Learn about the "Document does not have a valid rel=canonical" Lighthouse
   audit.

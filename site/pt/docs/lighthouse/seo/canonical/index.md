@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: O documento não tem um `rel = canonical` válido
+title: O documento não tem um rel = canonical válido
 description: |2-
 
   Saiba mais sobre a auditoria Lighthouse "O documento não tem um rel = canonical".

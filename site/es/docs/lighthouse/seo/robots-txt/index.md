@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: EL archivo `robots.txt` no es válido
+title: EL archivo robots.txt no es válido
 description: |2
 
   Obtenga más información sobre la auditoría de Lighthouse "robots.txt no es válido".

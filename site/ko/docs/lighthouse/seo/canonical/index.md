@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: 문서에 유효한 `rel=canonical`이 없음
+title: 문서에 유효한 rel=canonical이 없음
 description: '"문서에 유효한 rel=canonical이 없음" Lighthouse 감사에 대해 알아봅니다.'
 date: 2019-05-02
 updated: 2019-08-20

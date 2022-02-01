@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/doc-post.njk'
-title: '`robots.txt`가 유효하지 않습니다'
+title: 'robots.txt가 유효하지 않습니다'
 description: |2
 
   "robots.txt가 유효하지 않음" Lighthouse 감사에 대해 알아보세요.
