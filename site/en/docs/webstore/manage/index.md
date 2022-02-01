@@ -30,7 +30,7 @@ status types", width="800", height="221" %}
 To stay informed of your item's status, you can:
 
 -  **Enable email notifications**. There are mandatory emails like take down or rejection
-   notifications that are enabled by default. To receive notification when you item is published or
+   notifications that are enabled by default. To receive notification when your item is published or
    staged, you can enable email notifications in the Account page. 
 
     {% Img src="image/BhuKGJaIeLNPW9ehns59NfwqKxF2/FgPIwRl3QEbNowNV1zRn.png", alt="How to enable
