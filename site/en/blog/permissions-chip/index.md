@@ -1,6 +1,6 @@
 ---
 layout: 'layouts/blog-post.njk'
-title: 'Permissions Request Chip'
+title: 'Permissions request chip'
 description: >
   Permission prompts demand an answer immediately and are frequently ignored. Chrome 97 adds
   dedicated space in the location bar for permissions, with the goal of putting all
@@ -36,8 +36,8 @@ in an accumulated way how Windows users reacted to the geolocation and the notif
 <thead>
 <tr>
 <th>Action</th>
-<th>% of Geolocation Prompts</th>
-<th>% of Notification Prompts</th>
+<th>Percent of geolocation prompts</th>
+<th>Percent of notification prompts</th>
 </tr>
 </thead>
 <tbody>
@@ -65,7 +65,7 @@ in an accumulated way how Windows users reacted to the geolocation and the notif
 </table>
 </div>
 
-Given this ignore/dismiss rate of ~85%, and especially given how much the prompt stands out and
+Given an ignore/dismiss rate of approximately 85%, and especially given how much the prompt stands out and
 insists on users making a decision immediately, there is a conflict between the level of urgency
 assumed by the browser versus the user's preference for waiting to make a decision. This creates the
 perception that it's "annoying" for a site to ask for a permission.
@@ -73,10 +73,9 @@ perception that it's "annoying" for a site to ask for a permission.
 ## New design
 
 From Chrome 97 on, we therefore introduced an animated chip UI which appears next to the lock
-whenever a permission is requested. This consists of an icon and label of the permission being
-requested. Our aim was to improve the experience of web browsing without being distracted by
-(generally unnecessary) permission requests for the vast majority of users who ignore or dismiss the
-current prompt.
+whenever a permission is requested. This consists of an icon and label describing the permission being
+requested. Our aim was to improve the experience of web browsing while avoiding permission requests 
+that are generally unnecessary for the vast majority of users and frequently ignored or dismissed.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/SsFtKKnZzbkAovNkX4Lt.png", alt="ALT_TEXT_HERE", width="653", height="229" %}
 
@@ -94,21 +93,21 @@ below:
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/amp4hx5iei2FvfXFt8gK.png", alt="ALT_TEXT_HERE", width="800", height="445" %}
 
 For non-essential permissions not triggered by a gesture, the prompt no longer intrudes on the site
-contents, and is not insistent on an immediate decision. The user can ignore the request chip until
+contents, and does not insist on an immediate decision. The user can ignore the request chip until
 they have enough information to make a decision.
 
-With no interaction, after a short delay, the request chip will automatically collapse to just a
+With no interaction, and after a short delay, the request chip will automatically collapse to just a
 blocked icon (to indicate the permission being temporarily blocked), before being dismissed
-entirely. The aim is to get out of the way of users who choose not to make a decision and can do so
+entirely. The aim is to get out of the way of users who choose not to make a decision letting them do so
 without any interaction.
 
 {% Img src="image/8WbTDNrhLsU0El80frMBGE4eMCD3/0xzCGLqbOFMcDGVvM1Z2.png", alt="ALT_TEXT_HERE", width="722", height="180" %}
 
 ### Expected short-term impact
 
-In the short-term, until users get used to the new UI, it is likely that site owners will observe
+In the short term, and until users get used to the new UI, it is likely that site owners will observe
 lower grant rates for sites, especially for those that auto-request permissions without priming or
-demanding a user gesture (a [bad practice](https://web.dev/notification-on-start/) anyway). This
+demanding a user gesture (which is considered a [bad practice](https://web.dev/notification-on-start/) anyway). This
 acknowledged downside is vastly outweighed by the less interruptive experience.
 
 ### Best practices
@@ -119,21 +118,21 @@ ignoring the request or dismissing the prompt—can request the permission again
 session. Only do this if the permission is essential for the site or feature to work, otherwise it
 runs the risk of annoying users and getting auto blocked. In those cases we show the
 [quiet messaging](https://blog.chromium.org/2020/01/introducing-quieter-permission-ui-for.html) that
-was introduced in Chrome 80. For more general guidance, see the article
+was introduced in Chrome 80. For more general guidance, see
 [Permission UX](https://developers.google.com/web/fundamentals/push-notifications/permission-ux).
 
 ## Outlook and conclusions
 
-At the moment, the chip appears side by side next to the padlock, but the intention is to override
-the padlock in the future and add closer association of permissions and the site information
-surface. There are also plans on showing a confirmation with additional feedback on the decision
-made. The Chrome team is also investigating potentially more aggressive auto-blocking of permissions
+At the moment, the chip appears side-by-side with the padlock, but the intention is to override
+the padlock in the future and add closer association between permissions and the site information
+surface. There are also plans to show a confirmation with additional feedback on the user's decision.
+The Chrome team is also investigating potentially more aggressive auto-blocking of permissions
 based on prior behavior. You will learn about the news here once these plans mature.
 
-Concluding, the new UI reduces the perceived insistence on a decision and improves the experience of
-browsing. Since most permission prompts are blocked or ignored, the met objective was to improve the
-general experience of browsing, all while not breaking the flows where showing a permission prompt
-and the user granting the permission are essential for the use case at hand to succeed.
+Concluding, the new UI reduces the perceived insistence on a decision and improves the browsing
+experience. Since most permission prompts are blocked or ignored, the met objective was to improve the
+general experience of browsing, while not breaking user flows when showing a permission prompt,
+especially in situations where permissions are required to complete a use case.
 
 ## Acknowledgements
 
